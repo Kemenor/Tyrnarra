@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #04060f;
+    --deep: #080d1e;
+    --gold: #c8a84b;
+    --gold-dim: #8a6e28;
+    --gold-bright: #f0d080;
+    --cloud-dim: #a0b0cc;
+    --text: #d4cbb8;
+    --text-dim: #8a8070;
+    --prelife: #c084fc;
+    --life: #34d399;
+    --postlife: #f87171;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--void);
+    background-image:
+      radial-gradient(ellipse at 50% 0%, #0d1a3a 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, #1a0a2e22 0%, transparent 50%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── STARS ── */
+  .starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--d, 3s) ease-in-out infinite var(--delay, 0s);
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: var(--min, 0.2); }
+    50% { opacity: var(--max, 0.8); }
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 20px 80px;
+  }
+
+  /* ── HEADER ── */
+  .world-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .world-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: clamp(3.2rem, 10vw, 5.5rem);
+    font-weight: 300;
+    color: var(--gold-bright);
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 60px rgba(200,168,75,0.4), 0 0 120px rgba(200,168,75,0.15);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .world-subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--cloud-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 28px;
+  }
+
+  .world-flavor {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 56px 0 40px;
+  }
+  .div-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(200,168,75,0.3), transparent); }
+  .div-glyph { color: var(--gold-dim); font-size: 0.8rem; }
+
+  /* ── SECTION ── */
+  .section-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  /* ── PRIMER CARDS ── */
+  .primer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .primer-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(200,168,75,0.15);
+    border-radius: 4px;
+    padding: 22px 22px 20px;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .primer-card:hover {
+    border-color: rgba(200,168,75,0.4);
+    background: rgba(255,255,255,0.04);
+    transform: translateY(-2px);
+  }
+
+  .primer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent, var(--gold));
+    opacity: 0.6;
+  }
+
+  .primer-tag {
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+  }
+
+  .primer-name {
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--gold-bright);
+    margin-bottom: 8px;
+  }
+
+  .primer-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--text-dim);
+  }
+
+  .primer-arrow {
+    margin-top: 12px;
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Tinting per layer */
+  .card-cosmos { --accent: var(--prelife); }
+  .card-gods   { --accent: var(--gold); }
+  .card-talan  { --accent: var(--life); }
+  .card-town   { --accent: #c89040; }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: rgba(200,168,75,0.25);
+    margin-top: 60px;
+  }
+
+  @media (max-width: 500px) {
+    .container { padding: 56px 16px 56px; }
+    .primer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Starfield -->
+<div class="starfield" id="starfield"></div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="world-header">
+    <div class="world-title">Tyrnarra</div>
+    <div class="world-subtitle">A world adrift in the Cloud Sea</div>
+    <div class="world-flavor">
+      A continent of bound gods and merchant councils, of cloudships that cross the white expanse and rivers that remember more than they should. Below: the primers that map what is known.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- World Primers -->
+  <div class="section-title">World &amp; Cosmos</div>
+  <div class="primer-grid">
+
+    <a class="primer-card card-cosmos" href="tyrnarra-primer.html">
+      <div class="primer-tag">World Primer</div>
+      <div class="primer-name">Tyrnarra</div>
+      <div class="primer-desc">Cosmology, the Cloud Sea, the Wellspring, and the three layers of reality.</div>
+      <div class="primer-arrow">Enter &nbsp;→</div>
+    </a>
+
+    <a class="primer-card card-gods" href="tyrnarra-gods.html">
+      <div class="primer-tag">The Pantheon</div>
+      <div class="primer-name">The 13 Bound Gods</div>
+      <div class="primer-desc">Thirteen deities who walk the Material Plane, constrained by the Gods' Law.</div>
+      <div class="primer-arrow">Enter &nbsp;→</div>
+    </a>
+
+    <a class="primer-card card-talan" href="talan-primer.html">
+      <div class="primer-tag">Continent Primer</div>
+      <div class="primer-name">Talan</div>
+      <div class="primer-desc">The central landmass — kingdoms, contested borders, and the domains of the bound gods.</div>
+      <div class="primer-arrow">Enter &nbsp;→</div>
+    </a>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- Settlements -->
+  <div class="section-title">Settlements</div>
+  <div class="primer-grid">
+
+    <a class="primer-card card-town" href="millhaven/millhaven.html">
+      <div class="primer-tag">Town Primer</div>
+      <div class="primer-name">Millhaven</div>
+      <div class="primer-desc">Where the river meets the sea — and the law runs thin. Population ~6,400, three feuding council factions, one Adventurers Guild branch.</div>
+      <div class="primer-arrow">Enter &nbsp;→</div>
+    </a>
+
+  </div>
+
+  <div class="doc-footer">
+    TYRNARRA · WORLD GAZETTEER · FOR GM USE
+  </div>
+
+</div>
+
+<script>
+// Starfield
+const sf = document.getElementById('starfield');
+for (let i = 0; i < 180; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  const size = Math.random() * 2 + 0.5;
+  s.style.cssText = `
+    width:${size}px;height:${size}px;
+    top:${Math.random()*100}%;left:${Math.random()*100}%;
+    --min:${Math.random()*0.2+0.05};
+    --max:${Math.random()*0.6+0.3};
+    --d:${Math.random()*4+2}s;
+    --delay:-${Math.random()*6}s;
+  `;
+  sf.appendChild(s);
+}
+</script>
+</body>
+</html>
