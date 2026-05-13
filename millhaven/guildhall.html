@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wayward Compass — Guildhall</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #100d08;
+    --bg2: #1a1510;
+    --gold: #c8900a;
+    --gold-dim: #7a5808;
+    --gold-bright: #e8b030;
+    --text: #d8cdb8;
+    --text-dim: #7a7060;
+    --text-bright: #f0e8d0;
+    --river: #1a3a5a;
+    --river-light: #2a5a8a;
+    --divider: rgba(200,144,10,0.15);
+    --red: #8a2a18;
+    --parch: #c8a860;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); min-height: 100vh; font-family: 'Source Serif 4', Georgia, serif; color: var(--text); overflow-x: hidden; }
+
+  /* HEADER */
+  .header { background: var(--bg2); border-bottom: 1px solid var(--divider); padding: 32px 28px 24px; max-width: 1080px; margin: 0 auto; }
+  .compass-row { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  .hall-name { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem,5vw,2.6rem); font-weight: 700; color: var(--text-bright); line-height: 1; }
+  .hall-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text-dim); margin-top: 4px; }
+  .hall-meta { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 14px; }
+  .meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .meta-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-dim); }
+  .meta-value { font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; color: var(--gold); }
+
+  /* MAIN & TABS */
+  .main { max-width: 1080px; margin: 0 auto; padding: 28px 28px 80px; }
+  .tab-bar { display: flex; margin-bottom: 28px; border-bottom: 1px solid var(--divider); flex-wrap: wrap; }
+  .tab-btn { font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 18px; background: none; border: none; color: var(--text-dim); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  .tab-panel { display: none; animation: fadeUp 0.25s ease; }
+  .tab-panel.active { display: block; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+  /* BUILDING DIAGRAM */
+  .diagram-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+  .building-diagram { border: 1px solid var(--divider); border-radius: 5px; overflow: hidden; background: var(--bg2); margin-bottom: 24px; }
+  .floor-row { display: flex; border-bottom: 1px solid var(--divider); min-height: 52px; }
+  .floor-row:last-child { border-bottom: none; }
+  .floor-label { width: 104px; flex-shrink: 0; background: rgba(0,0,0,0.2); border-right: 1px solid var(--divider); display: flex; align-items: center; padding: 0 10px; font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); gap: 5px; }
+  .floor-rooms { display: flex; flex: 1; flex-wrap: wrap; }
+  .room-cell { flex: 1; min-width: 110px; padding: 10px 13px; border-right: 1px solid var(--divider); cursor: pointer; transition: background 0.15s; display: flex; flex-direction: column; justify-content: center; gap: 3px; position: relative; }
+  .room-cell:last-child { border-right: none; }
+  .room-cell.upper { background-color: rgba(42,31,18,0.35); }
+  .room-cell.upper:hover, .room-cell.upper.active { background-color: rgba(200,144,10,0.1); }
+  .room-cell.lower { background-color: rgba(18,32,42,0.35); }
+  .room-cell.lower:hover, .room-cell.lower.active { background-color: rgba(42,90,138,0.18); }
+  .room-name { font-family: 'Playfair Display', serif; font-size: 0.76rem; font-weight: 700; color: var(--text-bright); line-height: 1.2; }
+  .room-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.46rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+  .room-tag { position: absolute; top: 5px; right: 7px; font-family: 'Josefin Sans', sans-serif; font-size: 0.4rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 5px; border-radius: 6px; background: rgba(200,144,10,0.08); color: var(--gold-dim); border: 1px solid rgba(200,144,10,0.12); }
+  .river-divider { background: linear-gradient(to right,var(--river),#1e4a6a,var(--river)); border-top: 1px solid rgba(42,90,138,0.35); border-bottom: 1px solid rgba(42,90,138,0.35); padding: 7px 14px; display: flex; align-items: center; gap: 10px; }
+  .river-text { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(100,160,220,0.65); flex: 1; text-align: center; }
+  .river-line { flex: 1; height: 1px; background: linear-gradient(to right,transparent,rgba(100,160,220,0.25),transparent); }
+
+  /* DETAIL PANEL */
+  .detail-panel { border: 1px solid var(--divider); border-radius: 4px; background: var(--bg2); margin-bottom: 32px; overflow: hidden; }
+  .detail-empty { padding: 24px; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-dim); }
+  .detail-content { display: none; animation: fadeUp 0.2s ease; }
+  .detail-content.visible { display: block; }
+  .detail-header { padding: 16px 20px 12px; border-bottom: 1px solid var(--divider); display: flex; align-items: flex-start; gap: 14px; }
+  .detail-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+  .detail-room-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-bright); margin-bottom: 3px; }
+  .detail-floor { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+  .detail-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
+  .detail-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.46rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 8px; border: 1px solid var(--divider); color: var(--text-dim); background: rgba(255,255,255,0.025); }
+  .detail-body { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  @media (max-width:700px) { .detail-body { grid-template-columns:1fr; } }
+  @media (min-width:701px) and (max-width:900px) { .detail-body { grid-template-columns:1fr 1fr; } }
+  .detail-col { padding: 14px 18px 18px; border-right: 1px solid var(--divider); }
+  .detail-col:last-child { border-right: none; }
+  .detail-col-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--divider); }
+  .detail-desc { font-size: 0.9rem; line-height: 1.75; color: var(--text); font-style: italic; }
+  .detail-list { list-style: none; }
+  .detail-list li { font-size: 0.86rem; line-height: 1.6; color: var(--text); padding: 4px 0 4px 13px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.03); }
+  .detail-list li:last-child { border-bottom: none; }
+  .detail-list li::before { content:'◆'; position:absolute; left:0; color:var(--gold-dim); font-size:0.38rem; top:8px; }
+  .read-aloud { background: rgba(200,144,10,0.04); border: 1px solid rgba(200,144,10,0.18); border-radius: 3px; padding: 14px 16px; }
+  .read-aloud-text { font-size: 0.9rem; line-height: 1.8; color: var(--parch); font-style: italic; }
+
+  /* OVERVIEW */
+  .section { margin-bottom: 38px; }
+  .section-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 13px; padding-bottom: 7px; border-bottom: 1px solid var(--divider); }
+  .prose { font-size: 0.98rem; line-height: 1.85; color: var(--text); }
+  .prose p { margin-bottom: 11px; }
+  .prose p:last-child { margin-bottom: 0; }
+  .callout { border-left: 3px solid var(--gold-dim); background: rgba(200,144,10,0.05); padding: 11px 15px; border-radius: 0 3px 3px 0; margin: 14px 0; font-size: 0.9rem; line-height: 1.7; font-style: italic; color: var(--text); }
+  .callout-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; font-style: normal; }
+
+  /* NPC CARDS */
+  .npc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 18px; }
+  .npc-card { background: var(--bg2); border: 1px solid var(--divider); border-radius: 4px; cursor: pointer; transition: transform 0.18s, border-color 0.18s; position: relative; overflow: hidden; }
+  .npc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,var(--gold-dim),var(--gold-bright),var(--gold-dim)); }
+  .npc-card:hover { transform: translateY(-2px); border-color: rgba(200,144,10,0.3); }
+  .npc-card.expanded { grid-column: 1 / -1; }
+  .card-header { display: flex; align-items: flex-start; gap: 12px; padding: 16px 16px 12px; border-bottom: 1px solid var(--divider); }
+  .npc-icon { width:44px; height:44px; border-radius:50%; background:rgba(26,42,74,0.8); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; border:1px solid var(--gold-dim); }
+  .npc-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--text-bright); line-height: 1.2; }
+  .npc-role { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-top: 3px; }
+  .npc-race { font-size: 0.78rem; color: var(--text-dim); font-style: italic; margin-top: 2px; }
+  .expand-hint { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; align-self: center; opacity: 0.6; margin-left: auto; }
+  .card-summary { padding: 12px 16px; font-size: 0.88rem; line-height: 1.65; color: var(--text); font-style: italic; }
+  .card-expanded { display: none; border-top: 1px solid var(--divider); padding: 16px; animation: fadeUp 0.22s ease; }
+  .npc-card.expanded .card-expanded { display: block; }
+  .npc-card.expanded .expand-hint { display: none; }
+  .expanded-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width:580px) { .expanded-inner { grid-template-columns:1fr; } }
+  .exp-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid var(--divider); }
+  .exp-body { font-size: 0.87rem; line-height: 1.65; color: var(--text); margin-bottom: 14px; }
+  .trait-list { list-style: none; margin-bottom: 14px; }
+  .trait-list li { font-size: 0.84rem; color: var(--text); padding: 3px 0 3px 13px; position: relative; line-height: 1.5; }
+  .trait-list li::before { content:'◆'; position:absolute; left:0; color:var(--gold-dim); font-size:0.38rem; top:6px; }
+  .secret-box { background: rgba(138,42,24,0.08); border-left: 3px solid var(--red); padding: 10px 13px; border-radius: 0 3px 3px 0; margin-bottom: 12px; }
+  .secret-box .exp-label { color: #c05040; border-color: rgba(138,42,24,0.25); }
+  .secret-box .exp-body { color: #b08070; font-style: italic; }
+  .hook-box { background: rgba(26,42,74,0.15); border-left: 3px solid var(--river-light); padding: 10px 13px; border-radius: 0 3px 3px 0; }
+  .hook-box .exp-label { color: #5090c0; border-color: rgba(42,90,138,0.25); }
+  .stat-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .stat-pill { background: rgba(26,42,74,0.6); color: var(--gold-dim); font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 12px; border: 1px solid rgba(200,144,10,0.12); }
+
+  .footer-note { text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.28em; color: rgba(200,144,10,0.16); text-transform: uppercase; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--divider); }
+
+  @media (max-width:520px) { .floor-label { width:68px; font-size:0.44rem; } .room-name { font-size:0.68rem; } .header, .main { padding-left:14px; padding-right:14px; } .tab-btn { padding:8px 10px; font-size:0.5rem; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="compass-row">
+    <svg width="42" height="42" viewBox="0 0 80 80" fill="none">
+      <circle cx="40" cy="40" r="36" stroke="#7a5808" stroke-width="1.5"/>
+      <line x1="40" y1="14" x2="40" y2="66" stroke="#c8900a" stroke-width="1"/>
+      <line x1="14" y1="40" x2="66" y2="40" stroke="#c8900a" stroke-width="1"/>
+      <polygon points="40,12 43,22 40,20 37,22" fill="#e8b030"/>
+      <polygon points="40,68 43,58 40,60 37,58" fill="#7a5808"/>
+      <polygon points="68,40 58,43 60,40 58,37" fill="#7a5808"/>
+      <polygon points="12,40 22,43 20,40 22,37" fill="#7a5808"/>
+      <rect x="36" y="36" width="8" height="8" transform="rotate(45 40 40)" fill="#c8900a"/>
+    </svg>
+    <div>
+      <div class="hall-name">The Wayward Compass</div>
+      <div class="hall-sub">Adventurers Guild · Branch #1,847 · Millhaven · Est. 1,891 MR</div>
+    </div>
+  </div>
+  <div class="hall-meta">
+    <div class="meta-item"><div class="meta-label">Location</div><div class="meta-value">Central Bridge, Millwater River</div></div>
+    <div class="meta-item"><div class="meta-label">Structure</div><div class="meta-value">3 floors above bridge + 2 piling extensions below</div></div>
+    <div class="meta-item"><div class="meta-label">Guildmaster</div><div class="meta-value">Aldric Fenn, Veteran Field Agent</div></div>
+    <div class="meta-item"><div class="meta-label">Staff</div><div class="meta-value">6 permanent, rotating field agents</div></div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('layout',event)">Layout</button>
+    <button class="tab-btn" onclick="switchTab('overview',event)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('staff',event)">Staff</button>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="tab-panel active" id="tab-layout">
+    <div class="diagram-label">Building Layout — Click any room to expand</div>
+    <div class="building-diagram">
+      <div class="floor-row">
+        <div class="floor-label">▲ Floor 3</div>
+        <div class="floor-rooms">
+          <div class="room-cell upper" onclick="showRoom('office',event)"><div class="room-name">Guildmaster's Office</div><div class="room-sub">Private · Top floor</div><div class="room-tag">Restricted</div></div>
+          <div class="room-cell upper" onclick="showRoom('library',event)"><div class="room-name">The Knowledge Dock</div><div class="room-sub">Library & archive</div></div>
+          <div class="room-cell upper" onclick="showRoom('quarters-staff',event)"><div class="room-name">Staff Quarters</div><div class="room-sub">Permanent staff rooms</div><div class="room-tag">Private</div></div>
+        </div>
+      </div>
+      <div class="floor-row">
+        <div class="floor-label">▲ Floor 2</div>
+        <div class="floor-rooms">
+          <div class="room-cell upper" onclick="showRoom('drinkinghall',event)"><div class="room-name">The Drinking Hall</div><div class="room-sub">Main gathering space</div></div>
+          <div class="room-cell upper" onclick="showRoom('quarters-adventurer',event)"><div class="room-name">Adventurer Bunks</div><div class="room-sub">Bare sleeping rooms</div></div>
+          <div class="room-cell upper" onclick="showRoom('storage',event)"><div class="room-name">Storage Rooms</div><div class="room-sub">Equipment & supplies</div></div>
+        </div>
+      </div>
+      <div class="floor-row">
+        <div class="floor-label">↔ Bridge</div>
+        <div class="floor-rooms">
+          <div class="room-cell upper" onclick="showRoom('reception',event)"><div class="room-name">Reception & Quest Board</div><div class="room-sub">Main entrance · Street level</div></div>
+          <div class="room-cell upper" onclick="showRoom('briefing',event)"><div class="room-name">Briefing Room</div><div class="room-sub">Contract discussions</div></div>
+          <div class="room-cell upper" onclick="showRoom('velka',event)"><div class="room-name">Quartermaster's Den</div><div class="room-sub">Velka Dorn's domain</div></div>
+        </div>
+      </div>
+      <div class="river-divider">
+        <div class="river-line"></div>
+        <div class="river-text">↓ Millwater River — Piling Extensions Below ↓</div>
+        <div class="river-line"></div>
+      </div>
+      <div class="floor-row">
+        <div class="floor-label">↓ Piling 1</div>
+        <div class="floor-rooms">
+          <div class="room-cell lower" onclick="showRoom('training',event)"><div class="room-name">Training Hall</div><div class="room-sub">Combat practice · River-level</div></div>
+          <div class="room-cell lower" onclick="showRoom('dova',event)"><div class="room-name">Dova's Bar</div><div class="room-sub">The real drinking hall</div></div>
+        </div>
+      </div>
+      <div class="floor-row">
+        <div class="floor-label">↓ Piling 2</div>
+        <div class="floor-rooms">
+          <div class="room-cell lower" onclick="showRoom('dock',event)"><div class="room-name">Guild Dock</div><div class="room-sub">Private berth · River access</div><div class="room-tag">Unregistered</div></div>
+          <div class="room-cell lower" onclick="showRoom('deepstorage',event)"><div class="room-name">Deep Storage</div><div class="room-sub">Locked. Ask Velka.</div><div class="room-tag">Restricted</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-panel" id="detailPanel">
+      <div class="detail-empty" id="detailEmpty">← Select a room above to see details</div>
+      <div class="detail-content" id="detailContent"></div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="tab-panel" id="tab-overview">
+    <div class="section">
+      <div class="section-title">The Building</div>
+      <div class="prose">
+        <p>The Wayward Compass has occupied its spot on the central bridge since 1,891 MR — over six hundred years, through the tail end of the Dark Era and everything that came after. It did not start as a guildhall. It started as a storage shed that a group of adventurers rented by the week, then couldn't stop renting because it was convenient, and then quietly bought when the owner died without heirs.</p>
+        <p>It has grown the way the bridge district itself has grown — upward first, then outward, then eventually downward onto pilings that were originally just meant to support a practice post for Kael's sparring sessions. The original shed is now somewhere inside the walls of the second floor. Nobody is entirely sure which walls. Rumor has it, it still houses an artifact of the original trio who founded this hall. Aldric will scowl if you go looking for it.</p>
+        <p>From the bridge level, it presents a respectable face: a wide door, the compass rose sign, Mira Seld's desk visible through the front window. From the river, it looks like something that decided it wanted to be a boat but couldn't commit. Ropes run between the piling extensions and the bridge above. The sound of the river is constant — louder in the lower levels, a soft undertone in the upper floors. Regulars stop noticing it. New arrivals find it either calming or unsettling.</p>
+      </div>
+      <div class="callout">
+        <div class="callout-label">What Makes It Feel Like Home</div>
+        Maps cover almost every wall — some current, some historical, some of places nobody has been able to identify for decades. Trophy cases line the drinking hall stairs: a basilisk scale, a piece of what might be Elden stonework, three weapons of unusual make with small plaques listing the names of the people who brought them back. The plaques list when they were recovered. They do not always list what happened to the person who recovered them. Regulars know which ones to avoid reading.
+      </div>
+    </div>
+  </div>
+
+  <!-- STAFF -->
+  <div class="tab-panel" id="tab-staff">
+    <div class="npc-grid" id="npcGrid"></div>
+  </div>
+
+  <div class="footer-note">The Wayward Compass · Branch #1,847 · Millhaven · For GM Reference</div>
+</div>
+
+<script>
+function switchTab(id, e) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+const rooms = {
+  reception: {
+    icon:"📜", name:"Reception & Quest Board", floor:"Bridge Level — Main Entrance",
+    tags:["Public","Always Open","Mira Seld"],
+    readAloud:"The first thing you notice is the board. It covers the entire right wall — contracts pinned edge to edge, some crisp and new, some yellowed at the corners in a way that suggests they've been there long enough to become part of the architecture. To the left, behind a desk angled to see both the door and the stairs, a half-elf woman with ink-stained fingers looks up from a ledger. She already knows you're here. She's been tracking you since you crossed the threshold.",
+    desc:"The first room anyone sees. Wide enough for a small crowd, low-ceilinged enough to feel intimate. Mira Seld's desk sits left of the entrance, angled so she can see both the door and the stairs simultaneously. The quest board dominates the right wall — contracts, notices, bounties, organized in a system only Mira fully understands. Two or three have yellowed at the edges. Nobody takes them. Nobody asks why.",
+    details:["Mira's desk has three locked drawers — contents never explained","A small bell audible anywhere in the building when rung","Quest board updated every morning before opening","A worn bench; a sleeping hound of unknown ownership is always there","A second board marked 'COMPLETED' — Mira tracks returning parties here","The entrance guild seal glows faintly when Rank 6+ crosses it"]
+  },
+  briefing: {
+    icon:"🗺️", name:"Briefing Room", floor:"Bridge Level",
+    tags:["Semi-Private","Contract Discussions","Maps"],
+    readAloud:"A long table, eight chairs, and more maps than any room this size should reasonably hold. They're layered on every wall, corners overlapping, some rolled in the corners. The table itself has a shallow channel running its center — someone has been rolling dice in it recently. The window looks over the river. The room smells of old paper, candle wax, and decisions.",
+    desc:"Where contract details get discussed before parties head out, and where debrief happens on return. The table's center channel was meant for scroll maps; it's also used for dice. Kael uses this room for mission briefings. Mira for sensitive clients. Aldric for council conversations he doesn't want on record.",
+    details:["The table channel is ink-stained from decades of map-rolling","A locked cabinet holds regional maps not available publicly","Soundproofed — badly. Raised voices carry to reception.","One chair is slightly taller. Nobody admits knowing why. Everyone wants it.","A speaking tube to Aldric's office — he can listen without being present","Kael always sits with his back to the river window"]
+  },
+  velka: {
+    icon:"🗝️", name:"Quartermaster's Den", floor:"Bridge Level",
+    tags:["Velka Dorn","Equipment Loans","Archive Access"],
+    readAloud:"The smell hits first — old paper, metal polish, and something faintly herbal you can't identify. Every surface is organized with a precision that feels almost aggressive. A tall woman with silver hair and reading glasses she clearly doesn't think she needs is writing in a ledger without looking up. After a moment she says, without inflection: 'Sign the log. Touch nothing until I've noted it.'",
+    desc:"Half equipment locker, half filing office, entirely Velka Dorn's domain. Equipment loans in front, six centuries of archive in back. A locked door leads to Deep Storage. Velka has the only key and has declined to share it, politely and otherwise.",
+    details:["Every loaned item logged with name, rank, and expected return","Equipment sorted by category then alphabetically — disturb at your peril","Three filing cabinets always locked, indexed as 'Historical Reference — Classification Pending'","The Deep Storage door has two keyholes. Velka has both keys.","A reading chair where Velka spends off-hours with archive documents","A small shrine to no identifiable deity — she neither confirms nor denies it"]
+  },
+  drinkinghall: {
+    icon:"🍺", name:"The Drinking Hall", floor:"Second Floor",
+    tags:["Public (Guild)","Evening Hours","Trophy Cases"],
+    readAloud:"The stairs open into noise and warmth. Long tables, mismatched chairs, a ceiling gone dark with smoke from a fireplace that predates the current chimney. The walls are covered — maps, sketches, a large painting of a landscape nobody can identify. Trophy cases flank the stairwell. One has a plaque listing a name and a date but no explanation. Most regulars don't look at it anymore. New arrivals always do.",
+    desc:"The social heart of the upper building. Where parties form, contracts get celebrated or mourned, new recruits assessed over a pint they didn't ask for. Ceiling low and smoke-darkened. Walls thick with maps, sketches, and one painting of a landscape three people have separately claimed to have visited.",
+    details:["Trophy cases: basilisk scale, possible Elden stonework, three recovered weapons with memorial plaques","The fireplace predates the current building — it was here before the shed was converted","A corner table informally reserved for Aldric's after-council drinks","Dova's dumbwaiter connects directly to the bar below","Unidentified landscape: 'Recovered, 2201 MR. Provenance Unknown.'","A wall of former members' notes — some jokes, some warnings, some neither"]
+  },
+  'quarters-adventurer': {
+    icon:"🛏️", name:"Adventurer Bunks", floor:"Second Floor",
+    tags:["1 Silver/Night","Guild Members Only","Bare"],
+    readAloud:"Eight doors, eight rooms, each containing a bunk, a hook, and a window over the Millwater. The window is the only point of character. Through it you can hear the river against the pilings below and, if the wind is right, the sound of Dova's bar two floors down. The rooms are clean. They are not comfortable. They were never meant to be.",
+    desc:"Eight small rooms: a bunk, a hook, a narrow river window, nothing else. One silver a night, guild members only. Pip runs laundry Tuesdays and Thursdays. Clean and entirely without comfort — the point, Aldric would say.",
+    details:["Eight rooms numbered by Velka — not consecutively","Room 3 has a larger window. There is always a waiting list.","The corridor boards creak in a pattern Mira can read by sound","Shared washroom: cold water, wood-burning copper for hot","Pip's laundry: leave gear outside the door in the provided sack","The bunk hooks are rated 80 lbs each. Kael tested this. Personally."]
+  },
+  storage: {
+    icon:"📦", name:"Storage Rooms", floor:"Second Floor",
+    tags:["Staff Access","General Supplies","Equipment Overflow"],
+    readAloud:"Three connected rooms of varying size. The largest smells of lamp oil and rope — practical things, stocked with the quiet assumption that someone will always need them at the wrong moment. The middle room has items in uncertain status, tagged but not yet filed. The smallest room is locked and labelled, in precise handwriting: 'Pending Classification.' The label is not new.",
+    desc:"Three connected rooms: general supplies in the largest, equipment overflow in the middle, a locked room labelled 'Pending Classification' in the smallest. It has carried that label since at least 2490 MR.",
+    details:["Supply room restocked weekly via Bram Aldover's people at guild rates","Velka audits monthly — results never quite what she expects","Overflow room has three items 'pending review' for over a decade","The locked room's smell changes day to day","The only second-floor window facing the Cape side is here","Pip is not allowed here unsupervised. He has a key anyway."]
+  },
+  office: {
+    icon:"⚔️", name:"Guildmaster's Office", floor:"Third Floor — Top of Building",
+    tags:["Restricted","Aldric Fenn","Locks From Inside"],
+    readAloud:"The staircase ends at a door that locks from the inside. The office beyond is large by the building's standards — which means there's room for a desk, two chairs, bookshelves, and enough floor to pace. The windows look out over the river on one side and the bridge street on the other. A shortsword rests on the desk. It is not decorative. On one shelf, three items that don't match the rest: a folded map, a small portrait, a sealed letter addressed to someone.",
+    desc:"Aldric's office occupies the top of the building. Locks from both sides — the only room that does. Deliberate guest chairs, bookshelves, a locked chest under the desk. A speaking tube behind his left shoulder. A second unlabelled staircase behind the bookcase leads to the roof.",
+    details:["Locks from both sides — unique in the building","Two guest chairs, both less comfortable than Aldric's — he noticed","Personal shelf: a folded map, a small portrait, a sealed letter to an unnamed recipient","The chest under the desk: only Mira Seld knows its contents","The speaking tube to the briefing room can be muted silently from his end","A staircase behind the bookcase to the roof — Aldric goes up alone, sometimes"]
+  },
+  library: {
+    icon:"📚", name:"The Knowledge Dock", floor:"Third Floor",
+    tags:["Guild Members","Velka's Index","Six Centuries of Records"],
+    readAloud:"Floor-to-ceiling shelves, two reading alcoves built into window bays over the river, a long table in the center with a candelabra that's never fully extinguished. The smell is paper, old leather, and something mineral you can't place. The organization is meticulous and entirely opaque — Velka's index, in Velka's shorthand. The introduction to the index is on the first shelf. She will not explain it verbally.",
+    desc:"Regional maps, bestiary records, historical contracts, field notes — six centuries of guild operations. Organized by Velka's cross-referenced shorthand index. A restricted section behind a locked gate holds Head Office documents.",
+    details:["Regional maps by domain then era — some Elden-period maps of uncertain accuracy","Bestiary records contributed by returning parties — some illustrated, some best not","Six centuries of contract records. Velka has read them all.","Two river-view window alcoves — quietly competed over","Restricted section behind locked gate: Head Office seal, contents classified","One shelf: 'UNCLASSIFIED — DO NOT REMOVE' — seventeen items of wildly varying nature"]
+  },
+  'quarters-staff': {
+    icon:"🏠", name:"Staff Quarters", floor:"Third Floor",
+    tags:["Private","Permanent Staff Only"],
+    readAloud:"Four doors along a corridor that smells of wood polish and old maps. Each room is visibly, distinctly its occupant's. One is spare and locked. One smells of equipment oil through the door. One has filing boxes stacked in the hall outside it. One is cheerful chaos, door slightly open, maps pinned to every visible surface. The fourth door, at the end, is shut. The window at the end of the corridor is always slightly open. Nobody explains why.",
+    desc:"Four private rooms. Mira's is spare and precisely ordered. Kael's has a weapons rack taking a third of the floor. Velka's has filing boxes that followed her upstairs. Pip's is cheerful chaos with maps everywhere. The fourth room is empty, made up, window slightly open. Nobody asks about it.",
+    details:["Mira's room: spare, locked, a second door that doesn't go anywhere obvious","Kael's room: weapons rack, a cot, one chair — declined every offer to improve it","Velka's room: half bedroom, half archive overflow — insists this is intentional","Pip's room: maps everywhere, three half-finished sketches, collected bridge oddities","The empty fourth room: clean, made up, window always slightly open — Aldric keeps it that way","Shared kitchen: Dova does not cook here. Pip attempts to."]
+  },
+  training: {
+    icon:"🛡️", name:"Training Hall", floor:"Piling Level 1 — Below the Bridge",
+    tags:["Kael Orvaine","Open Dawn–Dusk","River Breeze"],
+    readAloud:"One wall is open to the river behind a heavy rope barrier, and the sound of the Millwater fills the room completely. The floor is hardwood over piling frame — worn smooth in the center, rougher at the edges where no one has quite reached. A chalk circle sits at the center, crisp and fresh. The ceiling is lower than you'd expect. A large half-orc in scale mail is watching you calculate exactly how low.",
+    desc:"Built onto the first piling extension, partially over the river. One wall open behind a rope barrier. Floor worn smooth at the sparring circle's center. The ceiling — 6'8\" at center, sloping to 6'2\" at edges — is a feature, according to Kael.",
+    details:["Open sparring every dawn — Kael is always first and last","The rope barrier has been fully tested by falling into it approximately eleven times","Practice weapons on racks: dulled blades, weighted staffs, blunt-tipped bows","Chalk circle refreshed each morning — stepping in it uninvited is noted","Ceiling: 6'8\" center, 6'2\" edges. Kael knows exactly who will hit it.","A logbook: who trains, when, Kael's private assessment — not for sharing"]
+  },
+  dova: {
+    icon:"🥃", name:"Dova's Bar", floor:"Piling Level 1 — Below the Bridge",
+    tags:["Dova Crestmark","All Hours","Private Conversations"],
+    readAloud:"Lower than the hall upstairs, darker, closer to the water. You can hear the Millwater against the pilings from any stool — a constant, low rhythm underneath everything. The bar is a single plank of dark wood, grain unlike anything local. Behind it, a dwarf woman with copper-streaked braids and burn-scarred forearms sets a glass in front of you without asking what you want. It's what you needed.",
+    desc:"Where the guild actually drinks. Darker and closer to the water than upstairs. The bar plank is claimed to be from a ship called the Ardent Constant, which no record confirms existed. The shelves reorganize slightly every few weeks. Non-alcoholic house brew in brown bottles under the bar for people she's worried about.",
+    details:["Dumbwaiter to upstairs hall runs on Pip's pulley — jams when overloaded","Three stools claimed by regulars. The fourth is never sat in.","Brown bottles under the bar, unlabelled — house brew for those who need it","The bar plank's grain doesn't match any local timber","A back door to Piling Level 2 — Dova has the key, uses it occasionally","Conversations here are genuinely private. Dova ensures this. Mechanism unknown."]
+  },
+  dock: {
+    icon:"⚓", name:"Guild Dock", floor:"Piling Level 2 — Lowest Level",
+    tags:["River Access","Not Registered","One Covered Berth"],
+    readAloud:"The staircase ends at the waterline. A covered berth, river on three sides, the sound and smell of the Millwater immediate and total. A mooring chain with a combination lock. A supply locker built into the piling. A narrow window at near-waterline giving a fish-eye view of whatever is passing above on the river. The berth is empty. It has a quality of readiness about it.",
+    desc:"A single covered berth at the waterline, accessed from the river or through Dova's bar. Not registered with the Cape dockmaster or Realm port authority — 'an ongoing clerical issue' of over two hundred years. When it's occupied, nobody in the upper building mentions it unless Aldric does first.",
+    details:["One covered berth, capacity to 40 feet — longer craft overhang the downstream piling","Not on any port register — 'a clerical oversight' since 2,300 MR","Mooring chain combination: known to Aldric, Dova, and Mira Seld","Supply locker: rope, lanterns, provisions, one sealed oilskin of unknown contents","Current runs strong — downstream departures fast, arrivals require skill","Waterline window gives a fish-eye view of passing river traffic"]
+  },
+  deepstorage: {
+    icon:"🔒", name:"Deep Storage", floor:"Piling Level 2 — Lowest Level",
+    tags:["Velka's Key Only","Waterproofed","Classification Unknown"],
+    readAloud:"Dry. That's the first thing — the room is inexplicably, completely dry this close to the waterline. Old enchantment, nobody knows who cast it. Shelves of sealed containers, each labelled in a shorthand you can't read. A Head Office seal on the far wall that predates the current charter. And in the corner, on a shelf by itself, a sealed iron box with a date in careful handwriting: 2498 MR. Beneath it: 'PENDING — DO NOT OPEN.'",
+    desc:"Adjacent to the guild dock, Velka's key only. Dry despite its position — old enchantment, caster unknown. Sealed containers, a Head Office seal, and a locked iron box catalogued in 2498 MR and not reopened. A second door in the back wall appears on no building plan.",
+    details:["Waterproofing enchantment of unknown age — Velka has tested it; it holds","Shelves of sealed containers, each in Velka's shorthand with a classification date","A Head Office seal on the far wall — present at founding, authority unclear under current charter","The sealed iron box: catalogued 2498 MR, 'PENDING — DO NOT OPEN', not reopened","A second door in the back wall — not on any building plan Velka has located","Velka visits monthly, alone, with her own light"]
+  }
+};
+
+function showRoom(id, event) {
+  const room = rooms[id];
+  if (!room) return;
+  document.querySelectorAll('.room-cell').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const empty = document.getElementById('detailEmpty');
+  const content = document.getElementById('detailContent');
+  empty.style.display = 'none';
+  content.innerHTML = `
+    <div class="detail-header">
+      <div class="detail-icon">${room.icon}</div>
+      <div>
+        <div class="detail-room-name">${room.name}</div>
+        <div class="detail-floor">${room.floor}</div>
+        <div class="detail-tags">${room.tags.map(t=>`<span class="detail-tag">${t}</span>`).join('')}</div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div class="detail-col">
+        <div class="detail-col-label">GM Notes — Read Aloud</div>
+        <div class="read-aloud"><div class="read-aloud-text">${room.readAloud}</div></div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-label">Description</div>
+        <div class="detail-desc">${room.desc}</div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-label">Notable Details</div>
+        <ul class="detail-list">${room.details.map(d=>`<li>${d}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+  content.classList.add('visible');
+  setTimeout(() => document.getElementById('detailPanel').scrollIntoView({behavior:'smooth',block:'nearest'}), 50);
+}
+
+const npcs = [
+  { id:"receptionist", name:"Mira Seld", role:"Branch Receptionist", race:"Half-elf, mid-30s", icon:"📜",
+    summary:"The first face every adventurer sees — and the last one they want to disappoint. Mira runs the front desk with terrifying competence and a smile that never quite reaches her eyes.",
+    personality:"Unflappable. Warm but watchful. She remembers every name, every face, every outstanding fee. Speaks to hardened veterans the same way she speaks to terrified first-timers: calmly, clearly, with exactly the right amount of expectation.",
+    appearance:"Practical dark hair pinned back, ink-stained fingers, three quills always tucked behind her ear. Wears the guild uniform — navy and gold — with the precision of someone who ironed it that morning and will iron it again tomorrow.",
+    traits:["Knows every active contract, who took it, and when it's overdue","Can de-escalate a barfight using only tone of voice","Sends handwritten follow-up notes after dangerous missions","Fiercely protective of new recruits; quietly tests veterans"],
+    secret:"Mira is a former field agent — Rank 7 clearance — who burned out after a classified operation went wrong. The Head Office offered a desk as a mercy posting. She took it, and discovered she's better at this than she ever was at fieldwork. She could go back. She won't.",
+    hooks:["She quietly steers particular quests to particular parties — why?","An old contact shows up at the desk pale and panicked. Mira sends everyone out of earshot.","A sealed letter arrives addressed to her with a Head Office sigil she recognizes and visibly pales at."],
+    stats:["Perception +8","Insight +9","Persuasion +7","Rank 7 (Retired Field)"]
+  },
+  { id:"guildmaster", name:"Aldric Fenn", role:"Branch Guildmaster · Bridge Council Seat", race:"Human, late 50s", icon:"⚔️",
+    summary:"A bear of a man who runs a small-town office for the most powerful organization in the known world — and is acutely aware of both halves of that sentence. Drinks too much. Cares too much. Gets results.",
+    personality:"Direct, pragmatic, occasionally volcanic. Prefers solving problems with a handshake, but keeps a shortsword on the desk for symbolic reasons. Treats his branch like family, which means he worries constantly and never says so.",
+    appearance:"Big, weathered, with the kind of scarring that tells stories. Salt-and-pepper beard, always slightly unkempt. Wears his guildmaster's medallion but tucks it under his collar when meeting locals — he doesn't want them afraid of what it represents.",
+    traits:["Has a file on every guild branch within 200 miles, some of it unofficial","Will bend rules for his people. Will not break the Charter. Knows the difference intimately.","Refers to Head Office as 'the suits' with deep personal feeling","Never turns away someone in genuine need, even if they can't pay the registration fee"],
+    secret:"Aldric was offered a Regional Director position three times. He turned it down each time. Head Office sent an auditor to find out why. Aldric bought them a beer, explained nothing, and the auditor left confused but oddly at peace. The real reason: he knows what Regional Directors are actually asked to do, and some of it keeps him up at night.",
+    hooks:["He pulls a party aside after a job and says 'this one doesn't go in the official report'","A Head Office inspector arrives unannounced with a perfect smile and cold eyes","He asks the party to quietly look into a guild branch two towns over that has gone silent"],
+    stats:["Athletics +7","Intimidation +8","History +6","Insight +7","Veteran Field Agent"]
+  },
+  { id:"barkeeper", name:"Dova Crestmark", role:"Guildhall Barkeeper", race:"Dwarf, appears ageless", icon:"🍺",
+    summary:"Runs the guildhall's tavern with iron authority and an endless supply of something she simply calls 'the good stuff.' Nobody knows her age, her hometown, or how she got the job. Nobody asks twice.",
+    personality:"Blunt, generous in unexpected moments, and possessed of an unsettling ability to know what you need before you say it. Has a philosophy about drinking that sounds like tavern wisdom until you realize it's actually life advice.",
+    appearance:"Short even by dwarf standards, broad-shouldered, with copper-streaked braids and burn scars on both forearms she doesn't explain. Wears an apron with so many pockets it's practically armor. Laughs like she means it.",
+    traits:["Never forgets a drink order or a secret told at her bar","Has a complex unofficial credit system that somehow works","Can read a room's tension level in seconds and calibrate accordingly","Makes a non-alcoholic house brew that she gives to people she's worried about"],
+    secret:"Dova is technically a guild employee but also a named informant for a separate organization — not hostile, but parallel. She passes on nothing that harms her regulars. She has, once, passed on something that saved the whole branch without anyone knowing it came from her. The arrangement is old, the details classified even from Aldric.",
+    hooks:["She slides a folded note with someone's drink: 'Don't open it here.'","A traveler sits at the bar and she serves them without being asked what they want — and they don't seem surprised","She asks a trusted party to quietly remove someone from the premises before Aldric sees them"],
+    stats:["Perception +8","Sleight of Hand +6","Brewing (Legendary)","Guild Informant — Classification Unknown"]
+  },
+  { id:"waiter", name:"Pip Sallow", role:"Guildhall Server & Odd-Jobs", race:"Halfling, early 20s", icon:"🥘",
+    summary:"Fastest moving thing in the guildhall, somehow always where he's needed and almost never where he's not. Enthusiastic to a fault, desperately wants to be an adventurer, and is being gently protected from that ambition by everyone who likes him.",
+    personality:"Bright-eyed, relentlessly cheerful, asks too many questions about what it's like 'out there.' Has a talent for being invisible when useful and visible when annoying. Genuinely kind. More perceptive than he looks.",
+    appearance:"Small even for a halfling, with unruly brown curls and ink smudges on his wrists from writing down orders he forgets to stop taking. Wears the tavern apron two sizes too big. Always slightly out of breath.",
+    traits:["Has memorized everyone's usual order","Draws maps of 'the adventures he's going to have someday' — some are disturbingly accurate","Has a nose for when people are lying, just doesn't know what to do with it yet","The guildhall cats follow him. All of them."],
+    secret:"Pip is the illegitimate child of a guild Rank 9 operative who doesn't know he exists. Pip doesn't know who his parent is. He just knows the guild took him in when he was seven and no one has ever told him the full story. He stopped asking. He hasn't stopped wondering. One of his 'adventure maps' accidentally sketched a location that his missing parent's last mission was centered on.",
+    hooks:["He asks a party to take him 'just to the edge of town, just to see' — and something actually happens","He brings a party the wrong order... which turns out to be a note slipped under a plate by someone who knew they'd be there","He's seen someone hanging around outside the guildhall for three nights and finally tells someone"],
+    stats:["Stealth +5","Perception +4","Persuasion +4","Sleight of Hand +3 (Unofficial)"]
+  },
+  { id:"quartermaster", name:"Sister Velka Dorn", role:"Quartermaster & Archivist", race:"Human (Lapsed Cleric), 40s", icon:"🗝️",
+    summary:"Manages the equipment locker, the contract archive, and the deep records room — the last of which most people don't know exists. Was once a cleric of a knowledge deity; now serves a different kind of truth.",
+    personality:"Meticulous, precise, with flashes of dark humor that appear without warning. Has opinions about how things are stored, filed, and returned. Will lend equipment to a party she trusts; will not lend her good ink to anyone.",
+    appearance:"Tall, angular, hair gone silver early. Reading glasses she refuses to admit she needs. Carries a ring of keys that is too large for the building's known doors. Wears simple grey robes with a guild badge pinned exactly level.",
+    traits:["Knows where every piece of guild equipment is, including the pieces that aren't logged","Has read every contract filed at this branch going back 30 years","Can authenticate a document in seconds and spot a forgery in less","Does not gossip. Does tell you what you need to know, sometimes unprompted."],
+    secret:"The deep records room contains files on guild operations that predate the current Charter. Velka has read them all. Some describe things that, technically, the guild should not have survived doing. She catalogued them, said nothing, and started keeping her own coded notes. She serves the guild. She also serves what the guild claims to stand for. She's watching to see if those things stay the same.",
+    hooks:["She pulls an old contract from the archives: 'This is about where you're going.'","A piece of returned equipment has markings she recognizes from a file that shouldn't exist","She asks a party to verify what actually happened on a job — not for the report, for the record"],
+    stats:["History +10","Investigation +9","Religion +7","Arcana +6","Former Rank 5 (Church Transfer)"]
+  },
+  { id:"trainer", name:"Kael Orvaine", role:"Field Trainer & Combat Coordinator", race:"Half-orc, late 30s", icon:"🛡️",
+    summary:"Runs orientation for new recruits, posts the difficulty ratings on contracts, and is responsible for the sign on the wall that reads 'DEAD MEMBERS COMPLETE NO QUESTS.' A pragmatist who has made peace with caring.",
+    personality:"Measured, economical with words, will give you exactly the advice you need to not die — once. Doesn't repeat himself. Has a laugh that's rare and worth earning. Holds a deep professional respect for competence wherever he finds it.",
+    appearance:"Built like a door. Moves like something that has been hurt before and decided to learn from it. One tusk is chipped; he says it's from a training accident, everyone assumes otherwise. Always wears lightweight scale mail, even indoors.",
+    traits:["Rates every incoming party within 10 minutes of watching them interact","Keeps informal notes on which contract types suit which party compositions","Will pull a contract for a group he thinks isn't ready yet — and explain exactly why","Runs sparring sessions at dawn that anyone can join, no questions asked"],
+    secret:"Kael lost a full party on a Head Office sanctioned mission that he was told was low-risk. The official report listed it as a field accident. He has the real orders. He kept the job because walking away felt like abandoning the people the guild could still protect. He does not know what he will do if he discovers Aldric knew the mission was compromised.",
+    hooks:["He refuses to rate a new contract — and won't say why until pushed","He asks a senior party to take a rookie along, phrasing it like a favor but meaning it as a test","He approaches a party privately after a debrief: 'I need to ask you something. Off the record.'"],
+    stats:["Athletics +9","Perception +7","Insight +6","Survival +7","Tactics (Expert)","Former Rank 6"]
+  }
+];
+
+function buildCard(npc) {
+  const card = document.createElement('div');
+  card.className = 'npc-card';
+  card.innerHTML = `
+    <div class="card-header">
+      <div class="npc-icon">${npc.icon}</div>
+      <div style="flex:1">
+        <div class="npc-name">${npc.name}</div>
+        <div class="npc-role">${npc.role}</div>
+        <div class="npc-race">${npc.race}</div>
+      </div>
+      <div class="expand-hint">Tap ▾</div>
+    </div>
+    <div class="card-summary">${npc.summary}</div>
+    <div class="card-expanded">
+      <div class="expanded-inner">
+        <div>
+          <div class="exp-label">Personality</div><div class="exp-body">${npc.personality}</div>
+          <div class="exp-label">Appearance</div><div class="exp-body">${npc.appearance}</div>
+          <div class="exp-label">Notable Traits</div>
+          <ul class="trait-list">${npc.traits.map(t=>`<li>${t}</li>`).join('')}</ul>
+          <div class="exp-label">Guild Stats</div>
+          <div class="stat-row">${npc.stats.map(s=>`<span class="stat-pill">${s}</span>`).join('')}</div>
+        </div>
+        <div>
+          <div class="secret-box">
+            <div class="exp-label">🔒 GM Secret</div>
+            <div class="exp-body">${npc.secret}</div>
+          </div>
+          <br/>
+          <div class="hook-box">
+            <div class="exp-label">⚓ Adventure Hooks</div>
+            <ul class="trait-list">${npc.hooks.map(h=>`<li>${h}</li>`).join('')}</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  card.addEventListener('click', () => {
+    const was = card.classList.contains('expanded');
+    document.querySelectorAll('.npc-card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!was) { card.classList.add('expanded'); setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'nearest'}),50); }
+  });
+  return card;
+}
+
+document.getElementById('npcGrid').append(...npcs.map(buildCard));
+</script>
+</body>
+</html>

@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talan — Continent Primer</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0c08;
+    --bg2: #171209;
+    --parch: #c8b890;
+    --parch-dim: #8a7a58;
+    --parch-bright: #e8d8a8;
+    --gold: #c8900a;
+    --gold-bright: #f0b020;
+    --gold-dim: #7a5808;
+    --red: #8a1a08;
+    --red-bright: #c02808;
+    --green: #1a4a18;
+    --green-bright: #2a7a28;
+    --ink: #1a1408;
+    --text: #d0c8a8;
+    --text-dim: #7a7058;
+    --era-creation: #6a4a8a;
+    --era-elden: #2a6a8a;
+    --era-gods: #8a6a2a;
+    --era-crimson: #8a1a1a;
+    --era-lost: #4a4a6a;
+    --era-golden: #8a7a1a;
+    --era-dark: #4a1a1a;
+    --era-adventurer: #1a5a3a;
+    --shadow: rgba(0,0,0,0.6);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse at 30% 10%, #1a1408 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 90%, #0a0c08 0%, transparent 50%);
+    min-height: 100vh;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── PARCHMENT TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  /* ── HEADER ── */
+  .world-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .header-ornament {
+    font-size: 1.2rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.5em;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .world-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    color: var(--gold-bright);
+    letter-spacing: 0.08em;
+    text-shadow:
+      0 0 40px rgba(200,144,10,0.5),
+      0 0 80px rgba(200,144,10,0.2),
+      2px 3px 0px rgba(0,0,0,0.8);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .world-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--parch-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .world-date {
+    display: inline-block;
+    margin-top: 14px;
+    border: 1px solid var(--gold-dim);
+    padding: 5px 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    border-radius: 2px;
+    background: rgba(200,144,10,0.06);
+  }
+
+  /* ── NAV TABS ── */
+  .tab-bar {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(200,144,10,0.2);
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 9px 16px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover { color: var(--parch); }
+  .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+
+  .tab-panel { display: none; animation: fadeUp 0.3s ease; }
+  .tab-panel.active { display: block; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex; align-items: center; gap: 14px; margin: 36px 0;
+  }
+  .div-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(200,144,10,0.25), transparent); }
+  .div-rune { color: var(--gold-dim); font-size: 0.75rem; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 44px; }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(200,144,10,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-body {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+    font-weight: 300;
+  }
+  .section-body p { margin-bottom: 12px; }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  /* ── CARD GRID ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .info-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,144,10,0.12);
+    border-radius: 3px;
+    padding: 14px 16px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .info-card:hover {
+    border-color: rgba(200,144,10,0.28);
+    background: rgba(255,255,255,0.04);
+  }
+
+  .info-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  .info-card-body {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 8px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(200,144,10,0.3) 10%, rgba(200,144,10,0.3) 90%, transparent);
+  }
+
+  .era {
+    position: relative;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .era:hover { border-color: rgba(200,144,10,0.15); }
+
+  .era-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+
+  .era-dot {
+    position: absolute;
+    left: -24px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    flex-shrink: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .era-date {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  .era-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    flex: 1;
+  }
+
+  .era-chevron {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .era.open .era-chevron { transform: rotate(180deg); }
+
+  .era-body {
+    display: none;
+    padding: 0 16px 14px 16px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    animation: fadeUp 0.2s ease;
+  }
+  .era.open .era-body { display: block; }
+
+  .era-tag {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+
+  /* Era color schemes */
+  .era-creation .era-header { background: linear-gradient(to right, rgba(106,74,138,0.18), transparent); }
+  .era-creation .era-name { color: #c084fc; }
+  .era-creation .era-dot { background: #c084fc; }
+
+  .era-elden .era-header { background: linear-gradient(to right, rgba(42,106,138,0.18), transparent); }
+  .era-elden .era-name { color: #60c8f0; }
+  .era-elden .era-dot { background: #60c8f0; }
+
+  .era-gods .era-header { background: linear-gradient(to right, rgba(138,106,42,0.18), transparent); }
+  .era-gods .era-name { color: #f0c040; }
+  .era-gods .era-dot { background: #f0c040; }
+
+  .era-crimson .era-header { background: linear-gradient(to right, rgba(138,26,26,0.25), transparent); }
+  .era-crimson .era-name { color: #f87171; }
+  .era-crimson .era-dot { background: #f87171; }
+
+  .era-lost .era-header { background: linear-gradient(to right, rgba(74,74,106,0.18), transparent); }
+  .era-lost .era-name { color: #a0a0c8; }
+  .era-lost .era-dot { background: #a0a0c8; }
+
+  .era-golden .era-header { background: linear-gradient(to right, rgba(138,122,26,0.2), transparent); }
+  .era-golden .era-name { color: #f0d060; }
+  .era-golden .era-dot { background: #f0d060; }
+
+  .era-dark .era-header { background: linear-gradient(to right, rgba(74,26,26,0.25), transparent); }
+  .era-dark .era-name { color: #e07060; }
+  .era-dark .era-dot { background: #e07060; }
+
+  .era-adventurer .era-header { background: linear-gradient(to right, rgba(26,90,58,0.2), transparent); }
+  .era-adventurer .era-name { color: #34d399; }
+  .era-adventurer .era-dot { background: #34d399; }
+
+  /* ── REGION CARDS ── */
+  .region-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .region-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,144,10,0.1);
+    border-left: 3px solid;
+    border-radius: 0 4px 4px 0;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+  .region-card:hover { background: rgba(255,255,255,0.04); }
+
+  .region-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .region-god {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+
+  .region-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    flex: 1;
+  }
+
+  .region-type {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--text-dim);
+  }
+
+  .region-chevron {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    transition: transform 0.2s;
+  }
+  .region-card.open .region-chevron { transform: rotate(180deg); }
+
+  .region-body {
+    display: none;
+    padding: 0 16px 14px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text);
+    animation: fadeUp 0.2s ease;
+  }
+  .region-card.open .region-body { display: block; }
+
+  .region-detail {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .region-pill {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-dim);
+  }
+
+  /* ── FACTIONS ── */
+  .faction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .faction-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,144,10,0.1);
+    border-radius: 4px;
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .faction-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+
+  .faction-card:hover {
+    border-color: rgba(200,144,10,0.25);
+    background: rgba(255,255,255,0.035);
+  }
+
+  .faction-card.open { border-color: rgba(200,144,10,0.3); }
+
+  .faction-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    color: var(--parch-bright);
+    margin-bottom: 4px;
+  }
+
+  .faction-type {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .faction-summary {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .faction-detail {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(200,144,10,0.15);
+    font-size: 0.87rem;
+    line-height: 1.65;
+    color: var(--text);
+    animation: fadeUp 0.2s ease;
+  }
+  .faction-card.open .faction-detail { display: block; }
+
+  /* ── MAGIC & FAITH ── */
+  .scale-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .scale-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,144,10,0.08);
+    border-radius: 3px;
+    padding: 12px 14px;
+  }
+
+  .scale-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .scale-content { flex: 1; }
+
+  .scale-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .scale-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    border-left: 3px solid var(--gold-dim);
+    background: rgba(200,144,10,0.06);
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    margin: 16px 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--parch);
+  }
+
+  .callout-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: rgba(200,144,10,0.2);
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(200,144,10,0.08);
+  }
+
+  @media (max-width: 520px) {
+    .era-date { display: none; }
+    .tab-btn { padding: 8px 10px; font-size: 0.55rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="world-header">
+    <span class="header-ornament">⸻ ✦ ⸻</span>
+    <div class="world-title">Talan</div>
+    <div class="world-subtitle">The Great Continent · World of Tyrnarra</div>
+    <div class="world-date">Current Year: 2532 MR — The Adventurer Era</div>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('history')">History</button>
+    <button class="tab-btn" onclick="switchTab('regions')">Regions</button>
+    <button class="tab-btn" onclick="switchTab('factions')">Factions</button>
+    <button class="tab-btn" onclick="switchTab('magic')">Magic & Faith</button>
+    <button class="tab-btn" onclick="switchTab('world')">The World</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TAB: HISTORY -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="tab-panel active" id="tab-history">
+
+    <div class="section">
+      <div class="section-title">✦ The Ages of Talan</div>
+      <div class="section-body">
+        <p>History on Talan is measured in two calendars: <strong>GR (Gods Reign)</strong>, counting backward from the establishment of the Gods' Law, and <strong>MR (Mortal Reign)</strong>, counting forward from that same moment. The current year is <strong>2532 MR</strong>.</p>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">On Counting Years</div>
+        The transition point — 0 GR / 0 MR — is the Week of Crimson Rain. Everything before it is measured in GR counting down. Everything after is MR counting up. Scholars of history must always note which calendar they reference.
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="era era-creation" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">6001 GR</div>
+          <div class="era-name">The Creation Era <span class="era-tag" style="background:rgba(192,132,252,0.15);color:#c084fc;border:1px solid rgba(192,132,252,0.2)">Open</span></div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          The beginning of recorded possibility. What came before 6001 GR is unknown — or deliberately unwritten. The Creation Era marks the point at which the Wellspring's outpouring gave rise to Tyrnarra as a distinct world, and Talan as its great continent. The gods were present and active from the first moment. This era is kept deliberately open; its depths may yet be explored.
+        </div>
+      </div>
+
+      <div class="era era-elden" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">6000 GR — 2945 GR</div>
+          <div class="era-name">The Elden Era</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          For over three thousand years, Talan was dominated by the Elden — an ancient race of immense power and sophistication whose origins remain disputed. Neither fully mortal nor fully divine, they built civilizations of staggering scale and engaged in constant territorial conflict with the gods over the question of dominion: who held rights over mortal lands, mortal souls, mortal destiny. The gods could not simply destroy them. The Elden would not simply yield.<br><br>
+          Then, in 2945 GR, they vanished. Every Elden. Everywhere. On the same day. No war, no plague, no exodus was recorded. They were simply gone — their cities intact, their libraries full, their hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across all of Talan, are among the most sought-after and dangerous places in the known world.
+        </div>
+      </div>
+
+      <div class="era era-gods" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">2944 GR — 1 GR</div>
+          <div class="era-name">The Gods' Era</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          With the Elden gone, the gods moved to fill the void — and found nothing standing between them and total dominion over mortal life. What followed was nearly three thousand years of divine rule: gods as kings, gods as landlords, gods as law. Mortals lived under the direct and often capricious governance of beings of immense power.<br><br>
+          It was not uniformly terrible. Some gods were just, even benevolent. Many mortals knew prosperity under divine rule. But the gods were also petty, jealous, and deeply territorial. Their conflicts with one another — over borders, followers, resources, and pride — repeatedly consumed mortal populations in wars they had no say in starting and no power to end.
+        </div>
+      </div>
+
+      <div class="era era-crimson" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">0 GR — 0 MR</div>
+          <div class="era-name">The Week of Crimson Rain</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          The pivotal event in all of Talan's history. For one week, the skies across the entire continent wept crimson — not rain, but blood. Divine blood. The nature of the conflict that caused it is still debated: was it a war among the gods? An intervention from outside the Material Plane? A judgment passed by the Wellspring itself?<br><br>
+          What is known: casualties among divine and mortal alike were of a scale that has no name. At the end of the week, the Gods' Law was established — a binding compact enforced by the Ethereal Plane itself. All gods residing on the Material Plane would be constrained: no direct governance of mortal civilizations, no open warfare, no unchecked divine control of mortal lives. Most gods, unwilling to operate under such restrictions, withdrew to Layer 3. Only thirteen remained, accepting the Law's binding in exchange for continued Material Plane presence. They are the 13 Bound Gods. The world they inherited was broken.
+        </div>
+      </div>
+
+      <div class="era era-lost" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">1 MR — 559 MR</div>
+          <div class="era-name">The Lost Era</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          For over five centuries, mortal civilization simply tried to survive. The gods were constrained. The divine infrastructure — the systems of governance, food distribution, law enforcement — had been divine-built, and without active divine management, it collapsed. Mortals, who had never been asked to govern themselves, had to learn.<br><br>
+          The Lost Era is characterized by fragmentation, rediscovery, and immense loss of knowledge. Entire libraries of the Gods' Era were lost. Languages fractured and drifted. Populations crashed in some regions, migrated in others. Slowly, painstakingly, mortal kingdoms began to form — imperfect, contentious, but their own. The era is called "Lost" not because nothing happened, but because so much of what happened was simply not recorded.
+        </div>
+      </div>
+
+      <div class="era era-golden" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">560 MR — 1325 MR</div>
+          <div class="era-name">The Golden Era</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          Named for the civilization that defined it: the Golden Empire, a dwarven empire that rose from the southern heartlands and, over seven centuries of expansion, conquest, and political absorption, came to control approximately 70% of Talan. At its peak it was the largest mortal empire in recorded history — a monument to what mortals could build when freed from direct divine governance.<br><br>
+          The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age — fossilized in the old place-names that survive to this day.
+        </div>
+      </div>
+
+      <div class="era era-dark" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">1321 MR — 2135 MR</div>
+          <div class="era-name">The Dark Era & The Guild's Birth</div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          In 1321 MR, Golden Empire miners breached something deep beneath the earth — a sealed place, old beyond reckoning. What emerged was the Corrupted God: not a deity of the Gods' Law, not bound by the Ethereal Compact, something older and something wrong. Its influence spread through the rock and soil like poison through water. Its spawn — countless, varied, relentless — erupted across Talan. By 1325 MR the Golden Empire had collapsed entirely, its infrastructure overwhelmed, its population shattered.<br><br>
+          What followed was eight centuries of attrition. The Corrupted God's forces did not conquer — they hunted. Probed. Destroyed. Drove mortals apart and then eliminated them in isolation. Kingdoms fell. Populations dwindled. The 13 Bound Gods could not directly intervene; the Gods' Law held even in this crisis.<br><br>
+          In this darkness, something unprecedented emerged. Not a king's army. Not a god's command. A group of people — adventurers, wanderers, soldiers without banners — began to resist. Not for coin, not for titles, but because their own conscience demanded it. They organized, slowly, across borders and nations. They became the Adventurers Guild.<br><br>
+          The Guild grew from desperate resistance cells into a continent-spanning organization: the only institution on Talan with reach, resources, and the independent will to stand against the Corrupted God's tide. They did not answer to kings. They answered to the mission. In 2135 MR, a party of adventurers descended further than any before them and defeated the Corrupted God — not slaying it precisely, but wounding it so deeply that its active influence collapsed. The spawn retreated. The darkness receded.
+        </div>
+      </div>
+
+      <div class="era era-adventurer open" onclick="toggleEra(this)">
+        <div class="era-header">
+          <div class="era-dot"></div>
+          <div class="era-date">2135 MR — Present (2532 MR)</div>
+          <div class="era-name">The Adventurer Era <span class="era-tag" style="background:rgba(52,211,153,0.12);color:#34d399;border:1px solid rgba(52,211,153,0.2)">Current</span></div>
+          <div class="era-chevron">▾</div>
+        </div>
+        <div class="era-body">
+          Four centuries of rebuilding, expansion, and uneasy opportunity. Kingdoms have risen in the ruins of the Dark Era — some rebuilt on old foundations, some entirely new, some assembled from conquered neighbors. The Adventurers Guild, no longer fighting for survival against a singular threat, has transformed: still independent, still outside government, but now a world-spanning institution of enormous soft power. It brokers contracts, maintains neutral ground, and quietly influences more political decisions than any king would like to admit.<br><br>
+          The threats of the Corrupted God linger. Spawn still emerge from deep places. Old ruins still harbor things that should not have survived. But the world is alive again — trading, scheming, building, exploring. It is a time of genuine opportunity and genuine danger in equal measure. History is being made by anyone willing to reach for it.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TAB: REGIONS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-regions">
+    <div class="section">
+      <div class="section-title">✦ Regions of Talan</div>
+      <div class="section-body">
+        <p>Talan's political geography is organized loosely around the domains of the 13 Bound Gods, though mortal kingdoms rarely map cleanly onto divine territories. The central sea, <strong>Midarra</strong>, divides the continent into rough compass quadrants and serves as the great highway of trade and conflict.</p>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">Starting Region</div>
+        Millhaven lies in the south-central band of Talan — within the overlapping influence of Earth (Sarrum) and Law (Forseti), near the coast of Midarra. Close enough to the central sea to feel the pull of every corner of the continent; far enough from the major powers to operate with some freedom.
+      </div>
+    </div>
+
+    <div class="region-list" id="regionList"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TAB: FACTIONS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-factions">
+    <div class="section">
+      <div class="section-title">✦ Major Powers & Factions</div>
+      <div class="section-body">
+        <p>Talan in 2532 MR is a world of competing interests. No single power controls the continent. The void left by the Golden Empire has never been filled — and many have tried.</p>
+      </div>
+    </div>
+    <div class="faction-grid" id="factionGrid"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TAB: MAGIC & FAITH -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-magic">
+
+    <div class="section">
+      <div class="section-title">✦ Magic in Daily Life</div>
+      <div class="section-body">
+        <p>Magic is not rare in Talan — it is infrastructure. It is as ordinary as a mill or a road, as expected as a blacksmith. The question is never whether magic exists, but how much of it is available here, and who controls it.</p>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-item">
+          <div class="scale-icon">🏚️</div>
+          <div class="scale-content">
+            <div class="scale-label">Village</div>
+            <div class="scale-desc">A hedge witch or herbalist with minor charms. A shrine to the local god tended by a lay priest. Folk magic woven into daily life — blessing a harvest, reading weather, treating illness. No formal magical infrastructure, but magic is present in small ways everywhere.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">🏘️</div>
+          <div class="scale-content">
+            <div class="scale-label">Town</div>
+            <div class="scale-desc">A proper magic shop stocking common components, scrolls, and minor enchantments. A dedicated spellcaster — perhaps a wizard's modest practice or a cleric's healing house. A temple with at least one ordained priest. Magic is a service industry here.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">🏙️</div>
+          <div class="scale-content">
+            <div class="scale-label">City</div>
+            <div class="scale-desc">Multiple magical specialists. Enchanted infrastructure — street lighting, water purification, message networks. High-level casters available for the right price. Major temples with divine contact capability. The Adventurers Guild maintains a full branch office.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">🏛️</div>
+          <div class="scale-content">
+            <div class="scale-label">Major City</div>
+            <div class="scale-desc">Archmage-tier practitioners. Direct access to divine intermediaries. Magical academies and great libraries. Enchanted city districts. The kind of power that shapes wars and topples governments. A place where even visiting adventurers feel the weight of what walks these streets.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"><div class="div-line"></div><div class="div-rune">✦</div><div class="div-line"></div></div>
+
+    <div class="section">
+      <div class="section-title">✦ Faith & the Gods</div>
+      <div class="section-body">
+        <p>Religion on Talan is not a matter of belief — it is a matter of relationship. The gods exist. Everyone knows they exist. You can travel to their city and, with sufficient cause and patience, request an audience. Faith is not about whether the gods are real; it is about how you relate to them.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="info-card-title">Common Worship</div>
+          <div class="info-card-body">Most people offer prayers to multiple gods across their day — a sailor's dawn prayer to Shuun, a merchant's midday blessing to Jianna, an evening invocation to whichever god governs their domain. Devotion to a single god is respected but considered unusually focused.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Priests & Clerics</div>
+          <div class="info-card-body">Ordained priests typically dedicate to one god or one pantheon. Their divine power is real and demonstrably so — healing, blessing, divine smite. This is not metaphor. It is a professional relationship with a genuine supernatural entity.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">The 13 & Beyond</div>
+          <div class="info-card-body">The 13 Bound Gods are the most accessible, but many other gods exist in Layer 1 and Layer 3. Elven ancestral pantheons, deep god cults, demon lord worship — all have churches and real divine power flowing through them. The morality of the worshippers is a separate question from whether the god is real.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Atheists</div>
+          <div class="info-card-body">A peculiar philosophical position. An atheist does not deny the gods exist — that would be absurd. They deny that the gods deserve worship, divine authority, or the title "god" in any meaningful sense. "Powerful being, yes. Worthy of reverence? Prove it." A small but vocal intellectual minority, mostly in Law and Commerce domains.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TAB: THE WORLD -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-world">
+    <div class="section">
+      <div class="section-title">✦ Midarra — The Central Sea</div>
+      <div class="section-body">
+        <p>The great inland sea at the heart of Talan is called <strong>Midarra</strong> — an ancient name whose roots scholars argue over, though most agree it translates roughly to <em>The Still Mirror</em> or <em>The Deep Eye</em>. It is Talan's highway, its battleground, and its shared backyard.</p>
+        <p>The island of <strong>Basamortua</strong> sits at its center, home to the city of <strong>Malagarra</strong> — neutral ground by centuries of treaty, claimed by no kingdom and in theory governed by none. In practice, Malagarra is governed by money, tradition, and the quiet threat of every navy that depends on its port remaining open.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="div-line"></div><div class="div-rune">✦</div><div class="div-line"></div></div>
+
+    <div class="section">
+      <div class="section-title">✦ The Cloud Sea</div>
+      <div class="section-body">
+        <p>Beyond the shores of Talan lies not open ocean but the Cloud Sea — an infinite, luminous plain of white vapor that rings the known world. It does not move with wind or tide. Conventional ships that attempt to cross it sink slowly and silently, pulled under by something that does not behave like ordinary water.</p>
+        <p>Only <strong>cloudships</strong> — vessels specially built with keels and hulls adapted to the Cloud Sea's properties — can traverse it. They are expensive, rare, and strategically critical. The difference between a regional power and a world power is whether they own a cloudship fleet. The Cloud Sea swallows the sun and both moons each cycle, returning them from the opposite horizon — as if beneath it lies another world entirely.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="div-line"></div><div class="div-rune">✦</div><div class="div-line"></div></div>
+
+    <div class="section">
+      <div class="section-title">✦ Naming the World</div>
+      <div class="section-body">
+        <p>The age of a place is written in its name. Ancient sites — ruins of the Elden, old kingdoms from the Gods' Era, natural features named in the Lost Era — carry names derived from old tongues now long drifted from their origins. <strong>Argia Esfera</strong>, for instance, descends from a phrase meaning <em>Sphere of Light</em>, its original form worn smooth by centuries of use.</p>
+        <p>Newer settlements and institutions name themselves plainly, in the common tongue of the day: the <strong>Order of Steam</strong>, the <strong>Free City</strong>, the <strong>River Duchies</strong>. A historian can roughly date a location just from how its name sounds.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="doc-footer">Talan Continent Primer · 2532 MR · For GM Reference</div>
+
+</div>
+
+<script>
+// ── TAB SWITCHING ──
+function switchTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ── ERA TOGGLE ──
+function toggleEra(el) {
+  el.classList.toggle('open');
+}
+
+// ── REGION DATA ──
+const regions = [
+  {
+    name: "The Northern Reaches",
+    god: "Wind · Fisaya",
+    color: "#60c8f0",
+    type: "Tundra, mountain passes, monastery fortresses",
+    places: ["Baerfrost", "Air Monastery", " Arctic Passes"],
+    desc: "The cold north where Fisaya's winds are literal and constant. The Air Monastery sits above the snowline, a fortress of monks who study wind magic and serve as Fisaya's most visible mortal institution. Baerfrost is the largest permanent settlement — a city of fur traders, miners, and people stubborn enough to stay.",
+    pills: ["Cold Climate", "Wind Magic", "Isolationist"]
+  },
+  {
+    name: "The Northeast Forests",
+    god: "Dunc · Dinka",
+    color: "#4ade80",
+    type: "Ancient forest, scattered kingdoms",
+    places: ["Lands of Villtur", "Fellibylur", "Azkataria"],
+    desc: "Dense old-growth forest covering the northeast quadrant. The god Dinka's domain is one of the least understood — Dunc is a word whose meaning has drifted so far from its source that scholars disagree on its translation. The kingdoms here tend toward independence and mutual suspicion.",
+    pills: ["Forest Terrain", "Dispersed Power", "Old Magic"]
+  },
+  {
+    name: "The Commerce Heartlands",
+    god: "Commerce · Jianna",
+    color: "#fbbf24",
+    type: "Trade routes, merchant cities, central plains",
+    places: ["Azhamour", "Emarrea", "Twin Suns"],
+    desc: "The great trading heartlands of Talan. Jianna's domain is everywhere money moves — which means everywhere. The Commerce territories are technically neutral ground for trade, giving even hostile nations reason to maintain embassies here. Twin Suns is named for a phenomenon visible from its hilltop — on clear days at certain angles, both moons are visible alongside the sun.",
+    pills: ["Trade Hub", "Politically Neutral", "High Wealth"]
+  },
+  {
+    name: "The Shadow Steppes",
+    god: "Darkness · Araphel",
+    color: "#a78bfa",
+    type: "Open steppe, shadow-touched plains",
+    places: ["Shadow Steppes", "Jun Festin", "Irzasna"],
+    desc: "The western steppes where Araphel's darkness is not evil — it is simply the absence of light, the space between stars, the quiet between words. Misunderstood by outsiders, the Shadow Steppes cultures have a sophisticated relationship with darkness as concept and power. Shadow magic is studied openly here.",
+    pills: ["Shadow Magic", "Misunderstood Culture", "Open Steppe"]
+  },
+  {
+    name: "The Floating Isles of Shuun",
+    god: "Water · Shuun",
+    color: "#38bdf8",
+    type: "Island chains, sea territories, floating archipelago",
+    places: ["Floating Isles of Shuun", "Balatur Tian"],
+    desc: "The great water domain covering the western sea approach. The Floating Isles are exactly what they sound like — islands that drift, anchored by deep-water roots to shifting channels. Navigation here requires local knowledge or magic. Shuun's priests are among the most practically useful in Talan: weather-reading, safe passage, drowning prevention.",
+    pills: ["Naval Power", "Island Chains", "Water Magic"]
+  },
+  {
+    name: "The Eastern Wilds",
+    god: "Chaos · Visuna",
+    color: "#f472b6",
+    type: "Unpredictable terrain, wild magic zones",
+    places: ["Ekasadaun Principality", "Chaos Frontier"],
+    desc: "The eastern frontier where Visuna's chaos is woven into the land itself. Wild magic surges are common. Terrain shifts. The Ekasadaun Principality has somehow maintained political coherence here for centuries — a feat that outsiders attribute to either exceptional governance or exceptional luck.",
+    pills: ["Wild Magic", "Unstable Terrain", "Frontier"]
+  },
+  {
+    name: "The Law Empires",
+    god: "Law · Forseti",
+    color: "#94a3b8",
+    type: "Empire, city-states, codified civilization",
+    places: ["Legea Empire", "Thousand Kingdoms", "Land of Law", "Vernua Dominion", "Nanuu Republic"],
+    desc: "The most politically complex region of Talan. Forseti's domain encompasses multiple competing powers all claiming to embody law and order — which they define differently. The Legea Empire favors central authority. The Thousand Kingdoms favor distributed sovereignty. The Nanuu Republic favors democratic process. Their debates are conducted in courts, trade agreements, and occasional border conflicts.",
+    pills: ["Politically Dense", "Codified Law", "Multiple Powers"]
+  },
+  {
+    name: "The Volcanic South",
+    god: "Fire · Komo",
+    color: "#fb923c",
+    type: "Volcanic highlands, fire-adapted civilizations",
+    places: ["Order of Steam", "No Man's Land (south)", "Tahu Tangata"],
+    desc: "The southern volcanic band where Komo's fire is geological as much as magical. The Order of Steam is one of Talan's great industrial institutions — a kingdom-guild hybrid that has harnessed volcanic power for manufacturing at a scale no other region matches. Tahu Tangata is an older name, its meaning partially lost, referring to the indigenous culture of the volcanic coast.",
+    pills: ["Industrial Power", "Fire Magic", "Volcanic Terrain"]
+  },
+  {
+    name: "The Central Isle — Freedom",
+    god: "Freedom · Cronus",
+    color: "#34d399",
+    type: "Island-nation, neutral territory, sea crossroads",
+    places: ["Basamortua", "Malagarra"],
+    desc: "The island of Basamortua in the heart of Midarra is Cronus's domain — freedom as absolute value, freedom from governance, freedom of movement. Malagarra, its capital, is the closest thing Talan has to a truly neutral city. It belongs to no kingdom. Every navy respects its port. Every guild has an office here. Its governance is a perpetually renegotiated agreement between whoever holds the most leverage.",
+    pills: ["Truly Neutral", "Sea Crossroads", "Lawless-ish"]
+  },
+  {
+    name: "The Southern Heartlands",
+    god: "Earth · Sarrum",
+    color: "#a8a060",
+    type: "Farmlands, river valleys, ancient settlements",
+    places: ["The Earth Realm", "Galdua Jendea", "River Duchies", "Jakinduria"],
+    desc: "Sarrum's domain is Talan's breadbasket — the most fertile agricultural land on the continent. The River Duchies are exactly that: a loose confederation of noble houses whose wealth comes from controlling river trade. Galdua Jendea (old name, meaning disputed — possibly 'Place of Many Waters') is the cultural and administrative center.",
+    pills: ["Agricultural Wealth", "River Trade", "Old Nobility"]
+  },
+  {
+    name: "The Dreaming Southwest",
+    god: "Time · Tani",
+    color: "#c084fc",
+    type: "Temporal anomalies, ancient ruins, dreamlike landscape",
+    places: ["The Dreaming Cape", "Lost Kingdom"],
+    desc: "Tani's domain is time — and the southwest shows it. Temporal anomalies are reported throughout the region: moments that repeat, ruins that seem newer than they should be, travelers who arrive before they left. The Dreaming Cape is the most extreme example — a coastal region where the boundary between past and present is genuinely unclear.",
+    pills: ["Temporal Magic", "Unstable Time", "Ancient Ruins"]
+  },
+  {
+    name: "The Knowledge Interior",
+    god: "Knowledge · Curi",
+    color: "#67e8f9",
+    type: "Libraries, academies, research territories",
+    places: ["Harro Dishgatsua", "The Golden Coast", "Gotolelkua"],
+    desc: "Curi's domain prizes knowledge above all else — its collection, preservation, and control. The interior south houses some of Talan's great libraries and magical academies. Harro Dishgatsua (an old name, meaning approximately 'Place Where Knowledge Rests') is home to archives that predate the Lost Era. Access is negotiated, not assumed.",
+    pills: ["Academic Power", "Great Libraries", "Information Broker"]
+  },
+  {
+    name: "Argia Esfera — Domain of Light",
+    god: "Light · Iro",
+    color: "#fde68a",
+    type: "Prosperous kingdom, divine light, southeast",
+    places: ["Argia Esfera", "Lira Casas", "Hareaveldi"],
+    desc: "The domain of Iro, god of Light — and the name says everything. Argia Esfera descends from an old phrase meaning Sphere of Light, the name worn smooth by centuries of use. It is among the most prosperous and stable regions of Talan, its divine connection to light magic creating both genuine beauty and genuine power. Hareaveldi to the south has a partially independent cultural identity, its old name suggesting it predates Iro's influence in the region.",
+    pills: ["Divine Light", "Prosperous", "Politically Stable"]
+  }
+];
+
+// ── FACTION DATA ──
+const factions = [
+  {
+    name: "The Adventurers Guild",
+    type: "World-spanning independent institution",
+    color: "#34d399",
+    summary: "Founded during the Dark Era not by kings but by conscience, the Guild is now the most powerful non-governmental organization on Talan. It operates in every major settlement and answers to no crown.",
+    detail: "The Guild's independence is its founding principle and its greatest asset. During the Dark Era it was the only thing standing between mortal civilization and extinction — and that history gives it a moral authority no kingdom can claim. Its charter, established mid-Dark Era, explicitly prohibits alignment with any single government, religion, or god. Members swear to the Guild, not to any flag. Head Office coordinates the world network; regional directors manage multi-kingdom areas; branch guildmasters run local offices. The soft power the Guild wields — in information, in talent, in reach — quietly shapes political outcomes across Talan."
+  },
+  {
+    name: "The 13 Bound Gods",
+    type: "Divine powers, Material Plane residents",
+    color: "#f0d080",
+    summary: "Thirteen deities who accepted the Gods' Law in exchange for continued presence on the Material Plane. They walk among mortals, maintain divine domains, and influence events within the Law's constraints.",
+    detail: "The Gods' Law prohibits direct governance of mortal populations, open warfare between gods on the Material Plane, and unchecked divine control of mortal lives. Within those constraints, the 13 operate with considerable freedom — inspiring followers, granting divine power to priests, maintaining their domains, and engaging in the political games that gods never quite gave up. They cannot command armies. They can certainly advise them. Each god's relationship with their domain's mortal kingdoms varies enormously."
+  },
+  {
+    name: "The Order of Steam",
+    type: "Industrial kingdom-guild hybrid",
+    color: "#fb923c",
+    summary: "Part kingdom, part guild, entirely pragmatic. The Order controls the southern volcanic belt's manufacturing output and has leveraged it into political power that punches far above its territorial size.",
+    detail: "Founded during the Adventurer Era as a practical response to reconstruction needs, the Order of Steam has no noble bloodlines, no divine patron, and no interest in either. It is run by elected councils of master craftspeople and engineers. Its volcanic-powered manufactories produce weapons, tools, and magical components at scale no other region matches. Its independence is maintained by the simple fact that everyone needs what it makes — which makes warfare against it deeply impractical."
+  },
+  {
+    name: "The Legea Empire",
+    type: "Major eastern empire",
+    color: "#94a3b8",
+    summary: "The largest single political entity in the Law domain, the Legea Empire views itself as the natural successor to the Golden Empire's civilizing mission. Most of its neighbors disagree, sometimes loudly.",
+    detail: "The Empire is old, stable, and deeply convinced of its own rightness. Its legal code is genuinely sophisticated — centuries of refinement have produced a system that, within its own logic, functions well. The problem, from its neighbors' perspective, is that the Empire views its legal code as universal rather than regional. It has a history of 'extending legal protection' to border territories in ways that look remarkably like annexation."
+  },
+  {
+    name: "The Nanuu Republic",
+    type: "Democratic city-state network",
+    color: "#60c8f0",
+    summary: "An experiment in elected governance that has lasted three centuries against considerable expectation. The Nanuu Republic is small, principled, and perpetually exhausting to negotiate with.",
+    detail: "Every significant decision in the Republic requires a vote — sometimes multiple votes, sometimes a referendum, sometimes both. Outsiders find this maddening. Citizens find it essential. The Republic's military is modest; its diplomatic corps is extraordinary. It survives on the principle that everyone prefers having it as a neutral interlocutor to the alternative. The Guild maintains a particularly close relationship with the Republic — the values of independence and non-alignment resonate."
+  },
+  {
+    name: "The Remnants of Corruption",
+    type: "Threat, not faction — Corrupted God's lingering spawn",
+    color: "#e07060",
+    summary: "The Corrupted God was defeated in 2135 MR, but not destroyed. Its spawn still emerge from deep places. Its influence still lingers in certain ruins. The Guild's original mission — the reason it exists — never fully ended.",
+    detail: "Four centuries after the defeat, the frequency of emergence events has dropped dramatically — but never to zero. Deep delving operations, mining below certain depths, disturbing certain sealed Elden ruins — all carry risk of encounter. The spawn vary wildly: some are mindless, some are disturbingly intelligent, all are hostile to mortal life. The Guild maintains a standing research operation attempting to understand and predict emergence patterns. Some members believe the Corrupted God is healing."
+  }
+];
+
+// ── BUILD REGIONS ──
+const regionList = document.getElementById('regionList');
+regions.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'region-card';
+  card.style.borderLeftColor = r.color;
+  card.innerHTML = `
+    <div class="region-header" onclick="toggleRegion(this.parentElement)">
+      <div class="region-god" style="color:${r.color}">${r.god}</div>
+      <div class="region-name" style="color:${r.color}">${r.name}</div>
+      <div class="region-type">${r.type}</div>
+      <div class="region-chevron">▾</div>
+    </div>
+    <div class="region-body">
+      ${r.desc}
+      <div class="region-detail">
+        ${r.places.map(p => `<span class="region-pill">📍 ${p}</span>`).join('')}
+        ${r.pills.map(p => `<span class="region-pill">${p}</span>`).join('')}
+      </div>
+    </div>
+  `;
+  regionList.appendChild(card);
+});
+
+function toggleRegion(card) {
+  card.classList.toggle('open');
+}
+
+// ── BUILD FACTIONS ──
+const factionGrid = document.getElementById('factionGrid');
+factions.forEach(f => {
+  const card = document.createElement('div');
+  card.className = 'faction-card';
+  card.style.setProperty('--accent', f.color);
+  card.querySelector = () => {};
+  card.innerHTML = `
+    <div class="faction-card-inner" style="position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${f.color};opacity:0.6;border-radius:2px 2px 0 0;margin:-16px -16px 0"></div>
+    </div>
+    <div class="faction-name" style="color:${f.color};margin-top:4px">${f.name}</div>
+    <div class="faction-type">${f.type}</div>
+    <div class="faction-summary">${f.summary}</div>
+    <div class="faction-detail">${f.detail}</div>
+  `;
+  card.addEventListener('click', () => card.classList.toggle('open'));
+  factionGrid.appendChild(card);
+});
+
+// ── ERA TOGGLE ──
+function toggleEra(el) { el.classList.toggle('open'); }
+</script>
+</body>
+</html>
