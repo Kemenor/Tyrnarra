@@ -179,6 +179,11 @@
     justify-content: center;
   }
 
+  .god-grid.life-grid:has(.god-card.expanded) {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
   /* ── GOD CARD ── */
   .god-card {
     background: var(--bg2);
