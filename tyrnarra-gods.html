@@ -364,6 +364,69 @@
     font-style: italic;
   }
 
+  /* ── SECRET SECTION ── */
+  .secret-section {
+    border-top: 1px solid rgba(180,40,40,0.25);
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+
+  .secret-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(200,70,70,0.55);
+    background: rgba(150,30,30,0.06);
+    border: 1px solid rgba(180,40,40,0.2);
+    border-radius: 2px;
+    padding: 6px 14px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .secret-toggle:hover {
+    color: rgba(220,90,90,0.9);
+    border-color: rgba(200,60,60,0.45);
+    background: rgba(150,30,30,0.12);
+  }
+
+  .secret-content {
+    display: none;
+    margin-top: 10px;
+    background: rgba(120,20,20,0.1);
+    border: 1px solid rgba(180,40,40,0.25);
+    border-left: 3px solid rgba(200,60,60,0.5);
+    border-radius: 0 3px 3px 0;
+    padding: 12px 14px;
+    animation: fadeUp 0.2s ease;
+  }
+
+  .secret-content.revealed { display: block; }
+
+  .secret-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(210,80,80,0.65);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(180,40,40,0.2);
+  }
+
+  .secret-text {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--text);
+    font-style: italic;
+  }
+
   /* ── CONCLAVE NOTE ── */
   .conclave-box {
     background: rgba(200,168,74,0.04);
@@ -420,7 +483,7 @@
   <div class="header-sub">Grand Gods of the Material Plane · Bound by the Gods' Law · 0 MR</div>
   <div class="header-groups">
     <span class="group-pill">✦ The Primordial Six — Origin of All Things</span>
-    <span class="group-pill">✦ The Ascendant Six — Born of Mortal Civilization</span>
+    <span class="group-pill">✦ The Ascendant Six — Shaped by Mortal Civilization</span>
     <span class="group-pill">✦ The Life God — The Fulcrum</span>
   </div>
 </div>
@@ -456,7 +519,7 @@
     <div class="gdiv-line"></div>
     <div class="gdiv-label">
       The Life God
-      <span class="gdiv-sublabel">The Fulcrum · Origin and Destination · The Ascended Mortal</span>
+      <span class="gdiv-sublabel">The Fulcrum · Origin and Destination</span>
     </div>
     <div class="gdiv-line"></div>
   </div>
@@ -500,7 +563,8 @@ const gods = {
       nature: "Araphel embodies the truth that darkness is neutral. It shelters the innocent child from the storm and the thief from pursuit with the same indifferent grace. His worship is built on the radical idea that what you were before you came to him is irrelevant. What matters is who you choose to be in the dark.",
       worship: "His church offers true forgiveness — not absolution, but a genuine new beginning. To join his clergy is to leave your old life behind entirely, whatever it was. Former criminals and former victims serve side by side. Many of his most devoted priests have committed acts they will not discuss and have been offered a door out of who they were.",
       depiction: "Most commonly depicted as a Fetchling or Pale Elf — a figure that exists at the boundary between light and shadow. Myrria itself was once conquered and is now known as the City of Second Chances, a fact that shaped his domain as much as any theology.",
-      note: "Myrria's history of conquest and rebirth is not a scandal in his church — it is the sermon. The city is the proof of concept."
+      note: "Myrria's history of conquest and rebirth is not a scandal in his church — it is the sermon. The city is the proof of concept.",
+      secret: ""
     },
     {
       name: "Fisaya",
@@ -515,7 +579,8 @@ const gods = {
       nature: "Change is not good or evil. The cold wind that kills the harvest is the same wind that clears the plague from the city. Fisaya makes no promises about whether the change she brings will be welcome — only that it will come, and that those who move with it fare better than those who resist.",
       worship: "Her worship is restless — no fixed liturgy, no permanent temples, shrines that are meant to be built and dismantled. Her clergy travel constantly and are expected to never sleep in the same place for more than a week. She is the patron of travelers, wanderers, those rebuilding after loss, and those who need the world to be different than it is.",
       depiction: "Depicted as a female Kitsune with multicolour fur — each colour a different aspect of change, shifting depending on the light. No two depictions agree on which colours or in what arrangement. This is considered theologically correct.",
-      note: "Haizava is known for its architecture — buildings designed to be partially open to the wind, which is considered a form of worship."
+      note: "Haizava is known for its architecture — buildings designed to be partially open to the wind, which is considered a form of worship.",
+      secret: ""
     },
     {
       name: "Komo",
@@ -530,7 +595,8 @@ const gods = {
       nature: "Komo's fire is not wrath — it is drive. The smith's forge, the artist's obsession, the merchant's burning need to build something that lasts. His darker aspect is the fire that burns too hot: ambition that consumes everything around it, passion that becomes destruction. He does not judge either.",
       worship: "Artisans, craftspeople, architects, and those with burning ambitions pray to Komo before beginning any great work. His clergy maintain the great forges in Eldara, which are open to any who come to create. The act of making something is itself a form of worship. His priests are expected to have a craft.",
       depiction: "Typically depicted as a Lizardfolk — a figure that stands in fire comfortably, working with material that would destroy others. Often shown mid-creation, hands in the forge, expression focused rather than peaceful.",
-      note: "Eldara's forges never go cold. This is not metaphor — the forge at the city's center has burned continuously since the city's founding and is considered the closest thing to Komo's physical presence in the world."
+      note: "Eldara's forges never go cold. This is not metaphor — the forge at the city's center has burned continuously since the city's founding and is considered the closest thing to Komo's physical presence in the world.",
+      secret: ""
     },
     {
       name: "Sarrum",
@@ -545,7 +611,8 @@ const gods = {
       nature: "Tradition is not good because it is old. It is good because it carries something worth carrying. Sarrum's worship asks: what are you protecting? What are you holding? The answer determines whether his blessing is deserved. He does not distinguish between the guard holding the gate and the elder holding the old stories — both are performing the same sacred act.",
       worship: "His clergy are keepers — of records, of buildings, of customs, of the dead's names. His temples double as archives, and his priests are expected to memorize what cannot be written. In Lurrath, the clergy perform a daily vigil at dawn in which the names of the city's dead are read aloud. The list is very long. They do not skip days.",
       depiction: "Typically depicted as a Minotaur — immovable, vast, patient. Usually shown standing still, which in a depiction of a god is rarer than it sounds. The stillness is the point.",
-      note: "Sarrum's relationship with the Golden Empire's memory is complex. The Empire invoked him constantly. The Empire also fell. His clergy have spent centuries carefully parsing what this means."
+      note: "Sarrum's relationship with the Golden Empire's memory is complex. The Empire invoked him constantly. The Empire also fell. His clergy have spent centuries carefully parsing what this means.",
+      secret: ""
     },
     {
       name: "Shuun",
@@ -560,13 +627,14 @@ const gods = {
       nature: "The social aspect of Shuun is her most misunderstood domain. She does not govern happiness or community in a simple sense — she governs connection itself, including the painful kind. The honest conversation that ends a friendship and the honest conversation that saves one are both in her domain. Water reflects what is, not what we want to see.",
       worship: "Her clergy are counselors, mediators, and listeners. Her temples are built near water wherever possible and are designed for private conversation — small rooms, flowing water, no echoes. In Uravel, the clergy maintain a tradition of sitting with anyone who asks, for as long as they need, without speaking unless spoken to first.",
       depiction: "Depicted as an Undine — a figure that is themselves partly water, that exists at the boundary between human and element. Usually shown seated and still, which contrasts with the restlessness of the water around her.",
-      note: "Uravel's Floating Isles shift position slowly over years, which the clergy interpret as Shuun's commentary on the conversations happening in the world."
+      note: "Uravel's Floating Isles shift position slowly over years, which the clergy interpret as Shuun's commentary on the conversations happening in the world.",
+      secret: ""
     },
     {
       name: "Iro",
       primary: "Light · Healing · Zealotry",
       domains: ["Dust", "Healing", "Sun", "Divine Magic", "Belief", "Zealotry"],
-      city: "Ljosarn — Argia Esfera, Sphere of Light",
+      city: "Ljosarn — The Everbright City",
       orb: "☀️",
       accent: "#e8d040",
       orbBg: "rgba(122,106,16,0.6)",
@@ -575,7 +643,8 @@ const gods = {
       nature: "Iro does not consider zealotry a flaw in worship — he considers it an inevitable consequence of genuine belief. To truly believe in something is to organize your life around it, and that organization can be beautiful or terrifying depending on what you believe and what you do in its name. He makes no editorial distinction. The healing priest and the inquisitor both burn with his light.",
       worship: "His clergy are divided into the Healing Orders and the Ordained — the first dedicated to medicine and care, the second to the propagation and defense of faith. Both consider themselves Iro's truest servants. They have disagreed about this for centuries with occasional violence. Iro apparently finds this acceptable.",
       depiction: "Typically depicted as a Nephilim — a figure caught between the mortal and something greater, which suits a god whose domain sits between gentle healing and consuming fervor. Usually shown with one hand raised, either in blessing or in judgment. Artists rarely agree on which.",
-      note: "Ljosarn and Myrria have a complicated historical relationship. Light and Darkness are not enemies in Tyrnarra's theology, but their respective zealous clergies have occasionally disagreed on practical matters."
+      note: "Ljosarn and Myrria have a complicated historical relationship. Light and Darkness are not enemies in Tyrnarra's theology, but their respective zealous clergies have occasionally disagreed on practical matters.",
+      secret: ""
     }
   ],
   ascendant: [
@@ -583,7 +652,7 @@ const gods = {
       name: "Enki",
       primary: "Knowledge · Occult Magic · Perfection",
       domains: ["Glyph", "Knowledge", "Perfection", "Occult Magic"],
-      city: "Thekkavar — The Library City",
+      city: "Thekkavar — The City of Learning",
       orb: "📚",
       accent: "#4080b0",
       orbBg: "rgba(26,58,90,0.6)",
@@ -592,7 +661,8 @@ const gods = {
       nature: "Enki's neutrality is the most absolute of the thirteen. He does not weight knowledge by its application. The scholar who cures a plague and the scholar who engineers one are equally his devotees if they pursue their work with rigor and genuine curiosity. His only moral position is against ignorance — not out of virtue, but out of distaste.",
       worship: "His greatest creation is the Infinite Library — an extradimensional space that connects to every library in existence across space and time. Scholars who are granted access can find any book that has ever been written, including books not yet written and books deliberately destroyed. Access is granted by Enki's clergy after a test of genuine intellectual commitment. Failing the test costs nothing. Cheating on it costs everything.",
       depiction: "Depicted as a black-haired Catfolk male — curious, precise, usually shown reading or examining something. The expression is always focused. He is never depicted looking at the viewer.",
-      note: "The Infinite Library has a reading room that has never been found by anyone who went looking for it. Several scholars have found it accidentally. They all describe arriving via a different path."
+      note: "The Infinite Library has a reading room that has never been found by anyone who went looking for it. Several scholars have found it accidentally. They all describe arriving via a different path.",
+      secret: ""
     },
     {
       name: "Forseti",
@@ -607,7 +677,8 @@ const gods = {
       nature: "The inclusion of Secrecy in a deity of Truth is Forseti's central theological paradox, and her clergy spend considerable effort explaining it. The resolution: some truths must be protected to remain true. A secret kept in service of justice is not a lie. A truth deployed to destroy is not justice. The line between these is exactly where Forseti lives.",
       worship: "Her clergy serve as judges, investigators, and keepers of sealed records. Her temples contain two sections — the open court, where all may come and all proceedings are public, and the sealed archive, where truths are kept that cannot be safely known. Her priests take an oath to know the difference between these two rooms and to never confuse them.",
       depiction: "Typically depicted as an Android — a figure of perfect impartiality, of law without personal feeling, of truth without emotional investment. This is simultaneously the most and least comforting depiction in the pantheon.",
-      note: "Forseti and Enki's relationship is the most studied divine relationship in Tyrnarra. They share knowledge but not philosophy. There are entire academic departments dedicated to the question of what they think of each other."
+      note: "Forseti and Enki's relationship is the most studied divine relationship in Tyrnarra. They share knowledge but not philosophy. There are entire academic departments dedicated to the question of what they think of each other.",
+      secret: ""
     },
     {
       name: "Hinka",
@@ -622,7 +693,8 @@ const gods = {
       nature: "Hinka's death domain is not the grim reaper's death — it is the hunter's death, clean and purposeful. The prey that dies quickly and the hunter that makes a clean kill are both honoring her. Prolonged suffering, wasteful killing, killing without purpose — these are the closest things she has to sins. Death in her theology is a threshold, not an ending, and should be crossed with dignity.",
       worship: "Her clergy serve at both ends of the hunt — blessing the hunt before it begins and sitting with the dying as they cross over. Her priests in the field are some of the most practically skilled in the world. Her priests in the sick rooms are some of the most peaceful. Both consider themselves the same vocation.",
       depiction: "Depicted as a red-headed Orc with a bow — a figure of physical capability and purposeful motion. Almost always shown mid-draw or at the moment of release, never before or after. The moment of decision is her domain.",
-      note: "Hinka and Iro share the Zeal domain, which has caused friction between their respective clergies. Hinka's zealots tend to be quieter about it."
+      note: "Hinka and Iro share the Zeal domain, which has caused friction between their respective clergies. Hinka's zealots tend to be quieter about it.",
+      secret: ""
     },
     {
       name: "Jianna",
@@ -637,7 +709,8 @@ const gods = {
       nature: "Jianna's Primal Magic domain surprises those who think of commerce as purely social. But cities grow from land, wealth flows from natural abundance, and family is the first ecology. She understands civilization as a natural phenomenon — as organic as a forest, as fragile, and as capable of growth given the right conditions.",
       worship: "Merchants pray to her before significant deals. Families invoke her at meals and births. City founders lay a coin with her mark in the foundation stone. Her clergy are often found in the merchant districts of cities, not as traders themselves but as the trusted neutral parties in disputes, the keepers of weights and measures, the arbiters of fair dealing.",
       depiction: "Typically depicted as a Vishkanya — elegant, precise, possessed of a beauty that has an edge to it. Usually shown with one hand open in offering and one hand closed, which is interpreted variously as generosity and its limits, or as the difference between a fair price and a non-negotiable one.",
-      note: "Merkavar is reportedly the wealthiest city on Talan per capita — not because Jianna favors her own city, but because the clergy take tithing seriously and reinvest it in the city's infrastructure with exceptional competence."
+      note: "Merkavar is reportedly the wealthiest city on Talan per capita — not because Jianna favors her own city, but because the clergy take tithing seriously and reinvest it in the city's infrastructure with exceptional competence.",
+      secret: ""
     },
     {
       name: "Tani",
@@ -648,11 +721,12 @@ const gods = {
       accent: "#9070b0",
       orbBg: "rgba(58,42,74,0.6)",
       orbGlow: "rgba(144,112,176,0.25)",
-      summary: "She was killed in the Week of Crimson Rain. She remembers it fully. She is the youngest of the thirteen and the only one who knows from the inside what death is. She governs time, fate, and peaceful passing — the only god whose theology is built on personal experience of her own domain.",
-      nature: "Tani's death is the defining fact of her divinity. Every other god understands death as observers. She understands it as participant. This makes her death domain categorically different from Hinka's — Hinka governs the hunt's end, the clean crossing. Tani governs what comes after. What the Postlife feels like. She knows. She came back. She has not described it, but those who have spoken to her say the knowing is visible in all three of her faces.",
+      summary: "She was killed in the Week of Crimson Rain. She remembers it fully. She is the youngest of the thirteen — and the only one who has actually died. Who crossed from living to dead and came back. She governs time, fate, and peaceful passing: the only god whose theology is built on personal experience of her own domain.",
+      nature: "The Postlife is not a mystery to the gods. Many of the thirteen have been banished there; any of them could travel there if they wished. What they have never experienced is dying — the crossing itself, the moment of becoming dead. Tani has. She came back, and somewhere between the death and the return, something happened that she has not described to anyone. Not what the Postlife contains. Something else. The other gods know there is a gap in what she tells them. She does not deny it.",
       worship: "The Threefold Goddess is simultaneously the innocent child who does not know what is coming, the woman in full knowledge of what was and what will be, and the elder who has already accepted it. She is prayed to at births, at crossings into adulthood, and at deaths. Her clergy are also threefold — the Keepers of Beginning, the Readers of Fate, and the Guides of Passing, each a separate order that cooperates around the full arc of life.",
       depiction: "Three women simultaneously: innocent child, woman in her prime, wisened elder. Statues sometimes show all three as a single three-faced figure. Sometimes as three separate figures facing outward. Both are theologically valid. She experiences time non-linearly and finds neither representation more accurate than the other.",
-      note: "Tani is the only god the others are genuinely curious about. What she knows — what death is, what comes after, whether the Postlife is what the theology describes — she does not volunteer. At the Frae City conclave, the seat beside hers is always empty."
+      note: "The mystery of Tani is not the Postlife — the others have been there. They could visit tomorrow. But none of them have crossed from the living side, and none of them know what she found between the moment of dying and the moment she woke as a god. She has had a very long time to decide she is not going to say.",
+      secret: ""
     },
     {
       name: "Vesuna",
@@ -667,7 +741,8 @@ const gods = {
       nature: "The Life domain sits with Vesuna because life is fundamentally chaotic — it grows where it shouldn't, refuses to die when it should, mutates, adapts, surprises. She and Cronus share conceptual territory around the unpredictable expression of mortal existence, and their relationship is accordingly warm, competitive, and frequently surprising to observers.",
       worship: "Vesuna has no fixed liturgy and her clergy consider this a feature. Her worship is the most varied of the thirteen — different cities have entirely different practices, all considered valid. The unifying element is the coin: a coin appears in every form of her worship, as offering, as divination, as the central symbol of her theology. Luck is a coin. It has two sides. She represents both.",
       depiction: "Vesuna has no fixed depiction — no ancestry, no gender, no consistent form. Only symbols: a coin, a die, an open hand with something unseen in it. Her clergy consider this a profound theological statement about the nature of chaos. Critics consider it convenient. Both are correct.",
-      note: "Nahaskel is reportedly laid out differently every time someone maps it. The clergy say the city reflects the goddess. Urban planners say the city has a drainage problem that causes periodic structural shifts. Both explanations have supporting evidence."
+      note: "Nahaskel is reportedly laid out differently every time someone maps it. The clergy say the city reflects the goddess. Urban planners say the city has a drainage problem that causes periodic structural shifts. Both explanations have supporting evidence.",
+      secret: ""
     }
   ],
   life: [
@@ -680,11 +755,12 @@ const gods = {
       accent: "#50a0a0",
       orbBg: "rgba(26,58,58,0.6)",
       orbGlow: "rgba(80,160,160,0.3)",
-      summary: "Not born a god. Made one. During the Week of Crimson Rain, when twelve divine beings were tearing the world apart, a mortal united them and gave them a law to live under. The other twelve accepted this. They still don't entirely know how that happened.",
-      nature: "Cronus governs freedom not as an abstract ideal but as a daily practice — the freedom to move, to dream, to choose differently than you chose yesterday. His mortal origin is not a weakness in his theology; it is the theology. He is proof that the line between mortal and divine is crossable. His clergy spend a great deal of time managing the implications of this.",
+      summary: "The god who ended the Week of Crimson Rain. Twelve divine beings tearing the world apart — and then, without warning, they stopped. What Cronus said to them has never been stated plainly. He governs freedom, dreams, and travel from Frae City, the only neutral ground on Talan. He is the only one of the thirteen who has never explained his own origin.",
+      nature: "Cronus governs freedom not as an abstract ideal but as a daily practice — the freedom to move, to dream, to choose differently than you chose yesterday. Of the thirteen, he is the most opaque. Every other god's domain traces clearly to something ancient or obvious. His authority among them — how he holds the position he holds, why the others defer to him at the conclave — is a question scholars have studied for generations without a satisfying answer. His clergy consider the mystery a feature.",
       worship: "Frae City is the most religiously diverse city in Talan — every faith has a presence there, because Cronus requires it. His own clergy are the lightest touch of the thirteen: no mandatory rituals, no required attendance, a standing offer of sanctuary to anyone who asks. The only thing his temple will not permit is the restriction of another person's freedom within its walls. This has led to interesting situations.",
-      depiction: "Depicted as a mortal man — deliberately, specifically mortal. No divine light, no inhuman beauty, no celestial signifiers. A man who could be anyone. This is the point. Artists who try to make him look divine are gently corrected by his clergy. He is the god who looks like you could sit next to him in a tavern. In Frae City, you occasionally can.",
-      note: "The other twelve were asked, once, what they thought of Cronus. None of them answered the same way. All twelve answers were variations on respect. Several were also variations on bafflement."
+      depiction: "Depicted as an unremarkable man. No divine light, no inhuman beauty, no celestial signifiers — just a person who could be anyone. His clergy offer various theological explanations for this. None of them agree. In Frae City, people occasionally claim to have sat next to him in a tavern. A surprising number of those claims hold up under scrutiny.",
+      note: "The other twelve were asked, once, what they thought of Cronus. None of them answered the same way. All twelve answers were variations on respect. Several were also variations on bafflement.",
+      secret: "Was mortal. The only one of the thirteen who began as a living man. He ended the Week of Crimson Rain through persuasion, not power — offered the twelve a framework they could accept, and in accepting it they made him something they could not undo. The twelve know. They were there. The secret holds because none of them have chosen to break it. His clergy do not know. His worshippers do not know. Scholars have come close twice. Both times the work was quietly buried."
     }
   ]
 };
@@ -735,6 +811,13 @@ function buildCard(god, gridId) {
           </div>
         </div>
       </div>
+      <div class="secret-section">
+        <button class="secret-toggle" onclick="toggleSecret(event, this)">⚿ &nbsp; GM Secret — Click to Reveal</button>
+        <div class="secret-content">
+          <div class="secret-label">⚿ &nbsp; Secret — Known to Very Few</div>
+          <div class="secret-text">${god.secret || '<span style="color:var(--text-dim)">— not yet defined —</span>'}</div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -753,6 +836,15 @@ function buildCard(god, gridId) {
 gods.primordial.forEach(g => buildCard(g, 'primordialGrid'));
 gods.ascendant.forEach(g => buildCard(g, 'ascendantGrid'));
 gods.life.forEach(g => buildCard(g, 'lifeGrid'));
+
+function toggleSecret(e, btn) {
+  e.stopPropagation();
+  const content = btn.nextElementSibling;
+  const revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed
+    ? '⚿ &nbsp; Hide Secret'
+    : '⚿ &nbsp; GM Secret — Click to Reveal';
+}
 </script>
 </body>
 </html>
