@@ -564,6 +564,61 @@
     font-style: normal;
   }
 
+  /* ── GM SECRET BOX ── */
+  .secret-era {
+    margin-top: 14px;
+    border-top: 1px solid rgba(160,40,40,0.2);
+    padding-top: 10px;
+  }
+
+  .secret-era-toggle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(180,60,60,0.55);
+    background: rgba(120,20,20,0.06);
+    border: 1px solid rgba(160,40,40,0.2);
+    border-radius: 2px;
+    padding: 5px 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .secret-era-toggle:hover {
+    color: rgba(210,80,80,0.9);
+    border-color: rgba(180,50,50,0.4);
+    background: rgba(120,20,20,0.12);
+  }
+
+  .secret-era-content {
+    display: none;
+    margin-top: 10px;
+    background: rgba(100,15,15,0.1);
+    border: 1px solid rgba(160,40,40,0.2);
+    border-left: 3px solid rgba(180,50,50,0.5);
+    border-radius: 0 3px 3px 0;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text);
+    animation: fadeUp 0.2s ease;
+  }
+
+  .secret-era-content.revealed { display: block; }
+
+  .secret-era-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(200,70,70,0.6);
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(160,40,40,0.15);
+  }
+
   /* ── FOOTER ── */
   .doc-footer {
     text-align: center;
@@ -670,6 +725,13 @@
         <div class="era-body">
           The pivotal event in all of Talan's history. For one week, the skies across the entire continent wept crimson — not rain, but blood. Divine blood. The nature of the conflict that caused it is still debated: was it a war among the gods? An intervention from outside the Material Plane? A judgment passed by the Wellspring itself?<br><br>
           What is known: casualties among divine and mortal alike were of a scale that has no name — hundreds of gods and countless mortals perished or were displaced. At the end of the week, the Gods' Law was established — a binding compact enforced by the Ethereal Plane itself. All gods residing on the Material Plane would be constrained: no direct governance of mortal civilizations, no open warfare, no unchecked divine control of mortal lives. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes — Prelife, Postlife, or the planes between — taking their own pantheons with them. Thirteen accepted the Law's binding and remained. They are the 13 Bound Gods. The world they inherited was broken.
+          <div class="secret-era">
+            <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The True Cause</button>
+            <div class="secret-era-content">
+              <div class="secret-era-label">⚿ &nbsp; Known to Very Few</div>
+              The Week of Crimson Rain was not started by a divine dispute, a cosmic judgment, or an outside intervention. It began with a single act: the killing of Tani, god of Time and Fate — the first Grand God ever slain, a thing that had been considered impossible. The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war out of fear as much as fury. Common people do not know this. Scholars have theories. The gods know exactly what happened and have not said.
+            </div>
+          </div>
         </div>
       </div>
 
@@ -900,11 +962,11 @@ const regions = [
   },
   {
     name: "The Northeast Forests",
-    god: "Dunc · Dinka",
+    god: "Hunt · Hinka",
     color: "#4ade80",
     type: "Ancient forest, scattered kingdoms",
     places: ["Lands of Villtur", "Fellibylur", "Azkataria"],
-    desc: "Dense old-growth forest covering the northeast quadrant. The god Dinka's domain is one of the least understood — Dunc is a word whose meaning has drifted so far from its source that scholars disagree on its translation. The kingdoms here tend toward independence and mutual suspicion.",
+    desc: "Dense old-growth forest covering the northeast quadrant. The god Hinka's domain here is one of the most ancient-feeling on Talan — deep forest, predator and prey, the hunt as a way of life rather than a pastime. The kingdoms here tend toward independence and mutual suspicion.",
     pills: ["Forest Terrain", "Dispersed Power", "Old Magic"]
   },
   {
@@ -936,7 +998,7 @@ const regions = [
   },
   {
     name: "The Eastern Wilds",
-    god: "Chaos · Visuna",
+    god: "Chaos · Vesuna",
     color: "#f472b6",
     type: "Unpredictable terrain, wild magic zones",
     places: ["Ekasadaun Principality", "Chaos Frontier"],
@@ -990,11 +1052,11 @@ const regions = [
   },
   {
     name: "The Knowledge Interior",
-    god: "Knowledge · Curi",
+    god: "Knowledge · Enki",
     color: "#67e8f9",
     type: "Libraries, academies, research territories",
     places: ["Harro Dishgatsua", "The Golden Coast", "Gotolelkua"],
-    desc: "Curi's domain prizes knowledge above all else — its collection, preservation, and control. The interior south houses some of Talan's great libraries and magical academies. Harro Dishgatsua (an old name, meaning approximately 'Place Where Knowledge Rests') is home to archives that predate the Lost Era. Access is negotiated, not assumed.",
+    desc: "Enki's domain prizes knowledge above all else — its collection, preservation, and control. The interior south houses some of Talan's great libraries and magical academies. Harro Dishgatsua (an old name, meaning approximately 'Place Where Knowledge Rests') is home to archives that predate the Lost Era. Access is negotiated, not assumed.",
     pills: ["Academic Power", "Great Libraries", "Information Broker"]
   },
   {
@@ -1002,8 +1064,8 @@ const regions = [
     god: "Light · Iro",
     color: "#fde68a",
     type: "Prosperous kingdom, divine light, southeast",
-    places: ["Argia Esfera", "Lira Casas", "Hareaveldi"],
-    desc: "The domain of Iro, god of Light — and the name says everything. Argia Esfera descends from an old phrase meaning Sphere of Light, the name worn smooth by centuries of use. It is among the most prosperous and stable regions of Talan, its divine connection to light magic creating both genuine beauty and genuine power. Hareaveldi to the south has a partially independent cultural identity, its old name suggesting it predates Iro's influence in the region.",
+    places: ["Ljosarn", "Lira Casas", "Hareaveldi"],
+    desc: "The domain of Iro, god of Light. At its heart sits Ljosarn, the Everbright City — Iro's independent city-state and temple complex. It is among the most prosperous and stable regions of Talan, its divine connection to light magic creating both genuine beauty and genuine power. Hareaveldi to the south has a partially independent cultural identity, its old name suggesting it predates Iro's influence in the region.",
     pills: ["Divine Light", "Prosperous", "Politically Stable"]
   }
 ];
@@ -1104,6 +1166,16 @@ factions.forEach(f => {
 
 // ── ERA TOGGLE ──
 function toggleEra(el) { el.classList.toggle('open'); }
+
+// ── ERA SECRET TOGGLE ──
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  const content = btn.nextElementSibling;
+  const revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed
+    ? '⚿ &nbsp; Hide Secret'
+    : '⚿ &nbsp; GM Secret — The True Cause';
+}
 </script>
 </body>
 </html>

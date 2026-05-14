@@ -10,13 +10,6 @@ When adding a new coined name, record: **Name · Source language · Literal mean
 
 ## Confirmed by user (canonical examples)
 
-### Argia Esfera
-- **Source:** Basque — *"Argi-esfera"*
-- **Meaning:** Sphere of Light
-- **Drift:** *Argi-esfera* → *Argia Esfera* (added vowel, separated as two words)
-- **In-world:** Capital / seat of Iro (god of Light), southeast Talan
-- **Style:** Old/ancient (deity domain capital)
-
 ### Free City
 - **Source:** plain English
 - **Style:** New/modern (a recently founded or contemporary polity)
@@ -49,17 +42,17 @@ These appear in the existing HTML primers. Some don't follow the Basque/Icelandi
 | Domain | Name | Region |
 |---|---|---|
 | Wind | Fisaya | Northern reaches |
-| Dunc (?) | Dinka | Northeast forests |
+| Hunt | Hinka | Northeast forests |
 | Commerce | Jianna | Central trade lands |
 | Darkness | Araphel | Western shadow steppes |
 | Water | Shuun | Floating isles & sea |
-| Chaos | Visuna | Eastern wilds |
+| Chaos | Vesuna | Eastern wilds |
 | Law | Forseti | Southeast empires |
 | Fire | Komo | Southern volcanic lands |
 | Freedom | Cronus | Central sea isle |
 | Earth | Sarrum | Southern heartlands |
 | Time | Tani | Southwestern reaches |
-| Knowledge | Curi | Southern interior |
+| Knowledge | Enki | Southern interior |
 | Light | Iro | Southeast — Argia Esfera |
 
 ### Geography & Settlements
