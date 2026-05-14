@@ -564,6 +564,61 @@
     font-style: normal;
   }
 
+  /* ── POPULAR BELIEF BOX ── */
+  .legend-era {
+    margin-top: 14px;
+    border-top: 1px solid rgba(170,120,20,0.2);
+    padding-top: 10px;
+  }
+
+  .legend-era-toggle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(175,125,20,0.6);
+    background: rgba(110,80,10,0.07);
+    border: 1px solid rgba(160,110,20,0.22);
+    border-radius: 2px;
+    padding: 5px 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .legend-era-toggle:hover {
+    color: rgba(200,150,30,0.9);
+    border-color: rgba(180,130,20,0.45);
+    background: rgba(110,80,10,0.14);
+  }
+
+  .legend-era-content {
+    display: none;
+    margin-top: 10px;
+    background: rgba(90,65,8,0.1);
+    border: 1px solid rgba(160,110,20,0.22);
+    border-left: 3px solid rgba(180,130,20,0.5);
+    border-radius: 0 3px 3px 0;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text);
+    animation: fadeUp 0.2s ease;
+  }
+
+  .legend-era-content.revealed { display: block; }
+
+  .legend-era-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(190,140,30,0.65);
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(160,110,20,0.18);
+  }
+
   /* ── GM SECRET BOX ── */
   .secret-era {
     margin-top: 14px;
@@ -697,8 +752,24 @@
           <div class="era-chevron">▾</div>
         </div>
         <div class="era-body">
-          For over three thousand years, Talan was dominated by the Elden — an ancient race of immense power and sophistication whose origins remain disputed. Neither fully mortal nor fully divine, they built civilizations of staggering scale and engaged in constant territorial conflict with the gods over the question of dominion: who held rights over mortal lands, mortal souls, mortal destiny. The gods could not simply destroy them. The Elden would not simply yield.<br><br>
-          Then, in 2945 GR, they vanished. Every Elden. Everywhere. On the same day. No war, no plague, no exodus was recorded. They were simply gone — their cities intact, their libraries full, their hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across all of Talan, are among the most sought-after and dangerous places in the known world.
+          For over three thousand years, Talan was dominated by the Elden — an ancient race of immense power and sophistication. Neither fully mortal nor fully divine, they built civilizations of staggering scale. Little of their culture survives in comprehensible form; what does is often beyond mortal understanding to replicate. Their greatest known achievement was the creation of the <strong>Android</strong> ancestry — people of extraordinary sophistication that no civilization has since been able to reproduce.<br><br>
+          Then, in 2945 GR, every Elden vanished — on the same day, everywhere on Talan. No war, no plague, no exodus was recorded. Their cities stood intact, libraries full, hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across Talan, are among the most sought-after and dangerous places in the known world.
+          <div class="legend-era">
+            <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — What Happened to the Elden</button>
+            <div class="legend-era-content">
+              <div class="legend-era-label">◈ &nbsp; Theories & Common Belief</div>
+              Three theories dominate popular understanding of the Elden's disappearance. The first holds that they fought a war with the gods — a direct, escalating conflict — and were destroyed or driven out, their civilization unmade in a struggle too vast to leave ordinary records. The second suggests they fulfilled whatever purpose brought them into existence and departed willingly, ascending beyond the known planes. The third, more poetic, holds that they found a way out entirely: beyond the Cloud Sea, to another world, leaving everything behind by choice. All three have adherents. None have evidence.
+            </div>
+          </div>
+          <div class="secret-era">
+            <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The True Fate of the Elden</button>
+            <div class="secret-era-content">
+              <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+              The Elden were at war with the gods — and winning often enough to make the gods afraid. Rather than fight to a stalemate, they devised a final solution. They freed the <strong>Devourer</strong> — a being of pure consumption, imprisoned since before recorded history, existing only to unmake existence — and turned it loose on the gods. While the gods scrambled to fight the Devourer and protect existence, the Elden retreated deep underground and began a ritual to connect themselves directly to the Wellspring. Had it succeeded, every Elden would have become a being of near-infinite power, unified in a single hive mind, drawing from the source of all creation.<br><br>
+              The gods noticed in the last moment. With no time for anything else, they shoved the Devourer directly into the Elden's open connection to the Wellspring. The ritual completed. The Elden connected — to both the Wellspring's endless creation and the Devourer's endless destruction simultaneously. Every Elden, every individual, every piece of their civilisation collapsed into a single being: constant creation, constant decay, locked in permanent internal war. The Corrupted God.<br><br>
+              What the Golden Empire miners breached in 1321 MR was the Elden's ritual site. What emerged was what the Elden had become.
+            </div>
+          </div>
         </div>
       </div>
 
@@ -724,7 +795,14 @@
         </div>
         <div class="era-body">
           The pivotal event in all of Talan's history. For one week, the skies across the entire continent wept crimson — not rain, but blood. Divine blood. The nature of the conflict that caused it is still debated: was it a war among the gods? An intervention from outside the Material Plane? A judgment passed by the Wellspring itself?<br><br>
-          What is known: casualties among divine and mortal alike were of a scale that has no name — hundreds of gods and countless mortals perished or were displaced. At the end of the week, the Gods' Law was established — a binding compact enforced by the Ethereal Plane itself. All gods residing on the Material Plane would be constrained: no direct governance of mortal civilizations, no open warfare, no unchecked divine control of mortal lives. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes — Prelife, Postlife, or the planes between — taking their own pantheons with them. Thirteen accepted the Law's binding and remained. They are the 13 Bound Gods. The world they inherited was broken.
+          For one week the skies across the entire continent wept crimson — not rain, but blood. Divine blood. Casualties among divine and mortal alike were of a scale that has no name. At the end of the week, the Gods' Law was established — a binding compact enforced by the Ethereal Plane itself: no direct governance of mortal civilizations, no open warfare, no unchecked divine control of mortal lives. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes, taking their own pantheons with them. Thirteen accepted the Law's binding and remained. The world they inherited was broken.
+          <div class="legend-era">
+            <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — What People Think Caused It</button>
+            <div class="legend-era-content">
+              <div class="legend-era-label">◈ &nbsp; Theories & Common Belief</div>
+              The cause of the Week of Crimson Rain is the subject of ongoing scholarly debate and popular legend. Three theories dominate. The first holds that it was a war among the gods — territorial, petty, and catastrophic in scale, the same divine conflicts of the Gods' Era simply taken too far. The second suggests an intervention from outside the Material Plane: a judgment handed down from the higher layers, perhaps from the Wellspring itself. The third, favoured in more mystical traditions, holds that the gods simply became too powerful, and reality pushed back. None has been confirmed. The gods do not comment.
+            </div>
+          </div>
           <div class="secret-era">
             <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The True Cause</button>
             <div class="secret-era-content">
@@ -757,7 +835,8 @@
         </div>
         <div class="era-body">
           Named for the civilization that defined it: the Golden Empire, a dwarven empire that rose from the southern heartlands and, over seven centuries of expansion, conquest, and political absorption, came to control approximately 70% of Talan. At its peak it was the largest mortal empire in recorded history — a monument to what mortals could build when freed from direct divine governance.<br><br>
-          The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age — fossilized in the old place-names that survive to this day.
+          The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age — fossilized in the old place-names that survive to this day.<br><br>
+          Among the Empire's many pursuits, its greatest scholars attempted to recreate the Androids of the Elden — synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <strong>Automaton</strong> ancestry: formidable constructs of considerable capability, but not the living people the Elden had made. The distinction haunted Imperial scholarship until the Empire's end.
         </div>
       </div>
 
@@ -828,6 +907,46 @@
   <!-- TAB: MAGIC & FAITH -->
   <!-- ══════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-magic">
+
+    <div class="section">
+      <div class="section-title">✦ The Four Schools of Magic</div>
+      <div class="section-body">
+        <p>All magic in Tyrnarra is the same thing at its root: access to the Wellspring, the source of all existence. The four schools are not competing philosophies — they are different methods of reaching the same power. A divine spell and an arcane spell ultimately draw from the same place. The difference is in the path.</p>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-item">
+          <div class="scale-icon">⚙️</div>
+          <div class="scale-content">
+            <div class="scale-label">Arcane</div>
+            <div class="scale-desc">Accesses the Wellspring through mathematics, structured knowledge, precise forms, and ritual. The arcane tradition treats magic as a science — a set of rules that, correctly applied, produce predictable results. Each formula is a carefully calculated path to a tiny drop of Wellspring energy. Reliable, replicable, and entirely dependent on the caster understanding exactly what they are doing.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">📜</div>
+          <div class="scale-content">
+            <div class="scale-label">Occult</div>
+            <div class="scale-desc">Accesses the Wellspring through belief and story — the same mechanism by which belief shapes reality. Songs, art, legends, and oral traditions carry slivers of Wellspring energy simply by virtue of being believed and retold. The occult practitioner does not calculate a path to the Wellspring; they inherit one, embedded in a story old enough to have accumulated real power. The older and more widely believed the tradition, the stronger the access.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">🌿</div>
+          <div class="scale-content">
+            <div class="scale-label">Primal</div>
+            <div class="scale-desc">Accesses the Wellspring through the energy already present in every living thing. All life is Wellspring energy given form — primal magic reaches inward or outward to that existing connection rather than forging a new one. It is the most direct path and in some ways the most intimate: the caster is not reaching for the Wellspring, they are drawing on the piece of it they already carry.</div>
+          </div>
+        </div>
+        <div class="scale-item">
+          <div class="scale-icon">✦</div>
+          <div class="scale-content">
+            <div class="scale-label">Divine</div>
+            <div class="scale-desc">Accesses the Wellspring through the gods, who serve as a lens. A god's connection to the Wellspring is vast and direct — far beyond what any mortal can touch unaided. Divine magic works by borrowing that connection: the caster channels power through their god, and the god focuses it. The relationship is real and reciprocal. Divine power does not flow to those their god has abandoned, and a priest who loses faith does not simply lose belief — they lose access.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"><div class="div-line"></div><div class="div-rune">✦</div><div class="div-line"></div></div>
 
     <div class="section">
       <div class="section-title">✦ Magic in Daily Life</div>
@@ -1166,6 +1285,16 @@ factions.forEach(f => {
 
 // ── ERA TOGGLE ──
 function toggleEra(el) { el.classList.toggle('open'); }
+
+// ── ERA LEGEND TOGGLE ──
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  const content = btn.nextElementSibling;
+  const revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed
+    ? '◈ &nbsp; Hide Popular Belief'
+    : '◈ &nbsp; Popular Belief — What People Think Caused It';
+}
 
 // ── ERA SECRET TOGGLE ──
 function toggleEraSecret(e, btn) {

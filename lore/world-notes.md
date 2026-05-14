@@ -60,6 +60,20 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 ---
 
+## Magic — The Four Schools
+
+All magic is access to the Wellspring. The four schools are four different methods of reaching it — none is more "real" than another, and a practitioner of one school can theoretically understand (if not use) the others.
+
+- **Arcane** — uses mathematics, codified knowledge, and precise ritual to carve open tiny, controlled channels to the Wellspring. Reliable, learnable, scalable. Its practitioners treat magic as a science: the same formula produces the same result. The limitation is that you can only channel what you have formally learned to channel.
+
+- **Occult** — uses the magic left behind in stories, art, song, and belief. Because belief is a mechanism of the Wellspring, stories and cultural memory carry slivers of Wellspring energy accumulated from every mind that has held them. Occult practitioners tap this residue. The tradition is old, strange, and deeply tied to folklore — a song sung by ten thousand people over three centuries carries more power than one composed last week.
+
+- **Primal** — draws on the Wellspring energy that lives within every living being. All life is animated by the Wellspring; Primal magic is the practice of feeling that current and redirecting it. It does not require study of forms or stories — it requires attunement to the living world. Practitioners tend toward druids, healers, and those who spend their lives close to nature.
+
+- **Divine** — uses a god as a lens through which to access the Wellspring. Gods are intimately connected to the Wellspring (the original twelve are literally made of it). A divine practitioner doesn't channel the Wellspring directly — they channel the god, who channels the Wellspring for them. This makes divine magic highly reliable but entirely dependent on the relationship between worshipper and deity. A god can, in principle, withdraw access.
+
+---
+
 ## Gods — Death & Regeneration
 
 - Gods can be killed. When a god dies, their energy returns to the Wellspring.
@@ -156,13 +170,35 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 ---
 
-## The Corrupted God
+## The Elden
 
-- Not one of the 13. Not bound by the Gods' Law. Something older, something wrong.
-- Breached from deep underground in 1321 MR when Golden Empire miners dug too deep.
-- Defeated (not destroyed) in 2135 MR by the Adventurers Guild — its active influence collapsed but it was not killed.
-- Spawn still emerge from deep places. Some Guild members believe it is healing.
-- **Open question:** Is the Corrupted God a belief being? A Wellspring anomaly? A pre-creation remnant? Not yet defined.
+- An ancient race active roughly 6000–2945 GR. Neither fully mortal nor fully divine.
+- **Greatest known achievement:** the **Android** ancestry (PF2e) — synthetic people no civilisation has ever been able to replicate.
+- The Golden Empire later attempted to recreate Androids and produced the **Automaton** ancestry (PF2e) instead — formidable, but not the same thing.
+- Little of their culture survives in comprehensible form. Ruins are sought-after and dangerous.
+- **Common knowledge:** vanished 2945 GR, all on the same day, cities intact, no explanation confirmed.
+- **Popular belief:** war with gods / fulfilled their purpose / simply left.
+- **The truth:** they became the Corrupted God (see below).
+
+---
+
+## The Devourer (The Void)
+
+- A being of pure consumption — exists only to unmake existence. Imprisoned since before recorded history.
+- The Elden freed it deliberately as a weapon against the gods during their war.
+- Subsequently fused with the Elden via the gods' counter-move (see below).
+- **More detail on origin, nature, and current state to be defined later.**
+
+---
+
+## The Corrupted God — True Identity
+
+- **The Corrupted God is the Elden.** Every Elden, their entire civilisation, collapsed into a single being.
+- **How:** The Elden freed the Devourer to distract the gods. While the gods fought to protect existence, the Elden went deep underground and began a ritual to connect directly to the Wellspring — which would have made them a unified hive mind of near-infinite power. The gods noticed at the last moment and shoved the Devourer into the Elden's open Wellspring connection. The ritual completed with both forces fused: the Wellspring's endless creation and the Devourer's endless destruction, simultaneously, forever. Every Elden became one being, locked in permanent internal war.
+- **What miners breached in 1321 MR** was the Elden's ritual site. What emerged was what the Elden had become.
+- Not bound by the Gods' Law — predates it, was never party to it.
+- Defeated (not destroyed) in 2135 MR — wounded enough that active influence collapsed. Spawn still emerge. Some believe it is healing.
+- **Cannot be permanently killed by conventional means** — it contains both Wellspring and Void. What it would truly take to end it is not yet defined.
 
 ---
 

@@ -93,4 +93,4 @@ The site is live at **https://tyrnarra.kunkel.swiss** (custom domain, HTTPS enab
 ## Working notes
 
 - **HTML files can be edited freely.** Everything is in git, so changes are safe and reversible. No need to surface diffs before editing.
-- **When in doubt about canon**, check `lore/world-notes.md` and `lore/glossary.md` first, then read the relevant primer HTML, then ask.
+- **When in doubt about canon**, check `lore/world-notes.md`, `lore/glossary.md`, and `lore/timeline.md` first, then read the relevant primer HTML, then ask.
