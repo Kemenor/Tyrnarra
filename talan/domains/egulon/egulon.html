@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Egulon — Light · Iro</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0c08;
+    --bg2: #171209;
+    --parch: #c8b890;
+    --parch-dim: #8a7a58;
+    --parch-bright: #e8d8a8;
+    --gold: #c8900a;
+    --gold-bright: #f0b020;
+    --gold-dim: #7a5808;
+    --text: #d0c8a8;
+    --text-dim: #7a7058;
+    --domain-accent: #f0c040;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse at 30% 10%, #1a1408 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 90%, #0a0c08 0%, transparent 50%);
+    min-height: 100vh;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+  .nav-toggle {
+    position: fixed; top: 14px; left: 14px; z-index: 200;
+    background: rgba(15,12,8,0.85); color: var(--gold-bright);
+    border: 1px solid rgba(200,168,75,0.35);
+    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+    padding: 8px 14px; border-radius: 2px; cursor: pointer;
+    backdrop-filter: blur(4px); text-transform: uppercase;
+  }
+  .nav-toggle:hover { background: rgba(40,28,12,0.95); }
+  .site-nav {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
+    background: rgba(8,10,18,0.96); backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(200,168,75,0.18);
+    padding: 64px 20px 30px; overflow-y: auto; z-index: 190;
+    font-family: 'Crimson Pro', Georgia, serif;
+    transform: translateX(-100%); transition: transform 0.28s ease;
+  }
+  .site-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
+  .site-nav-title {
+    display: block; font-family: 'Cinzel', serif;
+    font-size: 1.1rem; letter-spacing: 0.28em;
+    color: var(--gold-bright); text-decoration: none; text-align: center;
+    margin-bottom: 24px; padding-bottom: 14px;
+    border-bottom: 1px solid rgba(200,168,75,0.18);
+    text-transform: uppercase;
+  }
+  .nav-section { margin-bottom: 22px; }
+  .nav-section-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.32em;
+    color: var(--gold-dim); margin-bottom: 8px; text-transform: uppercase;
+  }
+  .nav-list { list-style: none; padding: 0; margin: 0; }
+  .nav-list a {
+    display: block; padding: 4px 10px;
+    color: var(--text-dim); text-decoration: none; font-size: 0.92rem;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .nav-list a:hover {
+    color: var(--text); border-left-color: rgba(200,168,75,0.4);
+    background: rgba(200,168,75,0.05);
+  }
+  .nav-list a.is-current {
+    color: var(--gold-bright); border-left-color: var(--gold);
+    background: rgba(200,168,75,0.08);
+  }
+  .nav-scrim {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 180;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  }
+  .nav-scrim.open { opacity: 1; pointer-events: auto; }
+  @media (max-width: 600px) { .site-nav { width: 86vw; } }
+
+  .container {
+    position: relative; z-index: 1;
+    max-width: 920px; margin: 0 auto;
+    padding: 72px 20px 80px;
+  }
+  .breadcrumb {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; color: var(--gold-dim);
+    text-transform: uppercase; text-align: center;
+    margin-bottom: 12px;
+  }
+  .breadcrumb a { color: var(--gold-dim); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 8px; }
+
+  .header { text-align: center; margin-bottom: 40px; }
+  .header-ornament {
+    font-size: 1.1rem; color: var(--gold-dim);
+    letter-spacing: 0.5em; margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
+    color: var(--gold-bright); letter-spacing: 0.06em;
+    text-shadow: 0 0 40px rgba(200,144,10,0.45), 0 0 80px rgba(200,144,10,0.18), 2px 3px 0 rgba(0,0,0,0.8);
+    line-height: 1; margin-bottom: 10px;
+  }
+  .page-subtitle {
+    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.4em;
+    color: var(--parch-dim); text-transform: uppercase; margin-bottom: 6px;
+  }
+  .page-god-line {
+    font-family: 'Crimson Pro', serif; font-style: italic;
+    font-size: 1.1rem; color: var(--gold); margin-bottom: 12px;
+  }
+  .page-flavor {
+    font-family: 'Crimson Pro', serif; font-style: italic;
+    font-size: 1rem; line-height: 1.8; color: var(--text-dim);
+    max-width: 620px; margin: 0 auto;
+  }
+
+  .divider {
+    display: flex; align-items: center; gap: 16px;
+    margin: 40px 0 28px;
+  }
+  .div-line { flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,144,10,0.3), transparent);
+  }
+  .div-glyph { color: var(--gold-dim); font-size: 0.85rem; }
+  h2.section-heading {
+    font-family: 'Cinzel', serif; font-size: 0.85rem;
+    letter-spacing: 0.32em; color: var(--gold);
+    text-align: center; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose p { font-size: 1rem; line-height: 1.8; margin-bottom: 0.9em; }
+
+  /* Quick facts panel */
+  .facts {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 8px 18px; max-width: 720px; margin: 0 auto 24px;
+    padding: 18px 22px;
+    background: rgba(20,16,8,0.4);
+    border: 1px solid rgba(200,144,10,0.18);
+    border-left: 3px solid var(--domain-accent);
+    border-radius: 3px;
+  }
+  .facts dt {
+    font-family: 'Cinzel', serif; font-size: 0.62rem;
+    letter-spacing: 0.28em; color: var(--gold-dim);
+    text-transform: uppercase; align-self: start; padding-top: 4px;
+  }
+  .facts dd { font-size: 0.95rem; line-height: 1.6; color: var(--text); }
+  .facts dd .etym { font-style: italic; color: var(--parch-dim); font-size: 0.85rem; display: block; margin-top: 2px; }
+
+  /* City callout */
+  .gods-city {
+    text-align: center; margin: 32px auto;
+    max-width: 720px;
+    padding: 22px 22px;
+    border: 1px solid var(--domain-accent);
+    border-radius: 3px;
+    background: rgba(0,0,0,0.25);
+    position: relative;
+  }
+  .gods-city::before,
+  .gods-city::after {
+    content: '✦'; position: absolute; top: -10px;
+    background: var(--bg); padding: 0 10px;
+    color: var(--domain-accent); font-size: 0.9rem;
+  }
+  .gods-city::before { left: 20px; }
+  .gods-city::after  { right: 20px; }
+  .gods-city-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.32em; color: var(--gold-dim);
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .gods-city-name {
+    font-family: 'Uncial Antiqua', serif; font-size: 1.6rem;
+    color: var(--gold-bright); margin-bottom: 4px;
+  }
+  .gods-city-byname {
+    font-family: 'Crimson Pro', serif; font-style: italic;
+    font-size: 0.95rem; color: var(--parch);
+  }
+
+  /* Sub-region cards */
+  .subregion-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .subregion-card {
+    background: rgba(20,16,8,0.42);
+    border: 1px solid rgba(200,144,10,0.18);
+    border-radius: 3px;
+    padding: 16px 18px 14px;
+    position: relative; overflow: hidden;
+  }
+  .subregion-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%; background: var(--domain-accent);
+    opacity: 0.7;
+  }
+  .subregion-name {
+    font-family: 'Cinzel', serif; font-size: 0.95rem;
+    color: var(--gold-bright); letter-spacing: 0.12em;
+    margin-bottom: 4px; text-transform: uppercase;
+  }
+  .subregion-etym {
+    font-family: 'Crimson Pro', serif; font-style: italic;
+    font-size: 0.78rem; color: var(--parch-dim); margin-bottom: 8px;
+  }
+  .subregion-desc { font-size: 0.92rem; line-height: 1.6; color: var(--text); }
+  .subregion-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .subregion-tag {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.18em; color: var(--gold-dim);
+    text-transform: uppercase;
+    border: 1px solid rgba(200,144,10,0.25);
+    padding: 2px 7px; border-radius: 8px;
+  }
+  .subregion-tag.tbd { color: var(--text-dim); border-color: rgba(150,140,100,0.18); font-style: italic; letter-spacing: 0.12em; }
+
+  .stub-note {
+    max-width: 720px; margin: 32px auto 0;
+    padding: 14px 18px;
+    border: 1px dashed rgba(200,144,10,0.3);
+    border-radius: 3px;
+    font-style: italic; font-size: 0.9rem;
+    color: var(--parch-dim); text-align: center;
+    background: rgba(0,0,0,0.15);
+  }
+  .footer {
+    text-align: center; font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.3em;
+    color: rgba(200,144,10,0.3); margin-top: 56px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 600px) {
+    .container { padding: 56px 16px 56px; }
+    .facts { grid-template-columns: 1fr; gap: 4px 0; }
+    .facts dt { padding-top: 8px; }
+  }
+</style>
+</head>
+<body data-page="egulon">
+
+<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>
+<div class="nav-scrim" id="navScrim"></div>
+
+<aside class="site-nav" id="siteNav" aria-label="Site navigation">
+  <a href="/index.html" class="site-nav-title">Tyrnarra</a>
+
+  <div class="nav-section">
+    <div class="nav-section-label">World &amp; Cosmos</div>
+    <ul class="nav-list">
+      <li><a href="/tyrnarra-primer.html" data-page="cosmology">Cosmology</a></li>
+      <li><a href="/tyrnarra-gods.html"   data-page="gods">The 13 Bound Gods</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Talan</div>
+    <ul class="nav-list">
+      <li><a href="/talan/talan.html"   data-page="talan">Continent Overview</a></li>
+      <li><a href="/talan/history.html" data-page="history">History &amp; Eras</a></li>
+      <li><a href="/talan/magic.html"   data-page="magic">Magic — Four Schools</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Domains</div>
+    <ul class="nav-list">
+      <li><a href="/talan/domains/vindul/vindul.html"     data-page="vindul">Vindul · Wind</a></li>
+      <li><a href="/talan/domains/lautara/lautara.html"   data-page="lautara">Lautara · Commerce</a></li>
+      <li><a href="/talan/domains/myrkono/myrkono.html"   data-page="myrkono">Myrkono · Darkness</a></li>
+      <li><a href="/talan/domains/floteyn/floteyn.html"   data-page="floteyn">Floteyn · Water</a></li>
+      <li><a href="/talan/domains/sumendar/sumendar.html" data-page="sumendar">Sumendar · Fire</a></li>
+      <li><a href="/talan/domains/lioaru/lioaru.html"     data-page="lioaru">Lioaru · Time</a></li>
+      <li><a href="/talan/domains/brauogi/brauogi.html"   data-page="brauogi">Brauogi · Earth</a></li>
+      <li><a href="/talan/domains/ezkudon/ezkudon.html"   data-page="ezkudon">Ezkudon · Knowledge</a></li>
+      <li><a href="/talan/domains/egulon/egulon.html"     data-page="egulon">Egulon · Light</a></li>
+      <li><a href="/talan/domains/zuzental/zuzental.html" data-page="zuzental">Zuzental · Law</a></li>
+      <li><a href="/talan/domains/nashavel/nashavel.html" data-page="nashavel">Nashavel · Chaos</a></li>
+      <li><a href="/talan/domains/ehizahar/ehizahar.html" data-page="ehizahar">Ehizahar · Hunt</a></li>
+      <li><a href="/talan/domains/askamira/askamira.html" data-page="askamira">Askamira · Freedom</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Factions</div>
+    <ul class="nav-list">
+      <li><a href="/talan/factions/factions.html"          data-page="factions">All Factions</a></li>
+      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>
+      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>
+      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>
+      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>
+    </ul>
+  </div>
+</aside>
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><span>Egulon</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Egulon</div>
+    <div class="page-subtitle">Light Domain</div>
+    <div class="page-god-line">Bound to <b>Iro</b></div>
+    <div class="page-flavor">Sunlight on open fields, not cold brilliance. The land where the most people simply live and prosper.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>eguzkia</i> (sun) → compressed and drifted</dd>
+    <dt>Position</dt><dd>Southeast Talan, east of Ezkudon, south of Zuzental and Nashavel, coastal on Hafra</dd>
+    <dt>Terrain</dt><dd>Warm golden terrain throughout, open and relatively flat. Mountain ranges scattered through centre and west. Distinctive circular mountain ring with forest to the east. Large forested island off the southeast coast. The most settled and prosperous domain on the continent.</dd>
+    <dt>Bound God</dt><dd>Iro — domain of Light</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">God's City</div>
+    <div class="gods-city-name">Ljosarn</div>
+    <div class="gods-city-byname">The Everbright City</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Sub-Regions</h2>
+  <div class="subregion-grid">
+    <div class="subregion-card">
+      <div class="subregion-name">Harro Distiratsue</div>
+      <div class="subregion-etym">Etymology TBD</div>
+      <div class="subregion-desc">Border territory shared with Brauogi.</div>
+      <div class="subregion-tags"><span class="subregion-tag">Border</span><span class="subregion-tag">Shared</span></div>
+    </div>
+    <div class="subregion-card">
+      <div class="subregion-name">Lua Lasai</div>
+      <div class="subregion-etym">Etymology TBD</div>
+      <div class="subregion-desc">Border territory shared with Ezkudon.</div>
+      <div class="subregion-tags"><span class="subregion-tag">Border</span><span class="subregion-tag">Shared</span></div>
+    </div>
+    <div class="subregion-card">
+      <div class="subregion-name">Argia Esfera</div>
+      <div class="subregion-etym">Basque <i>argia</i> (light) + Latin/Spanish <i>esfera</i> (sphere) — "sphere of light"</div>
+      <div class="subregion-desc">Details to be developed.</div>
+      <div class="subregion-tags"><span class="subregion-tag tbd">TBD</span></div>
+    </div>
+  </div>
+
+  <div class="stub-note">
+    This page is a stub. Sub-regions live as cards above; when one earns enough content, it gets promoted to its own page in this folder.
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · EGULON</div>
+
+
+</div>
+
+<script>
+(function() {
+  var nav = document.getElementById('siteNav');
+  var toggle = document.getElementById('navToggle');
+  var scrim = document.getElementById('navScrim');
+  if (!nav || !toggle) return;
+  var current = document.body.getAttribute('data-page');
+  if (current) {
+    var link = nav.querySelector('a[data-page="' + current + '"]');
+    if (link) link.classList.add('is-current');
+  }
+  function open()  { nav.classList.add('open');    if (scrim) scrim.classList.add('open'); }
+  function close() { nav.classList.remove('open'); if (scrim) scrim.classList.remove('open'); }
+  toggle.addEventListener('click', function(e) { e.stopPropagation(); nav.classList.contains('open') ? close() : open(); });
+  if (scrim) scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>

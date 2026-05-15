@@ -26,32 +26,90 @@ This repo is a personal worldbuilding project for the setting **Tyrnarra**. The 
 
 ## File layout
 
+The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingdoms → Settlements.** The folder tree mirrors the world. World-level (cosmic) content lives at root; continent-level content lives under `/talan/`.
+
 ```
-/                          ← GitHub Pages serves from here
-  index.html               ← landing page (links to all primers)
-  tyrnarra-primer.html     ← world cosmology
-  tyrnarra-gods.html       ← the 13 bound gods
-  talan-primer.html        ← the continent
-  millhaven/               ← one folder per major settlement
-    millhaven.html         ← settlement primer (entry point)
-    lowspan.html           ← location within the settlement
-    guildhall.html
-    Quests/                ← quests are nested under their location
-      quest-venomqueen.html
-      quest-veldtmark.html
-  lore/                    ← markdown reference notes (NOT published)
-    glossary.md            ← coined names + etymologies
-    (geography.md, factions.md, timeline.md as the world grows)
-  CLAUDE.md                ← this file
+/                                      ← GitHub Pages serves from here
+  index.html                           ← landing page (curated portal + sidebar)
+  tyrnarra-primer.html                 ← cosmology (world-level)
+  tyrnarra-gods.html                   ← the 13 bound gods (world-level)
+  talan-primer.html                    ← LEGACY tabbed primer; content migrates to /talan/ in Phase 2
+
+  talan/                               ← continent-level content
+    talan.html                         ← continent overview (geography, three seas, all 13 domains)
+    magic.html                         ← The Four Schools
+    history.html                       ← Eras / timeline
+    domains/                           ← the 13 god domains
+      <domain>/<domain>.html           ← e.g. vindul/vindul.html — domain entry page
+      <domain>/<sub-region>.html       ← optional: promoted sub-region with its own page
+      <domain>/<settlement>/           ← settlement folder, when content warrants
+        <settlement>.html
+        <sub-location>.html            ← location within the settlement
+        Quests/                        ← quests nest under their location
+          quest-<slug>.html
+    factions/                          ← independent organisations
+      factions.html                    ← faction overview / taxonomy
+      adventurers-guild.html
+      mercenary-guild.html
+      god-churches.html
+      remnants.html
+
+  lore/                                ← markdown reference notes (NOT published)
+    world-notes.md                     ← authoritative canon
+    geography.md                       ← domain etymologies + sub-regions
+    factions.md                        ← faction taxonomy + entries
+    glossary.md                        ← coined names + etymologies
+    timeline.md                        ← eras + dates
+    site-inventory.md                  ← what's published + what's stub
+    restructure-plan.md                ← phasing notes for the restructure
+    sidebar-nav.md                     ← the canonical sidebar HTML/CSS/JS snippet
+
+  CLAUDE.md                            ← this file
   README.md
+  CNAME
 ```
 
+**Layer-to-folder mapping:**
+
+| World layer | Folder | Example |
+|---|---|---|
+| World (Tyrnarra) | root | `tyrnarra-primer.html`, `tyrnarra-gods.html` |
+| Continent (Talan) | `/talan/` | `talan.html`, `magic.html`, `history.html` |
+| Region (god domain) | `/talan/domains/<domain>/` | `/talan/domains/vindul/vindul.html` |
+| Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
+| Settlement | folder under its domain | `/talan/domains/brauogi/millhaven/millhaven.html` |
+| Sub-location of settlement | sibling file in settlement folder | `/talan/domains/brauogi/millhaven/lowspan.html` |
+| Quest | `Quests/` inside settlement folder | `/talan/domains/brauogi/millhaven/Quests/quest-x.html` |
+| Faction (independent org) | `/talan/factions/` | `/talan/factions/adventurers-guild.html` |
+| God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/talan/factions/god-churches.html` |
+
 **Conventions:**
-- Each settlement gets its own folder. The folder's main page is named the same as the folder (`millhaven/millhaven.html`).
-- Sub-locations sit alongside the main page at the same level.
-- Quests nest under `Quests/` within their settlement folder, named `quest-<slug>.html`.
-- World/continent-level primers sit at the repo root.
-- `lore/` is markdown for *my* reference — it does not get published to the site. Use it to keep track of canon, names, and cross-references that don't need a polished HTML page yet.
+
+- **Folder slugs** are lowercase ASCII with hyphens. Diacritics are stripped from slugs but kept in display titles.
+- **Each settlement gets its own folder under its domain.** The folder's main page is named the same as the folder (`millhaven/millhaven.html`).
+- **Sub-regions** start as sections inside the domain page. When one earns enough content, promote it to its own file in the domain folder (e.g. `zuzental/thousand-kingdom.html`). Don't create empty stub files for sub-regions that don't exist yet.
+- **Kingdoms vs. sub-regions:** the term "sub-region" is the umbrella; some sub-regions are kingdoms (Thousand Kingdom, Order of Steam), others are geographic (Baerfrost), cultural (Tahu Tangata), or border territories (Azkamour). All live in the same place in the folder tree — the political type is a property, not a folder.
+- **Quests** nest under `Quests/` within their settlement folder, named `quest-<slug>.html`.
+- **World-level primers** (cosmology, the 13 gods) sit at the repo root.
+- **`lore/`** is markdown reference — not published. Authoritative canon lives here. Use it to keep track of canon, names, and cross-references that don't need a polished HTML page yet.
+
+---
+
+## Persistent sidebar navigation
+
+Every published HTML page includes a persistent sidebar menu. The canonical snippet (HTML + CSS + JS) lives in `lore/sidebar-nav.md`. To add a page to the nav, edit that file *and* update the snippet inlined in every page that already has it.
+
+**How a page declares its location:**
+
+```html
+<body data-page="vindul">
+```
+
+The sidebar JS reads `data-page` and highlights the matching link.
+
+**When extending the nav:**
+- Add a new top-level page → add a `<li>` to the matching `nav-section`, update `lore/sidebar-nav.md`, then propagate to every existing page (until we have a build step, this is a find-and-replace pass).
+- Settlements and sub-region pages are accessed from their parent domain page rather than the sidebar — the sidebar only carries the top-level structure to avoid bloat.
 
 ---
 
@@ -67,13 +125,13 @@ Used for: world primers, cosmology, planar structure, deity overviews, anything 
 - **Signature elements:** animated starfield background, celestial orbs, planar-layer color coding (prelife purple, life green, postlife red)
 - **Reference:** `tyrnarra-primer.html`
 
-### Style B — Grounded / Settlement-level
-Used for: town primers, district guides, NPC rosters, anything ground-level and lived-in.
+### Style B — Grounded / Continent + Settlement-level
+Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, anything ground-level and lived-in.
 
-- **Fonts:** Libre Baskerville (body), Philosopher (headings), Josefin Sans (labels, small caps)
-- **Palette:** warmer/darker (`--bg: #0c0e0f`), gold accent (`--gold: #c89040`), per-district color coding driven by the location's character
-- **Signature elements:** tabbed layout (Overview / Districts / Council / People / Hooks & Rumors / GM Notes), district strip header, NPC accordion cards, rumor pills with per-tag color, "Read Aloud" callout boxes
-- **Reference:** `millhaven/millhaven.html`
+- **Fonts:** Uncial Antiqua (page titles), Crimson Pro (body), Cinzel (labels/small caps)
+- **Palette:** warm dark (`--bg: #0f0c08`), gold accents (`--gold: #c8900a`, `--gold-bright: #f0b020`), parchment text (`--text: #d0c8a8`), per-domain accent colour driven by the location's character
+- **Signature elements:** parchment noise overlay, ornament dividers (`✦ · ✦ · ✦`), "At a Glance" facts panel, god-city callout boxes, sub-region grid cards
+- **References:** `talan/talan.html` (continent overview), any of `talan/domains/<domain>/<domain>.html` (domain page), `talan/factions/adventurers-guild.html` (faction page)
 
 ### Shared conventions
 - **Single-file HTML.** No external CSS/JS files. Fonts come from Google Fonts via `<link>` in the head.
@@ -86,7 +144,9 @@ Used for: town primers, district guides, NPC rosters, anything ground-level and 
 
 ## GitHub Pages setup
 
-The site is live at **https://tyrnarra.kunkel.swiss** (custom domain, HTTPS enabled). Deploys automatically on push to `main` — no build step, no Actions workflow needed. `index.html` at the repo root is the landing page; sub-pages are reachable at their relative paths (e.g. `/tyrnarra-primer.html`, `/millhaven/millhaven.html`).
+The site is live at **https://tyrnarra.kunkel.swiss** (custom domain, HTTPS enabled). Deploys automatically on push to `main` — no build step, no Actions workflow needed. `index.html` at the repo root is the landing page; sub-pages are reachable at their absolute paths (e.g. `/tyrnarra-primer.html`, `/talan/talan.html`, `/talan/domains/vindul/vindul.html`).
+
+**Always use absolute paths in links** (starting with `/`). The sidebar is on every page and the navigation works the same regardless of depth — relative paths would break it.
 
 ---
 

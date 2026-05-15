@@ -691,9 +691,125 @@
     .era-date { display: none; }
     .tab-btn { padding: 8px 10px; font-size: 0.55rem; }
   }
+
+  /* ── SITE NAV (injected) ── */
+  .nav-toggle {
+    position: fixed; top: 14px; left: 14px; z-index: 200;
+    background: rgba(8, 10, 18, 0.85);
+    color: var(--gold-bright, var(--gold, #c8a84b));
+    border: 1px solid rgba(200,168,75,0.35);
+    font-family: 'Cormorant SC', 'Cinzel', serif;
+    font-size: 0.7rem; letter-spacing: 0.28em;
+    padding: 8px 14px; border-radius: 2px; cursor: pointer;
+    backdrop-filter: blur(4px); text-transform: uppercase;
+  }
+  .nav-toggle:hover { background: rgba(40, 28, 12, 0.95); }
+  .site-nav {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
+    background: rgba(8, 10, 18, 0.96); backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(200, 168, 75, 0.18);
+    padding: 64px 20px 30px; overflow-y: auto; z-index: 190;
+    font-family: 'Cormorant Garamond', 'Crimson Pro', Georgia, serif;
+    transform: translateX(-100%); transition: transform 0.28s ease;
+  }
+  .site-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
+  .site-nav-title {
+    display: block; font-family: 'Cormorant SC', 'Cinzel', serif;
+    font-size: 1.2rem; letter-spacing: 0.28em;
+    color: var(--gold-bright, var(--gold, #c8a84b));
+    text-decoration: none; text-align: center;
+    margin-bottom: 24px; padding-bottom: 14px;
+    border-bottom: 1px solid rgba(200,168,75,0.18);
+  }
+  .nav-section { margin-bottom: 22px; }
+  .nav-section-label {
+    font-family: 'Cormorant SC', 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.32em;
+    color: var(--gold-dim, #8a6e28);
+    margin-bottom: 8px; text-transform: uppercase;
+  }
+  .nav-list { list-style: none; padding: 0; margin: 0; }
+  .nav-list a {
+    display: block; padding: 4px 10px;
+    color: var(--text-dim, #8a8070); text-decoration: none; font-size: 0.92rem;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .nav-list a:hover {
+    color: var(--text, #d4cbb8); border-left-color: rgba(200,168,75,0.4);
+    background: rgba(200,168,75,0.05);
+  }
+  .nav-list a.is-current {
+    color: var(--gold-bright, var(--gold, #c8a84b));
+    border-left-color: var(--gold, #c8a84b);
+    background: rgba(200,168,75,0.08);
+  }
+  .nav-scrim {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 180;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  }
+  .nav-scrim.open { opacity: 1; pointer-events: auto; }
+  @media (max-width: 600px) { .site-nav { width: 86vw; } }
+
 </style>
 </head>
-<body>
+<body data-page="talan-primer">
+
+<!-- Site Nav (injected) -->
+<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>
+<div class="nav-scrim" id="navScrim"></div>
+
+<aside class="site-nav" id="siteNav" aria-label="Site navigation">
+  <a href="/index.html" class="site-nav-title">Tyrnarra</a>
+
+  <div class="nav-section">
+    <div class="nav-section-label">World &amp; Cosmos</div>
+    <ul class="nav-list">
+      <li><a href="/tyrnarra-primer.html" data-page="cosmology">Cosmology</a></li>
+      <li><a href="/tyrnarra-gods.html"   data-page="gods">The 13 Bound Gods</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Talan</div>
+    <ul class="nav-list">
+      <li><a href="/talan/talan.html"   data-page="talan">Continent Overview</a></li>
+      <li><a href="/talan/history.html" data-page="history">History &amp; Eras</a></li>
+      <li><a href="/talan/magic.html"   data-page="magic">Magic — Four Schools</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Domains</div>
+    <ul class="nav-list">
+      <li><a href="/talan/domains/vindul/vindul.html"     data-page="vindul">Vindul · Wind</a></li>
+      <li><a href="/talan/domains/lautara/lautara.html"   data-page="lautara">Lautara · Commerce</a></li>
+      <li><a href="/talan/domains/myrkono/myrkono.html"   data-page="myrkono">Myrkono · Darkness</a></li>
+      <li><a href="/talan/domains/floteyn/floteyn.html"   data-page="floteyn">Floteyn · Water</a></li>
+      <li><a href="/talan/domains/sumendar/sumendar.html" data-page="sumendar">Sumendar · Fire</a></li>
+      <li><a href="/talan/domains/lioaru/lioaru.html"     data-page="lioaru">Lioaru · Time</a></li>
+      <li><a href="/talan/domains/brauogi/brauogi.html"   data-page="brauogi">Brauogi · Earth</a></li>
+      <li><a href="/talan/domains/ezkudon/ezkudon.html"   data-page="ezkudon">Ezkudon · Knowledge</a></li>
+      <li><a href="/talan/domains/egulon/egulon.html"     data-page="egulon">Egulon · Light</a></li>
+      <li><a href="/talan/domains/zuzental/zuzental.html" data-page="zuzental">Zuzental · Law</a></li>
+      <li><a href="/talan/domains/nashavel/nashavel.html" data-page="nashavel">Nashavel · Chaos</a></li>
+      <li><a href="/talan/domains/ehizahar/ehizahar.html" data-page="ehizahar">Ehizahar · Hunt</a></li>
+      <li><a href="/talan/domains/askamira/askamira.html" data-page="askamira">Askamira · Freedom</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Factions</div>
+    <ul class="nav-list">
+      <li><a href="/talan/factions/factions.html"          data-page="factions">All Factions</a></li>
+      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>
+      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>
+      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>
+      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>
+    </ul>
+  </div>
+</aside>
+
 <div class="container">
 
   <!-- HEADER -->
@@ -895,9 +1011,10 @@
   <!-- ══════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-factions">
     <div class="section">
-      <div class="section-title">✦ Major Powers & Factions</div>
+      <div class="section-title">✦ Factions & Powers</div>
       <div class="section-body">
-        <p>Talan in 2532 MR is a world of competing interests. No single power controls the continent. The void left by the Golden Empire has never been filled — and many have tried.</p>
+        <p>Talan in 2532 MR is a world of competing interests. Factions exist at every scale: every kingdom and sub-region is a political actor in its own right, every god has a church with its own agenda, and several world-spanning organisations operate outside any government's authority. Below are the independent organisations — those that answer to no crown and no domain.</p>
+        <p>Political entities (kingdoms, city-states) are covered in the <strong>Regions</strong> tab. God churches are covered in the <strong>Gods</strong> primer.</p>
       </div>
     </div>
     <div class="faction-grid" id="factionGrid"></div>
@@ -1195,43 +1312,29 @@ const factions = [
     name: "The Adventurers Guild",
     type: "World-spanning independent institution",
     color: "#34d399",
-    summary: "Founded during the Dark Era not by kings but by conscience, the Guild is now the most powerful non-governmental organization on Talan. It operates in every major settlement and answers to no crown.",
-    detail: "The Guild's independence is its founding principle and its greatest asset. During the Dark Era it was the only thing standing between mortal civilization and extinction — and that history gives it a moral authority no kingdom can claim. Its charter, established mid-Dark Era, explicitly prohibits alignment with any single government, religion, or god. Members swear to the Guild, not to any flag. Head Office coordinates the world network; regional directors manage multi-kingdom areas; branch guildmasters run local offices. The soft power the Guild wields — in information, in talent, in reach — quietly shapes political outcomes across Talan."
+    summary: "Founded during the Dark Era not by kings but by conscience, the Guild is now the most powerful non-governmental organisation on Talan. It operates everywhere and answers to no crown — the sword and shield of mortals.",
+    detail: "The Guild's founding principle is strict neutrality within the law of whatever kingdom it operates in. It holds relations with all countries and follows local law without exception in its official capacity. If slavery is legal in a kingdom, the Guild will not post quests to free slaves — no law was broken. If a stolen object needs recovering, the Guild will post the quest; if adventurers break a law in the process, the Guild will not publicly side with them if caught. Individual Guild members may work to overthrow unjust governments or free slaves — but never in official Guild capacity. The Guild has no knowledge of it officially.<br><br>This strict legalism is what allows the Guild to hold relations with every kingdom simultaneously, including hostile ones. Kingdoms that despise each other both need the Guild and both trust that it will not be weaponised against them.<br><br>Scale: remote villages get a single part-time contact; towns get real branch offices; cities get guild halls; capitals and city-states get full Guild Complexes with archives, legal staff, and senior officers."
   },
   {
-    name: "The 13 Bound Gods",
-    type: "Divine powers, Material Plane residents",
+    name: "The Mercenary Guild",
+    type: "Shadow network — coin, no loyalty",
+    color: "#f59e0b",
+    summary: "Where the Adventurers Guild cannot go officially, work still needs doing. The Mercenary Guild has no moral position on the job — only on payment. Kill contracts, kidnapping, freeing slaves where it is illegal, destabilising governments: if you have the coin, they will find someone.",
+    detail: "The Mercenary Guild exists because the Adventurers Guild's strict legalism left an enormous range of work officially undone. It fills that gap with no loyalty except to coin and no ideology except the contract.<br><br>It has no official presence anywhere — no legal registration, no public charter, no kingdom that formally acknowledges it. It sometimes operates from inside Adventurers Guild buildings, if you know who to talk to and they trust you enough to say so. Every kingdom knows the Mercenary Guild exists. Every kingdom knows it is dangerous. Every kingdom also knows it is useful. This mutual understanding is why it survives everywhere without being formally sanctioned anywhere.<br><br>Scale: does not exist in remote villages. In towns it is an informal bar, a clubhouse, a back room — nothing on paper. It never builds a massive presence; the point is to be invisible."
+  },
+  {
+    name: "God Churches",
+    type: "Thirteen churches + other traditions",
     color: "#f0d080",
-    summary: "Thirteen deities who accepted the Gods' Law in exchange for continued presence on the Material Plane. They walk among mortals, maintain divine domains, and influence events within the Law's constraints.",
-    detail: "The Gods' Law prohibits direct governance of mortal populations, open warfare between gods on the Material Plane, and unchecked divine control of mortal lives. Within those constraints, the 13 operate with considerable freedom — inspiring followers, granting divine power to priests, maintaining their domains, and engaging in the political games that gods never quite gave up. They cannot command armies. They can certainly advise them. Each god's relationship with their domain's mortal kingdoms varies enormously."
+    summary: "Each of the 13 Bound Gods has a church operating across Talan. Each church follows local law in whatever kingdom it sits in, but ultimately answers to its god's theology. Beyond the thirteen, cults and churches of non-bound gods — elven ancestral pantheons, demon lord traditions, deep god worship — have real divine power and active presence.",
+    detail: "The thirteen churches vary enormously in structure, reach, and character — from Iro's split between healing orders and ordained inquisitors, to Vesuna's deliberately unstructured worship, to Enki's gatekept libraries. Each god's entry in the Gods primer covers their clergy in detail.<br><br>Other God Believers — those who follow gods outside the thirteen — are not heretics in Tyrnarra. The other gods are real; their divine power flows to their priests as surely as the thirteen's does. The distinction is that the thirteen are present and bound on the Material Plane. The others are not."
   },
   {
-    name: "The Order of Steam",
-    type: "Industrial kingdom-guild hybrid",
-    color: "#fb923c",
-    summary: "Part kingdom, part guild, entirely pragmatic. The Order controls the southern volcanic belt's manufacturing output and has leveraged it into political power that punches far above its territorial size.",
-    detail: "Founded during the Adventurer Era as a practical response to reconstruction needs, the Order of Steam has no noble bloodlines, no divine patron, and no interest in either. It is run by elected councils of master craftspeople and engineers. Its volcanic-powered manufactories produce weapons, tools, and magical components at scale no other region matches. Its independence is maintained by the simple fact that everyone needs what it makes — which makes warfare against it deeply impractical."
-  },
-  {
-    name: "The Legea Empire",
-    type: "Major eastern empire",
-    color: "#94a3b8",
-    summary: "The largest single political entity in the Law domain, the Legea Empire views itself as the natural successor to the Golden Empire's civilizing mission. Most of its neighbors disagree, sometimes loudly.",
-    detail: "The Empire is old, stable, and deeply convinced of its own rightness. Its legal code is genuinely sophisticated — centuries of refinement have produced a system that, within its own logic, functions well. The problem, from its neighbors' perspective, is that the Empire views its legal code as universal rather than regional. It has a history of 'extending legal protection' to border territories in ways that look remarkably like annexation."
-  },
-  {
-    name: "The Namur Republic",
-    type: "Democratic city-state network",
-    color: "#60c8f0",
-    summary: "An experiment in elected governance that has lasted three centuries against considerable expectation. The Namur Republic is small, principled, and perpetually exhausting to negotiate with.",
-    detail: "Every significant decision in the Republic requires a vote — sometimes multiple votes, sometimes a referendum, sometimes both. Outsiders find this maddening. Citizens find it essential. The Republic's military is modest; its diplomatic corps is extraordinary. It survives on the principle that everyone prefers having it as a neutral interlocutor to the alternative. The Guild maintains a particularly close relationship with the Republic — the values of independence and non-alignment resonate."
-  },
-  {
-    name: "The Remnants of Corruption",
-    type: "Threat, not faction — Corrupted God's lingering spawn",
+    name: "Remnants of Corruption",
+    type: "Threat — the Corrupted God's lingering spawn",
     color: "#e07060",
-    summary: "The Corrupted God was defeated in 2135 MR, but not destroyed. Its spawn still emerge from deep places. Its influence still lingers in certain ruins. The Guild's original mission — the reason it exists — never fully ended.",
-    detail: "Four centuries after the defeat, the frequency of emergence events has dropped dramatically — but never to zero. Deep delving operations, mining below certain depths, disturbing certain sealed Elden ruins — all carry risk of encounter. The spawn vary wildly: some are mindless, some are disturbingly intelligent, all are hostile to mortal life. The Guild maintains a standing research operation attempting to understand and predict emergence patterns. Some members believe the Corrupted God is healing."
+    summary: "The Corrupted God was defeated in 2135 MR but not destroyed. Its spawn still emerge from deep places. The Guild's original mission — the reason it exists — never fully ended.",
+    detail: "Four centuries after the defeat, emergence events have dropped dramatically but never reached zero. Deep mining operations, disturbed Elden ruins, certain sealed places — all carry risk. The spawn vary enormously: some are mindless, some disturbingly intelligent, all hostile to mortal life.<br><br>The Corrupted God is not bound by the Gods' Law — it predates it and was never party to it. The Guild maintains a standing research operation attempting to understand and predict emergence patterns. Some researchers believe the Corrupted God is healing."
   }
 ];
 
@@ -1306,5 +1409,26 @@ function toggleEraSecret(e, btn) {
     : '⚿ &nbsp; GM Secret — The True Cause';
 }
 </script>
+
+<script>
+// Site Nav (injected)
+(function() {
+  var nav = document.getElementById('siteNav');
+  var toggle = document.getElementById('navToggle');
+  var scrim = document.getElementById('navScrim');
+  if (!nav || !toggle) return;
+  var current = document.body.getAttribute('data-page');
+  if (current) {
+    var link = nav.querySelector('a[data-page="' + current + '"]');
+    if (link) link.classList.add('is-current');
+  }
+  function open()  { nav.classList.add('open');    if (scrim) scrim.classList.add('open'); }
+  function close() { nav.classList.remove('open'); if (scrim) scrim.classList.remove('open'); }
+  toggle.addEventListener('click', function(e) { e.stopPropagation(); nav.classList.contains('open') ? close() : open(); });
+  if (scrim) scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+
 </body>
 </html>

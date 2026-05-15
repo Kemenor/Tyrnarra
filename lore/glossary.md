@@ -10,8 +10,8 @@ When adding a new coined name, record: **Name · Source language · Literal mean
 
 ## Confirmed by user (canonical examples)
 
-### Free City
-- **Source:** plain English
+### Frae City
+- **Source:** plain English, lightly drifted (*Free City* → *Frae City*)
 - **Style:** New/modern (a recently founded or contemporary polity)
 
 ### Order of Steam
@@ -25,7 +25,7 @@ When adding a new coined name, record: **Name · Source language · Literal mean
 These appear in the existing HTML primers. Some don't follow the Basque/Icelandic rule because they predate it. Treat them as canon-as-written.
 
 ### Cosmology / Planes
-- **Tyrnarra** — the world (note: repo folder is "Tyrnara" — spelling needs reconciliation)
+- **Tyrnarra** — the world
 - **Talan** — the central continent
 - **Solyra** — the golden sun
 - **Veyru** — the red moon
@@ -146,15 +146,5 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Star Island** — modern English; small star-shaped island in Midarra
 
 ### Geography & Settlements
-- **Millhaven** — town on the southern shores of Midarra. Modern English — fits the rule for new things.
-- **Millwater River** — runs south to Midarra (English, fits)
 - **Midarra** — the central freshwater inner sea of Talan. NOT a city. Cronus's island sits within it; Millhaven is on its southern shore. Etymology TBD.
 - **Hafra** — the saltwater sea surrounding Talan. Icelandic *haf* (ocean, open sea) → shortened and drifted.
-- **The Drift Quarter** — old district of Millhaven with Tani temporal influence
-
-### Locations within Millhaven
-- The Sodden Mast (tavern), The Empirical Eye (magic shop), The Wayward Compass (guild hall), Clearwater Exchange, The Low Span, The Toll House, The Pilings, The Quiet Docks, Sarrum's Stone (shrine), The Council Hall, The Grain Exchange, The Golden Plough (inn)
-
-### Quests
-- Quest: Venomqueen
-- Quest: Veldtmark *(Veldtmark — possibly drift-name, etymology TBD)*
