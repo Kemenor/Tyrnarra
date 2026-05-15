@@ -123,7 +123,6 @@ const gods = {
       domainName: "Myrkono",
       domainSlug: "myrkono",
       primary: "Darkness · Protection · Void",
-      domains: ["Darkness", "Protection", "Void", "Second Chances"],
       city: "Myrria — City of Second Chances",
       orb: "🌑",
       accent: "#9a60c0",
@@ -146,7 +145,6 @@ const gods = {
       domainName: "Vindul",
       domainSlug: "vindul",
       primary: "Air · Change · Cold",
-      domains: ["Air", "Change", "Cold", "Wind"],
       city: "Haizava — The Shifting City",
       orb: "🌬️",
       accent: "#70c8e8",
@@ -169,7 +167,6 @@ const gods = {
       domainName: "Sumendar",
       domainSlug: "sumendar",
       primary: "Fire · Ambition · Creation",
-      domains: ["Ambition", "Creation", "Fire", "Passion", "Crafting"],
       city: "Eldara — The Forge City",
       orb: "🔥",
       accent: "#e06030",
@@ -192,7 +189,6 @@ const gods = {
       domainName: "Brauogi",
       domainSlug: "brauogi",
       primary: "Earth · Duty · Tradition",
-      domains: ["Confidence", "Duty", "Earth", "Vigil", "Tradition"],
       city: "Lurrath — The Steadfast City",
       orb: "⛰️",
       accent: "#a07840",
@@ -215,7 +211,6 @@ const gods = {
       domainName: "Floteyn",
       domainSlug: "floteyn",
       primary: "Water · Introspection · Social",
-      domains: ["Introspection", "Repose", "Water", "Social", "Community"],
       city: "Uravel — The Floating Isles",
       orb: "🌊",
       accent: "#40a0c8",
@@ -238,7 +233,6 @@ const gods = {
       domainName: "Egulon",
       domainSlug: "egulon",
       primary: "Light · Healing · Zealotry",
-      domains: ["Dust", "Healing", "Sun", "Divine Magic", "Belief", "Zealotry"],
       city: "Ljosarn — The Everbright City",
       orb: "☀️",
       accent: "#e8d040",
@@ -263,7 +257,6 @@ const gods = {
       domainName: "Ezkudon",
       domainSlug: "ezkudon",
       primary: "Knowledge · Occult Magic · Perfection",
-      domains: ["Glyph", "Knowledge", "Perfection", "Occult Magic"],
       city: "Thekkavar — The City of Learning",
       orb: "📚",
       accent: "#4080b0",
@@ -286,7 +279,6 @@ const gods = {
       domainName: "Zuzental",
       domainSlug: "zuzental",
       primary: "Law · Truth · Secrecy",
-      domains: ["Secrecy", "Star", "Truth", "Arcane Magic", "Justice"],
       city: "Lograth — The Judgment City",
       orb: "⚖️",
       accent: "#6878c0",
@@ -309,7 +301,6 @@ const gods = {
       domainName: "Ehizahar",
       domainSlug: "ehizahar",
       primary: "Hunt · Nature · Death",
-      domains: ["Might", "Nature", "Zeal", "Death", "Hunt"],
       city: "Veidrath — The Hunting City",
       orb: "🏹",
       accent: "#a04030",
@@ -332,7 +323,6 @@ const gods = {
       domainName: "Lautara",
       domainSlug: "lautara",
       primary: "Commerce · Cities · Family",
-      domains: ["Cities", "Family", "Wealth", "Primal Magic", "Progress"],
       city: "Merkavar — The Market City",
       orb: "⚖️",
       accent: "#60a060",
@@ -355,7 +345,6 @@ const gods = {
       domainName: "Lioaru",
       domainSlug: "lioaru",
       primary: "Time · Death · Fate",
-      domains: ["Death", "Fate", "Time", "Peaceful Death"],
       city: "Denbora — The Threefold City",
       orb: "⏳",
       accent: "#9070b0",
@@ -378,7 +367,6 @@ const gods = {
       domainName: "Nashavel",
       domainSlug: "nashavel",
       primary: "Chaos · Luck · Life",
-      domains: ["Passion", "Luck", "Trickery", "Chaos", "Life"],
       city: "Nahaskel — The Unmapped City",
       orb: "🎲",
       accent: "#c09030",
@@ -403,7 +391,6 @@ const gods = {
       domainName: "Askamira",
       domainSlug: "askamira",
       primary: "Freedom · Dreams · Travel",
-      domains: ["Dreams", "Freedom", "Travel", "Soul"],
       city: "Frae City — The Free City",
       orb: "🌟",
       accent: "#50a0a0",
@@ -442,9 +429,6 @@ function buildCard(god, gridId) {
       <div class="expand-hint">Tap ▾</div>
     </div>
     <div class="card-summary">${god.summary}</div>
-    <div class="domain-row">
-      ${god.domains.map(d => `<span class="domain-pill">${d}</span>`).join('')}
-    </div>
     <div class="card-expanded">
       <div class="exp-section">
         <div class="exp-label">Aspects & Mechanics</div>
