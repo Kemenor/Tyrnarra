@@ -4,6 +4,23 @@ A running file for complex, easy-to-misremember lore facts. Read this before wri
 
 ---
 
+## Tyrnarra — The World & Sky
+
+- **Tyrnarra** is a world adrift in an endless ocean, its lands ringed by the still, white expanse of the **Cloud Sea**.
+- Above it, three celestial bodies turn in slow rhythm — a golden sun and two moons. Each rises from and sinks back into the Cloud Sea every cycle.
+  - **Solyra** — the sun: a blazing disc of gold.
+  - **Veyru** — the Red Moon: deep crimson; its light seems to shimmer faintly in motion.
+  - **Calune** — the Green Moon: pale jade, with marbled streaks that shift subtly across the seasons.
+- Tyrnarra is one of countless worlds born of the Wellspring's outpouring — a single leaf on an infinite, ever-growing tree. Other worlds exist; mortals on Talan have no practical contact with them.
+
+### The Cloud Sea
+
+- An infinite, unbroken plain of luminous, snow-white vapor. It never shifts with wind, tide, or season.
+- **Peril:** ordinary ships and airships that venture onto it slowly sink and vanish without trace. Only **cloudships** — vessels specifically built for its strange surface — can cross it.
+- The Cloud Sea swallows the sun and both moons each cycle and returns them on the opposite horizon. Some scholars say it is the veil between all worlds; this is unconfirmed.
+
+---
+
 ## Divine Power Tiers
 
 All gods and godlike beings (including demon lords, powerful spirits, belief-born entities, etc.) fall into one of four tiers:
@@ -141,27 +158,71 @@ All magic is access to the Wellspring. The four schools are four different metho
 
 ---
 
-## Planar Travel
+## Planar Structure — The Three Layers
 
-- The planes are not sealed — they are traversable by gods and sufficiently powerful beings.
-- The 13 Bound Gods have largely been to the Postlife (many were banished there at points).
-- This means the Postlife is not a mystery to the gods. What is unknown is what it is like to *die and cross as a living being* — which only Tani has experienced.
+All of reality is arranged into **three great layers**, each containing **three primary planes**, with a **transitional veil** that bridges the layer to the rest of existence. All planes are connected by the **Astral Plane** — an infinite void of thought and light where distance is meaningless and every realm is a step away. The layers flow in an eternal cycle: **Prelife → Life → Postlife → Prelife**, as the Wellspring sends out creation and calls it home.
+
+### Layer 1 — Prelife
+
+The origin of all things, from which the Wellspring's outpouring flows to create all other planes. Created by the **Primordial Six**.
+
+- **Transitional veil:** **The Aurora Veil** (*Veil of Genesis*) — a dawn-hued ocean of living light, where unborn worlds drift like clouds and souls pass through as pure potential without form or memory.
+- **Wellspring** — the first place and final destination. All souls, matter, and magic are born from its infinite depth and will one day return.
+- **Energy Plane** — an endless sea of raw positive and negative energy, surging and clashing in eternal balance.
+- **Elemental Plane** — a boundless expanse of unmixed fire, water, wind, and earth — the primal matter from which worlds are shaped.
+
+### Layer 2 — Life
+
+The middle span of existence, where creation takes form, grows, and changes. Created jointly by all twelve.
+
+- **Transitional veil:** **The Ethereal Plane** (*The Invocation of Gods' Law*) — a shimmering membrane around the Life Layer; the place where divine will and cosmic law influence mortal reality. This is what enforces the Gods' Law on the Life Layer (see above).
+- **Feyworld** — the plane of **Chaos**: vibrant, shifting, unpredictable.
+- **Material Plane** — the stable physical realm where Talan and mortal civilisations exist.
+- **Shadowplane** — the plane of **Order**: constant, unchanging, eternal in structure.
+
+### Layer 3 — Postlife
+
+The destination of souls after death, where judgment and final dwelling are decided before the cycle begins anew. Created by the **Ascendant Six**.
+
+- **Transitional veil:** **The Duskmire** (*Shroud of Return*) — a twilight sea where the stars above are the lights of distant souls; souls destined to return to the Wellspring shed their memories here.
+- **Elysium** — the plane of **Good**: radiant realms ruled by benevolent gods, each in their own kingdom.
+- **Diyu** — the plane of **Balance and Judgment**: home to neutral gods and to **Dauria**, the City of the Dead, where souls wait if no god claims them, until the Wellspring calls them back.
+- **Abyss** — the plane of **Evil**: a vast nightmarish domain where gods of malice, devils, and demons rule.
+
+### The Nature of the Soul
+
+Every living being contains essence from all three layers. What separates one soul from another is **which layer's energy burns brightest** within them.
+
+### Planar Travel
+
+- The planes are not sealed — they are traversable by gods and sufficiently powerful beings, via the Astral Plane.
+- The 13 Bound Gods have largely been to the Postlife (many were banished there at points). The Postlife is therefore not a mystery to them.
+- What *is* unknown is what it is like to **die and cross as a living being** — only Tani has experienced this (see Tani — Lore Notes).
 
 ---
 
 ## The Gods' City-States
 
 - Each of the 13 Grand Gods resides in a **temple complex with a sanctum** — this is their actual home on the Material Plane.
+- The sanctum is not a symbolic shrine. It is a **literal home**: the god eats, sleeps, dreams, and walks within its walls. Their true power remains beyond mortal comprehension, but they have chosen an enduring physical form on the Life Layer so they can live *within* the world they once ruled.
 - Over time, cities have grown up around these temple complexes and have become powerful and independent enough to function as **independent city-states**, not subject to any kingdom.
 - The gods **do not rule their city-states.** They only govern their temple complex. The city around it is self-governing.
+- Citizens of a free city may **see their god with their own eyes** — walking through gardens, attending ceremonies, even speaking in public forums. A merchant in Jianna's city may claim she once smiled at him in passing; that alone can lift a family's fortunes. Farmers in Sarrum's city say he walks the fields before planting season.
 - Gods can be **auditioned** — if they are present in their sanctum, a sufficiently motivated mortal can request an audience. This is rare, difficult, and not guaranteed.
 - Frae City is no exception: Cronus rules his temple, not the city. The city's independence is simply more absolute than most (freedom being his domain).
+
+### The Council of Thirteen
+
+- When the Grand Gods gather (rare), they meet **in person** — no avatars, no visions.
+- A full Council of Thirteen assembling is a moment of awe and terror for mortals — a sign that history itself is about to turn.
+- Even in council, they bicker, debate, and stall. They are gods, but also beings of personality, flaw, and contradiction.
 
 **Frae City — History:**
 - Founded during the Week of Crimson Rain as the base of operations for Cronus and the mortal resistance.
 - After the war and the forging of the Gods' Law, it became Cronus's city.
-- It is where the five-year conclave is held — not because it is neutral ground, but because it is Cronus's home and he hosts it. The historical significance (the place where the Law was forged) adds weight to the tradition.
+- It is where the **Council of Thirteen** convenes when it convenes at all — not because Frae City is neutral ground, but because it is Cronus's home and he hosts. The historical weight of the place where the Law was forged makes it the natural ground. There is **no fixed schedule**; the Council gathers only when something demands the full body in person.
 - Do not describe Frae City as "the only neutral ground" — it is Cronus's home, not neutral territory.
+- **Older texts (in-world and otherwise) sometimes refer to a "five-year conclave."** This was an earlier framing and is no longer canon — the Council of Thirteen does not gather on a regular schedule.
 
 ## Neutral Ground
 
@@ -199,6 +260,121 @@ All magic is access to the Wellspring. The four schools are four different metho
 - Not bound by the Gods' Law — predates it, was never party to it.
 - Defeated (not destroyed) in 2135 MR — wounded enough that active influence collapsed. Spawn still emerge. Some believe it is healing.
 - **Cannot be permanently killed by conventional means** — it contains both Wellspring and Void. What it would truly take to end it is not yet defined.
+
+---
+
+## The Thirteen — Per-God Sheet
+
+Aspects, depictions, favoured weapons, mortal perception, and cleric domains for each Grand God. **Each is neutral in essence** — they embody both the light and shadow of their portfolio. Mortals tend to **worship aspects, not the whole** (invoking Iro for warmth while fearing his zealotry; praying to Araphel for rest while avoiding his despair). The gods abide by the Gods' Law: no direct rule, but their presence shapes the world through symbols, omens, and the powers granted to the faithful.
+
+> **Note on weapons:** these are the favoured/iconic forms in which each god is depicted. They are symbolic and ceremonial as well as practical — clergy and devoted faithful often wield them in ritual or actual combat.
+
+### Vesuna — Goddess of Chaos (Female)
+- **Aspects:** change, creativity, destruction, madness.
+- **Cleric domains:** Passion, Luck, Trickery.
+- **Depiction:** a woman cloaked in mismatched silks, eyes glowing in different colours, hair wild as storm-wind.
+- **Favoured weapon:** *Meteor Hammer* — its wild arcs and unpredictable strikes embody her chaotic nature.
+- **Mortals see her as:** the spark of innovation and the collapse of order; the gamble that reshapes fate.
+
+### Jianna — Goddess of Commerce (Female)
+- **Aspects:** trade, wealth, greed, generosity.
+- **Cleric domains:** Cities, Family, Wealth, Primal Magic, Progress.
+- **Depiction:** a merchant queen draped in gold chains, scales of balance in one hand and a ledger in the other.
+- **Favoured weapon:** *Twin Chakram* — spinning cycles of exchange, profit and loss, endless trade.
+- **Mortals see her as:** the market's lifeblood — honest exchange or ruthless exploitation.
+
+### Araphel — God of Darkness (Male)
+- **Aspects:** shadows, secrets, rest, despair.
+- **Cleric domains:** Darkness, Protection, Void, Second Chances.
+- **Depiction:** a tall figure robed in black, face hidden except for silver eyes like moonlight.
+- **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
+- **Mortals see him as:** keeper of mysteries, balm of sleep, the weight of sorrow.
+
+### Sarrum — God of Earth (Male)
+- **Aspects:** stone, harvest, endurance, greed.
+- **Cleric domains:** Confidence, Duty, Earth, Vigil.
+- **Depiction:** a broad-shouldered man with skin like granite, veins of ore glowing faintly beneath.
+- **Favoured weapon:** *Dorn-Dergar* — a spiked, cube-weighted chain, as crushing and immovable as an avalanche.
+- **Mortals see him as:** provider of shelter and crops, but also the crushing hand of famine and stone.
+
+### Komo — God of Fire (Male)
+- **Aspects:** flame, passion, destruction, renewal.
+- **Cleric domains:** Ambition, Creation, Fire.
+- **Depiction:** a warrior wreathed in fire, eyes glowing like embers, weapons forged of molten steel.
+- **Favoured weapon:** *Fire Poi* — chains of flame, used in both ritual dance and devastating battle.
+- **Mortals see him as:** hearth and forge, but also wildfire and war.
+
+### Cronus — God of Freedom (Male)
+- **Aspects:** choice, rebellion, self-determination, lawlessness.
+- **Cleric domains:** Dreams, Freedom, Travel, Soul.
+- **Depiction:** a traveller with unbound chains trailing from his wrists, cloak fluttering like wings.
+- **Favoured weapon:** *Chain Sword* — a segmented blade that whips like broken shackles turned to rebellion.
+- **Mortals see him as:** liberator or anarchist, the spark that defies order.
+- **See also:** Cronus — The Secret (above). The "rebellion-incarnate" depiction is the public face; the truth of his ascension is buried.
+
+### Hinka — Goddess of the Hunt (Female)
+- **Aspects:** predation, survival, patience, cruelty.
+- **Cleric domains:** Might, Nature, Zeal.
+- **Depiction:** a huntress cloaked in fur, bow of horn in hand, eyes glinting with primal focus — often depicted as a red-haired woman of orcish or part-orcish lineage.
+- **Favoured weapon:** *Karambit* — a curved claw-knife, quick and intimate as a predator's strike.
+- **Mortals see her as:** provider of sustenance — or stalker in the dark.
+
+### Enki — God of Knowledge (Male)
+- **Aspects:** wisdom, discovery, arrogance, forbidden lore.
+- **Cleric domains:** Glyph, Knowledge, Perfection, Occult Magic.
+- **Depiction:** a scholar cloaked in runes, carrying a staff crowned with a lantern of shifting light.
+- **Favoured weapon:** *Whipstaff* — rigid and flexible in one, embodying truth's reach and cunning's adaptability.
+- **Mortals see him as:** teacher, sage, inventor — or tempter into dangerous truths.
+
+### Forseti — Goddess of Law (Female)
+- **Aspects:** order, justice, tyranny, bureaucracy.
+- **Cleric domains:** Secrecy, Star, Truth, Arcane Magic.
+- **Depiction:** a stern woman in ceremonial armour, scales in one hand, scrolls bound in the other.
+- **Favoured weapon:** *Hook Swords* — paired blades that interlock, symbolising laws binding all together.
+- **Mortals see her as:** arbiter of peace or oppressive enforcer.
+
+### Iro — God of Light (Male)
+- **Aspects:** sun, hope, growth, zealotry.
+- **Cleric domains:** Dust, Healing, Sun, Divine Magic.
+- **Depiction:** a radiant figure clad in white, face haloed by golden rays, eyes like dawn.
+- **Favoured weapon:** *Guisarme / Glaive* — a sweeping polearm, like a shaft of sunlight cutting through shadow.
+- **Mortals see him as:** bringer of illumination and joy — or blinding fanaticism.
+
+### Tani — Goddess of Time (Female)
+- **Aspects:** cycles, fate, patience, inevitability.
+- **Cleric domains:** Death, Fate, Time, Peaceful Death.
+- **Depiction:** a woman draped in flowing sand, clockwork turning faintly in her eyes.
+- **Favoured weapon:** *Zulfikar* — a forked scimitar, the split blade of fate and branching futures.
+- **Mortals see her as:** keeper of destiny, the march of years, the inevitability of endings.
+- **See also:** Tani — Lore Notes (above). Slain in the Week of Crimson Rain, reborn at its end; her death/rebirth is the hinge of the Gods' Law.
+
+### Shuun — God of Water (Genderfluid)
+- **Aspects:** rivers, seas, adaptability, drowning.
+- **Cleric domains:** Introspection, Repose, Water.
+- **Depiction:** a shifting form of water — sometimes man, sometimes woman, sometimes storm.
+- **Favoured weapon:** *Trident* — piercing tide, storm, and current alike.
+- **Mortals see Shuun as:** life-giver and sailor's blessing, or merciless tide and flood.
+
+### Fisaya — Goddess of Wind (Female)
+- **Aspects:** storms, travel, breath, ruin.
+- **Cleric domains:** Air, Change, Cold.
+- **Depiction:** a dancing figure of flowing silks, hair trailing into clouds, voice carried like a gale.
+- **Favoured weapon:** *Bladed Scarf* — silks edged with steel, graceful as a breeze, deadly as a storm.
+- **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
+
+---
+
+## The Age of Corruption — Mortal Myth
+
+A widely circulated in-world account of the Corrupted God's binding, attributed to *Sage Lorant of Highspire*, **3rd Century After Binding** (an in-universe document, not authoritative on actual events):
+
+> "There was a time when the earth itself seemed to rot beneath our feet. The god of Corruption — whom some name the **Maw Below**, others the **Blightfather** — rose from darkness and turned his gaze upon all mortal kind. Fields withered, rivers festered, the very beasts of forest and plain were twisted into horrors unfit for this world. Armies crumbled, cities drowned in plague. Yet a fellowship arose — champions whose names are etched in every tongue. They bore relics of light, rallied what hosts remained, and struck into the god's heart. They could not kill him, for such a power is beyond mortal reach — but they **bound him in chains of divine law, sealed deep beneath the bones of the world.** Thus ended the Age of Corruption, and so began the Counting of Years we keep today."
+
+**Why this matters as canon:**
+- This is what **mortals tell themselves**. It is mostly wrong.
+- The truth (see *The Corrupted God — True Identity* above) is that the Corrupted God is the Elden — an entire civilisation fused with the Devourer, not a malevolent personal deity. Most mortals do not know this and would not believe it.
+- The names **Maw Below** and **Blightfather** are folk titles for the Corrupted God. Use them in mortal-voiced text (sermons, chronicles, peasant rumour); avoid them in GM-truth contexts.
+- "Counting of Years we keep today" in this myth is conflated — the calendar (GR/MR) actually pivots on the Week of Crimson Rain, not the Corrupted God's defeat. Sage Lorant — or his sources — has the centuries muddled. This kind of error is endemic to mortal histories of the deep past.
 
 ---
 

@@ -145,6 +145,12 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Maitagarri** — Basque *maitagarri* (lovable, charming, endearing); forest region
 - **Star Island** — modern English; small star-shaped island in Midarra
 
+### Folk Names for Cosmic Things (mortal-mouth, not GM truth)
+
+- **The Maw Below** — folk title for the Corrupted God; common in mortal sermons and chronicles.
+- **The Blightfather** — folk title for the Corrupted God; same referent. Used as if it were a personal deity, which it is not (see `world-notes.md` for the truth).
+- **The Counting of Years** — mortal name for the post-binding calendar (MR). Mortals often credit the Corrupted God's binding as its origin, but the calendar actually pivots on the Week of Crimson Rain.
+
 ### Geography & Settlements
 - **Midarra** — the central freshwater inner sea of Talan. NOT a city. Cronus's island sits within it; Millhaven is on its southern shore. Etymology TBD.
 - **Hafra** — the saltwater sea surrounding Talan. Icelandic *haf* (ocean, open sea) → shortened and drifted.

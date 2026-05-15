@@ -22,7 +22,7 @@ python tools/wa-to-md.py export/World-Talan-97c    worldanvil-export/Talan
 ---
 
 ## Phase 1 — Cosmology & World Rules → `lore/world-notes.md`
-**Status: TODO**
+**Status: DONE (2026-05-16)**
 
 *Tyrnarra export, do this first — these are the foundation everything else references.*
 
@@ -36,6 +36,21 @@ Source files:
 - `worldanvil-export/Talan/Grand Gods/` × 13 — per-god detail pages (likely thin, worth checking)
 
 Target: merge into `lore/world-notes.md`, expanding existing god entries.
+
+**What was merged:**
+- Added "Tyrnarra — The World & Sky" (Cloud Sea, Solyra/Veyru/Calune, cloudships).
+- Expanded the Planar Travel stub into a full "Planar Structure — The Three Layers" section (Wellspring, Energy, Elemental; Feyworld, Material, Shadowplane; Elysium, Diyu, Abyss; Aurora Veil, Ethereal Plane, Duskmire; Astral Plane; Dauria; the soul-from-all-three-layers note).
+- Extended "Gods' City-States" with sanctum-as-literal-home, blessing/burden examples (Komo fires, Forseti red tape, Vesuna shifting streets), and a "Council of Thirteen" subsection.
+- Added "The Thirteen — Per-God Sheet" — aspects, depiction, favoured weapon, mortal perception, and PF2e cleric domains for all 13 (folded the Talan/Grand Gods/ domain tags into the per-god cleric-domain lines).
+- Added "The Age of Corruption — Mortal Myth" — the *Sage Lorant of Highspire* in-world account, with a note that this is a mortal-mouth folk version and conflicts with the GM-truth Elden/Corrupted God identity already in `world-notes.md`.
+- Added folk names (**Maw Below**, **Blightfather**, **Counting of Years**) to `glossary.md` under a new "Folk Names for Cosmic Things" subsection.
+
+**Not migrated (intentional):**
+- `Talan/World Atlas/introduction-to-talan.md`, `magic-of-talan.md`, `introduction-to-the-atlas.md`, `planes.md` — older 2023 drafts, superseded by the Tyrnarra-side files; nothing new to import.
+- `Talan/World Atlas/education-level.md`, `technology-level.md` — campaign-prep stat tables, not lore.
+
+**Notes for later phases:**
+- Tani's biographical detail in the WA export refers to "Lost Kingdom's rebellion" and "Lost Era" — these don't yet exist in `world-notes.md` as named events. They will surface in Phase 5 (Timeline). Existing canon ties Tani's death to the Week of Crimson Rain; the "Lost Kingdom's rebellion" may be a sub-event within it. Resolve in Phase 5.
 
 ---
 
