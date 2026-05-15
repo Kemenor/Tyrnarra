@@ -2,7 +2,7 @@
 
 Live at **https://tyrnarra.kunkel.swiss** · Auto-deploys on push to `main` · No build step.
 
-Last updated 2026-05-15 after Phase 1 of the restructure (skeleton + sidebar) and the subsequent extraction of shared chrome into `/assets/`.
+Last updated **2026-05-15** after Phase 2 of the restructure (content migration + legacy primer deletion).
 
 ---
 
@@ -10,41 +10,41 @@ Last updated 2026-05-15 after Phase 1 of the restructure (skeleton + sidebar) an
 
 ```
 /                              [Style A · cosmic]
-  index.html                   landing page, curated portal + sidebar
-  tyrnarra-primer.html         world cosmology + sidebar (existing)
-  tyrnarra-gods.html           the 13 bound gods + sidebar (existing)
-  talan-primer.html            LEGACY tabbed primer + sidebar
-                               → Phase 2: content migrates to /talan/
+  index.html                   landing page + sidebar
+  tyrnarra-primer.html         world cosmology + sidebar
+  tyrnarra-gods.html           the 13 bound gods + sidebar
+  (talan-primer.html removed — content migrated 2026-05-15)
 
 /talan/                        [Style B · grounded]
-  talan.html                   continent overview                    STUB (substantive)
-  magic.html                   Four Schools                          STUB
-  history.html                 Eras / timeline                       STUB
+  talan.html                   continent overview, three seas, 13 domain cards     POPULATED
+  magic.html                   Four Schools + Magic in Daily Life + Faith & Gods   POPULATED
+  history.html                 8 eras with three-tier knowledge UI                 POPULATED
 
-/talan/domains/                13 domain folders, each with a STUB entry page
-  vindul/vindul.html           STUB (substantive — etymology, terrain, sub-regions)
-  lautara/lautara.html         STUB
-  myrkono/myrkono.html         STUB
-  floteyn/floteyn.html         STUB
-  sumendar/sumendar.html       STUB
-  lioaru/lioaru.html           STUB
-  brauogi/brauogi.html         STUB
-  ezkudon/ezkudon.html         STUB
-  egulon/egulon.html           STUB
-  zuzental/zuzental.html       STUB
-  nashavel/nashavel.html       STUB
-  ehizahar/ehizahar.html       STUB
-  askamira/askamira.html       STUB
+/talan/domains/                13 domain pages — each with etymology, facts,
+                               character pills, god's city, sub-region cards
+  vindul/vindul.html           POPULATED (stub-level prose)
+  lautara/lautara.html         POPULATED
+  myrkono/myrkono.html         POPULATED
+  floteyn/floteyn.html         POPULATED
+  sumendar/sumendar.html       POPULATED
+  lioaru/lioaru.html           POPULATED
+  brauogi/brauogi.html         POPULATED
+  ezkudon/ezkudon.html         POPULATED
+  egulon/egulon.html           POPULATED
+  zuzental/zuzental.html       POPULATED
+  nashavel/nashavel.html       POPULATED
+  ehizahar/ehizahar.html       POPULATED
+  askamira/askamira.html       POPULATED
 
 /talan/factions/
-  factions.html                taxonomy overview                     STUB (substantive)
-  adventurers-guild.html       STUB (substantive)
-  mercenary-guild.html         STUB (substantive)
-  god-churches.html            STUB
-  remnants.html                STUB
+  factions.html                taxonomy overview + 4 cards                         POPULATED
+  adventurers-guild.html       At a Glance + Origin + Neutrality + Scale          POPULATED
+  mercenary-guild.html         At a Glance + Origin + Work + Structure + Scale    POPULATED
+  god-churches.html            13 + Other God Believers                           POPULATED
+  remnants.html                Origin + Current state + GM context                POPULATED
 ```
 
-**Stub legend**: "STUB" = page exists with the new sidebar and skeleton content, ready for prose expansion. "Substantive stub" = stub but already carries non-trivial content drawn from the lore files. No fully-populated long-form pages yet outside the legacy primers.
+**Populated** = page has substantive content beyond skeleton. Many pages can still grow — particularly the domain pages, where sub-regions are listed but not yet promoted to their own files.
 
 ---
 
@@ -56,9 +56,11 @@ Loaded by every page via `<link>` and `<script defer src>`:
 |---|---|---|
 | `assets/site-nav.css` | every page | Sidebar styling |
 | `assets/site-nav.js` | every page | Sidebar markup + behaviour (single source of truth for menu structure) |
-| `assets/style-b.css` | every page under `/talan/` | Style B base — palette, fonts, container/header/divider, facts panel, gods-city callout, sub-region grid, domain accents |
+| `assets/style-b.css` | every page under `/talan/` | Style B base — palette, fonts, container/header/divider, facts panel, gods-city callout, sub-region grid, domain accents, **timeline + era cards, three-tier (amber/red) expandables, info-card grid, scale-row, callout, pill row** |
 
 To add a page to the sidebar, edit `assets/site-nav.js` only. The `NAV_HTML` array is the single source of truth.
+
+---
 
 ## Sidebar Nav
 
@@ -78,7 +80,7 @@ The current page is highlighted via `<body data-page="<slug>">`. Settlements and
 | Style | Used on | Key fonts | Palette |
 |---|---|---|---|
 | A — Cosmic | `index.html`, `tyrnarra-primer.html`, `tyrnarra-gods.html` | Cormorant Garamond, Cormorant SC, IM Fell English | void blue, gold, cloud white |
-| B — Grounded | `talan-primer.html` (legacy), all `/talan/**` pages | Uncial Antiqua, Crimson Pro, Cinzel | warm dark, parchment, gold |
+| B — Grounded | all `/talan/**` pages | Uncial Antiqua, Crimson Pro, Cinzel | warm dark, parchment, gold |
 
 ---
 
@@ -92,36 +94,27 @@ The current page is highlighted via `<body data-page="<slug>">`. Settlements and
 | `lore/glossary.md` | All coined names with etymologies; domain name table; sub-region name list by domain |
 | `lore/timeline.md` | All eight eras with dates |
 | `lore/site-inventory.md` | this file |
-| `lore/restructure-plan.md` | Phasing notes for the restructure (Phase 1 done, 2/3 ahead) |
-| `lore/sidebar-nav.md` | Canonical sidebar HTML/CSS/JS snippet |
+| `lore/restructure-plan.md` | Phasing notes for the restructure (Phase 1 + 2 done; Phase 3 ahead) |
+| `lore/sidebar-nav.md` | Architecture notes on the shared sidebar |
 
 ---
 
-## Phase 2 — Content Migration (next)
+## Phase 3 — Settlements + Sub-region Promotion (ahead)
 
-Open work that will progressively populate the skeleton:
-
-- Move `talan-primer.html` **History** tab content into `/talan/history.html` (with three-tier knowledge UI intact: amber `◈` Popular Belief pills, red `⚿` GM Secret pills).
-- Move `talan-primer.html` **Magic** tab content (the long-form "Magic in Daily Life" section) into `/talan/magic.html`.
-- Move `talan-primer.html` **Regions** tab content (13 region cards) into the respective `/talan/domains/<domain>/<domain>.html` pages.
-- Move `talan-primer.html` **Factions** tab content into `/talan/factions/factions.html`.
-- After migration: either delete `talan-primer.html` or leave it as a redirect to `/talan/talan.html`.
-
----
-
-## Phase 3 — Settlements + Sub-region Promotion (later)
-
-- Reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html` (plus its existing sub-pages and Quests folder).
+- Reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html`.
 - Promote the most-developed sub-regions to their own files: Thousand Kingdom, Order of Steam, Lost Kingdom, Dragon's Reach, River Duchies, etc.
+- Add the three-tier knowledge UI to remaining eras (Gods', Lost, Golden, Dark, Adventurer) as their Popular Belief / GM Secret content gets written.
 
 ---
 
 ## Three-Tier Knowledge System
 
-Established in `talan-primer.html` (History tab) and `tyrnarra-gods.html` (god secrets):
-
 - **Plain text** — common knowledge, no interaction.
-- **Amber ◈ pill** — "Popular Belief", expandable.
-- **Red ⚿ pill** — "GM Secret", expandable.
+- **Amber ◈ pill** — "Popular Belief", expandable. Uses `.legend-era-toggle` / `.legend-era-content`.
+- **Red ⚿ pill** — "GM Secret", expandable. Uses `.secret-era-toggle` / `.secret-era-content`.
 
-Currently used in: `tyrnarra-gods.html` (all 13 gods) and `talan-primer.html` (Elden Era, Week of Crimson Rain). The remaining eras have only common-knowledge text. To do: add Popular Belief / GM Secret tiers to Gods' Era, Lost Era, Golden Era, Dark Era, Adventurer Era when their content migrates.
+Currently used in:
+- `tyrnarra-gods.html` — all 13 gods have at least the red GM Secret tier.
+- `/talan/history.html` — Elden Era and Week of Crimson Rain have all three tiers.
+
+Other eras have only common-knowledge text. To do: extend the amber + red tiers to Gods' Era, Lost Era, Golden Era, Dark Era, Adventurer Era as their content is developed.

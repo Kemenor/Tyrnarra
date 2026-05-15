@@ -21,80 +21,165 @@
   <div class="header">
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">History</div>
-    <div class="page-subtitle">The Eras of Talan</div>
-    <div class="page-flavor">All dates use the two-calendar system anchored at the Week of Crimson Rain (0&nbsp;GR / 0&nbsp;MR). Before it: <b>GR</b> (Gods Reign), counting down. After: <b>MR</b> (Mortal Reign), counting up. Current year: <b>2532&nbsp;MR</b>.</div>
+    <div class="page-subtitle">The Ages of Talan</div>
+    <div class="page-flavor">
+      History on Talan is measured in two calendars: <b>GR (Gods Reign)</b>, counting backward from the establishment of the Gods' Law, and <b>MR (Mortal Reign)</b>, counting forward from that same moment. The current year is <b>2532 MR</b>.
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">On Counting Years</div>
+    The transition point — 0 GR / 0 MR — is the Week of Crimson Rain. Everything before it is measured in GR counting down. Everything after is MR counting up. Scholars of history must always note which calendar they reference.
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 class="section-heading">Eras at a Glance</h2>
-  <div class="subregion-grid">
-
-    <div class="subregion-card" style="--domain-accent: #6a4a8a;">
-      <div class="subregion-name">Creation</div>
-      <div class="subregion-etym">6001 GR</div>
-      <div class="subregion-desc">The beginning of recorded possibility. The Wellspring&rsquo;s outpouring gives rise to Tyrnarra. The twelve Grand Gods are present and active from the first moment.</div>
+  <div class="timeline">
+    <div class="era era-creation">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">6001 GR</div>
+        <div class="era-name">The Creation Era <span class="era-tag" style="background:rgba(192,132,252,0.15);color:#c084fc;border:1px solid rgba(192,132,252,0.2)">Open</span></div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        The beginning of recorded possibility. What came before 6001 GR is unknown — or deliberately unwritten. The Creation Era marks the point at which the Wellspring's outpouring gave rise to Tyrnarra as a distinct world, and Talan as its great continent. The gods were present and active from the first moment. This era is kept deliberately open; its depths may yet be explored.
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #2a6a8a;">
-      <div class="subregion-name">Elden Era</div>
-      <div class="subregion-etym">6000 GR — 2945 GR</div>
-      <div class="subregion-desc">Three thousand years dominated by the Elden — neither fully mortal nor fully divine. Created the Android ancestry. Vanished on a single day in 2945 GR.</div>
+    <div class="era era-elden">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">6000 GR — 2945 GR</div>
+        <div class="era-name">The Elden Era</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        For over three thousand years, Talan was dominated by the Elden — an ancient race of immense power and sophistication. Neither fully mortal nor fully divine, they built civilizations of staggering scale. Little of their culture survives in comprehensible form; what does is often beyond mortal understanding to replicate. Their greatest known achievement was the creation of the <b>Android</b> ancestry — people of extraordinary sophistication that no civilization has since been able to reproduce.<br><br>Then, in 2945 GR, every Elden vanished — on the same day, everywhere on Talan. No war, no plague, no exodus was recorded. Their cities stood intact, libraries full, hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across Talan, are among the most sought-after and dangerous places in the known world.
+        <div class="legend-era">
+          <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — What Happened to the Elden</button>
+          <div class="legend-era-content">
+            <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+            Three theories dominate popular understanding of the Elden's disappearance. The first holds that they fought a war with the gods — a direct, escalating conflict — and were destroyed or driven out, their civilization unmade in a struggle too vast to leave ordinary records. The second suggests they fulfilled whatever purpose brought them into existence and departed willingly, ascending beyond the known planes. The third, more poetic, holds that they found a way out entirely: beyond the Cloud Sea, to another world, leaving everything behind by choice. All three have adherents. None have evidence.
+          </div>
+        </div>
+        <div class="secret-era">
+          <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The True Fate of the Elden</button>
+          <div class="secret-era-content">
+            <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+            The Elden were at war with the gods — and winning often enough to make the gods afraid. Rather than fight to a stalemate, they devised a final solution. They freed the <b>Devourer</b> — a being of pure consumption, imprisoned since before recorded history, existing only to unmake existence — and turned it loose on the gods. While the gods scrambled to fight the Devourer and protect existence, the Elden retreated deep underground and began a ritual to connect themselves directly to the Wellspring. Had it succeeded, every Elden would have become a being of near-infinite power, unified in a single hive mind, drawing from the source of all creation.<br><br>The gods noticed in the last moment. With no time for anything else, they shoved the Devourer directly into the Elden's open connection to the Wellspring. The ritual completed. The Elden connected — to both the Wellspring's endless creation and the Devourer's endless destruction simultaneously. Every Elden, every individual, every piece of their civilisation collapsed into a single being: constant creation, constant decay, locked in permanent internal war. The Corrupted God.<br><br>What the Golden Empire miners breached in 1321 MR was the Elden's ritual site. What emerged was what the Elden had become.
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #8a6a2a;">
-      <div class="subregion-name">Gods&rsquo; Era</div>
-      <div class="subregion-etym">2944 GR — 1 GR</div>
-      <div class="subregion-desc">Three thousand years of direct divine rule. Gods as kings, gods as landlords, gods as law. Prosperity and petty divine warfare in equal measure.</div>
+    <div class="era era-gods">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">2944 GR — 1 GR</div>
+        <div class="era-name">The Gods' Era</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        With the Elden gone, the gods moved to fill the void — and found nothing standing between them and total dominion over mortal life. What followed was nearly three thousand years of divine rule: gods as kings, gods as landlords, gods as law. Mortals lived under the direct and often capricious governance of beings of immense power.<br><br>It was not uniformly terrible. Some gods were just, even benevolent. Many mortals knew prosperity under divine rule. But the gods were also petty, jealous, and deeply territorial. Their conflicts with one another — over borders, followers, resources, and pride — repeatedly consumed mortal populations in wars they had no say in starting and no power to end.
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #8a1a1a;">
-      <div class="subregion-name">Week of Crimson Rain</div>
-      <div class="subregion-etym">0 GR — 0 MR</div>
-      <div class="subregion-desc">The pivotal week. Skies wept divine blood. At the end, the Gods&rsquo; Law was forged — thirteen accepted its binding and stayed; the rest withdrew.</div>
+    <div class="era era-crimson">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">0 GR — 0 MR</div>
+        <div class="era-name">The Week of Crimson Rain</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        The pivotal event in all of Talan's history. For one week, the skies across the entire continent wept crimson — not rain, but blood. Divine blood. The nature of the conflict that caused it is still debated: was it a war among the gods? An intervention from outside the Material Plane? A judgment passed by the Wellspring itself?<br><br>Casualties among divine and mortal alike were of a scale that has no name. At the end of the week, the Gods' Law was established — a binding compact enforced by the Ethereal Plane itself: no direct governance of mortal civilizations, no open warfare, no unchecked divine control of mortal lives. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes, taking their own pantheons with them. Thirteen accepted the Law's binding and remained. The world they inherited was broken.
+        <div class="legend-era">
+          <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — What People Think Caused It</button>
+          <div class="legend-era-content">
+            <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+            The cause of the Week of Crimson Rain is the subject of ongoing scholarly debate and popular legend. Three theories dominate. The first holds that it was a war among the gods — territorial, petty, and catastrophic in scale, the same divine conflicts of the Gods' Era simply taken too far. The second suggests an intervention from outside the Material Plane: a judgment handed down from the higher layers, perhaps from the Wellspring itself. The third, favoured in more mystical traditions, holds that the gods simply became too powerful, and reality pushed back. None has been confirmed. The gods do not comment.
+          </div>
+        </div>
+        <div class="secret-era">
+          <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The True Cause</button>
+          <div class="secret-era-content">
+            <div class="secret-era-label">⚿ &nbsp; Known to Very Few</div>
+            The Week of Crimson Rain was not started by a divine dispute, a cosmic judgment, or an outside intervention. It began with a single act: the killing of <b>Tani</b>, god of Time — the first Grand God ever slain, a thing that had been considered impossible. The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war out of fear as much as fury.<br><br><b>Cronus</b>, a mortal man, hated it. He began uniting mortal survivors under one banner — and because belief is real, the act of thousands rallying to him began making him more than mortal. <b>Araphel</b> was the first Grand God to stand behind him. Together, with Tani's rebirth at the end of the war, the eleven remaining Grand Gods forged the Gods' Law. Only thirteen accepted its binding. Common people do not know this. Scholars have theories. The gods know exactly what happened and have not said.
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #4a4a6a;">
-      <div class="subregion-name">Lost Era</div>
-      <div class="subregion-etym">1 MR — 559 MR</div>
-      <div class="subregion-desc">Five centuries of mortal civilisation learning to govern itself for the first time. Fragmentation, rediscovery, and immense loss of knowledge.</div>
+    <div class="era era-lost">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">1 MR — 559 MR</div>
+        <div class="era-name">The Lost Era</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        For over five centuries, mortal civilization simply tried to survive. The gods were constrained. The divine infrastructure — the systems of governance, food distribution, law enforcement — had been divine-built, and without active divine management, it collapsed. Mortals, who had never been asked to govern themselves, had to learn.<br><br>The Lost Era is characterized by fragmentation, rediscovery, and immense loss of knowledge. Entire libraries of the Gods' Era were lost. Languages fractured and drifted. Populations crashed in some regions, migrated in others. Slowly, painstakingly, mortal kingdoms began to form — imperfect, contentious, but their own. The era is called "Lost" not because nothing happened, but because so much of what happened was simply not recorded.
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #8a7a1a;">
-      <div class="subregion-name">Golden Era</div>
-      <div class="subregion-etym">560 MR — 1325 MR</div>
-      <div class="subregion-desc">The Golden Empire — a dwarven empire controlling roughly 70&percnt; of Talan. The largest mortal empire in recorded history. Produced the Automaton ancestry.</div>
+    <div class="era era-golden">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">560 MR — 1325 MR</div>
+        <div class="era-name">The Golden Era</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        Named for the civilization that defined it: the Golden Empire, a dwarven empire that rose from the southern heartlands and, over seven centuries of expansion, conquest, and political absorption, came to control approximately 70% of Talan. At its peak it was the largest mortal empire in recorded history — a monument to what mortals could build when freed from direct divine governance.<br><br>The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age — fossilized in the old place-names that survive to this day.<br><br>Among the Empire's many pursuits, its greatest scholars attempted to recreate the Androids of the Elden — synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: formidable constructs of considerable capability, but not the living people the Elden had made. The distinction haunted Imperial scholarship until the Empire's end.
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #4a1a1a;">
-      <div class="subregion-name">Dark Era &amp; the Guild&rsquo;s Birth</div>
-      <div class="subregion-etym">1321 MR — 2135 MR</div>
-      <div class="subregion-desc">Miners breached the sealed Elden ritual site. The Corrupted God emerged. Eight centuries of attrition. The Adventurers Guild rose from conscience. Defeated in 2135 MR.</div>
+    <div class="era era-dark">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">1321 MR — 2135 MR</div>
+        <div class="era-name">The Dark Era &amp; The Guild's Birth</div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        In 1321 MR, Golden Empire miners breached something deep beneath the earth — a sealed place, old beyond reckoning. What emerged was the Corrupted God: not a deity of the Gods' Law, not bound by the Ethereal Compact, something older and something wrong. Its influence spread through the rock and soil like poison through water. Its spawn — countless, varied, relentless — erupted across Talan. By 1325 MR the Golden Empire had collapsed entirely, its infrastructure overwhelmed, its population shattered.<br><br>What followed was eight centuries of attrition. The Corrupted God's forces did not conquer — they hunted. Probed. Destroyed. Drove mortals apart and then eliminated them in isolation. Kingdoms fell. Populations dwindled. The 13 Bound Gods could not directly intervene; the Gods' Law held even in this crisis.<br><br>In this darkness, something unprecedented emerged. Not a king's army. Not a god's command. A group of people — adventurers, wanderers, soldiers without banners — began to resist. Not for coin, not for titles, but because their own conscience demanded it. They organized, slowly, across borders and nations. They became the Adventurers Guild.<br><br>The Guild grew from desperate resistance cells into a continent-spanning organization: the only institution on Talan with reach, resources, and the independent will to stand against the Corrupted God's tide. They did not answer to kings. They answered to the mission. In 2135 MR, a party of adventurers descended further than any before them and defeated the Corrupted God — not slaying it precisely, but wounding it so deeply that its active influence collapsed. The spawn retreated. The darkness receded.
+      </div>
     </div>
 
-    <div class="subregion-card" style="--domain-accent: #1a5a3a;">
-      <div class="subregion-name">Adventurer Era</div>
-      <div class="subregion-etym">2135 MR — Present (2532 MR)</div>
-      <div class="subregion-desc">Four centuries of rebuilding and uneasy opportunity. The Adventurers Guild has become a world-spanning institution of soft power. Spawn still emerge from deep places, but the world is alive again.</div>
+    <div class="era era-adventurer open">
+      <div class="era-header" onclick="toggleEra(this.parentElement)">
+        <div class="era-dot"></div>
+        <div class="era-date">2135 MR — Present (2532 MR)</div>
+        <div class="era-name">The Adventurer Era <span class="era-tag" style="background:rgba(52,211,153,0.12);color:#34d399;border:1px solid rgba(52,211,153,0.2)">Current</span></div>
+        <div class="era-chevron">▾</div>
+      </div>
+      <div class="era-body">
+        Four centuries of rebuilding, expansion, and uneasy opportunity. Kingdoms have risen in the ruins of the Dark Era — some rebuilt on old foundations, some entirely new, some assembled from conquered neighbors. The Adventurers Guild, no longer fighting for survival against a singular threat, has transformed: still independent, still outside government, but now a world-spanning institution of enormous soft power. It brokers contracts, maintains neutral ground, and quietly influences more political decisions than any king would like to admit.<br><br>The threats of the Corrupted God linger. Spawn still emerge from deep places. Old ruins still harbor things that should not have survived. But the world is alive again — trading, scheming, building, exploring. It is a time of genuine opportunity and genuine danger in equal measure. History is being made by anyone willing to reach for it.
+      </div>
     </div>
-
-  </div>
-
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <h2 class="section-heading">Three-Tier Knowledge Notes</h2>
-  <div class="prose">
-    <p>Several eras carry both common knowledge and deeper layers: <b>Popular Belief</b> (amber pill, expandable) and <b>GM Secret</b> (red pill, expandable). The Elden Era and the Week of Crimson Rain have all three tiers in <code>talan-primer.html</code>. The remaining eras have common-knowledge text only.</p>
-    <p>This page is a stub. The full era content with three-tier interactions will migrate here from <code>talan-primer.html</code> (History tab) in a later pass.</p>
-  </div>
-
-  <div class="stub-note">
-    Long-form era content (with the amber-pill Popular Belief and red-pill GM Secret panels) currently lives in <code>talan-primer.html</code> under the History tab. Migration is Phase 2.
   </div>
 
   <div class="footer">TYRNARRA · TALAN · HISTORY</div>
 
 </div>
 
+<script>
+function toggleEra(el) { el.classList.toggle('open'); }
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '◈ &nbsp; Hide Popular Belief' : btn.getAttribute('data-original');
+}
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
 </body>
 </html>

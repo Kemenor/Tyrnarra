@@ -33,7 +33,6 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
   index.html                           ← landing page (curated portal + sidebar)
   tyrnarra-primer.html                 ← cosmology (world-level)
   tyrnarra-gods.html                   ← the 13 bound gods (world-level)
-  talan-primer.html                    ← LEGACY tabbed primer; content migrates to /talan/ in Phase 2
 
   talan/                               ← continent-level content
     talan.html                         ← continent overview (geography, three seas, all 13 domains)

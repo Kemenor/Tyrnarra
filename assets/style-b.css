@@ -418,8 +418,414 @@ a.subregion-card:hover {
   text-transform: uppercase;
 }
 
+/* ── CALLOUT BOX ───────────────────────────────────────────── */
+
+.callout {
+  border-left: 3px solid var(--gold-dim);
+  background: rgba(200, 144, 10, 0.06);
+  padding: 12px 16px;
+  border-radius: 0 4px 4px 0;
+  margin: 16px auto;
+  max-width: 720px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--parch);
+}
+.callout-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+/* ── TIMELINE + ERA CARDS ──────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.timeline {
+  position: relative;
+  margin: 24px auto 0;
+  max-width: 760px;
+  padding-left: 24px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(200, 144, 10, 0.3) 10%, rgba(200, 144, 10, 0.3) 90%, transparent);
+}
+
+.era {
+  position: relative;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.era:hover { border-color: rgba(200, 144, 10, 0.15); }
+
+.era-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.era-dot {
+  position: absolute;
+  left: -24px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  flex-shrink: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.era-date {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  min-width: 130px;
+  flex-shrink: 0;
+}
+.era-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  flex: 1;
+}
+.era-chevron {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.era.open .era-chevron { transform: rotate(180deg); }
+
+.era-body {
+  display: none;
+  padding: 0 16px 14px 16px;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  animation: fadeUp 0.2s ease;
+}
+.era.open .era-body { display: block; }
+
+.era-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+/* Era colour schemes */
+.era-creation   .era-header { background: linear-gradient(to right, rgba(106, 74, 138, 0.18), transparent); }
+.era-creation   .era-name   { color: #c084fc; }
+.era-creation   .era-dot    { background: #c084fc; }
+
+.era-elden      .era-header { background: linear-gradient(to right, rgba(42, 106, 138, 0.18), transparent); }
+.era-elden      .era-name   { color: #60c8f0; }
+.era-elden      .era-dot    { background: #60c8f0; }
+
+.era-gods       .era-header { background: linear-gradient(to right, rgba(138, 106, 42, 0.18), transparent); }
+.era-gods       .era-name   { color: #f0c040; }
+.era-gods       .era-dot    { background: #f0c040; }
+
+.era-crimson    .era-header { background: linear-gradient(to right, rgba(138, 26, 26, 0.25), transparent); }
+.era-crimson    .era-name   { color: #f87171; }
+.era-crimson    .era-dot    { background: #f87171; }
+
+.era-lost       .era-header { background: linear-gradient(to right, rgba(74, 74, 106, 0.18), transparent); }
+.era-lost       .era-name   { color: #a0a0c8; }
+.era-lost       .era-dot    { background: #a0a0c8; }
+
+.era-golden     .era-header { background: linear-gradient(to right, rgba(138, 122, 26, 0.2), transparent); }
+.era-golden     .era-name   { color: #f0d060; }
+.era-golden     .era-dot    { background: #f0d060; }
+
+.era-dark       .era-header { background: linear-gradient(to right, rgba(74, 26, 26, 0.25), transparent); }
+.era-dark       .era-name   { color: #e07060; }
+.era-dark       .era-dot    { background: #e07060; }
+
+.era-adventurer .era-header { background: linear-gradient(to right, rgba(26, 90, 58, 0.2), transparent); }
+.era-adventurer .era-name   { color: #34d399; }
+.era-adventurer .era-dot    { background: #34d399; }
+
+/* ── THREE-TIER KNOWLEDGE: POPULAR BELIEF (amber) ─────────── */
+
+.legend-era {
+  margin-top: 14px;
+  border-top: 1px solid rgba(170, 120, 20, 0.2);
+  padding-top: 10px;
+}
+.legend-era-toggle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(175, 125, 20, 0.7);
+  background: rgba(110, 80, 10, 0.07);
+  border: 1px solid rgba(160, 110, 20, 0.22);
+  border-radius: 2px;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 100%;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.legend-era-toggle:hover {
+  color: rgba(200, 150, 30, 0.95);
+  border-color: rgba(180, 130, 20, 0.45);
+  background: rgba(110, 80, 10, 0.14);
+}
+.legend-era-content {
+  display: none;
+  margin-top: 10px;
+  background: rgba(90, 65, 8, 0.1);
+  border: 1px solid rgba(160, 110, 20, 0.22);
+  border-left: 3px solid rgba(180, 130, 20, 0.5);
+  border-radius: 0 3px 3px 0;
+  padding: 10px 14px;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text);
+  animation: fadeUp 0.2s ease;
+}
+.legend-era-content.revealed { display: block; }
+.legend-era-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(190, 140, 30, 0.75);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(160, 110, 20, 0.18);
+}
+
+/* ── THREE-TIER KNOWLEDGE: GM SECRET (red) ────────────────── */
+
+.secret-era {
+  margin-top: 14px;
+  border-top: 1px solid rgba(160, 40, 40, 0.2);
+  padding-top: 10px;
+}
+.secret-era-toggle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(180, 60, 60, 0.65);
+  background: rgba(120, 20, 20, 0.06);
+  border: 1px solid rgba(160, 40, 40, 0.2);
+  border-radius: 2px;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 100%;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.secret-era-toggle:hover {
+  color: rgba(210, 80, 80, 0.95);
+  border-color: rgba(180, 50, 50, 0.4);
+  background: rgba(120, 20, 20, 0.12);
+}
+.secret-era-content {
+  display: none;
+  margin-top: 10px;
+  background: rgba(100, 15, 15, 0.1);
+  border: 1px solid rgba(160, 40, 40, 0.2);
+  border-left: 3px solid rgba(180, 50, 50, 0.5);
+  border-radius: 0 3px 3px 0;
+  padding: 10px 14px;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text);
+  animation: fadeUp 0.2s ease;
+}
+.secret-era-content.revealed { display: block; }
+.secret-era-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(200, 70, 70, 0.7);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(160, 40, 40, 0.15);
+}
+
+/* ── SCALE ROW (magic schools, city sizes) ─────────────────── */
+
+.scale-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 14px auto;
+  max-width: 760px;
+}
+.scale-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(200, 144, 10, 0.1);
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+.scale-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.scale-content { flex: 1; }
+.scale-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.scale-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* ── INFO CARD GRID (Faith section) ────────────────────────── */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.info-card {
+  background: rgba(20, 16, 8, 0.4);
+  border: 1px solid rgba(200, 144, 10, 0.15);
+  border-radius: 3px;
+  padding: 16px 18px;
+}
+.info-card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.info-card-body {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* ── EXPANDABLE FACTION CARDS ──────────────────────────────── */
+
+.faction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.faction-card-x {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(200, 144, 10, 0.12);
+  border-radius: 4px;
+  padding: 18px 18px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.faction-card-x::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent, var(--gold));
+  opacity: 0.7;
+}
+.faction-card-x:hover {
+  border-color: rgba(200, 144, 10, 0.35);
+  background: rgba(255, 255, 255, 0.035);
+}
+.faction-card-x.open { border-color: rgba(200, 144, 10, 0.4); }
+.faction-card-x-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--accent, var(--gold-bright));
+  margin: 4px 0 4px;
+}
+.faction-card-x-type {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.faction-card-x-summary {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+}
+.faction-card-x-detail {
+  display: none;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(200, 144, 10, 0.15);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text);
+  animation: fadeUp 0.2s ease;
+}
+.faction-card-x.open .faction-card-x-detail { display: block; }
+
+/* ── PILL ROW (used on domain "Character" rows) ────────────── */
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0;
+}
+.pill {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 144, 10, 0.2);
+  color: var(--parch);
+  text-transform: uppercase;
+}
+
 @media (max-width: 600px) {
   .container { padding: 56px 16px 56px; }
   .facts { grid-template-columns: 1fr; gap: 4px 0; }
   .facts dt { padding-top: 8px; }
+  .era-date { display: none; }
 }

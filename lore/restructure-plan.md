@@ -2,7 +2,7 @@
 
 Authored 2026-05-15. The goal: turn a flat collection of HTML pages into a clearly hierarchical site that mirrors the world's own hierarchy (Tyrnarra → Talan → domains → kingdoms → settlements) with a persistent sidebar menu and obvious homes for every type of content.
 
-This plan is implemented in phases. Phase 1 (skeleton + nav) ships first. Content migration from `talan-primer.html`'s tabs into dedicated pages is Phase 2.
+**Status:** Phase 1 and Phase 2 complete. Phase 3 (settlements + sub-region promotion) ahead. `talan-primer.html` was deleted on 2026-05-15 after its content migrated.
 
 ---
 
