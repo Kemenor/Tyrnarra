@@ -143,3 +143,47 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 - **Palette:** warm dark (`--bg: #0f0c08`), gold accents (`--gold: #c8900a`, `--gold-bright: #f0b020`), parchment text (`--text: #d0c8a8`), per-domain accent colour driven by the location's character
 - **Signature elements:** parchment noise overlay, ornament dividers (`✦ · ✦ · ✦`), "At a Glance" facts panel, god-city callout boxes, sub-region grid cards, timeline + era cards, amber `◈` Popular Belief + red `⚿` GM Secret expandables
 - **References:** `talan/talan.html` (continent overview), any of `talan/domains/<domain>/<domain>.html` (domain page), `talan/factions/adventurers-guild.html` (faction page)
+
+---
+
+## How we work together — drafting → publishing
+
+**Lore-first protocol.** When the user is brainstorming new content — a kingdom, an NPC, a magic ritual, a faction, a god's secret — capture it into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space and evolve freely. HTML pages are the published output: clean, polished, navigable.
+
+**Stay in lore by default.** A new session starts in drafting mode. Claude should not generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*, or similar. If the intent is ambiguous, ask before touching HTML.
+
+**Where new content goes:**
+
+| Topic | File |
+|---|---|
+| Cosmology, gods, magic, divine law, ancient races, calendar | `lore/world-notes.md` |
+| Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography.md` |
+| Factions, guilds, churches, organisations | `lore/factions.md` |
+| New coined names + etymologies | `lore/glossary.md` (always — see naming rule) |
+| Eras, historical events, dates | `lore/timeline.md` |
+| Something entirely new that doesn't fit above | new file in `lore/` (e.g. `lore/bestiary.md`, `lore/spells.md`) |
+
+When coining new names, always record the source language, literal meaning, and drift step in `glossary.md` *before* using the name elsewhere — the glossary is the source of truth for derivation.
+
+**On the publish signal**, identify the target HTML page from the layer-to-folder mapping above, pick the matching style (A or B), and either edit the existing page or create a new one. After publishing, update `docs/site-inventory.md` to reflect any new or now-populated pages.
+
+---
+
+## Working across sessions (and via Cowork Dispatch)
+
+This project is designed so a fresh Claude session — a new chat, a new Cowork session, or a task dispatched from your phone — can pick it up with no prior context. Everything Claude needs is in the repo:
+
+1. **Read `CLAUDE.md` first** — naming rule, folder layout, style guide, drafting protocol.
+2. **Read whichever `lore/` files are relevant** to the topic at hand.
+3. **Skim `docs/site-inventory.md`** to know what's already published vs. stub.
+
+Don't rely on the user's in-session memory file for canon — that's a summary, not the source. The lore files win.
+
+### Using Cowork Dispatch
+
+Cowork's Dispatch feature lets you assign tasks to Claude from your phone (or another spot) and Claude executes them on the desktop. For Tyrnarra:
+
+- The Tyrnarra folder must be selected as the Cowork workspace so the dispatched session can read and write the files.
+- The Claude Desktop app must be installed, running, and the computer awake when the task fires.
+- Dispatched tasks can be terse — e.g. *"In Tyrnarra, design a coastal city called Veldtmark in Brauogi"* — because Claude will read `CLAUDE.md` and the relevant lore files to learn the conventions and existing canon.
+- The drafting protocol still applies: a dispatched session captures to `lore/` and doesn't render HTML unless the task includes the publish signal.
