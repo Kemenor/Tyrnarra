@@ -2,7 +2,7 @@
 
 Live at **https://tyrnarra.kunkel.swiss** · Auto-deploys on push to `main` · No build step.
 
-Last updated 2026-05-15 after Phase 1 of the restructure (skeleton + sidebar).
+Last updated 2026-05-15 after Phase 1 of the restructure (skeleton + sidebar) and the subsequent extraction of shared chrome into `/assets/`.
 
 ---
 
@@ -48,9 +48,21 @@ Last updated 2026-05-15 after Phase 1 of the restructure (skeleton + sidebar).
 
 ---
 
+## Shared Chrome (`/assets/`)
+
+Loaded by every page via `<link>` and `<script defer src>`:
+
+| File | Used by | Purpose |
+|---|---|---|
+| `assets/site-nav.css` | every page | Sidebar styling |
+| `assets/site-nav.js` | every page | Sidebar markup + behaviour (single source of truth for menu structure) |
+| `assets/style-b.css` | every page under `/talan/` | Style B base — palette, fonts, container/header/divider, facts panel, gods-city callout, sub-region grid, domain accents |
+
+To add a page to the sidebar, edit `assets/site-nav.js` only. The `NAV_HTML` array is the single source of truth.
+
 ## Sidebar Nav
 
-Every page has the persistent sidebar (canonical snippet at `lore/sidebar-nav.md`). The sidebar lists:
+The sidebar lists:
 
 - World & Cosmos · Cosmology, The 13 Bound Gods
 - Talan · Continent Overview, History, Magic

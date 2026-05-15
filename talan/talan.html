@@ -5,299 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talan — Continent Overview</title>
 <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0f0c08;
-    --bg2: #171209;
-    --parch: #c8b890;
-    --parch-dim: #8a7a58;
-    --parch-bright: #e8d8a8;
-    --gold: #c8900a;
-    --gold-bright: #f0b020;
-    --gold-dim: #7a5808;
-    --text: #d0c8a8;
-    --text-dim: #7a7058;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    background-image:
-      radial-gradient(ellipse at 30% 10%, #1a1408 0%, transparent 50%),
-      radial-gradient(ellipse at 70% 90%, #0a0c08 0%, transparent 50%);
-    min-height: 100vh;
-    font-family: 'Crimson Pro', Georgia, serif;
-    color: var(--text);
-    overflow-x: hidden;
-  }
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* ── SITE NAV ── */
-  .nav-toggle {
-    position: fixed; top: 14px; left: 14px; z-index: 200;
-    background: rgba(15, 12, 8, 0.85);
-    color: var(--gold-bright); border: 1px solid rgba(200,168,75,0.35);
-    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
-    padding: 8px 14px; border-radius: 2px; cursor: pointer;
-    backdrop-filter: blur(4px); text-transform: uppercase;
-  }
-  .nav-toggle:hover { background: rgba(40, 28, 12, 0.95); }
-  .site-nav {
-    position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
-    background: rgba(8, 10, 18, 0.96); backdrop-filter: blur(10px);
-    border-right: 1px solid rgba(200, 168, 75, 0.18);
-    padding: 64px 20px 30px; overflow-y: auto; z-index: 190;
-    font-family: 'Crimson Pro', Georgia, serif;
-    transform: translateX(-100%); transition: transform 0.28s ease;
-  }
-  .site-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
-  .site-nav-title {
-    display: block; font-family: 'Cinzel', serif;
-    font-size: 1.1rem; letter-spacing: 0.28em;
-    color: var(--gold-bright); text-decoration: none; text-align: center;
-    margin-bottom: 24px; padding-bottom: 14px;
-    border-bottom: 1px solid rgba(200, 168, 75, 0.18);
-    text-transform: uppercase;
-  }
-  .nav-section { margin-bottom: 22px; }
-  .nav-section-label {
-    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.32em;
-    color: var(--gold-dim); margin-bottom: 8px; text-transform: uppercase;
-  }
-  .nav-list { list-style: none; padding: 0; margin: 0; }
-  .nav-list a {
-    display: block; padding: 4px 10px;
-    color: var(--text-dim); text-decoration: none; font-size: 0.92rem;
-    border-left: 2px solid transparent;
-    transition: color 0.15s, border-color 0.15s, background 0.15s;
-  }
-  .nav-list a:hover {
-    color: var(--text); border-left-color: rgba(200,168,75,0.4);
-    background: rgba(200,168,75,0.05);
-  }
-  .nav-list a.is-current {
-    color: var(--gold-bright); border-left-color: var(--gold);
-    background: rgba(200,168,75,0.08);
-  }
-  .nav-scrim {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 180;
-    opacity: 0; pointer-events: none; transition: opacity 0.2s;
-  }
-  .nav-scrim.open { opacity: 1; pointer-events: auto; }
-  @media (max-width: 600px) { .site-nav { width: 86vw; } }
-
-  /* ── LAYOUT ── */
-  .container {
-    position: relative; z-index: 1;
-    max-width: 960px; margin: 0 auto;
-    padding: 72px 20px 80px;
-  }
-  .breadcrumb {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.25em; color: var(--gold-dim);
-    text-transform: uppercase; text-align: center;
-    margin-bottom: 12px;
-  }
-  .breadcrumb a { color: var(--gold-dim); text-decoration: none; }
-  .breadcrumb a:hover { color: var(--gold); }
-  .breadcrumb .sep { color: var(--gold-dim); margin: 0 8px; }
-
-  .header { text-align: center; margin-bottom: 48px; }
-  .header-ornament {
-    font-size: 1.1rem; color: var(--gold-dim);
-    letter-spacing: 0.5em; margin-bottom: 12px;
-  }
-  .page-title {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: clamp(2.8rem, 8vw, 4.8rem);
-    color: var(--gold-bright); letter-spacing: 0.06em;
-    text-shadow: 0 0 40px rgba(200,144,10,0.5), 0 0 80px rgba(200,144,10,0.2), 2px 3px 0 rgba(0,0,0,0.8);
-    line-height: 1; margin-bottom: 10px;
-  }
-  .page-subtitle {
-    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.4em;
-    color: var(--parch-dim); text-transform: uppercase; margin-bottom: 16px;
-  }
-  .page-flavor {
-    font-family: 'Crimson Pro', serif; font-style: italic;
-    font-size: 1.05rem; line-height: 1.85; color: var(--text);
-    max-width: 640px; margin: 0 auto;
-  }
-
-  .divider {
-    display: flex; align-items: center; gap: 16px;
-    margin: 48px 0 36px;
-  }
-  .div-line { flex: 1; height: 1px;
-    background: linear-gradient(to right, transparent, rgba(200,144,10,0.3), transparent);
-  }
-  .div-glyph { color: var(--gold-dim); font-size: 0.85rem; }
-
-  h2.section-heading {
-    font-family: 'Cinzel', serif; font-size: 0.85rem;
-    letter-spacing: 0.32em; color: var(--gold);
-    text-align: center; text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-
-  .prose p {
-    font-size: 1.02rem; line-height: 1.85;
-    margin-bottom: 1em;
-  }
-  .prose p + p { margin-top: 0; }
-
-  /* Three Seas */
-  .sea-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px; margin-bottom: 24px;
-  }
-  .sea-card {
-    background: rgba(20,16,8,0.4); border: 1px solid rgba(200,144,10,0.18);
-    padding: 18px 18px 16px; border-radius: 3px;
-    position: relative; overflow: hidden;
-  }
-  .sea-card::before {
-    content: ''; position: absolute; top: 0; left: 0;
-    width: 3px; height: 100%; background: var(--gold-dim);
-  }
-  .sea-name {
-    font-family: 'Cinzel', serif; font-size: 0.9rem;
-    color: var(--gold-bright); letter-spacing: 0.18em;
-    margin-bottom: 4px; text-transform: uppercase;
-  }
-  .sea-etym {
-    font-family: 'Crimson Pro', serif; font-style: italic;
-    font-size: 0.78rem; color: var(--parch-dim); margin-bottom: 8px;
-  }
-  .sea-desc { font-size: 0.93rem; line-height: 1.65; color: var(--text); }
-
-  /* Domain grid */
-  .domain-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 14px;
-  }
-  .domain-card {
-    display: block; text-decoration: none; color: inherit;
-    background: rgba(20,16,8,0.4); border: 1px solid rgba(200,144,10,0.18);
-    border-radius: 3px; padding: 16px 18px 14px;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    position: relative; overflow: hidden;
-  }
-  .domain-card:hover {
-    border-color: rgba(200,144,10,0.5);
-    background: rgba(30,22,10,0.5);
-    transform: translateY(-2px);
-  }
-  .domain-card::before {
-    content: ''; position: absolute; top: 0; left: 0;
-    width: 3px; height: 100%; background: var(--accent, var(--gold));
-    opacity: 0.7;
-  }
-  .domain-tag {
-    font-family: 'Cinzel', serif; font-size: 0.55rem;
-    letter-spacing: 0.3em; color: var(--gold-dim);
-    text-transform: uppercase; margin-bottom: 4px;
-  }
-  .domain-name {
-    font-family: 'Cinzel', serif; font-size: 1.05rem;
-    letter-spacing: 0.1em; color: var(--gold-bright);
-    margin-bottom: 4px;
-  }
-  .domain-god {
-    font-family: 'Crimson Pro', serif; font-style: italic;
-    font-size: 0.85rem; color: var(--parch-dim); margin-bottom: 8px;
-  }
-  .domain-desc { font-size: 0.85rem; line-height: 1.55; color: var(--text-dim); }
-
-  /* Accent palette mapping to god domains */
-  .d-vindul   { --accent: #88aacf; }  /* wind / arctic */
-  .d-lautara  { --accent: #d4a04a; }  /* commerce / sand */
-  .d-myrkono  { --accent: #6a5a8a; }  /* darkness */
-  .d-floteyn  { --accent: #4a8ab0; }  /* water */
-  .d-sumendar { --accent: #c84020; }  /* fire */
-  .d-lioaru   { --accent: #b07a3a; }  /* time / desert */
-  .d-brauogi  { --accent: #7a9a3a; }  /* earth / fields */
-  .d-ezkudon  { --accent: #5a7a8a; }  /* knowledge */
-  .d-egulon   { --accent: #f0c040; }  /* light */
-  .d-zuzental { --accent: #8aa090; }  /* law */
-  .d-nashavel { --accent: #2a6a4a; }  /* chaos / wild forest */
-  .d-ehizahar { --accent: #8a4a2a; }  /* hunt */
-  .d-askamira { --accent: #e8d8a8; }  /* freedom / unique */
-
-  .footer {
-    text-align: center; font-family: 'Cinzel', serif;
-    font-size: 0.6rem; letter-spacing: 0.3em;
-    color: rgba(200,144,10,0.3); margin-top: 64px;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 600px) {
-    .container { padding: 56px 16px 56px; }
-  }
-</style>
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
 </head>
 <body data-page="talan">
-
-<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>
-<div class="nav-scrim" id="navScrim"></div>
-
-<aside class="site-nav" id="siteNav" aria-label="Site navigation">
-  <a href="/index.html" class="site-nav-title">Tyrnarra</a>
-
-  <div class="nav-section">
-    <div class="nav-section-label">World &amp; Cosmos</div>
-    <ul class="nav-list">
-      <li><a href="/tyrnarra-primer.html" data-page="cosmology">Cosmology</a></li>
-      <li><a href="/tyrnarra-gods.html"   data-page="gods">The 13 Bound Gods</a></li>
-    </ul>
-  </div>
-
-  <div class="nav-section">
-    <div class="nav-section-label">Talan</div>
-    <ul class="nav-list">
-      <li><a href="/talan/talan.html"   data-page="talan">Continent Overview</a></li>
-      <li><a href="/talan/history.html" data-page="history">History &amp; Eras</a></li>
-      <li><a href="/talan/magic.html"   data-page="magic">Magic — Four Schools</a></li>
-    </ul>
-  </div>
-
-  <div class="nav-section">
-    <div class="nav-section-label">Domains</div>
-    <ul class="nav-list">
-      <li><a href="/talan/domains/vindul/vindul.html"     data-page="vindul">Vindul · Wind</a></li>
-      <li><a href="/talan/domains/lautara/lautara.html"   data-page="lautara">Lautara · Commerce</a></li>
-      <li><a href="/talan/domains/myrkono/myrkono.html"   data-page="myrkono">Myrkono · Darkness</a></li>
-      <li><a href="/talan/domains/floteyn/floteyn.html"   data-page="floteyn">Floteyn · Water</a></li>
-      <li><a href="/talan/domains/sumendar/sumendar.html" data-page="sumendar">Sumendar · Fire</a></li>
-      <li><a href="/talan/domains/lioaru/lioaru.html"     data-page="lioaru">Lioaru · Time</a></li>
-      <li><a href="/talan/domains/brauogi/brauogi.html"   data-page="brauogi">Brauogi · Earth</a></li>
-      <li><a href="/talan/domains/ezkudon/ezkudon.html"   data-page="ezkudon">Ezkudon · Knowledge</a></li>
-      <li><a href="/talan/domains/egulon/egulon.html"     data-page="egulon">Egulon · Light</a></li>
-      <li><a href="/talan/domains/zuzental/zuzental.html" data-page="zuzental">Zuzental · Law</a></li>
-      <li><a href="/talan/domains/nashavel/nashavel.html" data-page="nashavel">Nashavel · Chaos</a></li>
-      <li><a href="/talan/domains/ehizahar/ehizahar.html" data-page="ehizahar">Ehizahar · Hunt</a></li>
-      <li><a href="/talan/domains/askamira/askamira.html" data-page="askamira">Askamira · Freedom</a></li>
-    </ul>
-  </div>
-
-  <div class="nav-section">
-    <div class="nav-section-label">Factions</div>
-    <ul class="nav-list">
-      <li><a href="/talan/factions/factions.html"          data-page="factions">All Factions</a></li>
-      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>
-      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>
-      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>
-      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>
-    </ul>
-  </div>
-</aside>
 
 <div class="container">
 
@@ -316,7 +28,6 @@
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <!-- Three Seas -->
   <h2 class="section-heading">The Three Seas</h2>
   <div class="sea-grid">
     <div class="sea-card">
@@ -338,26 +49,16 @@
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <!-- Geography Structure -->
   <h2 class="section-heading">The Shape of the World</h2>
-  <div class="prose" style="max-width: 700px; margin: 0 auto;">
-    <p style="text-align: center; font-style: italic; color: var(--parch-dim);">
-      Tyrnarra → Talan → Domains → Sub-Regions &amp; Kingdoms → Settlements
-    </p>
-    <p>
-      <b>Tyrnarra</b> is the world entire — all three planar layers, the Cloud Sea, and everything within. <b>Talan</b> is the great continent of the Material Plane and the only place where the thirteen Bound Gods reside.
-    </p>
-    <p>
-      Talan is divided into <b>thirteen Domains</b>, one per bound god. These are ancient regions, named in tongues older than any living kingdom. Each Domain contains <b>sub-regions</b> — some of which are kingdoms, others tribal lands, others uninhabited wilderness, and a few unclaimed. Within those sit the <b>settlements</b>: city-states, free cities, towns, hamlets, and ruins.
-    </p>
-    <p>
-      The thirteen Domains are listed below. Each links to its own page.
-    </p>
+  <div class="prose">
+    <p style="text-align: center; font-style: italic; color: var(--parch-dim);">Tyrnarra → Talan → Domains → Sub-Regions &amp; Kingdoms → Settlements</p>
+    <p><b>Tyrnarra</b> is the world entire — all three planar layers, the Cloud Sea, and everything within. <b>Talan</b> is the great continent of the Material Plane and the only place where the thirteen Bound Gods reside.</p>
+    <p>Talan is divided into <b>thirteen Domains</b>, one per bound god. These are ancient regions, named in tongues older than any living kingdom. Each Domain contains <b>sub-regions</b> — some of which are kingdoms, others tribal lands, others uninhabited wilderness, and a few unclaimed. Within those sit the <b>settlements</b>: city-states, free cities, towns, hamlets, and ruins.</p>
+    <p>The thirteen Domains are listed below. Each links to its own page.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <!-- Domains -->
   <h2 class="section-heading">The Thirteen Domains</h2>
   <div class="domain-grid">
 
@@ -456,41 +157,16 @@
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <!-- Where to go next -->
   <h2 class="section-heading">Continue Exploring</h2>
-  <div class="prose" style="max-width: 660px; margin: 0 auto;">
-    <p>
-      For the eras that shaped this continent — Elden, Gods', the Week of Crimson Rain, the Dark Era — see <a href="/talan/history.html" style="color: var(--gold);">History &amp; Eras</a>.
-    </p>
-    <p>
-      For the four schools of magic and how mortals access the Wellspring, see <a href="/talan/magic.html" style="color: var(--gold);">Magic — Four Schools</a>.
-    </p>
-    <p>
-      For the Adventurers Guild, the Mercenary Guild, and the other independent organisations spanning the continent, see <a href="/talan/factions/factions.html" style="color: var(--gold);">Factions</a>.
-    </p>
+  <div class="prose">
+    <p>For the eras that shaped this continent — Elden, Gods', the Week of Crimson Rain, the Dark Era — see <a href="/talan/history.html">History &amp; Eras</a>.</p>
+    <p>For the four schools of magic and how mortals access the Wellspring, see <a href="/talan/magic.html">Magic — Four Schools</a>.</p>
+    <p>For the Adventurers Guild, the Mercenary Guild, and the other independent organisations spanning the continent, see <a href="/talan/factions/factions.html">Factions</a>.</p>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · CONTINENT OVERVIEW</div>
 
 </div>
 
-<script>
-(function() {
-  var nav = document.getElementById('siteNav');
-  var toggle = document.getElementById('navToggle');
-  var scrim = document.getElementById('navScrim');
-  if (!nav || !toggle) return;
-  var current = document.body.getAttribute('data-page');
-  if (current) {
-    var link = nav.querySelector('a[data-page="' + current + '"]');
-    if (link) link.classList.add('is-current');
-  }
-  function open()  { nav.classList.add('open');    if (scrim) scrim.classList.add('open'); }
-  function close() { nav.classList.remove('open'); if (scrim) scrim.classList.remove('open'); }
-  toggle.addEventListener('click', function(e) { e.stopPropagation(); nav.classList.contains('open') ? close() : open(); });
-  if (scrim) scrim.addEventListener('click', close);
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
-})();
-</script>
 </body>
 </html>

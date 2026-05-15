@@ -1,0 +1,91 @@
+/* ───────────────────────────────────────────────────────────────
+   site-nav.css — persistent sidebar menu
+   Loaded by every published page.
+   Uses fallback CSS variables so it works in both Style A and B.
+   ─────────────────────────────────────────────────────────────── */
+
+.nav-toggle {
+  position: fixed; top: 14px; left: 14px; z-index: 200;
+  background: rgba(8, 10, 18, 0.85);
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  border: 1px solid rgba(200, 168, 75, 0.35);
+  font-family: 'Cormorant SC', 'Cinzel', serif;
+  font-size: 0.7rem; letter-spacing: 0.28em;
+  padding: 8px 14px; border-radius: 2px;
+  cursor: pointer; text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+.nav-toggle:hover { background: rgba(40, 28, 12, 0.95); }
+
+.site-nav {
+  position: fixed; top: 0; left: 0; bottom: 0;
+  width: 280px;
+  background: rgba(8, 10, 18, 0.96);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(200, 168, 75, 0.18);
+  padding: 64px 20px 30px;
+  overflow-y: auto;
+  z-index: 190;
+  font-family: 'Cormorant Garamond', 'Crimson Pro', Georgia, serif;
+  transform: translateX(-100%);
+  transition: transform 0.28s ease;
+}
+.site-nav.open {
+  transform: translateX(0);
+  box-shadow: 4px 0 32px rgba(0, 0, 0, 0.6);
+}
+
+.site-nav-title {
+  display: block;
+  font-family: 'Cormorant SC', 'Cinzel', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.28em;
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(200, 168, 75, 0.18);
+}
+
+.nav-section { margin-bottom: 22px; }
+.nav-section-label {
+  font-family: 'Cormorant SC', 'Cinzel', serif;
+  font-size: 0.6rem; letter-spacing: 0.32em;
+  color: var(--gold-dim, #8a6e28);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.nav-list { list-style: none; padding: 0; margin: 0; }
+.nav-list a {
+  display: block;
+  padding: 4px 10px;
+  color: var(--text-dim, #8a8070);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.nav-list a:hover {
+  color: var(--text, #d0c8a8);
+  border-left-color: rgba(200, 168, 75, 0.4);
+  background: rgba(200, 168, 75, 0.05);
+}
+.nav-list a.is-current {
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  border-left-color: var(--gold, #c8a84b);
+  background: rgba(200, 168, 75, 0.08);
+}
+
+.nav-scrim {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 180;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.nav-scrim.open { opacity: 1; pointer-events: auto; }
+
+@media (max-width: 600px) {
+  .site-nav { width: 86vw; }
+}

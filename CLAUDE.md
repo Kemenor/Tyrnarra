@@ -1,6 +1,6 @@
 # Tyrnarra — Worldbuilding Project
 
-This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages. Pages are hand-crafted, single-file HTML with embedded CSS and JS — each page is its own self-contained artifact.
+This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages. Pages are hand-crafted HTML; **shared chrome lives in `/assets/`** (sidebar nav, Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
 
 ---
 
@@ -54,6 +54,11 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
       god-churches.html
       remnants.html
 
+  assets/                              ← shared chrome (loaded by every page)
+    site-nav.css                       ← sidebar styling
+    site-nav.js                        ← sidebar HTML + behaviour (single source of truth)
+    style-b.css                        ← Style B base (used by every page under /talan/)
+
   lore/                                ← markdown reference notes (NOT published)
     world-notes.md                     ← authoritative canon
     geography.md                       ← domain etymologies + sub-regions
@@ -62,7 +67,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     timeline.md                        ← eras + dates
     site-inventory.md                  ← what's published + what's stub
     restructure-plan.md                ← phasing notes for the restructure
-    sidebar-nav.md                     ← the canonical sidebar HTML/CSS/JS snippet
+    sidebar-nav.md                     ← legacy snippet doc — superseded by /assets/
 
   CLAUDE.md                            ← this file
   README.md
@@ -97,19 +102,24 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
 ## Persistent sidebar navigation
 
-Every published HTML page includes a persistent sidebar menu. The canonical snippet (HTML + CSS + JS) lives in `lore/sidebar-nav.md`. To add a page to the nav, edit that file *and* update the snippet inlined in every page that already has it.
+Every page references the shared sidebar by including two tags in `<head>`:
 
-**How a page declares its location:**
+```html
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+```
+
+The JS injects the sidebar markup into the DOM on page load and wires up the toggle, scrim, and Escape-to-close behaviour. The page declares its location with:
 
 ```html
 <body data-page="vindul">
 ```
 
-The sidebar JS reads `data-page` and highlights the matching link.
+The sidebar reads `data-page` and highlights the matching link. If the page isn't in the sidebar (e.g. a settlement or sub-region page), just omit `data-page` or use any value — it'll silently fail to find a match and that's fine.
 
-**When extending the nav:**
-- Add a new top-level page → add a `<li>` to the matching `nav-section`, update `lore/sidebar-nav.md`, then propagate to every existing page (until we have a build step, this is a find-and-replace pass).
-- Settlements and sub-region pages are accessed from their parent domain page rather than the sidebar — the sidebar only carries the top-level structure to avoid bloat.
+**To add or rename a page in the sidebar:** edit `/assets/site-nav.js` (the `NAV_HTML` array near the top). One file, one place. No find-and-replace.
+
+**Sidebar scope:** the sidebar carries top-level structure only — World & Cosmos, Talan, Domains, Factions. Settlements and sub-region pages are accessed from their parent domain page, not from the sidebar.
 
 ---
 
@@ -134,11 +144,13 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 - **References:** `talan/talan.html` (continent overview), any of `talan/domains/<domain>/<domain>.html` (domain page), `talan/factions/adventurers-guild.html` (faction page)
 
 ### Shared conventions
-- **Single-file HTML.** No external CSS/JS files. Fonts come from Google Fonts via `<link>` in the head.
+- **Shared chrome lives in `/assets/`** (sidebar nav, Style B base CSS). Every page references it via `<link>` and `<script defer src>`. Page-specific styling stays inline.
+- **Style B pages** (everything under `/talan/`) also include `<link rel="stylesheet" href="/assets/style-b.css">` — this provides the palette, fonts, container/header/divider primitives, facts panel, gods-city callout, sub-region cards, and the domain accent classes. The page only needs to define `--domain-accent` in a small inline `<style>` if it wants a custom accent.
+- **Style A pages** (root cosmic primers) keep their unique styling inline. They only reference `/assets/site-nav.css` and `/assets/site-nav.js`.
 - **Dark mode only.** All pages assume a dark background.
 - **No build step.** Open in browser, it just works.
-- **Mobile responsive.** Existing pages have `@media (max-width: 600px)` breakpoints — match this.
-- **Tone in copy:** specific over generic. The Millhaven primer is the gold standard — small concrete details (the smell, the named NPCs, the inside-joke aside about the town's name) over abstract worldbuilding.
+- **Mobile responsive.** Pages use `@media (max-width: 600px)` breakpoints — match this.
+- **Tone in copy:** specific over generic. Small concrete details (the smell, the named NPCs, the inside-joke aside) over abstract worldbuilding.
 
 ---
 
