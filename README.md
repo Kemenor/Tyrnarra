@@ -63,21 +63,21 @@ To preview a change live, push to `main` and wait ~30 seconds for the Pages buil
 
 ```
 /                                      ← repo root
-  index.html                           ← landing page
-  tyrnarra-primer.html                 ← world cosmology
-  tyrnarra-gods.html                   ← the 13 bound gods
+  index.html                           ← landing page = world primer (cosmology)
+  grand-gods.html                   ← the 13 bound gods
+  magic.html                           ← Magic & Faith — Four Schools, daily life, faith
 
   talan/                               ← continent-level content
     talan.html                         ← continent overview
     history.html                       ← eras / timeline
-    magic.html                         ← Four Schools
     domains/<slug>/<slug>.html         ← one folder per god domain
     factions/                          ← independent organisations
 
-  assets/                              ← shared chrome (sidebar nav, Style B base)
+  assets/                              ← shared chrome (sidebar nav, base CSS)
     site-nav.css
     site-nav.js                        ← single source of truth for menu structure
-    style-b.css
+    style-a.css                        ← world-level pages (landing, gods, magic)
+    style-b.css                        ← /talan/ pages
 
   lore/                                ← markdown reference notes (NOT published)
     world-notes.md                     ← authoritative canon
@@ -95,4 +95,4 @@ To preview a change live, push to `main` and wait ~30 seconds for the Pages buil
   serve.bat / serve.sh                 ← local dev server helpers
 ```
 
-For the full conventions (naming rule, folder layout, style guide), read [`CLAUDE.md`](CLAUDE.md).
+For the full conventions (naming rule, folder l

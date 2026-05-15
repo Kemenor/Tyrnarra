@@ -10,7 +10,7 @@ Factions in Talan fall into four broad categories. Political entities and city-s
 
 **2. City-States** — The god city-states (one per bound god) plus independent city-states (Dragon's Reach, Frae City, etc.). City-states are self-governing and answer to no kingdom. See `geography.md`.
 
-**3. God Churches** — One church per bound god (13 total). Each church operates within whatever kingdom it sits in, subject to local law, but ultimately answers to their god's theology. See `tyrnarra-gods.html` for each god's clergy structure.
+**3. God Churches** — One church per bound god (13 total). Each church operates within whatever kingdom it sits in, subject to local law, but ultimately answers to their god's theology. See `grand-gods.html` for each god's clergy structure.
 - **Other God Believers** — An umbrella category for cults, churches, and traditions of non-bound gods (elven ancestral pantheons, demon lord cults, deep god worship, etc.). These have real divine power and active presence on Talan. To be developed.
 
 **4. Independent Organisations** — World-spanning institutions that answer to no kingdom or god. Detailed below.

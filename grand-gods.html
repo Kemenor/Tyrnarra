@@ -5,479 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Thirteen — Gods of Tyrnarra</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #06060a;
-    --bg2: #0c0c14;
-    --bg3: #12121e;
-    --text: #c8c4d8;
-    --text-dim: #5a5870;
-    --text-bright: #eeeaf8;
-    --divider: rgba(200,196,220,0.08);
-    --gold: #c8a84a;
-    --gold-dim: #6a5820;
-    --gold-bright: #f0d080;
-
-    /* God accent colors */
-    --araphel: #4a2a6a;
-    --araphel-light: #9a60c0;
-    --fisaya: #3a7a9a;
-    --fisaya-light: #70c8e8;
-    --komo: #8a2a10;
-    --komo-light: #e06030;
-    --sarrum: #4a3a20;
-    --sarrum-light: #a07840;
-    --shuun: #1a4a6a;
-    --shuun-light: #40a0c8;
-    --iro: #7a6a10;
-    --iro-light: #e8d040;
-    --enki: #1a3a5a;
-    --enki-light: #4080b0;
-    --forseti: #2a2a4a;
-    --forseti-light: #6878c0;
-    --hinka: #3a1a10;
-    --hinka-light: #a04030;
-    --jianna: #2a4a2a;
-    --jianna-light: #60a060;
-    --tani: #3a2a4a;
-    --tani-light: #9070b0;
-    --vesuna: #4a3a10;
-    --vesuna-light: #c09030;
-    --cronus: #1a3a3a;
-    --cronus-light: #50a0a0;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    background-image:
-      radial-gradient(ellipse at 30% 20%, rgba(74,42,106,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 70% 80%, rgba(26,58,106,0.1) 0%, transparent 50%);
-    min-height: 100vh;
-    font-family: 'Crimson Pro', Georgia, serif;
-    color: var(--text);
-    overflow-x: hidden;
-  }
-
-  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes starPulse { 0%,100% { opacity:0.3; } 50% { opacity:0.8; } }
-  @keyframes orbFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
-
-  /* ── STARS ── */
-  .starfield { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
-  .star { position:absolute; background:white; border-radius:50%; animation:starPulse var(--d,3s) ease-in-out infinite var(--delay,0s); }
-
-  /* ── HEADER ── */
-  .header {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 56px 24px 40px;
-    border-bottom: 1px solid var(--divider);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .header-ornament {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .header-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: 400;
-    color: var(--gold-bright);
-    letter-spacing: 0.08em;
-    text-shadow: 0 0 60px rgba(200,168,74,0.3);
-    line-height: 1.1;
-    margin-bottom: 8px;
-  }
-
-  .header-sub {
-    font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-bottom: 28px;
-  }
-
-  .header-groups {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .group-pill {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border: 1px solid var(--divider);
-    border-radius: 2px;
-    color: var(--text-dim);
-  }
-
-  /* ── MAIN ── */
-  .main {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-
-  /* ── SECTION DIVIDER ── */
-  .group-divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 48px 0 28px;
-  }
-
-  .group-divider:first-child { margin-top: 0; }
-
-  .gdiv-line { flex:1; height:1px; background:linear-gradient(to right,transparent,rgba(200,196,220,0.15),transparent); }
-
-  .gdiv-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
-
-  .gdiv-sublabel {
-    font-size: 0.48rem;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-  }
-
-  /* ── GOD GRID ── */
-  .god-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 16px;
-  }
-
-  .god-grid.life-grid {
-    grid-template-columns: minmax(280px, 480px);
-    justify-content: center;
-  }
-
-  .god-grid.life-grid:has(.god-card.expanded) {
-    grid-template-columns: 1fr;
-    justify-content: stretch;
-  }
-
-  /* ── GOD CARD ── */
-  .god-card {
-    background: var(--bg2);
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-    position: relative;
-  }
-
-  .god-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--accent, #888);
-    opacity: 0.7;
-  }
-
-  .god-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  }
-
-  .god-card.expanded {
-    grid-column: 1 / -1;
-  }
-
-  /* Card header */
-  .card-top {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 16px 16px 12px;
-    border-bottom: 1px solid var(--divider);
-  }
-
-  .god-orb {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    border: 1px solid rgba(255,255,255,0.08);
-    animation: orbFloat 4s ease-in-out infinite;
-    background: var(--orb-bg, #111);
-    box-shadow: 0 0 16px var(--orb-glow, transparent);
-  }
-
-  .god-title { flex: 1; }
-
-  .god-name {
-    font-family: 'Cinzel', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-bright);
-    line-height: 1.2;
-    margin-bottom: 3px;
-  }
-
-  .god-domain-primary {
-    font-family: 'Cinzel', serif;
-    font-size: 0.52rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent, #888);
-    margin-bottom: 2px;
-  }
-
-  .god-city {
-    font-size: 0.78rem;
-    font-style: italic;
-    color: var(--text-dim);
-  }
-
-  .expand-hint {
-    font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    align-self: center;
-    opacity: 0.5;
-    text-transform: uppercase;
-  }
-
-  /* Card summary */
-  .card-summary {
-    padding: 12px 16px;
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--text);
-    font-style: italic;
-  }
-
-  /* Domain pills */
-  .domain-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 0 16px 14px;
-  }
-
-  .domain-pill {
-    font-family: 'Cinzel', serif;
-    font-size: 0.46rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--divider);
-    color: var(--text-dim);
-  }
-
-  /* Expanded content */
-  .card-expanded {
-    display: none;
-    border-top: 1px solid var(--divider);
-    padding: 20px;
-    animation: fadeUp 0.22s ease;
-  }
-
-  .god-card.expanded .card-expanded { display: block; }
-  .god-card.expanded .expand-hint { display: none; }
-
-  .expanded-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  @media (max-width: 600px) { .expanded-grid { grid-template-columns: 1fr; } }
-
-  .exp-section { margin-bottom: 16px; }
-
-  .exp-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.5rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 6px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--divider);
-  }
-
-  .exp-text {
-    font-size: 0.9rem;
-    line-height: 1.75;
-    color: var(--text);
-  }
-
-  .exp-text.italic { font-style: italic; }
-
-  .worship-box {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--divider);
-    border-left: 3px solid var(--accent, #888);
-    border-radius: 0 3px 3px 0;
-    padding: 10px 14px;
-    margin-top: 4px;
-  }
-
-  .worship-text {
-    font-size: 0.88rem;
-    line-height: 1.7;
-    color: var(--text);
-    font-style: italic;
-  }
-
-  .depiction-box {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--divider);
-    border-radius: 3px;
-    padding: 10px 14px;
-    margin-top: 4px;
-    font-size: 0.88rem;
-    line-height: 1.65;
-    color: var(--text-dim);
-    font-style: italic;
-  }
-
-  /* ── SECRET SECTION ── */
-  .secret-section {
-    border-top: 1px solid rgba(180,40,40,0.25);
-    margin-top: 18px;
-    padding-top: 14px;
-  }
-
-  .secret-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    cursor: pointer;
-    font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgba(200,70,70,0.55);
-    background: rgba(150,30,30,0.06);
-    border: 1px solid rgba(180,40,40,0.2);
-    border-radius: 2px;
-    padding: 6px 14px;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
-  }
-
-  .secret-toggle:hover {
-    color: rgba(220,90,90,0.9);
-    border-color: rgba(200,60,60,0.45);
-    background: rgba(150,30,30,0.12);
-  }
-
-  .secret-content {
-    display: none;
-    margin-top: 10px;
-    background: rgba(120,20,20,0.1);
-    border: 1px solid rgba(180,40,40,0.25);
-    border-left: 3px solid rgba(200,60,60,0.5);
-    border-radius: 0 3px 3px 0;
-    padding: 12px 14px;
-    animation: fadeUp 0.2s ease;
-  }
-
-  .secret-content.revealed { display: block; }
-
-  .secret-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.46rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgba(210,80,80,0.65);
-    margin-bottom: 8px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(180,40,40,0.2);
-  }
-
-  .secret-text {
-    font-size: 0.88rem;
-    line-height: 1.75;
-    color: var(--text);
-    font-style: italic;
-  }
-
-  /* ── CONCLAVE NOTE ── */
-  .conclave-box {
-    background: rgba(200,168,74,0.04);
-    border: 1px solid rgba(200,168,74,0.15);
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin: 40px 0 0;
-    text-align: center;
-  }
-
-  .conclave-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 10px;
-  }
-
-  .conclave-text {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-    font-style: italic;
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  .footer-note {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
-    letter-spacing: 0.28em;
-    color: rgba(200,168,74,0.15);
-    text-transform: uppercase;
-    margin-top: 48px;
-    padding-top: 18px;
-    border-top: 1px solid var(--divider);
-  }
-
-  @media (max-width: 520px) {
-    .header { padding: 36px 16px 28px; }
-    .main { padding: 24px 16px 60px; }
-  }
-
-</style>
+<link rel="stylesheet" href="/assets/style-a.css">
   <link rel="stylesheet" href="/assets/site-nav.css">
   <script defer src="/assets/site-nav.js"></script>
 </head>
@@ -562,6 +90,8 @@ const gods = {
   primordial: [
     {
       name: "Araphel",
+      domainName: "Myrkono",
+      domainSlug: "myrkono",
       primary: "Darkness · Protection · Void",
       domains: ["Darkness", "Protection", "Void", "Second Chances"],
       city: "Myrria — City of Second Chances",
@@ -578,6 +108,8 @@ const gods = {
     },
     {
       name: "Fisaya",
+      domainName: "Vindul",
+      domainSlug: "vindul",
       primary: "Air · Change · Cold",
       domains: ["Air", "Change", "Cold", "Wind"],
       city: "Haizava — The Shifting City",
@@ -594,6 +126,8 @@ const gods = {
     },
     {
       name: "Komo",
+      domainName: "Sumendar",
+      domainSlug: "sumendar",
       primary: "Fire · Ambition · Creation",
       domains: ["Ambition", "Creation", "Fire", "Passion", "Crafting"],
       city: "Eldara — The Forge City",
@@ -610,6 +144,8 @@ const gods = {
     },
     {
       name: "Sarrum",
+      domainName: "Brauogi",
+      domainSlug: "brauogi",
       primary: "Earth · Duty · Tradition",
       domains: ["Confidence", "Duty", "Earth", "Vigil", "Tradition"],
       city: "Lurrath — The Steadfast City",
@@ -626,6 +162,8 @@ const gods = {
     },
     {
       name: "Shuun",
+      domainName: "Floteyn",
+      domainSlug: "floteyn",
       primary: "Water · Introspection · Social",
       domains: ["Introspection", "Repose", "Water", "Social", "Community"],
       city: "Uravel — The Floating Isles",
@@ -642,6 +180,8 @@ const gods = {
     },
     {
       name: "Iro",
+      domainName: "Egulon",
+      domainSlug: "egulon",
       primary: "Light · Healing · Zealotry",
       domains: ["Dust", "Healing", "Sun", "Divine Magic", "Belief", "Zealotry"],
       city: "Ljosarn — The Everbright City",
@@ -660,6 +200,8 @@ const gods = {
   ascendant: [
     {
       name: "Enki",
+      domainName: "Ezkudon",
+      domainSlug: "ezkudon",
       primary: "Knowledge · Occult Magic · Perfection",
       domains: ["Glyph", "Knowledge", "Perfection", "Occult Magic"],
       city: "Thekkavar — The City of Learning",
@@ -676,6 +218,8 @@ const gods = {
     },
     {
       name: "Forseti",
+      domainName: "Zuzental",
+      domainSlug: "zuzental",
       primary: "Law · Truth · Secrecy",
       domains: ["Secrecy", "Star", "Truth", "Arcane Magic", "Justice"],
       city: "Lograth — The Judgment City",
@@ -692,6 +236,8 @@ const gods = {
     },
     {
       name: "Hinka",
+      domainName: "Ehizahar",
+      domainSlug: "ehizahar",
       primary: "Hunt · Nature · Death",
       domains: ["Might", "Nature", "Zeal", "Death", "Hunt"],
       city: "Veidrath — The Hunting City",
@@ -708,6 +254,8 @@ const gods = {
     },
     {
       name: "Jianna",
+      domainName: "Lautara",
+      domainSlug: "lautara",
       primary: "Commerce · Cities · Family",
       domains: ["Cities", "Family", "Wealth", "Primal Magic", "Progress"],
       city: "Merkavar — The Market City",
@@ -724,6 +272,8 @@ const gods = {
     },
     {
       name: "Tani",
+      domainName: "Lioaru",
+      domainSlug: "lioaru",
       primary: "Time · Death · Fate",
       domains: ["Death", "Fate", "Time", "Peaceful Death"],
       city: "Denbora — The Threefold City",
@@ -740,6 +290,8 @@ const gods = {
     },
     {
       name: "Vesuna",
+      domainName: "Nashavel",
+      domainSlug: "nashavel",
       primary: "Chaos · Luck · Life",
       domains: ["Passion", "Luck", "Trickery", "Chaos", "Life"],
       city: "Nahaskel — The Unmapped City",
@@ -758,6 +310,8 @@ const gods = {
   life: [
     {
       name: "Cronus",
+      domainName: "Askamira",
+      domainSlug: "askamira",
       primary: "Freedom · Dreams · Travel",
       domains: ["Dreams", "Freedom", "Travel", "Soul"],
       city: "Frae City — The Free City",
@@ -819,6 +373,11 @@ function buildCard(god, gridId) {
             <div class="exp-label">GM Note</div>
             <div class="exp-text" style="color:var(--text-dim);font-style:italic">${god.note}</div>
           </div>
+          ${god.domainSlug ? `
+          <div class="exp-section">
+            <div class="exp-label">Region</div>
+            <a class="god-domain-link" style="--accent:${god.accent}" href="/talan/domains/${god.domainSlug}/${god.domainSlug}.html">${god.domainName} &nbsp;→</a>
+          </div>` : ''}
         </div>
       </div>
       <div class="secret-section">

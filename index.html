@@ -3,245 +3,383 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tyrnarra</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<title>Tyrnarra — The World</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-a.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  :root {
-    --void: #04060f;
-    --deep: #080d1e;
-    --gold: #c8a84b;
-    --gold-dim: #8a6e28;
-    --gold-bright: #f0d080;
-    --cloud-dim: #a0b0cc;
-    --text: #d4cbb8;
-    --text-dim: #8a8070;
-    --prelife: #c084fc;
-    --life: #34d399;
-    --postlife: #f87171;
+  /* ── Page-specific extras ── */
+
+  .celestial-bar {
+    display: flex; justify-content: center; gap: 32px;
+    margin: 16px 0 4px; flex-wrap: wrap;
+  }
+  .celestial-body { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .celestial-orb {
+    width: 28px; height: 28px; border-radius: 50%;
+    box-shadow: 0 0 12px currentColor;
+    animation: orbFloat 5s ease-in-out infinite;
+  }
+  .orb-sun   { background: radial-gradient(circle at 30% 30%, #f5d050, #c89020); color: rgba(240, 200, 80, 0.6); }
+  .orb-red   { background: radial-gradient(circle at 30% 30%, #c84050, #802030); color: rgba(200, 80, 90, 0.5); }
+  .orb-green { background: radial-gradient(circle at 30% 30%, #50c890, #208060); color: rgba(80, 200, 144, 0.5); }
+  .celestial-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--text-dim);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--void);
-    background-image:
-      radial-gradient(ellipse at 50% 0%, #0d1a3a 0%, transparent 60%),
-      radial-gradient(ellipse at 20% 80%, #1a0a2e22 0%, transparent 50%);
-    min-height: 100vh;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  /* Layer block expandable */
+  .layer-block {
+    background: var(--bg2);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .layer-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px;
+    cursor: pointer; user-select: none;
+    border-left: 4px solid var(--layer-accent, var(--gold));
+  }
+  .layer-pip {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--layer-accent, var(--gold));
+    box-shadow: 0 0 10px var(--layer-accent, var(--gold));
+    flex-shrink: 0;
+  }
+  .layer-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem; letter-spacing: 0.1em;
+    color: var(--text-bright); flex: 1;
+  }
+  .layer-tagline {
+    font-size: 0.78rem; font-style: italic;
+    color: var(--text-dim);
+  }
+  .layer-chevron {
+    font-size: 0.7rem; color: var(--text-dim);
+    transition: transform 0.25s;
+  }
+  .layer-block.open .layer-chevron { transform: rotate(180deg); }
+  .layer-body {
+    display: none;
+    padding: 14px 18px 18px 36px;
+    animation: fadeUp 0.25s ease;
+    border-top: 1px solid var(--divider);
+  }
+  .layer-block.open .layer-body { display: block; }
+  .veil-tag {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem; letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  .plane-list { list-style: none; padding: 0; margin: 8px 0 0; }
+  .plane-item {
+    display: grid;
+    grid-template-columns: 32px 130px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--divider);
+    align-items: start;
+  }
+  .plane-item:last-child { border-bottom: 0; }
+  .plane-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem; color: var(--layer-accent, var(--gold));
+    text-align: center; padding-top: 2px;
+  }
+  .plane-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem; letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-bright);
+  }
+  .plane-desc {
+    font-size: 0.9rem; line-height: 1.65;
     color: var(--text);
-    overflow-x: hidden;
+  }
+  .layer-block.layer-prelife  { --layer-accent: var(--prelife); }
+  .layer-block.layer-life     { --layer-accent: var(--life); }
+  .layer-block.layer-postlife { --layer-accent: var(--postlife); }
+
+  /* Soul bars */
+  .soul-bars {
+    max-width: 720px; margin: 24px auto 0;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .soul-bar { display: grid; grid-template-columns: 100px 1fr 200px; gap: 14px; align-items: center; }
+  .soul-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .soul-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--divider);
+    border-radius: 4px; overflow: hidden;
+  }
+  .soul-fill {
+    height: 100%;
+    box-shadow: 0 0 12px currentColor;
+  }
+  .soul-note {
+    font-size: 0.78rem; font-style: italic; color: var(--text-dim);
+  }
+  @media (max-width: 600px) {
+    .soul-bar { grid-template-columns: 1fr; gap: 4px; }
+    .soul-note { text-align: left; }
+    .plane-item { grid-template-columns: 24px 1fr; }
+    .plane-item .plane-desc { grid-column: 2; }
   }
 
-  /* ── STARS ── */
-  .starfield {
-    position: fixed; inset: 0; pointer-events: none;
-    z-index: 0; overflow: hidden;
-  }
-  .star {
-    position: absolute; background: white; border-radius: 50%;
-    animation: twinkle var(--d, 3s) ease-in-out infinite var(--delay, 0s);
-  }
-  @keyframes twinkle {
-    0%, 100% { opacity: var(--min, 0.2); }
-    50% { opacity: var(--max, 0.8); }
-  }
-
-  /* ── LAYOUT ── */
-  .container {
-    position: relative; z-index: 1;
-    max-width: 880px; margin: 0 auto;
-    padding: 80px 20px 80px;
-  }
-  .world-header { text-align: center; margin-bottom: 64px; }
-  .world-title {
-    font-family: 'Cormorant SC', serif;
-    font-size: clamp(3.2rem, 10vw, 5.5rem); font-weight: 300;
-    color: var(--gold-bright); letter-spacing: 0.18em;
-    text-shadow: 0 0 60px rgba(200,168,75,0.4), 0 0 120px rgba(200,168,75,0.15);
-    line-height: 1; margin-bottom: 14px;
-  }
-  .world-subtitle {
-    font-family: 'IM Fell English', serif; font-style: italic;
-    font-size: 1.05rem; color: var(--cloud-dim);
-    letter-spacing: 0.06em; margin-bottom: 28px;
-  }
-  .world-flavor {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-style: italic; font-size: 1.05rem; line-height: 1.85;
-    color: var(--text); max-width: 620px; margin: 0 auto;
+  /* Astral bar */
+  .astral-bar {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.18em;
+    color: var(--text-dim);
+    background: linear-gradient(to right, transparent, rgba(200, 168, 74, 0.06), transparent);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+    padding: 10px 16px;
+    margin: 16px 0 22px;
+    font-style: italic;
   }
 
-  .divider {
-    display: flex; align-items: center; gap: 16px;
-    margin: 56px 0 40px;
+  /* Cycle row */
+  .cycle-row {
+    display: flex; justify-content: center; gap: 12px;
+    flex-wrap: wrap; margin: 18px 0 4px;
   }
-  .div-line { flex: 1; height: 1px;
-    background: linear-gradient(to right, transparent, rgba(200,168,75,0.3), transparent);
+  .cycle-node {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 6px 14px; border-radius: 12px;
   }
-  .div-glyph { color: var(--gold-dim); font-size: 0.8rem; }
-
-  .section-title {
-    font-family: 'Cormorant SC', serif; font-size: 0.85rem;
-    font-weight: 400; letter-spacing: 0.3em;
-    color: var(--gold); margin-bottom: 24px; text-align: center;
-  }
-
-  .primer-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-  }
-  .primer-card {
-    display: block; text-decoration: none; color: inherit;
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(200,168,75,0.15);
-    border-radius: 4px; padding: 22px 22px 20px;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    position: relative; overflow: hidden;
-  }
-  .primer-card:hover {
-    border-color: rgba(200,168,75,0.4);
-    background: rgba(255,255,255,0.04);
-    transform: translateY(-2px);
-  }
-  .primer-card::before {
-    content: ''; position: absolute;
-    top: 0; left: 0; width: 3px; height: 100%;
-    background: var(--accent, var(--gold)); opacity: 0.6;
-  }
-  .primer-tag {
-    font-family: 'Cormorant SC', serif; font-size: 0.6rem;
-    letter-spacing: 0.28em; color: var(--gold-dim); margin-bottom: 10px;
-  }
-  .primer-name {
-    font-family: 'Cormorant SC', serif; font-size: 1.25rem;
-    letter-spacing: 0.1em; color: var(--gold-bright); margin-bottom: 8px;
-  }
-  .primer-desc {
-    font-size: 0.95rem; line-height: 1.6;
-    font-style: italic; color: var(--text-dim);
-  }
-  .primer-arrow {
-    margin-top: 12px; font-family: 'Cormorant SC', serif;
-    font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold);
-    display: flex; align-items: center; gap: 6px;
-  }
-
-  .card-cosmos    { --accent: var(--prelife); }
-  .card-gods      { --accent: var(--gold); }
-  .card-talan     { --accent: var(--life); }
-  .card-history   { --accent: #8a6a2a; }
-  .card-magic     { --accent: #8a3a8a; }
-  .card-factions  { --accent: #c89040; }
-  .card-stub      { --accent: var(--text-dim); opacity: 0.55; }
-  .card-stub:hover { opacity: 0.85; }
-
-  .doc-footer {
-    text-align: center; font-family: 'Cormorant SC', serif;
-    font-size: 0.6rem; letter-spacing: 0.3em;
-    color: rgba(200,168,75,0.25); margin-top: 60px;
-  }
-
-  @media (max-width: 500px) {
-    .container { padding: 56px 16px 56px; }
-    .primer-grid { grid-template-columns: 1fr; }
+  .cycle-arrow {
+    color: var(--gold-dim); font-size: 0.85rem;
+    align-self: center;
   }
 </style>
 </head>
-<body data-page="home">
+<body data-page="cosmology">
 
 <!-- Starfield -->
 <div class="starfield" id="starfield"></div>
 
-<div class="container">
+<div class="header">
+  <span class="header-ornament">⸻ World Primer · For the Curious Soul ⸻</span>
+  <div class="header-title">Tyrnarra</div>
+  <div class="header-sub">A World Adrift in the Cloud Sea</div>
+  <div class="header-flavor">
+    A continent of bound gods and merchant councils, of cloudships that cross the white expanse and rivers that remember more than they should. The thirteen who walk the Material Plane, the four schools of magic that tap the Wellspring, the eight ages of mortal history. Begin here.
+  </div>
+  <div class="celestial-bar">
+    <div class="celestial-body"><div class="celestial-orb orb-sun"></div><div class="celestial-name">Solyra</div></div>
+    <div class="celestial-body"><div class="celestial-orb orb-red"></div><div class="celestial-name">Veyru</div></div>
+    <div class="celestial-body"><div class="celestial-orb orb-green"></div><div class="celestial-name">Calune</div></div>
+  </div>
+</div>
 
-  <!-- Header -->
-  <div class="world-header">
-    <div class="world-title">Tyrnarra</div>
-    <div class="world-subtitle">A world adrift in the Cloud Sea</div>
-    <div class="world-flavor">
-      A continent of bound gods and merchant councils, of cloudships that cross the white expanse and rivers that remember more than they should. Below: the gazetteer of what is known.
+<div class="main">
+
+  <!-- Portal -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Where to Begin<div class="gdiv-sublabel">Pick a thread</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="portal-grid">
+    <a class="portal-card p-gods" href="/grand-gods.html">
+      <div class="portal-tag">The Pantheon</div>
+      <div class="portal-name">The 13 Bound Gods</div>
+      <div class="portal-desc">Thirteen deities who walk the Material Plane, constrained by the Gods' Law. Each holds a domain across the continent.</div>
+      <div class="portal-arrow">Enter &nbsp;→</div>
+    </a>
+    <a class="portal-card p-magic" href="/magic.html">
+      <div class="portal-tag">The Wellspring</div>
+      <div class="portal-name">Magic — Four Schools</div>
+      <div class="portal-desc">Arcane, Occult, Primal, Divine. Four routes to the same source of all existence.</div>
+      <div class="portal-arrow">Enter &nbsp;→</div>
+    </a>
+    <a class="portal-card p-talan" href="/talan/talan.html">
+      <div class="portal-tag">The Continent</div>
+      <div class="portal-name">Talan</div>
+      <div class="portal-desc">Thirteen god domains, three seas, and the Adventurers Guild that knows the way between them.</div>
+      <div class="portal-arrow">Enter &nbsp;→</div>
+    </a>
+    <a class="portal-card p-history" href="/talan/history.html">
+      <div class="portal-tag">Mortal Memory</div>
+      <div class="portal-name">History &amp; Eras</div>
+      <div class="portal-desc">From the Creation Era to the present (2532 MR). The Week of Crimson Rain is where the calendar turns.</div>
+      <div class="portal-arrow">Enter &nbsp;→</div>
+    </a>
+  </div>
+
+  <!-- The World -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The World<div class="gdiv-sublabel">Skies, seas, and the great continent</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>Tyrnarra is a world adrift in an endless ocean, its lands ringed by the still, white expanse of the Cloud Sea. Above it, the heavens turn with the slow rhythm of three celestial bodies — the golden sun Solyra, and two moons, Veyru and Calune — each day and night sinking into, and rising from, the Cloud Sea's horizon.</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-title">The Cloud Sea</div><div class="info-card-body">An infinite, unbroken plain of luminous white vapor. Never shifts with wind, tide, or season. Ships that are not built for its surface slowly sink without trace. Only cloudships can cross it.</div></div>
+    <div class="info-card"><div class="info-card-title">The Celestial Descent</div><div class="info-card-body">All three bodies rise and set from the Cloud Sea, vanishing into its depths each cycle and returning from the opposite horizon — as if passing into another realm beneath.</div></div>
+    <div class="info-card"><div class="info-card-title">The Continent of Talan</div><div class="info-card-body">The great landmass at the heart of the known world. Home to the 13 bound gods of the Material Plane and the kingdoms, city-states, and contested territories shaped by their domains.</div></div>
+    <div class="info-card"><div class="info-card-title">Cloudships</div><div class="info-card-body">Vessels specially built to traverse the Cloud Sea. Rare, expensive, and strategically invaluable — the difference between a regional power and a world power.</div></div>
+  </div>
+
+  <!-- The Wellspring -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The Wellspring<div class="gdiv-sublabel">Source of all things</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>The Wellspring is not merely a source — it is the first place. It is its own plane of existence, from which all other planes spring forth: material, spiritual, and elemental alike.</p>
+    <p>Every living thing, every plane, and even the stars themselves trace their origin to the Wellspring. In time, all that exists will return to it, dissolving back into the primal flow from which it came. Tyrnarra is one of countless worlds born of its outpouring — a single leaf on an infinite, ever-growing tree.</p>
+  </div>
+
+  <!-- Planar Structure -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The Planar Structure<div class="gdiv-sublabel">Three layers, nine planes</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>All of reality is arranged into three great layers, each containing three primary planes. The layers flow in an eternal cycle, as the Wellspring sends out creation and calls it home.</p>
+  </div>
+
+  <div class="cycle-row">
+    <div class="cycle-node" style="background:rgba(124,58,237,0.2);color:var(--prelife);border:1px solid rgba(192,132,252,0.3)">Prelife</div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-node" style="background:rgba(6,95,70,0.2);color:var(--life);border:1px solid rgba(52,211,153,0.3)">Life</div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-node" style="background:rgba(153,27,27,0.2);color:var(--postlife);border:1px solid rgba(248,113,113,0.3)">Postlife</div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-node" style="background:rgba(124,58,237,0.1);color:var(--prelife);border:1px dashed rgba(192,132,252,0.2)">Wellspring</div>
+  </div>
+
+  <div class="astral-bar">✦ All planes connected by the Astral Plane — an infinite void where distance is meaningless, traversable by gods and sufficiently powerful beings ✦</div>
+
+  <!-- PRELIFE -->
+  <div class="layer-block layer-prelife" data-layer="prelife">
+    <div class="layer-header" onclick="toggleLayer(this)">
+      <div class="layer-pip"></div>
+      <div class="layer-name">Layer I — Prelife</div>
+      <div class="layer-tagline">Origin of all things</div>
+      <div class="layer-chevron">▾</div>
+    </div>
+    <div class="layer-body">
+      <div class="veil-tag">Veil: The Aurora Veil (Veil of Genesis)</div>
+      <p style="font-size:0.88rem;font-style:italic;color:var(--text-dim);margin-bottom:12px">A dawn-hued ocean of living light where unborn worlds drift like clouds. Souls pass through here as pure potential, without form or memory.</p>
+      <ul class="plane-list">
+        <li class="plane-item"><div class="plane-num">I</div><div class="plane-name">Wellspring</div><div class="plane-desc">The first place and final destination. All souls, matter, and magic are born from its infinite depth and will one day return.</div></li>
+        <li class="plane-item"><div class="plane-num">II</div><div class="plane-name">Energy Plane</div><div class="plane-desc">An endless sea of raw positive and negative energy, surging and clashing in eternal balance.</div></li>
+        <li class="plane-item"><div class="plane-num">III</div><div class="plane-name">Elemental Plane</div><div class="plane-desc">A boundless expanse of unmixed fire, water, wind, and earth — the primal matter from which worlds are shaped.</div></li>
+      </ul>
     </div>
   </div>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- World & Cosmos -->
-  <div class="section-title">World &amp; Cosmos</div>
-  <div class="primer-grid">
-
-    <a class="primer-card card-cosmos" href="/tyrnarra-primer.html">
-      <div class="primer-tag">World Primer</div>
-      <div class="primer-name">Cosmology</div>
-      <div class="primer-desc">The Wellspring, the three layers of reality, Solyra and the two moons, the Cloud Sea.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
-    <a class="primer-card card-gods" href="/tyrnarra-gods.html">
-      <div class="primer-tag">The Pantheon</div>
-      <div class="primer-name">The 13 Bound Gods</div>
-      <div class="primer-desc">Thirteen deities who walk the Material Plane, constrained by the Gods' Law.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
+  <!-- LIFE -->
+  <div class="layer-block layer-life open" data-layer="life">
+    <div class="layer-header" onclick="toggleLayer(this)">
+      <div class="layer-pip"></div>
+      <div class="layer-name">Layer II — Life</div>
+      <div class="layer-tagline">Where creation takes form</div>
+      <div class="layer-chevron">▾</div>
+    </div>
+    <div class="layer-body">
+      <div class="veil-tag">Veil: The Ethereal Plane (Invocation of Gods' Law)</div>
+      <p style="font-size:0.88rem;font-style:italic;color:var(--text-dim);margin-bottom:12px">A shimmering membrane around the Life Layer. A place where divine will and cosmic law shape mortal reality — and where the 13 bound gods operate under the Gods' Law.</p>
+      <ul class="plane-list">
+        <li class="plane-item"><div class="plane-num">I</div><div class="plane-name">Feyworld</div><div class="plane-desc">The plane of Chaos. Vibrant, shifting, and unpredictable.</div></li>
+        <li class="plane-item"><div class="plane-num">II</div><div class="plane-name">Material Plane</div><div class="plane-desc">The stable physical realm where mortal civilizations rise and fall. Home of Tyrnarra, Talan, and the 13 bound gods.</div></li>
+        <li class="plane-item"><div class="plane-num">III</div><div class="plane-name">Shadowplane</div><div class="plane-desc">The plane of Order. Constant, unchanging, and eternal in structure.</div></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- Talan -->
-  <div class="section-title">Talan — The Continent</div>
-  <div class="primer-grid">
-
-    <a class="primer-card card-talan" href="/talan/talan.html">
-      <div class="primer-tag">Continent Primer</div>
-      <div class="primer-name">Talan</div>
-      <div class="primer-desc">The central landmass — thirteen god domains, three seas, and the Adventurers Guild that knows the way between them.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
-    <a class="primer-card card-history" href="/talan/history.html">
-      <div class="primer-tag">Reference</div>
-      <div class="primer-name">History &amp; Eras</div>
-      <div class="primer-desc">From the Creation Era to the present (2532 MR). The Week of Crimson Rain is where the calendar turns.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
-    <a class="primer-card card-magic" href="/talan/magic.html">
-      <div class="primer-tag">Reference</div>
-      <div class="primer-name">Magic — Four Schools</div>
-      <div class="primer-desc">Arcane, Occult, Primal, Divine — four routes to the same Wellspring.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
-    <a class="primer-card card-factions" href="/talan/factions/factions.html">
-      <div class="primer-tag">Reference</div>
-      <div class="primer-name">Factions</div>
-      <div class="primer-desc">The Adventurers Guild, the Mercenary Guild, the god churches, and the Remnants of Corruption.</div>
-      <div class="primer-arrow">Enter &nbsp;→</div>
-    </a>
-
+  <!-- POSTLIFE -->
+  <div class="layer-block layer-postlife" data-layer="postlife">
+    <div class="layer-header" onclick="toggleLayer(this)">
+      <div class="layer-pip"></div>
+      <div class="layer-name">Layer III — Postlife</div>
+      <div class="layer-tagline">Destination of souls after death</div>
+      <div class="layer-chevron">▾</div>
+    </div>
+    <div class="layer-body">
+      <div class="veil-tag">Veil: The Duskmire (Shroud of Return)</div>
+      <p style="font-size:0.88rem;font-style:italic;color:var(--text-dim);margin-bottom:12px">A twilight sea where the stars above are the lights of distant souls. Those destined to return to the Wellspring shed their memories here.</p>
+      <ul class="plane-list">
+        <li class="plane-item"><div class="plane-num">I</div><div class="plane-name">Elysium</div><div class="plane-desc">The plane of Good. Radiant realms ruled by benevolent gods, each in their own kingdom.</div></li>
+        <li class="plane-item"><div class="plane-num">II</div><div class="plane-name">Diyu</div><div class="plane-desc">The plane of Balance and Judgment. Home to neutral gods and to Dauria, the City of the Dead.</div></li>
+        <li class="plane-item"><div class="plane-num">III</div><div class="plane-name">Abyss</div><div class="plane-desc">The plane of Evil. A vast, nightmarish domain where gods of malice, devils, and demons rule.</div></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- Settlements (placeholder until Millhaven returns) -->
-  <div class="section-title">Settlements</div>
-  <div class="primer-grid">
-
-    <a class="primer-card card-stub" href="/talan/talan.html">
-      <div class="primer-tag">Coming Back</div>
-      <div class="primer-name">Millhaven</div>
-      <div class="primer-desc">Where the river meets the sea — and the law runs thin. The Millhaven primer is being rebuilt under <code>/talan/domains/brauogi/millhaven/</code>.</div>
-      <div class="primer-arrow">Continent overview &nbsp;→</div>
-    </a>
-
+  <!-- The Soul -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The Nature of the Soul<div class="gdiv-sublabel">Three layers within one being</div></div>
+    <div class="gdiv-line"></div>
   </div>
 
-  <div class="doc-footer">
-    TYRNARRA · WORLD GAZETTEER · FOR GM USE
+  <div class="section-body">
+    <p>Every living being contains essence from all three layers. What separates one soul from another is which layer's energy burns brightest within them.</p>
   </div>
+
+  <div class="soul-bars">
+    <div class="soul-bar">
+      <div class="soul-label" style="color:var(--prelife)">Prelife</div>
+      <div class="soul-track"><div class="soul-fill" style="width:60%;background:var(--prelife);color:var(--prelife)"></div></div>
+      <div class="soul-note">Origin · Potential · The unformed</div>
+    </div>
+    <div class="soul-bar">
+      <div class="soul-label" style="color:var(--life)">Life</div>
+      <div class="soul-track"><div class="soul-fill" style="width:85%;background:var(--life);color:var(--life)"></div></div>
+      <div class="soul-note">Form · Will · The living present</div>
+    </div>
+    <div class="soul-bar">
+      <div class="soul-label" style="color:var(--postlife)">Postlife</div>
+      <div class="soul-track"><div class="soul-fill" style="width:40%;background:var(--postlife);color:var(--postlife)"></div></div>
+      <div class="soul-note">Memory · Consequence · The echo</div>
+    </div>
+  </div>
+
+  <!-- Gods Note -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The 13 Bound Gods<div class="gdiv-sublabel">The compact of the Material Plane</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>Thirteen major deities reside on the Material Plane, bound by the Gods' Law to operate within its rules. Unlike gods of Layer 1 or Layer 3, these gods walk among mortals — but are constrained by the Ethereal Veil's divine compact. Their domains define the regions of Talan itself. For each god's nature, depiction, and clergy — and for what only the gods themselves know — see the pantheon page.</p>
+    <p style="text-align:center;margin-top:18px"><a class="god-domain-link" style="--accent: var(--gold)" href="/grand-gods.html">Visit The Thirteen &nbsp;→</a></p>
+  </div>
+
+  <div class="footer-note">TYRNARRA · WORLD PRIMER · FOR GM USE · 2532 MR</div>
 
 </div>
 
@@ -261,6 +399,11 @@ for (let i = 0; i < 180; i++) {
     --delay:-${Math.random()*6}s;
   `;
   sf.appendChild(s);
+}
+
+// Layer toggles
+function toggleLayer(header) {
+  header.parentElement.classList.toggle('open');
 }
 </script>
 </body>

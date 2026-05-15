@@ -30,13 +30,12 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
 ```
 /                                      ← GitHub Pages serves from here
-  index.html                           ← landing page (curated portal + sidebar)
-  tyrnarra-primer.html                 ← cosmology (world-level)
-  tyrnarra-gods.html                   ← the 13 bound gods (world-level)
+  index.html                           ← landing page = world primer (cosmology)
+  grand-gods.html                   ← the 13 bound gods (world-level)
+  magic.html                           ← Magic & Faith — Four Schools, daily life, faith (world-level)
 
   talan/                               ← continent-level content
     talan.html                         ← continent overview (geography, three seas, all 13 domains)
-    magic.html                         ← The Four Schools
     history.html                       ← Eras / timeline
     domains/                           ← the 13 god domains
       <domain>/<domain>.html           ← e.g. vindul/vindul.html — domain entry page
@@ -56,6 +55,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
   assets/                              ← shared chrome (loaded by every page)
     site-nav.css                       ← sidebar styling
     site-nav.js                        ← sidebar HTML + behaviour (single source of truth)
+    style-a.css                        ← Style A base (used by world-level pages: /, gods, magic)
     style-b.css                        ← Style B base (used by every page under /talan/)
 
   lore/                                ← markdown reference notes (NOT published)
@@ -77,8 +77,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
 | World layer | Folder | Example |
 |---|---|---|
-| World (Tyrnarra) | root | `tyrnarra-primer.html`, `tyrnarra-gods.html` |
-| Continent (Talan) | `/talan/` | `talan.html`, `magic.html`, `history.html` |
+| World (Tyrnarra) | root | `index.html` (cosmology), `grand-gods.html`, `magic.html` |
+| Continent (Talan) | `/talan/` | `talan.html`, `history.html` |
 | Region (god domain) | `/talan/domains/<domain>/` | `/talan/domains/vindul/vindul.html` |
 | Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
 | Settlement | folder under its domain | `/talan/domains/brauogi/millhaven/millhaven.html` |
@@ -127,12 +127,13 @@ The sidebar reads `data-page` and highlights the matching link. If the page isn'
 The existing pages establish two visual modes. New pages should pick one and match it closely — don't invent a third style without asking.
 
 ### Style A — Cosmic / World-level
-Used for: world primers, cosmology, planar structure, deity overviews, anything mythic in scope.
+Used for: the landing/cosmology, the 13 gods, magic — anything world-scale or mythic.
 
-- **Fonts:** Cormorant Garamond (body), Cormorant SC (headings, small caps), IM Fell English (accent)
-- **Palette:** deep void/astral backgrounds (`--void: #04060f`, `--deep: #080d1e`), gold accents (`--gold: #c8a84b`, `--gold-bright: #f0d080`), cloud-white text (`--text: #d4cbb8`)
-- **Signature elements:** animated starfield background, celestial orbs, planar-layer color coding (prelife purple, life green, postlife red)
-- **Reference:** `tyrnarra-primer.html`
+- **Source:** `/assets/style-a.css`. Page-specific tweaks (orb effects, soul bars) stay inline in the page itself.
+- **Fonts:** Cinzel Decorative (page titles), Cinzel (labels, small caps), Crimson Pro (body)
+- **Palette:** deep void (`--bg: #06060a`), purple/blue ambient gradients, gold accents (`--gold: #c8a84a`, `--gold-bright: #f0d080`), parchment text (`--text: #c8c4d8`), per-god accent colours
+- **Signature elements:** animated starfield, god orbs that gently float, group dividers with sub-labels, expandable god cards with red `⚿ GM Secret` pills, planar-layer expandables
+- **References:** `index.html` (cosmology landing), `grand-gods.html` (the pantheon), `magic.html`
 
 ### Style B — Grounded / Continent + Settlement-level
 Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, anything ground-level and lived-in.
@@ -143,9 +144,9 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 - **References:** `talan/talan.html` (continent overview), any of `talan/domains/<domain>/<domain>.html` (domain page), `talan/factions/adventurers-guild.html` (faction page)
 
 ### Shared conventions
-- **Shared chrome lives in `/assets/`** (sidebar nav, Style B base CSS). Every page references it via `<link>` and `<script defer src>`. Page-specific styling stays inline.
-- **Style B pages** (everything under `/talan/`) also include `<link rel="stylesheet" href="/assets/style-b.css">` — this provides the palette, fonts, container/header/divider primitives, facts panel, gods-city callout, sub-region cards, and the domain accent classes. The page only needs to define `--domain-accent` in a small inline `<style>` if it wants a custom accent.
-- **Style A pages** (root cosmic primers) keep their unique styling inline. They only reference `/assets/site-nav.css` and `/assets/site-nav.js`.
+- **Shared chrome lives in `/assets/`** (sidebar nav, Style A and Style B base CSS). Every page references it via `<link>` and `<script defer src>`. Page-specific styling stays inline.
+- **Style A pages** (root world-level pages — landing, gods, magic) include `<link rel="stylesheet" href="/assets/style-a.css">`. This provides palette, fonts, starfield, header, group dividers, portal cards, god-card grid, secret pills, scale rows, info cards, and the planar-layer accents.
+- **Style B pages** (everything under `/talan/`) include `<link rel="stylesheet" href="/assets/style-b.css">`. This provides palette, fonts, container/header/divider primitives, facts panel, gods-city callout, sub-region cards, domain accent classes, era cards, three-tier (amber/red) expandables, pill rows. Pages define `--domain-accent` in a small inline `<style>` when they want a custom accent.
 - **Dark mode only.** All pages assume a dark background.
 - **No build step.** Open in browser, it just works.
 - **Mobile responsive.** Pages use `@media (max-width: 600px)` breakpoints — match this.
@@ -155,13 +156,6 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 ## GitHub Pages setup
 
-The site is live at **https://tyrnarra.kunkel.swiss** (custom domain, HTTPS enabled). Deploys automatically on push to `main` — no build step, no Actions workflow needed. `index.html` at the repo root is the landing page; sub-pages are reachable at their absolute paths (e.g. `/tyrnarra-primer.html`, `/talan/talan.html`, `/talan/domains/vindul/vindul.html`).
+The site is live at **https://tyrnarra.kunkel.swiss** (custom domain, HTTPS enabled). Deploys automatically on push to `main` — no build step, no Actions workflow needed. `index.html` at the repo root is the landing page (the world primer / cosmology); sub-pages are reachable at their absolute paths (e.g. `/grand-gods.html`, `/magic.html`, `/talan/talan.html`, `/talan/domains/vindul/vindul.html`).
 
-**Always use absolute paths in links** (starting with `/`). The sidebar is on every page and the navigation works the same regardless of depth — relative paths would break it.
-
----
-
-## Working notes
-
-- **HTML files can be edited freely.** Everything is in git, so changes are safe and reversible. No need to surface diffs before editing.
-- **When in doubt about canon**, check `lore/world-notes.md`, `lore/glossary.md`, and `lore/timeline.md` first, then read the relevant primer HTML, then ask.
+**Always use absolute paths in links** (starting with `/`). The sidebar is on every p

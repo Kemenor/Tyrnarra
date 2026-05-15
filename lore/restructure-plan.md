@@ -26,7 +26,7 @@ Authored 2026-05-15. The goal: turn a flat collection of HTML pages into a clear
   README.md
 
   tyrnarra-primer.html                     ← cosmos (world-level)
-  tyrnarra-gods.html                       ← the 13 bound gods (world-level)
+  grand-gods.html                       ← the 13 bound gods (world-level)
 
   /talan/                                  ← continent-level content
     talan.html                             ← continent overview (geography, three seas)
@@ -92,7 +92,7 @@ Authored 2026-05-15. The goal: turn a flat collection of HTML pages into a clear
 
 | World layer | Folder | Example |
 |---|---|---|
-| **World (Tyrnarra)** | root | `tyrnarra-primer.html`, `tyrnarra-gods.html` |
+| **World (Tyrnarra)** | root | `tyrnarra-primer.html`, `grand-gods.html` |
 | **Continent (Talan)** | `/talan/` | `talan.html`, `magic.html`, `history.html` |
 | **Region (god domain)** | `/talan/domains/<domain>/` | `/talan/domains/vindul/vindul.html` |
 | **Sub-region / Kingdom** | section in domain page, or own file when promoted | `Thousand Kingdom` section in `zuzental.html`, or eventually `/talan/domains/zuzental/thousand-kingdom.html` |
@@ -155,7 +155,7 @@ Folder slugs use **lowercase ASCII with hyphens**: `myrkono/`, `thousand-kingdom
 1. Create the `/talan/` tree (folders + stub HTML pages).
 2. Stub pages for all 13 domains, 4 factions, magic, history, faction overview, Talan overview.
 3. Each stub uses the appropriate visual style (A or B) and has the sidebar nav, breadcrumb, title, and short flavor line. No deep content yet.
-4. Existing root pages (`tyrnarra-primer.html`, `tyrnarra-gods.html`, `talan-primer.html`) get the sidebar nav patched in but keep their current content unchanged.
+4. Existing root pages (`tyrnarra-primer.html`, `grand-gods.html`, `talan-primer.html`) get the sidebar nav patched in but keep their current content unchanged.
 5. `index.html` is reworked to point at the new layout. Broken Millhaven link is stubbed (links to a placeholder until Millhaven returns).
 6. `CLAUDE.md` is updated with the new conventions.
 7. `lore/site-inventory.md` is refreshed.
@@ -175,6 +175,6 @@ Folder slugs use **lowercase ASCII with hyphens**: `myrkono/`, `thousand-kingdom
 
 ## What this plan deliberately does *not* do
 
-- It does not rename `tyrnarra-primer.html` or `tyrnarra-gods.html`. They stay at root because they are world-level, and changing their URLs would break the live site's existing bookmarks.
+- It does not rename `tyrnarra-primer.html` or `grand-gods.html`. They stay at root because they are world-level, and changing their URLs would break the live site's existing bookmarks.
 - It does not introduce a build step. Every page remains hand-crafted, standalone HTML.
-- It does not retrofit existing names to the Basque/Icelandic rule. Per `CLAUDE.md`, the rule applies going forward only.
+- It does not retrofit existing names to the Basque/Icelandic rule. Per `CLAUDE.md`, the rule applies going for

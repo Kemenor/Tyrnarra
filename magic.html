@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magic &amp; Faith — Talan</title>
-<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style-b.css">
+<title>Magic &amp; Faith — Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-a.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
-<style>:root { --domain-accent: #8a3a8a; }</style>
 </head>
 <body data-page="magic">
 
-<div class="container">
+<div class="starfield" id="starfield"></div>
 
-  <div class="breadcrumb">
-    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><span>Magic &amp; Faith</span>
+<div class="header">
+  <span class="header-ornament">⸻ Of the Wellspring and Those Who Tap It ⸻</span>
+  <div class="header-title">Magic &amp; Faith</div>
+  <div class="header-sub">The Four Schools · The Daily Life · The Gods</div>
+  <div class="header-flavor">
+    All magic in Tyrnarra is the same thing at its root: access to the Wellspring, the source of all existence. The four schools are not competing philosophies — they are different methods of reaching the same power. A divine spell and an arcane spell ultimately draw from the same place. The difference is in the path.
   </div>
+</div>
 
-  <div class="header">
-    <div class="header-ornament">✦ · ✦ · ✦</div>
-    <div class="page-title">Magic &amp; Faith</div>
-    <div class="page-subtitle">Of the Wellspring, and Those Who Tap It</div>
-    <div class="page-flavor">
-      All magic in Tyrnarra is the same thing at its root: access to the Wellspring, the source of all existence. The four schools are not competing philosophies — they are different methods of reaching the same power. A divine spell and an arcane spell ultimately draw from the same place. The difference is in the path.
-    </div>
+<div class="main">
+
+  <!-- Four Schools -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The Four Schools<div class="gdiv-sublabel">Four routes to one source</div></div>
+    <div class="gdiv-line"></div>
   </div>
-
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <h2 class="section-heading">The Four Schools of Magic</h2>
 
   <div class="scale-row">
     <div class="scale-item">
@@ -62,10 +62,14 @@
     </div>
   </div>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+  <!-- Magic in Daily Life -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Magic in Daily Life<div class="gdiv-sublabel">By scale of settlement</div></div>
+    <div class="gdiv-line"></div>
+  </div>
 
-  <h2 class="section-heading">Magic in Daily Life</h2>
-  <div class="prose">
+  <div class="section-body">
     <p>Magic is not rare in Talan — it is infrastructure. It is as ordinary as a mill or a road, as expected as a blacksmith. The question is never whether magic exists, but how much of it is available here, and who controls it.</p>
   </div>
 
@@ -100,10 +104,14 @@
     </div>
   </div>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+  <!-- Faith & the Gods -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Faith &amp; the Gods<div class="gdiv-sublabel">Not belief, but relationship</div></div>
+    <div class="gdiv-line"></div>
+  </div>
 
-  <h2 class="section-heading">Faith &amp; the Gods</h2>
-  <div class="prose">
+  <div class="section-body">
     <p>Religion on Talan is not a matter of belief — it is a matter of relationship. The gods exist. Everyone knows they exist. You can travel to their city and, with sufficient cause and patience, request an audience. Faith is not about whether the gods are real; it is about how you relate to them.</p>
   </div>
 
@@ -126,9 +134,26 @@
     </div>
   </div>
 
-  <div class="footer">TYRNARRA · TALAN · MAGIC &amp; FAITH</div>
+  <div class="footer-note">TYRNARRA · MAGIC &amp; FAITH</div>
 
 </div>
 
+<script>
+const sf = document.getElementById('starfield');
+for (let i = 0; i < 180; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  const size = Math.random() * 2 + 0.5;
+  s.style.cssText = `
+    width:${size}px;height:${size}px;
+    top:${Math.random()*100}%;left:${Math.random()*100}%;
+    --min:${Math.random()*0.2+0.05};
+    --max:${Math.random()*0.6+0.3};
+    --d:${Math.random()*4+2}s;
+    --delay:-${Math.random()*6}s;
+  `;
+  sf.appendChild(s);
+}
+</script>
 </body>
 </html>
