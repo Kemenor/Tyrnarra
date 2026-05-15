@@ -222,7 +222,6 @@ Every living being contains essence from all three layers. What separates one so
 - After the war and the forging of the Gods' Law, it became Cronus's city.
 - It is where the **Council of Thirteen** convenes when it convenes at all — not because Frae City is neutral ground, but because it is Cronus's home and he hosts. The historical weight of the place where the Law was forged makes it the natural ground. There is **no fixed schedule**; the Council gathers only when something demands the full body in person.
 - Do not describe Frae City as "the only neutral ground" — it is Cronus's home, not neutral territory.
-- **Older texts (in-world and otherwise) sometimes refer to a "five-year conclave."** This was an earlier framing and is no longer canon — the Council of Thirteen does not gather on a regular schedule.
 
 ## Neutral Ground
 
@@ -272,78 +271,78 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 ### Vesuna — Goddess of Chaos (Female)
 - **Aspects:** change, creativity, destruction, madness.
 - **Cleric domains:** Passion, Luck, Trickery.
-- **Depiction:** a woman cloaked in mismatched silks, eyes glowing in different colours, hair wild as storm-wind.
+- **Depiction:** no fixed form — no ancestry, no gender, no consistent body. Only symbols: a coin, a die, an open hand with something unseen in it.
 - **Favoured weapon:** *Meteor Hammer* — its wild arcs and unpredictable strikes embody her chaotic nature.
 - **Mortals see her as:** the spark of innovation and the collapse of order; the gamble that reshapes fate.
 
 ### Jianna — Goddess of Commerce (Female)
 - **Aspects:** trade, wealth, greed, generosity.
 - **Cleric domains:** Cities, Family, Wealth, Primal Magic, Progress.
-- **Depiction:** a merchant queen draped in gold chains, scales of balance in one hand and a ledger in the other.
+- **Depiction:** a **Vishkanya** — elegant, precise, with beauty that has an edge; one hand open in offering and one hand closed.
 - **Favoured weapon:** *Twin Chakram* — spinning cycles of exchange, profit and loss, endless trade.
 - **Mortals see her as:** the market's lifeblood — honest exchange or ruthless exploitation.
 
 ### Araphel — God of Darkness (Male)
 - **Aspects:** shadows, secrets, rest, despair.
 - **Cleric domains:** Darkness, Protection, Void, Second Chances.
-- **Depiction:** a tall figure robed in black, face hidden except for silver eyes like moonlight.
+- **Depiction:** a **Fetchling** or **Pale Elf** with silver eyes, body hidden by black robes — always at the boundary between light and shadow.
 - **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
 - **Mortals see him as:** keeper of mysteries, balm of sleep, the weight of sorrow.
 
 ### Sarrum — God of Earth (Male)
 - **Aspects:** stone, harvest, endurance, greed.
 - **Cleric domains:** Confidence, Duty, Earth, Vigil.
-- **Depiction:** a broad-shouldered man with skin like granite, veins of ore glowing faintly beneath.
+- **Depiction:** a **Minotaur** — immovable, vast, patient, usually standing still, with veins of ore glowing faintly beneath his granite skin.
 - **Favoured weapon:** *Dorn-Dergar* — a spiked, cube-weighted chain, as crushing and immovable as an avalanche.
 - **Mortals see him as:** provider of shelter and crops, but also the crushing hand of famine and stone.
 
 ### Komo — God of Fire (Male)
 - **Aspects:** flame, passion, destruction, renewal.
 - **Cleric domains:** Ambition, Creation, Fire.
-- **Depiction:** a warrior wreathed in fire, eyes glowing like embers, weapons forged of molten steel.
+- **Depiction:** a **Kobold** — stands in fire comfortably, mid-creation at the forge, eyes glowing like embers. *(Earlier drafts depicted him as a Lizardfolk; this is incorrect — he is a Kobold everywhere in canon.)*
 - **Favoured weapon:** *Fire Poi* — chains of flame, used in both ritual dance and devastating battle.
 - **Mortals see him as:** hearth and forge, but also wildfire and war.
 
 ### Cronus — God of Freedom (Male)
 - **Aspects:** choice, rebellion, self-determination, lawlessness.
 - **Cleric domains:** Dreams, Freedom, Travel, Soul.
-- **Depiction:** a traveller with unbound chains trailing from his wrists, cloak fluttering like wings.
+- **Depiction:** an unremarkable man — no divine signifiers, someone who could be anyone in a tavern — except for **a broken chain hanging from his belt**.
 - **Favoured weapon:** *Chain Sword* — a segmented blade that whips like broken shackles turned to rebellion.
 - **Mortals see him as:** liberator or anarchist, the spark that defies order.
-- **See also:** Cronus — The Secret (above). The "rebellion-incarnate" depiction is the public face; the truth of his ascension is buried.
+- **See also:** Cronus — The Secret (above). The "anyone-in-a-tavern" depiction is the public face; the truth of his ascension is buried.
 
 ### Hinka — Goddess of the Hunt (Female)
 - **Aspects:** predation, survival, patience, cruelty.
 - **Cleric domains:** Might, Nature, Zeal.
-- **Depiction:** a huntress cloaked in fur, bow of horn in hand, eyes glinting with primal focus — often depicted as a red-haired woman of orcish or part-orcish lineage.
+- **Depiction:** a red-headed **Orc** cloaked in fur, drawing a bow of horn — mid-draw, decisive.
 - **Favoured weapon:** *Karambit* — a curved claw-knife, quick and intimate as a predator's strike.
 - **Mortals see her as:** provider of sustenance — or stalker in the dark.
 
 ### Enki — God of Knowledge (Male)
 - **Aspects:** wisdom, discovery, arrogance, forbidden lore.
 - **Cleric domains:** Glyph, Knowledge, Perfection, Occult Magic.
-- **Depiction:** a scholar cloaked in runes, carrying a staff crowned with a lantern of shifting light.
+- **Depiction:** a black-haired **Catfolk** male — curious, precise, usually shown reading or examining something, a staff crowned with a lantern of shifting light at his side.
 - **Favoured weapon:** *Whipstaff* — rigid and flexible in one, embodying truth's reach and cunning's adaptability.
 - **Mortals see him as:** teacher, sage, inventor — or tempter into dangerous truths.
 
 ### Forseti — Goddess of Law (Female)
 - **Aspects:** order, justice, tyranny, bureaucracy.
 - **Cleric domains:** Secrecy, Star, Truth, Arcane Magic.
-- **Depiction:** a stern woman in ceremonial armour, scales in one hand, scrolls bound in the other.
+- **Depiction:** an **Android** — perfect impartiality, law without personal feeling; scales in one hand, scrolls in the other.
 - **Favoured weapon:** *Hook Swords* — paired blades that interlock, symbolising laws binding all together.
 - **Mortals see her as:** arbiter of peace or oppressive enforcer.
 
 ### Iro — God of Light (Male)
 - **Aspects:** sun, hope, growth, zealotry.
 - **Cleric domains:** Dust, Healing, Sun, Divine Magic.
-- **Depiction:** a radiant figure clad in white, face haloed by golden rays, eyes like dawn.
+- **Depiction:** a **Nephilim** — caught between the mortal and something greater, one hand raised in blessing or judgement, eyes like dawn.
 - **Favoured weapon:** *Guisarme / Glaive* — a sweeping polearm, like a shaft of sunlight cutting through shadow.
 - **Mortals see him as:** bringer of illumination and joy — or blinding fanaticism.
 
 ### Tani — Goddess of Time (Female)
 - **Aspects:** cycles, fate, patience, inevitability.
 - **Cleric domains:** Death, Fate, Time, Peaceful Death.
-- **Depiction:** a woman draped in flowing sand, clockwork turning faintly in her eyes.
+- **Depiction:** three women simultaneously — child, woman in her prime, wisened elder — sometimes rendered as a single three-faced figure.
 - **Favoured weapon:** *Zulfikar* — a forked scimitar, the split blade of fate and branching futures.
 - **Mortals see her as:** keeper of destiny, the march of years, the inevitability of endings.
 - **See also:** Tani — Lore Notes (above). Slain in the Week of Crimson Rain, reborn at its end; her death/rebirth is the hinge of the Gods' Law.
@@ -351,14 +350,14 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 ### Shuun — God of Water (Genderfluid)
 - **Aspects:** rivers, seas, adaptability, drowning.
 - **Cleric domains:** Introspection, Repose, Water.
-- **Depiction:** a shifting form of water — sometimes man, sometimes woman, sometimes storm.
+- **Depiction:** an **Undine** — themselves partly water, existing at the boundary between human and element. Usually shown seated and still, contrasting with the restlessness of the water around them.
 - **Favoured weapon:** *Trident* — piercing tide, storm, and current alike.
 - **Mortals see Shuun as:** life-giver and sailor's blessing, or merciless tide and flood.
 
 ### Fisaya — Goddess of Wind (Female)
 - **Aspects:** storms, travel, breath, ruin.
 - **Cleric domains:** Air, Change, Cold.
-- **Depiction:** a dancing figure of flowing silks, hair trailing into clouds, voice carried like a gale.
+- **Depiction:** a female **Kitsune** with multicolour fur — each colour an aspect of change — wearing flowing silks, hair trailing into clouds.
 - **Favoured weapon:** *Bladed Scarf* — silks edged with steel, graceful as a breeze, deadly as a storm.
 - **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
 
