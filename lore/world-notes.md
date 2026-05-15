@@ -165,7 +165,7 @@ All magic is access to the Wellspring. The four schools are four different metho
 
 ## Neutral Ground
 
-- **Malagarra** (on Basamortua island in Midarra) is neutral by centuries of treaty — claimed by no kingdom, depended on by every navy. This is the clearest example of neutral ground on Talan.
+- No single city on Talan is universally recognised as neutral ground. Frae City (Cronus's home) is often mistaken for neutral territory but is not — it is Cronus's city, founded during the Week of Crimson Rain as the base of mortal resistance.
 - Other neutral territories exist. Frae City is *not* neutral ground — it is Cronus's city.
 
 ---

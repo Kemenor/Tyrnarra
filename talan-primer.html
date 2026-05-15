@@ -1024,7 +1024,7 @@
       <div class="section-title">✦ Midarra — The Central Sea</div>
       <div class="section-body">
         <p>The great inland sea at the heart of Talan is called <strong>Midarra</strong> — an ancient name whose roots scholars argue over, though most agree it translates roughly to <em>The Still Mirror</em> or <em>The Deep Eye</em>. It is Talan's highway, its battleground, and its shared backyard.</p>
-        <p>The island of <strong>Basamortua</strong> sits at its center, home to the city of <strong>Malagarra</strong> — neutral ground by centuries of treaty, claimed by no kingdom and in theory governed by none. In practice, Malagarra is governed by money, tradition, and the quiet threat of every navy that depends on its port remaining open.</p>
+        <p>The island of <strong>Askamira</strong> sits at its center — Cronus's domain, and the only place on Talan where ice, desert, and forest coexist on a single landmass. At its heart is <strong>Frae City</strong>, where the Gods' Law was forged and where Cronus keeps his temple.</p>
       </div>
     </div>
 
@@ -1043,7 +1043,7 @@
     <div class="section">
       <div class="section-title">✦ Naming the World</div>
       <div class="section-body">
-        <p>The age of a place is written in its name. Ancient sites — ruins of the Elden, old kingdoms from the Gods' Era, natural features named in the Lost Era — carry names derived from old tongues now long drifted from their origins. <strong>Argia Esfera</strong>, for instance, descends from a phrase meaning <em>Sphere of Light</em>, its original form worn smooth by centuries of use.</p>
+        <p>The age of a place is written in its name. Ancient sites — ruins of the Elden, old kingdoms from the Gods' Era, natural features named in the Lost Era — carry names derived from old tongues now long drifted from their origins. <strong>Ehizahar</strong>, for instance, descends from words meaning <em>the ancient hunt</em>, its original form worn smooth by millennia of use.</p>
         <p>Newer settlements and institutions name themselves plainly, in the common tongue of the day: the <strong>Order of Steam</strong>, the <strong>Free City</strong>, the <strong>River Duchies</strong>. A historian can roughly date a location just from how its name sounds.</p>
       </div>
     </div>
@@ -1071,120 +1071,120 @@ function toggleEra(el) {
 // ── REGION DATA ──
 const regions = [
   {
-    name: "The Northern Reaches",
+    name: "Vindul",
     god: "Wind · Fisaya",
     color: "#60c8f0",
-    type: "Tundra, mountain passes, monastery fortresses",
-    places: ["Baerfrost", "Air Monastery", " Arctic Passes"],
-    desc: "The cold north where Fisaya's winds are literal and constant. The Air Monastery sits above the snowline, a fortress of monks who study wind magic and serve as Fisaya's most visible mortal institution. Baerfrost is the largest permanent settlement — a city of fur traders, miners, and people stubborn enough to stay.",
+    type: "Tundra, ancient forest, mountain passes",
+    places: ["Haizava"],
+    desc: "The wind domain of the northwest. Arctic coast and ice isles in the north, the highest conifers in the west, mountain ranges sheltering the Air Monastery, open grass steppes in the south. Fisaya's winds are literal and constant here — the region's character is shaped as much by what the wind brings as by what it takes away.",
     pills: ["Cold Climate", "Wind Magic", "Isolationist"]
   },
   {
-    name: "The Northeast Forests",
+    name: "Ehizahar",
     god: "Hunt · Hinka",
     color: "#4ade80",
-    type: "Ancient forest, scattered kingdoms",
-    places: ["Lands of Villtur", "Fellibylur", "Azkataria"],
-    desc: "Dense old-growth forest covering the northeast quadrant. The god Hinka's domain here is one of the most ancient-feeling on Talan — deep forest, predator and prey, the hunt as a way of life rather than a pastime. The kingdoms here tend toward independence and mutual suspicion.",
-    pills: ["Forest Terrain", "Dispersed Power", "Old Magic"]
+    type: "Ancient forest, arctic tundra, jungle",
+    places: ["Veidrath"],
+    desc: "The largest domain on Talan, and the oldest-feeling. Arctic tundra in the far north, the highest mountain range on the continent, ancient dark conifers that predate mortal civilization, and deep jungle forest in the south. The hunt here is not a pastime — it is a way of life, a theology, and a relationship with the land that no outside kingdom has ever fully understood.",
+    pills: ["Oldest Land", "Dispersed Power", "Old Magic"]
   },
   {
-    name: "The Commerce Heartlands",
+    name: "Lautara",
     god: "Commerce · Jianna",
     color: "#fbbf24",
-    type: "Trade routes, merchant cities, central plains",
-    places: ["Azhamour", "Emarrea", "Twin Suns"],
-    desc: "The great trading heartlands of Talan. Jianna's domain is everywhere money moves — which means everywhere. The Commerce territories are technically neutral ground for trade, giving even hostile nations reason to maintain embassies here. Twin Suns is named for a phenomenon visible from its hilltop — on clear days at certain angles, both moons are visible alongside the sun.",
-    pills: ["Trade Hub", "Politically Neutral", "High Wealth"]
+    type: "Trade routes, desert steppe, merchant cities",
+    places: ["Merkavar"],
+    desc: "Sandy steppe and desert dominate, with grass plains in the north and forested highlands to the east. Jianna's domain is everywhere money moves — which means Lautara sits at the crossroads of the continent's trade. Even hostile nations maintain embassies here. The eastern cultural character gives the region a distinctly cosmopolitan feel.",
+    pills: ["Trade Hub", "Crossroads", "High Wealth"]
   },
   {
-    name: "The Shadow Steppes",
+    name: "Myrkono",
     god: "Darkness · Araphel",
     color: "#a78bfa",
-    type: "Open steppe, shadow-touched plains",
-    places: ["Shadow Steppes", "Jun Festin", "Irzasna"],
-    desc: "The western steppes where Araphel's darkness is not evil — it is simply the absence of light, the space between stars, the quiet between words. Misunderstood by outsiders, the Shadow Steppes cultures have a sophisticated relationship with darkness as concept and power. Shadow magic is studied openly here.",
-    pills: ["Shadow Magic", "Misunderstood Culture", "Open Steppe"]
+    type: "Dark forest, mountain spine, shadow steppes",
+    places: ["Myrria"],
+    desc: "West Talan, Cloud Sea on two sides. A mountain range runs through the spine of the domain, and deep dark forest fills the rest — old, dense, alive in ways that feel older than the settlements. Araphel's darkness is not evil here: it is the absence of light, the space between stars, the quiet between words. The Myrkons — three heavily forested islands offshore — are part of the domain.",
+    pills: ["Shadow Magic", "Deep Forest", "Misunderstood Culture"]
   },
   {
-    name: "The Floating Isles of Shuun",
+    name: "Floteyn",
     god: "Water · Shuun",
     color: "#38bdf8",
-    type: "Island chains, sea territories, floating archipelago",
-    places: ["Floating Isles of Shuun", "Balatur Tian"],
-    desc: "The great water domain covering the western sea approach. The Floating Isles are exactly what they sound like — islands that drift, anchored by deep-water roots to shifting channels. Navigation here requires local knowledge or magic. Shuun's priests are among the most practically useful in Talan: weather-reading, safe passage, drowning prevention.",
+    type: "Floating archipelago, open sea, island chains",
+    places: ["Uravel"],
+    desc: "Overwhelmingly water, with one large forested island and hundreds of smaller ones scattered across Midarra and Hafra. The islands drift on deep-water roots — navigation requires local knowledge or magic. Shuun's priests are among the most practically useful in Talan: weather-reading, safe passage, the knowledge that keeps sailors alive.",
     pills: ["Naval Power", "Island Chains", "Water Magic"]
   },
   {
-    name: "The Eastern Wilds",
+    name: "Nashavel",
     god: "Chaos · Vesuna",
     color: "#f472b6",
-    type: "Unpredictable terrain, wild magic zones",
-    places: ["Ekasadaun Principality", "Chaos Frontier"],
-    desc: "The eastern frontier where Visuna's chaos is woven into the land itself. Wild magic surges are common. Terrain shifts. The Ekasadaun Principality has somehow maintained political coherence here for centuries — a feat that outsiders attribute to either exceptional governance or exceptional luck.",
-    pills: ["Wild Magic", "Unstable Terrain", "Frontier"]
+    type: "Dense ancient forest, wild magic zones",
+    places: ["Nahaskel"],
+    desc: "The eastern domain, covered almost entirely in dense old-growth forest where wild magic is woven into the trees themselves. Paths don't stay fixed. The Kaosadaemi Principality has somehow maintained political coherence here for centuries — a feat outsiders attribute to either exceptional governance or exceptional luck. Nahaskel, the Unmapped City, is laid out differently every time someone maps it.",
+    pills: ["Wild Magic", "Unstable Terrain", "Ancient Forest"]
   },
   {
-    name: "The Law Empires",
+    name: "Zuzental",
     god: "Law · Forseti",
     color: "#94a3b8",
-    type: "Empire, city-states, codified civilization",
-    places: ["Legea Empire", "Thousand Kingdoms", "Land of Law", "Vernua Dominion", "Nanuu Republic"],
-    desc: "The most politically complex region of Talan. Forseti's domain encompasses multiple competing powers all claiming to embody law and order — which they define differently. The Legea Empire favors central authority. The Thousand Kingdoms favor distributed sovereignty. The Nanuu Republic favors democratic process. Their debates are conducted in courts, trade agreements, and occasional border conflicts.",
+    type: "Open plains, codified civilization, competing empires",
+    places: ["Lograth"],
+    desc: "The most politically complex domain on Talan. Green and open in the north, steppe in the south, traversable land suited to roads, borders, and disputes about where borders fall. Multiple powers all claim to embody law — the Legea Empire favors central authority, the Thousand Kingdom favors distributed sovereignty, the Namur Republic favors democratic process. Their debates are conducted in courts, trade agreements, and occasional border conflicts.",
     pills: ["Politically Dense", "Codified Law", "Multiple Powers"]
   },
   {
-    name: "The Volcanic South",
+    name: "Sumendar",
     god: "Fire · Komo",
     color: "#fb923c",
-    type: "Volcanic highlands, fire-adapted civilizations",
-    places: ["Order of Steam", "No Man's Land (south)", "Tahu Tangata"],
-    desc: "The southern volcanic band where Komo's fire is geological as much as magical. The Order of Steam is one of Talan's great industrial institutions — a kingdom-guild hybrid that has harnessed volcanic power for manufacturing at a scale no other region matches. Tahu Tangata is an older name, its meaning partially lost, referring to the indigenous culture of the volcanic coast.",
+    type: "Volcanic highlands, mountain ring, fire-adapted civilizations",
+    places: ["Eldara"],
+    desc: "A volcanic domain defined by a distinctive circular mountain ring at its center, with a river encircling it. Active volcanoes cluster to the west. The Order of Steam has harnessed volcanic power for manufacturing at a scale no other region matches. Eldara's forges, at the city's heart, have burned continuously since the city's founding.",
     pills: ["Industrial Power", "Fire Magic", "Volcanic Terrain"]
   },
   {
-    name: "The Central Isle — Freedom",
+    name: "Askamira",
     god: "Freedom · Cronus",
     color: "#34d399",
-    type: "Island-nation, neutral territory, sea crossroads",
-    places: ["Basamortua", "Malagarra"],
-    desc: "The island of Basamortua in the heart of Midarra is Cronus's domain — freedom as absolute value, freedom from governance, freedom of movement. Malagarra, its capital, is the closest thing Talan has to a truly neutral city. It belongs to no kingdom. Every navy respects its port. Every guild has an office here. Its governance is a perpetually renegotiated agreement between whoever holds the most leverage.",
-    pills: ["Truly Neutral", "Sea Crossroads", "Lawless-ish"]
+    type: "Magical island, three biomes, sea crossroads",
+    places: ["Frae City"],
+    desc: "The island of Askamira in the heart of Midarra is Cronus's domain — freedom as absolute value, freedom from governance, freedom of movement. Three distinct biomes coexist on a single island: ice in the north (Dea Elurra), desert at the center (Basamortua), dense forest in the east (Maitagarri). No single climate governs, just as no single law governs. Frae City, where the Gods' Law was forged, sits at the island's heart.",
+    pills: ["Three Biomes", "Sea Crossroads", "Freedom Absolute"]
   },
   {
-    name: "The Southern Heartlands",
+    name: "Brauogi",
     god: "Earth · Sarrum",
     color: "#a8a060",
     type: "Farmlands, river valleys, ancient settlements",
-    places: ["The Earth Realm", "Galdua Jendea", "River Duchies", "Jakinduria"],
-    desc: "Sarrum's domain is Talan's breadbasket — the most fertile agricultural land on the continent. The River Duchies are exactly that: a loose confederation of noble houses whose wealth comes from controlling river trade. Galdua Jendea (old name, meaning disputed — possibly 'Place of Many Waters') is the cultural and administrative center.",
+    places: ["Lurrath"],
+    desc: "Talan's breadbasket — the most fertile agricultural land on the continent. Rolling hills and river valleys, dense forest in the south, rivers everywhere. Old noble houses control river trade. The land has been farmed continuously since before the Lost Era, and it shows — the soil here remembers every generation that worked it.",
     pills: ["Agricultural Wealth", "River Trade", "Old Nobility"]
   },
   {
-    name: "The Dreaming Southwest",
+    name: "Lioaru",
     god: "Time · Tani",
     color: "#c084fc",
-    type: "Temporal anomalies, ancient ruins, dreamlike landscape",
-    places: ["The Dreaming Cape", "Lost Kingdom"],
-    desc: "Tani's domain is time — and the southwest shows it. Temporal anomalies are reported throughout the region: moments that repeat, ruins that seem newer than they should be, travelers who arrive before they left. The Dreaming Cape is the most extreme example — a coastal region where the boundary between past and present is genuinely unclear.",
+    type: "Desert, temporal anomalies, ancient ruins",
+    places: ["Denbora"],
+    desc: "Time doesn't move cleanly in Lioaru. Temporal anomalies are reported throughout: moments that repeat, ruins that seem newer than they should be, travelers who arrive before they left. The Lost Kingdom on the western coast fell during or after the Week of Crimson Rain — directly tied to Tani's death — and its ruins are considered deeply dangerous. A green river valley cuts through as an oasis in the desert.",
     pills: ["Temporal Magic", "Unstable Time", "Ancient Ruins"]
   },
   {
-    name: "The Knowledge Interior",
+    name: "Ezkudon",
     god: "Knowledge · Enki",
     color: "#67e8f9",
-    type: "Libraries, academies, research territories",
-    places: ["Harro Dishgatsua", "The Golden Coast", "Gotolelkua"],
-    desc: "Enki's domain prizes knowledge above all else — its collection, preservation, and control. The interior south houses some of Talan's great libraries and magical academies. Harro Dishgatsua (an old name, meaning approximately 'Place Where Knowledge Rests') is home to archives that predate the Lost Era. Access is negotiated, not assumed.",
+    type: "Hidden archives, forest ring, research territories",
+    places: ["Thekkavar"],
+    desc: "Enki's domain prizes knowledge above all else — its collection, preservation, and control. A distinctive circular ring of forest and hills encloses mountains at the domain's heart, like a natural fortress grown around the great archives. Access to Ezkudon's libraries is negotiated, not assumed. The archives here predate the Lost Era. What is kept in the sealed sections has never been publicly catalogued.",
     pills: ["Academic Power", "Great Libraries", "Information Broker"]
   },
   {
-    name: "Argia Esfera — Domain of Light",
+    name: "Egulon",
     god: "Light · Iro",
     color: "#fde68a",
-    type: "Prosperous kingdom, divine light, southeast",
-    places: ["Ljosarn", "Lira Casas", "Hareaveldi"],
-    desc: "The domain of Iro, god of Light. At its heart sits Ljosarn, the Everbright City — Iro's independent city-state and temple complex. It is among the most prosperous and stable regions of Talan, its divine connection to light magic creating both genuine beauty and genuine power. Hareaveldi to the south has a partially independent cultural identity, its old name suggesting it predates Iro's influence in the region.",
+    type: "Prosperous plains, divine light, southeast",
+    places: ["Ljosarn"],
+    desc: "The most prosperous and settled domain on Talan. Warm golden terrain, open and flat, with mountain ranges through the center and west. Ljosarn, the Everbright City, is Iro's city-state and temple — its divine connection to light magic creates both genuine beauty and genuine power. The domain is stable in a way that makes its neighbours quietly envious.",
     pills: ["Divine Light", "Prosperous", "Politically Stable"]
   }
 ];
@@ -1220,10 +1220,10 @@ const factions = [
     detail: "The Empire is old, stable, and deeply convinced of its own rightness. Its legal code is genuinely sophisticated — centuries of refinement have produced a system that, within its own logic, functions well. The problem, from its neighbors' perspective, is that the Empire views its legal code as universal rather than regional. It has a history of 'extending legal protection' to border territories in ways that look remarkably like annexation."
   },
   {
-    name: "The Nanuu Republic",
+    name: "The Namur Republic",
     type: "Democratic city-state network",
     color: "#60c8f0",
-    summary: "An experiment in elected governance that has lasted three centuries against considerable expectation. The Nanuu Republic is small, principled, and perpetually exhausting to negotiate with.",
+    summary: "An experiment in elected governance that has lasted three centuries against considerable expectation. The Namur Republic is small, principled, and perpetually exhausting to negotiate with.",
     detail: "Every significant decision in the Republic requires a vote — sometimes multiple votes, sometimes a referendum, sometimes both. Outsiders find this maddening. Citizens find it essential. The Republic's military is modest; its diplomatic corps is extraordinary. It survives on the principle that everyone prefers having it as a neutral interlocutor to the alternative. The Guild maintains a particularly close relationship with the Republic — the values of independence and non-alignment resonate."
   },
   {

@@ -12,7 +12,7 @@ This repo is a personal worldbuilding project for the setting **Tyrnarra**. The 
   1. Translating a meaningful word or phrase into **Basque** or **Icelandic**
   2. Then slightly altering it to represent linguistic drift over time
 
-  Example: *"Argia Esfera"* (Sphere of Light, capital of Iro's domain) comes from Basque *"Argi-esfera"* meaning Sphere of Light, drifted slightly.
+  Example: *"Ehizahar"* (Hunt domain of Hinka) comes from Basque *"ehiza"* (hunt) + *"zahar"* (ancient), naturally eroded to its current form. Drift can happen anywhere in the word, not just the end.
 
 - **New or modern things** — recently founded institutions, contemporary city-states, modern organizations — are named **plainly in English** but they may have drifted lightly.
 
