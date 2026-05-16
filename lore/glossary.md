@@ -279,6 +279,19 @@ Full bestiary entries live in `lore/bestiary.md`. Listed here are the named bein
 - **The Virtue Demons** — Plain English. The Aristotelian-pattern demon hierarchy: one demon per virtue-line extreme. See `bestiary.md` for the full virtue/excess/deficiency table.
 - **The Sin Devils** — Plain English. The seven canonical devil-lords, one per Sin (Envy, Gluttony, Greed, Lust, Pride, Sloth, Wrath). Individual names TBD.
 
+**Versatile heritage placements (post-remaster, Tyrnarra canon):**
+- Heritages are PF2e-canonical names (imported); not Tyrnarra-coined. Listed here only for the Tyrnarra-specific *source* mapping.
+- **Aphorite** → Forseti (Law). **Ganzi** → Vesuna (Chaos). **Beastkin** → Hinka (Hunt). **Changeling** → Araphel (Darkness). **Duskwalker** → Tani (Time) — *created not born*, manifests at death-touched sites, the **Blackened Lands** are Talan's largest Duskwalker source.
+- **Nephilim** → any god (celestial) or any demon/devil (fiendish) — the universal divine-blood / fiendish-blood heritage. Replaces and absorbs former Aasimar and Tiefling.
+- **Ifrit / Oread / Sylph / Undine** → Elemental Plane sparks (Komo / Sarrum / Fisaya / Shuun affinity by domain, not by blood). **Suli** → generic geniekin (no specific element).
+- **Ardande** → Feyworld lineage (Wood element). **Talos** → Shadowplane lineage (Metal element). Neither plane belongs to a bound god — Ardande and Talos are *planar* lineages without divine alignment.
+- **Aiuvarin** → half-elf; **Dromaar** → half-orc. Genetic, not metaphysical.
+- **Dhampir** → half-Vampire; undead-touched, **not** god-touched. Vampires are an independent lineage on Talan.
+- **Dragonblood** → alien Dragon descent (see *Dragons* ancestry).
+- **Hungerseed** → half-Oni; **TBD** pending Tian Xia ancestries pass.
+- **Reflection** → magical mishap / Wellspring blip; no parent lineage.
+- **Bound gods without heritages after remaster:** Iro (Light), Enki (Knowledge), Jianna (Commerce), Cronus (Freedom).
+
 **Folklore + claims (mortal-mouth, not always true):**
 - **"Elden blood"** — the persistent Azarketi inherited claim. **Wrong.** Azarketi descend from the Storveldi Denbora, who *imitated* the Elden but were not of their lineage. The claim has been transmitted forward across millennia and is still widespread.
 - **"The corruption by the gods"** — dragon-internal phrase for what the Gods'-Era gods did to the surviving dragons after the mothership crash. Dragon-doctrinal vocabulary; not common Talanese.

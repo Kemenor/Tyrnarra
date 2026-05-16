@@ -189,34 +189,84 @@ Uncommon everywhere. No particular domain concentration.
 
 ---
 
-## Versatile Heritages
+## Versatile Heritages — Post-Remaster
 
-**The pf2e remaster reshuffled versatile heritages** (renames, reassignments, and new options). The mapping below is the pre-rework canon imported from WorldAnvil with the *Aasimar → Nephilim* rename applied. Several remaster-era heritages are still unmapped; the system will be fully re-aligned to Tyrnarra's bound thirteen in a later pass.
+The pf2e remaster reshuffled the versatile heritage roster — renames (Aasimar → Nephilim, expanded), absorptions (Tiefling folded into Nephilim), new elemental options (Wood → Ardande, Metal → Talos), and new ancestry-mix options (Aiuvarin, Dromaar). The mapping below is the **post-remaster canonical placement** for Tyrnarra.
 
-Most Talanese heritages are explained in-world as a god's blood running in mortal veins. The trait is rare, often visible, and varies in cultural reception — some heritages are blessed (Nephilim in Egulon), some are feared (Dhampir nearly anywhere), most are simply *known* and lived around.
+Most heritages are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception — some are blessed, some are feared, most are simply *known* and lived around.
 
-| Heritage | Bound God | Domain |
+### Divine-blood heritages (god in the veins)
+
+| Heritage | Source | Notes |
 |---|---|---|
-| **Nephilim** *(was Aasimar)* | Iro | Light |
-| **Aphorite** | Forseti | Law |
-| **Beastkin** | Hinka | Hunt |
-| **Changeling** | Araphel | Darkness |
-| **Dhampir** | Araphel | Darkness |
-| **Duskwalker** | Tani | Time |
-| **Ganzi** | Vesuna | Chaos |
-| **Ifrit** | Komo | Fire |
-| **Oread** | Sarrum | Earth |
-| **Suli** | Enki | Knowledge |
-| **Sylph** | Fisaya | Wind |
-| **Undine** | Shuun | Water |
+| **Aphorite** | Forseti (Law) | Axis-aligned; counterpart to Ganzi. Common in Zuzental, especially among the Thousand Kingdom's elder-bureaucracy lineages. |
+| **Beastkin** | Hinka (Hunt) | Partial-animal features; most common in Ehizahar tribal lineages. Read as Hinka's blessing or burden depending on the tribe. |
+| **Changeling** | Araphel (Darkness) | Tied to Araphel's *new faces* aspect — shapeshifters and identity-shifters fit his theology of becoming. Common in Myrria. |
+| **Duskwalker** | Tani (Time) | **Created, not born.** Manifests as a mortal child in a location with close ties to death — psychopomp-touched. The **Blackened Lands** produce more Duskwalkers than anywhere else on Talan; Tani's home domain of Lioaru is a steady second. They are doctrinally close to Tani's clergy. |
+| **Ganzi** | Vesuna (Chaos) | Chaos-aligned; counterpart to Aphorite. Common in Nashavel, especially the Kaosadaemi Principality. |
+| **Nephilim** | **Any divine or fiendish source** | See below — Nephilim is the universal divine-blood heritage on Talan and absorbs the old Aasimar/Tiefling split. |
 
-**Unmapped (no bound-god heritage for these gods):**
-- **Jianna** (Commerce) — no inherited-trait heritage in current canon. Jianna's blessing manifests as accumulated good fortune in trade, not in body. Plausibly remaster-era options (Reflection? a new commerce-aligned heritage?) will fit; pending the rework.
-- **Cronus** (Freedom) — no inherited-trait heritage. Cronus's nature does not lend itself to bloodline transmission (see `world-notes.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by choice, not blood.
+#### Nephilim — the universal divine-blood heritage
 
-**Unchanged from PF2e canon (no Tyrnarra-specific reflavour yet):**
-- **Reflection** — pending Tyrnarra-side reframing.
-- **Tiefling** — pending. Note: in PF2e Remaster, "Tiefling" is no longer a distinct heritage; the term survives in cultural usage but its mechanical content has been absorbed into other heritages.
+In PF2e Remaster, **Nephilim covers both celestial and fiendish features**. On Talan that broadens further:
+
+- **Celestial features** manifest in Nephilim descended from *any god* — most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
+- **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a virtue demon (corruption-of-virtue lineage) or a sin devil (sin-as-being lineage). See the *Virtue Demons* and *Sin Devils* sections below for the parent populations.
+
+Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag — one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
+
+### Elemental Plane heritages (Layer 1 / Prelife origin)
+
+| Heritage | Element | Bound-god affinity |
+|---|---|---|
+| **Ifrit** | Primordial Flame | Komo (Fire) |
+| **Oread** | Primordial Earth | Sarrum (Earth) |
+| **Sylph** | Primordial Air | Fisaya (Wind) |
+| **Undine** | Primordial Water | Shuun (Water) |
+| **Suli** | Mixed elemental (general geniekin) | None specific |
+
+These heritages carry the **spark of the Elemental Plane** itself (Layer 1 of the planar structure — see `world-notes.md`). The Primordial Six who created Prelife include the four bound elemental gods, so each elemental-heritage individual has a doctrinal affinity with their corresponding god — but the lineage is properly *elemental-plane* lineage, not divine blood. Communities of these heritages cluster around their corresponding god's domain by cultural gravity, not by birth.
+
+**Suli** is the exception: generic geniekin without a single-element specialisation, suiting cross-elemental or mixed-blood lines. No specific bound-god affinity; tends to settle where they are welcome.
+
+### Life-Layer planar heritages
+
+The remaster added two elements (Wood, Metal) that don't fit the classical four. On Talan they map to **the two non-Material planes of the Life Layer (Layer 2)** — the planes flanking the Material Plane in the canonical cosmology. **Neither plane belongs to a bound god.** The bound thirteen all reside on the Material Plane; the Feyworld and Shadowplane are sibling planes that no god owns.
+
+| Heritage | Element | Planar origin |
+|---|---|---|
+| **Ardande** | Wood | **Feyworld** — the plane of Chaos (vibrant, shifting, unpredictable) |
+| **Talos** | Metal | **Shadowplane** — the plane of Order (constant, unchanging, eternal in structure) |
+
+- **Ardande** carry the spark of Feyworld's living-growth element — wild, lush, mutable. They are creatures of the chaos-plane substrate. Their relationship to the bound thirteen is no closer than any other mortal's — Vesuna is the *god of Chaos*, but her domain is Nashavel on the Material Plane, not the Feyworld. Ardande lineages cluster wherever their kin are welcomed, regardless of domain.
+- **Talos** carry the spark of Shadowplane's eternal-structure element — fixed, ordered, durable. The name *Shadowplane* is a cosmological accident — the plane is order, not darkness — and Talos are not Araphel-aligned, despite the surface verbal overlap. Forseti is the *god of Law*, but his domain is Zuzental, not the Shadowplane. Talos lineages live without a god-claimant; their cultural communities form around craft and structure rather than worship.
+
+### Mortal-ancestry mixes
+
+| Heritage | Mix | Notes |
+|---|---|---|
+| **Aiuvarin** | Half-Elf, half any other ancestry | Most common where elves dominate (Zuzental, Myrkono Drow communities); the half-and-half identity is its own social position. |
+| **Dromaar** | Half-Orc, half any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi, Lautara, Nashavel). |
+
+These are genetic, not metaphysical — no divine, planar, or otherworldly lineage. Their place in the world is shaped by the mortal politics of the two ancestries involved.
+
+### Other lineages
+
+| Heritage | Source | Notes |
+|---|---|---|
+| **Dhampir** | Half-Vampire | Vampire heritage — undead-touched, not god-touched. Vampires are an independent lineage on Talan (not a bound-god creation), and Dhampir descend from them directly. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The acceptance is cultural, not doctrinal — Dhampir are not Araphel's by blood. |
+| **Dragonblood** | Alien Dragons | Descendants of the alien Dragons whose mothership crash-landed during the Gods' Era (see *Dragons* in the ancestry list). Concentrates around Dragon's Reach in Sumendar. Carries some of the dragon-doctrinal hunger for *purity / their roots* — Dragonblood adventurers are often seekers. |
+| **Hungerseed** | Half-Oni | **TBD.** Oni in PF2e are hungry yokai-spirits; Tyrnarra does not yet have a defined Oni population. Hungerseed canon is acknowledged but the source-lineage placement awaits the planned **Tian Xia ancestries pass**, which will handle Oni and the other Eastern-stratum beings as a batch. |
+| **Reflection** | Magical accident / Wellspring blip | A creation of ritual mishap, cosmic blip, or magical duplication. No parent lineage — Reflections are *made*, sometimes intentionally, often not. Theologically interesting: Reflections are arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. |
+
+### Bound gods without heritages
+
+After the remaster reshuffle, four of the bound thirteen have no exclusive heritage on Talan:
+
+- **Iro** (Light) — was Aasimar; now covered by Nephilim (celestial). No exclusive heritage.
+- **Enki** (Knowledge) — was Suli (pre-remaster); now Suli is generic geniekin. **Enki has no remaster heritage.** Knowledge isn't a body-borne trait in the new system; Enki-touched mortals manifest scholarly aptitude rather than physical change.
+- **Jianna** (Commerce) — never had one. Jianna's blessing is accumulated good fortune in trade, not in body.
+- **Cronus** (Freedom) — never had one. Cronus's nature does not lend itself to bloodline transmission (see `world-notes.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by choice, not blood.
 
 ---
 

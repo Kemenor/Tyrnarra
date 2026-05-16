@@ -196,10 +196,12 @@ Design decisions (resolved with user 2026-05-16):
 
 **Open threads:**
 - **Base ancestry roster rework** — the pf2e remaster also reshuffled the core ancestry list (renames, splits, merges, new options, retired options). The bestiary's 41 entries are imported from the WA export (pre-remaster) and need a remaster-era pass.
-- **Versatile heritage rework** — same situation; mapping pending settled pf2e remaster reshuffle.
+- **Tian Xia ancestries pass** — the full Eastern-stratum ancestry roster (Oni and others) is planned as a batch. **Hungerseed** sits in the bestiary as a *TBD* placeholder pending this pass.
 - Individual virtue-demon names beyond Muiral.
 - Sin-devil names, planar seats, and politics.
-- Whether the **Reflection** and **Tiefling** heritages get Tyrnarra reflavours or stay PF2e-canonical.
+
+**Recently closed (post-remaster pass 2026-05-16):**
+- ✅ **Versatile heritage rework** — full post-remaster roster placed. New cosmology established: divine-blood heritages map to bound thirteen + demons/devils (Nephilim now universal); Elemental Plane heritages (Ifrit/Oread/Sylph/Undine/Suli) carry Layer-1 Prelife sparks with domain affinity; **Wood (Ardande) → Feyworld lineage**, **Metal (Talos) → Shadowplane lineage** — the two new elements occupy the two non-Material planes of the Life Layer. Aiuvarin / Dromaar are genetic; Dragonblood ties to alien Dragons; Reflection is Wellspring-mishap. Tiefling absorbed into Nephilim (no longer a distinct heritage).
 
 Target: ✅ achieved. Bestiary is the reference; deeper development happens as the world is played.
 
