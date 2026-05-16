@@ -138,7 +138,95 @@ All magic is access to the Wellspring. The four schools are four different metho
 
 - Was the **first Grand God to stand with Cronus** during the Week of Crimson Rain — a Grand God, one of the twelve original creators, backing a mortal man. This was a turning point.
 - His reason: exhaustion. The blood, the desperate prayers from darkness, the weight of despair in every shadow. He was done.
-- This history is part of why Araphel's domain is acceptance and second chances — he has lived it.
+- This history is part of why Araphel's domain is **acceptance, second chances, and rebirth** — he has lived it.
+
+### Aspects of Araphel
+
+Araphel is the god of shadows, forgotten things, and **new faces** — three intertwined domains. Mortals come to him for sanctuary, for the right to begin again, and for the courage to redefine themselves. His teaching: *to embrace forgetting, remaking, and becoming.*
+
+**Edicts**
+- Offer sanctuary to those who seek a new life.
+- Conceal the secrets of those who entrust them to you.
+- Protect those who flee past dangers or persecution.
+- Embrace change, taking on new names, faces, or roles as needed.
+
+**Anathema**
+- Expose a secret entrusted to you.
+- Deny someone the chance to atone or begin anew.
+- Hunt those who have renounced their past under Araphel's shadow.
+- Refuse to adapt to change when change is needed.
+
+### Depictions
+
+Araphel is most commonly shown in two forms — both **fetchling**, both with waist-length hair:
+- A barrel-chested **fetchling man**.
+- A beautiful **fetchling courtesan woman**.
+
+But neither is canonical. Araphel is also called the **God of Many Faces**. He walks Myrria openly in countless guises — every gender, every race, every form. The only constant is his apparent age: **thirty-five years**. The only tell is the glint of ageless eyes.
+
+### The Sanctum of Veils — Araphel's temple
+
+The Sanctum of Veils, at Myrria's heart, is both Araphel's residence on Talan and the resting place of the **Divine Wardstone** — the seventh and last of the Seven Wardstones (see below). Its walls are draped in black-and-silver silks said to shift like living shadows. The innermost sanctum is open only to priests, the Council of Adventurers, and those Araphel himself summons.
+
+### Sacred iconography
+- **Symbol** — a half-mask split down the centre, one side smooth, the other etched with shifting patterns. Black-on-silver or white-on-deep-violet.
+- **Colors** — deep violet (rebirth), black (forgetting), silver (transformation).
+- **Sacred animal** — the raven, often depicted carrying a lantern or veil.
+- **Favoured weapon** — dagger.
+- **Sacred motifs** — veils, dark lanterns lit with violet flame, the Many Faces (murals of diverse faces gazing inward toward a shadowed void).
+
+### Rites
+- **The Shadowed Palm** — one hand pressed across the face leaving only one eye uncovered; a sign of prayer and a promise to reveal only what you choose.
+- **The Lantern Rite** — light a violet-flamed lantern while speaking your old name, then extinguish it while declaring a new one.
+- **The Shadow-Coin** — small blackened-silver coins, blank on one side and bearing the half-mask on the other. Pilgrims toss them into Myrria's shrines when renouncing old names.
+
+---
+
+## The Seven Wardstones — The Chains of the Bound
+
+Seven monumental relics forged at the end of the Age of Corruption. Together they **bind the Corrupted God deep beneath the earth**, anchoring the chains of divine law sealed at the Week of Crimson Rain (the same binding referenced in *The Age of Corruption — Mortal Myth* below and in *The Corrupted God — True Identity* above).
+
+**Geography.** All seven Wardstones rest in Araphel's domain (Myrkono), distributed across four of its sub-regions — three "kingdoms" and one divine city-state. The geographic concentration is not accidental: Araphel was the first Grand God to stand with Cronus, and the binding was anchored under his watch. The chains of the bound run through *his* domain.
+
+| # | Wardstone | Location | Description |
+|---|---|---|---|
+| 1 | **The Lakeside Wardstone** | Shadow Steppes — a city on the shores of the great lake | Anchors both commerce and faith. The city grew around it as nomadic clans gathered to guard its light. |
+| 2 | **The Steppes Wardstone** | Shadow Steppes — open grasslands | A solitary stone protected by wandering clans. Both a sacred pilgrimage site and a wartime rallying point. |
+| 3 | **The Forest Wardstone** | Itzasoa — within the canopy of the great forest | Enshrined in a vast arboreal city. Bridges of living wood and watchful druids keep eternal vigil. |
+| 4 | **The Temple Wardstone** | Itzasoa — at the heart of a temple city | Integrated into towering ziggurats. Priests conduct daily rites to keep corruption at bay. |
+| 5 | **The Monastery Wardstone** | Ilun Tasun — high in the mountains | Monks devote their lives to guarding it. Pilgrims climb perilous paths to glimpse its veiled glow. |
+| 6 | **The Port Wardstone** | Ilun Tasun — fortified port city by the sea | Both sacred relic and keystone of trade. The Ilun Tasun fleets are sworn to its defence. |
+| 7 | **The Divine Wardstone** | Myrria — Sanctum of Veils | The last of the seven. Unlike the others, it is openly bound to a living deity's protection. Glows only beneath the stars; fades before the sun. |
+
+**The War of Seals** is the ongoing struggle to keep the Wardstones safe. While the chains hold, the Corrupted God remains bound. Were Myrria to fall, the entire chain would be imperilled — which is why even rival kingdoms respect the city's independence.
+
+---
+
+## The Nine Generals of Corruption
+
+The Nine are the foremost servants of the Corrupted God — wrought from his power while he remains bound. Originally mortal cultists, clerics, beasts, and nameless horrors from deep places, each was chosen and remade into a vessel of corruption's will. Unlike their imprisoned master, **the Nine can be fought and slain.** Their defeat weakens the Blightfather's reach in the world above.
+
+### The Nine Dungeons
+
+The Nine dwell in colossal subterranean fortresses — the **Nine Dungeons**. These did not exist in the long centuries after the binding. They **erupted eight years ago** (current year 2532 MR; the eruption was therefore around 2524 MR), tearing pathways into the mortal world and disgorging the first great armies of corruption of the modern age.
+
+The kingdoms united, rallied adventurers and militias, and after bloody campaigns broke that first wave. To prevent another flood, the **main entrances of the Nine Dungeons were sealed** with wards, stone, and sacrifice. But sealing the gates did not end the threat: corruption now seeps upward through smaller caverns and tunnel networks, forcing a constant containment war.
+
+### The Nine — current state
+
+| General | Identity | Domain |
+|---|---|---|
+| **The Vermin Queen** | Mistress of swarms | Hive-dungeon: the Hollow of Ten Thousand Threads (Shadow Steppes). Breeds endless spiders, locusts, crawling things. |
+| **The Rot-Tyrant** | Corpse-warlord in ruined armour | Ossuary-halls. Rusting legions whose every step spreads despair and decay. |
+| **The Blight-Seer** | Prophet twisted into living plague | A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. |
+| **The Flesh-Sculptor** | Butcher who remakes flesh to the Blightfather's design | Lair of stitched horrors and alchemical vats. |
+| ~~**The Ash-Binder**~~ | *Defeated.* Once a corrupted elemental beast | Lair was a volcanic furnace of stone and fire. Now scattered — but the lair still leaks dangerous slag-born remnants. The defeat is celebrated across the kingdoms as proof the Nine can fall. |
+| **The Whisperer in Dreams** | Shadowbound cultist turned nightmare-made-flesh | Temple of illusions warping dream and waking; intruders wander lost. |
+| **The Maw Serpent** | Colossal venomous serpent pulled from the world's depths | Cavern-dungeon of sinkholes, acid pools, and tunnels wide enough to swallow caravans. |
+| **The False Saint** | Once a holy woman, now a mockery of faith | Underground chapel oozing false miracles; prayers rot into curses, faithful rise as zealots of corruption. |
+| **The Root-Twister** | Beast of wild growth remade into a lord of rot | Living dungeon: an underground jungle of strangling vines, carnivorous trees, choking spores. |
+
+**Eight remain.** Each that falls delays the master's freedom. But the wrath of the remaining eight burns hotter with every loss. See `factions.md` (*Remnants of Corruption*) for the broader threat structure.
 
 ---
 

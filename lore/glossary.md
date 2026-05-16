@@ -84,7 +84,8 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 **Lautara (Commerce):**
 - **Azkataria** — contains Merkavar; etymology TBD
 - **Twin Suns** — modern English, named for hilltop astronomical phenomenon
-- **Emarrea** — etymology TBD
+- **Emarrea** — Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom — fox-colour and gentle-host disposition encoded in the name. Forested eastern highlands of Lautara. Capital: Biozuri.
+- **Biozuri** — Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
 - **Soul Tree** — modern English, cosmologically significant island
 
 **Myrkono (Darkness):**
@@ -126,7 +127,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 **Zuzental (Law):**
 - **Thousand Kingdom** — modern English; houses Lograth (capital and city-state merged)
 - **Emerald Isles** — modern English; three islands off east coast
-- **Legea Empire** — drift from Latin *lex/legem* (law); major empire
+- **Legea Empire** — drift from Latin *lex/legem* (law); major empire. **A theocracy ruled by a demigod of a non-bound god (Layer 3 / Postlife resident; specifics TBD). State faith is the Divine Faith (see `factions.md`).** Sits inside Forseti's domain of Law — the resulting law-vs-law theological argument is structural and continual.
 - **Namur Republic** — modern English; democratic city-state network
 - **Order of Law** — modern English; institution
 
@@ -138,6 +139,81 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 **Ehizahar (Hunt):**
 - **Lands of Villtur** — Icelandic *villtur* (wild, lost, strayed); umbrella name for tribal territories
 - **Ardo Beroa** — Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; island sub-region
+- **Fenurra** — Icelandic *funi* (flame, blaze) + Basque *iturri* (spring, source) → *funi-iturri* "flame-source" → eroded over millennia to *Fenurra*. The land whose volcanism springs from a single ancient source — the meteor crater at its heart. Sub-territory within the Lands of Villtur.
+
+### Fenurran proper nouns (Latinate / English register, not the deep-old stratum)
+
+The Fenurran culture is detailed in `cultures.md`. Its internal place- and weapon-names sit in a Latinate / Germanic / English register — not the deep Basque/Icelandic stratum. They function as "modern" coined names in the world (the Fenurran people are old, but their *naming language* is closer to plain-style than the deep-old domains).
+
+- **Aeris** — Fenurran capital, carved into the inner walls of the Scar of Aeris. Latinate stylization (Latin *aer/aeris* = "of the air"). Etymology partial — Fenurran-internal name.
+- **Scar of Aeris** — the ancient meteor crater at the heart of Fenurra. Source of the volcanism, the star-metals, and the Fenurran capital. Plain English compound with a Latinate proper noun.
+- **Hall of Shards** — the Speaker's seat at the centre of Aeris. Plain English.
+- **Mount Skel** — high crag of the Seravain. Germanic-stem name (echoes *skull/skel-* "to cut"). Probably old Fenurran.
+- **Ashwall Divide** — Seravain cliff territory. Plain English compound.
+- **Sulfur Vents of Vehl** — Vexiren superheated canyon homeland. *Vehl* is a Fenurran-internal place name; etymology TBD.
+
+### Fenurran tribes (Latinate stylization)
+
+The four major Fenurran tribes carry Latinate names. Per the naming rule these are "new-style" — the tribes themselves are ancient but the names are stylized within Fenurran usage:
+
+- **Draconis** — The Scaled Flame. Latin *draco* (dragon) → *Draconis* (genitive). Echoes the Ember Drake totem and the dragon-claw imagery of their craft.
+- **Vexiren** — The Ember-Eyed. Constructed stem; loose echo of Latin *vexare* (to harass) and the *-ren* ending characteristic of Fenurran tribe names.
+- **Brakkaun** — The Bone-Burdened. Germanic-feeling consonant cluster; suggests "broken" / "brakka-" with a Fenurran *-aun* suffix.
+- **Seravain** — The Soulbound. Latinate-Germanic blend. (Note: WA file slugs use "sevarain" — typo; canonical spelling is **Seravain**, as in the master Fenurran article.)
+
+### Fenurran materials & substances
+
+- **Blackglass** — Plain English. Steel-and-obsidian alloy forged only by the Draconis. Sharper than anything else on Talan but brittle if mis-struck.
+- **Velthite** — Constructed name (Latinate *velt-* + mineral suffix *-ite*). Pure star-metal alloy mined inside the Scar of Aeris.
+- **Ghost Willow** — Plain English. The pale near-translucent tree that grows in sulfur-choked soil; bow-limb wood.
+- **Obsidian Silk** — Plain English compound. Light-absorbing thread spun from ashspinner-larva silk + volcanic resin. Used for the silent Whisperfang bowstring.
+- **Spice Wine** — Plain English. Hallucinogenic Draconis communion drink brewed from sulfur-rich roots near the Scar.
+- **Emberstones / Ashstones / Slagsteel / Cratersteel / Craterbone / Craterwood / Emberframe / Sulflare** — Fenurran technical vocabulary; plain English compounds for materials, devices, and ammunition described in `cultures.md`.
+
+### Fenurran institutions
+
+- **The Speaker's Mantle** — Leadership token of Fenurra, currently held by the Draconis. Plain English.
+- **The Bone Gong** — Inter-tribal signal instrument carved from direbeast femur. Plain English.
+- **The War Council** — Ad-hoc tribal military assembly. Plain English.
+- **Ash Seat Trial** — Formal challenge to a War Speaker mid-council. Plain English.
+- **Dance of the Sulfur Fire** — Bonding rite, the only sacred ritual the Fenurrans recognize. Plain English.
+- **The Shattervoice** — Brakkaun anti-magic drum-and-chant discipline. Plain English compound.
+
+### Fenurran combat doctrines (named)
+
+- **Infernal-Smoked Hook-Line-Sinker Charge** — Signature three-stage siege assault. Plain English compound.
+- **Three Bodies, One Mind** — Seravain two-rider-one-direwolf doctrine. Plain English.
+- **Spiral Charge / Tether Leap / Ashscreen Wheel** — Seravain signature manoeuvres. Plain English.
+- **Smokewalks / Scorchline Flanks / Silencing Strikes** — Vexiren tactics. Plain English.
+- **Dissonant Warfare / Craterline Holds / Gate-Cracking Charges** — Brakkaun tactics. Plain English.
+
+### Kitsune proper nouns (Japanese-style internal register)
+
+The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingdom and capital by the old-language names (Emarrea, Biozuri, listed under Lautara sub-regions above). Internally, the kitsune use a Japanese-flavoured cultural register for their own places, dishes, rituals, and titles. Same pattern as Fenurra's internal Latinate vocabulary.
+
+**Places (kitsune-internal):**
+- **Heartplaza** — central district of Biozuri, the bustling civic heart of the capital. Modern English compound.
+- **Kawaakari** — "river light." The mountain-pass resort village famous for hot springs, the shimmering Hoshigawa river, and the Foxfire Stone Massage. Japanese-internal naming.
+- **Hoshigawa** — "star river." The crystal-fed mountain river flowing through Kawaakari; trace crystal dust suspended in the water sparkles even by day. Japanese-internal naming.
+
+**Government:**
+- **The Heartcourt** — Plain English. The ruling polycule of 4-9 Hearts governing Emarrea.
+- **The nine Hearts** — Plain English. Each Heart oversees one of the nine great pillars (Crimson/Military, Azure/Diplomacy, Golden/Commerce, Emerald/Nature, Ivory/Law, Violet/Magic, Rose/Arts, Sapphire/Knowledge, Onyx/Secrets).
+- **The Growing Circle** — Plain English. The Heart-heirs living alongside the court in training.
+- **The Passing of the Tails** — Plain English. The transfer ritual when a new Heart is seated.
+- **Spectacles of Selection** — Plain English. Crisis-time selection trials (public courtship, sacred duels, festival trials).
+
+**Tradition & craft:**
+- **Catjomin Sake** — kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures.md`.
+- **Yukihime-shu** — "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
+- **Foxfire Stone Massage** — Plain English. Kawaakari's signature spa treatment.
+- **Festival of the Fox Lanterns** — Plain English. Annual Kawaakari river festival; lanterns drift down the Hoshigawa.
+
+**Landmark:**
+- **The House of a Thousand Flavors** — Plain English. Premier dining-and-illusion venue in Heartplaza, run by the seven-chef polycule **The Cook's Circle** (Rinza, Maeko, Tairen, Shouka, Virel, Kyome, Elhara).
+
+**Social structure:**
+- **Circles of Importance** — Plain English. The five concentric loyalty rings: Family → Community → Settlement → Region → Kingdom.
 
 **Askamira (Freedom):**
 - **Basamortua** — Basque *basa* (wild) + *mortu* (desert/empty) = wild desert
@@ -151,6 +227,34 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **The Blightfather** — folk title for the Corrupted God; same referent. Used as if it were a personal deity, which it is not (see `world-notes.md` for the truth).
 - **The Counting of Years** — mortal name for the post-binding calendar (MR). Mortals often credit the Corrupted God's binding as its origin, but the calendar actually pivots on the Week of Crimson Rain.
 
+### The Binding Apparatus (post-Week of Crimson Rain cosmology)
+
+Full lore in `world-notes.md`.
+
+- **The Seven Wardstones** — monumental relics forged at the end of the Age of Corruption that anchor the Corrupted God's binding. All seven sit inside Myrkono.
+  - **The Lakeside Wardstone** (Shadow Steppes — lake-shore city)
+  - **The Steppes Wardstone** (Shadow Steppes — open grasslands)
+  - **The Forest Wardstone** (Itzasoa — arboreal city in the canopy)
+  - **The Temple Wardstone** (Itzasoa — temple-city ziggurats)
+  - **The Monastery Wardstone** (Ilun Tasun — high mountain monastery)
+  - **The Port Wardstone** (Ilun Tasun — fortified sea port)
+  - **The Divine Wardstone** (Myrria — Sanctum of Veils; glows only beneath the stars)
+- **The War of Seals** — the ongoing struggle to keep the Wardstones safe and the Nine Generals contained.
+- **The Nine Generals of Corruption** — the Corrupted God's lieutenant-vessels; each commands one of the Nine Dungeons that erupted ~2524 MR. **The Ash-Binder is defeated.** Eight remain: Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister.
+- **The Nine Dungeons** — the subterranean fortresses of the Nine. Main entrances sealed after the first-wave campaigns; smaller leakage continues. One known: **the Hollow of Ten Thousand Threads** (Vermin Queen's lair, Shadow Steppes).
+
+### Myrria (Araphel's city-state) — proper nouns
+
+Full geography in `geography.md` and god-deep-dive in `world-notes.md`.
+
+- **Sanctum of Veils** — Araphel's temple; holds the Divine Wardstone.
+- **Council of Adventurers** — governs Myrria; based in the Blackstone Stronghold.
+- **The Shadowguard** — Myrria's elite oath-sworn military force; based in Shadowguard Keep.
+- **City districts**: The Lantern Stairs, Cliffside Bazaar, The Veiled Quarter, The Sanctum of Veils, Shadowguard Keep, The Hidden Vaults, The Blackstone Stronghold, The Starlight Cliffs.
+- **God of Many Faces** — epithet for Araphel, who walks Myrria in countless guises (every gender and race), always at apparent age thirty-five.
+- **Shadowed Palm / Lantern Rite / Shadow-Coin** — Araphel's signature rites of renunciation and renaming.
+
 ### Geography & Settlements
 - **Midarra** — the central freshwater inner sea of Talan. NOT a city. Cronus's island sits within it; Millhaven is on its southern shore. Etymology TBD.
 - **Hafra** — the saltwater sea surrounding Talan. Icelandic *haf* (ocean, open sea) → shortened and drifted.
+- **Twin Cities** — modern English; the mobile pirate capital adrift in Midarra. A paired settlement: a water-bound raft-city of lashed hulls below, a sky-bound sister-city of tethered airships and lifted islets above. The pair moves together on a course set by the council of Pirate Lords. Sovereign — no god, no kingdom.

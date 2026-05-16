@@ -14,6 +14,11 @@
 
 **Midarra** — the central freshwater inner sea of Talan. Cronus's island (Freedom domain) sits within it. Millhaven is on its southern shore. Etymology TBD — name is old, predates mortal settlements.
 
+**Notable feature — Twin Cities** (the pirate capital). A paired settlement that drifts together through Midarra on a course set by the council of pirate lords; never in the same place twice. The two halves are:
+- A floating raft-city of lashed-together hulls and ship-decks, sitting on the water.
+- A sky-suspended sister-city of tethered airships and lifted islets, hanging directly above the water-city.
+Both move as one. The Twin Cities answer to no god and no kingdom — they are the seat of pirate sovereignty on Talan, the place where the Pirate Lords meet, settle disputes, and divide the seas. Modern English name.
+
 **Hafra** — the saltwater sea surrounding Talan. Sits between the continent and the Cloud Sea; at some point the saltwater transitions into cloud. No hard boundary — sailors know when they've crossed over.
 *Etymology: Icelandic haf (ocean, open sea) → shortened and drifted to Hafra.*
 
@@ -58,7 +63,10 @@ God domains are ancient — they predate mortal civilization and carry old-world
 
 **Sub-regions:**
 - **Azkamour** — border territory straddling Lautara and Vindul, split roughly half-half. Capital city is in Lautara. See also Vindul.
-- **Emarrea** — (details TBD)
+- **Emarrea** — the kitsune kingdom. Sits in Lautara's forested eastern highlands, where the steppe gives way to mountain pass country, crystal-fed rivers, and terraced orchards. Politically distinct from the rest of Lautara: Emarrea is ruled by the **Heartcourt**, a polycule of four-to-nine elected monarchs (the "Hearts") who govern by public acclaim and shared affection rather than bloodline or conquest. The kingdom's relationship with Jianna and Merkavar is cordial but separate — Emarrea exports sake, hot-spring tourism, and theatrical illusion-craft into the wider Lautaran commerce network, but its political life answers to its own court. Capital: **Biozuri**. Notable village: **Kawaakari** (see *Settlements* below). Internal landmark: the **House of a Thousand Flavors** in Heartplaza, the capital's central district. The kitsune culture is detailed in `cultures.md`.
+
+  - **Biozuri** — the kitsune capital. *(Old-language: Basque bihotz "heart" + hiri "city" → drifted to Biozuri.)* Built around the Heartcourt's seat. **Heartplaza** is its bustling central district, where the Heartcourt holds its open festivals, petitions, and Passing of the Tails ceremonies.
+  - **Kawaakari** — *the Village of Shimmering Waters.* A secluded mountain-pass resort village famous for its hot springs, the crystal-fed *Hoshigawa* (star river — its trace crystal dust makes the water sparkle even by day), Snow Princess Wine (*Yukihime-shu*) from terrace plum-and-snowberry orchards, and the signature Foxfire Stone Massage. Ruled by a local council of innkeepers, brewers, and bathhouse masters. Famous continent-wide for its annual Festival of the Fox Lanterns, when the river is covered in glowing paper lanterns.
 - **Twin Suns** — named for a hilltop phenomenon where both moons are visible alongside the sun on clear days. Coastal sub-region; Soul Tree island lies just offshore.
 - **Azkataria** — sub-region containing Merkavar (Jianna's city-state), which sits on a lake within Azkataria's interior.
 - **Soul Tree** — a small rocky island in Midarra, just off the coast of Twin Suns. Named for the single massive pale tree at its center — an actual tree, through which souls may wander on to the Postlife. A small structure stands beside it (shrine or guardian post). One of the most cosmologically significant sites on Talan: a natural passage point between the Life Layer and the Postlife that does not require death in the conventional sense. Modern English name.
@@ -74,13 +82,54 @@ God domains are ancient — they predate mortal civilization and carry old-world
 
 **God's city:** Myrria — City of Second Chances
 
+**Cosmological role:** Myrkono houses **all seven of the Wardstones** that bind the Corrupted God — distributed across the Shadow Steppes (2), Itzasoa (2), Ilun Tasun (2), and Myrria (1, the Divine Wardstone). The concentration is not accidental — Araphel was the first Grand God to stand with Cronus during the Week of Crimson Rain, and the binding was anchored under his watch. See `world-notes.md` for the full Wardstones + Nine Generals + War of Seals lore.
+
 **Sub-regions:**
-- **Ilun Tasun** — the dark heartland of Myrkono. Myrria sits within it. Name is Basque: *ilun* (dark) + *tasun* (-ness, quality of) = "the darkness itself."
-- **Shadow Steppes** — the open steppe territory of the domain, shadow-touched plains.
-- **Itzasoa** — coastal sub-region. Name echoes Basque *itsasoa* (sea/ocean). Details TBD.
+- **Ilun Tasun** — the dark heartland of Myrkono. Myrria sits within it. Name is Basque: *ilun* (dark) + *tasun* (-ness, quality of) = "the darkness itself." Holds **two Wardstones**: the **Monastery Wardstone** (high mountain monks devote their lives to its guard; pilgrims climb perilous paths to glimpse its veiled glow) and the **Port Wardstone** (in a fortified port city by the sea; Ilun Tasun's fleets are sworn to its defence).
+- **Shadow Steppes** — the open steppe territory of the domain, shadow-touched plains. Holds **two Wardstones**: the **Lakeside Wardstone** (set within a city on the shores of the great lake — the city grew around it as nomadic clans gathered to guard its light; anchors both commerce and faith) and the **Steppes Wardstone** (alone in the open grasslands, protected by wandering clans; both pilgrimage site and wartime rallying point). Also contains **the Hollow of Ten Thousand Threads** — the Vermin Queen's hive-dungeon and the leakage point for spider-swarm corruption seeding lesser nests across the plains (see *Notable Locations* below).
+- **Itzasoa** — coastal sub-region. Name echoes Basque *itsasoa* (sea/ocean). Holds **two Wardstones**: the **Forest Wardstone** (hidden within the canopy of the great forest, enshrined in a vast arboreal city; bridges of living wood and watchful druids keep eternal vigil) and the **Temple Wardstone** (at the heart of a temple city, integrated into towering ziggurats; priests conduct daily rites to keep corruption at bay).
 - **Three Pines** — the island collection of Myrkono. Three main heavily forested islands (the original Myrkons) plus two smaller islands now under their control: one off the coast of Ilun Tasun, one adjacent to Haizetsua (Vindul's western island). Five islands total.
 
 **Note:** Darkness in Araphel's domain is not malevolent — it is the absence of light, the space between stars, the quiet. The culture here has a sophisticated relationship with shadow and darkness as concept and power.
+
+#### Notable Locations in Myrkono
+
+**Myrria — the City of Second Chances** (god's city-state, sits in Ilun Tasun)
+
+An independent city-state nestled in a crescent of mountains, both sanctuary and fortress. Streets carved into blackstone terraces climb the slopes and wind into hidden strongholds. The city does not end at its walls — whole wings extend *inside* the mountains, forming hidden strongholds and vault-like sanctuaries. At night, pale lanterns shine from both cliffside windows and mountain halls, giving the city the appearance of a starlit constellation scattered across stone.
+
+**Government:** Authority does not rest with Araphel directly — though he resides in the Sanctum of Veils, he does not rule. Power rests with the **Council of Adventurers**, a body of seasoned wanderers and heroes who once lived by the sword and now guide Myrria's fate. The city welcomes any soul seeking redemption or rebirth: names can be left behind, past crimes set aside, hunted souls find refuge — provided they abide by the Council's decrees.
+
+**Districts:**
+- **The Lantern Stairs** — the great stairway winding up the slope, flanked by hundreds of pale lanterns. Pilgrims ascend barefoot to honour the God of Shadows, leaving tokens of their old lives along the way. Lined with hostels, shrines, and markets.
+- **Cliffside Bazaar** — wide terraces overlooking the valleys; merchants, traders, smugglers. Anyone can sell their wares — no questions asked. Even fugitives trade here, provided they pay the tolls.
+- **The Veiled Quarter** — main residential district. Narrow streets often draped in dark silks. Names are often changed here; neighbours rarely ask about past lives. Anonymity-friendly inns and taverns thrive.
+- **The Sanctum of Veils** — Araphel's temple. Resting place of the **Divine Wardstone** (the seventh and last). Walls draped with shifting black-and-silver silks. Innermost sanctum open only to priests, the Council of Adventurers, and those Araphel himself summons.
+- **Shadowguard Keep** — the martial heart of the city. The **Shadowguard** are elite warriors sworn to defend Myrria by oath, not lineage. Part fortress, part barracks, part training ground. Patrols watch both the mountain passes and the city's underways.
+- **The Hidden Vaults** — tunnels and chambers carved deep within the mountains. Some for storage; others hold secrets even the Council guards closely. Rumours say entire vaults hold relics of adventurers who died seeking redemption — or prisoners too dangerous to release.
+- **The Blackstone Stronghold** — ancient citadel built into the highest ridge, towers emerging from the peaks like jagged fangs. Once a fortress of war; now houses the Council of Adventurers. Council deliberations happen here, alongside halls dedicated to training new adventurers seeking their second chance.
+- **The Starlight Cliffs** — the uppermost terraces where lanterns are replaced by open skies. Festivals of shadow and rebirth are held here at night, when the Divine Wardstone shines most brightly, reflecting the stars.
+
+**Notable institution:** **Myrria's Godshall** — the Adventurers' Guild Godshall, the regional command centre for the Guild across all of Myrkono. The Guild Sovereign of Myrkono (currently **Seraphel Duskbane**, fetchling, the *Duskbane* epithet earned hunting corruption cults) sits here; the Godshall and the Council of Adventurers share power in the city. Architecture, leadership, and full description of this faction belong to `factions.md` (Phase 3).
+
+---
+
+**The Hollow of Ten Thousand Threads** (Shadow Steppes)
+
+The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `world-notes.md`). A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers — strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors.
+
+**Structure:**
+- **The Web-Tunnels** — narrow passageways coated in sticky threads. Trap and alarm system in one; intrusions alert the Queen's spawn instantly.
+- **The Brood Pits** — chambers full of eggs, larvae, and swollen brood-mothers. Tarry too long here and the hatchlings overwhelm.
+- **The Silken Vaults** — cocooned bodies: mortal victims, beasts, and adventurers. Some still live, transforming slowly into monstrosities through corruption seeping from the silk.
+- **The Throne of the Vermin Queen** — chamber vast enough to contain her massive form. Draped in layers of living web. She is attended by her chosen spawn — grotesque spider-hybrids once human, now twisted.
+
+**Threats:**
+- **Endless swarms** — strength lies in the unending tide as much as the Queen herself.
+- **Corrupted silk** — threads carry the Blightfather's power; weapons and armour entangled in them corrode; wounds taken while bound heal slowly or not at all.
+- **Hive-mind influence** — long exposure fills intruders with whispers; the swarm itself wears down willpower, drawing the unwary into the hive.
+
+**Significance:** A constant source of corruption in the Shadow Steppes. Monsters burrow outward, seeding lesser nests across the plains. Whole caravans have vanished into web-choked gullies. Destroying the Vermin Queen would scatter her hive and collapse much of the Hollow — but as long as she endures, the swarms only grow.
 
 ---
 
@@ -203,7 +252,7 @@ God domains are ancient — they predate mortal civilization and carry old-world
 **Sub-regions:**
 - **Emerald Isles** — collection of three forested islands off the eastern coast. Modern English name.
 - **Thousand Kingdom** — the dominant political sub-region of Zuzental. Lograth sits within it and functions as both the god's city-state and the actual capital of Thousand Kingdom — the two have grown together into a single urban mass over centuries. The city-state and kingdom are effectively inseparable.
-- **Legea Empire** — (details TBD)
+- **Legea Empire** — **A theocracy ruled by a demigod whose allegiance is not to Forseti nor to any of the bound thirteen, but to a god residing in the third (Postlife) planar layer — Elysium, Diyu, or Abyss (specific plane and identity TBD).** The Empire's state faith is the **Divine Faith** (see `factions.md`). The political and theological collision is structural: Legea sits inside Zuzental, the domain of *Forseti, the bound god of law itself* — and the Empire's god claims a competing, possibly older legal authority through their demigod scion. Forseti's law and the Divine Faith's law are not the same law, and both are enforced inside the same domain. The Empire reaches far beyond its own borders through an active missionary programme, most consequentially to Fenurra (see `cultures.md`).
 - **Namur Republic** — (details TBD)
 - **Order of Law** — (details TBD)
 
@@ -230,12 +279,13 @@ God domains are ancient — they predate mortal civilization and carry old-world
 
 **Position:** Northeast Talan — the largest domain, spanning arctic north to jungle south
 
-**Terrain:** The most varied domain. Arctic/icy tundra in the far north. The highest mountain range on the continent and the oldest trees (ancient dark conifers, northwest corner). Open grassland through the center. Deep jungle-like old-growth forest in the south and southeast. Rivers throughout. The domain that feels most primordially "of the world itself."
+**Terrain:** The most varied domain. Arctic/icy tundra in the far north. The highest mountain range on the continent and the oldest trees (ancient dark conifers, northwest corner). Open grassland through the center. Deep jungle-like old-growth forest in the south and southeast. Rivers throughout. The domain that feels most primordially "of the world itself." A meteor struck the central-northern wastes in deep antiquity, leaving a vast crater that still bleeds slow volcanism into the surrounding land — the only significant volcanic activity outside Sumendar.
 
 **God's city:** Veidrath — The Hunting City
 
 **Sub-regions:**
 - **Lands of Villtur** — the umbrella territory covering most of Ehizahar. The domain is overwhelmingly tribal — no unified kingdoms, no formal borders. The many tribes that live across the arctic tundra, grasslands, and ancient forests all fall under this collective name. Veidrath sits within this expanse. *(Icelandic villtur = wild, lost, strayed — old name, fits the ancient naming rule.)*
+- **Fenurra** — a sub-territory within the Lands of Villtur. Defined by the ancient meteor crater and the volcanic activity that still surrounds it: sulfurous fumes, basalt fields, slow lava flows, and strange star-metals seeded into the ground by the impact. The region is harsh and resource-poor in normal terms but rich in materials no other place on Talan produces. The Fenurran tribes that live there are hardened, pragmatic, and politically distinct from the broader Villtur tribal sprawl — they hold themselves apart even from their fellow tribespeople. *(Cultural detail — tribes, materials, customs — pending a later cultures pass; see `worldanvil-export/Talan/Fenurra/` for the draft material.)*
 - **Basogur Jungle** — the deep jungle territory in the south and southeast, shared with Nashavel. See also Nashavel.
 - **Ardo Beroa** — island sub-region of Ehizahar. *(Basque ardo = wine + beroa = hot, warm → "warm wine" or "hot wine." Old name, etymology partially obscured by drift.)*
 
