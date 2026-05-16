@@ -262,6 +262,28 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Matron Charna** — Anadi personal name; modern-stratum. Ancient Anadi proprietor of the Spider's Silk.
 - **The Hiring Wall / The Webroom / Silk Lines Service / The Favor** — Plain English. The inn's institutional features.
 
+### Other Continents (named)
+
+- **Sortalde** — Basque *sortaldea* "sunrise-land / east" → shortened and softened to **Sortalde**. The **Talanese name** for the Eastern continent: a petal-shaped archipelago across Hafra to the east of Talan, separated from Talan by stormy outer waters. Sailors who survive the crossing usually trade on its outer petals; the inner courts are harder to reach. Talanese atlases, Iron Tide intelligence, Adventurers' Guild dispatches, and Lautaran merchant records all use this name.
+- **Tao Hua Yuan** (桃花源) — the **Sortalde-internal name** for the same continent. Chinese-flavoured internal register (deliberately distinct from the kitsune's Japanese-flavoured Emarrean register — kitsune are *not* related to Sortalde, the parallel is coincidental). Literally "Peach Blossom Spring," after the foundational Tao Yuanming poem about a hidden paradise of peach orchards reachable only through a difficult river passage and lost to outside contact. The name encodes the continent's cultural self-understanding: *we are blossoms, we are hidden, the way back is rarely found.* Used by Sortalde residents internally and by Talanese characters who've actually been there. **Distinguishing pattern:** same external/internal split that Emarrea/Biozuri and Fenurra/Aeris already use — Talanese-stratum old-Basque externally, internal register held by the resident culture itself.
+
+### Sortalde proper nouns (Chinese-flavoured internal register)
+
+The seven petals of Sortalde each carry a Sortalde-internal name. Pattern: a one- or two-character descriptor + *Dao* (岛, "island") for the six ancestral petals; the central Concord seat uses *Heting* (合廷, "Concord-Court"). Chinese-flavoured throughout, with no claim to literal Mandarin grammar — the names are evocative compounds, not phrasebook entries.
+
+- **Lundao** (轮岛, "Wheel Island") — Samsaran homeland. Named for *samsara* (the wheel of reincarnation). The senior contemplative-bureaucratic petal; Samsaran chancellors keep multi-life memory of the Concord's history.
+- **Niudao** (牛岛, "Ox Island") — Sarangay homeland. Named directly for the bull-folk's bovine character. The warrior-oath petal; Sarangay houses serve multiple courts as standing martial nobility.
+- **Xidao** (戏岛, "Theatre Island") — Tanuki homeland. Named for *xi* (play, theatre, deception). The convivial-merchant-performer petal; Tanuki troupes circulate Sortalde and occasionally reach Talan via surviving merchant routes.
+- **Yingdao** (影岛, "Shadow Island") — Wayang homeland. Named for *ying* (shadow). The shadow-court petal; Wayang serve as inter-petal spies, diplomats, and shadow-screen archivists — most secrets in Sortalde have passed through Yingdao at some point.
+- **Lingdao** (灵岛, "Spirit Island") — Yaksha homeland, also the **concentration zone for bound Oni** (see *Oni* below). Named for *ling* (spirit). The dynastic-place-spirit petal; Yaksha are nobility tied to specific lands here, and Oni are their darker cousins — shared spirit-nature, opposed temperament.
+- **Wandao** (万岛, "Myriad Island") — Yaoguai homeland. Named for *wan* (myriad, ten thousand). The common-folk petal; Yaoguai's vast taxonomic spectrum (beast-shaped sapients of countless variations) makes Wandao the most populous petal and the one most easily reached by Talanese merchants.
+- **Heting** (合廷, "Concord-Court") — the central seat. A smaller island at the geographic centre of the seven-petal arrangement. The **Concord of Courts** convenes here; ambassadors from each of the six ancestral petals maintain residence. Reaching Heting from Talan is mythically hard; most Talanese never hear it named. The Emarrean kitsune — entirely unrelated to Sortalde — have a coincidentally similar internal register, which means the two cultures' diplomats can sometimes pronounce each other's names but cannot trust each other's grammar.
+
+### Sortalde institutions
+
+- **The Concord of Courts** — the long-standing confederation of the six ancestral petals, convening at Heting. Held together by ancient agreement rather than enforced authority. Samsaran chancellors are the continuity (multi-life memory carries the Concord's institutional knowledge across human lifetimes).
+- **Oni** — bound spirits of Sortalde tied to specific places. Concentrated on **Lingdao** alongside the Yaksha (who are their *lighter* cousins — both spirit-natures, opposed temperaments). Manifest physically only at their bound site; cannot wander. **Half-Oni mortal children are Hungerseeds** (see `bestiary.md` heritages).
+
 ### Named Non-Bound Gods (Layer 3 residents)
 
 Full canon in `world-notes.md` — *Named Non-Bound Gods*.

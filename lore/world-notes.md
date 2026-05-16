@@ -272,6 +272,7 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 
 - Many gods beyond the 13 exist in Prelife (Layer 1) and Postlife (Layer 3).
 - The named Postlife residents whose portfolios appear in clerical practice on Talan are covered below in *Named Non-Bound Gods* (Bikiargi, Zaharsuge, Epairima, Betibizi). The non-bound god of the **Divine Faith / Legea Empire** is also Layer-3-resident; identity TBD (see `factions.md`).
+- **Sortalde (the Eastern continent — see `geography.md`) runs an entirely separate clerical substrate.** No bound gods reside there; all Sortalde clerical work channels through an unnamed Layer-3 pantheon of dynasty-spirits, ancestor-judges, and place-gods. Sortalde mortals have **never seen a god walk among them** — religion there is invocation across the veil, never personal audition. The Sortalde pantheon is a future-development thread.
 - Elven ancestral pantheons, deep god cults, demon lord worship, and others have real divine power and active churches on Talan.
 - The 13 are distinctive because they are *present on the Material Plane* and *bound by the Gods' Law* — not because they are the only gods.
 - The Talan primer (Magic & Faith tab) already references this.
@@ -547,8 +548,9 @@ All four below are **belief-shaped** — like the Ascendant Six, they take their
 - **Aspects:** indigenous serpents, drakes, basilisks, primal wyrms; the deep-earth slither; the *pre-Dragon* lineage of Talan's scaled beasts.
 - **Predates the alien Dragons** by ages. His wyrm-line was the established serpentine intelligence of Talan when the Dragon mothership crashed during the Gods' Era. The alien Dragons' "we are the true wyrm-lords" claim is, on Talan, theologically wrong — Zaharsuge was here first.
 - **Residence:** **Diyu** (Layer 3, neutral). Sancta-less on Talan, but his shadow falls heaviest in the upper **Darklands** — the Sentinel Dwarves who patrol there may be unknowingly guarding his cultic sites.
-- **Worshippers:** lizardfolk, nagaji, naga ancestry, some kobolds (which produces a religious schism with Komo's kobold-incarnation lore — kobolds are split between the bound Komo and the indigenous Zaharsuge), small dragon-blood cults that reject Dragon's Reach's authority claim.
-- **Hook:** indigenous wyrm-cultists have a theological grievance against the Dragons of Dragon's Reach. Untested, simmering.
+- **Living lineage on Talan: Dragonets** (see `bestiary.md`). Small dragonlike sapients native to Talan, his direct ancestral children, distinct from both the alien Dragons and from Dragonkin. Dragonet populations concentrate in the upper Darklands and the Basogur Jungle — the same places Zaharsuge's domain bleeds through.
+- **Worshippers:** Dragonets above all (his direct ancestral children); also lizardfolk, nagaji, naga ancestry, some kobolds (which produces a religious schism with Komo's kobold-incarnation lore — kobolds are split between the bound Komo and the indigenous Zaharsuge), small dragon-blood cults that reject Dragon's Reach's authority claim.
+- **Hook:** indigenous wyrm-cultists have a theological grievance against the Dragons of Dragon's Reach. Many Dragonets refuse to recognise Dragon's Reach as having authority over wyrmkind on Talan. Untested, simmering.
 
 ### Epairima — The Judge of Souls (Minor God)
 - **Aspects:** verdict, weighing, sorting, second-chance allocation, soul-routing.

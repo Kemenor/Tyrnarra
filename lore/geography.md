@@ -28,13 +28,49 @@ Both move as one. The Twin Cities answer to no god and no kingdom — they are t
 
 ## Other Continents
 
-Tyrnarra has more than one continent. Most are little known to Talanese scholars — Hafra is wide, the Cloud Sea wider, and active contact is rare.
+Tyrnarra has more than one continent. Most are little known to Talanese scholars — Hafra is wide, the Cloud Sea wider, and active contact is rare. **Two are named in canon: the Red Empire's home continent (west across Hafra) and Sortalde (east across Hafra).** Others exist but remain unnamed in Talanese sources.
 
-**The one exception is the home continent of the Red Empire** (see `factions.md` — Off-Continent Powers). Its name, geography, and internal politics are largely unknown on Talan, but its existence is canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy had some contact with Talan's coasts, most of it unfriendly.
+The bound thirteen reside on Talan, not on any other continent. The Gods' Law applies anywhere on the Material Plane (it's physics, not jurisdiction), but the gods themselves do not have established sancta or temple complexes off-continent. **This means every other continent runs on a fundamentally different theological substrate from Talan** — no walking gods, no auditioned sancta, clerical work runs through Layer-3-resident or Prelife-resident gods only (see `world-notes.md` — *Named Non-Bound Gods*).
 
-The bound thirteen reside on Talan, not on the Empire's home continent. The Gods' Law applies anywhere on the Material Plane (it's physics, not jurisdiction), but the gods themselves do not have established sancta or temple complexes off-continent — which is why the Red Empire can build a "godless state" infrastructure without the direct daily friction a Talanese kingdom would face.
+### The Red Empire's home continent (west across Hafra)
+
+Largely unknown on Talan, but canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy in routine and usually unfriendly contact with Talan's coasts. Full faction detail in `factions.md` — *Off-Continent Powers*.
 
 **Open thread:** The home continent's name, internal map, and any non-Imperial polities that share it with the Empire are TBD. Crossing distance is "long enough that landings are campaigns, not raids."
+
+### Sortalde (east across Hafra) — the Petal Continent
+
+**Talanese name:** *Sortalde* (Basque *sortaldea* "sunrise-land / east"). **Sortalde-internal name:** *Tao Hua Yuan* (桃花源, "Peach Blossom Spring," after the Tao Yuanming poem about a hidden paradise reachable only through a difficult passage). Same external/internal naming split that Emarrea/Biozuri and Fenurra/Aeris use. Full etymology in `glossary.md`.
+
+**Shape.** A great archipelago: **seven major islands arranged in a petal formation**, six ancestral petals around a smaller central seat. Internal seas between the petals are narrow and routinely sailed by Sortalde-native vessels; the outer ring is wide, stormy, and historically the graveyard of Talanese shipping.
+
+**Crossing from Talan.** **Hard.** The stormy outer ring of Sortalde routinely sinks Talanese ships. Surviving merchants typically reach only the **outer petals** (the three petals on the Talan-facing arc of the archipelago — Wandao, Xidao, Niudao); the inner petals (Yingdao, Lingdao, Lundao) and the central Concord seat (Heting) are rumour to most Talanese. The Iron Tide has lost ships trying; raids on Sortalde are unprofitable enough that the Red Empire's standing policy is "don't bother."
+
+**Theology.** Sortalde has **no walking gods.** The bound thirteen all maintain their sancta on Talan; none have crossed Hafra to establish presence on Sortalde, and no indigenous Sortalde bound god has emerged. All clerical work on Sortalde channels through **Layer-3-resident gods** — a Sortalde-internal pantheon of dynasty-spirits, ancestor-judges, and place-gods who reside in Diyu and (less often) Elysium. **The pantheon is not yet named in Tyrnarra canon** — it exists as a placeholder for future development. The practical effect on daily Sortalde life is profound: religion is invocation across the veil, never personal audition. No mortal in Sortalde has ever met their god in person.
+
+**Politics — the Concord of Courts.** The seven petals are bound together by an ancient confederation, **the Concord of Courts**, which convenes at Heting. The Concord is held together by long agreement, not enforced authority. **Samsaran chancellors** carry political memory across reincarnations, providing institutional continuity that no human lifetime can match. Each petal has its own internal governance — typically a hereditary court with a long-lived ancestral lineage — but inter-petal disputes are mediated through Concord channels.
+
+**The seven petals.**
+
+| Petal | Ancestry | Character |
+|---|---|---|
+| **Wandao** (Myriad Island) | Yaoguai | Common-folk petal, vast taxonomic spectrum; most populous; nearest Talan-side reach. Outer petal. |
+| **Xidao** (Theatre Island) | Tanuki | Convivial merchants, performers, mischievous shapeshifters. Outer petal; Tanuki troupes occasionally cross to Talan. |
+| **Niudao** (Ox Island) | Sarangay | Bull-folk warrior caste, strong oath-keepers, hereditary martial nobility. Outer petal. |
+| **Yingdao** (Shadow Island) | Wayang | Shadow-courtiers, spies, shadow-puppet archivists. Inner petal; most Sortalde secrets pass through here. |
+| **Lingdao** (Spirit Island) | Yaksha (+ Oni) | Dynastic place-spirits bound to specific lands; **also the concentration zone for bound Oni** (Yaksha's darker spirit-cousins). Inner petal. |
+| **Lundao** (Wheel Island) | Samsaran | Contemplatives, senior bureaucrats; multi-life memory keepers. Inner petal. |
+| **Heting** (Concord-Court) | shared | Central island; Concord seat; ambassadors from all six ancestral petals reside here. Mythically hard to reach from outside. |
+
+**Active diplomatic interface with Talan.** Sortalde maintains **standing embassies in Lautara** (Commerce / Jianna) — typically at Crossroads or in Merkavar — staffed mostly by Wandao Yaoguai and Xidao Tanuki (the petals whose ancestries find the crossing survivable in numbers). The Adventurers' Guild does *not* maintain a Sortalde branch; expeditions there are commissioned individually and pay survivor-tax rates.
+
+**Cultural quirk — kitsune coincidence.** The kitsune of Emarrea (Lautara) use a Japanese-flavoured internal naming register; Sortalde residents use a Chinese-flavoured register. The parallel is **purely coincidental** — kitsune are not descended from Sortalde populations and have no ancestral connection to the continent. Diplomats from the two cultures can sometimes guess at each other's pronunciation but cannot trust each other's grammar. Both cultures find the coincidence faintly insulting if pointed out, for opposite reasons.
+
+**Hooks:**
+- Any voyage to Sortalde is a campaign in itself — the outer-ring storms are the framing obstacle.
+- The Tao Hua Yuan poetic-self-mythology suggests that even Sortalde residents have an ambivalent relationship with the outside; defectors and exiles exist but cannot easily return.
+- A Talanese character with a Sortalde ancestry is rare enough to draw notice; their story of crossing is half-formed legend by the time they reach Lautara.
+- The unnamed Sortalde Layer-3 pantheon is a deep open thread — anyone who pursues planar contact with Sortalde's gods is doing original theological work.
 
 ---
 

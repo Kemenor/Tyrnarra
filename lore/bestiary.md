@@ -2,7 +2,7 @@
 
 A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. **The mechanical rules are Pathfinder 2e** (Remaster) — this file does not duplicate PF2e crunch. What it captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `world-notes.md`, `geography.md`, `factions.md`, and `cultures.md`.
 
-> **Status note (2026-05-16):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. Several entries are deliberately thin where the source was thin — they will deepen as the world gets played.
+> **Status note (2026-05-17):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. **Base ancestry rework completed 2026-05-16** — roster reconciled against the 44 standard PF2e remaster ancestries (Gnoll→Kholo and Grippli→Tripkee renames applied; 8 new ancestries added: Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). **Tian Xia placement pass completed 2026-05-17** — the 6 Tian Xia ancestries placed on **Sortalde**, the Eastern petal-continent (see `geography.md`); Hungerseed heritage resolved as half-Oni-of-Lingdao. Retained outside the standard 44 as Tyrnarra-canon additions: Dragons, Dragonkin, Slimes, Rabbitfolk.
 
 ---
 
@@ -13,28 +13,30 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | Domain | God | Dominant Ancestries | Notable Uncommon |
 |---|---|---|---|
 | **Light** · Egulon | Iro | Nagaji · Shoony | — |
-| **Darkness** · Myrkono | Araphel | Fetchling · Elf (Drow) | — |
+| **Darkness** · Myrkono | Araphel | Fetchling · Elf (Drow) | Centaur (Shadow Steppes) |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
-| **Water** · Floteyn | Shuun | Strix · Grippli | Leshy |
-| **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin | Leshy |
-| **Wind** · Vindul | Fisaya | Kashrishi · Tengu | Dragonkin (Air Temple order) |
+| **Water** · Floteyn | Shuun | Strix · Tripkee · Athamaru · Merfolk | Leshy |
+| **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
+| **Wind** · Vindul | Fisaya | Kashrishi · Tengu | Jotunborn (Baerfrost) · Dragonkin (Air Temple order) |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi | — |
 | **Law** · Zuzental | Forseti | Elf · Human | — |
-| **Hunt** · Ehizahar | Hinka | Orc · Gnoll · Lizardfolk | Goloma |
+| **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk · Centaur (Lands of Villtur) | Goloma |
 | **Commerce** · Lautara | Jianna | Halfling · Vishkanya | Kitsune (concentrated in Emarrea) |
 | **Knowledge** · Ezkudon | Enki | Shisk · Catfolk | — |
 | **Chaos** · Nashavel | Vesuna | Gnome · Vanara | Conrasu · Anadi |
 | **Freedom** · Askamira | Cronus | *All ancestries equally* | — |
 
-**Uncommon everywhere:** Rabbitfolk · Ratfolk.
+**Uncommon everywhere:** Rabbitfolk · Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
 
-**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Dragonkin (one order in Fisaya's Air Temple in Vindul) · Android · Azarketi.
+**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Dragonkin (one order in Fisaya's Air Temple in Vindul) · Android · Azarketi · Awakened Animal (no domain concentration).
+
+**Sortalde-native (Eastern continent — see `geography.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries — The Six Petals* below.
 
 ---
 
 ## Ancestries — Alphabetical
 
-> **Rework pending.** Like the versatile heritages, the **base ancestry list has shifted in the pf2e remaster** (renames, splits, merges, new options, retired options). The entries below are imported from the WorldAnvil export (pre-remaster) with light Tyrnarra reflavour. They are *correct on world placement* but the ancestry roster itself needs a remaster-era pass — adding new ancestries, retiring or renaming old ones, and re-checking the domain distribution table once the post-remaster roster is settled. Flag in this file when that pass happens.
+> **Post-remaster roster reconciled (2026-05-16) + Tian Xia placement pass complete (2026-05-17).** All 44 standard PF2e remaster ancestries placed. Gnoll → **Kholo** and Grippli → **Tripkee** renamed. Eight new ancestries added in the first pass (Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) now placed on **Sortalde** (see `geography.md`), each on its own petal of the seven-petal Concord archipelago. Hungerseed heritage resolved (Oni are bound spirits of Lingdao). Retained beyond the standard 44 as Tyrnarra-canon additions: Dragons, Dragonkin, Slimes, Rabbitfolk.
 
 ### Anadi
 Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hunt domain (Ehizahar); **rare** everywhere else. Talan's most famous Anadi is **Matron Charna**, proprietor of the Spider's Silk Inn at Crossroads (see `factions.md`).
@@ -46,8 +48,14 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 
 > The popular misconception that Androids were "built by the Storveldi Denbora" is a folk-myth artefact of the same conflation that makes mortals think the Storveldi Denbora were the Elden (see `world-notes.md`). Androids are Elden work, not Storveldi Denbora work.
 
+### Athamaru
+**Seal-folk of the Floating Isles and the Hafra coast.** Aquatic by anatomy and amphibious by habit; their pods range the spray-zone islets of **Floteyn (Water / Shuun)** and the saltwater shorelines of Hafra. Common in Floteyn; uncommon along Hafra coasts; rare in the freshwater interior. Cultural relationship with the Strix-and-Tripkee island life is generally cooperative — the three ancestries have lived in adjacent ecological niches long enough to have settled the boundaries.
+
 ### Automaton
 **Synthetic people created by the Golden Empire** in their attempt to recreate the Android ancestry of the Elden. They are capable — formidable, even — but they are not Androids. The differences are deep and the Empire's scholars could not close them. Now **uncommon** everywhere; concentration in Sumendar (Fire) where the New Age Dwarves and the Kobolds are slowly recovering enough of the technology to maintain them, though full replication remains out of reach.
+
+### Awakened Animal
+**Animals magically uplifted to sapience.** No native population, no cultural homeland — each Awakened Animal is its own story. **Rare everywhere.** Origins on Talan typically trace to one of three sources: (1) a druid or primal-school caster performing the awakening intentionally, most often in **Brauogi or Floteyn**; (2) ambient Komo-flame-touch in **Sumendar**, where ash-fall and ember-storm regions occasionally produce unintended awakenings in their fauna; (3) Feyworld leakage at the edges of **Nashavel** or in pockets of Vesuna's chaos-touched wilderness. The Adventurers' Guild treats Awakened Animals as full members of any party they join; mortal kingdoms vary widely in their legal recognition.
 
 ### Azarketi
 **Descendants of the Storveldi Denbora** — the mortal civilisation whose ascended ruling class killed Tani and kicked off the Week of Crimson Rain (see `world-notes.md` — *The Storveldi Denbora — The Real History*). Specifically, the Azarketi descend from the experimented-upon population of the Storveldi Denbora who survived the divine retaliation that obliterated their homeland.
@@ -61,13 +69,27 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 ### Catfolk
 Curious beings, **dominant in Ezkudon (Knowledge / Enki)** — Enki himself is depicted as a black-haired catfolk. They are over-represented in the scholar-caste, the archive-keeper professions, and Ezkudon's negotiated-access knowledge economy.
 
+### Centaur
+**Nomadic plainsfolk.** Two distinct cultural populations on Talan, in two domains that share the open-ground character:
+- **Dominant in the Lands of Villtur (Ehizahar / Hunt)** — the largest centaur population on Talan. Tribal, hunt-aligned, sharing the territory with Orcs, Kholo, and Lizardfolk; the four ancestries' tribal cultures intermix and feud along recognisable patterns.
+- **Uncommon on the Shadow Steppes (Myrkono / Darkness)** — smaller herds that live cautiously around the two Wardstone sites of the Steppes. The Shadow Steppes centaurs are notably more wary, more nocturnal, and more theologically inflected (Araphel-adjacent) than their Villtur cousins.
+
+Rare elsewhere. The two populations are aware of each other but do not intermarry routinely — the cultural drift between Villtur-tribal and Steppes-watchful is wider than appearance suggests.
+
 ### Conrasu
 Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding the Basogur Jungle interior; rare elsewhere.
 
+### Dragonet
+**Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from both the alien Dragons and from Dragonkin** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `world-notes.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
+
 ### Dragonkin
+**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — distinct from both Dragons and Dragonet).
+
 **Descendants of an unholy creation of one of the gods later expelled by the Gods' Law.** Which god is not on record — the surviving Dragonkin lineages have outlived the memory of their progenitor, and the bound thirteen do not discuss the gods who were banished. **Rare everywhere.** The most coherent surviving population is the **single order at Fisaya's Air Temple in Vindul**, who serve as wind-priests and storm-flyers. Note: despite the name, **Dragonkin are not related to Dragons** (the alien race) — the linguistic overlap is an unfortunate Common-tongue accident.
 
 ### Dragons
+**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — Tyrnarra's Dragons are a unique alien lineage, distinct from PF2e's *Dragonet* ancestry which represents native Zaharsuge-line wyrmkin).
+
 **An alien race. Their mothership crash-landed on Talan during the Gods' Era**, a few hundred years before the Week of Crimson Rain (see `timeline.md` — Gods' Era). The crash scattered dragon survivors across the continent; the gods of the era took an interest. What they did is now referred to in dragon culture as **"the corruption by the gods"** — a forced theological reshaping that the dragons have spent over two millennia trying to reverse.
 
 **Modern status:**
@@ -104,9 +126,6 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 ### Ghoran
 "Guardians of Time." **Dominant in Lioaru (Time / Tani)** — they are explicitly aligned with Tani's domain and many serve as wardens of temporally unstable sites along the Lioaru-Lost-Kingdom border. Their plant-rooted longevity gives them a perspective on the slow currents of time that suits their domain.
 
-### Gnoll
-**Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The Lands of Villtur hold the largest gnoll populations.
-
 ### Gnome
 **Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest. Mostly unchanged from PF2e canon.
 
@@ -115,9 +134,6 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 
 ### Goloma
 **Uncommon in the Jungle of Chaos and the Hunt domain**, rare everywhere else. Same pattern as Anadi.
-
-### Grippli
-**Commonly found on the Floating Isles of Shuun** — the islet-archipelago sub-region of Floteyn (Water). Their amphibious physiology suits the spray-zone island life better than most.
 
 ### Halfling
 **Dominant in Lautara (Commerce / Jianna)**. Wanderlust-driven, which is why so many of them become merchants — the call of *the next market* is doctrinally central to halfling culture, and Jianna's commerce-blessed roads carry more halflings than any other population.
@@ -128,8 +144,16 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 ### Human
 **Dominant in Zuzental (Law / Forseti)** alongside elves. **Politically motivated and short-planning** — the human side of the Thousand Kingdom moves fast, takes risks, and burns through political cycles in single human lifetimes. One of the two ruling bloodlines of the Thousand Kingdom. The interplay between elven long-planning and human short-planning is what gives the Thousand Kingdom its characteristic political volatility — and its longevity.
 
+### Jotunborn
+**Giant-blooded.** **Dominant in Baerfrost**, the arctic northern sub-region of **Vindul (Wind / Fisaya)**. The Baerfrost Jotunborn are the largest stable population on Talan — frost-adapted, cold-hardy, often nomadic across the high tundra. Rare elsewhere; small lineages live in the high mountain monasteries shared with Tengu, and a thin scatter of Jotunborn appear in the upper Darklands where their giant ancestors are thought to have wandered deep ages ago. Cultural disposition: stoic, slow to anger, deeply respectful of Fisaya's wind-and-storm aspect; many serve as weather-readers and ice-route guides for cloudship crews crossing the northern arc.
+
 ### Kashrishi
 **Common in Vindul (Wind / Fisaya).** Secular by inclination — the Kashrishi tradition keeps its theology private and its civic life public, the inverse of the more zealous Nagaji of Egulon.
+
+### Kholo
+*(Renamed from Gnoll in the PF2e remaster — Tyrnarra adopts the new name.)*
+
+**Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations — sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
 **Known as the Divine Envoys.** Rare across Talan generally — but **concentrated in Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
@@ -143,19 +167,25 @@ Fisaya herself is depicted as a female kitsune with multicolour fur (see `world-
 Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn). Can be **created through ritual** or naturally reproduce. The two-domain spread reflects the fact that Leshy are mediators between the soil and the water — they are creatures of both.
 
 ### Lizardfolk
-**Common in Ehizahar (Hunt / Hinka)**, alongside Orcs and Gnolls. The third of Hinka's three dominant ancestries; tribal cultures parallel to (but distinct from) the orc and gnoll traditions.
+**Common in Ehizahar (Hunt / Hinka)**, alongside Orcs, Kholo, and Centaur. One of the four dominant ancestries of the Hunt domain; tribal cultures parallel to (but distinct from) the orc and kholo traditions. Lizardfolk packs tend to be the most strategic of the four — slower to start a hunt, more patient in pursuit, more deliberate at the kill.
+
+### Merfolk
+**Aquatic.** Common in **Floteyn (Water / Shuun)** waters and **Hafra** coastal regions; a small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty). Rare in any landlocked region. Merfolk-Athamaru relations are generally cordial in shared waters, though merfolk treat their saltwater claim as senior.
+
+### Minotaur
+**Dominant in Brauogi (Earth / Sarrum)** alongside Goblins and Hobgoblins — sharing the domain as Sarrum's third major ancestry. **Sarrum himself is depicted as a Minotaur** (see `world-notes.md` — per-god sheet); Talan's Minotaurs are his cultural cousins. Disposition: immovable, patient, slow to act and slower to forgive. Excellent stonecutters, farmers, and contract negotiators (their patience is professional, not personal). Most kingdoms across Talan host small Minotaur trade-houses; Brauogi is simply where they are at home. The Minotaur-Goblin-Hobgoblin three-way of Brauogi politics is more cooperative than the Hunt domain's four-way Villtur dynamics — the Earth ancestries trade rather than feud.
 
 ### Nagaji
 **Dominant in Egulon (Light / Iro)**. **Strong belief in the gods. Almost zealous.** The Nagaji are Iro's most fervent worshippers — to the point that other domains sometimes find them off-putting in their certainty. Most of the public-facing clergy of Iro's church are Nagaji; their conviction is part of what powers the church's outward energy.
 
 ### Orc
-**Dominant in Ehizahar (Hunt / Hinka)** alongside Gnolls and Lizardfolk. Tribal, strong. Hinka is depicted as a red-headed orc; the cultural affinity runs deep.
+**Dominant in Ehizahar (Hunt / Hinka)** alongside Kholo, Lizardfolk, and Centaur. Tribal, strong. Hinka is depicted as a red-headed orc; the cultural affinity runs deep. Within the four-way tribal mix of the Lands of Villtur, Orcs are usually the loudest, the first to charge, and the most consistently in feud with their three counterparts.
 
 ### Poppet
 Small constructed beings. Rare everywhere; no domain-specific concentration. Mostly unchanged from PF2e canon as of this writing.
 
 ### Rabbitfolk
-Uncommon everywhere. No particular domain concentration.
+**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster). Uncommon everywhere. No particular domain concentration; populations are widely scattered, frequently nomadic, and culturally heterogeneous. They keep no continental-scale institutions of their own.
 
 ### Ratfolk
 **Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities — they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground.
@@ -170,22 +200,77 @@ Uncommon everywhere. No particular domain concentration.
 **Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `world-notes.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
 
 ### Slimes
-**Uncommon in the Darklands** — the Darklands' ambient corruption pressure suits slime adaptability. **Rare everywhere else.** The pf2e slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
+**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster). **Uncommon in the Darklands** — the Darklands' ambient corruption pressure suits slime adaptability. **Rare everywhere else.** The pf2e slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
 
 ### Sprite
 **Native to the Feyworld** (the Chaos plane of the Life Layer). Common there; some cross to the Material Plane and live among mortals, where they are rare. No domain-specific concentration on Talan — sprites go where they go.
 
 ### Strix
-**Commonly found on the Floating Isles of Shuun** alongside Grippli. Their natural flight makes the islet-archipelago life of Floteyn one of the few comfortable habitats for them; elsewhere on Talan they are rare and often suspected by mortals who do not know them.
+**Commonly found on the Floating Isles of Shuun** alongside Tripkee, Athamaru, and Merfolk. Their natural flight makes the islet-archipelago life of Floteyn one of the few comfortable habitats for them; elsewhere on Talan they are rare and often suspected by mortals who do not know them.
+
+### Surki
+**Insectoid sapients of the deep places.** **Uncommon in the upper Darklands** — they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals — see `world-notes.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
 
 ### Tengu
 **Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks — the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul.
+
+### Tripkee
+*(Renamed from Grippli in the PF2e remaster — Tyrnarra adopts the new name.)*
+
+**Commonly found on the Floating Isles of Shuun** — the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Strix, Athamaru, and Merfolk; Tripkee are the most settled of the four (Strix fly through, Athamaru swim past, Merfolk pass underneath — Tripkee build).
 
 ### Vanara
 **Common in the Jungle of Chaos** — the Basogur Jungle that straddles Nashavel and Ehizahar. The Vanara culture is one of the few that straddles two domains comfortably; the Jungle is their home and the politics of the two domains around it are something they navigate rather than belong to.
 
 ### Vishkanya
 **Most common in Lautara (Commerce / Jianna).** **Keeping community** is a core Vishkanya value, and **following creative pursuit** is the second. They are over-represented in artisan-merchant guilds and in the more refined corners of Lautara's market culture. Jianna herself is depicted as a vishkanya (see `world-notes.md`).
+
+---
+
+## Sortalde Ancestries — The Six Petals
+
+The six Tian Xia ancestries — **Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai** — are native to **Sortalde** (*Tao Hua Yuan* internally), the petal-archipelago continent east of Talan across Hafra. Each has one ancestral homeland petal; the seventh petal (**Heting**, "Concord-Court") is the central seat where all six meet through their ambassadors. Full continent geography in `geography.md` — *Other Continents → Sortalde*.
+
+**On Talan, all six are rare.** The crossing is hard — stormy outer ring, surviving merchants only — so individuals from Sortalde reach Talan in single-digit numbers per generation, and almost always through the standing Sortalde embassies in Lautara (typically at Crossroads or Merkavar). A Sortalde-ancestry character on Talan is a *story*, not a demographic.
+
+| Ancestry | Sortalde homeland | Talan presence |
+|---|---|---|
+| **Yaoguai** | Wandao (Myriad Island) — outer petal | Rare; most common Sortalde ancestry seen in Talan because Wandao is closest. |
+| **Tanuki** | Xidao (Theatre Island) — outer petal | Rare; itinerant performer-merchants occasionally cross. |
+| **Sarangay** | Niudao (Ox Island) — outer petal | Rare; usually attached to embassy security details. |
+| **Wayang** | Yingdao (Shadow Island) — inner petal | Vanishingly rare; the inner-petal Wayang rarely cross at all. Those who do are typically on intelligence assignments. |
+| **Yaksha** | Lingdao (Spirit Island) — inner petal | Functionally never seen on Talan; Yaksha are *bound* to specific places by their nature and cannot leave them comfortably. The very rare Talan-side Yaksha is doctrinally an exile. |
+| **Samsaran** | Lundao (Wheel Island) — inner petal | Vanishingly rare; Samsaran chancellors are the continuity of the Concord and are not usually permitted to risk the crossing. A Talan-side Samsaran is almost always a retired chancellor or a heretic. |
+
+### Samsaran
+**Long-lived contemplatives with multi-life memory.** Native to **Lundao** (Wheel Island), the inner contemplative-bureaucratic petal of Sortalde. Samsaran serve as the **chancellors of the Concord of Courts** — multi-life civil servants whose continuity bridges human lifespans and gives Sortalde its institutional memory. A typical Samsaran chancellor has held office across two or three reincarnations and remembers the relevant policy history personally. Politically, this makes the Concord very hard to deceive on long-running questions, and very capable of patient strategy.
+
+**On Talan:** functionally never. The very rare Talan-side Samsaran is a retired chancellor pursuing a private project, or a heretic whose multi-life dissent made them inconvenient to keep at home. Either way, they are *interesting* — Samsaran are reliable witnesses to events much older than any other living source on Talan can recall.
+
+### Sarangay
+**Bull-folk warrior caste, strong oath-keepers.** Native to **Niudao** (Ox Island), an outer petal. Sarangay houses serve as the standing martial nobility of the Concord — they hold no single petal's court but instead provide warriors to all of them under inter-petal contract. Their oaths are notoriously durable: a Sarangay oath survives reincarnation cycles (theirs and others'), feuds, and continent-scale political upheaval.
+
+**On Talan:** uncommon among the rare set — Sarangay are usually attached to Sortalde embassy security details in Lautara. A Sarangay character on Talan unattached to an embassy is typically discharged-and-stranded or oath-pursuing an outcome that can only be resolved off-petal.
+
+### Tanuki
+**Shapeshifters, raccoon-dog-coded, mischievous and convivial.** Native to **Xidao** (Theatre Island), an outer petal. Tanuki are the performer-merchant class of Sortalde — their troupes circulate the inner seas, run inter-petal trade, and serve as informal cultural ambassadors. Their shapeshifting is theatrical as much as practical (most Tanuki perform openly; their deceptions are advertised in advance and admired for craft).
+
+**On Talan:** the most-likely-to-be-seen Sortalde ancestry alongside Yaoguai. Tanuki troupes occasionally survive the crossing for trade or performance contracts; a few have settled long-term in Lautara (Crossroads especially), where their performance culture meshes with the city's tri-domain commerce-and-rumour atmosphere.
+
+### Wayang
+**Shadow-folk, shadow-courtiers, shadow-puppet archivists.** Native to **Yingdao** (Shadow Island), an inner petal. Wayang serve as the spies, diplomats, and secret-keepers of the Concord — most of Sortalde's institutional secrets have passed through Yingdao at some point and are stored in the shadow-puppet archives there (an unusual archival medium: each significant secret is encoded as a shadow-play that must be performed to be read).
+
+**On Talan:** vanishingly rare. Wayang who cross to Talan are typically on intelligence assignments — embedded in the Sortalde embassies in Lautara, or working as freelance information brokers in Crossroads. Almost never seen as general adventurers; if you meet one outside the embassy circuit, they are working.
+
+### Yaksha
+**Nature-spirit-descended; bound to specific places, hereditary nobility.** Native to **Lingdao** (Spirit Island), an inner petal. Yaksha are the **dynastic place-spirits** of Sortalde — each noble lineage is tied to a specific land (a mountain, a river-bend, a forest grove), and the bond is genuine: a Yaksha cannot comfortably leave their bound land for long. This anchors Sortalde's politics to specific geography in a way Talanese politics is not (you cannot move a Yaksha; you negotiate with the place).
+
+**On Talan:** functionally never. A Yaksha away from their bound land suffers — physically, emotionally, theologically. The very rare Talan-side Yaksha is doctrinally an *exile* whose bond was broken by some catastrophe (a kingdom razed, a river dammed, a forest burned). Such characters are tragic figures by definition; the bond cannot be reformed across Hafra.
+
+### Yaoguai
+**Beast-spirit-shaped; a vast taxonomic spectrum.** Native to **Wandao** (Myriad Island), the most populous outer petal. Yaoguai is less a single people than a *category* — beast-shaped sapients of countless forms (fox-spirits, deer-spirits, crane-spirits, monkey-spirits, every animal you can name has a Yaoguai variation somewhere on Wandao). They are the common folk of Sortalde; the Concord's most numerous citizens; the petal that Talanese merchants most often actually reach.
+
+**On Talan:** the most likely Sortalde ancestry seen in Lautara. Yaoguai merchants travel the Talan-Sortalde route in small numbers and often settle in Lautara if they survive long enough to build a trade route both ways. A Yaoguai on Talan is unusual but no longer shocking in the Commerce domain; outside Lautara, still very rare.
 
 ---
 
@@ -256,7 +341,7 @@ These are genetic, not metaphysical — no divine, planar, or otherworldly linea
 |---|---|---|
 | **Dhampir** | Half-Vampire | Vampire heritage — undead-touched, not god-touched. Vampires are an independent lineage on Talan (not a bound-god creation), and Dhampir descend from them directly. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The acceptance is cultural, not doctrinal — Dhampir are not Araphel's by blood. |
 | **Dragonblood** | Alien Dragons | Descendants of the alien Dragons whose mothership crash-landed during the Gods' Era (see *Dragons* in the ancestry list). Concentrates around Dragon's Reach in Sumendar. Carries some of the dragon-doctrinal hunger for *purity / their roots* — Dragonblood adventurers are often seekers. |
-| **Hungerseed** | Half-Oni | **TBD.** Oni in PF2e are hungry yokai-spirits; Tyrnarra does not yet have a defined Oni population. Hungerseed canon is acknowledged but the source-lineage placement awaits the planned **Tian Xia ancestries pass**, which will handle Oni and the other Eastern-stratum beings as a batch. |
+| **Hungerseed** | Half-Oni | **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha — Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra — a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. The Adventurers' Guild's stance is the same as for any unusual heritage: assess the individual, not the lineage. |
 | **Reflection** | Magical accident / Wellspring blip | A creation of ritual mishap, cosmic blip, or magical duplication. No parent lineage — Reflections are *made*, sometimes intentionally, often not. Theologically interesting: Reflections are arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. |
 
 ### Bound gods without heritages
@@ -335,7 +420,8 @@ The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unli
 - **Lost Kingdom (Blackened Lands geography)** — `geography.md` → Lioaru
 - **Dragon's Reach (dragon capital)** — `geography.md` → Sumendar
 - **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)** — `world-notes.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
-- **Kitsune culture, Heartcourt, Catjomin Sake** — `cultures.md`
+- **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)** — `geography.md` → Other Continents → Sortalde; `glossary.md` for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
+- **Kitsune culture, Heartcourt, Catjomin Sake** — `cultures.md` (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
 - **Fenurran ancestries detail** — `cultures.md` (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
 - **House Eisenhart (dwarven), the Menagerie (Red Empire fleshwarp origin)** — `factions.md`
 - **Spider's Silk Inn (Matron Charna, Anadi)** — `factions.md`
