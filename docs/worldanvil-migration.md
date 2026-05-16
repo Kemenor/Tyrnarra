@@ -23,22 +23,26 @@
 >
 > ### Open work — pick up here
 >
+> **Migration-review pass completed 2026-05-16.** Full audit ran against all 233 WA source files; 10 discrepancies surfaced and all resolved in the same session. Results in `docs/migration-review.md` (see *Resolution log* at bottom). Side-effects: four new named non-bound gods entered canon (Bikiargi, Zaharsuge, Epairima, Betibizi) and the 14 PF2e "no extra gods" domains were mapped to specific Tyrnarran granters.
+>
 > **Bestiary follow-ups** (PF2e remaster reconciliation):
 > - **Base ancestry roster rework** — the bestiary's 41 entries are pre-remaster WA imports. Needs a post-remaster pass: new ancestries to add, retired/renamed ones to remove, the domain-distribution table to re-check.
 > - **Tian Xia ancestries pass** — entire Eastern-stratum batch (Oni and others). **Hungerseed** currently sits in `bestiary.md` as a TBD placeholder pending this.
 > - **Individual virtue-demon names** beyond Muiral the Misshapen.
-> - **Sin-devil names, planar seats, politics** — currently placeholder.
+> - **Sin-devil names, planar seats, politics** — Indulgence/Tyranny/Destruction now bound to Gluttony/Pride/Wrath devils respectively in `bestiary.md`'s table, but the devils themselves are still unnamed; Greed/Lust/Envy/Sloth devils' grantable domains are also TBD.
 >
 > **Worldbuilding hooks raised this session, not yet resolved:**
-> - **Vampire origin on Talan.** Dhampir got reframed as undead-touched (not god-touched), which made vampires-as-an-independent-lineage canon. Their origin is undefined. Candidate hooks: failed Storveldi Denbora integrations, Blackened Lands émigrés, banned-god creations, Feyworld émigrés.
+> - **Vampire origin on Talan.** Dhampir got reframed as undead-touched (not god-touched), which made vampires-as-an-independent-lineage canon. Their origin is undefined. Candidate hooks: failed Storveldi Denbora integrations, Blackened Lands émigrés, banned-god creations, Feyworld émigrés. (Note: with Betibizi now canon as the Undeath god, "failed Betibizi-integration attempts" is a stronger candidate hook than the others.)
 > - **Eight remaining Nine Generals dungeons** still need geographic placement (only the Vermin Queen's Hollow is placed).
-> - **Divine Faith** — god identity, demigod ruler, theocratic prince identity all TBD.
+> - **Divine Faith** — god identity TBD (resides Layer 3 / Postlife — confirmed); demigod ruler, theocratic prince identity all TBD.
 > - **Red Empire home continent** — name, internal map, non-Imperial neighbours, crossing distance all TBD.
-> - **The Storveldi Denbora integration procedure** — who holds it now, how complete the surviving record is, whether the bound thirteen know. The single largest open hook in the setting.
+> - ~~**The Storveldi Denbora integration procedure**~~ — RESOLVED 2026-05-16. The procedure is held by **Betibizi** (Storveldi Denbora ruling-class survivor, ascended to Minor God of Undeath, now in Abyss); fragments persist on Talan with his cult and the descended lineages. See `world-notes.md` — *The Mortal Ascent Ladder* and *Named Non-Bound Gods*.
+> - **The Sun god** — new open thread. Mortals pray to Solyra; symmetry with Bikiargi suggests a sun-deity should exist. Name, nature, and whether they're absorbed into Iro's Light or stand apart all TBD.
+> - **Domara/Epairima placement** is locked, but Dauria itself has more potential to develop (other named functionaries in the City of the Dead, Epairima's cult on Talan, what rare "second-pass" verdict actually entails for a soul). Optional thread.
 >
 > **HTML publishing — not started yet:** full per-phase tracker in *HTML Publishing — Status Tracker* below. The user holds the publish signal; nothing should be pushed to HTML without an explicit go-ahead.
 >
-> **Memory:** A `feedback` memory exists noting that the user wants check-ins between phases of this migration. Future sessions should respect that.
+> **Memory:** The user wants check-ins between phases of this migration. Future sessions should respect that.
 
 ---
 

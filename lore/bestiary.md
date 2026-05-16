@@ -167,7 +167,7 @@ Uncommon everywhere. No particular domain concentration.
 **All dog-coded ancestries fall under the Shoony label on Talan.** Found most commonly in **Egulon (Light / Iro)** — loyal, devoted, and culturally aligned with the Nagaji-led religious life of the domain. The second dominant ancestry of Egulon.
 
 ### Skeleton
-**Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not.
+**Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `world-notes.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
 
 ### Slimes
 **Uncommon in the Darklands** — the Darklands' ambient corruption pressure suits slime adaptability. **Rare everywhere else.** The pf2e slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
@@ -294,7 +294,7 @@ This is why the demons are not random or symmetric: they are exactly as numerous
 | **Wittiness** | Buffoonery | Boorishness |
 
 **Named demons so far:**
-- **Muiral the Misshapen** — Modesty-line demon (Shamelessness / Shyness pair). The only individually named virtue demon in canon as of this writing; the rest are described by their virtue line. Muiral's name appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports.
+- **Muiral the Misshapen** — Modesty-line demon (Shamelessness / Shyness pair). The only individually named virtue demon in canon as of this writing; the rest are described by their virtue line. Muiral's name appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. **Grants the Abomination domain** — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the *misshapen*. See `world-notes.md` — *Domains Outside the Thirteen — Source Mapping*.
 
 **Implications:**
 - Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones. The Cowardice-demon and the Rashness-demon both pervert Courage — and both have reasons to hate each other.
@@ -308,15 +308,15 @@ This is why the demons are not random or symmetric: they are exactly as numerous
 
 The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unlike the virtue demons (which embody a *corruption* of something good), sin devils embody the sins themselves directly. There is one canonical devil-lord per sin.
 
-| Sin | Devil-Lord |
-|---|---|
-| **Envy** | *(unnamed)* |
-| **Gluttony** | *(unnamed)* |
-| **Greed** | *(unnamed)* |
-| **Lust** | *(unnamed)* |
-| **Pride** | *(unnamed)* |
-| **Sloth** | *(unnamed)* |
-| **Wrath** | *(unnamed)* |
+| Sin | Devil-Lord | Grantable domain (Tyrnarra canon) |
+|---|---|---|
+| **Envy** | *(unnamed)* | TBD |
+| **Gluttony** | *(unnamed)* | **Indulgence** |
+| **Greed** | *(unnamed)* | TBD |
+| **Lust** | *(unnamed)* | TBD |
+| **Pride** | *(unnamed)* | **Tyranny** |
+| **Sloth** | *(unnamed)* | TBD |
+| **Wrath** | *(unnamed)* | **Destruction** |
 
 **Status:** Placeholder. The WA export had only the seven category names with no entries; the devil-lord names, their politics, their planar seats, and their relationships to mortals are all open. The structural pattern is locked in: seven sins, seven lords, no more, no less.
 
@@ -330,9 +330,11 @@ The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unli
 
 ## Cross-References
 
-- **Storveldi Denbora, Blackened Lands, integration procedure** — `world-notes.md`
+- **Storveldi Denbora, Blackened Lands, integration procedure, Betibizi (Undeath god + integration-procedure holder)** — `world-notes.md`
+- **Named Non-Bound Gods** (Bikiargi, Zaharsuge, Epairima, Betibizi) and **Domains Outside the Thirteen — Source Mapping** (14-domain table assigning Abomination/Plague/Undeath/etc. to their granters) — `world-notes.md`
 - **Lost Kingdom (Blackened Lands geography)** — `geography.md` → Lioaru
 - **Dragon's Reach (dragon capital)** — `geography.md` → Sumendar
+- **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)** — `world-notes.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
 - **Kitsune culture, Heartcourt, Catjomin Sake** — `cultures.md`
 - **Fenurran ancestries detail** — `cultures.md` (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
 - **House Eisenhart (dwarven), the Menagerie (Red Empire fleshwarp origin)** — `factions.md`

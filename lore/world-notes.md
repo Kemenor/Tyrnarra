@@ -96,7 +96,11 @@ Shards exist wherever divine power has been concentrated or shed. Known sources:
 
 Finding a shard is hard. **Using one correctly is harder.** A shard is not consumed by being held — a mortal who simply possesses or wears one accrues nothing but danger. To convert a shard into actual ascension requires **integration**: a specific (and brutal) procedure that imbues the shard into the mortal's own divine essence. Integration done wrong destroys the mortal. Integration done correctly elevates them.
 
-**Integration knowledge is the truly rare commodity.** Not shards — shards exist in many places, individually well-guarded but plural. The integration procedure itself is what almost no one possesses. The **Storveldi Denbora** had it, ran it at industrial scale, and elevated most of their ruling class with it. Their methodology is **not public knowledge, but it is not lost** — it persists somewhere on Talan or its veils. Recovering it is the single largest unsolved problem for anyone seriously trying to climb the ladder. The individual shard caches the Storveldi Denbora drew from are mostly known to be heavily guarded; the procedure that lets you use one is what no one else has.
+**Integration knowledge is the truly rare commodity.** Not shards — shards exist in many places, individually well-guarded but plural. The integration procedure itself is what almost no one possesses. The **Storveldi Denbora** had it, ran it at industrial scale, and elevated most of their ruling class with it.
+
+**Where the procedure is now.** One member of the Storveldi Denbora ruling class survived the Week of Crimson Rain's annihilation and used the procedure on himself in the aftermath, ascending to Minor God status. He took the name **Betibizi** ("eternal life"), now god of Undeath, and fled to Abyss (Layer 3). **He is the original holder of the procedure** and the reason it persists at all. See *Named Non-Bound Gods* below.
+
+**Fragments persist on Talan.** Betibizi's cult, the necromantic underground, and the Storveldi-Denbora-descended lineages (most of whom inherited the false Elden-blood claim and don't know whose godhood they're invoking) hold partial copies of the procedure — incomplete, error-prone, often deadly to attempt. Reconstructing the complete procedure from these fragments is a real possibility but a slow, dangerous, and well-watched undertaking. The bound thirteen suppress the work where they find it. The individual shard caches the Storveldi Denbora originally drew from are mostly known and heavily guarded; the procedure that lets you use one is what almost no one has in its complete form.
 
 #### Implications
 
@@ -267,6 +271,7 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 ## Other Pantheons
 
 - Many gods beyond the 13 exist in Prelife (Layer 1) and Postlife (Layer 3).
+- The named Postlife residents whose portfolios appear in clerical practice on Talan are covered below in *Named Non-Bound Gods* (Bikiargi, Zaharsuge, Epairima, Betibizi). The non-bound god of the **Divine Faith / Legea Empire** is also Layer-3-resident; identity TBD (see `factions.md`).
 - Elven ancestral pantheons, deep god cults, demon lord worship, and others have real divine power and active churches on Talan.
 - The 13 are distinctive because they are *present on the Material Plane* and *bound by the Gods' Law* — not because they are the only gods.
 - The Talan primer (Magic & Faith tab) already references this.
@@ -308,8 +313,8 @@ The destination of souls after death, where judgment and final dwelling are deci
 
 - **Transitional veil:** **The Duskmire** (*Shroud of Return*) — a twilight sea where the stars above are the lights of distant souls; souls destined to return to the Wellspring shed their memories here.
 - **Elysium** — the plane of **Good**: radiant realms ruled by benevolent gods, each in their own kingdom.
-- **Diyu** — the plane of **Balance and Judgment**: home to neutral gods and to **Dauria**, the City of the Dead, where souls wait if no god claims them, until the Wellspring calls them back.
-- **Abyss** — the plane of **Evil**: a vast nightmarish domain where gods of malice, devils, and demons rule.
+- **Diyu** — the plane of **Balance and Judgment**: home to neutral gods (including **Bikiargi** the Twins of the Moon, **Zaharsuge** the Eldest of Wyrmkin, and **Epairima** the Judge of Souls — see *Named Non-Bound Gods* below) and to **Dauria**, the City of the Dead, where unclaimed souls are weighed at Epairima's court and routed onward — to their god, to the Wellspring, or rarely back to the layer above.
+- **Abyss** — the plane of **Evil**: a vast nightmarish domain where gods of malice, devils, and demons rule. Named residents in canon include **Betibizi** the Self-Ascended (Undeath; see *Named Non-Bound Gods* below).
 
 ### The Nature of the Soul
 
@@ -378,14 +383,14 @@ A mortal civilization of the **Gods' Era** (2944 GR – 1 GR) — not the Elden,
 
 **The God Killing Incident.** The two Minor Gods of the Storveldi Denbora, supported by the Demi-God ruling class beneath them, attacked **Tani in her own domain** and killed her. Her death triggered the **Week of Crimson Rain.**
 
-**The fall.** Tani's slaying brought the Grand Gods' war crashing down on Talan — and the Storveldi Denbora homeland was the centre of it. The capital was annihilated. The land around it was so deeply wounded by concentrated divine retaliation that it has never healed. That land is now the **Blackened Lands** (below) — the **Lost Kingdom** sub-region of Lioaru on the modern map. Their cities are ruined. Their ruling class is dead. The Storveldi Denbora as a polity ended in the Week of Crimson Rain.
+**The fall.** Tani's slaying brought the Grand Gods' war crashing down on Talan — and the Storveldi Denbora homeland was the centre of it. The capital was annihilated. The land around it was so deeply wounded by concentrated divine retaliation that it has never healed. That land is now the **Blackened Lands** (below) — the **Lost Kingdom** sub-region of Lioaru on the modern map. Their cities are ruined. Their ruling class is *almost* entirely dead — **one member of the ruling class survived** and used the integration procedure on himself in the aftermath, ascending to Minor God status and taking the name **Betibizi** ("eternal life," self-named). He fled Talan for Abyss and has not returned. He is the origin of the Undeath domain on Talan and the original holder of the integration procedure as it persists today (see *Named Non-Bound Gods* below).
 
 **The remnants.** Not every Storveldi Denbora citizen was at the capital when the gods came. A scattered population of survivors persists today — descendants of those who had been experimented on (or who carried the inherited results of generations of self-experiment), but who were never themselves elevated. **They are the Azarketi.** Folk-memory and Azarketi cultural tradition often still claim **Elden blood** — those claims are the Storveldi Denbora's original lie, transmitted forward across millennia. The Azarketi descend from the people who **imitated** the Elden, not from the Elden themselves. Many modern Azarketi do not know this.
 
 **Why this matters cosmologically.**
 - They are the only mortals known to have killed a Grand God.
 - They are the only mortals known to have reached Minor God status, twice over, by integration of recovered shards rather than the rare lucky individual case.
-- They are the only mortal civilisation known to have **developed and held the integration procedure** — the choke-point knowledge for converting any shard into actual ascension. That knowledge persists somewhere; whoever recovers it inherits the largest unsolved capability gap on Talan.
+- They are the only mortal civilisation known to have **developed and held the integration procedure** — the choke-point knowledge for converting any shard into actual ascension. The procedure persists with **Betibizi** in Abyss and in fragmentary form among his cult and the descended lineages on Talan; reconstructing the complete procedure from those fragments is the largest unsolved capability gap on Talan.
 - Their fall was followed by the divine retaliation of the Week of Crimson Rain, which obliterated their homeland and dispersed their survivors as the Azarketi.
 
 ---
@@ -430,7 +435,7 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 
 ### Vesuna — Goddess of Chaos (Female)
 - **Aspects:** change, creativity, destruction, madness.
-- **Cleric domains:** Passion, Luck, Trickery.
+- **Cleric domains:** Passion, Luck, Trickery, Free Will.
 - **Depiction:** no fixed form — no ancestry, no gender, no consistent body. Only symbols: a coin, a die, an open hand with something unseen in it.
 - **Favoured weapon:** *Meteor Hammer* — its wild arcs and unpredictable strikes embody her chaotic nature.
 - **Mortals see her as:** the spark of innovation and the collapse of order; the gamble that reshapes fate.
@@ -473,7 +478,7 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 
 ### Hinka — Goddess of the Hunt (Female)
 - **Aspects:** predation, survival, patience, cruelty.
-- **Cleric domains:** Might, Nature, Zeal.
+- **Cleric domains:** Might, Nature, Zeal, Violent Death.
 - **Depiction:** a red-headed **Orc** cloaked in fur, drawing a bow of horn — mid-draw, decisive.
 - **Favoured weapon:** *Karambit* — a curved claw-knife, quick and intimate as a predator's strike.
 - **Mortals see her as:** provider of sustenance — or stalker in the dark.
@@ -520,6 +525,79 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 - **Depiction:** a female **Kitsune** with multicolour fur — each colour an aspect of change — wearing flowing silks, hair trailing into clouds.
 - **Favoured weapon:** *Bladed Scarf* — silks edged with steel, graceful as a breeze, deadly as a storm.
 - **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
+
+---
+
+## Named Non-Bound Gods
+
+Beyond the Thirteen, the Postlife layer (Elysium / Diyu / Abyss) holds a number of Major and Minor gods who **do not maintain sancta on Talan** and are not subject to the Gods' Law in its bound form (they remain in Layer 3, where it only bleeds through weakly). Most are unnamed. The following are the named ones whose portfolios appear in clerical practice on Talan.
+
+All four below are **belief-shaped** — like the Ascendant Six, they take their shape from mortal worship and folk practice. None of the four are members of the Council of Thirteen.
+
+### Bikiargi — The Twins (Moon · Major God)
+- **Aspects:** moonlight, tides, lunar omens, the dream-currents, lovers' meetings, hunts in the dark.
+- **Two beings, one portfolio.** Always depicted as a paired figure — never one alone. The two share the lunar portfolio absolutely; mortals praying for moon-tied outcomes invoke "Bikiargi," not one twin or the other.
+  - **The Bright Twin** is benevolent — calm tides, safe roads under moonlight, true dreams, lovers reunited, the moonlit hunt that comes home well-fed.
+  - **The Dark Twin** is malevolent — ill omens, hunting weather for what shouldn't be hunted, false dreams, sleepwalkers led to cliffs, the moonlit hunt that becomes the hunted.
+- **Together they are neutral**, which is why they reside in **Diyu** (Layer 3, neutral plane). Mortals who try to invoke only one inevitably draw both — the Twins do not separate.
+- **Worshippers:** sailors, navigators, witches, lovers, the Iron Tide's astronomers, midwives (births tracked by moon-phase), nocturnal hunters. Iron Tide ships habitually keep separate shrines to each twin.
+- **Mortal origin of the Twins:** mortals have prayed to the two moons for as long as there have been mortals. The prayer made the gods — same mechanism as the Ascendant Six writ small.
+
+### Zaharsuge — The Eldest (Wyrmkin · Minor God)
+- **Aspects:** indigenous serpents, drakes, basilisks, primal wyrms; the deep-earth slither; the *pre-Dragon* lineage of Talan's scaled beasts.
+- **Predates the alien Dragons** by ages. His wyrm-line was the established serpentine intelligence of Talan when the Dragon mothership crashed during the Gods' Era. The alien Dragons' "we are the true wyrm-lords" claim is, on Talan, theologically wrong — Zaharsuge was here first.
+- **Residence:** **Diyu** (Layer 3, neutral). Sancta-less on Talan, but his shadow falls heaviest in the upper **Darklands** — the Sentinel Dwarves who patrol there may be unknowingly guarding his cultic sites.
+- **Worshippers:** lizardfolk, nagaji, naga ancestry, some kobolds (which produces a religious schism with Komo's kobold-incarnation lore — kobolds are split between the bound Komo and the indigenous Zaharsuge), small dragon-blood cults that reject Dragon's Reach's authority claim.
+- **Hook:** indigenous wyrm-cultists have a theological grievance against the Dragons of Dragon's Reach. Untested, simmering.
+
+### Epairima — The Judge of Souls (Minor God)
+- **Aspects:** verdict, weighing, sorting, second-chance allocation, soul-routing.
+- **Residence:** **Diyu** — specifically **Dauria, the City of the Dead.** Her court is the central feature of the city.
+- **Each soul that reaches Dauria unclaimed** (no god has called them onward) **is weighed at her court.** Her verdict routes the soul: onward to a claimant god, onward to the Wellspring, or — rarely — back to the layer above for a second pass at the life they failed.
+- **Not the only judge in existence**, but she is the *named* judge whose office is invoked in mortal funerary rites on Talan. Other judges presumably operate elsewhere.
+- **Worshippers:** the bereaved, the dying, executioners, jurists who want their work to outlast them, anyone whose loved one died unclaimed.
+
+### Betibizi — The Self-Ascended (Undeath · Minor God)
+- **Aspects:** undeath, refusal of death, the prolongation of the self past its natural span, necromantic continuity.
+- **Self-named** at his ascension — *Betibizi* is a declaration, not a gift. The name means "eternal life."
+- **Origin:** a member of the Storveldi Denbora ruling class who survived the Week of Crimson Rain's annihilation and ascended via the **integration procedure** in the aftermath. He is the *original* holder of that procedure — its survival across the post-Crimson-Rain ages is his work. (This resolves the open *who holds the integration procedure?* thread.)
+- **Residence:** **Abyss** (Layer 3, evil plane). He fled Talan after his ascension and has not returned.
+- **The Blackened Lands' natural-born Skeleton ancestry** and the region's ambient necromantic resonance **trace spiritually back to him.** The proximate cause is still the cursed ground (the divine retaliation that destroyed his civilisation), but he is the cursing's spiritual root. Necromancers on Talan who reach for *life-after-life* magic are reaching for his domain, whether they know his name or not.
+- **Worshippers:** necromantic underground, ascension-cultists, surviving Storveldi-Denbora-descended lineages (most of whom inherited the false Elden-blood claim and don't know whose godhood they're invoking), the desperate ill, those who refuse to grieve.
+- **In direct theological opposition to Epairima**: she sorts and releases the dead; he keeps them, recursively, against the natural flow. Their portfolios were not designed to be at odds — but they are.
+
+### Open thread — The Sun
+
+Mortals have prayed to **Solyra** for as long as there have been mortals. The same mechanism that birthed Bikiargi from prayers to the two moons should plausibly have birthed a sun-deity from prayers to the sun. Such a god is not yet named or detailed in canon — they may exist as a Major God of the Sun (paired-mate to the Twins by symmetry), may exist as a single deity with no twinship, or may have been absorbed by Iro's Light portfolio long enough ago that the distinct sun-god dissolved back into the Wellspring. TBD.
+
+---
+
+## Domains Outside the Thirteen — Source Mapping
+
+Pathfinder/PF2e includes a number of cleric domains that are **not granted by any of the Thirteen Bound Gods**. In Tyrnarra, these domains exist and can be channeled — they are simply sourced from elsewhere. The table below maps each to its in-world granter. Most trace upward to the Corrupted God, the virtue-demons, the sin-devils, or a named non-bound god above; a few have an intermediate granter (a General of Corruption, for instance, who in turn serves the Corrupted God).
+
+| Domain | Granted by | Lineage |
+|---|---|---|
+| **Abomination** | **Muiral the Misshapen** (Modesty-line virtue-demon) | Virtue-demon |
+| **Plague** | **The Corrupted God** | Corrupted God direct |
+| **Undeath** | **Betibizi** (see above) | Independent — Storveldi Denbora ascension |
+| **Decay** | **The Rot-Tyrant** (General of Corruption) | Serves the Corrupted God |
+| **Swarm** | **The Vermin Queen** (General of Corruption) | Serves the Corrupted God |
+| **Naga** | **The Maw Serpent** (General of Corruption) | Serves the Corrupted God |
+| **Nightmares** | **The Whisperer in Dreams** (General of Corruption) | Serves the Corrupted God |
+| **Tyranny** | **The Pride Sin-Devil** | Sin-devil |
+| **Destruction** | **The Wrath Sin-Devil** | Sin-devil |
+| **Indulgence** | **The Gluttony Sin-Devil** | Sin-devil |
+| **Pain** | virtue-demon (Patience-line excess) | Virtue-demon |
+| **Toil** | virtue-demon (Industriousness-line excess) | Virtue-demon |
+| **Sorrow** | virtue-demon (Magnanimity-line deficiency) | Virtue-demon |
+| **Delirium** | virtue-demon (Temperance-line deficiency) | Virtue-demon |
+
+**Reading the table:** "Lineage" tells you whose authority the clerical grant ultimately serves. A cleric of Decay channels through the Rot-Tyrant directly, but the Rot-Tyrant is the Corrupted God's vehicle — the cleric's power answers to both. A cleric of Indulgence channels through a sin-devil and answers to that devil alone. A cleric of Undeath answers to Betibizi alone (no Corrupted-God lineage).
+
+**Domains *not* in this list** (the Thirteen's domains) are covered in *The Thirteen — Per-God Sheet* above. **Domains in PF2e not listed here at all** — if a player or NPC presents a domain not covered by either table, treat it as an obscure or experimental claim that needs a GM ruling.
+
+**The four sin-devils that don't get a domain in this list** (Greed, Lust, Envy, Sloth) still exist as canonical devil-lords; their grantable domains in Tyrnarra are TBD. Same for unmapped virtue-demons.
 
 ---
 
