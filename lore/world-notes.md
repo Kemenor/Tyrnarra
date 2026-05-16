@@ -71,9 +71,38 @@ The twelve are split into two groups of six with a real cosmological distinction
 - If enough people believe in something — a bogeyman, a spirit, a legend — that thing begins to exist, built from accumulated belief energy. **Belief beings** are real beings, created entirely by collective faith.
 - Belief beings do not need a shard of divinity to exist — they are created around one implicitly. But they **cease to exist if forgotten** — unlike the original twelve, there is nothing underlying them once belief drains away.
 - This applies to mortals too: a king, a general, a famous hero accrues tiny amounts of power from everyone who believes in them. This is why great leaders sometimes seem more than mortal — because they literally are.
-- Enough collective belief can elevate a mortal to **Demi-God status.**
-- To rise further (above Demi-God), a mortal needs **a shard of divinity** — a fragment of power given by an existing god.
 - Gods themselves grow more powerful with more belief. Being feared and being loved are both valid sources.
+
+### The Mortal Ascent Ladder
+
+The path from mortality to godhood runs along the same four-tier hierarchy that governs all divine power (see *Divine Power Tiers* above). Each rung has its own gate:
+
+1. **Mortal → Demi-God.** Accomplished by **collecting enough power** — primarily belief, but also raw deeds, accumulated divine residue, and other Wellspring-touched sources. No god's consent required, no shard required. This rung is climbable under a mortal's own power. Lord Albrecht Lavisburg of the Adventurers' Guild (see `factions.md`) is a contemporary example. The Storveldi Denbora's entire ruling class reached this rung at the height of their civilisation.
+2. **Demi-God → Minor God.** Requires a **shard of divinity** — a fragment of power that already exists in the world. **A shard's use does not require the original god's consent** — the shard is sought-after, not granted. The scarcity is in the finding *and* in the knowing-what-to-do-with-it (see *integration* below).
+3. **Minor God → Major God.** Requires further shards — more, larger, or rarer. Same mechanism, just at a level where the shards needed are far harder to come by. Major Gods are fully bound on the Material Plane by the Gods' Law if they choose to reside there.
+4. **Major God → Grand God.** **Impossible by any normal mechanism.** The thirteen Grand Gods are the original twelve plus Cronus; the twelve created existence itself, and Cronus's ascent was a one-time event driven by the unique mechanism of the Gods' Law (every god giving him a shard as the Law's anchor — see *Cronus — The Secret*). There is no replicable path for any other being to reach Grand God.
+
+#### Where shards come from
+
+Shards exist wherever divine power has been concentrated or shed. Known sources:
+
+- **Ruins of fallen civilisations** that handled divine artefacts — Elden sites, Storveldi Denbora ruins, ruined sancta of gods banished or killed during the Week of Crimson Rain.
+- **Godblood battlefields** — places where a god bled or died on the Material Plane. The Week of Crimson Rain was the largest such event in history; many of its sites are still productive, though all have been picked over multiple times. Smaller skirmish sites from the Gods' Era persist as well.
+- **Killing another god** — slaying a Minor or Major God yields a shard from the kill. This is a **near-impossible feat** under normal circumstances; gods at that tier are not easy targets, and the act draws immediate attention from the rest of the divine hierarchy. But it is the cleanest source of a "fresh" shard.
+- **The Aurora Veil and the Duskmire veil** — the transitional veils flanking the Life Layer. Both bear residue of every god who has passed through. Shards can be recovered from either, though crossing into the veils is itself a feat reserved for the powerful.
+- **Other planes where gods have died** — the deeper planes (Elysium, Diyu, Abyss, the Energy and Elemental planes) all hold shards from divine deaths recorded over the ages. Most are sealed inside the dwellings of the gods still resident there.
+
+#### Integration — the genuinely rare knowledge
+
+Finding a shard is hard. **Using one correctly is harder.** A shard is not consumed by being held — a mortal who simply possesses or wears one accrues nothing but danger. To convert a shard into actual ascension requires **integration**: a specific (and brutal) procedure that imbues the shard into the mortal's own divine essence. Integration done wrong destroys the mortal. Integration done correctly elevates them.
+
+**Integration knowledge is the truly rare commodity.** Not shards — shards exist in many places, individually well-guarded but plural. The integration procedure itself is what almost no one possesses. The **Storveldi Denbora** had it, ran it at industrial scale, and elevated most of their ruling class with it. Their methodology is **not public knowledge, but it is not lost** — it persists somewhere on Talan or its veils. Recovering it is the single largest unsolved problem for anyone seriously trying to climb the ladder. The individual shard caches the Storveldi Denbora drew from are mostly known to be heavily guarded; the procedure that lets you use one is what no one else has.
+
+#### Implications
+
+- The shard mechanic means **the gods cannot gatekeep ascension** the way some clergy assume. A determined mortal who locates a shard *and* possesses the integration procedure can rise.
+- The bound thirteen do not advertise shard locations. They cannot easily destroy shards either (each is a fragment of divinity — durable by nature). Where the thirteen *can* exert pressure is by suppressing the integration knowledge.
+- Most factions with an interest in mortal ascension focus on **finding the integration procedure**, not on hoarding shards. Shards are eventually findable. The procedure is the choke point.
 
 ---
 
@@ -102,7 +131,9 @@ All magic is access to the Wellspring. The four schools are four different metho
 
 ## The Week of Crimson Rain — The True Account
 
-**What started it:** The killing of Tani — a feat that had never been accomplished before. A Grand God had been slain. The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war. Not a border dispute or a political conflict — genuine all-out war, hundreds of gods and countless mortals dying. The greatest conflict Talan has ever seen.
+**What started it:** The killing of Tani — a feat that had never been accomplished before. A Grand God had been slain. **Her killers were the ascended ruling class of the Storveldi Denbora** (see below) — a mortal civilisation whose elite had self-elevated en masse to Demi-God status by belief-and-power accumulation, with two of their sovereigns ascending further to Minor God status by systematic shard recovery. With that concentration of mortal-derived divinity, they did what no other mortal civilisation had ever organised the scale to do: they killed a Grand God.
+
+The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war. Not a border dispute or a political conflict — genuine all-out war, hundreds of gods and countless mortals dying. The greatest conflict Talan has ever seen.
 
 **Cronus's role:** A mortal man. He hated it. He began uniting mortal survivors under one banner — and because belief is real, the act of thousands rallying to him began making him more than mortal. He led armies, fought gods directly, and began making alliances with gods who were also tired of the slaughter.
 
@@ -118,7 +149,7 @@ All magic is access to the Wellspring. The four schools are four different metho
 
 ## Cronus — The Secret
 
-- **Was mortal.** The only being to ascend to Grand God status, rather than being born to it.
+- **Was mortal.** The only being to ascend to **Grand God** status, rather than being born to it. (He is not the only mortal to ascend *at all* — see *The Storveldi Denbora* below. The Storveldi Denbora's ruling class reached Demi-God status by belief and two reached Minor God status by means still unknown. What makes Cronus unique is that he reached **Grand God** — the top tier — which the Storveldi Denbora never did, and which has never been accomplished by anyone else before or since.)
 - He elevated through a combination of: (1) massive collective belief from uniting mortal civilization, (2) fighting gods on the battlefield, (3) political alliances, (4) the specific mechanism of the Gods' Law — when the twelve accepted the compact, **each gave him a shard of their power**, making him the Law's anchor. He is not just "one of them" — he is held together by all twelve. The Gods' Law runs through him.
 - **The twelve know.** They were there. They chose this. The secret holds because none of them have chosen to break it.
 - His clergy do not know. His worshippers do not know. Scholars have come close twice. Both times the work was quietly buried.
@@ -128,9 +159,12 @@ All magic is access to the Wellspring. The four schools are four different metho
 ## Tani — Lore Notes
 
 - **Her death started the Week of Crimson Rain.** She was the first Grand God ever killed — an event that had been considered impossible or theoretical. This shattered the assumption of Grand God invulnerability and triggered the war.
+- **Her killers were the Storveldi Denbora's ascended ruling class** — a mortal cabal who had self-elevated to Demi-God status (most) and Minor God status (two, by systematic shard recovery), working together with that concentrated divinity to do what no mortal civilisation had ever assembled the scale to do. See *The Storveldi Denbora — The Real History* below for the full account.
+- **The killing happened in Lioaru — in her own domain.** Tani was struck down in (or beside) the Storveldi Denbora capital. The divine retaliation that followed her death obliterated the city and its surrounding territory. That scorched ground is now the **Blackened Lands** — the modern Lost Kingdom (see *The Blackened Lands* below and `geography.md`).
 - She died, crossed into the Postlife, and came back as a god. Her rebirth at the end of the war was the moment the Gods' Law was forged — she is literally its origin point.
 - **Every god knows what the Postlife is** — they can visit, many have been banished there. Her knowledge of the Postlife is not unusual.
 - Her **secret** is what happened between the moment of her death and her rebirth — something she experienced that no other being has, crossing from the living side. She has not described it. The others know there is a gap. She does not deny it.
+- **Folk name for her killing:** *the God Killing Incident* — the most widely used mortal term for the event. The phrase deliberately omits the Storveldi Denbora's role, since most mortal histories have lost or never knew the killers' identity.
 
 ---
 
@@ -327,6 +361,44 @@ Every living being contains essence from all three layers. What separates one so
 - **Common knowledge:** vanished 2945 GR, all on the same day, cities intact, no explanation confirmed.
 - **Popular belief:** war with gods / fulfilled their purpose / simply left.
 - **The truth:** they became the Corrupted God (see below).
+
+---
+
+## The Storveldi Denbora — The Real History
+
+A mortal civilization of the **Gods' Era** (2944 GR – 1 GR) — not the Elden, despite their claim to the contrary. The conflation of the two is one of the most persistent folk-myths on Talan, and the Storveldi Denbora themselves were its first authors.
+
+**Who they actually were.** A mortal people who rose during the Gods' Era after the Elden vanished. They settled atop the abandoned ruins of an Elden city and built their capital on those foundations. They claimed Elden descent — for prestige, for legitimacy, and to inherit the awe their predecessors commanded. The claim was a lie. They had no Elden blood. They simply lived where the Elden had lived and copied what they could understand of what the Elden had left behind.
+
+**What they actually did.** They experimented on themselves. Generations of selective practice, alchemical work, archaeology of the Elden ruins they sat atop, and what we would today call divine engineering. They used the Wellspring/belief mechanic aggressively to lift ruling-class members to **Demi-God** status. The far rarer achievement: **they developed the integration procedure** — the technique for actually imbuing a found shard of divinity into a mortal's own divine essence (see *Integration — the genuinely rare knowledge* above). With the procedure in hand, they could turn any recovered shard into an ascension.
+
+**Then two went further.** Their two most accomplished sovereigns recovered shards and integrated enough of them to ascend past Demi-God to **Minor God** status. The mechanic was open to anyone — but no other mortal civilisation possessed the integration procedure, and no other mortal civilisation had assembled the political and scholarly machinery to apply it at scale. **The Storveldi Denbora's true edge was not the shards. It was the procedure.**
+
+**What persists.** The Storveldi Denbora's **integration procedure is not public knowledge, but it is not lost.** It persists somewhere on Talan or in its veils. Who holds the records, how complete the preservation is, and whether the bound thirteen know are open questions; the bound thirteen do not discuss it. The individual shard sites the Storveldi Denbora used are largely known, each one now insanely well-guarded — but knowing where the shards are does not get you up the ladder. The procedure is the choke point, and the procedure is what hides.
+
+**The God Killing Incident.** The two Minor Gods of the Storveldi Denbora, supported by the Demi-God ruling class beneath them, attacked **Tani in her own domain** and killed her. Her death triggered the **Week of Crimson Rain.**
+
+**The fall.** Tani's slaying brought the Grand Gods' war crashing down on Talan — and the Storveldi Denbora homeland was the centre of it. The capital was annihilated. The land around it was so deeply wounded by concentrated divine retaliation that it has never healed. That land is now the **Blackened Lands** (below) — the **Lost Kingdom** sub-region of Lioaru on the modern map. Their cities are ruined. Their ruling class is dead. The Storveldi Denbora as a polity ended in the Week of Crimson Rain.
+
+**The remnants.** Not every Storveldi Denbora citizen was at the capital when the gods came. A scattered population of survivors persists today — descendants of those who had been experimented on (or who carried the inherited results of generations of self-experiment), but who were never themselves elevated. **They are the Azarketi.** Folk-memory and Azarketi cultural tradition often still claim **Elden blood** — those claims are the Storveldi Denbora's original lie, transmitted forward across millennia. The Azarketi descend from the people who **imitated** the Elden, not from the Elden themselves. Many modern Azarketi do not know this.
+
+**Why this matters cosmologically.**
+- They are the only mortals known to have killed a Grand God.
+- They are the only mortals known to have reached Minor God status, twice over, by integration of recovered shards rather than the rare lucky individual case.
+- They are the only mortal civilisation known to have **developed and held the integration procedure** — the choke-point knowledge for converting any shard into actual ascension. That knowledge persists somewhere; whoever recovers it inherits the largest unsolved capability gap on Talan.
+- Their fall was followed by the divine retaliation of the Week of Crimson Rain, which obliterated their homeland and dispersed their survivors as the Azarketi.
+
+---
+
+## The Blackened Lands
+
+- **Where:** Western Lioaru (Tani's domain) — the coastal sub-region now called the **Lost Kingdom**.
+- **What it is:** The site of Tani's killing and the ruined Storveldi Denbora capital. The ground here was so deeply wounded by the divine retaliation following her death that it has never healed.
+- **Terrain:** Blackened soil; time-warped strata where moments repeat or pool; ruins that read newer than the surrounding stone; ambient necromantic resonance; periodic fleshwarp incidents in survivors and trespassers; concentrations of restless dead.
+- **Origin of the Fleshwarp and Skeleton ancestries.** Both arise here. The cursed ground twists living flesh into the irregular bodies of **Fleshwarps**; the restless wound pulls the dead back into motion as **Skeletons**. Neither is the work of any current faction — they are *the land itself.* The Menagerie produces fleshwarps elsewhere (off-continent, see `factions.md`), but those are deliberate fabrications and distinct from the Lost-Kingdom-born ancestry.
+- **Folk name:** *the black spot on the map.* Common in chronicles, sermons, and traveller's tales.
+- **Politics:** No kingdom claims it. No reliable maps exist of the deep interior. The Adventurers' Guild posts a perpetual standing warning. A handful of Tani-mourning sects make pilgrimage to the edges; necromancers and ascension-cultists are drawn here for predictable reasons.
+- **Folk-myth tie-in:** The Storveldi Denbora's surviving folk-myth (recorded in some chronicles as *"the Old Race who killed Tani, whose land became the black spot"*) is one of the few mortal stories that actually preserves a fragment of the true history — though most retellings still conflate the Storveldi Denbora with the Elden, exactly as the Storveldi Denbora themselves did.
 
 ---
 

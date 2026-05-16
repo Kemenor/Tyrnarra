@@ -307,7 +307,7 @@ Strict caste structure, but the castes are **fluid** — rise and fall are const
 - **The Apex Line** — singular reforged predators built as living siege weapons. Unleashed for annihilation, not deployment.
 - **Ashborn** — Fodder or Broken reforged by necromancy. Stitched living-and-dead engines of endurance, sustained by arcane binding.
 - **Harvested** — reanimated enemy corpses stripped of identity, fielded en masse.
-- **Fleshwarps** — survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two are alike. Deployed as shock troops, terror weapons, or laborers in lethal environments. Considered both failure *and* asset. (Cross-ref: the Pathfinder Fleshwarp ancestry, found in the "blackened lands" cursed during the God Killing Incident, may or may not be related to Menagerie work — open question for Phase 4.)
+- **Fleshwarps** — survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two are alike. Deployed as shock troops, terror weapons, or laborers in lethal environments. Considered both failure *and* asset. **These are Menagerie-made fleshwarps, distinct from the natural-born Fleshwarp ancestry** that arises in the Blackened Lands of Lioaru (see `world-notes.md`). Two different origins, similar end-product — and Menagerie Curators are believed to have studied the Blackened Lands fleshwarp population for technique, though the Empire has never confirmed it.
 
 **Symbol:** Crimson serpent devouring its own tail, set inside a cage of black iron bars.
 

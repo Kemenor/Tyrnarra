@@ -192,12 +192,12 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `w
 
 **Sub-regions:**
 - **Galdua Jendea** — the sub-region that houses Denbora. The sand whales that carry the city roam within this territory. Name is Basque: meaning disputed — possibly "Place of Many Waters" or "Place of the Lost People."
-- **Lost Kingdom** — ruined/lost territory on the western coast. Fell during or after the Week of Crimson Rain, directly tied to Tani's death. Temporally unstable, deeply dangerous. The ruins are considered among the most hazardous on Talan.
-- **Lost Isle** — small island offshore to the west, associated with the Lost Kingdom.
+- **Lost Kingdom** — the ruined / cursed western-coast territory. Specifically: the **Blackened Lands**, the site where Tani was killed by the Storveldi Denbora's ascended ruling class (see `world-notes.md` for the full Storveldi Denbora and Blackened Lands accounts). Their capital — built atop earlier Elden ruins — was annihilated by the divine retaliation that followed her death, and the surrounding land has never healed. Modern features: blackened soil, time-warped strata (moments repeat, ruins read newer than they should be), ambient necromantic resonance, periodic fleshwarp incidents in survivors and trespassers, and concentrations of restless dead. **Origin of the Fleshwarp and Skeleton ancestries** — both arise from the cursed ground itself, not from any current faction's work. **Folk name:** *the black spot on the map.* Considered among the most hazardous regions on Talan; no kingdom claims it; the Adventurers' Guild posts a perpetual standing warning. Tani-mourning pilgrims, necromancers, and ascension-cultists are the most common visitors.
+- **Lost Isle** — small island offshore to the west, associated with the Lost Kingdom. Shares some of the cursed-ground character of the mainland Blackened Lands but at lower intensity.
 - **River Duchies** — the green river valley cutting through the desert as an oasis. A loose confederation of noble houses whose wealth comes from controlling river trade.
 - **Hareaveldi** — fully within Lioaru. Partially independent cultural identity; name predates Tani's influence in the region.
 
-**Note:** The Lost Kingdom's fall is directly connected to Tani's death — she was the first Grand God ever killed, and her domain bore the consequences. The ruins are considered deeply dangerous and temporally unstable.
+**Note:** The Lost Kingdom is the single most cosmologically loaded location in Lioaru — it is where a Grand God was killed and where the Week of Crimson Rain began. Its identification with the **Storveldi Denbora capital** (the *Old Race who killed Tani* of mortal myth) is canon truth that most mortal histories do not preserve correctly; mortal folk-myth more commonly conflates the Storveldi Denbora with the Elden, exactly as the Storveldi Denbora themselves did.
 
 ---
 

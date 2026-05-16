@@ -27,12 +27,20 @@ In 2945 GR, every Elden vanished on the same day. Cities intact, libraries full,
 
 With the Elden gone, the gods moved to fill the void and found nothing standing between them and total dominion over mortal life. Nearly three thousand years of divine rule followed: gods as kings, gods as landlords, gods as law. Some were just, even benevolent. Many mortals knew prosperity under divine rule. But gods were also petty, jealous, and deeply territorial. Their conflicts repeatedly consumed mortal populations in wars mortals had no say in starting and no power to end.
 
+**Mid-Era event — the rise of the Storveldi Denbora.** Among the mortal civilisations that arose during this era, one settled atop the ruins of an Elden city in what is now western Lioaru and built its capital on those foundations. They called themselves the **Storveldi Denbora** and claimed Elden descent — the claim was a lie, but it took root in their culture and in the wider world. Over centuries they ran a sustained programme of self-experiment, divine engineering, and shard recovery — and crucially, **they developed the integration procedure**: the technique for actually imbuing a found shard of divinity into a mortal's own divine essence. By the end of the era, most of their ruling class had elevated themselves to **Demi-God status** through belief-and-power accumulation, and two of their sovereigns had ascended further to **Minor God status** by integrating recovered shards. The mechanic is open to any mortal — but no other civilisation possessed the procedure to use it. **The procedure is not public knowledge, but it persists** somewhere on Talan or its veils. See `world-notes.md` for the full account.
+
+The arrival of an alien race during this era is also worth noting: a **dragon mothership** crash-landed on Talan a few hundred years before the era's end, scattering dragon survivors across the continent. The gods of the era took an interest. What they did to those survivors — what mortals now call the *"corruption by the gods"* — set the foundation for the modern dragon kingdoms in Sumendar and for the **Dragonkin** ancestry (descendants of an unsanctioned creation by one of the gods later banned by the Gods' Law). See `bestiary.md` for ancestry detail.
+
+**End of the era.** The Storveldi Denbora's two Minor Gods, backed by their Demi-God ruling class, attacked **Tani in her own domain** and killed her. This is the event mortals call **the God Killing Incident.** It triggered the Week of Crimson Rain.
+
 ---
 
 ## The Week of Crimson Rain
 **0 GR — 0 MR**
 
-The pivotal event in all of Talan's history. For one week, the skies across the continent wept crimson — not rain, but blood. Divine blood. The cause is debated in common history (see world-notes.md for the true account). Casualties among divine and mortal alike were of a scale that has no name — hundreds of gods and countless mortals perished or were displaced.
+The pivotal event in all of Talan's history. For one week, the skies across the continent wept crimson — not rain, but blood. Divine blood. **It was triggered by the killing of Tani at the hands of the Storveldi Denbora's ascended ruling class** (see Gods' Era above; full account in `world-notes.md`). The Grand Gods, now knowing they could be killed, went to total war. Casualties among divine and mortal alike were of a scale that has no name — hundreds of gods and countless mortals perished or were displaced.
+
+The Storveldi Denbora homeland was annihilated in the divine retaliation that followed Tani's death — their capital became the cursed scar now called the **Blackened Lands** / **Lost Kingdom** sub-region of Lioaru. Their polity ended here; a scattered population of experimented-upon survivors persists today as the **Azarketi**.
 
 At the end of the week, the Gods' Law was established. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes. Thirteen accepted the Law's binding and remained. The world they inherited was broken.
 
