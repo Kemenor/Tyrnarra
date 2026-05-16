@@ -161,26 +161,47 @@ A storveldi-denbora.md single-line stub in the WA export ("Old Race, caused deat
 ---
 
 ## Phase 4 — Bestiary & Species → `lore/bestiary.md` *(new file)*
-**Status: TODO — source surveyed, design questions resolved with user, write pending**
+**Status: DONE in lore (2026-05-16). Not yet published to HTML.**
 
 *Talan export, purely additive.*
 
-Source files:
-- `worldanvil-export/Talan/Ancestries/` × 41 — all playable ancestries with world-flavour notes (mostly 1–3 lines each; the *ancestry-overview.md* file has the domain mapping)
-- `worldanvil-export/Talan/Versatile Heritages/` × 14 — tieflings, aasimar, etc.
-- `worldanvil-export/Talan/Demons/` × 14 — virtue demons (excess-vs-deficiency Aristotelian pairs)
-- `worldanvil-export/Talan/Devils/` × 7 — sin devils (empty stubs except the seven-deadly-sins category itself)
-- ~~`worldanvil-export/Tyrnarra/Kitsune/` × 5~~ — **merged in Phase 2 (2026-05-16)**; pure-species mechanical detail still pending here.
+Source files (all processed):
+- ✅ `worldanvil-export/Talan/Ancestries/` × 41 — every ancestry entry (mostly 1–3 lines each) folded in. The *ancestry-overview.md* domain mapping became the bestiary's distribution table.
+- ✅ `worldanvil-export/Talan/Versatile Heritages/` × 14 — all merged. *Aasimar → Nephilim* rename applied per pf2e remaster. Heritage rework flagged as pending.
+- ✅ `worldanvil-export/Talan/Demons/` × 14 — Aristotelian virtue/excess/deficiency pattern preserved; full table built. Muiral the Misshapen recorded as the only named virtue demon so far.
+- ✅ `worldanvil-export/Talan/Devils/` × 7 — placeholder section with the seven-sin frame; devil-lord names TBD.
+- ~~`worldanvil-export/Tyrnarra/Kitsune/` × 5~~ — bulk merged in Phase 2; species-mechanics-only summary referenced from the Kitsune entry in `bestiary.md`.
 
 Design decisions (resolved with user 2026-05-16):
-- **Dragons** are an alien race — mothership crash-landed on Talan during the Gods' Era a few hundred years before the Week of Crimson Rain. Corrupted by the gods. Capital at Dragon's Reach in Sumendar. Seeking purity / their roots.
-- **Dragonkin** descend from an unholy creation of one of the gods later expelled by the Gods' Law.
+- **Dragons** are an alien race — mothership crash-landed during the Gods' Era a few hundred years before the Week of Crimson Rain. Corrupted by the gods. Capital at Dragon's Reach in Sumendar. Seeking purity / their roots.
+- **Dragonkin** descend from an unholy creation of one of the gods later expelled by the Gods' Law. No relation to Dragons.
 - **Azarketi** are descendants of Storveldi Denbora self-experimented survivors. They sometimes still claim Elden blood — wrong, that's the original Storveldi Denbora lie inherited forward.
-- **Fleshwarps and Skeletons** originate from the Blackened Lands / Lost Kingdom. (Menagerie fleshwarps are a separate off-continent origin.)
+- **Fleshwarps** and **Skeletons** originate from the Blackened Lands / Lost Kingdom. (Menagerie fleshwarps are a separate off-continent origin — same end-product, distinct lineage.)
 - **Darklands** acknowledged as a pf2e-import term meaning deep-underground / Corrupted God's dominion. Candidate for renaming later.
-- **Versatile Heritages** — leave Jianna and Cronus without heritage mappings. Full system needs rework once pf2e remaster reshuffle settles. **Aasimar → Nephilim** per the remaster rename.
+- **Sentinel Dwarves** patrol the upper Darklands; **Ratfolk** originate from there; **Slimes** are concentrated there.
+- **Versatile Heritages** — Jianna and Cronus left without heritage mappings (no inherited-trait blessing in current canon). Full system needs rework once pf2e remaster reshuffle settles.
 
-Target: new `lore/bestiary.md` for ancestries, heritages, demons, and devils.
+**What landed in `lore/bestiary.md`:**
+- Header with status note framing this as a reference, not a PF2e rules-duplicate.
+- **Ancestry Distribution by Domain** table — clean per-domain ancestry breakdown derived from the WA *ancestry-overview.md* mapping.
+- **41 alphabetical ancestry entries** with their world-flavour notes plus cross-references to existing canon. Major canon-load entries (Dragons, Azarketi, Fleshwarp, Skeleton, Android, Automaton, Drow elves, the two dwarf cultures) received fuller writeups; thin WA sources got concise entries.
+- **Versatile Heritages** — table of the 12 mapped heritages (bound god + domain) with rework note for the unmapped two (Jianna, Cronus) and the unchanged-pending ones (Reflection, Tiefling).
+- **Virtue Demons — the Aristotelian Pattern** — full virtue/excess/deficiency table; Muiral the Misshapen recorded.
+- **Sin Devils — the Seven** — placeholder section with the seven-sin frame and a clean demon-vs-devil theological distinction (demons corrupt a virtue, can in principle be redeemed; devils embody a sin, cannot).
+- Cross-references section linking back to `world-notes.md`, `geography.md`, `cultures.md`, `factions.md`.
+
+**Bestiary additions in `lore/glossary.md`:**
+- *Muiral the Misshapen*, *The Virtue Demons*, *The Sin Devils* — bestiary proper nouns.
+- *"Elden blood"* and *"the corruption by the gods"* — folklore claims preserved with truth-status notes.
+
+**Open threads:**
+- **Base ancestry roster rework** — the pf2e remaster also reshuffled the core ancestry list (renames, splits, merges, new options, retired options). The bestiary's 41 entries are imported from the WA export (pre-remaster) and need a remaster-era pass.
+- **Versatile heritage rework** — same situation; mapping pending settled pf2e remaster reshuffle.
+- Individual virtue-demon names beyond Muiral.
+- Sin-devil names, planar seats, and politics.
+- Whether the **Reflection** and **Tiefling** heritages get Tyrnarra reflavours or stay PF2e-canonical.
+
+Target: ✅ achieved. Bestiary is the reference; deeper development happens as the world is played.
 
 ---
 
@@ -235,7 +256,12 @@ The table below tracks which lore additions await HTML publication when the user
 | **The Mortal Ascent Ladder** (4 rungs, shard sources, integration procedure) | `world-notes.md` | best on a magic / theology subpage; partly fits in `magic.html` (Wellspring & Belief expansion) |
 | Updated Tani section (her killers, where she died) | `world-notes.md` | `grand-gods.html` Tani card (mortal-side stays neutral; full detail in GM Secret) |
 | Updated Cronus secret framing (only Grand-God ascender) | `world-notes.md` | `grand-gods.html` Cronus secret — minor tweak; current text is broadly OK |
-| **Phase 4 — Bestiary** | TBD | new `bestiary.html` or per-domain ancestry notes |
+| **Phase 4 — Bestiary** | | |
+| Ancestry distribution by domain (table) | `bestiary.md` | new `bestiary.html` overview page, or per-domain ancestry notes on each domain page |
+| 41 ancestry entries (Dragons, Azarketi, Fleshwarp, Skeleton, etc.) | `bestiary.md` | new `bestiary.html` or per-ancestry pages under `bestiary/` |
+| Versatile Heritages mapping | `bestiary.md` | `bestiary.html` heritages section — flag rework-pending |
+| Virtue Demons (Aristotelian pattern) | `bestiary.md` | new page under `factions/` (or sit on a new `bestiary/demons.html`) |
+| Sin Devils (placeholder) | `bestiary.md` | placeholder section on the same demons/devils page |
 
 **Publishing order suggestion (when ready):**
 1. The Wardstones and Nine Generals (`the-binding.html`) — already partially built, lowest-friction completion.

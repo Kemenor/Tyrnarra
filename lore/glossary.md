@@ -270,6 +270,19 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **The Blackened Lands / The Black Spot on the Map** — Plain English. The cursed-ground scar at the western coast of Lioaru where Tani was struck down and the Storveldi Denbora capital was annihilated. Canonically the same place as the **Lost Kingdom** sub-region (see `geography.md`). Origin of the **Fleshwarp** and **Skeleton** ancestries.
 - **Lost Kingdom** — Plain English. Modern-map name for the Blackened Lands sub-region of Lioaru. Already entered above under Lioaru sub-regions — cross-listed here for the secret-history reader.
 
+### Bestiary proper nouns
+
+Full bestiary entries live in `lore/bestiary.md`. Listed here are the named beings and the inherited-folklore terms worth recording for cross-reference.
+
+**Otherworldly entities:**
+- **Muiral the Misshapen** — Plain English. The only individually named virtue demon in canon; demon of the *Modesty* line (Shamelessness / Shyness pair). Modern-stratum name; appears in mortal exorcism texts.
+- **The Virtue Demons** — Plain English. The Aristotelian-pattern demon hierarchy: one demon per virtue-line extreme. See `bestiary.md` for the full virtue/excess/deficiency table.
+- **The Sin Devils** — Plain English. The seven canonical devil-lords, one per Sin (Envy, Gluttony, Greed, Lust, Pride, Sloth, Wrath). Individual names TBD.
+
+**Folklore + claims (mortal-mouth, not always true):**
+- **"Elden blood"** — the persistent Azarketi inherited claim. **Wrong.** Azarketi descend from the Storveldi Denbora, who *imitated* the Elden but were not of their lineage. The claim has been transmitted forward across millennia and is still widespread.
+- **"The corruption by the gods"** — dragon-internal phrase for what the Gods'-Era gods did to the surviving dragons after the mothership crash. Dragon-doctrinal vocabulary; not common Talanese.
+
 ### Darklands
 
 - **The Darklands** — Plain English. Imported term for the deep-underground regions beneath Talan — the dominion of the **Corrupted God**. Pathfinder/PF2e-stratum vocabulary (may be renamed at some point to fit the Tyrnarra naming convention). The Nine Dungeons of the Corrupted God's generals open from here; the **Sentinel Dwarves** patrol its upper reaches; **Ratfolk** and **Slimes** have populations adapted to it; **Skeletons** and **Fleshwarps** wander up from the Blackened Lands into Darklands tunnels.
