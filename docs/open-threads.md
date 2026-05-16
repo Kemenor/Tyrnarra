@@ -190,19 +190,19 @@ When you close a thread, strike it through with `~~...~~` rather than deleting (
 
 ## Unplaced sketches (in [lore/unplaced.md](../lore/unplaced.md))
 
-Captured but not yet placed in a domain. Each is a worldbuilding hook waiting for the right home.
+*(All previously-unplaced sketches have been placed as of 2026-05-17. See `lore/unplaced.md` "Recently placed" log for the trail.)*
 
-### Balaena — the Skywhale City
-**Status:** captured; placement TBD.
-**Candidates:** Brauogi (Earth), Ezkudon (Knowledge), or Lautara (Commerce). Needs a freshwater lake — Midarra is sea-water and pirate-controlled, so likely not there.
+### ~~Balaena — the Skywhale City~~ → RESOLVED 2026-05-17
+Placed in **Floteyn → Floating Isles of Shuun**. Drifting-island framing fits perfectly: Balaena is one of the hundreds of drifters of Shuun, with skywhale nature hidden in plain sight. See `geography.md`.
 
-### The Conductor and his Station
-**Status:** captured; placement TBD.
-**Candidates:** Cronus (Freedom/Travel domain), Vesuna (Chaos), or planar hazard tied to the Ethereal/Astral Planes.
+### ~~The Conductor and his Station~~ → RESOLVED 2026-05-17
+Promoted to canon as a rare pocket-dimension hazard of the **Magitrain network**. Full entry in `world-notes.md` — *Technology — Magitech and Infrastructure*. Preferential network haunting (one vs both) is the remaining sub-thread.
 
-### Grav Trains + Ultra-High-Tech Civilisation
-**Status:** captured; the *Ultra-High-Tech Civilisation* identity is the gating question.
-**Open:** Is the UHTC a Storveldi Denbora technological branch, an Elden remnant, or its own lost people? Resolves the placement of the whole tech entry in `world-notes.md`. Train Pirates probably belong in `factions.md` as a bandit category.
+### ~~Grav Trains + Magitrains~~ → RESOLVED 2026-05-17
+Promoted to full canon as part of the **Magitech and Infrastructure** section in `world-notes.md`. Magitrains are common-place; Grav Train is the legacy term for UHTC-origin prototypes. Train Pirates entry added to `factions.md` under *Bandit Categories*.
+
+### ~~Ultra-High-Tech Civilisation (UHTC) — identity~~ → RESOLVED 2026-05-17
+**The UHTC were the Elden.** Modern Magitech (particularly Arcanotech) descends from post-Crimson-Rain Elden-ruin discoveries; the Order of Steam grew up around an Elden-tech excavation in Sumendar. "UHTC" survives as a folk-term mortals use without knowing the Elden source. See `world-notes.md` — *The Elden* and *Technology — Magitech and Infrastructure*.
 
 ---
 
@@ -229,6 +229,8 @@ Captured but not yet placed in a domain. Each is a worldbuilding hook waiting fo
 
 These are the threads created *by* resolving other threads. Listed here so the chain is visible.
 
+- **UHTC identity** — opened and immediately closed (2026-05-17). The Magitech-restructure pass canonised the UHTC as the Elden. Modern Arcanotech descends from Elden-ruin discoveries. Thread closed.
+- ~~**Conductor's Station preferential network haunting**~~ → RESOLVED 2026-05-17. Haunts both networks equally; no Northern or Southern bias.
 - **Sortalde Layer-3 pantheon** — opened when the Sortalde continent landed (2026-05-17). See *Cosmology & Gods* above.
 - **The Sun god** — opened when Bikiargi landed (2026-05-16). The symmetry "moons have a god, sun should too" surfaced naturally. See *Cosmology & Gods* above.
 - **Sin-Devil grantable domains for Envy/Greed/Lust/Sloth** — opened when the 14-domain mapping landed (2026-05-16). Three of seven devils got domains; four didn't.

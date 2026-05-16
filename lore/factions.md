@@ -404,3 +404,19 @@ Strict caste structure, but the castes are **fluid** — rise and fall are const
 - A sealed upper room has been wrapped in silk for decades. No one but Charna is allowed near it. She has not explained.
 
 ---
+
+## Bandit Categories
+
+Not organised institutions — patterns of lawless work common enough on Talan to be recognised by type. Listed here for cross-reference.
+
+### Train Pirates
+
+**Character:** Contemporary bandit category active across both the northern and southern Magitrain networks. They hit trains at the **slow stretches** — climbs, junctions, station approaches, the places where Arcanotech acceleration drops to walking pace. *Langsam auf Land, schnell auf Schiene* ("slow on land, fast on rail") is the train-piracy axiom.
+
+**Composition:** Most train-pirate crews are ordinary mortal banditry — armed, mounted, opportunistic, in for the cargo. A minority are politically motivated: **Cronus-aligned freebooters** claiming the rails as commons against the Order of Steam's licensing model; **anti-industrial ideological strikes** from druid-adjacent or primal-aligned factions; **inter-kingdom proxy violence** dressed as banditry; **Sortalde-route specialists** who hit only the eastern-bound freight trains carrying embassy goods (small, prestigious, often targeted for the embassy-cargo rather than the train).
+
+**Response:** The Order of Steam fields its own Magitech-armed security on its licensed lines. Smaller operators rely on Adventurers' Guild contracts. Train-pirate cells that grow large enough to threaten scheduled service tend to attract Guild high-rank attention and disappear within a season; most cells stay small enough to evade that threshold.
+
+**See also:** `world-notes.md` — *Technology — Magitech and Infrastructure → Train Pirates and other Magitrain hazards*; the **Conductor's Station** pocket-dimension hazard is a separate non-bandit Magitrain phenomenon documented in the same section.
+
+---

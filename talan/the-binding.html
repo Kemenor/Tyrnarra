@@ -35,6 +35,8 @@
   .general-tag.located { background: rgba(154,96,192,0.2); color: #c8a8f0; border: 1px solid rgba(154,96,192,0.5); }
   .general-byline { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 8px; }
   .general-desc { color: var(--text); font-size: 0.94rem; }
+  .general-grants { margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(180,60,60,0.22); font-size: 0.84rem; color: var(--gold-dim); font-style: italic; }
+  .general-grants b { color: #e89a8a; font-style: normal; font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.04em; }
 </style>
 </head>
 <body data-page="the-binding">
@@ -61,6 +63,14 @@
     <p>While the Wardstones hold, the Corrupted God remains bound. He cannot raise armies directly. His will reaches the surface only through <b>the Nine Generals of Corruption</b> — his lieutenant-vessels, each commanding a subterranean fortress-dungeon, each a piece of his power made flesh.</p>
 
     <p>The defence of the Wardstones and the hunt against the Nine is collectively called <b>the War of Seals</b>. It is the longest war Talan has known, and it is not over.</p>
+
+    <div class="secret-era">
+      <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — What Is Actually Bound</button>
+      <div class="secret-era-content">
+        <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+        The being beneath the Wardstones is not a malevolent personal deity. It is the <b>Corrupted God</b> — the singular fused unity that the entire <b>Elden</b> civilisation became at the moment they connected themselves to both the Wellspring and the Devourer simultaneously. (See <a href="/talan/history.html">history.html → Elden Era → GM Secret</a> for the full account of how that happened.)<br><br>What this means for the Binding: every Wardstone is not a chain on a single demon-king but an anchor on a <b>civilisation-scale being of constant creation-and-destruction</b>, locked in permanent internal war with itself. The Nine Generals are not its servants in the way mortal lieutenants serve a tyrant — they are <b>fragments of the Elden mass</b> that broke off and re-formed into discrete vessels after the binding. Killing one is killing a piece of what was once a thinking civilisation.<br><br>Mortal scholarship and folk-tradition both treat the bound god as a malevolent personal deity (<i>"the Blightfather"</i>, <i>"the Maw Below"</i>). The player-facing material on this page deliberately preserves that framing.
+      </div>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -172,6 +182,7 @@
       </div>
       <div class="general-byline">Mistress of swarms · hive-dungeon: the Hollow of Ten Thousand Threads</div>
       <div class="general-desc">Breeds endless spiders, locusts, centipedes, and crawling things. When her children stir, they pour out in tides that choke entire valleys. Her dungeon lies in the Shadow Steppes, dangerously close to two Wardstones. Her webs are not mere silk: they are corruption-infused, sticky enough to bind armoured warriors and slow-poisoning to weapons and armour that touch them.</div>
+      <div class="general-grants">Grants the <b>Swarm</b> domain to clerics who turn to corruption through her vessel.</div>
     </div>
 
     <div class="general-card">
@@ -181,6 +192,7 @@
       </div>
       <div class="general-byline">Corpse-warlord in ruined armour</div>
       <div class="general-desc">His rusting legions march from ossuary-halls, each step spreading despair and decay. Whole battlefields where he has stood do not grow living plants for a decade.</div>
+      <div class="general-grants">Grants the <b>Decay</b> domain.</div>
     </div>
 
     <div class="general-card">
@@ -217,6 +229,7 @@
       </div>
       <div class="general-byline">Shadowbound cultist turned nightmare made flesh</div>
       <div class="general-desc">His temple of illusions warps dream and waking alike. Intruders wander in endless confusion. Survivors return convinced they have been gone for years, when in truth no time has passed at all — or the reverse.</div>
+      <div class="general-grants">Grants the <b>Nightmares</b> domain.</div>
     </div>
 
     <div class="general-card">
@@ -226,6 +239,7 @@
       </div>
       <div class="general-byline">Colossal venomous serpent pulled from the world's depths</div>
       <div class="general-desc">A cavern-dungeon of sinkholes, acid pools, and tunnels large enough to swallow caravans whole. The serpent itself has been seen only fleetingly — but the holes left where it has passed are unmistakable.</div>
+      <div class="general-grants">Grants the <b>Naga</b> domain. Cults among naga ancestry sometimes pledge to him without realising he is a General; the rest of the Naga-domain priesthood treats them as compromised on first contact.</div>
     </div>
 
     <div class="general-card">
@@ -275,6 +289,16 @@
   <div class="footer">TYRNARRA · TALAN · THE BINDING</div>
 
 </div>
+
+<script>
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
 
 </body>
 </html>

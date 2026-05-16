@@ -10,6 +10,17 @@
 
 ---
 
+## The Continental Rail Network
+
+Talan runs on **Magitrains** — common-place Arcanotech infrastructure. The continent has **two interconnected networks** that do not link to each other:
+
+- **Northern Talan network** — connects the northern domains and their major cities.
+- **Southern Talan network** — connects the southern domains; Sumendar (Order of Steam manufacturing) is its industrial heart.
+
+The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **ships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight — Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** are *not* used for routine north-south travel — they're rare specialist Cloud-Sea-crossing craft, not domestic transport. Full canon in [`world-notes.md`](world-notes.md) — *Technology — Magitech and Infrastructure*.
+
+---
+
 ## The Three Seas
 
 **Midarra** — the central freshwater inner sea of Talan. Cronus's island (Freedom domain) sits within it. Millhaven is on its southern shore. Etymology TBD — name is old, predates mortal settlements.
@@ -195,6 +206,14 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `w
 - **Balatur Erui** — (details TBD)
 - **Floating Isles of Shuun** — the collective name for the hundreds of drifting islands across the domain. Each island technically has its own name but this is the common reference for the archipelago as a whole.
 
+**Notable settlement — Balaena, the Skywhale City.** One of the hundreds of drifting islands of Shuun, but unique: Balaena is built atop a **half-submerged skywhale.** From outside it reads as an ordinary drifting island — exactly the sort of thing the archipelago is full of — but the buoyancy is a young, weak skywhale whose nature is preserved by city-wide ritual. The people who live on Balaena do not know they stand on a creature.
+
+- **The weight-balance protocol.** A skywhale wants to rise. Balaena's buildings and population hold it down. Equilibrium is fragile, so the city's defining ritual is **gate-controlled weight balance**: anyone entering arranges for equivalent weight to leave (and vice versa for departures). No teleportation, no landings, no take-offs in the city's airspace. The protocol reads to outsiders as the eccentricity of a paranoid port town; it is in fact what keeps the island afloat at the right depth.
+- **The bridge that walks on water.** A wooden footbridge connects Balaena to a fixed pier on a neighbouring stable islet. Over the years the whale has grown — and sunk — and the water has risen with it. The bridge now sits about five centimetres beneath the surface. Visitors appear to walk across the water.
+- **The blowhole fountain.** Twice daily, the city's weight-and-pulley system temporarily presses the island down enough that the whale's blowhole erupts. Sheets of water, rainbows in the mist, an intricate fountain network throughout the city — public spectacle that draws visitors from across Floteyn. Afterward the system releases. The shower is also the whale's regulated breath; the people of Balaena are, without knowing it, keeping their host alive.
+- **The secret.** A small organisation within the city's government **knows what Balaena actually is** and works to maintain the precise balance — too weak to fly away, not so weak that it dies. Their motive is the status quo: a city this beautiful, this profitable, this distinctive cannot afford for the whale to recover.
+- **Hooks:** weight-balance security at the gates is the city's defining ritual; the lake-still mirror reflection of nearby calm-water mornings makes Balaena uncannily beautiful at dawn; the secret organisation is the obvious plot lever; any sustained Magitech weight-disturbance — say, a Magitrain rolling through (impossible, no rails) or a cloudship docking — risks tipping the equilibrium.
+
 ---
 
 ### Sumendar — Fire · Komo
@@ -321,7 +340,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `w
 **Sub-regions:**
 - **Vernua Dominion** — the sub-region housing Nahaskel, Vesuna's city-state. The city sits within the Dominion but resists being governed by it — the relationship between mortal authority and the god's presence here is perpetually contested. *(Vernua likely drifted from Vesuna's own name — the Dominion named in her shadow.)*
 - **Kaosadaemi Principality** — (details TBD) *(Basque kaosa = chaos + Icelandic dæmi = district, domain → "the chaos district." Old compound name, fits the ancient naming rule.)*
-- **Basogur Jungle** — dense jungle sub-region shared with Ehizahar. *(Basque baso = forest/wood → drifted to Basogur. An old name for an old place.)* See also Ehizahar.
+- **Basogur Jungle** — dense jungle sub-region shared with Ehizahar. *(Basque baso = forest/wood → drifted to Basogur. An old name for an old place.)* See also Ehizahar. **The continental rail-blocker:** Basogur bisects the east-central waist of Talan and is the reason there is no through-rail between the northern and southern Magitrain networks (see `world-notes.md` — *Technology — Magitech and Infrastructure → The Continental Rail Network*). Arcanotech engineering attempts founder on the jungle's Vesuna-touched chaos-magic interference (rails warp, runes fail); indigenous Vanara/leshy/beast-spirits/druid resistance dismantles construction as it happens; and the Nashavel/Ehizahar political deadlock prevents any consortium from securing the right of way. **North-south travel routes around Basogur by ship across Midarra, by airship over the jungle (Arcanotech airships suffer turbulence and instrument drift; Occultech airships fly clean), or by the long overland bypass.**
 
 ---
 
@@ -337,7 +356,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `w
 **Sub-regions:**
 - **Lands of Villtur** — the umbrella tribal territory covering most of Ehizahar. The domain is overwhelmingly tribal — no unified kingdoms, no formal borders. The many tribes that live across the arctic tundra, grasslands, and ancient forests all fall under this collective name. Veidrath sits within this expanse. *(Icelandic villtur = wild, lost, strayed — old name, fits the ancient naming rule.)*
 - **Fenurra** — a sub-region of Ehizahar in its own right, bordering the Lands of Villtur but distinct from them. Defined by an ancient meteor crater and the volcanic activity that still surrounds it: sulfurous fumes, basalt fields, slow lava flows, and strange star-metals seeded into the ground by the impact. Harsh and resource-poor in conventional terms, but rich in materials no other place on Talan produces. The Fenurran tribes who live here are hardened, pragmatic, and politically distinct from the wider Villtur tribal sprawl — they hold themselves apart even from their tribal neighbours. The only significant volcanic activity outside Sumendar. Full cultural detail — four tribes, Speaker's Mantle politics, Blackglass / Velthite / Ghost Willow materials, the Scar of Aeris, etc. — lives in `cultures.md`.
-- **Basogur Jungle** — the deep jungle territory in the south and southeast, shared with Nashavel. See also Nashavel.
+- **Basogur Jungle** — the deep jungle territory in the south and southeast, shared with Nashavel. See also Nashavel. *(Continental rail-blocker — see the Nashavel entry above for the full breakdown.)*
 - **Ardo Beroa** — island sub-region of Ehizahar. *(Basque ardo = wine + beroa = hot, warm → "warm wine" or "hot wine." Old name, etymology partially obscured by drift.)*
 
 ---

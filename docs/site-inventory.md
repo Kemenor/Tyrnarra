@@ -2,7 +2,7 @@
 
 Live at **https://tyrnarra.kunkel.swiss** · Auto-deploys on push to `main` · No build step.
 
-Last updated **2026-05-16**. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [sidebar-nav.md](sidebar-nav.md).
+Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [sidebar-nav.md](sidebar-nav.md).
 
 ---
 
@@ -17,7 +17,14 @@ Last updated **2026-05-16**. For repo conventions and folder layout, see [`../CL
 /talan/                        [Style B · grounded]
   talan.html                   continent overview, three seas, 13 domain cards   POPULATED
   history.html                 8 eras with three-tier knowledge UI               POPULATED
-  the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16)
+  the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
+
+Tier 1 publishing pass — 2026-05-17:
+  grand-gods.html              Vesuna +Free Will, Hinka +Violent Death extra cleric domains
+  brauogi.html                 Minotaur added as 3rd dominant ancestry + Magitrain southern-network note
+  lautara.html                 Emarrea card now links to its page; Crossroads sub-region card added; Magitrain hub + Sortalde embassies note
+  lioaru.html                  Lost Kingdom expanded (Blackened Lands, Skeleton/Fleshwarp origin); Storveldi/Betibizi GM Secret expandable; Magitrain limits note
+  sumendar.html                Order of Steam reframed as Magitech industrial heart (Elden-tech origin, House Eisenhart); Dragon's Reach two-recovery-projects friction; Magitech + Magitrain notes
 
 /talan/domains/                13 domain pages — etymology, facts, character pills,
                                god's city, sub-region cards

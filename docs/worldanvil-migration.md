@@ -15,6 +15,8 @@
 >
 > ### Resume Point — first-half (lore-side) closure
 >
+> **Pre-publishing canon polish, 2026-05-17:** Three sketches that had been sitting in `unplaced.md` were promoted to full canon: **Balaena** (placed in Floteyn → Floating Isles of Shuun), and **Magitech + Magitrains + Conductor's Station + Train Pirates** (the whole technology layer, now a full *Technology — Magitech and Infrastructure* section in `world-notes.md`). Same-day restructure expanded Magitech into an umbrella term with **four school-based sub-traditions** (**Arcanotech** dominant, **Occultech** rarer, **Divitech** almost non-existent, **Primotech** essentially non-existent). **UHTC identity resolved: the Elden.** Four transport tiers documented: **Magitrains** on land (Arcanotech, common); **Ships** on water (normal wooden by count, Magitech for the wealth upgrade — typically Arcanotech, Occultech for chaos-water specialists); **Airships** in the sky (always Magitech — Arcanotech standard or Occultech with bound air elemental, no non-magical airships exist); **Cloudships** for the Cloud Sea (always *dual-school* Magitech — Arcanotech + Occultech most common, +Divitech rare, +Primotech legendary; the dual-school requirement is what makes cloudships so rare). North-south crossing now includes airship-over-Basogur as the premium option (with Occultech airships handling the chaos-magic cleaner than Arcanotech).
+>
 > ### Current state
 >
 > | Phase | Lore | HTML |
@@ -305,10 +307,10 @@ The table below tracks which lore additions await HTML publication when the user
 | Tyrnarra & the Cloud Sea (Solyra/Veyru/Calune) | `world-notes.md` | `index.html` (cosmology landing) — possibly already covered, audit pending |
 | Full Three-Layer planar structure | `world-notes.md` | `index.html` planar section — audit pending |
 | Sanctum-as-literal-home + Council of Thirteen | `world-notes.md` | `grand-gods.html` / Cronus's Frae City page |
-| Per-God Sheet (aspects, weapons, depictions for all 13) | `world-notes.md` | `grand-gods.html` cards — partially mirrored, audit per-card |
+| Per-God Sheet (aspects, weapons, depictions for all 13) | `world-notes.md` | `grand-gods.html` cards — partially mirrored, audit per-card. ✅ Vesuna *Free Will* + Hinka *Violent Death* extra cleric domains added 2026-05-17. |
 | Age of Corruption mortal myth | `world-notes.md` | history page mortal-myth expandable |
-| **The Seven Wardstones** (full table) | `world-notes.md` | `the-binding.html` — partially mirrored (Araphel context), table needs publishing |
-| **The Nine Generals + Nine Dungeons** | `world-notes.md` | `the-binding.html` + `factions/remnants.html` |
+| ~~**The Seven Wardstones** (full table)~~ | `world-notes.md` | ✅ `the-binding.html` complete (2026-05-17). |
+| ~~**The Nine Generals + Nine Dungeons**~~ | `world-notes.md` | ✅ `the-binding.html` complete with new General→Domain grants (Swarm/Decay/Nightmares/Naga); GM Secret "What Is Actually Bound" revealing Elden truth added. `factions/remnants.html` cross-link preserved; remnants page itself untouched this pass. |
 | **Araphel deep dive** (sanctum, rites, iconography) | `world-notes.md` | `domains/myrkono/myrria/myrria.html` — partially mirrored; rites + sacred-symbol detail to add |
 | **Phase 2 — Geography** | | |
 | Fenurra placement (Lands of Villtur, meteor + volcanism) | `geography.md` | new `domains/ehizahar/fenurra.html` — already exists, audit completeness |
@@ -316,8 +318,8 @@ The table below tracks which lore additions await HTML publication when the user
 | Emarrea + Biozuri + Kawaakari (kitsune kingdom) | `geography.md` | new `domains/lautara/emarrea/` folder |
 | Myrria's 8 districts | `geography.md` | `domains/myrkono/myrria/myrria.html` — district detail to publish |
 | Hollow of Ten Thousand Threads | `geography.md` | `the-binding.html` (Nine Dungeons section) or own page |
-| **Crossroads** (tri-domain trade nexus) | `geography.md` | new page or section on Lautara |
-| **The Blackened Lands / Lost Kingdom expansion** | `geography.md` | new page under `domains/lioaru/` |
+| **Crossroads** (tri-domain trade nexus) | `geography.md` | ✅ Sub-region card on `lautara.html` published 2026-05-17 (Spider's Silk Inn mentioned, Sortalde embassies noted). Dedicated page = Tier 2. |
+| **The Blackened Lands / Lost Kingdom expansion** | `geography.md` | ✅ `lioaru.html` updated 2026-05-17 — Lost Kingdom card expanded (Blackened Lands public detail, Skeleton/Fleshwarp origin), GM Secret expandable added (Storveldi truth + Betibizi). Dedicated `lost-kingdom.html` page = Tier 2. |
 | **Other Continents** framing | `geography.md` | continent-overview note on `talan.html` or own page |
 | Fenurran culture (4 tribes, weapons, doctrine) | `cultures.md` | section on `fenurra.html` |
 | Kitsune culture (Heartcourt, 9 Hearts, Catjomin Sake) | `cultures.md` | section on emarrea-area page |

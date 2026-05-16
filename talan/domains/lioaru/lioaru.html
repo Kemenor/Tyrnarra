@@ -38,6 +38,7 @@
       <div class="pill-row" style="margin-top:6px"><span class="pill">Temporal Magic</span><span class="pill">Unstable Time</span><span class="pill">Ancient Ruins</span></div>
     </dd>
     <dt>Bound God</dt><dd>Tani — domain of Time</dd>
+    <dt>Magitrain</dt><dd>Lines reach the River Duchies and Hareaveldi from the wider <b>southern network</b>; the desert interior is served by caravan, the mobile capital Denbora is served by nothing scheduled, and the <b>Lost Kingdom has no rail and never will</b> — the Blackened Lands' chaos-magic scrambles Arcanotech precision, and no consortium would build there anyway.</dd>
   </dl>
 
   <div class="gods-city">
@@ -57,10 +58,10 @@
       <div class="subregion-tags"><span class="subregion-tag">Houses Denbora</span></div>
     </div>
     <div class="subregion-card">
-      <div class="subregion-name">Lost Kingdom</div>
-      <div class="subregion-etym">Modern English</div>
-      <div class="subregion-desc">Ruined/lost territory on the western coast. Fell during or after the Week of Crimson Rain, directly tied to Tani's death. Temporally unstable, deeply dangerous. Among the most hazardous ruins on Talan.</div>
-      <div class="subregion-tags"><span class="subregion-tag">Ruined</span><span class="subregion-tag">Dangerous</span></div>
+      <div class="subregion-name">Lost Kingdom · The Blackened Lands</div>
+      <div class="subregion-etym">Modern English; folk name <i>the black spot on the map</i></div>
+      <div class="subregion-desc">Ruined western-coast territory. Fell during the Week of Crimson Rain — this is where <b>Tani was struck down</b>, and the divine retaliation that followed wounded the land so deeply it has never healed. Modern features: blackened soil, time-warped strata (moments repeat, ruins read newer than they should), ambient necromantic resonance, periodic fleshwarp incidents in survivors and trespassers, concentrations of restless dead. <b>Origin of the natural-born Fleshwarp and Skeleton ancestries</b> — both arise from the cursed ground itself, not from any current faction's work. No kingdom claims it; the Adventurers' Guild posts a perpetual standing warning. Tani-mourning pilgrims, necromancers, and ascension-cultists are the most common visitors.</div>
+      <div class="subregion-tags"><span class="subregion-tag">Ruined</span><span class="subregion-tag">Cursed ground</span><span class="subregion-tag">Fleshwarp + Skeleton origin</span></div>
     </div>
     <div class="subregion-card">
       <div class="subregion-name">Lost Isle</div>
@@ -82,9 +83,29 @@
     </div>
   </div>
 
+  <div class="prose" style="margin-top:32px">
+    <div class="secret-era">
+      <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Who Killed Tani &amp; What the Blackened Lands Really Are</button>
+      <div class="secret-era-content">
+        <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+        Tani's killers were the <b>Storveldi Denbora</b> — a mortal civilisation of the Gods' Era whose ruling class had self-ascended to Demi-God status by belief-and-power accumulation, with two sovereigns reaching Minor God status through the integration of recovered shards of divinity. They built their capital atop earlier Elden ruins on what is now the Lost Kingdom coast. They <b>claimed Elden descent</b> for prestige; they had no such blood. The claim is the original lie behind every modern Azarketi who still inherits "Elden blood" folklore — those Azarketi descend from the Storveldi Denbora's experimented-upon population, not from the Elden themselves.<br><br>The Storveldi Denbora <b>attacked Tani in her own domain and killed her</b> — the first Grand God ever slain. The Week of Crimson Rain that followed obliterated their homeland. The cursed land left behind is what the modern map calls the Lost Kingdom.<br><br><b>One member of the ruling class survived.</b> He used the integration procedure on himself in the aftermath, ascended to Minor God of Undeath, took the self-given name <b>Betibizi</b> ("eternal life"), and fled Talan for Abyss. He has not returned. He is the spiritual root of the Blackened Lands' ambient necromancy and the canonical source-god for the natural-born Skeleton ancestry — and he is the <b>original holder of the integration procedure</b>, the choke-point knowledge that could elevate other mortals past Demi-God status. Fragments persist on Talan among his cult and the descended lineages.<br><br>The folk-history version — <i>"the God Killing Incident"</i> — strips the killers from the story; most modern usage doesn't know who they were. Player-facing material on this page deliberately preserves that gap.<br><br>See <a href="/talan/history.html">history.html → Gods' Era</a> for the timeline placement; <a href="/talan/the-binding.html">the-binding.html → GM Secret</a> for the Corrupted God's true nature; and the bestiary entries for <a href="/talan/factions/factions.html">Skeleton / Fleshwarp / Azarketi</a>.
+      </div>
+    </div>
+  </div>
+
   <div class="footer">TYRNARRA · TALAN · LIOARU</div>
 
 </div>
+
+<script>
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
 
 </body>
 </html>
