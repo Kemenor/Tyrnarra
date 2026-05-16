@@ -6,7 +6,9 @@ How the persistent sidebar on every page is built and how to extend it.
 
 ## How it works
 
-- The sidebar markup lives in `/assets/site-nav.js` (the `NAV_HTML` array near the top).
+- The sidebar structure lives in `/assets/site-nav.js`. Two data sources drive it:
+  - **`DOMAINS`** — the array of 13 god-domains. Each entry has a `slug`, `label`, `href`, and a `children` list of nested sub-region/settlement pages.
+  - **The top-level section markup** (World & Cosmos, Talan section, Factions) — string literals inside `buildNavHtml()`.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
@@ -15,7 +17,7 @@ How the persistent sidebar on every page is built and how to extend it.
   <script defer src="/assets/site-nav.js"></script>
   ```
 
-- On `DOMContentLoaded`, the script injects the sidebar markup as the first child of `<body>`, then wires up the toggle button, the scrim, the Escape-key handler, and the "is-current" highlight.
+- On `DOMContentLoaded`, the script builds the sidebar markup from the data arrays, injects it as the first child of `<body>`, then wires up the toggle button, the scrim, the Escape-key handler, the `.is-current` highlight, and the accordion chevrons.
 
 The page tells the sidebar which entry to highlight with:
 
@@ -39,14 +41,26 @@ The slug doesn't have to match the filename — it just has to match between the
 
 ## How to extend the nav
 
-**To add a new top-level page** (a new domain, a new faction, a new world reference):
+**To add a new top-level page** (a new continent-level reference, a new faction, etc.):
 
 1. Open `/assets/site-nav.js`.
-2. Add a `<li>` to the matching `nav-section` inside the `NAV_HTML` array.
-3. Use a unique `data-page="<slug>"`.
+2. Inside `buildNavHtml()`, find the matching top-level section's string array (World &amp; Cosmos, Talan, or Factions).
+3. Add a `<li>` line with a unique `data-page="<slug>"`.
 4. On the new HTML page, set `<body data-page="<slug>">`.
 
-That's it. One file edited. No find-and-replace across pages.
+**To add a sub-region or settlement under a domain** (nested accordion entry):
+
+1. Open `/assets/site-nav.js`.
+2. Find the matching entry in the `DOMAINS` array.
+3. Push a child object `{ slug, label, href }` into its `children` array.
+4. On the new HTML page, set `<body data-page="<slug>">` matching the child's slug.
+
+The accordion will:
+- Show a chevron `▸` next to any domain whose `children` array is non-empty (and no chevron for domains with empty children).
+- Auto-expand the domain when the current page is either **that domain itself** or one of its **nested children**. So visiting Myrria auto-opens the Myrkono submenu; visiting the Myrkono domain page also auto-opens it (so the chevron isn't required to discover what's underneath).
+- Toggle open/closed on chevron click. The domain name itself stays a normal link — clicking it navigates to the domain page rather than expanding.
+
+One file edited. No find-and-replace across pages.
 
 ---
 
@@ -60,4 +74,8 @@ That's it. One file edited. No find-and-replace across pages.
 
 ## Scope
 
-The sidebar carries only top-level structure — World & Cosmos, Talan, Domains, Factions. Settlement pages and sub-region pages are accessed from their parent domain page, not from the sidebar, to avoid bloat.
+The sidebar carries:
+- **Top-level world-and-Talan structure** — World & Cosmos, Talan-level pages (Overview, History, The Binding), Factions.
+- **The 13 Domains**, each with an optional nested list of promoted sub-region and settlement pages (accordion, click-to-expand).
+
+To avoid sidebar bloat, only **promoted** sub-regions get a sidebar entry. A sub-region is "promoted" when it has its own HTML page (e.g. Fenurra, Emarrea, Myrria). Sub-regions and settlements that exist only as cards or sections on a domain page are not in the sidebar — visitors reach them via the parent domain page.

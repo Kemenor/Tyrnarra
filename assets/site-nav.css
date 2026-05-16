@@ -86,6 +86,57 @@
 }
 .nav-scrim.open { opacity: 1; pointer-events: auto; }
 
+/* ── Accordion domain rows (domain link + expand chevron + nested sublist) ── */
+.nav-domain-row {
+  display: flex;
+  align-items: stretch;
+}
+.nav-domain-row > a {
+  flex: 1;
+  min-width: 0;
+}
+.nav-expand {
+  background: transparent;
+  border: 0;
+  color: var(--gold-dim, #8a6e28);
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid transparent;
+  transition: transform 0.22s ease, color 0.15s;
+}
+.nav-expand:hover {
+  color: var(--gold-bright, var(--gold, #c8a84b));
+}
+.nav-domain.expanded > .nav-domain-row > .nav-expand {
+  transform: rotate(90deg);
+  color: var(--gold, #c8a84b);
+}
+.nav-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+.nav-domain.expanded > .nav-sublist {
+  max-height: 600px;
+}
+.nav-sublist a {
+  padding-left: 28px;
+  font-size: 0.85rem;
+  color: var(--text-dim, #8a8070);
+  opacity: 0.85;
+}
+.nav-sublist a:hover {
+  opacity: 1;
+}
+
 @media (max-width: 600px) {
   .site-nav { width: 86vw; }
 }
