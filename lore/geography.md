@@ -30,7 +30,7 @@ Both move as one. The Twin Cities answer to no god and no kingdom — they are t
 
 Tyrnarra has more than one continent. Most are little known to Talanese scholars — Hafra is wide, the Cloud Sea wider, and active contact is rare.
 
-**The one exception is the home continent of the Red Empire** (see `factions.md` — Off-Continent Powers). Its name, geography, and internal politics are largely unknown on Talan, but its existence is canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, and that empire has been throwing its Iron Tide navy at Talan's coasts. Coastal kingdoms (notably Itzasoa, Ilun Tasun, Floteyn, the Order of Steam's ports, and Ehizahar's southern shore) have all had Iron Tide encounters.
+**The one exception is the home continent of the Red Empire** (see `factions.md` — Off-Continent Powers). Its name, geography, and internal politics are largely unknown on Talan, but its existence is canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy had some contact with Talan's coasts, most of it unfriendly.
 
 The bound thirteen reside on Talan, not on the Empire's home continent. The Gods' Law applies anywhere on the Material Plane (it's physics, not jurisdiction), but the gods themselves do not have established sancta or temple complexes off-continent — which is why the Red Empire can build a "godless state" infrastructure without the direct daily friction a Talanese kingdom would face.
 
