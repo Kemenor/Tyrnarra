@@ -26,6 +26,18 @@ Both move as one. The Twin Cities answer to no god and no kingdom — they are t
 
 ---
 
+## Other Continents
+
+Tyrnarra has more than one continent. Most are little known to Talanese scholars — Hafra is wide, the Cloud Sea wider, and active contact is rare.
+
+**The one exception is the home continent of the Red Empire** (see `factions.md` — Off-Continent Powers). Its name, geography, and internal politics are largely unknown on Talan, but its existence is canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, and that empire has been throwing its Iron Tide navy at Talan's coasts. Coastal kingdoms (notably Itzasoa, Ilun Tasun, Floteyn, the Order of Steam's ports, and Ehizahar's southern shore) have all had Iron Tide encounters.
+
+The bound thirteen reside on Talan, not on the Empire's home continent. The Gods' Law applies anywhere on the Material Plane (it's physics, not jurisdiction), but the gods themselves do not have established sancta or temple complexes off-continent — which is why the Red Empire can build a "godless state" infrastructure without the direct daily friction a Talanese kingdom would face.
+
+**Open thread:** The home continent's name, internal map, and any non-Imperial polities that share it with the Empire are TBD. Crossing distance is "long enough that landings are campaigns, not raids."
+
+---
+
 ## Naming Convention (regions)
 
 God domains are ancient — they predate mortal civilization and carry old-world names (Basque or Icelandic root, drifted). The god's domain character shapes the name but does not describe it directly. Drift can happen anywhere in the word, not just the end. Creativity and cross-language compounds are encouraged.
@@ -70,6 +82,7 @@ God domains are ancient — they predate mortal civilization and carry old-world
 - **Twin Suns** — named for a hilltop phenomenon where both moons are visible alongside the sun on clear days. Coastal sub-region; Soul Tree island lies just offshore.
 - **Azkataria** — sub-region containing Merkavar (Jianna's city-state), which sits on a lake within Azkataria's interior.
 - **Soul Tree** — a small rocky island in Midarra, just off the coast of Twin Suns. Named for the single massive pale tree at its center — an actual tree, through which souls may wander on to the Postlife. A small structure stands beside it (shrine or guardian post). One of the most cosmologically significant sites on Talan: a natural passage point between the Life Layer and the Postlife that does not require death in the conventional sense. Modern English name.
+- **Crossroads** — Lautara's eastern marches. A trade-nexus settlement sitting on the three-way border of **Lautara** (Commerce), **Zuzental** (Law), and **Ezkudon** (Knowledge). Functionally independent in the same way Frae City is independent: not legally sovereign, but every neighbouring power benefits from its neutrality and none will be the one to break it. Modern English name. **The Spider's Silk Inn** (run by the ancient Anadi matron **Charna**) is the town's defining institution; see `factions.md`. The Mercenary Guild treats Crossroads as a major hub. Officially Lautaran for tax purposes; functionally tri-domain.
 
 ---
 

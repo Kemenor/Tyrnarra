@@ -87,6 +87,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Emarrea** — Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom — fox-colour and gentle-host disposition encoded in the name. Forested eastern highlands of Lautara. Capital: Biozuri.
 - **Biozuri** — Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
 - **Soul Tree** — modern English, cosmologically significant island
+- **Crossroads** — modern English. Tri-domain trade-nexus settlement on the Lautara / Zuzental / Ezkudon border; functionally independent. Home of the Spider's Silk Inn (see `factions.md`).
 
 **Myrkono (Darkness):**
 - **Ilun Tasun** — Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself"
@@ -220,6 +221,46 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Dea Elurra** — Basque *elurra* (snow/ice) → drifted to *Dea Elurra*
 - **Maitagarri** — Basque *maitagarri* (lovable, charming, endearing); forest region
 - **Star Island** — modern English; small star-shaped island in Midarra
+
+### Faction proper nouns
+
+**The Adventurers Guild:**
+- **Quill & Blade** — Plain English. The Guild's sigil and motto-pair (words + deeds). Modern.
+- **First of the Quill & Blade** — Plain English. Elected head of the Grand Assembly; the Guild's highest single authority.
+- **Branch Office / Guild Office / Guildhall / Kingshall / Godshall** — Plain English ladder of regional Guild facilities, smallest to largest.
+- **Lord Albrecht Lavisburg** — Modern personal name, Germanic-style. A 67-year-old human; minor demi-god of Order and Ethics by accumulated belief. See `factions.md`.
+- **Seraphel Duskbane** — Modern compound personal name. Fetchling Guild Sovereign of Myrria's Godshall. *Duskbane* earned epithet (English). See `factions.md`.
+
+**The Red Empire (off-continent — across Hafra from Talan; full entry in `factions.md` under Off-Continent Powers):**
+- **The Crimson Emperor** — Plain English title.
+- **The Pyre Seat / Pyre Throne** — Plain English. Throne forged from the weapons of defeated kings.
+- **The Ordeal of Ash** — Plain English. The Emperor's forty-day endurance trial.
+- **The Trial of Ash** — Plain English. The Empire's universal age-ten endurance test.
+- **Red Army / Legions of Flame** — Plain English. The Empire's standing army.
+- **Ashen Guard** — Plain English. The Emperor's elite.
+- **The Menagerie** — Plain English (with deliberate irony — they call themselves *artisans of war*; outsiders use the *cage* reading). Their secret-most corps.
+- **Iron Tide** — Plain English. The Empire's navy.
+- **Master Curator / Curator / Keeper / Collector** — Plain English. The Menagerie's rank ladder.
+- **Pyre Throne / Command Caste / Forged / Blooded / Respected Hands / Ashen / Broken / Fodder** — Plain English caste names of the Red Empire's social hierarchy.
+- **Flamefangs / Frostfangs / Steam Hulks / Corsair Auxilia** — Plain English. Iron Tide ship classes.
+- **Admirals of Flame and Frost** — Plain English. Iron Tide dual-command.
+- **Augments / Exemplars / The Apex Line / Ashborn / Harvested / Fleshwarps** — Plain English. The Menagerie's creation lines.
+- **Fleshwrights** — Plain English. Common-Empire slang for the Menagerie.
+
+**House Eisenhart (Order of Steam):**
+- **House Eisenhart** — Germanic-style compound (*Eisen* "iron" + *Hart* "hard"). Modern dwarven noble name. Fits the Order of Steam's modern stratum.
+- **Stahlglanz** — Old Dwarvish, glossed in-text as "Steelshine." The House's 400-metre amphibious mobile fortress. Old Dwarvish is the Order of Steam's internal antique register, parallel to Fenurra's Latinate or the kitsune's Japanese-style internal vocabulary.
+- **Council of the Forge** — Plain English. The Order of Steam's war-policy / industrial council.
+- **Anvil Throne / Steel Marches / Furnace-Law** — Plain English compound titles of the Eisenhart Matriarch.
+- **Ethersteel** — Plain English compound. The House's signature magic-warded plating.
+- **Eisenhart Leviathan-class / Ironwing line / runeblade bayonet** — Plain English. House Eisenhart's signature exports.
+- **Siege of Nine Storms** — Plain English. The campaign in which the *Stahlglanz* broke a three-nation blockade.
+- **Total Mobilization** — Plain English. The Order of Steam's standing-army wartime escalation; not declared in over a century.
+
+**The Spider's Silk Inn:**
+- **The Spider's Silk** — Plain English. The inn at Crossroads; neutral ground / mercenary hiring hall / information exchange.
+- **Matron Charna** — Anadi personal name; modern-stratum. Ancient Anadi proprietor of the Spider's Silk.
+- **The Hiring Wall / The Webroom / Silk Lines Service / The Favor** — Plain English. The inn's institutional features.
 
 ### Folk Names for Cosmic Things (mortal-mouth, not GM truth)
 
