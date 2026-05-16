@@ -9,13 +9,13 @@ Distinct peoples on Talan whose identity is cultural — origin, character, inte
 > *"We do not pray for easier lives. We sharpen ourselves against the one we were given."*
 > — Fenurran proverb
 
-A people of ash and will. The Fenurrans inhabit the sulfurous wasteland surrounding the ancient meteor crater at the heart of Ehizahar, inside the Lands of Villtur (see [geography.md](geography.md)). To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home — a people forged in a crucible where survival is a daily, hard-won victory.
+A people of ash and will. The Fenurrans inhabit the sulfurous wasteland surrounding the ancient meteor crater at the heart of Ehizahar — the **Fenurra** sub-region, distinct from but bordering the Lands of Villtur (see [geography.md](geography.md)). To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home — a people forged in a crucible where survival is a daily, hard-won victory.
 
 They are fiercely independent, brutally pragmatic, and passionate in their personal lives in a way the colder politics of their neighbours rarely matches. They argue with vigour, laugh without restraint, and love with fire-coloured intensity. Their celebrations are explosive and cathartic. Their wars are surgical and silent.
 
 ### Where they live
 
-The Fenurran heartland is **Fenurra**, the volcanic sub-territory of the Lands of Villtur — a basalt-and-ash wasteland defined by the meteor crater at its centre. The crater is called the **Scar of Aeris**, and the city carved into its inner walls is **Aeris**, the Fenurran capital. The crater bleeds slow volcanism and seeds the surrounding land with materials that exist nowhere else on Talan: star-metals, sulfur-glass, and rare flora that thrive only in the poisonous air.
+The Fenurran heartland is **Fenurra**, the volcanic sub-region of Ehizahar — a basalt-and-ash wasteland defined by the meteor crater at its centre. The crater is called the **Scar of Aeris**, and the city carved into its inner walls is **Aeris**, the Fenurran capital. The crater bleeds slow volcanism and seeds the surrounding land with materials that exist nowhere else on Talan: star-metals, sulfur-glass, and rare flora that thrive only in the poisonous air.
 
 Wood is precious in Fenurra. The people rely on emberstones and slow-burning char for heat and forging. Air is often thick with sulfurous fumes. The land is prowled by beasts — direbeasts, sulfur-stags, sulfur lynxes, ash boars — that would shatter the nerves of lesser warriors. Smaller named places within Fenurra:
 - **Mount Skel** and the **Ashwall Divide** — high crags where the Seravain build their paired cliff-homes.
@@ -285,7 +285,7 @@ Used with Whisperfang bows. Built on either standard Ghost Willow shafts (lethal
 - ~~**The Divine Faith**~~ — RESOLVED 2026-05-16. The Faith is the state religion of the **Legea Empire** (Zuzental sub-region). Its god is not one of the bound thirteen but a deity of the third (Postlife) layer; specific plane and name TBD. See `factions.md`.
 - ~~**The theocratic prince**~~ — RESOLVED 2026-05-16. The prince is the **heir to the Legea Empire** — and therefore heir of the demigod line that rules it. Personal name and demigod-parent's name still TBD.
 - **Spice Wine and the Dance of the Sulfur Fire** — both have ritual significance. Could be folded into the magic/faith page once a faith-overview pass is done.
-- **The four tribes' relationship to the Lands of Villtur tribes proper** — Fenurra is described as politically distinct from the broader Villtur tribal sprawl. The exact tension and trade between Fenurra and the non-Fenurran Villtur tribes needs definition.
+- **Relationship to the Lands of Villtur tribes** — Fenurra is its own sub-region of Ehizahar, but the wider Villtur tribal sprawl borders it directly. The exact tension and trade between Fenurra and the Villtur tribes needs definition.
 
 ---
 

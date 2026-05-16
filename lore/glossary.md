@@ -139,7 +139,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 **Ehizahar (Hunt):**
 - **Lands of Villtur** — Icelandic *villtur* (wild, lost, strayed); umbrella name for tribal territories
 - **Ardo Beroa** — Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; island sub-region
-- **Fenurra** — Icelandic *funi* (flame, blaze) + Basque *iturri* (spring, source) → *funi-iturri* "flame-source" → eroded over millennia to *Fenurra*. The land whose volcanism springs from a single ancient source — the meteor crater at its heart. Sub-territory within the Lands of Villtur.
+- **Fenurra** — Icelandic *funi* (flame, blaze) + Basque *iturri* (spring, source) → *funi-iturri* "flame-source" → eroded over millennia to *Fenurra*. The land whose volcanism springs from a single ancient source — the meteor crater at its heart. Its own sub-region of Ehizahar, bordering the Lands of Villtur.
 
 ### Fenurran proper nouns (Latinate / English register, not the deep-old stratum)
 

@@ -172,7 +172,7 @@ The Sanctum of Veils, at Myrria's heart, is both Araphel's residence on Talan an
 - **Symbol** — a half-mask split down the centre, one side smooth, the other etched with shifting patterns. Black-on-silver or white-on-deep-violet.
 - **Colors** — deep violet (rebirth), black (forgetting), silver (transformation).
 - **Sacred animal** — the raven, often depicted carrying a lantern or veil.
-- **Favoured weapon** — dagger.
+- **Favoured weapon:** the **Kusarigama** — sickle-and-chain; strikes unseen, binds prey in shadow. Canon both as iconography (art, ceremony, gods page) and as the PF2e mechanical favoured weapon for clerics.
 - **Sacred motifs** — veils, dark lanterns lit with violet flame, the Many Faces (murals of diverse faces gazing inward toward a shadowed void).
 
 ### Rites

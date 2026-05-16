@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Binding — Wardstones & The Nine · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #9a60c0; }
+
+  /* Wardstone region groups */
+  .ward-region { max-width: 880px; margin: 28px auto 0; }
+  .ward-region-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin-bottom: 4px; }
+  .ward-region-byline { text-align: center; font-style: italic; color: var(--gold-dim); font-size: 0.85rem; margin-bottom: 14px; }
+  .ward-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .ward-card { background: rgba(14,10,22,0.55); border: 1px solid rgba(154,96,192,0.38); border-radius: 6px; padding: 14px 16px; position: relative; }
+  .ward-card.divine { border-color: rgba(200,168,240,0.65); box-shadow: 0 0 32px rgba(154,96,192,0.12); }
+  .ward-number { position: absolute; top: 8px; right: 12px; font-family: 'Cinzel', serif; color: var(--gold-dim); font-size: 0.78rem; letter-spacing: 0.1em; }
+  .ward-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; font-size: 0.98rem; margin-bottom: 4px; padding-right: 60px; }
+  .ward-loc { font-style: italic; color: var(--gold-dim); font-size: 0.83rem; margin-bottom: 8px; }
+  .ward-desc { color: var(--text); font-size: 0.92rem; }
+
+  /* Nine Generals card list */
+  .general-list { max-width: 920px; margin: 16px auto 0; }
+  .general-card { background: rgba(20,8,8,0.5); border: 1px solid rgba(180,60,60,0.32); border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .general-card.defeated { opacity: 0.55; border-style: dashed; }
+  .general-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 4px; }
+  .general-name { font-family: 'Cinzel', serif; font-weight: 600; color: #e89a8a; font-size: 1.02rem; letter-spacing: 0.06em; }
+  .general-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Cinzel', serif; font-weight: 600; }
+  .general-tag.alive { background: rgba(180,60,60,0.2); color: #e89a8a; border: 1px solid rgba(180,60,60,0.5); }
+  .general-tag.defeated { background: rgba(80,140,80,0.18); color: #a8d8a8; border: 1px solid rgba(80,140,80,0.45); }
+  .general-tag.located { background: rgba(154,96,192,0.2); color: #c8a8f0; border: 1px solid rgba(154,96,192,0.5); }
+  .general-byline { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 8px; }
+  .general-desc { color: var(--text); font-size: 0.94rem; }
+</style>
+</head>
+<body data-page="the-binding">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><span>The Binding</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Binding</div>
+    <div class="page-subtitle">The Seven Wardstones · The Nine Generals · The War of Seals</div>
+    <div class="page-flavor">"They could not kill him, for such a power is beyond mortal reach — but they bound him in chains of divine law, sealed deep beneath the bones of the world."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">What the Binding Is</h2>
+  <div class="prose">
+    <p>At the close of the Age of Corruption, when the kingdoms had broken the armies of the Blightfather but could not kill him, his power was instead <b>bound</b>. Sealed beneath the bones of the world. The chains that hold him are not metaphor — they are anchored in seven monumental relics forged at the end of that age. <b>The Seven Wardstones.</b></p>
+
+    <p>While the Wardstones hold, the Corrupted God remains bound. He cannot raise armies directly. His will reaches the surface only through <b>the Nine Generals of Corruption</b> — his lieutenant-vessels, each commanding a subterranean fortress-dungeon, each a piece of his power made flesh.</p>
+
+    <p>The defence of the Wardstones and the hunt against the Nine is collectively called <b>the War of Seals</b>. It is the longest war Talan has known, and it is not over.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Seven Wardstones</h2>
+  <div class="prose">
+    <p>All seven Wardstones rest inside <b>Myrkono</b>, distributed across four of its sub-regions. The concentration is not accidental: <b>Araphel</b> was the first Grand God to stand with Cronus during the Week of Crimson Rain, and the binding was anchored under his watch. The chains of the bound run through his domain.</p>
+  </div>
+
+  <!-- Shadow Steppes -->
+  <div class="ward-region">
+    <div class="ward-region-name">Shadow Steppes</div>
+    <div class="ward-region-byline">Two stones · open plains and lake-shore city</div>
+    <div class="ward-cards">
+      <div class="ward-card">
+        <div class="ward-number">I · ✦</div>
+        <div class="ward-name">The Lakeside Wardstone</div>
+        <div class="ward-loc">A city on the shores of the great lake</div>
+        <div class="ward-desc">Anchors both commerce and faith. The city grew around the stone as nomadic clans gathered to guard its light. To live in the Lakeside city is to live within a constant pilgrimage.</div>
+      </div>
+      <div class="ward-card">
+        <div class="ward-number">II · ✦</div>
+        <div class="ward-name">The Steppes Wardstone</div>
+        <div class="ward-loc">Standing alone in the open grasslands</div>
+        <div class="ward-desc">Protected by wandering clans. Both a sacred pilgrimage site and a rallying point during times of war — a meeting place that no kingdom owns and every kingdom needs.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Itzasoa -->
+  <div class="ward-region">
+    <div class="ward-region-name">Itzasoa</div>
+    <div class="ward-region-byline">Two stones · canopy city and temple ziggurats</div>
+    <div class="ward-cards">
+      <div class="ward-card">
+        <div class="ward-number">III · ✦</div>
+        <div class="ward-name">The Forest Wardstone</div>
+        <div class="ward-loc">Hidden within the canopy of the great forest</div>
+        <div class="ward-desc">Enshrined in a vast arboreal city. Bridges of living wood and watchful druids keep eternal vigil. The stone is not so much guarded as <i>grown around</i> — the forest itself answers to its presence.</div>
+      </div>
+      <div class="ward-card">
+        <div class="ward-number">IV · ✦</div>
+        <div class="ward-name">The Temple Wardstone</div>
+        <div class="ward-loc">At the heart of a temple city</div>
+        <div class="ward-desc">Integrated into towering ziggurats. Priests conduct daily rites to keep corruption at bay. The rites are not optional — they have not stopped in centuries.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ilun Tasun -->
+  <div class="ward-region">
+    <div class="ward-region-name">Ilun Tasun</div>
+    <div class="ward-region-byline">Two stones · high monastery and fortified port</div>
+    <div class="ward-cards">
+      <div class="ward-card">
+        <div class="ward-number">V · ✦</div>
+        <div class="ward-name">The Monastery Wardstone</div>
+        <div class="ward-loc">High in the mountains</div>
+        <div class="ward-desc">Monks devote their lives to its guard. Pilgrims climb perilous paths to glimpse its veiled glow. The monastery has not opened its gates to a foreign army in living memory — but the path up the mountain is open to anyone willing to make it.</div>
+      </div>
+      <div class="ward-card">
+        <div class="ward-number">VI · ✦</div>
+        <div class="ward-name">The Port Wardstone</div>
+        <div class="ward-loc">In a fortified port city by the sea</div>
+        <div class="ward-desc">Both sacred relic and keystone of trade. The fleets of Ilun Tasun are sworn to its defence. Goods from half the continent pass within sight of it — and the city's customs officers double as the stone's watch.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Myrria -->
+  <div class="ward-region">
+    <div class="ward-region-name">Myrria</div>
+    <div class="ward-region-byline">The seventh and last — the divine anchor</div>
+    <div class="ward-cards" style="grid-template-columns: 1fr; max-width: 540px; margin: 0 auto;">
+      <div class="ward-card divine">
+        <div class="ward-number">VII · ✦</div>
+        <div class="ward-name">The Divine Wardstone</div>
+        <div class="ward-loc"><a href="/talan/domains/myrkono/myrria/myrria.html">Myrria — Sanctum of Veils</a></div>
+        <div class="ward-desc">The last of the seven. Unlike the others, it is openly bound to a living deity's protection — Araphel himself. Glows only beneath the stars; fades before the sun. It is said that as long as the Wardstone endures, the shadows of the god will guard the city from corruption — and that the moment its light goes out, the chain has broken.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 28px;">
+    <div class="callout-label">Why Myrria endures</div>
+    <p>Myrria is not bound to any kingdom, yet it is indispensable. Were Myrria to fall, the entire chain would be imperilled. For this reason, even rival kingdoms respect its independence — knowing that the survival of all rests partly in the mountain city.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Nine Generals of Corruption</h2>
+  <div class="prose">
+    <p>The Nine are the foremost servants of the bound Corrupted God — wrought from his power while he remains chained. Once mortal cultists, clerics, beasts, and nameless horrors from deep places, each was chosen and remade into a vessel of corruption's will. <b>Unlike their imprisoned master, the Nine can be fought and slain.</b> Their defeat weakens the Blightfather's reach in the world above.</p>
+
+    <p><b>The Nine Dungeons</b> — their colossal subterranean fortresses — did not exist in the long centuries after the binding. They <b>erupted eight years ago</b> (~2524 MR), tearing open pathways into the mortal world and disgorging the first great armies of corruption in the modern age. The kingdoms united, rallied adventurers and militias, and after bloody campaigns broke that first wave. To prevent another flood, the main entrances of the Nine Dungeons were sealed with wards, stone, and sacrifice.</p>
+
+    <p>Sealing the gates did not end the threat. Corruption now finds its way upward through smaller caverns and tunnel networks that lace the land, forcing the ongoing containment war. Entire caravans have vanished into corruption-fed gullies. Border towns plague-rot from below. The work of the Adventurers' Guild has shifted, in eight short years, from quest-running to siege management.</p>
+
+    <p><b>One has fallen. Eight remain.</b></p>
+  </div>
+
+  <div class="general-list">
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Vermin Queen</span>
+        <span class="general-tag alive">Active</span>
+        <span class="general-tag located">Located · Shadow Steppes</span>
+      </div>
+      <div class="general-byline">Mistress of swarms · hive-dungeon: the Hollow of Ten Thousand Threads</div>
+      <div class="general-desc">Breeds endless spiders, locusts, centipedes, and crawling things. When her children stir, they pour out in tides that choke entire valleys. Her dungeon lies in the Shadow Steppes, dangerously close to two Wardstones. Her webs are not mere silk: they are corruption-infused, sticky enough to bind armoured warriors and slow-poisoning to weapons and armour that touch them.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Rot-Tyrant</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Corpse-warlord in ruined armour</div>
+      <div class="general-desc">His rusting legions march from ossuary-halls, each step spreading despair and decay. Whole battlefields where he has stood do not grow living plants for a decade.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Blight-Seer</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Prophet twisted into living plague</div>
+      <div class="general-desc">A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. Cult survivors emerge speaking in fevered prophecy that, disturbingly, sometimes proves true.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Flesh-Sculptor</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Butcher who remakes flesh according to the Blightfather's design</div>
+      <div class="general-desc">A nightmare of stitched horrors and alchemical vats. His creations are not random — each is a deliberate experiment in what mortal flesh can be made to become.</div>
+    </div>
+
+    <div class="general-card defeated">
+      <div class="general-head">
+        <span class="general-name">The Ash-Binder</span>
+        <span class="general-tag defeated">Defeated</span>
+      </div>
+      <div class="general-byline">Once a corrupted elemental beast · volcanic furnace lair</div>
+      <div class="general-desc">A corrupted elemental beast who dwelled in a volcanic furnace of stone and fire. His defeat is celebrated across the kingdoms as proof that the Nine can fall. Still, his lair remains dangerous, haunted by remnants of his slag-born armies that did not die with him. The campaign that brought him down is the closest thing the modern age has to a founding heroism.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Whisperer in Dreams</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Shadowbound cultist turned nightmare made flesh</div>
+      <div class="general-desc">His temple of illusions warps dream and waking alike. Intruders wander in endless confusion. Survivors return convinced they have been gone for years, when in truth no time has passed at all — or the reverse.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Maw Serpent</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Colossal venomous serpent pulled from the world's depths</div>
+      <div class="general-desc">A cavern-dungeon of sinkholes, acid pools, and tunnels large enough to swallow caravans whole. The serpent itself has been seen only fleetingly — but the holes left where it has passed are unmistakable.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The False Saint</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">Once a holy woman, now a mockery of faith</div>
+      <div class="general-desc">Her underground chapel oozes false miracles, where prayers rot into curses and the faithful rise as zealots of corruption. Of all Nine, she is the one most likely to be mistaken for an ally before her nature is revealed.</div>
+    </div>
+
+    <div class="general-card">
+      <div class="general-head">
+        <span class="general-name">The Root-Twister</span>
+        <span class="general-tag alive">Active</span>
+      </div>
+      <div class="general-byline">A beast of wild growth remade into a lord of rot</div>
+      <div class="general-desc">His living dungeon is an underground jungle of strangling vines, carnivorous trees, and choking spores. Above-ground forests near his lair are slowly being consumed from below.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The War of Seals — A Doctrine, Not a Campaign</h2>
+  <div class="prose">
+    <p>The War of Seals has no single front. It is fought on every Wardstone watch and at every dungeon mouth simultaneously. Its strategy rests on a simple equation:</p>
+    <ul>
+      <li><b>Keep the Wardstones safe</b> — the moment one falls, the binding weakens. Every kingdom with a stone within its borders treats its defence as continental, not local.</li>
+      <li><b>Kill the Generals as opportunity permits</b> — each defeat permanently weakens the Blightfather's reach. The Ash-Binder's fall proves it can be done.</li>
+      <li><b>Contain the leakage</b> — even with the Nine Dungeons sealed, smaller emergence events continue. The Adventurers' Guild maintains a standing research operation to predict and respond.</li>
+    </ul>
+    <p>Some researchers believe the Corrupted God is healing — that the eruption of the Nine Dungeons eight years ago was the first major fracture, and others will follow. Others believe the eruption was something else entirely: a probe, a test, or a deliberate provocation by something inside the binding that has finally found a way to push.</p>
+    <p>The Wardstones still glow. For now.</p>
+  </div>
+
+  <div class="callout" style="margin-top: 28px; border-color: rgba(154,96,192,0.5);">
+    <div class="callout-label">See also</div>
+    <ul style="margin: 6px 0 0;">
+      <li><a href="/talan/domains/myrkono/myrria/myrria.html">Myrria — City of Second Chances</a> (houses the Divine Wardstone)</li>
+      <li><a href="/talan/factions/remnants.html">Remnants of Corruption</a> (the broader threat structure)</li>
+      <li><a href="/talan/history.html">History &amp; Eras</a> (the Age of Corruption, the Week of Crimson Rain, the Counting of Years)</li>
+      <li><a href="/grand-gods.html">The 13 Bound Gods</a> (Araphel — the god who anchors the chain)</li>
+    </ul>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · THE BINDING</div>
+
+</div>
+
+</body>
+</html>
