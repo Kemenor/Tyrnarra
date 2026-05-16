@@ -1,5 +1,49 @@
 # WorldAnvil → Lore Migration Plan
 
+> ## Resume Point — 2026-05-16 (end of session)
+>
+> **Lore-side migration: COMPLETE.** All five phases (plus a 3.5 canon-corrections pass) are integrated into `lore/`. No further WorldAnvil-export-driven work remains.
+>
+> ### Current state
+>
+> | Phase | Lore | HTML |
+> |---|---|---|
+> | 1 — Cosmology | ✅ DONE | ⏳ partial |
+> | 2 — Geography | ✅ DONE | ⏳ partial |
+> | 3 — Factions | ✅ DONE | ❌ not started |
+> | 3.5 — Canon corrections (Storveldi Denbora) | ✅ DONE | ❌ not started |
+> | 4 — Bestiary | ✅ DONE (with post-remaster versatile-heritage rework) | ❌ not started |
+> | 5 — Timeline | ✅ closed (absorbed into 3.5) | — |
+>
+> ### Most-recent canon work (late session, 2026-05-16)
+> - **Mortal Ascent Ladder** + shard mechanic locked in (`world-notes.md`). Shards are *found*, not granted. Five sources: ruins, godblood battlefields, killing a Minor/Major God, Aurora Veil + Duskmire veil, planes where gods have died. **Integration procedure** is the rare-but-not-lost choke-point knowledge.
+> - **Storveldi Denbora** reframed as the real Tani-killers (false-Elden-claim civilisation). The Blackened Lands are their ruined capital and the natural source of Fleshwarp and Skeleton ancestries.
+> - **Versatile heritages post-remaster:** full reshuffle done. Wood (Ardande) → Feyworld lineage; Metal (Talos) → Shadowplane lineage; neither plane belongs to a bound god. Nephilim is universal divine-blood (any god) OR fiendish (any demon/devil). Dhampir reframed as undead-touched (Vampire heritage), *not* Araphel-aligned. Demons AND devils are both canonically redeemable in principle.
+> - Talan HTML sanitised: Cronus tile on `talan.html` no longer leaks the GM-truth that he was mortal.
+>
+> ### Open work — pick up here
+>
+> **Bestiary follow-ups** (PF2e remaster reconciliation):
+> - **Base ancestry roster rework** — the bestiary's 41 entries are pre-remaster WA imports. Needs a post-remaster pass: new ancestries to add, retired/renamed ones to remove, the domain-distribution table to re-check.
+> - **Tian Xia ancestries pass** — entire Eastern-stratum batch (Oni and others). **Hungerseed** currently sits in `bestiary.md` as a TBD placeholder pending this.
+> - **Individual virtue-demon names** beyond Muiral the Misshapen.
+> - **Sin-devil names, planar seats, politics** — currently placeholder.
+>
+> **Worldbuilding hooks raised this session, not yet resolved:**
+> - **Vampire origin on Talan.** Dhampir got reframed as undead-touched (not god-touched), which made vampires-as-an-independent-lineage canon. Their origin is undefined. Candidate hooks: failed Storveldi Denbora integrations, Blackened Lands émigrés, banned-god creations, Feyworld émigrés.
+> - **Eight remaining Nine Generals dungeons** still need geographic placement (only the Vermin Queen's Hollow is placed).
+> - **Divine Faith** — god identity, demigod ruler, theocratic prince identity all TBD.
+> - **Red Empire home continent** — name, internal map, non-Imperial neighbours, crossing distance all TBD.
+> - **The Storveldi Denbora integration procedure** — who holds it now, how complete the surviving record is, whether the bound thirteen know. The single largest open hook in the setting.
+>
+> **HTML publishing — not started yet:** full per-phase tracker in *HTML Publishing — Status Tracker* below. The user holds the publish signal; nothing should be pushed to HTML without an explicit go-ahead.
+>
+> **Memory:** A `feedback` memory exists noting that the user wants check-ins between phases of this migration. Future sessions should respect that.
+
+---
+
+
+
 Migrating content from `worldanvil-export/` into the canonical `lore/` files.
 **Rule:** existing `lore/` files win on conflict — WA export is the import, not the override.
 
