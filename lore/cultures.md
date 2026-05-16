@@ -1,6 +1,6 @@
 # Cultures — Tyrnarra Lore Reference
 
-Distinct peoples on Talan whose identity is cultural — origin, character, internal divisions, and how outsiders perceive them. Initial imports 2026-05-16: **Fenurrans** (from `worldanvil-export/Talan/Fenurra/`) and **Kitsune** (from `worldanvil-export/Tyrnarra/Kitsune/`).
+Distinct peoples on Talan whose identity is cultural — origin, character, internal divisions, and how outsiders perceive them. Two cultures fully captured so far: **Fenurrans** and **Kitsune**.
 
 ---
 
@@ -249,7 +249,7 @@ Combustion-signal devices made from pressurized sulfur gas, Blackglass shards, a
 
 ## Notable Weapons
 
-Compact reference. Full lore for each lives in the imported source files at `worldanvil-export/Talan/Fenurra/`.
+Compact reference; each weapon's full character lives in its row below and in the surrounding tribal sections above.
 
 | Weapon | Tribe | Type | Signature |
 |---|---|---|---|

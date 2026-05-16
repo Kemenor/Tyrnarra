@@ -1,8 +1,19 @@
-# WorldAnvil → Lore Migration Plan
+# WorldAnvil → Lore → HTML Migration Plan
 
-> ## Resume Point — 2026-05-16 (end of session)
+> ## Migration State — updated 2026-05-17
 >
-> **Lore-side migration: COMPLETE.** All five phases (plus a 3.5 canon-corrections pass) are integrated into `lore/`. No further WorldAnvil-export-driven work remains.
+> The migration runs in two halves. **The first half is done. The second half is the active work.**
+>
+> | Half | Status |
+> |---|---|
+> | **WA-export → lore/** | ✅ **COMPLETE** (2026-05-17). All 233 WA source files audited, all substantive content migrated to `lore/`, all 10 discrepancies resolved (see `docs/migration-review.md`). The `worldanvil-export/` folder is no longer needed for canon work and can be retired from the repo. |
+> | **lore/ → HTML site** | 🟡 **IN PROGRESS** (0% started). Per-page tracker below in *HTML Publishing — Status Tracker*. The user holds the publish signal; nothing is pushed to HTML without an explicit go-ahead. This is the active half of the work. |
+>
+> **Open canon hooks (not migration debt — forward worldbuilding)** are tracked in [`docs/open-threads.md`](open-threads.md). Those are decisions for ongoing development, not blockers on either migration half.
+>
+> ---
+>
+> ### Resume Point — first-half (lore-side) closure
 >
 > ### Current state
 >
@@ -41,32 +52,37 @@
 > - **The Sun god** — new open thread. Mortals pray to Solyra; symmetry with Bikiargi suggests a sun-deity should exist. Name, nature, and whether they're absorbed into Iro's Light or stand apart all TBD.
 > - **Domara/Epairima placement** is locked, but Dauria itself has more potential to develop (other named functionaries in the City of the Dead, Epairima's cult on Talan, what rare "second-pass" verdict actually entails for a soul). Optional thread.
 >
-> **HTML publishing — not started yet:** full per-phase tracker in *HTML Publishing — Status Tracker* below. The user holds the publish signal; nothing should be pushed to HTML without an explicit go-ahead.
+> **HTML publishing — the active second half.** See *HTML Publishing — Status Tracker* below for the per-page punch list. The user holds the publish signal; nothing should be pushed to HTML without an explicit go-ahead.
 >
 > **Memory:** The user wants check-ins between phases of this migration. Future sessions should respect that.
 
 ---
 
+## Re-importing from WorldAnvil (only if needed)
 
+The `worldanvil-export/` folder was the staging area for the first-half migration and has been retired from the repo. The original raw export (`export/World-Tyrnarra-ec6` etc.) is also no longer locally available.
 
-Migrating content from `worldanvil-export/` into the canonical `lore/` files.
-**Rule:** existing `lore/` files win on conflict — WA export is the import, not the override.
+**If you ever do a fresh WorldAnvil export to cross-check or pull new content:**
 
-Re-run the converter any time you do a fresh WA export:
+1. Download the raw export from WorldAnvil into `export/World-Tyrnarra-<id>/` and `export/World-Talan-<id>/`.
+2. Re-run the converter:
+
 ```
 python tools/wa-to-md.py export/World-Tyrnarra-ec6 worldanvil-export/Tyrnarra
 python tools/wa-to-md.py export/World-Talan-97c    worldanvil-export/Talan
 ```
 
+3. **Reconciliation rule:** existing `lore/` files win on conflict — a fresh WA export is the *import*, not the *override*. Any divergence from canon should be audited by hand (see how the original migration-review pass worked in `docs/migration-review.md`) before any re-merge.
+
 ---
 
-## Source overview
+## Source overview (historical — first-half migration)
 
 | Source | Files | Notes |
 |---|---|---|
-| `worldanvil-export/Tyrnarra/` | 25 | Richer content, newer writing (2025) |
-| `worldanvil-export/Talan/` | 208 | Shallower per-article, broader coverage |
-| `lore/` (existing) | 5 files | Canon — do not overwrite, only extend |
+| `worldanvil-export/Tyrnarra/` | 25 | Richer content, newer writing (2025). **Retired 2026-05-17.** |
+| `worldanvil-export/Talan/` | 208 | Shallower per-article, broader coverage. **Retired 2026-05-17.** |
+| `lore/` (canonical) | 8 files | The authoritative source of truth: `world-notes.md`, `geography.md`, `factions.md`, `bestiary.md`, `cultures.md`, `glossary.md`, `timeline.md`, `unplaced.md`. |
 
 ---
 
@@ -265,7 +281,19 @@ The two WA source files were both stubs (`golden-empire.md` empty; `storveldi-de
 
 ---
 
-## HTML Publishing — Status Tracker
+## HTML Publishing — Status Tracker  *(active second-half work)*
+
+This is the live punch list for the second half of the migration. Lore content that is canon but not yet rendered to the site lives here. **The user holds the publish signal** — nothing in this table is pushed without an explicit go-ahead per CLAUDE.md.
+
+Items added since the original tracker was written:
+- **Sortalde** continent — new page or section on `talan.html` covering the seven petals, the Concord, embassies-in-Lautara.
+- **Named Non-Bound Gods** (Bikiargi, Zaharsuge, Epairima, Betibizi) — likely belongs on a theology subpage or expanded `grand-gods.html`.
+- **14-domain "Domains Outside the Thirteen" mapping** — `magic.html` or theology subpage.
+- **Six Sortalde ancestries + Hungerseed-as-half-Oni-of-Lingdao** — wherever the ancestry catalogue lands.
+- **Eight new Talan ancestries** (Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki) and renames (Gnoll→Kholo, Grippli→Tripkee) — same target.
+- **Lost Kingdom / Storveldi Denbora cannibalism flavour line** + Betibizi spiritual-root note — relevant when the Lioaru / Blackened Lands page is published.
+
+
 
 The migration above describes work into **`lore/`**. None of it has been published to the HTML site yet — the user holds the publish signal (per `CLAUDE.md` drafting protocol).
 

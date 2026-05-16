@@ -176,8 +176,14 @@ This project is designed so a fresh Claude session — a new chat, a new Cowork 
 1. **Read `CLAUDE.md` first** — naming rule, folder layout, style guide, drafting protocol.
 2. **Read whichever `lore/` files are relevant** to the topic at hand.
 3. **Skim `docs/site-inventory.md`** to know what's already published vs. stub.
+4. **Check `docs/open-threads.md`** if the user references an ongoing canon question — it lists every TBD/unresolved thread with status and where it lives.
 
 Don't rely on the user's in-session memory file for canon — that's a summary, not the source. The lore files win.
+
+### Migration state (as of 2026-05-17)
+
+- **WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` folder has been retired from the repo. All canon now lives in `lore/`. If you need to re-import from a fresh WA export, instructions live in `docs/worldanvil-migration.md` — *Re-importing from WorldAnvil*.
+- **Lore → HTML publishing: IN PROGRESS.** Per-page tracker in `docs/worldanvil-migration.md` — *HTML Publishing — Status Tracker*. The user holds the publish signal; do not push lore to HTML without an explicit go-ahead.
 
 ### Using Cowork Dispatch
 
