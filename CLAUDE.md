@@ -152,6 +152,8 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 **Stay in lore by default.** A new session starts in drafting mode. Claude should not generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*, or similar. If the intent is ambiguous, ask before touching HTML.
 
+**Published HTML is lore documentation, not a campaign starter.** Pages should read as reference material — what exists in the world, why, how, and who. **Do not add dedicated "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material belongs in private GM notes, not on the published site. World-flavour expandables — folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation — are different and welcome: they characterise *the world*, not *what to do in it*.
+
 **Where new content goes:**
 
 | Topic | File |

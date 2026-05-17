@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emerald Isles — Zuzental · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #4a9268; }
+
+  .isle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .isle-card { background: rgba(16,28,22,0.55); border-left: 4px solid var(--isle-color, var(--domain-accent)); padding: 14px 16px; border-radius: 4px; }
+  .isle-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--isle-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .isle-role { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 6px; }
+  .isle-desc { font-size: 0.9rem; color: var(--text); }
+  .isle-neighbours { font-size: 0.82rem; color: var(--gold-dim); margin-top: 8px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .i-north  { --isle-color: #6aa088; }
+  .i-middle { --isle-color: #c8a040; }
+  .i-south  { --isle-color: #88a878; }
+
+  .bridge-block { background: rgba(20,30,28,0.55); border: 1px solid rgba(74,146,104,0.45); border-radius: 4px; padding: 18px 22px; margin: 22px auto; max-width: 960px; }
+  .bridge-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
+  .bridge-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.5rem; margin-bottom: 10px; }
+  .bridge-block p { margin: 8px 0; }
+
+  .embassy-block { background: rgba(20,24,30,0.55); border-left: 4px solid #c88090; padding: 14px 18px; margin: 22px auto; max-width: 960px; border-radius: 4px; }
+  .embassy-label { font-family: 'Cinzel', serif; color: #d8a0b0; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
+
+  .approach-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px auto; max-width: 1000px; }
+  .approach-card { background: rgba(16,28,22,0.5); border-left: 3px solid var(--gold-dim); padding: 10px 14px; border-radius: 4px; }
+  .approach-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 4px; }
+  .approach-desc { font-size: 0.88rem; color: var(--text); }
+</style>
+</head>
+<body data-page="emerald-isles">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/zuzental/zuzental.html">Zuzental</a><span class="sep">›</span><span>Emerald Isles</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Emerald Isles</div>
+    <div class="page-subtitle">Zuzental Sub-Region · The Island Kingdom · Talan's Cloud-Sea Coast</div>
+    <div class="page-flavor">"The kingdom that built the bridges is the kingdom <a href="/off-continent/sortalde.html" style="color:var(--gold-bright);text-decoration:none;border-bottom:1px dotted var(--gold-bright)">Sortalde</a> does business with."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Plainly English (modern naming stratum). The kingdom names itself in plain Talanese; the islands themselves are described, not titled.</dd>
+    <dt>Position</dt><dd>East coast of Zuzental. <b>Three main forested islands</b> within Talan's coastal waters (Northern, Middle, Southern), plus a recently-acquired collection of smaller northeastern islands — <b>the Bridgelands</b> — sitting partly in Hafra and partly in the Cloud Sea.</dd>
+    <dt>Government</dt><dd>Independent kingdom within Zuzental. Court and crown sit on Middle Isle; the kingdom's law follows Forseti's framework (Law-domain alignment is part of the kingdom's diplomatic identity).</dd>
+    <dt>Capital</dt><dd>The kingdom's capital is on Middle Isle's western shore, facing the mainland. <i>Name TBD.</i></dd>
+    <dt>Cloud-Sea reach</dt><dd>The Bridgelands are <b>the only Zuzental territory that touches the Cloud Sea at all.</b> No other Zuzental sub-region has Cloud-Sea coast.</dd>
+    <dt>Sortalde embassies</dt><dd>The standing Sortalde embassies on Talan are sited in the Bridgelands. Cloudships from the petals make landfall there; the embassy staff are mostly Wandao Yaoguai and Xidao Tanuki, with rarer Wayang and Sarangay presence.</dd>
+    <dt>Character</dt><dd>
+      <i>Forested island kingdom, Magitech bridges, Cloud-Sea coast, Sortalde-facing</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Island Kingdom</span><span class="pill">Forseti-aligned</span><span class="pill">Cloud-Sea Coast</span><span class="pill">Sortalde Embassies</span><span class="pill">Bridge Engineering</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Three Main Isles</h2>
+  <div class="prose">
+    <p>The kingdom's original territory: three forested islands off Zuzental's eastern coast, each facing a different stretch of the mainland and each with its own political tilt. The three are bound together as one kingdom — one court on Middle Isle, one law, one purse — but each isle's character reflects who its mainland neighbours are.</p>
+  </div>
+
+  <div class="isle-grid">
+
+    <div class="isle-card i-north">
+      <div class="isle-name">Northern Isle</div>
+      <div class="isle-role">The Trade-Watch · facing the Chaos border</div>
+      <div class="isle-desc">The northernmost of the three, sitting off the coast where Zuzental meets the Nashavel border. The isle's commerce runs north — caravans embark for the inland routes that wrap around the northern domains. The court here is the kingdom's listening post on Nashavel chaos-magic spill, and the isle's law-houses spend more of their time on cross-border contract disputes than the other two combined.</div>
+      <div class="isle-neighbours">Mainland neighbours: <b>Kaosadaemi Principality</b> (Nashavel) · <b>Thousand Kingdoms</b> (Zuzental)</div>
+    </div>
+
+    <div class="isle-card i-middle">
+      <div class="isle-name">Middle Isle</div>
+      <div class="isle-role">The Seat · capital, court, treasury</div>
+      <div class="isle-desc">The largest of the three and the heart of the kingdom. The <b>capital city</b> (name TBD) sits on Middle Isle's western shore, facing the Zuzental mainland across the strait. The royal court convenes here, the kingdom's treasury vaults sit here, and the Concord-of-Courts liaison who handles formal Sortalde correspondence keeps residence in the capital's diplomatic quarter. The mainland-facing port is the kingdom's busiest, taking inland freight to and from the Order-of-Law interior.</div>
+      <div class="isle-neighbours">Mainland neighbour: <b>Order of Law</b> (Zuzental)</div>
+    </div>
+
+    <div class="isle-card i-south">
+      <div class="isle-name">Southern Isle</div>
+      <div class="isle-role">The Cradle · facing the Light coast</div>
+      <div class="isle-desc">Cradled in the bay where Zuzental's coast bends south into Egulon's reach. The Southern Isle's trade tilts south — its merchants do more business with the Light domain than with the Law-domain interior, and the local accents on the isle pick up Egulon vowels that the Middle Isle would never tolerate at court. Politically loyal to the crown on Middle Isle, but culturally half a Light-domain island already.</div>
+      <div class="isle-neighbours">Mainland neighbours: <b>Order of Law</b> (Zuzental) · <b>Harro Distiratsua</b> (Egulon border) · <b>Argia Esfera</b> (Egulon)</div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Bridgelands</h2>
+  <div class="prose">
+    <p>In recent generations the kingdom expanded northeast and <b>acquired a collection of smaller islands</b> sitting on the Hafra / Cloud-Sea boundary. The acquisition predates the bridges by a generation or two — the kingdom had the islands before it had a reason to make them useful. Then Sortalde's diplomatic posture warmed, the question of <i>where</i> the embassies should land became active, and the kingdom's engineers had an answer ready.</p>
+  </div>
+
+  <div class="bridge-block">
+    <div class="bridge-label">Engineering · Soft Power · Cloud-Sea Coast</div>
+    <div class="bridge-name">The Bridges</div>
+    <p>The kingdom built <b>spanning Magitech bridges</b> between the Bridgeland islands. These are not footbridges or trade-jetties — they are <b>substantial Arcanotech engineering works</b>, wide enough to carry caravan traffic, anchored with rune-array foundations that hold through the Cloud-Sea-edge currents that would tear ordinary stonework apart inside a season. They span gaps that would otherwise require cloudship hops between islands.</p>
+    <p>The practical consequence: <b>once a traveller reaches one Bridgeland island, the rest are accessible overland.</b> No second cloudship leg, no inter-island ferry contract, no waiting on weather. For a continent where cloudship berths are rare and expensive, that is a meaningful change.</p>
+    <p>The political consequence: the bridges are <b>a permanent soft-power signal</b>. The kingdom that built the bridges is the kingdom Sortalde does business with. Other Zuzental polities can <i>also</i> trade with the petals, in principle, but the freight goes through the Bridgelands either way — and the Bridgeland tolls are set by the Emerald Isles court on Middle Isle. The bridges paid for themselves within a generation and continue to pay.</p>
+    <p>Bridge construction is ongoing. Several of the outermost Cloud-Sea-touching gaps are still cloudship-only; the kingdom's engineers consider the next-bridge question every other Council session and have not exhausted the queue.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Sortalde Embassy Compound</h2>
+
+  <div class="embassy-block">
+    <div class="embassy-label">Cloudship Landfall · The Talan-Side Diplomatic Interface</div>
+    <p>The standing embassies of <a href="/off-continent/sortalde.html">Sortalde</a> sit on one of the outermost Bridgeland islands — the one whose docks face the Cloud Sea and whose harbour was rebuilt to take cloudship traffic. The compound is bounded by Concord-of-Courts protocol and Emerald Isles law in a tidy nested arrangement: inside the embassy walls, Concord law; outside the walls, the kingdom's. The line is drawn in inlaid jade on the compound's threshold stone.</p>
+    <p><b>Staff demographics.</b> Mostly <b>Wandao Yaoguai</b> and <b>Xidao Tanuki</b> — the two outer-petal populations whose ancestries find the Hafra crossing survivable in numbers. <b>Sarangay</b> from Niudao provide security details. <b>Wayang</b> from Yingdao occasionally embed for intelligence work and are noticeable when they do. <b>Samsaran</b> and <b>Yaksha</b> are very rarely seen at the embassies, for opposite reasons (Samsaran chancellors are too valuable to risk; Yaksha cannot leave their bound lands).</p>
+    <p>The compound is the largest standing concentration of Sortalde-ancestry mortals on Talan. The next-largest is the touring Tanuki troupes scattered across the Lautaran circuit; everything else is single-figure.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Reaching the Kingdom</h2>
+  <div class="prose">
+    <p>Travel between the kingdom's territories operates on three different transport tiers, depending on which leg of the journey you're on.</p>
+  </div>
+
+  <div class="approach-row">
+    <div class="approach-card">
+      <div class="approach-name">Mainland to Main Isles</div>
+      <div class="approach-desc">Ordinary saltwater crossing across Zuzental's eastern strait. Normal wooden ships dominate; the trip takes a single tide cycle in fair weather. Three mainland ports each serve a different isle, run by the corresponding Zuzental sub-region (Order of Law's port serves Middle Isle; Thousand Kingdoms' the Northern; the Light-domain Egulon ports the Southern).</div>
+    </div>
+    <div class="approach-card">
+      <div class="approach-name">Main Isles to Bridgelands</div>
+      <div class="approach-desc">Saltwater crossing across the open Hafra to the innermost Bridgeland island. Normal ships handle the leg. Once you make landfall on the first Bridgeland, the rest is overland via the bridges.</div>
+    </div>
+    <div class="approach-card">
+      <div class="approach-name">Between Bridgelands</div>
+      <div class="approach-desc">Overland across the spanning Magitech bridges. Caravan traffic moves the same way Talanese caravans move on rail-adjacent road. A few of the outermost Cloud-Sea-touching gaps still require cloudship hops — bridge construction is ongoing.</div>
+    </div>
+    <div class="approach-card">
+      <div class="approach-name">Sortalde to Bridgelands</div>
+      <div class="approach-desc">Cloudship from the petals. Landfall on the embassy compound's harbour. The only practical way for Sortalde-side traffic to reach Talan, and the structural reason the Bridgelands are where they are.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Politics &amp; Position Within Zuzental</h2>
+  <div class="prose">
+    <p>The Emerald Isles are formally a sub-region of <b>Zuzental</b> — they answer to Forseti's law-and-correctness framework as every Zuzental polity does. The kingdom's crown is independent of the <a href="/talan/domains/zuzental/zuzental.html">Thousand Kingdoms</a>' merged-with-Lograth political mass; the Isles run their own court, their own treasury, their own foreign correspondence. They are not a vassal of the Thousand Kingdoms; they are a peer.</p>
+
+    <p><b>Why Forseti's domain hosts the eastern continent's diplomatic presence</b> reads, on the surface, as a Law-domain courtesy: a kingdom committed to correct procedure is the kingdom most reliably trustworthy with embassy protocol. The deeper reading is that the kingdom <b>chose</b> the role — engineered for it, acquired the right territory for it, built the bridges that made it work — and the Law-domain framing was the polite story attached after the fact. The Emerald Isles court would not say so in plain words; the chancery would phrase it as <i>"a happy alignment of doctrine and geography."</i></p>
+
+    <p>The Concord of Courts at Heting handles Sortalde-side correspondence; the capital on Middle Isle handles the Talan-side. The Samsaran chancellor assigned to the Talan posting has been in residence for at least two reincarnations and has personally outlasted three Emerald Isles monarchs. The kingdom's archives note this without complaint.</p>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · ZUZENTAL · EMERALD ISLES</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sortalde — Off-Continent · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #c88090; }
+
+  .petal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .petal-card { background: rgba(28,18,22,0.55); border-left: 4px solid var(--petal-color, var(--domain-accent)); padding: 14px 16px; border-radius: 4px; }
+  .petal-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--petal-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .petal-hanzi { font-family: serif; color: var(--gold-dim); font-size: 1.1rem; margin-bottom: 4px; line-height: 1; }
+  .petal-meaning { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 4px; }
+  .petal-ancestry { font-size: 0.85rem; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .petal-desc { font-size: 0.9rem; color: var(--text); }
+  .petal-tier { font-size: 0.75rem; color: var(--gold-dim); margin-top: 6px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .p-wandao   { --petal-color: #d0a070; }
+  .p-xidao    { --petal-color: #d88e6a; }
+  .p-niudao   { --petal-color: #a87850; }
+  .p-yingdao  { --petal-color: #6a5878; }
+  .p-lingdao  { --petal-color: #7a90a8; }
+  .p-lundao   { --petal-color: #b89cb8; }
+  .p-heting   { --petal-color: #d8b078; }
+
+  .ancestry-table { width: 100%; max-width: 1000px; margin: 16px auto; border-collapse: collapse; font-size: 0.9rem; }
+  .ancestry-table th, .ancestry-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(200,128,144,0.22); vertical-align: top; }
+  .ancestry-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+  .ancestry-table td:first-child { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; white-space: nowrap; }
+  .ancestry-table tr:hover { background: rgba(200,128,144,0.06); }
+  .freq-rare    { color: #c8a070; }
+  .freq-vrare   { color: #b07880; }
+  .freq-never   { color: #7a6878; font-style: italic; }
+
+  .concord-card { background: rgba(40,28,32,0.55); border: 1px solid rgba(200,128,144,0.4); border-radius: 4px; padding: 16px 20px; margin: 22px auto; max-width: 940px; }
+  .concord-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
+  .concord-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.45rem; margin-bottom: 10px; }
+  .concord-name .hanzi { font-family: serif; font-size: 1.2rem; color: var(--gold-dim); margin-left: 8px; }
+
+  .theology-block { background: rgba(28,22,32,0.55); border-left: 4px solid #8a6ac8; padding: 14px 18px; margin: 22px auto; max-width: 940px; border-radius: 4px; }
+  .theology-label { font-family: 'Cinzel', serif; color: #b89cd8; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
+
+  .hook-list { max-width: 940px; margin: 14px auto; padding-left: 26px; }
+  .hook-list li { margin-bottom: 8px; }
+</style>
+</head>
+<body data-page="sortalde">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><span>Off-Continent</span><span class="sep">›</span><span>Sortalde</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Sortalde</div>
+    <div class="page-subtitle">Off-Continent · <i>Tao Hua Yuan</i> · The Petal Continent</div>
+    <div class="page-flavor">"We are blossoms. We are hidden. The way back is rarely found."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Position</dt><dd>East across Hafra. A great archipelago of seven major islands arranged in a petal formation — six ancestral petals around a smaller central seat.</dd>
+    <dt>Talanese name</dt><dd><b>Sortalde</b> — from Basque <i>sortaldea</i>, "sunrise-land / east." The name Talanese atlases, Iron Tide intelligence, Adventurers' Guild dispatches, and Lautaran merchant records all use.</dd>
+    <dt>Internal name</dt><dd><b>Tao Hua Yuan</b> (桃花源) — "Peach Blossom Spring," after the Tao Yuanming poem about a hidden paradise reachable only through a difficult passage and lost to outside contact. The name encodes the continent's cultural self-understanding.</dd>
+    <dt>Shape</dt><dd>Seven petals. <b>Three outer petals</b> on the Talan-facing arc (Wandao, Xidao, Niudao) — closest to the world, reachable by surviving merchants. <b>Three inner petals</b> (Yingdao, Lingdao, Lundao) — rumour to most Talanese. <b>The central Concord seat at Heting</b> — mythically hard to reach from outside.</dd>
+    <dt>Crossing from Talan</dt><dd><b>Hard.</b> The stormy outer ring routinely sinks Talanese ships. Cloudships make the crossing more reliable but remain rare, expensive, and themselves <a href="/magic.html">dual-school Magitech</a>. The Iron Tide has lost ships trying; the <a href="/off-continent/red-empire.html">Red Empire</a>'s standing policy is <i>don't bother.</i></dd>
+    <dt>Government</dt><dd><b>The Concord of Courts</b> — an ancient confederation binding the seven petals together, convening at Heting. Held by long agreement, not enforced authority. <b>Samsaran chancellors</b> carry political memory across reincarnations.</dd>
+    <dt>Theology</dt><dd><b>No walking gods.</b> The Thirteen Bound have never crossed Hafra to Sortalde, and no indigenous Sortalde bound god has emerged. All clerical work channels through an unnamed <b>Layer-3 pantheon</b> of dynasty-spirits, ancestor-judges, and place-gods. <i>No mortal in Sortalde has ever met their god in person.</i></dd>
+    <dt>Talan interface</dt><dd>Standing embassies on the <a href="/talan/domains/zuzental/zuzental.html">Emerald Isles</a> — the Zuzental island kingdom whose outer holdings sit on the Hafra / Cloud Sea boundary. Cloudships from the petals make landfall there; mostly Wandao Yaoguai and Xidao Tanuki staff.</dd>
+    <dt>Adventurers' Guild</dt><dd><b>No branch on Sortalde.</b> Expeditions are commissioned individually and pay <i>survivor-tax rates</i>.</dd>
+    <dt>Character</dt><dd>
+      <i>Hidden paradise, blossom-and-veil, the way is rarely found</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Petal Archipelago</span><span class="pill">Concord-Ruled</span><span class="pill">No Walking Gods</span><span class="pill">Hard Crossing</span><span class="pill">Multi-Life Memory</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Why It Hides</h2>
+  <div class="prose">
+    <p>The continent's own name for itself — <b>Tao Hua Yuan</b> — is borrowed from Tao Yuanming's poem about a fisherman who follows a peach-blossom river upstream, passes through a narrow cave, and emerges in a valley of perfect peace inhabited by people who fled the world generations ago. The fisherman is welcomed, treated well, and shown the valley's harvest. When he leaves, he tries to mark the path so he can return. He cannot find it. No one ever does.</p>
+
+    <p>That is Sortalde's self-mythology. The petals do not advertise themselves; the storms of the outer ring do most of the gatekeeping, but the continent's residents also hold a quiet conviction that <i>the world outside is the loss</i>, not theirs. Talanese diplomats notice this. Sortalde diplomats do not deny it. The Concord polite-but-distant attitude toward the outside is not strategic — it is constitutional.</p>
+
+    <p>A defector from Sortalde, or an exile, faces a doubled difficulty: the crossing is hard going out, and the path back is closed by something more than geography.</p>
+
+    <p style="font-style:italic; text-align:center; color:var(--gold-dim); margin-top:18px;">"忘路之远近" — <i>he forgot the distance of his journey.</i></p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Cloud Sea Crossing</h2>
+  <div class="prose">
+    <p>Sortalde sits east across <b>Hafra</b> — the saltwater sea ringing Talan — but the crossing is not made by ordinary ship. The wide outer ring of seas around Sortalde is <i>stormy</i> in a way Talanese sailors find disproportionate to its latitude, and ordinary wooden hulls sink in it with weary regularity. The graveyard of Talanese shipping is older than the Adventurers' Guild and has never been mapped.</p>
+
+    <p><b>Cloudships</b> can make the crossing reliably; almost nothing else can. The cloudship requirement is the structural reason Sortalde stays distant — every cloudship is <a href="/magic.html">dual-school Magitech</a> (typically Arcanotech + Occultech), and the dual-school construction requirement is why cloudships are so rare in the first place. A scheduled Talan-Sortalde cloudship route exists; berths are expensive, contracts are long, and the route's owners are wealthy enough to be quiet about exactly who they are.</p>
+
+    <p><b>Surviving Talanese merchants typically reach only the outer petals</b> — Wandao, Xidao, Niudao, on the Talan-facing arc of the archipelago. The inner petals and the Concord seat at Heting are rumour to most Talanese; even most surviving merchants have never been past the outer ring.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Seven Petals</h2>
+  <div class="prose">
+    <p>Each petal is one homeland of one ancestry. The naming convention is shared: a one- or two-character descriptor + <i>Dao</i> (岛, "island"). The central seat uses <i>Heting</i> (合廷, "Concord-Court"). The pattern is Chinese-flavoured in evocation only — the names are compounds for atmosphere, not phrasebook entries.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.05rem; margin-top:18px;">Outer Petals — the Talan-Facing Arc</h3>
+  <div class="petal-grid">
+
+    <div class="petal-card p-wandao">
+      <div class="petal-name">Wandao</div>
+      <div class="petal-hanzi">万岛</div>
+      <div class="petal-meaning">"Myriad Island" — <i>wan</i> (myriad, ten thousand)</div>
+      <div class="petal-ancestry">Yaoguai · Common-folk petal</div>
+      <div class="petal-desc">The most populous petal. Yaoguai is less a single people than a <i>category</i> — beast-shaped sapients of countless forms (fox-spirits, deer-spirits, crane-spirits, monkey-spirits, every animal you can name has a Yaoguai variation somewhere on Wandao). Sortalde's common citizens; the most numerous Concord constituency; the petal Talanese merchants most often actually reach.</div>
+      <div class="petal-tier">Outer petal · closest to Talan</div>
+    </div>
+
+    <div class="petal-card p-xidao">
+      <div class="petal-name">Xidao</div>
+      <div class="petal-hanzi">戏岛</div>
+      <div class="petal-meaning">"Theatre Island" — <i>xi</i> (play, theatre, deception)</div>
+      <div class="petal-ancestry">Tanuki · Performer-merchants</div>
+      <div class="petal-desc">The convivial-merchant-performer petal. Tanuki troupes circulate the inner seas of Sortalde, run inter-petal trade, and serve as informal cultural ambassadors. Their shapeshifting is theatrical as much as practical — most Tanuki perform openly, their deceptions advertised in advance and admired for craft.</div>
+      <div class="petal-tier">Outer petal · most likely to reach Talan</div>
+    </div>
+
+    <div class="petal-card p-niudao">
+      <div class="petal-name">Niudao</div>
+      <div class="petal-hanzi">牛岛</div>
+      <div class="petal-meaning">"Ox Island" — named directly for the bull-folk</div>
+      <div class="petal-ancestry">Sarangay · Warrior-oath nobility</div>
+      <div class="petal-desc">The warrior-oath petal. Sarangay houses serve as standing martial nobility of the Concord — they hold no single petal's court but instead provide warriors to all of them under inter-petal contract. Their oaths are notoriously durable: a Sarangay oath survives reincarnation cycles (theirs and others'), feuds, and continent-scale political upheaval.</div>
+      <div class="petal-tier">Outer petal · embassy security on Talan</div>
+    </div>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">Inner Petals — Rumour to Most Talanese</h3>
+  <div class="petal-grid">
+
+    <div class="petal-card p-yingdao">
+      <div class="petal-name">Yingdao</div>
+      <div class="petal-hanzi">影岛</div>
+      <div class="petal-meaning">"Shadow Island" — <i>ying</i> (shadow)</div>
+      <div class="petal-ancestry">Wayang · Shadow-courtiers</div>
+      <div class="petal-desc">The shadow-court petal. Wayang serve as the Concord's spies, diplomats, and secret-keepers — most of Sortalde's institutional secrets have passed through Yingdao at some point. Their archive is unusual: <b>each significant secret is encoded as a shadow-play that must be performed to be read.</b></div>
+      <div class="petal-tier">Inner petal · vanishingly rare on Talan</div>
+    </div>
+
+    <div class="petal-card p-lingdao">
+      <div class="petal-name">Lingdao</div>
+      <div class="petal-hanzi">灵岛</div>
+      <div class="petal-meaning">"Spirit Island" — <i>ling</i> (spirit)</div>
+      <div class="petal-ancestry">Yaksha · Dynastic place-spirits<br><span style="color:var(--gold-dim); font-size:0.78rem; text-transform:none; letter-spacing:0">(+ Oni — the darker cousins)</span></div>
+      <div class="petal-desc">The dynastic-place-spirit petal. Each Yaksha noble lineage is bound to a specific land (a mountain, a river-bend, a forest grove) and the bond is genuine — a Yaksha cannot comfortably leave their bound land for long. This anchors Sortalde's politics to specific geography in a way Talanese politics is not: <i>you cannot move a Yaksha; you negotiate with the place.</i> Lingdao is also the concentration zone for <b>bound Oni</b> — Yaksha's darker spirit-cousins, shared spirit-nature, opposed temperament.</div>
+      <div class="petal-tier">Inner petal · functionally never seen on Talan</div>
+    </div>
+
+    <div class="petal-card p-lundao">
+      <div class="petal-name">Lundao</div>
+      <div class="petal-hanzi">轮岛</div>
+      <div class="petal-meaning">"Wheel Island" — <i>samsara</i>, the wheel of reincarnation</div>
+      <div class="petal-ancestry">Samsaran · Multi-life chancellors</div>
+      <div class="petal-desc">The senior contemplative-bureaucratic petal. Samsaran serve as the <b>chancellors of the Concord of Courts</b> — multi-life civil servants whose continuity bridges human lifespans and gives Sortalde its institutional memory. A typical chancellor has held office across two or three reincarnations and remembers the relevant policy history personally. This makes the Concord very hard to deceive on long-running questions, and very capable of patient strategy.</div>
+      <div class="petal-tier">Inner petal · the Concord's deep memory</div>
+    </div>
+
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">The Central Seat</h3>
+  <div class="petal-grid">
+    <div class="petal-card p-heting" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+      <div class="petal-name">Heting</div>
+      <div class="petal-hanzi">合廷</div>
+      <div class="petal-meaning">"Concord-Court" — <i>he</i> (concord, unity) + <i>ting</i> (court)</div>
+      <div class="petal-ancestry">Shared seat · Ambassadors from all six petals</div>
+      <div class="petal-desc">The central island at the geometric centre of the petal arrangement. The <b>Concord of Courts</b> convenes here; ambassadors from each of the six ancestral petals maintain permanent residence. <b>Mythically hard to reach from outside</b> — even most Sortalde citizens never travel to Heting, and most Talanese never hear it named. The handful of Talanese who claim to have set foot on Heting are usually lying; the very rare exceptions are <i>interesting.</i></div>
+      <div class="petal-tier">Central seat · the Concord's living centre</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Concord of Courts</h2>
+
+  <div class="concord-card">
+    <div class="concord-label">Central Authority · Convenes at Heting</div>
+    <div class="concord-name">The Concord of Courts<span class="hanzi">合廷</span></div>
+    <p>An ancient confederation binding the seven petals together. The Concord <b>does not</b> enforce its authority through standing armies or central decree — it holds together by <i>long agreement</i>. Each of the six ancestral petals has its own internal governance (typically a hereditary court with a long-lived ancestral lineage), and inter-petal disputes are mediated through Concord channels at Heting.</p>
+    <p>What makes the Concord work where similar Talanese confederations have failed is <b>multi-life institutional memory</b>. The Samsaran chancellors of Lundao continue across reincarnations — a chancellor who handled a treaty negotiation forty years ago may still be in office, personally, with the same name in a new body. Sortalde politics happens at a temporal scale Talanese diplomacy cannot match. A bad-faith concession buried in a treaty signed six decades ago will not have been forgotten on the Sortalde side; the chancellor who signed it is probably still in the room.</p>
+    <p>The Sarangay houses of Niudao provide the Concord's standing martial force when one is needed — under <b>inter-petal contract</b>, not as a centralised army. The Wayang of Yingdao provide intelligence. The Tanuki of Xidao circulate as informal cultural ambassadors. The Yaoguai of Wandao are the body politic; the Yaksha of Lingdao are the geographic anchors. The Concord's coherence comes from <i>each petal doing what only that petal does.</i></p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Theology — No Walking Gods</h2>
+
+  <div class="theology-block">
+    <div class="theology-label">A continent without divine presence</div>
+    <p>Sortalde has <b>no walking gods.</b> The Thirteen Bound all maintain their sancta on Talan; none have crossed Hafra to establish presence on Sortalde, and no indigenous Sortalde bound god has emerged from the continent's own population. The bound thirteen are <i>aware</i> of Sortalde — Forseti's clergy in particular have studied the Concord with academic interest — but they have never sent missionaries, and the Concord has never asked for them.</p>
+    <p>All clerical work on Sortalde channels through a <b>Layer-3 pantheon</b> of dynasty-spirits, ancestor-judges, and place-gods who reside in Diyu and (less often) Elysium. Sortalde clergy invoke their gods <i>across the veil</i>, never in person. <b>No mortal in Sortalde has ever met their god face to face.</b> Religion there is invocation, ancestor-memory, and inherited covenant — never personal audition.</p>
+    <p>The practical effect is profound. Sortalde mortals find the Talanese habit of <i>walking up to a god and asking a question</i> faintly improper. Talanese mortals find the Sortalde habit of <i>never seeing the divine face</i> faintly tragic. Both are correct about each other.</p>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">Open Thread — The Layer-3 Pantheon</div>
+    <p>The Sortalde Layer-3 pantheon is <b>not yet named in Tyrnarra canon</b>. It exists abstractly — dynasty-spirits, ancestor-judges, place-gods, the structural shape of who Sortalde clergy reach for — but no individual gods have been named, no portfolios assigned, no cornerstone deities canonised. A future naming pass would close out the religious texture of the Eastern continent.</p>
+    <p>For now, a Sortalde cleric character should be played as <i>channelling a named ancestor or a named place-spirit</i>, with the channelling framework consistent (Layer-3-resident, never embodied, invoked across the veil). The named entity itself is the player's invention until canon catches up.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Six Ancestries on Talan</h2>
+  <div class="prose">
+    <p>A Sortalde-ancestry character on Talan is <b>a story, not a demographic</b>. Six ancestries; single-digit numbers per generation crossing Hafra; almost always through the <a href="/talan/domains/zuzental/zuzental.html">Emerald Isles</a> embassy interface. The table below summarises how often Talanese characters can plausibly encounter each.</p>
+  </div>
+
+  <table class="ancestry-table">
+    <thead><tr><th>Ancestry</th><th>Homeland petal</th><th>On Talan</th></tr></thead>
+    <tbody>
+      <tr><td>Yaoguai</td><td>Wandao (outer)</td><td class="freq-rare"><b>Rare</b> — the most common Sortalde ancestry seen in Lautara. Beast-spirit-shaped merchants. Settled communities exist in Commerce-domain ports.</td></tr>
+      <tr><td>Tanuki</td><td>Xidao (outer)</td><td class="freq-rare"><b>Rare</b> — the other most-likely. Largest standing Tanuki population on Talan is on the Emerald Isles (around the embassies); smaller settled communities work the touring circuits of Lautara, Crossroads especially.</td></tr>
+      <tr><td>Sarangay</td><td>Niudao (outer)</td><td class="freq-rare"><b>Rare</b> — usually attached to Sortalde embassy security details on the Emerald Isles. An unattached Sarangay is typically discharged-and-stranded or oath-pursuing an outcome that can only be resolved off-petal.</td></tr>
+      <tr><td>Wayang</td><td>Yingdao (inner)</td><td class="freq-vrare"><b>Vanishingly rare</b> — typically on intelligence assignments. Embedded with the embassies, or working as freelance information brokers (Crossroads is a perennial favourite). If you meet one outside the embassy circuit, they are working.</td></tr>
+      <tr><td>Yaksha</td><td>Lingdao (inner)</td><td class="freq-never"><b>Functionally never seen.</b> A Yaksha away from their bound land suffers — physically, emotionally, theologically. The very rare Talan-side Yaksha is doctrinally an <i>exile</i> whose bond was broken by some catastrophe. Tragic figures by definition; the bond cannot be reformed across Hafra.</td></tr>
+      <tr><td>Samsaran</td><td>Lundao (inner)</td><td class="freq-vrare"><b>Vanishingly rare.</b> The Concord's continuity is too valuable to risk crossing. A Talan-side Samsaran is almost always a retired chancellor pursuing a private project, or a heretic whose multi-life dissent made them inconvenient to keep at home. Either way, they are reliable witnesses to events much older than any other living source on Talan.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">Hungerseed Note — Oni of Lingdao</div>
+    <p>The PF2e Hungerseed heritage on Talan canonically descends from <b>Oni</b> — the darker spirit-cousins of the Yaksha, concentrated on Lingdao. Oni are <i>bound</i> spirits in the same nature-spirit lineage as the Yaksha but with opposed temperament; their darker line produces the rare Hungerseed-touched mortals who occasionally surface on Talan. A Hungerseed character on Talan is almost certainly several reincarnations downstream of a Lingdao Oni — and very likely does not know that.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Emerald Isles Embassy Interface</h2>
+  <div class="prose">
+    <p>Sortalde maintains its standing embassies on <a href="/talan/domains/zuzental/emerald-isles.html">the Emerald Isles</a> — the island kingdom of <a href="/talan/domains/zuzental/zuzental.html">Zuzental</a>. Specifically: the embassies sit on <b>the Bridgelands</b>, the kingdom's northeastern outer-rim islands which touch the Cloud Sea. The Bridgelands are connected to each other by spanning <a href="/magic.html">Magitech bridges</a> — substantial Arcanotech engineering works — which means that once a traveller reaches one Bridgeland island, the rest are accessible overland. Cloudships from the petals make landfall on the embassy compound's harbour; the Bridgelands have been the canonical landing point since the embassies were established (the exact date is a Concord chancery question — ask a Samsaran).</p>
+    <p>The embassies are staffed mostly by <b>Wandao Yaoguai</b> and <b>Xidao Tanuki</b> — the two outer-petal populations whose ancestries find the crossing survivable in numbers. <b>Sarangay</b> from Niudao provide security details. <b>Wayang</b> from Yingdao occasionally embed for intelligence work. <b>Samsaran</b> and <b>Yaksha</b> are very rarely seen at the embassies, for opposite reasons.</p>
+    <p>The Adventurers' Guild does <i>not</i> maintain a Sortalde branch. Expeditions are commissioned individually and pay <b>survivor-tax rates</b> — the underwriter charges as if losing the party is the base case. Surviving expeditions rarely commission a second.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Kitsune Coincidence</h2>
+  <div class="callout">
+    <div class="callout-label">Two cultures, two registers, no kinship</div>
+    <p>The <a href="/talan/domains/lautara/emarrea.html">kitsune of Emarrea</a> use a Japanese-flavoured internal naming register (Biozuri, Heartplaza, Catjomin Sake). Sortalde residents use a Chinese-flavoured register. The parallel is <b>purely coincidental</b> — kitsune are <i>not</i> descended from Sortalde populations and have no ancestral connection to the petal continent.</p>
+    <p>Diplomats from the two cultures can sometimes guess at each other's pronunciation but cannot trust each other's grammar. Both cultures find the coincidence <i>faintly insulting</i> if pointed out, for opposite reasons: the Emarrean kitsune object to being mistaken for kin of a continent they have no relation to; the Sortalde residents object to being mistaken for the cousins of a Lautaran trickster culture they have no relation to. The polite Talanese diplomatic move is to <b>never bring it up.</b></p>
+  </div>
+
+  <div class="footer">TYRNARRA · OFF-CONTINENT · SORTALDE</div>
+
+</div>
+
+</body>
+</html>

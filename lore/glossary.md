@@ -127,7 +127,8 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 
 **Zuzental (Law):**
 - **Thousand Kingdom** — modern English; houses Lograth (capital and city-state merged)
-- **Emerald Isles** — modern English; three islands off east coast
+- **Emerald Isles** — modern English. Island kingdom of Zuzental: three main forested islands within Talan's coastal waters (Northern Isle, Middle Isle, Southern Isle) plus the **Bridgelands** (a recently-acquired northeastern collection of smaller islands sitting partly in Hafra and partly in the Cloud Sea, connected to each other by spanning Magitech bridges). The Bridgelands are the canonical Sortalde cloudship landing point and host the standing Sortalde embassies on Talan. Capital sits on Middle Isle (capital name TBD).
+- **The Bridgelands** — modern English. The northeastern outer-rim islands of the Emerald Isles kingdom, named for the spanning Magitech bridges the kingdom built between them. The bridges are substantial Arcanotech works, capable of carrying caravan traffic across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Bridge engineering doubles as soft-power signal — *the kingdom that built the bridges is the kingdom Sortalde does business with.*
 - **Legea Empire** — drift from Latin *lex/legem* (law); major empire. **A theocracy ruled by a demigod of a non-bound god (Layer 3 / Postlife resident; specifics TBD). State faith is the Divine Faith (see `factions.md`).** Sits inside Forseti's domain of Law — the resulting law-vs-law theological argument is structural and continual.
 - **Namur Republic** — modern English; democratic city-state network
 - **Order of Law** — modern English; institution
