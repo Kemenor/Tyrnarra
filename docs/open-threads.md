@@ -97,6 +97,18 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Personal name. By extension: the bride's personal name on the Draconis side, and whether the marriage has produced (or will produce) an heir who is part Draconis bloodline + part demigod line. That child would be diplomatically explosive.
 **Where.** [lore/factions.md](../lore/factions.md); [lore/cultures.md](../lore/cultures.md) — *Fenurra → The schism*. Rendered as an inline TBD on [legea-empire.html](../talan/domains/zuzental/legea-empire.html).
 
+### [Thousand Kingdom] Founding-history identities
+**Decided.** Full founding arc canonised (see [thousand-kingdom.html → Founding & History](../talan/domains/zuzental/thousand-kingdom.html) and [lore/geography.md](../lore/geography.md) → *Zuzental → Thousand Kingdom*). Timeline locked: Old King's original unification → Dark-Era murder by Corrupted-God minions → fracture → **2397 MR** Demon-Demigod rises → sixty-year conquest → **2457 MR** Kingdom re-founded by the Founding Queen, who killed him publicly. **Public belief: he is dead.** **GM truth: he is alive**, refounded his old village under a new name, lives quietly as a hunter; arrangement with the Queen is a private mercy + private call-on-aid obligation (not a Forseti-framework compact); the throne passes the secret heir-to-heir via sealed letter opened on coronation. Three-tier knowledge UI shipped (public / amber Old-King-prophecy / red GM truth on the village-and-hunter twist).
+**Open.** Five named identities and one cosmic-mechanical question:
+- Personal name of the **Demon Demigod** (and his epithet/byname — *the Conqueror* is one chronicle-form, and his quiet new name in the refounded village)
+- Personal name of the **Old King** (the historical Dark-Era-killed first uniter)
+- Personal name of the **Founding Queen** (the adventurer who took the seed)
+- Personal names of the **two trusted generals** who ran the lineage-forgery operation, and their fates (died in the final battle? went with him to the village? living elsewhere under new names?)
+- **Name of the refounded village** where the Demigod now lives as a hunter (and rough geographic placement within the Thousand Kingdom)
+- **Mechanism of the Demigod's ascension** — belief-and-power accumulation through conquest, integration procedure, both, or something else
+- Whether **Forseti's clergy know** about the legitimacy fiction, treat it as a sealed-archive matter, or genuinely don't know
+**Where.** [lore/geography.md](../lore/geography.md) — *Zuzental → Thousand Kingdom → Founding history*; [thousand-kingdom.html](../talan/domains/zuzental/thousand-kingdom.html) — Founding & History section with inline TBD markers.
+
 ### [Legea Empire] Doctrine, antiquity, and case-law against Forseti
 **Decided.** The structural tension between the Faith's law and Forseti's law is published canon — Faith claims older/freer/unconditioned law; Forseti's framework treats authority as sworn compact. That Forseti tolerates the Empire within his own domain is the single most interesting fact about the arrangement.
 **Open.** Three linked questions: (1) **Antiquity** — does the Empire predate the Gods' Law (negotiated into it as a special exception) or postdate the Week of Crimson Rain (grew on Forseti's land afterward)? Reshapes the law-vs-law tension significantly. (2) **The Faith–Forseti relationship in practice** — tolerance, rivalry, an undisclosed agreement, or active simmering conflict? (3) **Doctrinal case-law collisions** — exactly how the Faith's law differs from Forseti's at the daily kingdom-law level (criminal, contract, succession, oath). The teachings collide in principle; the practical case-law clashes are not yet written.
@@ -194,11 +206,6 @@ Items where the world has decided *what* but not *much* — placements and struc
 
 Items where the lore is written but the HTML side hasn't caught up. Pick one when you want to ship visible site progress.
 
-### [HTML] Sub-region promotion — Thousand Kingdom
-**Decided.** Dominant political sub-region of Zuzental. **Lograth** (Forseti's city-state) sits within it and functions as both god-city and Kingdom capital — the two have grown together into a single urban mass over centuries; effectively inseparable. The kingdom's character runs on the elven long-planning vs human short-planning interplay (documented on `grand-gods.html` Forseti card and `bestiary.html` Zuzental detail). Currently lives as a section inside [zuzental.html](../talan/domains/zuzental/zuzental.html); pattern for promotion is established (Crossroads, Lost Kingdom, Order of Steam, Emerald Isles, Legea Empire).
-**Open.** Build dedicated page at `/talan/domains/zuzental/thousand-kingdom.html`. No lore additions required; this is pure assembly of existing content into a Style B sub-region page.
-**Where.** [lore/geography.md](../lore/geography.md) — *Zuzental → Thousand Kingdom*.
-
 ### [HTML] Sub-region promotion — Dragon's Reach
 **Decided.** Capital of the alien Dragons in Sumendar. Lore is rich: mothership crash-landed during the Gods' Era; "corruption by the gods" reshaping doctrine; modern goal of recovering pre-corruption purity; two-recovery-projects friction with the Order of Steam over Elden-tech excavations; indigenous wyrm-cultists (Dragonet / Zaharsuge-line) rejecting Dragon's Reach's authority claim over wyrmkind on Talan. Pattern for promotion established.
 **Open.** Build dedicated page at `/talan/domains/sumendar/dragons-reach.html`. No lore additions required; assembly only.
@@ -231,6 +238,7 @@ Published HTML is **lore documentation, not campaign-starter material**. Dedicat
 ## § Resolved — closed (struck-through, kept for context)
 
 ### Recent closures (2026-05-17)
+- ~~**Sub-region promotion — Thousand Kingdom**~~ → published at [thousand-kingdom.html](../talan/domains/zuzental/thousand-kingdom.html). Steel-blue accent (Forseti-judicial). Sections: at-a-glance facts, the *"A Thousand, Now One"* etymology piece, the Lograth–Kingdom inseparable-capital section, the centrepiece **Two Bloodlines** side-by-side block (elven Long Horizon in slate-blue + human Short Horizon in warm gold, each with its own failure mode), Forseti's Law in Practice (sworn-compact + open-court / sealed-archive), four-card Borderlands compass (Legea south, Kaosadaemi north, Emerald Isles east, internal Zuzental). Sidebar nav added under Zuzental; zuzental.html sub-region card linkified.
 - ~~**Legea Empire / Divine Faith stub page**~~ → published at [legea-empire.html](../talan/domains/zuzental/legea-empire.html). At-a-glance with inline TBD markers; two-sided law-vs-law tension blocks (Faith and Forseti positions side-by-side); missionary programme + Draconis marriage write-up; "Open in Canon" panel listing the six TBDs as deliberate state, not oversight. Sidebar nav added under Zuzental; zuzental.html sub-region card now linkified. The §Needs-writing entry *Divine Faith — pantheon identity* remains open for the eventual canon decisions.
 - ~~**Myrria sub-pages**~~ → both Myrria's Godshall and Seraphel Duskbane published on [adventurers-guild.html](../talan/factions/adventurers-guild.html) (Godshall as its own H2 *A Regional Seat Worth Naming*, Seraphel as a full figure-card). Cross-linked from [myrria.html](../talan/domains/myrkono/myrria/myrria.html). Dedicated sub-pages not warranted — the guild page is the right home.
 - ~~**Age of Corruption mortal myth**~~ → published as an amber ◈ Popular Belief expandable on the Dark Era card of [history.html](../talan/history.html). Sage Lorant of Highspire chronicle with the *"era of the adventurer"* close.

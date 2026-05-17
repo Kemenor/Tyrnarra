@@ -64,6 +64,18 @@ Tier 1 publishing pass — 2026-05-17:
                                Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
   sumendar/order-of-steam/house-eisenhart.html
                                House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
+  zuzental/thousand-kingdom.html
+                               Thousand Kingdom · Forseti's Realm of Law — the
+                               dual-bloodline (elf long-horizon / human short-
+                               horizon) constitutional kingdom that holds
+                               Lograth and the inseparable god-city/capital
+                               fusion; four-card borderlands compass             POPULATED  (NEW 2026-05-17)
+                               + Founding & History section with three-tier
+                               UI: Demon-Demigod conquest of the warring
+                               Thousand, adventurer-Queen of the Old King's
+                               forged blood, the binding compact; amber Old-
+                               King-myth folkloric layer; red GM Secret on the
+                               Queen-knew-the-truth twist                        (UPDATED 2026-05-17)
   zuzental/emerald-isles.html  Emerald Isles · Three Main Isles + Bridgelands    POPULATED  (NEW 2026-05-17 Tier 4 pair w/ Sortalde)
   zuzental/legea-empire.html   Legea Empire · Demigod Theocracy of the Divine
                                Faith — at-a-glance with visible TBDs, two-sided
@@ -112,6 +124,7 @@ Currently used in:
 - `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
 - `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
 - `/talan/domains/floteyn/floteyn.html` — one amber Popular Belief expandable (Balaena's captivity).
+- `/talan/domains/zuzental/thousand-kingdom.html` — full three-tier on the founding: plain prose + amber Popular Belief (Old King myth) + red GM Secret (Demigod's tragic motive + forged Queen lineage + the throne-held truth).
 - `/talan/domains/lautara/crossroads.html` — four amber tavern-rumour expandables.
 - `/magic.html` — GM Secret on the Mortal Ascent Ladder (integration-procedure / Storveldi / Betibizi).
 
