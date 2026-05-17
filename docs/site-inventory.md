@@ -41,6 +41,9 @@ Tier 1 publishing pass — 2026-05-17:
                                god's city, sub-region cards
   vindul/vindul.html           POPULATED      lautara/lautara.html     POPULATED
   myrkono/myrkono.html         POPULATED      floteyn/floteyn.html     POPULATED
+                                              + Balaena Skywhale City featured section
+                                              (4 info-cards + amber Popular Belief on
+                                              the captivity truth)                  (UPDATED 2026-05-17)
   sumendar/sumendar.html       POPULATED      lioaru/lioaru.html       POPULATED
   brauogi/brauogi.html         POPULATED      ezkudon/ezkudon.html     POPULATED
   egulon/egulon.html           POPULATED      zuzental/zuzental.html   POPULATED
@@ -51,7 +54,9 @@ Tier 1 publishing pass — 2026-05-17:
   ehizahar/fenurra.html        Fenurra · the Flame-Source                        POPULATED  (NEW 2026-05-16)
   lautara/emarrea.html         Emarrea · the Kitsune Kingdom                     POPULATED  (NEW 2026-05-16)
   lautara/crossroads.html      Crossroads · Tri-Domain Nexus + Spider's Silk Inn POPULATED  (NEW 2026-05-17)
-  lioaru/lost-kingdom.html     Lost Kingdom · The Blackened Lands                POPULATED  (NEW 2026-05-17)
+  lioaru/lost-kingdom.html     Lost Kingdom · The Blackened Lands                POPULATED  (NEW 2026-05-17;
+                               + Meat-on-a-Stick amber Popular Belief
+                               (Storveldi cannibalism folk-trope)                 UPDATED 2026-05-17)
   myrkono/myrria/myrria.html   Myrria · City of Second Chances                   POPULATED  (NEW 2026-05-16;
                                + Faith of Many Faces section — three rites, sacred
                                iconography callout, edicts/anathema                UPDATED 2026-05-17)
@@ -99,7 +104,8 @@ Currently used in:
 - `/talan/history.html` — **Elden Era**, **Gods' Era**, and **Week of Crimson Rain** have all three tiers (Gods' Era added 2026-05-17). The remaining 5 eras have only common-knowledge text.
 - `/talan/the-binding.html` — GM Secret expandable (Corrupted God = Elden + four General domain-grants).
 - `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
-- `/talan/domains/lioaru/lost-kingdom.html` — three amber Popular Belief expandables + comprehensive GM Secret.
+- `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
+- `/talan/domains/floteyn/floteyn.html` — one amber Popular Belief expandable (Balaena's captivity).
 - `/talan/domains/lautara/crossroads.html` — four amber tavern-rumour expandables.
 - `/magic.html` — GM Secret on the Mortal Ascent Ladder (integration-procedure / Storveldi / Betibizi).
 
@@ -110,7 +116,7 @@ Currently used in:
 - **Settlements**: reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html`.
 - **Sub-region promotion (remaining major)**: Thousand Kingdom, Dragon's Reach, River Duchies. The pattern is established by Fenurra / Emarrea / Myrria / Crossroads / Lost Kingdom / Order of Steam / Emerald Isles.
 - **Other god city-state pages**: Myrria's pattern (folder under domain, settlement page named after the folder) can be replicated for Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City as their content matures.
-- **Myrria sub-pages**: Myrria's Godshall (Adventurers' Guild facility) and Seraphel Duskbane (Guild Sovereign of Myrkono) — both flagged as stubs from the Myrria city page and currently held in `lore/factions.md`. Promote when Phase 3 of the WA migration runs.
+- ~~**Myrria sub-pages**~~ — RESOLVED 2026-05-17. Both Myrria's Godshall and Seraphel Duskbane were published on `/talan/factions/adventurers-guild.html` (Tier 3 step 5) — Godshall as its own H2 section *A Regional Seat Worth Naming*, Seraphel as a full figure-card. Cross-linked from `myrria.html`. Dedicated sub-pages aren't needed — Godshalls are a guild tier and Seraphel is a guild sovereign, so the Adventurers Guild page is their right home.
 - **The other six Wardstones**: their host cities (Lakeside, Steppes, Forest, Temple, Monastery, Port) currently lack names — once named, each can become its own settlement page linked from the-binding.html.
 - **The eight remaining Nine Generals' dungeons**: only the Vermin Queen's Hollow of Ten Thousand Threads is sited. The other seven need placement before they can earn their own dungeon pages.
 - **Three-tier UI on remaining eras**: extend the amber Popular Belief / red GM Secret expandables to Gods', Lost, Golden, Dark, Adventurer eras as content gets written.

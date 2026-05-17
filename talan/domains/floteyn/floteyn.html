@@ -59,14 +59,58 @@
     <div class="subregion-card">
       <div class="subregion-name">Floating Isles of Shuun</div>
       <div class="subregion-etym">Collective name</div>
-      <div class="subregion-desc">The hundreds of drifting islands across the domain. Each island technically has its own name; this is the common reference for the archipelago as a whole.</div>
+      <div class="subregion-desc">The hundreds of drifting islands across the domain. Each island technically has its own name; this is the common reference for the archipelago as a whole. The most famous is <b>Balaena, the Skywhale City</b> — see below.</div>
       <div class="subregion-tags"><span class="subregion-tag">Archipelago</span></div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Balaena — The Skywhale City</h2>
+  <div class="prose">
+    <p>One of the hundreds of drifting islands of Shuun, but unique. From outside Balaena reads as an ordinary drifter — exactly the sort of thing the archipelago is full of — but it is built atop a <b>half-submerged young skywhale</b>, kept buoyant by city-wide ritual and a careful weight-and-pulley balance. The people who live there do not know they stand on a creature.</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-title">The Bridge That Walks on Water</div>
+      <div class="info-card-body">A wooden footbridge connects Balaena to a fixed pier on a neighbouring stable islet. Over the years the whale has grown — and sunk — and the water has risen with it. The bridge now sits about five centimetres beneath the surface. Visitors appear to walk across the water.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">The Blowhole Fountain</div>
+      <div class="info-card-body">Twice daily, the city's weight-and-pulley system presses the island down enough that the whale's blowhole erupts. Sheets of water, rainbows in the mist, an intricate fountain network throughout the city — public spectacle that draws visitors from across Floteyn. Afterward the system releases.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">The Weight-Gate Ritual</div>
+      <div class="info-card-body">Every visitor entering Balaena is weighed at the harbour gate — politely, ceremonially, with a small tally token returned at departure. Citizens regard it as folkloric civic pride. The city's balance, after all, is the city's safety.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">The Mirror Mornings</div>
+      <div class="info-card-body">On calm-water dawns the lake stills enough that Balaena's reflection shows the city and its inverse twin in perfect glass. Painters and pilgrims plan trips around the forecast. The image is the city's most-reproduced postcard.</div>
+    </div>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — What the Quiet Few Maintain</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; A whisper passed between dockmasters and balance-keepers</div>
+      A small organisation within Balaena's government knows what the city actually is and works to keep the balance precise — too weak to fly away, not so weak that it dies. Their motive is the status quo: a city this beautiful, this profitable, this distinctive cannot afford for the whale to recover. The fountain shows, the weight-gates, the underwater bridge — all of it is the apparatus of a quiet, polite act of captivity, performed daily in plain sight.
     </div>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · FLOTEYN</div>
 
 </div>
+
+<script>
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
+}
+</script>
 
 </body>
 </html>
