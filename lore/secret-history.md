@@ -223,3 +223,94 @@ A widely circulated in-world account of the Corrupted God's binding, attributed 
 - The truth (see *The Corrupted God — True Identity* above) is that the Corrupted God is the Elden — an entire civilisation fused with the Devourer, not a malevolent personal deity. Most mortals do not know this and would not believe it.
 - The names **Maw Below** and **Blightfather** are folk titles for the Corrupted God. Use them in mortal-voiced text (sermons, chronicles, peasant rumour); avoid them in GM-truth contexts.
 - The closing line names the binding (2135 MR) as the beginning of the **Adventurer Era** — the current age. The Adventurers Guild's founding-mythos status is baked into popular history; Lorant's account is part of why.
+
+---
+
+## The Lost Era — Mortal Belief
+
+The five hundred years between the Crimson Rain and the Golden Empire's rise are called *Lost* because almost nothing survived in written form to describe them. Scholars offer three explanations.
+
+- **The first** holds that the survivors of the Crimson Rain were simply too shocked to write — generations stunned by the war's casualty scale, occupied entirely with subsistence, with neither inclination nor institutions for chronicling.
+- **The second** points to infrastructure collapse: the gods had run the great libraries, schools, and scriptoria of the Gods' Era, and without divine maintenance these collapsed; what was lost was lost.
+- **The third**, common in mystical traditions, proposes a kind of collective amnesia — that something in mortal awareness *changed* after the Crimson Rain, that whole decades simply did not lodge in memory the way ordinary time does, and that mortals who tried later to remember those years found the past slipping out from under them. The kinder versions of this theory blame trauma. **The stranger versions argue the *Wellspring* was different in those years** — which is the closest mortal scholarship gets to the truth.
+
+---
+
+## The Lost Era — The Real History
+
+The forging of the Gods' Law banished all divine beings from the Material Plane except the thirteen who accepted the binding. Before the Crimson Rain, the world held many gods — Major, Minor, Demi, and the Grand twelve — whose combined presence mediated the Wellspring's outflow into the Life Layer through dense networks of divine grant, clerical channel, and direct presence. After the Compact, **thirteen alone remained to do this work. They could not.**
+
+**The leak.** For roughly the first century of the Lost Era the Wellspring's source-fluid touched the world more directly than at any time since pre-Creation. Dreamers shaped reality in their sleep; certain valleys spoke languages that produced what they named; infants were born already speaking forgotten tongues; and the **Storveldi integration procedure** became findable again to anyone whose curiosity took them the right way. Some mortals certainly ascended in those decades. There was no one to stop them and no one to record what they became.
+
+**Reflections.** The first class of beings produced by the leak: mortals born when raw, un-mediated Wellspring touched a conception or earliest gestation — mortal-shaped but with no ancestry, anchored directly to the Wellspring rather than to any deity-mediated ancestry line. Most Lost-Era Reflections died young (raw Wellspring contact is not biologically stable); a few survived to seed the modern Reflection lineage. The existing `bestiary.md` gloss — *magical mishap / Wellspring blip / no parent lineage* — is the **public cover** for what Reflections actually are. See `bestiary.md` — *Reflection heritage* and `cosmology.md` — *Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window*.
+
+**Stabilisation.** The thirteen returned during the second century with a new mediation framework — what mortals now experience as **the Four Schools** and the modern cleric craft. The Four Schools' modern form is the post-leak stabilisation tooling, designed to let mortals mediate the outflow themselves where the thirteen are too few. By the close of the second century, the general leak had subsided.
+
+**Stillpools.** When the general leak stopped, a small number of Wellspring-touched sites remained as **Stillpools** — quiet, scattered, locally folkloric. **Mechanic:** when a mortal interacts with a Stillpool (looks too long, bathes, drinks, leaves something behind), there is a chance that a **Reflection is born nearby roughly one week later.** Every modern Reflection traces back to a Stillpool event. They are not random and not mishaps. Full mechanic in `cosmology.md`.
+
+**Why the records didn't survive.** Not divine redaction — the bound thirteen are forbidden by the Compact from that kind of mortal-surveillance work. The records simply didn't survive: infrastructure had collapsed, surviving Reflections and ascended mortals had reason to keep their own accounts unwritten, and by the time the thirteen returned the strangest decades were already folk-memory. *"Lost"* is the polite word.
+
+---
+
+## The Golden Empire — Mortal Belief
+
+The Golden Empire's seven centuries of dominance are the subject of more scholarly debate than any other era of mortal rule, and three explanations dominate.
+
+- **The first** credits the Emperor's personal qualities — a dwarven sovereign of legendary discipline, strategic intelligence, and longevity, whose institutional foundations his successors merely maintained.
+- **The second**, common in temple traditions, holds that the Gods' Law was quietly bent in the Empire's favour: the bound thirteen permitted its flourishing because the new order needed an anchor civilisation to rebuild around, and what mortals read as divine *absence* was in fact divine *allowance*.
+- **The third**, favoured in mystic schools, holds that the Wellspring itself shaped events to reward the first true mortal civilisation for surviving its gods — the Empire as the world's gift back to itself.
+
+All three flatter the present. None has documentary footing strong enough to settle the question; the dwarven imperial archives that would, did not survive the Dark Era's first decade.
+
+---
+
+## The Golden Empire — The Real History
+
+**The Golden Emperor was a Reflection.**
+
+He was conceived a generation or so before the Empire's founding, born near a Stillpool that his mother had unknowingly approached (a forest pond on the southern foothills of what would become the imperial heartland). The midwives knew there was something different about him — eyes that focused too soon, an oddly settled gravity in an infant — but no one named what he was, because the framing for *what he was* did not exist in the post-Lost-Era scholarly vocabulary. The conscious-pull technique that would make his ascent possible was something he discovered for himself over decades, through patient inward attention to a sensation no one else around him could feel.
+
+**Reflections have a fundamentally different connection to the Wellspring than ancestry-derived mortals.** They are *born* of direct Wellspring contact, so the divine-mediation framework that the Gods' Law uses to bind mortal/divine ascension does not fully apply to them. The Compact's enforcement runs through the same divine-mediation lattice that produces ordinary ancestry-derived mortals, and a Wellspring-direct being slips the framework's grain.
+
+**The Emperor was the only Reflection in recorded history who recognised what he was, identified the connection he carried, and learned to consciously *pull* on it.** By doing so he ascended to **Minor God status while remaining on the Material Plane** — the unprecedented loophole exploit. His ascent was gradual, hidden, and never named in court: he simply grew more competent, more present, more impossible to oppose, year by year, decade by decade. The Empire's seven centuries are what one Wellspring-direct minor god, operating outside the Compact's framework, can build in a single career.
+
+**His end — and what he did with it.** The Emperor was alive and active throughout the breach crisis. When the miners broke the seal in 1321 MR and the Corrupted God's first spawn erupted into the Empire, he coordinated the initial defence personally — and **began concentrating his power directly against the Corrupted God**, the closest anything has come to a mortal-led counterattack on a bound divinity. The concentration worked locally: he held the central provinces longer than any other Imperial institution. But pulling that much of his strength inward starved the rest of the Empire. **The periphery, already strained by the spawn-wave, cracked. The cracks grew.** By the time the Empire formally collapsed in 1325 MR, half of it had already left him. In the years that followed he kept fighting — wave after wave, in a shrinking territory, increasingly alone.
+
+**A rebellion party surprised him** in his weakened state, in the aftermath of a defensive engagement against another spawn-wave. They killed him. Mortal killers, a mortal death. Normally that would send his soul straight to Layer 3.
+
+**It did not.** At the moment of death he **captured his own soul into a pocket dimension still in Layer 2** — a Life-Layer-adjacent pocket carved out by the same Wellspring-direct means that had bypassed the Compact at his ascent, now applied to bypass the Postlife at his death. He resides there now, intact in a sense, **continuously seeking a path to resurrect.** He has been there for roughly twelve hundred years. He has not given up. (Campaign-hook tier — see `docs/open-threads.md` for *The Golden Emperor Returns*.)
+
+**The Grand Gods do not know how he did it.** Two reasons, both structural:
+
+- First, they analyse divine events through the Law's framework — the Ethereal-Plane lattice that mediates god / Material-Plane interaction — and the Emperor's ascent operates *outside* that framework. Their diagnostic tooling is the wrong instrument for the question.
+- Second, the population that can exploit the loophole (Reflections) is the population the thirteen cannot watch: surveilling Reflections en masse to study the mechanism would itself violate the Law's prohibition on *unchecked divine control of mortal lives*. The bound thirteen carry a permanent, structural inability to study the one path that could break the Compact.
+
+They do not advertise this. **No living Reflection knows what they are.** Across all of Talan and its veils, the people who know the full arc — Reflections, Stillpools, the Emperor's loophole, the Emperor's persistence in the Layer-2 pocket — number in the **lower single digits.** The Emperor himself, in his pocket, is one of them. The others are not who you would guess.
+
+**Why this matters as canon:**
+- The Emperor was Wellspring-direct (Reflection), not deity-mediated. This is what enabled the loophole.
+- The Empire's success was not divine favour, was not Wellspring favour, was not exceptional discipline — it was one ascended Wellspring-direct mortal operating where no god could legally interrupt him.
+- The Emperor's continuing existence is GM-tier. Mortals do not know. The thirteen do not know.
+
+---
+
+## The Dark Era — The Mining Wasn't Accidental
+
+The 1321 MR breach of the Corrupted God's seal was not an accident. The Golden Empire knew what was beneath the seal — or thought it did.
+
+**The Emperor's calculation.** By 1321 MR the Emperor had been a Minor God on the Material Plane for centuries (see *The Golden Empire — The Real History* above). His ascent had levelled off. Further progress on the ladder — toward Major God, toward something the thirteen would have to acknowledge — required either many more shards, or some larger concentrated source. **He had located the Elden ritual site through means no mortal expedition should have managed**, almost certainly by following his Wellspring-direct intuition into the strata beneath Imperial mining country, and he had read fragments of pre-Crimson-Rain records that implied a dormant power-cache of unprecedented scale.
+
+**The miners weren't exploring — they were excavating to a known target.** The Imperial mining programme of the late thirteen-hundreds was not commercial; it was the Emperor's, run through commercial cover. The depth, the bearings, the resource allocation — all directed.
+
+**The miscalculation.** He had not understood that the dormant entity below was a fused divinity-and-void — that what slept beneath was the Elden civilisation collapsed into a single being, the Wellspring's endless creation and the Devourer's endless destruction locked together (see *The Corrupted God — True Identity* above). He had expected a power-cache. He found a Corrupted God.
+
+**The Dark Era is the price of his miscalculation, but the Emperor himself did not die at the breach.** He survived it — Wellspring-direct, operating outside the framework the spawn knew how to assault — and personally coordinated the Imperial defence. He even began **concentrating his power directly against the Corrupted God** — the closest anything has come to a mortal-led counterattack on a bound divinity. The concentration worked locally and broke the Empire elsewhere: pulling his strength inward starved the periphery, cracks grew, and by **1325 MR** the Empire had formally collapsed. He kept fighting in shrinking territory for years afterward.
+
+A **rebellion party** eventually surprised him after a defensive engagement, in his weakened state, and killed him. The death should have routed his soul to Layer 3. It did not. **He captured his own soul into a pocket dimension within Layer 2** — same Wellspring-direct mechanism that had bypassed the Compact at his ascent, now applied to bypass the Postlife at his death. He has been in that pocket for roughly twelve hundred years, **continuously seeking a path to resurrect** (full account in *The Golden Empire — The Real History*; campaign hook tracked in `docs/open-threads.md`).
+
+**Why the thirteen don't know.** Same structural reason: they analyse divine events through the Law's framework, and the Emperor's actions all operate outside it. They know the breach happened, they know the Empire fell, they know the Corrupted God is what emerged. They do not know that a Wellspring-direct mortal *triggered* the emergence by chasing an ascent the framework cannot see. The Adventurers Guild does not know this either. The Sage Lorant chronicle (above) is mostly cover.
+
+**Why this matters as canon:**
+- Directly bridges the **Golden Empire — Real History** to the **Dark Era**: the same secret runs through both. The Empire's success and the Empire's collapse are the same mortal's career.
+- Echoes the Storveldi pattern: mortal ascension overreach causes cosmic catastrophe. Twice in recorded history now.
+- Provides a story-vector for any cleric, scholar, or adventurer who stumbles into evidence at an old Imperial mining site, an Imperial archive, or — rarely — a Stillpool that remembers an Emperor.

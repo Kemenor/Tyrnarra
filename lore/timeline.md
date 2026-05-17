@@ -55,6 +55,8 @@ For over five centuries, mortal civilization simply tried to survive. The divine
 
 Characterized by fragmentation, rediscovery, and immense loss of knowledge. Entire libraries of the Gods' Era were lost. Languages fractured. Populations crashed in some regions, migrated in others. Slowly, mortal kingdoms began to form — imperfect, contentious, but their own. Called "Lost" not because nothing happened, but because so much of what happened was never recorded.
 
+*The era's first century in particular has its own deeper story — see `secret-history.md` — **The Lost Era — The Real History** and `cosmology.md` — **Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window**.*
+
 ---
 
 ## The Golden Era
@@ -65,6 +67,8 @@ Named for the civilization that defined it: the **Golden Empire**, a dwarven emp
 The Empire's scholars attempted to recreate the Androids of the Elden and failed — producing the **Automaton** ancestry instead. Capable constructs, but not what they were reaching for.
 
 The Golden Empire was not a gentle ruler, but it was a consistent one. The cultural foundations of many modern kingdoms trace directly to this period.
+
+*The Empire's actual mechanism — and the Emperor's true nature — is GM-tier. See `secret-history.md` — **The Golden Empire — The Real History**.*
 
 ---
 
@@ -78,6 +82,8 @@ Eight centuries of attrition followed. The Corrupted God's forces did not conque
 From this darkness emerged the **Adventurers Guild** — not a king's army, not a god's command, but people who resisted because their conscience demanded it. They organized across borders and nations, answering to the mission rather than any crown.
 
 In **2135 MR**, a party of adventurers descended further than any before them and defeated the Corrupted God — not slaying it, but wounding it so deeply its active influence collapsed. The spawn retreated. The darkness receded.
+
+*The 1321 MR breach was not accidental. The cover story (Lorant's *Age of Corruption*) is one of the most widely circulated mortal accounts; the actual cause runs through the Golden Empire. See `secret-history.md` — **The Age of Corruption — Mortal Myth**, **The Corrupted God — True Identity**, and **The Dark Era — The Mining Wasn't Accidental**.*
 
 ---
 

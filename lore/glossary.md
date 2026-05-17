@@ -79,10 +79,11 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 **Vindul (Wind):**
 - **Haizetsua** — Basque *haize* (wind); island name echoes domain character
 - **Baerfrost** — English-style, arctic northern sub-region
-- **Azkamour** — etymology TBD; border territory with Lautara
+- **Azkamour** — Basque *azkar* (swift, quick) + *muga* (border) → *azkar-muga* → drifted *azkamoua > azkamour* "the Swift March." Border territory between Vindul and Lautara, capital on the Lautara side. The Commerce-and-Wind crossroads — the name records that trade moves fast through.
+- **Fellibylur** — Icelandic *fell* (lone mountain, fell) + *bylur* (snowstorm, blizzard, gale) → *fellsbylur > Fellibylur* "Storm-Fell / Blizzard Peak." Drift: genitive *-s-* worn to *-i-*. A high lone peak in Vindul whose summit gathers weather; the storm-wracked character fits Fisaya's wind-and-cold domain, and Baerfrost lies adjacent.
 
 **Lautara (Commerce):**
-- **Azkataria** — contains Merkavar; etymology TBD
+- **Azkataria** — Basque *azoka* (market, fair) + *-tar(ra)* (people-of, native-of) → *azokataria* → vowel-loss to **Azkataria** "market-folk / people of the market." Sub-region of Lautara containing Merkavar (Jianna's city-state, on a lake within Azkataria's interior). The region named after the people who live around the great market.
 - **Twin Suns** — modern English, named for hilltop astronomical phenomenon
 - **Emarrea** — Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom — fox-colour and gentle-host disposition encoded in the name. Forested eastern highlands of Lautara. Capital: Biozuri.
 - **Biozuri** — Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
@@ -94,7 +95,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Itzasoa** — echoes Basque *itsasoa* (sea/ocean); coastal sub-region
 
 **Floteyn (Water):**
-- **Balatur Erui** — etymology TBD
+- **Balatur Erui** — Basque *balea* (whale) + Icelandic *eyri* (sandbank, sea-spit of land) → *balea-eyri* → drifted to **Balatur Erui** "whale-spit / whale shoals." Hybrid Basque/Icelandic, echoing the Burdineyja pattern. Drifting islands and whales together fit Floteyn double; Balaena the Skywhale City sits within the same archipelago.
 
 **Sumendar (Fire):**
 - **Burdineyja** — Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
@@ -108,27 +109,32 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Galdua Jendea** — Basque; meaning disputed ("Place of Many Waters" or "Place of the Lost People")
 - **Lost Kingdom** — modern English; temporally unstable ruins
 - **River Duchies** — modern English; oasis river valley confederation
-- **Hareaveldi** — predates Tani's influence; etymology TBD
+- **Hareaveldi** — Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift — initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru. Partially independent cultural identity persists.
 
 **Brauogi (Earth):**
-- **Gotorlekua** — contains Lurrath; etymology TBD
-- **Rika Tikur** — independent coastal city west of Millhaven; etymology TBD
+- **Gotorlekua** — Basque *gotor* (strong, firm, sturdy) + *leku* (place) + *-a* (definite article) → **Gotorlekua** "the Stronghold." Near-undrifted Basque — the name reads younger than its referent suggests, either because the meaning has refreshed it in usage over the millennia, or because plain compounds erode less than poetic ones. Houses Lurrath, Sarrum's city-state (Steadfast City).
+- **Rika Tikur** — Icelandic *ríkur* (rich, wealthy) + *tígulegur* (splendid, stately) → **Rika Tikur** "Rich and Splendid." The compound is imperfect — less a clean Icelandic phrase than a boastful self-applied brag that stuck. An independent coastal merchant-port west of Millhaven, in Brauogi, naming itself for the wealth it claims.
 - **Dreaming Cape** — English-style
 - **The Earth Realm** — English-style
 
 **Ezkudon (Knowledge):**
 - **Jakinduria** — Basque *jakinduria* (wisdom/knowledge); real word, no drift required
 - **The Golden Coast** — modern English; coastal sub-region
-- **Lua Lasai** — etymology TBD; border territory with Egulon
+- **Lua Lasai** — Basque *lur* (land, earth) + *lasai(a)* (calm, peaceful, tranquil) → *lur-lasaia* → r-loss to **Lua Lasai** "Calm Country / Quiet Land." Border territory between Ezkudon (Knowledge) and Egulon (Light); the peaceful frontier between two non-warring domains, the name encoding the politics of the place — quiet because neither domain has cause for war here.
 
 **Egulon (Light):**
-- **Harro Distiratsue** — etymology TBD; border territory with Brauogi
+- **Harro Distiratsue** — Basque *harro* (proud) + *distiratsu* (radiant, brilliant, sparkling) → **Harro Distiratsue** "Proud Radiance." Drift: adjective ending *-tsu > -tsue* (light Tyrnarran inflection). Border territory between Egulon (Light/Iro) and Brauogi (Earth/Sarrum); Iro-side framing — pride and radiance both fit the Light domain's character.
 - **Argia Esfera** — Basque *argia* (light) + Latin/Spanish *esfera* (sphere) = sphere of light
 
 **Zuzental (Law):**
 - **Thousand Kingdom** — modern English; houses Lograth (capital and city-state merged)
-- **Emerald Isles** — modern English. Island kingdom of Zuzental: three main forested islands within Talan's coastal waters (Northern Isle, Middle Isle, Southern Isle) plus the **Bridgelands** (a recently-acquired northeastern collection of smaller islands sitting partly in Hafra and partly in the Cloud Sea, connected to each other by spanning Magitech bridges). The Bridgelands are the canonical Sortalde cloudship landing point and host the standing Sortalde embassies on Talan. Capital sits on Middle Isle (capital name TBD).
-- **The Bridgelands** — modern English. The northeastern outer-rim islands of the Emerald Isles kingdom, named for the spanning Magitech bridges the kingdom built between them. The bridges are substantial Arcanotech works, capable of carrying caravan traffic across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Bridge engineering doubles as soft-power signal — *the kingdom that built the bridges is the kingdom Sortalde does business with.*
+- **Emerald Isles** — modern English. Island kingdom of Zuzental: three main forested islands within Talan's coastal waters (Northern Isle, Middle Isle, Southern Isle) plus the **Bridgelands** (a recently-acquired northeastern collection of smaller islands sitting partly in Hafra and partly in the Cloud Sea, connected to each other by spanning Magitech bridges). The Bridgelands are the canonical Sortalde cloudship landing point and host the standing Sortalde embassies on Talan. Capital is **Oathmoore**, on Middle Isle's western shore (see below).
+- **Oathmoore** — modern English with light Frae-style drift. Capital of the Emerald Isles, on Middle Isle's western shore, facing the Zuzental mainland across the strait. **A trilingual compound** that triple-reads: *oath* (sworn-compact / Forseti's framework) + *moor* (mooring, dock — the busy mainland-facing port) + an echo of *more* signifying "more oaths." The trailing silent *-e* is the drift that lets the third reading land — *Oathmoor* would carry only the first two. Houses the royal court, the kingdom's treasury, and the Concord-of-Courts liaison who handles formal Sortalde correspondence.
+- **The Watchstone** — modern English chronicler's by-name for **Northern Isle** — the northernmost emerald of the trio, set outward and watching the Kaosadaemi shore across the water. Jewel + law angle (the northern stone keeping the kingdom's chaos-facing watch).
+- **Emerald's Eye** — modern English chronicler's by-name for **Middle Isle** — the centre-stone of the three-emerald setting; the gaze of the kingdom. Pure jewel angle.
+- **The Lyteward Bough** — modern English with Middle-English-style drift (*light* → *lyte*, real manuscript variant); chronicler's by-name for **Southern Isle** — the bough that leans toward the Light coast, where the isle's trade and ritual both tilt. **Significance: this is the founding bough** — the Southern Isle was the original seat of the Emerald Isles kingdom; the capital was later moved to Oathmoore on Middle Isle for the strait-facing diplomatic geometry the kingdom has today. The by-name preserves the founding memory in chronicler usage even though the throne no longer sits here.
+- **The Bridge-Pearls** — modern English chronicler's by-name for **the Bridgelands** — a smaller string of stones to the main trio's emeralds; pearls for size and for the Cloud Sea's pale, near-white quality where the bridges meet the cloud-touching gaps. Jewel + sea angle.
+- **The Bridgelands** — modern English. The northeastern outer-rim islands of the Emerald Isles kingdom, named for the spanning Magitech bridges the kingdom built between them. The bridges are substantial Arcanotech works, capable of carrying caravan traffic across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Bridge engineering doubles as soft-power signal — *the kingdom that built the bridges is the kingdom Sortalde does business with.* Chronicler's by-name: *the Bridge-Pearls.*
 - **Legea Empire** — drift from Latin *lex/legem* (law); major empire. **A theocracy ruled by a demigod of a non-bound god (Layer 3 / Postlife resident; specifics TBD). State faith is the Divine Faith (see `factions.md`).** Sits inside Forseti's domain of Law — the resulting law-vs-law theological argument is structural and continual.
 - **Namur Republic** — modern English; democratic city-state network
 - **Order of Law** — modern English; institution
@@ -386,6 +392,10 @@ Full geography in `geography.md` and god-deep-dive in `secret-history.md` — *A
 - **Shadowed Palm / Lantern Rite / Shadow-Coin** — Araphel's signature rites of renunciation and renaming.
 
 ### Geography & Settlements
-- **Midarra** — the central freshwater inner sea of Talan. NOT a city. Cronus's island sits within it; Millhaven is on its southern shore. Etymology TBD.
+- **Midarra** — Icelandic *mið* (middle, midway) + *ár* (river, water) + *-a* (definite article, reanalyzed onto the compound) → *Miðára > Midarra* "the Middle Waters." The central freshwater inner sea of Talan — NOT a city. Cronus's island (Freedom domain) sits within it; Millhaven is on its southern shore. The name predates mortal settlement; a deep-old Icelandic-drift designation for the sea that lies in the middle of the continent.
 - **Hafra** — the saltwater sea surrounding Talan. Icelandic *haf* (ocean, open sea) → shortened and drifted.
 - **Twin Cities** — modern English; the mobile pirate capital adrift in Midarra. A paired settlement: a water-bound raft-city of lashed hulls below, a sky-bound sister-city of tethered airships and lifted islets above. The pair moves together on a course set by the council of Pirate Lords. Sovereign — no god, no kingdom.
+
+### Wellspring sites
+
+- **Stillpool** — modern English (descriptive folk term, no drift). A residual Wellspring-touched site left over from the **Lost-Era leak** — when the bound thirteen alone were too few to mediate the Wellspring's outflow after the Crimson Rain. Scattered across Talan; **the count is deliberately uncatalogued in canon** — sources disagree, and even the Adventurers Guild's sealed atlas is presumed incomplete. Quiet, locally folkloric — fairy-haunted, witch-touched, bad-luck-to-visit. **Mechanic:** when a mortal interacts with a Stillpool (looks too long, bathes, drinks, leaves something behind), there is a chance that a **Reflection** is born nearby roughly one week later. Every modern Reflection traces back to a Stillpool event. The **Adventurers Guild keeps the sealed atlas** as a working register for high-rank parties; one or two Stillpools are watched by the nearest church; most are remote enough that nobody visits. See `cosmology.md` — *Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window* and `secret-history.md` — *The Lost Era — The Real History*.

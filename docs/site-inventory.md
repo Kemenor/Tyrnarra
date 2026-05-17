@@ -51,6 +51,45 @@ Tier 1 publishing pass — 2026-05-17:
   lioaru.html                  Lost Kingdom expanded (Blackened Lands, Skeleton/Fleshwarp origin); Storveldi/Betibizi GM Secret expandable; Magitrain limits note
   sumendar.html                Order of Steam reframed as Magitech industrial heart (Elden-tech origin, House Eisenhart); Dragon's Reach two-recovery-projects friction; Magitech + Magitrain notes
 
+History three-tier publish pass — 2026-05-17:
+  history.html                 Lost / Golden / Dark era cards now carry full three-tier UI.
+                               **Lost Era** — new Popular Belief (three-theory cover: trauma /
+                               infrastructure collapse / mystical-amnesia) + new GM Secret
+                               (Wellspring Wakened — leak mechanism, Reflections as Lost-Era-
+                               born, Stillpools mechanic, why records didn't survive).
+                               **Golden Era** — new Popular Belief (three-theory cover:
+                               Emperor's qualities / divine allowance / Wellspring favour) +
+                               new GM Secret (Emperor was a Reflection; conscious-pull
+                               ascent; Material-Plane Minor God via loophole; killed by
+                               rebellion in shrinking post-breach territory; captured own
+                               soul into Layer-2 pocket dimension; twelve hundred years
+                               seeking resurrection; *lower single digits* know).
+                               **Dark Era** — new GM Secret (The Mining Wasn't Accidental
+                               — Emperor located Elden ritual site, ordered breach as
+                               ascent fuel, miscalculated catastrophically). Popular Belief
+                               (Sage Lorant Age-of-Corruption chronicle) was already
+                               published; left as-is.
+  Cross-anchored to lore in   cosmology.md (Wellspring Outflow section), secret-history.md
+                               (Lost / Golden / Dark era pairs, ~1100 new words),
+                               bestiary.md (Reflection retcon — cover-vs-truth),
+                               glossary.md (Stillpool entry), timeline.md (see-also pointers).
+
+Emerald Isles capital + by-names pass — 2026-05-17:
+  emerald-isles.html           Capital name **Oathmoore** filled (3 slots: at-a-glance dd, Middle Isle card, closing-section reference); trilingual etymology recorded in the at-a-glance dd. Four chronicler's by-names added: Northern Isle = "The Watchstone", Middle Isle = "Emerald's Eye", Southern Isle = "The Lyteward Bough", Bridgelands = "The Bridge-Pearls". New `.isle-byname` style added (Cinzel italic, parallel to existing `.isle-role` slot) — mirrors the subregion-etym pattern without a new component family. **Southern Isle reframed as the founding bough** — the kingdom was originally founded there; the throne later moved to Oathmoore on Middle Isle for the strait-facing diplomatic geometry. No "Open in Canon" panel existed on this page (the two TBDs were inline); both now resolved.
+  glossary.md                  Five new Zuzental-block entries: Oathmoore (with trilingual etymology), The Watchstone, Emerald's Eye, The Lyteward Bough (with founding-site note), The Bridge-Pearls. Existing Emerald Isles + Bridgelands entries updated to point at the capital and by-names.
+  geography.md                 Emerald Isles section: capital fill on Middle Isle; chronicler's by-names added to all three isles + Bridgelands; Southern Isle founding-bough fact recorded.
+
+Etymology publish pass — 2026-05-17:
+  10 sub-region etymologies filled in on existing `subregion-card` / `sea-card` slots (Burdineyja pattern, no new components):
+  vindul.html                  Azkamour (Swift March), Fellibylur (Storm-Fell / Blizzard Peak) — Fellibylur canon-placement corrected here per geography.md
+  lautara.html                 Azkamour (Swift March), Azkataria (market-folk)
+  floteyn.html                 Balatur Erui (Whale-Spit / Whale Shoals)
+  lioaru.html                  Hareaveldi (Sand Realm — predates Tani)
+  brauogi.html                 Gotorlekua (the Stronghold), Rika Tikur (Rich and Splendid), Harro Distiratsue (Proud Radiance)
+  ezkudon.html                 Lua Lasai (Calm Country)
+  egulon.html                  Lua Lasai (Calm Country), Harro Distiratsue (Proud Radiance)
+  talan.html                   Midarra sea-card: Middle Waters; older-tongue Still Mirror / Deep Eye flavour preserved as trailing clause
+
 /talan/domains/                13 domain pages — etymology, facts, character pills,
                                god's city, sub-region cards
   vindul/vindul.html           POPULATED      lautara/lautara.html     POPULATED
@@ -141,7 +180,7 @@ The site uses three layers of revealability for setting information:
 
 Currently used in:
 - `grand-gods.html` — all 13 gods have at least the red GM Secret tier (Cronus's is fully written; others have placeholder text).
-- `/talan/history.html` — **Elden Era**, **Gods' Era**, and **Week of Crimson Rain** have all three tiers (Gods' Era added 2026-05-17). The remaining 5 eras have only common-knowledge text.
+- `/talan/history.html` — **Elden Era**, **Gods' Era**, **Week of Crimson Rain**, **Lost Era**, **Golden Era**, and **Dark Era** all carry the three-tier UI. **Adventurer Era** (current) intentionally carries common-knowledge prose only. **Creation Era** is deliberately Open with no expandables.
 - `/talan/the-binding.html` — GM Secret expandable (Corrupted God = Elden + four General domain-grants).
 - `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
 - `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
