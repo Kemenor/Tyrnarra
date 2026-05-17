@@ -197,35 +197,4 @@ Removed in earlier phases: `talan-primer.html`, `tyrnarra-primer.html`, `tyrnarr
 
 ---
 
-## Cross-Links Between Pages
-
-- Each god card on `grand-gods.html` has a **"Visit [Domain Name] →"** link in its expanded view, pointing to the matching `/talan/domains/<slug>/<slug>.html`. When god city-states get their own pages later, a second link will go there.
-- The landing page's portal cards link out to the gods, magic, Talan, and history pages.
-- Each domain page breadcrumbs back to `/talan/talan.html` and `/index.html`.
-
----
-
-## Three-Tier Knowledge System — Inventory
-
-The site uses three layers of revealability for setting information:
-
-- **Plain text** — common knowledge, no interaction.
-- **Amber ◈ pill** — "Popular Belief", expandable. `.legend-era-toggle` / `.legend-era-content` (Style B / history page).
-- **Red ⚿ pill** — "GM Secret", expandable. `.secret-toggle` / `.secret-content` (gods page) or `.secret-era-toggle` (history page).
-
-Currently used in:
-- `grand-gods.html` — all 13 gods have at least the red GM Secret tier (Cronus's is fully written; others have placeholder text).
-- `/talan/history.html` — **Elden Era**, **Gods' Era**, **Week of Crimson Rain**, **Lost Era**, **Golden Era**, and **Dark Era** all carry the three-tier UI. **Adventurer Era** (current) intentionally carries common-knowledge prose only. **Creation Era** is deliberately Open with no expandables.
-- `/talan/historical/golden-empire.html` — full Popular Belief + GM Secret pair, mirroring the canon entered on history.html's Golden Era card, with additional institutional depth.
-- `/talan/the-binding.html` — GM Secret expandable (Corrupted God = Elden + four General domain-grants).
-- `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
-- `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
-- `/talan/domains/floteyn/floteyn.html` — one amber Popular Belief expandable (Balaena's captivity).
-- `/talan/domains/zuzental/thousand-kingdom.html` — full three-tier on the founding: plain prose + amber Popular Belief (Old King myth) + red GM Secret (Demigod's tragic motive + forged Queen lineage + the throne-held truth).
-- `/talan/domains/sumendar/dragons-reach.html` — one amber Popular Belief expandable (most Talanese don't know Dragons are alien — truth is findable, not GM-secret).
-- `/talan/domains/lautara/crossroads.html` — four amber tavern-rumour expandables.
-- `/magic.html` — GM Secret on the Mortal Ascent Ladder (integration-procedure / Storveldi / Betibizi).
-
----
-
 This file is a **description of what is published**, not a TODO list. For forward work — what needs writing, fleshing out, or publishing next — see [`open-threads.md`](open-threads.md).
