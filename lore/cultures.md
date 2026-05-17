@@ -287,6 +287,8 @@ A people of love, laughter, and living well. The kitsune inhabit **Emarrea** —
 
 Geography and political detail live in [geography.md](geography.md) under *Lautara — Emarrea*. This entry covers the people.
 
+> **A note on the kitsune and Sortalde.** The kitsune of Emarrea and the peoples of Sortalde share East-Asian visual and onomastic register in our real-world reference vocabulary, but in Tyrnarra they are **entirely separate cultures with no shared history, no shared institutions, no diplomatic ties, and no political contact.** The kitsune sit on Talan's eastern highlands within Lautara; Sortalde lies a Cloud-Sea-and-Hafra crossing away. The two are not relatives, not branches of a common pre-history, and not on each other's radar. When canon discusses them together it is for register-of-language reasons (both use internally-coherent East-Asian-feeling vocabularies that don't sit in the Basque/Icelandic stratum), never for shared lineage or politics.
+
 ### Circles of Importance
 
 The kitsune frame every relationship as a circle. The closer to your innermost circle, the greater your obligation. Each circle has its own rhythm of festival and obligation:
