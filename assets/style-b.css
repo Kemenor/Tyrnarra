@@ -844,6 +844,18 @@ a.subregion-card:hover {
 .accent-card.is-link:hover {
   transform: translateY(-2px);
 }
+/* outlined: adds a subtle 1px frame on top/right/bottom while keeping
+   the base's thick left stripe. Set --card-outline for the frame colour. */
+.accent-card.outlined {
+  border-top: 1px solid var(--card-outline, rgba(200,168,75,0.2));
+  border-right: 1px solid var(--card-outline, rgba(200,168,75,0.2));
+  border-bottom: 1px solid var(--card-outline, rgba(200,168,75,0.2));
+}
+/* cut-left: sharp left corners, rounded right. Pairs naturally with the
+   left-stripe look — the stripe runs cleanly off the card's edges. */
+.accent-card.cut-left {
+  border-radius: 0 4px 4px 0;
+}
 
 /* ── TWO-COLUMN PAIR ─────────────────────────────────────────
    Side-by-side block layout used for opposing-positions

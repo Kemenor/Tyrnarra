@@ -33,14 +33,13 @@
   .scatter-list b { color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; }
 
   /* Sortalde pointer */
-  .pointer-card { max-width: 920px; margin: 16px auto 0; padding: 18px 22px; background: rgba(20,16,8,0.45); border: 1px solid rgba(200,144,10,0.2); border-left: 3px solid #6a8aa8; border-radius: 3px; }
+  .pointer-card { max-width: 920px; margin: 16px auto 0; padding: 18px 22px; border-radius: 3px; --card-bg: rgba(20,16,8,0.45); --card-outline: rgba(200,144,10,0.2); --card-accent: #6a8aa8; }
   .pointer-title { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 6px; }
   .pointer-cta { display: inline-block; margin-top: 10px; font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,144,10,0.4); padding: 6px 12px; border-radius: 2px; }
   .pointer-cta:hover { background: rgba(200,144,10,0.1); }
 
   /* Domain detail cards — denser than subregion cards, no link transform */
-  .ancestry-card { background: rgba(20,16,8,0.42); border: 1px solid rgba(200,144,10,0.18); border-radius: 3px; padding: 14px 16px 12px; position: relative; overflow: hidden; }
-  .ancestry-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--domain-accent); opacity: 0.75; }
+  .ancestry-card { padding: 14px 16px 12px; border-radius: 3px; --card-bg: rgba(20,16,8,0.42); --card-outline: rgba(200,144,10,0.18); }
   .ancestry-card-title { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 4px; }
   .ancestry-card-title a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(200,144,10,0.3); }
   .ancestry-card-title a:hover { color: #fff; border-color: rgba(200,144,10,0.7); }
@@ -138,7 +137,7 @@
 
   <div class="subregion-grid">
 
-    <div class="ancestry-card" style="--domain-accent: #f0c040;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#f0c040;">
       <div class="ancestry-card-title"><a href="/talan/domains/egulon/egulon.html">Egulon · Light</a></div>
       <div class="ancestry-card-god">Iro · sun-and-radiance</div>
       <div class="ancestry-card-body">
@@ -147,7 +146,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #6a5a8a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#6a5a8a;">
       <div class="ancestry-card-title"><a href="/talan/domains/myrkono/myrkono.html">Myrkono · Darkness</a></div>
       <div class="ancestry-card-god">Araphel · new faces, second chances</div>
       <div class="ancestry-card-body">
@@ -157,7 +156,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #c84020;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#c84020;">
       <div class="ancestry-card-title"><a href="/talan/domains/sumendar/sumendar.html">Sumendar · Fire</a></div>
       <div class="ancestry-card-god">Komo · forge, flame, invention</div>
       <div class="ancestry-card-body">
@@ -167,7 +166,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #4a8ab0;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#4a8ab0;">
       <div class="ancestry-card-title"><a href="/talan/domains/floteyn/floteyn.html">Floteyn · Water</a></div>
       <div class="ancestry-card-god">Shuun · sea, spray, drifting isles</div>
       <div class="ancestry-card-body">
@@ -178,7 +177,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #7a9a3a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#7a9a3a;">
       <div class="ancestry-card-title"><a href="/talan/domains/brauogi/brauogi.html">Brauogi · Earth</a></div>
       <div class="ancestry-card-god">Sarrum · stone, soil, patience</div>
       <div class="ancestry-card-body">
@@ -188,7 +187,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #88aacf;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#88aacf;">
       <div class="ancestry-card-title"><a href="/talan/domains/vindul/vindul.html">Vindul · Wind</a></div>
       <div class="ancestry-card-god">Fisaya · sky, storm, monastery</div>
       <div class="ancestry-card-body">
@@ -198,7 +197,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #b07a3a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#b07a3a;">
       <div class="ancestry-card-title"><a href="/talan/domains/lioaru/lioaru.html">Lioaru · Time</a></div>
       <div class="ancestry-card-god">Tani · slow currents, vigilance</div>
       <div class="ancestry-card-body">
@@ -212,7 +211,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #8aa090;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#8aa090;">
       <div class="ancestry-card-title"><a href="/talan/domains/zuzental/zuzental.html">Zuzental · Law</a></div>
       <div class="ancestry-card-god">Forseti · contract, custody, order</div>
       <div class="ancestry-card-body">
@@ -222,7 +221,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #8a4a2a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#8a4a2a;">
       <div class="ancestry-card-title"><a href="/talan/domains/ehizahar/ehizahar.html">Ehizahar · Hunt</a></div>
       <div class="ancestry-card-god">Hinka · pursuit, blood-token, pack</div>
       <div class="ancestry-card-body">
@@ -234,7 +233,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #d4a04a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#d4a04a;">
       <div class="ancestry-card-title"><a href="/talan/domains/lautara/lautara.html">Lautara · Commerce</a></div>
       <div class="ancestry-card-god">Jianna · road, market, contract-of-trust</div>
       <div class="ancestry-card-body">
@@ -244,7 +243,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #5a7a8a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#5a7a8a;">
       <div class="ancestry-card-title"><a href="/talan/domains/ezkudon/ezkudon.html">Ezkudon · Knowledge</a></div>
       <div class="ancestry-card-god">Enki · archive, negotiation, secret-keeping</div>
       <div class="ancestry-card-body">
@@ -253,7 +252,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #2a6a4a;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#2a6a4a;">
       <div class="ancestry-card-title"><a href="/talan/domains/nashavel/nashavel.html">Nashavel · Chaos</a></div>
       <div class="ancestry-card-god">Vesuna · improvisation, free will, the Feyworld at the edges</div>
       <div class="ancestry-card-body">
@@ -263,7 +262,7 @@
       </div>
     </div>
 
-    <div class="ancestry-card" style="--domain-accent: #e8d8a8;">
+    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#e8d8a8;">
       <div class="ancestry-card-title"><a href="/talan/domains/askamira/askamira.html">Askamira · Freedom</a></div>
       <div class="ancestry-card-god">Cronus · refusal, refuge, the open road</div>
       <div class="ancestry-card-body">
@@ -326,7 +325,7 @@
     </tbody>
   </table>
 
-  <div class="pointer-card">
+  <div class="accent-card outlined thin pointer-card">
     <div class="pointer-title">Read the full continent</div>
     <div>Sortalde has its own continent page covering the seven petals, the Concord of Courts, the dynasty-spirit pantheon, and the cloudship-only trade route to the Emerald Isles. The bestiary entries above are the at-a-glance; the continent page is where the ancestries breathe.</div>
     <a class="pointer-cta" href="/off-continent/sortalde.html">Sortalde · Tao Hua Yuan →</a>
