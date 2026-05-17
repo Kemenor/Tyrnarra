@@ -19,6 +19,8 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
 /talan/                        [Style B · grounded]
   talan.html                   continent overview, three seas, 13 domain cards   POPULATED
                                + Continental Rail Network + Other Continents     (UPDATED 2026-05-17 Tier 3 step 7)
+                               Also serves as the **Talan section header** target
+                               in the sidebar (clickable section labels pass).
   history.html                 8 eras with three-tier knowledge UI               POPULATED
                                + Gods' Era three-tier expandables (Old Race + Storveldi)
                                + Week of Crimson Rain secret harmonised
@@ -102,6 +104,9 @@ Etymology publish pass — 2026-05-17:
 
 /talan/domains/                13 domain pages — etymology, facts, character pills,
                                god's city, sub-region cards
+  domains.html                 NEW hub page (2026-05-17). Brief framing of what a
+                               domain is + 13 colour-coded cards linking to each.
+                               Sidebar **Domains** section header points here.   POPULATED  (NEW 2026-05-17)
   vindul/vindul.html           POPULATED      lautara/lautara.html     POPULATED
   myrkono/myrkono.html         POPULATED      floteyn/floteyn.html     POPULATED
                                               + Balaena Skywhale City featured section
@@ -179,6 +184,11 @@ Etymology publish pass — 2026-05-17:
                                (7 deliberate TBDs).                              POPULATED  (NEW 2026-05-17)
 
 /off-continent/                NEW top-level section (2026-05-17) — non-Talan continents & powers
+  off-continent.html           NEW hub page (2026-05-17). Brief framing of "beyond
+                               Talan" + two continent cards (Sortalde, Red Empire)
+                               + an Unmapped placeholder + a Hafra-vs-Cloud-Sea
+                               crossing note. Sidebar **Off-Continent** section
+                               header points here.                                POPULATED  (NEW 2026-05-17)
   red-empire.html              The Red Empire — godless mortal-supremacist state POPULATED  (NEW 2026-05-17)
   sortalde.html                Sortalde · Tao Hua Yuan · The Petal Continent     POPULATED  (NEW 2026-05-17 Tier 4)
 ```

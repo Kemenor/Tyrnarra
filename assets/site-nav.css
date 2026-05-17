@@ -50,11 +50,26 @@
 
 .nav-section { margin-bottom: 22px; }
 .nav-section-label {
+  display: block;
   font-family: 'Cormorant SC', 'Cinzel', serif;
   font-size: 0.6rem; letter-spacing: 0.32em;
   color: var(--gold-dim, #8a6e28);
   margin-bottom: 8px;
   text-transform: uppercase;
+}
+.nav-section-link {
+  text-decoration: none;
+  padding: 2px 0 4px;
+  border-bottom: 1px solid rgba(200, 168, 75, 0.12);
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-section-link:hover {
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  border-bottom-color: rgba(200, 168, 75, 0.4);
+}
+.nav-section-link.is-current {
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  border-bottom-color: var(--gold, #c8a84b);
 }
 .nav-list { list-style: none; padding: 0; margin: 0; }
 .nav-list a {

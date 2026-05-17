@@ -21,8 +21,9 @@
   // Same accordion pattern as DOMAINS below. Leaf pages have
   // empty children arrays; pages with children get a chevron and
   // expand on click (or auto-expand when on the parent or a child).
+  // Note: the Talan section header itself links to the Continent
+  // Overview, so that page is intentionally not repeated here.
   var TALAN_PAGES = [
-    { slug: 'talan',       label: 'Continent Overview',     href: '/talan/talan.html',       children: [] },
     { slug: 'history',     label: 'History &amp; Eras',     href: '/talan/history.html',     children: [] },
     { slug: 'the-binding', label: 'The Binding',            href: '/talan/the-binding.html', children: [
       { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/talan/the-binding/hollow-of-ten-thousand-threads.html' }
@@ -128,32 +129,30 @@
       '  <a href="/index.html" class="site-nav-title">Tyrnarra</a>',
 
       '  <div class="nav-section">',
-      '    <div class="nav-section-label">World &amp; Cosmos</div>',
+      '    <a class="nav-section-label nav-section-link" href="/index.html" data-page="cosmology">World &amp; Cosmos</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/index.html"         data-page="cosmology">Cosmology</a></li>',
       '      <li><a href="/grand-gods.html"    data-page="gods">The 13 Bound Gods</a></li>',
       '      <li><a href="/magic.html"         data-page="magic">Magic &amp; Faith</a></li>',
       '    </ul>',
       '  </div>',
 
       '  <div class="nav-section">',
-      '    <div class="nav-section-label">Talan</div>',
+      '    <a class="nav-section-label nav-section-link" href="/talan/talan.html" data-page="talan">Talan</a>',
       '    <ul class="nav-list">',
            talanItems,
       '    </ul>',
       '  </div>',
 
       '  <div class="nav-section">',
-      '    <div class="nav-section-label">Domains</div>',
+      '    <a class="nav-section-label nav-section-link" href="/talan/domains/domains.html" data-page="domains-hub">Domains</a>',
       '    <ul class="nav-list">',
            domainItems,
       '    </ul>',
       '  </div>',
 
       '  <div class="nav-section">',
-      '    <div class="nav-section-label">Factions</div>',
+      '    <a class="nav-section-label nav-section-link" href="/talan/factions/factions.html" data-page="factions">Factions</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/talan/factions/factions.html"          data-page="factions">All Factions</a></li>',
       '      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>',
       '      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>',
       '      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>',
@@ -162,7 +161,7 @@
       '  </div>',
 
       '  <div class="nav-section">',
-      '    <div class="nav-section-label">Off-Continent</div>',
+      '    <a class="nav-section-label nav-section-link" href="/off-continent/off-continent.html" data-page="off-continent-hub">Off-Continent</a>',
       '    <ul class="nav-list">',
       '      <li><a href="/off-continent/sortalde.html"   data-page="sortalde">Sortalde · Petal Continent</a></li>',
       '      <li><a href="/off-continent/red-empire.html" data-page="red-empire">The Red Empire</a></li>',

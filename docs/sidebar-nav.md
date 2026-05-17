@@ -7,9 +7,23 @@ How the persistent sidebar on every page is built and how to extend it.
 ## How it works
 
 - The sidebar structure lives in `/assets/site-nav.js`. Three data sources drive it:
-  - **`TALAN_PAGES`** — the array of continent-level reference pages (Continent Overview, History, The Binding, Bestiary, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same accordion shape as `DOMAINS`.
+  - **`TALAN_PAGES`** — the array of continent-level reference pages (History, The Binding, Bestiary, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same accordion shape as `DOMAINS`. The Continent Overview is intentionally not in this list — it is the Talan section's own clickable header.
   - **`DOMAINS`** — the array of 13 god-domains. Same shape: `slug`, `label`, `href`, `children`.
   - **The remaining top-level section markup** (World & Cosmos, Factions, Off-Continent) — string literals inside `buildNavHtml()`.
+
+### Section headers are clickable
+
+Each of the five section headers in the sidebar is itself a link to that section's hub page, not a passive label:
+
+| Section | Header links to | `data-page` |
+|---|---|---|
+| World & Cosmos | `/index.html` (Cosmology) | `cosmology` |
+| Talan | `/talan/talan.html` (Continent Overview) | `talan` |
+| Domains | `/talan/domains/domains.html` (Domains hub) | `domains-hub` |
+| Factions | `/talan/factions/factions.html` (All Factions) | `factions` |
+| Off-Continent | `/off-continent/off-continent.html` (Off-Continent hub) | `off-continent-hub` |
+
+Because the header itself carries the link, the hub page is **not repeated as a leaf item** inside the section's list. The `.nav-section-label.nav-section-link` styling picks up `.is-current` highlight the same way `.nav-list a` does — when on the hub page, the header lights up gold.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
