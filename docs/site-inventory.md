@@ -1,207 +1,75 @@
-# Site Inventory — Current State
+# Site Inventory
 
 Live at **https://tyrnarra.kunkel.swiss** · Auto-deploys on push to `main` · No build step.
 
-Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [sidebar-nav.md](sidebar-nav.md).
+A description of what is currently published, organised by section. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [`sidebar-nav.md`](sidebar-nav.md). For forward work — what needs writing, fleshing out, or publishing next — see [`open-threads.md`](open-threads.md).
 
 ---
 
-## Page Tree — Publish Status
+## `/` — World-level (Style A · cosmic)
 
-```
-/                              [Style A · cosmic]
-  index.html                   landing = world primer (cosmology)                POPULATED
-  grand-gods.html              the 13 bound gods (data-driven, expandable)       POPULATED
-  non-bound-gods.html          Non-Bound Gods & Beings — Named Non-Bound Gods
-                               (Bikiargi, Zaharsuge, Epairima, Betibizi + Sun
-                               god open thread) · Virtue Demons (Aristotelian
-                               pattern, Muiral named) · Sin Devils (Seven Sins,
-                               three domains mapped). Migrated demons/devils
-                               off bestiary.html; sidebar nav entry under
-                               World & Cosmos.                                    POPULATED  (NEW)
-  magic.html                   Magic & Faith — Four Schools / Magitech / Daily Life /
-                               Mortal Ascent Ladder + GM Secret / Faith / Domains-Outside-13
-                               REWRITE (2026-05-17 Tier 3 step 6)
+- **`index.html`** — World primer and cosmology landing. Three celestial bodies (Solyra, Veyru, Calune), Cloud Sea framing, the Wellspring, planar structure (three layers, nine planes, the Astral connecting all), soul-layer composition, link-outs to the rest of the site.
+- **`grand-gods.html`** — The 13 Bound Gods (Primordial Six + Ascendant Six + Cronus). Data-driven expandable cards: aspects, cleric domains, favoured weapon, mortal-view, nature, worship, depiction, GM note, and a `⚿ GM Secret` expandable per god (Cronus's secret is filled; the other twelve are canon-pending). Council of Thirteen note at the bottom.
+- **`non-bound-gods.html`** — Beyond the Thirteen. Named Non-Bound Gods (Bikiargi · Zaharsuge · Epairima · Betibizi) with tier/plane pills, aspects, worshippers, etymology, and notes. Virtue Demons (Aristotelian excess/deficiency table; Muiral the Misshapen named). Sin Devils (Seven Sins, three domains mapped). Demon-vs-Devil distinction callout. Sun-god open-thread callout.
+- **`magic.html`** — Magic & Faith. Four Schools (Arcane · Occult · Primal · Divine), the four Magitech sub-traditions (Arcanotech · Occultech · Divitech · Primotech) with relative commonness and chaos-region resilience, Magic in Daily Life by settlement scale, Belief and the Wellspring + `⚿ GM Secret` (Mortal Ascent Ladder, shard mechanic, integration procedure, Betibizi as original holder), Faith & the Gods, Domains Outside the Thirteen table.
 
-/talan/                        [Style B · grounded]
-  talan.html                   continent overview, three seas, 13 domain cards   POPULATED
-                               + Continental Rail Network + Other Continents     (UPDATED 2026-05-17 Tier 3 step 7)
-                               Also serves as the **Talan section header** target
-                               in the sidebar (clickable section labels pass).
-  history.html                 8 eras with three-tier knowledge UI               POPULATED
-                               + Gods' Era three-tier expandables (Old Race + Storveldi)
-                               + Week of Crimson Rain secret harmonised
-                               + Dark Era amber Popular Belief (Sage Lorant
-                                 Age-of-Corruption chronicle + calendar-conflation note)
-                                                                                 (UPDATED 2026-05-17)
-  the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
-                               + Vermin Queen card now links to dedicated
-                               Hollow page                                        (UPDATED 2026-05-17)
-  the-binding/hollow-of-ten-thousand-threads.html
-                               Hollow of Ten Thousand Threads · The Vermin
-                               Queen's Hive — first dedicated Nine-Dungeons page.
-                               Sickly-olive accent. Four-card chamber geography
-                               (Web-Tunnels / Brood Pits / Silken Vaults /
-                               Throne); three red-bordered threat cards
-                               (Endless Swarms / Corrupted Silk / Hive-Mind
-                               Influence); Vermin Queen section with Swarm-
-                               domain grant; blue Surki Counter callout (kin-
-                               gone-wrong framing); two seal-blocks for War-
-                               of-Seals context (2524 eruption + standing-threat
-                               margin-pay callout); Open in Canon panel        POPULATED  (NEW 2026-05-17)
-  bestiary.html                Peoples &amp; Heritages — distribution table, 13 domain cards,
-                               Sortalde pointer, versatile heritages, virtue demons,
-                               sin devils                                        POPULATED  (NEW 2026-05-17 Tier 4 step 10)
+## `/talan/` — Continent-level (Style B · grounded)
 
-Tier 1 publishing pass — 2026-05-17:
-  grand-gods.html              Vesuna +Free Will, Hinka +Violent Death extra cleric domains
-  brauogi.html                 Minotaur added as 3rd dominant ancestry + Magitrain southern-network note
-  lautara.html                 Emarrea card now links to its page; Crossroads sub-region card added; Magitrain hub + Sortalde embassies note
-  lioaru.html                  Lost Kingdom expanded (Blackened Lands, Skeleton/Fleshwarp origin); Storveldi/Betibizi GM Secret expandable; Magitrain limits note
-  sumendar.html                Order of Steam reframed as Magitech industrial heart (Elden-tech origin, House Eisenhart); Dragon's Reach two-recovery-projects friction; Magitech + Magitrain notes
+- **`talan.html`** — Continent overview. Three Seas (Midarra, Hafra, Cloud Sea), Chains-Beneath callout, Shape-of-the-World framing, 13 domain cards, Continental Rail Network (Northern + Southern halves, the Basogur seam, the three crossings), Other Continents pointer (Sortalde, Red Empire, Unmapped).
+- **`history.html`** — Eight eras with three-tier knowledge UI (era card + amber `◈ Popular Belief` + red `⚿ GM Secret`). Creation, Elden, Gods', Week of Crimson Rain, Lost, Golden, Dark + the Guild's Birth, Adventurer (current). The Storveldi Denbora, Reflections and the Stillpool mechanic, the Golden Emperor's Reflection arc, and the Dark Era mining-truth all live in the GM-tier expandables.
+- **`the-binding.html`** — Wardstones + Nine Generals + War of Seals. The Seven Wardstones distributed across four sub-regions of Myrkono (Shadow Steppes, Itzasoa, Ilun Tasun, Myrria). The Nine Generals of Corruption (Ash-Binder defeated; eight active). `⚿ GM Secret` on what is actually bound (the Elden / Corrupted God identity, the Generals as fragments of the Elden mass).
+- **`bestiary.html`** — Peoples & Heritages. Ancestry distribution table by domain, per-domain ancestry cards, "Without a Single Home" scatter-list, Sortalde pointer + six Tian Xia ancestries table, versatile heritages (divine-blood, Elemental Plane sparks, Wood & Metal planar lines, mortal-ancestry mixes, other lineages including Reflection with `⚿ GM Secret` toggle), "Four bound gods whose touch passes outside bloodline" callout, pointer to Non-Bound Gods & Beings.
 
-Historical section launched — 2026-05-17:
-  /talan/historical/           NEW folder under /talan/ for fallen civilisations.
-                               Sibling to /talan/factions/ and /talan/the-binding/.
-                               Style B, parchment palette. Sidebar nav entry added
-                               under the Talan section ("Historical · The Fallen")
-                               with the Golden Empire as a nested child (↳ prefix
-                               pattern matching the Hollow-under-the-Binding entry).
-                               history.html Golden Era card cross-linked to
-                               golden-empire.html.
+## `/talan/the-binding/` — Nine Dungeons
 
-History three-tier publish pass — 2026-05-17:
-  history.html                 Lost / Golden / Dark era cards now carry full three-tier UI.
-                               **Lost Era** — new Popular Belief (three-theory cover: trauma /
-                               infrastructure collapse / mystical-amnesia) + new GM Secret
-                               (Wellspring Wakened — leak mechanism, Reflections as Lost-Era-
-                               born, Stillpools mechanic, why records didn't survive).
-                               **Golden Era** — new Popular Belief (three-theory cover:
-                               Emperor's qualities / divine allowance / Wellspring favour) +
-                               new GM Secret (Emperor was a Reflection; conscious-pull
-                               ascent; Material-Plane Minor God via loophole; killed by
-                               rebellion in shrinking post-breach territory; captured own
-                               soul into Layer-2 pocket dimension; twelve hundred years
-                               seeking resurrection; *lower single digits* know).
-                               **Dark Era** — new GM Secret (The Mining Wasn't Accidental
-                               — Emperor located Elden ritual site, ordered breach as
-                               ascent fuel, miscalculated catastrophically). Popular Belief
-                               (Sage Lorant Age-of-Corruption chronicle) was already
-                               published; left as-is.
-  Cross-anchored to lore in   cosmology.md (Wellspring Outflow section), secret-history.md
-                               (Lost / Golden / Dark era pairs, ~1100 new words),
-                               bestiary.md (Reflection retcon — cover-vs-truth),
-                               glossary.md (Stillpool entry), timeline.md (see-also pointers).
+- **`hollow-of-ten-thousand-threads.html`** — Vermin Queen's hive (Shadow Steppes). Four-card chamber geography (Web-Tunnels · Brood Pits · Silken Vaults · Throne), three threat cards (Endless Swarms · Corrupted Silk · Hive-Mind Influence), Vermin Queen section with Swarm-domain grant, blue Surki Counter callout, two seal-blocks (2524 eruption + standing-threat context), Open in Canon panel.
 
-Emerald Isles capital + by-names pass — 2026-05-17:
-  emerald-isles.html           Capital name **Oathmoore** filled (3 slots: at-a-glance dd, Middle Isle card, closing-section reference); trilingual etymology recorded in the at-a-glance dd. Four chronicler's by-names added: Northern Isle = "The Watchstone", Middle Isle = "Emerald's Eye", Southern Isle = "The Lyteward Bough", Bridgelands = "The Bridge-Pearls". New `.isle-byname` style added (Cinzel italic, parallel to existing `.isle-role` slot) — mirrors the subregion-etym pattern without a new component family. **Southern Isle reframed as the founding bough** — the kingdom was originally founded there; the throne later moved to Oathmoore on Middle Isle for the strait-facing diplomatic geometry. No "Open in Canon" panel existed on this page (the two TBDs were inline); both now resolved.
-  glossary.md                  Five new Zuzental-block entries: Oathmoore (with trilingual etymology), The Watchstone, Emerald's Eye, The Lyteward Bough (with founding-site note), The Bridge-Pearls. Existing Emerald Isles + Bridgelands entries updated to point at the capital and by-names.
-  geography.md                 Emerald Isles section: capital fill on Middle Isle; chronicler's by-names added to all three isles + Bridgelands; Southern Isle founding-bough fact recorded.
+## `/talan/domains/` — Domain hub + the 13 god domains
 
-Etymology publish pass — 2026-05-17:
-  10 sub-region etymologies filled in on existing `subregion-card` / `sea-card` slots (Burdineyja pattern, no new components):
-  vindul.html                  Azkamour (Swift March), Fellibylur (Storm-Fell / Blizzard Peak) — Fellibylur canon-placement corrected here per geography.md
-  lautara.html                 Azkamour (Swift March), Azkataria (market-folk)
-  floteyn.html                 Balatur Erui (Whale-Spit / Whale Shoals)
-  lioaru.html                  Hareaveldi (Sand Realm — predates Tani)
-  brauogi.html                 Gotorlekua (the Stronghold), Rika Tikur (Rich and Splendid), Harro Distiratsue (Proud Radiance)
-  ezkudon.html                 Lua Lasai (Calm Country)
-  egulon.html                  Lua Lasai (Calm Country), Harro Distiratsue (Proud Radiance)
-  talan.html                   Midarra sea-card: Middle Waters; older-tongue Still Mirror / Deep Eye flavour preserved as trailing clause
+- **`domains.html`** — Hub. 13 colour-coded cards linking to each domain.
+- **`vindul/vindul.html`** — Vindul · Wind · Fisaya · Haizava
+- **`lautara/lautara.html`** — Lautara · Commerce · Jianna · Merkavar
+- **`myrkono/myrkono.html`** — Myrkono · Darkness · Araphel · Myrria
+- **`floteyn/floteyn.html`** — Floteyn · Water · Shuun · Uravel · *Balaena Skywhale City* featured section
+- **`sumendar/sumendar.html`** — Sumendar · Fire · Komo · Eldara
+- **`lioaru/lioaru.html`** — Lioaru · Time · Tani · Denbora
+- **`brauogi/brauogi.html`** — Brauogi · Earth · Sarrum · Lurrath
+- **`ezkudon/ezkudon.html`** — Ezkudon · Knowledge · Enki · Thekkavar
+- **`egulon/egulon.html`** — Egulon · Light · Iro · Ljosarn
+- **`zuzental/zuzental.html`** — Zuzental · Law · Forseti · Lograth
+- **`nashavel/nashavel.html`** — Nashavel · Chaos · Vesuna · Nahaskel
+- **`ehizahar/ehizahar.html`** — Ehizahar · Hunt · Hinka · Veidrath
+- **`askamira/askamira.html`** — Askamira · Freedom · Cronus · Frae City
 
-/talan/domains/                13 domain pages — etymology, facts, character pills,
-                               god's city, sub-region cards
-  domains.html                 NEW hub page (2026-05-17). Brief framing of what a
-                               domain is + 13 colour-coded cards linking to each.
-                               Sidebar **Domains** section header points here.   POPULATED  (NEW 2026-05-17)
-  vindul/vindul.html           POPULATED      lautara/lautara.html     POPULATED
-  myrkono/myrkono.html         POPULATED      floteyn/floteyn.html     POPULATED
-                                              + Balaena Skywhale City featured section
-                                              (4 info-cards + amber Popular Belief on
-                                              the captivity truth)                  (UPDATED 2026-05-17)
-  sumendar/sumendar.html       POPULATED      lioaru/lioaru.html       POPULATED
-  brauogi/brauogi.html         POPULATED      ezkudon/ezkudon.html     POPULATED
-  egulon/egulon.html           POPULATED      zuzental/zuzental.html   POPULATED
-  nashavel/nashavel.html       POPULATED      ehizahar/ehizahar.html   POPULATED
-  askamira/askamira.html       POPULATED
+## `/talan/domains/<domain>/` — Promoted sub-regions & settlements
 
-/talan/domains/<domain>/       Promoted sub-region & settlement pages
-  ehizahar/fenurra.html        Fenurra · the Flame-Source                        POPULATED  (NEW 2026-05-16)
-  lautara/emarrea.html         Emarrea · the Kitsune Kingdom                     POPULATED  (NEW 2026-05-16)
-  lautara/crossroads.html      Crossroads · Tri-Domain Nexus + Spider's Silk Inn POPULATED  (NEW 2026-05-17)
-  lioaru/lost-kingdom.html     Lost Kingdom · The Blackened Lands                POPULATED  (NEW 2026-05-17;
-                               + Meat-on-a-Stick amber Popular Belief
-                               (Storveldi cannibalism folk-trope)                 UPDATED 2026-05-17)
-  myrkono/myrria/myrria.html   Myrria · City of Second Chances                   POPULATED  (NEW 2026-05-16;
-                               + Faith of Many Faces section — three rites, sacred
-                               iconography callout, edicts/anathema                UPDATED 2026-05-17)
-  sumendar/order-of-steam/order-of-steam.html
-                               Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
-  sumendar/dragons-reach.html  Dragon's Reach · Dragon Capital — the city built
-                               from the mid-Gods'-Era mothership wreckage;
-                               three-tier lifespan band (non-purist / purist /
-                               "the purest"); four purist-school cards; two-
-                               sided purist-vs-pragmatist position blocks on
-                               the age-weighted vote tension; Order-of-Steam
-                               friction + Dragonet older-claim schism; amber
-                               Popular Belief on the buried-alien-truth        POPULATED  (NEW 2026-05-17)
-  sumendar/order-of-steam/house-eisenhart.html
-                               House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
-  zuzental/thousand-kingdom.html
-                               Thousand Kingdom · Forseti's Realm of Law — the
-                               dual-bloodline (elf long-horizon / human short-
-                               horizon) constitutional kingdom that holds
-                               Lograth and the inseparable god-city/capital
-                               fusion; four-card borderlands compass             POPULATED  (NEW 2026-05-17)
-                               + Founding & History section with three-tier
-                               UI: Demon-Demigod conquest of the warring
-                               Thousand, adventurer-Queen of the Old King's
-                               forged blood, the binding compact; amber Old-
-                               King-myth folkloric layer; red GM Secret on the
-                               Queen-knew-the-truth twist                        (UPDATED 2026-05-17)
-  zuzental/emerald-isles.html  Emerald Isles · Three Main Isles + Bridgelands    POPULATED  (NEW 2026-05-17 Tier 4 pair w/ Sortalde)
-  zuzental/legea-empire.html   Legea Empire · Demigod Theocracy of the Divine
-                               Faith — at-a-glance with visible TBDs, two-sided
-                               law-vs-law tension blocks (Faith vs Forseti
-                               positions), missionary programme + Draconis
-                               marriage, "Open in Canon" panel listing the 6
-                               TBDs as deliberate state                          POPULATED  (NEW 2026-05-17)
+- **`ehizahar/fenurra.html`** — Fenurra · the Flame-Source
+- **`lautara/emarrea.html`** — Emarrea · the Kitsune Kingdom
+- **`lautara/crossroads.html`** — Crossroads · Tri-Domain Nexus + Spider's Silk Inn
+- **`lioaru/lost-kingdom.html`** — Lost Kingdom · the Blackened Lands (with the *Meat-on-a-Stick* amber Popular Belief)
+- **`myrkono/myrria/myrria.html`** — Myrria · City of Second Chances (Faith of Many Faces section — three rites, sacred iconography, edicts/anathema)
+- **`sumendar/order-of-steam/order-of-steam.html`** — Order of Steam · Industrial Kingdom-Guild Hybrid
+- **`sumendar/order-of-steam/house-eisenhart.html`** — House Eisenhart · Highforge Lineage + *Stahlglanz*
+- **`sumendar/dragons-reach.html`** — Dragon's Reach · Dragon Capital. Mid-Gods'-Era mothership wreckage, three-tier lifespan band (non-purist / purist / "the purest"), four purist-school cards, purist-vs-pragmatist position blocks, Order-of-Steam friction, Dragonet schism, amber Popular Belief on the buried alien truth.
+- **`zuzental/thousand-kingdom.html`** — Thousand Kingdom · Forseti's Realm of Law. Dual-bloodline (elf long-horizon / human short-horizon) constitutional kingdom, four-card borderlands compass. Founding & History three-tier section: Demon-Demigod conquest, Old King's Returning Blood folklore, red `⚿ GM Secret` on the Queen-knew-the-truth twist.
+- **`zuzental/emerald-isles.html`** — Emerald Isles · Three Main Isles + Bridgelands. Capital Oathmoore (Middle Isle), chronicler's by-names (Watchstone · Emerald's Eye · Lyteward Bough · Bridge-Pearls), Sortalde embassy landing point.
+- **`zuzental/legea-empire.html`** — Legea Empire · Demigod Theocracy of the Divine Faith. Two-sided law-vs-law tension blocks (Faith vs. Forseti positions), missionary programme + Draconis marriage, Open in Canon panel listing the canon-pending details.
 
-/talan/factions/
-  factions.html                taxonomy overview + 4 cards                       POPULATED
-                               + Bandit Categories & Hazards (Train Pirates +
-                               Conductor's Station)                              (UPDATED 2026-05-17)
-  adventurers-guild.html       FULL REWRITE (2026-05-17) — branch hierarchy, rank ladder, Bank, Post, Lavisburg, Seraphel, Godshall
-  mercenary-guild.html         POPULATED
-  god-churches.html            POPULATED      remnants.html            POPULATED
+## `/talan/factions/` — Independent organisations
 
-/talan/historical/             NEW section (2026-05-17) — fallen civilisations
-  historical.html              Hub stub. Three civilisation cards: Golden
-                               Empire (linkified) + Storveldi Denbora and
-                               Elden (TBD placeholders for future pages).      POPULATED  (NEW 2026-05-17)
-  golden-empire.html           The Empire's institutional page. Dwarven-gold
-                               accent. Sections: at-a-glance, the empire's
-                               sweep, the Emperor (public), the empire's work
-                               (4 cards: common law / roads / script / Automa-
-                               tons), the mining programme + the fall (side-
-                               by-side blocks), legacy, Popular Belief expand-
-                               able, GM Secret expandable (Emperor was a
-                               Reflection, Layer-2 pocket dimension, lower-
-                               single-digits know), Open in Canon panel
-                               (7 deliberate TBDs).                              POPULATED  (NEW 2026-05-17)
+- **`factions.html`** — Taxonomy overview + four faction-category cards + Bandit Categories & Hazards (Train Pirates, Conductor's Station).
+- **`adventurers-guild.html`** — Branch hierarchy (Branch Office → Guild Office → Guildhall → Kingshall → Godshall), rank ladder (Bronze → Starsteel), the Guild Bank and the Guild Post, Lord Albrecht Lavisburg (Demi-God of Order and Ethics by accumulated mortal belief), Seraphel Duskbane (Sovereign of Myrria's Godshall), Myrria's Godshall.
+- **`mercenary-guild.html`** — Mercenary Guild (shadow, coin, no loyalty beyond the contract).
+- **`god-churches.html`** — Umbrella entry for the 13 bound-god churches.
+- **`remnants.html`** — Remnants of Corruption (threat-not-organisation, the Nine Generals frame).
 
-/off-continent/                NEW top-level section (2026-05-17) — non-Talan continents & powers
-  off-continent.html           NEW hub page (2026-05-17). Brief framing of "beyond
-                               Talan" + two continent cards (Sortalde, Red Empire)
-                               + an Unmapped placeholder + a Hafra-vs-Cloud-Sea
-                               crossing note. Sidebar **Off-Continent** section
-                               header points here.                                POPULATED  (NEW 2026-05-17)
-  red-empire.html              The Red Empire — godless mortal-supremacist state POPULATED  (NEW 2026-05-17)
-  sortalde.html                Sortalde · Tao Hua Yuan · The Petal Continent     POPULATED  (NEW 2026-05-17 Tier 4)
-```
+## `/talan/historical/` — Fallen civilisations
 
-Removed in earlier phases: `talan-primer.html`, `tyrnarra-primer.html`, `tyrnarra-gods.html` (renamed to `grand-gods.html`), `/talan/magic.html` (moved to `/magic.html`).
+- **`historical.html`** — Hub. Three civilisation cards: Golden Empire (linkified) and two canon-pending pages (Storveldi Denbora, Elden).
+- **`golden-empire.html`** — The Empire's institutional page. At-a-glance, the Empire's sweep, the Emperor (public face), the Empire's work (four cards: common law · roads · script · Automatons), the mining programme + the fall (side-by-side blocks), legacy. Popular Belief expandable + `⚿ GM Secret` (Emperor was a Reflection; Layer-2 pocket dimension; lower-single-digits know). Open in Canon panel.
 
----
+## `/off-continent/` — Non-Talan continents & powers
 
-This file is a **description of what is published**, not a TODO list. For forward work — what needs writing, fleshing out, or publishing next — see [`open-threads.md`](open-threads.md).
+- **`off-continent.html`** — Hub. Two continent cards (Sortalde, Red Empire) + Unmapped placeholder + Hafra-vs-Cloud-Sea crossing note.
+- **`sortalde.html`** — Sortalde · *Tao Hua Yuan* · The Petal Continent. Seven-petal archipelago, Concord of Courts, six ancestral petals + central Heting seat, veil-mediated clerical theology, cloudship crossing to Emerald Isles, six Tian Xia ancestries.
+- **`red-empire.html`** — The Red Empire — godless mortal-supremacist state. Crimson Emperor, Pyre Throne, social hierarchy, the Iron Tide (navy) and the Menagerie (war-mage / surgeon corps with Collectors operating on Talan).
