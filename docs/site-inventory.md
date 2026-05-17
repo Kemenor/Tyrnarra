@@ -65,6 +65,12 @@ Tier 1 publishing pass — 2026-05-17:
   sumendar/order-of-steam/house-eisenhart.html
                                House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
   zuzental/emerald-isles.html  Emerald Isles · Three Main Isles + Bridgelands    POPULATED  (NEW 2026-05-17 Tier 4 pair w/ Sortalde)
+  zuzental/legea-empire.html   Legea Empire · Demigod Theocracy of the Divine
+                               Faith — at-a-glance with visible TBDs, two-sided
+                               law-vs-law tension blocks (Faith vs Forseti
+                               positions), missionary programme + Draconis
+                               marriage, "Open in Canon" panel listing the 6
+                               TBDs as deliberate state                          POPULATED  (NEW 2026-05-17)
 
 /talan/factions/
   factions.html                taxonomy overview + 4 cards                       POPULATED

@@ -82,10 +82,25 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Mortal-side mechanics — what spells, rituals, or artefacts allow mortal planar travel, and what each costs.
 **Where.** [lore/world-notes.md](../lore/world-notes.md) — *Planar Travel*.
 
-### [Factions] Divine Faith — pantheon identity (Legea Empire)
-**Decided.** State religion of the **Legea Empire** (Zuzental sub-region). Its god is not bound; resides in **Layer 3 (Postlife)**. The Empire is ruled by a **demigod line**, with a current **theocratic prince** as heir. Active missionary programme; the Draconis Fenurran tribe has arranged a political marriage of their daughter to the theocratic prince.
-**Open.** Specific plane (Elysium / Diyu / Abyss) and the god's name; name and nature of the demigod ruler; personal name of the theocratic prince; the Faith's relationship to Forseti and the bound thirteen; whether the Empire predates the Gods' Law or postdates the Week of Crimson Rain; doctrinal contrast with Forseti's law.
-**Where.** [lore/factions.md](../lore/factions.md) — *Non-Bound God Faiths*; [lore/cultures.md](../lore/cultures.md) — *Open threads & TBD*.
+### [Legea Empire] The Divine Faith's god — plane and identity
+**Decided.** The Faith's god is not one of the bound thirteen. They reside in **Layer 3 (Postlife)** and operate from there with full unconstrained divinity (they did not swear the Gods' Law). They affect the Material Plane through chosen mortals, clerical power, and the demigod scion who reigns as Empire. The Faith's clergy decline to confirm which plane is home — *the teaching is the same in all three.*
+**Open.** Which Postlife plane houses them — **Elysium** (Good), **Diyu** (Balance), or **Abyss** (Evil). The choice recasts the Empire's moral colour entirely. And the god's actual name (the Empire titles them only as *"the god of the Faith"*).
+**Where.** [lore/factions.md](../lore/factions.md) — *Non-Bound God Faiths*; [lore/world-notes.md](../lore/world-notes.md) — *Other Pantheons*. Rendered as an inline TBD on [legea-empire.html](../talan/domains/zuzental/legea-empire.html).
+
+### [Legea Empire] The reigning demigod — name and nature
+**Decided.** The Empire is ruled by a **demigod** — half-divine in literal blood, descended from or championed by the Faith's god. Manifests divine power well beyond mortal scale; lives noticeably longer than a mortal of comparable health; recognised by the god as the throne's rightful occupant. The doctrine: authority flows from the god directly, not from sworn compact with the governed.
+**Open.** Personal name. Specific nature of the divine relationship (scion vs champion vs something else). Whether the divine inheritance attenuates over generations or is renewed through some investiture rite — pilgrims and ambassadors return with different answers.
+**Where.** [lore/factions.md](../lore/factions.md) — *Non-Bound God Faiths*. Rendered as an inline TBD on [legea-empire.html](../talan/domains/zuzental/legea-empire.html).
+
+### [Legea Empire] The Theocratic Prince — personal name
+**Decided.** Current heir to the demigod line. Subject of the **political marriage to the daughter of the Draconis** (the ruling Fenurran tribe) — a marriage arranged to absorb the Divine Faith's missionary penetration into Fenurran politics rather than let it shatter the tribal balance. The marriage is now a fact of Talanese diplomacy.
+**Open.** Personal name. By extension: the bride's personal name on the Draconis side, and whether the marriage has produced (or will produce) an heir who is part Draconis bloodline + part demigod line. That child would be diplomatically explosive.
+**Where.** [lore/factions.md](../lore/factions.md); [lore/cultures.md](../lore/cultures.md) — *Fenurra → The schism*. Rendered as an inline TBD on [legea-empire.html](../talan/domains/zuzental/legea-empire.html).
+
+### [Legea Empire] Doctrine, antiquity, and case-law against Forseti
+**Decided.** The structural tension between the Faith's law and Forseti's law is published canon — Faith claims older/freer/unconditioned law; Forseti's framework treats authority as sworn compact. That Forseti tolerates the Empire within his own domain is the single most interesting fact about the arrangement.
+**Open.** Three linked questions: (1) **Antiquity** — does the Empire predate the Gods' Law (negotiated into it as a special exception) or postdate the Week of Crimson Rain (grew on Forseti's land afterward)? Reshapes the law-vs-law tension significantly. (2) **The Faith–Forseti relationship in practice** — tolerance, rivalry, an undisclosed agreement, or active simmering conflict? (3) **Doctrinal case-law collisions** — exactly how the Faith's law differs from Forseti's at the daily kingdom-law level (criminal, contract, succession, oath). The teachings collide in principle; the practical case-law clashes are not yet written.
+**Where.** [lore/factions.md](../lore/factions.md) — *Non-Bound God Faiths*. Tension blocks on [legea-empire.html](../talan/domains/zuzental/legea-empire.html) frame the principled disagreement; daily-practice consequences are unwritten.
 
 ### [Factions] Kitsune religion
 **Decided.** The Heartcourt's nine Hearts cover Military, Diplomacy, Commerce, Nature, Law, Magic, Arts, Knowledge, Secrets. No Faith pillar.
@@ -111,6 +126,16 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Decided.** Cronus's GM Secret is fully written (was-mortal, shard-anchored). The structure for each god-card on `grand-gods.html` already includes a `⚿ GM Secret` expandable slot.
 **Open.** Write the GM Secret content for the other twelve (Araphel, Fisaya, Komo, Sarrum, Shuun, Iro, Enki, Forseti, Hinka, Jianna, Tani, Vesuna). Each is its own story call — the kind of truth a high-rank cleric or god-hunter might eventually surface. Pace these as stories want them.
 **Where.** [grand-gods.html](../grand-gods.html) — each god card; lore source [lore/world-notes.md](../lore/world-notes.md) per-god sheet + Named Non-Bound Gods.
+
+### [History] Three-tier knowledge content for remaining eras
+**Decided.** The three-tier pattern (plain prose → amber ◈ Popular Belief → red ⚿ GM Secret) is established on `history.html` for Elden Era, Gods' Era, Week of Crimson Rain, and the Dark Era amber (Age of Corruption myth). Lost / Golden / Adventurer eras carry plain prose only; Dark Era has no GM Secret yet.
+**Open.** Write per-era Popular Belief and GM Secret content for: **Lost Era** (what mortals tell themselves about the divine withdrawal; what actually happened to the divine infrastructure), **Golden Era** (folk-history of the Empire's rise + the Android-replication failure; the GM truth of how close they actually got, or what they learned by failing), **Dark Era — GM Secret slot** (something distinct from the Elden=Corrupted-God truth already on the Elden Era card — perhaps a specific Guild-founding detail, or what the binding-party actually had to give up), **Adventurer Era** (what mortals think the Wardstones do vs how they actually work; what the 2524 MR re-emergence really means). Creation Era is intentionally open and gets no expandable.
+**Where.** [talan/history.html](../talan/history.html); source material starts from [lore/world-notes.md](../lore/world-notes.md) and [lore/timeline.md](../lore/timeline.md) but most of this is *new* secret-tier writing, not lift-and-shift.
+
+### [Geography] Millhaven — settlement re-introduction
+**Decided.** Millhaven was on the site at one point (a Brauogi settlement) and removed during a restructure. The Myrria pattern is the template for re-introduction (folder under domain, settlement page named after the folder).
+**Open.** Recover or rewrite the Millhaven canon — character, position within Brauogi, distinguishing detail, relationship to the Goblin-Hobgoblin-Minotaur three-way of the Earth domain. Source content needs to come from git history (if any was preserved) or be written fresh.
+**Where.** Future `/talan/domains/brauogi/millhaven/millhaven.html`; lore lands in [lore/geography.md](../lore/geography.md) — *Brauogi* — once written.
 
 ---
 
@@ -148,46 +173,41 @@ Items where the world has decided *what* but not *much* — placements and struc
 **Open.** Names for the six remaining host cities. Once named, each can become its own settlement page linked from `the-binding.html`.
 **Where.** [the-binding.html](../talan/the-binding.html); [lore/world-notes.md](../lore/world-notes.md) — *The Seven Wardstones*.
 
+### [Geography] Other god city-state pages — content maturation
+**Decided.** Eleven god city-states remain unpromoted to dedicated pages: **Haizava** (Vindul · Shifting City) · **Merkavar** (Lautara · Market City) · **Uravel** (Floteyn · Floating Isles) · **Eldara** (Sumendar · Forge City) · **Denbora** (Lioaru · Threefold City, built on sand-whales) · **Lurrath** (Brauogi · Steadfast City) · **Thekkavar** (Ezkudon · City of Learning) · **Ljosarn** (Egulon · Everbright City) · **Lograth** (Zuzental · Judgment City) · **Nahaskel** (Nashavel · Unmapped City) · **Veidrath** (Ehizahar · Hunting City) · **Frae City** (Askamira · the Free City). Each has a name, byname, and one or two cultural details on `grand-gods.html` and the parent domain page.
+**Open.** Each city needs its own districts, named figures, landmarks, faith/politics specifics, and visitor-facing flavour before it earns a Myrria-style dedicated page. Pace by story interest — none are blocking. **Frae City** has the most narrative pull (Council of Thirteen venue, Cronus's seat, most religiously diverse city on Talan); **Eldara** is the natural second pick (Order of Steam adjacency means the existing Sumendar build provides scaffolding).
+**Where.** [grand-gods.html](../grand-gods.html) — per-god city fields; per-domain pages under [talan/domains/](../talan/domains/).
+
+### [Geography] River Duchies — flesh-out before promotion
+**Decided.** Lioaru sub-region: the green river valley cutting through the desert as an oasis. A loose confederation of noble houses whose wealth comes from controlling river trade.
+**Open.** Named houses, their tensions, river-toll politics, the relationship to the surrounding desert sub-regions (Galdua Jendea, Hareaveldi), Denbora's role as the sand-whale capital that passes through. Currently a one-liner — too thin for a dedicated page. Bundled with the other two major sub-region promotions (Thousand Kingdom + Dragon's Reach) until the prose catches up.
+**Where.** [lore/geography.md](../lore/geography.md) — *Lioaru → River Duchies*.
+
+### [Factions] Factions page reorganisation — Bandits / Conductor / Twin Cities
+**Decided.** Train Pirates and the Conductor's Station currently live as a *Bandit Categories & Hazards* section at the bottom of [factions.html](../talan/factions/factions.html) (added 2026-05-17 to close broken cross-links). Functional placement, not ideal — the page was designed for the four faction categories and these are neither.
+**Open.** Three linked organisational decisions, each waiting on more content rather than a pure publishing call. (1) **Bandit Categories own page** — wait until more categories land (highway raiders, Midarra river pirates / Twin Cities, ruin-strippers, slavers), then decide. (2) **Conductor's Station** — phenomenon more than bandit category; possible homes are own page under factions, a future `/talan/hazards/` folder, or a "Magitrain phenomena" section on a future rail-focused page. (3) **Twin Cities** — likely own page under Askamira when content matures, or as a peer page. All three resolve as more bandit/hazard/pirate content lands; the structural decision then becomes obvious.
+**Where.** [talan/factions/factions.html](../talan/factions/factions.html) — *Bandit Categories & Hazards* section.
+
 ---
 
 ## § Needs publishing — lore complete, HTML missing
 
 Items where the lore is written but the HTML side hasn't caught up. Pick one when you want to ship visible site progress.
 
-### [HTML] Three-tier knowledge UI on remaining eras
-**Decided.** Pattern established on `history.html` for Elden Era, Gods' Era, Week of Crimson Rain, Dark Era (amber only). Lost / Golden / Adventurer eras carry plain prose only.
-**Open.** Add amber ◈ Popular Belief and red ⚿ GM Secret expandables to **Lost Era**, **Golden Era**, **Dark Era (secret slot — currently has amber Age of Corruption only)**, and **Adventurer Era**. Creation Era is intentionally open and gets no expandable. Content sources live in lore for several of these (e.g. Storveldi GM Secret already harmonised on the other eras).
-**Where.** [talan/history.html](../talan/history.html); [lore/world-notes.md](../lore/world-notes.md) and [lore/timeline.md](../lore/timeline.md).
+### [HTML] Sub-region promotion — Thousand Kingdom
+**Decided.** Dominant political sub-region of Zuzental. **Lograth** (Forseti's city-state) sits within it and functions as both god-city and Kingdom capital — the two have grown together into a single urban mass over centuries; effectively inseparable. The kingdom's character runs on the elven long-planning vs human short-planning interplay (documented on `grand-gods.html` Forseti card and `bestiary.html` Zuzental detail). Currently lives as a section inside [zuzental.html](../talan/domains/zuzental/zuzental.html); pattern for promotion is established (Crossroads, Lost Kingdom, Order of Steam, Emerald Isles, Legea Empire).
+**Open.** Build dedicated page at `/talan/domains/zuzental/thousand-kingdom.html`. No lore additions required; this is pure assembly of existing content into a Style B sub-region page.
+**Where.** [lore/geography.md](../lore/geography.md) — *Zuzental → Thousand Kingdom*.
 
-### [HTML] Other god city-state pages
-**Decided.** Myrria's pattern (folder under domain, settlement page named after the folder) is the template. Eleven god city-states remain unpromoted: **Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City.**
-**Open.** Promote each as its content matures. None are blocking; story-driven cadence.
-**Where.** [docs/site-inventory.md](site-inventory.md) — page tree.
+### [HTML] Sub-region promotion — Dragon's Reach
+**Decided.** Capital of the alien Dragons in Sumendar. Lore is rich: mothership crash-landed during the Gods' Era; "corruption by the gods" reshaping doctrine; modern goal of recovering pre-corruption purity; two-recovery-projects friction with the Order of Steam over Elden-tech excavations; indigenous wyrm-cultists (Dragonet / Zaharsuge-line) rejecting Dragon's Reach's authority claim over wyrmkind on Talan. Pattern for promotion established.
+**Open.** Build dedicated page at `/talan/domains/sumendar/dragons-reach.html`. No lore additions required; assembly only.
+**Where.** [lore/geography.md](../lore/geography.md) — *Sumendar*; [lore/bestiary.md](../lore/bestiary.md) — *Dragons*; [lore/world-notes.md](../lore/world-notes.md) — *Zaharsuge*; existing sections on [sumendar.html](../talan/domains/sumendar/sumendar.html) and [order-of-steam.html](../talan/domains/sumendar/order-of-steam/order-of-steam.html).
 
-### [HTML] Sub-region promotion — major remaining
-**Decided.** Pattern established by Fenurra / Emarrea / Myrria / Crossroads / Lost Kingdom / Order of Steam / Emerald Isles. Three major sub-regions remain unpromoted.
-**Open.** Build dedicated pages for **Thousand Kingdom** (Zuzental), **Dragon's Reach** (Sumendar), **River Duchies** (Lioaru) — each currently lives as a section inside its domain page.
-**Where.** [lore/geography.md](../lore/geography.md) per-domain entries; [docs/site-inventory.md](site-inventory.md).
-
-### [HTML] Settlements — Millhaven
-**Decided.** Pattern established by Myrria. Millhaven was on the site at one point and removed during a restructure.
-**Open.** Reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html`.
-**Where.** Will need lore-pull from any preserved Millhaven content + a Brauogi-context placement check.
-
-### [HTML] Legea Empire / Divine Faith — stub page
-**Decided.** Zuzental sub-region housing the Divine Faith theocracy. Page can ship as a stub with TBDs visibly flagged — that's the canon state.
-**Open.** Publish a stub page that captures what's locked (Layer-3 god, demigod line, theocratic prince heir, missionary programme, Draconis political marriage) and flags the four TBD identity questions explicitly. See *Divine Faith — pantheon identity* in **§ Needs writing** above.
-**Where.** New page under [factions/](../talan/factions/) or as a Zuzental sub-region page.
-
-### [HTML] Individual Nine Generals dungeon pages
-**Decided.** Pattern: one page per dungeon, linked from `the-binding.html`. The Hollow of Ten Thousand Threads (Vermin Queen) is sited and could become the first dedicated page.
-**Open.** Build per-dungeon pages, starting with the Hollow. Remaining seven Generals require placement first (see **§ Needs writing**).
-**Where.** [the-binding.html](../talan/the-binding.html).
-
-### [HTML] Factions page reorganisation — Bandit Categories & Conductor's Station
-**Decided.** Train Pirates and the Conductor's Station currently live as a *Bandit Categories & Hazards* section at the bottom of `factions.html` (added 2026-05-17 to close broken cross-links). Functional placement, not ideal — `factions.html` was designed for the four faction categories and these are neither.
-**Open.** Whether **Bandit Categories** deserves its own page (`/talan/factions/bandits.html`) once more categories land (highway raiders, Midarra river pirates / Twin Cities, ruin-strippers, slavers). Whether the **Conductor's Station** deserves its own page entirely — it is a *phenomenon* more than a bandit category, and grouping with mortal banditry under-sells the cosmological strangeness. Possible homes: own page under factions, a future `/talan/hazards/` folder, or a "Magitrain phenomena" section on a future rail-focused page. Whether the **Twin Cities** want their own home once they earn more content — likely under Askamira or as a peer page.
-**Where.** [talan/factions/factions.html](../talan/factions/factions.html) — *Bandit Categories & Hazards* section at the bottom.
+### [HTML] First Nine Generals dungeon page — Hollow of Ten Thousand Threads
+**Decided.** Vermin Queen's dungeon, sited in the **Shadow Steppes** (Myrkono / Darkness / Araphel). The only one of the Nine Dungeons currently placed. Surki cultural antagonism to the Vermin Queen is canon. Cross-link from [the-binding.html](../talan/the-binding.html) exists.
+**Open.** Build dedicated page at `/talan/the-binding/hollow-of-ten-thousand-threads.html` (or under Myrkono if preferred). Page would cover the Vermin Queen's nature, the Hollow's character, the Shadow Steppes setting, the Surki opposition, and the Adventurers' Guild operations against it. Lore for the other seven dungeons exists only as Generals' names — those pages are blocked by the **placement** thread in **§ Needs writing**.
+**Where.** [the-binding.html](../talan/the-binding.html); [lore/world-notes.md](../lore/world-notes.md) — *The Nine Generals of Corruption*; [lore/bestiary.md](../lore/bestiary.md) — Surki entry.
 
 ---
 
@@ -211,6 +231,7 @@ Published HTML is **lore documentation, not campaign-starter material**. Dedicat
 ## § Resolved — closed (struck-through, kept for context)
 
 ### Recent closures (2026-05-17)
+- ~~**Legea Empire / Divine Faith stub page**~~ → published at [legea-empire.html](../talan/domains/zuzental/legea-empire.html). At-a-glance with inline TBD markers; two-sided law-vs-law tension blocks (Faith and Forseti positions side-by-side); missionary programme + Draconis marriage write-up; "Open in Canon" panel listing the six TBDs as deliberate state, not oversight. Sidebar nav added under Zuzental; zuzental.html sub-region card now linkified. The §Needs-writing entry *Divine Faith — pantheon identity* remains open for the eventual canon decisions.
 - ~~**Myrria sub-pages**~~ → both Myrria's Godshall and Seraphel Duskbane published on [adventurers-guild.html](../talan/factions/adventurers-guild.html) (Godshall as its own H2 *A Regional Seat Worth Naming*, Seraphel as a full figure-card). Cross-linked from [myrria.html](../talan/domains/myrkono/myrria/myrria.html). Dedicated sub-pages not warranted — the guild page is the right home.
 - ~~**Age of Corruption mortal myth**~~ → published as an amber ◈ Popular Belief expandable on the Dark Era card of [history.html](../talan/history.html). Sage Lorant of Highspire chronicle with the *"era of the adventurer"* close.
 - ~~**Araphel rites & sacred iconography**~~ → published as the *Faith of Many Faces* section on [myrria.html](../talan/domains/myrkono/myrria/myrria.html). Three rites (Shadowed Palm, Lantern Rite, Shadow-Coin) as info-cards, iconography callout, edicts/anathema prose.

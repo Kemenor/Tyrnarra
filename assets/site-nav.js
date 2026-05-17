@@ -38,7 +38,8 @@
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
-      { slug: 'emerald-isles', label: 'Emerald Isles · Island Kingdom', href: '/talan/domains/zuzental/emerald-isles.html' }
+      { slug: 'emerald-isles', label: 'Emerald Isles · Island Kingdom', href: '/talan/domains/zuzental/emerald-isles.html' },
+      { slug: 'legea-empire',  label: 'Legea Empire · Demigod Theocracy', href: '/talan/domains/zuzental/legea-empire.html' }
     ]},
     { slug: 'nashavel', label: 'Nashavel · Chaos',    href: '/talan/domains/nashavel/nashavel.html', children: [] },
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/talan/domains/ehizahar/ehizahar.html', children: [
