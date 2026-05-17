@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order of Steam — Sumendar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #c87830; }
+
+  .council-card { background: rgba(40,28,16,0.55); border: 1px solid rgba(200,120,48,0.4); border-radius: 4px; padding: 16px 20px; margin: 22px auto; max-width: 920px; }
+  .council-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
+  .council-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 10px; }
+
+  .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
+  .pillar-card { background: rgba(28,20,12,0.55); border-left: 4px solid var(--domain-accent); padding: 12px 14px; border-radius: 4px; }
+  .pillar-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .pillar-desc { font-size: 0.9rem; color: var(--text); }
+
+  .sub-card { background: rgba(28,20,12,0.42); border-left: 4px solid var(--gold-dim); border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+  .sub-card a.sub-card-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; text-decoration: none; }
+  .sub-card a.sub-card-name:hover { color: var(--gold); text-decoration: underline; }
+  .sub-card-desc { font-size: 0.92rem; color: var(--text); margin-top: 4px; }
+
+  .doctrine-block { background: rgba(50,28,18,0.55); border-left: 4px solid #b04030; padding: 14px 18px; margin: 22px auto; max-width: 920px; }
+  .doctrine-label { font-family: 'Cinzel', serif; color: #d88060; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
+</style>
+</head>
+<body data-page="order-of-steam">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/sumendar/sumendar.html">Sumendar</a><span class="sep">›</span><span>Order of Steam</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Order of Steam</div>
+    <div class="page-subtitle">Sumendar Sub-Region · Industrial Kingdom-Guild Hybrid</div>
+    <div class="page-flavor">"No crown, no god. The fire we built ourselves."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Plainly English (modern naming stratum). A polity that named itself after the substance it sells. <i>"Order"</i> is the institutional self-flattery; <i>"Steam"</i> is the actual deliverable.</dd>
+    <dt>Position</dt><dd>The volcanic belt of Sumendar — the long crescent of active volcanoes, mineral veins, and high-temperature forge country running along the western and southern reaches of the domain.</dd>
+    <dt>Government</dt><dd><b>Kingdom-guild hybrid.</b> No noble bloodlines, no divine patron, no hereditary crown. Power flows through <b>elected councils of master craftspeople and engineers</b>; the highest of those councils — the <a href="#council">Council of the Forge</a> — runs war policy and industrial priorities. The Order signs treaties as a sovereign body; it taxes, drafts, and judges; it just does so by ballot among its qualified.</dd>
+    <dt>Industrial output</dt><dd>The <b>largest Magitech producer on Talan</b> — most Magitrains, the bulk of Arcanotech airship engines, and most regulated heavy machinery come out of Order shops or licensed derivatives. Predominantly <b>Arcanotech</b>; very little of anything else.</dd>
+    <dt>Origin</dt><dd>Grew up around <b>an Elden-tech excavation</b> in the early post-Crimson-Rain centuries. Every modern Arcanotech tradition on Talan traces back, at one or two removes, to discoveries made on the volcanic belt.</dd>
+    <dt>Magitrain</dt><dd>The <b>southern continental network's industrial heart.</b> Most southern rolling stock is manufactured here. The Order also fields its own <b>Magitech-armed rail security</b> on its licensed lines — the standard counter to <a href="/talan/factions/factions.html">Train Pirates</a>.</dd>
+    <dt>Character</dt><dd>
+      <i>Steam, smoke, schedules; council politics; craft as virtue</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Industrial Power</span><span class="pill">Council-Ruled</span><span class="pill">No Nobles, No Gods</span><span class="pill">Magitech Heart</span><span class="pill">Elden-Tech Lineage</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">What Makes the Order</h2>
+  <div class="prose">
+    <p>The Order of Steam is the only kingdom-tier polity on Talan governed without nobles or a bound god. It is, in its own self-description, <i>a kingdom that voted itself into existence and would vote itself out again if it stopped working.</i> Citizenship runs through guilds; political voice runs through craft-mastery; sovereignty runs through the assemblies of those qualified to <i>vote on what gets built.</i> The Order's volcanic factories produce at a scale no other region matches, and the politics of who decides <i>which</i> factory runs, and which design ships, is the Order's whole internal life.</p>
+
+    <p>There is no Crimson Throne here. There is no Forseti-style High Court. There is the next council session, the next vote, the next contract. A guild-master who falls behind in their craft loses their voting weight; a foreman who ships a defective batch loses their seat; an engineer whose Arcanotech prototype works <i>three times in a row in front of witnesses</i> can rise from journeyman to council member in a single year.</p>
+
+    <p style="font-style:italic; text-align:center; color:var(--gold-dim); margin-top:18px;">"In Sumendar the mountains forge. The Order decides which forges run."</p>
+  </div>
+
+  <a id="council"></a>
+  <div class="council-card">
+    <div class="council-label">Central Authority</div>
+    <div class="council-name">The Council of the Forge</div>
+    <p>The Order's apex body. Sets <b>war policy</b>, <b>industrial priorities</b>, and the licensing regime under which any heavy Magitech can be built at scale. Seats are partly elected from the senior craft-guilds and partly held as <b>hereditary seats by the great Houses</b> (notably <a href="/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart</a>, which holds several). The hereditary seats are the closest thing the Order has to nobility — and the long-running internal argument is whether they should exist at all. Reformist factions cycle through proposals to abolish them every council session; the Houses cycle through proposals to extend their reach. Neither side has won.</p>
+    <p>When the Order signs a treaty, the Council signs. When the Order declares war, the Council declares. When the Order declares <b>Total Mobilization</b> — see below — the Council declares that too. The vote required is supermajority, and it has not been called in over a century.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Four Pillars</h2>
+  <div class="prose">
+    <p>The Order organises its industrial work into four broad craft-pillars. Each has its own master council and its own seat on the Council of the Forge; together they produce most of what mortals on Talan would call "regulated heavy Magitech."</p>
+  </div>
+
+  <div class="pillar-grid">
+    <div class="pillar-card">
+      <div class="pillar-name">Rail &amp; Locomotion</div>
+      <div class="pillar-desc">Magitrains and the rolling stock that fills the southern network. The Pillar that the Order is most globally known for — most of Talan's Arcanotech rail traces here.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-name">Airships &amp; Atmosphere</div>
+      <div class="pillar-desc">Arcanotech airship engines and the standard Talanese hull patterns. <b>House Eisenhart's Ironwing line</b> dominates the heavy-combat segment. Vindul still leads on hull-singing quality, but Order-built engines are the industry default.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-name">Foundry &amp; Heavy Industry</div>
+      <div class="pillar-desc">Furnaces, mills, regulated weapon manufacture, rune cannons, Ethersteel plating. The volcanic belt's literal forges feed this pillar; House Eisenhart leads it by output and reputation.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-name">Engineering &amp; Archaeology</div>
+      <div class="pillar-desc">Elden-tech recovery, prototype labs, Council-licensed reverse-engineering of the volcanic belt's deep ruins. The Pillar whose seat is most often held by a new-rising engineer rather than an established House.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Elden-Tech Lineage</h2>
+  <div class="prose">
+    <p>The Order is younger than most Talanese kingdoms — it grew up in the early post-Crimson-Rain centuries, not before. Its founding moment is the <b>excavation of a single concentrated Elden-tech ruin</b> in the volcanic belt: a deep complex preserved better than most because the lava had sealed it. Reverse-engineering what was found there produced the first reliable Arcanotech engines, the first rail-bound mass acceleration on Talan, and the first formal craft-school whose vote-of-the-qualified rule eventually crystallised into the Council of the Forge.</p>
+
+    <p>The Order does not advertise that lineage, and most mortals on Talan would not know it. Mainstream usage treats Arcanotech as <i>"the work of the dwarven engineers"</i> or <i>"licensed Order-tradition"</i>, not as recovered Elden inheritance. Scholarly usage admits the source quietly. The deepest of the recovered designs are still locked in Council vaults — released, slowly, on a licensing schedule that the Pillars argue about every session.</p>
+
+    <p>The ruin itself is still active archaeology. <b>New Elden-tech recoveries land in the Order's labs roughly once a generation.</b> Each one reshapes a pillar. The current quiet rumour among engineers is that something significant came up in the last decade and is still being studied; the Council neither confirms nor denies.</p>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">What "Elden" Means Here</div>
+    <p>The Order's working vocabulary treats <i>Elden</i> as a pre-Crimson-Rain technical civilisation whose ruins are the source of recovered Arcanotech. That is true. <i>What the Elden actually became</i> is on <a href="/talan/the-binding.html">the-binding.html</a> as a GM Secret; the Order's Engineering Pillar does not have that knowledge in any form they would publish.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Houses, Guilds, and Foundries</h2>
+  <div class="prose">
+    <p>The Order has Houses — the closest thing it has to nobility — but the Houses are <b>craft-lineages</b>, not bloodlines of conquest. A House is a family that has held seats on a Pillar council for long enough that its name is now load-bearing in the industry. Houses can be unmade by a single bad decade; new Houses can be made by three good ones. The Council of the Forge contains both hereditary House seats and elected guild seats, and the balance between them is the Order's running internal politics.</p>
+  </div>
+
+  <div class="sub-card">
+    <a class="sub-card-name" href="/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart →</a>
+    <div class="sub-card-desc">The Order's highest-prestige dwarven House. Arms manufacturer to the world, holds multiple hereditary seats on the Council of the Forge, and currently led by the Highforge Matriarch <b>Tharka Eisenhart</b>. Builders of the <i>Stahlglanz</i> mobile fortress and the Ironwing combat-airship line. See dedicated page.</div>
+  </div>
+
+  <div class="prose" style="margin-top:18px;">
+    <p>Other Houses exist — smaller, regional, or specialist — and many of the rising engineering names belong to no House at all. The Engineering Pillar's seat in particular rotates fast; its current holder is a non-House practitioner whose work on Elden-tech rune-array recovery has been controversial inside the Council for a decade. Whether they keep their seat through the next vote is one of the Order's standing internal arguments.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Doctrine — Total Mobilization</h2>
+
+  <div class="doctrine-block">
+    <div class="doctrine-label">War-Standing — Last Declared 100+ Years Ago</div>
+    <p><b>Total Mobilization</b> is the Order's standing-army wartime escalation — the legal posture under which every workshop becomes a foundry-for-the-state, every licensed Magitech design is requisitioned, and the great War Relics (including <i>Stahlglanz</i>) are deployed. Declaration requires a supermajority vote of the Council of the Forge.</p>
+    <p>The Order has <i>not</i> declared Total Mobilization in over a century. The discipline of that restraint is something the Order's diplomats trade on; the threat of declaring it is something the Order's hawks lean on. Both faces of the same posture.</p>
+  </div>
+
+  <div class="prose">
+    <p>In peacetime — that is, almost always — the Order maintains a <b>professional standing army</b> drawn from House regiments, foundry militias, and Council-licensed mercenary contracts. Its dwarven heavy-infantry regiments are the standard reference for what disciplined heavy infantry on Talan looks like. Its airship fleet (Ironwing-class as the heavy element) is one of two on Talan; Vindul's is the other.</p>
+
+    <p>The Order's strategic posture toward the <a href="/off-continent/red-empire.html">Red Empire</a> is the open one: the Order regards the Iron Tide as the active threat for which most modern Order doctrine exists. The Eisenhart engineering tradition, the Ironwing class, and <i>Stahlglanz</i> all exist <b>in part</b> as answers to a particular kind of Imperial landing.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Friction Within Sumendar</h2>
+
+  <div class="callout">
+    <div class="callout-label">Dragon's Reach — Parallel Recovery</div>
+    <p>The Order shares the volcanic belt with <b>Dragon's Reach</b>, the independent dragon city-state at the alien vessel's crash site. Both polities run major recovery archaeology in adjacent terrain — the Order on Elden-tech ruins, the Dragons on what remains of their own crashed mothership. The two recovery projects have <i>deeply different attitudes</i> toward what should be done with what is found. The Order wants to reproduce. The Dragons want to remember. Specific finds have been quietly disputed between the two over the centuries; the volcanic terrain does not always make clear which excavation a given chamber belongs to.</p>
+    <p>Formal relations are <i>cordial.</i> Practical relations are <i>complicated.</i></p>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">The Eldara Question</div>
+    <p>Komo's city-state <b>Eldara</b> sits in Sumendar's <i>No Man's Land</i> — the ungoverned ring around the god's sanctum — and the Order has no jurisdiction there. The Order's relationship with Komo's church is correct but distant; the Order pays no tithes, performs no rites, and treats Eldara as <i>a neighbouring polity that happens to be a god's house.</i> Komo, for his part, has never publicly objected. The Order does not declare a divine patron, and Komo does not declare an Order claim. The arrangement holds.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">What the Order Sells, What It Does Not</h2>
+  <div class="prose">
+    <p>The Order is a commercial polity. <b>It sells.</b> Magitrains, rail components, airship engines, foundry-tooling, rune cannons, prefabricated forge-modules, license rights on its second-tier designs — the price list is long and the customers are global, including (via licensed intermediaries) some surprising parties.</p>
+
+    <p>What the Order <i>does not</i> sell, and what is therefore the centre of its strategic value, is the top tier: bleeding-edge Elden-recovered designs, the Eisenhart Leviathan and Ironwing combat hulls, Ethersteel-class plating, and anything the Council of the Forge has marked under <b>Pillar Restriction</b>. House Eisenhart's most-advanced exports are sold by long-term contract to allied powers only, and the bleeding edge is sold to <i>no one</i>. The Order's standing doctrine is that what the Order can build that no one else can build is what keeps the Order sovereign.</p>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · SUMENDAR · ORDER OF STEAM</div>
+
+</div>
+
+</body>
+</html>

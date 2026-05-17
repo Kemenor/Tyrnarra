@@ -8,6 +8,38 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<style>
+  .rail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
+  .rail-card { background: rgba(28,20,10,0.55); border-left: 4px solid var(--rail-color, var(--gold)); padding: 14px 18px; border-radius: 4px; }
+  .rail-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--rail-color, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
+  .rail-byline { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 8px; }
+  .rail-desc { font-size: 0.92rem; color: var(--text); }
+  .rail-north { --rail-color: #6890c0; }
+  .rail-south { --rail-color: #d0742a; }
+
+  .blocker-block { background: rgba(40,20,16,0.55); border-left: 4px solid #a85040; padding: 14px 18px; margin: 22px auto; max-width: 1000px; border-radius: 4px; }
+  .blocker-label { font-family: 'Cinzel', serif; color: #d88060; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 8px; }
+  .blocker-reasons { padding-left: 22px; margin: 10px 0; }
+  .blocker-reasons li { margin-bottom: 10px; }
+  .blocker-reasons li b { color: #f0d080; }
+
+  .cross-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px auto; max-width: 1100px; }
+  .cross-card { background: rgba(28,20,10,0.5); border-left: 3px solid var(--gold-dim); padding: 10px 14px; border-radius: 4px; }
+  .cross-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 4px; }
+  .cross-desc { font-size: 0.88rem; color: var(--text); }
+
+  .continent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
+  .continent-card { background: rgba(28,20,10,0.55); border: 1px solid var(--cont-color, rgba(200,144,10,0.4)); border-radius: 4px; padding: 14px 18px; }
+  .continent-card.is-link { display: block; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+  .continent-card.is-link:hover { border-color: var(--cont-color-hover, var(--gold)); transform: translateY(-2px); }
+  .continent-direction { font-family: 'Cinzel', serif; color: var(--cont-color, var(--gold-dim)); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+  .continent-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.35rem; margin-bottom: 6px; }
+  .continent-byname { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 8px; }
+  .continent-desc { font-size: 0.92rem; color: var(--text); }
+  .c-sortalde { --cont-color: rgba(120,160,200,0.45); --cont-color-hover: #78a0c8; }
+  .c-empire   { --cont-color: rgba(176,64,48,0.45);  --cont-color-hover: #b04030; }
+  .c-unknown  { --cont-color: rgba(110,100,120,0.4); }
+</style>
 </head>
 <body data-page="talan">
 
@@ -165,11 +197,110 @@
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
+  <h2 class="section-heading">The Continental Rail Network</h2>
+  <div class="prose">
+    <p>Talan is stitched together by <b>Magitrains</b>. Scheduled passenger and freight service runs as common as roads in the regions the rails reach; most Talanese mortals have ridden a train at least once in their lives, and most kingdom merchants depend on the schedule for the goods that arrive on Monday. The rail network is not a luxury — it is the substrate of modern continental commerce, and the single most visible piece of <a href="/magic.html">Magitech</a> in daily life.</p>
+
+    <p>The network is descended from <a href="/talan/the-binding.html">Elden</a>-tech recovery — the original prototypes were called <b>Grav Trains</b> in the first reverse-engineering centuries after the Week of Crimson Rain. Modern industrial rail traces back, at one or two removes, to those discoveries. <i>Pedants still distinguish "Grav Train" (the recovered original) from "Magitrain" (the modern industrial product); most people use the terms interchangeably.</i> The bulk of modern rolling stock comes from the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> in Sumendar or its licensed derivatives.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.1rem; margin-top:18px;">Two Halves, Not One</h3>
+  <div class="prose">
+    <p>The network is <b>two interconnected halves, not one continental whole</b>. The northern domains share one rail system; the southern domains share another; <b>no through-rail crosses between them</b>. Every Talanese merchant who needs to move goods north-to-south knows the seam intimately.</p>
+  </div>
+
+  <div class="rail-grid">
+    <div class="rail-card rail-north">
+      <div class="rail-name">Northern Network</div>
+      <div class="rail-byline">Vindul · Lautara · Myrkono · Ezkudon · Zuzental · Ehizahar · Askamira</div>
+      <div class="rail-desc">Interconnects the northern domains and their major cities. Confederated multi-operator system; <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>-licensed lines dominate, regional operators run shorter routes. <b><a href="/talan/domains/lautara/lautara.html">Merkavar</a></b> is the network's busiest freight hub — Jianna's Market City sits at the crossing of the Vindul, Myrkono, Ezkudon, and Zuzental lines. The standing <b>Sortalde embassy freight</b> also terminates here.</div>
+    </div>
+    <div class="rail-card rail-south">
+      <div class="rail-name">Southern Network</div>
+      <div class="rail-byline">Sumendar · Lioaru · Brauogi · Egulon · Nashavel</div>
+      <div class="rail-desc">Sumendar is the industrial heart — most southern rolling stock is manufactured here, and the <b><a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a></b> licenses the dominant lines. The southern network is younger than the northern by about a century, denser in mineral-and-grain freight, and less politically fragmented. The <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> have no rail and never will; lines reach the habitable interior of Lioaru and stop at the cursed-ground's edge.</div>
+    </div>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.1rem; margin-top:18px;">Why There Is a Seam — Basogur</h3>
+
+  <div class="blocker-block">
+    <div class="blocker-label">The Rail-Blocker — Basogur Jungle</div>
+    <p>The two networks do not connect because no rail has ever been laid across <b>Basogur Jungle</b> — the deep jungle straddling Nashavel and Ehizahar that bisects the continent's east-central waist. Multiple Magitech engineering projects have attempted the crossing over the decades; <b>every one has failed</b>. The reasons are three, and they compound:</p>
+    <ol class="blocker-reasons">
+      <li><b>Engineering impossibility.</b> Basogur's density, terrain, and ambient chaotic magical character scramble Arcanotech precision. Rails warp; runes fail; trains derail even on completed test segments. Theoretical Occultech rail would fare better, but Occultech does not scale to industrial production.</li>
+      <li><b>Indigenous resistance.</b> Vanara, leshy, beast-spirits, and resident druids of the jungle <i>actively dismantle</i> any rail-laying attempt as it happens. Escorting projects with armed crews escalates into running conflicts the engineers cannot win without becoming an occupation.</li>
+      <li><b>Political deadlock.</b> Both <b>Nashavel</b> (Chaos · Vesuna) and <b>Ehizahar</b> (Hunt · Hinka) claim sovereignty over Basogur; neither effectively governs it; neither will sanction a project the other has not, and neither will. Even if the engineering and indigenous problems were solved, no rail consortium can secure the right of way.</li>
+    </ol>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.1rem; margin-top:18px;">Crossing the Seam</h3>
+  <div class="prose">
+    <p>North-south travel is therefore done by other means. Each has its own economy attached, and the kingdoms astride each alternative draw real revenue from it.</p>
+  </div>
+
+  <div class="cross-row">
+    <div class="cross-card">
+      <div class="cross-name">Ship across Midarra</div>
+      <div class="cross-desc">The bulk-cargo route. Talan's freshwater inner sea is the preferred lane for tonnage that doesn't fit in a passenger schedule. The <b>Twin Cities</b> — the mobile pirate capital drifting through Midarra — draw real revenue from being a routine transit point. Toll, escort, or both.</div>
+    </div>
+    <div class="cross-card">
+      <div class="cross-name">Airship over Basogur</div>
+      <div class="cross-desc">The premium passenger and urgent-freight option. Arcanotech airships do this regularly but suffer turbulence and instrument drift in the chaos-magic uplift. <b>Occultech airships fly through it cleanly</b> and charge accordingly. Vindul and Sumendar airship guilds dominate the over-jungle route.</div>
+    </div>
+    <div class="cross-card">
+      <div class="cross-name">The Overland Loop</div>
+      <div class="cross-desc">The long road that loops around Basogur — slow, monetised by toll-collecting kingdoms along the bypass. The poor route, the patient route, the route taken when the airship guilds are full or the season is bad on Midarra. Still used; still profitable for whoever holds the tolls.</div>
+    </div>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.1rem; margin-top:18px;">Hazards of the Rails</h3>
+  <div class="prose">
+    <p><b>Train Pirates.</b> Contemporary banditry active across both networks. They hit at the <i>slow stretches</i> — climbs, junctions, station approaches, the places where Arcanotech acceleration drops to walking pace. <i>Langsam auf Land, schnell auf Schiene</i> ("slow on land, fast on rail") is the train-piracy axiom. Most crews are ordinary mortal banditry in for the cargo; a minority are politically motivated. The Order of Steam fields its own Magitech-armed security on its licensed lines; smaller operators rely on <a href="/talan/factions/adventurers-guild.html">Adventurers' Guild</a> contracts.</p>
+
+    <p><b>The Conductor's Station.</b> A rare pocket-dimension hazard of the Magitrain network — a phantom way-station that doesn't appear on the schedule and is gone again before anyone can return to it. Trains that stop there sometimes arrive somewhere else. The Conductor's Station haunts both networks equally; no Northern or Southern preference. It is canon, it is rare, and what it <i>is</i> remains an open question among engineers and theurgists.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Other Continents — Tyrnarra Is Larger Than Talan</h2>
+  <div class="prose">
+    <p>Talan is one of several continents in Tyrnarra. Most are little known to Talanese scholars — Hafra is wide, the <a href="#" onclick="event.preventDefault();">Cloud Sea</a> wider, and active contact is rare. Two are named in canon. The rest exist but remain unmapped from this side of the water.</p>
+  </div>
+
+  <div class="continent-grid">
+    <div class="continent-card c-sortalde">
+      <div class="continent-direction">East across Hafra</div>
+      <div class="continent-name">Sortalde</div>
+      <div class="continent-byname"><i>Tao Hua Yuan</i> in its own tongue · The petal-archipelago</div>
+      <div class="continent-desc">A seven-petal archipelago east of Talan, separated by stormy outer waters. Six ancestral petals plus the central <b>Concord seat at Heting</b>. <b>No walking gods</b> — Sortalde's clerical work runs entirely through Layer-3 dynasty-spirits, ancestor-judges, and place-gods. The crossing is hard; surviving merchants typically reach only the outer petals (<b>Wandao</b>, <b>Xidao</b>, <b>Niudao</b>). Standing Sortalde embassies in Lautara — at <a href="/talan/domains/lautara/lautara.html">Merkavar</a> and <a href="/talan/domains/lautara/crossroads.html">Crossroads</a> — are the active diplomatic interface.</div>
+    </div>
+    <a class="continent-card c-empire is-link" href="/off-continent/red-empire.html">
+      <div class="continent-direction">West across Hafra (or thereabouts)</div>
+      <div class="continent-name">The Red Empire's Home Continent</div>
+      <div class="continent-byname">Name unknown to Talanese scholars · The godless coast</div>
+      <div class="continent-desc">A vast authoritarian state under the <b>Crimson Emperor</b> — godless, militarist, mortal-supremacist as cosmological position. The <b>Iron Tide</b> (navy) lands on Talan's coasts; the <b>Menagerie's Collectors</b> infiltrate Talan's cities. The home continent itself is over the sea and out of reach — no Talanese army has ever set foot on it. <i>See dedicated page.</i></div>
+    </a>
+    <div class="continent-card c-unknown">
+      <div class="continent-direction">Other bearings</div>
+      <div class="continent-name">Unnamed in Talanese Sources</div>
+      <div class="continent-byname">Unknown · Unmapped · Possibly inhabited</div>
+      <div class="continent-desc">The Cloud Sea wraps the world. Other continents exist — Talanese scholars accept this as a matter of geometry — but no expedition has returned with a usable map. The Adventurers' Guild has tried; results have not been encouraging. <i>"Beyond Hafra"</i> is the polite Talanese phrase for what no one has confirmed.</div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">How You Get There</div>
+    <p><b>Cloudships</b> are the only practical way for Talan to reach another continent. Every cloudship is <a href="/magic.html">dual-school Magitech</a> — Arcanotech plus Occultech, almost always — which is the structural reason they are so rare. The Adventurers' Guild commissions Sortalde expeditions individually and pays survivor-tax rates; the Iron Tide has lost ships trying to reach Sortalde and the Empire's standing policy is <i>don't bother.</i> A voyage to either named continent is a <i>campaign</i>, not a trip.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
   <h2 class="section-heading">Continue Exploring</h2>
   <div class="prose">
     <p>For the eras that shaped this continent — Elden, Gods', the Week of Crimson Rain, the Dark Era — see <a href="/talan/history.html">History &amp; Eras</a>.</p>
     <p>For the Seven Wardstones, the Nine Generals of Corruption, and the War of Seals, see <a href="/talan/the-binding.html">The Binding</a>.</p>
-    <p>For the four schools of magic and how mortals access the Wellspring, see <a href="/talan/magic.html">Magic — Four Schools</a>.</p>
+    <p>For the four schools of magic, Magitech, the Mortal Ascent Ladder, and the domains beyond the Thirteen, see <a href="/magic.html">Magic &amp; Faith</a>.</p>
     <p>For the Adventurers Guild, the Mercenary Guild, and the other independent organisations spanning the continent, see <a href="/talan/factions/factions.html">Factions</a>.</p>
   </div>
 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lost Kingdom — Lioaru · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #6a5868; }
+
+  .signs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
+  .sign-card { background: rgba(22,18,24,0.55); border-left: 4px solid var(--domain-accent); padding: 12px 14px; border-radius: 4px; }
+  .sign-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.93rem; margin-bottom: 4px; }
+  .sign-desc { font-size: 0.9rem; color: var(--text); }
+
+  .ancestry-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
+  .ancestry-card { background: rgba(22,18,24,0.6); border: 1px solid rgba(106,88,104,0.45); border-radius: 4px; padding: 12px 16px; }
+  .ancestry-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
+  .ancestry-desc { font-size: 0.9rem; color: var(--text); }
+
+  .warning-block { background: rgba(40,18,22,0.55); border-left: 4px solid #a04848; padding: 12px 16px; margin: 22px auto; max-width: 920px; }
+  .warning-label { font-family: 'Cinzel', serif; color: #d88080; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 4px; }
+</style>
+</head>
+<body data-page="lost-kingdom">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lioaru/lioaru.html">Lioaru</a><span class="sep">›</span><span>Lost Kingdom</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Lost Kingdom</div>
+    <div class="page-subtitle">Lioaru Sub-Region · The Blackened Lands · "The Black Spot on the Map"</div>
+    <div class="page-flavor">"A god died here. The land has not forgotten how."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Plainly English (modern naming stratum). The folk-name <i>"the black spot on the map"</i> circulates in chronicles, sermons, and traveller's tales — most cartographers depict the territory as a literal void in the page rather than try to render its interior.</dd>
+    <dt>Position</dt><dd>The western coastal sub-region of Lioaru, fronting Hafra. Bounded inland by the desert; <b>Lost Isle</b> lies offshore to the west, sharing the curse at lower intensity.</dd>
+    <dt>Terrain</dt><dd>Blackened soil that takes nothing in cultivation. Time-warped strata where moments <i>repeat</i> or <i>pool</i>. Ruins that read newer than the surrounding stone, sometimes by centuries. Ambient necromantic resonance over the whole sub-region.</dd>
+    <dt>Character</dt><dd>
+      <i>Cursed ground, restless dead, time slipping, no kingdom claims it</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Ruined</span><span class="pill">Cursed Ground</span><span class="pill">Tani Died Here</span><span class="pill">Fleshwarp + Skeleton Origin</span><span class="pill">Unclaimed</span></div>
+    </dd>
+    <dt>Politics</dt><dd>No kingdom claims it. No reliable maps exist of the deep interior. The <b>Adventurers' Guild posts a perpetual standing warning</b>; passing the edge is at the traveller's own count.</dd>
+    <dt>Magitrain</dt><dd><b>No rail. No rail planned. No rail possible.</b> The Blackened Lands' chaotic magical residue scrambles Arcanotech precision, and no rail consortium would build there in any case. Access is on foot, by mount, or by airship over the edge — and airships routinely refuse the contract.</dd>
+    <dt>Visitors</dt><dd>Tani-mourning sects on edge-pilgrimage; necromancers drawn by the resonance; ascension-cultists hunting for what the ruins might still hold; the rare Adventurers' Guild expedition. Most do not return whole; some do not return at all.</dd>
+  </dl>
+
+  <div class="warning-block">
+    <div class="warning-label">Adventurers' Guild — Standing Notice</div>
+    <p>The Lost Kingdom is the only sub-region on Talan that the Guild publishes a <b>permanent edge-of-region warning</b> for. Any party entering past the inner stone ring is recorded as a <i>missing-presumed-lost</i> contract from the moment they cross. Recovery teams are not dispatched. The Bronze-rank ceiling for any expedition contract that touches the Blackened Lands has been overridden in writing — Guild Master Lavisburg's instruction is that no rank-Bronze party is permitted near. Mithral and above only.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">What the Land Is</h2>
+  <div class="prose">
+    <p>The Lost Kingdom is the wound where a Grand God died. The divine retaliation that followed Tani's killing concentrated on this single coast for the better part of a week — what mortals remember as the <b>Week of Crimson Rain</b> — and the land has carried the strike ever since. Three and a half thousand years have not healed it.</p>
+
+    <p>What grew here once is gone. What remains is the wound — and the things the wound makes.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size:1.1rem; margin-top:24px;">Signs of the Curse</h3>
+  <div class="signs-grid">
+    <div class="sign-card">
+      <div class="sign-name">Blackened Soil</div>
+      <div class="sign-desc">The ground takes nothing — no crop, no grass, not even the patient lichens that colonise dead stone elsewhere. The black is not ash; it is the soil itself, all the way down past the depth a shovel reaches.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-name">Time-Warped Strata</div>
+      <div class="sign-desc">Moments <i>repeat</i> in pockets — a wind that blows the same gust twice; footsteps that arrive before the foot. Other moments <i>pool</i>, holding the traveller in a single second for what feels like an hour. The temporal anomalies are heaviest near the ruined capital's core.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-name">Ruins Reading Newer</div>
+      <div class="sign-desc">Stone fragments that the eye reads as <i>newer</i> than the surrounding rock — by years, sometimes by centuries. The Storveldi Denbora capital lies underneath; the strata above it date wrong because the strata <i>are</i> wrong.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-name">Ambient Necromantic Resonance</div>
+      <div class="sign-desc">A constant low pressure on the spell-sense of anyone trained to feel it. Necromancers describe entering the Lost Kingdom as a <i>volume change</i> — the background hum of the dead made suddenly audible.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-name">Periodic Fleshwarp Incidents</div>
+      <div class="sign-desc">Survivors of the cursed ground sometimes return changed in body. Limbs malformed, organs duplicated, sense-organs in the wrong places. The land works on the living without consent and without pattern.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-name">The Restless Dead</div>
+      <div class="sign-desc">Concentrations of bone-revenants. Skeletons rise from the soil itself — most are old, some are not. No necromancer is needed; the land does its own raising.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Why the Land Is This Way</h2>
+  <div class="prose">
+    <p>The mortal histories agree on the public part of the story: <b>this is where Tani was killed.</b> The Goddess of Time was struck down in her own domain — the first Grand God ever slain. Her death triggered the Week of Crimson Rain, the Grand Gods' open war that ended an era and reshaped the world. The kingdom that occupied this coast at the time of her death was annihilated in the retaliation; the cursed ground left behind is what the modern map calls the Lost Kingdom.</p>
+
+    <p><i>Who</i> killed Tani is where the public histories thin. Mortal chronicles call the event <b>the God Killing Incident</b> and most retellings name the killers only as <i>"the Old Race who killed Tani"</i>. Some sources conflate them with the long-vanished <a href="/talan/the-binding.html">Elden</a>; some treat them as an unnamed mortal civilisation of the Gods' Era; some treat them as a folk-figure for whatever the Storveldi Denbora actually were. The full truth is closer to the GM section at the bottom of this page.</p>
+
+    <p>What every chronicle does agree on: the killers' homeland was annihilated <i>here</i>, by the Grand Gods themselves, in answer.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Ancestries of the Cursed Ground</h2>
+  <div class="prose">
+    <p>The Lost Kingdom is the canonical origin point of two of Talan's mortal ancestries. <b>Neither is the work of any current faction.</b> They are not the product of cults, sorcerers, or governments. They are what the land itself produces from those who live or die on it.</p>
+  </div>
+
+  <div class="ancestry-row">
+    <div class="ancestry-card">
+      <div class="ancestry-name">Fleshwarp</div>
+      <div class="ancestry-desc">The cursed ground twists living flesh into irregular bodies. Fleshwarps born of the Lost Kingdom are the natural mortal ancestry — children of survivors, of trespassers who lingered, and sometimes of the land's slower work on those who never asked to be changed at all. <b>This is the PF2e Fleshwarp ancestry as it exists on Talan.</b> Each is unique; no two share form.</div>
+    </div>
+    <div class="ancestry-card">
+      <div class="ancestry-name">Skeleton</div>
+      <div class="ancestry-desc">The restless wound pulls the dead back into motion. Lost-Kingdom Skeletons are not raised by a necromancer's hand — they rise. Some are old enough that nothing of who they were remains; some are recent enough that fragments of personality persist. They are the canonical natural-born Skeleton ancestry on Talan.</div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">Distinct from Menagerie-Made</div>
+    <p>The <a href="/off-continent/red-empire.html">Red Empire's Menagerie</a> produces its own Fleshwarps off-continent — deliberate fabrications, not natural-born. Same end-product, completely different origin. Most Talanese cannot tell them apart on sight. A Blackened-Lands Fleshwarp is <i>rare-but-pitied</i>; a Menagerie-made Fleshwarp is <i>rare-and-feared</i>. The politics of being mistaken for one is its own slow tragedy.</p>
+  </div>
+
+  <div class="callout" style="margin-top:18px;">
+    <div class="callout-label">A Quieter Third — Duskwalkers</div>
+    <p>The Lost Kingdom is also Talan's largest source of the <b>Duskwalker</b> heritage — death-touched mortals who manifest at sites where the veil between Life and Postlife wore thin. Duskwalkers are not <i>born</i> in the usual sense; they appear, fully grown, at death-soaked sites. The Lost Kingdom is the most prolific such site on the continent. They drift away from the cursed ground once self-aware; most Duskwalkers met elsewhere on Talan trace, if they can be traced, back here.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Lost Isle</h2>
+  <div class="prose">
+    <p>A small island off the western coast, well within sight from the mainland's edge. It shares the cursed-ground character of the Blackened Lands at lower intensity — softer time-warps, fewer revenants, a fleshwarp incidence the locals call <i>"merciful by comparison."</i> No ferry runs there. Several have tried.</p>
+
+    <p>The deep history of Lost Isle is unwritten. Two possibilities circulate: that it was a coastal outpost of the same kingdom that perished on the mainland, dragged into the wound by association; or that it predates the kingdom entirely, and is the older scar — the one the kingdom unwisely built next to. The Adventurers' Guild does not adjudicate the question.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Who Goes There, and Why</h2>
+  <div class="prose">
+    <p><b>Tani-mourning sects.</b> Small religious groups, scattered across Talan, who hold that the Goddess of Time was wronged and that her memory deserves witness. Their pilgrimage stops at the inner stone ring — they do not enter. Some leave offerings; most leave silent.</p>
+
+    <p><b>Necromancers.</b> Drawn by the resonance. The Lost Kingdom is the strongest single concentration of ambient death-magic on the continent; a practitioner who survives a week at the edge often returns home <i>changed</i> in study, if not in body. Most of the changes do not announce themselves as beneficial.</p>
+
+    <p><b>Ascension-cultists.</b> The folk-tradition that <i>"power can be found where the gods bled"</i> draws these the most reliably. They are looking for shards of divinity — fragments of Tani's power, or of the killers' own, depending on which version of the myth they hold. Sometimes they find what they came for. Sometimes the land finds them first.</p>
+
+    <p><b>The Adventurers' Guild.</b> Standing edge-monitoring contracts run year-round, posted at Lioaru's guildhalls and at Crossroads. The Guild publishes no map of the deep interior — partly because no one has produced one that two surveyors agree on, and partly because the maps that have been drawn are considered unsafe to circulate. <i>What is on the map can be sought.</i></p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">What People Say</h2>
+  <div class="prose">
+    <div class="legend-era">
+      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — The Old Race Who Killed Tani</button>
+      <div class="legend-era-content">
+        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+        Most mortal chronicles call the killers <i>"the Old Race who killed Tani, whose land became the black spot."</i> Beyond that the stories differ. <b>Some conflate them with the Elden</b> — the long-vanished pre-Crimson-Rain civilisation; this is the most common version, and the most wrong. <b>Some hold they were a separate mortal civilisation</b> who simply lived among or after the Elden, claimed kinship for prestige, and reached too far. <b>Some hold they were sorcerer-kings of the Gods' Era</b> who pried open a forbidden divine secret. The historical record preserves enough to confirm the killers were <i>not</i> the Elden — but most retellings make the conflation anyway, because the killers themselves encouraged it during their lifetime. The lie has outlasted the liars by millennia.
+      </div>
+    </div>
+
+    <div class="legend-era">
+      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — The Inheritors</button>
+      <div class="legend-era-content">
+        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+        The <b>Azarketi</b> — water-touched mortals scattered across Talan's coasts — sometimes still claim <i>"Elden blood"</i> as inherited tradition. Their elders preserve fragments of the claim in oral history. Some sages dispute the claim; others accept it as a folk-memory that probably descends from <i>somewhere</i> real. Few make the connection to the Lost Kingdom explicitly. The Azarketi themselves, when asked, usually say only that their people came from <i>"across the water, before the Rain."</i>
+      </div>
+    </div>
+
+    <div class="legend-era">
+      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — Pilgrims Speak of a Voice</button>
+      <div class="legend-era-content">
+        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+        Among the Tani-mourning sects there is a quiet tradition: that the edge of the cursed ground sometimes <i>answers</i> the pilgrim. Not in words, never in shape — a sense of being heard, a pressure that lifts after an offering is made. Skeptics call it grief feeding on itself. The sects call it her, still present, somewhere under the soil.
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="prose" style="margin-top:24px">
+    <div class="secret-era">
+      <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The Real History of the Lost Kingdom</button>
+      <div class="secret-era-content">
+        <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+        <b>The killers were the Storveldi Denbora</b> — a mortal civilisation of the Gods' Era. Not the Elden, despite their claim to the contrary. They settled atop abandoned Elden ruins on this coast and built their own capital on those foundations; they <b>claimed Elden descent</b> for prestige and legitimacy, copying what they could understand of what their predecessors had left behind. The conflation of Storveldi Denbora with Elden is their own original lie, transmitted forward across millennia. Most modern mortals — including most Azarketi — do not know this.<br><br>
+
+        <b>What they actually achieved.</b> Generations of selective practice, alchemical work, archaeology of the Elden ruins beneath them, and what we would today call divine engineering. They used the Wellspring/belief mechanic aggressively to lift their entire ruling class to <b>Demi-God</b> status. The far rarer achievement: <b>they developed the integration procedure</b> — the technique for imbuing a found shard of divinity into a mortal's own divine essence. With the procedure in hand, any recovered shard could be converted into actual ascension. <i>The procedure was their true edge — not the shards themselves.</i> Two of their most accomplished sovereigns went further and reached <b>Minor God</b> status by integrating recovered shards. See <a href="/talan/the-binding.html">the-binding.html</a> for cosmological context.<br><br>
+
+        <b>The God Killing Incident.</b> The two Minor Gods of the Storveldi Denbora, supported by their Demi-God ruling class, attacked <b>Tani in her own domain and killed her</b> — the first Grand God ever slain. The retaliation was the <b>Week of Crimson Rain</b>; the centre of it was here. The capital was annihilated; the land around it was so deeply wounded that it has never healed. <i>This is the cosmological reason the Blackened Lands exist.</i><br><br>
+
+        <b>One member of the ruling class survived.</b> He used the integration procedure on himself in the aftermath, ascended to <b>Minor God of Undeath</b>, took the self-given name <b>Betibizi</b> ("eternal life"), and fled Talan for Abyss (Layer 3). He has not returned. <b>He is the spiritual root of the Blackened Lands' ambient necromancy</b> — the reason the cursed ground raises Skeletons without a necromancer's intervention, and the canonical source-god for the natural-born Skeleton ancestry. He is also the <b>original holder of the integration procedure</b>, the choke-point knowledge that could elevate other mortals past Demi-God status. Fragments of the procedure persist on Talan among Betibizi's cult and the descended Azarketi lineages; reconstructing the complete procedure from those fragments is <b>the largest unsolved capability gap on Talan</b>. The bound thirteen do not discuss whether they know its location.<br><br>
+
+        <b>The Azarketi connection.</b> Not every Storveldi Denbora citizen was at the capital when the gods came. A scattered population of survivors — descendants of those who had been experimented upon, or who carried the inherited results of generations of self-experiment, but who were never themselves elevated — persists today as the <b>Azarketi</b>. Their inherited "Elden blood" claim is the Storveldi Denbora's original lie passed down in a form that none of the modern claimants recognise. They descend from the people who <i>imitated</i> the Elden, not from the Elden themselves.<br><br>
+
+        <b>Player-facing hooks.</b> Anyone hunting the integration procedure has reasons to come here — Betibizi's cult fragments and the deep ruins are both candidates. Any campaign about a NPC ascending past Demi-God status leans on this knowledge being held somewhere. The Storveldi Denbora ruins themselves remain largely unexplored at deep level; the cursed ground prevents serious archaeology, which is exactly why the bound thirteen have not finished cleaning the site out. The Adventurers' Guild's Mithral-and-above ceiling is partly about competence and partly about <i>not finding what is still down there.</i><br><br>
+
+        See also: <a href="/talan/history.html">history.html → Gods' Era</a> for timeline placement; <a href="/talan/domains/lioaru/lioaru.html">lioaru.html</a> for the domain-level summary of this secret; <a href="/talan/the-binding.html">the-binding.html → GM Secret</a> for the Corrupted God's true (Elden) identity, distinct from the Storveldi Denbora story; <a href="/off-continent/red-empire.html">red-empire.html</a> for the Menagerie-fleshwarp counterpart-origin.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LIOARU · LOST KINGDOM</div>
+
+</div>
+
+<script>
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
+}
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
+
+</body>
+</html>

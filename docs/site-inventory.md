@@ -12,10 +12,13 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
 /                              [Style A · cosmic]
   index.html                   landing = world primer (cosmology)                POPULATED
   grand-gods.html              the 13 bound gods (data-driven, expandable)       POPULATED
-  magic.html                   Magic & Faith — Four Schools / Daily Life / Faith POPULATED
+  magic.html                   Magic & Faith — Four Schools / Magitech / Daily Life /
+                               Mortal Ascent Ladder + GM Secret / Faith / Domains-Outside-13
+                               REWRITE (2026-05-17 Tier 3 step 6)
 
 /talan/                        [Style B · grounded]
   talan.html                   continent overview, three seas, 13 domain cards   POPULATED
+                               + Continental Rail Network + Other Continents     (UPDATED 2026-05-17 Tier 3 step 7)
   history.html                 8 eras with three-tier knowledge UI               POPULATED
   the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
 
@@ -39,12 +42,22 @@ Tier 1 publishing pass — 2026-05-17:
 /talan/domains/<domain>/       Promoted sub-region & settlement pages
   ehizahar/fenurra.html        Fenurra · the Flame-Source                        POPULATED  (NEW 2026-05-16)
   lautara/emarrea.html         Emarrea · the Kitsune Kingdom                     POPULATED  (NEW 2026-05-16)
+  lautara/crossroads.html      Crossroads · Tri-Domain Nexus + Spider's Silk Inn POPULATED  (NEW 2026-05-17)
+  lioaru/lost-kingdom.html     Lost Kingdom · The Blackened Lands                POPULATED  (NEW 2026-05-17)
   myrkono/myrria/myrria.html   Myrria · City of Second Chances                   POPULATED  (NEW 2026-05-16)
+  sumendar/order-of-steam/order-of-steam.html
+                               Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
+  sumendar/order-of-steam/house-eisenhart.html
+                               House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
 
 /talan/factions/
   factions.html                taxonomy overview + 4 cards                       POPULATED
-  adventurers-guild.html       POPULATED      mercenary-guild.html     POPULATED
+  adventurers-guild.html       FULL REWRITE (2026-05-17) — branch hierarchy, rank ladder, Bank, Post, Lavisburg, Seraphel, Godshall
+  mercenary-guild.html         POPULATED
   god-churches.html            POPULATED      remnants.html            POPULATED
+
+/off-continent/                NEW top-level section (2026-05-17) — non-Talan continents & powers
+  red-empire.html              The Red Empire — godless mortal-supremacist state POPULATED  (NEW 2026-05-17)
 ```
 
 Removed in earlier phases: `talan-primer.html`, `tyrnarra-primer.html`, `tyrnarra-gods.html` (renamed to `grand-gods.html`), `/talan/magic.html` (moved to `/magic.html`).
