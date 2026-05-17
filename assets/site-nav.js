@@ -120,6 +120,7 @@
       '      <li><a href="/talan/talan.html"       data-page="talan">Continent Overview</a></li>',
       '      <li><a href="/talan/history.html"     data-page="history">History &amp; Eras</a></li>',
       '      <li><a href="/talan/the-binding.html" data-page="the-binding">The Binding</a></li>',
+      '      <li style="margin-left:16px;"><a href="/talan/the-binding/hollow-of-ten-thousand-threads.html" data-page="hollow-of-ten-thousand-threads" style="font-size:0.85em;opacity:0.9;">↳ Hollow of Ten Thousand Threads</a></li>',
       '      <li><a href="/talan/bestiary.html"    data-page="bestiary">Bestiary &amp; Ancestries</a></li>',
       '    </ul>',
       '  </div>',

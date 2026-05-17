@@ -26,6 +26,20 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
                                  Age-of-Corruption chronicle + calendar-conflation note)
                                                                                  (UPDATED 2026-05-17)
   the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
+                               + Vermin Queen card now links to dedicated
+                               Hollow page                                        (UPDATED 2026-05-17)
+  the-binding/hollow-of-ten-thousand-threads.html
+                               Hollow of Ten Thousand Threads · The Vermin
+                               Queen's Hive — first dedicated Nine-Dungeons page.
+                               Sickly-olive accent. Four-card chamber geography
+                               (Web-Tunnels / Brood Pits / Silken Vaults /
+                               Throne); three red-bordered threat cards
+                               (Endless Swarms / Corrupted Silk / Hive-Mind
+                               Influence); Vermin Queen section with Swarm-
+                               domain grant; blue Surki Counter callout (kin-
+                               gone-wrong framing); two seal-blocks for War-
+                               of-Seals context (2524 eruption + standing-threat
+                               margin-pay callout); Open in Canon panel        POPULATED  (NEW 2026-05-17)
   bestiary.html                Peoples &amp; Heritages — distribution table, 13 domain cards,
                                Sortalde pointer, versatile heritages, virtue demons,
                                sin devils                                        POPULATED  (NEW 2026-05-17 Tier 4 step 10)
