@@ -24,6 +24,9 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
                                + Week of Crimson Rain secret harmonised
                                                                                  (UPDATED 2026-05-17 Tier 3 step 8)
   the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
+  bestiary.html                Peoples &amp; Heritages — distribution table, 13 domain cards,
+                               Sortalde pointer, versatile heritages, virtue demons,
+                               sin devils                                        POPULATED  (NEW 2026-05-17 Tier 4 step 10)
 
 Tier 1 publishing pass — 2026-05-17:
   grand-gods.html              Vesuna +Free Will, Hinka +Violent Death extra cleric domains
@@ -52,6 +55,7 @@ Tier 1 publishing pass — 2026-05-17:
                                Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
   sumendar/order-of-steam/house-eisenhart.html
                                House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
+  zuzental/emerald-isles.html  Emerald Isles · Three Main Isles + Bridgelands    POPULATED  (NEW 2026-05-17 Tier 4 pair w/ Sortalde)
 
 /talan/factions/
   factions.html                taxonomy overview + 4 cards                       POPULATED
@@ -63,6 +67,7 @@ Tier 1 publishing pass — 2026-05-17:
 
 /off-continent/                NEW top-level section (2026-05-17) — non-Talan continents & powers
   red-empire.html              The Red Empire — godless mortal-supremacist state POPULATED  (NEW 2026-05-17)
+  sortalde.html                Sortalde · Tao Hua Yuan · The Petal Continent     POPULATED  (NEW 2026-05-17 Tier 4)
 ```
 
 Removed in earlier phases: `talan-primer.html`, `tyrnarra-primer.html`, `tyrnarra-gods.html` (renamed to `grand-gods.html`), `/talan/magic.html` (moved to `/magic.html`).
@@ -87,14 +92,19 @@ The site uses three layers of revealability for setting information:
 
 Currently used in:
 - `grand-gods.html` — all 13 gods have at least the red GM Secret tier (Cronus's is fully written; others have placeholder text).
-- `/talan/history.html` — Elden Era and Week of Crimson Rain have all three tiers. The remaining 6 eras have only common-knowledge text.
+- `/talan/history.html` — **Elden Era**, **Gods' Era**, and **Week of Crimson Rain** have all three tiers (Gods' Era added 2026-05-17). The remaining 5 eras have only common-knowledge text.
+- `/talan/the-binding.html` — GM Secret expandable (Corrupted God = Elden + four General domain-grants).
+- `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
+- `/talan/domains/lioaru/lost-kingdom.html` — three amber Popular Belief expandables + comprehensive GM Secret.
+- `/talan/domains/lautara/crossroads.html` — four amber tavern-rumour expandables.
+- `/magic.html` — GM Secret on the Mortal Ascent Ladder (integration-procedure / Storveldi / Betibizi).
 
 ---
 
 ## Future Work
 
 - **Settlements**: reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html`.
-- **Sub-region promotion (remaining major)**: Thousand Kingdom, Order of Steam, Lost Kingdom, Dragon's Reach, River Duchies. The pattern is now established by Fenurra / Emarrea / Myrria.
+- **Sub-region promotion (remaining major)**: Thousand Kingdom, Dragon's Reach, River Duchies. The pattern is established by Fenurra / Emarrea / Myrria / Crossroads / Lost Kingdom / Order of Steam / Emerald Isles.
 - **Other god city-state pages**: Myrria's pattern (folder under domain, settlement page named after the folder) can be replicated for Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City as their content matures.
 - **Myrria sub-pages**: Myrria's Godshall (Adventurers' Guild facility) and Seraphel Duskbane (Guild Sovereign of Myrkono) — both flagged as stubs from the Myrria city page and currently held in `lore/factions.md`. Promote when Phase 3 of the WA migration runs.
 - **The other six Wardstones**: their host cities (Lakeside, Steppes, Forest, Temple, Monastery, Port) currently lack names — once named, each can become its own settlement page linked from the-binding.html.

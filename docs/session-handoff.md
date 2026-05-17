@@ -6,123 +6,138 @@ A snapshot for the next Claude session picking up Tyrnarra work. The canonical t
 
 ## Where the project is right now
 
-**WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` and `tools/` folders have been deleted from the repo (recoverable from git history). All canon now lives in `lore/`.
+**WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` and `tools/` folders are no longer in the repo (recoverable from git history). All canon lives in `lore/`.
 
-**Lore → HTML publishing: IN PROGRESS.** Tier 1 of the publishing pass just landed. Tier 2 is next.
+**Lore → HTML publishing: TIERS 1–4 SUBSTANTIALLY COMPLETE.** Tier 5 (TBD-stub pages) and Tier 6 (incremental story-driven content) are the active forward fronts. The only remaining structural Tier-4-or-earlier item is **`bestiary.html`** (Tier 4 step 10 — overview page for 50+ ancestries).
 
-**Current authoritative state lives in three files** — read all three before picking up work:
+**Current authoritative state lives in four files** — read them in this order:
 
 1. [`lore/`](../lore/) — the canon (world-notes, geography, factions, bestiary, cultures, glossary, timeline, unplaced). Lore wins on conflict with any HTML page.
-2. [`docs/open-threads.md`](open-threads.md) — every TBD / unresolved / future-development thread, organised by topic with status + what's decided + what's open + where it lives. **Read this any time the user mentions an unresolved canon question.**
-3. [`docs/site-inventory.md`](site-inventory.md) — what's published vs stub on the HTML side. **Read this any time the user mentions publishing or HTML pages.**
-4. [`docs/worldanvil-migration.md`](worldanvil-migration.md) — historical migration log + **active HTML Publishing Status Tracker** at the bottom. The tracker is the publishing punch list.
+2. [`docs/open-threads.md`](open-threads.md) — every TBD / unresolved / future-development thread, organised by topic.
+3. [`docs/site-inventory.md`](site-inventory.md) — what's published vs stub on the HTML side. Comprehensive.
+4. [`docs/worldanvil-migration.md`](worldanvil-migration.md) — historical migration log + active HTML Publishing Status Tracker at the bottom. The tracker is the publishing punch list with most rows now struck through.
 
 ---
 
-## What was done this session (2026-05-16 → 2026-05-17)
+## What was done across the recent sessions (2026-05-16 → 2026-05-17)
 
-The session spanned two days of dense work, organised as a sequence of phases each ending with a user check-in.
+### Lore-side closure (earlier sessions, 2026-05-16/17)
 
-### Lore-side closure
+1. **Migration audit** — walked all 233 WA export files; 10 discrepancies resolved.
+2. **Named Non-Bound Gods** — Bikiargi (Twins/Moon), Zaharsuge (Eldest/Wyrmkin), Epairima (Judge of Souls), Betibizi (Undeath; Storveldi-Denbora-survivor + integration-procedure holder). Sun god is a forward thread.
+3. **"Domains Outside the Thirteen"** 14-domain source mapping (now published on `magic.html`).
+4. **Base ancestry rework** — 44 PF2e remaster ancestries + 8 new placements + Tyrnarra-canon retained.
+5. **Tian Xia placement pass** — created **Sortalde** / **Tao Hua Yuan**, the seven-petal continent. All six ancestries placed. Theology: no walking gods, Layer-3 pantheon (unnamed; future thread).
+6. **Magitech canon** — Arcanotech (dominant) / Occultech (rarer) / Divitech (almost non-existent) / Primotech (legendary). Transport tiers documented (Magitrains / ships / airships / cloudships).
 
-1. **Migration audit** — walked all 233 WA export files; 10 discrepancies surfaced, all resolved. Results in `docs/migration-review.md`.
-2. **Named Non-Bound Gods canonised** — Bikiargi (Twins / Moon), Zaharsuge (Eldest / Wyrmkin), Epairima (Judge of Souls), Betibizi (Undeath; Storveldi Denbora ruling-class survivor + integration-procedure holder). Sun god noted as forward thread.
-3. **"Domains Outside the Thirteen" 14-domain source mapping** added (Abomination → Muiral; Plague → Corrupted God; Decay/Swarm/Naga/Nightmares → four Generals of Corruption; Tyranny/Destruction/Indulgence → three named Sin Devils; Pain/Toil/Sorrow/Delirium → four virtue-demons).
-4. **Base ancestry rework** — 44 standard PF2e remaster ancestries placed; Gnoll→Kholo, Grippli→Tripkee renamed; 8 new ancestries placed (Athamaru, Awakened Animal, Centaur, Dragonet — Zaharsuge's living lineage, Jotunborn, Merfolk, Minotaur, Surki). Tyrnarra-canon kept: Dragons, Dragonkin, Slimes, Rabbitfolk.
-5. **Tian Xia placement pass** — created **Sortalde** (external Talanese name) / **Tao Hua Yuan** (internal name), the Eastern petal-archipelago across Hafra. Shape: 7 petals (Wandao/Xidao/Niudao = outer; Yingdao/Lingdao/Lundao = inner; Heting = central Concord seat). All 6 Tian Xia ancestries placed on petals. Hungerseed resolved (Oni are bound spirits of Lingdao). Kitsune confirmed *not* descended from Sortalde — parallel naming is coincidental. Theology: no walking gods on Sortalde, Layer-3 pantheon (unnamed, future thread).
-6. **Magitech canon** — Magitech is the umbrella for applied magic-engineering, with four sub-traditions per school: **Arcanotech** (dominant), **Occultech** (rarer; chaos-resilient), **Divitech** (almost non-existent; ceremonial), **Primotech** (essentially non-existent; legendary). Modern Magitech descends from **post-Crimson-Rain Elden-ruin discoveries** (UHTC = Elden — that open thread closed). Transport tiers documented: **Magitrains** on land (common, two-half network with Basogur as the rail-blocker between northern and southern halves), **Ships** on water (normal wooden by count, Magitech for the wealth upgrade — Occultech for chaos-water work), **Airships** in the sky (always Magitech; Arcanotech standard or Occultech with bound air elemental; only premium way over Basogur), **Cloudships** for the Cloud Sea (very rare; **always dual-school** — typically Arcanotech+Occultech, rarer Arcanotech+Divitech, legendary Arcanotech+Primotech like *Eyrasunda*).
-7. **Cleanups** — Balaena placed in Floteyn → Floating Isles of Shuun; Conductor's Station promoted to canon hazard of the Magitrain network (haunts both halves equally); Train Pirates entry added to factions.md.
-8. **Doc hygiene** — created `docs/open-threads.md` as the punch list; restructured `docs/worldanvil-migration.md` to clearly separate the (complete) WA-side migration from the (active) HTML publishing; updated CLAUDE.md with migration state. Deleted `worldanvil-export/` and `tools/`.
+### HTML publishing — TIERS 1 → 4 (this session run)
 
-### HTML publishing — Tier 1 landed
+**Tier 1** — `the-binding.html`, `grand-gods.html`, and five domain pages (brauogi/lautara/lioaru/sumendar plus the Cronus tile on talan.html).
 
-The publishing audit produced a tiered priority list (see `docs/worldanvil-migration.md` HTML tracker for the live state). Tier 1 = lowest friction, highest visible impact. All complete:
+**Tier 2** — four pages all shipped:
+- `crossroads.html` + Spider's Silk Inn — Lautara sub-region
+- `red-empire.html` — new `/off-continent/` section created
+- `lost-kingdom.html` — Lioaru deep dive with comprehensive GM Secret
+- Bundle: `order-of-steam.html` + `house-eisenhart.html` — Sumendar sub-region with sub-page
 
-- **`the-binding.html`** — added GM Secret expandable revealing the Corrupted God = Elden truth + 4 General domain-grants (Vermin Queen → Swarm, Rot-Tyrant → Decay, Whisperer in Dreams → Nightmares, Maw Serpent → Naga). Toggle JS wired in.
-- **`grand-gods.html`** — Vesuna gained Free Will, Hinka gained Violent Death (per-god cleric domain lists).
-- **`brauogi.html`** — Minotaur added as third dominant Earth-domain ancestry; Magitrain southern-network line added to At a Glance.
-- **`lautara.html`** — Emarrea sub-region card now links to its existing page (was stale TBD); Crossroads sub-region card added (Spider's Silk Inn + Sortalde embassies mentioned); Magitrain northern-hub line added.
-- **`lioaru.html`** — Lost Kingdom card expanded with public Blackened Lands canon (Skeleton/Fleshwarp origin); GM Secret expandable revealing Storveldi/Betibizi truth; Magitrain limits noted.
-- **`sumendar.html`** — Order of Steam reframed as Magitech industrial heart with Elden-tech excavation origin and House Eisenhart; Dragon's Reach two-recovery-projects friction; Magitech + Magitrain lines added.
+**Tier 3** — all four touches shipped:
+- `adventurers-guild.html` — full rewrite (branch hierarchy, rank ladder, Bank, Post, Lavisburg, Seraphel, Godshall)
+- `magic.html` — rewrite adding Magitech section, Mortal Ascent Ladder + GM Secret, Domains-Outside-the-Thirteen table
+- `talan.html` — Continental Rail Network full section, Other Continents three-card section
+- `history.html` — Gods' Era three-tier expandables (Old Race + Storveldi); Week of Crimson Rain secret harmonised
+
+**Tier 4 (partial)** — pair shipped:
+- `sortalde.html` — full continent page in `/off-continent/`
+- `emerald-isles.html` — paired Talan-side cloudship landing point with the Bridgelands canon
+- *Remaining*: `bestiary.html` overview (Tier 4 step 10).
+
+### Smaller corrections shipped this session (worth knowing)
+
+- **Sortalde embassies relocated** from Merkavar/Crossroads (inland — wrong) to the **Emerald Isles' Bridgelands** (the kingdom's NE outer-rim islands on the Hafra/Cloud-Sea boundary). Lore + HTML both consistent.
+- **Train Pirates "Sortalde-route specialists" canon retraction** — cloudship route, not rail. Removed from lore and HTML.
+- **Train Pirates + Conductor's Station** added to `factions.html` as a *Bandit Categories & Hazards* section to resolve broken cross-links from talan.html and order-of-steam.html.
+- **Hooks sections removed** from `sortalde.html` and `house-eisenhart.html` — per user preference: **published HTML is lore documentation, not campaign-starter material.** This is a durable rule going forward — see `CLAUDE.md` and `feedback_no_campaign_hooks_in_html.md`. World-flavour expandables (Crossroads tavern rumours, Lost Kingdom Popular Belief) are different and stay.
 
 ---
 
 ## What's next
 
-### Tier 2 — next publishing batch (recommended order)
+### Tier 4 — final structural piece
 
-1. **Crossroads dedicated page** at `talan/domains/lautara/crossroads.html` + **Spider's Silk Inn** content. The Lautara sub-region card already references both; this promotes them properly. **Add sidebar nav entry** in `assets/site-nav.js` under Lautara children.
-2. **Red Empire faction page** at `talan/factions/red-empire.html` — fully written in lore (`factions.md` → Off-Continent Powers), clean new build. Add sidebar nav.
-3. **Lost Kingdom dedicated page** at `talan/domains/lioaru/lost-kingdom.html` with GM Secret for the Storveldi truth. (Lioaru domain page already covers the public-facing summary + GM Secret; the dedicated page is the deep dive.)
-4. **House Eisenhart page** under factions or as a sub-page of Order of Steam (TBD).
+10. **`bestiary.html`** — overview page for 50+ ancestries. Options: per-domain sections, alphabetical, or both. Sortalde ancestries already published on the Sortalde continent page; this would be the Talan-side bestiary surface. Bigger build than most Tier 2/3 work.
 
-### Tier 3 — substantial rewrites
+### Tier 5 — publishable with TBD (user is fine with TBD-stub pages)
 
-5. **Adventurers Guild rewrite** at `talan/factions/adventurers-guild.html` — major expansion to incorporate the rank ladder (Bronze→Starsteel), branch hierarchy, Bank, Post, Grand Assembly, Lord Albrecht Lavisburg, Seraphel Duskbane. Currently has the original short writeup.
-6. **`magic.html` rewrite** — add Mortal Ascent Ladder, Domains Outside the Thirteen, Magitech canon section.
-7. **`talan.html` updates** — Other Continents framing (Sortalde + Red Empire continent), Continental Rail Network note.
-8. **`history.html` updates** — Storveldi Denbora GM Secret on Gods' Era card.
+11. **Legea Empire page** — Divine Faith / Zuzental sub-region. God identity, demigod ruler, theocratic prince all TBD.
+12. **Individual Nine Generals dungeon pages** — placements TBD for 7 of 8 (only Vermin Queen's Hollow is sited).
 
-### Tier 4 — big new builds
+### Tier 6 — incremental, story-driven (the long backlog)
 
-9. **Sortalde continent** — new page at `talan/sortalde.html` or `talan/sortalde/sortalde.html`. Covers 7 petals + 6 ancestries + Concord + theology + Hafra crossing. Decide whether to use Style B with Sortalde-specific accent colour. **Add sidebar nav entry as a peer to Talan, or as a separate top section.**
-10. **`bestiary.html`** — overview page for 50+ ancestries. Could be per-domain sections, alphabetical, or both.
-
-### Tier 5 — publishable with TBD (per user)
-
-11. **Legea Empire page** — Divine Faith. God name + demigod ruler + theocratic prince all TBD. User said they're fine with TBD pages.
-12. Individual Nine Generals dungeon pages — placements TBD for 7 of 8.
-
-### Tier 6 — incremental, story-driven
-
-- Per-god GM Secrets (12 of 13 placeholder on `grand-gods.html`; Cronus's is the only one fully written).
-- Three-tier UI on remaining 6 history eras.
-- Other god city-state pages (Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City).
-- Millhaven settlement (Brauogi).
-- Order of Steam, Thousand Kingdom, Dragon's Reach — promoted sub-region/settlement pages.
+- **Per-god GM Secrets** — 12 of 13 placeholder text on `grand-gods.html` (Cronus is done).
+- **Three-tier UI on remaining eras** — Lost, Golden, Dark, Adventurer (Creation is intentionally open). Pattern matches Gods' Era / Crimson Rain / Elden Era.
+- **Other god city-state pages** — Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City. Pattern: folder under domain (Myrria pattern).
+- **Settlements**: Millhaven (Brauogi).
+- **Sub-region promotion (remaining major)**: Thousand Kingdom, Dragon's Reach, River Duchies.
+- **Per-faction promotions**:
+  - **Bandit Categories** — likely deserves its own page once more categories land (highway raiders, Midarra river pirates / Twin Cities, ruin-strippers, slavers). Tracked in `open-threads.md` → *Site structure → Factions page reorganisation*.
+  - **Conductor's Station** — same. Phenomenon more than bandit category; could move to its own page or a future `/hazards/` folder.
+- **Emerald Isles capital name** — flagged TBD in `open-threads.md`.
 
 ---
 
 ## How we've been working — patterns to maintain
 
-These are session-level rhythms, not formal rules. They've been working — keep them up unless the user redirects.
+These are session-level rhythms. They've been working — keep them up unless redirected.
 
-1. **Check in between phases.** A phase is a coherent chunk of work (one HTML page, one big lore restructure, one ancestry pass). After each phase: short summary, list of what landed, pointer to next, then wait for user. **Don't run two phases together without an explicit "yes continue."** Memory file: `feedback_check_in_between_phases.md`.
-2. **Strong defaults + crisp redirects.** The user gives directional answers and expects strong picks rather than open-ended questions. When proposing options, offer 2–4 with a clear pick and reasoning. They redirect if they disagree. Don't over-batch questions — 3–4 max in an AskUserQuestion call; if more are needed, do them in two rounds.
-3. **Lore-first protocol.** All worldbuilding lands in `lore/` first; HTML only with explicit publish signal. The lore migration is closed, so this mostly affects new canon coined during HTML work (etymologies, named NPCs) — capture to glossary.md / relevant lore file BEFORE the HTML uses it.
-4. **GM Secret discipline.** Recent canon includes major GM-truth pieces. Public-facing HTML body must NOT leak them. Use the `.secret-era-toggle` / `.secret-era-content` pattern (red ⚿ pill); content reveals on click. Toggle JS goes at the bottom of the page if not already present. The Storveldi-Denbora-killed-Tani, Cronus-was-mortal, Elden=Corrupted-God, Betibizi-Origin, and Integration-Procedure facts are all GM-only.
-5. **Sidebar nav.** Every new page needs an entry in `/assets/site-nav.js` `DOMAINS` array (sub-regions/settlements under domains) or `NAV_HTML` arrays (top-level/factions). Easy to forget. Add immediately when a new page lands.
-6. **Migration doc + site-inventory updates.** When a publishing pass lands, strike through completed rows in `docs/worldanvil-migration.md` HTML tracker and add to `docs/site-inventory.md`. Both are how future sessions know what's done.
+1. **Check in between phases.** A phase ≈ one HTML page or one coherent lore restructure. After each: short summary + what landed + next + wait. **Don't run two phases together without an explicit "yes continue."** Memory: `feedback_check_in_between_phases.md`.
+2. **Strong defaults + crisp redirects.** Offer 2–4 options with a clear recommendation and reasoning. User redirects if they disagree. 3–4 questions max per AskUserQuestion call.
+3. **Lore-first protocol.** New canon coined during HTML work (etymologies, named NPCs, kingdom expansions) goes to `lore/glossary.md` / `lore/geography.md` / etc. BEFORE the HTML uses it. Drafting protocol is still in effect for new canon even during the publishing pass.
+4. **GM Secret discipline.** Major GM-truth facts (Cronus-was-mortal, Elden=Corrupted-God, Storveldi-killed-Tani, Betibizi-origin, Integration-Procedure) stay behind red ⚿ `secret-era-toggle` expandables. Public-facing body must not leak them.
+5. **Lore documents, not campaign starters.** Published HTML is lore reference. **No dedicated "Hooks" sections** with adventure prompts in the published pages — that material belongs in GM-side notes elsewhere. World-flavour expandables (folkloric Popular Belief, in-world rumours) are different and welcome. Memory: `feedback_no_campaign_hooks_in_html.md`. Project convention: `CLAUDE.md`.
+6. **Sidebar nav.** Every new page needs an entry in `/assets/site-nav.js` (`DOMAINS` for children under domains; `NAV_HTML` arrays for top-level sections). Easy to forget — add immediately when a page lands.
+7. **Tracker updates.** When a page lands: strike through completed rows in `worldanvil-migration.md` HTML tracker; add to `site-inventory.md`. Both are how future sessions know what's done.
 
 ---
 
 ## Open canon questions ranked by publishing impact
 
-Forward-worldbuilding gaps that would show up in HTML if their target page publishes today. User said they're OK with TBD-stub pages, so these are NOT blockers — but worth knowing per page:
+Forward-worldbuilding gaps. User said TBD-stubs are fine, so these are not blockers — but worth knowing per page:
 
-- **Sortalde Layer-3 pantheon** — would render as "(unnamed; future thread)" on a Sortalde page.
-- **Divine Faith pantheon** — god/demigod/prince names all TBD; would render as "TBD" on a Legea Empire page.
-- **8 Nine Generals dungeons** — placement TBD for 7. The-binding.html already handles this (only Vermin Queen has a Located tag).
-- **Sub-region etymologies** — ~10 sub-regions with "etymology TBD" tags. Visible on domain pages and the glossary.
+- **Emerald Isles capital name** — currently renders as *"the kingdom's capital (name TBD)"* on `emerald-isles.html`. Small naming call.
+- **Sortalde Layer-3 pantheon** — flagged on `sortalde.html` as "unnamed; future thread." Doesn't break anything; a naming pass would close out the Eastern continent's religious texture.
+- **Divine Faith pantheon** — god/demigod/prince names all TBD; would render as "TBD" on any future Legea Empire page.
+- **8 Nine Generals dungeons** — placement TBD for 7. `the-binding.html` already handles this (only Vermin Queen has a Located tag).
+- **Sub-region etymologies** — ~10 sub-regions with "etymology TBD" tags. Visible on domain pages and glossary.
 - **Sin-Devil names + 4 missing domain mappings** (Envy/Greed/Lust/Sloth) — visible as "(unnamed) — TBD" in any future devils/demons page.
-- **Sun god** — short "open thread" subsection in world-notes; would render as TBD on a Named Non-Bound Gods page.
+- **Sun god** — short open thread; would render as TBD on a Named Non-Bound Gods page.
 
 Full list with status: [`docs/open-threads.md`](open-threads.md).
 
 ---
 
+## Important recent canon corrections (don't undo)
+
+The user caught and corrected several things mid-session. **Do not reintroduce these:**
+
+- **Sortalde + rail conflation is wrong.** Sortalde freight arrives via cloudship and lands on the Bridgelands. No Magitrain line or Sortalde-route train freight on any page. Train Pirates have no "Sortalde-route specialist" category.
+- **Sortalde embassies are NOT in Merkavar or Crossroads** (those are inland). They are on the **Emerald Isles' Bridgelands** — the NE outer-rim islands of the Zuzental island kingdom, partially in Hafra/partially in Cloud Sea, connected by spanning Magitech bridges.
+- **No "Hooks" sections** on lore-documentation pages. Folkloric expandables (Popular Belief / tavern rumour / "what people say") are fine; campaign-starter prompts are not.
+
+---
+
 ## Memory state
 
-The persistent memory directory at `~/.claude/projects/C--Users-Thoma-Documents-Tyrnarra/memory/` has one file:
+The persistent memory directory at `~/.claude/projects/C--Users-Thomas-Documents-Tyrnarra/memory/` has:
 
-- `feedback_check_in_between_phases.md` — captures the between-phases-check rhythm and the strong-defaults/crisp-redirects preference.
+- `feedback_check_in_between_phases.md` — the between-phases-check rhythm and strong-defaults preference.
+- `feedback_no_campaign_hooks_in_html.md` — published HTML is lore documentation, not campaign starters; no dedicated Hooks sections.
 
-`MEMORY.md` indexes it.
+`MEMORY.md` indexes them.
 
 ---
 
 ## Final note
 
-The user prefers **terse, scannable summaries** over verbose explanations. Use sentence fragments where they read clean; complete sentences where they don't. Match the tone of past responses in this repo's docs files. Markdown links so files are clickable.
+The user prefers **terse, scannable summaries** over verbose explanations. Match the tone of past responses in this repo's docs files. Markdown links so files are clickable.
 
 If you're uncertain about scope, ask — but pick a default first. Don't ratify exhaustively.

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestiary &amp; Ancestries — Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #c8900a; }
+
+  /* Reference tables — used for distribution, heritage, demon, devil lists */
+  .ref-table { width: 100%; max-width: 1000px; margin: 14px auto 22px; border-collapse: collapse; font-size: 0.92rem; }
+  .ref-table th, .ref-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid rgba(200,144,10,0.14); vertical-align: top; }
+  .ref-table th { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.22em; color: var(--gold-dim); text-transform: uppercase; padding-top: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(200,144,10,0.3); }
+  .ref-table td a { color: var(--gold); }
+  .ref-table td b { color: var(--gold-bright); font-weight: 600; }
+  .ref-table .uncommon { color: var(--parch-dim); font-style: italic; font-size: 0.86rem; }
+  .ref-table .tbd { color: var(--text-dim); font-style: italic; }
+  .ref-table tr:last-child td { border-bottom: none; }
+  @media (max-width: 600px) {
+    .ref-table { font-size: 0.85rem; }
+    .ref-table th, .ref-table td { padding: 6px 8px; }
+  }
+
+  /* Compact list for the "no single home" set */
+  .scatter-list { max-width: 900px; margin: 8px auto 0; padding: 0; list-style: none; }
+  .scatter-list li { padding: 8px 0; border-bottom: 1px dotted rgba(200,144,10,0.14); font-size: 0.93rem; line-height: 1.55; }
+  .scatter-list li:last-child { border-bottom: none; }
+  .scatter-list b { color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; }
+
+  /* Sortalde pointer */
+  .pointer-card { max-width: 920px; margin: 16px auto 0; padding: 18px 22px; background: rgba(20,16,8,0.45); border: 1px solid rgba(200,144,10,0.2); border-left: 3px solid #6a8aa8; border-radius: 3px; }
+  .pointer-title { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 6px; }
+  .pointer-cta { display: inline-block; margin-top: 10px; font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,144,10,0.4); padding: 6px 12px; border-radius: 2px; }
+  .pointer-cta:hover { background: rgba(200,144,10,0.1); }
+
+  /* Domain detail cards — denser than subregion cards, no link transform */
+  .ancestry-card { background: rgba(20,16,8,0.42); border: 1px solid rgba(200,144,10,0.18); border-radius: 3px; padding: 14px 16px 12px; position: relative; overflow: hidden; }
+  .ancestry-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--domain-accent); opacity: 0.75; }
+  .ancestry-card-title { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 4px; }
+  .ancestry-card-title a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(200,144,10,0.3); }
+  .ancestry-card-title a:hover { color: #fff; border-color: rgba(200,144,10,0.7); }
+  .ancestry-card-god { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.78rem; color: var(--parch-dim); margin-bottom: 8px; }
+  .ancestry-card-body { font-size: 0.9rem; line-height: 1.55; color: var(--text); }
+  .ancestry-card-body p { margin: 4px 0; }
+  .ancestry-card-body .label { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.18em; color: var(--gold-dim); text-transform: uppercase; margin-right: 6px; }
+
+  /* The xref strip at the bottom */
+  .xref-strip { max-width: 900px; margin: 16px auto 0; padding: 14px 18px; background: rgba(0,0,0,0.2); border: 1px solid rgba(200,144,10,0.12); border-radius: 3px; font-size: 0.88rem; line-height: 1.7; color: var(--parch-dim); }
+  .xref-strip a { color: var(--gold); }
+  .xref-strip b { color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body data-page="bestiary">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><span>Bestiary &amp; Ancestries</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Bestiary &amp; Ancestries</div>
+    <div class="page-subtitle">The Playable Peoples of Talan &amp; the Beings Adjacent to Them</div>
+    <div class="page-flavor">A reference for who lives where, which heritages reach which veins, and what the demons and devils of Talan actually <i>are</i>. Mechanical rules live in Pathfinder 2e Remaster; this page is the where-and-why.</div>
+  </div>
+
+  <dl class="facts">
+    <dt>Standard ancestries</dt>
+    <dd>44 PF2e Remaster ancestries placed across the thirteen domains; six more native to Sortalde.</dd>
+    <dt>Tyrnarra-canon</dt>
+    <dd>Four additions outside the standard roster: <b>Dragons</b>, <b>Dragonkin</b>, <b>Slimes</b>, <b>Rabbitfolk</b>.</dd>
+    <dt>Sortalde petals</dt>
+    <dd>Six ancestries, one per outer/inner petal of the eastern continent. All rare on Talan. <a href="/off-continent/sortalde.html">See Sortalde →</a></dd>
+    <dt>Heritages</dt>
+    <dd>Six divine-blood lines, five elemental-plane sparks, two Life-Layer planar lines (Wood / Metal), two mortal-mix lines, four other lineages.</dd>
+    <dt>Demons &amp; devils</dt>
+    <dd>Virtue demons follow an Aristotelian excess/deficiency pattern; sin devils are the seven sins given form.</dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       DISTRIBUTION TABLE
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Ancestry Distribution by Domain</h2>
+  <div class="prose">
+    <p>Each god's domain has one or more <b>dominant</b> ancestries — peoples for whom that domain is cultural and demographic heartland. Other ancestries appear everywhere but in smaller numbers.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead>
+      <tr><th>Domain · God</th><th>Dominant</th><th>Notable Uncommon</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/talan/domains/egulon/egulon.html"><b>Egulon</b> · Light · Iro</a></td><td>Nagaji · Shoony</td><td class="uncommon">—</td></tr>
+      <tr><td><a href="/talan/domains/myrkono/myrkono.html"><b>Myrkono</b> · Darkness · Araphel</a></td><td>Fetchling · Elf (Drow)</td><td class="uncommon">Centaur (Shadow Steppes)</td></tr>
+      <tr><td><a href="/talan/domains/sumendar/sumendar.html"><b>Sumendar</b> · Fire · Komo</a></td><td>Dragons (Dragon's Reach) · Dwarf · Kobold</td><td class="uncommon">Automaton</td></tr>
+      <tr><td><a href="/talan/domains/floteyn/floteyn.html"><b>Floteyn</b> · Water · Shuun</a></td><td>Strix · Tripkee · Athamaru · Merfolk</td><td class="uncommon">Leshy</td></tr>
+      <tr><td><a href="/talan/domains/brauogi/brauogi.html"><b>Brauogi</b> · Earth · Sarrum</a></td><td>Hobgoblin · Goblin · Minotaur</td><td class="uncommon">Leshy</td></tr>
+      <tr><td><a href="/talan/domains/vindul/vindul.html"><b>Vindul</b> · Wind · Fisaya</a></td><td>Kashrishi · Tengu</td><td class="uncommon">Jotunborn (Baerfrost) · Dragonkin (Air Temple)</td></tr>
+      <tr><td><a href="/talan/domains/lioaru/lioaru.html"><b>Lioaru</b> · Time · Tani</a></td><td>Ghoran · Azarketi</td><td class="uncommon">—</td></tr>
+      <tr><td><a href="/talan/domains/zuzental/zuzental.html"><b>Zuzental</b> · Law · Forseti</a></td><td>Elf · Human</td><td class="uncommon">—</td></tr>
+      <tr><td><a href="/talan/domains/ehizahar/ehizahar.html"><b>Ehizahar</b> · Hunt · Hinka</a></td><td>Orc · Kholo · Lizardfolk · Centaur (Villtur)</td><td class="uncommon">Goloma</td></tr>
+      <tr><td><a href="/talan/domains/lautara/lautara.html"><b>Lautara</b> · Commerce · Jianna</a></td><td>Halfling · Vishkanya</td><td class="uncommon">Kitsune (concentrated in <a href="/talan/domains/lautara/emarrea.html">Emarrea</a>)</td></tr>
+      <tr><td><a href="/talan/domains/ezkudon/ezkudon.html"><b>Ezkudon</b> · Knowledge · Enki</a></td><td>Shisk · Catfolk</td><td class="uncommon">—</td></tr>
+      <tr><td><a href="/talan/domains/nashavel/nashavel.html"><b>Nashavel</b> · Chaos · Vesuna</a></td><td>Gnome · Vanara</td><td class="uncommon">Conrasu · Anadi</td></tr>
+      <tr><td><a href="/talan/domains/askamira/askamira.html"><b>Askamira</b> · Freedom · Cronus</a></td><td><i>All ancestries equally</i></td><td class="uncommon">—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Uncommon everywhere</div>
+    Rabbitfolk · Ratfolk · Dragonet (small concentrations in the upper Darklands and Basogur Jungle) · Surki (slight concentration in the upper Darklands).
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Rare everywhere</div>
+    Kitsune (concentrated in Emarrea) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld) · Fleshwarp (common in the <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a>) · Skeleton (common in the Blackened Lands) · Dragonkin (one order in Fisaya's Air Temple) · Android · Azarketi · Awakened Animal (no domain concentration).
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PER-DOMAIN CARDS
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Domain by Domain</h2>
+  <div class="prose">
+    <p>Where each domain's dominant ancestries live, what character they share with their god, and the cultural inflection that makes each people <i>of</i> that land.</p>
+  </div>
+
+  <div class="subregion-grid">
+
+    <div class="ancestry-card" style="--domain-accent: #f0c040;">
+      <div class="ancestry-card-title"><a href="/talan/domains/egulon/egulon.html">Egulon · Light</a></div>
+      <div class="ancestry-card-god">Iro · sun-and-radiance</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Nagaji</span> Iro's most fervent worshippers — the public face of his church, almost zealous in their certainty.</p>
+        <p><span class="label">Shoony</span> All dog-coded ancestries fold here; loyal and devoted, aligned with the Nagaji-led religious life.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #6a5a8a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/myrkono/myrkono.html">Myrkono · Darkness</a></div>
+      <div class="ancestry-card-god">Araphel · new faces, second chances</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Fetchling</span> Remnants of a civilisation that sought refuge in the region of Darkness and found it. Most live in <a href="/talan/domains/myrkono/myrria/myrria.html">Myrria</a>.</p>
+        <p><span class="label">Drow</span> Surface-dwelling children of shadow — not the underdark stereotype. Talan's underdark is the Darklands, and they are <i>not</i> Araphel's.</p>
+        <p><span class="label">Centaur (Shadow Steppes)</span> Smaller herds than their Villtur cousins, more nocturnal, more theologically inflected.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #c84020;">
+      <div class="ancestry-card-title"><a href="/talan/domains/sumendar/sumendar.html">Sumendar · Fire</a></div>
+      <div class="ancestry-card-god">Komo · forge, flame, invention</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Dragons</span> An <b>alien race</b>; their mothership crash-landed in the Gods' Era. Capital at Dragon's Reach. Modern goal: <i>purity</i> — recovering their pre-corruption nature.</p>
+        <p><span class="label">Dwarf</span> Two cultures — <i>New Age</i> in the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>, and <i>Sentinel</i> deep in the upper Darklands.</p>
+        <p><span class="label">Kobold</span> Genius chaotic inventors who don't care about safety. Komo himself is depicted as a kobold.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #4a8ab0;">
+      <div class="ancestry-card-title"><a href="/talan/domains/floteyn/floteyn.html">Floteyn · Water</a></div>
+      <div class="ancestry-card-god">Shuun · sea, spray, drifting isles</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Strix</span> Flight suits the islet-archipelago life. Suspect almost everywhere else.</p>
+        <p><span class="label">Tripkee</span> The most settled of the islet four — they build where the others pass through, swim past, or pass underneath.</p>
+        <p><span class="label">Athamaru</span> Seal-folk of the Floating Isles and the Hafra coast; amphibious by habit.</p>
+        <p><span class="label">Merfolk</span> Coastal and Hafra waters; a small freshwater pod lives in Midarra with informal Twin Cities alliance.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #7a9a3a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/brauogi/brauogi.html">Brauogi · Earth</a></div>
+      <div class="ancestry-card-god">Sarrum · stone, soil, patience</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Hobgoblin &amp; Goblin</span> Share the Goblin &amp; Hobgoblin Kingdom — the major political sub-region of Brauogi.</p>
+        <p><span class="label">Minotaur</span> Sarrum is depicted as a Minotaur. Immovable, patient, slow to forgive; excellent stonecutters and contract negotiators.</p>
+        <p><i>Brauogi's three-way is cooperative — the Earth ancestries trade rather than feud.</i></p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #88aacf;">
+      <div class="ancestry-card-title"><a href="/talan/domains/vindul/vindul.html">Vindul · Wind</a></div>
+      <div class="ancestry-card-god">Fisaya · sky, storm, monastery</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Kashrishi</span> Secular by inclination — theology private, civic life public. Inverse of Egulon's zeal.</p>
+        <p><span class="label">Tengu</span> Often become Monks; Vindul's mountain monasticism produces a steady stream of wanderers.</p>
+        <p><span class="label">Jotunborn (Baerfrost)</span> Frost-adapted, cold-hardy, often nomadic; the largest stable population on Talan.</p>
+        <p><span class="label">Dragonkin (Air Temple)</span> A single order of wind-priests and storm-flyers — <b>not</b> related to Dragons despite the name.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #b07a3a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/lioaru/lioaru.html">Lioaru · Time</a></div>
+      <div class="ancestry-card-god">Tani · slow currents, vigilance</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Ghoran</span> "Guardians of Time" — explicitly aligned with Tani's domain; many warden the temporally unstable sites along the <a href="/talan/domains/lioaru/lost-kingdom.html">Lost Kingdom</a> border.</p>
+        <p><span class="label">Azarketi</span> Cluster on Lioaru's western coast and the islands offshore of the Lost Kingdom. Inherited folklore still claims <i>Elden blood</i> — a long-distorted memory.</p>
+        <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Azarketi Origin</button>
+        <div class="secret-era-content">
+          <div class="secret-era-label">GM Truth</div>
+          Azarketi descend from the experimented-upon population of the <b>Storveldi Denbora</b> — the mortal civilisation whose ascended ruling class killed Tani and triggered the Week of Crimson Rain. Their inherited "Elden blood" claim is the original Storveldi lie, transmitted forward across millennia. Any Azarketi character who follows the bloodline far enough back hits the integration procedure that elevated mortals past Demi-God status. See the GM Secrets on <a href="/talan/domains/lioaru/lost-kingdom.html">Lost Kingdom</a>, <a href="/talan/history.html">history</a>, and <a href="/magic.html">Magic &amp; Faith</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #8aa090;">
+      <div class="ancestry-card-title"><a href="/talan/domains/zuzental/zuzental.html">Zuzental · Law</a></div>
+      <div class="ancestry-card-god">Forseti · contract, custody, order</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Elf</span> Politically motivated and <i>long-planning</i> — moves on generational timescales. One of the two ruling bloodlines of the Thousand Kingdom.</p>
+        <p><span class="label">Human</span> Politically motivated and <i>short-planning</i> — moves fast, takes risks, burns through cycles. The other ruling bloodline.</p>
+        <p><i>The interplay between elven slow and human fast is what gives the Thousand Kingdom its volatility — and its longevity.</i></p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #8a4a2a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/ehizahar/ehizahar.html">Ehizahar · Hunt</a></div>
+      <div class="ancestry-card-god">Hinka · pursuit, blood-token, pack</div>
+      <div class="ancestry-card-body">
+        <p>The four-way of the <b>Lands of Villtur</b> — Orc, Kholo, Lizardfolk, Centaur — intermix and feud along recognisable patterns.</p>
+        <p><span class="label">Orc</span> Loudest, first to charge, most consistently in feud. Hinka is depicted as a red-headed orc.</p>
+        <p><span class="label">Kholo</span> Most explicitly matriarchal of the four; bone-token-marked.</p>
+        <p><span class="label">Lizardfolk</span> Most strategic — slower to start, more patient in pursuit, more deliberate at the kill.</p>
+        <p><span class="label">Centaur (Villtur)</span> The largest centaur population on Talan; tribal and hunt-aligned.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #d4a04a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/lautara/lautara.html">Lautara · Commerce</a></div>
+      <div class="ancestry-card-god">Jianna · road, market, contract-of-trust</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Halfling</span> Wanderlust-driven — the call of <i>the next market</i> is doctrinally central. Carry more halflings than any other domain.</p>
+        <p><span class="label">Vishkanya</span> Community-keeping and creative-pursuing. Over-represented in artisan-merchant guilds. Jianna herself is depicted as a vishkanya.</p>
+        <p><span class="label">Kitsune (Emarrea)</span> Concentrated in <a href="/talan/domains/lautara/emarrea.html">Emarrea</a>, the kitsune kingdom — Heartcourt government, capital at Biozuri.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #5a7a8a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/ezkudon/ezkudon.html">Ezkudon · Knowledge</a></div>
+      <div class="ancestry-card-god">Enki · archive, negotiation, secret-keeping</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Catfolk</span> Curious; over-represented in the scholar-caste and archive-keeper professions. Enki is depicted as a black-haired catfolk.</p>
+        <p><span class="label">Shisk</span> Hunters of esoteric knowledge — <i>shisk-curiosity</i> is a common warning given to junior novices.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #2a6a4a;">
+      <div class="ancestry-card-title"><a href="/talan/domains/nashavel/nashavel.html">Nashavel · Chaos</a></div>
+      <div class="ancestry-card-god">Vesuna · improvisation, free will, the Feyworld at the edges</div>
+      <div class="ancestry-card-body">
+        <p><span class="label">Gnome</span> Feyworld-native; long migrated into the Material Plane during the Gods' Era and after.</p>
+        <p><span class="label">Vanara</span> Common in the <b>Basogur Jungle</b> straddling Nashavel and Ehizahar — one of the few cultures comfortable across two domains.</p>
+        <p><span class="label">Conrasu · Anadi</span> Uncommon here, rare elsewhere. Matron Charna of the Spider's Silk Inn is Talan's most famous Anadi.</p>
+      </div>
+    </div>
+
+    <div class="ancestry-card" style="--domain-accent: #e8d8a8;">
+      <div class="ancestry-card-title"><a href="/talan/domains/askamira/askamira.html">Askamira · Freedom</a></div>
+      <div class="ancestry-card-god">Cronus · refusal, refuge, the open road</div>
+      <div class="ancestry-card-body">
+        <p><i>All ancestries equally.</i> Askamira holds no demographic majority by design — Cronus's domain is the one place on Talan where origin counts for nothing and the choice you arrive with counts for everything.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       NO SINGLE HOME
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Without a Single Home</h2>
+  <div class="prose">
+    <p>Ancestries with no domain heartland — either scattered, refugee, made, or simply not numerous enough to dominate anywhere.</p>
+  </div>
+
+  <ul class="scatter-list">
+    <li><b>Rabbitfolk</b> Widely scattered, frequently nomadic, no continental-scale institutions of their own.</li>
+    <li><b>Ratfolk</b> Originally from the Darklands; now thrive as the most adaptable urban underclass in every city. Often serve as guides for Adventurers' Guild parties heading underground.</li>
+    <li><b>Dragonet</b> Indigenous wyrmkin — children of <b>Zaharsuge</b>, predating the alien Dragons by ages. Lean toward indigenous wyrm-cultism; many reject Dragon's Reach's authority claim on theological grounds.</li>
+    <li><b>Surki</b> Insectoid sapients of the upper Darklands; share the territory loosely with the Sentinel Dwarves. Antagonistic to the <a href="/talan/the-binding.html">Vermin Queen</a> by design.</li>
+    <li><b>Sprite</b> Native to the Feyworld; rare on the Material Plane. They go where they go.</li>
+    <li><b>Slimes</b> Uncommon in the Darklands' ambient corruption pressure; surface Slimes almost always worked their way up.</li>
+    <li><b>Awakened Animal</b> No native population — each is its own story, typically traced to a druid awakening, ambient Komo-flame-touch, or Feyworld leakage.</li>
+    <li><b>Poppet</b> Constructed beings; rare; no domain-specific concentration.</li>
+    <li><b>Android</b> Synthetic people <b>created by the Elden</b>; declining for millennia, very few remain. The Golden Empire's attempt to recreate them produced Automatons instead.</li>
+    <li><b>Automaton</b> The Golden Empire's would-be Androids — capable, formidable, not the same thing. Now concentrated in Sumendar where Dwarves and Kobolds slowly recover the maintenance technology.</li>
+    <li><b>Fleshwarp</b> Native to the <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> (the canonical lineage), or fabricated by the <a href="/off-continent/red-empire.html">Red Empire's Menagerie</a>. Same end-product, completely different origin.</li>
+    <li><b>Skeleton</b> Native to the Blackened Lands — the wound in the land pulls the dead back into motion. Spiritually tied to <b>Betibizi</b>, the Minor God of Undeath.</li>
+    <li><b>Azarketi</b> Dominant in Lioaru's western coast; aquatic adaptations cluster their communities along Hafra-side trade routes. Inherited folklore claims <i>Elden blood</i>.</li>
+  </ul>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SORTALDE POINTER
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Sortalde — The Six Petals</h2>
+  <div class="prose">
+    <p>Six ancestries native to <b>Sortalde</b> (<i>Tao Hua Yuan</i> internally), the petal-archipelago continent east of Talan across Hafra. Each has one ancestral homeland petal; the seventh — Heting, the Concord-Court — is the central seat where all six meet through their ambassadors.</p>
+    <p><b>On Talan, all six are rare.</b> The crossing is hard, and most arrivals come through the standing Sortalde embassies on the <a href="/talan/domains/zuzental/emerald-isles.html">Emerald Isles</a>' Bridgelands — the cloudship landing point for Sortalde traffic. A Sortalde-ancestry character on Talan is a <i>story</i>, not a demographic.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead>
+      <tr><th>Ancestry</th><th>Sortalde homeland</th><th>Talan presence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>Yaoguai</b></td><td>Wandao (Myriad Island) — outer petal</td><td>Most-likely-seen; closest petal to Talan. Yaoguai merchants occasionally settle in Lautara.</td></tr>
+      <tr><td><b>Tanuki</b></td><td>Xidao (Theatre Island) — outer petal</td><td>Itinerant performer-merchants; the largest standing population on Talan is around the embassies.</td></tr>
+      <tr><td><b>Sarangay</b></td><td>Niudao (Ox Island) — outer petal</td><td>Usually attached to embassy security details. Their oaths survive reincarnation cycles.</td></tr>
+      <tr><td><b>Wayang</b></td><td>Yingdao (Shadow Island) — inner petal</td><td>Vanishingly rare; those who cross are typically working — embedded spies or freelance information brokers.</td></tr>
+      <tr><td><b>Yaksha</b></td><td>Lingdao (Spirit Island) — inner petal</td><td>Functionally never. Bound to specific places; a Talan-side Yaksha is doctrinally an exile whose bond was broken.</td></tr>
+      <tr><td><b>Samsaran</b></td><td>Lundao (Wheel Island) — inner petal</td><td>Vanishingly rare. A Talan-side Samsaran is almost always a retired chancellor or a heretic.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pointer-card">
+    <div class="pointer-title">Read the full continent</div>
+    <div>Sortalde has its own continent page covering the seven petals, the Concord of Courts, the dynasty-spirit pantheon, and the cloudship-only trade route to the Emerald Isles. The bestiary entries above are the at-a-glance; the continent page is where the ancestries breathe.</div>
+    <a class="pointer-cta" href="/off-continent/sortalde.html">Sortalde · Tao Hua Yuan →</a>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VERSATILE HERITAGES
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Versatile Heritages</h2>
+  <div class="prose">
+    <p>The PF2e Remaster reshuffled the versatile heritage roster — Aasimar and Tiefling folded into <b>Nephilim</b>; Wood and Metal added as Ardande and Talos; new ancestry-mixes (Aiuvarin, Dromaar). The placement below is the post-remaster canon for Talan: most heritages are explained in-world as a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Divine-Blood — God in the Veins</h3>
+  <table class="ref-table">
+    <thead><tr><th>Heritage</th><th>Source</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>Aphorite</b></td><td>Forseti · Law</td><td>Axis-aligned; counterpart to Ganzi. Common among the Thousand Kingdom's elder-bureaucracy lineages.</td></tr>
+      <tr><td><b>Beastkin</b></td><td>Hinka · Hunt</td><td>Partial-animal features; common in Ehizahar tribes. Read as Hinka's blessing or burden depending on the tribe.</td></tr>
+      <tr><td><b>Changeling</b></td><td>Araphel · Darkness</td><td>Tied to Araphel's <i>new faces</i> aspect. Common in Myrria.</td></tr>
+      <tr><td><b>Duskwalker</b></td><td>Tani · Time</td><td><b>Created, not born</b> — manifests as a mortal child in a location close to death. The <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> produce more Duskwalkers than anywhere else on Talan; doctrinally close to Tani's clergy.</td></tr>
+      <tr><td><b>Ganzi</b></td><td>Vesuna · Chaos</td><td>Chaos-aligned; counterpart to Aphorite. Common in Nashavel, especially the Kaosadaemi Principality.</td></tr>
+      <tr><td><b>Nephilim</b></td><td>Any divine or fiendish source</td><td>The universal divine-blood heritage — see the note below.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Nephilim — the universal heritage</div>
+    Remaster Nephilim covers both celestial and fiendish features. On Talan that broadens further: <b>celestial features</b> can manifest in Nephilim descended from <i>any</i> god — most commonly Iro (Light), but any of the bound thirteen, and sometimes banned/expelled gods too. <b>Fiendish features</b> manifest in Nephilim descended from any virtue demon or sin devil (see the demon and devil tables below). Two Nephilim from different parent lineages may share nothing beyond the <i>divinely-touched</i> flag — one glows faintly, another smells of brimstone, another casts a shadow with three more limbs than the body has. Identifying the parent line is a skill — and a service Enki's scholars sometimes sell.
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Elemental Plane — Layer 1 (Prelife) Sparks</h3>
+  <table class="ref-table">
+    <thead><tr><th>Heritage</th><th>Element</th><th>Bound-god affinity</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ifrit</b></td><td>Primordial Flame</td><td>Komo · Fire</td></tr>
+      <tr><td><b>Oread</b></td><td>Primordial Earth</td><td>Sarrum · Earth</td></tr>
+      <tr><td><b>Sylph</b></td><td>Primordial Air</td><td>Fisaya · Wind</td></tr>
+      <tr><td><b>Undine</b></td><td>Primordial Water</td><td>Shuun · Water</td></tr>
+      <tr><td><b>Suli</b></td><td>Mixed elemental (general geniekin)</td><td>None specific</td></tr>
+    </tbody>
+  </table>
+  <div class="prose">
+    <p>These heritages carry the spark of the <a href="/magic.html">Elemental Plane</a> itself. The Primordial Six who created Prelife include the four bound elemental gods — so each elemental-heritage individual has a doctrinal affinity with their corresponding god, but the lineage is properly <i>elemental-plane</i>, not divine blood. <b>Suli</b> is the exception: generic geniekin without a single-element specialisation.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Life-Layer Planar — Wood &amp; Metal</h3>
+  <table class="ref-table">
+    <thead><tr><th>Heritage</th><th>Element</th><th>Planar origin</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ardande</b></td><td>Wood</td><td><b>Feyworld</b> — the plane of Chaos (vibrant, shifting, unpredictable)</td></tr>
+      <tr><td><b>Talos</b></td><td>Metal</td><td><b>Shadowplane</b> — the plane of Order (constant, unchanging, eternal in structure)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">A common confusion</div>
+    <b>Neither plane belongs to a bound god.</b> The thirteen all reside on the Material Plane; the Feyworld and Shadowplane are sibling planes that no god owns. <b>Ardande</b> are not Vesuna's by blood — Vesuna is god of Chaos but her domain is Nashavel on the Material, not the Feyworld. <b>Talos</b> are not Araphel-aligned despite the verbal overlap — the Shadowplane is <i>order</i>, not darkness, and Forseti's domain is Zuzental, not the Shadowplane. Both lineages live without a god-claimant.
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Mortal-Ancestry Mixes</h3>
+  <table class="ref-table">
+    <thead><tr><th>Heritage</th><th>Mix</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>Aiuvarin</b></td><td>Half-Elf · any other ancestry</td><td>Most common where elves dominate — Zuzental, Myrkono Drow communities. The half-and-half identity is its own social position.</td></tr>
+      <tr><td><b>Dromaar</b></td><td>Half-Orc · any other ancestry</td><td>Most common at the borders of Ehizahar where orcish lands meet Brauogi, Lautara, Nashavel.</td></tr>
+    </tbody>
+  </table>
+  <div class="prose">
+    <p>These are genetic, not metaphysical — no divine, planar, or otherworldly lineage. Their place is shaped by the mortal politics of the two ancestries involved.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Other Lineages</h3>
+  <table class="ref-table">
+    <thead><tr><th>Heritage</th><th>Source</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>Dhampir</b></td><td>Half-Vampire</td><td>Undead-touched, not god-touched. Vampires are an independent lineage on Talan; Dhampir descend directly. Mistrusted across most of the continent; sometimes find easier acceptance in Myrkono, where Araphel's doctrine extends limited hospitality — cultural, not doctrinal.</td></tr>
+      <tr><td><b>Dragonblood</b></td><td>Alien Dragons</td><td>Descendants of the alien Dragons (see Sumendar above). Concentrates around Dragon's Reach. Carries some of the dragon-doctrinal hunger for <i>purity / their roots</i>.</td></tr>
+      <tr><td><b>Hungerseed</b></td><td>Half-Oni</td><td><b>Oni are bound spirits of Sortalde</b>, concentrated on <b>Lingdao</b> alongside the Yaksha (Yaksha are Lingdao's lighter cousins; Oni are the darker). Like Yaksha, Oni cannot wander. Almost all Hungerseeds in canon are Sortalde-born; Talan-side Hungerseeds typically descend from a Sortalde émigré one or two generations back.</td></tr>
+      <tr><td><b>Reflection</b></td><td>Magical accident · Wellspring blip</td><td>No parent lineage — Reflections are <i>made</i>, sometimes intentionally, often not. Arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Four bound gods without exclusive heritages</div>
+    After the remaster reshuffle: <b>Iro</b> (was Aasimar; now covered by Nephilim celestial) — no exclusive heritage. <b>Enki</b> (was Suli pre-remaster; Suli is now generic geniekin) — no remaster heritage; Knowledge isn't a body-borne trait. <b>Jianna</b> never had one — Jianna's blessing is good fortune in trade, not in body. <b>Cronus</b> never had one — his nature does not lend itself to bloodline transmission; his worshippers are made by choice, not blood.
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIRTUE DEMONS
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Virtue Demons — The Aristotelian Pattern</h2>
+  <div class="prose">
+    <p>Talan's demons follow a coherent theological pattern that mortal scholars have catalogued: <b>each demon is the personification of a virtue's corruption.</b> Following the classical doctrine of the mean, every virtue sits between two vices — one of <b>excess</b>, one of <b>deficiency</b>. A demon embodies one of those two extremes.</p>
+    <p>This is why the demons are not random or symmetric: they are exactly as numerous as there are virtue/extreme pairs in the Talanese moral tradition, and they map cleanly to those pairs.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead><tr><th>Virtue</th><th>Vice of Excess</th><th>Vice of Deficiency</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ambition</b></td><td>Empty Vanity</td><td>Undue Humility</td></tr>
+      <tr><td><b>Conscientiousness</b></td><td>Depravity</td><td>Deferential Submission</td></tr>
+      <tr><td><b>Courage</b></td><td>Rashness</td><td>Cowardice</td></tr>
+      <tr><td><b>Friendliness</b></td><td>Obsequiousness</td><td>Cantankerousness</td></tr>
+      <tr><td><b>Industriousness</b></td><td>Single-mindedness</td><td>Laziness</td></tr>
+      <tr><td><b>Liberality</b></td><td>Prodigality</td><td>Illiberality · Meanness</td></tr>
+      <tr><td><b>Magnanimity</b></td><td>Vanity</td><td>Pusillanimity</td></tr>
+      <tr><td><b>Modesty</b></td><td>Shamelessness</td><td>Shyness</td></tr>
+      <tr><td><b>Patience</b></td><td>Unirascibility</td><td>Irascibility</td></tr>
+      <tr><td><b>Spirit</b></td><td>Boastfulness</td><td>Melancholy</td></tr>
+      <tr><td><b>Temperance</b></td><td>Asceticism</td><td>Addiction</td></tr>
+      <tr><td><b>Truthfulness</b></td><td>Boastfulness</td><td>Mock Modesty</td></tr>
+      <tr><td><b>Wittiness</b></td><td>Buffoonery</td><td>Boorishness</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Named so far · Muiral the Misshapen</div>
+    The only individually named virtue demon in canon. <b>Muiral</b> is a Modesty-line demon (Shamelessness / Shyness pair) and grants the <b>Abomination</b> domain — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the <i>misshapen</i>. Muiral appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. The rest of the virtue lines have demons too — they just have not yet named themselves.
+  </div>
+
+  <div class="prose">
+    <p><b>Implications.</b> Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones — the Cowardice-demon and the Rashness-demon both pervert Courage, and both have reasons to hate each other. Mortal philosophers who study the pattern can predict demon behaviour; a handful of Enki-aligned exorcists work by reading the demon, identifying its line, then deploying the <i>opposite</i> extreme to push it off-pattern.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SIN DEVILS
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Sin Devils — The Seven</h2>
+  <div class="prose">
+    <p>The devils of Talan are organised on a simpler pattern: <b>the Seven Sins.</b> Unlike the virtue demons (corruption of something good), sin devils embody the sins themselves directly. One canonical devil-lord per sin — seven sins, seven lords, no more, no less.</p>
+    <p>Three are bound to grantable domains via the <a href="/magic.html">Domains Outside the Thirteen</a> mapping. The other four grantable domains, and all seven devil-lord names, remain open.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead><tr><th>Sin</th><th>Devil-Lord</th><th>Grantable Domain</th></tr></thead>
+    <tbody>
+      <tr><td><b>Envy</b></td><td class="tbd">(unnamed)</td><td class="tbd">TBD</td></tr>
+      <tr><td><b>Gluttony</b></td><td class="tbd">(unnamed)</td><td><b>Indulgence</b></td></tr>
+      <tr><td><b>Greed</b></td><td class="tbd">(unnamed)</td><td class="tbd">TBD</td></tr>
+      <tr><td><b>Lust</b></td><td class="tbd">(unnamed)</td><td class="tbd">TBD</td></tr>
+      <tr><td><b>Pride</b></td><td class="tbd">(unnamed)</td><td><b>Tyranny</b></td></tr>
+      <tr><td><b>Sloth</b></td><td class="tbd">(unnamed)</td><td class="tbd">TBD</td></tr>
+      <tr><td><b>Wrath</b></td><td class="tbd">(unnamed)</td><td><b>Destruction</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-label">Demon &amp; Devil — the Talan distinction</div>
+    <b>Demons corrupt a virtue.</b> Their existence is parasitic on the virtue line — perversions of what could have been good. <b>Devils embody a sin.</b> Their existence is foundational — the sin given form. <b>Both are redeemable in principle</b> — the virtue line still runs through every demon, and every devil retains the seed of the contrary virtue. Redemption work is rare and brutally difficult, but it is canonically <i>possible</i> — no being on Talan is fixed beyond change. Demons proliferate around mortals who have already half-corrupted a virtue; devils proliferate around mortals who choose a sin.
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       CROSS-REFERENCES
+       ════════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Cross-References</h2>
+
+  <div class="xref-strip">
+    <b>Theology &amp; cosmology</b>
+    <a href="/grand-gods.html">The 13 Bound Gods</a> · <a href="/magic.html">Magic &amp; Faith</a> (Four Schools · Magitech · Mortal Ascent Ladder · Domains Outside the Thirteen) · <a href="/index.html">Cosmology landing</a>.
+  </div>
+
+  <div class="xref-strip">
+    <b>Places that ancestries belong to</b>
+    <a href="/talan/domains/lioaru/lost-kingdom.html">Lost Kingdom · the Blackened Lands</a> (Fleshwarp · Skeleton homeland) · <a href="/talan/domains/lautara/emarrea.html">Emarrea</a> (Kitsune kingdom · Heartcourt) · <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> (New Age Dwarves · <a href="/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart</a>) · <a href="/off-continent/sortalde.html">Sortalde</a> (six petal-ancestries · Oni · the unnamed Layer-3 pantheon) · <a href="/talan/domains/zuzental/emerald-isles.html">Emerald Isles</a> (Sortalde embassy landing).
+  </div>
+
+  <div class="xref-strip">
+    <b>Factions &amp; threats</b>
+    <a href="/talan/factions/adventurers-guild.html">Adventurers Guild</a> (assesses the individual, not the lineage) · <a href="/off-continent/red-empire.html">Red Empire</a> (Menagerie-made fleshwarps) · <a href="/talan/the-binding.html">The Binding</a> (Vermin Queen vs. Surki).
+  </div>
+
+  <div class="footer">Tyrnarra · Bestiary &amp; Ancestries</div>
+
+</div>
+
+<script>
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
+
+</body>
+</html>

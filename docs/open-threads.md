@@ -112,6 +112,12 @@ When you close a thread, strike it through with `~~...~~` rather than deleting (
 - **Dragon's Reach** — vessel-arrival and crash-site detail
 **Where it lives:** [lore/geography.md](../lore/geography.md) — per-domain entries.
 
+### Emerald Isles capital name
+**Status:** low — newly opened.
+**What's decided:** The Emerald Isles' capital sits on Middle Isle's western shore, facing the Zuzental mainland. The royal court, treasury, and Concord-of-Courts Talan-side liaison all reside there. Modern English naming stratum (the kingdom names itself in plain Talanese).
+**What's open:** The capital's name. Pending one specific call. Currently rendered as "the kingdom's capital (name TBD)" on `emerald-isles.html`.
+**Where it lives:** [emerald-isles.html](../talan/domains/zuzental/emerald-isles.html) → *The Three Main Isles → Middle Isle*; [lore/geography.md](../lore/geography.md) — *Zuzental → Emerald Isles*; [lore/glossary.md](../lore/glossary.md) — Emerald Isles entry.
+
 ### Aeris / Scar of Aeris naming retrofit
 **Status:** low — naming-rule consistency question.
 **What's decided:** Aeris, Scar of Aeris, Hall of Shards, Sulfur Vents of Vehl exist in Fenurra with Latinate / Germanic / English-stylized names.

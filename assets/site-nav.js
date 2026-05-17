@@ -37,7 +37,9 @@
     { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/talan/domains/brauogi/brauogi.html',   children: [] },
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
-    { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [] },
+    { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
+      { slug: 'emerald-isles', label: 'Emerald Isles · Island Kingdom', href: '/talan/domains/zuzental/emerald-isles.html' }
+    ]},
     { slug: 'nashavel', label: 'Nashavel · Chaos',    href: '/talan/domains/nashavel/nashavel.html', children: [] },
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/talan/domains/ehizahar/ehizahar.html', children: [
       { slug: 'fenurra', label: 'Fenurra · The Flame-Source', href: '/talan/domains/ehizahar/fenurra.html' }
@@ -115,6 +117,7 @@
       '      <li><a href="/talan/talan.html"       data-page="talan">Continent Overview</a></li>',
       '      <li><a href="/talan/history.html"     data-page="history">History &amp; Eras</a></li>',
       '      <li><a href="/talan/the-binding.html" data-page="the-binding">The Binding</a></li>',
+      '      <li><a href="/talan/bestiary.html"    data-page="bestiary">Bestiary &amp; Ancestries</a></li>',
       '    </ul>',
       '  </div>',
 
@@ -139,6 +142,7 @@
       '  <div class="nav-section">',
       '    <div class="nav-section-label">Off-Continent</div>',
       '    <ul class="nav-list">',
+      '      <li><a href="/off-continent/sortalde.html"   data-page="sortalde">Sortalde · Petal Continent</a></li>',
       '      <li><a href="/off-continent/red-empire.html" data-page="red-empire">The Red Empire</a></li>',
       '    </ul>',
       '  </div>',
