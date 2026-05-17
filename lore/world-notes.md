@@ -531,11 +531,11 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 - **Mortals see her as:** the market's lifeblood — honest exchange or ruthless exploitation.
 
 ### Araphel — God of Darkness (Male)
-- **Aspects:** shadows, secrets, rest, despair.
-- **Cleric domains:** Darkness, Protection, Void, Second Chances.
-- **Depiction:** a **Fetchling** or **Pale Elf** with silver eyes, body hidden by black robes — always at the boundary between light and shadow.
+- **Aspects:** shadows, secrets, rest, new faces, rebirth. *(Despair is what mortals bring to him; new faces and rebirth are what he answers with — see the Araphel deep-dive above for the theological resolution.)*
+- **Cleric domains:** Darkness, Protection, Void, Secrecy, Change, Repose. *(Second Chances is implicit in the rebirth theology rather than a discrete PF2e domain.)*
+- **Depiction:** most commonly a **Fetchling** — either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman — but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
 - **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
-- **Mortals see him as:** keeper of mysteries, balm of sleep, the weight of sorrow.
+- **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
 
 ### Sarrum — God of Earth (Male)
 - **Aspects:** stone, harvest, endurance, greed.
@@ -689,13 +689,13 @@ Pathfinder/PF2e includes a number of cleric domains that are **not granted by an
 
 A widely circulated in-world account of the Corrupted God's binding, attributed to *Sage Lorant of Highspire*, **3rd Century After Binding** (an in-universe document, not authoritative on actual events):
 
-> "There was a time when the earth itself seemed to rot beneath our feet. The god of Corruption — whom some name the **Maw Below**, others the **Blightfather** — rose from darkness and turned his gaze upon all mortal kind. Fields withered, rivers festered, the very beasts of forest and plain were twisted into horrors unfit for this world. Armies crumbled, cities drowned in plague. Yet a fellowship arose — champions whose names are etched in every tongue. They bore relics of light, rallied what hosts remained, and struck into the god's heart. They could not kill him, for such a power is beyond mortal reach — but they **bound him in chains of divine law, sealed deep beneath the bones of the world.** Thus ended the Age of Corruption, and so began the Counting of Years we keep today."
+> "There was a time when the earth itself seemed to rot beneath our feet. The god of Corruption — whom some name the **Maw Below**, others the **Blightfather** — rose from darkness and turned his gaze upon all mortal kind. Fields withered, rivers festered, the very beasts of forest and plain were twisted into horrors unfit for this world. Armies crumbled, cities drowned in plague. Yet a fellowship arose — champions whose names are etched in every tongue. They bore relics of light, rallied what hosts remained, and struck into the god's heart. They could not kill him, for such a power is beyond mortal reach — but they **bound him in chains of divine law, sealed deep beneath the bones of the world.** Thus ended the Age of Corruption, and so began the era of the adventurer — the age we live in today."
 
 **Why this matters as canon:**
 - This is what **mortals tell themselves**. It is mostly wrong.
 - The truth (see *The Corrupted God — True Identity* above) is that the Corrupted God is the Elden — an entire civilisation fused with the Devourer, not a malevolent personal deity. Most mortals do not know this and would not believe it.
 - The names **Maw Below** and **Blightfather** are folk titles for the Corrupted God. Use them in mortal-voiced text (sermons, chronicles, peasant rumour); avoid them in GM-truth contexts.
-- "Counting of Years we keep today" in this myth is conflated — the calendar (GR/MR) actually pivots on the Week of Crimson Rain, not the Corrupted God's defeat. Sage Lorant — or his sources — has the centuries muddled. This kind of error is endemic to mortal histories of the deep past.
+- The closing line names the binding (2135 MR) as the beginning of the **Adventurer Era** — the current age. The Adventurers Guild's founding-mythos status is baked into popular history; Lorant's account is part of why.
 
 ---
 

@@ -22,7 +22,9 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
   history.html                 8 eras with three-tier knowledge UI               POPULATED
                                + Gods' Era three-tier expandables (Old Race + Storveldi)
                                + Week of Crimson Rain secret harmonised
-                                                                                 (UPDATED 2026-05-17 Tier 3 step 8)
+                               + Dark Era amber Popular Belief (Sage Lorant
+                                 Age-of-Corruption chronicle + calendar-conflation note)
+                                                                                 (UPDATED 2026-05-17)
   the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
   bestiary.html                Peoples &amp; Heritages — distribution table, 13 domain cards,
                                Sortalde pointer, versatile heritages, virtue demons,
@@ -50,7 +52,9 @@ Tier 1 publishing pass — 2026-05-17:
   lautara/emarrea.html         Emarrea · the Kitsune Kingdom                     POPULATED  (NEW 2026-05-16)
   lautara/crossroads.html      Crossroads · Tri-Domain Nexus + Spider's Silk Inn POPULATED  (NEW 2026-05-17)
   lioaru/lost-kingdom.html     Lost Kingdom · The Blackened Lands                POPULATED  (NEW 2026-05-17)
-  myrkono/myrria/myrria.html   Myrria · City of Second Chances                   POPULATED  (NEW 2026-05-16)
+  myrkono/myrria/myrria.html   Myrria · City of Second Chances                   POPULATED  (NEW 2026-05-16;
+                               + Faith of Many Faces section — three rites, sacred
+                               iconography callout, edicts/anathema                UPDATED 2026-05-17)
   sumendar/order-of-steam/order-of-steam.html
                                Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
   sumendar/order-of-steam/house-eisenhart.html

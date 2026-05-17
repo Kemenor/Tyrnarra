@@ -8,7 +8,7 @@ Everything currently flagged as TBD, unresolved, or awaiting development. Mainta
 - *What's open* is the specific work to do.
 - *Where it lives* points to the file(s) where the thread is currently anchored.
 
-When you close a thread, strike it through with `~~...~~` rather than deleting (so the resolution context survives), and update [docs/worldanvil-migration.md](worldanvil-migration.md)'s resume point.
+When you close a thread, strike it through with `~~...~~` rather than deleting (so the resolution context survives), and update [docs/site-inventory.md](site-inventory.md) if the closure publishes new HTML.
 
 ---
 
@@ -46,7 +46,7 @@ When you close a thread, strike it through with `~~...~~` rather than deleting (
 - Blackened Lands émigrés (Storveldi-Denbora-descended)
 - Banned-god creations (a god expelled by Gods' Law who left vampires behind)
 - Feyworld émigrés
-**Where it lives:** [lore/bestiary.md](../lore/bestiary.md) — Dhampir heritage; [docs/worldanvil-migration.md](worldanvil-migration.md) resume point.
+**Where it lives:** [lore/bestiary.md](../lore/bestiary.md) — Dhampir heritage.
 
 ### The order Grand Gods joined Cronus during the Week of Crimson Rain
 **Status:** low — narrative texture.
@@ -227,20 +227,7 @@ Promoted to full canon as part of the **Magitech and Infrastructure** section in
 
 ## HTML publishing
 
-**Status:** not started. User holds the publish signal.
-**What's tracked:** Per-phase publication tracker lives in [docs/worldanvil-migration.md](worldanvil-migration.md) under *HTML Publishing — Status Tracker*. Suggested publishing order is at the bottom of that section:
-1. Wardstones + Nine Generals (`the-binding.html`)
-2. New domain/settlement pages (Crossroads, Emarrea, Lost Kingdom)
-3. New faction pages (Red Empire, House Eisenhart, Spider's Silk Inn)
-4. Adventurers Guild HTML rewrite
-5. Storveldi Denbora secret on `history.html`
-6. Mortal Ascent Ladder on `magic.html` or new theology page
-
-**Updates needed since the migration doc was last revised:**
-- Add Sortalde to the publishing queue (new continent page or section on `talan.html`).
-- Add Named Non-Bound Gods (Bikiargi, Zaharsuge, Epairima, Betibizi) — likely belongs on a theology subpage or expanded `grand-gods.html`.
-- Add 14-domain mapping to `magic.html` / theology subpage.
-- Cronus tile sanitisation on `talan.html` already done (the only HTML touch so far).
+**Status:** ✅ closed (2026-05-17). All four migration phases shipped — cosmology, geography, factions, bestiary. The forward HTML backlog (other god city-state pages, sub-region promotions, Legea Empire stub, individual Nine Generals dungeon pages, per-god GM Secrets, three-tier UI on remaining eras) lives in [docs/site-inventory.md](site-inventory.md)'s *Future Work* section. Open canon questions that gate any of those builds are listed above in this file.
 
 ---
 

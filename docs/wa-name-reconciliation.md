@@ -1,6 +1,6 @@
 # WorldAnvil → Canon Name Reconciliation (Phase 2 prep)
 
-Built **2026-05-16** as the first step of [Phase 2 — Geography & Domains](worldanvil-migration.md#phase-2--geography--domains-loregeographymd). Cross-checks WA export folder/file names against canon in [`lore/geography.md`](../lore/geography.md) and the published HTML at [`talan/domains/`](../talan/domains/).
+Built **2026-05-16** as the first step of the WorldAnvil → lore Phase 2 (Geography & Domains) migration. Cross-checks WA export folder/file names against canon in [`lore/geography.md`](../lore/geography.md) and the published HTML at [`talan/domains/`](../talan/domains/). Retained as historical-record archaeology; the WorldAnvil migration itself closed 2026-05-17.
 
 **Rule reminder:** WA names are old working names from 2023. `lore/geography.md` wins on conflict.
 
