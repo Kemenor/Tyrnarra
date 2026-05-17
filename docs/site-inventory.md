@@ -62,6 +62,14 @@ Tier 1 publishing pass — 2026-05-17:
                                iconography callout, edicts/anathema                UPDATED 2026-05-17)
   sumendar/order-of-steam/order-of-steam.html
                                Order of Steam · Industrial Kingdom-Guild Hybrid  POPULATED  (NEW 2026-05-17)
+  sumendar/dragons-reach.html  Dragon's Reach · Dragon Capital — the city built
+                               from the mid-Gods'-Era mothership wreckage;
+                               three-tier lifespan band (non-purist / purist /
+                               "the purest"); four purist-school cards; two-
+                               sided purist-vs-pragmatist position blocks on
+                               the age-weighted vote tension; Order-of-Steam
+                               friction + Dragonet older-claim schism; amber
+                               Popular Belief on the buried-alien-truth        POPULATED  (NEW 2026-05-17)
   sumendar/order-of-steam/house-eisenhart.html
                                House Eisenhart · Highforge Lineage + Stahlglanz  POPULATED  (NEW 2026-05-17)
   zuzental/thousand-kingdom.html
@@ -125,6 +133,7 @@ Currently used in:
 - `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
 - `/talan/domains/floteyn/floteyn.html` — one amber Popular Belief expandable (Balaena's captivity).
 - `/talan/domains/zuzental/thousand-kingdom.html` — full three-tier on the founding: plain prose + amber Popular Belief (Old King myth) + red GM Secret (Demigod's tragic motive + forged Queen lineage + the throne-held truth).
+- `/talan/domains/sumendar/dragons-reach.html` — one amber Popular Belief expandable (most Talanese don't know Dragons are alien — truth is findable, not GM-secret).
 - `/talan/domains/lautara/crossroads.html` — four amber tavern-rumour expandables.
 - `/magic.html` — GM Secret on the Mortal Ascent Ladder (integration-procedure / Storveldi / Betibizi).
 
