@@ -6,9 +6,10 @@ How the persistent sidebar on every page is built and how to extend it.
 
 ## How it works
 
-- The sidebar structure lives in `/assets/site-nav.js`. Two data sources drive it:
-  - **`DOMAINS`** — the array of 13 god-domains. Each entry has a `slug`, `label`, `href`, and a `children` list of nested sub-region/settlement pages.
-  - **The top-level section markup** (World & Cosmos, Talan section, Factions) — string literals inside `buildNavHtml()`.
+- The sidebar structure lives in `/assets/site-nav.js`. Three data sources drive it:
+  - **`TALAN_PAGES`** — the array of continent-level reference pages (Continent Overview, History, The Binding, Bestiary, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same accordion shape as `DOMAINS`.
+  - **`DOMAINS`** — the array of 13 god-domains. Same shape: `slug`, `label`, `href`, `children`.
+  - **The remaining top-level section markup** (World & Cosmos, Factions, Off-Continent) — string literals inside `buildNavHtml()`.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
@@ -41,24 +42,30 @@ The slug doesn't have to match the filename — it just has to match between the
 
 ## How to extend the nav
 
-**To add a new top-level page** (a new continent-level reference, a new faction, etc.):
+**To add a new continent-level reference page** (a new Talan-tier page like Historical, a future bestiary expansion, etc.):
 
 1. Open `/assets/site-nav.js`.
-2. Inside `buildNavHtml()`, find the matching top-level section's string array (World &amp; Cosmos, Talan, or Factions).
+2. Add a new entry to the `TALAN_PAGES` array with `slug`, `label`, `href`, and `children: []` (or a populated children array for nested pages).
+3. On the new HTML page, set `<body data-page="<slug>">`.
+
+**To add a new top-level page** (a new faction, off-continent entry, etc.):
+
+1. Open `/assets/site-nav.js`.
+2. Inside `buildNavHtml()`, find the matching top-level section's string array (World &amp; Cosmos, Factions, Off-Continent).
 3. Add a `<li>` line with a unique `data-page="<slug>"`.
 4. On the new HTML page, set `<body data-page="<slug>">`.
 
-**To add a sub-region or settlement under a domain** (nested accordion entry):
+**To add a sub-page under a domain or under a Talan-tier page** (nested accordion entry):
 
 1. Open `/assets/site-nav.js`.
-2. Find the matching entry in the `DOMAINS` array.
+2. Find the matching parent entry in `DOMAINS` or `TALAN_PAGES`.
 3. Push a child object `{ slug, label, href }` into its `children` array.
 4. On the new HTML page, set `<body data-page="<slug>">` matching the child's slug.
 
-The accordion will:
-- Show a chevron `▸` next to any domain whose `children` array is non-empty (and no chevron for domains with empty children).
-- Auto-expand the domain when the current page is either **that domain itself** or one of its **nested children**. So visiting Myrria auto-opens the Myrkono submenu; visiting the Myrkono domain page also auto-opens it (so the chevron isn't required to discover what's underneath).
-- Toggle open/closed on chevron click. The domain name itself stays a normal link — clicking it navigates to the domain page rather than expanding.
+The accordion (used by both `TALAN_PAGES` and `DOMAINS`) will:
+- Show a chevron `▸` next to any row whose `children` array is non-empty (and no chevron for leaf rows with empty children).
+- Auto-expand the parent when the current page is either **that parent itself** or one of its **nested children**. So visiting Myrria auto-opens the Myrkono submenu; visiting the Myrkono domain page also auto-opens it (so the chevron isn't required to discover what's underneath). Same behaviour applies to The Binding → Hollow, Historical → Golden Empire, etc.
+- Toggle open/closed on chevron click. The parent name itself stays a normal link — clicking it navigates to the parent page rather than expanding.
 
 One file edited. No find-and-replace across pages.
 

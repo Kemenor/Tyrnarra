@@ -51,6 +51,16 @@ Tier 1 publishing pass — 2026-05-17:
   lioaru.html                  Lost Kingdom expanded (Blackened Lands, Skeleton/Fleshwarp origin); Storveldi/Betibizi GM Secret expandable; Magitrain limits note
   sumendar.html                Order of Steam reframed as Magitech industrial heart (Elden-tech origin, House Eisenhart); Dragon's Reach two-recovery-projects friction; Magitech + Magitrain notes
 
+Historical section launched — 2026-05-17:
+  /talan/historical/           NEW folder under /talan/ for fallen civilisations.
+                               Sibling to /talan/factions/ and /talan/the-binding/.
+                               Style B, parchment palette. Sidebar nav entry added
+                               under the Talan section ("Historical · The Fallen")
+                               with the Golden Empire as a nested child (↳ prefix
+                               pattern matching the Hollow-under-the-Binding entry).
+                               history.html Golden Era card cross-linked to
+                               golden-empire.html.
+
 History three-tier publish pass — 2026-05-17:
   history.html                 Lost / Golden / Dark era cards now carry full three-tier UI.
                                **Lost Era** — new Popular Belief (three-theory cover: trauma /
@@ -153,6 +163,21 @@ Etymology publish pass — 2026-05-17:
   mercenary-guild.html         POPULATED
   god-churches.html            POPULATED      remnants.html            POPULATED
 
+/talan/historical/             NEW section (2026-05-17) — fallen civilisations
+  historical.html              Hub stub. Three civilisation cards: Golden
+                               Empire (linkified) + Storveldi Denbora and
+                               Elden (TBD placeholders for future pages).      POPULATED  (NEW 2026-05-17)
+  golden-empire.html           The Empire's institutional page. Dwarven-gold
+                               accent. Sections: at-a-glance, the empire's
+                               sweep, the Emperor (public), the empire's work
+                               (4 cards: common law / roads / script / Automa-
+                               tons), the mining programme + the fall (side-
+                               by-side blocks), legacy, Popular Belief expand-
+                               able, GM Secret expandable (Emperor was a
+                               Reflection, Layer-2 pocket dimension, lower-
+                               single-digits know), Open in Canon panel
+                               (7 deliberate TBDs).                              POPULATED  (NEW 2026-05-17)
+
 /off-continent/                NEW top-level section (2026-05-17) — non-Talan continents & powers
   red-empire.html              The Red Empire — godless mortal-supremacist state POPULATED  (NEW 2026-05-17)
   sortalde.html                Sortalde · Tao Hua Yuan · The Petal Continent     POPULATED  (NEW 2026-05-17 Tier 4)
@@ -181,6 +206,7 @@ The site uses three layers of revealability for setting information:
 Currently used in:
 - `grand-gods.html` — all 13 gods have at least the red GM Secret tier (Cronus's is fully written; others have placeholder text).
 - `/talan/history.html` — **Elden Era**, **Gods' Era**, **Week of Crimson Rain**, **Lost Era**, **Golden Era**, and **Dark Era** all carry the three-tier UI. **Adventurer Era** (current) intentionally carries common-knowledge prose only. **Creation Era** is deliberately Open with no expandables.
+- `/talan/historical/golden-empire.html` — full Popular Belief + GM Secret pair, mirroring the canon entered on history.html's Golden Era card, with additional institutional depth.
 - `/talan/the-binding.html` — GM Secret expandable (Corrupted God = Elden + four General domain-grants).
 - `/talan/domains/lioaru/lioaru.html` — GM Secret (Storveldi/Betibizi/Lost Kingdom truth).
 - `/talan/domains/lioaru/lost-kingdom.html` — four amber Popular Belief expandables + comprehensive GM Secret.
