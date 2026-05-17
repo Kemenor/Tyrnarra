@@ -28,59 +28,46 @@ For getting the site running locally, see [`README.md`](README.md). For what's c
 
 ## File layout
 
-The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingdoms → Settlements.** The folder tree mirrors the world. World-level (cosmic) content lives at root; continent-level content lives under `/talan/`.
+The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingdoms → Settlements.** The folder tree mirrors the world. World-level (cosmic) content lives at root; continent-level content lives under `/talan/`. The schematic below shows the *pattern*; for the actual file roster + publish status, see [`docs/site-inventory.md`](docs/site-inventory.md).
 
 ```
 /                                      ← GitHub Pages serves from here
-  index.html                           ← landing = world primer (cosmology)
-  grand-gods.html                      ← the 13 bound gods (world-level)
-  magic.html                           ← Magic & Faith — Four Schools, daily life, faith
+  <world-level>.html                   ← cosmology, gods, magic — Style A pages live at root
 
-  talan/                               ← continent-level content
-    talan.html                         ← continent overview (three seas, all 13 domains)
-    history.html                       ← Eras / timeline
+  talan/                               ← continent-level content (Style B)
+    talan.html                         ← continent overview
+    history.html, bestiary.html, …     ← other continent-level pages
     domains/                           ← the 13 god domains
       <domain>/<domain>.html           ← e.g. vindul/vindul.html — domain entry page
       <domain>/<sub-region>.html       ← optional: promoted sub-region with its own page
       <domain>/<settlement>/           ← settlement folder, when content warrants
-        <settlement>.html
+        <settlement>.html              ← folder's main page, same name as the folder
         <sub-location>.html            ← location within the settlement
-        Quests/                        ← quests nest under their location
-          quest-<slug>.html
+        Quests/quest-<slug>.html       ← quests nest under their settlement
     factions/                          ← independent organisations
-      factions.html                    ← faction overview / taxonomy
-      adventurers-guild.html
-      mercenary-guild.html
-      god-churches.html
-      remnants.html
+    historical/                        ← fallen civilisations
+    the-binding/                       ← Nine Generals dungeons
+
+  off-continent/                       ← non-Talan continents & powers
 
   assets/                              ← shared chrome (loaded by every page)
-    site-nav.css                       ← sidebar styling
-    site-nav.js                        ← sidebar markup + behaviour (single source of truth for menu)
+    site-nav.css / site-nav.js         ← sidebar (single source of truth for menu)
     site-interactions.js               ← shared toggle handlers (Popular Belief ◈, GM Secret ⚿, era cards)
     site-starfield.js                  ← generates the cosmic-page starfield (Style A only)
-    style-a.css                        ← Style A base — used by world-level pages (/, gods, magic)
-    style-b.css                        ← Style B base — used by every page under /talan/
+    style-a.css                        ← Style A base — world-level cosmic pages
+    style-b.css                        ← Style B base — every page under /talan/ and /off-continent/
 
   lore/                                ← worldbuilding canon (NOT published)
-    cosmology.md                       ← how the world works — Wellspring, planar layers, magic, magitech, calendar
-    gods.md                            ← who the gods are — the Thirteen, non-bound gods, city-states, cleric domains
-    secret-history.md                  ← what really happened — Crimson Rain, Storveldi Denbora, Elden, Wardstones, Nine
-    geography.md                       ← domain etymologies + sub-regions
-    factions.md                        ← faction taxonomy + entries
-    cultures.md                        ← peoples, traditions, politics, craft
-    bestiary.md                        ← playable ancestries + otherworldly beings
-    glossary.md                        ← coined names + etymologies
-    timeline.md                        ← eras + dates
+    cosmology.md, gods.md, secret-history.md, geography.md, factions.md,
+    cultures.md, bestiary.md, glossary.md, timeline.md
+    (see "Where new content goes" below for what lives in each)
 
   docs/                                ← site documentation (NOT published)
-    site-inventory.md                  ← what's published vs. stub
-    sidebar-nav.md                     ← architecture notes on the shared sidebar
+    site-inventory.md                  ← canonical roster of every page + publish status
+    sidebar-nav.md                     ← architecture notes on shared sidebar + assets
+    open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
 
-  CLAUDE.md                            ← this file
-  README.md
-  CNAME
-  serve.bat / serve.sh                 ← local dev server helpers
+  CLAUDE.md · README.md · CNAME · serve.bat / serve.sh
 ```
 
 **`lore/` vs. `docs/`**: `lore/` is the source of truth for what's *true in the world* — when an HTML page disagrees with a lore file, the lore wins. `docs/` is the source of truth for *how the site is built*. They have different update rhythms: canon evolves with the world; docs drift with the code.
@@ -124,7 +111,7 @@ Every page references the shared sidebar by including two tags in `<head>`:
 
 The page declares its location for the highlight via `<body data-page="vindul">`.
 
-To add or rename a page in the sidebar, edit `/assets/site-nav.js` (the `NAV_HTML` array) — one file, one place. Full architecture in [`docs/sidebar-nav.md`](docs/sidebar-nav.md).
+To add or rename a page in the sidebar, edit `/assets/site-nav.js` — one file, one place. Full architecture (data arrays, section-header pattern, accordion behaviour) in [`docs/sidebar-nav.md`](docs/sidebar-nav.md).
 
 ---
 
@@ -142,7 +129,7 @@ Used for: the landing/cosmology, the 13 gods, magic — anything world-scale or 
 - **References:** `index.html` (cosmology landing), `grand-gods.html` (the pantheon), `magic.html`
 
 ### Style B — Grounded / Continent + Settlement-level
-Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, anything ground-level and lived-in.
+Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, off-continent powers, anything ground-level and lived-in. Every page under `/talan/` and `/off-continent/` uses Style B.
 
 - **Source:** `/assets/style-b.css`. Pages set a custom `--domain-accent` in a small inline `<style>` when they want one.
 - **Fonts:** Uncial Antiqua (page titles), Crimson Pro (body), Cinzel (labels/small caps)
@@ -154,15 +141,15 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 ## How we work together — drafting → publishing
 
-**Lore-first protocol.** When the user is brainstorming new content — a kingdom, an NPC, a magic ritual, a faction, a god's secret — capture it into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space and evolve freely. HTML pages are the published output: clean, polished, navigable.
+**Lore-first protocol.** Brainstormed content — a kingdom, an NPC, a ritual, a faction, a god's secret — goes into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space; HTML pages are the published output.
 
-**Stay in lore by default.** A new session starts in drafting mode. Claude should not generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*, or similar. If the intent is ambiguous, ask before touching HTML.
+**Stay in lore by default.** A new session starts in drafting mode. Don't generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*. If the intent is ambiguous, ask.
 
-**Pause between lore-write and HTML-publish — always, even with a publish signal.** When new content is being created (not just polishing existing canon), the lore-write and the HTML-mirror are two separate phases, and the user wants to review the lore before it's mirrored to HTML. Even when the original instruction was *"write out the history"* or *"publish this"* — when the lore is fresh content, write it into `lore/`, then **stop and surface what landed** so the user can correct details (timing, characters, public-vs-secret partition, canon implications) before the HTML lock-in. Mirroring to HTML before the lore is confirmed creates double-edit work when corrections come. The pause is mandatory; the user will say *"go ahead and publish"* to release it. Polish-only or wiring-only follow-ups (sidebar nav, site-inventory, open-threads closure) can chain after the HTML publish without a second pause.
+**Pause between lore-write and HTML-publish — always, even with a publish signal.** When the content is *new* (not polishing existing canon), the lore-write and HTML-mirror are two phases. Even if the original instruction was *"write out the history"* or *"publish this"*: write the lore, then **stop and surface what landed** so the user can correct details (timing, characters, public-vs-secret partition, canon implications) before HTML lock-in. The user will say *"go ahead and publish"* to release it. Polish-only or wiring-only follow-ups (sidebar nav, site-inventory, open-threads) can chain after the HTML publish without a second pause.
 
-**Published HTML is lore documentation, not a campaign starter.** Pages should read as reference material — what exists in the world, why, how, and who. **Do not add dedicated "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material belongs in private GM notes, not on the published site. World-flavour expandables — folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation — are different and welcome: they characterise *the world*, not *what to do in it*.
+**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material belongs in private GM notes. World-flavour expandables — folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation — are welcome: they characterise *the world*, not *what to do in it*.
 
-**Surface phase boundaries for review — don't chain them.** On multi-step work (e.g. publishing several pages, restructuring multiple docs, a coherent lore restructure across several files), pause at the seam between phases and surface what landed + what's next, even when given a broad "work through it" instruction. A phase boundary is a review checkpoint, not a clarifying question — these pauses are wanted even under "work without stopping for clarifying questions" framing. Survey work and reading source files is fine within a phase; *writes* are what trigger the boundary.
+**Surface phase boundaries — don't chain them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions — they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
 **Where new content goes:**
 
@@ -185,9 +172,9 @@ When coining new names, always record the source language, literal meaning, and 
 
 ---
 
-## Working across sessions (and via Cowork Dispatch)
+## Working across sessions
 
-This project is designed so a fresh Claude session — a new chat, a new Cowork session, or a task dispatched from your phone — can pick it up with no prior context. Everything Claude needs is in the repo:
+This project is designed so a fresh Claude session can pick it up with no prior context. Everything Claude needs is in the repo:
 
 1. **Read `CLAUDE.md` first** — naming rule, folder layout, style guide, drafting protocol.
 2. **Read whichever `lore/` files are relevant** to the topic at hand.
@@ -195,17 +182,3 @@ This project is designed so a fresh Claude session — a new chat, a new Cowork 
 4. **Check `docs/open-threads.md`** if the user references an ongoing canon question — it lists every TBD/unresolved thread with status and where it lives.
 
 Don't rely on the user's in-session memory file for canon — that's a summary, not the source. The lore files win.
-
-### Migration state (as of 2026-05-17)
-
-- **WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` folder has been retired from the repo. All canon now lives in `lore/`.
-- **Lore → HTML publishing: COMPLETE.** All four migration phases (cosmology, geography, factions, bestiary) shipped to HTML. Remaining work is incremental Tier 5/6 worldbuilding tracked in [`docs/open-threads.md`](docs/open-threads.md) and [`docs/site-inventory.md`](docs/site-inventory.md)'s *Future Work* section. The user holds the publish signal; do not push new lore to HTML without an explicit go-ahead.
-
-### Using Cowork Dispatch
-
-Cowork's Dispatch feature lets you assign tasks to Claude from your phone (or another spot) and Claude executes them on the desktop. For Tyrnarra:
-
-- The Tyrnarra folder must be selected as the Cowork workspace so the dispatched session can read and write the files.
-- The Claude Desktop app must be installed, running, and the computer awake when the task fires.
-- Dispatched tasks can be terse — e.g. *"In Tyrnarra, design a coastal city called Veldtmark in Brauogi"* — because Claude will read `CLAUDE.md` and the relevant lore files to learn the conventions and existing canon.
-- The drafting protocol still applies: a dispatched session captures to `lore/` and doesn't render HTML unless the task includes the publish signal.
