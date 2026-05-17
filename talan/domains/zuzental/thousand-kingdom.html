@@ -70,6 +70,37 @@
     vertical-align: 0.05em;
     margin: 0 2px;
   }
+
+  /* ── Reveal scaffolding for cards inside GM-Secret boxes ────────── */
+  .secret-era-content .accent-card { --card-bg: rgba(46,14,18,0.55); border-color: rgba(180,80,80,0.30); }
+  .secret-reveal {
+    font-style: italic;
+    font-size: 0.98rem;
+    color: #f0c8a8;
+    margin: 0 0 14px 0;
+    padding: 6px 0 6px 14px;
+    border-left: 2px solid rgba(180,80,80,0.55);
+  }
+  .secret-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 14px 0; }
+  .secret-pill {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 10px;
+    background: rgba(140,50,50,0.20); border: 1px solid rgba(200,100,100,0.42);
+    color: #f0c8b0;
+  }
+  .secret-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .secret-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 14px 0; }
+  .secret-card { padding: 12px 14px; }
+  .secret-card-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #d48a8a; margin-bottom: 4px;
+  }
+  .secret-card-title {
+    font-family: 'Cinzel', serif; font-weight: 600; font-size: 1rem;
+    color: var(--gold-bright); margin-bottom: 8px; letter-spacing: 0.04em;
+  }
+  .secret-card-body { font-size: 0.88rem; line-height: 1.55; color: var(--text); }
+  .secret-coda { font-size: 0.88rem; color: var(--parch-dim); font-style: italic; margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(180,80,80,0.30); }
 </style>
 </head>
 <body data-page="thousand-kingdom">
@@ -124,44 +155,180 @@
 
   <h2 class="section-heading">Founding &amp; History</h2>
   <div class="prose">
-    <p>The Thousand was once one kingdom. In deep history, <b>the Old King</b> <span class="tbd">Name TBD</span> — the figure who first hammered a thousand small polities into a single throne — held the Thousand together for generations. Then the <a href="/talan/history.html">Dark Era</a> came. Among the many things the Corrupted God's minions destroyed during their hunting of the world, they killed the Old King; without him the unification did not survive, and the Thousand fractured back into the warring patchwork it had once been. The early <a href="/talan/history.html">Adventurer Era</a> opened with the Thousand at war with itself across every border.</p>
+    <p>The Thousand was once one kingdom. In deep history, <b>Renauld Fyrstmond, the Old King</b> — the figure who first hammered a thousand small polities into a single throne — founded the royal line and held the Thousand together for generations. Then the <a href="/talan/history.html">Dark Era</a> came. Among the many things the Corrupted God's minions destroyed during their hunting of the world, they killed Renauld and every direct claimant of his line; without the royal house the unification did not survive, and the Thousand fractured back into the warring patchwork it had once been. <b>House Fyrst sat claimless</b> through the centuries that followed — preserved in chronicle and prophecy but with no living heir to occupy it. The early <a href="/talan/history.html">Adventurer Era</a> opened with the Thousand at war with itself across every border, the empty royal house a structural absence at the centre of the chronicles.</p>
 
-    <p>In <b>2397 MR</b> — sixty-two years into the Adventurer Era's rebuilding — a figure history remembers as <b>the Demon Demigod</b> <span class="tbd">Name TBD</span> rose out of one of those endless small wars and began absorbing the polities by force. He collected lands, generals, and momentum; he was a Demi-God by some mechanism the chroniclers do not agree on <span class="tbd">Ascension mechanism TBD</span>; and by the late 2440s most of the Thousand had fallen to him.</p>
+    <p>In <b>2397 MR</b> — sixty-two years into the Adventurer Era's rebuilding — a figure history remembers as <b>Garaion the Conqueror, the Demon Demigod</b> rose out of one of those endless small wars and began absorbing the polities by force. He collected lands, generals, and momentum; he was a Demi-God by some mechanism the chroniclers do not agree on; and by the late 2440s most of the Thousand had fallen to him.</p>
 
-    <p>The resistance that finally broke him was led by an <b>adventurer party</b>. Their leader — an adventurer whose lineage chronicles traced back to the Old King, whose surviving cult had always taught that his blood would return when the Thousand needed him again — became the first Queen of the re-unified Kingdom in the war's aftermath. She is remembered as <b>the Founding Queen</b> <span class="tbd">Name TBD</span>. In the final battle of the long war, <b>she killed the Demigod with her own hand</b>. The Kingdom was re-founded in <b>2457 MR</b>.</p>
+    <p>The resistance that finally broke him was led by an <b>adventurer party</b>. Their leader — a Nephilim woman whose lineage chronicles traced back to Renauld Fyrstmond, and whose visible celestial nature seemed to vouch for the bloodline at sight — took up the long-vacant royal house and is remembered as <b>Aelis Marien Fyrstgilt, the Founding Queen</b> (the <i>-gilt</i> suffix marks her Nephilim ancestry within the Thousand-Kingdom noble convention; the <i>Fyrst</i> prefix is the royal line's, recovered from centuries of dormancy). In the final battle of the long war, <b>she killed Garaion with her own hand</b>. The Kingdom was re-founded in <b>2457 MR</b>.</p>
 
     <p>It is, by Talanese measure, a young Kingdom — only 75 years old at the present date (2532 MR) — but already established as the continent's reference implementation of Forseti's law.</p>
   </div>
 
   <div class="legend-era">
-    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — The Old King's Blood Returns</button>
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — The Returning Blood</button>
     <div class="legend-era-content">
       <div class="legend-era-label">◈ &nbsp; The Founding Prophecy in Common Telling</div>
-      The Old King's cult — which survived his Dark-Era murder underground — taught for generations that his blood was not lost. His line had quietly persisted, scattered and untraceable to the casual eye, and would surface when the Thousand needed it. <i>The kingmaker's child.</i> The prophecy is in dozens of forms; bards still embroider it.
+      The Fyrst cult — which survived Renauld's Dark-Era murder underground — taught for generations that his blood was not lost. His line had quietly persisted, scattered and untraceable to the casual eye, and would surface when the Thousand needed it. <i>The kingmaker's child.</i> The prophecy is in dozens of forms; bards still embroider it.
       <br><br>
-      The Founding Queen is the answer the prophecy was waiting for. The people knew it the moment her lineage was confirmed by the cult's surviving genealogists in the war's last years. Variations on her tale abound: in some tellings she was raised in secret by sages who knew what she was; in others she had no idea until the moment of crisis and the discovery was its own kind of awakening; in others still her party's bards composed her royal lineage into ballads that travelled faster than her army did. All versions agree the Demigod was a monster of pure ambition who could not have been resisted without divine providence — which the Old King's returning blood was understood to be — and that the Queen killed him in the final battle with the weapon her ancestor had once carried.
+      Aelis Fyrstgilt is the answer the prophecy was waiting for. The people knew it the moment her lineage was confirmed by the cult's surviving genealogists in the war's last years — and her <b>Nephilim heritage</b> stood as visible witness to what the documents claimed. Folk-belief reads her celestial nature as the bloodline shining through after centuries of dormancy.
+      <br><br>
+      Variations on her tale abound: in some tellings she was raised in secret by sages who knew what she was; in others she had no idea until the moment of crisis and the discovery was its own kind of awakening; in others still her party's bards composed her royal lineage into ballads that travelled faster than her army did. All versions agree Garaion was a monster of pure ambition who could not have been resisted without divine providence — which the Returning Blood was understood to be — and that the Queen killed him in the final battle with the weapon her ancestor had once carried.
     </div>
   </div>
 
+  <!-- ── Secret 1: Who Garaion Really Was ── -->
   <div class="secret-era">
-    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — He Is Not Dead, and the Queen Knows Where He Lives</button>
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Who Garaion Really Was</button>
     <div class="secret-era-content">
-      <div class="secret-era-label">⚿ &nbsp; Known to the Queen, the Demigod, and Almost No One Else</div>
-      The Demon Demigod was originally a <b>mortal man — a conscript-soldier in one of the early Adventurer-Era's endless small wars</b>. He came home from a campaign to find his village destroyed and his wife and child dead, killed in a war neither he nor anyone he loved had started. He turned to conquest with the explicit, articulated goal of <b>ending the wars by unifying the Thousand under a single throne</b> — his throne, since no one else would do it and the wars would not stop on their own. <i>He did not love the bloodshed. He hated it. He could not see another way to stop it.</i> His ascension to Demi-God status was a means, not an end.
-      <br><br>
-      Foreseeing that adventurer-resistance was inevitable — a heroic counter-narrative the Thousand would generate against him as surely as the wars had generated him — he and his <b>two most trusted generals</b> <span class="tbd">Names TBD</span> ran a long, deliberate operation: identifying promising adventurer parties as they rose, seeding rumours of royal blood among the most charismatic of them, forging genealogies, planting <i>"discovered"</i> documents in the right archives, prompting the right bards to compose the right ballads. They built a <i>daughter of myth</i> the Thousand could rally to. Whoever the seed took with most strongly would be the one who eventually unified the resistance and defeated him.
-      <br><br>
-      It took years and several false starts. The adventurer it eventually took with was the woman who became the Founding Queen. <b>The royal lineage she carried was a forgery</b> — exquisite, painstakingly constructed, theologically airtight when checked by the Old King's surviving cult — but a forgery. <b>She figured it out</b> during the long resistance, well before the final battle.
-      <br><br>
-      When she had him beaten — when she had her blade at his throat in private, in the closed council-tent on the night before the Thousand expected her to execute him — <b>she did not kill him</b>. She let him explain. He told her everything: the soldier, the destroyed village, the dead wife, the dead child, the conquest as the only way he could see to stop the wars. She believed him. She also knew that the Thousand needed him dead; the unification she would found could not coexist with a living Demigod-conqueror whose existence undid every story she had been built into.
-      <br><br>
-      So they staged it. The next morning, in front of the assembled war-host, she announced his death and produced the evidence the Thousand needed. Privately, she let him go on a single condition: <b>live the life that had been taken from you.</b> He went back to where his village had been, refounded it under a quiet new name <span class="tbd">Village name TBD</span>, and now lives there as a hunter. He has never returned to politics. He has never spoken his old name aloud. The Thousand believes he is dead; the village believes he is a quiet retiree with a bad-old-war past nobody asks about.
-      <br><br>
-      <b>The understanding between them is not a compact</b> — there is no binding oath, no Forseti-framework seal. It is a private mercy and a private obligation. The Founding Queen knows where he lives; she can call on him for emergencies large enough to need him; he will answer if she does. The arrangement passes from reigning monarch to heir as a sealed letter, opened only on coronation. The Queen has called him perhaps once or twice in the seventy-five years since the founding — for crises severe enough to warrant a Demi-God; not for ordinary use. He answered. He fought. He went home afterward.
-      <br><br>
-      The <b>two generals'</b> fates are not in any surviving record. They may have died in the war's final battle (and the bodies the war-host saw may have been theirs as much as anyone's), they may have gone with him to the rebuilt village, or they may live elsewhere on Talan under names nobody connects to the Demigod's regime. <span class="tbd">Fates TBD</span>
-      <br><br>
-      <b>The implication that even Forseti's clergy walk carefully around:</b> the Founding Queen's bloodline is — strictly — not the Old King's. The Kingdom's claim to legitimacy through that lineage is therefore a fiction laundered into law by the very framework (Forseti's) that would normally find such a fiction unconscionable. Forseti's clergy have not commented in the seventy-five years since the founding. Whether they know, treat it as a sealed-archive matter, or genuinely don't know is <span class="tbd">open</span>.
+      <div class="secret-era-label">⚿ &nbsp; The Conqueror's Truth</div>
+      <p class="secret-reveal">Garaion was not the monster of pure ambition the chronicles preserve. He was a man with a name, a tragedy, and an articulated reason for everything he did.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">Aldwin Mero</span>
+        <span class="secret-pill">conscript-soldier</span>
+        <span class="secret-pill">end the wars</span>
+      </div>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Soldier</div>
+          <div class="secret-card-title">Aldwin Mero</div>
+          <div class="secret-card-body">A conscript-soldier in one of the early Adventurer-Era's endless small wars. Thousand-Kingdom commoner; village-born; nothing in his early life marked him for what he would become. <b>The man who became Garaion was, first, an ordinary peasant who had been sent to a war.</b></div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Loss</div>
+          <div class="secret-card-title">Home in Ashes</div>
+          <div class="secret-card-body">He came back from his campaign to find his village destroyed and his wife and child dead, killed in a war neither he nor anyone he loved had started. There was no one left to bury. He left the name <i>Aldwin Mero</i> behind with the village's dead and walked away from the ruins.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Choice</div>
+          <div class="secret-card-title">A Throne to End the Wars</div>
+          <div class="secret-card-body">He turned to conquest with the explicit, articulated goal of <b>ending the wars by unifying the Thousand under a single throne</b> — his throne, since no one else would do it and the wars would not stop on their own. <i>He did not love the bloodshed. He hated it. He could not see another way to stop it.</i></div>
+        </div>
+      </div>
+
+      <div class="secret-grid-2">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Mechanism</div>
+          <div class="secret-card-title">Belief Through Fear</div>
+          <div class="secret-card-body">He was a genuinely exceptional general before any of it began. His ascent was that skill <b>plus accumulated dread</b>: the fear of subjects, the certainty of armies, and the legend of a realm that had begun, by the conquest's fifth decade, to write him into its own future as inevitable. The substance is the same directed mortal belief that raised Bikiargi to godhood — channelled fear-and-inevitability rather than worship.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">How It Differs</div>
+          <div class="secret-card-title">Not a Ritual, Not a Loophole</div>
+          <div class="secret-card-body">Distinct from the <a href="/talan/historical/storveldi-denbora.html">Storveldi integration procedure</a> (deliberate ritual), the Golden Emperor's Wellspring-direct loophole (Reflection-only), and Cronus's mortal-with-shard route (Layer-3-resident, pre-Compact). He did not seek divinity. He did not know it was happening. By the time he understood, he was already most of the way there.</div>
+        </div>
+      </div>
+
+      <div class="secret-coda">He had become a Demi-God incidentally to becoming an inevitability.</div>
+    </div>
+  </div>
+
+  <!-- ── Secret 2: The Forgery ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The Forgery That Built the Queen</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Sixty Years of Building a Daughter of Fyrst</div>
+      <p class="secret-reveal">The Returning Blood prophecy was answered because Garaion's intelligence chief had been writing the answer for sixty years.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">Halver Konrad Trent</span>
+        <span class="secret-pill">Iona Marthe Vesh</span>
+        <span class="secret-pill">the daughter of Fyrst</span>
+      </div>
+
+      <p style="font-size: 0.92rem; line-height: 1.6;">Foreseeing that adventurer-resistance was inevitable — a heroic counter-narrative the Thousand would generate against him as surely as the wars had generated him — Garaion and his two most trusted generals ran a long, deliberate operation to make sure the eventual hero was someone they had built.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Operation</div>
+          <div class="secret-card-title">Forging a Bloodline</div>
+          <div class="secret-card-body">Identify promising adventurer parties as they rose. Seed rumours of royal blood among the most charismatic. Forge genealogies. Plant <i>"discovered"</i> documents in the right archives. Prompt the right bards to compose the right ballads. <b>Restore the long-vacant House Fyrst in the public imagination</b>, then wait for the right adventurer to step into the role the forgery had carved.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Right Candidate</div>
+          <div class="secret-card-title">Aelis Marien Vaughn</div>
+          <div class="secret-card-body">Years and several false starts. The seed eventually took with a Nephilim adventurer named <b>Aelis Marien Vaughn</b> — and her celestial heritage was a gift the generals could not have planned for. The lineage they had built fit her far better than it would have fit a plain-human candidate.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Verification</div>
+          <div class="secret-card-title">"The Bloodline Is Restored"</div>
+          <div class="secret-card-body">The Fyrst cult's surviving genealogists examined the documents <i>and</i> the visible Nephilim daughter, and declared the bloodline restored. The Thousand believed them. Folk-belief took her celestial nature as proof of what the documents claimed. <b>The forgery worked perfectly.</b></div>
+        </div>
+      </div>
+
+      <div class="secret-coda">Aelis figured it out during the long resistance — partly from the documents themselves, partly, decisively, from a confession at a burning lab. She did not say so.</div>
+    </div>
+  </div>
+
+  <!-- ── Secret 3: The Lab and the Tent ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The Lab, the Tent, and the Conqueror's Tomb</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Two Confessions and a State Funeral</div>
+      <p class="secret-reveal">Aelis heard the truth twice. Once from a woman she chose not to kill, once from a man she had to. Then she announced his death and buried someone else in his armour.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">First Confession</div>
+          <div class="secret-card-title">The Lab Confrontation</div>
+          <div class="secret-card-body">In the war's final months, Aelis's adventurer party raided <b>Iona Marthe Vesh's mansion-and-lab</b> — the forgery operation's headquarters. Iona was waiting; she had known they would come; she stood ready to die. Aelis raised her blade and <b>did not strike</b>. In the breath that followed, Iona told Aelis the truth: Aldwin Mero, the destroyed village, Garaion's motive, the forgery beneath Aelis's documents.<br><br>Aelis ordered the lab burned. Iona was extracted through a hidden passage Iona had built decades earlier against the contingency she now lived. The party watched the mansion and lab burn to the ground. <b>The official record:</b> Iona Marthe Vesh died that day when the heroes <i>put a stop to her evil machinations</i>.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">Second Confession</div>
+          <div class="secret-card-title">The Closed Tent</div>
+          <div class="secret-card-body">Aelis went to the final battle <b>already knowing</b>. When she had Garaion beaten — when she had her blade at his throat in private, in the closed council-tent on the night before the Thousand expected her to execute him — she did not kill him. She let him explain.<br><br>He told her the same story Iona had given at the lab: the soldier, the destroyed village, the conquest as the only way to stop the wars. The corroboration mattered — Iona's account could have been a final lie, but Garaion's confirmation, given by a man who could not have known what Iona had told her, sealed it. <b>Aelis already believed.</b></div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Staging</div>
+          <div class="secret-card-title">Halver in Royal Armour</div>
+          <div class="secret-card-body"><b>General Halver Konrad Trent</b> had died for real in the battle the day before. The next morning, Aelis produced his corpse — dressed in Garaion's royal-style armour, face wrecked enough by the fighting that no witness could verify identity past the armour. The war-host accepted it.<br><br><b>Halver was buried as Garaion</b> in a state funeral at Lograth. The <b>Conqueror's tomb</b> holds his bones. Halver's own death was never publicly recorded; war-archives list him only as <i>missing in the final week</i>, and any family he had was told he had died and his body had not been recovered.</div>
+        </div>
+      </div>
+
+      <div class="secret-coda">The Thousand believes Garaion is dead. He is not. The body in his tomb is the loyal general who built the forgery that built the Queen.</div>
+    </div>
+  </div>
+
+  <!-- ── Secret 4: After the Founding ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Quietbarrow, the Sealed Letter, and Forseti's Silence</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Where the Truth Lives Now</div>
+      <p class="secret-reveal">Two of the three are still alive. The truth lives with them, with Aelis's line, and nowhere else.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Hunter</div>
+          <div class="secret-card-title">Aldwin Reclaims His Name</div>
+          <div class="secret-card-body">Aelis let Garaion go on a single condition: <b>live the life that had been taken from you.</b> He went back to where his village had been, refounded it under the name <b>Quietbarrow</b>, and <b>reclaimed Aldwin Mero</b> — the name the world had buried with his original village's dead. There was no one left alive to recognise it.<br><br>He has lived there ever since as a hunter. Quietbarrow sits in the eastern hill country, two days off the nearest postal route; ~200 souls. The villagers run a three-name register like the rest of the Kingdom; Aldwin's two-name form reads as rural-unpretentious. He is known for being a steady shot and an unusually reticent storyteller.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Leather-Worker</div>
+          <div class="secret-card-title">Alayah Mero</div>
+          <div class="secret-card-body"><b>Iona Marthe Vesh</b> — smuggled to Quietbarrow alongside Aldwin's relocation — lived there for nearly six decades under the name <b>Alayah Mero</b>. She shared Aldwin's reclaimed surname; the village reads them as kin in some unspecified form, and Aldwin never volunteers details.<br><br>She worked the village as a leather-worker; her work was steady and unornamented and nobody who bought a belt or saddle from her ever guessed she had once forged a royal genealogy that fooled a kingdom. <b>No descendants.</b> She died of old age in <b>2520 MR</b> — twelve years before present — and is buried in the village graveyard under the name Alayah Mero. Aldwin tends the grave.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Arrangement</div>
+          <div class="secret-card-title">The Sealed Letter</div>
+          <div class="secret-card-body">The understanding between Aldwin and the throne is <b>not a compact</b>. No binding oath, no Forseti-framework seal. A private mercy and a private obligation: Aelis's heirs know where he lives; they can call on him for emergencies large enough to need him; he will answer.<br><br>The arrangement passes monarch-to-heir as a <b>sealed letter</b>, opened only on coronation. The throne has called Aldwin <b>twice</b> in seventy-five years — once during a Nashavel border incursion in the 2480s, once during a Dark-Era artefact crisis in the 2510s. Both were severe enough to warrant a Demi-God. He answered. He fought. He went home afterward.</div>
+        </div>
+      </div>
+
+      <div class="secret-grid-2" style="margin-top: 18px;">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">Forseti's Silence</div>
+          <div class="secret-card-title">The Clergy Do Not Know</div>
+          <div class="secret-card-body">Aelis Marien Fyrstgilt's bloodline is — strictly — not Renauld's. The Kingdom's claim to legitimacy through that lineage is therefore a fiction. <b>Forseti's clergy do not know.</b> The Lograth sealed archives <b>do not</b> contain the truth — Aelis kept it in her own line precisely because she did not want the priesthood entangled in a political secret that was not theologically theirs to keep. The sealed letter on coronation passes monarch-to-heir; the priesthood reads only the compact.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">Why That Is Safe</div>
+          <div class="secret-card-title">The Framework Makes It Right</div>
+          <div class="secret-card-body">Forseti's law grounds royal legitimacy in <b>sworn compact with the governed</b>, not in bloodline. The compact Aelis swore with the Thousand at the founding is real and binding; her heirs renew it at every coronation. The lineage-fiction is <b>politically dangerous</b> (it would shatter the legitimacy myth) but <b>theologically irrelevant</b> — if a confessor were told the truth tomorrow, Forseti's framework would shrug at the bloodline question and ask whether the compact remains. It does. <b>The throne keeps the secret to prevent civil war, not to prevent excommunication.</b></div>
+        </div>
+      </div>
+
+      <div class="secret-coda">The Returning Blood was a myth before it was a forgery. The throne it raised is real anyway.</div>
     </div>
   </div>
 

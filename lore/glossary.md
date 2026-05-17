@@ -129,6 +129,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 
 **Zuzental (Law):**
 - **Thousand Kingdom** — modern English; houses Lograth (capital and city-state merged)
+  - **Quietbarrow** *(settlement within the Thousand Kingdom, not a sub-region)* — modern English compound (*quiet* + *barrow* "small hill / burial mound"). A hill-country village of ~200 souls in the eastern Thousand Kingdom, two days' ride off the nearest postal route. **GM truth:** founded in 2457 MR by the surviving Demon Demigod on the ruins of his original birth-village; he lives there as a hunter under his reclaimed birth name *Aldwin Mero*. Public belief: an ordinary rural village with no history worth recording. The name is deliberately anonymous-sounding — the village's only signal is that it has nothing to signal.
 - **Emerald Isles** — modern English. Island kingdom of Zuzental: three main forested islands within Talan's coastal waters (Northern Isle, Middle Isle, Southern Isle) plus the **Bridgelands** (a recently-acquired northeastern collection of smaller islands sitting partly in Hafra and partly in the Cloud Sea, connected to each other by spanning Magitech bridges). The Bridgelands are the canonical Sortalde cloudship landing point and host the standing Sortalde embassies on Talan. Capital is **Oathmoore**, on Middle Isle's western shore (see below).
 - **Oathmoore** — modern English with light Frae-style drift. Capital of the Emerald Isles, on Middle Isle's western shore, facing the Zuzental mainland across the strait. **A trilingual compound** that triple-reads: *oath* (sworn-compact / Forseti's framework) + *moor* (mooring, dock — the busy mainland-facing port) + an echo of *more* signifying "more oaths." The trailing silent *-e* is the drift that lets the third reading land — *Oathmoor* would carry only the first two. Houses the royal court, the kingdom's treasury, and the Concord-of-Courts liaison who handles formal Sortalde correspondence.
 - **The Watchstone** — modern English chronicler's by-name for **Northern Isle** — the northernmost emerald of the trio, set outward and watching the Kaosadaemi shore across the water. Jewel + law angle (the northern stone keeping the kingdom's chaos-facing watch).
@@ -254,6 +255,58 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Admirals of Flame and Frost** — Plain English. Iron Tide dual-command.
 - **Augments / Exemplars / The Apex Line / Ashborn / Harvested / Fleshwarps** — Plain English. The Menagerie's creation lines.
 - **Fleshwrights** — Plain English. Common-Empire slang for the Menagerie.
+
+**Thousand Kingdom — the noble-naming convention:**
+
+Full canon in `geography.md` — *Zuzental → Thousand Kingdom → Founding history*. The convention itself is **ancient** — older than the unified Thousand, older than House Fyrst itself; the small polities Renauld eventually unified each already kept registers in this form. Rumour holds it predates even Renauld's birth, though no Adventurer-Era scholar can demonstrate the claim. The system survived the Dark Era fracture: each fragment-kingdom kept registering, and at the 2457 MR re-founding Aelis Fyrstgilt did not invent the system, she merely re-took an old throne within it.
+
+- **Form.** Every noble surname is **[house prefix] + [ancestry suffix]**. House prefix is the dynastic identifier (Raven, Bel, Fyrst). Ancestry suffix is determined by the *individual's* ancestry, not the house's — so one household can produce siblings with different surnames if the children are different ancestries.
+- **Suffix at birth.** The herald-clerk records the suffix on the birth-register the day the child enters the world.
+- **Heir-prefix rule.** One parent is the designated **head of family** (matriarch or patriarch — gender, biology, and adoption are all irrelevant to the designation; only registration matters). The **main heir** carries the head's prefix; **non-heir children** carry the secondary parent's prefix. Everyone's suffix tracks their own ancestry.
+- **Heir-status mobility.** If the heir is replaced or disinherited, their **prefix changes** — they shift from the head's prefix to the secondary parent's prefix. Your legal surname literally rewrites when your position in the inheritance shifts. The country's most distinctive legal artefact: a disinherited noble walks out of the hall with a different surname than the one they walked in with.
+- **Bastard override.** A recognised bastard of any ancestry bears the suffix **-born** *instead of* their ancestry-suffix. Bastardy is the dominant marker; ancestry is overridden. Unrecognised bastards bear commoner names only.
+- **Royal elevation.** When a non-noble is elevated to the throne (as Aelis was), they **drop their commoner surname** and take the royal house prefix with their own ancestry suffix attached. Patronymic / matronymic middle is preserved.
+- **Scope.** Thousand Kingdom only. The Emerald Isles, Legea Empire, Order of Law, and Namur Republic each run their own conventions. This system is one of the Thousand's most-formalised Forseti-domain artefacts and a quiet point of pride.
+
+**Ancestry suffix register (the precedents the Lograth heralds maintain):**
+
+| Ancestry | Suffix | Example | Notes |
+|---|---|---|---|
+| Human | -mond | Ravenmond | Default of the human-majority Thousand |
+| Elf | -ford | Ravenford | |
+| Bastard (status, not ancestry) | -born | Ravenborn | Overrides whatever suffix the ancestry would have taken |
+| Dwarf | -stein | Ravenstein | Germanic "stone"; firm, hearth-rooted |
+| Halfling | -down | Ravendown | Small hill, small folk |
+| Gnome | -hollow | Ravenhollow | Fey-touched, hidden places |
+| Half-orc / Orc | -mark | Ravenmark | Germanic march/border; warrior-frontier |
+| Tiefling | -fell | Ravenfell | "Fallen"; infernally-touched |
+| Nephilim (good-aligned, e.g. Aasimar-style) | -gilt | Ravengilt | Gilded; celestial sheen. *House Fyrst's current monarch bears this suffix.* |
+| Goblinkin (goblin / hobgoblin) | -snarl | Ravensnarl | Sharp-edged, lupine |
+| Leshy | -bough | Ravenbough | Plant-folk |
+| Tengu / Aiuvarin | -wing | Ravenwing | Feathered |
+| Lizardfolk / Kobold / Iruxi | -scale | Ravenscale | Reptilian |
+| Catfolk | -prowl | Ravenprowl | Feline |
+| Fetchling | -dusk | Ravendusk | Shadow-Plane-touched |
+| Anadi | -weft | Ravenweft | Spider-folk, woven |
+| *Ancestry without a registered precedent* | -heim (default) | Ravenheim | "Home"; generic Germanic. Used until the Lograth heralds coin a specific suffix for that ancestry, which becomes the new precedent. |
+
+**Thousand Kingdom — commoner naming:**
+
+Commoners run a **three-name structure** by social default: *given + middle + family*. The middle name is matronymic or patronymic — the named parent's given name. The three-name form is a low-grade snobbery; in a country whose pre-unification history was a thousand small kingdoms full of pretend-nobility, commoners assert their parental lineage to flag that they too have a parent worth naming. **Two-name commoners** (just given + family) read as too rural to bother with the affectation, too principled to imitate nobility, or unwilling to claim a parent (orphan, foundling, deliberately reticent). Register is light Germanic / French: given names like *Aldwin, Bren, Edda, Greta, Halver, Iona, Jacques, Konrad, Marien, Marthe, Mira, Pieter, Renier, Solène, Tomas, Wenzel*; surnames like *Halder, Brask, Trent, Vaughn, Mero, Vesh, Marche, Rouland, Schein, Halt, Bourdin, Karth, Velder*.
+
+**Thousand Kingdom (founding figures):**
+
+Full narrative in `geography.md` — *Zuzental → Thousand Kingdom → Founding history*.
+
+- **Renauld Fyrstmond** — French *Renaud* + Germanic *-ld* hardening → **Renauld**. Drift: light, the French softness audible beneath the Germanic close. Personal name of **the Old King**, deep-history human founder of **House Fyrst**, who first unified the thousand small polities of the Thousand Kingdom into a single throne. Killed in the Dark Era by the Corrupted God's minions, along with every direct claimant of his line. House Fyrst sat claimless for centuries thereafter; the *Returning Blood* prophecy preserved the cult through the gap.
+- **House Fyrst** — the royal house of the Thousand Kingdom. Founded by Renauld Fyrstmond in deep history; extinct after the Dark Era murders; re-occupied in 2457 MR by Aelis Marien Fyrstgilt on the strength of a (forged) bloodline claim and a popular mandate. *Fyrst* itself reads as a Germanic-drifted "first," appropriate to the first royal house of the unified Thousand; the suffix on a Fyrst monarch tracks their personal ancestry (*Fyrstmond* for a human ruler, *Fyrstgilt* for a Nephilim, etc.).
+- **Garaion** — Basque *garaitu* (to win, to conquer) + *jaun* (lord) → *garaitu-jaun* → *garaijon* → **garaion**. "Conqueror-lord." The chronicle name of **the Demon Demigod, the Conqueror** — taken by the conscript-soldier Aldwin Mero when he turned to conquest in the late 2390s MR; the name he was known by for his sixty-year campaign and at the war-host's announcement of his death in 2457 MR. He has not spoken the name aloud since. Public belief: he died at Aelis Fyrstgilt's hand in the final battle. GM truth: he is alive, living quietly in Quietbarrow under his reclaimed birth name.
+- **Aldwin Mero** — Plain Thousand-Kingdom commoner two-name (Germanic given, Latinate-soft surname). The birth name of the man who became Garaion. A conscript-soldier whose village was destroyed and family killed in one of the early Adventurer-Era's small wars; he left the name behind with his dead and took it back up in 2457 MR when he returned to refound the village as Quietbarrow. The two-name form reads as rural-unpretentious — exactly the social signal a man with nothing to prove (and everything to hide) would carry. The world knows the name only as one of many that died with the original village. Known to Aelis Marien Fyrstgilt and her direct heirs (via sealed letter); known to no one else who matters.
+- **Aelis Marien Vaughn** — Pre-coronation commoner three-name. Given *Aelis* (French-stratum), matronymic middle *Marien* (daughter of Marien), commoner surname *Vaughn* (light Welsh-via-French drift). Adventurer-Era, Nephilim. The Nephilim heritage is real and birth-given; the *Fyrst* lineage the forgery attached to her was not. She figured out the forgery during the long resistance, well before the final battle.
+- **Aelis Marien Fyrstgilt** — Post-coronation royal form. *Vaughn* drops; the *Fyrst* prefix is taken up from the long-vacant royal house; the *-gilt* suffix tracks her Nephilim ancestry. *Marien* is preserved as matronymic middle (royal middles follow the same parental-name convention as commoners — Forseti-doctrinally, no rule should change just because the throne is involved). The first occupant of House Fyrst in centuries.
+- **Halver Konrad Trent** — Plain Thousand-Kingdom commoner three-name. Career soldier; one of Garaion's two most trusted generals. Senior, blade-and-strategy. **Died for real in the final battle of 2457 MR**; his armoured corpse, face wrecked, was produced the next morning as the proof of Garaion's death. **Buried as Garaion in a state funeral at Lograth** — the *Conqueror's tomb* holds Halver's bones, not the Demigod's. Halver's own death was never publicly recorded; war-archives list him only as *missing in the final week*, and any family he had was told he had died and his body had not been recovered.
+- **Iona Marthe Vesh** — Plain Thousand-Kingdom commoner three-name (matronymic *Marthe*). Garaion's second general. Intelligence and logistics; architect of the lineage-forgery operation. **Officially died at her mansion-and-lab** when Aelis's adventurer party raided it in the war's final months and burned her infrastructure to the ground — the public record reads that the heroes "put a stop to her evil machinations." GM truth: Aelis declined to strike when Iona stood ready to die; Iona confirmed Aldwin's true motives at the lab in the breath before her supposed end, and Aelis extracted her through one of the mansion's hidden passages before the fire took the building. Iona was smuggled to Quietbarrow after the final battle. She lived there for nearly six decades under the name **Alayah Mero** (see below); died of old age in **2520 MR**; buried in Quietbarrow as Alayah Mero. **No descendants.**
+- **Alayah Mero** — Plain Thousand-Kingdom commoner two-name. The Quietbarrow name of Iona Marthe Vesh from 2457 MR to her death in 2520 MR. Shared Aldwin's reclaimed surname for village cover; worked the village as a leather-worker through her six decades there. The village reads Alayah and Aldwin as kin in some form (late-life married, siblings, brother-and-sister-in-law) — the exact tie has never been pinned down by Quietbarrow gossip and Aldwin never volunteers. Known to Aelis Marien Fyrstgilt and her heirs (via the sealed letter); known to no one else who matters.
 
 **House Eisenhart (Order of Steam):**
 - **House Eisenhart** — Germanic-style compound (*Eisen* "iron" + *Hart* "hard"). Modern dwarven noble name. Fits the Order of Steam's modern stratum.
