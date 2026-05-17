@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Bound Gods &amp; Beings — Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-a.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<script defer src="/assets/site-starfield.js"></script>
+<style>
+  /* Per-being card — compact info-card variant */
+  .being-card { position: relative; padding: 18px 20px; }
+  .being-card .being-pill {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem; letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 3px 9px;
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+  .being-card .being-pill.major { color: #e8d080; border-color: rgba(232,208,128,0.4); }
+  .being-card .being-pill.minor { color: #c8a878; border-color: rgba(200,168,120,0.35); }
+  .being-card .being-pill.plane { color: #a890c8; border-color: rgba(168,144,200,0.35); }
+  .being-card .being-name {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--accent, var(--gold-bright));
+    font-size: 1.35rem;
+    margin: 2px 0 4px;
+  }
+  .being-card .being-byline {
+    font-style: italic; color: var(--text-dim);
+    font-size: 0.88rem; margin-bottom: 12px;
+  }
+  .being-card .being-stats {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 6px 14px;
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+  .being-card .stat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-top: 3px;
+  }
+  .being-card .stat-val { color: var(--text); line-height: 1.55; }
+  .being-card .being-body { font-size: 0.95rem; line-height: 1.7; color: var(--text); }
+  .being-card .being-body p { margin: 6px 0; }
+  .being-card .being-note {
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px solid var(--divider);
+    font-size: 0.85rem; font-style: italic; color: var(--text-dim);
+  }
+  .b-bikiargi  { --accent: #a8b8e0; }
+  .b-zaharsuge { --accent: #80b890; }
+  .b-epairima  { --accent: #c8a8d0; }
+  .b-betibizi  { --accent: #8a7090; }
+
+  /* Reference tables — used by the demon and devil sections */
+  .ref-table { width: 100%; max-width: 920px; margin: 14px auto 18px; border-collapse: collapse; font-size: 0.9rem; }
+  .ref-table th, .ref-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--divider); vertical-align: top; }
+  .ref-table th { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; padding-top: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(200,168,74,0.3); }
+  .ref-table td b { color: var(--gold-bright); font-weight: 600; }
+  .ref-table .tbd { color: var(--text-dim); font-style: italic; }
+  .ref-table tr:last-child td { border-bottom: none; }
+  .ref-table tr:hover { background: rgba(200,168,74,0.04); }
+</style>
+</head>
+<body data-page="non-bound-gods">
+
+<div class="starfield" id="starfield"></div>
+
+<div class="header">
+  <span class="header-ornament">⸻ Beyond the Thirteen ⸻</span>
+  <div class="header-title">Non-Bound Gods &amp; Beings</div>
+  <div class="header-sub">Layer 3 Residents · Virtue Demons · Sin Devils</div>
+  <div class="header-flavor">
+    The thirteen Bound Gods reside on the Material Plane under the Gods' Law. Beyond them, divinity continues: Layer-3 gods whose portfolios reach Talan from across the veil, virtue-demons that perversion-mirror the moral catalogue, sin-devils that embody the sins themselves. They are not bound by the Compact; mortal clerics on Talan still channel through several of them.
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Named Non-Bound Gods -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Named Non-Bound Gods<div class="gdiv-sublabel">Layer 3 Residents · Belief-Shaped · Sancta-less on Talan</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>The Layer 3 (Postlife) layer holds many gods beyond the Thirteen. Most go unnamed in Talanese sources — their portfolios are unspecific, their cults are local, their pantheons unmapped. The four below are the named ones whose portfolios appear in clerical practice on Talan: a Major God of the moon, two Minor Gods of indigenous lineage and soul-routing, and a Minor God of Undeath who was once mortal himself. All four are <b>belief-shaped</b> the same way the Ascendant Six are — they take their form from mortal worship and folk practice.</p>
+    <p>None maintains a sanctum on Talan. None walks the Material Plane. Faith reaches them across the veil; they answer through grants and dreams.</p>
+  </div>
+
+  <div class="info-grid">
+
+    <div class="info-card being-card b-bikiargi">
+      <span class="being-pill major">Major God</span><span class="being-pill plane">Diyu — Layer 3 · Neutral</span>
+      <div class="being-name">Bikiargi</div>
+      <div class="being-byline">The Twins — Moon · Tides · Lunar Omens · Dreams</div>
+      <div class="being-stats">
+        <div class="stat-label">Aspects</div><div class="stat-val">Moonlight · Tides · Lunar Omens · The Dream-Currents · Lovers' Meetings · Hunts in the Dark</div>
+        <div class="stat-label">Worshippers</div><div class="stat-val">Sailors, navigators, witches, lovers, the <a href="/off-continent/red-empire.html">Iron Tide</a>'s astronomers, midwives (births tracked by moon-phase), nocturnal hunters</div>
+        <div class="stat-label">Etymology</div><div class="stat-val">Basque <i>biki</i> (twin) + <i>argi</i> (light) → <i>bikiargi</i> "the twin-light"</div>
+      </div>
+      <div class="being-body">
+        <p><b>Two beings, one portfolio.</b> Always depicted as a paired figure, never alone. The two share the lunar portfolio absolutely; mortals praying for moon-tied outcomes invoke "Bikiargi," not one twin or the other.</p>
+        <p>The <b>Bright Twin</b> is benevolent — calm tides, safe roads under moonlight, true dreams, lovers reunited, the moonlit hunt that comes home well-fed. The <b>Dark Twin</b> is malevolent — ill omens, hunting weather for what shouldn't be hunted, false dreams, sleepwalkers led to cliffs, the moonlit hunt that becomes the hunted.</p>
+        <p>Together they are neutral, which is why they reside in <b>Diyu</b>. Mortals who try to invoke only one inevitably draw both. The Twins do not separate. Iron Tide ships habitually keep separate shrines to each twin.</p>
+      </div>
+      <div class="being-note">Mortals have prayed to the two moons (Veyru and Calune) for as long as there have been mortals. The prayer made the gods — same mechanism as the Ascendant Six writ small.</div>
+    </div>
+
+    <div class="info-card being-card b-zaharsuge">
+      <span class="being-pill minor">Minor God</span><span class="being-pill plane">Diyu — Layer 3 · Neutral</span>
+      <div class="being-name">Zaharsuge</div>
+      <div class="being-byline">The Eldest — Wyrmkin · Indigenous Serpents · Primal Wyrms</div>
+      <div class="being-stats">
+        <div class="stat-label">Aspects</div><div class="stat-val">Indigenous serpents, drakes, basilisks, primal wyrms · the deep-earth slither · the pre-Dragon lineage of Talan's scaled beasts</div>
+        <div class="stat-label">Worshippers</div><div class="stat-val">Dragonets above all (his direct ancestral children); also lizardfolk, nagaji, naga ancestry, some kobolds (producing a religious schism with Komo's kobold-incarnation lore), small dragon-blood cults that reject Dragon's Reach's authority claim</div>
+        <div class="stat-label">Etymology</div><div class="stat-val">Basque <i>suge</i> (serpent) + <i>zahar</i> (ancient) → <i>zahar-suge</i> "the ancient one of serpents"</div>
+      </div>
+      <div class="being-body">
+        <p><b>Predates the alien Dragons</b> by ages. Zaharsuge's wyrm-line was the established serpentine intelligence of Talan when the Dragon mothership crashed during the Gods' Era. The alien Dragons' <i>"we are the true wyrm-lords"</i> claim is, on Talan, theologically wrong — Zaharsuge was here first, and many of his descendants know it.</p>
+        <p>Sancta-less on Talan, but his shadow falls heaviest in the upper <b>Darklands</b> — the Sentinel Dwarves who patrol there may be unknowingly guarding his cultic sites. His living lineage on Talan are the <a href="/talan/bestiary.html">Dragonets</a>, small dragonlike sapients concentrated in the upper Darklands and the Basogur Jungle.</p>
+      </div>
+      <div class="being-note">Theological hook: indigenous wyrm-cultists have a grievance against the Dragons of <a href="/talan/domains/sumendar/dragons-reach.html">Dragon's Reach</a>. Many Dragonets refuse to recognise Dragon's Reach as having authority over wyrmkind on Talan. Untested, simmering.</div>
+    </div>
+
+    <div class="info-card being-card b-epairima">
+      <span class="being-pill minor">Minor God</span><span class="being-pill plane">Diyu — Layer 3 · Neutral</span>
+      <div class="being-name">Epairima</div>
+      <div class="being-byline">The Judge of Souls — Verdict · Weighing · Sorting</div>
+      <div class="being-stats">
+        <div class="stat-label">Aspects</div><div class="stat-val">Verdict · Weighing · Sorting · Second-Chance Allocation · Soul-Routing</div>
+        <div class="stat-label">Worshippers</div><div class="stat-val">The bereaved, the dying, executioners, jurists who want their work to outlast them, anyone whose loved one died unclaimed</div>
+        <div class="stat-label">Etymology</div><div class="stat-val">Basque <i>epai</i> (judgment) + <i>arima</i> (soul) → <i>epai-arima</i> "soul-judgment"</div>
+      </div>
+      <div class="being-body">
+        <p>Resides in <b>Diyu</b> — specifically in <b>Dauria, the City of the Dead</b>, where her court is the central feature. Every soul that reaches Dauria unclaimed (no god has called them onward) is weighed at her court. Her verdict routes the soul: onward to a claimant god, onward to the Wellspring, or — rarely — back to the layer above for a second pass at the life they failed.</p>
+        <p>Not the only judge in existence, but she is the <i>named</i> judge whose office is invoked in mortal funerary rites on Talan. Other judges presumably operate elsewhere; Talanese clergy invoke Epairima by name.</p>
+      </div>
+    </div>
+
+    <div class="info-card being-card b-betibizi">
+      <span class="being-pill minor">Minor God</span><span class="being-pill plane">Abyss — Layer 3 · Evil</span>
+      <div class="being-name">Betibizi</div>
+      <div class="being-byline">The Self-Ascended — Undeath · The Original Integration-Procedure Holder</div>
+      <div class="being-stats">
+        <div class="stat-label">Aspects</div><div class="stat-val">Undeath · Refusal of Death · The Prolongation of the Self Past Its Natural Span · Necromantic Continuity</div>
+        <div class="stat-label">Worshippers</div><div class="stat-val">Necromantic underground · ascension-cultists · surviving <a href="/talan/domains/lioaru/lost-kingdom.html">Storveldi-Denbora-descended</a> lineages (most of whom inherited the false Elden-blood claim and don't know whose godhood they're invoking) · the desperate ill · those who refuse to grieve</div>
+        <div class="stat-label">Etymology</div><div class="stat-val">Basque <i>betiko</i> (eternal/forever) + <i>bizi</i> (life, alive) → <i>betiko-bizi</i> "eternal life." <b>Self-named</b> at the moment of ascension — the name is a declaration, not a gift.</div>
+      </div>
+      <div class="being-body">
+        <p><b>Origin: he was once mortal.</b> A member of the Storveldi Denbora's ascended ruling class who survived the Week of Crimson Rain's annihilation of his homeland (the cursed-ground scar now called the <a href="/talan/domains/lioaru/lost-kingdom.html">Lost Kingdom</a>) and used the <b>integration procedure</b> on himself in the aftermath, ascending to Minor God status. He fled Talan for Abyss and has not returned.</p>
+        <p>He is the <b>original holder of the integration procedure</b> — the technique for imbuing a found shard of divinity into a mortal's own divine essence — and the reason it persists at all. Fragments persist on Talan among his cult and the Azarketi-descended lineages; reconstructing the complete procedure is the largest unsolved capability gap on Talan.</p>
+        <p>The Blackened Lands' natural-born <b>Skeleton</b> ancestry and the region's ambient necromantic resonance trace spiritually back to Betibizi, though the proximate cause is the cursed ground itself (the divine retaliation that destroyed his civilisation). Necromancers on Talan who reach for <i>life-after-life</i> magic are reaching for his domain, whether they know his name or not.</p>
+        <p><b>Theological opposition:</b> Betibizi stands in direct theological opposition to <b>Epairima</b>. She sorts and releases the dead; he keeps them, recursively, against the natural flow. Their portfolios were not designed to be at odds — but they are.</p>
+      </div>
+      <div class="being-note">Grants the <b>Undeath</b> domain to clerics on Talan. Full integration-procedure context on <a href="/magic.html">magic.html → Mortal Ascent Ladder</a>; full Storveldi history on <a href="/talan/history.html">history.html → Gods' Era</a>.</div>
+    </div>
+
+  </div>
+
+  <div class="info-card" style="max-width: 940px; margin: 22px auto 0; padding: 18px 22px; border-left: 3px solid #c8a84a;">
+    <div style="font-family:'Cinzel',serif; font-size:0.78rem; letter-spacing:0.18em; color:#f0d080; text-transform:uppercase; margin-bottom:8px;">Open Thread — The Sun</div>
+    <p style="margin:0; font-size:0.95rem; color:var(--text); line-height:1.7;">Mortals have prayed to <b>Solyra</b> for as long as there have been mortals. The same mechanism that birthed Bikiargi from prayers to the two moons should plausibly have produced a sun-deity from prayers to the sun. Such a god is not yet named or detailed in canon — they may exist as a Major God of the Sun (paired-mate to the Twins by symmetry), may exist as a single deity with no twinship, or may have been absorbed by Iro's Light portfolio long enough ago that the distinct sun-god dissolved back into the Wellspring. <i>Canon-pending.</i></p>
+  </div>
+
+  <!-- Virtue Demons -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Virtue Demons — The Aristotelian Pattern<div class="gdiv-sublabel">One Demon per Virtue's Corruption · Excess or Deficiency</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>Talan's demons follow a coherent theological pattern that mortal scholars have catalogued: <b>each demon is the personification of a virtue's corruption.</b> Following the classical doctrine of the mean, every virtue sits between two vices — one of <b>excess</b>, one of <b>deficiency</b>. A demon embodies one of those two extremes.</p>
+    <p>This is why the demons are not random or symmetric: they are exactly as numerous as there are virtue/extreme pairs in the Talanese moral tradition, and they map cleanly to those pairs.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead><tr><th>Virtue</th><th>Vice of Excess</th><th>Vice of Deficiency</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ambition</b></td><td>Empty Vanity</td><td>Undue Humility</td></tr>
+      <tr><td><b>Conscientiousness</b></td><td>Depravity</td><td>Deferential Submission</td></tr>
+      <tr><td><b>Courage</b></td><td>Rashness</td><td>Cowardice</td></tr>
+      <tr><td><b>Friendliness</b></td><td>Obsequiousness</td><td>Cantankerousness</td></tr>
+      <tr><td><b>Industriousness</b></td><td>Single-mindedness</td><td>Laziness</td></tr>
+      <tr><td><b>Liberality</b></td><td>Prodigality</td><td>Illiberality · Meanness</td></tr>
+      <tr><td><b>Magnanimity</b></td><td>Vanity</td><td>Pusillanimity</td></tr>
+      <tr><td><b>Modesty</b></td><td>Shamelessness</td><td>Shyness</td></tr>
+      <tr><td><b>Patience</b></td><td>Unirascibility</td><td>Irascibility</td></tr>
+      <tr><td><b>Spirit</b></td><td>Boastfulness</td><td>Melancholy</td></tr>
+      <tr><td><b>Temperance</b></td><td>Asceticism</td><td>Addiction</td></tr>
+      <tr><td><b>Truthfulness</b></td><td>Boastfulness</td><td>Mock Modesty</td></tr>
+      <tr><td><b>Wittiness</b></td><td>Buffoonery</td><td>Boorishness</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-grid">
+    <div class="info-card" style="--card-accent: #a890c8;">
+      <div class="info-card-title">Named so far · Muiral the Misshapen</div>
+      <div class="info-card-body">The only individually named virtue demon in canon. <b>Muiral</b> is a Modesty-line demon (Shamelessness / Shyness pair) and grants the <b>Abomination</b> domain — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the <i>misshapen</i>. Muiral appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. The rest of the virtue lines have demons too — they just have not yet named themselves.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">Implications</div>
+      <div class="info-card-body">Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones — the Cowardice-demon and the Rashness-demon both pervert Courage, and both have reasons to hate each other. Mortal philosophers who study the pattern can predict demon behaviour; a handful of Enki-aligned exorcists work by reading the demon, identifying its line, then deploying the <i>opposite</i> extreme to push it off-pattern.</div>
+    </div>
+  </div>
+
+  <!-- Sin Devils -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Sin Devils — The Seven<div class="gdiv-sublabel">One Devil-Lord per Sin · Seven Lords, No More, No Less</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>The devils of Talan are organised on a simpler pattern: <b>the Seven Sins.</b> Unlike the virtue demons (which corrupt something good), sin devils embody the sins themselves directly. One canonical devil-lord per sin — seven sins, seven lords. The structural pattern is locked; the names of the lords are mostly canon-pending.</p>
+    <p>Three sin-devils are bound to grantable cleric domains on Talan via the <a href="/magic.html">Domains Outside the Thirteen</a> mapping. The other four grantable domains, and all seven devil-lord names, remain open.</p>
+  </div>
+
+  <table class="ref-table">
+    <thead><tr><th>Sin</th><th>Devil-Lord</th><th>Grantable Domain</th></tr></thead>
+    <tbody>
+      <tr><td><b>Envy</b></td><td class="tbd">(unnamed)</td><td class="tbd">canon-pending</td></tr>
+      <tr><td><b>Gluttony</b></td><td class="tbd">(unnamed)</td><td><b>Indulgence</b></td></tr>
+      <tr><td><b>Greed</b></td><td class="tbd">(unnamed)</td><td class="tbd">canon-pending</td></tr>
+      <tr><td><b>Lust</b></td><td class="tbd">(unnamed)</td><td class="tbd">canon-pending</td></tr>
+      <tr><td><b>Pride</b></td><td class="tbd">(unnamed)</td><td><b>Tyranny</b></td></tr>
+      <tr><td><b>Sloth</b></td><td class="tbd">(unnamed)</td><td class="tbd">canon-pending</td></tr>
+      <tr><td><b>Wrath</b></td><td class="tbd">(unnamed)</td><td><b>Destruction</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-card" style="max-width: 940px; margin: 18px auto 0; padding: 18px 22px;">
+    <div class="info-card-title">Demon &amp; Devil — the Talan Distinction</div>
+    <div class="info-card-body">
+      <p><b>Demons corrupt a virtue.</b> Their existence is parasitic on the virtue line — perversions of what could have been good.</p>
+      <p><b>Devils embody a sin.</b> Their existence is foundational — the sin given form.</p>
+      <p><b>Both are redeemable in principle.</b> The virtue line still runs through every demon, and every devil retains the seed of the contrary virtue. Redemption work is rare and brutally difficult, but it is canonically <i>possible</i> — no being on Talan is fixed beyond change.</p>
+      <p>Demons proliferate around mortals who have already half-corrupted a virtue. Devils proliferate around mortals who choose a sin.</p>
+    </div>
+  </div>
+
+  <!-- Cross-References -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Continue Reading<div class="gdiv-sublabel">Where these beings appear elsewhere on the site</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p><a href="/grand-gods.html"><b>The 13 Bound Gods →</b></a> · The deities who walk the Material Plane under the Compact. Sibling page to this one.</p>
+    <p><a href="/magic.html"><b>Magic &amp; Faith → Domains Outside the Thirteen →</b></a> · The cleric-domain table mapping each grantable domain to its in-world granter, including all the demons and devils listed above plus Betibizi for Undeath.</p>
+    <p><a href="/talan/the-binding.html"><b>The Binding →</b></a> · The Corrupted God (the Elden, fused with the Devourer) and his Nine Generals of Corruption — a different cosmological class from the Layer-3 gods and the demons/devils above, but also non-bound. The Generals serve the Corrupted God and command the Nine Dungeons.</p>
+    <p><a href="/talan/factions/factions.html"><b>Factions → Non-Bound God Faiths →</b></a> · The <b>Divine Faith</b> of the Legea Empire — a Layer-3 deity not among the Thirteen whose demigod scion rules a sub-region of Zuzental. Specific plane (Elysium, Diyu, or Abyss) and identity canon-pending.</p>
+    <p><a href="/talan/bestiary.html"><b>Bestiary &amp; Ancestries →</b></a> · Heritages descended from these beings — Nephilim (any divine or fiendish source), and the various heritages from the Thirteen, the elemental planes, and the Life-Layer planes.</p>
+  </div>
+
+  <div class="footer-note">TYRNARRA · NON-BOUND GODS &amp; BEINGS · BEYOND THE THIRTEEN</div>
+
+</div>
+
+</body>
+</html>

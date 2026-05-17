@@ -131,8 +131,9 @@
       '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/index.html" data-page="cosmology">World &amp; Cosmos</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/grand-gods.html"    data-page="gods">The 13 Bound Gods</a></li>',
-      '      <li><a href="/magic.html"         data-page="magic">Magic &amp; Faith</a></li>',
+      '      <li><a href="/grand-gods.html"      data-page="gods">The 13 Bound Gods</a></li>',
+      '      <li><a href="/non-bound-gods.html"  data-page="non-bound-gods">Non-Bound Gods &amp; Beings</a></li>',
+      '      <li><a href="/magic.html"           data-page="magic">Magic &amp; Faith</a></li>',
       '    </ul>',
       '  </div>',
 
