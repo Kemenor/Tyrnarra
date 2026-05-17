@@ -17,6 +17,22 @@
 (function () {
   'use strict';
 
+  // ── Talan-level pages (with collapsible children) ─────────────
+  // Same accordion pattern as DOMAINS below. Leaf pages have
+  // empty children arrays; pages with children get a chevron and
+  // expand on click (or auto-expand when on the parent or a child).
+  var TALAN_PAGES = [
+    { slug: 'talan',       label: 'Continent Overview',     href: '/talan/talan.html',       children: [] },
+    { slug: 'history',     label: 'History &amp; Eras',     href: '/talan/history.html',     children: [] },
+    { slug: 'the-binding', label: 'The Binding',            href: '/talan/the-binding.html', children: [
+      { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/talan/the-binding/hollow-of-ten-thousand-threads.html' }
+    ]},
+    { slug: 'bestiary',    label: 'Bestiary &amp; Ancestries', href: '/talan/bestiary.html', children: [] },
+    { slug: 'historical',  label: 'Historical · The Fallen',   href: '/talan/historical/historical.html', children: [
+      { slug: 'golden-empire', label: 'The Golden Empire', href: '/talan/historical/golden-empire.html' }
+    ]}
+  ];
+
   // ── Domain & sub-region structure ─────────────────────────────
   var DOMAINS = [
     { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [] },
@@ -50,14 +66,15 @@
     { slug: 'askamira', label: 'Askamira · Freedom',  href: '/talan/domains/askamira/askamira.html', children: [] }
   ];
 
-  // ── Determine which domain (if any) should auto-expand ──────
-  // Expands when the current page is either the domain itself
+  // ── Determine which row (if any) should auto-expand ─────────
+  // Expands when the current page is either the parent row itself
   // or one of its nested children. Missing the chevron is then
   // not a punishment — you can still see what's underneath.
-  function findExpandedDomainSlug(currentPage) {
+  // Works for any accordion array (Talan, Domains, future blocks).
+  function findExpandedSlug(arr, currentPage) {
     if (!currentPage) return null;
-    for (var i = 0; i < DOMAINS.length; i++) {
-      var d = DOMAINS[i];
+    for (var i = 0; i < arr.length; i++) {
+      var d = arr[i];
       if (d.slug === currentPage) return d.slug;
       for (var j = 0; j < d.children.length; j++) {
         if (d.children[j].slug === currentPage) return d.slug;
@@ -67,13 +84,16 @@
   }
 
   // ── HTML builders ─────────────────────────────────────────────
-  function buildDomainRow(d, expandSlug) {
+  // Builds a single accordion row with optional chevron + sublist.
+  // Used by both the Talan section and the Domains section — they
+  // share the same .nav-domain CSS, so the styling is consistent.
+  function buildAccordionRow(d, expandSlug) {
     var hasChildren = d.children && d.children.length > 0;
     var isExpanded  = hasChildren && d.slug === expandSlug;
     var liClass     = 'nav-domain' + (hasChildren ? ' has-children' : '') + (isExpanded ? ' expanded' : '');
 
     var chevron = hasChildren
-      ? '<button class="nav-expand" data-domain="' + d.slug + '" aria-label="Toggle ' + d.label + ' sub-regions" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" type="button">▸</button>'
+      ? '<button class="nav-expand" data-domain="' + d.slug + '" aria-label="Toggle ' + d.label + ' children" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" type="button">▸</button>'
       : '';
 
     var sublist = '';
@@ -96,8 +116,10 @@
   }
 
   function buildNavHtml(currentPage) {
-    var expandSlug = findExpandedDomainSlug(currentPage);
-    var domainItems = DOMAINS.map(function (d) { return buildDomainRow(d, expandSlug); }).join('\n');
+    var talanExpand  = findExpandedSlug(TALAN_PAGES, currentPage);
+    var domainExpand = findExpandedSlug(DOMAINS,     currentPage);
+    var talanItems   = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpand); }).join('\n');
+    var domainItems  = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpand); }).join('\n');
 
     return [
       '<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>',
@@ -117,11 +139,7 @@
       '  <div class="nav-section">',
       '    <div class="nav-section-label">Talan</div>',
       '    <ul class="nav-list">',
-      '      <li><a href="/talan/talan.html"       data-page="talan">Continent Overview</a></li>',
-      '      <li><a href="/talan/history.html"     data-page="history">History &amp; Eras</a></li>',
-      '      <li><a href="/talan/the-binding.html" data-page="the-binding">The Binding</a></li>',
-      '      <li style="margin-left:16px;"><a href="/talan/the-binding/hollow-of-ten-thousand-threads.html" data-page="hollow-of-ten-thousand-threads" style="font-size:0.85em;opacity:0.9;">↳ Hollow of Ten Thousand Threads</a></li>',
-      '      <li><a href="/talan/bestiary.html"    data-page="bestiary">Bestiary &amp; Ancestries</a></li>',
+           talanItems,
       '    </ul>',
       '  </div>',
 

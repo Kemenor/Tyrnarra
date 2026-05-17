@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Golden Empire — Historical · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #d4a01a; }
+
+  /* Achievement cards — the Empire's tangible works */
+  .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .work-card {
+    background: rgba(28,22,10,0.55);
+    border-left: 4px solid var(--domain-accent);
+    padding: 14px 16px;
+    border-radius: 4px;
+  }
+  .work-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .work-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
+  .work-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
+
+  /* Mining-and-Fall side-by-side */
+  .arc-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 22px auto; max-width: 1000px; }
+  @media (max-width: 800px) { .arc-pair { grid-template-columns: 1fr; } }
+  .arc-block {
+    background: rgba(20,16,10,0.55);
+    border-left: 4px solid var(--arc-color, var(--domain-accent));
+    border-radius: 0 4px 4px 0;
+    padding: 16px 18px;
+  }
+  .arc-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--arc-color, var(--gold-bright)); text-transform: uppercase; margin-bottom: 4px; }
+  .arc-name { font-family: 'Uncial Antiqua', cursive; color: var(--arc-color, var(--gold-bright)); font-size: 1.3rem; margin-bottom: 8px; }
+  .arc-tagline { font-family: 'Crimson Pro', serif; font-style: italic; color: var(--parch-dim); font-size: 0.88rem; margin-bottom: 10px; }
+  .arc-block p { margin: 8px 0; font-size: 0.93rem; line-height: 1.6; }
+  .arc-mining { --arc-color: #d4a01a; }
+  .arc-fall   { --arc-color: #8a3a2a; }
+
+  /* Inline TBD marker — same convention as Thousand Kingdom */
+  .tbd {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #d4c098;
+    background: rgba(200,168,40,0.16);
+    border: 1px solid rgba(212,192,152,0.32);
+    padding: 1px 7px;
+    border-radius: 8px;
+    vertical-align: 0.05em;
+    margin: 0 2px;
+  }
+
+  /* Open in Canon panel — explicit TBD inventory */
+  .open-canon {
+    background: rgba(20,16,8,0.45);
+    border: 1px dashed rgba(212,192,152,0.4);
+    border-radius: 4px;
+    padding: 14px 20px;
+    margin: 22px auto;
+    max-width: 1000px;
+  }
+  .open-canon h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+  }
+  .open-canon .sub {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--parch-dim);
+    margin-bottom: 8px;
+  }
+  .open-canon ol {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+    font-size: 0.93rem;
+    color: var(--text);
+  }
+  .open-canon li { margin: 4px 0; }
+  .open-canon li b { color: var(--gold-bright); }
+</style>
+</head>
+<body data-page="golden-empire">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/historical/historical.html">Historical</a><span class="sep">›</span><span>The Golden Empire</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Golden Empire</div>
+    <div class="page-subtitle">560 MR – 1325 MR · Dwarven · The Largest Mortal Empire in Recorded History</div>
+    <div class="page-flavor">"The roads were paved in dwarvish, the laws were drafted in dwarvish, the coins were stamped in dwarvish. The Empire is dead. The script is still on the milestones."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Dates</dt><dd><b>560 MR – 1325 MR.</b> Seven hundred and sixty-five years of unbroken Imperial rule. The collapse, when it came, took four years.</dd>
+    <dt>Origin</dt><dd>The southern heartlands of Talan. The founding kingdoms unified under one banner during the early <a href="/talan/history.html">Golden Era</a>, then expanded outward across the post-Lost-Era patchwork.</dd>
+    <dt>People</dt><dd><b>Dwarven empire</b> — dwarves held the throne, the great houses, the central bureaucracy, and the scholarly traditions throughout. Non-dwarven subjects (humans, elves, halflings, gnomes, and the wider Talanese ancestry mix) participated fully as citizens and provincial nobility, but the Empire's institutional centre of gravity was dwarven.</dd>
+    <dt>Scope at peak</dt><dd><b>Approximately 70% of Talan.</b> By every measure that survives, the largest mortal empire in recorded history. The non-Imperial 30% was the wild north, the chaos-touched Basogur belt, and the still-fractious kingdoms of what is now <a href="/talan/domains/zuzental/zuzental.html">Zuzental</a>'s far east.</dd>
+    <dt>Capital</dt><dd>The Imperial capital sat in the southern heartlands, the city from which the founding dynasty had risen. <span class="tbd">Name TBD</span>. It was overrun in the breach years and is now a Dark-Era ruin somewhere in modern <a href="/talan/domains/sumendar/sumendar.html">Sumendar</a>'s outer reaches; its exact site is not catalogued.</dd>
+    <dt>Government</dt><dd>Imperial monarchy under a single sovereign — <b>the Golden Emperor</b> <span class="tbd">Name TBD</span> — supported by the Imperial Court, the great dwarven houses, and a continent-spanning bureaucracy. The Emperor's reign extended remarkably long; later chronicles dispute whether one ruler or a tightly continuous line. The dynastic name is <span class="tbd">TBD</span>.</dd>
+    <dt>Language</dt><dd>Imperial Dwarvish — the scholarly and administrative standard of the age. <b>Fossilised in modern Talanese place-names</b> across the southern half of the continent; many old toponyms are Imperial Dwarvish drifted past recognition.</dd>
+    <dt>Character</dt><dd>
+      <i>Consistent rule · common law · continental roads · the cultural foundation modern empires still trace themselves to</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Dwarven Empire</span><span class="pill">Common-Law Spine</span><span class="pill">Imperial Roads</span><span class="pill">Continental Scale</span><span class="pill">Collapsed 1325 MR</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE EMPIRE'S SWEEP
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Empire's Sweep</h2>
+  <div class="prose">
+    <p>The Empire rose out of the Lost Era's last two centuries — when the divine infrastructure had finally finished collapsing and the surviving mortal kingdoms had begun, painfully, to organise themselves. The southern dwarven founding-kingdom <span class="tbd">Founding-state name TBD</span> was the seed. Its early century of consolidation followed the playbook of every other post-Crimson-Rain unifier: marriages, treaties, occasional well-judged wars. What was unusual was that <b>this one kept working.</b> The unifications held. The treaties survived their signatories. The wars ended in actually-stable settlements.</p>
+
+    <p>By 700 MR the Empire had absorbed most of what is now <a href="/talan/domains/sumendar/sumendar.html">Sumendar</a>, <a href="/talan/domains/brauogi/brauogi.html">Brauogi</a>, and <a href="/talan/domains/ezkudon/ezkudon.html">Ezkudon</a>. By 900 MR it had pushed north into <a href="/talan/domains/lautara/lautara.html">Lautara</a> and west into <a href="/talan/domains/lioaru/lioaru.html">Lioaru</a> (carefully — the Blackened Lands sat at the western edge of Imperial reach, and no Imperial administrator who served there left a tidy report on the experience). By 1100 MR it touched the southern shore of <a href="/talan/talan.html">Midarra</a> at most points and held the major southern islands of the inner sea. At its peak it controlled approximately seventy per cent of the continent — every region, in fact, except the far north (still fractious), the central Basogur belt (un-pacifiable then as now), and the remote eastern reaches that would later become the Emerald Isles and the Thousand Kingdom's founding sub-region.</p>
+
+    <p>The Empire's age, considered as an Imperial unit rather than as a chronicle of monarchs, ran <b>seven hundred and sixty-five years.</b> Five normal mortal empires would have been born and ended in that span. The Golden Empire just kept going.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE EMPEROR — public account
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Emperor</h2>
+  <div class="prose">
+    <p>Every account of the Empire's success comes back to its sovereign. Public history records <b>the Golden Emperor</b> <span class="tbd">Personal name TBD</span> as a dwarven monarch of extraordinary discipline, strategic intelligence, and physical longevity — a ruler whose institutional foundations his successors merely maintained, and which then proved durable enough to outlast any of them. The longevity is the part that strains the chronicles: by the standards of dwarven lifespan (already long), the Emperor's recorded reign requires either a remarkable single individual, or — as most academic histories now hold — a tightly continuous line whose later kings were named, raised, and presented in the founder's image so deliberately that the chronicle-record blurs together.</p>
+
+    <p>The chroniclers of the time did not, themselves, blur. They wrote of one Emperor, in one voice, across centuries. The standard modern reading is that the chronicle tradition was uniformly under-loyal to the throne and reported as if the dynasty were a single ruler because that was what the dynasty wanted recorded. The minority reading is that the chronicles were correct. Neither reading is comfortable.</p>
+
+    <p>The Imperial court was disciplined, formal, and conservative. The Emperor's directives travelled by Imperial courier-network (the Empire's road infrastructure was originally a military-supply asset; its civilian and scholarly uses are downstream). The provincial governors were dwarven by default and non-dwarven by careful exception; the great houses rotated through court appointments on schedules so predictable that scribes in distant provinces planned their own careers around them. The Empire's bureaucracy was the most consistent administrative apparatus the continent has ever supported.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE EMPIRE'S WORK — achievements
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Empire's Work</h2>
+  <div class="prose">
+    <p>Whatever the Empire was, it built. Four threads of that building survive in modern Talan in concrete, daily-use form — the institutional and material spine that most modern kingdoms inherited without quite remembering they did.</p>
+  </div>
+
+  <div class="work-grid">
+
+    <div class="work-card">
+      <div class="work-name">Common Law</div>
+      <div class="work-byline">The legal spine modern kingdoms inherited</div>
+      <div class="work-desc">Imperial common law was the first continental-scale legal framework since the Gods' Era. Property, contract, succession, the structure of formal oath — all codified, all enforceable across provincial borders, all written in Imperial Dwarvish. <b>Most modern Talanese kingdoms' legal codes descend from it</b>, including (with substantial Forseti-doctrinal evolution) the <a href="/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>'s framework. The Empire's law was not gentle but it was consistent, and consistency turned out to be the more important inheritance.</div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-name">The Roads</div>
+      <div class="work-byline">Imperial military-supply corridors, now civilian</div>
+      <div class="work-desc">The Imperial road network connected every provincial capital to the Imperial heartland by paved, milestone-marked, garrison-protected routes. After the collapse, the roads survived — milestones still in their original positions, stone bedding still under the soil. <b>Modern Magitrain routing follows the Imperial road network</b> in many southern stretches; the engineers found that the easiest places to lay new rail were the places the Empire had already cleared and levelled centuries earlier.</div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-name">The Script</div>
+      <div class="work-byline">Imperial Dwarvish, fossilised in modern place-names</div>
+      <div class="work-desc">For seven centuries the scholarly standard of the continent. Every educated Talanese mortal of the era could read it; every formal document of the Empire was written in it; every official place-name was Dwarvish. After the collapse, the script faded from active use within a century — but the <b>place-names did not move.</b> Modern Talanese maps are studded with Imperial Dwarvish toponyms drifted past recognition: villages, valleys, river-bends, milestones, abandoned watch-stations. The continent is still, in this small way, the Empire's.</div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-name">The Automatons</div>
+      <div class="work-byline">The Empire's failure that made an ancestry</div>
+      <div class="work-desc">The Empire's greatest scholars spent generations trying to recreate the <a href="/talan/bestiary.html">Android</a> ancestry of the Elden — synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: capable constructs of considerable skill, but not the living people the Elden had made. The Empire treated the Automaton programme as a near-success its scholars would eventually close; modern bestiary work treats the Automatons as their own people, distinct and complete. The Empire never resolved the question. Its scholars considered it haunting; the Automatons themselves did not.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE MINING PROGRAMME + THE FALL — side-by-side
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Mining Programme and the Fall</h2>
+  <div class="prose">
+    <p>In the last century of the Empire's recorded history, a vast new mining programme opened under Imperial backing in the deep southern strata — formally framed as commercial resource extraction, ambitious by any measure, ultimately catastrophic. The Empire's collapse runs through these two arcs back to back.</p>
+  </div>
+
+  <div class="arc-pair">
+
+    <div class="arc-block arc-mining">
+      <div class="arc-label">Late Imperial · 12th – 13th Centuries MR</div>
+      <div class="arc-name">The Mining Programme</div>
+      <div class="arc-tagline">"The depths held nothing the Empire could not catalogue."</div>
+      <p>Imperial mining had always been competent. The late-Empire programme was something else — a sustained push into the deep southern strata, at unprecedented scale, under direct Imperial backing rather than provincial or commercial sponsorship. The official framing was resource extraction: the Empire's metallurgy was the best on the continent and could absorb any quantity of ore the strata yielded. The programme's depth records, route maps, and resource allocations were unusually opaque even for Imperial standards.</p>
+      <p>Contemporary chroniclers noted the oddity. The Imperial bureaucracy did not respond to the questions. Documents in the dwarven imperial archives — which would have settled the question — did not survive the four years that followed.</p>
+    </div>
+
+    <div class="arc-block arc-fall">
+      <div class="arc-label">1321 MR – 1325 MR</div>
+      <div class="arc-name">The Fall</div>
+      <div class="arc-tagline">"Four years from breach to collapse. The Empire fought every one of them."</div>
+      <p>In <b>1321 MR</b> the deep mining shafts broke into a sealed substrate older than the Empire — older than any of Talan's mortal civilisations. What emerged is now called <b>the Corrupted God</b> (see <a href="/talan/the-binding.html">The Binding</a>). Its spawn erupted into the Empire's southern provinces within weeks.</p>
+      <p>The Imperial response was decisive and never quite enough. Provincial legions were drawn back to the heartland. The Emperor coordinated the defence personally. The central provinces held longer than the periphery — but the periphery cracked, and the cracks grew. By <b>1325 MR</b> the Empire had formally collapsed: the capital was lost, the provincial governors were dead or scattered, the Imperial road-network had become spawn-corridor instead of supply-corridor. The Dark Era opened on what remained.</p>
+      <p>The Adventurers Guild emerged in the chaos of these years and the centuries that followed (see the <a href="/talan/factions/adventurers-guild.html">Guild page</a>). The world that survived the collapse is the one the Adventurer Era inherited.</p>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       LEGACY
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Legacy</h2>
+  <div class="prose">
+    <p>The Empire is gone in the political sense but everywhere in the material sense. Every modern Talanese kingdom's law-book carries Imperial common-law fossils. Every southern Magitrain route follows an Imperial road. Every educated mortal who reads scholarly Dwarvish is reading the Empire's. Every old village whose name no one quite remembers the origin of is — somewhere down the etymology — Imperial.</p>
+
+    <p>The deeper legacy is conceptual. The Empire is the proof that <b>mortals can build at continental scale without divine governance.</b> Before the Empire, the Lost Era had been five centuries of mortals trying to remember how to govern themselves at all. After the Empire — even through the Dark Era's collapse, even through the centuries of attrition — mortal civilisation never fell back to the Lost Era's fragmentation. The reference example existed. Modern kingdoms argue with the Empire's choices constantly; they do not argue with the underlying premise that an empire of that scale is possible. The Empire decided that question.</p>
+
+    <p>What the Empire learned about its own success, and what it actually was, is the question that survives it. The chronicles do not say. The archives did not survive. The Emperor — by every public account — died with his capital. The thirteen bound gods have not commented.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — Why the Empire Worked</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
+      The Golden Empire's seven centuries of dominance are the subject of more scholarly debate than any other era of mortal rule, and three explanations dominate. <b>The first</b> credits the Emperor's personal qualities — a dwarven sovereign of legendary discipline, strategic intelligence, and longevity, whose institutional foundations his successors merely maintained. <b>The second</b>, common in temple traditions, holds that the Gods' Law was quietly bent in the Empire's favour: the bound thirteen permitted its flourishing because the new order needed an anchor civilisation to rebuild around, and what mortals read as divine <i>absence</i> was in fact divine <i>allowance</i>. <b>The third</b>, favoured in mystic schools, holds that the Wellspring itself shaped events to reward the first true mortal civilisation for surviving its gods — the Empire as the world's gift back to itself. All three flatter the present. None has documentary footing strong enough to settle the question; the dwarven imperial archives that would, did not survive the Dark Era's first decade.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — How the Empire Actually Worked</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to the Lower Single Digits</div>
+      <b>The Golden Emperor was a Reflection.</b> He was conceived a generation or so before the Empire's founding, born near a <b>Stillpool</b> (a forest pond his mother had unknowingly approached on the southern foothills of what would become the imperial heartland — see <a href="/talan/bestiary.html">Reflection heritage</a> for the broader mechanism). The midwives knew there was something different about him — eyes that focused too soon, an oddly settled gravity in an infant — but no one named what he was, because the framing for <i>what he was</i> did not exist in the post-Lost-Era scholarly vocabulary. The conscious-pull technique that would make his ascent possible was something he discovered for himself over decades, through patient inward attention to a sensation no one else around him could feel.
+      <br><br>
+      <b>Reflections operate outside the Compact's framework.</b> Because they are <i>born</i> of direct Wellspring contact, the divine-mediation framework that the Gods' Law uses to bind mortal/divine ascension does not fully apply to them. A Wellspring-direct being slips the framework's grain. The Emperor was the only Reflection in recorded history who recognised what he was, identified the connection he carried, and learned to consciously <b>pull</b> on it. By doing so he ascended to <b>Minor God status while remaining on the Material Plane</b> — the unprecedented loophole exploit. His ascent was gradual, hidden, never named in court. The Empire's seven centuries are what one Wellspring-direct minor god, operating outside the Compact, can build in a single career — and the longevity that drove every public account of the throne was, beneath the surface, the same single mortal who had simply stopped ageing.
+      <br><br>
+      <b>The Mining Programme was his.</b> By the late thirteen-hundreds his ascent had levelled off; further progress on the ladder required either many more shards, or some larger concentrated source. He had located the Elden ritual site through means no mortal expedition should have managed — almost certainly by following his Wellspring-direct intuition into the strata beneath Imperial mining country — and had read fragments of pre-Crimson-Rain records implying a dormant power-cache of unprecedented scale. <b>The miners weren't exploring — they were excavating to a known target.</b> The Imperial mining programme of the late thirteen-hundreds was not commercial; it was his, run through commercial cover.
+      <br><br>
+      <b>The miscalculation.</b> He had not understood that the dormant entity below was a fused divinity-and-void — that what slept beneath was the Elden civilisation collapsed into a single being (see <a href="/talan/the-binding.html">The Binding</a> for that arc). He had expected a power-cache. He found a Corrupted God.
+      <br><br>
+      <b>His end.</b> The Emperor was alive and active throughout the breach crisis. He coordinated the Imperial defence personally and <b>began concentrating his power directly against the Corrupted God</b> — the closest anything has come to a mortal-led counterattack on a bound divinity. The concentration worked locally: he held the central provinces longer than any other Imperial institution. But pulling that much of his strength inward starved the rest of the Empire. The periphery, already strained by the spawn-wave, cracked. The cracks grew. By 1325 MR the Empire had formally collapsed, and half of it had already left him. In the years that followed he kept fighting — wave after wave, in shrinking territory, increasingly alone.
+      <br><br>
+      A <b>rebellion party</b> eventually surprised him after a defensive engagement against another spawn-wave, in his weakened state, and killed him. Mortal killers, a mortal death. Normally that would send his soul straight to Layer 3. <b>It did not.</b> At the moment of death he <b>captured his own soul into a pocket dimension still in Layer 2</b> — a Life-Layer-adjacent pocket carved out by the same Wellspring-direct means that had bypassed the Compact at his ascent, now applied to bypass the Postlife at his death. He resides there now, intact in a sense, <b>continuously seeking a path to resurrect.</b> He has been there for roughly twelve hundred years. He has not given up.
+      <br><br>
+      <b>Why the Grand Gods can't reverse-engineer the trick.</b> Two reasons, both structural. First, they analyse divine events through the Compact's framework — the Ethereal-Plane lattice that mediates god / Material-Plane interaction — and the Emperor's ascent operates <i>outside</i> that framework. Their diagnostic tooling is the wrong instrument for the question. Second, the population that can exploit the loophole is the population the thirteen cannot watch: surveilling Reflections en masse to study the mechanism would itself violate the Compact's prohibition on unchecked divine control of mortal lives.
+      <br><br>
+      <b>Who knows.</b> <b>No living Reflection knows what they are.</b> Across all of Talan and its veils, the people who know the full arc — Reflections, Stillpools, the Emperor's loophole, the Emperor's persistence in the Layer-2 pocket — number in the <b>lower single digits.</b> The Emperor himself, in his pocket, is one of them. The others are not who you would guess.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       OPEN IN CANON
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in Canon</h3>
+    <div class="sub">The Empire is locked in shape but several named identities and specifics are deliberately open — future canon work will close them as stories want them.</div>
+    <ol>
+      <li><b>The Emperor's personal name</b> — central to any campaign in which the Layer-2 pocket becomes active.</li>
+      <li><b>The Imperial dynasty's name</b> — the family or house under which the throne was held; fossilised in places no living dwarf would recognise.</li>
+      <li><b>The Empire's capital and the founding dwarven kingdom's name</b> — both are Dark-Era ruins now, with locations uncatalogued.</li>
+      <li><b>The Stillpool the Emperor's mother passed</b> — somewhere in the southern foothills, presumably still on the Adventurers Guild's sealed atlas, presumably under a less anodyne name than the Guild gives it.</li>
+      <li><b>The rebellion party that killed the Emperor</b> — names, composition, weapons, fate; whether they understood what they were killing, whether they survived afterward, whether any of their descendants live on Talan.</li>
+      <li><b>Imperial-era artefacts still in circulation</b> — coins, scholarly texts, decorative pieces; some carry residue of the Emperor's Wellspring-direct work and may not be inert.</li>
+      <li><b>The location of the pocket dimension</b> — Layer 2 is the Life Layer, so it is here somewhere; how one would find or access it is the campaign's central technical problem.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · HISTORICAL · GOLDEN EMPIRE</div>
+
+</div>
+
+<script>
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '◈ &nbsp; Hide Popular Belief' : btn.getAttribute('data-original');
+}
+function toggleEraSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+</script>
+</body>
+</html>
