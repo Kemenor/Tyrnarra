@@ -128,7 +128,7 @@ The `.open-canon` panel (dashed TBD-inventory box at the bottom of several pages
   - `--card-bg` — background colour (defaults to warm dark)
   - `--card-accent` — stripe / border colour (falls through to `--domain-accent` then `--gold`)
   
-  Modifiers: `.thin` (3px stripe instead of 4px), `.framed` (full 1px border, replaces the left stripe), `.is-link` (clickable card with hover lift). Pages keep their own semantic class (`.dom-card`, `.hazard-card`, `.isle-card`, etc.) for padding/margin/max-width — the base only owns the shape, not the size.
+  Modifiers: `.thin` (3px stripe instead of 4px), `.framed` (full 1px border, replaces the left stripe), `.outlined` (subtle 1px frame on top/right/bottom *plus* the left stripe — set `--card-outline` for the frame colour), `.cut-left` (sharp left corners / rounded right — pairs naturally with the left-stripe look), `.is-link` (clickable card with hover lift). Pages keep their own semantic class (`.dom-card`, `.hazard-card`, `.isle-card`, etc.) for padding/margin/max-width — the base only owns the shape, not the size.
 
   Usage:
   ```html

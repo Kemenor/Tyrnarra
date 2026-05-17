@@ -35,30 +35,13 @@
     margin: 18px auto;
     max-width: 1000px;
   }
-  .chamber-card {
-    background: rgba(20,24,12,0.55);
-    border: 1px solid rgba(106,117,48,0.32);
-    border-left: 4px solid var(--chamber-color, var(--domain-accent));
-    border-radius: 0 4px 4px 0;
-    padding: 14px 16px;
-  }
-  .chamber-name {
-    font-family: 'Cinzel', serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.14em;
-    color: var(--chamber-color, #c0c890);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .chamber-desc {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--text);
-  }
-  .c-tunnels { --chamber-color: #88936a; }
-  .c-brood   { --chamber-color: #9a8a40; }
-  .c-vaults  { --chamber-color: #7a8a3a; }
-  .c-throne  { --chamber-color: #c8a040; }
+  .chamber-card { padding: 14px 16px; --card-bg: rgba(20,24,12,0.55); --card-outline: rgba(106,117,48,0.32); }
+  .chamber-name { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.14em; color: var(--card-accent, #c0c890); text-transform: uppercase; margin-bottom: 6px; }
+  .chamber-desc { font-size: 0.9rem; line-height: 1.6; color: var(--text); }
+  .c-tunnels { --card-accent: #88936a; }
+  .c-brood   { --card-accent: #9a8a40; }
+  .c-vaults  { --card-accent: #7a8a3a; }
+  .c-throne  { --card-accent: #c8a040; }
 
   /* Threat blocks — three-card row with sickly red-tinted border */
   .threat-row {
@@ -68,13 +51,7 @@
     max-width: 1000px;
     margin: 18px auto;
   }
-  .threat-card {
-    background: rgba(28,16,16,0.55);
-    border: 1px solid rgba(122,42,42,0.4);
-    border-left: 3px solid #a04848;
-    border-radius: 0 4px 4px 0;
-    padding: 14px 16px;
-  }
+  .threat-card { padding: 14px 16px; --card-bg: rgba(28,16,16,0.55); --card-outline: rgba(122,42,42,0.4); --card-accent: #a04848; }
   .threat-name {
     font-family: 'Cinzel', serif;
     font-size: 0.78rem;
@@ -107,14 +84,7 @@
   .pill-domain { --pill-border: #a8a4c0; color: #c8c4d8; }
 
   /* Surki counter callout */
-  .counter-block {
-    padding: 16px 20px;
-    margin: 22px auto;
-    max-width: 920px;
-    border-radius: 0 4px 4px 0;
-    --card-bg: rgba(14,22,28,0.6);
-    --card-accent: #5a8aa8;
-  }
+  .counter-block { padding: 16px 20px; margin: 22px auto; max-width: 920px; --card-bg: rgba(14,22,28,0.6); --card-accent: #5a8aa8; }
   .counter-label {
     font-family: 'Cinzel', serif;
     font-size: 0.62rem;
@@ -126,14 +96,7 @@
   .counter-block p { margin: 8px 0; font-size: 0.93rem; line-height: 1.65; }
 
   /* War of Seals — context callout */
-  .seal-block {
-    padding: 16px 20px;
-    margin: 22px auto;
-    max-width: 920px;
-    border-radius: 0 4px 4px 0;
-    --card-bg: rgba(24,18,8,0.55);
-    --card-accent: var(--gold-dim);
-  }
+  .seal-block { padding: 16px 20px; margin: 22px auto; max-width: 920px; --card-bg: rgba(24,18,8,0.55); --card-accent: var(--gold-dim); }
   .seal-label {
     font-family: 'Cinzel', serif;
     font-size: 0.62rem;
@@ -210,22 +173,22 @@
 
   <div class="chamber-grid">
 
-    <div class="chamber-card c-tunnels">
+    <div class="accent-card outlined cut-left chamber-card c-tunnels">
       <div class="chamber-name">The Web-Tunnels</div>
       <div class="chamber-desc">Narrow passageways coated in sticky threads. Trap and alarm system in one — intrusions alert the Queen's spawn instantly. The Tunnels are the dungeon's connective tissue and its outer warning layer. No deep penetration of the Hollow begins anywhere else.</div>
     </div>
 
-    <div class="chamber-card c-brood">
+    <div class="accent-card outlined cut-left chamber-card c-brood">
       <div class="chamber-name">The Brood Pits</div>
       <div class="chamber-desc">Chambers full of eggs, larvae, and swollen brood-mothers. The Pits are where the swarms come from. Tarry too long and the hatchlings overwhelm; clear a Pit and another swells to take its place within seasons. The Pits are the reason containment, not eradication, is the doctrine.</div>
     </div>
 
-    <div class="chamber-card c-vaults">
+    <div class="accent-card outlined cut-left chamber-card c-vaults">
       <div class="chamber-name">The Silken Vaults</div>
       <div class="chamber-desc">Cocooned bodies — mortal victims, beasts, and adventurers. Some still live, transforming slowly into monstrosities through corruption seeping from the silk. A Vault's worth of cocoons is the Hollow's grimmest cargo: every one is a story, and most are unfinished.</div>
     </div>
 
-    <div class="chamber-card c-throne">
+    <div class="accent-card outlined cut-left chamber-card c-throne">
       <div class="chamber-name">The Throne of the Vermin Queen</div>
       <div class="chamber-desc">Chamber vast enough to contain her massive form. Draped in layers of living web. She is attended by her chosen spawn — grotesque spider-hybrids once human, now twisted. No expedition has reached the Throne and returned. The few that have <i>reached</i> it had no survivors to bring word.</div>
     </div>
@@ -245,17 +208,17 @@
 
   <div class="threat-row">
 
-    <div class="threat-card">
+    <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Endless Swarms</div>
       <div class="threat-desc">The Hollow's strength lies in the unending tide as much as the Queen herself. A party can cut a thousand and meet two thousand before the silk dries on the first cut. <i>Numbers attrition</i>, the Guild calls it — and the Hollow has Brood Pits enough to attrition any expedition the kingdoms can field, given time.</div>
     </div>
 
-    <div class="threat-card">
+    <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Corrupted Silk</div>
       <div class="threat-desc">The webs are not mere thread. They carry the Blightfather's power — sticky enough to bind armoured warriors, slow-poisoning to weapons and armour that touch them. Steel pitted by silk fails sooner than steel struck a hundred times. Wounds taken while bound heal slowly or not at all. A Hollow expedition prepares as much for material decay as for combat.</div>
     </div>
 
-    <div class="threat-card">
+    <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Hive-Mind Influence</div>
       <div class="threat-desc">Long exposure fills intruders with <i>whispers</i> — fragmented compulsions to stop fighting, to lie down, to join. The swarm itself wears down willpower; the corruption-soaked air is part of the attack. Parties that linger past a certain duration begin to lose members not to combat but to <i>drift</i> — adventurers who walked into a cocoon of their own choosing and could not be retrieved.</div>
     </div>
@@ -287,7 +250,7 @@
 
   <h2 class="section-heading">The Surki Counter</h2>
 
-  <div class="accent-card counter-block">
+  <div class="accent-card cut-left counter-block">
     <div class="counter-label">Insectoid, but not Corrupted</div>
     <p>The <b>Surki</b> — insectoid sapients of the deep places, uncommon in the upper Darklands and rare anywhere else — hold a doctrinal position on the Vermin Queen that mortals elsewhere often miss. The Surki are insectoid by anatomy: compound eyes, chitinous segmentation, hive-adjacent biology. The Vermin Queen's swarm-corruption is <b>precisely the fate they organise to resist</b>. The opposition is not incidental. The Surki recognise her as the version of themselves that would have happened if the gods had finished what they started with the Dragons.</p>
     <p>The opposition is doctrinal, cultural, and operational. Surki who climb out of the Darklands and reach the Shadow Steppes are <b>among the most informed and most committed allies any Guild expedition into the Hollow can hope for</b>. They know the swarm-vocabulary; they read the silk-patterns; they understand the hive-mind influence as <i>kin gone wrong</i>, which is the only frame in which it can be effectively resisted rather than merely endured. A Hollow expedition with a Surki scout-or-advisor is materially more likely to come back than one without.</p>
@@ -302,7 +265,7 @@
 
   <h2 class="section-heading">The Hollow in the War of Seals</h2>
 
-  <div class="accent-card seal-block">
+  <div class="accent-card cut-left seal-block">
     <div class="seal-label">The 2524 Eruption</div>
     <p>The Nine Dungeons did not exist for the long centuries between the Corrupted God's binding (2135 MR) and the modern day. They <b>erupted in 2524 MR</b> — overnight, all nine at once, tearing pathways into the mortal world and disgorging the first great corruption armies in four centuries. The Hollow was one of those nine. The kingdoms united, the Guild rallied, militias were drafted; after bloody campaigns the first wave was broken. To prevent another flood, the <b>main entrances of all nine Dungeons were sealed</b> with wards, stone, and sacrifice. The Hollow's main entrance is among them.</p>
     <p>Sealing the gate did not end the threat. <b>Corruption now seeps upward through smaller caverns and tunnel networks the seals do not reach.</b> The Hollow leaks. The Vermin Queen's children find their way to the surface through gully-mouths and old mine-shafts and faults the Steppes' shadow-tinted geology hides until something walks out of them. Containment, not eradication, is the doctrine. <a href="/talan/factions/adventurers-guild.html">Myrria's Godshall</a> coordinates the standing response from across Myrkono; Branch and Office tier outposts maintain the daily presence on the ground.</p>
