@@ -803,6 +803,105 @@ a.subregion-card:hover {
 }
 .faction-card-x.open .faction-card-x-detail { display: block; }
 
+/* ── ACCENT CARD ─────────────────────────────────────────────
+   Shared shell for the many "panel with an accent edge" cards
+   used across the site (domain cards, hazard cards, tier cards,
+   isle cards, branch cards, position blocks, etc.).
+
+   The base gives the SHAPE: background, border edge, radius.
+   Pages provide the SIZE: padding, margin, max-width — those
+   are inherent to the card's role (grid item vs centred
+   callout vs sub-card) and stay inline per page.
+
+   Customise per card by setting two CSS variables — usually
+   inline or via a tiny per-class rule:
+     --card-bg      background colour (defaults to warm dark)
+     --card-accent  stripe / border colour (falls through to --domain-accent)
+
+   Modifier classes:
+     .framed     full 1px border instead of left stripe
+     .is-link    clickable card with hover lift
+     .thin       3px stripe instead of 4px (compact sub-cards) */
+
+.accent-card {
+  background: var(--card-bg, rgba(28,20,10,0.55));
+  border-left: 4px solid var(--card-accent, var(--domain-accent, var(--gold)));
+  border-radius: 4px;
+}
+.accent-card.thin {
+  border-left-width: 3px;
+}
+.accent-card.framed {
+  border: 1px solid var(--card-accent, var(--domain-accent, var(--gold)));
+  border-left-width: 1px;
+}
+.accent-card.is-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+.accent-card.is-link:hover {
+  transform: translateY(-2px);
+}
+
+/* ── TWO-COLUMN PAIR ─────────────────────────────────────────
+   Side-by-side block layout used for opposing-positions
+   sections (bloodline pair, faith-vs-forseti tension,
+   mining-and-fall narrative pair, etc.). Collapses to a
+   single column on tablet-and-down. Children carry their
+   own block styling. */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 22px auto;
+  max-width: 1000px;
+}
+@media (max-width: 800px) {
+  .two-column { grid-template-columns: 1fr; }
+}
+
+/* ── "OPEN IN CANON" PANEL ───────────────────────────────────
+   Dashed-border panel listing the deliberate TBDs / open
+   questions on a page. The heading colour and border edge
+   pick up the page's --domain-accent so the panel sits inside
+   the page's accent palette without extra inline overrides. */
+
+.open-canon {
+  background: rgba(20,14,8,0.45);
+  border: 1px dashed var(--domain-accent);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 24px auto;
+  max-width: 920px;
+}
+.open-canon h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--domain-accent);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.open-canon .sub {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--parch-dim);
+  margin-bottom: 12px;
+}
+.open-canon ul,
+.open-canon ol {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.open-canon li { margin: 4px 0; }
+.open-canon li b { color: var(--gold-bright); }
+
 /* ── PILL ROW (used on domain "Character" rows) ────────────── */
 
 .pill-row {

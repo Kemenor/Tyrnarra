@@ -11,11 +11,11 @@
 <style>
   :root { --domain-accent: #b04030; }
 
-  .creed-block { background: rgba(40,18,16,0.55); border-left: 4px solid var(--domain-accent); padding: 14px 18px; margin: 22px auto; max-width: 920px; }
+  .creed-block { padding: 14px 18px; margin: 22px auto; max-width: 920px; --card-bg: rgba(40,18,16,0.55); }
   .creed-block .creed-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
   .creed-block p { margin: 6px 0; }
 
-  .ruler-card { background: rgba(40,18,16,0.6); border: 1px solid rgba(176,64,48,0.45); border-radius: 4px; padding: 16px 20px; margin: 20px auto; max-width: 920px; }
+  .ruler-card { padding: 16px 20px; margin: 20px auto; max-width: 920px; --card-bg: rgba(40,18,16,0.6); --card-accent: rgba(176,64,48,0.45); }
   .ruler-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .ruler-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.6rem; margin-bottom: 10px; }
   .ruler-grid  { display: grid; grid-template-columns: 130px 1fr; gap: 8px 16px; font-size: 0.92rem; }
@@ -30,16 +30,16 @@
   .caste-table tr:hover { background: rgba(176,64,48,0.06); }
 
   .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .branch-card { background: rgba(28,16,16,0.55); border-left: 4px solid var(--branch-color, var(--domain-accent)); padding: 12px 14px; border-radius: 4px; }
-  .branch-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--branch-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .branch-card { padding: 12px 14px; --card-bg: rgba(28,16,16,0.55); }
+  .branch-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
   .branch-desc { font-size: 0.9rem; color: var(--text); }
-  .b-red       { --branch-color: #b04030; }
-  .b-ashen     { --branch-color: #6a6068; }
-  .b-tide      { --branch-color: #4a7088; }
-  .b-menagerie { --branch-color: #8a5878; }
+  .b-red       { --card-accent: #b04030; }
+  .b-ashen     { --card-accent: #6a6068; }
+  .b-tide      { --card-accent: #4a7088; }
+  .b-menagerie { --card-accent: #8a5878; }
 
   .ship-row, .creation-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px auto; max-width: 1000px; }
-  .ship-card, .creation-card { background: rgba(20,14,14,0.55); border-left: 3px solid var(--gold-dim); padding: 10px 14px; border-radius: 4px; }
+  .ship-card, .creation-card { padding: 10px 14px; --card-bg: rgba(20,14,14,0.55); --card-accent: var(--gold-dim); }
   .ship-name, .creation-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 4px; }
   .ship-desc, .creation-desc { font-size: 0.88rem; color: var(--text); }
 
@@ -91,7 +91,7 @@
     <p>From a Talanese perspective the Empire is the <i>foreign</i> power. From the Empire's perspective, Talan is the <i>backwards</i> continent — the one still in thrall to gods.</p>
   </div>
 
-  <div class="creed-block">
+  <div class="accent-card creed-block">
     <div class="creed-label">The Imperial Creed</div>
     <p>Mortal life is <b>discipline, hardship, and sacrifice</b>. Through them the mortal will is hardened past the point at which any god can claim it. To pray is to surrender will to an external master; to endure without prayer is to assert the only sovereignty that matters. <b>Weakness is the only sin.</b></p>
     <p>The bound thirteen are illusions or parasites. Their city-states are theatre. The Empire's purpose is to demonstrate, on Talan's own coasts, that mortals do not need gods — and that mortals who insist they do are owed conquest.</p>
@@ -101,7 +101,7 @@
 
   <h2 class="section-heading">The Crimson Emperor</h2>
 
-  <div class="ruler-card">
+  <div class="accent-card framed ruler-card">
     <div class="ruler-label">Supreme Commander · The Pyre Throne</div>
     <div class="ruler-name">The Crimson Emperor</div>
     <dl class="ruler-grid">
@@ -149,19 +149,19 @@
   </div>
 
   <div class="branch-grid">
-    <div class="branch-card b-red">
+    <div class="accent-card branch-card b-red">
       <div class="branch-name">Red Army · Legions of Flame</div>
       <div class="branch-desc">Citizen-soldiers in lifelong service. Self-sufficient legions with their own infantry, engineers, and war-mages. Daily drill includes endurance trials — fasting, exposure, forced marches. The bulk of the Empire; the body of the state.</div>
     </div>
-    <div class="branch-card b-ashen">
+    <div class="accent-card branch-card b-ashen">
       <div class="branch-name">Ashen Guard</div>
       <div class="branch-desc">The Emperor's elite, drawn from survivors of the hardest trials. Armour blackened by the ritual fires they walk through to earn it. Enforce Imperial law and execute failed officers.</div>
     </div>
-    <div class="branch-card b-tide">
+    <div class="accent-card branch-card b-tide">
       <div class="branch-name">Iron Tide</div>
       <div class="branch-desc">The Empire's navy — and the only branch most Talanese have ever seen. Black iron, fire, frost. Detailed below.</div>
     </div>
-    <div class="branch-card b-menagerie">
+    <div class="accent-card branch-card b-menagerie">
       <div class="branch-name">The Menagerie</div>
       <div class="branch-desc">Secretive corps of war-mages, alchemists, surgeons, and necromancers. <i>Artisans of war</i> to themselves; <i>Fleshwrights</i> to everyone else. Detailed below.</div>
     </div>
@@ -188,10 +188,10 @@
 
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">Fleet Classes</h3>
   <div class="ship-row">
-    <div class="ship-card"><div class="ship-name">Flamefangs</div><div class="ship-desc">Warships armed with fire-belchers, pitch-casters, and incendiary ballistae. The torch arm of the Tide.</div></div>
-    <div class="ship-card"><div class="ship-name">Frostfangs</div><div class="ship-desc">Vessels clad in enchanted ice; prows that freeze the sea solid to trap enemy hulls. The trap arm of the Tide.</div></div>
-    <div class="ship-card"><div class="ship-name">Steam Hulks</div><div class="ship-desc">Massive ironclads driven by boilers and arcane engines. Loud, slow, unstoppable — mobile fortresses.</div></div>
-    <div class="ship-card"><div class="ship-name">Corsair Auxilia</div><div class="ship-desc">Captured vessels crewed by conscripts or Broken, used as sacrificial first wave.</div></div>
+    <div class="accent-card thin ship-card"><div class="ship-name">Flamefangs</div><div class="ship-desc">Warships armed with fire-belchers, pitch-casters, and incendiary ballistae. The torch arm of the Tide.</div></div>
+    <div class="accent-card thin ship-card"><div class="ship-name">Frostfangs</div><div class="ship-desc">Vessels clad in enchanted ice; prows that freeze the sea solid to trap enemy hulls. The trap arm of the Tide.</div></div>
+    <div class="accent-card thin ship-card"><div class="ship-name">Steam Hulks</div><div class="ship-desc">Massive ironclads driven by boilers and arcane engines. Loud, slow, unstoppable — mobile fortresses.</div></div>
+    <div class="accent-card thin ship-card"><div class="ship-name">Corsair Auxilia</div><div class="ship-desc">Captured vessels crewed by conscripts or Broken, used as sacrificial first wave.</div></div>
   </div>
 
   <div class="prose" style="margin-top:24px;">
@@ -217,19 +217,19 @@
 
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">Structure</h3>
   <div class="branch-grid">
-    <div class="branch-card b-menagerie">
+    <div class="accent-card branch-card b-menagerie">
       <div class="branch-name">Master Curator</div>
       <div class="branch-desc">Top authority, chosen by peer consensus rather than appointment. "Keeper of the collection." Directs Menagerie-wide projects.</div>
     </div>
-    <div class="branch-card b-menagerie">
+    <div class="accent-card branch-card b-menagerie">
       <div class="branch-name">Curators</div>
       <div class="branch-desc">Senior war-mages, alchemists, surgeons leading specific experimental lines. Each maintains a personal <i>catalogue</i> — theories, failures, and living subjects.</div>
     </div>
-    <div class="branch-card b-menagerie">
+    <div class="accent-card branch-card b-menagerie">
       <div class="branch-name">Keepers</div>
       <div class="branch-desc">Mid-rank practitioners running the actual laboratories, overseeing Fodder test subjects, and implementing the Curators' designs.</div>
     </div>
-    <div class="branch-card b-menagerie">
+    <div class="accent-card branch-card b-menagerie">
       <div class="branch-name">Collectors</div>
       <div class="branch-desc">Field agents who gather subjects, materials, and rare reagents inside the Empire and beyond. Trained to vanish into any society. <b>The Menagerie's only operational presence on Talan.</b></div>
     </div>
@@ -246,12 +246,12 @@
 
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">Creations</h3>
   <div class="creation-row">
-    <div class="creation-card"><div class="creation-name">Augments</div><div class="creation-desc">Soldiers reinforced with steel-bone, hardened skin, or heightened senses. Subtle enough to blend into legion rank-and-file.</div></div>
-    <div class="creation-card"><div class="creation-name">Exemplars</div><div class="creation-desc">Attempts to refine entire cohorts: fearless, sleepless, tireless, obedient.</div></div>
-    <div class="creation-card"><div class="creation-name">The Apex Line</div><div class="creation-desc">Singular reforged predators built as living siege weapons. Unleashed for annihilation, not deployment.</div></div>
-    <div class="creation-card"><div class="creation-name">Ashborn</div><div class="creation-desc">Fodder or Broken reforged by necromancy. Stitched living-and-dead engines of endurance, sustained by arcane binding.</div></div>
-    <div class="creation-card"><div class="creation-name">Harvested</div><div class="creation-desc">Reanimated enemy corpses stripped of identity, fielded en masse.</div></div>
-    <div class="creation-card"><div class="creation-name">Fleshwarps</div><div class="creation-desc">Survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two alike. Shock troops, terror weapons, or labourers in lethal environments. Considered both <i>failure</i> and <i>asset</i>.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">Augments</div><div class="creation-desc">Soldiers reinforced with steel-bone, hardened skin, or heightened senses. Subtle enough to blend into legion rank-and-file.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">Exemplars</div><div class="creation-desc">Attempts to refine entire cohorts: fearless, sleepless, tireless, obedient.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">The Apex Line</div><div class="creation-desc">Singular reforged predators built as living siege weapons. Unleashed for annihilation, not deployment.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">Ashborn</div><div class="creation-desc">Fodder or Broken reforged by necromancy. Stitched living-and-dead engines of endurance, sustained by arcane binding.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">Harvested</div><div class="creation-desc">Reanimated enemy corpses stripped of identity, fielded en masse.</div></div>
+    <div class="accent-card thin creation-card"><div class="creation-name">Fleshwarps</div><div class="creation-desc">Survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two alike. Shock troops, terror weapons, or labourers in lethal environments. Considered both <i>failure</i> and <i>asset</i>.</div></div>
   </div>
 
   <div class="callout" style="margin-top:24px;">

@@ -12,16 +12,16 @@
   :root { --domain-accent: #c8900a; }
 
   .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .tier-card { background: rgba(28,20,8,0.55); border-left: 4px solid var(--tier-color, var(--domain-accent)); padding: 14px 16px; border-radius: 4px; }
-  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--tier-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .tier-card { padding: 14px 16px; --card-bg: rgba(28,20,8,0.55); }
+  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
   .tier-where { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 6px; }
   .tier-lead { font-size: 0.78rem; color: var(--gold-dim); margin-top: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
   .tier-desc { font-size: 0.9rem; color: var(--text); }
-  .t-branch    { --tier-color: #a07050; }
-  .t-office    { --tier-color: #c8900a; }
-  .t-guildhall { --tier-color: #d8a830; }
-  .t-kings     { --tier-color: #e0b850; }
-  .t-godshall  { --tier-color: #f0d080; }
+  .t-branch    { --card-accent: #a07050; }
+  .t-office    { --card-accent: #c8900a; }
+  .t-guildhall { --card-accent: #d8a830; }
+  .t-kings     { --card-accent: #e0b850; }
+  .t-godshall  { --card-accent: #f0d080; }
 
   .rank-table { width: 100%; max-width: 920px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
   .rank-table th, .rank-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(200,144,10,0.22); vertical-align: top; }
@@ -30,11 +30,11 @@
   .rank-table tr:hover { background: rgba(200,144,10,0.06); }
 
   .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 14px auto; max-width: 1000px; }
-  .service-card { background: rgba(28,20,8,0.5); border-left: 3px solid var(--gold-dim); padding: 12px 14px; border-radius: 4px; }
+  .service-card { padding: 12px 14px; --card-bg: rgba(28,20,8,0.5); --card-accent: var(--gold-dim); }
   .service-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 4px; }
   .service-desc { font-size: 0.9rem; color: var(--text); }
 
-  .figure-card { background: rgba(28,20,8,0.6); border: 1px solid rgba(200,144,10,0.4); border-radius: 4px; padding: 18px 22px; margin: 22px auto; max-width: 940px; }
+  .figure-card { padding: 18px 22px; margin: 22px auto; max-width: 940px; --card-bg: rgba(28,20,8,0.6); --card-accent: rgba(200,144,10,0.4); }
   .figure-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .figure-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.55rem; margin-bottom: 4px; }
   .figure-byname { font-style: italic; color: var(--gold-dim); font-size: 0.95rem; margin-bottom: 14px; }
@@ -42,7 +42,7 @@
   .figure-grid dt { font-family: 'Cinzel', serif; color: var(--gold-dim); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.78rem; padding-top: 2px; }
   .figure-grid dd { margin: 0; color: var(--text); }
 
-  .godshall-block { background: rgba(28,20,8,0.5); border-left: 4px solid var(--gold-bright); padding: 14px 18px; margin: 22px auto; max-width: 940px; border-radius: 4px; }
+  .godshall-block { padding: 14px 18px; margin: 22px auto; max-width: 940px; --card-bg: rgba(28,20,8,0.5); --card-accent: var(--gold-bright); }
   .godshall-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
   .godshall-block ul { padding-left: 22px; margin: 8px 0; }
   .godshall-block li { margin-bottom: 6px; }
@@ -110,31 +110,31 @@
   </div>
 
   <div class="tier-grid">
-    <div class="tier-card t-branch">
+    <div class="accent-card tier-card t-branch">
       <div class="tier-name">Branch Office</div>
       <div class="tier-where">Remote villages · Frontier settlements</div>
       <div class="tier-desc">A single clerk working part-time, sometimes managing four villages from one location. Handles pest contracts, escorts, and local patrols. Reports up to a Guild Office in the nearest town.</div>
       <div class="tier-lead">Led by: a part-time clerk</div>
     </div>
-    <div class="tier-card t-office">
+    <div class="accent-card tier-card t-office">
       <div class="tier-name">Guild Office</div>
       <div class="tier-where">Towns</div>
       <div class="tier-desc">A proper staff of multiple clerks and scribes. Real quest boards and contracts. Coordinates the surrounding Branch Offices. The most common tier most travelling adventurers actually walk into.</div>
       <div class="tier-lead">Led by: a Head Clerk (occasionally a Guildmaster)</div>
     </div>
-    <div class="tier-card t-guildhall">
+    <div class="accent-card tier-card t-guildhall">
       <div class="tier-name">Guildhall</div>
       <div class="tier-where">Cities</div>
       <div class="tier-desc">Significant infrastructure: staff, storage, holding cells, an inn-and-tavern complex serving as adventurer hostel and the Guild's public face. The first tier where the institution looks like an institution from the outside.</div>
       <div class="tier-lead">Led by: a Guildmaster</div>
     </div>
-    <div class="tier-card t-kings">
+    <div class="accent-card tier-card t-kings">
       <div class="tier-name">Kingshall</div>
       <div class="tier-where">Capital cities</div>
       <div class="tier-desc">Larger than a Guildhall. The primary liaison between the Guild and the royal court — and the office that holds the line on neutrality when crowns lean. Oversees every Guildhall and Office within the kingdom.</div>
       <div class="tier-lead">Led by: a Grand Guildmaster</div>
     </div>
-    <div class="tier-card t-godshall">
+    <div class="accent-card tier-card t-godshall">
       <div class="tier-name">Godshall</div>
       <div class="tier-where">Divine city-states only</div>
       <div class="tier-desc">Monumental. Archives, legal staff, senior officers, ancient relics, high councils of adventurers, direct contact with Guild leadership. The Guild's regional command above a Kingshall — covering the kingdoms surrounding the divine seat.</div>
@@ -189,15 +189,15 @@
   </div>
 
   <div class="service-grid">
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Enchanted Ledgers</div>
       <div class="service-desc">Every office maintains a synchronised ledger. Deposit in one Guildhall, withdraw in another, anywhere on the continent — distance is irrelevant. The ledger-magic was Guild-developed and remains Guild-proprietary.</div>
     </div>
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Public Access</div>
       <div class="service-desc">Common folk use the Bank routinely. In some regions it rivals or outright replaces the royal treasury for general use. Crowns publicly disapprove and privately deposit.</div>
     </div>
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Wartime Trust</div>
       <div class="service-desc">Kingdoms at war commonly entrust funds to the Bank because Guild neutrality protects the deposits from seizure by either side. Several historical wars have been quietly funded out of accounts neither belligerent could touch.</div>
     </div>
@@ -211,15 +211,15 @@
   </div>
 
   <div class="service-grid">
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Remote Reach</div>
       <div class="service-desc">Letters reach frontier villages no merchant company will serve, because the Guild already maintains a Branch Office there. The Post is the only reliable way to write home from the edge of the map.</div>
     </div>
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Adventurer Couriers</div>
       <div class="service-desc">In dangerous country, adventurers themselves carry the post, escorted by their own training. A Silver-rank carrying a parcel through wyvern country is a routine sight; the rank gate scales with the route.</div>
     </div>
-    <div class="service-card">
+    <div class="accent-card thin service-card">
       <div class="service-name">Sealed by the Guild</div>
       <div class="service-desc">Every official parcel bears a magical seal proving authenticity and resisting tampering. The seal is also a contract: tampering with a Guild-sealed parcel is itself a Guild-prosecutable offence, regardless of local law.</div>
     </div>
@@ -229,7 +229,7 @@
 
   <h2 class="section-heading">Notable Figures</h2>
 
-  <div class="figure-card">
+  <div class="accent-card framed figure-card">
     <div class="figure-label">Chairman of the Moral &amp; Ethics Committee · Minor Demi-God by Belief</div>
     <div class="figure-name">Lord Albrecht Lavisburg</div>
     <div class="figure-byname">"Chairman of the Committee" — he answers to nothing else</div>
@@ -252,7 +252,7 @@
     </dl>
   </div>
 
-  <div class="figure-card">
+  <div class="accent-card framed figure-card">
     <div class="figure-label">Guild Sovereign · Myrria's Godshall · Highest Guild Authority in Myrkono</div>
     <div class="figure-name">Seraphel Duskbane</div>
     <div class="figure-byname">Quill and Blade in literal form, at the belt</div>
@@ -275,7 +275,7 @@
     <p>The Guild's seat in Myrkono and the regional command for every Guild operation across Araphel's domain. Carved tiers of blackstone rising above the Lantern Stairs in Myrria; the façade bears the Quill &amp; Blade sigil in muted silver. Architecturally and politically the city's <i>other heart</i>, alongside the Sanctum of Veils. Full coverage on the <a href="/talan/domains/myrkono/myrria/myrria.html">Myrria page</a>; the structural summary lives here.</p>
   </div>
 
-  <div class="godshall-block">
+  <div class="accent-card godshall-block">
     <div class="godshall-label">Lower Halls (Public)</div>
     <ul>
       <li><b>The taproom-inn-dormitory complex</b> — <i>The Hearth</i> (firepit and storytelling ring) and <i>The Trophy Wall</i> (Seraphel's contributions included).</li>
@@ -286,7 +286,7 @@
     </ul>
   </div>
 
-  <div class="godshall-block" style="border-left-color: #d04848;">
+  <div class="accent-card godshall-block" style="--card-accent:#d04848">
     <div class="godshall-label" style="color: #d88080;">Upper Halls (Restricted — Mithral and above)</div>
     <ul>
       <li><b>The Hall of Quests</b> — high-rank contracts and raid-planning against the Nine Generals.</li>

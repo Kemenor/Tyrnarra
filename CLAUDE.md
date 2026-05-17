@@ -57,6 +57,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
   assets/                              ← shared chrome (loaded by every page)
     site-nav.css                       ← sidebar styling
     site-nav.js                        ← sidebar markup + behaviour (single source of truth for menu)
+    site-interactions.js               ← shared toggle handlers (Popular Belief ◈, GM Secret ⚿, era cards)
+    site-starfield.js                  ← generates the cosmic-page starfield (Style A only)
     style-a.css                        ← Style A base — used by world-level pages (/, gods, magic)
     style-b.css                        ← Style B base — used by every page under /talan/
 

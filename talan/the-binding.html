@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #9a60c0; }
 
@@ -16,8 +17,8 @@
   .ward-region-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin-bottom: 4px; }
   .ward-region-byline { text-align: center; font-style: italic; color: var(--gold-dim); font-size: 0.85rem; margin-bottom: 14px; }
   .ward-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-  .ward-card { background: rgba(14,10,22,0.55); border: 1px solid rgba(154,96,192,0.38); border-radius: 6px; padding: 14px 16px; position: relative; }
-  .ward-card.divine { border-color: rgba(200,168,240,0.65); box-shadow: 0 0 32px rgba(154,96,192,0.12); }
+  .ward-card { padding: 14px 16px; border-radius: 6px; position: relative; --card-bg: rgba(14,10,22,0.55); --card-accent: rgba(154,96,192,0.38); }
+  .ward-card.divine { --card-accent: rgba(200,168,240,0.65); box-shadow: 0 0 32px rgba(154,96,192,0.12); }
   .ward-number { position: absolute; top: 8px; right: 12px; font-family: 'Cinzel', serif; color: var(--gold-dim); font-size: 0.78rem; letter-spacing: 0.1em; }
   .ward-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; font-size: 0.98rem; margin-bottom: 4px; padding-right: 60px; }
   .ward-loc { font-style: italic; color: var(--gold-dim); font-size: 0.83rem; margin-bottom: 8px; }
@@ -25,7 +26,7 @@
 
   /* Nine Generals card list */
   .general-list { max-width: 920px; margin: 16px auto 0; }
-  .general-card { background: rgba(20,8,8,0.5); border: 1px solid rgba(180,60,60,0.32); border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .general-card { padding: 14px 18px; margin-bottom: 14px; border-radius: 6px; --card-bg: rgba(20,8,8,0.5); --card-accent: rgba(180,60,60,0.32); }
   .general-card.defeated { opacity: 0.55; border-style: dashed; }
   .general-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 4px; }
   .general-name { font-family: 'Cinzel', serif; font-weight: 600; color: #e89a8a; font-size: 1.02rem; letter-spacing: 0.06em; }
@@ -85,13 +86,13 @@
     <div class="ward-region-name">Shadow Steppes</div>
     <div class="ward-region-byline">Two stones · open plains and lake-shore city</div>
     <div class="ward-cards">
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">I · ✦</div>
         <div class="ward-name">The Lakeside Wardstone</div>
         <div class="ward-loc">A city on the shores of the great lake</div>
         <div class="ward-desc">Anchors both commerce and faith. The city grew around the stone as nomadic clans gathered to guard its light. To live in the Lakeside city is to live within a constant pilgrimage.</div>
       </div>
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">II · ✦</div>
         <div class="ward-name">The Steppes Wardstone</div>
         <div class="ward-loc">Standing alone in the open grasslands</div>
@@ -105,13 +106,13 @@
     <div class="ward-region-name">Itzasoa</div>
     <div class="ward-region-byline">Two stones · canopy city and temple ziggurats</div>
     <div class="ward-cards">
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">III · ✦</div>
         <div class="ward-name">The Forest Wardstone</div>
         <div class="ward-loc">Hidden within the canopy of the great forest</div>
         <div class="ward-desc">Enshrined in a vast arboreal city. Bridges of living wood and watchful druids keep eternal vigil. The stone is not so much guarded as <i>grown around</i> — the forest itself answers to its presence.</div>
       </div>
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">IV · ✦</div>
         <div class="ward-name">The Temple Wardstone</div>
         <div class="ward-loc">At the heart of a temple city</div>
@@ -125,13 +126,13 @@
     <div class="ward-region-name">Ilun Tasun</div>
     <div class="ward-region-byline">Two stones · high monastery and fortified port</div>
     <div class="ward-cards">
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">V · ✦</div>
         <div class="ward-name">The Monastery Wardstone</div>
         <div class="ward-loc">High in the mountains</div>
         <div class="ward-desc">Monks devote their lives to its guard. Pilgrims climb perilous paths to glimpse its veiled glow. The monastery has not opened its gates to a foreign army in living memory — but the path up the mountain is open to anyone willing to make it.</div>
       </div>
-      <div class="ward-card">
+      <div class="accent-card framed ward-card">
         <div class="ward-number">VI · ✦</div>
         <div class="ward-name">The Port Wardstone</div>
         <div class="ward-loc">In a fortified port city by the sea</div>
@@ -145,7 +146,7 @@
     <div class="ward-region-name">Myrria</div>
     <div class="ward-region-byline">The seventh and last — the divine anchor</div>
     <div class="ward-cards" style="grid-template-columns: 1fr; max-width: 540px; margin: 0 auto;">
-      <div class="ward-card divine">
+      <div class="accent-card framed ward-card divine">
         <div class="ward-number">VII · ✦</div>
         <div class="ward-name">The Divine Wardstone</div>
         <div class="ward-loc"><a href="/talan/domains/myrkono/myrria/myrria.html">Myrria — Sanctum of Veils</a></div>
@@ -174,7 +175,7 @@
 
   <div class="general-list">
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Vermin Queen</span>
         <span class="general-tag alive">Active</span>
@@ -185,7 +186,7 @@
       <div class="general-grants">Grants the <b>Swarm</b> domain to clerics who turn to corruption through her vessel. Full Hollow geography, three-threats doctrine, Surki counter, and War-of-Seals containment context on the <a href="/talan/the-binding/hollow-of-ten-thousand-threads.html"><b>Hollow page →</b></a></div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Rot-Tyrant</span>
         <span class="general-tag alive">Active</span>
@@ -195,7 +196,7 @@
       <div class="general-grants">Grants the <b>Decay</b> domain.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Blight-Seer</span>
         <span class="general-tag alive">Active</span>
@@ -204,7 +205,7 @@
       <div class="general-desc">A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. Cult survivors emerge speaking in fevered prophecy that, disturbingly, sometimes proves true.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Flesh-Sculptor</span>
         <span class="general-tag alive">Active</span>
@@ -213,7 +214,7 @@
       <div class="general-desc">A nightmare of stitched horrors and alchemical vats. His creations are not random — each is a deliberate experiment in what mortal flesh can be made to become.</div>
     </div>
 
-    <div class="general-card defeated">
+    <div class="accent-card framed general-card defeated">
       <div class="general-head">
         <span class="general-name">The Ash-Binder</span>
         <span class="general-tag defeated">Defeated</span>
@@ -222,7 +223,7 @@
       <div class="general-desc">A corrupted elemental beast who dwelled in a volcanic furnace of stone and fire. His defeat is celebrated across the kingdoms as proof that the Nine can fall. Still, his lair remains dangerous, haunted by remnants of his slag-born armies that did not die with him. The campaign that brought him down is the closest thing the modern age has to a founding heroism.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Whisperer in Dreams</span>
         <span class="general-tag alive">Active</span>
@@ -232,7 +233,7 @@
       <div class="general-grants">Grants the <b>Nightmares</b> domain.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Maw Serpent</span>
         <span class="general-tag alive">Active</span>
@@ -242,7 +243,7 @@
       <div class="general-grants">Grants the <b>Naga</b> domain. Cults among naga ancestry sometimes pledge to him without realising he is a General; the rest of the Naga-domain priesthood treats them as compromised on first contact.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The False Saint</span>
         <span class="general-tag alive">Active</span>
@@ -251,7 +252,7 @@
       <div class="general-desc">Her underground chapel oozes false miracles, where prayers rot into curses and the faithful rise as zealots of corruption. Of all Nine, she is the one most likely to be mistaken for an ally before her nature is revealed.</div>
     </div>
 
-    <div class="general-card">
+    <div class="accent-card framed general-card">
       <div class="general-head">
         <span class="general-name">The Root-Twister</span>
         <span class="general-tag alive">Active</span>
@@ -289,16 +290,6 @@
   <div class="footer">TYRNARRA · TALAN · THE BINDING</div>
 
 </div>
-
-<script>
-function toggleEraSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>

@@ -9,21 +9,24 @@
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  :root { --domain-accent: #d6843a; }
+  :root {
+    --domain-accent: #d6843a;
+    --card-bg: rgba(20,12,8,0.55);
+  }
   .hearts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px auto; max-width: 1000px; }
-  .heart-card { background: rgba(20,12,8,0.55); border-left: 4px solid var(--heart-color, #d6843a); padding: 12px 14px; border-radius: 4px; }
-  .heart-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--heart-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .heart-card { padding: 12px 14px; }
+  .heart-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
   .heart-domain { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 6px; }
   .heart-symbol { font-size: 0.85rem; color: var(--text); }
-  .h-crimson  { --heart-color: #b04030; }
-  .h-azure    { --heart-color: #4a78b8; }
-  .h-golden   { --heart-color: #d8a040; }
-  .h-emerald  { --heart-color: #4a9060; }
-  .h-ivory    { --heart-color: #d8d2b8; }
-  .h-violet   { --heart-color: #8a60b0; }
-  .h-rose     { --heart-color: #c87490; }
-  .h-sapphire { --heart-color: #5878a8; }
-  .h-onyx     { --heart-color: #4a4858; }
+  .h-crimson  { --card-accent: #b04030; }
+  .h-azure    { --card-accent: #4a78b8; }
+  .h-golden   { --card-accent: #d8a040; }
+  .h-emerald  { --card-accent: #4a9060; }
+  .h-ivory    { --card-accent: #d8d2b8; }
+  .h-violet   { --card-accent: #8a60b0; }
+  .h-rose     { --card-accent: #c87490; }
+  .h-sapphire { --card-accent: #5878a8; }
+  .h-onyx     { --card-accent: #4a4858; }
   .sake-table { width: 100%; max-width: 880px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
   .sake-table th, .sake-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(214,132,58,0.18); }
   .sake-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
@@ -88,15 +91,15 @@
   </div>
 
   <div class="hearts-grid">
-    <div class="heart-card h-crimson"><div class="heart-name">Crimson Heart</div><div class="heart-domain">Military & War</div><div class="heart-symbol">A fox's head crowned with a laurel of crimson silk.</div></div>
-    <div class="heart-card h-azure"><div class="heart-name">Azure Heart</div><div class="heart-domain">Diplomacy & Foreign Relations</div><div class="heart-symbol">Two entwined fox tails over a calm wave.</div></div>
-    <div class="heart-card h-golden"><div class="heart-name">Golden Heart</div><div class="heart-domain">Commerce & Wealth</div><div class="heart-symbol">A fox's paw clutching a golden coin.</div></div>
-    <div class="heart-card h-emerald"><div class="heart-name">Emerald Heart</div><div class="heart-domain">Nature & Stewardship</div><div class="heart-symbol">A fox curled within a wreath of ivy.</div></div>
-    <div class="heart-card h-ivory"><div class="heart-name">Ivory Heart</div><div class="heart-domain">Law & Justice</div><div class="heart-symbol">A fox's mask split black and white.</div></div>
-    <div class="heart-card h-violet"><div class="heart-name">Violet Heart</div><div class="heart-domain">Magic & Mysticism</div><div class="heart-symbol">A fox tail wreathed in stars.</div></div>
-    <div class="heart-card h-rose"><div class="heart-name">Rose Heart</div><div class="heart-domain">Arts & Festivals</div><div class="heart-symbol">A fox dancing with a ribbon.</div></div>
-    <div class="heart-card h-sapphire"><div class="heart-name">Sapphire Heart</div><div class="heart-domain">Knowledge & Education</div><div class="heart-symbol">An open scroll beneath a fox's gaze.</div></div>
-    <div class="heart-card h-onyx"><div class="heart-name">Onyx Heart</div><div class="heart-domain">Secrets & Shadows</div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></div>
+    <div class="accent-card heart-card h-crimson"><div class="heart-name">Crimson Heart</div><div class="heart-domain">Military & War</div><div class="heart-symbol">A fox's head crowned with a laurel of crimson silk.</div></div>
+    <div class="accent-card heart-card h-azure"><div class="heart-name">Azure Heart</div><div class="heart-domain">Diplomacy & Foreign Relations</div><div class="heart-symbol">Two entwined fox tails over a calm wave.</div></div>
+    <div class="accent-card heart-card h-golden"><div class="heart-name">Golden Heart</div><div class="heart-domain">Commerce & Wealth</div><div class="heart-symbol">A fox's paw clutching a golden coin.</div></div>
+    <div class="accent-card heart-card h-emerald"><div class="heart-name">Emerald Heart</div><div class="heart-domain">Nature & Stewardship</div><div class="heart-symbol">A fox curled within a wreath of ivy.</div></div>
+    <div class="accent-card heart-card h-ivory"><div class="heart-name">Ivory Heart</div><div class="heart-domain">Law & Justice</div><div class="heart-symbol">A fox's mask split black and white.</div></div>
+    <div class="accent-card heart-card h-violet"><div class="heart-name">Violet Heart</div><div class="heart-domain">Magic & Mysticism</div><div class="heart-symbol">A fox tail wreathed in stars.</div></div>
+    <div class="accent-card heart-card h-rose"><div class="heart-name">Rose Heart</div><div class="heart-domain">Arts & Festivals</div><div class="heart-symbol">A fox dancing with a ribbon.</div></div>
+    <div class="accent-card heart-card h-sapphire"><div class="heart-name">Sapphire Heart</div><div class="heart-domain">Knowledge & Education</div><div class="heart-symbol">An open scroll beneath a fox's gaze.</div></div>
+    <div class="accent-card heart-card h-onyx"><div class="heart-name">Onyx Heart</div><div class="heart-domain">Secrets & Shadows</div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></div>
   </div>
 
   <div class="prose">

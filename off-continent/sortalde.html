@@ -9,23 +9,26 @@
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  :root { --domain-accent: #c88090; }
+  :root {
+    --domain-accent: #c88090;
+    --card-bg: rgba(28,18,22,0.55);
+  }
 
   .petal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .petal-card { background: rgba(28,18,22,0.55); border-left: 4px solid var(--petal-color, var(--domain-accent)); padding: 14px 16px; border-radius: 4px; }
-  .petal-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--petal-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .petal-card { padding: 14px 16px; }
+  .petal-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
   .petal-hanzi { font-family: serif; color: var(--gold-dim); font-size: 1.1rem; margin-bottom: 4px; line-height: 1; }
   .petal-meaning { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 4px; }
   .petal-ancestry { font-size: 0.85rem; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
   .petal-desc { font-size: 0.9rem; color: var(--text); }
   .petal-tier { font-size: 0.75rem; color: var(--gold-dim); margin-top: 6px; letter-spacing: 0.05em; text-transform: uppercase; }
-  .p-wandao   { --petal-color: #d0a070; }
-  .p-xidao    { --petal-color: #d88e6a; }
-  .p-niudao   { --petal-color: #a87850; }
-  .p-yingdao  { --petal-color: #6a5878; }
-  .p-lingdao  { --petal-color: #7a90a8; }
-  .p-lundao   { --petal-color: #b89cb8; }
-  .p-heting   { --petal-color: #d8b078; }
+  .p-wandao   { --card-accent: #d0a070; }
+  .p-xidao    { --card-accent: #d88e6a; }
+  .p-niudao   { --card-accent: #a87850; }
+  .p-yingdao  { --card-accent: #6a5878; }
+  .p-lingdao  { --card-accent: #7a90a8; }
+  .p-lundao   { --card-accent: #b89cb8; }
+  .p-heting   { --card-accent: #d8b078; }
 
   .ancestry-table { width: 100%; max-width: 1000px; margin: 16px auto; border-collapse: collapse; font-size: 0.9rem; }
   .ancestry-table th, .ancestry-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(200,128,144,0.22); vertical-align: top; }
@@ -36,12 +39,12 @@
   .freq-vrare   { color: #b07880; }
   .freq-never   { color: #7a6878; font-style: italic; }
 
-  .concord-card { background: rgba(40,28,32,0.55); border: 1px solid rgba(200,128,144,0.4); border-radius: 4px; padding: 16px 20px; margin: 22px auto; max-width: 940px; }
+  .concord-card { padding: 16px 20px; margin: 22px auto; max-width: 940px; --card-bg: rgba(40,28,32,0.55); --card-accent: rgba(200,128,144,0.4); }
   .concord-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .concord-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.45rem; margin-bottom: 10px; }
   .concord-name .hanzi { font-family: serif; font-size: 1.2rem; color: var(--gold-dim); margin-left: 8px; }
 
-  .theology-block { background: rgba(28,22,32,0.55); border-left: 4px solid #8a6ac8; padding: 14px 18px; margin: 22px auto; max-width: 940px; border-radius: 4px; }
+  .theology-block { padding: 14px 18px; margin: 22px auto; max-width: 940px; --card-bg: rgba(28,22,32,0.55); --card-accent: #8a6ac8; }
   .theology-label { font-family: 'Cinzel', serif; color: #b89cd8; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
 
   .hook-list { max-width: 940px; margin: 14px auto; padding-left: 26px; }
@@ -116,7 +119,7 @@
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:18px;">Outer Petals — the Talan-Facing Arc</h3>
   <div class="petal-grid">
 
-    <div class="petal-card p-wandao">
+    <div class="accent-card petal-card p-wandao">
       <div class="petal-name">Wandao</div>
       <div class="petal-hanzi">万岛</div>
       <div class="petal-meaning">"Myriad Island" — <i>wan</i> (myriad, ten thousand)</div>
@@ -125,7 +128,7 @@
       <div class="petal-tier">Outer petal · closest to Talan</div>
     </div>
 
-    <div class="petal-card p-xidao">
+    <div class="accent-card petal-card p-xidao">
       <div class="petal-name">Xidao</div>
       <div class="petal-hanzi">戏岛</div>
       <div class="petal-meaning">"Theatre Island" — <i>xi</i> (play, theatre, deception)</div>
@@ -134,7 +137,7 @@
       <div class="petal-tier">Outer petal · most likely to reach Talan</div>
     </div>
 
-    <div class="petal-card p-niudao">
+    <div class="accent-card petal-card p-niudao">
       <div class="petal-name">Niudao</div>
       <div class="petal-hanzi">牛岛</div>
       <div class="petal-meaning">"Ox Island" — named directly for the bull-folk</div>
@@ -147,7 +150,7 @@
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">Inner Petals — Rumour to Most Talanese</h3>
   <div class="petal-grid">
 
-    <div class="petal-card p-yingdao">
+    <div class="accent-card petal-card p-yingdao">
       <div class="petal-name">Yingdao</div>
       <div class="petal-hanzi">影岛</div>
       <div class="petal-meaning">"Shadow Island" — <i>ying</i> (shadow)</div>
@@ -156,7 +159,7 @@
       <div class="petal-tier">Inner petal · vanishingly rare on Talan</div>
     </div>
 
-    <div class="petal-card p-lingdao">
+    <div class="accent-card petal-card p-lingdao">
       <div class="petal-name">Lingdao</div>
       <div class="petal-hanzi">灵岛</div>
       <div class="petal-meaning">"Spirit Island" — <i>ling</i> (spirit)</div>
@@ -165,7 +168,7 @@
       <div class="petal-tier">Inner petal · functionally never seen on Talan</div>
     </div>
 
-    <div class="petal-card p-lundao">
+    <div class="accent-card petal-card p-lundao">
       <div class="petal-name">Lundao</div>
       <div class="petal-hanzi">轮岛</div>
       <div class="petal-meaning">"Wheel Island" — <i>samsara</i>, the wheel of reincarnation</div>
@@ -178,7 +181,7 @@
 
   <h3 class="section-heading" style="font-size:1.05rem; margin-top:24px;">The Central Seat</h3>
   <div class="petal-grid">
-    <div class="petal-card p-heting" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+    <div class="accent-card petal-card p-heting" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
       <div class="petal-name">Heting</div>
       <div class="petal-hanzi">合廷</div>
       <div class="petal-meaning">"Concord-Court" — <i>he</i> (concord, unity) + <i>ting</i> (court)</div>
@@ -192,7 +195,7 @@
 
   <h2 class="section-heading">The Concord of Courts</h2>
 
-  <div class="concord-card">
+  <div class="accent-card framed concord-card">
     <div class="concord-label">Central Authority · Convenes at Heting</div>
     <div class="concord-name">The Concord of Courts<span class="hanzi">合廷</span></div>
     <p>An ancient confederation binding the seven petals together. The Concord <b>does not</b> enforce its authority through standing armies or central decree — it holds together by <i>long agreement</i>. Each of the six ancestral petals has its own internal governance (typically a hereditary court with a long-lived ancestral lineage), and inter-petal disputes are mediated through Concord channels at Heting.</p>
@@ -204,7 +207,7 @@
 
   <h2 class="section-heading">Theology — No Walking Gods</h2>
 
-  <div class="theology-block">
+  <div class="accent-card theology-block">
     <div class="theology-label">A continent without divine presence</div>
     <p>Sortalde has <b>no walking gods.</b> The Thirteen Bound all maintain their sancta on Talan; none have crossed Hafra to establish presence on Sortalde, and no indigenous Sortalde bound god has emerged from the continent's own population. The bound thirteen are <i>aware</i> of Sortalde — Forseti's clergy in particular have studied the Concord with academic interest — but they have never sent missionaries, and the Concord has never asked for them.</p>
     <p>All clerical work on Sortalde channels through a <b>Layer-3 pantheon</b> of dynasty-spirits, ancestor-judges, and place-gods who reside in Diyu and (less often) Elysium. Sortalde clergy invoke their gods <i>across the veil</i>, never in person. <b>No mortal in Sortalde has ever met their god face to face.</b> Religion there is invocation, ancestor-memory, and inherited covenant — never personal audition.</p>

@@ -8,20 +8,24 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
-  :root { --domain-accent: #6a5868; }
+  :root {
+    --domain-accent: #6a5868;
+    --card-bg: rgba(22,18,24,0.55);
+  }
 
   .signs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .sign-card { background: rgba(22,18,24,0.55); border-left: 4px solid var(--domain-accent); padding: 12px 14px; border-radius: 4px; }
+  .sign-card { padding: 12px 14px; }
   .sign-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.93rem; margin-bottom: 4px; }
   .sign-desc { font-size: 0.9rem; color: var(--text); }
 
   .ancestry-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .ancestry-card { background: rgba(22,18,24,0.6); border: 1px solid rgba(106,88,104,0.45); border-radius: 4px; padding: 12px 16px; }
+  .ancestry-card { padding: 12px 16px; --card-bg: rgba(22,18,24,0.6); --card-accent: rgba(106,88,104,0.45); }
   .ancestry-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
   .ancestry-desc { font-size: 0.9rem; color: var(--text); }
 
-  .warning-block { background: rgba(40,18,22,0.55); border-left: 4px solid #a04848; padding: 12px 16px; margin: 22px auto; max-width: 920px; }
+  .warning-block { padding: 12px 16px; margin: 22px auto; max-width: 920px; --card-bg: rgba(40,18,22,0.55); --card-accent: #a04848; }
   .warning-label { font-family: 'Cinzel', serif; color: #d88080; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 4px; }
 </style>
 </head>
@@ -56,7 +60,7 @@
     <dt>Visitors</dt><dd>Tani-mourning sects on edge-pilgrimage; necromancers drawn by the resonance; ascension-cultists hunting for what the ruins might still hold; the rare Adventurers' Guild expedition. Most do not return whole; some do not return at all.</dd>
   </dl>
 
-  <div class="warning-block">
+  <div class="accent-card warning-block">
     <div class="warning-label">Adventurers' Guild — Standing Notice</div>
     <p>The Lost Kingdom is the only sub-region on Talan that the Guild publishes a <b>permanent edge-of-region warning</b> for. Any party entering past the inner stone ring is recorded as a <i>missing-presumed-lost</i> contract from the moment they cross. Recovery teams are not dispatched. The Bronze-rank ceiling for any expedition contract that touches the Blackened Lands has been overridden in writing — Guild Master Lavisburg's instruction is that no rank-Bronze party is permitted near. Mithral and above only.</p>
   </div>
@@ -72,27 +76,27 @@
 
   <h3 class="section-heading" style="font-size:1.1rem; margin-top:24px;">Signs of the Curse</h3>
   <div class="signs-grid">
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">Blackened Soil</div>
       <div class="sign-desc">The ground takes nothing — no crop, no grass, not even the patient lichens that colonise dead stone elsewhere. The black is not ash; it is the soil itself, all the way down past the depth a shovel reaches.</div>
     </div>
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">Time-Warped Strata</div>
       <div class="sign-desc">Moments <i>repeat</i> in pockets — a wind that blows the same gust twice; footsteps that arrive before the foot. Other moments <i>pool</i>, holding the traveller in a single second for what feels like an hour. The temporal anomalies are heaviest near the ruined capital's core.</div>
     </div>
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">Ruins Reading Newer</div>
       <div class="sign-desc">Stone fragments that the eye reads as <i>newer</i> than the surrounding rock — by years, sometimes by centuries. The Storveldi Denbora capital lies underneath; the strata above it date wrong because the strata <i>are</i> wrong.</div>
     </div>
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">Ambient Necromantic Resonance</div>
       <div class="sign-desc">A constant low pressure on the spell-sense of anyone trained to feel it. Necromancers describe entering the Lost Kingdom as a <i>volume change</i> — the background hum of the dead made suddenly audible.</div>
     </div>
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">Periodic Fleshwarp Incidents</div>
       <div class="sign-desc">Survivors of the cursed ground sometimes return changed in body. Limbs malformed, organs duplicated, sense-organs in the wrong places. The land works on the living without consent and without pattern.</div>
     </div>
-    <div class="sign-card">
+    <div class="accent-card sign-card">
       <div class="sign-name">The Restless Dead</div>
       <div class="sign-desc">Concentrations of bone-revenants. Skeletons rise from the soil itself — most are old, some are not. No necromancer is needed; the land does its own raising.</div>
     </div>
@@ -117,11 +121,11 @@
   </div>
 
   <div class="ancestry-row">
-    <div class="ancestry-card">
+    <div class="accent-card framed ancestry-card">
       <div class="ancestry-name">Fleshwarp</div>
       <div class="ancestry-desc">The cursed ground twists living flesh into irregular bodies. Fleshwarps born of the Lost Kingdom are the natural mortal ancestry — children of survivors, of trespassers who lingered, and sometimes of the land's slower work on those who never asked to be changed at all. <b>This is the PF2e Fleshwarp ancestry as it exists on Talan.</b> Each is unique; no two share form.</div>
     </div>
-    <div class="ancestry-card">
+    <div class="accent-card framed ancestry-card">
       <div class="ancestry-name">Skeleton</div>
       <div class="ancestry-desc">The restless wound pulls the dead back into motion. Lost-Kingdom Skeletons are not raised by a necromancer's hand — they rise. Some are old enough that nothing of who they were remains; some are recent enough that fragments of personality persist. They are the canonical natural-born Skeleton ancestry on Talan.</div>
     </div>
@@ -223,23 +227,6 @@
   <div class="footer">TYRNARRA · TALAN · LIOARU · LOST KINGDOM</div>
 
 </div>
-
-<script>
-function toggleEraLegend(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
-}
-function toggleEraSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>

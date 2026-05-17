@@ -108,12 +108,12 @@
 
   /* Surki counter callout */
   .counter-block {
-    background: rgba(14,22,28,0.6);
-    border-left: 4px solid #5a8aa8;
     padding: 16px 20px;
     margin: 22px auto;
     max-width: 920px;
     border-radius: 0 4px 4px 0;
+    --card-bg: rgba(14,22,28,0.6);
+    --card-accent: #5a8aa8;
   }
   .counter-label {
     font-family: 'Cinzel', serif;
@@ -127,12 +127,12 @@
 
   /* War of Seals — context callout */
   .seal-block {
-    background: rgba(24,18,8,0.55);
-    border-left: 4px solid var(--gold-dim);
     padding: 16px 20px;
     margin: 22px auto;
     max-width: 920px;
     border-radius: 0 4px 4px 0;
+    --card-bg: rgba(24,18,8,0.55);
+    --card-accent: var(--gold-dim);
   }
   .seal-label {
     font-family: 'Cinzel', serif;
@@ -143,38 +143,6 @@
     margin-bottom: 6px;
   }
   .seal-block p { margin: 8px 0; font-size: 0.93rem; line-height: 1.65; }
-
-  /* Open in canon */
-  .open-canon {
-    background: rgba(20,12,16,0.45);
-    border: 1px dashed rgba(192,200,144,0.4);
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin: 24px auto;
-    max-width: 920px;
-  }
-  .open-canon h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
-    color: #c0c890;
-    text-transform: uppercase;
-    margin: 0 0 6px;
-  }
-  .open-canon .sub {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--parch-dim);
-    margin-bottom: 12px;
-  }
-  .open-canon ul {
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-    font-size: 0.93rem;
-    line-height: 1.65;
-  }
-  .open-canon li { margin: 4px 0; }
-  .open-canon li b { color: var(--gold-bright); }
 </style>
 </head>
 <body data-page="hollow-of-ten-thousand-threads">
@@ -319,7 +287,7 @@
 
   <h2 class="section-heading">The Surki Counter</h2>
 
-  <div class="counter-block">
+  <div class="accent-card counter-block">
     <div class="counter-label">Insectoid, but not Corrupted</div>
     <p>The <b>Surki</b> — insectoid sapients of the deep places, uncommon in the upper Darklands and rare anywhere else — hold a doctrinal position on the Vermin Queen that mortals elsewhere often miss. The Surki are insectoid by anatomy: compound eyes, chitinous segmentation, hive-adjacent biology. The Vermin Queen's swarm-corruption is <b>precisely the fate they organise to resist</b>. The opposition is not incidental. The Surki recognise her as the version of themselves that would have happened if the gods had finished what they started with the Dragons.</p>
     <p>The opposition is doctrinal, cultural, and operational. Surki who climb out of the Darklands and reach the Shadow Steppes are <b>among the most informed and most committed allies any Guild expedition into the Hollow can hope for</b>. They know the swarm-vocabulary; they read the silk-patterns; they understand the hive-mind influence as <i>kin gone wrong</i>, which is the only frame in which it can be effectively resisted rather than merely endured. A Hollow expedition with a Surki scout-or-advisor is materially more likely to come back than one without.</p>
@@ -334,7 +302,7 @@
 
   <h2 class="section-heading">The Hollow in the War of Seals</h2>
 
-  <div class="seal-block">
+  <div class="accent-card seal-block">
     <div class="seal-label">The 2524 Eruption</div>
     <p>The Nine Dungeons did not exist for the long centuries between the Corrupted God's binding (2135 MR) and the modern day. They <b>erupted in 2524 MR</b> — overnight, all nine at once, tearing pathways into the mortal world and disgorging the first great corruption armies in four centuries. The Hollow was one of those nine. The kingdoms united, the Guild rallied, militias were drafted; after bloody campaigns the first wave was broken. To prevent another flood, the <b>main entrances of all nine Dungeons were sealed</b> with wards, stone, and sacrifice. The Hollow's main entrance is among them.</p>
     <p>Sealing the gate did not end the threat. <b>Corruption now seeps upward through smaller caverns and tunnel networks the seals do not reach.</b> The Hollow leaks. The Vermin Queen's children find their way to the surface through gully-mouths and old mine-shafts and faults the Steppes' shadow-tinted geology hides until something walks out of them. Containment, not eradication, is the doctrine. <a href="/talan/factions/adventurers-guild.html">Myrria's Godshall</a> coordinates the standing response from across Myrkono; Branch and Office tier outposts maintain the daily presence on the ground.</p>

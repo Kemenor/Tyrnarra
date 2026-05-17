@@ -29,12 +29,11 @@
 
   /* Tension callout — Faith-vs-Forseti law-vs-law block */
   .tension-block {
-    background: rgba(28,18,38,0.55);
-    border-left: 4px solid var(--domain-accent);
     padding: 16px 20px;
     margin: 22px auto;
     max-width: 920px;
     border-radius: 0 4px 4px 0;
+    --card-bg: rgba(28,18,38,0.55);
   }
   .tension-label {
     font-family: 'Cinzel', serif;
@@ -45,38 +44,6 @@
     margin-bottom: 6px;
   }
   .tension-block p { margin: 8px 0; }
-
-  /* "Open in Canon" panel — explicit TBD inventory */
-  .open-canon {
-    background: rgba(20,16,8,0.45);
-    border: 1px dashed rgba(200,168,216,0.4);
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin: 24px auto;
-    max-width: 920px;
-  }
-  .open-canon h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
-    color: #c8a8d8;
-    text-transform: uppercase;
-    margin: 0 0 6px;
-  }
-  .open-canon .sub {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--parch-dim);
-    margin-bottom: 12px;
-  }
-  .open-canon ol {
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-    font-size: 0.93rem;
-    line-height: 1.65;
-  }
-  .open-canon li { margin: 4px 0; }
-  .open-canon li b { color: var(--gold-bright); }
 </style>
 </head>
 <body data-page="legea-empire">
@@ -151,14 +118,14 @@
     <p>The Empire sits <i>inside</i> Zuzental — Forseti's domain, the domain of law itself. Two divine legal authorities operate inside the same territory: Forseti's law, which is the foundation of Zuzental's continental reputation, and the Faith's law, which the Empire's god claims is older and truer. The boundary between them is a continual political and theological argument that the rest of Talan watches carefully.</p>
   </div>
 
-  <div class="tension-block">
+  <div class="accent-card tension-block">
     <div class="tension-label">The Faith's Position</div>
     <p>The bound thirteen swore the Gods' Law as a treaty at the close of the Week of Crimson Rain. A sworn law is a contingent law — agreed to under specific historical pressure, accepted in exchange for a benefit, in principle revocable if the parties chose. Forseti's law is sworn law.</p>
     <p>The Faith's god did not swear that law and was not party to that treaty. Their law has always been free — pre-existing, unconditioned, owed to no one. Older. Truer. The Empire's authority follows from that older law.</p>
     <p><i>The Empire teaches this from the pulpit. Forseti's clergy in the Thousand Kingdom find it provocative on theological grounds and unconvincing on legal ones.</i></p>
   </div>
 
-  <div class="tension-block" style="border-left-color: var(--gold); background: rgba(38,28,12,0.4);">
+  <div class="accent-card tension-block" style="--card-accent:var(--gold); --card-bg:rgba(38,28,12,0.4)">
     <div class="tension-label" style="color: var(--gold-bright);">Forseti's Position</div>
     <p>A law sworn by the parties bound to it is a law given consent. A law imposed from outside — older, freer, owed to no one — is by definition unaccountable. The Faith mistakes <i>antiquity</i> for <i>legitimacy</i>, and the difference matters: the Gods' Law was sworn precisely because the alternative was the petty divine governance of the Gods' Era, which mortals had no say in starting and no power to end.</p>
     <p><i>Forseti's clergy say this less publicly than the Faith says the inverse, but they say it.</i></p>

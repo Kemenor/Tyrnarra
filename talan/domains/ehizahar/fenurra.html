@@ -11,7 +11,7 @@
 <style>
   :root { --domain-accent: #c84a2a; }
   .tribe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 24px auto; max-width: 980px; }
-  .tribe-card { background: rgba(20,12,8,0.55); border: 1px solid rgba(200,74,42,0.28); border-radius: 6px; padding: 16px 18px; }
+  .tribe-card { padding: 16px 18px; border-radius: 6px; --card-bg: rgba(20,12,8,0.55); --card-accent: rgba(200,74,42,0.28); }
   .tribe-card h3 { font-family: 'Cinzel', serif; font-weight: 600; font-size: 1.05rem; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
   .tribe-byname { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 10px; }
   .tribe-quote { font-style: italic; font-size: 0.92rem; color: var(--text); border-left: 2px solid rgba(200,74,42,0.4); padding-left: 10px; margin: 10px 0; }
@@ -72,7 +72,7 @@
 
   <div class="tribe-grid">
 
-    <div class="tribe-card">
+    <div class="accent-card framed tribe-card">
       <h3>Draconis</h3>
       <div class="tribe-byname">The Scaled Flame · Forgemasters of Fenurra</div>
       <div class="tribe-quote">"To temper steel, you need fire. To temper a people, you need something far hotter."</div>
@@ -86,7 +86,7 @@
       </div>
     </div>
 
-    <div class="tribe-card">
+    <div class="accent-card framed tribe-card">
       <h3>Vexiren</h3>
       <div class="tribe-byname">The Ember-Eyed · Smoke-Touched · Ghostflame</div>
       <div class="tribe-quote">"We bury no kin. We light the sky in their name, then vanish."</div>
@@ -100,7 +100,7 @@
       </div>
     </div>
 
-    <div class="tribe-card">
+    <div class="accent-card framed tribe-card">
       <h3>Brakkaun</h3>
       <div class="tribe-byname">The Bone-Burdened · Ashdrummers · Dissonants</div>
       <div class="tribe-quote">"We do not cast spells. We cast echoes that scatter them."</div>
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <div class="tribe-card">
+    <div class="accent-card framed tribe-card">
       <h3>Seravain</h3>
       <div class="tribe-byname">The Soulbound · Twice-Chosen · Emberwelds</div>
       <div class="tribe-quote">"I did not choose you in peace. I chose you in fire. I choose you still."</div>

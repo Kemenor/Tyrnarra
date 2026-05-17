@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>:root { --domain-accent: #b07a3a; }</style>
 </head>
 <body data-page="lioaru">
@@ -96,16 +97,6 @@
   <div class="footer">TYRNARRA · TALAN · LIOARU</div>
 
 </div>
-
-<script>
-function toggleEraSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>

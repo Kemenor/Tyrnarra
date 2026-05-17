@@ -9,9 +9,12 @@
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  :root { --domain-accent: #8a8a98; }
+  :root {
+    --domain-accent: #8a8a98;
+    --card-bg: rgba(22,22,28,0.55);
+  }
 
-  .matriarch-card { background: rgba(22,22,28,0.6); border: 1px solid rgba(138,138,152,0.5); border-radius: 4px; padding: 18px 22px; margin: 22px auto; max-width: 940px; }
+  .matriarch-card { padding: 18px 22px; margin: 22px auto; max-width: 940px; --card-bg: rgba(22,22,28,0.6); --card-accent: rgba(138,138,152,0.5); }
   .matriarch-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .matriarch-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.6rem; margin-bottom: 4px; }
   .matriarch-titles { font-style: italic; color: var(--gold-dim); margin-bottom: 12px; font-size: 0.95rem; }
@@ -19,7 +22,7 @@
   .matriarch-grid dt { font-family: 'Cinzel', serif; color: var(--gold-dim); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.78rem; padding-top: 2px; }
   .matriarch-grid dd { margin: 0; color: var(--text); }
 
-  .relic-card { background: rgba(22,22,28,0.55); border-left: 4px solid var(--domain-accent); border-radius: 4px; padding: 16px 22px; margin: 22px auto; max-width: 940px; }
+  .relic-card { padding: 16px 22px; margin: 22px auto; max-width: 940px; }
   .relic-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 4px; }
   .relic-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.5rem; margin-bottom: 4px; }
   .relic-byname { font-style: italic; color: var(--gold-dim); font-size: 0.95rem; margin-bottom: 14px; }
@@ -28,7 +31,7 @@
   .relic-grid dd { margin: 0; color: var(--text); }
 
   .export-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .export-card { background: rgba(22,22,28,0.5); border-left: 3px solid var(--gold-dim); padding: 12px 14px; border-radius: 4px; }
+  .export-card { padding: 12px 14px; --card-bg: rgba(22,22,28,0.5); --card-accent: var(--gold-dim); }
   .export-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
   .export-desc { font-size: 0.9rem; color: var(--text); }
 </style>
@@ -69,7 +72,7 @@
 
   <h2 class="section-heading">The Highforge Matriarch</h2>
 
-  <div class="matriarch-card">
+  <div class="accent-card framed matriarch-card">
     <div class="matriarch-label">Head of House · Current Generation</div>
     <div class="matriarch-name">Tharka Eisenhart</div>
     <div class="matriarch-titles">Lady of the Anvil Throne · Warden of the Steel Marches · Keeper of the Furnace-Law</div>
@@ -90,7 +93,7 @@
     <p>House Eisenhart's most famous single creation, and the most recognised Magitech war-relic alive on Talan.</p>
   </div>
 
-  <div class="relic-card">
+  <div class="accent-card relic-card">
     <div class="relic-label">War Relic · Mobile Fortress</div>
     <div class="relic-name">Stahlglanz</div>
     <div class="relic-byname">"Steelshine" in Old Dwarvish</div>
@@ -118,19 +121,19 @@
   </div>
 
   <div class="export-grid">
-    <div class="export-card">
+    <div class="accent-card thin export-card">
       <div class="export-name">Eisenhart Leviathan-Class Warship</div>
       <div class="export-desc">Heavy capital warship. Ethersteel hull, dual rune-cannon batteries, integrated airship hangar. Currently the heaviest-armed Magitech vessel a foreign power can actually buy. Standing waiting list for new-build hulls runs eight to twelve years.</div>
     </div>
-    <div class="export-card">
+    <div class="accent-card thin export-card">
       <div class="export-name">The Ironwing Line</div>
       <div class="export-desc">Heavy combat airships. The Talanese industry-standard heavy-airship pattern — most foreign air fleets that field heavy hulls field Ironwings or licensed Ironwing derivatives. The newest sub-class (the <i>Ironwing Lance</i>) is restricted-export and sold only to Order-allied powers.</div>
     </div>
-    <div class="export-card">
+    <div class="accent-card thin export-card">
       <div class="export-name">Precision-Forged Runeblade Bayonets</div>
       <div class="export-desc">Issued to elite dwarven regiments. Closer to a sidearm than a polearm; the rune-edge will cut through field armour the rifle's shot would not. Status item; the export run is small, the waitlist disproportionate.</div>
     </div>
-    <div class="export-card">
+    <div class="accent-card thin export-card">
       <div class="export-name">Foundry Furnace Modules</div>
       <div class="export-desc">Prefabricated forge-cells exported to allied industrial regions. Each module is a self-contained Arcanotech foundry; client kingdoms install them as the seed of a local heavy industry. Politically as important as militarily — the modules embed Order-licensed designs at the receiver's industrial root.</div>
     </div>

@@ -19,7 +19,7 @@ echo.
 echo  ╭─────────────────────────────────────────────╮
 echo  │   TYRNARRA  ·  LOCAL DEV SERVER             │
 echo  │   live-reload enabled                       │
-echo  │   http://localhost:8000                     │
+echo  │   http://localhost:8008                     │
 echo  │   Ctrl+C to stop                            │
 echo  ╰─────────────────────────────────────────────╯
 echo.
@@ -28,4 +28,4 @@ REM --yes:    skip the "OK to install?" prompt on first run
 REM --port:   match the GitHub Pages local convention
 REM --ignore: skip lore/ markdown and git internals to avoid
 REM           reloads on notes/commits
-npx --yes live-server --port=8000 --ignore="lore/**,.git/**,outputs/**"
+npx --yes live-server --port=8008 --ignore="lore/**,.git/**,outputs/**"

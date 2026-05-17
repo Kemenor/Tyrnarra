@@ -11,13 +11,13 @@
 <style>
   :root { --domain-accent: #c8900a; }
 
-  .hazard-card { background: rgba(28,20,10,0.55); border-left: 4px solid var(--hazard-color, var(--gold)); padding: 14px 18px; margin: 14px auto; max-width: 1000px; border-radius: 4px; }
-  .hazard-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--hazard-color, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
+  .hazard-card { padding: 14px 18px; margin: 14px auto; max-width: 1000px; }
+  .hazard-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
   .hazard-byline { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 8px; }
   .hazard-body { font-size: 0.93rem; color: var(--text); }
   .hazard-body p { margin: 8px 0; }
-  .hazard-pirate { --hazard-color: #c87830; }
-  .hazard-conductor { --hazard-color: #8a6ac8; }
+  .hazard-pirate { --card-accent: #c87830; }
+  .hazard-conductor { --card-accent: #8a6ac8; }
 </style>
 </head>
 <body data-page="factions">
@@ -91,7 +91,7 @@
     <p>Not organised institutions — patterns of lawless work and inhabited phenomena common enough on Talan to be recognised by type. Listed here for reference and cross-link.</p>
   </div>
 
-  <div class="hazard-card hazard-pirate" id="train-pirates">
+  <div class="accent-card hazard-card hazard-pirate" id="train-pirates">
     <div class="hazard-name">Train Pirates</div>
     <div class="hazard-byline">Bandit category · Active on both <a href="/talan/talan.html#continental-rail-network">continental networks</a></div>
     <div class="hazard-body">
@@ -106,7 +106,7 @@
     </div>
   </div>
 
-  <div class="hazard-card hazard-conductor" id="conductors-station">
+  <div class="accent-card hazard-card hazard-conductor" id="conductors-station">
     <div class="hazard-name">The Conductor's Station</div>
     <div class="hazard-byline">Pocket-dimension hazard · Rare · Haunts both networks equally</div>
     <div class="hazard-body">
