@@ -12,6 +12,13 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
 /                              [Style A · cosmic]
   index.html                   landing = world primer (cosmology)                POPULATED
   grand-gods.html              the 13 bound gods (data-driven, expandable)       POPULATED
+  non-bound-gods.html          Non-Bound Gods & Beings — Named Non-Bound Gods
+                               (Bikiargi, Zaharsuge, Epairima, Betibizi + Sun
+                               god open thread) · Virtue Demons (Aristotelian
+                               pattern, Muiral named) · Sin Devils (Seven Sins,
+                               three domains mapped). Migrated demons/devils
+                               off bestiary.html; sidebar nav entry under
+                               World & Cosmos.                                    POPULATED  (NEW)
   magic.html                   Magic & Faith — Four Schools / Magitech / Daily Life /
                                Mortal Ascent Ladder + GM Secret / Faith / Domains-Outside-13
                                REWRITE (2026-05-17 Tier 3 step 6)
