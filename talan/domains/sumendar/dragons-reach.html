@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dragon's Reach — Sumendar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #9a3050; }
+
+  /* Inline TBD marker */
+  .tbd {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #d8a0b0;
+    background: rgba(154,48,80,0.18);
+    border: 1px solid rgba(216,160,176,0.35);
+    padding: 1px 7px;
+    border-radius: 8px;
+    vertical-align: 0.05em;
+    margin: 0 2px;
+  }
+
+  /* Lifespan band — visualises the 150 / 200 / 230 split */
+  .lifespan-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 80px;
+    gap: 14px;
+    align-items: center;
+    max-width: 760px;
+    margin: 10px auto;
+    padding: 10px 14px;
+    background: rgba(28,16,22,0.5);
+    border-left: 4px solid var(--life-color, var(--domain-accent));
+    border-radius: 0 3px 3px 0;
+  }
+  .lifespan-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    color: var(--life-color, var(--gold-bright));
+    text-transform: uppercase;
+  }
+  .lifespan-desc { font-size: 0.88rem; color: var(--text); }
+  .lifespan-years {
+    font-family: 'Cinzel', serif;
+    font-size: 0.92rem;
+    color: var(--gold-bright);
+    text-align: right;
+    font-weight: 600;
+  }
+  .ls-pragmatist { --life-color: #c8a060; }
+  .ls-purist     { --life-color: #b85878; }
+  .ls-purest     { --life-color: #d840a0; }
+
+  /* Purist schools — four-card grid */
+  .school-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 18px auto;
+    max-width: 1000px;
+  }
+  .school-card {
+    background: rgba(28,16,22,0.5);
+    border: 1px solid rgba(154,48,80,0.3);
+    border-radius: 4px;
+    padding: 14px 16px;
+  }
+  .school-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    color: #d8a0b0;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .school-method {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--parch-dim);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  .school-theory {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .school-theory b { color: var(--gold-bright); }
+
+  /* Two-sided tension blocks (purist vs pragmatist on government) */
+  .position-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px auto; max-width: 1000px; }
+  @media (max-width: 800px) { .position-pair { grid-template-columns: 1fr; } }
+  .position {
+    background: rgba(28,16,22,0.5);
+    border-left: 4px solid var(--pos-color, var(--domain-accent));
+    border-radius: 0 4px 4px 0;
+    padding: 14px 16px;
+  }
+  .position-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    color: var(--pos-color, var(--gold-bright));
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .position-name {
+    font-family: 'Uncial Antiqua', cursive;
+    color: var(--pos-color, var(--gold-bright));
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .position p { margin: 8px 0; font-size: 0.92rem; line-height: 1.6; }
+  .pos-purist     { --pos-color: #d8a0b0; }
+  .pos-pragmatist { --pos-color: #c8a060; }
+
+  /* Friction cards (two-recovery, wyrm-cult) */
+  .friction-block {
+    background: rgba(28,16,22,0.5);
+    border-left: 4px solid var(--frict-color, var(--gold-dim));
+    padding: 14px 18px;
+    margin: 16px auto;
+    max-width: 960px;
+    border-radius: 0 4px 4px 0;
+  }
+  .friction-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    color: var(--frict-color, var(--gold-bright));
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .friction-block p { margin: 8px 0; }
+  .f-steam { --frict-color: #c87830; }
+  .f-wyrm  { --frict-color: #88a878; }
+
+  /* Open in canon panel */
+  .open-canon {
+    background: rgba(20,12,16,0.45);
+    border: 1px dashed rgba(216,160,176,0.4);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 24px auto;
+    max-width: 920px;
+  }
+  .open-canon h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    color: #d8a0b0;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  .open-canon .sub {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--parch-dim);
+    margin-bottom: 12px;
+  }
+  .open-canon ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+  .open-canon li { margin: 4px 0; }
+  .open-canon li b { color: var(--gold-bright); }
+</style>
+</head>
+<body data-page="dragons-reach">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/sumendar/sumendar.html">Sumendar</a><span class="sep">›</span><span>Dragon's Reach</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Dragon's Reach</div>
+    <div class="page-subtitle">Sumendar Sub-Region · Dragon Capital · The City Built From the Ship</div>
+    <div class="page-flavor">"Pre-corruption material runs through these walls like bones through a body. Every Dragon born here grows up touching it."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Modern Talanese. Named for the site where the Dragons' mothership <i>reached</i> Talan — and for the largest surviving section of that vessel, which became the city's foundation.</dd>
+    <dt>Position</dt><dd>Volcanic belt of <a href="/talan/domains/sumendar/sumendar.html">Sumendar</a> (Fire / Komo). Special independent city-state within the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>'s territory.</dd>
+    <dt>Founded</dt><dd>By Dragon survivors who sheltered in the mothership's largest surviving chambers in the immediate aftermath of the crash. The city has grown outward from the wreckage for roughly four millennia.</dd>
+    <dt>Government</dt><dd><b>Voting assembly, age-weighted</b> — older Dragons hold more vote-weight. The system structurally tilts purist (see below). <span class="tbd">Internal layout / named council TBD</span></dd>
+    <dt>Population</dt><dd>The <b>largest concentration of Dragons on Talan</b> — the cultural and political seat. Individuals and small lineages live elsewhere on the continent, but the Reach is the centre.</dd>
+    <dt>Character</dt><dd>
+      <i>Dragon capital · purist–pragmatist civil argument · mothership-as-architecture · friction with Order of Steam</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Dragon Capital</span><span class="pill">Ship-Built</span><span class="pill">Purity-Seekers</span><span class="pill">Age-Weighted Vote</span><span class="pill">Active Archaeology</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE CRASH & THE CITY
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Crash &amp; The City Built From the Ship</h2>
+  <div class="prose">
+    <p>The Dragons came from beyond Tyrnarra entirely — an intergalactic vessel, in dragon record, capable of crossing whatever lies between worlds. The mothership did not survive its arrival. It <b>broke apart in atmosphere</b>: chunks of hull, drive-sections, internal chambers, and crew-blocks tore loose at altitude and scattered as separate falls across most of <a href="/talan/talan.html">Talan</a>. The single largest section — what the Dragons now know as the Reach — struck the volcanic belt that would become Sumendar.</p>
+
+    <p>The survivors sheltered in the largest surviving chambers of that section, then expanded outward as their numbers stabilised, integrating salvaged hull plates and structural members into every wall and span as they went. <b>The city is the ship.</b> Modern Dragon's Reach reads from outside as an unusually-shaped volcanic city; from inside, the older quarters are visibly <i>ship</i> — alien geometry, alien metalwork, chambers that were not designed by anyone who had ever stood under a sun. Every Dragon born here grows up touching pre-corruption material every day.</p>
+
+    <p>The Reach is also the <b>active archaeological dig</b> of what remains of the ship. Recovery of pre-corruption Dragon material is doctrinally central — and the dig is not <i>near</i> the city but <i>continuous with</i> it. New chambers are still being opened. Some are habitable; some are sealed and treated as relics; a few have proven dangerous in ways nobody understood until the wall came down.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE CORRUPTION
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Corruption — What Was Taken</h2>
+  <div class="prose">
+    <p>Pre-corruption Dragons were <b>immortal</b>. Dragon doctrine holds that the Gods'-Era gods <i>used</i> the surviving Dragons for their own purposes — Dragons were strong, useful, exploited as weapons in the gods' wars and as instruments for divine projects — and in the using, the gods somehow <b>stripped them of their immortality</b>. Modern Dragons are mortal. They die.</p>
+
+    <p>The lifespan today splits cleanly along doctrine. The numbers are public knowledge, observable across centuries of Council records, and part of why the purist–pragmatist argument never resolves:</p>
+  </div>
+
+  <div class="lifespan-row ls-pragmatist">
+    <div class="lifespan-label">Non-Purist</div>
+    <div class="lifespan-desc">Dragons who do not pursue purity — pragmatists, in-between Dragons, those who simply live their lives.</div>
+    <div class="lifespan-years">150–180 years</div>
+  </div>
+  <div class="lifespan-row ls-purist">
+    <div class="lifespan-label">Purist</div>
+    <div class="lifespan-desc">Dragons who actively pursue restoration of the lost nature — by any of the schools (see below).</div>
+    <div class="lifespan-years">~200 years</div>
+  </div>
+  <div class="lifespan-row ls-purest">
+    <div class="lifespan-label">"The Purest"</div>
+    <div class="lifespan-desc">The most disciplined of the purists — those who have committed their entire lives to a single school and held to it.</div>
+    <div class="lifespan-years">scratching 230</div>
+  </div>
+
+  <div class="prose">
+    <p>The Dragons <b>remember being immortal</b> — but only as oral tradition and archival record handed down from the post-crash generations. <b>No Dragon alive today was alive before the corruption</b>; the post-crash generations who knew the old life are all centuries dead. <i>What specifically was lost — what divine or biological mechanism was severed — is not known.</i> That this fact is unknown is the <b>central strife of Dragon civilisation</b>. Every Dragon in the Reach is, in some sense, asking the same question: <i>what was taken from us, and can we get it back?</i></p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE PURITY QUESTION
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Purity Question</h2>
+  <div class="prose">
+    <p>No two Dragons answer the question the same way. The Dragons who believe restoration is possible are called <b>purists</b> — but there are no purist schools, no orthodoxy, no consensus method. A large fraction of modern Dragons — possibly the majority — reject the entire project as folly.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em;">Paths of Purity</h3>
+  <div class="prose" style="margin-top: -4px;">
+    <p><b>There are as many paths as there are purists.</b> Each Dragon must find theirs alone. The four directions below are not factions, schools, or institutions — they are simply <i>common categories observers can identify</i>. Many purists combine several. New purists invent novel methods every generation. The grouping is descriptive convenience; the practice is private.</p>
+  </div>
+
+  <div class="school-grid">
+
+    <div class="school-card">
+      <div class="school-name">Power-Accumulation</div>
+      <div class="school-method">Direction: raw strength as proxy</div>
+      <div class="school-theory"><b>Theory:</b> enough strength is enough strength, by any measure, including the one we lost. If we are mighty enough, we will close the gap by becoming larger than the gap. Purists in this direction tend toward conquest, hoarding, and the accumulation of magical and martial power without obvious limit.</div>
+    </div>
+
+    <div class="school-card">
+      <div class="school-name">Discipline of Body &amp; Mind</div>
+      <div class="school-method">Direction: generations-long regimen</div>
+      <div class="school-theory"><b>Theory:</b> what was severed in us can be rebuilt by doing, slowly, what immortality did automatically. Adherents hold to strict regimens — diet, breath, study, motion — practised without break across full Dragon lifetimes. The longest-lived Dragons in the city are almost all from this direction.</div>
+    </div>
+
+    <div class="school-card">
+      <div class="school-name">Meditation in the Wreckage</div>
+      <div class="school-method">Direction: religious practice in the ship-chambers</div>
+      <div class="school-theory"><b>Theory:</b> closeness to what we were makes us closer to it again. Adherents take vigil in the deepest preserved chambers of the ship — those parts of the city still recognisably <i>vessel</i> — and meditate there for years at a time, sometimes decades. Some emerge changed. Some do not emerge.</div>
+    </div>
+
+    <div class="school-card">
+      <div class="school-name">Reconstruction</div>
+      <div class="school-method">Direction: archaeology of the pre-corruption practice</div>
+      <div class="school-theory"><b>Theory:</b> if we recover what we did <i>before</i> — the daily rituals, the work, the song — our nature follows. Adherents work the ship-relics literally embedded in the city walls, plus what new chambers the dig opens. They want the past back as a way of life, not as a sentiment.</div>
+    </div>
+
+  </div>
+
+  <div class="friction-block" style="--frict-color: #d8a0b0; margin-top: 22px;">
+    <div class="friction-label">The Teacher Recursion</div>
+    <p>A purist may attach to a teacher whose path speaks to them and follow that teacher for as long as the teacher lives. But <b>when the teacher dies, the teacher was not pure</b> — that is what their death proves, by definition — and so the student knows <i>more needs to be done.</i> The recursion is the doctrine. Every dead teacher is evidence that the practice must continue, must intensify, must find what the teacher missed.</p>
+    <p>The longest-lived purist Dragons are the ones who have buried the most teachers. The most-followed teachers are the ones whose deaths most reliably produce the next generation of seekers. Pragmatist Dragons watch this and find it sad. Purist Dragons regard pragmatists as having given up.</p>
+  </div>
+
+  <h3 class="section-heading" style="font-size: 0.95rem; letter-spacing: 0.18em; margin-top: 28px;">The Pragmatist Counter</h3>
+  <div class="prose">
+    <p>A large fraction of modern Dragons — possibly the majority — think the pursuit of purity is folly. <i>The corruption happened, the gods who did it are gone or bound, and we are who we are now. Live the life you have.</i> Pragmatist Dragons regard purist Dragons with affectionate frustration; purist Dragons regard pragmatists as having given up on themselves. The two camps share the city, the vote, the wreckage-archaeology (pragmatists work the dig too — they just want to know, not to <i>become</i>), and a constant low-grade argument about whether the whole project is meaningful.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       GOVERNMENT & STRUCTURAL TENSION
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Government — Voting, Age-Weighted, Structurally Contested</h2>
+  <div class="prose">
+    <p>Dragon's Reach votes. The voting assembly is <b>age-weighted</b> — older Dragons hold more vote-weight, since age in a mortal-Dragon system is a kind of survival achievement and a proxy for accumulated judgement. The principle was set when the city was younger and seemed neutral; it does not seem neutral now.</p>
+
+    <p>In practice the system <b>tilts purist</b>. Purist discipline extends life. The longest-lived Dragons in the Reach are almost all from the purist schools — especially the Disciplined — and the Council records prove it across centuries of recorded ages-at-death. The age-weighted vote therefore systematically over-weights the voice of Dragons whose entire doctrine is <i>"discipline extends life,"</i> because their discipline has extended their life and the records show it. The argument writes itself: <b>the purists are using their longer lives as evidence of their rightness, and counting the evidence twice.</b></p>
+  </div>
+
+  <div class="position-pair">
+
+    <div class="position pos-purist">
+      <div class="position-label">The Purist Position</div>
+      <div class="position-name">We Are Still Here</div>
+      <p>The vote-weighting is the only one that makes sense. Age is achievement; achievement is judgement; judgement deserves voice. We did not write the system to favour ourselves — we lived long enough for the system to favour us, and the system is right to recognise it.</p>
+      <p>The pragmatists' resentment is unbecoming. They could choose differently and live as we do. They have not. The vote reflects that.</p>
+      <p style="font-style: italic; color: var(--parch);">We are still here. You are not.</p>
+    </div>
+
+    <div class="position pos-pragmatist">
+      <div class="position-label">The Pragmatist Position</div>
+      <div class="position-name">We Lived Ours</div>
+      <p>Vote-weight should not track <i>lifespan</i>. Lifespan is downstream of a contested doctrine — and treating doctrine-determined longevity as constitutional authority means the doctrine wins by sheer demographic accident, not by its merits. The purists are using their longer lives as evidence of their rightness, and counting the evidence twice.</p>
+      <p>We lived our shorter lives more fully, more for ourselves, less in pursuit of a ghost we cannot prove exists. The merits are on us. The vote should reflect that.</p>
+      <p style="font-style: italic; color: var(--parch);">You may have lived longer. We lived ours.</p>
+    </div>
+
+  </div>
+
+  <div class="prose">
+    <p>The argument is centuries old. It does not resolve. It will likely never resolve. The city goes on voting, the purists keep winning, the pragmatists keep arguing — and the city keeps running, which the pragmatists privately concede is partly because the purists have been right about a great many practical things over the centuries even if they are wrong about the central one.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FRICTION
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Friction</h2>
+  <div class="prose">
+    <p>Two friction-points define the Reach's external politics. One is shared volcanic terrain with the Order of Steam; the other is a theological grievance held by Talan's indigenous wyrmkind.</p>
+  </div>
+
+  <div class="friction-block f-steam">
+    <div class="friction-label">Within Sumendar — Parallel Recovery</div>
+    <p>The Reach shares the volcanic belt with the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html"><b>Order of Steam</b></a>, and both polities run major recovery archaeology in adjacent terrain — the Order on <b>Elden-tech ruins</b>, the Dragons on the <b>mothership wreckage</b> that the city is built from and around. <i>The Order wants to reproduce; the Dragons want to remember.</i> The doctrinal difference matters: an Order recovery is a step toward replication, a Dragon recovery is a step toward restoration of <i>what we were</i>. Specific finds have been quietly disputed over the centuries — the volcanic terrain does not always make clear which excavation a given chamber belongs to, and some chambers post-date both, sometimes both at once.</p>
+    <p>Formal relations are <i>cordial.</i> Practical relations are <i>complicated.</i></p>
+  </div>
+
+  <div class="friction-block f-wyrm">
+    <div class="friction-label">Beyond Sumendar — The Older Claim</div>
+    <p>Outside the city, the <b>Dragonets</b> — indigenous wyrmkin of Talan, children of <a href="/grand-gods.html"><b>Zaharsuge</b></a>, the Minor God who is Talan's pre-Dragon wyrm-lord — reject the Reach's implicit claim to authority over wyrmkind on Talan. Zaharsuge predates the alien Dragons by ages; the indigenous wyrm-line was here first, and many Dragonets find the Reach's posture (<i>"we are the dragons of Talan"</i>) theologically incorrect. The grievance is untested and simmering. The Reach largely ignores it, which the Dragonets find provocative on a separate level.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SCATTERED FRAGMENTS
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Scattered Across Talan</h2>
+  <div class="prose">
+    <p>The mothership broke apart at altitude. <b>Pieces lie scattered across Talan</b> wherever a chunk fell — artefact-sites the Dragons' archaeology has catalogued some of, reached fewer of, and recovered almost none of. Most are unmapped. Some sit in domains where Dragon presence would be politically awkward (Lograth has politely declined three formal requests for survey rights over the past two centuries). Some are buried by terrain or hidden by the centuries. Some are presumably under hundreds of metres of forest, ocean, or ice and have never been seen by any sapient eye.</p>
+
+    <p>The practical consequence: <b>any deep ruin on Talan with metalwork or chamber-geometry that "looks alien" might be a mothership fragment.</b> Adventurers occasionally turn one up — sometimes by accident, sometimes by deliberate work, sometimes by walking into trouble they didn't know they had walked into. The Reach pays well for verifiable finds and pays better for safe-return delivery of intact relics. The Order of Steam pays for the same finds for entirely different reasons, which is one of the practical reasons the cordial-formal / complicated-practical relationship stays complicated.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — Most Talanese Don't Know They're Alien</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Continent Assumes</div>
+      Most Talanese think of Dragons as a <b>native species</b>. They've been here for four millennia — far longer than any living mortal's memory or any kingdom's institutional record — and they look like the kind of being a fire-domain continent ought to have. Folk tradition, sermons, sagas, and most contemporary scholarship treat them as part of Talan's native fauna alongside the indigenous wyrmkind.
+      <br><br>
+      <b>The alien-arrival truth is not a GM secret.</b> It is openly preserved in Dragon-internal religion, in the Reach's archives, and in scattered Gods'-Era scholarly records held by Enki's library system. Anyone who genuinely looks — an Ezkudon scholar, a determined adventurer, a Reach-trained Dragonblood ancestor-seeker — can find it without much trouble. The truth is simply <i>not the default</i> assumption, and most people never have reason to look.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       OPEN IN CANON
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in Canon</h3>
+    <div class="sub">Dragon's Reach is a canon city with deliberately unfinished interior. Future canon work will close these in turn; until then, the TBD state is the world's state.</div>
+    <ul>
+      <li><b>Internal city layout</b> — districts, named quarters, the wreckage-floorplan that became civic architecture</li>
+      <li><b>Named Dragon elders or council figures</b> — no Tharka-Eisenhart equivalent has surfaced yet for the Dragons</li>
+      <li><b>The mothership's name and origin world</b> — where the vessel came from, how it crossed, who built it</li>
+      <li><b>The corruption mechanism</b> — only the <i>result</i> (mortality) is known; what divine or biological process was severed remains open even to the Dragons themselves</li>
+      <li><b>Specific dispute incidents with the Order of Steam</b> — the cordial-formal / complicated-practical relationship has presumably generated named incidents over the centuries</li>
+      <li><b>Specific scattered fragment-sites elsewhere on Talan</b> — most are unmapped; named ones would be hooks waiting to attach</li>
+      <li><b>The practical scale of the Dragonet schism</b> — currently described as <i>untested and simmering</i>; pressure-point untouched</li>
+      <li><b>The Reach's relationship with Komo's church and Eldara</b> — both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified</li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- Cross-references -->
+  <div class="prose" style="font-size: 0.9rem; color: var(--parch-dim);">
+    <p><b>See also:</b> <a href="/talan/domains/sumendar/sumendar.html">Sumendar</a> (parent domain); <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> (the kingdom-guild sharing the volcanic belt); <a href="/talan/bestiary.html">Bestiary &amp; Ancestries → Dragons</a> (ancestry detail + mortality bands); <a href="/grand-gods.html">Zaharsuge</a> (the older claim); <a href="/talan/history.html">History &amp; Eras → Gods' Era</a> (the crash's place in continental history).</p>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · SUMENDAR · DRAGON'S REACH</div>
+
+</div>
+
+<script>
+function toggleEraLegend(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  var content = btn.nextElementSibling;
+  var revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
+}
+</script>
+
+</body>
+</html>

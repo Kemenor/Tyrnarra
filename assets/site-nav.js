@@ -29,7 +29,8 @@
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/talan/domains/floteyn/floteyn.html',   children: [] },
     { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/talan/domains/sumendar/sumendar.html', children: [
-      { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html' }
+      { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html' },
+      { slug: 'dragons-reach',  label: 'Dragon\'s Reach · Dragon Capital',   href: '/talan/domains/sumendar/dragons-reach.html' }
     ]},
     { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/talan/domains/lioaru/lioaru.html',     children: [
       { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/talan/domains/lioaru/lost-kingdom.html' }
