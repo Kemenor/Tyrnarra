@@ -184,8 +184,8 @@ Don't rely on the user's in-session memory file for canon — that's a summary, 
 
 ### Migration state (as of 2026-05-17)
 
-- **WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` folder has been retired from the repo. All canon now lives in `lore/`. If you need to re-import from a fresh WA export, instructions live in `docs/worldanvil-migration.md` — *Re-importing from WorldAnvil*.
-- **Lore → HTML publishing: IN PROGRESS.** Per-page tracker in `docs/worldanvil-migration.md` — *HTML Publishing — Status Tracker*. The user holds the publish signal; do not push lore to HTML without an explicit go-ahead.
+- **WorldAnvil → lore migration: COMPLETE.** The `worldanvil-export/` folder has been retired from the repo. All canon now lives in `lore/`.
+- **Lore → HTML publishing: COMPLETE.** All four migration phases (cosmology, geography, factions, bestiary) shipped to HTML. Remaining work is incremental Tier 5/6 worldbuilding tracked in [`docs/open-threads.md`](docs/open-threads.md) and [`docs/site-inventory.md`](docs/site-inventory.md)'s *Future Work* section. The user holds the publish signal; do not push new lore to HTML without an explicit go-ahead.
 
 ### Using Cowork Dispatch
 

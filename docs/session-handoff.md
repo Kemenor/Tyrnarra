@@ -15,7 +15,8 @@ A snapshot for the next Claude session picking up Tyrnarra work. The canonical t
 1. [`lore/`](../lore/) — the canon (world-notes, geography, factions, bestiary, cultures, glossary, timeline, unplaced). Lore wins on conflict with any HTML page.
 2. [`docs/open-threads.md`](open-threads.md) — every TBD / unresolved / future-development thread, organised by topic.
 3. [`docs/site-inventory.md`](site-inventory.md) — what's published vs stub on the HTML side. Comprehensive.
-4. [`docs/worldanvil-migration.md`](worldanvil-migration.md) — historical migration log + active HTML Publishing Status Tracker at the bottom. The tracker is the publishing punch list with most rows now struck through.
+
+The historical WorldAnvil migration tracker (`docs/worldanvil-migration.md`) was retired on 2026-05-17 once the migration closed — its forward-looking content moved to open-threads and site-inventory, the rest was archaeology.
 
 ---
 
@@ -95,7 +96,7 @@ These are session-level rhythms. They've been working — keep them up unless re
 4. **GM Secret discipline.** Major GM-truth facts (Cronus-was-mortal, Elden=Corrupted-God, Storveldi-killed-Tani, Betibizi-origin, Integration-Procedure) stay behind red ⚿ `secret-era-toggle` expandables. Public-facing body must not leak them.
 5. **Lore documents, not campaign starters.** Published HTML is lore reference. **No dedicated "Hooks" sections** with adventure prompts in the published pages — that material belongs in GM-side notes elsewhere. World-flavour expandables (folkloric Popular Belief, in-world rumours) are different and welcome. Memory: `feedback_no_campaign_hooks_in_html.md`. Project convention: `CLAUDE.md`.
 6. **Sidebar nav.** Every new page needs an entry in `/assets/site-nav.js` (`DOMAINS` for children under domains; `NAV_HTML` arrays for top-level sections). Easy to forget — add immediately when a page lands.
-7. **Tracker updates.** When a page lands: strike through completed rows in `worldanvil-migration.md` HTML tracker; add to `site-inventory.md`. Both are how future sessions know what's done.
+7. **Tracker updates.** When a page lands: add a row to [`docs/site-inventory.md`](site-inventory.md) under the page tree, and close any matching open thread in [`docs/open-threads.md`](open-threads.md). These two files are how future sessions know what's done and what's left.
 
 ---
 
