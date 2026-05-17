@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Elden — Historical · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root { --domain-accent: #5a6a88; }
+
+  /* ── Achievement / Inheritance / Theory grids (open prose) ──────── */
+  .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .topic-card { padding: 14px 16px; --card-bg: rgba(18,22,32,0.55); }
+  .topic-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .topic-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
+  .topic-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
+
+  /* Single highlight callout — used for the Android pull-quote */
+  .android-callout { padding: 18px 22px; margin: 18px auto; max-width: 1000px; --card-bg: rgba(20,26,40,0.62); border-left: 3px solid var(--domain-accent); }
+  .android-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 6px; }
+  .android-title { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 10px; }
+  .android-body { font-size: 0.94rem; color: var(--text); line-height: 1.6; }
+
+  /* ── Reveal scaffolding for cards inside GM-Secret boxes ────────── */
+  .secret-era-content .accent-card { --card-bg: rgba(46,14,18,0.55); border-color: rgba(180,80,80,0.30); }
+  .secret-reveal {
+    font-style: italic;
+    font-size: 0.98rem;
+    color: #f0c8a8;
+    margin: 0 0 14px 0;
+    padding: 6px 0 6px 14px;
+    border-left: 2px solid rgba(180,80,80,0.55);
+  }
+  .secret-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 14px 0; }
+  .secret-pill {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 10px;
+    background: rgba(140,50,50,0.20); border: 1px solid rgba(200,100,100,0.42);
+    color: #f0c8b0;
+  }
+  .secret-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 14px 0; }
+  .secret-card { padding: 12px 14px; }
+  .secret-card-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #d48a8a; margin-bottom: 4px;
+  }
+  .secret-card-title {
+    font-family: 'Cinzel', serif; font-weight: 600; font-size: 1rem;
+    color: var(--gold-bright); margin-bottom: 8px; letter-spacing: 0.04em;
+  }
+  .secret-card-body { font-size: 0.88rem; line-height: 1.55; color: var(--text); }
+  .secret-coda { font-size: 0.88rem; color: var(--parch-dim); font-style: italic; margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(180,80,80,0.30); }
+
+  /* Inline TBD marker */
+  .tbd {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #d4c098;
+    background: rgba(200,168,40,0.16);
+    border: 1px solid rgba(212,192,152,0.32);
+    padding: 1px 7px;
+    border-radius: 8px;
+    vertical-align: 0.05em;
+    margin: 0 2px;
+  }
+
+</style>
+</head>
+<body data-page="elden">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/historical/historical.html">Historical</a><span class="sep">›</span><span>The Elden</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Elden</div>
+    <div class="page-subtitle">6000 GR – 2945 GR · Neither Mortal Nor Fully Divine · Vanished in a Day</div>
+    <div class="page-flavor">"The libraries were still warm. The cookfires were still burning. The bread on the tables had not yet cooled. And every Elden, everywhere on Talan, was simply gone. Three thousand years of dominance ended between one breath and the next, and no chronicler — then or since — has been able to say why."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Dates</dt><dd><b>6000 GR – 2945 GR.</b> A little over three thousand years of recorded dominance on Talan. Their actual antiquity beyond <b>6000 GR</b> is unknown — Talan's chronicle record begins with them. They left no foundation date.</dd>
+    <dt>Identity</dt><dd><b>Neither fully mortal nor fully divine.</b> The Gods' Law did not yet exist; the Elden were not bound by anything that came after. Whatever class of being they were, no surviving terminology fits them. Modern scholarship treats them as <i>sui generis</i> — their own category, of which no other example survives.</dd>
+    <dt>End</dt><dd><b>2945 GR — vanished in a single day.</b> Every Elden, everywhere on the continent, simultaneously. Cities intact, libraries full, hearths still burning. No war, no plague, no exodus was recorded. <b>No explanation has ever been confirmed.</b></dd>
+    <dt>Greatest Achievement</dt><dd>The <a href="/talan/bestiary.html">Android</a> ancestry — synthetic people of a sophistication no civilisation has been able to reproduce. The <a href="/talan/historical/golden-empire.html">Golden Empire</a>'s most ambitious scholarly programme spent generations attempting to recreate them and produced the Automaton ancestry instead: capable, sometimes brilliant, not the same thing.</dd>
+    <dt>Technological Legacy</dt><dd>Most of <a href="/magic.html">modern Magitech</a> — and especially <b>Arcanotech</b> — descends from post-Crimson-Rain Elden-ruin discoveries. The continental rail network, atmospheric vessels, industrial-scale enchantment, the entire infrastructure of the modern Talanese economy: each of them traces its engineering ancestry back to something pulled out of an Elden ruin.</dd>
+    <dt>Folk Name</dt><dd>The folk-tongue still calls them the <i>"Ultra-High-Tech Civilisation"</i> when it knows the name at all — a phrase mortals use without quite knowing what it refers to. The chronicler-fellowships use the proper name.</dd>
+    <dt>Character</dt><dd>
+      <i>Three thousand years · the vanishing in a day · the tech that runs the modern world</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Pre-Mortal Era</span><span class="pill">Vanished 2945 GR</span><span class="pill">Source of Magitech</span><span class="pill">Made the Androids</span><span class="pill">Most-Asked Mystery</span></div>
+    </dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE ERA OF DOMINANCE  (open)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Era of Dominance</h2>
+  <div class="prose">
+    <p>For three thousand and fifty-five years, the Elden were the only civilisation on Talan that anyone could meaningfully call <i>continental</i>. The gods existed, were active, and walked openly — but the gods of the Elden Era were guests on a continent the Elden ran. Mortal civilisations existed too, but in the gaps the Elden left them, on the margins the Elden did not need.</p>
+
+    <p>What survives of their culture, in any form a modern scholar can read, is fractional. Their tongue is not preserved. Their philosophy survives as inference from the engineering. Their politics, their families, their wars among themselves — all of it is gone. What is not gone is what they <i>built</i>, because building was the part of Elden civilisation that they did at industrial scale, and ruins survive their owners.</p>
+  </div>
+
+  <div class="topic-grid">
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">Continental Scale</div>
+      <div class="topic-byline">Every region of modern Talan has Elden bones beneath it</div>
+      <div class="topic-desc">Elden infrastructure spanned the entire continent: arterial transport, industrial sites, urban concentrations, atmospheric travel routes. Every modern domain stands atop strata of Elden work, and every modern excavation programme of any seriousness has Elden material in its inventories. The continent is, in this material sense, still theirs.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">Rail-Bound Mass Acceleration</div>
+      <div class="topic-byline">The principle the modern Magitrain rediscovered</div>
+      <div class="topic-desc">The Elden moved freight and people across the continent on rail systems whose engineering principles modern Arcanotech has spent four centuries reproducing in stripped-down form. The original Elden routes operated at speeds, scales, and tolerances that modern engineering does not yet match. Most of the route-corridors used by today's Magitrain follow Elden roadbeds.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">Atmospheric Vessels</div>
+      <div class="topic-byline">Airships before there was a word for airship</div>
+      <div class="topic-desc">Recovered Elden airframes from a half-dozen high-elevation ruin-sites show an aerostatic and propulsive sophistication that the modern airship trade has approached only in the last century — and only in the largest mercantile-house construction yards. The Elden flew routinely. The Sortalde-Talan crossing the modern cloudships make is, by Elden-era standards, a short hop.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">Industrial Magic</div>
+      <div class="topic-byline">Rune-arrays, formula-driven enchantment, reproducible manufacture</div>
+      <div class="topic-desc">Most of what modern Talan calls <a href="/magic.html">Arcanotech</a> — formula-based, scalable, reproducible — was practised by the Elden at production-line volumes. They did not enchant individual artefacts the way a modern wizard does. They <i>manufactured</i> them. The Order of Steam's most prized possessions are working Elden industrial cores; none of them have been fully reverse-engineered.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE GREATEST ACHIEVEMENT  (open)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Greatest Achievement — The Androids</h2>
+
+  <div class="accent-card android-callout">
+    <div class="android-label">The work no civilisation has matched</div>
+    <div class="android-title">The Android Ancestry</div>
+    <div class="android-body">
+      <p>The Elden made people. Not constructs, not animated automata — <b>people</b>. Synthetic minds in synthetic bodies, with the full mortal range of awareness, inheritance, change. <a href="/talan/bestiary.html">Androids</a> walk Talan today. They were originally Elden work and no civilisation since has come close to repeating it.</p>
+      <p>The <a href="/talan/historical/golden-empire.html">Golden Empire</a>'s most sustained scholarly programme — across generations of dwarven research — tried specifically to recreate them. What came out was the <b>Automaton</b> ancestry: capable, often brilliant, and emphatically their own people. They are not Androids. The Empire's scholars considered the gap haunting. The Automatons themselves considered it irrelevant; they are what they are.</p>
+      <p>Modern Androids tend to keep their own counsel about their origins. The few who have written publicly are clear about one thing: <i>"We were made. We do not know by whom, exactly, and we do not feel that the not-knowing diminishes us."</i> The scholarly question of Android continuity — whether the modern population is uninterrupted from the Elden era, whether some were rebuilt or maintained across the intervening gap, whether the original templates persist somewhere — is open and not getting closer to closed.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE VANISHING  (open)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Vanishing</h2>
+  <div class="prose">
+    <p>In <b>2945 GR</b>, on a single day, every Elden vanished. There is no surviving record from anyone who saw it. The earliest accounts come from mortals and gods who walked into Elden cities in the days and weeks afterward, looking for explanations and finding none.</p>
+
+    <p>The cities were <b>intact</b>. The libraries were full. The cookfires were still burning. The bread on tables had not yet cooled. Industrial sites were mid-cycle. Atmospheric vessels were docked at their moorings. Androids were standing where their Elden colleagues had been standing a moment before, with no more information than anyone else. <b>Nothing had been packed. Nothing had been written. Nothing had been said.</b></p>
+
+    <p>The vanishing is the most-recorded non-event in Talan's chronicle history. Every neighbouring kingdom sent emissaries. The gods made enquiries — at first openly, later (after the same answers kept coming back) more discreetly. The Adventurers' Guild did not yet exist; if it had, its first commission would have been this. Nothing emerged. The Elden cities filled with mortal scavengers, scholars, and then settlers; the strata they left have been excavated continuously for three thousand years; <b>no Elden has been seen since, and no record of where they went has been recovered.</b></p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE THREE THEORIES  (open)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Three Theories</h2>
+  <div class="prose">
+    <p>In the absence of explanation, mortal scholarship has produced three competing accounts of the vanishing. None has documentary footing strong enough to settle the others. Each has serious adherents, prestigious chronicler-fellowships, and a long shelf of published argument behind it.</p>
+  </div>
+
+  <div class="topic-grid">
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The War with the Gods</div>
+      <div class="topic-byline">"A conflict too vast to leave ordinary records."</div>
+      <div class="topic-desc">The oldest and most popular reading. The Elden and the gods of the era were in escalating conflict over the continent's mortal populations and material wealth, and the conflict resolved — somehow — with the Elden gone. This tradition treats the missing records as the natural consequence of a war fought at a scale that left no surviving witnesses to write any. Some variants hold the Elden were destroyed; others that they were driven out; others that the conflict simply consumed them. All agree on the war.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The Fulfilled Purpose</div>
+      <div class="topic-byline">"They came for a reason, and then the reason was finished."</div>
+      <div class="topic-desc">A reading particularly common in temple traditions and mystical scholarship. The Elden are read here as a civilisation with a single underlying task — variously named depending on the tradition — whose completion required their continuation only up to that completion. Once the work was done, there was no further reason to remain on the Material Plane. They departed willingly, perhaps even joyfully. The intact cities and warm libraries are treated as evidence of completion rather than catastrophe.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The Departure</div>
+      <div class="topic-byline">"They found a way out and they took it."</div>
+      <div class="topic-desc">The most poetic and the most enduring of the three. The Elden, in this tradition, found a way to leave Talan entirely — beyond the Cloud Sea, beyond the planes mortals can name, to another world or another kind of existence. They walked through, and the door closed behind them. Adherents argue that the vanishing's totality — every Elden, simultaneously, with no remnant — fits no model of war or completion, and only the Departure account accommodates the simultaneity. Sceptics call this the most beautiful answer that explains the least.</div>
+    </div>
+
+  </div>
+
+  <!-- ⚿ Secret #1 — Why They Vanished -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Why They Vanished</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+
+      <p class="secret-reveal">None of the three theories is right. The Elden did not depart, did not fulfil a purpose, did not lose a war. They were attempting to ascend — and on the day of the vanishing, they were mid-ritual.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">War with the Gods</span>
+        <span class="secret-pill">The Devourer as Weapon</span>
+        <span class="secret-pill">Wellspring Hive Mind</span>
+      </div>
+
+      <div class="secret-grid-3">
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Setting</div>
+          <div class="secret-card-title">The War</div>
+          <div class="secret-card-body">The Elden and the gods of the Elden Era <i>were</i> at war, and the war was real — closer to the popular theory than scholars realise. What scholarship has not preserved is who was winning. The Elden were holding their own often enough to make the gods afraid, and the war had reached a point where neither side could end it cheaply. The Elden chose to end it with a single decisive move.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Weapon</div>
+          <div class="secret-card-title">The Devourer</div>
+          <div class="secret-card-body">A being of pure consumption — imprisoned since before recorded history, existing only to unmake existence — the <b>Devourer</b> was the cosmos's standing nightmare-in-a-box. The Elden <b>freed it deliberately</b>, as a weapon, and turned it loose on the gods. While the gods scrambled to defend existence itself, the Elden retreated underground and began the work that would finish the war on their terms.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Plan</div>
+          <div class="secret-card-title">The Ritual</div>
+          <div class="secret-card-body">Deep beneath the continent, the Elden began a ritual to connect themselves <i>directly</i> to the <a href="/magic.html">Wellspring</a> — the source of all creation. Had it completed cleanly, every Elden would have become a being of near-infinite power, unified into a single hive-mind civilisation drawing from the source itself. The vanishing was the ritual's <i>first stage</i>: every Elden, everywhere, simultaneously connecting into the underground site.</div>
+        </div>
+
+      </div>
+
+      <div class="secret-coda">The cities were warm because the Elden meant to come back to them, transformed. The cookfires were burning because no one had reason to put them out — they would not be away long, only long enough to ascend.</div>
+    </div>
+  </div>
+
+  <!-- ⚿ Secret #2 — What Stopped Them -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — What Stopped Them</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+
+      <p class="secret-reveal">The gods noticed in the last moment, with no time left for finesse. They reached for the closest available tool — the very weapon the Elden had loosed on them — and threw it into the work.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">A Single Improvised Move</span>
+        <span class="secret-pill">Both Forces Fused</span>
+        <span class="secret-pill">Locked Forever</span>
+      </div>
+
+      <div class="secret-grid-3">
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Counter-Move</div>
+          <div class="secret-card-title">The Push</div>
+          <div class="secret-card-body">With no time for any planned response, the gods <b>shoved the Devourer directly into the Elden's open connection to the Wellspring</b>. The ritual completed as scheduled — but with both forces flowing through the connection simultaneously: the Wellspring's endless creation and the Devourer's endless destruction, hitting the Elden's open channel at the same instant. The civilisation did not get the ascent it had designed.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Fusion</div>
+          <div class="secret-card-title">One Being</div>
+          <div class="secret-card-body">The ritual's collective-fusion architecture executed exactly as written. Every Elden, every individual, every fragment of the civilisation collapsed into <b>a single being</b> — but a being now constituted from both poles at once. Constant creation, constant decay, every moment, with no possibility of resolution. The hive mind the Elden had designed was achieved. What it contained was not what they had planned.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Lock</div>
+          <div class="secret-card-title">Permanent Internal War</div>
+          <div class="secret-card-body">The fusion cannot be undone. The Wellspring cannot be unmixed from the Void; the Elden cannot be extracted from either. Every instant of its continued existence is creation and destruction simultaneously, both at maximum, neither able to win. <b>It exists by being unable to end itself.</b> The gods, having improvised the trap, found themselves unable to dismantle it. They sealed it instead.</div>
+        </div>
+
+      </div>
+
+      <div class="secret-coda">The Elden vanished because they were no longer Elden. Plural was no longer the right grammar.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       THE TECHNOLOGICAL INHERITANCE  (open)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">The Technological Inheritance</h2>
+  <div class="prose">
+    <p>What the Elden left behind is, materially, almost all of modern Talanese civilisation. Their work was hardened, abundant, and built to outlast its builders — even unintentionally. After the Week of Crimson Rain shattered the divine governance that followed them, mortal civilisations had to rebuild from something, and the something they rebuilt from was Elden.</p>
+  </div>
+
+  <div class="topic-grid">
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">Arcanotech</div>
+      <div class="topic-byline">The dominant industrial Magitech tradition</div>
+      <div class="topic-desc">Almost every working principle behind modern <a href="/magic.html">Arcanotech</a> — formula-driven, runic, reproducible — descends from post-Crimson-Rain Elden-ruin discoveries. The first generations of Arcanotech artificers were, functionally, archaeologists. The discipline's foundational textbooks are explicit about which Elden site each formula originated from. Most of the rest of Magitech (Divitech, Primotech, Occultech) is contrastive — defined partly by what makes it <i>not</i> Arcanotech, which means partly by what makes it <i>not</i> Elden-derived.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The Order of Steam</div>
+      <div class="topic-byline">A kingdom-guild grown around an Elden excavation</div>
+      <div class="topic-desc">The <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> in Sumendar is, in its origin, an Elden-tech excavation programme that grew into an industrial society. Their breakthroughs across the past two centuries — the formal study of rail-mass-acceleration, atmospheric-vessel architecture, industrial enchantment standardisation — all trace back to the working Elden cores their original engineers managed to reactivate. The Order regards the Elden with a specific professional reverence not quite shared by anyone else on Talan.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The Continental Rail Network</div>
+      <div class="topic-byline">New rolling stock on old roadbeds</div>
+      <div class="topic-desc">The modern Magitrain network's geography is the Elden's geography. Where the modern engineers laid track, the Elden had already cleared the corridor — and three thousand years of intervening collapse had not erased the levelled ground, the cut tunnels, the bridge-foundations. The southern and continental main lines are particularly Elden-shaped. A train rider crossing the Basogur seam is, without knowing it, riding within metres of Elden engineering for most of the journey.</div>
+    </div>
+
+    <div class="accent-card topic-card">
+      <div class="topic-name">The Automaton Failure</div>
+      <div class="topic-byline">The Empire's most ambitious miss</div>
+      <div class="topic-desc">The <a href="/talan/historical/golden-empire.html">Golden Empire</a>'s scholars set out to recreate the Androids. They produced the <a href="/talan/bestiary.html">Automatons</a> instead — which are not the same thing. The Empire's chroniclers wrote about this with the disappointment of scholars who knew they had missed; modern Talan, with the benefit of distance, mostly recognises that the Empire <i>did</i> create a new people, and treats the work as success-by-different-measure. The Empire never came to that view. They wanted Androids and they did not get them.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       LEGACY + POPULAR BELIEF + FINAL SECRET
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Legacy in the Chronicle Record</h2>
+  <div class="prose">
+    <p>The Elden are the most-asked unanswered question in Talanese scholarship. The <a href="/talan/factions/adventurers-guild.html">Adventurers' Guild</a> has standing rewards posted with multiple chronicler-fellowships for documentation that might bear on the vanishing; the rewards have been outstanding for centuries and remain unclaimed. Excavation of Elden ruins is older than most modern kingdoms. The continent is, materially, still the Elden's — and the question of what they were doing the day before they vanished remains open in mortal scholarship.</p>
+
+    <p>What is not open is their inheritance. <b>Most of modern Talan was made possible by an Elden ruin somewhere.</b> The rail network, the airship trade, the formula-grammar of every Arcanotech enchantment, the Androids who walk the continent today — each thread reaches back into one of the strata they left. The Elden are the world's substrate. The world built on top of them and is still building.</p>
+
+    <p>The question survives. The civilisation does not. The gap between those two facts is the shape of every Elden ruin a modern excavation team opens — full cities, full libraries, full of everything except the people who built them.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief — The Folk Imagination of the Elden</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; Folk-Myth &amp; Common Belief</div>
+      Outside the chronicler-fellowships, the Elden live as folk-myth. Children grow up with the phrase <b>Ultra-High-Tech Civilisation</b> long before they encounter the proper name. Tavern-tales attribute every old wall to them — most wrongly. Travellers report <i>"the Elden are coming back"</i> rumours every generation; none has ever produced an Elden. A persistent strain of <a href="/non-bound-gods.html">Bikiargi</a>-adjacent mysticism holds that the Elden simply walked into another world and will, eventually, walk back; the more apocalyptic variants hold that they will not be pleased with what mortals did with their ruins. A quieter strain — common in <a href="/talan/historical/storveldi-denbora.html">Azarketi communities</a> — claims direct Elden descent, though the chronicle record treats those claims as contested. Folk-memory is mostly content to leave the Elden mysterious and the ruins productive; the mystery is the substrate's romance, and the substrate runs the world.
+    </div>
+  </div>
+
+  <!-- ⚿ Secret #3 — Where They Are Now -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — Where They Are Now</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Civilisation Did Not Die</div>
+
+      <p class="secret-reveal">The Elden did not depart. They did not die. They are <i>here</i> — bound, contained, and active enough that the entire War of Seals exists to keep them that way. The continent's standing existential threat is the people who built half its infrastructure.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">The Corrupted God Is Them</span>
+        <span class="secret-pill">Breached 1321 MR</span>
+        <span class="secret-pill">Cannot Be Permanently Killed</span>
+      </div>
+
+      <div class="secret-grid-3">
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Identity</div>
+          <div class="secret-card-title">The Corrupted God</div>
+          <div class="secret-card-body">The being mortals call the <b><a href="/talan/the-binding.html">Corrupted God</a></b> — the <i>Maw Below</i>, the <i>Blightfather</i> — is the Elden. Every Elden, every individual, the entire civilisation, fused into one being in permanent internal war between Wellspring and Void. The "god of corruption" of mortal sermons is a misframing: the entity is not a malevolent personal deity but a civilisation locked in self-consuming completion.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Breach</div>
+          <div class="secret-card-title">1321 MR</div>
+          <div class="secret-card-body">What the <a href="/talan/historical/golden-empire.html">Golden Empire</a>'s miners broke into in 1321 MR was the <b>Elden's ritual site</b> — the underground architecture where the fusion had been sealed since the day of the vanishing. The seal had been intact for over four thousand years. What emerged was what the Elden had become. The <a href="/talan/history.html">Dark Era</a> opened on the consequences.</div>
+        </div>
+
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Standing Threat</div>
+          <div class="secret-card-title">The Binding Holds</div>
+          <div class="secret-card-body">Defeated (not destroyed) in 2135 MR by combined kingdoms-and-Guild action, bound beneath the <b><a href="/talan/the-binding.html">Seven Wardstones</a></b>. Its active influence collapsed; the <b>Nine Generals of Corruption</b> persist as its outward reach. <b>Cannot be permanently killed by conventional means</b> — it contains both Wellspring and Void simultaneously, and ending it would require unmaking one or the other. Neither operation is known to be possible.</div>
+        </div>
+
+      </div>
+
+      <p><b>Not bound by the Gods' Law.</b> The Compact predates the fusion by less than three millennia and the Corrupted God by considerably more; the entity beneath the binding was never party to the Compact and is not constrained by it. The bound thirteen have no internal lever on it. The Wardstones are mortal-and-divine joint work, anchored largely in <a href="/talan/domains/myrkono/myrkono.html">Myrkono</a> and concentrated under <a href="/non-bound-gods.html">Araphel</a>'s watch — the entire institutional weight of <a href="/talan/the-binding.html">the War of Seals</a> exists because no easier solution is available.</p>
+
+      <p><b>Why the bound thirteen do not advertise the identity.</b> The fusion was the gods' own counter-move, and what came out of it is, in a literal sense, their fault. Mortals are told the Corrupted God exists, must be bound, and is dangerous. Mortals are not told <i>which dangerous</i> — and they are very specifically not told that the entire substrate of their modern technological civilisation was the same beings now sealed beneath the Wardstones. The fewer questions about <i>continuity</i>, the better.</p>
+
+      <p><b>Why this matters as canon.</b> The Elden never left the continent. The bound thirteen, the Wardstones, the Nine Generals, the entire War of Seals — all of it exists because of a counter-move improvised at the end of a war four thousand years ago. Every Elden ruin is a fragment of a civilisation that <i>is still here</i>, just no longer in fragments. The substrate that built Talan and the threat that lives beneath Talan are the same beings.</p>
+
+      <div class="secret-coda">
+        <b>GM-tier open threads.</b> The civilisation's truth is locked; several specifics within it remain open — close them when stories want them.
+        <ol style="margin-top:6px; padding-left:18px;">
+          <li><b>The Devourer's origin</b> — imprisoned since before recorded history; by whom, where, and for what original purpose, are open.</li>
+          <li><b>Elden internal politics</b> — were they a single polity, a federation, several civilisations? The decision to free the Devourer and perform the ritual presupposes some governance structure. None of it is preserved.</li>
+          <li><b>What the Androids were <i>for</i></b> — whether Androids were the Elden's people-replacements during the ritual (planned successors), their work-force (industrial substrate), their experimental population (a generation of trial-runs for the fusion), or something else entirely.</li>
+          <li><b>Whether any Elden survived the fusion</b> — partial-failures of the collective fusion architecture would, in principle, leave individual remnants. Whether any did is open. If any did, where they have been for four thousand years is a campaign by itself.</li>
+          <li><b>The ritual site's full architecture</b> — the 1321 MR miners breached <i>one</i> approach. The full underground site spans much more than that; how much, where, and whether other approaches are still sealed, is open.</li>
+          <li><b>Whether the Corrupted God is healing</b> — modern researchers disagree; the 2524 MR Nine-Dungeon eruption is read variously as the first fracture in the binding, a probe, or something deliberate from inside.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       OPEN IN THE CHRONICLE RECORD  (chronicler-tier)
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even within the chronicler-tier consensus, several questions about the Elden remain open — these are the kinds of detail that future scholarship or future excavation might one day close.</div>
+    <ol>
+      <li><b>The foundation date</b> — chronicle attestation begins at 6000 GR; whether they pre-existed Talan's recorded history is unknown.</li>
+      <li><b>The Elden tongue</b> — no readable corpus has been recovered. Comparative-linguistics work has been ongoing for three thousand years and is no closer to a grammar.</li>
+      <li><b>The Android-continuity question</b> — whether the modern Android population is uninterrupted from the Elden era, periodically maintained, or otherwise reconstituted across the gap.</li>
+      <li><b>Definitive resolution among the three theories</b> — War / Fulfilled Purpose / Departure. Three thousand years of chronicler argument have not narrowed it.</li>
+      <li><b>Catalogue of major Elden sites</b> — many ruins are known; many more are speculatively located; a complete continental atlas of Elden infrastructure does not exist.</li>
+      <li><b>The relationship to <a href="/talan/historical/storveldi-denbora.html">the Storveldi Denbora</a></b> — the Azarketi-blood claim, the Old-Race conflation, and the persistent scholarly question of whether the two civilisations were related (they were not, but resolving that publicly is a scholarship project of its own).</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · HISTORICAL · ELDEN</div>
+
+</div>
+
+</body>
+</html>

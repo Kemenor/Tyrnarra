@@ -139,6 +139,30 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 ---
 
+## Chronicler's voice — what's public, what's behind the seal
+
+Published HTML pages are **player-facing**. Open prose reads as something an in-world chronicler of Talan would actually write — hedged where the chronicle-record is hedged, ignorant where mortals are ignorant. **GM-tier truth never goes in open prose**; it lives inside expandable boxes only. The lore files hold the full truth flat; HTML pages stratify it. This applies to both Style A and Style B pages.
+
+**Three tiers, three treatments:**
+
+| Tier | Box | Contents |
+|---|---|---|
+| **Chronicler** | Open prose | What a scholar in-world could plausibly write — disputed scholarship, *"the chronicles say…"* framing, named-but-debated facts. |
+| **Folk-belief** | Amber `◈ Popular Belief` expandable | Tavern-tales, sermons, traveller's accounts — what mortals *say*, including the parts that are wrong. |
+| **GM-tier** | Red `⚿ GM Secret` expandable | The actual truth — mechanisms, identities, cosmological reality. Hidden until clicked. |
+
+A useful gut check: **if a chronicler reading the open prose would learn something the lore files mark as GM-only, it's leaking.** Move it inside the secret box. The *Open in Canon* panel at the bottom of a page is open prose too — keep it chronicler-tier; put GM-tier "open threads" inside the secret block they relate to.
+
+**Use multiple secret boxes per page.** A single secret at the bottom of a long page is a wall of text. Split secrets by topic and place each one immediately after the open-prose section it answers — the reader gets *"the chronicles disagree about X"* in the prose, clicks, and sees *"what X actually was."* Four or five thematic boxes on a long page is fine.
+
+**Theme secret boxes with the page's full visual vocabulary.** Cards, grids, pill rows, italic reveal-intros, side-by-side comparisons, codas — same scaffolding you'd use in open prose, just inside the box. If cards need a darker background to read against the secret-box tint, override `--card-bg` with a darker tinted value (e.g. `rgba(46,14,18,0.55)` for red-secret-tinted cards). Treat each secret as a structured reveal, not a paragraph.
+
+**Reference implementations:**
+- [`talan/historical/storveldi-denbora.html`](talan/historical/storveldi-denbora.html) — four thematic GM Secret boxes, each with reveal-pills, themed cards (claim-vs-truth, three-tier court, three fragment-locations) and italic codas. The model for *multiple themed secrets per page*.
+- [`talan/historical/golden-empire.html`](talan/historical/golden-empire.html) — single consolidated GM Secret box. The model for when *one continuous reveal arc* makes more sense than splitting.
+
+---
+
 ## How we work together — drafting → publishing
 
 **Lore-first protocol.** Brainstormed content — a kingdom, an NPC, a ritual, a faction, a god's secret — goes into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space; HTML pages are the published output.
