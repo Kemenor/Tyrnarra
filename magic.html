@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="/assets/style-a.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<script defer src="/assets/site-starfield.js"></script>
 <style>
   /* Mortal Ascent Ladder — vertical rungs */
   .ladder { max-width: 940px; margin: 18px auto; }
@@ -349,30 +351,5 @@
 
 </div>
 
-<script>
-function toggleSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  const content = btn.nextElementSibling;
-  const revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-
-const sf = document.getElementById('starfield');
-for (let i = 0; i < 180; i++) {
-  const s = document.createElement('div');
-  s.className = 'star';
-  const size = Math.random() * 2 + 0.5;
-  s.style.cssText = `
-    width:${size}px;height:${size}px;
-    top:${Math.random()*100}%;left:${Math.random()*100}%;
-    --min:${Math.random()*0.2+0.05};
-    --max:${Math.random()*0.6+0.3};
-    --d:${Math.random()*4+2}s;
-    --delay:-${Math.random()*6}s;
-  `;
-  sf.appendChild(s);
-}
-</script>
 </body>
 </html>

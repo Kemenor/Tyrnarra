@@ -8,36 +8,25 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #d4a01a; }
 
   /* Achievement cards — the Empire's tangible works */
   .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .work-card {
-    background: rgba(28,22,10,0.55);
-    border-left: 4px solid var(--domain-accent);
-    padding: 14px 16px;
-    border-radius: 4px;
-  }
+  .work-card { padding: 14px 16px; --card-bg: rgba(28,22,10,0.55); }
   .work-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
   .work-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
   .work-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
 
-  /* Mining-and-Fall side-by-side */
-  .arc-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 22px auto; max-width: 1000px; }
-  @media (max-width: 800px) { .arc-pair { grid-template-columns: 1fr; } }
-  .arc-block {
-    background: rgba(20,16,10,0.55);
-    border-left: 4px solid var(--arc-color, var(--domain-accent));
-    border-radius: 0 4px 4px 0;
-    padding: 16px 18px;
-  }
-  .arc-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--arc-color, var(--gold-bright)); text-transform: uppercase; margin-bottom: 4px; }
-  .arc-name { font-family: 'Uncial Antiqua', cursive; color: var(--arc-color, var(--gold-bright)); font-size: 1.3rem; margin-bottom: 8px; }
+  /* Mining-and-Fall side-by-side — uses .two-column from style-b.css */
+  .arc-block { padding: 16px 18px; border-radius: 0 4px 4px 0; --card-bg: rgba(20,16,10,0.55); }
+  .arc-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--card-accent, var(--gold-bright)); text-transform: uppercase; margin-bottom: 4px; }
+  .arc-name { font-family: 'Uncial Antiqua', cursive; color: var(--card-accent, var(--gold-bright)); font-size: 1.3rem; margin-bottom: 8px; }
   .arc-tagline { font-family: 'Crimson Pro', serif; font-style: italic; color: var(--parch-dim); font-size: 0.88rem; margin-bottom: 10px; }
   .arc-block p { margin: 8px 0; font-size: 0.93rem; line-height: 1.6; }
-  .arc-mining { --arc-color: #d4a01a; }
-  .arc-fall   { --arc-color: #8a3a2a; }
+  .arc-mining { --card-accent: #d4a01a; }
+  .arc-fall   { --card-accent: #8a3a2a; }
 
   /* Inline TBD marker — same convention as Thousand Kingdom */
   .tbd {
@@ -55,37 +44,6 @@
     margin: 0 2px;
   }
 
-  /* Open in Canon panel — explicit TBD inventory */
-  .open-canon {
-    background: rgba(20,16,8,0.45);
-    border: 1px dashed rgba(212,192,152,0.4);
-    border-radius: 4px;
-    padding: 14px 20px;
-    margin: 22px auto;
-    max-width: 1000px;
-  }
-  .open-canon h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
-    color: var(--gold-bright);
-    text-transform: uppercase;
-    margin: 0 0 6px 0;
-  }
-  .open-canon .sub {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--parch-dim);
-    margin-bottom: 8px;
-  }
-  .open-canon ol {
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-    font-size: 0.93rem;
-    color: var(--text);
-  }
-  .open-canon li { margin: 4px 0; }
-  .open-canon li b { color: var(--gold-bright); }
 </style>
 </head>
 <body data-page="golden-empire">
@@ -163,25 +121,25 @@
 
   <div class="work-grid">
 
-    <div class="work-card">
+    <div class="accent-card work-card">
       <div class="work-name">Common Law</div>
       <div class="work-byline">The legal spine modern kingdoms inherited</div>
       <div class="work-desc">Imperial common law was the first continental-scale legal framework since the Gods' Era. Property, contract, succession, the structure of formal oath — all codified, all enforceable across provincial borders, all written in Imperial Dwarvish. <b>Most modern Talanese kingdoms' legal codes descend from it</b>, including (with substantial Forseti-doctrinal evolution) the <a href="/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>'s framework. The Empire's law was not gentle but it was consistent, and consistency turned out to be the more important inheritance.</div>
     </div>
 
-    <div class="work-card">
+    <div class="accent-card work-card">
       <div class="work-name">The Roads</div>
       <div class="work-byline">Imperial military-supply corridors, now civilian</div>
       <div class="work-desc">The Imperial road network connected every provincial capital to the Imperial heartland by paved, milestone-marked, garrison-protected routes. After the collapse, the roads survived — milestones still in their original positions, stone bedding still under the soil. <b>Modern Magitrain routing follows the Imperial road network</b> in many southern stretches; the engineers found that the easiest places to lay new rail were the places the Empire had already cleared and levelled centuries earlier.</div>
     </div>
 
-    <div class="work-card">
+    <div class="accent-card work-card">
       <div class="work-name">The Script</div>
       <div class="work-byline">Imperial Dwarvish, fossilised in modern place-names</div>
       <div class="work-desc">For seven centuries the scholarly standard of the continent. Every educated Talanese mortal of the era could read it; every formal document of the Empire was written in it; every official place-name was Dwarvish. After the collapse, the script faded from active use within a century — but the <b>place-names did not move.</b> Modern Talanese maps are studded with Imperial Dwarvish toponyms drifted past recognition: villages, valleys, river-bends, milestones, abandoned watch-stations. The continent is still, in this small way, the Empire's.</div>
     </div>
 
-    <div class="work-card">
+    <div class="accent-card work-card">
       <div class="work-name">The Automatons</div>
       <div class="work-byline">The Empire's failure that made an ancestry</div>
       <div class="work-desc">The Empire's greatest scholars spent generations trying to recreate the <a href="/talan/bestiary.html">Android</a> ancestry of the Elden — synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: capable constructs of considerable skill, but not the living people the Elden had made. The Empire treated the Automaton programme as a near-success its scholars would eventually close; modern bestiary work treats the Automatons as their own people, distinct and complete. The Empire never resolved the question. Its scholars considered it haunting; the Automatons themselves did not.</div>
@@ -200,9 +158,9 @@
     <p>In the last century of the Empire's recorded history, a vast new mining programme opened under Imperial backing in the deep southern strata — formally framed as commercial resource extraction, ambitious by any measure, ultimately catastrophic. The Empire's collapse runs through these two arcs back to back.</p>
   </div>
 
-  <div class="arc-pair">
+  <div class="two-column">
 
-    <div class="arc-block arc-mining">
+    <div class="accent-card arc-block arc-mining">
       <div class="arc-label">Late Imperial · 12th – 13th Centuries MR</div>
       <div class="arc-name">The Mining Programme</div>
       <div class="arc-tagline">"The depths held nothing the Empire could not catalogue."</div>
@@ -210,7 +168,7 @@
       <p>Contemporary chroniclers noted the oddity. The Imperial bureaucracy did not respond to the questions. Documents in the dwarven imperial archives — which would have settled the question — did not survive the four years that followed.</p>
     </div>
 
-    <div class="arc-block arc-fall">
+    <div class="accent-card arc-block arc-fall">
       <div class="arc-label">1321 MR – 1325 MR</div>
       <div class="arc-name">The Fall</div>
       <div class="arc-tagline">"Four years from breach to collapse. The Empire fought every one of them."</div>
@@ -290,21 +248,5 @@
 
 </div>
 
-<script>
-function toggleEraLegend(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '◈ &nbsp; Hide Popular Belief' : btn.getAttribute('data-original');
-}
-function toggleEraSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-</script>
 </body>
 </html>

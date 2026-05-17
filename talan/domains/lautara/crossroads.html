@@ -8,17 +8,21 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
-  :root { --domain-accent: #a89cb8; }
+  :root {
+    --domain-accent: #a89cb8;
+    --card-bg: rgba(20,16,22,0.55);
+  }
 
   .three-realms { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .realm-card { background: rgba(20,16,22,0.55); border-left: 4px solid var(--realm-color, #a89cb8); padding: 12px 14px; border-radius: 4px; }
-  .realm-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--realm-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .realm-card { padding: 12px 14px; }
+  .realm-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
   .realm-domain { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 6px; }
   .realm-note { font-size: 0.88rem; color: var(--text); }
-  .r-lautara  { --realm-color: #d8a040; }
-  .r-zuzental { --realm-color: #b8c0c8; }
-  .r-ezkudon  { --realm-color: #6a90c0; }
+  .r-lautara  { --card-accent: #d8a040; }
+  .r-zuzental { --card-accent: #b8c0c8; }
+  .r-ezkudon  { --card-accent: #6a90c0; }
 
   .silk-note { background: rgba(40,32,48,0.5); border: 1px solid rgba(168,156,184,0.35); border-radius: 4px; padding: 14px 18px; margin: 22px auto; max-width: 920px; font-size: 0.95rem; }
   .silk-note .silk-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.82rem; margin-bottom: 8px; }
@@ -26,11 +30,11 @@
   .silk-effects li { margin-bottom: 8px; }
 
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .feature-card { background: rgba(20,16,22,0.55); border-left: 3px solid var(--gold-dim); padding: 12px 14px; border-radius: 4px; }
+  .feature-card { padding: 12px 14px; --card-accent: var(--gold-dim); }
   .feature-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
   .feature-desc { font-size: 0.9rem; color: var(--text); }
 
-  .charna-card { background: rgba(28,22,36,0.6); border: 1px solid rgba(168,156,184,0.45); border-radius: 4px; padding: 16px 20px; margin: 20px auto; max-width: 920px; }
+  .charna-card { padding: 16px 20px; margin: 20px auto; max-width: 920px; --card-bg: rgba(28,22,36,0.6); --card-accent: rgba(168,156,184,0.45); }
   .charna-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .charna-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.5rem; margin-bottom: 10px; }
   .charna-grid { display: grid; grid-template-columns: 130px 1fr; gap: 8px 16px; font-size: 0.92rem; }
@@ -80,17 +84,17 @@
   </div>
 
   <div class="three-realms">
-    <div class="realm-card r-lautara">
+    <div class="accent-card realm-card r-lautara">
       <div class="realm-name">Lautara</div>
       <div class="realm-domain">Commerce · Jianna</div>
       <div class="realm-note">Caravans, factors, banking houses with discreet branches behind the inns. The town is legally a Lautara sub-region; the capital city sits on Lautaran soil. Jianna's church keeps a small, deliberately understaffed mission.</div>
     </div>
-    <div class="realm-card r-zuzental">
+    <div class="accent-card realm-card r-zuzental">
       <div class="realm-name">Zuzental</div>
       <div class="realm-domain">Law · Forseti</div>
       <div class="realm-note">Notaries, witnesses, sealed-document copyists, signatory-houses. Most major Talan contracts whose parties don't trust each other are signed in Crossroads, with at least one Zuzental-licensed scribe in the room.</div>
     </div>
-    <div class="realm-card r-ezkudon">
+    <div class="accent-card realm-card r-ezkudon">
       <div class="realm-name">Ezkudon</div>
       <div class="realm-domain">Knowledge · Enki</div>
       <div class="realm-note">Couriers, cipher-clerks, archivists keeping rented dead-letter rooms. Ezkudon scholarship deals in rumour as much as in fact, and rumour is Crossroads' first export.</div>
@@ -111,7 +115,7 @@
     <p>The Spider's Silk is, simultaneously and without apology: a <b>tavern</b>, the region's largest <b>mercenary hiring hall</b>, a <b>neutral ground</b> where agents of rival powers drink at adjacent tables, an <b>information exchange</b> where a sealed pouch can change hands in plain view without comment, and a <b>sanctuary</b> for those who need to disappear for a season. The same room serves all five functions at once.</p>
   </div>
 
-  <div class="charna-card">
+  <div class="accent-card framed charna-card">
     <div class="charna-label">Proprietor</div>
     <div class="charna-name">Matron Charna</div>
     <dl class="charna-grid">
@@ -134,19 +138,19 @@
 
   <h3 class="section-heading" style="font-size:1.1rem; margin-top:32px;">Notable Features</h3>
   <div class="features-grid">
-    <div class="feature-card">
+    <div class="accent-card thin feature-card">
       <div class="feature-name">The Hiring Wall</div>
       <div class="feature-desc">A public noticeboard of contracts, bounties, and discreet arrangements, posted and pulled by Charna's staff. The Mercenary Guild treats it the way Adventurer's-Guild parties treat the Postboard. The slips are not signed; the work is.</div>
     </div>
-    <div class="feature-card">
+    <div class="accent-card thin feature-card">
       <div class="feature-name">The Webroom</div>
       <div class="feature-desc">A curtained upper chamber for private negotiation, reached only by silk rappel-line lowered from the rafters at Charna's word. Soundproofed, warded, and inside the silk's awareness — which is to say, witnessed.</div>
     </div>
-    <div class="feature-card">
+    <div class="accent-card thin feature-card">
       <div class="feature-name">Silk Lines Service</div>
       <div class="feature-desc">Anadi staff and nimble humanoid servers descend on silk lines from the rafters to deliver trays directly to tables, without ever putting a foot on the floor. A bowl of stew arriving from above is one of the inn's small civic theatres.</div>
     </div>
-    <div class="feature-card">
+    <div class="accent-card thin feature-card">
       <div class="feature-name">Guest Rooms</div>
       <div class="feature-desc">Silk-sealed sleeping chambers on the upper floors. Magical and mundane eavesdropping are both suppressed inside. Highly sought by travellers with dangerous enemies or dangerous secrets. Rates reflect the demand.</div>
     </div>
@@ -209,16 +213,6 @@
   <div class="footer">TYRNARRA · TALAN · LAUTARA · CROSSROADS</div>
 
 </div>
-
-<script>
-function toggleEraLegend(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>

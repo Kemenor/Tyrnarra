@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #9a3050; }
 
@@ -67,12 +68,7 @@
     margin: 18px auto;
     max-width: 1000px;
   }
-  .school-card {
-    background: rgba(28,16,22,0.5);
-    border: 1px solid rgba(154,48,80,0.3);
-    border-radius: 4px;
-    padding: 14px 16px;
-  }
+  .school-card { padding: 14px 16px; --card-bg: rgba(28,16,22,0.5); --card-accent: rgba(154,48,80,0.3); }
   .school-name {
     font-family: 'Cinzel', serif;
     font-size: 0.78rem;
@@ -95,85 +91,21 @@
   }
   .school-theory b { color: var(--gold-bright); }
 
-  /* Two-sided tension blocks (purist vs pragmatist on government) */
-  .position-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px auto; max-width: 1000px; }
-  @media (max-width: 800px) { .position-pair { grid-template-columns: 1fr; } }
-  .position {
-    background: rgba(28,16,22,0.5);
-    border-left: 4px solid var(--pos-color, var(--domain-accent));
-    border-radius: 0 4px 4px 0;
-    padding: 14px 16px;
-  }
-  .position-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.22em;
-    color: var(--pos-color, var(--gold-bright));
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .position-name {
-    font-family: 'Uncial Antiqua', cursive;
-    color: var(--pos-color, var(--gold-bright));
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
+  /* Two-sided tension blocks (purist vs pragmatist on government) — uses .two-column from style-b.css */
+  .position { padding: 14px 16px; border-radius: 0 4px 4px 0; --card-bg: rgba(28,16,22,0.5); }
+  .position-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--card-accent, var(--gold-bright)); text-transform: uppercase; margin-bottom: 4px; }
+  .position-name { font-family: 'Uncial Antiqua', cursive; color: var(--card-accent, var(--gold-bright)); font-size: 1.2rem; margin-bottom: 8px; }
   .position p { margin: 8px 0; font-size: 0.92rem; line-height: 1.6; }
-  .pos-purist     { --pos-color: #d8a0b0; }
-  .pos-pragmatist { --pos-color: #c8a060; }
+  .pos-purist     { --card-accent: #d8a0b0; }
+  .pos-pragmatist { --card-accent: #c8a060; }
 
   /* Friction cards (two-recovery, wyrm-cult) */
-  .friction-block {
-    background: rgba(28,16,22,0.5);
-    border-left: 4px solid var(--frict-color, var(--gold-dim));
-    padding: 14px 18px;
-    margin: 16px auto;
-    max-width: 960px;
-    border-radius: 0 4px 4px 0;
-  }
-  .friction-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.22em;
-    color: var(--frict-color, var(--gold-bright));
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
+  .friction-block { padding: 14px 18px; margin: 16px auto; max-width: 960px; border-radius: 0 4px 4px 0; --card-bg: rgba(28,16,22,0.5); --card-accent: var(--gold-dim); }
+  .friction-label { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em; color: var(--card-accent, var(--gold-bright)); text-transform: uppercase; margin-bottom: 6px; }
   .friction-block p { margin: 8px 0; }
-  .f-steam { --frict-color: #c87830; }
-  .f-wyrm  { --frict-color: #88a878; }
+  .f-steam { --card-accent: #c87830; }
+  .f-wyrm  { --card-accent: #88a878; }
 
-  /* Open in canon panel */
-  .open-canon {
-    background: rgba(20,12,16,0.45);
-    border: 1px dashed rgba(216,160,176,0.4);
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin: 24px auto;
-    max-width: 920px;
-  }
-  .open-canon h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
-    color: #d8a0b0;
-    text-transform: uppercase;
-    margin: 0 0 6px;
-  }
-  .open-canon .sub {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--parch-dim);
-    margin-bottom: 12px;
-  }
-  .open-canon ul {
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-    font-size: 0.93rem;
-    line-height: 1.65;
-  }
-  .open-canon li { margin: 4px 0; }
-  .open-canon li b { color: var(--gold-bright); }
 </style>
 </head>
 <body data-page="dragons-reach">
@@ -272,25 +204,25 @@
 
   <div class="school-grid">
 
-    <div class="school-card">
+    <div class="accent-card framed school-card">
       <div class="school-name">Power-Accumulation</div>
       <div class="school-method">Direction: raw strength as proxy</div>
       <div class="school-theory"><b>Theory:</b> enough strength is enough strength, by any measure, including the one we lost. If we are mighty enough, we will close the gap by becoming larger than the gap. Purists in this direction tend toward conquest, hoarding, and the accumulation of magical and martial power without obvious limit.</div>
     </div>
 
-    <div class="school-card">
+    <div class="accent-card framed school-card">
       <div class="school-name">Discipline of Body &amp; Mind</div>
       <div class="school-method">Direction: generations-long regimen</div>
       <div class="school-theory"><b>Theory:</b> what was severed in us can be rebuilt by doing, slowly, what immortality did automatically. Adherents hold to strict regimens — diet, breath, study, motion — practised without break across full Dragon lifetimes. The longest-lived Dragons in the city are almost all from this direction.</div>
     </div>
 
-    <div class="school-card">
+    <div class="accent-card framed school-card">
       <div class="school-name">Meditation in the Wreckage</div>
       <div class="school-method">Direction: religious practice in the ship-chambers</div>
       <div class="school-theory"><b>Theory:</b> closeness to what we were makes us closer to it again. Adherents take vigil in the deepest preserved chambers of the ship — those parts of the city still recognisably <i>vessel</i> — and meditate there for years at a time, sometimes decades. Some emerge changed. Some do not emerge.</div>
     </div>
 
-    <div class="school-card">
+    <div class="accent-card framed school-card">
       <div class="school-name">Reconstruction</div>
       <div class="school-method">Direction: archaeology of the pre-corruption practice</div>
       <div class="school-theory"><b>Theory:</b> if we recover what we did <i>before</i> — the daily rituals, the work, the song — our nature follows. Adherents work the ship-relics literally embedded in the city walls, plus what new chambers the dig opens. They want the past back as a way of life, not as a sentiment.</div>
@@ -298,7 +230,7 @@
 
   </div>
 
-  <div class="friction-block" style="--frict-color: #d8a0b0; margin-top: 22px;">
+  <div class="accent-card friction-block" style="--card-accent:#d8a0b0; margin-top:22px">
     <div class="friction-label">The Teacher Recursion</div>
     <p>A purist may attach to a teacher whose path speaks to them and follow that teacher for as long as the teacher lives. But <b>when the teacher dies, the teacher was not pure</b> — that is what their death proves, by definition — and so the student knows <i>more needs to be done.</i> The recursion is the doctrine. Every dead teacher is evidence that the practice must continue, must intensify, must find what the teacher missed.</p>
     <p>The longest-lived purist Dragons are the ones who have buried the most teachers. The most-followed teachers are the ones whose deaths most reliably produce the next generation of seekers. Pragmatist Dragons watch this and find it sad. Purist Dragons regard pragmatists as having given up.</p>
@@ -322,9 +254,9 @@
     <p>In practice the system <b>tilts purist</b>. Purist discipline extends life. The longest-lived Dragons in the Reach are almost all from the purist schools — especially the Disciplined — and the Council records prove it across centuries of recorded ages-at-death. The age-weighted vote therefore systematically over-weights the voice of Dragons whose entire doctrine is <i>"discipline extends life,"</i> because their discipline has extended their life and the records show it. The argument writes itself: <b>the purists are using their longer lives as evidence of their rightness, and counting the evidence twice.</b></p>
   </div>
 
-  <div class="position-pair">
+  <div class="two-column">
 
-    <div class="position pos-purist">
+    <div class="accent-card position pos-purist">
       <div class="position-label">The Purist Position</div>
       <div class="position-name">We Are Still Here</div>
       <p>The vote-weighting is the only one that makes sense. Age is achievement; achievement is judgement; judgement deserves voice. We did not write the system to favour ourselves — we lived long enough for the system to favour us, and the system is right to recognise it.</p>
@@ -332,7 +264,7 @@
       <p style="font-style: italic; color: var(--parch);">We are still here. You are not.</p>
     </div>
 
-    <div class="position pos-pragmatist">
+    <div class="accent-card position pos-pragmatist">
       <div class="position-label">The Pragmatist Position</div>
       <div class="position-name">We Lived Ours</div>
       <p>Vote-weight should not track <i>lifespan</i>. Lifespan is downstream of a contested doctrine — and treating doctrine-determined longevity as constitutional authority means the doctrine wins by sheer demographic accident, not by its merits. The purists are using their longer lives as evidence of their rightness, and counting the evidence twice.</p>
@@ -357,13 +289,13 @@
     <p>Two friction-points define the Reach's external politics. One is shared volcanic terrain with the Order of Steam; the other is a theological grievance held by Talan's indigenous wyrmkind.</p>
   </div>
 
-  <div class="friction-block f-steam">
+  <div class="accent-card friction-block f-steam">
     <div class="friction-label">Within Sumendar — Parallel Recovery</div>
     <p>The Reach shares the volcanic belt with the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html"><b>Order of Steam</b></a>, and both polities run major recovery archaeology in adjacent terrain — the Order on <b>Elden-tech ruins</b>, the Dragons on the <b>mothership wreckage</b> that the city is built from and around. <i>The Order wants to reproduce; the Dragons want to remember.</i> The doctrinal difference matters: an Order recovery is a step toward replication, a Dragon recovery is a step toward restoration of <i>what we were</i>. Specific finds have been quietly disputed over the centuries — the volcanic terrain does not always make clear which excavation a given chamber belongs to, and some chambers post-date both, sometimes both at once.</p>
     <p>Formal relations are <i>cordial.</i> Practical relations are <i>complicated.</i></p>
   </div>
 
-  <div class="friction-block f-wyrm">
+  <div class="accent-card friction-block f-wyrm">
     <div class="friction-label">Beyond Sumendar — The Older Claim</div>
     <p>Outside the city, the <b>Dragonets</b> — indigenous wyrmkin of Talan, children of <a href="/grand-gods.html"><b>Zaharsuge</b></a>, the Minor God who is Talan's pre-Dragon wyrm-lord — reject the Reach's implicit claim to authority over wyrmkind on Talan. Zaharsuge predates the alien Dragons by ages; the indigenous wyrm-line was here first, and many Dragonets find the Reach's posture (<i>"we are the dragons of Talan"</i>) theologically incorrect. The grievance is untested and simmering. The Reach largely ignores it, which the Dragonets find provocative on a separate level.</p>
   </div>
@@ -422,16 +354,6 @@
   <div class="footer">TYRNARRA · TALAN · SUMENDAR · DRAGON'S REACH</div>
 
 </div>
-
-<script>
-function toggleEraLegend(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>

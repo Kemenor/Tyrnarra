@@ -11,25 +11,25 @@
 <style>
   :root { --domain-accent: #c8a84b; }
   .dom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1180px; }
-  .dom-card { display: block; text-decoration: none; color: inherit; background: rgba(28,20,10,0.55); border-left: 4px solid var(--dc, var(--gold)); padding: 14px 18px; border-radius: 4px; transition: transform 0.15s, border-color 0.15s; }
-  .dom-card:hover { transform: translateY(-2px); border-color: var(--dc-hi, var(--gold-bright)); }
+  .dom-card { padding: 14px 18px; }
+  .dom-card:hover { border-color: var(--dc-hi, var(--gold-bright)); }
   .dom-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--dc-hi, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
   .dom-meta { font-family: 'Cinzel', serif; color: var(--gold-dim); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
   .dom-desc { font-size: 0.9rem; color: var(--text); }
 
-  .d-vindul   { --dc: #6890c0; --dc-hi: #88b0e0; }
-  .d-lautara  { --dc: #c89030; --dc-hi: #e8b050; }
-  .d-myrkono  { --dc: #5a3a78; --dc-hi: #8a6ac8; }
-  .d-floteyn  { --dc: #3a8aa8; --dc-hi: #5aaac8; }
-  .d-sumendar { --dc: #c84028; --dc-hi: #e86048; }
-  .d-lioaru   { --dc: #a87830; --dc-hi: #d8a860; }
-  .d-brauogi  { --dc: #8a6028; --dc-hi: #b88848; }
-  .d-ezkudon  { --dc: #d0c060; --dc-hi: #f0e080; }
-  .d-egulon   { --dc: #f0d080; --dc-hi: #ffe8a0; }
-  .d-zuzental { --dc: #6080a8; --dc-hi: #80a0c8; }
-  .d-nashavel { --dc: #8a3068; --dc-hi: #b85088; }
-  .d-ehizahar { --dc: #b04830; --dc-hi: #d86848; }
-  .d-askamira { --dc: #c8a84b; --dc-hi: #f0d080; }
+  .d-vindul   { --card-accent: #6890c0; --dc-hi: #88b0e0; }
+  .d-lautara  { --card-accent: #c89030; --dc-hi: #e8b050; }
+  .d-myrkono  { --card-accent: #5a3a78; --dc-hi: #8a6ac8; }
+  .d-floteyn  { --card-accent: #3a8aa8; --dc-hi: #5aaac8; }
+  .d-sumendar { --card-accent: #c84028; --dc-hi: #e86048; }
+  .d-lioaru   { --card-accent: #a87830; --dc-hi: #d8a860; }
+  .d-brauogi  { --card-accent: #8a6028; --dc-hi: #b88848; }
+  .d-ezkudon  { --card-accent: #d0c060; --dc-hi: #f0e080; }
+  .d-egulon   { --card-accent: #f0d080; --dc-hi: #ffe8a0; }
+  .d-zuzental { --card-accent: #6080a8; --dc-hi: #80a0c8; }
+  .d-nashavel { --card-accent: #8a3068; --dc-hi: #b85088; }
+  .d-ehizahar { --card-accent: #b04830; --dc-hi: #d86848; }
+  .d-askamira { --card-accent: #c8a84b; --dc-hi: #f0d080; }
 </style>
 </head>
 <body data-page="domains-hub">
@@ -62,79 +62,79 @@
   <h2 class="section-heading">The Thirteen</h2>
   <div class="dom-grid">
 
-    <a class="dom-card d-vindul" href="/talan/domains/vindul/vindul.html">
+    <a class="accent-card is-link dom-card d-vindul" href="/talan/domains/vindul/vindul.html">
       <div class="dom-name">Vindul</div>
       <div class="dom-meta">Wind · Shuun's domain · Northern reaches</div>
       <div class="dom-desc">The wind-swept northern plateaus and the Shifting City of Haizava. A confederation of nomadic peoples bound less by border than by season.</div>
     </a>
 
-    <a class="dom-card d-lautara" href="/talan/domains/lautara/lautara.html">
+    <a class="accent-card is-link dom-card d-lautara" href="/talan/domains/lautara/lautara.html">
       <div class="dom-name">Lautara</div>
       <div class="dom-meta">Commerce · Jianna's domain · Trade corridor</div>
       <div class="dom-desc">Merkavar's markets, the Kitsune Kingdom of Emarrea, and the Crossroads tri-domain nexus. The richest domain by gold, the most contested by everyone else.</div>
     </a>
 
-    <a class="dom-card d-myrkono" href="/talan/domains/myrkono/myrkono.html">
+    <a class="accent-card is-link dom-card d-myrkono" href="/talan/domains/myrkono/myrkono.html">
       <div class="dom-name">Myrkono</div>
       <div class="dom-meta">Darkness · Araphel's domain · Shadow Steppes</div>
       <div class="dom-desc">Myrria, the City of Second Chances, and the bleak steppes that hide the Hollow of Ten Thousand Threads. Mercy lives here, but so do older things.</div>
     </a>
 
-    <a class="dom-card d-floteyn" href="/talan/domains/floteyn/floteyn.html">
+    <a class="accent-card is-link dom-card d-floteyn" href="/talan/domains/floteyn/floteyn.html">
       <div class="dom-name">Floteyn</div>
       <div class="dom-meta">Water · Shuun's-twin domain · Floating Isles</div>
       <div class="dom-desc">The Floating Isles of Uravel, the Whale Shoals of Balatur Erui, and Balaena — the Skywhale City that draws breath against the upper sky.</div>
     </a>
 
-    <a class="dom-card d-sumendar" href="/talan/domains/sumendar/sumendar.html">
+    <a class="accent-card is-link dom-card d-sumendar" href="/talan/domains/sumendar/sumendar.html">
       <div class="dom-name">Sumendar</div>
       <div class="dom-meta">Fire · Komo's domain · Volcanic spine</div>
       <div class="dom-desc">Eldara's forges, the Order of Steam's industrial heart, and Dragon's Reach — the city built from a fallen mothership. The continent's Magitech engine.</div>
     </a>
 
-    <a class="dom-card d-lioaru" href="/talan/domains/lioaru/lioaru.html">
+    <a class="accent-card is-link dom-card d-lioaru" href="/talan/domains/lioaru/lioaru.html">
       <div class="dom-name">Lioaru</div>
       <div class="dom-meta">Time · Tani's domain · Desert and Lost Kingdom</div>
       <div class="dom-desc">The sand realm of Hareaveldi, the threefold sand-whale capital of Denbora, and the Lost Kingdom — the Blackened Lands where the old curse has not yet lifted.</div>
     </a>
 
-    <a class="dom-card d-brauogi" href="/talan/domains/brauogi/brauogi.html">
+    <a class="accent-card is-link dom-card d-brauogi" href="/talan/domains/brauogi/brauogi.html">
       <div class="dom-name">Brauogi</div>
       <div class="dom-meta">Earth · Enki's domain · Stronghold country</div>
       <div class="dom-desc">Gotorlekua the Stronghold, Lurrath the Steadfast City, and the three-way of goblin, hobgoblin, and minotaur peoples that share the Earth domain.</div>
     </a>
 
-    <a class="dom-card d-ezkudon" href="/talan/domains/ezkudon/ezkudon.html">
+    <a class="accent-card is-link dom-card d-ezkudon" href="/talan/domains/ezkudon/ezkudon.html">
       <div class="dom-name">Ezkudon</div>
       <div class="dom-meta">Knowledge · Vesuna's domain · Scholarly heartland</div>
       <div class="dom-desc">Thekkavar the City of Learning, the Calm Country of Lua Lasai, and the libraries that outlast every kingdom that has held them.</div>
     </a>
 
-    <a class="dom-card d-egulon" href="/talan/domains/egulon/egulon.html">
+    <a class="accent-card is-link dom-card d-egulon" href="/talan/domains/egulon/egulon.html">
       <div class="dom-name">Egulon</div>
       <div class="dom-meta">Light · Iro's domain · Sun-blessed lowlands</div>
       <div class="dom-desc">Ljosarn the Everbright City, the radiant fields of Harro Distiratsue, and the warmest stretch of Calm Country on the continent.</div>
     </a>
 
-    <a class="dom-card d-zuzental" href="/talan/domains/zuzental/zuzental.html">
+    <a class="accent-card is-link dom-card d-zuzental" href="/talan/domains/zuzental/zuzental.html">
       <div class="dom-name">Zuzental</div>
       <div class="dom-meta">Law · Forseti's domain · Codified kingdoms</div>
       <div class="dom-desc">Lograth the Judgment City, the dual-bloodline Thousand Kingdom, the Emerald Isles, and the Legea Empire — the densest concentration of formal law on Talan.</div>
     </a>
 
-    <a class="dom-card d-nashavel" href="/talan/domains/nashavel/nashavel.html">
+    <a class="accent-card is-link dom-card d-nashavel" href="/talan/domains/nashavel/nashavel.html">
       <div class="dom-name">Nashavel</div>
       <div class="dom-meta">Chaos · Fisaya's domain · Unmapped country</div>
       <div class="dom-desc">Nahaskel the Unmapped City and the Kaosadaemi Principality. A domain where the maps disagree because the country itself disagrees with itself.</div>
     </a>
 
-    <a class="dom-card d-ehizahar" href="/talan/domains/ehizahar/ehizahar.html">
+    <a class="accent-card is-link dom-card d-ehizahar" href="/talan/domains/ehizahar/ehizahar.html">
       <div class="dom-name">Ehizahar</div>
       <div class="dom-meta">Hunt · Hinka's domain · Wilderness and Fenurra</div>
       <div class="dom-desc">Veidrath the Hunting City, the Villtur tribal sprawl, and Fenurra — the volcanic Flame-Source where the Draconis tribe burns its rites.</div>
     </a>
 
-    <a class="dom-card d-askamira" href="/talan/domains/askamira/askamira.html">
+    <a class="accent-card is-link dom-card d-askamira" href="/talan/domains/askamira/askamira.html">
       <div class="dom-name">Askamira</div>
       <div class="dom-meta">Freedom · Cronus's domain · The central island</div>
       <div class="dom-desc">Frae City at the heart of Midarra — Cronus's seat, the Council of Thirteen's venue, the most religiously diverse city on Talan, and the only landmass where ice, desert, and forest share a single shore.</div>

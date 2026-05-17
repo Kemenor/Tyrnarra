@@ -11,21 +11,21 @@
 <style>
   :root { --domain-accent: #c87830; }
 
-  .council-card { background: rgba(40,28,16,0.55); border: 1px solid rgba(200,120,48,0.4); border-radius: 4px; padding: 16px 20px; margin: 22px auto; max-width: 920px; }
+  .council-card { padding: 16px 20px; margin: 22px auto; max-width: 920px; --card-bg: rgba(40,28,16,0.55); --card-accent: rgba(200,120,48,0.4); }
   .council-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .council-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 10px; }
 
   .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .pillar-card { background: rgba(28,20,12,0.55); border-left: 4px solid var(--domain-accent); padding: 12px 14px; border-radius: 4px; }
+  .pillar-card { padding: 12px 14px; --card-bg: rgba(28,20,12,0.55); }
   .pillar-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
   .pillar-desc { font-size: 0.9rem; color: var(--text); }
 
-  .sub-card { background: rgba(28,20,12,0.42); border-left: 4px solid var(--gold-dim); border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+  .sub-card { padding: 12px 16px; margin: 12px 0; --card-bg: rgba(28,20,12,0.42); --card-accent: var(--gold-dim); }
   .sub-card a.sub-card-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; text-decoration: none; }
   .sub-card a.sub-card-name:hover { color: var(--gold); text-decoration: underline; }
   .sub-card-desc { font-size: 0.92rem; color: var(--text); margin-top: 4px; }
 
-  .doctrine-block { background: rgba(50,28,18,0.55); border-left: 4px solid #b04030; padding: 14px 18px; margin: 22px auto; max-width: 920px; }
+  .doctrine-block { padding: 14px 18px; margin: 22px auto; max-width: 920px; --card-bg: rgba(50,28,18,0.55); --card-accent: #b04030; }
   .doctrine-label { font-family: 'Cinzel', serif; color: #d88060; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
 </style>
 </head>
@@ -72,7 +72,7 @@
   </div>
 
   <a id="council"></a>
-  <div class="council-card">
+  <div class="accent-card framed council-card">
     <div class="council-label">Central Authority</div>
     <div class="council-name">The Council of the Forge</div>
     <p>The Order's apex body. Sets <b>war policy</b>, <b>industrial priorities</b>, and the licensing regime under which any heavy Magitech can be built at scale. Seats are partly elected from the senior craft-guilds and partly held as <b>hereditary seats by the great Houses</b> (notably <a href="/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart</a>, which holds several). The hereditary seats are the closest thing the Order has to nobility — and the long-running internal argument is whether they should exist at all. Reformist factions cycle through proposals to abolish them every council session; the Houses cycle through proposals to extend their reach. Neither side has won.</p>
@@ -87,19 +87,19 @@
   </div>
 
   <div class="pillar-grid">
-    <div class="pillar-card">
+    <div class="accent-card pillar-card">
       <div class="pillar-name">Rail &amp; Locomotion</div>
       <div class="pillar-desc">Magitrains and the rolling stock that fills the southern network. The Pillar that the Order is most globally known for — most of Talan's Arcanotech rail traces here.</div>
     </div>
-    <div class="pillar-card">
+    <div class="accent-card pillar-card">
       <div class="pillar-name">Airships &amp; Atmosphere</div>
       <div class="pillar-desc">Arcanotech airship engines and the standard Talanese hull patterns. <b>House Eisenhart's Ironwing line</b> dominates the heavy-combat segment. Vindul still leads on hull-singing quality, but Order-built engines are the industry default.</div>
     </div>
-    <div class="pillar-card">
+    <div class="accent-card pillar-card">
       <div class="pillar-name">Foundry &amp; Heavy Industry</div>
       <div class="pillar-desc">Furnaces, mills, regulated weapon manufacture, rune cannons, Ethersteel plating. The volcanic belt's literal forges feed this pillar; House Eisenhart leads it by output and reputation.</div>
     </div>
-    <div class="pillar-card">
+    <div class="accent-card pillar-card">
       <div class="pillar-name">Engineering &amp; Archaeology</div>
       <div class="pillar-desc">Elden-tech recovery, prototype labs, Council-licensed reverse-engineering of the volcanic belt's deep ruins. The Pillar whose seat is most often held by a new-rising engineer rather than an established House.</div>
     </div>
@@ -128,7 +128,7 @@
     <p>The Order has Houses — the closest thing it has to nobility — but the Houses are <b>craft-lineages</b>, not bloodlines of conquest. A House is a family that has held seats on a Pillar council for long enough that its name is now load-bearing in the industry. Houses can be unmade by a single bad decade; new Houses can be made by three good ones. The Council of the Forge contains both hereditary House seats and elected guild seats, and the balance between them is the Order's running internal politics.</p>
   </div>
 
-  <div class="sub-card">
+  <div class="accent-card sub-card">
     <a class="sub-card-name" href="/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart →</a>
     <div class="sub-card-desc">The Order's highest-prestige dwarven House. Arms manufacturer to the world, holds multiple hereditary seats on the Council of the Forge, and currently led by the Highforge Matriarch <b>Tharka Eisenhart</b>. Builders of the <i>Stahlglanz</i> mobile fortress and the Ironwing combat-airship line. See dedicated page.</div>
   </div>
@@ -141,7 +141,7 @@
 
   <h2 class="section-heading">Doctrine — Total Mobilization</h2>
 
-  <div class="doctrine-block">
+  <div class="accent-card doctrine-block">
     <div class="doctrine-label">War-Standing — Last Declared 100+ Years Ago</div>
     <p><b>Total Mobilization</b> is the Order's standing-army wartime escalation — the legal posture under which every workshop becomes a foundry-for-the-state, every licensed Magitech design is requisitioned, and the great War Relics (including <i>Stahlglanz</i>) are deployed. Declaration requires a supermajority vote of the Council of the Forge.</p>
     <p>The Order has <i>not</i> declared Total Mobilization in over a century. The discipline of that restraint is something the Order's diplomats trade on; the threat of declaring it is something the Order's hawks lean on. Both faces of the same posture.</p>

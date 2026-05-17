@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="/assets/style-a.css">
   <link rel="stylesheet" href="/assets/site-nav.css">
   <script defer src="/assets/site-nav.js"></script>
+  <script defer src="/assets/site-interactions.js"></script>
+  <script defer src="/assets/site-starfield.js"></script>
 <style>
   /* ── Per-god quick-stats block (Aspects / Cleric Domains / Weapon / Mortals' View) ── */
   .god-stats {
@@ -105,16 +107,6 @@
 </div>
 
 <script>
-// ── STARFIELD ──
-const sf = document.getElementById('starfield');
-for (let i = 0; i < 200; i++) {
-  const s = document.createElement('div');
-  s.className = 'star';
-  const size = Math.random() * 2 + 0.5;
-  s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--min:${Math.random()*0.15+0.05};--max:${Math.random()*0.5+0.2};--d:${Math.random()*4+2}s;--delay:-${Math.random()*6}s;opacity:${Math.random()*0.4+0.1}`;
-  sf.appendChild(s);
-}
-
 // ── GOD DATA ──
 const gods = {
   primordial: [
@@ -493,15 +485,6 @@ function buildCard(god, gridId) {
 gods.primordial.forEach(g => buildCard(g, 'primordialGrid'));
 gods.ascendant.forEach(g => buildCard(g, 'ascendantGrid'));
 gods.life.forEach(g => buildCard(g, 'lifeGrid'));
-
-function toggleSecret(e, btn) {
-  e.stopPropagation();
-  const content = btn.nextElementSibling;
-  const revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed
-    ? '⚿ &nbsp; Hide Secret'
-    : '⚿ &nbsp; GM Secret — Click to Reveal';
-}
 </script>
 
 </body>

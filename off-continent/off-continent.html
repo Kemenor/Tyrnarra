@@ -9,24 +9,26 @@
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  :root { --domain-accent: #8aa0c8; }
+  :root {
+    --domain-accent: #8aa0c8;
+    --card-bg: rgba(20,20,32,0.55);
+  }
 
   .continent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
-  .continent-card { background: rgba(20,20,32,0.55); border: 1px solid var(--cont-color, rgba(138,160,200,0.4)); border-radius: 4px; padding: 16px 20px; }
-  .continent-card.is-link { display: block; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
-  .continent-card.is-link:hover { border-color: var(--cont-color-hover, var(--gold)); transform: translateY(-2px); }
-  .continent-direction { font-family: 'Cinzel', serif; color: var(--cont-color, var(--gold-dim)); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+  .continent-card { padding: 16px 20px; }
+  .continent-card.is-link:hover { border-color: var(--card-accent-hover, var(--gold)); }
+  .continent-direction { font-family: 'Cinzel', serif; color: var(--card-accent-hover, var(--gold-dim)); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
   .continent-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.45rem; margin-bottom: 6px; }
   .continent-byname { font-style: italic; color: var(--gold-dim); font-size: 0.9rem; margin-bottom: 8px; }
   .continent-desc { font-size: 0.92rem; color: var(--text); }
   .continent-tags { margin-top: 10px; }
   .continent-tag { display: inline-block; font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); border: 1px solid rgba(200,168,75,0.25); border-radius: 2px; padding: 2px 8px; margin-right: 6px; margin-top: 4px; }
   .continent-tag.tbd { color: #a89060; border-color: rgba(168,144,96,0.35); font-style: italic; }
-  .c-sortalde { --cont-color: rgba(120,160,200,0.45); --cont-color-hover: #78a0c8; }
-  .c-empire   { --cont-color: rgba(176,64,48,0.45);  --cont-color-hover: #b04030; }
-  .c-unknown  { --cont-color: rgba(110,100,120,0.4); }
+  .c-sortalde { --card-accent: rgba(120,160,200,0.45); --card-accent-hover: #78a0c8; }
+  .c-empire   { --card-accent: rgba(176,64,48,0.45);  --card-accent-hover: #b04030; }
+  .c-unknown  { --card-accent: rgba(110,100,120,0.4); }
 
-  .crossing-block { background: rgba(18,22,32,0.55); border-left: 4px solid #8aa0c8; padding: 14px 18px; margin: 18px auto; max-width: 1000px; border-radius: 4px; }
+  .crossing-block { padding: 14px 18px; margin: 18px auto; max-width: 1000px; }
   .crossing-label { font-family: 'Cinzel', serif; color: #b0c0d8; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
 </style>
 </head>
@@ -52,7 +54,7 @@
   <h2 class="section-heading">Known Lands</h2>
   <div class="continent-grid">
 
-    <a class="continent-card is-link c-sortalde" href="/off-continent/sortalde.html">
+    <a class="accent-card framed is-link continent-card c-sortalde" href="/off-continent/sortalde.html">
       <div class="continent-direction">East across Hafra</div>
       <div class="continent-name">Sortalde</div>
       <div class="continent-byname">Tao Hua Yuan · the Petal Continent</div>
@@ -60,7 +62,7 @@
       <div class="continent-tags"><span class="continent-tag">Cloudship trade</span><span class="continent-tag">Layer-3 pantheon only</span><span class="continent-tag">Page →</span></div>
     </a>
 
-    <a class="continent-card is-link c-empire" href="/off-continent/red-empire.html">
+    <a class="accent-card framed is-link continent-card c-empire" href="/off-continent/red-empire.html">
       <div class="continent-direction">Across Hafra</div>
       <div class="continent-name">The Red Empire</div>
       <div class="continent-byname">A godless mortal-supremacist state</div>
@@ -68,7 +70,7 @@
       <div class="continent-tags"><span class="continent-tag">No gods</span><span class="continent-tag">Mortal-supremacist</span><span class="continent-tag">Page →</span></div>
     </a>
 
-    <div class="continent-card c-unknown">
+    <div class="accent-card framed continent-card c-unknown">
       <div class="continent-direction">Bearings unrecorded</div>
       <div class="continent-name">The Unmapped</div>
       <div class="continent-byname">What lies further out</div>
@@ -85,12 +87,12 @@
     <p>The two seas that ring Talan behave differently, and crossings choose their water accordingly.</p>
   </div>
 
-  <div class="crossing-block">
+  <div class="accent-card crossing-block" style="--card-accent:#8aa0c8">
     <div class="crossing-label">Hafra · the saltwater ring</div>
     <p>Conventional sailing crosses Hafra. The far shore of Hafra is where most off-continent contact happens — including the long sail to the Red Empire's coastline. The crossing is dangerous but not exotic; experienced captains, hardened crews, and a long enough hold of provision are enough.</p>
   </div>
 
-  <div class="crossing-block">
+  <div class="accent-card crossing-block" style="--card-accent:#8aa0c8">
     <div class="crossing-label">The Cloud Sea · luminous vapor</div>
     <p>The Cloud Sea cannot be crossed by ordinary ships — vessels that attempt it sink slowly through the vapor and do not return. <b>Cloudships</b> — vessels purpose-built for it — are the only craft that traverse it. They are expensive, rare, and strategically critical. Sortalde freight arrives by cloudship and lands on the <a href="/talan/domains/zuzental/emerald-isles.html">Emerald Isles' Bridgelands</a>. No Magitrain line connects to either Sortalde or the Empire — rail is a continental matter.</p>
   </div>

@@ -10,35 +10,34 @@
 <script defer src="/assets/site-nav.js"></script>
 <style>
   .rail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
-  .rail-card { background: rgba(28,20,10,0.55); border-left: 4px solid var(--rail-color, var(--gold)); padding: 14px 18px; border-radius: 4px; }
-  .rail-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--rail-color, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
+  .rail-card { padding: 14px 18px; }
+  .rail-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
   .rail-byline { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 8px; }
   .rail-desc { font-size: 0.92rem; color: var(--text); }
-  .rail-north { --rail-color: #6890c0; }
-  .rail-south { --rail-color: #d0742a; }
+  .rail-north { --card-accent: #6890c0; }
+  .rail-south { --card-accent: #d0742a; }
 
-  .blocker-block { background: rgba(40,20,16,0.55); border-left: 4px solid #a85040; padding: 14px 18px; margin: 22px auto; max-width: 1000px; border-radius: 4px; }
+  .blocker-block { padding: 14px 18px; margin: 22px auto; max-width: 1000px; --card-bg: rgba(40,20,16,0.55); --card-accent: #a85040; }
   .blocker-label { font-family: 'Cinzel', serif; color: #d88060; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 8px; }
   .blocker-reasons { padding-left: 22px; margin: 10px 0; }
   .blocker-reasons li { margin-bottom: 10px; }
   .blocker-reasons li b { color: #f0d080; }
 
   .cross-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px auto; max-width: 1100px; }
-  .cross-card { background: rgba(28,20,10,0.5); border-left: 3px solid var(--gold-dim); padding: 10px 14px; border-radius: 4px; }
+  .cross-card { padding: 10px 14px; --card-bg: rgba(28,20,10,0.5); --card-accent: var(--gold-dim); }
   .cross-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 4px; }
   .cross-desc { font-size: 0.88rem; color: var(--text); }
 
   .continent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
-  .continent-card { background: rgba(28,20,10,0.55); border: 1px solid var(--cont-color, rgba(200,144,10,0.4)); border-radius: 4px; padding: 14px 18px; }
-  .continent-card.is-link { display: block; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
-  .continent-card.is-link:hover { border-color: var(--cont-color-hover, var(--gold)); transform: translateY(-2px); }
-  .continent-direction { font-family: 'Cinzel', serif; color: var(--cont-color, var(--gold-dim)); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+  .continent-card { padding: 14px 18px; }
+  .continent-card.is-link:hover { border-color: var(--card-accent-hover, var(--gold)); }
+  .continent-direction { font-family: 'Cinzel', serif; color: var(--card-accent, var(--gold-dim)); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
   .continent-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.35rem; margin-bottom: 6px; }
   .continent-byname { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 8px; }
   .continent-desc { font-size: 0.92rem; color: var(--text); }
-  .c-sortalde { --cont-color: rgba(120,160,200,0.45); --cont-color-hover: #78a0c8; }
-  .c-empire   { --cont-color: rgba(176,64,48,0.45);  --cont-color-hover: #b04030; }
-  .c-unknown  { --cont-color: rgba(110,100,120,0.4); }
+  .c-sortalde { --card-accent: rgba(120,160,200,0.45); --card-accent-hover: #78a0c8; }
+  .c-empire   { --card-accent: rgba(176,64,48,0.45);  --card-accent-hover: #b04030; }
+  .c-unknown  { --card-accent: rgba(110,100,120,0.4); }
 </style>
 </head>
 <body data-page="talan">
@@ -210,12 +209,12 @@
   </div>
 
   <div class="rail-grid">
-    <div class="rail-card rail-north">
+    <div class="accent-card rail-card rail-north">
       <div class="rail-name">Northern Network</div>
       <div class="rail-byline">Vindul · Lautara · Myrkono · Ezkudon · Zuzental · Ehizahar · Askamira</div>
       <div class="rail-desc">Interconnects the northern domains and their major cities. Confederated multi-operator system; <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>-licensed lines dominate, regional operators run shorter routes. <b><a href="/talan/domains/lautara/lautara.html">Merkavar</a></b> is the network's busiest freight hub — Jianna's Market City sits at the crossing of the Vindul, Myrkono, Ezkudon, and Zuzental lines.</div>
     </div>
-    <div class="rail-card rail-south">
+    <div class="accent-card rail-card rail-south">
       <div class="rail-name">Southern Network</div>
       <div class="rail-byline">Sumendar · Lioaru · Brauogi · Egulon · Nashavel</div>
       <div class="rail-desc">Sumendar is the industrial heart — most southern rolling stock is manufactured here, and the <b><a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a></b> licenses the dominant lines. The southern network is younger than the northern by about a century, denser in mineral-and-grain freight, and less politically fragmented. The <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> have no rail and never will; lines reach the habitable interior of Lioaru and stop at the cursed-ground's edge.</div>
@@ -224,7 +223,7 @@
 
   <h3 class="section-heading" style="font-size:1.1rem; margin-top:18px;">Why There Is a Seam — Basogur</h3>
 
-  <div class="blocker-block">
+  <div class="accent-card blocker-block">
     <div class="blocker-label">The Rail-Blocker — Basogur Jungle</div>
     <p>The two networks do not connect because no rail has ever been laid across <b>Basogur Jungle</b> — the deep jungle straddling Nashavel and Ehizahar that bisects the continent's east-central waist. Multiple Magitech engineering projects have attempted the crossing over the decades; <b>every one has failed</b>. The reasons are three, and they compound:</p>
     <ol class="blocker-reasons">
@@ -240,15 +239,15 @@
   </div>
 
   <div class="cross-row">
-    <div class="cross-card">
+    <div class="accent-card thin cross-card">
       <div class="cross-name">Ship across Midarra</div>
       <div class="cross-desc">The bulk-cargo route. Talan's freshwater inner sea is the preferred lane for tonnage that doesn't fit in a passenger schedule. The <b>Twin Cities</b> — the mobile pirate capital drifting through Midarra — draw real revenue from being a routine transit point. Toll, escort, or both.</div>
     </div>
-    <div class="cross-card">
+    <div class="accent-card thin cross-card">
       <div class="cross-name">Airship over Basogur</div>
       <div class="cross-desc">The premium passenger and urgent-freight option. Arcanotech airships do this regularly but suffer turbulence and instrument drift in the chaos-magic uplift. <b>Occultech airships fly through it cleanly</b> and charge accordingly. Vindul and Sumendar airship guilds dominate the over-jungle route.</div>
     </div>
-    <div class="cross-card">
+    <div class="accent-card thin cross-card">
       <div class="cross-name">The Overland Loop</div>
       <div class="cross-desc">The long road that loops around Basogur — slow, monetised by toll-collecting kingdoms along the bypass. The poor route, the patient route, the route taken when the airship guilds are full or the season is bad on Midarra. Still used; still profitable for whoever holds the tolls.</div>
     </div>
@@ -267,19 +266,19 @@
   </div>
 
   <div class="continent-grid">
-    <div class="continent-card c-sortalde">
+    <div class="accent-card framed continent-card c-sortalde">
       <div class="continent-direction">East across Hafra</div>
       <div class="continent-name">Sortalde</div>
       <div class="continent-byname"><i>Tao Hua Yuan</i> in its own tongue · The petal-archipelago</div>
       <div class="continent-desc">A seven-petal archipelago east of Talan, separated by stormy outer waters. Six ancestral petals plus the central <b>Concord seat at Heting</b>. <b>No walking gods</b> — Sortalde's clerical work runs entirely through Layer-3 dynasty-spirits, ancestor-judges, and place-gods. The crossing is hard; surviving merchants typically reach only the outer petals (<b>Wandao</b>, <b>Xidao</b>, <b>Niudao</b>). Cloudships from Sortalde make landfall on the <a href="/talan/domains/zuzental/zuzental.html">Emerald Isles</a> — the Zuzental island kingdom whose outer holdings straddle the Hafra / Cloud Sea boundary — where the standing <b>Sortalde embassies</b> are sited.</div>
     </div>
-    <a class="continent-card c-empire is-link" href="/off-continent/red-empire.html">
+    <a class="accent-card framed is-link continent-card c-empire" href="/off-continent/red-empire.html">
       <div class="continent-direction">West across Hafra (or thereabouts)</div>
       <div class="continent-name">The Red Empire's Home Continent</div>
       <div class="continent-byname">Name unknown to Talanese scholars · The godless coast</div>
       <div class="continent-desc">A vast authoritarian state under the <b>Crimson Emperor</b> — godless, militarist, mortal-supremacist as cosmological position. The <b>Iron Tide</b> (navy) lands on Talan's coasts; the <b>Menagerie's Collectors</b> infiltrate Talan's cities. The home continent itself is over the sea and out of reach — no Talanese army has ever set foot on it. <i>See dedicated page.</i></div>
     </a>
-    <div class="continent-card c-unknown">
+    <div class="accent-card framed continent-card c-unknown">
       <div class="continent-direction">Other bearings</div>
       <div class="continent-name">Unnamed in Talanese Sources</div>
       <div class="continent-byname">Unknown · Unmapped · Possibly inhabited</div>

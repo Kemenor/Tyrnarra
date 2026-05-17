@@ -8,29 +8,27 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #4a6a8a; }
 
-  /* Side-by-side bloodline blocks — the page's centrepiece */
-  .bloodline-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 22px auto; max-width: 1000px; }
-  @media (max-width: 800px) { .bloodline-pair { grid-template-columns: 1fr; } }
+  /* Side-by-side bloodline blocks — the page's centrepiece. Container uses .two-column from style-b.css */
   .bloodline {
-    background: rgba(16,22,32,0.55);
-    border-left: 4px solid var(--bloodline-color, var(--domain-accent));
-    border-radius: 0 4px 4px 0;
     padding: 16px 18px;
+    border-radius: 0 4px 4px 0;
+    --card-bg: rgba(16,22,32,0.55);
   }
   .bloodline-label {
     font-family: 'Cinzel', serif;
     font-size: 0.62rem;
     letter-spacing: 0.22em;
-    color: var(--bloodline-color, var(--gold-bright));
+    color: var(--card-accent, var(--gold-bright));
     text-transform: uppercase;
     margin-bottom: 4px;
   }
   .bloodline-name {
     font-family: 'Uncial Antiqua', cursive;
-    color: var(--bloodline-color, var(--gold-bright));
+    color: var(--card-accent, var(--gold-bright));
     font-size: 1.35rem;
     margin-bottom: 8px;
   }
@@ -42,8 +40,8 @@
     margin-bottom: 10px;
   }
   .bloodline p { margin: 8px 0; font-size: 0.93rem; line-height: 1.65; }
-  .bloodline-elf   { --bloodline-color: #8aa0c8; }
-  .bloodline-human { --bloodline-color: #c8a060; }
+  .bloodline-elf   { --card-accent: #8aa0c8; }
+  .bloodline-human { --card-accent: #c8a060; }
 
   /* Borderlands compass */
   .borders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
@@ -194,9 +192,9 @@
     <p>Authority in the Kingdom is held by two ruling bloodlines — <b>elven houses</b> and <b>human houses</b> — by a constitutional arrangement so old that no surviving chronicle records its origin. The arrangement holds because the two bloodlines operate on incompatible timescales, and the Kingdom has discovered, expensively and over generations, that it needs both.</p>
   </div>
 
-  <div class="bloodline-pair">
+  <div class="two-column">
 
-    <div class="bloodline bloodline-elf">
+    <div class="accent-card bloodline bloodline-elf">
       <div class="bloodline-label">The Long Horizon</div>
       <div class="bloodline-name">The Elven Houses</div>
       <div class="bloodline-tagline">Politically motivated and long-planning.</div>
@@ -205,7 +203,7 @@
       <p>The elven failure mode is <b>inertia</b>: a strategy that no longer fits its moment continued because the person holding it has too much sunk patience to revise. Human houses sometimes exploit this; the Kingdom's worst stagnations have all been elven-line driven.</p>
     </div>
 
-    <div class="bloodline bloodline-human">
+    <div class="accent-card bloodline bloodline-human">
       <div class="bloodline-label">The Short Horizon</div>
       <div class="bloodline-name">The Human Houses</div>
       <div class="bloodline-tagline">Politically motivated and short-planning.</div>
@@ -288,23 +286,6 @@
   <div class="footer">TYRNARRA · TALAN · ZUZENTAL · THOUSAND KINGDOM</div>
 
 </div>
-
-<script>
-function toggleEraLegend(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '◈ &nbsp; Hide' : btn.getAttribute('data-original');
-}
-function toggleEraSecret(e, btn) {
-  e.stopPropagation();
-  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
-  var content = btn.nextElementSibling;
-  var revealed = content.classList.toggle('revealed');
-  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
-}
-</script>
 
 </body>
 </html>
