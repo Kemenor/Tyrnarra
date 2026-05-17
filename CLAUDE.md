@@ -61,9 +61,13 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     style-b.css                        ← Style B base — used by every page under /talan/
 
   lore/                                ← worldbuilding canon (NOT published)
-    world-notes.md                     ← authoritative canon
+    cosmology.md                       ← how the world works — Wellspring, planar layers, magic, magitech, calendar
+    gods.md                            ← who the gods are — the Thirteen, non-bound gods, city-states, cleric domains
+    secret-history.md                  ← what really happened — Crimson Rain, Storveldi Denbora, Elden, Wardstones, Nine
     geography.md                       ← domain etymologies + sub-regions
     factions.md                        ← faction taxonomy + entries
+    cultures.md                        ← peoples, traditions, politics, craft
+    bestiary.md                        ← playable ancestries + otherworldly beings
     glossary.md                        ← coined names + etymologies
     timeline.md                        ← eras + dates
 
@@ -162,12 +166,16 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 | Topic | File |
 |---|---|
-| Cosmology, gods, magic, divine law, ancient races, calendar | `lore/world-notes.md` |
+| How the world works — Wellspring, belief mechanic, planar layers, magic schools, Magitech, Gods' Law mechanics, calendar | `lore/cosmology.md` |
+| Who the gods are — the Thirteen, named non-bound gods, gods' city-states, Council, cleric domains | `lore/gods.md` |
+| What really happened — Crimson Rain, Cronus's secret, Storveldi Denbora, Elden / Corrupted God, Wardstones, Nine Generals, Tani & Araphel deep-dives | `lore/secret-history.md` |
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography.md` |
 | Factions, guilds, churches, organisations | `lore/factions.md` |
+| Peoples, traditions, politics, craft, warfare | `lore/cultures.md` |
+| Playable ancestries (PF2e), heritages, otherworldly beings (virtue-demons, sin-devils, etc.) | `lore/bestiary.md` |
 | New coined names + etymologies | `lore/glossary.md` (always — see naming rule) |
 | Eras, historical events, dates | `lore/timeline.md` |
-| Something entirely new that doesn't fit above | new file in `lore/` (e.g. `lore/bestiary.md`, `lore/spells.md`) |
+| Something entirely new that doesn't fit above | new file in `lore/` (e.g. `lore/spells.md`) |
 
 When coining new names, always record the source language, literal meaning, and drift step in `glossary.md` *before* using the name elsewhere — the glossary is the source of truth for derivation.
 

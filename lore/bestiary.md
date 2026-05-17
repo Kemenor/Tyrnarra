@@ -1,6 +1,6 @@
 # Bestiary — Ancestries, Heritages, & Otherworldly Beings
 
-A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. **The mechanical rules are Pathfinder 2e** (Remaster) — this file does not duplicate PF2e crunch. What it captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `world-notes.md`, `geography.md`, `factions.md`, and `cultures.md`.
+A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. **The mechanical rules are Pathfinder 2e** (Remaster) — this file does not duplicate PF2e crunch. What it captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography.md`, `factions.md`, and `cultures.md`.
 
 > **Status note (2026-05-17):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. **Base ancestry rework completed 2026-05-16** — roster reconciled against the 44 standard PF2e remaster ancestries (Gnoll→Kholo and Grippli→Tripkee renames applied; 8 new ancestries added: Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). **Tian Xia placement pass completed 2026-05-17** — the 6 Tian Xia ancestries placed on **Sortalde**, the Eastern petal-continent (see `geography.md`); Hungerseed heritage resolved as half-Oni-of-Lingdao. **Dragonkin removed 2026-05-17** — D&D 5e migration relic, no narrative footprint worth keeping. Retained outside the standard 44 as Tyrnarra-canon additions: Dragons, Slimes, Rabbitfolk.
 
@@ -46,7 +46,7 @@ Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hu
 
 The Golden Empire's attempt to recreate them (1325 MR scholarly project) produced **Automatons** instead — capable, but not the same thing.
 
-> The popular misconception that Androids were "built by the Storveldi Denbora" is a folk-myth artefact of the same conflation that makes mortals think the Storveldi Denbora were the Elden (see `world-notes.md`). Androids are Elden work, not Storveldi Denbora work.
+> The popular misconception that Androids were "built by the Storveldi Denbora" is a folk-myth artefact of the same conflation that makes mortals think the Storveldi Denbora were the Elden (see `secret-history.md`). Androids are Elden work, not Storveldi Denbora work.
 
 ### Athamaru
 **Seal-folk of the Floating Isles and the Hafra coast.** Aquatic by anatomy and amphibious by habit; their pods range the spray-zone islets of **Floteyn (Water / Shuun)** and the saltwater shorelines of Hafra. Common in Floteyn; uncommon along Hafra coasts; rare in the freshwater interior. Cultural relationship with the Strix-and-Tripkee island life is generally cooperative — the three ancestries have lived in adjacent ecological niches long enough to have settled the boundaries.
@@ -58,7 +58,7 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 **Animals magically uplifted to sapience.** No native population, no cultural homeland — each Awakened Animal is its own story. **Rare everywhere.** Origins on Talan typically trace to one of three sources: (1) a druid or primal-school caster performing the awakening intentionally, most often in **Brauogi or Floteyn**; (2) ambient Komo-flame-touch in **Sumendar**, where ash-fall and ember-storm regions occasionally produce unintended awakenings in their fauna; (3) Feyworld leakage at the edges of **Nashavel** or in pockets of Vesuna's chaos-touched wilderness. The Adventurers' Guild treats Awakened Animals as full members of any party they join; mortal kingdoms vary widely in their legal recognition.
 
 ### Azarketi
-**Descendants of the Storveldi Denbora** — the mortal civilisation whose ascended ruling class killed Tani and kicked off the Week of Crimson Rain (see `world-notes.md` — *The Storveldi Denbora — The Real History*). Specifically, the Azarketi descend from the experimented-upon population of the Storveldi Denbora who survived the divine retaliation that obliterated their homeland.
+**Descendants of the Storveldi Denbora** — the mortal civilisation whose ascended ruling class killed Tani and kicked off the Week of Crimson Rain (see `secret-history.md` — *The Storveldi Denbora — The Real History*). Specifically, the Azarketi descend from the experimented-upon population of the Storveldi Denbora who survived the divine retaliation that obliterated their homeland.
 
 **Inherited folklore:** Many Azarketi today still claim **Elden blood**. This is the original Storveldi Denbora lie, transmitted forward across millennia. The Storveldi Denbora had no Elden ancestry — they simply built their capital atop Elden ruins and styled themselves heirs to the Elden for prestige. The Azarketi inherited the claim with the culture; most who repeat it today do not know they are perpetuating a falsehood that is two-and-a-half millennia old.
 
@@ -80,7 +80,7 @@ Rare elsewhere. The two populations are aware of each other but do not intermarr
 Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding the Basogur Jungle interior; rare elsewhere.
 
 ### Dragonet
-**Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from the alien Dragons** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `world-notes.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
+**Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from the alien Dragons** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `gods.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
 
 ### Dragons
 **Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — Tyrnarra's Dragons are a unique alien lineage, distinct from PF2e's *Dragonet* ancestry which represents native Zaharsuge-line wyrmkin).
@@ -112,7 +112,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 **Remnants of a civilisation that sought refuge in the region of Darkness** and found it. **Common in Myrkono**, especially Myrria. Uncommon elsewhere. Many fetchlings serve Araphel directly — including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`).
 
 ### Fleshwarp
-**Native to the Blackened Lands** — the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `world-notes.md` — *The Blackened Lands* — and `geography.md` — Lioaru → Lost Kingdom). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
+**Native to the Blackened Lands** — the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `secret-history.md` — *The Blackened Lands* — and `geography.md` — Lioaru → Lost Kingdom). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
 
 **Two distinct fleshwarp populations exist on Talan:**
 1. **Natural-born fleshwarps of the Blackened Lands** — children of the cursed ground. They are mortal beings shaped by where they were born or where they spent enough time. This is the canonical PF2e ancestry.
@@ -155,10 +155,10 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 ### Kitsune
 **Known as the Divine Envoys.** Rare across Talan generally — but **concentrated in Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
 
-Fisaya herself is depicted as a female kitsune with multicolour fur (see `world-notes.md` — the Thirteen). Kitsune communities on the Wind side of Talan therefore feel a doctrinal pull toward Vindul, but the actual demographic centre of kitsune life remains in Emarrea (Commerce).
+Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md` — the Thirteen). Kitsune communities on the Wind side of Talan therefore feel a doctrinal pull toward Vindul, but the actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
 ### Kobold
-**Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity — Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `world-notes.md`).
+**Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity — Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `gods.md`).
 
 ### Leshy
 Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn). Can be **created through ritual** or naturally reproduce. The two-domain spread reflects the fact that Leshy are mediators between the soil and the water — they are creatures of both.
@@ -170,7 +170,7 @@ Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn)
 **Aquatic.** Common in **Floteyn (Water / Shuun)** waters and **Hafra** coastal regions; a small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty). Rare in any landlocked region. Merfolk-Athamaru relations are generally cordial in shared waters, though merfolk treat their saltwater claim as senior.
 
 ### Minotaur
-**Dominant in Brauogi (Earth / Sarrum)** alongside Goblins and Hobgoblins — sharing the domain as Sarrum's third major ancestry. **Sarrum himself is depicted as a Minotaur** (see `world-notes.md` — per-god sheet); Talan's Minotaurs are his cultural cousins. Disposition: immovable, patient, slow to act and slower to forgive. Excellent stonecutters, farmers, and contract negotiators (their patience is professional, not personal). Most kingdoms across Talan host small Minotaur trade-houses; Brauogi is simply where they are at home. The Minotaur-Goblin-Hobgoblin three-way of Brauogi politics is more cooperative than the Hunt domain's four-way Villtur dynamics — the Earth ancestries trade rather than feud.
+**Dominant in Brauogi (Earth / Sarrum)** alongside Goblins and Hobgoblins — sharing the domain as Sarrum's third major ancestry. **Sarrum himself is depicted as a Minotaur** (see `gods.md` — per-god sheet); Talan's Minotaurs are his cultural cousins. Disposition: immovable, patient, slow to act and slower to forgive. Excellent stonecutters, farmers, and contract negotiators (their patience is professional, not personal). Most kingdoms across Talan host small Minotaur trade-houses; Brauogi is simply where they are at home. The Minotaur-Goblin-Hobgoblin three-way of Brauogi politics is more cooperative than the Hunt domain's four-way Villtur dynamics — the Earth ancestries trade rather than feud.
 
 ### Nagaji
 **Dominant in Egulon (Light / Iro)**. **Strong belief in the gods. Almost zealous.** The Nagaji are Iro's most fervent worshippers — to the point that other domains sometimes find them off-putting in their certainty. Most of the public-facing clergy of Iro's church are Nagaji; their conviction is part of what powers the church's outward energy.
@@ -194,7 +194,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration. Mos
 **All dog-coded ancestries fall under the Shoony label on Talan.** Found most commonly in **Egulon (Light / Iro)** — loyal, devoted, and culturally aligned with the Nagaji-led religious life of the domain. The second dominant ancestry of Egulon.
 
 ### Skeleton
-**Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `world-notes.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
+**Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `gods.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
 
 ### Slimes
 **Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster). **Uncommon in the Darklands** — the Darklands' ambient corruption pressure suits slime adaptability. **Rare everywhere else.** The pf2e slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
@@ -206,7 +206,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration. Mos
 **Commonly found on the Floating Isles of Shuun** alongside Tripkee, Athamaru, and Merfolk. Their natural flight makes the islet-archipelago life of Floteyn one of the few comfortable habitats for them; elsewhere on Talan they are rare and often suspected by mortals who do not know them.
 
 ### Surki
-**Insectoid sapients of the deep places.** **Uncommon in the upper Darklands** — they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals — see `world-notes.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
+**Insectoid sapients of the deep places.** **Uncommon in the upper Darklands** — they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals — see `secret-history.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
 
 ### Tengu
 **Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks — the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul.
@@ -220,7 +220,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration. Mos
 **Common in the Jungle of Chaos** — the Basogur Jungle that straddles Nashavel and Ehizahar. The Vanara culture is one of the few that straddles two domains comfortably; the Jungle is their home and the politics of the two domains around it are something they navigate rather than belong to.
 
 ### Vishkanya
-**Most common in Lautara (Commerce / Jianna).** **Keeping community** is a core Vishkanya value, and **following creative pursuit** is the second. They are over-represented in artisan-merchant guilds and in the more refined corners of Lautara's market culture. Jianna herself is depicted as a vishkanya (see `world-notes.md`).
+**Most common in Lautara (Commerce / Jianna).** **Keeping community** is a core Vishkanya value, and **following creative pursuit** is the second. They are over-represented in artisan-merchant guilds and in the more refined corners of Lautara's market culture. Jianna herself is depicted as a vishkanya (see `gods.md`).
 
 ---
 
@@ -307,7 +307,7 @@ Nephilim is therefore the most cosmologically variable heritage on Talan. Two Ne
 | **Undine** | Primordial Water | Shuun (Water) |
 | **Suli** | Mixed elemental (general geniekin) | None specific |
 
-These heritages carry the **spark of the Elemental Plane** itself (Layer 1 of the planar structure — see `world-notes.md`). The Primordial Six who created Prelife include the four bound elemental gods, so each elemental-heritage individual has a doctrinal affinity with their corresponding god — but the lineage is properly *elemental-plane* lineage, not divine blood. Communities of these heritages cluster around their corresponding god's domain by cultural gravity, not by birth.
+These heritages carry the **spark of the Elemental Plane** itself (Layer 1 of the planar structure — see `cosmology.md`). The Primordial Six who created Prelife include the four bound elemental gods, so each elemental-heritage individual has a doctrinal affinity with their corresponding god — but the lineage is properly *elemental-plane* lineage, not divine blood. Communities of these heritages cluster around their corresponding god's domain by cultural gravity, not by birth.
 
 **Suli** is the exception: generic geniekin without a single-element specialisation, suiting cross-elemental or mixed-blood lines. No specific bound-god affinity; tends to settle where they are welcome.
 
@@ -348,7 +348,7 @@ After the remaster reshuffle, four of the bound thirteen have no exclusive herit
 - **Iro** (Light) — was Aasimar; now covered by Nephilim (celestial). No exclusive heritage.
 - **Enki** (Knowledge) — was Suli (pre-remaster); now Suli is generic geniekin. **Enki has no remaster heritage.** Knowledge isn't a body-borne trait in the new system; Enki-touched mortals manifest scholarly aptitude rather than physical change.
 - **Jianna** (Commerce) — never had one. Jianna's blessing is accumulated good fortune in trade, not in body.
-- **Cronus** (Freedom) — never had one. Cronus's nature does not lend itself to bloodline transmission (see `world-notes.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by choice, not blood.
+- **Cronus** (Freedom) — never had one. Cronus's nature does not lend itself to bloodline transmission (see `secret-history.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by choice, not blood.
 
 ---
 
@@ -376,7 +376,7 @@ This is why the demons are not random or symmetric: they are exactly as numerous
 | **Wittiness** | Buffoonery | Boorishness |
 
 **Named demons so far:**
-- **Muiral the Misshapen** — Modesty-line demon (Shamelessness / Shyness pair). The only individually named virtue demon in canon as of this writing; the rest are described by their virtue line. Muiral's name appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. **Grants the Abomination domain** — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the *misshapen*. See `world-notes.md` — *Domains Outside the Thirteen — Source Mapping*.
+- **Muiral the Misshapen** — Modesty-line demon (Shamelessness / Shyness pair). The only individually named virtue demon in canon as of this writing; the rest are described by their virtue line. Muiral's name appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. **Grants the Abomination domain** — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the *misshapen*. See `gods.md` — *Domains Outside the Thirteen — Source Mapping*.
 
 **Implications:**
 - Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones. The Cowardice-demon and the Rashness-demon both pervert Courage — and both have reasons to hate each other.
@@ -412,11 +412,11 @@ The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unli
 
 ## Cross-References
 
-- **Storveldi Denbora, Blackened Lands, integration procedure, Betibizi (Undeath god + integration-procedure holder)** — `world-notes.md`
-- **Named Non-Bound Gods** (Bikiargi, Zaharsuge, Epairima, Betibizi) and **Domains Outside the Thirteen — Source Mapping** (14-domain table assigning Abomination/Plague/Undeath/etc. to their granters) — `world-notes.md`
+- **Storveldi Denbora, Blackened Lands, integration procedure** — `secret-history.md`; **Betibizi (Undeath god + integration-procedure holder)** — `gods.md` — *Named Non-Bound Gods*
+- **Named Non-Bound Gods** (Bikiargi, Zaharsuge, Epairima, Betibizi) and **Domains Outside the Thirteen — Source Mapping** (14-domain table assigning Abomination/Plague/Undeath/etc. to their granters) — `gods.md`
 - **Lost Kingdom (Blackened Lands geography)** — `geography.md` → Lioaru
 - **Dragon's Reach (dragon capital)** — `geography.md` → Sumendar
-- **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)** — `world-notes.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
+- **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)** — `gods.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
 - **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)** — `geography.md` → Other Continents → Sortalde; `glossary.md` for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
 - **Kitsune culture, Heartcourt, Catjomin Sake** — `cultures.md` (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
 - **Fenurran ancestries detail** — `cultures.md` (the four tribes are human-stock; bestiary entries here treat the species, not the culture)

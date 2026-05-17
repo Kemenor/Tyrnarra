@@ -95,7 +95,7 @@ The Guild also runs the world's most reliable courier network.
   - *Manifestation of the Review Board* — at will conjures an illusory spectral panel of silent judges.
   - *Ethics Smite* — his disappointed gaze is morale-devastating; veterans flinch.
 - **Recursive irony:** every story told about him strengthens him, which generates new stories. He has never tried to inspire fear. He is, by his own assessment, simply *being proper*.
-- **Demonstrates the canon mechanic:** belief generates real divine power for mortal figures (`world-notes.md` — The Wellspring & Belief). Lavisburg is the cleanest contemporary case study.
+- **Demonstrates the canon mechanic:** belief generates real divine power for mortal figures (`cosmology.md` — The Wellspring & Belief). Lavisburg is the cleanest contemporary case study.
 
 **Guild Sovereign Seraphel Duskbane** — Fetchling, current Guild Sovereign of **Myrria's Godshall**, and thus the highest-ranking Guild leader across Myrkono (Shadow Steppes, Itzasoa, Ilun Tasun, Myrria).
 
@@ -152,11 +152,11 @@ The Guild's seat in Myrkono and the regional command for all Guild operations ac
 
 **Current state:** Frequency of emergence events had dropped dramatically over four centuries — but **eight years ago (~2524 MR) the Nine Dungeons erupted**, disgorging the first great corruption armies of the modern age. The kingdoms broke that first wave; the dungeons' main entrances are now sealed. The smaller leakage continues. The Adventurers' Guild maintains a standing research operation to understand and predict emergence patterns. Some researchers believe the Corrupted God is healing; others believe the eruption was the binding's first major fracture.
 
-**The Nine Generals of Corruption (above the leakage):** Nine corruption-lords serve as the Blightfather's hands in the mortal world, each commanding a dungeon and a legion. Unlike their master, the Nine can be slain. **One has fallen — the Ash-Binder.** Eight remain: the Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Full descriptions in `world-notes.md`. The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in `geography.md`; the other seven dungeons' precise locations remain TBD.
+**The Nine Generals of Corruption (above the leakage):** Nine corruption-lords serve as the Blightfather's hands in the mortal world, each commanding a dungeon and a legion. Unlike their master, the Nine can be slain. **One has fallen — the Ash-Binder.** Eight remain: the Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Full descriptions in `secret-history.md`. The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in `geography.md`; the other seven dungeons' precise locations remain TBD.
 
-**The Wardstones (counter-pressure):** Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono (see `world-notes.md` and `geography.md`). While they hold, the Blightfather stays bound. The fight against the Nine is also the fight to keep the Wardstones safe — this is the **War of Seals**.
+**The Wardstones (counter-pressure):** Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono (see `secret-history.md` and `geography.md`). While they hold, the Blightfather stays bound. The fight against the Nine is also the fight to keep the Wardstones safe — this is the **War of Seals**.
 
-**Note:** The Corrupted God is not bound by the Gods' Law — it predates it and was never party to it. The chains of the Wardstones are a separate, mortal-and-Araphel-led containment. See `world-notes.md` for full cosmology.
+**Note:** The Corrupted God is not bound by the Gods' Law — it predates it and was never party to it. The chains of the Wardstones are a separate, mortal-and-Araphel-led containment. See `secret-history.md` for the full account.
 
 ---
 
@@ -307,7 +307,7 @@ Strict caste structure, but the castes are **fluid** — rise and fall are const
 - **The Apex Line** — singular reforged predators built as living siege weapons. Unleashed for annihilation, not deployment.
 - **Ashborn** — Fodder or Broken reforged by necromancy. Stitched living-and-dead engines of endurance, sustained by arcane binding.
 - **Harvested** — reanimated enemy corpses stripped of identity, fielded en masse.
-- **Fleshwarps** — survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two are alike. Deployed as shock troops, terror weapons, or laborers in lethal environments. Considered both failure *and* asset. **These are Menagerie-made fleshwarps, distinct from the natural-born Fleshwarp ancestry** that arises in the Blackened Lands of Lioaru (see `world-notes.md`). Two different origins, similar end-product — and Menagerie Curators are believed to have studied the Blackened Lands fleshwarp population for technique, though the Empire has never confirmed it.
+- **Fleshwarps** — survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two are alike. Deployed as shock troops, terror weapons, or laborers in lethal environments. Considered both failure *and* asset. **These are Menagerie-made fleshwarps, distinct from the natural-born Fleshwarp ancestry** that arises in the Blackened Lands of Lioaru (see `secret-history.md`). Two different origins, similar end-product — and Menagerie Curators are believed to have studied the Blackened Lands fleshwarp population for technique, though the Empire has never confirmed it.
 
 **Symbol:** Crimson serpent devouring its own tail, set inside a cage of black iron bars.
 
@@ -417,6 +417,6 @@ Not organised institutions — patterns of lawless work common enough on Talan t
 
 **Response:** The Order of Steam fields its own Magitech-armed security on its licensed lines. Smaller operators rely on Adventurers' Guild contracts. Train-pirate cells that grow large enough to threaten scheduled service tend to attract Guild high-rank attention and disappear within a season; most cells stay small enough to evade that threshold.
 
-**See also:** `world-notes.md` — *Technology — Magitech and Infrastructure → Train Pirates and other Magitrain hazards*; the **Conductor's Station** pocket-dimension hazard is a separate non-bandit Magitrain phenomenon documented in the same section.
+**See also:** `cosmology.md` — *Technology — Magitech and Infrastructure → Train Pirates and other Magitrain hazards*; the **Conductor's Station** pocket-dimension hazard is a separate non-bandit Magitrain phenomenon documented in the same section.
 
 ---
