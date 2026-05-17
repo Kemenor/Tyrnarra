@@ -2,7 +2,7 @@
 
 A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. **The mechanical rules are Pathfinder 2e** (Remaster) — this file does not duplicate PF2e crunch. What it captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `world-notes.md`, `geography.md`, `factions.md`, and `cultures.md`.
 
-> **Status note (2026-05-17):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. **Base ancestry rework completed 2026-05-16** — roster reconciled against the 44 standard PF2e remaster ancestries (Gnoll→Kholo and Grippli→Tripkee renames applied; 8 new ancestries added: Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). **Tian Xia placement pass completed 2026-05-17** — the 6 Tian Xia ancestries placed on **Sortalde**, the Eastern petal-continent (see `geography.md`); Hungerseed heritage resolved as half-Oni-of-Lingdao. Retained outside the standard 44 as Tyrnarra-canon additions: Dragons, Dragonkin, Slimes, Rabbitfolk.
+> **Status note (2026-05-17):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. **Base ancestry rework completed 2026-05-16** — roster reconciled against the 44 standard PF2e remaster ancestries (Gnoll→Kholo and Grippli→Tripkee renames applied; 8 new ancestries added: Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). **Tian Xia placement pass completed 2026-05-17** — the 6 Tian Xia ancestries placed on **Sortalde**, the Eastern petal-continent (see `geography.md`); Hungerseed heritage resolved as half-Oni-of-Lingdao. **Dragonkin removed 2026-05-17** — D&D 5e migration relic, no narrative footprint worth keeping. Retained outside the standard 44 as Tyrnarra-canon additions: Dragons, Slimes, Rabbitfolk.
 
 ---
 
@@ -17,7 +17,7 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
 | **Water** · Floteyn | Shuun | Strix · Tripkee · Athamaru · Merfolk | Leshy |
 | **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
-| **Wind** · Vindul | Fisaya | Kashrishi · Tengu | Jotunborn (Baerfrost) · Dragonkin (Air Temple order) |
+| **Wind** · Vindul | Fisaya | Kashrishi · Tengu | Jotunborn (Baerfrost) |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi | — |
 | **Law** · Zuzental | Forseti | Elf · Human | — |
 | **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk · Centaur (Lands of Villtur) | Goloma |
@@ -28,7 +28,7 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 
 **Uncommon everywhere:** Rabbitfolk · Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
 
-**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Dragonkin (one order in Fisaya's Air Temple in Vindul) · Android · Azarketi · Awakened Animal (no domain concentration).
+**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
 **Sortalde-native (Eastern continent — see `geography.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries — The Six Petals* below.
 
@@ -36,7 +36,7 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 
 ## Ancestries — Alphabetical
 
-> **Post-remaster roster reconciled (2026-05-16) + Tian Xia placement pass complete (2026-05-17).** All 44 standard PF2e remaster ancestries placed. Gnoll → **Kholo** and Grippli → **Tripkee** renamed. Eight new ancestries added in the first pass (Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) now placed on **Sortalde** (see `geography.md`), each on its own petal of the seven-petal Concord archipelago. Hungerseed heritage resolved (Oni are bound spirits of Lingdao). Retained beyond the standard 44 as Tyrnarra-canon additions: Dragons, Dragonkin, Slimes, Rabbitfolk.
+> **Post-remaster roster reconciled (2026-05-16) + Tian Xia placement pass complete (2026-05-17).** All 44 standard PF2e remaster ancestries placed. Gnoll → **Kholo** and Grippli → **Tripkee** renamed. Eight new ancestries added in the first pass (Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) now placed on **Sortalde** (see `geography.md`), each on its own petal of the seven-petal Concord archipelago. Hungerseed heritage resolved (Oni are bound spirits of Lingdao). Dragonkin removed 2026-05-17 (D&D 5e migration relic). Retained beyond the standard 44 as Tyrnarra-canon additions: Dragons, Slimes, Rabbitfolk.
 
 ### Anadi
 Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hunt domain (Ehizahar); **rare** everywhere else. Talan's most famous Anadi is **Matron Charna**, proprietor of the Spider's Silk Inn at Crossroads (see `factions.md`).
@@ -80,12 +80,7 @@ Rare elsewhere. The two populations are aware of each other but do not intermarr
 Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding the Basogur Jungle interior; rare elsewhere.
 
 ### Dragonet
-**Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from both the alien Dragons and from Dragonkin** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `world-notes.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
-
-### Dragonkin
-**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — distinct from both Dragons and Dragonet).
-
-**Descendants of an unholy creation of one of the gods later expelled by the Gods' Law.** Which god is not on record — the surviving Dragonkin lineages have outlived the memory of their progenitor, and the bound thirteen do not discuss the gods who were banished. **Rare everywhere.** The most coherent surviving population is the **single order at Fisaya's Air Temple in Vindul**, who serve as wind-priests and storm-flyers. Note: despite the name, **Dragonkin are not related to Dragons** (the alien race) — the linguistic overlap is an unfortunate Common-tongue accident.
+**Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from the alien Dragons** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `world-notes.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
 
 ### Dragons
 **Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — Tyrnarra's Dragons are a unique alien lineage, distinct from PF2e's *Dragonet* ancestry which represents native Zaharsuge-line wyrmkin).
