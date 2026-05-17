@@ -8,7 +8,17 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
-<style>:root { --domain-accent: #c8900a; }</style>
+<style>
+  :root { --domain-accent: #c8900a; }
+
+  .hazard-card { background: rgba(28,20,10,0.55); border-left: 4px solid var(--hazard-color, var(--gold)); padding: 14px 18px; margin: 14px auto; max-width: 1000px; border-radius: 4px; }
+  .hazard-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--hazard-color, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
+  .hazard-byline { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 8px; }
+  .hazard-body { font-size: 0.93rem; color: var(--text); }
+  .hazard-body p { margin: 8px 0; }
+  .hazard-pirate { --hazard-color: #c87830; }
+  .hazard-conductor { --hazard-color: #8a6ac8; }
+</style>
 </head>
 <body data-page="factions">
 
@@ -72,6 +82,43 @@
 
   <div class="stub-note">
     Promote individual god churches to their own pages here when their churches earn their own content beyond what fits on <code>grand-gods.html</code>.
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading" id="bandits-and-hazards">Bandit Categories &amp; Continental Hazards</h2>
+  <div class="prose">
+    <p>Not organised institutions — patterns of lawless work and inhabited phenomena common enough on Talan to be recognised by type. Listed here for reference and cross-link.</p>
+  </div>
+
+  <div class="hazard-card hazard-pirate" id="train-pirates">
+    <div class="hazard-name">Train Pirates</div>
+    <div class="hazard-byline">Bandit category · Active on both <a href="/talan/talan.html#continental-rail-network">continental networks</a></div>
+    <div class="hazard-body">
+      <p><b>Character.</b> Contemporary banditry hitting <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Magitrains</a> at the <i>slow stretches</i> — climbs, junctions, station approaches, the places where Arcanotech acceleration drops to walking pace. <i>Langsam auf Land, schnell auf Schiene</i> — "slow on land, fast on rail" — is the train-piracy axiom and the only line of Old Dwarvish most train conductors learn.</p>
+      <p><b>Composition.</b> Most crews are ordinary mortal banditry — armed, mounted, opportunistic, in for the cargo. A minority are politically motivated:</p>
+      <ul>
+        <li><b>Cronus-aligned freebooters</b> claiming the rails as <i>commons</i> against the Order of Steam's licensing model. Small, ideological, surprisingly disciplined when on a run.</li>
+        <li><b>Anti-industrial ideological strikes</b> from druid-adjacent or primal-aligned factions. Generally non-lethal toward passengers; specifically hostile to the rail itself.</li>
+        <li><b>Inter-kingdom proxy violence</b> dressed as banditry. A neighbouring crown wanting to bleed a rival's freight without owning the act.</li>
+      </ul>
+      <p><b>Response.</b> The Order of Steam fields its own Magitech-armed security on its licensed lines. Smaller operators rely on <a href="/talan/factions/adventurers-guild.html">Adventurers' Guild</a> contracts. Train-pirate cells that grow large enough to threaten scheduled service tend to attract Guild high-rank attention and disappear within a season; most cells stay small enough to evade that threshold.</p>
+    </div>
+  </div>
+
+  <div class="hazard-card hazard-conductor" id="conductors-station">
+    <div class="hazard-name">The Conductor's Station</div>
+    <div class="hazard-byline">Pocket-dimension hazard · Rare · Haunts both networks equally</div>
+    <div class="hazard-body">
+      <p><b>What it is.</b> A pocket-dimension hazard of the Magitrain network. Trains very occasionally <i>derail into</i> a starry-purple void in which the <b>Lost and Found</b> of the rails drifts — every dropped pen, every abandoned suitcase, every orphaned train car ever lost on the network. The five-eyed <b>Conductor</b> presides.</p>
+      <p><b>The opening line is always the same.</b> <i>"Tickets please!"</i> He is <b>not</b> asking about boarding tickets. He is asking for <i>a memory, a riddle's answer, or a possession of personal significance.</i> Get it right and the train re-enters ordinary tunnel-darkness, on the same schedule, in the same kilometre it left. Get it wrong and you become part of the Lost and Found.</p>
+      <p><b>Haunts both networks equally.</b> No Northern or Southern bias; the Lost and Found does not appear to distinguish between the two. Train crews in both halves keep the same warding rituals and tell the same stories. New conductors are taught the Conductor's preferred currencies (memories of a first love, the answer to <i>"what is heavier than itself?"</i>, a coin minted in the year of one's birth) on their first overnight run.</p>
+      <p><b>Rarity.</b> Confirmed events average less than one per network per year. Unconfirmed events — late arrivals where the crew swore something happened but no Lost-and-Found token can be produced — are commoner and harder to credit. <i>Most stories about the Conductor are not true. Some are. No one is good at telling them apart.</i></p>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:18px;">
+    <p><i>Other bandit categories</i> (highway raiders, river pirates of Midarra including the Twin Cities, ruin-strippers, slaver bands operating in jurisdictions where the trade is legal) exist in lore and may earn entries here as content develops.</p>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · FACTIONS</div>
