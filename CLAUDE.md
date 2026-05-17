@@ -154,6 +154,8 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 **Published HTML is lore documentation, not a campaign starter.** Pages should read as reference material — what exists in the world, why, how, and who. **Do not add dedicated "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material belongs in private GM notes, not on the published site. World-flavour expandables — folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation — are different and welcome: they characterise *the world*, not *what to do in it*.
 
+**Surface phase boundaries for review — don't chain them.** On multi-step work (e.g. publishing several pages, restructuring multiple docs, a coherent lore restructure across several files), pause at the seam between phases and surface what landed + what's next, even when given a broad "work through it" instruction. A phase boundary is a review checkpoint, not a clarifying question — these pauses are wanted even under "work without stopping for clarifying questions" framing. Survey work and reading source files is fine within a phase; *writes* are what trigger the boundary.
+
 **Where new content goes:**
 
 | Topic | File |
