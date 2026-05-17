@@ -30,7 +30,9 @@
     ]},
     { slug: 'bestiary',    label: 'Bestiary &amp; Ancestries', href: '/talan/bestiary.html', children: [] },
     { slug: 'historical',  label: 'Historical · The Fallen',   href: '/talan/historical/historical.html', children: [
-      { slug: 'golden-empire', label: 'The Golden Empire', href: '/talan/historical/golden-empire.html' }
+      { slug: 'golden-empire',     label: 'The Golden Empire',     href: '/talan/historical/golden-empire.html' },
+      { slug: 'storveldi-denbora', label: 'The Storveldi Denbora', href: '/talan/historical/storveldi-denbora.html' },
+      { slug: 'elden',             label: 'The Elden',             href: '/talan/historical/elden.html' }
     ]}
   ];
 
