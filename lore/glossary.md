@@ -84,7 +84,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 
 **Lautara (Commerce):**
 - **Azkataria** — Basque *azoka* (market, fair) + *-tar(ra)* (people-of, native-of) → *azokataria* → vowel-loss to **Azkataria** "market-folk / people of the market." Sub-region of Lautara containing Merkavar (Jianna's city-state, on a lake within Azkataria's interior). The region named after the people who live around the great market.
-- **Twin Suns** — modern English, named for hilltop astronomical phenomenon
+- **Twin Suns** — modern English. Coastal sub-region of Lautara. Name records a phenomenon native to the sub-region; the specific phenomenon that earned the "twin suns" framing is an open thread (see `docs/open-threads.md`).
 - **Emarrea** — Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom — fox-colour and gentle-host disposition encoded in the name. Forested eastern highlands of Lautara. Capital: Biozuri.
 - **Biozuri** — Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
 - **Soul Tree** — modern English, cosmologically significant island
@@ -116,6 +116,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Rika Tikur** — Icelandic *ríkur* (rich, wealthy) + *tígulegur* (splendid, stately) → **Rika Tikur** "Rich and Splendid." The compound is imperfect — less a clean Icelandic phrase than a boastful self-applied brag that stuck. An independent coastal merchant-port west of Millhaven, in Brauogi, naming itself for the wealth it claims.
 - **Dreaming Cape** — English-style
 - **The Earth Realm** — English-style
+- **The Wildreach** — modern English compound. Unclaimed border territory shared between Brauogi (Earth) and Ezkudon (Knowledge); the wild-touched live here. Distinct from Sumendar's *No Man's Land*, the unclaimed Komo-city-state territory.
 
 **Ezkudon (Knowledge):**
 - **Jakinduria** — Basque *jakinduria* (wisdom/knowledge); real word, no drift required
@@ -318,7 +319,8 @@ Full canon in `gods.md` — *Named Non-Bound Gods*.
 - **Epairima** — Basque *epai* (judgment, sentence) + *arima* (soul) → *epai-arima* → assimilated to **Epairima** "soul-judgment." Minor God; **Judge of Souls** of Dauria, the City of the Dead. Resides in **Diyu** (Layer 3, neutral). Each soul that reaches Dauria unclaimed is weighed at her court; her verdict routes the soul onward to its god, onward to the Wellspring, or — rarely — back to the layer above for a second pass.
 - **Bikiargi** — Basque *biki* (twin) + *argi* (light) → *bikiargi* "the twin-light." Major God of the **Moon**, in two persons sharing one portfolio. One twin is benevolent (calm tides, safe roads, true dreams); the other is malevolent (ill omens, hunting weather for what shouldn't be hunted, false dreams). Together they are neutral, which is why they reside in **Diyu** (Layer 3, neutral). Worshipped by sailors, navigators, witches, lovers, the Iron Tide's astronomers — anyone whose work depends on moonlight or tide.
 - **Zaharsuge** — Basque *suge* (serpent) + *zahar* (ancient) → *zahar-suge* → assimilated to **Zaharsuge** "the ancient one of serpents." Minor God of **Wyrmkin** (drakes, basilisks, primal serpents, indigenous Talan dragon-line). Predates the alien Dragons' arrival by ages — his line of indigenous wyrms was already established when the Dragon mothership crashed. Resides in **Diyu** (Layer 3, neutral). Pairs with Ehizahar (Hinka's domain) and **Hilezar** (rejected naming proposal — *not* used) as the *-zar* suffix family marking the deep-ancient stratum across multiple proper nouns.
-- **Betibizi** — Basque *betiko* (eternal/forever) + *bizi* (life, alive) → *betiko-bizi* "eternal life" → assimilated to **Betibizi**. Minor God of **Undeath**. Resides in **Abyss** (Layer 3, evil). **Self-named** at the moment of ascension — the name is a declaration, not a gift. **Origin:** a Storveldi Denbora ruling-class survivor who ascended via the **integration procedure** in the aftermath of the Week of Crimson Rain; he is the *original* holder of that procedure and the reason it persists at all. The Blackened Lands' natural-born Skeleton ancestry and ambient necromantic resonance trace spiritually back to him, though the proximate cause is the cursed ground itself. Major hook: the integration procedure thread (see `secret-history.md`) now has a canonical owner. **Sun god** — paired-mate to Bikiargi by symmetry but not yet named or detailed; open thread.
+- **Betibizi** — Basque *betiko* (eternal/forever) + *bizi* (life, alive) → *betiko-bizi* "eternal life" → assimilated to **Betibizi**. Minor God of **Undeath**. Resides in **Abyss** (Layer 3, evil). **Self-named** at the moment of ascension — the name is a declaration, not a gift. **Origin:** a Storveldi Denbora ruling-class survivor who ascended via the **integration procedure** in the aftermath of the Week of Crimson Rain; he is the *original* holder of that procedure and the reason it persists at all. The Blackened Lands' natural-born Skeleton ancestry and ambient necromantic resonance trace spiritually back to him, though the proximate cause is the cursed ground itself. Major hook: the integration procedure thread (see `secret-history.md`) now has a canonical owner.
+- **Sun god** — paired-mate to Bikiargi by symmetry; mortals have prayed to **Solyra** for as long as there have been mortals, and the same prayer-mechanism that birthed Bikiargi should plausibly have produced a sun-deity. Open thread: whether they exist as a standalone Major God, are absorbed by Iro's Light portfolio, or have dissolved back into the Wellspring (see `gods.md` — *Open thread — The Sun*).
 
 ### Pre-Crimson-Rain civilisations & their fall
 
@@ -337,18 +339,20 @@ Full bestiary entries live in `lore/bestiary.md`. Listed here are the named bein
 - **The Virtue Demons** — Plain English. The Aristotelian-pattern demon hierarchy: one demon per virtue-line extreme. See `bestiary.md` for the full virtue/excess/deficiency table.
 - **The Sin Devils** — Plain English. The seven canonical devil-lords, one per Sin (Envy, Gluttony, Greed, Lust, Pride, Sloth, Wrath). Individual names TBD.
 
-**Versatile heritage placements (post-remaster, Tyrnarra canon):**
-- Heritages are PF2e-canonical names (imported); not Tyrnarra-coined. Listed here only for the Tyrnarra-specific *source* mapping.
+**Versatile heritage placements (Tyrnarra source mapping):**
+
+Quick reference. Full prose in `bestiary.md` — *Versatile Heritages*; system-side Remaster reshuffle notes in `pf2e-notes.md`.
+
 - **Aphorite** → Forseti (Law). **Ganzi** → Vesuna (Chaos). **Beastkin** → Hinka (Hunt). **Changeling** → Araphel (Darkness). **Duskwalker** → Tani (Time) — *created not born*, manifests at death-touched sites, the **Blackened Lands** are Talan's largest Duskwalker source.
-- **Nephilim** → any god (celestial) or any demon/devil (fiendish) — the universal divine-blood / fiendish-blood heritage. Replaces and absorbs former Aasimar and Tiefling.
+- **Nephilim** → any god (celestial) or any demon/devil (fiendish) — the universal divine-blood / fiendish-blood heritage.
 - **Ifrit / Oread / Sylph / Undine** → Elemental Plane sparks (Komo / Sarrum / Fisaya / Shuun affinity by domain, not by blood). **Suli** → generic geniekin (no specific element).
-- **Ardande** → Feyworld lineage (Wood element). **Talos** → Shadowplane lineage (Metal element). Neither plane belongs to a bound god — Ardande and Talos are *planar* lineages without divine alignment.
+- **Ardande** → Feyworld lineage (Wood element). **Talos** → Shadowplane lineage (Metal element). Both are planar lineages of the Life Layer's sibling planes; neither plane belongs to a bound god.
 - **Aiuvarin** → half-elf; **Dromaar** → half-orc. Genetic, not metaphysical.
-- **Dhampir** → half-Vampire; undead-touched, **not** god-touched. Vampires are an independent lineage on Talan.
+- **Dhampir** → half-Vampire; undead-touched. Vampires are an independent lineage on Talan.
 - **Dragonblood** → alien Dragon descent (see *Dragons* ancestry).
-- **Hungerseed** → half-Oni; **TBD** pending Tian Xia ancestries pass.
-- **Reflection** → magical mishap / Wellspring blip; no parent lineage.
-- **Bound gods without heritages after remaster:** Iro (Light), Enki (Knowledge), Jianna (Commerce), Cronus (Freedom).
+- **Hungerseed** → half-Oni. Oni are bound spirits of Sortalde, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha — Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Almost all Hungerseeds are Sortalde-born; Talan-side Hungerseeds typically descend from a Sortalde émigré whose Oni heritage is one or two generations back.
+- **Reflection** → Wellspring-direct (Stillpool-born). Public framing: ritual mishap / Wellspring blip. See `cosmology.md` and `bestiary.md` for the cover-vs-truth split.
+- **Bound gods whose touch is not bloodline-borne:** Iro (Light), Enki (Knowledge), Jianna (Commerce), Cronus (Freedom).
 
 **Folklore + claims (mortal-mouth, not always true):**
 - **"Elden blood"** — the persistent Azarketi inherited claim. **Wrong.** Azarketi descend from the Storveldi Denbora, who *imitated* the Elden but were not of their lineage. The claim has been transmitted forward across millennia and is still widespread.
@@ -360,8 +364,8 @@ Full bestiary entries live in `lore/bestiary.md`. Listed here are the named bein
 
 ### Folk Names for Cosmic Things (mortal-mouth, not GM truth)
 
-- **The Maw Below** — folk title for the Corrupted God; common in mortal sermons and chronicles.
-- **The Blightfather** — folk title for the Corrupted God; same referent. Used as if it were a personal deity, which it is not (see `secret-history.md` for the truth).
+- **The Maw Below** — folk title for the Corrupted God; common in mortal sermons and chronicles. Interchangeable with *Corrupted God* and *Blightfather* in published prose; lore reference favours *Corrupted God*.
+- **The Blightfather** — folk title for the Corrupted God; same referent, mortal-mouthed as if it were a personal deity. Interchangeable with *Corrupted God* and *Maw Below* in published prose; lore reference favours *Corrupted God*.
 - **The Counting of Years** — mortal name for the post-binding calendar (MR). Mortals often credit the Corrupted God's binding as its origin, but the calendar actually pivots on the Week of Crimson Rain.
 
 ### The Binding Apparatus (post-Week of Crimson Rain cosmology)

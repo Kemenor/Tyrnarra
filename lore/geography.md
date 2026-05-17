@@ -17,7 +17,7 @@ Talan runs on **Magitrains** — common-place Arcanotech infrastructure. The con
 - **Northern Talan network** — connects the northern domains and their major cities.
 - **Southern Talan network** — connects the southern domains; Sumendar (Order of Steam manufacturing) is its industrial heart.
 
-The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **ships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight — Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** are *not* used for routine north-south travel — they're rare specialist Cloud-Sea-crossing craft, not domestic transport. Full canon in [`cosmology.md`](cosmology.md) — *Technology — Magitech and Infrastructure*.
+The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **ships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight — Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** serve the Cloud Sea crossing only — they are rare specialist craft, never deployed for domestic transport. Full canon in [`cosmology.md`](cosmology.md) — *Technology — Magitech and Infrastructure*.
 
 ---
 
@@ -30,10 +30,10 @@ The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevent
 - A sky-suspended sister-city of tethered airships and lifted islets, hanging directly above the water-city.
 Both move as one. The Twin Cities answer to no god and no kingdom — they are the seat of pirate sovereignty on Talan, the place where the Pirate Lords meet, settle disputes, and divide the seas. Modern English name.
 
-**Hafra** — the saltwater sea surrounding Talan. Sits between the continent and the Cloud Sea; at some point the saltwater transitions into cloud. No hard boundary — sailors know when they've crossed over.
+**Hafra** — the saltwater sea surrounding Talan. Sits between the continent and the Cloud Sea, with a **sharp, visible boundary** where water ends and cloud begins — a clean line on the horizon, recognisable from kilometres out.
 *Etymology: Icelandic haf (ocean, open sea) → shortened and drifted to Hafra.*
 
-**The Cloud Sea** — the vast grey-brown expanse beyond Hafra. Surrounds the known world. Traversable by cloudship.
+**The Cloud Sea** — the vast luminous white expanse beyond Hafra. Surrounds the known world. **Crossing it requires a cloudship.** The vapor will not support weight: any ordinary hull that crosses the boundary sinks fast and the crew sinks with it; a swimmer who falls in drowns the same way they would in deep water (the surrounding cloud reads as solid until they try to grip it). Cloudships — purpose-built dual-school Magitech vessels — are the only craft that cross safely. Full canon in [`cosmology.md`](cosmology.md) — *The Cloud Sea* and *Technology — Magitech and Infrastructure*.
 
 ---
 
@@ -105,7 +105,7 @@ God domains are ancient — they predate mortal civilization and carry old-world
 **Sub-regions:**
 - **Baerfrost** — the fully arctic/ice sub-region. Northern coast and ice isles.
 - **Air Monastery** — enclosed mountain enclave. Fortified monastery in the eastern mountain range, autonomous territory.
-- **Fellibylur** — (details TBD)
+- **Fellibylur** — a high lone peak in Vindul whose summit gathers weather. *Storm-Fell / Blizzard Peak.* Adjacent to Baerfrost; storm-wracked character fits Fisaya's wind-and-cold domain.
 - **Haizetsua** — the massive island to the west, part of Fisaya's domain. Mountain range through its interior. (*haize* = wind in Basque — the name echoes the domain.)
 - **Azkamour** — border territory straddling Vindul and Lautara, split roughly half-half. Capital city is in Lautara. See also Lautara.
 
@@ -126,7 +126,7 @@ God domains are ancient — they predate mortal civilization and carry old-world
 
   - **Biozuri** — the kitsune capital. *(Old-language: Basque bihotz "heart" + hiri "city" → drifted to Biozuri.)* Built around the Heartcourt's seat. **Heartplaza** is its bustling central district, where the Heartcourt holds its open festivals, petitions, and Passing of the Tails ceremonies.
   - **Kawaakari** — *the Village of Shimmering Waters.* A secluded mountain-pass resort village famous for its hot springs, the crystal-fed *Hoshigawa* (star river — its trace crystal dust makes the water sparkle even by day), Snow Princess Wine (*Yukihime-shu*) from terrace plum-and-snowberry orchards, and the signature Foxfire Stone Massage. Ruled by a local council of innkeepers, brewers, and bathhouse masters. Famous continent-wide for its annual Festival of the Fox Lanterns, when the river is covered in glowing paper lanterns.
-- **Twin Suns** — named for a hilltop phenomenon where both moons are visible alongside the sun on clear days. Coastal sub-region; Soul Tree island lies just offshore.
+- **Twin Suns** — coastal sub-region of Lautara; Soul Tree island lies just offshore. The name records a phenomenon native to the sub-region — origin TBD (see `docs/open-threads.md`).
 - **Azkataria** — sub-region containing Merkavar (Jianna's city-state), which sits on a lake within Azkataria's interior.
 - **Soul Tree** — a small rocky island in Midarra, just off the coast of Twin Suns. Named for the single massive pale tree at its center — an actual tree, through which souls may wander on to the Postlife. A small structure stands beside it (shrine or guardian post). One of the most cosmologically significant sites on Talan: a natural passage point between the Life Layer and the Postlife that does not require death in the conventional sense. Modern English name.
 - **Crossroads** — Lautara's eastern marches. A trade-nexus settlement sitting on the three-way border of **Lautara** (Commerce), **Zuzental** (Law), and **Ezkudon** (Knowledge). Functionally independent in the same way Frae City is independent: not legally sovereign, but every neighbouring power benefits from its neutrality and none will be the one to break it. Modern English name. **The Spider's Silk Inn** (run by the ancient Anadi matron **Charna**) is the town's defining institution; see `factions.md`. The Mercenary Guild treats Crossroads as a major hub. Officially Lautaran for tax purposes; functionally tri-domain.
@@ -186,7 +186,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 
 **Threats:**
 - **Endless swarms** — strength lies in the unending tide as much as the Queen herself.
-- **Corrupted silk** — threads carry the Blightfather's power; weapons and armour entangled in them corrode; wounds taken while bound heal slowly or not at all.
+- **Corrupted silk** — threads carry the Corrupted God's power; weapons and armour entangled in them corrode; wounds taken while bound heal slowly or not at all.
 - **Hive-mind influence** — long exposure fills intruders with whispers; the swarm itself wears down willpower, drawing the unwary into the hive.
 
 **Significance:** A constant source of corruption in the Shadow Steppes. Monsters burrow outward, seeding lesser nests across the plains. Whole caravans have vanished into web-choked gullies. Destroying the Vermin Queen would scatter her hive and collapse much of the Hollow — but as long as she endures, the swarms only grow.
@@ -203,7 +203,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 **God's city:** Uravel — The Floating Isles
 
 **Sub-regions:**
-- **Balatur Erui** — (details TBD)
+- **Balatur Erui** — *whale-spit / whale shoals.* One of Floteyn's drifting-island sub-regions; Balaena the Skywhale City sits within its archipelago.
 - **Floating Isles of Shuun** — the collective name for the hundreds of drifting islands across the domain. Each island technically has its own name but this is the common reference for the archipelago as a whole.
 
 **Notable settlement — Balaena, the Skywhale City.** One of the hundreds of drifting islands of Shuun, but unique: Balaena is built atop a **half-submerged skywhale.** From outside it reads as an ordinary drifting island — exactly the sort of thing the archipelago is full of — but the buoyancy is a young, weak skywhale whose nature is preserved by city-wide ritual. The people who live on Balaena do not know they stand on a creature.
@@ -226,9 +226,9 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 **God's city:** Eldara — The Forge City (located in No Man's Land)
 
 **Sub-regions:**
-- **The Red Dominion** — (details TBD)
+- **The Red Dominion** — coastal sub-region of Sumendar. Burdineyja's island chain lies off its coast.
 - **Burdineyja** — island chain off the coast of the Red Dominion, extending into Midarra. Name: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) → Burdineyja. Iron Islands — fits the volcanic, metal-working character of the domain.
-- **Haraour Eliza** — (details TBD; *eliza* = church in Basque — possibly a religious or institutional sub-region)
+- **Haraour Eliza** — sub-region of Sumendar. The *eliza* root (Basque: church) frames the place as religious or institutional in character.
 - **No Man's Land** — unclaimed territory belonging to no kingdom. Houses Eldara, Komo's city-state. The god's presence here keeps it ungoverned by mortal powers.
 - **Order of Steam** — industrial kingdom-guild hybrid controlling the volcanic belt's manufacturing. No noble bloodlines, no divine patron — run by elected councils of master craftspeople and engineers. Volcanic-powered manufactories produce at a scale no other region matches.
 - **Tahu Tangata** — the indigenous culture of the volcanic coast. Old name, meaning partially lost.
@@ -294,10 +294,10 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 **Sub-regions:**
 - **Rika Tikur** — independent coastal city and its surrounding territory, west of Millhaven. Etymology TBD.
 - **The Dreaming Cape** — coastal sub-region of Brauogi.
-- **The Earth Realm** — (details TBD)
+- **The Earth Realm** — a sub-region of Brauogi, fitting the domain's Earth character.
 - **Gotorlekua** — houses Lurrath, Sarrum's city-state.
 - **Harro Distiratsue** — border territory shared with Egulon. See also Egulon.
-- **No Man's Land** — shared with Ezkudon. Unclaimed territory on the border between the two domains. The wild-touched live here. See also Ezkudon.
+- **The Wildreach** — shared with Ezkudon. Unclaimed territory on the border between the two domains. The wild-touched live here. See also Ezkudon.
 
 ---
 
@@ -311,7 +311,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 **God's city:** Thekkavar — The City of Learning
 
 **Sub-regions:**
-- **No Man's Land** — shared with Brauogi. Unclaimed territory on the border between the two domains. The wild-touched live here. See also Brauogi.
+- **The Wildreach** — shared with Brauogi. Unclaimed territory on the border between the two domains. The wild-touched live here. See also Brauogi.
 - **Jakinduria** — the sub-region housing Thekkavar, Enki's city-state. The great archives sit at the center of this protected interior territory. *(Basque jakinduria = wisdom, knowledge.)*
 - **The Golden Coast** — coastal sub-region of Ezkudon. Despite the domain's secretive reputation, this stretch of southeastern coast sees more trade traffic than most would expect.
 - **Lua Lasai** — border territory shared with Egulon. See also Egulon.
@@ -330,7 +330,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 **Sub-regions:**
 - **Harro Distiratsue** — border territory shared with Brauogi. See also Brauogi.
 - **Lua Lasai** — border territory shared with Ezkudon. See also Ezkudon.
-- **Argia Esfera** — (details TBD) *(Basque argia = light + esfera from Latin/Spanish esfera = sphere → "sphere of light." An old name, fitting the Light domain.)*
+- **Argia Esfera** — *"sphere of light."* Basque *argia* (light) + Latin/Spanish *esfera* (sphere). An old compound name fitting the Light domain's character.
 
 ---
 
@@ -348,7 +348,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
   - **The three main isles**:
     - **Northern Isle** — the northernmost of the three, sitting off the coast where Zuzental meets the Nashavel border. Closest neighbours on the mainland are the **Kaosadaemi Principality** (Nashavel) to the north and the **Thousand Kingdoms** to the west. Chronicler's by-name: **The Watchstone** — northernmost emerald set outward, watching the Kaosadaemi shore across the water.
     - **Middle Isle** — the largest of the three and the **seat of the kingdom**; the capital **Oathmoore** sits on its western shore facing the mainland. Closest neighbour on the mainland is the **Order of Law** (Zuzental's central institutional sub-region). The royal court, the Concord-of-Courts liaison, and the great trade-houses of the kingdom all sit here. Chronicler's by-name: **Emerald's Eye** — centre-stone of the three-emerald setting.
-    - **Southern Isle** — cradled in the bay where Zuzental meets the southern domains. Closest neighbours are the **Order of Law** to the northwest, **Harro Distiratsua** (Egulon border with Brauogi) to the southwest, and **Argia Esfera** (Egulon) to the south. The Southern Isle's politics tilt slightly south — its trade is more often with the Light domain than with the Law-domain interior. **Founding bough.** The Emerald Isles kingdom was originally founded here on Southern Isle; the throne later moved to Oathmoore on Middle Isle for the strait-facing diplomatic geometry the kingdom has today. Chronicler's by-name: **The Lyteward Bough** (light-warding, drifted in the Frae/Oathmoore register) — preserves the founding memory in high-register usage even though the court no longer sits on the founding bough.
+    - **Southern Isle** — cradled in the bay where Zuzental meets the southern domains. Closest neighbours are the **Order of Law** to the northwest, **Harro Distiratsue** (Egulon border with Brauogi) to the southwest, and **Argia Esfera** (Egulon) to the south. The Southern Isle's politics tilt slightly south — its trade is more often with the Light domain than with the Law-domain interior. **Founding bough.** The Emerald Isles kingdom was originally founded here on Southern Isle; the throne later moved to Oathmoore on Middle Isle for the strait-facing diplomatic geometry the kingdom has today. Chronicler's by-name: **The Lyteward Bough** (light-warding, drifted in the Frae/Oathmoore register) — preserves the founding memory in high-register usage even though the court no longer sits on the founding bough.
   - **The Bridgelands** — the northeastern collection of smaller islands the kingdom acquired in recent generations. Chronicler's by-name: **The Bridge-Pearls** — smaller string of stones to the main trio's emeralds; pearls for size and for the Cloud Sea's pale quality where the bridges meet the cloud-touching gaps. They sit partly in Hafra (saltwater) and partly in the Cloud Sea — the only Zuzental territory that touches the Cloud Sea at all. The Emerald Isles built **spanning Magitech bridges** between the Bridgeland islands — substantial Arcanotech engineering works, not footbridges, capable of carrying caravans across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Once a traveller reaches one Bridgeland island, the rest are accessible overland via the bridges. The Bridgelands are the **canonical landing point for cloudships from Sortalde**, and the standing **Sortalde embassies on Talan** are sited there. Embassy staff are mostly Wandao Yaoguai and Xidao Tanuki, with rarer Wayang intelligence-arm and Sarangay security details. The bridge engineering is itself a soft-power demonstration: the kingdom that built the bridges is the kingdom Sortalde does business with.
   - **The kingdom's interest** in hosting the embassies is partly economic (cloudship trade routes terminate on Bridgeland docks) and partly Forseti-aligned diplomatic prestige — a Zuzental kingdom housing the eastern continent's diplomatic presence is doctrinally tidy under the Law domain.
 - **Thousand Kingdom** — the dominant political sub-region of Zuzental. Lograth sits within it and functions as both the god's city-state and the actual capital of Thousand Kingdom — the two have grown together into a single urban mass over centuries. The city-state and kingdom are effectively inseparable.
@@ -381,8 +381,8 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 
   *Open canon questions:* personal names (Demigod, Old King, Founding Queen, the two generals); mechanism of the Demigod's ascension; the name his refounded village goes by; how many times exactly the Queen has called on him and for what; whether the Forseti-clergy know.
 - **Legea Empire** — **A theocracy ruled by a demigod whose allegiance is not to Forseti nor to any of the bound thirteen, but to a god residing in the third (Postlife) planar layer — Elysium, Diyu, or Abyss (specific plane and identity TBD).** The Empire's state faith is the **Divine Faith** (see `factions.md`). The political and theological collision is structural: Legea sits inside Zuzental, the domain of *Forseti, the bound god of law itself* — and the Empire's god claims a competing, possibly older legal authority through their demigod scion. Forseti's law and the Divine Faith's law are not the same law, and both are enforced inside the same domain. The Empire reaches far beyond its own borders through an active missionary programme, most consequentially to Fenurra (see `cultures.md`).
-- **Namur Republic** — (details TBD)
-- **Order of Law** — (details TBD)
+- **Namur Republic** — a democratic city-state network within Zuzental. Modern English name.
+- **Order of Law** — an institutional sub-region of Zuzental, central to Forseti's framework on Talan. Modern English name.
 
 ---
 
@@ -397,7 +397,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 
 **Sub-regions:**
 - **Vernua Dominion** — the sub-region housing Nahaskel, Vesuna's city-state. The city sits within the Dominion but resists being governed by it — the relationship between mortal authority and the god's presence here is perpetually contested. *(Vernua likely drifted from Vesuna's own name — the Dominion named in her shadow.)*
-- **Kaosadaemi Principality** — (details TBD) *(Basque kaosa = chaos + Icelandic dæmi = district, domain → "the chaos district." Old compound name, fits the ancient naming rule.)*
+- **Kaosadaemi Principality** — *"the chaos district."* Basque *kaosa* (chaos) + Icelandic *dæmi* (district, domain). Old compound name, fits Nashavel's chaos character.
 - **Basogur Jungle** — dense jungle sub-region shared with Ehizahar. *(Basque baso = forest/wood → drifted to Basogur. An old name for an old place.)* See also Ehizahar. **The continental rail-blocker:** Basogur bisects the east-central waist of Talan and is the reason there is no through-rail between the northern and southern Magitrain networks (see `cosmology.md` — *Technology — Magitech and Infrastructure → The Continental Rail Network*). Arcanotech engineering attempts founder on the jungle's Vesuna-touched chaos-magic interference (rails warp, runes fail); indigenous Vanara/leshy/beast-spirits/druid resistance dismantles construction as it happens; and the Nashavel/Ehizahar political deadlock prevents any consortium from securing the right of way. **North-south travel routes around Basogur by ship across Midarra, by airship over the jungle (Arcanotech airships suffer turbulence and instrument drift; Occultech airships fly clean), or by the long overland bypass.**
 
 ---
@@ -430,9 +430,9 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 - **Basamortua** — the desert region. Basque *basa* (wild) + *mortu* (desert/empty) → Basamortua.
 - **Dea Elurra** — the ice region. Basque *elurra* (snow, ice) → drifted to Dea Elurra.
 - **Maitagarri** — the forest region. Basque *maitagarri* (lovable, charming, endearing).
-- **Star Island** — a small star-shaped island lying nearby in Midarra. Modern English name. (Details TBD.)
+- **Star Island** — a small star-shaped island lying nearby in Midarra. Modern English name.
 
-**God's city:** Frae City — The Free City (founded during the Week of Crimson Rain as the base of mortal resistance. NOT neutral ground — Cronus's home.)
+**God's city:** Frae City — The Free City (Cronus's home, founded during the Week of Crimson Rain as the base of mortal resistance).
 
 
 ---

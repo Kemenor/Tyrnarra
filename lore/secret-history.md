@@ -16,8 +16,6 @@ The remaining eleven Grand Gods, now understanding that they were not untouchabl
 
 **Araphel:** The first Grand God to stand behind Cronus. A Grand God — one of the original creators — backing a mortal man. Araphel was tired of it: the blood, the prayers of the desperate in darkness, the despair haunting every shadow. He chose Cronus.
 
-**The order of the others joining** is not yet defined — to be developed.
-
 **How it ended:** Cronus united all eleven remaining Grand Gods under him. With Tani's rebirth — she came back — they forged the Gods' Law together. The Law, once established, banished all divine and powerful beings from the Material Plane unless they accepted its binding. Those who refused or were deemed too dangerous were driven to the other planes (Prelife or Postlife). Those who chose to remain accepted the binding. Only thirteen did.
 
 **Why the thirteen?** More could have stayed — the Law doesn't cap the number. But virtually no god was willing to be bound. The thirteen who stayed did so by choice.
@@ -83,7 +81,7 @@ The Sanctum of Veils, at Myrria's heart, is both Araphel's residence on Talan an
 - **Symbol** — a half-mask split down the centre, one side smooth, the other etched with shifting patterns. Black-on-silver or white-on-deep-violet.
 - **Colors** — deep violet (rebirth), black (forgetting), silver (transformation).
 - **Sacred animal** — the raven, often depicted carrying a lantern or veil.
-- **Favoured weapon:** the **Kusarigama** — sickle-and-chain; strikes unseen, binds prey in shadow. Canon both as iconography (art, ceremony, gods page) and as the PF2e mechanical favoured weapon for clerics.
+- **Favoured weapon:** the **Kusarigama** — sickle-and-chain; strikes unseen, binds prey in shadow. Canon both as iconography (art, ceremony, gods page) and as the mechanical favoured weapon for Araphel's clerics in play.
 - **Sacred motifs** — veils, dark lanterns lit with violet flame, the Many Faces (murals of diverse faces gazing inward toward a shadowed void).
 
 ### Rites
@@ -115,7 +113,7 @@ Seven monumental relics forged at the end of the Age of Corruption. Together the
 
 ## The Nine Generals of Corruption
 
-The Nine are the foremost servants of the Corrupted God — wrought from his power while he remains bound. Originally mortal cultists, clerics, beasts, and nameless horrors from deep places, each was chosen and remade into a vessel of corruption's will. Unlike their imprisoned master, **the Nine can be fought and slain.** Their defeat weakens the Blightfather's reach in the world above.
+The Nine are the foremost servants of the Corrupted God — wrought from his power while he remains bound. Originally mortal cultists, clerics, beasts, and nameless horrors from deep places, each was chosen and remade into a vessel of corruption's will. Unlike their imprisoned master, **the Nine can be fought and slain.** Their defeat weakens the Corrupted God's reach in the world above.
 
 ### The Nine Dungeons
 
@@ -130,7 +128,7 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 | **The Vermin Queen** | Mistress of swarms | Hive-dungeon: the Hollow of Ten Thousand Threads (Shadow Steppes). Breeds endless spiders, locusts, crawling things. |
 | **The Rot-Tyrant** | Corpse-warlord in ruined armour | Ossuary-halls. Rusting legions whose every step spreads despair and decay. |
 | **The Blight-Seer** | Prophet twisted into living plague | A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. |
-| **The Flesh-Sculptor** | Butcher who remakes flesh to the Blightfather's design | Lair of stitched horrors and alchemical vats. |
+| **The Flesh-Sculptor** | Butcher who remakes flesh to the Corrupted God's design | Lair of stitched horrors and alchemical vats. |
 | ~~**The Ash-Binder**~~ | *Defeated.* Once a corrupted elemental beast | Lair was a volcanic furnace of stone and fire. Now scattered — but the lair still leaks dangerous slag-born remnants. The defeat is celebrated across the kingdoms as proof the Nine can fall. |
 | **The Whisperer in Dreams** | Shadowbound cultist turned nightmare-made-flesh | Temple of illusions warping dream and waking; intruders wander lost. |
 | **The Maw Serpent** | Colossal venomous serpent pulled from the world's depths | Cavern-dungeon of sinkholes, acid pools, and tunnels wide enough to swallow caravans. |
@@ -144,8 +142,8 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 ## The Elden
 
 - An ancient race active roughly 6000–2945 GR. Neither fully mortal nor fully divine.
-- **Greatest known achievement:** the **Android** ancestry (PF2e) — synthetic people no civilisation has ever been able to replicate.
-- The Golden Empire later attempted to recreate Androids and produced the **Automaton** ancestry (PF2e) instead — formidable, but not the same thing.
+- **Greatest known achievement:** the **Android** ancestry — synthetic people no civilisation has ever been able to replicate.
+- The Golden Empire later attempted to recreate Androids and produced the **Automaton** ancestry instead — formidable, but not the same thing.
 - **The technological inheritance.** Beyond Androids, the Elden were a high-tech civilisation in their own era. Rail-bound mass acceleration, atmospheric vessels, and a great deal of industrial infrastructure originated with them. Most of that work was lost when the civilisation transformed; the ruins were not. **Modern Magitech — most especially Arcanotech — descends from post-Crimson-Rain Elden-ruin discoveries** (see `cosmology.md` — *Technology — Magitech and Infrastructure*). The Order of Steam in Sumendar grew up around an Elden-tech excavation; their early breakthroughs are the spine of the modern continental rail network. The folk-term "Ultra-High-Tech Civilisation" mortals sometimes use refers to the Elden, even when the speakers don't know it.
 - Little of their culture survives in comprehensible form. Ruins are sought-after and dangerous.
 - **Common knowledge:** vanished 2945 GR, all on the same day, cities intact, no explanation confirmed.
@@ -197,7 +195,6 @@ A mortal civilization of the **Gods' Era** (2944 GR – 1 GR) — not the Elden,
 - A being of pure consumption — exists only to unmake existence. Imprisoned since before recorded history.
 - The Elden freed it deliberately as a weapon against the gods during their war.
 - Subsequently fused with the Elden via the gods' counter-move (see below).
-- **More detail on origin, nature, and current state to be defined later.**
 
 ---
 
@@ -208,7 +205,7 @@ A mortal civilization of the **Gods' Era** (2944 GR – 1 GR) — not the Elden,
 - **What miners breached in 1321 MR** was the Elden's ritual site. What emerged was what the Elden had become.
 - Not bound by the Gods' Law — predates it, was never party to it.
 - Defeated (not destroyed) in 2135 MR — wounded enough that active influence collapsed. Spawn still emerge. Some believe it is healing.
-- **Cannot be permanently killed by conventional means** — it contains both Wellspring and Void. What it would truly take to end it is not yet defined.
+- **Cannot be permanently killed by conventional means** — it contains both Wellspring and Void.
 
 ---
 
@@ -221,7 +218,7 @@ A widely circulated in-world account of the Corrupted God's binding, attributed 
 **Why this matters as canon:**
 - This is what **mortals tell themselves**. It is mostly wrong.
 - The truth (see *The Corrupted God — True Identity* above) is that the Corrupted God is the Elden — an entire civilisation fused with the Devourer, not a malevolent personal deity. Most mortals do not know this and would not believe it.
-- The names **Maw Below** and **Blightfather** are folk titles for the Corrupted God. Use them in mortal-voiced text (sermons, chronicles, peasant rumour); avoid them in GM-truth contexts.
+- In mortal sermons and chronicles the Corrupted God is named **Maw Below** or **Blightfather**. Both names are interchangeable with *Corrupted God* in published prose, but lore reference favours *Corrupted God*; scholars who know the truth use it consistently.
 - The closing line names the binding (2135 MR) as the beginning of the **Adventurer Era** — the current age. The Adventurers Guild's founding-mythos status is baked into popular history; Lorant's account is part of why.
 
 ---

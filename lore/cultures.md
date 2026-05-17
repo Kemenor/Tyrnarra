@@ -278,17 +278,6 @@ Used with Whisperfang bows. Built on either standard Ghost Willow shafts (lethal
 
 ---
 
-## Open threads & TBD
-
-- **Aeris (city) and the Scar of Aeris (crater)** — these are Latinate-feeling names. Per the naming rule, ancient places should have Basque/Icelandic etymologies. Decide whether *Aeris* is canon-as-imported (a Fenurran-internal stylized name predating the rule) or should be retrofitted. The Hall of Shards is similarly stylized.
-- **Mount Skel, Ashwall Divide, Sulfur Vents of Vehl** — short Germanic/English names; probably best left as-is (modern Fenurran usage). Vehl is Latinate-ish.
-- ~~**The Divine Faith**~~ — RESOLVED 2026-05-16. The Faith is the state religion of the **Legea Empire** (Zuzental sub-region). Its god is not one of the bound thirteen but a deity of the third (Postlife) layer; specific plane and name TBD. See `factions.md`.
-- ~~**The theocratic prince**~~ — RESOLVED 2026-05-16. The prince is the **heir to the Legea Empire** — and therefore heir of the demigod line that rules it. Personal name and demigod-parent's name still TBD.
-- **Spice Wine and the Dance of the Sulfur Fire** — both have ritual significance. Could be folded into the magic/faith page once a faith-overview pass is done.
-- **Relationship to the Lands of Villtur tribes** — Fenurra is its own sub-region of Ehizahar, but the wider Villtur tribal sprawl borders it directly. The exact tension and trade between Fenurra and the Villtur tribes needs definition.
-
----
-
 ## The Kitsune
 
 > *"One heart can hold many lights — why not let them shine?"*
@@ -388,10 +377,3 @@ Their long midlife and shortened elderhood reinforce the cultural focus on relat
 - **Biozuri / Heartplaza** — the capital and its central district. The **House of a Thousand Flavors** (see below) sits a short walk from the Heartcourt itself.
 - **Kawaakari** — the mountain-pass resort village (see `geography.md`). The kingdom's most-visited destination by outsiders.
 - **The House of a Thousand Flavors** — the kingdom's most prestigious dining experience and the favoured stage for high-level Heartcourt negotiations, romantic declarations, and dramatic public courting displays. Run by **The Cook's Circle**, a polycule of seven master chefs — Rinza (Head Flavorist), Maeko (Illusionist-Plater), Tairen (Texture Architect), Shouka (Aroma Alchemist), Virel (Harmony Master, directing live musicians), Kyome (Temperature Virtuoso), and Elhara (Storyweaver). The Circle's personal chemistry fuels the kitchen's creativity, and their love-life is gossiped about nearly as much as their cuisine. Reservations are booked months in advance; menus change seasonally with themes (*"A Lovers' Chase Through the Seasons"*, *"The Nine Tails of Autumn"*, *"Dreams Beneath the Lantern Sea"*). Each table is semi-private, with illusions creating custom surroundings — diners may find themselves in a cherry-blossom grove, a cliffside above a stormy sea, or a floating lantern festival. Guests often leave with small enchanted tokens that replay a snippet of music or a fleeting scent from the evening. *Tagline: "A meal is a memory, and we serve memories worth keeping."*
-
-### Open threads & TBD
-
-- **Specific Hearts currently seated.** The Heartcourt is named generically (Crimson, Azure, etc.) but no individual Hearts have personal names yet. Phase 4 / future detail.
-- **Relations with Jianna and Merkavar.** Emarrea is inside Lautara — the commerce domain — but politically self-governing. The trade-and-court relationship with Lautara's god, Lautara's other sub-regions, and Merkavar's markets needs definition.
-- **Foxfire magic.** The kitsune use foxfire in lanterns, treatments, and illusions. Its mechanical relationship to Talan's Four Schools of magic is unclear; may slot into the *Magic & Faith* page on a future pass.
-- **Kitsune religion.** The Heartcourt explicitly has no Faith pillar (Violet covers magic; Ivory covers law; none covers faith). Whether kitsune worship one of the Thirteen, ancestral fox-spirits, or something else entirely is open.

@@ -42,7 +42,7 @@ The pivotal event in all of Talan's history. For one week, the skies across the 
 
 The Storveldi Denbora homeland was annihilated in the divine retaliation that followed Tani's death — their capital became the cursed scar now called the **Blackened Lands** / **Lost Kingdom** sub-region of Lioaru. Their polity ended here; a scattered population of experimented-upon survivors persists today as the **Azarketi**.
 
-At the end of the week, the Gods' Law was established. More gods could have stayed, but virtually none were willing to be bound. The vast majority withdrew to the other planes. Thirteen accepted the Law's binding and remained. The world they inherited was broken.
+At the end of the week, the Gods' Law was established. Thirteen accepted the binding and remained on the Material Plane; the rest withdrew to the other planes. The world the Thirteen inherited was broken.
 
 *Key events within the week: not yet fully defined. Frae City was founded during this period as the base of mortal resistance.*
 

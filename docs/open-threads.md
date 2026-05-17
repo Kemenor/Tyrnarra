@@ -131,12 +131,12 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 ### [Factions] Kitsune religion
 **Decided.** The Heartcourt's nine Hearts cover Military, Diplomacy, Commerce, Nature, Law, Magic, Arts, Knowledge, Secrets. No Faith pillar.
 **Open.** Whether kitsune worship one of the Thirteen (Fisaya is depicted as a kitsune — natural fit), ancestral fox-spirits, something else entirely, or operate as functional secularists.
-**Where.** [lore/cultures.md](../lore/cultures.md) — *Kitsune → Open threads & TBD*.
+**Where.** [lore/cultures.md](../lore/cultures.md) — *The Kitsune* section.
 
 ### [Factions] Heartcourt — specific seated Hearts *(low, story-driven)*
 **Decided.** Court structure locked (4–9 Hearts, each tied to a colour-pillar; Passing of the Tails ritual; Growing Circle of heirs).
 **Open.** Personal names for the current seated Hearts. Best done when a story needs them.
-**Where.** [lore/cultures.md](../lore/cultures.md) — *Kitsune → Open threads & TBD*.
+**Where.** [lore/cultures.md](../lore/cultures.md) — *The Kitsune* section.
 
 ### [Bestiary] Foxfire magic — system placement
 **Decided.** Kitsune use foxfire in lanterns, treatments, and illusions (Kawaakari's Foxfire Stone Massage, foxfire lanterns of Biozuri).
@@ -162,6 +162,11 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Decided.** Both are named in [CLAUDE.md](../CLAUDE.md) as canonical examples of the modern-English-with-drift naming stratum, alongside Free City/Frae City and Order of Steam (both of which exist as full canon in lore + HTML). The two names imply trade / logistics / navigation function.
 **Open.** Everything substantive — what each organisation actually *is* (mercantile? courier? exploration? brokerage?), founding, presence, the relationship between them (rivals? complementary? successor-predecessor?), domain footprint, leadership, why they're worth naming alongside the Order of Steam. Neither appears in `factions.md` or any HTML page yet. They are committed names with no content.
 **Where.** Eventually [lore/factions.md](../lore/factions.md) — *Independent Organisations* — then [talan/factions/factions.html](../talan/factions/factions.html) (as cards) or their own pages if scope warrants.
+
+### [Geography] Twin Suns — name's origin phenomenon
+**Decided.** Coastal sub-region of Lautara (Commerce / Jianna). Soul Tree island lies just offshore. The name *Twin Suns* (two suns, not the sun-plus-moons alignment in earlier draft) is correct and stays.
+**Open.** What phenomenon earns the sub-region its name. Candidates: an atmospheric reflection / mirage producing a second sun-disc above the horizon at certain seasons; a Wellspring-touched echo of Solyra visible only here; a Gods'-Era event (twin gods of sun-aspect briefly walked the coast?); an Elden-tech relic still feeding the sky an after-image. Whatever it is should fit the Commerce-domain framing (the phenomenon as a trade-route landmark) and the Soul Tree adjacency.
+**Where.** [lore/geography.md](../lore/geography.md) — *Lautara → Twin Suns*; [lore/glossary.md](../lore/glossary.md) — *Lautara sub-regions → Twin Suns*.
 
 ### [Geography] Millhaven — settlement re-introduction
 **Decided.** Millhaven was on the site at one point (a Brauogi settlement) and removed during a restructure. The Myrria pattern is the template for re-introduction (folder under domain, settlement page named after the folder).
@@ -198,13 +203,13 @@ Items where the world has decided *what* but not *much* — placements and struc
 
 ### [Geography] Sub-region details — small placement-and-flavour passes
 **Decided.** Each sub-region exists in canon with a defined location.
-**Open.** Flesh out the prose for: **The Red Dominion** (Sumendar) · **Haraour Eliza** (Sumendar — *eliza* = church in Basque, likely a religious institution) · **The Earth Realm** (Brauogi) · **Argia Esfera** (Egulon) · **Namur Republic** (Zuzental) · **Order of Law** (Zuzental) · **Kaosadaemi Principality** (Nashavel) · **Star Island** (Askamira — small star-shaped island in Midarra) · **Fellibylur** (Floteyn) · **Balatur Erui** (Floteyn) · **Dragon's Reach** — vessel-arrival and crash-site detail.
+**Open.** Flesh out the prose for: **The Red Dominion** (Sumendar) · **Haraour Eliza** (Sumendar — *eliza* = church in Basque, likely a religious institution) · **The Earth Realm** (Brauogi) · **Argia Esfera** (Egulon) · **Namur Republic** (Zuzental) · **Order of Law** (Zuzental) · **Kaosadaemi Principality** (Nashavel) · **Star Island** (Askamira — small star-shaped island in Midarra) · **Fellibylur** (Vindul — high lone peak, Storm-Fell / Blizzard Peak) · **Balatur Erui** (Floteyn — whale-spit / whale shoals) · **Dragon's Reach** — vessel-arrival and crash-site detail.
 **Where.** [lore/geography.md](../lore/geography.md) — per-domain entries.
 
 ### [Factions] Emarrea–Lautara political relationship
 **Decided.** Emarrea sits inside Lautara (Commerce / Jianna) but is politically self-governing under the Heartcourt.
 **Open.** Trade and court relationship between Emarrea, Jianna's church, Merkavar's markets, and Lautara's other sub-regions.
-**Where.** [lore/cultures.md](../lore/cultures.md) — *Kitsune → Open threads & TBD*.
+**Where.** [lore/cultures.md](../lore/cultures.md) — *The Kitsune* section.
 
 ### [Factions] Fenurra–Villtur relationship
 **Decided.** Fenurra is its own sub-region of Ehizahar, bordering the wider Villtur tribal sprawl.
