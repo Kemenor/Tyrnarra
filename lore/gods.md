@@ -36,7 +36,7 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 - Many gods beyond the 13 exist in Prelife (Layer 1) and Postlife (Layer 3).
 - The named Postlife residents whose portfolios appear in clerical practice on Talan are covered below in *Named Non-Bound Gods* (Bikiargi, Zaharsuge, Epairima, Betibizi). The non-bound god of the **Divine Faith / Legea Empire** is also Layer-3-resident; identity TBD (see `factions.md`).
-- **Sortalde (the Eastern continent — see `geography.md`) runs an entirely separate clerical substrate.** No bound gods reside there; all Sortalde clerical work channels through an unnamed Layer-3 pantheon of dynasty-spirits, ancestor-judges, and place-gods. Sortalde mortals have **never seen a god walk among them** — religion there is invocation across the veil, never personal audition. The Sortalde pantheon is a future-development thread.
+- **Sortalde (the Eastern continent — see `geography.md`) runs an entirely separate clerical substrate.** Sortalde's clerical life is veil-mediated throughout. Every grant runs through a Layer-3-resident pantheon of **dynasty-spirits, ancestor-judges, and place-gods**, and reaches the worshipper across the veil. Religion on Sortalde is invocation, not personal audition — the gods stay on their side, the worshippers stay on theirs. The pantheon's names and individual portfolios are a future-development thread.
 - Elven ancestral pantheons, deep god cults, demon lord worship, and others have real divine power and active churches on Talan.
 - The 13 are distinctive because they are *present on the Material Plane* and *bound by the Gods' Law* — not because they are the only gods.
 - The Talan primer (Magic & Faith tab) already references this.
@@ -45,8 +45,8 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 ## The Gods' Origins
 
-- **None of the 13 have explained their own origins.** This applies to all of them equally.
-- Scholars study their origins constantly. Gods do not answer these questions.
+- **The Thirteen treat their own origins as theirs alone.** This applies to all of them equally.
+- Scholars study their origins constantly. Every question deflects.
 
 ---
 
@@ -69,13 +69,7 @@ The twelve are split into two groups of six with a real cosmological distinction
 **Frae City — History:**
 - Founded during the Week of Crimson Rain as the base of operations for Cronus and the mortal resistance.
 - After the war and the forging of the Gods' Law, it became Cronus's city.
-- It is where the **Council of Thirteen** convenes when it convenes at all — not because Frae City is neutral ground, but because it is Cronus's home and he hosts. The historical weight of the place where the Law was forged makes it the natural ground. There is **no fixed schedule**; the Council gathers only when something demands the full body in person.
-- Do not describe Frae City as "the only neutral ground" — it is Cronus's home, not neutral territory.
-
-## Neutral Ground
-
-- No single city on Talan is universally recognised as neutral ground. Frae City (Cronus's home) is often mistaken for neutral territory but is not — it is Cronus's city, founded during the Week of Crimson Rain as the base of mortal resistance.
-- Other neutral territories exist. Frae City is *not* neutral ground — it is Cronus's city.
+- The **Council of Thirteen** convenes there when it convenes at all — Cronus hosts, and the historical weight of the place where the Law was forged makes it the natural ground. The Council gathers irregularly, on call, when something demands the full body in person.
 
 ---
 
@@ -101,7 +95,7 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 
 ### Araphel — God of Darkness (Male)
 - **Aspects:** shadows, secrets, rest, new faces, rebirth. *(Despair is what mortals bring to him; new faces and rebirth are what he answers with — see `secret-history.md` — Araphel — Lore Notes for the theological resolution.)*
-- **Cleric domains:** Darkness, Protection, Void, Secrecy, Change, Repose. *(Second Chances is implicit in the rebirth theology rather than a discrete PF2e domain.)*
+- **Cleric domains:** Darkness, Protection, Void, Secrecy, Change, Repose. *(Second Chances is implicit in the rebirth theology rather than a discrete listed domain.)*
 - **Depiction:** most commonly a **Fetchling** — either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman — but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
 - **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
 - **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
@@ -116,7 +110,7 @@ Aspects, depictions, favoured weapons, mortal perception, and cleric domains for
 ### Komo — God of Fire (Male)
 - **Aspects:** flame, passion, destruction, renewal.
 - **Cleric domains:** Ambition, Creation, Fire.
-- **Depiction:** a **Kobold** — stands in fire comfortably, mid-creation at the forge, eyes glowing like embers. *(Earlier drafts depicted him as a Lizardfolk; this is incorrect — he is a Kobold everywhere in canon.)*
+- **Depiction:** a **Kobold** — stands in fire comfortably, mid-creation at the forge, eyes glowing like embers.
 - **Favoured weapon:** *Fire Poi* — chains of flame, used in both ritual dance and devastating battle.
 - **Mortals see him as:** hearth and forge, but also wildfire and war.
 
@@ -227,7 +221,7 @@ Mortals have prayed to **Solyra** for as long as there have been mortals. The sa
 
 ## Domains Outside the Thirteen — Source Mapping
 
-Pathfinder/PF2e includes a number of cleric domains that are **not granted by any of the Thirteen Bound Gods**. In Tyrnarra, these domains exist and can be channeled — they are simply sourced from elsewhere. The table below maps each to its in-world granter. Most trace upward to the Corrupted God, the virtue-demons, the sin-devils, or a named non-bound god above; a few have an intermediate granter (a General of Corruption, for instance, who in turn serves the Corrupted God).
+A number of cleric domains exist in Tyrnarra that are **not granted by any of the Thirteen Bound Gods** — they are sourced from elsewhere. The table below maps each to its in-world granter. Most trace upward to the Corrupted God, the virtue-demons, the sin-devils, or a named non-bound god above; a few have an intermediate granter (a General of Corruption, for instance, who in turn serves the Corrupted God).
 
 | Domain | Granted by | Lineage |
 |---|---|---|
@@ -248,6 +242,6 @@ Pathfinder/PF2e includes a number of cleric domains that are **not granted by an
 
 **Reading the table:** "Lineage" tells you whose authority the clerical grant ultimately serves. A cleric of Decay channels through the Rot-Tyrant directly, but the Rot-Tyrant is the Corrupted God's vehicle — the cleric's power answers to both. A cleric of Indulgence channels through a sin-devil and answers to that devil alone. A cleric of Undeath answers to Betibizi alone (no Corrupted-God lineage).
 
-**Domains *not* in this list** (the Thirteen's domains) are covered in *The Thirteen — Per-God Sheet* above. **Domains in PF2e not listed here at all** — if a player or NPC presents a domain not covered by either table, treat it as an obscure or experimental claim that needs a GM ruling.
+The Thirteen's own domains are covered in *The Thirteen — Per-God Sheet* above. For unknown-domain rulings and PF2e-side bookkeeping, see `pf2e-notes.md`.
 
-**The four sin-devils that don't get a domain in this list** (Greed, Lust, Envy, Sloth) still exist as canonical devil-lords; their grantable domains in Tyrnarra are TBD. Same for unmapped virtue-demons.
+The four sin-devils outside this list (Greed, Lust, Envy, Sloth) still exist as canonical devil-lords; their grantable domains in Tyrnarra await canon, as do most virtue-demon lines beyond Muiral.

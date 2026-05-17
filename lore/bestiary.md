@@ -1,14 +1,12 @@
 # Bestiary — Ancestries, Heritages, & Otherworldly Beings
 
-A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. **The mechanical rules are Pathfinder 2e** (Remaster) — this file does not duplicate PF2e crunch. What it captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography.md`, `factions.md`, and `cultures.md`.
-
-> **Status note (2026-05-17):** Built from the WorldAnvil export's ancestry / heritage / demon / devil notes (mostly 1–3 lines each) plus the user's canon clarifications on Dragons, Azarketi, Fleshwarps, the Darklands, and the pf2e remaster's heritage reshuffle. **Base ancestry rework completed 2026-05-16** — roster reconciled against the 44 standard PF2e remaster ancestries (Gnoll→Kholo and Grippli→Tripkee renames applied; 8 new ancestries added: Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). **Tian Xia placement pass completed 2026-05-17** — the 6 Tian Xia ancestries placed on **Sortalde**, the Eastern petal-continent (see `geography.md`); Hungerseed heritage resolved as half-Oni-of-Lingdao. **Dragonkin removed 2026-05-17** — D&D 5e migration relic, no narrative footprint worth keeping. Retained outside the standard 44 as Tyrnarra-canon additions: Dragons, Slimes, Rabbitfolk.
+A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography.md`, `factions.md`, and `cultures.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
 
 ---
 
 ## Ancestry Distribution by Domain
 
-Each god's domain has one or more **dominant** ancestries — peoples for whom that domain is their cultural and demographic heartland. Other ancestries are present everywhere but in smaller numbers; *uncommon* and *rare* are the PF2e access tags applied at Talan-scale.
+Each god's domain has one or more **dominant** ancestries — peoples for whom that domain is their cultural and demographic heartland. Other ancestries are present everywhere but in smaller numbers; *uncommon* and *rare* tag the access at Talan-scale.
 
 | Domain | God | Dominant Ancestries | Notable Uncommon |
 |---|---|---|---|
@@ -36,8 +34,6 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 
 ## Ancestries — Alphabetical
 
-> **Post-remaster roster reconciled (2026-05-16) + Tian Xia placement pass complete (2026-05-17).** All 44 standard PF2e remaster ancestries placed. Gnoll → **Kholo** and Grippli → **Tripkee** renamed. Eight new ancestries added in the first pass (Athamaru, Awakened Animal, Centaur, Dragonet, Jotunborn, Merfolk, Minotaur, Surki). The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) now placed on **Sortalde** (see `geography.md`), each on its own petal of the seven-petal Concord archipelago. Hungerseed heritage resolved (Oni are bound spirits of Lingdao). Dragonkin removed 2026-05-17 (D&D 5e migration relic). Retained beyond the standard 44 as Tyrnarra-canon additions: Dragons, Slimes, Rabbitfolk.
-
 ### Anadi
 Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hunt domain (Ehizahar); **rare** everywhere else. Talan's most famous Anadi is **Matron Charna**, proprietor of the Spider's Silk Inn at Crossroads (see `factions.md`).
 
@@ -52,7 +48,7 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 **Seal-folk of the Floating Isles and the Hafra coast.** Aquatic by anatomy and amphibious by habit; their pods range the spray-zone islets of **Floteyn (Water / Shuun)** and the saltwater shorelines of Hafra. Common in Floteyn; uncommon along Hafra coasts; rare in the freshwater interior. Cultural relationship with the Strix-and-Tripkee island life is generally cooperative — the three ancestries have lived in adjacent ecological niches long enough to have settled the boundaries.
 
 ### Automaton
-**Synthetic people created by the Golden Empire** in their attempt to recreate the Android ancestry of the Elden. They are capable — formidable, even — but they are not Androids. The differences are deep and the Empire's scholars could not close them. Now **uncommon** everywhere; concentration in Sumendar (Fire) where the New Age Dwarves and the Kobolds are slowly recovering enough of the technology to maintain them, though full replication remains out of reach.
+**Synthetic people created by the Golden Empire** in their attempt to recreate the Android ancestry of the Elden. Automatons are capable — formidable, even — and a distinct ancestry in their own right; the gap between them and the Androids the Empire was reaching for stayed wide, and the Empire's scholars stopped short. Now **uncommon** everywhere; concentration in Sumendar (Fire) where the New Age Dwarves and the Kobolds maintain them with steadily improving technology, working toward replication that remains out of reach.
 
 ### Awakened Animal
 **Animals magically uplifted to sapience.** No native population, no cultural homeland — each Awakened Animal is its own story. **Rare everywhere.** Origins on Talan typically trace to one of three sources: (1) a druid or primal-school caster performing the awakening intentionally, most often in **Brauogi or Floteyn**; (2) ambient Komo-flame-touch in **Sumendar**, where ash-fall and ember-storm regions occasionally produce unintended awakenings in their fauna; (3) Feyworld leakage at the edges of **Nashavel** or in pockets of Vesuna's chaos-touched wilderness. The Adventurers' Guild treats Awakened Animals as full members of any party they join; mortal kingdoms vary widely in their legal recognition.
@@ -83,9 +79,7 @@ Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding
 **Indigenous wyrmkin of Talan — children of Zaharsuge.** Small dragonlike sapients with deep ancestral memory of the pre-Dragon-arrival serpent-line. **Distinct from the alien Dragons** — Dragonets predate the alien Dragons' crash by ages, and Zaharsuge is their progenitor god (see `gods.md` — *Named Non-Bound Gods*). **Uncommon everywhere**, with small concentrations in the upper Darklands (where Zaharsuge's shadow falls heaviest) and in the Basogur Jungle (deep-earth-adjacent wyrm habitat). Cultural disposition leans toward indigenous wyrm-cultism — many Dragonets reject the authority claim of Dragon's Reach on theological grounds. This is the most active living link between Zaharsuge's domain and the Material Plane.
 
 ### Dragons
-**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster — Tyrnarra's Dragons are a unique alien lineage, distinct from PF2e's *Dragonet* ancestry which represents native Zaharsuge-line wyrmkin).
-
-**An alien race. Their mothership crash-landed on Talan deep in the Gods' Era — roughly 4000–4500 years ago by modern reckoning** (mid-Gods'-Era; see `timeline.md`). The crash scattered dragon survivors across the continent; the gods of the era took an interest. What they did is now referred to in dragon culture as **"the corruption by the gods"** — a forced theological reshaping that the dragons have spent roughly four millennia trying to reverse.
+**An alien race**, distinct from the indigenous *Dragonet* wyrmkin of Zaharsuge's line — both ancestries exist on Talan and are unrelated. **Their mothership crash-landed on Talan deep in the Gods' Era — roughly 4000–4500 years ago by modern reckoning** (mid-Gods'-Era; see `timeline.md`). The crash scattered dragon survivors across the continent; the gods of the era took an interest. What they did is now referred to in dragon culture as **"the corruption by the gods"** — a forced theological reshaping that the dragons have spent roughly four millennia trying to reverse.
 
 **What the corruption did.** Pre-corruption Dragons were an **immortal race**. Dragon doctrine holds that the Gods'-Era gods *used* the surviving Dragons for their own purposes — Dragons were strong, useful, exploited as weapons in the gods' wars and as instruments for divine projects — and in the using, **the gods somehow stripped them of their immortality**. Modern Dragons are mortal and die of age in a band that splits along doctrine: **non-purist Dragons** typically die between **150 and 180 years**; **purist Dragons** typically reach **200**; the most disciplined of the purists — *"the purest"* — have been recorded scratching **230**. This is not folklore — it is an observable demographic fact, and it is part of why the purist–pragmatist argument never resolves. The Dragons remember being immortal — but only as oral tradition and archival record handed down from the post-crash generations. **No Dragon alive today was alive before the corruption.** *What specifically was lost — what divine or biological mechanism was severed — is not known.* That this fact is unknown is the central strife of Dragon civilisation.
 
@@ -93,7 +87,7 @@ Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding
 - **Capital:** Dragon's Reach in Sumendar (Fire / Komo). The largest concentration of surviving Dragons and the seat of their culture.
 - **Spread:** Individuals and small lineages exist across Talan, but the cultural heart is Dragon's Reach.
 - **Modern goal — seeking purity.** A recovery of the original pre-corruption nature. **Every Dragon has their own opinion on what purity means**, and not all Dragons actually want to be pure again — many think the pursuit is folly and just want to live their lives. The most single-minded are the **purists** — but there is *no school of purity*, no orthodoxy, no consensus method. **There are as many paths as there are purists.** Each Dragon must find theirs alone. Common directions observers can identify — raw power-accumulation, generations-long discipline of body and mind, meditation in the wreckage, archaeological reconstruction — are descriptive groupings, not institutions; many purists combine several, and new purists invent novel methods every generation. A purist may follow a teacher, but **when the teacher dies, the teacher was not pure**, and so the student knows more needs to be done. The recursion is the doctrine; every dead teacher is evidence that the practice must continue. Pragmatist Dragons regard the whole project with affectionate frustration; purists regard pragmatists as having given up on themselves. See `geography.md` → *Sumendar → Dragon's Reach* for the civilisational shape of this debate.
-- **Outsider perception:** Most Talanese think of Dragons as a native species. The "alien arrivals" truth is buried in dragon-internal religion and Gods'-Era scholarly archives; it is not common knowledge but is not GM-secret either — accessible to anyone who looks.
+- **Outsider perception:** Most Talanese think of Dragons as a native species. The "alien arrivals" truth is buried in dragon-internal religion and Gods'-Era scholarly archives — reachable to anyone who looks for it, just rarely sought out.
 
 **Hooks:** Any dragon NPC is asking the same question (or has decided not to). Any dragon ruin is potentially a memory of the pre-corruption nature. Any expelled god might have been one of the ones who shaped the corruption.
 
@@ -106,7 +100,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 ### Elf
 **Dominant in Zuzental (Law / Forseti)** alongside humans. Politically motivated and **long-planning** — the elven side of the Thousand Kingdom's politics moves on generational timescales, often outlasting and out-thinking the human factions whose lives don't span the same windows. Elves are one of the two ruling bloodlines of the Thousand Kingdom.
 
-**Drow** — the Darkness sub-population. Dominant in **Myrkono (Darkness / Araphel)**. Surface-dwelling, despite the PF2e stereotype: Drow on Talan are children of shadow, not children of the underdark. The underdark on Talan is the Darklands, and the Darklands belong to the Corrupted God, not to elves. Most Drow live in Myrria and the surrounding sub-regions, where Araphel's domain of shadow is a daily reality, not a metaphor.
+**Drow** — the Darkness sub-population. Dominant in **Myrkono (Darkness / Araphel)**. Surface-dwelling: Drow on Talan are children of shadow. The underdark on Talan is the Darklands, the Corrupted God's territory; the Drow live above it, in Myrria and the surrounding sub-regions, where Araphel's domain of shadow is a daily reality.
 
 ### Fetchling
 **Remnants of a civilisation that sought refuge in the region of Darkness** and found it. **Common in Myrkono**, especially Myrria. Uncommon elsewhere. Many fetchlings serve Araphel directly — including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`).
@@ -115,7 +109,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 **Native to the Blackened Lands** — the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `secret-history.md` — *The Blackened Lands* — and `geography.md` — Lioaru → Lost Kingdom). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
 
 **Two distinct fleshwarp populations exist on Talan:**
-1. **Natural-born fleshwarps of the Blackened Lands** — children of the cursed ground. They are mortal beings shaped by where they were born or where they spent enough time. This is the canonical PF2e ancestry.
+1. **Natural-born fleshwarps of the Blackened Lands** — children of the cursed ground. Mortal beings shaped by where they were born or where they spent enough time. This is the canonical Talanese fleshwarp.
 2. **Menagerie-made fleshwarps** — deliberate Red Empire fabrications, off-continent (see `factions.md`). Same end-product, completely different origin.
 
 Both are rare everywhere outside their source. A Blackened Lands fleshwarp is rare-but-pitied; a Menagerie fleshwarp is rare-and-feared. Most Talanese cannot tell them apart on sight.
@@ -124,7 +118,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 "Guardians of Time." **Dominant in Lioaru (Time / Tani)** — they are explicitly aligned with Tani's domain and many serve as wardens of temporally unstable sites along the Lioaru-Lost-Kingdom border. Their plant-rooted longevity gives them a perspective on the slow currents of time that suits their domain.
 
 ### Gnome
-**Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest. Mostly unchanged from PF2e canon.
+**Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest.
 
 ### Goblin
 **Dominant in Brauogi (Earth / Sarrum)** alongside Hobgoblins. The Goblin & Hobgoblin Kingdom is the major political sub-region of Brauogi shared between them.
@@ -148,8 +142,6 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Common in Vindul (Wind / Fisaya).** Secular by inclination — the Kashrishi tradition keeps its theology private and its civic life public, the inverse of the more zealous Nagaji of Egulon.
 
 ### Kholo
-*(Renamed from Gnoll in the PF2e remaster — Tyrnarra adopts the new name.)*
-
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations — sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
@@ -179,10 +171,10 @@ Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn)
 **Dominant in Ehizahar (Hunt / Hinka)** alongside Kholo, Lizardfolk, and Centaur. Tribal, strong. Hinka is depicted as a red-headed orc; the cultural affinity runs deep. Within the four-way tribal mix of the Lands of Villtur, Orcs are usually the loudest, the first to charge, and the most consistently in feud with their three counterparts.
 
 ### Poppet
-Small constructed beings. Rare everywhere; no domain-specific concentration. Mostly unchanged from PF2e canon as of this writing.
+Small constructed beings. Rare everywhere; no domain-specific concentration.
 
 ### Rabbitfolk
-**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster). Uncommon everywhere. No particular domain concentration; populations are widely scattered, frequently nomadic, and culturally heterogeneous. They keep no continental-scale institutions of their own.
+Uncommon everywhere. No particular domain concentration; populations are widely scattered, frequently nomadic, and culturally heterogeneous. They keep no continental-scale institutions of their own.
 
 ### Ratfolk
 **Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities — they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground.
@@ -197,7 +189,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration. Mos
 **Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `gods.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
 
 ### Slimes
-**Tyrnarra-canon addition** (not part of the standard 44 PF2e remaster roster). **Uncommon in the Darklands** — the Darklands' ambient corruption pressure suits slime adaptability. **Rare everywhere else.** The pf2e slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
+**Uncommon in the Darklands** — the ambient corruption pressure suits slime adaptability. **Rare everywhere else.** A slime on Talan is almost always a Darklands-born individual that worked its way to the surface.
 
 ### Sprite
 **Native to the Feyworld** (the Chaos plane of the Life Layer). Common there; some cross to the Material Plane and live among mortals, where they are rare. No domain-specific concentration on Talan — sprites go where they go.
@@ -212,8 +204,6 @@ Small constructed beings. Rare everywhere; no domain-specific concentration. Mos
 **Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks — the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul.
 
 ### Tripkee
-*(Renamed from Grippli in the PF2e remaster — Tyrnarra adopts the new name.)*
-
 **Commonly found on the Floating Isles of Shuun** — the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Strix, Athamaru, and Merfolk; Tripkee are the most settled of the four (Strix fly through, Athamaru swim past, Merfolk pass underneath — Tripkee build).
 
 ### Vanara
@@ -271,11 +261,9 @@ The six Tian Xia ancestries — **Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Ya
 
 ---
 
-## Versatile Heritages — Post-Remaster
+## Versatile Heritages
 
-The pf2e remaster reshuffled the versatile heritage roster — renames (Aasimar → Nephilim, expanded), absorptions (Tiefling folded into Nephilim), new elemental options (Wood → Ardande, Metal → Talos), and new ancestry-mix options (Aiuvarin, Dromaar). The mapping below is the **post-remaster canonical placement** for Tyrnarra.
-
-Most heritages are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception — some are blessed, some are feared, most are simply *known* and lived around.
+Heritages on Talan are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception — some are blessed, some are feared, most are simply *known* and lived around. The mapping below is the canonical placement for Tyrnarra; for the system-side Remaster reshuffle (Aasimar/Tiefling → Nephilim, Wood/Metal heritages, etc.) see `pf2e-notes.md`.
 
 ### Divine-blood heritages (god in the veins)
 
@@ -290,7 +278,7 @@ Most heritages are explained in-world as either a god's blood, an Elemental Plan
 
 #### Nephilim — the universal divine-blood heritage
 
-In PF2e Remaster, **Nephilim covers both celestial and fiendish features**. On Talan that broadens further:
+**Nephilim covers both celestial and fiendish features** on Talan, with parentage determining the manifestation. The mapping broadens further:
 
 - **Celestial features** manifest in Nephilim descended from *any god* — most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
 - **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a virtue demon (corruption-of-virtue lineage) or a sin devil (sin-as-being lineage). See the *Virtue Demons* and *Sin Devils* sections below for the parent populations.
@@ -313,15 +301,15 @@ These heritages carry the **spark of the Elemental Plane** itself (Layer 1 of th
 
 ### Life-Layer planar heritages
 
-The remaster added two elements (Wood, Metal) that don't fit the classical four. On Talan they map to **the two non-Material planes of the Life Layer (Layer 2)** — the planes flanking the Material Plane in the canonical cosmology. **Neither plane belongs to a bound god.** The bound thirteen all reside on the Material Plane; the Feyworld and Shadowplane are sibling planes that no god owns.
+Two further elements — Wood and Metal — sit outside the classical four. On Talan they map to **the two non-Material planes of the Life Layer (Layer 2)** — the planes flanking the Material Plane in the canonical cosmology. The bound thirteen all reside on the Material Plane; the Feyworld and Shadowplane are sibling planes that stand without a god-claimant.
 
 | Heritage | Element | Planar origin |
 |---|---|---|
 | **Ardande** | Wood | **Feyworld** — the plane of Chaos (vibrant, shifting, unpredictable) |
 | **Talos** | Metal | **Shadowplane** — the plane of Order (constant, unchanging, eternal in structure) |
 
-- **Ardande** carry the spark of Feyworld's living-growth element — wild, lush, mutable. They are creatures of the chaos-plane substrate. Their relationship to the bound thirteen is no closer than any other mortal's — Vesuna is the *god of Chaos*, but her domain is Nashavel on the Material Plane, not the Feyworld. Ardande lineages cluster wherever their kin are welcomed, regardless of domain.
-- **Talos** carry the spark of Shadowplane's eternal-structure element — fixed, ordered, durable. The name *Shadowplane* is a cosmological accident — the plane is order, not darkness — and Talos are not Araphel-aligned, despite the surface verbal overlap. Forseti is the *god of Law*, but his domain is Zuzental, not the Shadowplane. Talos lineages live without a god-claimant; their cultural communities form around craft and structure rather than worship.
+- **Ardande** carry the Feyworld's living-growth element — wild, lush, mutable; creatures of the chaos-plane substrate. Their planar lineage runs to the Feyworld itself, parallel to (rather than mediated by) the bound thirteen. Ardande lineages cluster wherever their kin are welcomed, by cultural gravity rather than domain alignment.
+- **Talos** carry the Shadowplane's eternal-structure element — fixed, ordered, durable. *Shadowplane* is the cosmological name; the plane's substance is order, and Talos express that order rather than the surface-verbal overlap with darkness. Their planar lineage runs to the Shadowplane itself, parallel to the bound thirteen. Talos communities form around craft and structure, gathering by trade rather than worship.
 
 ### Mortal-ancestry mixes
 
@@ -330,25 +318,25 @@ The remaster added two elements (Wood, Metal) that don't fit the classical four.
 | **Aiuvarin** | Half-Elf, half any other ancestry | Most common where elves dominate (Zuzental, Myrkono Drow communities); the half-and-half identity is its own social position. |
 | **Dromaar** | Half-Orc, half any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi, Lautara, Nashavel). |
 
-These are genetic, not metaphysical — no divine, planar, or otherworldly lineage. Their place in the world is shaped by the mortal politics of the two ancestries involved.
+These are mortal-ancestry mixes — genetic lineages, with their place in the world shaped by the mortal politics of the two parent ancestries.
 
 ### Other lineages
 
 | Heritage | Source | Notes |
 |---|---|---|
-| **Dhampir** | Half-Vampire | Vampire heritage — undead-touched, not god-touched. Vampires are an independent lineage on Talan (not a bound-god creation), and Dhampir descend from them directly. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The acceptance is cultural, not doctrinal — Dhampir are not Araphel's by blood. |
+| **Dhampir** | Half-Vampire | Vampire heritage — undead-touched. Vampires are an independent lineage on Talan, and Dhampir descend from them directly. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The welcome is cultural — a social courtesy, with the lineage itself staying its own. |
 | **Dragonblood** | Alien Dragons | Descendants of the alien Dragons whose mothership crash-landed during the Gods' Era (see *Dragons* in the ancestry list). Concentrates around Dragon's Reach in Sumendar. Carries some of the dragon-doctrinal hunger for *purity / their roots* — Dragonblood adventurers are often seekers. |
 | **Hungerseed** | Half-Oni | **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha — Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra — a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. The Adventurers' Guild's stance is the same as for any unusual heritage: assess the individual, not the lineage. |
 | **Reflection** | Wellspring-direct (Stillpool-born) | **Public framing (cover):** ritual mishap, cosmic blip, or magical duplication; no parent lineage, made sometimes intentionally and often not; arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. **GM truth:** every Reflection is born near a **Stillpool** roughly one week after a mortal interacts with it (looks too long, bathes, drinks, leaves something behind). Stillpools are the residual Wellspring-touched sites left over from the **Lost-Era leak** (see `cosmology.md` — *Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window* and `secret-history.md` — *The Lost Era — The Real History*). Reflections are mortal-shaped but anchored directly to the Wellspring rather than to any deity-mediated ancestry line, and the Gods' Law's framework for binding mortal/divine ascension does not fully apply to them. **The Golden Emperor was a Reflection** — the only one in recorded history who learned to consciously pull on the connection. See `secret-history.md` — *The Golden Empire — The Real History*. |
 
-### Bound gods without heritages
+### Bound gods whose touch passes outside bloodline
 
-After the remaster reshuffle, four of the bound thirteen have no exclusive heritage on Talan:
+Four of the bound thirteen express their touch otherwise than through an exclusive heritage:
 
-- **Iro** (Light) — was Aasimar; now covered by Nephilim (celestial). No exclusive heritage.
-- **Enki** (Knowledge) — was Suli (pre-remaster); now Suli is generic geniekin. **Enki has no remaster heritage.** Knowledge isn't a body-borne trait in the new system; Enki-touched mortals manifest scholarly aptitude rather than physical change.
-- **Jianna** (Commerce) — never had one. Jianna's blessing is accumulated good fortune in trade, not in body.
-- **Cronus** (Freedom) — never had one. Cronus's nature does not lend itself to bloodline transmission (see `secret-history.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by choice, not blood.
+- **Iro** (Light) — celestial Nephilim is the divine-blood expression of Iro's touch.
+- **Enki** (Knowledge) — Enki's touch manifests as scholarly aptitude; it travels in the mind.
+- **Jianna** (Commerce) — Jianna's blessing accumulates as good fortune in trade; it travels in the ledger.
+- **Cronus** (Freedom) — Cronus's nature passes by choice (see `secret-history.md` — *Cronus — The Secret* for the theological reason). His worshippers are made by deciding.
 
 ---
 
@@ -382,8 +370,6 @@ This is why the demons are not random or symmetric: they are exactly as numerous
 - Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones. The Cowardice-demon and the Rashness-demon both pervert Courage — and both have reasons to hate each other.
 - Mortal philosophers who study Talan's moral pattern can predict demon behaviour. This is how a handful of Enki-aligned exorcists work: they read the demon, identify its virtue line and which extreme it embodies, then deploy the *opposite* extreme to push it off-pattern.
 
-**Open thread:** The full taxonomic catalogue (named demon per line) is incomplete. Most virtue lines have an as-yet-unnamed demon, which is one of the rolling worldbuilding hooks left open here.
-
 ---
 
 ## Sin Devils — the Seven
@@ -400,7 +386,7 @@ The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unli
 | **Sloth** | *(unnamed)* | TBD |
 | **Wrath** | *(unnamed)* | **Destruction** |
 
-**Status:** Placeholder. The WA export had only the seven category names with no entries; the devil-lord names, their politics, their planar seats, and their relationships to mortals are all open. The structural pattern is locked in: seven sins, seven lords, no more, no less.
+The structural pattern is locked: seven sins, seven lords. Three are mapped to grantable domains (Indulgence → Gluttony, Tyranny → Pride, Destruction → Wrath); the remaining four await canon.
 
 **Demon / Devil distinction in Talan:**
 - **Demons** corrupt a virtue. They are perversions of what could have been good. Their existence is parasitic on the virtue line.
