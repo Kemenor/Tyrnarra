@@ -111,14 +111,4 @@ Currently used in:
 
 ---
 
-## Future Work
-
-- **Settlements**: reintroduce Millhaven under `/talan/domains/brauogi/millhaven/millhaven.html`.
-- **Sub-region promotion (remaining major)**: Thousand Kingdom, Dragon's Reach, River Duchies. The pattern is established by Fenurra / Emarrea / Myrria / Crossroads / Lost Kingdom / Order of Steam / Emerald Isles.
-- **Other god city-state pages**: Myrria's pattern (folder under domain, settlement page named after the folder) can be replicated for Haizava, Merkavar, Uravel, Eldara, Denbora, Lurrath, Thekkavar, Ljosarn, Lograth, Nahaskel, Veidrath, Frae City as their content matures.
-- ~~**Myrria sub-pages**~~ — RESOLVED 2026-05-17. Both Myrria's Godshall and Seraphel Duskbane were published on `/talan/factions/adventurers-guild.html` (Tier 3 step 5) — Godshall as its own H2 section *A Regional Seat Worth Naming*, Seraphel as a full figure-card. Cross-linked from `myrria.html`. Dedicated sub-pages aren't needed — Godshalls are a guild tier and Seraphel is a guild sovereign, so the Adventurers Guild page is their right home.
-- **The other six Wardstones**: their host cities (Lakeside, Steppes, Forest, Temple, Monastery, Port) currently lack names — once named, each can become its own settlement page linked from the-binding.html.
-- **The eight remaining Nine Generals' dungeons**: only the Vermin Queen's Hollow of Ten Thousand Threads is sited. The other seven need placement before they can earn their own dungeon pages.
-- **Three-tier UI on remaining eras**: extend the amber Popular Belief / red GM Secret expandables to Gods', Lost, Golden, Dark, Adventurer eras as content gets written.
-- **Per-god GM Secrets**: fill out the 12 placeholder secrets on `grand-gods.html` (Cronus is done).
-- **Legea Empire page**: the Zuzental sub-region housing the Divine Faith demigod theocracy — pending the deity-name / demigod-name / prince-name calls.
+This file is a **description of what is published**, not a TODO list. For forward work — what needs writing, fleshing out, or publishing next — see [`open-threads.md`](open-threads.md).
