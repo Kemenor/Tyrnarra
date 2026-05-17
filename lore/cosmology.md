@@ -58,6 +58,23 @@ All gods and godlike beings (including demon lords, powerful spirits, belief-bor
 - This applies to mortals too: a king, a general, a famous hero accrues tiny amounts of power from everyone who believes in them. This is why great leaders sometimes seem more than mortal — because they literally are.
 - Gods themselves grow more powerful with more belief. Being feared and being loved are both valid sources.
 
+### Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window
+
+The Wellspring's outflow into the Life Layer is **not self-stabilising**. The source-fluid wants to touch everything it can reach, and what prevents it from doing so unmediated is the presence of gods — many gods, distributed across the Material Plane, each siphoning, channelling, and grant-mediating the outflow through their own divine machinery (cleric magic, ancestry-mediated lineages, divine sanctuaries, ambient grants). **Many gods = dense mediation lattice = stable outflow.** This was the steady state of the Gods' Era: hundreds of gods present, the outflow fully channelled, the world functioning the way mortals expected it to.
+
+**The Week of Crimson Rain broke the lattice.** The Gods' Law banished all divine beings from the Material Plane except the thirteen who accepted the binding (see `secret-history.md` — *Week of Crimson Rain*). The thirteen, alone, could not mediate the outflow at the density the prior pantheon had maintained. **For roughly the first century of the Lost Era, the Wellspring's outflow leaked.** Source-fluid touched the world more directly than at any time since pre-Creation:
+
+- Dreamers in scattered places **shaped reality in their sleep**.
+- Certain valleys spoke **languages that produced what they named**.
+- Infants were born already **speaking tongues no living parent recognised**.
+- The **Storveldi integration procedure** (see *Integration — the genuinely rare knowledge* below) became findable again to anyone whose curiosity took them the right way.
+- **Some mortals certainly ascended in those decades.** There was no one to stop them and no one to record what they became.
+- And the leak produced a new class of beings: **Reflections** (see `bestiary.md` — *Reflection heritage*). The first Reflections were mortals born when raw, un-mediated Wellspring touched a conception or earliest gestation — mortal-shaped but anchored directly to the Wellspring, with no deity-mediated ancestry line.
+
+**Stabilisation.** The thirteen returned during the second century with a new mediation framework — what mortals now experience as **the Four Schools** (see below) and the modern cleric craft. The Four Schools' modern form is not pre-Crimson-Rain magic; it is the post-leak stabilisation tooling, designed to let mortals mediate the outflow themselves where the thirteen are too few. By the close of the second century, the general leak had subsided.
+
+**Stillpools — residual leak sites.** When the general leak stopped, a small, **deliberately uncatalogued** number of Wellspring-touched sites remained scattered across Talan. The sources that have made counts disagree; the **Adventurers Guild's sealed atlas** is the closest thing to authoritative, used by high-rank Guild parties as a working register, and even it is presumed incomplete. Local folklore knows them as **fairy-haunted, witch-touched, bad-luck-to-visit** — quiet hidden ponds, clearings, caves, unremarkable to outside observation. Mortals who interact with a Stillpool (look too long, bathe, drink, leave something behind) **have a chance of causing a Reflection to be born nearby roughly one week later.** Every modern Reflection traces back to a Stillpool event. They are not random and not mishaps.
+
 ### The Mortal Ascent Ladder
 
 The path from mortality to godhood runs along the same four-tier hierarchy that governs all divine power (see *Divine Power Tiers* above). Each rung has its own gate:
