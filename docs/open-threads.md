@@ -206,6 +206,19 @@ Promoted to full canon as part of the **Magitech and Infrastructure** section in
 
 ---
 
+## Site structure — reorganisation TODOs
+
+### Factions page reorganisation
+**Status:** medium — factions.html has accumulated mixed content and probably wants a structural pass.
+**What's decided:** Train Pirates and the Conductor's Station were added to `factions.html` as a *Bandit Categories & Hazards* section (2026-05-17) to close a broken cross-link from `talan.html` and `order-of-steam.html`. The placement is functional but not ideal — the factions overview was designed for the four faction categories (Political, City-States, God Churches, Independent Organisations), and bandits + train-network hazards are neither.
+**What's open:**
+- Whether Bandit Categories deserves its own page (`/talan/factions/bandits.html`?) once more categories land (highway raiders, Midarra river pirates / Twin Cities, ruin-strippers, slavers).
+- Whether the **Conductor's Station** deserves its own page entirely — it is a *phenomenon* more than a bandit category, and grouping it with mortal banditry under-sells the cosmological strangeness. Possible homes: own page under `/talan/factions/` (or a future `/talan/hazards/` folder), or fold into a "Magitrain phenomena" section on a future rail-focused page.
+- Whether **the Twin Cities** (Midarra's mobile pirate capital) and **other Midarra-side piracy** want their own home once they earn more content — likely under Askamira or as a peer page.
+**Where it lives:** `talan/factions/factions.html` — *Bandit Categories & Hazards* section at the bottom.
+
+---
+
 ## HTML publishing
 
 **Status:** not started. User holds the publish signal.

@@ -20,6 +20,9 @@ Last updated **2026-05-17**. For repo conventions and folder layout, see [`../CL
   talan.html                   continent overview, three seas, 13 domain cards   POPULATED
                                + Continental Rail Network + Other Continents     (UPDATED 2026-05-17 Tier 3 step 7)
   history.html                 8 eras with three-tier knowledge UI               POPULATED
+                               + Gods' Era three-tier expandables (Old Race + Storveldi)
+                               + Week of Crimson Rain secret harmonised
+                                                                                 (UPDATED 2026-05-17 Tier 3 step 8)
   the-binding.html             Wardstones + Nine Generals + War of Seals         POPULATED  (NEW 2026-05-16; GM Secret + General domain-grants added 2026-05-17)
 
 Tier 1 publishing pass — 2026-05-17:
@@ -52,6 +55,8 @@ Tier 1 publishing pass — 2026-05-17:
 
 /talan/factions/
   factions.html                taxonomy overview + 4 cards                       POPULATED
+                               + Bandit Categories & Hazards (Train Pirates +
+                               Conductor's Station)                              (UPDATED 2026-05-17)
   adventurers-guild.html       FULL REWRITE (2026-05-17) — branch hierarchy, rank ladder, Bank, Post, Lavisburg, Seraphel, Godshall
   mercenary-guild.html         POPULATED
   god-churches.html            POPULATED      remnants.html            POPULATED
