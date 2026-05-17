@@ -21,14 +21,19 @@
   var DOMAINS = [
     { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [] },
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
-      { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html' }
+      { slug: 'emarrea',    label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html' },
+      { slug: 'crossroads', label: 'Crossroads · Tri-Domain Nexus', href: '/talan/domains/lautara/crossroads.html' }
     ]},
     { slug: 'myrkono',  label: 'Myrkono · Darkness',  href: '/talan/domains/myrkono/myrkono.html',   children: [
       { slug: 'myrria',  label: 'Myrria · City of Second Chances', href: '/talan/domains/myrkono/myrria/myrria.html' }
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/talan/domains/floteyn/floteyn.html',   children: [] },
-    { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/talan/domains/sumendar/sumendar.html', children: [] },
-    { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/talan/domains/lioaru/lioaru.html',     children: [] },
+    { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/talan/domains/sumendar/sumendar.html', children: [
+      { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html' }
+    ]},
+    { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/talan/domains/lioaru/lioaru.html',     children: [
+      { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/talan/domains/lioaru/lost-kingdom.html' }
+    ]},
     { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/talan/domains/brauogi/brauogi.html',   children: [] },
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
@@ -128,6 +133,13 @@
       '      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>',
       '      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>',
       '      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>',
+      '    </ul>',
+      '  </div>',
+
+      '  <div class="nav-section">',
+      '    <div class="nav-section-label">Off-Continent</div>',
+      '    <ul class="nav-list">',
+      '      <li><a href="/off-continent/red-empire.html" data-page="red-empire">The Red Empire</a></li>',
       '    </ul>',
       '  </div>',
       '</aside>'

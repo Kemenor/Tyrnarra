@@ -8,6 +8,36 @@
 <link rel="stylesheet" href="/assets/style-a.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<style>
+  /* Mortal Ascent Ladder — vertical rungs */
+  .ladder { max-width: 940px; margin: 18px auto; }
+  .rung { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 14px 18px; margin-bottom: 12px; background: rgba(20,18,40,0.55); border-left: 3px solid var(--rung-color, #c8a84a); border-radius: 4px; }
+  .rung-num { font-family: 'Cinzel Decorative', serif; color: var(--rung-color, #c8a84a); font-size: 1.8rem; text-align: center; padding-top: 4px; }
+  .rung-body .rung-label { font-family: 'Cinzel', serif; font-weight: 600; color: var(--rung-color, #f0d080); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
+  .rung-body .rung-gate { font-style: italic; font-size: 0.88rem; color: #a8a4c0; margin-bottom: 6px; }
+  .rung-body .rung-desc { font-size: 0.95rem; color: var(--text); }
+  .r-demi   { --rung-color: #c8a84a; }
+  .r-minor  { --rung-color: #d8b860; }
+  .r-major  { --rung-color: #e8c878; }
+  .r-grand  { --rung-color: #a890c8; }
+
+  /* Domains-Outside table */
+  .domains-table { width: 100%; max-width: 920px; margin: 16px auto; border-collapse: collapse; font-size: 0.9rem; }
+  .domains-table th, .domains-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(200,168,74,0.2); }
+  .domains-table th { font-family: 'Cinzel', serif; color: #f0d080; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.76rem; }
+  .domains-table td:first-child { font-family: 'Cinzel', serif; color: #f0d080; font-weight: 600; }
+  .domains-table tr:hover { background: rgba(200,168,74,0.06); }
+  .lin-corr  { color: #d88060; }
+  .lin-devil { color: #c87890; }
+  .lin-demon { color: #a890c8; }
+  .lin-indep { color: #80b890; }
+
+  /* Magitech sub-traditions */
+  .magitech-row .scale-item { background: rgba(20,18,40,0.5); }
+
+  /* Inline GM-secret styling tweak for magic page (Style A already provides .secret-section etc.) */
+  .ladder-secret { max-width: 940px; margin: 18px auto; }
+</style>
 </head>
 <body data-page="magic">
 
@@ -62,6 +92,54 @@
     </div>
   </div>
 
+  <!-- Magitech — The Applied Forms -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Magitech — The Applied Forms<div class="gdiv-sublabel">Building with the schools, not redefining them</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p><b>Magitech</b> is the umbrella term for any applied integration of magic with material engineering. It is not a fifth school — it is what mortals do when they <i>build with</i> the existing four. The same way an electrical engineer isn't doing fresh physics, a Magitech engineer isn't doing fresh magic. They are working out how to manufacture <i>with</i> an established magical principle at scale.</p>
+    <p>Each of the four schools has its own Magitech sub-tradition. They differ wildly in commonness — by an order of magnitude or more between adjacent rungs.</p>
+  </div>
+
+  <div class="scale-row magitech-row">
+    <div class="scale-item">
+      <div class="scale-icon">⚙️</div>
+      <div class="scale-content">
+        <div class="scale-label">Arcanotech</div>
+        <div class="scale-desc"><b>By far the most common.</b> Industrial Arcanotech is what mortals mean when they say "Magitech" colloquially — rune-arrays, formula-driven engineering, reproducible enchantment-as-manufacture. All Magitrains, almost all airships, the entire Order of Steam catalogue, regulated streetlight grids, sanitation arrays, mercantile reckoning machines, the bulk of cloudship hulls. The natural substrate for industry because Arcane is formula-based, reproducible, and scalable.</div>
+      </div>
+    </div>
+    <div class="scale-item">
+      <div class="scale-icon">📜</div>
+      <div class="scale-content">
+        <div class="scale-label">Occultech</div>
+        <div class="scale-desc"><b>Rarer.</b> Story-and-belief encoded into the object itself. A song-rune-engine runs better in regions where the song is widely sung; a sword reforged from a famous battlefield's iron carries the battle's weight. Narrative-based, not formula-based — every Occultech item is partly unique. <b>Meaningfully more resilient than Arcanotech in chaos-disrupted regions</b> (the Blackened Lands, Basogur, the upper Darklands), which is why Adventurers' Guild high-rank parties carry Occultech blades into cursed country.</div>
+      </div>
+    </div>
+    <div class="scale-item">
+      <div class="scale-icon">✦</div>
+      <div class="scale-content">
+        <div class="scale-label">Divitech</div>
+        <div class="scale-desc"><b>Almost non-existent.</b> A god must grant the underlying access for the device to function — which makes the device dependent on a continuing divine relationship, not on the device itself. A few sanctified pieces exist (a Wardstone-adjacent device in Myrria, Iro-sanctified hospital wards in Ljosarn), but Divitech does not scale. Gods don't license their power for industrial production, and an item that breaks its god-relationship simply stops working. Ceremonial / institutional, never industrial.</div>
+      </div>
+    </div>
+    <div class="scale-item">
+      <div class="scale-icon">🌿</div>
+      <div class="scale-content">
+        <div class="scale-label">Primotech</div>
+        <div class="scale-desc"><b>Essentially non-existent.</b> Primal magic is attunement to the living current — it doesn't manufacture, it <i>grows</i>. The handful of extant Primotech items are all legendary: living-wood polearms that bond with their wielder across decades, leshy-grown bowyards that produce one perfect bow per generation, a rumoured Brauogi heart-stone. Most mortals will never see a Primotech item in their lifetime; druids are doctrinally suspicious of the category in any case.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-body">
+    <p><b>When someone says "Magitech" without qualifying, they mean Arcanotech</b> — the same way "phone" defaults to "smartphone" in the modern reader's mouth. Modern Magitech is recovered <a href="/talan/the-binding.html">Elden</a>-tech evolved: post-Crimson-Rain Talanese kingdoms began the systematic archaeology of pre-Rain ruins, and every modern Arcanotech tradition traces back, at one or two removes, to those discoveries. The <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> in Sumendar grew up around an Elden-tech excavation; it remains the largest Magitech producer on the continent.</p>
+    <p><b>Talan's four transport tiers are all Magitech</b> in the modern era. Magitrains carry the land (Arcanotech, continental rail network); Magitech ships are the wealth upgrade on the seas alongside wood-and-sail; <b>airships are always Magitech</b> — there are no non-magical airships — Arcanotech for the standard hulls, Occultech with a bound air elemental for chaos-region work; <b>cloudships are always dual-school</b> (typically Arcanotech + Occultech), which is the structural reason they are so rare. They are the only craft that can cross the Cloud Sea — and therefore the only practical way Talan reaches <a href="/off-continent/red-empire.html">other continents</a>.</p>
+  </div>
+
   <!-- Magic in Daily Life -->
   <div class="group-divider">
     <div class="gdiv-line"></div>
@@ -104,6 +182,106 @@
     </div>
   </div>
 
+  <!-- The Mortal Ascent Ladder -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">The Mortal Ascent Ladder<div class="gdiv-sublabel">How a mortal becomes a god — the public version</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>The Wellspring is the source of all divine power; gods are concentrations of it. The path from mortal to god is not blocked by divine decree — it is gated by <b>scarcity of the right materials</b> at each rung. The gods themselves cannot prevent a determined and well-placed mortal from rising; what they can do is keep the choke-point knowledge scarce.</p>
+    <p>The ladder has four rungs. Each has its own gate.</p>
+  </div>
+
+  <div class="ladder">
+
+    <div class="rung r-demi">
+      <div class="rung-num">I</div>
+      <div class="rung-body">
+        <div class="rung-label">Mortal → Demi-God</div>
+        <div class="rung-gate">Gate: enough accumulated power</div>
+        <div class="rung-desc">Climbable under a mortal's own work. The gate is <b>raw accumulation</b> — primarily belief, but also great deeds, accumulated divine residue, and other Wellspring-touched sources. No god's consent required. No external relic required. The contemporary case study walks among us: <a href="/talan/factions/adventurers-guild.html">Lord Albrecht Lavisburg</a>, by accumulated mortal belief alone.</div>
+      </div>
+    </div>
+
+    <div class="rung r-minor">
+      <div class="rung-num">II</div>
+      <div class="rung-body">
+        <div class="rung-label">Demi-God → Minor God</div>
+        <div class="rung-gate">Gate: a shard of divinity</div>
+        <div class="rung-desc">Requires a <b>shard of divinity</b> — a fragment of power that already exists in the world. <i>A shard's use does not require the original god's consent</i> — the shard is sought-after, not granted. Shards exist in many places, plural; the scarcity at this rung is in the finding, and in the <i>knowing-what-to-do-with-it</i>.</div>
+      </div>
+    </div>
+
+    <div class="rung r-major">
+      <div class="rung-num">III</div>
+      <div class="rung-body">
+        <div class="rung-label">Minor God → Major God</div>
+        <div class="rung-gate">Gate: further shards — more, larger, rarer</div>
+        <div class="rung-desc">The same mechanism, applied at a level where the shards required are far harder to come by. Major Gods, if they choose to reside on the Material Plane, are fully bound by the Gods' Law.</div>
+      </div>
+    </div>
+
+    <div class="rung r-grand">
+      <div class="rung-num">IV</div>
+      <div class="rung-body">
+        <div class="rung-label">Major God → Grand God</div>
+        <div class="rung-gate">Gate: impossible by any normal mechanism</div>
+        <div class="rung-desc">The Thirteen are the original Twelve plus one. The Twelve created existence itself; the one was a unique one-time event driven by the Gods' Law's anchoring mechanism. <b>There is no replicable path for any other being to reach Grand God.</b> Mortals on this rung are folk-tale; sober theologians do not list it among the climbable rungs.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-body">
+    <p><b>Where shards come from.</b> The mechanism is open knowledge; the locations are guarded. Shards exist wherever divine power has been concentrated or shed:</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-title">Ruins of Fallen Civilisations</div>
+      <div class="info-card-body">Sites where divine artefacts were handled — Elden ruins, the deeper Lost-Kingdom strata, the ruined sancta of gods banished or killed during the Week of Crimson Rain. Picked over for millennia; still productive.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">Godblood Battlefields</div>
+      <div class="info-card-body">Places where a god bled or died on the Material Plane. The Week of Crimson Rain was the largest such event in history; smaller skirmish sites persist from across the Gods' Era.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">Killing Another God</div>
+      <div class="info-card-body">Slaying a Minor or Major God yields a shard from the kill. A near-impossible feat under normal circumstances — gods at that tier are not easy targets, and the act draws immediate attention from the rest of the hierarchy. But it is the cleanest source of a fresh shard.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">The Aurora &amp; Duskmire Veils</div>
+      <div class="info-card-body">The transitional veils flanking the Life Layer. Both bear residue of every god who has passed through. Shards can be recovered from either — though crossing the veils is itself a feat reserved for the powerful.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">Other Planes Where Gods Have Died</div>
+      <div class="info-card-body">The deeper planes — Elysium, Diyu, Abyss, the Energy and Elemental planes — hold shards from divine deaths recorded over the ages. Most are sealed inside the dwellings of the gods still resident there.</div>
+    </div>
+  </div>
+
+  <div class="section-body">
+    <p><b>The genuinely rare commodity.</b> Finding a shard is hard. <i>Using one correctly is harder.</i> A shard is not consumed by being held — a mortal who simply possesses or wears one accrues nothing but danger. Converting a shard into actual ascension requires <b>integration</b>: a specific procedure that imbues the shard into the mortal's own divine essence. Integration done wrong destroys the mortal. Done correctly, it elevates them.</p>
+    <p>The integration procedure is the choke point. Not shards — <i>shards exist in many places.</i> What hides is the procedure. Whoever holds it can convert any recovered shard into an ascension; whoever does not is just a mortal carrying a dangerous rock.</p>
+    <p>Most factions with an interest in mortal ascension focus on <b>finding the procedure</b>, not on hoarding shards. The bound thirteen do not advertise shard locations either, but they cannot easily destroy them. Where they <i>can</i> exert pressure is by suppressing the procedure.</p>
+  </div>
+
+  <div class="ladder-secret">
+    <div class="secret-section">
+      <button class="secret-toggle" onclick="toggleSecret(event, this)">⚿ &nbsp; GM Secret — Where the Integration Procedure Is Now</button>
+      <div class="secret-content">
+        <div class="secret-label">⚿ &nbsp; Known to Almost No One</div>
+        <div class="secret-text">
+          The integration procedure was developed by the <b>Storveldi Denbora</b>, a mortal civilisation of the Gods' Era. They ran it at industrial scale and elevated their entire ruling class to Demi-God status, with their two most accomplished sovereigns reaching Minor God status by integrating recovered shards. Their two Minor Gods, backed by the Demi-God ruling class beneath them, attacked Tani in her own domain and killed her — the act that triggered the Week of Crimson Rain.<br><br>
+          The retaliation annihilated their homeland. <b>One member of the ruling class survived</b> and used the integration procedure on himself in the aftermath, ascending to Minor God status. He took the name <b>Betibizi</b> ("eternal life," self-given), became god of Undeath, and fled to Abyss. He has not returned. He is the <b>original holder of the integration procedure</b> as it persists today, and the reason it persists at all.<br><br>
+          Fragments of the procedure persist on Talan among Betibizi's cult and the descended Azarketi lineages. <b>Reconstructing the complete procedure from those fragments is the largest unsolved capability gap on Talan.</b> The bound thirteen do not discuss whether they know where the surviving fragments are.<br><br>
+          See <a href="/talan/domains/lioaru/lost-kingdom.html">lost-kingdom.html</a> for the Blackened Lands deep dive, <a href="/talan/the-binding.html">the-binding.html</a> for the Corrupted God's true (Elden) identity — distinct from this story — and <a href="/talan/history.html">history.html → Gods' Era</a> for the timeline placement.
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Faith & the Gods -->
   <div class="group-divider">
     <div class="gdiv-line"></div>
@@ -134,11 +312,56 @@
     </div>
   </div>
 
+  <!-- Domains Outside the Thirteen -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Domains Outside the Thirteen<div class="gdiv-sublabel">Cleric domains the Bound do not grant</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>The Pathfinder cleric domains beyond those held by the Thirteen Bound Gods exist on Talan, and they can be channeled — they are simply <b>sourced from elsewhere</b>. The table below maps each to its in-world granter. Most trace upward to the Corrupted God, the virtue-demons, the sin-devils, or a named non-bound god; a few have an intermediate granter — a General of Corruption, for instance, who in turn serves the Corrupted God.</p>
+  </div>
+
+  <table class="domains-table">
+    <thead><tr><th>Domain</th><th>Granted by</th><th>Lineage</th></tr></thead>
+    <tbody>
+      <tr><td>Abomination</td><td>Muiral the Misshapen <span style="color:#a8a4c0">(Modesty-line virtue-demon)</span></td><td class="lin-demon">Virtue-demon</td></tr>
+      <tr><td>Plague</td><td>The Corrupted God</td><td class="lin-corr">Corrupted God — direct</td></tr>
+      <tr><td>Undeath</td><td>Betibizi <span style="color:#a8a4c0">(Storveldi-Denbora-descended Minor God; Abyss)</span></td><td class="lin-indep">Independent</td></tr>
+      <tr><td>Decay</td><td>The Rot-Tyrant <span style="color:#a8a4c0">(General of Corruption)</span></td><td class="lin-corr">Serves the Corrupted God</td></tr>
+      <tr><td>Swarm</td><td>The Vermin Queen <span style="color:#a8a4c0">(General of Corruption)</span></td><td class="lin-corr">Serves the Corrupted God</td></tr>
+      <tr><td>Naga</td><td>The Maw Serpent <span style="color:#a8a4c0">(General of Corruption)</span></td><td class="lin-corr">Serves the Corrupted God</td></tr>
+      <tr><td>Nightmares</td><td>The Whisperer in Dreams <span style="color:#a8a4c0">(General of Corruption)</span></td><td class="lin-corr">Serves the Corrupted God</td></tr>
+      <tr><td>Tyranny</td><td>The Pride Sin-Devil</td><td class="lin-devil">Sin-devil</td></tr>
+      <tr><td>Destruction</td><td>The Wrath Sin-Devil</td><td class="lin-devil">Sin-devil</td></tr>
+      <tr><td>Indulgence</td><td>The Gluttony Sin-Devil</td><td class="lin-devil">Sin-devil</td></tr>
+      <tr><td>Pain</td><td>virtue-demon <span style="color:#a8a4c0">(Patience-line excess)</span></td><td class="lin-demon">Virtue-demon</td></tr>
+      <tr><td>Toil</td><td>virtue-demon <span style="color:#a8a4c0">(Industriousness-line excess)</span></td><td class="lin-demon">Virtue-demon</td></tr>
+      <tr><td>Sorrow</td><td>virtue-demon <span style="color:#a8a4c0">(Magnanimity-line deficiency)</span></td><td class="lin-demon">Virtue-demon</td></tr>
+      <tr><td>Delirium</td><td>virtue-demon <span style="color:#a8a4c0">(Temperance-line deficiency)</span></td><td class="lin-demon">Virtue-demon</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-body">
+    <p><b>Reading the table.</b> <i>Lineage</i> tells you whose authority the clerical grant ultimately serves. A cleric of Decay channels through the Rot-Tyrant directly, but the Rot-Tyrant is the Corrupted God's vehicle — the cleric's power answers to <i>both</i>. A cleric of Indulgence channels through a sin-devil and answers to that devil alone. A cleric of Undeath answers to Betibizi alone (no Corrupted-God lineage).</p>
+    <p><b>What's not in the table.</b> The Thirteen's own cleric domains are covered on <a href="/grand-gods.html">grand-gods.html</a>. A PF2e domain not listed in either place is an obscure or experimental claim that needs a GM ruling.</p>
+    <p>The <b>four sin-devils that do not yet appear here</b> (Greed, Lust, Envy, Sloth) still exist as canonical devil-lords; their Tyrnarra-grantable domains are TBD. Same for the unmapped virtue-demons.</p>
+  </div>
+
   <div class="footer-note">TYRNARRA · MAGIC &amp; FAITH</div>
 
 </div>
 
 <script>
+function toggleSecret(e, btn) {
+  e.stopPropagation();
+  if (!btn.getAttribute('data-original')) btn.setAttribute('data-original', btn.innerHTML);
+  const content = btn.nextElementSibling;
+  const revealed = content.classList.toggle('revealed');
+  btn.innerHTML = revealed ? '⚿ &nbsp; Hide Secret' : btn.getAttribute('data-original');
+}
+
 const sf = document.getElementById('starfield');
 for (let i = 0; i < 180; i++) {
   const s = document.createElement('div');

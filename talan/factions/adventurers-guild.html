@@ -8,7 +8,45 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
-<style>:root { --domain-accent: #c8900a; }</style>
+<style>
+  :root { --domain-accent: #c8900a; }
+
+  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .tier-card { background: rgba(28,20,8,0.55); border-left: 4px solid var(--tier-color, var(--domain-accent)); padding: 14px 16px; border-radius: 4px; }
+  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--tier-color, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .tier-where { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 6px; }
+  .tier-lead { font-size: 0.78rem; color: var(--gold-dim); margin-top: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .tier-desc { font-size: 0.9rem; color: var(--text); }
+  .t-branch    { --tier-color: #a07050; }
+  .t-office    { --tier-color: #c8900a; }
+  .t-guildhall { --tier-color: #d8a830; }
+  .t-kings     { --tier-color: #e0b850; }
+  .t-godshall  { --tier-color: #f0d080; }
+
+  .rank-table { width: 100%; max-width: 920px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
+  .rank-table th, .rank-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(200,144,10,0.22); vertical-align: top; }
+  .rank-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+  .rank-table td:first-child { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; white-space: nowrap; }
+  .rank-table tr:hover { background: rgba(200,144,10,0.06); }
+
+  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 14px auto; max-width: 1000px; }
+  .service-card { background: rgba(28,20,8,0.5); border-left: 3px solid var(--gold-dim); padding: 12px 14px; border-radius: 4px; }
+  .service-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 4px; }
+  .service-desc { font-size: 0.9rem; color: var(--text); }
+
+  .figure-card { background: rgba(28,20,8,0.6); border: 1px solid rgba(200,144,10,0.4); border-radius: 4px; padding: 18px 22px; margin: 22px auto; max-width: 940px; }
+  .figure-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
+  .figure-name { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.55rem; margin-bottom: 4px; }
+  .figure-byname { font-style: italic; color: var(--gold-dim); font-size: 0.95rem; margin-bottom: 14px; }
+  .figure-grid { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; font-size: 0.92rem; }
+  .figure-grid dt { font-family: 'Cinzel', serif; color: var(--gold-dim); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.78rem; padding-top: 2px; }
+  .figure-grid dd { margin: 0; color: var(--text); }
+
+  .godshall-block { background: rgba(28,20,8,0.5); border-left: 4px solid var(--gold-bright); padding: 14px 18px; margin: 22px auto; max-width: 940px; border-radius: 4px; }
+  .godshall-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 6px; }
+  .godshall-block ul { padding-left: 22px; margin: 8px 0; }
+  .godshall-block li { margin-bottom: 6px; }
+</style>
 </head>
 <body data-page="adventurers-guild">
 
@@ -21,44 +59,254 @@
   <div class="header">
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">The Adventurers Guild</div>
-    <div class="page-subtitle">Independent Organisation · World-spanning</div>
-    <div class="page-flavor">The sword and shield of mortals. Public, open, lawful — and founded by conscience, not crown.</div>
+    <div class="page-subtitle">Independent Organisation · World-Spanning</div>
+    <div class="page-flavor">"Quill and Blade, One Purpose."</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 class="section-heading">At a Glance</h2>
   <dl class="facts">
-    <dt>Character</dt><dd>Public, open, lawful. Holds relations with every kingdom on Talan, including hostile ones.</dd>
-    <dt>Founded</dt><dd>During the Dark Era — not by kings or gods but by wanderers and soldiers resisting the Corrupted God because their conscience demanded it.</dd>
-    <dt>Neutrality</dt><dd>Strict legalism within whatever kingdom it operates in. Follows local law without exception in its official capacity. Individual members may act otherwise; the Guild does not, officially.</dd>
-    <dt>Scale</dt><dd>The most geographically distributed institution on Talan — from one-person village outposts to full Guild Complexes in capitals and city-states.</dd>
-    <dt>Sister Org</dt><dd>Mercenary Guild. Complementary, not enemies.</dd>
+    <dt>Character</dt><dd>Public, open, lawful. The sword and shield of mortals. Holds relations with <i>every</i> kingdom on Talan — including kingdoms hostile to each other.</dd>
+    <dt>Founded</dt><dd>During the <b>Dark Era</b> — not by kings or gods but by <i>wanderers and soldiers with no banner</i> who began resisting the Corrupted God because their conscience demanded it. The Guild exists because mortals needed it to exist, and it answers to that mission before any government.</dd>
+    <dt>Neutrality</dt><dd>Strict legalism within whatever kingdom it operates in. Follows local law without exception in its <b>official</b> capacity. Individual members may act otherwise; the Guild does not, officially.</dd>
+    <dt>Scale</dt><dd>The most geographically distributed institution on Talan — from one-person village clerks to the monumental Godshalls of the divine city-states. Five tiers of presence; one branch hierarchy.</dd>
+    <dt>Apex authority</dt><dd>The <b>Grand Assembly</b> of all Grand Guildmasters and Guild Sovereigns. Convenes only in major crises. Elects the <b>First of the Quill &amp; Blade</b> from among themselves.</dd>
+    <dt>Services</dt><dd>Contracts &amp; questboards; the <b>Guild Bank</b> (the most trusted financial network on Talan); the <b>Guild Post</b> (the world's most reliable courier service).</dd>
+    <dt>Sister organisation</dt><dd><a href="/talan/factions/mercenary-guild.html">Mercenary Guild</a> — complementary, not enemies.</dd>
+    <dt>Motto</dt><dd><i>"Quill and Blade, One Purpose."</i></dd>
   </dl>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 class="section-heading">Origin</h2>
+  <h2 class="section-heading">Origin — Founded by Conscience</h2>
   <div class="prose">
-    <p>Founded during the Dark Era not by kings or gods but by conscience. Wanderers and soldiers with no banner began resisting the Corrupted God because their conscience demanded it. That founding history shapes everything about the Guild. It exists because mortals needed it to exist, and it answers to that mission before any government.</p>
+    <p>The Adventurers Guild is the only major institution on Talan founded <b>by neither king nor god.</b> It began in the Dark Era as scattered bands of wanderers and soldiers — most with no banner, several outright deserters — who turned against the Corrupted God's incursions because no crown was acting and no church was meeting the moment. Those bands found each other across distances they had no business covering. They wrote each other letters. They agreed, in writing, to keep doing the work.</p>
+
+    <p>The Guild's modern legalism descends directly from that founding moment. The original bands needed to operate across kingdoms whose rulers had failed them — but they also needed those same kingdoms to <i>let them through</i>. They wrote the first neutrality compacts because the alternative was being run off the road by every petty lord who suspected them of being someone else's army. The compacts worked. They have been written and rewritten in every generation since. They are the bones the Guild stands on.</p>
+
+    <p style="font-style:italic; text-align:center; color:var(--gold-dim); margin-top:18px;">"No banner, no crown, no god — but a great many people."</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 class="section-heading">Neutrality — how it actually works</h2>
+  <h2 class="section-heading">Neutrality — How It Actually Works</h2>
   <div class="prose">
-    <p>The Guild's defining principle is strict neutrality within the law of whatever kingdom it operates in. If slavery is legal in a kingdom, the Guild will not post quests to free slaves — no law was broken. If a stolen object needs recovering, the Guild will post the quest; if the adventurers break the law in the process, the Guild will not publicly side with them — but they will not mind either. Individual members may work to overthrow unjust governments, free slaves, or undermine corrupt power. Never in official Guild capacity. This strict legalism is principled, not cowardly — it is what allows the Guild to hold relations with every kingdom simultaneously.</p>
+    <p>The Guild's defining principle is <b>strict neutrality within the law</b> of whatever kingdom it operates in. It holds relations with all countries and follows local law without exception <i>in its official capacity</i>. In practice this means:</p>
+    <ul>
+      <li>If slavery is legal in a kingdom, the Guild will not post quests to free slaves — <b>no law was broken</b>.</li>
+      <li>If a stolen object needs recovering, the Guild will post the quest. If the adventurers <i>break the law</i> in the course of recovering it, the Guild will not publicly side with them if caught — but it will not mind either.</li>
+      <li>Individual Guild members may work to overthrow unjust governments, free slaves, or undermine corrupt power. <b>Never in official Guild capacity.</b> The Guild has no knowledge of it, officially.</li>
+    </ul>
+    <p>This strict legalism is <b>principled, not cowardly.</b> It is what allows the Guild to hold relations with every kingdom simultaneously, including kingdoms at war with each other. Hostile capitals both need the Guild and both know that the Guild will not be weaponised against them by their enemies. The compact only holds because the Guild keeps it exactly.</p>
+    <p>Members understand the seam. Posting a contract through the Guild is the public route; doing what the public route cannot is the personal one. The Guild does not punish members for the latter, provided the seam is kept clean.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 class="section-heading">Scale by location</h2>
+  <h2 class="section-heading">Branch Hierarchy — Five Tiers of Presence</h2>
   <div class="prose">
-    <p>Remote villages — A single person working part-time, sometimes managing four villages from one location. Towns — Real branch offices with proper staff, quest boards, contracts. Cities — Guild halls. Significant infrastructure, multiple staff, storage, holding cells. Capitals and city-states — Guild Complexes. The full weight of the institution: archives, legal staff, senior officers, direct contact with Guild leadership.</p>
+    <p>Every Guild outpost on Talan sits at one of five tiers. Locally people often say "the Guild office" regardless; the official names matter most when paperwork, jurisdiction, or rank-gated contracts come into play. Each tier reports to the one above; coordination across regions flows up to a Kingshall and onward to a Godshall.</p>
   </div>
 
-  <div class="stub-note">
-    This page is a stub. Content is drawn from <code>lore/factions.md</code> and <code>lore/world-notes.md</code>. Promote sections to dedicated pages as the world grows.
+  <div class="tier-grid">
+    <div class="tier-card t-branch">
+      <div class="tier-name">Branch Office</div>
+      <div class="tier-where">Remote villages · Frontier settlements</div>
+      <div class="tier-desc">A single clerk working part-time, sometimes managing four villages from one location. Handles pest contracts, escorts, and local patrols. Reports up to a Guild Office in the nearest town.</div>
+      <div class="tier-lead">Led by: a part-time clerk</div>
+    </div>
+    <div class="tier-card t-office">
+      <div class="tier-name">Guild Office</div>
+      <div class="tier-where">Towns</div>
+      <div class="tier-desc">A proper staff of multiple clerks and scribes. Real quest boards and contracts. Coordinates the surrounding Branch Offices. The most common tier most travelling adventurers actually walk into.</div>
+      <div class="tier-lead">Led by: a Head Clerk (occasionally a Guildmaster)</div>
+    </div>
+    <div class="tier-card t-guildhall">
+      <div class="tier-name">Guildhall</div>
+      <div class="tier-where">Cities</div>
+      <div class="tier-desc">Significant infrastructure: staff, storage, holding cells, an inn-and-tavern complex serving as adventurer hostel and the Guild's public face. The first tier where the institution looks like an institution from the outside.</div>
+      <div class="tier-lead">Led by: a Guildmaster</div>
+    </div>
+    <div class="tier-card t-kings">
+      <div class="tier-name">Kingshall</div>
+      <div class="tier-where">Capital cities</div>
+      <div class="tier-desc">Larger than a Guildhall. The primary liaison between the Guild and the royal court — and the office that holds the line on neutrality when crowns lean. Oversees every Guildhall and Office within the kingdom.</div>
+      <div class="tier-lead">Led by: a Grand Guildmaster</div>
+    </div>
+    <div class="tier-card t-godshall">
+      <div class="tier-name">Godshall</div>
+      <div class="tier-where">Divine city-states only</div>
+      <div class="tier-desc">Monumental. Archives, legal staff, senior officers, ancient relics, high councils of adventurers, direct contact with Guild leadership. The Guild's regional command above a Kingshall — covering the kingdoms surrounding the divine seat.</div>
+      <div class="tier-lead">Led by: a Guild Sovereign</div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Godshalls only sit in the divine city-states themselves. The known seat is <a href="/talan/domains/myrkono/myrria/myrria.html">Myrria's Godshall</a> in Araphel's Myrkono; other Godshalls exist where the major bound gods reside (each god's seat anchors one). When the Grand Assembly is called, every Godshall's Sovereign attends in person.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Ranks of the Guild — Bronze to Starsteel</h2>
+  <div class="prose">
+    <p>Adventurers are ranked by <b>deeds and capability</b>, not wealth or heritage. Rank gates the contracts a member may accept and carries proportional responsibility. The published ladder, lowest to highest:</p>
+  </div>
+
+  <table class="rank-table">
+    <thead><tr><th>Rank</th><th>Standing &amp; Typical Work</th></tr></thead>
+    <tbody>
+      <tr><td>Bronze</td><td>Novices and initiates — pest control, short escorts, clearing small dens. The starting rank for almost every adventurer who lives to be Silver.</td></tr>
+      <tr><td>Silver</td><td>Reliable adventurers — beast hunts, ruin scouting, longer-range guard work. The first rank at which adventurers are known by name beyond their home Office.</td></tr>
+      <tr><td>Gold</td><td>Seasoned fighters and casters — small-party leadership; serious threats (trolls, wyverns, anomalies). A Gold-rank adventurer is the standard "veteran" in folk-imagination.</td></tr>
+      <tr><td>Platinum</td><td>Veterans of renown — regional-scale threats; raid-leadership into major dungeons. A Platinum is who a Kingshall calls when a kingdom needs help and cannot say so on paper.</td></tr>
+      <tr><td>Mithral</td><td>Masters known by name across kingdoms — catastrophic threats, corruption incursions, Nine Dungeons skirmishes. The minimum rank cleared to enter the <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> on a Guild contract.</td></tr>
+      <tr><td>Orichalcum</td><td>Legendary — quests whose outcomes decide the fate of nations. <i>The fall of the Ash-Binder was led by Orichalcum-ranked adventurers.</i></td></tr>
+      <tr><td>Starsteel</td><td>The Guild's highest honour. Symbols as much as warriors. A handful exist at any one time, and the count is published.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="prose" style="margin-top:14px;">
+    <p>Rank promotion is by recommendation from above — a Mithral cannot be made by a Guildmaster alone; the Grand Guildmaster of the kingdom and a regional Sovereign must both sign. Orichalcum and Starsteel require the full Grand Assembly.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Grand Assembly &amp; the First of the Quill &amp; Blade</h2>
+  <div class="prose">
+    <p>The Guild's supreme body is not a place but a <b>gathering</b>: every Grand Guildmaster and Guild Sovereign convened together, in one room, at one time. The Grand Assembly meets only in major crises or to settle policy disputes that cannot be resolved at regional level. The most recent full Assembly was convened in the wake of the Nine Generals' eruption (~2524 MR).</p>
+
+    <p>From among themselves, the Assembly elects the <b>First of the Quill &amp; Blade</b> — the Guild's highest single authority. The First is not a monarch but a figure of consensus respect, chosen for the balance of <i>words</i> (the Quill — diplomacy, policy, neutrality discipline) and <i>deeds</i> (the Blade — proven adventuring record). The First holds the office until they resign it or the next Assembly elects another. The position is famously thankless and famously prestigious in the same breath.</p>
+
+    <p>The Guild's motto — <i>"Quill and Blade, One Purpose"</i> — is the First's office in compressed form. Both halves are required; either one without the other is not the Guild.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Guild Bank</h2>
+  <div class="prose">
+    <p>Originally a treasure-deposit service so adventurers need not carry coin into dungeons. It has grown into <b>the most trusted financial network on Talan</b> — used routinely by merchants, nobles, common folk, and (quietly) by kingdoms that need a place to keep funds the next kingdom over cannot reach for.</p>
+  </div>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="service-name">Enchanted Ledgers</div>
+      <div class="service-desc">Every office maintains a synchronised ledger. Deposit in one Guildhall, withdraw in another, anywhere on the continent — distance is irrelevant. The ledger-magic was Guild-developed and remains Guild-proprietary.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-name">Public Access</div>
+      <div class="service-desc">Common folk use the Bank routinely. In some regions it rivals or outright replaces the royal treasury for general use. Crowns publicly disapprove and privately deposit.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-name">Wartime Trust</div>
+      <div class="service-desc">Kingdoms at war commonly entrust funds to the Bank because Guild neutrality protects the deposits from seizure by either side. Several historical wars have been quietly funded out of accounts neither belligerent could touch.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Guild Post</h2>
+  <div class="prose">
+    <p>The world's most reliable courier network. Built on the same distributed-presence the Guild already maintained for its contract work; the Post is the by-product of having Branch Offices in every village.</p>
+  </div>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="service-name">Remote Reach</div>
+      <div class="service-desc">Letters reach frontier villages no merchant company will serve, because the Guild already maintains a Branch Office there. The Post is the only reliable way to write home from the edge of the map.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-name">Adventurer Couriers</div>
+      <div class="service-desc">In dangerous country, adventurers themselves carry the post, escorted by their own training. A Silver-rank carrying a parcel through wyvern country is a routine sight; the rank gate scales with the route.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-name">Sealed by the Guild</div>
+      <div class="service-desc">Every official parcel bears a magical seal proving authenticity and resisting tampering. The seal is also a contract: tampering with a Guild-sealed parcel is itself a Guild-prosecutable offence, regardless of local law.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Notable Figures</h2>
+
+  <div class="figure-card">
+    <div class="figure-label">Chairman of the Moral &amp; Ethics Committee · Minor Demi-God by Belief</div>
+    <div class="figure-name">Lord Albrecht Lavisburg</div>
+    <div class="figure-byname">"Chairman of the Committee" — he answers to nothing else</div>
+    <dl class="figure-grid">
+      <dt>Race / Age</dt><dd>Human · 67. By every conventional measure a mortal middle-aged bureaucrat.</dd>
+      <dt>Office</dt><dd>Head of the Guild's <b>Moral and Ethics Committee</b> — the body that vets contract postings against the neutrality compact and adjudicates internal Guild misconduct cases.</dd>
+      <dt>Divine status</dt><dd>A <b>minor Demi-God of Order and Ethics</b> by <i>accumulated mortal belief</i>, not by any god's decree. Decades of guildhall stories about his preternatural reach — sensing contract violations from fifty miles, stopping bar brawls with a stare — compounded into actual Wellspring-fed divine power. He refuses the title and corrects anyone who uses it.</dd>
+      <dt>Belief-forged domains</dt><dd>Order · Ethics · Decorum · Contract.</dd>
+      <dt>Symbol</dt><dd>A quill perfectly aligned upon a closed ledger.</dd>
+      <dt>Manner</dt><dd>Precise, ordered, joyless. Speaks in formal-report cadence. Regards frivolity as a flaw to be corrected.</dd>
+      <dt>Disciplinary tool</dt><dd>The <b>ethics seminar.</b> Most infamous: <i>"Lavisburg's Masterclass in Courteous Conduct for the Discerning Professional"</i> — a multi-day ordeal of lectures, mandatory roleplay, and written examination in etiquette. Survivors describe it as worse than the dungeon they were sent to it for.</dd>
+      <dt>Belief-forged abilities</dt><dd>
+        <i>Aura of Compliance</i> — in his presence, people sit straighter and stop breaking rules without knowing why.<br>
+        <i>Contract Binding</i> — agreements written in his sight become magically enforceable.<br>
+        <i>Perfect Recall</i> — every regulation, sub-clause, and precedent.<br>
+        <i>Manifestation of the Review Board</i> — at will conjures an illusory spectral panel of silent judges.<br>
+        <i>Ethics Smite</i> — his disappointed gaze is morale-devastating; veterans flinch.
+      </dd>
+      <dt>Recursive irony</dt><dd>Every story told about him strengthens him, which generates new stories. He has never <i>tried</i> to inspire fear. He is, by his own assessment, simply <i>being proper</i>. See <a href="/magic.html">magic.html → The Wellspring &amp; Belief</a> — he is the cleanest contemporary case study of the canonical mortal-ascension mechanic.</dd>
+    </dl>
+  </div>
+
+  <div class="figure-card">
+    <div class="figure-label">Guild Sovereign · Myrria's Godshall · Highest Guild Authority in Myrkono</div>
+    <div class="figure-name">Seraphel Duskbane</div>
+    <div class="figure-byname">Quill and Blade in literal form, at the belt</div>
+    <dl class="figure-grid">
+      <dt>Race</dt><dd>Fetchling. Believed Myrria-born.</dd>
+      <dt>Origin</dt><dd>Started as a <b>Bronze-rank adventurer</b> at a remote Shadow Steppes Branch Office, working as a scout-tracker on corruption-cult hunts. Rose through every rank by work, not by petition.</dd>
+      <dt>Epithet</dt><dd><i>Duskbane</i> — earned from her sustained record against corruption cults in the steppes.</dd>
+      <dt>Promotion</dt><dd>Elevated unanimously to Guild Sovereign of Myrkono after coordinating the defence of three provinces in Itzasoa's river valleys during the eruption of the Nine Dungeons (~2524 MR). The Grand Assembly's vote was the fastest in the office's history.</dd>
+      <dt>Appearance</dt><dd>Muted-shadow skin, faintly glowing silver eyes, tight silver-white braid. Black-and-silver Guild uniform with practical armour plate. Wisps of shadow trail her movement and never quite dissipate. <b>Quill and sword at the belt</b> — the motto worn as kit.</dd>
+      <dt>Personality</dt><dd>Pragmatic, ceremony-averse, neutrality-strict (no involvement in mortal wars, no exceptions). Soft spot for Bronze and Silver postings — she reviews many of them herself to keep new adventurers out of bureaucratic traps. Believes deeply in Myrria's ethos of <i>second chances</i>; takes personal interest in fugitives and exiles seeking redemption through the Guild.</dd>
+      <dt>Role in Myrria</dt><dd>Works in shared governance with the Council of Adventurers — Myrria's actual government, Araphel residing but not ruling. Many citizens see her as the <b>mortal balance</b> to the divine presence at the Sanctum of Veils.</dd>
+      <dt>Quirks</dt><dd>Signs every decree personally; never delegates the signature. Keeps her own monster trophies in the Godshall taproom — <i>public, not private.</i> Walks the Veiled Quarter in plain clothes, listening to pilgrims and fugitives tell their stories.</dd>
+    </dl>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Myrria's Godshall — A Regional Seat Worth Naming</h2>
+  <div class="prose">
+    <p>The Guild's seat in Myrkono and the regional command for every Guild operation across Araphel's domain. Carved tiers of blackstone rising above the Lantern Stairs in Myrria; the façade bears the Quill &amp; Blade sigil in muted silver. Architecturally and politically the city's <i>other heart</i>, alongside the Sanctum of Veils. Full coverage on the <a href="/talan/domains/myrkono/myrria/myrria.html">Myrria page</a>; the structural summary lives here.</p>
+  </div>
+
+  <div class="godshall-block">
+    <div class="godshall-label">Lower Halls (Public)</div>
+    <ul>
+      <li><b>The taproom-inn-dormitory complex</b> — <i>The Hearth</i> (firepit and storytelling ring) and <i>The Trophy Wall</i> (Seraphel's contributions included).</li>
+      <li><b>The Entry Hall</b> — <i>The Postboard</i> (a wall of quest-slips arranged by rank), the <i>Grouping Tables</i> chalked with party openings, the <i>Guild Counter</i> lined with synchronised enchanted ledgers.</li>
+      <li><b>The Bank Hall</b> — rune-carved vaults; the Myrria branch of the continental ledger.</li>
+      <li><b>The Post Station</b> — every northern-route parcel through Myrkono passes here.</li>
+      <li><b>The Adventurers' Library</b> — open-access expedition journals, bestiaries, maps, scribbled future-warnings. Managed by a Guild Scribe — usually a retired adventurer who keeps the trophy wall honest.</li>
+    </ul>
+  </div>
+
+  <div class="godshall-block" style="border-left-color: #d04848;">
+    <div class="godshall-label" style="color: #d88080;">Upper Halls (Restricted — Mithral and above)</div>
+    <ul>
+      <li><b>The Hall of Quests</b> — high-rank contracts and raid-planning against the Nine Generals.</li>
+      <li><b>The Lantern Archive</b> — sealed library of adventurer journals; Mithral-and-above only.</li>
+      <li><b>The War Vaults</b> — enchanted weapons and crisis stockpile.</li>
+      <li><b>Council Chamber</b> — the Guild Sovereign and senior advisors, carved high into the mountain face.</li>
+    </ul>
+  </div>
+
+  <div class="prose">
+    <p><b>Regional weight.</b> The Godshall coordinates Nine Generals defence operations, dispatches dungeon expeditions, organises border-town relief, hubs the regional Guild Bank ledger sync, and routes the Guild Post through warzones. When the Grand Assembly is called, Myrria's Sovereign always attends — Seraphel herself for the last three sessions.</p>
+
+    <p><b>Politics.</b> Unlike most capitals where Guild and crown work uneasily, in Myrria the Godshall and the Council of Adventurers <b>share power outright</b> — many councillors are former adventurers, and the Godshall regularly underwrites the city's crisis response. The arrangement reads like an anomaly until you remember the city was built by, for, and around people seeking second chances. The Guild was already that institution before Myrria was a city.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Sister Organisation — The Mercenary Guild</h2>
+  <div class="prose">
+    <p>The Guild's strict legalism leaves an enormous range of work undone. The <a href="/talan/factions/mercenary-guild.html">Mercenary Guild</a> fills that gap — and the two organisations are <b>complementary, not enemies</b>. Mercenary Guild contacts sometimes exist within Adventurers Guild buildings, structurally present but never officially on paper. Both Guilds know it. Both kingdoms know it. The Adventurers Guild does not punish members who know how to find the other Guild; it punishes members who advertise.</p>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · FACTIONS · THE ADVENTURERS GUILD</div>
