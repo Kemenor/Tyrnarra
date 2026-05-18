@@ -413,7 +413,7 @@ Quick reference. Full prose in `bestiary.md` — *Versatile Heritages*; system-s
 
 ### Darklands
 
-- **The Darklands** — Plain English. Imported term for the deep-underground regions beneath Talan — the dominion of the **Corrupted God**. Pathfinder/PF2e-stratum vocabulary (may be renamed at some point to fit the Tyrnarra naming convention). The Nine Dungeons of the Corrupted God's generals open from here; the **Sentinel Dwarves** patrol its upper reaches; **Ratfolk** and **Slimes** have populations adapted to it; **Skeletons** and **Fleshwarps** wander up from the Blackened Lands into Darklands tunnels.
+- **The Darklands** — Plain English. Imported term for the deep-underground regions beneath Talan — the dominion of the **Corrupted God**. Pathfinder/PF2e-stratum vocabulary (may be renamed at some point to fit the Tyrnarra naming convention). The Nine Dungeons of the Corrupted God's generals open from here; the **Sentinel Dwarves** patrol its upper reaches; **Ratfolk** keep populations adapted to it; **Skeletons** and **Fleshwarps** wander up from the Blackened Lands into Darklands tunnels.
 
 ### Folk Names for Cosmic Things (mortal-mouth, not GM truth)
 

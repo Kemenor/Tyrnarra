@@ -24,9 +24,9 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | **Chaos** · Nashavel | Vesuna | Gnome · Vanara | Conrasu · Anadi |
 | **Freedom** · Askamira | Cronus | *All ancestries equally* | — |
 
-**Uncommon everywhere:** Rabbitfolk · Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
+**Uncommon everywhere:** Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
 
-**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Slimes (uncommon in the Darklands) · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
+**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
 **Sortalde-native (Eastern continent — see `geography.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries — The Six Petals* below.
 
@@ -171,9 +171,6 @@ Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn)
 ### Poppet
 Small constructed beings. Rare everywhere; no domain-specific concentration.
 
-### Rabbitfolk
-Uncommon everywhere. No particular domain concentration; populations are widely scattered, frequently nomadic, and culturally heterogeneous. They keep no continental-scale institutions of their own.
-
 ### Ratfolk
 **Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities — they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground.
 
@@ -185,9 +182,6 @@ Uncommon everywhere. No particular domain concentration; populations are widely 
 
 ### Skeleton
 **Native to the Blackened Lands** — the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés — and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `gods.md` — *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate.
-
-### Slimes
-**Uncommon in the Darklands** — the ambient corruption pressure suits slime adaptability. **Rare everywhere else.** A slime on Talan is almost always a Darklands-born individual that worked its way to the surface.
 
 ### Sprite
 **Native to the Feyworld** (the Chaos plane of the Life Layer). Common there; some cross to the Material Plane and live among mortals, where they are rare. No domain-specific concentration on Talan — sprites go where they go.
@@ -282,6 +276,15 @@ Heritages on Talan are explained in-world as either a god's blood, an Elemental 
 - **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a virtue demon (corruption-of-virtue lineage) or a sin devil (sin-as-being lineage). See the *Virtue Demons* and *Sin Devils* sections below for the parent populations.
 
 Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag — one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
+
+#### Bound gods whose touch is not bloodline-borne
+
+Four of the bound thirteen have no exclusive heritage on Talan — their blessing simply does not manifest as physical lineage:
+
+- **Iro** (Light) — celestial Nephilim covers the divine-blood expression; Iro's worshippers are folded into the broader Nephilim line rather than carrying their own marker.
+- **Enki** (Knowledge) — Enki's touch manifests as scholarly aptitude rather than physical change; generic Suli geniekin is the closest mechanical mirror but is not exclusively his.
+- **Jianna** (Commerce) — blessing accumulates as trade fortune, not body trait. A Jianna-favoured merchant prospers; their child does not.
+- **Cronus** (Freedom) — worshippers are made by choice, not blood (see `secret-history.md` — *Cronus — The Secret*).
 
 ### Elemental Plane heritages (Layer 1 / Prelife origin)
 

@@ -122,6 +122,7 @@ const gods = {
       orbGlow: "rgba(154,96,192,0.3)",
       clericDomains: "Darkness · Nothingness · Protection",
       weapon: "Sickle-Saber — a long curving blade with a secondary grip; every twist of the wrist a new edge, every cut a different face",
+      magicSchool: "Divine Magic (with Iro) — the dark pole of god-granted power; faith made power through shadow, rebirth, the door out of who you were",
       mortalsView: "Keeper of mysteries, sanctuary in shadow, the door out of who you were.",
       shortPronoun: "Them",
       summary: "The god of acceptance, rebirth, and new faces — thieves and victims pray to him in equal measure, and so do exiles, fugitives, and anyone who needs to stop being who they have been. Darkness here is not malevolent. It is the space where a name can be put down.",
@@ -143,6 +144,7 @@ const gods = {
       orbGlow: "rgba(112,200,232,0.25)",
       clericDomains: "Air · Cold · Lightning",
       weapon: "Feng Huo Lun — twin bladed wheels spun on the wrist; wind given an edge, the storm with hands",
+      magicSchool: "Primal Magic (one of the Four Elementals, with Sarrum, Komo, and Shuun) — the wind that breathes the substrate",
       mortalsView: "A whisper that carries ships, or a storm that tears them apart.",
       shortPronoun: "Her",
       summary: "The wind does not stop because you ask it to. Fisaya governs change in all its forms — the season turning, the mind shifting, the life redirected. She is prayed to by those in transition, those who cannot stay still, and those who fear what is coming.",
@@ -164,6 +166,7 @@ const gods = {
       orbGlow: "rgba(224,96,48,0.3)",
       clericDomains: "Fire · Ambition · Creation · Passion",
       weapon: "Fire Poi — chains of flame, used in both ritual dance and devastating battle",
+      magicSchool: "Primal Magic (one of the Four Elementals, with Sarrum, Shuun, and Fisaya) — the flame at the heart of the substrate",
       mortalsView: "Hearth and forge — but also wildfire and war.",
       shortPronoun: "Him",
       summary: "Fire creates and destroys in the same motion. Komo is the god of those who make things — who reach into the world and reshape it according to their vision. He is equally the patron of the master craftsperson and the ambitious upstart.",
@@ -185,6 +188,7 @@ const gods = {
       orbGlow: "rgba(160,120,64,0.25)",
       clericDomains: "Earth · Confidence · Duty · Vigil · Metal",
       weapon: "Maul-Spade — club and shovel forged as one; the iron that breaks the wall breaks the soil, and the burden carried is the harvest taken",
+      magicSchool: "Primal Magic (one of the Four Elementals, with Komo, Shuun, and Fisaya) — the earthen pillar of the material-plane substrate",
       mortalsView: "Provider of shelter and crops — but also the crushing hand of famine and stone.",
       shortPronoun: "Him",
       summary: "The earth does not move — and when it does, it is an event of catastrophic significance. Sarrum governs duty, tradition, and the weight of what has always been done. He is prayed to by those who hold the line, and those who refuse to let what matters be forgotten.",
@@ -206,6 +210,7 @@ const gods = {
       orbGlow: "rgba(64,160,200,0.25)",
       clericDomains: "Water · Introspection · Repose",
       weapon: "Kalis — a wavy double-edged blade; the silhouette of a wave caught in steel, both edges cutting as both tides take",
+      magicSchool: "Primal Magic (one of the Four Elementals, with Sarrum, Komo, and Fisaya) — the water that runs through the substrate",
       mortalsView: "Life-giver and sailor's blessing — or merciless tide and flood.",
       shortPronoun: "Shuun",
       summary: "Water connects everything it touches. Shuun governs the spaces between people — the conversations, the bonds, the things left unsaid. She is prayed to before difficult conversations, at the beginning of voyages, and in the quiet moments after grief.",
@@ -227,6 +232,7 @@ const gods = {
       orbGlow: "rgba(232,208,64,0.3)",
       clericDomains: "Sun · Healing · Dust · Zeal",
       weapon: "Falcata — a single-edged blade that flares as it falls; a sunray widening into noon, illumination with weight behind it",
+      magicSchool: "Divine Magic (with Araphel) — the bright pole of god-granted power; faith made power through sun, healing, and the dawn",
       mortalsView: "Bringer of illumination and joy — or blinding fanaticism.",
       shortPronoun: "Him",
       summary: "Light heals and blinds in equal measure. Iro is the god of healing and divine magic, but also of zealotry — of belief so complete it becomes its own kind of darkness. He is prayed to by healers and by those who have given themselves entirely to a cause.",
@@ -250,6 +256,7 @@ const gods = {
       orbGlow: "rgba(64,128,176,0.25)",
       clericDomains: "Knowledge · Magic · Perfection",
       weapon: "Spiral Rapier — a corkscrew blade that catches a foe's steel mid-thrust; inquiry made point, pinning the truth that tried to slip past",
+      magicSchool: "Occult Magic — knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation",
       mortalsView: "Teacher, sage, inventor — or tempter into dangerous truths.",
       shortPronoun: "Him",
       summary: "There is no good or bad knowledge. Only knowledge. Enki collects everything without judgment — the healing formula and the poison, the map to the treasure and the map to the weapon. He is the god of the curious, the obsessive, and the dangerous.",
@@ -271,6 +278,7 @@ const gods = {
       orbGlow: "rgba(104,120,192,0.25)",
       clericDomains: "Truth · Secrecy · Star · Glyph",
       weapon: "Hook Sword — paired blades hooked at the tip; they snag what flees and bind what would not be bound, the law's grip in two hands",
+      magicSchool: "Arcane Magic — the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be",
       mortalsView: "Arbiter of peace, or oppressive enforcer.",
       shortPronoun: "Her",
       summary: "Law without truth is tyranny. Truth without law is chaos. Forseti holds both simultaneously, which is why her worship is the most internally contradictory of the thirteen — and the most rigorous. She governs justice, which is different from both law and truth and requires both.",
@@ -414,6 +422,7 @@ function buildCard(god, gridId) {
         <div class="god-stats">
           <div class="stat-row"><div class="stat-label">Cleric Domains</div><div class="stat-val">${god.clericDomains}</div></div>
           <div class="stat-row"><div class="stat-label">Favoured Weapon</div><div class="stat-val stat-weapon">${god.weapon}</div></div>
+          ${god.magicSchool ? `<div class="stat-row"><div class="stat-label">Magic School</div><div class="stat-val">${god.magicSchool}</div></div>` : ''}
           <div class="stat-row"><div class="stat-label">Mortals See ${god.shortPronoun || god.name} As</div><div class="stat-val">${god.mortalsView}</div></div>
         </div>
       </div>

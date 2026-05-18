@@ -83,6 +83,8 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 
 > **Note on weapons:** these are the favoured/iconic forms in which each god is depicted. They are symbolic and ceremonial as well as practical — clergy and devoted faithful often wield them in ritual or actual combat.
 
+> **Lore-implicit magic schools.** Eight of the Thirteen carry one of the four PF2e magic-tradition names as in-world theological flavour: *Arcane Magic* (Forseti), *Divine Magic* (Iro & Araphel, the two poles), *Occult Magic* (Enki), *Primal Magic* (the four Elemental Gods collectively — Sarrum · Komo · Shuun · Fisaya). These are theological flavour, not mechanical grants; full convention and reasoning in `pf2e-notes.md` — *Lore-implicit domains*.
+
 ### Vesuna — Goddess of Chaos (Female)
 - **Aspects:** Change · Creativity · Spontaneity · Madness.
 - **Depiction:** no fixed form — no ancestry, no gender, no consistent body. Only symbols: a coin, a die, an open hand with something unseen in it.
@@ -99,18 +101,21 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Aspects:** Shadows · New Faces · Rebirth · Erasure.
 - **Depiction:** most commonly a **Fetchling** — either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman — but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
 - **Favoured weapon:** *Sickle-Saber* — a long curving blade with a secondary grip; every twist of the wrist a new edge, every cut a different face.
+- **Lore-implicit school:** *Divine Magic* (with Iro) — the dark pole of god-granted power; faith made power through shadow, rebirth, the door out of who you were.
 - **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
 
 ### Sarrum — God of Earth (Male)
 - **Aspects:** Stone · Harvest · Endurance · Burden.
 - **Depiction:** a **Minotaur** — immovable, vast, patient, usually standing still, with veins of ore glowing faintly beneath his granite skin.
 - **Favoured weapon:** *Maul-Spade* — club and shovel forged as one; the iron that breaks the wall breaks the soil, and the burden carried is the harvest taken.
+- **Lore-implicit school:** *Primal Magic* (one of the Four Elementals, with Komo, Shuun, and Fisaya) — the earthen pillar of the material-plane substrate.
 - **Mortals see him as:** provider of shelter and crops, but also the crushing hand of famine and stone.
 
 ### Komo — God of Fire (Male)
 - **Aspects:** Flame · Passion · Destruction · Forge.
 - **Depiction:** a **Kobold** — stands in fire comfortably, mid-creation at the forge, eyes glowing like embers.
 - **Favoured weapon:** *Fire Poi* — chains of flame, used in both ritual dance and devastating battle.
+- **Lore-implicit school:** *Primal Magic* (one of the Four Elementals, with Sarrum, Shuun, and Fisaya) — the flame at the heart of the substrate.
 - **Mortals see him as:** hearth and forge, but also wildfire and war.
 
 ### Cronus — God of Freedom (Male)
@@ -130,18 +135,21 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Aspects:** Wisdom · Discovery · Mysteries · Arrogance.
 - **Depiction:** a black-haired **Catfolk** male — curious, precise, usually shown reading or examining something, a staff crowned with a lantern of shifting light at his side.
 - **Favoured weapon:** *Spiral Rapier* — a corkscrew blade that catches a foe's steel mid-thrust; inquiry made point, pinning the truth that tried to slip past.
+- **Lore-implicit school:** *Occult Magic* — knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation.
 - **Mortals see him as:** teacher, sage, inventor — or tempter into dangerous truths.
 
 ### Forseti — Goddess of Law (Female)
 - **Aspects:** Order · Justice · Oath · Tyranny.
 - **Depiction:** an **Android** — perfect impartiality, law without personal feeling; scales in one hand, scrolls in the other.
 - **Favoured weapon:** *Hook Sword* — paired blades hooked at the tip; they snag what flees and bind what would not be bound, the law's grip in two hands.
+- **Lore-implicit school:** *Arcane Magic* — the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be.
 - **Mortals see her as:** arbiter of peace or oppressive enforcer.
 
 ### Iro — God of Light (Male)
 - **Aspects:** Sun · Hope · Growth · Zealotry.
 - **Depiction:** a **Nephilim** — caught between the mortal and something greater, one hand raised in blessing or judgement, eyes like dawn.
 - **Favoured weapon:** *Falcata* — a single-edged blade that flares as it falls; a sunray widening into noon, illumination with weight behind it.
+- **Lore-implicit school:** *Divine Magic* (with Araphel) — the bright pole of god-granted power; faith made power through sun, healing, and the dawn.
 - **Mortals see him as:** bringer of illumination and joy — or blinding fanaticism.
 
 ### Tani — Goddess of Time (Female)
@@ -155,12 +163,14 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Aspects:** Rivers · Seas · Adaptability · Drowning.
 - **Depiction:** an **Undine** — themselves partly water, existing at the boundary between human and element. Usually shown seated and still, contrasting with the restlessness of the water around them.
 - **Favoured weapon:** *Kalis* — a wavy double-edged blade; the silhouette of a wave caught in steel, both edges cutting as both tides take.
+- **Lore-implicit school:** *Primal Magic* (one of the Four Elementals, with Sarrum, Komo, and Fisaya) — the water that runs through the substrate.
 - **Mortals see Shuun as:** life-giver and sailor's blessing, or merciless tide and flood.
 
 ### Fisaya — Goddess of Wind (Female)
 - **Aspects:** Storms · Travel · Breath · Ruin.
 - **Depiction:** a female **Kitsune** with multicolour fur — each colour an aspect of change — wearing flowing silks, hair trailing into clouds.
 - **Favoured weapon:** *Feng Huo Lun* — twin bladed wheels spun on the wrist; wind given an edge, the storm with hands.
+- **Lore-implicit school:** *Primal Magic* (one of the Four Elementals, with Sarrum, Komo, and Shuun) — the wind that breathes the substrate.
 - **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
 
 ---
