@@ -81,6 +81,8 @@ The seats are immortal (as long as vice exists in mortals); the *holders* can be
 
 **Lethar — Outer-being origin note.** Of the seven, Lethar is the only seat-holder who is neither a mortal soul nor a god of Tyrnarra. He is an **Outer being** from a multiversal reality beyond the Wellspring's reach — drawn into Abyss across the Astral when sloth first emerged as a recognised vice among mortals and the Sloth seat's calling reached outside Tyrnarra. He is the **original holder** of his seat (the only one of the seven who is) and has held it since it formed. Full canon: `bolverk.md` — *Lethar — the Sloth Vice Demon*; multiversal-realities canon: `cosmology.md` — *Tyrnarra — The World & Sky*.
 
+**Henrick Brodd** — plain English with light drift, fitting the Dark Era register. Forge Dwarf innkeeper of a small mining-hamlet in upper Brauogi during the Dark Era. Inherited a fragmentary cookbook he could not fully read; followed the diagrams; fed the village on what the diagrams produced for roughly seventy years. Died of (extended) old age c. early Adventurer Era; soul fell to Bolverk soaked in residue; took the Veislur seat shortly after arrival and has held it for about six hundred and fifty years. Current **Veislur**. Full canon: `bolverk.md` — *Veislur — the Gluttony Vice Demon*.
+
 ### God Domains (coined following the naming rule)
 Full etymologies are in `lore/geography.md`. Quick reference:
 
