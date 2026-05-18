@@ -165,6 +165,10 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 ## How we work together — drafting → publishing
 
+**Read the canon before designing on top of it.** Before drafting anything new whose design *touches* an established canon event — Crimson Rain, Gods' Law forging, Tani's death, the Storveldi Denbora, the Elden / Corrupted God, the Mortal Ascent Ladder, Bolverk soul-routing, the Council, individual Grand Gods — **read the relevant lore file end-to-end first**, not a grep, not a skim. The roster of what each file covers is in [`docs/site-inventory.md`](docs/site-inventory.md) — *Lore files*. The test: if the user could reasonably point at the draft and say *"that contradicts what's in `<file>`,"* you should have read `<file>` first. Reading mid-design is a fix; reading before drafting is the rule.
+
+**Write affirmatively.** Say what something *is*, not what it *isn't*. Don't open sentences with *"Not …"* or *"No …"*; avoid *"not X but Y"* constructions. If you're tempted to write *"not a Council god,"* the affirmative version (*"his own god, of his own pantheon"*) is always available and always better — strip the negation and rewrite from what's actually true. **Sole exception:** when a true negation is the clearest framing for a fact that has no affirmative form (*"his cult kept no records"*, *"the Cloud Sea will not support weight"*). When in doubt, prefer the affirmative.
+
 **Lore-first protocol.** Brainstormed content — a kingdom, an NPC, a ritual, a faction, a god's secret — goes into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space; HTML pages are the published output.
 
 **Stay in lore by default.** A new session starts in drafting mode. Don't generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*. If the intent is ambiguous, ask.
@@ -201,9 +205,9 @@ When coining new names, always record the source language, literal meaning, and 
 
 This project is designed so a fresh Claude session can pick it up with no prior context. Everything Claude needs is in the repo:
 
-1. **Read `CLAUDE.md` first** — naming rule, folder layout, style guide, drafting protocol.
-2. **Read whichever `lore/` files are relevant** to the topic at hand.
-3. **Skim `docs/site-inventory.md`** to know what's already published vs. stub.
+1. **Read `CLAUDE.md` first** — naming rule, folder layout, style guide, drafting protocol (including the pre-read rule and the affirmative-prose rule).
+2. **Skim `docs/site-inventory.md`** to know what's already published, what's stub, and — in the *Lore files* section at the top — which `lore/` file covers which topics. The pre-read rule routes through this table.
+3. **Read the relevant `lore/` files end-to-end** before drafting content that touches their canon — the *Lore files* section tells you which.
 4. **Check `docs/open-threads.md`** if the user references an ongoing canon question — it lists every TBD/unresolved thread with status and where it lives.
 
 Don't rely on the user's in-session memory file for canon — that's a summary, not the source. The lore files win.

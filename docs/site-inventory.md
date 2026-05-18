@@ -6,6 +6,25 @@ A description of what is currently published, organised by section. For repo con
 
 ---
 
+## Lore files (`/lore/` — not published)
+
+The canon source of truth. **When the pre-read rule in [`../CLAUDE.md`](../CLAUDE.md) says read the file, read it end-to-end — not just grep.** Sizes are approximate.
+
+- **`cosmology.md`** *(~36 KB)* — How the world works. Tyrnarra/Cloud Sea/sun and two moons. Divine power tiers (Grand · Major · Minor · Demi). Gods' Law (scope, enforcement on Life Layer via Ethereal, tier-by-tier binding). Wellspring + belief mechanic, the post-Crimson-Rain leak / Lost-Era window / Stillpools / Reflections. Mortal Ascent Ladder (4 rungs, shards, the integration procedure as choke-point). Four magic schools (Arcane · Occult · Primal · Divine). Magitech (4 sub-traditions, regional producers, transport tiers — land/water/sky/Cloud Sea). Magitrains + Train Pirates + Conductor's Station. Planar structure (3 layers, 9 planes, Astral). Calendar (GR / MR).
+- **`gods.md`** *(~24 KB)* — Who the gods are. The 13 Grand Gods (Primordial Six + Ascendant Six + Cronus): per-god sheets with aspects, domains, favoured weapon, magic school, city-state, worshipper base. Named Non-Bound Gods (Bikiargi · Zaharsuge · Epairima · Betibizi). Council of Thirteen. Open Sun-god thread.
+- **`secret-history.md`** *(~39 KB)* — What actually happened. **The Week of Crimson Rain — True Account** (Tani killed by Storveldi Denbora; eleven Grand Gods went to war; hundreds of gods participated; Cronus rallied survivors; Gods' Law forged at the end). Cronus's secret (mortal-ascended via Law-anchor mechanism). Storveldi Denbora (true identity, integration procedure originators). The Elden → Corrupted God (fusion with Devourer). Wardstones, Nine Generals. Tani and Araphel deep dives. **Read before drafting anything that touches Crimson Rain, the Gods' Law forging, or any pre-Lost-Era event.**
+- **`geography.md`** *(~71 KB)* — Where things are. All 13 god domains with their characters. Sub-regions (kingdoms, geographic features, cultural enclaves, border territories). Settlement-level detail. The Three Seas (Midarra · Hafra · Cloud Sea). Other continents (Sortalde · Red Empire homeland · unmapped).
+- **`factions.md`** *(~42 KB)* — Independent organisations. Adventurers' Guild (branches, rank ladder, the Bank, the Post, Lord Albrecht Lavisburg as Demi-God). Mercenary Guild. God Churches (umbrella). Order of Steam. Pirate Lords of the Twin Cities. Iron Tide / Menagerie (Red Empire). Remnants of Corruption.
+- **`cultures.md`** *(~39 KB)* — Peoples, traditions, politics, craft, warfare. Noble-naming conventions. Regional culture detail (Tahu Tangata · Lautaran mercantile · Vindul storm-folk · etc.).
+- **`bestiary.md`** *(~47 KB)* — Playable ancestries (PF2e Remaster). Versatile heritages (Nephilim, Reflection, elemental sparks, wood/metal planar lines, mortal-ancestry mixes). **250-year lifespan cap** (Talan-wide principle). Per-domain ancestry distribution. Bound-god touches that aren't bloodline-borne.
+- **`bolverk.md`** *(~32 KB)* — The megacity in Abyss. Geography (partition, Tunsund, 4-stage flood cycle, neutral strip). Soul-claim mechanic (pre-tagged · untagged-evil · strong-untagged → Independent). Three factions (Vice Demons · Virtue Devils · Independents) + feudal-tithe model. Demon/Devil distinction (foundational vs. parasitic). Full Vice Demon entries for Drambur, Ofunda, Reidar; placeholders for Nirfel/Lostar/Veislur/Lethar. Canonical 14 Virtue Devil table (virtue + excess + deficiency). **Read before drafting any infernal seat, Bolverk geography, or soul-routing detail.**
+- **`glossary.md`** *(~64 KB)* — All coined names + etymologies. Confirmed canonical examples. Already-in-world names that predate the rule (do not retrofit). The 13 Bound Gods. Vice Demon names. God domains. Sub-regions. Fenurran / Kitsune / Sortalde proper-noun registers. Faction proper nouns. Named Non-Bound Gods. Pre-Crimson-Rain civilisations. Folk-names for cosmic things. The Binding apparatus. Wellspring sites. **Always check before coining a new name — confirm the source language and drift step land before using the name anywhere else.**
+- **`timeline.md`** *(~10 KB)* — Eras, historical events, dates. GR (Gods' Reign, backward-counted) and MR (Mortal Reign, forward-counted). Crimson Rain at 0 GR / 0 MR is the hinge point. Current year: 2532 MR.
+- **`pf2e-notes.md`** *(~8 KB)* — System-side notes. PF2e Remaster reshuffle. Lore-implicit domain mapping. Bound-god touches that aren't bloodline-borne (cross-ref into bestiary). PF2e cleric domain candidate annotations.
+- **`unplaced.md`** *(~0.4 KB)* — Catch-all for unrouted content. Usually empty.
+
+---
+
 ## `/` — World-level (Style A · cosmic)
 
 - **`index.html`** — World primer and cosmology landing. Three celestial bodies (Solyra, Veyru, Calune), Cloud Sea framing, the Wellspring, planar structure (three layers, nine planes, the Astral connecting all), soul-layer composition, link-outs to the rest of the site.
