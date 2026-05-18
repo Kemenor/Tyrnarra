@@ -77,6 +77,8 @@ The seats are immortal (as long as vice exists in mortals); the *holders* can be
 | Wrath | **Reidar** | Icelandic *reiði* — "wrath" | added *-ar* name-ending, hardened consonants |
 | Sloth | **Lethar** | Icelandic *leti* — "sloth" | inserted medial *-h-*, added *-ar* ending |
 
+**Atezar** — Basque *atezain* ("gatekeeper, doorkeeper") → drift *atezain → atezar*. Minor god of the late Gods' Era; head of a small frontier pantheon (five gods, names lost), venerated by border garrisons and wall-towns. His pantheon and last followers were annihilated in the Week of Crimson Rain. At the forging of the Gods' Law he was sorted *dangerous* and banished to Layer 3; in Abyss he killed and replaced the Reidar of the day and has been the **current Reidar** since shortly after the Gods' Law was sealed. Full canon: `bolverk.md` — *Reidar — the Wrath Vice Demon*.
+
 ### God Domains (coined following the naming rule)
 Full etymologies are in `lore/geography.md`. Quick reference:
 

@@ -28,8 +28,8 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Where.** [lore/gods.md](../lore/gods.md) — *Other Pantheons*; [lore/geography.md](../lore/geography.md) — *Other Continents → Sortalde*.
 
 ### [Bestiary] Vice Demons — personalities, politics, mortal touch *(rolling)*
-**Decided.** Seven Vice Demons (Pride · Greed · Lust · Envy · Gluttony · Wrath · Sloth). **Current holders named** (Drambur · Nirfel · Lostar · Ofunda · Veislur · Reidar · Lethar). Planar seat: Bolverk (Abyss); each holds an independent spire. Anarchic, kill-and-replace, no leader. Power economy via soul-binding (life vows → death-tithe). PF2e domain grants for all seven: **canon-pending** in the registrar.
-**Open.** Individual personalities, intra-Bolverk politics between the seven, characteristic methods of mortal-touch (whispers vs offers vs contracts), each holder's history (how they ascended to their seat). PF2e domain grants for all seven (deferred until characters land).
+**Decided.** Seven Vice Demons (Pride · Greed · Lust · Envy · Gluttony · Wrath · Sloth). **Current holders named** (Drambur · Nirfel · Lostar · Ofunda · Veislur · Reidar · Lethar). Planar seat: Bolverk (Abyss); each holds an independent spire. Anarchic, kill-and-replace, no leader. Power economy via soul-binding (life vows → death-tithe). PF2e domain grants for all seven: **canon-pending** in the registrar. **Individual canon written for 3 of 7:** Drambur (Pride), Ofunda (Envy), Reidar (Wrath, former god *Atezar*).
+**Open.** Remaining 4 of 7 — **Nirfel** (Greed), **Lostar** (Lust), **Veislur** (Gluttony), **Lethar** (Sloth) — individual personality, history, ascension, mortal-touch method, and GM Secret each. Intra-Bolverk politics between the seven once all are drafted. PF2e domain grants for all seven (deferred until characters land).
 **Where.** [lore/bolverk.md](../lore/bolverk.md) — *Vice Demons — the Seven*; [lore/glossary.md](../lore/glossary.md) — *Vice Demons — Bolverk's seven seat-holders*.
 
 ### [Bestiary] Vampire origin on Talan
@@ -141,10 +141,10 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Cross-reference to the *Magic & Faith* page on the future faith-overview pass.
 **Where.** [lore/cultures.md](../lore/cultures.md) — Fenurran section.
 
-### [Cosmology] Per-god GM Secrets — 12 of 13
-**Decided.** Cronus's GM Secret is fully written (was-mortal, shard-anchored). The structure for each god-card on `grand-gods.html` already includes a `⚿ GM Secret` expandable slot.
-**Open.** Write the GM Secret content for the other twelve (Araphel, Fisaya, Komo, Sarrum, Shuun, Iro, Enki, Forseti, Hinka, Jianna, Tani, Vesuna). Each is its own story call — the kind of truth a high-rank cleric or god-hunter might eventually surface. Pace these as stories want them.
-**Where.** [grand-gods.html](../grand-gods.html) — each god card; lore source [lore/gods.md](../lore/gods.md) per-god sheet + Named Non-Bound Gods.
+### [Cosmology] Per-god GM Secrets — 11 of 13
+**Decided.** Cronus's GM Secret is fully written (was-mortal, shard-anchored). **Iro's GM Secret** is fully written (the wound from Drambur — his Sun-Champion's near-fatal turn during the Week of Crimson Rain is why Iro cannot speak against his own zealots). The structure for each god-card on `grand-gods.html` includes a `⚿ GM Secret` expandable slot.
+**Open.** Write the GM Secret content for the other eleven (Araphel, Fisaya, Komo, Sarrum, Shuun, Enki, Forseti, Hinka, Jianna, Tani, Vesuna). Each is its own story call — the kind of truth a high-rank cleric or god-hunter might eventually surface. Pace these as stories want them.
+**Where.** [grand-gods.html](../grand-gods.html) — each god card; lore source [lore/gods.md](../lore/gods.md) per-god sheet.
 
 ### [History] Three-tier knowledge content — Adventurer Era only
 **Decided.** Lost / Golden / Dark eras are now all three-tier on `history.html` (published 2026-05-17 — see §Resolved). Creation Era is intentionally Open with no expandable. Only the **Adventurer Era** (current) remains without Popular Belief / GM Secret content.
