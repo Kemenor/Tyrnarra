@@ -13,8 +13,6 @@ Tyrnarra uses the PF2e Remaster ancestry roster, plus the additions below.
 ### Tyrnarra-canon additions (outside the standard 44)
 
 - **Dragons** — the alien-mothership lineage. Distinct from PF2e's **Dragonet** ancestry (Tyrnarra uses *Dragonet* for native Zaharsuge-line wyrmkin); both ancestries exist on Talan and are unrelated.
-- **Slimes** — Darklands-adapted; the published slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
-- **Rabbitfolk** — uncommon everywhere; widely scattered, frequently nomadic.
 
 ### Access tags
 
@@ -37,16 +35,7 @@ The PF2e versatile-heritage roster maps to Tyrnarra as follows:
 - **Aiuvarin** and **Dromaar** — the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
 - **Suli** — generic geniekin, no single-element specialisation.
 
-Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md` — *Versatile Heritages*.
-
-### Bound gods whose touch is not bloodline-borne
-
-Four of the bound thirteen have no exclusive heritage on Talan:
-
-- **Iro** (Light) — celestial Nephilim covers the divine-blood expression.
-- **Enki** (Knowledge) — touch manifests as scholarly aptitude rather than physical change; generic Suli geniekin is the closest mechanical mirror but is not exclusively his.
-- **Jianna** (Commerce) — blessing accumulates as trade fortune, not body trait.
-- **Cronus** (Freedom) — worshippers are made by choice, not blood (see `secret-history.md` — *Cronus — The Secret*).
+Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md` — *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
 
 ---
 
@@ -64,13 +53,10 @@ Some domain names in the Tyrnarra canon are **theological-flavour names**, not e
 
 | Lore-implicit name | God that carries it (as flavour) | What it expresses through (mechanically) |
 |---|---|---|
-| **Arcane Magic** | Forseti | Truth · Secrecy · Star · Glyph |
-| **Divine Magic** | Iro | Sun · Healing · Dust · Zeal |
-| **Occult Magic** | Enki | Knowledge · Magic · Perfection |
-| **Primal Magic** | Jianna | Cities · Family · Wealth |
-| **Progress** | Jianna | Cities · Family · Wealth — civic-growth flavour |
-| **Free Will** | Vesuna | Luck · Trickery · Change · Disorientation — choice flavour |
-| **Second Chances** | Araphel | Darkness · Nothingness · Protection — rebirth flavour |
+| **Arcane Magic** | Forseti | Truth · Secrecy · Star · Glyph — the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be. |
+| **Divine Magic** | Iro & Araphel | Sun · Healing · Dust · Zeal (Iro) and Darkness · Nothingness · Protection (Araphel) — the god-granted tradition at both its poles: dawn and dusk, blessing and rebirth, faith made power whether by sunlight or shadow. |
+| **Occult Magic** | Enki | Knowledge · Magic · Perfection — knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation. |
+| **Primal Magic** | The Four Elemental Gods (Sarrum · Komo · Shuun · Fisaya) | Earth · Fire · Water · Air — the substrate of the material plane; Primal magic is the four-fold balance made channelable, what every living thing is composed of. |
 
 **The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph) — *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
 
