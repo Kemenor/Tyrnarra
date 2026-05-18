@@ -41,7 +41,7 @@ Full source-mapping table (which god / plane each heritage descends from) lives 
 
 ## Cleric Domains
 
-The official PF2e cleric-domain register (61 domains as of the Remaster + Tian Xia + War of Immortals expansions) is the authoritative mechanical list. The published reference page at [`pf2e-registrar.html`](../pf2e-registrar.html) holds the master mapping from each PF2e domain to its in-world Tyrnarra granter (Bound 13 god, non-bound god, sin-devil, virtue-demon, General of Corruption, or Open / canon-pending).
+The official PF2e cleric-domain register (61 domains as of the Remaster + Tian Xia + War of Immortals expansions) is the authoritative mechanical list. The published reference page at [`pf2e-registrar.html`](../pf2e-registrar.html) holds the master mapping from each PF2e domain to its in-world Tyrnarra granter (Bound 13 god, non-bound god, Vice Demon, Virtue Devil, General of Corruption, or Open / canon-pending).
 
 ### The Thirteen's domains
 
@@ -62,20 +62,20 @@ Some domain names in the Tyrnarra canon are **theological-flavour names**, not e
 
 ### Non-bound granters — canon-pending
 
-Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiting a dedicated assignment pass focused on sin-devils, virtue-demons, Generals of Corruption, Betibizi, and the Corrupted God directly. The non-bound entities themselves exist as canonical beings; only their specific PF2e cleric-domain grants are pending. The 13 domains in this state are:
+Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiting a dedicated assignment pass focused on Vice Demons, Virtue Devils, Generals of Corruption, Betibizi, and the Corrupted God directly. The non-bound entities themselves exist as canonical beings; only their specific PF2e cleric-domain grants are pending. The 13 domains in this state are:
 
-- **Abomination** *(candidate: Muiral the Misshapen, Modesty-line virtue-demon)*
+- **Abomination** *(candidate: Virtue Devil, virtue-line TBD)*
 - **Decay** *(candidate: The Rot-Tyrant, General of Corruption)*
-- **Destruction** *(candidate: The Wrath Sin-Devil)*
-- **Indulgence** *(candidate: The Gluttony Sin-Devil)*
+- **Destruction** *(candidate: Reidar, the Wrath Vice Demon)*
+- **Indulgence** *(candidate: Veislur, the Gluttony Vice Demon)*
 - **Naga** *(candidate: The Maw Serpent, General of Corruption)*
 - **Nightmares** *(candidate: The Whisperer in Dreams, General of Corruption)*
-- **Pain** *(candidate: virtue-demon, Patience-line excess)*
+- **Pain** *(candidate: Virtue Devil, Patience-line excess)*
 - **Plague** *(candidate: The Corrupted God, direct grant)*
-- **Sorrow** *(candidate: virtue-demon, Magnanimity-line deficiency)*
+- **Sorrow** *(candidate: Virtue Devil, Magnanimity-line deficiency)*
 - **Swarm** *(candidate: The Vermin Queen, General of Corruption)*
-- **Toil** *(candidate: virtue-demon, Industriousness-line excess)*
-- **Tyranny** *(candidate: The Pride Sin-Devil)*
+- **Toil** *(candidate: Virtue Devil, Industriousness-line excess)*
+- **Tyranny** *(candidate: Drambur, the Pride Vice Demon)*
 - **Undeath** *(candidate: Betibizi, self-ascended Minor God in Abyss)*
 
 ### Domains not yet claimed — Open / GM ruling

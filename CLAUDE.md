@@ -185,7 +185,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography.md` |
 | Factions, guilds, churches, organisations | `lore/factions.md` |
 | Peoples, traditions, politics, craft, warfare | `lore/cultures.md` |
-| Playable ancestries (PF2e), heritages, otherworldly beings (virtue-demons, sin-devils, etc.) | `lore/bestiary.md` |
+| Playable ancestries (PF2e), heritages, otherworldly beings (Vice Demons, Virtue Devils, etc.) | `lore/bestiary.md` |
 | New coined names + etymologies | `lore/glossary.md` (always — see naming rule) |
 | Eras, historical events, dates | `lore/timeline.md` |
 | Something entirely new that doesn't fit above | new file in `lore/` (e.g. `lore/spells.md`) |

@@ -222,4 +222,4 @@ Mortals have prayed to **Solyra** for as long as there have been mortals. The sa
 
 ## Cleric domain mappings — see the PF2e Registrar
 
-PF2e cleric domain grants — for both the Thirteen and the non-bound granters (Corrupted God, Generals, sin-devils, virtue-demons, Betibizi) — are mechanical reference and live on [`pf2e-registrar.html`](../pf2e-registrar.html). This file used to carry the Domains Outside the Thirteen table; that table has moved to the registrar so that all PF2e domain bookkeeping has a single home. See `pf2e-notes.md` for the lore-implicit naming convention.
+PF2e cleric domain grants — for both the Thirteen and the non-bound granters (Corrupted God, Generals, Vice Demons, Virtue Devils, Betibizi) — are mechanical reference and live on [`pf2e-registrar.html`](../pf2e-registrar.html). This file used to carry the Domains Outside the Thirteen table; that table has moved to the registrar so that all PF2e domain bookkeeping has a single home. See `pf2e-notes.md` for the lore-implicit naming convention.
