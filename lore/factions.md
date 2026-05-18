@@ -346,7 +346,7 @@ Strict caste structure, but the castes are **fluid** — rise and fall are const
 
 #### Highforge Matriarch — Tharka Eisenhart
 
-- **Race:** Mountain Dwarf.
+- **Race:** Forge Dwarf.
 - **Age:** 217.
 - **Titles:** Lady of the Anvil Throne, Warden of the Steel Marches, Keeper of the Furnace-Law.
 - **Profile:** Stern, unsmiling, pragmatic. Runs the House like a war campaign — ruthlessly efficient, zero tolerance for incompetence. Famous for field-testing new weapons in live combat, and once for silencing a noble critic by hurling a prototype cannonball across a boardroom table.

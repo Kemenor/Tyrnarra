@@ -86,25 +86,25 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 ### Vesuna — Goddess of Chaos (Female)
 - **Aspects:** Change · Creativity · Spontaneity · Madness.
 - **Depiction:** no fixed form — no ancestry, no gender, no consistent body. Only symbols: a coin, a die, an open hand with something unseen in it.
-- **Favoured weapon:** *Meteor Hammer* — its wild arcs and unpredictable strikes embody her chaotic nature.
+- **Favoured weapon:** *Switchscythe* — a blade that switches mid-stroke, scythe into hooked pick, never the same weapon twice.
 - **Mortals see her as:** the spark of innovation and the collapse of order; the gamble that reshapes fate.
 
 ### Jianna — Goddess of Commerce (Female)
 - **Aspects:** Trade · Wealth · Greed · Generosity.
 - **Depiction:** a **Vishkanya** — elegant, precise, with beauty that has an edge; one hand open in offering and one hand closed.
-- **Favoured weapon:** *Twin Chakram* — spinning cycles of exchange, profit and loss, endless trade.
+- **Favoured weapon:** *Tamchal Chakram* — a spinning ring of edged metal, thrown and caught; the wheel of trade, profit and loss in motion.
 - **Mortals see her as:** the market's lifeblood — honest exchange or ruthless exploitation.
 
 ### Araphel — God of Darkness (Male)
 - **Aspects:** Shadows · New Faces · Rebirth · Erasure.
 - **Depiction:** most commonly a **Fetchling** — either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman — but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
-- **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
+- **Favoured weapon:** *Sickle-Saber* — a long curving blade with a secondary grip; every twist of the wrist a new edge, every cut a different face.
 - **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
 
 ### Sarrum — God of Earth (Male)
 - **Aspects:** Stone · Harvest · Endurance · Burden.
 - **Depiction:** a **Minotaur** — immovable, vast, patient, usually standing still, with veins of ore glowing faintly beneath his granite skin.
-- **Favoured weapon:** *Dorn-Dergar* — a spiked, cube-weighted chain, as crushing and immovable as an avalanche.
+- **Favoured weapon:** *Maul-Spade* — club and shovel forged as one; the iron that breaks the wall breaks the soil, and the burden carried is the harvest taken.
 - **Mortals see him as:** provider of shelter and crops, but also the crushing hand of famine and stone.
 
 ### Komo — God of Fire (Male)
@@ -123,44 +123,44 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 ### Hinka — Goddess of the Hunt (Female)
 - **Aspects:** Predation · Survival · Patience · Cruelty.
 - **Depiction:** a red-headed **Orc** cloaked in fur, drawing a bow of horn — mid-draw, decisive.
-- **Favoured weapon:** *Karambit* — a curved claw-knife, quick and intimate as a predator's strike.
+- **Favoured weapon:** *Whip Claw* — tethered claw-daggers flung and retrieved; the patient predator's reach, claws that come from the dark and return before prey can run.
 - **Mortals see her as:** provider of sustenance — or stalker in the dark.
 
 ### Enki — God of Knowledge (Male)
 - **Aspects:** Wisdom · Discovery · Mysteries · Arrogance.
 - **Depiction:** a black-haired **Catfolk** male — curious, precise, usually shown reading or examining something, a staff crowned with a lantern of shifting light at his side.
-- **Favoured weapon:** *Whipstaff* — rigid and flexible in one, embodying truth's reach and cunning's adaptability.
+- **Favoured weapon:** *Spiral Rapier* — a corkscrew blade that catches a foe's steel mid-thrust; inquiry made point, pinning the truth that tried to slip past.
 - **Mortals see him as:** teacher, sage, inventor — or tempter into dangerous truths.
 
 ### Forseti — Goddess of Law (Female)
 - **Aspects:** Order · Justice · Oath · Tyranny.
 - **Depiction:** an **Android** — perfect impartiality, law without personal feeling; scales in one hand, scrolls in the other.
-- **Favoured weapon:** *Hook Swords* — paired blades that interlock, symbolising laws binding all together.
+- **Favoured weapon:** *Hook Sword* — paired blades hooked at the tip; they snag what flees and bind what would not be bound, the law's grip in two hands.
 - **Mortals see her as:** arbiter of peace or oppressive enforcer.
 
 ### Iro — God of Light (Male)
 - **Aspects:** Sun · Hope · Growth · Zealotry.
 - **Depiction:** a **Nephilim** — caught between the mortal and something greater, one hand raised in blessing or judgement, eyes like dawn.
-- **Favoured weapon:** *Guisarme / Glaive* — a sweeping polearm, like a shaft of sunlight cutting through shadow.
+- **Favoured weapon:** *Falcata* — a single-edged blade that flares as it falls; a sunray widening into noon, illumination with weight behind it.
 - **Mortals see him as:** bringer of illumination and joy — or blinding fanaticism.
 
 ### Tani — Goddess of Time (Female)
 - **Aspects:** Fate · Patience · Memory · Decay.
 - **Depiction:** three women simultaneously — child, woman in her prime, wisened elder — sometimes rendered as a single three-faced figure.
-- **Favoured weapon:** *Zulfikar* — a forked scimitar, the split blade of fate and branching futures.
+- **Favoured weapon:** *Zulfikar* — a forked scimitar inscribed along its length; the split blade of fate, futures branching, memory etched in steel.
 - **Mortals see her as:** keeper of destiny, the march of years, the inevitability of endings.
 - **See also:** `secret-history.md` — *Tani — Lore Notes*. Slain in the Week of Crimson Rain, reborn at its end; her death/rebirth is the hinge of the Gods' Law.
 
 ### Shuun — God of Water (Genderfluid)
 - **Aspects:** Rivers · Seas · Adaptability · Drowning.
 - **Depiction:** an **Undine** — themselves partly water, existing at the boundary between human and element. Usually shown seated and still, contrasting with the restlessness of the water around them.
-- **Favoured weapon:** *Trident* — piercing tide, storm, and current alike.
+- **Favoured weapon:** *Kalis* — a wavy double-edged blade; the silhouette of a wave caught in steel, both edges cutting as both tides take.
 - **Mortals see Shuun as:** life-giver and sailor's blessing, or merciless tide and flood.
 
 ### Fisaya — Goddess of Wind (Female)
 - **Aspects:** Storms · Travel · Breath · Ruin.
 - **Depiction:** a female **Kitsune** with multicolour fur — each colour an aspect of change — wearing flowing silks, hair trailing into clouds.
-- **Favoured weapon:** *Bladed Scarf* — silks edged with steel, graceful as a breeze, deadly as a storm.
+- **Favoured weapon:** *Feng Huo Lun* — twin bladed wheels spun on the wrist; wind given an edge, the storm with hands.
 - **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
 
 ---

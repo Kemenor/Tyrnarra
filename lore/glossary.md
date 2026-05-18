@@ -278,9 +278,9 @@ Full canon in `geography.md` — *Zuzental → Thousand Kingdom → Founding his
 | Dwarf | -stein | Ravenstein | Germanic "stone"; firm, hearth-rooted |
 | Halfling | -down | Ravendown | Small hill, small folk |
 | Gnome | -hollow | Ravenhollow | Fey-touched, hidden places |
-| Half-orc / Orc | -mark | Ravenmark | Germanic march/border; warrior-frontier |
-| Tiefling | -fell | Ravenfell | "Fallen"; infernally-touched |
-| Nephilim (good-aligned, e.g. Aasimar-style) | -gilt | Ravengilt | Gilded; celestial sheen. *House Fyrst's current monarch bears this suffix.* |
+| Dromaar / Orc | -mark | Ravenmark | Germanic march/border; warrior-frontier |
+| Fiendish Nephilim | -fell | Ravenfell | "Fallen"; infernally-touched |
+| Divine Nephilim | -gilt | Ravengilt | Gilded; celestial sheen. *House Fyrst's current monarch bears this suffix.* |
 | Goblinkin (goblin / hobgoblin) | -snarl | Ravensnarl | Sharp-edged, lupine |
 | Leshy | -bough | Ravenbough | Plant-folk |
 | Tengu / Aiuvarin | -wing | Ravenwing | Feathered |
@@ -400,7 +400,7 @@ Quick reference. Full prose in `bestiary.md` — *Versatile Heritages*; system-s
 - **Nephilim** → any god (celestial) or any demon/devil (fiendish) — the universal divine-blood / fiendish-blood heritage.
 - **Ifrit / Oread / Sylph / Undine** → Elemental Plane sparks (Komo / Sarrum / Fisaya / Shuun affinity by domain, not by blood). **Suli** → generic geniekin (no specific element).
 - **Ardande** → Feyworld lineage (Wood element). **Talos** → Shadowplane lineage (Metal element). Both are planar lineages of the Life Layer's sibling planes; neither plane belongs to a bound god.
-- **Aiuvarin** → half-elf; **Dromaar** → half-orc. Genetic, not metaphysical.
+- **Aiuvarin** → elven-and-other mixed ancestry; **Dromaar** → orcish-and-other mixed ancestry. Genetic, not metaphysical.
 - **Dhampir** → half-Vampire; undead-touched. Vampires are an independent lineage on Talan.
 - **Dragonblood** → alien Dragon descent (see *Dragons* ancestry).
 - **Hungerseed** → half-Oni. Oni are bound spirits of Sortalde, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha — Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Almost all Hungerseeds are Sortalde-born; Talan-side Hungerseeds typically descend from a Sortalde émigré whose Oni heritage is one or two generations back.

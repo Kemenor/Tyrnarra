@@ -8,12 +8,7 @@ Tyrnarra is built for play with **Pathfinder 2e (Remaster)**. The lore files cap
 
 ## Ancestry roster vs. the standard 44
 
-Tyrnarra adopts the 44 PF2e Remaster ancestries with three adjustments:
-
-### Renames adopted from the Remaster
-
-- **Kholo** (formerly Gnoll) — full canon entry in `bestiary.md`.
-- **Tripkee** (formerly Grippli) — full canon entry in `bestiary.md`.
+Tyrnarra uses the PF2e Remaster ancestry roster, plus the additions below.
 
 ### Tyrnarra-canon additions (outside the standard 44)
 
@@ -21,17 +16,9 @@ Tyrnarra adopts the 44 PF2e Remaster ancestries with three adjustments:
 - **Slimes** — Darklands-adapted; the published slime ancestry on Talan is almost always a Darklands-born individual that worked its way to the surface.
 - **Rabbitfolk** — uncommon everywhere; widely scattered, frequently nomadic.
 
-### Removed
-
-- **Dragonkin** — D&D 5e migration relic. No narrative footprint worth keeping. Dragons (alien lineage) and Dragonet (native wyrmkin) cover the dragon-coded play space.
-
 ### Access tags
 
 The PF2e *common / uncommon / rare* access tags apply at Talan scale. The Ancestry Distribution table at the top of `bestiary.md` lists per-domain dominance, uncommon access, and rare access for every placement.
-
-### Drow — Talan-specific framing
-
-PF2e's default drow are underdark-dwelling. On Talan, the underdark is the **Darklands** — the Corrupted God's territory. Drow on Talan are surface-dwelling children of shadow, concentrated in Myrkono around Araphel's domain. The mechanical ancestry is unchanged; the framing is.
 
 ### Sortalde (Tian Xia) ancestry placements
 
@@ -41,23 +28,23 @@ The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai
 
 ---
 
-## Versatile Heritages — Remaster reshuffle
+## Versatile Heritages
 
-The Remaster reshuffled the versatile-heritage roster:
+The PF2e versatile-heritage roster maps to Tyrnarra as follows:
 
-- **Nephilim** absorbs the former Aasimar (celestial) and Tiefling (fiendish) heritages — both expressions are now Nephilim, with parentage determining the manifestation.
-- **Ardande** (Wood) and **Talos** (Metal) are new elemental options. In Tyrnarra they map to the two non-Material planes of the Life Layer — Ardande to **Feyworld**, Talos to **Shadowplane**.
-- **Aiuvarin** and **Dromaar** replace Half-Elf and Half-Orc as the canonical mixed-ancestry heritages.
-- **Suli** is now generic geniekin, with no single-element specialisation.
+- **Nephilim** — celestial or fiendish parentage, with parentage determining the manifestation.
+- **Ardande** (Wood) and **Talos** (Metal) — elemental heritages tied to the two non-Material planes of the Life Layer: Ardande to **Feyworld**, Talos to **Shadowplane**.
+- **Aiuvarin** and **Dromaar** — the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
+- **Suli** — generic geniekin, no single-element specialisation.
 
 Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md` — *Versatile Heritages*.
 
 ### Bound gods whose touch is not bloodline-borne
 
-After the Remaster reshuffle, four of the bound thirteen have no exclusive heritage on Talan:
+Four of the bound thirteen have no exclusive heritage on Talan:
 
 - **Iro** (Light) — celestial Nephilim covers the divine-blood expression.
-- **Enki** (Knowledge) — Enki was Suli pre-Remaster; Suli is now generic geniekin. Enki's touch manifests as scholarly aptitude rather than physical change.
+- **Enki** (Knowledge) — touch manifests as scholarly aptitude rather than physical change; generic Suli geniekin is the closest mechanical mirror but is not exclusively his.
 - **Jianna** (Commerce) — blessing accumulates as trade fortune, not body trait.
 - **Cronus** (Freedom) — worshippers are made by choice, not blood (see `secret-history.md` — *Cronus — The Secret*).
 
@@ -87,35 +74,33 @@ Some domain names in the Tyrnarra canon are **theological-flavour names**, not e
 
 **The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph) — *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
 
-**Reconciled out of canon.** Several flavour names previously in canon have been **retired** during the PF2e domain rebuild: *Peaceful Death* (dropped from Tani; **Death is now Hinka's alone** — Tani retains Fate and Time, plus Soul; her death-and-return remains character canon), *Violent Death* (replaced for Hinka by the PF2e Death domain), and *Delirium* (dropped entirely; the Temperance-deficiency virtue-demon's PF2e grant is now canon-pending). The older *Void* domain has been **renamed** in line with the PF2e Remaster to *Nothingness* — Araphel grants Nothingness; older canon's *Void* readings continue to mean the same domain.
-
 ### Non-bound granters — canon-pending
 
-A previous canon pass mapped 13 PF2e domains to non-bound granters (sin-devils, virtue-demons, Generals of Corruption, Betibizi, the Corrupted God directly). **That mapping has been rolled back to Open** as part of the bound-god rebuild — the non-bound entities still exist as canonical beings, but their specific PF2e cleric-domain grants are now canon-pending, awaiting a fresh assignment pass focused on the non-bound side. The 13 domains in this state are:
+Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiting a dedicated assignment pass focused on sin-devils, virtue-demons, Generals of Corruption, Betibizi, and the Corrupted God directly. The non-bound entities themselves exist as canonical beings; only their specific PF2e cleric-domain grants are pending. The 13 domains in this state are:
 
-- **Abomination** *(prior candidate: Muiral the Misshapen, Modesty-line virtue-demon)*
-- **Decay** *(prior candidate: The Rot-Tyrant, General of Corruption)*
-- **Destruction** *(prior candidate: The Wrath Sin-Devil)*
-- **Indulgence** *(prior candidate: The Gluttony Sin-Devil)*
-- **Naga** *(prior candidate: The Maw Serpent, General of Corruption)*
-- **Nightmares** *(prior candidate: The Whisperer in Dreams, General of Corruption)*
-- **Pain** *(prior candidate: virtue-demon, Patience-line excess)*
-- **Plague** *(prior candidate: The Corrupted God, direct grant)*
-- **Sorrow** *(prior candidate: virtue-demon, Magnanimity-line deficiency)*
-- **Swarm** *(prior candidate: The Vermin Queen, General of Corruption)*
-- **Toil** *(prior candidate: virtue-demon, Industriousness-line excess)*
-- **Tyranny** *(prior candidate: The Pride Sin-Devil)*
-- **Undeath** *(prior candidate: Betibizi, self-ascended Minor God in Abyss)*
+- **Abomination** *(candidate: Muiral the Misshapen, Modesty-line virtue-demon)*
+- **Decay** *(candidate: The Rot-Tyrant, General of Corruption)*
+- **Destruction** *(candidate: The Wrath Sin-Devil)*
+- **Indulgence** *(candidate: The Gluttony Sin-Devil)*
+- **Naga** *(candidate: The Maw Serpent, General of Corruption)*
+- **Nightmares** *(candidate: The Whisperer in Dreams, General of Corruption)*
+- **Pain** *(candidate: virtue-demon, Patience-line excess)*
+- **Plague** *(candidate: The Corrupted God, direct grant)*
+- **Sorrow** *(candidate: virtue-demon, Magnanimity-line deficiency)*
+- **Swarm** *(candidate: The Vermin Queen, General of Corruption)*
+- **Toil** *(candidate: virtue-demon, Industriousness-line excess)*
+- **Tyranny** *(candidate: The Pride Sin-Devil)*
+- **Undeath** *(candidate: Betibizi, self-ascended Minor God in Abyss)*
 
 ### Domains not yet claimed — Open / GM ruling
 
-Two PF2e domains exist in the system but have no canonical Tyrnarra granter on either side (bound or non-bound), and no prior assignment to roll back: **Dragon** and **Moon**. Plausible candidates exist (Zaharsuge for Dragon; Bikiargi for Moon) but neither is decided. Treat these as obscure or experimental claims that need a GM ruling until canon settles them.
+Two PF2e domains have no canonical Tyrnarra granter on either side: **Dragon** and **Moon**. Plausible candidates exist (Zaharsuge for Dragon; Bikiargi for Moon) but neither is decided. Treat these as obscure or experimental claims that need a GM ruling until canon settles them.
 
 ---
 
 ## Favoured weapons
 
-Per-god favoured weapons in `gods.md` — *The Thirteen — Per-God Sheet* are both iconography and PF2e cleric mechanical favoured weapons. Araphel's **Kusarigama** (sickle-and-chain) is canon both ways.
+Per-god favoured weapons in `gods.md` — *The Thirteen — Per-God Sheet* are both iconography and PF2e cleric mechanical favoured weapons, drawn exclusively from the PF2e **Advanced** weapon category. Araphel's **Sickle-Saber** (curved blade with a secondary grip) is canon both ways.
 
 ---
 
