@@ -79,6 +79,8 @@ The seats are immortal (as long as vice exists in mortals); the *holders* can be
 
 **Atezar** — Basque *atezain* ("gatekeeper, doorkeeper") → drift *atezain → atezar*. Minor god of the late Gods' Era; head of a small frontier pantheon (five gods, names lost), venerated by border garrisons and wall-towns. His pantheon and last followers were annihilated in the Week of Crimson Rain. At the forging of the Gods' Law he was sorted *dangerous* and banished to Layer 3; in Abyss he killed and replaced the Reidar of the day and has been the **current Reidar** since shortly after the Gods' Law was sealed. Full canon: `bolverk.md` — *Reidar — the Wrath Vice Demon*.
 
+**Lethar — Outer-being origin note.** Of the seven, Lethar is the only seat-holder who is neither a mortal soul nor a god of Tyrnarra. He is an **Outer being** from a multiversal reality beyond the Wellspring's reach — drawn into Abyss across the Astral when sloth first emerged as a recognised vice among mortals and the Sloth seat's calling reached outside Tyrnarra. He is the **original holder** of his seat (the only one of the seven who is) and has held it since it formed. Full canon: `bolverk.md` — *Lethar — the Sloth Vice Demon*; multiversal-realities canon: `cosmology.md` — *Tyrnarra — The World & Sky*.
+
 ### God Domains (coined following the naming rule)
 Full etymologies are in `lore/geography.md`. Quick reference:
 

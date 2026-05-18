@@ -13,7 +13,8 @@ How the world works: physical structure, divine mechanics, the Wellspring, magic
   - **Solyra** — the sun: a blazing disc of gold.
   - **Veyru** — the Red Moon: deep crimson; its light seems to shimmer faintly in motion.
   - **Calune** — the Green Moon: pale jade, with marbled streaks that shift subtly across the seasons.
-- Tyrnarra is one of countless worlds born of the Wellspring's outpouring — a single leaf on an infinite, ever-growing tree. Other worlds exist; mortals on Talan have no practical contact with them.
+- **Tyrnarra is the totality of what springs from this Wellspring** — the world, all nine planes, all souls, all gods, every being and place Wellspring-born is part of it. It is one cosmology, not one world among many of the same kind. Mortals colloquially use *Tyrnarra* for the world they live on (the same name at mortal scale); at the cosmological scale the term means *everything from this Wellspring*.
+- **Other realities exist in a multiversal sense** — alien cosmologies, separately constituted, fed by other sources or by nothing at all. They are not part of Tyrnarra, not subject to the Gods' Law, not reached by the Wellspring's outflow. Mortals on Talan have no practical contact with them; the bound gods have no jurisdiction within them. Outer entities have, very rarely, drifted across — the Vice Demon **Lethar** is the only canonically-recorded such arrival.
 
 ### The Cloud Sea
 
