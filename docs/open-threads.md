@@ -37,6 +37,11 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Where vampires came from. Candidate hooks: failed Betibizi-integration attempts (strongest — Betibizi holds the integration procedure); Blackened Lands émigrés (Storveldi-Denbora-descended); banned-god creations; Feyworld émigrés.
 **Where.** [lore/bestiary.md](../lore/bestiary.md) — Dhampir heritage.
 
+### [Bestiary] Fetchling lore — Darkness dominant ancestry
+**Decided.** Fetchling is the dominant ancestry of Myrkono (Darkness / Araphel), taking the slot vacated when Drow were dropped from canon (Pathfinder Remaster removed Drow). Current single-line origin: *"Remnants of a civilisation that sought refuge in the region of Darkness and found it."* Guild Sovereign Seraphel Duskbane is a Fetchling.
+**Open.** Flesh out Fetchling origin and identity on Talan. Specifically: decide whether to drop the Shadow-Plane connection (the PF2e default) and root them entirely in the in-world Refuge-Civilisation origin. If the Shadow-Plane connection is removed, the noble-name suffix *-dusk* (currently glossed *"Shadow-Plane-touched"*) needs re-glossing — possibly *"of the Refuge-line"* or similar. Also: what was the civilisation they fled from, and what were they fleeing?
+**Where.** [lore/bestiary.md](../lore/bestiary.md) — Fetchling entry; [lore/glossary.md](../lore/glossary.md) — Fetchling suffix row in the noble-naming table; [talan/domains/zuzental/thousand-kingdom.html](../talan/domains/zuzental/thousand-kingdom.html) — same row.
+
 ### [Cosmology] Order Grand Gods joined Cronus in the Week of Crimson Rain
 **Decided.** Cronus united all eleven remaining Grand Gods. **Araphel** was the first to stand behind him.
 **Open.** The sequence of the other ten and the political moments that decided each.

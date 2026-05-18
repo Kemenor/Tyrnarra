@@ -11,7 +11,7 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | Domain | God | Dominant Ancestries | Notable Uncommon |
 |---|---|---|---|
 | **Light** · Egulon | Iro | Nagaji · Shoony | — |
-| **Darkness** · Myrkono | Araphel | Fetchling · Elf (Drow) | Centaur (Shadow Steppes) |
+| **Darkness** · Myrkono | Araphel | Fetchling | Centaur (Shadow Steppes) |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
 | **Water** · Floteyn | Shuun | Strix · Tripkee · Athamaru · Merfolk | Leshy |
 | **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
@@ -100,10 +100,8 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 ### Elf
 **Dominant in Zuzental (Law / Forseti)** alongside humans. Politically motivated and **long-planning** — the elven side of the Thousand Kingdom's politics moves on generational timescales, often outlasting and out-thinking the human factions whose lives don't span the same windows. Elves are one of the two ruling bloodlines of the Thousand Kingdom.
 
-**Drow** — the Darkness sub-population. Dominant in **Myrkono (Darkness / Araphel)**. Surface-dwelling: Drow on Talan are children of shadow. The underdark on Talan is the Darklands, the Corrupted God's territory; the Drow live above it, in Myrria and the surrounding sub-regions, where Araphel's domain of shadow is a daily reality.
-
 ### Fetchling
-**Remnants of a civilisation that sought refuge in the region of Darkness** and found it. **Common in Myrkono**, especially Myrria. Uncommon elsewhere. Many fetchlings serve Araphel directly — including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`).
+**Dominant in Myrkono (Darkness / Araphel).** Remnants of a civilisation that sought refuge in the region of Darkness and found it; the lineage stayed, and Myrria grew around it. Many fetchlings serve Araphel directly — including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`). Uncommon outside Myrkono.
 
 ### Fleshwarp
 **Native to the Blackened Lands** — the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `secret-history.md` — *The Blackened Lands* — and `geography.md` — Lioaru → Lost Kingdom). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
@@ -263,7 +261,7 @@ The six Tian Xia ancestries — **Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Ya
 
 ## Versatile Heritages
 
-Heritages on Talan are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception — some are blessed, some are feared, most are simply *known* and lived around. The mapping below is the canonical placement for Tyrnarra; for the system-side Remaster reshuffle (Aasimar/Tiefling → Nephilim, Wood/Metal heritages, etc.) see `pf2e-notes.md`.
+Heritages on Talan are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception — some are blessed, some are feared, most are simply *known* and lived around. The mapping below is the canonical placement for Tyrnarra; for the system-side mapping see `pf2e-notes.md`.
 
 ### Divine-blood heritages (god in the veins)
 
@@ -274,7 +272,7 @@ Heritages on Talan are explained in-world as either a god's blood, an Elemental 
 | **Changeling** | Araphel (Darkness) | Tied to Araphel's *new faces* aspect — shapeshifters and identity-shifters fit his theology of becoming. Common in Myrria. |
 | **Duskwalker** | Tani (Time) | **Created, not born.** Manifests as a mortal child in a location with close ties to death — psychopomp-touched. The **Blackened Lands** produce more Duskwalkers than anywhere else on Talan; Tani's home domain of Lioaru is a steady second. They are doctrinally close to Tani's clergy. |
 | **Ganzi** | Vesuna (Chaos) | Chaos-aligned; counterpart to Aphorite. Common in Nashavel, especially the Kaosadaemi Principality. |
-| **Nephilim** | **Any divine or fiendish source** | See below — Nephilim is the universal divine-blood heritage on Talan and absorbs the old Aasimar/Tiefling split. |
+| **Nephilim** | **Any divine or fiendish source** | See below — Nephilim is the universal divine-blood heritage on Talan and covers both divine and fiendish parentage. |
 
 #### Nephilim — the universal divine-blood heritage
 
@@ -315,8 +313,8 @@ Two further elements — Wood and Metal — sit outside the classical four. On T
 
 | Heritage | Mix | Notes |
 |---|---|---|
-| **Aiuvarin** | Half-Elf, half any other ancestry | Most common where elves dominate (Zuzental, Myrkono Drow communities); the half-and-half identity is its own social position. |
-| **Dromaar** | Half-Orc, half any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi, Lautara, Nashavel). |
+| **Aiuvarin** | Elven · any other ancestry | Most common where elves dominate (Zuzental); the half-and-half identity is its own social position. |
+| **Dromaar** | Orcish · any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi, Lautara, Nashavel). |
 
 These are mortal-ancestry mixes — genetic lineages, with their place in the world shaped by the mortal politics of the two parent ancestries.
 
