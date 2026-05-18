@@ -36,13 +36,15 @@ These appear in the existing HTML primers. Some don't follow the Basque/Icelandi
 - **Elysium / Diyu / Abyss** — the three planes of the Postlife layer
 - **The Aurora Veil** (Veil of Genesis) — transitional veil at Prelife
 - **The Duskmire** (Shroud of Return) — transitional veil at Postlife
-- **Dauria** — **Judgment City of the dead**, in Diyu. Souls arrive from the **Duskmire** (the Shroud of Return), are judged here, and are dispatched to their destination plane via the moon-cycle Wellspring channels — the **Tunsund** being the channel that carries the wicked to Bolverk in Abyss. Dauria is the cosmological router for the dead.
-- **Bolverk** — the megacity in **Abyss**; seat of the seven **Vice Demons** and the fourteen **Virtue Devils**. Partitioned: Vice-Demon side (seven independent spires, anarchic) and Virtue-Devil side (a **tetradecagram** of fourteen vertically-split ziggurats around a central Council Hall — each ziggurat owned by one Virtue Devil, the excess-face above and the deficiency-face below, with the devil seated on the false-mean between; ordered). The **Tunsund** channel cuts between the two sides, flanked by a four-terraced **neutral strip** belonging to neither faction. The city is the *endpoint* of corruption, not the engine — the work happens on Talan via whispers and bargains; Bolverk is where harvested souls are processed into Wellspring-power.
+- **Dauria** — **Judgment City of the dead**, in Diyu. Souls arrive from the **Duskmire** (the Shroud of Return), are judged here, and are dispatched to their destination plane via the moon-cycle Wellspring channels. The cosmological router for the dead. *(Full canon in `bolverk.md` — the Dauria-to-Bolverk routing.)*
+- **Bolverk** — the megacity in **Abyss**; seat of the seven **Vice Demons** and the fourteen **Virtue Devils**.
   - **Source:** Icelandic *bölverkur* — "evil-deed."
   - **Drift:** dropped the *-ur* nominative ending, then treated as a single-word place-name. *bölverkur* → *bölverk* → **Bolverk**.
-- **Tunsund** — the channel running through Bolverk between the Vice-Demon and Virtue-Devil sides, carrying souls from Dauria via the daily Wellspring-flood. Flanked by a four-terraced **neutral strip** (upper terraces command *time prestige* — they flood last and briefest). **Flood cycle**, tied to the moons sinking into the Cloud Sea: (1) Veyru begins sinking — bottom terrace floods; (2) Veyru fully submerged — terrace 2; (3) Calune begins sinking — terrace 3; (4) both moons fully submerged — top terrace, peak flood. When the moons rise the next night the channel drains and the terraces dry. Each flood-stage strands fresh souls on the newly-flooded terrace, where Vice Demons and Virtue Devils contest, claim, or trade them. Between floods the terraces hold *temporary life* — markets, parleys, ad-hoc bargains — built and broken down on the cycle. Anyone caught in the channel itself when a flood-stage breaks is carried off.
+  - **Full canon:** `bolverk.md` (city geography, factions, soul-routing, individual seat-holders).
+- **Tunsund** — the channel through Bolverk between the Vice-Demon and Virtue-Devil sides, carrying souls from Dauria via the daily Wellspring-flood.
   - **Source:** Icelandic *tunglsund* — "moon-channel" (from *tungl* "moon" + *sund* "channel/strait"). The moons drive the flood, hence the name.
   - **Drift:** dropped the middle consonant cluster *gl*. *tunglsund* → **Tunsund**.
+  - **Full canon:** `bolverk.md` — *The Tunsund* (flood cycle, terraces, time-prestige).
 
 ### The 13 Bound Gods
 | Domain | Name | Region | God's City |
@@ -408,8 +410,8 @@ Full canon in `gods.md` — *Named Non-Bound Gods*.
 Full bestiary entries live in `lore/bestiary.md`. Listed here are the named beings and the inherited-folklore terms worth recording for cross-reference.
 
 **Otherworldly entities:**
-- **The Virtue Devils** — Plain English. The Aristotelian-pattern devil hierarchy in Bolverk: **fourteen** devils, one per virtue, each devil internally holding both *excess* and *deficiency* extremes (they tip the scale either way to suit the mortal in their grip). Vertically-split ziggurats in a tetradecagram, Council of Fourteen by consensus. See `bestiary.md` for the virtue catalogue. *No individual Virtue Devils are named in current canon — Muiral the Misshapen (prior canon, Modesty-line) has been retired.*
-- **The Vice Demons** — Plain English category-name; the seven current holders have their own coined names (see *Vice Demons — Bolverk's seven seat-holders* above). One Vice Demon per Vice (Envy, Gluttony, Greed, Lust, Pride, Sloth, Wrath); seats are immortal, holders can be killed and replaced.
+- **The Virtue Devils** — Plain English category-name. Fourteen Aristotelian-pattern devils, one per virtue, each holding both excess and deficiency. Full canon: `bolverk.md` — *Virtue Devils — the Fourteen* (canonical fourteen virtues, the doctrine-of-the-mean mechanic, tetradecagram architecture). No individual Virtue Devils named in current canon.
+- **The Vice Demons** — Plain English category-name. Seven Aquinas-pattern demons, one per Vice. Current holders (Drambur, Nirfel, Lostar, Ofunda, Veislur, Reidar, Lethar) have their own coined names — see *Vice Demons — Bolverk's seven seat-holders* above. Full canon: `bolverk.md` — *Vice Demons — the Seven*.
 
 **Versatile heritage placements (Tyrnarra source mapping):**
 

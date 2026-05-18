@@ -286,7 +286,7 @@ Heritages on Talan are explained in-world as either a god's blood, an Elemental 
 **Nephilim covers both celestial and fiendish features** on Talan, with parentage determining the manifestation. The mapping broadens further:
 
 - **Celestial features** manifest in Nephilim descended from *any god* — most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
-- **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See the *Vice Demons* and *Virtue Devils* sections below for the parent populations.
+- **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See `bolverk.md` for the parent populations: *Vice Demons — the Seven* and *Virtue Devils — the Fourteen*.
 
 Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag — one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
 
@@ -354,86 +354,17 @@ Four of the bound thirteen express their touch otherwise than through an exclusi
 
 ---
 
-## Virtue Devils — the Fourteen
+## Vice Demons, Virtue Devils, and Bolverk
 
-Talan's Virtue-Devil hierarchy follows a coherent theological pattern that mortal scholars have catalogued: **each Virtue Devil is the personification of a virtue's corruption.** Following the classical *doctrine of the mean*, every virtue sits between two failure modes — one of **excess**, one of **deficiency**. A Virtue Devil embodies **both extremes within itself** — the corruption of the virtue as a whole, manifested as either excess or deficiency depending on what will most damage the mortal in their grip. The devil tips the scale; they do not care which way it falls.
+The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, and **Bolverk** (the megacity in Abyss where they dwell) lives in `bolverk.md`. This file used to carry those sections; they have been migrated so that `bestiary.md` can stay focused on Talan's ancestries and heritages.
 
-**Fourteen Virtue Devils, one per virtue.** Each owns a vertically-split ziggurat in Bolverk's tetradecagram: the **excess-face** as the upper tier, the **deficiency-face** as the lower tier, the devil itself seated on the **false-mean** between — looking, from a distance, like virtue. The architecture dramatises the corruption. The 14 devils sit on the **Council of Fourteen** in the central Council Hall, by consensus-bound debate (slow, ritualistic, mostly stable — the contrast with the anarchic Vice Demon spires across the Tunsund).
-
-The Virtue Devil count is **not paired against the seven Vices** — the virtues stand on their own catalogue, more numerous and more varied than the vices because virtue is more diverse than its absence.
-
-### The canonical fourteen
-
-| Virtue | Excess (corruption above the mean) | Deficiency (corruption below the mean) |
-|---|---|---|
-| **Courage** | Recklessness | Cowardice |
-| **Wisdom** | Cynicism | Folly |
-| **Justice** | Vengefulness | Permissiveness |
-| **Honesty** | Indiscretion | Deceit |
-| **Hope** | Delusion | Despair |
-| **Faith** | Fanaticism | Apostasy |
-| **Loyalty** | Servility | Treachery |
-| **Compassion** | Sentimentality | Callousness |
-| **Curiosity** | Obsession | Apathy |
-| **Hospitality** | Sycophancy | Xenophobia |
-| **Honor** | Vainglory | Perfidy |
-| **Mercy** | Appeasement | Implacability |
-| **Magnanimity** | Vanity | Pettiness |
-| **Creativity** | Hubris | Sterility |
-
-**Named Virtue Devils so far:**
-- *(none individually named in current canon.)* Prior canon included **Muiral the Misshapen** as the Modesty-line Virtue Devil, but Modesty is no longer among the canonical fourteen and Muiral has been **retired**. Individual Virtue Devils will be named as stories call for them; the name *Muiral* may return in a future role if it fits, but is not currently bound to any of the fourteen.
-
-**Implications:**
-- A Virtue Devil's *preferred mode* (which extreme they push toward first) varies by individual and by situation. The Courage Devil may default to feeding Cowardice in some mortals and Recklessness in others — they read the target and tip whichever way will damage more. Mortal scholars who study a particular devil can sometimes anticipate its preferences, but the devil retains the freedom to flip if a counter-strategy is detected.
-- Mortal philosophers who study Talan's moral pattern can predict Virtue-Devil behaviour. This is how a handful of Enki-aligned exorcists work: they read the devil, identify its virtue line, then deploy the *true mean* — the genuine virtue itself — to push it off-pattern. The corruption fails not when the opposite extreme is invoked but when the virtue is restored.
-- Killing a Virtue Devil is possible (and rare); the seat persists, and a new devil rises to occupy the same virtue line. The pattern is immortal even when individual holders are not — same logic as the Vice Demon seats, different mechanism.
-
----
-
-## Vice Demons — the Seven
-
-The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a *corruption* of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always **seven** Vice Demons, and there is always one per Vice. The **seats are immortal** (as long as the vice exists in mortals); the **holders can be killed and replaced**, and each new holder takes a new name. They reside in Bolverk, the megacity in Abyss (see `glossary.md` — Bolverk), each in their own independent spire.
-
-| Vice | Current Holder | PF2e Domain Grant |
-|---|---|---|
-| **Pride** | **Drambur** | canon-pending |
-| **Greed** | **Nirfel** | canon-pending |
-| **Lust** | **Lostar** | canon-pending |
-| **Envy** | **Ofunda** | canon-pending |
-| **Gluttony** | **Veislur** | canon-pending |
-| **Wrath** | **Reidar** | canon-pending |
-| **Sloth** | **Lethar** | canon-pending |
-
-All seven domain grants are currently **Open** in the PF2e registrar pending the dedicated non-bound assignment pass. Personalities and individual canon for the seven holders are in progress.
-
-### Drambur — the Pride Vice Demon
-
-**Mortal life.** Nephilim of Iro, demi-god of the Gods' Era. Iro's chosen — the literal divine warrior, light flowing through him in battle. He was already proud by station: god's-blood traits at birth, demigod stature by deeds, the war turned where he turned, not the other way. During the Gods' Era he killed a minor god in single combat (canon-pending which one; dead for millennia, no narrative weight needed) and **took the divine shard for himself** — *why shouldn't he? he is the divine warrior.* The shard advanced him further along the Mortal Ascent Ladder.
-
-**The corruption.** He was proud at the start; the shard made him more so. Then came the **Week of Crimson Rain**, and Tani fell to the unjust gods and died. Drambur watched the Goddess of Time *die* — and realised, in that moment, that gods are mortal beings of immense power, not metaphysical absolutes. The thought that followed was small and terrible: *if Tani can die, Iro can die. If Iro can die, what is the difference between Iro and me? I have a shard. I have the battlefield. I have already done what he did.*
-
-**The fall.** With Iro deep in the cosmic work of the Week — wrestling with Tani's binding-back, with the unjust gods, with Cronus's gathering — Drambur turned on his own god at his god's weakest moment, believing himself indomitable. **It was a real fight, god to god.** Drambur, demi-god with a stolen shard, met Iro on something near-even terms and **almost killed him**. The fight tore on for hours. Iro put him down in the end — but it cost the god: wounds that have never fully closed, hours stolen from the cosmic work elsewhere, and a permanent flinch around the question of zealotry. (See `gods.md` — Iro — *GM Secret: the wound from Drambur*.)
-
-**Ascension to the seat.** Drambur's Pride-perfect soul fell across the Tunsund into Bolverk. The previous Pride-seat-holder — old, complacent, ruling on inheritance rather than vigour — could not hold against him. Drambur killed the previous Drambur in the Pride spire and took the throne. He has held it since the close of the Gods' Era; in mortal reckoning, **several millennia**.
-
-**Form.** Still in his mortal warrior-shape, perfected: tall, golden-haired, sun-bronzed, armoured in the Sun-Champion pattern polished beyond what mortal smiths could manage. The shard he took is visible — set in his breastplate where his heart would be, faintly singing with a stolen-god's resonance. **He cannot appear smaller or narrower than whoever stands before him**; his pride is dimensionally enforced. A halfling in his presence sees a giant; a giant sees something larger still; a dragon sees a peer. **His shadow falls upward**, as if the world is below him — mortals who notice this detail sometimes break free of his whisper.
-
-**The spire.** The tallest of the seven Vice Demon spires — not because Pride is the senior vice, but because *Drambur's spire has grown taller under him*, fed by his own self-image. Sheathed in something resembling polished gold-mirror; from a distance, in the right light, it could be mistaken for a Ljosarn cathedral tower. Up close the mirror reflects each visitor back slightly *aggrandised* — taller, brighter, more beautiful than they are. The trick begins before they enter the spire.
-
-**Method on Talan.** Drambur does not whisper to the proud-and-vulgar. He whispers to *the genuinely great* — the just king, the brilliant scholar, the saintly healer, the world-class artisan. Paladins of Iro especially; he knows the shape of that fall. His message is consistent: *"They are right to praise you. You have earned more than they say. The work was yours, not the god's. You are the source, not the channel."* He never tempts toward sin. He only *agrees* — earlier and more enthusiastically than the mortal can.
-
-**Reputation among the seven.** Drambur considers himself the senior of the Vice Demons, and the other six **never contradict him**. Partly because his Pride is structurally easy to use — let him think he is first, then act around him. Partly because his spire is genuinely taller, and crossing him in his own court is more trouble than it's worth. Behind their teeth the other six call him *the gilded fool* and *the dimmed sun*. He has never noticed.
-
-**GM Secret — his former name.** Drambur's mortal name appears in no chronicle. Iro's clergy of the time scoured it from the records as part of the official forgetting — a champion who turned on his god could not be named to inspire others. The name persists in **exactly one place on Talan: in Iro's own memory.** A cleric of Iro who reaches deep into the god's communion at a moment of high need *might* be granted it. Speaking that name in Drambur's presence **fractures his Pride** — the elevated *Drambur*-shape collapses briefly to the mortal soul beneath. He is vulnerable in that moment to mortal harm in a way he otherwise never is. *Iro grants the name perhaps once a generation, and never to the eager.*
-
----
-
-**Demon / Devil distinction in Talan:**
-- **Vice Demons** embody a vice. They are the vice itself, given form. Their existence is foundational, not parasitic. Anarchic; constant power-struggle below the seven seat-holders; the seven themselves rarely shift but *can* be killed and replaced.
-- **Virtue Devils** corrupt a virtue. They are perversions of what could have been good. Their existence is parasitic on the virtue line. Ordered; locked into excess/deficiency pairs in the heptagram; one dominant per pair, the subordinate cannot kill the dominant without collapsing both.
-- **Both are redeemable in principle.** The contrary virtue still runs through every Vice Demon, and every Virtue Devil retains the seed of the virtue it perverts. Redemption work on either is rare and brutally difficult, but it is canonically *possible* — no being on Talan is fixed beyond change.
-- Vice Demons proliferate around mortals who *choose* a vice. Virtue Devils proliferate around mortals who have already *half-corrupted* a virtue.
+`bolverk.md` covers:
+- The city: geography, the Tunsund channel, the four-terraced neutral strip, the daily flood cycle, the Dauria-Bolverk soul-routing
+- The three factions: Vice Demons (anarchic spires), Virtue Devils (ordered tetradecagram), and Independents (Soul Sellers, Independent Souls)
+- The feudal-tithe model
+- The soul-claim mechanic on the Tunsund banks
+- Individual canon for named Vice Demons (Drambur, Ofunda — more in progress)
+- The canonical fourteen Virtue Devils' virtues + excess/deficiency table
 
 ---
 

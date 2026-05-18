@@ -30,7 +30,7 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 ### [Bestiary] Vice Demons — personalities, politics, mortal touch *(rolling)*
 **Decided.** Seven Vice Demons (Pride · Greed · Lust · Envy · Gluttony · Wrath · Sloth). **Current holders named** (Drambur · Nirfel · Lostar · Ofunda · Veislur · Reidar · Lethar). Planar seat: Bolverk (Abyss); each holds an independent spire. Anarchic, kill-and-replace, no leader. Power economy via soul-binding (life vows → death-tithe). PF2e domain grants for all seven: **canon-pending** in the registrar.
 **Open.** Individual personalities, intra-Bolverk politics between the seven, characteristic methods of mortal-touch (whispers vs offers vs contracts), each holder's history (how they ascended to their seat). PF2e domain grants for all seven (deferred until characters land).
-**Where.** [lore/bestiary.md](../lore/bestiary.md) — *Vice Demons — the Seven*; [lore/glossary.md](../lore/glossary.md) — *Vice Demons — Bolverk's seven seat-holders*.
+**Where.** [lore/bolverk.md](../lore/bolverk.md) — *Vice Demons — the Seven*; [lore/glossary.md](../lore/glossary.md) — *Vice Demons — Bolverk's seven seat-holders*.
 
 ### [Bestiary] Vampire origin on Talan
 **Decided.** Dhampir reframed as undead-touched (not god-touched), which makes vampires-as-an-independent-lineage canon. Vampires exist on Talan and produce Dhampir descendants.
@@ -192,7 +192,7 @@ Items where the world has decided *what* but not *much* — placements and struc
 ### [Bestiary] Virtue Devils — names, personalities *(rolling)*
 **Decided.** Aristotelian virtue/excess/deficiency pattern locked. **14 Virtue Devils** in Bolverk, **one per virtue** (not paired against vices). Each devil holds *both* extremes within themselves — excess and deficiency, manifesting whichever will damage the mortal more. Architecture: a tetradecagram of fourteen vertically-split ziggurats around a central Council Hall (excess-face above, deficiency-face below, devil seated on the false-mean between). **Council of Fourteen** by consensus-bound debate. Individual devils are killable; the virtue-seat persists and a new devil rises. **Canonical fourteen virtues** locked: Courage · Wisdom · Justice · Honesty · Hope · Faith · Loyalty · Compassion · Curiosity · Hospitality · Honor · Mercy · Magnanimity · Creativity (each with its locked excess/deficiency pair). **Muiral the Misshapen** (prior canon, Modesty-line) has been retired; no individually named Virtue Devils in current canon.
 **Open.** Names for the fourteen Virtue Devils as they become relevant in play. Personalities, internal duality preferences (which extreme each devil prefers to push toward), individual histories. Domain grants for all 14: canon-pending.
-**Where.** [lore/bestiary.md](../lore/bestiary.md) — *Virtue Devils — the Fourteen*.
+**Where.** [lore/bolverk.md](../lore/bolverk.md) — *Virtue Devils — the Fourteen*.
 
 ### [Geography] Sub-region details — small placement-and-flavour passes
 **Decided.** Each sub-region exists in canon with a defined location.
