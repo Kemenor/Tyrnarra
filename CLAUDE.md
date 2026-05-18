@@ -59,7 +59,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
   lore/                                ← worldbuilding canon (NOT published)
     cosmology.md, gods.md, secret-history.md, geography.md, factions.md,
-    cultures.md, bestiary.md, glossary.md, timeline.md
+    cultures.md, bestiary.md, bolverk.md, glossary.md, timeline.md
     (see "Where new content goes" below for what lives in each)
 
   docs/                                ← site documentation (NOT published)
@@ -185,7 +185,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography.md` |
 | Factions, guilds, churches, organisations | `lore/factions.md` |
 | Peoples, traditions, politics, craft, warfare | `lore/cultures.md` |
-| Playable ancestries (PF2e), heritages, otherworldly beings (Vice Demons, Virtue Devils, etc.) | `lore/bestiary.md` |
+| Playable ancestries (PF2e), heritages | `lore/bestiary.md` |
+| Bolverk (the megacity in Abyss), Vice Demons, Virtue Devils, the Tunsund, soul-routing from Dauria, individual demon/devil seat-holders | `lore/bolverk.md` |
 | New coined names + etymologies | `lore/glossary.md` (always — see naming rule) |
 | Eras, historical events, dates | `lore/timeline.md` |
 | Something entirely new that doesn't fit above | new file in `lore/` (e.g. `lore/spells.md`) |
