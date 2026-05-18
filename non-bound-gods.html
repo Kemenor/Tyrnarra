@@ -434,14 +434,25 @@ const viceDemons = [
     name: "Reidar",
     vice: "Wrath",
     primary: "The Wrath Vice Demon",
-    location: "Bolverk · Wrath Spire",
+    location: "Bolverk · The Smouldering Spire",
     orb: "⚔️",
     accent: "#c83030",
     orbBg: "rgba(82,16,16,0.6)",
     orbGlow: "rgba(200,48,48,0.3)",
-    heldSince: "Canon-pending",
-    etymology: "Icelandic <i>reiði</i> (wrath) → <b>Reidar</b>",
-    summary: "Vice Demon of Wrath. Personality, history, and the temper of his spire — canon in progress."
+    heldSince: "Since shortly after the Gods' Law was sealed — second-oldest seat-holder",
+    etymology: "Icelandic <i>reiði</i> (wrath) → <b>Reidar</b>. <b>Former name:</b> <i>Atezar</i> — Basque <i>atezain</i> (gatekeeper, doorkeeper) → drift <i>atezain → atezar</i>.",
+    summary: "Once Atezar, head of a small frontier pantheon whose followers were all killed in the Week of Crimson Rain. He turned to pure wrath, was banished to Layer 3 at the forging of the Gods' Law, and killed the Reidar of the day to take the seat.",
+    mortalLifeLabel: "Godhood — Atezar of the Last Door",
+    mortalLife: "Atezar was the head of a small frontier pantheon — five gods venerated in the wall-towns, border garrisons, and edge-of-the-map shrines of the late Gods' Era. The pantheon's name is lost; four of his peers are nameless even in fragmentary chronicle. His domain was <b>the line that does not break</b> — the watch, the gate, the last shield. Mortals prayed to him at the door of the keep before going to the wall.",
+    theFallLabel: "The Crimson Rain, the Turning &amp; the Banishment",
+    theFall: "When Tani fell and the Grand Gods went to war, the war rolled over the borders before it rolled over the heartlands. His pantheon was small; the collateral of god-on-god combat at scale killed his four peers across seven days — one cut down by a Grand God's stray retaliation in a sky-strike that flattened a hundred miles of plain, one by a rival war-god settling a side-grievance, one by something he never identified, one by simply ceasing as her followers' city was wiped from the map and her last belief evaporated with it.<br><br>He fought through. He was the god of holding ground; he held. Across the seven days his believers shrank from a region to a province to a town to a household to one. He stood beside the last of them — a wall-captain in a frontier fort that no longer had a wall — and that captain was killed by a fleeing demon's blade as the battle moved past them. Godhood unwitnessed, every promise his pantheon had ever made unkept and unkeepable.<br><br><b>The turning.</b> What he did in the hours after was turn. Toward everything. Toward the war that had taken his peers, toward the mortals whose deaths had hollowed him, toward the gods on every side of the slaughter, toward himself for having held the line into pointlessness. By the time the war's last shocks settled he was a god of pure wrath, walking what was left of Talan with nothing left to defend.<br><br><b>The banishment.</b> When the thirteen Grand Gods forged the Gods' Law, they had to dispose of every unbound divine being still active. Atezar was sorted <b>dangerous</b> — a god of wrath with no followers to anchor him to any restraint. They drove him to <b>Layer 3</b>. He did not resist hard. There was nothing in the Life Layer he was willing to fight to keep.<br><br><b>Becoming Reidar.</b> The Wrath seat existed long before he arrived — every Reidar before him had been challenged and replaced when a wrath stronger than theirs walked into Bolverk. Atezar walked in as <b>a Minor God burning with pure wrath</b>, which the seat had never seen. The Reidar of the day met him on the open ground in front of the Smouldering Spire and was killed in under an hour. The transfer was not contested again.",
+    form: "Man-sized. <b>Armour broken on his left side</b> — the side that gave when his last follower fell — and intact on his right. Skin half scar-tissue, half live ember. A <b>death-wound at the ribs bleeds light and will not close</b>. Heat haze distorts the air around him; mortals and demons near him feel their old, specific grievances return vividly — every wrong they have not avenged, sharpening. Voice rough, like a man who screamed for too long.",
+    spire: "<b>Half-ruin, half-fortress.</b> The ruined half is the failure he carries; the standing half is the wrath that replaced it. They share a load-bearing wall that should have fallen and has not. He sits in the open court of the standing half on an <b>anvil-throne</b>, in line of sight of any visitor — no audience-chamber, no antechamber. He does not hide. The ruined half is unentered even by him.",
+    method: "He whispers to <i>the genuinely wronged</i> — survivors, orphans, betrayed lovers, soldiers who watched comrades die for nothing. Not the casually angry. Not the proud-vulgar. The wronged. <i>\"You know exactly what they did. You know justice will not come. Nothing you do will undo it. But everything you do will mark it.\"</i>",
+    reputation: "The most dangerous of the seven in single combat. Universally acknowledged. The other six negotiate around him rather than challenge him. Across the Tunsund, the Virtue Devils watch him more carefully than they watch any other Vice Demon. If the seven-and-fourteen détente ever breaks, the breaking point is him.",
+    secretTitle: "The Banishment Depends on the Law",
+    secretLabel: "A God of Wrath, One Cosmic Frame Away From Walking Back Into Talan",
+    secret: "<p><b>The Gods' Law is what bars him from returning to the Life Layer.</b> The Ethereal Plane enforces the prohibition; the framework holds because <b>Cronus holds</b>. If the Law ever frays — if Cronus is unmade — <b>the banishment lapses with it, and Atezar walks back into Talan in unfettered Wrath</b>. Cronus knows. The other twelve know. Atezar himself knows. It is one of the few patient thoughts he holds.</p><p><b>Secret weakness — the Salute of the Last Door.</b> The gesture his wall-captains made before walking watch: fist pressed flat to the opposite shoulder, drawn down the chest in a single line. The salute is functionally extinct on Talan; three or four scattered remembrances survive in fragmentary form — a weathered carving on a ruined gatepost, a half-line in a folk song nobody understands, a tomb-relief in a forgotten frontier crypt. Performed correctly in his presence by someone who <i>means</i> it — not in mockery, not in tactic — the wound at his ribs flares wide enough to <b>drop him to one knee for several seconds</b>. Long enough to escape him, lock him behind a door, or speak something he otherwise would not let be spoken.</p>"
   },
   {
     name: "Lethar",
@@ -490,8 +501,8 @@ function buildDemonCard(d, gridId) {
           <div class="stat-row"><div class="stat-label">PF2e Domain</div><div class="stat-val" style="color:var(--text-dim);font-style:italic">canon-pending (see <a href="/pf2e-registrar.html">PF2e Registrar</a>)</div></div>
         </div>
       </div>
-      ${sectionIf('Mortal Life', d.mortalLife)}
-      ${sectionIf('The Fall &amp; Ascension', d.theFall)}
+      ${sectionIf(d.mortalLifeLabel || 'Mortal Life', d.mortalLife)}
+      ${sectionIf(d.theFallLabel || 'The Fall &amp; Ascension', d.theFall)}
       ${sectionIf('Form', d.form)}
       ${sectionIf('The Spire', d.spire)}
       ${sectionIf('Method on Talan', d.method)}
