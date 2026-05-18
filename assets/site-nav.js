@@ -136,6 +136,7 @@
       '      <li><a href="/grand-gods.html"      data-page="gods">The 13 Bound Gods</a></li>',
       '      <li><a href="/non-bound-gods.html"  data-page="non-bound-gods">Non-Bound Gods &amp; Beings</a></li>',
       '      <li><a href="/magic.html"           data-page="magic">Magic &amp; Faith</a></li>',
+      '      <li><a href="/pf2e-registrar.html"  data-page="pf2e-registrar">PF2e Registrar</a></li>',
       '    </ul>',
       '  </div>',
 

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PF2e Registrar — Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-a.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  /* No starfield on this page — administrative feel, not cosmic.
+     Page header is plainer than other Style-A pages to match. */
+  .header-flavor { font-size: 0.92rem; color: #b8b4c8; }
+
+  /* Master registrar table */
+  .reg-table {
+    width: 100%;
+    max-width: 1040px;
+    margin: 16px auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .reg-table th, .reg-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(200,168,74,0.18);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .reg-table th {
+    font-family: 'Cinzel', serif;
+    color: #f0d080;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    border-bottom: 1px solid rgba(200,168,74,0.4);
+  }
+  .reg-table td:first-child {
+    font-family: 'Cinzel', serif;
+    color: #f0d080;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .reg-table tr:hover td { background: rgba(200,168,74,0.05); }
+  .reg-table td a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(200,168,74,0.4); }
+  .reg-table td a:hover { color: #f0e0a8; border-color: rgba(240,224,168,0.7); }
+
+  /* Source-category pills */
+  .src-pill {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 2px 9px;
+    border-radius: 10px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .src-bound   { color: #d8b860; background: rgba(200,168,74,0.08); }
+  .src-nonbound{ color: #a8b8e0; background: rgba(74,90,150,0.10); }
+  .src-devil   { color: #c87890; background: rgba(150,60,90,0.10); }
+  .src-demon   { color: #a890c8; background: rgba(120,80,150,0.10); }
+  .src-general { color: #d88060; background: rgba(160,80,50,0.10); }
+  .src-corr    { color: #ec6058; background: rgba(180,40,40,0.12); }
+  .src-open    { color: #a8a4c0; background: rgba(74,68,90,0.18); }
+
+  /* Open / canon-pending callout */
+  .open-section {
+    max-width: 920px;
+    margin: 20px auto 0 auto;
+    padding: 16px 22px;
+    background: rgba(74,68,90,0.10);
+    border: 1px dashed rgba(168,164,192,0.32);
+    border-radius: 6px;
+  }
+  .open-section h3 {
+    font-family: 'Cinzel', serif;
+    color: #c8c4d8;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .open-section ul { margin-left: 18px; }
+  .open-section li { margin-bottom: 6px; font-size: 0.9rem; color: var(--text); }
+  .open-section .open-tag {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #a8a4c0; padding: 1px 8px; border-radius: 8px; border: 1px solid rgba(168,164,192,0.4); margin-right: 6px;
+  }
+
+  /* Future-sections placeholder note */
+  .future-note {
+    max-width: 920px;
+    margin: 28px auto 0 auto;
+    padding: 14px 20px;
+    background: rgba(20,18,40,0.45);
+    border-left: 3px solid rgba(200,168,74,0.35);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.88rem;
+    color: #b8b4c8;
+    line-height: 1.6;
+  }
+  .future-note b { color: #d8c890; }
+
+  @media (max-width: 600px) {
+    .reg-table { font-size: 0.84rem; }
+    .reg-table th, .reg-table td { padding: 6px 6px; }
+  }
+</style>
+</head>
+<body data-page="pf2e-registrar">
+
+<div class="header">
+  <span class="header-ornament">⸻ Mechanical Reference ⸻</span>
+  <div class="header-title">PF2e Registrar</div>
+  <div class="header-sub">Cleric Domains · and other Tyrnarra-to-PF2e mappings</div>
+  <div class="header-flavor">
+    A consulting reference. The rest of the site describes Talan's gods, demons, devils, and Generals in narrative form — this page consolidates the mechanical mappings: which PF2e cleric domain grants from where, who actually channels through, what its source-category is. More sections will land here as the world needs them.
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Cleric Domains -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Cleric Domains<div class="gdiv-sublabel">Every canonical PF2e domain and its Tyrnarra source</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>Alphabetical master register. <i>Granted by</i> names the in-world being whose authority backs the domain grant. <i>Source category</i> identifies the class of granter — for filtering at a glance. A cleric channelling a domain answers theologically to the granter named here.</p>
+    <p><b>Reading the categories.</b> <span class="src-pill src-bound">Bound 13</span> are the Compact-bound gods of Talan, walking the Material Plane — they claim 46 of the 61 PF2e cleric domains between them, with a strict <b>no-sharing rule</b> (each domain goes to the single god it fits most strongly). <span class="src-pill src-open">Open</span> covers the remaining 15 domains. Of those, 13 were previously canon-assigned to non-bound granters (sin-devils, virtue-demons, Generals of Corruption, Betibizi, the Corrupted God directly) but have been <b>rolled back to Open</b> pending a fresh non-bound assignment pass; their prior candidates are noted inline. The other two (Dragon, Moon) have plausible non-bound candidates but were never formally assigned.</p>
+  </div>
+
+  <table class="reg-table">
+    <thead><tr><th>Domain</th><th>Granted by</th><th>Source Category</th></tr></thead>
+    <tbody>
+      <tr><td>Abomination</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">Muiral the Misshapen</a>, Modesty-line virtue-demon)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Air</td><td><a href="/grand-gods.html">Fisaya</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Ambition</td><td><a href="/grand-gods.html">Komo</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Change</td><td><a href="/grand-gods.html">Vesuna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Cities</td><td><a href="/grand-gods.html">Jianna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Cold</td><td><a href="/grand-gods.html">Fisaya</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Confidence</td><td><a href="/grand-gods.html">Sarrum</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Creation</td><td><a href="/grand-gods.html">Komo</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Darkness</td><td><a href="/grand-gods.html">Araphel</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Death</td><td><a href="/grand-gods.html">Hinka</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Decay</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/talan/the-binding.html">The Rot-Tyrant</a>, General of Corruption)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Destruction</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">The Wrath Sin-Devil</a>)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Disorientation</td><td><a href="/grand-gods.html">Vesuna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Dragon</td><td><i style="color:#a8a4c0">(canon-pending; <a href="/non-bound-gods.html">Zaharsuge</a> a plausible candidate)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Dreams</td><td><a href="/grand-gods.html">Cronus</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Dust</td><td><a href="/grand-gods.html">Iro</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Duty</td><td><a href="/grand-gods.html">Sarrum</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Earth</td><td><a href="/grand-gods.html">Sarrum</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Family</td><td><a href="/grand-gods.html">Jianna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Fate</td><td><a href="/grand-gods.html">Tani</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Fire</td><td><a href="/grand-gods.html">Komo</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Freedom</td><td><a href="/grand-gods.html">Cronus</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Glyph</td><td><a href="/grand-gods.html">Forseti</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Healing</td><td><a href="/grand-gods.html">Iro</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Indulgence</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">The Gluttony Sin-Devil</a>)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Introspection</td><td><a href="/grand-gods.html">Shuun</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Knowledge</td><td><a href="/grand-gods.html">Enki</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Lightning</td><td><a href="/grand-gods.html">Fisaya</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Luck</td><td><a href="/grand-gods.html">Vesuna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Magic</td><td><a href="/grand-gods.html">Enki</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Metal</td><td><a href="/grand-gods.html">Sarrum</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Might</td><td><a href="/grand-gods.html">Hinka</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Moon</td><td><i style="color:#a8a4c0">(canon-pending; <a href="/non-bound-gods.html">Bikiargi</a> a plausible candidate)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Naga</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/talan/the-binding.html">The Maw Serpent</a>, General of Corruption)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Nature</td><td><a href="/grand-gods.html">Hinka</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Nightmares</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/talan/the-binding.html">The Whisperer in Dreams</a>, General of Corruption)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Nothingness</td><td><a href="/grand-gods.html">Araphel</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Pain</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">virtue-demon</a>, Patience-line excess)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Passion</td><td><a href="/grand-gods.html">Komo</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Perfection</td><td><a href="/grand-gods.html">Enki</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Plague</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/talan/the-binding.html">The Corrupted God</a>, direct grant)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Protection</td><td><a href="/grand-gods.html">Araphel</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Repose</td><td><a href="/grand-gods.html">Shuun</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Secrecy</td><td><a href="/grand-gods.html">Forseti</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Sorrow</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">virtue-demon</a>, Magnanimity-line deficiency)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Soul</td><td><a href="/grand-gods.html">Tani</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Star</td><td><a href="/grand-gods.html">Forseti</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Sun</td><td><a href="/grand-gods.html">Iro</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Swarm</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/talan/the-binding/hollow-of-ten-thousand-threads.html">The Vermin Queen</a>, General of Corruption)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Time</td><td><a href="/grand-gods.html">Tani</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Toil</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">virtue-demon</a>, Industriousness-line excess)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Travel</td><td><a href="/grand-gods.html">Cronus</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Trickery</td><td><a href="/grand-gods.html">Vesuna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Truth</td><td><a href="/grand-gods.html">Forseti</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Tyranny</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">The Pride Sin-Devil</a>)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Undeath</td><td><i style="color:#a8a4c0">(canon-pending; prior candidate: <a href="/non-bound-gods.html">Betibizi</a>, self-ascended Minor God, Abyss)</i></td><td><span class="src-pill src-open">Open</span></td></tr>
+      <tr><td>Vigil</td><td><a href="/grand-gods.html">Sarrum</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Water</td><td><a href="/grand-gods.html">Shuun</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Wealth</td><td><a href="/grand-gods.html">Jianna</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Wood</td><td><a href="/grand-gods.html">Hinka</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+      <tr><td>Zeal</td><td><a href="/grand-gods.html">Iro</a></td><td><span class="src-pill src-bound">Bound 13</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="open-section">
+    <h3>✦ Open / Canon-Pending</h3>
+    <ul>
+      <li><span class="open-tag">Bound Pass Locked</span><b>46 of 61 PF2e domains assigned to the Thirteen.</b> The bound-god domain pass is complete and follows the no-sharing rule: every domain that any of the Thirteen grants is granted by exactly one god — the deity whose aspects most directly align with it. Domains that fit two gods conceptually are still held by one; the other carries the flavour in lore (see Lore-Implicit below) but not the mechanical grant.</li>
+      <li><span class="open-tag">Non-Bound Rollback</span><b>13 domains rolled back to Open pending a fresh non-bound pass.</b> Abomination, Decay, Destruction, Indulgence, Naga, Nightmares, Pain, Plague, Sorrow, Swarm, Toil, Tyranny, Undeath. Each row in the table above carries an inline note naming the prior candidate (Muiral the Misshapen, the Generals of Corruption, the Sin-Devils, the unnamed virtue-demons, Betibizi, and the Corrupted God directly). These entities remain canonical beings — only the specific PF2e domain assignments have been rolled back, awaiting a fresh non-bound assignment pass.</li>
+      <li><span class="open-tag">Never Assigned</span><b>2 domains have no prior canonical assignment on either side:</b> Dragon and Moon. Plausible candidates exist (<a href="/non-bound-gods.html">Zaharsuge</a> for Dragon, <a href="/non-bound-gods.html">Bikiargi</a> for Moon), but neither has been formally taken up.</li>
+      <li><span class="open-tag">Lore-Implicit</span><b>Tyrnarra-flavour names that aren't PF2e domains.</b> Several names in the wider canon are <i>theological flavour</i> rather than PF2e cleric domains — <i>Arcane Magic</i> (Forseti), <i>Divine Magic</i> (Iro), <i>Occult Magic</i> (Enki), <i>Primal Magic</i> + <i>Progress</i> (Jianna), <i>Free Will</i> (Vesuna), <i>Second Chances</i> (Araphel) — and a cleric of these gods picks from their PF2e-canonical portfolios above. The flavour names are how worshippers <i>describe</i> their god's work in-world, not mechanical domains at character build. Full convention in <code>lore/pf2e-notes.md</code>.</li>
+    </ul>
+  </div>
+
+  <div class="future-note">
+    <p><b>More sections will land here as needed.</b> The registrar is the home for mechanical mappings that don't fit narrative pages — anathemas-by-god, favoured-weapons consolidation, Reflection PF2e mechanics, Magitech-as-PF2e-items, and any other crunchy cross-reference the world picks up over time.</p>
+  </div>
+
+  <!-- Cross-references -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">See Also<div class="gdiv-sublabel">Where these mappings live in narrative form</div></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p><a href="/grand-gods.html"><b>The 13 Bound Gods →</b></a> Each god's aspects, favoured weapon, depiction, and mortal-view. The narrative source for every <span class="src-pill src-bound">Bound 13</span> row above.</p>
+    <p><a href="/non-bound-gods.html"><b>Non-Bound Gods &amp; Beings →</b></a> Bikiargi, Zaharsuge, Epairima, Betibizi · the Seven Sin-Devils · the Aristotelian Virtue-Demons (Muiral and the pattern). The narrative source for the entities currently named as prior candidates on Open rows; a future non-bound pass will reassign domains from this roster.</p>
+    <p><a href="/talan/the-binding.html"><b>The Binding →</b></a> The Corrupted God and the Nine Generals of Corruption. The narrative source for several Open rows (Plague, Decay, Naga, Nightmares, Swarm) pending their fresh assignment.</p>
+    <p><a href="/magic.html"><b>Magic &amp; Faith →</b></a> The cosmological underpinning of clerical grants — the Wellspring, the Mortal Ascent Ladder, and the planar layers from which divinity reaches mortals.</p>
+  </div>
+
+  <div class="footer-note">TYRNARRA · PF2e REGISTRAR · MECHANICAL REFERENCE</div>
+
+</div>
+
+</body>
+</html>

@@ -75,99 +75,90 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 ## The Thirteen — Per-God Sheet
 
-Aspects, depictions, favoured weapons, mortal perception, and cleric domains for each Grand God. **Each is neutral in essence** — they embody both the light and shadow of their portfolio. Mortals tend to **worship aspects, not the whole** (invoking Iro for warmth while fearing his zealotry; praying to Araphel for rest while avoiding his despair). The gods abide by the Gods' Law: no direct rule, but their presence shapes the world through symbols, omens, and the powers granted to the faithful.
+Aspects, depictions, favoured weapons, and mortal perception for each Grand God. **Each is neutral in essence** — they embody both the light and shadow of their portfolio. Mortals tend to **worship aspects, not the whole** (invoking Iro for warmth while fearing his zealotry; praying to Araphel for rest while avoiding his despair). The gods abide by the Gods' Law: no direct rule, but their presence shapes the world through symbols, omens, and the powers granted to the faithful.
+
+> **PF2e cleric domain grants are mechanical reference and live in [`pf2e-registrar.html`](../pf2e-registrar.html), not here.** The aspects below are the in-world theological flavour each god embodies, separate from the cleric-domain selection a player makes at character build. See `pf2e-notes.md` for the lore-implicit naming convention (how some aspects get reflected as domain names without granting discrete PF2e domains).
+
+> **Each god has four aspects** chosen to show who they are — typically one neutral, two positive (the gift), one negative (the shadow). Aspects are theological flavour, not mechanical: a cleric still picks PF2e cleric domains for their character via the registrar.
 
 > **Note on weapons:** these are the favoured/iconic forms in which each god is depicted. They are symbolic and ceremonial as well as practical — clergy and devoted faithful often wield them in ritual or actual combat.
 
 ### Vesuna — Goddess of Chaos (Female)
-- **Aspects:** change, creativity, destruction, madness.
-- **Cleric domains:** Passion, Luck, Trickery, Free Will.
+- **Aspects:** Change · Creativity · Spontaneity · Madness.
 - **Depiction:** no fixed form — no ancestry, no gender, no consistent body. Only symbols: a coin, a die, an open hand with something unseen in it.
 - **Favoured weapon:** *Meteor Hammer* — its wild arcs and unpredictable strikes embody her chaotic nature.
 - **Mortals see her as:** the spark of innovation and the collapse of order; the gamble that reshapes fate.
 
 ### Jianna — Goddess of Commerce (Female)
-- **Aspects:** trade, wealth, greed, generosity.
-- **Cleric domains:** Cities, Family, Wealth, Primal Magic, Progress.
+- **Aspects:** Trade · Wealth · Greed · Generosity.
 - **Depiction:** a **Vishkanya** — elegant, precise, with beauty that has an edge; one hand open in offering and one hand closed.
 - **Favoured weapon:** *Twin Chakram* — spinning cycles of exchange, profit and loss, endless trade.
 - **Mortals see her as:** the market's lifeblood — honest exchange or ruthless exploitation.
 
 ### Araphel — God of Darkness (Male)
-- **Aspects:** shadows, secrets, rest, new faces, rebirth. *(Despair is what mortals bring to him; new faces and rebirth are what he answers with — see `secret-history.md` — Araphel — Lore Notes for the theological resolution.)*
-- **Cleric domains:** Darkness, Protection, Void, Secrecy, Change, Repose. *(Second Chances is implicit in the rebirth theology rather than a discrete listed domain.)*
+- **Aspects:** Shadows · New Faces · Rebirth · Erasure.
 - **Depiction:** most commonly a **Fetchling** — either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman — but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
 - **Favoured weapon:** *Kusarigama* — the sickle and chain; strikes unseen and binds prey in shadow.
 - **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
 
 ### Sarrum — God of Earth (Male)
-- **Aspects:** stone, harvest, endurance, greed.
-- **Cleric domains:** Confidence, Duty, Earth, Vigil.
+- **Aspects:** Stone · Harvest · Endurance · Burden.
 - **Depiction:** a **Minotaur** — immovable, vast, patient, usually standing still, with veins of ore glowing faintly beneath his granite skin.
 - **Favoured weapon:** *Dorn-Dergar* — a spiked, cube-weighted chain, as crushing and immovable as an avalanche.
 - **Mortals see him as:** provider of shelter and crops, but also the crushing hand of famine and stone.
 
 ### Komo — God of Fire (Male)
-- **Aspects:** flame, passion, destruction, renewal.
-- **Cleric domains:** Ambition, Creation, Fire.
+- **Aspects:** Flame · Passion · Destruction · Forge.
 - **Depiction:** a **Kobold** — stands in fire comfortably, mid-creation at the forge, eyes glowing like embers.
 - **Favoured weapon:** *Fire Poi* — chains of flame, used in both ritual dance and devastating battle.
 - **Mortals see him as:** hearth and forge, but also wildfire and war.
 
 ### Cronus — God of Freedom (Male)
-- **Aspects:** choice, rebellion, self-determination, lawlessness.
-- **Cleric domains:** Dreams, Freedom, Travel, Soul.
+- **Aspects:** Choice · Defiance · Wandering · Lawlessness.
 - **Depiction:** an unremarkable man — no divine signifiers, someone who could be anyone in a tavern — except for **a broken chain hanging from his belt**.
 - **Favoured weapon:** *Chain Sword* — a segmented blade that whips like broken shackles turned to rebellion.
 - **Mortals see him as:** liberator or anarchist, the spark that defies order.
 - **See also:** `secret-history.md` — *Cronus — The Secret*. The "anyone-in-a-tavern" depiction is the public face; the truth of his ascension is buried.
 
 ### Hinka — Goddess of the Hunt (Female)
-- **Aspects:** predation, survival, patience, cruelty.
-- **Cleric domains:** Might, Nature, Zeal, Violent Death.
+- **Aspects:** Predation · Survival · Patience · Cruelty.
 - **Depiction:** a red-headed **Orc** cloaked in fur, drawing a bow of horn — mid-draw, decisive.
 - **Favoured weapon:** *Karambit* — a curved claw-knife, quick and intimate as a predator's strike.
 - **Mortals see her as:** provider of sustenance — or stalker in the dark.
 
 ### Enki — God of Knowledge (Male)
-- **Aspects:** wisdom, discovery, arrogance, forbidden lore.
-- **Cleric domains:** Glyph, Knowledge, Perfection, Occult Magic.
+- **Aspects:** Wisdom · Discovery · Mysteries · Arrogance.
 - **Depiction:** a black-haired **Catfolk** male — curious, precise, usually shown reading or examining something, a staff crowned with a lantern of shifting light at his side.
 - **Favoured weapon:** *Whipstaff* — rigid and flexible in one, embodying truth's reach and cunning's adaptability.
 - **Mortals see him as:** teacher, sage, inventor — or tempter into dangerous truths.
 
 ### Forseti — Goddess of Law (Female)
-- **Aspects:** order, justice, tyranny, bureaucracy.
-- **Cleric domains:** Secrecy, Star, Truth, Arcane Magic.
+- **Aspects:** Order · Justice · Oath · Tyranny.
 - **Depiction:** an **Android** — perfect impartiality, law without personal feeling; scales in one hand, scrolls in the other.
 - **Favoured weapon:** *Hook Swords* — paired blades that interlock, symbolising laws binding all together.
 - **Mortals see her as:** arbiter of peace or oppressive enforcer.
 
 ### Iro — God of Light (Male)
-- **Aspects:** sun, hope, growth, zealotry.
-- **Cleric domains:** Dust, Healing, Sun, Divine Magic.
+- **Aspects:** Sun · Hope · Growth · Zealotry.
 - **Depiction:** a **Nephilim** — caught between the mortal and something greater, one hand raised in blessing or judgement, eyes like dawn.
 - **Favoured weapon:** *Guisarme / Glaive* — a sweeping polearm, like a shaft of sunlight cutting through shadow.
 - **Mortals see him as:** bringer of illumination and joy — or blinding fanaticism.
 
 ### Tani — Goddess of Time (Female)
-- **Aspects:** cycles, fate, patience, inevitability.
-- **Cleric domains:** Death, Fate, Time, Peaceful Death.
+- **Aspects:** Fate · Patience · Memory · Decay.
 - **Depiction:** three women simultaneously — child, woman in her prime, wisened elder — sometimes rendered as a single three-faced figure.
 - **Favoured weapon:** *Zulfikar* — a forked scimitar, the split blade of fate and branching futures.
 - **Mortals see her as:** keeper of destiny, the march of years, the inevitability of endings.
 - **See also:** `secret-history.md` — *Tani — Lore Notes*. Slain in the Week of Crimson Rain, reborn at its end; her death/rebirth is the hinge of the Gods' Law.
 
 ### Shuun — God of Water (Genderfluid)
-- **Aspects:** rivers, seas, adaptability, drowning.
-- **Cleric domains:** Introspection, Repose, Water.
+- **Aspects:** Rivers · Seas · Adaptability · Drowning.
 - **Depiction:** an **Undine** — themselves partly water, existing at the boundary between human and element. Usually shown seated and still, contrasting with the restlessness of the water around them.
 - **Favoured weapon:** *Trident* — piercing tide, storm, and current alike.
 - **Mortals see Shuun as:** life-giver and sailor's blessing, or merciless tide and flood.
 
 ### Fisaya — Goddess of Wind (Female)
-- **Aspects:** storms, travel, breath, ruin.
-- **Cleric domains:** Air, Change, Cold.
+- **Aspects:** Storms · Travel · Breath · Ruin.
 - **Depiction:** a female **Kitsune** with multicolour fur — each colour an aspect of change — wearing flowing silks, hair trailing into clouds.
 - **Favoured weapon:** *Bladed Scarf* — silks edged with steel, graceful as a breeze, deadly as a storm.
 - **Mortals see her as:** a whisper that carries ships or a storm that tears them apart.
@@ -219,29 +210,6 @@ Mortals have prayed to **Solyra** for as long as there have been mortals. The sa
 
 ---
 
-## Domains Outside the Thirteen — Source Mapping
+## Cleric domain mappings — see the PF2e Registrar
 
-A number of cleric domains exist in Tyrnarra that are **not granted by any of the Thirteen Bound Gods** — they are sourced from elsewhere. The table below maps each to its in-world granter. Most trace upward to the Corrupted God, the virtue-demons, the sin-devils, or a named non-bound god above; a few have an intermediate granter (a General of Corruption, for instance, who in turn serves the Corrupted God).
-
-| Domain | Granted by | Lineage |
-|---|---|---|
-| **Abomination** | **Muiral the Misshapen** (Modesty-line virtue-demon) | Virtue-demon |
-| **Plague** | **The Corrupted God** | Corrupted God direct |
-| **Undeath** | **Betibizi** (see above) | Independent — Storveldi Denbora ascension |
-| **Decay** | **The Rot-Tyrant** (General of Corruption) | Serves the Corrupted God |
-| **Swarm** | **The Vermin Queen** (General of Corruption) | Serves the Corrupted God |
-| **Naga** | **The Maw Serpent** (General of Corruption) | Serves the Corrupted God |
-| **Nightmares** | **The Whisperer in Dreams** (General of Corruption) | Serves the Corrupted God |
-| **Tyranny** | **The Pride Sin-Devil** | Sin-devil |
-| **Destruction** | **The Wrath Sin-Devil** | Sin-devil |
-| **Indulgence** | **The Gluttony Sin-Devil** | Sin-devil |
-| **Pain** | virtue-demon (Patience-line excess) | Virtue-demon |
-| **Toil** | virtue-demon (Industriousness-line excess) | Virtue-demon |
-| **Sorrow** | virtue-demon (Magnanimity-line deficiency) | Virtue-demon |
-| **Delirium** | virtue-demon (Temperance-line deficiency) | Virtue-demon |
-
-**Reading the table:** "Lineage" tells you whose authority the clerical grant ultimately serves. A cleric of Decay channels through the Rot-Tyrant directly, but the Rot-Tyrant is the Corrupted God's vehicle — the cleric's power answers to both. A cleric of Indulgence channels through a sin-devil and answers to that devil alone. A cleric of Undeath answers to Betibizi alone (no Corrupted-God lineage).
-
-The Thirteen's own domains are covered in *The Thirteen — Per-God Sheet* above. For unknown-domain rulings and PF2e-side bookkeeping, see `pf2e-notes.md`.
-
-The four sin-devils outside this list (Greed, Lust, Envy, Sloth) still exist as canonical devil-lords; their grantable domains in Tyrnarra await canon, as do most virtue-demon lines beyond Muiral.
+PF2e cleric domain grants — for both the Thirteen and the non-bound granters (Corrupted God, Generals, sin-devils, virtue-demons, Betibizi) — are mechanical reference and live on [`pf2e-registrar.html`](../pf2e-registrar.html). This file used to carry the Domains Outside the Thirteen table; that table has moved to the registrar so that all PF2e domain bookkeeping has a single home. See `pf2e-notes.md` for the lore-implicit naming convention.
