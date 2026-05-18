@@ -15,9 +15,9 @@
   --parch-bright: #e8d8a8;
   --gold: #c8900a;
   --gold-bright: #f0b020;
-  --gold-dim: #7a5808;
+  --gold-dim: #a07520;
   --text: #d0c8a8;
-  --text-dim: #7a7058;
+  --text-dim: #9a9078;
 
   /* Default per-page accent — pages override in their inline style. */
   --domain-accent: var(--gold);
@@ -413,7 +413,7 @@ a.subregion-card:hover {
   text-align: center;
   font-family: 'Cinzel', serif;
   font-size: 0.6rem; letter-spacing: 0.3em;
-  color: rgba(200,144,10,0.3);
+  color: rgba(220,165,40,0.7);
   margin-top: 64px;
   text-transform: uppercase;
 }
@@ -581,7 +581,7 @@ a.subregion-card:hover {
   font-size: 0.55rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(175, 125, 20, 0.7);
+  color: rgba(220, 170, 60, 0.95);
   background: rgba(110, 80, 10, 0.07);
   border: 1px solid rgba(160, 110, 20, 0.22);
   border-radius: 2px;
@@ -614,7 +614,7 @@ a.subregion-card:hover {
   font-size: 0.5rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(190, 140, 30, 0.75);
+  color: rgba(225, 175, 70, 0.95);
   margin-bottom: 6px;
   padding-bottom: 4px;
   border-bottom: 1px solid rgba(160, 110, 20, 0.18);
@@ -632,7 +632,7 @@ a.subregion-card:hover {
   font-size: 0.55rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(180, 60, 60, 0.65);
+  color: rgba(225, 115, 115, 0.95);
   background: rgba(120, 20, 20, 0.06);
   border: 1px solid rgba(160, 40, 40, 0.2);
   border-radius: 2px;
@@ -665,7 +665,7 @@ a.subregion-card:hover {
   font-size: 0.5rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(200, 70, 70, 0.7);
+  color: rgba(230, 125, 125, 0.95);
   margin-bottom: 6px;
   padding-bottom: 4px;
   border-bottom: 1px solid rgba(160, 40, 40, 0.15);
