@@ -273,7 +273,7 @@ Heritages on Talan are explained in-world as either a god's blood, an Elemental 
 **Nephilim covers both celestial and fiendish features** on Talan, with parentage determining the manifestation. The mapping broadens further:
 
 - **Celestial features** manifest in Nephilim descended from *any god* — most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
-- **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a virtue demon (corruption-of-virtue lineage) or a sin devil (sin-as-being lineage). See the *Virtue Demons* and *Sin Devils* sections below for the parent populations.
+- **Fiendish features** manifest in Nephilim descended from **any demon or devil** — a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See the *Vice Demons* and *Virtue Devils* sections below for the parent populations.
 
 Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag — one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
 
@@ -341,59 +341,64 @@ Four of the bound thirteen express their touch otherwise than through an exclusi
 
 ---
 
-## Virtue Demons — the Aristotelian Pattern
+## Virtue Devils — the Fourteen
 
-Talan's demon hierarchy follows a coherent theological pattern that mortal scholars have catalogued: **each demon is the personification of a virtue's corruption.** Following the classical *doctrine of the mean*, every virtue sits between two vices — one of **excess**, one of **deficiency**. A demon embodies one of those two extremes.
+Talan's Virtue-Devil hierarchy follows a coherent theological pattern that mortal scholars have catalogued: **each Virtue Devil is the personification of a virtue's corruption.** Following the classical *doctrine of the mean*, every virtue sits between two failure modes — one of **excess**, one of **deficiency**. A Virtue Devil embodies **both extremes within itself** — the corruption of the virtue as a whole, manifested as either excess or deficiency depending on what will most damage the mortal in their grip. The devil tips the scale; they do not care which way it falls.
 
-This is why the demons are not random or symmetric: they are exactly as numerous as there are virtue/extreme pairs in the Talanese moral tradition, and they map cleanly to those pairs.
+**Fourteen Virtue Devils, one per virtue.** Each owns a vertically-split ziggurat in Bolverk's tetradecagram: the **excess-face** as the upper tier, the **deficiency-face** as the lower tier, the devil itself seated on the **false-mean** between — looking, from a distance, like virtue. The architecture dramatises the corruption. The 14 devils sit on the **Council of Fourteen** in the central Council Hall, by consensus-bound debate (slow, ritualistic, mostly stable — the contrast with the anarchic Vice Demon spires across the Tunsund).
 
-| Virtue | Vice of Excess | Vice of Deficiency |
+The Virtue Devil count is **not paired against the seven Vices** — the virtues stand on their own catalogue, more numerous and more varied than the vices because virtue is more diverse than its absence.
+
+### The canonical fourteen
+
+| Virtue | Excess (corruption above the mean) | Deficiency (corruption below the mean) |
 |---|---|---|
-| **Ambition** | Empty Vanity | Undue Humility |
-| **Conscientiousness** | Depravity | Deferential Submission |
-| **Courage** | Rashness | Cowardice |
-| **Friendliness** | Obsequiousness | Cantankerousness |
-| *(Friendly — duplicate frame)* | Quarrelsomeness | Bootlicking |
-| **Industriousness** | Single-mindedness | Laziness |
-| **Liberality** | Prodigality | Illiberality / Meanness |
-| **Magnanimity** | Vanity | Pusillanimity |
-| **Modesty** | Shamelessness | Shyness |
-| **Patience** | Unirascibility (refusal to feel anger) | Irascibility |
-| **Spirit** | Boastfulness | Melancholy |
-| **Temperance** | Asceticism | Addiction |
-| **Truthfulness** | Boastfulness | Mock Modesty |
-| **Wittiness** | Buffoonery | Boorishness |
+| **Courage** | Recklessness | Cowardice |
+| **Wisdom** | Cynicism | Folly |
+| **Justice** | Vengefulness | Permissiveness |
+| **Honesty** | Indiscretion | Deceit |
+| **Hope** | Delusion | Despair |
+| **Faith** | Fanaticism | Apostasy |
+| **Loyalty** | Servility | Treachery |
+| **Compassion** | Sentimentality | Callousness |
+| **Curiosity** | Obsession | Apathy |
+| **Hospitality** | Sycophancy | Xenophobia |
+| **Honor** | Vainglory | Perfidy |
+| **Mercy** | Appeasement | Implacability |
+| **Magnanimity** | Vanity | Pettiness |
+| **Creativity** | Hubris | Sterility |
 
-**Named demons so far:**
-- **Muiral the Misshapen** — Modesty-line demon (Shamelessness / Shyness pair). The only individually named virtue demon in canon as of this writing; the rest are described by their virtue line. Muiral's name appears in mortal exorcism texts and in a handful of Adventurers' Guild high-rank contract reports. **Grants the Abomination domain** — corrupted Modesty either dissolves form (Shyness extreme) or inflates it into grotesque self-display (Shamelessness extreme); either produces the *misshapen*. See `gods.md` — *Domains Outside the Thirteen — Source Mapping*.
+**Named Virtue Devils so far:**
+- *(none individually named in current canon.)* Prior canon included **Muiral the Misshapen** as the Modesty-line Virtue Devil, but Modesty is no longer among the canonical fourteen and Muiral has been **retired**. Individual Virtue Devils will be named as stories call for them; the name *Muiral* may return in a future role if it fits, but is not currently bound to any of the fourteen.
 
 **Implications:**
-- Demons of opposed extremes within the same virtue line are theological enemies as well as cosmic ones. The Cowardice-demon and the Rashness-demon both pervert Courage — and both have reasons to hate each other.
-- Mortal philosophers who study Talan's moral pattern can predict demon behaviour. This is how a handful of Enki-aligned exorcists work: they read the demon, identify its virtue line and which extreme it embodies, then deploy the *opposite* extreme to push it off-pattern.
+- A Virtue Devil's *preferred mode* (which extreme they push toward first) varies by individual and by situation. The Courage Devil may default to feeding Cowardice in some mortals and Recklessness in others — they read the target and tip whichever way will damage more. Mortal scholars who study a particular devil can sometimes anticipate its preferences, but the devil retains the freedom to flip if a counter-strategy is detected.
+- Mortal philosophers who study Talan's moral pattern can predict Virtue-Devil behaviour. This is how a handful of Enki-aligned exorcists work: they read the devil, identify its virtue line, then deploy the *true mean* — the genuine virtue itself — to push it off-pattern. The corruption fails not when the opposite extreme is invoked but when the virtue is restored.
+- Killing a Virtue Devil is possible (and rare); the seat persists, and a new devil rises to occupy the same virtue line. The pattern is immortal even when individual holders are not — same logic as the Vice Demon seats, different mechanism.
 
 ---
 
-## Sin Devils — the Seven
+## Vice Demons — the Seven
 
-The devils of Talan are organised on a simpler pattern: **the Seven Sins.** Unlike the virtue demons (which embody a *corruption* of something good), sin devils embody the sins themselves directly. There is one canonical devil-lord per sin.
+The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a *corruption* of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always **seven** Vice Demons, and there is always one per Vice. The **seats are immortal** (as long as the vice exists in mortals); the **holders can be killed and replaced**, and each new holder takes a new name. They reside in Bolverk, the megacity in Abyss (see `glossary.md` — Bolverk), each in their own independent spire.
 
-| Sin | Devil-Lord | Grantable domain (Tyrnarra canon) |
+| Vice | Current Holder | PF2e Domain Grant |
 |---|---|---|
-| **Envy** | *(unnamed)* | TBD |
-| **Gluttony** | *(unnamed)* | **Indulgence** |
-| **Greed** | *(unnamed)* | TBD |
-| **Lust** | *(unnamed)* | TBD |
-| **Pride** | *(unnamed)* | **Tyranny** |
-| **Sloth** | *(unnamed)* | TBD |
-| **Wrath** | *(unnamed)* | **Destruction** |
+| **Pride** | **Drambur** | canon-pending |
+| **Greed** | **Nirfel** | canon-pending |
+| **Lust** | **Lostar** | canon-pending |
+| **Envy** | **Ofunda** | canon-pending |
+| **Gluttony** | **Veislur** | canon-pending |
+| **Wrath** | **Reidar** | canon-pending |
+| **Sloth** | **Lethar** | canon-pending |
 
-The structural pattern is locked: seven sins, seven lords. Three are mapped to grantable domains (Indulgence → Gluttony, Tyranny → Pride, Destruction → Wrath); the remaining four await canon.
+All seven domain grants are currently **Open** in the PF2e registrar pending the dedicated non-bound assignment pass. Personalities and individual canon for the seven holders are in progress.
 
 **Demon / Devil distinction in Talan:**
-- **Demons** corrupt a virtue. They are perversions of what could have been good. Their existence is parasitic on the virtue line.
-- **Devils** embody a sin. They are the sin itself, given form. Their existence is foundational, not parasitic.
-- **Both are redeemable in principle.** The virtue line still runs through every demon, and every devil retains the seed of the contrary virtue. Redemption work on either is rare and brutally difficult, but it is canonically *possible* — no being on Talan is fixed beyond change.
-- Demons proliferate around mortals who have already half-corrupted a virtue. Devils proliferate around mortals who choose a sin.
+- **Vice Demons** embody a vice. They are the vice itself, given form. Their existence is foundational, not parasitic. Anarchic; constant power-struggle below the seven seat-holders; the seven themselves rarely shift but *can* be killed and replaced.
+- **Virtue Devils** corrupt a virtue. They are perversions of what could have been good. Their existence is parasitic on the virtue line. Ordered; locked into excess/deficiency pairs in the heptagram; one dominant per pair, the subordinate cannot kill the dominant without collapsing both.
+- **Both are redeemable in principle.** The contrary virtue still runs through every Vice Demon, and every Virtue Devil retains the seed of the virtue it perverts. Redemption work on either is rare and brutally difficult, but it is canonically *possible* — no being on Talan is fixed beyond change.
+- Vice Demons proliferate around mortals who *choose* a vice. Virtue Devils proliferate around mortals who have already *half-corrupted* a virtue.
 
 ---
 
