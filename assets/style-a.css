@@ -668,3 +668,34 @@ body {
   .main   { padding: 24px 16px 60px; }
   .header-groups { gap: 8px; }
 }
+
+/* ── WIP BANNER ──────────────────────────────────────────────
+   Drop <div class="wip-banner">✎ Writing in Progress</div>
+   anywhere in <body> to flag a page that's mid-edit. Floats in
+   the top-right corner, ignores clicks, gently pulses. Remove
+   the element when the page is ready. */
+
+.wip-banner {
+  position: fixed;
+  top: 12px; right: 12px;
+  z-index: 195;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-bright, #f0d080);
+  background: rgba(40, 28, 12, 0.78);
+  border: 1px dashed rgba(240, 200, 110, 0.5);
+  border-radius: 2px;
+  padding: 7px 14px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  animation: wipPulse 2.5s ease-in-out infinite;
+}
+@keyframes wipPulse {
+  0%, 100% { opacity: 0.75; }
+  50%      { opacity: 1; }
+}
+@media (max-width: 600px) {
+  .wip-banner { font-size: 0.5rem; letter-spacing: 0.22em; padding: 5px 10px; top: 8px; right: 8px; }
+}
