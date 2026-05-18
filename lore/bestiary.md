@@ -4,6 +4,19 @@ A reference for the playable peoples of Talan and the otherworldly beings adjace
 
 ---
 
+## Lifespan — a Tyrnarra-wide principle
+
+**No mortal ancestry on Talan lives past 250 years.** This is a deliberate Tyrnarra-specific departure from other fantasy settings: there are no long-lived elves, dwarves, or other ancestries that span centuries while younger races live and die around them. Every Talanese ancestry ages within a roughly human-comparable window — some longer (Nephilim, certain elf lines), some shorter, but all bounded by the 250-year cap. The cap shapes politics (no monarch outlives institutional memory by much), warfare (no living combatant remembers an ancient war first-hand), and theology (mortals who claim divine longevity are claiming something the world does not permit).
+
+The cap does not apply to:
+- **The Bound Thirteen** (gods, on the Material Plane under the Gods' Law)
+- **Named Non-Bound Gods** (Layer-3 residents)
+- **Vice Demons, Virtue Devils, and other infernal seat-holders** in Bolverk
+- **Demi-gods and ascendant figures on the Mortal Ascent Ladder** (their lifespan-cap loosens as they ascend; see `cosmology.md`)
+- **Undead** (Skeletons, Dhampir, Vampires, etc. — explicitly *post-mortal*)
+
+---
+
 ## Ancestry Distribution by Domain
 
 Each god's domain has one or more **dominant** ancestries — peoples for whom that domain is their cultural and demographic heartland. Other ancestries are present everywhere but in smaller numbers; *uncommon* and *rare* tag the access at Talan-scale.
@@ -393,6 +406,28 @@ The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlik
 | **Sloth** | **Lethar** | canon-pending |
 
 All seven domain grants are currently **Open** in the PF2e registrar pending the dedicated non-bound assignment pass. Personalities and individual canon for the seven holders are in progress.
+
+### Drambur — the Pride Vice Demon
+
+**Mortal life.** Nephilim of Iro, demi-god of the Gods' Era. Iro's chosen — the literal divine warrior, light flowing through him in battle. He was already proud by station: god's-blood traits at birth, demigod stature by deeds, the war turned where he turned, not the other way. During the Gods' Era he killed a minor god in single combat (canon-pending which one; dead for millennia, no narrative weight needed) and **took the divine shard for himself** — *why shouldn't he? he is the divine warrior.* The shard advanced him further along the Mortal Ascent Ladder.
+
+**The corruption.** He was proud at the start; the shard made him more so. Then came the **Week of Crimson Rain**, and Tani fell to the unjust gods and died. Drambur watched the Goddess of Time *die* — and realised, in that moment, that gods are mortal beings of immense power, not metaphysical absolutes. The thought that followed was small and terrible: *if Tani can die, Iro can die. If Iro can die, what is the difference between Iro and me? I have a shard. I have the battlefield. I have already done what he did.*
+
+**The fall.** With Iro deep in the cosmic work of the Week — wrestling with Tani's binding-back, with the unjust gods, with Cronus's gathering — Drambur turned on his own god at his god's weakest moment, believing himself indomitable. **It was a real fight, god to god.** Drambur, demi-god with a stolen shard, met Iro on something near-even terms and **almost killed him**. The fight tore on for hours. Iro put him down in the end — but it cost the god: wounds that have never fully closed, hours stolen from the cosmic work elsewhere, and a permanent flinch around the question of zealotry. (See `gods.md` — Iro — *GM Secret: the wound from Drambur*.)
+
+**Ascension to the seat.** Drambur's Pride-perfect soul fell across the Tunsund into Bolverk. The previous Pride-seat-holder — old, complacent, ruling on inheritance rather than vigour — could not hold against him. Drambur killed the previous Drambur in the Pride spire and took the throne. He has held it since the close of the Gods' Era; in mortal reckoning, **several millennia**.
+
+**Form.** Still in his mortal warrior-shape, perfected: tall, golden-haired, sun-bronzed, armoured in the Sun-Champion pattern polished beyond what mortal smiths could manage. The shard he took is visible — set in his breastplate where his heart would be, faintly singing with a stolen-god's resonance. **He cannot appear smaller or narrower than whoever stands before him**; his pride is dimensionally enforced. A halfling in his presence sees a giant; a giant sees something larger still; a dragon sees a peer. **His shadow falls upward**, as if the world is below him — mortals who notice this detail sometimes break free of his whisper.
+
+**The spire.** The tallest of the seven Vice Demon spires — not because Pride is the senior vice, but because *Drambur's spire has grown taller under him*, fed by his own self-image. Sheathed in something resembling polished gold-mirror; from a distance, in the right light, it could be mistaken for a Ljosarn cathedral tower. Up close the mirror reflects each visitor back slightly *aggrandised* — taller, brighter, more beautiful than they are. The trick begins before they enter the spire.
+
+**Method on Talan.** Drambur does not whisper to the proud-and-vulgar. He whispers to *the genuinely great* — the just king, the brilliant scholar, the saintly healer, the world-class artisan. Paladins of Iro especially; he knows the shape of that fall. His message is consistent: *"They are right to praise you. You have earned more than they say. The work was yours, not the god's. You are the source, not the channel."* He never tempts toward sin. He only *agrees* — earlier and more enthusiastically than the mortal can.
+
+**Reputation among the seven.** Drambur considers himself the senior of the Vice Demons, and the other six **never contradict him**. Partly because his Pride is structurally easy to use — let him think he is first, then act around him. Partly because his spire is genuinely taller, and crossing him in his own court is more trouble than it's worth. Behind their teeth the other six call him *the gilded fool* and *the dimmed sun*. He has never noticed.
+
+**GM Secret — his former name.** Drambur's mortal name appears in no chronicle. Iro's clergy of the time scoured it from the records as part of the official forgetting — a champion who turned on his god could not be named to inspire others. The name persists in **exactly one place on Talan: in Iro's own memory.** A cleric of Iro who reaches deep into the god's communion at a moment of high need *might* be granted it. Speaking that name in Drambur's presence **fractures his Pride** — the elevated *Drambur*-shape collapses briefly to the mortal soul beneath. He is vulnerable in that moment to mortal harm in a way he otherwise never is. *Iro grants the name perhaps once a generation, and never to the eager.*
+
+---
 
 **Demon / Devil distinction in Talan:**
 - **Vice Demons** embody a vice. They are the vice itself, given form. Their existence is foundational, not parasitic. Anarchic; constant power-struggle below the seven seat-holders; the seven themselves rarely shift but *can* be killed and replaced.
