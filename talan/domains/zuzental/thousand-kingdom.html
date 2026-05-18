@@ -70,37 +70,53 @@
     vertical-align: 0.05em;
     margin: 0 2px;
   }
+  /* Secret-box card scaffolding (.secret-reveal / .secret-pill / .secret-grid-* / .secret-card / .secret-coda) now lives in /assets/style-b.css */
 
-  /* ── Reveal scaffolding for cards inside GM-Secret boxes ────────── */
-  .secret-era-content .accent-card { --card-bg: rgba(46,14,18,0.55); border-color: rgba(180,80,80,0.30); }
-  .secret-reveal {
-    font-style: italic;
-    font-size: 0.98rem;
-    color: #f0c8a8;
-    margin: 0 0 14px 0;
-    padding: 6px 0 6px 14px;
-    border-left: 2px solid rgba(180,80,80,0.55);
+  /* Naming-convention section */
+  .sub-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin: 24px 0 10px 0;
+    text-align: center;
   }
-  .secret-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 14px 0; }
-  .secret-pill {
-    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
-    padding: 3px 9px; border-radius: 10px;
-    background: rgba(140,50,50,0.20); border: 1px solid rgba(200,100,100,0.42);
-    color: #f0c8b0;
+  .names-table {
+    width: 100%;
+    max-width: 880px;
+    margin: 14px auto 0 auto;
+    border-collapse: collapse;
+    font-size: 0.88rem;
   }
-  .secret-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
-  .secret-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 14px 0; }
-  .secret-card { padding: 12px 14px; }
-  .secret-card-label {
-    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: #d48a8a; margin-bottom: 4px;
+  .names-table th {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    text-align: left;
+    padding: 8px 10px 6px 10px;
+    border-bottom: 1px solid rgba(200,144,10,0.32);
   }
-  .secret-card-title {
-    font-family: 'Cinzel', serif; font-weight: 600; font-size: 1rem;
-    color: var(--gold-bright); margin-bottom: 8px; letter-spacing: 0.04em;
+  .names-table td {
+    padding: 7px 10px;
+    border-bottom: 1px dashed rgba(200,144,10,0.14);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.45;
   }
-  .secret-card-body { font-size: 0.88rem; line-height: 1.55; color: var(--text); }
-  .secret-coda { font-size: 0.88rem; color: var(--parch-dim); font-style: italic; margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(180,80,80,0.30); }
+  .names-table tr:hover td { background: rgba(74,106,138,0.06); }
+  .names-table td:nth-child(1) { color: var(--parch-bright); white-space: nowrap; }
+  .names-table td:nth-child(2) { font-family: 'Cinzel', serif; color: var(--gold-bright); white-space: nowrap; }
+  .names-table td:nth-child(3) { font-style: italic; color: var(--parch-dim); white-space: nowrap; }
+  .names-table td:nth-child(4) { color: var(--text-dim); font-size: 0.85rem; }
+  .names-table tr.default-row td { background: rgba(74,106,138,0.08); }
+  @media (max-width: 600px) {
+    .names-table { font-size: 0.82rem; }
+    .names-table th, .names-table td { padding: 6px 6px; }
+    .names-table td:nth-child(3) { white-space: normal; }
+  }
 </style>
 </head>
 <body data-page="thousand-kingdom">
@@ -214,9 +230,9 @@
           <div class="secret-card-body">He was a genuinely exceptional general before any of it began. His ascent was that skill <b>plus accumulated dread</b>: the fear of subjects, the certainty of armies, and the legend of a realm that had begun, by the conquest's fifth decade, to write him into its own future as inevitable. The substance is the same directed mortal belief that raised Bikiargi to godhood — channelled fear-and-inevitability rather than worship.</div>
         </div>
         <div class="accent-card cut-left secret-card">
-          <div class="secret-card-label">How It Differs</div>
-          <div class="secret-card-title">Not a Ritual, Not a Loophole</div>
-          <div class="secret-card-body">Distinct from the <a href="/talan/historical/storveldi-denbora.html">Storveldi integration procedure</a> (deliberate ritual), the Golden Emperor's Wellspring-direct loophole (Reflection-only), and Cronus's mortal-with-shard route (Layer-3-resident, pre-Compact). He did not seek divinity. He did not know it was happening. By the time he understood, he was already most of the way there.</div>
+          <div class="secret-card-label">The Long Arc</div>
+          <div class="secret-card-title">Becoming Inevitable</div>
+          <div class="secret-card-body">The transformation crystallised on him gradually — year by year, conquest by conquest. He set out to end the wars by force; he built his armies and his certainty to that end. Somewhere in the campaign's fifth decade he recognised the change in himself: he was lifting toward divinity as a byproduct of the forty years of fear and certainty he had generated. He kept going. The war and the ascent had become the same project, and they completed together. By the late 2440s most of the Thousand had fallen, and Garaion was a Demi-God.</div>
         </div>
       </div>
 
@@ -226,7 +242,7 @@
 
   <!-- ── Secret 2: The Forgery ── -->
   <div class="secret-era">
-    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — The Forgery That Built the Queen</button>
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret — How the Prophecy Was Answered</button>
     <div class="secret-era-content">
       <div class="secret-era-label">⚿ &nbsp; Sixty Years of Building a Daughter of Fyrst</div>
       <p class="secret-reveal">The Returning Blood prophecy was answered because Garaion's intelligence chief had been writing the answer for sixty years.</p>
@@ -384,6 +400,64 @@
     <p><b>The interplay is the Kingdom.</b> The elven houses provide continuity that survives any single career. The human houses provide urgency that survives any single century. Neither bloodline could hold the Kingdom alone — left to the elves, it would calcify into a single multi-generational strategy executed past its expiry date; left to the humans, it would consume itself in a generation of short-term wins that produced long-term ruin. Forseti's law is what binds the two together: a framework of sworn compacts both bloodlines can sign, durable enough to survive the elves' inertia, flexible enough to absorb the humans' volatility.</p>
 
     <p>It is also why the Kingdom is <b>politically volatile and structurally durable</b> at the same time — the cycle that gives it both is constant. A political crisis flares in the human-house chamber; an elven house catches it and slows it; the next decade absorbs the lesson; the next century encodes it. Volatility and longevity, both, by design.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       NAMES AND HOUSES — the naming convention
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 class="section-heading">Names and Houses</h2>
+  <div class="prose">
+    <p>The Thousand Kingdom keeps one of the continent's most formalised noble-naming conventions — a system old enough that the small polities Renauld eventually unified each already kept registers in this form. Rumour holds it predates even the Old King's birth, though no surviving scholar can demonstrate the claim. The convention survived the Dark Era fracture: each fragment-kingdom kept registering, and the 2457 MR re-founding did not invent the system — Aelis Fyrstgilt re-took an old throne within an old register.</p>
+
+    <p>Every noble surname is built from <b>[house prefix] + [ancestry suffix]</b>. The house prefix is the dynastic identifier — <i>Raven</i>, <i>Bel</i>, <i>Fyrst</i>. The ancestry suffix is determined by the individual's own ancestry, not the house's, so one household can produce siblings with different surnames if the children are different ancestries.</p>
+  </div>
+
+  <h3 class="sub-heading">✦ The Rules</h3>
+
+  <dl class="facts">
+    <dt>Suffix at birth</dt><dd>The herald-clerk records the suffix on the birth-register the day the child enters the world.</dd>
+    <dt>Heir-prefix rule</dt><dd>One parent is the designated <b>head of family</b> (matriarch or patriarch — gender, biology, and adoption are all irrelevant; only registration matters). The <b>main heir</b> carries the head's prefix. Non-heir children carry the secondary parent's prefix. Everyone's suffix tracks their own ancestry.</dd>
+    <dt>Heir-status mobility</dt><dd>If the heir is replaced, their <b>prefix changes</b> — they shift from the head's prefix to the secondary parent's prefix. <b>Your legal surname literally rewrites when your position in the inheritance shifts.</b> The country's most distinctive legal artefact: a disinherited noble walks out of the hall with a different surname than the one they walked in with.</dd>
+    <dt>Bastard override</dt><dd>A recognised bastard of any ancestry bears the suffix <b>-born</b> in place of their ancestry-suffix. Bastardy is the dominant marker; ancestry yields to it. Unrecognised bastards bear commoner names only.</dd>
+    <dt>Royal elevation</dt><dd>When a non-noble is elevated to the throne (as Aelis was), they <b>drop their commoner surname</b> and take the royal house prefix with their own ancestry suffix attached. The patronymic / matronymic middle is preserved. <i>Aelis Marien Vaughn → Aelis Marien Fyrstgilt.</i></dd>
+  </dl>
+
+  <h3 class="sub-heading">✦ The Suffix Register</h3>
+  <div class="prose">
+    <p>The precedents the heralds at Lograth maintain. An ancestry without a registered suffix falls back on <b>-heim</b> by default until the heralds coin a specific one, which then becomes precedent for any future noble of that ancestry.</p>
+  </div>
+
+  <table class="names-table">
+    <thead><tr><th>Ancestry</th><th>Suffix</th><th>Example</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Human</td><td>-mond</td><td>Ravenmond</td><td>Default of the human-majority Thousand</td></tr>
+      <tr><td>Elf</td><td>-ford</td><td>Ravenford</td><td></td></tr>
+      <tr><td>Bastard <i>(status)</i></td><td>-born</td><td>Ravenborn</td><td>Overrides any ancestry suffix</td></tr>
+      <tr><td>Dwarf</td><td>-stein</td><td>Ravenstein</td><td>Germanic <i>stone</i>; firm, hearth-rooted</td></tr>
+      <tr><td>Halfling</td><td>-down</td><td>Ravendown</td><td>Small hill, small folk</td></tr>
+      <tr><td>Gnome</td><td>-hollow</td><td>Ravenhollow</td><td>Fey-touched, hidden places</td></tr>
+      <tr><td>Half-orc / Orc</td><td>-mark</td><td>Ravenmark</td><td>Germanic march/border; warrior-frontier</td></tr>
+      <tr><td>Tiefling</td><td>-fell</td><td>Ravenfell</td><td>Fallen; infernally-touched</td></tr>
+      <tr><td>Nephilim <i>(Aasimar-style)</i></td><td>-gilt</td><td>Ravengilt</td><td>Gilded; celestial sheen. <b>House Fyrst's current monarch bears this suffix.</b></td></tr>
+      <tr><td>Goblinkin <i>(goblin / hobgoblin)</i></td><td>-snarl</td><td>Ravensnarl</td><td>Sharp-edged, lupine</td></tr>
+      <tr><td>Leshy</td><td>-bough</td><td>Ravenbough</td><td>Plant-folk</td></tr>
+      <tr><td>Tengu / Aiuvarin</td><td>-wing</td><td>Ravenwing</td><td>Feathered</td></tr>
+      <tr><td>Lizardfolk / Kobold / Iruxi</td><td>-scale</td><td>Ravenscale</td><td>Reptilian</td></tr>
+      <tr><td>Catfolk</td><td>-prowl</td><td>Ravenprowl</td><td>Feline</td></tr>
+      <tr><td>Fetchling</td><td>-dusk</td><td>Ravendusk</td><td>Shadow-Plane-touched</td></tr>
+      <tr><td>Anadi</td><td>-weft</td><td>Ravenweft</td><td>Spider-folk, woven</td></tr>
+      <tr class="default-row"><td><i>Default (no registered suffix)</i></td><td>-heim</td><td>Ravenheim</td><td>"Home"; generic Germanic. Used until the heralds coin a specific precedent.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-heading">✦ Commoner Names</h3>
+  <div class="prose">
+    <p>Commoners run a <b>three-name structure</b> by social default: <i>given + middle + family</i>. The middle name is matronymic or patronymic — the named parent's given name. The three-name form is a low-grade snobbery; in a country whose pre-unification history was a thousand small kingdoms full of pretend-nobility, commoners assert their parental lineage to flag that they too have a parent worth naming.</p>
+
+    <p><b>Two-name commoners</b> (just given + family) read as too rural to bother with the affectation, too principled to imitate nobility, or unwilling to claim a parent. The register is light Germanic / French; given names like <i>Aldwin, Bren, Edda, Greta, Halver, Iona, Jacques, Konrad, Marien, Marthe, Pieter, Renier, Solène, Tomas, Wenzel</i>; surnames like <i>Halder, Brask, Trent, Vaughn, Mero, Vesh, Marche, Rouland, Karth, Velder</i>.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>

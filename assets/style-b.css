@@ -671,6 +671,44 @@ a.subregion-card:hover {
   border-bottom: 1px solid rgba(160, 40, 40, 0.15);
 }
 
+/* ── Reveal scaffolding for cards inside GM-Secret boxes ────────────
+   Multi-secret pattern (Storveldi + Thousand Kingdom + future pages):
+   themed cards, reveal pills, and codas inside .secret-era-content.
+   See CLAUDE.md — "Theme secret boxes with the page's full visual
+   vocabulary." Used by any page that places multiple thematic ⚿ GM
+   Secret boxes after open-prose sections.
+   ──────────────────────────────────────────────────────────────── */
+
+.secret-era-content .accent-card { --card-bg: rgba(46,14,18,0.55); border-color: rgba(180,80,80,0.30); }
+.secret-reveal {
+  font-style: italic;
+  font-size: 0.98rem;
+  color: #f0c8a8;
+  margin: 0 0 14px 0;
+  padding: 6px 0 6px 14px;
+  border-left: 2px solid rgba(180,80,80,0.55);
+}
+.secret-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 14px 0; }
+.secret-pill {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 10px;
+  background: rgba(140,50,50,0.20); border: 1px solid rgba(200,100,100,0.42);
+  color: #f0c8b0;
+}
+.secret-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+.secret-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 14px 0; }
+.secret-card { padding: 12px 14px; }
+.secret-card-label {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #d48a8a; margin-bottom: 4px;
+}
+.secret-card-title {
+  font-family: 'Cinzel', serif; font-weight: 600; font-size: 1rem;
+  color: var(--gold-bright); margin-bottom: 8px; letter-spacing: 0.04em;
+}
+.secret-card-body { font-size: 0.88rem; line-height: 1.55; color: var(--text); }
+.secret-coda { font-size: 0.88rem; color: var(--parch-dim); font-style: italic; margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(180,80,80,0.30); }
+
 /* ── SCALE ROW (magic schools, city sizes) ─────────────────── */
 
 .scale-row {
