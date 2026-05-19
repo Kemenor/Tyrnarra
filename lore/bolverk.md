@@ -103,17 +103,17 @@ The two infernal orders share Bolverk but operate on different theological mecha
 
 The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a *corruption* of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always **seven** Vice Demons, and there is always one per Vice. The **seats are immortal** (as long as the vice exists in mortals); the **holders can be killed and replaced**, and each new holder takes a new name. They reside each in their own independent spire on the Vice-Demon side.
 
-| Vice | Current Holder | PF2e Domain Grant |
-|---|---|---|
-| **Pride** | **Drambur** | canon-pending |
-| **Greed** | **Nirfel** | canon-pending |
-| **Lust** | **Lostar** | canon-pending |
-| **Envy** | **Ofunda** | canon-pending |
-| **Gluttony** | **Veislur** | canon-pending |
-| **Wrath** | **Reidar** | canon-pending |
-| **Sloth** | **Lethar** | canon-pending |
+| Vice | Current Holder | PF2e Domain Grants (primary in bold) | Favored Weapon |
+|---|---|---|---|
+| **Pride** | **Drambur** | **Tyranny** · Confidence · Zeal · Might | Aldori Dueling Sword |
+| **Greed** | **Nirfel** | **Toil** · Wealth · Secrecy · Travel · Trickery | Flying Talon |
+| **Lust** | **Lostar** | **Pain** · Trickery · Passion · Dreams | Bladed Hoop |
+| **Envy** | **Ofunda** | **Sorrow** · Passion · Secrecy | Visap |
+| **Gluttony** | **Veislur** | **Indulgence** · Decay · Plague · Family | Karambit |
+| **Wrath** | **Reidar** | **Destruction** · Pain · Sorrow · Might | Spirit Thresher |
+| **Sloth** | **Lethar** | **Abomination** · Nightmares · Nothingness · Repose · Dreams | Dwarven Dorn-Dergar |
 
-All seven domain grants are currently **Open** in the PF2e registrar pending the dedicated non-bound assignment pass. Personalities and individual canon for the seven holders are in progress.
+**Reading the table.** Each Vice Demon's **primary PF2e cleric domain grant** is bolded — that's the registrar-canonical assignment in `pf2e-registrar.html` and the no-sharing rule among the Bound 13 does not extend to the non-bound, so Vice Demons can and do share thematic affinity with Bound-13 domains (the remaining listed domains). A cleric of Tyranny answers to Drambur; a cleric of Confidence answers to Sarrum, even though Drambur evokes Confidence as a Pride-shape. Favoured weapons are PF2e Advanced-category, one per holder, distinct across all seven.
 
 ### Drambur — the Pride Vice Demon
 
@@ -134,6 +134,8 @@ All seven domain grants are currently **Open** in the PF2e registrar pending the
 **Reputation among the seven.** Drambur considers himself the senior of the Vice Demons, and the other six **never contradict him**. Partly because his Pride is structurally easy to use — let him think he is first, then act around him. Partly because his spire is genuinely taller, and crossing him in his own court is more trouble than it's worth. Behind their teeth the other six call him *the gilded fool* and *the dimmed sun*. He has never noticed.
 
 **GM Secret — his former name.** Drambur's mortal name appears in no chronicle. Iro's clergy of the time scoured it from the records as part of the official forgetting — a champion who turned on his god could not be named to inspire others. The name persists in **exactly one place on Talan: in Iro's own memory.** A cleric of Iro who reaches deep into the god's communion at a moment of high need *might* be granted it. Speaking that name in Drambur's presence **fractures his Pride** — the elevated *Drambur*-shape collapses briefly to the mortal soul beneath. He is vulnerable in that moment to mortal harm in a way he otherwise never is. *Iro grants the name perhaps once a generation, and never to the eager.*
+
+**Domains & Favored Weapon.** PF2e domain grant: **Tyranny** (registrar primary). Thematic affinities: Confidence, Zeal, Might (Pride-coded — these remain Sarrum's, Iro's, and Hinka's respectively in mechanics; Drambur evokes them without granting). Favored weapon: **Aldori Dueling Sword** — slim, single-bladed, status-coded; the duelist's blade fits the fallen Sun-Champion better than any axe could.
 
 ### Ofunda — the Envy Vice Demon
 
@@ -163,6 +165,8 @@ Her eyes are hollow in a specific way: a mortal who meets her gaze sees, in her 
 
 **GM Secret — the mark she still carries, and denies.** The Justice Vice's Vengefulness face still holds a **thread of debt** on Ofunda's soul. It survived her death and her ascension to the Envy seat — marks of that order do not burn away. She has not only failed to pay; she has **actively refused to acknowledge** the debt for forty-five years, and the Justice Devil knows it. This is structurally heretical: a Vice Demon owing a Virtue Devil violates the unwritten parity between the orders, and *defiant* refusal compounds the offence. If the Justice Devil ever decides to call in the debt publicly, the Council of Fourteen will have a casus belli against the Vice Demon spires for the first time in living memory. Drambur's pride may *welcome* such a war; the rest of Bolverk will not. Ofunda is gambling that the Justice Devil will not risk the diplomatic upset over a single debt. He has not, yet. The thread is still there. *(Note: which mortal-side bargains the Justice Devil's mark could be used to pull through Ofunda is itself a story-handle for play — the Devil could feed information or favours through her against her will, if he ever chose to twist the thread instead of cutting it.)*
 
+**Domains & Favored Weapon.** PF2e domain grant: **Sorrow** (registrar primary — envy is sorrow at the gap). Thematic affinities: Passion (Komo's, shared as the longing-shape of envy), Secrecy (Forseti's, shared as the hidden mark she has not declared). Favored weapon: **Visap** — twin curved Vishkanya blades from a single hilt with a hollow for poison. Her ancestry's signature weapon, and her sister killed her with slow poison. Perfectly recursive.
+
 ### Reidar — the Wrath Vice Demon
 
 **Godhood.** Atezar was the head of a small frontier pantheon — five gods venerated in the wall-towns, border garrisons, and edge-of-the-map shrines of the late Gods' Era. The pantheon's name is lost; four of his peers are nameless even in fragmentary chronicle. His domain was **the line that does not break** — the watch, the gate, the last shield. Mortals prayed to him at the door of the keep before going to the wall. (Basque *atezain* "gatekeeper" → drift *atezain → atezar*.)
@@ -189,6 +193,8 @@ He fought through. He was the god of holding ground; he held. Across the seven d
 
 **Secret weakness — the Salute of the Last Door.** The gesture his wall-captains made before walking watch — fist pressed flat to the opposite shoulder, drawn down the chest in a single line. The salute is functionally extinct on Talan; three or four scattered remembrances survive in fragmentary form (a weathered carving on a ruined gatepost, a half-line in a folk song nobody understands, a tomb-relief in a forgotten frontier crypt). Performed correctly in his presence by someone who *means* it — not in mockery, not in tactic — the wound at his ribs flares wide enough to drop him to one knee for several seconds. Long enough to escape him, lock him behind a door, or speak something he otherwise would not let be spoken.
 
+**Domains & Favored Weapon.** PF2e domain grant: **Destruction** (registrar primary). Thematic affinities: Pain (Lostar's primary, shared as the grievance-induction wrinkle of his presence), Sorrow (Ofunda's primary, shared as the unwitnessed-god grief), Might (Hinka's, shared — most dangerous of the seven in single combat). Favored weapon: **Spirit Thresher** — bones on metal chains, "loosens fragments of the soul like husks struck from grains." A flail that threshes the spirit. Carried by him from the open court of the standing half of the Smouldering Spire.
+
 ### Lethar — the Sloth Vice Demon
 
 **What he is.** The only Vice Demon who is not a mortal soul or a god. **Outer being** — kin to the things mortals invoke when they want a horror beyond their own cosmology (the Yellow King, the dreaming god in the sunken city), except real, present, and in Bolverk. He is **the original holder of the Sloth seat**: where the other six seats have changed hands across mortal millennia, Lethar has held his since the seat first formed. He is the only one who can claim that.
@@ -212,6 +218,8 @@ He fought through. He was the god of holding ground; he held. Across the seven d
 **GM Secret — the home he came from.** Lethar's home reality — wherever it was, whatever it was — was a cosmology where his kind, once active, **consumed every form of motion until there was nothing left to consume.** They were extremely successful. They ran out of food. He is the last of his kind in his ambient cosmology, and he came to Tyrnarra because what was left of his reality had reached perfect stillness and there was no one to share it with. He chose Sloth as his condition on landing — not because he was lazy, but because **action is what destroyed his kind**, and he has held that lesson for longer than mortal civilisations have existed. His sloth is doctrinal. He is the surviving philosopher of an extinct cosmology, and his philosophy is *do not move; that is how it ends.*
 
 **Secret weakness — the unintended approach.** **Effort cannot reach him; absence of intent can.** His slow-down field is a function of *intent* — anything approaching with purpose, malice, plan, or even strong curiosity bogs down. A being who genuinely does not want anything from him passes through the field unimpeded. This is not a useful weakness in practice because almost no one walks into a Vice Demon's hall without wanting something. But it is the structural opening. The known historical case: a small child wandered into his hall during an earlier era of Bolverk's looser borders, became lost, sat on his bulk thinking it was a hill, and slept for the night undisturbed. He noticed her. He did not move. She left in the morning. **He could have eaten her. He did not, because that would also have been work.** The child grew up and never spoke of the hall except in dreams.
+
+**Domains & Favored Weapon.** PF2e domain grant: **Abomination** (registrar primary — Outer being, multiversal origin, form is the canonical horror-aesthetic). Thematic affinities: Nightmares (shared with the Whisperer in Dreams candidate, in the still-open registrar slot), Nothingness (Araphel's, shared as the do-not-move philosophy), Repose (Shuun's, shared as the endless-rest aesthetic), Dreams (Cronus's, shared as the sleeping-child case and the dream-orbit of his Talan-touched mortals). Favored weapon: **Dwarven Dorn-Dergar** — a heavy weighted cube of metal on a long chain. A weapon that strikes slowly and breaks lines. The slow inevitability of being hit by a mountain. He has not lifted it in millennia.
 
 ### Veislur — the Gluttony Vice Demon
 
@@ -248,6 +256,8 @@ The Adventurers' Guild treats found cookbook-pages as a category of hazardous-ma
 **Secret weakness — the chest and the first recipe.** The hamlet's cellar still holds **the original chest** — emptied of the cookbook by Henrick's death, but the wood itself carries the weight of what passed through it. To someone who can read the history of objects — occult-school practitioners, certain antiquarians, the rarer sort of Adventurers' Guild specialist — the chest holds **an insatiable hunger inside its grain, and the story Henrick told himself, and the story he didn't.** And somewhere in the hamlet's ground, buried where Henrick first practiced and never returned to dig up, **his first recipe page** lies — copied out in his own hand, before he had justified anything, before he had told himself any story at all. The original step. **The truth before the framing.** The first rung on the endless ladder he was already climbing without knowing.
 
 The hamlet's location is in Brauogi upper border country, currently uncatalogued — known to Adventurers' Guild atlases only as *cleared, no settlement, low priority.*
+
+**Domains & Favored Weapon.** PF2e domain grant: **Indulgence** (registrar primary). Thematic affinities: Decay (shared with the Rot-Tyrant candidate, in the still-open registrar slot — the meat-broth diagrams *are* decay-as-cookery), Plague (shared with the Corrupted God candidate — his recipes' downstream effects on the communities that follow them), Family (Jianna's, shared in the twisted sense — he ran the inn as the village's surrogate hearth). Favored weapon: **Karambit** — small curved tiger's-claw blade for deep wounds. The cook's knife. Reads as the kitchen tool first and the weapon second, which is the whole point of Veislur.
 
 ### Nirfel — the Greed Vice Demon
 
@@ -287,6 +297,8 @@ Somewhere on Talan, the unrecorded cache sits where she put it. Probably small. 
 
 **Secret weakness — the cache itself.** **If the lost cache is found, identified, and presented to her as the one she does not remember burying** — by someone who *knows* what it is, not someone who happens upon it — the Greed-perfect identity that holds her together cracks. She cannot dismiss it; she knows it is hers; she cannot account for it in her catalogue; she cannot rebuild the catalogue around it because the catalogue is who she is. **For some minutes, she is recoverable as a person rather than a seat.** In that window: she can be reasoned with, fought through, killed by mortal means, or — vanishingly rarely — talked back toward something other than what she became. The window closes when she manages to re-suture the catalogue around the new entry, which she will, eventually, learn to do.
 
+**Domains & Favored Weapon.** PF2e domain grant: **Toil** (registrar primary — the patient ledger-walking, the forty-year work of methodical burial). Thematic affinities: Wealth (Jianna's, shared — the catalogue's nominal value across Talan), Secrecy (Forseti's, shared — the personal script, the locked vault rooms), Travel (Cronus's, shared — sailing every domain), Trickery (Vesuna's, shared — the bait caches). Favored weapon: **Flying Talon** — three-pronged barbed hook on a chain, melee or hurled. *Literally a grappling hook with a melee mode.* Pirate-coded twice over, and the chain-and-hook visual mirrors her ledger-keep's locked-door aesthetic.
+
 ### Lostar — the Lust Vice Demon
 
 **What she is.** **Demonborn** in a back-alley of Bolverk's lower-tier service-quarters — the streets between the workshops and the laundry-pits where the city's plainest demons grow up out of the substrate. Squat, blunt-featured, asymmetrical, **unremarkable in the way only Bolverk's most middling demons manage to be**. In her first decades the senior demons walking through her quarter could not have picked her out of any other demonling.
@@ -322,6 +334,8 @@ The apprenticeships are real apprenticeships. She teaches in stages, with exerci
 Her entire thesis — *desire is in the eye, not the object* — is true partly because she has never been the eye. She cannot verify it from the wanter's side. **She does not know whether she is right.** The not-knowing is the wound her library is intended, secretly, to fill: every catalogued observation is a small piece of the answer she cannot have because she cannot run the experiment on herself.
 
 **Secret weakness — being made to want.** The structural opening: **if a mortal could induce genuine first-feeling desire in her — using her own craft against her, or by some untrained route she has not catalogued — the seat would crack.** Lust embodied is supposed to want. She has held the seat for four centuries on the engineering alone. The discovery that she could be the wanter, not only the engineer of wanters, would reveal her entire epistemology as incomplete — and **the seat's metaphysics would not allow incompleteness at the centre.** She would not survive the discovery intact. Whether she would survive it at all is open.
+
+**Domains & Favored Weapon.** PF2e domain grant: **Pain** (registrar primary — the engineered downstream cost of corrupted desire; her apprentices cause pain at scale). Thematic affinities: Trickery (Vesuna's, shared — engineered desire is the perfect trick), Passion (Komo's, shared — Lust's umbrella), Dreams (Cronus's, shared — apprentices reach her in dream). Favored weapon: **Bladed Hoop** — a circular hoop with blades along the outer edge, wielded in two hands or spun around an arm with the free-hand trait. A performance weapon. Requires trained presence and calibrated motion to use. The 🎭 form meets its weapon.
 
 ---
 
