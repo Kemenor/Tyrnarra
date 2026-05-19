@@ -1,4 +1,4 @@
-/* ───────────────────────────────────────────────────────────────
+﻿/* ───────────────────────────────────────────────────────────────
    site-nav.js — persistent sidebar menu
    Loaded by every published page (typically with `defer`).
 
@@ -28,7 +28,7 @@
     { slug: 'the-binding', label: 'The Binding',            href: '/talan/the-binding.html', children: [
       { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/talan/the-binding/hollow-of-ten-thousand-threads.html' }
     ]},
-    { slug: 'bestiary',    label: 'Ancestries',                  href: '/talan/bestiary.html', children: [] },
+    { slug: 'ancestries',    label: 'Ancestries',                  href: '/talan/ancestries.html', children: [] },
     { slug: 'historical',  label: 'Historical · The Fallen',   href: '/talan/historical/historical.html', children: [
       { slug: 'golden-empire',     label: 'The Golden Empire',     href: '/talan/historical/golden-empire.html' },
       { slug: 'storveldi-denbora', label: 'The Storveldi Denbora', href: '/talan/historical/storveldi-denbora.html' },
