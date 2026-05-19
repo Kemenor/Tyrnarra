@@ -32,14 +32,14 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | **Time** · Lioaru | Tani | Ghoran · Azarketi | — |
 | **Law** · Zuzental | Forseti | Elf · Human | — |
 | **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk · Centaur (Lands of Villtur) | Goloma |
-| **Commerce** · Lautara | Jianna | Halfling · Vishkanya | Kitsune (concentrated in Emarrea) |
+| **Commerce** · Lautara | Jianna | Kitsune (in Emarrea) · Halfling · Vishkanya | — |
 | **Knowledge** · Ezkudon | Enki | Shisk · Catfolk | — |
 | **Chaos** · Nashavel | Vesuna | Gnome · Vanara | Conrasu · Anadi |
 | **Freedom** · Askamira | Cronus | *All ancestries equally* | — |
 
 **Uncommon everywhere:** Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
 
-**Rare everywhere:** Kitsune (concentrated in Emarrea — see `cultures.md`) · Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
+**Rare everywhere:** Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
 **Sortalde-native (Eastern continent — see `geography.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries — The Six Petals* below.
 
@@ -156,7 +156,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations — sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
-**Known as the Divine Envoys.** Rare across Talan generally — but **concentrated in Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
+**Known as the Divine Envoys.** **Dominant in Lautara** — specifically in **Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands; rare elsewhere on Talan. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
 
 Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md` — the Thirteen). Kitsune communities on the Wind side of Talan therefore feel a doctrinal pull toward Vindul, but the actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
