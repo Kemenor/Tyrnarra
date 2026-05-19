@@ -65,7 +65,7 @@ These appear in the existing HTML primers. Some don't follow the Basque/Icelandi
 
 ### Vice Demons — Bolverk's seven seat-holders
 
-The seats are immortal (as long as vice exists in mortals); the *holders* can be killed and replaced, and each holder takes a new name. The names below are the **current** holders. All seven coined from Icelandic + drift.
+The seats are immortal (as long as vice exists in mortals); the *holders* can be killed and replaced. The names below are the **current** holders. All seven coined from Icelandic + drift.
 
 | Vice | Current Holder | Source | Drift |
 |---|---|---|---|
@@ -396,6 +396,18 @@ The seven petals of Sortalde each carry a Sortalde-internal name. Pattern: a one
 
 - **The Concord of Courts** — the long-standing confederation of the six ancestral petals, convening at Heting. Held together by ancient agreement rather than enforced authority. Samsaran chancellors are the continuity (multi-life memory carries the Concord's institutional knowledge across human lifetimes).
 - **Oni** — bound spirits of Sortalde tied to specific places. Concentrated on **Lingdao** alongside the Yaksha (who are their *lighter* cousins — both spirit-natures, opposed temperaments). Manifest physically only at their bound site; cannot wander. **Half-Oni mortal children are Hungerseeds** (see `bestiary.md` heritages).
+
+### Named Non-Bound Beings (Layer 1 Primordials)
+
+The seven Layer-1 primordials are stub-tier canon — names and plane-bindings are fixed; full portfolios are pending. The six plane-bound ones share the *-zar* suffix marking the deep-ancient stratum (cf. Zaharsuge, the wider *-zar* family); Iturima follows the *-arima* "soul" pattern instead (cf. Epairima). Full canon: `gods.md` — *Named Non-Bound Gods → Layer-1 Primordials*.
+
+- **Suzar** — Basque *su* (fire) + *zahar* (ancient) → *suzar*. Major Being of the fire-stratum of the Elemental Plane (Layer 1).
+- **Urzar** — Basque *ur* (water) + *zahar* → *urzar*. Major Being of the water-stratum (Layer 1).
+- **Lurzahar** — Basque *lur* (earth) + *zahar* → *lurzahar*. Major Being of the earth-and-stone stratum (Layer 1). Longer form deliberately retained to distinguish from the Brauogi place-name *Lurrath*.
+- **Haizar** — Basque *haize* (wind) + *zahar* → *haizar*. Major Being of the wind-and-air stratum (Layer 1).
+- **Indazar** — Basque *indar* (force, strength, vigour) + *zahar* → *indazar*. Major Being of the positive/life current of the Energy Plane (Layer 1).
+- **Hutzar** — Basque *huts* (void, empty) + *zahar* → *hutzar*. Major Being of the negative/void current of the Energy Plane (Layer 1).
+- **Iturima** — Basque *iturri* (spring, source) + *arima* (soul) → *iturarima → iturima*. Major Being (canon-pending tier) — the soul of the Wellspring itself, the most fundamental of the seven Layer-1 primordials.
 
 ### Named Non-Bound Gods (Layer 3 residents)
 

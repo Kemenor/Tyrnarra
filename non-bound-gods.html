@@ -58,9 +58,9 @@
 <div class="header">
   <span class="header-ornament">⸻ Beyond the Thirteen ⸻</span>
   <div class="header-title">Non-Bound Gods &amp; Beings</div>
-  <div class="header-sub">Layer 3 Residents · Vice Demons · Virtue Devils</div>
+  <div class="header-sub">Layer 1 Primordials · Layer 3 Residents · Vice Demons · Virtue Devils</div>
   <div class="header-flavor">
-    The thirteen Bound Gods reside on the Material Plane under the Gods' Law. Beyond them, divinity continues: Layer-3 gods whose portfolios reach Talan from across the veil, and the infernal orders of <b>Bolverk</b> — the megacity in Abyss where the seven Vice Demons embody the vices and the fourteen Virtue Devils corrupt the virtues. None are bound by the Compact; mortal clerics on Talan still channel through several of them, and bargainers on Talan are reached by all.
+    The thirteen Bound Gods reside on the Material Plane under the Gods' Law. Beyond them, divinity continues: <b>Layer-1 primordials</b> tied to the substrate of Prelife (the Elemental Plane's four strata, the Energy Plane's two poles, and the Wellspring's soul itself); <b>Layer-3 gods</b> whose portfolios reach Talan from across the veil; and the infernal orders of <b>Bolverk</b> — the megacity in Abyss where the seven Vice Demons embody the vices and the fourteen Virtue Devils corrupt the virtues. None are bound by the Compact.
   </div>
 </div>
 
@@ -76,6 +76,19 @@
   <div class="section-body">
     <p>The Layer 3 (Postlife) layer holds many gods beyond the Thirteen. Most go unnamed in Talanese sources — their portfolios are unspecific, their cults are local, their pantheons unmapped. The named ones whose portfolios appear in clerical practice on Talan are listed below, grouped by the plane they reside in. All are <b>belief-shaped</b> the same way the Ascendant Six are — they take their form from mortal worship and folk practice. None maintains a sanctum on Talan; faith reaches them across the veil, and they answer through grants and dreams.</p>
   </div>
+
+  <!-- PRELIFE GROUP -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Prelife — Layer 1 · Primordial<span class="gdiv-sublabel">Plane-Bound Embodiments · Stub-tier · Predate Mortal Belief</span></div>
+    <div class="gdiv-line"></div>
+  </div>
+
+  <div class="section-body">
+    <p>Layer 1 (Prelife) hosts seven named primordial beings whose portfolios are tied to the substrate of the layer itself rather than to mortal worship. Their relationship to the <b>Primordial Six</b> (the six Grand Gods who shaped Prelife) is canon-pending — peers, sub-aspects, or older predecessors are all on the table. All seven are tentatively <b>Major Beings</b>; portfolios and stories await fleshing-out.</p>
+  </div>
+
+  <div class="god-grid" id="prelifeGrid"></div>
 
   <!-- DIYU GROUP -->
   <div class="group-divider">
@@ -121,8 +134,7 @@
   </div>
 
   <div class="section-body">
-    <p>The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a <i>corruption</i> of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always <b>seven</b>, and there is always one per Vice. The <b>seats are immortal</b> (as long as the vice exists in mortals); the holders can be killed and replaced, and each new holder takes a new name. Power moves below the seven by clawing climbers; the seven themselves rarely shift.</p>
-    <p>For PF2e cleric domain grants tied to these demons, see the <a href="/pf2e-registrar.html"><b>PF2e Registrar</b></a> — all seven are currently Open / canon-pending.</p>
+    <p>The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a <i>corruption</i> of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always <b>seven</b>, and there is always one per Vice. The <b>seats are immortal</b> (as long as the vice exists in mortals); the holders can be killed and replaced. Power moves below the seven by clawing climbers; the seven themselves rarely shift.</p>
   </div>
 
   <div class="god-grid" id="viceDemonsGrid"></div>
@@ -193,7 +205,6 @@
     <p><a href="/grand-gods.html"><b>The 13 Bound Gods →</b></a> · The deities who walk the Material Plane under the Compact. Sibling page to this one.</p>
     <p><a href="/pf2e-registrar.html"><b>PF2e Registrar →</b></a> · The cleric-domain table mapping each PF2e cleric domain to its in-world granter, including all the demons, devils, Generals, and Betibizi.</p>
     <p><a href="/talan/the-binding.html"><b>The Binding →</b></a> · The Corrupted God (the Elden, fused with the Devourer) and his Nine Generals of Corruption — a different cosmological class from the Layer-3 gods and the demons/devils above, but also non-bound. The Generals serve the Corrupted God and command the Nine Dungeons.</p>
-    <p><a href="/talan/factions/factions.html"><b>Factions → Non-Bound God Faiths →</b></a> · The <b>Divine Faith</b> of the Legea Empire — a Layer-3 deity not among the Thirteen whose demigod scion rules a sub-region of Zuzental. Specific plane (Elysium, Diyu, or Abyss) and identity canon-pending.</p>
     <p><a href="/talan/bestiary.html"><b>Bestiary &amp; Ancestries →</b></a> · Heritages descended from these beings — Nephilim (any divine or fiendish source), and the various heritages from the Thirteen, the elemental planes, and the Life-Layer planes.</p>
   </div>
 
@@ -204,6 +215,127 @@
 <script>
 // ── NON-BOUND GOD DATA ──
 const beings = {
+  prelife: [
+    {
+      name: "Suzar",
+      tier: "Major Being",
+      primary: "The Fire-Stratum — Elemental Plane",
+      city: "Prelife · Layer 1 · Elemental",
+      orb: "🔥",
+      accent: "#e07840",
+      orbBg: "rgba(90,30,16,0.6)",
+      orbGlow: "rgba(224,120,64,0.30)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the fire-stratum of the Elemental Plane.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending — Layer-1 primordials predate mortal worship; any clerical link is undecided.</i>",
+      etymology: "Basque <i>su</i> (fire) + <i>zahar</i> (ancient) → drift <i>suzar</i>",
+      summary: "Layer-1 primordial of the fire-stratum. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Komo (Bound Grand God of Fire) — peer, sub-aspect, or older predecessor — is undecided.</i>",
+      note: "Stub roster entry. The six plane-bound primordials share the <i>-zar</i> suffix that marks the deep-ancient stratum elsewhere in canon.",
+      secret: ""
+    },
+    {
+      name: "Urzar",
+      tier: "Major Being",
+      primary: "The Water-Stratum — Elemental Plane",
+      city: "Prelife · Layer 1 · Elemental",
+      orb: "💧",
+      accent: "#4090c8",
+      orbBg: "rgba(20,52,90,0.6)",
+      orbGlow: "rgba(64,144,200,0.28)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the water-stratum of the Elemental Plane.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>ur</i> (water) + <i>zahar</i> (ancient) → drift <i>urzar</i>",
+      summary: "Layer-1 primordial of the water-stratum. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Shuun (Bound Grand God of Water) is undecided.</i>",
+      note: "Stub roster entry.",
+      secret: ""
+    },
+    {
+      name: "Lurzahar",
+      tier: "Major Being",
+      primary: "The Earth-Stratum — Elemental Plane",
+      city: "Prelife · Layer 1 · Elemental",
+      orb: "⛰️",
+      accent: "#a08040",
+      orbBg: "rgba(70,52,28,0.6)",
+      orbGlow: "rgba(160,128,64,0.25)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the earth-and-stone stratum.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>lur</i> (earth) + <i>zahar</i> (ancient) → drift <i>lurzahar</i>. Longer form deliberately retained to distinguish from the Brauogi place-name <i>Lurrath</i>.",
+      summary: "Layer-1 primordial of the earth-and-stone stratum. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Sarrum (Bound Grand God of Earth) is undecided.</i>",
+      note: "Stub roster entry.",
+      secret: ""
+    },
+    {
+      name: "Haizar",
+      tier: "Major Being",
+      primary: "The Wind-Stratum — Elemental Plane",
+      city: "Prelife · Layer 1 · Elemental",
+      orb: "💨",
+      accent: "#a8c0c8",
+      orbBg: "rgba(60,80,90,0.55)",
+      orbGlow: "rgba(168,192,200,0.25)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the wind-and-air stratum.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>haize</i> (wind) + <i>zahar</i> (ancient) → drift <i>haizar</i>",
+      summary: "Layer-1 primordial of the wind-and-air stratum. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Fisaya (Bound Grand God of Wind) is undecided.</i>",
+      note: "Stub roster entry.",
+      secret: ""
+    },
+    {
+      name: "Indazar",
+      tier: "Major Being",
+      primary: "The Positive Current — Energy Plane",
+      city: "Prelife · Layer 1 · Energy",
+      orb: "✨",
+      accent: "#f0c850",
+      orbBg: "rgba(90,72,20,0.6)",
+      orbGlow: "rgba(240,200,80,0.28)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The positive/life current of the Energy Plane.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>indar</i> (force, strength, vigour) + <i>zahar</i> (ancient) → drift <i>indazar</i>",
+      summary: "Layer-1 primordial of the positive-energy current. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Counterpart to Hutzar in the Energy Plane's two-pole structure.</i>",
+      note: "Stub roster entry. Pairs structurally with Hutzar — both are required for the Energy Plane to function.",
+      secret: ""
+    },
+    {
+      name: "Hutzar",
+      tier: "Major Being",
+      primary: "The Negative Current — Energy Plane",
+      city: "Prelife · Layer 1 · Energy",
+      orb: "🕳️",
+      accent: "#604878",
+      orbBg: "rgba(36,24,52,0.65)",
+      orbGlow: "rgba(96,72,120,0.25)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The negative/void current of the Energy Plane.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>huts</i> (void, empty) + <i>zahar</i> (ancient) → drift <i>hutzar</i>",
+      summary: "Layer-1 primordial of the negative-energy current. Stub-tier — full portfolio pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Counterpart to Indazar in the Energy Plane's two-pole structure.</i>",
+      note: "Stub roster entry. Pairs structurally with Indazar.",
+      secret: ""
+    },
+    {
+      name: "Iturima",
+      tier: "Major Being (tier canon-pending)",
+      primary: "The Soul of the Wellspring",
+      city: "Prelife · Layer 1 · Wellspring",
+      orb: "🌀",
+      accent: "#a890d0",
+      orbBg: "rgba(58,46,78,0.65)",
+      orbGlow: "rgba(168,144,208,0.28)",
+      aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The soul of the Wellspring itself; the most fundamental of the seven Layer-1 primordials.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      etymology: "Basque <i>iturri</i> (spring, source) + <i>arima</i> (soul) → <i>iturarima</i> → drift <i>iturima</i>. Follows the <i>-arima</i> \"soul\" pattern (cf. Epairima), standing outside the six plane-bound primordials' <i>-zar</i> family.",
+      summary: "Layer-1 primordial of the Wellspring's soul. The most fundamental of the seven; stub-tier — even basic questions canon-pending.",
+      nature: "<i style=\"color:var(--text-dim)\">Canon-pending — including the basic question of whether <i>being</i> in the sentient sense or personification of the Wellspring's coherence. Tier classification may exceed Major.</i>",
+      note: "Stub roster entry. Structurally above the other six Layer-1 primordials.",
+      secret: ""
+    }
+  ],
   diyu: [
     {
       name: "Bikiargi",
@@ -339,6 +471,7 @@ function buildBeingCard(being, gridId) {
   grid.appendChild(card);
 }
 
+beings.prelife.forEach(b => buildBeingCard(b, 'prelifeGrid'));
 beings.diyu.forEach(b => buildBeingCard(b, 'diyuGrid'));
 beings.abyss.forEach(b => buildBeingCard(b, 'abyssGrid'));
 
