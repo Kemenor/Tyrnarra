@@ -24,7 +24,7 @@ Each god's domain has one or more **dominant** ancestries — peoples for whom t
 | Domain | God | Dominant Ancestries | Notable Uncommon |
 |---|---|---|---|
 | **Light** · Egulon | Iro | Nagaji · Shoony | — |
-| **Darkness** · Myrkono | Araphel | Fetchling | Centaur (Shadow Steppes) |
+| **Darkness** · Myrkono | Araphel | Fetchling | — |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
 | **Water** · Floteyn | Shuun | Strix · Tripkee · Athamaru · Merfolk | Leshy |
 | **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
@@ -81,9 +81,9 @@ Curious beings, **dominant in Ezkudon (Knowledge / Enki)** — Enki himself is d
 ### Centaur
 **Nomadic plainsfolk.** Two distinct cultural populations on Talan, in two domains that share the open-ground character:
 - **Dominant in the Lands of Villtur (Ehizahar / Hunt)** — the largest centaur population on Talan. Tribal, hunt-aligned, sharing the territory with Orcs, Kholo, and Lizardfolk; the four ancestries' tribal cultures intermix and feud along recognisable patterns.
-- **Uncommon on the Shadow Steppes (Myrkono / Darkness)** — smaller herds that live cautiously around the two Wardstone sites of the Steppes. The Shadow Steppes centaurs are notably more wary, more nocturnal, and more theologically inflected (Araphel-adjacent) than their Villtur cousins.
+- **Also present on the Shadow Steppes (Myrkono / Darkness)** — smaller herds that live cautiously around the two Wardstone sites of the Steppes. The Shadow Steppes centaurs are notably more wary, more nocturnal, and more theologically inflected (Araphel-adjacent) than their Villtur cousins.
 
-Rare elsewhere. The two populations are aware of each other but do not intermarry routinely — the cultural drift between Villtur-tribal and Steppes-watchful is wider than appearance suggests.
+The two populations are aware of each other but do not intermarry routinely — the cultural drift between Villtur-tribal and Steppes-watchful is wider than appearance suggests.
 
 ### Conrasu
 Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding the Basogur Jungle interior; rare elsewhere.
@@ -156,7 +156,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations — sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
-**Known as the Divine Envoys.** **Dominant in Lautara** — specifically in **Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands; rare elsewhere on Talan. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
+**Known as the Divine Envoys.** **Dominant in Lautara** — specifically in **Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands. Full cultural detail in `cultures.md` (Kitsune — Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
 
 Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md` — the Thirteen). Kitsune communities on the Wind side of Talan therefore feel a doctrinal pull toward Vindul, but the actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
