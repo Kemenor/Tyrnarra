@@ -272,7 +272,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Lord Albrecht Lavisburg** — Modern personal name, Germanic-style. A 67-year-old human; minor demi-god of Order and Ethics by accumulated belief. See `factions.md`.
 - **Seraphel Duskbane** — Modern compound personal name. Fetchling Guild Sovereign of Myrria's Godshall. *Duskbane* earned epithet (English). See `factions.md`.
 
-**The Red Empire (off-continent — across Hafra from Talan; full entry in `factions.md` under Off-Continent Powers):**
+**The Red Empire (off-continent — across the *Cloud Sea* from Talan; full entry in `factions.md` under Off-Continent Powers):**
 - **The Crimson Emperor** — Plain English title.
 - **The Pyre Seat / Pyre Throne** — Plain English. Throne forged from the weapons of defeated kings.
 - **The Ordeal of Ash** — Plain English. The Emperor's forty-day endurance trial.
@@ -280,7 +280,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Red Army / Legions of Flame** — Plain English. The Empire's standing army.
 - **Ashen Guard** — Plain English. The Emperor's elite.
 - **The Menagerie** — Plain English (with deliberate irony — they call themselves *artisans of war*; outsiders use the *cage* reading). Their secret-most corps.
-- **Iron Tide** — Plain English. The Empire's navy.
+- **Iron Tide** — Plain English. The Empire's navy of **Magitech warship-cloudships**: cloud-capable warships engineered to cross the Cloud Sea from the Empire's home continent and then descend on Talanese coasts as a conventional naval force. Distinct from any civil cloudship Talan ever sees; the Empire builds them at industrial scale, which is the structural reason the Tide is the threat it is. Unlike Sortalde (which builds no cloudships at all), the Empire's industrial Magitech is fully sufficient for the crossing.
 - **Master Curator / Curator / Keeper / Collector** — Plain English. The Menagerie's rank ladder.
 - **Pyre Throne / Command Caste / Forged / Blooded / Respected Hands / Ashen / Broken / Fodder** — Plain English caste names of the Red Empire's social hierarchy.
 - **Flamefangs / Frostfangs / Steam Hulks / Corsair Auxilia** — Plain English. Iron Tide ship classes.
