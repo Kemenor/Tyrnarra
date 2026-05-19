@@ -180,7 +180,7 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 
 Beyond the Thirteen, both the **Postlife layer** (Elysium / Diyu / Abyss) and the **Prelife layer** (Wellspring / Energy / Elemental) hold named non-bound beings whose portfolios appear in clerical practice or theological cross-reference on Talan. None maintain sancta on the Material Plane; none are subject to the Gods' Law in its bound form (they remain in Layer 3 or Layer 1, where the Law only bleeds through weakly).
 
-The Layer-3 entries (Bikiargi, Zaharsuge, Epairima, Betibizi) are all **belief-shaped** — like the Ascendant Six, they take their shape from mortal worship and folk practice. The Layer-1 primordials are differently grounded: they predate mortal worship entirely and are bound to the substrate of their plane rather than to belief. None of either group are members of the Council of Thirteen.
+All non-bound beings on both layers are **belief-shaped**, but by different streams of belief. Layer-3 residents take their shape from mortal prayer, rite, and folk practice — the same mechanism that grew the Ascendant Six, only writ smaller. The Layer-1 primordials are shaped by an older and more diffuse stream: the **undirected reverence mortals hold for the elemental forces themselves**, regardless of which named god they invoke. A sailor may pray to Shuun and still fear the storm and the water in their own right; a smith may pray to Komo and still know that fire is fire before any god named it. That older awe is what created the primordials and is what sustains them. None of either group are members of the Council of Thirteen.
 
 ### Bikiargi — The Twins (Moon · Major God)
 - **Aspects:** moonlight, tides, lunar omens, the dream-currents, lovers' meetings, hunts in the dark.
@@ -221,7 +221,7 @@ Mortals have prayed to **Solyra** for as long as there have been mortals. The sa
 
 ### Layer-1 Primordials — The Seven of Prelife *(stub roster)*
 
-Layer 1 (Prelife) hosts seven named primordial beings whose portfolios are tied to the substrate of the layer itself rather than to mortal worship. Their relationship to the **Primordial Six** (the six Grand Gods who shaped Prelife) is canon-pending — peers, sub-aspects of, or older predecessors of those gods are all on the table. All seven are tentatively classed **Major Beings** at stub-tier; full portfolios, mortal-touch (if any), and individual stories await fleshing-out.
+Layer 1 (Prelife) hosts primordial beings whose portfolios are tied to the substrate of the layer itself rather than to personal worship. They are belief-shaped, but by a belief older and more diffuse: mortals will always hold reverence for the elemental forces themselves, regardless of which named god they invoke. A sailor may pray to Shuun and still fear the storm and the water in their own right; a smith may pray to Komo and still know that fire is fire before any god named it. That older, undirected awe — for the wind, the stone, the flame, the void — is what created them and is what sustains them. Their relationship to the **Primordial Six** (the six Grand Gods who shaped Prelife) is unknown. Currently classed **Major Beings** at stub-tier; full portfolios and individual stories await fleshing-out.
 
 | Plane | Being | Source | Portfolio (stub) |
 |---|---|---|---|
