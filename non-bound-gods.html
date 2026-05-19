@@ -60,7 +60,7 @@
   <div class="header-title">Non-Bound Gods &amp; Beings</div>
   <div class="header-sub">Layer 1 Primordials · Layer 3 Residents · Vice Demons · Virtue Devils</div>
   <div class="header-flavor">
-    The thirteen Bound Gods reside on the Material Plane under the Gods' Law. Beyond them, divinity continues: <b>Layer-1 primordials</b> tied to the substrate of Prelife (the Elemental Plane's four strata, the Energy Plane's two poles, and the Wellspring's soul itself); <b>Layer-3 gods</b> whose portfolios reach Talan from across the veil; and the infernal orders of <b>Bolverk</b> — the megacity in Abyss where the seven Vice Demons embody the vices and the fourteen Virtue Devils corrupt the virtues. None are bound by the Compact.
+    The thirteen Bound Gods reside on the Material Plane under the Gods' Law. Beyond them, divinity continues: <b>Layer-1 primordials</b> tied to the substrate of Prelife; <b>Layer-3 gods</b> whose portfolios reach Talan from across the veil; and the infernal orders of <b>Bolverk</b> — the megacity in Abyss where the seven Vice Demons embody the vices and the fourteen Virtue Devils corrupt the virtues. None are bound by the Compact.
   </div>
 </div>
 
@@ -74,7 +74,7 @@
   </div>
 
   <div class="section-body">
-    <p>The Layer 3 (Postlife) layer holds many gods beyond the Thirteen. Most go unnamed in Talanese sources — their portfolios are unspecific, their cults are local, their pantheons unmapped. The named ones whose portfolios appear in clerical practice on Talan are listed below, grouped by the plane they reside in. All are <b>belief-shaped</b> the same way the Ascendant Six are — they take their form from mortal worship and folk practice. None maintains a sanctum on Talan; faith reaches them across the veil, and they answer through grants and dreams.</p>
+    <p>The Layer 3 (Postlife) layer holds many gods and beings beyond the Thirteen. The named ones whose portfolios appear in clerical practice on Talan are listed below, grouped by the plane they reside in. They are <b>belief-shaped</b> — created and sustained by mortal prayer, rite, and the steady weight of folk practice. None maintain a sanctum on Talan; faith reaches them across the veil, and they answer through grants and dreams.</p>
   </div>
 
   <!-- PRELIFE GROUP -->
@@ -85,7 +85,7 @@
   </div>
 
   <div class="section-body">
-    <p>Layer 1 (Prelife) hosts seven named primordial beings whose portfolios are tied to the substrate of the layer itself rather than to mortal worship. Their relationship to the <b>Primordial Six</b> (the six Grand Gods who shaped Prelife) is canon-pending — peers, sub-aspects, or older predecessors are all on the table. All seven are tentatively <b>Major Beings</b>; portfolios and stories await fleshing-out.</p>
+    <p>Layer 1 (Prelife) hosts primordial beings whose portfolios are tied to the substrate of the layer itself rather than to personal worship. They are belief-shaped, but by a belief older and more diffuse: mortals will always hold reverence for the elemental forces themselves, regardless of which named god they invoke. A sailor may pray to Shuun and still fear the storm and the water in their own right. A smith may pray to Komo and still know that fire is fire before any god named it. That older, undirected awe — for the wind, the stone, the flame, the void — is what created them and is what sustains them. Their relationship to the <b>Primordial Six</b> (the six Grand Gods who shaped Prelife) is unknown.</p>
   </div>
 
   <div class="god-grid" id="prelifeGrid"></div>
@@ -152,25 +152,7 @@
     <p>The Virtue Devil count is <b>not paired against the seven Vices</b> — the virtues stand on their own catalogue, more numerous and more varied because virtue is more diverse than its absence.</p>
   </div>
 
-  <table class="ref-table">
-    <thead><tr><th>Virtue</th><th>Excess (above the mean)</th><th>Deficiency (below the mean)</th></tr></thead>
-    <tbody>
-      <tr><td><b>Courage</b></td><td>Recklessness</td><td>Cowardice</td></tr>
-      <tr><td><b>Wisdom</b></td><td>Cynicism</td><td>Folly</td></tr>
-      <tr><td><b>Justice</b></td><td>Vengefulness</td><td>Permissiveness</td></tr>
-      <tr><td><b>Honesty</b></td><td>Indiscretion</td><td>Deceit</td></tr>
-      <tr><td><b>Hope</b></td><td>Delusion</td><td>Despair</td></tr>
-      <tr><td><b>Faith</b></td><td>Fanaticism</td><td>Apostasy</td></tr>
-      <tr><td><b>Loyalty</b></td><td>Servility</td><td>Treachery</td></tr>
-      <tr><td><b>Compassion</b></td><td>Sentimentality</td><td>Callousness</td></tr>
-      <tr><td><b>Curiosity</b></td><td>Obsession</td><td>Apathy</td></tr>
-      <tr><td><b>Hospitality</b></td><td>Sycophancy</td><td>Xenophobia</td></tr>
-      <tr><td><b>Honor</b></td><td>Vainglory</td><td>Perfidy</td></tr>
-      <tr><td><b>Mercy</b></td><td>Appeasement</td><td>Implacability</td></tr>
-      <tr><td><b>Magnanimity</b></td><td>Vanity</td><td>Pettiness</td></tr>
-      <tr><td><b>Creativity</b></td><td>Hubris</td><td>Sterility</td></tr>
-    </tbody>
-  </table>
+  <div class="god-grid" id="virtueDevilsGrid"></div>
 
   <div class="info-grid">
     <div class="info-card">
@@ -226,7 +208,7 @@ const beings = {
       orbBg: "rgba(90,30,16,0.6)",
       orbGlow: "rgba(224,120,64,0.30)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the fire-stratum of the Elemental Plane.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending — Layer-1 primordials predate mortal worship; any clerical link is undecided.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>su</i> (fire) + <i>zahar</i> (ancient) → drift <i>suzar</i>",
       summary: "Layer-1 primordial of the fire-stratum. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Komo (Bound Grand God of Fire) — peer, sub-aspect, or older predecessor — is undecided.</i>",
@@ -243,7 +225,7 @@ const beings = {
       orbBg: "rgba(20,52,90,0.6)",
       orbGlow: "rgba(64,144,200,0.28)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the water-stratum of the Elemental Plane.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>ur</i> (water) + <i>zahar</i> (ancient) → drift <i>urzar</i>",
       summary: "Layer-1 primordial of the water-stratum. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Shuun (Bound Grand God of Water) is undecided.</i>",
@@ -260,7 +242,7 @@ const beings = {
       orbBg: "rgba(70,52,28,0.6)",
       orbGlow: "rgba(160,128,64,0.25)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the earth-and-stone stratum.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>lur</i> (earth) + <i>zahar</i> (ancient) → drift <i>lurzahar</i>. Longer form deliberately retained to distinguish from the Brauogi place-name <i>Lurrath</i>.",
       summary: "Layer-1 primordial of the earth-and-stone stratum. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Sarrum (Bound Grand God of Earth) is undecided.</i>",
@@ -277,7 +259,7 @@ const beings = {
       orbBg: "rgba(60,80,90,0.55)",
       orbGlow: "rgba(168,192,200,0.25)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. Plane-bound to the wind-and-air stratum.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>haize</i> (wind) + <i>zahar</i> (ancient) → drift <i>haizar</i>",
       summary: "Layer-1 primordial of the wind-and-air stratum. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Relationship to Fisaya (Bound Grand God of Wind) is undecided.</i>",
@@ -294,7 +276,7 @@ const beings = {
       orbBg: "rgba(90,72,20,0.6)",
       orbGlow: "rgba(240,200,80,0.28)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The positive/life current of the Energy Plane.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>indar</i> (force, strength, vigour) + <i>zahar</i> (ancient) → drift <i>indazar</i>",
       summary: "Layer-1 primordial of the positive-energy current. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Counterpart to Hutzar in the Energy Plane's two-pole structure.</i>",
@@ -311,7 +293,7 @@ const beings = {
       orbBg: "rgba(36,24,52,0.65)",
       orbGlow: "rgba(96,72,120,0.25)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The negative/void current of the Energy Plane.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>huts</i> (void, empty) + <i>zahar</i> (ancient) → drift <i>hutzar</i>",
       summary: "Layer-1 primordial of the negative-energy current. Stub-tier — full portfolio pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending. Counterpart to Indazar in the Energy Plane's two-pole structure.</i>",
@@ -328,7 +310,7 @@ const beings = {
       orbBg: "rgba(58,46,78,0.65)",
       orbGlow: "rgba(168,144,208,0.28)",
       aspects: "<i style=\"color:var(--text-dim)\">Stub — canon-pending. The soul of the Wellspring itself; the most fundamental of the seven Layer-1 primordials.</i>",
-      worshippers: "<i style=\"color:var(--text-dim)\">Canon-pending.</i>",
+      worshippers: "<i style=\"color:var(--text-dim)\">Sustained by the undirected reverence mortals hold for the elemental force itself — distinct from personal worship of bound gods. Specific clerical link canon-pending.</i>",
       etymology: "Basque <i>iturri</i> (spring, source) + <i>arima</i> (soul) → <i>iturarima</i> → drift <i>iturima</i>. Follows the <i>-arima</i> \"soul\" pattern (cf. Epairima), standing outside the six plane-bound primordials' <i>-zar</i> family.",
       summary: "Layer-1 primordial of the Wellspring's soul. The most fundamental of the seven; stub-tier — even basic questions canon-pending.",
       nature: "<i style=\"color:var(--text-dim)\">Canon-pending — including the basic question of whether <i>being</i> in the sentient sense or personification of the Wellspring's coherence. Tier classification may exceed Major.</i>",
@@ -725,6 +707,53 @@ function buildDemonCard(d, gridId) {
 }
 
 viceDemons.forEach(d => buildDemonCard(d, 'viceDemonsGrid'));
+
+// ─────────────────────────────────────────────────────────────────────
+// VIRTUE DEVILS — the Fourteen of Bolverk (stub cards · placeholder by virtue)
+// ─────────────────────────────────────────────────────────────────────
+//
+// Individual Virtue Devils are not yet named in canon. Each card is a stub
+// holding the virtue line — excess + deficiency — until the seat-holder is
+// designed. The virtue itself stands in as the placeholder card name.
+
+const virtueDevilsStubNote = "Stub roster entry. Individual Virtue Devils will be named as stories call for them; the virtue line itself stands in until then.";
+const virtueDevilsStubWorshippers = "<i style=\"color:var(--text-dim)\">Whispers to mortals who have already half-corrupted the virtue — tipping them toward excess or deficiency depending on which will damage more. The devil tips the scale; they do not care which way it falls.</i>";
+const virtueDevilsStubEtymology = "<i style=\"color:var(--text-dim)\">Individual name canon-pending.</i>";
+
+const virtueDevils = [
+  { name: "Courage",     excess: "Recklessness",    deficiency: "Cowardice",    orb: "🛡️", accent: "#c87060", orbBg: "rgba(82,40,28,0.55)",  orbGlow: "rgba(200,112,96,0.25)"  },
+  { name: "Wisdom",      excess: "Cynicism",        deficiency: "Folly",        orb: "🦉", accent: "#6a82a8", orbBg: "rgba(38,52,72,0.6)",   orbGlow: "rgba(106,130,168,0.25)" },
+  { name: "Justice",     excess: "Vengefulness",    deficiency: "Permissiveness", orb: "⚖️", accent: "#b0a890", orbBg: "rgba(64,60,48,0.55)",  orbGlow: "rgba(176,168,144,0.25)" },
+  { name: "Honesty",     excess: "Indiscretion",    deficiency: "Deceit",       orb: "👁️", accent: "#a8a8a8", orbBg: "rgba(54,54,58,0.55)",  orbGlow: "rgba(168,168,168,0.22)" },
+  { name: "Hope",        excess: "Delusion",        deficiency: "Despair",      orb: "🌅", accent: "#d8a060", orbBg: "rgba(82,52,24,0.55)",  orbGlow: "rgba(216,160,96,0.25)"  },
+  { name: "Faith",       excess: "Fanaticism",      deficiency: "Apostasy",     orb: "🙏", accent: "#9070b8", orbBg: "rgba(54,40,72,0.55)",  orbGlow: "rgba(144,112,184,0.25)" },
+  { name: "Loyalty",     excess: "Servility",       deficiency: "Treachery",    orb: "🤝", accent: "#80a070", orbBg: "rgba(44,60,40,0.55)",  orbGlow: "rgba(128,160,112,0.22)" },
+  { name: "Compassion",  excess: "Sentimentality",  deficiency: "Callousness",  orb: "💗", accent: "#c88aa0", orbBg: "rgba(74,40,52,0.55)",  orbGlow: "rgba(200,138,160,0.25)" },
+  { name: "Curiosity",   excess: "Obsession",       deficiency: "Apathy",       orb: "🔍", accent: "#60a0a8", orbBg: "rgba(30,60,64,0.55)",  orbGlow: "rgba(96,160,168,0.22)"  },
+  { name: "Hospitality", excess: "Sycophancy",      deficiency: "Xenophobia",   orb: "🍞", accent: "#c89060", orbBg: "rgba(76,52,28,0.55)",  orbGlow: "rgba(200,144,96,0.25)"  },
+  { name: "Honor",       excess: "Vainglory",       deficiency: "Perfidy",      orb: "🎖️", accent: "#a86848", orbBg: "rgba(70,38,24,0.55)",  orbGlow: "rgba(168,104,72,0.25)"  },
+  { name: "Mercy",       excess: "Appeasement",     deficiency: "Implacability",orb: "🕊️", accent: "#a0b8c8", orbBg: "rgba(50,66,76,0.55)",  orbGlow: "rgba(160,184,200,0.22)" },
+  { name: "Magnanimity", excess: "Vanity",          deficiency: "Pettiness",    orb: "🌟", accent: "#d8b860", orbBg: "rgba(82,68,24,0.55)",  orbGlow: "rgba(216,184,96,0.25)"  },
+  { name: "Creativity",  excess: "Hubris",          deficiency: "Sterility",    orb: "🎨", accent: "#b888a8", orbBg: "rgba(66,46,60,0.55)",  orbGlow: "rgba(184,136,168,0.25)" }
+].map(v => ({
+  name: v.name,
+  tier: "Virtue Devil",
+  primary: `Corruption of ${v.name}`,
+  city: `Bolverk · Tetradecagram · ${v.name}-Line Ziggurat`,
+  orb: v.orb,
+  accent: v.accent,
+  orbBg: v.orbBg,
+  orbGlow: v.orbGlow,
+  aspects: `<b>Excess</b> (above the mean): ${v.excess} &nbsp;·&nbsp; <b>Deficiency</b> (below the mean): ${v.deficiency}`,
+  worshippers: virtueDevilsStubWorshippers,
+  etymology: virtueDevilsStubEtymology,
+  summary: `The Virtue Devil of the ${v.name} line. Personifies ${v.name}'s corruption — tipping mortals toward <b>${v.excess}</b> or <b>${v.deficiency}</b> depending on which will damage more. Individual name canon-pending.`,
+  nature: `Owns a vertically-split ziggurat in the tetradecagram: the <b>${v.excess}</b>-face as the upper tier, the <b>${v.deficiency}</b>-face as the lower tier, the devil itself seated on the false-mean between — looking, from a distance, like ${v.name.toLowerCase()}. Sits on the Council of Fourteen by consensus-bound debate. Killable individually; the seat persists.`,
+  note: virtueDevilsStubNote,
+  secret: ""
+}));
+
+virtueDevils.forEach(v => buildBeingCard(v, 'virtueDevilsGrid'));
 </script>
 
 </body>
