@@ -101,7 +101,7 @@ The two infernal orders share Bolverk but operate on different theological mecha
 
 ## Vice Demons — the Seven
 
-The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a *corruption* of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always **seven** Vice Demons, and there is always one per Vice. The **seats are immortal** (as long as the vice exists in mortals); the **holders can be killed and replaced**, and each new holder takes a new name. They reside each in their own independent spire on the Vice-Demon side.
+The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlike the Virtue Devils (which embody a *corruption* of something good), Vice Demons are the vice itself given form — pure embodiment, not parasitism. There are always **seven** Vice Demons, and there is always one per Vice. The **seats are immortal** (as long as the vice exists in mortals); the **holders can be killed and replaced**. They reside each in their own independent spire on the Vice-Demon side.
 
 | Vice | Current Holder | PF2e Domain Grants | Favored Weapon |
 |---|---|---|---|

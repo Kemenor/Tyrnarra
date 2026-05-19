@@ -178,9 +178,9 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 
 ## Named Non-Bound Gods
 
-Beyond the Thirteen, the Postlife layer (Elysium / Diyu / Abyss) holds a number of Major and Minor gods who **do not maintain sancta on Talan** and are not subject to the Gods' Law in its bound form (they remain in Layer 3, where it only bleeds through weakly). Most are unnamed. The following are the named ones whose portfolios appear in clerical practice on Talan.
+Beyond the Thirteen, both the **Postlife layer** (Elysium / Diyu / Abyss) and the **Prelife layer** (Wellspring / Energy / Elemental) hold named non-bound beings whose portfolios appear in clerical practice or theological cross-reference on Talan. None maintain sancta on the Material Plane; none are subject to the Gods' Law in its bound form (they remain in Layer 3 or Layer 1, where the Law only bleeds through weakly).
 
-All four below are **belief-shaped** — like the Ascendant Six, they take their shape from mortal worship and folk practice. None of the four are members of the Council of Thirteen.
+The Layer-3 entries (Bikiargi, Zaharsuge, Epairima, Betibizi) are all **belief-shaped** — like the Ascendant Six, they take their shape from mortal worship and folk practice. The Layer-1 primordials are differently grounded: they predate mortal worship entirely and are bound to the substrate of their plane rather than to belief. None of either group are members of the Council of Thirteen.
 
 ### Bikiargi — The Twins (Moon · Major God)
 - **Aspects:** moonlight, tides, lunar omens, the dream-currents, lovers' meetings, hunts in the dark.
@@ -218,6 +218,22 @@ All four below are **belief-shaped** — like the Ascendant Six, they take their
 ### Open thread — The Sun
 
 Mortals have prayed to **Solyra** for as long as there have been mortals. The same mechanism that birthed Bikiargi from prayers to the two moons should plausibly have birthed a sun-deity from prayers to the sun. Such a god is not yet named or detailed in canon — they may exist as a Major God of the Sun (paired-mate to the Twins by symmetry), may exist as a single deity with no twinship, or may have been absorbed by Iro's Light portfolio long enough ago that the distinct sun-god dissolved back into the Wellspring. TBD.
+
+### Layer-1 Primordials — The Seven of Prelife *(stub roster)*
+
+Layer 1 (Prelife) hosts seven named primordial beings whose portfolios are tied to the substrate of the layer itself rather than to mortal worship. Their relationship to the **Primordial Six** (the six Grand Gods who shaped Prelife) is canon-pending — peers, sub-aspects of, or older predecessors of those gods are all on the table. All seven are tentatively classed **Major Beings** at stub-tier; full portfolios, mortal-touch (if any), and individual stories await fleshing-out.
+
+| Plane | Being | Source | Portfolio (stub) |
+|---|---|---|---|
+| **Elemental — Fire** | **Suzar** | Basque *su* (fire) + *zahar* (ancient) → *suzar* | The fire-stratum of the Elemental Plane. |
+| **Elemental — Water** | **Urzar** | Basque *ur* (water) + *zahar* → *urzar* | The water-stratum. |
+| **Elemental — Earth** | **Lurzahar** | Basque *lur* (earth) + *zahar* → *lurzahar* (longer form to distinguish from the Brauogi place-name *Lurrath*) | The earth-and-stone stratum. |
+| **Elemental — Wind** | **Haizar** | Basque *haize* (wind) + *zahar* → *haizar* | The wind-and-air stratum. |
+| **Energy — Positive** | **Indazar** | Basque *indar* (force, strength, vigour) + *zahar* → *indazar* | The positive/life current of the Energy Plane. |
+| **Energy — Negative** | **Hutzar** | Basque *huts* (void, empty) + *zahar* → *hutzar* | The negative/void current. |
+| **Wellspring** | **Iturima** | Basque *iturri* (spring, source) + *arima* (soul) → *iturarima → iturima* | The soul of the Wellspring itself — the most fundamental of the seven; canon-pending whether *being* in the sentient sense or personification of the Wellspring's coherence. |
+
+The six plane-bound primordials share the **-zar suffix** that marks the deep-ancient stratum elsewhere in canon (cf. Zahar­suge, the *-zar* family). **Iturima** stands outside this group because the Wellspring is structurally above the six — its name follows the *-arima* "soul" pattern (cf. Epairima).
 
 ---
 
