@@ -169,6 +169,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Write affirmatively.** Say what something *is*, not what it *isn't*. Don't open sentences with *"Not …"* or *"No …"*; avoid *"not X but Y"* constructions. If you're tempted to write *"not a Council god,"* the affirmative version (*"his own god, of his own pantheon"*) is always available and always better — strip the negation and rewrite from what's actually true. **Sole exception:** when a true negation is the clearest framing for a fact that has no affirmative form (*"his cult kept no records"*, *"the Cloud Sea will not support weight"*). When in doubt, prefer the affirmative.
 
+**Avoid em-dashes.** Don't use em-dashes (—) in new prose, in lore files or HTML. They're a tell of AI drafting and they pile up fast. Reach for a period, a semicolon, a colon, parentheses, or a comma first; if none of those work, rewrite the sentence. Existing em-dashes in canon stay; don't sweep them out as a cleanup task, but fix them in passing when you're editing nearby anyway. The rule is going forward, not retroactive.
+
 **Lore-first protocol.** Brainstormed content — a kingdom, an NPC, a ritual, a faction, a god's secret — goes into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space; HTML pages are the published output.
 
 **Stay in lore by default.** A new session starts in drafting mode. Don't generate or modify HTML pages until the user gives an explicit publish signal — phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*. If the intent is ambiguous, ask.
