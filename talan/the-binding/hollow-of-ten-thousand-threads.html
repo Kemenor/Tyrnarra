@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Hollow of Ten Thousand Threads — Tyrnarra</title>
+<title>The Hollow of Ten Thousand Threads · Tyrnarra</title>
 <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
@@ -11,7 +11,7 @@
 <style>
   :root { --domain-accent: #6a7530; }
 
-  /* Inline TBD marker — green-tinged to match the accent */
+  /* Inline TBD marker, green-tinged to match the accent */
   .tbd {
     display: inline-block;
     font-family: 'Cinzel', serif;
@@ -27,7 +27,7 @@
     margin: 0 2px;
   }
 
-  /* Chamber cards — four-grid for the Hollow's geography */
+  /* Chamber cards, four-grid for the Hollow's geography */
   .chamber-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -43,7 +43,7 @@
   .c-vaults  { --card-accent: #7a8a3a; }
   .c-throne  { --card-accent: #c8a040; }
 
-  /* Threat blocks — three-card row with sickly red-tinted border */
+  /* Threat blocks, three-card row with sickly red-tinted border */
   .threat-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -95,7 +95,7 @@
   }
   .counter-block p { margin: 8px 0; font-size: 0.93rem; line-height: 1.65; }
 
-  /* War of Seals — context callout */
+  /* War of Seals, context callout */
   .seal-block { padding: 16px 20px; margin: 22px auto; max-width: 920px; --card-bg: rgba(24,18,8,0.55); --card-accent: var(--gold-dim); }
   .seal-label {
     font-family: 'Cinzel', serif;
@@ -120,7 +120,7 @@
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">The Hollow of Ten Thousand Threads</div>
     <div class="page-subtitle">Nine Dungeons · The Vermin Queen's Hive · Shadow Steppes</div>
-    <div class="page-flavor">"The webs are not silk. They are <i>her</i> — extended, listening, hungry. To touch one is to be already inside the Hollow."</div>
+    <div class="page-flavor">"The webs are not silk. They are <i>her</i>: extended, listening, hungry. To touch one is to be already inside the Hollow."</div>
   </div>
 
   <div class="status-bar">
@@ -134,11 +134,11 @@
 
   <h2 class="section-heading">At a Glance</h2>
   <dl class="facts">
-    <dt>Type</dt><dd>One of the <b>Nine Dungeons</b> — the colossal subterranean fortresses that erupted across Talan in <b>2524 MR</b> and disgorged the first great corruption armies of the modern age. See <a href="/talan/the-binding.html">The Binding</a> for the full Nine-Generals framework.</dd>
-    <dt>Position</dt><dd>Beneath the <b>Shadow Steppes</b> of <a href="/talan/domains/myrkono/myrkono.html">Myrkono</a> (Darkness / Araphel). <b>Dangerously close to two Wardstones</b> — the Lakeside Wardstone and the Steppes Wardstone, both within Shadow-Steppes territory.</dd>
-    <dt>Master</dt><dd><b>The Vermin Queen</b> — one of the Nine Generals of Corruption. Mistress of swarms. Of the eight Generals still active (the Ash-Binder is defeated), she is the only one with confirmed geographic placement; the other seven remain unsited.</dd>
+    <dt>Type</dt><dd>One of the <b>Nine Dungeons</b>: the colossal subterranean fortresses that erupted across Talan in <b>2524 MR</b> and disgorged the first great corruption armies of the modern age. See <a href="/talan/the-binding.html">The Binding</a> for the full Nine-Generals framework.</dd>
+    <dt>Position</dt><dd>Beneath the <b>Shadow Steppes</b> of <a href="/talan/domains/myrkono/myrkono.html">Myrkono</a> (Darkness / Araphel). <b>Dangerously close to two Wardstones</b>: the Lakeside Wardstone and the Steppes Wardstone, both within Shadow-Steppes territory.</dd>
+    <dt>Master</dt><dd><b>The Vermin Queen</b>: one of the Nine Generals of Corruption. Mistress of swarms.</dd>
     <dt>Doctrine</dt><dd>Grants the <b>Swarm</b> domain to clerics who turn to corruption through her vessel. See <a href="/magic.html">Magic &amp; Faith → Domains Outside the Thirteen</a>.</dd>
-    <dt>Status</dt><dd>Main entrance <b>sealed</b> after the first-wave campaigns of 2524–2528 MR. Containment-only since; smaller leakage continues through tunnel networks the seals do not reach. <span class="tbd">Detailed seal-history TBD</span></dd>
+    <dt>Status</dt><dd>Main entrance <b>sealed</b> after the first-wave campaigns of 2524–2528 MR. Containment-only since; smaller leakage continues through tunnel networks the seals do not reach.</dd>
     <dt>Character</dt><dd>
       <i>Cavern-hive, web-choked, swarm-breeder, soul-eroding</i><br>
       <div class="pill-row" style="margin-top:6px"><span class="pill">Corruption Vessel</span><span class="pill">Swarm Source</span><span class="pill">Wardstone-Adjacent</span><span class="pill">Active Containment</span></div>
@@ -148,34 +148,19 @@
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       THE SETTING
-       ═══════════════════════════════════════════════════════════════ -->
-
-  <h2 class="section-heading">The Setting — Two Wardstones in the Same Steppe</h2>
-  <div class="prose">
-    <p>The Shadow Steppes are open shadow-touched plains across the western and central reaches of <a href="/talan/domains/myrkono/myrkono.html">Myrkono</a>. They hold <b>two of the Seven Wardstones</b> — the <b>Lakeside Wardstone</b> in a city on the shores of the great lake, and the <b>Steppes Wardstone</b> in the open grasslands, protected by wandering clans. The Steppes are a sacred geography. They are also the geography directly above the Hollow.</p>
-
-    <p>This is the part of the Hollow's situation that keeps the Adventurers' Guild awake at night. The Vermin Queen's dungeon is not just <i>a</i> Nine-Generals site — it is the Nine-Generals site that sits closest to live Wardstone anchors. <b>If the Hollow expanded uncontrollably, two Wardstones could fall in a single campaign.</b> No other Dungeon-versus-Wardstone geography on Talan is as compressed. Containment of the Hollow is therefore a continental-strategic priority, not a regional one, and Guild Sovereign <a href="/talan/factions/adventurers-guild.html">Seraphel Duskbane</a> — who earned the <i>Duskbane</i> epithet hunting corruption cults across these same Steppes — has personal history at the Hollow's edge dating to her Bronze-rank scout-tracker days.</p>
-
-    <p>Above ground the Steppes look mostly normal: rolling shadow-tinted grasslands, the lake to the west, wandering clans, the two Wardstone cities. Below, the Hollow extends in every direction, a vast cavern system that has been actively breeding for eight years and was here for longer than anyone knows before that.</p>
-  </div>
-
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
        THE HOLLOW'S GEOGRAPHY
        ═══════════════════════════════════════════════════════════════ -->
 
   <h2 class="section-heading">The Hollow's Geography</h2>
   <div class="prose">
-    <p>A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers — strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors. Four chamber-types recur throughout the system and define the operational geography:</p>
+    <p>A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers, strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors. Four chamber-types recur throughout the system and define the operational geography:</p>
   </div>
 
   <div class="chamber-grid">
 
     <div class="accent-card outlined cut-left chamber-card c-tunnels">
       <div class="chamber-name">The Web-Tunnels</div>
-      <div class="chamber-desc">Narrow passageways coated in sticky threads. Trap and alarm system in one — intrusions alert the Queen's spawn instantly. The Tunnels are the dungeon's connective tissue and its outer warning layer. No deep penetration of the Hollow begins anywhere else.</div>
+      <div class="chamber-desc">Narrow passageways coated in sticky threads. Trap and alarm system in one · intrusions alert the Queen's spawn instantly. The Tunnels are the dungeon's connective tissue and its outer warning layer. No deep penetration of the Hollow begins anywhere else.</div>
     </div>
 
     <div class="accent-card outlined cut-left chamber-card c-brood">
@@ -185,12 +170,12 @@
 
     <div class="accent-card outlined cut-left chamber-card c-vaults">
       <div class="chamber-name">The Silken Vaults</div>
-      <div class="chamber-desc">Cocooned bodies — mortal victims, beasts, and adventurers. Some still live, transforming slowly into monstrosities through corruption seeping from the silk. A Vault's worth of cocoons is the Hollow's grimmest cargo: every one is a story, and most are unfinished.</div>
+      <div class="chamber-desc">Cocooned bodies · mortal victims, beasts, and adventurers. Some still live, transforming slowly into monstrosities through corruption seeping from the silk. A Vault's worth of cocoons is the Hollow's grimmest cargo: every one is a story, and most are unfinished.</div>
     </div>
 
     <div class="accent-card outlined cut-left chamber-card c-throne">
       <div class="chamber-name">The Throne of the Vermin Queen</div>
-      <div class="chamber-desc">Chamber vast enough to contain her massive form. Draped in layers of living web. She is attended by her chosen spawn — grotesque spider-hybrids once human, now twisted. No expedition has reached the Throne and returned. The few that have <i>reached</i> it had no survivors to bring word.</div>
+      <div class="chamber-desc">Chamber vast enough to contain her massive form. Draped in layers of living web. She is attended by her chosen spawn · grotesque spider-hybrids once human, now twisted. No expedition has reached the Throne and returned. The few that have <i>reached</i> it had no survivors to bring word.</div>
     </div>
 
   </div>
@@ -210,17 +195,17 @@
 
     <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Endless Swarms</div>
-      <div class="threat-desc">The Hollow's strength lies in the unending tide as much as the Queen herself. A party can cut a thousand and meet two thousand before the silk dries on the first cut. <i>Numbers attrition</i>, the Guild calls it — and the Hollow has Brood Pits enough to attrition any expedition the kingdoms can field, given time.</div>
+      <div class="threat-desc">The Hollow's strength lies in the unending tide as much as the Queen herself. A party can cut a thousand and meet two thousand before the silk dries on the first cut. <i>Numbers attrition</i>, the Guild calls it, and the Hollow has Brood Pits enough to attrition any expedition the kingdoms can field, given time.</div>
     </div>
 
     <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Corrupted Silk</div>
-      <div class="threat-desc">The webs are not mere thread. They carry the Blightfather's power — sticky enough to bind armoured warriors, slow-poisoning to weapons and armour that touch them. Steel pitted by silk fails sooner than steel struck a hundred times. Wounds taken while bound heal slowly or not at all. A Hollow expedition prepares as much for material decay as for combat.</div>
+      <div class="threat-desc">The webs are not mere thread. They carry the Blightfather's power · sticky enough to bind armoured warriors, slow-poisoning to weapons and armour that touch them. Steel pitted by silk fails sooner than steel struck a hundred times. Wounds taken while bound heal slowly or not at all. A Hollow expedition prepares as much for material decay as for combat.</div>
     </div>
 
     <div class="accent-card outlined cut-left thin threat-card">
       <div class="threat-name">Hive-Mind Influence</div>
-      <div class="threat-desc">Long exposure fills intruders with <i>whispers</i> — fragmented compulsions to stop fighting, to lie down, to join. The swarm itself wears down willpower; the corruption-soaked air is part of the attack. Parties that linger past a certain duration begin to lose members not to combat but to <i>drift</i> — adventurers who walked into a cocoon of their own choosing and could not be retrieved.</div>
+      <div class="threat-desc">Long exposure fills intruders with <i>whispers</i>: fragmented compulsions to stop fighting, to lie down, to join. The swarm itself wears down willpower; the corruption-soaked air is part of the attack. Parties that linger past a certain duration begin to lose members not to combat but to <i>drift</i>: adventurers who walked into a cocoon of their own choosing and could not be retrieved.</div>
     </div>
 
   </div>
@@ -233,11 +218,11 @@
 
   <h2 class="section-heading">The Vermin Queen</h2>
   <div class="prose">
-    <p>One of the <b>Nine Generals of Corruption</b> — the foremost servants of the Corrupted God, wrought from his power while he remains bound. Originally a mortal cultist, cleric, beast, or nameless horror from a deep place (canonical record disagrees), the Queen was chosen and remade into a vessel of corruption's will. Unlike her imprisoned master, <b>she can be fought and slain</b> — though no expedition has yet succeeded.</p>
+    <p>One of the <b>Nine Generals of Corruption</b>: the foremost servants of the Corrupted God, wrought from his power while he remains bound. Originally a mortal cultist, cleric, beast, or nameless horror from a deep place (canonical record disagrees), the Queen was chosen and remade into a vessel of corruption's will. Unlike her imprisoned master, <b>she can be fought and slain</b>: though no expedition has yet succeeded.</p>
 
-    <p>Her nature is <i>mistress of swarms.</i> She breeds endless spiders, locusts, centipedes, beetles, crawling things — when her children stir, they pour out in tides that choke entire valleys. She rules from the Throne chamber, attended by her chosen spawn. The Hollow itself is partly her body — the silk is hers, the broods are hers, the hive-mind influence is hers extended.</p>
+    <p>Her nature is <i>mistress of swarms.</i> She breeds endless spiders, locusts, centipedes, beetles, crawling things, when her children stir, they pour out in tides that choke entire valleys. She rules from the Throne chamber, attended by her chosen spawn. The Hollow itself is partly her body, the silk is hers, the broods are hers, the hive-mind influence is hers extended.</p>
 
-    <p>She grants the <b>Swarm domain</b> to mortals who turn to corruption through her — clerics whose faith chooses the hive over the self. There are not many. There are some. They tend to vanish into the Steppes within a year of conversion. Where they go is, technically, an open question.</p>
+    <p>She grants the <b>Swarm domain</b> to mortals who turn to corruption through her, clerics whose faith chooses the hive over the self. There are not many. There are some. They tend to vanish into the Steppes within a year of conversion. Where they go is, technically, an open question.</p>
 
     <p><b>Destroying her would scatter her hive and collapse much of the Hollow.</b> The mathematics of the War of Seals say this loudly. The mathematics of the Throne's survival rate say something else.</p>
   </div>
@@ -252,28 +237,9 @@
 
   <div class="accent-card cut-left counter-block">
     <div class="counter-label">Insectoid, but not Corrupted</div>
-    <p>The <b>Surki</b> — insectoid sapients of the deep places, uncommon in the upper Darklands and rare anywhere else — hold a doctrinal position on the Vermin Queen that mortals elsewhere often miss. The Surki are insectoid by anatomy: compound eyes, chitinous segmentation, hive-adjacent biology. The Vermin Queen's swarm-corruption is <b>precisely the fate they organise to resist</b>. The opposition is not incidental. The Surki recognise her as the version of themselves that would have happened if the gods had finished what they started with the Dragons.</p>
+    <p>The <b>Surki</b>: insectoid sapients of the deep places, hold a doctrinal position on the Vermin Queen that mortals elsewhere often miss. The Surki are insectoid by anatomy: compound eyes, chitinous segmentation, hive-adjacent biology. The Vermin Queen's swarm-corruption is <b>precisely the fate they organise to resist</b>.</p>
     <p>The opposition is doctrinal, cultural, and operational. Surki who climb out of the Darklands and reach the Shadow Steppes are <b>among the most informed and most committed allies any Guild expedition into the Hollow can hope for</b>. They know the swarm-vocabulary; they read the silk-patterns; they understand the hive-mind influence as <i>kin gone wrong</i>, which is the only frame in which it can be effectively resisted rather than merely endured. A Hollow expedition with a Surki scout-or-advisor is materially more likely to come back than one without.</p>
-    <p>The Surki have <i>not</i> made a public alliance with the Adventurers' Guild — they don't make public alliances generally — but the working relationship at the Shadow Steppes margin is real and centuries deep. The Hollow's eruption in 2524 MR has only sharpened it.</p>
-  </div>
-
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       THE WAR OF SEALS
-       ═══════════════════════════════════════════════════════════════ -->
-
-  <h2 class="section-heading">The Hollow in the War of Seals</h2>
-
-  <div class="accent-card cut-left seal-block">
-    <div class="seal-label">The 2524 Eruption</div>
-    <p>The Nine Dungeons did not exist for the long centuries between the Corrupted God's binding (2135 MR) and the modern day. They <b>erupted in 2524 MR</b> — overnight, all nine at once, tearing pathways into the mortal world and disgorging the first great corruption armies in four centuries. The Hollow was one of those nine. The kingdoms united, the Guild rallied, militias were drafted; after bloody campaigns the first wave was broken. To prevent another flood, the <b>main entrances of all nine Dungeons were sealed</b> with wards, stone, and sacrifice. The Hollow's main entrance is among them.</p>
-    <p>Sealing the gate did not end the threat. <b>Corruption now seeps upward through smaller caverns and tunnel networks the seals do not reach.</b> The Hollow leaks. The Vermin Queen's children find their way to the surface through gully-mouths and old mine-shafts and faults the Steppes' shadow-tinted geology hides until something walks out of them. Containment, not eradication, is the doctrine. <a href="/talan/factions/adventurers-guild.html">Myrria's Godshall</a> coordinates the standing response from across Myrkono; Branch and Office tier outposts maintain the daily presence on the ground.</p>
-  </div>
-
-  <div class="seal-block" style="--gold-dim: #b04040; border-left-color: #a04040;">
-    <div class="seal-label" style="color: #d88080;">The Standing Threat</div>
-    <p>The Hollow is the only Nine-Dungeons site currently <b>located</b> by name and confirmed in geography. <i>Located</i> is not the same as <i>contained</i>; the other eight Generals are out there, unsited, presumed to operate similar Dungeons in geographies the kingdoms have not yet identified. Adventurers' Guild posting at the Hollow draws hazard-pay accordingly and has the highest <i>casualty-and-non-return</i> rate of any Myrkono operation by margin. <i>The Steppes are not a posting. The Steppes are a tour.</i></p>
+    <p>The Surki have <i>not</i> made a public alliance with the Adventurers' Guild, they don't make public alliances generally, but the working relationship at the Shadow Steppes margin is real and centuries deep. The Hollow's eruption in 2524 MR has only sharpened it.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -286,12 +252,11 @@
     <h3>⌬ &nbsp; Open in Canon</h3>
     <div class="sub">The Hollow is a fully canonised threat-site; specific operational details remain open for future story-driven work.</div>
     <ul>
-      <li><b>Detailed seal-history</b> — the four-year first-wave campaign (2524-2528 MR) presumably produced named figures, named victories, named losses; the specific seal-ritual that closed the main entrance is unwritten</li>
-      <li><b>The Vermin Queen's origin</b> — canonical record disagrees on whether she was originally a mortal cultist, a cleric, a beast, or a nameless horror; the actual answer is open</li>
-      <li><b>Specific Guild expeditions</b> — high-rank operations against the Hollow over the past eight years presumably exist; named parties, named survivors, named losses are unwritten</li>
-      <li><b>Surki organisational structure</b> — the doctrinal-cultural-operational opposition is canon; the specific Surki institutions, leadership, or coordination methods are unwritten</li>
-      <li><b>Specific Swarm-domain clerics on record</b> — there are *some* but they tend to vanish into the Steppes within a year; the Guild's tracking effort and named individuals are open</li>
-      <li><b>The other seven Generals' dungeons</b> — the Hollow is the only sited Nine-Dungeons site; placement for the other seven (Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister) blocks any analogous pages for them</li>
+      <li><b>The Vermin Queen's origin</b>: canonical record disagrees on whether she was originally a mortal cultist, a cleric, a beast, or a nameless horror; the actual answer is open</li>
+      <li><b>Specific Guild expeditions</b>: high-rank operations against the Hollow over the past eight years presumably exist; named parties, named survivors, named losses are unwritten</li>
+      <li><b>Surki organisational structure</b>: the doctrinal-cultural-operational opposition is canon; the specific Surki institutions, leadership, or coordination methods are unwritten</li>
+      <li><b>Specific Swarm-domain clerics on record</b>: there are *some* but they tend to vanish into the Steppes within a year; the Guild's tracking effort and named individuals are open</li>
+      <li><b>The other seven Generals' dungeons</b>: the Hollow is the only Nine-Dungeons site written up as its own page so far. The other seven (Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister) exist in canon and will earn their own pages as the detail develops</li>
     </ul>
   </div>
 
