@@ -36,7 +36,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
   talan/                               ← continent-level content (Style B)
     talan.html                         ← continent overview
-    history.html, bestiary.html, …     ← other continent-level pages
+    history.html, ancestries.html, …   ← other continent-level pages
     domains/                           ← the 13 god domains
       <domain>/<domain>.html           ← e.g. vindul/vindul.html — domain entry page
       <domain>/<sub-region>.html       ← optional: promoted sub-region with its own page
