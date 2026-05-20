@@ -379,3 +379,37 @@ Their long midlife and shortened elderhood reinforce the cultural focus on relat
 - **Biozuri / Heartplaza** — the capital and its central district. The **House of a Thousand Flavors** (see below) sits a short walk from the Heartcourt itself.
 - **Kawaakari** — the mountain-pass resort village (see `geography.md`). The kingdom's most-visited destination by outsiders.
 - **The House of a Thousand Flavors** — the kingdom's most prestigious dining experience and the favoured stage for high-level Heartcourt negotiations, romantic declarations, and dramatic public courting displays. Run by **The Cook's Circle**, a polycule of seven master chefs — Rinza (Head Flavorist), Maeko (Illusionist-Plater), Tairen (Texture Architect), Shouka (Aroma Alchemist), Virel (Harmony Master, directing live musicians), Kyome (Temperature Virtuoso), and Elhara (Storyweaver). The Circle's personal chemistry fuels the kitchen's creativity, and their love-life is gossiped about nearly as much as their cuisine. Reservations are booked months in advance; menus change seasonally with themes (*"A Lovers' Chase Through the Seasons"*, *"The Nine Tails of Autumn"*, *"Dreams Beneath the Lantern Sea"*). Each table is semi-private, with illusions creating custom surroundings — diners may find themselves in a cherry-blossom grove, a cliffside above a stormy sea, or a floating lantern festival. Guests often leave with small enchanted tokens that replay a snippet of music or a fleeting scent from the evening. *Tagline: "A meal is a memory, and we serve memories worth keeping."*
+
+---
+
+## The Common Tongue — Talanese
+
+The continental common language is called **Talanese**, and it is an **inheritance of the Golden Empire**.
+
+Under the Empire (560 MR – 1325 MR), **Imperial Dwarvish** was the language of administration, contract, and trade across roughly two thirds of the continent. Every kingdom under Imperial reach had to deal with it: the legions, the road-stations, the tax-collectors, the road-merchants who paid Imperial tolls all spoke it as a working language. Seven centuries of compulsory exposure produced a steady braid in every local mortal community: Imperial Dwarvish vocabulary and clause-grammar woven through whatever the local tongue had been, mortared together by the simple convenience of being understood by the next caravan-stop.
+
+By the time the Empire fell, the braid had a name. **Talanese** is what came out of it.
+
+**Modern Talanese** is the continental lingua franca: spoken in every kingdom, taught to children alongside the local tongue, used for inter-domain trade, diplomacy, the Adventurers' Guild's standing reports, the Magitrain conductors' announcements, and the Imperial-fossil law-books every kingdom still reads. The spine of the grammar is Imperial Dwarvish; the surface vocabulary is whatever each region kept, drifted, and mixed in. A Talanese speaker today reading an Empire-era legal document recognises perhaps a third of the words at sight, more with any scholarly training.
+
+**Dialects.** Talanese carries regional dialects in every domain. They diverge in vocabulary, accent, and idiom but not in mutual intelligibility: a Lautaran merchant and a Vindul highland herder can negotiate without an interpreter. Major recognised dialects include:
+
+- **Lautaran merchant cant** — quick, contract-heavy, with a Jianna-tradition habit of finishing a deal with a verbal seal-phrase
+- **Vindul highland Talanese** — sing-song intonation from the mountain monasteries; preserves more old-Imperial vocabulary than most dialects
+- **Ehizahar tribal registers** — pruned-down, faster, four-tribal-variant where Orc, Kholo, Lizardfolk, and Centaur each carry their own inflection over the shared spine
+- **Sumendar industrial Talanese** — heavy with Order-of-Steam coinages for machinery and Magitech parts; faster than the southern average
+- **Zuzental legal Talanese** — formal, sub-clausal, the closest of the modern dialects to the original Imperial Dwarvish
+- **Brauogi village Talanese** — slow, agricultural-calendar-rich, the dialect outsider chroniclers most often hear as *"the way Talan really sounds"*
+- **Egulon temple Talanese** — Iro-clergy-shaped, with characteristic ritual-cadence
+- **Myrkono shadow-cant** — softer consonants, hedged grammar, Araphel-doctrine influence on the choice of indirect-address forms
+
+Other domains carry recognised variants but the eight above are the most-named by scholars. The dialects are converging at the speed of the rail network: a town with daily Magitrain service hears two or three other dialects every day, and the convergence of usage is visible across decades.
+
+**The non-Talanese tongues.** Several languages persist alongside Talanese rather than being absorbed by it:
+- **Old Dwarvish** — the antique register of the Order of Steam (House Eisenhart's internal tongue), distinct from Imperial Dwarvish and intentionally preserved
+- **Fenurran Latinate** — the Fenurran tribes' internal vocabulary, never widely spoken outside Fenurra
+- **Kitsune Japanese-flavoured register** — kitsune-internal naming for places, dishes, traditions; co-exists with Talanese in Emarrea
+- **Sortalde-internal Chinese-flavoured register** — the petals' own language, spoken across the Cloud Sea; Talanese diplomats need interpreters
+- **Local survivals** — pockets in nearly every domain preserve a pre-Imperial tongue at the household and ritual level (the older Lioaru desert tribes, certain Floteyn islet communities, the Hareaveldi sand-realm's deep-old idiom)
+
+Imperial Dwarvish itself is now an antique: read by scholars to parse Empire-era law-books, spoken by no community as a living tongue. The Golden Empire's spine is the spine of Talanese itself, and that is the form in which the Empire still speaks.
