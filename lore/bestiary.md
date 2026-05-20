@@ -1,4 +1,4 @@
-# Bestiary — Ancestries, Heritages, & Otherworldly Beings
+﻿# Bestiary — Ancestries, Heritages, & Otherworldly Beings
 
 A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography.md`, `factions.md`, and `cultures.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
 
@@ -71,7 +71,7 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 
 **Inherited folklore:** Many Azarketi today still claim **Elden blood**. This is the original Storveldi Denbora lie, transmitted forward across millennia. The Storveldi Denbora had no Elden ancestry — they simply built their capital atop Elden ruins and styled themselves heirs to the Elden for prestige. The Azarketi inherited the claim with the culture; most who repeat it today do not know they are perpetuating a falsehood that is two-and-a-half millennia old.
 
-**Distribution:** Dominant in Lioaru (Time / Tani — their ancestral homeland, including the Lost Kingdom edges where the Blackened Lands begin). Rare everywhere else. Aquatic adaptations make Azarketi communities cluster on Lioaru's western coast, around the islands offshore of the Lost Kingdom, and along Hafra-side trade routes.
+**Distribution:** Dominant in Lioaru (Time / Tani — their ancestral homeland, including the Lost Kingdom edges where the Blackened Lands begin). Rare everywhere else. Aquatic adaptations make Azarketi communities cluster on Lioaru's southern coast, around the islands offshore of the Lost Kingdom, and along Hafra-side trade routes.
 
 **For GM use:** Any Azarketi character who follows their bloodline far enough back hits the Storveldi Denbora — and through them, potentially, the integration procedure that elevated mortals past Demi-God status. The procedure is not public knowledge but is not lost. An Azarketi adventurer is the most natural in-world thread to that knowledge.
 

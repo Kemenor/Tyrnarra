@@ -1,4 +1,4 @@
-# Secret History — Tyrnarra Lore Reference
+﻿# Secret History — Tyrnarra Lore Reference
 
 What actually happened, behind what mortals are told. The Week of Crimson Rain and its true causes; the Storveldi Denbora and the integration procedure; the Elden and what they became; the Wardstones and the Nine; deep-dives on Tani and Araphel. Most of this is GM-tier — published HTML pages should reflect only what mortals in-world would know.
 
@@ -180,7 +180,7 @@ A mortal civilization of the **Gods' Era** (2944 GR – 1 GR) — not the Elden,
 
 ## The Blackened Lands
 
-- **Where:** Western Lioaru (Tani's domain) — the coastal sub-region now called the **Lost Kingdom**.
+- **Where:** Southern Lioaru (Tani's domain) — the coastal sub-region now called the **Lost Kingdom**.
 - **What it is:** The site of Tani's killing and the ruined Storveldi Denbora capital. The ground here was so deeply wounded by the divine retaliation following her death that it has never healed.
 - **Terrain:** Blackened soil; time-warped strata where moments repeat or pool; ruins that read newer than the surrounding stone; ambient necromantic resonance; periodic fleshwarp incidents in survivors and trespassers; concentrations of restless dead.
 - **Origin of the Fleshwarp and Skeleton ancestries.** Both arise here. The cursed ground twists living flesh into the irregular bodies of **Fleshwarps**; the restless wound pulls the dead back into motion as **Skeletons**. Neither is the work of any current faction — they are *the land itself.* The Menagerie produces fleshwarps elsewhere (off-continent, see `factions.md`), but those are deliberate fabrications and distinct from the Lost-Kingdom-born ancestry.

@@ -1,4 +1,4 @@
-# Geography — Talan
+﻿# Geography — Talan
 
 ## Structure
 
@@ -98,12 +98,12 @@ God domains are ancient — they predate mortal civilization and carry old-world
 
 **Position:** Northwest Talan
 
-**Terrain:** Arctic/icy north coast, mountain range (east), ancient old-growth forest, open grass steppes (south), rivers and lakes. Small ice isle archipelago off the northern coast. Massive island to the west (Haizetsua).
+**Terrain:** Arctic/icy north coast, mountain range (east), ancient old-growth forest, open grass steppes (south), rivers and lakes. Massive island to the west (Haizetsua).
 
 **God's city:** Haizava — The Shifting City
 
 **Sub-regions:**
-- **Baerfrost** — the fully arctic/ice sub-region. Northern coast and ice isles.
+- **Baerfrost** — the fully arctic/ice sub-region. Vindul's northern coast.
 - **Air Monastery** — enclosed mountain enclave. Fortified monastery in the eastern mountain range, autonomous territory.
 - **Fellibylur** — a high lone peak in Vindul whose summit gathers weather. *Storm-Fell / Blizzard Peak.* Adjacent to Baerfrost; storm-wracked character fits Fisaya's wind-and-cold domain.
 - **Haizetsua** — the massive island to the west, part of Fisaya's domain. Mountain range through its interior. (*haize* = wind in Basque — the name echoes the domain.)
@@ -265,7 +265,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 
 **Position:** Southwest Talan, south of Sumendar, west of Brauogi and Ezkudon, coastal on Hafra to the south
 
-**Terrain:** Desert dominant with orange sand dunes throughout. A green river valley cuts through as an oasis of life. The dark, shadowy **Lost Kingdom** occupies the western coastal area — a kingdom lost during or after the Week of Crimson Rain, directly tied to Tani's death. **Lost Isle** sits offshore to the west. Temporal anomalies throughout: moments that repeat, ruins newer than they should be.
+**Terrain:** Desert dominant with orange sand dunes throughout. A green river valley cuts through as an oasis of life. The dark, shadowy **Lost Kingdom** occupies the southern coastal area — a kingdom lost during or after the Week of Crimson Rain, directly tied to Tani's death. **Lost Isle** sits offshore to the west. Temporal anomalies throughout: moments that repeat, ruins newer than they should be.
 
 **God's city:** Denbora — The Threefold City (built on massive sand whales that travel through the desert — the city is never in the same place)
 
@@ -413,7 +413,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 
 **Position:** Northeast Talan — the largest domain, spanning arctic north to jungle south
 
-**Terrain:** The most varied domain. Arctic/icy tundra in the far north. The highest mountain range on the continent and the oldest trees (ancient dark conifers, northwest corner). Open grassland through the center. Deep jungle-like old-growth forest in the south and southeast. Rivers throughout. The domain that feels most primordially "of the world itself." A meteor struck deep antiquity, leaving a vast crater that still bleeds slow volcanism into the surrounding land — the **Fenurra** sub-region, the only significant volcanic activity outside Sumendar.
+**Terrain:** The most varied domain. Arctic/icy tundra in the far north, with a small ice-isle archipelago off the northern coast. The highest mountain range on the continent and the oldest trees (ancient dark conifers, northwest corner). Open grassland through the center. Deep jungle-like old-growth forest in the south and southeast. Rivers throughout. The domain that feels most primordially "of the world itself." A meteor struck deep antiquity, leaving a vast crater that still bleeds slow volcanism into the surrounding land — the **Fenurra** sub-region, the only significant volcanic activity outside Sumendar.
 
 **God's city:** Veidrath — The Hunting City
 
@@ -421,7 +421,7 @@ The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `s
 - **Lands of Villtur** — the umbrella tribal territory covering most of Ehizahar. The domain is overwhelmingly tribal — no unified kingdoms, no formal borders. The many tribes that live across the arctic tundra, grasslands, and ancient forests all fall under this collective name. Veidrath sits within this expanse. *(Icelandic villtur = wild, lost, strayed — old name, fits the ancient naming rule.)*
 - **Fenurra** — a sub-region of Ehizahar in its own right, bordering the Lands of Villtur but distinct from them. Defined by an ancient meteor crater and the volcanic activity that still surrounds it: sulfurous fumes, basalt fields, slow lava flows, and strange star-metals seeded into the ground by the impact. Harsh and resource-poor in conventional terms, but rich in materials no other place on Talan produces. The Fenurran tribes who live here are hardened, pragmatic, and politically distinct from the wider Villtur tribal sprawl — they hold themselves apart even from their tribal neighbours. The only significant volcanic activity outside Sumendar. Full cultural detail — four tribes, Speaker's Mantle politics, Blackglass / Velthite / Ghost Willow materials, the Scar of Aeris, etc. — lives in `cultures.md`.
 - **Basogur Jungle** — the deep jungle territory in the south and southeast, shared with Nashavel. See also Nashavel. *(Continental rail-blocker — see the Nashavel entry above for the full breakdown.)*
-- **Ardo Beroa** — island sub-region of Ehizahar. *(Basque ardo = wine + beroa = hot, warm → "warm wine" or "hot wine." Old name, etymology partially obscured by drift.)*
+- **Ardo Beroa** — the small ice-isle archipelago off Ehizahar's northern arctic coast. *(Basque ardo = wine + beroa = hot, warm → "warm wine" or "hot wine." Old name, etymology partially obscured by drift; the ironic mismatch between the literal meaning and the arctic character is part of the local lore.)*
 
 ---
 
