@@ -1,4 +1,4 @@
-# Glossary — Coined Names & Etymologies
+﻿# Glossary — Coined Names & Etymologies
 
 A working record of names in the setting. Per the naming convention in `CLAUDE.md`:
 - **Old/ancient things** → Basque or Icelandic source, with linguistic drift
@@ -180,7 +180,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 
 **Ehizahar (Hunt):**
 - **Lands of Villtur** — Icelandic *villtur* (wild, lost, strayed); umbrella name for tribal territories
-- **Ardo Beroa** — Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; island sub-region
+- **Ardo Beroa** — Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; the small ice-isle archipelago off Ehizahar's northern arctic coast (literal meaning ironically opposite to the geography)
 - **Fenurra** — Icelandic *funi* (flame, blaze) + Basque *iturri* (spring, source) → *funi-iturri* "flame-source" → eroded over millennia to *Fenurra*. The land whose volcanism springs from a single ancient source — the meteor crater at its heart. Its own sub-region of Ehizahar, bordering the Lands of Villtur.
 
 ### Fenurran proper nouns (Latinate / English register, not the deep-old stratum)
@@ -425,7 +425,7 @@ Full canon in `gods.md` — *Named Non-Bound Gods*.
 - **The Storveldi Denbora** — Icelandic *stór* "great" + *veldi* "empire/dominion" + Basque *denbora* "time/era" = literally "the era of the great empire." Mixed-language deep-old compound, fitting the Gods'-Era stratum. A mortal civilisation of the Gods' Era (2944 GR – 1 GR) that settled atop Elden ruins, **falsely claimed Elden descent for prestige**, and ran a generations-long programme of divine self-engineering. Their true edge was developing the **integration procedure** — the technique for imbuing a found shard of divinity into a mortal's own divine essence. Most of their ruling class self-elevated to Demi-God status by belief-and-power accumulation; two reached Minor God status by integrating recovered shards. **The procedure is not public knowledge, but it persists** somewhere on Talan or its veils. **They killed Tani.** Their homeland was annihilated in the Week of Crimson Rain's divine retaliation. The remnants of their experimented-upon population persist today as the **Azarketi** ancestry (most of whom still inherit the original Elden-blood lie). Full canon in `secret-history.md` — *The Storveldi Denbora — The Real History*.
 - **Shard of divinity** — fragment of divine power that can be **found**, not granted. No god's consent needed to use one. Sources: ancient ruins, godblood battlefields, killing another Minor or Major God (near-impossible), the Aurora Veil and Duskmire veil, and other planes where gods have died. Use requires the **integration procedure** (see Storveldi Denbora). Detailed in `cosmology.md` — *The Mortal Ascent Ladder*.
 - **The God Killing Incident** — Plain English. The mortal folk-name for the killing of Tani. The phrase strips the killers from the story; most modern usage doesn't know who they were.
-- **The Blackened Lands / The Black Spot on the Map** — Plain English. The cursed-ground scar at the western coast of Lioaru where Tani was struck down and the Storveldi Denbora capital was annihilated. Canonically the same place as the **Lost Kingdom** sub-region (see `geography.md`). Origin of the **Fleshwarp** and **Skeleton** ancestries.
+- **The Blackened Lands / The Black Spot on the Map** — Plain English. The cursed-ground scar at the southern coast of Lioaru where Tani was struck down and the Storveldi Denbora capital was annihilated. Canonically the same place as the **Lost Kingdom** sub-region (see `geography.md`). Origin of the **Fleshwarp** and **Skeleton** ancestries.
 - **Lost Kingdom** — Plain English. Modern-map name for the Blackened Lands sub-region of Lioaru. Already entered above under Lioaru sub-regions — cross-listed here for the secret-history reader.
 
 ### Bestiary proper nouns
