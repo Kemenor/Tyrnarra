@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────
-   site-starfield.js — generates the ambient star field for the
+   site-starfield.js: generates the ambient star field for the
    Style A "cosmic" pages. Looks for the canonical placeholder:
 
      <div class="starfield" id="starfield" data-stars="180"></div>

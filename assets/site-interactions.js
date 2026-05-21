@@ -1,8 +1,8 @@
 /* ───────────────────────────────────────────────────────────────
-   site-interactions.js — shared click handlers for page widgets
+   site-interactions.js: shared click handlers for page widgets
    Loaded by any page that uses the three-tier knowledge UI or
    the era-card accordion. Safe to include even when a page uses
-   none of these — each function is invoked from inline onclick=,
+   none of these: each function is invoked from inline onclick=,
    so unused handlers cost nothing.
 
    Exposes (on window):
@@ -14,8 +14,8 @@
    The legend and secret toggles share one mechanism: store the
    button's original label on first click, swap to "Hide …" while
    open, restore on close. The original-label snapshot means the
-   page's inline HTML — including any per-page wording variants
-   like "◈ Hide" vs "◈ Hide Popular Belief" — is preserved without
+   page's inline HTML: including any per-page wording variants
+   like "◈ Hide" vs "◈ Hide Popular Belief": is preserved without
    the JS needing to know about it.
    ─────────────────────────────────────────────────────────────── */
 
@@ -39,7 +39,7 @@
   }
 
   /* Default open-state labels can be overridden per-button via
-     data-hide-label="…" — useful where a shorter "Hide" reads
+     data-hide-label="…": useful where a shorter "Hide" reads
      better than the full default. */
 
   g.toggleSecret = function (e, btn) {

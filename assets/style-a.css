@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────
-   style-a.css — "Cosmic" base styles
+   style-a.css: "Cosmic" base styles
    Used by the world-level pages: index.html (cosmology landing),
    grand-gods.html, magic.html.
 
@@ -534,7 +534,7 @@ body {
   transform: translateX(2px);
 }
 
-/* ── THREE-TIER KNOWLEDGE — GM SECRET (red) ───────────────── */
+/* ── THREE-TIER KNOWLEDGE: GM SECRET (red) ───────────────── */
 
 .secret-section {
   border-top: 1px solid rgba(180, 40, 40, 0.25);

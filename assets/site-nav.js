@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────
-   site-nav.js — persistent sidebar menu
+   site-nav.js: persistent sidebar menu
    Loaded by every published page (typically with `defer`).
 
    Single source of truth for the menu structure:
@@ -8,12 +8,12 @@
    - the remaining fixed sections (World & Cosmos, Factions, Off-Continent)
      are string literals inside buildNavHtml()
 
-   Tree shape (any depth — children may themselves have children):
+   Tree shape (any depth: children may themselves have children):
      { slug, label, href, children: [ { slug, label, href, children: […] } ] }
 
    The page declares its location with <body data-page="<slug>">.
    On load, the sidebar walks the tree for that slug and auto-expands
-   the full ancestor chain — every other branch stays collapsed.
+   the full ancestor chain: every other branch stays collapsed.
    Click a chevron to expand/collapse a row; click the label to navigate.
    ─────────────────────────────────────────────────────────────── */
 
@@ -102,7 +102,7 @@
   // ── HTML builders ─────────────────────────────────────────────
   // Recursive accordion row. `depth` starts at 1 for top-level rows
   // inside a section's <ul class="nav-list"> and increments by one
-  // for each level of nesting — CSS uses data-depth to step the
+  // for each level of nesting: CSS uses data-depth to step the
   // indent / font-size / dim per level.
   function buildAccordionRow(node, expandedSet, depth) {
     var hasChildren = node.children && node.children.length > 0;
