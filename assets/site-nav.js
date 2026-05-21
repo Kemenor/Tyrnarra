@@ -61,6 +61,7 @@
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
+      { slug: 'lograth',          label: 'Lograth · The Judgment City',        href: '/talan/domains/zuzental/lograth/lograth.html',  children: [] },
       { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/talan/domains/zuzental/thousand-kingdom.html', children: [] },
       { slug: 'emerald-isles',    label: 'Emerald Isles · Island Kingdom',     href: '/talan/domains/zuzental/emerald-isles.html',    children: [] },
       { slug: 'legea-empire',     label: 'Legea Empire · Demigod Theocracy',   href: '/talan/domains/zuzental/legea-empire.html',     children: [] },
