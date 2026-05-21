@@ -1,116 +1,129 @@
-﻿/* ───────────────────────────────────────────────────────────────
+/* ───────────────────────────────────────────────────────────────
    site-nav.js — persistent sidebar menu
    Loaded by every published page (typically with `defer`).
 
    Single source of truth for the menu structure:
-   - top-level sections in NAV_SECTIONS (cosmology, talan, factions)
-   - the 13 domains in DOMAINS, with their sub-region/settlement children
+   - the Talan-level reference pages in TALAN_PAGES
+   - the 13 domains in DOMAINS (with sub-region / settlement / location children)
+   - the remaining fixed sections (World & Cosmos, Factions, Off-Continent)
+     are string literals inside buildNavHtml()
 
-   To add or rename a page in the sidebar, edit those arrays below.
+   Tree shape (any depth — children may themselves have children):
+     { slug, label, href, children: [ { slug, label, href, children: […] } ] }
 
    The page declares its location with <body data-page="<slug>">.
-   The accordion auto-expands the domain whose child matches the
-   current data-page on load. Domain rows are click-to-expand:
-   click the chevron to toggle, click the name to navigate.
+   On load, the sidebar walks the tree for that slug and auto-expands
+   the full ancestor chain — every other branch stays collapsed.
+   Click a chevron to expand/collapse a row; click the label to navigate.
    ─────────────────────────────────────────────────────────────── */
 
 (function () {
   'use strict';
 
-  // ── Talan-level pages (with collapsible children) ─────────────
-  // Same accordion pattern as DOMAINS below. Leaf pages have
-  // empty children arrays; pages with children get a chevron and
-  // expand on click (or auto-expand when on the parent or a child).
+  // ── Talan-level pages (collapsible) ───────────────────────────
   // Note: the Talan section header itself links to the Continent
-  // Overview, so that page is intentionally not repeated here.
+  // Overview, so that page is not repeated here.
   var TALAN_PAGES = [
-    { slug: 'history',     label: 'History &amp; Eras',     href: '/talan/history.html',     children: [] },
-    { slug: 'the-binding', label: 'The Binding',            href: '/talan/the-binding.html', children: [
-      { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/talan/the-binding/hollow-of-ten-thousand-threads.html' }
+    { slug: 'history',     label: 'History &amp; Eras', href: '/talan/history.html',     children: [] },
+    { slug: 'the-binding', label: 'The Binding',        href: '/talan/the-binding.html', children: [
+      { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/talan/the-binding/hollow-of-ten-thousand-threads.html', children: [] }
     ]},
-    { slug: 'ancestries',    label: 'Ancestries',                  href: '/talan/ancestries.html', children: [] },
+    { slug: 'ancestries',  label: 'Ancestries',                href: '/talan/ancestries.html',           children: [] },
     { slug: 'historical',  label: 'Historical · The Fallen',   href: '/talan/historical/historical.html', children: [
-      { slug: 'golden-empire',     label: 'The Golden Empire',     href: '/talan/historical/golden-empire.html' },
-      { slug: 'storveldi-denbora', label: 'The Storveldi Denbora', href: '/talan/historical/storveldi-denbora.html' },
-      { slug: 'elden',             label: 'The Elden',             href: '/talan/historical/elden.html' }
+      { slug: 'golden-empire',     label: 'The Golden Empire',     href: '/talan/historical/golden-empire.html',     children: [] },
+      { slug: 'storveldi-denbora', label: 'The Storveldi Denbora', href: '/talan/historical/storveldi-denbora.html', children: [] },
+      { slug: 'elden',             label: 'The Elden',             href: '/talan/historical/elden.html',             children: [] }
     ]}
   ];
 
   // ── Domain & sub-region structure ─────────────────────────────
+  // Children may nest to whatever depth the world requires.
+  // Practical ceiling is ~5 levels before labels start to wrap.
   var DOMAINS = [
     { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [] },
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
-      { slug: 'emarrea',    label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html' }
+      { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html', children: [] }
     ]},
     { slug: 'myrkono',  label: 'Myrkono · Darkness',  href: '/talan/domains/myrkono/myrkono.html',   children: [
-      { slug: 'myrria',  label: 'Myrria · City of Second Chances', href: '/talan/domains/myrkono/myrria/myrria.html' }
+      { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/talan/domains/myrkono/myrria/myrria.html', children: [] }
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/talan/domains/floteyn/floteyn.html',   children: [] },
     { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/talan/domains/sumendar/sumendar.html', children: [
-      { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html' },
-      { slug: 'dragons-reach',  label: 'Dragon\'s Reach · Dragon Capital',   href: '/talan/domains/sumendar/dragons-reach.html' }
+      { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html', children: [
+        { slug: 'house-eisenhart', label: 'House Eisenhart', href: '/talan/domains/sumendar/order-of-steam/house-eisenhart.html', children: [] }
+      ]},
+      { slug: 'dragons-reach', label: 'Dragon\'s Reach · Dragon Capital', href: '/talan/domains/sumendar/dragons-reach.html', children: [] }
     ]},
     { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/talan/domains/lioaru/lioaru.html',     children: [
-      { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/talan/domains/lioaru/lost-kingdom.html' }
+      { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/talan/domains/lioaru/lost-kingdom.html', children: [] }
     ]},
     { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/talan/domains/brauogi/brauogi.html',   children: [] },
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
-      { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/talan/domains/zuzental/thousand-kingdom.html' },
-      { slug: 'emerald-isles', label: 'Emerald Isles · Island Kingdom', href: '/talan/domains/zuzental/emerald-isles.html' },
-      { slug: 'legea-empire',  label: 'Legea Empire · Demigod Theocracy', href: '/talan/domains/zuzental/legea-empire.html' },
-      { slug: 'crossroads',    label: 'Crossroads · Southern Tri-Domain Nexus', href: '/talan/domains/zuzental/crossroads.html' }
+      { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/talan/domains/zuzental/thousand-kingdom.html', children: [] },
+      { slug: 'emerald-isles',    label: 'Emerald Isles · Island Kingdom',     href: '/talan/domains/zuzental/emerald-isles.html',    children: [] },
+      { slug: 'legea-empire',     label: 'Legea Empire · Demigod Theocracy',   href: '/talan/domains/zuzental/legea-empire.html',     children: [] },
+      { slug: 'crossroads',       label: 'Crossroads · Southern Tri-Domain Nexus', href: '/talan/domains/zuzental/crossroads.html',  children: [] }
     ]},
     { slug: 'nashavel', label: 'Nashavel · Chaos',    href: '/talan/domains/nashavel/nashavel.html', children: [] },
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/talan/domains/ehizahar/ehizahar.html', children: [
-      { slug: 'fenurra', label: 'Fenurra · The Flame-Source', href: '/talan/domains/ehizahar/fenurra.html' }
+      { slug: 'fenurra', label: 'Fenurra · The Flame-Source', href: '/talan/domains/ehizahar/fenurra.html', children: [] }
     ]},
     { slug: 'askamira', label: 'Askamira · Freedom',  href: '/talan/domains/askamira/askamira.html', children: [] }
   ];
 
-  // ── Determine which row (if any) should auto-expand ─────────
-  // Expands when the current page is either the parent row itself
-  // or one of its nested children. Missing the chevron is then
-  // not a punishment — you can still see what's underneath.
-  // Works for any accordion array (Talan, Domains, future blocks).
-  function findExpandedSlug(arr, currentPage) {
-    if (!currentPage) return null;
+  // ── Walk the tree for the current slug, return ancestor path ──
+  // Returns an array of slugs from the root of the tree down to and
+  // including the matched node. Used to decide which rows auto-expand.
+  function findAncestorPath(arr, currentPage) {
+    if (!currentPage || !arr) return null;
     for (var i = 0; i < arr.length; i++) {
-      var d = arr[i];
-      if (d.slug === currentPage) return d.slug;
-      for (var j = 0; j < d.children.length; j++) {
-        if (d.children[j].slug === currentPage) return d.slug;
+      var node = arr[i];
+      if (node.slug === currentPage) return [node.slug];
+      if (node.children && node.children.length > 0) {
+        var deeper = findAncestorPath(node.children, currentPage);
+        if (deeper) return [node.slug].concat(deeper);
       }
     }
     return null;
   }
 
+  function buildExpandedSet(arr, currentPage) {
+    var path = findAncestorPath(arr, currentPage);
+    var set  = Object.create(null);
+    if (path) {
+      for (var i = 0; i < path.length; i++) set[path[i]] = true;
+    }
+    return set;
+  }
+
   // ── HTML builders ─────────────────────────────────────────────
-  // Builds a single accordion row with optional chevron + sublist.
-  // Used by both the Talan section and the Domains section — they
-  // share the same .nav-domain CSS, so the styling is consistent.
-  function buildAccordionRow(d, expandSlug) {
-    var hasChildren = d.children && d.children.length > 0;
-    var isExpanded  = hasChildren && d.slug === expandSlug;
+  // Recursive accordion row. `depth` starts at 1 for top-level rows
+  // inside a section's <ul class="nav-list"> and increments by one
+  // for each level of nesting — CSS uses data-depth to step the
+  // indent / font-size / dim per level.
+  function buildAccordionRow(node, expandedSet, depth) {
+    var hasChildren = node.children && node.children.length > 0;
+    var isExpanded  = hasChildren && !!expandedSet[node.slug];
     var liClass     = 'nav-domain' + (hasChildren ? ' has-children' : '') + (isExpanded ? ' expanded' : '');
 
     var chevron = hasChildren
-      ? '<button class="nav-expand" data-domain="' + d.slug + '" aria-label="Toggle ' + d.label + ' children" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" type="button">▸</button>'
+      ? '<button class="nav-expand" data-domain="' + node.slug + '" aria-label="Toggle ' + node.label + ' children" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" type="button">▸</button>'
       : '';
 
     var sublist = '';
     if (hasChildren) {
-      var items = d.children.map(function (c) {
-        return '<li><a href="' + c.href + '" data-page="' + c.slug + '">' + c.label + '</a></li>';
+      var items = node.children.map(function (c) {
+        return buildAccordionRow(c, expandedSet, depth + 1);
       }).join('');
       sublist = '<ul class="nav-sublist">' + items + '</ul>';
     }
 
     return (
-      '<li class="' + liClass + '">' +
+      '<li class="' + liClass + '" data-depth="' + depth + '">' +
         '<div class="nav-domain-row">' +
-          '<a href="' + d.href + '" data-page="' + d.slug + '">' + d.label + '</a>' +
+          '<a href="' + node.href + '" data-page="' + node.slug + '">' + node.label + '</a>' +
           chevron +
         '</div>' +
         sublist +
@@ -119,10 +132,10 @@
   }
 
   function buildNavHtml(currentPage) {
-    var talanExpand  = findExpandedSlug(TALAN_PAGES, currentPage);
-    var domainExpand = findExpandedSlug(DOMAINS,     currentPage);
-    var talanItems   = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpand); }).join('\n');
-    var domainItems  = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpand); }).join('\n');
+    var talanExpanded  = buildExpandedSet(TALAN_PAGES, currentPage);
+    var domainExpanded = buildExpandedSet(DOMAINS,     currentPage);
+    var talanItems     = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpanded,  1); }).join('\n');
+    var domainItems    = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpanded, 1); }).join('\n');
 
     return [
       '<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>',
@@ -185,13 +198,12 @@
     var scrim  = document.getElementById('navScrim');
     if (!nav || !toggle) return;
 
-    // Highlight current page (matches both top-level links and sub-region children)
+    // Highlight current page (matches both top-level links and nested children at any depth)
     if (currentPage) {
       var link = nav.querySelector('a[data-page="' + currentPage + '"]');
       if (link) link.classList.add('is-current');
     }
 
-    // Sidebar open/close
     function open()  { nav.classList.add('open');    if (scrim) scrim.classList.add('open'); }
     function close() { nav.classList.remove('open'); if (scrim) scrim.classList.remove('open'); }
 
@@ -204,7 +216,7 @@
       if (e.key === 'Escape') close();
     });
 
-    // Accordion: click chevron to expand/collapse the domain row
+    // Accordion: click chevron to expand/collapse the row at any depth
     nav.querySelectorAll('.nav-expand').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
