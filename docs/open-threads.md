@@ -171,6 +171,14 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Recover or rewrite the Millhaven canon — character, position within Brauogi, distinguishing detail, relationship to the Goblin-Hobgoblin-Minotaur three-way of the Earth domain. Source content needs to come from git history (if any was preserved) or be written fresh.
 **Where.** Future `/talan/domains/brauogi/millhaven/millhaven.html`; lore lands in [lore/geography.md](../lore/geography.md) — *Brauogi* — once written.
 
+### [Geography] Floteyn boundary redraw + the unnamed Northwest Port
+**Decided.** A semi-shady coastal port-town on the northwest seaboard exists in canon, at a tri-domain border where **Lautara** (Commerce), **Floteyn** (Water), and **Myrkono** (Darkness) meet. The town is **functionally independent** in the same pattern as Crossroads. Character: foggy harbour, three different docking traditions, salt-rotten warehouses, Myrria second-chance doctrine inflected throughout (many residents have decided to be someone new and the town accommodates them). The prerequisite for the tri-point to exist is recorded: **Floteyn's eastern boundary is redrawn slightly to touch Lautara's western coast.**
+**Open.** Three things, in order:
+1. **The Floteyn boundary redraw itself** — formalise where exactly Floteyn extends east, what islets or mainland fringe move with the redraw, and update [lore/geography.md](../lore/geography.md) Floteyn entry + the Floteyn domain page accordingly. Until the redraw is canon, the tri-point exists only as a geographic placeholder.
+2. **The town's name** — coined per the naming rule. Modern stratum likely (this is a contemporary trade port, like Crossroads), so plain English with light drift; if the user wants an old-stratum framing instead, Basque/Icelandic per the rule. Record etymology in [lore/glossary.md](../lore/glossary.md) — *Lautara sub-regions* — before using the name elsewhere.
+3. **Full canon** — ruling structure if any, harbour-master detente between the three docking traditions, named institutions (its equivalent of the Spider's Silk if it has one), notable NPCs, the kind of contracts that get signed here vs in Crossroads, theological cast (Shuun / Araphel / Jianna instead of Forseti / Sarrum / Iro).
+**Where.** Currently a placeholder in [lore/geography.md](../lore/geography.md) — *Lautara → (Unnamed Northwest Port)* — and [lore/glossary.md](../lore/glossary.md) — *Lautara sub-regions → (Unnamed Northwest Port)*. Future HTML at `/talan/domains/lautara/<slug>/<slug>.html` once named.
+
 ---
 
 ## § Campaign hooks — story frames waiting on a write-up

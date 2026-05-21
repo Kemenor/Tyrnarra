@@ -40,8 +40,7 @@
   var DOMAINS = [
     { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [] },
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
-      { slug: 'emarrea',    label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html' },
-      { slug: 'crossroads', label: 'Crossroads · Tri-Domain Nexus', href: '/talan/domains/lautara/crossroads.html' }
+      { slug: 'emarrea',    label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea.html' }
     ]},
     { slug: 'myrkono',  label: 'Myrkono · Darkness',  href: '/talan/domains/myrkono/myrkono.html',   children: [
       { slug: 'myrria',  label: 'Myrria · City of Second Chances', href: '/talan/domains/myrkono/myrria/myrria.html' }
@@ -60,7 +59,8 @@
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
       { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/talan/domains/zuzental/thousand-kingdom.html' },
       { slug: 'emerald-isles', label: 'Emerald Isles · Island Kingdom', href: '/talan/domains/zuzental/emerald-isles.html' },
-      { slug: 'legea-empire',  label: 'Legea Empire · Demigod Theocracy', href: '/talan/domains/zuzental/legea-empire.html' }
+      { slug: 'legea-empire',  label: 'Legea Empire · Demigod Theocracy', href: '/talan/domains/zuzental/legea-empire.html' },
+      { slug: 'crossroads',    label: 'Crossroads · Southern Tri-Domain Nexus', href: '/talan/domains/zuzental/crossroads.html' }
     ]},
     { slug: 'nashavel', label: 'Nashavel · Chaos',    href: '/talan/domains/nashavel/nashavel.html', children: [] },
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/talan/domains/ehizahar/ehizahar.html', children: [
