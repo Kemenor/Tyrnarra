@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────
-   site-nav.css — persistent sidebar menu
+   site-nav.css: persistent sidebar menu
    Loaded by every published page.
    Uses fallback CSS variables so it works in both Style A and B.
    ─────────────────────────────────────────────────────────────── */
@@ -104,7 +104,7 @@
 /* ── Accordion rows (recursive) ──────────────────────────────────
    Each <li class="nav-domain"> carries data-depth="N" where 1 is
    a top-level row inside a section's .nav-list, and each nesting
-   level adds 1. Depth drives indent, font-size, and dim — so the
+   level adds 1. Depth drives indent, font-size, and dim: so the
    tree can recurse 4–5 levels without the labels becoming cramped.
    ────────────────────────────────────────────────────────────── */
 .nav-domain-row {

@@ -1,6 +1,6 @@
 /* ───────────────────────────────────────────────────────────────
-   style-b.css — "Grounded" base styles
-   Used by every page under /talan/ — continent overview, domain
+   style-b.css: "Grounded" base styles
+   Used by every page under /talan/: continent overview, domain
    pages, faction pages, history, magic.
 
    Page-specific tweaks (e.g. --domain-accent for a single page)
@@ -19,7 +19,7 @@
   --text: #d0c8a8;
   --text-dim: #9a9078;
 
-  /* Default per-page accent — pages override in their inline style. */
+  /* Default per-page accent: pages override in their inline style. */
   --domain-accent: var(--gold);
 }
 
@@ -674,7 +674,7 @@ a.subregion-card:hover {
 /* ── Reveal scaffolding for cards inside GM-Secret boxes ────────────
    Multi-secret pattern (Storveldi + Thousand Kingdom + future pages):
    themed cards, reveal pills, and codas inside .secret-era-content.
-   See CLAUDE.md — "Theme secret boxes with the page's full visual
+   See CLAUDE.md: "Theme secret boxes with the page's full visual
    vocabulary." Used by any page that places multiple thematic ⚿ GM
    Secret boxes after open-prose sections.
    ──────────────────────────────────────────────────────────────── */
@@ -847,11 +847,11 @@ a.subregion-card:hover {
    isle cards, branch cards, position blocks, etc.).
 
    The base gives the SHAPE: background, border edge, radius.
-   Pages provide the SIZE: padding, margin, max-width — those
+   Pages provide the SIZE: padding, margin, max-width: those
    are inherent to the card's role (grid item vs centred
    callout vs sub-card) and stay inline per page.
 
-   Customise per card by setting two CSS variables — usually
+   Customise per card by setting two CSS variables: usually
    inline or via a tiny per-class rule:
      --card-bg      background colour (defaults to warm dark)
      --card-accent  stripe / border colour (falls through to --domain-accent)
@@ -890,7 +890,7 @@ a.subregion-card:hover {
   border-bottom: 1px solid var(--card-outline, rgba(200,168,75,0.2));
 }
 /* cut-left: sharp left corners, rounded right. Pairs naturally with the
-   left-stripe look — the stripe runs cleanly off the card's edges. */
+   left-stripe look: the stripe runs cleanly off the card's edges. */
 .accent-card.cut-left {
   border-radius: 0 4px 4px 0;
 }
