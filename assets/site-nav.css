@@ -101,7 +101,12 @@
 }
 .nav-scrim.open { opacity: 1; pointer-events: auto; }
 
-/* ── Accordion domain rows (domain link + expand chevron + nested sublist) ── */
+/* ── Accordion rows (recursive) ──────────────────────────────────
+   Each <li class="nav-domain"> carries data-depth="N" where 1 is
+   a top-level row inside a section's .nav-list, and each nesting
+   level adds 1. Depth drives indent, font-size, and dim — so the
+   tree can recurse 4–5 levels without the labels becoming cramped.
+   ────────────────────────────────────────────────────────────── */
 .nav-domain-row {
   display: flex;
   align-items: stretch;
@@ -140,16 +145,31 @@
   transition: max-height 0.28s ease;
 }
 .nav-domain.expanded > .nav-sublist {
-  max-height: 600px;
+  max-height: 2400px;
 }
-.nav-sublist a {
-  padding-left: 28px;
+
+/* Per-depth indent + size cascade.
+   Depth 1 inherits the default .nav-list a styling (font-size 0.92rem,
+   padding-left 10px). Each deeper level steps in ~14px and ticks the
+   font-size and opacity down a notch so the hierarchy reads cleanly. */
+.nav-domain[data-depth="2"] > .nav-domain-row > a {
+  padding-left: 24px;
+  font-size: 0.88rem;
+}
+.nav-domain[data-depth="3"] > .nav-domain-row > a {
+  padding-left: 38px;
   font-size: 0.85rem;
-  color: var(--text-dim, #8a8070);
-  opacity: 0.85;
+  opacity: 0.94;
 }
-.nav-sublist a:hover {
-  opacity: 1;
+.nav-domain[data-depth="4"] > .nav-domain-row > a {
+  padding-left: 52px;
+  font-size: 0.82rem;
+  opacity: 0.88;
+}
+.nav-domain[data-depth="5"] > .nav-domain-row > a {
+  padding-left: 66px;
+  font-size: 0.80rem;
+  opacity: 0.84;
 }
 
 @media (max-width: 600px) {

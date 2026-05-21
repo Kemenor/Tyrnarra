@@ -7,9 +7,11 @@ How the persistent sidebar on every page is built and how to extend it.
 ## How it works
 
 - The sidebar structure lives in `/assets/site-nav.js`. Three data sources drive it:
-  - **`TALAN_PAGES`** — the array of continent-level reference pages (History, The Binding, Bestiary, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same accordion shape as `DOMAINS`. The Continent Overview is intentionally not in this list — it is the Talan section's own clickable header.
+  - **`TALAN_PAGES`** — the array of continent-level reference pages (History, The Binding, Ancestries, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same recursive accordion shape as `DOMAINS`.
   - **`DOMAINS`** — the array of 13 god-domains. Same shape: `slug`, `label`, `href`, `children`.
   - **The remaining top-level section markup** (World & Cosmos, Factions, Off-Continent) — string literals inside `buildNavHtml()`.
+
+  Both `TALAN_PAGES` and `DOMAINS` are **recursive trees** — any `children` entry may itself carry a `children` array. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Brauogi → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
@@ -58,14 +60,15 @@ The slug doesn't have to match the filename — it just has to match between the
 
 All edits happen in `/assets/site-nav.js`; the new page sets `<body data-page="<slug>">` matching the entry. Pick the spot that fits:
 
-- **A continent-level reference page** (Talan-tier — like Historical, Bestiary): add an entry to `TALAN_PAGES`.
-- **A nested accordion entry** under a domain or Talan-tier page: push `{ slug, label, href }` into the parent's `children` array in `DOMAINS` or `TALAN_PAGES`.
+- **A continent-level reference page** (Talan-tier — like Historical, Ancestries): add an entry to `TALAN_PAGES` with `children: []` if it has no nested pages yet.
+- **A nested accordion entry** under a domain, Talan-tier page, *or any deeper node*: push `{ slug, label, href, children: [] }` into that node's `children` array. Children may themselves have children — the tree recurses to whatever depth you need.
 - **A new leaf under a fixed section** (World & Cosmos, Factions, Off-Continent): add a `<li>` to the matching string-literal block inside `buildNavHtml()`.
 
-The accordion (used by both `TALAN_PAGES` and `DOMAINS`):
-- Shows a chevron `▸` next to any row with non-empty `children`.
-- Auto-expands when the current page is either the parent itself or one of its nested children (visiting Myrria opens the Myrkono submenu; visiting Myrkono opens it too).
-- Toggles on chevron click. The parent name stays a normal link — clicking it navigates rather than expanding.
+The recursive accordion (used by both `TALAN_PAGES` and `DOMAINS`):
+- Shows a chevron `▸` next to any row whose `children` is non-empty, at any depth.
+- On page load, walks the tree for the current `data-page` and **auto-expands the full ancestor chain** — visiting *House Eisenhart* opens *Sumendar → Order of Steam* so the whole path is visible. Every other branch stays collapsed by default.
+- Toggles on chevron click. The label stays a normal link — clicking it navigates rather than expanding.
+- Each `<li>` carries `data-depth="N"` (1 for top-level rows in a section, +1 per nested level). CSS uses this to step the indent (~14px per level), shrink the font-size, and dim the colour, so 4–5 levels read cleanly in a 280px sidebar.
 
 One file edited. No find-and-replace across pages.
 
