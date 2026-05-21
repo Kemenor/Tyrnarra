@@ -110,16 +110,20 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 
 ### [Dragon's Reach] City interior, named figures, mothership origin
 **Decided.** The civilisational shape is canon (see [dragons-reach.html](../talan/domains/sumendar/dragons-reach.html) and [lore/geography.md](../lore/geography.md) → *Sumendar → Dragon's Reach*). Crash placed at ~mid-Gods'-Era (4000–4500 years ago); city is built from the largest surviving mothership section; civilisational strife centred on the lost immortality (lifespans 150-180 non-purist / 200 purist / 230 "purest"); paths of purity are individual not institutional, with the teacher-recursion as the keystone observation; age-weighted vote tilts purist; pragmatist resentment is centuries-old and unresolved; Order-of-Steam parallel-recovery friction and Dragonet older-claim schism both canon.
-**Open.** Eight named TBDs visibly flagged on the page:
+**Open.** Named TBDs visibly flagged on the page:
 - **Internal city layout** — districts, named quarters, the wreckage-floorplan that became civic architecture (older quarters are visibly *ship* from inside but the floorplan is unwritten)
 - **Named Dragon elders or council figures** — no Tharka-Eisenhart equivalent has surfaced yet; the age-weighted Council's oldest members are the loudest voices and remain unnamed
 - **The mothership's name and origin world** — where the vessel came from, how it crossed whatever lies between worlds, who built it (intergalactic in dragon record; details all open)
-- **The corruption mechanism** — only the *result* (mortality) is known; what divine or biological process was severed remains open even to the Dragons themselves
 - **Specific dispute incidents with the Order of Steam** — the cordial-formal / complicated-practical relationship has presumably generated named incidents over the centuries; none are written
 - **Specific scattered fragment-sites elsewhere on Talan** — most unmapped; named ones would be hooks waiting to attach (could become individual ruin-pages or be folded into other domain pages)
 - **The practical scale of the Dragonet schism** — currently described as *untested and simmering*; the pressure-point is unwritten
 - **The Reach's relationship with Komo's church and Eldara** — both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified
 **Where.** [lore/geography.md](../lore/geography.md) — *Sumendar → Dragon's Reach*; [lore/bestiary.md](../lore/bestiary.md) — *Dragons*; [dragons-reach.html](../talan/domains/sumendar/dragons-reach.html) — Open in Canon panel mirrors these.
+
+### [Lost Kingdom] A small city of the cursed-born
+**Decided.** Somewhere in the Blackened Lands' interior, sheltered from the worst of the time-warps and the deeper necromantic resonance, lives a settlement of **Skeletons and Fleshwarps** who have nowhere else to go. The ancestries the cursed ground produces are not unwelcome; they are unwelcome *elsewhere*, and the Lost Kingdom is the one place on Talan where their presence is the local norm. Existence canon; the rest open.
+**Open.** Name; layout (built into Storveldi Denbora ruins? grown out of the Adventurers' Guild's edge-camp infrastructure? a deeper-interior find?); government (if any — Skeletons and Fleshwarps both have continuity-of-self problems that complicate political life); leadership and named figures; population scale (hamlet, town, small city — the page's working language is "small city" as ceiling); the working relationship with the Adventurers' Guild's standing warning (do Platinum parties stop here? does the Guild even acknowledge the city formally?); the population's stance on the deeper Storveldi Denbora ruins they live among (custodians, scavengers, deliberate ignorance?); whether Betibizi's cult has a presence here or is doctrinally rejected; visitor reception; how the city sustains itself materially in cursed ground that takes no cultivation.
+**Where.** [lost-kingdom.html](../talan/domains/lioaru/lost-kingdom.html) — Open in Canon panel. No lore-file home yet; would land in `lore/geography.md` under Lioaru once written.
 
 ### [Legea Empire] Doctrine, antiquity, and case-law against Forseti
 **Decided.** The structural tension between the Faith's law and Forseti's law is published canon — Faith claims older/freer/unconditioned law; Forseti's framework treats authority as sworn compact. That Forseti tolerates the Empire within his own domain is the single most interesting fact about the arrangement.
