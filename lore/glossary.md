@@ -120,7 +120,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Emarrea** — Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom — fox-colour and gentle-host disposition encoded in the name. Forested eastern highlands of Lautara. Capital: Biozuri.
 - **Biozuri** — Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
 - **Soul Tree** — modern English, cosmologically significant island
-- **Crossroads** — modern English. Tri-domain trade-nexus settlement on the Lautara / Zuzental / Ezkudon border; functionally independent. Home of the Spider's Silk Inn (see `factions.md`).
+- **(Unnamed Northwest Port)** — *canon-pending name.* A semi-shady coastal port-town on the northwest seaboard at the tri-domain border where **Lautara** (Commerce), **Floteyn** (Water), and **Myrkono** (Darkness) meet. **Floteyn's eastern boundary is redrawn to touch Lautara's western coast for the tri-point to exist.** Foggy harbour, three different docking traditions, salt-rotten warehouses, and an interior where you can lose someone in two blocks. The Myrria second-chance doctrine inflects the town: many residents have decided to be someone new, and the town accommodates them. **Functionally independent** in the same pattern as Crossroads. Naming, etymology, and full canon TBD — placeholder for a future drafting pass.
 
 **Myrkono (Darkness):**
 - **Ilun Tasun** — Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself"
@@ -172,6 +172,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Legea Empire** — drift from Latin *lex/legem* (law); major empire. **A theocracy ruled by a demigod of a non-bound god (Layer 3 / Postlife resident; specifics TBD). State faith is the Divine Faith (see `factions.md`).** Sits inside Forseti's domain of Law — the resulting law-vs-law theological argument is structural and continual.
 - **Namur Republic** — modern English; democratic city-state network
 - **Order of Law** — modern English; institution
+- **Crossroads** — modern English. Trade-nexus settlement on the southern tri-domain border where Zuzental, Brauogi (Earth), and Egulon (Light) meet. **Functionally independent** of all three; nominally a Zuzental sub-region by the geography of the tri-point but answers to no domain's law. Home of the **Spider's Silk Inn** (Matron Charna, ancient Anadi, weaver of enchanted silver silk that suppresses hostile magic). See `factions.md`.
 
 **Nashavel (Chaos):**
 - **Vernua Dominion** — likely drifted from Vesuna's name; houses Nahaskel
