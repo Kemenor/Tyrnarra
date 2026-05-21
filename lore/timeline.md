@@ -44,6 +44,8 @@ The Storveldi Denbora homeland was annihilated in the divine retaliation that fo
 
 At the end of the week, the Gods' Law was established. Thirteen accepted the binding and remained on the Material Plane; the rest withdrew to the other planes. The world the Thirteen inherited was broken.
 
+**No mortal kingdom survived the Week intact.** Every polity of the Gods' Era had been built around the divine hand that governed it — gods as kings, gods as landlords, gods as the source of law. When the surviving gods withdrew to their planes and the dead gods could no longer hold up their share of the world, every Gods'-Era kingdom lost its governing organ in the same week. Some structures persisted (cities still stood, surviving populations still spoke their tongues), but as *kingdoms*, with continuity of rule and law, none of them came through. **No kingdom on Talan today predates 1 MR**, and the few who claim otherwise are claiming a name, not an unbroken political line.
+
 *Key events within the week: not yet fully defined. Frae City was founded during this period as the base of mortal resistance.*
 
 ---
@@ -54,6 +56,8 @@ At the end of the week, the Gods' Law was established. Thirteen accepted the bin
 For over five centuries, mortal civilization simply tried to survive. The divine infrastructure — systems of governance, food distribution, law enforcement — had been god-built, and without active divine management, it collapsed. Mortals had never been asked to govern themselves and had to learn.
 
 Characterized by fragmentation, rediscovery, and immense loss of knowledge. Entire libraries of the Gods' Era were lost. Languages fractured. Populations crashed in some regions, migrated in others. Slowly, mortal kingdoms began to form — imperfect, contentious, but their own. Called "Lost" not because nothing happened, but because so much of what happened was never recorded.
+
+**The Lost Era is the kingdom-founding era of Talan.** Every kingdom on the continent today traces its earliest founding-as-self-rule back to this period, even when the *name* on the modern map is older or younger. The patchwork of small kingdoms, duchies, principalities, free cities, and contested holdings that the Lost Era produced is the substrate every later era worked on. The earliest of these foundations are roughly 2500 years old today; most are younger.
 
 *The era's first century in particular has its own deeper story — see `secret-history.md` — **The Lost Era — The Real History** and `cosmology.md` — **Wellspring Outflow — Mediation, Leakage, and the Lost-Era Window**.*
 
@@ -68,6 +72,8 @@ The Empire's scholars attempted to recreate the Androids of the Elden and failed
 
 The Golden Empire was not a gentle ruler, but it was a consistent one. The cultural foundations of many modern kingdoms trace directly to this period.
 
+**The Empire swallowed most of the Lost-Era kingdom map.** Where it expanded, it absorbed the Lost-Era patchwork into Imperial provinces, blurred sub-region lines, redrew borders for administrative convenience, and consolidated smaller polities into larger ones; some old kingdom-names survived as place-names or noble titles, others vanished entirely from public record. Where it did *not* reach (the far north, Basogur, the eastern reaches), the Lost-Era kingdoms continued under their own laws, increasingly archaic by Imperial measure. Roughly 70% of the continent spent the Golden Era as Empire, and the political map of that 70% was the Empire's map, not its predecessors'.
+
 *The Empire's actual mechanism — and the Emperor's true nature — is GM-tier. See `secret-history.md` — **The Golden Empire — The Real History**.*
 
 ---
@@ -78,6 +84,10 @@ The Golden Empire was not a gentle ruler, but it was a consistent one. The cultu
 In **1321 MR**, Golden Empire miners breached something deep beneath the earth — the sealed ritual site of the Elden, undisturbed since 2945 GR. The **Corrupted God** emerged: not bound by the Gods' Law, something older and profoundly wrong. Its true nature is not known to common history. Its influence spread through rock and soil. Its spawn erupted across Talan. By **1325 MR** the Golden Empire had collapsed entirely.
 
 Eight centuries of attrition followed. The Corrupted God's forces did not conquer — they hunted, probed, destroyed, drove mortals apart. Kingdoms fell. Populations dwindled. The 13 Bound Gods could not directly intervene; the Gods' Law held even in this crisis.
+
+**Mid-Era event — the founding of the Legea Empire.** In the first third of the Dark Era, in the dangerous centuries immediately after the Golden Empire's collapse, a **holy knight** in southern Zuzental fought Corrupted spawn and protected the refugees who gathered around him. He was the chosen instrument of a non-bound god (Layer-3-resident, unbound by the Crimson-Rain Compact and free to grant power without mediating constraint). His congregation grew into a town, the town into a polity, the polity into a kingdom; **the Knight ascended to demigod status within his own lifetime** through sustained mortal belief plus the god's recognition, and the throne passed by blood at his death. **Hereditary demigod theocracy has been the polity's form ever since**, and the Empire is now known as the **Legea Empire** — the most politically significant non-bound-god faith on Talan, sitting inside Forseti's domain as a structural theocracy-inside-a-judgment-only-domain tension. Forseti was structurally a spectator; the Gods' Law (which she helped swear) forbids the bound thirteen from directly governing mortal populations or waging open war against them, which is exactly the kind of polity the founding cult was. See `factions.md` — *The Divine Faith (Legea Empire)*.
+
+**The Dark Era shattered the political map twice over.** First the Empire fell, releasing the 70% of Talan that had spent seven centuries as Imperial provinces back into unstructured territory; second, the remaining Lost-Era kingdoms (the ones the Empire had never absorbed) were hit by the same eight centuries of attrition the rest of the continent was hit by, and most of them fell too. By the time the Corrupted God's active influence collapsed in 2135 MR, almost no continuous political line ran unbroken from before the breach. **Most of the kingdoms on the modern map were founded, refounded, or substantially redrawn during the Dark Era** — sometimes during the breach centuries themselves, sometimes in the immediate aftermath. **Refoundings that reached for old Lost-Era names are common**, which is part of why the modern map carries so many ancient-sounding place-names: those names were *taken back* by the new polities, not handed down through unbroken rule. The naming convention this project follows (old names in Basque/Icelandic-with-drift) reflects this layering; the *name* is old, the *kingdom presently using it* is usually not.
 
 From this darkness emerged the **Adventurers Guild** — not a king's army, not a god's command, but people who resisted because their conscience demanded it. They organized across borders and nations, answering to the mission rather than any crown.
 
@@ -93,3 +103,17 @@ In **2135 MR**, a party of adventurers descended further than any before them an
 Four centuries of rebuilding, expansion, and uneasy opportunity. Kingdoms have risen in the ruins of the Dark Era. The Adventurers Guild, no longer fighting for survival, has transformed into a world-spanning institution of enormous soft power — brokering contracts, maintaining neutral ground, quietly influencing more political decisions than any king would like to admit.
 
 The threats of the Corrupted God linger. Spawn still emerge from deep places. Old ruins still harbor things that should not have survived. But the world is alive again — trading, scheming, building, exploring. Current year: **2532 MR**.
+
+---
+
+## Kingdom continuity across the eras
+
+A canonical rule that all kingdom-pages and faction-pages should respect:
+
+- **No kingdom on Talan today predates 1 MR.** Every Gods'-Era polity lost its divine governing organ in the Week of Crimson Rain; nothing carried through as a *kingdom* with continuity of rule. Some cities and cultures persisted; political lines did not.
+- **No kingdom is older than the Lost Era (1 MR — 559 MR).** The earliest possible founding-as-self-rule for any Talanese kingdom is somewhere in the Lost Era. The very oldest modern kingdoms reach back roughly 2500 years from the present; most reach back far less.
+- **Few kingdoms are older than the Dark Era (1321 MR — 2135 MR).** The Empire's fall and the eight breach centuries that followed broke most of the political map. Where a kingdom claims unbroken continuity from before 1321 MR, that claim is exceptional and should be treated as such. Most kingdoms on the modern map were **founded, refounded, or substantially redrawn during the Dark Era** or in the immediate post-Dark-Era reconstruction of the Adventurer Era's first century.
+- **Old-sounding names are usually re-claimed, not inherited.** When the post-Dark-Era founders rebuilt, many of them reached back to the Lost-Era kingdom-names that had occupied the same ground centuries earlier, treating the old name as a legitimacy-claim against the new world. The naming convention this project uses (old things named in drifted Basque/Icelandic) reflects which *names* are old, not which *polities* are old. A kingdom can carry a 2000-year-old name and be 300 years old at the same time.
+- **Older-claimed kingdoms are story-bearing.** A polity that does claim continuity from before the Dark Era is making a strong statement and the page should treat the claim as a feature. Verifying or breaking such a claim is exactly the kind of question a Forseti-court or an Ezkudon scholar would ask.
+
+This rule applies to every kingdom-tier page (`/talan/domains/<domain>/<domain>.html`, plus sub-region kingdom pages like *Thousand Kingdom*, *Legea Empire*, *Order of Steam*). Domain-level entities (the 13 god-domains themselves) are older — they predate every kingdom and trace back to the Gods' Era at minimum, since the domain-boundaries are the bound god's territorial reach, not a polity's borders. **Domain ≠ kingdom**; the domain is geography under a god, the kingdom is a polity inside that geography.
