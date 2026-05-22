@@ -208,6 +208,12 @@ h2.section-heading {
   font-size: 0.95rem;
   color: var(--parch);
 }
+/* Anchor-reset when the god's-city callout is rendered as <a>. */
+a.gods-city {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
 /* ── SUB-REGION CARDS (used on domain pages & faction overview) ── */
 
@@ -872,6 +878,13 @@ a.subregion-card:hover {
 .accent-card.framed {
   border: 1px solid var(--card-accent, var(--domain-accent, var(--gold)));
   border-left-width: 1px;
+}
+/* Anchor-reset for any accent-card rendered as <a>. Saves repeating
+   style="display:block; text-decoration:none; color:inherit" inline. */
+a.accent-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 .accent-card.is-link {
   display: block;
