@@ -72,6 +72,48 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Placement for the remaining seven dungeons: Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Likely best done as a batch pass with a thematic mapping (each General fits a domain by character).
 **Where.** [lore/secret-history.md](../lore/secret-history.md) — *The Nine Generals of Corruption*.
 
+### [Cosmology] Languages of Talan
+**Decided.** **Talanese** is named in [lore/cultures.md](../lore/cultures.md) as the Common Tongue. The naming-rule scaffolding implies a stratification: a deep-old tongue (rendered in our voice as Basque/Icelandic with drift) underlying ancient names; a modern English-with-drift stratum for contemporary coinages; and regional cultural registers (Fenurran Latinate-feeling internal vocabulary, Kitsune Japanese-inflected, Sortalde Chinese-inflected) layered over both.
+**Open.** What languages mortals actually speak day-to-day, and what they read when they read old things.
+- **Talanese as Common Tongue.** Origin (post-Crimson-Rain trade lingua? pre-Crimson-Rain survivor?), how universal it actually is, where it's a second tongue and what the first one is, whether the bound thirteen speak through it natively or through their own divine tongue.
+- **The Old Tongue.** Does a single ancestor language underlie the Basque/Icelandic deep stratum, or are the two strains the modern echo of two separate pre-Crimson-Rain language families? Either reading is workable; the naming rule does not commit. Implication for scholars who try to read genuinely Lost-Era inscriptions.
+- **Regional tongues.** Fenurran ritual register, Kitsune court tongue (Emarrea/Heartcourt-internal), Sortalde dynastic register, Dragon's Reach internal speech (still using pre-corruption vocabulary in places?), Bolverk's internal scripts (Lostar writes her Library in a personal script per non-bound-gods.html; that's one named example). Tahu Tangata also flagged in cultures.md as having a partially lost old name.
+- **The Storveldi tongue.** Completely lost in the chronicle record per the Storveldi page TBDs. Whether *anything* survives in inscription, modern loanword, or Blackened-Lands fragment is open.
+- **Magical languages.** Does Arcane / Occult / Primal / Divine magic each have a working tongue? Divine cleric speech to one's god, Primal druidic, the Elden tongue (named-as-lost in elden.html TBDs).
+**Where.** [lore/cultures.md](../lore/cultures.md), *The Common Tongue — Talanese* section is the natural anchor; [lore/cosmology.md](../lore/cosmology.md) for any cosmologically-significant tongues (the Wellspring-leak *valleys that spoke languages that produced what they named* is a hook waiting for canon); [lore/glossary.md](../lore/glossary.md) for any newly-coined language names.
+
+### [Cosmology] Calendar of Holy Days & festival cycle
+**Decided.** **GR/MR dating** is locked, hinge at Crimson Rain (0 GR / 0 MR), current year 2532 MR ([lore/timeline.md](../lore/timeline.md) + [lore/cosmology.md](../lore/cosmology.md), *Calendar*). A handful of named annual rites exist: **Festival of the Fox Lanterns** at Kawaakari, **Passing of the Tails** in the Heartcourt, **Dance of the Sulfur Fire** in Fenurra, the Lantern Stairs pilgrimage at Myrria.
+**Open.** The rhythm of the year. What mortals on Talan put on their walls.
+- **Per-god feast days.** Each of the bound thirteen presumably has at least one major annual observance. Iro's Light has a sun-cycle; Tani's Time has a calendar problem all its own; Komo's Fire and Sarrum's Earth have agricultural-cycle ties; Forseti's Law has a court-calendar tradition; Araphel's Darkness has nocturnal observances.
+- **Crimson Rain anniversary.** 2532 years on, is there a Talan-wide remembrance day? Per-domain variants? A specifically Cronine observance (he's the reason the world survived; his church might mark it)?
+- **Seasonal markers.** Harvest, planting, longest-night, longest-day. Brauogi as the breadbasket presumably has a major harvest festival; Sumendar a volcanic-cycle one; Floteyn a tide or migration-of-the-drifting-isles one.
+- **Local festivals.** Every domain probably has two or three named festivals worth naming; every god city-state has its civic-religious calendar.
+- **Working calendar structure.** How many days in a year, how many in a month, the lunar relationship to Veyru and Calune (the two moons), whether the week-rhythm is shared across domains. Cosmology.md has the GR/MR framing but the month/week structure may be open.
+- **Mourning observances.** Tani-mourning is already canon (pilgrims to the Blackened Lands); whether that's an annual rite or rolling individual practice.
+**Where.** [lore/cosmology.md](../lore/cosmology.md), *Calendar* section; [lore/cultures.md](../lore/cultures.md) for per-culture observances; [lore/gods.md](../lore/gods.md) for per-god feast-day notes once they exist.
+
+### [Cosmology] Reflections in the present day
+**Decided.** The mechanic is fully canon ([cosmology.md](../lore/cosmology.md), *Stillpools — residual leak sites*, plus [bestiary.md](../lore/bestiary.md), Reflection heritage). Stillpool interaction → roughly one-week incubation → Reflection birth nearby. Every modern Reflection traces back to a Stillpool event. The **Adventurers Guild's sealed atlas** is the working register and is presumed incomplete. Folk-belief frames Stillpools as fairy-haunted / witch-touched / bad-luck-to-visit. The Golden Emperor was the most consequential historical Reflection (see [secret-history.md](../lore/secret-history.md)).
+**Open.** What it's like to *be* a Reflection on Talan in 2532 MR.
+- **Lived experience.** How a Reflection's identity differs from a soul-born mortal. Cosmology.md says they're *mortal-shaped but anchored directly to the Wellspring, with no deity-mediated ancestry line*. The day-to-day texture of that anchoring (do they feel it? do priests detect it? do clerical grants work on them?) is open.
+- **Demographics.** Roughly how many living Reflections are on Talan. Order of dozens? Hundreds? The Stillpool count is sealed, but a rough scale would let other canon settle.
+- **Detection and treatment.** How clerics, the Guild, and ordinary villages identify Reflections. Some traditions presumably treat them as cursed; others as gifted; some not at all.
+- **Named living Reflections.** At least one or two named figures, ideally across domains and stations (a Guild adventurer, an unaffiliated villager, a noble's reflection-born child who was raised as legitimate).
+- **The Compact's blind spot.** Already canon that the bound thirteen cannot directly observe Wellspring-direct activity ([secret-history.md](../lore/secret-history.md), Golden Emperor coverage). The practical implication for living Reflections is they sit in a structural gap in divine surveillance. The Guild's sealed atlas may be the only institution that can find them at scale.
+- **Reflection cults / mutual-aid networks.** Whether living Reflections recognise one another and self-organise, or whether each is socially isolated.
+- **Relationship to Betibizi's integration procedure.** The Storveldi route bypasses the Compact by ritual; the Reflection route bypasses it by birth. Both produce *Wellspring-direct* beings. A Reflection who learns of the integration procedure is the Golden Emperor's path.
+**Where.** [lore/bestiary.md](../lore/bestiary.md), Reflection heritage; [lore/cosmology.md](../lore/cosmology.md), *Stillpools*; [lore/factions.md](../lore/factions.md), Adventurers' Guild (for the sealed atlas's operational shape).
+
+### [Cosmology] Gods' Law follow-ups after the Compact commit
+**Decided.** The full Compact-and-Articles structure is canon ([cosmology.md](../lore/cosmology.md), *The Gods' Law: The Compact of the Bound Thirteen*). Thirteen Articles, Sanctioned Exchanges catalog (Clergy Bond, Knight's Oath, Common Blessing, Lifetime Covenant), Scope with tier-scaled binding + Layer-1/3-residency clause, Enforcement via Ethereal-as-physics + the binding within the binding (Article 13). The Lord Albrecht test case resolves under Article 11 (no god raised him). The Bikiargi route is permitted because the bound god is not the agent. The Layer-residency loophole is structural (non-bound Layer-3 residents like the Faith's god can act on the Life Layer only through Compact-permitted forms: clerics, chosen instruments, mortal mediation). The years-not-week duration of the founding war is committed to [secret-history.md](../lore/secret-history.md).
+**Open.** Three sub-threads remain after the commit:
+- **Cronus's mortal name (pre-ascension).** *Cronus* is the post-ascension name. The man he was before carries his own, born of some Talanese mortal line, raised in some village now forgotten, fighting under whatever name his parents gave him through the years of the war. Designing this name is its own pass; deep-old Basque/Icelandic stratum per the naming rule (Cronus was a Lost-Era mortal at minimum; his birth-name pre-dates the rule's modern-stratum cutoff). Cross-references: the Cronus card on [grand-gods.html](../grand-gods.html) gains a TBD; [lore/secret-history.md](../lore/secret-history.md), *Cronus — The Secret* has the placeholder.
+- **The Ethereal's operational enforcement mechanism.** Canon: enforcement is via the Ethereal Plane, answers as physics answers. Open: passive filter vs active monitor vs automatic counter-pressure. Implication for any mortal who could reach or manipulate the Ethereal directly (high-rank arcanists, certain divine clerics). Probably low-priority until a story or PC ability touches it.
+- **Council operational rules vs the Compact.** The Council of Thirteen is the bound thirteen's political body; the Compact is their cosmic constraint. Open: does the Council arbitrate disputes about Article edge-cases (the *is-this-a-violation* judgment), or does the Ethereal arbitrate automatically and the Council merely discuss? When the bound thirteen disagree about whether a non-bound god's activity counts as a Compact-relevant act, who decides? Likely best resolved alongside the broader Council-of-Thirteen flesh-out (see *Council of Thirteen* candidate thread).
+- **Historical case-law on Compact-test incidents over the 2532 years.** In two and a half millennia, the bound thirteen have presumably each pushed against the Articles at least once. The Iro / Drambur Crimson-Rain incident is the only canon example currently (Iro cannot speak against his own zealots because of the Drambur wound; voluntary, Law-enforced, or both?). Named historical incidents per god would give future sessions case-law to reach for. Pace by per-god deep-dive interest.
+**Where.** [lore/cosmology.md](../lore/cosmology.md), *The Gods' Law*; [lore/secret-history.md](../lore/secret-history.md); [lore/gods.md](../lore/gods.md) for per-god behaviour-under-the-Compact specifics.
+
 ### [Cosmology] Aeris / Scar of Aeris — naming-stratum decision *(low)*
 **Decided.** Aeris, Scar of Aeris, Hall of Shards, Sulfur Vents of Vehl exist in Fenurra with Latinate / Germanic / English-stylised names.
 **Open.** Decide whether these stay Fenurran-internal (matching the Fenurran cultural register — Latinate-feeling internal vocabulary, paralleling the kitsune's Japanese-internal and Sortalde's Chinese-internal registers) or get retrofitted to the deep-old Basque/Icelandic stratum. Recommended default: keep Fenurran-internal.
@@ -216,10 +258,48 @@ Items where the world has decided *what* but not *much* — placements and struc
 **Open.** Names for the fourteen Virtue Devils as they become relevant in play. Personalities, internal duality preferences (which extreme each devil prefers to push toward), individual histories. Domain grants for all 14: canon-pending.
 **Where.** [lore/bolverk.md](../lore/bolverk.md) — *Virtue Devils — the Fourteen*.
 
-### [Geography] Sub-region details — small placement-and-flavour passes
-**Decided.** Each sub-region exists in canon with a defined location.
-**Open.** Flesh out the prose for: **The Red Dominion** (Sumendar) · **Haraour Eliza** (Sumendar — *eliza* = church in Basque, likely a religious institution) · **The Earth Realm** (Brauogi) · **Argia Esfera** (Egulon) · **Namur Republic** (Zuzental) · **Order of Law** (Zuzental) · **Kaosadaemi Principality** (Nashavel) · **Star Island** (Askamira — small star-shaped island in Midarra) · **Fellibylur** (Vindul — high lone peak, Storm-Fell / Blizzard Peak) · **Balatur Erui** (Floteyn — whale-spit / whale shoals) · **Dragon's Reach** — vessel-arrival and crash-site detail.
-**Where.** [lore/geography.md](../lore/geography.md) — per-domain entries.
+### [Geography] Sub-regions: government, living culture, named institutions *(rolling)*
+**Decided.** Every sub-region exists in canon with a placed location, an etymology, and (usually) a one-line character. A handful have been promoted to full canon with their own pages or extensive lore entries (**Myrria, Emarrea, Crossroads, Lost Kingdom, Order of Steam, Dragon's Reach, Thousand Kingdom, Emerald Isles, Legea Empire, Lograth, Fenurra**) and those carry government, named figures, districts, daily life. Everything else (the majority) is still a bullet point.
+**Open.** Bring the rest closer to the promoted-tier baseline along these axes:
+- **Government / ruling structure.** Who rules, by what claim (bloodline, election, divine mandate, council, theocracy, none), and how the seat passes.
+- **Daily living culture.** What people eat, wear, sing about, get drunk on; what the streets smell like; what a market morning looks like; what the regional vice is.
+- **Named institutions.** A temple, a guild branch, a notable inn or trade-house, a court, a school; the kind of place a party would actually go.
+- **Named figures.** At least one current ruler/seat-holder/notable, named per the noble-naming or commoner-three-name registers as appropriate.
+- **Demographics.** Ancestry mix (cross-ref bestiary distribution table), population scale, who came when.
+- **Relationship to the domain's god.** Devout, indifferent, syncretic, hostile; whether the church has a presence.
+- **Relationship to neighbours.** Trade, friction, treaty, ignorance.
+
+**Concrete starter list** (thin one-liners with no flesh yet, ordered roughly by story-leverage):
+- **Earth Realm** (Brauogi). Sarrum's central sub-region, almost certainly the breadbasket-of-the-breadbasket; needs a name beyond the working English label, ruling houses, the agricultural-noble structure.
+- **The Red Dominion** (Sumendar). Coastal, fronting Burdineyja; tonal handle is open (martial? mercantile? volcanic-coast frontier?).
+- **Haraour Eliza** (Sumendar). *Eliza* is Basque "church"; framed as religious/institutional, no actual institution yet.
+- **Namur Republic** (Zuzental). A *republic* in Forseti's domain is its own statement; needs the constitutional shape, the assembly, the named officials.
+- **Order of Law** (Zuzental). Name implies a sworn order, not a kingdom; relationship to Forseti's clergy and to the Thousand Kingdom is the live question.
+- **Kaosadaemi Principality** (Nashavel). A *principality* in the Chaos domain is a deliberate contradiction; who is the prince, how do they hold the seat in Vesuna's country.
+- **Argia Esfera** (Egulon). Light-domain sub-region; named institutions, the relationship to Iro's church and Ljosarn.
+- **Hareaveldi** (Lioaru). Fully inside Lioaru, partial independent identity, predates Tani's influence; an old-stratum culture-pocket waiting on detail.
+- **Galdua Jendea** (Lioaru). Houses Denbora and the sand-whale roaming-range; the ground-level life of people whose capital is mobile is its own design problem.
+- **Gotorlekua** (Brauogi). Houses Lurrath; standard god-city-state-region pattern, needs the everyday around the divine seat.
+- **Azkataria** (Lautara). Houses Merkavar on its interior lake; the merchant-feeder regions of the Market City are unwritten.
+- **Twin Suns** (Lautara). Blocked on the phenomenon-of-origin thread (§Needs writing); flesh-out follows the naming.
+- **Star Island** (Askamira). Small star-shaped island in Midarra; tonal handle and government open.
+- **Fellibylur** (Vindul). High lone peak; settlement at all? monastic outpost? uninhabited landmark?
+- **Balatur Erui** (Floteyn). Whale-shoals sub-region holding Balaena; the *other* islands of this archipelago.
+- **Baerfrost** (Vindul). Arctic coast; the people who live this far north and what their winter looks like.
+- **Haizetsua** (Vindul). The great western island; mountain-range interior, a separate-from-the-mainland identity.
+- **Air Monastery** (Vindul). Autonomous fortified enclave; the order's name, its founding, what they actually train.
+- **The Dreaming Cape** (Brauogi). Name implies a specific phenomenon; what dreams, whose dreams, why this coast.
+- **Rika Tikur** (Brauogi). Independent coastal city west of Millhaven; etymology and full canon both open. (Likely best paired with the Millhaven re-introduction thread.)
+- **The Wildreach** (Brauogi/Ezkudon border). *The wild-touched live here* is the one-line; what that means in practice is open.
+- **Three Pines** (Myrkono). Five-island collection; the only Myrkono sub-region not built around a Wardstone, needs its own identity.
+- **Burdineyja** (Sumendar). Iron Islands off the Red Dominion; volcanic-metal-working character implied but unwritten.
+- **Lost Isle** (Lioaru). Lower-intensity Blackened-Lands cousin offshore; what survives there.
+
+**Approach.** No batch pass; this is rolling work. Pick one when its domain page is being touched, or when a story needs a setting that lands in that sub-region. The promoted tier (Myrria, Thousand Kingdom, etc.) is the ceiling; most of these probably want to land somewhere between *one-line bullet* and *Crossroads-scale section in the domain page*, not full dedicated pages. Promotion to its own file follows enough content earning it, not the other way around.
+
+**Related: god city-states.** The eleven unpromoted Bound-god city-states (Haizava · Merkavar · Uravel · Eldara · Denbora · Lurrath · Thekkavar · Ljosarn · Lograth · Nahaskel · Veidrath · Frae City) sit on this same gap. They each have a name, a byname, and one or two cultural details, but their districts, named figures, institutions, daily-life texture, and faith/politics specifics are unwritten. They're tracked separately in *[Geography] Other god city-state pages, content maturation* below because they're a coherent set with a shared promotion-pattern (Myrria is the template). When you flesh out a sub-region that houses a city-state (**Gotorlekua/Lurrath**, **Galdua Jendea/Denbora**, **Azkataria/Merkavar**, **No Man's Land/Eldara**, etc.) pull from both threads at once.
+
+**Where.** [lore/geography.md](../lore/geography.md), per-domain *Sub-regions* lists; [lore/cultures.md](../lore/cultures.md) for the living-culture axes; [lore/glossary.md](../lore/glossary.md) for any new coined names that come up along the way.
 
 ### [Factions] Emarrea–Lautara political relationship
 **Decided.** Emarrea sits inside Lautara (Commerce / Jianna) but is politically self-governing under the Heartcourt.
@@ -240,6 +320,19 @@ Items where the world has decided *what* but not *much* — placements and struc
 **Decided.** Seven Wardstones placed; only the Divine Wardstone's host city (Myrria) is named. The other six host cities are tagged by terrain only: Lakeside, Steppes, Forest, Temple, Monastery, Port.
 **Open.** Names for the six remaining host cities. Once named, each can become its own settlement page linked from `the-binding.html`.
 **Where.** [the-binding.html](../talan/the-binding.html); [lore/secret-history.md](../lore/secret-history.md) — *The Seven Wardstones*.
+
+### [Factions] God Church individual pages, promotion from the umbrella *(rolling)*
+**Decided.** [god-churches.html](../talan/factions/god-churches.html) is the umbrella entry for the thirteen bound-god churches. The Adventurers' Guild's promotion pattern is the template: stay on the umbrella until content earns a dedicated page, then promote with its own file at `/talan/factions/<church-slug>.html`. Each god has a sketch of clergy/worship presence on [grand-gods.html](../grand-gods.html) and their domain page; that's the baseline. The Faith of Many Faces (Araphel's three-rite clergy on the [Myrria page](../talan/domains/myrkono/myrria/myrria.html)) is the only one with substantial in-canon institutional detail so far.
+**Open.** Each church needs the institutional shape; most don't have it yet.
+- **Clergy ranks and titles.** What a Fisaya cleric calls themselves at each rung; how Forseti's judges differ from Forseti's lay priests; whether Jianna's church even uses clerics or operates as a guild-of-priests.
+- **Doctrine specifics.** The church's actual teachings beyond *the god's portfolio*. What a Sarrum sermon says about a bad harvest. What an Iro homily warns against. What Vesuna's clergy do *during* worship (chaos-rite practice is its own design problem).
+- **Holy sites.** Beyond the god's city-state, where the church builds. Major temples, pilgrimage routes, hidden chapels.
+- **Named officials.** At least one named high-clergyperson per church, by domain.
+- **Internal politics.** The Council of Thirteen represents the gods themselves; the churches presumably have their own inter-church politics on the Material Plane. The Iro-vs-Drambur wound (Iro's GM Secret) implies a current operational tension between Iro's clergy and any institution that runs into former-Sun-Champion lineage.
+- **Relationship to the Council of Thirteen.** Clergies presumably advocate for their god at the Council. Whether they have formal representation or whether the god speaks for themselves at the Frae City venue is open.
+- **The non-bound church question.** Separately from the bound thirteen, the Divine Faith of the Legea Empire is a non-bound god's church; whether *its* page lands here or under a separate Faiths taxonomy is its own organisational call.
+**Approach.** Rolling. Promote a church when a story needs it, or when its god gets a deep-dive (a per-god GM Secret unlock often surfaces church material naturally; Iro's already has Drambur-as-fallen-Sun-Champion lore that would land cleanly on an Iro Church page). The promotion pattern matches the sub-region and god-city-state threads: domain pages and grand-gods.html carry the umbrella detail; full pages follow content.
+**Where.** [lore/factions.md](../lore/factions.md), *God Churches* section is the natural anchor; [lore/gods.md](../lore/gods.md), per-god clerical-grant fields for the doctrinal core; future per-church files at `/talan/factions/<church-slug>.html`.
 
 ### [Geography] Other god city-state pages — content maturation
 **Decided.** Eleven god city-states remain unpromoted to dedicated pages: **Haizava** (Vindul · Shifting City) · **Merkavar** (Lautara · Market City) · **Uravel** (Floteyn · Floating Isles) · **Eldara** (Sumendar · Forge City) · **Denbora** (Lioaru · Threefold City, built on sand-whales) · **Lurrath** (Brauogi · Steadfast City) · **Thekkavar** (Ezkudon · City of Learning) · **Ljosarn** (Egulon · Everbright City) · **Lograth** (Zuzental · Judgment City) · **Nahaskel** (Nashavel · Unmapped City) · **Veidrath** (Ehizahar · Hunting City) · **Frae City** (Askamira · the Free City). Each has a name, byname, and one or two cultural details on `grand-gods.html` and the parent domain page.

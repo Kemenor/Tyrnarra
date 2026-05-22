@@ -466,6 +466,22 @@ Quick reference. Full prose in `bestiary.md` — *Versatile Heritages*; system-s
 - **The Blightfather** — folk title for the Corrupted God; same referent, mortal-mouthed as if it were a personal deity. Interchangeable with *Corrupted God* and *Maw Below* in published prose; lore reference favours *Corrupted God*.
 - **The Counting of Years** — mortal name for the post-binding calendar (MR). Mortals often credit the Corrupted God's binding as its origin, but the calendar actually pivots on the Week of Crimson Rain.
 
+### The Compact of the Bound Thirteen (post-Week of Crimson Rain cosmology)
+
+Full text and structure in `cosmology.md`, *The Gods' Law: The Compact of the Bound Thirteen*.
+
+- **The Gods' Law.** Modern English, mortal-mouth name. The most common name for the body of binding sworn at the close of the Week of Crimson Rain.
+- **The Compact.** Modern English, scholarly register. The formal name; used by chroniclers and clergy when writing about the binding as a document.
+- **The Thirteen Articles.** Modern English. Chronicler designation when the binding is enumerated article-by-article rather than treated as a single body of law.
+- **Sanctioned Exchanges.** Modern English. The catalog of canonical exchange-forms permitted under Articles 2 through 5. Four named forms in current canon: **The Clergy Bond** (lifetime worship → continuous grants), **The Knight's Oath** (lifetime service in arms → martial grants; the paladin form), **The Common Blessing** (defined rite + offering → defined favour), **The Lifetime Covenant** (lifetime devotion of a specific kind → bespoke grant; Araphel's second-chance bond is the model). The catalog is open.
+- **Anathema.** Modern English, ecclesiastical. The named acts whose commission by a cleric breaks the covenant of Article 5 and frees their god from the binding. Every church codifies its own list so the line is legible in advance.
+- **The binding within the binding.** Chronicler phrase for Article 13, the recursive article that sworn each signatory to enforce the Compact against any other signatory who would violate it.
+
+#### Voices on the Compact
+
+- **Golivander.** Pre-rule existing name (Thomas's prior worldbuilding, predates the naming convention). Traveling scholar; author of *A Traveller's Guide to Tyrnarra*, which is the chronicler-tier work most often quoted when mortals write about the Compact in plain language.
+- **Jeanne Pintos.** Pre-rule existing name (Thomas's prior worldbuilding, predates the naming convention). Talanese natural philosopher; author of *You're not flying, you're falling upwards*, the in-world treatise on the laws of physics and magic that Golivander cites as the model for treating the Gods' Law as physics-not-rule.
+
 ### The Binding Apparatus (post-Week of Crimson Rain cosmology)
 
 Full lore in `secret-history.md`.

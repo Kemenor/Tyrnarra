@@ -8,17 +8,19 @@ What actually happened, behind what mortals are told. The Week of Crimson Rain a
 
 ## The Week of Crimson Rain — The True Account
 
+**The name and the duration.** Mortals remember it as a week; *the Week of Crimson Rain* is the name the chronicle preserved. The truth is that the conflict extended over **several years.** The blood-coloured rains that gave the period its mortal name fell at intervals across that span, in places where divine deaths concentrated; chroniclers compressed the imagery into a single intense episode because the truth of years of god-war was both too large for any one chronicle to hold and too dangerous to record. The bound thirteen do not correct the folk-record. The name is wrong about the timing, right about the colour, and useful as it is.
+
 **What started it:** The killing of Tani — a feat that had never been accomplished before. A Grand God had been slain. **Her killers were the ascended ruling class of the Storveldi Denbora** (see below) — a mortal civilisation whose elite had self-elevated en masse to Demi-God status by belief-and-power accumulation, with two of their sovereigns ascending further to Minor God status by systematic shard recovery. With that concentration of mortal-derived divinity, they did what no other mortal civilisation had ever organised the scale to do: they killed a Grand God.
 
-The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war. Not a border dispute or a political conflict — genuine all-out war, hundreds of gods and countless mortals dying. The greatest conflict Talan has ever seen.
+The remaining eleven Grand Gods, now understanding that they were not untouchable, went to war. Not a border dispute or a political conflict — genuine all-out war, hundreds of gods and countless mortals dying, fought across the Material Plane and through Feyworld and Shadowplane, with the surviving Grand Gods hunting one another and the lesser pantheons into their own sanctums across Layer 1 and Layer 3 when the Material was no longer enough to contain them. The greatest conflict Talan has ever seen.
 
 **Cronus's role:** A mortal man. He hated it. He began uniting mortal survivors under one banner — and because belief is real, the act of thousands rallying to him began making him more than mortal. He led armies, fought gods directly, and began making alliances with gods who were also tired of the slaughter.
 
 **Araphel:** The first Grand God to stand behind Cronus. A Grand God — one of the original creators — backing a mortal man. Araphel was tired of it: the blood, the prayers of the desperate in darkness, the despair haunting every shadow. He chose Cronus.
 
-**How it ended:** Cronus united all eleven remaining Grand Gods under him. With Tani's rebirth — she came back — they forged the Gods' Law together. The Law, once established, banished all divine and powerful beings from the Material Plane unless they accepted its binding. Those who refused or were deemed too dangerous were driven to the other planes (Prelife or Postlife). Those who chose to remain accepted the binding. Only thirteen did.
+**How it ended:** Cronus united all eleven remaining Grand Gods under him. With Tani's rebirth (she came back) they forged the Gods' Law together: the thirteen sworn Articles and their enforcement architecture, the body of binding that has held the bound thirteen as physics-on-a-divine-scale for two and a half millennia. (Full text and structure in `cosmology.md`, *The Gods' Law: The Compact of the Bound Thirteen*.) The Compact, once established, banished all divine and powerful beings from the Material Plane unless they accepted its binding. Those who refused or were deemed too dangerous were driven to the other planes (Prelife or Postlife). Those who chose to remain accepted the binding. Only thirteen did.
 
-**Why the thirteen?** More could have stayed — the Law doesn't cap the number. But virtually no god was willing to be bound. The thirteen who stayed did so by choice.
+**Why the thirteen?** More could have stayed — the Compact doesn't cap the number. But virtually no god was willing to be bound. The thirteen who stayed did so by choice.
 
 ---
 
@@ -28,6 +30,7 @@ The remaining eleven Grand Gods, now understanding that they were not untouchabl
 - He elevated through a combination of: (1) massive collective belief from uniting mortal civilization, (2) fighting gods on the battlefield, (3) political alliances, (4) the specific mechanism of the Gods' Law — when the twelve accepted the compact, **each gave him a shard of their power**, making him the Law's anchor. He is not just "one of them" — he is held together by all twelve. The Gods' Law runs through him.
 - **The twelve know.** They were there. They chose this. The secret holds because none of them have chosen to break it.
 - His clergy do not know. His worshippers do not know. Scholars have come close twice. Both times the work was quietly buried.
+- **His mortal name is canon-pending.** *Cronus* is the post-ascension name, taken when the twelve gave him their shards and he became the Law's anchor. The man he was before that name was born of some Talanese mortal line, raised in some village now forgotten, fighting under whatever name his parents gave him through the years of the war. The name is in the archives no scholar reads; the bound twelve all know it and have not spoken it in two and a half millennia. Designing the mortal name is an open thread; see `docs/open-threads.md`.
 
 ---
 
