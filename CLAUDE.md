@@ -68,6 +68,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     site-inventory.md                  ← canonical roster of every page + publish status
     sidebar-nav.md                     ← architecture notes on shared sidebar + assets
     open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
+    accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
+    card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
 
   CLAUDE.md · README.md · CNAME · serve.bat / serve.sh
 ```
@@ -98,6 +100,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 - **Dark mode only.** All pages assume a dark background.
 - **Mobile responsive.** Pages use `@media (max-width: 600px)` breakpoints — match this.
 - **Accent colours must clear 3:1 contrast** against `--bg`. New `--domain-accent` values (and any colour used as a card stripe, border, or load-bearing graphic) need to pass the graphic-contrast floor — moody-dark is fine, invisible isn't. See [`docs/accessibility.md`](docs/accessibility.md) for the PowerShell check and the rest of the WCAG 2.1 AA contract (focus styles, aria-expanded on toggles, glyph + label not colour alone).
+- **Clickable cards are whole-card links and end their title with ` →`.** If a card links somewhere, the entire card is the `<a>`; the title text carries a trailing arrow. Cards with no destination stay as `<div>` with no arrow. Inner anchors inside a clickable card's body are forbidden (use plain `<b>` instead). Full spec, reference implementations, and pitfalls in [`docs/card-conventions.md`](docs/card-conventions.md).
 - **No build step.** Open in a local server, it just works. (See README.md for the local server.)
 - **Tone in copy:** specific over generic. Small concrete details (the smell, the named NPCs, the inside-joke aside) over abstract worldbuilding.
 
