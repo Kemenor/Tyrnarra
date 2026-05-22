@@ -2,17 +2,19 @@
 
 How cards behave on the site. Read this before adding a new card type or making a card clickable.
 
-The site uses cards heavily (domain cards, sub-region cards, ancestry cards, continent cards, the Nine Generals cards on the-binding.html, the historical-civilisation hub cards, etc.). They split into two camps: **plain** and **clickable**. Each camp has a strict convention so the affordance reads the same everywhere on the site.
+The site uses cards heavily (domain cards, sub-region cards, ancestry cards, continent cards, god cards, the Nine Generals cards on the-binding.html, the historical-civilisation hub cards, etc.). They split into three camps: **plain**, **clickable** (navigates to another page), and **expandable** (reveals more content in place). Each camp has a strict convention so the affordance reads the same everywhere on the site.
 
 ---
 
-## The rule
+## The rules
 
 > **If a card links somewhere, the entire card is the link, and the card's title ends with ` →`.**
 >
-> If a card does not link anywhere, the card is a `<div>` with no arrow and no hover-lift.
+> **If a card expands in place, it carries a `Tap ▾` pill in its header.**
+>
+> If a card does neither, it is a `<div>` with no arrow, no pill, no hover-lift.
 
-Both conventions are non-negotiable for new cards. Mixed-state cards (links inside an otherwise-plain card body) are not allowed: see *Inner anchors* below.
+All three conventions are non-negotiable for new cards. Mixed-state cards (links inside an otherwise-plain card body) are not allowed: see *Inner anchors* below.
 
 ---
 
@@ -47,6 +49,43 @@ The title's trailing `→` is part of the text content, not a CSS pseudo-element
 - **Historical civilisation cards on historical.html** ([`/talan/historical/historical.html`](../talan/historical/historical.html)): three `<a class="subregion-card">` cards (Golden Empire, Storveldi Denbora, Elden).
 - **Continent cards on talan.html** Other Continents section: Sortalde and the Red Empire continent are `<a class="accent-card framed is-link continent-card">`; the *Unmapped* placeholder is a plain `<div>`.
 - **The Vermin Queen card on the-binding.html** ([`/talan/the-binding.html`](../talan/the-binding.html)): the only General with a sited dungeon page, so the only one of nine that's clickable. Pattern: `<a class="accent-card framed general-card is-link">` linking to the Hollow.
+
+---
+
+## Expandable card pattern
+
+For cards that reveal more content in place when clicked (rather than navigating to another page), use the `expand-hint` pill in the card's header row:
+
+```html
+<div class="<flavour>-card" onclick="toggleCard(event, this)">
+  <div class="card-top">
+    <!-- title, subtitle, etc. -->
+    <div class="expand-hint">Tap ▾</div>
+  </div>
+  <div class="card-summary">Always-visible summary text.</div>
+  <div class="card-expanded">
+    <!-- revealed content -->
+  </div>
+</div>
+```
+
+Styling (from [`/assets/style-a.css`](../assets/style-a.css) `.expand-hint`):
+
+- Small Cinzel uppercase text in a thin gold-bordered pill.
+- Brightens on card hover.
+- Hidden once the card is in the expanded state (`.<card>.expanded .expand-hint { display: none }`).
+
+The pill is the universal affordance for *click me to reveal more*. Don't replace it with a chevron-only or text-only variant; the bordered pill is what makes it visible against the moody Style-A background.
+
+### Reference implementations
+
+- **God cards on grand-gods.html** ([`/grand-gods.html`](../grand-gods.html)): each of the 13 gods. The pill sits in the top-right of the card header alongside the orb and title block, and disappears when the card is expanded.
+
+### When to use the expand pill
+
+- The card has a default-collapsed body that opens in place. Use the pill.
+- The card is a button-style toggle (the `.legend-era-toggle` / `.secret-era-toggle` ◈ / ⚿ buttons on history.html and the rest of Style B): the glyph + label already carry the affordance, no pill needed.
+- The card navigates instead of expanding: use the ` →` arrow in the title, not the pill.
 
 ---
 
@@ -119,7 +158,8 @@ If the destination is unwritten, leave the card as `<div>`. Promote it to `<a>` 
 Before shipping a page with cards:
 
 1. Every `<a class="...card...">` ends its title with ` →`.
-2. No `<a>` tag appears inside any other `<a>` tag.
-3. Every clickable card uses `is-link` (or `a.accent-card`, which has the same display-block reset).
-4. Plain `<div class="...card...">` cards have no `→` and no `is-link`.
-5. Per-card `--card-accent` accent stripe survives hover (test by hovering — the left stripe should not change colour).
+2. Every expandable card carries a `Tap ▾` pill (`.expand-hint`) in its header row.
+3. No `<a>` tag appears inside any other `<a>` tag.
+4. Every clickable card uses `is-link` (or `a.accent-card`, which has the same display-block reset).
+5. Plain `<div class="...card...">` cards have no `→`, no pill, and no `is-link`.
+6. Per-card `--card-accent` accent stripe survives hover (test by hovering — the left stripe should not change colour).
