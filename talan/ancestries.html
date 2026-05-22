@@ -41,11 +41,11 @@
   .pointer-cta { display: inline-block; margin-top: 10px; font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,144,10,0.4); padding: 6px 12px; border-radius: 2px; }
   .pointer-cta:hover { background: rgba(200,144,10,0.1); }
 
-  /* Domain detail cards, denser than subregion cards, no link transform */
+  /* Domain detail cards. Whole-card clickable (uses .is-link from style-b.css). */
   .ancestry-card { padding: 14px 16px 12px; border-radius: 3px; --card-bg: rgba(20,16,8,0.42); --card-outline: rgba(200,144,10,0.18); }
-  .ancestry-card-title { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 4px; }
-  .ancestry-card-title a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(200,144,10,0.3); }
-  .ancestry-card-title a:hover { color: #fff; border-color: rgba(200,144,10,0.7); }
+  .ancestry-card.is-link:hover { background: rgba(28,22,12,0.55); }
+  .ancestry-card.is-link:hover .ancestry-card-title { color: #fff; }
+  .ancestry-card-title { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.14em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 4px; transition: color 0.15s ease; }
   .ancestry-card-god { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.78rem; color: var(--parch-dim); margin-bottom: 8px; }
   .ancestry-card-body { font-size: 0.9rem; line-height: 1.55; color: var(--text); }
   .ancestry-card-body p { margin: 4px 0; }
@@ -138,36 +138,36 @@
 
   <div class="subregion-grid">
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#f0c040;">
-      <div class="ancestry-card-title"><a href="/talan/domains/egulon/egulon.html">Egulon · Light</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/egulon/egulon.html" style="--card-accent:#f0c040;">
+      <div class="ancestry-card-title">Egulon · Light →</div>
       <div class="ancestry-card-god">Iro · sun-and-radiance</div>
       <div class="ancestry-card-body">
         <p><span class="label">Nagaji</span> Iro's most fervent worshippers, the public face of his church, almost zealous in their certainty.</p>
         <p><span class="label">Shoony</span> Every dog-shaped people lives among the Shoony; loyal and devoted, aligned with the Nagaji-led religious life.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#6a5a8a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/myrkono/myrkono.html">Myrkono · Darkness</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/myrkono/myrkono.html" style="--card-accent:#6a5a8a;">
+      <div class="ancestry-card-title">Myrkono · Darkness →</div>
       <div class="ancestry-card-god">Araphel · new faces, second chances</div>
       <div class="ancestry-card-body">
-        <p><span class="label">Fetchling</span> Dominant ancestry of Myrkono. Remnants of a civilisation that sought refuge in the region of Darkness and found it; most live in <a href="/talan/domains/myrkono/myrria/myrria.html">Myrria</a>.</p>
+        <p><span class="label">Fetchling</span> Dominant ancestry of Myrkono. Remnants of a civilisation that sought refuge in the region of Darkness and found it; most live in <b>Myrria</b>.</p>
         <p><span class="label">Centaur (Shadow Steppes)</span> Smaller herds than their Villtur cousins, more nocturnal, more theologically inflected.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#c84020;">
-      <div class="ancestry-card-title"><a href="/talan/domains/sumendar/sumendar.html">Sumendar · Fire</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/sumendar/sumendar.html" style="--card-accent:#c84020;">
+      <div class="ancestry-card-title">Sumendar · Fire →</div>
       <div class="ancestry-card-god">Komo · forge, flame, invention</div>
       <div class="ancestry-card-body">
         <p><span class="label">Dragons</span> An <b>alien race</b>; their mothership crash-landed in the Gods' Era. Capital at Dragon's Reach. Modern goal: <i>purity</i>: recovering their pre-corruption nature.</p>
-        <p><span class="label">Dwarf</span> Two cultures: <i>New Age</i> in the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>, and <i>Sentinel</i> deep in the upper Darklands.</p>
+        <p><span class="label">Dwarf</span> Two cultures: <i>New Age</i> in the <b>Order of Steam</b>, and <i>Sentinel</i> deep in the upper Darklands.</p>
         <p><span class="label">Kobold</span> Genius chaotic inventors who don't care about safety. Komo himself is depicted as a kobold.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#4a8ab0;">
-      <div class="ancestry-card-title"><a href="/talan/domains/floteyn/floteyn.html">Floteyn · Water</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/floteyn/floteyn.html" style="--card-accent:#4a8ab0;">
+      <div class="ancestry-card-title">Floteyn · Water →</div>
       <div class="ancestry-card-god">Shuun · sea, spray, drifting isles</div>
       <div class="ancestry-card-body">
         <p><span class="label">Strix</span> Flight suits the islet-archipelago life. Suspect almost everywhere else.</p>
@@ -175,49 +175,49 @@
         <p><span class="label">Athamaru</span> Seal-folk of the Drifting Islands and the Hafra coast; amphibious by habit.</p>
         <p><span class="label">Merfolk</span> Coastal and Hafra waters; a small freshwater pod lives in Midarra with informal Twin Cities alliance.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#7a9a3a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/brauogi/brauogi.html">Brauogi · Earth</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/brauogi/brauogi.html" style="--card-accent:#7a9a3a;">
+      <div class="ancestry-card-title">Brauogi · Earth →</div>
       <div class="ancestry-card-god">Sarrum · stone, soil, patience</div>
       <div class="ancestry-card-body">
         <p><span class="label">Hobgoblin &amp; Goblin</span> Share the Goblin &amp; Hobgoblin Kingdom, the major political sub-region of Brauogi.</p>
         <p><span class="label">Minotaur</span> Sarrum is depicted as a Minotaur. Immovable, patient, slow to forgive; excellent stonecutters and contract negotiators.</p>
         <p><i>Brauogi's three-way is cooperative, the Earth ancestries trade rather than feud.</i></p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#88aacf;">
-      <div class="ancestry-card-title"><a href="/talan/domains/vindul/vindul.html">Vindul · Wind</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/vindul/vindul.html" style="--card-accent:#88aacf;">
+      <div class="ancestry-card-title">Vindul · Wind →</div>
       <div class="ancestry-card-god">Fisaya · sky, storm, monastery</div>
       <div class="ancestry-card-body">
         <p><span class="label">Kashrishi</span> Secular by inclination, theology private, civic life public. Inverse of Egulon's zeal.</p>
         <p><span class="label">Tengu</span> Often become Monks; Vindul's mountain monasticism produces a steady stream of wanderers.</p>
         <p><span class="label">Jotunborn (Baerfrost)</span> Frost-adapted, cold-hardy, often nomadic; the largest stable population on Talan.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#b07a3a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/lioaru/lioaru.html">Lioaru · Time</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/lioaru/lioaru.html" style="--card-accent:#b07a3a;">
+      <div class="ancestry-card-title">Lioaru · Time →</div>
       <div class="ancestry-card-god">Tani · slow currents, vigilance</div>
       <div class="ancestry-card-body">
-        <p><span class="label">Ghoran</span> "Guardians of Time", explicitly aligned with Tani's domain; many warden the temporally unstable sites along the <a href="/talan/domains/lioaru/lost-kingdom.html">Lost Kingdom</a> border.</p>
+        <p><span class="label">Ghoran</span> "Guardians of Time", explicitly aligned with Tani's domain; many warden the temporally unstable sites along the <b>Lost Kingdom</b> border.</p>
         <p><span class="label">Azarketi</span> Cluster on Lioaru's southern coast and the islands offshore of the Lost Kingdom. Inherited folklore still claims <i>Elden blood</i>: a long-distorted memory.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#8aa090;">
-      <div class="ancestry-card-title"><a href="/talan/domains/zuzental/zuzental.html">Zuzental · Law</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/zuzental/zuzental.html" style="--card-accent:#8aa090;">
+      <div class="ancestry-card-title">Zuzental · Law →</div>
       <div class="ancestry-card-god">Forseti · contract, custody, order</div>
       <div class="ancestry-card-body">
         <p><span class="label">Elf</span> Politically motivated and <i>long-planning</i>: moves on generational timescales. One of the two ruling bloodlines of the Thousand Kingdom.</p>
         <p><span class="label">Human</span> Politically motivated and <i>short-planning</i>: moves fast, takes risks, burns through cycles. The other ruling bloodline.</p>
         <p><i>The interplay between elven slow and human fast is what gives the Thousand Kingdom its volatility, and its longevity.</i></p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#8a4a2a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/ehizahar/ehizahar.html">Ehizahar · Hunt</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/ehizahar/ehizahar.html" style="--card-accent:#8a4a2a;">
+      <div class="ancestry-card-title">Ehizahar · Hunt →</div>
       <div class="ancestry-card-god">Hinka · pursuit, blood-token, pack</div>
       <div class="ancestry-card-body">
         <p>The four-way of the <b>Lands of Villtur</b>: Orc, Kholo, Lizardfolk, Centaur, intermix and feud along recognisable patterns.</p>
@@ -226,44 +226,44 @@
         <p><span class="label">Lizardfolk</span> Most strategic, slower to start, more patient in pursuit, more deliberate at the kill.</p>
         <p><span class="label">Centaur (Villtur)</span> The largest centaur population on Talan; tribal and hunt-aligned.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#d4a04a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/lautara/lautara.html">Lautara · Commerce</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/lautara/lautara.html" style="--card-accent:#d4a04a;">
+      <div class="ancestry-card-title">Lautara · Commerce →</div>
       <div class="ancestry-card-god">Jianna · road, market, contract-of-trust</div>
       <div class="ancestry-card-body">
         <p><span class="label">Halfling</span> Wanderlust-driven; the call of <i>the next market</i> is doctrinally central. Lautara is home to more halflings than any other domain.</p>
         <p><span class="label">Vishkanya</span> Community-keeping and creative-pursuing; well-represented in artisan-merchant guilds. Jianna herself is depicted as a vishkanya.</p>
-        <p><span class="label">Kitsune</span> The third people of Lautara's heartland, concentrated in <a href="/talan/domains/lautara/emarrea.html">Emarrea</a>, the kitsune kingdom in Lautara's forested eastern highlands.</p>
+        <p><span class="label">Kitsune</span> The third people of Lautara's heartland, concentrated in <b>Emarrea</b>, the kitsune kingdom in Lautara's forested eastern highlands.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#5a7a8a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/ezkudon/ezkudon.html">Ezkudon · Knowledge</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/ezkudon/ezkudon.html" style="--card-accent:#5a7a8a;">
+      <div class="ancestry-card-title">Ezkudon · Knowledge →</div>
       <div class="ancestry-card-god">Enki · archive, negotiation, secret-keeping</div>
       <div class="ancestry-card-body">
         <p><span class="label">Catfolk</span> Curious; over-represented in the scholar-caste and archive-keeper professions. Enki is depicted as a black-haired catfolk.</p>
         <p><span class="label">Shisk</span> Hunters of esoteric knowledge: <i>shisk-curiosity</i> is a common warning given to junior novices.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#2a6a4a;">
-      <div class="ancestry-card-title"><a href="/talan/domains/nashavel/nashavel.html">Nashavel · Chaos</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/nashavel/nashavel.html" style="--card-accent:#2a6a4a;">
+      <div class="ancestry-card-title">Nashavel · Chaos →</div>
       <div class="ancestry-card-god">Vesuna · improvisation, free will, the Feyworld at the edges</div>
       <div class="ancestry-card-body">
         <p><span class="label">Gnome</span> Feyworld-native; long migrated into the Material Plane during the Gods' Era and after.</p>
         <p><span class="label">Vanara</span> Common in the <b>Basogur Jungle</b> straddling Nashavel and Ehizahar, one of the few cultures comfortable across two domains.</p>
         <p><span class="label">Conrasu · Anadi</span> Uncommon here, rare elsewhere. Matron Charna of the Spider's Silk Inn is Talan's most famous Anadi.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="accent-card outlined thin ancestry-card" style="--card-accent:#e8d8a8;">
-      <div class="ancestry-card-title"><a href="/talan/domains/askamira/askamira.html">Askamira · Freedom</a></div>
+    <a class="accent-card outlined thin ancestry-card is-link" href="/talan/domains/askamira/askamira.html" style="--card-accent:#e8d8a8;">
+      <div class="ancestry-card-title">Askamira · Freedom →</div>
       <div class="ancestry-card-god">Cronus · refusal, refuge, the open road</div>
       <div class="ancestry-card-body">
         <p><i>All ancestries equally.</i> Askamira holds no demographic majority by design, Cronus's domain is the one place on Talan where origin counts for nothing and the choice you arrive with counts for everything.</p>
       </div>
-    </div>
+    </a>
 
   </div>
 
