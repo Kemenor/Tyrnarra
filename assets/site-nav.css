@@ -175,3 +175,17 @@
 @media (max-width: 600px) {
   .site-nav { width: 86vw; }
 }
+
+/* ── KEYBOARD FOCUS (WCAG 2.4.7) ──────────────────────────────
+   Loaded by every page (Style A and Style B), so this is the
+   universal focus indicator for the site. Uses the gold accent
+   so the ring is visible on both the warm dark Style-B background
+   and the cool void Style-A background. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold-bright, var(--gold, #f0d080));
+  outline-offset: 2px;
+  border-radius: 2px;
+}

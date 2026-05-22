@@ -35,7 +35,27 @@
     var revealed = content.classList.toggle('revealed');
     var openLabel = btn.getAttribute('data-hide-label') || defaultOpenLabel;
     btn.innerHTML = revealed ? openLabel : btn.getAttribute('data-original');
+    /* Announce state to screen readers (WCAG 4.1.2 Name, Role, Value). */
+    btn.setAttribute('aria-expanded', revealed ? 'true' : 'false');
     return revealed;
+  }
+
+  /* Seed aria-expanded="false" on every reveal-toggle at load time, so
+     assistive tech reads correct state before the first interaction.
+     Also marks the paired content as a region for navigation. */
+  function initAria() {
+    var selectors = '.secret-toggle, .secret-era-toggle, .legend-era-toggle';
+    var btns = document.querySelectorAll(selectors);
+    for (var i = 0; i < btns.length; i++) {
+      if (!btns[i].hasAttribute('aria-expanded')) {
+        btns[i].setAttribute('aria-expanded', 'false');
+      }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAria);
+  } else {
+    initAria();
   }
 
   /* Default open-state labels can be overridden per-button via

@@ -944,7 +944,10 @@ a.accent-card {
   font-family: 'Cinzel', serif;
   font-size: 0.85rem;
   letter-spacing: 0.18em;
-  color: var(--domain-accent);
+  /* Fixed gold (6.9:1 on --bg) so the heading stays AA-readable even on
+     pages whose --domain-accent is intentionally moody/dark. The dashed
+     border above still carries the domain accent for visual flavour. */
+  color: var(--gold);
   text-transform: uppercase;
   margin: 0 0 6px;
 }
