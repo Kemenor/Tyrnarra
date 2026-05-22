@@ -29,7 +29,7 @@ The channel that cuts the city in two and carries souls into it.
 |---|---|---|
 | 1 | **Veyru** begins sinking into the Cloud Sea | Bottom terrace floods |
 | 2 | Veyru fully submerged | Terrace 2 floods |
-| 3 | **Calune** begins sinking | Terrace 3 floods |
+| 3 | **Unaru** begins sinking | Terrace 3 floods |
 | 4 | Both moons fully submerged | Top terrace floods — peak |
 | *Quiet* | Moons rise again the next night | Channel drains; terraces dry |
 

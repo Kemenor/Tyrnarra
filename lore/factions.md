@@ -144,6 +144,49 @@ The Guild's seat in Myrkono and the regional command for all Guild operations ac
 
 ---
 
+### The Voroir Daua
+
+**Character:** *As much worship as hunters, as much church as charter.* The Voroir Daua are simultaneously a religious order sworn to Epairima and a militant adventuring fraternity, the two roles fused. A Voroir Daua charter house functions as church, hall, and barracks at once.
+
+**Identity:** The mortal arm of **Epairima's cycle-warden order** (full canon in `gods.md`, *Epairima — The Judge of Souls, Warden of the Cycle*; etymology and Creation-Era founding in `glossary.md`, *The Voroir Daua*). Their charge: **hunt those who prolong life beyond their normal means.** Targets include necromancers building undead followings, lichdom-seekers, Storveldi-procedure aspirants, vampire-line lineages that have chosen to feed rather than die, and mortal scholars who cross into Betibizi's domain through fragmentary integration practice.
+
+**Origin:** The original Voroir Daua were Epairima's direct Layer-3 subordinates, postlife-born wardens who acted on the Life Layer through the Creation Era and the Gods' Era. After the Gods' Law closed the Life Layer to Layer-3 residents at the close of the Week of Crimson Rain, the Layer-3 form was sealed in Dauria. The mortal arm (Knights and Paladins drawn from the Life Layer's faithful) took up the office and has carried it ever since.
+
+**Scale:** **Smallish.** Not in every kingdom; not even close to universal coverage. Some kingdoms have a single charter; some have several; many have none. The order is older than any kingdom on Talan, but its mortal arm is patchwork by necessity: charters form where Epairima's faithful gather and have reason to stay, and they fold when the gathering disperses. The order operates wherever it exists, and waits where it does not.
+
+**Structure:** **Decentralised.** No central authority, no supreme leader, no headquarters, no continental council. Each charter is its own polity, communicating with the others by letter and visit but never deferring to any one of them.
+
+**Rank ladder (top to bottom):**
+- **Charter Leader.** Voted by the charter's members. The charter's voice and final-call on its operations. No authority outside its own charter.
+- **Veteran.** Those who have survived long enough to earn the title. **Honorific, not authoritative**: a Veteran carries the same operational standing as a Professional, but the room defers to their experience.
+- **Professional.** A full member of the order. Earned by completing one's **first major hunt** as a Greenear and surviving the experience. Most order members are Professionals their whole careers.
+- **Greenear.** New recruit. No hunts yet. Trains, supports senior members on their hunts, learns the cycle-doctrine and the order's craft. Promoted to Professional upon completion of a first major hunt.
+
+**Promotion mechanics:**
+- **Greenear to Professional:** completion of a first major hunt. The judgment of *what counts as major* belongs to the Charter Leader who sanctioned the hunt and the senior members who saw the work done. A successful first hunt is rarely the difference between living and dying; a botched first hunt frequently is.
+- **Professional to Veteran:** longevity. No formal threshold; the title is bestowed informally by the charter when the person has been around long enough that no one can remember when they joined. Many Professionals die before reaching Veteran. Some live to be elected Charter Leader without ever holding the Veteran title; some hold it for decades without ever being elected.
+- **Charter Leader:** elected by the charter's members. Can be a Professional, a Veteran, or (rarely) a particularly promising long-service Greenear if the charter is in a leadership crisis and trusts the candidate. Term is open-ended; the charter calls a new vote when the current Leader steps down, dies, or loses the room.
+
+**Inter-charter relations:** Charters communicate by sealed letter, by travelling Veterans, and by mutual visits during religious observances at Dauria-aligned shrines. There is no superior body. Disagreements between charters are resolved by direct correspondence; a charter that wants help from another charter requests it and may be refused. The closest the order comes to a continental body is the irregular **assembly of Charter Leaders** that convenes when a hunt outgrows a single charter's reach (the breach of a major necromantic cell, the surfacing of a previously-unknown vampire-line lineage). The assembly disperses when the hunt closes.
+
+**Worship:** The order's clergy-bond with Epairima is the spine of their identity. Daily observances honour the death-and-return cycle; weekly observances mark the named dead; high observances mark the anniversaries of major past hunts. Charter houses include a shrine to Epairima at the centre of the building, oriented toward Dauria (which has no fixed direction on the Material Plane and is approximated by individual charter custom). A Voroir Daua member who breaks the clergy-bond loses Epairima's grants and is expelled from the order.
+
+**PF2e class composition:** The most common classes among Voroir Daua members are **Alchemist, Champion, Cleric, Commander, Fighter, Investigator, Guardian, Magus, Ranger,** and **Thaumaturge**, plus **Druids** to a lesser degree (the Primal connection to the cycle resonates, even if Druid practice doesn't naturally call them to monster-hunting work). Other classes are welcome; these are simply the most-represented. Class composition varies by charter.
+
+**Relationship to the Adventurers' Guild:** **Cooperative.** The Voroir Daua are independent of the Guild and answer to no Guild rank, but the two organisations work together when the hunt and the Guild contract overlap. Voroir Daua charters are typically welcome at Guild offices; Guild parties occasionally hire Voroir Daua Veterans as specialist consultants on undeath-adjacent contracts. **The Voroir Daua offer expertise in hunting and killing monsters**, particularly undead, necromantically-touched, and cycle-breaking creatures. Where the Guild specialises in *generalist adventuring across the continent's many threats*, the Voroir Daua specialise in *the narrower brutal craft of ending what should have ended already.*
+
+**Relationship to Epairima's broader faithful:** Distinct. The funerary clergy and soul-routing priests across Talan worship Epairima but do not hunt; they keep the rites, oversee burials, and counsel the bereaved. The Voroir Daua draws from this larger faithful base but is a separate institution with a separate charge.
+
+**Geographic distribution:** Patchwork. Charters cluster where Epairima's worship is strongest and where the hunting work is most needed:
+- **Stronger presence:** the Thousand Kingdom (Forseti's domain, where the order's legalistic-warrior temperament resonates); Lograth area (proximity to Forseti's city and the cosmopolitan worship base); Myrkono (Araphel's domain has hidden undeath problems that the Voroir Daua quietly address); the Lost Kingdom edge (the Blackened Lands generate Skeletons and necromantic incidents at higher rate than anywhere else, and the order keeps a watch-station near the standing Guild warning).
+- **Thinner or absent:** Sortalde (entirely separate clerical substrate), the Red Empire (anti-deity, would expel any clerical order on principle), Dragon's Reach (also anti-deity), the deep Basogur Jungle (the chaos-magic terrain doesn't suit the order's operations).
+
+**Founding date (mortal arm):** Roughly as old as the Gods' Law itself (~2532 years; founded in the immediate post-Crimson-Rain reconstruction when the Layer-3 form was sealed and Epairima needed mortal hands to continue the office). Individual charter foundings vary; the oldest continuously-operating charter is canon-pending.
+
+**Open canon:** Specific charter locations and named figures, the oldest continuously-operating charter, named past hunts that have become order-history, the exact ritual contents of the daily / weekly / high observances, and the formal coordination mechanism (if any) with the Adventurers' Guild's standing warnings on the Blackened Lands and other necromantically-active sites are all canon-pending.
+
+---
+
 ### Remnants of Corruption
 
 **Character:** Threat, not an organisation. No unified leadership at the field level, no agenda beyond the original imperative — hunt and destroy mortal life. But the threat has *structure* above the field level: see *The Nine Generals of Corruption* below.
@@ -401,11 +444,11 @@ Strict caste structure, but the castes are **fluid** — rise and fall are const
 
 **Common patrons:** Mercenaries (the Mercenary Guild treats Crossroads as a major hub), merchants closing sensitive deals or hiring escort, informants and spies trading both ways, runaways and exiles waiting for the next leg of disappearance, and — rarely — Adventurers Guild members on the Guild's grey-area work who prefer not to be seen at their own posts.
 
-**Rumour and hook:**
-- A kingdom's missing emissary was last seen entering the Spider's Silk. He never left.
-- The silver silk may not just suppress and listen — it may **record**. No one has proven this.
-- Once in a generation Charna offers a guest **The Favor**. Those who accept rise to power with her unseen help. The price of having accepted is never named in advance.
-- A sealed upper room has been wrapped in silk for decades. No one but Charna is allowed near it. She has not explained.
+**What People Say:** Every long-running inn has its stories; the Spider's Silk has more than most, partly because Charna lets them propagate. None are confirmed; all are repeated.
+
+- **The silk may record.** The silver silk may not only suppress hostile magic and carry sound to Charna's platform; some claim it *records*, every conversation under the rafters held inside the thread itself, waiting to be drawn out. No one has proven this. The rumour persists because more than one negotiator has been quoted, years later, with phrasing they swear they used only once, only in the Spider's Silk.
+- **The Favor.** Once in a generation Charna offers a guest **The Favor**. The form varies: a quiet word at the bar, a silk-lowered note, a chamber granted free of charge. Those who accept rise to power afterward, with her unseen help. The price of having accepted is never named in advance. Those who decline are not punished, and not invited again.
+- **The sealed chamber.** On the topmost floor, behind a door no staff member uses, a single chamber has been wrapped in silk for decades, layer over layer, until the silk itself is the wall. No one but Charna is allowed near it. She has not explained, and the few patrons who have asked twice have not asked a third time.
 
 ---
 

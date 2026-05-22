@@ -12,7 +12,7 @@ How the world works: physical structure, divine mechanics, the Wellspring, magic
 - Above it, three celestial bodies turn in slow rhythm — a golden sun and two moons. Each rises from and sinks back into the Cloud Sea every cycle.
   - **Solyra** — the sun: a blazing disc of gold.
   - **Veyru** — the Red Moon: deep crimson; its light seems to shimmer faintly in motion.
-  - **Calune** — the Green Moon: pale jade, with marbled streaks that shift subtly across the seasons.
+  - **Unaru** — the Green Moon: pale jade, with marbled streaks that shift subtly across the seasons.
 - **Tyrnarra is the totality of what springs from this Wellspring** — the world, all nine planes, all souls, all gods, every being and place Wellspring-born is part of it. It is one cosmology, not one world among many of the same kind. Mortals colloquially use *Tyrnarra* for the world they live on (the same name at mortal scale); at the cosmological scale the term means *everything from this Wellspring*.
 - **Other realities exist in a multiversal sense** — alien cosmologies, separately constituted, fed by other sources or by nothing at all. They are not part of Tyrnarra, not subject to the Gods' Law, not reached by the Wellspring's outflow. Mortals on Talan have no practical contact with them; the bound gods have no jurisdiction within them. Outer entities have, very rarely, drifted across — the Vice Demon **Lethar** is the only canonically-recorded such arrival.
 
@@ -299,7 +299,7 @@ The destination of souls after death, where judgment and final dwelling are deci
 
 - **Transitional veil:** **The Duskmire** (*Shroud of Return*) — a twilight sea where the stars above are the lights of distant souls; souls destined to return to the Wellspring shed their memories here.
 - **Elysium** — the plane of **Good**: radiant realms ruled by benevolent gods, each in their own kingdom.
-- **Diyu** — the plane of **Balance and Judgment**: home to neutral gods (including **Bikiargi** the Twins of the Moon, **Zaharsuge** the Eldest of Wyrmkin, and **Epairima** the Judge of Souls — see `gods.md` — *Named Non-Bound Gods*) and to **Dauria**, the City of the Dead, where unclaimed souls are weighed at Epairima's court and routed onward — to their god, to the Wellspring, or rarely back to the layer above.
+- **Diyu** — the plane of **Balance and Judgment**: home to neutral gods (including **Bikiargi** the Twins of the Moon, **Zaharsuge** the Wyrm-Shepherd, and **Epairima** the Judge of Souls — see `gods.md` — *Named Non-Bound Gods*) and to **Dauria**, the City of the Dead, where unclaimed souls are weighed at Epairima's court and routed onward — to their god, to the Wellspring, or rarely back to the layer above.
 - **Abyss** — the plane of **Evil**: a vast nightmarish domain where gods of malice, devils, and demons rule. Named residents in canon include **Betibizi** the Self-Ascended (Undeath; see `gods.md` — *Named Non-Bound Gods*).
 
 ### The Nature of the Soul
