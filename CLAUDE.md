@@ -97,6 +97,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 - **Always use absolute paths in links** (starting with `/`). The sidebar uses absolute paths and so does cross-linking between pages.
 - **Dark mode only.** All pages assume a dark background.
 - **Mobile responsive.** Pages use `@media (max-width: 600px)` breakpoints — match this.
+- **Accent colours must clear 3:1 contrast** against `--bg`. New `--domain-accent` values (and any colour used as a card stripe, border, or load-bearing graphic) need to pass the graphic-contrast floor — moody-dark is fine, invisible isn't. See [`docs/accessibility.md`](docs/accessibility.md) for the PowerShell check and the rest of the WCAG 2.1 AA contract (focus styles, aria-expanded on toggles, glyph + label not colour alone).
 - **No build step.** Open in a local server, it just works. (See README.md for the local server.)
 - **Tone in copy:** specific over generic. Small concrete details (the smell, the named NPCs, the inside-joke aside) over abstract worldbuilding.
 
