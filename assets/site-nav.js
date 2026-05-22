@@ -174,6 +174,7 @@
       '    <ul class="nav-list">',
       '      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>',
       '      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>',
+      '      <li><a href="/talan/factions/voroir-daua.html"       data-page="voroir-daua">The Voroir Daua</a></li>',
       '      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>',
       '      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>',
       '    </ul>',

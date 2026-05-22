@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Voroir Daua · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root { --domain-accent: #8e7ab0; }
+
+  .rank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
+  .rank-card { padding: 14px 16px; --card-bg: rgba(24,18,32,0.55); }
+  .rank-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .rank-where { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 6px; }
+  .rank-desc { font-size: 0.9rem; color: var(--text); }
+  .r-leader   { --card-accent: #c0a8d8; }
+  .r-veteran  { --card-accent: #9e8ac0; }
+  .r-pro      { --card-accent: #7e6aa8; }
+  .r-green    { --card-accent: #6a5a90; }
+
+  .class-tag { display: inline-block; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; margin: 4px 6px 4px 0; background: rgba(142,122,176,0.15); border: 1px solid rgba(142,122,176,0.4); border-radius: 3px; color: var(--gold-bright); }
+  .class-tag.lesser { background: rgba(142,122,176,0.06); border-color: rgba(142,122,176,0.2); color: var(--gold-dim); }
+
+  .geo-card { padding: 14px 18px; margin: 12px auto; max-width: 1000px; --card-bg: rgba(24,18,32,0.5); }
+  .geo-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 8px; }
+  .geo-body { font-size: 0.92rem; color: var(--text); }
+  .geo-body ul { margin: 6px 0; padding-left: 22px; }
+  .geo-body li { margin-bottom: 6px; }
+  .geo-strong { --card-accent: #b298d0; }
+  .geo-thin   { --card-accent: #5a4870; }
+</style>
+</head>
+<body data-page="voroir-daua">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/factions/factions.html">Factions</a><span class="sep">›</span><span>The Voroir Daua</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Voroir Daua</div>
+    <div class="page-subtitle">Independent Organisation · Epairima's Cycle-Warden Order</div>
+    <div class="page-flavor"><i>As much worship as hunters, as much church as charter.</i></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Character</dt><dd>A religious order sworn to <a href="/non-bound-gods.html"><b>Epairima</b></a>, the Warden of the Cycle, and a militant adventuring fraternity. The two roles are fused. A charter house functions as church, hall, and barracks at once.</dd>
+    <dt>Name</dt><dd>Old Norse <i>vörðir</i> (wardens) + <i>dauða</i> (death, genitive) → <i>Vörðir Dauða</i> "Wardens of Death", drifted over millennia to <b>Voroir Daua</b>. Fully Old Norse construction, no Basque mixing; a register predating the language families mortals can still tell apart.</dd>
+    <dt>Founded</dt><dd>The order itself in the <b>Creation Era</b>, when the death-and-return cycle first established itself; the oldest named faction on Talan. The mortal arm is younger: roughly as old as the Gods' Law (~2532 years), founded in the immediate post-Crimson-Rain reconstruction when the Layer-3 form was sealed and Epairima needed mortal hands to continue the office.</dd>
+    <dt>Charge</dt><dd><b>Hunt those who prolong life beyond their normal means.</b> Necromancers, lichdom-seekers, Storveldi-procedure aspirants, vampire-line lineages that have chosen to feed rather than die, and mortal scholars who cross into <a href="/non-bound-gods.html">Betibizi</a>'s domain through fragmentary integration practice.</dd>
+    <dt>Scale</dt><dd><b>Smallish.</b> Not in every kingdom; not close to universal coverage. Charters form where Epairima's faithful gather and have reason to stay; they fold when the gathering disperses.</dd>
+    <dt>Structure</dt><dd><b>Decentralised.</b> No central authority, no supreme leader, no headquarters, no continental council. Each charter is its own polity.</dd>
+    <dt>Patron</dt><dd><a href="/non-bound-gods.html"><b>Epairima</b></a>, Minor God, Diyu-resident, Judge of Souls and Warden of the Cycle.</dd>
+    <dt>Sister organisation</dt><dd><a href="/talan/factions/adventurers-guild.html">Adventurers Guild</a>, cooperative. The two organisations work together when hunt and contract overlap.</dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Origin · The Creation Era and the Two Forms</h2>
+  <div class="prose">
+    <p>The Voroir Daua are older than every kingdom on Talan. They are older than the Gods' Law, older than the bound thirteen's residence on the Material Plane, older than every belief-formed god mortals know by name. They were founded in the <b>Creation Era</b>, when the death-and-return cycle first established itself with the first lives the Grand Gods made. <a href="/non-bound-gods.html"><b>Epairima</b></a> (the Warden of the Cycle, born with the cycle itself) needed an order to keep it whole, and the Voroir Daua were what she gathered.</p>
+
+    <p>Through the Creation Era and the long Gods' Era that followed, the order's members were <b>Epairima's direct Layer-3 subordinates</b>: postlife-born wardens who could cross to the Life Layer in her name and hunt cycle-breakers wherever the breaking happened. The Material Plane saw them openly in those ages; chronicles from before the Week of Crimson Rain remember them, though most of those chronicles are themselves lost.</p>
+
+    <p>When the <a href="/gods-law.html">Compact</a> closed around the Life Layer at the end of the Week of Crimson Rain, the Layer-3 subordinates were caught by the same structural rule that binds every Layer-3 resident: they may keep their offices in Dauria and the deeper planes, but they may not extend their hand across the veil to act on Talan. <b>Epairima cannot send them.</b> The order on the Life Layer continued, but only through its <b>mortal arm</b>: Knights and Paladins drawn from the Life Layer's faithful, sworn by clergy-bond or knight's-oath into the same office their Layer-3 predecessors once held. The charge is unchanged; only the form.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Charge · Hunting Those Who Prolong Life</h2>
+  <div class="prose">
+    <p>The Voroir Daua exist for one purpose: <b>to hunt those who prolong life beyond their normal means.</b> Where Epairima's postlife clergy in Dauria sorts the dead, the Voroir Daua on the Life Layer ensure that more souls reach her than would otherwise. The order is the cycle's mortal enforcement arm.</p>
+
+    <p><b>Categorical targets:</b></p>
+    <ul>
+      <li><b>Necromancers</b> building undead followings or raising the dead for service.</li>
+      <li><b>Lichdom-seekers</b> and anyone pursuing the transformation of mortal self into preserved undead form.</li>
+      <li><b>Storveldi-procedure aspirants</b>: scholars and ascension-cultists working with the fragmentary integration procedure that <a href="/non-bound-gods.html">Betibizi</a>'s surviving lineages preserved (see <a href="/talan/historical/storveldi-denbora.html">the Storveldi Denbora</a>).</li>
+      <li><b>Vampire-line lineages that have chosen to feed rather than die.</b> Vampires themselves are categorical targets. <b>Dhampir are not</b>, since Dhampir remain within the cycle (mortal, ageing, dying) and the order draws the line at <i>they didn't choose this</i>.</li>
+      <li><b>Aware <a href="/talan/ancestries.html">Skeletons</a></b> on the Material Plane outside the Blackened Lands. Blackened-Lands-native Skeletons in the cursed-ground sub-region are largely left alone (the order has limited reach there); émigré Skeletons elsewhere are watched and, in some charters' practice, hunted on sight.</li>
+    </ul>
+
+    <p><b>The order's posture toward Dhampir, native-born Skeletons, and other undead-touched mortals who did not choose their condition is not warm</b>, but it is not hostile. The Voroir Daua are professional and reserved: they do their work, and they leave the people they did not come for alone.</p>
+
+    <p>The order stands in <b>direct theological opposition to <a href="/non-bound-gods.html">Betibizi</a></b>, the self-ascended Minor God of Undeath whose surviving cult preserves the fragmentary integration procedure. The opposition was not designed; it is structural. Where Betibizi keeps the dead against the natural flow, Epairima sorts and releases them. The Voroir Daua walk the line where the two doctrines meet.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Structure · Charters, Not a Council</h2>
+  <div class="prose">
+    <p>The Voroir Daua have <b>no central authority</b>. No supreme leader. No headquarters. No continental council. The order is a federation of self-governing charters, each its own polity, communicating with the others by sealed letter, by travelling Veterans, and by mutual visits during religious observances at Dauria-aligned shrines. Disagreements between charters are resolved by direct correspondence; a charter that wants help from another charter requests it, and may be refused.</p>
+
+    <p>The closest the order comes to a continental body is the irregular <b>assembly of Charter Leaders</b> that convenes when a hunt outgrows a single charter's reach: the breach of a major necromantic cell, the surfacing of a previously-unknown vampire-line lineage, a Storveldi-procedure resurgence with continental implications. The assembly disperses when the hunt closes. It has no standing authority between gatherings.</p>
+  </div>
+
+  <h2 class="section-heading">Rank Ladder</h2>
+  <div class="rank-grid">
+
+    <div class="accent-card rank-card r-leader">
+      <div class="rank-name">Charter Leader</div>
+      <div class="rank-where">Voted by the charter</div>
+      <div class="rank-desc">The charter's voice and final-call on its operations. Elected by the charter's members; term open-ended. The charter calls a new vote when the current Leader steps down, dies, or loses the room. No authority outside the charter.</div>
+    </div>
+
+    <div class="accent-card rank-card r-veteran">
+      <div class="rank-name">Veteran</div>
+      <div class="rank-where">Survived long enough</div>
+      <div class="rank-desc">Honorific, not authoritative. A Veteran carries the same operational standing as a Professional, but the room defers to their experience. The title is bestowed informally by the charter when no one can remember when the person joined.</div>
+    </div>
+
+    <div class="accent-card rank-card r-pro">
+      <div class="rank-name">Professional</div>
+      <div class="rank-where">Earned by first major hunt</div>
+      <div class="rank-desc">A full member of the order. Earned by completing one's first major hunt as a Greenear and surviving the experience. Most order members are Professionals their whole careers.</div>
+    </div>
+
+    <div class="accent-card rank-card r-green">
+      <div class="rank-name">Greenear</div>
+      <div class="rank-where">New recruit</div>
+      <div class="rank-desc">No hunts yet. Trains, supports senior members on their hunts, learns the cycle-doctrine and the order's craft. Promoted to Professional upon completion of a first major hunt.</div>
+    </div>
+
+  </div>
+
+  <h2 class="section-heading">Promotion</h2>
+  <div class="prose">
+    <ul>
+      <li><b>Greenear to Professional:</b> completion of a first major hunt. The judgment of <i>what counts as major</i> belongs to the Charter Leader who sanctioned the hunt and the senior members who saw the work done. A successful first hunt is rarely the difference between living and dying; a botched first hunt frequently is.</li>
+      <li><b>Professional to Veteran:</b> longevity. No formal threshold; the title is bestowed informally by the charter when the person has been around long enough. Many Professionals die before reaching Veteran. Some live to be elected Charter Leader without ever holding the Veteran title; some hold it for decades without ever being elected.</li>
+      <li><b>Charter Leader:</b> elected by the charter's members. Can be a Professional, a Veteran, or (rarely) a particularly promising long-service Greenear if the charter is in a leadership crisis and trusts the candidate.</li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Worship · The Clergy Bond</h2>
+  <div class="prose">
+    <p>The order's clergy-bond with Epairima is the spine of their identity. Without the bond, a Voroir Daua member is just another adventurer with a strong opinion about undeath; with it, they wield the goddess's grants and stand in her name. Breaking the bond (anathema, in the Compact's terms) loses Epairima's grants and expels the member from the order. The expulsion is irrevocable.</p>
+
+    <p><b>Observances:</b></p>
+    <ul>
+      <li><b>Daily observances</b> honour the death-and-return cycle: morning recognition of the souls who passed through Epairima's court overnight, evening recognition of the souls about to pass.</li>
+      <li><b>Weekly observances</b> mark <b>the named dead</b>: members of the charter, allies, and notable opponents whose deaths the charter witnessed or caused. The named-dead list is read aloud at the weekly observance and never trimmed; the longer the list, the older the charter.</li>
+      <li><b>High observances</b> mark the anniversaries of <b>major past hunts</b>. These vary by charter; each charter keeps its own calendar of hunts that mattered.</li>
+    </ul>
+
+    <p>Charter houses include a shrine to Epairima at the centre of the building, oriented toward <b>Dauria</b> (which has no fixed direction on the Material Plane and is approximated by individual charter custom; some shrines orient west toward sunset, some orient downward toward the deep substrate, some orient toward the local burial ground).</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Membership · PF2e Class Composition</h2>
+  <div class="prose">
+    <p>The most common classes among Voroir Daua members:</p>
+    <p>
+      <span class="class-tag">Alchemist</span>
+      <span class="class-tag">Champion</span>
+      <span class="class-tag">Cleric</span>
+      <span class="class-tag">Commander</span>
+      <span class="class-tag">Fighter</span>
+      <span class="class-tag">Guardian</span>
+      <span class="class-tag">Investigator</span>
+      <span class="class-tag">Magus</span>
+      <span class="class-tag">Ranger</span>
+      <span class="class-tag">Thaumaturge</span>
+      <span class="class-tag lesser">Druid (lesser)</span>
+    </p>
+    <p>Druids appear in the order at a lesser rate than the rest, but they do appear; the Primal connection to the cycle resonates with the order's doctrine, even if Druid practice does not naturally call them to monster-hunting work. <b>Other classes are welcome.</b> These are simply the most-represented. Class composition varies by charter: a frontier charter near the Blackened Lands edge tends heavier on Ranger and Cleric; a Lograth charter tends heavier on Investigator and Champion; an itinerant charter that follows the rail network may carry an unusual concentration of Alchemists for the rapid-deploy chemistry the work demands.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Relationships</h2>
+  <div class="prose">
+    <p><b><a href="/talan/factions/adventurers-guild.html">The Adventurers Guild</a>: cooperative.</b> The Voroir Daua are independent of the Guild and answer to no Guild rank, but the two organisations work together when the hunt and the Guild contract overlap. Voroir Daua charters are typically welcome at Guild offices; Guild parties occasionally hire Voroir Daua Veterans as specialist consultants on undeath-adjacent contracts. Where the Guild specialises in <i>generalist adventuring across the continent's many threats</i>, the Voroir Daua specialise in <i>the narrower brutal craft of ending what should have ended already</i>.</p>
+
+    <p><b>Epairima's broader faithful: distinct.</b> The funerary clergy and soul-routing priests across Talan worship Epairima but do not hunt; they keep the rites, oversee burials, and counsel the bereaved. The Voroir Daua draws from this larger faithful base but is a separate institution with a separate charge. A funerary priest's robes and a Voroir Daua Knight's gear are not confused.</p>
+
+    <p><b><a href="/non-bound-gods.html">Betibizi</a>'s cult: structural enemies.</b> The opposition is theological and operational. Betibizi's cultists, fragmentary-integration scholars, and necromantically-aligned faithful are the Voroir Daua's primary adversaries on the Life Layer. Direct confrontation is regular; both sides take losses; neither side is gaining on the long view.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Geography · Where the Charters Are</h2>
+  <div class="prose">
+    <p>Charters cluster where Epairima's worship is strongest and where the hunting work is most needed.</p>
+  </div>
+
+  <div class="accent-card geo-card geo-strong">
+    <div class="geo-label">Stronger Presence</div>
+    <div class="geo-body">
+      <ul>
+        <li><b>Thousand Kingdom (Forseti's domain).</b> The order's legalistic-warrior temperament resonates with Forseti's framework; the Thousand provides the order's largest concentrated faithful base on the continent.</li>
+        <li><b>Lograth area.</b> Proximity to Forseti's city and the cosmopolitan worship base. The largest single charter on Talan is rumoured to operate from a quiet quarter of the city.</li>
+        <li><b>Myrkono (Araphel's domain).</b> Araphel's domain harbours hidden undeath problems that the Voroir Daua quietly address. The cooperation with Myrria's Sanctum of Veils is unofficial but real.</li>
+        <li><b>The Lost Kingdom edge.</b> The Blackened Lands generate Skeletons and necromantic incidents at higher rate than anywhere else on the continent; the order keeps a watch-station near the standing Guild warning, working in loose coordination with Guild high-rank parties.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accent-card geo-card geo-thin">
+    <div class="geo-label">Thinner or Absent</div>
+    <div class="geo-body">
+      <ul>
+        <li><b>Sortalde.</b> Entirely separate clerical substrate; the order has no foothold across the Cloud Sea and has not tried.</li>
+        <li><b>The Red Empire.</b> Anti-deity by doctrine; the Empire would expel any clerical order on principle. The Voroir Daua do not attempt presence.</li>
+        <li><b>Dragon's Reach.</b> Also anti-deity, with its own doctrinal hostility toward clerical institutions of any kind. The order has no charter and does not seek one.</li>
+        <li><b>The deep Basogur Jungle.</b> Chaos-magic terrain disrupts the precision the order's operations require; charters do not form in the deep interior. The jungle's edges sometimes see charter activity from neighbouring kingdoms.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Open in Canon</h2>
+  <div class="prose">
+    <p>The Voroir Daua's institutional shape is decided; the specifics are not. Open canon questions:</p>
+    <ul>
+      <li>The order's specific charter locations and named figures (Charter Leaders, notable Veterans, named founders).</li>
+      <li>The oldest continuously-operating charter on Talan and its history.</li>
+      <li>Named past hunts that have become order-history, the kind a charter's high observance commemorates.</li>
+      <li>The exact ritual contents of daily, weekly, and high observances.</li>
+      <li>The formal coordination mechanism (if any) with the Adventurers' Guild's standing warnings on the Blackened Lands and other necromantically-active sites.</li>
+      <li>Whether any single Voroir Daua member has ever risen to a tier that drew Epairima's personal attention from Dauria.</li>
+    </ul>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · FACTIONS · THE VOROIR DAUA</div>
+
+</div>
+
+</body>
+</html>
