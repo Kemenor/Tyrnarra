@@ -37,18 +37,80 @@ All gods and godlike beings (including demon lords, powerful spirits, belief-bor
 
 ---
 
-## The Gods' Law — Scope & Mechanics
+## The Gods' Law: The Compact of the Bound Thirteen
 
-- The Gods' Law applies **on the Life Layer** (Material Plane, Feyworld, Shadowplane).
-- It operates as **physics, not a rule.** A god who enters the Material Plane is subject to it automatically, the same way matter is subject to gravity. It stands beyond willpower or loophole.
-- The Law scales with power tier:
-  - **Demi-Gods** — partially under the Law, proportional to their power.
-  - **Minor Gods** — more constrained, especially on the Material Plane.
-  - **Major Gods** — fully chained on the Material Plane. However, if they remain in Layer 1 or Layer 3, they are *not* fully bound — only affected weakly through the Feyworld/Shadowplane bleed.
-  - **Grand Gods** — fully bound if present on the Material Plane. The thirteen accepted this in exchange for Material Plane presence.
-- The Law is enforced by the Ethereal Plane (the veil between Layer 1 and the Life Layer).
-- Key constraints on bound gods: no direct governance of mortal populations, no open warfare on the Material Plane, no unchecked divine control of mortal lives.
-- Within those constraints, the 13 can advise, inspire, grant divine power to priests, and play political games freely.
+The set of laws sworn at the close of the Week of Crimson Rain. Mortals know it as the **Gods' Law**; scholars writing in the formal register name it **the Compact**; some chronicler traditions break it out as **the Thirteen Articles**. All three names refer to the same body of binding.
+
+> *"If someone speaks of laws I instinctively picture written words in a book, maybe a judge that decides the fate of a criminal. But the gods law is no written word; it is more akin to the laws of physics or magic, affecting everything around us. Forces not needed to be understood to be felt; chains that bind with no knowledge needed."*
+>
+> Golivander, *A Traveller's Guide to Tyrnarra: The Gods' Law*
+
+### Scope
+
+- The Compact binds every divine being present on the Life Layer (Material Plane, Feyworld, Shadowplane), in proportion to their power.
+- **Grand Gods:** bound absolutely on the Material Plane. The thirteen accepted this in exchange for Material Plane presence.
+- **Major Gods:** fully bound on the Material Plane; weaker on the Shadowplane and Feyworld.
+- **Minor Gods:** more constrained, especially on the Material Plane; less so than Major Gods.
+- **Demi-Gods:** touched by only the lightest articles, proportional to their power.
+- Beings who departed the Life Layer at the swearing (those who fled to Layer 1 or Layer 3) are bound **only insofar as they reach back to the Life Layer.** They may keep their own kingdoms beyond the veil; they may not extend their hand across it unbound. This is the structural reason Layer-3-resident non-bound gods (the Faith's god of the Legea Empire, the Sun-god question, the Vice Demons reaching from Bolverk into Bolverk-adjacent planes) can operate sovereign within their own planes but must work through the Compact's permitted forms (clerics, chosen instruments, mortal mediation) to act on the Life Layer.
+
+### The Thirteen Articles
+
+The Compact operates as physics, not as rule. A god who steps against an Article is met as a thrown stone is met by the ground. There is no court, no appeal, no leniency.
+
+**Article 1.** *"You shall not knowingly speak a lie."*
+A god's word carries the spark of creation. Hedged speech, careful oracles, the silences of the bound when pressed, all consequences of this article.
+
+**Article 2.** *"Power shall not be given, only exchanged; every exchange matched, and both terms known."*
+Cleric grants are exchanges. Bound gods cannot place power into a mortal hand without something flowing the other way, and the exchange must be legible to both parties at the moment of binding. The god owes what was promised; the mortal owes what was sworn. Hidden costs, surprise grants, one-sided promises, and unilateral gifts all lie outside the article and are forbidden. This is what protects mortal religious life from divine trickery, divine power from being squandered on unbound favours, and the deity-mediation framework as a whole from collapsing into either chaos or coercion.
+
+**Article 3.** *"You shall not grant what compels another's will."*
+An exchange may shape the world, the requester, the fortune at their feet, the boundary between life and death. It may not bend another being's free will. A god may make a petitioner charming; the god may not make another mortal fall in love with them. A god may grant strength to defend a kingdom; the god may not compel an enemy to surrender. A god may carry a soul back across the threshold of death; the god may not bind the soul there against its own choice. The line is sharp: the grant acts on the world, on the asker, or on the asker's place within events, but never on the will of a third party. When a soul refuses to return, the god's part is fulfilled. The offering was accepted, the exchange complete, the article held, and the petitioner buries their loved one with no further claim on the god.
+
+**Article 4.** *"What is granted once in exchange shall not be reclaimed."*
+A common blessing, a knight's investiture, a bespoke covenant's gift: once given in legitimate exchange, the grant belongs to the mortal. The god cannot reclaim it. *This article cuts both ways.* A mortal who bargained for a wish and lived to regret it has no recourse to the god. A parent who traded for a son's life and watched him become someone unbearable, a knight who bartered for victory and learned what victory cost, a desperate suitor who asked for a love that turned to cage. The exchange was matched, the grant was given, the article holds. Mortals are warned by their clergies to be exact about what they ask for, because the Compact will not unmake what it has made.
+
+**Article 5.** *"You shall not break covenant with one who has rendered you worship."*
+A god may not sever the bond with one of their clergy. Once accepted, the cleric is the god's responsibility. The god cannot withdraw grants, abandon their congregation, or strike a faithful cleric from the rolls. The single exception is **anathema**: a cleric who acts against their god's portfolio, violates the terms of the oath they swore, or turns to a rival has by their own act broken the covenant, and the god is freed of the binding. *The asymmetry is the point.* A cleric may walk away from their faith; a god may not walk away from a cleric who walks straight. Every church codifies its own list of anathema acts so the line is known.
+
+**Article 6.** *"You shall not rule over mortals."*
+No bound god seats themselves on a mortal throne, commands a mortal army as its general, or governs a mortal population as its sovereign. The bound thirteen advise, inspire, and judge through their clergies; the chair of rule is mortal.
+
+**Article 7.** *"You shall not stand in harm's way for your followers."*
+A bound god cannot personally take a blow meant for a mortal worshipper. The cleric stands; the god does not. This is the article that answers the founding question. The war ended because gods were forbidden from being mortals' personal champions ever again.
+
+**Article 8.** *"You shall only attack in defence."*
+Open offensive war is forbidden. Self-defence and defence of fellow signatories are preserved; defence of mortals or mortal causes is not. This is the article that explains the bound thirteen's absence from the Corrupted God's 1321 MR breach: the binding was holding, the signatories were not under direct attack, and the Compact forbade them from intervening on mortals' behalf. The Empire defended itself with mortal force; the bound thirteen could only watch. The Adventurers' Guild was founded into the gap this article creates.
+
+**Article 9.** *"You shall not enter a mortal vessel."*
+Possession is forbidden absolutely. Gods walk in their own form when they walk. They speak to mortals through dreams, visions, omens, and clerics; they do not borrow mortal flesh. No consent, no exception, no rite of invitation reaches around this article.
+
+**Article 10.** *"You shall summon no being to act for you on the Life Layer."*
+A bound signatory cannot reach across the planes and call something forth to do their work. No angels, no elementals, no Postlife dead, no fey courtiers, no Abyss-spawn. The summoning craft is mortal craft. Clerics, ritualists, and properly-versed adventurers may call beings forth and bind them; the bound thirteen may not. A god who wants something done in the world hires a mortal.
+
+**Article 11.** *"You shall raise no mortal to godhood by your own hand."*
+A bound god cannot deliberately elevate a mortal to divine tier through their own grant. Mortals climb. The thirteen may not lift them.
+
+**Article 12.** *"You shall not strike to destroy a fellow signatory."*
+Self-defence permits a blow returned; it does not permit the blow that ends another bound god. Even in defence, the bound thirteen cannot strike to destroy one another. This is the article that directly answers the war's beginning. Tani's death set the cascade in motion; the Compact ensures the answering wars between gods can never repeat among the bound.
+
+**Article 13.** *"You shall uphold this Compact, and bind any who would break it."*
+Each signatory swears to enforce the Compact against any other signatory who violates it. The Ethereal punishes the act as physics punishes a violation of physics; the thirteen punish the actor. The binding within the binding.
+
+### Sanctioned Exchanges: the canonical forms
+
+The Bound Gods can be petitioned during an audience at their city-states. The shapes the Articles 2 through 5 cluster permits are catalogued below, in order of how common they are in mortal practice. Four named forms are in current canon; new ones can be coined as gods and mortals invent them, provided they satisfy *matched-and-known* (Article 2).
+
+- **The Clergy Bond.** Lifetime worship of a specific god → continuous grants of that god's power, scaled to faith and rank. The largest and most common form. The cleric-and-god relationship of every published church on Talan operates here.
+- **The Knight's Oath.** Lifetime service in arms toward a specific god's cause → martial grants. Tighter than clergy, narrower in scope; the paladin form. The service is action rather than worship.
+- **The Common Blessing.** A defined rite plus a defined offering → a defined specific favour. Safe childbirth, a fair harvest, a safe crossing, a child's name-blessing. Small, bounded, single-instance. Available to any mortal who knows the rite and brings the offering. Most mortals' actual experience of the bound thirteen happens here.
+- **The Lifetime Covenant.** A defined lifetime devotion of a specific kind → a bespoke grant tailored to the god's portfolio. **Araphel's second chances** are the model: lifetime clergy in Myrria for the past sealed, the name lifted, the hunters who would follow turned away. Other gods have their own canonical lifetime-covenants: Forseti's witness-oaths (a life of standing witness to oath-making in exchange for an unbreakable personal oath of the witness's own); Hinka's pact-of-the-quarry (a life of hunting one specific kind of prey in exchange for absolute lethality against it); Komo's forge-bond (a life of forging in one specific tradition in exchange for a craft beyond a mortal's reach). Each god offers what their portfolio can offer; the form is the same. (Named examples are confirmed; per-god flesh-out is paced by story interest. See `docs/open-threads.md`.)
+
+### Enforcement
+
+- The Compact is enforced by the **Ethereal Plane**, the membrane surrounding the Life Layer. It is not law as mortals know law. There is no court, no appeal, no leniency. The Ethereal answers as physics answers: a god who steps against the Compact is met as a thrown stone is met by the ground.
+- The bound thirteen are sworn each to the other under Article 13. Where the Ethereal punishes the act, the thirteen punish the actor. This is the binding within the binding.
+- The operational detail of the Ethereal's enforcement mechanism (passive filter vs active monitor vs automatic counter-pressure) is canon-pending; see `docs/open-threads.md`.
 
 ---
 
