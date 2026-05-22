@@ -89,7 +89,7 @@ Possession is forbidden absolutely. Gods walk in their own form when they walk. 
 A bound signatory cannot reach across the planes and call something forth to do their work. No angels, no elementals, no Postlife dead, no fey courtiers, no Abyss-spawn. The summoning craft is mortal craft. Clerics, ritualists, and properly-versed adventurers may call beings forth and bind them; the bound thirteen may not. A god who wants something done in the world hires a mortal.
 
 **Article 11.** *"You shall raise no mortal to godhood by your own hand."*
-A bound god cannot deliberately elevate a mortal to divine tier through their own grant. Mortals climb. The thirteen may not lift them.
+A god cannot deliberately elevate a mortal to divine tier through their own grant. Mortals climb. No god may lift them.
 
 **Article 12.** *"You shall not strike to destroy a fellow signatory."*
 Self-defence permits a blow returned; it does not permit the blow that ends another bound god. Even in defence, the bound thirteen cannot strike to destroy one another. This is the article that directly answers the war's beginning. Tani's death set the cascade in motion; the Compact ensures the answering wars between gods can never repeat among the bound.
