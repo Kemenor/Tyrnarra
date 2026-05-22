@@ -25,7 +25,7 @@ Every text-on-background pairing in [`/assets/style-b.css`](../assets/style-b.cs
 | `--gold-dim` `#a07520` | `--bg` | 4.70 : 1 |
 | `--text-dim` `#9a9078` | `--bg` | 6.16 : 1 |
 
-**Style A (cosmic — root-level pages: `index.html`, `grand-gods.html`, `magic.html`, `non-bound-gods.html`):**
+**Style A (cosmic — root-level pages: `index.html`, `grand-gods.html`, `non-bound-gods.html`, `gods-law.html`, `magic.html`, `pf2e-registrar.html`):**
 
 | Foreground | Background | Ratio |
 |---|---|---|
