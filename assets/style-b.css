@@ -993,6 +993,8 @@ a.accent-card {
   .facts { grid-template-columns: 1fr; gap: 4px 0; }
   .facts dt { padding-top: 8px; }
   .era-date { display: none; }
+  .page-subtitle { letter-spacing: 0.18em; }
+  .page-god-line { font-size: 1rem; }
 }
 
 /* ── WIP BANNER ──────────────────────────────────────────────
