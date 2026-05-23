@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,7 +36,7 @@
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <div class="timeline">
-    <div class="era era-creation">
+    <div class="era era-creation" id="creation-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">Before 6000 GR</div>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="era era-elden">
+    <div class="era era-elden" id="elden-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">6000 GR · 2945 GR</div>
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="era era-gods">
+    <div class="era era-gods" id="gods-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">2944 GR · 1 GR</div>
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <div class="era era-crimson">
+    <div class="era era-crimson" id="week-of-crimson-rain">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">0 GR · 0 MR</div>
@@ -131,7 +131,7 @@
       </div>
     </div>
 
-    <div class="era era-lost">
+    <div class="era era-lost" id="lost-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">1 MR · 559 MR</div>
@@ -162,7 +162,7 @@
       </div>
     </div>
 
-    <div class="era era-golden">
+    <div class="era era-golden" id="golden-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">560 MR · 1325 MR</div>
@@ -192,7 +192,7 @@
       </div>
     </div>
 
-    <div class="era era-dark">
+    <div class="era era-dark" id="dark-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">1321 MR · 2135 MR</div>
@@ -222,7 +222,7 @@
       </div>
     </div>
 
-    <div class="era era-adventurer open">
+    <div class="era era-adventurer open" id="adventurer-era">
       <div class="era-header" onclick="toggleEra(this.parentElement)">
         <div class="era-dot"></div>
         <div class="era-date">2135 MR · Present (2532 MR)</div>
