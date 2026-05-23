@@ -473,6 +473,7 @@ const beings = {
       secret: ""
     },
     {
+      id: "odain",
       name: "⚿ Sealed Entry · Click to Reveal",
       tier: "GM-tier only · cosmology spoiler",
       primary: "Secret deity · expanding this card reveals their name and nature",
@@ -570,6 +571,11 @@ function buildBeingCard(being, gridId) {
   if (!grid) return;
   const card = document.createElement('div');
   card.className = 'god-card';
+  if (being.id) {
+    card.id = being.id;
+  } else {
+    card.id = being.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
   card.style.setProperty('--accent', being.accent);
 
   card.innerHTML = `
