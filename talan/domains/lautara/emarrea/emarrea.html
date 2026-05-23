@@ -41,6 +41,17 @@
   .candidate { padding: 14px 16px; }
   .candidate .cand-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
   .candidate .cand-school { font-style: italic; color: var(--gold-dim); font-size: 0.85rem; margin-bottom: 8px; }
+  a.heartcourt-cta { display: block; max-width: 760px; margin: 28px auto; padding: 22px 28px; background: rgba(48,32,16,0.5); border: 1px dashed rgba(214,132,58,0.55); border-radius: 4px; text-align: center; text-decoration: none; color: inherit; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  a.heartcourt-cta:hover, a.heartcourt-cta:focus-visible { background: rgba(72,48,24,0.6); border-color: rgba(240,176,32,0.85); transform: translateY(-1px); }
+  a.heartcourt-cta:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+  a.heartcourt-cta .cta-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 10px; }
+  a.heartcourt-cta .cta-title { font-family: 'Uncial Antiqua', serif; font-size: 1.3rem; color: var(--gold-bright); margin-bottom: 12px; }
+  a.heartcourt-cta:hover .cta-title { color: #f0d080; }
+  a.heartcourt-cta .cta-body { font-size: 0.95rem; color: var(--text); line-height: 1.55; margin: 0; }
+  a.heart-card { display: block; text-decoration: none; color: inherit; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  a.heart-card:hover, a.heart-card:focus-visible { background: rgba(72,48,24,0.45); transform: translateY(-1px); }
+  a.heart-card:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  a.heart-card:hover .heart-name { color: #f0d080; }
   .sake-table { width: 100%; max-width: 880px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
   .sake-table th, .sake-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(214,132,58,0.18); }
   .sake-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
@@ -119,11 +130,11 @@
     <div class="accent-card heart-card h-onyx"><div class="heart-name">Onyx Heart</div><div class="heart-domain">Secrets & Shadows</div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></div>
   </div>
 
-  <div style="max-width: 760px; margin: 28px auto; padding: 22px 28px; background: rgba(48,32,16,0.5); border: 1px dashed rgba(214,132,58,0.55); border-radius: 4px; text-align: center;">
-    <div style="font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 10px;">Read More</div>
-    <a href="/talan/domains/lautara/emarrea/heartcourt.html" style="font-family: 'Uncial Antiqua', serif; font-size: 1.3rem; color: var(--gold-bright); text-decoration: none; display: block; margin-bottom: 12px;">The Heartcourt of Emarrea →</a>
-    <p style="font-size: 0.95rem; color: var(--text); line-height: 1.55; margin: 0;">The seven currently seated in full, the kingdom's relationships and frictions, the active Onyx Spectacle (Kasumi vs Murasaki), the public-Heartplaza kiss the kingdom will not stop talking about, an afternoon at Kawaakari with the retired Crimson Heart Yorimichi, and eleven dispatches from Golivander's <i>Letters from Biozuri</i>.</p>
-  </div>
+  <a href="/talan/domains/lautara/emarrea/heartcourt.html" class="heartcourt-cta">
+    <div class="cta-label">Read More</div>
+    <div class="cta-title">The Heartcourt of Emarrea →</div>
+    <p class="cta-body">The seven currently seated in full, the kingdom's relationships and frictions, the active Onyx Spectacle (Kasumi vs Murasaki), the public-Heartplaza kiss the kingdom will not stop talking about, an afternoon at Kawaakari with the retired Crimson Heart Yorimichi, and eleven dispatches from Golivander's <i>Letters from Biozuri</i>.</p>
+  </a>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
@@ -142,21 +153,21 @@
   </div>
 
   <div class="hearts-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-    <div class="accent-card heart-card h-rose" style="--card-accent: #e8a890;">
-      <div class="heart-name">Hahane</div>
+    <a class="accent-card heart-card h-rose" href="/non-bound-gods.html" style="--card-accent: #e8a890;">
+      <div class="heart-name">Hahane →</div>
       <div class="heart-domain">The Mother-Root · Head of the Hall</div>
-      <div class="heart-symbol">Love · Polyamory · Family · Festival · The Polycule Bond. First incense at every household shrine; the Passing of the Tails invokes her name; the <i>Rose Heart</i> often serves as her informal high-priest. <br><br><b>Cleric domains:</b> Family · Passion · Indulgence.</div>
-    </div>
-    <div class="accent-card heart-card h-violet" style="--card-accent: #c0a8e0;">
-      <div class="heart-name">Honokage</div>
+      <div class="heart-symbol">Love · Polyamory · Family · Festival · The Polycule Bond. First incense at every household shrine; the Passing of the Tails invokes her name; the <b>Rose Heart</b> often serves as her informal high-priest. <br><br><b>Cleric domains:</b> Family · Passion · Indulgence.</div>
+    </a>
+    <a class="accent-card heart-card h-violet" href="/non-bound-gods.html" style="--card-accent: #c0a8e0;">
+      <div class="heart-name">Honokage →</div>
       <div class="heart-domain">The Soft-Shadow · Foxfire &amp; Illusion</div>
-      <div class="heart-symbol">The lantern-lit night, kind misdirection, the trick that ends in laughter for all. Patron of the kitsune Occult tradition; foxfire is his offering. The <i>Violet Heart</i> and <i>Onyx Heart</i> keep small foxfire-shrines. <br><br><b>Cleric domains:</b> Trickery · Magic · Moon.</div>
-    </div>
-    <div class="accent-card heart-card h-sapphire" style="--card-accent: #7888c0;">
-      <div class="heart-name">Yumegatari</div>
+      <div class="heart-symbol">The lantern-lit night, kind misdirection, the trick that ends in laughter for all. Patron of the kitsune Occult tradition; foxfire is his offering. The <b>Violet Heart</b> and <b>Onyx Heart</b> keep small foxfire-shrines. <br><br><b>Cleric domains:</b> Trickery · Magic · Moon.</div>
+    </a>
+    <a class="accent-card heart-card h-sapphire" href="/non-bound-gods.html" style="--card-accent: #7888c0;">
+      <div class="heart-name">Yumegatari →</div>
       <div class="heart-domain">The Dream-Teller · Story &amp; Memory</div>
-      <div class="heart-symbol">Wish-lanterns, the long telling, the dream that outlives the dreamer. The <i>Sapphire Heart</i> and the Cook's Circle <i>Storyweaver</i> both speak for her. The Festival of the Fox Lanterns is her largest rite. <br><br><b>Cleric domains:</b> Dreams · Knowledge · Soul.</div>
-    </div>
+      <div class="heart-symbol">Wish-lanterns, the long telling, the dream that outlives the dreamer. The <b>Sapphire Heart</b> and the Cook's Circle <b>Storyweaver</b> both speak for her. The Festival of the Fox Lanterns is her largest rite. <br><br><b>Cleric domains:</b> Dreams · Knowledge · Soul.</div>
+    </a>
   </div>
 
   <div class="prose" style="margin-top: 20px;">
