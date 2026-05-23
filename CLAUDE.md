@@ -24,6 +24,8 @@ For getting the site running locally, see [`README.md`](README.md). For what's c
 
 **Existing names predate this rule** — don't try to retrofit names that are already in the HTML pages (Forseti, Cronus, etc.). Just follow the rule going forward.
 
+**Regional cultural registers are a third stratum, not exceptions.** The Basque/Icelandic-with-drift rule covers the deep-old layer and the English-with-drift rule covers the modern layer; alongside both, every region has its own naming register a mortal born there will follow (Fenurran Latinate, Kotokoe-kitsune, Sortalde dynastic, Haizetsua-Tengu, etc.). A name in a regional register is not a rule-exception and does not need meta-flagging in lore as "pre-rule" or "predates the convention" — it is simply a name from where its bearer was born.
+
 **Kingdoms inherit names, not continuity.** A kingdom's *name* belongs to the old-and-ancient stratum (Basque/Icelandic with drift), but the *polity carrying that name* is almost never that old. **No Talanese kingdom predates 1 MR**; few are older than the Dark Era; most modern kingdoms were founded, refounded, or substantially redrawn during the Dark Era (1321 MR — 2135 MR) or in the immediate post-Dark-Era reconstruction, and they routinely *re-claimed* the older Lost-Era kingdom-names that had occupied the same ground centuries earlier. When you coin a new kingdom or write a founding date, default to a Dark-Era or early-Adventurer-Era founding unless the page makes the older-claim a deliberate story feature. Full canon: [`lore/timeline.md`](lore/timeline.md) — *Kingdom continuity across the eras*.
 
 ---
