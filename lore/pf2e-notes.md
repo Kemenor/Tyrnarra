@@ -80,7 +80,7 @@ Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiti
 
 ### Domains not yet claimed — Open / GM ruling
 
-Two PF2e domains have no canonical Tyrnarra granter on either side: **Dragon** and **Moon**. Plausible candidates exist (Zaharsuge for Dragon; Bikiargi for Moon) but neither is decided. Treat these as obscure or experimental claims that need a GM ruling until canon settles them.
+**All previously-pending domain rows are now closed** (as of 2026-05-22). Dragon (Zaharsuge), Moon (Bikiargi), Undeath (Betibizi), Swarm (Vermin Queen). Naga is jointly granted by Zaharsuge and the Maw Serpent. Five source-category pills are in use: **Bound 13**, **Vice Demon**, **Non-Bound** (Layer-3 unbound deities: Solyra, Bikiargi, Zaharsuge, Epairima, Betibizi), **General** (surviving Generals of Corruption: Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister; the Ash-Binder is defeated and grants no current domain), and **Corrupted God** (direct grants from the imprisoned god). The Corrupted God holds direct grants on five domains: **Plague, Abomination, Nothingness, Decay, Destruction**. See the registrar for the full table.
 
 ---
 
