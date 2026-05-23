@@ -364,6 +364,34 @@ A sacred Emarrean tradition. Catjomin Sake is brewed exclusively by kitsune mast
 
 **Potency:** Deceptively delicate. *"One cup loosens the tongue. Two opens the heart. The third may unseal the soul."*
 
+### Foxfire — the kitsune Occult tradition
+
+**Foxfire is Occult magic.** Per the Four Schools framework (see [cosmology.md](cosmology.md) → *Magic — The Four Schools*), Occult magic draws on the slivers of Wellspring energy that accumulate in stories, songs, art, and shared belief. The kitsune are an Occult people by inclination as much as ability: a culture organised around festival, performance, dramatic public ritual, and centuries-deep tradition feeds exactly the cultural-memory residue Occult practice taps. The pale gold-and-blue flames that the kitsune call **foxfire** are the visible signature of that practice — illusion-fire that throws no real heat, but bends light, scent, sound, and warmth-of-feeling in the directions a trained practitioner intends.
+
+Day-to-day uses are everywhere in Emarrea: the **foxfire lanterns** of Biozuri (the kingdom's nighttime aesthetic depends on them), the **Foxfire Stone Massage** at Kawaakari (the warmth-illusion is half the treatment's effect), the **wish-lanterns** floated down the Hoshigawa, the **House of a Thousand Flavors'** course-illusions and accompanying breezes-from-elsewhere. The Heartcourt's *Violet Heart* (Magic & Mysticism) is by tradition a strong Occult practitioner, often a foxfire-master in their own right.
+
+Foxfire is not exclusive to kitsune — any Occult caster can produce the same effect — but it is *characteristic* of them, the way Vindul long-singing storm-folk Occultech is characteristic of Vindul. Outsider mortals encountering foxfire for the first time almost always mistake it for something more dangerous; longtime trade partners learn to read it.
+
+### Religion — plural faith and the Kyūbi-no-Den
+
+Kitsune religion is **plural and open**. A kitsune household commonly keeps small shrines to several gods at once: the **Kyūbi-no-Den** (*the Nine-Tailed Hall*), the kitsune's own ancestral pantheon, alongside whichever of the Bound Thirteen happens to be useful or beloved. The disposition mirrors the kitsune approach to love and family: many bonds, freely held, all honoured. Insisting on a single faith is something kitsune find slightly puzzling, the way they find lifelong monogamy slightly puzzling. Both work for some people; neither is the rule.
+
+The Heartcourt is **structurally secular**: no Faith pillar, no state religion, no Faith-Heart. The Faiths of Emarrea are accordingly **household and shrine-led**, organised through neighbourhood temples and family rites rather than national hierarchy.
+
+**The Bound Thirteen in Emarrea.** **Fisaya** (Wind & Change) is the most-worshipped of the Thirteen by considerable margin; she is depicted in kitsune iconography as a kitsune herself, and the affinity goes back as far as the chronicle record reaches. **Jianna** (Commerce) holds the trade-houses for obvious reasons. **Forseti** (Law) shows up at oath-witnessings and contract-signings. **Iro** (Light), **Sarrum** (Earth), and **Vesuna** (Chaos) all hold devout pockets across the kingdom. Bikiargi shrines mark the lunar festivals. A travelling kitsune passing through another domain finds it perfectly natural to drop incense at whichever god's temple sits nearest the road.
+
+#### The Kyūbi-no-Den — the Nine-Tailed Hall
+
+The kitsune's own ancestral pantheon, named *Kyūbi-no-Den* in Kotokoe — *the Nine-Tailed Hall*. Three named gods sit it:
+
+- **Hahane** *(the Mother-Root)* — Minor Goddess of love, polyamory, family, festival, and the polycule bond. Head of the pantheon. The Passing of the Tails ritual invokes her name; first incense at every household shrine is hers; the Heartcourt's *Rose Heart* (Arts & Festivals) often serves as her informal high-priest. Cleric domain grants: **Family · Passion · Indulgence**.
+- **Honokage** *(the Soft-Shadow)* — Minor God of foxfire, illusion, kind misdirection, and the lantern-lit night. Patron of Occult practitioners across the kingdom; foxfire is his offering. Lanterns are lit *for* him as much as *by* him. The *Violet Heart* (Magic & Mysticism) and the *Onyx Heart* (Secrets & Shadows) both keep small foxfire-shrines. Cleric domain grants: **Trickery · Magic · Moon**.
+- **Yumegatari** *(the Dream-Teller)* — Minor Goddess of story, memory, wish-lanterns, and legacy. The wish-lanterns floated down the Hoshigawa at Kawaakari are her offering. The **Storyweaver** at the House of a Thousand Flavors is by ancient courtesy understood to speak for her at the table; her presence is felt wherever a long story is told well. Cleric domain grants: **Dreams · Knowledge · Soul**.
+
+The pantheon's name carries the number nine even though the Hall holds three. The kitsune say the other six seats are open: held by ancestral spirits, by unnamed lesser gods of the kingdom's place-spirits, or simply waiting to be filled when the world's stories grow long enough to seat them. Theologians debate whether the empty seats are a real cosmic feature or a piece of pious poetry. The kitsune as a people are content to leave the question unanswered.
+
+All three Kyūbi-no-Den gods reside in **Elysium** (Layer 3, good) — not bound to the Gods' Law, not present on the Material Plane, reaching their worshippers through clerical grants and household devotion. Elysium residency reflects the pantheon's devotional centre of gravity: a culture organised around love freely given, communal feast, and the kindness-trickster ethic. They do not appear in person in Emarrea, and the kitsune do not expect them to. Compare Bikiargi, Epairima, and Zaharsuge in `gods.md`.
+
 ### Kitsune lifespan — slow ageing through tail growth
 
 - **Average lifespan:** 140-160 years; exceptional individuals to 180.
@@ -410,7 +438,7 @@ Other domains carry recognised variants but the eight above are the most-named b
 **The non-Talanese tongues.** Several languages persist alongside Talanese rather than being absorbed by it:
 - **Old Dwarvish** — the antique register of the Order of Steam (House Eisenhart's internal tongue), distinct from Imperial Dwarvish and intentionally preserved
 - **Fenurran Latinate** — the Fenurran tribes' internal vocabulary, never widely spoken outside Fenurra
-- **Kitsune Japanese-flavoured register** — kitsune-internal naming for places, dishes, traditions; co-exists with Talanese in Emarrea
+- **Kotokoe** — *"the voice of words"* (from *koto* + *koe*). The kitsune cultural tongue, used internally in Emarrea for place-names, dishes, rituals, gods, and craft-vocabulary; co-exists with Talanese as a bilingual household norm. Japanese-flavoured register. Full glossary entry in `glossary.md` — *Kitsune proper nouns → Language*.
 - **Sortalde-internal Chinese-flavoured register** — the petals' own language, spoken across the Cloud Sea; Talanese diplomats need interpreters
 - **Local survivals** — pockets in nearly every domain preserve a pre-Imperial tongue at the household and ritual level (the older Lioaru desert tribes, certain Floteyn islet communities, the Hareaveldi sand-realm's deep-old idiom)
 
