@@ -27,6 +27,20 @@
   .h-rose     { --card-accent: #c87490; }
   .h-sapphire { --card-accent: #5878a8; }
   .h-onyx     { --card-accent: #4a4858; }
+  .heart-card.heart-vacant { opacity: 0.55; border-style: dashed; }
+  .heart-card.heart-vacant .heart-name { font-style: italic; color: var(--gold-dim); }
+  .heart-card .heart-person { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 2px; }
+  .heart-card .heart-pillar { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .heart-card .heart-bio { font-size: 0.88rem; color: var(--text); line-height: 1.45; }
+  .heart-card .heart-bio i { color: var(--text-dim); }
+  .heart-card .tail-pill { display: inline-block; padding: 1px 7px; border: 1px solid var(--card-accent, var(--gold-dim)); border-radius: 10px; font-size: 0.72rem; font-family: 'Cinzel', serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--card-accent, var(--gold-bright)); margin-right: 5px; }
+  .court-section { max-width: 920px; margin: 22px auto; }
+  h3.section-heading { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.32em; color: var(--gold); text-align: center; text-transform: uppercase; margin: 32px 0 18px; }
+  .spectacle-card { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 14px 0; }
+  @media (max-width: 600px) { .spectacle-card { grid-template-columns: 1fr; } }
+  .candidate { padding: 14px 16px; }
+  .candidate .cand-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
+  .candidate .cand-school { font-style: italic; color: var(--gold-dim); font-size: 0.85rem; margin-bottom: 8px; }
   .sake-table { width: 100%; max-width: 880px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
   .sake-table th, .sake-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(214,132,58,0.18); }
   .sake-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
@@ -92,28 +106,125 @@
     <p>The ruling body of Emarrea: a living polycule of between four and nine <b>Hearts</b>, each a monarch in their own right, bound to each other by love, trust, and public acclaim, not by bloodline or conquest. Each Heart oversees one of the kingdom's nine great pillars and wears a richly embroidered ceremonial sash, a <b>Tail</b>: in that pillar's colour. When the court runs short of nine, the remaining Hearts wear multiple Tails, carrying the responsibilities of absent peers. The more Tails a Heart wears, the greater the honour, and the heavier the burden.</p>
   </div>
 
-  <div class="hearts-grid">
-    <div class="accent-card heart-card h-crimson"><div class="heart-name">Crimson Heart</div><div class="heart-domain">Military & War</div><div class="heart-symbol">A fox's head crowned with a laurel of crimson silk.</div></div>
-    <div class="accent-card heart-card h-azure"><div class="heart-name">Azure Heart</div><div class="heart-domain">Diplomacy & Foreign Relations</div><div class="heart-symbol">Two entwined fox tails over a calm wave.</div></div>
-    <div class="accent-card heart-card h-golden"><div class="heart-name">Golden Heart</div><div class="heart-domain">Commerce & Wealth</div><div class="heart-symbol">A fox's paw clutching a golden coin.</div></div>
-    <div class="accent-card heart-card h-emerald"><div class="heart-name">Emerald Heart</div><div class="heart-domain">Nature & Stewardship</div><div class="heart-symbol">A fox curled within a wreath of ivy.</div></div>
-    <div class="accent-card heart-card h-ivory"><div class="heart-name">Ivory Heart</div><div class="heart-domain">Law & Justice</div><div class="heart-symbol">A fox's mask split black and white.</div></div>
-    <div class="accent-card heart-card h-violet"><div class="heart-name">Violet Heart</div><div class="heart-domain">Magic & Mysticism</div><div class="heart-symbol">A fox tail wreathed in stars.</div></div>
-    <div class="accent-card heart-card h-rose"><div class="heart-name">Rose Heart</div><div class="heart-domain">Arts & Festivals</div><div class="heart-symbol">A fox dancing with a ribbon.</div></div>
-    <div class="accent-card heart-card h-sapphire"><div class="heart-name">Sapphire Heart</div><div class="heart-domain">Knowledge & Education</div><div class="heart-symbol">An open scroll beneath a fox's gaze.</div></div>
-    <div class="accent-card heart-card h-onyx"><div class="heart-name">Onyx Heart</div><div class="heart-domain">Secrets & Shadows</div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></div>
+  <h3 class="section-heading">The Current Court · Seven of Nine</h3>
+  <div class="prose">
+    <p>The Heartcircle currently sits with <b>seven Hearts seated and two pillars vacant</b>. The vacancies tell you what Emarrea is currently focused on, and what it is not.</p>
   </div>
 
-  <div class="prose">
-    <p><b>Succession, the Growing Circle.</b> Hearts choose heirs from any walk of life: noble-born, commoner, foreigner, lover, rival, friend, anyone they believe embodies the spirit of the kingdom. The heirs form the <b>Growing Circle</b>, living alongside the Hearts and learning. When a Heart retires, dies, or steps aside, one heir is elevated by unanimous consent and a public celebration.</p>
+  <div class="hearts-grid">
+    <div class="accent-card heart-card h-crimson heart-vacant">
+      <div class="heart-name">— Vacant —</div>
+      <div class="heart-pillar">Crimson Heart · Military &amp; War</div>
+      <div class="heart-bio">A fox's head crowned with a laurel of crimson silk. <br><i>Structurally vacant ~10 years; covered by</i> <b>Shirae</b> <i>(Sapphire, double-Tailed). Emarrea sits inside Lautara at peace, and the court has not pushed to fill it.</i></div>
+    </div>
+    <div class="accent-card heart-card h-azure">
+      <div class="heart-person">Saemi</div>
+      <div class="heart-pillar">Azure Heart · Diplomacy &amp; Foreign Relations</div>
+      <div class="heart-bio"><span class="tail-pill">3 Tails</span> Woman, late 50s. Poised, dryly funny, half the year on the road to Frae City and the Lautaran trade-courts. The kingdom's window outward. Symbol: two entwined fox tails over a calm wave.</div>
+    </div>
+    <div class="accent-card heart-card h-golden">
+      <div class="heart-person">Houreni</div>
+      <div class="heart-pillar">Golden Heart · Commerce &amp; Wealth</div>
+      <div class="heart-bio"><span class="tail-pill">4 Tails</span> Woman, mid 40s. Magnetic big-host energy; built her fortune in the Lautaran spice trade before elevation. Finances half the House of a Thousand Flavors' menu changes. Symbol: a fox's paw clutching a golden coin.</div>
+    </div>
+    <div class="accent-card heart-card h-emerald">
+      <div class="heart-person">Shionori</div>
+      <div class="heart-pillar">Emerald Heart · Nature &amp; Stewardship</div>
+      <div class="heart-bio"><span class="tail-pill">8 Tails</span> They/them, age 142, looks ~50. Eldest seated Heart in living memory; one of the vanishingly-rare eight-tailed kitsune the kingdom holds. Walks the orchards barefoot, slow-speaking. The court's moral gravity. Symbol: a fox curled within a wreath of ivy.</div>
+    </div>
+    <div class="accent-card heart-card h-ivory">
+      <div class="heart-person">Norikaze</div>
+      <div class="heart-pillar">Ivory Heart · Law &amp; Justice</div>
+      <div class="heart-bio"><span class="tail-pill">2 Tails</span> Man, 30. Freshly a junior professor of jurisprudence at <b>Lograth</b> (Forseti's city) before his elevation; the only seated Heart with formal off-Emarrea training. Idealistic, energetic, sticks to the letter of the law. Symbol: a fox's mask split black and white.</div>
+    </div>
+    <div class="accent-card heart-card h-violet">
+      <div class="heart-person">Yorume</div>
+      <div class="heart-pillar">Violet Heart · Magic &amp; Mysticism <span style="color:var(--text-dim); font-weight:400;">(+ Onyx Tail)</span></div>
+      <div class="heart-bio"><span class="tail-pill">5 Tails</span> Woman, mid 40s. Foxfire master, Honokage's de facto high-priest, the most theatrical Heart. Currently <b>double-Tailed</b> (covering the active Onyx Spectacle); exhausted but will not admit it. Symbol: a fox tail wreathed in stars.</div>
+    </div>
+    <div class="accent-card heart-card h-rose">
+      <div class="heart-person">Reien</div>
+      <div class="heart-pillar">Rose Heart · Arts &amp; Festivals</div>
+      <div class="heart-bio"><span class="tail-pill">2 Tails</span> Man, 28. Youngest seated Heart; the kingdom's creative explosion. Poet, dancer, host of festivals. Hahane's informal high-priest. The most-publicly-romantic figure in court. Symbol: a fox dancing with a ribbon.</div>
+    </div>
+    <div class="accent-card heart-card h-sapphire">
+      <div class="heart-person">Shirae</div>
+      <div class="heart-pillar">Sapphire Heart · Knowledge &amp; Education <span style="color:var(--text-dim); font-weight:400;">(+ Crimson Tail)</span></div>
+      <div class="heart-bio"><span class="tail-pill">6 Tails</span> Woman, 130s, looks ~60. Scholar-archivist, head of Biozuri's <b>House of Names</b> (Yumegatari's archive of every kitsune death across four centuries). Carries the Crimson Tail reluctantly; the only seated Heart who can read the old strategic treatises. Heaviest mental load in court. Symbol: an open scroll beneath a fox's gaze.</div>
+    </div>
+    <div class="accent-card heart-card h-onyx heart-vacant">
+      <div class="heart-name">— Vacant · Spectacle Underway —</div>
+      <div class="heart-pillar">Onyx Heart · Secrets &amp; Shadows</div>
+      <div class="heart-bio">A fox's eye half-hidden in shadow. <br><i>Recently vacant; covered by</i> <b>Yorume</b> <i>(Violet, double-Tailed). Spectacle of Selection currently underway, two candidates competing (see below).</i></div>
+    </div>
+  </div>
 
-    <p><b>Spectacles of Selection.</b> In times of crisis, or if the Heartcircle falls below four members, a new Heart is chosen by <b>public courtship, sacred duels, or festival trials</b>: multi-day national spectacles blending politics, performance, and romance.</p>
+  <div class="court-section">
+    <h3 class="section-heading">Relations Within the Seven</h3>
+    <div class="prose">
+      <p>The Heartcourt is famously dramatic; the structure under that drama is not an equal seven-polycule.</p>
+      <ul>
+        <li><b>Public romantic centre · Violet ↔ Rose.</b> Yorume and Reien are the court's most-watched bond. Foxfire-master and poet-dancer; she lights his stages, he writes verses she pretends not to read at court. The kingdom thinks they are each other's primary.</li>
+        <li><b>Hidden romantic centre · Violet ↔ Sapphire.</b> Yorume's actual nights are mostly with Shirae, a private bond going on twelve years. Shirae values her quiet and is faintly amused that the gossip mill has missed her entirely. Yorume keeps the public eye on Reien partly to protect Shirae's privacy.</li>
+        <li><b>Secondary public bond · Golden ↔ Rose.</b> Houreni also loves Reien; finances his festivals, sends gifts the kingdom catalogues. Accepted by Yorume without strain (Houreni and Yorume are friends, no romantic crossover).</li>
+        <li><b>The quiet pair · Azure ↔ Ivory.</b> Saemi and Norikaze are lovers. Both reserved, both spend a lot of time away from court business; they walk together in the gardens at dawn before either has to perform. The court knows; the court has nothing to say about it.</li>
+        <li><b>Standalone · Emerald.</b> Shionori currently holds no romantic bonds. Beloved by all six other Hearts as confidant. Often takes Catjomin Sake with Shirae in the orchards.</li>
+      </ul>
+    </div>
+  </div>
 
-    <p><b>The Passing of the Tails.</b> The transfer ritual. The retiring Heart removes their Tail before the gathered people and personally drapes it across the new Heart's shoulders. Both a transfer of authority and a declaration of unity, witnessed by the kingdom. The Tails are enchanted silk that shimmers faintly in torch- and moonlight; some are centuries old, passed through dozens of Hearts. Losing a Tail in battle or theft is both a political crisis and a personal disgrace.</p>
+  <div class="court-section">
+    <h3 class="section-heading">Frictions · Good Drama, Not Destructive</h3>
+    <div class="prose">
+      <ul>
+        <li><b>Ivory ↔ Rose · the public matter.</b> Norikaze and Reien argue policy in open Heartcourt every fortnight; the kingdom turns up to watch. Three weeks ago a debate in Heartplaza over the Onyx Spectacle's trial rules (Norikaze: stricter; Reien: freer) escalated, voices rose, the crowd thickened, and at some heated peak the two of them <b>kissed in full public view</b> for a long second before walking off in opposite directions. <i>Neither has acknowledged it since.</i> Their next public meeting was stiffly formal. Yorume, who saw the whole thing from a balcony, has pointedly said nothing. The gossip mill cannot get enough; whether this was a one-time eruption or the first crack in a longer unspoken thing is the kingdom's favourite open question.</li>
+        <li><b>Ivory ↔ Golden.</b> Norikaze finds Houreni's lavish style vulgar; Houreni finds Norikaze's restraint dull. They cooperate on commerce-law without warmth.</li>
+        <li><b>Sapphire ↔ Azure.</b> Both reserved, both quietly powerful, both wish they had to deal with less. They respect each other and do not socialise. The court reads this as a feud; it is not. It is two introverts.</li>
+      </ul>
+      <p><b>Pure friendships (no romance):</b> Emerald and Sapphire walk the orchards together. Emerald and Golden are surprising friends (Houreni is the orchards' largest patron and Shionori's most-frequent dinner guest). Rose and Azure share gossip from Saemi's travels; pure platonic delight.</p>
+    </div>
+  </div>
 
-    <p><b>Courtly life.</b> The Heartcourt is <i>famously dramatic</i>. Romances between Hearts, lovers brought into the circle, shifting alliances, and passionate debates are played out in public view. Political disputes are resolved through open negotiation, often accompanied by wit, poetry, or friendly competition. Major decisions are announced during grand festivals, where citizens may petition the Hearts directly, a tradition that keeps the court rooted in the people's voice.</p>
+  <div class="court-section">
+    <h3 class="section-heading">The Active Onyx Spectacle</h3>
+    <div class="prose">
+      <p>Two candidates from the Growing Circle compete through public trials of misdirection, intelligence-gathering, and clever-without-malicious trickster-proof. Each is publicly mentored by a sitting Heart. The trials are scheduled to conclude before the next Festival of the Fox Lanterns. The kingdom is genuinely split between the two readings of what <i>Onyx</i> means.</p>
+    </div>
+    <div class="spectacle-card">
+      <div class="accent-card candidate h-violet" style="--card-accent:#c0a8e0;">
+        <div class="cand-name">Kasumi</div>
+        <div class="cand-school">Stagecraft-Secrets · mentored by Yorume</div>
+        <div class="heart-bio"><span class="tail-pill">1 Tail</span> Mid 20s. Studied at Yorume's elbow for years. The audience-favourite: theatrical, charismatic, the foxfire-master in miniature. Her trial entries lean illusion, performance, and the kindness-trick that protects what shouldn't be seen. A natural Honokage devotee.</div>
+      </div>
+      <div class="accent-card candidate h-azure" style="--card-accent:#4a78b8;">
+        <div class="cand-name">Murasaki</div>
+        <div class="cand-school">Listening-Secrets · mentored by Saemi</div>
+        <div class="heart-bio"><span class="tail-pill">4 Tails</span> Early 40s. Trained at the Lautaran trade-courts under Saemi's secondment over the past decade. The agents'-favourite: quiet, polylingual, the network of trusted strangers. Her trial entries lean information-asymmetry, well-placed ears, and the network that delivers a useful word at a useful moment.</div>
+      </div>
+    </div>
+  </div>
 
-    <p style="font-style:italic; text-align:center; color:var(--gold-dim); margin-top:18px;">"A single heart may falter, but a circle of hearts beats forever."</p>
+  <div class="court-section">
+    <h3 class="section-heading">The Retired Crimson Heart · Yorimichi at Kawaakari</h3>
+    <div class="prose">
+      <p><b>Yorimichi</b>, <span class="tail-pill" style="border-color:#b04030; color:#b04030;">7 Tails</span> aged ~140, was Crimson Heart through several Dark-Era-residue crises in the late twenty-fourth century MR. She retired at age circa 2522 MR and now lives at <b>Kawaakari</b> as a master Catjomin Sake brewer. Her bottles brew reliably at the <i>Kōmyōzen</i> (six-stripe) tier; her rare <i>Kinkanrou</i> (seven-stripe) editions are the bottles noble courts across Lautara fight over.</p>
+      <p>She still attends Heartcourt sessions twice a year as an honoured elder; her opinions on the empty Crimson seat are listened to but no longer binding. <i>On the record</i>, she has said the seat should stay vacant <i>"until someone the kingdom would follow into a fight stands up of their own accord."</i> No such kitsune has yet stood up.</p>
+    </div>
+  </div>
+
+  <div class="court-section">
+    <h3 class="section-heading">Standing Procedures · Succession, Selection, and Court Life</h3>
+    <div class="prose">
+      <p><b>Succession · The Growing Circle.</b> Hearts choose heirs from any walk of life: noble-born, commoner, foreigner, lover, rival, friend, anyone they believe embodies the spirit of the kingdom. The heirs form the <b>Growing Circle</b>, living alongside the Hearts and learning. When a Heart retires, dies, or steps aside, one heir is elevated by unanimous consent and a public celebration.</p>
+
+      <p><b>Spectacles of Selection.</b> In times of crisis, or if the Heartcircle falls below four members, a new Heart is chosen by <b>public courtship, sacred duels, or festival trials</b>: multi-day national spectacles blending politics, performance, and romance. (The current Onyx Spectacle, see above, is the smaller per-pillar variant; the crisis-trigger Spectacle is rare.)</p>
+
+      <p><b>The Passing of the Tails.</b> The transfer ritual. The retiring Heart removes their Tail before the gathered people and personally drapes it across the new Heart's shoulders. Both a transfer of authority and a declaration of unity, witnessed by the kingdom. The Tails are enchanted silk that shimmers faintly in torch- and moonlight; some are centuries old, passed through dozens of Hearts. Losing a Tail in battle or theft is both a political crisis and a personal disgrace.</p>
+
+      <p><b>Courtly life.</b> The Heartcourt is <i>famously dramatic</i>. Romances between Hearts, lovers brought into the circle, shifting alliances, and passionate debates are played out in public view. Political disputes are resolved through open negotiation, often accompanied by wit, poetry, or friendly competition. Major decisions are announced during grand festivals, where citizens may petition the Hearts directly, a tradition that keeps the court rooted in the people's voice.</p>
+
+      <p style="font-style:italic; text-align:center; color:var(--gold-dim); margin-top:18px;">"A single heart may falter, but a circle of hearts beats forever."</p>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -127,7 +238,7 @@
     <p><b>The Bound Thirteen in Emarrea.</b> <b>Fisaya</b> (Wind &amp; Change) is the most-worshipped of the Thirteen by considerable margin; she is depicted in kitsune iconography as a kitsune herself, and the affinity goes back as far as the chronicle record reaches. <b>Jianna</b> (Commerce) holds the trade-houses for obvious reasons. <b>Forseti</b> (Law) shows up at oath-witnessings and contract-signings. <b>Iro</b> (Light), <b>Sarrum</b> (Earth), and <b>Vesuna</b> (Chaos) all hold devout pockets across the kingdom. Bikiargi shrines mark the lunar festivals. A travelling kitsune passing through another domain finds it perfectly natural to drop incense at whichever god's temple sits nearest the road.</p>
   </div>
 
-  <h3 class="section-heading" style="font-size: 1.4rem; margin-top: 24px;">The Kyūbi-no-Den · The Nine-Tailed Hall</h3>
+  <h3 class="section-heading">The Kyūbi-no-Den · The Nine-Tailed Hall</h3>
   <div class="prose">
     <p>The kitsune ancestral pantheon, all Minor and all <a href="/non-bound-gods.html">Elysium-resident</a>. Three named gods sit the Hall; the kitsune say the other six seats wait on ancestral spirits, place-spirits, or stories not yet long enough to fill them. The number nine echoes the nine-tail mastery ladder and the Heartcourt's nine pillars. <i>Theologians debate whether the empty seats are a real cosmic feature or a piece of pious poetry; the kitsune as a people are content to leave the question unanswered.</i></p>
   </div>
