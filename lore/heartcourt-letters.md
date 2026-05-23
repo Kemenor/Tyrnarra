@@ -207,4 +207,19 @@ A handful of details inside the columns are deliberately under-specified in cano
 - **The Heart who walks the gardens at sunrise with Saemi (Column 1).** Norikaze. The column's coyness is Golivander's voice; canon has the bond fully named in `cultures.md` and on the Heartcourt page.
 - **The "Heart who keeps that quiet" (Column 5).** Shirae. Same coyness pattern.
 - **The "another Heart" of Column 7.** Shirae writing about Yorume. The third such elision in the dispatch is intentional in Golivander's voice; the bond is canonised elsewhere.
-- **Golivander's race, age, education, home base, scholarly stance.** Not committed in canon (see `docs/open-threads.md` — *Golivander deep-dive*). The columns work without these and gain ambiguity from the absence.
+- **Golivander's race, age, education, home base, scholarly stance.** Committed in canon as of 2026-05-24 — Tengu of Haizetsua, ~110, Thekkavar-apprenticed in natural philosophy, based at The Lantern Press in Frae City, naturalistic and unbound. Full character sheet in [`glossary.md`](glossary.md) under *Voices on the Compact → Golivander*. The Letters' voice does not reach for these facts; the elision in the columns is method, not vacancy.
+
+---
+
+## About the chronicler (canon summary)
+
+Quick-reference for readers of these columns who want the chronicler's shape without leaving the file. Full sheet in [`glossary.md`](glossary.md).
+
+- **Golivander Tessek.** Tengu, ~110, born on Haizetsua (the western tengu island of Vindul); white-brow mature feathering, spectacled, ink-stained claws, a worn travelling satchel.
+- **Trained at Thekkavar** (City of Learning, Ezkudon) in natural philosophy and rhetoric, apprentice-and-leave path; modest Occult training picked up alongside. Cites Jeanne Pintos as model.
+- **Based at The Lantern Press** in Frae City (Halvar Erikson, publisher; Maren Erikson, his daughter, reads the drafts). Rarely home; three-quarters of the year on the road.
+- **Loves to travel and to experience the world.** Intensely curious, tries everything once. The Catjomin tasting at Kawaakari, the Foxfire Stone Massage, the row-C seat at the Onyx Spectacle's third trial — same impulse.
+- **Naturalistic and unbound to any church.** Treats the Compact as physics. Drops incense at any temple on the road as travel-habit.
+- **Method.** Never prints uncorroborated gossip; protects sources by deliberate elision (the *I shall not name* signature); revises when corrected in print (Saemi's correction is the precedent); refuses payment from subjects.
+- **Voice.** Experience-first, lightly witty, objective. Formal-philosophical in the books; arch-knowing in the periodical. Wit is seasoning, never the dish.
+- **Two products.** ***A Traveller's Guide to Tyrnarra*** is the official multi-volume reference work; ***The Travelling Chronicle*** is the informal periodical of experiences he gets published. *Letters from Biozuri* is the Emarrea section of the latter.
