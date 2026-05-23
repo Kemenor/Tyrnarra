@@ -195,6 +195,12 @@ body {
 .section-body p:last-child { margin-bottom: 0; }
 .section-body a { color: var(--gold); }
 
+/* ── GLOBAL LINK COLOURS · low-specificity defaults so context-specific
+   rules (card-links, breadcrumbs, etc.) still override ─────────────── */
+:where(a:link)    { color: var(--gold); }
+:where(a:visited) { color: var(--gold-dim); }
+:where(a:hover)   { color: var(--gold-bright); }
+
 /* ── CALLOUT / CONCLAVE BOX ───────────────────────────────── */
 
 .conclave-box {
