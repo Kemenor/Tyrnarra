@@ -344,6 +344,60 @@ When the court runs short of nine, the remaining Hearts wear **multiple Tails**,
 > *"A single heart may falter, but a circle of hearts beats forever."*
 > — Kitsune proverb
 
+### The current court — seven of nine
+
+The Heartcircle sits with **seven Hearts seated, two pillars vacant**. The vacancies tell you what Emarrea is currently focused on (and not):
+
+- **Crimson** (Military &amp; War) has been **structurally vacant for ten years.** The previous Crimson Heart, **Yorimichi**, retired at age, and the court has not pushed to elevate a successor. The reading: Emarrea sits inside Lautara at peace, no border pressure, and a Heart whose pillar carries no current weight is widely thought wasteful. Currently covered by **Shirae** (Sapphire) wearing a second Tail. Several Hearts argue the seat should be filled before it is needed; the court has not agreed.
+- **Onyx** (Secrets &amp; Shadows) is **recently vacant.** The previous Onyx Heart died within the past year (natural causes by chronicle record, contested by gossip), and a **Spectacle of Selection** is currently underway. Two candidates are competing through public trials; the Spectacle is drawing more spectators than the last harvest festival. Currently covered by **Yorume** (Violet) wearing a second Tail.
+
+**The seven currently seated, by pillar:**
+
+| Pillar · Heart | Person | Tails / age | Reads as |
+|---|---|---|---|
+| **Azure** (Diplomacy) | **Saemi** | 3 · late 50s, looks ~40 | Woman. Poised, dryly funny, half the year on the road to Frae City and the trade-courts of Lautara. The kingdom's window outward. From a long-line trade family. |
+| **Golden** (Commerce) | **Houreni** | 4 · mid 40s, looks ~30 | Woman. Magnetic big-host energy. Made her fortune in the Lautaran spice trade before her elevation; finances half the House of a Thousand Flavors' menu changes; her receptions are the kingdom's most-coveted invitations. |
+| **Emerald** (Nature) | **Shionori** | 8 · 142, looks ~50 | They/them. Eldest seated Heart in living memory; one of the vanishingly-rare eight-tailed kitsune the kingdom holds. Walks the orchards barefoot, slow-speaking, the court's moral gravity. Currently no romantic bonds (their last partnership ended two decades ago); confidant of every other Heart. |
+| **Ivory** (Law) | **Norikaze** | 2 · 30 | Man. Fresh from a junior professorship of jurisprudence at **Lograth** (Forseti's city), the only seated Heart with formal off-Emarrea training. Idealistic, energetic, sticks to the letter of the law with the rawness of someone whose academic theory has just collided with kingdom-scale practice. Reads as the most Bound-Thirteen-faith-coded Heart. |
+| **Violet** (Magic &amp; Mysticism), with **Onyx** Tail | **Yorume** | 5 · mid 40s, looks ~32 | Woman. Foxfire master, Honokage's de facto high-priest, the most theatrical Heart. Currently double-Tailed; exhausted but will not admit it. Mentor to the candidate **Kasumi** in the active Onyx Spectacle. |
+| **Rose** (Arts &amp; Festivals) | **Reien** | 2 · 28 | Man. Youngest seated Heart. Poet, dancer, host of festivals; the kingdom's creative explosion. Hahane's informal high-priest. The most-publicly-romantic figure in court; the gossip mill's perennial subject. |
+| **Sapphire** (Knowledge &amp; Education), with **Crimson** Tail | **Shirae** | 6 · 130s, looks ~60 | Woman. Scholar-archivist, head of Biozuri's **House of Names** (Yumegatari's archive of every kitsune death across four centuries). Carries the Crimson Tail reluctantly: she is the only seated Heart who can read the old strategic treatises of past eras. Heaviest mental load of any Heart. |
+
+#### Relations within the seven
+
+The Heartcourt is famously dramatic, and the structure under that drama is not an equal seven-polycule:
+
+- **Public romantic centre — Violet ↔ Rose.** Yorume and Reien are the court's most-watched bond. Foxfire-master and poet-dancer; she lights his stages, he writes verses she pretends not to read at court. The kingdom thinks they are each other's primary.
+- **Hidden romantic centre — Violet ↔ Sapphire.** Yorume's actual nights are mostly with Shirae, a private bond going on twelve years. Shirae values her quiet and is faintly amused that the gossip mill has missed her entirely. Yorume keeps the public eye on Reien partly to protect Shirae's privacy.
+- **Secondary public bond — Golden ↔ Rose.** Houreni also loves Reien; finances Reien's festivals, sends gifts the kingdom catalogues. Accepted by Yorume without strain (Houreni and Yorume are friends, no romantic crossover).
+- **The quiet pair — Azure ↔ Ivory.** Saemi and Norikaze are lovers. Both reserved, both spend a lot of time away from court business; they walk together in the gardens at dawn before either has to perform. The court knows; the court has nothing to say about it.
+- **Standalone — Emerald.** Shionori currently holds no romantic bonds. Beloved by all six other Hearts as confidant. Often takes Catjomin Sake with Shirae in the orchards.
+
+**The frictions** (good drama, not destructive):
+
+- **Ivory ↔ Rose — *the public matter.*** Norikaze and Reien argue policy in open Heartcourt every fortnight; the kingdom turns up to watch. Three weeks ago, a debate in Heartplaza over the Onyx Spectacle's trial rules (Norikaze: stricter; Reien: freer) escalated, voices rose, the crowd thickened, and at some heated peak the two of them **kissed in full public view** for a long second before walking off in opposite directions. Neither has acknowledged it since. Their next public meeting was stiffly formal. **Yorume** (Reien's other lover, who saw the whole thing from a balcony) has pointedly said nothing. The gossip mill cannot get enough. Whether this was a one-time eruption or the first crack in a longer-running unspoken thing is the kingdom's favourite open question.
+- **Ivory ↔ Golden.** Norikaze finds Houreni's lavish style vulgar; Houreni finds Norikaze's restraint dull. They cooperate on commerce-law without warmth.
+- **Sapphire ↔ Azure.** Both reserved, both quietly powerful, both wish they had to deal with less. They respect each other and do not socialise. The court reads this as a feud; it is not. It is two introverts.
+
+**Pure friendships (no romance):**
+
+- **Emerald + Sapphire** — the two senior Hearts, often walking the orchards together.
+- **Emerald + Golden** — surprising bond; Houreni is the orchards' largest patron and Shionori's most-frequent dinner guest.
+- **Rose + Azure** — Reien shares gossip with Saemi from her travels; pure platonic delight.
+
+#### The active Onyx Spectacle
+
+Two candidates from the Growing Circle compete through public trials of misdirection, intelligence-gathering, and clever-without-malicious trickster-proof. Each is publicly mentored by a sitting Heart:
+
+- **Kasumi** — 1 tail, mid 20s, mentored by **Yorume**. The *stagecraft-secrets* school: secrets-as-illusion, the foxfire that misdirects, the kindness-trick that protects what shouldn't be seen. Theatrical, charismatic, the audience-favourite. A natural Honokage devotee.
+- **Murasaki** — 4 tails, early 40s, mentored by **Saemi**. The *listening-secrets* school: secrets-as-information-asymmetry, the well-placed ear, the quiet recording, the network of trusted strangers. Quiet, polylingual, the agents'-favourite. Trained at the Lautaran trade-courts under Saemi's secondment over the past decade.
+
+The Spectacle is structurally a contest between two readings of what *Onyx* means. The kingdom is genuinely split. The trials are scheduled to conclude before the next Festival of the Fox Lanterns.
+
+#### The retired Crimson Heart
+
+**Yorimichi**, 7 tails, ~140, was Crimson Heart through several Dark-Era-residue crises in the late twenty-fourth century MR. She retired at age a decade back and now lives at **Kawaakari** as a master Catjomin Sake brewer; her bottles brew at the *Kōmyōzen* (six-stripe) tier reliably, and her rare *Kinkanrou* (seven-stripe) editions are the ones noble courts across Lautara fight over. She still attends Heartcourt sessions twice a year as an honoured elder; her opinions on the empty Crimson seat are listened to but no longer binding. (She has, on the record, said the seat should stay vacant *"until someone the kingdom would follow into a fight stands up of their own accord.* No such kitsune has yet stood up.)
+
 ### Catjomin Sake — the brewer's mastery
 
 A sacred Emarrean tradition. Catjomin Sake is brewed exclusively by kitsune master-brewers, and the craft is bound to the brewer's spiritual mastery — specifically, the number of **tails** the brewer holds at the time of creation. Each bottle bears **1 to 9 stripes** marking those tails. The stripes are a sacred taxonomy: each tier has a poetic name, social use, and emotional weight.

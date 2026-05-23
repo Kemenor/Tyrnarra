@@ -258,6 +258,25 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **The Passing of the Tails** — Plain English. The transfer ritual when a new Heart is seated.
 - **Spectacles of Selection** — Plain English. Crisis-time selection trials (public courtship, sacred duels, festival trials).
 
+**Currently seated Hearts (seven of nine, Kotokoe names):**
+- **Saemi** — Kotokoe *sae* (clear, evident, perceiving keenly) + *mi* (observance, sight) → "the clear-seeing." Drifted-soft from earlier *Saekomi* through unstressed-syllable loss. Current **Azure Heart** (Diplomacy &amp; Foreign Relations). Woman, 3 tails, late 50s.
+- **Houreni** — Kotokoe *hou* (treasure) + *ren* (lotus) + feminine suffix *-i* → "treasure-lotus, the lady of." Drifted from the older masculine form *Houren* (which the kingdom retains as the male-vocative variant). Current **Golden Heart** (Commerce &amp; Wealth). Woman, 4 tails, mid 40s.
+- **Shionori** — Kotokoe *shio* (tide) + *nori* (custom, principle, the right way) → "the tide's principle" / "law of the tides." Current **Emerald Heart** (Nature &amp; Stewardship). They/them, 8 tails, 142. One of the vanishingly-rare eight-tailed kitsune.
+- **Norikaze** — Kotokoe *nori* (rule, doctrine, the right way) + *kaze* (wind) → "law-wind" / "the wind of the rule." Current **Ivory Heart** (Law &amp; Justice). Man, 2 tails, 30. The only seated Heart who studied jurisprudence formally outside Emarrea (at **Lograth**, Forseti's city).
+- **Yorume** — Kotokoe *yoru* (night) + *me* (eye) → "night-eye," the one who sees in the lantern-dark. Current **Violet Heart** (Magic &amp; Mysticism) and acting **Onyx Heart** (Secrets &amp; Shadows). Woman, 5 tails, mid 40s. Foxfire master; Honokage's de facto high-priest.
+- **Reien** — Kotokoe *rei* (grace, gratitude) + *en* (festival, garden, the public celebration) → "the grace of festival." Current **Rose Heart** (Arts &amp; Festivals). Man, 2 tails, 28. Youngest seated Heart; Hahane's informal high-priest.
+- **Shirae** — Kotokoe *shira* (white, pure, unmarked) + *e* (picture, blessing, the recorded image) → "the white image" / "the clear record." Current **Sapphire Heart** (Knowledge &amp; Education) and acting **Crimson Heart** (Military &amp; War). Woman, 6 tails, 130s. Head of Biozuri's **House of Names** (Yumegatari's death-archive).
+
+**Onyx Spectacle candidates (currently competing):**
+- **Kasumi** — Kotokoe *kasumi* (mist) → directly preserved; the candidate the name fits literally. Yorume's protégé, 1 tail, mid 20s. *Stagecraft-secrets* school (secrets-as-illusion).
+- **Murasaki** — Kotokoe *murasaki* (purple, the colour of distance and quiet gravity) → directly preserved. Saemi's protégé, 4 tails, early 40s. *Listening-secrets* school (secrets-as-information-asymmetry).
+
+**Retired Heart:**
+- **Yorimichi** — Kotokoe *yori* (trust, reliance, the firm rest) + *michi* (way, path, road) → "the way of trust" / "the trusted path." Former **Crimson Heart** through several late-Adventurer-Era crises; retired at age circa 2522 MR. Now a master **Catjomin Sake** brewer at Kawaakari (brews reliably at *Kōmyōzen* tier; her rare *Kinkanrou* editions are sought by noble courts across Lautara). 7 tails, ~140. Attends Heartcourt sessions twice a year as honoured elder.
+
+**Civic landmark (new):**
+- **The House of Names** — Plain English. The Sapphire Heart's archive of every kitsune death in Emarrea across four centuries, run as an annexe of the Knowledge-pillar's offices in Biozuri. Theological annexe of **Yumegatari's** clergy: a story that ends is a record the world holds.
+
 **Tradition & craft:**
 - **Catjomin Sake** — kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures.md`.
 - **Yukihime-shu** — "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
