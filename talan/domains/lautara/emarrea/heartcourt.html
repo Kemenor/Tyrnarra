@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Heartcourt · Emarrea · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<style>
+  :root {
+    --domain-accent: #d6843a;
+    --card-bg: rgba(20,12,8,0.55);
+  }
+
+  /* Heart pillar palette (re-used from emarrea.html) */
+  .hearts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 20px auto; max-width: 1080px; }
+  .heart-card { padding: 14px 16px; }
+  .heart-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .heart-pillar { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .heart-bio { font-size: 0.88rem; color: var(--text); line-height: 1.45; }
+  .heart-bio i { color: var(--text-dim); }
+  .heart-person { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 2px; }
+  .tail-pill { display: inline-block; padding: 1px 7px; border: 1px solid var(--card-accent, var(--gold-dim)); border-radius: 10px; font-size: 0.72rem; font-family: 'Cinzel', serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--card-accent, var(--gold-bright)); margin-right: 5px; }
+  .heart-card.heart-vacant { opacity: 0.55; border-style: dashed; }
+  .heart-card.heart-vacant .heart-name { font-style: italic; color: var(--gold-dim); }
+  .h-crimson  { --card-accent: #b04030; }
+  .h-azure    { --card-accent: #4a78b8; }
+  .h-golden   { --card-accent: #d8a040; }
+  .h-emerald  { --card-accent: #4a9060; }
+  .h-ivory    { --card-accent: #d8d2b8; }
+  .h-violet   { --card-accent: #8a60b0; }
+  .h-rose     { --card-accent: #c87490; }
+  .h-sapphire { --card-accent: #5878a8; }
+  .h-onyx     { --card-accent: #4a4858; }
+
+  /* Heart-detail block: each seated Heart gets a full dedicated section */
+  .heart-detail { max-width: 920px; margin: 32px auto; padding: 22px 26px; background: rgba(20,12,8,0.4); border-left: 3px solid var(--detail-accent, var(--gold)); border-radius: 4px; }
+  .heart-detail h3 { font-family: 'Uncial Antiqua', serif; font-size: 1.5rem; color: var(--detail-accent, var(--gold-bright)); margin: 0 0 4px; }
+  .heart-detail .pillar-sub { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 14px; }
+  .heart-detail .meta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; font-size: 0.88rem; color: var(--text-dim); }
+  .heart-detail .vignette-list { margin: 14px 0; padding-left: 22px; }
+  .heart-detail .vignette-list > li { margin-bottom: 12px; line-height: 1.55; }
+  .heart-detail .vignette-list > li > i { color: var(--gold-bright); font-weight: 600; }
+  .heart-detail blockquote.verse { border-left: 2px solid var(--detail-accent, var(--gold-dim)); margin: 12px 0; padding: 8px 14px; font-style: italic; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
+
+  /* Golivander column: in-world periodical quotation */
+  .golivander-letter { max-width: 760px; margin: 22px auto; padding: 20px 28px; background: rgba(48,32,16,0.5); border-left: 2px solid rgba(214,132,58,0.55); border-radius: 3px; position: relative; }
+  .golivander-letter::before { content: '✦ Letters from Biozuri ✦'; display: block; font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); text-align: center; margin-bottom: 12px; }
+  .golivander-letter .letter-title { font-family: 'Cinzel', serif; font-size: 0.92rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); text-align: center; margin-bottom: 12px; font-style: normal; }
+  .golivander-letter p { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1rem; color: var(--text); margin: 0 0 12px; line-height: 1.65; }
+  .golivander-letter p:last-of-type { margin-bottom: 0; }
+  .golivander-letter blockquote { border-left: 2px solid rgba(214,132,58,0.4); margin: 10px 0; padding: 6px 14px; font-style: italic; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
+  .golivander-letter .attribution { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-style: normal; margin-top: 14px; text-align: right; }
+  .golivander-letter strong, .golivander-letter b { color: var(--gold-bright); font-style: normal; }
+
+  /* Court overview section blocks */
+  .court-section { max-width: 920px; margin: 22px auto; }
+  h3.section-heading { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.32em; color: var(--gold); text-align: center; text-transform: uppercase; margin: 32px 0 18px; }
+
+  /* Spectacle candidate cards */
+  .spectacle-card { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 14px 0; max-width: 920px; margin-left: auto; margin-right: auto; }
+  @media (max-width: 600px) { .spectacle-card { grid-template-columns: 1fr; } }
+  .candidate { padding: 14px 16px; }
+  .candidate .cand-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
+  .candidate .cand-school { font-style: italic; color: var(--gold-dim); font-size: 0.85rem; margin-bottom: 8px; }
+
+  /* Pillars overview table */
+  .pillars-table { width: 100%; max-width: 880px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
+  .pillars-table th, .pillars-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(214,132,58,0.18); }
+  .pillars-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+  .pillars-table td:first-child { font-family: 'Cinzel', serif; font-weight: 600; }
+</style>
+</head>
+<body data-page="heartcourt">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><a href="/talan/domains/lautara/emarrea/emarrea.html">Emarrea</a><span class="sep">›</span><span>The Heartcourt</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Heartcourt</div>
+    <div class="page-subtitle">The Living Polycule of Hearts · Emarrea</div>
+    <div class="page-flavor">"A single heart may falter, but a circle of hearts beats forever."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Seat</dt><dd>Biozuri · Heartplaza, in the capital of <a href="/talan/domains/lautara/emarrea/emarrea.html">Emarrea</a>.</dd>
+    <dt>Body</dt><dd>4 to 9 Hearts, each a monarch of their own pillar. <b>Currently 7 seated · 2 pillars vacant</b> (Crimson long-running; Onyx active Spectacle).</dd>
+    <dt>Selection</dt><dd>The <b>Growing Circle</b> (heirs trained alongside seated Hearts) and the <b>Spectacles of Selection</b> (crisis-trigger trials).</dd>
+    <dt>Investiture</dt><dd>The <b>Passing of the Tails</b>: the retiring Heart drapes their pillar-coloured silk sash across the new Heart's shoulders before the gathered kingdom.</dd>
+    <dt>Informal patron</dt><dd><a href="/non-bound-gods.html">Hahane</a> via the Rose Heart tradition; the <a href="/non-bound-gods.html">Kyūbi-no-Den</a> generally.</dd>
+    <dt>Chronicler of record</dt><dd>Golivander, whose <i>Letters from Biozuri</i> (a section of <i>The Travelling Chronicle</i>) has covered the court for sixteen years and is quoted throughout this page.</dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="golivander-letter">
+    <div class="letter-title">Editor's Preface to <i>Letters from Biozuri</i></div>
+    <p>Dear reader,</p>
+    <p>Some volumes of <i>A Traveller's Guide to Tyrnarra</i> my publisher will sell openly in the markets of Frae City and Lograth. Some he will sell from a back room with the door not quite closed. <i>Letters from Biozuri</i> is the second sort, and the door does not close because the Hearts of Emarrea would consider the gesture rude.</p>
+    <p>I have visited the Heartcourt every spring and autumn for sixteen years. I have been welcomed at festival tables, fed at the House of a Thousand Flavors, given lodging by Hearts who knew very well I was going to write about them, and on one notable evening corrected on a misattribution by the Heart in question, who suggested I revise the column before it went to press. I did. (She was right.) The kitsune do not consider gossip beneath the dignity of governance. They consider it the <i>texture</i> of governance.</p>
+    <p>What follows are dispatches from a court that <i>wants</i> to be written about. May the kingdom of Emarrea remain as marvellously themselves as they have ever been, and may the rest of Talan continue to under-estimate them at its own expense.</p>
+    <div class="attribution">— G.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Structure of the Court</h2>
+  <div class="prose">
+    <p>The ruling body of Emarrea: a living polycule of between four and nine <b>Hearts</b>, each a monarch in their own right, bound to each other by love, trust, and public acclaim, not by bloodline or conquest. Each Heart oversees one of the kingdom's nine great pillars and wears a richly embroidered ceremonial sash, a <b>Tail</b>: in that pillar's colour. When the court runs short of nine, the remaining Hearts wear multiple Tails, carrying the responsibilities of absent peers. The more Tails a Heart wears, the greater the honour, and the heavier the burden.</p>
+  </div>
+
+  <table class="pillars-table">
+    <thead><tr><th>Pillar</th><th>Portfolio</th><th>Symbol</th></tr></thead>
+    <tbody>
+      <tr><td>Crimson</td><td>Military &amp; War</td><td>A fox's head crowned with a laurel of crimson silk.</td></tr>
+      <tr><td>Azure</td><td>Diplomacy &amp; Foreign Relations</td><td>Two entwined fox tails over a calm wave.</td></tr>
+      <tr><td>Golden</td><td>Commerce &amp; Wealth</td><td>A fox's paw clutching a golden coin.</td></tr>
+      <tr><td>Emerald</td><td>Nature &amp; Stewardship</td><td>A fox curled within a wreath of ivy.</td></tr>
+      <tr><td>Ivory</td><td>Law &amp; Justice</td><td>A fox's mask split black and white.</td></tr>
+      <tr><td>Violet</td><td>Magic &amp; Mysticism</td><td>A fox tail wreathed in stars.</td></tr>
+      <tr><td>Rose</td><td>Arts &amp; Festivals</td><td>A fox dancing with a ribbon.</td></tr>
+      <tr><td>Sapphire</td><td>Knowledge &amp; Education</td><td>An open scroll beneath a fox's gaze.</td></tr>
+      <tr><td>Onyx</td><td>Secrets &amp; Shadows</td><td>A fox's eye half-hidden in shadow.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="prose">
+    <p><b>Succession · The Growing Circle.</b> Hearts choose heirs from any walk of life: noble-born, commoner, foreigner, lover, rival, friend, anyone they believe embodies the spirit of the kingdom. The heirs form the <b>Growing Circle</b>, living alongside the Hearts and learning. When a Heart retires, dies, or steps aside, one heir is elevated by unanimous consent and a public celebration.</p>
+
+    <p><b>Spectacles of Selection.</b> In times of crisis, or if the Heartcircle falls below four members, a new Heart is chosen by <b>public courtship, sacred duels, or festival trials</b>: multi-day national spectacles blending politics, performance, and romance. (The current Onyx Spectacle, see below, is the smaller per-pillar variant; the crisis-trigger Spectacle is rare.)</p>
+
+    <p><b>The Passing of the Tails.</b> The transfer ritual. The retiring Heart removes their Tail before the gathered people and personally drapes it across the new Heart's shoulders. Both a transfer of authority and a declaration of unity, witnessed by the kingdom. The Tails are enchanted silk that shimmers faintly in torch- and moonlight; some are centuries old, passed through dozens of Hearts. Losing a Tail in battle or theft is both a political crisis and a personal disgrace.</p>
+
+    <p><b>Courtly life.</b> The Heartcourt is <i>famously dramatic</i>. Romances between Hearts, lovers brought into the circle, shifting alliances, and passionate debates are played out in public view. Political disputes are resolved through open negotiation, often accompanied by wit, poetry, or friendly competition. Major decisions are announced during grand festivals, where citizens may petition the Hearts directly, a tradition that keeps the court rooted in the people's voice.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Current Seven · A Closer Look</h2>
+  <div class="prose">
+    <p>The Heartcircle currently sits with <b>seven Hearts seated and two pillars vacant</b>. What follows is each seated Heart in turn: who they are, what they carry, the two or three moments that the kingdom has come to associate with them, and what Golivander's <i>Letters from Biozuri</i> has said about each.</p>
+  </div>
+
+  <!-- ============ SAEMI ============ -->
+  <div class="heart-detail" style="--detail-accent: #4a78b8;">
+    <h3>Saemi</h3>
+    <div class="pillar-sub">Azure Heart · Diplomacy &amp; Foreign Relations</div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #4a78b8;">3 Tails</span><span>Woman · late 50s, looks ~40 · seated 22 years</span></div>
+    <div class="prose"><p>Poised, dryly funny, half the year on the road to Frae City and the Lautaran trade-courts. The kingdom's window outward, and the Heart who has best learned that silence is itself a position.</p></div>
+    <ul class="vignette-list">
+      <li><i>The three-day silence at Frae City.</i> Five years back, a Cronus-clergy envoy sat across from her for trade-talks; Saemi did not speak for three days. The envoy broke first and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.</li>
+      <li><i>The welcome dinner that became a four-hour conversation.</i> Her quiet bond with Norikaze began the night of his elevation, when she noticed his nervousness, took him aside under cover of getting more wine, and gave him advice about court protocol. Neither went back to the party.</li>
+      <li><i>The Saiken-Veksir inheritance.</i> She was raised to inherit the Saiken-Veksir spice fortune, a Lautaran trade-house of three generations' standing. When the Azure Tail was offered she signed the inheritance over to her younger brother. He still sends her quarterly statements; she does not read them.</li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Says Less and Knows More</div>
+      <p>The Azure Heart, Saemi, has been a Heart for twenty-two years and a diplomat for the entire span. The kingdom understands that she travels well; the kingdom under-estimates how much she listens. I will share a confidence: at the Crimson-Year trade-talks with Frae City five years ago, she sat across from a Cronus-clergy envoy for three full days in silence. The envoy spoke first. The answer she gave was already drafted in the folder under her elbow.</p>
+      <p>She has, I am told, lately developed a fondness for walking in the Heartplaza gardens at sunrise. She is never alone. I shall not name the Heart who keeps the early-hour pace with her; you all know which Heart it is, and the discretion is the point.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2531 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ HOURENI ============ -->
+  <div class="heart-detail" style="--detail-accent: #d8a040;">
+    <h3>Houreni</h3>
+    <div class="pillar-sub">Golden Heart · Commerce &amp; Wealth</div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #d8a040;">4 Tails</span><span>Woman · mid 40s, looks ~30</span></div>
+    <div class="prose"><p>Magnetic big-host energy; built her fortune in the Lautaran spice trade before elevation and never quite stopped running it. Finances half the House of a Thousand Flavors' menu changes. Her receptions are the kingdom's most-coveted invitations.</p></div>
+    <ul class="vignette-list">
+      <li><i>The night she saved the Nine Tails of Autumn menu.</i> Three chefs of the Cook's Circle had threatened to walk after a sourcing dispute. Houreni's counter-offer, an underwriting of three seasons' specialty ingredients, kept them. The menu is still served every autumn; it bears her seal-cipher in the dessert course.</li>
+      <li><i>The empire she still quietly owns.</i> Her Lautaran spice contracts continue to operate; the fortune is what pays for her festival robes. She told Saemi once, <i>"Being a Heart is interesting work. It is not the work I would have chosen if interesting were what I wanted."</i></li>
+      <li><i>The Lantern Banquet gift.</i> The foxfire-lantern she sent Reien was made by a Honokage-cult artisan over six weeks, with Reien's unpublished verses woven into the paper so they emerge only at certain angles of the lantern's turn. Reien wept publicly on receiving it. The lantern hangs above his sleeping chamber. Yorume was present and smiled.</li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Whose Generosity Is Also a Wager</div>
+      <p>The Golden Heart, Houreni, sent the Rose Heart a lantern. The lantern was made by a Honokage-cult artisan who has, I am reliably told, refused commissions from three Hearts in the past decade because <i>"the work would not be sufficiently meant."</i> This one she meant. It took six weeks. The Rose Heart's unpublished verses are woven into the paper, foxfire-lit so they emerge only at certain angles of the lantern's turn. When the Rose Heart received it, at a Heartplaza banquet so public that the kingdom calls it <i>The Lantern Banquet</i> now, he wept openly. The Golden Heart watched him weep with the satisfied air of a woman who has just won, by gift, what others compete for by courtship.</p>
+      <p>The Violet Heart was also present. The Violet Heart smiled.</p>
+      <p>No one in this kingdom does anything by halves and I find it exhausting and enlivening in equal measure.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ SHIONORI ============ -->
+  <div class="heart-detail" style="--detail-accent: #4a9060;">
+    <h3>Shionori</h3>
+    <div class="pillar-sub">Emerald Heart · Nature &amp; Stewardship</div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #4a9060;">8 Tails</span><span>They / them · age 142, looks ~50</span></div>
+    <div class="prose"><p>Eldest seated Heart in living memory; one of the vanishingly-rare eight-tailed kitsune the kingdom holds. Walks the orchards barefoot, slow-speaking. The court's moral gravity. Confidant of every other Heart.</p></div>
+    <ul class="vignette-list">
+      <li><i>The end of the last partnership.</i> Two decades ago, their polycule of four lost one to age; Shionori stepped out of the remaining three rather than seek a fifth. <i>"I have been loved enough; now I love the orchards."</i> The two surviving Hearts of that polycule still visit Shionori at the kingdom's Birch Grove twice a year.</li>
+      <li><i>The weekly dinner with Houreni.</i> Houreni asks about the orchards; Shionori asks who Houreni currently most wants to impress. Both find the answers oddly useful.</li>
+      <li><i>The morning after the kiss.</i> Shionori was in the orchard at first light. Reien came to them still in his court-dress from the night before, said only <i>"I do not know what happened,"</i> sat, drank tea, and left two hours later having said no more.</li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Loves the Orchards</div>
+      <p>The Emerald Heart, Shionori (and yes, the kingdom of Emarrea is the kind of kingdom where one of its rulers carries no honorific and prefers it that way), is one hundred and forty-two years old. They have eight tails. There are perhaps three living kitsune of whom this is true. The chronicle record of Emarrea suggests there has not been a seated Eight-Tail in living memory.</p>
+      <p>I asked them once whether they intended to keep the seat into a ninth tail. They considered for some time. They said: <i>"I do not think the orchards would forgive me."</i></p>
+      <p>I had no response to this and decided I should not invent one for the column.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2530 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ NORIKAZE ============ -->
+  <div class="heart-detail" style="--detail-accent: #d8d2b8;">
+    <h3>Norikaze</h3>
+    <div class="pillar-sub">Ivory Heart · Law &amp; Justice</div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #d8d2b8;">2 Tails</span><span>Man · 30 · seated 18 months</span></div>
+    <div class="prose"><p>Freshly a junior professor of jurisprudence at <a href="/grand-gods.html">Lograth</a> (Forseti's city) before his elevation; the only seated Heart with formal off-Emarrea training. Idealistic, energetic, sticks to the letter of the law with the rawness of someone whose academic theory has just collided with kingdom-scale practice.</p></div>
+    <ul class="vignette-list">
+      <li><i>The Lograth thesis.</i> His doctoral work argued that Forseti's law-tradition could be made to admit the kitsune's by-consent succession model without doctrinal violation; the thesis is still cited in Lograth jurisprudence circles. He has not returned to Lograth since his elevation.</li>
+      <li><i>The first ruling, six months in.</i> A citizen-dispute about a household-contract gone wrong: three lovers jointly held a vineyard, one walked out with the year's harvest in a sealed wagon. Norikaze took four hours, drafted a precedent the court has cited eleven times since. The walking-out lover returned the wagon.</li>
+      <li><i>The kiss.</i> Publicly: a heated Heartplaza debate over the Onyx Spectacle's trial rules, voices rising, crowd thickening, the moment. He does not quite know what happened himself. Saemi has said one thing to him about it, in private the morning after; he has not repeated it.</li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Is Still Astonished to Find Himself Here</div>
+      <p>The Ivory Heart, Norikaze, was thirty years old when he was elevated. He had until that point been a junior professor of jurisprudence at Lograth, where Forseti's clergy taught him law as a structure of weighed evidence and ratified precedent. He was not, by his own published view, ready. He had said so to the Growing Circle. They had elevated him anyway.</p>
+      <p>He is by all reports a precise jurist and a man whose hairline I have watched recede half an inch in the eighteen months he has worn the white-and-black Tail. He is also (and the kingdom knows this) the subject of the most-discussed unfinished sentence in court memory. I shall not finish it for him. He cannot finish it for himself. Whether anyone will is, at present, the kingdom's most-watched open question.</p>
+      <p>Norikaze, my publisher sends his sympathies and his subscription rates.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ YORUME ============ -->
+  <div class="heart-detail" style="--detail-accent: #8a60b0;">
+    <h3>Yorume</h3>
+    <div class="pillar-sub">Violet Heart · Magic &amp; Mysticism <span style="font-weight:400; color: var(--text-dim);">(+ Onyx Tail)</span></div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #8a60b0;">5 Tails</span><span>Woman · mid 40s, looks ~32 · currently double-Tailed</span></div>
+    <div class="prose"><p>Foxfire master, <a href="/non-bound-gods.html">Honokage</a>'s de facto high-priest, the most theatrical Heart. Currently double-Tailed (covering the active Onyx Spectacle); exhausted but will not admit it.</p></div>
+    <ul class="vignette-list">
+      <li><i>The night she first met Shirae.</i> Twelve years ago at the House of Names; Yorume had come to research a foxfire technique for animating an enchanted-paper memorial. They worked together until dawn. The technique was perfected; the memorial still lights Biozuri's lantern festival every Festival of the Fox Lanterns. The bond began that night and has held.</li>
+      <li><i>Managing the double-Tail.</i> She sleeps four hours, drinks tea of a strength other Hearts have failed to replicate, lights small foxfire-baubles in her bedchamber for warmth-illusion when sleep refuses. Her Growing Circle students do not know.</li>
+      <li><i>Mentoring Kasumi.</i> She chose Kasumi at sixteen, when Kasumi had already earned her first tail (an unusual prodigy). What she teaches: <i>"Illusion is mercy; secrecy is mercy; foxfire is mercy; the trick that ends in laughter is mercy. Choose mercy. The Onyx Heart decides when truth would harm, and when it would not."</i></li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Is Currently Two Hearts</div>
+      <p>The Violet Heart, Yorume, has carried the Onyx Tail for nine months while the Spectacle of Selection runs. She sleeps, I am told, four hours, drinks tea that I have been served on visits and found to be of a strength I cannot reproduce at home, and is by morning at the foxfire-masters' atelier mentoring her chosen Onyx candidate Kasumi.</p>
+      <p>She is also somehow at court. She is also somehow at the Lantern Banquet. She is also somehow, on the night of the most-public moment in the Heartcircle's recent memory, on a balcony, watching, saying nothing afterwards. She is <i>also</i>, on certain nights I shall not specify, somewhere quieter than any of the above. (I shall not say where. The Heart who keeps that quiet knows already.)</p>
+      <p>Yorume, the kingdom would like you to sleep. The kingdom would also like the Spectacle to conclude. The kingdom would, on balance, like the Spectacle to conclude first.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ REIEN ============ -->
+  <div class="heart-detail" style="--detail-accent: #c87490;">
+    <h3>Reien</h3>
+    <div class="pillar-sub">Rose Heart · Arts &amp; Festivals</div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #c87490;">2 Tails</span><span>Man · 28 · seated 2 years</span></div>
+    <div class="prose"><p>Youngest seated Heart; the kingdom's creative explosion. Poet, dancer, host of festivals. <a href="/non-bound-gods.html">Hahane</a>'s informal high-priest. The most-publicly-romantic figure in court; the gossip mill's perennial subject.</p></div>
+    <ul class="vignette-list">
+      <li><i>The elevation Spectacle.</i> Two years ago at twenty-six, against three older candidates, he wrote and performed a seven-act festival cycle titled <b>Cycle of the First Lantern</b>. The kingdom voted by acclaim before the seventh act ended. He wept, the kingdom wept, Yorume lit the air gold with foxfire.</li>
+      <li><i>Three loves and a question.</i> Yorume (public primary, the foxfire-master who lights his stages), Houreni (lavish secondary, the lantern in his sleeping chamber), and the unspoken something with Norikaze. The kingdom catalogues all of it.</li>
+      <li><i>The slim octavo just published.</i> <b>Of Lanterns and the Lighting of Them</b>, his second published volume, circulates fortnight-on among the literate classes of Lautara. Two of his most-quoted verses:
+        <blockquote class="verse">Two lanterns make a path home.<br>A third lantern is for the friend<br>who hasn't decided yet whether to come.<br>Light it anyway. Light it kindly.</blockquote>
+        <blockquote class="verse">You say I am shallow because I dance.<br>I say you are deep because you do not.<br>Neither of us has bothered to ask<br>what the river thinks of either.</blockquote>
+      </li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Was Always Going to Be Written About</div>
+      <p>The Rose Heart, Reien, was twenty-six years old when he stood on the Spectacle stage and performed a seven-act festival cycle of his own composition. The kingdom voted by acclaim before the seventh act ended. He has been a Heart for two years, has been loved by three Hearts I can name and one I will not, and has published in the last fortnight a slim octavo titled <i>Of Lanterns and the Lighting of Them</i> that the literate classes of Lautara are already pretending not to read aloud at parties.</p>
+      <p>Two of the verses, transcribed with his publisher's grumbling permission:</p>
+      <blockquote>Two lanterns make a path home.<br>A third lantern is for the friend<br>who hasn't decided yet whether to come.<br>Light it anyway. Light it kindly.</blockquote>
+      <blockquote>You say I am shallow because I dance.<br>I say you are deep because you do not.<br>Neither of us has bothered to ask<br>what the river thinks of either.</blockquote>
+      <p>The Ivory Heart has not, by any account I trust, read the volume. I find this very hard to believe.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+    </div>
+  </div>
+
+  <!-- ============ SHIRAE ============ -->
+  <div class="heart-detail" style="--detail-accent: #5878a8;">
+    <h3>Shirae</h3>
+    <div class="pillar-sub">Sapphire Heart · Knowledge &amp; Education <span style="font-weight:400; color: var(--text-dim);">(+ Crimson Tail)</span></div>
+    <div class="meta-row"><span class="tail-pill" style="--card-accent: #5878a8;">6 Tails</span><span>Woman · 130s, looks ~60 · currently double-Tailed</span></div>
+    <div class="prose"><p>Scholar-archivist, head of Biozuri's <b>House of Names</b> (<a href="/non-bound-gods.html">Yumegatari</a>'s archive of every kitsune death across four centuries). Carries the Crimson Tail reluctantly; the only seated Heart who can read the old strategic treatises. Heaviest mental load in court.</p></div>
+    <ul class="vignette-list">
+      <li><i>The House of Names.</i> The four-century rolling archive of every kitsune death in Emarrea, each entry annotated with the stories told at funeral. The youngest entries are five days old; the oldest are four hundred and twelve years. Shirae heads the institution and reads in it daily.</li>
+      <li><i>The Lost-Era treatises.</i> She is the only seated Heart who can read the strategic treatises preserved in the Sapphire archives; she has read all of them. Asked what the kingdom should build with what she has learned, she said: <i>"A library, Golivander. Build the library. The army can wait for a reason to exist."</i></li>
+      <li><i>The twelve years with Yorume.</i> The bond is private, by Shirae's preference. The pattern: her absences from court coincide with Yorume's; she locks the House of Names an hour later than usual on nights they are together. The kingdom has not noticed. Shirae chose this.</li>
+    </ul>
+    <div class="golivander-letter">
+      <div class="letter-title">On the Heart Who Holds Every Other Heart's Names</div>
+      <p>The Sapphire Heart, Shirae, runs the House of Names, which is a four-century archive of every kitsune death this kingdom has chosen to remember, annotated with the stories told at each funeral. I have read in it. I will not tell you what I read. The archive is hers, and she once told me, kindly but firmly, that <i>"a chronicler who quotes from the House of Names without leaving offering at the lantern is the chronicler I do not next welcome,"</i> which I took to heart and now do.</p>
+      <p>She also reads the Lost-Era strategic treatises that no other Heart can. She has read all of them. When I asked her what she thought the kingdom should build with what she had learned, she said: <i>"A library, Golivander. Build the library. The army can wait for a reason to exist."</i></p>
+      <p>She is, in addition, the Heart most often absent from court on the same evenings as another Heart whom I shall, for the third time in this dispatch, decline to name. The pattern has held for twelve years. The kingdom has not yet noticed. I notice because it is my work to notice. I notice and I do not write it down.</p>
+      <p>Shirae, this dispatch is the closest the column will come.</p>
+      <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Relations Within the Seven</h2>
+  <div class="prose">
+    <p>The Heartcourt is famously dramatic; the structure under that drama is not an equal seven-polycule.</p>
+    <ul>
+      <li><b>Public romantic centre · Violet ↔ Rose.</b> Yorume and Reien are the court's most-watched bond. She lights his stages, he writes verses she pretends not to read at court.</li>
+      <li><b>Hidden romantic centre · Violet ↔ Sapphire.</b> Yorume's actual nights are mostly with Shirae, twelve years private. Shirae values her quiet; Yorume keeps the public eye on Reien partly to protect Shirae's privacy.</li>
+      <li><b>Secondary public bond · Golden ↔ Rose.</b> Houreni also loves Reien; finances his festivals, sends gifts the kingdom catalogues. Accepted by Yorume without strain.</li>
+      <li><b>The quiet pair · Azure ↔ Ivory.</b> Saemi and Norikaze are lovers. Both reserved; they walk together in the gardens at dawn before either has to perform. The court knows; the court has nothing to say about it.</li>
+      <li><b>Standalone · Emerald.</b> Shionori currently holds no romantic bonds. Beloved by all six other Hearts as confidant.</li>
+    </ul>
+
+    <p><b>Frictions · good drama, not destructive.</b></p>
+    <ul>
+      <li><b>Ivory ↔ Rose</b> argue policy in open Heartcourt every fortnight. Three weeks ago, this friction erupted in <a href="#the-kiss">the kiss</a> the kingdom is still discussing.</li>
+      <li><b>Ivory ↔ Golden.</b> Norikaze finds Houreni's lavish style vulgar; Houreni finds Norikaze's restraint dull. They cooperate on commerce-law without warmth.</li>
+      <li><b>Sapphire ↔ Azure.</b> Both reserved, both quietly powerful, both wish they had to deal with less. The court reads this as a feud; it is two introverts.</li>
+    </ul>
+
+    <p><b>Pure friendships (no romance):</b> Emerald and Sapphire walk the orchards together. Emerald and Golden are surprising friends. Rose and Azure share gossip from Saemi's travels; pure platonic delight.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Two Vacancies</h2>
+
+  <div class="hearts-grid" style="grid-template-columns: 1fr 1fr; max-width: 920px;">
+    <div class="accent-card heart-card h-crimson heart-vacant">
+      <div class="heart-name">— Vacant —</div>
+      <div class="heart-pillar">Crimson Heart · Military &amp; War</div>
+      <div class="heart-bio">A fox's head crowned with a laurel of crimson silk. <br><i>Structurally vacant ~10 years; covered by <b>Shirae</b> (Sapphire, double-Tailed). Emarrea sits inside Lautara at peace, and the court has not pushed to fill it.</i></div>
+    </div>
+    <div class="accent-card heart-card h-onyx heart-vacant">
+      <div class="heart-name">— Vacant · Spectacle Underway —</div>
+      <div class="heart-pillar">Onyx Heart · Secrets &amp; Shadows</div>
+      <div class="heart-bio">A fox's eye half-hidden in shadow. <br><i>Recently vacant; covered by <b>Yorume</b> (Violet, double-Tailed). Spectacle of Selection currently underway; two candidates competing (see below).</i></div>
+    </div>
+  </div>
+
+  <h3 class="section-heading">The Active Onyx Spectacle</h3>
+  <div class="prose">
+    <p>Two candidates from the Growing Circle compete through public trials of misdirection, intelligence-gathering, and clever-without-malicious trickster-proof. Each is publicly mentored by a sitting Heart. The trials are scheduled to conclude before the next Festival of the Fox Lanterns. The kingdom is genuinely split between the two readings of what <i>Onyx</i> means.</p>
+  </div>
+  <div class="spectacle-card">
+    <div class="accent-card candidate h-violet" style="--card-accent:#c0a8e0;">
+      <div class="cand-name">Kasumi</div>
+      <div class="cand-school">Stagecraft-Secrets · mentored by Yorume</div>
+      <div class="heart-bio"><span class="tail-pill">1 Tail</span> Mid 20s. Studied at Yorume's elbow for years. The audience-favourite: theatrical, charismatic, the foxfire-master in miniature. Her trial entries lean illusion, performance, and the kindness-trick that protects what shouldn't be seen. A natural Honokage devotee.</div>
+    </div>
+    <div class="accent-card candidate h-azure" style="--card-accent:#4a78b8;">
+      <div class="cand-name">Murasaki</div>
+      <div class="cand-school">Listening-Secrets · mentored by Saemi</div>
+      <div class="heart-bio"><span class="tail-pill">4 Tails</span> Early 40s. Trained at the Lautaran trade-courts under Saemi's secondment over the past decade. The agents'-favourite: quiet, polylingual, the network of trusted strangers. Her trial entries lean information-asymmetry, well-placed ears, and the network that delivers a useful word at a useful moment.</div>
+    </div>
+  </div>
+
+  <div class="golivander-letter">
+    <div class="letter-title">On the Spectacle the Kingdom Is Watching Instead of Working</div>
+    <p>The Onyx Spectacle has produced two candidates, two schools, and one unprecedented run on the box-stands of Heartplaza, which now sell numbered seats for the trial-days. (I attended the third trial. I sat in row C. I have an opinion. I shall keep it.)</p>
+    <p><b>Kasumi</b>, mentored by the Violet Heart, is twenty-five years old and has one tail. She has, in three trials, made the audience laugh, made the audience gasp, made the audience uncertain whether the trick had happened yet, and on one notable occasion made the audience cry. Her school is <i>secrets-as-illusion</i>. Her foxfire is, to my eye (and I have seen foxfire in seven kingdoms), the cleanest I have witnessed outside her mentor's own work.</p>
+    <p><b>Murasaki</b>, mentored by the Azure Heart, is forty-one years old and has four tails. She has, in three trials, said almost nothing, won twice, and on the trial she lost was widely judged afterwards to have lost on purpose. Her school is <i>secrets-as-information-asymmetry</i>. She is the candidate the merchants prefer. She is the candidate the rest of the kingdom finds slightly unsettling, which is, I suspect, also a vote in her favour.</p>
+    <p>The seventh and final trial is scheduled before the next Festival of the Fox Lanterns. <i>Place no wagers; the Heartcourt has formally disapproved of public betting on a Spectacle, and the kingdom has formally ignored the disapproval, and I am formally not advising anyone.</i></p>
+    <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading" id="the-kiss">The Kiss</h2>
+  <div class="prose">
+    <p>Three weeks ago, in Heartplaza at the open afternoon session, the Ivory Heart (Norikaze) and the Rose Heart (Reien) were arguing, as they argue every fortnight, about the trial-rules of the present Onyx Spectacle. Voices rose. The crowd thickened. At some moment the chronicle cannot precisely fix, the two of them <b>kissed in full public view</b> for a single long second, separated, looked at one another, and walked off in opposite directions.</p>
+    <p>Both have kept silent since. The kingdom is genuinely split on whether this was a one-time eruption never to be repeated, or the first crack in a longer-running, deeply-unspoken thing. Each reading has its partisans. The arguments are conducted at every tea-house, every Catjomin tasting, every workshop in Biozuri's potters' quarter.</p>
+    <p>The page below preserves the kingdom's open question. Golivander's column, the longest he has ever filed from Biozuri, follows.</p>
+  </div>
+
+  <div class="golivander-letter">
+    <div class="letter-title">On a Single Public Second</div>
+    <p>Reader, the Heartcourt has had its share of moments. I have been writing this column for sixteen years. I have reported elevations, retirements, marriages, three deaths, one war-vote, and forty-one Lantern Banquets. I have never, in any of those years, written a dispatch I expected the kingdom to commit to memory.</p>
+    <p>Three weeks ago, on the eighteenth day of the second month of autumn, in Heartplaza at the open afternoon session, the Ivory Heart and the Rose Heart were arguing, as the Ivory Heart and the Rose Heart argue every fortnight, about the trial-rules of the present Onyx Spectacle. The Ivory Heart had taken the stricter view; the Rose Heart had taken the looser. (They had, between them, exhausted the arguable views some time ago, and at this point were arguing primarily for the satisfaction of doing so. The kingdom approved.)</p>
+    <p>Voices were raised. The crowd thickened, as crowds will. At some moment the chronicle cannot precisely fix (I have spoken with eleven separate witnesses; they do not agree on the precise sequence, though they agree on the fact), the Ivory Heart and the Rose Heart <strong>kissed in full view of the assembled people of Biozuri</strong> for a single long second, separated, looked at one another for another second, and walked off in opposite directions.</p>
+    <p>Both have kept silent since.</p>
+    <p>Reader, I have asked. I have asked carefully and I have asked indirectly and I have asked openly. The Ivory Heart's response, in court, on each of the three occasions I have raised the matter, has been <i>"the question is not properly framed."</i> The Rose Heart's response, asked at the Lantern Banquet, has been to recite a verse he had not previously published which I include here for completeness:</p>
+    <blockquote>Some questions are mine.<br>Some questions are not mine.<br>The kingdom does not always get to know which is which.</blockquote>
+    <p>The kingdom finds this answer wanting. The kingdom finds it, in fact, wanting more than any answer in the present generation. <b>Three weeks</b>, reader. <b>Three weeks</b>.</p>
+    <p>What the kingdom is split on: was this a single eruption never to be repeated, or was this the first crack in a longer-running, deeply-unspoken thing? Each reading has its partisans. The arguments are conducted at every tea-house, every Catjomin tasting, every workshop in Biozuri's potters' quarter. I have heard sixty-year-old kitsune put down their tea to argue about it. I have heard the lantern-makers' apprentices argue about it. I once heard a Komo-clergy visiting from Eldara stop on the path to Heartplaza and ask a passing kitsune to explain <i>"the entire situation, please, from the beginning, slowly."</i> The kitsune did. It took an hour. The clergyperson missed her appointment and did not mind.</p>
+    <p>I have my own view. I shall keep it. I will say only this: the Violet Heart, present on a balcony and known to be the Rose Heart's other public love, has been seen at the House of Names on three consecutive nights since the kiss, and the Sapphire Heart who heads the House of Names has, on each of those nights, locked the public archive an hour later than her usual time. <i>I notice. I do not write down what I notice. Mostly.</i></p>
+    <p>Reader, this is a chronicle, not a verdict. The verdict is yours.</p>
+    <div class="attribution">— G., <i>Letters from Biozuri</i>, 2532 MR (rushed edition, second printing)</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">The Retired Crimson Heart · Yorimichi at Kawaakari</h2>
+  <div class="prose">
+    <p><b>Yorimichi</b>, <span class="tail-pill" style="border-color:#b04030; color:#b04030;">7 Tails</span> aged ~140, was Crimson Heart through several Dark-Era-residue crises in the late twenty-fourth century MR. She retired at age circa 2522 MR and now lives at <b>Kawaakari</b> as a master Catjomin Sake brewer. Her bottles brew reliably at the <i>Kōmyōzen</i> (six-stripe) tier; her rare <i>Kinkanrou</i> (seven-stripe) editions are the bottles noble courts across Lautara fight over.</p>
+    <p>She still attends Heartcourt sessions twice a year as an honoured elder; her opinions on the empty Crimson seat are listened to but no longer binding. <i>On the record</i>, she has said the seat should stay vacant <i>"until someone the kingdom would follow into a fight stands up of their own accord."</i> No such kitsune has yet stood up.</p>
+    <p>Golivander attended one of her tastings at Kawaakari this past summer and filed the following:</p>
+  </div>
+
+  <div class="golivander-letter">
+    <div class="letter-title">On an Afternoon at Kawaakari with the Retired Crimson Heart <br><span style="font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold-dim);">Kawaakari Supplement</span></div>
+    <p>Reader, indulge me. I am not the kingdom's tasting-critic. I am the kingdom's chronicler. The publisher's note that prefaces this column reminds me of the difference. I have ignored the publisher.</p>
+    <p>Yorimichi (formerly the Crimson Heart; presently the most-sought Catjomin brewer working at Kawaakari; seven tails; approximately one hundred and forty years old and looking, in afternoon light through the steam of the bath-house upper pavilion, perhaps sixty) hosted a tasting for ten on the seventh of the eighth month. I was the eighth seat. I was, I will confess, <i>honoured</i>.</p>
+    <p>She poured five tiers. I shall not number them in order; she would not approve.</p>
+    <p>The <b>Shirohana</b> was a young one, pale and light, opened with a brightness like the river outside the pavilion. Excellent table sake, the brewer's apprentices' work, served first because <i>"the palate should remember it is still capable of being surprised by a small thing."</i> I was surprised.</p>
+    <p>The <b>Hanatsuyu</b> opened on stone-fruit and closed on cold cedar. I held my second cup for some minutes because the closing note did not seem to want to be hurried.</p>
+    <p>The <b>Togetsu</b> I will not describe. It was, simply, the best sake I have ever consumed. I am told that to be a connoisseur of Catjomin is to learn never to say this aloud. Reader, I have chosen to say it. Take this as the chronicle's confession.</p>
+    <p>The <b>Kōmyōzen</b>, her usual tier, brewed in the still that has stood in her brewery for the eleven years of her retirement, drank like a memory. I cannot put this more precisely. The other guests put down their cups and were silent for some time. The retired Crimson Heart watched us be silent and was satisfied.</p>
+    <p>The <b>Kinkanrou</b> she opened only because, she said, <i>"the chronicler should know what the noble courts of Lautara fight over before he writes about it."</i> Reader, the noble courts of Lautara are correct to fight. I will not describe this either. Some things deserve to remain in the bottle they were brewed for.</p>
+    <p>Yorimichi told us, between pours, of the Crimson seat she once held. She told us that she was offered the post in 2487 MR, accepted, served thirty-five years, retired on a morning when she woke up and could not for the first time in those thirty-five years see a reason to put the Tail on. She walked it to the next Heartcourt session and laid it on the table. The Spectacle that followed seated her Growing Circle heir. That heir served twelve years and died on the dais last year of natural causes (a heart-stoppage in his sleep; <i>"a kind death,"</i> she said). Her opinion on the present empty seat: <i>"Let it stay empty until someone the kingdom would follow into a fight stands up of their own accord. The kingdom has yet to produce that kitsune. Until one stands up, the seat does its work by being visible."</i></p>
+    <p>The pavilion's foxfire-lanterns came on as we finished the fifth pour. The bath-house steam caught the gold. I have written this column three times trying to find a closing that does not over-state, and have failed three times, so I shall just write what I thought as I left:</p>
+    <p><i>Some afternoons are not, in fact, for the column.</i></p>
+    <div class="attribution">— G., <i>Letters from Biozuri</i> (Kawaakari supplement), 2532 MR</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 class="section-heading">Open in the Chronicle Record</h2>
+  <div class="prose">
+    <p>A handful of details inside this page are deliberately under-specified. Surfacing them as discrete §Needs-writing threads is the work of later passes; what stays open by design:</p>
+    <ul>
+      <li><b>The previous Onyx Heart's identity and death.</b> Reported as natural by the chronicle, contested by gossip. The Spectacle's drama depends on the question staying live; resolving it would defeat the page.</li>
+      <li><b>The Norikaze-Reien open question.</b> Whether the kiss was one-time eruption or first crack of a longer thing. The kingdom does not know. The page does not know.</li>
+      <li><b>The previous Crimson Heart's heir</b> (Yorimichi's Growing Circle successor, who served twelve years and died last year). Personal name uncommitted in canon.</li>
+      <li><b>Heart-incidents from past generations.</b> The court is centuries old; most of its history is unwritten. The page deliberately treats the <i>current</i> court as its scope.</li>
+      <li><b>The Growing Circle now.</b> Named heirs to each seated pillar (and the Onyx candidates' eventual outcomes) will land as future passes when stories call for them.</li>
+      <li><b>Golivander himself.</b> Race, age, education, home base, scholarly stance. The columns work without these and gain ambiguity from the absence. See <a href="/docs/open-threads.md">open-threads</a> for the deep-dive thread.</li>
+    </ul>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · EMARREA · THE HEARTCOURT</div>
+
+</div>
+
+</body>
+</html>

@@ -385,6 +385,54 @@ The Heartcourt is famously dramatic, and the structure under that drama is not a
 - **Emerald + Golden** — surprising bond; Houreni is the orchards' largest patron and Shionori's most-frequent dinner guest.
 - **Rose + Azure** — Reien shares gossip with Saemi from her travels; pure platonic delight.
 
+#### Per-Heart vignettes — formative events and present-day matters
+
+Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`heartcourt-letters.md`](heartcourt-letters.md)).
+
+**Saemi (Azure).**
+- *The three-day silence at Frae City.* Five years back, a Cronus-clergy envoy sat across from her for trade-talks; Saemi did not speak for three days. The envoy broke first and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.
+- *The Heartcourt welcome dinner that became a four-hour conversation.* Her quiet bond with Norikaze began the night of his elevation, when she noticed his nervousness, took him aside under cover of getting more wine, and gave him advice about court protocol. Neither went back to the party.
+- *The Saiken-Veksir inheritance.* She was raised to inherit the Saiken-Veksir spice fortune, a Lautaran trade-house of three generations' standing. When the Azure Tail was offered she signed the inheritance over to her younger brother. He still sends her quarterly statements; she does not read them.
+
+**Houreni (Golden).**
+- *The night she saved the Nine Tails of Autumn menu.* Three chefs of the Cook's Circle had threatened to walk after a sourcing dispute. Houreni's counter-offer, an underwriting of three seasons' specialty ingredients, kept them. The menu is still served every autumn; it bears her seal-cipher in the dessert course.
+- *The empire she still quietly owns.* Her Lautaran spice contracts continue to operate; the fortune is what pays for her festival robes. She told Saemi once, *"Being a Heart is interesting work. It is not the work I would have chosen if interesting were what I wanted."*
+- *The Lantern Banquet gift.* The foxfire-lantern she sent Reien at a Heartplaza banquet was made by a Honokage-cult artisan over six weeks, with Reien's unpublished verses woven into the paper so they emerge only at certain angles of the lantern's turn. Reien wept publicly on receiving it. The lantern hangs above his sleeping chamber. Yorume was present and smiled.
+
+**Shionori (Emerald).**
+- *The end of the last partnership.* Two decades ago, their polycule of four lost one to age; Shionori stepped out of the remaining three rather than seek a fifth. *"I have been loved enough; now I love the orchards."* The two surviving Hearts of that polycule still visit Shionori at the kingdom's Birch Grove twice a year.
+- *The weekly dinner with Houreni.* Houreni asks about the orchards; Shionori asks who Houreni currently most wants to impress. Both find the answers oddly useful.
+- *The morning after the kiss.* Shionori was in the orchard at first light. Reien came to them still in his court-dress from the night before, said only *"I do not know what happened,"* sat, drank tea, and left two hours later having said no more.
+
+**Norikaze (Ivory).**
+- *The Lograth thesis.* His doctoral work argued that Forseti's law-tradition could be made to admit the kitsune's by-consent succession model without doctrinal violation; the thesis is still cited in Lograth jurisprudence circles. He has not returned to Lograth since his elevation.
+- *The first ruling, six months in.* A citizen-dispute about a household-contract gone wrong: three lovers jointly held a vineyard, one walked out with the year's harvest in a sealed wagon. Norikaze took four hours, drafted a precedent the court has cited eleven times since. The walking-out lover returned the wagon.
+- *The kiss.* Publicly: a heated Heartplaza debate over the Onyx Spectacle's trial rules, voices rising, crowd thickening, the moment. He does not quite know what happened himself. Saemi has said one thing to him about it, in private the morning after; he has not repeated it.
+
+**Yorume (Violet + Onyx Tail).**
+- *The night she first met Shirae.* Twelve years ago at the House of Names; Yorume had come to research a foxfire technique for animating an enchanted-paper memorial. They worked together until dawn. The technique was perfected; the memorial still lights Biozuri's lantern festival every Festival of the Fox Lanterns. The bond began that night and has held.
+- *Managing the double-Tail.* She sleeps four hours, drinks tea of a strength other Hearts have failed to replicate, lights small foxfire-baubles in her bedchamber for warmth-illusion when sleep refuses. Her Growing Circle students do not know.
+- *Mentoring Kasumi.* She chose Kasumi at sixteen, when Kasumi had already earned her first tail (an unusual prodigy). What she teaches: *"Illusion is mercy; secrecy is mercy; foxfire is mercy; the trick that ends in laughter is mercy. Choose mercy. The Onyx Heart decides when truth would harm, and when it would not."*
+
+**Reien (Rose).**
+- *The elevation Spectacle.* Two years ago at twenty-six, against three older candidates, he wrote and performed a seven-act festival cycle titled ***Cycle of the First Lantern***. The kingdom voted by acclaim before the seventh act ended. He wept, the kingdom wept, Yorume lit the air gold with foxfire.
+- *Three loves and a question.* Yorume (public primary, the foxfire-master who lights his stages), Houreni (lavish secondary, the lantern in his sleeping chamber), and the unspoken something with Norikaze. The kingdom catalogues all of it.
+- *The slim octavo just published.* ***Of Lanterns and the Lighting of Them***, his second published volume, circulates fortnight-on among the literate classes of Lautara. Two of his most-quoted verses:
+  > Two lanterns make a path home.
+  > A third lantern is for the friend
+  > who hasn't decided yet whether to come.
+  > Light it anyway. Light it kindly.
+
+  > You say I am shallow because I dance.
+  > I say you are deep because you do not.
+  > Neither of us has bothered to ask
+  > what the river thinks of either.
+
+**Shirae (Sapphire + Crimson Tail).**
+- *The House of Names.* The four-century rolling archive of every kitsune death in Emarrea, each entry annotated with the stories told at funeral. Yumegatari's offering in archive form. The youngest entries are five days old; the oldest are four hundred and twelve years. Shirae heads the institution and reads in it daily.
+- *The Lost-Era treatises.* She is the only seated Heart who can read the strategic treatises preserved in the Sapphire archives; she has read all of them. Asked what the kingdom should build with what she has learned, she said: *"A library. Build the library. The army can wait for a reason to exist."*
+- *The twelve years with Yorume.* The bond is private, by Shirae's preference. The pattern: her absences from court coincide with Yorume's; she locks the House of Names an hour later than usual on nights they are together. The kingdom has not noticed. Shirae chose this.
+
 #### The active Onyx Spectacle
 
 Two candidates from the Growing Circle compete through public trials of misdirection, intelligence-gathering, and clever-without-malicious trickster-proof. Each is publicly mentored by a sitting Heart:
