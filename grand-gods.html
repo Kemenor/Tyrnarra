@@ -402,6 +402,7 @@ function buildCard(god, gridId) {
   const grid = document.getElementById(gridId);
   const card = document.createElement('div');
   card.className = 'god-card';
+  card.id = god.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   card.style.setProperty('--accent', god.accent);
 
   card.innerHTML = `
