@@ -37,13 +37,13 @@ What this gets you, from the shared rules in [`/assets/style-b.css`](../assets/s
 - `cursor: pointer` over the whole card surface.
 - `color: inherit; text-decoration: none;` so the body prose looks like card content, not a link.
 - On hover: `transform: translateY(-2px)` to lift the card.
-- Per-card accent stripe via `--card-accent` is preserved on hover (don't override `border-color` in the hover rule on a card-flavour selector — that erases the stripe; see *Pitfalls* below).
+- Per-card accent stripe via `--card-accent` is preserved on hover (don't override `border-color` in the hover rule on a card-flavour selector, which erases the stripe; see *Pitfalls* below).
 
 The title's trailing `→` is part of the text content, not a CSS pseudo-element. Put it in the HTML so screen readers announce it.
 
 ### Reference implementations
 
-- **Sub-region cards on sumendar.html** ([`/talan/domains/sumendar/sumendar.html`](../talan/domains/sumendar/sumendar.html)): *Order of Steam →* and *Dragon's Reach →* use the canonical `<a class="subregion-card">` pattern. Other sub-regions on the same page are non-clickable `<div class="subregion-card">` because they have no dedicated page yet. This is the strictest model — the same hub displays both states side-by-side cleanly.
+- **Sub-region cards on sumendar.html** ([`/talan/domains/sumendar/sumendar.html`](../talan/domains/sumendar/sumendar.html)): *Order of Steam →* and *Dragon's Reach →* use the canonical `<a class="subregion-card">` pattern. Other sub-regions on the same page are non-clickable `<div class="subregion-card">` because they have no dedicated page yet. This is the strictest model: the same hub displays both states side-by-side cleanly.
 - **Domain cards on talan.html** ([`/talan/talan.html`](../talan/talan.html)): 13 `<a class="domain-card">` cards, one per god domain.
 - **Ancestry cards on ancestries.html** ([`/talan/ancestries.html`](../talan/ancestries.html)): 13 `<a class="accent-card ... ancestry-card is-link">` cards.
 - **Historical civilisation cards on historical.html** ([`/talan/historical/historical.html`](../talan/historical/historical.html)): three `<a class="subregion-card">` cards (Golden Empire, Storveldi Denbora, Elden).
@@ -162,4 +162,4 @@ Before shipping a page with cards:
 3. No `<a>` tag appears inside any other `<a>` tag.
 4. Every clickable card uses `is-link` (or `a.accent-card`, which has the same display-block reset).
 5. Plain `<div class="...card...">` cards have no `→`, no pill, and no `is-link`.
-6. Per-card `--card-accent` accent stripe survives hover (test by hovering — the left stripe should not change colour).
+6. Per-card `--card-accent` accent stripe survives hover (test by hovering; the left stripe should not change colour).
