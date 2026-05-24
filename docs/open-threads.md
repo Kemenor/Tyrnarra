@@ -264,10 +264,10 @@ Items where the world has decided *what* but not *much*: placements and structur
 - **Azkataria** (Lautara). Houses Merkavar on its interior lake; the merchant-feeder regions of the Market City are unwritten.
 - **Twin Suns** (Lautara). Blocked on the phenomenon-of-origin thread (§Needs writing); flesh-out follows the naming.
 - **Star Island** (Askamira). Small star-shaped island in Midarra; tonal handle and government open.
-- **Fellibylur** (Vindul). High lone peak; settlement at all? monastic outpost? uninhabited landmark?
+- **Fellibylur** (Vindul). Fully canon (see geography.md, *Vindul → Fellibylur*): Strix-anchored storm-people merchant kingdom on the Hafra coast and Vindul steppe-interior, governed under the **Stormpact** (chartered Council with two seats, **the Skybell Republic** on the coast and **the Thunderhost** in the interior). Signature export: **Stormriders**, foul-weather Hafra pilots. Closed.
 - **Balatur Erui** (Floteyn). Whale-shoals sub-region holding Balaena; the *other* islands of this archipelago.
-- **Baerfrost** (Vindul). Arctic coast; the people who live this far north and what their winter looks like.
-- **Air Monastery** (Vindul). Autonomous fortified enclave; the order's name, its founding, what they actually train.
+- **Baerfrost** (Vindul). The **Hunt-League** polity is canon (see geography.md, *Vindul → Baerfrost*): two-tier meritocracy, clan-chosen chieftains vote a midwinter Hammer-Lord, post-Dark-Era institution in tension with rising jarldoms and treaty-merit. Still open: the cold-hall's name, named clans, named recent Hammer-Lords, the Gathering's voting structure (acclaim, secret ballot, ritual duel of arguments?), the names of the border jarldoms in formation, daily winter life, and the Air-Monastery trade-treaty detail.
+- **Air Monastery** (Vindul). Fully canon (see geography.md, *Vindul → Air Monastery*): mother-house of **the Wyndwalken**, a Kashrishi-anchored secular-contemplative cartographer order with pre-Imperial astronomer roots, Empire-era brass instruments, eight centuries of Dark-Era monastic defence, and a modern mendicant practice that has made their maps the standard reference on Talan. Closed.
 - **The Dreaming Cape** (Brauogi). Name implies a specific phenomenon; what dreams, whose dreams, why this coast.
 - **Rika Tikur** (Brauogi). Independent coastal city west of Millhaven; etymology and full canon both open. (Likely best paired with the Millhaven re-introduction thread.)
 - **The Wildreach** (Brauogi/Ezkudon border). *The wild-touched live here* is the one-line; what that means in practice is open.

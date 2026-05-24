@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baerfrost · Vindul · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #7090b0;
+    --card-bg: rgba(18,22,30,0.55);
+  }
+
+  /* Skald-record kill entries, prose-bolded sub-headers in a tight stack */
+  .skald-stack { max-width: 880px; margin: 18px auto; }
+  .skald-entry { padding: 18px 22px; margin-bottom: 14px; }
+  .skald-mark { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+  .skald-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; font-size: 1.1rem; margin-bottom: 8px; }
+  .skald-entry p { margin: 0 0 8px; line-height: 1.6; }
+  .skald-entry p:last-child { margin-bottom: 0; }
+
+  /* Pressure-of-the-era split panel (two faces of the same argument) */
+  .pressure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
+  .pressure-card { padding: 16px 18px; }
+  .pressure-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 8px; }
+  .pressure-card p { margin: 0; font-size: 0.92rem; line-height: 1.55; }
+
+  /* Cold-Hall callout (left-bordered, ice-toned, parallels Haizetsua's vornsketta) */
+  .hall-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(28,38,52,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .hall-call .h-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .hall-call p { margin: 0 0 12px; line-height: 1.6; }
+  .hall-call p:last-child { margin-bottom: 0; }
+
+  /* Signature feature panels (the Hammer, the year-rhythm) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+</style>
+</head>
+<body data-page="baerfrost">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/vindul/vindul.html">Vindul</a><span class="sep">›</span><span>Baerfrost</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Baerfrost</div>
+    <div class="page-subtitle">Vindul Sub-Region · The Arctic Hunt-League</div>
+    <div class="page-flavor">"The Hammer passes at midwinter. What stands tallest in the year, stands."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Modern-English coinage, lightly drifted. <i>Bear</i> + <i>frost</i> → <i>Baerfrost</i>, the vowel raised through centuries of cold-country mouths. The name records the country plainly: the bear's ground, where the frost holds.</dd>
+    <dt>Position</dt><dd>The fully arctic northern coast of Vindul; the high tundra above the river that runs east through the Lands of Villtur. The ice never fully retreats here; the southern border is a river and a season, depending on which is harder that year.</dd>
+    <dt>Terrain</dt><dd>Pack-ice and ice-shelf at the north shore; high tundra falling south to scrub-line; isolated stone bluffs the clans use as winter-camp anchors. The interior is treeless past a certain latitude; the southern fringe carries dwarf pine where it meets the Villtur grass.</dd>
+    <dt>Character</dt><dd>
+      <i>Cold-country meritocracy, ritualised at the Hammer-passing</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Hunt-League</span><span class="pill">Clan-Chieftains</span><span class="pill">Midwinter Gathering</span><span class="pill">Dark-Era Survival</span></div>
+    </dd>
+    <dt>People</dt><dd>The <b>Jotunborn</b>, the giant-blooded; the largest stable population on Talan. Frost-adapted by ancestry, tall by ancestry, stoic by temperament. Lifespans run 150–200 years, with full physical maturity reached late (by the third decade) and clan-elder seniority typically arriving past the century-mark. The signature white-streak through the hair that comes with age is read across the tundra as <i>seasons-counted</i>, the cold-country mark of a Jotunborn who has been believed in by other Jotunborn long enough to earn the reading.</dd>
+    <dt>Tongue</dt><dd>Talanese for trade and abroad; a Jotunborn cold-country register at the cold-halls and on the ice. The register is short, consonant-weighted, and built for wind: a syllable that the wind would carry away gets dropped, and the language has lived with this rule long enough that southerners trying to imitate it tend to lose the rhythm before the words.</dd>
+    <dt>Faith</dt><dd><b>Fisaya</b>-touched, undogmatic. The wind goddess's <i>storms</i> and <i>breath</i> aspects sit naturally over a country whose weather is the chief antagonist; her temples here are open-faced and small. The clans keep founder-remembrance as ancestor-respect (the pattern is shared with Haizetsua, though the Baerfrost form is older and more wordless). No separate ancestral pantheon, no zealotry.</dd>
+    <dt>Rule</dt><dd><b>The Hunt-League</b>. Two tiers: each clan picks its own chieftain by its own meritocratic test; once a year at midwinter the chieftains gather at a fixed cold-hall and vote among themselves for the year's <b>Hammer-Lord</b>. Authority is total within the year and ends at the next midwinter without inheritance.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(112,144,176,0.5);">
+    <div class="gods-city-label">Seat of the Gathering</div>
+    <div class="gods-city-name">The Cold-Hall</div>
+    <div class="gods-city-byname">A fixed midwinter gathering-hall on the high tundra · the only Baerfrost structure that does not move with its clan</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-hunt-league" class="section-heading">The Hunt-League</h2>
+  <div class="prose">
+    <p>The <b>Hunt-League</b> is what the arctic clans of Baerfrost became when the breach centuries ended and the survivors found themselves still standing. The institution is two-tier and uncomplicated in its bones. Each clan picks its own chieftain by its own meritocratic test: most clans weigh proven kills, but the reckoning is the clan's own affair, and several of the older clans weigh seasons-led, hard-winters-survived, or feasts-hosted in place of or alongside the kill-count. A Baerfrost chieftaincy is never inherited and rarely contested for long; the clan that has the wrong chieftain finds out by the next bad season, and the test reopens.</p>
+
+    <p>Once a year at midwinter, the chieftains travel to the Cold-Hall and meet in council. They vote among themselves for the <b>Hammer-Lord</b>: the Jotunborn whose Merit over the past year stands tallest. Authority is total within the year, ends at the next midwinter, and passes without inheritance to whoever the chieftains read as the year's tallest standing. The Hammer-Lord rules the League's external affairs (treaties with the southern jarldoms, the trade-bond with the Skarvorn-coast, the rare emissary sent to Haizava); inside Baerfrost the chieftains continue to rule their clans, and a Hammer-Lord who tries to govern a clan that is not their own is reminded, courteously and then less courteously, that the Hammer is not for that.</p>
+
+    <p>What makes the League unusual on Talan is the combination: the meritocracy is total, the term is fixed, the office is real, and no Hammer-Lord has ever held the office twice in succession. (Twice non-consecutive happens; twice in a row would, by the unwritten reading, mean the year's Merit had not moved, and a year in which Merit had not moved would be a year the Gathering would not vote.) The institution was Dark-Era survival made permanent and perfect for its era; the era is now over, and the institution is feeling that.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cold-hall-and-the-gathering" class="section-heading">The Cold-Hall and the Gathering</h2>
+  <div class="feature-panel prose">
+    <p>The <b>Cold-Hall</b> is the only Baerfrost structure that does not move with its clan. It stands on the high tundra at the country's interior, a long low building of fitted stone and beam-timber dragged up from the southern pine-line in the Dark Era and never replaced. The hall has no permanent residents. It is opened twelve days before midwinter by the chieftain whose clan-circuit runs nearest that year, swept, fired, and provisioned for the assembly; closed again on the morning the new Hammer-Lord rides out. Between gatherings, the hall belongs to nobody and to the wind.</p>
+
+    <p>The <b>Gathering</b> itself runs over the three darkest days of the year. The chieftains arrive on the first day with their seconds and a small honour-guard each, leave the honour-guard at the camp-ring outside the hall, and enter alone. The first day is feast, recital, and the reading of the past year's Merit: each chieftain stands in turn and gives a plain account of what their clan has done since the last Hammer passed. (Plain accounts are required; a chieftain caught embroidering is told once and shamed twice.) The second day is debate, in the Jotunborn register's formal mode, with the seconded chieftain at each speaker's left to call out any claim of fact that the second can disprove. The third day is the vote.</p>
+
+    <p>The voting is by <b>iron token</b>. Each chieftain carries a single token cast in their clan-mark, and each in turn lays their token in the hall's central brazier-pit on the name of the Jotunborn they read as the year's tallest. (Voting for oneself is not forbidden, but is held to be the act of someone who has not yet understood the institution.) The chieftain whose name carries the most tokens lifts the Hammer from the hall's beam and is, for the next year, the Hammer-Lord. They ride out at first light. The chieftains close the hall behind them and ride home through what is, by then, beginning to feel like the year turning.</p>
+  </div>
+
+  <div class="hall-call">
+    <div class="h-label">The Hammer · the Year's Mark</div>
+    <p>The Hammer itself is a heavy long-hafted warhammer of dark iron, head bound with annual rings of beaten silver, one ring added at the close of each year's term. The hafted weapon is older than any chieftain present can remember; the eldest ring still attached is the ring of the second Hammer-Lord (the first ring is held in private custody by the clan of the first Hammer-Lord and has never been re-attached). A chieftain who lifts the Hammer at the Gathering's third dawn carries something with the weight of every previous year's reading in their hand. The weight is not metaphorical. Several Hammer-Lords have remarked on the difficulty of the first day's ride.</p>
+    <p>The new ring is added in summer by a Skarvorn-trained silversmith of the southern coast; the silversmith's clan-name is not recorded in the hall's reckoning, only the work. The reading is that the Hammer belongs to the Hammer-Lord for the year and to the Gathering for the longer time, and the southern hand that adds the ring is hand and not author.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-skald-record" class="section-heading">The Skald-Record</h2>
+  <div class="prose">
+    <p>The Cold-Hall's beam is the Hunt-League's chronicle. Trophies of the kills that have won the Hammer hang along its length: a tooth, a vertebra, a strip of corrupted hide cured with sea-salt. The skalds of the southern clans (Baerfrost has no formal bardic order; the skalds are clan-kept and clan-trained) recite the beam at every Gathering, year by year, naming each kill and each Hammer-Lord. The recital takes most of the first feast-night. Younger chieftains are expected to know it by heart by their second Gathering, and the Cold-Hall does not have written records of the older centuries; the beam is the record, and the recital is the index.</p>
+    <p>Three entries from the beam carry the institution most heavily, named below as a southern chronicler would set them down. The skald-reading at the hall is denser and longer and is not properly translatable.</p>
+  </div>
+
+  <div class="skald-stack">
+    <div class="accent-card skald-entry">
+      <div class="skald-mark">Early centuries · the breach-years</div>
+      <div class="skald-name">The Corrupted-Spawn Stragglers</div>
+      <p>The Hunt-League's founding decades are recorded on the beam as a long series of small entries: tooth and claw and corrupted bone-shard, taken one at a time from the things that came north out of the breach. The early Hammer-Lords were the chieftains who killed the most and recovered the most clans-people; the institution's earliest Merit-reading was almost entirely kill-count, and the beam's first century is so dense with small trophies that the cleaning of it is a separate clan duty.</p>
+      <p>The skalds give a particular weight to the Hammer-Lord who first ordered the corrupted trophies cured in sea-salt rather than left in their natural state, on the reading that the corruption should not be allowed into the hall's air. The practice has held ever since. A Cold-Hall trophy that is not salt-cured is, by definition, not a corruption-trophy.</p>
+    </div>
+
+    <div class="accent-card skald-entry">
+      <div class="skald-mark">Mid-Adventurer Era · undated in the beam's first reckoning</div>
+      <div class="skald-name">The Ice-Kraken</div>
+      <p>The teeth still hang at the hall's beam: a curved row of nine, the largest the length of a Jotunborn forearm, each set into a wedge of darkened ice-bone. The kill was made off the north shelf by a Hammer-Lord whose clan-name the recital still gives in full; the beast had been rising from beneath the pack-ice for three seasons running, taking sealers and once an entire winter-camp, and the Hammer-Lord that year had stood the Merit-vote on the strength of three smaller kills and the public oath to take the kraken before the next Gathering. The kraken was taken. The Hammer-Lord was not re-elected the following year, on the reading that the kill had been the term's work and the term was complete.</p>
+      <p>The teeth are the only trophy in the hall that visitors are permitted to touch. The reading there is older than anyone present can give a reason for.</p>
+    </div>
+
+    <div class="accent-card skald-entry">
+      <div class="skald-mark">2487 MR · the most recent kill-Hammer</div>
+      <div class="skald-name">The Deep-Water Serpent</div>
+      <p>A long pale eel-bodied thing that rose at the spring thaw of 2487 MR and was tracked, harried, and finally killed over a six-month chase that ranged the whole length of the north shelf. The Hammer-Lord that year stood on the kill alone; the skalds note this approvingly, on the reading that a clean single-kill Merit is the truest kind. A single curved vertebra hangs from the hall's beam where the kraken's teeth do not, and the spacing is deliberate.</p>
+      <p>2487 MR is the most recent kill-Hammer of the modern century. Every Hammer since has been carried on cumulative-Merit readings (multiple smaller kills, seasons-led, feasts-hosted) or, in the most contested case, on a treaty. The serpent's vertebra has come to mark, without anyone having decided so, the institution's last unambiguous year.</p>
+    </div>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: The Beam Reads Back</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Camp-Fires Say</div>
+      Southern camp-fires hold that the Cold-Hall's beam reads back: that a Hammer-Lord who lays a hand on the beam between the recital's verses can feel the previous bearers' weight settle into the hand, and that this is the older sense of <i>the Hammer is heavy</i>. The chieftains do not confirm this and do not deny it. The skalds, asked, will smile and pour another cup of the southern beer that the trade-treaty made cheap.
+      <br><br>
+      A separate folk-reading among the youngest clans is that the ice-kraken was not the only one of its kind, that a second swims still under the pack-ice, and that the year a Hammer-Lord rises on a second kraken-kill will be the year the institution proves itself again. The chieftains do not confirm this and do not, in this case, particularly want to.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-pressure-of-the-open-era" class="section-heading">The Pressure of the Open Era</h2>
+  <div class="prose">
+    <p>The Hunt-League was Dark-Era survival made permanent. The era is over. Corrupted-spawn stragglers have dwindled to near-rumour in the past century; the deep beasts are rarer each decade; the southern trade-routes that the Adventurer Era opened bring Skarvorn-coast caravans up through the southern pine-line with beer, salt, iron, and (this part the chieftains discuss only at the Gathering's second day) ideas. Some border clans have begun building permanent winter-halls rather than camping. The families who hold those halls have begun to look very much like jarldoms in everything but name. The Gathering still meets and the Hammer still passes, but the question of <i>what Merit is for, when the dark is gone</i> is the loudest argument the chieftains have ever held.</p>
+
+    <p>The argument crystallised at the most recent Hammer-passing. A border-clan chieftain stood the Merit-vote on the strength of a <b>trade-treaty</b> negotiated with the Wyndwalken's eastern range out of the Air Monastery: the first treaty of its kind, a formalised exchange of cartographer-survey work for Baerfrost ice-route guidance, sealed without a kill anywhere in the year's reckoning. The vote carried. Half the chieftains read it as a betrayal of the institution; the other half read it as the institution finally working. The Hammer was lifted. The Hammer-Lord rode out at first light. The chieftains who had voted against rode home a different way.</p>
+  </div>
+
+  <div class="pressure-grid">
+    <div class="accent-card pressure-card">
+      <div class="pressure-name">The Old Reading</div>
+      <p>The Hunt-League is what the dark required of us. <i>Merit</i> means what it has always meant: the kill, the season survived, the clan brought through. A treaty is the work of a chieftain in their clan, not the year's tallest standing. To lift the Hammer on a treaty is to mistake the office. The institution is not broken; the chieftains who lifted it that day were.</p>
+    </div>
+    <div class="accent-card pressure-card">
+      <div class="pressure-name">The New Reading</div>
+      <p>Merit is what stands tallest in the year. In a year with no kraken, the tallest standing is the chieftain who held the longest border, brought the largest trade, kept the most clans-people fed. The Hammer does not weigh the year; the year weighs the Hammer. A meritocracy of killing in a country with nothing left to kill is not a meritocracy at all. The institution is finally working as it always meant to.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Both readings are held by chieftains the others respect. Neither side has put the question to a formal split, and the unwritten rule of the Gathering is that the question is the chieftains' own and the Hammer-Lord, whoever it is for the year, does not weigh in. The next several years are the institution's open question. The chieftains who fear the jarldom-drift fear it on the reading that a Baerfrost organised around treaties and winter-halls is a Baerfrost organised around something other than the cold, and that the cold has not gone anywhere. The chieftains who welcome the drift answer that the cold's chosen instrument is whatever instrument keeps the clans-people alive, and that the cold has never been particular about its tools.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith-and-storm" class="section-heading">Faith and Storm</h2>
+  <div class="feature-panel prose">
+    <p>Baerfrost is <b>Fisaya</b>-touched, undogmatic. The wind goddess sits over the country in her storm-and-breath aspects more than her travel-and-ruin aspects; a Jotunborn weather-reader asked which Fisaya they serve will give the answer in cloud-shape and wind-direction rather than in theological category, and a Jotunborn cleric in the southern temples will tell you the answer is the same answer. The temples here are small, open-faced, set in the lee of stone bluffs where the wind passes through without forcing the building. The central rite is silent attendance to whichever storm is currently passing.</p>
+
+    <p>Clerics of Fisaya are uncommon in Baerfrost (the Jotunborn temperament does not naturally produce them; the southern Vindul temples draw the few who do take the orders), but <b>weather-readers</b> are everywhere. Every clan keeps at least one, and the best of them work as ice-route guides for cloudship crews crossing the northern arc; the trade is steady enough that a Baerfrost-trained reader on a Hafra-bound cloudship raises the manifest-price of the crossing by a fixed percentage. The reading is not magical, in the same sense the Tengu wind-knowing is not magical: it is breath training and pattern discipline, applied generation after generation to a country whose weather is the chief antagonist of life.</p>
+
+    <p>What Baerfrost Fisaya-devotion has that mainland Vindul Fisaya-devotion does not is the long silence. A Jotunborn at the open-faced sanctuary may stand for an entire passing storm without speaking, without moving past what the wind requires, and consider the rite complete. Mainland clerics visiting the north report that the silence is not the Vindul silence; it is older, and it does not ask anything back.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: The Hammer-Lord's First Storm</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; A Southern-Coast Telling</div>
+      Southern-coast Skarvorn traders hold that the first storm to pass over Baerfrost after a new Hammer-Lord rides out from the Cold-Hall is Fisaya's reading of the year's vote: a clean clear storm if the chieftains chose well, a long ugly one if they did not. The Jotunborn do not subscribe to this belief and find it slightly insulting when southerners try to compare notes on what the latest storm meant. (The chieftains, in private, do compare notes. They simply do not call what they are doing comparing notes.)
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Baerfrost's central institution is settled; several local details remain open and will close as future scholarship or future story calls for them.</div>
+    <ol>
+      <li><b>The Cold-Hall's proper name.</b> The hall is referred to in this entry by its function. The chieftains use a name in the Jotunborn cold-country register that has not yet been set into the chronicle; it will be coined and seeded in the glossary when the right occasion presents.</li>
+      <li><b>Named clans.</b> The Hunt-League's clan structure is canon; the roster of clan-names, clan-marks, and per-clan meritocratic tests is open. Specific clans will be named as stories want them, in the Jotunborn cold-country register.</li>
+      <li><b>Named Hammer-Lords of the modern century.</b> The trade-treaty Hammer-Lord, the 2487 MR serpent-killer, and the older kraken-Hammer-Lord all need names. They will be set down as their stories surface.</li>
+      <li><b>The Gathering's voting precedence.</b> The iron-token vote is settled. Whether ties are broken by recital-order, by clan-seniority, by an extra round, or by some older mechanism is open; ties have been rare in the chronicle and the rule has never had to be public.</li>
+      <li><b>Daily winter life.</b> The clans' year-round rhythms, the camp-ring routines, the seasonal migrations, the standing camp-trades (skin-work, ice-fishing, bone-carving): all open. The shape is sketched; the lived detail will fill in.</li>
+      <li><b>The Air Monastery trade-treaty, in detail.</b> The treaty's existence and its political weight are canon; the specific terms (what the Wyndwalken receive in exchange for the cartographer-survey work, which Baerfrost passes the ice-route guidance covers, the durations and review-cycles) are open and will be set down jointly when both pages need the detail.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · VINDUL · BAERFROST</div>
+
+</div>
+
+</body>
+</html>

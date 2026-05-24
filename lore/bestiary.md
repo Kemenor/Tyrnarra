@@ -26,9 +26,9 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 | **Light** · Egulon | Iro | Nagaji · Shoony | – |
 | **Darkness** · Myrkono | Araphel | Fetchling | – |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
-| **Water** · Floteyn | Shuun | Strix · Tripkee · Athamaru · Merfolk | Leshy |
+| **Water** · Floteyn | Shuun | Tripkee · Athamaru · Merfolk | Leshy |
 | **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
-| **Wind** · Vindul | Fisaya | Kashrishi · Tengu | Jotunborn (Baerfrost) |
+| **Wind** · Vindul | Fisaya | Kashrishi · Tengu · Strix | Jotunborn (Baerfrost) |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi | – |
 | **Law** · Zuzental | Forseti | Elf · Human | – |
 | **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk · Centaur (Lands of Villtur) | Goloma |
@@ -58,7 +58,7 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 > The popular misconception that Androids were "built by the Storveldi Denbora" is a folk-myth artefact of the same conflation that makes mortals think the Storveldi Denbora were the Elden (see `secret-history.md`). Androids are Elden work, not Storveldi Denbora work.
 
 ### Athamaru
-**Seal-folk of the Floating Isles and the Hafra coast.** Aquatic by anatomy and amphibious by habit; their pods range the spray-zone islets of **Floteyn (Water / Shuun)** and the saltwater shorelines of Hafra. Common in Floteyn; uncommon along Hafra coasts; rare in the freshwater interior. Cultural relationship with the Strix-and-Tripkee island life is generally cooperative; the three ancestries have lived in adjacent ecological niches long enough to have settled the boundaries.
+**Seal-folk of the Floating Isles and the Hafra coast.** Aquatic by anatomy and amphibious by habit; their pods range the spray-zone islets of **Floteyn (Water / Shuun)** and the saltwater shorelines of Hafra. Common in Floteyn; uncommon along Hafra coasts; rare in the freshwater interior. Cultural relationship with the Tripkee island life is generally cooperative; the two ancestries have lived in adjacent ecological niches long enough to have settled the boundaries.
 
 ### Automaton
 **Synthetic people created by the Golden Empire** in their attempt to recreate the Android ancestry of the Elden. Automatons are capable (formidable, even) and a distinct ancestry in their own right; the gap between them and the Androids the Empire was reaching for stayed wide, and the Empire's scholars stopped short. Now **uncommon** everywhere; concentration in Sumendar (Fire) where the New Age Dwarves and the Kobolds maintain them with steadily improving technology, working toward replication that remains out of reach.
@@ -200,7 +200,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 **Native to the Feyworld** (the Chaos plane of the Life Layer). Common there; some cross to the Material Plane and live among mortals, where they are rare. No domain-specific concentration on Talan; sprites go where they go.
 
 ### Strix
-**Commonly found on the Floating Isles of Shuun** alongside Tripkee, Athamaru, and Merfolk. Their natural flight makes the islet-archipelago life of Floteyn one of the few comfortable habitats for them; elsewhere on Talan they are rare and often suspected by mortals who do not know them.
+**Commonly found in the storm-wracked sub-region of Fellibylur (Vindul / Wind / Fisaya).** Winged sky-people who ride the gathering weather of the Vindul steppe and the Hafra coast; their natural flight and weather-attunement make them the deepest keepers of storm-lore on Talan. The Strix interior of Fellibylur runs nomadic, clan-circuiting the open grass-steppe and roosting in foothill and river-bluff cliffs; the coastal Strix live among the **Skybell Republic**'s port-towns and serve as the core of Fellibylur's elite **Stormriders**, the foul-weather Hafra pilots no merchant fleet that crosses the cloud-sea will cross without if they can help it. The **Thunderhost** (Fellibylur's clan-moot half of the Stormpact) is functionally a council of Strix clan-chieftains. Uncommon outside Vindul, where they are seen mostly as travellers or hired pilots from Fellibylur.
 
 ### Surki
 **Insectoid sapients of the deep places.** **Uncommon in the upper Darklands**; they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals; see `secret-history.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
@@ -209,7 +209,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 **Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks; the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul.
 
 ### Tripkee
-**Commonly found on the Floating Isles of Shuun**: the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Strix, Athamaru, and Merfolk; Tripkee are the most settled of the four (Strix fly through, Athamaru swim past, Merfolk pass underneath; Tripkee build).
+**Commonly found on the Floating Isles of Shuun**: the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Athamaru and Merfolk; Tripkee are the most settled of the three (Athamaru swim past, Merfolk pass underneath; Tripkee build).
 
 ### Vanara
 **Common in the Jungle of Chaos**: the Basogur Jungle that straddles Nashavel and Ehizahar. The Vanara culture is one of the few that straddles two domains comfortably; the Jungle is their home and the politics of the two domains around it are something they navigate rather than belong to.
