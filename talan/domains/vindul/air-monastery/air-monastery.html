@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Monastery · Vindul · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #a89060;
+    --card-bg: rgba(22,18,12,0.55);
+  }
+
+  /* Discipline cards (the secular-contemplative cast) */
+  .disc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .disc-card { padding: 14px 16px; }
+  .disc-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
+  .disc-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Era arc cards (four-era walk through the order's history) */
+  .arc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 20px auto; }
+  .arc-card { padding: 16px 16px 14px; }
+  .arc-era { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 6px; }
+  .arc-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
+  .arc-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Order callout (mother-house / order frame, brass-toned) */
+  .order-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(48,40,24,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .order-call .o-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .order-call p { margin: 0 0 12px; line-height: 1.6; }
+  .order-call p:last-child { margin-bottom: 0; }
+
+  /* Map-feature panel (the gold-standard) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+
+  /* The way-a-place-wants-to-be-found pill-row of map kinds */
+  .map-kinds { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; max-width: 980px; margin: 18px auto; }
+  .map-card { padding: 14px 14px; }
+  .map-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; }
+  .map-band { font-style: italic; color: var(--gold-dim); font-size: 0.82rem; margin: 4px 0 6px; }
+  .map-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+</style>
+</head>
+<body data-page="air-monastery">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/vindul/vindul.html">Vindul</a><span class="sep">›</span><span>Air Monastery</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Air Monastery</div>
+    <div class="page-subtitle">Vindul Sub-Region · Mother-House of the Wyndwalken</div>
+    <div class="page-flavor">"The fire keeps the watch. The brass keeps the line. The walker keeps the field-book. The mountain keeps the rest."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>
+      <b>Air Monastery</b>: plain English, modern stratum. The sub-region name describes the place: a monastic enclave high enough that the air itself is the first thing a visitor notices.<br>
+      <b>The Wyndwalken</b>: modern-English coinage with light drift. From <i>Wind-Walked</i> (the order's mendicant cartographers walk the world): vowel drift <i>i → y</i>, which lands the <i>Wynd-</i> form inside Vindul's wind-domain naming-field, and the archaic past-participle <i>-en</i> (as in <i>oxen</i>, <i>spoken</i>). The collective form names the order; a single member is a <i>Wyndwalker</i>.
+    </dd>
+    <dt>Position</dt><dd>Vindul's eastern mountain range, a fortified enclave on the highest passes. Autonomous territory; recognised by Haizava as part of the domain in faith and in custom, but governed entirely from within its own walls.</dd>
+    <dt>Terrain</dt><dd>Granite and snow above the treeline, terraced approaches below it, scree fields and switchback paths in between. The eastern passes close in winter and reopen on the first long thaw; the order keeps a written record of the closing-date and the opening-date going back the better part of a millennium.</dd>
+    <dt>Character</dt><dd>
+      <i>Brass and granite, a fire kept on the highest tower, walkers gone abroad with field-books</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Mendicant</span><span class="pill">Cartographer</span><span class="pill">Secular-Contemplative</span><span class="pill">Star-Watch</span><span class="pill">Brass</span></div>
+    </dd>
+    <dt>People</dt><dd>Mostly <b>Kashrishi</b>: the Air Monastery is the closest thing the ancestry has to a home-institution on Talan. A steady minority of Vindul-native <b>Tengu</b> (whose Vornsketta-disposition takes well to mendicant work) and <b>Humans</b> round out the resident body; aspirants drift in from outside the domain at a rate the Abbey accepts but does not advertise.</dd>
+    <dt>Tongue</dt><dd>Talanese for the field-book, the trade-letter, and the bell-courtyard. The Kashrishi internal register is kept for liturgical recitation, the philosophical seminars, and the technical vocabulary of the brass: a Wyndwalker reading a calibrated grid speaks the instrument in its own language.</dd>
+    <dt>Faith</dt><dd>A <b>secular discipline</b> with private theology and public civic life: the Kashrishi inversion of more zealous traditions. Vows are sworn on <i>observation</i> and <i>craft</i> rather than on a god's name; what a particular monk believes in their own room is their own business and the abbey will not ask. <b>Fisaya</b> is acknowledged as the domain's god and her storm-festivals are observed, but the order maintains no clergy of its own and trains no clerics.</dd>
+    <dt>Rule</dt><dd>An <b>Abbot</b> seats the order, chosen for life from the senior Wyndwalken by an internal council of the longest-walked. Day-to-day governance runs through a small <b>Chapter</b> of department-heads (the Brass, the Field, the Archive, the Watch, the Gates); the Abbot adjudicates disputes the Chapter cannot resolve and signs the order's external correspondence. <i>Canon-additive: the Abbot's title and the Chapter's exact composition are surfaced here as the page's working call; either could be revised by future canon.</i></dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(168,144,96,0.5);">
+    <div class="gods-city-label">Mother-House</div>
+    <div class="gods-city-name">Hartzar Erruta</div>
+    <div class="gods-city-byname">The Star-Watched Crag · seat of the Wyndwalken</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; color:var(--gold-dim); max-width:760px; margin: 12px auto 0; font-size:0.88rem;">
+    <i>Hartzar Erruta</i>: from Basque <i>haitz</i> (rock, crag) + <i>izar</i> (star) → <i>haitz-izar</i> "star-rock" → drifted to <i>Hartzar</i>; with <i>errota</i> (mill, turning thing; archaic: anything that turns by force of weather) → drifted to <i>Erruta</i>. "The Star-Crag that Turns with the Sky." The deep-old name records what the founding observers came up the mountain to do: read a turning sky from a fixed stone.<br>
+    <span style="color:var(--text-dim); font-size:0.85rem;">Canon-additive: the mother-house's name is committed here pending revision.</span>
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wyndwalken-order" class="section-heading">The Wyndwalken Order</h2>
+  <div class="prose">
+    <p>The <b>Wyndwalken</b> are the order whose cartography sets the gold standard of Talanese map-making. The name reads in two directions at once: literally, <i>those who have walked</i>; locally, a sound that sits inside Vindul's wind-domain naming-field without forcing itself there. A Wyndwalker abroad introduces themselves with the order's name and a clan-line of teachers, in that order; the personal name comes third and sometimes not at all.</p>
+
+    <p>The cast of the order has held since its founding, through every change of era the mountain has weathered: <b>secular-contemplative</b>. The discipline is the discipline of looking carefully and recording what you saw, repeated over a working lifetime, with the inward steadiness that a working lifetime of careful looking quietly produces. The Kashrishi inclination toward private theology and public civic work is the cultural soil the order grew from; four millennia of practice have only deepened it. A Wyndwalker may or may not believe in any particular god. What they believe in is the <i>field-book</i>.</p>
+
+    <p>Most Wyndwalken spend most of their working lives <b>on the road</b>: walking the ranges and coasts and forests of Talan with <b>rule, compass, and field-book</b>, returning to the mother-house only for retreat, archival, training, and the long winter when the eastern passes close. The discipline of the road is the discipline of the cell. A Wyndwalker measures a coastline by walking it twice (once in each direction, in different weathers), sleeps where the field-book tells them the next day's grid-line opens, and carries the brass in a fitted case at their hip with the inward attention of someone whose hands have done the same motion ten thousand times.</p>
+  </div>
+
+  <div class="order-call">
+    <div class="o-label">A Wyndwalker, met on the road</div>
+    <p>Their posture when they read sky is the recognisable one. Feet square, head tipped slightly back, the small calibrated brass instrument held at the level of the brow in the left hand, the right hand stilled at the field-book's open page. They do not blink for longer than feels comfortable. They will speak if spoken to, with the short courteous brevity of someone whose attention is genuinely elsewhere; they will not begin the conversation. When they have what they came for, they note it down, close the brass back into its case with a small turning click that anyone who has met a Wyndwalker before will recognise from rooms away, and resume their walk.</p>
+    <p>The brass smells faintly of beeswax and old polish. The field-book smells of the leather binding and the particular ink the order makes in its own workrooms. A reader who has handled one Wyndwalker's working book can pick another Wyndwalker's working book out of a stack of ten by smell alone.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-secular-contemplative-cast" class="section-heading">The Secular-Contemplative Cast</h2>
+  <div class="prose">
+    <p>The order's daily life is structured by four old disciplines. None of them are framed religiously; all of them function the way religious disciplines function. The Kashrishi practice of <i>keeping theology private and civic life public</i> shapes every one.</p>
+  </div>
+
+  <div class="disc-grid">
+    <div class="accent-card disc-card">
+      <div class="disc-name">The Brass</div>
+      <p>The instruments themselves are the discipline. A Wyndwalker who has cared for the same calibrated sextant for forty years has, by the act of that care, learned what the order most wants them to know. Apprentices spend their first two years on instrument-craft before they are permitted a field-book of their own.</p>
+    </div>
+    <div class="accent-card disc-card">
+      <div class="disc-name">The Field-Book</div>
+      <p>Every working Wyndwalker keeps one. It travels with them, lives at their hip, and is copied into the archive on every return to the mother-house. A Wyndwalker who loses a field-book on the road is expected to walk back to the last entry's coordinates and reconstruct what they can; a Wyndwalker who fakes one is no longer of the order.</p>
+    </div>
+    <div class="accent-card disc-card">
+      <div class="disc-name">The Watch</div>
+      <p>The <b>fire-watch</b> at the highest tower has been lit every night since the breach centuries. Walking the watch in rotation is required of every resident Wyndwalker, including the Abbot. The watch is contemplative as much as practical: the long quiet of the cold hours above the mountain is, by long agreement, where most of the order's serious thinking happens.</p>
+    </div>
+    <div class="accent-card disc-card">
+      <div class="disc-name">The Walk</div>
+      <p>The mendicant life is itself the discipline. A Wyndwalker who has not been on the road for three years is gently encouraged back to it. The conviction is plain: a cartographer who stops walking stops being a cartographer, and an order of cartographers that lets its walkers settle becomes a library with opinions.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="from-sky-to-ground" class="section-heading">From Sky to Ground · the Astronomer Arc</h2>
+  <div class="prose">
+    <p>The order's deepest roots are <b>pre-Imperial</b>. In the late <a href="/talan/history.html">Lost Era</a>, a small enclave of Kashrishi astronomers climbed the eastern peaks of what would later be named Vindul and built the first observation-platforms on what is now the mother-house's central crag. Their work was the work of the night sky: cataloguing stars, tracking the moons through their cycle, marking the slow drift of the constellations across the years. The secular-contemplative cast was set in that founding generation, and the calibrated discipline of <i>looking carefully at a turning sky from a fixed point</i> shaped everything the order would later become.</p>
+
+    <p>The <b>Golden Empire</b> reached the mountain in the seventh century MR. The astronomers were conquered: the gates fell, the platforms were inventoried, and the enclave was folded into the imperial administration as a high-altitude survey post. The conquest was not gentle, but the relationship that followed was the most consequential gift the order has ever received.</p>
+
+    <p>The Empire gave the astronomers the <b>imperial brass</b>: precision instruments, mechanical clockwork, geometers' standard-rules, and (the gift that has shaped every later century of their work) <b>the technique of mapping what one observes against a calibrated grid</b>. The same discipline of careful observation, turned downward from the sky to the ground. In the same generation the astronomers became the Empire's high-altitude observatories <i>and</i> the Empire's mountain surveyors. The mother-house archive still holds the original imperial calibration-plates, kept in a sealed cabinet in the Brass-rooms and shown to apprentices on the day they are formally given their first instrument.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="eight-centuries-within" class="section-heading">Eight Centuries Within · the Dark Era</h2>
+  <div class="prose">
+    <p>When the breach centuries came and the Golden Empire fell, the order <b>withdrew behind its mountain walls and held</b>. The fortress thickened: outer walls were extended down the approach paths, the gate-houses were doubled, the inner courts were reinforced. The brass instruments folded inside. The fire-watch atop the highest tower was first lit in the early Dark Era as both a navigation point for travellers who could still climb the passes and a signal that civilization persisted here; it has burned every night since, in unbroken rotation, for the better part of eight centuries.</p>
+
+    <p>Refugees climbed the mountain throughout the era. The order took them in. Many stayed. The mother-house's residential ranges, which were built for an astronomer-enclave of perhaps two hundred, were extended through the breach centuries to house several thousand at the era's height. The terraced gardens on the south-facing slopes date from this period; the kitchens were rebuilt twice; the great cistern was cut from the rock in 1742 MR by refugees who would later be Wyndwalken themselves.</p>
+
+    <p>Eight centuries of defensive monasticism shaped the order in ways that have outlasted the necessity. The contemplative discipline deepened. The internal seminars became the philosophical seminars they still are. The astronomer-surveyors of the imperial period became a <b>contemplative order with an astronomer-surveyor's discipline still at its centre</b>: a transformation the order itself reads as continuity rather than change, on the grounds that what was being preserved through the dark was the same thing that had been founded under the open sky.</p>
+
+    <p>The fire-watch is the symbol the order will not let go of. A Wyndwalker on the road who passes another Wyndwalker on the road greets them by saying, simply, <i>the fire keeps</i>. The other replies <i>the fire keeps</i>. They walk on.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-road-re-opened" class="section-heading">The Road Re-Opened · the Mendicant Era</h2>
+  <div class="prose">
+    <p>When the Adventurer Era opened the world back up, the Wyndwalken <b>left their gates</b>. The decision was made in Chapter, recorded in a brief minute (<i>the world is again to be walked; we will walk it</i>) and put into practice within a single generation. The order's reputation as the Empire's surveyors was old enough by then to be myth rather than memory; the order's own conviction that surveying was what they were for had survived the breach centuries unaltered.</p>
+
+    <p>They are a <b>mendicant order</b> now. Most monks spend most of their working lives on the road, walking the ranges and coasts and forests of Talan with rule, compass, and field-book, returning to the mother-house only for retreat, archival, training, and the long winter when the eastern passes close. The annual return-flow is a small festival in itself: the gates open, the walkers come up the switchbacks in groups of two and three through the late autumn, the brass-cases click open in the cleaning rooms, the field-books go into the archive for copying, and the fire-watch rotation rebuilds itself for the months that the snow keeps everyone home.</p>
+
+    <p>The mendicant life pairs naturally with the <a href="/talan/domains/vindul/haizetsua/haizetsua.html">Tengu Vornsketta</a>: young Haizetsuans whose wing-journey takes them up the eastern range often find a season's work alongside a Wyndwalker walking a coastline, and a small but steady minority of those Tengu come back the next year to take the apprentice's vow. The Vornsketta-disposed take to the discipline of the walk in a way the order has come to count on; the order's own discipline of the field-book gives a young Tengu wing-traveller a structure the wing-journey otherwise leaves to the traveller themselves.</p>
+
+    <p>A recent <b>trade-treaty</b> with the eastern range of <a href="/talan/domains/vindul/vindul.html">Baerfrost</a>'s Hunt-League opened mendicant routes north along the high passes for the first time since the Dark Era; the treaty was the occasion of a <a href="/talan/domains/vindul/vindul.html"><b>Hammer-Lord</b></a> election in Baerfrost won on a successful diplomatic rather than a kill, the first such election in the institution's history, and the Wyndwalken read the outcome as a quietly hopeful sign for the kind of world they walk in.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-maps" class="section-heading">The Maps</h2>
+  <div class="feature-panel prose">
+    <p>The Wyndwalken's <b>maps are the standard reference</b> at every court that can afford a copy. They are the working surface a Lautaran trade-house plans a caravan route on, the document a Zuzental judge consults when a boundary dispute reaches the bench, the chart a cloudship captain unrolls before committing to a Hafra crossing. A map carrying the Wyndwalken's small impressed brass mark in the lower-right corner is, in the practical jurisprudence of every court on Talan, treated as evidence; a map without the mark is treated as opinion.</p>
+
+    <p>The technique is the imperial discipline, deepened by eight centuries of internal seminar and four centuries of mendicant practice. Every Wyndwalker map starts as <b>field-book entries</b> taken at calibrated stations along a measured walk; the entries are reconciled at the mother-house against the order's accumulated grid; the final fair-copy is drawn in the archive workrooms by a small team of senior cartographers who never themselves walked the ground. The separation of walker and drafter is deliberate: a map is the order's work, not the walker's. The walker's name appears nowhere on the finished sheet.</p>
+  </div>
+
+  <div class="map-kinds">
+    <div class="accent-card map-card">
+      <div class="map-name">The Working Sheet</div>
+      <div class="map-band">commissioned · the standard product</div>
+      <p>What a court or trade-house actually buys. Coastlines, roads, settlements, terrain, the things that do not move. Calibrated, signed with the brass mark, sold at a price that scales with the area surveyed. Most of what the order does.</p>
+    </div>
+    <div class="accent-card map-card">
+      <div class="map-name">The Long Survey</div>
+      <div class="map-band">commissioned · multi-year, multi-walker</div>
+      <p>A regional survey across years, with several walkers rotating through and the field-books reconciled centrally. The sheets are large, drawn at a uniform scale, and sold as bound atlases. The continent's working geography is in significant part the cumulative output of this kind of work.</p>
+    </div>
+    <div class="accent-card map-card">
+      <div class="map-name">The Found Map</div>
+      <div class="map-band">rare · the prized ones</div>
+      <p>The maps that are said to show <i>the way a place wants to be found</i>. An Occult-touched cartography that has never been satisfactorily explained outside the order. The mother-house produces perhaps one a year; the price they fetch at private sale is the kind of price that does not appear in any open ledger.</p>
+    </div>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>The Found Maps are the order's quiet exception to its own technique. They are drawn by the same drafters, on the same paper, from field-books that look on inspection like any other field-book the order keeps. What is in them, and how it gets into them, is a question the order does not answer. A Wyndwalker asked about it directly will give the small courteous brevity reserved for questions whose answer the asker does not need; the Abbey's external correspondence treats the matter as not being a matter.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: <i>Asking the Map Nicely</i></button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; The Travellers' Story</div>
+      It is widely told along the trade-roads that a Wyndwalken Found Map will not work for a reader who is in a hurry. The story usually involves a merchant who paid more for the map than they paid for the rest of the expedition, lost the road in fog on the third day out, sat in the wet for an hour with the map open on a flat rock, asked the map (out loud, with feeling) what it would like them to do, and found the next mile of road folded clearly into a quarter of the sheet that they would have sworn was blank an hour earlier. The merchant tells the story themselves, after a few drinks, with a slightly embarrassed expression. Most listeners do not quite believe it.
+      <br><br>
+      A second version of the same story has the merchant cursing the map, the map closing itself in their hands, and the merchant lost for three further days until they found their humility. The chronicler's record contains both versions in roughly equal proportion; the Wyndwalken themselves smile at both and decline to clarify.
+      <br><br>
+      The folk-name <i>Asking the Map Nicely</i> has stuck. It is now a common idiom in the trade-cities for any kind of work whose results depend on a patience the worker would rather not display.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-kashrishi-cast" class="section-heading">The Kashrishi Cast</h2>
+  <div class="prose">
+    <p>Most Wyndwalken are <b>Kashrishi</b>. The Air Monastery is the closest thing the ancestry has to a home-institution on Talan, and the order's character is in significant part the public-civic crown of the broader Kashrishi inclination: a tradition that keeps its theology private and its civic life public, the inverse of the more outwardly zealous traditions of other domains. A Kashrishi monk asked about what they themselves believe will give a polite answer that does not actually answer the question; a Kashrishi monk asked about what they have surveyed in the past year will pull out the field-book and show the relevant pages with quiet pride.</p>
+
+    <p>The order does not require its monks to be Kashrishi, and never has. Vindul-native Tengu and Humans make up a steady minority of the resident body, and the order is unembarrassed by aspirants drifting in from outside the domain at whatever rate the gates can absorb. The cast of the order has shaped its non-Kashrishi members rather than the other way around: a Tengu Wyndwalker, after twenty years in the order, will keep their theology private and their civic life public in ways their home Skarvorn clan finds both familiar and slightly foreign. The order's culture works on whoever stays long enough to be worked on.</p>
+
+    <p>For most Talanese mortals who know the Kashrishi only by reputation, the Wyndwalken <i>are</i> the Kashrishi: the visible public face of an ancestry whose private life is largely invisible to outsiders. A Kashrishi met on the road who is not a Wyndwalker is sometimes asked, by polite strangers, whether they are one anyway. The polite answer is to smile, decline gently, and offer to recommend a working map.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the order's central canon settled, several details about the Air Monastery remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The Abbot's title and the Chapter's exact shape.</b> Surfaced here as <i>Abbot</i> with a small <i>Chapter</i> of department-heads (Brass, Field, Archive, Watch, Gates); whether the order uses a different internal title (the Kashrishi register might prefer a word the Wyndwalken would translate only awkwardly into Talanese) and whether the Chapter is five seats or seven is open.</li>
+      <li><b>Named living Wyndwalken.</b> The order has produced four centuries of mendicant monks since the gates reopened; no individual Wyndwalker is yet named in canon. Surveyors of particular note, the current Abbot, the master of the Brass-rooms, and the senior drafters of the Found Maps all wait on stories that call for them.</li>
+      <li><b>The Baerfrost trade-treaty detail.</b> The treaty between the order and the Hunt-League's eastern border is canon (it occasioned the first non-kill Hammer-Lord election); its specific terms, the chieftain who proposed it, and what the order surveys for the League in return are open.</li>
+      <li><b>Specific recurring map-commissions.</b> Which courts hold standing contracts with the order, which trade-houses have right-of-first-refusal on new Long Surveys, and which Found Maps have surfaced into private circulation are all open. The order's commercial ledger is a future drafting pass.</li>
+      <li><b>The relationship with Haizetsua's Tengu clans.</b> A steady minority of Wyndwalken are Tengu, and the Vornsketta-to-novitiate pipeline runs reliably enough that the Skarvorn Republic is aware of it. Whether any of the eleven clans has a formal long-standing relationship with the order, supplies monks at a noticeably higher rate, or runs trade-correspondence with the order's mapping work is open. The Haizetsua entry surfaces the question from the other side.</li>
+      <li><b>The mother-house's named interior.</b> The page commits the mother-house's name (<i>Hartzar Erruta</i>, the Star-Watched Crag) as a working canon. The named towers, courts, gardens, gates, and the Brass-rooms themselves wait on a dedicated mother-house page when the order earns one.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · VINDUL · AIR MONASTERY</div>
+
+</div>
+
+</body>
+</html>

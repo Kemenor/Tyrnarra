@@ -41,7 +41,10 @@
   // Practical ceiling is ~5 levels before labels start to wrap.
   var DOMAINS = [
     { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [
-      { slug: 'haizetsua', label: 'Haizetsua · Tengu Island', href: '/talan/domains/vindul/haizetsua/haizetsua.html', children: [] }
+      { slug: 'baerfrost',     label: 'Baerfrost &middot; Hunt-League',     href: '/talan/domains/vindul/baerfrost/baerfrost.html',         children: [] },
+      { slug: 'air-monastery', label: 'Air Monastery &middot; Wyndwalken',  href: '/talan/domains/vindul/air-monastery/air-monastery.html', children: [] },
+      { slug: 'fellibylur',    label: 'Fellibylur &middot; Stormpact',      href: '/talan/domains/vindul/fellibylur/fellibylur.html',       children: [] },
+      { slug: 'haizetsua',     label: 'Haizetsua &middot; Tengu Island',    href: '/talan/domains/vindul/haizetsua/haizetsua.html',         children: [] }
     ]},
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fellibylur &middot; Vindul &middot; Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #7088b0;
+    --card-bg: rgba(18,22,30,0.55);
+  }
+
+  /* Two-seat structural grid (Skybell Republic / Thunderhost summary) */
+  .seat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; max-width: 1000px; margin: 22px auto; }
+  .seat-card { padding: 18px 22px; }
+  .seat-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+  .seat-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.15rem; margin-bottom: 6px; }
+  .seat-band { font-style: italic; color: var(--gold-dim); font-size: 0.9rem; margin-bottom: 10px; }
+  .seat-card p { font-size: 0.95rem; line-height: 1.55; margin: 0; }
+
+  /* Skybell feature panel: bell cards arranged like a network */
+  .bell-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 1000px; margin: 18px auto; }
+  .bell-card { padding: 14px 14px; text-align: center; }
+  .bell-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1rem; }
+  .bell-tone { font-style: italic; color: var(--text); font-size: 0.85rem; margin: 4px 0 6px; }
+  .bell-note { font-size: 0.8rem; color: var(--text-dim); line-height: 1.45; }
+
+  /* Stormrider craft sub-blocks (paired training) */
+  .craft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .craft-card { padding: 14px 16px; }
+  .craft-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
+  .craft-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Strix disposition cards */
+  .disposition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .disp-card { padding: 14px 16px; }
+  .disp-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
+  .disp-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Stormpact founding callout (left-bordered, sky-toned) */
+  .pact-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(40,52,72,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .pact-call .v-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .pact-call p { margin: 0 0 12px; line-height: 1.6; }
+  .pact-call p:last-child { margin-bottom: 0; }
+
+  /* Signature feature panels (Skybells, Stormriders) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+</style>
+</head>
+<body data-page="fellibylur">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">&rsaquo;</span><a href="/talan/talan.html">Talan</a><span class="sep">&rsaquo;</span><a href="/talan/domains/vindul/vindul.html">Vindul</a><span class="sep">&rsaquo;</span><span>Fellibylur</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">&#10022; &middot; &#10022; &middot; &#10022;</div>
+    <div class="page-title">Fellibylur</div>
+    <div class="page-subtitle">Vindul Sub-Region &middot; The Stormpact Kingdom</div>
+    <div class="page-flavor">"Hear the bell, read the cloud, ride the gust. The goddess says the rest."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Icelandic <i>fell</i> (lone mountain) + <i>bylur</i> (blizzard, gale), originally <i>fellsbylur</i> "Storm-Fell." Drift wore the genitive <i>-s-</i> down to <i>-i-</i>. The deep-old peak-reading faded over the centuries; the name persists as a description of the region's <i>character</i>, the place where storms gather and roll across open lands.</dd>
+    <dt>Position</dt><dd>Between <a href="/talan/domains/vindul/vindul.html"><b>Baerfrost</b></a> in the north (separated by the river that runs east through the lands of Villtur), <b>Azkamour</b> to the southwest, <b>Azkataria</b> to the south and east, with the <b>Hafra coast</b> to the west.</dd>
+    <dt>Terrain</dt><dd>Open grass-steppe with scattered foothills; one notable interior forest along the river-cuts; the Hafra coast in the west. Storm-weather year-round, the sky never quite settling for long.</dd>
+    <dt>Character</dt><dd>
+      <i>Storm-people merchants of an open country that is mostly weather</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Storm-People</span><span class="pill">Merchant Coast</span><span class="pill">Mendicant Steppe</span><span class="pill">Stormriders</span></div>
+    </dd>
+    <dt>People</dt><dd><b>Strix</b>-anchored: winged sky-people who read weather as natural discipline. Common across both halves of the kingdom and dominant in the interior, where they roost in foothill and river-bluff cliffs and clan-circuit the open steppe. The coast mixes them with <b>Tengu</b> sailors out of <a href="/talan/domains/vindul/haizetsua/haizetsua.html">Haizetsua</a> and <b>Kashrishi-Human</b> merchant-families who keep the port-houses' books.</dd>
+    <dt>Tongue</dt><dd>Talanese for trade and abroad; the Strix interior keeps its own clan-modes (a high register for storm-augury and a low register for everyday camp-talk), and the coast carries a port-Talanese stiffened by Tengu loan-words for sail-handling.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Fisaya</b>-devotional. Storms are read as the goddess speaking, and reading her is both commercial practice (the bell-network is Fisaya-consecrated infrastructure) and spiritual practice (the Thunderhost's chieftains take their seats on the strength of demonstrated storm-augury).</dd>
+    <dt>Rule</dt><dd><b>The Stormpact</b>: a chartered Council of two seats. <b>The Skybell Republic</b> holds the coast; <b>the Thunderhost</b> holds the steppe-interior. The two vote together on matters that cross the coast-interior line and rule their own halves between sessions.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(112,136,176,0.5);">
+    <div class="gods-city-label">Port-Capital &middot; Skybell Republic</div>
+    <div class="gods-city-name">Brasswatch</div>
+    <div class="gods-city-byname">The Standing Bell &middot; first-rung of the Skybell network</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="the-stormpact" class="section-heading">The Stormpact</h2>
+  <div class="prose">
+    <p>The <b>Stormpact</b> is the chartered constitution that binds Fellibylur. Two seats sit under it, one for the coast and one for the interior, and the kingdom's central conviction is that a country this open cannot be held by one voice: the weather is a shared problem, the trade-routes are a shared problem, and the agreement on how to handle both is the country.</p>
+
+    <p>In ordinary practice the two seats rule their own halves. The Skybell Republic charters merchant-houses, certifies Stormriders, and rings the bells when the goddess is loud; the Thunderhost passes its grazing-rounds, settles its breeding-stock disputes, and reads the high-thunder skies that the coast cannot see clearly from the harbour-line. They vote together when the question crosses the coast-interior line: trade-charters with Baerfrost's Hunt-League up the northern river-road; Wyndwalken cartographer commissions for the port-charts; cross-border banditry; the question of whether a clan that has roosted three winters at a port-town counts as Republic or Thunderhost for the season's grazing-fees.</p>
+
+    <p>The Stormpact uses the word <i>Compact</i> sparingly: every Talanese mortal knows the <b>Compact of the Bound Thirteen</b> as the Gods' Law, and Fellibylur prefers to keep the registers clean. A Stormpact session is a <i>moot</i> in interior usage and a <i>sitting</i> in coast usage; both halves understand both words.</p>
+  </div>
+
+  <div class="seat-grid">
+    <div class="accent-card seat-card">
+      <div class="seat-label">Coast-Seat</div>
+      <div class="seat-name">The Skybell Republic</div>
+      <div class="seat-band">port-towns, bell-network, chartered houses</div>
+      <p>Holds the Hafra coast and the river-mouths. Registers chartered merchant-houses, certifies <b>Stormriders</b>, and maintains the consecrated bronze bells whose ringing is the kingdom's signature sound. Mixed-ancestry by long settlement: coast-Strix on the towers, Tengu on the rigging, Kashrishi-Human merchant-families in the counting-houses.</p>
+    </div>
+    <div class="accent-card seat-card">
+      <div class="seat-label">Interior-Seat</div>
+      <div class="seat-name">The Thunderhost</div>
+      <div class="seat-band">clan-moot, midsummer gathering, storm-augury</div>
+      <p>Holds the steppe-interior and the clan-circuits. A moot of Strix clan-chieftains who meet at midsummer at a fixed inland gathering to deliberate grazing, horse-breeding, weather-lore, and joint Stormpact business. A chieftain takes their seat by demonstrated storm-augury; promise is not enough, the read has to land.</p>
+    </div>
+  </div>
+
+  <div class="pact-call">
+    <div class="v-label">The Founding &middot; Early Adventurer Era</div>
+    <p>The Stormpact was sworn in the first decades of the Adventurer Era, when the long closure of the Dark Era released its grip on the northern roads and trade reopened in both directions through the Fellibylur passes for the first time in centuries. Baerfrost caravans came south with sealskin, ice-amber, and whatever the Hunt-League's hunts had brought down that season; southern merchants came north with grain, brass, and the Skybell-cast bronze that the coast had quietly perfected during the closure. Both routes crossed the same open steppe, and both halves of the region had to agree on a shared law or be ruined by competing for the same traffic.</p>
+    <p>The chronicles record a long winter of negotiation in a coast-port whose name the surviving record does not preserve. Coast-side merchants and Thunderhost chieftains sat at one fire through three storms; the agreement that walked out of that hall is the agreement still in force. The two seats, the two seats' separate domains, the joint-vote on what crosses both, the bells as Republic infrastructure, the storm-augury as Thunderhost qualification: each piece settled in that winter.</p>
+    <p>It has held, four-odd centuries on. The chronicles note three near-collapses (a Hunt-League trade-dispute in the second century of the Pact, a coast-side merchant-house attempt to seat a chartered governor over the bells, and the so-called <i>Year of the Silent Tower</i> when a major Skybell broke and no Thunderhost augur could agree on whether the silence was the goddess withdrawing or the bell-foundry's poor brass), and three quiet recoveries.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="the-skybell-republic" class="section-heading">The Skybell Republic</h2>
+  <div class="prose">
+    <p>The Republic is the coast-side seat: a chartered body of port-towns whose elders sit jointly under a rotating Chair drawn one season at a time from a different port. There is no capital in the kingdom-sense; <b>Brasswatch</b> is the senior port and the first-rung of the bell-network, but the Chair travels and the bells ring in chorus. A Republic session opens with the harbour-master of the host port striking the local Skybell once, plainly, on the unconsecrated side; the meeting closes when the same bell is struck on the consecrated side at adjournment. The two strikes are different tones and the difference is the meeting.</p>
+
+    <p>The Republic's charge is threefold: it <b>registers chartered merchant-houses</b> (no house trades through a Skybell port without a current charter and a posted bond against weather-loss); it <b>certifies Stormriders</b> (the kingdom's signature export, see below); and it <b>maintains the bell-network</b>, the bronze infrastructure that the goddess herself is said to speak through.</p>
+
+    <p>The Kashrishi-Human merchant-houses keep most of the day-to-day book-work and have done so for the better part of three centuries; the coast-Strix run the towers and the wind-watch; the Tengu keep the sails and the harbour-trade with Haizetsua. The arrangement is not statutory, it is settled: each ancestry occupies the role its disposition fits best, and the houses that have tried to break the pattern have not generally prospered.</p>
+  </div>
+
+  <h3 id="the-skybells" class="section-heading" style="margin-top: 28px; font-size: 1.2rem;">The Skybells</h3>
+  <div class="feature-panel prose">
+    <p>The signature infrastructure of the Republic. Each Skybell is a <b>consecrated bronze storm-warning bell</b> rung from the port-tower of a Republic town when a storm is inbound from Hafra. Each bell is <b>named</b>, cast in a Skybell-Republic foundry to a tone the local Fisaya-priest has chosen for the harbour's character, and consecrated in a rite that the priests will not describe to outsiders in any detail useful for reproduction. The ringing is a <b>sacred act</b>: the bell-keeper of a tower is a Fisaya-cleric as well as a watch-officer, and a Skybell rung by a profane hand is held to be silent in the way that matters.</p>
+
+    <p>A bell speaks in three modes. <b>One slow toll</b> is a watch-call: the keeper has seen something on the horizon and wants the harbour's eyes on the sky. <b>A steady measured ring</b> is a confirmed storm: ships in are to make fast, ships out are to come in if they still can. <b>A rapid double-strike</b> is a storm that has surprised the watch: this one is on the harbour, secure for it now, and the keeper is sorry. The three modes carry across the network. A bell at Brasswatch rung at confirmed-storm pitch sets the bell at Cloudshadow ringing watch-call within an hour, and the bell at Highmarrow within two; the network reads the coast end to end faster than a fast rider could.</p>
+
+    <p>The bells are named for what they have done. The most-known are <b>Old Brasswatch</b> (the standing senior bell, cast in the first generation of the Republic; her tone is the one the Republic's harbour-masters tune their own bells against), <b>Stormgift</b> at Cloudshadow (cast from the salvaged bronze of a foundering ship that beached on its port-bar in the founding year), <b>Highmarrow's Voice</b> (the highest-pitched of the major bells, audible for leagues inland on still air), and <b>the Mourner</b> at the small coast-port of Wrackmoor (cast after the only confirmed loss of a Skybell tower in the kingdom's history, struck only at confirmed-storm pitch and never on the watch-call mode).</p>
+  </div>
+
+  <div class="bell-grid">
+    <div class="accent-card bell-card"><div class="bell-name">Old Brasswatch</div><div class="bell-tone">low, steady, long-finishing</div><div class="bell-note">The senior bell of the network; tuning reference for the rest.</div></div>
+    <div class="accent-card bell-card"><div class="bell-name">Stormgift</div><div class="bell-tone">bright, slightly cracked, beloved</div><div class="bell-note">Cast from salvaged ship-bronze in the founding year.</div></div>
+    <div class="accent-card bell-card"><div class="bell-name">Highmarrow's Voice</div><div class="bell-tone">highest of the major bells</div><div class="bell-note">Heard for leagues inland on still air.</div></div>
+    <div class="accent-card bell-card"><div class="bell-name">The Mourner</div><div class="bell-tone">deep, single-mode only</div><div class="bell-note">Wrackmoor's bell. Struck only at confirmed-storm pitch.</div></div>
+  </div>
+
+  <div class="legend-era" style="margin-top: 24px;">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">&#9672; &nbsp; Popular Belief, The Bell That Could Be Heard at Sea</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">&#9672; &nbsp; Folk-Tale &amp; Coast-Tavern Rumour</div>
+      Two stories told along the Skybell coast that the chroniclers note but do not endorse. The first concerns the lost port of <b>Tallow's Reach</b>, said to have stood on a stretch of bar-coast between Wrackmoor and Cloudshadow some two centuries ago; the tale runs that the harbour-master, in a dispute with the local Fisaya-priest, ordered the bell pulled down for re-tuning during a calm summer, and that the storm that came in on the third day of the bell's silence took the town and the tower with it, leaving no survivors and no recoverable bronze. Coast-Strix fly over the stretch even now and report that the wind reads strangely there. The chroniclers note the absence of any kingdom-record of a port by that name, the convenient moral, and the fact that priests tell this story to wavering harbour-masters as a matter of policy. The Stormpact accepts the story as folk-tale; whether it accepts it as history depends on which priest you ask.
+      <br><br>
+      The second concerns the Stormrider known in song as <b>the Brassheart</b>, a coast-Strix of the previous generation said to have piloted a merchant convoy through a Hafra squall so dense that the bells were inaudible to the convoy from inside the storm; according to the song, the Brassheart held the convoy's course on the bell at Old Brasswatch <i>for nine hours after the wind had outscreamed the bell to every ear but his</i>, bringing them through to a harbour that the convoy's own helmsman had given up for lost. Stormriders training in Brasswatch are sometimes asked, late in the night by their teachers, whether they think the song is true. The expected answer is not yes or no; the expected answer is <i>I will train as if it could be true and I will not boast as if it were</i>.
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="the-thunderhost" class="section-heading">The Thunderhost</h2>
+  <div class="prose">
+    <p>The Thunderhost is the interior-side seat: a <b>moot of Strix clan-chieftains</b> who meet at midsummer at a fixed inland gathering called the <b>Hightable</b>, a wide flat of grass-and-foothill cradled by river-bluffs that the chieftains have used since the founding generation. The site is permanent in the way the kingdom's interior cities are permanent: no walls, but the cliff-roost-marks of forty generations of Strix chieftains cut into the bluffs, and the firepit-rings worn into the grass deep enough that a horse can read them by hoof.</p>
+
+    <p>The Hightable meets once a year, for the seven days that span midsummer plus three days either side, and in that span it does its work for the whole season. Chieftains arrive on the wing two days early to settle; deliberations open at first light on the first marked day; closing happens at sundown on the seventh, whether business is finished or not. Business not finished waits a year, which the moot regards as a discipline rather than a flaw.</p>
+
+    <p>The matter brought to the Hightable is what the steppe runs on: <b>grazing-rights</b> across the clan-circuits, <b>horse-breeding</b> stock-share and stud-rotation (Fellibylur's steppe-horses are a quiet secondary export the coast tends to forget about), <b>weather-lore</b> exchange between augurs of different bluffs (each bluff reads the high thunder slightly differently, and the season's compared readings sharpen every clan's eye), and the <b>joint Stormpact business</b> that has come up from the coast since the previous Hightable.</p>
+
+    <p>A chieftain takes their seat by <b>demonstrated storm-augury</b>. The qualification is not a single test but a sustained record: the previous year's reads, called publicly in clan-camp and verified by what the season then did. A would-be chieftain who has called five major reads in their last season and landed four of them is in serious contention; one who has called five and landed two is not yet ready, regardless of their other merits. The clans hold this strictly: a bad augur in the moot is a worse problem than a missing seat, because the moot's joint readings of the coming season are what sets the next season's grazing-circuits.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="the-stormriders" class="section-heading">The Stormriders</h2>
+  <div class="feature-panel prose">
+    <p>The kingdom's signature export. A <b>Stormrider</b> is a <b>foul-weather Hafra pilot</b>: the contracted specialist who joins a merchant fleet for the duration of a cloud-sea crossing or a Hafra-storm passage, takes the helm or stands at the helmsman's shoulder when the sky goes bad, and brings the ships through. No merchant fleet that knows what a Stormrider costs will cross without one if it can secure one; the survival differential is large enough to be a line item in the insurance houses' tables, and the Lautaran underwriters quietly index their premiums to which Stormriders are on which ships.</p>
+
+    <p>Training takes years and is the most visible product of the Stormpact in everyday life: a Stormrider is trained on <b>both sides</b>, and the certification requires both. The Republic side teaches the <b>field-book discipline</b>, the patient observational craft of the chart, the wind-rose, the squall-table, the pressure-glass; the Thunderhost side teaches the <b>storm-augury discipline</b>, the read of the high thunder, the feel of the cloud-front in the body, the gesture-language by which Strix call a coming gust to each other on the wing without breath.</p>
+
+    <p>The two trainings live in the same Stormrider and the best ones do not separate them. A senior Stormrider standing at a Hafra helm reads the pressure-glass with one eye and the cloud-front with the other; the call they make to the helmsman is one decision drawn from both. The double-trained are the most prestigious and the most expensive; a single-trained Stormrider (Republic side only, no Thunderhost augury) can still be hired but commands roughly a third the rate, and the underwriters know it. The Thunderhost-only certification is rarer still and is generally taken by interior-born Strix who have decided late in life to go to sea; it is held in equal respect to the double, on the grounds that the field-book can be learned at any time but the augury cannot.</p>
+  </div>
+
+  <div class="craft-grid">
+    <div class="accent-card craft-card">
+      <div class="craft-name">The Field-Book</div>
+      <p>The Republic-side discipline. Chart-keeping, wind-rose, squall-table, pressure-glass, sail-readiness rating, harbour-bar pilotage. A Stormrider's field-book is their own; they carry it for their working life, copy it for their students, and bury it with them.</p>
+    </div>
+    <div class="accent-card craft-card">
+      <div class="craft-name">The Augury</div>
+      <p>The Thunderhost-side discipline. Reading the cloud-front, the high thunder, the gust-rhythm, the smell of a coming front. Taught in the bluffs by working augurs; verified on the wing in the season after the teaching.</p>
+    </div>
+    <div class="accent-card craft-card">
+      <div class="craft-name">The Gesture-Tongue</div>
+      <p>The wing-hand sign-language Strix use to call coming gusts to one another in flight without breath. A double-trained Stormrider uses it from the deck to coast-Strix on the rigging or the tower; a fleet running silent in a storm coordinates by it.</p>
+    </div>
+    <div class="accent-card craft-card">
+      <div class="craft-name">The Bond</div>
+      <p>A Stormrider contracted to a fleet wears that fleet's house-token for the duration. The token is returned at safe harbour. A Stormrider who returns a token to a house whose ship did not make it is owed nothing further by that house, and the Republic does not chase them for the rest.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="the-strix-of-fellibylur" class="section-heading">The Strix of Fellibylur</h2>
+  <div class="prose">
+    <p>The kingdom's anchor people. The <b>Strix</b> are winged sky-people, weather-attuned by ancestry: a Strix child reads gust-rhythms before they read letters, and the reading sharpens through the decades into the augury that qualifies a Thunderhost chieftain. They are common across both halves of the kingdom and dominant in the interior; outside Fellibylur they are uncommon, seen mostly as Stormriders on hire or as travellers passing through.</p>
+
+    <p>Interior Strix run <b>nomadic</b>. The clan-circuits cross the open grass-steppe on a multi-year rotation that the Thunderhost adjusts each Hightable; a clan roosts a season in the foothill cliffs above one bluff-bend, the next season in the river-bluffs over a different reach, and the chieftain reads the wind across the rotation rather than across a fixed home-place. Roosts are <b>cliff-camps</b>, never permanent halls: the Strix conviction that walls confine the wind runs deep, and a chieftain who built one would be regarded as confused about their office.</p>
+
+    <p>Coastal Strix have made the opposite settlement. The port-towns are <b>tower-cities</b>: vertical-stacked dwellings carved or built into the harbour-cliffs, with the Skybell at the peak of each settlement and the merchant-houses graduated down the cliff-face by their charter-age. A coast-Strix family will keep the same tower-flat for generations and consider the tower itself part of their lineage. The cultural distance between coast and interior is therefore real (a coast-Strix who has never roosted on a bluff is regarded with mild bemusement by Thunderhost cousins, and a Thunderhost chieftain who has never slept above tide-line is regarded with mild bemusement by the Republic), and the Stormpact's persistence across that distance is one of the things the kingdom is most quietly proud of.</p>
+  </div>
+
+  <div class="disposition-grid">
+    <div class="accent-card disp-card">
+      <div class="disp-name">Wing-First</div>
+      <p>A Strix in good health flies as the default mode of getting anywhere. Walking is for when wings are tired, weather is wrong, or company is mixed. Fellibylur infrastructure assumes flight: the tower-cities have no ground-stair to most upper levels, and the interior cliff-roosts have no ground-approach at all.</p>
+    </div>
+    <div class="accent-card disp-card">
+      <div class="disp-name">Weather-Speech</div>
+      <p>Strix conversation routinely names the wind being read: <i>that gust is a Brassheart-three, that front will turn before nightfall</i>. A Strix who cannot read weather at the table is presumed to be ill, distracted, or very young.</p>
+    </div>
+    <div class="accent-card disp-card">
+      <div class="disp-name">Cliff-Memory</div>
+      <p>Each Strix family-line keeps a sung memory of the cliffs and bluffs the line has roosted in. Interior Strix recite the rotation back five generations as a coming-of-age; coast-Strix recite their tower's lineage back as long as the tower has stood.</p>
+    </div>
+    <div class="accent-card disp-card">
+      <div class="disp-name">The Gust-Greeting</div>
+      <p>Two Strix passing on the wing exchange a quick gesture-and-call that names the wind they are both reading at that moment. The greeting is courtesy and weather-bulletin in one; ignoring it is rude, getting the wind wrong in it is funny.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <h2 id="faith-and-storm" class="section-heading">Faith and Storm</h2>
+  <div class="prose">
+    <p>Fellibylur is <b>Fisaya-devotional</b>, and the kingdom's specific theological tilt is that <i>the storm is the goddess speaking</i>. A Skybell ringing is a response to her speech; a Thunderhost augury is a careful listening to it; a Stormrider's working life is a kind of conversation with her, conducted at risk and at speed. The kingdom does not regard storm-deaths as the goddess being cruel; it regards them as the goddess being loud, and as the listener having missed the read. The accountability runs to the listener, not to the goddess. This is held to be the right shape for a faith.</p>
+
+    <p>Worship is split between coast and interior in form, unified in substance. Coast-side practice runs through <b>the bell-rites</b>: the bell-keepers are clerics, the bell-tower is the temple, the consecrated-strike at the close of a meeting is the prayer. Interior practice runs through <b>the open-bluff rites</b>: the chieftains' augury is religious work, the Hightable's seven days include three nights of silent attendance to the wind on the bluffs, and the wind that has been read and called publicly is the prayer the next season will answer. The Vindul mainland clergy regards both as sound. The Tengu of Haizetsua, with their own Fisaya-Tengu iconography, recognise the Fellibylur Strix-as-listener iconography as a sibling local affection and trade clergy with it on cordial terms.</p>
+
+    <p>The Fellibylur calendar runs on the storm-seasons rather than the Talanese months: the <b>Long Front</b> of early year, when the year's first major weather rolls in off Hafra; the <b>Bright Steppe</b> of the brief mid-summer calm; the <b>Hightable</b> at midsummer proper; the <b>Coming-Down</b> of late summer when the convoys move; and the <b>Deep Winter</b> when the bell-watch holds and the chieftains overwinter at the bluffs. A Fellibylur merchant writing dates abroad gives both the season and the Talanese month; a Fellibylur Strix writing at home gives only the season.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">&#10022;</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>&#9132; &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Stormpact's central canon is settled; several local details remain open and will close as future scholarship or future story calls for them.</div>
+    <ol>
+      <li><b>Brasswatch's interior.</b> The senior port and the bell-network's first rung is canon-named, but its districts, named tower-cliffs, harbour-bar pilotage, and named merchant-houses are open. A dedicated <i>Brasswatch</i> page will follow when the port earns it.</li>
+      <li><b>The other port-towns by name.</b> Cloudshadow, Highmarrow, and Wrackmoor stand named here as bell-towers; their populations, charters, and inland-trade connections are open. Other Skybell ports almost certainly exist along the coast and have not yet been named.</li>
+      <li><b>Named merchant-houses.</b> The Kashrishi-Human merchant-house tradition is centuries old and the houses with the deepest charter-records are presumably named in coast-memory. None have been committed to canon.</li>
+      <li><b>Named Thunderhost clans.</b> The clan-circuits run on a multi-year rotation under the Hightable's adjustment; the named clans, their bluff-territories, and the lineages of their chieftain-augurs are open.</li>
+      <li><b>Named living Stormriders.</b> The Brassheart of folk-tale stands; the working Stormriders of the present season do not. A named senior Stormrider would be a natural protagonist for any campaign that touches a Hafra crossing.</li>
+      <li><b>The other major and minor Skybells.</b> Four named here; the network is larger. Each bell has a name, a tone, a casting-history, and a bell-keeper-cleric lineage.</li>
+      <li><b>The founding year of the Stormpact.</b> The chronicles place it in the first decades of the Adventurer Era, in a coast-port whose name the surviving record does not preserve. A precise year and a recovered name for the founding port are both open.</li>
+      <li><b>The Baerfrost trade-treaty detail.</b> The recent Hammer-Lord elected on the strength of a trade-treaty with the Air Monastery's eastern range (see <a href="/talan/domains/vindul/vindul.html">Vindul &rarr; Baerfrost</a>) has obvious knock-on for Fellibylur's northern caravan-routes; the specific terms, the Stormpact's response, and the Skybell Republic's position on chartered Baerfrost trade through the northern river-road are all open.</li>
+      <li><b>The Wellspring-resonance of the Hightable augury.</b> The Thunderhost reads the high thunder with a consistency that the Wyndwalken's visiting cartographer-monks have quietly noted as <i>more accurate than chance allows on a flat statistical basis</i>. Whether the Hightable's site itself carries a Wellspring-resonance that sharpens the augury, or whether the centuries of practice have produced an Occult-touched cultural-memory residue at the site comparable to the singing-cities of Haizetsua, is open canon and will be developed in a future drafting pass.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA &middot; TALAN &middot; VINDUL &middot; FELLIBYLUR</div>
+
+</div>
+
+</body>
+</html>
