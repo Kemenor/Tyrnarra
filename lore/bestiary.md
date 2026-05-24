@@ -156,9 +156,9 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations, sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
-**Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**, the kitsune kingdom in Lautara's forested eastern highlands. Full cultural detail in `cultures.md` (Kitsune: Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
+**Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**, the kitsune kingdom in Lautara's forested western highlands. Full cultural detail in `cultures.md` (Kitsune: Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
 
-Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md`, the Thirteen). Kitsune communities on the Wind side of Talan therefore feel a doctrinal pull toward Vindul, but the actual demographic centre of kitsune life remains in Emarrea (Commerce).
+Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md`, the Thirteen). Kitsune communities feel a doctrinal pull toward Vindul (Fisaya's home domain) regardless of where they live; the wind reaches them from any direction. The actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
 ### Kobold
 **Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity: Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `gods.md`).
@@ -330,7 +330,7 @@ Two further elements (Wood and Metal) sit outside the classical four. On Talan t
 | Heritage | Mix | Notes |
 |---|---|---|
 | **Aiuvarin** | Elven · any other ancestry | Most common where elves dominate (Zuzental); the half-and-half identity is its own social position. |
-| **Dromaar** | Orcish · any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi, Lautara, Nashavel). |
+| **Dromaar** | Orcish · any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi to the west and Nashavel to the south). |
 
 These are mortal-ancestry mixes: genetic lineages, with their place in the world shaped by the mortal politics of the two parent ancestries.
 
