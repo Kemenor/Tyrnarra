@@ -1,4 +1,4 @@
-# PF2e Notes — System-Side Bookkeeping
+# PF2e Notes: System-Side Bookkeeping
 
 Tyrnarra is built for play with **Pathfinder 2e (Remaster)**. The lore files capture *what is true in the world*; this file captures *how that world maps onto the rules*. GM-facing reference, not canon prose.
 
@@ -12,7 +12,7 @@ Tyrnarra uses the PF2e Remaster ancestry roster, plus the additions below.
 
 ### Tyrnarra-canon additions (outside the standard 44)
 
-- **Dragons** — the alien-mothership lineage. Distinct from PF2e's **Dragonet** ancestry (Tyrnarra uses *Dragonet* for native Zaharsuge-line wyrmkin); both ancestries exist on Talan and are unrelated.
+- **Dragons**: the alien-mothership lineage. Distinct from PF2e's **Dragonet** ancestry (Tyrnarra uses *Dragonet* for native Zaharsuge-line wyrmkin); both ancestries exist on Talan and are unrelated.
 
 ### Access tags
 
@@ -20,7 +20,7 @@ The PF2e *common / uncommon / rare* access tags apply at Talan scale. The Ancest
 
 ### Sortalde (Tian Xia) ancestry placements
 
-The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Full per-ancestry detail in `bestiary.md` — *Sortalde Ancestries — The Six Petals*.
+The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Full per-ancestry detail in `bestiary.md`, *Sortalde Ancestries: The Six Petals*.
 
 **Hungerseed** is resolved as half-Oni; Oni are bound spirits of **Lingdao** (Spirit Island). Almost all Hungerseeds in canon are Sortalde-born.
 
@@ -30,12 +30,12 @@ The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai
 
 The PF2e versatile-heritage roster maps to Tyrnarra as follows:
 
-- **Nephilim** — celestial or fiendish parentage, with parentage determining the manifestation.
-- **Ardande** (Wood) and **Talos** (Metal) — elemental heritages tied to the two non-Material planes of the Life Layer: Ardande to **Feyworld**, Talos to **Shadowplane**.
-- **Aiuvarin** and **Dromaar** — the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
-- **Suli** — generic geniekin, no single-element specialisation.
+- **Nephilim**: celestial or fiendish parentage, with parentage determining the manifestation.
+- **Ardande** (Wood) and **Talos** (Metal) carry elemental heritages tied to the two non-Material planes of the Life Layer: Ardande to **Feyworld**, Talos to **Shadowplane**.
+- **Aiuvarin** and **Dromaar**: the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
+- **Suli**: generic geniekin, no single-element specialisation.
 
-Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md` — *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
+Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md`, *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
 
 ---
 
@@ -45,22 +45,22 @@ The official PF2e cleric-domain register (61 domains as of the Remaster + Tian X
 
 ### The Thirteen's domains
 
-The 13 Bound Gods' grantable cleric domains live on [`pf2e-registrar.html`](../pf2e-registrar.html). Bound god assignments follow a **no-sharing rule**: each PF2e domain that any of the Thirteen grants is granted by exactly one god — the deity it fits most strongly. Cross-portfolio overlap (a domain credibly fitting two gods) is resolved by giving the domain to whichever god's *primary* aspects align most directly; the other god keeps the *flavour* of the domain in lore but not the mechanical grant. The Thirteen between them currently claim **46 of the 61 PF2e cleric domains**.
+The 13 Bound Gods' grantable cleric domains live on [`pf2e-registrar.html`](../pf2e-registrar.html). Bound god assignments follow a **no-sharing rule**: each PF2e domain that any of the Thirteen grants is granted by exactly one god, the deity it fits most strongly. Cross-portfolio overlap (a domain credibly fitting two gods) is resolved by giving the domain to whichever god's *primary* aspects align most directly; the other god keeps the *flavour* of the domain in lore but not the mechanical grant. The Thirteen between them currently claim **46 of the 61 PF2e cleric domains**.
 
-### Lore-implicit domains — Tyrnarra theological flavour, not PF2e-mechanical
+### Lore-implicit domains: Tyrnarra theological flavour, not PF2e-mechanical
 
 Some domain names in the Tyrnarra canon are **theological-flavour names**, not entries in the official PF2e cleric-domain register. They live in canon as the way mortals on Talan name an aspect of a god's portfolio, but they do not grant a discrete PF2e domain. A cleric of one of these gods picks from the god's PF2e-canonical domains; the lore-implicit names are the *flavour* through which that god's worshippers describe their own work.
 
 | Lore-implicit name | God that carries it (as flavour) | What it expresses through (mechanically) |
 |---|---|---|
-| **Arcane Magic** | Forseti | Truth · Secrecy · Star · Glyph — the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be. |
-| **Divine Magic** | Iro & Araphel | Sun · Healing · Dust · Zeal (Iro) and Darkness · Nothingness · Protection (Araphel) — the god-granted tradition at both its poles: dawn and dusk, blessing and rebirth, faith made power whether by sunlight or shadow. |
-| **Occult Magic** | Enki | Knowledge · Magic · Perfection — knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation. |
-| **Primal Magic** | The Four Elemental Gods (Sarrum · Komo · Shuun · Fisaya) | Earth · Fire · Water · Air — the substrate of the material plane; Primal magic is the four-fold balance made channelable, what every living thing is composed of. |
+| **Arcane Magic** | Forseti | Truth · Secrecy · Star · Glyph; the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be. |
+| **Divine Magic** | Iro & Araphel | Sun · Healing · Dust · Zeal (Iro) and Darkness · Nothingness · Protection (Araphel); the god-granted tradition at both its poles: dawn and dusk, blessing and rebirth, faith made power whether by sunlight or shadow. |
+| **Occult Magic** | Enki | Knowledge · Magic · Perfection; knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation. |
+| **Primal Magic** | The Four Elemental Gods (Sarrum · Komo · Shuun · Fisaya) | Earth · Fire · Water · Air, the substrate of the material plane. Primal magic is the four-fold balance made channelable, what every living thing is composed of. |
 
-**The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph) — *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
+**The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph). *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
 
-### Non-bound granters — canon-pending
+### Non-bound granters: canon-pending
 
 Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiting a dedicated assignment pass focused on Vice Demons, Virtue Devils, Generals of Corruption, Betibizi, and the Corrupted God directly. The non-bound entities themselves exist as canonical beings; only their specific PF2e cleric-domain grants are pending. The 13 domains in this state are:
 
@@ -78,7 +78,7 @@ Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiti
 - **Tyranny** *(candidate: Drambur, the Pride Vice Demon)*
 - **Undeath** *(candidate: Betibizi, self-ascended Minor God in Abyss)*
 
-### Domains not yet claimed — Open / GM ruling
+### Domains not yet claimed: Open / GM ruling
 
 **All previously-pending domain rows are now closed** (as of 2026-05-22). Dragon (Zaharsuge), Moon (Bikiargi · Honokage), Undeath (Betibizi), Swarm (Vermin Queen). Naga is jointly granted by Zaharsuge and the Maw Serpent. Five source-category pills are in use: **Bound 13**, **Vice Demon**, **Non-Bound** (Layer-3 unbound deities: Solyra, Bikiargi, Zaharsuge, Epairima, Betibizi, Odain, and the three Kyūbi-no-Den gods Hahane / Honokage / Yumegatari; Layer-1-tier primordials Suzar, Urzar, Lurzahar, Haizar, Indazar, Hutzar, Iturima, Zurzar, Burdinzar), **General** (surviving Generals of Corruption: Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister; the Ash-Binder is defeated and grants no current domain), and **Corrupted God** (direct grants from the imprisoned god). The Corrupted God holds direct grants on five domains: **Plague, Abomination, Nothingness, Decay, Destruction**. See the registrar for the full table.
 
@@ -88,13 +88,13 @@ Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiti
 
 ## Favoured weapons
 
-Per-god favoured weapons in `gods.md` — *The Thirteen — Per-God Sheet* are both iconography and PF2e cleric mechanical favoured weapons, drawn exclusively from the PF2e **Advanced** weapon category. Araphel's **Sickle-Saber** (curved blade with a secondary grip) is canon both ways.
+Per-god favoured weapons in `gods.md`, *The Thirteen: Per-God Sheet*, are both iconography and PF2e cleric mechanical favoured weapons, drawn exclusively from the PF2e **Advanced** weapon category. Araphel's **Sickle-Saber** (curved blade with a secondary grip) is canon both ways.
 
 ---
 
 ## Ancestries unchanged from PF2e canon
 
-A handful of ancestry entries in `bestiary.md` carry no Tyrnarra-specific reframing — their PF2e default is the canon default. Notable examples: **Gnome**, **Poppet**, **Sprite**. These read as they do in published PF2e material; placement notes in `bestiary.md` capture only their Talan-specific distribution.
+A handful of ancestry entries in `bestiary.md` carry no Tyrnarra-specific reframing; their PF2e default is the canon default. Notable examples: **Gnome**, **Poppet**, **Sprite**. These read as they do in published PF2e material; placement notes in `bestiary.md` capture only their Talan-specific distribution.
 
 ---
 

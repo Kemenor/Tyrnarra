@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ─────────────────────────────────────────────────────────────
-# serve.sh — local dev server for Tyrnarra (live-reload)
+# serve.sh: local dev server for Tyrnarra (live-reload)
 # macOS / Linux / WSL.
 #
 # Uses live-server via npx: auto-opens the browser and refreshes

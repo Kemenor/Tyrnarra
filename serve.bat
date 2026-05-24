@@ -1,6 +1,6 @@
 @echo off
 REM ─────────────────────────────────────────────────────────────
-REM serve.bat — local dev server for Tyrnarra (live-reload)
+REM serve.bat: local dev server for Tyrnarra (live-reload)
 REM Double-click to launch, or run from a terminal.
 REM
 REM Uses live-server via npx: auto-opens the browser and refreshes

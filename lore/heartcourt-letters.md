@@ -20,7 +20,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *What follows are dispatches from a court that wants to be written about. May the kingdom of Emarrea remain as marvellously themselves as they have ever been, and may the rest of Talan continue to under-estimate them at its own expense.*
 
-— *G.*
+– *G.*
 
 ---
 
@@ -31,7 +31,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *She has, I am told, lately developed a fondness for walking in the Heartplaza gardens at sunrise. She is never alone. I shall not name the Heart who keeps the early-hour pace with her; you all know which Heart it is, and the discretion is the point.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2531 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2531 MR*
 
 ---
 
@@ -44,7 +44,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *No one in this kingdom does anything by halves and I find it exhausting and enlivening in equal measure.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -57,7 +57,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *I had no response to this and decided I should not invent one for the column.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2530 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2530 MR*
 
 ---
 
@@ -70,7 +70,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *Norikaze, my publisher sends his sympathies and his subscription rates.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -83,7 +83,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *Yorume, the kingdom would like you to sleep. The kingdom would also like the Spectacle to conclude. The kingdom would, on balance, like the Spectacle to conclude first.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -106,7 +106,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *The Ivory Heart has not, by any account I trust, read the volume. I find this very hard to believe.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -121,7 +121,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *Shirae, this dispatch is the closest the column will come.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -136,7 +136,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *The seventh and final trial is scheduled before the next Festival of the Fox Lanterns. Place no wagers; the Heartcourt has formally disapproved of public betting on a Spectacle, and the kingdom has formally ignored the disapproval, and I am formally not advising anyone.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
 ---
 
@@ -165,7 +165,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *Reader, this is a chronicle, not a verdict. The verdict is yours.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR (rushed edition, second printing)*
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR (rushed edition, second printing)*
 
 ---
 
@@ -194,7 +194,7 @@ See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from
 
 *Some afternoons are not, in fact, for the column.*
 
-— *G., The Travelling Chronicle, Letters from Biozuri (Kawaakari supplement), 2532 MR*
+– *G., The Travelling Chronicle, Letters from Biozuri (Kawaakari supplement), 2532 MR*
 
 ---
 
