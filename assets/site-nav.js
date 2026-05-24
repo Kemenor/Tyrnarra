@@ -40,7 +40,9 @@
   // Children may nest to whatever depth the world requires.
   // Practical ceiling is ~5 levels before labels start to wrap.
   var DOMAINS = [
-    { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [] },
+    { slug: 'vindul',   label: 'Vindul · Wind',       href: '/talan/domains/vindul/vindul.html',     children: [
+      { slug: 'haizetsua', label: 'Haizetsua · Tengu Island', href: '/talan/domains/vindul/haizetsua/haizetsua.html', children: [] }
+    ]},
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [
         { slug: 'heartcourt', label: 'The Heartcourt', href: '/talan/domains/lautara/emarrea/heartcourt.html', children: [] }

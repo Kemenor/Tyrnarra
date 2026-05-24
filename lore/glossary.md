@@ -110,6 +110,7 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 
 **Vindul (Wind):**
 - **Haizetsua** — Basque *haize* (wind); island name echoes domain character
+  - **Vindboorg** — Icelandic *vindr* (wind) + *borg* (fortress, town) → *Vindborg* → drift to *Vindboorg* "Wind-Hold." Drift: vowel-elongation through long use. Capital of the Skarvorn Republic; the most-named of the singing cities.
 - **Baerfrost** — English-style, arctic northern sub-region
 - **Azkamour** — Basque *azkar* (swift, quick) + *muga* (border) → *azkar-muga* → drifted *azkamoua > azkamour* "the Swift March." Border territory between Vindul and Lautara, capital on the Lautara side. The Commerce-and-Wind crossroads — the name records that trade moves fast through.
 - **Fellibylur** — Icelandic *fell* (lone mountain, fell) + *bylur* (snowstorm, blizzard, gale) → *fellsbylur > Fellibylur* "Storm-Fell / Blizzard Peak." Drift: genitive *-s-* worn to *-i-*. A high lone peak in Vindul whose summit gathers weather; the storm-wracked character fits Fisaya's wind-and-cold domain, and Baerfrost lies adjacent.
@@ -294,6 +295,55 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **Dea Elurra** — Basque *elurra* (snow/ice) → drifted to *Dea Elurra*
 - **Maitagarri** — Basque *maitagarri* (lovable, charming, endearing); forest region
 - **Star Island** — modern English; small star-shaped island in Midarra
+
+### Tengu proper nouns (Tengu cultural register)
+
+The Tengu culture is detailed in `cultures.md` · *The Tengu*. Outsiders refer to the island and capital by the old-language names (Haizetsua, Vindboorg, listed under *Vindul (Wind)* above). Internally, the Tengu use a distinct **Tengu cultural register** for their own institutions, clans, customs, and crafts: austere, consonant-heavy, hard finals, the *Tessek* family of sound. The register is a pure coinage stratum, not a translatable language; the etymologies below are coinage-notes, not interlinear gloss.
+
+**Republic:**
+- **Skarvorn**: Tengu-register coinage; *skar* (flock, multitude) + *vorn* (wing, voice) → "Flock-Voice." The seated body of Haizetsua's republic; the eleven clan-elders convene as the Skarvorn. No single ruler. Convenes quarterly at the **Open Pavilion** in Vindboorg.
+- **The Open Pavilion**: Plain English. The Skarvorn's seating-place in Vindboorg.
+
+**The eleven clans** (clan-and-monastery-and-trading-guild kindreds; each sends one elder to the Skarvorn):
+- **Tessek**: Golivander Tessek's clan; most-known abroad through the chronicler's career
+- **Karrok**
+- **Vorrek**
+- **Drennok**
+- **Brakkar**
+- **Nottek**
+- **Vellok**
+- **Holkar**
+- **Marskenn**
+- **Skenrak**
+- **Drakkun**
+
+(Individual clan-colours are unwritten by design; the structural equality between the eleven is the point. Future canon will shade them in as stories want.)
+
+**Customs:**
+- **Vornsketta**: Tengu-register coinage; *vorn* (wing) + *sketta* (journey, road-going) → "wing-journey." The migration custom: every Tengu in their first century leaves Haizetsua for three to twenty years and lives, works, and learns abroad. Older than the Republic. Golivander's seventy-year continent-wandering is the canonical model of a Vornsketta that became a vocation.
+- **Founder-remembrance**: Plain English. The clan-internal practice of reciting first-generation names at clan-elder turning. Ancestor-respect, not ancestor-worship; the clans do not invoke their founders for power.
+
+**Crafts:**
+- **Air-carving**: Plain English. The mason-instrument-maker's craft that tunes Tengu dwellings to produce sustained musical tones when wind passes through their carved channels and cavities. A Tengu air-carver may train twenty years to tune a new house. The body of work the singing-cities tradition rests on.
+- **Stormsinging**: Plain English. The Tengu vocal craft of singing *with* the city: pitching voice into the building's tones, projected through wind currents. Acoustic-and-breath discipline in ordinary practice; Occult-adjacent in skilled hands (cultural-memory residue, same mechanism as kitsune foxfire). See `cosmology.md` → *Magic — The Four Schools → Occult*.
+- **The Vindboorg Major / Minor**: Plain English. The capital's signature wind-tones: the Major sounds on the **Helmar** (high summer's high wind), the Minor on the **Skennok** (winter's white wind).
+
+**The Three Teas** (Haizetsua's signature trade product; three altitude bands, descending luxury):
+- **Skardun**: Tengu-register coinage; *skar* (high, cloud-bound) + *dun* (leaf, fold) → "cloud-grown." The most luxurious; highest band, mist-condensation harvest before sunrise. Prized in Lautara's noble courts and Frae City's high-Council chambers. Small annual yield. Sometimes faked by mainland merchants; a genuine Skardun tin carries a clan-seal at the lid.
+- **Vintek**: Tengu-register coinage; *vin* (wind, drift from Vind- root) + *tek* (leaf, picked) → "wind-leaf." The middle-altitude tea, the working merchant's tea. Brighter than Skardun, faster, considerably more available. Standard tea at any reputable Talanese tea-house importing from Haizetsua.
+- **Korrek**: Tengu-register coinage; *kor* (high, the lower-high band) + *rek* (leaf, plain) → "high-leaf." The everyday tea, the Tengu staple. Robust, drinkable through the day, re-steepable through multiple pots.
+
+**The eight winds** (the year-marking calendar; each a stretch of weather and character):
+- **Skarrenn**: the homing wind; year-opening; travellers return; Skarvorn convenes
+- **Vorkat**: the climbing wind; thermals strengthen; sky-trade routes open
+- **Helmar**: the high wind; peak updrafts; Skarvorn convenes; Vindboorg sings its Major
+- **Drekkir**: the dry wind; the still part of the year; clan-work and study
+- **Tellenn**: the turning wind; first cold; Skarvorn convenes; Vornsketta departures common
+- **Norkar**: the cold wind; the slow weeks; clan-elders teach
+- **Skennok**: the white wind; snow; Skarvorn convenes; Vindboorg sings its Minor
+- **Vyrrek**: the waking wind; the year prepares to open again; travellers begin home-flights
+
+(Day-counts per wind are not committed; the broader Tyrnarra calendar structure is itself an open thread; see `docs/open-threads.md`.)
 
 ### Faction proper nouns
 
@@ -524,7 +574,7 @@ Full text and structure in `cosmology.md`, *The Gods' Law: The Compact of the Bo
 - **Golivander.** The most-travelled chronicler of Talan; a known name in the literate classes of every continent kingdom that prints books. Full name **Golivander Tessek**; he signs *Golivander* in print and *G.* in column sign-offs, with *Tessek* appearing only at formal introduction.
   - **Race and birth.** **Tengu**, born on **Haizetsua** (the great western tengu island of Vindul). His Haizetsua volume in the *Traveller's Guide* is the standing reference on Tengu life for the rest of Talan, written from a child's-deep insider familiarity; he goes home rarely now but writes the island with the authority no other Talan-side scholar can match. His Tengu lifespan (150–200) is what makes the multi-decade chronicler career structurally possible.
   - **Age.** Approximately one hundred and ten in 2532 MR. Slate-and-charcoal feathering with the white-brow signature of a mature Tengu, spectacled, ink-stained finger-claws, a worn travelling satchel that goes with him everywhere. Dresses well enough for court and no more lavishly than that.
-  - **Disposition.** Loves to travel and to experience the world; intensely curious; tries everything once and writes about it whether the trying went well or poorly. The catjomin tasting at Kawaakari, the Foxfire Stone Massage, the third trial of the Onyx Spectacle from a row-C box-stand seat — all the same impulse. He travels alone, three-quarters of the year on the road.
+  - **Disposition.** Loves to travel and to experience the world; intensely curious; tries everything once and writes about it whether the trying went well or poorly. The catjomin tasting at Kawaakari, the Foxfire Stone Massage, the third trial of the Onyx Spectacle from a row-C box-stand seat: all the same impulse. He travels alone, three-quarters of the year on the road.
   - **Education.** Apprenticed at **Thekkavar** (the City of Learning, Ezkudon) some seventy years ago in natural philosophy and rhetoric. Apprentice-and-leave path, not the degree-and-stay one. He cites **Jeanne Pintos** as the model from his Thekkavar reading; her *You're not flying, you're falling upwards* is the treatise he treats as the working text for natural philosophy and the basis for treating the Gods' Law as physics-not-rule.
   - **Magical training.** Modest **Occult**, picked up alongside the natural-philosophy work at Thekkavar; not a practising caster of consequence. Enough to read certain Wellspring-touched inscriptions when the column needs it. The fit is thematic as much as practical: the Chronicle's life-work *is* cultural-memory residue (see [cosmology.md](cosmology.md), *Magic — The Four Schools → Occult*), and Golivander adds to that residue every time a Heart quotes him at tea.
   - **Home base.** A small permanent room above **The Lantern Press** in **Frae City**, his only fixed address. He is rarely there; the room holds his back-files, his correspondence, and the icon of Iro the publisher's father left over the desk and that Halvar has never moved.
@@ -533,10 +583,10 @@ Full text and structure in `cosmology.md`, *The Gods' Law: The Compact of the Bo
   - **Method.** Three working rules, established over the career:
     1. **Never print uncorroborated gossip.** What the kingdom is saying may appear in the column; what the kingdom is *whispering* may not, unless he can corroborate it independently.
     2. **Protect sources by deliberate elision.** The signature *I shall not name* and *the Heart who keeps that quiet knows already* patterns in *Letters from Biozuri* are not coyness; they are method.
-    3. **Revise when corrected in print.** Saemi (Azure Heart of Emarrea) once corrected him on a misattribution and suggested he revise the column before it went to press; he did, and the practice has become a standing offer to every subject. **Refuses payment from subjects** — gifts of food, lodging, and Catjomin are accepted; coin is not.
+    3. **Revise when corrected in print.** Saemi (Azure Heart of Emarrea) once corrected him on a misattribution and suggested he revise the column before it went to press; he did, and the practice has become a standing offer to every subject. **Refuses payment from subjects**: gifts of food, lodging, and Catjomin are accepted; coin is not.
   - **Writing voice.** Experience-first, lightly witty, objective. The wit is the seasoning, never the dish. He writes what he tried, what he saw, what he was told; he reports the kingdom's argument over an event without rendering verdict; he marks the boundary between *what is the case* and *what is being said about what is the case* and never erases it. Formal-philosophical register in the books; arch-knowing-chronicler register in the periodical.
-  - **Recurring relationships in canon (small at present; will grow).** **Halvar Erikson** of The Lantern Press (publisher, Frae City). In Emarrea: **Saemi** (Azure Heart; correction-and-revise), **Yorimichi** (retired Crimson; Catjomin host at Kawaakari), **Shirae** (Sapphire Heart and head of the House of Names; admitted to the archive on terms — leaves offering at the lantern before each consultation). Other named figures across Talan will land as future stories surface them.
-- ***A Traveller's Guide to Tyrnarra***. Golivander's formal multi-volume reference work. The official product — formal-philosophical voice, treated by literate-class Talanese as the standing reference on everything from continental geography to the Gods' Law. Named volumes include **The Gods' Law** (the most-quoted; the epigraph on [gods-law.html](../gods-law.html) is drawn from it, and chronicler glosses cite him by volume) and **Haizetsua** (the standing reference on Tengu life, written from his child's-deep familiarity with the island). Reprinted often; available wherever books are sold across Talan.
+  - **Recurring relationships in canon (small at present; will grow).** **Halvar Erikson** of The Lantern Press (publisher, Frae City). In Emarrea: **Saemi** (Azure Heart; correction-and-revise), **Yorimichi** (retired Crimson; Catjomin host at Kawaakari), **Shirae** (Sapphire Heart and head of the House of Names; admitted to the archive on terms; leaves offering at the lantern before each consultation). Other named figures across Talan will land as future stories surface them.
+- ***A Traveller's Guide to Tyrnarra***. Golivander's formal multi-volume reference work. The official product: formal-philosophical voice, treated by literate-class Talanese as the standing reference on everything from continental geography to the Gods' Law. Named volumes include **The Gods' Law** (the most-quoted; the epigraph on [gods-law.html](../gods-law.html) is drawn from it, and chronicler glosses cite him by volume) and **Haizetsua** (the standing reference on Tengu life, written from his child's-deep familiarity with the island). Reprinted often; available wherever books are sold across Talan.
 - ***The Travelling Chronicle***. Golivander's periodical, distinct in register from his books. Regional dispatches written wherever he is at the time. Circulates across Lautara, Frae City, Sumendar, and a smaller subscription in Sortalde. The Emarrea-specific section is *Letters from Biozuri*; supplements append regional events (e.g. *Kawaakari supplement* for Yorimichi's Catjomin tastings). Tone is arch-knowing-chronicler, deeply familiar with the people he writes about, folk-belief-tier reportage (he never confirms what cannot be confirmed). Plain English title; pre-rule naming convention.
 - ***Letters from Biozuri***. The Emarrea-specific section of *The Travelling Chronicle*. Sixteen years of running coverage of the Heartcourt and its surrounding kingdom-life. The kitsune themselves read his columns; some Hearts cultivate him, some pointedly do not. Full text of the present canonical dispatches lives in [`heartcourt-letters.md`](heartcourt-letters.md).
 - **Jeanne Pintos.** Talanese natural philosopher; author of *You're not flying, you're falling upwards*, the in-world treatise on the laws of physics and magic that Golivander cites as the model for treating the Gods' Law as physics-not-rule.
