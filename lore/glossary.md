@@ -121,12 +121,14 @@ Full etymologies are in `lore/geography.md`. Quick reference:
   - **The Hightable**: Plain English (modern stratum). The fixed inland midsummer gathering-site of the Thunderhost; also the name of the high-summer storm-season the gathering opens. The season takes its name from the site; the site takes its name from the elevated flat where the Strix clan-chieftains have always perched to deliberate.
 
 **Lautara (Commerce):**
-- **Azkataria**: Basque *azoka* (market, fair) + *-tar(ra)* (people-of, native-of) → *azokataria* → vowel-loss to **Azkataria** "market-folk / people of the market." Sub-region of Lautara containing Merkavar (Jianna's city-state, on a lake within Azkataria's interior). The region named after the people who live around the great market.
+- **Azkataria**: Basque *azoka* (market, fair) + *-tar(ra)* (people-of, native-of) → *azokataria* → vowel-loss to **Azkataria** "market-folk / people of the market." Sub-region of Lautara south of Merkavar; the agricultural feeder belt that supplies the Market City. The market-folk are the orchard-keepers, vintners, market-gardeners, and dairy-farmers whose work orbits Merkavar's market gravity.
 - **Emarrea**: Basque *ema* (soft, gentle, calm) + *arrea* (tawny, sandy-brown) → *ema-arrea* "the soft tawny [land]" → assimilated to **Emarrea**. The kitsune kingdom; fox-colour and gentle-host disposition encoded in the name. Forested western highlands of Lautara. Capital: Biozuri.
 - **Biozuri**: Basque *bihotz* (heart) + *hiri* (city). *bihotz-hiri* → drop the medial h → *bihotzuri* → soften tz→z → **Biozuri** "heart-city." Hidden modern-Basque double-reading: *bio* (life-root) + *zuri* (white/pale) = "pale life," fitting the foxfire-lit shimmering valleys. Capital of Emarrea, seat of the Heartcourt.
 - **Rika Tikur**: Icelandic *ríkur* (rich, wealthy) + *tígulegur* (splendid, stately) → **Rika Tikur** "Rich and Splendid." The compound is imperfect, less a clean Icelandic phrase than a boastful self-applied brag that stuck. An independent coastal island-city set inside the Order of Steam bay in Lautara, naming itself for the wealth it claims and handling the bulk industrial freight from the OoS volcanic-belt manufactories.
 - **Dreaming Cape**: English-style
-- **The Wildreach**: modern English compound. Unclaimed border territory shared between Lautara (Commerce) and Ezkudon (Knowledge); the wild-touched live here. Distinct from Sumendar's *No Man's Land*, the unclaimed Komo-city-state territory.
+- **Itsasalda**: Basque *itsasoaldea* "the seaside region" (*itsaso* "sea" + *aldea* "region") → vowel-loss to **Itsasalda** "seaside." Northern coastal arm of Lautara, encompassing the Midarra-facing coastlands and the Order of Steam bay area; holds Rika Tikur and the Dreaming Cape within its bounds. The mercantile staging-ground where industrial freight from Sumendar's volcanic belt meets the wider Lautaran network.
+- **Atarialda**: Basque *atari* (threshold, entrance, gateway) + *aldea* (region) → *atarialdea* → vowel-loss to **Atarialda** "the threshold-region." Eastern arm of Lautara, holding the overland trade routes toward Egulon, Ezkudon, and Zuzental. The gateway-region: caravans leaving Merkavar east cross Atarialda, and Crossroads sits at its northeast corner as the literal *atari* of the domain.
+- **Helgafjall**: Icelandic *helgr* (holy, sacred) + *fjall* (mountain) → **Helgafjall** "holy mountain" (near-undrifted). The sacred snow-capped peak that rises from the centre of Merkavar's lake. Sacred-mountain watcher over the market-city; pilgrim trails wind up its slopes, the snow on its peak never fully melts, the lake at its foot has never frozen in record. Norse-stratum balance against the Basque-heavy Lautara sub-region naming.
 
 **Myrkono (Darkness):**
 - **Ilun Tasun**: Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself"
@@ -159,6 +161,8 @@ Full etymologies are in `lore/geography.md`. Quick reference:
 - **Jakinduria**: Basque *jakinduria* (wisdom/knowledge); real word, no drift required
 - **The Golden Coast**: modern English; coastal sub-region
 - **Lua Lasai**: Basque *lur* (land, earth) + *lasai(a)* (calm, peaceful, tranquil) → *lur-lasaia* → r-loss to **Lua Lasai** "Calm Country / Quiet Land." Border territory between Ezkudon (Knowledge) and Egulon (Light); the peaceful frontier between two non-warring domains, the name encoding the politics of the place: quiet because neither domain has cause for war here.
+- **The Wildreach**: modern English compound. A sub-region of Ezkudon. The wild people live here, and the area carries a strong wild-magic / wild-fey character. The **Iratxobaso** cluster at its centre is the source or focus of that magic.
+- **Iratxobaso**: Basque *iratxo* (fey-creature, fairy, gnome) + *baso* (forest) → **Iratxobaso** "fey-forest" (near-undrifted compound). The cluster of multicoloured trees at the centre of the Wildreach (Ezkudon); their presence is read as the source or focus of the surrounding wild-magic. Whether the trees produce the wild-magic or merely cluster where it is densest is a question the wild people answer differently.
 
 **Egulon (Light):**
 - **Harro Distiratsue**: Basque *harro* (proud) + *distiratsu* (radiant, brilliant, sparkling) → **Harro Distiratsue** "Proud Radiance." Drift: adjective ending *-tsu > -tsue* (light Tyrnarran inflection). Fully within Egulon (Light/Iro), no longer a border territory; the Lautara/Egulon border shifted west to absorb the sub-region entirely. The proud-radiance reading sits naturally inside the Light domain.
@@ -285,6 +289,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 **Tradition & craft:**
 - **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures.md`.
 - **Yukihime-shu**: "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
+- **Yukihime-no-mori**: Kotokoe (Japanese-flavoured); *yukihime* (snow princess) + *no* (genitive) + *mori* (forest) → "the Snow Princess Forest." The pink-blossomed orchard-and-wildflower lowlands at Emarrea's southern edge where the Yukihime-shu plums grow on terraced slopes. The forest and the wine share the *Yukihime* name; the plums are the bridge.
 - **Foxfire Stone Massage**: Plain English. Kawaakari's signature spa treatment.
 - **Festival of the Fox Lanterns**: Plain English. Annual Kawaakari river festival; lanterns drift down the Hoshigawa.
 
