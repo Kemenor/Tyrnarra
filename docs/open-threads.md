@@ -213,6 +213,21 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Write the Lautaran-merchant-people register. Parallels to draw on: silk-road historical caravans (Samarkand / Bukhara / Kashgar), Persian/Indian/Chinese trade-prince traditions, the caravan-guild structures of inland-Asian Eastern history. What the people eat, sing about, drink, wear; what a Merkavar warehouse-floor morning sounds like; the rhythm of caravan-season; the trade-festivals; the merchant-house succession patterns; the relationship between the trade-houses and Jianna's clergy. Defer until after maps land and the domain's geographic specifics are settled.
 **Where.** [lore/cultures.md](../lore/cultures.md); a new top-level *## The Lautaran Trade-Folk* section parallel to *## The Tengu* and *## The Kitsune* is the natural placement.
 
+### [Geography / Factions] Twin Suns / Bikitsa shared governance structure
+**Decided.** Twin Suns (Brauogi coastal sub-region) and Bikitsa (Myrkono coastal sub-region) share the two-sun phenomenon and are jointly governed under a single shared structure. The cross-domain governance is unique on Talan and the closest the bound thirteen have come to permitting a polity that answers to two domains at once.
+**Open.** The form of the shared structure. Working hint: **liquid-democracy-style** (voters vote directly on issues or delegate to representatives, with re-delegation chains). Other possible forms: bicameral council (one chamber per domain), elected joint Reeve, rotating governance. The specific structure shapes who sits in the kingdom's chambers, how disputes between the two halves resolve, what happens when Sarrum or Araphel would object to a decision the shared body makes, and how the two-domain governance answers (or fails to answer) to the Council of the Bound Thirteen.
+**Where.** Future: [lore/geography.md](../lore/geography.md), *Brauogi → Twin Suns* and *Myrkono → Bikitsa*; [lore/factions.md](../lore/factions.md) for the political body itself once shaped.
+
+### [Geography] The smaller Iturmen eastern lake
+**Decided.** Iturmen (Brauogi's central east-west source-mountain spine) has **two lakes** on it: the great central **Iturburu** (under the tallest peak, the headwaters of the domain's rivers) and a smaller lake to the east. Iturburu is named and characterised as the practical-livelihood mother-lake; the eastern lake is unnamed.
+**Open.** Whether the smaller eastern lake is independent or a daughter-lake of Iturburu (overflow drainage). Naming if independent. Specific role (separate watershed? hot spring? sacred site of a different rite from Iturburu? observation point?).
+**Where.** Future: [lore/geography.md](../lore/geography.md), *Brauogi → Iturmen*; [lore/glossary.md](../lore/glossary.md), Brauogi section.
+
+### [Geography] Mugamen's Myrkono-side counterpart name
+**Decided.** Mugamen (Basque *muga + mendi*, "border-mountain") is the Brauogi-side name for the southern mountain wall separating Brauogi from Myrkono. The wall is the same physical range from both sides; Myrkono mortals presumably have their own name for it from the darkness-domain perspective.
+**Open.** The Myrkono-side name. Candidates in Myrkono's naming register: an Itzal-prefix name (shadow-mountain, e.g., *Itzalmen*), an Ilun-prefix name (dark-mountain), or a different naming logic entirely (Myrkono's culture might name the wall by what's *on the other side* — the bread-mountain, the wall before the grain country). Best handled when fleshing out Myrkono. The Brauogi/Myrkono pair of names for the same wall is itself a piece of canon flavour (each culture naming the same border by what's behind it from their side).
+**Where.** Future: [lore/geography.md](../lore/geography.md), *Myrkono → sub-regions* or *Notes*; [lore/glossary.md](../lore/glossary.md), Myrkono section.
+
 ---
 
 ## § Campaign hooks: story frames waiting on a write-up
