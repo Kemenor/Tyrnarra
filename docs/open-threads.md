@@ -298,6 +298,20 @@ Items where the world has decided *what* but not *much*: placements and structur
 
 **Where.** [lore/geography.md](../lore/geography.md), per-domain *Sub-regions* lists; [lore/cultures.md](../lore/cultures.md) for the living-culture axes; [lore/glossary.md](../lore/glossary.md) for any new coined names that come up along the way.
 
+### [Geography / Factions] Merkavar: city interior + named figures + traditions *(rolling)*
+**Decided.** Merkavar's governance shipped 2026-05-26. **Seasonal Assembly** (legislature, meeting at each of the four great markets: **Hazi-Azoka** spring, **Lore-Azoka** summer, **Uzta-Azoka** autumn, **Kontu-Azoka** winter) + **Jianna's clergy** (standing administration, cosmopolitan and open to all ancestries with Vishkanya over-represented). Three ancestry-blocs canonised: Vishkanya (clergy + craft-guilds), Halfling (Halfling Railworkers' Association, dominant in autumn assembly under the Order of Steam's reduced-fare freight window), Kitsune (ancient parallel tradition to Emarrea, market-readers and information-brokers). The clergy-vs-assembly supremacy question is the deepest unresolved political question of the city. Dedicated page at [`/talan/domains/lautara/merkavar/merkavar.html`](../talan/domains/lautara/merkavar/merkavar.html); full canon in [lore/geography.md](../lore/geography.md), *Lautara → Notable Locations → Merkavar*.
+**Open.** Seven page-local TBDs flagged in the *Open in the Chronicle Record* panel:
+- **City layout and districts.** Freight-yard quarter, temple climb toward Helgafjall, market-squares along the western shore, warehouse rings sketched but not detailed; named quarters / guildhalls / clergy-precincts canon-pending.
+- **Named clergy figures.** Senior administrative ranks, high-priest equivalents who chair the standing committees, cross-ancestry clergy whose careers exemplify the cosmopolitan ideal.
+- **Named Halfling Railworkers' Association leadership.** The Association's whip, its chief negotiator, its representative on the assembly floor.
+- **Named kitsune information-brokers.** The market-reader whose seasonal stall is the canonical first stop for new merchants, the broker whose contract-arbitration record is the longest unbroken streak on the continent.
+- **Historical clergy-vs-assembly arbitration cases.** The three different supremacy answers of the last century each came from a named arbitration body in a named dispute; dispute names, bodies, and legal reasoning all unwritten.
+- **The four-market traditions.** Each market has its own ritual rhythm: opening rites, closing rites, the songs sung at dawn on the first day, the customary first toast at the merchant-house dinner.
+- **Specific Helgafjall pilgrimage practices.** Trails, way-shrines, threshold-tokens left at the summit, prayer-formulae merchant-houses send their apprentices to recite.
+
+Pace as stories want them. Rolling work.
+**Where.** [`/talan/domains/lautara/merkavar/merkavar.html`](../talan/domains/lautara/merkavar/merkavar.html) (page-local *Open in the Chronicle Record* panel); [lore/geography.md](../lore/geography.md), *Lautara → Notable Locations → Merkavar*.
+
 ### [Factions] Emarrea–Lautara political relationship
 **Decided.** Emarrea sits inside Lautara (Commerce / Jianna) but is politically self-governing under the Heartcourt.
 **Open.** Trade and court relationship between Emarrea, Jianna's church, Merkavar's markets, and Lautara's other sub-regions.
