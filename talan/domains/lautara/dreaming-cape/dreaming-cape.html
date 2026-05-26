@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dreaming Cape · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #8aa8c0;
+    --card-bg: rgba(20,26,36,0.55);
+  }
+
+  /* Five-tier dream-trade grid */
+  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 18px auto; }
+  .tier-card { padding: 16px 18px; }
+  .tier-num { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
+  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
+  .tier-name.free      { color: #b8c8d8; }
+  .tier-name.clergy    { color: #c8d8e0; }
+  .tier-name.lodging   { color: #a8b0b8; }
+  .tier-name.brew      { color: #c0d0e0; }
+  .tier-name.monopoly  { color: #e0d8b8; }
+  .tier-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.4; }
+  .tier-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+
+  /* Polity sub-sections */
+  .polity-sub { max-width: 880px; margin: 18px auto; padding: 18px 24px; background: rgba(20,26,36,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .polity-sub-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+  .polity-sub p { margin: 0 0 10px; line-height: 1.6; }
+  .polity-sub p:last-child { margin-bottom: 0; }
+
+  /* Wakehelm feature panel */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+
+  /* Folk-theory grid (for the drift's open causes) */
+  .theory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; max-width: 980px; margin: 18px auto; }
+  .theory-card { padding: 14px 16px; }
+  .theory-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 6px; }
+  .theory-card p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+
+  /* Tension grid (3-card) */
+  .tension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .tension-card { padding: 16px 18px; }
+  .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
+  .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+</style>
+</head>
+<body data-page="dreaming-cape">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><span>The Dreaming Cape</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Dreaming Cape</div>
+    <div class="page-subtitle">Lautara Sub-Region · The Twin Lantern</div>
+    <div class="page-flavor">"You will have walked this road before. You will know you have not. The Cape does this to everyone."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Modern English (modern stratum). The Cape was named by Adventurer-Era travellers for the dreaming-sub-state quality of its air, the phenomenon locals call <b>the drift</b>.</dd>
+    <dt>Position</dt><dd>Forms the <b>north-east headland</b> of the freshwater <b>Order of Steam bay</b> and wraps around the bay's south and east coasts, holding the larger share of the bay's coastline. The Cape's coasts touch both the bay (south, east, NE headland) and the open Midarra (along the headland's outer face). Bordered to the west by <b>Tahu Tangata</b> (Sumendar) across the <b>Markaa</b> river, and to the east and south by <b>Itsasalda</b> across a mountain range and a smaller river. The Cape does not border <a href="/talan/domains/lautara/emarrea/emarrea.html">Emarrea</a> directly; Itsasalda extends between them.</dd>
+    <dt>Terrain</dt><dd>Mountains and lowlands in the interior; cliff-faced coast on the Midarra outer face of the NE headland; gentler shores around the bay. Springs in the interior mountains carry a noticeable drift-intensity that locals consider lucky.</dd>
+    <dt>Character</dt><dd>
+      <i>A dreamy mercantile reach where the air itself feels half-touched by sleep</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Lunar Theocracy</span><span class="pill">Gynocracy</span><span class="pill">Dream-Trade</span><span class="pill">The Drift</span><span class="pill">Twin Voices</span></div>
+    </dd>
+    <dt>People</dt><dd><b>Halflings</b> anchor inn-keeping, dream-blend production, and the lay-pilot crews of the Wakehelm. <b>Vishkanya</b> anchor the temple's ledger work and the dream-record archive. A small <b>Merkavar-kitsune</b> information-broker minority operates alongside the inn-trade. The Cape has a noticeably higher-than-average rate of <b>identical-twin births</b>, locally read as Bikiargi's broad blessing.</dd>
+    <dt>Tongue</dt><dd>Talanese throughout. The temple's ritual register carries a small archaic vocabulary around the lunar calendar and dream-feast days; outside of those contexts, ordinary Lautaran trade-cant rules.</dd>
+    <dt>Faith</dt><dd><b>Bikiargi</b>-devotional, in her paired aspect (Unaru bright, Veyru dark); the only place on Talan where her cult is the civic-religious centre rather than scattered shrines. <b>Jianna</b> as secondary, the working faith of the inn-keepers and the harbour-side commercial life. <b>Honokage</b> of the Kyūbi-no-Den as a tertiary acknowledgement among the kitsune broker minority. The lunar calendar rules everything.</dd>
+    <dt>Rule</dt><dd><b>The Cape Theocracy of Bikiargi</b>, governed by the high temple of <b>the Twin Lantern</b>. Headed by paired identical-twin women, <b>the Bright Voice</b> and <b>the Dark Voice</b>, who speak as one in every public utterance. <b>The Midnight Sisters</b> are the temple's executive layer beneath the Voices. The polity is a gynocracy: men may join the clergy in many ranks, but positions of power are held by women only.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(138,168,192,0.5);">
+    <div class="gods-city-label">Capital</div>
+    <div class="gods-city-name">Moonwatch</div>
+    <div class="gods-city-byname">on the NE headland · seat of the Twin Lantern</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Moonwatch sits on the north-east headland at the bay-mouth, where the freshwater bay opens into the open Midarra. The <b>Twin Lantern</b> temple-tower doubles as the bay-mouth lighthouse: the same flame guides ships in by night and marks the goddess's seat by day. The city watches the moon and the bay-traffic at once.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-drift" class="section-heading">The Drift</h2>
+  <div class="prose">
+    <p>The Cape carries a phenomenon locals call <b>the drift</b>: a persistent déjà vu felt by travellers and residents alike, a fractional gap between sound and source, the recurring sense that a road has been walked before or a conversation already held. Travellers describe it as the waking mind being half-touched by dream; scholarly opinion describes the effect as a <i>dreaming sub-state</i> of the local air. The effect is reliable enough that the Cape's dock-side inns built their reputation on it, the temple of the Twin Lantern organised its religious life around it, and the Wakehelm pilot-craft trained itself to navigate through it.</p>
+
+    <p>The cause is genuinely unknown to the chronicle-record. The temple's standing doctrine holds that the drift is <b>Bikiargi's blessing</b>, the goddess of the twin moons holding sleep and waking in tension here. Outside the temple, four folk-theories compete in the inns and at the dock-side tables, none confirmed and none refuted:</p>
+  </div>
+
+  <div class="theory-grid">
+    <div class="accent-card theory-card">
+      <div class="theory-name">The Forge-Smoke</div>
+      <p>Old salts blame the Order of Steam's forge-smoke that drifts across the bay; the smoke carries something, they say, that settles in the lungs and folds the hours.</p>
+    </div>
+    <div class="accent-card theory-card">
+      <div class="theory-name">The Holy Water</div>
+      <p>Tahu Tangata songs name the bay-water as a holy water that remembers what mortal memory cannot.</p>
+    </div>
+    <div class="accent-card theory-card">
+      <div class="theory-name">The Old Thing</div>
+      <p>The Cape's interior mountains hide an old thing; pilgrims who climbed there returned changed, and the changed walk among us spreading the drift.</p>
+    </div>
+    <div class="accent-card theory-card">
+      <div class="theory-name">The Friction</div>
+      <p>The bay-mouth is where two waters meet, the open Midarra and the bay's enclosed flow, and the drift is the friction between them.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The temple's reading is <i>a</i> reading, not the answer. Some Thekkavar-educated clergy hold other views quietly; <a href="/talan/domains/lautara/azkataria/azkataria.html">Helgaft</a> scholars passing through occasionally publish papers the temple does not endorse and does not suppress.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-twin-lantern" class="section-heading">The Twin Lantern · The Cape Theocracy of Bikiargi</h2>
+  <div class="prose">
+    <p>The Cape is governed by the high temple of the <b>Twin Lantern</b> at Moonwatch. The temple grew up around the bay-mouth lighthouse in the mid-to-late Adventurer Era, and as the Cape's drift drew dream-curious travellers and pilgrims after the wider continent re-opened to trade, the temple's authority quietly extended to license the inn-keeping and the pilotage that grew around dream-tending. The polity is a <b>gynocracy</b>: men may join the clergy in many ranks, but positions of power are held by women only. It is the <b>second non-bound-god theocracy on Talan</b>, distinct in shape from the <a href="/talan/domains/zuzental/legea-empire.html">Legea Empire</a> (which is hereditary-demigod and prescriptive); the Twin Lantern is clergy-led, lunar-cycle-centred, doctrinally about <i>tending mystery</i> rather than enforcing law.</p>
+
+    <p>It is also the <b>only place on Talan where Bikiargi's cult is the civic-religious centre</b>. Elsewhere her shrines mark the lunar festivals; here her temple-tower lights the bay.</p>
+  </div>
+
+  <div class="polity-sub">
+    <div class="polity-sub-label">The Bright Voice + the Dark Voice</div>
+    <p>The paired high priesthood of Bikiargi, always identical-twin women, always selected by the Lunarcall. The two map one-to-one onto Bikiargi's twin halves (Unaru bright, Veyru dark) and <b>speak as one in every public utterance</b>; private disagreement, where it exists, is the goddess working out a question in herself and stays inside the temple.</p>
+    <p>They receive prophetic dreams from Bikiargi privately, the temple states this openly, and the Cape's centuries of prosperity demonstrate it. Their decisions across the generations have built and maintained the Cape's working life: the inns full, the Wakehelm's reputation continental, the dream-trade lucrative and mysterious, the harbour-trade reliable. Even their prophetic dreams stay dream-quality: the goddess keeps her answers oblique, and the Voices' skill is in <i>reading</i> facets even the best of them do not fully know.</p>
+  </div>
+
+  <div class="polity-sub">
+    <div class="polity-sub-label">The Midnight Sisters</div>
+    <p>The temple's executive layer beneath the Voices: the senior women-clergy who handle day-to-day governance, hold the lunar calendar, run the dream-feast days and sleep-vigils, and conduct the Lunarcall. The name reads doubly: the Sisters who keep the midnight watches of the lunar cycle, and the Sisters who hold the temple's deepest midnight secrets. The gynocratic principle is most visible here; men serve as senior clergy in many capacities, but a Midnight Sister's seat is held by women only.</p>
+  </div>
+
+  <div class="polity-sub">
+    <div class="polity-sub-label">The Lunarcall</div>
+    <p>The ritual by which a new Bright Voice and Dark Voice are brought into the seats. The Lunarcall convenes whenever the Voices' seats fall vacant, which is always together: a surviving Voice and her dead sister cannot continue alone, and on the death of one, the other steps down to the wider clergy and the Midnight Sisters prepare the ritual.</p>
+    <p>The Lunarcall reveals the twins that dream most vividly under Bikiargi's calling. Candidates may come from anywhere: clergy ranks, established Cape families, refugees recently arrived. The ritual chooses regardless of background, and the chosen pair are brought into novitiate together. The whole Cape attends the closing vigil; the new Voices step into the bay-mouth lantern-light at dawn.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-dream-trade" class="section-heading">The Five Tiers of the Dream-Trade</h2>
+  <div class="prose">
+    <p>The Cape's commercial offering structured by doctrine, in five tiers from free to most-sacred. The dream owned by a sleeper is sacred; a dream sold to a stranger is a desecration; the inn sells the brew, the dream stays the sleeper's.</p>
+  </div>
+
+  <div class="tier-grid">
+    <div class="accent-card tier-card">
+      <div class="tier-num">Tier 1</div>
+      <div class="tier-name free">Witnessing</div>
+      <div class="tier-band">Free · the Twin Lantern's dormitory</div>
+      <p>Sleepers in the temple dormitory may have their dreams witnessed by the dream-clergy and, if they wish, entered into the temple register. The goddess's hospitality, free to any who come.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-num">Tier 2</div>
+      <div class="tier-name clergy">Interpretation</div>
+      <div class="tier-band">Paid clergy service</div>
+      <p>Interpretation of dreams brought to the clergy, a working sworn craft paid as any. Reading is its own skill: the prophetic answer is always given, the reading is never the whole of it.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-num">Tier 3</div>
+      <div class="tier-name lodging">Lodging</div>
+      <div class="tier-band">Paid inn-bed</div>
+      <p>Beds at chartered inns across Moonwatch and the Cape's smaller settlements. What the body dreams under the inn's roof remains the sleeper's.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-num">Tier 4</div>
+      <div class="tier-name brew">Temple-Stamped Brews</div>
+      <div class="tier-band">Paid inn product · the temple's mark</div>
+      <p>Dream-blends sold at chartered inns under the temple's certification mark, brews designed to promote vivid restful dreaming. The inn sells the brew; the dream stays the sleeper's. Unstamped brews exist outside the chartered system at the drinker's own risk.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-num">Tier 5</div>
+      <div class="tier-name monopoly">Prophetic Induction</div>
+      <div class="tier-band">Paid temple monopoly · Twin Lantern clergy only</div>
+      <p>The temple's most sacred offering. A specific question put to the goddess through ritualised sleep, the answer compelled and witnessed by the dream-clergy. The rite is weighty and the price reflects it. The future is always shown, but the interpretation stays open and the answer stays dream-quality.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Outside merchants who write asking for "certified dreams" are politely refused at the temple and quietly pursued by some inn-keepers in violation of charter. Inn-keepers caught brokering dream-content lose their licence; the temple holds the line strictly, and enforcement is the polity's most chronic political headache.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wakehelm" class="section-heading">The Wakehelm · The Cape's Pilot-Craft</h2>
+  <div class="feature-panel prose">
+    <p>A Cape pilotage is a <b>paired</b> unit: one <b>ship-pilot</b> (lay) and one <b>dream-pilot</b> (clergy of Bikiargi), trained together at the temple's navigation-school and bearing the temple's joint mark. A ship that hires one hires both. The dream-pilot boards the night before a crossing, sleeps in the captain's cabin, and reads the dream-state for forecast; the ship-pilot pilots through the bay-mouth and the Midarra-coastal routes, weighing the dream-pilot's morning report against sea-state and choosing the line.</p>
+
+    <p>The Wakehelm are <b>Midarra experts</b>: the bay-mouth currents, the two-headland approach geometry, Rika Tikur's heavy traffic, the routes south down the Sumendar Midarra-coast and east along Lautara's. Hafra crossings belong to other pilots (<a href="/talan/domains/vindul/fellibylur/fellibylur.html">Fellibylur's Stormriders</a> for cloud-sea, Floteyn's coastal craft for Hafra-coast); the Wakehelm leaves them alone.</p>
+
+    <p>They navigate <b>through the drift</b>: a captain whose helm-orders arrive with a fractional delay, or a lookout who sees the next minute before this one, makes wrong calls without a Cape-trained pair in the bridge. The Wakehelm's continental reputation rests on this. No other Midarra craft offers it. A Frae City merchant-house with a Cape pilotage on its standing payroll is signalling that it can afford the Cape's rate and trusts no other crew on its decks.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-silver-light" class="section-heading">The Silver Light · The Founding Inn</h2>
+  <div class="prose">
+    <p><b>The Silver Light</b> at Moonwatch is the oldest dream-house and the lay reflection of the Twin Lantern: the inn that catches the lighthouse-flame from down at the harbour. It was the first establishment to serve a temple-stamped dream-blend, and a bed in its upper rooms is what every visiting merchant tries to secure first. The Silver Light's brewers are among the few inn-side artisans whose blends carry the temple's purity-mark without a single annual audit-failure since the inn was chartered.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples-and-faith" class="section-heading">Peoples and Faith</h2>
+  <div class="prose">
+    <p><b>Halflings</b> anchor the inn-keeping, the dream-blend production, and the lay-pilot crews of the Wakehelm. <b>Vishkanya</b> anchor the temple's ledger work, the dream-record archive, and the pilot-warrant inscription. A small <b>Merkavar-kitsune</b> information-broker minority operates alongside the inn-trade, doing continental information-trade adjacent to the Cape's dream-tending; the temple regards them with polite distance. Cosmopolitan mix in dock-work, lighthouse-watch, and lay-clerical service.</p>
+
+    <p>The Cape has a noticeably higher-than-average rate of <b>identical-twin births</b>. Locals read this as Bikiargi's broad blessing across the whole population, an answering grace to the temple's twin-headed authority. Clinical explanation has never been worked out by any chronicler. Cape grandmothers have a hundred small folk-practices to encourage a twin-birth, none of them studied and most of them passed quietly down family lines.</p>
+
+    <p>Faith stack: <b>Bikiargi</b> primary, in her paired aspect; <b>Jianna</b> secondary, the working faith of the inn-keepers and the harbour-side commercial life; <b>Honokage</b> of the Kyūbi-no-Den tertiary, acknowledged by the kitsune broker minority and a handful of Cape families with long Emarrea-trade ties. The lunar calendar rules everything: dream-feast days at the full and new moons, working transitions at the half-moons, Lunarcall vigils whenever the Voices' seats fall vacant.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="live-tensions" class="section-heading">Live Tensions</h2>
+  <div class="prose">
+    <p>Three arguments run quietly through Moonwatch and louder in the smaller settlements.</p>
+  </div>
+
+  <div class="tension-grid">
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Brokering Line</div>
+      <p>Inn-keepers chafe against the temple's licensing on dream-blends, especially the doctrinal line against any inn brokering certified dream-content. Outside merchants keep asking. A few inn-keepers keep being quietly suspected of saying yes. The temple holds the line strictly and the enforcement headache stays chronic.</p>
+    </div>
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Drift Question</div>
+      <p>The drift's actual cause is genuinely open. The temple's official Bikiargi-blessing reading is doctrine; some Thekkavar-educated clergy quietly hold other views; Helgaft scholars passing through occasionally publish papers the temple does not endorse and does not suppress.</p>
+    </div>
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Bay-Mouth Fees</div>
+      <p>Rika Tikur's port-masters periodically push to renegotiate the bay-mouth pilot fees, arguing the Order of Steam's industrial freight should pay less than Lautaran merchant traffic. The Wakehelm has held the line for forty years; the Twin Lantern's standing answer is that the same drift hazards every ship the same.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Merchant's Question</button>
+    <div class="legend-era-content">
+      <p>A Frae City merchant came to Moonwatch with a single question for the temple: would his ship be lost on its next crossing to Sortalde? He paid the prophetic-induction fee, slept the rite, dreamed his dream, woke and asked the Bright Voice and the Dark Voice (speaking as one) what it meant. They told him: the ship will reach Sortalde. He sailed.</p>
+      <p>The ship reached Sortalde. On the way back, in fair weather, the vessel caught fire and burned to the waterline. The crew survived in lifeboats. The merchant did not. They say his last words were: <i>she said the ship would reach Sortalde. She did not lie. I asked the wrong question.</i></p>
+      <p>They tell this tale in the Frae City warehouses every time a merchant pays Moonwatch's prophetic-induction fee. It is the standing reminder of how Cape prophecy works: the future is always shown, the reading is its own skill, and the answer is always insufficient unless the question was the right one.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ── GM Secret 1: The Drift's Real Origin ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Drift Actually Is</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Stillpool Beneath</div>
+      <p class="secret-reveal">The drift is Wellspring-residue. The Cape sits over a new kind of Wellspring-leak site: a <b>Stillpool-river</b>.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">subsurface flow</span>
+        <span class="secret-pill">new Stillpool sub-class</span>
+        <span class="secret-pill">ambient dreaming sub-state</span>
+      </div>
+
+      <p>Beneath the Cape runs a subsurface flow of Wellspring-residue, a Stillpool elongated into a coursing watercourse rather than the standard pooled site. The Cape is the first known canon example of a Stillpool-river; whether others exist on Talan is open. The river's proximity to the surface varies; at some places the residue rises near enough to produce noticeable surface effects.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">Surface Emergence</div>
+          <div class="secret-card-title">Where the Drift Concentrates</div>
+          <div class="secret-card-body">The Twin Lantern's hill at Moonwatch, the Silver Light's well, the bay-mouth itself, certain springs in the interior mountains. Locals consider these places lucky; pilgrims gather there without knowing why.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Ambient Effect</div>
+          <div class="secret-card-title">A Dreaming Sub-State</div>
+          <div class="secret-card-body">Everywhere on the Cape, the residue's ambient resonance produces what locals call the drift: the waking mortal mind half-touched by the Wellspring itself. Folk-explained as Bikiargi's blessing; no chronicler has worked out the actual mechanism.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Guild's Atlas</div>
+          <div class="secret-card-title">Marked or Unmarked</div>
+          <div class="secret-card-body">The Adventurers' Guild's sealed Stillpool atlas may carry the Cape under a coordinate the Guild has chosen to leave unmarked. Whether the Guild has identified the Cape as Stillpool-river-anchored is a separate question, and an open one.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda"><i>The drift is the Wellspring breathing under the Cape. The temple has built a goddess's working life on top of that breath.</i></p>
+    </div>
+  </div>
+
+  <!-- ── GM Secret 2: The Lunarcall's Hidden Mechanism ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Lunarcall Actually Does</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Temple's Deepest Mystery</div>
+      <p class="secret-reveal">The Lunarcall is not a selection process. It is a creation event. The ritual creates one of the two Voices on the spot.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">always an orphan</span>
+        <span class="secret-pill">always a dream-sister candidate</span>
+        <span class="secret-pill">Reflection-birth</span>
+      </div>
+
+      <p>The Midnight Sisters identify a particular kind of girl: always an orphan, always a child who has reported an "imaginary friend" or "dream-sister" for as long as she can remember. These girls are <b>Reflection-incubation candidates</b>: their dream-companion is the pre-form of a Reflection that the Wellspring-suffused Cape ground has been gestating in their dream-life. The Lunarcall ritual brings the dream-companion across the threshold and into the waking world. The chosen girl experiences this as her always-present sister finally manifesting in flesh.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Mortal Voice</div>
+          <div class="secret-card-title">Never Knows</div>
+          <div class="secret-card-body">She lives her whole life believing she is one of identical twin sisters whose bond is the goddess's blessing. She dies believing this. The Midnight Sisters hold the secret from her by standing practice; the secret stays kept.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Reflection-Voice</div>
+          <div class="secret-card-title">Always Figures It Out, Always Through Dream</div>
+          <div class="secret-card-body">Being Wellspring-direct, she has access to perceptions the mortal Voice does not. Within months or decades of the Lunarcall, she dreams the truth: she sees herself unmade, sees the moment of her creation, sees the dream-companion she once was. The realisation comes through the medium that defines her polity.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Confirming</div>
+          <div class="secret-card-title">When She Asks</div>
+          <div class="secret-card-body">Some Reflection-Voices share the burden with one of the Midnight Sisters; some carry it alone. None tell their mortal twin. The Midnight Sisters' standing practice: when a Reflection-Voice approaches a Sister to ask, the Sister confirms. The conversation is held in the temple's deepest chamber. Both leave changed.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda"><i>The chosen girl is given the sister she always thought she had. The Reflection-Voice always learns the truth she was made within. The Cape is governed by a pair of women, one of whom does not know what the other is, and the other knows everything.</i></p>
+    </div>
+  </div>
+
+  <!-- ── GM Secret 3: The Compact's Blind Spot ── -->
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Twin Lantern in the Compact's Blind Spot</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; A Wellspring-Direct Institution</div>
+      <p class="secret-reveal">The Reflection-Voice is Wellspring-direct, which means she operates in the Compact's blind spot. The Twin Lantern is structurally a <b>Wellspring-direct institution operating in the Compact's blind spot</b>, the same loophole the Golden Emperor used to ascend.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">Compact-blind</span>
+        <span class="secret-pill">prosperity, not ascension</span>
+        <span class="secret-pill">drawn Reflections</span>
+        <span class="secret-pill">elevated twin rate</span>
+      </div>
+
+      <p>The bound thirteen cannot directly observe Wellspring-direct beings (see <a href="/talan/historical/golden-empire.html">the Golden Empire's structural pattern</a>). The Reflection-Voice's perceptions, her prophetic dreams, her sense of when something is wrong on the continent: all run on cosmic substrate the bound thirteen do not surveil. Bikiargi herself works through both Voices; the mortal Voice carries Bikiargi's clergy-bond perception; the Reflection-Voice carries Wellspring-direct perception. The pair together has access no other Talanese governance has, and the prosperity of the Cape across centuries is the demonstrated result.</p>
+
+      <div class="secret-grid-3">
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Cape's Drawn Reflections</div>
+          <div class="secret-card-title">Quietly Welcomed</div>
+          <div class="secret-card-body">Reflections from elsewhere on Talan are slightly drawn to the Cape; the Wellspring-residue substrate feels to a Reflection like home. Ordinary perception cannot identify a Reflection by sight; the Reflection-Voices can, under temple-ritual conditions. The Cape's secret Reflection population is loosely known to the Midnight Sisters via the Voices' quiet identification. Standing policy: welcome and protect, do not surface.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">The Twin Rate</div>
+          <div class="secret-card-title">A Wellspring Side-Effect</div>
+          <div class="secret-card-body">The subsurface Stillpool-river produces a subtle biological resonance that elevates the local rate of identical-twin births. Folk-explanation is Bikiargi's blessing; the temple lets the folk-explanation stand. Clinical explanation has never been worked out by any chronicler, because the cosmology that would produce one is GM-tier.</div>
+        </div>
+        <div class="accent-card cut-left secret-card">
+          <div class="secret-card-label">Why It Stays Hidden</div>
+          <div class="secret-card-title">The Blind Spot Protects Itself</div>
+          <div class="secret-card-body">The mortal Voices, never knowing, cannot disclose. The Reflection-Voices, knowing, will not. The Wellspring-suffused ground produces no visible signs; the drift is folk-explained; the twin-rate is folk-explained; everything fits. The Compact's blind spot means even the bound thirteen do not see it.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda"><i>The Cape's path is not the Golden Empire's. The temple uses its position for governance and prosperity rather than ascension, and the working life of the Cape across centuries is the demonstration. But the structural potential is the same. If the Voices ever decided otherwise, no one on the continent would see it coming.</i></p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the polity's central canon settled, several details about the Dreaming Cape remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Named Voices, named Midnight Sisters, named Wakehelm pilot-pairs.</b> Personal names across the temple, the executive layer, and the pilot-craft. They will surface as stories want them.</li>
+      <li><b>The drift's actual cause.</b> Genuinely unknown to the chronicle-record; the temple's Bikiargi-blessing reading is doctrine; the four folk-theories above are live tavern-debate. The chronicler does not know which is correct; the GM does.</li>
+      <li><b>The smaller river and the mountain range</b> that form the Cape's eastern and southern border with Itsasalda are unnamed in canon. Both are deep-old features; names to be coined when Itsasalda gets its own pass or the Cape's interior is fleshed further.</li>
+      <li><b>The lunar calendar's specific feast-day names.</b> The temple keeps full-moon and new-moon dream-feast days, half-moon working transitions, and the Lunarcall vigils. The named days, their rites, and the inn-side observances that grew around them are unwritten.</li>
+      <li><b>The Cape's secondary settlements.</b> Smaller harbour-towns and interior villages beyond Moonwatch are gestured at but unnamed; the chartered-inn distribution and the trail-network into the interior mountains are open.</li>
+      <li><b>The Order-of-Steam-side of the bay-mouth fee dispute.</b> What Rika Tikur's port-masters specifically argue, and the named recent incidents that have flared the dispute, are flagged on the Wakehelm's side but not narrated from Rika Tikur.</li>
+      <li><b>Named dream-blends.</b> Two or three signature blends the inns are known for would ground the dream-trade canon further; left for future writing.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · THE DREAMING CAPE</div>
+
+</div>
+
+</body>
+</html>
