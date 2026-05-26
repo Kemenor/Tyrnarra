@@ -62,8 +62,13 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     style-b.css                        ← Style B base, every page under /talan/ and /off-continent/
 
   lore/                                ← worldbuilding canon (NOT published)
-    cosmology.md, gods.md, secret-history.md, geography.md, factions.md,
+    cosmology.md, gods.md, secret-history.md, factions.md,
     cultures.md, bestiary.md, bolverk.md, glossary.md, timeline.md
+    geography/                          ← per-domain canon (split for read-cost)
+      _continent.md                     ← structure, seas, rail, off-continent, domain index
+      vindul.md, lautara.md, myrkono.md, floteyn.md, sumendar.md,
+      lioaru.md, brauogi.md, ezkudon.md, egulon.md, zuzental.md,
+      nashavel.md, ehizahar.md, askamira.md
     (see "Where new content goes" below for what lives in each)
 
   docs/                                ← site documentation (NOT published)
@@ -196,7 +201,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 | How the world works: Wellspring, belief mechanic, planar layers, magic schools, Magitech, Gods' Law mechanics, calendar | `lore/cosmology.md` |
 | Who the gods are: the Thirteen, named non-bound gods, gods' city-states, Council, cleric domains | `lore/gods.md` |
 | What really happened: Crimson Rain, Cronus's secret, Storveldi Denbora, Elden / Corrupted God, Wardstones, Nine Generals, Tani & Araphel deep-dives | `lore/secret-history.md` |
-| Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography.md` |
+| Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography/<region>.md` (one file per god domain) + `lore/geography/_continent.md` (structure, seas, rail network, off-continent powers, naming convention, full domain index). Each domain file declares its land borders at the top; when designing on top of a domain, read its file *and* the files of its bordering domains. |
 | Factions, guilds, churches, organisations | `lore/factions.md` |
 | Peoples, traditions, politics, craft, warfare | `lore/cultures.md` |
 | Playable ancestries (PF2e), heritages | `lore/bestiary.md` |

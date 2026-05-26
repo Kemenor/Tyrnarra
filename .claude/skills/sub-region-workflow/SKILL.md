@@ -1,13 +1,13 @@
 ---
 name: sub-region-workflow
-description: Use this skill whenever working on a Talanese sub-region (kingdom, free city, theocracy, mendicant order, guild-state, merchant republic, federated free-towns, march, clan-confederation, nomadic confederacy, or any polity smaller than a continent) within the Tyrnarra worldbuilding project. Trigger on phrases like "flesh out [name]", "let's design [polity]", "new sub-region in [domain]", "what should [domain]'s [feature] be", "promote [name] to its own page", "build the page for [name]", "we have a label on the map but no canon for X", working with TBD sub-region entries in docs/open-threads.md, drafting bullets in lore/geography.md sub-region sections, or any session that takes a label-on-the-map to fully fleshed canon. Also use when the user references the Baerfrost, Air Monastery / Wyndwalken, or Fellibylur exemplars as patterns to follow. The skill enforces a strict seven-phase workflow with surface-before-writing pauses, the kingdoms-inherit-names rule, the Basque/Icelandic/English naming-stratum check, the collision check on reserved names (Compact, Order), the lore-pre-read step, and the lore-first / surface-before-HTML protocol from CLAUDE.md. Do not use for cosmology or pantheon work, quest design unconnected to founding or refounding a polity, NPC dossiers in already-established sub-regions, or HTML edits to pages that already exist for unrelated reasons.
+description: Use this skill whenever working on a Talanese sub-region (kingdom, free city, theocracy, mendicant order, guild-state, merchant republic, federated free-towns, march, clan-confederation, nomadic confederacy, or any polity smaller than a continent) within the Tyrnarra worldbuilding project. Trigger on phrases like "flesh out [name]", "let's design [polity]", "new sub-region in [domain]", "what should [domain]'s [feature] be", "promote [name] to its own page", "build the page for [name]", "we have a label on the map but no canon for X", working with TBD sub-region entries in docs/open-threads.md, drafting bullets in lore/geography/<region>.md sub-region sections, or any session that takes a label-on-the-map to fully fleshed canon. Also use when the user references the Baerfrost, Air Monastery / Wyndwalken, or Fellibylur exemplars as patterns to follow. The skill enforces a strict seven-phase workflow with surface-before-writing pauses, the kingdoms-inherit-names rule, the Basque/Icelandic/English naming-stratum check, the collision check on reserved names (Compact, Order), the lore-pre-read step, and the lore-first / surface-before-HTML protocol from CLAUDE.md. Do not use for cosmology or pantheon work, quest design unconnected to founding or refounding a polity, NPC dossiers in already-established sub-regions, or HTML edits to pages that already exist for unrelated reasons.
 ---
 
 # Sub-region workflow
 
 ## What this skill is for
 
-Taking a sub-region from "label on the map" (a one-liner stub in `lore/geography.md`, a TBD entry in `docs/open-threads.md`, or a freshly named region on a hand-drawn map) to fully fleshed canon, and optionally to a dedicated HTML page, inside a single session, with the user's voice setting direction at every phase boundary.
+Taking a sub-region from "label on the map" (a one-liner stub in `lore/geography/<region>.md`, a TBD entry in `docs/open-threads.md`, or a freshly named region on a hand-drawn map) to fully fleshed canon, and optionally to a dedicated HTML page, inside a single session, with the user's voice setting direction at every phase boundary.
 
 This applies to anything that needs its own polity-shape and signature institution(s) and stops short of a continent: kingdoms, factions-as-polities, orders, theocracies, confederations, free cities, mendicant brotherhoods, guild-states. The exemplars are the three Vindul sub-regions promoted on **2026-05-24**: **Baerfrost** (Hunt-League), **Air Monastery / Wyndwalken** (Kashrishi cartographers), **Fellibylur** (Stormpact merchant kingdom). Reading those three side by side is the fastest way to learn the rhythm.
 
@@ -29,8 +29,8 @@ If any canon contradicts what you were about to draft, the canon wins. Surface t
 | **1. Spitball options** | Generate 4-6 structurally distinct political shapes with founding-era, ancestry-anchor, and cross-canon hook for each. End with a recommended pick | Chat only. No file writes |
 | **2. User picks + refines** | User picks one or combines two. Axis-confirmation only. Ask one or two clarifying questions on placement, neighbors, ancestry-anchor, naming-axis preference | **Axis-confirmation is not a green light to draft prose.** Do not start Phase 4 yet |
 | **3. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
-| **4. Surface the prose draft** | Draft the geography.md bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
-| **5. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography.md`, `lore/glossary.md`, `lore/bestiary.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
+| **4. Surface the prose draft** | Draft the `geography/<region>.md` bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
+| **5. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/bestiary.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
 | **6. HTML mirror** | On an explicit publish signal, upgrade the parent domain HTML card and update cross-page links | Stay within the minimum mirror unless the user signals promotion |
 | **7. Promote to dedicated page** | On an explicit "promote" signal, build `talan/domains/<domain>/<slug>/<slug>.html` using `talan/domains/vindul/haizetsua/haizetsua.html` as template. Wire `assets/site-nav.js`, the parent domain card, `docs/site-inventory.md`, cross-page links. Fold any agent-committed canon back to glossary.md | For multi-page promotion, see *Parallelization* below |
 
@@ -42,7 +42,7 @@ The phase boundaries are review checkpoints. Pause at each one even under broad 
 
 Per CLAUDE.md's pre-read rule, read the relevant lore end-to-end before drafting. For a sub-region in domain X:
 
-1. **`lore/geography.md`** — the domain X section (terrain, neighbors, existing sub-region bullets, the god-city)
+1. **`lore/geography/<region>.md`** for domain X, end-to-end (terrain, neighbors, existing sub-region bullets, the god-city). Also read **`lore/geography/<bordering-region>.md`** for each bordering domain named in the file's `**Borders:**` line, since neighbours' canon constrains the sub-region's edges. **`lore/geography/_continent.md`** if the sub-region touches a sea, an off-continent power, or the rail network.
 2. **`lore/glossary.md`** — sub-regions block for the domain; Faction proper nouns if any anchor institutions exist
 3. **`lore/bestiary.md`** — any ancestry already anchored to this sub-region, or candidate ancestries that could be
 4. **`docs/open-threads.md`** — search the target name; flesh-out spec may already be partially drafted
@@ -132,7 +132,7 @@ Once direction and names are settled, draft the actual prose. **Surface in chat.
 
 ### Standard draft contents
 
-- **A single extended bullet for `lore/geography.md`** under the domain section. Model on the Haizetsua bullet pattern: one rich paragraph (or a small handful of paragraphs) packing geography, polity, institutions, signature export, tension, and faith. No em-dashes. Affirmative prose. Chronicler-tier voice (in-world scholar).
+- **A single extended bullet for `lore/geography/<region>.md`** under the domain's *Sub-regions* list. Model on the Haizetsua bullet pattern: one rich paragraph (or a small handful of paragraphs) packing geography, polity, institutions, signature export, tension, and faith. No em-dashes. Affirmative prose. Chronicler-tier voice (in-world scholar).
 - **Etymology entries for `lore/glossary.md`** (sub-region entry under *Sub-regions → <Domain>*, nested under parent if it's a place-within-a-place like *Hartzar Erruta* under *Air Monastery*).
 - **Faction subsection for `lore/glossary.md`** if institutions are coined (modeled on the Voroir Daua or Wyndwalken patterns).
 - **Bestiary updates** if an ancestry is being anchored, moved, or freshly placed (table cell + per-ancestry entry + cross-references in related entries).
@@ -149,7 +149,7 @@ User green-lights with "commit" / "go ahead" / "publish to lore" / similar. Appl
 
 | File | What goes there |
 |---|---|
-| `lore/geography.md` | The full sub-region bullet, replacing the prior one-liner |
+| `lore/geography/<region>.md` | The full sub-region bullet, replacing the prior one-liner |
 | `lore/glossary.md` | Sub-region etymology entry (nested under *Sub-regions → <Domain>* block); new Faction proper nouns subsection if institutions were coined |
 | `lore/bestiary.md` | Ancestry-anchor table updates; full ancestry-entry rewrite if the ancestry moved or is newly Common; cross-reference cleanup in related ancestry entries |
 | `docs/open-threads.md` | Close or update the sub-region's open-thread entry. Mark "Closed." inline. If any sub-canon remains open, enumerate what's still TBD. |
@@ -175,7 +175,7 @@ Lore stays canonical; HTML is reflection.
 
 ## Phase 7: Promote to dedicated page (on explicit "promote" signal)
 
-Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist yet." Once a sub-region has full lore canon (geography.md bullet + glossary entries + factions referenced), it has earned promotion.
+Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist yet." Once a sub-region has full lore canon (`geography/<region>.md` bullet + glossary entries + factions referenced), it has earned promotion.
 
 ### Build the page
 
@@ -224,7 +224,7 @@ When a page-building agent invents canon-additive content (new place-names, gove
 
 When promoting two or more sub-regions at once, **spawn one general-purpose agent per page in parallel** with the Agent tool. Each agent gets:
 
-- **Canon source pointers** — the lore source files for its target (geography.md bullet + glossary entries + bestiary if relevant)
+- **Canon source pointers** — the lore source files for its target (`geography/<region>.md` bullet + glossary entries + bestiary if relevant)
 - **Template pointer** — `talan/domains/vindul/haizetsua/haizetsua.html` as the model
 - **Convention pointers** — `CLAUDE.md`, `docs/card-conventions.md`, `docs/accessibility.md`, `docs/sidebar-nav.md`
 - **Explicit guidance** on the page's `--domain-accent` (suggest 2-3 hex options + tell the agent to verify contrast against `#0f0c08`)
@@ -275,8 +275,8 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 
 The three Vindul sub-regions promoted on 2026-05-24:
 
-- **Baerfrost** (clan-confederation under rotating meritocracy). `lore/geography.md` *Vindul → Baerfrost*; `lore/glossary.md` sub-regions block; `talan/domains/vindul/baerfrost/baerfrost.html`.
-- **Air Monastery / The Wyndwalken** (mendicant order with fixed mother-house). `lore/geography.md` *Vindul → Air Monastery*; `lore/glossary.md` sub-regions + *The Wyndwalken (Air Monastery cartographer order)*; `talan/domains/vindul/air-monastery/air-monastery.html`.
-- **Fellibylur** (chartered merchant kingdom, parallel coast/interior seats). `lore/geography.md` *Vindul → Fellibylur*; `lore/glossary.md` sub-regions + *Fellibylur (storm-people merchant kingdom of Vindul)*; `talan/domains/vindul/fellibylur/fellibylur.html`.
+- **Baerfrost** (clan-confederation under rotating meritocracy). `lore/geography/vindul.md` *Baerfrost*; `lore/glossary.md` sub-regions block; `talan/domains/vindul/baerfrost/baerfrost.html`.
+- **Air Monastery / The Wyndwalken** (mendicant order with fixed mother-house). `lore/geography/vindul.md` *Air Monastery*; `lore/glossary.md` sub-regions + *The Wyndwalken (Air Monastery cartographer order)*; `talan/domains/vindul/air-monastery/air-monastery.html`.
+- **Fellibylur** (chartered merchant kingdom, parallel coast/interior seats). `lore/geography/vindul.md` *Fellibylur*; `lore/glossary.md` sub-regions + *Fellibylur (storm-people merchant kingdom of Vindul)*; `talan/domains/vindul/fellibylur/fellibylur.html`.
 
-Read the prose in `lore/geography.md` + the etymology entries in `lore/glossary.md` + the HTML at `talan/domains/vindul/<slug>/<slug>.html` for each. That is the shape every new sub-region is aiming at.
+Read the prose in `lore/geography/vindul.md` + the etymology entries in `lore/glossary.md` + the HTML at `talan/domains/vindul/<slug>/<slug>.html` for each. That is the shape every new sub-region is aiming at.

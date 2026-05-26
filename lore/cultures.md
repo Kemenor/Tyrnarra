@@ -9,7 +9,7 @@ Distinct peoples on Talan whose identity is cultural (origin, character, interna
 > *"We do not pray for easier lives. We sharpen ourselves against the one we were given."*
 > Fenurran proverb
 
-A people of ash and will. The Fenurrans inhabit the sulfurous wasteland surrounding the ancient meteor crater at the heart of Ehizahar: the **Fenurra** sub-region, distinct from but bordering the Lands of Villtur (see [geography.md](geography.md)). To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home, a people forged in a crucible where survival is a daily, hard-won victory.
+A people of ash and will. The Fenurrans inhabit the sulfurous wasteland surrounding the ancient meteor crater at the heart of Ehizahar: the **Fenurra** sub-region, distinct from but bordering the Lands of Villtur (see [geography/ehizahar.md](geography/ehizahar.md)). To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home, a people forged in a crucible where survival is a daily, hard-won victory.
 
 They are fiercely independent, brutally pragmatic, and passionate in their personal lives in a way the colder politics of their neighbours rarely matches. They argue with vigour, laugh without restraint, and love with fire-coloured intensity. Their celebrations are explosive and cathartic. Their wars are surgical and silent.
 
@@ -34,7 +34,7 @@ Politically, there are no kings or queens. There are no permanent generals. Ther
 
 ### The schism
 
-A recent development: missionaries from the **Divine Faith** have penetrated Fenurra and converted a number of tribes. The ruling Draconis (caretakers of the Speaker's Mantle for generations) have been forced into a precarious position. To absorb the encroaching ideology rather than fracture against it, they have arranged the political marriage of their daughter to the **theocratic prince**, the heir to the **Legea Empire**, the demigod-ruled theocracy that *is* the Divine Faith's polity. The Faith serves a god not of the bound thirteen, but one residing in the third (Postlife) layer of the planes; specific identity TBD. See `factions.md` for the Divine Faith and `geography.md` (Zuzental, Legea Empire) for the political geography.
+A recent development: missionaries from the **Divine Faith** have penetrated Fenurra and converted a number of tribes. The ruling Draconis (caretakers of the Speaker's Mantle for generations) have been forced into a precarious position. To absorb the encroaching ideology rather than fracture against it, they have arranged the political marriage of their daughter to the **theocratic prince**, the heir to the **Legea Empire**, the demigod-ruled theocracy that *is* the Divine Faith's polity. The Faith serves a god not of the bound thirteen, but one residing in the third (Postlife) layer of the planes; specific identity TBD. See `factions.md` for the Divine Faith and `geography/zuzental.md`, *Legea Empire* for the political geography.
 
 The outcome of this gambit is unsettled. It may unify Fenurra under a new religious overlay; it may shatter the tribal balance entirely; or it may drag Fenurra into the simmering law-vs-law theological argument between Forseti's Zuzental and the Empire's Faith.
 
@@ -285,7 +285,7 @@ Used with Whisperfang bows. Built on either standard Ghost Willow shafts (lethal
 
 A people of love, laughter, and living well. The kitsune inhabit **Emarrea**, the forested western highlands of Lautara, where mountain-pass valleys, crystal-fed rivers, and terraced orchards give way to the capital **Biozuri** and a constellation of resort villages and trade towns. To outside trade partners they are warmth, wit, and theatrical hospitality. To themselves they are a culture organised entirely around the loops of love and belonging: circles of intimacy, rings of festival, and the polycule court that rules them.
 
-Geography and political detail live in [geography.md](geography.md) under *Lautara, Emarrea*. This entry covers the people.
+Geography and political detail live in [geography/lautara.md](geography/lautara.md) under *Emarrea*. This entry covers the people.
 
 > **A note on the kitsune and Sortalde.** The kitsune of Emarrea and the peoples of Sortalde share East-Asian visual and onomastic register in our real-world reference vocabulary, but in Tyrnarra they are **entirely separate cultures with no shared history, no shared institutions, no diplomatic ties, and no political contact.** The kitsune sit on Lautara's western highlands; Sortalde lies a Cloud-Sea-and-Hafra crossing away. The two are not relatives, not branches of a common pre-history, and not on each other's radar. When canon discusses them together it is for register-of-language reasons (both use internally-coherent East-Asian-feeling vocabularies that don't sit in the Basque/Icelandic stratum), never for shared lineage or politics.
 
@@ -508,7 +508,7 @@ Their long midlife and shortened elderhood reinforce the cultural focus on relat
 ### Notable landmarks
 
 - **Biozuri / Heartplaza**: the capital and its central district. The **House of a Thousand Flavors** (see below) sits a short walk from the Heartcourt itself.
-- **Kawaakari**: the mountain-pass resort village (see `geography.md`). The kingdom's most-visited destination by outsiders.
+- **Kawaakari**: the mountain-pass resort village (see `geography/lautara.md`, *Emarrea → Kawaakari*). The kingdom's most-visited destination by outsiders.
 - **The House of a Thousand Flavors**: the kingdom's most prestigious dining experience and the favoured stage for high-level Heartcourt negotiations, romantic declarations, and dramatic public courting displays. Run by **The Cook's Circle**, a polycule of seven master chefs (Rinza (Head Flavorist), Maeko (Illusionist-Plater), Tairen (Texture Architect), Shouka (Aroma Alchemist), Virel (Harmony Master, directing live musicians), Kyome (Temperature Virtuoso), and Elhara (Storyweaver)). The Circle's personal chemistry fuels the kitchen's creativity, and their love-life is gossiped about nearly as much as their cuisine. Reservations are booked months in advance; menus change seasonally with themes (*"A Lovers' Chase Through the Seasons"*, *"The Nine Tails of Autumn"*, *"Dreams Beneath the Lantern Sea"*). Each table is semi-private, with illusions creating custom surroundings; diners may find themselves in a cherry-blossom grove, a cliffside above a stormy sea, or a floating lantern festival. Guests often leave with small enchanted tokens that replay a snippet of music or a fleeting scent from the evening. *Tagline: "A meal is a memory, and we serve memories worth keeping."*
 
 ---
@@ -520,7 +520,7 @@ Their long midlife and shortened elderhood reinforce the cultural focus on relat
 
 A people of stone, salt, and silence-broken-by-song. The Tengu of **Haizetsua** (the great western island of Vindul, mountain-range interior, capital at **Vindboorg**) live high above the sea-line, in cities carved into living rock and tuned to the wind that crosses them. To outside trade partners they are precise, formal, and surprisingly mercantile. To themselves they are eleven clans, eight winds, and the long Vornsketta that takes every young Tengu away from home and brings most of them back.
 
-Geography and political detail live in [geography.md](geography.md) under *Vindul · Haizetsua*. This entry covers the people.
+Geography and political detail live in [geography/vindul.md](geography/vindul.md) under *Haizetsua*. This entry covers the people.
 
 ### The Skarvorn Republic
 

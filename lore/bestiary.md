@@ -1,6 +1,6 @@
 ﻿# Bestiary: Ancestries, Heritages, & Otherworldly Beings
 
-A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography.md`, `factions.md`, and `cultures.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
+A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography/<region>.md`, `factions.md`, and `cultures.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
 
 ---
 
@@ -41,7 +41,7 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 
 **Rare everywhere:** Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
-**Sortalde-native (Eastern continent; see `geography.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries: The Six Petals* below.
+**Sortalde-native (Eastern continent; see `geography/_continent.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries: The Six Petals* below.
 
 ---
 
@@ -99,7 +99,7 @@ Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding
 **Modern status:**
 - **Capital:** Dragon's Reach in Sumendar (Fire / Komo). The largest concentration of surviving Dragons and the seat of their culture.
 - **Spread:** Individuals and small lineages exist across Talan, but the cultural heart is Dragon's Reach.
-- **Modern goal: seeking purity.** A recovery of the original pre-corruption nature. **Every Dragon has their own opinion on what purity means**, and not all Dragons actually want to be pure again; many think the pursuit is folly and just want to live their lives. The most single-minded are the **purists**, but there is *no school of purity*, no orthodoxy, no consensus method. **There are as many paths as there are purists.** Each Dragon must find theirs alone. Common directions observers can identify (raw power-accumulation, generations-long discipline of body and mind, meditation in the wreckage, archaeological reconstruction) are descriptive groupings, not institutions; many purists combine several, and new purists invent novel methods every generation. A purist may follow a teacher, but **when the teacher dies, the teacher was not pure**, and so the student knows more needs to be done. The recursion is the doctrine; every dead teacher is evidence that the practice must continue. Pragmatist Dragons regard the whole project with affectionate frustration; purists regard pragmatists as having given up on themselves. See `geography.md` → *Sumendar → Dragon's Reach* for the civilisational shape of this debate.
+- **Modern goal: seeking purity.** A recovery of the original pre-corruption nature. **Every Dragon has their own opinion on what purity means**, and not all Dragons actually want to be pure again; many think the pursuit is folly and just want to live their lives. The most single-minded are the **purists**, but there is *no school of purity*, no orthodoxy, no consensus method. **There are as many paths as there are purists.** Each Dragon must find theirs alone. Common directions observers can identify (raw power-accumulation, generations-long discipline of body and mind, meditation in the wreckage, archaeological reconstruction) are descriptive groupings, not institutions; many purists combine several, and new purists invent novel methods every generation. A purist may follow a teacher, but **when the teacher dies, the teacher was not pure**, and so the student knows more needs to be done. The recursion is the doctrine; every dead teacher is evidence that the practice must continue. Pragmatist Dragons regard the whole project with affectionate frustration; purists regard pragmatists as having given up on themselves. See `geography/sumendar.md`, *Dragon's Reach* for the civilisational shape of this debate.
 - **Outsider perception:** Most Talanese think of Dragons as a native species. The "alien arrivals" truth is buried in dragon-internal religion and Gods'-Era scholarly archives, reachable to anyone who looks for it, just rarely sought out.
 
 **Hooks:** Any dragon NPC is asking the same question (or has decided not to). Any dragon ruin is potentially a memory of the pre-corruption nature. Any expelled god might have been one of the ones who shaped the corruption.
@@ -117,7 +117,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 **Dominant in Myrkono (Darkness / Araphel).** Remnants of a civilisation that sought refuge in the region of Darkness and found it; the lineage stayed, and Myrria grew around it. Many fetchlings serve Araphel directly, including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`). Uncommon outside Myrkono.
 
 ### Fleshwarp
-**Native to the Blackened Lands**: the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `secret-history.md`, *The Blackened Lands*, and `geography.md`, Lioaru → Lost Kingdom). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
+**Native to the Blackened Lands**: the cursed-ground sub-region of Lioaru where Tani was killed and the Storveldi Denbora capital was annihilated (see `secret-history.md`, *The Blackened Lands*, and `geography/lioaru.md`, *Lost Kingdom*). The ambient necromantic resonance of the wound twists living flesh into the irregular bodies of Fleshwarps: mismatched limbs, fused organs, beast-grafts. No two are alike.
 
 **Two distinct fleshwarp populations exist on Talan:**
 1. **Natural-born fleshwarps of the Blackened Lands**: children of the cursed ground. Mortal beings shaped by where they were born or where they spent enough time. This is the canonical Talanese fleshwarp.
@@ -221,9 +221,9 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 
 ## Sortalde Ancestries: The Six Petals
 
-The six Tian Xia ancestries (**Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai**) are native to **Sortalde** (*Tao Hua Yuan* internally), the petal-archipelago continent east of Talan across Hafra. Each has one ancestral homeland petal; the seventh petal (**Heting**, "Concord-Court") is the central seat where all six meet through their ambassadors. Full continent geography in `geography.md`, *Other Continents → Sortalde*.
+The six Tian Xia ancestries (**Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai**) are native to **Sortalde** (*Tao Hua Yuan* internally), the petal-archipelago continent east of Talan across Hafra. Each has one ancestral homeland petal; the seventh petal (**Heting**, "Concord-Court") is the central seat where all six meet through their ambassadors. Full continent geography in `geography/_continent.md`, *Other Continents → Sortalde*.
 
-**On Talan, all six are rare.** The crossing is hard (stormy outer ring, surviving merchants only), so individuals from Sortalde reach Talan in single-digit numbers per generation, and almost always through the standing Sortalde embassies on the **Emerald Isles** (the Zuzental island kingdom whose outer holdings sit on the Hafra / Cloud Sea boundary, the cloudship landing point for Sortalde traffic; see `geography.md`). A Sortalde-ancestry character on Talan is a *story*, not a demographic.
+**On Talan, all six are rare.** The crossing is hard (stormy outer ring, surviving merchants only), so individuals from Sortalde reach Talan in single-digit numbers per generation, and almost always through the standing Sortalde embassies on the **Emerald Isles** (the Zuzental island kingdom whose outer holdings sit on the Hafra / Cloud Sea boundary, the cloudship landing point for Sortalde traffic; see `geography/zuzental.md`, *Emerald Isles*). A Sortalde-ancestry character on Talan is a *story*, not a demographic.
 
 | Ancestry | Sortalde homeland | Talan presence |
 |---|---|---|
@@ -372,10 +372,10 @@ The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, an
 
 - **Storveldi Denbora, Blackened Lands, integration procedure**: `secret-history.md`; **Betibizi (Undeath god + integration-procedure holder)**: `gods.md`, *Named Non-Bound Gods*
 - **Named Non-Bound Gods** (Bikiargi, Zaharsuge, Epairima, Betibizi) and **Domains Outside the Thirteen: Source Mapping** (14-domain table assigning Abomination/Plague/Undeath/etc. to their granters): `gods.md`
-- **Lost Kingdom (Blackened Lands geography)**: `geography.md` → Lioaru
-- **Dragon's Reach (dragon capital)**: `geography.md` → Sumendar
+- **Lost Kingdom (Blackened Lands geography)**: `geography/lioaru.md`
+- **Dragon's Reach (dragon capital)**: `geography/sumendar.md`
 - **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)**: `gods.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
-- **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)**: `geography.md` → Other Continents → Sortalde; `glossary.md` for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
+- **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)**: `geography/_continent.md` → Other Continents → Sortalde; `glossary.md` for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
 - **Kitsune culture, Heartcourt, Catjomin Sake**: `cultures.md` (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
 - **Fenurran ancestries detail**: `cultures.md` (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
 - **House Eisenhart (dwarven), the Menagerie (Red Empire fleshwarp origin)**: `factions.md`

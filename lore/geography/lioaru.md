@@ -1,0 +1,24 @@
+# Lioaru: Time · Tani
+
+**Borders:** Sumendar, Lautara, Ezkudon
+
+**Seas:** Hafra (southern coast; Lost Isle offshore). **No Midarra access.**
+
+**Etymology:** Icelandic *líð* (passage of time, waning, slipping away) → drifted to *Lioaru*. A land where time doesn't move cleanly; things don't fully pass.
+
+**Position:** Southwest Talan, south of Sumendar, west of Brauogi and Ezkudon, coastal on Hafra to the south
+
+**Terrain:** Desert dominant with orange sand dunes throughout. A green river valley cuts through as an oasis of life. The dark, shadowy **Lost Kingdom** occupies the southern coastal area, a kingdom lost during or after the Week of Crimson Rain, directly tied to Tani's death. **Lost Isle** sits offshore to the west. Temporal anomalies throughout: moments that repeat, ruins newer than they should be.
+
+**God's city:** Denbora, The Threefold City (built on massive sand whales that travel through the desert; the city is never in the same place)
+
+**Sub-regions:**
+- **Galdua Jendea**: the sub-region that houses Denbora. The sand whales that carry the city roam within this territory. Name is Basque: meaning disputed, possibly "Place of Many Waters" or "Place of the Lost People." Its northern corner touches Emarrea (Lautara); Denbora periodically drifts close enough for Heartcourt envoys to meet Tani's clergy. Specific cultural detail of these meetings flesh out during Lioaru work.
+- **Lost Kingdom**: the ruined / cursed western-coast territory. Specifically: the **Blackened Lands**, the site where Tani was killed by the Storveldi Denbora's ascended ruling class (see `../secret-history.md` for the full Storveldi Denbora and Blackened Lands accounts). Their capital (built atop earlier Elden ruins) was annihilated by the divine retaliation that followed her death, and the surrounding land has never healed. Modern features: blackened soil, time-warped strata (moments repeat, ruins read newer than they should be), ambient necromantic resonance, periodic fleshwarp incidents in survivors and trespassers, and concentrations of restless dead. **Origin of the Fleshwarp and Skeleton ancestries**: both arise from the cursed ground itself, not from any current faction's work. **Folk name:** *the black spot on the map.* Considered among the most hazardous regions on Talan; no kingdom claims it; the Adventurers' Guild posts a perpetual standing warning. Tani-mourning pilgrims, necromancers, and ascension-cultists are the most common visitors. **Surviving folk-detail of pre-annihilation Storveldi Denbora life:** they ate human flesh as everyday food, *meat on a stick*, sold from street vendors. The detail survives only as a horror-trope in mortal folk-history, but it lines up with the ruling class's broader contempt for non-ascended life and reads as canonical truth.
+- **Lost Isle**: small island offshore to the west, associated with the Lost Kingdom. Shares some of the cursed-ground character of the mainland Blackened Lands but at lower intensity.
+- **River Duchies**: the green river valley cutting through the desert as an oasis. A loose confederation of noble houses whose wealth comes from controlling river trade. The valley's headwaters reach up into Emarrea (Lautara) via the river that flows down from the kitsune kingdom's terraced orchards; the Duchies handle the downstream distribution of Emarrea's sake, orchard goods, and theatrical-illusion exports as a secondary trade channel separate from the main Lautaran merchant-house network.
+- **Hareaveldi**: fully within Lioaru. Partially independent cultural identity; name predates Tani's influence in the region. Now borders Emarrea (Lautara) on its northern edge; the wider character of the kingdom and its Emarrea-side cultural interface flesh out during Lioaru work.
+
+**Note:** The Lost Kingdom is the single most cosmologically loaded location in Lioaru: it is where a Grand God was killed and where the Week of Crimson Rain began. Its identification with the **Storveldi Denbora capital** (the *Old Race who killed Tani* of mortal myth) is canon truth that most mortal histories do not preserve correctly; mortal folk-myth more commonly conflates the Storveldi Denbora with the Elden, exactly as the Storveldi Denbora themselves did.
+
+**Spiritual root of the ambient necromancy:** the natural-born Skeleton ancestry and the restless-dead phenomenon both trace spiritually to **Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath in the aftermath of the city's annihilation (see `../gods.md`, *Named Non-Bound Gods*). The proximate cause of the cursing is still the divine retaliation that wounded the land; Betibizi is its spiritual focus. Necromantic pilgrims occasionally come to the Blackened Lands specifically to attune to his domain; most of them don't return.
