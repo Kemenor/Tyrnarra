@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tyrnarra",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/.claude/serve-idempotent.ps1"],
+      "port": 8008
+    }
+  ]
+}

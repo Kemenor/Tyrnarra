@@ -1,2 +1,4 @@
 .claude/*
 !.claude/skills/
+!.claude/launch.json
+!.claude/serve-idempotent.ps1
