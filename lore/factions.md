@@ -1,14 +1,14 @@
 # Factions: Tyrnarra Lore Reference
 
-Factions in Talan fall into four broad categories. Political entities and city-states are too numerous to list exhaustively here; see `lore/geography.md` for the full breakdown by domain.
+Factions in Talan fall into four broad categories. Political entities and city-states are too numerous to list exhaustively here; see `lore/geography/` (one file per god domain) for the full breakdown by domain.
 
 ---
 
 ## Faction Categories
 
-**1. Political Entities**: Every kingdom, sub-region, and domain is a political faction in its own right. See `geography.md`.
+**1. Political Entities**: Every kingdom, sub-region, and domain is a political faction in its own right. See `geography/<region>.md`.
 
-**2. City-States**: The god city-states (one per bound god) plus independent city-states (Dragon's Reach, Frae City, etc.). City-states are self-governing and answer to no kingdom. See `geography.md`.
+**2. City-States**: The god city-states (one per bound god) plus independent city-states (Dragon's Reach, Frae City, etc.). City-states are self-governing and answer to no kingdom. See `geography/_continent.md` for the index of domain capitals and `geography/<region>.md` for the city-state detail under each domain.
 
 **3. God Churches**: One church per bound god (13 total). Each church operates within whatever kingdom it sits in, subject to local law, but ultimately answers to their god's theology. See `grand-gods.html` for each god's clergy structure.
 - **Other God Believers**: An umbrella category for cults, churches, and traditions of non-bound gods (elven ancestral pantheons, demon lord cults, deep god worship, etc.). These have real divine power and active presence on Talan. The most politically significant instance currently is the **Divine Faith** of the Legea Empire (see entry below).
@@ -195,9 +195,9 @@ The Guild's seat in Myrkono and the regional command for all Guild operations ac
 
 **Current state:** Frequency of emergence events had dropped dramatically over four centuries, but **eight years ago (~2524 MR) the Nine Dungeons erupted**, disgorging the first great corruption armies of the modern age. The kingdoms broke that first wave; the dungeons' main entrances are now sealed. The smaller leakage continues. The Adventurers' Guild maintains a standing research operation to understand and predict emergence patterns. Some researchers believe the Corrupted God is healing; others believe the eruption was the binding's first major fracture.
 
-**The Nine Generals of Corruption (above the leakage):** Nine corruption-lords serve as the Corrupted God's hands in the mortal world, each commanding a dungeon and a legion. Unlike their master, the Nine can be slain. **One has fallen: the Ash-Binder.** Eight remain: the Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Full descriptions in `secret-history.md`. The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in `geography.md`; the other seven dungeons' precise locations remain TBD.
+**The Nine Generals of Corruption (above the leakage):** Nine corruption-lords serve as the Corrupted God's hands in the mortal world, each commanding a dungeon and a legion. Unlike their master, the Nine can be slain. **One has fallen: the Ash-Binder.** Eight remain: the Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Full descriptions in `secret-history.md`. The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in `geography/myrkono.md`; the other seven dungeons' precise locations remain TBD.
 
-**The Wardstones (counter-pressure):** Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono (see `secret-history.md` and `geography.md`). While they hold, the Corrupted God stays bound. The fight against the Nine is also the fight to keep the Wardstones safe; this is the **War of Seals**.
+**The Wardstones (counter-pressure):** Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono (see `secret-history.md` and `geography/myrkono.md`). While they hold, the Corrupted God stays bound. The fight against the Nine is also the fight to keep the Wardstones safe; this is the **War of Seals**.
 
 **Note:** The Corrupted God is not bound by the Gods' Law; it predates it and was never party to it. The chains of the Wardstones are a separate, mortal-and-Araphel-led containment. See `secret-history.md` for the full account.
 
@@ -420,7 +420,7 @@ Strict caste structure, but the castes are **fluid**; rise and fall are constant
 
 **Location:** **Crossroads**, a trade-nexus settlement at the meeting point of multiple territories. Crossroads is independent in the same way Frae City is independent: not legally sovereign, but functionally untouched because every neighbouring power benefits from its neutrality and none can risk being the one that breaks it.
 
-> **Geographic placement (canon decision, 2026-05-24):** Crossroads sits on the three-way border of **Zuzental** (Law / Forseti), **Lautara** (Commerce / Jianna), and **Egulon** (Light / Iro). The three Ascendant domains of law, trade, and prosperity converge there, which is why every kingdom with business in any of them maintains a discreet presence in town. The name is plainly English (modern naming stratum). Recorded in `geography.md` (Lautara, eastern marches; Zuzental sub-region entry).
+> **Geographic placement (canon decision, 2026-05-24):** Crossroads sits on the three-way border of **Zuzental** (Law / Forseti), **Lautara** (Commerce / Jianna), and **Egulon** (Light / Iro). The three Ascendant domains of law, trade, and prosperity converge there, which is why every kingdom with business in any of them maintains a discreet presence in town. The name is plainly English (modern naming stratum). Recorded in `geography/lautara.md` (eastern marches) and `geography/zuzental.md` (Crossroads sub-region entry).
 
 **Proprietor:** **Matron Charna**, ancient Anadi.
 
