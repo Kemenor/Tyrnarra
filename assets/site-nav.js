@@ -49,6 +49,7 @@
     ]},
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
       { slug: 'merkavar', label: 'Merkavar · the Market City', href: '/talan/domains/lautara/merkavar/merkavar.html', children: [] },
+      { slug: 'azkataria', label: 'Azkataria · Pilgrim Cellars', href: '/talan/domains/lautara/azkataria/azkataria.html', children: [] },
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [
         { slug: 'heartcourt', label: 'The Heartcourt', href: '/talan/domains/lautara/emarrea/heartcourt.html', children: [] }
       ]}
