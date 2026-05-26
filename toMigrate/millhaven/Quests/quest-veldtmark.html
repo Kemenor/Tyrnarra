@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quest: The Veldtmark Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Josefin+Sans:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0806;
+    --bg2: #120f0a;
+    --bg3: #1a1410;
+    --blood: #5a0a0a;
+    --blood-light: #8a1a1a;
+    --blood-dim: #3a0808;
+    --gold: #9a7a30;
+    --gold-bright: #c8a050;
+    --gold-dim: #5a4818;
+    --text: #c8c0a8;
+    --text-dim: #706858;
+    --text-bright: #e8e0c8;
+    --text-pale: #a89880;
+    --divider: rgba(154,122,48,0.15);
+    --red-glow: rgba(90,10,10,0.4);
+    --candle: #c85010;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse at 50% 0%, #1a0808 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 100%, #0a0a14 0%, transparent 50%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── CANDLE FLICKER ── */
+  @keyframes flicker {
+    0%,100% { opacity:1; transform:scaleY(1); }
+    25% { opacity:0.85; transform:scaleY(0.97); }
+    50% { opacity:0.92; transform:scaleY(1.02); }
+    75% { opacity:0.88; transform:scaleY(0.98); }
+  }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 52px 24px 36px;
+    position: relative;
+    border-bottom: 1px solid var(--divider);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .candles {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 24px;
+  }
+
+  .candle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .candle-flame {
+    width: 8px; height: 14px;
+    background: radial-gradient(ellipse at 50% 80%, #ffcc44, #ff8800, transparent);
+    border-radius: 50% 50% 30% 30%;
+    animation: flicker 2.1s ease-in-out infinite;
+    box-shadow: 0 0 8px #ff880088, 0 0 20px #ff440044;
+  }
+
+  .candle-body {
+    width: 10px; height: 28px;
+    background: linear-gradient(to bottom, #e8e0d0, #c8c0b0);
+    border-radius: 2px 2px 1px 1px;
+  }
+
+  .quest-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--blood-light);
+    margin-bottom: 10px;
+  }
+
+  .quest-title {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    color: var(--text-bright);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 40px rgba(90,10,10,0.6);
+  }
+
+  .quest-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .meta-pill {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border: 1px solid var(--divider);
+    border-radius: 2px;
+    color: var(--gold);
+    background: rgba(154,122,48,0.06);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 36px 24px 80px;
+  }
+
+  /* ── TABS ── */
+  .tab-bar {
+    display: flex;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--blood-light); }
+
+  .tab-panel { display: none; animation: fadeUp 0.25s ease; }
+  .tab-panel.active { display: block; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 40px; }
+
+  .section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--divider);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .prose {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text);
+    font-weight: 300;
+  }
+
+  .prose p { margin-bottom: 12px; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* ── READ ALOUD ── */
+  .read-aloud {
+    background: rgba(90,10,10,0.08);
+    border: 1px solid rgba(90,10,10,0.3);
+    border-left: 3px solid var(--blood-light);
+    border-radius: 0 3px 3px 0;
+    padding: 18px 20px;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  .read-aloud-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--blood-light);
+    margin-bottom: 8px;
+  }
+
+  .read-aloud-text {
+    font-size: 0.98rem;
+    line-height: 1.9;
+    color: var(--text-pale);
+    font-style: italic;
+  }
+
+  /* ── GM BOX ── */
+  .gm-box {
+    background: rgba(154,122,48,0.05);
+    border: 1px solid var(--divider);
+    border-left: 3px solid var(--gold-dim);
+    border-radius: 0 3px 3px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+
+  .gm-box-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 6px;
+  }
+
+  .gm-box-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* ── ROOM CARDS ── */
+  .room-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+
+  .room-card {
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    background: var(--bg2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .room-card:hover { border-color: rgba(154,122,48,0.3); }
+  .room-card.open { border-color: rgba(90,10,10,0.4); }
+
+  .room-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .room-num {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.1rem;
+    color: var(--blood-light);
+    width: 24px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .room-titles { flex: 1; }
+
+  .room-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 0.95rem;
+    color: var(--text-bright);
+    line-height: 1.2;
+  }
+
+  .room-tag {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  .room-chevron {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .room-card.open .room-chevron { transform: rotate(180deg); }
+
+  .room-body {
+    display: none;
+    padding: 0 16px 16px 52px;
+    animation: fadeUp 0.2s ease;
+  }
+
+  .room-card.open .room-body { display: block; }
+
+  .room-section { margin-bottom: 12px; }
+
+  .room-section-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 5px;
+  }
+
+  .room-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .room-details {
+    list-style: none;
+    margin-top: 4px;
+  }
+
+  .room-details li {
+    font-size: 0.87rem;
+    color: var(--text);
+    padding: 3px 0 3px 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .room-details li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--blood-light);
+    font-size: 0.38rem;
+    top: 7px;
+  }
+
+  /* ── ENDING CARDS ── */
+  .ending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .ending-card {
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    background: var(--bg2);
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .ending-card:hover { border-color: rgba(154,122,48,0.3); }
+  .ending-card.open { border-color: rgba(154,122,48,0.35); }
+
+  .ending-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+    color: var(--text-bright);
+    margin-bottom: 4px;
+  }
+
+  .ending-type {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  .ending-summary {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  .ending-detail {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--divider);
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    animation: fadeUp 0.2s ease;
+  }
+
+  .ending-card.open .ending-detail { display: block; }
+
+  /* ── NPC STRIP ── */
+  .npc-strip { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+
+  .npc-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    background: var(--bg2);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .npc-row:hover { border-color: rgba(154,122,48,0.25); }
+  .npc-row.open { border-color: rgba(90,10,10,0.35); }
+
+  .npc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+
+  .npc-info { flex: 1; }
+
+  .npc-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 0.95rem;
+    color: var(--text-bright);
+    margin-bottom: 2px;
+  }
+
+  .npc-role {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .npc-detail {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--divider);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    animation: fadeUp 0.2s ease;
+  }
+
+  .npc-row.open .npc-detail { display: block; }
+
+  .npc-secret {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: rgba(90,10,10,0.08);
+    border-left: 2px solid var(--blood-light);
+    border-radius: 0 2px 2px 0;
+    font-style: normal;
+    color: var(--text-dim);
+    font-size: 0.84rem;
+  }
+
+  /* ── WARNING BOX ── */
+  .warning-box {
+    background: rgba(90,10,10,0.1);
+    border: 1px solid rgba(90,10,10,0.3);
+    border-radius: 3px;
+    padding: 14px 18px;
+    margin: 16px 0;
+  }
+
+  .warning-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blood-light);
+    margin-bottom: 6px;
+  }
+
+  .warning-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-pale);
+  }
+
+  .divider {
+    display: flex; align-items: center; gap: 12px; margin: 32px 0;
+  }
+  .div-line { flex:1; height:1px; background:linear-gradient(to right,transparent,rgba(90,10,10,0.3),transparent); }
+  .div-glyph { color: var(--blood-dim); font-size: 0.8rem; }
+
+  .footer-note {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.28em;
+    color: rgba(154,122,48,0.18);
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--divider);
+  }
+
+  @media (max-width:520px) {
+    .tab-btn { padding: 8px 10px; font-size: 0.5rem; }
+    .room-body { padding-left: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="candles">
+    <div class="candle"><div class="candle-flame"></div><div class="candle-body"></div></div>
+    <div class="candle"><div class="candle-flame"></div><div class="candle-body"></div></div>
+    <div class="candle"><div class="candle-flame"></div><div class="candle-body"></div></div>
+  </div>
+  <div class="quest-label">Guild Contract · Investigation · Millhaven Branch #1,847</div>
+  <div class="quest-title">The Veldtmark Invitation</div>
+  <div class="quest-subtitle">Someone stopped answering. Someone always stops answering.</div>
+  <div class="meta-row">
+    <span class="meta-pill">Party Level 5</span>
+    <span class="meta-pill">3–4 Sessions</span>
+    <span class="meta-pill">Cape Side — Tani Drift Zone</span>
+    <span class="meta-pill">Investigation + Combat</span>
+    <span class="meta-pill">Multiple Endings</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('hook',event)">The Hook</button>
+    <button class="tab-btn" onclick="switchTab('approach',event)">The Approach</button>
+    <button class="tab-btn" onclick="switchTab('groundfloor',event)">Ground Floor</button>
+    <button class="tab-btn" onclick="switchTab('basement',event)">The Basement</button>
+    <button class="tab-btn" onclick="switchTab('npcs',event)">NPCs</button>
+    <button class="tab-btn" onclick="switchTab('truth',event)">The Truth</button>
+    <button class="tab-btn" onclick="switchTab('endings',event)">Endings</button>
+    <button class="tab-btn" onclick="switchTab('letter',event)">The Letter</button>
+  </div>
+
+  <!-- ══ THE HOOK ══ -->
+  <div class="tab-panel active" id="tab-hook">
+    <div class="section">
+      <div class="section-title">The Contract</div>
+      <div class="prose">
+        <p>The contract on the board is unremarkable at first glance — a welfare check on a local wealthy resident who has failed to attend several scheduled appointments. It was posted by his business partner, who is owed a significant sum and is beginning to worry. The pay is modest. The expected difficulty is listed by Kael as "social — low risk."</p>
+        <p>Kael rated it before he thought about it too hard. He hasn't changed the rating. He has, however, mentioned to Mira Seld that something about the posting feels off to him. She agreed. Neither of them has said this to the party.</p>
+      </div>
+
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud — Quest Board</div>
+        <div class="read-aloud-text">"Lord Caevan Veldtmark, merchant and landowner of the Cape district, has failed to respond to correspondence or attend any scheduled appointments for the past three weeks. His business partner, one Harlen Doss, requests a welfare check and, if the lord is well, collection of a debt of record. Inquire at the Wayward Compass for details. Discretion expected."</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">GM Note — What Harlen Doss Actually Knows</div>
+        <div class="gm-box-text">Harlen Doss is genuinely worried about his money but also genuinely worried about Veldtmark. The last time they spoke, three weeks ago, Veldtmark was distracted and strange — kept referring to "the great work" and "the invitation being answered." Harlen assumed he was drunk. He's been assuming that ever since because the alternative is worse. If the party presses him, he'll admit this. He won't volunteer it.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Background — Lord Caevan Veldtmark</div>
+      <div class="prose">
+        <p>Caevan Veldtmark is a merchant lord of middling wealth and significant social ambition. He inherited the Cape estate from his father, expanded it with trade profits, and built the small church on the grounds approximately eight months ago — ostensibly as a private chapel dedicated to Tani, god of Time, which fits the Cape district's temporal character and raised no suspicion.</p>
+        <p>The truth is that Veldtmark has been a member of a secretive philosophical society for years — one obsessed with what lies beneath the Tani drift, what the temporal disturbance on the Cape actually touches, and whether something on the other side of it can be contacted. Six months ago, they made contact. Four months ago, something answered. Three months ago, Veldtmark stopped attending social functions. The church is not dedicated to Tani.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">The Thing That Answered</div>
+        <div class="warning-text">It has no name that mortals have recorded. It exists in the space that the Tani drift brushes against — not the past or the future, but the space between moments, the gap where time doesn't flow. It is not a demon. It is not a vampire. It is something that was old before either category existed. It experiences hunger the way time experiences forward motion: constantly, inevitably, without cruelty but also without mercy. Veldtmark offered it worship, feeding, and a vessel. It accepted. It is currently contained in the basement because containment was part of the original bargain — until it is strong enough not to need the bargain anymore.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ THE APPROACH ══ -->
+  <div class="tab-panel" id="tab-approach">
+    <div class="section">
+      <div class="section-title">Getting There</div>
+
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud — The Road to Veldtmark Estate</div>
+        <div class="read-aloud-text">The estate sits on the Cape side's northern edge, where the salt-crusted streets thin out and the Tani drift sits heavier in the air. You've walked this road before. You know you haven't — this is your first time here — but the certainty keeps surfacing, quiet and wrong, like a word you can't stop almost remembering. The iron gate is closed but not locked. The grounds beyond it are well-kept. Too well-kept, perhaps, for a man who hasn't been seen in three weeks. The gravel path to the front door is raked perfectly smooth. There are no footprints in it. Not even the gardener's.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">GM Note — The Drift</div>
+        <div class="gm-box-text">From the moment the party enters the gate, light Tani drift effects apply: persistent déjà vu, a sense that they have done each action seconds before doing it, and occasionally a fractional delay — a sound that arrives slightly before or after its source. These are disorienting but not mechanically harmful. Increase the intensity as they approach the basement. By the time they reach the ritual chamber, the drift is strong enough that they may see brief ghost-images of past events in the estate — fleeting, silent, gone before they can examine them. Don't explain this. Let them ask questions.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">The Butler</div>
+
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud — The Front Door</div>
+        <div class="read-aloud-text">The door opens before you knock. The man standing in it is tall, precisely dressed, and the color of old bone. Not pale — bone. His eyes are the grey of something that has stopped having preferences. He inclines his head at exactly the angle required by courtesy and no further. "The lord is not receiving visitors," he says. His voice is correct in every technical respect. "If you have business with the estate, I am empowered to take messages." He has not blinked since the door opened.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">GM Note — Aldous, The Butler</div>
+        <div class="gm-box-text">Aldous is not dead. He is not undead. He has simply been in proximity to the Thing long enough that something has been... smoothed away. He was a perfectly normal man eight months ago. He will answer questions politely and deflect them precisely. He will not lie — he will use technically true statements to mislead. He knows the party is here because of the debt. He will offer to write a bank draft. If the party insists on seeing Veldtmark personally, he will "consult the lord's schedule" and return to say the lord can see them tomorrow. He is trying to make them leave. He is not threatening. He is deeply, quietly wrong, and players who succeed on Perception or Insight checks will feel it even if they can't name it.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">GM Note — Getting Inside</div>
+        <div class="gm-box-text">Social entry works if the party is persistent or clever — Aldous will eventually allow them to "wait in the sitting room" while he checks on the lord, which gives them access to the ground floor. They can also find their way in through the church on the grounds (unlocked, "open to worshippers"), through a window, or by following a staff member who is running an errand outside. The estate does not want to seem like it's hiding anything. That's more important to Aldous than keeping them out.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ GROUND FLOOR ══ -->
+  <div class="tab-panel" id="tab-groundfloor">
+    <div class="section">
+      <div class="section-title">Ground Floor Rooms</div>
+      <div class="prose"><p>The estate presents as a wealthy, well-maintained home. Everything is correct. Everything is slightly wrong. Click each room for description, read-aloud, and what can be found there.</p></div>
+    </div>
+
+    <div class="room-list" id="groundFloorRooms"></div>
+  </div>
+
+  <!-- ══ BASEMENT ══ -->
+  <div class="tab-panel" id="tab-basement">
+    <div class="section">
+      <div class="section-title">The Basement — Entry Points</div>
+
+      <div class="warning-box">
+        <div class="warning-label">Four Hidden Entrances</div>
+        <div class="warning-text">The basement is accessible through four concealed entry points on the ground floor. Each requires discovery — none are obvious. The party is unlikely to find all four; they only need one. Each entry delivers them to a different part of the basement and colors their initial experience of it differently.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">Entry 1 — The Church (Right Side of Grounds)</div>
+        <div class="gm-box-text">Behind the altar, a stone prayer rail slides aside when pressed in the correct sequence — the sequence is written in the church's hymnal in a cipher using Tani's holy symbols, which a Religion check will crack. This entry deposits the party into the sarcophagus corridor. They'll hear the ritual chamber before they see it.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">Entry 2 — The Organ Room (Top Left)</div>
+        <div class="gm-box-text">Playing a specific chord sequence on the organ — the last piece of sheet music on the stand, which is not a real composition — opens a passage behind the instrument. A Performance or Investigation check identifies the sequence. This entry leads directly to the pipe corridor above the barred cell. They'll hear something in the cell before they're ready for it.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">Entry 3 — The Well (Between Church and Mansion)</div>
+        <div class="gm-box-text">The well is dry. It has always been dry — it was never a real well. Iron rungs lead down to a passage that connects to the winding path between the ritual chamber and the sarcophagus corridor. This is the most direct route and the most exposed — no cover once they're in the main passage.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">Entry 4 — Locked Storage, Kitchen (Top Center)</div>
+        <div class="gm-box-text">A locked door in the kitchen storage area — Aldous has the key, or a Thievery check opens it — leads to a narrow servants' stair down to the pipe corridor near the ritual chamber's north wall. The party can hear the ritual chanting clearly from this entry. If they haven't encountered cultists yet, three of them are in the corridor below, preparing an offering.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Basement Rooms</div>
+      <div class="room-list" id="basementRooms"></div>
+    </div>
+  </div>
+
+  <!-- ══ NPCS ══ -->
+  <div class="tab-panel" id="tab-npcs">
+    <div class="section">
+      <div class="section-title">Cast of the Estate</div>
+      <div class="npc-strip" id="npcStrip"></div>
+    </div>
+  </div>
+
+  <!-- ══ THE TRUTH ══ -->
+  <div class="tab-panel" id="tab-truth">
+    <div class="section">
+      <div class="section-title">What Is Actually Happening</div>
+      <div class="prose">
+        <p>Eight months ago, Lord Veldtmark made contact — through rituals his philosophical society had been refining for years — with something that exists in the space the Tani drift brushes against. Not a spirit. Not a god. Something that experiences time differently than anything else alive, because it exists between moments rather than within them.</p>
+        <p>The contact was intoxicating. The thing communicated through sensation rather than words — a feeling of total significance, of being seen across all of time simultaneously. Veldtmark interpreted this as communion. It was closer to the attention of something very large noticing something very small.</p>
+        <p>The bargain was Veldtmark's idea. He offered the Thing a vessel, worship, and regular feeding — human vitality, drawn through the cult rituals — in exchange for what he called "the gift of true sight." He wanted to see across time the way it does. Instead, he got something closer to standing too close to a furnace: he can sense temporal echoes now, see ghost-images of past moments, feel the future as a pressure behind his eyes. It is destroying him slowly. He believes it is transcendence. He is incorrect.</p>
+        <p>The Thing in the coffin is not imprisoned. The chains are ceremonial. It remains in the basement because it is not yet strong enough to move freely in mortal time — the feeding has been irregular, the cult is small, and the bargain includes a clause Veldtmark doesn't fully understand: it cannot act until invited above the threshold by the person who made the original pact. Veldtmark has not yet done this. He is saving it for what he calls "the completion."</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">What "The Completion" Means</div>
+        <div class="warning-text">Veldtmark believes that when the Thing is strong enough, he will formally invite it above the threshold, it will grant him true temporal sight, and they will exist in a partnership of mutual elevation. What will actually happen: the Thing will step above the threshold, the bargain will be technically fulfilled, and it will no longer be bound by any of its terms. It will feed freely, move freely, and Veldtmark will be its first unstructured meal. It has no malice toward him. It simply won't need the arrangement anymore.</div>
+      </div>
+
+      <div class="gm-box">
+        <div class="gm-box-label">How Strong Is It Currently?</div>
+        <div class="gm-box-text">Approximately 60–70% of what it needs to operate freely above the threshold. At current feeding rates it would reach completion in six to eight weeks. The party has arrived at a point where the situation is still containable — barely. If they do nothing and leave, they will be back within two months for something considerably worse.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ENDINGS ══ -->
+  <div class="tab-panel" id="tab-endings">
+    <div class="section">
+      <div class="section-title">How This Can End</div>
+      <div class="prose"><p>There is no single correct resolution. The party's choices determine the outcome. Each ending has consequences that can ripple into future sessions.</p></div>
+      <div class="ending-grid" id="endingGrid"></div>
+    </div>
+  </div>
+
+  <!-- ══ THE LETTER ══ -->
+  <div class="tab-panel" id="tab-letter">
+    <div class="section">
+      <div class="section-title">The Letter — Found on Harlen Doss</div>
+      <div class="gm-box">
+        <div class="gm-box-label">GM Note</div>
+        <div class="gm-box-text">This letter was sent by Veldtmark to Harlen six weeks ago — before the silence, while he still had enough of himself left to write coherently. Harlen has not opened it. If the party convinces him to hand it over, or find it on his person, this is what they read. It is the clearest single document in the adventure. It is also heartbreaking if the party has already met Veldtmark, because they will recognize the man who wrote it is still in there somewhere, buried under six more weeks of the Thing's attention. This letter is the key to the "Save Veldtmark" ending — showing it to him, particularly the final paragraph, is the crack in his framework that everything else can follow through.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Read Aloud — The Letter</div>
+
+      <div style="
+        background: rgba(200,168,100,0.04);
+        border: 1px solid rgba(154,122,48,0.25);
+        border-radius: 4px;
+        padding: 36px 40px;
+        max-width: 640px;
+        margin: 0 auto;
+        position: relative;
+      ">
+        <!-- Wax seal decoration -->
+        <div style="
+          text-align: right;
+          margin-bottom: 20px;
+          font-size: 0.55rem;
+          font-family: 'Josefin Sans', sans-serif;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--gold-dim);
+        ">Veldtmark Estate · Cape District · 6 weeks prior</div>
+
+        <div style="
+          font-family: 'IM Fell English', serif;
+          font-size: 1rem;
+          line-height: 2;
+          color: var(--text-pale);
+          font-style: italic;
+        ">
+          <p style="margin-bottom: 1.4em;">Harlen,</p>
+
+          <p style="margin-bottom: 1.4em;">I am writing this in the morning, which is when I am most myself. I have noticed that I am less myself as the day progresses. I thought you should know that I have noticed this, because it means part of me is still paying attention, and I find that reassuring even if I suspect I should not.</p>
+
+          <p style="margin-bottom: 1.4em;">I want to tell you that the work is going well, because it is, by every measure I have established for it. The contact is stronger. The communion deepens every week. What I have described to you as the great work is proceeding exactly as I hoped when I began it. I am not writing to tell you it has gone wrong.</p>
+
+          <p style="margin-bottom: 1.4em;">I am writing because I had a dream last night in which I was myself at twenty-three, sitting in the study with my father, and my father asked me what I wanted from my life, and I said I wanted to understand things. He said that was a fine ambition. In the dream I knew he was going to die in three years and I didn't tell him. I woke up and I couldn't remember the last time I thought about my father.</p>
+
+          <p style="margin-bottom: 1.4em;">I couldn't remember the last time I thought about anything that wasn't the work.</p>
+
+          <p style="margin-bottom: 1.4em;">The debt I owe you — the shipping agreement from last autumn — I am enclosing a draft for the full amount. You should have it regardless of how things proceed. You have been a good partner and a good friend, and I am aware that I have not been available to you in recent months, and I am sorry for that in a way I am finding it difficult to fully articulate.</p>
+
+          <p style="margin-bottom: 1.4em;">I believe what I am doing is important. I believe it is the most important thing anyone has done in this city in a very long time, possibly ever. I believe I am on the threshold of something that will change what it means to understand time and existence and the space between moments. I believe all of this completely.</p>
+
+          <p style="margin-bottom: 1.4em;">I am also, Harlen — and I am asking you to keep this between us, as I have asked nothing else of you — I am also afraid. I don't know what I'm afraid of exactly. It isn't failure. I think it might be success. I think it might be that I will get exactly what I asked for and discover that what I asked for and what I wanted are not the same thing, and that by the time I know the difference it will be too late to say so.</p>
+
+          <p style="margin-bottom: 1.4em;">I am most myself in the mornings. I am writing this down so I don't forget that I knew it.</p>
+
+          <p style="margin-bottom: 1.4em;">Give my regards to your wife. Come to dinner when this is over — I'll have Aldous prepare something good. I owe you a proper meal and a proper conversation, the kind we used to have before I became so thoroughly occupied with becoming something other than what I am.</p>
+
+          <p style="margin-bottom: 2em;">Your friend,<br>Caevan</p>
+
+          <p style="
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            font-style: normal;
+            border-top: 1px solid rgba(154,122,48,0.15);
+            padding-top: 12px;
+            margin-top: 0;
+          ">P.S. — The draft is enclosed. If you don't hear from me for more than a month, please don't come yourself. Send someone. Send several someones. I am telling you this as a precaution and I am nearly certain it is unnecessary.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="margin-top: 32px;">
+      <div class="section-title">GM Notes — Using This Letter</div>
+      <div class="prose">
+        <p>Three moments in this letter do the most work at the table. The first: <em>"I am most myself in the mornings."</em> If the party reads this aloud to Veldtmark, watch his face. He wrote it. He remembers writing it. He has been telling himself for six weeks that he was being dramatic.</p>
+        <p>The second: the postscript. He knew. Six weeks ago he knew well enough to write a warning into a letter he told himself was a precaution. The party can point out that the precaution was correct and that he left it with the one person he told not to come himself.</p>
+        <p>The third — and this one is for the party, not Veldtmark: <em>"I think it might be that I will get exactly what I asked for and discover that what I asked for and what I wanted are not the same thing."</em> He diagnosed himself perfectly and proceeded anyway. That's the tragedy. That's also what makes the "Save Veldtmark" ending feel earned rather than easy — he is not a fool who didn't see it coming. He is a man who saw it coming and walked toward it, and the question the party has to answer is whether that makes him more or less worth saving.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">The Veldtmark Invitation · Guild Contract · Millhaven Branch #1,847 · GM Reference</div>
+</div>
+
+<script>
+function switchTab(id, e) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+// ── GROUND FLOOR ROOMS ──
+const groundFloor = [
+  {
+    num: "I", name: "The Grand Hall / Ballroom", tag: "Top Left — Blue Floor",
+    readAloud: "The ballroom is impeccable. Blue silk on the walls, candelabras burning low, chairs arranged as if for an event that ended recently or is about to begin. The flowers in the arrangements are fresh. Someone tended them this morning. There is a single wineglass on a side table, half full, the wine inside perfectly still.",
+    gm: "The glass has been half full for six days. The wine does not spoil. This is a minor effect of the Thing's proximity — time moves strangely near objects the cult has touched. A Nature or Arcana check notes that the wine should be vinegar by now.",
+    details: ["A framed portrait of Veldtmark hangs near the fireplace — painted six months ago, he looks healthy. The eyes in the portrait follow nobody. This is not supernatural. It just feels that way.", "Three invitations on the mantelpiece, unopened, dated three weeks ago — social events he missed.", "A locked writing desk contains correspondence about 'the Society' in veiled language. Cipher requires an hour and a Cryptography check."]
+  },
+  {
+    num: "II", name: "The Dining Room", tag: "Left Center — Long Red Table",
+    readAloud: "A table set for fourteen. Fourteen chairs, fourteen place settings, fourteen glasses — all clean, all waiting. The room smells of beeswax and something faintly metallic underneath. The candles here burn red-orange rather than white. They have always burned that color, the butler will say, if asked. The butler is lying.",
+    gm: "The table is set for cult meetings — fourteen is the full membership of Veldtmark's philosophical society, though only six are still active. The red-orange candles are treated with a compound that mildly suppresses Perception — anyone sitting at this table for more than ten minutes takes a -1 circumstance penalty to Perception until they leave and rest. Veldtmark uses these meetings to make the cult members easier to manage.",
+    details: ["Under the table, carved into the wood on the underside of the tabletop: fourteen names in a spiral. One of them is a sitting member of the Millhaven Merchant Council.", "The metallic smell is dried blood, faint enough that only high Perception or a Scent ability identifies it.", "A sideboard contains fourteen identical small journals — cult members' devotional logs. Most are banal. Two are not."]
+  },
+  {
+    num: "III", name: "The Organ Room", tag: "Top Left — Entry Point II",
+    readAloud: "The organ fills the entire north wall, pipes running floor to ceiling. It is playing. Softly, slowly, a melody that has no beginning you can identify — it feels as though it has always been playing and you've only just walked into earshot. There is no one at the keys.",
+    gm: "The organ is playing itself — a minor enchantment Veldtmark commissioned two months ago. The melody is the cipher sequence for Entry II played on loop. A Performance or Arcana check reveals the enchantment; a second check identifies the sequence. The room feels like standing inside a held breath.",
+    details: ["Sheet music on the stand: 'Meditation on the Spaces Between' — not a real composition, the entry cipher.", "A second, locked music cabinet contains compositions in a notation system nobody uses anymore. Pre-Lost Era, a History check confirms.", "One organ pipe has been sealed — something was stored inside it. The seal is recent wax, stamped with the cult's mark."]
+  },
+  {
+    num: "IV", name: "The Kitchen & Storage", tag: "Top Center — Entry Point IV",
+    readAloud: "The kitchen is working. Pots on the fire, bread in the oven, two kitchen staff moving with the mechanical precision of people who have stopped thinking about what they're doing. They look up when you enter. They smile. The smiles arrive a half-second after the looking, as if loaded separately.",
+    gm: "The kitchen staff — two humans, middle-aged — have been in proximity to the Thing long enough to develop mild drift effects. They are not hostile, not thralled, just... blurred at the edges. They will answer questions with cheerful irrelevance. The bread in the oven has been baking for four days and is not burned. The locked storage door is behind the largest rack of shelves.",
+    details: ["The staff cannot tell you what day it is. They will tell you with complete confidence, and they will be wrong.", "A ledger on the kitchen table logs deliveries — including a weekly delivery of something listed only as 'the requirement,' signed for by Aldous.", "The locked storage door: Aldous has the key, or DC 18 Thievery to open."]
+  },
+  {
+    num: "V", name: "The Conservatory / Garden Room", tag: "Center — Glass and Plants",
+    readAloud: "The conservatory is humid and green and smells of living things. Plants crowd every surface — not wildly, but insistently, with the confidence of things that have been growing unopposed for some time. In the center, on a white iron bench, Lord Caevan Veldtmark sits reading a book. He looks up when you enter and smiles with the warmth of a man who has been expecting you for some time. 'Ah,' he says. 'The guild sends representatives. How perfectly timed.'",
+    gm: "This is the party's first encounter with Veldtmark. He is not hostile. He is gracious, articulate, and wrong in ways that take time to notice. He knows who sent them (Harlen Doss) and finds it gently amusing. He will offer tea. He will pay the debt immediately, in full, from a purse he produces without counting it. He is trying to make this easy. He wants them to leave. He will answer questions with partial truths. He will not discuss the church or the basement. If pushed, he becomes vague rather than defensive — 'private spiritual matters, you understand.' He is not afraid of the party. He should be, but he's too far gone to know it.",
+    details: ["His eyes have a faint luminescence in low light — not obvious, visible on a high Perception check.", "The book he's reading has no title on the cover. Its pages appear blank from a distance. Up close, text appears in peripheral vision only.", "Plants nearest him are thriving abnormally. Plants nearest the door are wilting slightly, as if the room's energy flows toward him."]
+  },
+  {
+    num: "VI", name: "The Bedroom & Sitting Room", tag: "Bottom Right",
+    readAloud: "The bedroom is barely used — the bed made with the precision of habit rather than rest. A sitting room connects through an open door. On the sitting room desk: correspondence, ledgers, and a wooden box with a lock that has been forced open from the inside.",
+    gm: "Veldtmark rarely sleeps now. The desk contains the clearest evidence of his decline: early letters to Society members describing their research excitedly; middle letters becoming more intense and esoteric; recent letters that are partially in a script nobody recognizes. The forced-open box contained something he describes in an earlier letter as 'the terms of the agreement' — it's empty now, and the inside of the lid is scored with what look like claw marks, though they could be fingernails.",
+    details: ["The foreign-script letters can be translated with Linguistics DC 22 — they describe the Thing's nature in terms that match nothing in the guild's bestiary.", "A mirror in the bedroom reflects the room accurately except: Veldtmark does not appear in it. A small note taped to the mirror's frame reads 'normal — do not worry.' It is in his handwriting.", "Under the bed, a locked iron strongbox containing 200gp, a deed to a property in Rika Tikur, and a letter addressed to 'whoever finds this first, if I cannot finish it.'"]
+  },
+  {
+    num: "VII", name: "The Church", tag: "Right Side Building — Entry Point I",
+    readAloud: "The church is small, stone-built, with genuine craft in its construction. Pews of dark wood, candles on the altar, a stained glass window at the far end depicting a figure standing in a field of clocks — a common Tani motif. The air here is different. Quieter than quiet, as if sound is being absorbed rather than reflected. Your footsteps don't echo.",
+    gm: "The church looks like a Tani chapel. The stained glass is a Tani motif. The hymnal in the pews is genuine Tani liturgy — except for the last section, which contains the cipher. The altar's prayer rail slides aside when pressed in sequence (Religion DC 16 to identify the sequence from the cipher). Below the altar, carved into the stone floor, is the cult's true symbol: not Tani's wheel, but something older, asymmetric, that makes the eye want to slide away from it.",
+    details: ["The absence of echo is unnatural — a consecration effect for something that is not Tani.", "Six offering bowls on the altar, five containing dried flowers, one containing a dark dried substance that is not flowers.", "The cipher in the hymnal: last 12 pages, Tani symbols used as numbers corresponding to organ keys."]
+  }
+];
+
+// ── BASEMENT ROOMS ──
+const basement = [
+  {
+    num: "A", name: "The Ritual Chamber", tag: "Central — Red Light, Chained Coffin",
+    readAloud: "The room is red. Not decorated red — the light itself is red, emanating from four candles at the chamber's corners that burn without wax or wick, sustained by something else. In the center, a coffin. Heavy chains wrap it, bound with locks that have no keyholes. The chains are warm. From inside the coffin, if you stand very close and breathe very quietly, you can hear something that is not breathing but fills the same space as breathing would.",
+    gm: "The Thing is here, in its vessel. It is not asleep. It is patient. It is aware of the party the moment they enter the chamber and experiences them as interesting in the way a person might find a new smell interesting — noted, categorized, not yet important. The chains are ceremonial but also functional: they are part of the original bargain's terms, holding the Thing to its agreement. Breaking them would free it from the terms — not free it physically, but free it from its obligations. Do not break the chains. Unless the party wants to find out what happens.",
+    details: ["The four candles cannot be extinguished by any mundane means — magical suppression works for one round before they relight.", "The floor beneath the coffin has a symbol that predates the Elden Era, according to a History DC 24 check. Nobody knows what it means, but it pulses faintly in time with whatever is breathing in the coffin.", "Touching the coffin: the toucher experiences three seconds of complete temporal displacement — they see themselves from outside, three seconds in the future, performing the same action. Unsettling, not harmful. First time only.", "At maximum Tani drift: ghost-images of the ritual that first summoned the Thing play on loop in the corners of vision."]
+  },
+  {
+    num: "B", name: "The Barred Cell", tag: "North — Pipe Corridor Above",
+    readAloud: "The cell is iron-barred, the door chained on the outside. Inside, two figures sit against opposite walls. They look up when the light reaches them. Their eyes are the color of very old wood. They are breathing. They are not, you realize after a moment, doing anything else — not blinking, not shifting, not reacting beyond the initial look. They watch you with the patience of things that have stopped measuring time.",
+    gm: "Two captives — a dockworker named Sera Vance and an elderly scholar named Professor Odo Mast who came to investigate the estate independently and was taken three weeks ago. Both are alive and physically unharmed. Both have been fed to the Thing repeatedly in small amounts — enough to weaken it never fully receiving what it needs, enough to affect the captives significantly. They are conscious but temporally displaced — they experience time in fragments, present one moment, absent the next. They can be rescued. Recovery from the displacement takes weeks and proper clerical care. Sera will be aggressive when freed; Odo will ask, very calmly, what year it is.",
+    details: ["Odo has been taking notes on scraps of his clothing using a fingernail and his own blood — fragmentary observations about the Thing that are genuinely valuable research.", "Sera has a guild tattoo — not Millhaven branch. Another branch, further south. This is a loose thread.", "The cell key hangs on a hook outside — visible, accessible, almost inviting. There are no guards currently. There were, twenty minutes ago."]
+  },
+  {
+    num: "C", name: "The Sarcophagus Corridor", tag: "Right Side — Six Standing Sarcophagi",
+    readAloud: "Six stone sarcophagi stand upright along the corridor walls, three to a side, facing inward. They are old — older than the estate by centuries, which raises a question about where they came from and what they were doing before they were here. Their faces are worn smooth except for a repeating symbol around the lids. The symbol is the same one on the ritual chamber floor. They are sealed. The seals look recent.",
+    gm: "The sarcophagi were acquired by Veldtmark over the past year from various sources — estate sales, a traveling merchant, one he won't account for. He believed them to be connected to the Thing's origin based on the symbol. He was probably right. Currently they contain: three that are empty (recently emptied, the old remains removed — where they went is unclear); two that contain preserved bodies in ceremonial dress that match no known culture; one that is sealed with a different, newer lock and hums very quietly. Veldtmark does not have the key to the last one. He is looking for it.",
+    details: ["Opening the humming sarcophagus requires the key (location unknown) or DC 24 Thievery. What's inside is a hook for future sessions — leave it sealed this session.", "The preserved bodies have no decay despite apparent age. A Medicine or Arcana check: they appear to be in a state of suspended animation rather than death.", "The symbol on the sarcophagi predates the Elden Era — same conclusion as the ritual chamber floor. These things are connected and old."]
+  },
+  {
+    num: "D", name: "The Pipe Corridors", tag: "North — Connecting Passages",
+    readAloud: "The corridors are narrow and smell of damp stone and something faintly electrical that shouldn't be possible. Pipes run along the ceiling — not water pipes, not gas pipes, something that pulses with a slow warmth. The sound of the ritual chamber is muffled here but present, like a heartbeat felt through a wall.",
+    gm: "The pipes carry something — not water, not gas. They connect the ritual chamber to points throughout the estate, including directly beneath Veldtmark's bedroom and the organ room. Whatever flows through them is how the Thing maintains its influence over the household from below. Disrupting the pipes (Thievery DC 20 or significant physical effort) weakens the drift effects in the estate and causes mild distress in Aldous and the kitchen staff. It does not harm the Thing directly but slows its feeding.",
+    details: ["A valve junction in the north corridor controls flow to the entire system — closing it buys time and alerts Veldtmark immediately.", "Chalk marks on the corridor walls: a running tally in three different handwritings. Numbers. Dates. The tallies don't match.", "Cult members use these corridors to move between the entry points without going through the ritual chamber. There are fresh footprints."]
+  },
+  {
+    num: "E", name: "The Scrying Pool", tag: "Top Right — Circular Room",
+    readAloud: "A circular room, a circular pool, still water that reflects the ceiling — except the ceiling reflected in the water is not the ceiling above you. It shows a night sky. Stars you don't recognize in patterns you've never seen. The water is perfectly cold. Nothing floats in it. Nothing sinks.",
+    gm: "The pool shows the sky from the space the Thing comes from — the between-moments, rendered as starlight from a perspective that has no up or down. Looking into the pool for more than one round: the viewer experiences a Wisdom save (DC 18) or is fascinated for one minute — not charmed, just unable to look away, certain that they're about to understand something. They never do. The pool is not dangerous by itself. Veldtmark uses it to communicate with the Thing when he cannot go below — he speaks to his reflection and the Thing's responses arrive as temperature changes in the water.",
+    details: ["A journal beside the pool — Veldtmark's transcriptions of his pool conversations. Most are his interpretations of temperature fluctuations. They grow increasingly grandiose.", "Touching the water: cold, sharp, and briefly the character sees their own reflection age forward by approximately ten years before snapping back.", "The star patterns in the pool: an Arcana DC 26 identifies them as matching no known stellar map, including historical ones."]
+  }
+];
+
+// ── NPCS ──
+const questNPCs = [
+  {
+    icon: "🦴", name: "Aldous", role: "The Butler · Temporal Drift Victim · Not Quite Wrong Enough to Fight",
+    detail: "Aldous was an ordinary man. He has been Veldtmark's butler for eleven years and would have been for eleven more without incident. Eight months of proximity to the Thing have smoothed something out of him — not his personality exactly, more his investment in outcomes. He does his job. He protects the estate. He does not experience this as loyalty; he experiences it as the correct sequence of actions. If the party directly confronts him with what they know, he will listen carefully, agree that their concerns have merit, and then do nothing with this information. He is not an enemy. He is not an ally. He is furniture that learned to speak.",
+    secret: "Aldous has not slept in four months. He has not noticed."
+  },
+  {
+    icon: "🎭", name: "Lord Caevan Veldtmark", role: "The Lord · Cult Leader · True Believer · The Saddest Person in the Building",
+    detail: "Veldtmark is not a villain in his own story. He is a man of genuine intellectual curiosity who found something real and mistook contact for understanding. He is kind to his staff, generous with his money, and has been slowly hollowing himself out for eight months in service of something that doesn't know his name. He genuinely believes he is on the cusp of transcendence. He is six weeks from being consumed. He will not be easily convinced of this — he has constructed an elaborate internal framework to explain away every warning sign, and that framework is load-bearing. Dismantle it too fast and he collapses. He is not immune to reason. He has just had a lot of practice not hearing it.",
+    secret: "In the letter under his bed — the one addressed to 'whoever finds this first' — he admits he's afraid. He wrote it three weeks ago and hasn't been able to make himself put it somewhere someone would actually find it."
+  },
+  {
+    icon: "🔗", name: "The Thing in the Coffin", role: "The Entity · No Clean Name · 60-70% Toward Freedom",
+    detail: "It does not communicate in words. It communicates in sensation, temperature, and the sudden certainty that you have always known something you did not know a moment ago. It is not evil in a way that maps onto morality — it is hungry in a way that maps onto weather. It cannot be reasoned with because it does not experience reason as a relevant category. It can be bargained with, technically, because bargaining is a form of exchange and exchange is something it understands. Any new bargain it makes will be precisely honored and completely devastating. It is currently interested in the party in the way something very old and patient is interested in new things: thoroughly, without urgency.",
+    secret: "It has been trying to communicate with one specific party member since they entered the estate — whoever has the highest Wisdom score. The communication has manifested as an inexplicable certainty, three times, that they have forgotten something important. They haven't forgotten anything. The Thing is just practicing."
+  },
+  {
+    icon: "⛓️", name: "Sera Vance", role: "Captive · Dockworker · Guild Tattoo (Unknown Branch)",
+    detail: "Aggressive, disoriented, and furious in that order. Sera was taken while investigating suspicious cargo at the Cape docks — she saw Aldous loading something from a cart into the estate at 3am and followed out of curiosity. She has been in the cell for three weeks and is in significantly better shape than Professor Mast, possibly because her anger is keeping her oriented in time. She will demand to be taken directly to the Watch, then immediately revise this to the Guild when she remembers the Watch doesn't cover this part of the Cape. She has the guild tattoo of a southern branch she won't explain yet. She is a loose thread the party will want to pull.",
+    secret: "She was investigating the cargo because her branch sent her to. She was on a job when she was taken. She hasn't missed a check-in in three weeks and someone is looking for her."
+  },
+  {
+    icon: "📜", name: "Professor Odo Mast", role: "Captive · Scholar · Accidentally Knows Too Much",
+    detail: "Odo came to the estate three weeks ago with a letter of introduction and a theory about anomalous Tani drift readings in the northern Cape. He was going to present this to Veldtmark as a collegial inquiry. He was put in the cell within an hour of arriving, which he found extremely rude. He has spent his captivity taking notes on his clothing in his own blood, which he considers a reasonable response to limited resources. His notes are fragmentary but genuinely insightful — he's observed the Thing's behavior from below for three weeks and has drawn several correct conclusions. He is calm in a way that suggests either remarkable self-possession or that the temporal displacement has removed his fear response. Possibly both.",
+    secret: "His theory about the drift readings was exactly right. He published a preliminary paper six months ago. Three members of Veldtmark's philosophical society read it and recommended him as a candidate for 'invitation.' Veldtmark decided imprisonment was safer. Odo doesn't know this yet."
+  },
+  {
+    icon: "💰", name: "Harlen Doss", role: "Quest Giver · Business Partner · Worried Man Pretending He Isn't",
+    detail: "Harlen Doss is a cloth merchant of modest success and significant practicality — the kind of man who keeps meticulous records, pays his debts on time, and has never in his life done anything that could be described as interesting. He posted the contract because Veldtmark owes him money and he is worried, in that order, and he is deeply uncomfortable with the fact that those two things have swapped position over the past three weeks. He will meet the party at the Clearwater Exchange or the Golden Plough, somewhere respectable and public, because he has decided that whatever is happening at the estate is the sort of thing you discuss in well-lit rooms with other people around. He is a short, neat man with the posture of someone bracing for bad news. He has been bracing for three weeks. If the party asks what Veldtmark said the last time they spoke, he will pause, look at his hands, and admit that Veldtmark talked about 'the great work' and 'the invitation being answered' and that he told himself it was drink because he didn't want to know what else it could be. He is not a brave man. He is an honest one, which is rarer.",
+    secret: "Harlen has a letter in his coat that Veldtmark sent him six weeks ago, before the silence started. He hasn't opened it. He tells himself it's because he wants to respect Caevan's privacy. The real reason is that he's afraid of what it says. If the party finds out about the letter and presses him, he'll hand it over without much resistance — he's been wanting someone to take that decision away from him. The letter contains Veldtmark's most coherent description of what he's done and what he believes is coming. It is the clearest evidence in the adventure, and Harlen has been carrying it in his breast pocket like a coal."
+  }
+];
+
+// ── ENDINGS ──
+const endings = [
+  {
+    name: "Destroy the Vessel",
+    type: "Combat Resolution — High Risk",
+    summary: "Break the chains, force a confrontation, destroy or drive out the Thing before Veldtmark can complete the ritual.",
+    detail: "Breaking the chains voids the Thing's obligations. It will not immediately attack — it will assess. Then it will act. Combat at 60-70% strength is survivable for a level 5 party but dangerous. Destroying the vessel does not destroy the Thing; it disperses it back to the between-moments. It will be significantly set back. It may return. Veldtmark, if alive, will be devastated — this was his life's work. Consequences: the estate's temporal effects fade over weeks, Aldous and the kitchen staff slowly recover, the cult disbands or goes underground. The party is heroes, quietly, in a way nobody will officially acknowledge."
+  },
+  {
+    name: "Expose Veldtmark",
+    type: "Social / Investigation Resolution",
+    summary: "Gather enough evidence to take to the authorities — the Watch, the Guild, or the Merchant Council — and let institutions handle it.",
+    detail: "This is complicated by the fact that a member of the Merchant Council is in Veldtmark's cult (their name is on the dining room table). The Watch has no jurisdiction on this part of the Cape. The Guild can act, but Aldric will need compelling evidence and will be deeply uncomfortable about the Council member. This resolution is slower and creates political fallout. The Thing remains in the basement during the process. Every week of delay is a week closer to completion. Consequences: Veldtmark is arrested or flees, the cult is exposed, the Council member is a problem, and someone has to actually deal with what's in the basement, which turns out to be the party again."
+  },
+  {
+    name: "Save Veldtmark",
+    type: "Difficult Social Resolution — Requires Genuine Effort",
+    summary: "Convince Veldtmark of what is actually happening to him before it's too late.",
+    detail: "This requires the party to dismantle his internal framework carefully — showing him evidence, using his own documentation against his beliefs, possibly using the scrying pool to show him something true. It requires high Diplomacy or Deception checks and the letter under the bed is the key: if they find it and give it back to him, it cracks something open. A saved Veldtmark becomes a complicated ally — he knows more about the Thing than anyone, he's deeply ashamed, and he is dying slowly from the exposure. He can help them deal with what's in the basement but cannot undo what's been done to Aldous, the captives, or himself. Consequences: most merciful, most complicated, creates an NPC with significant knowledge and significant guilt."
+  },
+  {
+    name: "Contain and Report",
+    type: "Neutral Resolution — Kicks the Problem Upward",
+    summary: "Secure the estate, free the captives, and report everything to the Guild for Head Office to handle.",
+    detail: "Aldric will accept this report and forward it. Head Office will respond. They will respond slowly. The Thing will be three to four weeks closer to completion by the time anyone arrives. The estate will need to be watched in the meantime, which is either the party's job or a problem. Head Office's response, when it comes, will involve someone with a perfect smile and cold eyes — the same type of person Aldric warned about. They will handle the Thing efficiently and ask questions about what the party saw that are slightly too specific. Consequences: professional, unsatisfying, and plants seeds for a Head Office subplot."
+  },
+  {
+    name: "Make a Deal",
+    type: "Chaotic Resolution — High Consequence",
+    summary: "Bargain with the Thing directly.",
+    detail: "It will deal. Any bargain it makes is precisely honored. Precisely. It understands exchange, not intention. If the party asks for something, they will receive exactly that thing with none of the context they assumed. If they ask for the captives to be freed, the captives are freed — from the cell, from the estate, from the Thing's influence. They will also be freed from approximately three weeks of continuous memory. If they ask the Thing to leave, it will — to the scrying pool. Then the organ room. Then the dining room. It is very literal about directions. No deal will contain it permanently. Every deal will be honored. Every deal will have a consequence the party didn't account for. This resolution is for the party that has decided they know what they're doing. They do not know what they're doing."
+  }
+];
+
+// ── BUILD ROOMS ──
+function buildRoom(room, container) {
+  const card = document.createElement('div');
+  card.className = 'room-card';
+  card.innerHTML = `
+    <div class="room-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="room-num">${room.num}</div>
+      <div class="room-titles">
+        <div class="room-name">${room.name}</div>
+        <div class="room-tag">${room.tag}</div>
+      </div>
+      <div class="room-chevron">▾</div>
+    </div>
+    <div class="room-body">
+      <div class="room-section">
+        <div class="room-section-label">Read Aloud</div>
+        <div class="room-text">${room.readAloud}</div>
+      </div>
+      <div class="room-section">
+        <div class="room-section-label">GM Notes</div>
+        <div class="room-text" style="color:var(--text-dim)">${room.gm}</div>
+      </div>
+      <div class="room-section">
+        <div class="room-section-label">What's Here</div>
+        <ul class="room-details">${room.details.map(d=>`<li>${d}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+  container.appendChild(card);
+}
+
+document.querySelectorAll('#groundFloorRooms').forEach(c => groundFloor.forEach(r => buildRoom(r, c)));
+document.querySelectorAll('#basementRooms').forEach(c => basement.forEach(r => buildRoom(r, c)));
+
+// ── BUILD NPCS ──
+const strip = document.getElementById('npcStrip');
+questNPCs.forEach(n => {
+  const row = document.createElement('div');
+  row.className = 'npc-row';
+  row.innerHTML = `
+    <div class="npc-icon">${n.icon}</div>
+    <div class="npc-info">
+      <div class="npc-name">${n.name}</div>
+      <div class="npc-role">${n.role}</div>
+      <div class="npc-detail">
+        ${n.detail}
+        <div class="npc-secret">🔒 ${n.secret}</div>
+      </div>
+    </div>
+  `;
+  row.addEventListener('click', () => row.classList.toggle('open'));
+  strip.appendChild(row);
+});
+
+// ── BUILD ENDINGS ──
+const grid = document.getElementById('endingGrid');
+endings.forEach(e => {
+  const card = document.createElement('div');
+  card.className = 'ending-card';
+  card.innerHTML = `
+    <div class="ending-name">${e.name}</div>
+    <div class="ending-type">${e.type}</div>
+    <div class="ending-summary">${e.summary}</div>
+    <div class="ending-detail">${e.detail}</div>
+  `;
+  card.addEventListener('click', () => card.classList.toggle('open'));
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>

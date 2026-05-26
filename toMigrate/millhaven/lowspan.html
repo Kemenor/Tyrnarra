@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Low Span Pit</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0805;
+    --bg2: #131008;
+    --bg3: #1c170f;
+    --sand: #c8a860;
+    --sand-dim: #7a6030;
+    --sand-dark: #3a2c10;
+    --blood: #6a1a08;
+    --blood-light: #aa3018;
+    --amber: #e08020;
+    --amber-dim: #805010;
+    --text: #d0c8a8;
+    --text-dim: #706848;
+    --text-bright: #f0e8c8;
+    --river: #1a3050;
+    --divider: rgba(200,168,96,0.12);
+    --smoke: rgba(20,16,8,0.85);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    min-height: 100vh;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── LAMP FLICKER ── */
+  @keyframes lampFlicker {
+    0%,100% { opacity:1; }
+    20% { opacity:0.88; }
+    40% { opacity:0.95; }
+    60% { opacity:0.84; }
+    80% { opacity:0.92; }
+  }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes crowdPulse { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+
+  /* ── HEADER ── */
+  .header {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--divider);
+    padding: 0;
+  }
+
+  /* The ring visual */
+  .ring-header {
+    background: var(--bg2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px 36px;
+    position: relative;
+  }
+
+  /* Lamp chains */
+  .lamps {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .lamp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: lampFlicker 3s ease-in-out infinite;
+  }
+
+  .lamp:nth-child(2) { animation-delay: -1.2s; }
+  .lamp:nth-child(3) { animation-delay: -0.7s; }
+
+  .lamp-chain {
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(to bottom, transparent, #6a5828);
+  }
+
+  .lamp-body {
+    width: 20px; height: 28px;
+    background: radial-gradient(ellipse at 40% 30%, #fff8c0, #e08020, #803000);
+    border-radius: 3px 3px 6px 6px;
+    box-shadow: 0 0 20px #e0802088, 0 0 40px #80400044, 0 0 80px #40200022;
+  }
+
+  .lamp-glow {
+    width: 60px; height: 20px;
+    background: radial-gradient(ellipse, rgba(224,128,32,0.3), transparent);
+    margin-top: -4px;
+    border-radius: 50%;
+  }
+
+  .venue-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    letter-spacing: 0.06em;
+    color: var(--text-bright);
+    text-shadow:
+      0 0 30px rgba(224,128,32,0.4),
+      0 0 80px rgba(200,168,96,0.15),
+      3px 4px 0 rgba(0,0,0,0.8);
+    line-height: 0.9;
+    margin-bottom: 6px;
+  }
+
+  .venue-sub {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--sand-dim);
+    margin-bottom: 20px;
+  }
+
+  /* The ring itself */
+  .ring-visual {
+    position: relative;
+    width: 160px; height: 160px;
+    margin: 0 auto 24px;
+  }
+
+  .ring-outer {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 2px solid rgba(200,168,96,0.3);
+    position: absolute;
+  }
+
+  .ring-inner {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,168,96,0.15);
+    position: absolute;
+    top: 20px; left: 20px;
+    background: radial-gradient(ellipse at center, rgba(200,168,96,0.08), transparent);
+  }
+
+  .ring-sand {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 40% 35%, #c8a860, #7a6030, #3a2c10);
+    position: absolute;
+    top: 40px; left: 40px;
+    box-shadow: 0 0 20px rgba(200,168,96,0.2);
+  }
+
+  .figure-a, .figure-b {
+    position: absolute;
+    width: 8px; height: 20px;
+    border-radius: 4px 4px 2px 2px;
+    top: 50px;
+  }
+
+  .figure-a {
+    background: linear-gradient(to bottom, #d0c8a8, #a09070);
+    left: 58px;
+    transform: rotate(-15deg);
+  }
+
+  .figure-b {
+    background: linear-gradient(to bottom, #605040, #403020);
+    left: 90px;
+    transform: rotate(10deg);
+  }
+
+  /* Crowd noise indicator */
+  .crowd-bars {
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+    height: 20px;
+    margin-top: 8px;
+  }
+
+  .crowd-bar {
+    width: 4px;
+    background: var(--amber-dim);
+    border-radius: 2px 2px 0 0;
+    animation: crowdPulse var(--d, 0.8s) ease-in-out infinite var(--delay, 0s);
+  }
+
+  .meta-strip {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .meta-pip {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sand-dim);
+    padding: 3px 10px;
+    border: 1px solid var(--divider);
+    border-radius: 2px;
+  }
+
+  /* ── MAIN ── */
+  .main { max-width: 980px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  /* ── TABS ── */
+  .tab-bar { display: flex; border-bottom: 1px solid var(--divider); margin-bottom: 28px; flex-wrap: wrap; }
+
+  .tab-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--sand); border-bottom-color: var(--amber); }
+
+  .tab-panel { display: none; animation: fadeUp 0.25s ease; }
+  .tab-panel.active { display: block; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 36px; }
+
+  .section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sand-dim);
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .prose { font-size: 1rem; line-height: 1.9; color: var(--text); font-weight: 300; }
+  .prose p { margin-bottom: 12px; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* ── READ ALOUD ── */
+  .read-aloud {
+    background: rgba(200,168,96,0.04);
+    border: 1px solid rgba(200,168,96,0.18);
+    border-left: 3px solid var(--sand-dim);
+    border-radius: 0 3px 3px 0;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+
+  .read-aloud-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sand-dim);
+    margin-bottom: 7px;
+  }
+
+  .read-aloud-text { font-size: 0.97rem; line-height: 1.9; color: var(--text); font-style: italic; }
+
+  /* ── GM BOX ── */
+  .gm-box {
+    background: rgba(122,96,48,0.06);
+    border: 1px solid var(--divider);
+    border-left: 3px solid var(--amber-dim);
+    border-radius: 0 3px 3px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+  }
+
+  .gm-box-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber-dim);
+    margin-bottom: 5px;
+  }
+
+  .gm-box-text { font-size: 0.88rem; line-height: 1.72; color: var(--text-dim); font-style: italic; }
+
+  /* ── LEVEL CARDS ── */
+  .level-stack { display: flex; flex-direction: column; gap: 12px; }
+
+  .level-card {
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    background: var(--bg2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .level-card:hover { border-color: rgba(200,168,96,0.25); }
+  .level-card.open { border-color: rgba(200,168,96,0.3); }
+
+  .level-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .level-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--sand-dim);
+    width: 36px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .level-info { flex: 1; }
+
+  .level-name {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 3px;
+  }
+
+  .level-desc {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .level-tag {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.44rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .tag-legal { background: rgba(58,106,26,0.12); color: #6aaa3a; border: 1px solid rgba(90,154,42,0.2); }
+  .tag-grey { background: rgba(154,122,48,0.1); color: var(--sand); border: 1px solid rgba(200,168,96,0.18); }
+  .tag-dark { background: rgba(106,26,8,0.15); color: #c05030; border: 1px solid rgba(170,48,24,0.2); }
+
+  .level-chevron { font-size: 0.6rem; color: var(--text-dim); transition: transform 0.2s; }
+  .level-card.open .level-chevron { transform: rotate(180deg); }
+
+  .level-body { display: none; padding: 0 16px 16px 66px; animation: fadeUp 0.2s ease; }
+  .level-card.open .level-body { display: block; }
+
+  .level-body-text { font-size: 0.92rem; line-height: 1.75; color: var(--text); margin-bottom: 12px; }
+
+  .room-list-inner { list-style: none; }
+
+  .room-list-inner li {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding: 4px 0 4px 13px;
+    position: relative;
+    line-height: 1.55;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .room-list-inner li:last-child { border-bottom: none; }
+
+  .room-list-inner li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--sand-dark);
+    font-size: 0.38rem;
+    top: 8px;
+  }
+
+  /* ── NPC STRIP ── */
+  .npc-strip { display: flex; flex-direction: column; gap: 8px; }
+
+  .npc-row {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    background: var(--bg2);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .npc-row:hover { border-color: rgba(200,168,96,0.22); }
+  .npc-row.open { border-color: rgba(200,168,96,0.3); }
+
+  .npc-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+  .npc-info { flex: 1; }
+
+  .npc-name {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 2px;
+  }
+
+  .npc-role {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .npc-detail {
+    display: none;
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px solid var(--divider);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    animation: fadeUp 0.2s ease;
+  }
+
+  .npc-row.open .npc-detail { display: block; }
+
+  .npc-hook {
+    margin-top: 7px;
+    padding: 7px 11px;
+    background: rgba(200,168,96,0.05);
+    border-left: 2px solid var(--sand-dark);
+    border-radius: 0 2px 2px 0;
+    font-style: normal;
+    color: var(--text-dim);
+    font-size: 0.84rem;
+  }
+
+  /* ── ODDS BOARD ── */
+  .odds-board {
+    background: var(--bg3);
+    border: 1px solid var(--divider);
+    border-top: 3px solid var(--amber-dim);
+    border-radius: 0 0 3px 3px;
+    padding: 20px;
+    margin-top: 14px;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .odds-title {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--sand-dim);
+    margin-bottom: 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 8px;
+  }
+
+  .odds-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(200,168,96,0.06);
+  }
+
+  .odds-row:last-child { border-bottom: none; }
+
+  .odds-fighters {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--text);
+  }
+
+  .odds-vs {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+  }
+
+  .odds-value {
+    font-size: 1.1rem;
+    color: var(--amber);
+    letter-spacing: 0.05em;
+    min-width: 60px;
+    text-align: right;
+  }
+
+  .odds-note {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.44rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    min-width: 80px;
+    text-align: right;
+  }
+
+  /* ── SECRETS ── */
+  .secret-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+
+  .secret-item {
+    background: rgba(106,26,8,0.08);
+    border: 1px solid rgba(170,48,24,0.15);
+    border-left: 3px solid var(--blood);
+    border-radius: 0 3px 3px 0;
+    padding: 12px 16px;
+  }
+
+  .secret-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blood-light);
+    margin-bottom: 5px;
+  }
+
+  .secret-text { font-size: 0.9rem; line-height: 1.72; color: var(--text); font-style: italic; }
+
+  .footer-note {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.26em;
+    color: rgba(200,168,96,0.15);
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+  }
+
+  @media (max-width:520px) {
+    .tab-btn { padding: 8px 10px; font-size: 0.48rem; }
+    .level-body { padding-left: 16px; }
+    .lamps { gap: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="ring-header">
+    <div class="lamps">
+      <div class="lamp"><div class="lamp-chain"></div><div class="lamp-body"></div><div class="lamp-glow"></div></div>
+      <div class="lamp"><div class="lamp-chain"></div><div class="lamp-body"></div><div class="lamp-glow"></div></div>
+      <div class="lamp"><div class="lamp-chain"></div><div class="lamp-body"></div><div class="lamp-glow"></div></div>
+    </div>
+
+    <div class="venue-name">The Low Span</div>
+    <div class="venue-sub">Fighting Pit & Establishment · Bridge District · Millhaven</div>
+
+    <div class="ring-visual">
+      <div class="ring-outer"></div>
+      <div class="ring-inner"></div>
+      <div class="ring-sand"></div>
+      <div class="figure-a"></div>
+      <div class="figure-b"></div>
+    </div>
+
+    <div class="crowd-bars">
+      <div class="crowd-bar" style="height:8px;--d:0.6s;--delay:0s"></div>
+      <div class="crowd-bar" style="height:14px;--d:0.8s;--delay:-0.2s"></div>
+      <div class="crowd-bar" style="height:10px;--d:0.7s;--delay:-0.4s"></div>
+      <div class="crowd-bar" style="height:18px;--d:0.9s;--delay:-0.1s"></div>
+      <div class="crowd-bar" style="height:12px;--d:0.65s;--delay:-0.3s"></div>
+      <div class="crowd-bar" style="height:16px;--d:0.75s;--delay:-0.5s"></div>
+      <div class="crowd-bar" style="height:9px;--d:0.85s;--delay:-0.2s"></div>
+      <div class="crowd-bar" style="height:14px;--d:0.7s;--delay:-0.4s"></div>
+      <div class="crowd-bar" style="height:11px;--d:0.6s;--delay:-0.1s"></div>
+    </div>
+
+    <div class="meta-strip">
+      <span class="meta-pip">Bridge District — Low Span</span>
+      <span class="meta-pip">3 Levels</span>
+      <span class="meta-pip">Deed: 3 Names, None of Them Sable Rei</span>
+      <span class="meta-pip">Open Dusk to Dawn</span>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('overview',event)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('levels',event)">The Levels</button>
+    <button class="tab-btn" onclick="switchTab('ring',event)">The Ring</button>
+    <button class="tab-btn" onclick="switchTab('people',event)">People</button>
+    <button class="tab-btn" onclick="switchTab('secrets',event)">What's Below</button>
+  </div>
+
+  <!-- ══ OVERVIEW ══ -->
+  <div class="tab-panel active" id="tab-overview">
+
+    <div class="section">
+      <div class="section-title">The Establishment</div>
+      <div class="prose">
+        <p>The Low Span started as a fighting ring in the southernmost bridge's undercroft about forty years ago — two dockworkers settling a disagreement in front of an audience that was supposed to be three people and became thirty. Someone started taking bets. Someone else started charging admission. By the time anyone thought to ask who owned it, ownership had become a complicated question answered by three different names on three different documents, none of which are Sable Rei.</p>
+        <p>What it is now: three levels of descending legitimacy beneath the bridge's public face. The ring on the ground floor is completely above board — agreed rules, consenting fighters, betting conducted openly and taxed, theoretically, by the bridge district's self-appointed revenue collector. Below that, through a trapdoor behind the bar, a second floor where the rules are fewer and the stakes are higher. Below that, a third level that isn't on any document and where the word "below" starts to feel more like a moral description than a physical one.</p>
+        <p>Sable Rei doesn't own it. Sable Rei is simply always there when something important happens, which is a different kind of ownership entirely.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Read Aloud — Arriving</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">First Visit</div>
+        <div class="read-aloud-text">You smell it before you find it — sawdust and river damp and the particular kind of noise that only happens when a crowd is watching something they've put money on. The entrance is a door set into the bridge's south face, unmarked except for a small brass compass rose scratched into the wood at eye level. Inside, the ceiling is the underside of the bridge itself — raw timber and iron bolts — and the floor drops away in tiers toward a sand circle thirty feet across, lit by oil lamps on chains that sway with the river movement. The lamps flicker in sequence. Nobody has explained why.</div>
+      </div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">The Crowd</div>
+        <div class="read-aloud-text">The crowd is three deep at the rail on the best tiers. Cape dock workers, bridge merchants, two people who are clearly neither and trying to look like both. A halfling woman is taking bets from a leather satchel, moving through the crowd with the efficiency of someone who has memorized everyone's face and their credit. Nobody looks at you when you walk in. In a place like this, not being looked at is a form of welcome.</div>
+      </div>
+    </div>
+
+    <div class="gm-box">
+      <div class="gm-box-label">GM Note — The Compass Rose</div>
+      <div class="gm-box-text">The compass rose scratched into the door is not the Low Span's mark — it's the Wayward Compass guild symbol, very small, done with a knife rather than a tool. It was put there by Aldric Fenn approximately fifteen years ago. He has never mentioned this to anyone. Sable Rei noticed it within a week and has never mentioned it either. It means: the guild knows this place exists, has always known, and has chosen not to ask questions. This is a mutual arrangement. It has served everyone adequately.</div>
+    </div>
+
+  </div>
+
+  <!-- ══ THE LEVELS ══ -->
+  <div class="tab-panel" id="tab-levels">
+    <div class="section">
+      <div class="section-title">Three Floors Down</div>
+      <div class="prose"><p>Each level is accessible from the one above — the transitions are not secret, exactly, but they are not advertised. First-timers stay on the ground floor. Return visitors find the trapdoor. What's below that finds you, when it wants to.</p></div>
+    </div>
+
+    <div class="level-stack" id="levelStack"></div>
+  </div>
+
+  <!-- ══ THE RING ══ -->
+  <div class="tab-panel" id="tab-ring">
+    <div class="section">
+      <div class="section-title">Tonight's Card</div>
+      <div class="prose">
+        <p>The ring runs three to five bouts a night, dusk to midnight, with a late card on Fridays that goes until the lamps run low. The fighters are independent — they contract per bout, take a cut of the betting pool, and are responsible for their own medical arrangements. The Low Span provides the sand, the lamps, and the crowd. It does not provide opinions on outcomes.</p>
+        <p>Sable Rei always bets on whoever is more interesting, regardless of odds. This is known, frequently imitated, and almost as frequently regretted by imitators who lack Sable Rei's specific judgment about what interesting means in a fight.</p>
+      </div>
+
+      <div class="odds-board">
+        <div class="odds-title">Current Odds — Tonight's Card</div>
+
+        <div class="odds-row">
+          <div class="odds-fighters">
+            <span>Marro "Twice" Denn</span>
+            <span class="odds-vs">vs</span>
+            <span>The Sable Woman</span>
+          </div>
+          <div class="odds-value">3:1</div>
+          <div class="odds-note">Sable favoured</div>
+        </div>
+
+        <div class="odds-row">
+          <div class="odds-fighters">
+            <span>Gren of the South Roads</span>
+            <span class="odds-vs">vs</span>
+            <span>The River Entry</span>
+          </div>
+          <div class="odds-value">5:2</div>
+          <div class="odds-note">Even crowd</div>
+        </div>
+
+        <div class="odds-row">
+          <div class="odds-fighters">
+            <span>The Dockmaster's Son</span>
+            <span class="odds-vs">vs</span>
+            <span>Unknown — Cape Entry</span>
+          </div>
+          <div class="odds-value">2:1</div>
+          <div class="odds-note">Unknown rising</div>
+        </div>
+
+        <div class="odds-row">
+          <div class="odds-fighters">
+            <span>Headliner: Voss</span>
+            <span class="odds-vs">vs</span>
+            <span>Headliner: The Quiet</span>
+          </div>
+          <div class="odds-value">7:4</div>
+          <div class="odds-note">Sable Rei betting Voss</div>
+        </div>
+      </div>
+
+      <div class="gm-box" style="margin-top:16px">
+        <div class="gm-box-label">GM Note — The Fights as Scene Texture</div>
+        <div class="gm-box-text">The ring is not a combat encounter — it's atmosphere and timing. Use the fight in the background of the Sable Rei conversation to control pacing: a good hit from the crowd's reaction gives Sable a moment to think before answering a hard question; the end of a bout is a natural scene break. If the party wants to bet, let them — the odds above are the current card, outcomes are GM's discretion. Sable always wins their bet. This is not luck.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PEOPLE ══ -->
+  <div class="tab-panel" id="tab-people">
+    <div class="section">
+      <div class="section-title">Regulars & Staff</div>
+      <div class="npc-strip" id="npcStrip"></div>
+    </div>
+  </div>
+
+  <!-- ══ WHAT'S BELOW ══ -->
+  <div class="tab-panel" id="tab-secrets">
+    <div class="section">
+      <div class="section-title">What the Low Span Actually Is</div>
+      <div class="prose">
+        <p>The fighting ring is real. The gambling is real. Everything below the second floor is also real, and considerably more interesting, and the party will only access it if they are invited or very clever or both.</p>
+      </div>
+
+      <div class="secret-list">
+
+        <div class="secret-item">
+          <div class="secret-label">🔒 The Second Floor — The Real Betting Room</div>
+          <div class="secret-text">Through the trapdoor behind the bar, down a ladder that was not built for people in a hurry, a second room runs the length of the bridge underbelly. Card tables, a second ring with no rules written anywhere, and a bar that stocks things the upstairs bar doesn't acknowledge carrying. The second floor is where bridge district business actually happens — contracts discussed at card tables, information exchanged in the language of raised bets and folded hands. Sable Rei has a standing table here that is never officially reserved and always available.</div>
+        </div>
+
+        <div class="secret-item">
+          <div class="secret-label">🔒 The Third Level — The River Room</div>
+          <div class="secret-text">The third level is not a room. It is a platform over the Millwater itself, accessible only through a door in the second floor's south wall that requires a key nobody admits to having. The platform has a mooring point, a waterproof document locker built into the piling, and enough space for six people to have a conversation that the river current ensures no one above can hear. This is where Sable Rei conducts business that cannot be discussed anywhere else. The party will not access this level in a first visit. They will, eventually, be invited here — and the invitation will mean something significant has changed in how Sable Rei regards them.</div>
+        </div>
+
+        <div class="secret-item">
+          <div class="secret-label">🔒 The Deed Question</div>
+          <div class="secret-text">The Low Span's deed is held in three names: a retired Cape dockmaster named Holt who died eight years ago and whose name was never removed, a woman named Cress who operates a candle shop on the Realm side and has never visited the Low Span in her life and receives a small quarterly payment she has never questioned, and a guild holding entity registered under Wayward Compass Branch #1,847 that Aldric Fenn signed into existence fifteen years ago and has not mentioned to anyone including his own staff. The guild technically co-owns the Low Span. This has never come up. It will, eventually.</div>
+        </div>
+
+        <div class="secret-item">
+          <div class="secret-label">🔒 What Flows Through Here</div>
+          <div class="secret-text">Information, primarily. The Low Span is the best place in Millhaven to learn something — not because anyone tells you things, but because everyone in the bridge district passes through eventually and people talk when they're watching a fight. Vara Mink sends someone on Tuesdays to sit at the second-floor bar and listen. Dova Crestmark has never visited but receives a written summary every two weeks from a source she has never named to anyone. Kael Orvaine comes once a month to watch the fights and does not speak to anyone and leaves before the headliner. Nobody has asked him about this.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">The Low Span · Bridge District · Millhaven · For GM Reference</div>
+</div>
+
+<script>
+function switchTab(id, e) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+const levels = [
+  {
+    number: "01",
+    name: "The Ground Floor — The Ring",
+    desc: "Public · Legitimate · Taxed (theoretically)",
+    tag: "legal",
+    tagLabel: "Above Board",
+    body: "The main floor is exactly what it looks like: a fighting ring, tiered standing room, a bar running the north wall, lamp chains swaying overhead. The ceiling is raw bridge timber. The crowd is mixed and loud. Betting is conducted openly by Marta, the halfling bookkeeper, who has a memory for faces and figures that makes most guild archivists look careless.",
+    rooms: [
+      "The Sand Ring — thirty-foot circle, fresh sand before each bout, blood raked under not out",
+      "The Bar — north wall, three staff, stocks two things the menu doesn't mention if you know to ask",
+      "The Tiers — standing room in concentric steps descending to ring level, best rail is second tier east",
+      "Marta's Corner — the bookkeeper works from a stool near the entrance, satchel of coin, ledger of every bet placed in the last four years",
+      "The Entrance Door — the compass rose scratch. Aldric put it there. Sable noticed."
+    ]
+  },
+  {
+    number: "02",
+    name: "The Second Floor — The Real Room",
+    desc: "Semi-Private · Grey Market · Card Tables & Fewer Rules",
+    tag: "grey",
+    tagLabel: "Grey Market",
+    body: "The trapdoor behind the bar opens onto a ladder. The second floor is longer and lower than the ground floor, running beneath the bridge's structural span. Card tables, a second ring with no posted rules, a bar stocked differently. The clientele here knows each other, at least by reputation. New faces are noticed and assessed within thirty seconds of descending the ladder. Sable Rei has a table. It is never reserved. It is always available.",
+    rooms: [
+      "The Card Tables — four tables, ongoing games, information exchanged in the language of raised bets",
+      "The Lower Ring — no posted rules, smaller, the sand is darker and not always raked between bouts",
+      "Sable's Table — southeast corner, sight lines to both the ladder and the south door, always clear",
+      "The South Door — leads to the River Room, requires a key, the key does not officially exist",
+      "The Second Bar — stocks things the upstairs bar doesn't carry, including at least two substances of uncertain legal status and one bottle of something that predates the current Millhaven charter"
+    ]
+  },
+  {
+    number: "03",
+    name: "The River Room — The Platform",
+    desc: "Invitation Only · Over the Millwater · No Document Exists",
+    tag: "dark",
+    tagLabel: "Restricted",
+    body: "Not a room. A platform of treated timber cantilevered over the Millwater itself, close enough to the water that river spray reaches it in high current. Sound is impossible to carry here — the river current takes it. Six people can stand comfortably. A mooring point for a small vessel. A waterproof document locker built into the piling. This is where things are decided that cannot be decided anywhere else. The party will not see this on a first visit. When they are invited, it will matter.",
+    rooms: [
+      "The Platform — treated timber, river spray at high current, six-person capacity, no walls",
+      "The Mooring Point — iron ring, chain, accepts a vessel up to twenty feet",
+      "The Document Locker — built into the east piling, waterproof, combination known to three people maximum at any time",
+      "The Current — makes conversation above whisper level inaudible beyond the platform's edge. Deliberately."
+    ]
+  }
+];
+
+const levelStack = document.getElementById('levelStack');
+levels.forEach(l => {
+  const card = document.createElement('div');
+  card.className = 'level-card';
+  card.innerHTML = `
+    <div class="level-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="level-number">${l.number}</div>
+      <div class="level-info">
+        <div class="level-name">${l.name}</div>
+        <div class="level-desc">${l.desc}</div>
+      </div>
+      <span class="level-tag tag-${l.tag}">${l.tagLabel}</span>
+      <div class="level-chevron">▾</div>
+    </div>
+    <div class="level-body">
+      <div class="level-body-text">${l.body}</div>
+      <ul class="room-list-inner">${l.rooms.map(r=>`<li>${r}</li>`).join('')}</ul>
+    </div>
+  `;
+  levelStack.appendChild(card);
+});
+
+const npcs = [
+  {
+    icon: "📒",
+    name: "Marta",
+    role: "Bookkeeper · Ground Floor · Takes Every Bet, Remembers Every Face",
+    detail: "A halfling woman in her 50s who has been running the Low Span's books since before Sable Rei was involved. Precise, warm, and in possession of a four-year ledger of every bet placed in this establishment. She does not share the ledger. She will tell you the odds on anything, including things not currently on the card, if you know to ask. She has a very clear sense of who in Millhaven has a gambling problem and quietly adjusts their credit limits without being asked by anyone.",
+    hook: "If the party has been watching the fights for more than one visit, Marta will approach them with a small folded note: a tip on the next bout, offered without explanation. The tip will be correct. She will not explain where it came from. She will do this exactly twice. The third time she approaches, the note will not be about a fight."
+  },
+  {
+    icon: "⚔️",
+    name: "The Sable Woman",
+    role: "Fighter · Headliner Regular · Nobody Knows Her Name",
+    detail: "She fights under no name — the card just says 'The Sable Woman' and has for three years. She is exceptional, efficient, and wins in a way that suggests she could end bouts earlier than she does and chooses not to. Sable Rei always bets on her. She has never spoken to Sable Rei in public. She has a key to the south door on the second floor. These facts are not connected, officially.",
+    hook: "If a party member watches her fight closely and succeeds on a high Perception check, they notice she's holding back in a very specific way — like someone who learned to fight somewhere the stakes were considerably higher than a betting ring, and who has decided that this level of exposure is exactly enough."
+  },
+  {
+    icon: "🍺",
+    name: "Cord",
+    role: "Second Floor Barkeeper · Knows Everything · Confirms Nothing",
+    detail: "Cord is a large, quiet human man who has been tending the second floor bar for eight years and in that time has heard approximately everything that has been decided in Millhaven's grey economy. He has never repeated any of it. He is not loyal to Sable Rei, or anyone else, in any way that could be demonstrated. He is loyal to the bar, which is a distinction that has served him well. He will serve anyone who comes down the ladder without comment. He will not serve anyone twice who has caused a problem.",
+    hook: "Cord will, once, answer a direct question about what he's heard — if the party has been coming in long enough that he's decided they're not stupid and not dangerous in the wrong direction. His answer will be a single sentence. It will be accurate. He will not elaborate."
+  },
+  {
+    icon: "🦊",
+    name: "Sable Rei",
+    role: "Bridge Council · Merchant Lord · Always At The Rail · Different Face Each Visit",
+    detail: "Present most nights, standing at the second tier rail of the ground floor like anyone else who paid to get in. Different face on different nights — the silver-streaked one, a younger darker one, occasionally something that splits the difference in a way that suggests they stopped being careful. Same coat. Always the same coat. Bets on whoever is more interesting regardless of odds, collects their winnings without counting them, and is in conversation with someone between every bout if you watch closely enough to notice.",
+    hook: "On a third or later visit, if the party has handled themselves well, Sable Rei will be at the rail next to them between bouts and say, without looking away from the ring: 'You keep coming back. That means you like it here, or you're learning something. Either way, come find me downstairs after the headliner.' The south door will be unlocked."
+  }
+];
+
+const strip = document.getElementById('npcStrip');
+npcs.forEach(n => {
+  const row = document.createElement('div');
+  row.className = 'npc-row';
+  row.innerHTML = `
+    <div class="npc-icon">${n.icon}</div>
+    <div class="npc-info">
+      <div class="npc-name">${n.name}</div>
+      <div class="npc-role">${n.role}</div>
+      <div class="npc-detail">
+        ${n.detail}
+        <div class="npc-hook">⚓ ${n.hook}</div>
+      </div>
+    </div>
+  `;
+  row.addEventListener('click', () => row.classList.toggle('open'));
+  strip.appendChild(row);
+});
+</script>
+</body>
+</html>
