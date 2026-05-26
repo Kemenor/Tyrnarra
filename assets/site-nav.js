@@ -51,6 +51,7 @@
       { slug: 'merkavar', label: 'Merkavar · the Market City', href: '/talan/domains/lautara/merkavar/merkavar.html', children: [] },
       { slug: 'azkataria', label: 'Azkataria · Pilgrim Cellars', href: '/talan/domains/lautara/azkataria/azkataria.html', children: [] },
       { slug: 'dreaming-cape', label: 'The Dreaming Cape · Twin Lantern', href: '/talan/domains/lautara/dreaming-cape/dreaming-cape.html', children: [] },
+      { slug: 'itsasalda', label: 'Itsasalda · Conductor-Magistracy', href: '/talan/domains/lautara/itsasalda/itsasalda.html', children: [] },
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [
         { slug: 'heartcourt', label: 'The Heartcourt', href: '/talan/domains/lautara/emarrea/heartcourt.html', children: [] }
       ]}
