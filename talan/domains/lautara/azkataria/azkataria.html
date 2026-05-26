@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azkataria · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #b86840;
+    --card-bg: rgba(28,18,12,0.55);
+  }
+
+  /* House grids (Pilgrim + Cellar) */
+  .house-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; max-width: 1000px; margin: 18px auto; }
+  .house-card { padding: 18px 20px; }
+  .house-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 4px; }
+  .house-etym { font-style: italic; color: var(--gold-dim); font-size: 0.82rem; margin-bottom: 10px; line-height: 1.4; }
+  .house-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .house-tag { display: inline-block; font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-top: 10px; }
+
+  /* Three-tier production grid */
+  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
+  .tier-card { padding: 16px 18px; }
+  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
+  .tier-name.bulk      { color: var(--gold-dim); }
+  .tier-name.cellar    { color: #d8a060; }
+  .tier-name.threshold { color: #e8b070; }
+  .tier-band { font-style: italic; color: var(--gold-dim); font-size: 0.82rem; margin-bottom: 8px; }
+  .tier-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Pilgrim route arrival grid */
+  .arrival-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; max-width: 1000px; margin: 18px auto; }
+  .arrival-card { padding: 14px 16px; }
+  .arrival-dir { font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
+  .arrival-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1rem; margin-bottom: 6px; }
+  .arrival-card.canonical .arrival-name { color: #f0c890; }
+  .arrival-card p { font-size: 0.88rem; line-height: 1.45; margin: 0; }
+
+  /* Tension grid */
+  .tension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .tension-card { padding: 16px 18px; }
+  .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
+  .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Helgaft callout */
+  .helgaft-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(56,32,16,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .helgaft-call .h-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .helgaft-call p { margin: 0 0 12px; line-height: 1.6; }
+  .helgaft-call p:last-child { margin-bottom: 0; }
+
+  /* Threshold-token feature panel (signature) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+</style>
+</head>
+<body data-page="azkataria">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><span>Azkataria</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Azkataria</div>
+    <div class="page-subtitle">Lautara Sub-Region · The Pilgrim Cellars</div>
+    <div class="page-flavor">"Where the climb begins, the cellars run deepest."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>azoka</i> (market, fair) + <i>-tar(ra)</i> (people-of, native-of) → <i>azokataria</i> → vowel-loss to <b>Azkataria</b>, "market-folk / people of the market."</dd>
+    <dt>Position</dt><dd>The agricultural feeder belt <b>south of Merkavar</b>, wrapping the southern face of the city-state's lake-and-Helgafjall territory and holding the <b>southern approach to the sacred peak</b>. Neighbours: <a href="/talan/domains/lautara/merkavar/merkavar.html"><b>Merkavar</b></a> (north, the city-state-with-territory), <b>Atarialda</b> (east, the threshold-region), <b>Lioaru</b> (south), <b>Ezkudon</b> (southeast).</dd>
+    <dt>Terrain</dt><dd>Rolling cultivated country: terraced vineyards on the south-facing slopes, walled orchards across the lowlands, market-gardens close to the river-courses, dairy meadows where the soil thins. The southern slopes of <b>Helgafjall</b> rise out of the northern reach; the pilgrim trails climb them.</dd>
+    <dt>Character</dt><dd>
+      <i>Cellar-deep, harvest-rich, pilgrim-traversed</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Wine &amp; Orchard</span><span class="pill">Pilgrim Trails</span><span class="pill">League of Houses</span><span class="pill">Agricultural-Eastern</span></div>
+    </dd>
+    <dt>Peoples</dt><dd><b>Vishkanya</b> anchor the Cellar Master class through the precision of vintage-aging. <b>Halflings</b> anchor the village layer (orchard-keepers, dairy-workers, the rail-junction workforce) and the trail-keeper cohort of the Pilgrim Houses. The steward and day-labour ranks pull from the wider cosmopolitan mix the domain carries; a scatter of <b>Merkavar-kitsune</b> keep information-stalls in the larger market-towns.</dd>
+    <dt>Tongue</dt><dd>Talanese throughout. Cellar work uses a long-standing Vishkanya-flavoured trade-cant for vintage-aging records and clergy certification; the cant carries Basque place-names and Icelandic House-names without translation.</dd>
+    <dt>Faith</dt><dd><b>Jianna</b>-devotional with a worked theology: the well-aged vintage and the honestly-recorded ledger are acts of faith. Certified vintages carry the Jianna-clergy mark on the bottle; the certifying clergy take a cut of the price as part of the church's revenue.</dd>
+    <dt>Rule</dt><dd><b>The Cellarsworn</b>, the chartered League of Cellar Houses; rule sits with the <b>Council of Cellar Masters</b>, which meets at <b>Roskelstein</b> on the four-Azoka cadence two weeks before each Merkavar market.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(184,104,64,0.5);">
+    <div class="gods-city-label">Threshold Shrine</div>
+    <div class="gods-city-name">Roskelstein</div>
+    <div class="gods-city-byname">The Threshold Stone · Seat of the Council</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Roskelstein (Icelandic <i>Þröskuldssteinn</i>, "Threshold Stone") is the deep-old shrine at the trailhead where the pilgrim route up Helgafjall begins. The shrine pre-dates the League; the League gathered around it. Pilgrims set down their threshold-tokens here at the foot of the climb; the Council of Cellar Masters convenes here in the two weeks before each of Merkavar's four great markets.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cellarsworn" class="section-heading">The Cellarsworn</h2>
+  <div class="prose">
+    <p>The polity of Azkataria is <b>the Cellarsworn</b>, the chartered League of Cellar Houses. The compound names what the polity is: those <i>sworn to the cellar and the charter</i>, the Cellar Masters bound by oath to the League and to the cellars they keep. Rule sits with the <b>Council of Cellar Masters</b>, the seated body of all currently chartered Cellar Houses; the Council meets at <a href="#at-a-glance">Roskelstein</a> at the foot of Helgafjall on the four-Azoka cadence, two weeks before each of Merkavar's great markets, so the League's positions are settled before each House sends its merchant-representatives down to vote in the city.</p>
+
+    <p>The Council's core work is the running maintenance of an agricultural polity that <b>negotiates with</b> rather than reports to the Market City: setting joint freight-rates with the <a href="/talan/domains/lautara/merkavar/merkavar.html"><b>Halfling Railworkers' Association</b></a>, certifying the year's vintages and preserves under the Cellar Mark, arbitrating intra-House disputes over water-rights, road frontage, and altar-wine contracts. Within an estate, the villages are the affair of the House whose cellar they feed; the Council does not govern village life directly, and the villages have no Council seat of their own.</p>
+
+    <p>The League was charted in the <b>early Adventurer Era</b>, when the southern wine-and-orchard trade had outgrown its pilgrim-hospitality origins and the estates realised Merkavar's clergy were extracting concessions any single House could not refuse. The first League charter is the document that bound the Houses to negotiate as one. It still does.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-pilgrim-houses" class="section-heading">The Pilgrim Houses</h2>
+  <div class="prose">
+    <p>The three oldest Houses of the Cellarsworn are the <b>Pilgrim Houses</b>, founded over the deep centuries on the Helgafjall trails to shelter and feed pilgrims climbing the sacred peak. Their hospitality cellars discovered they could age wine in the same cool stone the pilgrim-provisions kept, and the wine-trade grew out of the pilgrim-trade. The Pilgrim Houses still hold their stretch of trail by formal charter from Jianna's clergy: the trail is theirs to maintain, the way-shrines theirs to keep lit.</p>
+  </div>
+
+  <div class="house-grid">
+    <div class="accent-card house-card">
+      <div class="house-name">Fornbar</div>
+      <div class="house-etym">Icelandic <i>fornn</i> (ancient) + <i>bær</i> (estate) → <i>Fornbær</i> → vowel-smoothing → "the Ancient Estate"</div>
+      <p>The oldest House, deepest cellar, the prestige seat of the League. Fornbar's Pilgrim Reserves are the bottles other Houses measure their work against; its Cellar Master's House mark on a certification carries weight beyond its size on the page.</p>
+      <div class="house-tag">Prestige Seat</div>
+    </div>
+    <div class="accent-card house-card">
+      <div class="house-name">Lestastad</div>
+      <div class="house-etym">Icelandic <i>lestur</i> (reading) + <i>staður</i> (place) → <i>Lestrastaður</i> → vowel-loss + trailing <i>-ur</i> dropped → "the Reading-Place"</div>
+      <p>The scholar's House, with the largest cellar-library on the trail and the standing <b>Helgaft</b> residency for visiting Thekkavar scholars (see callout below). The <i>scholar-Master</i> pipeline runs through Lestastad: a Cellar Master who came as a student, never left, and rose through the cellar work is a working norm here.</p>
+      <div class="house-tag">Scholar's House</div>
+    </div>
+    <div class="accent-card house-card">
+      <div class="house-name">Starnasal</div>
+      <div class="house-etym">Icelandic <i>stjörnur</i> (stars) + <i>salur</i> (hall) → <i>Stjörnusalur</i> → drift through <i>Starnusalur</i> → "Star-Hall"</div>
+      <p>The astronomer's House, oriented to the higher way-shrines along the trail. Natural philosophers from Thekkavar walk Starnasal's stretch at first dark; the way-shrines double as observation-shelters by long-standing custom, and the House keeps a small register of who has read what from which shelter on which night.</p>
+      <div class="house-tag">Astronomer's House</div>
+    </div>
+  </div>
+
+  <h3 id="threshold-tokens" class="section-heading" style="font-size: 1.1rem; margin-top: 28px;">Roskelstein and the Threshold-Tokens</h3>
+  <div class="feature-panel prose">
+    <p>Each pilgrim sets down a small object at Roskelstein when they begin the climb. The <b>threshold-token</b> marks what they hope to leave behind, what they hope to bring back, or what they hope to be changed by. The form of the object is the pilgrim's own choice; the practice is the rite. A widow may leave a cradle-blanket; a merchant may leave a single coin from a deal they regret; a Thekkavar scholar may leave an unfinished line of writing. Roskelstein's lower stones are crowded with tokens at every hour of the climbing season, and the Pilgrim House whose charter holds that stretch of trail gathers them into its reckoning.</p>
+
+    <p>The disposal of the tokens is by ritual, and the ritual matches the pilgrim's intent. A token for what is <i>released</i> is burnt at the cellar door at the new year. A token for what should <i>stay</i> is buried at the trailhead in the spring rains. A token for what should be <i>transformed</i> is kept in the cellar with the vintages aging, in a sealed chamber at the deepest level of the House. The Pilgrim Reserves (see <a href="#the-three-marks">The Three Marks</a> below) are the wines aged in those cellars: the bottles that share their stone with what pilgrims have asked be transformed.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cellar-houses" class="section-heading">The Cellar Houses</h2>
+  <div class="prose">
+    <p>The younger Houses of the Cellarsworn are the post-Adventurer-Era estates that joined the League at its founding charter. They built no pilgrim-houses, hold no trail-charters, and their bottles carry the Cellar Mark alone. Their work is pure wine-and-orchard at scale, and they bring the modern estate's production-line discipline to the League's collective work. The three together carry the bulk of the Cellar Mark volume that Merkavar's markets actually sell.</p>
+  </div>
+
+  <div class="house-grid">
+    <div class="accent-card house-card">
+      <div class="house-name">Goldenleaf</div>
+      <div class="house-etym">Plain English (modern stratum)</div>
+      <p>The autumn-harvest House. Its vineyards turn the colour of the name in the weeks before <b>Uzta-Azoka</b>; visitors who time the autumn road right find themselves walking under whole hills of gold leaf for ten days running. Goldenleaf's autumn vintage is consequently the House's largest single product, sold under the freight-window pricing that <b>Uzta-Azoka</b> opens.</p>
+      <div class="house-tag">Autumn Harvest</div>
+    </div>
+    <div class="accent-card house-card">
+      <div class="house-name">Sundwell</div>
+      <div class="house-etym">Modern English with archaic <i>-d-</i> insertion (cf. <i>sund</i> in old English place-names) · <i>sun + well</i></div>
+      <p>The sun-rich House on the south-facing slopes. The longest light reaches Sundwell's vines, the warmest cellars hold its vintages through the cold months, the highest-sugar grapes ripen on its terraces. Sundwell wines are heavier, more alcoholic, and (when aged with discipline) capable of holding their structure decades past the working norm.</p>
+      <div class="house-tag">Sun-Rich Slopes</div>
+    </div>
+    <div class="accent-card house-card">
+      <div class="house-name">Highvine</div>
+      <div class="house-etym">Plain English (modern stratum)</div>
+      <p>The upper-altitude House. Highvine's vineyards run toward the Helgafjall foothills, where the grape ripens slower and the cellar runs a degree colder all year. The wines are leaner, brighter, structured for long-aging; Highvine's Cellar Master holds the longest-running argument with the other two on whether a Cellar Mark vintage should be drunk young or kept.</p>
+      <div class="house-tag">Foothill Vines</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-three-marks" class="section-heading">The Three Marks</h2>
+  <div class="prose">
+    <p>Azkataria's production splits in three tiers. The seal on the bottle tells the buyer which.</p>
+  </div>
+
+  <div class="tier-grid">
+    <div class="accent-card tier-card">
+      <div class="tier-name bulk">Uncertified</div>
+      <div class="tier-band">bulk daily-bread · no seal</div>
+      <p>Table wine, fruit, milk, vegetables, the working cheeses. Ships uncertified to Merkavar for the everyday markets, sold at the four-Azoka rhythms at the prices the city sets. Most of Azkataria's actual tonnage moves this way.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-name cellar">Cellar Mark</div>
+      <div class="tier-band">Council-certified vintages · formal trade</div>
+      <p>The seal of the Cellarsworn. Council-certified vintages and preserves from named cellars under known masters, the working luxury of the silk-road register. Carries the certifying Jianna-clergy mark alongside the Cellar Master's House mark. The newer Cellar Houses (Goldenleaf, Sundwell, Highvine) carry the bulk of the Cellar Mark volume.</p>
+    </div>
+    <div class="accent-card tier-card">
+      <div class="tier-name threshold">Threshold Seal</div>
+      <div class="tier-band">Pilgrim Reserves · prestige sub-class · export name: <i>Helgafell Mark</i></div>
+      <p>The seal applied to Pilgrim Reserves, the prestige sub-class of vintages aged in the cellars that also hold the threshold-tokens pilgrims have asked be transformed. Produced only by the Pilgrim Houses with active trail-charters (Fornbar, Lestastad, Starnasal). The export trade calls the same seal the <b>Helgafell Mark</b>, using the Anglicised drift of Helgafjall that foreign buyers recognise faster than the threshold-token tradition.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="helgaft-call">
+    <div class="h-label">The Helgaft · Scholar's Residency at Lestastad</div>
+    <p>"Doing a Helgaft" is the working phrase among Thekkavar's colleges: a season or more in residency at <a href="#the-pilgrim-houses">Lestastad</a>, the scholar's Pilgrim House at the foot of Helgafjall. The name traces to Icelandic <i>Helga-fót</i> "foot of the holy mountain," what students once called the long retreat until the slang formalised. A Helgaft means the cellar-library by lamplight in the long mornings, the trail by daylight, the higher way-shrines after sundown for the astronomers among the residents, and dinner with whichever cellar workers are off the floor that night.</p>
+    <p>The residency runs from any of the four Azoka markets to any other, by the student's arrangement with Lestastad's Cellar Master and their professor at Thekkavar. Theology students read Jianna's commercial-theology in Lestastad's cellar-library; natural philosophers walk the way-shrines as observation-shelters; visiting professors take retreat-seasons there to write. Some never quite leave: a scholar-Master at Lestastad is often a former Thekkavar student who came on Helgaft thirty or forty years ago and never went back.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-southern-pilgrim-route" class="section-heading">The Southern Pilgrim Route</h2>
+  <div class="prose">
+    <p>Azkataria holds the canonical pilgrim route up Helgafjall. The other three approaches to the sacred peak each carry their own character; the southern is the slow route and the faithful route, the one whose travellers are most often Thekkavar scholars on Helgaft or Jianna-clergy on the long retreat.</p>
+  </div>
+
+  <div class="arrival-grid">
+    <div class="accent-card arrival-card canonical">
+      <div class="arrival-dir">South · Azkataria</div>
+      <div class="arrival-name">The Pilgrim Approach</div>
+      <p>The canonical pilgrim ascent. Travellers from Lioaru and Ezkudon, and those routed through <b>Atarialda</b> from further east who want the formal pilgrimage, detour south through Azkataria, ascend the trail by the Pilgrim Houses' way-shrines, and leave their threshold-tokens at Roskelstein.</p>
+    </div>
+    <div class="accent-card arrival-card">
+      <div class="arrival-dir">North · Itsasalda</div>
+      <div class="arrival-name">The Commercial Approach</div>
+      <p>The lake-and-river arrival. Goods from the Midarra coast and the Order of Steam bay reach Merkavar this way; people who travel with goods (merchants, caravan-leaders, train conductors) arrive here. The pilgrim infrastructure on the northern face is scant; the ascent from this side is the short and secular climb.</p>
+    </div>
+    <div class="accent-card arrival-card">
+      <div class="arrival-dir">East · Atarialda</div>
+      <div class="arrival-name">The Threshold Region</div>
+      <p>The eastern overland traffic from Egulon, Ezkudon, and Zuzental crosses Atarialda before reaching Merkavar. Atarialda itself feeds travellers into a choice: south through Azkataria for the pilgrim ascent, or north through Itsasalda for the short commercial ascent. A Thekkavar scholar on Helgaft will detour south; a merchant on schedule will go north.</p>
+    </div>
+    <div class="accent-card arrival-card">
+      <div class="arrival-dir">West · <a href="/talan/domains/lautara/emarrea/emarrea.html">Emarrea</a></div>
+      <div class="arrival-name">The Kitsune Mediation</div>
+      <p>The kitsune kingdom on Lautara's western margin receives travellers from Sumendar and Tahu Tangata before they reach the Market City. The Heartcourt does informal hospitality on its own terms; Pilgrim House infrastructure does not reach this approach, and the kitsune set the pilgrim's tone for any traveller who arrives this way.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples-and-faith" class="section-heading">Peoples and Faith</h2>
+  <div class="prose">
+    <p><b>Vishkanya</b> anchor the Cellar Master class. The work of vintage-aging is a precision-of-numbers discipline (cellar-temperature logs across decades, oxidation curves, blending ratios, the long ledger-work of certification), and the Vishkanya inclination to numerical precision suits it. The pipeline to and from <a href="/talan/domains/lautara/merkavar/merkavar.html">Jianna's clergy in Merkavar</a> runs heavily through the Vishkanya: a Cellar Master who studied clergy administration before returning to a House cellar is a working norm, and a Vishkanya clergy administrator who retired to a Cellar Master's seat after a long career in the city is the same story told in reverse.</p>
+
+    <p><b>Halflings</b> anchor the village layer of Azkataria. The orchard-keepers, dairy-workers, vintners' apprentices, and the rail-junction workforce that ties the southern feeder lines to the <a href="/talan/domains/lautara/merkavar/merkavar.html">Halfling Railworkers' Association</a> are predominantly Halfling. The same population provides the trail-keeper cohort of the Pilgrim Houses: road-maintenance, way-shrine-lighting, pilgrim-greeting at Roskelstein. The trail-keeper rank is the <b>second pipeline</b> into a Cellar Master's seat, where many a Pilgrim House's oldest Master rose from a trail-keeper's family. The two pipelines (trail-keeper-risen, scholar-risen) are the two ways into the cellar-master ranks, and the social texture of the Pilgrim Houses is shaped by which Master came from which path.</p>
+
+    <p>The steward and day-labour ranks pull from the wider cosmopolitan mix the domain carries, with no single ancestry dominant. A scatter of <b>Merkavar-kitsune</b> keep information-stalls in the larger market-towns, reading the southern trade the way they read everything else.</p>
+
+    <p>Faith is <b>Jianna-devotional</b>, with a worked theology that distinguishes Azkataria's clergy from the more abstract commercial-philosophy of Merkavar's standing administration. In Azkataria the act of faith is concrete and tactile: the well-aged vintage and the honestly-recorded ledger are the church's acts of worship, and a Cellar Master who falsifies a certification is a sinner before they are a swindler. Certified vintages carry the Jianna-clergy mark on the bottle; the certifying clergy take a cut of the price as part of the church's revenue, and the certification fee is the largest single income stream of the Azkataria parish.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="live-tensions" class="section-heading">Live Tensions</h2>
+  <div class="prose">
+    <p>Four arguments run in the Council Hall and through the cellars at every gathering. None are near resolution.</p>
+  </div>
+
+  <div class="tension-grid">
+    <div class="accent-card tension-card">
+      <div class="tension-name">Heritability Drift</div>
+      <p>The longest-running House dynasties have started talking about Cellar Master succession as if it were heritable, and the younger Cellar Houses argue against any drift toward inheritance. The Council so far holds the line on nomination-from-within-the-House's-working-ranks. The argument runs every gathering.</p>
+    </div>
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Villages and the City</div>
+      <p>The villages within each estate get no Council seat, and a handful have begun submitting petitions to Merkavar's clergy directly, bypassing their House. The clergy have accepted some, which the Cellarsworn read as Merkavar reaching past the League into Azkataria's internal affairs.</p>
+    </div>
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Reserve Monopoly</div>
+      <p>The newer Cellar Houses chafe at the Pilgrim Reserve monopoly held by the trail-chartered Pilgrim Houses. The Council has so far blocked every motion to let trail-charters be purchased rather than inherited from the original founding; the older Houses argue that the charters were granted for the maintenance of the trails, not the brand on the bottles.</p>
+    </div>
+    <div class="accent-card tension-card">
+      <div class="tension-name">The Trails and the Slopes</div>
+      <p>The line between <i>the trails</i> (the Pilgrim Houses' charter from Jianna's clergy) and <i>the slopes proper</i> (Merkavar's city-state territory) gets contested in places where they meet, especially around the higher way-shrines closer to the peak. Merkavar's clergy occasionally reassert their ownership of the mountain; the Pilgrim Houses point to the age of their charters.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Cradle-Blanket Vintage</button>
+    <div class="legend-era-content">
+      <p>They say there is a vintage at <b>Fornbar</b>'s deepest cellar that nobody draws from anymore. It was laid down the year a Hammer-Lord's widow climbed the southern route to bury her grief at Roskelstein. The token she set down at the trailhead was a cradle-blanket from a child she had lost in winter; the cellar took the blanket, and the wine that aged alongside the blanket took the name of the year.</p>
+      <p>The tale, as it gets told in the inns of Atarialda and at the freight-yard tables of Merkavar, is that merchants who paid Fornbar's price for a single bottle of that vintage came down off the mountain remembering names they had not been able to summon in twenty years. A father's voice. The pet-name a child had used. A line of a hymn from a temple that closed before the Dark Era ended. The clergy of Jianna do not certify any of this; the chronicle of the cellar does not record it; <a href="/gods-law.html">the Compact</a> says nothing about cellars at all.</p>
+      <p>Whether any bottle from that vintage still exists in working stock is a question Fornbar's Cellar Master answers by silence. The travellers who tell the tale say the silence is the answer.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the polity's central canon settled, several details about Azkataria remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Named Cellar Masters of the six Houses.</b> Fornbar's prestige Master, Lestastad's scholar-Master and the standing Helgaft tradition's keeper, Starnasal's astronomer-Master, and the three modern Cellar Houses' Masters all need their figures. Names will surface as stories want them.</li>
+      <li><b>The merchant-house apprentice prayer-formulae.</b> Merkavar merchant-houses send their apprentices up the trail to recite formulae at Roskelstein and at the way-shrines; the specific words, and the per-clergy summit formula, are <a href="/talan/domains/lautara/merkavar/merkavar.html">flagged on the Merkavar page</a> and open here too.</li>
+      <li><b>Exact way-shrine count and naming.</b> The way-shrines are kept lit by trail-keepers and used as observation-shelters by Starnasal's astronomers; how many stand along the trail, what each is dedicated to, and which lie in which Pilgrim House's charter-stretch is unwritten.</li>
+      <li><b>The token-disposal calendar.</b> Burnings are at new year, burials in spring rains, transformations sealed into the cellars on no fixed date; the precise rhythm and the named festivals around each are open.</li>
+      <li><b>The villages.</b> The estates of the six Houses each sit around a cluster of working villages; the named villages, their populations, their seasonal-market routes into Merkavar, and the specific structure of the village-petition drama with the clergy are unwritten.</li>
+      <li><b>The Houses' charter-stretches on the trail.</b> Fornbar holds the oldest stretch; Lestastad and Starnasal hold the middle and higher stretches respectively; the exact dividing-shrines and which House holds which way-shrine are canon-pending.</li>
+      <li><b>Cross-canon: the Atarialda flavour of the pilgrimage-versus-commerce choice.</b> Atarialda routes east-overland travellers into the southern-or-northern-arrival decision; the specific named inns, way-stations, and trail-keepers' guesthouses at the Atarialda/Azkataria boundary will land when Atarialda gets its own pass.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · AZKATARIA</div>
+
+</div>
+
+</body>
+</html>
