@@ -11,7 +11,7 @@ How the persistent sidebar on every page is built and how to extend it.
   - **`DOMAINS`**: the array of 13 god-domains. Same shape: `slug`, `label`, `href`, `children`.
   - **The remaining top-level section markup** (World & Cosmos, Factions, Off-Continent): string literals inside `buildNavHtml()`.
 
-  Both `TALAN_PAGES` and `DOMAINS` are **recursive trees**; any `children` entry may itself carry a `children` array. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Brauogi → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
+  Both `TALAN_PAGES` and `DOMAINS` are **recursive trees**; any `children` entry may itself carry a `children` array. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Lautara → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
