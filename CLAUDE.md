@@ -2,7 +2,7 @@
 
 This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages. Pages are hand-crafted HTML; **shared chrome lives in `/assets/`** (sidebar nav, Style A and Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
 
-For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see [`docs/kingdom-workflow.md`](docs/kingdom-workflow.md).
+For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see the `sub-region-workflow` skill at [`.claude/skills/sub-region-workflow/SKILL.md`](.claude/skills/sub-region-workflow/SKILL.md).
 
 ---
 
