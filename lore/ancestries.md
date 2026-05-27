@@ -2,7 +2,7 @@
 
 A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `timeline.md`, `geography/<region>.md`, `factions.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
 
-**Peoples with deep cultural canon** live in `lore/cultures/<people>.md` and absorb their own per-ancestry section there. This file holds the lookup-tier placement and demographics; one-line stubs below point to the cultures file for any people whose living-culture canon has graduated to its own file.
+**Peoples with deep cultural canon** live with their place in `lore/geography/<domain>/<sub-region>.md` and absorb their own per-ancestry section there. This file holds the lookup-tier placement and demographics; one-line stubs below point to the geography file for any people whose living-culture canon has graduated to its own file (Kitsune → Emarrea, Tengu → Haizetsua, Fenurran-stock → Fenurra, Sortalde peoples → off-continent).
 
 ---
 
