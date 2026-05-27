@@ -1,6 +1,8 @@
-﻿# Bestiary: Ancestries, Heritages, & Otherworldly Beings
+# Ancestries & Heritages of Talan
 
-A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography/<region>.md`, `factions.md`, and `cultures.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
+A reference for the playable peoples of Talan and the otherworldly beings adjacent to them. What this file captures is **where each ancestry lives in Tyrnarra's setting**, what role they play in the world, and how they connect to the canon in `cosmology.md`, `gods.md`, `secret-history.md`, `geography/<region>.md`, `factions.md`, and `cultures/<people>.md`. System-side bookkeeping (renames, additions, removals, heritage reshuffles, mechanical rules) lives in `pf2e-notes.md`.
+
+**Peoples with deep cultural canon** live in `lore/cultures/<people>.md` and absorb their own per-ancestry section there. This file holds the lookup-tier placement and demographics; one-line stubs below point to the cultures file for any people whose living-culture canon has graduated to its own file.
 
 ---
 
@@ -41,7 +43,7 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 
 **Rare everywhere:** Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
-**Sortalde-native (Eastern continent; see `geography/_continent.md` → Other Continents → Sortalde):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; full per-ancestry detail in *Sortalde Ancestries: The Six Petals* below.
+**Sortalde-native (Eastern continent):** Samsaran (Lundao) · Sarangay (Niudao) · Tanuki (Xidao) · Wayang (Yingdao) · Yaksha (Lingdao) · Yaoguai (Wandao). All six are rare-bordering-on-vanishing on Talan; per-people canon in [`cultures/sortalde.md`](cultures/sortalde.md). Continent geography in [`geography/_continent.md`](geography/_continent.md), *Other Continents → Sortalde*.
 
 ---
 
@@ -113,6 +115,9 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 ### Elf
 **Dominant in Zuzental (Law / Forseti)** alongside humans. Politically motivated and **long-planning**; the elven side of the Thousand Kingdom's politics moves on generational timescales, often outlasting and out-thinking the human factions whose lives don't span the same windows. Elves are one of the two ruling bloodlines of the Thousand Kingdom.
 
+### Fenurran-stock human
+**Human-stock; the Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain) are culturally distinct, ancestrally human.** Full living-culture canon (the four tribes, the Speaker's Mantle, materials, warfare, weapons) in [`cultures/fenurra.md`](cultures/fenurra.md). The bestiary-tier placement is simply *human, with deep regional cultural register.*
+
 ### Fetchling
 **Dominant in Myrkono (Darkness / Araphel).** Remnants of a civilisation that sought refuge in the region of Darkness and found it; the lineage stayed, and Myrria grew around it. Many fetchlings serve Araphel directly, including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`). Uncommon outside Myrkono.
 
@@ -156,9 +161,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations, sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
-**Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**, the kitsune kingdom in Lautara's forested western highlands. Full cultural detail in `cultures.md` (Kitsune: Heartcourt; the nine Hearts; Catjomin Sake tradition; lifespan and tail-growth). The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
-
-Fisaya herself is depicted as a female kitsune with multicolour fur (see `gods.md`, the Thirteen). Kitsune communities feel a doctrinal pull toward Vindul (Fisaya's home domain) regardless of where they live; the wind reaches them from any direction. The actual demographic centre of kitsune life remains in Emarrea (Commerce).
+**Known as the Divine Envoys. Dominant in Lautara**, specifically in **Emarrea**. Fisaya herself is depicted as a female kitsune; the affinity goes back as far as the chronicle record reaches. Full living-culture canon (Heartcourt, Catjomin Sake, Kyūbi-no-Den, foxfire, lifespan and tail-growth) in [`cultures/kitsune.md`](cultures/kitsune.md).
 
 ### Kobold
 **Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity: Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `gods.md`).
@@ -187,6 +190,9 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 ### Ratfolk
 **Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities; they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground.
 
+### Samsaran · Sarangay · Tanuki · Wayang · Yaksha · Yaoguai
+**Sortalde-native; all six rare-bordering-on-vanishing on Talan.** Per-people canon (homeland petal, on-Talan presence, Concord roles) in [`cultures/sortalde.md`](cultures/sortalde.md). Continent geography in [`geography/_continent.md`](geography/_continent.md), *Other Continents → Sortalde*.
+
 ### Shisk
 **Dominant in Ezkudon (Knowledge / Enki).** Hunters of esoteric knowledge; they pursue the kind of lore that other scholars consider dangerous or theologically forbidden. Their over-representation in Enki's secret-keeper hierarchy is so pronounced that "shisk-curiosity" is a common warning given to junior Ezkudon novices.
 
@@ -206,7 +212,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 **Insectoid sapients of the deep places.** **Uncommon in the upper Darklands**; they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals; see `secret-history.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
 
 ### Tengu
-**Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks; the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul.
+**Usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. Full living-culture canon (Skarvorn Republic, eleven clans, Vornsketta, singing cities, stormsinging, three teas, eight winds) in [`cultures/tengu.md`](cultures/tengu.md).
 
 ### Tripkee
 **Commonly found on the Floating Isles of Shuun**: the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Athamaru and Merfolk; Tripkee are the most settled of the three (Athamaru swim past, Merfolk pass underneath; Tripkee build).
@@ -216,53 +222,6 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 
 ### Vishkanya
 **Most common in Lautara (Commerce / Jianna).** **Keeping community** is a core Vishkanya value, and **following creative pursuit** is the second. They are over-represented in artisan-merchant guilds and in the more refined corners of Lautara's market culture. Jianna herself is depicted as a vishkanya (see `gods.md`).
-
----
-
-## Sortalde Ancestries: The Six Petals
-
-The six Tian Xia ancestries (**Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai**) are native to **Sortalde** (*Tao Hua Yuan* internally), the petal-archipelago continent east of Talan across Hafra. Each has one ancestral homeland petal; the seventh petal (**Heting**, "Concord-Court") is the central seat where all six meet through their ambassadors. Full continent geography in `geography/_continent.md`, *Other Continents → Sortalde*.
-
-**On Talan, all six are rare.** The crossing is hard (stormy outer ring, surviving merchants only), so individuals from Sortalde reach Talan in single-digit numbers per generation, and almost always through the standing Sortalde embassies on the **Emerald Isles** (the Zuzental island kingdom whose outer holdings sit on the Hafra / Cloud Sea boundary, the cloudship landing point for Sortalde traffic; see `geography/zuzental.md`, *Emerald Isles*). A Sortalde-ancestry character on Talan is a *story*, not a demographic.
-
-| Ancestry | Sortalde homeland | Talan presence |
-|---|---|---|
-| **Yaoguai** | Wandao (Myriad Island), outer petal | Rare; most common Sortalde ancestry seen in Talan because Wandao is closest. |
-| **Tanuki** | Xidao (Theatre Island), outer petal | Rare; itinerant performer-merchants occasionally cross. |
-| **Sarangay** | Niudao (Ox Island), outer petal | Rare; usually attached to embassy security details. |
-| **Wayang** | Yingdao (Shadow Island), inner petal | Vanishingly rare; the inner-petal Wayang rarely cross at all. Those who do are typically on intelligence assignments. |
-| **Yaksha** | Lingdao (Spirit Island), inner petal | Functionally never seen on Talan; Yaksha are *bound* to specific places by their nature and cannot leave them comfortably. The very rare Talan-side Yaksha is doctrinally an exile. |
-| **Samsaran** | Lundao (Wheel Island), inner petal | Vanishingly rare; Samsaran chancellors are the continuity of the Concord and are not usually permitted to risk the crossing. A Talan-side Samsaran is almost always a retired chancellor or a heretic. |
-
-### Samsaran
-**Long-lived contemplatives with multi-life memory.** Native to **Lundao** (Wheel Island), the inner contemplative-bureaucratic petal of Sortalde. Samsaran serve as the **chancellors of the Concord of Courts**: multi-life civil servants whose continuity bridges human lifespans and gives Sortalde its institutional memory. A typical Samsaran chancellor has held office across two or three reincarnations and remembers the relevant policy history personally. Politically, this makes the Concord very hard to deceive on long-running questions, and very capable of patient strategy.
-
-**On Talan:** functionally never. The very rare Talan-side Samsaran is a retired chancellor pursuing a private project, or a heretic whose multi-life dissent made them inconvenient to keep at home. Either way, they are *interesting*; Samsaran are reliable witnesses to events much older than any other living source on Talan can recall.
-
-### Sarangay
-**Bull-folk warrior caste, strong oath-keepers.** Native to **Niudao** (Ox Island), an outer petal. Sarangay houses serve as the standing martial nobility of the Concord; they hold no single petal's court but instead provide warriors to all of them under inter-petal contract. Their oaths are notoriously durable: a Sarangay oath survives reincarnation cycles (theirs and others'), feuds, and continent-scale political upheaval.
-
-**On Talan:** uncommon among the rare set; Sarangay are usually attached to Sortalde embassy security details on the **Emerald Isles**. A Sarangay character on Talan unattached to an embassy is typically discharged-and-stranded or oath-pursuing an outcome that can only be resolved off-petal.
-
-### Tanuki
-**Shapeshifters, raccoon-dog-coded, mischievous and convivial.** Native to **Xidao** (Theatre Island), an outer petal. Tanuki are the performer-merchant class of Sortalde; their troupes circulate the inner seas, run inter-petal trade, and serve as informal cultural ambassadors. Their shapeshifting is theatrical as much as practical (most Tanuki perform openly; their deceptions are advertised in advance and admired for craft).
-
-**On Talan:** the most-likely-to-be-seen Sortalde ancestry alongside Yaoguai. Tanuki troupes occasionally survive the crossing for trade or performance contracts. The largest standing Tanuki population on Talan is on the **Emerald Isles** (around the embassies), with smaller settled communities working the touring circuits of Lautara, Crossroads in particular, where their performance culture meshes with the tri-domain commerce-and-rumour atmosphere.
-
-### Wayang
-**Shadow-folk, shadow-courtiers, shadow-puppet archivists.** Native to **Yingdao** (Shadow Island), an inner petal. Wayang serve as the spies, diplomats, and secret-keepers of the Concord; most of Sortalde's institutional secrets have passed through Yingdao at some point and are stored in the shadow-puppet archives there (an unusual archival medium: each significant secret is encoded as a shadow-play that must be performed to be read).
-
-**On Talan:** vanishingly rare. Wayang who cross to Talan are typically on intelligence assignments, embedded in the Sortalde embassies on the **Emerald Isles**, or working as freelance information brokers anywhere the secrets are good (Crossroads being a perennial favourite). Almost never seen as general adventurers; if you meet one outside the embassy circuit, they are working.
-
-### Yaksha
-**Nature-spirit-descended; bound to specific places, hereditary nobility.** Native to **Lingdao** (Spirit Island), an inner petal. Yaksha are the **dynastic place-spirits** of Sortalde; each noble lineage is tied to a specific land (a mountain, a river-bend, a forest grove), and the bond is genuine: a Yaksha cannot comfortably leave their bound land for long. This anchors Sortalde's politics to specific geography in a way Talanese politics is not (you cannot move a Yaksha; you negotiate with the place).
-
-**On Talan:** functionally never. A Yaksha away from their bound land suffers: physically, emotionally, theologically. The very rare Talan-side Yaksha is doctrinally an *exile* whose bond was broken by some catastrophe (a kingdom razed, a river dammed, a forest burned). Such characters are tragic figures by definition; the bond cannot be reformed across Hafra.
-
-### Yaoguai
-**Beast-spirit-shaped; a vast taxonomic spectrum.** Native to **Wandao** (Myriad Island), the most populous outer petal. Yaoguai is less a single people than a *category*: beast-shaped sapients of countless forms (fox-spirits, deer-spirits, crane-spirits, monkey-spirits, every animal you can name has a Yaoguai variation somewhere on Wandao). They are the common folk of Sortalde; the Concord's most numerous citizens; the petal that Talanese merchants most often actually reach.
-
-**On Talan:** the most likely Sortalde ancestry seen in Lautara. Yaoguai merchants travel the Talan-Sortalde route in small numbers and often settle in Lautara if they survive long enough to build a trade route both ways. A Yaoguai on Talan is unusual but no longer shocking in the Commerce domain; outside Lautara, still very rare.
 
 ---
 
@@ -340,7 +299,7 @@ These are mortal-ancestry mixes: genetic lineages, with their place in the world
 |---|---|---|
 | **Dhampir** | Half-Vampire | Vampire heritage, undead-touched. Vampires are an independent lineage on Talan, and Dhampir descend from them directly. **Vampires themselves are categorical targets of the Voroir Daua** (Epairima's cycle-warden order; see `gods.md` and `factions.md`); **Dhampir are not**, since they remain within the cycle (mortal, ageing, dying), and the order draws the line at *they didn't choose this*. The order's posture toward a given Dhampir is not warm (the Voroir Daua are professional and reserved, not friendly), but it is not hostile either. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The welcome is cultural: a social courtesy, with the lineage itself staying its own. |
 | **Dragonblood** | Alien Dragons | Descendants of the alien Dragons whose mothership crash-landed during the Gods' Era (see *Dragons* in the ancestry list). Concentrates around Dragon's Reach in Sumendar. Carries some of the dragon-doctrinal hunger for *purity / their roots*; Dragonblood adventurers are often seekers. |
-| **Hungerseed** | Half-Oni | **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra; a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. The Adventurers' Guild's stance is the same as for any unusual heritage: assess the individual, not the lineage. |
+| **Hungerseed** | Half-Oni | **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra; a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. See [`cultures/sortalde.md`](cultures/sortalde.md), *Yaksha (Lingdao · Spirit Island)*. |
 | **Reflection** | Wellspring-direct (Stillpool-born) | **Public framing (cover):** ritual mishap, cosmic blip, or magical duplication; no parent lineage, made sometimes intentionally and often not; arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. **GM truth:** every Reflection is born near a **Stillpool** roughly one week after a mortal interacts with it (looks too long, bathes, drinks, leaves something behind). Stillpools are the residual Wellspring-touched sites left over from the **Lost-Era leak** (see `cosmology.md`, *Wellspring Outflow: Mediation, Leakage, and the Lost-Era Window*, and `secret-history.md`, *The Lost Era: The Real History*). Reflections are mortal-shaped but anchored directly to the Wellspring rather than to any deity-mediated ancestry line, and the Gods' Law's framework for binding mortal/divine ascension does not fully apply to them. **The Golden Emperor was a Reflection**: the only one in recorded history who learned to consciously pull on the connection. See `secret-history.md`, *The Golden Empire: The Real History*. |
 
 ### Bound gods whose touch passes outside bloodline
@@ -356,7 +315,7 @@ Four of the bound thirteen express their touch otherwise than through an exclusi
 
 ## Vice Demons, Virtue Devils, and Bolverk
 
-The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, and **Bolverk** (the megacity in Abyss where they dwell) lives in `bolverk.md`. This file used to carry those sections; they have been migrated so that `bestiary.md` can stay focused on Talan's ancestries and heritages.
+The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, and **Bolverk** (the megacity in Abyss where they dwell) lives in `bolverk.md`. This file stays focused on Talan's ancestries and heritages.
 
 `bolverk.md` covers:
 - The city: geography, the Tunsund channel, the four-terraced neutral strip, the daily flood cycle, the Dauria-Bolverk soul-routing
@@ -375,9 +334,10 @@ The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, an
 - **Lost Kingdom (Blackened Lands geography)**: `geography/lioaru.md`
 - **Dragon's Reach (dragon capital)**: `geography/sumendar.md`
 - **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)**: `gods.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
-- **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)**: `geography/_continent.md` → Other Continents → Sortalde; `glossary.md` for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
-- **Kitsune culture, Heartcourt, Catjomin Sake**: `cultures.md` (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
-- **Fenurran ancestries detail**: `cultures.md` (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
+- **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)**: living-culture canon in [`cultures/sortalde.md`](cultures/sortalde.md); continent geography in [`geography/_continent.md`](geography/_continent.md), *Other Continents → Sortalde*; [`glossary.md`](glossary.md) for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
+- **Kitsune culture, Heartcourt, Catjomin Sake**: [`cultures/kitsune.md`](cultures/kitsune.md) (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
+- **Tengu culture, Skarvorn Republic, eleven clans, Vornsketta, singing cities**: [`cultures/tengu.md`](cultures/tengu.md)
+- **Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain), Speaker's Mantle, Blackglass/Velthite/Ghost Willow, the Scar of Aeris**: [`cultures/fenurra.md`](cultures/fenurra.md) (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
 - **House Eisenhart (dwarven), the Menagerie (Red Empire fleshwarp origin)**: `factions.md`
 - **Spider's Silk Inn (Matron Charna, Anadi)**: `factions.md`
 - **Lord Albrecht Lavisburg, Seraphel Duskbane**: `factions.md` (contemporary heritage / ancestry examples)

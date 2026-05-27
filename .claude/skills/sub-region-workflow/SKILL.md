@@ -30,7 +30,7 @@ If any canon contradicts what you were about to draft, the canon wins. Surface t
 | **2. User picks + refines** | User picks one or combines two. Axis-confirmation only. Ask one or two clarifying questions on placement, neighbors, ancestry-anchor, naming-axis preference | **Axis-confirmation is not a green light to draft prose.** Do not start Phase 4 yet |
 | **3. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
 | **4. Surface the prose draft** | Draft the `geography/<region>.md` bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
-| **5. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/bestiary.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
+| **5. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/ancestries.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
 | **6. HTML mirror** | On an explicit publish signal, upgrade the parent domain HTML card and update cross-page links | Stay within the minimum mirror unless the user signals promotion |
 | **7. Promote to dedicated page** | On an explicit "promote" signal, build `talan/domains/<domain>/<slug>/<slug>.html` using `talan/domains/vindul/haizetsua/haizetsua.html` as template. Wire `assets/site-nav.js`, the parent domain card, `docs/site-inventory.md`, cross-page links. Fold any agent-committed canon back to glossary.md | For multi-page promotion, see *Parallelization* below |
 
@@ -44,7 +44,7 @@ Per CLAUDE.md's pre-read rule, read the relevant lore end-to-end before drafting
 
 1. **`lore/geography/<region>.md`** for domain X, end-to-end (terrain, neighbors, existing sub-region bullets, the god-city). Also read **`lore/geography/<bordering-region>.md`** for each bordering domain named in the file's `**Borders:**` line, since neighbours' canon constrains the sub-region's edges. **`lore/geography/_continent.md`** if the sub-region touches a sea, an off-continent power, or the rail network.
 2. **`lore/glossary.md`** — sub-regions block for the domain; Faction proper nouns if any anchor institutions exist
-3. **`lore/bestiary.md`** — any ancestry already anchored to this sub-region, or candidate ancestries that could be
+3. **`lore/ancestries.md`** — any ancestry already anchored to this sub-region, or candidate ancestries that could be
 4. **`docs/open-threads.md`** — search the target name; flesh-out spec may already be partially drafted
 5. **The parent domain's HTML** (`talan/domains/<domain>/<domain>.html`) — see how the existing card frames it
 6. **Grep the project** for the sub-region name; other pages may cross-reference it and constrain the design
@@ -151,7 +151,7 @@ User green-lights with "commit" / "go ahead" / "publish to lore" / similar. Appl
 |---|---|
 | `lore/geography/<region>.md` | The full sub-region bullet, replacing the prior one-liner |
 | `lore/glossary.md` | Sub-region etymology entry (nested under *Sub-regions → <Domain>* block); new Faction proper nouns subsection if institutions were coined |
-| `lore/bestiary.md` | Ancestry-anchor table updates; full ancestry-entry rewrite if the ancestry moved or is newly Common; cross-reference cleanup in related ancestry entries |
+| `lore/ancestries.md` | Ancestry-anchor table updates; full ancestry-entry rewrite if the ancestry moved or is newly Common; cross-reference cleanup in related ancestry entries |
 | `docs/open-threads.md` | Close or update the sub-region's open-thread entry. Mark "Closed." inline. If any sub-canon remains open, enumerate what's still TBD. |
 
 Lore is now canon. **Do not touch HTML** without an explicit publish signal. Phrasings that count: *publish to HTML*, *render the page*, *make it live*, *put it on the site*, *commit to HTML*, *mirror to HTML*.

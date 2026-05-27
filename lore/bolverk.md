@@ -383,5 +383,5 @@ The Virtue Devil count is **not paired against the seven Vices**; the virtues st
 - **The Corrupted God, Generals of Corruption, the Nine Dungeons**: `secret-history.md`, `the-binding.md`
 - **Betibizi (self-ascended Minor God of Undeath in Abyss)**: `gods.md` (*Named Non-Bound Gods*); she resides in Abyss but **not in Bolverk**
 - **Iro's wound from Drambur**: `gods.md` (Iro, *GM Secret: the wound from Drambur*)
-- **Nephilim with fiendish parentage (descended from Vice Demons or Virtue Devils)**: `bestiary.md` (*Versatile Heritages → Nephilim*)
+- **Nephilim with fiendish parentage (descended from Vice Demons or Virtue Devils)**: `ancestries.md` (*Versatile Heritages → Nephilim*)
 - **PF2e cleric domain grants for the Vice Demons and Virtue Devils**: currently **Open / canon-pending** in `pf2e-registrar.html`; a dedicated non-bound assignment pass will land these together

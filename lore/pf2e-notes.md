@@ -2,7 +2,7 @@
 
 Tyrnarra is built for play with **Pathfinder 2e (Remaster)**. The lore files capture *what is true in the world*; this file captures *how that world maps onto the rules*. GM-facing reference, not canon prose.
 
-**See also:** `bestiary.md` (where each ancestry lives in Tyrnarra), `gods.md` (cleric domains per bound god + Domains Outside the Thirteen), `cosmology.md` (the four schools of magic).
+**See also:** `ancestries.md` (where each ancestry lives in Tyrnarra), `gods.md` (cleric domains per bound god + Domains Outside the Thirteen), `cosmology.md` (the four schools of magic).
 
 ---
 
@@ -16,11 +16,11 @@ Tyrnarra uses the PF2e Remaster ancestry roster, plus the additions below.
 
 ### Access tags
 
-The PF2e *common / uncommon / rare* access tags apply at Talan scale. The Ancestry Distribution table at the top of `bestiary.md` lists per-domain dominance, uncommon access, and rare access for every placement.
+The PF2e *common / uncommon / rare* access tags apply at Talan scale. The Ancestry Distribution table at the top of `ancestries.md` lists per-domain dominance, uncommon access, and rare access for every placement.
 
 ### Sortalde (Tian Xia) ancestry placements
 
-The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Full per-ancestry detail in `bestiary.md`, *Sortalde Ancestries: The Six Petals*.
+The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Full per-ancestry detail in `ancestries.md`, *Sortalde Ancestries: The Six Petals*.
 
 **Hungerseed** is resolved as half-Oni; Oni are bound spirits of **Lingdao** (Spirit Island). Almost all Hungerseeds in canon are Sortalde-born.
 
@@ -35,7 +35,7 @@ The PF2e versatile-heritage roster maps to Tyrnarra as follows:
 - **Aiuvarin** and **Dromaar**: the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
 - **Suli**: generic geniekin, no single-element specialisation.
 
-Full source-mapping table (which god / plane each heritage descends from) lives in `bestiary.md`, *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
+Full source-mapping table (which god / plane each heritage descends from) lives in `ancestries.md`, *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
 
 ---
 
@@ -94,7 +94,7 @@ Per-god favoured weapons in `gods.md`, *The Thirteen: Per-God Sheet*, are both i
 
 ## Ancestries unchanged from PF2e canon
 
-A handful of ancestry entries in `bestiary.md` carry no Tyrnarra-specific reframing; their PF2e default is the canon default. Notable examples: **Gnome**, **Poppet**, **Sprite**. These read as they do in published PF2e material; placement notes in `bestiary.md` capture only their Talan-specific distribution.
+A handful of ancestry entries in `ancestries.md` carry no Tyrnarra-specific reframing; their PF2e default is the canon default. Notable examples: **Gnome**, **Poppet**, **Sprite**. These read as they do in published PF2e material; placement notes in `ancestries.md` capture only their Talan-specific distribution.
 
 ---
 
