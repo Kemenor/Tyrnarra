@@ -2,7 +2,7 @@
 
 How the world works: physical structure, divine mechanics, the Wellspring, magic, planar layers, technology, calendar. Read this before writing anything about how reality is built or operates.
 
-**See also:** `gods.md` (who the gods are; roster, per-god sheets, non-bound gods, divine city-states) · `secret-history.md` (what actually happened; Crimson Rain, Storveldi Denbora, the Elden, the Corrupted God, the Wardstones, the Nine).
+**See also:** `gods.md` (who the gods are; roster, per-god sheets, non-bound gods, divine city-states; per-god GM-tier secrets for Cronus, Tani, Araphel) · `timeline.md` (dated chronology + per-era GM-tier secrets including Crimson Rain True Account, Storveldi Denbora, the Elden, Golden Empire, Dark Era mining) · `geography/myrkono.md` (the Seven Wardstones) · `factions.md` (Nine Generals).
 
 ---
 
@@ -126,7 +126,7 @@ The Bound Gods can be petitioned during an audience at their city-states. The sh
 
 The Wellspring's outflow into the Life Layer is **not self-stabilising**. The source-fluid wants to touch everything it can reach, and what prevents it from doing so unmediated is the presence of gods: many gods, distributed across the Material Plane, each siphoning, channelling, and grant-mediating the outflow through their own divine machinery (cleric magic, ancestry-mediated lineages, divine sanctuaries, ambient grants). **Many gods = dense mediation lattice = stable outflow.** This was the steady state of the Gods' Era: hundreds of gods present, the outflow fully channelled, the world functioning the way mortals expected it to.
 
-**The Week of Crimson Rain broke the lattice.** The Gods' Law banished all divine beings from the Material Plane except the thirteen who accepted the binding (see `secret-history.md`, *Week of Crimson Rain*). The thirteen, alone, could not mediate the outflow at the density the prior pantheon had maintained. **For roughly the first century of the Lost Era, the Wellspring's outflow leaked.** Source-fluid touched the world more directly than at any time since pre-Creation:
+**The Week of Crimson Rain broke the lattice.** The Gods' Law banished all divine beings from the Material Plane except the thirteen who accepted the binding (see `timeline.md`, *Week of Crimson Rain → ⚿ GM Secret: The True Account*). The thirteen, alone, could not mediate the outflow at the density the prior pantheon had maintained. **For roughly the first century of the Lost Era, the Wellspring's outflow leaked.** Source-fluid touched the world more directly than at any time since pre-Creation:
 
 - Dreamers in scattered places **shaped reality in their sleep**.
 - Certain valleys spoke **languages that produced what they named**.
@@ -139,7 +139,7 @@ The Wellspring's outflow into the Life Layer is **not self-stabilising**. The so
 
 **Stillpools: residual leak sites.** When the general leak stopped, a small, **deliberately uncatalogued** number of Wellspring-touched sites remained scattered across Talan. The sources that have made counts disagree; the **Adventurers Guild's sealed atlas** is the closest thing to authoritative, used by high-rank Guild parties as a working register, and even it is presumed incomplete. Local folklore knows them as **fairy-haunted, witch-touched, bad-luck-to-visit**: quiet hidden ponds, clearings, caves, unremarkable to outside observation. Mortals who interact with a Stillpool (look too long, bathe, drink, leave something behind) **have a chance of causing a Reflection to be born nearby roughly one week later.** Every modern Reflection traces back to a Stillpool event. They are not random and not mishaps.
 
-**Stillpool-rivers.** Where a standard Stillpool is a pooled residual leak site (one place, bounded), a **Stillpool-river** is a subsurface flow of the same Wellspring-residue, running as an underground watercourse rather than collecting in a basin. The canonical example is the Stillpool-river beneath the **Dreaming Cape** (Lautara), responsible for the ambient *drift* the Cape is known for and for the Cape's elevated identical-twin-birth rate; see `secret-history.md`, *The Dreaming Cape: The Real History*. Whether other Stillpool-rivers exist on Talan is open; if discovered, the Adventurers Guild's sealed atlas would carry them under the same protocol as pooled Stillpools.
+**Stillpool-rivers.** Where a standard Stillpool is a pooled residual leak site (one place, bounded), a **Stillpool-river** is a subsurface flow of the same Wellspring-residue, running as an underground watercourse rather than collecting in a basin. The canonical example is the Stillpool-river beneath the **Dreaming Cape** (Lautara), responsible for the ambient *drift* the Cape is known for and for the Cape's elevated identical-twin-birth rate; see `geography/lautara.md`, *Dreaming Cape → ⚿ GM Secret: The Dreaming Cape: The Real History*. Whether other Stillpool-rivers exist on Talan is open; if discovered, the Adventurers Guild's sealed atlas would carry them under the same protocol as pooled Stillpools.
 
 ### The Mortal Ascent Ladder
 
@@ -148,7 +148,7 @@ The path from mortality to godhood runs along the same four-tier hierarchy that 
 1. **Mortal → Demi-God.** Accomplished by **collecting enough power**: primarily belief, but also raw deeds, accumulated divine residue, and other Wellspring-touched sources. No god's consent required, no shard required. This rung is climbable under a mortal's own power. Lord Albrecht Lavisburg of the Adventurers' Guild (see `factions.md`) is a contemporary example. The Storveldi Denbora's entire ruling class reached this rung at the height of their civilisation.
 2. **Demi-God → Minor God.** Requires a **shard of divinity**, a fragment of power that already exists in the world. **A shard's use does not require the original god's consent**; the shard is sought-after, not granted. The scarcity is in the finding *and* in the knowing-what-to-do-with-it (see *integration* below).
 3. **Minor God → Major God.** Requires further shards: more, larger, or rarer. Same mechanism, just at a level where the shards needed are far harder to come by. Major Gods are fully bound on the Material Plane by the Gods' Law if they choose to reside there.
-4. **Major God → Grand God.** **Impossible by any normal mechanism.** The thirteen Grand Gods are the original twelve plus Cronus; the twelve created existence itself, and Cronus's ascent was a one-time event driven by the unique mechanism of the Gods' Law (every god giving him a shard as the Law's anchor; see `secret-history.md`, *Cronus: The Secret*). There is no replicable path for any other being to reach Grand God.
+4. **Major God → Grand God.** **Impossible by any normal mechanism.** The thirteen Grand Gods are the original twelve plus Cronus; the twelve created existence itself, and Cronus's ascent was a one-time event driven by the unique mechanism of the Gods' Law (every god giving him a shard as the Law's anchor; see `gods.md`, *Cronus → ⚿ GM Secret: Cronus was mortal*). There is no replicable path for any other being to reach Grand God.
 
 #### Where shards come from
 
@@ -166,7 +166,7 @@ Finding a shard is hard. **Using one correctly is harder.** A shard is not consu
 
 **Integration knowledge is the truly rare commodity.** Not shards; shards exist in many places, individually well-guarded but plural. The integration procedure itself is what almost no one possesses. The **Storveldi Denbora** had it, ran it at industrial scale, and elevated most of their ruling class with it.
 
-**Where the procedure is now.** One member of the Storveldi Denbora ruling class survived the Week of Crimson Rain's annihilation and used the procedure on himself in the aftermath, ascending to Minor God status. He took the name **Betibizi** ("eternal life"), now god of Undeath, and fled to Abyss (Layer 3). **He is the original holder of the procedure** and the reason it persists at all. See `gods.md`, *Named Non-Bound Gods* and `secret-history.md`, *The Storveldi Denbora*.
+**Where the procedure is now.** One member of the Storveldi Denbora ruling class survived the Week of Crimson Rain's annihilation and used the procedure on himself in the aftermath, ascending to Minor God status. He took the name **Betibizi** ("eternal life"), now god of Undeath, and fled to Abyss (Layer 3). **He is the original holder of the procedure** and the reason it persists at all. See `gods.md`, *Named Non-Bound Gods* and `timeline.md`, *Gods' Era → ⚿ GM Secret: The Storveldi Denbora: The Real History*.
 
 **Fragments persist on Talan.** Betibizi's cult, the necromantic underground, and the Storveldi-Denbora-descended lineages (most of whom inherited the false Elden-blood claim and don't know whose godhood they're invoking) hold partial copies of the procedure: incomplete, error-prone, often deadly to attempt. Reconstructing the complete procedure from these fragments is a real possibility but a slow, dangerous, and well-watched undertaking. The bound thirteen suppress the work where they find it. The individual shard caches the Storveldi Denbora originally drew from are mostly known and heavily guarded; the procedure that lets you use one is what almost no one has in its complete form.
 
@@ -209,7 +209,7 @@ Each sub-tradition draws from one of the Four Schools. They differ wildly in com
 
 ### Where Magitech came from: the Elden inheritance
 
-**Modern Magitech is recovered Elden technology, evolved.** The Elden civilisation (6000 GR – 2945 GR; see `secret-history.md`, *The Elden*) was a high-tech people in its own time; before its fusion with the Devourer to become the Corrupted God, it built rail-bound mass acceleration, atmospheric vessels, and a great deal else. Most of that work was lost when the civilisation transformed; the ruins were not.
+**Modern Magitech is recovered Elden technology, evolved.** The Elden civilisation (6000 GR – 2945 GR; see `timeline.md`, *Elden Era → ⚿ GM Secret: The Elden: What Happened*) was a high-tech people in its own time; before its fusion with the Devourer to become the Corrupted God, it built rail-bound mass acceleration, atmospheric vessels, and a great deal else. Most of that work was lost when the civilisation transformed; the ruins were not.
 
 **Modern Magitech evolved from Elden-ruin discoveries**, primarily in the **Lost Era** (1 MR – 559 MR), as surviving Talanese kingdoms began the systematic archaeology that the Storveldi Denbora had begun before the Week of Crimson Rain (the Storveldi Denbora focused on the *divine-engineering* side of Elden tech, the integration procedure; modern Magitech focused on the *industrial* side). Formula-driven enchantment and the first airship engines come out of those Lost-Era reverse-engineering programmes. The **Golden Empire** (Dark Era) inherited that work and was very good at it: most of the standard Arcanotech catalogue in continuous use today is in some form a Golden-Empire refinement of Lost-Era discovery. **The Order of Steam** in Sumendar came at the end of the Dark Era, growing up around its own concentrated Elden-tech excavation in volcanic terrain. The Order did not invent Arcanotech: it inherited a working tradition centuries old. What the Order *did* invent (and what its predecessors had not built) was **rail-bound mass acceleration at industrial scale**: the **Magitrain** and the continental rail network are Order inventions end-to-end, and the Order remains the network's principal manufacturer. The Order is the largest current Arcanotech producer on the continent.
 
@@ -312,7 +312,7 @@ Every living being contains essence from all three layers. What separates one so
 
 - The planes are not sealed; they are traversable by gods and sufficiently powerful beings, via the Astral Plane.
 - The 13 Bound Gods have largely been to the Postlife (many were banished there at points). The Postlife is therefore not a mystery to them.
-- What *is* unknown is what it is like to **die and cross as a living being**; only Tani has experienced this (see `secret-history.md`, *Tani: Lore Notes*).
+- What *is* unknown is what it is like to **die and cross as a living being**; only Tani has experienced this (see `gods.md`, *Tani → ⚿ GM Secret: Tani's death and rebirth*).
 
 ---
 
@@ -322,3 +322,25 @@ Every living being contains essence from all three layers. What separates one so
 - **MR** (Mortal Reign): counts forward, used for post–Week of Crimson Rain dates.
 - Current year: **2532 MR**.
 - The Week of Crimson Rain = 0 GR / 0 MR, the hinge point of all history.
+
+---
+
+## ⚿ GM Secret: The Devourer (The Void)
+
+- A being of pure consumption; exists only to unmake existence. Imprisoned since before recorded history.
+- The Elden freed it deliberately as a weapon against the gods during their war.
+- Subsequently fused with the Elden via the gods' counter-move (see *The Corrupted God: True Identity* below).
+
+---
+
+## ⚿ GM Secret: The Corrupted God: True Identity
+
+- **The Corrupted God is the Elden.** Every Elden, their entire civilisation, collapsed into a single being.
+- **How:** The Elden freed the Devourer to distract the gods. While the gods fought to protect existence, the Elden went deep underground and began a ritual to connect directly to the Wellspring, which would have made them a unified hive mind of near-infinite power. The gods noticed at the last moment and shoved the Devourer into the Elden's open Wellspring connection. The ritual completed with both forces fused: the Wellspring's endless creation and the Devourer's endless destruction, simultaneously, forever. Every Elden became one being, locked in permanent internal war.
+- **What miners breached in 1321 MR** was the Elden's ritual site. What emerged was what the Elden had become.
+- Not bound by the Gods' Law; predates it, was never party to it.
+- Defeated (not destroyed) in 2135 MR, wounded enough that active influence collapsed. Spawn still emerge. Some believe it is healing.
+- **Cannot be permanently killed by conventional means**; it contains both Wellspring and Void.
+- Full Elden / Wyrmkin / Devourer-deployment context lives in [`timeline.md`](timeline.md), *Elden Era* (with the `⚿ GM Secret: The Elden: What Happened` and `⚿ GM Secret: The Wyrmkin: The Real History` sub-sections).
+- The Wardstones that bind the modern Corrupted God live in [`geography/myrkono.md`](geography/myrkono.md), *The Seven Wardstones: The Chains of the Bound*.
+- The Nine Generals serving the Corrupted God live in [`factions.md`](factions.md), *Remnants of Corruption → The Nine Generals*.

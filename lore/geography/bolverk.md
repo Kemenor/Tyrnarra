@@ -2,7 +2,7 @@
 
 The infernal megacity on the plane of **Abyss**. Bolverk holds the seven **Vice Demons** and the fourteen **Virtue Devils** that mortals on Talan call upon, fear, and bargain with, but it is **the endpoint of corruption, not its engine**. The work of vice and virtue-corruption happens on Talan via whispers, offers, and bargains; Bolverk is where the harvested souls are processed into Wellspring-power.
 
-This file holds the canon for Bolverk itself, its inhabitants, and the politics between them. Other evil powers on Talan (the **Corrupted God** beneath the Darklands, the **Generals of Corruption** in the Nine Dungeons, **Betibizi** the self-ascended Minor God of Undeath) do not live in Bolverk and are covered in `../gods.md`, `../secret-history.md`, and `the-binding.md` (relevant files).
+This file holds the canon for Bolverk itself, its inhabitants, and the politics between them. Other evil powers on Talan (the **Corrupted God** beneath the Darklands, the **Generals of Corruption** in the Nine Dungeons, **Betibizi** the self-ascended Minor God of Undeath) do not live in Bolverk and are covered elsewhere: see `../cosmology.md`, *⚿ GM Secret: The Corrupted God: True Identity*; `../factions.md`, *Remnants of Corruption → The Nine Generals*; `../gods.md`, *Named Non-Bound Gods → Betibizi*.
 
 ---
 
@@ -380,7 +380,7 @@ The Virtue Devil count is **not paired against the seven Vices**; the virtues st
 
 - **The plane of Abyss + the Postlife layer + the Wellspring**: `../cosmology.md`
 - **Dauria (Judgment City), the Duskmire, the moon-cycle soul-routing**: `../cosmology.md` and `../gods.md` (Tani, *Lore Notes*)
-- **The Corrupted God, Generals of Corruption, the Nine Dungeons**: `../secret-history.md`, `the-binding.md`
+- **The Corrupted God: True Identity**: `../cosmology.md`, *⚿ GM Secret: The Corrupted God: True Identity*. **Generals of Corruption + Nine Dungeons**: `../factions.md`, *Remnants of Corruption → The Nine Generals*. Wardstones: `../geography/myrkono.md`, *The Seven Wardstones*.
 - **Betibizi (self-ascended Minor God of Undeath in Abyss)**: `../gods.md` (*Named Non-Bound Gods*); she resides in Abyss but **not in Bolverk**
 - **Iro's wound from Drambur**: `../gods.md` (Iro, *GM Secret: the wound from Drambur*)
 - **Nephilim with fiendish parentage (descended from Vice Demons or Virtue Devils)**: `../ancestries.md` (*Versatile Heritages → Nephilim*)

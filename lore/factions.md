@@ -195,11 +195,39 @@ The Guild's seat in Myrkono and the regional command for all Guild operations ac
 
 **Current state:** Frequency of emergence events had dropped dramatically over four centuries, but **eight years ago (~2524 MR) the Nine Dungeons erupted**, disgorging the first great corruption armies of the modern age. The kingdoms broke that first wave; the dungeons' main entrances are now sealed. The smaller leakage continues. The Adventurers' Guild maintains a standing research operation to understand and predict emergence patterns. Some researchers believe the Corrupted God is healing; others believe the eruption was the binding's first major fracture.
 
-**The Nine Generals of Corruption (above the leakage):** Nine corruption-lords serve as the Corrupted God's hands in the mortal world, each commanding a dungeon and a legion. Unlike their master, the Nine can be slain. **One has fallen: the Ash-Binder.** Eight remain: the Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister. Full descriptions in `secret-history.md`. The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in `geography/myrkono.md`; the other seven dungeons' precise locations remain TBD.
+#### The Nine Generals of Corruption
 
-**The Wardstones (counter-pressure):** Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono (see `secret-history.md` and `geography/myrkono.md`). While they hold, the Corrupted God stays bound. The fight against the Nine is also the fight to keep the Wardstones safe; this is the **War of Seals**.
+The Nine are the foremost servants of the Corrupted God, wrought from his power while he remains bound. Originally mortal cultists, clerics, beasts, and nameless horrors from deep places, each was chosen and remade into a vessel of corruption's will. Unlike their imprisoned master, **the Nine can be fought and slain.** Their defeat weakens the Corrupted God's reach in the world above.
 
-**Note:** The Corrupted God is not bound by the Gods' Law; it predates it and was never party to it. The chains of the Wardstones are a separate, mortal-and-Araphel-led containment. See `secret-history.md` for the full account.
+##### The Nine Dungeons
+
+The Nine dwell in colossal subterranean fortresses, the **Nine Dungeons**. These did not exist in the long centuries after the binding. They **erupted eight years ago** (current year 2532 MR; the eruption was therefore around 2524 MR), tearing pathways into the mortal world and disgorging the first great armies of corruption of the modern age.
+
+The kingdoms united, rallied adventurers and militias, and after bloody campaigns broke that first wave. To prevent another flood, the **main entrances of the Nine Dungeons were sealed** with wards, stone, and sacrifice. But sealing the gates did not end the threat: corruption now seeps upward through smaller caverns and tunnel networks, forcing a constant containment war.
+
+##### The Nine: current state
+
+| General | Identity | Domain |
+|---|---|---|
+| **The Vermin Queen** | Mistress of swarms | Hive-dungeon: the Hollow of Ten Thousand Threads (Shadow Steppes). Breeds endless spiders, locusts, crawling things. |
+| **The Rot-Tyrant** | Corpse-warlord in ruined armour | Ossuary-halls. Rusting legions whose every step spreads despair and decay. |
+| **The Blight-Seer** | Prophet twisted into living plague | A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. |
+| **The Flesh-Sculptor** | Butcher who remakes flesh to the Corrupted God's design | Lair of stitched horrors and alchemical vats. |
+| ~~**The Ash-Binder**~~ | *Defeated.* Once a corrupted elemental beast | Lair was a volcanic furnace of stone and fire. Now scattered, but the lair still leaks dangerous slag-born remnants. The defeat is celebrated across the kingdoms as proof the Nine can fall. |
+| **The Whisperer in Dreams** | Shadowbound cultist turned nightmare-made-flesh | Temple of illusions warping dream and waking; intruders wander lost. |
+| **The Maw Serpent** | Colossal venomous serpent pulled from the world's depths | Cavern-dungeon of sinkholes, acid pools, and tunnels wide enough to swallow caravans. |
+| **The False Saint** | Once a holy woman, now a mockery of faith | Underground chapel oozing false miracles; prayers rot into curses, faithful rise as zealots of corruption. |
+| **The Root-Twister** | Beast of wild growth remade into a lord of rot | Living dungeon: an underground jungle of strangling vines, carnivorous trees, choking spores. |
+
+**Eight remain.** Each that falls delays the master's freedom. But the wrath of the remaining eight burns hotter with every loss.
+
+The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in [`geography/myrkono.md`](geography/myrkono.md); the other seven dungeons' precise locations remain TBD.
+
+#### The Wardstones (counter-pressure)
+
+Seven monumental relics anchor the chains that bind the Corrupted God. All seven sit inside Myrkono; full canon in [`geography/myrkono.md`](geography/myrkono.md), *The Seven Wardstones: The Chains of the Bound*. While they hold, the Corrupted God stays bound. The fight against the Nine is also the fight to keep the Wardstones safe; this is the **War of Seals**.
+
+**Note:** The Corrupted God is not bound by the Gods' Law; it predates it and was never party to it. The chains of the Wardstones are a separate, mortal-and-Araphel-led containment. Full canon on what the Corrupted God actually is: [`cosmology.md`](cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*.
 
 ---
 
