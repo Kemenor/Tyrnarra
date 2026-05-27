@@ -63,12 +63,18 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
   lore/                                ← worldbuilding canon (NOT published)
     cosmology.md, gods.md, secret-history.md, factions.md,
-    cultures.md, bestiary.md, bolverk.md, glossary.md, timeline.md
+    ancestries.md, bolverk.md, glossary.md, timeline.md
     geography/                          ← per-domain canon (split for read-cost)
       _continent.md                     ← structure, seas, rail, off-continent, domain index
       vindul.md, lautara.md, myrkono.md, floteyn.md, sumendar.md,
       lioaru.md, brauogi.md, ezkudon.md, egulon.md, zuzental.md,
       nashavel.md, ehizahar.md, askamira.md
+    cultures/                           ← per-people canon (split for read-cost)
+      _talan.md                         ← Talanese language, pan-continental notes
+      fenurra.md                        ← the Fenurrans of Ehizahar
+      kitsune.md                        ← the kitsune of Emarrea
+      tengu.md                          ← the Tengu of Haizetsua
+      sortalde.md                       ← the six petal-peoples of the eastern continent
     (see "Where new content goes" below for what lives in each)
 
   docs/                                ← site documentation (NOT published)
@@ -203,8 +209,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 | What really happened: Crimson Rain, Cronus's secret, Storveldi Denbora, Elden / Corrupted God, Wardstones, Nine Generals, Tani & Araphel deep-dives | `lore/secret-history.md` |
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography/<region>.md` (one file per god domain) + `lore/geography/_continent.md` (structure, seas, rail network, off-continent powers, naming convention, full domain index). Each domain file declares its land borders at the top; when designing on top of a domain, read its file *and* the files of its bordering domains. |
 | Factions, guilds, churches, organisations | `lore/factions.md` |
-| Peoples, traditions, politics, craft, warfare | `lore/cultures.md` |
-| Playable ancestries (PF2e), heritages | `lore/bestiary.md` |
+| Peoples, traditions, politics, craft, warfare | `lore/cultures/<people>.md` (one file per deep-culture people: fenurra, kitsune, tengu, sortalde) + `lore/cultures/_talan.md` (pan-Talan: common tongue, cross-cultural notes) |
+| Playable ancestries (PF2e), heritages, lifespan, domain distribution | `lore/ancestries.md` (deep-culture peoples carry one-line stubs that point to their `lore/cultures/<people>.md` file) |
 | Bolverk (the megacity in Abyss), Vice Demons, Virtue Devils, the Tunsund, soul-routing from Dauria, individual demon/devil seat-holders | `lore/bolverk.md` |
 | New coined names + etymologies | `lore/glossary.md` (always; see naming rule) |
 | Eras, historical events, dates | `lore/timeline.md` |

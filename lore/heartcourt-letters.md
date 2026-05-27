@@ -6,7 +6,7 @@ Golivander writes as the kingdom-knowing chronicler: arch, deeply familiar with 
 
 The columns are dated by the year (MR). The present year is 2532 MR.
 
-See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from Biozuri*); `cultures.md` (*The Kitsune → The Heartcourt → Per-Heart vignettes*) for the canonical events these columns reference.
+See also: `glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letters from Biozuri*); `cultures/kitsune.md` (*The Heartcourt → Per-Heart vignettes*) for the canonical events these columns reference.
 
 ---
 
@@ -204,7 +204,7 @@ A handful of details inside the columns are deliberately under-specified in cano
 
 - **The previous Onyx Heart's identity and death.** *Natural by chronicle, contested by gossip.* Both readings stay folk-tier; canon does not resolve. The gossip-mill in Column 8 and the public uncertainty in Column 9 depend on the question staying open.
 - **The Yorimichi heir who died last year on the dais.** Named only as her Growing Circle heir; the personal name is not committed in canon.
-- **The Heart who walks the gardens at sunrise with Saemi (Column 1).** Norikaze. The column's coyness is Golivander's voice; canon has the bond fully named in `cultures.md` and on the Heartcourt page.
+- **The Heart who walks the gardens at sunrise with Saemi (Column 1).** Norikaze. The column's coyness is Golivander's voice; canon has the bond fully named in `cultures/kitsune.md` and on the Heartcourt page.
 - **The "Heart who keeps that quiet" (Column 5).** Shirae. Same coyness pattern.
 - **The "another Heart" of Column 7.** Shirae writing about Yorume. The third such elision in the dispatch is intentional in Golivander's voice; the bond is canonised elsewhere.
 - **Golivander's race, age, education, home base, scholarly stance.** Committed in canon as of 2026-05-24: Tengu of Haizetsua, ~110, Thekkavar-apprenticed in natural philosophy, based at The Lantern Press in Frae City, naturalistic and unbound. Full character sheet in [`glossary.md`](glossary.md) under *Voices on the Compact → Golivander*. The Letters' voice does not reach for these facts; the elision in the columns is method, not vacancy.

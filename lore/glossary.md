@@ -219,7 +219,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 
 ### Fenurran proper nouns (Latinate / English register, not the deep-old stratum)
 
-The Fenurran culture is detailed in `cultures.md`. Its internal place- and weapon-names sit in a Latinate / Germanic / English register, not the deep Basque/Icelandic stratum. They function as "modern" coined names in the world (the Fenurran people are old, but their *naming language* is closer to plain-style than the deep-old domains).
+The Fenurran culture is detailed in `cultures/fenurra.md`. Its internal place- and weapon-names sit in a Latinate / Germanic / English register, not the deep Basque/Icelandic stratum. They function as "modern" coined names in the world (the Fenurran people are old, but their *naming language* is closer to plain-style than the deep-old domains).
 
 - **Aeris**: Fenurran capital, carved into the inner walls of the Scar of Aeris. Latinate stylization (Latin *aer/aeris* = "of the air"). Etymology partial; Fenurran-internal name.
 - **Scar of Aeris**: the ancient meteor crater at the heart of Fenurra. Source of the volcanism, the star-metals, and the Fenurran capital. Plain English compound with a Latinate proper noun.
@@ -244,7 +244,7 @@ The four major Fenurran tribes carry Latinate names. Per the naming rule these a
 - **Ghost Willow**: Plain English. The pale near-translucent tree that grows in sulfur-choked soil; bow-limb wood.
 - **Obsidian Silk**: Plain English compound. Light-absorbing thread spun from ashspinner-larva silk + volcanic resin. Used for the silent Whisperfang bowstring.
 - **Spice Wine**: Plain English. Hallucinogenic Draconis communion drink brewed from sulfur-rich roots near the Scar.
-- **Emberstones / Ashstones / Slagsteel / Cratersteel / Craterbone / Craterwood / Emberframe / Sulflare**: Fenurran technical vocabulary; plain English compounds for materials, devices, and ammunition described in `cultures.md`.
+- **Emberstones / Ashstones / Slagsteel / Cratersteel / Craterbone / Craterwood / Emberframe / Sulflare**: Fenurran technical vocabulary; plain English compounds for materials, devices, and ammunition described in `cultures/fenurra.md`.
 
 ### Fenurran institutions
 
@@ -265,7 +265,7 @@ The four major Fenurran tribes carry Latinate names. Per the naming rule these a
 
 ### Kitsune proper nouns (Japanese-style internal register)
 
-The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingdom and capital by the old-language names (Emarrea, Biozuri, listed under Lautara sub-regions above). Internally, the kitsune use a Japanese-flavoured cultural register for their own places, dishes, rituals, and titles. Same pattern as Fenurra's internal Latinate vocabulary.
+The kitsune culture is detailed in `cultures/kitsune.md`. Outsiders refer to their kingdom and capital by the old-language names (Emarrea, Biozuri, listed under Lautara sub-regions above). Internally, the kitsune use a Japanese-flavoured cultural register for their own places, dishes, rituals, and titles. Same pattern as Fenurra's internal Latinate vocabulary.
 
 **Language:**
 - **Kotokoe**: *koto* (word, thing, sound) + *koe* (voice) → "the voice of words." The kitsune cultural tongue, used internally in Emarrea alongside Talanese (the continental common). Names of places, dishes, rituals, and gods within the kingdom are coined in Kotokoe; outside the kingdom, trade and diplomacy run in Talanese. Most kitsune are fluent in both from childhood. Japanese-flavoured register, drifted across the kingdom's history.
@@ -273,7 +273,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 **Pantheon (the Kyūbi-no-Den, the kitsune ancestral pantheon):**
 - **Kyūbi-no-Den**: *kyūbi* (nine-tailed) + *den* (hall) → "the Nine-Tailed Hall." Name of the kitsune's own ancestral pantheon. Three named gods sit it (Hahane, Honokage, Yumegatari); the kitsune say the other six seats wait on ancestral spirits, place-spirits, or stories not yet long enough to fill them. The number nine echoes the nine-tail mastery ladder and the Heartcourt's nine pillars. Co-exists with worship of the Bound Thirteen (especially Fisaya, who is depicted in kitsune iconography as a kitsune); kitsune religion is plural and open. Full canon in `gods.md`, *Other Pantheons → The Kyūbi-no-Den*.
 - **Hahane**: *haha* (mother) + *ne* (root, source) → "the Mother-Root" / "the Rooted Mother." Coined in Kotokoe. **Minor Goddess** of love, polyamory, family, festival, and the polycule bond. Resides in **Elysium** (Layer 3, good). Head of the Kyūbi-no-Den. The Passing of the Tails ritual invokes her; first incense at every household shrine is hers. The Heartcourt's *Rose Heart* (Arts & Festivals) often serves as her informal high-priest. **Cleric domain grants:** Family · Passion · Indulgence.
-- **Honokage**: *hono* (faint, soft, the first flicker) + *kage* (light-play, shadow) → "the Soft-Shadow," the god glimpsed in lantern-light but never seen straight. **Minor God** of foxfire, illusion, kind misdirection, and the lantern-lit night. Resides in **Elysium** (Layer 3, good). Patron of Occult practitioners across the kingdom (foxfire being the kitsune signature of the Occult tradition; see `cultures.md`). Receives foxfire-offerings rather than incense; lanterns are lit *for* him as much as *by* him. **Cleric domain grants:** Trickery · Magic · Moon (the lantern-bearer face of the lunar portfolio, co-granted alongside Bikiargi).
+- **Honokage**: *hono* (faint, soft, the first flicker) + *kage* (light-play, shadow) → "the Soft-Shadow," the god glimpsed in lantern-light but never seen straight. **Minor God** of foxfire, illusion, kind misdirection, and the lantern-lit night. Resides in **Elysium** (Layer 3, good). Patron of Occult practitioners across the kingdom (foxfire being the kitsune signature of the Occult tradition; see `cultures/kitsune.md`, *Foxfire*). Receives foxfire-offerings rather than incense; lanterns are lit *for* him as much as *by* him. **Cleric domain grants:** Trickery · Magic · Moon (the lantern-bearer face of the lunar portfolio, co-granted alongside Bikiargi).
 - **Yumegatari**: *yume* (dream) + *katari* (telling, narration) → "the Dream-Teller." **Minor Goddess** of story, memory, wish-lanterns, and legacy. Resides in **Elysium** (Layer 3, good). The wish-lanterns floated down the Hoshigawa at Kawaakari are her offering; the **Storyweaver** at the House of a Thousand Flavors is by ancient courtesy understood to speak for her at the table. **Cleric domain grants:** Dreams · Knowledge · Soul (memory-as-Wellspring-imprint).
 
 **Magic tradition:**
@@ -311,7 +311,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 - **The House of Names**: Plain English. The Sapphire Heart's archive of every kitsune death in Emarrea across four centuries, run as an annexe of the Knowledge-pillar's offices in Biozuri. Theological annexe of **Yumegatari's** clergy: a story that ends is a record the world holds.
 
 **Tradition & craft:**
-- **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures.md`.
+- **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures/kitsune.md`, *Catjomin Sake*.
 - **Yukihime-shu**: "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
 - **Yukihime-no-mori**: Kotokoe (Japanese-flavoured); *yukihime* (snow princess) + *no* (genitive) + *mori* (forest) → "the Snow Princess Forest." The pink-blossomed orchard-and-wildflower lowlands at Emarrea's southern edge where the Yukihime-shu plums grow on terraced slopes. The forest and the wine share the *Yukihime* name; the plums are the bridge.
 - **Foxfire Stone Massage**: Plain English. Kawaakari's signature spa treatment.
@@ -331,7 +331,7 @@ The kitsune culture is detailed in `cultures.md`. Outsiders refer to their kingd
 
 ### Tengu proper nouns (Tengu cultural register)
 
-The Tengu culture is detailed in `cultures.md` · *The Tengu*. Outsiders refer to the island and capital by the old-language names (Haizetsua, Vindboorg, listed under *Vindul (Wind)* above). Internally, the Tengu use a distinct **Tengu cultural register** for their own institutions, clans, customs, and crafts: austere, consonant-heavy, hard finals, the *Tessek* family of sound. The register is a pure coinage stratum, not a translatable language; the etymologies below are coinage-notes, not interlinear gloss.
+The Tengu culture is detailed in `cultures/tengu.md`. Outsiders refer to the island and capital by the old-language names (Haizetsua, Vindboorg, listed under *Vindul (Wind)* above). Internally, the Tengu use a distinct **Tengu cultural register** for their own institutions, clans, customs, and crafts: austere, consonant-heavy, hard finals, the *Tessek* family of sound. The register is a pure coinage stratum, not a translatable language; the etymologies below are coinage-notes, not interlinear gloss.
 
 **Republic:**
 - **Skarvorn**: Tengu-register coinage; *skar* (flock, multitude) + *vorn* (wing, voice) → "Flock-Voice." The seated body of Haizetsua's republic; the eleven clan-elders convene as the Skarvorn. No single ruler. Convenes quarterly at the **Open Pavilion** in Vindboorg.
@@ -553,7 +553,7 @@ The seven petals of Sortalde each carry a Sortalde-internal name. Pattern: a one
 ### Sortalde institutions
 
 - **The Concord of Courts**: the long-standing confederation of the six ancestral petals, convening at Heting. Held together by ancient agreement rather than enforced authority. Samsaran chancellors are the continuity (multi-life memory carries the Concord's institutional knowledge across human lifetimes).
-- **Oni**: bound spirits of Sortalde tied to specific places. Concentrated on **Lingdao** alongside the Yaksha (who are their *lighter* cousins; both spirit-natures, opposed temperaments). Manifest physically only at their bound site; cannot wander. **Half-Oni mortal children are Hungerseeds** (see `bestiary.md` heritages).
+- **Oni**: bound spirits of Sortalde tied to specific places. Concentrated on **Lingdao** alongside the Yaksha (who are their *lighter* cousins; both spirit-natures, opposed temperaments). Manifest physically only at their bound site; cannot wander. **Half-Oni mortal children are Hungerseeds** (see `ancestries.md` heritages).
 - **Tao Hua Yuan ships**: Sortalde-built indigenous craft adapted across generations to the rough and strange character of Sortalde's *inner sea* (the waters between the petals where the inner-petal courts and the central Concord seat at Heting are sited). Name borrows the continent's own internal name (桃花源, *Tao Hua Yuan*, "Peach Blossom Spring"), so the craft are named "ships of the peach-blossom land." Talan-built cloudships cannot weather the inner-sea conditions and land only at the outer petals (Wandao, Xidao, Niudao); from there, onward travel into Sortalde's interior requires a Tao Hua Yuan ship. Boarding is a Concord question and is one of the petals' quieter gatekeeping mechanisms; Talanese passengers very rarely board them. **The structural reason Talanese merchants reach only the outer petals**, and the practical reason the inner courts and Heting remain rumour to most Talanese. The inner sea itself is unnamed in canon; whether it has a Sortalde-internal name is canon-pending.
 
 ### Named Non-Bound Beings (Layer 1 Primordials)
@@ -594,7 +594,7 @@ Full canon in `gods.md`, *Named Non-Bound Gods*.
 
 ### Bestiary proper nouns
 
-Full bestiary entries live in `lore/bestiary.md`. Listed here are the named beings and the inherited-folklore terms worth recording for cross-reference.
+Full ancestry entries live in `lore/ancestries.md`. Listed here are the named beings and the inherited-folklore terms worth recording for cross-reference.
 
 **Otherworldly entities:**
 - **The Virtue Devils**: Plain English category-name. Fourteen Aristotelian-pattern devils, one per virtue, each holding both excess and deficiency. Full canon: `bolverk.md`, *Virtue Devils: the Fourteen* (canonical fourteen virtues, the doctrine-of-the-mean mechanic, tetradecagram architecture). No individual Virtue Devils named in current canon.
@@ -602,7 +602,7 @@ Full bestiary entries live in `lore/bestiary.md`. Listed here are the named bein
 
 **Versatile heritage placements (Tyrnarra source mapping):**
 
-Quick reference. Full prose in `bestiary.md`, *Versatile Heritages*; system-side Remaster reshuffle notes in `pf2e-notes.md`.
+Quick reference. Full prose in `ancestries.md`, *Versatile Heritages*; system-side Remaster reshuffle notes in `pf2e-notes.md`.
 
 - **Aphorite** → Forseti (Law). **Ganzi** → Vesuna (Chaos). **Beastkin** → Hinka (Hunt). **Changeling** → Araphel (Darkness). **Duskwalker** → Tani (Time): *created not born*, manifests at death-touched sites, the **Blackened Lands** are Talan's largest Duskwalker source.
 - **Nephilim** → any god (celestial) or any demon/devil (fiendish): the universal divine-blood / fiendish-blood heritage.
@@ -612,7 +612,7 @@ Quick reference. Full prose in `bestiary.md`, *Versatile Heritages*; system-side
 - **Dhampir** → half-Vampire; undead-touched. Vampires are an independent lineage on Talan.
 - **Dragonblood** → alien Dragon descent (see *Dragons* ancestry).
 - **Hungerseed** → half-Oni. Oni are bound spirits of Sortalde, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Almost all Hungerseeds are Sortalde-born; Talan-side Hungerseeds typically descend from a Sortalde émigré whose Oni heritage is one or two generations back.
-- **Reflection** → Wellspring-direct (Stillpool-born). Public framing: ritual mishap / Wellspring blip. See `cosmology.md` and `bestiary.md` for the cover-vs-truth split.
+- **Reflection** → Wellspring-direct (Stillpool-born). Public framing: ritual mishap / Wellspring blip. See `cosmology.md` and `ancestries.md` for the cover-vs-truth split.
 - **Bound gods whose touch is not bloodline-borne:** Iro (Light), Enki (Knowledge), Jianna (Commerce), Cronus (Freedom).
 
 **Folklore + claims (mortal-mouth, not always true):**

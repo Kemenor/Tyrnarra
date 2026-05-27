@@ -133,7 +133,7 @@ The Wellspring's outflow into the Life Layer is **not self-stabilising**. The so
 - Infants were born already **speaking tongues no living parent recognised**.
 - The **Storveldi integration procedure** (see *Integration: the genuinely rare knowledge* below) became findable again to anyone whose curiosity took them the right way.
 - **Some mortals certainly ascended in those decades.** There was no one to stop them and no one to record what they became.
-- And the leak produced a new class of beings: **Reflections** (see `bestiary.md`, *Reflection heritage*). The first Reflections were mortals born when raw, un-mediated Wellspring touched a conception or earliest gestation; mortal-shaped but anchored directly to the Wellspring, with no deity-mediated ancestry line.
+- And the leak produced a new class of beings: **Reflections** (see `ancestries.md`, *Reflection heritage*). The first Reflections were mortals born when raw, un-mediated Wellspring touched a conception or earliest gestation; mortal-shaped but anchored directly to the Wellspring, with no deity-mediated ancestry line.
 
 **Stabilisation.** The thirteen returned during the second century with a new mediation framework: what mortals now experience as **the Four Schools** (see below) and the modern cleric craft. The Four Schools' modern form is not pre-Crimson-Rain magic; it is the post-leak stabilisation tooling, designed to let mortals mediate the outflow themselves where the thirteen are too few. By the close of the second century, the general leak had subsided.
 
