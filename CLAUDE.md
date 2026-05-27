@@ -62,7 +62,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     style-b.css                        ← Style B base, every page under /talan/ and /off-continent/
 
   lore/                                ← worldbuilding canon (NOT published)
-    cosmology.md, gods.md, secret-history.md, factions.md,
+    cosmology.md, gods.md, factions.md,
     ancestries.md, glossary.md, timeline.md
     geography/                          ← per-place canon (Talan domains + off-continent + Bolverk)
       _continent.md                     ← Talan-continental frame: structure, seas, rail, domain index
@@ -161,7 +161,7 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 ## Chronicler's voice: what's public, what's behind the seal
 
-Published HTML pages are **player-facing**. Open prose reads as something an in-world chronicler of Talan would actually write, hedged where the chronicle-record is hedged, ignorant where mortals are ignorant. **GM-tier truth never goes in open prose**; it lives inside expandable boxes only. The lore files hold the full truth flat; HTML pages stratify it. This applies to both Style A and Style B pages.
+Published HTML pages are **player-facing**. Open prose reads as something an in-world chronicler of Talan would actually write, hedged where the chronicle-record is hedged, ignorant where mortals are ignorant. **GM-tier truth never goes in open prose**; it lives inside expandable boxes only. **The lore files mark GM-tier inline** with a `⚿ GM Secret:` heading prefix (the lore-side equivalent of the HTML expandable; same content, same visibility-discipline). HTML pages stratify the same content into expandable boxes. This applies to both Style A and Style B pages.
 
 **Three tiers, three treatments:**
 
@@ -207,7 +207,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 |---|---|
 | How the world works: Wellspring, belief mechanic, planar layers, magic schools, Magitech, Gods' Law mechanics, calendar | `lore/cosmology.md` |
 | Who the gods are: the Thirteen, named non-bound gods, gods' city-states, Council, cleric domains | `lore/gods.md` |
-| What really happened: Crimson Rain, Cronus's secret, Storveldi Denbora, Elden / Corrupted God, Wardstones, Nine Generals, Tani & Araphel deep-dives | `lore/secret-history.md` |
+| What really happened (GM-tier secrets) | **No central file.** Each secret lives with the canon it shadows, marked with a `⚿ GM Secret:` heading prefix. Examples: Cronus's mortal origin and Tani's death/rebirth in `gods.md` (per-god sheets); the Week of Crimson Rain True Account, the Storveldi Denbora, the Elden / Wyrmkin, and the Lost/Golden/Dark-Era real-histories in `timeline.md` (per-era sub-sections); the Seven Wardstones in `geography/myrkono.md`; the Dreaming Cape Real History in `geography/lautara.md`; the Nine Generals in `factions.md` (under *Remnants of Corruption*); the Devourer and the Corrupted God's true identity in `cosmology.md`. The `⚿ GM Secret:` heading prefix is the lore-side equivalent of the HTML `⚿ GM Secret` expandable: same content, same visibility-discipline. |
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography/<region>.md` (one file per god domain) + `lore/geography/_continent.md` (Talan-continental frame, seas, rail, domain index) + `lore/geography/_off-continent.md` (Sortalde + Red Empire) + `lore/geography/bolverk.md` (the megacity in Abyss). Each domain file declares its land borders at the top; when designing on top of a domain, read its file *and* the files of its bordering domains. |
 | Factions, guilds, churches, organisations | `lore/factions.md` — but only for **cross-domain** organisations (Adventurers' Guild, Mercenary Guild, Voroir Daua, Remnants of Corruption, etc.). Region-bound institutions (state religions of single polities, noble houses of single kingdoms, named taverns) live in the relevant `lore/geography/<region>.md` file, not here. |
 | Peoples, traditions, politics, craft, warfare | Deep-culture peoples live with their place: **Fenurrans** in `lore/geography/ehizahar/fenurra.md`, **Kitsune** in `lore/geography/lautara/emarrea.md`, **Tengu** in `lore/geography/vindul/haizetsua.md`, **Sortalde peoples** in `lore/geography/_off-continent.md`. Pan-Talan cultural canon (the common tongue, cross-cultural patterns) lives in `lore/cultures/_talan.md`. |

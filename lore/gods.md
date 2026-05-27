@@ -2,7 +2,7 @@
 
 Who the gods are: the roster of the Twelve plus Cronus, their per-god depictions and domains, the named non-bound gods, the gods' city-states, the council, and how cleric domains map to their granters. Read this before writing anything about specific deities.
 
-**See also:** `cosmology.md` (how divinity works: tiers, Gods' Law, Wellspring, planar layers) · `secret-history.md` (Crimson Rain, Cronus's secret, the Storveldi Denbora, the Corrupted God, the Wardstones, deep-dives on Tani and Araphel).
+**See also:** `cosmology.md` (how divinity works: tiers, Gods' Law, Wellspring, planar layers; the Devourer + Corrupted God true identity at the bottom) · `timeline.md` (dated chronology, including the Crimson Rain True Account, the Storveldi Denbora, the Elden / Wyrmkin, and the Golden / Dark-Era real histories) · `geography/myrkono.md` (the Seven Wardstones).
 
 ---
 
@@ -100,9 +100,53 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 ### Araphel: God of Darkness (Male)
 - **Aspects:** Shadows · New Faces · Rebirth · Erasure.
 - **Depiction:** most commonly a **Fetchling** (either a barrel-chested waist-length-haired man or a beautiful waist-length-haired courtesan woman), but neither is canonical. He is the God of Many Faces; he walks Myrria openly in countless guises, every gender, every race, every form. Constant: apparent age thirty-five, with the glint of ageless eyes.
-- **Favoured weapon:** *Sickle-Saber*, a long curving blade with a secondary grip; every twist of the wrist a new edge, every cut a different face.
+- **Favoured weapon:** *Sickle-Saber*, a long curving blade with a secondary grip; every twist of the wrist a new edge, every cut a different face. *(See also:* **Kusarigama** *as canonical favoured weapon for Araphel's clerics in PF2e mechanical play, per sacred iconography below.)*
 - **Lore-implicit school:** *Divine Magic* (with Iro), the dark pole of god-granted power; faith made power through shadow, rebirth, the door out of who you were.
 - **Mortals see him as:** keeper of mysteries, sanctuary in shadow, the door out of who you were.
+
+#### Aspects of Araphel (expanded)
+
+Araphel is the god of shadows, forgotten things, and **new faces**: three intertwined domains. Mortals come to him for sanctuary, for the right to begin again, and for the courage to redefine themselves. His teaching: *to embrace forgetting, remaking, and becoming.*
+
+**Edicts**
+- Offer sanctuary to those who seek a new life.
+- Conceal the secrets of those who entrust them to you.
+- Protect those who flee past dangers or persecution.
+- Embrace change, taking on new names, faces, or roles as needed.
+
+**Anathema**
+- Expose a secret entrusted to you.
+- Deny someone the chance to atone or begin anew.
+- Hunt those who have renounced their past under Araphel's shadow.
+- Refuse to adapt to change when change is needed.
+
+#### Depictions (expanded)
+
+Araphel is most commonly shown in two forms, both **fetchling**, both with waist-length hair:
+- A barrel-chested **fetchling man**.
+- A beautiful **fetchling courtesan woman**.
+
+But neither is canonical. Araphel is also called the **God of Many Faces**. He walks Myrria openly in countless guises: every gender, every race, every form. The only constant is his apparent age: **thirty-five years**. The only tell is the glint of ageless eyes. (His residence, the **Sanctum of Veils**, is documented in [`geography/myrkono.md`](geography/myrkono.md), *Myrria → Districts*.)
+
+#### Sacred iconography
+
+- **Symbol**: a half-mask split down the centre, one side smooth, the other etched with shifting patterns. Black-on-silver or white-on-deep-violet.
+- **Colors**: deep violet (rebirth), black (forgetting), silver (transformation).
+- **Sacred animal**: the raven, often depicted carrying a lantern or veil.
+- **Favoured weapon:** the **Kusarigama**, sickle-and-chain; strikes unseen, binds prey in shadow. Canon both as iconography (art, ceremony, gods page) and as the mechanical favoured weapon for Araphel's clerics in play.
+- **Sacred motifs**: veils, dark lanterns lit with violet flame, the Many Faces (murals of diverse faces gazing inward toward a shadowed void).
+
+#### Rites
+
+- **The Shadowed Palm**: one hand pressed across the face leaving only one eye uncovered; a sign of prayer and a promise to reveal only what you choose.
+- **The Lantern Rite**: light a violet-flamed lantern while speaking your old name, then extinguish it while declaring a new one.
+- **The Shadow-Coin**: small blackened-silver coins, blank on one side and bearing the half-mask on the other. Pilgrims toss them into Myrria's shrines when renouncing old names.
+
+#### ⚿ GM Secret: Araphel and the Crimson Rain
+
+- Was the **first Grand God to stand with Cronus** during the Week of Crimson Rain: a Grand God, one of the twelve original creators, backing a mortal man. This was a turning point.
+- His reason: exhaustion. The blood, the desperate prayers from darkness, the weight of despair in every shadow. He was done.
+- This history is part of why Araphel's domain is **acceptance, second chances, and rebirth**; he has lived it.
 
 ### Sarrum: God of Earth (Male)
 - **Aspects:** Stone · Harvest · Endurance · Burden.
@@ -123,7 +167,14 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Depiction:** an unremarkable man (no divine signifiers, someone who could be anyone in a tavern), except for **a broken chain hanging from his belt**.
 - **Favoured weapon:** *Chain Sword*, a segmented blade that whips like broken shackles turned to rebellion.
 - **Mortals see him as:** liberator or anarchist, the spark that defies order.
-- **See also:** `secret-history.md`, *Cronus: The Secret*. The "anyone-in-a-tavern" depiction is the public face; the truth of his ascension is buried.
+
+#### ⚿ GM Secret: Cronus was mortal
+
+- **Was mortal.** The only being to ascend to **Grand God** status, rather than being born to it. (He is not the only mortal to ascend *at all*; see [`timeline.md`](timeline.md), *The Storveldi Denbora: The Real History*. The Storveldi Denbora's ruling class reached Demi-God status by belief and two reached Minor God status by means still unknown. What makes Cronus unique is that he reached **Grand God** (the top tier), which the Storveldi Denbora never did, and which has never been accomplished by anyone else before or since.)
+- He elevated through a combination of: (1) massive collective belief from uniting mortal civilization, (2) fighting gods on the battlefield, (3) political alliances, (4) the specific mechanism of the Gods' Law: when the twelve accepted the compact, **each gave him a shard of their power**, making him the Law's anchor. He is not just "one of them"; he is held together by all twelve. The Gods' Law runs through him.
+- **The twelve know.** They were there. They chose this. The secret holds because none of them have chosen to break it.
+- His clergy do not know. His worshippers do not know. Scholars have come close twice. Both times the work was quietly buried.
+- **His mortal name is canon-pending.** *Cronus* is the post-ascension name, taken when the twelve gave him their shards and he became the Law's anchor. The man he was before that name was born of some Talanese mortal line, raised in some village now forgotten, fighting under whatever name his parents gave him through the years of the war. The name is in the archives no scholar reads; the bound twelve all know it and have not spoken it in two and a half millennia. Designing the mortal name is an open thread; see `../docs/open-threads.md`.
 
 ### Hinka: Goddess of the Hunt (Female)
 - **Aspects:** Predation · Survival · Patience · Cruelty.
@@ -158,7 +209,17 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Depiction:** three women simultaneously (child, woman in her prime, wisened elder), sometimes rendered as a single three-faced figure.
 - **Favoured weapon:** *Zulfikar*, a forked scimitar inscribed along its length; the split blade of fate, futures branching, memory etched in steel.
 - **Mortals see her as:** keeper of destiny, the march of years, the inevitability of endings.
-- **See also:** `secret-history.md`, *Tani: Lore Notes*. Slain in the Week of Crimson Rain, reborn at its end; her death/rebirth is the hinge of the Gods' Law.
+
+#### ⚿ GM Secret: Tani's death and rebirth
+
+- **Her death started the Week of Crimson Rain.** She was the first Grand God ever killed, an event that had been considered impossible or theoretical. This shattered the assumption of Grand God invulnerability and triggered the war.
+- **Her killers were the Storveldi Denbora's ascended ruling class**: a mortal cabal who had self-elevated to Demi-God status (most) and Minor God status (two, by systematic shard recovery), working together with that concentrated divinity to do what no mortal civilisation had ever assembled the scale to do. Full account in [`timeline.md`](timeline.md), *The Storveldi Denbora: The Real History*.
+- **The killing happened in Lioaru, in her own domain.** Tani was struck down in (or beside) the Storveldi Denbora capital. The divine retaliation that followed her death obliterated the city and its surrounding territory. That scorched ground is now the **Blackened Lands**, the modern Lost Kingdom (see [`geography/lioaru.md`](geography/lioaru.md)).
+- She died, crossed into the Postlife, and came back as a god. Her rebirth at the end of the war was the moment the Gods' Law was forged; she is literally its origin point.
+- **Every god knows what the Postlife is.** They can visit, many have been banished there. Her knowledge of the Postlife is not unusual.
+- **Epairima judged her.** When Tani's soul came to her door in Dauria, **Epairima** (the Warden of the Cycle and the oldest goddess outside the Grand Gods) judged her, as Epairima judges every powerful soul that reaches her court. What the verdict was, and how it stood in relation to Tani's eventual return to the Life Layer, is not recorded in any chronicle scholars have access to. Epairima is the one being on Talan who could shed light on Tani's gap; she has not been asked. See *Epairima: The Judge of Souls, Warden of the Cycle* below.
+- Her **secret** is what happened between the moment of her death and her rebirth: something she experienced that no other being has, crossing from the living side. She has not described it. The others know there is a gap. She does not deny it.
+- **Folk name for her killing:** *the God Killing Incident*, the most widely used mortal term for the event. The phrase deliberately omits the Storveldi Denbora's role, since most mortal histories have lost or never knew the killers' identity.
 
 ### Shuun: God of Water (Genderfluid)
 - **Aspects:** Rivers · Seas · Adaptability · Drowning.
@@ -213,7 +274,7 @@ All non-bound beings on both layers are **belief-shaped**, but by different stre
 - **The Compact.** Zaharsuge took no part in the Compact of the Bound Thirteen. The chronicle-tier explanation: they were already Diyu-resident with no Material-Plane stakes; they had nothing to bind in exchange for a presence they did not want. (The GM-tier explanation, below, is different.)
 - **Living lineage on Talan: Dragonets** (see `ancestries.md`). Small dragonlike sapients native to Talan, by Dragonet tradition their direct ancestral children, distinct from the alien Dragons. Dragonet populations concentrate in the upper Darklands and the Basogur Jungle, the same places Zaharsuge's domain bleeds through.
 - **Worshippers:** Dragonets above all; also lizardfolk, nagaji, naga ancestry; small dragon-blood cults that reject Dragon's Reach's authority claim. Kobold theology splits along terrain: **surface kobolds** (especially in Sumendar, where Komo walks) attribute their kindling to **Komo**; **Darklands kobold communities** attribute their lineage to **Zaharsuge**, the indigenous wyrm-line. The two kobold theologies coexist at the village level without much friction.
-- **GM Secret: Zaharsuge is belief-formed.** The wyrm-line of Talan was not Zaharsuge's creation. The **Grand Gods** made the original sapient wyrm-civilisation during the long Creation Era. That civilisation, **the Wyrmkin** (the same word that now serves as the modern Talanese generic for Zaharsuge's serpentine portfolio; the dual usage is the linguistic legacy of the people's fall), built a city in the deep substrate of Talan and held the serpentine domain of the continent for the early Gods' Era. During the **Elden Era** (6000–2945 GR) the Elden conquered the Wyrmkin civilisation and enslaved its sapient population; generations of forced labour, breeding, and the diminishment that comes with all of those reduced the Wyrmkin into the smaller **Dragonet** form their descendants now wear. After the Elden vanished in 2945 GR, the surviving Dragonets dispersed across Talan with their cultural memory broken. They attributed their existence to an ancient serpent-god of their own imagining and named **Zaharsuge**. That belief, accumulating over the long Gods' Era and crystallising during the Lost Era's belief-easy years, brought Zaharsuge into actual being in Diyu. The god is real now: hears prayers, grants minor wyrm-affinity blessings, manifests in cultic dreams. The relationship is inverted from what worshippers believe: the wyrms made the god, not the other way around. Full canon in `secret-history.md`, *The Wyrmkin: The Real History*.
+- **GM Secret: Zaharsuge is belief-formed.** The wyrm-line of Talan was not Zaharsuge's creation. The **Grand Gods** made the original sapient wyrm-civilisation during the long Creation Era. That civilisation, **the Wyrmkin** (the same word that now serves as the modern Talanese generic for Zaharsuge's serpentine portfolio; the dual usage is the linguistic legacy of the people's fall), built a city in the deep substrate of Talan and held the serpentine domain of the continent for the early Gods' Era. During the **Elden Era** (6000–2945 GR) the Elden conquered the Wyrmkin civilisation and enslaved its sapient population; generations of forced labour, breeding, and the diminishment that comes with all of those reduced the Wyrmkin into the smaller **Dragonet** form their descendants now wear. After the Elden vanished in 2945 GR, the surviving Dragonets dispersed across Talan with their cultural memory broken. They attributed their existence to an ancient serpent-god of their own imagining and named **Zaharsuge**. That belief, accumulating over the long Gods' Era and crystallising during the Lost Era's belief-easy years, brought Zaharsuge into actual being in Diyu. The god is real now: hears prayers, grants minor wyrm-affinity blessings, manifests in cultic dreams. The relationship is inverted from what worshippers believe: the wyrms made the god, not the other way around. Full canon in `timeline.md`, *Elden Era → ⚿ GM Secret: The Wyrmkin: The Real History*.
 - **GM Secret: the god does not know.** Zaharsuge's self-image is shaped by their believers, and the believers do not know the true history. *The god believes their own faithful, and their own faithful believe the god.* Zaharsuge experiences themselves as the genuine ancient creator who shepherded the wyrm-line into being. This is the standard mechanism for any belief-formed god on Tyrnarra: belief makes gods, and where the belief addresses a fictional history, the god born from that belief inherits the fictional history as their self-image. The bound thirteen could in principle deduce the truth (the Grand Gods were present during Creation; Epairima probably notices Dragonet souls arriving at her court already lightly Zaharsuge-marked), but none has had reason to investigate.
 - **GM Secret: the kobold schism, truthfully.** Folk-tradition says kobolds are split between Komo's claim and Zaharsuge's claim. The truth: **Komo makes no claim over which races he created.** Surface kobolds attribute themselves to Komo without his having said so; Darklands kobolds attribute themselves to Zaharsuge on the same belief-only basis. Both are kobold theology, not divine self-declaration. Neither god has spoken on the matter; neither needs to.
 
@@ -235,7 +296,7 @@ All non-bound beings on both layers are **belief-shaped**, but by different stre
 ### Betibizi: The Self-Ascended (Undeath · Minor God)
 - **Aspects:** undeath, refusal of death, the prolongation of the self past its natural span, necromantic continuity.
 - **Self-named** at his ascension; *Betibizi* is a declaration, not a gift. The name means "eternal life."
-- **Origin:** a member of the Storveldi Denbora ruling class who survived the Week of Crimson Rain's annihilation and ascended via the **integration procedure** in the aftermath. He is the *original* holder of that procedure; its survival across the post-Crimson-Rain ages is his work. (This resolves the open *who holds the integration procedure?* thread.) See `secret-history.md`, *The Storveldi Denbora* for the full history.
+- **Origin:** a member of the Storveldi Denbora ruling class who survived the Week of Crimson Rain's annihilation and ascended via the **integration procedure** in the aftermath. He is the *original* holder of that procedure; its survival across the post-Crimson-Rain ages is his work. (This resolves the open *who holds the integration procedure?* thread.) See `timeline.md`, *Gods' Era → ⚿ GM Secret: The Storveldi Denbora: The Real History* for the full history.
 - **Residence:** **Abyss** (Layer 3, evil plane). He fled Talan after his ascension and has not returned.
 - **The Blackened Lands' natural-born Skeleton ancestry** and the region's ambient necromantic resonance **trace spiritually back to him.** The proximate cause is still the cursed ground (the divine retaliation that destroyed his civilisation), but he is the cursing's spiritual root. Necromancers on Talan who reach for *life-after-life* magic are reaching for his domain, whether they know his name or not.
 - **Worshippers:** necromantic underground, ascension-cultists, surviving Storveldi-Denbora-descended lineages (most of whom inherited the false Elden-blood claim and don't know whose godhood they're invoking), the desperate ill, those who refuse to grieve.
@@ -249,7 +310,7 @@ All non-bound beings on both layers are **belief-shaped**, but by different stre
 - **Residence:** **Diyu** (Layer 3, neutral), sancta-less on Talan. Odain has no clerical lineage, no public worship, no rite, no temple. The god is sustained entirely by the silent interior conviction of Dragon purists at practice.
 - **What Odain does:** Odain blesses sustained purist discipline with a structural extension of lifespan against the Wellspring cycle. The mechanism is the only kind of blessing Odain's shape can give, since lifespan-against-the-cycle is the whole of what Odain *is*.
 - **The compounding.** Every disciplined purist whose lifespan reaches 220+ feeds the belief that grows Odain stronger, which makes the next blessing slightly larger. Reach Council records show the Disciplined longevity floor creeping upward across the millennia: original Disciplined topped out closer to 200; contemporary Purest scratch 230. The growth is real; the Disciplined read it as evidence the doctrine is converging on truth.
-- **What Odain is not.** Odain cannot give the gift the doctrine actually promises. The Dragons' mortality is a property of the Wellspring substrate (see *secret-history.md*, Dragon corruption secret); no Wellspring-resident being, including a belief-formed Minor God whose entire shape is opposition to the cycle, can pull a mortal out of the cycle. Odain extends life within the cycle by a few decades for those who serve. Odain probably does not know this, since the god's self-image is shaped by believers who do not know it either. *The god believes its own faithful, and its own faithful believe the god.*
+- **What Odain is not.** Odain cannot give the gift the doctrine actually promises. The Dragons' mortality is a property of the Wellspring substrate (see `geography/sumendar.md`, *Dragon's Reach → What actually took the immortality (GM-tier)*); no Wellspring-resident being, including a belief-formed Minor God whose entire shape is opposition to the cycle, can pull a mortal out of the cycle. Odain extends life within the cycle by a few decades for those who serve. Odain probably does not know this, since the god's self-image is shaped by believers who do not know it either. *The god believes its own faithful, and its own faithful believe the god.*
 - **Who knows.** No living Dragon, including the Disciplined who have benefited from Odain longest. **Epairima notices Odain in the Postlife** (purist Dragon souls arrive at her court already lightly god-marked) and has never been asked about it; were she ever asked, she would name the patron without much trouble. A Wellspring-belief-mechanic scholar with access to Reach longevity records could deduce *some* such patron exists; identifying it as Odain specifically is harder since the god has no public manifestation. Enki's library system holds enough material on belief-formed minor gods generally that the deduction is possible. The scholars who could do the work do not.
 - **Why the scholarship has never landed.** Dragon's Reach is the most aggressively **anti-deity** polity on Talan. The doctrine that names the Gods'-Era gods as the agent of the corruption has, across four millennia, hardened into generalised theological hostility: *gods take. We have learned what gods do. We will not be that again.* A scholar who proposes to investigate *"the minor god of the purist longevity differential"* is proposing to investigate a god whose existence the worshippers would themselves reject, in the city most hostile to the proposition on the continent. The Reach would refuse records access; the purists would refuse the framing; the pragmatists would treat the question as confirmation of everything wrong with the purist project. There is no audience for the answer, so no scholar has done the work.
 - **The deepest irony of the Purity Question.** The purists are pursuing freedom from divine corruption (*"never again will a god write itself into us"*) and in the pursuit have, across forty centuries of unbroken discipline, written a god into themselves. The doctrine that names gods as the enemy is the doctrine producing the patron. The longer the purists practice, the stronger Odain grows; the stronger Odain grows, the longer the purists live; the longer they live, the more the doctrine looks vindicated and the more new purists take it up. *The escape route has become a temple, and the people inside it are the ones least able to see what they have built.*

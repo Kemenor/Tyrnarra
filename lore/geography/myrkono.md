@@ -12,7 +12,7 @@
 
 **God's city:** Myrria, City of Second Chances
 
-**Cosmological role:** Myrkono houses **all seven of the Wardstones** that bind the Corrupted God, distributed across the Shadow Steppes (2), Itzasoa (2), Ilun Tasun (2), and Myrria (1, the Divine Wardstone). The concentration is not accidental: Araphel was the first Grand God to stand with Cronus during the Week of Crimson Rain, and the binding was anchored under his watch. See `../secret-history.md` for the full Wardstones + Nine Generals + War of Seals lore.
+**Cosmological role:** Myrkono houses **all seven of the Wardstones** that bind the Corrupted God, distributed across the Shadow Steppes (2), Itzasoa (2), Ilun Tasun (2), and Myrria (1, the Divine Wardstone). The concentration is not accidental: Araphel was the first Grand God to stand with Cronus during the Week of Crimson Rain (see [`../gods.md`](../gods.md), *Araphel → GM Secret: Araphel and the Crimson Rain*), and the binding was anchored under his watch. Full Wardstone canon + the War of Seals are below; the Corrupted God's true identity lives in [`../cosmology.md`](../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*; the Nine Generals are in [`../factions.md`](../factions.md), *Remnants of Corruption → The Nine Generals*.
 
 **Sub-regions:**
 - **Ilun Tasun**: the dark heartland of Myrkono. Myrria sits within it. Name is Basque: *ilun* (dark) + *tasun* (-ness, quality of) = "the darkness itself." Holds **two Wardstones**: the **Monastery Wardstone** (high mountain monks devote their lives to its guard; pilgrims climb perilous paths to glimpse its veiled glow) and the **Port Wardstone** (in a fortified port city by the sea; Ilun Tasun's fleets are sworn to its defence).
@@ -22,6 +22,24 @@
 - **Bikitsa**: the coastal sub-region at the northern edge of Myrkono, sharing the two-sun phenomenon with the Brauogi-side **Twin Suns** (see [Brauogi](brauogi.md) → Twin Suns) and jointly governed with it under a single shared structure (form canon-pending; see `../../docs/open-threads.md`). *(Basque biki "twin" + itzal "shadow" → biki-itzal → consonant assimilation and final-syllable drop → Bikitsa "twin-shadow.")* Where Brauogi names what the two suns bring (light, harvest, gold), Myrkono names what they cast (twin shadows on the coast). The cross-domain governance is the only such structure on Talan and the closest the bound thirteen have come to permitting a polity that answers to two domains at once.
 
 **Note:** Darkness in Araphel's domain is not malevolent; it is the absence of light, the space between stars, the quiet. The culture here has a sophisticated relationship with shadow and darkness as concept and power.
+
+#### The Seven Wardstones: The Chains of the Bound
+
+Seven monumental relics forged at the end of the Age of Corruption. Together they **bind the Corrupted God deep beneath the earth**, anchoring the chains of divine law sealed at the Week of Crimson Rain (see [`../cosmology.md`](../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity* and the *Age of Corruption: Mortal Myth* in [`../timeline.md`](../timeline.md)).
+
+**Geography.** All seven Wardstones rest in Araphel's domain (Myrkono), distributed across four of its sub-regions: three "kingdoms" and one divine city-state. The geographic concentration is not accidental: Araphel was the first Grand God to stand with Cronus, and the binding was anchored under his watch. The chains of the bound run through *his* domain.
+
+| # | Wardstone | Location | Description |
+|---|---|---|---|
+| 1 | **The Lakeside Wardstone** | Shadow Steppes: a city on the shores of the great lake | Anchors both commerce and faith. The city grew around it as nomadic clans gathered to guard its light. |
+| 2 | **The Steppes Wardstone** | Shadow Steppes: open grasslands | A solitary stone protected by wandering clans. Both a sacred pilgrimage site and a wartime rallying point. |
+| 3 | **The Forest Wardstone** | Itzasoa: within the canopy of the great forest | Enshrined in a vast arboreal city. Bridges of living wood and watchful druids keep eternal vigil. |
+| 4 | **The Temple Wardstone** | Itzasoa: at the heart of a temple city | Integrated into towering ziggurats. Priests conduct daily rites to keep corruption at bay. |
+| 5 | **The Monastery Wardstone** | Ilun Tasun: high in the mountains | Monks devote their lives to guarding it. Pilgrims climb perilous paths to glimpse its veiled glow. |
+| 6 | **The Port Wardstone** | Ilun Tasun: fortified port city by the sea | Both sacred relic and keystone of trade. The Ilun Tasun fleets are sworn to its defence. |
+| 7 | **The Divine Wardstone** | Myrria: Sanctum of Veils | The last of the seven. Unlike the others, it is openly bound to a living deity's protection. Glows only beneath the stars; fades before the sun. |
+
+**The War of Seals** is the ongoing struggle to keep the Wardstones safe. While the chains hold, the Corrupted God remains bound. Were Myrria to fall, the entire chain would be imperilled, which is why even rival kingdoms respect the city's independence.
 
 #### Notable Locations in Myrkono
 
@@ -47,7 +65,7 @@ An independent city-state nestled in a crescent of mountains, both sanctuary and
 
 **The Hollow of Ten Thousand Threads** (Shadow Steppes)
 
-The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `../secret-history.md`). A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers: strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors.
+The lair of the **Vermin Queen**, one of the Nine Generals of Corruption (see `../factions.md`, *Remnants of Corruption → The Nine Generals*). A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers: strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors.
 
 **Structure:**
 - **The Web-Tunnels**: narrow passageways coated in sticky threads. Trap and alarm system in one; intrusions alert the Queen's spawn instantly.
