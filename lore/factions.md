@@ -1,4 +1,4 @@
-# Factions: Tyrnarra Lore Reference
+﻿# Factions: Tyrnarra Lore Reference
 
 Factions in Talan fall into four broad categories. Political entities and city-states are too numerous to list exhaustively here; see `lore/geography/` (one file per god domain) for the full breakdown by domain.
 
@@ -11,7 +11,7 @@ Factions in Talan fall into four broad categories. Political entities and city-s
 **2. City-States**: The god city-states (one per bound god) plus independent city-states (Dragon's Reach, Frae City, etc.). City-states are self-governing and answer to no kingdom. See `geography/_continent.md` for the index of domain capitals and `geography/<region>.md` for the city-state detail under each domain.
 
 **3. God Churches**: One church per bound god (13 total). Each church operates within whatever kingdom it sits in, subject to local law, but ultimately answers to their god's theology. See `grand-gods.html` for each god's clergy structure.
-- **Other God Believers**: An umbrella category for cults, churches, and traditions of non-bound gods (elven ancestral pantheons, demon lord cults, deep god worship, etc.). These have real divine power and active presence on Talan. The most politically significant instance currently is the **Divine Faith** of the Legea Empire (see entry below).
+- **Other God Believers**: An umbrella category for cults, churches, and traditions of non-bound gods (elven ancestral pantheons, demon lord cults, deep god worship, etc.). These have real divine power and active presence on Talan. The most politically significant instance currently is the **Divine Faith** of the Legea Empire; full canon in [`geography/zuzental.md`](geography/zuzental.md), *Legea Empire → The Divine Faith*.
 
 **4. Independent Organisations**: World-spanning institutions that answer to no kingdom or god. Detailed below.
 
@@ -203,255 +203,19 @@ The Guild's seat in Myrkono and the regional command for all Guild operations ac
 
 ---
 
-## Non-Bound God Faiths
+## Region-bound institutions (cross-pointers)
 
-### The Divine Faith (Legea Empire)
+Several institutions that originated in this file's *Independent Organisations* category turned out to live entirely inside one polity and have been relocated to their geography file. They are listed here only as pointers; full canon is at the destination.
 
-**Character:** State religion of the **Legea Empire**, a sub-region of Zuzental (Law / Forseti). A theocratic faith devoted to a god who is *not* one of the bound thirteen, a power residing in the third (Postlife) layer of the planes. Specific identity, name, and home plane (Elysium, Diyu, or Abyss) are TBD.
+- **The Divine Faith (Legea Empire).** State religion of the Legea Empire (Zuzental), tied to a non-bound Layer-3 god (specific plane TBD). Full canon in [`geography/zuzental.md`](geography/zuzental.md), *Legea Empire â†’ The Divine Faith*.
+- **House Eisenhart.** Mostly-dwarven prestige bloodline within the Order of Steam (Sumendar). Arms manufacturer to the world; political heavyweight on the Council of the Forge. *Stahlglanz* mobile-fortress relic. Full canon in [`geography/sumendar.md`](geography/sumendar.md), *Order of Steam â†’ House Eisenhart*.
+- **The Spider's Silk Inn (Charna's hall).** Tavern, neutral ground, mercenary hiring hall, information exchange. Sits in Crossroads on the Zuzental/Lautara/Egulon tri-point. Full canon in [`geography/zuzental.md`](geography/zuzental.md), *Crossroads â†’ The Spider's Silk Inn*.
+- **The Red Empire, the Iron Tide, the Menagerie.** Off-continent power, naval arm, and Fleshwright corps. Full canon in [`geography/_off-continent.md`](geography/_off-continent.md), *Red Empire's home continent*.
+- **Bolverk (the megacity in Abyss).** The seven Vice Demons, the fourteen Virtue Devils, and the Independents live there; soul-routing and the Tunsund channel are documented as a place rather than a faction. Full canon in [`geography/bolverk.md`](geography/bolverk.md).
 
-**Founding (first third of the Dark Era).** The Empire is younger than its own doctrine suggests. It was founded in the dangerous centuries immediately after the Golden Empire's 1325 MR collapse, when southern Zuzental was unstructured wreckage of refugees, broken roads, and Corrupted-spawn incursions ranging out of the deeper country. Its founder was a **holy knight** (name TBD) of no particular Imperial pedigree, taken by the Faith's god as a chosen instrument; the god, Layer-3-resident and unbound by the Crimson-Rain Compact, was free to grant power without the Compact's mediating constraints. The Knight **fought the spawn**, and the people he was protecting did not die. Refugees gathered, towns grew, the camp became a polity. Sustained mortal belief in the Knight and in the god backing him followed the Bikiargi-mechanism (same generative substrate that pulls Wellspring-born minor gods into being from concentrated worship): the Knight **ascended to demigod status within his own lifetime**, recognised by the Faith's god, witnessed by the congregations whose belief had lifted him. By his death (centuries later, as demigods do), the polity was a generation-old Empire and the succession had been arranged.
-
-**Political form:** Hereditary demigod theocracy. The Empire is ruled by a **demigod** of the Knight's blood: descendant of the founder, inheritor of the original ascent. Through this demigod the Faith and the throne are the same institution; there is no separation of church and state. Whether the divine inheritance attenuates across the generations, whether each heir is renewed through some rite of investiture, or whether the Faith's god re-confirms the bloodline at each transition, is not published by the Empire. The reigning monarch is several generations removed from the founder; exact count is open.
-
-**The doctrinal awkwardness.** The Empire teaches that the demigod's authority is *not* from the Empire's people but from the god directly: a top-down relay of divine will, structurally a denial of any bottom-up source of authority. The founding story contradicts this: the Knight's ascent ran on the belief of the people he protected, which is exactly the bottom-up source the doctrine officially rejects. The Faith prefers the framing that the Knight was always the god's chosen and that his divinity was a recognition rather than a building. Scholars outside the Empire find the human version (heroic mortal lifted into godhood by the people he saved) considerably more interesting.
-
-**Geography:** The Empire sits inside Zuzental (Forseti's domain), and this is the structural heart of its tension on Talan. The tension is *not* a contest of two divinely-prescribed legal codes; **Forseti does not prescribe law.** Her portfolio is judgment and oath-keeping (Order · Justice · Oath · Tyranny), not the daily content of how mortals live. In Zuzental at large (including the Thousand Kingdom and its neighbours), mortals make their own laws; Forseti's clergy serve as judges, oath-witnesses, contract-arbiters, and recorders, not as authors of doctrine. The Empire is the exception: **the Faith's god *does* prescribe how mortals live** (ritual, calendar, marriage, contracts, punishment, every part of the day), which is what makes the Empire a theocracy in the strict sense. The structural difference is *god-written life vs mortal-written life,* not *one divine law vs another.* **Forseti could not have crushed the founding cult in the Dark Era**: the Gods' Law operates as physics on the Material Plane, and one of its core constraints is that the bound thirteen cannot directly govern mortal populations or wage open war against them. A polity of mortal followers gathered around a non-bound god's chosen instrument is exactly the kind of arrangement Forseti is structurally forbidden to act against. The Faith's god, Layer-3-resident and unbound, was the active player. Forseti was a constrained spectator, not a tolerant overseer.
-
-**Reach:** Beyond the Empire proper, the Faith runs an active **missionary programme**. Most consequentially: Fenurra (see `cultures/fenurra.md`, *The schism*). Missionaries have converted a portion of Fenurran tribes, fracturing the tribal balance. The ruling Draconis tribe has responded by arranging the political marriage of their daughter to the **theocratic prince**, the heir to the Legea Empire (and thus the heir of the demigod line), attempting to absorb the Faith's ideology into Fenurran politics rather than let it shatter them. The outcome is unsettled.
-
-**Why this matters cosmologically:** This is the most politically significant non-bound god currently active on Talan. Unlike demon-lord cults or deep god worship, the Divine Faith holds an entire sub-region of the continent's most prestigious domain, fields a demigod ruler, and is actively expanding. It also raises sharp questions for the Gods' Law: the bound thirteen swore the Law and reside on Talan in the Material plane; a third-layer (Postlife) god is by definition outside that compact. What it can and cannot do on Talan, and what its demigod scion's powers look like, are open. That Forseti, the literal god of binding-rules, tolerates this within his own domain is itself a question worth asking.
-
-**Open threads:**
-- Specific plane (Elysium, Diyu, or Abyss) and identity of the deity.
-- **The founding Knight's name**: the mortal who became the first demigod.
-- Name and nature of the reigning demigod ruler, and which generation of the line they are.
-- Name and identity of the theocratic prince (the heir who carries the Draconis marriage).
-- The succession theology, whether the divine inheritance attenuates, is renewed at investiture, or is re-confirmed by the Faith's god at each transition.
-- The legal-theological doctrine: how does the Faith's law differ from Forseti's? Where do they conflict in practice?
+This file (`factions.md`) now holds only **cross-domain** factions: organisations whose reach spans Talan's polities and which do not sit inside any single one.
 
 ---
-
-## Off-Continent Powers
-
-The bound thirteen reside on **Talan**. Other continents exist across Hafra and the Cloud Sea; mortals on those landmasses live outside the Gods' Law's direct presence (though the Law itself, being physics of the Life Layer, still applies anywhere on the Material Plane). Most off-continent powers are little known to Talanese scholars. **One is known very well**, because it has been throwing itself at Talan's coasts.
-
-### The Red Empire
-
-**Origin:** A vast authoritarian state on **another continent**, across Hafra. From a Talanese perspective the Empire is the *foreign* power; its capital, its emperor, and its core population are all over the sea. From the Empire's perspective, Talan is the *backwards* continent: the one still in thrall to gods.
-
-**Character:** Authoritarian, godless, militarist. The world's loudest argument against divinity, and the bound thirteen's first major external rival.
-
-**Strategic posture toward Talan:** Active. The Empire treats Talan as the next conquest and the gods themselves as the enemy. The **Iron Tide** (see below) is the spearhead; the Empire reaches Talan by sea, lands at coasts, and burns ports before annexing them. The bound thirteen cannot deploy directly against the Empire on its home continent without leaving their own city-states; the Gods' Law's normal-state constraints (no direct governance of mortal populations, no open warfare on the Material Plane) make a divine response politically and theologically fraught even when the threat is undeniable. This is the structural advantage the Empire exploits: a godless state can move against gods more freely than gods can move against a godless state.
-
-**Why the threat lands hardest on Talan:** Talan is the continent where the bound thirteen *are*. To the Red Empire's ideology, every god-city is both an insult and a target. Conquering Talan would not just expand the Empire; it would *prove the creed* in the most public, most cosmologically loaded way available.
-
-**Creed:** Mortal supremacy as cosmological fact. The bound thirteen are dismissed as "illusions or parasites feeding on the weak"; worship is treated as the surrender of will to an external master. The Empire's claim is that **discipline, hardship, and sacrifice** can lift mortals past gods. Religion is outlawed inside Imperial borders. Priests and temples are dismantled or repurposed as academies and drill yards.
-
-**Ruler, The Crimson Emperor:** Supreme commander; the living advertisement for the creed. Said to have endured **the Ordeal of Ash** (forty days of isolation, starvation, and pain), emerging scarred but unbroken, as proof that mortal will outlasts any divine trial. His throne, the **Pyre Seat**, is forged from the weapons of defeated kings, melted together in conquest.
-
-**Motto:** *"Through hardship, dominion. Through discipline, eternity."*
-
-**Symbol:** A phoenix without wings, rising not from fire but from sharpened steel: rebirth by mortal hands, not divine grace.
-
-**Colours:** Crimson (blood spilled willingly) and black (ash left by fire).
-
-#### Military
-
-Everything is the army; the army is the state.
-
-- **Red Army (Legions of Flame)**: citizen-soldiers in lifelong service, organised into self-sufficient legions with their own infantry, engineers, and war-mages. Daily drill includes endurance trials: fasting, exposure, forced marches.
-- **Ashen Guard**: the Emperor's elite, drawn from survivors of the hardest trials. Their armour is blackened by the ritual fires they walk through to earn it. They enforce Imperial law and execute failed officers.
-- **The Menagerie**: secretive corps of war-mages, alchemists, surgeons, and necromancers. (Detailed below.)
-- **Iron Tide**: the Empire's navy and the only branch most Talanese have actually seen. (Detailed below.)
-
-#### Social Hierarchy
-
-Strict caste structure, but the castes are **fluid**; rise and fall are constant, both treated as a mortal being "placed into their correct station."
-
-1. **The Pyre Throne**: the Crimson Emperor alone. Legitimacy is tied to demonstrable strength; perceived weakness would unmake him.
-2. **The Command Caste**: Generals, Legates, High Strategoi; commanders of the Ashen Guard and Menagerie. Status is military victory plus endurance plus command loyalty. A scholar of war who loses a battle is stripped of rank and frequently demoted to Fodder.
-3. **The Forged**: esteemed artisans: blacksmiths, siege engineers, alchemists, Menagerie scholars. *"To craft is to conquer the world's resistance."* A master armour-smith can outrank a junior officer.
-4. **The Blooded**: professional Red Army legionaries. The backbone. Entitled to stipends, land rights, and crimson cloaks. Cowardice in battle demotes instantly to Fodder.
-5. **The Respected Hands**: common skilled labourers (carpenters, masons, shipwrights, healers, scribes). Productive, disciplined, organised into military-style guilds.
-6. **The Ashen**: unskilled labour (farmhands, dockers, miners). Necessary but replaceable. Can rise via the Trial of Ash or by volunteering for conscription.
-7. **The Broken**: the lowest tier: the unproductive, infirm, elderly without family, and those who fail the Trial without strength enough for menial work. Pressed into the most dangerous state projects: quarry work, war-mines. Survival rates are deliberately low.
-
-**Fodder**: *not* a caste but a punishment. Anyone demoted to Fodder is given whatever equipment is left over and thrown into front-line meat-grinder roles: living shields, first-charge in suicide assaults. Survivors are permitted to climb back into the Ashen caste and rise from there. Failure is death; survival is recognised as proof of worth.
-
-**Children & Trials:** At age ten every Imperial child faces the **Trial of Ash**. Those who endure feed the academies (soldiers, engineers, overseers). Those who fail become labourers or are cast aside.
-
-**Law:** Mercy is named as weakness; justice as survival. Theft, cowardice, treason: public execution, often staged as reminder.
-
-**Festivals:** Mass endurance marches, public duels, communal fasts, and the breaking of captured enemies in arenas.
-
-**Open threads:** The continent's name and geography, the Empire's borders within it, whether other nations exist alongside it on the same landmass (vassals, rivals, conquered remnants), and how far across Hafra the home continent actually lies. The crossing itself takes Iron Tide vessels long enough that landings on Talan are campaigns, not raids.
-
----
-
-### The Iron Tide
-
-**Sub-organisation of:** The Red Empire; its naval arm, and the only part of the Empire most Talanese have ever encountered firsthand.
-
-**Strategic role:** The Iron Tide is how the Empire reaches Talan. Its fleets cross Hafra, hammer Talanese coastal kingdoms, and either burn what they cannot take or annex what they can. Coastal city-states (Floteyn, Itzasoa, Ilun Tasun, the Order of Steam's ports, Ehizahar's southern shore) have all sighted Iron Tide vessels at some point in the last century. The Adventurers Guild maintains standing intelligence on Iron Tide movements; the Order of Steam's airship fleets and House Eisenhart's *Stahlglanz* exist in part because of them.
-
-**Character:** Black iron, fire, frost; ports reduced to ash. The Tide is engineered, not graceful.
-
-**Doctrine:**
-- **Scorched Shores**: coastal towns are annihilated *before* surrender is offered. Survivors are enslaved; ports are rebuilt in the Empire's image.
-- **Blockade Warfare**: entire kingdoms are strangled by frozen and burned trade routes until famine forces capitulation.
-- **Siege by Sea**: incendiary shot, alchemical fire, rune-bound ice bolts thrown from beyond shore-defence range.
-- **No Retreat**: captains are expected to scuttle their vessels rather than yield. Survival of a surrendered ship is shameful.
-
-**Structure:**
-- **Admirals of Flame and Frost**: dual command. One oversees the incendiary divisions, the other the frost-bound fleets.
-- **Flamefangs**: warships armed with fire-belchers, pitch-casters, and incendiary ballistae.
-- **Frostfangs**: vessels clad in enchanted ice; their prows freeze the sea solid to trap enemy hulls.
-- **Steam Hulks**: massive ironclads driven by boilers and arcane engines. Loud, slow, unstoppable; mobile fortresses.
-- **Corsair Auxilia**: captured vessels crewed by conscripts or Broken, used as sacrificial first wave.
-
-**Arsenal:**
-- **Incendiary Pitch**: thick black fire that clings to water and flesh alike.
-- **Frost-Bolt Ballistae**: runed spears of ice that pierce and freeze hulls solid.
-- **Steam Cannons**: experimental vent weapons that scald boarding crews alive.
-- **Boarding Hooks & Chains**: once an enemy hull is crippled, the boarding is swift and merciless.
-
-**Discipline:** Sailors are conditioned to both extremes: scalding boiler-rooms by day, ice-slicked decks by night. Punishment for cowardice is being lashed to the prow in freezing spray until death.
-
-**Creed:** *"The sea is no god. It bends to iron."*
-
-**Reputation:**
-- **Inside the Empire:** Revered as proof that mortal will commands the oceans. Long-service sailors are elevated into the Blooded or Forged.
-- **On Talan:** The black keels and crimson sails are read as guaranteed annihilation: fire on the water, ice in the harbour, smoke in the sky. Coastal kingdoms have evacuation protocols specifically for an Iron Tide horizon-sighting.
-
----
-
-### The Menagerie
-
-**Sub-organisation of:** The Red Empire; its secret-most, most-reviled corps. Operates from the Empire's home continent; **Collectors** are the only branch that operates routinely on Talan, infiltrating cities to gather subjects and reagents.
-
-**Character:** Self-described "artisans of war." Outsiders call them Fleshwrights. They take flesh, bone, mind, and soul as raw clay.
-
-**Creed:** *"Perfection has no pity."* Weakness is the only sin; every limitation (fear, hunger, fatigue, mortality) can be cut away. They reject the word *monstrous*: if a creation is effective, it is beautiful. Failure is data, not tragedy.
-
-**Goals:** Not destruction. **Progress**: eliminate frailty, forge mortals into something past gods.
-
-**Structure:**
-- **The Master Curator**: top authority, chosen by peer consensus rather than appointment. "Keeper of the collection." Directs Menagerie-wide projects.
-- **Curators**: senior war-mages / alchemists / surgeons leading specific experimental lines. Each maintains a personal *catalogue*: theories, failures, and living subjects.
-- **Keepers**: mid-rank practitioners running the actual laboratories, overseeing Fodder test subjects, and implementing the Curators' designs.
-- **Collectors**: field agents who gather subjects, materials, and rare reagents inside the Empire and beyond. Trained to vanish into any society. Children outside the Empire are told stories about them. **On Talan, Collectors are the Menagerie's only operational presence**; they pass for merchants, scholars, pilgrims, refugees. Disappearances near port cities are routinely investigated as possible Collector work.
-
-**Methods:**
-- **Surgical Reforging**: cutting, grafting, restructuring with steel, bone, or scale.
-- **Alchemical Transmutation**: concoctions that twist organs, harden flesh, fuel violent strength.
-- **Arcane Infusion**: runes branded into skin, enchantments woven into marrow, spirits stitched into flesh.
-- **Necromantic Reclamation**: knowledge torn from the dead; corpses driven for experiment; soul-fragments stitched into living hosts.
-- **Conditioning Trials**: survivors of starvation, fire, venom, and battle are mapped for insight: *"the empire learns most from those who almost die, but do not."*
-
-**Creations:**
-- **Augments**: soldiers reinforced with steel-bone, hardened skin, or heightened senses. Subtle enough to blend into legion rank-and-file.
-- **Exemplars**: attempts to refine entire cohorts: fearless, sleepless, tireless, obedient.
-- **The Apex Line**: singular reforged predators built as living siege weapons. Unleashed for annihilation, not deployment.
-- **Ashborn**: Fodder or Broken reforged by necromancy. Stitched living-and-dead engines of endurance, sustained by arcane binding.
-- **Harvested**: reanimated enemy corpses stripped of identity, fielded en masse.
-- **Fleshwarps**: survivors of the most unstable experiments. Mismatched limbs, fused organs, beast-grafts. No two are alike. Deployed as shock troops, terror weapons, or laborers in lethal environments. Considered both failure *and* asset. **These are Menagerie-made fleshwarps, distinct from the natural-born Fleshwarp ancestry** that arises in the Blackened Lands of Lioaru (see `secret-history.md`). Two different origins, similar end-product, and Menagerie Curators are believed to have studied the Blackened Lands fleshwarp population for technique, though the Empire has never confirmed it.
-
-**Symbol:** Crimson serpent devouring its own tail, set inside a cage of black iron bars.
-
-**Colours:** White and blue laboratory uniforms over hidden crimson linings: clinical purity over blood-soaked work.
-
-**Rituals:** Each Curator maintains a personal *collection room*: shelves of preserved organs, bones, and failed grafts, kept as reminders of paths discarded.
-
-**Reputation:**
-- **Inside the Empire:** Feared but tolerated. The Blooded call them *Fleshwrights*, half-respect, half-revulsion. The Forged sometimes envy them as "the pinnacle of craftsmanship," but few admit it openly.
-- **On Talan:** Whispered like a curse. Coastal cities watch port arrivals for Collector signatures. Captives of Iron Tide raids fear being shipped to the Empire's labs more than they fear execution at the dock.
-
----
-
-## Noble Houses
-
-### House Eisenhart (Order of Steam)
-
-**Character:** Mostly-dwarven prestige bloodline; arms manufacturer to the world; political heavyweight inside the Order of Steam.
-
-**Type:** Noble House, political and family.
-
-**Specialisation:** High-grade military equipment and large-scale war machines. Armoured airships. Steam-driven siege engines. Arcane-powered artillery. Their goods are status symbols as much as tools of war.
-
-**Reputation:** Uncompromising quality. Functional but imposing design. Equipment that remains operational for centuries.
-
-**Political Influence:**
-- Holds several **hereditary seats on the Council of the Forge**, the Order of Steam's central war-policy and industrial-priority body.
-- Maintains long-term supply contracts with multiple foreign powers, but rarely sells the most advanced designs outside the Order's borders.
-
-**Motto:** *"Strength Forged in Honor."*
-
-**Notable Exports:**
-- **The Eisenhart Leviathan-class warship.**
-- **The Ironwing line** of heavy combat airships.
-- **Precision-forged runeblade bayonets** issued to elite dwarven regiments.
-
-#### Highforge Matriarch: Tharka Eisenhart
-
-- **Race:** Forge Dwarf.
-- **Age:** 217.
-- **Titles:** Lady of the Anvil Throne, Warden of the Steel Marches, Keeper of the Furnace-Law.
-- **Profile:** Stern, unsmiling, pragmatic. Runs the House like a war campaign: ruthlessly efficient, zero tolerance for incompetence. Famous for field-testing new weapons in live combat, and once for silencing a noble critic by hurling a prototype cannonball across a boardroom table.
-- **Wears an adaptive exo-frame** (part armour, part medical brace) built after an assassination attempt that left her with lasting spinal injury.
-- **Politics:** Deeply loyal to the Order of Steam but distrustful of its softer political wings. Pushes aggressively for military modernisation and limited foreign expansion. Refuses to sell Eisenhart technology to "unproven hands," even allied ones.
-
-#### War Relic: *Stahlglanz*
-
-- **Type:** Mobile fortress (land and sea).
-- **Designation:** *Stahlglanz*, "Steelshine" in Old Dwarvish.
-- **Dimensions:** Over 400 metres long. Built like a floating citadel with retractable wheels and submersible hull segments.
-- **Mobility:** Arcane-driven tread assemblies and powered legs on the front half for overland travel; rear section reconfigures for aquatic propulsion. The fortress walks across land and crosses sea without intermediate transfer.
-- **Defences:** Reinforced Ethersteel plating with wards against elemental and arcane assault. Shield-array projectors powered by a cathedral-sized mana furnace. Full batteries of heavy rune cannons and long-range siege mortars.
-- **Features:** Internal barracks; hangar bays for Ironwing airships; command throne interfaced with the ship's engine spirit; a mobile forge-deck staffed by golem-assisted engineers for on-field repair and weapon production.
-- **Historical role:** Built during **the Siege of Nine Storms**, where it broke the blockade of three enemy nations by walking straight *through* the sea and levelling a fleet from beneath. Since then it deploys only on declaration of **Total Mobilization**, which the Order of Steam has not done in over a century.
-
----
-
-## Notable Neutral Grounds
-
-### The Spider's Silk Inn (Crossroads)
-
-**Character:** Tavern, neutral ground, mercenary hiring hall, information exchange, and sanctuary for those who need to disappear, all the same building.
-
-**Location:** **Crossroads**, a trade-nexus settlement at the meeting point of multiple territories. Crossroads is independent in the same way Frae City is independent: not legally sovereign, but functionally untouched because every neighbouring power benefits from its neutrality and none can risk being the one that breaks it.
-
-> **Geographic placement (canon decision, 2026-05-24):** Crossroads sits on the three-way border of **Zuzental** (Law / Forseti), **Lautara** (Commerce / Jianna), and **Egulon** (Light / Iro). The three Ascendant domains of law, trade, and prosperity converge there, which is why every kingdom with business in any of them maintains a discreet presence in town. The name is plainly English (modern naming stratum). Recorded in `geography/lautara.md` (eastern marches) and `geography/zuzental.md` (Crossroads sub-region entry).
-
-**Proprietor:** **Matron Charna**, ancient Anadi.
-
-- **Appearance:** Ebony exoskeleton with a mother-of-pearl sheen, eight glittering eyes, slender limbs moving with slow precision.
-- **Manner:** Watchful, deliberate, faintly amused. Rarely descends from her vantage point.
-- **Seat of power:** A nest-platform at the ceiling's centre. She oversees the whole common room from above.
-- **Reputation:** Holds the debts, secrets, and weaknesses of half the region. Keeps flawless memory of every deal struck under her roof. Wove every enchanted thread in the building herself.
-
-**The enchanted silver silk:** Threaded through every rafter, beam, and wall. It does two things simultaneously:
-
-1. **Suppresses hostile magic**: no one can cast aggressively under her roof. This is why the inn functions as neutral ground: rival agents can sit at adjacent tables without violence becoming an option.
-2. **Extends Charna's awareness**: every word and motion in the inn carries to her platform. Patrons assume this; most still talk freely, because the alternative is worse.
-
-**Notable features:**
-- **The Hiring Wall**: public noticeboard of contracts, bounties, and discreet arrangements. Mercenaries treat it the way Adventurer's-Guild parties treat the Postboard.
-- **The Webroom**: curtained upper chamber for private negotiation, accessible only by silk rappel-line. Soundproofed and warded.
-- **Silk Lines Service**: Anadi and nimble humanoid staff descend from the rafters on silk lines, delivering trays without spilling.
-- **Guest Rooms**: silk-sealed sleeping chambers. Magical and mundane eavesdropping is suppressed inside. Highly sought by travellers with dangerous enemies or dangerous secrets.
-
-**Atmosphere:** Crisp hops and spiced cider over richer notes of venison stew and rye bread. Drifting light orbs between tables. Concerts, arm-wrestling matches, storytellers, contests; the common room is "always alive." Brawls do not happen; Charna's authority is absolute, enforced first by the silk and second by everyone in the room understanding what she is.
-
-**Common patrons:** Mercenaries (the Mercenary Guild treats Crossroads as a major hub), merchants closing sensitive deals or hiring escort, informants and spies trading both ways, runaways and exiles waiting for the next leg of disappearance, and (rarely) Adventurers Guild members on the Guild's grey-area work who prefer not to be seen at their own posts.
-
-**What People Say:** Every long-running inn has its stories; the Spider's Silk has more than most, partly because Charna lets them propagate. None are confirmed; all are repeated.
-
-- **The silk may record.** The silver silk may not only suppress hostile magic and carry sound to Charna's platform; some claim it *records*, every conversation under the rafters held inside the thread itself, waiting to be drawn out. No one has proven this. The rumour persists because more than one negotiator has been quoted, years later, with phrasing they swear they used only once, only in the Spider's Silk.
-- **The Favor.** Once in a generation Charna offers a guest **The Favor**. The form varies: a quiet word at the bar, a silk-lowered note, a chamber granted free of charge. Those who accept rise to power afterward, with her unseen help. The price of having accepted is never named in advance. Those who decline are not punished, and not invited again.
-- **The sealed chamber.** On the topmost floor, behind a door no staff member uses, a single chamber has been wrapped in silk for decades, layer over layer, until the silk itself is the wall. No one but Charna is allowed near it. She has not explained, and the few patrons who have asked twice have not asked a third time.
-
----
-
 ## Bandit Categories
 
 Not organised institutions; patterns of lawless work common enough on Talan to be recognised by type. Listed here for cross-reference.
@@ -464,6 +228,6 @@ Not organised institutions; patterns of lawless work common enough on Talan to b
 
 **Response:** The Order of Steam fields its own Magitech-armed security on its licensed lines. Smaller operators rely on Adventurers' Guild contracts. Train-pirate cells that grow large enough to threaten scheduled service tend to attract Guild high-rank attention and disappear within a season; most cells stay small enough to evade that threshold.
 
-**See also:** `cosmology.md`, *Technology: Magitech and Infrastructure → Train Pirates and other Magitrain hazards*; the **Conductor's Station** pocket-dimension hazard is a separate non-bandit Magitrain phenomenon documented in the same section.
+**See also:** `cosmology.md`, *Technology: Magitech and Infrastructure â†’ Train Pirates and other Magitrain hazards*; the **Conductor's Station** pocket-dimension hazard is a separate non-bandit Magitrain phenomenon documented in the same section.
 
 ---

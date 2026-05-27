@@ -2,7 +2,7 @@
 
 The infernal megacity on the plane of **Abyss**. Bolverk holds the seven **Vice Demons** and the fourteen **Virtue Devils** that mortals on Talan call upon, fear, and bargain with, but it is **the endpoint of corruption, not its engine**. The work of vice and virtue-corruption happens on Talan via whispers, offers, and bargains; Bolverk is where the harvested souls are processed into Wellspring-power.
 
-This file holds the canon for Bolverk itself, its inhabitants, and the politics between them. Other evil powers on Talan (the **Corrupted God** beneath the Darklands, the **Generals of Corruption** in the Nine Dungeons, **Betibizi** the self-ascended Minor God of Undeath) do not live in Bolverk and are covered in `gods.md`, `secret-history.md`, and `the-binding.md` (relevant files).
+This file holds the canon for Bolverk itself, its inhabitants, and the politics between them. Other evil powers on Talan (the **Corrupted God** beneath the Darklands, the **Generals of Corruption** in the Nine Dungeons, **Betibizi** the self-ascended Minor God of Undeath) do not live in Bolverk and are covered in `../gods.md`, `../secret-history.md`, and `the-binding.md` (relevant files).
 
 ---
 
@@ -121,7 +121,7 @@ The Vice Demons of Talan embody one of the seven canonical Vices directly. Unlik
 
 **The corruption.** He was proud at the start; the shard made him more so. Then came the **Week of Crimson Rain**, and Tani fell to the unjust gods and died. Drambur watched the Goddess of Time *die*, and realised, in that moment, that gods are mortal beings of immense power, not metaphysical absolutes. The thought that followed was small and terrible: *if Tani can die, Iro can die. If Iro can die, what is the difference between Iro and me? I have a shard. I have the battlefield. I have already done what he did.*
 
-**The fall.** With Iro deep in the cosmic work of the Week (wrestling with Tani's binding-back, with the unjust gods, with Cronus's gathering), Drambur turned on his own god at his god's weakest moment, believing himself indomitable. **It was a real fight, god to god.** Drambur, demi-god with a stolen shard, met Iro on something near-even terms and **almost killed him**. The fight tore on for hours. Iro put him down in the end, but it cost the god: wounds that have never fully closed, hours stolen from the cosmic work elsewhere, and a permanent flinch around the question of zealotry. (See `gods.md`, Iro, *GM Secret: the wound from Drambur*.)
+**The fall.** With Iro deep in the cosmic work of the Week (wrestling with Tani's binding-back, with the unjust gods, with Cronus's gathering), Drambur turned on his own god at his god's weakest moment, believing himself indomitable. **It was a real fight, god to god.** Drambur, demi-god with a stolen shard, met Iro on something near-even terms and **almost killed him**. The fight tore on for hours. Iro put him down in the end, but it cost the god: wounds that have never fully closed, hours stolen from the cosmic work elsewhere, and a permanent flinch around the question of zealotry. (See `../gods.md`, Iro, *GM Secret: the wound from Drambur*.)
 
 **Ascension to the seat.** Drambur's Pride-perfect soul fell across the Tunsund into Bolverk. The previous Pride-seat-holder (old, complacent, ruling on inheritance rather than vigour) could not hold against him. Drambur killed the previous Drambur in the Pride spire and took the throne. He has held it since the close of the Gods' Era; in mortal reckoning, **several millennia**.
 
@@ -378,10 +378,10 @@ The Virtue Devil count is **not paired against the seven Vices**; the virtues st
 
 ## Cross-References
 
-- **The plane of Abyss + the Postlife layer + the Wellspring**: `cosmology.md`
-- **Dauria (Judgment City), the Duskmire, the moon-cycle soul-routing**: `cosmology.md` and `gods.md` (Tani, *Lore Notes*)
-- **The Corrupted God, Generals of Corruption, the Nine Dungeons**: `secret-history.md`, `the-binding.md`
-- **Betibizi (self-ascended Minor God of Undeath in Abyss)**: `gods.md` (*Named Non-Bound Gods*); she resides in Abyss but **not in Bolverk**
-- **Iro's wound from Drambur**: `gods.md` (Iro, *GM Secret: the wound from Drambur*)
-- **Nephilim with fiendish parentage (descended from Vice Demons or Virtue Devils)**: `ancestries.md` (*Versatile Heritages → Nephilim*)
+- **The plane of Abyss + the Postlife layer + the Wellspring**: `../cosmology.md`
+- **Dauria (Judgment City), the Duskmire, the moon-cycle soul-routing**: `../cosmology.md` and `../gods.md` (Tani, *Lore Notes*)
+- **The Corrupted God, Generals of Corruption, the Nine Dungeons**: `../secret-history.md`, `the-binding.md`
+- **Betibizi (self-ascended Minor God of Undeath in Abyss)**: `../gods.md` (*Named Non-Bound Gods*); she resides in Abyss but **not in Bolverk**
+- **Iro's wound from Drambur**: `../gods.md` (Iro, *GM Secret: the wound from Drambur*)
+- **Nephilim with fiendish parentage (descended from Vice Demons or Virtue Devils)**: `../ancestries.md` (*Versatile Heritages → Nephilim*)
 - **PF2e cleric domain grants for the Vice Demons and Virtue Devils**: currently **Open / canon-pending** in `pf2e-registrar.html`; a dedicated non-bound assignment pass will land these together

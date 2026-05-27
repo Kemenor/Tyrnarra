@@ -17,7 +17,47 @@
 - **Burdineyja**: island chain off the coast of the Red Dominion, extending into Midarra. Name: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) → Burdineyja. Iron Islands; fits the volcanic, metal-working character of the domain.
 - **Haraour Eliza**: sub-region of Sumendar. The *eliza* root (Basque: church) frames the place as religious or institutional in character.
 - **No Man's Land**: unclaimed territory belonging to no kingdom. Houses Eldara, Komo's city-state. The god's presence here keeps it ungoverned by mortal powers.
-- **Order of Steam**: industrial kingdom-guild hybrid controlling the volcanic belt's manufacturing. No noble bloodlines, no divine patron; run by elected councils of master craftspeople and engineers. Volcanic-powered manufactories produce at a scale no other region matches. **Completely ringed by a mountain range**: the Order's only outward opening is a single stretch on the **west coast of the Order of Steam bay** (a freshwater sub-body of the freshwater Midarra), extending north to an uninhabited mountain-headland (the bay's north-west corner) that the Order holds as territory but never settled. Through this single bay-coast, bulk industrial freight ships out via the **Rika Tikur** island-city and through the bay-mouth (the bay opens north between the OoS headland and the **Dreaming Cape** north-east headland) into the open Midarra. The bay's other coasts belong to **Tahu Tangata** (south-west) and the **Dreaming Cape** (south, east, north-east; the Cape's capital sits on its NE headland at the bay-mouth). The Order has no other access to sea or land trade.
+- **Order of Steam**: industrial kingdom-guild hybrid controlling the volcanic belt's manufacturing. No divine patron; the polity-frame is run by elected councils of master craftspeople and engineers (the **Council of the Forge** is the central war-policy and industrial-priority body). Volcanic-powered manufactories produce at a scale no other region matches. **Completely ringed by a mountain range**: the Order's only outward opening is a single stretch on the **west coast of the Order of Steam bay** (a freshwater sub-body of the freshwater Midarra), extending north to an uninhabited mountain-headland (the bay's north-west corner) that the Order holds as territory but never settled. Through this single bay-coast, bulk industrial freight ships out via the **Rika Tikur** island-city and through the bay-mouth (the bay opens north between the OoS headland and the **Dreaming Cape** north-east headland) into the open Midarra. The bay's other coasts belong to **Tahu Tangata** (south-west) and the **Dreaming Cape** (south, east, north-east; the Cape's capital sits on its NE headland at the bay-mouth). The Order has no other access to sea or land trade.
+
+  #### House Eisenhart
+
+  The Order of Steam has no aristocracy, but it has **House Eisenhart**: the mostly-dwarven prestige bloodline that has shaped the Order's military-industrial output across generations. Arms manufacturer to the world; political heavyweight inside the Order; the closest the egalitarian Order ever gets to having a noble house.
+
+  **Type:** Noble House, political and family. Operates entirely within the Order's councils and charters; holds no formal sovereignty.
+
+  **Specialisation:** High-grade military equipment and large-scale war machines. Armoured airships. Steam-driven siege engines. Arcane-powered artillery. Their goods are status symbols as much as tools of war.
+
+  **Reputation:** Uncompromising quality. Functional but imposing design. Equipment that remains operational for centuries.
+
+  **Political influence within the Order:**
+  - Holds several **hereditary seats on the Council of the Forge**.
+  - Maintains long-term supply contracts with multiple foreign powers, but rarely sells the most advanced designs outside the Order's borders.
+
+  **Motto:** *"Strength Forged in Honor."*
+
+  **Notable exports:**
+  - **The Eisenhart Leviathan-class warship.**
+  - **The Ironwing line** of heavy combat airships.
+  - **Precision-forged runeblade bayonets** issued to elite dwarven regiments.
+
+  **Highforge Matriarch: Tharka Eisenhart.**
+  - **Race:** Forge Dwarf.
+  - **Age:** 217.
+  - **Titles:** Lady of the Anvil Throne, Warden of the Steel Marches, Keeper of the Furnace-Law.
+  - **Profile:** Stern, unsmiling, pragmatic. Runs the House like a war campaign: ruthlessly efficient, zero tolerance for incompetence. Famous for field-testing new weapons in live combat, and once for silencing a noble critic by hurling a prototype cannonball across a boardroom table.
+  - **Wears an adaptive exo-frame** (part armour, part medical brace) built after an assassination attempt that left her with lasting spinal injury.
+  - **Politics:** Deeply loyal to the Order of Steam but distrustful of its softer political wings. Pushes aggressively for military modernisation and limited foreign expansion. Refuses to sell Eisenhart technology to "unproven hands," even allied ones.
+
+  **War Relic: *Stahlglanz*.**
+  - **Type:** Mobile fortress (land and sea).
+  - **Designation:** *Stahlglanz*, "Steelshine" in Old Dwarvish.
+  - **Dimensions:** Over 400 metres long. Built like a floating citadel with retractable wheels and submersible hull segments.
+  - **Mobility:** Arcane-driven tread assemblies and powered legs on the front half for overland travel; rear section reconfigures for aquatic propulsion. The fortress walks across land and crosses sea without intermediate transfer.
+  - **Defences:** Reinforced Ethersteel plating with wards against elemental and arcane assault. Shield-array projectors powered by a cathedral-sized mana furnace. Full batteries of heavy rune cannons and long-range siege mortars.
+  - **Features:** Internal barracks; hangar bays for Ironwing airships; command throne interfaced with the ship's engine spirit; a mobile forge-deck staffed by golem-assisted engineers for on-field repair and weapon production.
+  - **Historical role:** Built during **the Siege of Nine Storms**, where it broke the blockade of three enemy nations by walking straight *through* the sea and levelling a fleet from beneath. Since then it deploys only on declaration of **Total Mobilization**, which the Order of Steam has not done in over a century.
+
+  *Stahlglanz* exists in significant part because of the Iron Tide threat from the Red Empire's home continent across Hafra (see [`_off-continent.md`](_off-continent.md), *The Iron Tide*); the Order's airship fleet was built on the same threat profile.
 - **Tahu Tangata**: the indigenous culture of the volcanic coast. Old name, meaning partially lost. North-east stretch coasts the **south-west of the Order of Steam bay** (a freshwater sub-body of the freshwater Midarra; the bay's south-west arc is Tahu Tangata's; the bay's west coast belongs to the Order of Steam and the rest, south through east through the north-east headland, to the Dreaming Cape; Rika Tikur the island-city sits in the bay's waters). Eastern border is the **river** that separates Tahu Tangata from the Dreaming Cape (Lautara) in the river's western/northern stretch; the same river continues east-and-south as the Cape/Emarrea border. Now also borders Emarrea (Lautara) across the volcanic-belt shoulder; cultural interface flesh-out is deferred.
 - **Dragon's Reach**: a special independent city-state within the Order of Steam's territory. **The capital of Dragon civilisation on Talan.** Founded at (and built *from*) the largest surviving piece of the Dragons' **mothership**, which crashed during the Gods' Era.
 
@@ -41,7 +81,7 @@
 
   Pragmatist Dragons **hate this**, and the resentment is the city's defining internal tension. The pragmatist argument runs: vote-weight should not track *lifespan*, because lifespan is downstream of a contested doctrine; we lived our shorter lives more fully, more for ourselves, and on the merits we deserve at least equal say; the purists are using their longer lives as evidence of their rightness and counting the evidence twice. The purists' counter is wordless and demographic: *we are still here. You are not.* The argument is centuries old. It does not resolve.
 
-  **The Order of Steam friction.** Dragon's Reach shares the volcanic belt with the **Order of Steam**, and both polities run major recovery archaeology in adjacent terrain: the Order on Elden-tech ruins, the Dragons on the mothership wreckage that the city is built from and around. *The Order wants to reproduce; the Dragons want to remember.* Specific finds have been quietly disputed over the centuries; the volcanic terrain does not always make clear which excavation a given chamber belongs to (some chambers post-date both, sometimes both at once). Formal relations are cordial; practical relations are complicated. See `../factions.md`, *Order of Steam* and the cross-reference on `order-of-steam.html`.
+  **The Order of Steam friction.** Dragon's Reach shares the volcanic belt with the **Order of Steam**, and both polities run major recovery archaeology in adjacent terrain: the Order on Elden-tech ruins, the Dragons on the mothership wreckage that the city is built from and around. *The Order wants to reproduce; the Dragons want to remember.* Specific finds have been quietly disputed over the centuries; the volcanic terrain does not always make clear which excavation a given chamber belongs to (some chambers post-date both, sometimes both at once). Formal relations are cordial; practical relations are complicated. See the *Order of Steam* sub-region above (and the cross-reference on `order-of-steam.html`).
 
   **The wyrm-cult schism.** Outside the city, the **Dragonets** (Zaharsuge's children, see `../ancestries.md` and `../gods.md`, *Named Non-Bound Gods*) reject Dragon's Reach's authority claim over wyrmkind on Talan. Zaharsuge predates the alien Dragons; the indigenous wyrm-line was here first, and many Dragonets find the alien Dragons' implicit claim to *be* the wyrm-lords of Talan theologically incorrect. The grievance is untested and simmering; Dragon's Reach largely ignores it, which the Dragonets find provocative on a separate level.
 
