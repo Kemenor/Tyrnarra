@@ -1,17 +1,23 @@
-# The Fenurrans
+# Fenurra: the Volcanic Sub-Region of Ehizahar
+
+A sub-region of Ehizahar in its own right, bordering the Lands of Villtur but distinct from them. Defined by an ancient meteor crater and the volcanic activity that still surrounds it: sulfurous fumes, basalt fields, slow lava flows, and strange star-metals seeded into the ground by the impact. Harsh and resource-poor in conventional terms, but rich in materials no other place on Talan produces. The only significant volcanic activity outside Sumendar.
 
 > *"We do not pray for easier lives. We sharpen ourselves against the one we were given."*
 > Fenurran proverb
 
-A people of ash and will. The Fenurrans inhabit the sulfurous wasteland surrounding the ancient meteor crater at the heart of Ehizahar: the **Fenurra** sub-region, distinct from but bordering the Lands of Villtur (see [`../geography/ehizahar.md`](../geography/ehizahar.md)). To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home, a people forged in a crucible where survival is a daily, hard-won victory.
+Parent domain: [`../ehizahar.md`](../ehizahar.md). The Fenurran tribes who live here are hardened, pragmatic, and politically distinct from the wider Villtur tribal sprawl; they hold themselves apart even from their tribal neighbours.
+
+## The people: who the Fenurrans are
+
+A people of ash and will. To the prosperous southern kingdoms they are a nightmare: godless savages who ride monstrous wolves through poisonous smoke and wield weapons no one else can forge. To themselves they are simply home, a people forged in a crucible where survival is a daily, hard-won victory.
 
 They are fiercely independent, brutally pragmatic, and passionate in their personal lives in a way the colder politics of their neighbours rarely matches. They argue with vigour, laugh without restraint, and love with fire-coloured intensity. Their celebrations are explosive and cathartic. Their wars are surgical and silent.
 
-**Demographics & ancestry.** The four Fenurran tribes are human-stock: per-ancestry placement in [`../ancestries.md`](../ancestries.md) treats the species; this file treats the culture.
+**Demographics & ancestry.** The four Fenurran tribes are human-stock: per-ancestry placement in [`../../ancestries.md`](../../ancestries.md) treats the species; this file treats the culture and the place together.
 
 ## Where they live
 
-The Fenurran heartland is **Fenurra**, the volcanic sub-region of Ehizahar, a basalt-and-ash wasteland defined by the meteor crater at its centre. The crater is called the **Scar of Aeris**, and the city carved into its inner walls is **Aeris**, the Fenurran capital. The crater bleeds slow volcanism and seeds the surrounding land with materials that exist nowhere else on Talan: star-metals, sulfur-glass, and rare flora that thrive only in the poisonous air.
+The Fenurran heartland is a basalt-and-ash wasteland defined by the meteor crater at its centre. The crater is called the **Scar of Aeris**, and the city carved into its inner walls is **Aeris**, the Fenurran capital. The crater bleeds slow volcanism and seeds the surrounding land with materials that exist nowhere else on Talan: star-metals, sulfur-glass, and rare flora that thrive only in the poisonous air.
 
 Wood is precious in Fenurra. The people rely on emberstones and slow-burning char for heat and forging. Air is often thick with sulfurous fumes. The land is prowled by beasts (direbeasts, sulfur-stags, sulfur lynxes, ash boars) that would shatter the nerves of lesser warriors. Smaller named places within Fenurra:
 - **Mount Skel** and the **Ashwall Divide**: high crags where the Seravain build their paired cliff-homes.
@@ -30,7 +36,7 @@ Politically, there are no kings or queens. There are no permanent generals. Ther
 
 ## The schism
 
-A recent development: missionaries from the **Divine Faith** have penetrated Fenurra and converted a number of tribes. The ruling Draconis (caretakers of the Speaker's Mantle for generations) have been forced into a precarious position. To absorb the encroaching ideology rather than fracture against it, they have arranged the political marriage of their daughter to the **theocratic prince**, the heir to the **Legea Empire**, the demigod-ruled theocracy that *is* the Divine Faith's polity. The Faith serves a god not of the bound thirteen, but one residing in the third (Postlife) layer of the planes; specific identity TBD. See [`../geography/zuzental.md`](../geography/zuzental.md), *Legea Empire → The Divine Faith* for the full canon.
+A recent development: missionaries from the **Divine Faith** have penetrated Fenurra and converted a number of tribes. The ruling Draconis (caretakers of the Speaker's Mantle for generations) have been forced into a precarious position. To absorb the encroaching ideology rather than fracture against it, they have arranged the political marriage of their daughter to the **theocratic prince**, the heir to the **Legea Empire**, the demigod-ruled theocracy that *is* the Divine Faith's polity. The Faith serves a god not of the bound thirteen, but one residing in the third (Postlife) layer of the planes; specific identity TBD. See [`../zuzental.md`](../zuzental.md), *Legea Empire → The Divine Faith* for the full canon.
 
 The outcome of this gambit is unsettled. It may unify Fenurra under a new religious overlay; it may shatter the tribal balance entirely; or it may drag Fenurra into the simmering law-vs-law theological argument between Forseti's Zuzental and the Empire's Faith.
 

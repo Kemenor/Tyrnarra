@@ -116,7 +116,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 **Dominant in Zuzental (Law / Forseti)** alongside humans. Politically motivated and **long-planning**; the elven side of the Thousand Kingdom's politics moves on generational timescales, often outlasting and out-thinking the human factions whose lives don't span the same windows. Elves are one of the two ruling bloodlines of the Thousand Kingdom.
 
 ### Fenurran-stock human
-**Human-stock; the Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain) are culturally distinct, ancestrally human.** Full living-culture canon (the four tribes, the Speaker's Mantle, materials, warfare, weapons) in [`cultures/fenurra.md`](cultures/fenurra.md). The bestiary-tier placement is simply *human, with deep regional cultural register.*
+**Human-stock; the Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain) are culturally distinct, ancestrally human.** Full living-culture canon (the four tribes, the Speaker's Mantle, materials, warfare, weapons) in [`geography/ehizahar/fenurra.md`](geography/ehizahar/fenurra.md). The bestiary-tier placement is simply *human, with deep regional cultural register.*
 
 ### Fetchling
 **Dominant in Myrkono (Darkness / Araphel).** Remnants of a civilisation that sought refuge in the region of Darkness and found it; the lineage stayed, and Myrria grew around it. Many fetchlings serve Araphel directly, including **Guild Sovereign Seraphel Duskbane**, the current Guild Sovereign of Myrria's Godshall (see `factions.md`). Uncommon outside Myrkono.
@@ -161,7 +161,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 **Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations, sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
 
 ### Kitsune
-**Known as the Divine Envoys. Dominant in Lautara**, specifically in **Emarrea**. Fisaya herself is depicted as a female kitsune; the affinity goes back as far as the chronicle record reaches. Full living-culture canon (Heartcourt, Catjomin Sake, Kyūbi-no-Den, foxfire, lifespan and tail-growth) in [`cultures/kitsune.md`](cultures/kitsune.md).
+**Known as the Divine Envoys. Dominant in Lautara**, specifically in **Emarrea**. Fisaya herself is depicted as a female kitsune; the affinity goes back as far as the chronicle record reaches. Full living-culture canon (Heartcourt, Catjomin Sake, Kyūbi-no-Den, foxfire, lifespan and tail-growth) in [`geography/lautara/emarrea.md`](geography/lautara/emarrea.md).
 
 ### Kobold
 **Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity: Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `gods.md`).
@@ -212,7 +212,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 **Insectoid sapients of the deep places.** **Uncommon in the upper Darklands**; they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals; see `secret-history.md`) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
 
 ### Tengu
-**Usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. Full living-culture canon (Skarvorn Republic, eleven clans, Vornsketta, singing cities, stormsinging, three teas, eight winds) in [`cultures/tengu.md`](cultures/tengu.md).
+**Usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. Full living-culture canon (Skarvorn Republic, eleven clans, Vornsketta, singing cities, stormsinging, three teas, eight winds) in [`geography/vindul/haizetsua.md`](geography/vindul/haizetsua.md).
 
 ### Tripkee
 **Commonly found on the Floating Isles of Shuun**: the islet-archipelago sub-region of **Floteyn (Water / Shuun)**. Their amphibious physiology suits the spray-zone island life better than most. Share the islet life with Athamaru and Merfolk; Tripkee are the most settled of the three (Athamaru swim past, Merfolk pass underneath; Tripkee build).
@@ -335,9 +335,9 @@ The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, an
 - **Dragon's Reach (dragon capital)**: `geography/sumendar.md`
 - **Zaharsuge (Wyrmkin god, pre-dates alien Dragons)**: `gods.md`; relevant to indigenous dragon-line cults that reject Dragon's Reach's authority claim
 - **Sortalde / Tao Hua Yuan (Eastern petal-continent, homeland of the six Tian Xia ancestries + Oni)**: living-culture canon in [`cultures/sortalde.md`](cultures/sortalde.md); continent geography in [`geography/_continent.md`](geography/_continent.md), *Other Continents → Sortalde*; [`glossary.md`](glossary.md) for the seven petal names (Wandao, Xidao, Niudao, Yingdao, Lingdao, Lundao, Heting); the Sortalde Layer-3 pantheon is referenced but unnamed and is a future-development thread.
-- **Kitsune culture, Heartcourt, Catjomin Sake**: [`cultures/kitsune.md`](cultures/kitsune.md) (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
-- **Tengu culture, Skarvorn Republic, eleven clans, Vornsketta, singing cities**: [`cultures/tengu.md`](cultures/tengu.md)
-- **Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain), Speaker's Mantle, Blackglass/Velthite/Ghost Willow, the Scar of Aeris**: [`cultures/fenurra.md`](cultures/fenurra.md) (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
+- **Kitsune culture, Heartcourt, Catjomin Sake**: [`geography/lautara/emarrea.md`](geography/lautara/emarrea.md) (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
+- **Tengu culture, Skarvorn Republic, eleven clans, Vornsketta, singing cities**: [`geography/vindul/haizetsua.md`](geography/vindul/haizetsua.md)
+- **Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain), Speaker's Mantle, Blackglass/Velthite/Ghost Willow, the Scar of Aeris**: [`geography/ehizahar/fenurra.md`](geography/ehizahar/fenurra.md) (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
 - **House Eisenhart (dwarven)**: `geography/sumendar.md`, *Order of Steam → House Eisenhart*; **the Menagerie (Red Empire fleshwarp origin)**: `geography/_off-continent.md`, *The Menagerie*
 - **Spider's Silk Inn (Matron Charna, Anadi)**: `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*
 - **Lord Albrecht Lavisburg, Seraphel Duskbane**: `factions.md` (contemporary heritage / ancestry examples)
