@@ -1,19 +1,33 @@
-# The Kitsune
+# Emarrea: the Kitsune Kingdom of Lautara
+
+The kitsune kingdom on Lautara's western margin: the eastern-cultivated highlands where mountain-pass valleys, crystal-fed rivers, and terraced orchards give way to the capital **Biozuri** and a constellation of resort villages and trade towns.
 
 > *"One heart can hold many lights, why not let them shine?"*
 > Traditional kitsune proverb
 
-A people of love, laughter, and living well. The kitsune inhabit **Emarrea**, the forested western highlands of Lautara, where mountain-pass valleys, crystal-fed rivers, and terraced orchards give way to the capital **Biozuri** and a constellation of resort villages and trade towns. To outside trade partners they are warmth, wit, and theatrical hospitality. To themselves they are a culture organised entirely around the loops of love and belonging: circles of intimacy, rings of festival, and the polycule court that rules them.
+Parent domain: [`../lautara.md`](../lautara.md). Old-language etymology of *Biozuri*: Basque *bihotz* "heart" + *hiri* "city" → drifted to Biozuri.
 
-Geography and political detail live in [`../geography/lautara.md`](../geography/lautara.md) under *Emarrea*. This file covers the people.
+## Position and borders
+
+Eastern-cultivated highlands neighbouring **Hareaveldi** ([`../lioaru.md`](../lioaru.md)), **Tahu Tangata** ([`../sumendar.md`](../sumendar.md)), and **Wildreach** ([`../ezkudon.md`](../ezkudon.md)).
+
+Northern border is the **river** that runs east-west: it forms the Cape/Emarrea boundary along Emarrea's north-west reach and the Itsasalda/Emarrea boundary along Emarrea's north-east reach, eventually reaching Merkavar's lake to the east. Corner-touch with **Galdua Jendea** ([`../lioaru.md`](../lioaru.md)) means the Denbora sand-whale-city periodically drifts close enough for envoys to cross. Downstream river-trade channel into the **River Duchies** ([`../lioaru.md`](../lioaru.md)) provides a secondary distribution backbone for sake, orchard goods, and theatrical-illusion exports, separate from the main Lautaran merchant-house network.
+
+**Capital:** **Biozuri** · the kitsune capital. Built around the Heartcourt's seat. **Heartplaza** is its bustling central district, where the Heartcourt holds its open festivals, petitions, and Passing of the Tails ceremonies.
+
+**Notable village:** **Kawaakari**, *the Village of Shimmering Waters.* A secluded mountain-pass resort village famous for its hot springs, the crystal-fed *Hoshigawa* (star river; its trace crystal dust makes the water sparkle even by day), Snow Princess Wine (*Yukihime-shu*) from terrace plum-and-snowberry orchards, and the signature Foxfire Stone Massage. Ruled by a local council of innkeepers, brewers, and bathhouse masters. Famous continent-wide for its annual Festival of the Fox Lanterns, when the river is covered in glowing paper lanterns.
+
+**Notable terrain:** **Yukihime-no-mori** (the Snow Princess Forest), the pink-blossomed orchard-and-wildflower lowlands at Emarrea's southern edge where the Yukihime-shu plums grow on terraced slopes; the forest and the wine share the *Yukihime* name.
+
+**Internal landmark:** the **House of a Thousand Flavors** in Heartplaza, the capital's central district (full detail under *Notable landmarks* below).
 
 ## Demographics & ancestry placement
 
-**Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**, the kitsune kingdom in Lautara's forested western highlands. The Emarrean kitsune are governed by the Heartcourt (a polycule of 4–9 elected monarchs); the capital is **Biozuri**, and the famous mountain resort village is **Kawaakari**.
+**Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**. The Heartcourt rules; the capital is **Biozuri**; the famous mountain resort village is **Kawaakari**.
 
-Fisaya herself is depicted as a female kitsune with multicolour fur (see `../gods.md`, the Thirteen). Kitsune communities feel a doctrinal pull toward Vindul (Fisaya's home domain) regardless of where they live; the wind reaches them from any direction. The actual demographic centre of kitsune life remains in Emarrea (Commerce).
+**Fisaya** herself is depicted as a female kitsune with multicolour fur (see [`../../gods.md`](../../gods.md), the Thirteen). Kitsune communities feel a doctrinal pull toward Vindul (Fisaya's home domain) regardless of where they live; the wind reaches them from any direction. The actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
-A second long-established kitsune population lives in **Merkavar** itself as market-readers and information brokers; the **Merkavar-kitsune** are an ancient parallel tradition to the Heartcourt's forested kingdom, with their own commercial-pragmatic register. The two registers diverged so long ago that kitsune from each are sometimes mutually unrecognisable to outsiders. See [`../geography/lautara.md`](../geography/lautara.md), *Notable Locations → Merkavar*.
+A second long-established kitsune population lives in **Merkavar** itself as market-readers and information brokers; the **Merkavar-kitsune** are an ancient parallel tradition to the Heartcourt's forested kingdom, with their own commercial-pragmatic register. The two registers diverged so long ago that kitsune from each are sometimes mutually unrecognisable to outsiders. See [`../lautara.md`](../lautara.md), *Notable Locations → Merkavar*.
 
 > **A note on the kitsune and Sortalde.** The kitsune of Emarrea and the peoples of Sortalde share East-Asian visual and onomastic register in our real-world reference vocabulary, but in Tyrnarra they are **entirely separate cultures with no shared history, no shared institutions, no diplomatic ties, and no political contact.** The kitsune sit on Lautara's western highlands; Sortalde lies a Cloud-Sea-and-Hafra crossing away. The two are not relatives, not branches of a common pre-history, and not on each other's radar. When canon discusses them together it is for register-of-language reasons (both use internally-coherent East-Asian-feeling vocabularies that don't sit in the Basque/Icelandic stratum), never for shared lineage or politics.
 
@@ -116,7 +130,7 @@ The Heartcourt is famously dramatic, and the structure under that drama is not a
 
 ### Per-Heart vignettes: formative events and present-day matters
 
-Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`../heartcourt-letters.md`](../heartcourt-letters.md)).
+Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`../../heartcourt-letters.md`](../../heartcourt-letters.md)).
 
 **Saemi (Azure).**
 - *The three-day silence at Frae City.* Five years back, a Cronus-clergy envoy sat across from her for trade-talks; Saemi did not speak for three days. The envoy broke first and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.
@@ -197,7 +211,7 @@ A sacred Emarrean tradition. Catjomin Sake is brewed exclusively by kitsune mast
 
 ## Foxfire: the kitsune Occult tradition
 
-**Foxfire is Occult magic.** Per the Four Schools framework (see [`../cosmology.md`](../cosmology.md) → *Magic, The Four Schools*), Occult magic draws on the slivers of Wellspring energy that accumulate in stories, songs, art, and shared belief. The kitsune are an Occult people by inclination as much as ability: a culture organised around festival, performance, dramatic public ritual, and centuries-deep tradition feeds exactly the cultural-memory residue Occult practice taps. The pale gold-and-blue flames that the kitsune call **foxfire** are the visible signature of that practice: illusion-fire that throws no real heat, but bends light, scent, sound, and warmth-of-feeling in the directions a trained practitioner intends.
+**Foxfire is Occult magic.** Per the Four Schools framework (see [`../../cosmology.md`](../../cosmology.md) → *Magic, The Four Schools*), Occult magic draws on the slivers of Wellspring energy that accumulate in stories, songs, art, and shared belief. The kitsune are an Occult people by inclination as much as ability: a culture organised around festival, performance, dramatic public ritual, and centuries-deep tradition feeds exactly the cultural-memory residue Occult practice taps. The pale gold-and-blue flames that the kitsune call **foxfire** are the visible signature of that practice: illusion-fire that throws no real heat, but bends light, scent, sound, and warmth-of-feeling in the directions a trained practitioner intends.
 
 Day-to-day uses are everywhere in Emarrea: the **foxfire lanterns** of Biozuri (the kingdom's nighttime aesthetic depends on them), the **Foxfire Stone Massage** at Kawaakari (the warmth-illusion is half the treatment's effect), the **wish-lanterns** floated down the Hoshigawa, the **House of a Thousand Flavors'** course-illusions and accompanying breezes-from-elsewhere. The Heartcourt's *Violet Heart* (Magic & Mysticism) is by tradition a strong Occult practitioner, often a foxfire-master in their own right.
 
@@ -221,7 +235,7 @@ The kitsune's own ancestral pantheon, named *Kyūbi-no-Den* in Kotokoe (*the Nin
 
 The pantheon's name carries the number nine even though the Hall holds three. The kitsune say the other six seats are open: held by ancestral spirits, by unnamed lesser gods of the kingdom's place-spirits, or simply waiting to be filled when the world's stories grow long enough to seat them. Theologians debate whether the empty seats are a real cosmic feature or a piece of pious poetry. The kitsune as a people are content to leave the question unanswered.
 
-All three Kyūbi-no-Den gods reside in **Elysium** (Layer 3, good): not bound to the Gods' Law, not present on the Material Plane, reaching their worshippers through clerical grants and household devotion. Elysium residency reflects the pantheon's devotional centre of gravity: a culture organised around love freely given, communal feast, and the kindness-trickster ethic. They do not appear in person in Emarrea, and the kitsune do not expect them to. Compare Bikiargi, Epairima, and Zaharsuge in `../gods.md`.
+All three Kyūbi-no-Den gods reside in **Elysium** (Layer 3, good): not bound to the Gods' Law, not present on the Material Plane, reaching their worshippers through clerical grants and household devotion. Elysium residency reflects the pantheon's devotional centre of gravity: a culture organised around love freely given, communal feast, and the kindness-trickster ethic. They do not appear in person in Emarrea, and the kitsune do not expect them to. Compare Bikiargi, Epairima, and Zaharsuge in [`../../gods.md`](../../gods.md).
 
 ## Kitsune lifespan: slow ageing through tail growth
 
@@ -235,6 +249,6 @@ Their long midlife and shortened elderhood reinforce the cultural focus on relat
 
 ## Notable landmarks
 
-- **Biozuri / Heartplaza**: the capital and its central district. The **House of a Thousand Flavors** (see below) sits a short walk from the Heartcourt itself.
-- **Kawaakari**: the mountain-pass resort village (see [`../geography/lautara.md`](../geography/lautara.md), *Emarrea → Kawaakari*). The kingdom's most-visited destination by outsiders.
+- **Biozuri / Heartplaza**: the capital and its central district. The **House of a Thousand Flavors** sits a short walk from the Heartcourt itself.
+- **Kawaakari**: the mountain-pass resort village, the kingdom's most-visited destination by outsiders.
 - **The House of a Thousand Flavors**: the kingdom's most prestigious dining experience and the favoured stage for high-level Heartcourt negotiations, romantic declarations, and dramatic public courting displays. Run by **The Cook's Circle**, a polycule of seven master chefs (Rinza (Head Flavorist), Maeko (Illusionist-Plater), Tairen (Texture Architect), Shouka (Aroma Alchemist), Virel (Harmony Master, directing live musicians), Kyome (Temperature Virtuoso), and Elhara (Storyweaver)). The Circle's personal chemistry fuels the kitchen's creativity, and their love-life is gossiped about nearly as much as their cuisine. Reservations are booked months in advance; menus change seasonally with themes (*"A Lovers' Chase Through the Seasons"*, *"The Nine Tails of Autumn"*, *"Dreams Beneath the Lantern Sea"*). Each table is semi-private, with illusions creating custom surroundings; diners may find themselves in a cherry-blossom grove, a cliffside above a stormy sea, or a floating lantern festival. Guests often leave with small enchanted tokens that replay a snippet of music or a fleeting scent from the evening. *Tagline: "A meal is a memory, and we serve memories worth keeping."*

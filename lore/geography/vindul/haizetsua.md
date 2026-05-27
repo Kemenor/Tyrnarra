@@ -1,15 +1,15 @@
-# The Tengu
+# Haizetsua: the Tengu Island of Vindul
+
+The great western island of Vindul, Fisaya's domain, home of the Tengu. Mountain-range interior, coastal lowlands to the south and east, a sheltered harbour at the capital **Vindboorg**. Governed by the **Skarvorn Republic**, the seated body of the eleven Tengu clans, no single ruler. Its cities are the famous **singing cities** of the continent. Three Pines (Myrkono's outer-island cluster) sits off Haizetsua's southern coast.
 
 > *"The wind asks; the wind answers. We sing because the cities sing first."*
 > Traditional Tengu saying
 
-A people of stone, salt, and silence-broken-by-song. The Tengu of **Haizetsua** (the great western island of Vindul, mountain-range interior, capital at **Vindboorg**) live high above the sea-line, in cities carved into living rock and tuned to the wind that crosses them. To outside trade partners they are precise, formal, and surprisingly mercantile. To themselves they are eleven clans, eight winds, and the long Vornsketta that takes every young Tengu away from home and brings most of them back.
-
-Geography and political detail live in [`../geography/vindul.md`](../geography/vindul.md) under *Haizetsua*. This file covers the people.
+Parent domain: [`../vindul.md`](../vindul.md). *Haize* is wind in Basque; the island's name echoes the domain.
 
 ## Demographics & ancestry placement
 
-**Usually live in the lands of Fisaya (Vindul / Wind).** Some of them become Monks; the Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan. Uncommon everywhere outside Vindul. The cultural and demographic heart is Haizetsua; smaller Tengu communities live in the coastal Skybell Republic ports of Fellibylur as sailors and Stormrider crew, and a thin scatter of Tengu travellers can be found anywhere in Talan that the Vornsketta took them.
+**Tengu usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. The cultural and demographic heart is Haizetsua; smaller Tengu communities live in the coastal Skybell Republic ports of Fellibylur as sailors and Stormrider crew, and a thin scatter of Tengu travellers can be found anywhere in Talan that the Vornsketta took them. The Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan, often as Monks.
 
 ## The Skarvorn Republic
 
@@ -59,9 +59,9 @@ Smaller villages have their own characteristic tones, and a Tengu who has travel
 
 Layered onto the architecture is the vocal tradition. **Stormsinging** is the Tengu vocal craft of singing *with* the city: pitching the voice into the building's tones and projecting it through the wind currents that carry the city's sound. A skilled stormsinger can be heard half a mountainside away without raising their volume; the wind does the carrying, the architecture does the amplification.
 
-In ordinary practice stormsinging is acoustic and entirely natural: breath training and pitch discipline applied to a uniquely cooperative built environment. In the hands of an Occult practitioner the same craft becomes magical: the cultural-memory residue that Occult magic draws on (see [`../cosmology.md`](../cosmology.md), *Magic, The Four Schools → Occult*) is fed by every Tengu generation that has sung from the same balcony, and the wind itself can be made to carry meaning across distances no ordinary voice could reach. The boundary between the everyday discipline and the magical practice is the same boundary as between any cultural-memory-rich tradition and its Occult expression: gradual, ill-defined, and well-respected by both practitioners and clergy.
+In ordinary practice stormsinging is acoustic and entirely natural: breath training and pitch discipline applied to a uniquely cooperative built environment. In the hands of an Occult practitioner the same craft becomes magical: the cultural-memory residue that Occult magic draws on (see [`../../cosmology.md`](../../cosmology.md), *Magic, The Four Schools → Occult*) is fed by every Tengu generation that has sung from the same balcony, and the wind itself can be made to carry meaning across distances no ordinary voice could reach. The boundary between the everyday discipline and the magical practice is the same boundary as between any cultural-memory-rich tradition and its Occult expression: gradual, ill-defined, and well-respected by both practitioners and clergy.
 
-Outsiders frequently misread stormsinging as a Primal art, since wind sits in the elemental portfolio of Fisaya (one of the Four Elementals; see [`../gods.md`](../gods.md)). The reading is wrong but understandable. The craft is Occult; the air it travels through is Fisaya's; the two are not the same thing.
+Outsiders frequently misread stormsinging as a Primal art, since wind sits in the elemental portfolio of Fisaya (one of the Four Elementals; see [`../../gods.md`](../../gods.md)). The reading is wrong but understandable. The craft is Occult; the air it travels through is Fisaya's; the two are not the same thing.
 
 ## The Three Teas
 
@@ -92,7 +92,7 @@ Mainland calendars do not align with the Tengu year cleanly. A Tengu writing dat
 
 ## Tengu religion · Fisaya alone
 
-Tengu religion is **single-deity Fisaya-devotional**, with no separate ancestral pantheon. The wind goddess is depicted in Tengu iconography as a Tengu rather than a kitsune; her canonical depiction is kitsune-form (see [`../gods.md`](../gods.md)), and the Tengu icon is a parallel folk-image, well-tolerated by the mainland church and recognised as a local affection. Her four aspects (Storms, Travel, Breath, Ruin) map directly onto Tengu cultural life: storms make the singing-cities sing, travel structures the Vornsketta, breath is stormsinging, and ruin is the discipline of accepting what the wind takes.
+Tengu religion is **single-deity Fisaya-devotional**, with no separate ancestral pantheon. The wind goddess is depicted in Tengu iconography as a Tengu rather than a kitsune; her canonical depiction is kitsune-form (see [`../../gods.md`](../../gods.md)), and the Tengu icon is a parallel folk-image, well-tolerated by the mainland church and recognised as a local affection. Her four aspects (Storms, Travel, Breath, Ruin) map directly onto Tengu cultural life: storms make the singing-cities sing, travel structures the Vornsketta, breath is stormsinging, and ruin is the discipline of accepting what the wind takes.
 
 Worship is austere by comparison with mainland Vindul practice. Tengu temples are small, cliff-sided, with open-faced sanctuaries that the wind passes through; the central rite is silent attendance to whichever wind is currently blowing. Clerics are uncommon (the Tengu temperament does not naturally produce them), but those who do take the orders are highly respected and tend to drift mainland-ward into Vindul's wider clergy.
 

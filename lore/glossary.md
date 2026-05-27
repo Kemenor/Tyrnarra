@@ -219,7 +219,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 
 ### Fenurran proper nouns (Latinate / English register, not the deep-old stratum)
 
-The Fenurran culture is detailed in `cultures/fenurra.md`. Its internal place- and weapon-names sit in a Latinate / Germanic / English register, not the deep Basque/Icelandic stratum. They function as "modern" coined names in the world (the Fenurran people are old, but their *naming language* is closer to plain-style than the deep-old domains).
+The Fenurran culture is detailed in `geography/ehizahar/fenurra.md`. Its internal place- and weapon-names sit in a Latinate / Germanic / English register, not the deep Basque/Icelandic stratum. They function as "modern" coined names in the world (the Fenurran people are old, but their *naming language* is closer to plain-style than the deep-old domains).
 
 - **Aeris**: Fenurran capital, carved into the inner walls of the Scar of Aeris. Latinate stylization (Latin *aer/aeris* = "of the air"). Etymology partial; Fenurran-internal name.
 - **Scar of Aeris**: the ancient meteor crater at the heart of Fenurra. Source of the volcanism, the star-metals, and the Fenurran capital. Plain English compound with a Latinate proper noun.
@@ -244,7 +244,7 @@ The four major Fenurran tribes carry Latinate names. Per the naming rule these a
 - **Ghost Willow**: Plain English. The pale near-translucent tree that grows in sulfur-choked soil; bow-limb wood.
 - **Obsidian Silk**: Plain English compound. Light-absorbing thread spun from ashspinner-larva silk + volcanic resin. Used for the silent Whisperfang bowstring.
 - **Spice Wine**: Plain English. Hallucinogenic Draconis communion drink brewed from sulfur-rich roots near the Scar.
-- **Emberstones / Ashstones / Slagsteel / Cratersteel / Craterbone / Craterwood / Emberframe / Sulflare**: Fenurran technical vocabulary; plain English compounds for materials, devices, and ammunition described in `cultures/fenurra.md`.
+- **Emberstones / Ashstones / Slagsteel / Cratersteel / Craterbone / Craterwood / Emberframe / Sulflare**: Fenurran technical vocabulary; plain English compounds for materials, devices, and ammunition described in `geography/ehizahar/fenurra.md`.
 
 ### Fenurran institutions
 
@@ -265,7 +265,7 @@ The four major Fenurran tribes carry Latinate names. Per the naming rule these a
 
 ### Kitsune proper nouns (Japanese-style internal register)
 
-The kitsune culture is detailed in `cultures/kitsune.md`. Outsiders refer to their kingdom and capital by the old-language names (Emarrea, Biozuri, listed under Lautara sub-regions above). Internally, the kitsune use a Japanese-flavoured cultural register for their own places, dishes, rituals, and titles. Same pattern as Fenurra's internal Latinate vocabulary.
+The kitsune culture is detailed in `geography/lautara/emarrea.md`. Outsiders refer to their kingdom and capital by the old-language names (Emarrea, Biozuri, listed under Lautara sub-regions above). Internally, the kitsune use a Japanese-flavoured cultural register for their own places, dishes, rituals, and titles. Same pattern as Fenurra's internal Latinate vocabulary.
 
 **Language:**
 - **Kotokoe**: *koto* (word, thing, sound) + *koe* (voice) → "the voice of words." The kitsune cultural tongue, used internally in Emarrea alongside Talanese (the continental common). Names of places, dishes, rituals, and gods within the kingdom are coined in Kotokoe; outside the kingdom, trade and diplomacy run in Talanese. Most kitsune are fluent in both from childhood. Japanese-flavoured register, drifted across the kingdom's history.
@@ -273,7 +273,7 @@ The kitsune culture is detailed in `cultures/kitsune.md`. Outsiders refer to the
 **Pantheon (the Kyūbi-no-Den, the kitsune ancestral pantheon):**
 - **Kyūbi-no-Den**: *kyūbi* (nine-tailed) + *den* (hall) → "the Nine-Tailed Hall." Name of the kitsune's own ancestral pantheon. Three named gods sit it (Hahane, Honokage, Yumegatari); the kitsune say the other six seats wait on ancestral spirits, place-spirits, or stories not yet long enough to fill them. The number nine echoes the nine-tail mastery ladder and the Heartcourt's nine pillars. Co-exists with worship of the Bound Thirteen (especially Fisaya, who is depicted in kitsune iconography as a kitsune); kitsune religion is plural and open. Full canon in `gods.md`, *Other Pantheons → The Kyūbi-no-Den*.
 - **Hahane**: *haha* (mother) + *ne* (root, source) → "the Mother-Root" / "the Rooted Mother." Coined in Kotokoe. **Minor Goddess** of love, polyamory, family, festival, and the polycule bond. Resides in **Elysium** (Layer 3, good). Head of the Kyūbi-no-Den. The Passing of the Tails ritual invokes her; first incense at every household shrine is hers. The Heartcourt's *Rose Heart* (Arts & Festivals) often serves as her informal high-priest. **Cleric domain grants:** Family · Passion · Indulgence.
-- **Honokage**: *hono* (faint, soft, the first flicker) + *kage* (light-play, shadow) → "the Soft-Shadow," the god glimpsed in lantern-light but never seen straight. **Minor God** of foxfire, illusion, kind misdirection, and the lantern-lit night. Resides in **Elysium** (Layer 3, good). Patron of Occult practitioners across the kingdom (foxfire being the kitsune signature of the Occult tradition; see `cultures/kitsune.md`, *Foxfire*). Receives foxfire-offerings rather than incense; lanterns are lit *for* him as much as *by* him. **Cleric domain grants:** Trickery · Magic · Moon (the lantern-bearer face of the lunar portfolio, co-granted alongside Bikiargi).
+- **Honokage**: *hono* (faint, soft, the first flicker) + *kage* (light-play, shadow) → "the Soft-Shadow," the god glimpsed in lantern-light but never seen straight. **Minor God** of foxfire, illusion, kind misdirection, and the lantern-lit night. Resides in **Elysium** (Layer 3, good). Patron of Occult practitioners across the kingdom (foxfire being the kitsune signature of the Occult tradition; see `geography/lautara/emarrea.md`, *Foxfire*). Receives foxfire-offerings rather than incense; lanterns are lit *for* him as much as *by* him. **Cleric domain grants:** Trickery · Magic · Moon (the lantern-bearer face of the lunar portfolio, co-granted alongside Bikiargi).
 - **Yumegatari**: *yume* (dream) + *katari* (telling, narration) → "the Dream-Teller." **Minor Goddess** of story, memory, wish-lanterns, and legacy. Resides in **Elysium** (Layer 3, good). The wish-lanterns floated down the Hoshigawa at Kawaakari are her offering; the **Storyweaver** at the House of a Thousand Flavors is by ancient courtesy understood to speak for her at the table. **Cleric domain grants:** Dreams · Knowledge · Soul (memory-as-Wellspring-imprint).
 
 **Magic tradition:**
@@ -311,7 +311,7 @@ The kitsune culture is detailed in `cultures/kitsune.md`. Outsiders refer to the
 - **The House of Names**: Plain English. The Sapphire Heart's archive of every kitsune death in Emarrea across four centuries, run as an annexe of the Knowledge-pillar's offices in Biozuri. Theological annexe of **Yumegatari's** clergy: a story that ends is a record the world holds.
 
 **Tradition & craft:**
-- **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `cultures/kitsune.md`, *Catjomin Sake*.
+- **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `geography/lautara/emarrea.md`, *Catjomin Sake*.
 - **Yukihime-shu**: "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
 - **Yukihime-no-mori**: Kotokoe (Japanese-flavoured); *yukihime* (snow princess) + *no* (genitive) + *mori* (forest) → "the Snow Princess Forest." The pink-blossomed orchard-and-wildflower lowlands at Emarrea's southern edge where the Yukihime-shu plums grow on terraced slopes. The forest and the wine share the *Yukihime* name; the plums are the bridge.
 - **Foxfire Stone Massage**: Plain English. Kawaakari's signature spa treatment.
@@ -331,7 +331,7 @@ The kitsune culture is detailed in `cultures/kitsune.md`. Outsiders refer to the
 
 ### Tengu proper nouns (Tengu cultural register)
 
-The Tengu culture is detailed in `cultures/tengu.md`. Outsiders refer to the island and capital by the old-language names (Haizetsua, Vindboorg, listed under *Vindul (Wind)* above). Internally, the Tengu use a distinct **Tengu cultural register** for their own institutions, clans, customs, and crafts: austere, consonant-heavy, hard finals, the *Tessek* family of sound. The register is a pure coinage stratum, not a translatable language; the etymologies below are coinage-notes, not interlinear gloss.
+The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refer to the island and capital by the old-language names (Haizetsua, Vindboorg, listed under *Vindul (Wind)* above). Internally, the Tengu use a distinct **Tengu cultural register** for their own institutions, clans, customs, and crafts: austere, consonant-heavy, hard finals, the *Tessek* family of sound. The register is a pure coinage stratum, not a translatable language; the etymologies below are coinage-notes, not interlinear gloss.
 
 **Republic:**
 - **Skarvorn**: Tengu-register coinage; *skar* (flock, multitude) + *vorn* (wing, voice) → "Flock-Voice." The seated body of Haizetsua's republic; the eleven clan-elders convene as the Skarvorn. No single ruler. Convenes quarterly at the **Open Pavilion** in Vindboorg.
