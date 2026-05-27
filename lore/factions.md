@@ -1,5 +1,7 @@
 ﻿# Factions: Tyrnarra Lore Reference
 
+This file holds **cross-domain organisations only**: those whose reach spans Talan's polities and which do not sit inside any single one. Region-bound institutions (state religions of single empires, noble houses of single kingdoms, named taverns, the megacity in Abyss, off-continent powers) live in the geography file of their place. See [`../CLAUDE.md`](../CLAUDE.md) *Where new content goes* table or [`../docs/site-inventory.md`](../docs/site-inventory.md) for the full routing.
+
 Factions in Talan fall into four broad categories. Political entities and city-states are too numerous to list exhaustively here; see `lore/geography/` (one file per god domain) for the full breakdown by domain.
 
 ---
@@ -231,19 +233,6 @@ Seven monumental relics anchor the chains that bind the Corrupted God. All seven
 
 ---
 
-## Region-bound institutions (cross-pointers)
-
-Several institutions that originated in this file's *Independent Organisations* category turned out to live entirely inside one polity and have been relocated to their geography file. They are listed here only as pointers; full canon is at the destination.
-
-- **The Divine Faith (Legea Empire).** State religion of the Legea Empire (Zuzental), tied to a non-bound Layer-3 god (specific plane TBD). Full canon in [`geography/zuzental.md`](geography/zuzental.md), *Legea Empire â†’ The Divine Faith*.
-- **House Eisenhart.** Mostly-dwarven prestige bloodline within the Order of Steam (Sumendar). Arms manufacturer to the world; political heavyweight on the Council of the Forge. *Stahlglanz* mobile-fortress relic. Full canon in [`geography/sumendar.md`](geography/sumendar.md), *Order of Steam â†’ House Eisenhart*.
-- **The Spider's Silk Inn (Charna's hall).** Tavern, neutral ground, mercenary hiring hall, information exchange. Sits in Crossroads on the Zuzental/Lautara/Egulon tri-point. Full canon in [`geography/zuzental.md`](geography/zuzental.md), *Crossroads â†’ The Spider's Silk Inn*.
-- **The Red Empire, the Iron Tide, the Menagerie.** Off-continent power, naval arm, and Fleshwright corps. Full canon in [`geography/_off-continent.md`](geography/_off-continent.md), *Red Empire's home continent*.
-- **Bolverk (the megacity in Abyss).** The seven Vice Demons, the fourteen Virtue Devils, and the Independents live there; soul-routing and the Tunsund channel are documented as a place rather than a faction. Full canon in [`geography/bolverk.md`](geography/bolverk.md).
-
-This file (`factions.md`) now holds only **cross-domain** factions: organisations whose reach spans Talan's polities and which do not sit inside any single one.
-
----
 ## Bandit Categories
 
 Not organised institutions; patterns of lawless work common enough on Talan to be recognised by type. Listed here for cross-reference.

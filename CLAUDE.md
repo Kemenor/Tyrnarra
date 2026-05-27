@@ -65,7 +65,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     cosmology.md, gods.md, factions.md,
     ancestries.md, glossary.md, timeline.md
     geography/                          ← per-place canon (Talan domains + off-continent + Bolverk)
-      _continent.md                     ← Talan-continental frame: structure, seas, rail, domain index
+      _continent.md                     ← Talan-continental frame: structure, seas, rail, domain index, languages
       _off-continent.md                 ← Sortalde (+ six petal-peoples) and the Red Empire / Iron Tide / Menagerie
       bolverk.md                        ← the megacity in Abyss (city geography, Vice Demons, Virtue Devils)
       vindul.md, lautara.md, myrkono.md, floteyn.md, sumendar.md,
@@ -73,9 +73,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
       nashavel.md, ehizahar.md, askamira.md
       vindul/haizetsua.md               ← Haizetsua sub-region: place + Tengu culture combined
       lautara/emarrea.md                ← Emarrea sub-region: place + Kitsune culture combined
+      lautara/heartcourt-letters.md     ← Golivander's Letters from Biozuri (in-world document)
       ehizahar/fenurra.md               ← Fenurra sub-region: place + Fenurran culture combined
-    cultures/                           ← pan-Talan cultural canon (deep-culture peoples folded into geography)
-      _talan.md                         ← Talanese language, pan-continental notes
     (see "Where new content goes" below for what lives in each)
 
   docs/                                ← site documentation (NOT published)
@@ -210,8 +209,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 | What really happened (GM-tier secrets) | **No central file.** Each secret lives with the canon it shadows, marked with a `⚿ GM Secret:` heading prefix. Examples: Cronus's mortal origin and Tani's death/rebirth in `gods.md` (per-god sheets); the Week of Crimson Rain True Account, the Storveldi Denbora, the Elden / Wyrmkin, and the Lost/Golden/Dark-Era real-histories in `timeline.md` (per-era sub-sections); the Seven Wardstones in `geography/myrkono.md`; the Dreaming Cape Real History in `geography/lautara.md`; the Nine Generals in `factions.md` (under *Remnants of Corruption*); the Devourer and the Corrupted God's true identity in `cosmology.md`. The `⚿ GM Secret:` heading prefix is the lore-side equivalent of the HTML `⚿ GM Secret` expandable: same content, same visibility-discipline. |
 | Domains, sub-regions, kingdoms, settlements, terrain | `lore/geography/<region>.md` (one file per god domain) + `lore/geography/_continent.md` (Talan-continental frame, seas, rail, domain index) + `lore/geography/_off-continent.md` (Sortalde + Red Empire) + `lore/geography/bolverk.md` (the megacity in Abyss). Each domain file declares its land borders at the top; when designing on top of a domain, read its file *and* the files of its bordering domains. |
 | Factions, guilds, churches, organisations | `lore/factions.md` — but only for **cross-domain** organisations (Adventurers' Guild, Mercenary Guild, Voroir Daua, Remnants of Corruption, etc.). Region-bound institutions (state religions of single polities, noble houses of single kingdoms, named taverns) live in the relevant `lore/geography/<region>.md` file, not here. |
-| Peoples, traditions, politics, craft, warfare | Deep-culture peoples live with their place: **Fenurrans** in `lore/geography/ehizahar/fenurra.md`, **Kitsune** in `lore/geography/lautara/emarrea.md`, **Tengu** in `lore/geography/vindul/haizetsua.md`, **Sortalde peoples** in `lore/geography/_off-continent.md`. Pan-Talan cultural canon (the common tongue, cross-cultural patterns) lives in `lore/cultures/_talan.md`. |
-| Playable ancestries (PF2e), heritages, lifespan, domain distribution | `lore/ancestries.md` (deep-culture peoples carry one-line stubs that point to their `lore/cultures/<people>.md` file) |
+| Peoples, traditions, politics, craft, warfare | Deep-culture peoples live with their place: **Fenurrans** in `lore/geography/ehizahar/fenurra.md`, **Kitsune** in `lore/geography/lautara/emarrea.md`, **Tengu** in `lore/geography/vindul/haizetsua.md`, **Sortalde peoples** in `lore/geography/_off-continent.md`. Pan-Talan canon (the common tongue, cross-cultural patterns) lives in `lore/geography/_continent.md` (*Languages* section). |
+| Playable ancestries (PF2e), heritages, lifespan, domain distribution | `lore/ancestries.md` (deep-culture peoples carry one-line stubs that point to their `lore/geography/<domain>/<sub-region>.md` file) |
 | Bolverk (the megacity in Abyss), Vice Demons, Virtue Devils, the Tunsund, soul-routing from Dauria, individual demon/devil seat-holders | `lore/geography/bolverk.md` (Bolverk is a place; its city geography and the factions inside it live in the geography folder) |
 | New coined names + etymologies | `lore/glossary.md` (always; see naming rule) |
 | Eras, historical events, dates | `lore/timeline.md` |

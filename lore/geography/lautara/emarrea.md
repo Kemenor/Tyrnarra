@@ -130,7 +130,7 @@ The Heartcourt is famously dramatic, and the structure under that drama is not a
 
 ### Per-Heart vignettes: formative events and present-day matters
 
-Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`../../heartcourt-letters.md`](../../heartcourt-letters.md)).
+Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`heartcourt-letters.md`](heartcourt-letters.md)).
 
 **Saemi (Azure).**
 - *The three-day silence at Frae City.* Five years back, a Cronus-clergy envoy sat across from her for trade-talks; Saemi did not speak for three days. The envoy broke first and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.
