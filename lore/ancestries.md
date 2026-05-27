@@ -50,7 +50,7 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 ## Ancestries: Alphabetical
 
 ### Anadi
-Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hunt domain (Ehizahar); **rare** everywhere else. Talan's most famous Anadi is **Matron Charna**, proprietor of the Spider's Silk Inn at Crossroads (see `factions.md`).
+Eight-eyed spiderfolk. **Uncommon** in the Jungle of Chaos (Nashavel) and the Hunt domain (Ehizahar); **rare** everywhere else. Talan's most famous Anadi is **Matron Charna**, proprietor of the Spider's Silk Inn at Crossroads (see `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*).
 
 ### Android
 **Synthetic people created by the Elden** during the Elden Era (6000 GR – 2945 GR). They are the Elden's greatest known surviving achievement, and the only living link to Elden craftsmanship that civilisation has been able to study at all. Their numbers were never large and have been declining for millennia; very few remain today.
@@ -109,7 +109,7 @@ Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding
 ### Dwarf
 Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 
-- **New Age Dwarves**: lawful, inventive, and safety-conscious craftspeople. Centred in the **Order of Steam** (Sumendar's industrial kingdom-guild hybrid). Builders of airships, steam machinery, and arcane artillery. **House Eisenhart** is their highest-prestige lineage (see `factions.md`).
+- **New Age Dwarves**: lawful, inventive, and safety-conscious craftspeople. Centred in the **Order of Steam** (Sumendar's industrial kingdom-guild hybrid). Builders of airships, steam machinery, and arcane artillery. **House Eisenhart** is their highest-prestige lineage (see `geography/sumendar.md`, *Order of Steam → House Eisenhart*).
 - **Sentinel Dwarves**: live deep underground, in the upper reaches of the **Darklands**. Their stated mission: fix the mistakes of the failed Golden Empire and defend against the hordes that emerge from below. They are the most reliable mortal early-warning system against Corrupted-God leakage; the Adventurers' Guild treats their intelligence as gold.
 
 ### Elf
@@ -126,7 +126,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 
 **Two distinct fleshwarp populations exist on Talan:**
 1. **Natural-born fleshwarps of the Blackened Lands**: children of the cursed ground. Mortal beings shaped by where they were born or where they spent enough time. This is the canonical Talanese fleshwarp.
-2. **Menagerie-made fleshwarps**: deliberate Red Empire fabrications, off-continent (see `factions.md`). Same end-product, completely different origin.
+2. **Menagerie-made fleshwarps**: deliberate Red Empire fabrications, off-continent (see `geography/_off-continent.md`, *The Menagerie*). Same end-product, completely different origin.
 
 Both are rare everywhere outside their source. A Blackened Lands fleshwarp is rare-but-pitied; a Menagerie fleshwarp is rare-and-feared. Most Talanese cannot tell them apart on sight.
 
@@ -245,7 +245,7 @@ Heritages on Talan are explained in-world as either a god's blood, an Elemental 
 **Nephilim covers both celestial and fiendish features** on Talan, with parentage determining the manifestation. The mapping broadens further:
 
 - **Celestial features** manifest in Nephilim descended from *any god*, most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
-- **Fiendish features** manifest in Nephilim descended from **any demon or devil**: a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See `bolverk.md` for the parent populations: *Vice Demons: the Seven* and *Virtue Devils: the Fourteen*.
+- **Fiendish features** manifest in Nephilim descended from **any demon or devil**: a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See `geography/bolverk.md` for the parent populations: *Vice Demons: the Seven* and *Virtue Devils: the Fourteen*.
 
 Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag: one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
 
@@ -315,9 +315,9 @@ Four of the bound thirteen express their touch otherwise than through an exclusi
 
 ## Vice Demons, Virtue Devils, and Bolverk
 
-The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, and **Bolverk** (the megacity in Abyss where they dwell) lives in `bolverk.md`. This file stays focused on Talan's ancestries and heritages.
+The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, and **Bolverk** (the megacity in Abyss where they dwell) lives in `geography/bolverk.md`. This file stays focused on Talan's ancestries and heritages.
 
-`bolverk.md` covers:
+`geography/bolverk.md` covers:
 - The city: geography, the Tunsund channel, the four-terraced neutral strip, the daily flood cycle, the Dauria-Bolverk soul-routing
 - The three factions: Vice Demons (anarchic spires), Virtue Devils (ordered tetradecagram), and Independents (Soul Sellers, Independent Souls)
 - The feudal-tithe model
@@ -338,6 +338,6 @@ The full canon for the **seven Vice Demons**, the **fourteen Virtue Devils**, an
 - **Kitsune culture, Heartcourt, Catjomin Sake**: [`cultures/kitsune.md`](cultures/kitsune.md) (kitsune are *not* descended from Sortalde despite the parallel Eastern-flavoured naming register)
 - **Tengu culture, Skarvorn Republic, eleven clans, Vornsketta, singing cities**: [`cultures/tengu.md`](cultures/tengu.md)
 - **Fenurran tribes (Draconis, Vexiren, Brakkaun, Seravain), Speaker's Mantle, Blackglass/Velthite/Ghost Willow, the Scar of Aeris**: [`cultures/fenurra.md`](cultures/fenurra.md) (the four tribes are human-stock; bestiary entries here treat the species, not the culture)
-- **House Eisenhart (dwarven), the Menagerie (Red Empire fleshwarp origin)**: `factions.md`
-- **Spider's Silk Inn (Matron Charna, Anadi)**: `factions.md`
+- **House Eisenhart (dwarven)**: `geography/sumendar.md`, *Order of Steam → House Eisenhart*; **the Menagerie (Red Empire fleshwarp origin)**: `geography/_off-continent.md`, *The Menagerie*
+- **Spider's Silk Inn (Matron Charna, Anadi)**: `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*
 - **Lord Albrecht Lavisburg, Seraphel Duskbane**: `factions.md` (contemporary heritage / ancestry examples)
