@@ -145,6 +145,8 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 ### Halfling
 **Dominant in Lautara (Commerce / Jianna)**. Wanderlust-driven, which is why so many of them become merchants; the call of *the next market* is doctrinally central to halfling culture, and Jianna's commerce-blessed roads carry more halflings than any other population.
 
+Within Lautara, two distinct living-culture variants are already coined. **The mountain-Halflings of Itsasalda** are the descendants of wanderers who decided that the port was their road; they keep the same dock, the same window, and the same espresso bar across lifetimes, and *the steadfast watches* is the rule of life they have built around the seated Vordsbench at Bellhalt. The Atarialdan hearth-Halflings (canon-pending; the second of the two contrasting Lautaran Halfling cultures) carry the hearth with them across the eastern overland corridor. Both descend from the same wanderlust; the inversion is what *being from here* produces. Full canon in [`geography/lautara.md`](geography/lautara.md), *Itsasalda* (mountain-Halflings); *Atarialda* canon-pending.
+
 ### Hobgoblin
 **Dominant in Brauogi (Earth / Sarrum)** alongside Goblins, sharing the Goblin & Hobgoblin Kingdom.
 
@@ -162,6 +164,8 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 
 ### Kitsune
 **Known as the Divine Envoys. Dominant in Lautara**, specifically in **Emarrea**. Fisaya herself is depicted as a female kitsune; the affinity goes back as far as the chronicle record reaches. Full living-culture canon (Heartcourt, Catjomin Sake, Kyūbi-no-Den, foxfire, lifespan and tail-growth) in [`geography/lautara/emarrea.md`](geography/lautara/emarrea.md).
+
+A third Lautaran kitsune population anchors **the espresso-bar network of Itsasalda** at Bellhalt and the Muino-saila ports: generational bar-owners who keep the same counter across the same harbour view for lifetimes, hold information rather than sell it (in deliberate contrast to the Merkavar-kitsune market-stalls), and tend the warehouse-shrine fires on the Jianna route-priest's morning round with foxfire-kindled slow-fuel. The three Lautaran kitsune populations diverged so long ago that a kitsune of one tradition reading the others' civic life sometimes recognises only the foxfire. Full canon in [`geography/lautara.md`](geography/lautara.md), *Itsasalda → Itsasaldan kitsune*.
 
 ### Kobold
 **Genius chaotic inventors who don't care about safety.** Dangerous to be around and the source of half the most exciting (and most disastrous) inventions in the Order of Steam. **Common in Sumendar (Fire)**, uncommon elsewhere. **No relation to Dragons** despite the surface similarity: Kobolds are native, Dragons are alien arrivals. Komo himself is depicted as a kobold (see `gods.md`).
@@ -222,6 +226,8 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 
 ### Vishkanya
 **Most common in Lautara (Commerce / Jianna).** **Keeping community** is a core Vishkanya value, and **following creative pursuit** is the second. They are over-represented in artisan-merchant guilds and in the more refined corners of Lautara's market culture. Jianna herself is depicted as a vishkanya (see `gods.md`).
+
+Within Lautara, Vishkanya anchor specific archive-and-precision crafts that fit the *keeping community* and *creative pursuit* values: **the Cellar Masters** of the Azkataria Cellarsworn (precision of vintage-aging and Council-record), **the Reckoners** of the Vordsbench at Itsasalda (institutional memory, Watchroll-keeping, the held-deal registry that runs alongside the Jianna route-priest's witnessing route), and over-representation in Merkavar's Jianna-clergy administration. The shared shape is *the long ledger*: Vishkanya communities in Lautara are most reliably found wherever a working institution requires its accumulated record kept honestly across more time than any single seated officer's working life. Full canon in [`geography/lautara.md`](geography/lautara.md), *Azkataria* (Cellar Masters) and *Itsasalda* (Reckoners).
 
 ---
 
