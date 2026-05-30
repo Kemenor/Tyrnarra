@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/style-b.css">
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #d4a04a; }
   .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
@@ -36,7 +37,7 @@
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">Merkavar</div>
     <div class="page-subtitle">The Market City · Jianna's God-City</div>
-    <div class="page-flavor">"You are a citizen of Merkavar when you are here, and you govern it when you show up."</div>
+    <div class="page-flavor">The goddess of Commerce walks her own Market City, and sometimes she walks it as a customer. It is the fairest market on the continent, because the stranger at your stall might be Her.</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -44,7 +45,7 @@
   <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
   <dl class="facts">
     <dt>Etymology</dt><dd>Basque <i>merkatu</i> (market) + drift → <b>Merkavar</b>, "the Market." The byname (<i>The Market City</i>) is the gloss the rest of Talan reads.</dd>
-    <dt>Position</dt><dd>Central Lautara. An independent city-state-with-territory: the city, the great inland lake that surrounds it, and <b>Helgafjall</b>, the sacred snow-capped peak that rises from the lake's centre. Authority extends to the ring of water and the sacred peak. Surrounded by <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> (agricultural feeder belt to the south, governed by the Cellarsworn and holding the southern pilgrim route up Helgafjall) and the rest of Lautara beyond.</dd>
+    <dt>Position</dt><dd>Central Lautara. An independent city-state-with-territory: the city, the great inland lake that surrounds it, and <b>Helgafjall</b>, the sacred snow-capped peak that rises from the lake's centre. Authority extends to the ring of water and the sacred peak. Surrounded by <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> (the philosopher-market and agricultural belt to the south, governed by the Open Floor and holding the southern pilgrim route up Helgafjall) and the rest of Lautara beyond.</dd>
     <dt>Character</dt><dd>
       <i>The continent's busiest commercial junction. Loud, dense, multi-ancestry, never closed.</i><br>
       <div class="pill-row" style="margin-top:6px"><span class="pill">Market City</span><span class="pill">Silk-Road Hub</span><span class="pill">Seasonal Assembly</span><span class="pill">Cosmopolitan Clergy</span></div>
@@ -61,14 +62,99 @@
   <div class="prose">
     <p>The lake-city is a destination, not a port. Ships reach the Midarra coast at Rika Tikur or the Dreaming Cape, goods transfer to river-craft or caravan-train, and arrive at Merkavar to be sorted, valued, and redistributed onward. The continent's overland commerce passes through here at some point in its journey, and the city is built for it: freight yards along the lake's eastern shore, warehouse districts radiating outward, market-squares along the western shore for the seasonal markets, and the temple district climbing the lake-facing slopes toward Helgafjall.</p>
 
-    <p><b>Helgafjall</b> (Icelandic <i>helgr</i> "holy" + <i>fjall</i> "mountain") is the sacred-mountain watcher over the market-city. Pilgrim trails wind up its slopes; the snow on its peak never fully melts, and the lake at its foot has never frozen in record. Pilgrims climb in every season; the harder the climb, the more honoured the prayer at the summit. Merchant-houses are said to send a senior apprentice up Helgafjall before any deal of consequence, on the theory that the goddess watches commerce more closely when the mountain is in the prayer.</p>
+    <p><b>Helgafjall</b> (Icelandic <i>helgr</i> "holy" + <i>fjall</i> "mountain") is the sacred-mountain watcher over the market-city. Pilgrim trails wind up its slopes; the snow on its peak never fully melts, and the lake at its foot has never frozen even in the hardest winters. Pilgrims climb in every season; the harder the climb, the more honoured the prayer at the summit. Merchant-houses are said to send a senior apprentice up Helgafjall before any deal of consequence, on the theory that the goddess watches commerce more closely when the mountain is in the prayer.</p>
+
+    <p>The chronicler's standing guess for both the unmelting snow and the unfreezing water is the simplest one: that the goddess never truly leaves her city, and the two are the trace of a resident god.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-god-goes-to-market" class="section-heading">The God Goes to Market</h2>
+  <div class="prose">
+    <p>Merkavar's first fact is the one the rest of the continent forgets to say aloud: this is Jianna's own city, and a god walks their city-state with their own eyes. So in the Market City the goddess of Commerce is, sometimes, a customer. The veiled woman testing the silk at a stall, the stranger haggling over grain and paying without a quibble, might be Her, and every merchant in Merkavar half-believes it of the next person in line. <i>She smiled at me once</i> is a fortune made and a story a family tells for three generations.</p>
+
+    <p>The deepest devotion here is a fair deal struck with a stranger who might be the goddess, and Merkavar is the fairest market on the continent for exactly that reason: you short no one their weight, because the one you cheat could be the one whose smile lifts or breaks your house. Here the theology and the commercial ethics are a single rule.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-plazas" class="section-heading">The Plazas</h2>
+  <div class="prose">
+    <p>The lake-shore city trades across many market-plazas, each with its own crowd and character. The <b>travellers' plazas</b> sit by the freight-yards and the caravan-train depots, loud with strangers and four tongues, their stock turning over with each season's arrivals. The <b>local plazas</b> of the permanent quarters are where the same families have kept the same stalls for lifetimes, and everyone knows the weight of everyone's hand. Others run <b>by trade</b>: the cloth-plaza, the grain-plaza, the foxfire-lit information-stalls where the kitsune sit. A merchant's plaza is half their identity, and the daily current of the city is the movement between them.</p>
+
+    <p>The abundance of squares is also why the goddess can never be pinned to one place. There is always another plaza she might be standing in today, and a city of squares to choose among leaves no corner where a crowd could reliably wait for her.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-open-hand-and-the-smile-touched" class="section-heading">The Open Hand and the Smile-Touched</h2>
+  <div class="prose">
+    <p>Jianna's image holds one hand open in offering and one closed, and the Merkavar merchant shows the <b>open hand</b>, palm out, to every stranger who reaches the stall, before a word of price. It means both <i>I deal you fair</i> and <i>I greet you as Her, in case you are</i>, and a child learns the gesture before they learn to count change. A merchant who keeps both hands on his goods is read at a glance as rude, or as hiding a thumb on the scale.</p>
+
+    <p>A family that caught the goddess's smile in passing is <b>smile-touched</b>, a phrase the whole city knows. Their fortune is said to lift, and often visibly does, which is the only evidence anyone ever has, because the clergy refuse to register or certify a smile: you cannot audit the goddess, and a temple-stamped smile would be a closed hand laid on an open gift. So the city is full of quiet smile-claims, some glowing true and some threadbare, the difference read only in the ledger of what came after.</p>
+
+    <p>Shorting a customer their weight is, in Merkavar, nearer to blasphemy than to crime. The one you cheated might have been the goddess testing the scale, so a caught cheat loses his licence to the assembly and his standing to the temple both, and the second wound is the one that does not heal. Under the roar of spice and lake-damp runs a constant half-attention, the whole market watching, just slightly, for the veiled woman who pays without haggling and is gone before you look up.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, What the Smile-Touched Say</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; Tavern-Tales of the Passing Smile</div>
+      Every dockside tavern in Merkavar keeps its own roster of smile-touched houses, and the telling grows in the keeping. They say the brass-fitting family on the lower grain-plaza were nobodies until a veiled woman bought a candlestick off the eldest daughter, smiled, and walked off into the crowd, and within three years they held the plaza's best frontage. They say you cannot ask for the smile; the moment you arrange your face to deserve it, she has already passed you by. They say she favours the stallholder who gives a fair count to the beggar as readily as to the lord, and that more than one fortune was made by a kindness the giver thought no one saw. The skeptics, mostly clergy, note that the families who claim the smile are also the families who keep an honest scale and a long memory, and that fair dealing has a way of looking like luck after thirty years. The tavern-tellers answer that this is exactly what a smile-touched house would look like, and order another round.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, The Stall Jianna Keeps</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to No One in Merkavar</div>
+      <p style="font-style:italic; margin-top:0;">Once a month, the goddess keeps a stall. The smile-touched belief is the city's unwitting record of it, holding the true effect and the wrong cause.</p>
+
+      <div class="market-grid">
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">The Stall</div>
+          <div class="market-desc">Disguised, in one plaza or another and never the same twice, Jianna sets out a spread of trinkets and baubles and sells them with her own hands. The prices seem wrong to anyone watching, because she is not pricing the baubles. She is pricing the buyer.</div>
+        </div>
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">The Smile Is the Sale</div>
+          <div class="market-desc">A family does not catch a smile in passing and then prosper. The family bought from her stall, honoured what they bought, and prospered. Mortals hold the effect and the wrong cause, and no one connects the strange-priced trinket to the rising luck.</div>
+        </div>
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">The Trinkets Are Real</div>
+          <div class="market-desc">Each bauble is a genuine minor blessing of Jianna: true fortune to one who keeps and honours it, inert in the hands of one who would flip it, waste it, or forget it. She screens her buyers because the blessing is profaned on the careless. She is not selling the object; she is placing the blessing where it will be honoured.</div>
+        </div>
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">The Price Is the Test</div>
+          <div class="market-desc">Sometimes absurdly cheap, to see whether you treasure a thing that cost you nothing; sometimes steep for a trinket, to see whether you will pay dearly for a worth you can only sense. The haggler has already failed: talking her down is pricing the object, the opposite of honouring it. She watches the eyes, the hands, the reason it is wanted.</div>
+        </div>
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">She Cannot Be Hunted</div>
+          <div class="market-desc">Never the same day, never the same plaza, no pattern to stake out, and a city of squares to choose among. Were the stall predictable, every careless soul in Merkavar would camp it wearing a borrowed look of reverence and the test would die. The unpredictability keeps the screening honest. A refused buyer hears only <i>"this one is not for you,"</i> and the stall is gone when they think to return.</div>
+        </div>
+        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="market-name" style="--card-accent:#d4a04a;">No One Knows</div>
+          <div class="market-desc">The clergy do not; their doctrine that <i>Jianna rewards the honouring heart</i> is true without their grasping how literally. The smile-touched belief is the closest the city comes. Perhaps one or two very old merchants half-remember a woman who priced a brass bird strangely and looked at them too hard, and never let the thought finish.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-two-faces" class="section-heading">The Two Faces, and the Whole of Her</h2>
+  <div class="prose">
+    <p>Jianna appears in Merkavar two ways. <b>Openly and rarely</b>, at the great civic moments, a market's opening or a temple rite, she stands as herself, recognised, and the city stops; these are the witnessed theophanies the clergy keep and the chronicles record. <b>Hidden and often</b>, she walks the plazas veiled and unrecognised, the customer who might be anyone, and these are never confirmed.</p>
+
+    <p>The clergy's institutional faith leans on the open goddess of rite and law; the merchant's street-faith lives in the hidden one. The two registers quietly chafe: the clergy find the folk-fervour of smile-claims a touch superstitious, and cannot quite say so aloud, because she does walk.</p>
+
+    <p>Her four aspects are Trade, Wealth, Greed, and Generosity. Where each other Lautaran region took a single face of her, Merkavar is her seat and holds all four at once. The daily drama at a stall is the merchant poised between her <b>Greed-face</b>, which says short the stranger, and her <b>Generous-face</b>, which says deal fair to the maybe-goddess, and the market is the proving-ground where the whole of her is weighed in every transaction. Worship keeps no liturgy apart from the deal itself: the open hand is the daily rite, the climb up Helgafjall the rite before a deal of consequence, the market-opening the rite of the season, and the trade is the prayer.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="the-four-seasonal-markets" class="section-heading">The Four Seasonal Markets</h2>
   <p style="text-align:center; max-width:780px; margin:0 auto 0; opacity:0.92;">
-    Merkavar's commercial year runs on four great markets, one per season. Each market is also a seat of the <b>Seasonal Assembly</b>: every holder of a registered trade route, guild certification, or commerce-treaty seat gets a vote on the legislation the clergy have placed before the floor. The character of each market shapes which ancestry-blocs turn out, which legislation passes, and which struggles dominate the public squares.
+    <i>"You are a citizen of Merkavar when you are here, and you govern it when you show up."</i> Merkavar's commercial year runs on four great markets, one per season. Each market is also a seat of the <b>Seasonal Assembly</b>: every holder of a registered trade route, guild certification, or commerce-treaty seat gets a vote on the legislation the clergy have placed before the floor. The character of each market shapes which ancestry-blocs turn out, which legislation passes, and which struggles dominate the public squares.
   </p>
 
   <div class="market-grid">
@@ -145,12 +231,12 @@
   <div class="prose">
     <p style="font-style:italic; opacity:0.85;">The Market City is older than any chronicle that survives intact, and the chronicle record has long since stopped trying to catalogue it. Several specific questions remain open in canon:</p>
     <ul>
-      <li><b>City layout and districts.</b> The freight-yard quarter, the temple climb toward Helgafjall, the market-squares along the western shore, and the warehouse rings are sketched but not detailed; named quarters, named guildhalls, named clergy-precincts are canon-pending.</li>
+      <li><b>City layout and districts.</b> The plaza-pattern is now drawn in outline (travellers' plazas by the freight-yards, local plazas of the permanent quarters, by-trade plazas like the cloth- and grain-plazas), but the <i>named</i> squares, the freight-yard quarter, the temple climb toward Helgafjall, the warehouse rings, the named guildhalls and named clergy-precincts remain canon-pending.</li>
       <li><b>Named clergy figures.</b> The senior administrative ranks, the high-priest equivalents who chair the standing committees, the cross-ancestry clergy whose careers exemplify the cosmopolitan ideal: all unnamed.</li>
       <li><b>Named Halfling Railworkers' Association leadership.</b> The Association's whip, its chief negotiator, its representative on the assembly floor: characters waiting to be cast.</li>
       <li><b>Named kitsune information-brokers.</b> The market-reader whose seasonal stall is the canonical first stop for new merchants, the broker whose contract-arbitration record is the longest unbroken streak on the continent: open.</li>
       <li><b>Historical clergy-vs-assembly arbitration cases.</b> The three different supremacy answers of the last century each came from a named arbitration body in a named dispute; the dispute names, the bodies, and the legal reasoning are canon-pending.</li>
-      <li><b>The four-market traditions.</b> Each market has its own ritual rhythm: opening rites, closing rites, the songs sung at dawn on the first day, the customary first toast at the merchant-house dinner. Unwritten.</li>
+      <li><b>The four-market traditions.</b> The shape of Merkavar's worship is now drawn (the open hand as the daily rite, the Helgafjall climb before a deal of consequence, the market-opening as the rite of the season, the trade itself as the prayer), but each market's own ritual rhythm remains unwritten: the opening rites, closing rites, the songs sung at dawn on the first day, the customary first toast at the merchant-house dinner.</li>
       <li><b>Specific Helgafjall pilgrimage practices.</b> The trails, the way-shrines, the threshold-tokens left at the summit, the prayer-formulae merchant-houses send their apprentices to recite.</li>
     </ul>
     <p>Pace these as stories want them. The Market City does not need them all written; it benefits from each being there when called for.</p>
