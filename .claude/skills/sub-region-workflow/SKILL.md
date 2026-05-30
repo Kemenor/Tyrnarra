@@ -29,6 +29,18 @@ Read these in order. Skipping is the single largest source of rework.
 
 If any canon contradicts what you were about to draft, the canon wins. Surface the conflict in chat before adapting.
 
+## Cold start: invoked with just a region name
+
+The common trigger is a bare *"flesh out [REGION]"* with no other context. The opening move is the same every time:
+
+1. **Find the region and read its world.** Grep the repo for `[REGION]` to learn which domain it sits in, then run the Phase 0 reads end-to-end (the domain file and every bordering domain's file, the glossary sub-region and faction blocks, `ancestries.md` for any ancestry that might anchor here, the `open-threads.md` entry, the parent domain HTML, and the sibling sub-regions).
+2. **Report stub-versus-rework before designing.** Tell the user whether `[REGION]` is a fresh stub or existing canon that needs reworking (the Azkataria Cellarsworn → Open Floor case is the rework pattern), and what its neighbors and the committed canon constrain. This is a chat-only Phase 0 readback.
+3. **Seed first.** If the user supplied a seed, confirm it and short-circuit Phase 1/2 (the way the Lautara resketch did). Otherwise run the Phase 1 seed-questions in one batch and surface the answers before generating 2-3 seeds.
+4. **Grill before Phase 5.** Use the `grill-me` skill to walk the design tree one axis at a time, one question per turn, each with a recommended answer drawn from canon.
+5. **Surface before writing; commit to lore only on an explicit go; touch no HTML without an explicit publish or promote signal.**
+
+**Read the quality bar first.** Before designing, read the **Itsasalda**, **Atarialda**, and **Azkataria** bullets and the **Merkavar** section in `lore/geography/lautara.md`. They are the freshest seed-led builds (2026-05-29 to 2026-05-30, lore plus dedicated HTML pages) and show what a region reads like when the soul comes before the system; Merkavar is the model for *deepening* an already-built place. Emarrea and the Vindul three (Baerfrost, Air Monastery, Fellibylur) are the older exemplars.
+
 ## The eight phases at a glance
 
 | Phase | What happens | Phase boundary discipline |
