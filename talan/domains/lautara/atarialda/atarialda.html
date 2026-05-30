@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atarialda · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #e0944a;
+    --card-bg: rgba(34,22,12,0.55);
+  }
+
+  /* Northfire callout (left-bordered, ember-toned) */
+  .northfire-call { max-width: 800px; margin: 24px auto; padding: 22px 28px; background: rgba(50,30,14,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .northfire-call .nf-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .northfire-call p { margin: 0 0 12px; line-height: 1.6; }
+  .northfire-call p:last-child { margin-bottom: 0; }
+
+  /* The doorway greeting (centred two-line exchange) */
+  .greeting { max-width: 640px; margin: 26px auto; text-align: center; }
+  .greeting .g-line { font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--gold-bright); margin: 6px 0; }
+  .greeting .g-line.answer { color: var(--parch); }
+  .greeting .g-note { font-style: italic; color: var(--gold-dim); font-size: 0.9rem; margin-top: 12px; }
+
+  /* Daily-life triad */
+  .triad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .triad-card { padding: 16px 18px; }
+  .triad-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
+  .triad-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Two-tilts comparison (road / hearth) */
+  .tilt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
+  .tilt-card { padding: 18px 20px; }
+  .tilt-side { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
+  .tilt-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1.05rem; margin-bottom: 8px; }
+  .tilt-card.hearth .tilt-name { color: #e8c088; }
+  .tilt-card p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
+
+  /* Salt / Steward sub-callout */
+  .salt-sub { max-width: 880px; margin: 18px auto; padding: 18px 24px; background: rgba(50,30,14,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .salt-sub-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+  .salt-sub p { margin: 0 0 10px; line-height: 1.6; }
+  .salt-sub p:last-child { margin-bottom: 0; }
+
+  /* Faith two-faith rhythm (life-arc) */
+  .faith-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .faith-card { padding: 16px 18px; }
+  .faith-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .faith-band { font-style: italic; color: var(--gold-dim); font-size: 0.8rem; margin-bottom: 8px; }
+  .faith-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Feature panels (living archive, homecoming board) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+</style>
+</head>
+<body data-page="atarialda">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><span>Atarialda</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Atarialda</div>
+    <div class="page-subtitle">Lautara Sub-Region · The Welcome Threshold</div>
+    <div class="page-flavor">"There's a seat." · "And a story for it."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>atari</i> "threshold, gateway" + <i>aldea</i> "region" → <i>atarialdea</i> → vowel-loss to <b>Atarialda</b>, "the threshold region." Deep-old; the name names what the place still does.</dd>
+    <dt>Position</dt><dd>The eastern arm of Lautara, holding the domain's overland approach from the east. <a href="/talan/domains/lautara/itsasalda/itsasalda.html"><b>Itsasalda</b></a> to the NW; <a href="/talan/domains/lautara/merkavar/merkavar.html"><b>Merkavar</b></a>'s lake-and-Helgafjall territory to the W; <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> to the SW. Its outer edge faces three domains: <b>Egulon</b> (Light) to the E, <b>Zuzental</b> (Law) to the NE, <b>Ezkudon</b> (Knowledge) at the SE corner. <b>Crossroads</b> sits at the northeast corner on the tri-point; it stands <i>in</i> Atarialda without belonging to its hearth-culture (detailed under <a href="/talan/domains/zuzental/zuzental.html">Zuzental</a>).</dd>
+    <dt>Terrain</dt><dd>The watered eastern overland gateway: rolling rail-and-caravan country where the magitrain's eastern passenger lines cross toward Egulon and Zuzental, and the corridor's hearth-villages sit along the lines that carry the road home.</dd>
+    <dt>Character</dt><dd>
+      <i>The first fire a traveller reaches crossing in from the east; a living archive of everywhere the road has been</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Hearth-Halfling</span><span class="pill">The Welcome Threshold</span><span class="pill">Living Archive</span><span class="pill">Acephalous</span><span class="pill">Bound by the Salt</span></div>
+    </dd>
+    <dt>Peoples</dt><dd><b>Hearth-Halflings</b> anchor the region: wanderers who carry the hearth with them and come home to keep it, the inverse of Itsasalda's stay-put mountain-Halflings. Atarialda's defining demographic fact is that it <b>sorts no one</b>: the <b>Vishkanya</b> craftsman who stopped twenty years ago, the <b>kitsune</b> who came for a winter and stayed for the spring, the Zuzental cook who never went back are woven into the hearth-households as full members and living homeland-traces, never gathered into any record-caste.</dd>
+    <dt>Tongue</dt><dd>Talanese throughout; the evening table is many-tongued by nature, holding songs and sayings carried home from every domain the wanderers have crossed.</dd>
+    <dt>Faith</dt><dd>A two-faith rhythm along the life-arc. The travelling young pray to <b>Solyra</b> on the road going out, and a household keeps an east-facing shrine to her; the hearth coming home prays to <b>Jianna's open hand</b>, the gift that asks no return. The kept welcome-fire carries a quiet second devotion to <b>Komo</b> in his domestic face.</dd>
+    <dt>Rule</dt><dd><b>None, by design.</b> No council and no capital, the one Lautara sub-region with no seat at all. Authority is wholly distributed: the table you are sitting at is the highest authority on the matter it is hosting, disputes bound by <b>the Salt</b>, standing argued by hosting.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(224,148,74,0.5);">
+    <div class="gods-city-label">No Capital · the Region's Renowned Hearth</div>
+    <div class="gods-city-name">The Northfire</div>
+    <div class="gods-city-byname">Eyvind's great hearth · the warmest seat and the most trusted weather-word on the eastern corridor</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Atarialda raises no seat above its hearths, and the renown that another region would invest in a capital is invested here in the deepest tables instead. The Northfire is the one a far-travelled stranger is told to find first: kept by <b>Eyvind</b>, the Jotunborn who came the longest road on the continent, it holds far-north traces no other hearth in the warm east can, and a traveller stops there to be fed and to learn whether to ride on.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-welcome-threshold" class="section-heading">The Welcome Threshold</h2>
+  <div class="prose">
+    <p>Atarialda is the first hearth a traveller reaches crossing into Lautara from the east, and the domain's welcome is literal and geographic here: a fire and a meal at the threshold, offered before any question of who you are. A keeper who opens the door to a stranger feeds them first and asks afterward; the eastern overland approach runs through this region, and so the corridor's first impression of Commerce-domain Lautara is a bowl set in a stranger's hands at a stranger's table.</p>
+
+    <p>The people who keep these hearths are <b>Halflings as singular as Itsasalda's, and exactly inverse to them</b>. Where the mountain-Halflings of Bellhalt are wanderers who stopped and became the hearth that never moves, the Atarialda Halflings carry the hearth with them and bring it home full. Most travel young, a wander of years down the eastern lines and out across the neighbouring domains; most come home to settle and raise a family. To settle is to become a <b>keeper</b>, and the hearth is where the road is stored. The old Halfling who has not left her village in thirty years is a wanderer who came home full, and her table is the place other people's roads now end.</p>
+  </div>
+
+  <div class="greeting">
+    <div class="g-line">"There's a seat."</div>
+    <div class="g-line answer">"And a story for it."</div>
+    <div class="g-note">The keeper says the first before asking anything; the traveller who knows the country answers the second. The free seat and the story owed for it, the open hand and the archive, in a single exchange at the doorstep.</div>
+  </div>
+
+  <div class="tilt-grid">
+    <div class="accent-card tilt-card">
+      <div class="tilt-side">The first motion</div>
+      <div class="tilt-name">Road-Tilted</div>
+      <p>Houses that send their young farther and longer and refresh their store constantly. A road-tilted house that never sits down keeps a deep current of new traces moving through the door, and keeps nothing settled at all. The wander is the discipline; the gathering is for later.</p>
+    </div>
+    <div class="accent-card tilt-card hearth">
+      <div class="tilt-side">The second motion</div>
+      <div class="tilt-name">Hearth-Tilted</div>
+      <p>Houses that keep shorter circuits and run deeper roots. A hearth-tilted house gone too long without sending anyone out keeps an <i>aging archive</i>: its songs forty years stale, no new homeland-trace through the door in a generation. The keeping is the discipline; the wander is the cost it forgets to pay.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The gentle argument that never settles here runs along that line, and it has a real stake: the ideal needs both motions. A house that only goes out keeps nothing; a house that only stays grows stale. Almost every old Atarialda family carries the quarrel inside its own walls, and carries it warmly, because the answer is plainly both.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-living-archive" class="section-heading">The Living Archive</h2>
+  <div class="feature-panel prose">
+    <p>Atarialda is where knowledge survives that has been lost everywhere else, kept in a form no library holds: in recipes, in the songs sung at dinner, on the family trees, in the memory of an old Halfling who once wintered in a village that no longer exists. A traveller from a far domain walks into a stranger's home and finds a trace of his own homeland, a dish or a tune or a saying carried back twenty years ago by a wanderer who has since settled and kept it.</p>
+
+    <p>The Dark Era made this weightier than charm. The caravans kept moving through the centuries of collapse, and the songs of the small peoples who did not survive it are still sung at Atarialda dinner-tables, because the wanderer who learned them got out and went home. A region with no centre cannot be decapitated: the hospitality-network had no king to kill and no capital to sack, and so it carried the memory of the dead villages through the Dark Era intact. This is why Atarialda endured where seated polities fell.</p>
+
+    <p>Atarialda's place among the eastern domains is best read against its neighbours. Where <a href="/talan/domains/ezkudon/ezkudon.html"><b>Ezkudon</b></a> controls knowledge behind negotiated access and <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> tests it at the coffee-table, <b>Atarialda remembers</b> it, and only Atarialda's method outlives the death of the place the knowledge came from. Scholars who have exhausted Thekkavar, and grievers after a grandmother's song, come east not to an archive but house to house at dinner.</p>
+  </div>
+
+  <div class="salt-sub">
+    <div class="salt-sub-label">The Provenance-Exchange</div>
+    <p>The archive has a custom that governs its sharing. Recognise something of home at a stranger's table, a dish or a tune or a turn of phrase, and you are owed the story of how it came there; and you owe your own in return. The open hand at the door and the obligation at the table are the same instinct twice. A trace given freely is repaid not in coin but in another trace, and the archive grows by every meal eaten under a roof that sorts no one.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-salt" class="section-heading">The Salt</h2>
+  <div class="prose">
+    <p>A region with no court still settles its disputes, and Atarialda settles them at the table. Both parties are fed first; no one can be refused, and even your adversary eats at the fire before a word is heard. What is settled over the meal is then bound by <b>the Salt</b>: to share salt at a hearth is to be held to what is settled over it, and to break salt is the one unforgivable thing, the social death of a person who can no longer be trusted at a fire. <i>Held</i> and <i>broke</i> attach to a person here as readily as they attach to a deal in Itsasalda's registries; the sanction is reputation, and in a region whose whole life is the welcome, a person no fire will hold has nowhere left to sit.</p>
+  </div>
+
+  <div class="salt-sub">
+    <div class="salt-sub-label">The Reach of the Salt</div>
+    <p>The reach of the Salt is the reach of the hearth that held it. When an outsider comes for redress, a Zuzental merchant whose Atarialda partner has broken a contract, he returns to the hearth where the salt was shared, and its <b>Steward</b>, the keeper who heads that hearth, hears him and brings the weight of the break-salt sanction down on the one who broke it. A matter the binding hearth cannot settle is carried to a <b>greater hearth</b>, which takes it up by choosing to, as a thing that adds to its standing, never by any duty.</p>
+    <p>But the Salt binds particular people, at a particular fire, in a particular season, and it is mortal as the hearth that held it. When the binding hearth has died, its fire gone cold and no Steward keeping it, the bond has lost its anchor; the merchant may carry his grievance to a greater hearth and ask, but no hearth is obliged to honour another's dead salt. The canny outsider learns the lesson the Forseti courts never have to teach: <i>bind your salt at a hearth deep enough to outlast your contract.</i></p>
+  </div>
+
+  <div class="prose">
+    <p>This is the cost of the open hand, and Atarialda pays it on purpose. The perpetual enforcement that <a href="/talan/domains/zuzental/zuzental.html">Zuzental</a>'s offices guarantee is exactly the standing-body Atarialda will not raise. A jurist out of the Law domain crosses the threshold and finds no office to file with and no court to convene, only tables to sit at.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="who-is-the-bigger-hearth" class="section-heading">Who Is the Bigger Hearth</h2>
+  <div class="prose">
+    <p>A hearth's depth, its <b>table</b>, is the load-bearing fact of the region, and nothing certifies it. Where Itsasalda counts standing on the Reckoners' Watchroll, Atarialda only argues it. The <b>Great Hearths</b>, the renowned households whose tables run deepest, contend perpetually and in good humour over which of them stands highest this season, and the contest is settled the single way the culture settles anything: by hosting. You prove your table by feeding more, by the archive you can lay on it, by the hard cases you take up and close, and above all by hosting the <b>Homecoming Board</b>.</p>
+
+    <p>The rivalry stays warm because the only way to win it is to out-welcome the rest, and a hearth that wins by feeding the corridor better is a hearth doing the very thing the region is for. Stewardship passes the same way. When a Steward dies or lays down the hearth, the hearth <b>stands open</b>, and the keeping of it is contested over a season or two by anyone who will host for it, kin and stranger alike. Family is favoured in practice, for the plain reason that a daughter raised at the hearth knows its archive and its ways in a manner no newcomer can match in two seasons; but the open hosting is genuinely open, and a stranger who keeps a deeper welcome than the heirs can take a hearth that is none of his by blood.</p>
+
+    <p>The gap between the ideal (the deepest welcome keeps the hearth) and the practice (the family usually wins) is the region's oldest argument, and it surfaces at every Board. A Great Hearth coasting on an inherited name, hearth-tilted and stale, its welcome more memory than practice, is the standing reproach the ideal levels at the practice, and the open hosting stays genuinely open because everyone has watched an heir lose a hearth.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>The <b>Homecoming Board</b> is the once-a-year feast in late autumn, after the <i>Uzta-Azoka</i> rail season brings the road-tilted home, that rotates each year to whichever hearth the others concede is at its height. It is a reunion of scattered kin first, where the cousin four lines off who rides the Zuzental rail is finally met, and a settling of Atarialda-wide matters only on the side, because the people who would argue them are all at the table anyway. To host the Board is to be conceded the highest table of the year; to win it is to have out-welcomed the rest, which is the only victory the region recognises.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="eyvind-of-the-northfire" class="section-heading">Eyvind of the Northfire</h2>
+  <div class="northfire-call">
+    <div class="nf-label">The Northfire · Eyvind's Great Hearth</div>
+    <p>The most renowned settler on the corridor is <b>Eyvind</b>, a Jotunborn who came the longest road on the continent: down from the frost-tundra of <a href="/talan/domains/vindul/baerfrost/baerfrost.html"><b>Baerfrost</b></a> in the far north to the warm watered east, and who keeps the great hearth called <b>the Northfire</b>. He is the single deepest archive in Atarialda, one being who has personally stood in more places than any caravan-Halfling, and his table holds far-north traces no other hearth in the warm east can.</p>
+    <p>He reads the eastern weather for the caravans and the rail in the old Jotunborn craft, so the warmest seat on the corridor is also its most trusted weather-word, and travellers stop at the Northfire to be fed and to learn whether to ride on. A frost-giant with no Atarialda blood and no inherited name, holding a Great Hearth's full standing earned wholly by the depth of his table, he is the region's own argument walking around at eight feet tall: the living welcome outranks the surname.</p>
+    <p>He keeps the east-facing Solyra shrine and the open-hand fire like any Steward, and beside them a small private nod to <b>Fisaya's wind</b>, the north god he carried south and the only shrine of hers in the warm east; even a faith gets kept here. The warm-east Halflings call him Eyvind and nothing else, the northern name spoken plainly and unaltered, which in a country that takes the stranger as he is, is its own small honour.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="daily-life" class="section-heading">Daily Life · the Kept Fire</h2>
+  <div class="prose">
+    <p>The welcome is not an occasion in Atarialda; it is the shape of an ordinary day. Three habits carry it, and a household is read by whether it keeps them.</p>
+  </div>
+
+  <div class="triad-grid">
+    <div class="accent-card triad-card">
+      <div class="triad-name">The Kept Fire</div>
+      <p>A hearth is never let to go fully cold. The fire is banked overnight and fed back up first thing on waking, before anything else, because a cold hearth cannot welcome and no one knows who reached the door in the dark.</p>
+    </div>
+    <div class="accent-card triad-card">
+      <div class="triad-name">The Set Guest-Place</div>
+      <p>An ordinary table keeps one seat and one bowl laid for whoever comes. A table with no guest-place is a house with something to be ashamed of; the empty seat is the household's standing promise to the road.</p>
+    </div>
+    <div class="accent-card triad-card">
+      <div class="triad-name">The Kitchen as Archive</div>
+      <p>The cooking is the archive made edible: a single board holding a Zuzental court-dish beside a Hareaveldi desert-bread beside a recipe that survives in this one kitchen alone. The evening meal is many-tongued, loud, and full of songs from everywhere.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · the Open Hand and the Road</h2>
+  <div class="prose">
+    <p>Atarialda is where the domain prays to Jianna's <b>open hand</b>. Her image holds one hand open in offering and one closed, and where Merkavar, Itsasalda, and Azkataria read the goddess through the closed hand of the struck bargain and the kept ledger, the hearth-Halflings read her through the open hand of <b>Generosity</b>: the gift that asks no return, on the conviction that the open hand builds the only wealth that outlasts a life, since a paid bargain ends but a guest fed becomes kin, and kin is the wealth no debt closes. The Merkavar clergy hold this to be soft theology; the hearth-Halflings hold that Merkavar has mistaken the closed hand for the whole goddess, and the two-handed image lets the argument run forever.</p>
+  </div>
+
+  <div class="faith-grid">
+    <div class="accent-card faith-card">
+      <div class="faith-name">Solyra</div>
+      <div class="faith-band">going out · the road</div>
+      <p>The travelling young pray to Solyra on the road going out, and a household keeps an east-facing shrine to her, Atarialda being the eastern arm that faces the dawn the travellers ride toward, for its people still out. The shrine looks east because that is the direction the road leaves by.</p>
+    </div>
+    <div class="accent-card faith-card">
+      <div class="faith-name">Jianna's Open Hand</div>
+      <div class="faith-band">coming home · the hearth</div>
+      <p>The hearth coming home prays to the open hand: Generosity over the struck bargain, the gift that asks no return. A guest fed becomes kin, and kin is the wealth no debt closes. The two-faith rhythm runs along the life-arc, road then hearth, out then home.</p>
+    </div>
+    <div class="accent-card faith-card">
+      <div class="faith-name">Komo</div>
+      <div class="faith-band">the banked flame · quiet second</div>
+      <p>The kept welcome-fire carries a quiet second devotion to Komo in his domestic face, the hearth-flame apart from his forge and his wildfire. The fire that is never let go cold is his as much as it is the household's.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Frost-Giant Who Reads the Sky</button>
+    <div class="legend-era-content">
+      <p>The corridor tells more about Eyvind than Eyvind tells about himself, and the tales grow in the telling. Caravan-folk swear his weather-word has never once been wrong, that he tastes the coming wind off the rail-yards a full day before the clouds turn, that the one season a freight-master ignored him for the magitrain's schedule he lost the whole train to an ice-storm out of a clear morning. They say the Northfire's fire was carried down lit from Baerfrost and has never gone out since, banked across the whole long road south, which is why it is the warmest hearth in the east. They say a frost-giant feels the welcome owed because he was once the stranger at every door, and that the depth of his table is the loneliness of his road turned inside out.</p>
+      <p>The hearth-Halflings let the tales stand and add to them at the Board. What the elders will say plainly is shorter: that Eyvind came the longest road of anyone they ever fed, that he stayed, and that he keeps a better fire than most who were born to it. The rest is a good story, and a good story is owed a seat too.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Archive Keeps No Index</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What the Songs Quietly Hold</div>
+      <p class="secret-reveal">The archive keeps no index, and that is the danger in it. Somewhere in the Atarialda hearth-network, in a dinner-song or a recipe or an old Steward's memory of a village that burned in the Dark Era, sits the last surviving trace of a thing meant to stay lost.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">a true name</span>
+        <span class="secret-pill">a route</span>
+        <span class="secret-pill">a method</span>
+        <span class="secret-pill">a forgotten history</span>
+      </div>
+
+      <div class="prose" style="margin-top:14px;">
+        <p>The keepers do not know what they hold; to the household it is only grandmother's song. The candidates are open: a Dark-Era horror's name nobody alive recognises as a name; a line to a <b>Stillpool</b> the Adventurers' Guild quietly watches; a remnant of older lost-history the rest of Talan has successfully forgotten. Which hearth holds it, and what it is, is canon-pending.</p>
+      </div>
+
+      <p class="secret-coda"><i>The fixed point is structural: the one way of keeping knowledge that survives the death of its source is also the one no institution can audit, and Atarialda is its home. The chronicler-record knows the region remembers; it does not, and must not, know what.</i></p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the region's central canon settled, several details about Atarialda remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Named Stewards.</b> Beyond Eyvind of the Northfire, the keepers who head the corridor's Great Hearths are open. The deepest tables of any given season have names the elders all know; the chronicle has not yet written them down.</li>
+      <li><b>Named Great Hearths and settlements.</b> The Northfire is the renowned one; the other Great Hearths that contend for the Homecoming Board, and the hearth-villages strung along the eastern lines, await coining.</li>
+      <li><b>The Board's ritual texture.</b> The late-autumn Homecoming Board rotates to the season's highest hearth and runs as reunion-first; the order of its courses, the songs it opens and closes with, and the form of the standing-concession that names the host are open.</li>
+      <li><b>What the archive holds.</b> The hearth-network carries traces of dead villages and lost peoples no library kept. Which songs preserve which lost things, and from where, is the open body of the living archive; scholars exhaust Thekkavar and come east precisely because the next table may hold what no shelf does.</li>
+      <li><b>The reach-of-the-Salt case-law.</b> Disputes bound at one hearth and carried to a greater hearth, salt gone cold with a dead hearth, the canny outsider who bound deep enough: named historical cases would give the Salt the shape Zuzental's offices have in writ.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · ATARIALDA</div>
+
+</div>
+
+</body>
+</html>

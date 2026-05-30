@@ -8,7 +8,7 @@
 
 **Position:** Southeast Talan, east of Ezkudon, south of Zuzental and Nashavel, coastal on Hafra
 
-**Terrain:** Warm golden terrain throughout, open and relatively flat. Mountain ranges scattered through center and west. Distinctive circular mountain ring with forest to the east. Large forested island off the southeast coast. The most settled and prosperous domain on the continent.
+**Terrain:** Warm golden terrain throughout, open and relatively flat. Mountain ranges scattered through center and west. Distinctive circular mountain ring with forest to the east. Large forested island off the southeast coast. The most settled and prosperous domain on the continent. Egulon's warm south-facing slopes are now Talan's wine country: the vineyard-and-cellar trade that once sat oddly in cool Azkataria (Lautara) was rehomed here to the Light domain's sunlight, where wine belongs (full Egulon wine-country canon pending; see [`../../docs/open-threads.md`](../../docs/open-threads.md), *[Azkataria] Open Floor rebuild*).
 
 **God's city:** Ljosarn, The Everbright City
 

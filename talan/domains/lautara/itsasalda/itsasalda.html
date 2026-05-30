@@ -11,33 +11,34 @@
 <script defer src="/assets/site-interactions.js"></script>
 <style>
   :root {
-    --domain-accent: #8a9070;
-    --card-bg: rgba(24,28,18,0.55);
+    --domain-accent: #78a6c2;
+    --card-bg: rgba(16,24,30,0.55);
   }
 
-  /* Portfolio grid (5 Magistrate seats) */
-  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1100px; margin: 18px auto; }
-  .portfolio-card { padding: 16px 18px; }
-  .portfolio-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.98rem; margin-bottom: 4px; }
-  .portfolio-name.senior { color: #d8d8a8; }
-  .portfolio-name.foreign { color: #c8a890; }
-  .portfolio-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
-  .portfolio-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+  /* Feature panels (Vordsbench, route-priest, wax) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
 
-  /* HRA pipeline chain (horizontal) */
-  .pipeline-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(24,28,18,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
-  .pipeline-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
-  .pipeline-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; }
-  .pipeline-step { padding: 8px 14px; background: rgba(40,46,28,0.6); border: 1px solid rgba(138,144,112,0.4); border-radius: 3px; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); text-align: center; }
-  .pipeline-step.seated { background: rgba(56,60,38,0.7); border-color: var(--domain-accent); color: #e8d8a8; }
-  .pipeline-arrow { color: var(--domain-accent); font-size: 1.1rem; font-weight: bold; }
-  .pipeline-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+  /* Left-bordered callout sub-blocks (slate-toned) */
+  .slate-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(30,44,56,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .slate-call .sc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .slate-call p { margin: 0 0 12px; line-height: 1.6; }
+  .slate-call p:last-child { margin-bottom: 0; }
 
-  /* Polity sub-callouts (Magistrate title, HRA pipeline narrative) */
-  .polity-sub { max-width: 880px; margin: 18px auto; padding: 18px 24px; background: rgba(24,28,18,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
-  .polity-sub-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
-  .polity-sub p { margin: 0 0 10px; line-height: 1.6; }
-  .polity-sub p:last-child { margin-bottom: 0; }
+  /* The two-day calendar rhythm (horizontal stepped) */
+  .rhythm-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(30,44,56,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .rhythm-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .rhythm-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; }
+  .rhythm-step { padding: 8px 14px; background: rgba(28,40,52,0.6); border: 1px solid rgba(120,166,194,0.4); border-radius: 3px; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-bright); text-align: center; }
+  .rhythm-step.major { background: rgba(40,56,70,0.7); border-color: var(--domain-accent); color: #d8e4ee; }
+  .rhythm-arrow { color: var(--domain-accent); font-size: 1.1rem; font-weight: bold; }
+  .rhythm-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* Card grids */
+  .watch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .watch-card { padding: 16px 18px; }
+  .watch-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .watch-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
+  .watch-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
 
   /* Hringseyja partition: 2-card comparison */
   .partition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
@@ -53,8 +54,18 @@
   .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
   .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
-  /* HRA feature panel */
-  .feature-panel { max-width: 880px; margin: 18px auto; }
+  /* The stay-tilt vs rail-tilt opposing pair */
+  .tilt-card .b-title { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
+  .tilt-card.stay .b-title { color: #9cc4dc; }
+  .tilt-card.rail .b-title { color: #d8c088; }
+  .tilt-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .tilt-card { padding: 18px 22px; }
+
+  @media (max-width: 600px) {
+    .rhythm-row { flex-direction: column; }
+    .rhythm-arrow { transform: rotate(90deg); }
+    .slate-call { padding: 16px 18px; }
+  }
 </style>
 </head>
 <body data-page="itsasalda">
@@ -68,150 +79,165 @@
   <div class="header">
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">Itsasalda</div>
-    <div class="page-subtitle">Lautara Sub-Region · The Conductor-Magistracy</div>
-    <div class="page-flavor">"The road is the home; the bell is the law; the Magistrate rides between them."</div>
+    <div class="page-subtitle">Lautara Sub-Region · The Harbour That Stays</div>
+    <div class="page-flavor">"The king will go; the dock will not."</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
   <dl class="facts">
-    <dt>Etymology</dt><dd>Basque <i>itsasoaldea</i> "the seaside region" (<i>itsaso</i> "sea" + <i>aldea</i> "region") → vowel-loss to <b>Itsasalda</b>, "seaside." Deep-old, predates the modern polity by centuries.</dd>
-    <dt>Position</dt><dd>Substantial central-northern sub-region of Lautara. Open Midarra to the N (access partially blocked by the <b>Muino-saila</b> hilly range; port-towns sit in the gaps); the <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a> to the NW (across the <b>Vordfjall</b> mountain range and the <b>Smáa</b> river); <b>Atarialda</b> to the E; <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> to the SE; <a href="/talan/domains/lautara/merkavar/merkavar.html"><b>Merkavar</b></a>'s lake-and-Helgafjall territory to the S; <a href="/talan/domains/lautara/emarrea/emarrea.html"><b>Emarrea</b></a> to the SW across the <b>Markaa</b> river. Offshore: <b>Hringseyja</b>, the circular island bisected with the <a href="/talan/domains/zuzental/legea-empire.html"><b>Legea Empire</b></a>.</dd>
-    <dt>Terrain</dt><dd>Open coastal-and-plains country crossed by multiple rivers running south to Merkavar's lake; rolling rail-spur country between Bellhalt and Atarialda; the Muino-saila hill-range along the north coast; Vordfjall mountains along the Cape border in the NW.</dd>
+    <dt>Etymology</dt><dd>Basque <i>itsasoaldea</i> "the seaside region" (<i>itsaso</i> "sea" + <i>aldea</i> "region") → vowel-loss to <b>Itsasalda</b>, "seaside." Deep-old; the name long predates the polity that now carries it.</dd>
+    <dt>Position</dt><dd>Lautara's harbour-region on the central-northern Midarra coast. Open Midarra to the N (access partly blocked by the <b>Muino-saila</b> hill-range; the port-towns sit in the gaps); the <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a> to the NW (across the <b>Vordfjall</b> range and the <b>Smáa</b> river); <b>Atarialda</b> to the E; <a href="/talan/domains/lautara/azkataria/azkataria.html"><b>Azkataria</b></a> to the SE; <b>Merkavar</b>'s lake-and-Helgafjall territory to the S; <a href="/talan/domains/lautara/emarrea/emarrea.html"><b>Emarrea</b></a> to the SW across the <b>Markaa</b> river. Offshore in central Midarra: <b>Hringseyja</b>, the ring-island bisected with the <a href="/talan/domains/zuzental/legea-empire.html"><b>Legea Empire</b></a> along the Quietline.</dd>
+    <dt>Terrain</dt><dd>Open coastal-and-plains country crossed by multiple rivers running south to Merkavar's lake; the Muino-saila hill-range along the north coast with the ports in its gaps; the Vordfjall mountains along the Cape border in the NW; rolling rail-spur country inland toward Atarialda.</dd>
     <dt>Character</dt><dd>
-      <i>Halfling rails, river-barges, ports in the hill-gaps, and the long quiet at the Edge</i><br>
-      <div class="pill-row" style="margin-top:6px"><span class="pill">Halfling Polity</span><span class="pill">Rail &amp; River</span><span class="pill">Conductor-Magistracy</span><span class="pill">Hringseyja Bisected</span><span class="pill">HRA Ceiling</span></div>
+      <i>The most chaotic port on the continent, watched by its most immovable residents</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Mountain-Halflings</span><span class="pill">The Harbour That Stays</span><span class="pill">The Vordsbench</span><span class="pill">The Slow Council</span><span class="pill">Hringseyja Bisected</span></div>
     </dd>
-    <dt>Peoples</dt><dd><b>Halflings</b> dominate every working layer: rail-crews, river-barge captains, coastal dock-workers, the Magistrate ranks, the HRA's regional offices. <b>Vishkanya</b> anchor the customs-clerk and court-scrivener class attached to each Magistrate's retinue. Cosmopolitan mix in port-towns and rail-junction settlements. On Hringseyja, Halfling residents share partition-side villages with a small Legea Empire human population across the Quietline.</dd>
-    <dt>Tongue</dt><dd>Talanese throughout; HRA signal-bell tradition produces a small working vocabulary of bell-codes that pilots and conductors learn alongside their craft.</dd>
-    <dt>Faith</dt><dd><b>Jianna</b> primary (the commercial life of the ports and the river-trade); <b>Shuun</b> of Floteyn acknowledged among the river-barge captains and coast-pilots in particular; <b>Bikiargi</b> shrines mark the lunar festivals as in any Lautaran town, with no special concentration.</dd>
-    <dt>Rule</dt><dd><b>The Conductor-Magistracy</b>: five seated Magistrates riding portfolio circuits (Senior, Foreign, Coast, River, Rail); no fixed seat; fed by the <b>Halfling Railworkers' Association</b> (HRA) through a formal promotion pipeline. De-facto capital <b>Bellhalt</b>.</dd>
+    <dt>Peoples</dt><dd><b>Halflings</b> by gravity, of the <b>mountain-Halfling</b> kind: the wanderers who stopped and made the port their road. <b>Vishkanya</b> anchor the <b>Reckoner</b> scrivener corps. A third Lautaran <b>kitsune</b> population runs the espresso-bar network of Bellhalt and the Muino-saila ports. The transient working majority is the whole continent in one harbour at any given hour.</dd>
+    <dt>Tongue</dt><dd>Talanese throughout; a stranger at Bellhalt hears four languages before she finds the dockmaster.</dd>
+    <dt>Faith</dt><dd><b>Jianna</b> primary, read through the <i>running</i> of a contract rather than the moment of strike; <b>Shuun</b> of Floteyn acknowledged among coast-pilots and river-barge captains; <b>Bikiargi</b> shrines along the harbour wall lit only on full-moon nights, a politeness to the Cape across the Vordfjall.</dd>
+    <dt>Rule</dt><dd><b>The Vordsbench</b>: a permanently-seated slow council at Bellhalt, composed of <b>Watchers</b> whose seats are earned by a verified count of tides watched. Hears in spring, watches two seasons, rules in autumn. De-facto capital <b>Bellhalt</b>. Founded mid-Dark Era as a survivor-polity.</dd>
   </dl>
 
-  <div class="gods-city" style="border-color: rgba(138,144,112,0.5);">
+  <div class="gods-city" style="border-color: rgba(120,166,194,0.5);">
     <div class="gods-city-label">De-Facto Capital</div>
     <div class="gods-city-name">Bellhalt</div>
-    <div class="gods-city-byname">the rail-halt at the largest Muino-saila gap · HRA regional seat</div>
+    <div class="gods-city-byname">the rail-halt at the largest Muino-saila gap · seat of the Vordsbench</div>
   </div>
 
   <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
-    Bellhalt sits where the rail-line meets the principal river and the Midarra coast at once. The Halfling-English compound carries both the rail-halt and the signal-bell tradition: <i>the bell rings, the conductors halt, the cargo is sorted, the next train carries it on.</i> The HRA's Itsasalda regional headquarters is here; the Senior Magistrate's correspondence address is here; the largest cross-portfolio Magistrate-court when more than one Magistrate is in town is here.
+    Bellhalt sits where the rail-line meets the principal river and the Midarra coast at once. The Halfling-English compound carries both meanings: the rail-stop bell and the rail-halt. Most of half a continent's sea-trade lands here, and almost none of it stays; the Vordsbench's hearing chamber and the HRA's regional headquarters sit one block apart at the junction, and the locals will tell you the fastest and the slowest decisions on the continent are made within a stone's throw of each other.
   </p>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="the-conductor-magistracy" class="section-heading">The Conductor-Magistracy</h2>
+  <h2 id="the-harbour-that-stays" class="section-heading">The Harbour That Stays</h2>
   <div class="prose">
-    <p>Itsasalda is governed by <b>the Conductor-Magistracy</b>, a distributed institutional polity with <b>no fixed seat</b>. Five seated Magistrates ride portfolio circuits across Itsasalda's coast, rivers, rail, customs, and foreign-affairs work, holding court while they travel and corresponding between beats. A ship that needs a writ, a port that needs a ruling, a river-village with a dispute waits for the relevant Magistrate to ride through; the working law is whatever she finds on arrival and whatever she decides before riding on.</p>
+    <p>Itsasalda is the harbour where half the continent's sea-trade arrives and nothing of it stays. Brauogi grain ships, Myrkono wool, Floteyn timber, Ehizahar trade, the Order of Steam's heavy industrial freight, Nashavel small-traders who would rather pay Bellhalt docking than Zuzental legal fees: most of it comes by sea, most of it lands at the Muino-saila gaps, and most of that lands at Bellhalt. At any given hour the working population is mostly passing through. The thing that makes Itsasalda itself, the thing a traveller remembers, is the part that never moves.</p>
 
-    <p>The Magistracy formalised in the mid-Adventurer Era, when the Legea Empire's missionary programme pushed onto Hringseyja and the region needed a polity with diplomatic standing to negotiate the partition. Before then, the Halfling Railworkers' Association already ran Itsasalda's working infrastructure; the Magistracy gave that infrastructural reach a governance face that the Empire could send envoys to.</p>
+    <p>Itsasalda is dominated by Halflings of a kind found nowhere else on the continent: the descendants of wanderers who, generation after generation, decided that the port was their road. The world comes to them. A Halfling household at Bellhalt has watched the harbour from the same window for three or four lifetimes. The older great-mothers sit at the espresso bars <i>al banco</i>, at the same counter the same bar-owner's family has poured their morning coffee at for as long as either family can remember, and they look at the weather through the open door before they walk on. An old Halfling woman on the same dock stool she has kept every morning for fifty years watches a Brauogi grain ship unload with the exact expression of someone watching weather.</p>
+
+    <p>The mountain-Halflings of Itsasalda are the deliberate inverse of the hearth-Halflings of neighbouring <b>Atarialda</b>, who carry the hearth with them and come home to keep it. Both descend from the same wanderlust. In Itsasalda the wanderer stopped at the dock and never left it; in Atarialda the wanderer carries the road in and brings it home full. The chronicle-record reads the two as one people at two answers to the same question, and a Lautaran will tell you the most restless ancestry on the continent produced, in this one harbour, its most immovable residents.</p>
   </div>
 
-  <div class="polity-sub">
-    <div class="polity-sub-label">The Magistrate Title</div>
-    <p>Seated members of the Conductor-Magistracy are titled <b>Magistrate</b> in working speech; official documents use the portfolio prefix as the full title (e.g., <b>Foreign Magistrate</b>, <b>Senior Magistrate</b>, <b>River Magistrate</b>). The hyphenated <i>Conductor-</i> attaches to the polity, not to individuals. A Magistrate's writ travels in her satchel; her court convenes wherever she dismounts; her correspondence finds her at the next bell.</p>
-  </div>
-
-  <h3 class="section-heading" style="font-size: 1.1rem; margin-top: 24px;">The Five Portfolios</h3>
-
-  <div class="portfolio-grid">
-    <div class="accent-card portfolio-card">
-      <div class="portfolio-name senior">Senior Magistrate</div>
-      <div class="portfolio-band">First among equals · peer-elected</div>
-      <p>Elected from the seated body by the other four Magistrates. Holds no separate beat; rides as needed to mediate between portfolios, witness the Lunarcall-equivalent moments of the Magistracy's own working year, and host the cross-portfolio court at Bellhalt. The Senior's correspondence address is the closest thing the polity has to a fixed seat.</p>
+  <div class="two-column">
+    <div class="accent-card tilt-card stay framed" style="--card-accent:#78a6c2;">
+      <div class="b-title">The Stay-Tilt</div>
+      <p>The steadfast watches. A stay-tilted household keeps the dock, the window, the counter, the morning espresso, and the long view across lifetimes; its claim to authority is the tide-count it can lay on the Watchroll. Its conviction is that the harbour outlasts every king who ever sailed into it, and that watching is the work.</p>
     </div>
-    <div class="accent-card portfolio-card">
-      <div class="portfolio-name foreign">Foreign Magistrate</div>
-      <div class="portfolio-band">Hringseyja partition + sea-travel commerce</div>
-      <p>The Quietline first, the wider Itsasalda foreign-affairs portfolio second. The only Magistrate authorised to leave the continent by sea on duty; the only Magistrate whose beat crosses the Itsasalda land border at all. Her embassy-presence sits at Itsasalda's nearest port to Hringseyja; her circuit rides the half-island.</p>
-    </div>
-    <div class="accent-card portfolio-card">
-      <div class="portfolio-name">Coast Magistrate</div>
-      <div class="portfolio-band">Muino-saila port-gaps + coast-customs</div>
-      <p>The port-towns along the hilly north coast and the coast-customs work. Anti-smuggling patrols, dock-fee arbitration, the routine ship-writ ports need to keep moving. Her circuit follows the working coast; her bell rings at each port-gap in turn.</p>
-    </div>
-    <div class="accent-card portfolio-card">
-      <div class="portfolio-name">River Magistrate</div>
-      <div class="portfolio-band">Inland river-routes to Merkavar</div>
-      <p>The river-network from Midarra coast to Merkavar's lake: barge-captain disputes, river-village arbitration, the river-and-coast handoff at each port. Most river-villages see her once or twice a year. Her court convenes on a barge if the disputants are barge-folk.</p>
-    </div>
-    <div class="accent-card portfolio-card">
-      <div class="portfolio-name">Rail Magistrate</div>
-      <div class="portfolio-band">Itsasalda rail-spur + HRA labour relations</div>
-      <p>The Itsasalda spur of the southern rail network, the HRA-labour-side relations, the rail-junction settlements between Bellhalt and Atarialda. Where the Magistracy and the union meet most directly; the Rail Magistrate's portfolio carries the diplomatic weight of speaking for both layers at once when needed.</p>
+    <div class="accent-card tilt-card rail framed" style="--card-accent:#c8a84a;">
+      <div class="b-title">The Rail-Tilt</div>
+      <p>The train calls; his life got faster. A rail-tilted household runs with the <b>HRA</b> (the Halfling Railworkers' Association): the crews who carry the freight on, the conductors, the continental union. Its conviction is that the deal is a thing in motion and the work is moving it. Almost every old Bellhalt family has one household of each, and they argue along the line at festival-meals.</p>
     </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="the-hra-pipeline" class="section-heading">The HRA Pipeline</h2>
+  <h2 id="the-vordsbench" class="section-heading">The Vordsbench</h2>
   <div class="feature-panel prose">
-    <p>The Conductor-Magistracy is fed by the <b>Halfling Railworkers' Association</b> along a fixed promotion path. Magistrates are recruited from senior HRA members who have come up through the union's working ranks. The pipeline is formal; the candidacy is continental.</p>
+    <p>Itsasalda is governed by <b>the Vordsbench</b>, a permanently-seated slow council at Bellhalt. The name is a mixed-stratum compound: Icelandic <i>vörðr</i> "watchman" (the same root that names the <b>Vordfjall</b> range on the Cape border) joined to English <i>bench</i>, the seated body. "The watcher's bench." The council is composed of <b>Watchers</b>, and a Watcher's seat is earned by a verified count of tides watched from the same dock, the same river-stretch, or the same harbour-window, by long custom roughly a generation's count. Standing on the Vordsbench is demonstrated competence held across time. A seat is not won by election, wealth, or pedigree; it is won by having watched.</p>
+
+    <p>The council's defining principle, framed at its founding and repeated at every autumn ruling, is the one the page opens with: <i>the king will go; the dock will not</i>. The Vordsbench has kept Itsasalda's working life through generation after generation of Forgotten Kings, raid-cycles, plagues, and grain-collapses, on the conviction that a polity anchored to the tide outlasts any polity anchored to a crown.</p>
   </div>
 
-  <div class="pipeline-wrap">
-    <div class="pipeline-label">The Pipeline</div>
-    <div class="pipeline-row">
-      <div class="pipeline-step">HRA Member</div>
-      <span class="pipeline-arrow">→</span>
-      <div class="pipeline-step">Conductor</div>
-      <span class="pipeline-arrow">→</span>
-      <div class="pipeline-step">Senior Conductor</div>
-      <span class="pipeline-arrow">→</span>
-      <div class="pipeline-step">Magistrate Candidate</div>
-      <span class="pipeline-arrow">→</span>
-      <div class="pipeline-step seated">Seated Magistrate</div>
+  <div class="slate-call">
+    <div class="sc-label">Founding · the Forgotten King's Failed Approach</div>
+    <p>The Vordsbench consolidated in the mid-Dark Era out of a habit that had been there as long as the harbour. The founding moment is dated by chronicler-tradition to a Forgotten King's failed approach in the mid-1700s MR (the named king and the exact year are canon-pending): the dock-watchers refused his alliance and his levies, stayed at the dock through his threats, and were vindicated within a year by his collapse. The earliest surviving entries on the <b>Watchroll</b> date from the autumn meeting that followed. The polity is approaching its seventh century by current reckoning and is among the older standing institutions on the continent.</p>
+  </div>
+
+  <div class="watch-grid">
+    <div class="accent-card watch-card">
+      <div class="watch-name">The Watchers</div>
+      <div class="watch-band">the seated body · between five and eleven</div>
+      <p>The seated council. A seat is earned by tide-count, verified against the harbour records before confirmation. <i>A seat is a watch</i>; <i>to take the watch</i> is the confirmation-rite. The Watchroll is open by rule to any ancestry that accumulates the count, and Halfling by gravity rather than by statute; a minority in any generation are Vishkanya, occasionally a long-stay kitsune family elder, occasionally a Brauogi grain-house's third generation at Bellhalt.</p>
     </div>
-    <p class="pipeline-note">The Conductor-Magistracy is structurally the HRA's promotion ceiling. The non-HRA pipeline (river-captains, port-keepers) is closed by current standing rule.</p>
+    <div class="accent-card watch-card">
+      <div class="watch-name">The Senior</div>
+      <div class="watch-band">peer-elected · first among equals</div>
+      <p>The standing presiding seat, elected from the seated body by the other Watchers. The Senior holds no separate watch and carries no separate vote-weight; the office is the council's voice abroad and its convening hand at the two great days. It was the Senior of the day who refused the Forgotten King, and the Senior of the day who, generations later, swore the Quietline with the Empire's regional governor.</p>
+    </div>
+    <div class="accent-card watch-card">
+      <div class="watch-name">The Reckoners</div>
+      <div class="watch-band">the Vishkanya scrivener corps</div>
+      <p>The keepers of the Watchroll, the tide-count, and the held-deal registry that runs alongside the Jianna route-priest's witnessing round. They hold the institutional memory across the generations the seated Watchers do not individually span. A senior Reckoner gatekeeps which petitions reach the Long Hearing, which makes the office one of the most consequential in Itsasaldan civic life, and quietly more powerful than most seated Watchers. The Reckoners serve the Vordsbench; they are not Watchers, though a career Reckoner is sometimes elevated to the Watchroll on retirement once the tide-count is met.</p>
+    </div>
+    <div class="accent-card watch-card">
+      <div class="watch-name">The Standing</div>
+      <div class="watch-band">the resident partition officer at Edgeward</div>
+      <p>The Vordsbench's permanently-resident officer on the Itsasaldan half of <b>Hringseyja</b>. She handles routine Quietline incidents on her own authority, reports to the council by quarterly letter, and presides at the four protocol days a year alongside her Empire-side counterpart. The role was founded mid-Adventurer Era with the swearing of the Quietline (see <i>Hringseyja and the Quietline</i> below).</p>
+    </div>
   </div>
 
-  <div class="feature-panel prose">
-    <p>Any senior and trusted HRA member from across the continent may stand for Magistrate candidacy: the pipeline is continental, not regional. In practice most seated Magistrates come up through the Itsasaldan branch, where the HRA's regional structure puts candidates closer to the work and more well known to the seated body; but HRA seniors from other branches do sit on the Magistracy from time to time, and the cross-branch presence is one of the things that keeps the HRA continental rather than provincial.</p>
+  <div class="rhythm-wrap">
+    <div class="rhythm-label">The Two-Season Cycle</div>
+    <div class="rhythm-row">
+      <div class="rhythm-step major">Long Hearing's Open</div>
+      <span class="rhythm-arrow">→</span>
+      <div class="rhythm-step">Spring → Summer</div>
+      <span class="rhythm-arrow">→</span>
+      <div class="rhythm-step">Two Full Seasons of Watching</div>
+      <span class="rhythm-arrow">→</span>
+      <div class="rhythm-step major">Long Ruling's Close</div>
+    </div>
+    <p class="rhythm-note">Proposals are tabled at the spring <b>Long Hearing's Open</b>, watched across two full seasons, and ruled at the autumn <b>Long Ruling's Close</b>. Most of public life runs on the prior winter's rulings; a new ruling affects only the next year, and only after it has survived its own watching. The two-season rule is non-negotiable; urgent matters are by definition rare, and are handled by the Standing or routine harbour officers within their portfolio.</p>
+  </div>
 
-    <p>The Association is consequently a <b>two-layer institution</b>: labour (the working union, continental in reach) and governance (the seated Magistracy in Itsasalda). This two-layer character is unique on Talan. The HRA is the most powerful Halfling institution on the continent, and the Cellarsworn and other Lautara polities have begun watching the Association in ways they never watched a pure labour body.</p>
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-held-deal" class="section-heading">The Held Deal and the Route-Priest</h2>
+  <div class="feature-panel prose">
+    <p>Itsasaldan Jianna-clergy bless the <i>running</i> of a contract, not the moment of strike. A Bellhalt Jianna-priest walks a fixed route between the warehouse-shrine niches set into the working walls of the harbour, tending each shrine's slow-fuel fire (lit at dawn by the kitsune bar-owners' youngest, foxfire-kindled against the winter wet), visiting the merchant houses whose contracts come before the Vordsbench, and witnessing the running ledger of contracts currently being honoured.</p>
+
+    <p>A contract is <b>opened</b> at first shipment, <b>witnessed</b> by-cycle, <b>renewed</b> at each year's turn, and <b>closed</b> at honoured completion. A contract that fails is <b>broke</b>, marked publicly, and falls from the registry. <i>Held</i> and <i>broke</i> are adjectives that attach to merchants as readily as to deals: a held merchant is one whose running ledger the harbour trusts, and a broke merchant is one the registry has dropped. The Reckoners keep the held-deal registry alongside the Watchroll, and the route-priest's witness is what writes a contract into the harbour's working faith.</p>
+  </div>
+
+  <div class="slate-call">
+    <div class="sc-label">The Route-Priest's Year · Two Great Days</div>
+    <p>The route-priest's year turns on the same two days as the Vordsbench's. At <b>Long Hearing's Open</b> in spring, the previous year's Watchroll-summary is burned at the harbour edge to open the year. At <b>Long Ruling's Close</b> in autumn, the year's rulings are sealed with <b>island-wax</b> (see <i>Hringseyja and the Hringbark</i> below) tuned to Jianna's resonance and mixed with tide-water at the dockside.</p>
+    <p>Merkavar's four-Azoka Seasonal Assembly is acknowledged, and HRA delegations travel south for <i>Uzta-Azoka</i>; locally, the two-day Bellhalt calendar is the one that runs. <b>Shuun</b> of Floteyn is acknowledged among coast-pilots and river-barge captains, who keep a Shuun-token at the pilot-house and toss it overboard on the day they retire: the route belongs to Shuun once the pilot is done with it, and a captain who fails to toss the token is the captain whose successor takes the wrong line.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-bar-owners" class="section-heading">The Bar-Owners and the River-Trade</h2>
+  <div class="prose">
+    <p>A third Lautaran kitsune population, distinct from Emarrea's Heartcourt and from Merkavar's market-stalls, anchors the espresso-bar network of Bellhalt and the Muino-saila ports: generational bar-owners who keep the same counter across the same harbour view for lifetimes. They hold information rather than sell it, they tend the warehouse-shrine fires on the priest's morning round, and the three Lautaran kitsune populations diverged so long ago that a kitsune of one tradition reading the others' civic life sometimes recognises only the foxfire. The Bellhalt bar-owner is, in the daily working of the town, more powerful than most seated Watchers and almost as little discussed.</p>
+
+    <p>It is the bar-owners who say <i>the next tide is the next person</i> to the young arrival who has begun to wonder whether she should stay. The Watchroll's legitimacy rests on demonstrated competence over time, so a transient's question is not <i>am I represented?</i> but <i>is this a harbour worth doing business in?</i>, to which the answer is the held registry. Today's Watcher's family was yesterday's transient, accumulated across centuries.</p>
+
+    <p>Inland, multiple smaller rivers from the Itsasalda interior carry the most-direct water route between the Midarra coast and Merkavar's lake; the Itsasalda river-trade is the working spine of the southern network's water side. The <b>Markaa</b> river, the southern border with Emarrea, is the largest of the system and the route by which Emarrea's kotokoe trade-goods reach Merkavar through Itsasaldan waters. The Reckoners' customs-clerks at each river-mouth manage the river-customs that pays the Vordsbench's running cost.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="hringseyja-and-the-quietline" class="section-heading">Hringseyja and the Quietline</h2>
   <div class="prose">
-    <p>Offshore in Midarra, the circular island of <b>Hringseyja</b> (Icelandic <i>hringr</i> "ring" + <i>eyja</i> "island") is bisected between Itsasalda and the <a href="/talan/domains/zuzental/legea-empire.html"><b>Legea Empire</b></a> by a fixed partition: <b>the Quietline</b>. Each side governs its half. The line is not contested but it is not friendly. Itsasalda's half-island sits under a pattern of uneasy coexistence: small settled populations on both sides, occasional border-incidents at the line, formal embassies across by announced protocol only. Locals on the partition-side villages call the line <i>the Edge</i>, and the working life of those villages runs in close sight of the foreign jurisdiction across the road.</p>
+    <p>Offshore in central Midarra, roughly halfway between Itsasalda's northern coast and Cronus's <b>Askamira</b> to the north, the ring-island of <b>Hringseyja</b> (Icelandic <i>hringr</i> "ring" + <i>eyja</i> "island") is bisected between Itsasalda and the <a href="/talan/domains/zuzental/legea-empire.html"><b>Legea Empire</b></a> by a fixed partition: <b>the Quietline</b>. The Itsasaldan half holds <b>Edgeward</b>, the largest village at around 2,500 souls, three smaller fishing-and-tending hamlets along the half-island's coast, and roughly 4,000 in all. The partition-side villages call the line <i>the Edge</i>.</p>
 
-    <p>The Quietline was sworn in a mid-Adventurer-Era year (canon-pending) between the Senior Magistrate of the day and the Legea Empire's regional governor. Both sides have kept it for generations since. The Foreign Magistrate's standing job is to keep the incidents small.</p>
+    <p>The line is held by mutual restraint and by the <b>Hringbark</b> wax-stands, which grow in productive quantity only on this island. The Quietline opens at the named gate dawn-to-dawn on four <b>protocol days</b> a year, the solstices and the equinoxes, and is closed otherwise. On the protocol days both villages set out gate-zone markets, exchange the year's correspondence between cross-line families separated at the founding partition, share a midday meal at a table set across the line itself, and run through the night by watchfire. The Vordsbench rules on partition questions only when they touch the long holding; the Standing handles the rest on her own authority and reports by quarterly letter.</p>
   </div>
 
   <div class="partition-grid">
     <div class="accent-card partition-card">
       <div class="partition-side">Itsasalda's half</div>
       <div class="partition-name">The Halfling Side</div>
-      <p>Halfling-dominated villages, the Foreign Magistrate's embassy-court at the half-island's principal port, fishing and modest river-mouth trade. The partition-side market operates within yards of the Edge and is constantly under the Magistrate's eye. The Halfling residents have lived alongside their Empire neighbours for so long that some extended households were cut in half by the original partition; small-scale family-visits across the Quietline by announced permission are routine.</p>
+      <p>Edgeward and its three hamlets: Halfling fishing-and-tending villages under the Standing's resident authority, with the wax-groves on the mid-altitude meadows tended by long-inherited stewardship. Some extended households were cut in half at the original partition, and small-scale family visits across the line on the protocol days are the year's most-awaited correspondence. The half-island lives in close sight of a foreign jurisdiction across the road and has done so without breaking the line for nearly two centuries.</p>
     </div>
     <div class="accent-card partition-card empire">
       <div class="partition-side">The Empire's half</div>
       <div class="partition-name">The Faith Side</div>
-      <p>A small permanent Legea Empire human population on the other side of the Quietline, with their own port-village and a modest mission of the Divine Faith maintained for the local community. The Empire's regional governor's office handles the Empire-side. Cross-line contact is constant in small ways: smuggling, partition-cut marriage-line disputes, the occasional missionary venturing across to Itsasalda proper (always politely redirected by the Foreign Magistrate).</p>
+      <p>A small permanent Legea Empire population with its own port-village and a modest mission of the Divine Faith, administered from the Empire's regional governor's office. The Empire-side clergy attune Hringbark wax to their own state god at their mainland temples, by a craft developed independently of the Itsasaldan one. Cross-line contact persists in small ways: smuggling, partition-cut marriage-line disputes, and the occasional missionary venturing across to Itsasalda proper, always politely redirected by the Standing.</p>
     </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="the-river-trade" class="section-heading">The River-Trade</h2>
-  <div class="prose">
-    <p>Multiple smaller rivers from the Itsasalda interior carry the most-direct inland-water route between the Midarra coast and Merkavar's lake. The Itsasalda river-trade is the working spine of the southern network's water side: barge-captains run the routes; rail at Bellhalt and the other port-junctions handles the cross-modal transfer; Vishkanya customs-clerks at each port-mouth manage the river-customs work that pays the Magistracy's running cost.</p>
+  <h2 id="the-hringbark-wax" class="section-heading">The Hringbark and the Island-Wax</h2>
+  <div class="feature-panel prose">
+    <p>The <b>Hringbark</b> is the circle-bark tree whose stands grow in productive quantity only on Hringseyja's mid-altitude meadows. The wax tapped from it is the structural reason the Quietline has held by mutual restraint for nearly two centuries: both states need the groves, and neither has found a substitute that holds attunement well. The wax-stands take five generations from planting to first productive tap, so the current standing groves are the inheritance of pre-partition stewardship and are tended on both sides of the line by long agreement.</p>
 
-    <p>The <b>Markaa</b> river (Itsasalda's southern border with Emarrea) is the largest of the system and the route by which Emarrea's kotokoe trade-goods reach Merkavar through Itsasaldan waters. The River Magistrate's circuit follows the rivers themselves; her court convenes on a moored barge when the disputants are barge-folk.</p>
-  </div>
-
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <h2 id="peoples-and-faith" class="section-heading">Peoples and Faith</h2>
-  <div class="prose">
-    <p><b>Halflings</b> are the dominant population at every working layer: the rail-crews who run the southern network's Itsasalda spur, the river-barge captains who work the Merkavar routes, the dock-workers in the Muino-saila gap-ports, the Conductors who train toward the Magistracy, the seated Magistrates themselves. The HRA's Itsasalda regional offices employ thousands; the smaller HRA chapter-houses ring through every rail-junction settlement in the region.</p>
-
-    <p><b>Vishkanya</b> anchor the customs-clerk and court-scrivener class attached to each Magistrate's working retinue. A Magistrate's court is the Magistrate plus her clerk and her scrivener; the Vishkanya tradition of numerical precision and ledger-keeping suits both roles, and the customs-clerk pipeline runs heavily through Vishkanya house-lineages in much the same way that Azkataria's Cellar-Master pipeline does. Cosmopolitan mix in the port-towns, dock-work, and rail-junction settlements.</p>
-
-    <p>Faith stack: <b>Jianna</b> primary, the working faith of the ports and the river-trade; <b>Shuun</b> of Floteyn acknowledged among river-barge captains and coast-pilots in particular (the water-domain's reach into the Midarra river-system is part of Itsasaldan working-faith); <b>Bikiargi</b> shrines mark the lunar festivals as they do in any Lautaran town, with no special Cape-style concentration.</p>
+    <p>Both clergies treat the wax as material that <i>takes attunement</i>: the priest tunes the raw wax to her chosen god in the preparation rite, and the wax thereafter holds that resonance until consumed. The Itsasaldan Jianna-priests tune their wax to Jianna at the warehouse-shrines and use it to seal the year's rulings at Long Ruling's Close; the Empire's Divine-Faith clergy tune theirs to their state god at their mainland temples. Both crafts work. The folk-explanation on both sides names the wax <i>blessed</i>, <i>holy</i>, <i>the gift of the island</i>, without naming whom. The chronicler's standing position is the same as the harbour's: the wax works.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -223,27 +249,63 @@
 
   <div class="tension-grid">
     <div class="accent-card tension-card">
-      <div class="tension-name">The Quietline Incidents</div>
-      <p>Small flare-ups at the partition continue on a multi-year rhythm; the Foreign Magistrate's standing job is to keep them small. Most are smuggling, partition-cut marriage-line disputes, or the occasional Legea Empire missionary venturing off-island into Itsasalda proper. Each generation has its own canonical incident that the village-grandmothers can recite the resolution of.</p>
+      <div class="tension-name">The HRA and the Vordsbench</div>
+      <p>The HRA's Itsasalda headquarters sits one block from the hearing chamber, and the proximity is a standing civic joke. The HRA carries the autumn voting bloc at Merkavar's <i>Uzta-Azoka</i> and passes continental freight-rate changes that affect contracts already running under Vordsbench-witness. The council cannot overrule a Merkavar ruling, but it can withhold Jianna-witness on the change: a rate not yet <i>held</i> by Itsasaldan standing is in force without held-registry credit, and merchants learn to wait for the next Long Ruling. The lever has been used three or four times in living memory and is not used lightly. <i>The rails carry the deal, the dock holds the deal</i>, the older bar-owners say.</p>
     </div>
     <div class="accent-card tension-card">
-      <div class="tension-name">The HRA's Political Weight</div>
-      <p>With the Magistracy as the Association's promotion ceiling, the HRA has become a continental power-bloc that other Lautara polities eye uneasily. The <a href="/talan/domains/lautara/azkataria/azkataria.html">Cellarsworn</a> in particular have argued for freight-rate caps that the HRA's autumn vote at Merkavar keeps blocking. The argument runs in every autumn assembly; the rate-caps have not passed since the Magistracy formalised.</p>
+      <div class="tension-name">The Quietline's Quiet</div>
+      <p>The protocols have held for nearly two centuries, but the Legea Empire's missionary attempts continue at a low rate, contained by the protocol-day pattern. Each generation has its own canonical incident that the village-grandmothers can recite the resolution of, and the Standing's standing work is to keep the next one small. The line is not contested; it is held by people who have decided, generation after generation, that holding it is worth more than breaking it.</p>
     </div>
     <div class="accent-card tension-card">
-      <div class="tension-name">The Non-HRA Pipeline</div>
-      <p>River-captains and port-keepers have argued for generations that the formal HRA-only pipeline excludes their crafts from the Magistracy. The seated Magistrates have kept the pipeline closed by standing rule, though several Magistrates came up through rail-work that included river-postings, and the closure is felt more strongly by the river-captains than the rail-workers. River-captain associations periodically petition for a separate pipeline; the petitions are received politely and shelved.</p>
+      <div class="tension-name">The Wax-Groves</div>
+      <p>The Hringbark stands require careful tending across centuries-long maturation curves, and a poor year for the groves is a quiet emergency on both sides of the line at once. The wax that seals Itsasalda's rulings and the wax that sustains the Empire-side mission come from the same meadows; a failed harvest is the one event that aligns the two jurisdictions' interests perfectly and unwillingly.</p>
     </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <div class="popular-belief">
-    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Foreign Magistrate's Tea</button>
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Dock-Watchers and the Blessed Wax</button>
     <div class="legend-era-content">
-      <p>Once a year, on a date the Quietline-Founding-Day commemorates (canon-pending), the Foreign Magistrate of Itsasalda and the Legea Empire's regional governor on Hringseyja meet for tea. They meet at the partition-line itself, at a small stone table that has been there since the Quietline was sworn, with one chair on each side. They drink from the same pot of tea that one of them has brewed and the other has approved. They speak for an hour. Neither side records what is said. Both sides know what is said. They part. The table is washed by the partition-side village's eldest Halfling grandmother and the Empire-side village's eldest Faith-elder, on alternate years.</p>
-      <p>The locals say the tea is what keeps the Quietline quiet. The Magistrates and the governors say nothing public about it. Some years one or the other dies between teas, and the next year's tea is shared with whatever new Magistrate or governor has been assigned; the table is the constant. They say the table has not failed a tea in forty years.</p>
-      <p>What the tea actually does is the standing question. The Foreign Magistrate's clerk insists the tea is purely ceremonial, an annual confirmation that the line still holds. The partition-side villagers insist the tea is the working diplomacy and the embassies are the ceremony. The Empire-side villagers do not say. The tea continues.</p>
+      <p>The Bellhalt bar-owners keep a tale they tell the young arrival who has begun to think about staying. They say that the oldest dock-stools at Bellhalt have been sat by the same families so long that the wood has taken the shape of the watching, and that a great-mother who has kept her stool for fifty years can read a ship's whole season off the way it sits in the water before it has docked. They say a Watcher who has truly taken the watch can tell you which Forgotten King is coming by the weather, and that the harbour has outlasted every one of them by being too patient to bother fighting any of them. <i>The king will go; the dock will not</i> is what they say, and they say it the way other towns say a prayer.</p>
+      <p>Of the island-wax they say plainer and stranger things. The partition-side villagers say the Hringbark groves are <i>blessed</i>, that the island itself is holy, that the wax remembers something the trees have been drinking out of the ground since before anyone's grandmother. They cannot say what. The Jianna-priests say the wax merely takes the attunement well, the way good clay takes a glaze, and that the holiness is whatever a clergy puts into it. The Empire-side villagers across the Edge say the same of their own state god and do not discuss it further. The grandmothers on both sides agree on one point and disagree on everything else around it: the wax is a gift of the island, and you do not ask an island where its gifts came from.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Wax Remembers a Dead God</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to No Living Clergy</div>
+
+      <p class="secret-reveal">The harbour says the wax works and asks no further. The truth the harbour cannot reach is that the wax works because the island is, structurally, <i>lightly holy</i>: Hringseyja's soil carries the faint trace of a minor god who died on the island during the <b>Week of Crimson Rain</b>, two millennia ago. The Hringbark trees have grown on that soil ever since, drawing the residue up into their slow rings; the wax tapped from them carries the trace at the very edge of liturgical detection.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">The Residue</span>
+        <span class="secret-pill">Neither Clergy Knows</span>
+        <span class="secret-pill">The Council Cannot See It</span>
+      </div>
+
+      <div class="secret-grid-3">
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Source</div>
+          <div class="secret-card-title">A Frontier God's End</div>
+          <div class="secret-card-body">The most canon-coherent candidate is one of <b>Atezar's frontier pantheon</b>: the pantheon's other gods are recorded as <i>lost</i>, and one of them meeting her end at Hringseyja with her last followers among the Crimson-Rain annihilated places the residue on the island without coining a fresh god. The trace is light. The island is not a Stillpool; it is a god-residue site, which is structurally different.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">Both Crafts Work</div>
+          <div class="secret-card-title">Attunement, Unexamined</div>
+          <div class="secret-card-body">Itsasaldan Jianna-clergy and Empire Divine-Faith clergy both treat the wax as material that takes attunement. Each developed its craft independently across the centuries; each craft works; neither has examined the other's too closely, and neither traces the residue back to its source. Both folk-explanations name the wax <i>blessed</i>, <i>holy</i>, <i>the gift of the island</i>, without naming whom.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Guild's Atlas</div>
+          <div class="secret-card-title">A Possible Suspicion</div>
+          <div class="secret-card-body">The Adventurers' Guild's sealed Stillpool-and-residue atlas records sites the Guild watches quietly. Hringseyja is a god-residue site rather than a Stillpool. Whether the Guild's atlas distinguishes the two, and whether either appears on the Hringseyja coordinate, remains open.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda">The Vordsbench is structurally unable to know this. The slow council watches what mortals do at the harbour; it has no apparatus for sensing what the soil remembers. If the dead god were ever named on the chronicler-tier record, the council would add the entry to the Watchroll's marginalia and continue ruling slowly. The chronicler's standing position is the harbour's: the wax works.</p>
     </div>
   </div>
 
@@ -251,16 +313,15 @@
 
   <div class="open-canon">
     <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
-    <div class="sub">Even with the polity's central canon settled, several details about Itsasalda remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <div class="sub">Even with the harbour's central canon settled, several details about Itsasalda remain open · these are the kinds of detail that future scholarship or future story will close.</div>
     <ol>
-      <li><b>The Quietline's founding year and the Senior Magistrate who swore it.</b> Mid-Adventurer Era; both year and figure canon-pending. The Empire's regional governor who co-signed is the Empire-side counterpart figure, also canon-pending.</li>
-      <li><b>Named seated Magistrates.</b> The current Senior, Foreign, Coast, River, and Rail Magistrates' personal names. They will surface as stories want them.</li>
-      <li><b>Additional named port-towns.</b> Beyond Bellhalt, 2-4 more ports along the Muino-saila gaps and the river-mouths. The map records them; their names await coining.</li>
-      <li><b>Additional named rivers.</b> Multiple smaller rivers carry the most-direct inland-water route from Midarra to Merkavar; only Markaa and Smáa are named so far.</li>
-      <li><b>The monastery or fortress on Vordfjall.</b> A standing structure on the Cape/Itsasalda border range; character canon-pending, deferred from this pass.</li>
-      <li><b>The HRA's continental institutional sheet.</b> Chapter-houses, signal-bell canon, retirement pathways for non-Itsasaldan HRA seniors, the cross-branch Magistrate-candidacy mechanics in practice.</li>
-      <li><b>The Quietline incidents.</b> Named historical flare-ups across the partition's century-plus history would give the Foreign Magistrate's standing work a case-law shape.</li>
-      <li><b>The Cellarsworn vs HRA freight-rate fight.</b> The Cellarsworn argue for caps; the HRA's autumn vote keeps blocking. Named recent rounds of the argument unwritten.</li>
+      <li><b>The Forgotten King's name and the Vordsbench's founding year.</b> Chronicler-tradition dates the founding to a Forgotten King's failed approach in the mid-1700s MR; the named king and the exact year are canon-pending.</li>
+      <li><b>Named Watchers and the standing Senior.</b> The current seated body and its Senior, and the named Watchers of the founding generation whose tide-counts opened the Watchroll. They surface as stories want them.</li>
+      <li><b>The Standing at Edgeward and her Empire-side counterpart.</b> The current Standing, the partition officer she meets four times a year, and the named year of the Quietline-swearing (mid-Adventurer Era), with the Senior who swore it and the Empire's regional governor who co-signed.</li>
+      <li><b>Edgeward's three hamlets.</b> The three fishing-and-tending hamlets along the Itsasaldan half-island's coast are recorded but unnamed; their coining awaits a story.</li>
+      <li><b>The monastery or fortress on Vordfjall.</b> A standing structure sits on the Cape/Itsasalda border range; the <i>vörðr</i> watcher-root it shares with the Vordsbench is suggestive, and its character is canon-pending.</li>
+      <li><b>Additional named ports and rivers.</b> Beyond Bellhalt, two to four more ports sit in the Muino-saila gaps and the river-mouths; beyond Markaa and Smáa, multiple smaller rivers carry the Merkavar route. The map records them; their names await coining.</li>
+      <li><b>The Quietline incidents.</b> The canonical flare-up each generation's grandmothers can recite the resolution of would give the Standing's work a case-law shape across the partition's near-two-century history.</li>
     </ol>
   </div>
 
