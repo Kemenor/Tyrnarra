@@ -109,7 +109,7 @@ Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding
 ### Dwarf
 Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 
-- **New Age Dwarves**: lawful, inventive, and safety-conscious craftspeople. Centred in the **Order of Steam** (Sumendar's industrial kingdom-guild hybrid). Builders of airships, steam machinery, and arcane artillery. **House Eisenhart** is their highest-prestige lineage (see `geography/sumendar.md`, *Order of Steam → House Eisenhart*).
+- **New Age Dwarves**: lawful, inventive, and safety-conscious craftspeople. Centred in the **Order of Steam** (Sumendar's industrial kingdom-guild hybrid). Builders of airships, steam machinery, and arcane artillery. **House Eisenhart** is their highest-prestige lineage (see `geography/sumendar.md`, *Order of Steam → House Eisenhart*). A standing enclave of New Age Dwarf and kobold freight-factors lives on **Rika Tikur** (Lautara), the island-city that processes the Order's only export-freight: the producer's agents resident on the processor's doorstep, in perpetual tension with the plutocrat trade-houses (see [`geography/lautara.md`](geography/lautara.md), *Rika Tikur*).
 - **Sentinel Dwarves**: live deep underground, in the upper reaches of the **Darklands**. Their stated mission: fix the mistakes of the failed Golden Empire and defend against the hordes that emerge from below. They are the most reliable mortal early-warning system against Corrupted-God leakage; the Adventurers' Guild treats their intelligence as gold.
 
 ### Elf
@@ -192,7 +192,7 @@ Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn)
 Small constructed beings. Rare everywhere; no domain-specific concentration.
 
 ### Ratfolk
-**Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities; they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground.
+**Originally from the Darklands** (the deep-underground domain of the Corrupted God). Now found in all cities; they adapted to the surface, then to civilisation, and now thrive as the most adaptable urban underclass on Talan. Clever, fast-talking, and unsentimental. Their Darklands origin makes them naturally cautious around the deep places, which is also why they often serve as guides for Adventurers' Guild parties heading underground. On **Rika Tikur** (Lautara), the plutocrat island-city, Ratfolk anchor the underclass community of **the Gaps**, the districts capital refuses to light; the continent's most adaptable urban people here become the keepers of the mutual-aid fabric the share-register ignores (see [`geography/lautara.md`](geography/lautara.md), *Rika Tikur*).
 
 ### Samsaran · Sarangay · Tanuki · Wayang · Yaksha · Yaoguai
 **Sortalde-native; all six rare-bordering-on-vanishing on Talan.** Per-people canon (homeland petal, on-Talan presence, Concord roles) in [`cultures/sortalde.md`](cultures/sortalde.md). Continent geography in [`geography/_continent.md`](geography/_continent.md), *Other Continents → Sortalde*.

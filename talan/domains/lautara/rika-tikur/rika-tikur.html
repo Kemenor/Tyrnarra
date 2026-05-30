@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rika Tikur · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #c9a227;
+    --card-bg: rgba(26,22,12,0.55);
+  }
+
+  /* Feature panels (Exchange, Gilded Talon, House Goldmoor) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+
+  /* Left-bordered callout sub-blocks (brass-toned) */
+  .brass-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(38,32,16,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .brass-call .bc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .brass-call p { margin: 0 0 12px; line-height: 1.6; }
+  .brass-call p:last-child { margin-bottom: 0; }
+
+  /* The three-way haggle (3-card) */
+  .haggle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .haggle-card { padding: 16px 18px; }
+  .haggle-role { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
+  .haggle-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1.02rem; margin-bottom: 8px; }
+  .haggle-card.pilot .haggle-name { color: #9cc4dc; }
+  .haggle-card p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
+
+  /* The four strata (4-card, ranked) */
+  .strata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1040px; margin: 18px auto; }
+  .strata-card { padding: 16px 18px; }
+  .strata-rank { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
+  .strata-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.98rem; margin-bottom: 8px; }
+  .strata-card.gaps .strata-name { color: #b6c89a; }
+  .strata-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+
+  /* Peoples grid (3-card) */
+  .people-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .people-card { padding: 16px 18px; }
+  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .people-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
+  .people-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+
+  /* Faith two-card (closed fist / open hand) */
+  .faith-card .f-title { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
+  .faith-card.fist .f-title { color: #d8b840; }
+  .faith-card.hand .f-title { color: #b6c89a; }
+  .faith-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .faith-card { padding: 18px 22px; }
+
+  @media (max-width: 600px) {
+    .brass-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="rika-tikur">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><span>Rika Tikur</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Rika Tikur</div>
+    <div class="page-subtitle">Lautara Sub-Region · The Closed Fist of Jianna</div>
+    <div class="page-flavor">"If you have the money, the goods are yours."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Icelandic <i>ríkur</i> "rich" + <i>tígulegur</i> "splendid" → drift to <b>Rika Tikur</b>: a merchant-port's boast that stuck. The Company, the berths, the Board, the Exchange, and the Gaps that name the city's internal machinery are plain-English modern coinages, drifted lightly from the dock-language they grew out of.</dd>
+    <dt>Position</dt><dd>The island-city in the middle of the freshwater <b>Order of Steam bay</b>, a sub-body of the freshwater Midarra that opens north between two headlands: the Order's uninhabited NW mountain-headland and the <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a>'s inhabited NE one. The bay's coasts belong to the <b>Order of Steam</b> (W), <b>Tahu Tangata</b> (SW), and the Dreaming Cape (S and E).</dd>
+    <dt>Terrain</dt><dd>A worked island of dock-berths, processing-yards, and trade-floors, lit and pumped and immaculate in the berth-rich core and rotting in the <b>Gaps</b> between. The bay around it carries the bulk industrial freight of the Order's volcanic-belt manufactories out through the bay-mouth into the open Midarra.</dd>
+    <dt>Character</dt><dd>
+      <i>A plutocracy run as a joint-stock corporation, where money is power, literally and constitutionally</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Closed Fist</span><span class="pill">The Company</span><span class="pill">Berths &amp; the Board</span><span class="pill">The Exchange</span><span class="pill">Open Greed</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The one place on Talan that sorts by <b>what you hold</b> rather than what you are. A standing enclave of <b>New Age Dwarf</b> and <b>kobold</b> freight-factors works the Order's goods on the processor's doorstep; <b>Ratfolk</b> anchor the mutual-aid fabric of the Gaps; settled dock-families and a cosmopolitan churn of transients fill the rest.</dd>
+    <dt>Tongue</dt><dd>Talanese throughout, the working tongue of every dock and floor; the city's own civic vocabulary is the modern share-and-berth register the founders coined.</dd>
+    <dt>Faith</dt><dd><b>Jianna</b> by domain, read through her <i>Greed</i>-face: a prosperity-gospel where wealth is divine favour. Beneath it the great houses keep a brazen devotion to <b>Nirfel</b>, the Greed Vice Demon, at the temple of the <b>Gilded Talon</b>. Down in the Gaps the berthless honour <b>Epairima</b>, the Judge of Souls, and a quiet mutual-credit Jianna of the open hand.</dd>
+    <dt>Rule</dt><dd><b>The Company</b>: a joint-stock corporation that <i>is</i> the city. Citizenship is a share (a <b>berth</b>); votes are weighted by holding and never by head; the largest holders sit <b>the Board</b> and the controlling block holds <b>the Chair</b>. Answerable to no assembly and no law, only to capital.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(201,162,39,0.5);">
+    <div class="gods-city-label">The Civic Heart</div>
+    <div class="gods-city-name">The Exchange</div>
+    <div class="gods-city-byname">the floor where the city reads its own government off the ticker</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Rika Tikur keeps no capitol and no throne, only the Exchange. Berths, freight-contracts, debt, and futures on next season's Order output trade across its floor by the hour, and a citizen's morning is the board of prices: which house rose overnight, which berth-right doubled, whose debt came due. Where Merkavar trades goods and Azkataria trades arguments, the Exchange trades ownership itself, money trading money, which is Greed's purest commerce.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-closed-fist" class="section-heading">The Closed Fist</h2>
+  <div class="prose">
+    <p>Jianna is the goddess of commerce, depicted with one hand open in offering and one hand closed. Across Lautara her worshippers favour the open hand: <b>Atarialda</b> prays to her welcome and her generosity, and <b>Merkavar</b> holds the whole goddess, profit and grace at once. Rika Tikur is the closed fist. It is the one place on Talan that prays to her <i>Greed</i>-face openly and without apology, on a plain creed older than its corporate charter: that wealth is favour, that to prosper is to be blessed, and that if you have the money, the goods are yours.</p>
+
+    <p>The island wears the creed in its constitution. Rika Tikur is a self-governing Lautara sub-region, Jianna's by domain and by faith, answerable to no assembly and no law, only to capital. There is no commons here and no pretence of one. The city is honest about being a fist where its neighbours are coy about being hands, and the honesty is, in its own way, the most devout thing about it.</p>
+  </div>
+
+  <div class="brass-call">
+    <div class="bc-label">The Creed Made Plain</div>
+    <p>A Merkavar merchant will tell you the deal must be fair to be blessed. An Atarialdan will tell you the open hand returns more than the closed one keeps. A Rika Tikur berth-holder finds both sentiments charming and prices accordingly. To him the share-price is the blessing made visible, the tithe is a cut of profit, and the size of the tithe is his standing before the goddess. He does not think he has chosen the worse half of Jianna. He thinks he has stopped lying about which half pays.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-contested-throat" class="section-heading">The Contested Throat</h2>
+  <div class="prose">
+    <p>The <b>Order of Steam</b> is mountain-ringed, and this bay is its single door to all sea and land trade. The most productive manufactory-power on the continent, arms-maker to the world, can sell nothing except across this water. Rika Tikur sits on that throat: the island processes the bulk industrial freight of the Order's volcanic-belt manufactories and ships it out through the bay-mouth into the open Midarra, and onward to Merkavar by the river-route through <a href="/talan/domains/lautara/itsasalda/itsasalda.html"><b>Itsasalda</b></a>.</p>
+
+    <p>Rika Tikur is the dominant gate, not the only one. Two powers sit on the Order's door: the island, the processing-and-dock hub, and the <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a>, whose <b>Wakehelm</b> pilots are the only craft that can read the drift out the bay-mouth. The Order must pass both, and can lean on one against the other. Rika Tikur is the default only as long as its processing makes the freight worth more than shipping raw bulk straight to the Cape's pilots. Its grip is dominant but contested, and its Greed is disciplined by arithmetic: it must take the exact most that still keeps the freight choosing the island.</p>
+
+    <p>The three-way haggle of producer, processor, and pilot is the engine of the city's outward politics. The Cape pilot-fee war is its sharpest and longest-running front: Rika Tikur's port-masters periodically push to renegotiate the bay-mouth fees, arguing the Order's freight should pay the pilots less, and the Wakehelm have held their line for forty years.</p>
+  </div>
+
+  <div class="haggle-grid">
+    <div class="accent-card haggle-card">
+      <div class="haggle-role">The Producer</div>
+      <div class="haggle-name">The Order of Steam</div>
+      <p>The mountain-ringed manufactory-power that makes the freight and owns none of the door. It can sell only across this water, so it keeps freight-factors resident on the island to clear its goods and haggle its terms, and it plays the processor against the pilot to claw back what the geography costs it.</p>
+    </div>
+    <div class="accent-card haggle-card">
+      <div class="haggle-name">Rika Tikur</div>
+      <div class="haggle-role">The Processor</div>
+      <p>The island that adds the value: docking, processing, the freight-charter the Order is forced to use. Its leverage lasts exactly as long as its processing makes the cargo worth more than raw bulk shipped past it, so it must take the most it can without making the Order route around it.</p>
+    </div>
+    <div class="accent-card haggle-card pilot">
+      <div class="haggle-name">The Wakehelm</div>
+      <div class="haggle-role">The Pilot</div>
+      <p>The Dreaming Cape's paired pilot-craft, the only navigators who can read the drift out the bay-mouth. No cargo leaves the bay without them. They have held their fee against Rika Tikur's port-masters for forty years, and the standing threat of bulk routed straight to their docks is the island's discipline.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-company" class="section-heading">The Company</h2>
+  <div class="prose">
+    <p>Rika Tikur is governed as a joint-stock corporation, and the city <i>is</i> that corporation: <b>the Company</b>, whose founding asset is the port itself, the dock-berths, the processing-yards, and the freight-charter the Order is forced to use. To hold the Company is to hold the city, in a sense that is constitutional rather than figurative.</p>
+
+    <p>A share in the Company is a <b>berth</b>. The founders carved the port into berths and sold them, and the word drifted from a length of dock into the unit of ownership itself. A <b>berth-holder</b> is a citizen with a vote weighted to his holding; the <b>berthless</b> majority, however long they have lived on the island, hold neither vote nor standing. The largest holders sit <b>the Board</b> that governs, chartering what gets built, setting the tariffs and the berth-allocation, and writing what little law exists, all voted by berth-weight and never by head. A salaried operator-class runs the machine beneath them.</p>
+
+    <p><b>The Chair</b> is whoever controls the majority block this season. Power is exactly as stable as the register: a house rules while it holds its berths and falls the season it is outbid. A hostile takeover here is not a figure of speech. It is how governments change, and a citizen reads the next administration off the ticker the way other towns read it off a proclamation.</p>
+  </div>
+
+  <div class="brass-call">
+    <div class="bc-label">Government by Ticker · How the Chair Turns</div>
+    <p>Everywhere else a polity changes hands by succession, election, or coup. Rika Tikur changes hands by purchase. The Exchange trades the berths that confer the votes that seat the Board that names the Chair, so a controlling block accumulated quietly over a season is a bloodless coup completed before the losing house has finished reading the morning prices. The houses understand this perfectly. The Board's perpetual motion is takeover-politics conducted in the open, and a Chair who forgets to defend his float wakes to find someone else holding it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-the-company-builds" class="section-heading">What the Company Builds, and What It Does Not</h2>
+  <div class="prose">
+    <p>There is no commons here. Every road, lamp, fresh-water pump, and span of dock-planking exists because a berth-holder paid to lay it and expects a yield, and the rest of the island benefits or suffers as a side-effect. The labouring majority get paved streets exactly as far as the rich need them at the yards on time, lamps where a night-shift earns someone money, water clean enough to keep a workforce alive to work and no cleaner.</p>
+
+    <p>The fabric of the island is a map of where money has wanted something: lit and pumped and immaculate in the berth-rich core, rotting in <b>the Gaps</b>, the spaces between one profitable place and the next. The Gaps are where the infrastructure runs out, the poor districts the share-register declines to pave or light because no yield justifies the lamp-oil. They are also, by the same arithmetic, the one part of Rika Tikur that capital does not own.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-four-strata" class="section-heading">The Four Strata</h2>
+  <div class="prose">
+    <p>The island reads itself in four bands, ranked by the register rather than by blood. The myth the city tells is that anyone may buy a berth and rise; the working truth is that even Greed bends to nepotism, and a man rises by being useful to the right house for long enough at least as often as by coin alone.</p>
+  </div>
+
+  <div class="strata-grid">
+    <div class="accent-card strata-card">
+      <div class="strata-rank">Above the waterline</div>
+      <div class="strata-name">The Berth-Holders</div>
+      <p>The trade-houses and magnates who hold the city and build its big things for yield. Their lineage is the float; their standing is the share-price. They rule while the register lists them and fall the season it does not.</p>
+    </div>
+    <div class="accent-card strata-card">
+      <div class="strata-rank">Second band</div>
+      <div class="strata-name">The Connected</div>
+      <p>Foremen, factors, head clerks, the operator-class, families who have served a house for three generations and whose name a board will trust. They are the proof that even Greed bends to nepotism, and the quiet rebuttal of the city's myth that coin alone buys in.</p>
+    </div>
+    <div class="accent-card strata-card">
+      <div class="strata-rank">Third band</div>
+      <div class="strata-name">The Settled Base</div>
+      <p>Generational dock-families who have worked the same yards and slips for lifetimes without ever holding a berth. They are the island's working spine and the register's invisible majority.</p>
+    </div>
+    <div class="accent-card strata-card gaps">
+      <div class="strata-rank">The churn, and the Gaps</div>
+      <div class="strata-name">The Transients</div>
+      <p>The workers who cycle in on a season's labour and ship out, the whole continent passing through one island. Where they settle, in the Gaps, they build the thing the register cannot count.</p>
+    </div>
+  </div>
+
+  <div class="brass-call">
+    <div class="bc-label">The Shareholders Build Big Things; the Workers Build Communities</div>
+    <p>The berthless will not buy in, so they invest in each other: in the baker who carries a family through a bad month, in the grocer who keeps the slate, in the neighbour who minds the children of the night-shift. In the Gaps that capital refuses to light, the densest social fabric on the island has grown. It is the one wealth the share-register cannot count, because community is precisely the form of value the ticker has no column for. The shareholders build big things. The workers build communities. The Gaps are the part of Rika Tikur that money does not own.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith-the-closed-fist" class="section-heading">Faith · The Closed Fist</h2>
+  <div class="prose">
+    <p>Rika Tikur is the one place on Talan that prays to Jianna's Greed-face openly. The gospel is prosperity: wealth is divine favour, to prosper is to be blessed, and accumulation is itself devotion. The Exchange is the temple, the share-price is the blessing made visible, the tithe is a cut of profit, and the size of a holder's tithe is his standing before the goddess. A bad season is read as a withdrawal of favour, and a man whose float collapses is pitied less for his poverty than for what the goddess has evidently decided about him.</p>
+
+    <p>Beneath the gospel the great houses keep a darker devotion, to <b>Nirfel</b>, the Vice Demon of Greed herself. Everywhere else on Talan worshipping a Vice Demon is hidden and damnable; here the houses are brazen enough to keep her shrines and pledge to her sometimes openly, at the temple of <b>the Gilded Talon</b>. The continent holds its nose at the open demon-worship only because Rika Tikur is too essential a door to shun.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="brass-call">
+      <div class="bc-label">The Gilded Talon · Temple of the Open Cult</div>
+      <p>The temple takes its name from Nirfel's favoured weapon, the <b>Flying Talon</b>: a three-pronged barbed hook on a chain, a grappling-iron with a melee mode, pirate-coded twice over. <i>Gilded</i> for the wealth the houses lay at her shrines; <i>talon</i> for the predator beneath the gild.</p>
+      <p>Nirfel's aspects are <b>Toil</b>, <b>Wealth</b>, <b>Secrecy</b>, and <b>Travel</b>, and they read to the great houses like their own charter: the toil of building a float across generations, the wealth that is the whole point, the secrecy of a ledger no rival may read, the travel that carries the island's freight to every coast. To pledge to her is understood on the island to forfeit one's soul to her spire in the Abyss at death. The canniest houses pledge anyway and reckon the trade worth making. They are sure they know the price.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-the-poor-keep" class="section-heading">What the Poor Keep</h2>
+  <div class="prose">
+    <p>Down in the Gaps a different faith survives. The berthless honour <b>Epairima</b>, the Judge of Souls, on the conviction that in death all are weighed at Dauria's court, the greedy and the community-minded alike, and that no berth-block buys the verdict. It is the poor's faith in a reckoning against a plutocracy they cannot beat in life. They watch the rich pledge to Nirfel and trust that death will settle what the Exchange never will.</p>
+
+    <p>Beside Epairima they keep a quiet mutual-credit Jianna: the goddess of the honest small deal and the forgiven slate, the open hand surviving in the gaps of a closed-fist city. It is the same goddess the Board prays to, read from the other side of her body. The Gaps keep the hand the core keeps the fist of, and a Gaps grocer who keeps a family's slate through a hard winter believes himself no less Jianna's than the magnate who tithes a cut of his quarter to the Exchange.</p>
+  </div>
+
+  <div class="two-column">
+    <div class="accent-card faith-card fist framed" style="--card-accent:#c9a227;">
+      <div class="f-title">The Closed Fist</div>
+      <p>The core's faith. Jianna's Greed-face as prosperity-gospel: wealth is favour, the share-price is the blessing, the tithe is the proof. Beneath it, the brazen Nirfel-devotion of the great houses at the Gilded Talon. This is the faith the register can see, and it is loud about itself.</p>
+    </div>
+    <div class="accent-card faith-card hand framed" style="--card-accent:#9bb56a;">
+      <div class="f-title">The Open Hand</div>
+      <p>The Gaps' faith. Epairima, who weighs the greedy and the generous alike at a court no money buys; and a mutual-credit Jianna of the honest small deal and the forgiven slate. The faith of the people who will never hold a berth, who trust the reckoning the Exchange cannot price.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">Peoples · The Register Is the Only Lineage</h2>
+  <div class="prose">
+    <p>Rika Tikur may be the one place on Talan that sorts by what you hold rather than what you are. Ancestry confers no role and no standing; the berth-register is the only lineage that counts, and a Board may seat a kitsune freight-baron, a Vishkanya financier, and a dwarf-descended arms-broker side by side, joined only by their holdings. Three communities sit at the load-bearing seams of the island.</p>
+  </div>
+
+  <div class="people-grid">
+    <div class="accent-card people-card">
+      <div class="people-name">New Age Dwarves &amp; Kobolds</div>
+      <div class="people-band">the producer's agents on the processor's doorstep</div>
+      <p>A standing enclave of freight-factors from the <b>Order of Steam</b>, resident on the island that processes the Order's only export. They clear and inspect the producer's goods and haggle its terms in perpetual tension with the trade-houses. They are the Order's eyes on the door it cannot own, and the house-magnates treat them as a rival power they cannot evict.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">Ratfolk</div>
+      <div class="people-band">the keepers of the Gaps</div>
+      <p>The continent's most adaptable urban people, here the anchor of the underclass community of the Gaps. Where the share-register declines to light the streets, the Ratfolk keep the mutual-aid fabric the register ignores: the slate, the carried family, the social wealth the ticker has no column for. They are the densest community on an island that thinks it has none.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">The Settled and the Churn</div>
+      <div class="people-band">dock-families and transients</div>
+      <p>Generational dock-families who have worked the yards for lifetimes, and the cosmopolitan churn of transients who cycle in on a season's work and ship out. Between them they are most of the island's body and almost none of its vote, the whole continent landed in one harbour at any given hour.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="house-goldmoor" class="section-heading">House Goldmoor</h2>
+  <div class="feature-panel">
+    <div class="brass-call">
+      <div class="bc-label">The Great House</div>
+      <p>The oldest and greatest of Rika Tikur's trade-houses is <b>House Goldmoor</b>. Its berths have anchored the Board longer than any rival has held its float, and its century of dominance is explained on the island as shrewdness and uncommon luck: a run of good seasons no other house has matched, a knack for buying the right berth the season before it doubled, a Chair the family has held more often than not for as long as the Exchange has kept a ticker.</p>
+      <p>The name is a plain-English coinage: <i>gold</i> for the wealth, <i>moor</i> for a mooring, the family's fortune moored at the berths. Goldmoor is the house the island points to when it wants to prove the gospel true: prosper, and you are blessed; here is a house the goddess has plainly favoured for a hundred years. The house tells the same story about itself, and has no reason yet to doubt it.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Berth That Made a Man</button>
+    <div class="legend-era-content">
+      <p>Every dock-family in the Gaps keeps a version of the tale, and the bar-talk at the cheap end of the harbour swears it is true of someone's great-uncle. They say there was a berthless dreamer, a dock-hand like any other, who saved every clipped coin for thirty years and bought one berth, the smallest float the register will list, and so became a citizen with a vote weighted to exactly one share. They say he stood on the floor of the Exchange the morning his berth confirmed and wept, because he was the first of his line to count for anything the ticker could see, and that the great houses bought the rest of his block off him within the season and he died berthless again, but a <i>citizen</i> at the last, which the grandmothers say is the part that matters.</p>
+      <p>The Board likes this tale and tells a tidier version: that the man held his berth, founded a line, and that his grandchildren sit the second band today. The Gaps tell it the first way, and add that the dreamer's real fortune was the neighbours who fed him through the thirty years of saving, and that he forgot them the morning the berth confirmed, and that this is why a man should keep his slate paid in the Gaps before he ever stands on the floor. <i>Buy in if you can,</i> the grandmothers say, <i>but pay your slate first.</i> The island that sorts by what you hold keeps, in its poorest quarter, a story about what holding costs.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What Nirfel Actually Charges</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Hidden by the Demon's Design</div>
+
+      <p class="secret-reveal">The worship is open; the cost is hidden by design. Because <b>Nirfel</b> deals in greed, she never shows a buyer the real total. The houses pledge to her for wealth and believe they know the price, a tithe of fortune and the soul routed to her spire at death. They are wrong about the size of the bill, and being greedy, they never look closely enough to find it.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">The Lien Runs Down the Blood</span>
+        <span class="secret-pill">The Blessing Is the Hook</span>
+        <span class="secret-pill">The Souls Bypass the Court</span>
+      </div>
+
+      <div class="secret-grid-3">
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">Clause One</div>
+          <div class="secret-card-title">The Lien Down the Bloodline</div>
+          <div class="secret-card-body">The bargain out-greeds the greedy. The lien compounds and runs down the bloodline: the founder dealt, and the heirs are collateral they never agreed to be. A great house's dominance is a debt quietly growing against every name the house has carried, and Nirfel's claim is <b>senior to the berth-register</b> that lists those same names.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">Clause Two</div>
+          <div class="secret-card-title">The Appetite That Cannot Fill</div>
+          <div class="secret-card-body">The blessing is the hook. Her favour is not merely wealth but the <b>appetite that cannot be filled</b>: the blessed prosper and toil to the grave and are never once satisfied, and they call that hunger holy because the prosperity-gospel they also keep tells them endless greed is favour. The cover and the trap reinforce each other, and no pledger questions the thing consuming him.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Verdict the Poor Cannot See</div>
+          <div class="secret-card-title">Foreclosed, Not Damned</div>
+          <div class="secret-card-body">The Gaps trust Epairima to weigh the greedy in death. The verdict is right; the mechanism is wrong. A Nirfel-pledged soul is <b>pre-tagged and routes straight to her spire</b>, bypassing Dauria's court entirely: no weighing, only a creditor collecting collateral. The greedy are not damned by justice; they are foreclosed on. The unpledged still get Epairima's fair court.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda">The few of Epairima's clergy who have noticed souls slipping past the court into the Abyss above Rika Tikur are deeply troubled and say little. And <b>House Goldmoor's luck is a lien coming due</b>: the island's greatest house is the one whose founding Nirfel-bargain is now maturing. The early signs (a run of luck beginning to curdle, heirs born already hungry, the senior claim stirring in the ledger) and what the house does when it learns the true price are left for a story to claim.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the island's central canon settled, several details about Rika Tikur remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The rest of the trade-house roster.</b> Beyond House Goldmoor, the great houses that hold the Board and contest the Chair are recorded as a class but not yet named. Their names, floats, and rivalries await the stories that need them.</li>
+      <li><b>The berth-rich core's districts.</b> The lit-and-pumped heart of the island, set against the Gaps, is recorded as a contrast but not yet mapped. Its named districts, the Exchange's quarter, and the great houses' compounds are open.</li>
+      <li><b>Named Board figures and a current Chair.</b> The seated Board of any given season, the controlling block that holds the Chair, and the salaried operator-class beneath them are open. They surface as stories want them.</li>
+      <li><b>The freight-factor quarter.</b> The standing enclave of New Age Dwarf and kobold freight-factors has a place on the island; its name and its standing arrangement with the houses await coining.</li>
+      <li><b>House Goldmoor's reckoning.</b> The maturing of the founding Nirfel-bargain (held on the chronicler-tier record only as the house's "luck") is the island's largest open thread, and the one most clearly written for a story to claim.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · RIKA TIKUR</div>
+
+</div>
+
+</body>
+</html>
