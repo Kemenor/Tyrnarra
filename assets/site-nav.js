@@ -45,6 +45,7 @@
       { slug: 'baerfrost',     label: 'Baerfrost &middot; Hunt-League',     href: '/talan/domains/vindul/baerfrost/baerfrost.html',         children: [] },
       { slug: 'air-monastery', label: 'Air Monastery &middot; Wyndwalken',  href: '/talan/domains/vindul/air-monastery/air-monastery.html', children: [] },
       { slug: 'fellibylur',    label: 'Fellibylur &middot; Stormpact',      href: '/talan/domains/vindul/fellibylur/fellibylur.html',       children: [] },
+      { slug: 'haizava',       label: 'Haizava &middot; the Shifting City', href: '/talan/domains/vindul/haizava/haizava.html',             children: [] },
       { slug: 'haizetsua',     label: 'Haizetsua &middot; Tengu Island',    href: '/talan/domains/vindul/haizetsua/haizetsua.html',         children: [] }
     ]},
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
