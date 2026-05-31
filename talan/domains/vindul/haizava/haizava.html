@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haizava · The Shifting City · Vindul · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #6fb8c8;
+    --card-bg: rgba(16,30,36,0.55);
+  }
+
+  /* Governance roles (the Eye, the Windward, the Turning) */
+  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .gov-card { padding: 16px 18px; }
+  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
+  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+  /* Wind-craft roles (readers, trim-wrights, Windwatchers) */
+  .craft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .craft-card { padding: 14px 16px; }
+  .craft-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
+  .craft-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Signature feature panels (svif, windrift, the Fairwind) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+
+  /* The anti-grasping principle callout (left-bordered, sky-toned) */
+  .principle-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(28,52,62,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .principle-call .p-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .principle-call p { margin: 0 0 12px; line-height: 1.6; }
+  .principle-call p:last-child { margin-bottom: 0; }
+
+  /* Peoples grid */
+  .peoples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .people-card { padding: 14px 16px; }
+  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
+  .people-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+</style>
+</head>
+<body data-page="haizava">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/vindul/vindul.html">Vindul</a><span class="sep">›</span><span>Haizava</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Haizava</div>
+    <div class="page-subtitle">The Shifting City · Fisaya's God-City</div>
+    <div class="page-flavor">The city the wind rebuilds. You keep a wind-reader, not a map. It is the one place the Wyndwalken's cartographers cannot fix to paper, and Fisaya knows every wind.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>haize</i> (wind), echoing the domain → <b>Haizava</b>, "The Shifting City."</dd>
+    <dt>Position</dt><dd>On the great river that runs the <b>Baerfrost / Fellibylur border</b>, with the eastern old-growth forest close by and the <a href="/talan/domains/vindul/air-monastery/air-monastery.html"><b>Air Monastery</b></a> range near to the northeast.</dd>
+    <dt>Terrain</dt><dd>A wind-front: warm storm-winds rolling north off the Fellibylur steppe collide here with cold air spilling south off Baerfrost's ice, and a front of warm-meeting-cold is where the strongest, most <i>readable</i> winds are born. The great river is the one fixed thing, the constant the city reconfigures around and over.</dd>
+    <dt>Character</dt><dd>
+      <i>A city on sails, vanes, and rails that never holds the same shape twice; read, not mapped.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Kinetic Architecture</span><span class="pill">Wind-Read</span><span class="pill">Svif Culture</span><span class="pill">No Standing Ruler</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Cosmopolitan; the capital where the domain's wind-and-sky folk converge. <b>Strix</b> pilots, <b>Jotunborn</b> great-wind readers, <b>Kashrishi</b> observers (the continent's mappers in the one city no map holds), and <b>Tengu</b> crossing from the island.</dd>
+    <dt>Tongue</dt><dd>Talanese for trade and abroad; the wind-reading craft is the civic common ground, open to all, and no ancestry rules because the wind does.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Fisaya</b>-devotional. The wind goddess is present as herself, the nine-tailed kitsune of many colours, and rides a svif through her own city. Worship is reading the wind.</dd>
+    <dt>Rule</dt><dd>The wind seats the government. There is no standing ruler; authority belongs to whichever district the wind carries adjacent to <b>the Eye</b>, and turns when the wind turns.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">The Eye</div>
+    <div class="gods-city-name">The Wind-Still Center</div>
+    <div class="gods-city-byname">Fisaya's seat · the calm at a storm's core · the district carried here governs</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-shifting-city" class="section-heading">The Shifting City</h2>
+  <div class="prose">
+    <p>Haizava is Fisaya's seat and the one city on Talan that will not hold still: the city the wind rebuilds. Its streets, spans, and whole districts ride sails, vanes, counterweights, and rails, and when the weather turns the wind drives them into a new configuration, so the city is never the same shape twice. You do not learn Haizava; you learn to <i>read</i> it, and you keep a wind-reader where another city keeps a map. It is the one place the <a href="/talan/domains/vindul/air-monastery/air-monastery.html"><b>Wyndwalken</b></a>'s cartographers cannot fix to paper, which leaves Vindul holding both the masters of mapping and the city that defeats them.</p>
+
+    <p><b>Fisaya knows every wind.</b> She does not move the city by hand; she knows where every breath of air will go, and that is the craft. The engineering tells how the city answers a wind; the augury tells what the wind will do; and a forecast is both worn by one person. The two halves of a Haizavan trade are inseparable: an eye that can read the sky three days out is worth nothing without the hands to trim a district toward where it must be, and the finest trim-work is wasted on a forecast that misreads the front.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wind-seats-the-government" class="section-heading">The Wind Seats the Government</h2>
+  <div class="prose">
+    <p>Haizava has no standing ruler. Authority belongs to whichever district the wind carries adjacent to <b>the Eye</b>, the one wind-still point at the city's heart, the calm at a storm's core and Fisaya's seat. That district is <b>the Windward</b>, and it governs from the Eye until the wind turns and seats another, a rotation called <b>the Turning</b>: <i>the Windward holds till the wind turns</i>.</p>
+  </div>
+
+  <div class="gov-grid">
+    <div class="accent-card gov-card">
+      <div class="gov-name">The Eye</div>
+      <p>The one wind-still point at the city's heart, the calm at a storm's core and Fisaya's seat. The district the wind carries here governs from it. Anchored at the bend of the great river, the city's one fixed bearing.</p>
+    </div>
+    <div class="accent-card gov-card">
+      <div class="gov-name">The Windward</div>
+      <p>The district the wind has currently seated adjacent to the Eye. It governs the whole city from there until the wind turns and seats another. Power is a position, not an office, and it is held only as long as the sky allows.</p>
+    </div>
+    <div class="accent-card gov-card">
+      <div class="gov-name">The Turning</div>
+      <p>The rotation of power as the wind shifts the Windward away and carries a new district to the Eye. There is no election and no inheritance; there is the weather, read and trimmed, and the position it leaves you in.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Each district fields its own <b>wind-readers</b> and <b>trim-wrights</b> to forecast its path and nudge it centerward, so the contest for the Eye is one of reading and trimming, the wind holding the last say. Fisaya's clergy, <b>the Windwatchers</b>, stand sworn out of it: they keep the Eye, read the whole sky, call the Turning, and pilot the gondolas that thread every district alike.</p>
+  </div>
+
+  <div class="craft-grid">
+    <div class="accent-card craft-card">
+      <div class="craft-name">Wind-Readers</div>
+      <p>Each district's own forecasters. They read cloud, gust, and front to call where the wind will carry their ward, and how soon. A great reader can put their district at the Eye by knowing, days ahead, the weather everyone else only feels arrive.</p>
+    </div>
+    <div class="accent-card craft-card">
+      <div class="craft-name">Trim-Wrights</div>
+      <p>Each district's engineers, who work its sails, vanes, counterweights, and rails to nudge its position toward the center. The reader names where the wind goes; the trim-wright sets the ward to ride it there. The two work as one hand.</p>
+    </div>
+    <div class="accent-card craft-card">
+      <div class="craft-name">The Windwatchers</div>
+      <p>Fisaya's sworn-neutral clergy. They keep the Eye, read the whole sky rather than any one district's path, call the Turning, and pilot the windrifts that thread every district alike. They take no part in the contest for power, and their neutrality is the thing the whole rotation rests on.</p>
+    </div>
+  </div>
+
+  <div class="principle-call">
+    <div class="p-label">The Principle That Holds It Together</div>
+    <p><i>You may ride the wind to power; you may not chain it.</i></p>
+    <p>A district that grasps to hold the Eye is fighting the wind rather than riding it, and it loses the wind: storms turn against the grasping ward until it is cast to the rim. The city believes the goddess will not abide a tyrant, and so the rotation stays honest. No one rules Haizava for long, because no one is permitted to stop the weather, and the one ward that tries is the one the sky abandons.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="getting-around" class="section-heading">Getting Around · When Your Address Depends on the Weather</h2>
+  <div class="prose">
+    <p>The day begins with <b>the reading</b>, every district posting its dawn forecast, and <i>"if the wind holds north"</i> prefaces every plan. When a reconfiguration is coming, the Windwatchers sound the <b>shift-bell</b> and the city clears its moving spans, battens down, and rearranges over the next stretch. Homes are built to move and nothing is left loose, so Haizavans travel light, hold things loosely, and find a street that never changes faintly sad.</p>
+
+    <p>Most of the time they simply walk, since the forecast tells them where to be. For a fixed destination across a shift they ride a <b>windrift</b>; but the everyday craft is the <b>svif</b>, and a still vane on the roof-peak is a quiet dread in any household. The week's groceries on a day the market has drifted three districts off mean a long walk or a paid windrift, and everyone in Haizava has a story about the larder ending up an hour from the kitchen.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The svif.</b> A personal wind-board, half surf and half skate, the everyday way a Haizavan moves through their shifting city. Riding it takes skill and a <b>license almost every local holds and no traveller does</b>, so a licensed rider in the air and a visitor stuck on stale directions are sorted at a glance. (Icelandic <i>svífa</i>, to glide, soar, hover, drifted to <b>svif</b>.) Svifs carry almost nothing, which is exactly why the groceries are a comedy: the board is for the rider, the rider's hands, and nothing much more. Around the practical craft has grown a whole <b>trick culture</b>, riders throwing turns and lines down the canals for the joy and the standing of it.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The windrift, formally a Haizola.</b> The clergy-piloted gondola that drifts the <b>wind canals</b>, the steady aerial currents that hold their course above the reshuffling streets. <i>Windrift</i> is the common word; <i>Haizola</i> (Basque <i>haize</i> "wind" + the <i>-ola</i> of <i>gondola</i>) is the formal name. The Windwatchers pilot them, and a windrift will carry you to a fixed destination across a shift that would otherwise leave you walking, which is what you pay for. Heavy freight is another matter: it moves by <b>cargo airship</b>, which Haizava builds, wind-craft hulls flown by wind-reader pilots, a thing apart from the <a href="/talan/domains/sumendar/sumendar.html">Order of Steam</a>'s steam ships.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The household vane-shrine.</b> Every home keeps a roof-peak vane that is also its Fisaya-shrine, read each morning for the household's own small wind. A turning vane is the day's blessing in plain sight; a still vane is a quiet dread, and a household whose vane has not moved in days is a household something is wrong with.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · The Wind That Carries Into Every Home</h2>
+  <div class="prose">
+    <p>Fisaya is no distant goddess here. She is present as herself, the nine-tailed <b>kitsune</b> of many colours with hair trailing into cloud, and she rides. A crew of youths throwing svif-tricks down a canal may find a multicolour stranger fall in beside them, match their best and better it, and ride on before they grasp who joined them. Worship is reading the wind: her <b>Breath</b> is the augury, her <b>Travel</b> blesses every setting-out, and her <b>Storms</b> and <b>Ruin</b> are the great city-reshaping tempests, theophany and danger together, the one time the Turning halts and the whole city answers as one.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The Fairwind.</b> Haizava's great Fisaya-holiday: days of svif-races and trick-shows down the canals, where the champions earn the right to challenge the goddess herself. She rides as one more competitor, and is loved for it. The Fairwind is the one festival on Talan where the prize for being the best in the world at something is the chance to be soundly beaten by a god in front of the whole city, and to be cheered all the harder for it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">Peoples</h2>
+  <div class="prose">
+    <p>Haizava is cosmopolitan, the capital where the domain's wind-and-sky folk converge. The wind-reading craft is the civic common ground, open to all, and no ancestry rules because the wind does.</p>
+  </div>
+
+  <div class="peoples-grid">
+    <div class="accent-card people-card">
+      <div class="people-name">Strix</div>
+      <p>The natural pilots of the wind-canals, the svifs, and the airships, the winged folk most at home in a city whose whole business is the air. Where Fellibylur made them storm-readers of the open steppe, Haizava makes them the city's pilots.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">Jotunborn</div>
+      <p>Reading the great winds in their own known weather-craft. The same arctic instinct that lets a Baerfrost clan call a coming storm reads, here, the heavy cold air spilling south off the ice that meets the warm front over the river.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">Kashrishi</div>
+      <p>Bringing the Air Monastery's observation-discipline made urban, and the standing irony of the continent's mappers in the one city no map holds. They read the sky with instrument and calibrated rule, and live, smiling, where their craft's proudest product cannot be drawn.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">Tengu</div>
+      <p>Crossing from the island. The wind-knowing they learn as children on Haizetsua finds a second home in the city where wind-reading is the whole of civic life, and a Tengu on Vornsketta often spends a season here.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, The Stranger on the Svif</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Canal-Riders Say</div>
+      Every svif-crew in Haizava keeps the same story, and every crew swears it happened to them. They say you can be throwing your best line down a canal at dusk, a crew of four or five with nothing on your minds but the next turn, and a rider in colours you cannot quite name will drop in off a cross-current and ride at your shoulder. They say she matches your best trick, and then betters it without seeming to try, and rides on into a gust before any of you thinks to ask her name; and when you look for where she went, there is only the wind. They say the colours were all the colours, which is how you know after, though no one ever knows in the moment. They say she rides the Fairwind every year as one more competitor and lets the champions push her hard before she wins, because she likes the contest more than the winning. The old hands say if a multicolour rider falls in beside you, ride your best and do not slow to gawk: she came to race, not to be recognised, and the worst manners in Haizava are to stop the wind to stare at it.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, Who Banishes the Grasping</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Windwatchers' Deepest Vow</div>
+      <p style="font-style:italic; margin-top:0;">The wind does not banish the grasping district. The Windwatchers do.</p>
+
+      <div class="gov-grid">
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">The Counter-Trim</div>
+          <p>When a ward over-trims to chain itself to the Eye, the sworn-neutral clergy quietly counter-trim it, setting the great mechanisms and the canal-currents against it until it loses position. The storms that "turn against the grasping" are the Windwatchers' own hand on the city's machinery.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">True in Verdict, False in Hand</div>
+          <p><i>Fisaya banishes the grasping</i> is true in its verdict and false in its hand. The grasping ward is cast to the rim, exactly as the city believes; but it is mortal enforcement dressed as divine will, and the goddess's name is the cover the verdict wears.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">Why Keep the Belief</div>
+          <p>The Windwatchers keep the belief alive because a check everyone credits to the goddess needs no visible enforcer and draws no faction's blame. A clergy that openly cast wards from power would become a faction itself; a goddess who turns the weather on a tyrant is above faction, and so the rotation holds.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">Fisaya's Part</div>
+          <p>She is genuinely present and genuinely knows every wind, but she rides svifs and carries the breath into every home and leaves the governing of mortals to mortals. The Windwatchers' deepest vow is the secret of whose hand actually keeps Haizava free.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Shifting City's central canon is settled; several specifics remain open, the kind future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The named districts.</b> The Eye, the Windward, and the Turning fix the structure of power; the particular districts that contend for the Eye, their names, their characters, their standing rivalries, are open for stories to cast.</li>
+      <li><b>Named Windwatchers.</b> The clergy who keep the Eye, call the Turning, and hold the counter-trim secret are unnamed: the senior reader-of-the-whole-sky, the Windwatcher who pilots the first windrift of each dawn, the elder who carries the deepest vow.</li>
+      <li><b>The svif-trick canon.</b> The named tricks, the great riders, the canal-lines that carry a champion's reputation, and the standing records of the Fairwind are open.</li>
+      <li><b>The Fairwind's specifics.</b> The festival's day-count, its order of races, the rite by which a champion earns the challenge, and the customary form the goddess's appearance takes each year are unwritten.</li>
+      <li><b>The wind-canal map.</b> The steady aerial currents the windrifts run hold their course while the streets reshuffle beneath; the named canals, their junctions, and the airship lanes above them are canon-pending.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · VINDUL · HAIZAVA</div>
+
+</div>
+
+</body>
+</html>
