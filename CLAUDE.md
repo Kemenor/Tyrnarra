@@ -190,6 +190,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Avoid em-dashes.** Don't use em-dashes in new prose, lore files, or HTML. They're a tell of AI drafting and they pile up fast. Reach for a period, a semicolon, a colon, parentheses, or a comma first; if none of those work, rewrite the sentence. En-dashes are fine for numeric ranges (e.g. *1321 MR – 2135 MR*).
 
+**Mortals, not humans.** Talan has more than a dozen ancestries; *Human* is one specific people (Zuzental's, beside the Elves), not the word for people-in-general. When you mean persons generically, write *mortals*, *folk*, *people*, *no one*, *anyone*, never *humans* or *mankind*. The generic-human reflex is strong and easy to fall into; catch it in revision.
+
 **Lore-first protocol.** Brainstormed content (a kingdom, an NPC, a ritual, a faction, a god's secret) goes into the right `lore/` markdown file, not directly into HTML. Lore files are the draft space; HTML pages are the published output.
 
 **Stay in lore by default.** A new session starts in drafting mode. Don't generate or modify HTML pages until the user gives an explicit publish signal: phrasings like *"add this to the page"*, *"publish it"*, *"render the page"*, *"make it live"*, *"put it on the site"*. If the intent is ambiguous, ask.
