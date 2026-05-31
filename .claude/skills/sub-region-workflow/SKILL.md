@@ -303,6 +303,8 @@ When a page-building agent invents canon-additive content (new place-names, gove
 
 ## Parallelization for multi-page promotion
 
+**One page or two?** This is the decision rule, and getting it wrong wastes time. **A single page: build it directly, no agent**, especially when you have just written its lore and the canon is already in your context. Spawning an agent for one page only re-reads everything from scratch (the template, the conventions, the lore you already hold) and runs serially, so it is slower and more wasteful than authoring it yourself. **Two or more pages: fan out one agent per page in parallel** (below), where the concurrency and the context-offload genuinely pay for the agents' cold-read.
+
 When promoting two or more sub-regions at once, **spawn one general-purpose agent per page in parallel** with the Agent tool. Each agent gets:
 
 - **Canon source pointers** — the lore source files for its target (`geography/<region>.md` bullet + glossary entries + bestiary if relevant)
