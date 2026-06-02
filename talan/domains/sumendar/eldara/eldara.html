@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eldara · The Forge City · Sumendar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #ef7d34;
+    --card-bg: rgba(40,22,12,0.5);
+  }
+
+  /* Peoples / tempers grid */
+  .peoples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .people-card { padding: 14px 16px; }
+  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
+  .people-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  /* Signature feature panels (the Fog District, the lifts, the almosts) */
+  .feature-panel { max-width: 880px; margin: 18px auto; }
+
+  /* The making-is-worship principle callout (left-bordered, ember-toned) */
+  .principle-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(48,24,12,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .principle-call .p-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .principle-call p { margin: 0 0 12px; line-height: 1.6; }
+  .principle-call p:last-child { margin-bottom: 0; }
+
+  /* GM-secret card grid */
+  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
+  .gov-card { padding: 16px 18px; }
+  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
+  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+</style>
+</head>
+<body data-page="eldara">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/sumendar/sumendar.html">Sumendar</a><span class="sep">›</span><span>Eldara</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Eldara</div>
+    <div class="page-subtitle">The Forge City · Komo's God-City</div>
+    <div class="page-flavor">Built by an argument that never ends: the dwarf draws the schematic, the kobold blows up five prototypes, and the wonder that finally stands was made by neither hand alone. Here making is the worship, and a maker is exactly as much as their last true thing.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Icelandic <i>eldr / eldur</i> (fire) → <b>Eldara</b>, "the fire." The city names fire in Icelandic where the domain <a href="/talan/domains/sumendar/sumendar.html">Sumendar</a> names it in Basque (<i>sumendi</i>).</dd>
+    <dt>Position</dt><dd>Drilled into a volcano mountain in <b>No Man's Land</b>, the unclaimed peaks of Sumendar. <b>The Throat</b> opens north onto the Midarra, with Floteyn's <b>Balatur Erui</b> across the water; one rail line runs south to Tahu Tangata, then <a href="/talan/domains/lautara/emarrea/emarrea.html">Emarrea</a>, then <a href="/talan/domains/lautara/merkavar/merkavar.html">Merkavar</a>.</dd>
+    <dt>Terrain</dt><dd>An ore-rich volcano mountain, dug into and under, with the lava close enough to work. The ground is no friend: it shifts, it rumbles, and quakes take cave-ins and seal the Throat.</dd>
+    <dt>Character</dt><dd>
+      <i>A vertical fire-city of one-off wonders, where the forge is the only authority and no one rules.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Craft Is Worship</span><span class="pill">No Government</span><span class="pill">Never Sleeps</span><span class="pill">One-Offs Only</span></div>
+    </dd>
+    <dt>Peoples</dt><dd><b>New Age Dwarves</b> who wanted the fire raw, <b>Kobolds</b> working in the very image of the god, and the <b>forge-fallen</b> Dragons who left Dragon's Reach for the bench. Around them the feeders and keepers, and the road-traders who haul the food in.</dd>
+    <dt>Tongue</dt><dd>Talanese for trade and abroad; the craft itself is the civic common ground, and no ancestry rules because no one rules.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Komo</b>-devotional. Making is the worship, and every workbench is an altar, the anvil and the bread-rolling table alike. Eldarans say the god comes as <b>the Apprentice</b>.</dd>
+    <dt>Rule</dt><dd>None. The forge is the only authority Eldara recognizes; disputes are <i>made</i>, not arbitrated. Komo's clergy, the <b>Emberwardens</b>, keep the rites, not the city.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">The Heart of Eldara</div>
+    <div class="gods-city-name">The Open Forge</div>
+    <div class="gods-city-byname">Komo's altar · the great communal forge the Emberwardens keep · any fireless hand may work it</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-argument" class="section-heading">The Argument That Never Ends</h2>
+  <div class="prose">
+    <p>Eldara is built by an argument, and the argument never ends. It is the city where the New Age Dwarf draws the schematic and builds it steady, and the Kobold blows up five prototypes rather than draw five drawings, and the wonder that finally stands was made by neither hand alone. The friction between the two tempers is the city's daily weather, and the city would not work without it. Nothing here is made once and repeated; the work comes off the forge as one-offs and small runs, and the only thing that confers standing is the piece itself. A maker is exactly as much as their last true thing, and no more.</p>
+
+    <p>It grew on ground no kingdom would claim. Ore runs rich through these peaks, the lava sits close enough to work, and the god is present in the stone, and those three facts together drew makers to a place too inhospitable for anyone sane to settle. Eldara was never founded; it <i>accreted</i>, and the chronicles can give no year for a city that simply gathered.</p>
+  </div>
+
+  <div class="principle-call">
+    <div class="p-label">The One Thing Eldara Believes</div>
+    <p><i>Making is the worship, and every workbench is an altar.</i></p>
+    <p>The anvil is an altar and so is the bread-rolling table; the god is depicted as a Kobold at the forge, and so in Eldara the reckless inventor works in the very image of the god. There is no liturgy apart from the work, and no shrine the labour is not already standing in. What is sacred here is the thing that speaks for itself, and nothing else.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-forge-is-the-only-authority" class="section-heading">The Forge Is the Only Authority</h2>
+  <div class="prose">
+    <p>Because the god's presence keeps No Man's Land ungoverned by mortal powers, Eldara has no council, no charter, and no ruling house. The forge is the only authority it recognizes. Disputes are not arbitrated; they are <i>made</i>, one maker out-building another, or two partnering until the finished piece settles who was right. Holiness is the product, never the place: a quarter that works the lava is no holier than one that swears by coal, and standing is your last true piece wherever you happen to stand.</p>
+
+    <p>The one standing institution is the clergy of Komo, the <b>Emberwardens</b>, who tend his rites and the great open forge that any fireless hand may work, and who witness the coming-of-age pieces. They keep the worship; they do not rule the city. Three peoples work the fires, and the city is the place where being from <i>here</i> outweighs whatever you were.</p>
+  </div>
+
+  <div class="peoples-grid">
+    <div class="accent-card people-card">
+      <div class="people-name">New Age Dwarves</div>
+      <p>The method-temper without a rulebook. Where the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> harnesses the dwarf into a safety-conscious institution, the Eldaran dwarf wanted the fire raw rather than chartered, and chose to stand beside the explosion. Many are dwarves who left the Order, or refused it.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">Kobolds</div>
+      <p>The reckless inventors who work in the very image of the god, since Komo himself is depicted a Kobold. In the Order the dwarves manage him; in Eldara he is co-equal and unchained, honoured for the spark rather than contained for the danger of it.</p>
+    </div>
+    <div class="accent-card people-card">
+      <div class="people-name">The Forge-Fallen</div>
+      <p>A small, old trickle of <b>Dragons</b> who left <a href="/talan/domains/sumendar/dragons-reach.html">Dragon's Reach</a> and set down the Purity Question entirely. The Reach asks forever what was lost; Eldara cares only what comes off your bench today. They take up Komo and worship through the forge, which the Reach names apostasy and they name freedom.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="eldara-and-the-order" class="section-heading">Eldara and the Order of Steam</h2>
+  <div class="prose">
+    <p>Eldara and the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> are easily confused and easily told apart. The Order is the secular, chartered, majority-dwarf industrial kingdom that builds the world its magirail, its ships, and its engines at a scale no other region matches. Eldara makes no such thing; it forges the impossible piece as an act of devotion and lets the Order turn proven craft into industry. The Order sees Eldara as brilliant lunatics who cannot ship; Eldara sees the Order as craft drained of fire into a stamping press.</p>
+
+    <p>Eldara mines its own ore and burns its own lava, so it wants nothing from the world but food, and it pays for its bread in <b>the almosts</b>: the near-true pieces that fell one degree short of their maker's vision and are still worth a fortune in any market beyond the mountains. A trader hauls grain up the road and goes home with a discarded Eldaran mechanism worth ten times the grain; both sides believe they got the better deal, and both are right.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The almosts.</b> The work of Eldara is the one true piece, and most of what comes off the forge falls a degree short of it: the engine that pumps beautifully but was meant to be a wonder, the cooling-rig that works flawlessly and bored its maker. These are <b>the almosts</b>, and they do not get sold so much as <i>installed</i>. Eldara's aqueducts, waste-burners, lift-shafts, and street-heat run on yesterday's near-masterpieces, which is why the plumbing of a fireless city would be the envy of a king. The rest go up the road as the city's coin, and a maker parts with them gladly, having only ever cared about the one that got away.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-city-that-never-sleeps" class="section-heading">The City That Never Sleeps</h2>
+  <div class="prose">
+    <p>The city is drilled down into the mountain and it never sleeps. Forges and workshops run around the clock, and the citizens sleep to the rhythm and stop hearing it the way they stop hearing their own hearts. The first thing an outsider says is that the city will not be quiet; the first thing a native notices on leaving is how silent everywhere else is. There is no civic dawn and no wake-bell, only the work that never stops, and a maker's one private morning rite: to <b>read their fire</b> before committing to a piece, the lava's mood or the coal's burn deciding what the day is worth attempting.</p>
+
+    <p>Eldara is sorted into districts at different depths, but depth means only preference, never rank. Some quarters cluster around the lava for those who swear by it, some around coal, and the <b>Fog District</b> sits against the city's seaward Throat, living in permanent steam where the deep heat meets cold Midarra air. Every district stands or falls on all of its makers, the baker as much as the blade-smith, because good bread invites the genius who stays for the crunch. A strong quarter has warmed streets and lanterns that light themselves; a fading one goes dim and cold as its makers die and no one adopts the systems. Those systems are private devotion pointed at a public need, maintained by craft-pride rather than any municipality, because letting a district's water fail is a shame before the god.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The lifts.</b> Movement in Eldara is mostly vertical, and no two lifts are alike, because each is some maker's adopted civic piece. A commute is as good as the district's best lift-wright: a strong quarter has a silent, instant, beautiful cage, and a fading one a clanking bucket or a stair. The whole vertical circulation of the city is a living museum of one-off elevators, some famous, some feared, and a native knows exactly which one to let settle before boarding.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>Native and visitor.</b> To a native, Eldara is a perfectly legible home where every hazard is known and routed around: which booms mean a routine test and which mean run, which deep forges will cook you, how to read the lava to plan the day. To a visitor it is a beautiful machine that might kill them. They board the wrong lift, wander into a working forge they had no business near, and get fleeced buying an "almost" that is worth a fortune, which is exactly the trade the road-traders run in the other direction. Everyone needs a local to walk them through it, and everyone learns to keep a hand on the wall.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="a-season-from-hunger" class="section-heading">A Season From Hunger</h2>
+  <div class="prose">
+    <p>Eldara encompasses destruction as plainly as it encompasses fire. Failure at the work runs from a light bruise to a burn to a lost hand to a pyre, and every maker accepts that scale the day they pick up the craft. The mountain adds its own: it shifts, it rumbles, and quakes take cave-ins, seal the Throat, and swallow workshops whole. Destruction is the daily companion of the place, in the fire that is worked and the rock that is stood on, and Eldarans live with it the way they live with the noise.</p>
+
+    <p>The two lifelines that feed a city which cannot feed itself are both fragile by nature. <b>The Throat</b>, the sea-passage punched north through the mountain to the Midarra in the centuries before the rail, is caves, and caves in volcano country collapse and have. The single rail line runs to Tahu Tangata, then Emarrea, then Merkavar through one narrow valley where a single rockfall sets the whole line dead. So Eldara is forever a season from hunger, a city that can forge anything and cannot reliably eat, rich in marvels and short on wheat whenever the mountain decides it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · The Apprentice at the Bench</h2>
+  <div class="prose">
+    <p>Komo is no distant god here. Eldarans say he comes to the work as the apprentice who offers his help: he turns up at a bench, ember-eyed and lost in the task as though nothing else in the world exists, and asks to lend a hand. His help ends in the forge or in destruction. Sometimes he reaches over and does the one thing that cracks the piece a maker could not finish, and it comes out truer than mortal hands could manage; sometimes he grins and lights the prototype that blows up in the smoke, and in the ruin the maker finally sees what they were doing wrong. Either way they walk off having learned, and they rarely understand who it was until he is gone. From this comes the one courtesy every Eldaran keeps: you never refuse an offered hand at your bench, however proud you are and however personal the piece, because the hand might be His.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, the Apprentice</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Makers Say</div>
+      Every workshop in Eldara keeps the same story, and every maker half-believes it happened to them or to their teacher. They say you can be deep in a piece you cannot finish, hours past the point where you should have given up, and a young one will pull up to the bench beside you, ember-eyed and grinning, and ask to lend a hand. They say you must never wave him off, because the hand might be Komo's, and to refuse the apprentice is to refuse the god. They say if he stays, one of two things happens: he reaches over and does the single thing you could not see, and the piece comes out truer than anything your hands have made; or he lights the thing, and it blows up in the smoke, and in the ruin you finally understand what you were doing wrong. They say either way you have been blessed, and either way you do not know who it was until you look up and he is gone. The old hands say the ones who learn fastest in Eldara are the ones who never once turned a helper away, and the ones who lost a hand to a stranger's grin learned something worth more than the hand.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, the Mountain Has a Clock</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What the Emberwardens Actually Do</div>
+      <p style="font-style:italic; margin-top:0;">Eldara's volcano will erupt one day and end the city. The Emberwardens know, and they are trying to learn when.</p>
+
+      <div class="gov-grid">
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">The Hidden Work</div>
+          <p>Behind the rites and the open forge, the clergy's true labour is to read the mountain at the scale no maker reads their own fire. The eruption is coming; the only question is the year, and the Emberwardens spend their lives trying to narrow it.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">Why Keep It Silent</div>
+          <p>To name it aloud would empty Eldara overnight, stop the making, and kill the city as a city long before the mountain does. So they carry it alone and keep reading, and let the makers work in the noise as though the noise will never end.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">The Dread They Half-Say</div>
+          <p>That the eruption is not blind geology but Komo's own nature, the largest expression of Forge and Destruction together. The apprentice lights the prototype to watch it blow; Eldara is the god's prototype, the grandest thing he ever sat down at.</p>
+        </div>
+        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="gov-name" style="color:#f0b020;">Worship and the Clock</div>
+          <p>No one can tell whether millennia of unceasing worship postpone the eruption or feed it. That uncertainty is the worst of what the Emberwardens hold, and the reason their reading never stops any more than the forges do.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, Why the Forge-Fallen Die Young</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Cost of Setting It Down</div>
+      <p style="font-style:italic; margin-top:0;">Eldaran Dragons die sooner than Reach purists, and the chronicles record only the fact.</p>
+      <p>The cause is <b>Odain</b>, the minor god of purist longevity whom no Dragon recognizes (see the Named Non-Bound Gods). The purist discipline that stretches a Reach Dragon's life toward two and a quarter centuries is, in part, that unrecognized god's blessing, and the apostate who set Purism down receives no share of it. The forge-fallen trade length of life for a life spent in the making, and they die earlier for it. None of them know that is the trade, and those who suspect it would not take the years back.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Eldara's central canon is settled; several specifics remain open, the kind future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The named districts.</b> The Fog District fixes the pattern, quarters named by method (lava, coal) or by a resident genius (the self-lighting district, the warmed-streets district); the full roster, their characters, and their standing rivalries are open for stories to cast.</li>
+      <li><b>Named Emberwardens.</b> The clergy who keep the open forge, witness the coming-of-age pieces, and carry the eruption-vigil are unnamed: the senior reader-of-the-mountain, the warden who kindles the open forge, the elder who holds the deepest count.</li>
+      <li><b>The great makers.</b> The named masters, their signature pieces, the famous lifts and the feared ones, and the standing lineages of a strong district are open.</li>
+      <li><b>The Scorch-yard.</b> The upper level where the reckless young are let loose safely has no named custom, rite of passage, or first-piece tradition written yet.</li>
+      <li><b>The road-traders.</b> The savvy operators who haul food up the Throat and the rail and leave with the almosts are a class without named houses or figures, and the etiquette of pricing a city's cast-offs is unwritten.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · SUMENDAR · ELDARA</div>
+
+</div>
+
+</body>
+</html>

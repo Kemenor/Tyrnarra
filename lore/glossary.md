@@ -186,6 +186,11 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Haraour Eliza**: Basque *eliza* (church); possibly religious sub-region
 - **Tahu Tangata**: indigenous culture name, meaning partially lost
 - **No Man's Land**: modern English; Komo's city-state territory
+- **Eldara** (the Forge City): old/ancient stratum. Icelandic *eldr / eldur* (fire) → *eldar* → **Eldara**, "the fire." Reaches for *Icelandic* fire while the domain Sumendar names *Basque* fire (*sumendi*), so city and domain say the same word in two old tongues. Komo's ungoverned god-city, accreted (never founded) on the one ground where ore, lava, and the god's presence all met; making is worship, the forge is the only authority.
+  - **The Throat**: descriptive English. The collapse-prone cave-passage punched north through the mountain to the Midarra; Eldara's pre-rail sea lifeline.
+  - **The Fog District**: descriptive English. Eldara's seaward quarter against the Throat, in permanent steam where deep lava-heat meets cold Midarra air.
+  - **The Scorch-yard**: descriptive English. The upper level where reckless young makers are let loose safely.
+  - **The almosts**: Eldaran term for near-true pieces that fell one degree short of their maker's vision; they plumb and power the city and pay for its imported food.
 - **Order of Steam**: modern English; industrial kingdom-guild hybrid
 - **Dragon's Reach**: modern English; dragon civilization capital
 
@@ -424,6 +429,11 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Iron Tide**: Plain English. The Empire's navy of **Magitech warship-cloudships**: cloud-capable warships engineered to cross the Cloud Sea from the Empire's home continent and then descend on Talanese coasts as a conventional naval force. Distinct from any civil cloudship Talan ever sees; the Empire builds them at industrial scale, which is the structural reason the Tide is the threat it is. Unlike Sortalde (which builds no cloudships at all), the Empire's industrial Magitech is fully sufficient for the crossing.
 - **Master Curator / Curator / Keeper / Collector**: Plain English. The Menagerie's rank ladder.
 - **Pyre Throne / Command Caste / Forged / Blooded / Respected Hands / Ashen / Broken / Fodder**: Plain English caste names of the Red Empire's social hierarchy.
+
+**Eldara (Komo's city-state, Sumendar):**
+- **The Emberwardens**: English-descriptive (the Windwatchers precedent). Komo's clergy in Eldara; publicly the keepers of his embers and his great open forge, and witnesses to coming-of-age pieces. The innocent surface ("those who keep the embers") hides the vigil. *(⚿ GM Secret: their true hidden work is reading the mountain to learn when the volcano will erupt and end the city; see `geography/sumendar.md`, *Eldara*.)*
+- **The Apprentice**: folk-religious term. Komo manifest at the workbench, the ember-eyed helper who offers a hand that ends in forge or destruction. From it comes the courtesy of never refusing offered help at one's bench.
+- **The forge-fallen**: Dragon's Reach's pejorative for Dragons who abandoned the Purity Question for Eldara and took up Komo through the forge.
 - **Flamefangs / Frostfangs / Steam Hulks / Corsair Auxilia**: Plain English. Iron Tide ship classes.
 - **Admirals of Flame and Frost**: Plain English. Iron Tide dual-command.
 - **Augments / Exemplars / The Apex Line / Ashborn / Harvested / Fleshwarps**: Plain English. The Menagerie's creation lines.

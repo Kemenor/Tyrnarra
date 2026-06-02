@@ -12,7 +12,7 @@ Locked seeds for the **13 Bound-god city-states**, defined together (2026-05-30)
 |---|---|---|---|---|
 | **Merkavar** · Market City | Commerce / Jianna | Trade · Wealth · Greed · Generosity | The god goes to market; the customer might be Her, so the market is fair. | **Done** (lore + HTML) |
 | **Myrria** · City of Second Chances | Darkness / Araphel | Shadows · New Faces · Rebirth · Erasure | Sanctuary and the door out of who you were. | **Done** |
-| **Eldara** · Forge City | Fire / Komo | Flame · Passion · Destruction · Forge | Built by two tempers: dwarf-schematic and kobold-explosion, wonders from their argument. | seed locked |
+| **Eldara** · Forge City | Fire / Komo | Flame · Passion · Destruction · Forge | Built by two tempers: dwarf-schematic and kobold-explosion, wonders from their argument. | **lore done** (HTML pending) |
 | **Uravel** · Floating Isles | Water / Shuun | Rivers · Seas · Adaptability · Drowning | The city with no solid ground; adapt or drown. | seed locked |
 | **Haizava** · Shifting City | Wind / Fisaya | Storms · Travel · Breath · Ruin | The city the wind rebuilds; keep a wind-reader, not a map. | **lore done** (placement + HTML pending) |
 | **Lurrath** · Steadfast City | Earth / Sarrum | Stone · Harvest · Endurance · Burden | The unmoved stone that has never fallen, never changed, and bears every burden. | seed locked |

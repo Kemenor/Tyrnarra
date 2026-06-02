@@ -159,7 +159,7 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 - **Specific dispute incidents with the Order of Steam**: the cordial-formal / complicated-practical relationship has presumably generated named incidents over the centuries; none are written
 - **Specific scattered fragment-sites elsewhere on Talan**: most unmapped; named ones would be hooks waiting to attach (could become individual ruin-pages or be folded into other domain pages)
 - **The practical scale of the Dragonet schism**: currently described as *untested and simmering*; the pressure-point is unwritten
-- **The Reach's relationship with Komo's church and Eldara**: both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified
+- **The Reach's relationship with Komo's church and Eldara**: both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified *(partly resolved 2026-06-02: the relationship includes the **forge-fallen**, Reach Dragons who leave for Eldara and take up Komo; see `../lore/geography/sumendar.md`, Eldara)*
 **Where.** [lore/geography/sumendar.md](../lore/geography/sumendar.md), *Dragon's Reach*; [lore/ancestries.md](../lore/ancestries.md), *Dragons*; [dragons-reach.html](../talan/domains/sumendar/dragons-reach.html), Open in Canon panel mirrors these.
 
 ### [Lost Kingdom] A small city of the cursed-born
@@ -419,6 +419,7 @@ Pace as stories want them. Rolling work.
 ### [Geography] Other god city-state pages: content maturation
 **Decided.** Eleven god city-states remain unpromoted to dedicated pages: **Haizava** (Vindul · Shifting City) · **Merkavar** (Lautara · Market City) · **Uravel** (Floteyn · Floating Isles) · **Eldara** (Sumendar · Forge City) · **Denbora** (Lioaru · Threefold City, built on sand-whales) · **Lurrath** (Brauogi · Steadfast City) · **Thekkavar** (Ezkudon · City of Learning) · **Ljosarn** (Egulon · Everbright City) · **Lograth** (Zuzental · Judgment City) · **Nahaskel** (Nashavel · Unmapped City) · **Veidrath** (Ehizahar · Hunting City) · **Frae City** (Askamira · the Free City). Each has a name, byname, and one or two cultural details on `grand-gods.html` and the parent domain page.
 **Open.** Each city needs its own districts, named figures, landmarks, faith/politics specifics, and visitor-facing flavour before it earns a Myrria-style dedicated page. Pace by story interest; none are blocking. **Frae City** has the most narrative pull (Council of Thirteen venue, Cronus's seat, most religiously diverse city on Talan); **Eldara** is the natural second pick (Order of Steam adjacency means the existing Sumendar build provides scaffolding).
+**Update (2026-06-02).** Eldara now has full committed lore: `lore/geography/sumendar.md` (*Eldara, the Forge City*), glossary (Eldara plus the Throat, Fog District, Scorch-yard, the almosts, the Emberwardens, the Apprentice, the forge-fallen), and ancestry notes (Kobold, New Age Dwarf, Dragon forge-fallen). HTML promotion pending.
 **Where.** [grand-gods.html](../grand-gods.html), per-god city fields; per-domain pages under [talan/domains/](../talan/domains/).
 
 ### [Geography] River Duchies: flesh-out before promotion
