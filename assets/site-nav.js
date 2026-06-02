@@ -64,6 +64,7 @@
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/talan/domains/floteyn/floteyn.html',   children: [] },
     { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/talan/domains/sumendar/sumendar.html', children: [
+      { slug: 'eldara',         label: 'Eldara &middot; the Forge City', href: '/talan/domains/sumendar/eldara/eldara.html', children: [] },
       { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/talan/domains/sumendar/order-of-steam/order-of-steam.html', children: [
         { slug: 'house-eisenhart', label: 'House Eisenhart', href: '/talan/domains/sumendar/order-of-steam/house-eisenhart.html', children: [] }
       ]},
