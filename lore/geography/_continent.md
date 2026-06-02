@@ -111,7 +111,7 @@ Talanese carries regional dialects in every domain. They diverge in vocabulary, 
 
 - **Lautaran merchant cant**: quick, contract-heavy, with a Jianna-tradition habit of finishing a deal with a verbal seal-phrase
 - **Vindul highland Talanese**: sing-song intonation from the mountain monasteries; preserves more old-Imperial vocabulary than most dialects
-- **Ehizahar tribal registers**: pruned-down, faster, four-tribal-variant where Orc, Kholo, Lizardfolk, and Centaur each carry their own inflection over the shared spine
+- **Ehizahar tribal registers**: pruned-down, faster, three-tribal-variant where Orc, Kholo, and Lizardfolk each carry their own inflection over the shared spine
 - **Sumendar industrial Talanese**: heavy with Order-of-Steam coinages for machinery and Magitech parts; faster than the southern average
 - **Zuzental legal Talanese**: formal, sub-clausal, the closest of the modern dialects to the original Imperial Dwarvish
 - **Brauogi village Talanese**: slow, agricultural-calendar-rich, the dialect outsider chroniclers most often hear as *"the way Talan really sounds"*

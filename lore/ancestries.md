@@ -26,20 +26,20 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 | Domain | God | Dominant Ancestries | Notable Uncommon |
 |---|---|---|---|
 | **Light** · Egulon | Iro | Nagaji · Shoony | – |
-| **Darkness** · Myrkono | Araphel | Fetchling | – |
+| **Darkness** · Myrkono | Araphel | Fetchling · Centaur (Eizhalun) · Surki | – |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold | Automaton |
 | **Water** · Floteyn | Shuun | Tripkee · Athamaru · Merfolk | Leshy |
 | **Earth** · Brauogi | Sarrum | Hobgoblin · Goblin · Minotaur | Leshy |
 | **Wind** · Vindul | Fisaya | Kashrishi · Tengu · Strix | Jotunborn (Baerfrost) |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi | – |
 | **Law** · Zuzental | Forseti | Elf · Human | – |
-| **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk · Centaur (Lands of Villtur) | Goloma |
+| **Hunt** · Ehizahar | Hinka | Orc · Kholo · Lizardfolk | Goloma |
 | **Commerce** · Lautara | Jianna | Kitsune (in Emarrea) · Halfling · Vishkanya | – |
 | **Knowledge** · Ezkudon | Enki | Shisk · Catfolk | – |
 | **Chaos** · Nashavel | Vesuna | Gnome · Vanara | Conrasu · Anadi |
 | **Freedom** · Askamira | Cronus | *All ancestries equally* | – |
 
-**Uncommon everywhere:** Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle) · Surki (slight concentration in upper Darklands).
+**Uncommon everywhere:** Ratfolk · Dragonet (Zaharsuge-line wyrmkin; small concentrations in upper Darklands and Basogur Jungle).
 
 **Rare everywhere:** Poppet · Sprite (common in the Feyworld but rare on the Material Plane) · Fleshwarp (common in the Blackened Lands) · Skeleton (common in the Blackened Lands) · Android · Azarketi · Awakened Animal (no domain concentration).
 
@@ -81,11 +81,9 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 Curious beings, **dominant in Ezkudon (Knowledge / Enki)**; Enki himself is depicted as a black-haired catfolk. They are over-represented in the scholar-caste, the archive-keeper professions, and Ezkudon's negotiated-access knowledge economy.
 
 ### Centaur
-**Nomadic plainsfolk.** Two distinct cultural populations on Talan, in two domains that share the open-ground character:
-- **Dominant in the Lands of Villtur (Ehizahar / Hunt)**: the largest centaur population on Talan. Tribal, hunt-aligned, sharing the territory with Orcs, Kholo, and Lizardfolk; the four ancestries' tribal cultures intermix and feud along recognisable patterns.
-- **Also present on the Shadow Steppes (Myrkono / Darkness)**: smaller herds that live cautiously around the two Wardstone sites of the Steppes. The Shadow Steppes centaurs are notably more wary, more nocturnal, and more theologically inflected (Araphel-adjacent) than their Villtur cousins.
+**Nomadic plainsfolk of the Shadow Steppes; the Eizhalun.** **Dominant in Myrkono (Darkness / Araphel)** alongside the Fetchling, sharing the open steppe rather than the city. Centaurs were once a Hunt-domain people: the longest-ranging of the Lands of Villtur tribes, whose hunt-circuits ran wider than Orc, Kholo, or Lizardfolk would follow. During the Dark Era, swarm-spawn began crawling west out of the Hollow of Ten Thousand Threads (see [`geography/myrkono.md`](geography/myrkono.md)) and spilling across the open grass. The centaurs followed the corruption-beasts out of Ehizahar to run them down, and the hunt never ended; clan by clan they stopped returning, their quarry no longer game but the things that climb up from below, and a people of the day became a people of the night. By the reconstruction after the Dark Era the centaurs of Villtur were a memory, and the centaur people kept the Shadow Steppes.
 
-The two populations are aware of each other but do not intermarry routinely; the cultural drift between Villtur-tribal and Steppes-watchful is wider than appearance suggests.
+They are the **Eizhalun** now (*night-hunt*; see [`glossary.md`](glossary.md)): the open-ground watch of the steppe. The "wandering clans" and "nomadic clans" that the Wardstone canon credits with guarding the Steppes Wardstone and gathering around the Lakeside Wardstone are theirs; they ride the night between the Wardstone sites, running down swarm-spawn before a nest can root. Hunt-craft survived the crossing; the Hunt-god did not follow whole. They hunt by starlight under Araphel, for whom darkness is the quiet and the cover, not the enemy; Hinka endures among them as old-memory and method, not worship. Their counterpart underground is the **Surki**, who resist the same corruption from the deep places the Eizhalun cannot reach: the two peoples hunt one enemy from opposite sides of the ground, and recognise each other for it without sharing much else. Rare outside Myrkono; the relocation was total enough that a centaur in Ehizahar today is a traveller, not a native.
 
 ### Conrasu
 Beings of chaos given form. **Uncommon in Nashavel (Chaos / Vesuna)**, excluding the Basogur Jungle interior; rare elsewhere.
@@ -161,7 +159,7 @@ Within Lautara, two distinct living-culture variants are already coined. **The m
 **Common in Vindul (Wind / Fisaya).** Secular by inclination; the Kashrishi tradition keeps its theology private and its civic life public, the inverse of the more zealous Nagaji of Egulon. Beyond the Air Monastery, Kashrishi bring their observation-and-instrument discipline to **Haizava**, Fisaya's shifting god-city, where the continent's finest mappers live, with some irony, in the one city no map can hold (see [`geography/vindul.md`](geography/vindul.md), *Haizava*).
 
 ### Kholo
-**Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations, sharing the territory with the other three Hunt-dominant ancestries (Orc, Lizardfolk, Centaur). The four tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the four.
+**Dominant in Ehizahar (Hunt / Hinka)**, alongside Orcs. Tribal, strong, and oriented around the Hunt as both daily reality and theological practice. The **Lands of Villtur** hold the largest Kholo populations, sharing the territory with the other two Hunt-dominant ancestries (Orc, Lizardfolk). The three tribal cultures intermix and feud along recognisable patterns; Kholo packs tend toward the most explicitly matriarchal and bone-token-marked of the three.
 
 ### Kitsune
 **Known as the Divine Envoys. Dominant in Lautara**, specifically in **Emarrea**. Fisaya herself is depicted as a female kitsune; the affinity goes back as far as the chronicle record reaches. Full living-culture canon (Heartcourt, Catjomin Sake, Kyūbi-no-Den, foxfire, lifespan and tail-growth) in [`geography/lautara/emarrea.md`](geography/lautara/emarrea.md).
@@ -175,19 +173,19 @@ A third Lautaran kitsune population anchors **the espresso-bar network of Itsasa
 Plant-spirits, **dominant in the Earth and Water domains** (Brauogi and Floteyn). Can be **created through ritual** or naturally reproduce. The two-domain spread reflects the fact that Leshy are mediators between the soil and the water; they are creatures of both.
 
 ### Lizardfolk
-**Common in Ehizahar (Hunt / Hinka)**, alongside Orcs, Kholo, and Centaur. One of the four dominant ancestries of the Hunt domain; tribal cultures parallel to (but distinct from) the orc and kholo traditions. Lizardfolk packs tend to be the most strategic of the four: slower to start a hunt, more patient in pursuit, more deliberate at the kill.
+**Common in Ehizahar (Hunt / Hinka)**, alongside Orcs and Kholo. One of the three dominant ancestries of the Hunt domain; tribal cultures parallel to (but distinct from) the orc and kholo traditions. Lizardfolk packs tend to be the most strategic of the three: slower to start a hunt, more patient in pursuit, more deliberate at the kill.
 
 ### Merfolk
 **Aquatic.** Common in **Floteyn (Water / Shuun)** waters and **Hafra** coastal regions; a small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty). Rare in any landlocked region. Merfolk-Athamaru relations are generally cordial in shared waters, though merfolk treat their saltwater claim as senior.
 
 ### Minotaur
-**Dominant in Brauogi (Earth / Sarrum)** alongside Goblins and Hobgoblins, sharing the domain as Sarrum's third major ancestry. **Sarrum himself is depicted as a Minotaur** (see `gods.md`, per-god sheet); Talan's Minotaurs are his cultural cousins. Disposition: immovable, patient, slow to act and slower to forgive. Excellent stonecutters, farmers, and contract negotiators (their patience is professional, not personal). Most kingdoms across Talan host small Minotaur trade-houses; Brauogi is simply where they are at home. The Minotaur-Goblin-Hobgoblin three-way of Brauogi politics is more cooperative than the Hunt domain's four-way Villtur dynamics; the Earth ancestries trade rather than feud.
+**Dominant in Brauogi (Earth / Sarrum)** alongside Goblins and Hobgoblins, sharing the domain as Sarrum's third major ancestry. **Sarrum himself is depicted as a Minotaur** (see `gods.md`, per-god sheet); Talan's Minotaurs are his cultural cousins. Disposition: immovable, patient, slow to act and slower to forgive. Excellent stonecutters, farmers, and contract negotiators (their patience is professional, not personal). Most kingdoms across Talan host small Minotaur trade-houses; Brauogi is simply where they are at home. The Minotaur-Goblin-Hobgoblin three-way of Brauogi politics is more cooperative than the Hunt domain's three-way Villtur dynamics; the Earth ancestries trade rather than feud.
 
 ### Nagaji
 **Dominant in Egulon (Light / Iro)**. **Strong belief in the gods. Almost zealous.** The Nagaji are Iro's most fervent worshippers, to the point that other domains sometimes find them off-putting in their certainty. Most of the public-facing clergy of Iro's church are Nagaji; their conviction is part of what powers the church's outward energy.
 
 ### Orc
-**Dominant in Ehizahar (Hunt / Hinka)** alongside Kholo, Lizardfolk, and Centaur. Tribal, strong. Hinka is depicted as a red-headed orc; the cultural affinity runs deep. Within the four-way tribal mix of the Lands of Villtur, Orcs are usually the loudest, the first to charge, and the most consistently in feud with their three counterparts.
+**Dominant in Ehizahar (Hunt / Hinka)** alongside Kholo and Lizardfolk. Tribal, strong. Hinka is depicted as a red-headed orc; the cultural affinity runs deep. Within the three-way tribal mix of the Lands of Villtur, Orcs are usually the loudest, the first to charge, and the most consistently in feud with their two counterparts.
 
 ### Poppet
 Small constructed beings. Rare everywhere; no domain-specific concentration.
@@ -214,7 +212,7 @@ Small constructed beings. Rare everywhere; no domain-specific concentration.
 **Commonly found in the storm-wracked sub-region of Fellibylur (Vindul / Wind / Fisaya).** Winged sky-people who ride the gathering weather of the Vindul steppe and the Hafra coast; their natural flight and weather-attunement make them the deepest keepers of storm-lore on Talan. The Strix interior of Fellibylur runs nomadic, clan-circuiting the open grass-steppe and roosting in foothill and river-bluff cliffs; the coastal Strix live among the **Skybell Republic**'s port-towns and serve as the core of Fellibylur's elite **Stormriders**, the foul-weather Hafra pilots no merchant fleet that crosses the cloud-sea will cross without if they can help it. The **Thunderhost** (Fellibylur's clan-moot half of the Stormpact) is functionally a council of Strix clan-chieftains. Uncommon outside Vindul, where they are seen mostly as travellers or hired pilots from Fellibylur. In **Haizava**, Fisaya's shifting god-city, the Strix are the natural pilots of the wind-canals, the svifs, and the airships, the winged folk most at home in a city whose whole business is the air (see [`geography/vindul.md`](geography/vindul.md), *Haizava*).
 
 ### Surki
-**Insectoid sapients of the deep places.** **Uncommon in the upper Darklands**; they share the territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Surface-dwelling Surki are usually individuals who climbed out of the Darklands for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in mortal cities. Their relationship to the Vermin Queen (one of the Nine Generals; see `factions.md`, *Remnants of Corruption → The Nine Generals*) is **strictly antagonistic**: Surki are insectoid but not corrupted, and the Vermin Queen's swarm-corruption is precisely the fate they organise to resist.
+**Insectoid sapients of the deep places.** **Dominant in Myrkono (Darkness / Araphel)**; also present in their old home, the **upper Darklands**, where they share the deep territory loosely with the Sentinel Dwarves (who tolerate them as fellow-watchers against deeper threats) and the Ratfolk (who treat them as eccentric cousins rather than rivals). Rare anywhere else. Myrkono is the one domain that takes them in: Araphel's darkness is the quiet and the cover, not a thing to fear, and Myrria's second-chances doctrine extends to the compound-eyed and chitinous the welcome that cities elsewhere refuse them. Surki live throughout the domain's deep and shadowed places: the mountain underways, the under-vaults below Myrria, the old-forest hollows, and most militantly the **Shadow Steppes**, where the Vermin Queen's Hollow of Ten Thousand Threads seeds swarm-corruption outward and the Surki organise to resist precisely the fate it represents. Their relationship to the Vermin Queen (one of the Nine Generals; see `factions.md`, *Remnants of Corruption → The Nine Generals*) is **strictly antagonistic**: Surki are insectoid but not corrupted. On the steppe they are the deep-ground half of one watch with the **Eizhalun** centaurs above: the night-riders on the grass, the deep-climbers beneath it. Surface-dwelling Surki elsewhere on Talan are usually individuals who climbed out for reasons of their own; their compound eyes and chitinous segmentation make them recognisable but not always welcomed in cities that lack Myrkono's habit of welcome.
 
 ### Tengu
 **Usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. Full living-culture canon (Skarvorn Republic, eleven clans, Vornsketta, singing cities, stormsinging, three teas, eight winds) in [`geography/vindul/haizetsua.md`](geography/vindul/haizetsua.md).
