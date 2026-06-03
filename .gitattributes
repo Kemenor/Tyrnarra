@@ -1,0 +1,10 @@
+# Line-ending policy: text files are stored with LF in the repo.
+# This stops editor CRLF churn from showing up as whole-file diffs.
+* text=auto
+
+# Windows-native scripts check out with CRLF.
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets, never normalized.
+*.webp binary
