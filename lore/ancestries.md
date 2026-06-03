@@ -77,6 +77,8 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 
 **For GM use:** Any Azarketi character who follows their bloodline far enough back hits the Storveldi Denbora, and through them, potentially, the integration procedure that elevated mortals past Demi-God status. The procedure is not public knowledge but is not lost. An Azarketi adventurer is the most natural in-world thread to that knowledge.
 
+**In Valreka:** a community of Azarketi live among the Ghoran of Tani's whale-borne god-city, having set down the Elden-blood pride to atone as the city's **water-bearers**, finding and giving the water a desert city cannot live without, watering the Stokkul shoals, and guiding the youth-riders (the Strays) safely home. Their forebears were among Tani's killers; the life of her city now runs through their hands (see `geography/lioaru.md`, *Valreka*).
+
 ### Catfolk
 Curious beings, **dominant in Ezkudon (Knowledge / Enki)**; Enki himself is depicted as a black-haired catfolk. They are over-represented in the scholar-caste, the archive-keeper professions, and Ezkudon's negotiated-access knowledge economy.
 
@@ -130,7 +132,7 @@ Two coexisting cultures, both rooted in **Sumendar (Fire / Komo)**:
 Both are rare everywhere outside their source. A Blackened Lands fleshwarp is rare-but-pitied; a Menagerie fleshwarp is rare-and-feared. Most Talanese cannot tell them apart on sight.
 
 ### Ghoran
-"Guardians of Time." **Dominant in Lioaru (Time / Tani)**; they are explicitly aligned with Tani's domain and many serve as wardens of temporally unstable sites along the Lioaru-Lost-Kingdom border. Their plant-rooted longevity gives them a perspective on the slow currents of time that suits their domain.
+"Guardians of Time." **Dominant in Lioaru (Time / Tani)**; they are explicitly aligned with Tani's domain and many serve as wardens of temporally unstable sites along the Lioaru-Lost-Kingdom border. Their plant-rooted longevity gives them a perspective on the slow currents of time that suits their domain. In **Valreka**, Tani's whale-borne god-city, the Ghoran are the majority and the heart: long-lived enough that each elder is a living archive of centuries the rest of the city holds only in fragments, which is exactly the work of a people whose city exists to remember (see `geography/lioaru.md`, *Valreka*).
 
 ### Gnome
 **Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest.

@@ -21,7 +21,7 @@ Locked seeds for the **13 Bound-god city-states**, defined together (2026-05-30)
 | **Lograth** · Judgment City | Law / Forseti | Order · Justice · Oath · Tyranny | The court of last resort; law made flesh, the oath absolute. | seed locked |
 | **Veidrath** · Hunting City | Hunt / Hinka | Predation · Survival · Patience · Cruelty | The city that is a hunting-ground; status is the kill, patience is law. | seed locked |
 | **Nahaskel** · Unmapped City | Chaos / Vesuna | Change · Creativity · Spontaneity · Madness | The city its own people will not stop reinventing; wonders and abominations overnight, never twice. | seed locked |
-| **Denbora** · The Whale-Borne City | Time / Tani | Fate · Patience · Memory · Decay | A nomad city on titanic sandwhales, carrying its own buried past across the desert to build its future. | seed locked |
+| **Valreka** · The Whale-Borne City | Time / Tani | Fate · Patience · Memory · Decay | A whale-borne nomad city roaming to recover **Oroiri**, its buried holy city; lives in three tenses. (Renamed from *Denbora*, now reserved for the Storveldi Denbora empire alone.) | **lore done** (HTML pending) |
 | **Frae City** · the free seat | Freedom / Cronus | Choice · Defiance · Wandering · Lawlessness | No throne and no law; you belong only by choosing it. | seed locked |
 
 ## Uniqueness architecture

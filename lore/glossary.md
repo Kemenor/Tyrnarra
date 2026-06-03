@@ -59,7 +59,7 @@ These appear in the existing HTML primers. Some don't follow the Basque/Icelandi
 | Fire | Komo | Sumendar | Eldara |
 | Freedom | Cronus | Askamira | Frae City |
 | Earth | Sarrum | Brauogi | Lurrath |
-| Time | Tani | Lioaru | Denbora |
+| Time | Tani | Lioaru | Valreka |
 | Knowledge | Enki | Ezkudon | Thekkavar |
 | Light | Iro | Egulon | Ljosarn |
 
@@ -196,7 +196,9 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Dragon's Reach**: modern English; dragon civilization capital
 
 **Lioaru (Time):**
-- **Galdua Jendea**: Basque; meaning disputed ("Place of Many Waters" or "Place of the Lost People")
+- **Valreka** (the Whale-Borne City): Icelandic *hvalreki* (a beached whale; a windfall, a godsend) → *h-*loss, soften → **Valreka**, "the whale-drift," with the buried sense of the lucky thing the sand gives back. Tani's roaming god-city, refounded at her rebirth, riding sand-whales across Galdua Jendea to recover Oroiri.
+- **Oroiri**: Basque *oroit* (memory) + *hiri* (city) → contraction, *h-*loss → **Oroiri**, "the city of memory." Tani's buried Gods'-Era holy city, scattered under the desert at her death; Valreka roams to recover it piece by piece. Distinct from the **Storveldi Denbora**, whose separate ruin is the Blackened Lands; "Denbora" now names only that cursed empire.
+- **Galdua Jendea**: Basque; meaning disputed, "Place of Many Waters" (the hidden seeps and sand-springs the Azarketi water-bearers tend) or "Place of the Lost People." Houses Valreka and the sand-whale roaming-range.
 - **Lost Kingdom**: modern English; temporally unstable ruins
 - **River Duchies**: modern English; oasis river valley confederation
 - **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru. Partially independent cultural identity persists.
@@ -435,6 +437,13 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The Emberwardens**: English-descriptive (the Windwatchers precedent). Komo's clergy in Eldara; publicly the keepers of his embers and his great open forge, and witnesses to coming-of-age pieces. The innocent surface ("those who keep the embers") hides the vigil. *(⚿ GM Secret: their true hidden work is reading the mountain to learn when the volcano will erupt and end the city; see `geography/sumendar.md`, *Eldara*.)*
 - **The Apprentice**: folk-religious term. Komo manifest at the workbench, the ember-eyed helper who offers a hand that ends in forge or destruction. From it comes the courtesy of never refusing offered help at one's bench.
 - **The forge-fallen**: Dragon's Reach's pejorative for Dragons who abandoned the Purity Question for Eldara and took up Komo through the forge.
+
+**Valreka (Tani's city-state, Lioaru):**
+- **The Strays**: plain English. The citywide crew of youngsters who break and ride Stokkul for the joy of it, a chapter on every whale; the loose herd inside the herd.
+- **The Outrider Corps**: plain English. Valreka's sanctioned riders who cross the open sand between the moving whales on Stokkul; the city guard keeps its own outrider unit beside them.
+- **The memory-keepers**: descriptive. The whale-less house turned archaeologist, holding the old noble quarter on the mother whale and leading the recovery of Oroiri.
+- **Stokkul**: Icelandic *stökkull* (the leaper; a leaping-cetacean word) → umlaut-loss → **Stokkul**. The small leaping sand-kin of the whales; symbiotic shoals attend every sand-whale, and the city breaks its mounts from them.
+- **Amona** *(⚿ GM-tier)*: Basque "grandmother." The handle Tani rides under among the mother whale's Strays; the crew dubbed her for her old-soul fretting and never learn she is the goddess. See `geography/lioaru.md`, *Valreka → ⚿ GM Secret: Amona of the Strays*.
 - **Flamefangs / Frostfangs / Steam Hulks / Corsair Auxilia**: Plain English. Iron Tide ship classes.
 - **Admirals of Flame and Frost**: Plain English. Iron Tide dual-command.
 - **Augments / Exemplars / The Apex Line / Ashborn / Harvested / Fleshwarps**: Plain English. The Menagerie's creation lines.
