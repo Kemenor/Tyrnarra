@@ -224,6 +224,22 @@ If you inferred something from canon ("Kashrishi are secular per bestiary, so th
 
 ---
 
+## The depth axes (what every full build now covers)
+
+These are the recurring beats the god-city pass settled into (Haizava, Eldara, Valreka, Thekkavar; the locked seed-roster is `docs/god-city-seeds.md`). Grill them in Phases 3-5, render them in the Phase 5 lore and the Phase 7 page. They generalise to any sub-region; a full god-city build should hit all of them.
+
+- **Daily life: the trio, and the job each leg does.** Cover all three. A single thematic lens (the descent, the discipline of restraint) is the *content* the trio reveals, not a replacement for it.
+  - **Mass life** — the ordinary person's day and rhythm, and the shared civic ritual if there is one (Haizava's dawn reading, Thekkavar's Quiet Hour and tea-houses, Valreka's herd-rhythm).
+  - **Transport / circulation** — how people and goods actually move, and the **signature movement** the city is known for.
+  - **Visitor vs native** — what the outsider sees versus what the local knows, usually a knowledge-or-danger gap (which lift to trust, which booms mean run, that the deep is lethal, how to read the herd, the Quiet Hour you don't talk through).
+  - **Youth** — rebellion, fun, freedom from the rules: the sanctioned transgression (Haizava's svif trick-crews, Eldara's scorch-yard, Valreka's Strays, Thekkavar's unauthorised descent) and the coming-of-age act.
+- **The signature movement.** Each city gets one, or pointedly does not (and the absence is the point). Haizava: the svif and the clergy-piloted windrift. Valreka: outriders on breaching Stokkul, plus the contraption-bridges. Eldara: the one-off lifts, no universal craft. Thekkavar: page-runners and a deliberate walking-pace.
+- **The god in the city (the manifestation pattern).** Every bound god appears in their seat in the shape of that city's life; coin how. It is usually the **◈ Popular Belief**, sometimes with a **⚿ GM Secret** beneath (the hidden or truer version). Locked examples: Araphel a stranger who talks (Myrria); Jianna a trader, the customer who might be Her (Merkavar); Fisaya herself, riding a svif (Haizava); Komo the apprentice who offers help (Eldara); Tani the old woman at the dig (◈) and Amona of the Strays (⚿) (Valreka); Enki the incognito lecturer who teaches and withholds (Thekkavar).
+- **The two-tier reveal.** A god-city carries at least one **◈ Popular Belief** (the folk manifestation or tale, often quietly true) and at least one **⚿ GM Secret** (the domain's hidden seam: Haizava's counter-trim, Eldara's eruption-clock, Merkavar's Stall-Jianna-Keeps, Valreka's Amona, Thekkavar's price in the Leize). Open prose stays chronicler-tier; the seam lives in the box.
+- **Seed and uniqueness (god-cities).** The seed is already locked in `docs/god-city-seeds.md`: confirm it and short-circuit Phases 1-2. Run the 2-sentence test against the *other god-cities*, not only same-domain siblings (the elemental quartet and the make/build/know cluster are the easy blurs). Answer the economy question (what the city makes, keeps, or needs, and what leaves it). On the page, the first themed section expands the seed, never governance.
+
+---
+
 ## Phase 6: Commit lore (on explicit go)
 
 User green-lights with "commit" / "go ahead" / "publish to lore" / similar. Apply edits in parallel:

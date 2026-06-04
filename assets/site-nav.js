@@ -75,7 +75,9 @@
       { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/talan/domains/lioaru/lost-kingdom.html', children: [] }
     ]},
     { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/talan/domains/brauogi/brauogi.html',   children: [] },
-    { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [] },
+    { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/talan/domains/ezkudon/ezkudon.html',   children: [
+      { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }
+    ] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/talan/domains/egulon/egulon.html',     children: [] },
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/talan/domains/zuzental/zuzental.html', children: [
       { slug: 'lograth',          label: 'Lograth · The Judgment City',        href: '/talan/domains/zuzental/lograth/lograth.html',  children: [] },
