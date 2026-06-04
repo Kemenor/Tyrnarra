@@ -17,7 +17,7 @@ Locked seeds for the **13 Bound-god city-states**, defined together (2026-05-30)
 | **Haizava** · Shifting City | Wind / Fisaya | Storms · Travel · Breath · Ruin | The city the wind rebuilds; keep a wind-reader, not a map. | **lore done** (placement + HTML pending) |
 | **Lurrath** · Steadfast City | Earth / Sarrum | Stone · Harvest · Endurance · Burden | The unmoved stone that has never fallen, never changed, and bears every burden. | seed locked |
 | **Ljosarn** · Everbright City | Light / Iro | Sun · Hope · Growth · Zealotry | The city without shadow; eternal light as hope and as nowhere-to-hide. | seed locked |
-| **Thekkavar** · City of Learning | Knowledge / Enki | Wisdom · Discovery · Mysteries · Arrogance | Every facet of life learnable, the Occult spark in song and recipe alike; bottomless libraries, sealed depths. | seed locked |
+| **Thekkavar** · City of Learning | Knowledge / Enki | Wisdom · Discovery · Mysteries · Arrogance | Every facet of life learnable, the Occult spark in song and recipe alike; bottomless libraries, sealed depths; the Infinite Library (the Leize) and Enki's bargain beneath. | **lore done** (HTML pending) |
 | **Lograth** · Judgment City | Law / Forseti | Order · Justice · Oath · Tyranny | The court of last resort; law made flesh, the oath absolute. | seed locked |
 | **Veidrath** · Hunting City | Hunt / Hinka | Predation · Survival · Patience · Cruelty | The city that is a hunting-ground; status is the kill, patience is law. | seed locked |
 | **Nahaskel** · Unmapped City | Chaos / Vesuna | Change · Creativity · Spontaneity · Madness | The city its own people will not stop reinventing; wonders and abominations overnight, never twice. | seed locked |

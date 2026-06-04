@@ -216,6 +216,8 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Mugamen**: Basque *muga* (border) + *mendi* (mountain) → *muga-mendi* → assimilation to **Mugamen** "border-mountain." The southern mountain range that walls Brauogi off from Myrkono; the line where the bread country ends and the deep forests of Araphel's domain begin. Brauogi-side farmers and Myrkono-side shadow-folk both look at the same wall from opposite sides.
 
 **Ezkudon (Knowledge):**
+- **Thekkavar** (the City of Learning): Icelandic *þekkja* (to know, to recognise) + *varða* (to ward, to guard) → "the knowing-keep, where knowledge is warded," drifted to **Thekkavar**. Enki's god-city in Jakinduria; the formal-institutional pole of Talanese learning (it teaches and keeps, where Azkataria argues and Atarialda remembers). Sits beside the Basque-named domain Ezkudon ("the hidden"): the hidden domain, the knowing-keep at its heart.
+- **The Leize**: Basque *leize* (abyss, chasm, deep cavern) → *leizea* → **the Leize**, the clergy's and old name for Enki's **Infinite Library**, the extraplanar deep beneath Thekkavar's sanctum, raised over the most dangerous depth. "The Infinite Library" is the everyday name; the Leize is the old one.
 - **Jakinduria**: Basque *jakinduria* (wisdom/knowledge); real word, no drift required
 - **The Golden Coast**: modern English; coastal sub-region
 - **Lua Lasai**: Basque *lur* (land, earth) + *lasai(a)* (calm, peaceful, tranquil) → *lur-lasaia* → r-loss to **Lua Lasai** "Calm Country / Quiet Land." Border territory between Ezkudon (Knowledge) and Egulon (Light); the peaceful frontier between two non-warring domains, the name encoding the politics of the place: quiet because neither domain has cause for war here.
@@ -444,6 +446,15 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The memory-keepers**: descriptive. The whale-less house turned archaeologist, holding the old noble quarter on the mother whale and leading the recovery of Oroiri.
 - **Stokkul**: Icelandic *stökkull* (the leaper; a leaping-cetacean word) → umlaut-loss → **Stokkul**. The small leaping sand-kin of the whales; symbiotic shoals attend every sand-whale, and the city breaks its mounts from them.
 - **Amona** *(⚿ GM-tier)*: Basque "grandmother." The handle Tani rides under among the mother whale's Strays; the crew dubbed her for her old-soul fretting and never learn she is the goddess. See `geography/lioaru.md`, *Valreka → ⚿ GM Secret: Amona of the Strays*.
+
+**Thekkavar (Enki's city-state, Ezkudon):**
+- **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.
+- **The Convocation**: plain English. The assembled heads of the Institutes; Thekkavar's college of governance.
+- **The Provost**: plain English. The elected, term-limited chair of the Convocation and the city's voice to the world.
+- **The Sealed**: descriptive. Enki's clergy and secret-keepers, those who took the remember-and-serve bargain in the Leize and are bound never to speak or write what they found; keepers of the Infinite Library, drawn from both Catfolk and Shisk. The **Keeper of the Infinite Library** is the eldest of them.
+- **Writs of descent**: plain English. The depth-grants that mark a scholar's earned access; you read a life in the writs it holds.
+- **Page-runners**: plain English. The young who carry books up and down the stacks on request; the city's circulation.
+- **The Quiet Hour**: plain English. Thekkavar's daily citywide reading-rite; the Lanterns still their lectures and the whole city falls to reading over tea. (See also **the Helgaft**, Thekkavar student-slang, above.)
 - **Flamefangs / Frostfangs / Steam Hulks / Corsair Auxilia**: Plain English. Iron Tide ship classes.
 - **Admirals of Flame and Frost**: Plain English. Iron Tide dual-command.
 - **Augments / Exemplars / The Apex Line / Ashborn / Harvested / Fleshwarps**: Plain English. The Menagerie's creation lines.
