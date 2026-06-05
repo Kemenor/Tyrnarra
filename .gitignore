@@ -12,3 +12,9 @@
 # originals in a `_full/` subfolder under any campaign's maps/; only the
 # downsized web copies that sit directly in maps/ get committed.
 campaigns/**/assets/maps/_full/
+
+# pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
+# and the rebuildable SQLite snapshot are local-only build artifacts. Run
+# `python rebuild.py` to regenerate both. Homebrew creature JSON IS committed.
+campaigns/tools/encounterBuilder/_sources/
+campaigns/tools/encounterBuilder/bestiary.db
