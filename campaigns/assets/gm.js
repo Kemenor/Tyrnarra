@@ -18,6 +18,14 @@
      Levels:    <div class="level-card"><div class="level-header">…</div>…</div>
      Rooms:     <div class="room-cell" data-room="key">…</div>  +  a
                 <div id="roomDetail"> target; room data on window.GM_ROOMS[key]
+
+     Battlemap: <div class="map-wrap"> <img …>
+                  <button class="map-hot" data-area="key" style="left/top/width/height %">
+                    <span class="hot-num">1</span></button> …
+                </div>
+                <button class="map-toggle">Hide areas</button>
+                <div class="map-detail" id="mapDetail">…</div>
+                area notes on window.GM_MAP_AREAS[key] = { n: title, t: htmlNotes }
    ─────────────────────────────────────────────────────────────── */
 
 (function () {
@@ -65,6 +73,32 @@
         cell.classList.add('active');
         target.innerHTML = renderRoom(data);
         target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      return;
+    }
+
+    // ── Battlemap hotspots (notes on window.GM_MAP_AREAS, target #mapDetail) ──
+    var hot = e.target.closest('.map-hot');
+    if (hot && hot.dataset.area && window.GM_MAP_AREAS) {
+      var area = window.GM_MAP_AREAS[hot.dataset.area];
+      var mdetail = document.getElementById('mapDetail');
+      if (area && mdetail) {
+        document.querySelectorAll('.map-hot.active').forEach(function (x) { x.classList.remove('active'); });
+        hot.classList.add('active');
+        mdetail.innerHTML = '<div class="section-title">' + (area.n || '') + '</div><div class="prose">' + (area.t || '') + '</div>';
+        mdetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      return;
+    }
+
+    // ── Battlemap "hide areas" toggle ─────────────────────────
+    var mtoggle = e.target.closest('.map-toggle');
+    if (mtoggle) {
+      var mscope = mtoggle.closest('.section') || document;
+      var mwrap = mscope.querySelector('.map-wrap');
+      if (mwrap) {
+        var hidden = mwrap.classList.toggle('hide-areas');
+        mtoggle.textContent = hidden ? 'Show areas' : 'Hide areas';
       }
       return;
     }

@@ -254,6 +254,28 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .gm-link-card .glc-name { font-family: 'Cinzel', serif; font-size: 1.12rem; color: var(--gm-ink-bright); margin-bottom: 8px; }
 .gm-link-card .glc-desc { font-size: 0.92rem; line-height: 1.6; color: var(--gm-ink); }
 
+/* ── CLICKABLE BATTLEMAP ──
+   A map image with percentage-positioned hotspots; clicking one renders
+   its notes into #mapDetail. Area outlines + numbers show by default; the
+   .map-toggle drops them (adds .hide-areas) for a clean view. Per-page
+   supplies the hotspot markup + window.GM_MAP_AREAS; gm.js does the rest. */
+.map-hint { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin: 10px 0; }
+.map-wrap { position: relative; max-width: 800px; margin: 6px auto 0; line-height: 0; }
+.map-wrap > img { width: 100%; height: auto; display: block; border: 1px solid var(--gm-divider); border-radius: 5px; }
+.map-hot { position: absolute; margin: 0; padding: 0; background: rgba(106,166,200,0.10); border: 1.5px solid rgba(106,166,200,0.55); border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; }
+.map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
+.map-hot.active { background: rgba(194,72,60,0.24); border-color: var(--gm-accent); }
+.map-hot .hot-num { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #fff; background: rgba(16,18,24,0.72); border: 1px solid rgba(255,255,255,0.45); border-radius: 50%; min-width: 22px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; opacity: 0.85; }
+.map-hot:hover .hot-num, .map-hot.active .hot-num { opacity: 1; }
+.map-wrap.hide-areas .map-hot { background: rgba(106,166,200,0); border-color: rgba(106,166,200,0); }
+.map-wrap.hide-areas .map-hot .hot-num { opacity: 0; transition: opacity 0.15s; }
+.map-wrap.hide-areas .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
+.map-wrap.hide-areas .map-hot:hover .hot-num { opacity: 1; }
+.map-toggle { display: block; margin: 12px auto 0; font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); background: rgba(200,160,74,0.08); border: 1px solid var(--gm-divider); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
+.map-toggle:hover { color: var(--gm-ink-bright); border-color: var(--gm-gold-dim); }
+.map-detail { max-width: 800px; margin: 18px auto 0; min-height: 40px; }
+.map-detail-empty { font-style: italic; color: var(--gm-ink-dim); text-align: center; }
+
 /* ── DIVIDER + FOOTER ── */
 .gm-divider { display: flex; align-items: center; gap: 14px; margin: 34px 0; }
 .gm-divider::before, .gm-divider::after { content: ''; flex: 1; height: 1px; background: var(--gm-divider); }

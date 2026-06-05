@@ -20,24 +20,6 @@
   .ability-list { list-style: none; margin-top: 8px; }
   .ability-list li { padding: 8px 0; border-top: 1px solid var(--gm-divider); font-size: 0.92rem; line-height: 1.65; }
   .ability-name { font-family: 'Cinzel', serif; color: var(--gm-accent); font-size: 0.92rem; }
-  /* ── Clickable cavern map ── */
-  .map-hint { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin: 10px 0; }
-  .map-wrap { position: relative; max-width: 800px; margin: 6px auto 0; line-height: 0; }
-  .map-wrap > img { width: 100%; height: auto; display: block; border: 1px solid var(--gm-divider); border-radius: 5px; }
-  .map-hot { position: absolute; margin: 0; padding: 0; background: rgba(106,166,200,0.10); border: 1.5px solid rgba(106,166,200,0.55); border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; }
-  .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
-  .map-hot.active { background: rgba(194,72,60,0.24); border-color: var(--gm-accent); }
-  /* "Hide areas" toggle drops the always-on outlines for a clean view */
-  .map-wrap.hide-areas .map-hot { background: rgba(106,166,200,0); border-color: rgba(106,166,200,0); }
-  .map-wrap.hide-areas .map-hot .hot-num { opacity: 0; transition: opacity 0.15s; }
-  .map-wrap.hide-areas .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
-  .map-wrap.hide-areas .map-hot:hover .hot-num { opacity: 1; }
-  .map-hot .hot-num { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #fff; background: rgba(16,18,24,0.72); border: 1px solid rgba(255,255,255,0.45); border-radius: 50%; min-width: 22px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; opacity: 0.8; }
-  .map-hot:hover .hot-num, .map-hot.active .hot-num { opacity: 1; }
-  .map-toggle { display: block; margin: 12px auto 0; font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); background: rgba(200,160,74,0.08); border: 1px solid var(--gm-divider); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
-  .map-toggle:hover { color: var(--gm-ink-bright); border-color: var(--gm-gold-dim); }
-  .map-detail { max-width: 800px; margin: 18px auto 0; min-height: 40px; }
-  .map-detail-empty { font-style: italic; color: var(--gm-ink-dim); text-align: center; }
 </style>
 </head>
 <body data-page="quest-venomqueen">
@@ -332,40 +314,19 @@
 
 </div>
 
+<!-- Per-page area notes for the clickable map; behaviour lives in gm.js. -->
 <script>
-(function () {
-  var AREAS = {
-    spore:     { n: '1 · The Spore Field (Egg Clusters)', t: 'The glowing ceiling-carpet of egg clusters. <i>Placeholder.</i> Suggested source: the egg-cluster ceiling / <b>D4 · The Egg Chamber</b> (Deep Cavern tab). Write this area’s notes here, or tell me to pull the existing room text in.' },
-    warehouse: { n: '2 · The Warehouse', t: 'The smugglers’ staging area; the cargo crate is buried here. <i>Placeholder.</i> Suggested source: <b>U1 · The Warehouse Room</b> (Upper Cavern tab).' },
-    canal:     { n: '3 · The Canal Passage', t: 'The underground canal and the cocooned smuggler (Petra Voss). <i>Placeholder.</i> Suggested source: <b>U2 · The Canal Passage</b> (Upper Cavern tab).' },
-    mainfloor: { n: '4 · The Main Cavern Floor', t: 'Open stone, brood spiders, cocooned figures (Davo Kenn). <i>Placeholder.</i> Suggested source: <b>U3 · The Main Cavern Floor</b> (Upper Cavern tab).' },
-    flooded:   { n: '5 · The Flooded Chambers', t: 'Glowing pools and carved columns. <i>Placeholder.</i> Suggested source: <b>D1 · The Flooded Chambers</b> (Deep Cavern tab).' },
-    eastern:   { n: '6 · The Eastern Chambers', t: 'The furnished eastern rooms. <i>Placeholder.</i> No existing room maps cleanly here yet — name and write it, or merge it into a neighbour.' },
-    alcove:    { n: '7 · The Ritual Alcove', t: 'The glowing floor-sigil chamber and the circular room below it. <i>Placeholder.</i> Possible pre-smuggler ritual space; tie to the statue-culture thread or write fresh.' },
-    web:       { n: '8 · The Web Approaches', t: 'The silk-walled killing ground (Corin’s body; Lena Marsh embedded). <i>Placeholder.</i> Suggested source: <b>D3 · The Web Approaches</b> (Deep Cavern tab).' },
-    dock:      { n: '9 · The Statue Dock', t: 'The stone dock, the statues, and the boat exit. <i>Placeholder.</i> Suggested source: <b>D2 · The Statue Room</b> (Deep Cavern tab).' }
-  };
-  var detail = document.getElementById('mapDetail');
-  var wrap = document.getElementById('mapWrap');
-  var toggle = document.getElementById('mapToggle');
-  document.querySelectorAll('.map-hot').forEach(function (h) {
-    h.addEventListener('click', function () {
-      document.querySelectorAll('.map-hot.active').forEach(function (x) { x.classList.remove('active'); });
-      h.classList.add('active');
-      var a = AREAS[h.getAttribute('data-area')];
-      if (a && detail) {
-        detail.innerHTML = '<div class="section-title">' + a.n + '</div><div class="prose"><p>' + a.t + '</p></div>';
-        detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    });
-  });
-  if (toggle && wrap) {
-    toggle.addEventListener('click', function () {
-      var off = wrap.classList.toggle('hide-areas');
-      toggle.textContent = off ? 'Show areas' : 'Hide areas';
-    });
-  }
-})();
+window.GM_MAP_AREAS = {
+  spore:     { n: '1 · The Spore Field (Egg Clusters)', t: '<p>The glowing ceiling-carpet of egg clusters. <i>Placeholder.</i> Suggested source: the egg-cluster ceiling / <b>D4 · The Egg Chamber</b> (Deep Cavern tab). Write this area’s notes here, or tell me to pull the existing room text in.</p>' },
+  warehouse: { n: '2 · The Warehouse', t: '<p>The smugglers’ staging area; the cargo crate is buried here. <i>Placeholder.</i> Suggested source: <b>U1 · The Warehouse Room</b> (Upper Cavern tab).</p>' },
+  canal:     { n: '3 · The Canal Passage', t: '<p>The underground canal and the cocooned smuggler (Petra Voss). <i>Placeholder.</i> Suggested source: <b>U2 · The Canal Passage</b> (Upper Cavern tab).</p>' },
+  mainfloor: { n: '4 · The Main Cavern Floor', t: '<p>Open stone, brood spiders, cocooned figures (Davo Kenn). <i>Placeholder.</i> Suggested source: <b>U3 · The Main Cavern Floor</b> (Upper Cavern tab).</p>' },
+  flooded:   { n: '5 · The Flooded Chambers', t: '<p>Glowing pools and carved columns. <i>Placeholder.</i> Suggested source: <b>D1 · The Flooded Chambers</b> (Deep Cavern tab).</p>' },
+  eastern:   { n: '6 · The Eastern Chambers', t: '<p>The furnished eastern rooms. <i>Placeholder.</i> No existing room maps cleanly here yet — name and write it, or merge it into a neighbour.</p>' },
+  alcove:    { n: '7 · The Ritual Alcove', t: '<p>The glowing floor-sigil chamber and the circular room below it. <i>Placeholder.</i> Possible pre-smuggler ritual space; tie to the statue-culture thread or write fresh.</p>' },
+  web:       { n: '8 · The Web Approaches', t: '<p>The silk-walled killing ground (Corin’s body; Lena Marsh embedded). <i>Placeholder.</i> Suggested source: <b>D3 · The Web Approaches</b> (Deep Cavern tab).</p>' },
+  dock:      { n: '9 · The Statue Dock', t: '<p>The stone dock, the statues, and the boat exit. <i>Placeholder.</i> Suggested source: <b>D2 · The Statue Room</b> (Deep Cavern tab).</p>' }
+};
 </script>
 
 </body>
