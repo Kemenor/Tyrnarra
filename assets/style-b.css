@@ -1019,6 +1019,42 @@ a.accent-card {
 .open-canon li { margin: 4px 0; }
 .open-canon li b { color: var(--gold-bright); }
 
+/* ── "CONTINUE READING" PANEL ────────────────────────────────
+   Foot-of-page related-links panel. Sibling to .open-canon: a solid
+   accent stripe (vs open-canon's dashed border) marks "where to go
+   next" as distinct from "what's still unwritten". Each <li> is a
+   Title-arrow link (` →` in the bold title, per card-conventions) plus
+   a one-line gloss of why the page is thematically close. Defined in
+   both style-a.css and style-b.css so the panel renders in either mode. */
+
+.see-also {
+  background: rgba(20,16,8,0.4);
+  border: 1px solid rgba(200,144,10,0.18);
+  border-left: 4px solid var(--domain-accent);
+  border-radius: 4px;
+  padding: 18px 24px;
+  margin: 24px auto;
+  max-width: 920px;
+}
+.see-also h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.see-also ul { list-style: none; margin: 0; padding: 0; }
+.see-also li {
+  margin: 7px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.see-also li a { color: var(--gold); }
+.see-also li a:hover { color: var(--gold-bright); }
+.see-also li a b { color: var(--gold-bright); }
+
 /* ── PILL ROW (used on domain "Character" rows) ────────────── */
 
 .pill-row {

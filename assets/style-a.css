@@ -755,3 +755,36 @@ body {
 @media (max-width: 600px) {
   .wip-banner { font-size: 0.5rem; letter-spacing: 0.22em; padding: 5px 10px; top: 8px; right: 8px; }
 }
+
+/* ── "CONTINUE READING" PANEL ────────────────────────────────
+   Foot-of-page related-links panel, the cosmic-palette twin of the
+   one in style-b.css (same markup: <div class="see-also"> with an
+   <h3> and a <ul> of Title-arrow links + one-line glosses). */
+
+.see-also {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--divider);
+  border-left: 4px solid var(--gold-dim);
+  border-radius: 4px;
+  padding: 18px 24px;
+  margin: 28px auto;
+  max-width: 880px;
+}
+.see-also h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.see-also ul { list-style: none; margin: 0; padding: 0; }
+.see-also li {
+  margin: 7px 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.see-also li a { color: var(--gold-bright); text-decoration: none; }
+.see-also li a:hover { color: var(--text-bright); }
+.see-also li a b { color: var(--gold-bright); }
