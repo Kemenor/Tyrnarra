@@ -19,7 +19,7 @@ The Skarvorn convenes quarterly at the **Open Pavilion** in Vindboorg, with emer
 
 ## The Eleven Clans
 
-Each clan is a **clan, monastery, and trading-guild at once**: a kindred-by-blood-or-adoption that holds its own mountain-side compound, runs its own school, sponsors its own ships, and maintains its own internal philosophy without making that philosophy any other clan's business. The eleven do not divide by specialty in the way outsiders sometimes expect; every clan teaches its young to read wind, to sing with the city, to trade abroad, to fight at need, and to keep records. The differences between them are felt in tone and tradition more than function, and a Tengu would say that this is the point.
+Each clan is a **clan, monastery, and trading-guild at once**: a kindred-by-blood-or-adoption that holds its own mountain-side compound, runs its own school, sponsors its own **saltkeels** for the mainland trade, and maintains its own internal philosophy without making that philosophy any other clan's business. The eleven do not divide by specialty in the way outsiders sometimes expect; every clan teaches its young to read wind, to sing with the city, to trade abroad, to fight at need, and to keep records. The differences between them are felt in tone and tradition more than function, and a Tengu would say that this is the point.
 
 Crossing clan-lines through marriage, adoption, or formal study-rotation is common. A Tengu born to one clan and raised in part by another carries both names in full at formal introduction.
 
@@ -34,7 +34,7 @@ Their particular characters will land as stories want them; what is locked is th
 To be Tengu is to live high and to speak true. The disposition is consistent across the eleven:
 
 - **Vertical living.** Tengu cities and villages are built into mountain faces. Ladders, rope-bridges, and carved staircases serve where Talanese towns would have streets; an unflighted visitor learns the route by exhaustion before they learn it by memory.
-- **Wind-knowing.** Every Tengu child learns to read wind currents as discipline before they learn to read letters. The reading is functional, not magical: an experienced Tengu pilot can call a coming storm three days out from cloud-pattern and gust-rhythm alone.
+- **Wind-knowing.** A Tengu reads the wind from childhood and never stops: it is the first discipline a clan teaches and among the last age takes away. The skill is craft, not magic, an experienced reader calling a storm days ahead from cloud-shape and the feel of a gust.
 - **Flock-meals.** Communal eating is the social default. A Tengu eating alone is presumed to be in grief, contemplation, or work-fast; a polite neighbour leaves them to it, and an impolite one offers tea anyway.
 - **Speech-economy.** Tengu speech is shorter than Talanese-mainland speech. A long sentence is not impolite, but a short one is appreciated. The formal register, used in the Skarvorn and in clan-elder address, omits articles and pronouns entirely.
 - **The Vornsketta.** The long migration; see below.
@@ -88,13 +88,13 @@ The Tengu year is marked by **eight named winds**, each a stretch of weather and
 | **Skennok** | The white wind | Snow; Skarvorn convenes; Vindboorg sings its Minor |
 | **Vyrrek** | The waking wind | The year prepares to open again; travellers begin home-flights |
 
-Mainland calendars do not align with the Tengu year cleanly. A Tengu writing dates abroad gives both their wind and the Talanese month; a Tengu writing dates at home gives only the wind.
+Mainland calendars do not align with the Tengu year cleanly. Abroad, a Tengu dates a letter by the wind and the Talanese month both, since no mainlander tracks the winds; at home the wind alone serves, and adding the month reads as faintly pretentious.
 
 ## Tengu religion · Fisaya alone
 
 Tengu religion is **single-deity Fisaya-devotional**, with no separate ancestral pantheon. The wind goddess is depicted in Tengu iconography as a Tengu rather than a kitsune; her canonical depiction is kitsune-form (see [`../../gods.md`](../../gods.md)), and the Tengu icon is a parallel folk-image, well-tolerated by the mainland church and recognised as a local affection. Her four aspects (Storms, Travel, Breath, Ruin) map directly onto Tengu cultural life: storms make the singing-cities sing, travel structures the Vornsketta, breath is stormsinging, and ruin is the discipline of accepting what the wind takes.
 
-Worship is austere by comparison with mainland Vindul practice. Tengu temples are small, cliff-sided, with open-faced sanctuaries that the wind passes through; the central rite is silent attendance to whichever wind is currently blowing. Clerics are uncommon (the Tengu temperament does not naturally produce them), but those who do take the orders are highly respected and tend to drift mainland-ward into Vindul's wider clergy.
+Worship is austere by comparison with mainland Vindul practice. A Tengu temple is itself an air-carved instrument: a high cliff-cut chamber tuned so the prevailing wind voices it, and the rite is to sit inside that voice and listen for what the wind is saying through the stone. The sanctuary is never quite silent; the building is always half-singing, and the listening is the worship. Formal clergy are few, the Tengu pouring devotion into the singing and the listening rather than into an order, and one who feels a true call more often becomes a stormsinger than a cleric; the handful who do take Fisaya's orders are held in high regard and usually carry them mainland into Vindul's wider clergy.
 
 Alongside Fisaya, each of the eleven clans keeps an internal **founder-remembrance**: the names of the clan's first generation, recited at clan-elder turning, and held as ancestor-respect rather than ancestor-worship. The clans do not invoke their founders for power, do not maintain shrines to them in any public sense, and would not call the practice religion if asked directly. A clan-elder asked the same question by a chronicler will hedge, smile, and offer tea.
 
