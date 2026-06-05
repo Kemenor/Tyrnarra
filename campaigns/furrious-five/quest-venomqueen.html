@@ -24,9 +24,14 @@
   .map-hint { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin: 10px 0; }
   .map-wrap { position: relative; max-width: 800px; margin: 6px auto 0; line-height: 0; }
   .map-wrap > img { width: 100%; height: auto; display: block; border: 1px solid var(--gm-divider); border-radius: 5px; }
-  .map-hot { position: absolute; margin: 0; padding: 0; background: rgba(106,166,200,0); border: 1.5px solid rgba(106,166,200,0); border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; }
-  .map-wrap.show-areas .map-hot, .map-hot:hover { background: rgba(106,166,200,0.16); border-color: rgba(106,166,200,0.65); }
-  .map-hot.active { background: rgba(194,72,60,0.22); border-color: var(--gm-accent); }
+  .map-hot { position: absolute; margin: 0; padding: 0; background: rgba(106,166,200,0.10); border: 1.5px solid rgba(106,166,200,0.55); border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; }
+  .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
+  .map-hot.active { background: rgba(194,72,60,0.24); border-color: var(--gm-accent); }
+  /* "Hide areas" toggle drops the always-on outlines for a clean view */
+  .map-wrap.hide-areas .map-hot { background: rgba(106,166,200,0); border-color: rgba(106,166,200,0); }
+  .map-wrap.hide-areas .map-hot .hot-num { opacity: 0; transition: opacity 0.15s; }
+  .map-wrap.hide-areas .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
+  .map-wrap.hide-areas .map-hot:hover .hot-num { opacity: 1; }
   .map-hot .hot-num { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #fff; background: rgba(16,18,24,0.72); border: 1px solid rgba(255,255,255,0.45); border-radius: 50%; min-width: 22px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; opacity: 0.8; }
   .map-hot:hover .hot-num, .map-hot.active .hot-num { opacity: 1; }
   .map-toggle { display: block; margin: 12px auto 0; font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); background: rgba(200,160,74,0.08); border: 1px solid var(--gm-divider); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
@@ -122,7 +127,7 @@
         <button class="map-hot" data-area="web"       style="left:25%;top:67%;width:45%;height:25%"><span class="hot-num">8</span></button>
         <button class="map-hot" data-area="dock"      style="left:55%;top:90%;width:43%;height:9%"><span class="hot-num">9</span></button>
       </div>
-      <button class="map-toggle" id="mapToggle" type="button">Show all areas</button>
+      <button class="map-toggle" id="mapToggle" type="button">Hide areas</button>
       <div class="map-detail" id="mapDetail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
     </div>
   </div>
@@ -356,8 +361,8 @@
   });
   if (toggle && wrap) {
     toggle.addEventListener('click', function () {
-      var on = wrap.classList.toggle('show-areas');
-      toggle.textContent = on ? 'Hide areas' : 'Show all areas';
+      var off = wrap.classList.toggle('hide-areas');
+      toggle.textContent = off ? 'Show areas' : 'Hide areas';
     });
   }
 })();
