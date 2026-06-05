@@ -51,13 +51,18 @@
     { slug: 'lautara',  label: 'Lautara · Commerce',  href: '/talan/domains/lautara/lautara.html',   children: [
       { slug: 'merkavar', label: 'Merkavar · the Market City', href: '/talan/domains/lautara/merkavar/merkavar.html', children: [] },
       { slug: 'azkataria', label: 'Azkataria · Philosopher-Market', href: '/talan/domains/lautara/azkataria/azkataria.html', children: [] },
-      { slug: 'dreaming-cape', label: 'The Dreaming Cape · Twin Lantern', href: '/talan/domains/lautara/dreaming-cape/dreaming-cape.html', children: [] },
-      { slug: 'rika-tikur', label: 'Rika Tikur · the Plutocracy', href: '/talan/domains/lautara/rika-tikur/rika-tikur.html', children: [] },
-      { slug: 'itsasalda', label: 'Itsasalda · The Vordsbench', href: '/talan/domains/lautara/itsasalda/itsasalda.html', children: [] },
-      { slug: 'atarialda', label: 'Atarialda · Hearth-Halflings', href: '/talan/domains/lautara/atarialda/atarialda.html', children: [] },
-      { slug: 'millhaven', label: 'Millhaven · River-Border Town', href: '/talan/domains/lautara/millhaven/millhaven.html', children: [
-        { slug: 'wayward-compass', label: 'The Wayward Compass', href: '/talan/domains/lautara/millhaven/wayward-compass.html', children: [] }
+      { slug: 'dreaming-cape', label: 'The Dreaming Cape · Twin Lantern', href: '/talan/domains/lautara/dreaming-cape/dreaming-cape.html', children: [
+        { slug: 'millhaven', label: 'Millhaven · River-Border Town', href: '/talan/domains/lautara/millhaven/millhaven.html', children: [
+          { slug: 'wayward-compass', label: 'The Wayward Compass', href: '/talan/domains/lautara/millhaven/wayward-compass.html', children: [] }
+        ] }
       ] },
+      { slug: 'rika-tikur', label: 'Rika Tikur · the Plutocracy', href: '/talan/domains/lautara/rika-tikur/rika-tikur.html', children: [] },
+      { slug: 'itsasalda', label: 'Itsasalda · The Vordsbench', href: '/talan/domains/lautara/itsasalda/itsasalda.html', children: [
+        { slug: 'millhaven', label: 'Millhaven · River-Border Town', href: '/talan/domains/lautara/millhaven/millhaven.html', children: [
+          { slug: 'wayward-compass', label: 'The Wayward Compass', href: '/talan/domains/lautara/millhaven/wayward-compass.html', children: [] }
+        ] }
+      ] },
+      { slug: 'atarialda', label: 'Atarialda · Hearth-Halflings', href: '/talan/domains/lautara/atarialda/atarialda.html', children: [] },
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [
         { slug: 'heartcourt', label: 'The Heartcourt', href: '/talan/domains/lautara/emarrea/heartcourt.html', children: [] }
       ]}

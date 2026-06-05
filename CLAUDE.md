@@ -47,7 +47,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
       <domain>/<settlement>/           ← settlement folder, when content warrants
         <settlement>.html              ← folder's main page, same name as the folder
         <sub-location>.html            ← location within the settlement
-        Quests/quest-<slug>.html       ← quests nest under their settlement
+                                         (quests + GM/table material live in /campaigns/, NOT here)
     factions/                          ← independent organisations
     historical/                        ← fallen civilisations
     the-binding/                       ← Nine Generals dungeons
@@ -84,6 +84,10 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
 
+  campaigns/                           ← GM / table material (in repo, NOT for players; unlinked from sidebar)
+    assets/                            ← gm.css / gm.js / gm-nav.css / gm-nav.js (shared GM chrome)
+    <campaign>/                        ← per-campaign hub: GM town notes, location dossiers, quests
+
   CLAUDE.md · README.md · CNAME · serve.bat / serve.sh
 ```
 
@@ -97,9 +101,9 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 | Continent (Talan) | `/talan/` | `talan.html`, `history.html` |
 | Region (god domain) | `/talan/domains/<domain>/` | `/talan/domains/vindul/vindul.html` |
 | Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
-| Settlement | folder under its domain | `/talan/domains/brauogi/millhaven/millhaven.html` |
-| Sub-location of settlement | sibling file in settlement folder | `/talan/domains/brauogi/millhaven/lowspan.html` |
-| Quest | `Quests/` inside settlement folder | `/talan/domains/brauogi/millhaven/Quests/quest-x.html` |
+| Settlement | folder under its domain | `/talan/domains/lautara/millhaven/millhaven.html` |
+| Sub-location of settlement | sibling file in settlement folder | `/talan/domains/lautara/millhaven/wayward-compass.html` |
+| Quest / GM table material | campaign layer (GM-only, NOT published) | `/campaigns/<campaign>/quest-<slug>.html` |
 | Faction (independent org) | `/talan/factions/` | `/talan/factions/adventurers-guild.html` |
 | God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/talan/factions/god-churches.html` |
 
@@ -198,7 +202,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Always pause between lore-write and HTML-publish, even with a publish signal.** When the content is *new* (not polishing existing canon), the lore-write and HTML-mirror are two phases. Even if the original instruction was *"write out the history"* or *"publish this"*: write the lore, then **stop and surface what landed** so the user can correct details (timing, characters, public-vs-secret partition, canon implications) before HTML lock-in. The user will say *"go ahead and publish"* to release it. Polish-only or wiring-only follow-ups (sidebar nav, site-inventory, open-threads) can chain after the HTML publish without a second pause.
 
-**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material belongs in private GM notes. World-flavour expandables are welcome: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
+**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material (quests, stat blocks, read-aloud boxes, adventure hooks, GM-tier location detail) belongs in the in-repo **campaign layer** at `/campaigns/<campaign>/`, which is GM-only and deliberately unlinked from the player sidebar (see the file-layout schematic above); the *Furrious Five* layer is the reference implementation. World-flavour expandables are welcome: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
 
 **Surface phase boundaries rather than chaining them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions; they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
