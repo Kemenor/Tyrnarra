@@ -6,12 +6,16 @@ How the persistent sidebar on every page is built and how to extend it.
 
 ## How it works
 
-- The sidebar structure lives in `/assets/site-nav.js`. Three data sources drive it:
-  - **`TALAN_PAGES`**: the array of continent-level reference pages (History, The Binding, Ancestries, Historical). Each entry has a `slug`, `label`, `href`, and a `children` list of nested pages. Same recursive accordion shape as `DOMAINS`.
-  - **`DOMAINS`**: the array of 13 god-domains. Same shape: `slug`, `label`, `href`, `children`.
-  - **The remaining top-level section markup** (World & Cosmos, Factions, Off-Continent): string literals inside `buildNavHtml()`.
+- The sidebar structure lives in `/assets/site-nav.js`. **Every section is a data-driven array** of `{ slug, label, href, children }` nodes, rendered by the recursive `buildAccordionRow`; there is no hand-written `<li>` nav markup anymore. One array per section:
+  - **`WORLD_PAGES`**: World & Cosmos (the 13 Bound Gods, Non-Bound Gods → Bolverk, the Gods' Law, Magic, PF2e Registrar).
+  - **`TALAN_PAGES`**: continent-level reference pages (Maps, History, The Binding, Ancestries, Historical).
+  - **`DOMAINS`**: the 13 god-domains and their promoted sub-regions / settlements.
+  - **`FACTION_PAGES`**: the cross-domain organisations.
+  - **`OFFCONTINENT_PAGES`**: Sortalde, the Red Empire.
 
-  Both `TALAN_PAGES` and `DOMAINS` are **recursive trees**; any `children` entry may itself carry a `children` array. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Lautara → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
+  Each section's `<div class="nav-section">` header (the clickable section-label) is still a small string literal in `buildNavHtml()`, but its `<ul class="nav-list">` body is rendered from the matching array.
+
+  All five arrays are **recursive trees**; any `children` entry may itself carry a `children` array, and `buildExpandedSet` auto-expands the ancestor chain of the current page in any of them. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Lautara → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
 - The sidebar styling lives in `/assets/site-nav.css`.
 - Every page references both via two tags in `<head>`:
 
@@ -62,9 +66,9 @@ All edits happen in `/assets/site-nav.js`; the new page sets `<body data-page="<
 
 - **A continent-level reference page** (Talan-tier, like Historical, Ancestries): add an entry to `TALAN_PAGES` with `children: []` if it has no nested pages yet.
 - **A nested accordion entry** under a domain, Talan-tier page, *or any deeper node*: push `{ slug, label, href, children: [] }` into that node's `children` array. Children may themselves have children; the tree recurses to whatever depth you need.
-- **A new leaf under a fixed section** (World & Cosmos, Factions, Off-Continent): add a `<li>` to the matching string-literal block inside `buildNavHtml()`. *Exception:* the World & Cosmos section hand-rolls one nested accordion entry (**Bolverk** under **Non-Bound Gods**) by mirroring `buildAccordionRow`'s markup in the string literal (a `li.nav-domain.has-children` with a `.nav-expand` chevron and a `.nav-sublist`), gated by the `nbExpanded` flag for auto-expand. The chevron wires up automatically (the toggle binds to every `.nav-expand` after injection). If a fixed-section leaf ever grows more than one child, promote that whole section to a data-driven array like `TALAN_PAGES` instead of hand-rolling more.
+- **A new leaf or nested entry in World & Cosmos, Factions, or Off-Continent**: add a `{ slug, label, href, children: [] }` entry to `WORLD_PAGES`, `FACTION_PAGES`, or `OFFCONTINENT_PAGES` respectively (same shape and nesting rules as `TALAN_PAGES`/`DOMAINS`). No string-literal markup is involved.
 
-The recursive accordion (used by both `TALAN_PAGES` and `DOMAINS`):
+The recursive accordion (used by every section array):
 - Shows a chevron `▸` next to any row whose `children` is non-empty, at any depth.
 - On page load, walks the tree for the current `data-page` and **auto-expands the full ancestor chain**: visiting *House Eisenhart* opens *Sumendar → Order of Steam* so the whole path is visible. Every other branch stays collapsed by default.
 - Toggles on chevron click. The label stays a normal link; clicking it navigates rather than expanding.

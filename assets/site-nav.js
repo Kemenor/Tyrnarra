@@ -103,6 +103,36 @@
     ] }
   ];
 
+  // ── World & Cosmos section (collapsible) ──────────────────────
+  // The section header links to the Cosmology landing (index.html),
+  // so that page is not repeated as a leaf here.
+  var WORLD_PAGES = [
+    { slug: 'gods',           label: 'The 13 Bound Gods',           href: '/grand-gods.html',     children: [] },
+    { slug: 'non-bound-gods', label: 'Non-Bound Gods &amp; Beings', href: '/non-bound-gods.html', children: [
+      { slug: 'bolverk', label: 'Bolverk &middot; the Megacity in Abyss', href: '/bolverk.html', children: [] }
+    ]},
+    { slug: 'gods-law',       label: 'The Gods&rsquo; Law',         href: '/gods-law.html',       children: [] },
+    { slug: 'magic',          label: 'Magic &amp; Faith',           href: '/magic.html',          children: [] },
+    { slug: 'pf2e-registrar', label: 'PF2e Registrar',              href: '/pf2e-registrar.html', children: [] }
+  ];
+
+  // ── Factions section (collapsible) ────────────────────────────
+  // Header links to the Factions hub, so it is not repeated here.
+  var FACTION_PAGES = [
+    { slug: 'adventurers-guild', label: 'Adventurers Guild',      href: '/talan/factions/adventurers-guild.html', children: [] },
+    { slug: 'mercenary-guild',   label: 'Mercenary Guild',        href: '/talan/factions/mercenary-guild.html',   children: [] },
+    { slug: 'voroir-daua',       label: 'The Voroir Daua',        href: '/talan/factions/voroir-daua.html',       children: [] },
+    { slug: 'god-churches',      label: 'God Churches',           href: '/talan/factions/god-churches.html',      children: [] },
+    { slug: 'remnants',          label: 'Remnants of Corruption', href: '/talan/factions/remnants.html',          children: [] }
+  ];
+
+  // ── Off-Continent section (collapsible) ───────────────────────
+  // Header links to the Off-Continent hub, so it is not repeated here.
+  var OFFCONTINENT_PAGES = [
+    { slug: 'sortalde',   label: 'Sortalde · Petal Continent', href: '/off-continent/sortalde.html',   children: [] },
+    { slug: 'red-empire', label: 'The Red Empire',             href: '/off-continent/red-empire.html', children: [] }
+  ];
+
   // ── Walk the tree for the current slug, return ancestor path ──
   // Returns an array of slugs from the root of the tree down to and
   // including the matched node. Used to decide which rows auto-expand.
@@ -164,10 +194,14 @@
   function buildNavHtml(currentPage) {
     var talanExpanded  = buildExpandedSet(TALAN_PAGES, currentPage);
     var domainExpanded = buildExpandedSet(DOMAINS,     currentPage);
+    var worldExpanded  = buildExpandedSet(WORLD_PAGES,        currentPage);
+    var factionExpanded= buildExpandedSet(FACTION_PAGES,      currentPage);
+    var offExpanded    = buildExpandedSet(OFFCONTINENT_PAGES, currentPage);
     var talanItems     = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpanded,  1); }).join('\n');
     var domainItems    = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpanded, 1); }).join('\n');
-    // Non-Bound Gods carries one nested child (Bolverk); expand it when on either page.
-    var nbExpanded     = currentPage === 'non-bound-gods' || currentPage === 'bolverk';
+    var worldItems     = WORLD_PAGES.map(function (d) { return buildAccordionRow(d, worldExpanded,  1); }).join('\n');
+    var factionItems   = FACTION_PAGES.map(function (d) { return buildAccordionRow(d, factionExpanded, 1); }).join('\n');
+    var offItems       = OFFCONTINENT_PAGES.map(function (d) { return buildAccordionRow(d, offExpanded, 1); }).join('\n');
 
     return [
       '<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>',
@@ -178,19 +212,7 @@
       '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/index.html" data-page="cosmology">World &amp; Cosmos</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/grand-gods.html"      data-page="gods">The 13 Bound Gods</a></li>',
-      '      <li class="nav-domain has-children' + (nbExpanded ? ' expanded' : '') + '" data-depth="1">',
-      '        <div class="nav-domain-row">',
-      '          <a href="/non-bound-gods.html" data-page="non-bound-gods">Non-Bound Gods &amp; Beings</a>',
-      '          <button class="nav-expand" data-domain="non-bound-gods" aria-label="Toggle Non-Bound Gods children" aria-expanded="' + (nbExpanded ? 'true' : 'false') + '" type="button">&#9656;</button>',
-      '        </div>',
-      '        <ul class="nav-sublist">',
-      '          <li class="nav-domain" data-depth="2"><div class="nav-domain-row"><a href="/bolverk.html" data-page="bolverk">Bolverk &middot; the Megacity in Abyss</a></div></li>',
-      '        </ul>',
-      '      </li>',
-      '      <li><a href="/gods-law.html"        data-page="gods-law">The Gods&rsquo; Law</a></li>',
-      '      <li><a href="/magic.html"           data-page="magic">Magic &amp; Faith</a></li>',
-      '      <li><a href="/pf2e-registrar.html"  data-page="pf2e-registrar">PF2e Registrar</a></li>',
+           worldItems,
       '    </ul>',
       '  </div>',
 
@@ -211,19 +233,14 @@
       '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/talan/factions/factions.html" data-page="factions">Factions</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/talan/factions/adventurers-guild.html" data-page="adventurers-guild">Adventurers Guild</a></li>',
-      '      <li><a href="/talan/factions/mercenary-guild.html"   data-page="mercenary-guild">Mercenary Guild</a></li>',
-      '      <li><a href="/talan/factions/voroir-daua.html"       data-page="voroir-daua">The Voroir Daua</a></li>',
-      '      <li><a href="/talan/factions/god-churches.html"      data-page="god-churches">God Churches</a></li>',
-      '      <li><a href="/talan/factions/remnants.html"          data-page="remnants">Remnants of Corruption</a></li>',
+           factionItems,
       '    </ul>',
       '  </div>',
 
       '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/off-continent/off-continent.html" data-page="off-continent-hub">Off-Continent</a>',
       '    <ul class="nav-list">',
-      '      <li><a href="/off-continent/sortalde.html"   data-page="sortalde">Sortalde · Petal Continent</a></li>',
-      '      <li><a href="/off-continent/red-empire.html" data-page="red-empire">The Red Empire</a></li>',
+           offItems,
       '    </ul>',
       '  </div>',
       '</aside>'
