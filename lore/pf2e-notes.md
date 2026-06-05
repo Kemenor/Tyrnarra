@@ -60,25 +60,11 @@ Some domain names in the Tyrnarra canon are **theological-flavour names**, not e
 
 **The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph). *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
 
-### Non-bound granters: canon-pending
+### Non-bound granters: all assigned
 
-Thirteen PF2e domains sit in the registrar as Open on the non-bound side, awaiting a dedicated assignment pass focused on Vice Demons, Virtue Devils, Generals of Corruption, Betibizi, and the Corrupted God directly. The non-bound entities themselves exist as canonical beings; only their specific PF2e cleric-domain grants are pending. The 13 domains in this state are:
+Every PF2e cleric domain now carries a granter in the registrar; **no domain remains Open / canon-pending** on the non-bound side. The thirteen formerly-pending domains (Abomination, Decay, Destruction, Indulgence, Naga, Nightmares, Pain, Plague, Sorrow, Swarm, Toil, Tyranny, Undeath) were closed across the Vice Demon, Virtue Devil, General-of-Corruption, Betibizi, and Corrupted-God assignment passes; the registrar holds the current grantor for each.
 
-- **Abomination** *(candidate: Virtue Devil, virtue-line TBD)*
-- **Decay** *(candidate: The Rot-Tyrant, General of Corruption)*
-- **Destruction** *(candidate: Reidar, the Wrath Vice Demon)*
-- **Indulgence** *(candidate: Veislur, the Gluttony Vice Demon)*
-- **Naga** *(candidate: The Maw Serpent, General of Corruption)*
-- **Nightmares** *(candidate: The Whisperer in Dreams, General of Corruption)*
-- **Pain** *(candidate: Virtue Devil, Patience-line excess)*
-- **Plague** *(candidate: The Corrupted God, direct grant)*
-- **Sorrow** *(candidate: Virtue Devil, Magnanimity-line deficiency)*
-- **Swarm** *(candidate: The Vermin Queen, General of Corruption)*
-- **Toil** *(candidate: Virtue Devil, Industriousness-line excess)*
-- **Tyranny** *(candidate: Drambur, the Pride Vice Demon)*
-- **Undeath** *(candidate: Betibizi, self-ascended Minor God in Abyss)*
-
-### Domains not yet claimed: Open / GM ruling
+### Source categories and closure status
 
 **All previously-pending domain rows are now closed** (as of 2026-05-22). Dragon (Zaharsuge), Moon (Bikiargi · Honokage), Undeath (Betibizi), Swarm (Vermin Queen). Naga is jointly granted by Zaharsuge and the Maw Serpent. Five source-category pills are in use: **Bound 13**, **Vice Demon**, **Non-Bound** (Layer-3 unbound deities: Solyra, Bikiargi, Zaharsuge, Epairima, Betibizi, Odain, and the three Kyūbi-no-Den gods Hahane / Honokage / Yumegatari; Layer-1-tier primordials Suzar, Urzar, Lurzahar, Haizar, Indazar, Hutzar, Iturima, Zurzar, Burdinzar), **General** (surviving Generals of Corruption: Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister; the Ash-Binder is defeated and grants no current domain), and **Corrupted God** (direct grants from the imprisoned god). The Corrupted God holds direct grants on five domains: **Plague, Abomination, Nothingness, Decay, Destruction**. See the registrar for the full table.
 
