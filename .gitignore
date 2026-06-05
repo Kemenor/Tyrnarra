@@ -2,3 +2,5 @@
 !.claude/skills/
 !.claude/launch.json
 !.claude/serve-idempotent.ps1
+!.claude/settings.json
+!.claude/hooks/

@@ -224,6 +224,8 @@ When coining new names, always record the source language, literal meaning, and 
 
 **On the publish signal**, identify the target HTML page from the layer-to-folder mapping above, pick the matching style (A or B), and either edit the existing page or create a new one. After publishing, update `docs/site-inventory.md` to reflect any new or now-populated pages.
 
+**Commit and push per completed phase.** When a lore-write phase is complete and surfaced, or an HTML-publish phase is complete (the page edited or created, plus its wiring: sidebar nav, `docs/site-inventory.md`, `docs/open-threads.md`), commit that work with a descriptive message and push. Commit at the phase boundary, not per file edit, and hold off on committing mid-phase or un-reviewed drafts. The lore-write and the HTML-publish are separate phases (see the pause rule above), so they are separate commits. Write a real message naming what landed (`Add Itsasalda Vordsbench canon`, `Publish Frae City god-city page`), not a generic one. This is the project's standing authorization to commit and push straight to `main` for these phases: no need to ask each time, and no need to branch first (the site auto-deploys from `main`). A `PostToolUse` reminder hook (`.claude/hooks/git-commit-reminder.ps1`, registered in `.claude/settings.json`) nudges you after any `lore/` or `.html` edit; it only reminds and never runs git. You run the commit and the push yourself, with judgment about whether the phase is truly done.
+
 ---
 
 ## Working across sessions
