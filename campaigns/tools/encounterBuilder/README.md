@@ -117,23 +117,34 @@ python loot.py search --type consumable --text healing --level 1-3 -v
 
 ### Treasure builder
 
+Two modes, both themable and priced from real item data:
+
 ```bash
-python loot.py build --party-level 5 --party-size 4 --text "fire cult"      # a full level's haul
-python loot.py build --party-level 8 --party-size 5 --share 0.33 --seed 1    # a third of the level
-python loot.py build --party-level 3 --value 250                            # absolute gp target
+# Hand-out (default): the official Party-Treasure-by-Level basket for the level
+python loot.py build --party-level 5 --text "fire cult"
+python loot.py build --party-level 5 --party-size 6            # scales items + currency per PC
+
+# Value/share: a partial or arbitrary haul
+python loot.py build --party-level 8 --party-size 5 --share 0.33   # a third of the level
+python loot.py build --party-level 3 --value 250                   # absolute gp target
 ```
 
-Assembles a themed haul to a target value: `--share` is a fraction of the level's
-treasure (from `TREASURE_BY_LEVEL`, party-size scaled); `--value` sets gp directly.
-Both halves follow the GM Core spread (2x level+1, 2x level, +/-1 item per PC off 4):
-permanent items (held to `--perm-share`, default 0.5, of the target) then consumables
-(type=consumable only), each a real level-appropriate pick priced from `items.db`;
-coins absorb the remainder so the haul lands on target. Theme it with `--text /
---trait / --not-trait / --rarity / --source`; `--seed` reproduces; `--json` for structured.
+- **Hand-out** (no `--value`/`--share`): the exact GM Core spread for the level —
+  permanent items at 2×(L+1) + 2×L, consumables at 2×(L+1) + 2×L + 2×(L−1), plus
+  the table's **currency lump**. Levels 1 and 20 use the table's special rows.
+  Party size adds/removes one permanent + one consumable at L per PC off 4 and
+  adjusts currency by the per-PC column. The assembled total runs near the book
+  value (real item prices vary around the idealized figures).
+- **Value/share**: `--value` sets gp directly; `--share` is a fraction of the
+  level's total. Permanent items are held to `--perm-share` (default 0.5) of the
+  target and coins absorb the remainder, so the haul lands on the number.
 
-> The `TREASURE_BY_LEVEL` table at the top of `loot.py` is the one set of typed-in
-> constants (party-of-4 total per level). It's marked **VET THESE** — confirm the
-> column against GM Core before trusting a haul's absolute value.
+Theme either with `--text / --trait / --not-trait / --rarity / --source`; `--seed`
+reproduces; `--json` for structured output.
+
+> The treasure tables at the top of `loot.py` (`TREASURE_BY_LEVEL`, `CURRENCY`,
+> `CURRENCY_PER_PC`, and `slots()`) are verified column-for-column against
+> [AoN Rules 2656](https://2e.aonprd.com/Rules.aspx?ID=2656).
 
 ## Adding Tyrnarra / Azkataria homebrew
 

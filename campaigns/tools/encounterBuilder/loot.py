@@ -17,16 +17,37 @@ import json
 import random
 import sqlite3
 
-# --- PF2e treasure tables (GM Core) -----------------------------------------
-# Total treasure value gained per character level, for a party of 4. VET THESE.
+# --- PF2e Party Treasure by Level (GM Core / CRB Table) ----------------------
+# https://2e.aonprd.com/Rules.aspx?ID=2656  -- verified column-for-column.
+# Per character level (party of 4): total value, lump currency, and the
+# currency added per character above 4 (subtracted per character below).
 TREASURE_BY_LEVEL = {
     1: 175, 2: 300, 3: 500, 4: 850, 5: 1350, 6: 2000, 7: 2900, 8: 4000,
     9: 5700, 10: 8000, 11: 11500, 12: 16500, 13: 25000, 14: 36500, 15: 54500,
     16: 82500, 17: 128000, 18: 208000, 19: 355000, 20: 490000,
 }
-# Canonical permanent-item spread per level: two at level+1, two at level.
-# (One extra at `level` per PC above 4; one fewer per PC below.)
-PERM_PATTERN = [1, 1, 0, 0]  # offsets from party level
+CURRENCY = {
+    1: 40, 2: 70, 3: 120, 4: 200, 5: 320, 6: 500, 7: 720, 8: 1000, 9: 1400,
+    10: 2000, 11: 2800, 12: 4000, 13: 6000, 14: 9000, 15: 13000, 16: 20000,
+    17: 30000, 18: 48000, 19: 80000, 20: 140000,
+}
+CURRENCY_PER_PC = {
+    1: 10, 2: 18, 3: 30, 4: 50, 5: 80, 6: 125, 7: 180, 8: 250, 9: 350, 10: 500,
+    11: 700, 12: 1000, 13: 1500, 14: 2250, 15: 3250, 16: 5000, 17: 7500,
+    18: 12000, 19: 20000, 20: 35000,
+}
+
+
+def slots(level):
+    """Official item-level hand-out for a party of 4: (permanent[], consumable[]).
+    Permanents are 2x(L+1)+2xL; consumables add a third tier at L-1; levels 1 and
+    20 are the table's special rows."""
+    L = level
+    if L == 1:
+        return [2, 2, 1, 1], [2, 2, 1, 1, 1]
+    if L == 20:
+        return [20, 20, 20, 20], [20, 20, 20, 20, 19, 19]
+    return [L + 1, L + 1, L, L], [L + 1, L + 1, L, L, L - 1, L - 1]
 
 
 def connect(db):
@@ -95,30 +116,37 @@ def search(con, item_type=None, traits=None, not_traits=None, level=None,
 
 def build(con, party_level, party_size=4, share=None, value=None,
           perm_share=0.5, seed=None, **filters):
-    """Assemble a themed treasure haul to a target value.
+    """Assemble a themed treasure haul. Two modes:
 
-    Both halves follow the GM Core spread (2x level+1, 2x level, +/-1 per PC off
-    4): permanent items, then consumables (type=consumable only, so ammo/gems are
-    excluded), each a real level-appropriate pick priced from item data. Permanent
-    items are held to ~perm_share of the target so they don't eat the haul; coins
-    absorb the remainder. `filters` are theme filters (text/trait/rarity/source).
+    - Hand-out (default, no --value/--share): the official Party-Treasure-by-Level
+      basket -- exact item levels from slots(), real themed picks, plus the table's
+      currency lump. This is "the level's treasure to hand out".
+    - Value/share: scale to a gp target (--value) or a fraction of the level's
+      total (--share); permanent items are held to ~perm_share of it and coins
+      absorb the remainder, so the haul lands on the target.
+
+    `filters` are theme filters (text/trait/rarity/source) for both halves.
     """
     rng = random.Random(seed)
     cap = lambda lv: max(0, min(20, lv))
-    if value is not None:
-        target = float(value)
-    else:
-        base = TREASURE_BY_LEVEL[party_level] * (share if share is not None else 1.0)
-        target = base * (party_size / 4)
-    target_cp = round(target * 100)
-
-    # Item slots (offsets from party level), scaled by party size.
-    offsets = list(PERM_PATTERN)
+    L = party_level
     extra = party_size - 4
-    if extra > 0:
-        offsets += [0] * extra
+    handout = value is None and share is None
+
+    perm_levels, cons_levels = slots(L)
+    if extra > 0:                       # +1 permanent & +1 consumable at L per extra PC
+        perm_levels += [L] * extra
+        cons_levels += [L] * extra
     elif extra < 0:
-        offsets = offsets[:max(1, len(offsets) + extra)]
+        perm_levels = perm_levels[:max(1, len(perm_levels) + extra)]
+        cons_levels = cons_levels[:max(1, len(cons_levels) + extra)]
+
+    if handout:
+        target_cp = None
+    elif value is not None:
+        target_cp = round(value * 100)
+    else:
+        target_cp = round(TREASURE_BY_LEVEL[L] * share * (party_size / 4) * 100)
 
     def pick(lv, budget, item_type, consumable):
         last = []
@@ -133,18 +161,31 @@ def build(con, party_level, party_size=4, share=None, value=None,
                     return rng.choice(afford)
         return min(last, key=lambda p: p["price_cp"]) if last else None
 
-    # Permanent items, each capped near an even slice of the permanent portion.
-    perm_slot = max(100, round(target_cp * perm_share / max(1, len(offsets))))
-    perms = [pick(party_level + off, perm_slot, None, False) for off in offsets]
+    # Permanent items at the table's item levels.
+    perm_budget = (10 ** 12 if handout
+                   else max(100, round(target_cp * perm_share / max(1, len(perm_levels)))))
+    perms = [pick(lv, perm_budget, None, False) for lv in perm_levels]
     perms = [p for p in perms if p]
     perm_spent = sum(p["price_cp"] for p in perms)
 
-    # Consumables: same slot spread, type=consumable only (no ammo/treasure spam).
-    cons = [pick(party_level + off, 10 ** 12, ["consumable"], None) for off in offsets]
-    cons = [c for c in cons if c]
+    # Consumables (type=consumable only, so no ammo/gem spam).
+    cons, running = [], 0
+    cons_cap = None if handout else max(0, target_cp - perm_spent)
+    for lv in cons_levels:
+        budget = 10 ** 12 if handout else (cons_cap - running)
+        if budget <= 0:
+            break
+        c = pick(lv, budget, ["consumable"], None)
+        if c:
+            cons.append(c); running += c["price_cp"]
     cons_spent = sum(c["price_cp"] for c in cons)
 
-    coin_cp = max(0, target_cp - perm_spent - cons_spent)
+    if handout:
+        coin_cp = max(0, CURRENCY[L] + CURRENCY_PER_PC[L] * extra) * 100
+        ref_cp = round(TREASURE_BY_LEVEL[L] * 100) + CURRENCY_PER_PC[L] * extra * 100
+    else:
+        coin_cp = max(0, target_cp - perm_spent - cons_spent)
+        ref_cp = target_cp
     total_cp = perm_spent + cons_spent + coin_cp
 
     def agg(picks):
@@ -157,8 +198,9 @@ def build(con, party_level, party_size=4, share=None, value=None,
                  "price": gp(v["item"]["price_cp"]), "source": v["item"]["source"]}
                 for v in out.values()]
 
-    return {"target": gp(target_cp), "total": gp(total_cp),
-            "fill_pct": round(100 * total_cp / target_cp) if target_cp else 0,
+    return {"mode": "handout" if handout else "value",
+            "reference": gp(ref_cp), "total": gp(total_cp),
+            "fill_pct": round(100 * total_cp / ref_cp) if ref_cp else 0,
             "currency": gp(coin_cp), "permanent": agg(perms), "consumables": agg(cons)}
 
 
@@ -231,7 +273,8 @@ def main():
                 not_traits=a.not_traits, rarity=a.rarity, source=a.source, text=a.text)
     if a.json:
         print(json.dumps(res, indent=2)); return
-    print(f"\nTreasure for {a.party_size}x level {a.party_level}  |  target {res['target']}, "
+    book = "by-the-book" if res["mode"] == "handout" else "target"
+    print(f"\nTreasure for {a.party_size}x level {a.party_level}  |  {book} {res['reference']}, "
           f"assembled {res['total']} ({res['fill_pct']}%)\n")
     print("  Permanent:")
     for m in res["permanent"]:
