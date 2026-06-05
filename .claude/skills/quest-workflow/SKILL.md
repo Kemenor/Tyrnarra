@@ -1,6 +1,6 @@
 ---
 name: quest-workflow
-description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: premise -> structure -> map+areas (you draw them) -> encounters -> loot -> quest HTML, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
+description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you buy + draw areas) -> encounters -> loot -> quest HTML, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
 ---
 
 # quest-workflow
@@ -26,9 +26,9 @@ If anything you are about to design contradicts committed canon, the canon wins.
 | Phase | What happens | Boundary discipline |
 |---|---|---|
 | **0. Read** | CLAUDE.md + campaign-layer.md + a reference quest + the setting's player canon + tooling check | Do not start Phase 1 until done |
-| **1. Premise + party** | Chat: where it sits, **party level + size**, hook, antagonist, stakes, tone. Surface a premise summary | Chat only. No writes. |
+| **1. Intake + seeds** | Chat: take the intake text, lock **party level + size**, generate **3-5 distinct seeds**, user picks, workshop the winner into a premise | Chat only. No writes. |
 | **2. Structure** | Chat: the beats / scenes / rooms and the throughline; which scenes are combat vs social vs exploration; the climax. Surface a beat -> area outline | Chat only. No writes. |
-| **3. Map + areas** | Decide the battlemap; **you draw the areas** in `map-area-editor.html` and hand back the exported JSON. Skill consumes it as the room list | Human handoff. Skill waits for the area JSON. |
+| **3. Map + areas** | Claude searches CzePeku / Tom Cartos / Lost Atlas and surfaces **3-5 map options**; **user buys + downloads** the pick; **user draws the areas** in `map-area-editor.html` and hands back the exported JSON | Human handoff. Skill waits for the area JSON. |
 | **4. Encounters** | Invoke **pf2e-encounter** per combat area (party params + area theme), grounded in real stat blocks. Surface the encounter set | Surface for tweaks before Phase 6 |
 | **5. Loot** | Invoke **pf2e-loot** (level hand-out, or per-area/milestone), place rewards in areas. Surface | Surface for tweaks before Phase 6 |
 | **6. Assemble quest HTML** | Build `quest-<slug>.html` per campaign-layer conventions + wire it in. Surface the content plan first, build on the go | Surface-before-HTML pause |
@@ -37,18 +37,23 @@ Pause at each seam even under broad "work through it" framing. Reading is fine w
 
 ---
 
-## Phase 1: Premise + party (chat only)
+## Phase 1: Intake + seeds + party (chat only)
 
-Ask a tight batch of questions, then surface a premise summary. The non-negotiable two are **party level and party size** (every encounter and the loot math depend on them). Cover:
+The user opens with a block of raw material: themes, story beats, a location, a villain, a vibe. Two moves here.
 
-- **Setting + campaign.** Which campaign folder (`/campaigns/<campaign>/`), and where in Talan does this sit? Tie it to a real place so canon stays consistent.
-- **Party.** Level and size. Note any party weaknesses/strengths that should shape encounters (no healer, a fire mage, etc.).
-- **The hook.** Why are they here, and who sent them?
-- **The opposition.** The antagonist or threat, and its theme (this becomes the encounter and loot theme).
-- **Stakes + tone.** What happens if they fail; how grim/pulpy/eerie it plays.
-- **Shape + length.** One-shot vs multi-session; dungeon-crawl vs investigation vs set-piece.
+**First, lock the non-negotiables.** Party **level and size** drive every encounter and the loot math; if the intake text doesn't state them, ask before generating seeds. Also note which campaign folder (`/campaigns/<campaign>/`) and roughly where in Talan this sits, so the seeds stay canon-consistent. Tie it to a real place.
 
-Surface a 4-6 sentence premise back before Phase 2. Use the `grill-me` skill if the premise reads generic or the antagonist is a stock villain; specificity here pays off in every later phase.
+**Then generate 3-5 quest seeds** from the intake material and surface them for the user to pick. Each seed is a tight pitch (2-4 sentences) that reads as a *distinct* quest, not a reskin of its siblings:
+
+- a one-line title or working name,
+- **the hook** (why the party is here, who sent them),
+- **the opposition** (antagonist + its theme; this becomes the encounter and loot theme),
+- **the shape** (one-shot vs multi-session; dungeon-crawl / investigation / set-piece),
+- **the stakes + tone** (what failure costs; how grim / pulpy / eerie it plays).
+
+Make the seeds pull in genuinely different directions (different antagonist, different shape, different moral texture) so the pick is a real choice. Run them against the specificity test: if a seed's antagonist is a stock villain or its hook could be lifted into any other quest unchanged, sharpen it or replace it. Use the `grill-me` skill if the whole set reads generic.
+
+The user picks one seed (or splices two). **Workshop the winner into a 4-6 sentence premise** and surface that before Phase 2: setting + campaign, party level/size (plus any party weakness/strength that should shape encounters, e.g. no healer, a fire mage), hook, opposition, stakes, tone, and shape + length.
 
 ## Phase 2: Structure (chat only)
 
@@ -61,13 +66,20 @@ Lay out the beats and the spaces they happen in. Produce a **beat -> area outlin
 
 Surface the outline. The user may reorder, cut, or add scenes before any map work.
 
-## Phase 3: Map + areas (human handoff)
+## Phase 3: Map — search, buy, draw areas (web search + human handoff)
 
-The clickable battlemap is built from areas **you draw**.
+Three steps: Claude surfaces map options from the commercial catalogs, the user buys/downloads the pick, then the user draws the areas.
 
-1. **Pick the map.** Identify or choose the battlemap image. Paid art (CzePeku, etc.) stays local: full-res in `campaigns/<campaign>/assets/maps/_full/` (gitignored); a downsized ~800px web copy sits in `maps/` and is the one the page references. See campaign-layer.md "Map assets".
-2. **Hand off to the editor.** Tell the user to open `campaigns/tools/map-area-editor.html`, load the map, draw one area per room/scene from the Phase 2 outline (Shift+draw to add rectangles for L/T/plus shapes), label + describe each, and export the JSON.
-3. **Wait.** This is the user's step ("I create areas and notes"). Do not fabricate areas; consume the exported JSON they hand back as the authoritative room list. Each area is `{ label, desc, rects:[{left,top,width,height}] }` in percentages.
+**1. Search the catalogs and surface 3-5 options.** Using the Phase 2 mood + room list as the theme, search CzePeku and Tom Cartos for fitting battlemaps and present a shortlist of titled links for the user to choose from. These are visual, JS-heavy galleries, so drive the search with `WebSearch` scoped by domain rather than trying to scrape the gallery pages:
+   - **CzePeku** — `WebSearch` with `allowed_domains: ["czepeku.com"]` (fantasy maps live under `/fantasy/maps`, sci-fi under `/scifi/maps`).
+   - **Tom Cartos** — `WebSearch` with `allowed_domains: ["tomcartos.com"]` (`/map-gallery` for fantasy, `/modern-map-gallery` for modern).
+   - **Lost Atlas** (`lostatlas.co`) — a cross-creator keyword/creator-filtered battlemap search engine that indexes Tom Cartos and others; good when a domain-scoped search comes up thin.
+
+   Surface each candidate as a titled link with a one-line "why it fits" (the cavern with the central pool; the three-storey manor; the flooded crypt). `WebFetch` a candidate page only to confirm what is actually on it. Present 3-5 and let the user pick.
+
+**2. The user buys / downloads the pick.** These are paid (Patreon / marketplace) maps, so **the user does the download** — Claude never fetches or commits the paid image. The user drops the full-res original into `campaigns/<campaign>/assets/maps/_full/` (gitignored) and a downsized ~800px web copy into `maps/` (committed; the page references this one). See campaign-layer.md "Map assets".
+
+**3. Hand off to the editor.** Tell the user to open `campaigns/tools/map-area-editor.html`, load the (downsized) map, draw one area per room/scene from the Phase 2 outline (Shift+draw to add rectangles for L/T/plus shapes), label + describe each, and export the JSON. **Wait** for it: this is the user's step ("I create areas and notes"). Do not fabricate areas; consume the exported JSON they hand back as the authoritative room list. Each area is `{ label, desc, rects:[{left,top,width,height}] }` in percentages.
 
 If the user would rather skip the visual map (theatre-of-mind), take an ordered room list in chat instead and build the page without the map tab.
 
@@ -120,7 +132,7 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Real data, never invented.** Encounter budgets, creature stats, item levels and prices come from the tools and the source JSON via the leaf skills. If a number is not grounded, it does not ship.
 - **Party level + size first.** Capture them in Phase 1; all encounter and loot math depends on them.
 - **Canon-consistent.** NPCs, places, gods, and neighbours reconcile with the player lore. A quest may reveal GM-tier truth; it may not contradict committed canon.
-- **The user draws the map.** Areas come from `map-area-editor.html` (or an explicit chat room-list), not from invention.
+- **Claude surfaces map links; the user buys, downloads, and draws.** Claude searches the CzePeku / Tom Cartos / Lost Atlas catalogs and presents 3-5 options as links, but never fetches or commits a paid image — the user downloads it. Areas come from `map-area-editor.html` (or an explicit chat room-list), not from invention.
 - **Surface at every seam.** Premise -> structure -> areas -> encounters -> loot -> page. Pause and surface before each write, and before the HTML build.
 - **No em-dashes; affirmative prose; mortals not humans.** The project-wide prose rules apply to GM pages too.
 
