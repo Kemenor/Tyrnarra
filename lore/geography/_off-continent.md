@@ -1,6 +1,6 @@
 # Geography: Off-Continent
 
-Tyrnarra has more than one continent. Most are little known to Talanese scholars: Hafra is wide, the Cloud Sea wider, and active contact is rare. **Two are named in canon: the Red Empire's home continent (west across Hafra) and Sortalde (east across Hafra).** Others exist but remain unnamed in Talanese sources.
+Tyrnarra has more than one continent. Most are little known to Talanese scholars: Hafra is wide, the Cloud Sea wider, and active contact is rare. **Two are named in canon: the Red Empire's home continent (west across the Cloud Sea) and Sortalde (east across the Cloud Sea).** Others exist but remain unnamed in Talanese sources.
 
 The bound thirteen reside on Talan, not on any other continent. The Gods' Law applies anywhere on the Material Plane (it's physics, not jurisdiction), but the gods themselves do not have established sancta or temple complexes off-continent. **This means every other continent runs on a fundamentally different theological substrate from Talan**: no walking gods, no auditioned sancta, clerical work runs through Layer-3-resident or Prelife-resident gods only (see `../gods.md`, *Named Non-Bound Gods*).
 
@@ -8,13 +8,13 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 ---
 
-## Sortalde: the Petal Continent (east across Hafra)
+## Sortalde: the Petal Continent (east across the Cloud Sea)
 
 **Talanese name:** *Sortalde* (Basque *sortaldea* "sunrise-land / east"). **Sortalde-internal name:** *Tao Hua Yuan* (桃花源, "Peach Blossom Spring," after the Tao Yuanming poem about a hidden paradise reachable only through a difficult passage). Same external/internal naming split that Emarrea/Biozuri and Fenurra/Aeris use. Full etymology in `../glossary.md`.
 
-**Shape.** A great archipelago: **seven major islands arranged in a petal formation**, six ancestral petals around a smaller central seat. Internal seas between the petals are narrow and routinely sailed by Sortalde-native vessels; the outer ring is wide, stormy, and historically the graveyard of Talanese shipping.
+**Shape.** A great archipelago: **seven major islands arranged in a petal formation**, six ancestral petals around a smaller central seat. Internal seas between the petals are narrow and routinely sailed by Sortalde-native vessels; beyond the petals lies the open Cloud Sea, which no wooden hull crosses, and the wrecks along its near edge are the graveyard of every Talanese ship that tried before the cloudships came.
 
-**Crossing from Talan.** **Hard.** The stormy outer ring of Sortalde routinely sinks Talanese ships. Surviving merchants typically reach only the **outer petals** (the three petals on the Talan-facing arc of the archipelago: Wandao, Xidao, Niudao); the inner petals (Yingdao, Lingdao, Lundao) and the central Concord seat (Heting) are rumour to most Talanese. The Iron Tide has lost ships trying; raids on Sortalde are unprofitable enough that the Red Empire's standing policy is "don't bother."
+**Crossing from Talan.** **Hard.** The Cloud Sea lies between the continents and bears no wooden hull; only Magitech cloudships make the passage, and Sortalde builds none of its own, so every vessel on the route is Talan-made and Talan-crewed. Even by cloudship, traders typically reach only the **outer petals** (the three petals on the Talan-facing arc of the archipelago: Wandao, Xidao, Niudao); the inner petals (Yingdao, Lingdao, Lundao) and the central Concord seat (Heting) are rumour to most Talanese. The Iron Tide has lost cloudships trying; raids on Sortalde are unprofitable enough that the Red Empire's standing policy is "don't bother."
 
 **Theology.** Sortalde has **no walking gods.** The bound thirteen all maintain their sancta on Talan; none have crossed Hafra to establish presence on Sortalde, and no indigenous Sortalde bound god has emerged. All clerical work on Sortalde channels through **Layer-3-resident gods**: a Sortalde-internal pantheon of dynasty-spirits, ancestor-judges, and place-gods who reside in Diyu and (less often) Elysium. **The pantheon is not yet named in Tyrnarra canon**; it exists as a placeholder for future development. The practical effect on daily Sortalde life is profound: religion is invocation across the veil, never personal audition. No mortal in Sortalde has ever met their god in person.
 
@@ -59,7 +59,7 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 #### Samsaran (Lundao · Wheel Island)
 
-**Long-lived contemplatives with multi-life memory.** Native to **Lundao** (Wheel Island), the inner contemplative-bureaucratic petal of Sortalde. Samsaran serve as the **chancellors of the Concord of Courts**: multi-life civil servants whose continuity bridges human lifespans and gives Sortalde its institutional memory. A typical Samsaran chancellor has held office across two or three reincarnations and remembers the relevant policy history personally. Politically, this makes the Concord very hard to deceive on long-running questions, and very capable of patient strategy.
+**Long-lived contemplatives with multi-life memory.** Native to **Lundao** (Wheel Island), the inner contemplative-bureaucratic petal of Sortalde. Samsaran serve as the **chancellors of the Concord of Courts**: multi-life civil servants whose continuity bridges mortal lifespans and gives Sortalde its institutional memory. A typical Samsaran chancellor has held office across two or three reincarnations and remembers the relevant policy history personally. Politically, this makes the Concord very hard to deceive on long-running questions, and very capable of patient strategy.
 
 **On Talan:** functionally never. The very rare Talan-side Samsaran is a retired chancellor pursuing a private project, or a heretic whose multi-life dissent made them inconvenient to keep at home. Either way, they are *interesting*; Samsaran are reliable witnesses to events much older than any other living source on Talan can recall.
 
@@ -87,7 +87,7 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 **Lingdao also holds the bound Oni.** Yaksha are Lingdao's lighter spirit-cousins, Oni the darker; both are place-bound, and Oni concentrate on Lingdao alongside the Yaksha they shadow. The **Hungerseed** heritage (see [`../ancestries.md`](../ancestries.md), *Versatile Heritages → Other lineages*) results from the rare coupling of a manifest Oni with a mortal at the Oni's bound site, and almost all canon Hungerseeds are Lingdao-born.
 
-**On Talan:** functionally never. A Yaksha away from their bound land suffers: physically, emotionally, theologically. The very rare Talan-side Yaksha is doctrinally an *exile* whose bond was broken by some catastrophe (a kingdom razed, a river dammed, a forest burned). Such characters are tragic figures by definition; the bond cannot be reformed across Hafra.
+**On Talan:** functionally never. A Yaksha away from their bound land suffers: physically, emotionally, theologically. The very rare Talan-side Yaksha is doctrinally an *exile* whose bond was broken by some catastrophe (a kingdom razed, a river dammed, a forest burned). Such characters are tragic figures by definition; the bond cannot be reformed across the Cloud Sea.
 
 #### Yaoguai (Wandao · Myriad Island)
 
@@ -97,9 +97,9 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 ---
 
-## The Red Empire's home continent (west across Hafra)
+## The Red Empire's home continent (west across the Cloud Sea)
 
-Largely unknown on Talan, but canonical: somewhere across Hafra lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy in routine and usually unfriendly contact with Talan's coasts. From a Talanese perspective the Empire is the *foreign* power; its capital, its emperor, and its core population are all over the sea. From the Empire's perspective, Talan is the *backwards* continent: the one still in thrall to gods.
+Largely unknown on Talan, but canonical: somewhere across the Cloud Sea lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy in routine and usually unfriendly contact with Talan's coasts. From a Talanese perspective the Empire is the *foreign* power; its capital, its emperor, and its core population are all over the sea. From the Empire's perspective, Talan is the *backwards* continent: the one still in thrall to gods.
 
 **Open thread:** The home continent's name, internal map, and any non-Imperial polities that share it with the Empire are TBD. Crossing distance is "long enough that landings are campaigns, not raids."
 
