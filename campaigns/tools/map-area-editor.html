@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map Area Editor · GM Tool</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,400;0,600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/campaigns/assets/gm.css">
+<style>
+  body { padding-bottom: 60px; }
+  .tool-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0 18px; }
+  .tool-btn { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gm-ink-bright); background: rgba(200,160,74,0.10); border: 1px solid var(--gm-divider); border-radius: 4px; padding: 8px 14px; cursor: pointer; }
+  .tool-btn:hover { border-color: var(--gm-gold-dim); background: rgba(200,160,74,0.18); }
+  .tool-btn.danger { color: #e2978c; background: rgba(194,72,60,0.12); }
+  .tool-file { display: inline-block; }
+  .tool-file input { display: none; }
+  .editor-layout { display: flex; gap: 20px; align-items: flex-start; }
+  .editor-col { flex: 1 1 auto; min-width: 0; max-width: 860px; }
+  .panel-col { flex: 0 0 320px; }
+  @media (max-width: 820px) { .editor-layout { flex-direction: column; } .panel-col { flex: 1 1 auto; width: 100%; } }
+
+  .canvas-wrap { position: relative; border: 1px solid var(--gm-divider); border-radius: 5px; overflow: hidden; background: rgba(0,0,0,0.3); }
+  .canvas-wrap img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+  .canvas-empty { padding: 60px 20px; text-align: center; color: var(--gm-ink-dim); font-style: italic; }
+  .overlay { position: absolute; inset: 0; cursor: crosshair; }
+
+  .box { position: absolute; box-sizing: border-box; border: 2px solid rgba(106,166,200,0.9); background: rgba(106,166,200,0.16); cursor: move; }
+  .box.sel { border-color: var(--gm-gold); background: rgba(200,160,74,0.2); z-index: 6; }
+  .box .num { position: absolute; top: 1px; left: 2px; font-family: 'Cinzel', serif; font-size: 0.7rem; color: #fff; background: rgba(16,18,24,0.8); border-radius: 3px; padding: 0 5px; pointer-events: none; }
+  .h { position: absolute; width: 11px; height: 11px; background: var(--gm-gold); border: 1px solid #1a1a1a; border-radius: 2px; }
+  .h-nw { top: -6px; left: -6px; cursor: nwse-resize; }
+  .h-n  { top: -6px; left: 50%; margin-left: -5px; cursor: ns-resize; }
+  .h-ne { top: -6px; right: -6px; cursor: nesw-resize; }
+  .h-e  { top: 50%; right: -6px; margin-top: -5px; cursor: ew-resize; }
+  .h-se { bottom: -6px; right: -6px; cursor: nwse-resize; }
+  .h-s  { bottom: -6px; left: 50%; margin-left: -5px; cursor: ns-resize; }
+  .h-sw { bottom: -6px; left: -6px; cursor: nesw-resize; }
+  .h-w  { top: 50%; left: -6px; margin-top: -5px; cursor: ew-resize; }
+
+  .panel-block { border: 1px solid var(--gm-divider); border-radius: 6px; padding: 14px 16px; margin-bottom: 16px; background: var(--gm-card-bg); }
+  .panel-block h3 { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-gold); margin-bottom: 10px; }
+  .help-list { list-style: none; font-size: 0.86rem; line-height: 1.6; color: var(--gm-ink); }
+  .help-list li { padding: 2px 0 2px 14px; position: relative; }
+  .help-list li::before { content: '›'; position: absolute; left: 0; color: var(--gm-gold-dim); }
+  .box-row { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-top: 1px solid var(--gm-divider); }
+  .box-row .bnum { font-family: 'Cinzel', serif; color: var(--gm-gold); width: 22px; text-align: center; flex-shrink: 0; cursor: pointer; }
+  .box-row.sel .bnum { color: var(--gm-ink-bright); }
+  .box-row input { flex: 1; min-width: 0; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 4px 7px; }
+  .box-row .del { background: none; border: none; color: #c2766a; cursor: pointer; font-size: 0.9rem; flex-shrink: 0; }
+  .box-empty { font-style: italic; color: var(--gm-ink-dim); font-size: 0.86rem; }
+  textarea#json { width: 100%; height: 200px; background: rgba(0,0,0,0.3); border: 1px solid var(--gm-divider); border-radius: 4px; color: var(--gm-ink); font-family: 'Consolas','Courier New',monospace; font-size: 0.78rem; line-height: 1.45; padding: 10px; resize: vertical; }
+  .row-btns { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .meta-line { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="gm-banner">
+  <span>⚔ &nbsp; GM Tool · Behind the Screen · Not Player-Facing</span>
+  <span class="gm-banner-sep">·</span>
+  <a href="/campaigns/index.html">Campaign layer ↗</a>
+</div>
+
+<div class="gm-container" style="max-width:1240px;">
+
+  <div class="gm-header">
+    <div class="gm-kicker">GM Tool</div>
+    <div class="gm-title">Map Area Editor</div>
+    <div class="gm-subtitle">Draw clickable areas on a battlemap · export JSON for the quest page</div>
+  </div>
+
+  <div class="tool-bar">
+    <label class="tool-file"><span class="tool-btn">📂 &nbsp; Load Map Image</span><input type="file" id="fileInput" accept="image/*"></label>
+    <span class="meta-line" id="imgName" style="margin:0 0 0 4px;">no image loaded</span>
+    <span style="flex:1"></span>
+    <button class="tool-btn danger" id="clearBtn" type="button">Clear all boxes</button>
+  </div>
+
+  <div class="editor-layout">
+    <div class="editor-col">
+      <div class="canvas-wrap" id="wrap">
+        <div class="canvas-empty" id="empty">Load a map image to begin drawing areas.</div>
+        <img id="mapImg" alt="" style="display:none;">
+        <div class="overlay" id="overlay" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="panel-col">
+      <div class="panel-block">
+        <h3>How to use</h3>
+        <ul class="help-list">
+          <li><b>Draw:</b> click-drag on empty map.</li>
+          <li><b>Move:</b> drag a box. <b>Resize:</b> drag its handles.</li>
+          <li><b>Select:</b> click a box or its number in the list.</li>
+          <li><b>Nudge:</b> arrow keys move; <b>Shift</b>+arrows resize.</li>
+          <li><b>Delete:</b> Delete/Backspace, or the ✕ in the list.</li>
+          <li>Label each box (optional), then <b>Copy</b> or <b>Download</b> the JSON and hand it to me.</li>
+        </ul>
+      </div>
+
+      <div class="panel-block">
+        <h3>Areas (<span id="boxCount">0</span>)</h3>
+        <div id="boxList"><div class="box-empty">No boxes yet.</div></div>
+      </div>
+
+      <div class="panel-block">
+        <h3>JSON</h3>
+        <div class="meta-line">edit + Apply to re-import, or Copy / Download to hand off</div>
+        <textarea id="json" spellcheck="false"></textarea>
+        <div class="row-btns">
+          <button class="tool-btn" id="copyBtn" type="button">Copy</button>
+          <button class="tool-btn" id="downloadBtn" type="button">Download .json</button>
+          <button class="tool-btn" id="applyBtn" type="button">Apply (import)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gm-footer">MAP AREA EDITOR · GM TOOL · NOT PLAYER-FACING</div>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var boxes = [];      // { label, left, top, width, height }  (all % , 0-100)
+  var sel = -1;
+  var imageName = '';
+  var drag = null;     // { mode:'draw'|'move'|'resize', dir, startX, startY, init }
+
+  var wrap = document.getElementById('wrap');
+  var img = document.getElementById('mapImg');
+  var empty = document.getElementById('empty');
+  var overlay = document.getElementById('overlay');
+  var jsonBox = document.getElementById('json');
+  var boxList = document.getElementById('boxList');
+  var boxCount = document.getElementById('boxCount');
+  var imgNameEl = document.getElementById('imgName');
+
+  function round(n) { return Math.round(n * 10) / 10; }
+  function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
+
+  function pt(e) {
+    var r = overlay.getBoundingClientRect();
+    return {
+      x: clamp((e.clientX - r.left) / r.width * 100, 0, 100),
+      y: clamp((e.clientY - r.top) / r.height * 100, 0, 100)
+    };
+  }
+
+  // ── Image load ──
+  document.getElementById('fileInput').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0];
+    if (!f) return;
+    imageName = f.name;
+    imgNameEl.textContent = f.name;
+    img.onload = function () { empty.style.display = 'none'; img.style.display = 'block'; overlay.style.display = 'block'; renderJSON(); };
+    img.src = URL.createObjectURL(f);
+  });
+
+  // ── Drawing on empty overlay ──
+  overlay.addEventListener('mousedown', function (e) {
+    if (e.target !== overlay) return;     // clicks on boxes/handles handled separately
+    sel = -1;
+    var p = pt(e);
+    boxes.push({ label: '', left: p.x, top: p.y, width: 0, height: 0 });
+    sel = boxes.length - 1;
+    drag = { mode: 'draw', startX: p.x, startY: p.y };
+    render();
+    e.preventDefault();
+  });
+
+  function startMove(e, i) {
+    e.stopPropagation(); e.preventDefault();
+    sel = i;
+    var p = pt(e);
+    drag = { mode: 'move', startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
+    render();
+  }
+  function startResize(e, i, dir) {
+    e.stopPropagation(); e.preventDefault();
+    sel = i;
+    var p = pt(e);
+    drag = { mode: 'resize', dir: dir, startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
+    render();
+  }
+
+  document.addEventListener('mousemove', function (e) {
+    if (!drag || sel < 0) return;
+    var p = pt(e), b = boxes[sel];
+    if (drag.mode === 'draw') {
+      b.left = Math.min(drag.startX, p.x);
+      b.top = Math.min(drag.startY, p.y);
+      b.width = Math.abs(p.x - drag.startX);
+      b.height = Math.abs(p.y - drag.startY);
+    } else if (drag.mode === 'move') {
+      var dx = p.x - drag.startX, dy = p.y - drag.startY;
+      b.left = clamp(drag.init.left + dx, 0, 100 - b.width);
+      b.top = clamp(drag.init.top + dy, 0, 100 - b.height);
+    } else if (drag.mode === 'resize') {
+      applyResize(b, drag.init, drag.dir, p.x - drag.startX, p.y - drag.startY);
+    }
+    render();
+  });
+  document.addEventListener('mouseup', function () {
+    if (drag && drag.mode === 'draw') {
+      var b = boxes[sel];
+      if (!b || b.width < 1 || b.height < 1) { boxes.splice(sel, 1); sel = -1; }
+    }
+    drag = null;
+    render();
+  });
+
+  function applyResize(b, init, dir, dx, dy) {
+    var MIN = 1;
+    if (dir.indexOf('e') >= 0) b.width = Math.max(MIN, init.width + dx);
+    if (dir.indexOf('s') >= 0) b.height = Math.max(MIN, init.height + dy);
+    if (dir.indexOf('w') >= 0) { var nl = init.left + dx, nw = init.width - dx; if (nw < MIN) { nw = MIN; nl = init.left + init.width - MIN; } b.left = Math.max(0, nl); b.width = nw; }
+    if (dir.indexOf('n') >= 0) { var nt = init.top + dy, nh = init.height - dy; if (nh < MIN) { nh = MIN; nt = init.top + init.height - MIN; } b.top = Math.max(0, nt); b.height = nh; }
+    if (b.left + b.width > 100) b.width = 100 - b.left;
+    if (b.top + b.height > 100) b.height = 100 - b.top;
+  }
+
+  // ── Keyboard: nudge / resize / delete ──
+  document.addEventListener('keydown', function (e) {
+    if (sel < 0) return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    var b = boxes[sel], step = e.shiftKey ? 0.5 : 0.5;
+    if (e.key === 'Delete' || e.key === 'Backspace') { boxes.splice(sel, 1); sel = -1; render(); e.preventDefault(); return; }
+    var moved = true;
+    if (e.shiftKey) {
+      if (e.key === 'ArrowRight') b.width = clamp(b.width + step, 1, 100 - b.left);
+      else if (e.key === 'ArrowLeft') b.width = Math.max(1, b.width - step);
+      else if (e.key === 'ArrowDown') b.height = clamp(b.height + step, 1, 100 - b.top);
+      else if (e.key === 'ArrowUp') b.height = Math.max(1, b.height - step);
+      else moved = false;
+    } else {
+      if (e.key === 'ArrowRight') b.left = clamp(b.left + step, 0, 100 - b.width);
+      else if (e.key === 'ArrowLeft') b.left = clamp(b.left - step, 0, 100 - b.width);
+      else if (e.key === 'ArrowDown') b.top = clamp(b.top + step, 0, 100 - b.height);
+      else if (e.key === 'ArrowUp') b.top = clamp(b.top - step, 0, 100 - b.height);
+      else moved = false;
+    }
+    if (moved) { render(); e.preventDefault(); }
+  });
+
+  // ── Render ──
+  function render() {
+    Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (n) { n.remove(); });
+    boxes.forEach(function (b, i) {
+      var d = document.createElement('div');
+      d.className = 'box' + (i === sel ? ' sel' : '');
+      d.style.left = b.left + '%'; d.style.top = b.top + '%';
+      d.style.width = b.width + '%'; d.style.height = b.height + '%';
+      d.innerHTML = '<span class="num">' + (i + 1) + '</span>';
+      d.addEventListener('mousedown', function (e) { startMove(e, i); });
+      if (i === sel) {
+        ['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'].forEach(function (dir) {
+          var h = document.createElement('div'); h.className = 'h h-' + dir;
+          h.addEventListener('mousedown', function (e) { startResize(e, i, dir); });
+          d.appendChild(h);
+        });
+      }
+      overlay.appendChild(d);
+    });
+    renderList();
+    renderJSON();
+  }
+
+  function renderList() {
+    boxCount.textContent = boxes.length;
+    if (!boxes.length) { boxList.innerHTML = '<div class="box-empty">No boxes yet.</div>'; return; }
+    boxList.innerHTML = '';
+    boxes.forEach(function (b, i) {
+      var row = document.createElement('div');
+      row.className = 'box-row' + (i === sel ? ' sel' : '');
+      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1;
+      num.addEventListener('click', function () { sel = i; render(); });
+      var inp = document.createElement('input'); inp.type = 'text'; inp.placeholder = 'label (optional)'; inp.value = b.label || '';
+      inp.addEventListener('input', function () { b.label = inp.value; renderJSON(); });
+      inp.addEventListener('focus', function () { sel = i; renderHighlight(); });
+      var del = document.createElement('button'); del.className = 'del'; del.textContent = '✕'; del.title = 'Delete';
+      del.addEventListener('click', function () { boxes.splice(i, 1); sel = -1; render(); });
+      row.appendChild(num); row.appendChild(inp); row.appendChild(del);
+      boxList.appendChild(row);
+    });
+  }
+  function renderHighlight() {
+    Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (d, i) { d.classList.toggle('sel', i === sel); });
+  }
+
+  function renderJSON() {
+    var out = {
+      image: imageName || '',
+      areas: boxes.map(function (b) {
+        return { label: b.label || '', left: round(b.left), top: round(b.top), width: round(b.width), height: round(b.height) };
+      })
+    };
+    jsonBox.value = JSON.stringify(out, null, 2);
+  }
+
+  // ── Buttons ──
+  document.getElementById('clearBtn').addEventListener('click', function () {
+    if (boxes.length && !confirm('Delete all ' + boxes.length + ' boxes?')) return;
+    boxes = []; sel = -1; render();
+  });
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    jsonBox.select();
+    try { navigator.clipboard.writeText(jsonBox.value); } catch (e) { document.execCommand('copy'); }
+  });
+  document.getElementById('downloadBtn').addEventListener('click', function () {
+    var base = (imageName || 'map').replace(/\.[^.]+$/, '');
+    var blob = new Blob([jsonBox.value], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = base + '.areas.json';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  document.getElementById('applyBtn').addEventListener('click', function () {
+    try {
+      var data = JSON.parse(jsonBox.value);
+      if (data.image) { imageName = data.image; imgNameEl.textContent = data.image + ' (from JSON)'; }
+      boxes = (data.areas || []).map(function (a) {
+        return { label: a.label || '', left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 };
+      });
+      sel = -1; render();
+    } catch (err) { alert('Could not parse JSON: ' + err.message); }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
