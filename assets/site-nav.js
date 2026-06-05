@@ -20,6 +20,37 @@
 (function () {
   'use strict';
 
+  // ── Favicon + manifest (single source of truth) ──────────────
+  // The favicon pack lives at site root; these tags are injected
+  // here so every page that loads the sidebar gets them from one
+  // place. A bare /favicon.ico at root is auto-requested by the
+  // browser as a no-JS baseline; this upgrades to the SVG / Apple
+  // touch icon / PWA manifest and sets the tab theme colour.
+  function injectFavicon() {
+    var head = document.head || document.getElementsByTagName('head')[0];
+    if (!head || head.querySelector('link[rel~="icon"]')) return; // already wired
+    var links = [
+      { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16.png' },
+      { rel: 'apple-touch-icon', href: '/favicon-180.png' },
+      { rel: 'manifest', href: '/site.webmanifest' }
+    ];
+    links.forEach(function (spec) {
+      var el = document.createElement('link');
+      Object.keys(spec).forEach(function (k) { el.setAttribute(k, spec[k]); });
+      head.appendChild(el);
+    });
+    if (!head.querySelector('meta[name="theme-color"]')) {
+      var meta = document.createElement('meta');
+      meta.setAttribute('name', 'theme-color');
+      meta.setAttribute('content', '#101C3A');
+      head.appendChild(meta);
+    }
+  }
+  injectFavicon();
+
   // ── Talan-level pages (collapsible) ───────────────────────────
   // Note: the Talan section header itself links to the Continent
   // Overview, so that page is not repeated here.

@@ -117,6 +117,10 @@ The sidebar isn't the only thing extracted from per-page inline code. Two other 
   <script defer src="/assets/site-starfield.js"></script>
   ```
 
+### The favicon is injected by `site-nav.js`
+
+`site-nav.js` also injects the favicon/manifest tags (`injectFavicon()`, runs immediately on load, before the nav is built), so the icon is wired in one place and applies to every page that loads the sidebar; no per-page `<head>` markup is needed. The favicon files live at the **site root** (not `/assets/`, by the web's favicon convention): `favicon.ico`, `favicon.svg`, the PNG size set (`favicon-16/32/48/64/96/128/180/192/256/512.png`), and `site.webmanifest`. A bare `/favicon.ico` at root is auto-requested by browsers as a no-JS baseline; the injected tags upgrade to the SVG / Apple touch icon / PWA manifest and set `theme-color` (`#101C3A`). The equivalent static markup is documented in `/assets/favicon/install-snippet.html` (reference only; `/assets/favicon/preview.png` shows the icon). GM campaign pages load `gm-nav.js` rather than `site-nav.js`, so they get only the root-`favicon.ico` baseline.
+
 The `.open-canon` panel (dashed TBD-inventory box at the bottom of several pages) lives as a shared rule in `style-b.css`; pages just write `<div class="open-canon">…</div>` and the panel inherits the page's `--domain-accent` for the heading colour and border edge.
 
 ### Three utility families in `style-b.css`
