@@ -55,7 +55,9 @@ python encounter.py build --party-level 6 --party-size 4 --threat severe --trait
 | `--type` | the single best creature-type bucket (undead, dragon, fey...) |
 | `--trait` | exact trait; **repeatable, ANDed** (`--trait fire --trait undead`) |
 | `--weak` / `--resist` / `--immune` | by defense; repeatable, ANDed. `--immune` covers damage types **and** conditions |
+| `--weak-min` / `--resist-min` | magnitude floor; pairs with `--weak`/`--resist`, or alone for "any weakness/resistance >= N" |
 | `--move` | movement type: `fly` / `swim` / `climb` / `burrow` / `land`; repeatable |
+| `--move-min` | speed floor; pairs with `--move`, or alone for "any speed >= N" |
 | `--family` | creature kind: matches a **trait or the name** (`dragon`, `construct`, `mephit`, `sphinx`) |
 | `--rarity` | common / uncommon / rare / unique |
 | `--source` | one pack folder, e.g. `pathfinder-monster-core` |
@@ -103,8 +105,8 @@ Two options, in order of how I'd phase them:
 - `creature_type` is derived from the highest-priority creature-type trait. The
   full trait list is preserved in `creature_traits` for precise filtering;
   weaknesses, resistances, immunities and speeds get their own junction tables.
-- `value` is stored on weaknesses/resistances/speeds, so a magnitude filter
-  (e.g. `--weak-min 10`, `--fly-min 60`) is a cheap later add when wanted.
+- `value` is stored on weaknesses/resistances/speeds, exposed as the
+  `--weak-min` / `--resist-min` / `--move-min` magnitude floors.
 - The tool is meant to be driven by Claude Code (it will become a skill): search
   by theme, hand-pick creatures, build to budget, then read the source JSON for
   the chosen few. An MCP wrap is unnecessary for that (the CLI stdout is enough);

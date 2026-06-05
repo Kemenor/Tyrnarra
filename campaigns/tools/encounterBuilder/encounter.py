@@ -48,7 +48,8 @@ def connect(db):
 
 
 def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
-           move=None, family=None, level=None, size=None, rarity=None,
+           move=None, family=None, weak_min=None, resist_min=None, move_min=None,
+           level=None, size=None, rarity=None,
            source=None, no_homebrew=False, text=None, limit=200):
     where, where_params = ["1=1"], []
     joins, join_params = [], []
@@ -75,17 +76,27 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
         where_params += [f, f"%{f}%"]
 
     # Junction-based AND filters: one join per requested value (repeat => must
-    # have all). Join text comes before WHERE, so its params bind first.
-    def add(table, col, values, alias):
-        for i, v in enumerate(values or []):
+    # have all). Join text comes before WHERE, so its params bind first. A
+    # magnitude floor adds `value >= ?` to each join; given alone (no type), it
+    # matches any row clearing the floor (e.g. "has some weakness >= 10").
+    def add(table, col, values, alias, minval=None):
+        values = values or []
+        for i, v in enumerate(values):
             a = f"{alias}{i}"
-            joins.append(f"JOIN {table} {a} ON {a}.creature_id = c.id AND {a}.{col} = ?")
+            cond = f"{a}.creature_id = c.id AND {a}.{col} = ?"
             join_params.append(v)
+            if minval is not None:
+                cond += f" AND {a}.value >= ?"; join_params.append(minval)
+            joins.append(f"JOIN {table} {a} ON {cond}")
+        if not values and minval is not None:
+            a = f"{alias}m"
+            joins.append(f"JOIN {table} {a} ON {a}.creature_id = c.id AND {a}.value >= ?")
+            join_params.append(minval)
     add("creature_traits", "trait", traits, "ct")
-    add("creature_weaknesses", "type", weak, "w")
-    add("creature_resistances", "type", resist, "r")
+    add("creature_weaknesses", "type", weak, "w", weak_min)
+    add("creature_resistances", "type", resist, "r", resist_min)
     add("creature_immunities", "type", immune, "im")
-    add("creature_speeds", "type", move, "sp")
+    add("creature_speeds", "type", move, "sp", move_min)
 
     if text:
         joins.append("JOIN creatures_fts f ON f.rowid = c.id")
@@ -178,6 +189,9 @@ def main():
     common.add_argument("--resist", action="append", help="Has resistance to type (repeatable, AND).")
     common.add_argument("--immune", action="append", help="Immune to damage type or condition (repeatable, AND).")
     common.add_argument("--move", action="append", help="Has movement type, e.g. fly/swim/climb/burrow (repeatable, AND).")
+    common.add_argument("--weak-min", type=int, help="Minimum weakness value (with --weak, or any weakness).")
+    common.add_argument("--resist-min", type=int, help="Minimum resistance value (with --resist, or any resistance).")
+    common.add_argument("--move-min", type=int, help="Minimum speed value (with --move, or any speed).")
     common.add_argument("--family", help="Creature kind: matches a trait OR the name (dragon, mephit, construct...).")
     common.add_argument("--size")
     common.add_argument("--rarity")
@@ -203,7 +217,8 @@ def main():
     a = ap.parse_args()
     con = connect(a.db)
     filt = dict(ctype=a.ctype, traits=a.traits, weak=a.weak, resist=a.resist,
-                immune=a.immune, move=a.move, family=a.family, size=a.size,
+                immune=a.immune, move=a.move, family=a.family, weak_min=a.weak_min,
+                resist_min=a.resist_min, move_min=a.move_min, size=a.size,
                 rarity=a.rarity, source=a.source, no_homebrew=a.no_homebrew, text=a.text)
 
     if a.cmd == "search":
