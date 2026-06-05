@@ -161,6 +161,8 @@
     var domainExpanded = buildExpandedSet(DOMAINS,     currentPage);
     var talanItems     = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpanded,  1); }).join('\n');
     var domainItems    = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpanded, 1); }).join('\n');
+    // Non-Bound Gods carries one nested child (Bolverk); expand it when on either page.
+    var nbExpanded     = currentPage === 'non-bound-gods' || currentPage === 'bolverk';
 
     return [
       '<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>',
@@ -172,8 +174,15 @@
       '    <a class="nav-section-label nav-section-link" href="/index.html" data-page="cosmology">World &amp; Cosmos</a>',
       '    <ul class="nav-list">',
       '      <li><a href="/grand-gods.html"      data-page="gods">The 13 Bound Gods</a></li>',
-      '      <li><a href="/non-bound-gods.html"  data-page="non-bound-gods">Non-Bound Gods &amp; Beings</a></li>',
-      '      <li><a href="/bolverk.html"         data-page="bolverk">Bolverk &middot; the Megacity in Abyss</a></li>',
+      '      <li class="nav-domain has-children' + (nbExpanded ? ' expanded' : '') + '" data-depth="1">',
+      '        <div class="nav-domain-row">',
+      '          <a href="/non-bound-gods.html" data-page="non-bound-gods">Non-Bound Gods &amp; Beings</a>',
+      '          <button class="nav-expand" data-domain="non-bound-gods" aria-label="Toggle Non-Bound Gods children" aria-expanded="' + (nbExpanded ? 'true' : 'false') + '" type="button">&#9656;</button>',
+      '        </div>',
+      '        <ul class="nav-sublist">',
+      '          <li class="nav-domain" data-depth="2"><div class="nav-domain-row"><a href="/bolverk.html" data-page="bolverk">Bolverk &middot; the Megacity in Abyss</a></div></li>',
+      '        </ul>',
+      '      </li>',
       '      <li><a href="/gods-law.html"        data-page="gods-law">The Gods&rsquo; Law</a></li>',
       '      <li><a href="/magic.html"           data-page="magic">Magic &amp; Faith</a></li>',
       '      <li><a href="/pf2e-registrar.html"  data-page="pf2e-registrar">PF2e Registrar</a></li>',

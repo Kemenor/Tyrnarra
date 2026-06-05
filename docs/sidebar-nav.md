@@ -62,7 +62,7 @@ All edits happen in `/assets/site-nav.js`; the new page sets `<body data-page="<
 
 - **A continent-level reference page** (Talan-tier, like Historical, Ancestries): add an entry to `TALAN_PAGES` with `children: []` if it has no nested pages yet.
 - **A nested accordion entry** under a domain, Talan-tier page, *or any deeper node*: push `{ slug, label, href, children: [] }` into that node's `children` array. Children may themselves have children; the tree recurses to whatever depth you need.
-- **A new leaf under a fixed section** (World & Cosmos, Factions, Off-Continent): add a `<li>` to the matching string-literal block inside `buildNavHtml()`.
+- **A new leaf under a fixed section** (World & Cosmos, Factions, Off-Continent): add a `<li>` to the matching string-literal block inside `buildNavHtml()`. *Exception:* the World & Cosmos section hand-rolls one nested accordion entry (**Bolverk** under **Non-Bound Gods**) by mirroring `buildAccordionRow`'s markup in the string literal (a `li.nav-domain.has-children` with a `.nav-expand` chevron and a `.nav-sublist`), gated by the `nbExpanded` flag for auto-expand. The chevron wires up automatically (the toggle binds to every `.nav-expand` after injection). If a fixed-section leaf ever grows more than one child, promote that whole section to a data-driven array like `TALAN_PAGES` instead of hand-rolling more.
 
 The recursive accordion (used by both `TALAN_PAGES` and `DOMAINS`):
 - Shows a chevron `▸` next to any row whose `children` is non-empty, at any depth.
