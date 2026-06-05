@@ -13,6 +13,35 @@
 (function () {
   'use strict';
 
+  // ── Favicon + manifest (shared with the public site) ─────────
+  // The GM layer carries its own menu, so it does not load
+  // site-nav.js; mirror its favicon injection here so campaign
+  // pages get the full icon set, not just the root /favicon.ico
+  // baseline. Files live at the site root.
+  (function injectFavicon() {
+    var head = document.head || document.getElementsByTagName('head')[0];
+    if (!head || head.querySelector('link[rel~="icon"]')) return; // already wired
+    var links = [
+      { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16.png' },
+      { rel: 'apple-touch-icon', href: '/favicon-180.png' },
+      { rel: 'manifest', href: '/site.webmanifest' }
+    ];
+    links.forEach(function (spec) {
+      var el = document.createElement('link');
+      Object.keys(spec).forEach(function (k) { el.setAttribute(k, spec[k]); });
+      head.appendChild(el);
+    });
+    if (!head.querySelector('meta[name="theme-color"]')) {
+      var meta = document.createElement('meta');
+      meta.setAttribute('name', 'theme-color');
+      meta.setAttribute('content', '#101C3A');
+      head.appendChild(meta);
+    }
+  })();
+
   var TREE = [
     { slug: 'furrious-five', label: 'The Furrious Five', href: '/campaigns/furrious-five/index.html', children: [
       { slug: 'millhaven-gm', label: 'Millhaven · GM Notes', href: '/campaigns/furrious-five/millhaven-gm.html', children: [
