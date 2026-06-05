@@ -25,27 +25,21 @@
   .brass-call p:last-child { margin-bottom: 0; }
 
   /* The three-way haggle (3-card) */
-  .haggle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .haggle-card { padding: 16px 18px; }
+  .haggle-grid { --col-min: 250px; --card-pad: 16px 18px; }
+  .haggle-grid .card-name { font-size: 1.02rem; }
   .haggle-role { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
-  .haggle-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1.02rem; margin-bottom: 8px; }
-  .haggle-card.pilot .haggle-name { color: #9cc4dc; }
-  .haggle-card p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
+  .haggle-card.pilot .card-name { color: #9cc4dc; }
 
   /* The four strata (4-card, ranked) */
-  .strata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1040px; margin: 18px auto; }
-  .strata-card { padding: 16px 18px; }
+  .strata-grid { --col-min: 230px; --grid-max: 1040px; --card-pad: 16px 18px; }
+  .strata-grid .card-name { letter-spacing: 0.06em; font-size: 0.98rem; }
   .strata-rank { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
-  .strata-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.98rem; margin-bottom: 8px; }
-  .strata-card.gaps .strata-name { color: #b6c89a; }
-  .strata-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+  .strata-card.gaps .card-name { color: #b6c89a; }
 
   /* Peoples grid (3-card) */
-  .people-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .people-card { padding: 16px 18px; }
-  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .people-grid { --col-min: 250px; --card-pad: 16px 18px; }
+  .people-grid .card-name { letter-spacing: 0.06em; }
   .people-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
-  .people-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
 
   /* Faith two-card (closed fist / open hand) */
   .faith-card .f-title { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
@@ -126,19 +120,19 @@
     <p>The three-way haggle of producer, processor, and pilot is the engine of the city's outward politics. The Cape pilot-fee war is its sharpest and longest-running front: Rika Tikur's port-masters periodically push to renegotiate the bay-mouth fees, arguing the Order's freight should pay the pilots less, and the Wakehelm have held their line for forty years.</p>
   </div>
 
-  <div class="haggle-grid">
-    <div class="accent-card haggle-card">
+  <div class="card-grid haggle-grid">
+    <div class="accent-card">
       <div class="haggle-role">The Producer</div>
-      <div class="haggle-name">The Order of Steam</div>
+      <div class="card-name">The Order of Steam</div>
       <p>The mountain-ringed manufactory-power that makes the freight and owns none of the door. It can sell only across this water, so it keeps freight-factors resident on the island to clear its goods and haggle its terms, and it plays the processor against the pilot to claw back what the geography costs it.</p>
     </div>
-    <div class="accent-card haggle-card">
-      <div class="haggle-name">Rika Tikur</div>
+    <div class="accent-card">
+      <div class="card-name">Rika Tikur</div>
       <div class="haggle-role">The Processor</div>
       <p>The island that adds the value: docking, processing, the freight-charter the Order is forced to use. Its leverage lasts exactly as long as its processing makes the cargo worth more than raw bulk shipped past it, so it must take the most it can without making the Order route around it.</p>
     </div>
     <div class="accent-card haggle-card pilot">
-      <div class="haggle-name">The Wakehelm</div>
+      <div class="card-name">The Wakehelm</div>
       <div class="haggle-role">The Pilot</div>
       <p>The Dreaming Cape's paired pilot-craft, the only navigators who can read the drift out the bay-mouth. No cargo leaves the bay without them. They have held their fee against Rika Tikur's port-masters for forty years, and the standing threat of bulk routed straight to their docks is the island's discipline.</p>
     </div>
@@ -176,25 +170,25 @@
     <p>The island reads itself in four bands, ranked by the register rather than by blood. The myth the city tells is that anyone may buy a berth and rise; the working truth is that even Greed bends to nepotism, and a man rises by being useful to the right house for long enough at least as often as by coin alone.</p>
   </div>
 
-  <div class="strata-grid">
-    <div class="accent-card strata-card">
+  <div class="card-grid strata-grid">
+    <div class="accent-card">
       <div class="strata-rank">Above the waterline</div>
-      <div class="strata-name">The Berth-Holders</div>
+      <div class="card-name">The Berth-Holders</div>
       <p>The trade-houses and magnates who hold the city and build its big things for yield. Their lineage is the float; their standing is the share-price. They rule while the register lists them and fall the season it does not.</p>
     </div>
-    <div class="accent-card strata-card">
+    <div class="accent-card">
       <div class="strata-rank">Second band</div>
-      <div class="strata-name">The Connected</div>
+      <div class="card-name">The Connected</div>
       <p>Foremen, factors, head clerks, the operator-class, families who have served a house for three generations and whose name a board will trust. They are the proof that even Greed bends to nepotism, and the quiet rebuttal of the city's myth that coin alone buys in.</p>
     </div>
-    <div class="accent-card strata-card">
+    <div class="accent-card">
       <div class="strata-rank">Third band</div>
-      <div class="strata-name">The Settled Base</div>
+      <div class="card-name">The Settled Base</div>
       <p>Generational dock-families who have worked the same yards and slips for lifetimes without ever holding a berth. They are the island's working spine and the register's invisible majority.</p>
     </div>
     <div class="accent-card strata-card gaps">
       <div class="strata-rank">The churn, and the Gaps</div>
-      <div class="strata-name">The Transients</div>
+      <div class="card-name">The Transients</div>
       <p>The workers who cycle in on a season's labour and ship out, the whole continent passing through one island. Where they settle, in the Gaps, they build the thing the register cannot count.</p>
     </div>
   </div>
@@ -248,19 +242,19 @@
     <p>Rika Tikur may be the one place on Talan that sorts by what you hold rather than what you are. Ancestry confers no role and no standing; the berth-register is the only lineage that counts, and a Board may seat a kitsune freight-baron, a Vishkanya financier, and a dwarf-descended arms-broker side by side, joined only by their holdings. Three communities sit at the load-bearing seams of the island.</p>
   </div>
 
-  <div class="people-grid">
-    <div class="accent-card people-card">
-      <div class="people-name">New Age Dwarves &amp; Kobolds</div>
+  <div class="card-grid people-grid">
+    <div class="accent-card">
+      <div class="card-name">New Age Dwarves &amp; Kobolds</div>
       <div class="people-band">the producer's agents on the processor's doorstep</div>
       <p>A standing enclave of freight-factors from the <b>Order of Steam</b>, resident on the island that processes the Order's only export. They clear and inspect the producer's goods and haggle its terms in perpetual tension with the trade-houses. They are the Order's eyes on the door it cannot own, and the house-magnates treat them as a rival power they cannot evict.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Ratfolk</div>
+    <div class="accent-card">
+      <div class="card-name">Ratfolk</div>
       <div class="people-band">the keepers of the Gaps</div>
       <p>The continent's most adaptable urban people, here the anchor of the underclass community of the Gaps. Where the share-register declines to light the streets, the Ratfolk keep the mutual-aid fabric the register ignores: the slate, the carried family, the social wealth the ticker has no column for. They are the densest community on an island that thinks it has none.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">The Settled and the Churn</div>
+    <div class="accent-card">
+      <div class="card-name">The Settled and the Churn</div>
       <div class="people-band">dock-families and transients</div>
       <p>Generational dock-families who have worked the yards for lifetimes, and the cosmopolitan churn of transients who cycle in on a season's work and ship out. Between them they are most of the island's body and almost none of its vote, the whole continent landed in one harbour at any given hour.</p>
     </div>

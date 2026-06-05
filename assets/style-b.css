@@ -914,6 +914,51 @@ a.accent-card {
   border-radius: 0 4px 4px 0;
 }
 
+/* ── CARD GRID + LABEL (shared) ──────────────────────────────
+   The site's single most-repeated structure: a responsive auto-fit
+   grid of .accent-card items, each headed by an uppercase Cinzel
+   label over body prose. Dozens of pages previously re-declared this
+   as .gov-grid / .tier-grid / .peoples-grid / .craft-grid (etc.) plus
+   matching -name and -card-p clones; this is the one shared source.
+
+     <div class="card-grid">
+       <div class="accent-card">
+         <div class="card-name">Label</div>
+         <p>Body prose.</p>
+       </div>
+     </div>
+
+   The grid wrapper, the label, and the body <p> are all handled here.
+   Tune per page by setting CSS vars on .card-grid (inline, or via a
+   tiny per-page rule):
+     --col-min   min column width before wrap   (default 230px)
+     --grid-gap  gap between cards               (default 14px)
+     --grid-max  max grid width                  (default 1000px)
+     --card-pad  padding on each grid card       (default 14px 16px)
+   On a card, set --card-accent to recolour its .card-name (falls
+   through to --gold-bright). Cards that need extra sub-labels
+   (a number row, a sub-heading) keep those as their own page class;
+   only the grid / name / body trio collapses to the shared utility. */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-min, 230px), 1fr));
+  gap: var(--grid-gap, 14px);
+  max-width: var(--grid-max, 1000px);
+  margin: 18px auto;
+}
+.card-grid > .accent-card { padding: var(--card-pad, 14px 16px); }
+.card-grid p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+.card-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--card-accent, var(--gold-bright));
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--card-name-size, 0.95rem);
+  margin-bottom: 6px;
+}
+
 /* ── TWO-COLUMN PAIR ─────────────────────────────────────────
    Side-by-side block layout used for opposing-positions
    sections (bloodline pair, faith-vs-forseti tension,

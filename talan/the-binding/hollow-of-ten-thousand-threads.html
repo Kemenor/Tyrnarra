@@ -28,15 +28,9 @@
   }
 
   /* Chamber cards, four-grid for the Hollow's geography */
-  .chamber-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 14px;
-    margin: 18px auto;
-    max-width: 1000px;
-  }
-  .chamber-card { padding: 14px 16px; --card-bg: rgba(20,24,12,0.55); --card-outline: rgba(106,117,48,0.32); }
-  .chamber-name { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.14em; color: var(--card-accent, #c0c890); text-transform: uppercase; margin-bottom: 6px; }
+  .chamber-grid { --col-min: 240px; }
+  .chamber-grid .accent-card { --card-bg: rgba(20,24,12,0.55); --card-outline: rgba(106,117,48,0.32); }
+  .chamber-grid .card-name { font-size: 0.8rem; letter-spacing: 0.14em; color: var(--card-accent, #c0c890); margin-bottom: 6px; }
   .chamber-desc { font-size: 0.9rem; line-height: 1.6; color: var(--text); }
   .c-tunnels { --card-accent: #88936a; }
   .c-brood   { --card-accent: #9a8a40; }
@@ -44,20 +38,12 @@
   .c-throne  { --card-accent: #c8a040; }
 
   /* Threat blocks, three-card row with sickly red-tinted border */
-  .threat-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 14px;
-    max-width: 1000px;
-    margin: 18px auto;
-  }
-  .threat-card { padding: 14px 16px; --card-bg: rgba(28,16,16,0.55); --card-outline: rgba(122,42,42,0.4); --card-accent: #a04848; }
-  .threat-name {
-    font-family: 'Cinzel', serif;
+  .threat-row { --col-min: 260px; }
+  .threat-row .accent-card { --card-bg: rgba(28,16,16,0.55); --card-outline: rgba(122,42,42,0.4); --card-accent: #a04848; }
+  .threat-row .card-name {
     font-size: 0.78rem;
     letter-spacing: 0.16em;
     color: #d8a0a0;
-    text-transform: uppercase;
     margin-bottom: 6px;
   }
   .threat-desc { font-size: 0.9rem; line-height: 1.6; color: var(--text); }
@@ -156,25 +142,25 @@
     <p>A vast cavern system deep beneath the earth, transformed into a hive of spiders, centipedes, beetles, and crawling horrors. Named for the endless webs threading its chambers, strands infused with corruption, glistening with sickly light, strong enough to bind armoured warriors. Four chamber-types recur throughout the system and define the operational geography:</p>
   </div>
 
-  <div class="chamber-grid">
+  <div class="card-grid chamber-grid">
 
-    <div class="accent-card outlined cut-left chamber-card c-tunnels">
-      <div class="chamber-name">The Web-Tunnels</div>
+    <div class="accent-card outlined cut-left c-tunnels">
+      <div class="card-name">The Web-Tunnels</div>
       <div class="chamber-desc">Narrow passageways coated in sticky threads. Trap and alarm system in one · intrusions alert the Queen's spawn instantly. The Tunnels are the dungeon's connective tissue and its outer warning layer. No deep penetration of the Hollow begins anywhere else.</div>
     </div>
 
-    <div class="accent-card outlined cut-left chamber-card c-brood">
-      <div class="chamber-name">The Brood Pits</div>
+    <div class="accent-card outlined cut-left c-brood">
+      <div class="card-name">The Brood Pits</div>
       <div class="chamber-desc">Chambers full of eggs, larvae, and swollen brood-mothers. The Pits are where the swarms come from. Tarry too long and the hatchlings overwhelm; clear a Pit and another swells to take its place within seasons. The Pits are the reason containment, not eradication, is the doctrine.</div>
     </div>
 
-    <div class="accent-card outlined cut-left chamber-card c-vaults">
-      <div class="chamber-name">The Silken Vaults</div>
+    <div class="accent-card outlined cut-left c-vaults">
+      <div class="card-name">The Silken Vaults</div>
       <div class="chamber-desc">Cocooned bodies · mortal victims, beasts, and adventurers. Some still live, transforming slowly into monstrosities through corruption seeping from the silk. A Vault's worth of cocoons is the Hollow's grimmest cargo: every one is a story, and most are unfinished.</div>
     </div>
 
-    <div class="accent-card outlined cut-left chamber-card c-throne">
-      <div class="chamber-name">The Throne of the Vermin Queen</div>
+    <div class="accent-card outlined cut-left c-throne">
+      <div class="card-name">The Throne of the Vermin Queen</div>
       <div class="chamber-desc">Chamber vast enough to contain her massive form. Draped in layers of living web. She is attended by her chosen spawn · grotesque spider-hybrids once human, now twisted. No expedition has reached the Throne and returned. The few that have <i>reached</i> it had no survivors to bring word.</div>
     </div>
 
@@ -191,20 +177,20 @@
     <p>Veterans of the Shadow Steppes campaigns describe the Hollow as <i>three problems wearing one shape</i>. Each can kill on its own; in combination they erode the rolls of even high-rank Guild parties. They are taught at <a href="/talan/factions/adventurers-guild.html">Myrria's Godshall</a> as the canonical example of why Nine-Dungeons containment requires specialised doctrine, not just martial skill.</p>
   </div>
 
-  <div class="threat-row">
+  <div class="card-grid threat-row">
 
-    <div class="accent-card outlined cut-left thin threat-card">
-      <div class="threat-name">Endless Swarms</div>
+    <div class="accent-card outlined cut-left thin">
+      <div class="card-name">Endless Swarms</div>
       <div class="threat-desc">The Hollow's strength lies in the unending tide as much as the Queen herself. A party can cut a thousand and meet two thousand before the silk dries on the first cut. <i>Numbers attrition</i>, the Guild calls it, and the Hollow has Brood Pits enough to attrition any expedition the kingdoms can field, given time.</div>
     </div>
 
-    <div class="accent-card outlined cut-left thin threat-card">
-      <div class="threat-name">Corrupted Silk</div>
+    <div class="accent-card outlined cut-left thin">
+      <div class="card-name">Corrupted Silk</div>
       <div class="threat-desc">The webs are not mere thread. They carry the Blightfather's power · sticky enough to bind armoured warriors, slow-poisoning to weapons and armour that touch them. Steel pitted by silk fails sooner than steel struck a hundred times. Wounds taken while bound heal slowly or not at all. A Hollow expedition prepares as much for material decay as for combat.</div>
     </div>
 
-    <div class="accent-card outlined cut-left thin threat-card">
-      <div class="threat-name">Hive-Mind Influence</div>
+    <div class="accent-card outlined cut-left thin">
+      <div class="card-name">Hive-Mind Influence</div>
       <div class="threat-desc">Long exposure fills intruders with <i>whispers</i>: fragmented compulsions to stop fighting, to lie down, to join. The swarm itself wears down willpower; the corruption-soaked air is part of the attack. Parties that linger past a certain duration begin to lose members not to combat but to <i>drift</i>: adventurers who walked into a cocoon of their own choosing and could not be retrieved.</div>
     </div>
 

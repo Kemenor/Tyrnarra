@@ -16,10 +16,7 @@
   }
 
   /* Peoples / tempers grid */
-  .peoples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .people-card { padding: 14px 16px; }
-  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
-  .people-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  .peoples-grid { --col-min: 240px; }
 
   /* Signature feature panels (the Fog District, the lifts, the almosts) */
   .feature-panel { max-width: 880px; margin: 18px auto; }
@@ -31,10 +28,8 @@
   .principle-call p:last-child { margin-bottom: 0; }
 
   /* GM-secret card grid */
-  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .gov-card { padding: 16px 18px; }
-  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
-  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .gov-grid { --card-pad: 16px 18px; }
+  .gov-grid .card-name { font-size: 1rem; }
 </style>
 </head>
 <body data-page="eldara">
@@ -99,17 +94,17 @@
     <p>The one standing institution is the clergy of Komo, the <b>Emberwardens</b>, who tend his rites and the great open forge that any fireless hand may work, and who witness the coming-of-age pieces. They keep the worship; they do not rule the city. Three peoples work the fires, and the city is the place where being from <i>here</i> outweighs whatever you were.</p>
   </div>
 
-  <div class="peoples-grid">
-    <div class="accent-card people-card">
-      <div class="people-name">New Age Dwarves</div>
+  <div class="card-grid peoples-grid">
+    <div class="accent-card">
+      <div class="card-name">New Age Dwarves</div>
       <p>The method-temper without a rulebook. Where the <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> harnesses the dwarf into a safety-conscious institution, the Eldaran dwarf wanted the fire raw rather than chartered, and chose to stand beside the explosion. Many are dwarves who left the Order, or refused it.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Kobolds</div>
+    <div class="accent-card">
+      <div class="card-name">Kobolds</div>
       <p>The reckless inventors who work in the very image of the god, since Komo himself is depicted a Kobold. In the Order the dwarves manage him; in Eldara he is co-equal and unchained, honoured for the spark rather than contained for the danger of it.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">The Forge-Fallen</div>
+    <div class="accent-card">
+      <div class="card-name">The Forge-Fallen</div>
       <p>A small, old trickle of <b>Dragons</b> who left <a href="/talan/domains/sumendar/dragons-reach.html">Dragon's Reach</a> and set down the Purity Question entirely. The Reach asks forever what was lost; Eldara cares only what comes off your bench today. They take up Komo and worship through the forge, which the Reach names apostasy and they name freedom.</p>
     </div>
   </div>
@@ -176,21 +171,21 @@
       <div class="secret-era-label">⚿ &nbsp; What the Emberwardens Actually Do</div>
       <p style="font-style:italic; margin-top:0;">Eldara's volcano will erupt one day and end the city. The Emberwardens know, and they are trying to learn when.</p>
 
-      <div class="gov-grid">
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">The Hidden Work</div>
+      <div class="card-grid gov-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Hidden Work</div>
           <p>Behind the rites and the open forge, the clergy's true labour is to read the mountain at the scale no maker reads their own fire. The eruption is coming; the only question is the year, and the Emberwardens spend their lives trying to narrow it.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Why Keep It Silent</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Why Keep It Silent</div>
           <p>To name it aloud would empty Eldara overnight, stop the making, and kill the city as a city long before the mountain does. So they carry it alone and keep reading, and let the makers work in the noise as though the noise will never end.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">The Dread They Half-Say</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Dread They Half-Say</div>
           <p>That the eruption is not blind geology but Komo's own nature, the largest expression of Forge and Destruction together. The apprentice lights the prototype to watch it blow; Eldara is the god's prototype, the grandest thing he ever sat down at.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Worship and the Clock</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Worship and the Clock</div>
           <p>No one can tell whether millennia of unceasing worship postpone the eruption or feed it. That uncertainty is the worst of what the Emberwardens hold, and the reason their reading never stops any more than the forges do.</p>
         </div>
       </div>

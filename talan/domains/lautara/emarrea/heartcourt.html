@@ -15,16 +15,15 @@
   }
 
   /* Heart pillar palette (re-used from emarrea.html) */
-  .hearts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 20px auto; max-width: 1080px; }
-  .heart-card { padding: 14px 16px; }
-  .heart-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .hearts-grid { --col-min: 260px; --grid-max: 1080px; }
+  .hearts-grid .card-name { letter-spacing: 0.06em; }
   .heart-pillar { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
   .heart-bio { font-size: 0.88rem; color: var(--text); line-height: 1.45; }
   .heart-bio i { color: var(--text-dim); }
   .heart-person { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 2px; }
   .tail-pill { display: inline-block; padding: 1px 7px; border: 1px solid var(--card-accent, var(--gold-dim)); border-radius: 10px; font-size: 0.72rem; font-family: 'Cinzel', serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--card-accent, var(--gold-bright)); margin-right: 5px; }
-  .heart-card.heart-vacant { opacity: 0.55; border-style: dashed; }
-  .heart-card.heart-vacant .heart-name { font-style: italic; color: var(--gold-dim); }
+  .heart-vacant { opacity: 0.55; border-style: dashed; }
+  .heart-vacant .card-name { font-style: italic; color: var(--gold-dim); }
   .h-crimson  { --card-accent: #b04030; }
   .h-azure    { --card-accent: #4a78b8; }
   .h-golden   { --card-accent: #d8a040; }
@@ -284,14 +283,14 @@
 
   <h2 class="section-heading" id="vacancies">The Two Vacancies</h2>
 
-  <div class="hearts-grid" style="grid-template-columns: 1fr 1fr; max-width: 920px;">
-    <div class="accent-card heart-card h-crimson heart-vacant">
-      <div class="heart-name">– Vacant –</div>
+  <div class="card-grid hearts-grid" style="grid-template-columns: 1fr 1fr; max-width: 920px;">
+    <div class="accent-card h-crimson heart-vacant">
+      <div class="card-name">– Vacant –</div>
       <div class="heart-pillar">Crimson Heart · Military &amp; War</div>
       <div class="heart-bio">A fox's head crowned with a laurel of crimson silk. <br><i>Structurally vacant ~10 years; covered by <b>Shirae</b> (Sapphire, double-Tailed). Emarrea sits inside Lautara at peace, and the court has not pushed to fill it.</i></div>
     </div>
-    <div class="accent-card heart-card h-onyx heart-vacant">
-      <div class="heart-name">– Vacant · Spectacle Underway –</div>
+    <div class="accent-card h-onyx heart-vacant">
+      <div class="card-name">– Vacant · Spectacle Underway –</div>
       <div class="heart-pillar">Onyx Heart · Secrets &amp; Shadows</div>
       <div class="heart-bio">A fox's eye half-hidden in shadow. <br><i>Recently vacant; covered by <b>Yorume</b> (Violet, double-Tailed). Spectacle of Selection currently underway; two candidates competing (see below).</i></div>
     </div>

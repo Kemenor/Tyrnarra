@@ -15,17 +15,12 @@
     --card-bg: rgba(16,30,36,0.55);
   }
 
-  /* Governance roles (the Eye, the Windward, the Turning) */
-  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .gov-card { padding: 16px 18px; }
-  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
-  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  /* Governance roles — non-default font-size and padding */
+  .gov-grid { --card-pad: 16px 18px; }
+  .gov-grid .card-name { font-size: 1rem; line-height: 1.55; }
+  .gov-grid p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
 
-  /* Wind-craft roles (readers, trim-wrights, Windwatchers) */
-  .craft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .craft-card { padding: 14px 16px; }
-  .craft-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .craft-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  /* Wind-craft roles and peoples (plain, use card-grid defaults) */
 
   /* Signature feature panels (svif, windrift, the Fairwind) */
   .feature-panel { max-width: 880px; margin: 18px auto; }
@@ -36,11 +31,6 @@
   .principle-call p { margin: 0 0 12px; line-height: 1.6; }
   .principle-call p:last-child { margin-bottom: 0; }
 
-  /* Peoples grid */
-  .peoples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .people-card { padding: 14px 16px; }
-  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
-  .people-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 </style>
 </head>
 <body data-page="haizava">
@@ -100,17 +90,17 @@
     <p>Haizava has no standing ruler. Authority belongs to whichever district the wind carries to <b>the Eye</b> at the city's heart: that district, <b>the Windward</b>, governs until the wind shifts and seats another, the rotation Haizavans call <b>the Turning</b>. <i>The Windward holds till the wind turns.</i></p>
   </div>
 
-  <div class="gov-grid">
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Eye</div>
+  <div class="card-grid gov-grid">
+    <div class="accent-card">
+      <div class="card-name">The Eye</div>
       <p>The one wind-still point at the city's heart, the calm at a storm's core and Fisaya's seat. The district the wind carries here governs from it. Anchored at the bend of the great river, the city's one fixed bearing.</p>
     </div>
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Windward</div>
+    <div class="accent-card">
+      <div class="card-name">The Windward</div>
       <p>The district the wind has currently seated adjacent to the Eye. It governs the whole city from there until the wind turns and seats another. Power is a position, not an office, and it is held only as long as the sky allows.</p>
     </div>
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Turning</div>
+    <div class="accent-card">
+      <div class="card-name">The Turning</div>
       <p>The rotation of power as the wind shifts the Windward away and carries a new district to the Eye. There is no election and no inheritance; there is the weather, read and trimmed, and the position it leaves you in.</p>
     </div>
   </div>
@@ -119,17 +109,17 @@
     <p>Each district fields its own <b>wind-readers</b> and <b>trim-wrights</b>, so the contest for the Eye is one of forecast and trim, the wind holding the last say. Standing apart from all of it are Fisaya's clergy, <b>the Windwatchers</b>, sworn to no district and keepers of the Eye itself.</p>
   </div>
 
-  <div class="craft-grid">
-    <div class="accent-card craft-card">
-      <div class="craft-name">Wind-Readers</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Wind-Readers</div>
       <p>Each district's own forecasters. They read cloud, gust, and front to call where the wind will carry their ward, and how soon. A great reader can put their district at the Eye by knowing, days ahead, the weather everyone else only feels arrive.</p>
     </div>
-    <div class="accent-card craft-card">
-      <div class="craft-name">Trim-Wrights</div>
+    <div class="accent-card">
+      <div class="card-name">Trim-Wrights</div>
       <p>Each district's engineers, who work its sails, vanes, counterweights, and rails to nudge its position toward the center. The reader names where the wind goes; the trim-wright sets the ward to ride it there. The two work as one hand.</p>
     </div>
-    <div class="accent-card craft-card">
-      <div class="craft-name">The Windwatchers</div>
+    <div class="accent-card">
+      <div class="card-name">The Windwatchers</div>
       <p>Fisaya's sworn-neutral clergy. They keep the Eye, read the whole sky rather than any one district's path, call the Turning, and pilot the windrifts that thread every district alike. They take no part in the contest for power, and their neutrality is the thing the whole rotation rests on.</p>
     </div>
   </div>
@@ -179,21 +169,21 @@
     <p>Haizava is cosmopolitan, the capital where the domain's wind-and-sky folk converge, and the wind-reading craft is the common ground that holds them together. Who your people are matters less here than whether you can read the sky.</p>
   </div>
 
-  <div class="peoples-grid">
-    <div class="accent-card people-card">
-      <div class="people-name">Strix</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Strix</div>
       <p>The natural pilots of the wind-canals, the svifs, and the airships, the winged folk most at home in a city whose whole business is the air. Where Fellibylur made them storm-readers of the open steppe, Haizava makes them the city's pilots.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Jotunborn</div>
+    <div class="accent-card">
+      <div class="card-name">Jotunborn</div>
       <p>Reading the great winds in their own known weather-craft. The same arctic instinct that lets a Baerfrost clan call a coming storm reads, here, the heavy cold air spilling south off the ice that meets the warm front over the river.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Kashrishi</div>
+    <div class="accent-card">
+      <div class="card-name">Kashrishi</div>
       <p>Bringing the Air Monastery's observation-discipline made urban, and the standing irony of the continent's mappers in the one city no map holds. They read the sky with instrument and calibrated rule, and live, smiling, where their craft's proudest product cannot be drawn.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Tengu</div>
+    <div class="accent-card">
+      <div class="card-name">Tengu</div>
       <p>Crossing from the island. The wind-knowing they learn as children on Haizetsua finds a second home in the city where wind-reading is the whole of civic life, and a Tengu on Vornsketta often spends a season here.</p>
     </div>
   </div>
@@ -214,21 +204,21 @@
       <div class="secret-era-label">⚿ &nbsp; The Windwatchers' Deepest Vow</div>
       <p style="font-style:italic; margin-top:0;">The wind does not banish the grasping district. The Windwatchers do.</p>
 
-      <div class="gov-grid">
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">The Counter-Trim</div>
+      <div class="card-grid gov-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Counter-Trim</div>
           <p>When a ward over-trims to chain itself to the Eye, the sworn-neutral clergy quietly counter-trim it, setting the great mechanisms and the canal-currents against it until it loses position. The storms that "turn against the grasping" are the Windwatchers' own hand on the city's machinery.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">True in Verdict, False in Hand</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">True in Verdict, False in Hand</div>
           <p><i>Fisaya banishes the grasping</i> is true in its verdict and false in its hand. The grasping ward is cast to the rim, exactly as the city believes; but it is mortal enforcement dressed as divine will, and the goddess's name is the cover the verdict wears.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Why Keep the Belief</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Why Keep the Belief</div>
           <p>The Windwatchers keep the belief alive because a check everyone credits to the goddess needs no visible enforcer and draws no faction's blame. A clergy that openly cast wards from power would become a faction itself; a goddess who turns the weather on a tyrant is above faction, and so the rotation holds.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Fisaya's Part</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Fisaya's Part</div>
           <p>She is genuinely present and genuinely knows every wind, but she rides svifs and carries the breath into every home and leaves the governing of mortals to mortals. The Windwatchers' deepest vow is the secret of whose hand actually keeps Haizava free.</p>
         </div>
       </div>

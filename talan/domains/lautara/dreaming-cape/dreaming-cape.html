@@ -15,18 +15,18 @@
     --card-bg: rgba(20,26,36,0.55);
   }
 
-  /* Five-tier dream-trade grid */
-  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 18px auto; }
-  .tier-card { padding: 16px 18px; }
+  /* Five-tier dream-trade grid (rich cards: shared .card-grid/.card-name
+     utility, plus this page's bespoke num / band / colour-variant labels).
+     The 5-across width and roomier padding are the deliberate per-grid tune. */
+  .tier-grid { --col-min: 220px; --grid-max: 1100px; --card-pad: 16px 18px; }
+  .tier-grid .card-name { font-size: 1rem; margin-bottom: 4px; }
   .tier-num { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
-  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
-  .tier-name.free      { color: #b8c8d8; }
-  .tier-name.clergy    { color: #c8d8e0; }
-  .tier-name.lodging   { color: #a8b0b8; }
-  .tier-name.brew      { color: #c0d0e0; }
-  .tier-name.monopoly  { color: #e0d8b8; }
+  .tier-grid .card-name.free      { color: #b8c8d8; }
+  .tier-grid .card-name.clergy    { color: #c8d8e0; }
+  .tier-grid .card-name.lodging   { color: #a8b0b8; }
+  .tier-grid .card-name.brew      { color: #c0d0e0; }
+  .tier-grid .card-name.monopoly  { color: #e0d8b8; }
   .tier-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.4; }
-  .tier-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
 
   /* Polity sub-sections */
   .polity-sub { max-width: 880px; margin: 18px auto; padding: 18px 24px; background: rgba(20,26,36,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -37,17 +37,8 @@
   /* Wakehelm feature panel */
   .feature-panel { max-width: 880px; margin: 18px auto; }
 
-  /* Folk-theory grid (for the drift's open causes) */
-  .theory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; max-width: 980px; margin: 18px auto; }
-  .theory-card { padding: 14px 16px; }
-  .theory-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 6px; }
-  .theory-card p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
-
-  /* Tension grid (3-card) */
-  .tension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .tension-card { padding: 16px 18px; }
-  .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
-  .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  /* Folk-theory grid and tension grid both use the shared .card-grid
+     / .card-name utility at its defaults (style-b.css). */
 </style>
 </head>
 <body data-page="dreaming-cape">
@@ -101,21 +92,21 @@
     <p>The cause is genuinely unknown to the chronicle-record. The temple's standing doctrine holds that the drift is <b>Bikiargi's blessing</b>, the goddess of the twin moons holding sleep and waking in tension here. Outside the temple, four folk-theories compete in the inns and at the dock-side tables, none confirmed and none refuted:</p>
   </div>
 
-  <div class="theory-grid">
-    <div class="accent-card theory-card">
-      <div class="theory-name">The Forge-Smoke</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Forge-Smoke</div>
       <p>Old salts blame the Order of Steam's forge-smoke that drifts across the bay; the smoke carries something, they say, that settles in the lungs and folds the hours.</p>
     </div>
-    <div class="accent-card theory-card">
-      <div class="theory-name">The Holy Water</div>
+    <div class="accent-card">
+      <div class="card-name">The Holy Water</div>
       <p>Tahu Tangata songs name the bay-water as a holy water that remembers what mortal memory cannot.</p>
     </div>
-    <div class="accent-card theory-card">
-      <div class="theory-name">The Old Thing</div>
+    <div class="accent-card">
+      <div class="card-name">The Old Thing</div>
       <p>The Cape's interior mountains hide an old thing; pilgrims who climbed there returned changed, and the changed walk among us spreading the drift.</p>
     </div>
-    <div class="accent-card theory-card">
-      <div class="theory-name">The Friction</div>
+    <div class="accent-card">
+      <div class="card-name">The Friction</div>
       <p>The bay-mouth is where two waters meet, the open Midarra and the bay's enclosed flow, and the drift is the friction between them.</p>
     </div>
   </div>
@@ -157,34 +148,34 @@
     <p>The Cape's commercial offering structured by doctrine, in five tiers from free to most-sacred. The dream owned by a sleeper is sacred; a dream sold to a stranger is a desecration; the inn sells the brew, the dream stays the sleeper's.</p>
   </div>
 
-  <div class="tier-grid">
-    <div class="accent-card tier-card">
+  <div class="card-grid tier-grid">
+    <div class="accent-card">
       <div class="tier-num">Tier 1</div>
-      <div class="tier-name free">Witnessing</div>
+      <div class="card-name free">Witnessing</div>
       <div class="tier-band">Free · the Twin Lantern's dormitory</div>
       <p>Sleepers in the temple dormitory may have their dreams witnessed by the dream-clergy and, if they wish, entered into the temple register. The goddess's hospitality, free to any who come.</p>
     </div>
-    <div class="accent-card tier-card">
+    <div class="accent-card">
       <div class="tier-num">Tier 2</div>
-      <div class="tier-name clergy">Interpretation</div>
+      <div class="card-name clergy">Interpretation</div>
       <div class="tier-band">Paid clergy service</div>
       <p>Interpretation of dreams brought to the clergy, a working sworn craft paid as any. Reading is its own skill: the prophetic answer is always given, the reading is never the whole of it.</p>
     </div>
-    <div class="accent-card tier-card">
+    <div class="accent-card">
       <div class="tier-num">Tier 3</div>
-      <div class="tier-name lodging">Lodging</div>
+      <div class="card-name lodging">Lodging</div>
       <div class="tier-band">Paid inn-bed</div>
       <p>Beds at chartered inns across Moonwatch and the Cape's smaller settlements. What the body dreams under the inn's roof remains the sleeper's.</p>
     </div>
-    <div class="accent-card tier-card">
+    <div class="accent-card">
       <div class="tier-num">Tier 4</div>
-      <div class="tier-name brew">Temple-Stamped Brews</div>
+      <div class="card-name brew">Temple-Stamped Brews</div>
       <div class="tier-band">Paid inn product · the temple's mark</div>
       <p>Dream-blends sold at chartered inns under the temple's certification mark, brews designed to promote vivid restful dreaming. The inn sells the brew; the dream stays the sleeper's. Unstamped brews exist outside the chartered system at the drinker's own risk.</p>
     </div>
-    <div class="accent-card tier-card">
+    <div class="accent-card">
       <div class="tier-num">Tier 5</div>
-      <div class="tier-name monopoly">Prophetic Induction</div>
+      <div class="card-name monopoly">Prophetic Induction</div>
       <div class="tier-band">Paid temple monopoly · Twin Lantern clergy only</div>
       <p>The temple's most sacred offering. A specific question put to the goddess through ritualised sleep, the answer compelled and witnessed by the dream-clergy. The rite is weighty and the price reflects it. The future is always shown, but the interpretation stays open and the answer stays dream-quality.</p>
     </div>
@@ -230,17 +221,17 @@
     <p>Three arguments run quietly through Moonwatch and louder in the smaller settlements.</p>
   </div>
 
-  <div class="tension-grid">
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Brokering Line</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Brokering Line</div>
       <p>Inn-keepers chafe against the temple's licensing on dream-blends, especially the doctrinal line against any inn brokering certified dream-content. Outside merchants keep asking. A few inn-keepers keep being quietly suspected of saying yes. The temple holds the line strictly and the enforcement headache stays chronic.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Drift Question</div>
+    <div class="accent-card">
+      <div class="card-name">The Drift Question</div>
       <p>The drift's actual cause is genuinely open. The temple's official Bikiargi-blessing reading is doctrine; some Thekkavar-educated clergy quietly hold other views; Helgaft scholars passing through occasionally publish papers the temple does not endorse and does not suppress.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Bay-Mouth Fees</div>
+    <div class="accent-card">
+      <div class="card-name">The Bay-Mouth Fees</div>
       <p>Rika Tikur's port-masters periodically push to renegotiate the bay-mouth pilot fees, arguing the Order of Steam's industrial freight should pay less than Lautaran merchant traffic. The Wakehelm has held the line for forty years; the Twin Lantern's standing answer is that the same drift hazards every ship the same.</p>
     </div>
   </div>

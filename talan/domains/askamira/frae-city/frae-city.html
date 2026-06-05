@@ -15,10 +15,8 @@
     --card-bg: rgba(14,20,30,0.5);
   }
 
-  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .gov-card { padding: 16px 18px; }
-  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
-  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .gov-grid .card-name { font-size: 1rem; }
+  .gov-grid { --card-pad: 16px 18px; }
 
   .feature-panel { max-width: 880px; margin: 18px auto; }
 
@@ -99,17 +97,17 @@
 
   <div class="prose"><p style="text-align:center; font-style:italic; color:var(--domain-accent);">Three ways up, and freedom is in the climb.</p></div>
 
-  <div class="gov-grid">
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Climb</div>
+  <div class="card-grid gov-grid">
+    <div class="accent-card">
+      <div class="card-name">The Climb</div>
       <p>The chain-stairs, free and never closed, open to anyone willing to make the long climb up the seven cables. The free way is the hardest, which is the city in one image: freedom costs nothing and asks everything. The youth climb-race it, and scorn those who pay.</p>
     </div>
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Lift</div>
+    <div class="accent-card">
+      <div class="card-name">The Lift</div>
       <p>A cage-ride up the rock for coin. Ease is what you pay for; you cannot buy rank in Frae City, but you can buy out of the climb.</p>
     </div>
-    <div class="accent-card gov-card">
-      <div class="gov-name">The Airship</div>
+    <div class="accent-card">
+      <div class="card-name">The Airship</div>
       <p>A berth at the Rim, dear and dignified, the way the established and the far-come arrive. Frae City is built for airships, and the sky above the lake is thick with them.</p>
     </div>
   </div>

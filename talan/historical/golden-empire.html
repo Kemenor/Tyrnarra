@@ -13,9 +13,9 @@
   :root { --domain-accent: #d4a01a; }
 
   /* Achievement cards, the Empire's tangible works */
-  .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .work-card { padding: 14px 16px; --card-bg: rgba(28,22,10,0.55); }
-  .work-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .work-grid { --col-min: 260px; --grid-max: 1100px; }
+  .work-grid .accent-card { --card-bg: rgba(28,22,10,0.55); }
+  .work-grid .card-name { font-size: 0.92rem; }
   .work-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
   .work-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
 
@@ -119,28 +119,28 @@
     <p>Whatever the Empire was, it built. Four threads of that building survive in modern Talan in concrete, daily-use form, the institutional and material spine that most modern kingdoms inherited without quite remembering they did.</p>
   </div>
 
-  <div class="work-grid">
+  <div class="card-grid work-grid">
 
-    <div class="accent-card work-card">
-      <div class="work-name">Common Law</div>
+    <div class="accent-card">
+      <div class="card-name">Common Law</div>
       <div class="work-byline">The legal spine modern kingdoms inherited</div>
       <div class="work-desc">Imperial common law was the first continental-scale legal framework since the Gods' Era. Property, contract, succession, the structure of formal oath, all codified, all enforceable across provincial borders, all written in Imperial Dwarvish. <b>Most modern Talanese kingdoms' legal codes descend from it</b>, including (with substantial Forseti-doctrinal evolution) the <a href="/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>'s framework. The Empire's law was not gentle but it was consistent, and consistency turned out to be the more important inheritance.</div>
     </div>
 
-    <div class="accent-card work-card">
-      <div class="work-name">The Roads</div>
+    <div class="accent-card">
+      <div class="card-name">The Roads</div>
       <div class="work-byline">Imperial military-supply corridors, now civilian</div>
       <div class="work-desc">The Imperial road network connected every provincial capital to the Imperial heartland by paved, milestone-marked, garrison-protected routes. After the collapse, the roads survived, milestones still in their original positions, stone bedding still under the soil. <b>Modern Magitrain routing follows the Imperial road network</b> in many southern stretches; the engineers found that the easiest places to lay new rail were the places the Empire had already cleared and levelled centuries earlier.</div>
     </div>
 
-    <div class="accent-card work-card">
-      <div class="work-name">The Script</div>
+    <div class="accent-card">
+      <div class="card-name">The Script</div>
       <div class="work-byline">Imperial Dwarvish, fossilised in modern place-names</div>
       <div class="work-desc">For seven centuries the scholarly standard of the continent. Every educated Talanese mortal of the era could read it; every formal document of the Empire was written in it; every official place-name was Dwarvish. After the collapse, the script faded from active use within a century, but the <b>place-names did not move.</b> Modern Talanese maps are studded with Imperial Dwarvish toponyms drifted past recognition: villages, valleys, river-bends, milestones, abandoned watch-stations. The continent is still, in this small way, the Empire's.</div>
     </div>
 
-    <div class="accent-card work-card">
-      <div class="work-name">The Automatons</div>
+    <div class="accent-card">
+      <div class="card-name">The Automatons</div>
       <div class="work-byline">The Empire's failure that made an ancestry</div>
       <div class="work-desc">The Empire's greatest scholars spent generations trying to recreate the <a href="/talan/ancestries.html">Android</a> ancestry of the Elden, synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: capable constructs of considerable skill, but not the living people the Elden had made. The Empire treated the Automaton programme as a near-success its scholars would eventually close; modern bestiary work treats the Automatons as their own people, distinct and complete. The Empire never resolved the question. Its scholars considered it haunting; the Automatons themselves did not.</div>
     </div>

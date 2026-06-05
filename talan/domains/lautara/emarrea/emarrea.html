@@ -13,9 +13,8 @@
     --domain-accent: #d6843a;
     --card-bg: rgba(20,12,8,0.55);
   }
-  .hearts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px auto; max-width: 1000px; }
-  .heart-card { padding: 12px 14px; }
-  .heart-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .hearts-grid { --col-min: 220px; --card-pad: 12px 14px; }
+  .hearts-grid .card-name { letter-spacing: 0.06em; }
   .heart-domain { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 6px; }
   .heart-symbol { font-size: 0.85rem; color: var(--text); }
   .h-crimson  { --card-accent: #b04030; }
@@ -27,13 +26,13 @@
   .h-rose     { --card-accent: #c87490; }
   .h-sapphire { --card-accent: #5878a8; }
   .h-onyx     { --card-accent: #4a4858; }
-  .heart-card.heart-vacant { opacity: 0.55; border-style: dashed; }
-  .heart-card.heart-vacant .heart-name { font-style: italic; color: var(--gold-dim); }
-  .heart-card .heart-person { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 2px; }
-  .heart-card .heart-pillar { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
-  .heart-card .heart-bio { font-size: 0.88rem; color: var(--text); line-height: 1.45; }
-  .heart-card .heart-bio i { color: var(--text-dim); }
-  .heart-card .tail-pill { display: inline-block; padding: 1px 7px; border: 1px solid var(--card-accent, var(--gold-dim)); border-radius: 10px; font-size: 0.72rem; font-family: 'Cinzel', serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--card-accent, var(--gold-bright)); margin-right: 5px; }
+  .heart-vacant { opacity: 0.55; border-style: dashed; }
+  .heart-vacant .card-name { font-style: italic; color: var(--gold-dim); }
+  .heart-person { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 2px; }
+  .heart-pillar { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .heart-bio { font-size: 0.88rem; color: var(--text); line-height: 1.45; }
+  .heart-bio i { color: var(--text-dim); }
+  .tail-pill { display: inline-block; padding: 1px 7px; border: 1px solid var(--card-accent, var(--gold-dim)); border-radius: 10px; font-size: 0.72rem; font-family: 'Cinzel', serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--card-accent, var(--gold-bright)); margin-right: 5px; }
   .court-section { max-width: 920px; margin: 22px auto; }
   h3.section-heading { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.32em; color: var(--gold); text-align: center; text-transform: uppercase; margin: 32px 0 18px; }
   .spectacle-card { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 14px 0; }
@@ -48,10 +47,10 @@
   a.heartcourt-cta .cta-title { font-family: 'Uncial Antiqua', serif; font-size: 1.3rem; color: var(--gold-bright); margin-bottom: 12px; }
   a.heartcourt-cta:hover .cta-title { color: #f0d080; }
   a.heartcourt-cta .cta-body { font-size: 0.95rem; color: var(--text); line-height: 1.55; margin: 0; }
-  a.heart-card { display: block; text-decoration: none; color: inherit; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
-  a.heart-card:hover, a.heart-card:focus-visible { background: rgba(72,48,24,0.45); transform: translateY(-1px); }
-  a.heart-card:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
-  a.heart-card:hover .heart-name { color: #f0d080; }
+  .hearts-grid a.accent-card { display: block; text-decoration: none; color: inherit; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .hearts-grid a.accent-card:hover, .hearts-grid a.accent-card:focus-visible { background: rgba(72,48,24,0.45); transform: translateY(-1px); }
+  .hearts-grid a.accent-card:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  .hearts-grid a.accent-card:hover .card-name { color: #f0d080; }
   .sake-table { width: 100%; max-width: 880px; margin: 16px auto; border-collapse: collapse; font-size: 0.92rem; }
   .sake-table th, .sake-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid rgba(214,132,58,0.18); }
   .sake-table th { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
@@ -118,16 +117,16 @@
     <p><b>Currently seven of nine seated.</b> The Crimson seat (Military &amp; War) has been structurally vacant a decade; the Onyx seat (Secrets &amp; Shadows) is in active Spectacle of Selection, with two candidates competing through public trials. The seated seven are <b>Saemi</b> (Azure), <b>Houreni</b> (Golden), <b>Shionori</b> (Emerald, eight tails), <b>Norikaze</b> (Ivory), <b>Yorume</b> (Violet + Onyx Tail), <b>Reien</b> (Rose), and <b>Shirae</b> (Sapphire + Crimson Tail).</p>
   </div>
 
-  <div class="hearts-grid">
-    <a class="accent-card heart-card h-crimson" href="/talan/domains/lautara/emarrea/heartcourt.html#vacancies"><div class="heart-name">Crimson Heart →</div><div class="heart-domain">Military & War · <i>vacant</i></div><div class="heart-symbol">A fox's head crowned with a laurel of crimson silk.</div></a>
-    <a class="accent-card heart-card h-azure" href="/talan/domains/lautara/emarrea/heartcourt.html#saemi"><div class="heart-name">Azure Heart →</div><div class="heart-domain">Diplomacy & Foreign Relations · <i>Saemi</i></div><div class="heart-symbol">Two entwined fox tails over a calm wave.</div></a>
-    <a class="accent-card heart-card h-golden" href="/talan/domains/lautara/emarrea/heartcourt.html#houreni"><div class="heart-name">Golden Heart →</div><div class="heart-domain">Commerce & Wealth · <i>Houreni</i></div><div class="heart-symbol">A fox's paw clutching a golden coin.</div></a>
-    <a class="accent-card heart-card h-emerald" href="/talan/domains/lautara/emarrea/heartcourt.html#shionori"><div class="heart-name">Emerald Heart →</div><div class="heart-domain">Nature & Stewardship · <i>Shionori</i></div><div class="heart-symbol">A fox curled within a wreath of ivy.</div></a>
-    <a class="accent-card heart-card h-ivory" href="/talan/domains/lautara/emarrea/heartcourt.html#norikaze"><div class="heart-name">Ivory Heart →</div><div class="heart-domain">Law & Justice · <i>Norikaze</i></div><div class="heart-symbol">A fox's mask split black and white.</div></a>
-    <a class="accent-card heart-card h-violet" href="/talan/domains/lautara/emarrea/heartcourt.html#yorume"><div class="heart-name">Violet Heart →</div><div class="heart-domain">Magic & Mysticism · <i>Yorume</i></div><div class="heart-symbol">A fox tail wreathed in stars.</div></a>
-    <a class="accent-card heart-card h-rose" href="/talan/domains/lautara/emarrea/heartcourt.html#reien"><div class="heart-name">Rose Heart →</div><div class="heart-domain">Arts & Festivals · <i>Reien</i></div><div class="heart-symbol">A fox dancing with a ribbon.</div></a>
-    <a class="accent-card heart-card h-sapphire" href="/talan/domains/lautara/emarrea/heartcourt.html#shirae"><div class="heart-name">Sapphire Heart →</div><div class="heart-domain">Knowledge & Education · <i>Shirae</i></div><div class="heart-symbol">An open scroll beneath a fox's gaze.</div></a>
-    <a class="accent-card heart-card h-onyx" href="/talan/domains/lautara/emarrea/heartcourt.html#onyx-spectacle"><div class="heart-name">Onyx Heart →</div><div class="heart-domain">Secrets & Shadows · <i>Spectacle underway</i></div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></a>
+  <div class="card-grid hearts-grid">
+    <a class="accent-card h-crimson" href="/talan/domains/lautara/emarrea/heartcourt.html#vacancies"><div class="card-name">Crimson Heart →</div><div class="heart-domain">Military & War · <i>vacant</i></div><div class="heart-symbol">A fox's head crowned with a laurel of crimson silk.</div></a>
+    <a class="accent-card h-azure" href="/talan/domains/lautara/emarrea/heartcourt.html#saemi"><div class="card-name">Azure Heart →</div><div class="heart-domain">Diplomacy & Foreign Relations · <i>Saemi</i></div><div class="heart-symbol">Two entwined fox tails over a calm wave.</div></a>
+    <a class="accent-card h-golden" href="/talan/domains/lautara/emarrea/heartcourt.html#houreni"><div class="card-name">Golden Heart →</div><div class="heart-domain">Commerce & Wealth · <i>Houreni</i></div><div class="heart-symbol">A fox's paw clutching a golden coin.</div></a>
+    <a class="accent-card h-emerald" href="/talan/domains/lautara/emarrea/heartcourt.html#shionori"><div class="card-name">Emerald Heart →</div><div class="heart-domain">Nature & Stewardship · <i>Shionori</i></div><div class="heart-symbol">A fox curled within a wreath of ivy.</div></a>
+    <a class="accent-card h-ivory" href="/talan/domains/lautara/emarrea/heartcourt.html#norikaze"><div class="card-name">Ivory Heart →</div><div class="heart-domain">Law & Justice · <i>Norikaze</i></div><div class="heart-symbol">A fox's mask split black and white.</div></a>
+    <a class="accent-card h-violet" href="/talan/domains/lautara/emarrea/heartcourt.html#yorume"><div class="card-name">Violet Heart →</div><div class="heart-domain">Magic & Mysticism · <i>Yorume</i></div><div class="heart-symbol">A fox tail wreathed in stars.</div></a>
+    <a class="accent-card h-rose" href="/talan/domains/lautara/emarrea/heartcourt.html#reien"><div class="card-name">Rose Heart →</div><div class="heart-domain">Arts & Festivals · <i>Reien</i></div><div class="heart-symbol">A fox dancing with a ribbon.</div></a>
+    <a class="accent-card h-sapphire" href="/talan/domains/lautara/emarrea/heartcourt.html#shirae"><div class="card-name">Sapphire Heart →</div><div class="heart-domain">Knowledge & Education · <i>Shirae</i></div><div class="heart-symbol">An open scroll beneath a fox's gaze.</div></a>
+    <a class="accent-card h-onyx" href="/talan/domains/lautara/emarrea/heartcourt.html#onyx-spectacle"><div class="card-name">Onyx Heart →</div><div class="heart-domain">Secrets & Shadows · <i>Spectacle underway</i></div><div class="heart-symbol">A fox's eye half-hidden in shadow.</div></a>
   </div>
 
   <a href="/talan/domains/lautara/emarrea/heartcourt.html#the-structure-of-the-court" class="heartcourt-cta">
@@ -152,19 +151,19 @@
     <p>The kitsune ancestral pantheon, all Minor and all <a href="/non-bound-gods.html">Elysium-resident</a>. Three named gods sit the Hall; the kitsune say the other six seats wait on ancestral spirits, place-spirits, or stories not yet long enough to fill them. The number nine echoes the nine-tail mastery ladder and the Heartcourt's nine pillars. <i>Theologians debate whether the empty seats are a real cosmic feature or a piece of pious poetry; the kitsune as a people are content to leave the question unanswered.</i></p>
   </div>
 
-  <div class="hearts-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-    <a class="accent-card heart-card h-rose" href="/non-bound-gods.html#hahane" style="--card-accent: #e8a890;">
-      <div class="heart-name">Hahane →</div>
+  <div class="card-grid hearts-grid" style="--col-min:260px;">
+    <a class="accent-card h-rose" href="/non-bound-gods.html#hahane" style="--card-accent: #e8a890;">
+      <div class="card-name">Hahane →</div>
       <div class="heart-domain">The Mother-Root · Head of the Hall</div>
       <div class="heart-symbol">Love · Polyamory · Family · Festival · The Polycule Bond. First incense at every household shrine; the Passing of the Tails invokes her name; the <b>Rose Heart</b> often serves as her informal high-priest. <br><br><b>Cleric domains:</b> Family · Passion · Indulgence.</div>
     </a>
-    <a class="accent-card heart-card h-violet" href="/non-bound-gods.html#honokage" style="--card-accent: #c0a8e0;">
-      <div class="heart-name">Honokage →</div>
+    <a class="accent-card h-violet" href="/non-bound-gods.html#honokage" style="--card-accent: #c0a8e0;">
+      <div class="card-name">Honokage →</div>
       <div class="heart-domain">The Soft-Shadow · Foxfire &amp; Illusion</div>
       <div class="heart-symbol">The lantern-lit night, kind misdirection, the trick that ends in laughter for all. Patron of the kitsune Occult tradition; foxfire is his offering. The <b>Violet Heart</b> and <b>Onyx Heart</b> keep small foxfire-shrines. <br><br><b>Cleric domains:</b> Trickery · Magic · Moon.</div>
     </a>
-    <a class="accent-card heart-card h-sapphire" href="/non-bound-gods.html#yumegatari" style="--card-accent: #7888c0;">
-      <div class="heart-name">Yumegatari →</div>
+    <a class="accent-card h-sapphire" href="/non-bound-gods.html#yumegatari" style="--card-accent: #7888c0;">
+      <div class="card-name">Yumegatari →</div>
       <div class="heart-domain">The Dream-Teller · Story &amp; Memory</div>
       <div class="heart-symbol">Wish-lanterns, the long telling, the dream that outlives the dreamer. The <b>Sapphire Heart</b> and the Cook's Circle <b>Storyweaver</b> both speak for her. The Festival of the Fox Lanterns is her largest rite. <br><br><b>Cleric domains:</b> Dreams · Knowledge · Soul.</div>
     </a>

@@ -11,10 +11,9 @@
 <script defer src="/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #d4a04a; }
-  .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .market-card { padding: 14px 16px; }
+  .market-grid { --col-min: 220px; --grid-max: 1100px; }
+  .market-grid .card-name { font-size: 1rem; margin-bottom: 4px; }
   .market-season { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
-  .market-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 1rem; margin-bottom: 4px; }
   .market-etym { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
   .market-desc { font-size: 0.9rem; color: var(--text); line-height: 1.5; }
   .m-spring  { --card-accent: #8ab060; }
@@ -110,29 +109,29 @@
       <div class="secret-era-label">⚿ &nbsp; Known to No One in Merkavar</div>
       <p style="font-style:italic; margin-top:0;">Once a month, the goddess keeps a stall. The smile-touched belief is the city's unwitting record of it, holding the true effect and the wrong cause.</p>
 
-      <div class="market-grid">
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">The Stall</div>
+      <div class="card-grid market-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">The Stall</div>
           <div class="market-desc">Disguised, in one plaza or another and never the same twice, Jianna sets out a spread of trinkets and baubles and sells them with her own hands. The prices seem wrong to anyone watching, because she is not pricing the baubles. She is pricing the buyer.</div>
         </div>
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">The Smile Is the Sale</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">The Smile Is the Sale</div>
           <div class="market-desc">A family does not catch a smile in passing and then prosper. The family bought from her stall, honoured what they bought, and prospered. Mortals hold the effect and the wrong cause, and no one connects the strange-priced trinket to the rising luck.</div>
         </div>
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">The Trinkets Are Real</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">The Trinkets Are Real</div>
           <div class="market-desc">Each bauble is a genuine minor blessing of Jianna: true fortune to one who keeps and honours it, inert in the hands of one who would flip it, waste it, or forget it. She screens her buyers because the blessing is profaned on the careless. She is not selling the object; she is placing the blessing where it will be honoured.</div>
         </div>
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">The Price Is the Test</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">The Price Is the Test</div>
           <div class="market-desc">Sometimes absurdly cheap, to see whether you treasure a thing that cost you nothing; sometimes steep for a trinket, to see whether you will pay dearly for a worth you can only sense. The haggler has already failed: talking her down is pricing the object, the opposite of honouring it. She watches the eyes, the hands, the reason it is wanted.</div>
         </div>
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">She Cannot Be Hunted</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">She Cannot Be Hunted</div>
           <div class="market-desc">Never the same day, never the same plaza, no pattern to stake out, and a city of squares to choose among. Were the stall predictable, every careless soul in Merkavar would camp it wearing a borrowed look of reverence and the test would die. The unpredictability keeps the screening honest. A refused buyer hears only <i>"this one is not for you,"</i> and the stall is gone when they think to return.</div>
         </div>
-        <div class="accent-card market-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
-          <div class="market-name" style="--card-accent:#d4a04a;">No One Knows</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55); --card-accent:#d4a04a;">
+          <div class="card-name" style="--card-accent:#d4a04a;">No One Knows</div>
           <div class="market-desc">The clergy do not; their doctrine that <i>Jianna rewards the honouring heart</i> is true without their grasping how literally. The smile-touched belief is the closest the city comes. Perhaps one or two very old merchants half-remember a woman who priced a brass bird strangely and looked at them too hard, and never let the thought finish.</div>
         </div>
       </div>
@@ -157,28 +156,28 @@
     <i>"You are a citizen of Merkavar when you are here, and you govern it when you show up."</i> Merkavar's commercial year runs on four great markets, one per season. Each market is also a seat of the <b>Seasonal Assembly</b>: every holder of a registered trade route, guild certification, or commerce-treaty seat gets a vote on the legislation the clergy have placed before the floor. The character of each market shapes which ancestry-blocs turn out, which legislation passes, and which struggles dominate the public squares.
   </p>
 
-  <div class="market-grid">
-    <div class="accent-card market-card m-spring">
+  <div class="card-grid market-grid">
+    <div class="accent-card m-spring">
       <div class="market-season">Spring</div>
-      <div class="market-name">Hazi-Azoka</div>
+      <div class="card-name">Hazi-Azoka</div>
       <div class="market-etym">Basque <i>hazi</i> (seed) + <i>azoka</i> (market): "Seed-Market"</div>
       <div class="market-desc">Livestock, labour contracts, the year's planting commitments. The smallest of the four; itinerant population is at its lowest, and permanent residents are most over-represented on the assembly floor. The clergy bring controversial certification standards here when they want them passed.</div>
     </div>
-    <div class="accent-card market-card m-summer">
+    <div class="accent-card m-summer">
       <div class="market-season">Summer</div>
-      <div class="market-name">Lore-Azoka</div>
+      <div class="card-name">Lore-Azoka</div>
       <div class="market-etym">Basque <i>lore</i> (bloom, flower) + <i>azoka</i>: "Bloom-Market"</div>
       <div class="market-desc">Luxury-trade peaks; merchant-houses bring their finest stock to the lake-shore for display and high-value sale. The loudest assembly: floor so crowded with cross-domain visitors that procedural motions fail for want of attention. The clergy bring legislation they want quietly buried here.</div>
     </div>
-    <div class="accent-card market-card m-autumn">
+    <div class="accent-card m-autumn">
       <div class="market-season">Autumn</div>
-      <div class="market-name">Uzta-Azoka</div>
+      <div class="card-name">Uzta-Azoka</div>
       <div class="market-etym">Basque <i>uzta</i> (harvest) + <i>azoka</i>: "Harvest-Market"</div>
       <div class="market-desc">Bulk grain, iron, and cleared inventory move under the Order of Steam's reduced-fare freight window. Largest halfling turnout of the year; rail crews from three domains are in Merkavar's freight yards anyway. Legislation favouring operators-who-move over artisans-who-make passes reliably in autumn.</div>
     </div>
-    <div class="accent-card market-card m-winter">
+    <div class="accent-card m-winter">
       <div class="market-season">Winter</div>
-      <div class="market-name">Kontu-Azoka</div>
+      <div class="card-name">Kontu-Azoka</div>
       <div class="market-etym">Basque <i>kontu</i> (account, reckoning) + <i>azoka</i>: "Reckoning-Market"</div>
       <div class="market-desc">The smaller permanent population settles accounts, closes long contracts, and trades in high-value goods and information. Kitsune information-brokers do their best winter work here; the year's commercial knowledge consolidates at one table.</div>
     </div>

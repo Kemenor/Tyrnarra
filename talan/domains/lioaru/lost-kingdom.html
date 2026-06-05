@@ -15,9 +15,7 @@
     --card-bg: rgba(22,18,24,0.55);
   }
 
-  .signs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .sign-card { padding: 12px 14px; }
-  .sign-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.93rem; margin-bottom: 4px; }
+  .signs-grid { --col-min: 220px; --card-pad: 12px 14px; --card-name-size: 0.93rem; }
   .sign-desc { font-size: 0.9rem; color: var(--text); }
 
   .ancestry-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
@@ -75,29 +73,29 @@
   </div>
 
   <h3 id="signs-of-the-curse" class="section-heading" style="font-size:1.1rem; margin-top:24px;">Signs of the Curse</h3>
-  <div class="signs-grid">
-    <div class="accent-card sign-card">
-      <div class="sign-name">Blackened Soil</div>
+  <div class="card-grid signs-grid">
+    <div class="accent-card">
+      <div class="card-name">Blackened Soil</div>
       <div class="sign-desc">The ground takes nothing: no crop, no grass, not even the patient lichens that colonise dead stone elsewhere. The black is not ash; it is the soil itself, all the way down past the depth a shovel reaches.</div>
     </div>
-    <div class="accent-card sign-card">
-      <div class="sign-name">Time-Warped Strata</div>
+    <div class="accent-card">
+      <div class="card-name">Time-Warped Strata</div>
       <div class="sign-desc">Moments <i>repeat</i> in pockets: a wind that blows the same gust twice; footsteps that arrive before the foot. Other moments <i>pool</i>, holding the traveller in a single second for what feels like an hour. The temporal anomalies are heaviest near the ruined capital's core.</div>
     </div>
-    <div class="accent-card sign-card">
-      <div class="sign-name">Ruins Reading Newer</div>
+    <div class="accent-card">
+      <div class="card-name">Ruins Reading Newer</div>
       <div class="sign-desc">Stone fragments that the eye reads as <i>newer</i> than the surrounding rock: by years, sometimes by centuries. The Old Race's lost capital lies underneath; the strata above it date wrong because the strata <i>are</i> wrong.</div>
     </div>
-    <div class="accent-card sign-card">
-      <div class="sign-name">Ambient Necromantic Resonance</div>
+    <div class="accent-card">
+      <div class="card-name">Ambient Necromantic Resonance</div>
       <div class="sign-desc">A constant low pressure on the spell-sense of anyone trained to feel it. Necromancers describe entering the Lost Kingdom as a <i>volume change</i>: the background hum of the dead made suddenly audible.</div>
     </div>
-    <div class="accent-card sign-card">
-      <div class="sign-name">Periodic Fleshwarp Incidents</div>
+    <div class="accent-card">
+      <div class="card-name">Periodic Fleshwarp Incidents</div>
       <div class="sign-desc">Survivors of the cursed ground sometimes return changed in body. Limbs malformed, organs duplicated, sense-organs in the wrong places. The land works on the living without consent and without pattern.</div>
     </div>
-    <div class="accent-card sign-card">
-      <div class="sign-name">The Restless Dead</div>
+    <div class="accent-card">
+      <div class="card-name">The Restless Dead</div>
       <div class="sign-desc">Concentrations of bone-revenants. Skeletons rise from the soil itself: most are old, some are not. No necromancer is needed; the land does its own raising.</div>
     </div>
   </div>

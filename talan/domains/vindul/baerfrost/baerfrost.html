@@ -23,11 +23,10 @@
   .skald-entry p { margin: 0 0 8px; line-height: 1.6; }
   .skald-entry p:last-child { margin-bottom: 0; }
 
-  /* Pressure-of-the-era split panel (two faces of the same argument) */
-  .pressure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
-  .pressure-card { padding: 16px 18px; }
-  .pressure-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 8px; }
-  .pressure-card p { margin: 0; font-size: 0.92rem; line-height: 1.55; }
+  /* Pressure-of-the-era split panel (two wide cards) */
+  .pressure-grid { --col-min: 280px; --card-pad: 16px 18px; }
+  .pressure-grid .card-name { margin-bottom: 8px; }
+  .pressure-grid p { margin: 0; font-size: 0.92rem; line-height: 1.55; }
 
   /* Cold-Hall callout (left-bordered, ice-toned, parallels Haizetsua's vornsketta) */
   .hall-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(28,38,52,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -164,13 +163,13 @@
     <p>The argument crystallised at the most recent Hammer-passing. A border-clan chieftain stood the Merit-vote on the strength of a <b>trade-treaty</b> negotiated with the Wyndwalken's eastern range out of the Air Monastery: the first treaty of its kind, a formalised exchange of cartographer-survey work for Baerfrost ice-route guidance, sealed without a kill anywhere in the year's reckoning. The vote carried. Half the chieftains read it as a betrayal of the institution; the other half read it as the institution finally working. The Hammer was lifted. The Hammer-Lord rode out at first light. The chieftains who had voted against rode home a different way.</p>
   </div>
 
-  <div class="pressure-grid">
-    <div class="accent-card pressure-card">
-      <div class="pressure-name">The Old Reading</div>
+  <div class="card-grid pressure-grid">
+    <div class="accent-card">
+      <div class="card-name">The Old Reading</div>
       <p>The Hunt-League is what the dark required of us, and the dark is back under the ice. We sealed the thing in 2524 with our own dead and no help from the south, the way we outlived the whole Dark Era alone. <i>Merit</i> is the kill. Harden the clans, raise Hammer-Lords who can stand a General's spawn, and one day we clear what we could only seal. We have never needed the south, and we do not need it now: the cold made us enough once, and it will again.</p>
     </div>
-    <div class="accent-card pressure-card">
-      <div class="pressure-name">The New Reading</div>
+    <div class="accent-card">
+      <div class="card-name">The New Reading</div>
       <p>We sealed it. We could not clear it, and four winters of our best dead are the proof. Sealing is not winning, and a Nine General is past the reach of any one Hammer, however tall it stands. The road to ending the thing runs through the Air Monastery treaty, the Adventurers' Guild, allies who bring what the tundra cannot grow. <i>Merit</i> is whatever actually clears the ice; pride that will not ask for help is only a slower way to lose the seal.</p>
     </div>
   </div>

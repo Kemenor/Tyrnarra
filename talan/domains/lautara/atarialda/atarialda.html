@@ -27,19 +27,12 @@
   .greeting .g-line.answer { color: var(--parch); }
   .greeting .g-note { font-style: italic; color: var(--gold-dim); font-size: 0.9rem; margin-top: 12px; }
 
-  /* Daily-life triad */
-  .triad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .triad-card { padding: 16px 18px; }
-  .triad-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .triad-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
   /* Two-tilts comparison (road / hearth) */
-  .tilt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
-  .tilt-card { padding: 18px 20px; }
+  .tilt-grid { --col-min: 260px; --grid-max: 980px; --card-pad: 18px 20px; }
+  .tilt-grid .card-name { font-size: 1.05rem; }
   .tilt-side { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
-  .tilt-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1.05rem; margin-bottom: 8px; }
-  .tilt-card.hearth .tilt-name { color: #e8c088; }
-  .tilt-card p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
+  .tilt-card.hearth .card-name { color: #e8c088; }
 
   /* Salt / Steward sub-callout */
   .salt-sub { max-width: 880px; margin: 18px auto; padding: 18px 24px; background: rgba(50,30,14,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -48,11 +41,8 @@
   .salt-sub p:last-child { margin-bottom: 0; }
 
   /* Faith two-faith rhythm (life-arc) */
-  .faith-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .faith-card { padding: 16px 18px; }
-  .faith-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .faith-grid { --card-pad: 16px 18px; }
   .faith-band { font-style: italic; color: var(--gold-dim); font-size: 0.8rem; margin-bottom: 8px; }
-  .faith-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
   /* Feature panels (living archive, homecoming board) */
   .feature-panel { max-width: 880px; margin: 18px auto; }
@@ -115,15 +105,15 @@
     <div class="g-note">The keeper says the first before asking anything; the traveller who knows the country answers the second. The free seat and the story owed for it, the open hand and the archive, in a single exchange at the doorstep.</div>
   </div>
 
-  <div class="tilt-grid">
-    <div class="accent-card tilt-card">
+  <div class="card-grid tilt-grid">
+    <div class="accent-card">
       <div class="tilt-side">The first motion</div>
-      <div class="tilt-name">Road-Tilted</div>
+      <div class="card-name">Road-Tilted</div>
       <p>Houses that send their young farther and longer and refresh their store constantly. A road-tilted house that never sits down keeps a deep current of new traces moving through the door, and keeps nothing settled at all. The wander is the discipline; the gathering is for later.</p>
     </div>
     <div class="accent-card tilt-card hearth">
       <div class="tilt-side">The second motion</div>
-      <div class="tilt-name">Hearth-Tilted</div>
+      <div class="card-name">Hearth-Tilted</div>
       <p>Houses that keep shorter circuits and run deeper roots. A hearth-tilted house gone too long without sending anyone out keeps an <i>aging archive</i>: its songs forty years stale, no new homeland-trace through the door in a generation. The keeping is the discipline; the wander is the cost it forgets to pay.</p>
     </div>
   </div>
@@ -197,17 +187,17 @@
     <p>The welcome is not an occasion in Atarialda; it is the shape of an ordinary day. Three habits carry it, and a household is read by whether it keeps them.</p>
   </div>
 
-  <div class="triad-grid">
-    <div class="accent-card triad-card">
-      <div class="triad-name">The Kept Fire</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Kept Fire</div>
       <p>A hearth is never let to go fully cold. The fire is banked overnight and fed back up first thing on waking, before anything else, because a cold hearth cannot welcome and no one knows who reached the door in the dark.</p>
     </div>
-    <div class="accent-card triad-card">
-      <div class="triad-name">The Set Guest-Place</div>
+    <div class="accent-card">
+      <div class="card-name">The Set Guest-Place</div>
       <p>An ordinary table keeps one seat and one bowl laid for whoever comes. A table with no guest-place is a house with something to be ashamed of; the empty seat is the household's standing promise to the road.</p>
     </div>
-    <div class="accent-card triad-card">
-      <div class="triad-name">The Kitchen as Archive</div>
+    <div class="accent-card">
+      <div class="card-name">The Kitchen as Archive</div>
       <p>The cooking is the archive made edible: a single board holding a Zuzental court-dish beside a Hareaveldi desert-bread beside a recipe that survives in this one kitchen alone. The evening meal is many-tongued, loud, and full of songs from everywhere.</p>
     </div>
   </div>
@@ -219,19 +209,19 @@
     <p>Atarialda is where the domain prays to Jianna's <b>open hand</b>. Her image holds one hand open in offering and one closed, and where Merkavar, Itsasalda, and Azkataria read the goddess through the closed hand of the struck bargain and the kept ledger, the hearth-Halflings read her through the open hand of <b>Generosity</b>: the gift that asks no return, on the conviction that the open hand builds the only wealth that outlasts a life, since a paid bargain ends but a guest fed becomes kin, and kin is the wealth no debt closes. The Merkavar clergy hold this to be soft theology; the hearth-Halflings hold that Merkavar has mistaken the closed hand for the whole goddess, and the two-handed image lets the argument run forever.</p>
   </div>
 
-  <div class="faith-grid">
+  <div class="card-grid faith-grid">
     <div class="accent-card faith-card">
-      <div class="faith-name">Solyra</div>
+      <div class="card-name">Solyra</div>
       <div class="faith-band">going out · the road</div>
       <p>The travelling young pray to Solyra on the road going out, and a household keeps an east-facing shrine to her, Atarialda being the eastern arm that faces the dawn the travellers ride toward, for its people still out. The shrine looks east because that is the direction the road leaves by.</p>
     </div>
     <div class="accent-card faith-card">
-      <div class="faith-name">Jianna's Open Hand</div>
+      <div class="card-name">Jianna's Open Hand</div>
       <div class="faith-band">coming home · the hearth</div>
       <p>The hearth coming home prays to the open hand: Generosity over the struck bargain, the gift that asks no return. A guest fed becomes kin, and kin is the wealth no debt closes. The two-faith rhythm runs along the life-arc, road then hearth, out then home.</p>
     </div>
     <div class="accent-card faith-card">
-      <div class="faith-name">Komo</div>
+      <div class="card-name">Komo</div>
       <div class="faith-band">the banked flame · quiet second</div>
       <p>The kept welcome-fire carries a quiet second devotion to Komo in his domestic face, the hearth-flame apart from his forge and his wildfire. The fire that is never let go cold is his as much as it is the household's.</p>
     </div>

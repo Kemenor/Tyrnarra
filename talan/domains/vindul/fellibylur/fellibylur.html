@@ -16,31 +16,20 @@
   }
 
   /* Two-seat structural grid (Skybell Republic / Thunderhost summary) */
-  .seat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; max-width: 1000px; margin: 22px auto; }
-  .seat-card { padding: 18px 22px; }
+  .seat-grid { --col-min: 280px; --grid-gap: 18px; --card-pad: 18px 22px; }
   .seat-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
-  .seat-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.15rem; margin-bottom: 6px; }
+  .seat-grid .card-name { font-size: 1.15rem; letter-spacing: 0.1em; margin-bottom: 6px; }
   .seat-band { font-style: italic; color: var(--gold-dim); font-size: 0.9rem; margin-bottom: 10px; }
-  .seat-card p { font-size: 0.95rem; line-height: 1.55; margin: 0; }
+  .seat-grid p { font-size: 0.95rem; line-height: 1.55; margin: 0; }
 
   /* Skybell feature panel: bell cards arranged like a network */
-  .bell-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 1000px; margin: 18px auto; }
-  .bell-card { padding: 14px 14px; text-align: center; }
-  .bell-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1rem; }
+  .bell-grid { --col-min: 200px; --card-pad: 14px; }
+  .bell-grid .accent-card { text-align: center; }
+  .bell-grid .card-name { font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 0; }
   .bell-tone { font-style: italic; color: var(--text); font-size: 0.85rem; margin: 4px 0 6px; }
   .bell-note { font-size: 0.8rem; color: var(--text-dim); line-height: 1.45; }
 
-  /* Stormrider craft sub-blocks (paired training) */
-  .craft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .craft-card { padding: 14px 16px; }
-  .craft-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .craft-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
-
-  /* Strix disposition cards */
-  .disposition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .disp-card { padding: 14px 16px; }
-  .disp-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .disp-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  /* Stormrider craft sub-blocks and Strix disposition cards (plain, use card-grid defaults) */
 
   /* Stormpact founding callout (left-bordered, sky-toned) */
   .pact-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(40,52,72,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -102,16 +91,16 @@
     <p>In ordinary practice the two seats rule their own halves. The Skybell Republic charters merchant-houses, certifies Stormriders, and rings the bells when the goddess is loud; the Thunderhost passes its grazing-rounds, settles its breeding-stock disputes, and reads the high-thunder skies that the coast cannot see clearly from the harbour-line. They vote together when the question crosses the coast-interior line: trade-charters with Baerfrost's Hunt-League up the northern river-road; Wyndwalken cartographer commissions for the port-charts; cross-border banditry; the question of whether a clan that has roosted three winters at a port-town counts as Republic or Thunderhost for the season's grazing-fees. The interior calls its gathering a <i>moot</i> and the coast calls its own a <i>sitting</i>; both halves understand both words.</p>
   </div>
 
-  <div class="seat-grid">
-    <div class="accent-card seat-card">
+  <div class="card-grid seat-grid">
+    <div class="accent-card">
       <div class="seat-label">Coast-Seat</div>
-      <div class="seat-name">The Skybell Republic</div>
+      <div class="card-name">The Skybell Republic</div>
       <div class="seat-band">port-towns, bell-network, chartered houses</div>
       <p>Holds the Hafra coast and the river-mouths. Registers chartered merchant-houses, certifies <b>Stormriders</b>, and maintains the consecrated bronze bells whose ringing is the kingdom's signature sound. Mixed-ancestry by long settlement: coast-Strix on the towers, Tengu on the rigging, Kashrishi merchant-families in the counting-houses.</p>
     </div>
-    <div class="accent-card seat-card">
+    <div class="accent-card">
       <div class="seat-label">Interior-Seat</div>
-      <div class="seat-name">The Thunderhost</div>
+      <div class="card-name">The Thunderhost</div>
       <div class="seat-band">clan-moot, midsummer gathering, storm-augury</div>
       <p>Holds the steppe-interior and the clan-circuits. A moot of Strix clan-chieftains who meet at midsummer at a fixed inland gathering to deliberate grazing, horse-breeding, weather-lore, and joint Stormpact business. A chieftain takes their seat by demonstrated storm-augury; promise is not enough, the read has to land.</p>
     </div>
@@ -144,11 +133,11 @@
     <p>The bells are named for what they have done. The most-known are <b>Old Brasswatch</b> (the standing senior bell, cast in the first generation of the Republic; her tone is the one the Republic's harbour-masters tune their own bells against), <b>Stormgift</b> at Cloudshadow (cast from the salvaged bronze of a foundering ship that beached on its port-bar in the founding year), <b>Highmarrow's Voice</b> (the highest-pitched of the major bells, audible for leagues inland on still air), and <b>the Mourner</b> at the small coast-port of Wrackmoor (cast after the only confirmed loss of a Skybell tower in the kingdom's history, struck only at confirmed-storm pitch and never on the watch-call mode).</p>
   </div>
 
-  <div class="bell-grid">
-    <div class="accent-card bell-card"><div class="bell-name">Old Brasswatch</div><div class="bell-tone">low, steady, long-finishing</div><div class="bell-note">The senior bell of the network; tuning reference for the rest.</div></div>
-    <div class="accent-card bell-card"><div class="bell-name">Stormgift</div><div class="bell-tone">bright, slightly cracked, beloved</div><div class="bell-note">Cast from salvaged ship-bronze in the founding year.</div></div>
-    <div class="accent-card bell-card"><div class="bell-name">Highmarrow's Voice</div><div class="bell-tone">highest of the major bells</div><div class="bell-note">Heard for leagues inland on still air.</div></div>
-    <div class="accent-card bell-card"><div class="bell-name">The Mourner</div><div class="bell-tone">deep, single-mode only</div><div class="bell-note">Wrackmoor's bell. Struck only at confirmed-storm pitch.</div></div>
+  <div class="card-grid bell-grid">
+    <div class="accent-card"><div class="card-name">Old Brasswatch</div><div class="bell-tone">low, steady, long-finishing</div><div class="bell-note">The senior bell of the network; tuning reference for the rest.</div></div>
+    <div class="accent-card"><div class="card-name">Stormgift</div><div class="bell-tone">bright, slightly cracked, beloved</div><div class="bell-note">Cast from salvaged ship-bronze in the founding year.</div></div>
+    <div class="accent-card"><div class="card-name">Highmarrow's Voice</div><div class="bell-tone">highest of the major bells</div><div class="bell-note">Heard for leagues inland on still air.</div></div>
+    <div class="accent-card"><div class="card-name">The Mourner</div><div class="bell-tone">deep, single-mode only</div><div class="bell-note">Wrackmoor's bell. Struck only at confirmed-storm pitch.</div></div>
   </div>
 
   <div class="legend-era" style="margin-top: 24px;">
@@ -185,21 +174,21 @@
     <p>The two trainings live in the same Stormrider and the best ones do not separate them. A senior Stormrider standing at a Hafra helm reads the pressure-glass with one eye and the cloud-front with the other; the call they make to the helmsman is one decision drawn from both. The double-trained are the most prestigious and the most expensive; a single-trained Stormrider (Republic side only, no Thunderhost augury) can still be hired but commands roughly a third the rate, and the underwriters know it. The Thunderhost-only certification (augury, no field-book) is rarer still and is generally taken by interior-born Strix who have decided late in life to go to sea; it commands roughly two-thirds the rate, worth more than the field-book-only third but short of the double, on the grounds that the field-book can be learned at any time but the augury cannot.</p>
   </div>
 
-  <div class="craft-grid">
-    <div class="accent-card craft-card">
-      <div class="craft-name">The Field-Book</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Field-Book</div>
       <p>The Republic-side discipline. Chart-keeping, wind-rose, squall-table, pressure-glass, sail-readiness rating, harbour-bar pilotage. A Stormrider's field-book is their own; they carry it for their working life, copy it for their students, and bury it with them.</p>
     </div>
-    <div class="accent-card craft-card">
-      <div class="craft-name">The Augury</div>
+    <div class="accent-card">
+      <div class="card-name">The Augury</div>
       <p>The Thunderhost-side discipline. Reading the cloud-front, the high thunder, the gust-rhythm, the smell of a coming front. Taught in the bluffs by working augurs; verified on the wing in the season after the teaching.</p>
     </div>
-    <div class="accent-card craft-card">
-      <div class="craft-name">The Gesture-Tongue</div>
+    <div class="accent-card">
+      <div class="card-name">The Gesture-Tongue</div>
       <p>The wing-hand sign-language Strix use to call coming gusts to one another in flight without breath. A double-trained Stormrider uses it from the deck to coast-Strix on the rigging or the tower; a fleet running silent in a storm coordinates by it.</p>
     </div>
-    <div class="accent-card craft-card">
-      <div class="craft-name">The Bond</div>
+    <div class="accent-card">
+      <div class="card-name">The Bond</div>
       <p>A Stormrider contracted to a fleet wears that fleet's house-token for the duration. The token is returned at safe harbour. A Stormrider who returns a token to a house whose ship did not make it is owed nothing further by that house, and the Republic does not chase them for the rest.</p>
     </div>
   </div>
@@ -215,21 +204,21 @@
     <p>Coastal Strix have made the opposite settlement. The port-towns are <b>tower-cities</b>: vertical-stacked dwellings carved or built into the harbour-cliffs, with the Skybell at the peak of each settlement and the merchant-houses graduated down the cliff-face by their charter-age. A coast-Strix family will keep the same tower-flat for generations and consider the tower itself part of their lineage. The cultural distance between coast and interior is therefore real (a coast-Strix who has never roosted on a bluff is regarded with mild bemusement by Thunderhost cousins, and a Thunderhost chieftain who has never slept above tide-line is regarded with mild bemusement by the Republic), and the Stormpact's persistence across that distance is one of the things the kingdom is most quietly proud of.</p>
   </div>
 
-  <div class="disposition-grid">
-    <div class="accent-card disp-card">
-      <div class="disp-name">Wing-First</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Wing-First</div>
       <p>A Strix in good health flies as the default mode of getting anywhere. Walking is for when wings are tired, weather is wrong, or company is mixed. Fellibylur infrastructure assumes flight: the tower-cities have no ground-stair to most upper levels, and the interior cliff-roosts have no ground-approach at all.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">Weather-Speech</div>
+    <div class="accent-card">
+      <div class="card-name">Weather-Speech</div>
       <p>Strix conversation routinely names the wind being read: <i>that gust is a Brassheart-three, that front will turn before nightfall</i>. A Strix who cannot read weather at the table is presumed to be ill, distracted, or very young.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">Cliff-Memory</div>
+    <div class="accent-card">
+      <div class="card-name">Cliff-Memory</div>
       <p>Each Strix family-line keeps a sung memory of the cliffs and bluffs the line has roosted in. Interior Strix recite the rotation back five generations as a coming-of-age; coast-Strix recite their tower's lineage back as long as the tower has stood.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">The Gust-Greeting</div>
+    <div class="accent-card">
+      <div class="card-name">The Gust-Greeting</div>
       <p>Two Strix passing on the wing exchange a quick gesture-and-call that names the wind they are both reading at that moment. The greeting is courtesy and weather-bulletin in one; ignoring it is rude, getting the wind wrong in it is funny.</p>
     </div>
   </div>

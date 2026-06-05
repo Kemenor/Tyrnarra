@@ -15,18 +15,12 @@
     --card-bg: rgba(22,18,12,0.55);
   }
 
-  /* Discipline cards (the secular-contemplative cast) */
-  .disc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .disc-card { padding: 14px 16px; }
-  .disc-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .disc-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  /* Discipline cards (plain, use card-grid defaults) */
 
   /* Era arc cards (four-era walk through the order's history) */
-  .arc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 20px auto; }
-  .arc-card { padding: 16px 16px 14px; }
+  .arc-grid { --col-min: 220px; --grid-max: 1100px; --card-pad: 16px 16px 14px; }
   .arc-era { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 6px; }
-  .arc-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
-  .arc-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  .arc-grid .card-name { font-size: 1rem; margin-bottom: 8px; }
 
   /* Order callout (mother-house / order frame, brass-toned) */
   .order-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(48,40,24,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -37,12 +31,10 @@
   /* Map-feature panel (the gold-standard) */
   .feature-panel { max-width: 880px; margin: 18px auto; }
 
-  /* The way-a-place-wants-to-be-found pill-row of map kinds */
-  .map-kinds { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; max-width: 980px; margin: 18px auto; }
-  .map-card { padding: 14px 14px; }
-  .map-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; }
+  /* Map kinds (rich: map-band sub-label) */
+  .map-kinds { --grid-gap: 12px; --card-pad: 14px; }
   .map-band { font-style: italic; color: var(--gold-dim); font-size: 0.82rem; margin: 4px 0 6px; }
-  .map-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+  .map-kinds p { font-size: 0.88rem; }
 </style>
 </head>
 <body data-page="air-monastery">
@@ -117,21 +109,21 @@
     <p>The order's daily life is structured by four old disciplines. None of them are framed religiously; all of them function the way religious disciplines function.</p>
   </div>
 
-  <div class="disc-grid">
-    <div class="accent-card disc-card">
-      <div class="disc-name">The Brass</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Brass</div>
       <p>The instruments themselves are the discipline. A Wyndwalker who has cared for the same calibrated sextant for forty years has, by the act of that care, learned what the order most wants them to know. Apprentices spend their first two years on instrument-craft before they are permitted a field-book of their own.</p>
     </div>
-    <div class="accent-card disc-card">
-      <div class="disc-name">The Field-Book</div>
+    <div class="accent-card">
+      <div class="card-name">The Field-Book</div>
       <p>Every working Wyndwalker keeps one. It travels with them, lives at their hip, and is copied into the archive on every return to the mother-house. A Wyndwalker who loses a field-book on the road is expected to walk back to the last entry's coordinates and reconstruct what they can; a Wyndwalker who fakes one is no longer of the order.</p>
     </div>
-    <div class="accent-card disc-card">
-      <div class="disc-name">The Watch</div>
+    <div class="accent-card">
+      <div class="card-name">The Watch</div>
       <p>The <b>fire-watch</b> at the highest tower has been lit every night since the breach centuries. Walking the watch in rotation is required of every resident Wyndwalker, including the Abbot. The watch is contemplative as much as practical: the long quiet of the cold hours above the mountain is, by long agreement, where most of the order's serious thinking happens.</p>
     </div>
-    <div class="accent-card disc-card">
-      <div class="disc-name">The Walk</div>
+    <div class="accent-card">
+      <div class="card-name">The Walk</div>
       <p>The mendicant life is itself the discipline. A Wyndwalker who has not been on the road for three years is gently encouraged back to it. The conviction is plain: a cartographer who stops walking stops being a cartographer, and an order of cartographers that lets its walkers settle becomes a library with opinions.</p>
     </div>
   </div>
@@ -184,19 +176,19 @@
     <p>The technique is the imperial discipline, deepened by eight centuries of internal seminar and four centuries of mendicant practice. Every Wyndwalker map starts as <b>field-book entries</b> taken at calibrated stations along a measured walk; the entries are reconciled at the mother-house against the order's accumulated grid; the final fair-copy is drawn in the archive workrooms by a small team of senior cartographers who never themselves walked the ground. The separation of walker and drafter is deliberate: a map is the order's work, not the walker's. The walker's name appears nowhere on the finished sheet.</p>
   </div>
 
-  <div class="map-kinds">
-    <div class="accent-card map-card">
-      <div class="map-name">The Working Sheet</div>
+  <div class="card-grid map-kinds">
+    <div class="accent-card">
+      <div class="card-name">The Working Sheet</div>
       <div class="map-band">commissioned · the standard product</div>
       <p>What a court or trade-house actually buys. Coastlines, roads, settlements, terrain, the things that do not move. Calibrated, signed with the brass mark, sold at a price that scales with the area surveyed. Most of what the order does.</p>
     </div>
-    <div class="accent-card map-card">
-      <div class="map-name">The Long Survey</div>
+    <div class="accent-card">
+      <div class="card-name">The Long Survey</div>
       <div class="map-band">commissioned · multi-year, multi-walker</div>
       <p>A regional survey across years, with several walkers rotating through and the field-books reconciled centrally. The sheets are large, drawn at a uniform scale, and sold as bound atlases. The continent's working geography is in significant part the cumulative output of this kind of work.</p>
     </div>
-    <div class="accent-card map-card">
-      <div class="map-name">The Found Map</div>
+    <div class="accent-card">
+      <div class="card-name">The Found Map</div>
       <div class="map-band">rare · the prized ones</div>
       <p>The maps that are said to show <i>the way a place wants to be found</i>. An Occult-touched cartography that has never been satisfactorily explained outside the order. The mother-house produces perhaps one a year; the price they fetch at private sale is the kind of price that does not appear in any open ledger.</p>
     </div>

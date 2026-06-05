@@ -14,9 +14,8 @@
     --card-bg: rgba(28,18,22,0.55);
   }
 
-  .petal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .petal-card { padding: 14px 16px; }
-  .petal-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .petal-grid { --col-min: 260px; --grid-max: 1100px; }
+  .petal-grid .card-name { margin-bottom: 2px; }
   .petal-hanzi { font-family: serif; color: var(--gold-dim); font-size: 1.1rem; margin-bottom: 4px; line-height: 1; }
   .petal-meaning { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 4px; }
   .petal-ancestry { font-size: 0.85rem; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -121,10 +120,10 @@
   </div>
 
   <h3 id="outer-petals-the-talan-facing-arc" class="section-heading" style="font-size:1.05rem; margin-top:18px;">Outer Petals · the Talan-Facing Arc</h3>
-  <div class="petal-grid">
+  <div class="card-grid petal-grid">
 
-    <div class="accent-card petal-card p-wandao">
-      <div class="petal-name">Wandao</div>
+    <div class="accent-card p-wandao">
+      <div class="card-name">Wandao</div>
       <div class="petal-hanzi">万岛</div>
       <div class="petal-meaning">"Myriad Island" · <i>wan</i> (myriad, ten thousand)</div>
       <div class="petal-ancestry">Yaoguai · Common-folk petal</div>
@@ -132,8 +131,8 @@
       <div class="petal-tier">Outer petal · closest to Talan</div>
     </div>
 
-    <div class="accent-card petal-card p-xidao">
-      <div class="petal-name">Xidao</div>
+    <div class="accent-card p-xidao">
+      <div class="card-name">Xidao</div>
       <div class="petal-hanzi">戏岛</div>
       <div class="petal-meaning">"Theatre Island" · <i>xi</i> (play, theatre, deception)</div>
       <div class="petal-ancestry">Tanuki · Performer-merchants</div>
@@ -141,8 +140,8 @@
       <div class="petal-tier">Outer petal · most likely to reach Talan</div>
     </div>
 
-    <div class="accent-card petal-card p-niudao">
-      <div class="petal-name">Niudao</div>
+    <div class="accent-card p-niudao">
+      <div class="card-name">Niudao</div>
       <div class="petal-hanzi">牛岛</div>
       <div class="petal-meaning">"Ox Island" · named directly for the bull-folk</div>
       <div class="petal-ancestry">Sarangay · Warrior-oath nobility</div>
@@ -152,10 +151,10 @@
   </div>
 
   <h3 id="inner-petals-rumour-to-most-talanese" class="section-heading" style="font-size:1.05rem; margin-top:24px;">Inner Petals · Rumour to Most Talanese</h3>
-  <div class="petal-grid">
+  <div class="card-grid petal-grid">
 
-    <div class="accent-card petal-card p-yingdao">
-      <div class="petal-name">Yingdao</div>
+    <div class="accent-card p-yingdao">
+      <div class="card-name">Yingdao</div>
       <div class="petal-hanzi">影岛</div>
       <div class="petal-meaning">"Shadow Island" · <i>ying</i> (shadow)</div>
       <div class="petal-ancestry">Wayang · Shadow-courtiers</div>
@@ -163,8 +162,8 @@
       <div class="petal-tier">Inner petal · vanishingly rare on Talan</div>
     </div>
 
-    <div class="accent-card petal-card p-lingdao">
-      <div class="petal-name">Lingdao</div>
+    <div class="accent-card p-lingdao">
+      <div class="card-name">Lingdao</div>
       <div class="petal-hanzi">灵岛</div>
       <div class="petal-meaning">"Spirit Island" · <i>ling</i> (spirit)</div>
       <div class="petal-ancestry">Yaksha · Dynastic place-spirits<br><span style="color:var(--gold-dim); font-size:0.78rem; text-transform:none; letter-spacing:0">(+ Oni, the darker cousins)</span></div>
@@ -172,8 +171,8 @@
       <div class="petal-tier">Inner petal · functionally never seen on Talan</div>
     </div>
 
-    <div class="accent-card petal-card p-lundao">
-      <div class="petal-name">Lundao</div>
+    <div class="accent-card p-lundao">
+      <div class="card-name">Lundao</div>
       <div class="petal-hanzi">轮岛</div>
       <div class="petal-meaning">"Wheel Island" · <i>samsara</i>, the wheel of reincarnation</div>
       <div class="petal-ancestry">Samsaran · Multi-life chancellors</div>
@@ -184,9 +183,9 @@
   </div>
 
   <h3 id="the-central-seat" class="section-heading" style="font-size:1.05rem; margin-top:24px;">The Central Seat</h3>
-  <div class="petal-grid">
-    <div class="accent-card petal-card p-heting" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
-      <div class="petal-name">Heting</div>
+  <div class="card-grid petal-grid">
+    <div class="accent-card p-heting" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+      <div class="card-name">Heting</div>
       <div class="petal-hanzi">合廷</div>
       <div class="petal-meaning">"Concord-Court" · <i>he</i> (concord, unity) + <i>ting</i> (court)</div>
       <div class="petal-ancestry">Shared seat · Ambassadors from all six petals</div>

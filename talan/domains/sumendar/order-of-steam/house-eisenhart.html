@@ -30,9 +30,8 @@
   .relic-grid dt { font-family: 'Cinzel', serif; color: var(--gold-dim); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.78rem; padding-top: 2px; }
   .relic-grid dd { margin: 0; color: var(--text); }
 
-  .export-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .export-card { padding: 12px 14px; --card-bg: rgba(22,22,28,0.5); --card-accent: var(--gold-dim); }
-  .export-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .export-grid { --col-min: 260px; --card-pad: 12px 14px; --card-bg: rgba(22,22,28,0.5); --card-accent: var(--gold-dim); }
+  .export-grid .card-name { font-size: 0.92rem; letter-spacing: 0.06em; margin-bottom: 4px; }
   .export-desc { font-size: 0.9rem; color: var(--text); }
 </style>
 </head>
@@ -120,21 +119,21 @@
     <p>The House's <i>second-tier</i> goods, those licensed for sale outside the Order, are still considered the best of their respective classes on Talan. The <i>top tier</i> is not for sale to anyone outside the Order's borders, and not to most parties inside.</p>
   </div>
 
-  <div class="export-grid">
-    <div class="accent-card thin export-card">
-      <div class="export-name">Eisenhart Leviathan-Class Warship</div>
+  <div class="card-grid export-grid">
+    <div class="accent-card thin">
+      <div class="card-name">Eisenhart Leviathan-Class Warship</div>
       <div class="export-desc">Heavy capital warship. Ethersteel hull, dual rune-cannon batteries, integrated airship hangar. Currently the heaviest-armed Magitech vessel a foreign power can actually buy. Standing waiting list for new-build hulls runs eight to twelve years.</div>
     </div>
-    <div class="accent-card thin export-card">
-      <div class="export-name">The Ironwing Line</div>
+    <div class="accent-card thin">
+      <div class="card-name">The Ironwing Line</div>
       <div class="export-desc">Heavy combat airships. The Talanese industry-standard heavy-airship pattern, most foreign air fleets that field heavy hulls field Ironwings or licensed Ironwing derivatives. The newest sub-class (the <i>Ironwing Lance</i>) is restricted-export and sold only to Order-allied powers.</div>
     </div>
-    <div class="accent-card thin export-card">
-      <div class="export-name">Precision-Forged Runeblade Bayonets</div>
+    <div class="accent-card thin">
+      <div class="card-name">Precision-Forged Runeblade Bayonets</div>
       <div class="export-desc">Issued to elite dwarven regiments. Closer to a sidearm than a polearm; the rune-edge will cut through field armour the rifle's shot would not. Status item; the export run is small, the waitlist disproportionate.</div>
     </div>
-    <div class="accent-card thin export-card">
-      <div class="export-name">Foundry Furnace Modules</div>
+    <div class="accent-card thin">
+      <div class="card-name">Foundry Furnace Modules</div>
       <div class="export-desc">Prefabricated forge-cells exported to allied industrial regions. Each module is a self-contained Arcanotech foundry; client kingdoms install them as the seed of a local heavy industry. Politically as important as militarily, the modules embed Order-licensed designs at the receiver's industrial root.</div>
     </div>
   </div>

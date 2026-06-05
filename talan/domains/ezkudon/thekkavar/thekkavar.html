@@ -15,10 +15,8 @@
     --card-bg: rgba(14,28,26,0.5);
   }
 
-  .peoples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .people-card { padding: 14px 16px; }
-  .people-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
-  .people-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  .peoples-grid { --col-min: 250px; }
+  .peoples-grid p { font-size: 0.9rem; line-height: 1.5; }
 
   .feature-panel { max-width: 880px; margin: 18px auto; }
 
@@ -27,10 +25,8 @@
   .principle-call p { margin: 0 0 12px; line-height: 1.6; }
   .principle-call p:last-child { margin-bottom: 0; }
 
-  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .gov-card { padding: 16px 18px; }
-  .gov-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 6px; }
-  .gov-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .gov-grid .card-name { font-size: 1rem; }
+  .gov-grid { --card-pad: 16px 18px; }
 </style>
 </head>
 <body data-page="thekkavar">
@@ -111,13 +107,13 @@
     <p>The city is two peoples, and Enki is depicted as one and behaves as the other. The Catfolk are his face; the Shisk are his hunger; and Thekkavar is the long conversation between them. Two further figures cross every story here: the <b>apprentice-and-leave</b> who come young, take a discipline, and carry it back into the world (the chronicler Golivander's path, and Jeanne Pintos the natural-philosopher's before him), and the <b>degree-and-stay</b> who commit to the descent and never surface. The transients give Thekkavar its reach; the lifers give it its depth.</p>
   </div>
 
-  <div class="peoples-grid">
-    <div class="accent-card people-card">
-      <div class="people-name">Catfolk · Enki's Face</div>
+  <div class="card-grid peoples-grid">
+    <div class="accent-card">
+      <div class="card-name">Catfolk · Enki's Face</div>
       <p>Curious and precise, the scholar-caste and archive-keepers in the god's own image (Enki is depicted a black-haired catfolk). The <b>Wisdom</b> pole: masters of the Lanterns, the degree-and-stay lifers who built the discipline of restraint and hold that the closed doors are love. They keep, and they say "not yet" and mean it as mercy.</p>
     </div>
-    <div class="accent-card people-card">
-      <div class="people-name">Shisk · Enki's Hunger</div>
+    <div class="accent-card">
+      <div class="card-name">Shisk · Enki's Hunger</div>
       <p>Hunters of the forbidden and the dangerous, the <b>Discovery</b> pole: the ones drawn down past their access into the sealed shelves and the Leize itself, the city's only true reach into the deep and its standing temptation both. "Shisk-curiosity" is the warning every novice is given, because the gift and the danger are the same trait.</p>
     </div>
   </div>
@@ -166,21 +162,21 @@
     <div class="secret-era-content">
       <div class="secret-era-label">⚿ &nbsp; What "Cheating Costs Everything" Means</div>
       <p style="font-style:italic; margin-top:0;">The Leize is navigable to a point; once truly lost, only Enki can lead you out, lantern of shifting light in the dark, and he names a price. By the equivalent exchange that runs through the Gods' Law, the price for a life is a life's weight.</p>
-      <div class="gov-grid">
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Forget and Go</div>
+      <div class="card-grid gov-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Forget and Go</div>
           <p>Forget what you found, and pay in years off your span, proportional to how deep you wandered. A scholar lost in the shallows loses a triumph and a little time; one who plunged near the bottom comes up emptied of the answer and decades older, a youth returned grey in an afternoon.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Remember and Serve</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Remember and Serve</div>
           <p>Keep what you found, but never speak it and never write it, and give Enki the rest of your days. Those who take this door are the <b>Sealed</b>, each a living sealed Mystery, which is why the deepest knowledge never rises into the open stacks though the clergy hold it: the ones who know it are bound to silence, and they are the gate.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">The Never-Led-Out</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Never-Led-Out</div>
           <p>There is a depth past which no bargain can balance, where the price would be a whole remaining life, and there Enki does not come. Those souls are lost for good. This is what the surface means when it says, lightly, that cheating the test costs everything.</p>
         </div>
-        <div class="accent-card gov-card" style="--card-bg: rgba(46,14,18,0.55);">
-          <div class="gov-name" style="color:#f0b020;">Why the Discipline Holds</div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Why the Discipline Holds</div>
           <p>Closed-doors-as-mercy is literal. The slow earned descent is the only way to go deep without reaching the depth where rescue would cost a life, and the institutes withhold because the deep does not merely lose you, it bills a life to bring you back.</p>
         </div>
       </div>

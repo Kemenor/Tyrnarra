@@ -115,7 +115,20 @@ The sidebar isn't the only thing extracted from per-page inline code. Two other 
 
 The `.open-canon` panel (dashed TBD-inventory box at the bottom of several pages) lives as a shared rule in `style-b.css`; pages just write `<div class="open-canon">…</div>` and the panel inherits the page's `--domain-accent` for the heading colour and border edge.
 
-### Two utility families in `style-b.css`
+### Three utility families in `style-b.css`
+
+- **`.card-grid` + `.card-name`**: the single most-repeated structure on the site, a responsive auto-fit grid of `.accent-card` items each headed by an uppercase Cinzel label over body prose. Before this existed, dozens of pages re-declared the identical pattern under bespoke names (`.gov-grid`/`.gov-card`/`.gov-name`, `.peoples-grid`, `.tier-grid`, `.craft-grid`, `.tension-grid`, …) plus matching `-name` and `-card p` clones. They all collapse to:
+
+  ```html
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Label</div>
+      <p>Body prose.</p>
+    </div>
+  </div>
+  ```
+
+  The grid wrapper, the label, and the body `<p>` are all styled by the shared rule. Tune a grid by setting CSS variables on `.card-grid` (inline, or via a tiny per-page marker rule): `--col-min` (min column width before wrap, default 230px), `--grid-gap` (default 14px), `--grid-max` (default 1000px), `--card-pad` (per-card padding, default 14px 16px). Recolour a single label with `--card-accent` on the card; resize it with `--card-name-size` on the label. **Rich cards** (those with extra sub-labels: a number row, an italic band, a sub-heading) keep those extra elements as their own page class and add a thin marker rule (`.X-grid { --col-min: … }`) on a `class="card-grid X-grid"` wrapper; only the grid / name / body trio collapses. Reference implementations: `dreaming-cape.html` (plain theory/tension grids + rich five-tier grid with colour-variant labels), `rika-tikur.html` (variant-coloured cards with role sub-labels). **Do not** use `.card-grid` for fixed-column "fact" grids (`grid-template-columns: 130px 1fr`), two-column `1fr 1fr` blocks (use `.two-column`), or clickable/framed link-card indexes (those keep their own grid + card classes).
 
 - **`.accent-card`**: shared shell for the many "panel with an accent edge" cards across the site. Provides background, border-radius, and a left-stripe (or full border via `.framed`). Customise per card by setting two CSS variables:
   - `--card-bg`: background colour (defaults to warm dark)

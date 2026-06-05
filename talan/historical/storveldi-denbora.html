@@ -13,9 +13,9 @@
   :root { --domain-accent: #8a4cb4; }
 
   /* ── Chronicle-tradition cards (open prose) ─────────────────────── */
-  .tradition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .tradition-card { padding: 14px 16px; --card-bg: rgba(22,14,30,0.55); }
-  .tradition-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .tradition-grid { --col-min: 260px; --grid-max: 1100px; }
+  .tradition-grid .accent-card { --card-bg: rgba(22,14,30,0.55); }
+  .tradition-grid .card-name { font-size: 0.92rem; }
   .tradition-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
   .tradition-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
 
@@ -81,28 +81,28 @@
     <p>No civilisation of Talan's chronicle-record carries more competing identifications than this one. Each of the four major traditions has serious scholarship behind it; none has documentary footing strong enough to settle the question. Almost all of the actual records were lost when the homeland was annihilated, and what survives are second- and third-hand accounts from neighbouring kingdoms whose own libraries were thinned by the Crimson Rain in the days that followed.</p>
   </div>
 
-  <div class="tradition-grid">
+  <div class="card-grid tradition-grid">
 
-    <div class="accent-card tradition-card">
-      <div class="tradition-name">The Elden Returned</div>
+    <div class="accent-card">
+      <div class="card-name">The Elden Returned</div>
       <div class="tradition-byline">"The vanished came back to end what the gods had built."</div>
       <div class="tradition-desc">The oldest and most popular reading. The Elden Era ended in 2945 GR with the Elden vanishing in a single day, and this tradition holds that they returned, perhaps two thousand years later, to settle a quarrel with the gods who had filled the void they left. The fact that the <i>"Old Race"</i> built their capital atop an Elden ruin is treated as evidence: who else would inherit a vanished civilisation's site so confidently? The folk-name <i>the Old Race</i> is itself usually understood, in this tradition, as a reference to the Elden.</div>
     </div>
 
-    <div class="accent-card tradition-card">
-      <div class="tradition-name">A Separate Mortal Civilisation</div>
+    <div class="accent-card">
+      <div class="card-name">A Separate Mortal Civilisation</div>
       <div class="tradition-byline">"Mortals rose. Mortals reached too far. The result was the same."</div>
       <div class="tradition-desc">A growing minority reading, particularly in secular and Forsetian scholarship. This tradition argues that the <i>"Old Race"</i> were a wholly mortal people, not the Elden, not their descendants, who happened to occupy the empty Elden site and who built their own civilisation on top of it. Their downfall, in this reading, is the second of two great cautionary tales about mortal overreach (the first being the rumoured Storveldi Denbora ascent programmes, which some in this tradition treat as the same story). The Azarketi inheritance is taken seriously here, though debated.</div>
     </div>
 
-    <div class="accent-card tradition-card">
-      <div class="tradition-name">The Sorcerer-Kings</div>
+    <div class="accent-card">
+      <div class="card-name">The Sorcerer-Kings</div>
       <div class="tradition-byline">"They pried open a divine secret no mortal was meant to touch."</div>
       <div class="tradition-desc">Common in temple traditions and especially in the surviving record of <a href="/grand-gods.html#tani">Tani's clergy</a>. The <i>"Old Race"</i> are read here as a specifically mystical or sorcerous polity, kings who unlocked one ritual too many, found themselves able to challenge a Grand God, and were obliterated for it. The emphasis is moral rather than ethnographic: the <i>what</i> they were matters less than the <i>why</i> they fell. This reading is the closest mortal scholarship gets to the underlying mechanic, even though it dresses the truth in the wrong vocabulary.</div>
     </div>
 
-    <div class="accent-card tradition-card">
-      <div class="tradition-name">The Storveldi Denbora Hypothesis</div>
+    <div class="accent-card">
+      <div class="card-name">The Storveldi Denbora Hypothesis</div>
       <div class="tradition-byline">"A name some chronicles preserve, most do not."</div>
       <div class="tradition-desc">A minority of chronicles, almost all of them late-Gods'-Era or early-Lost-Era survivals, preserve the name <b>Storveldi Denbora</b> for this civilisation. The scholars who take the attribution seriously argue that this is the people's own self-name, surviving in the rare records that pre-date the conflation with the Elden. The scholars who do not take it seriously argue that <i>Storveldi Denbora</i> is a chronicle-tradition's invented label, retrofitted to a civilisation whose actual name no one alive remembers. Both positions are defensible. This page uses <i>Storveldi Denbora</i> as the working title because it is at least specific.</div>
     </div>

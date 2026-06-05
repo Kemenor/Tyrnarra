@@ -14,35 +14,28 @@
     --card-bg: rgba(18,22,30,0.55);
   }
 
-  /* Clan grid (11 clans, equal weight, plain cards) */
-  .clan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; max-width: 1000px; margin: 18px auto; }
-  .clan-card { padding: 14px 12px; text-align: center; }
-  .clan-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.05rem; }
+  /* Clan grid (11 clans, equal weight, rich cards with .clan-note) */
+  .clan-grid { --col-min: 170px; --card-pad: 14px 12px; }
+  .clan-grid .accent-card { text-align: center; }
+  .clan-grid .card-name { font-size: 1.05rem; letter-spacing: 0.1em; }
   .clan-note { font-size: 0.78rem; color: var(--gold-dim); font-style: italic; margin-top: 8px; line-height: 1.35; }
 
   /* Three teas (luxury-tier visual coding) */
-  .tea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 980px; margin: 20px auto; }
-  .tea-card { padding: 18px 20px; }
-  .tea-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.15rem; margin-bottom: 4px; }
+  .tea-grid { --col-min: 260px; --grid-gap: 16px; --grid-max: 980px; --card-pad: 18px 20px; }
+  .tea-grid .card-name { font-size: 1.15rem; letter-spacing: 0.1em; margin-bottom: 4px; }
   .tea-band { font-style: italic; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 10px; }
-  .t-skardun .tea-name { color: #e8d090; }
-  .t-vintek  .tea-name { color: #b8d0a0; }
-  .t-korrek  .tea-name { color: #c0a878; }
-  .tea-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .t-skardun .card-name { color: #e8d090; }
+  .t-vintek  .card-name { color: #b8d0a0; }
+  .t-korrek  .card-name { color: #c0a878; }
 
   /* Eight winds */
-  .wind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; max-width: 1000px; margin: 20px auto; }
-  .wind-card { padding: 14px 14px; }
-  .wind-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; }
+  .wind-grid { --col-min: 210px; --card-pad: 14px; }
+  .wind-grid .card-name { font-size: 1rem; margin-bottom: 0; }
   .wind-character { font-style: italic; color: var(--text); font-size: 0.88rem; margin: 4px 0 6px; }
   .wind-mark { font-size: 0.82rem; color: var(--text-dim); line-height: 1.45; }
-  .wind-major .wind-name { color: #b8d4f0; }
+  .wind-major .card-name { color: #b8d4f0; }
 
-  /* Disposition sub-blocks */
-  .disposition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .disp-card { padding: 14px 16px; }
-  .disp-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 6px; }
-  .disp-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  /* Disposition sub-blocks (plain, uses card-grid defaults) */
 
   /* Vornsketta callout (left-bordered, sky-toned) */
   .vornsketta-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(40,52,72,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -114,18 +107,18 @@
     <p>Crossing clan-lines through marriage, adoption, or formal study-rotation is common. A Tengu born to one clan and raised in part by another carries both names in full at formal introduction. The eleven clans, listed in no order of precedence (and the Tengu would consider any other listing a faux pas):</p>
   </div>
 
-  <div class="clan-grid">
-    <div class="accent-card clan-card"><div class="clan-name">Tessek</div><div class="clan-note">The chronicler Golivander Tessek's clan; most-known abroad.</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Karrok</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Vorrek</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Drennok</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Brakkar</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Nottek</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Vellok</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Holkar</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Marskenn</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Skenrak</div></div>
-    <div class="accent-card clan-card"><div class="clan-name">Drakkun</div></div>
+  <div class="card-grid clan-grid">
+    <div class="accent-card"><div class="card-name">Tessek</div><div class="clan-note">The chronicler Golivander Tessek's clan; most-known abroad.</div></div>
+    <div class="accent-card"><div class="card-name">Karrok</div></div>
+    <div class="accent-card"><div class="card-name">Vorrek</div></div>
+    <div class="accent-card"><div class="card-name">Drennok</div></div>
+    <div class="accent-card"><div class="card-name">Brakkar</div></div>
+    <div class="accent-card"><div class="card-name">Nottek</div></div>
+    <div class="accent-card"><div class="card-name">Vellok</div></div>
+    <div class="accent-card"><div class="card-name">Holkar</div></div>
+    <div class="accent-card"><div class="card-name">Marskenn</div></div>
+    <div class="accent-card"><div class="card-name">Skenrak</div></div>
+    <div class="accent-card"><div class="card-name">Drakkun</div></div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -135,21 +128,21 @@
     <p>To be Tengu is to live high and to speak true. The disposition is consistent across the eleven clans:</p>
   </div>
 
-  <div class="disposition-grid">
-    <div class="accent-card disp-card">
-      <div class="disp-name">Vertical Living</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Vertical Living</div>
       <p>Tengu cities and villages are built into mountain faces. Ladders, rope-bridges, and carved staircases serve where Talanese towns would have streets. An unflighted visitor learns the route by exhaustion before they learn it by memory.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">Wind-Knowing</div>
+    <div class="accent-card">
+      <div class="card-name">Wind-Knowing</div>
       <p>A Tengu reads the wind from childhood and never stops: it is the first discipline a clan teaches and among the last age takes away. The skill is craft, not magic, an experienced reader calling a storm days ahead from cloud-shape and the feel of a gust.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">Flock-Meals</div>
+    <div class="accent-card">
+      <div class="card-name">Flock-Meals</div>
       <p>Communal eating is the social default. A Tengu eating alone is presumed to be in grief, contemplation, or a work-fast; a polite neighbour leaves them to it, and an impolite one offers tea anyway.</p>
     </div>
-    <div class="accent-card disp-card">
-      <div class="disp-name">Speech-Economy</div>
+    <div class="accent-card">
+      <div class="card-name">Speech-Economy</div>
       <p>Tengu speech is shorter than Talanese-mainland speech. A long sentence is not impolite, but a short one is appreciated. The formal register, used in the Skarvorn and in clan-elder address, omits articles and pronouns entirely.</p>
     </div>
   </div>
@@ -188,19 +181,19 @@
     <p>Haizetsua's slopes support three distinct tea cultivars, grown at three altitude bands and constituting the island's signature trade product. Each band carries its own clan-pickers, its own harvest season, and its own social register.</p>
   </div>
 
-  <div class="tea-grid">
-    <div class="accent-card tea-card t-skardun">
-      <div class="tea-name">Skardun</div>
+  <div class="card-grid tea-grid">
+    <div class="accent-card t-skardun">
+      <div class="card-name">Skardun</div>
       <div class="tea-band">The Cloud-Grown · highest band · luxury tier</div>
       <p>Mist condenses on the leaves overnight; the harvest is gathered by hand before sunrise. The flavour is <i>quiet, long-finishing, and slightly bitter in a way that opens.</i> A small annual yield, prized in the noble courts of Lautara and the high-Council chambers of Frae City. The price reflects the climb. Faked downhill by less reputable mainland merchants; a genuine Skardun tin carries a clan-seal at the lid that air-carvers are commissioned to inspect.</p>
     </div>
-    <div class="accent-card tea-card t-vintek">
-      <div class="tea-name">Vintek</div>
+    <div class="accent-card t-vintek">
+      <div class="card-name">Vintek</div>
       <div class="tea-band">The Wind-Leaf · middle band · merchant tier</div>
       <p>The working merchant's tea. Brighter than Skardun, faster, considerably more available. The standard tea served at any reputable Talanese tea-house that imports from Haizetsua. A Tengu travelling abroad keeps a small Vintek tin in their satchel and considers it a piece of home.</p>
     </div>
-    <div class="accent-card tea-card t-korrek">
-      <div class="tea-name">Korrek</div>
+    <div class="accent-card t-korrek">
+      <div class="card-name">Korrek</div>
       <div class="tea-band">The High-Leaf · lowest band · everyday tier</div>
       <p>The Tengu staple at flock-meals and at the open Skarvorn galleries. Robust, drinkable through the day, re-steepable through multiple pots. A Tengu household with no Korrek at the kettle is not a household currently in good order.</p>
     </div>
@@ -213,15 +206,15 @@
     <p>The Tengu year is marked in <b>eight named winds</b> rather than months, each a stretch of weather and character defining a quarter-segment of the year. The four major winds open the four Skarvorn quarters; the four lesser winds mark internal clan business and Vornsketta departures. Abroad, a Tengu dates a letter by the wind and the Talanese month both, since no mainlander tracks the winds; at home the wind alone serves, and adding the month reads as faintly pretentious.</p>
   </div>
 
-  <div class="wind-grid">
-    <div class="accent-card wind-card wind-major"><div class="wind-name">Skarrenn</div><div class="wind-character">The homing wind</div><div class="wind-mark">Year-opening. Travellers return. Skarvorn convenes.</div></div>
-    <div class="accent-card wind-card"><div class="wind-name">Vorkat</div><div class="wind-character">The climbing wind</div><div class="wind-mark">Thermals strengthen. Sky-trade routes open.</div></div>
-    <div class="accent-card wind-card wind-major"><div class="wind-name">Helmar</div><div class="wind-character">The high wind</div><div class="wind-mark">Peak updrafts. Skarvorn convenes. Vindboorg sings its Major.</div></div>
-    <div class="accent-card wind-card"><div class="wind-name">Drekkir</div><div class="wind-character">The dry wind</div><div class="wind-mark">The still part of the year. Clan-work and study.</div></div>
-    <div class="accent-card wind-card wind-major"><div class="wind-name">Tellenn</div><div class="wind-character">The turning wind</div><div class="wind-mark">First cold. Skarvorn convenes. Vornsketta departures common.</div></div>
-    <div class="accent-card wind-card"><div class="wind-name">Norkar</div><div class="wind-character">The cold wind</div><div class="wind-mark">The slow weeks. Clan-elders teach.</div></div>
-    <div class="accent-card wind-card wind-major"><div class="wind-name">Skennok</div><div class="wind-character">The white wind</div><div class="wind-mark">Snow. Skarvorn convenes. Vindboorg sings its Minor.</div></div>
-    <div class="accent-card wind-card"><div class="wind-name">Vyrrek</div><div class="wind-character">The waking wind</div><div class="wind-mark">The year prepares to open again. Travellers begin home-flights.</div></div>
+  <div class="card-grid wind-grid">
+    <div class="accent-card wind-major"><div class="card-name">Skarrenn</div><div class="wind-character">The homing wind</div><div class="wind-mark">Year-opening. Travellers return. Skarvorn convenes.</div></div>
+    <div class="accent-card"><div class="card-name">Vorkat</div><div class="wind-character">The climbing wind</div><div class="wind-mark">Thermals strengthen. Sky-trade routes open.</div></div>
+    <div class="accent-card wind-major"><div class="card-name">Helmar</div><div class="wind-character">The high wind</div><div class="wind-mark">Peak updrafts. Skarvorn convenes. Vindboorg sings its Major.</div></div>
+    <div class="accent-card"><div class="card-name">Drekkir</div><div class="wind-character">The dry wind</div><div class="wind-mark">The still part of the year. Clan-work and study.</div></div>
+    <div class="accent-card wind-major"><div class="card-name">Tellenn</div><div class="wind-character">The turning wind</div><div class="wind-mark">First cold. Skarvorn convenes. Vornsketta departures common.</div></div>
+    <div class="accent-card"><div class="card-name">Norkar</div><div class="wind-character">The cold wind</div><div class="wind-mark">The slow weeks. Clan-elders teach.</div></div>
+    <div class="accent-card wind-major"><div class="card-name">Skennok</div><div class="wind-character">The white wind</div><div class="wind-mark">Snow. Skarvorn convenes. Vindboorg sings its Minor.</div></div>
+    <div class="accent-card"><div class="card-name">Vyrrek</div><div class="wind-character">The waking wind</div><div class="wind-mark">The year prepares to open again. Travellers begin home-flights.</div></div>
   </div>
 
   <div class="prose" style="margin-top: 14px;">

@@ -34,25 +34,15 @@
   .rhythm-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
 
   /* Card grids */
-  .watch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .watch-card { padding: 16px 18px; }
-  .watch-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
+  .watch-grid { --card-pad: 16px 18px; }
   .watch-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
-  .watch-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
 
   /* Hringseyja partition: 2-card comparison */
-  .partition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 980px; margin: 18px auto; }
-  .partition-card { padding: 18px 20px; }
+  .partition-grid { --col-min: 260px; --grid-max: 980px; --card-pad: 18px 20px; }
+  .partition-grid .card-name { font-size: 1.05rem; }
   .partition-side { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 4px; }
-  .partition-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); font-size: 1.05rem; margin-bottom: 8px; }
-  .partition-card.empire .partition-name { color: #c89888; }
-  .partition-card p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
+  .partition-card.empire .card-name { color: #c89888; }
 
-  /* Tension grid (3-card) */
-  .tension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .tension-card { padding: 16px 18px; }
-  .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
-  .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
   /* The stay-tilt vs rail-tilt opposing pair */
   .tilt-card .b-title { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 8px; }
@@ -146,24 +136,24 @@
     <p>The Vordsbench consolidated in the mid-Dark Era out of a habit that had been there as long as the harbour. The founding moment is dated by chronicler-tradition to a Forgotten King's failed approach in the mid-1700s MR (the named king and the exact year are canon-pending): the dock-watchers refused his alliance and his levies, stayed at the dock through his threats, and were vindicated within a year by his collapse. The earliest surviving entries on the <b>Watchroll</b> date from the autumn meeting that followed. The polity is approaching its seventh century by current reckoning and is among the older standing institutions on the continent.</p>
   </div>
 
-  <div class="watch-grid">
-    <div class="accent-card watch-card">
-      <div class="watch-name">The Watchers</div>
+  <div class="card-grid watch-grid">
+    <div class="accent-card">
+      <div class="card-name">The Watchers</div>
       <div class="watch-band">the seated body · between five and eleven</div>
       <p>The seated council. A seat is earned by tide-count, verified against the harbour records before confirmation. <i>A seat is a watch</i>; <i>to take the watch</i> is the confirmation-rite. The Watchroll is open by rule to any ancestry that accumulates the count, and Halfling by gravity rather than by statute; a minority in any generation are Vishkanya, occasionally a long-stay kitsune family elder, occasionally a Brauogi grain-house's third generation at Bellhalt.</p>
     </div>
-    <div class="accent-card watch-card">
-      <div class="watch-name">The Senior</div>
+    <div class="accent-card">
+      <div class="card-name">The Senior</div>
       <div class="watch-band">peer-elected · first among equals</div>
       <p>The standing presiding seat, elected from the seated body by the other Watchers. The Senior holds no separate watch and carries no separate vote-weight; the office is the council's voice abroad and its convening hand at the two great days. It was the Senior of the day who refused the Forgotten King, and the Senior of the day who, generations later, swore the Quietline with the Empire's regional governor.</p>
     </div>
-    <div class="accent-card watch-card">
-      <div class="watch-name">The Reckoners</div>
+    <div class="accent-card">
+      <div class="card-name">The Reckoners</div>
       <div class="watch-band">the Vishkanya scrivener corps</div>
       <p>The keepers of the Watchroll, the tide-count, and the held-deal registry that runs alongside the Jianna route-priest's witnessing round. They hold the institutional memory across the generations the seated Watchers do not individually span. A senior Reckoner gatekeeps which petitions reach the Long Hearing, which makes the office one of the most consequential in Itsasaldan civic life, and quietly more powerful than most seated Watchers. The Reckoners serve the Vordsbench; they are not Watchers, though a career Reckoner is sometimes elevated to the Watchroll on retirement once the tide-count is met.</p>
     </div>
-    <div class="accent-card watch-card">
-      <div class="watch-name">The Standing</div>
+    <div class="accent-card">
+      <div class="card-name">The Standing</div>
       <div class="watch-band">the resident partition officer at Edgeward</div>
       <p>The Vordsbench's permanently-resident officer on the Itsasaldan half of <b>Hringseyja</b>. She handles routine Quietline incidents on her own authority, reports to the council by quarterly letter, and presides at the four protocol days a year alongside her Empire-side counterpart. The role was founded mid-Adventurer Era with the swearing of the Quietline (see <i>Hringseyja and the Quietline</i> below).</p>
     </div>
@@ -218,15 +208,15 @@
     <p>The line is held by mutual restraint and by the <b>Hringbark</b> wax-stands, which grow in productive quantity only on this island. The Quietline opens at the named gate dawn-to-dawn on four <b>protocol days</b> a year, the solstices and the equinoxes, and is closed otherwise. On the protocol days both villages set out gate-zone markets, exchange the year's correspondence between cross-line families separated at the founding partition, share a midday meal at a table set across the line itself, and run through the night by watchfire. The Vordsbench rules on partition questions only when they touch the long holding; the Standing handles the rest on her own authority and reports by quarterly letter.</p>
   </div>
 
-  <div class="partition-grid">
-    <div class="accent-card partition-card">
+  <div class="card-grid partition-grid">
+    <div class="accent-card">
       <div class="partition-side">Itsasalda's half</div>
-      <div class="partition-name">The Halfling Side</div>
+      <div class="card-name">The Halfling Side</div>
       <p>Edgeward and its three hamlets: Halfling fishing-and-tending villages under the Standing's resident authority, with the wax-groves on the mid-altitude meadows tended by long-inherited stewardship. Some extended households were cut in half at the original partition, and small-scale family visits across the line on the protocol days are the year's most-awaited correspondence. The half-island lives in close sight of a foreign jurisdiction across the road and has done so without breaking the line for nearly two centuries.</p>
     </div>
     <div class="accent-card partition-card empire">
       <div class="partition-side">The Empire's half</div>
-      <div class="partition-name">The Faith Side</div>
+      <div class="card-name">The Faith Side</div>
       <p>A small permanent Legea Empire population with its own port-village and a modest mission of the Divine Faith, administered from the Empire's regional governor's office. The Empire-side clergy attune Hringbark wax to their own state god at their mainland temples, by a craft developed independently of the Itsasaldan one. Cross-line contact persists in small ways: smuggling, partition-cut marriage-line disputes, and the occasional missionary venturing across to Itsasalda proper, always politely redirected by the Standing.</p>
     </div>
   </div>
@@ -247,17 +237,17 @@
     <p>Three arguments run quietly across Itsasalda.</p>
   </div>
 
-  <div class="tension-grid">
-    <div class="accent-card tension-card">
-      <div class="tension-name">The HRA and the Vordsbench</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The HRA and the Vordsbench</div>
       <p>The HRA's Itsasalda headquarters sits one block from the hearing chamber, and the proximity is a standing civic joke. The HRA carries the autumn voting bloc at Merkavar's <i>Uzta-Azoka</i> and passes continental freight-rate changes that affect contracts already running under Vordsbench-witness. The council cannot overrule a Merkavar ruling, but it can withhold Jianna-witness on the change: a rate not yet <i>held</i> by Itsasaldan standing is in force without held-registry credit, and merchants learn to wait for the next Long Ruling. The lever has been used three or four times in living memory and is not used lightly. <i>The rails carry the deal, the dock holds the deal</i>, the older bar-owners say.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Quietline's Quiet</div>
+    <div class="accent-card">
+      <div class="card-name">The Quietline's Quiet</div>
       <p>The protocols have held for nearly two centuries, but the Legea Empire's missionary attempts continue at a low rate, contained by the protocol-day pattern. Each generation has its own canonical incident that the village-grandmothers can recite the resolution of, and the Standing's standing work is to keep the next one small. The line is not contested; it is held by people who have decided, generation after generation, that holding it is worth more than breaking it.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Wax-Groves</div>
+    <div class="accent-card">
+      <div class="card-name">The Wax-Groves</div>
       <p>The Hringbark stands require careful tending across centuries-long maturation curves, and a poor year for the groves is a quiet emergency on both sides of the line at once. The wax that seals Itsasalda's rulings and the wax that sustains the Empire-side mission come from the same meadows; a failed harvest is the one event that aligns the two jurisdictions' interests perfectly and unwillingly.</p>
     </div>
   </div>

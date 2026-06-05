@@ -61,20 +61,12 @@
   .ls-purest     { --life-color: #d840a0; }
 
   /* Purist schools: four-card grid */
-  .school-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 14px;
-    margin: 18px auto;
-    max-width: 1000px;
-  }
-  .school-card { padding: 14px 16px; --card-bg: rgba(28,16,22,0.5); --card-accent: rgba(154,48,80,0.3); }
-  .school-name {
-    font-family: 'Cinzel', serif;
+  .school-grid { --col-min: 240px; }
+  .school-grid .accent-card { --card-bg: rgba(28,16,22,0.5); --card-accent: rgba(154,48,80,0.3); }
+  .school-grid .card-name {
     font-size: 0.78rem;
     letter-spacing: 0.16em;
     color: #d8a0b0;
-    text-transform: uppercase;
     margin-bottom: 4px;
   }
   .school-method {
@@ -218,28 +210,28 @@
     <p><b>There are as many paths as there are purists.</b> Each Dragon must find theirs alone. The four directions below are not factions, schools, or institutions; they are simply <i>common categories observers can identify</i>. Many purists combine several. New purists invent novel methods every generation. The grouping is descriptive convenience; the practice is private.</p>
   </div>
 
-  <div class="school-grid">
+  <div class="card-grid school-grid">
 
-    <div class="accent-card framed school-card">
-      <div class="school-name">Power-Accumulation</div>
+    <div class="accent-card framed">
+      <div class="card-name">Power-Accumulation</div>
       <div class="school-method">Direction: raw strength as proxy</div>
       <div class="school-theory"><b>Theory:</b> enough strength is enough strength, by any measure, including the one we lost. If we are mighty enough, we will close the gap by becoming larger than the gap. Purists in this direction tend toward conquest, hoarding, and the accumulation of magical and martial power without obvious limit.</div>
     </div>
 
-    <div class="accent-card framed school-card">
-      <div class="school-name">Discipline of Body &amp; Mind</div>
+    <div class="accent-card framed">
+      <div class="card-name">Discipline of Body &amp; Mind</div>
       <div class="school-method">Direction: generations-long regimen</div>
       <div class="school-theory"><b>Theory:</b> what was severed in us can be rebuilt by doing, slowly, what immortality did automatically. Adherents hold to strict regimens (diet, breath, study, motion) practised without break across full Dragon lifetimes. The longest-lived Dragons in the city are almost all from this direction.</div>
     </div>
 
-    <div class="accent-card framed school-card">
-      <div class="school-name">Meditation in the Wreckage</div>
+    <div class="accent-card framed">
+      <div class="card-name">Meditation in the Wreckage</div>
       <div class="school-method">Direction: religious practice in the ship-chambers</div>
       <div class="school-theory"><b>Theory:</b> closeness to what we were makes us closer to it again. Adherents take vigil in the deepest preserved chambers of the ship (those parts of the city still recognisably <i>vessel</i>) and meditate there for years at a time, sometimes decades. Some emerge changed. Some do not emerge.</div>
     </div>
 
-    <div class="accent-card framed school-card">
-      <div class="school-name">Reconstruction</div>
+    <div class="accent-card framed">
+      <div class="card-name">Reconstruction</div>
       <div class="school-method">Direction: archaeology of the pre-corruption practice</div>
       <div class="school-theory"><b>Theory:</b> if we recover what we did <i>before</i> (the daily rituals, the work, the song), our nature follows. Adherents work the ship-relics literally embedded in the city walls, plus what new chambers the dig opens. They want the past back as a way of life, not as a sentiment.</div>
     </div>

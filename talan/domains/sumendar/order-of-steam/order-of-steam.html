@@ -15,9 +15,8 @@
   .council-label { font-family: 'Cinzel', serif; color: var(--gold-bright); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; }
   .council-name  { font-family: 'Uncial Antiqua', cursive; color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 10px; }
 
-  .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .pillar-card { padding: 12px 14px; --card-bg: rgba(28,20,12,0.55); }
-  .pillar-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .pillar-grid { --col-min: 220px; --card-pad: 12px 14px; }
+  .pillar-grid .card-name { font-size: 0.92rem; letter-spacing: 0.06em; margin-bottom: 4px; }
   .pillar-desc { font-size: 0.9rem; color: var(--text); }
 
   .sub-card { padding: 12px 16px; margin: 12px 0; --card-bg: rgba(28,20,12,0.42); --card-accent: var(--gold-dim); }
@@ -86,21 +85,21 @@
     <p>The Order organises its industrial work into four broad craft-pillars. Each has its own master council and its own seat on the Council of the Forge; together they produce most of what mortals on Talan would call "regulated heavy Magitech."</p>
   </div>
 
-  <div class="pillar-grid">
-    <div class="accent-card pillar-card">
-      <div class="pillar-name">Rail &amp; Locomotion</div>
+  <div class="card-grid pillar-grid">
+    <div class="accent-card">
+      <div class="card-name">Rail &amp; Locomotion</div>
       <div class="pillar-desc">Magitrains and the rolling stock that fills the southern network. The Pillar that the Order is most globally known for · most of Talan's Arcanotech rail traces here.</div>
     </div>
-    <div class="accent-card pillar-card">
-      <div class="pillar-name">Airships &amp; Atmosphere</div>
+    <div class="accent-card">
+      <div class="card-name">Airships &amp; Atmosphere</div>
       <div class="pillar-desc">Arcanotech engines, standard hull patterns, and the heavy-combat platforms the Order is famous for. <b>House Eisenhart's Ironwing line</b> dominates the heavy-combat segment; the Pillar's lighter freight-and-passenger designs are licensed widely. Vindul leads the continent on hull-singing and Occultech bound-elemental craft; the Order's segment is the industrial Arcanotech end of the same sky.</div>
     </div>
-    <div class="accent-card pillar-card">
-      <div class="pillar-name">Foundry &amp; Heavy Industry</div>
+    <div class="accent-card">
+      <div class="card-name">Foundry &amp; Heavy Industry</div>
       <div class="pillar-desc">Furnaces, mills, regulated weapon manufacture, rune cannons, Ethersteel plating. The volcanic belt's literal forges feed this pillar; House Eisenhart leads it by output and reputation.</div>
     </div>
-    <div class="accent-card pillar-card">
-      <div class="pillar-name">Engineering &amp; Archaeology</div>
+    <div class="accent-card">
+      <div class="card-name">Engineering &amp; Archaeology</div>
       <div class="pillar-desc">Elden-tech recovery, prototype labs, Council-licensed reverse-engineering of the volcanic belt's deep ruins. The Pillar whose seat is most often held by a new-rising engineer rather than an established House.</div>
     </div>
   </div>

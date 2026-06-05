@@ -13,9 +13,9 @@
   :root { --domain-accent: #5a6a88; }
 
   /* ── Achievement / Inheritance / Theory grids (open prose) ──────── */
-  .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .topic-card { padding: 14px 16px; --card-bg: rgba(18,22,32,0.55); }
-  .topic-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.92rem; margin-bottom: 4px; }
+  .topic-grid { --col-min: 240px; --grid-max: 1100px; }
+  .topic-grid .accent-card { --card-bg: rgba(18,22,32,0.55); }
+  .topic-grid .card-name { font-size: 0.92rem; }
   .topic-byline { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 8px; }
   .topic-desc { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
 
@@ -117,28 +117,28 @@
     <p>What survives of their culture, in any form a modern scholar can read, is fractional. Their tongue is not preserved. Their philosophy survives as inference from the engineering. Their politics, their families, their wars among themselves, all of it is gone. What is not gone is what they <i>built</i>, because building was the part of Elden civilisation that they did at industrial scale, and ruins survive their owners.</p>
   </div>
 
-  <div class="topic-grid">
+  <div class="card-grid topic-grid">
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">Continental Scale</div>
+    <div class="accent-card">
+      <div class="card-name">Continental Scale</div>
       <div class="topic-byline">Every region of modern Talan has Elden bones beneath it</div>
       <div class="topic-desc">Elden infrastructure spanned the entire continent: arterial transport, industrial sites, urban concentrations, atmospheric travel routes. Every modern domain stands atop strata of Elden work, and every modern excavation programme of any seriousness has Elden material in its inventories. The continent is, in this material sense, still theirs.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">Rail-Bound Mass Acceleration</div>
+    <div class="accent-card">
+      <div class="card-name">Rail-Bound Mass Acceleration</div>
       <div class="topic-byline">The principle the modern Magitrain rediscovered</div>
       <div class="topic-desc">The Elden moved freight and people across the continent on rail systems whose engineering principles modern Arcanotech has spent four centuries reproducing in stripped-down form. The original Elden routes operated at speeds, scales, and tolerances that modern engineering does not yet match. Most of the route-corridors used by today's Magitrain follow Elden roadbeds.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">Atmospheric Vessels</div>
+    <div class="accent-card">
+      <div class="card-name">Atmospheric Vessels</div>
       <div class="topic-byline">Airships before there was a word for airship</div>
       <div class="topic-desc">Recovered Elden airframes from a half-dozen high-elevation ruin-sites show an aerostatic and propulsive sophistication that the modern airship trade has approached only in the last century, and only in the largest mercantile-house construction yards. The Elden flew routinely. The Sortalde-Talan crossing the modern cloudships make is, by Elden-era standards, a short hop.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">Industrial Magic</div>
+    <div class="accent-card">
+      <div class="card-name">Industrial Magic</div>
       <div class="topic-byline">Rune-arrays, formula-driven enchantment, reproducible manufacture</div>
       <div class="topic-desc">Most of what modern Talan calls <a href="/magic.html">Arcanotech</a>, formula-based, scalable, reproducible, was practised by the Elden at production-line volumes. They did not enchant individual artefacts the way a modern wizard does. They <i>manufactured</i> them. The Order of Steam's most prized possessions are working Elden industrial cores; none of them have been fully reverse-engineered.</div>
     </div>
@@ -189,22 +189,22 @@
     <p>In the absence of explanation, mortal scholarship has produced three competing accounts of the vanishing. None has documentary footing strong enough to settle the others. Each has serious adherents, prestigious chronicler-fellowships, and a long shelf of published argument behind it.</p>
   </div>
 
-  <div class="topic-grid">
+  <div class="card-grid topic-grid">
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">The War with the Gods</div>
+    <div class="accent-card">
+      <div class="card-name">The War with the Gods</div>
       <div class="topic-byline">"A conflict too vast to leave ordinary records."</div>
       <div class="topic-desc">The oldest and most popular reading. The Elden and the gods of the era were in escalating conflict over the continent's mortal populations and material wealth, and the conflict resolved, somehow, with the Elden gone. This tradition treats the missing records as the natural consequence of a war fought at a scale that left no surviving witnesses to write any. Some variants hold the Elden were destroyed; others that they were driven out; others that the conflict simply consumed them. All agree on the war.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">The Fulfilled Purpose</div>
+    <div class="accent-card">
+      <div class="card-name">The Fulfilled Purpose</div>
       <div class="topic-byline">"They came for a reason, and then the reason was finished."</div>
       <div class="topic-desc">A reading particularly common in temple traditions and mystical scholarship. The Elden are read here as a civilisation with a single underlying task, variously named depending on the tradition, whose completion required their continuation only up to that completion. Once the work was done, there was no further reason to remain on the Material Plane. They departed willingly, perhaps even joyfully. The intact cities and warm libraries are treated as evidence of completion rather than catastrophe.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">The Departure</div>
+    <div class="accent-card">
+      <div class="card-name">The Departure</div>
       <div class="topic-byline">"They found a way out and they took it."</div>
       <div class="topic-desc">The most poetic and the most enduring of the three. The Elden, in this tradition, found a way to leave Talan entirely, beyond the Cloud Sea, beyond the planes mortals can name, to another world or another kind of existence. They walked through, and the door closed behind them. Adherents argue that the vanishing's totality, every Elden, simultaneously, with no remnant, fits no model of war or completion, and only the Departure account accommodates the simultaneity. Sceptics call this the most beautiful answer that explains the least.</div>
     </div>
@@ -302,22 +302,22 @@
     <p>What the Elden left behind is, materially, almost all of modern Talanese civilisation. Their work was hardened, abundant, and built to outlast its builders, even unintentionally. After the Week of Crimson Rain shattered the divine governance that followed them, mortal civilisations had to rebuild from something, and the something they rebuilt from was Elden.</p>
   </div>
 
-  <div class="topic-grid">
+  <div class="card-grid topic-grid">
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">Arcanotech</div>
+    <div class="accent-card">
+      <div class="card-name">Arcanotech</div>
       <div class="topic-byline">The dominant industrial Magitech tradition</div>
       <div class="topic-desc">Almost every working principle behind modern <a href="/magic.html">Arcanotech</a>, formula-driven, runic, reproducible, descends from post-Crimson-Rain Elden-ruin discoveries. The first generations of Arcanotech artificers were, functionally, archaeologists. The discipline's foundational textbooks are explicit about which Elden site each formula originated from. Most of the rest of Magitech (Divitech, Primotech, Occultech) is contrastive, defined partly by what makes it <i>not</i> Arcanotech, which means partly by what makes it <i>not</i> Elden-derived.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">The Order of Steam</div>
+    <div class="accent-card">
+      <div class="card-name">The Order of Steam</div>
       <div class="topic-byline">A kingdom-guild grown around an Elden excavation</div>
       <div class="topic-desc">The <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a> in Sumendar is, in its origin, an Elden-tech excavation programme that grew into an industrial society. Their breakthroughs across the past two centuries, the formal study of rail-mass-acceleration, atmospheric-vessel architecture, industrial enchantment standardisation, all trace back to the working Elden cores their original engineers managed to reactivate. The Order regards the Elden with a specific professional reverence not quite shared by anyone else on Talan.</div>
     </div>
 
-    <div class="accent-card topic-card">
-      <div class="topic-name">The Automaton Failure</div>
+    <div class="accent-card">
+      <div class="card-name">The Automaton Failure</div>
       <div class="topic-byline">The Empire's most ambitious miss</div>
       <div class="topic-desc">The <a href="/talan/historical/golden-empire.html">Golden Empire</a>'s scholars set out to recreate the Androids. They produced the <a href="/talan/ancestries.html">Automatons</a> instead, which are not the same thing. The Empire's chroniclers wrote about this with the disappointment of scholars who knew they had missed; modern Talan, with the benefit of distance, mostly recognises that the Empire <i>did</i> create a new people, and treats the work as success-by-different-measure. The Empire never came to that view. They wanted Androids and they did not get them.</div>
     </div>

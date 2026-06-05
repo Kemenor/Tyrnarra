@@ -9,9 +9,8 @@
 <link rel="stylesheet" href="/assets/site-nav.css">
 <script defer src="/assets/site-nav.js"></script>
 <style>
-  .rail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
-  .rail-card { padding: 14px 18px; }
-  .rail-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 2px; }
+  .rail-grid { --col-min: 280px; --grid-max: 1100px; --grid-gap: 16px; }
+  .rail-grid .card-name { font-size: 1rem; margin-bottom: 2px; }
   .rail-byline { font-style: italic; font-size: 0.85rem; color: var(--gold-dim); margin-bottom: 8px; }
   .rail-desc { font-size: 0.92rem; color: var(--text); }
   .rail-north { --card-accent: #6890c0; }
@@ -23,10 +22,10 @@
   .blocker-reasons li { margin-bottom: 10px; }
   .blocker-reasons li b { color: #f0d080; }
 
-  .cross-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px auto; max-width: 1100px; }
-  .cross-card { padding: 10px 14px; --card-bg: rgba(28,20,10,0.5); --card-accent: var(--gold-dim); }
-  .cross-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.88rem; margin-bottom: 4px; }
-  .cross-desc { font-size: 0.88rem; color: var(--text); }
+  .cross-row { --col-min: 240px; --grid-gap: 12px; --grid-max: 1100px; --card-pad: 10px 14px; }
+  .cross-row > .accent-card { --card-bg: rgba(28,20,10,0.5); --card-accent: var(--gold-dim); }
+  .cross-row .card-name { font-size: 0.88rem; margin-bottom: 4px; }
+  .cross-row p { font-size: 0.88rem; }
 
   .continent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 18px auto; max-width: 1100px; }
   .continent-card { padding: 14px 18px; }
@@ -210,14 +209,14 @@
     <p>The network is <b>two interconnected halves, not one continental whole</b>. The northern domains share one rail system; the southern domains share another; <b>no through-rail crosses between them</b>. Every Talanese merchant who needs to move goods north-to-south knows the seam intimately.</p>
   </div>
 
-  <div class="rail-grid">
-    <div class="accent-card rail-card rail-north">
-      <div class="rail-name">Northern Network</div>
+  <div class="card-grid rail-grid">
+    <div class="accent-card rail-north">
+      <div class="card-name">Northern Network</div>
       <div class="rail-byline">Vindul · Brauogi · Myrkono · Ehizahar · Askamira</div>
       <div class="rail-desc">Interconnects the northern domains and their major cities. Confederated multi-operator system; <a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>-licensed lines dominate, regional operators run shorter routes. <b>No single commercial heart-city</b>: the northern network operates as a distributed multi-node system. A future consolidation around Lurrath or another northern city is plausible but currently absent.</div>
     </div>
-    <div class="accent-card rail-card rail-south">
-      <div class="rail-name">Southern Network</div>
+    <div class="accent-card rail-south">
+      <div class="card-name">Southern Network</div>
       <div class="rail-byline">Sumendar · Lautara · Lioaru · Egulon · Ezkudon · Zuzental · Nashavel</div>
       <div class="rail-desc"><b>Centred on <a href="/talan/domains/lautara/lautara.html">Merkavar</a></b> (Jianna's market-city in Lautara, on the great inland lake at the foot of Helgafjall), where the rail lines converge. The <b><a href="/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a></b> in Sumendar produces most of the network's rolling stock but is itself isolated by mountain terrain; rolling stock leaves Sumendar via the <a href="/talan/domains/lautara/rika-tikur/rika-tikur.html">Rika Tikur</a> ports, crosses by Lautaran water and road, and enters the network at Merkavar to fan out across Atarialda to Egulon, Ezkudon, and Zuzental. The <a href="/talan/domains/lioaru/lost-kingdom.html">Blackened Lands</a> have no rail and never will; lines reach the habitable interior of Lioaru and stop at the cursed-ground's edge.</div>
     </div>
@@ -240,18 +239,18 @@
     <p>North-south travel is therefore done by other means. Each has its own economy attached, and the kingdoms astride each alternative draw real revenue from it.</p>
   </div>
 
-  <div class="cross-row">
-    <div class="accent-card thin cross-card">
-      <div class="cross-name">Stillship across Midarra</div>
-      <div class="cross-desc">The bulk-cargo route. Talan's freshwater inner sea is the preferred lane for the heavy <b>stillships</b> that haul tonnage no passenger schedule can take. The <b>Twin Cities</b> (the mobile pirate capital drifting through Midarra) draw real revenue from being a routine transit point. Toll, escort, or both.</div>
+  <div class="card-grid cross-row">
+    <div class="accent-card thin">
+      <div class="card-name">Stillship across Midarra</div>
+      <p>The bulk-cargo route. Talan's freshwater inner sea is the preferred lane for the heavy <b>stillships</b> that haul tonnage no passenger schedule can take. The <b>Twin Cities</b> (the mobile pirate capital drifting through Midarra) draw real revenue from being a routine transit point. Toll, escort, or both.</p>
     </div>
-    <div class="accent-card thin cross-card">
-      <div class="cross-name">Airship over Basogur</div>
-      <div class="cross-desc">The premium passenger and urgent-freight option. Arcanotech airships do this regularly but suffer turbulence and instrument drift in the chaos-magic uplift. <b>Occultech airships fly through it cleanly</b> and charge accordingly. Vindul and Sumendar airship guilds dominate the over-jungle route.</div>
+    <div class="accent-card thin">
+      <div class="card-name">Airship over Basogur</div>
+      <p>The premium passenger and urgent-freight option. Arcanotech airships do this regularly but suffer turbulence and instrument drift in the chaos-magic uplift. <b>Occultech airships fly through it cleanly</b> and charge accordingly. Vindul and Sumendar airship guilds dominate the over-jungle route.</p>
     </div>
-    <div class="accent-card thin cross-card">
-      <div class="cross-name">The Overland Loop</div>
-      <div class="cross-desc">The long road that loops around Basogur: slow, monetised by toll-collecting kingdoms along the bypass. The poor route, the patient route, the route taken when the airship guilds are full or the season is bad on Midarra. Still used; still profitable for whoever holds the tolls.</div>
+    <div class="accent-card thin">
+      <div class="card-name">The Overland Loop</div>
+      <p>The long road that loops around Basogur: slow, monetised by toll-collecting kingdoms along the bypass. The poor route, the patient route, the route taken when the airship guilds are full or the season is bad on Midarra. Still used; still profitable for whoever holds the tolls.</p>
     </div>
   </div>
 

@@ -11,9 +11,8 @@
 <style>
   :root { --domain-accent: #c8900a; }
 
-  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .tier-card { padding: 14px 16px; --card-bg: rgba(28,20,8,0.55); }
-  .tier-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .tier-grid { --col-min: 220px; --grid-max: 1100px; }
+  .tier-grid .accent-card { --card-bg: rgba(28,20,8,0.55); }
   .tier-where { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 6px; }
   .tier-lead { font-size: 0.78rem; color: var(--gold-dim); margin-top: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
   .tier-desc { font-size: 0.9rem; color: var(--text); }
@@ -29,9 +28,9 @@
   .rank-table td:first-child { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; white-space: nowrap; }
   .rank-table tr:hover { background: rgba(200,144,10,0.06); }
 
-  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 14px auto; max-width: 1000px; }
-  .service-card { padding: 12px 14px; --card-bg: rgba(28,20,8,0.5); --card-accent: var(--gold-dim); }
-  .service-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 4px; }
+  .service-grid { --col-min: 260px; --grid-gap: 14px; --card-pad: 12px 14px; margin: 14px auto; }
+  .service-grid .accent-card { --card-bg: rgba(28,20,8,0.5); --card-accent: var(--gold-dim); }
+  .service-grid .card-name { font-size: 0.9rem; margin-bottom: 4px; }
   .service-desc { font-size: 0.9rem; color: var(--text); }
 
   .figure-card { padding: 18px 22px; margin: 22px auto; max-width: 940px; --card-bg: rgba(28,20,8,0.6); --card-accent: rgba(200,144,10,0.4); }
@@ -109,33 +108,33 @@
     <p>Every Guild outpost on Talan sits at one of five tiers. Locally people often say "the Guild office" regardless; the official names matter most when paperwork, jurisdiction, or rank-gated contracts come into play. Each tier reports to the one above; coordination across regions flows up to a Kingshall and onward to a Godshall.</p>
   </div>
 
-  <div class="tier-grid">
-    <div class="accent-card tier-card t-branch">
-      <div class="tier-name">Branch Office</div>
+  <div class="card-grid tier-grid">
+    <div class="accent-card t-branch">
+      <div class="card-name">Branch Office</div>
       <div class="tier-where">Remote villages · Frontier settlements</div>
       <div class="tier-desc">A single clerk working part-time, sometimes managing four villages from one location. Handles pest contracts, escorts, and local patrols. Reports up to a Guild Office in the nearest town.</div>
       <div class="tier-lead">Led by: a part-time clerk</div>
     </div>
-    <div class="accent-card tier-card t-office">
-      <div class="tier-name">Guild Office</div>
+    <div class="accent-card t-office">
+      <div class="card-name">Guild Office</div>
       <div class="tier-where">Towns</div>
       <div class="tier-desc">A proper staff of multiple clerks and scribes. Real quest boards and contracts. Coordinates the surrounding Branch Offices. The most common tier most travelling adventurers actually walk into.</div>
       <div class="tier-lead">Led by: a Head Clerk (occasionally a Guildmaster)</div>
     </div>
-    <div class="accent-card tier-card t-guildhall">
-      <div class="tier-name">Guildhall</div>
+    <div class="accent-card t-guildhall">
+      <div class="card-name">Guildhall</div>
       <div class="tier-where">Cities</div>
       <div class="tier-desc">Significant infrastructure: staff, storage, holding cells, an inn-and-tavern complex serving as adventurer hostel and the Guild's public face. The first tier where the institution looks like an institution from the outside.</div>
       <div class="tier-lead">Led by: a Guildmaster</div>
     </div>
-    <div class="accent-card tier-card t-kings">
-      <div class="tier-name">Kingshall</div>
+    <div class="accent-card t-kings">
+      <div class="card-name">Kingshall</div>
       <div class="tier-where">Capital cities</div>
       <div class="tier-desc">Larger than a Guildhall. The primary liaison between the Guild and the royal court, and the office that holds the line on neutrality when crowns lean. Oversees every Guildhall and Office within the kingdom.</div>
       <div class="tier-lead">Led by: a Grand Guildmaster</div>
     </div>
-    <div class="accent-card tier-card t-godshall">
-      <div class="tier-name">Godshall</div>
+    <div class="accent-card t-godshall">
+      <div class="card-name">Godshall</div>
       <div class="tier-where">Divine city-states only</div>
       <div class="tier-desc">Monumental. Archives, legal staff, senior officers, ancient relics, high councils of adventurers, direct contact with Guild leadership. The Guild's regional command above a Kingshall, covering the kingdoms surrounding the divine seat.</div>
       <div class="tier-lead">Led by: a Guild Sovereign</div>
@@ -188,17 +187,17 @@
     <p>Originally a treasure-deposit service so adventurers need not carry coin into dungeons. It has grown into <b>the most trusted financial network on Talan</b>: used routinely by merchants, nobles, common folk, and (quietly) by kingdoms that need a place to keep funds the next kingdom over cannot reach for.</p>
   </div>
 
-  <div class="service-grid">
-    <div class="accent-card thin service-card">
-      <div class="service-name">Enchanted Ledgers</div>
+  <div class="card-grid service-grid">
+    <div class="accent-card thin">
+      <div class="card-name">Enchanted Ledgers</div>
       <div class="service-desc">Every office maintains a synchronised ledger. Deposit in one Guildhall, withdraw in another, anywhere on the continent · distance is irrelevant. The ledger-magic was Guild-developed and remains Guild-proprietary.</div>
     </div>
-    <div class="accent-card thin service-card">
-      <div class="service-name">Public Access</div>
+    <div class="accent-card thin">
+      <div class="card-name">Public Access</div>
       <div class="service-desc">Common folk use the Bank routinely. In some regions it rivals or outright replaces the royal treasury for general use. Crowns publicly disapprove and privately deposit.</div>
     </div>
-    <div class="accent-card thin service-card">
-      <div class="service-name">Wartime Trust</div>
+    <div class="accent-card thin">
+      <div class="card-name">Wartime Trust</div>
       <div class="service-desc">Kingdoms at war commonly entrust funds to the Bank because Guild neutrality protects the deposits from seizure by either side. Several historical wars have been quietly funded out of accounts neither belligerent could touch.</div>
     </div>
   </div>
@@ -211,16 +210,16 @@
   </div>
 
   <div class="service-grid">
-    <div class="accent-card thin service-card">
-      <div class="service-name">Remote Reach</div>
+    <div class="accent-card thin">
+      <div class="card-name">Remote Reach</div>
       <div class="service-desc">Letters reach frontier villages no merchant company will serve, because the Guild already maintains a Branch Office there. The Post is the only reliable way to write home from the edge of the map.</div>
     </div>
-    <div class="accent-card thin service-card">
-      <div class="service-name">Adventurer Couriers</div>
+    <div class="accent-card thin">
+      <div class="card-name">Adventurer Couriers</div>
       <div class="service-desc">In dangerous country, adventurers themselves carry the post, escorted by their own training. A Silver-rank carrying a parcel through wyvern country is a routine sight; the rank gate scales with the route.</div>
     </div>
-    <div class="accent-card thin service-card">
-      <div class="service-name">Sealed by the Guild</div>
+    <div class="accent-card thin">
+      <div class="card-name">Sealed by the Guild</div>
       <div class="service-desc">Every official parcel bears a magical seal proving authenticity and resisting tampering. The seal is also a contract: tampering with a Guild-sealed parcel is itself a Guild-prosecutable offence, regardless of local law.</div>
     </div>
   </div>

@@ -16,16 +16,14 @@
   }
 
   /* Drink grid (the four signature brews) */
-  .drink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 1000px; margin: 18px auto; }
-  .drink-card { padding: 18px 20px; }
-  .drink-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 1.15rem; margin-bottom: 2px; }
+  .drink-grid { --col-min: 240px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .drink-grid .card-name { font-size: 1.15rem; letter-spacing: 0.1em; margin-bottom: 2px; }
   .drink-gloss { font-style: italic; color: var(--gold-dim); font-size: 0.82rem; margin-bottom: 4px; }
   .drink-band { font-style: italic; color: var(--gold-dim); font-size: 0.86rem; margin-bottom: 10px; }
-  .d-goizkar .drink-name { color: #e8c870; }
-  .d-ilunbar .drink-name { color: #c89868; }
-  .d-goilore .drink-name { color: #b8d088; }
-  .d-ernai   .drink-name { color: #a8c898; }
-  .drink-card p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+  .d-goizkar .card-name { color: #e8c870; }
+  .d-ilunbar .card-name { color: #c89868; }
+  .d-goilore .card-name { color: #b8d088; }
+  .d-ernai   .card-name { color: #a8c898; }
 
   /* Open Floor lifecycle step-through */
   .floor-steps { max-width: 920px; margin: 18px auto; display: flex; flex-direction: column; gap: 12px; }
@@ -34,11 +32,6 @@
   .floor-body .fs-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 4px; }
   .floor-body p { font-size: 0.92rem; line-height: 1.5; margin: 0; }
 
-  /* Tension grid */
-  .tension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 1000px; margin: 18px auto; }
-  .tension-card { padding: 16px 18px; }
-  .tension-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 8px; }
-  .tension-card p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
   /* Left-bordered feature callouts (Reeve & Works, dual altar) */
   .feature-call { max-width: 800px; margin: 24px auto; padding: 22px 28px; background: rgba(34,42,22,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
@@ -188,27 +181,27 @@
     <p>The brew is the tempo. Where Itsasalda drinks the quick quiet espresso at the bar, Azkataria drinks the long pour-over and immersion a debater nurses across a whole argument: the cup bright at the first taste and grown deep by the hour. Four signature drinks carry the four civic functions of the floor.</p>
   </div>
 
-  <div class="drink-grid">
-    <div class="accent-card drink-card d-goizkar">
-      <div class="drink-name">Goizkar</div>
+  <div class="card-grid drink-grid">
+    <div class="accent-card d-goizkar">
+      <div class="card-name">Goizkar</div>
       <div class="drink-gloss">Basque <i>goiz</i> "morning" + <i>kar</i> "fervour, flame" · "morning-fire"</div>
       <div class="drink-band">coffee · the quick floor-quarrel</div>
       <p>The bright fast coffee of the quick morning floor-quarrel, grown on the warm south-facing lowland slopes. The cup you drink standing, the argument you win or lose before the second pour.</p>
     </div>
-    <div class="accent-card drink-card d-ilunbar">
-      <div class="drink-name">Ilunbar</div>
+    <div class="accent-card d-ilunbar">
+      <div class="card-name">Ilunbar</div>
       <div class="drink-gloss">Basque <i>ilunabar</i> "dusk" → medial vowel-loss · "the dusk-cup"</div>
       <div class="drink-band">coffee · the long evening argument</div>
       <p>The dark long-immersion coffee a debater nurses as an argument runs into evening, deepening as the argument does. The cup that is still on the table when the lamps are lit.</p>
     </div>
-    <div class="accent-card drink-card d-goilore">
-      <div class="drink-name">Goilore</div>
+    <div class="accent-card d-goilore">
+      <div class="card-name">Goilore</div>
       <div class="drink-gloss">Basque <i>goi</i> "high" + <i>lore</i> "bloom" · "high-bloom"</div>
       <div class="drink-band">tea · the slow deliberation · finest export</div>
       <p>The prized highland first-flush of the slow tea-house deliberations, grown in the cold high foothills toward Helgafjall. Azkataria's finest export, and the cup that frames a question too large to settle over coffee.</p>
     </div>
-    <div class="accent-card drink-card d-ernai">
-      <div class="drink-name">Ernai</div>
+    <div class="accent-card d-ernai">
+      <div class="card-name">Ernai</div>
       <div class="drink-gloss">Basque <i>ernai</i> "alert, wakeful", near-undrifted · "the wakeful one"</div>
       <div class="drink-band">tea · voting day &amp; the long count</div>
       <p>The strong vigil-tea drunk to stay sharp through voting day and the long count, when the Works reconciles every issued token and the champions watch the tally come in by lamplight.</p>
@@ -287,17 +280,17 @@
     <p>Three arguments run under everything, and the philosopher-market would not have it otherwise.</p>
   </div>
 
-  <div class="tension-grid">
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Dignity Quarrel</div>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Dignity Quarrel</div>
       <p>The high-minded hold that the people's deliberation is truth-seeking and not a circus; the realists answer that the philosopher-market is also a market, and the kitsune odds are the best read in town. The quarrel never settles, which is itself the high-minded's worst evidence and the realists' best.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">Open versus Controlled Knowledge</div>
+    <div class="accent-card">
+      <div class="card-name">Open versus Controlled Knowledge</div>
       <p>The oldest theological quarrel on the corridor, between Azkataria's open face of Enki and Ezkudon's closed one. Discovery against Mysteries, the lantern set on the table against the lantern kept hooded. It runs under every other argument and concedes to none of them.</p>
     </div>
-    <div class="accent-card tension-card">
-      <div class="tension-name">The Watch on the Works</div>
+    <div class="accent-card">
+      <div class="card-name">The Watch on the Works</div>
       <p>The watch the floor keeps hardest is on its own machine. A clerk who slow-walks or selectively implements to bend an outcome commits the cardinal Azkatarian sin, the Merkavar disease, and the winning committee rides herd on the apparatus precisely so it cannot redirect what the floor chose.</p>
     </div>
   </div>

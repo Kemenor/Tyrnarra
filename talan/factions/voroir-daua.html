@@ -11,9 +11,8 @@
 <style>
   :root { --domain-accent: #8e7ab0; }
 
-  .rank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1100px; }
-  .rank-card { padding: 14px 16px; --card-bg: rgba(24,18,32,0.55); }
-  .rank-name { font-family: 'Cinzel', serif; font-weight: 600; color: var(--card-accent, var(--gold-bright)); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 2px; }
+  .rank-grid { --col-min: 220px; --grid-max: 1100px; }
+  .rank-grid .accent-card { --card-bg: rgba(24,18,32,0.55); }
   .rank-where { font-style: italic; font-size: 0.82rem; color: var(--gold-dim); margin-bottom: 6px; }
   .rank-desc { font-size: 0.9rem; color: var(--text); }
   .r-leader   { --card-accent: #c0a8d8; }
@@ -103,28 +102,28 @@
   </div>
 
   <h2 id="rank-ladder" class="section-heading">Rank Ladder</h2>
-  <div class="rank-grid">
+  <div class="card-grid rank-grid">
 
-    <div class="accent-card rank-card r-leader">
-      <div class="rank-name">Charter Leader</div>
+    <div class="accent-card r-leader">
+      <div class="card-name">Charter Leader</div>
       <div class="rank-where">Voted by the charter</div>
       <div class="rank-desc">The charter's voice and final-call on its operations. Elected by the charter's members; term open-ended. The charter calls a new vote when the current Leader steps down, dies, or loses the room. No authority outside the charter.</div>
     </div>
 
-    <div class="accent-card rank-card r-veteran">
-      <div class="rank-name">Veteran</div>
+    <div class="accent-card r-veteran">
+      <div class="card-name">Veteran</div>
       <div class="rank-where">Survived long enough</div>
       <div class="rank-desc">Honorific, not authoritative. A Veteran carries the same operational standing as a Professional, but the room defers to their experience. The title is bestowed informally by the charter when no one can remember when the person joined.</div>
     </div>
 
-    <div class="accent-card rank-card r-pro">
-      <div class="rank-name">Professional</div>
+    <div class="accent-card r-pro">
+      <div class="card-name">Professional</div>
       <div class="rank-where">Earned by first major hunt</div>
       <div class="rank-desc">A full member of the order. Earned by completing one's first major hunt as a Greenear and surviving the experience. Most order members are Professionals their whole careers.</div>
     </div>
 
-    <div class="accent-card rank-card r-green">
-      <div class="rank-name">Greenear</div>
+    <div class="accent-card r-green">
+      <div class="card-name">Greenear</div>
       <div class="rank-where">New recruit</div>
       <div class="rank-desc">No hunts yet. Trains, supports senior members on their hunts, learns the cycle-doctrine and the order's craft. Promoted to Professional upon completion of a first major hunt.</div>
     </div>

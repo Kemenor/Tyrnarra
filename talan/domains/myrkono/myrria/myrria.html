@@ -10,12 +10,12 @@
 <script defer src="/assets/site-nav.js"></script>
 <style>
   :root { --domain-accent: #6a5a8a; }
-  .district-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 24px auto; max-width: 980px; }
-  .district-card { padding: 16px 18px; border-radius: 6px; position: relative; --card-bg: rgba(14,10,22,0.55); --card-accent: rgba(106,90,138,0.32); }
-  .district-card.has-wardstone { --card-accent: rgba(154,96,192,0.55); box-shadow: 0 0 24px rgba(154,96,192,0.08); }
-  .district-name { font-family: 'Cinzel', serif; font-weight: 600; font-size: 1.02rem; color: var(--gold-bright); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .district-grid { --col-min: 280px; --grid-max: 980px; --grid-gap: 18px; --card-pad: 16px 18px; }
+  .district-grid > .accent-card { border-radius: 6px; position: relative; --card-bg: rgba(14,10,22,0.55); --card-accent: rgba(106,90,138,0.32); }
+  .district-grid > .accent-card.has-wardstone { --card-accent: rgba(154,96,192,0.55); box-shadow: 0 0 24px rgba(154,96,192,0.08); }
+  .district-grid .card-name { font-size: 1.02rem; }
   .district-tag { display: inline-block; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; background: rgba(154,96,192,0.18); color: #c8a8f0; border: 1px solid rgba(154,96,192,0.45); margin-left: 6px; vertical-align: middle; letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Cinzel', serif; font-weight: 600; }
-  .district-desc { color: var(--text); font-size: 0.94rem; }
+  .district-grid p { font-size: 0.94rem; }
 </style>
 </head>
 <body data-page="myrria">
@@ -66,51 +66,51 @@
     <p>Myrria sprawls across mountain terraces and tunnels carved deep into stone. Its districts rise one above the other, linked by stairways, bridges, and hidden passages. Each has its own character, yet all are bound together under the lantern glow of the God of Shadows.</p>
   </div>
 
-  <div class="district-grid">
+  <div class="card-grid district-grid">
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">The Lantern Stairs</div>
-      <div class="district-desc">The first sight most travellers see: a great stairway winding up the slope, flanked by hundreds of pale lanterns. Pilgrims leave tokens of their lives along the steps to honour the God of Shadows. Lined with hostels, shrines, and markets.</div>
+    <div class="accent-card framed">
+      <div class="card-name">The Lantern Stairs</div>
+      <p>The first sight most travellers see: a great stairway winding up the slope, flanked by hundreds of pale lanterns. Pilgrims leave tokens of their lives along the steps to honour the God of Shadows. Lined with hostels, shrines, and markets.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">Cliffside Bazaar</div>
-      <div class="district-desc">Wide terraces overlooking the valleys. Merchants, traders, smugglers. Anyone can sell, no questions asked. Exotic goods flow in from all kingdoms; even fugitives find trade here, provided they pay the tolls.</div>
+    <div class="accent-card framed">
+      <div class="card-name">Cliffside Bazaar</div>
+      <p>Wide terraces overlooking the valleys. Merchants, traders, smugglers. Anyone can sell, no questions asked. Exotic goods flow in from all kingdoms; even fugitives find trade here, provided they pay the tolls.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">The Veiled Quarter</div>
-      <div class="district-desc">The city's main residential district. Narrow streets, often draped in dark silks and banners. Names are often changed here; neighbours rarely ask about past lives. Anonymity-friendly inns and taverns thrive.</div>
+    <div class="accent-card framed">
+      <div class="card-name">The Veiled Quarter</div>
+      <p>The city's main residential district. Narrow streets, often draped in dark silks and banners. Names are often changed here; neighbours rarely ask about past lives. Anonymity-friendly inns and taverns thrive.</p>
     </div>
 
-    <div class="accent-card framed district-card has-wardstone">
-      <div class="district-name">The Sanctum of Veils <span class="district-tag">Wardstone</span></div>
-      <div class="district-desc">Araphel's temple and the resting place of the <b>Divine Wardstone</b>: the seventh and last of the seven (glows only beneath the stars, fades before the sun). Walls draped in black-and-silver silks said to shift like living shadows. The innermost sanctum is open only to priests, the Council, and those Araphel himself summons.</div>
+    <div class="accent-card framed has-wardstone">
+      <div class="card-name">The Sanctum of Veils <span class="district-tag">Wardstone</span></div>
+      <p>Araphel's temple and the resting place of the <b>Divine Wardstone</b>: the seventh and last of the seven (glows only beneath the stars, fades before the sun). Walls draped in black-and-silver silks said to shift like living shadows. The innermost sanctum is open only to priests, the Council, and those Araphel himself summons.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">Shadowguard Keep</div>
-      <div class="district-desc">The martial heart of the city. The <b>Shadowguard</b> are elite warriors sworn to defend Myrria by oath, not by lineage. Part fortress, part barracks, part training ground. Patrols watch both the mountain passes and the city's underways.</div>
+    <div class="accent-card framed">
+      <div class="card-name">Shadowguard Keep</div>
+      <p>The martial heart of the city. The <b>Shadowguard</b> are elite warriors sworn to defend Myrria by oath, not by lineage. Part fortress, part barracks, part training ground. Patrols watch both the mountain passes and the city's underways.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">Myrria's Godshall</div>
-      <div class="district-desc">The great <a href="/talan/factions/adventurers-guild.html">Adventurers' Guild</a> centre carved into the mountainside above the Lantern Stairs. Highest Guild authority in Myrkono and the operational headquarters of <b>Guild Sovereign Seraphel Duskbane</b>. Entry hall, library, taproom, contract postings, and restricted wings; many of the Council of Adventurers' members began their careers here. The Godshall and the Council of Adventurers share many members and coordinate closely.</div>
+    <div class="accent-card framed">
+      <div class="card-name">Myrria's Godshall</div>
+      <p>The great <a href="/talan/factions/adventurers-guild.html">Adventurers' Guild</a> centre carved into the mountainside above the Lantern Stairs. Highest Guild authority in Myrkono and the operational headquarters of <b>Guild Sovereign Seraphel Duskbane</b>. Entry hall, library, taproom, contract postings, and restricted wings; many of the Council of Adventurers' members began their careers here. The Godshall and the Council of Adventurers share many members and coordinate closely.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">The Hidden Vaults</div>
-      <div class="district-desc">Tunnels and chambers carved deep within the mountains. Some hold goods in safekeeping; others hold secrets even the Council guards closely. Rumours say entire vaults are filled with relics of adventurers who died seeking redemption, or with prisoners too dangerous to release.</div>
+    <div class="accent-card framed">
+      <div class="card-name">The Hidden Vaults</div>
+      <p>Tunnels and chambers carved deep within the mountains. Some hold goods in safekeeping; others hold secrets even the Council guards closely. Rumours say entire vaults are filled with relics of adventurers who died seeking redemption, or with prisoners too dangerous to release.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">The Blackstone Stronghold</div>
-      <div class="district-desc">Ancient citadel built into the highest ridge; towers emerging from the peaks like jagged fangs. Once a war-fortress; now houses the <b>Council of Adventurers</b>. Many of its halls are dedicated to training new adventurers who seek their second chance.</div>
+    <div class="accent-card framed">
+      <div class="card-name">The Blackstone Stronghold</div>
+      <p>Ancient citadel built into the highest ridge; towers emerging from the peaks like jagged fangs. Once a war-fortress; now houses the <b>Council of Adventurers</b>. Many of its halls are dedicated to training new adventurers who seek their second chance.</p>
     </div>
 
-    <div class="accent-card framed district-card">
-      <div class="district-name">The Starlight Cliffs</div>
-      <div class="district-desc">The uppermost terraces, where lanterns are replaced by open skies. Gatherings are held here at night, celebrating festivals of shadow and rebirth. It is here that the Divine Wardstone shines most brightly, reflecting the stars.</div>
+    <div class="accent-card framed">
+      <div class="card-name">The Starlight Cliffs</div>
+      <p>The uppermost terraces, where lanterns are replaced by open skies. Gatherings are held here at night, celebrating festivals of shadow and rebirth. It is here that the Divine Wardstone shines most brightly, reflecting the stars.</p>
     </div>
 
   </div>
