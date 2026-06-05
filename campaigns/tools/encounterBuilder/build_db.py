@@ -79,6 +79,15 @@ def load_creature(path, pack, is_homebrew):
         if o.get("type"):
             speeds.append((o["type"], o.get("value")))
 
+    # Senses (darkvision/tremorsense/scent/...) from the perception block.
+    senses = [s["type"] for s in (sys.get("perception", {}).get("senses") or [])
+              if s.get("type")]
+
+    # Spellcasting: caster flag + the set of traditions across all entries.
+    caster_entries = [it for it in d.get("items", []) if it.get("type") == "spellcastingEntry"]
+    traditions = sorted({(it.get("system", {}).get("tradition", {}) or {}).get("value")
+                         for it in caster_entries} - {None, ""})
+
     return {
         "slug": os.path.splitext(os.path.basename(path))[0],
         "name": d.get("name", "").strip(),
@@ -91,6 +100,9 @@ def load_creature(path, pack, is_homebrew):
         "resistances": _typed_values("resistances"),
         "immunities": immunities,
         "speeds": speeds,
+        "senses": senses,
+        "caster": 1 if caster_entries else 0,
+        "traditions": " ".join(traditions),
         "hp": (attrs.get("hp") or {}).get("max"),
         "ac": (attrs.get("ac") or {}).get("value"),
         "pack": pack,
@@ -108,23 +120,27 @@ DROP TABLE IF EXISTS creature_weaknesses;
 DROP TABLE IF EXISTS creature_resistances;
 DROP TABLE IF EXISTS creature_immunities;
 DROP TABLE IF EXISTS creature_speeds;
+DROP TABLE IF EXISTS creature_senses;
 DROP TABLE IF EXISTS creatures_fts;
 CREATE TABLE creatures (
     id INTEGER PRIMARY KEY,
     slug TEXT, name TEXT, level INTEGER, size TEXT, rarity TEXT,
     creature_type TEXT, hp INTEGER, ac INTEGER, pack TEXT, source TEXT,
-    remaster INTEGER, is_homebrew INTEGER, traits_text TEXT, flavor TEXT
+    remaster INTEGER, is_homebrew INTEGER, caster INTEGER, traditions TEXT,
+    traits_text TEXT, flavor TEXT
 );
 CREATE TABLE creature_traits (creature_id INTEGER, trait TEXT);
 CREATE TABLE creature_weaknesses (creature_id INTEGER, type TEXT, value INTEGER);
 CREATE TABLE creature_resistances (creature_id INTEGER, type TEXT, value INTEGER);
 CREATE TABLE creature_immunities (creature_id INTEGER, type TEXT);
 CREATE TABLE creature_speeds (creature_id INTEGER, type TEXT, value INTEGER);
+CREATE TABLE creature_senses (creature_id INTEGER, type TEXT);
 CREATE INDEX idx_ct_trait ON creature_traits(trait);
 CREATE INDEX idx_weak ON creature_weaknesses(type);
 CREATE INDEX idx_resist ON creature_resistances(type);
 CREATE INDEX idx_immune ON creature_immunities(type);
 CREATE INDEX idx_speed ON creature_speeds(type);
+CREATE INDEX idx_sense ON creature_senses(type);
 CREATE INDEX idx_level ON creatures(level);
 CREATE INDEX idx_type ON creatures(creature_type);
 CREATE INDEX idx_pack ON creatures(pack);
@@ -179,11 +195,12 @@ def main():
     for c in rows:
         cur = con.execute(
             "INSERT INTO creatures(slug,name,level,size,rarity,creature_type,"
-            "hp,ac,pack,source,remaster,is_homebrew,traits_text,flavor) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "hp,ac,pack,source,remaster,is_homebrew,caster,traditions,traits_text,flavor) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (c["slug"], c["name"], c["level"], c["size"], c["rarity"],
              c["creature_type"], c["hp"], c["ac"], c["pack"], c["source"],
-             c["remaster"], c["is_homebrew"], " ".join(c["traits"]), c["flavor"]))
+             c["remaster"], c["is_homebrew"], c["caster"], c["traditions"],
+             " ".join(c["traits"]), c["flavor"]))
         cid = cur.lastrowid
         con.executemany("INSERT INTO creature_traits VALUES (?,?)",
                         [(cid, t) for t in c["traits"]])
@@ -195,6 +212,8 @@ def main():
                         [(cid, t) for t in c["immunities"]])
         con.executemany("INSERT INTO creature_speeds VALUES (?,?,?)",
                         [(cid, t, v) for t, v in c["speeds"]])
+        con.executemany("INSERT INTO creature_senses VALUES (?,?)",
+                        [(cid, t) for t in c["senses"]])
     con.execute("INSERT INTO creatures_fts(rowid,name,traits_text,flavor) "
                 "SELECT id,name,traits_text,flavor FROM creatures")
     con.commit()

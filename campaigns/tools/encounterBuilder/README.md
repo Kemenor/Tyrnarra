@@ -51,22 +51,31 @@ python encounter.py build --party-level 6 --party-size 4 --threat severe --trait
 |---|---|
 | `--level lo-hi` | level range (needed for encounter math) |
 | `--text "a OR b"` | fuzzy FTS5 over name / traits / flavor |
-| `--size` | tiny / sm / med / lg / huge / grg (fit the room) |
+| `--size` | `tiny`/`sm`/`med`/`lg`/`huge`/`grg`; **repeatable => OR** (fit the room) |
 | `--type` | the single best creature-type bucket (undead, dragon, fey...) |
 | `--trait` | exact trait; **repeatable, ANDed** (`--trait fire --trait undead`) |
 | `--weak` / `--resist` / `--immune` | by defense; repeatable, ANDed. `--immune` covers damage types **and** conditions |
 | `--weak-min` / `--resist-min` | magnitude floor; pairs with `--weak`/`--resist`, or alone for "any weakness/resistance >= N" |
 | `--move` | movement type: `fly` / `swim` / `climb` / `burrow` / `land`; repeatable |
 | `--move-min` | speed floor; pairs with `--move`, or alone for "any speed >= N" |
+| `--sense` | `darkvision`/`tremorsense`/`scent`/`lifesense`/`blindsight`...; repeatable, ANDed |
+| `--caster` | has a spellcasting entry |
+| `--tradition` | spell tradition: `arcane`/`divine`/`occult`/`primal` |
 | `--family` | creature kind: matches a **trait or the name** (`dragon`, `construct`, `mephit`, `sphinx`) |
+| `--not-trait` / `--not-weak` / `--not-immune` | exclude (carve the pool: undead but NOT incorporeal); repeatable |
 | `--rarity` | common / uncommon / rare / unique |
+| `--core` | only the general bestiaries + NPC gallery (drops AP/Society scaled-variant noise) |
+| `--no-pfs` | exclude Pathfinder Society scenario packs |
 | `--source` | one pack folder, e.g. `pathfinder-monster-core` |
 | `--no-homebrew` | exclude homebrew rows |
+| `--json` | emit JSON (full records + defenses/senses) instead of the text table |
 
-`search` also takes `-v/--verbose` (prints each result's speeds + weak/resist/immune)
+`search` also takes `-v/--verbose` (prints each result's caster/speeds/senses/defenses)
 and `--limit`. `build` takes `--party-level --party-size --threat --shape --seed
 --tolerance`. Shapes: `boss`, `elite`, `spread`, `horde`. `--tolerance 0.1` lets a
 build stop at 90%+ of budget instead of cramming to 100%; too-thin pools warn on stderr.
+`--core` is the usual noise-cut: it drops the *(1-2)/(PFS 2-05)* stat-variants that
+clutter thematic searches while keeping the canonical bestiary entries.
 
 **Family vs. trait:** PF2e has no "family" field, so `--family` is the forgiving
 knob (trait OR name) and `--trait` is the exact one. For families that are traits
@@ -104,7 +113,9 @@ Two options, in order of how I'd phase them:
   guessing.
 - `creature_type` is derived from the highest-priority creature-type trait. The
   full trait list is preserved in `creature_traits` for precise filtering;
-  weaknesses, resistances, immunities and speeds get their own junction tables.
+  weaknesses, resistances, immunities, speeds and senses get their own junction
+  tables. `caster`/`traditions` are flattened onto `creatures` (derived from each
+  actor's `spellcastingEntry` items).
 - `value` is stored on weaknesses/resistances/speeds, exposed as the
   `--weak-min` / `--resist-min` / `--move-min` magnitude floors.
 - The tool is meant to be driven by Claude Code (it will become a skill): search

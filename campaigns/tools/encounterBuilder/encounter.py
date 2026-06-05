@@ -17,9 +17,16 @@ Examples:
          --type undead --text crypt --shape boss --tolerance 0.1
 """
 import argparse
+import json
 import random
 import sqlite3
 import sys
+
+# The "no-variants" core: the general bestiaries + NPC gallery, excluding AP /
+# Society packs whose scaled stat-variants ("(1-2)", "(PFS 2-05)") add noise.
+CORE_PACKS = ["pathfinder-monster-core", "pathfinder-monster-core-2",
+              "pathfinder-bestiary", "pathfinder-bestiary-2",
+              "pathfinder-bestiary-3", "npc-gallery"]
 
 # --- PF2e budget tables (GM Core) -------------------------------------------
 THREAT_BUDGET = {"trivial": 40, "low": 60, "moderate": 80, "severe": 120, "extreme": 160}
@@ -48,8 +55,10 @@ def connect(db):
 
 
 def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
-           move=None, family=None, weak_min=None, resist_min=None, move_min=None,
-           level=None, size=None, rarity=None,
+           move=None, senses=None, family=None, caster=False, tradition=None,
+           not_traits=None, not_weak=None, not_immune=None,
+           weak_min=None, resist_min=None, move_min=None,
+           level=None, size=None, rarity=None, core=False, no_pfs=False,
            source=None, no_homebrew=False, text=None, limit=200):
     where, where_params = ["1=1"], []
     joins, join_params = [], []
@@ -58,12 +67,20 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
         where.append("c.creature_type = ?"); where_params.append(ctype)
     if rarity:
         where.append("c.rarity = ?"); where_params.append(rarity)
-    if size:
-        where.append("c.size = ?"); where_params.append(size)
+    if size:  # repeatable => OR (fit-the-room is a range, e.g. med or sm)
+        where.append(f"c.size IN ({','.join('?' * len(size))})"); where_params += list(size)
     if source:
         where.append("c.pack = ?"); where_params.append(source)
+    if core:
+        where.append(f"c.pack IN ({','.join('?' * len(CORE_PACKS))})"); where_params += CORE_PACKS
+    if no_pfs:
+        where.append("c.pack NOT LIKE 'pfs-%'")
     if no_homebrew:
         where.append("c.is_homebrew = 0")
+    if caster:
+        where.append("c.caster = 1")
+    if tradition:
+        where.append("c.traditions LIKE ?"); where_params.append(f"%{tradition}%")
     if level:
         lo, hi = level
         where.append("c.level BETWEEN ? AND ?"); where_params += [lo, hi]
@@ -74,6 +91,14 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
         where.append("(EXISTS (SELECT 1 FROM creature_traits ft "
                      "WHERE ft.creature_id = c.id AND ft.trait = ?) OR c.name LIKE ?)")
         where_params += [f, f"%{f}%"]
+    # Negations: carve the pool (undead but NOT incorporeal, etc.).
+    for tbl, col, vals in (("creature_traits", "trait", not_traits),
+                           ("creature_weaknesses", "type", not_weak),
+                           ("creature_immunities", "type", not_immune)):
+        for v in vals or []:
+            where.append(f"NOT EXISTS (SELECT 1 FROM {tbl} x "
+                         f"WHERE x.creature_id = c.id AND x.{col} = ?)")
+            where_params.append(v)
 
     # Junction-based AND filters: one join per requested value (repeat => must
     # have all). Join text comes before WHERE, so its params bind first. A
@@ -97,6 +122,7 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
     add("creature_resistances", "type", resist, "r", resist_min)
     add("creature_immunities", "type", immune, "im")
     add("creature_speeds", "type", move, "sp", move_min)
+    add("creature_senses", "type", senses, "sn")
 
     if text:
         joins.append("JOIN creatures_fts f ON f.rowid = c.id")
@@ -117,6 +143,7 @@ def defenses(con, cid):
             return [f"{t} {v}" if v is not None else t for t, v in rows]
         return [t for (t,) in rows]
     return {"speed": fetch("creature_speeds", True),
+            "sense": fetch("creature_senses", False),
             "weak": fetch("creature_weaknesses", True),
             "resist": fetch("creature_resistances", True),
             "immune": fetch("creature_immunities", False)}
@@ -192,12 +219,21 @@ def main():
     common.add_argument("--weak-min", type=int, help="Minimum weakness value (with --weak, or any weakness).")
     common.add_argument("--resist-min", type=int, help="Minimum resistance value (with --resist, or any resistance).")
     common.add_argument("--move-min", type=int, help="Minimum speed value (with --move, or any speed).")
+    common.add_argument("--sense", action="append", help="Has sense, e.g. darkvision/tremorsense/scent (repeatable, AND).")
+    common.add_argument("--caster", action="store_true", help="Has a spellcasting entry.")
+    common.add_argument("--tradition", help="Spell tradition: arcane/divine/occult/primal.")
     common.add_argument("--family", help="Creature kind: matches a trait OR the name (dragon, mephit, construct...).")
-    common.add_argument("--size")
+    common.add_argument("--not-trait", action="append", dest="not_traits", help="Exclude creatures with this trait (repeatable).")
+    common.add_argument("--not-weak", action="append", help="Exclude creatures weak to this type (repeatable).")
+    common.add_argument("--not-immune", action="append", help="Exclude creatures immune to this type (repeatable).")
+    common.add_argument("--size", action="append", help="tiny/sm/med/lg/huge/grg; repeatable => OR.")
     common.add_argument("--rarity")
     common.add_argument("--text")
+    common.add_argument("--core", action="store_true", help="Only the general bestiaries + NPC gallery (drop AP/Society variant noise).")
+    common.add_argument("--no-pfs", action="store_true", help="Exclude Pathfinder Society scenario packs.")
     common.add_argument("--source", help="Restrict to one pack (folder name, e.g. pathfinder-monster-core).")
     common.add_argument("--no-homebrew", action="store_true")
+    common.add_argument("--json", action="store_true", help="Emit JSON instead of the text table.")
 
     s = sub.add_parser("search", parents=[common])
     s.add_argument("--level", type=parse_level)
@@ -217,24 +253,37 @@ def main():
     a = ap.parse_args()
     con = connect(a.db)
     filt = dict(ctype=a.ctype, traits=a.traits, weak=a.weak, resist=a.resist,
-                immune=a.immune, move=a.move, family=a.family, weak_min=a.weak_min,
+                immune=a.immune, move=a.move, senses=a.sense, family=a.family,
+                caster=a.caster, tradition=a.tradition, not_traits=a.not_traits,
+                not_weak=a.not_weak, not_immune=a.not_immune, weak_min=a.weak_min,
                 resist_min=a.resist_min, move_min=a.move_min, size=a.size,
-                rarity=a.rarity, source=a.source, no_homebrew=a.no_homebrew, text=a.text)
+                rarity=a.rarity, core=a.core, no_pfs=a.no_pfs, source=a.source,
+                no_homebrew=a.no_homebrew, text=a.text)
 
     if a.cmd == "search":
         rows = search(con, level=a.level, limit=a.limit, **filt)
+        if a.json:
+            for r in rows:
+                r.update(defenses(con, r["id"]))
+            print(json.dumps(rows, indent=2))
+            return
         for r in rows:
             print(f"  L{r['level']:>2} {r['name']:<34} {r['creature_type']:<10} "
                   f"{r['rarity']:<8} {r['source']}")
             if a.verbose:
                 d = defenses(con, r["id"])
-                for k in ("speed", "weak", "resist", "immune"):
+                if r["caster"]:
+                    print(f"         {'caster':>7}: {r['traditions'] or 'yes'}")
+                for k in ("speed", "sense", "weak", "resist", "immune"):
                     if d[k]:
                         print(f"         {k:>7}: {', '.join(str(x) for x in d[k])}")
         print(f"\n{len(rows)} result(s)")
     else:
         res = build(con, a.party_level, a.party_size, a.threat, shape=a.shape,
                     seed=a.seed, tolerance=a.tolerance, **filt)
+        if a.json:
+            print(json.dumps(res, indent=2))
+            return
         print(f"\n{a.threat.upper()} encounter for {a.party_size}x level "
               f"{a.party_level}  |  budget {res['budget']} XP, "
               f"spent {res['spent']} XP ({res['fill_pct']}%)  |  shape: {a.shape}\n")
