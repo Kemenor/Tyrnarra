@@ -23,9 +23,11 @@
   .canvas-wrap img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
   .canvas-empty { padding: 60px 20px; text-align: center; color: var(--gm-ink-dim); font-style: italic; }
   .overlay { position: absolute; inset: 0; cursor: crosshair; }
+  .overlay.arming { cursor: copy; }
 
   .box { position: absolute; box-sizing: border-box; border: 2px solid rgba(106,166,200,0.9); background: rgba(106,166,200,0.16); cursor: move; }
   .box.sel { border-color: var(--gm-gold); background: rgba(200,160,74,0.2); z-index: 6; }
+  .box.active-piece { z-index: 7; box-shadow: 0 0 0 1px var(--gm-gold) inset; }
   .box .num { position: absolute; top: 1px; left: 2px; font-family: 'Cinzel', serif; font-size: 0.7rem; color: #fff; background: rgba(16,18,24,0.8); border-radius: 3px; padding: 0 5px; pointer-events: none; }
   .h { position: absolute; width: 11px; height: 11px; background: var(--gm-gold); border: 1px solid #1a1a1a; border-radius: 2px; }
   .h-nw { top: -6px; left: -6px; cursor: nwse-resize; }
@@ -44,12 +46,15 @@
   .help-list li::before { content: '›'; position: absolute; left: 0; color: var(--gm-gold-dim); }
   .box-row { padding: 7px 0; border-top: 1px solid var(--gm-divider); }
   .box-row.sel { background: rgba(200,160,74,0.06); }
-  .box-row-head { display: flex; gap: 8px; align-items: center; }
+  .box-row-head { display: flex; gap: 7px; align-items: center; }
   .box-row .bnum { font-family: 'Cinzel', serif; color: var(--gm-gold); width: 22px; text-align: center; flex-shrink: 0; cursor: grab; }
   .box-row.sel .bnum { color: var(--gm-ink-bright); }
   .box-row.dragging { opacity: 0.45; }
   .box-row.drag-over { box-shadow: inset 0 2px 0 0 var(--gm-gold); }
   .box-row .lbl { flex: 1; min-width: 0; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 4px 7px; }
+  .box-row .pieces { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gm-ink-dim); flex-shrink: 0; }
+  .box-row .addp { background: none; border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-gold); cursor: pointer; font-size: 0.85rem; line-height: 1; padding: 2px 6px; flex-shrink: 0; }
+  .box-row .addp.armed { background: rgba(200,160,74,0.25); color: var(--gm-ink-bright); border-color: var(--gm-gold); }
   .box-row .desc { width: 100%; margin-top: 5px; min-height: 36px; box-sizing: border-box; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.85rem; line-height: 1.4; padding: 5px 7px; resize: vertical; }
   .box-row .del { background: none; border: none; color: #c2766a; cursor: pointer; font-size: 0.9rem; flex-shrink: 0; }
   .box-empty { font-style: italic; color: var(--gm-ink-dim); font-size: 0.86rem; }
@@ -78,7 +83,7 @@
     <label class="tool-file"><span class="tool-btn">📂 &nbsp; Load Map Image</span><input type="file" id="fileInput" accept="image/*"></label>
     <span class="meta-line" id="imgName" style="margin:0 0 0 4px;">no image loaded</span>
     <span style="flex:1"></span>
-    <button class="tool-btn danger" id="clearBtn" type="button">Clear all boxes</button>
+    <button class="tool-btn danger" id="clearBtn" type="button">Clear all areas</button>
   </div>
 
   <div class="editor-layout">
@@ -94,24 +99,25 @@
       <div class="panel-block">
         <h3>How to use</h3>
         <ul class="help-list">
-          <li><b>Draw:</b> click-drag on empty map.</li>
-          <li><b>Move:</b> drag a box. <b>Resize:</b> drag its handles.</li>
-          <li><b>Select:</b> click a box or its number in the list.</li>
-          <li><b>Reorder:</b> drag a box's number in the list (the numbers renumber to match).</li>
-          <li><b>Nudge:</b> arrow keys move; <b>Shift</b>+arrows resize.</li>
-          <li><b>Delete:</b> Delete/Backspace, or the ✕ in the list.</li>
-          <li>Give each box a <b>label</b> and a <b>description</b> (the feel / contents), then <b>Copy</b> or <b>Download</b> the JSON and hand it to me.</li>
+          <li><b>Draw:</b> click-drag on empty map (makes a new area).</li>
+          <li><b>L / T / plus shapes:</b> select an area, then <b>Shift</b>+draw (or its <b>＋</b> button) to add another rectangle to it. The pieces together are one clickable area.</li>
+          <li><b>Move:</b> drag a piece. <b>Resize:</b> drag its handles.</li>
+          <li><b>Select:</b> click a piece, or an area's number in the list.</li>
+          <li><b>Reorder:</b> drag an area's number in the list.</li>
+          <li><b>Nudge:</b> arrow keys move the active piece; <b>Shift</b>+arrows resize it.</li>
+          <li><b>Delete:</b> Delete/Backspace removes the active piece; the ✕ removes the whole area.</li>
+          <li>Give each area a <b>label</b> + <b>description</b>, then <b>Copy</b> / <b>Download</b> the JSON for me.</li>
         </ul>
       </div>
 
       <div class="panel-block">
         <h3>Areas (<span id="boxCount">0</span>)</h3>
-        <div id="boxList"><div class="box-empty">No boxes yet.</div></div>
+        <div id="boxList"><div class="box-empty">No areas yet.</div></div>
       </div>
 
       <div class="panel-block">
         <h3>JSON</h3>
-        <div class="meta-line">edit + Apply to re-import, or Copy / Download to hand off</div>
+        <div class="meta-line">each area carries a rects[] list · edit + Apply to re-import, or Copy / Download to hand off</div>
         <textarea id="json" spellcheck="false"></textarea>
         <div class="row-btns">
           <button class="tool-btn" id="copyBtn" type="button">Copy</button>
@@ -129,13 +135,15 @@
 <script>
 (function () {
   'use strict';
-  var boxes = [];      // { label, desc, left, top, width, height }  (geometry % , 0-100)
-  var sel = -1;
+  // An area is a union of rectangles: { label, desc, rects: [ {left,top,width,height}, … ] } (% , 0-100)
+  var areas = [];
+  var selA = -1;       // selected area
+  var selR = -1;       // active rectangle (piece) within the selected area
   var imageName = '';
   var drag = null;     // { mode:'draw'|'move'|'resize', dir, startX, startY, init }
-  var dragIndex = -1;  // list-reorder: index of the row being dragged
+  var dragIndex = -1;  // list-reorder: area index being dragged
+  var armed = false;   // when true, the next draw adds a piece to the selected area
 
-  var wrap = document.getElementById('wrap');
   var img = document.getElementById('mapImg');
   var empty = document.getElementById('empty');
   var overlay = document.getElementById('overlay');
@@ -146,6 +154,8 @@
 
   function round(n) { return Math.round(n * 10) / 10; }
   function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
+  function activeRect() { return (areas[selA] && areas[selA].rects[selR]) || null; }
+  function setArmed(on) { armed = on; overlay.classList.toggle('arming', !!on); }
 
   function pt(e) {
     var r = overlay.getBoundingClientRect();
@@ -165,59 +175,73 @@
     img.src = URL.createObjectURL(f);
   });
 
-  // ── Drawing on empty overlay ──
+  // ── Draw on empty overlay (new area, or a piece of the selected area) ──
   overlay.addEventListener('mousedown', function (e) {
-    if (e.target !== overlay) return;     // clicks on boxes/handles handled separately
-    sel = -1;
+    if (e.target !== overlay) return;
     var p = pt(e);
-    boxes.push({ label: '', desc: '', left: p.x, top: p.y, width: 0, height: 0 });
-    sel = boxes.length - 1;
+    var addToArea = (e.shiftKey || armed) && selA >= 0 && areas[selA];
+    if (addToArea) {
+      areas[selA].rects.push({ left: p.x, top: p.y, width: 0, height: 0 });
+      selR = areas[selA].rects.length - 1;
+    } else {
+      areas.push({ label: '', desc: '', rects: [{ left: p.x, top: p.y, width: 0, height: 0 }] });
+      selA = areas.length - 1; selR = 0;
+    }
+    setArmed(false);
     drag = { mode: 'draw', startX: p.x, startY: p.y };
     renderAll();
     e.preventDefault();
   });
 
-  function startMove(e, i) {
+  function startMove(e, a, r) {
     e.stopPropagation(); e.preventDefault();
-    sel = i;
+    selA = a; selR = r;
     var p = pt(e);
-    drag = { mode: 'move', startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
-    renderBoxes(); updateRowHighlight();
+    drag = { mode: 'move', startX: p.x, startY: p.y, init: Object.assign({}, areas[a].rects[r]) };
+    renderShapes(); updateRowHighlight();
   }
-  function startResize(e, i, dir) {
+  function startResize(e, a, r, dir) {
     e.stopPropagation(); e.preventDefault();
-    sel = i;
+    selA = a; selR = r;
     var p = pt(e);
-    drag = { mode: 'resize', dir: dir, startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
-    renderBoxes(); updateRowHighlight();
+    drag = { mode: 'resize', dir: dir, startX: p.x, startY: p.y, init: Object.assign({}, areas[a].rects[r]) };
+    renderShapes(); updateRowHighlight();
   }
 
   document.addEventListener('mousemove', function (e) {
-    if (!drag || sel < 0) return;
-    var p = pt(e), b = boxes[sel];
+    if (!drag) return;
+    var rect = activeRect(); if (!rect) return;
+    var p = pt(e);
     if (drag.mode === 'draw') {
-      b.left = Math.min(drag.startX, p.x);
-      b.top = Math.min(drag.startY, p.y);
-      b.width = Math.abs(p.x - drag.startX);
-      b.height = Math.abs(p.y - drag.startY);
+      rect.left = Math.min(drag.startX, p.x);
+      rect.top = Math.min(drag.startY, p.y);
+      rect.width = Math.abs(p.x - drag.startX);
+      rect.height = Math.abs(p.y - drag.startY);
     } else if (drag.mode === 'move') {
       var dx = p.x - drag.startX, dy = p.y - drag.startY;
-      b.left = clamp(drag.init.left + dx, 0, 100 - b.width);
-      b.top = clamp(drag.init.top + dy, 0, 100 - b.height);
+      rect.left = clamp(drag.init.left + dx, 0, 100 - rect.width);
+      rect.top = clamp(drag.init.top + dy, 0, 100 - rect.height);
     } else if (drag.mode === 'resize') {
-      applyResize(b, drag.init, drag.dir, p.x - drag.startX, p.y - drag.startY);
+      applyResize(rect, drag.init, drag.dir, p.x - drag.startX, p.y - drag.startY);
     }
-    renderBoxes(); renderJSON();
+    renderShapes(); renderJSON();
   });
   document.addEventListener('mouseup', function () {
-    if (!drag) return;   // a mouseup that wasn't a box drag (e.g. clicking a label / description field) must not re-render
+    if (!drag) return;   // a mouseup that wasn't a drag (e.g. clicking a label/description) must not re-render
     if (drag.mode === 'draw') {
-      var b = boxes[sel];
-      if (!b || b.width < 1 || b.height < 1) { boxes.splice(sel, 1); sel = -1; }
+      var rect = activeRect();
+      if (!rect || rect.width < 1 || rect.height < 1) { removeActivePiece(); }
     }
     drag = null;
     renderAll();
   });
+
+  function removeActivePiece() {
+    var area = areas[selA]; if (!area) return;
+    area.rects.splice(selR, 1);
+    if (area.rects.length === 0) { areas.splice(selA, 1); selA = -1; selR = -1; }
+    else { selR = Math.min(selR, area.rects.length - 1); }
+  }
 
   function applyResize(b, init, dir, dx, dy) {
     var MIN = 1;
@@ -229,84 +253,95 @@
     if (b.top + b.height > 100) b.height = 100 - b.top;
   }
 
-  // ── Keyboard: nudge / resize / delete ──
+  // ── Keyboard: nudge / resize / delete / cancel arm ──
   document.addEventListener('keydown', function (e) {
-    if (sel < 0) return;
+    if (e.key === 'Escape') { setArmed(false); renderList(); return; }
     var tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea') return;
-    var b = boxes[sel], step = e.shiftKey ? 0.5 : 0.5;
-    if (e.key === 'Delete' || e.key === 'Backspace') { boxes.splice(sel, 1); sel = -1; renderAll(); e.preventDefault(); return; }
+    var rect = activeRect(); if (!rect) return;
+    var step = 0.5;
+    if (e.key === 'Delete' || e.key === 'Backspace') { removeActivePiece(); renderAll(); e.preventDefault(); return; }
     var moved = true;
     if (e.shiftKey) {
-      if (e.key === 'ArrowRight') b.width = clamp(b.width + step, 1, 100 - b.left);
-      else if (e.key === 'ArrowLeft') b.width = Math.max(1, b.width - step);
-      else if (e.key === 'ArrowDown') b.height = clamp(b.height + step, 1, 100 - b.top);
-      else if (e.key === 'ArrowUp') b.height = Math.max(1, b.height - step);
+      if (e.key === 'ArrowRight') rect.width = clamp(rect.width + step, 1, 100 - rect.left);
+      else if (e.key === 'ArrowLeft') rect.width = Math.max(1, rect.width - step);
+      else if (e.key === 'ArrowDown') rect.height = clamp(rect.height + step, 1, 100 - rect.top);
+      else if (e.key === 'ArrowUp') rect.height = Math.max(1, rect.height - step);
       else moved = false;
     } else {
-      if (e.key === 'ArrowRight') b.left = clamp(b.left + step, 0, 100 - b.width);
-      else if (e.key === 'ArrowLeft') b.left = clamp(b.left - step, 0, 100 - b.width);
-      else if (e.key === 'ArrowDown') b.top = clamp(b.top + step, 0, 100 - b.height);
-      else if (e.key === 'ArrowUp') b.top = clamp(b.top - step, 0, 100 - b.height);
+      if (e.key === 'ArrowRight') rect.left = clamp(rect.left + step, 0, 100 - rect.width);
+      else if (e.key === 'ArrowLeft') rect.left = clamp(rect.left - step, 0, 100 - rect.width);
+      else if (e.key === 'ArrowDown') rect.top = clamp(rect.top + step, 0, 100 - rect.height);
+      else if (e.key === 'ArrowUp') rect.top = clamp(rect.top - step, 0, 100 - rect.height);
       else moved = false;
     }
-    if (moved) { renderBoxes(); renderJSON(); e.preventDefault(); }
+    if (moved) { renderShapes(); renderJSON(); e.preventDefault(); }
   });
 
-  // ── Render ──
-  // render is split so that editing a label/description (which only needs
-  // renderJSON) never rebuilds the panel inputs and steals their focus.
-  function renderAll() { renderBoxes(); renderList(); renderJSON(); }
-  function moveBox(from, to) { if (from === to) return; var b = boxes.splice(from, 1)[0]; boxes.splice(to, 0, b); sel = to; renderAll(); }
+  // ── Render (split so editing a label/description never rebuilds the panel inputs) ──
+  function renderAll() { renderShapes(); renderList(); renderJSON(); }
+  function moveArea(from, to) { if (from === to) return; var a = areas.splice(from, 1)[0]; areas.splice(to, 0, a); selA = to; renderAll(); }
 
-  function renderBoxes() {
+  function renderShapes() {
     Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (n) { n.remove(); });
-    boxes.forEach(function (b, i) {
-      var d = document.createElement('div');
-      d.className = 'box' + (i === sel ? ' sel' : '');
-      d.style.left = b.left + '%'; d.style.top = b.top + '%';
-      d.style.width = b.width + '%'; d.style.height = b.height + '%';
-      d.innerHTML = '<span class="num">' + (i + 1) + '</span>';
-      d.addEventListener('mousedown', function (e) { startMove(e, i); });
-      if (i === sel) {
-        ['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'].forEach(function (dir) {
-          var h = document.createElement('div'); h.className = 'h h-' + dir;
-          h.addEventListener('mousedown', function (e) { startResize(e, i, dir); });
-          d.appendChild(h);
-        });
-      }
-      overlay.appendChild(d);
+    areas.forEach(function (area, a) {
+      area.rects.forEach(function (rect, r) {
+        var d = document.createElement('div');
+        var isActive = (a === selA && r === selR);
+        d.className = 'box' + (a === selA ? ' sel' : '') + (isActive ? ' active-piece' : '');
+        d.style.left = rect.left + '%'; d.style.top = rect.top + '%';
+        d.style.width = rect.width + '%'; d.style.height = rect.height + '%';
+        if (r === 0) d.innerHTML = '<span class="num">' + (a + 1) + '</span>';
+        d.addEventListener('mousedown', function (e) { startMove(e, a, r); });
+        if (isActive) {
+          ['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'].forEach(function (dir) {
+            var h = document.createElement('div'); h.className = 'h h-' + dir;
+            h.addEventListener('mousedown', function (e) { startResize(e, a, r, dir); });
+            d.appendChild(h);
+          });
+        }
+        overlay.appendChild(d);
+      });
     });
   }
 
   function updateRowHighlight() {
-    Array.prototype.slice.call(boxList.querySelectorAll('.box-row')).forEach(function (r, i) { r.classList.toggle('sel', i === sel); });
+    Array.prototype.slice.call(boxList.querySelectorAll('.box-row')).forEach(function (row, a) { row.classList.toggle('sel', a === selA); });
   }
 
   function renderList() {
-    boxCount.textContent = boxes.length;
-    if (!boxes.length) { boxList.innerHTML = '<div class="box-empty">No boxes yet.</div>'; return; }
+    boxCount.textContent = areas.length;
+    if (!areas.length) { boxList.innerHTML = '<div class="box-empty">No areas yet.</div>'; return; }
     boxList.innerHTML = '';
-    boxes.forEach(function (b, i) {
+    areas.forEach(function (area, a) {
       var row = document.createElement('div');
-      row.className = 'box-row' + (i === sel ? ' sel' : '');
+      row.className = 'box-row' + (a === selA ? ' sel' : '');
       row.addEventListener('dragover', function (e) { if (dragIndex < 0) return; e.preventDefault(); e.dataTransfer.dropEffect = 'move'; row.classList.add('drag-over'); });
       row.addEventListener('dragleave', function () { row.classList.remove('drag-over'); });
-      row.addEventListener('drop', function (e) { e.preventDefault(); row.classList.remove('drag-over'); if (dragIndex >= 0 && dragIndex !== i) moveBox(dragIndex, i); });
+      row.addEventListener('drop', function (e) { e.preventDefault(); row.classList.remove('drag-over'); if (dragIndex >= 0 && dragIndex !== a) moveArea(dragIndex, a); });
+
       var head = document.createElement('div'); head.className = 'box-row-head';
-      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1; num.title = 'Click to select · drag to reorder'; num.draggable = true;
-      num.addEventListener('click', function () { sel = i; renderBoxes(); updateRowHighlight(); });
-      num.addEventListener('dragstart', function (e) { dragIndex = i; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', String(i)); } catch (_) {} row.classList.add('dragging'); });
+      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = a + 1; num.title = 'Click to select · drag to reorder'; num.draggable = true;
+      num.addEventListener('click', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      num.addEventListener('dragstart', function (e) { dragIndex = a; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', String(a)); } catch (_) {} row.classList.add('dragging'); });
       num.addEventListener('dragend', function () { dragIndex = -1; Array.prototype.slice.call(boxList.querySelectorAll('.dragging, .drag-over')).forEach(function (r) { r.classList.remove('dragging'); r.classList.remove('drag-over'); }); });
-      var lbl = document.createElement('input'); lbl.type = 'text'; lbl.className = 'lbl'; lbl.placeholder = 'label (short name)'; lbl.value = b.label || '';
-      lbl.addEventListener('focus', function () { sel = i; renderBoxes(); updateRowHighlight(); });
-      lbl.addEventListener('input', function () { b.label = lbl.value; renderJSON(); });
-      var del = document.createElement('button'); del.className = 'del'; del.textContent = '✕'; del.title = 'Delete';
-      del.addEventListener('click', function () { boxes.splice(i, 1); sel = -1; renderAll(); });
-      head.appendChild(num); head.appendChild(lbl); head.appendChild(del);
-      var desc = document.createElement('textarea'); desc.className = 'desc'; desc.placeholder = 'description · the feel / contents (optional)'; desc.value = b.desc || '';
-      desc.addEventListener('focus', function () { sel = i; renderBoxes(); updateRowHighlight(); });
-      desc.addEventListener('input', function () { b.desc = desc.value; renderJSON(); });
+
+      var lbl = document.createElement('input'); lbl.type = 'text'; lbl.className = 'lbl'; lbl.placeholder = 'label (short name)'; lbl.value = area.label || '';
+      lbl.addEventListener('focus', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      lbl.addEventListener('input', function () { area.label = lbl.value; renderJSON(); });
+
+      if (area.rects.length > 1) { var pc = document.createElement('span'); pc.className = 'pieces'; pc.textContent = area.rects.length + 'p'; pc.title = area.rects.length + ' pieces'; head.appendChild(pc); }
+
+      var addp = document.createElement('button'); addp.className = 'addp' + (armed && a === selA ? ' armed' : ''); addp.textContent = '＋'; addp.title = 'Add a piece to this area (then draw), or Shift+draw';
+      addp.addEventListener('click', function () { selA = a; selR = 0; setArmed(!(armed && a === selA) ? true : false); renderAll(); });
+
+      var del = document.createElement('button'); del.className = 'del'; del.textContent = '✕'; del.title = 'Delete the whole area';
+      del.addEventListener('click', function () { areas.splice(a, 1); selA = -1; selR = -1; renderAll(); });
+
+      head.appendChild(num); head.appendChild(lbl); head.appendChild(addp); head.appendChild(del);
+      var desc = document.createElement('textarea'); desc.className = 'desc'; desc.placeholder = 'description · the feel / contents (optional)'; desc.value = area.desc || '';
+      desc.addEventListener('focus', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      desc.addEventListener('input', function () { area.desc = desc.value; renderJSON(); });
       row.appendChild(head); row.appendChild(desc);
       boxList.appendChild(row);
     });
@@ -315,8 +350,11 @@
   function renderJSON() {
     var out = {
       image: imageName || '',
-      areas: boxes.map(function (b) {
-        return { label: b.label || '', desc: b.desc || '', left: round(b.left), top: round(b.top), width: round(b.width), height: round(b.height) };
+      areas: areas.map(function (area) {
+        return {
+          label: area.label || '', desc: area.desc || '',
+          rects: area.rects.map(function (r) { return { left: round(r.left), top: round(r.top), width: round(r.width), height: round(r.height) }; })
+        };
       })
     };
     jsonBox.value = JSON.stringify(out, null, 2);
@@ -324,8 +362,8 @@
 
   // ── Buttons ──
   document.getElementById('clearBtn').addEventListener('click', function () {
-    if (boxes.length && !confirm('Delete all ' + boxes.length + ' boxes?')) return;
-    boxes = []; sel = -1; renderAll();
+    if (areas.length && !confirm('Delete all ' + areas.length + ' areas?')) return;
+    areas = []; selA = -1; selR = -1; setArmed(false); renderAll();
   });
   document.getElementById('copyBtn').addEventListener('click', function () {
     jsonBox.select();
@@ -342,10 +380,16 @@
     try {
       var data = JSON.parse(jsonBox.value);
       if (data.image) { imageName = data.image; imgNameEl.textContent = data.image + ' (from JSON)'; }
-      boxes = (data.areas || []).map(function (a) {
-        return { label: a.label || '', desc: a.desc || a.note || '', left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 };
+      areas = (data.areas || []).map(function (a) {
+        var rects;
+        if (Array.isArray(a.rects) && a.rects.length) {
+          rects = a.rects.map(function (r) { return { left: +r.left || 0, top: +r.top || 0, width: +r.width || 0, height: +r.height || 0 }; });
+        } else {
+          rects = [{ left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 }];   // back-compat: old single-rect area
+        }
+        return { label: a.label || '', desc: a.desc || a.note || '', rects: rects };
       });
-      sel = -1; renderAll();
+      selA = -1; selR = -1; setArmed(false); renderAll();
     } catch (err) { alert('Could not parse JSON: ' + err.message); }
   });
 

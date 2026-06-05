@@ -84,7 +84,8 @@
       var mdetail = document.getElementById('mapDetail');
       if (area && mdetail) {
         document.querySelectorAll('.map-hot.active').forEach(function (x) { x.classList.remove('active'); });
-        hot.classList.add('active');
+        // an area may be several rectangles (L / T shapes) sharing one data-area; light them all
+        document.querySelectorAll('.map-hot[data-area="' + hot.dataset.area + '"]').forEach(function (p) { p.classList.add('active'); });
         mdetail.innerHTML = '<div class="section-title">' + (area.n || '') + '</div><div class="prose">' + (area.t || '') + '</div>';
         mdetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
