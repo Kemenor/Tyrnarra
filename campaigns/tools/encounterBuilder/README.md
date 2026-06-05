@@ -35,21 +35,46 @@ your homebrew is never deduped away.
 # Thematic search — structured filters + fuzzy flavor text (FTS5 MATCH)
 python encounter.py search --type undead --level 3-7 --text "crypt OR grave" --rarity common
 python encounter.py search --trait fire --trait undead --size lg   # fire AND undead (repeatable)
+python encounter.py search --weak fire --move fly --level 1-8 -v   # fire-vulnerable fliers, verbose
+python encounter.py search --family mephit                         # name-only family still works
 python encounter.py search --type fey --source pathfinder-monster-core --no-homebrew
 
 # Build an encounter to a threat budget
 python encounter.py build --party-level 5 --party-size 4 --threat severe --type undead --shape boss
-python encounter.py build --party-level 8 --party-size 5 --threat moderate --text "forest fey" \
-       --shape horde --tolerance 0.1
+python encounter.py build --party-level 6 --party-size 4 --threat severe --trait undead --weak fire \
+       --shape elite --tolerance 0.1
 ```
 
-Filters (`--type --trait --size --rarity --text --level --source --no-homebrew`)
-compose, and the same set works for both `search` and `build`. `--trait` is
-repeatable and ANDs (exact junction filtering); `--source` takes a pack folder
-name (e.g. `pathfinder-monster-core`). Shapes: `boss`, `elite`, `spread`, `horde`.
-`--seed` makes a build reproducible. `--tolerance 0.1` lets a build stop at 90%+
-of budget instead of always cramming to 100%; if the filtered pool is too thin to
-reach the floor, the build prints a warning to stderr.
+### Filters (compose; same set works for `search` and `build`)
+
+| Filter | Meaning |
+|---|---|
+| `--level lo-hi` | level range (needed for encounter math) |
+| `--text "a OR b"` | fuzzy FTS5 over name / traits / flavor |
+| `--size` | tiny / sm / med / lg / huge / grg (fit the room) |
+| `--type` | the single best creature-type bucket (undead, dragon, fey...) |
+| `--trait` | exact trait; **repeatable, ANDed** (`--trait fire --trait undead`) |
+| `--weak` / `--resist` / `--immune` | by defense; repeatable, ANDed. `--immune` covers damage types **and** conditions |
+| `--move` | movement type: `fly` / `swim` / `climb` / `burrow` / `land`; repeatable |
+| `--family` | creature kind: matches a **trait or the name** (`dragon`, `construct`, `mephit`, `sphinx`) |
+| `--rarity` | common / uncommon / rare / unique |
+| `--source` | one pack folder, e.g. `pathfinder-monster-core` |
+| `--no-homebrew` | exclude homebrew rows |
+
+`search` also takes `-v/--verbose` (prints each result's speeds + weak/resist/immune)
+and `--limit`. `build` takes `--party-level --party-size --threat --shape --seed
+--tolerance`. Shapes: `boss`, `elite`, `spread`, `horde`. `--tolerance 0.1` lets a
+build stop at 90%+ of budget instead of cramming to 100%; too-thin pools warn on stderr.
+
+**Family vs. trait:** PF2e has no "family" field, so `--family` is the forgiving
+knob (trait OR name) and `--trait` is the exact one. For families that are traits
+(dragon, demon, construct, golem) they're equivalent; `--family` earns its keep on
+name-only families (mephit, sphinx, naga, hydra, wisp).
+
+**Full stat blocks:** the DB is a search index. Once a search narrows to a few
+candidates, the authoritative sheet (Perception, saves, attacks, exact damage)
+lives in that creature's JSON under `_sources/` — read it for the real numbers
+rather than trusting anything not in the DB.
 
 ## Adding Tyrnarra / Azkataria homebrew
 
@@ -76,9 +101,12 @@ Two options, in order of how I'd phase them:
   trivial/low/moderate/severe/extreme and the relative-level XP table. Exact, no
   guessing.
 - `creature_type` is derived from the highest-priority creature-type trait. The
-  full trait list is preserved in `creature_traits` for precise filtering.
-- Worth adding next: **weaknesses/resistances columns** (for theming around energy
-  types, e.g. "fire-vulnerable swamp things") and, once query shapes settle,
-  wrapping `search()`/`build()` as an **MCP server** (they're already plain,
-  importable functions). `--source`/`--no-homebrew` and the tolerance band are done.
+  full trait list is preserved in `creature_traits` for precise filtering;
+  weaknesses, resistances, immunities and speeds get their own junction tables.
+- `value` is stored on weaknesses/resistances/speeds, so a magnitude filter
+  (e.g. `--weak-min 10`, `--fly-min 60`) is a cheap later add when wanted.
+- The tool is meant to be driven by Claude Code (it will become a skill): search
+  by theme, hand-pick creatures, build to budget, then read the source JSON for
+  the chosen few. An MCP wrap is unnecessary for that (the CLI stdout is enough);
+  `search()`/`build()` stay importable in case it ever helps.
 ```

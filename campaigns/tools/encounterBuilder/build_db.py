@@ -59,8 +59,26 @@ def load_creature(path, pack, is_homebrew):
     sys = d.get("system", {})
     det = sys.get("details", {})
     tr = sys.get("traits", {})
+    attrs = sys.get("attributes", {})
     traits = [t for t in tr.get("value", []) if t]
     flavor = " ".join(filter(None, [det.get("blurb"), clean_text(det.get("publicNotes", ""))]))
+
+    # Defenses: weaknesses/resistances carry a value; immunities are bare types
+    # (a mix of damage types and conditions). Any of these can be null/empty.
+    def _typed_values(key):
+        return [(x["type"], x.get("value"))
+                for x in (attrs.get(key) or []) if x.get("type")]
+    immunities = [x["type"] for x in (attrs.get("immunities") or []) if x.get("type")]
+
+    # Movement: land speed + every otherSpeeds entry (fly/swim/climb/burrow/...).
+    speed = attrs.get("speed") or {}
+    speeds = []
+    if speed.get("value") not in (None, ""):
+        speeds.append(("land", speed.get("value")))
+    for o in speed.get("otherSpeeds") or []:
+        if o.get("type"):
+            speeds.append((o["type"], o.get("value")))
+
     return {
         "slug": os.path.splitext(os.path.basename(path))[0],
         "name": d.get("name", "").strip(),
@@ -69,8 +87,12 @@ def load_creature(path, pack, is_homebrew):
         "rarity": tr.get("rarity", "common"),
         "creature_type": derive_type(traits),
         "traits": traits,
-        "hp": (sys.get("attributes", {}).get("hp") or {}).get("max"),
-        "ac": (sys.get("attributes", {}).get("ac") or {}).get("value"),
+        "weaknesses": _typed_values("weaknesses"),
+        "resistances": _typed_values("resistances"),
+        "immunities": immunities,
+        "speeds": speeds,
+        "hp": (attrs.get("hp") or {}).get("max"),
+        "ac": (attrs.get("ac") or {}).get("value"),
         "pack": pack,
         "source": (det.get("publication") or {}).get("title") or pack,
         "remaster": 1 if (det.get("publication") or {}).get("remaster") else 0,
@@ -82,6 +104,10 @@ def load_creature(path, pack, is_homebrew):
 SCHEMA = """
 DROP TABLE IF EXISTS creatures;
 DROP TABLE IF EXISTS creature_traits;
+DROP TABLE IF EXISTS creature_weaknesses;
+DROP TABLE IF EXISTS creature_resistances;
+DROP TABLE IF EXISTS creature_immunities;
+DROP TABLE IF EXISTS creature_speeds;
 DROP TABLE IF EXISTS creatures_fts;
 CREATE TABLE creatures (
     id INTEGER PRIMARY KEY,
@@ -90,7 +116,15 @@ CREATE TABLE creatures (
     remaster INTEGER, is_homebrew INTEGER, traits_text TEXT, flavor TEXT
 );
 CREATE TABLE creature_traits (creature_id INTEGER, trait TEXT);
+CREATE TABLE creature_weaknesses (creature_id INTEGER, type TEXT, value INTEGER);
+CREATE TABLE creature_resistances (creature_id INTEGER, type TEXT, value INTEGER);
+CREATE TABLE creature_immunities (creature_id INTEGER, type TEXT);
+CREATE TABLE creature_speeds (creature_id INTEGER, type TEXT, value INTEGER);
 CREATE INDEX idx_ct_trait ON creature_traits(trait);
+CREATE INDEX idx_weak ON creature_weaknesses(type);
+CREATE INDEX idx_resist ON creature_resistances(type);
+CREATE INDEX idx_immune ON creature_immunities(type);
+CREATE INDEX idx_speed ON creature_speeds(type);
 CREATE INDEX idx_level ON creatures(level);
 CREATE INDEX idx_type ON creatures(creature_type);
 CREATE INDEX idx_pack ON creatures(pack);
@@ -153,6 +187,14 @@ def main():
         cid = cur.lastrowid
         con.executemany("INSERT INTO creature_traits VALUES (?,?)",
                         [(cid, t) for t in c["traits"]])
+        con.executemany("INSERT INTO creature_weaknesses VALUES (?,?,?)",
+                        [(cid, t, v) for t, v in c["weaknesses"]])
+        con.executemany("INSERT INTO creature_resistances VALUES (?,?,?)",
+                        [(cid, t, v) for t, v in c["resistances"]])
+        con.executemany("INSERT INTO creature_immunities VALUES (?,?)",
+                        [(cid, t) for t in c["immunities"]])
+        con.executemany("INSERT INTO creature_speeds VALUES (?,?,?)",
+                        [(cid, t, v) for t, v in c["speeds"]])
     con.execute("INSERT INTO creatures_fts(rowid,name,traits_text,flavor) "
                 "SELECT id,name,traits_text,flavor FROM creatures")
     con.commit()

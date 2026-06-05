@@ -47,10 +47,12 @@ def connect(db):
     return con
 
 
-def search(con, ctype=None, traits=None, level=None, size=None, rarity=None,
+def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
+           move=None, family=None, level=None, size=None, rarity=None,
            source=None, no_homebrew=False, text=None, limit=200):
     where, where_params = ["1=1"], []
-    joins, join_params = "", []
+    joins, join_params = [], []
+
     if ctype:
         where.append("c.creature_type = ?"); where_params.append(ctype)
     if rarity:
@@ -64,17 +66,49 @@ def search(con, ctype=None, traits=None, level=None, size=None, rarity=None,
     if level:
         lo, hi = level
         where.append("c.level BETWEEN ? AND ?"); where_params += [lo, hi]
-    # Exact trait filtering: one junction join per requested trait (AND semantics).
-    for i, t in enumerate(traits or []):
-        a = f"ct{i}"
-        joins += f" JOIN creature_traits {a} ON {a}.creature_id = c.id AND {a}.trait = ? "
-        join_params.append(t)
+    if family:
+        # "Family" has no Foundry field: it's a trait for most kinds (dragon,
+        # demon, construct...) and only a name for the rest (mephit, sphinx).
+        f = family.lower()
+        where.append("(EXISTS (SELECT 1 FROM creature_traits ft "
+                     "WHERE ft.creature_id = c.id AND ft.trait = ?) OR c.name LIKE ?)")
+        where_params += [f, f"%{f}%"]
+
+    # Junction-based AND filters: one join per requested value (repeat => must
+    # have all). Join text comes before WHERE, so its params bind first.
+    def add(table, col, values, alias):
+        for i, v in enumerate(values or []):
+            a = f"{alias}{i}"
+            joins.append(f"JOIN {table} {a} ON {a}.creature_id = c.id AND {a}.{col} = ?")
+            join_params.append(v)
+    add("creature_traits", "trait", traits, "ct")
+    add("creature_weaknesses", "type", weak, "w")
+    add("creature_resistances", "type", resist, "r")
+    add("creature_immunities", "type", immune, "im")
+    add("creature_speeds", "type", move, "sp")
+
     if text:
-        joins += " JOIN creatures_fts f ON f.rowid = c.id "
+        joins.append("JOIN creatures_fts f ON f.rowid = c.id")
         where.append("creatures_fts MATCH ?"); where_params.append(text)
-    sql = (f"SELECT DISTINCT c.* FROM creatures c {joins} "
+
+    sql = (f"SELECT DISTINCT c.* FROM creatures c {' '.join(joins)} "
            f"WHERE {' AND '.join(where)} ORDER BY c.level, c.name LIMIT {int(limit)}")
     return [dict(r) for r in con.execute(sql, join_params + where_params)]
+
+
+def defenses(con, cid):
+    """Per-creature weakness/resistance/immunity/speed summary for verbose output."""
+    def fetch(table, valued):
+        rows = con.execute(f"SELECT type, value FROM {table} WHERE creature_id = ?"
+                           if valued else
+                           f"SELECT type FROM {table} WHERE creature_id = ?", (cid,))
+        if valued:
+            return [f"{t} {v}" if v is not None else t for t, v in rows]
+        return [t for (t,) in rows]
+    return {"speed": fetch("creature_speeds", True),
+            "weak": fetch("creature_weaknesses", True),
+            "resist": fetch("creature_resistances", True),
+            "immune": fetch("creature_immunities", False)}
 
 
 def build(con, party_level, party_size, threat, shape="spread", seed=None,
@@ -140,6 +174,11 @@ def main():
     common.add_argument("--type", dest="ctype")
     common.add_argument("--trait", action="append", dest="traits",
                         help="Repeatable; multiple traits are ANDed.")
+    common.add_argument("--weak", action="append", help="Has weakness to type (repeatable, AND).")
+    common.add_argument("--resist", action="append", help="Has resistance to type (repeatable, AND).")
+    common.add_argument("--immune", action="append", help="Immune to damage type or condition (repeatable, AND).")
+    common.add_argument("--move", action="append", help="Has movement type, e.g. fly/swim/climb/burrow (repeatable, AND).")
+    common.add_argument("--family", help="Creature kind: matches a trait OR the name (dragon, mephit, construct...).")
     common.add_argument("--size")
     common.add_argument("--rarity")
     common.add_argument("--text")
@@ -149,6 +188,8 @@ def main():
     s = sub.add_parser("search", parents=[common])
     s.add_argument("--level", type=parse_level)
     s.add_argument("--limit", type=int, default=50)
+    s.add_argument("-v", "--verbose", action="store_true",
+                   help="Print each result's speeds and defenses.")
 
     b = sub.add_parser("build", parents=[common])
     b.add_argument("--party-level", type=int, required=True)
@@ -161,14 +202,20 @@ def main():
 
     a = ap.parse_args()
     con = connect(a.db)
-    filt = dict(ctype=a.ctype, traits=a.traits, size=a.size, rarity=a.rarity,
-                source=a.source, no_homebrew=a.no_homebrew, text=a.text)
+    filt = dict(ctype=a.ctype, traits=a.traits, weak=a.weak, resist=a.resist,
+                immune=a.immune, move=a.move, family=a.family, size=a.size,
+                rarity=a.rarity, source=a.source, no_homebrew=a.no_homebrew, text=a.text)
 
     if a.cmd == "search":
         rows = search(con, level=a.level, limit=a.limit, **filt)
         for r in rows:
             print(f"  L{r['level']:>2} {r['name']:<34} {r['creature_type']:<10} "
                   f"{r['rarity']:<8} {r['source']}")
+            if a.verbose:
+                d = defenses(con, r["id"])
+                for k in ("speed", "weak", "resist", "immune"):
+                    if d[k]:
+                        print(f"         {k:>7}: {', '.join(str(x) for x in d[k])}")
         print(f"\n{len(rows)} result(s)")
     else:
         res = build(con, a.party_level, a.party_size, a.threat, shape=a.shape,
