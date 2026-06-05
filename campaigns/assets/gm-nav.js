@@ -52,6 +52,9 @@
         { slug: 'quest-veldtmark',  label: 'The Veldtmark Invitation', href: '/campaigns/furrious-five/quest-veldtmark.html',   children: [] },
         { slug: 'quest-venomqueen', label: 'Below the Quiet Docks',    href: '/campaigns/furrious-five/quest-venomqueen.html',  children: [] }
       ]}
+    ]},
+    { slug: 'tools', label: 'Tools', href: null, children: [
+      { slug: 'map-area-editor', label: 'Map Area Editor', href: '/campaigns/tools/map-area-editor.html', children: [] }
     ]}
   ];
 
