@@ -100,7 +100,7 @@ The fourteen seats are immortal (as long as the virtues exist in mortals to corr
 
 **The Counting House**: plain English, the spire-by-name register of Bolverk (the Long Inn, the Vault, the Library). Jafnar's ziggurat: the Collections floors above, the Archive of Open Accounts below, the reading-floor between.
 
-**Legaun**: Basque *legejaun* ("law-lord": *lege* law + *jaun* lord) → *j*-loss drift. God-king of the mid Gods' Era whose court Idazkar served; banished to Layer 3 at the forging of the Gods' Law; debtor of the First Account. (⚿ GM-tier: **Legaun is the god of the Divine Faith of the Legea Empire**; the *lege*-rooted names of southern Zuzental descend from his court's vocabulary, and the Empire carries its god's name without knowing it. See `geography/bolverk.md`, *Jafnar → ⚿ GM Secret: the First Account*, and `geography/zuzental.md`, *Legea Empire → The Divine Faith*.)
+**Legaun**: Basque *legejaun* ("law-lord": *lege* law + *jaun* lord) → *j*-loss drift. The god of the Divine Faith of the Legea Empire, named openly there and in Fenurra; the *lege*-rooted names of southern Zuzental descend from his court's vocabulary. (⚿ GM-tier: Legaun is the banished Gods'-Era god-king whose court Idazkar served, debtor of the First Account now held by **Jafnar**; the Jafnar/Legaun link is the secret, which is why Jafnar's public Bolverk card no longer names him. See `geography/bolverk.md`, *Jafnar → ⚿ GM Secret: the First Account*, and `geography/zuzental.md`, *Legea Empire → The Divine Faith*.)
 
 ### God Domains (coined following the naming rule)
 Full etymologies are in `lore/geography/<region>.md` (one file per god domain). Quick reference:
