@@ -1,0 +1,121 @@
+/* ───────────────────────────────────────────────────────────────
+   gm-nav.css: left-side menu for the campaign / GM layer.
+   Off-canvas drawer + toggle + scrim, mirroring the player site-nav
+   pattern but themed to gm.css (ink-slate ground, red GM accent).
+   Loaded by every page under /campaigns/.
+   ─────────────────────────────────────────────────────────────── */
+
+.gm-nav-toggle {
+  position: fixed; top: 3px; left: 10px; z-index: 210;
+  background: rgba(58,20,16,0.9);
+  color: #f0d0c8;
+  border: 1px solid rgba(194,72,60,0.55);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.56rem; letter-spacing: 0.2em;
+  padding: 5px 11px; border-radius: 3px;
+  cursor: pointer; text-transform: uppercase;
+}
+.gm-nav-toggle:hover { background: rgba(90,30,24,0.95); color: #fff; }
+
+.gm-nav {
+  position: fixed; top: 0; left: 0; bottom: 0;
+  width: 286px;
+  background: rgba(14,16,20,0.97);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(194,72,60,0.3);
+  padding: 58px 18px 30px;
+  overflow-y: auto;
+  z-index: 220;
+  font-family: 'Crimson Pro', Georgia, serif;
+  transform: translateX(-100%);
+  transition: transform 0.28s ease;
+}
+.gm-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
+
+.gm-nav-title {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem; letter-spacing: 0.22em;
+  color: var(--gm-accent, #c2483c);
+  text-decoration: none; text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 6px; padding-bottom: 12px;
+  border-bottom: 1px solid rgba(194,72,60,0.28);
+}
+.gm-nav-sub {
+  display: block; text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gm-ink-dim, #8a8676);
+  margin: -2px 0 18px;
+}
+
+.gm-nav-list, .gm-nav-sublist { list-style: none; padding: 0; margin: 0; }
+
+.gm-nav-row { display: flex; align-items: stretch; }
+.gm-nav-row > a {
+  flex: 1; min-width: 0; display: block;
+  padding: 5px 10px;
+  color: var(--gm-ink-dim, #8a8676);
+  text-decoration: none; border: none;
+  font-size: 0.94rem;
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.gm-nav-row > span.gm-nav-grouplabel {
+  flex: 1; padding: 7px 10px 3px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gm-gold, #c8a04a);
+}
+.gm-nav-row > a:hover {
+  color: var(--gm-ink-bright, #f0ece0);
+  border-left-color: rgba(194,72,60,0.5);
+  background: rgba(194,72,60,0.06);
+}
+.gm-nav-row > a.is-current {
+  color: var(--gm-ink-bright, #f0ece0);
+  border-left-color: var(--gm-accent, #c2483c);
+  background: rgba(194,72,60,0.1);
+}
+
+.gm-nav-expand {
+  background: transparent; border: 0;
+  color: var(--gm-gold-dim, #7a6028);
+  cursor: pointer; padding: 4px 10px;
+  font-size: 0.8rem; font-family: inherit; line-height: 1;
+  display: flex; align-items: center;
+  transition: transform 0.22s ease, color 0.15s;
+}
+.gm-nav-expand:hover { color: var(--gm-gold, #c8a04a); }
+.gm-nav-item.expanded > .gm-nav-row > .gm-nav-expand { transform: rotate(90deg); color: var(--gm-accent, #c2483c); }
+
+.gm-nav-sublist { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+.gm-nav-item.expanded > .gm-nav-sublist { max-height: 1600px; }
+
+.gm-nav-item[data-depth="2"] > .gm-nav-row > a,
+.gm-nav-item[data-depth="2"] > .gm-nav-row > span.gm-nav-grouplabel { padding-left: 22px; font-size: 0.9rem; }
+.gm-nav-item[data-depth="3"] > .gm-nav-row > a { padding-left: 36px; font-size: 0.86rem; opacity: 0.94; }
+
+.gm-nav-foot {
+  margin-top: 24px; padding-top: 16px;
+  border-top: 1px solid rgba(200,190,160,0.12);
+}
+.gm-nav-foot a {
+  display: block; padding: 5px 10px;
+  color: var(--gm-gold-dim, #7a6028); border: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.gm-nav-foot a:hover { color: var(--gm-gold, #c8a04a); }
+
+.gm-nav-scrim {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 200;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.gm-nav-scrim.open { opacity: 1; pointer-events: auto; }
+
+@media (max-width: 600px) { .gm-nav { width: 86vw; } }

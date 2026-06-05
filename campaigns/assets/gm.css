@@ -1,0 +1,268 @@
+/* ───────────────────────────────────────────────────────────────
+   gm.css: shared chrome for the campaign / GM layer (NOT player-facing)
+
+   Loaded by every page under /campaigns/. Deliberately distinct from
+   the player-facing style-a / style-b: cooler ink-slate ground, a red
+   "behind the screen" accent, and a persistent GM banner, so there is
+   never any doubt which side of the screen a page belongs to.
+
+   Component vocabulary (used across town notes, location dossiers, and
+   quest modules):
+     .gm-banner            persistent "GM material" strip
+     .gm-container         page width wrapper
+     .gm-header            page title block
+     .gm-tabs/.gm-tab-btn/.gm-panel   tabbed sections
+     .section / .section-title
+     .read-aloud           boxed read-to-players prose
+     .gm-note              boxed GM-only aside
+     .gm-secret            boxed reveal (collapsible)
+     .statblock            NPC / creature stat block
+     .npc-grid/.npc-card   expandable NPC roster
+     .floor-stack/.room-cell   floorplans & level stacks
+     .enc-tag              encounter-type chips
+     .odds-board           betting / odds table
+     .ending-grid/.ending-card   branching outcomes
+     .rumor / .pill        misc
+   ─────────────────────────────────────────────────────────────── */
+
+:root {
+  --gm-bg: #111317;
+  --gm-bg2: #171a1f;
+  --gm-bg3: #1e222a;
+  --gm-ink: #d6d2c4;
+  --gm-ink-bright: #f0ece0;
+  --gm-ink-dim: #8a8676;
+  --gm-accent: #c2483c;        /* GM red */
+  --gm-accent-dim: #7a2e26;
+  --gm-gold: #c8a04a;
+  --gm-gold-dim: #7a6028;
+  --gm-divider: rgba(200,190,160,0.12);
+  --gm-card-bg: rgba(255,255,255,0.022);
+  /* semantic accents reused by encounter tags etc. */
+  --enc-combat: #d2625a;
+  --enc-skill: #6aa6c8;
+  --enc-discovery: #c8a04a;
+  --enc-hazard: #d2954a;
+  --enc-boss: #b07ad0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--gm-bg);
+  background-image:
+    radial-gradient(ellipse at 50% 0%, #1a1d24 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 100%, #16120f 0%, transparent 55%);
+  min-height: 100vh;
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: var(--gm-ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a { color: var(--gm-gold); text-decoration: none; border-bottom: 1px dotted rgba(200,160,74,0.4); }
+a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
+
+/* ── PERSISTENT GM BANNER ── */
+.gm-banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 7px 16px;
+  background: linear-gradient(to right, var(--gm-accent-dim), #3a1410 50%, var(--gm-accent-dim));
+  border-bottom: 1px solid var(--gm-accent);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #f0d0c8;
+}
+.gm-banner a { color: #f0d0c8; border: none; }
+.gm-banner a:hover { color: #fff; }
+.gm-banner .gm-banner-sep { opacity: 0.5; }
+
+/* ── LAYOUT ── */
+.gm-container { max-width: 1040px; margin: 0 auto; padding: 36px 24px 90px; }
+
+.breadcrumb { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 26px; }
+.breadcrumb a { border: none; color: var(--gm-ink-dim); }
+.breadcrumb a:hover { color: var(--gm-gold); }
+.breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+
+/* ── HEADER ── */
+.gm-header { border-bottom: 1px solid var(--gm-divider); padding-bottom: 24px; margin-bottom: 28px; }
+.gm-kicker { font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 12px; }
+.gm-title { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 600; color: var(--gm-ink-bright); letter-spacing: 0.02em; line-height: 1.05; }
+.gm-subtitle { font-family: 'Josefin Sans', sans-serif; font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gm-ink-dim); margin-top: 12px; }
+.gm-flavor { font-style: italic; color: var(--gm-gold); margin-top: 14px; font-size: 1.02rem; }
+
+/* quick fact strip under a header */
+.stat-row { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 18px; }
+.stat { display: flex; flex-direction: column; gap: 3px; }
+.stat-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gm-ink-dim); }
+.stat-value { font-family: 'Cinzel', serif; font-size: 0.92rem; color: var(--gm-gold); }
+
+/* ── TABS ── */
+.gm-tabs { display: flex; gap: 0; flex-wrap: wrap; border-bottom: 1px solid var(--gm-divider); margin-bottom: 28px; }
+.gm-tab-btn { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 11px 18px; background: none; border: none; color: var(--gm-ink-dim); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+.gm-tab-btn:hover { color: var(--gm-ink); }
+.gm-tab-btn.active { color: var(--gm-ink-bright); border-bottom-color: var(--gm-accent); }
+.gm-panel { display: none; animation: gmFade 0.25s ease; }
+.gm-panel.active { display: block; }
+@keyframes gmFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── SECTIONS ── */
+.section { margin-bottom: 38px; }
+.section-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gm-gold); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--gm-divider); }
+.prose { font-size: 1.02rem; line-height: 1.85; }
+.prose p { margin-bottom: 13px; }
+.prose p:last-child { margin-bottom: 0; }
+.prose b, .prose strong { color: var(--gm-ink-bright); }
+
+/* ── READ ALOUD ── */
+.read-aloud { background: rgba(120,150,176,0.05); border: 1px solid rgba(120,150,176,0.2); border-left: 3px solid var(--enc-skill); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 16px 0; }
+.read-aloud-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--enc-skill); margin-bottom: 8px; }
+.read-aloud-text { font-style: italic; line-height: 1.9; color: var(--gm-ink); }
+.read-aloud-text p { margin-bottom: 1em; }
+.read-aloud-text p:last-child { margin-bottom: 0; }
+
+/* ── GM NOTE ── */
+.gm-note { background: rgba(122,96,40,0.07); border: 1px solid var(--gm-divider); border-left: 3px solid var(--gm-gold-dim); border-radius: 0 4px 4px 0; padding: 13px 17px; margin: 14px 0; }
+.gm-note-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gm-gold); margin-bottom: 6px; }
+.gm-note-text { font-size: 0.94rem; line-height: 1.72; color: var(--gm-ink); }
+
+/* ── GM SECRET (collapsible) ── */
+.gm-secret { border: 1px solid rgba(194,72,60,0.28); border-left: 3px solid var(--gm-accent); background: rgba(58,20,16,0.32); border-radius: 0 4px 4px 0; margin: 16px 0; overflow: hidden; }
+.gm-secret-toggle { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 14px 18px; font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-accent); display: flex; align-items: center; gap: 8px; }
+.gm-secret-toggle::after { content: '▾'; margin-left: auto; transition: transform 0.2s; }
+.gm-secret.open .gm-secret-toggle::after { transform: rotate(180deg); }
+.gm-secret-body { display: none; padding: 0 18px 18px; }
+.gm-secret.open .gm-secret-body { display: block; animation: gmFade 0.2s ease; }
+.gm-secret-body .secret-reveal { font-style: italic; color: var(--gm-ink-bright); margin-bottom: 12px; }
+
+/* ── STAT BLOCK ── */
+.statblock { background: var(--gm-bg2); border: 1px solid var(--gm-divider); border-top: 3px solid var(--gm-accent); border-radius: 4px; padding: 18px 20px; margin: 16px 0; }
+.statblock-name { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--gm-ink-bright); margin-bottom: 2px; }
+.statblock-meta { font-family: 'Josefin Sans', sans-serif; font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 12px; }
+.statblock-line { display: flex; gap: 10px; flex-wrap: wrap; padding: 6px 0; border-top: 1px solid var(--gm-divider); font-size: 0.92rem; }
+.statblock-line b { color: var(--gm-gold); font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; min-width: 80px; }
+.stat-pill { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.1em; padding: 3px 9px; border-radius: 11px; background: rgba(255,255,255,0.04); border: 1px solid var(--gm-divider); color: var(--gm-ink); }
+
+/* ── NPC GRID ── */
+.npc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 16px; }
+.npc-card { border: 1px solid var(--gm-divider); border-radius: 5px; background: var(--gm-card-bg); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+.npc-card:hover { border-color: rgba(200,160,74,0.3); }
+.npc-card.open { border-color: rgba(200,160,74,0.4); }
+.npc-card-header { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.npc-icon { font-size: 1.4rem; flex-shrink: 0; }
+.npc-name { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gm-ink-bright); }
+.npc-role { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); margin-top: 2px; }
+.npc-kin { font-style: italic; color: var(--gm-gold-dim); font-size: 0.82rem; }
+.npc-card .expand-hint { margin-left: auto; font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); border: 1px solid var(--gm-divider); border-radius: 10px; padding: 2px 8px; flex-shrink: 0; }
+.npc-summary { padding: 0 16px 14px; font-style: italic; color: var(--gm-ink); font-size: 0.92rem; }
+.npc-body { display: none; padding: 14px 16px; border-top: 1px solid var(--gm-divider); animation: gmFade 0.2s ease; }
+.npc-card.open .npc-body { display: block; }
+.exp-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-gold); margin: 12px 0 5px; }
+.exp-label:first-child { margin-top: 0; }
+.exp-body { font-size: 0.9rem; line-height: 1.65; }
+.trait-list { list-style: none; }
+.trait-list li { font-size: 0.88rem; padding: 3px 0 3px 14px; position: relative; }
+.trait-list li::before { content: '›'; position: absolute; left: 0; color: var(--gm-gold-dim); }
+.secret-box { background: rgba(58,20,16,0.4); border: 1px solid rgba(194,72,60,0.22); border-radius: 4px; padding: 11px 13px; margin-top: 12px; }
+.hook-box { background: rgba(122,96,40,0.08); border-left: 2px solid var(--gm-gold-dim); border-radius: 0 3px 3px 0; padding: 10px 13px; margin-top: 12px; }
+
+/* ── FLOORPLANS / LEVEL STACKS ── */
+.floor-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.floor-row { display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: start; }
+.floor-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); padding-top: 12px; }
+.floor-rooms { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.room-cell { background: var(--gm-card-bg); border: 1px solid var(--gm-divider); border-radius: 4px; padding: 11px 13px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.room-cell:hover { border-color: rgba(200,160,74,0.3); background: rgba(255,255,255,0.035); }
+.room-cell.active { border-color: var(--gm-accent); }
+.room-name { font-family: 'Cinzel', serif; font-size: 0.9rem; color: var(--gm-ink-bright); }
+.room-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); margin-top: 3px; }
+.room-tag { display: inline-block; font-family: 'Josefin Sans', sans-serif; font-size: 0.46rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 9px; margin-top: 6px; background: rgba(194,72,60,0.14); color: #d88; border: 1px solid rgba(194,72,60,0.25); }
+.river-divider { display: flex; align-items: center; gap: 12px; margin: 6px 0; }
+.river-divider .river-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(106,166,200,0.4), transparent); }
+.river-divider .river-text { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--enc-skill); }
+
+/* level cards (lowspan-style descending floors) */
+.level-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.level-card { border: 1px solid var(--gm-divider); border-radius: 5px; background: var(--gm-bg2); overflow: hidden; }
+.level-header { display: flex; align-items: center; gap: 14px; padding: 14px 16px; cursor: pointer; }
+.level-number { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gm-gold-dim); width: 40px; text-align: center; flex-shrink: 0; }
+.level-name { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gm-ink-bright); }
+.level-desc { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gm-ink-dim); margin-top: 3px; }
+.level-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.46rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; flex-shrink: 0; margin-left: auto; }
+.tag-legal { background: rgba(74,138,58,0.14); color: #7aba5a; border: 1px solid rgba(90,154,66,0.25); }
+.tag-grey { background: rgba(200,160,74,0.12); color: var(--gm-gold); border: 1px solid rgba(200,160,74,0.22); }
+.tag-dark { background: rgba(194,72,60,0.16); color: #d2766a; border: 1px solid rgba(194,72,60,0.28); }
+.level-chevron { font-size: 0.7rem; color: var(--gm-ink-dim); transition: transform 0.2s; }
+.level-card.open .level-chevron { transform: rotate(180deg); }
+.level-body { display: none; padding: 0 18px 18px 70px; }
+.level-card.open .level-body { display: block; animation: gmFade 0.2s ease; }
+.room-list { list-style: none; margin-top: 8px; }
+.room-list li { font-size: 0.9rem; padding: 5px 0 5px 15px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.room-list li::before { content: '◆'; position: absolute; left: 0; top: 9px; font-size: 0.4rem; color: var(--gm-gold-dim); }
+
+/* ── ENCOUNTER TAGS ── */
+.enc-tag { display: inline-block; font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; border-radius: 9px; margin: 2px 4px 2px 0; }
+.enc-combat { background: rgba(210,98,90,0.14); color: var(--enc-combat); border: 1px solid rgba(210,98,90,0.3); }
+.enc-skill { background: rgba(106,166,200,0.14); color: var(--enc-skill); border: 1px solid rgba(106,166,200,0.3); }
+.enc-discovery { background: rgba(200,160,74,0.14); color: var(--enc-discovery); border: 1px solid rgba(200,160,74,0.3); }
+.enc-hazard { background: rgba(210,149,74,0.14); color: var(--enc-hazard); border: 1px solid rgba(210,149,74,0.3); }
+.enc-boss { background: rgba(176,122,208,0.16); color: var(--enc-boss); border: 1px solid rgba(176,122,208,0.32); }
+
+/* ── ODDS BOARD ── */
+.odds-board { background: var(--gm-bg3); border: 1px solid var(--gm-divider); border-top: 3px solid var(--gm-gold-dim); border-radius: 0 0 4px 4px; padding: 18px 20px; margin: 16px 0; }
+.odds-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.1em; color: var(--gm-gold); margin-bottom: 14px; text-align: center; border-bottom: 1px solid var(--gm-divider); padding-bottom: 8px; }
+.odds-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(200,160,74,0.06); }
+.odds-row:last-child { border-bottom: none; }
+.odds-fighters { flex: 1; font-size: 0.92rem; }
+.odds-vs { color: var(--gm-ink-dim); font-size: 0.78rem; margin: 0 8px; }
+.odds-value { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gm-gold); min-width: 58px; text-align: right; }
+.odds-note { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gm-ink-dim); min-width: 92px; text-align: right; }
+
+/* ── ENDING / BRANCH CARDS ── */
+.ending-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-top: 16px; }
+.ending-card { border: 1px solid var(--gm-divider); border-radius: 4px; background: var(--gm-card-bg); padding: 16px; }
+.ending-name { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gm-ink-bright); margin-bottom: 4px; }
+.ending-type { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 10px; }
+.ending-card .prose { font-size: 0.92rem; }
+
+/* ── RUMORS ── */
+.rumor-list { display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
+.rumor { padding: 12px 16px; border: 1px solid var(--gm-divider); border-radius: 4px; background: var(--gm-card-bg); font-style: italic; display: flex; gap: 12px; align-items: flex-start; }
+.rumor-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border-radius: 10px; flex-shrink: 0; margin-top: 2px; white-space: nowrap; background: rgba(200,160,74,0.1); color: var(--gm-gold); border: 1px solid rgba(200,160,74,0.22); }
+
+/* ── GENERIC CALLOUT + PILLS ── */
+.callout { border-left: 3px solid var(--gm-gold-dim); background: rgba(200,160,74,0.05); padding: 13px 17px; border-radius: 0 4px 4px 0; margin: 16px 0; font-style: italic; }
+.callout-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gm-gold); margin-bottom: 6px; font-style: normal; }
+.pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 11px; background: rgba(255,255,255,0.04); border: 1px solid var(--gm-divider); color: var(--gm-ink); }
+
+/* ── CARD GRID (campaign index) ── */
+.gm-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 18px; }
+.gm-link-card { display: block; border: 1px solid var(--gm-divider); border-radius: 6px; background: var(--gm-card-bg); padding: 18px 20px; border-bottom: 1px solid var(--gm-divider); transition: border-color 0.2s, background 0.2s; }
+.gm-link-card:hover { border-color: rgba(200,160,74,0.4); background: rgba(255,255,255,0.04); }
+.gm-link-card .glc-kind { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 6px; }
+.gm-link-card .glc-name { font-family: 'Cinzel', serif; font-size: 1.12rem; color: var(--gm-ink-bright); margin-bottom: 8px; }
+.gm-link-card .glc-desc { font-size: 0.92rem; line-height: 1.6; color: var(--gm-ink); }
+
+/* ── DIVIDER + FOOTER ── */
+.gm-divider { display: flex; align-items: center; gap: 14px; margin: 34px 0; }
+.gm-divider::before, .gm-divider::after { content: ''; flex: 1; height: 1px; background: var(--gm-divider); }
+.gm-divider span { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gm-ink-dim); }
+.gm-footer { text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(200,190,160,0.22); margin-top: 50px; padding-top: 22px; border-top: 1px solid var(--gm-divider); }
+
+@media (max-width: 600px) {
+  .gm-tab-btn { padding: 9px 12px; font-size: 0.52rem; }
+  .floor-row { grid-template-columns: 1fr; }
+  .floor-label { padding-top: 0; }
+  .level-body { padding-left: 18px; }
+}
