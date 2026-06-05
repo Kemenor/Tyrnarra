@@ -11,34 +11,9 @@
   <script defer src="/assets/site-interactions.js"></script>
   <script defer src="/assets/site-starfield.js"></script>
 <style>
-  /* ── Per-god quick-stats block (Aspects / Cleric Domains / Weapon / Mortals' View) ── */
-  .god-stats {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin-top: 4px;
-  }
-  .stat-row { display: contents; }
-  .stat-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    padding-top: 4px;
-    align-self: start;
-  }
-  .stat-val {
-    color: var(--text);
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
+  /* The .god-stats quick-stats block is shared in style-a.css. Only the
+     grand-gods-specific weapon styling stays here. */
   .stat-weapon { font-style: italic; color: var(--gold-bright); }
-  @media (max-width: 600px) {
-    .god-stats { grid-template-columns: 1fr; gap: 2px 0; }
-    .stat-label { padding-top: 10px; }
-    .stat-val { padding-bottom: 4px; }
-  }
 </style>
 </head>
 <body data-page="gods">

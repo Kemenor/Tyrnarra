@@ -10,34 +10,10 @@
 <script defer src="/assets/site-nav.js"></script>
 <script defer src="/assets/site-interactions.js"></script>
 <script defer src="/assets/site-starfield.js"></script>
+<script defer src="/assets/god-cards.js"></script>
 <style>
-  /* Per-god quick-stats block (mirrors grand-gods.html) */
-  .god-stats {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin-top: 4px;
-  }
-  .stat-row { display: contents; }
-  .stat-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    padding-top: 4px;
-    align-self: start;
-  }
-  .stat-val {
-    color: var(--text);
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-  @media (max-width: 600px) {
-    .god-stats { grid-template-columns: 1fr; gap: 2px 0; }
-    .stat-label { padding-top: 10px; }
-    .stat-val { padding-bottom: 4px; }
-  }
+  /* .god-stats quick-stats block now lives in style-a.css (shared with
+     grand-gods.html and the /assets/god-cards.js builders). */
 
   /* Reference tables: for demons and devils */
   .ref-table { width: 100%; max-width: 920px; margin: 14px auto 18px; border-collapse: collapse; font-size: 0.9rem; }
@@ -584,77 +560,9 @@ const beings = {
 };
 
 // ── BUILD CARDS ──
-function buildBeingCard(being, gridId) {
-  const grid = document.getElementById(gridId);
-  if (!grid) return;
-  const card = document.createElement('div');
-  card.className = 'god-card';
-  if (being.id) {
-    card.id = being.id;
-  } else {
-    card.id = being.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-  }
-  card.style.setProperty('--accent', being.accent);
-
-  card.innerHTML = `
-    <div class="card-top">
-      <div class="god-orb" style="--orb-bg:${being.orbBg};--orb-glow:${being.orbGlow};background:${being.orbBg};box-shadow:0 0 16px ${being.orbGlow}">${being.orb}</div>
-      <div class="god-title">
-        <div class="god-name">${being.name}</div>
-        <div class="god-domain-primary" style="color:${being.accent}">${being.primary}</div>
-        <div class="god-city">${being.tier} · ${being.city}</div>
-      </div>
-      <div class="expand-hint">Tap ▾</div>
-    </div>
-    <div class="card-summary">${being.summary}</div>
-    <div class="card-expanded">
-      <div class="exp-section">
-        <div class="exp-label">At a Glance</div>
-        <div class="god-stats">
-          <div class="stat-row"><div class="stat-label">Aspects</div><div class="stat-val">${being.aspects}</div></div>
-          <div class="stat-row"><div class="stat-label">Worshippers</div><div class="stat-val">${being.worshippers}</div></div>
-          <div class="stat-row"><div class="stat-label">Etymology</div><div class="stat-val">${being.etymology}</div></div>
-        </div>
-      </div>
-      <div class="exp-section">
-        <div class="exp-label">Nature &amp; Position</div>
-        <div class="exp-text">${being.nature}</div>
-      </div>
-      <div class="exp-section">
-        <div class="exp-label">GM Note</div>
-        <div class="exp-text" style="color:var(--text-dim);font-style:italic">${being.note}</div>
-      </div>
-      ${being.secret ? `
-      <div class="secret-section">
-        <button class="secret-toggle" onclick="toggleSecret(event, this)">⚿ &nbsp; GM Secret · Click to Reveal</button>
-        <div class="secret-content">
-          <div class="secret-label">⚿ &nbsp; Secret · Known to Very Few</div>
-          <div class="secret-text">${being.secret}</div>
-        </div>
-      </div>` : ''}
-    </div>
-  `;
-
-  card.addEventListener('click', (e) => {
-    // Don't collapse when clicking inside the expanded content
-    if (card.classList.contains('expanded') && e.target.closest('.card-expanded')) return;
-    const isExpanded = card.classList.contains('expanded');
-    document.querySelectorAll('.god-card.expanded').forEach(c => c.classList.remove('expanded'));
-    if (!isExpanded) {
-      card.classList.add('expanded');
-      setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
-    }
-  });
-
-  grid.appendChild(card);
-}
-
-beings.prelife.forEach(b => buildBeingCard(b, 'prelifeGrid'));
-beings.feyworld.forEach(b => buildBeingCard(b, 'feyworldGrid'));
-beings.shadowplane.forEach(b => buildBeingCard(b, 'shadowplaneGrid'));
-beings.diyu.forEach(b => buildBeingCard(b, 'diyuGrid'));
-beings.elysium.forEach(b => buildBeingCard(b, 'elysiumGrid'));
-beings.abyss.forEach(b => buildBeingCard(b, 'abyssGrid'));
+// buildBeingCard and buildDemonCard are shared in /assets/god-cards.js.
+// Build calls run in the DOMContentLoaded handler at the foot of this
+// script (the builders load via `defer`, so they are defined by then).
 
 // ─────────────────────────────────────────────────────────────────────
 // VICE DEMONS: the Seven of Bolverk
@@ -841,71 +749,8 @@ const viceDemons = [
   }
 ];
 
-function buildDemonCard(d, gridId) {
-  const grid = document.getElementById(gridId);
-  if (!grid) return;
-  const card = document.createElement('div');
-  card.className = 'god-card';
-  card.id = d.name.toLowerCase();
-  card.style.setProperty('--accent', d.accent);
-
-  const sectionIf = (label, text) => text ? `<div class="exp-section"><div class="exp-label">${label}</div><div class="exp-text">${text}</div></div>` : '';
-  const placeholderNote = !d.mortalLife ? `<div class="exp-section"><div class="exp-text" style="color:var(--text-dim);font-style:italic">Full canon for this holder is in progress and will appear here as it is designed.</div></div>` : '';
-
-  card.innerHTML = `
-    <div class="card-top">
-      <div class="god-orb" style="--orb-bg:${d.orbBg};--orb-glow:${d.orbGlow};background:${d.orbBg};box-shadow:0 0 16px ${d.orbGlow}">${d.orb}</div>
-      <div class="god-title">
-        <div class="god-name">${d.name}</div>
-        <div class="god-domain-primary" style="color:${d.accent}">${d.primary}</div>
-        <div class="god-city">${d.location}</div>
-      </div>
-      <div class="expand-hint">Tap ▾</div>
-    </div>
-    <div class="card-summary">${d.summary}</div>
-    <div class="card-expanded">
-      <div class="exp-section">
-        <div class="exp-label">At a Glance</div>
-        <div class="god-stats">
-          <div class="stat-row"><div class="stat-label">${d.lineLabel || 'Vice'}</div><div class="stat-val">${d.vice}</div></div>
-          <div class="stat-row"><div class="stat-label">Held since</div><div class="stat-val">${d.heldSince}</div></div>
-          <div class="stat-row"><div class="stat-label">Name etymology</div><div class="stat-val">${d.etymology}</div></div>
-          <div class="stat-row"><div class="stat-label">PF2e Domain</div><div class="stat-val">${d.domain}</div></div>
-          <div class="stat-row"><div class="stat-label">Favored Weapon</div><div class="stat-val">${d.weapon}</div></div>
-        </div>
-      </div>
-      ${sectionIf(d.mortalLifeLabel || 'Mortal Life', d.mortalLife)}
-      ${sectionIf(d.theFallLabel || 'The Fall &amp; Ascension', d.theFall)}
-      ${sectionIf('Form', d.form)}
-      ${sectionIf(d.spireLabel || 'The Spire', d.spire)}
-      ${sectionIf('Method on Talan', d.method)}
-      ${sectionIf(d.reputationLabel || 'Reputation Among the Seven', d.reputation)}
-      ${placeholderNote}
-      ${d.secret ? `
-      <div class="secret-section">
-        <button class="secret-toggle" onclick="toggleSecret(event, this)">⚿ &nbsp; GM Secret · ${d.secretTitle || 'Click to Reveal'}</button>
-        <div class="secret-content">
-          <div class="secret-label">⚿ &nbsp; ${d.secretLabel || 'Secret · Known to Very Few'}</div>
-          <div class="secret-text">${d.secret}</div>
-        </div>
-      </div>` : ''}
-    </div>
-  `;
-
-  card.addEventListener('click', (e) => {
-    if (card.classList.contains('expanded') && e.target.closest('.card-expanded')) return;
-    const isExpanded = card.classList.contains('expanded');
-    document.querySelectorAll('.god-card.expanded').forEach(c => c.classList.remove('expanded'));
-    if (!isExpanded) {
-      card.classList.add('expanded');
-      setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
-    }
-  });
-
-  grid.appendChild(card);
-}
-
-viceDemons.forEach(d => buildDemonCard(d, 'viceDemonsGrid'));
+// buildDemonCard is shared in /assets/god-cards.js (build call in the
+// DOMContentLoaded handler below).
 
 // ─────────────────────────────────────────────────────────────────────
 // VIRTUE DEVILS: the Fourteen of Bolverk (seated holders + stub cards)
@@ -985,10 +830,20 @@ const seatedVirtueDevils = {
   }
 };
 
-virtueDevils.forEach(v => {
-  const seated = seatedVirtueDevils[v.name];
-  if (seated) buildDemonCard(seated, 'virtueDevilsGrid');
-  else buildBeingCard(v, 'virtueDevilsGrid');
+// Render every group once the shared builders (deferred) are loaded.
+document.addEventListener('DOMContentLoaded', () => {
+  beings.prelife.forEach(b => buildBeingCard(b, 'prelifeGrid'));
+  beings.feyworld.forEach(b => buildBeingCard(b, 'feyworldGrid'));
+  beings.shadowplane.forEach(b => buildBeingCard(b, 'shadowplaneGrid'));
+  beings.diyu.forEach(b => buildBeingCard(b, 'diyuGrid'));
+  beings.elysium.forEach(b => buildBeingCard(b, 'elysiumGrid'));
+  beings.abyss.forEach(b => buildBeingCard(b, 'abyssGrid'));
+  viceDemons.forEach(d => buildDemonCard(d, 'viceDemonsGrid'));
+  virtueDevils.forEach(v => {
+    const seated = seatedVirtueDevils[v.name];
+    if (seated) buildDemonCard(seated, 'virtueDevilsGrid');
+    else buildBeingCard(v, 'virtueDevilsGrid');
+  });
 });
 </script>
 

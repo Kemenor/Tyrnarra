@@ -510,6 +510,35 @@ body {
 }
 .exp-text.italic { font-style: italic; }
 
+/* Per-card quick-stats block (used by the shared god-card builders in
+   /assets/god-cards.js, and by grand-gods.html's bound-god cards). */
+.god-stats {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px 16px;
+  margin-top: 4px;
+}
+.stat-row { display: contents; }
+.stat-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-top: 4px;
+  align-self: start;
+}
+.stat-val {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+@media (max-width: 600px) {
+  .god-stats { grid-template-columns: 1fr; gap: 2px 0; }
+  .stat-label { padding-top: 10px; }
+  .stat-val { padding-bottom: 4px; }
+}
+
 .worship-box {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--divider);
