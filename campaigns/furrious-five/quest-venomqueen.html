@@ -99,15 +99,20 @@
       <div class="map-hint">Click a numbered area for its notes · these are placeholder areas, rename / move / fill as needed</div>
       <div class="map-wrap" id="mapWrap">
         <img src="/campaigns/furrious-five/assets/maps/cavern-of-the-venom-queen.jpg" alt="Cavern of the Venom Queen battlemap (downsized reference)">
-        <button class="map-hot" data-area="spore"     style="left:31%;top:3%;width:65%;height:33%"><span class="hot-num">1</span></button>
-        <button class="map-hot" data-area="warehouse" style="left:14%;top:14%;width:18%;height:14%"><span class="hot-num">2</span></button>
-        <button class="map-hot" data-area="canal"     style="left:0%;top:38%;width:12%;height:40%"><span class="hot-num">3</span></button>
-        <button class="map-hot" data-area="mainfloor" style="left:17%;top:44%;width:29%;height:23%"><span class="hot-num">4</span></button>
-        <button class="map-hot" data-area="flooded"   style="left:47%;top:46%;width:21%;height:18%"><span class="hot-num">5</span></button>
-        <button class="map-hot" data-area="eastern"   style="left:69%;top:43%;width:29%;height:23%"><span class="hot-num">6</span></button>
-        <button class="map-hot" data-area="alcove"    style="left:2%;top:68%;width:20%;height:28%"><span class="hot-num">7</span></button>
-        <button class="map-hot" data-area="web"       style="left:25%;top:67%;width:45%;height:25%"><span class="hot-num">8</span></button>
-        <button class="map-hot" data-area="dock"      style="left:55%;top:90%;width:43%;height:9%"><span class="hot-num">9</span></button>
+        <button class="map-hot" data-area="spore-nw"    style="left:7%;top:1%;width:20%;height:16%"><span class="hot-num">1</span></button>
+        <button class="map-hot" data-area="spore-main"  style="left:35%;top:4%;width:63%;height:30%"><span class="hot-num">2</span></button>
+        <button class="map-hot" data-area="warehouse"   style="left:22%;top:18%;width:16%;height:16%"><span class="hot-num">3</span></button>
+        <button class="map-hot" data-area="west-pools"  style="left:1%;top:34%;width:19%;height:17%"><span class="hot-num">4</span></button>
+        <button class="map-hot" data-area="central"     style="left:16%;top:36%;width:36%;height:15%"><span class="hot-num">5</span></button>
+        <button class="map-hot" data-area="mid-chamber" style="left:59%;top:42%;width:14%;height:8%"><span class="hot-num">6</span></button>
+        <button class="map-hot" data-area="ne-chamber"  style="left:75%;top:41%;width:16%;height:9%"><span class="hot-num">7</span></button>
+        <button class="map-hot" data-area="mid-passage" style="left:47%;top:58%;width:10%;height:20%"><span class="hot-num">8</span></button>
+        <button class="map-hot" data-area="flooded"     style="left:53%;top:55%;width:20%;height:13%"><span class="hot-num">9</span></button>
+        <button class="map-hot" data-area="east-rooms"  style="left:86%;top:54%;width:14%;height:17%"><span class="hot-num">10</span></button>
+        <button class="map-hot" data-area="sigil-room"  style="left:16%;top:70%;width:17%;height:12%"><span class="hot-num">11</span></button>
+        <button class="map-hot" data-area="corridors"   style="left:31%;top:76%;width:43%;height:14%"><span class="hot-num">12</span></button>
+        <button class="map-hot" data-area="circle-room" style="left:2%;top:84%;width:15%;height:10%"><span class="hot-num">13</span></button>
+        <button class="map-hot" data-area="dock"        style="left:62%;top:92%;width:37%;height:8%"><span class="hot-num">14</span></button>
       </div>
       <button class="map-toggle" id="mapToggle" type="button">Hide areas</button>
       <div class="map-detail" id="mapDetail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
@@ -317,15 +322,20 @@
 <!-- Per-page area notes for the clickable map; behaviour lives in gm.js. -->
 <script>
 window.GM_MAP_AREAS = {
-  spore:     { n: '1 · The Spore Field (Egg Clusters)', t: '<p>The glowing ceiling-carpet of egg clusters. <i>Placeholder.</i> Suggested source: the egg-cluster ceiling / <b>D4 · The Egg Chamber</b> (Deep Cavern tab). Write this area’s notes here, or tell me to pull the existing room text in.</p>' },
-  warehouse: { n: '2 · The Warehouse', t: '<p>The smugglers’ staging area; the cargo crate is buried here. <i>Placeholder.</i> Suggested source: <b>U1 · The Warehouse Room</b> (Upper Cavern tab).</p>' },
-  canal:     { n: '3 · The Canal Passage', t: '<p>The underground canal and the cocooned smuggler (Petra Voss). <i>Placeholder.</i> Suggested source: <b>U2 · The Canal Passage</b> (Upper Cavern tab).</p>' },
-  mainfloor: { n: '4 · The Main Cavern Floor', t: '<p>Open stone, brood spiders, cocooned figures (Davo Kenn). <i>Placeholder.</i> Suggested source: <b>U3 · The Main Cavern Floor</b> (Upper Cavern tab).</p>' },
-  flooded:   { n: '5 · The Flooded Chambers', t: '<p>Glowing pools and carved columns. <i>Placeholder.</i> Suggested source: <b>D1 · The Flooded Chambers</b> (Deep Cavern tab).</p>' },
-  eastern:   { n: '6 · The Eastern Chambers', t: '<p>The furnished eastern rooms. <i>Placeholder.</i> No existing room maps cleanly here yet — name and write it, or merge it into a neighbour.</p>' },
-  alcove:    { n: '7 · The Ritual Alcove', t: '<p>The glowing floor-sigil chamber and the circular room below it. <i>Placeholder.</i> Possible pre-smuggler ritual space; tie to the statue-culture thread or write fresh.</p>' },
-  web:       { n: '8 · The Web Approaches', t: '<p>The silk-walled killing ground (Corin’s body; Lena Marsh embedded). <i>Placeholder.</i> Suggested source: <b>D3 · The Web Approaches</b> (Deep Cavern tab).</p>' },
-  dock:      { n: '9 · The Statue Dock', t: '<p>The stone dock, the statues, and the boat exit. <i>Placeholder.</i> Suggested source: <b>D2 · The Statue Room</b> (Deep Cavern tab).</p>' }
+  'spore-nw':    { n: '1 · Spore Cluster (NW)', t: '<p>The north-west patch of the egg-cluster ceiling. <i>Placeholder.</i> Part of the egg-covered ceiling (see <b>D4 · The Egg Chamber</b>). Write this area’s notes here, or tell me to pull the existing room text in.</p>' },
+  'spore-main':  { n: '2 · The Spore Field', t: '<p>The main glowing ceiling-carpet of egg clusters. <i>Placeholder.</i> Suggested source: <b>D4 · The Egg Chamber</b> (Deep Cavern tab).</p>' },
+  'warehouse':   { n: '3 · The Warehouse', t: '<p>The smugglers’ staging area; the cargo crate is buried here. <i>Placeholder.</i> Suggested source: <b>U1 · The Warehouse Room</b> (Upper Cavern tab).</p>' },
+  'west-pools':  { n: '4 · The West Pools', t: '<p>The left-edge water pools / canal head. <i>Placeholder.</i> Likely the <b>U2 · Canal Passage</b> approach (Upper Cavern tab).</p>' },
+  'central':     { n: '5 · The Main Cavern Floor', t: '<p>Open central chambers with debris and cocooned figures (Davo Kenn). <i>Placeholder.</i> Suggested source: <b>U3 · The Main Cavern Floor</b> (Upper Cavern tab).</p>' },
+  'mid-chamber': { n: '6 · The Workshop Chamber', t: '<p>A small central chamber (crates / work tables). <i>Placeholder.</i> Possibly <b>U4 · The Workshop Area</b> (Upper Cavern tab).</p>' },
+  'ne-chamber':  { n: '7 · North-East Chamber', t: '<p>A chamber on the upper-right shelf. <i>Placeholder.</i> Name and write it, or tie it to a neighbour.</p>' },
+  'mid-passage': { n: '8 · The Central Passage', t: '<p>The tall central passage running down toward the deep cavern. <i>Placeholder.</i> Part of the <b>D3 · Web Approaches</b> run (Deep Cavern tab).</p>' },
+  'flooded':     { n: '9 · The Flooded Chambers', t: '<p>Glowing pools and carved columns. <i>Placeholder.</i> Suggested source: <b>D1 · The Flooded Chambers</b> (Deep Cavern tab).</p>' },
+  'east-rooms':  { n: '10 · The Eastern Rooms', t: '<p>The furnished eastern chambers (statues). <i>Placeholder.</i> May be part of <b>D2 · The Statue Room</b> (Deep Cavern tab).</p>' },
+  'sigil-room':  { n: '11 · The Sigil Room', t: '<p>The glowing floor-sigil chamber on the west. <i>Placeholder.</i> Pre-smuggler ritual space; tie to the statue-culture thread.</p>' },
+  'corridors':   { n: '12 · The Web Approaches', t: '<p>The silk-walled corridor maze (Corin’s body; Lena Marsh embedded). <i>Placeholder.</i> Suggested source: <b>D3 · The Web Approaches</b> (Deep Cavern tab).</p>' },
+  'circle-room': { n: '13 · The Circle Room', t: '<p>The circular ritual room, bottom-west. <i>Placeholder.</i> Pre-smuggler; tie to the statue-culture thread or write fresh.</p>' },
+  'dock':        { n: '14 · The Statue Dock', t: '<p>The stone dock, the statues, and the boat exit. <i>Placeholder.</i> Suggested source: <b>D2 · The Statue Room</b> (Deep Cavern tab).</p>' }
 };
 </script>
 
