@@ -56,22 +56,32 @@ def discover_packs():
     return packs
 
 
+EQUIPMENT_PACK = PACKS_ROOT + "/equipment"
+
+
 def main():
     ensure_repo()
     packs = discover_packs()
     if not packs:
         sys.exit("No creature packs discovered under packs/; check the repo layout.")
-    git("-C", REPO, "sparse-checkout", "set", *packs)
+    git("-C", REPO, "sparse-checkout", "set", *packs, EQUIPMENT_PACK)
     git("-C", REPO, "checkout")
-    print(f"Sparse-checked-out {len(packs)} creature packs.")
+    print(f"Sparse-checked-out {len(packs)} creature packs + equipment.")
 
+    # 1. creatures -> bestiary.db
     pack_dirs = [os.path.join(REPO, p.replace("/", os.sep)) for p in packs]
     cmd = [sys.executable, os.path.join(HERE, "build_db.py"),
            "--packs", *pack_dirs, "--out", os.path.join(HERE, "bestiary.db")]
     if os.path.isdir(HOMEBREW):
         cmd += ["--homebrew", HOMEBREW]
     subprocess.run(cmd, check=True)
-    print("Rebuild complete: bestiary.db")
+
+    # 2. equipment -> items.db
+    eq_dir = os.path.join(REPO, EQUIPMENT_PACK.replace("/", os.sep))
+    subprocess.run([sys.executable, os.path.join(HERE, "build_items.py"),
+                    "--packs", eq_dir, "--out", os.path.join(HERE, "items.db")],
+                   check=True)
+    print("Rebuild complete: bestiary.db + items.db")
 
 
 if __name__ == "__main__":

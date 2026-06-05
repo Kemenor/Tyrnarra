@@ -1,28 +1,30 @@
 # pf2e-prep
 
-A static, rebuildable PF2e creature index for thematic encounter prep. Built so
-Claude Code can search the bestiary by theme and draft encounters to a precise
-PF2e budget that you then tweak by hand.
+A static, rebuildable PF2e index for thematic session prep. Built so Claude Code
+can search the bestiary by theme and draft encounters to a precise PF2e budget,
+and search the equipment list by theme to assemble level-gated loot, all from
+real data that you then tweak by hand.
 
 ## How it fits together
 
 ```
-foundry pf2e repo  ─┐
-                    ├─> build_db.py ─> bestiary.db ─> encounter.py (search + build)
-homebrew/*.json   ─┘     (SQLite + FTS5)
+                  ┌─> build_db.py    ─> bestiary.db ─> encounter.py (search + build)
+foundry pf2e repo ─┤     (creatures)
+                  └─> build_items.py ─> items.db    ─> loot.py (search; treasure-build planned)
+homebrew/*.json ───────^ (creatures only)         all SQLite + FTS5
 ```
 
-- **bestiary.db** is a static snapshot. Nothing queries the network at prep time.
-- **rebuild.py** is the prestart/cron hook: it syncs the Foundry repo and
-  rebuilds the DB from official packs + your homebrew. Cross-platform (no bash),
+- **bestiary.db / items.db** are static snapshots. Nothing queries the network at prep time.
+- **rebuild.py** is the prestart/cron hook: it syncs the Foundry repo and rebuilds
+  both DBs from official packs + your homebrew. Cross-platform (no bash),
   reproducible and offline after the first sync. It discovers creature packs from
-  the git tree (every bestiary, Monster Core, NPC gallery), so new AP/Lost Omens
-  packs are picked up automatically.
+  the git tree (every bestiary, Monster Core, NPC gallery) plus the `equipment`
+  pack, so new AP/Lost Omens packs are picked up automatically.
 
 ## Setup
 
 ```bash
-python rebuild.py     # first run clones + builds (~6k creatures); later runs pull + rebuild
+python rebuild.py     # first run clones + builds (~6k creatures, ~5.6k items); later runs pull + rebuild
 ```
 
 The full official set overlaps itself (legacy Bestiary 1-3 vs. Monster Core).
@@ -86,6 +88,37 @@ name-only families (mephit, sphinx, naga, hydra, wisp).
 candidates, the authoritative sheet (Perception, saves, attacks, exact damage)
 lives in that creature's JSON under `_sources/` — read it for the real numbers
 rather than trusting anything not in the DB.
+
+## Loot (items.db / loot.py)
+
+The equipment counterpart: ~5.6k items (weapons, armor, consumables, treasure...)
+with real level, price, type, traits and rarity, so loot can be themed and
+level-gated against actual data.
+
+```bash
+python loot.py search --text "fire OR flame" --permanent --level 1-5
+python loot.py search --type weapon --category martial --group sword --price-max 100
+python loot.py search --type consumable --text healing --level 1-3 -v
+```
+
+| Filter | Meaning |
+|---|---|
+| `--type` | `weapon`/`armor`/`shield`/`equipment`/`consumable`/`ammo`/`treasure`; repeatable => OR |
+| `--level lo-hi` | item level range |
+| `--price-min` / `--price-max` | price band, in **gp** |
+| `--trait` / `--not-trait` | exact trait include (ANDed) / exclude; repeatable |
+| `--rarity` | common / uncommon / rare / unique |
+| `--category` | weapon `simple`/`martial`/`advanced`, armor `light`/`medium`/`heavy`, elixir... |
+| `--group` | `sword` / `bow` / `plate`... |
+| `--permanent` / `--consumable` | kept-vs-spent split |
+| `--source` | publication title (substring) |
+| `--text` | fuzzy FTS5 over name / traits / flavor |
+| `--json` / `-v` | JSON output / print traits inline |
+
+**Planned (Phase B):** a `loot.py build` treasure-budget builder over the GM Core
+Treasure-by-Level table (permanent/consumable/currency split scaled by party
+size), assembling a themed basket from `search`. Pending sign-off on the table
+constants so the math is exact, like the encounter budgets.
 
 ## Adding Tyrnarra / Azkataria homebrew
 
