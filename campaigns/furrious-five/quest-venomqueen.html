@@ -20,6 +20,19 @@
   .ability-list { list-style: none; margin-top: 8px; }
   .ability-list li { padding: 8px 0; border-top: 1px solid var(--gm-divider); font-size: 0.92rem; line-height: 1.65; }
   .ability-name { font-family: 'Cinzel', serif; color: var(--gm-accent); font-size: 0.92rem; }
+  /* ── Clickable cavern map ── */
+  .map-hint { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin: 10px 0; }
+  .map-wrap { position: relative; max-width: 800px; margin: 6px auto 0; line-height: 0; }
+  .map-wrap > img { width: 100%; height: auto; display: block; border: 1px solid var(--gm-divider); border-radius: 5px; }
+  .map-hot { position: absolute; margin: 0; padding: 0; background: rgba(106,166,200,0); border: 1.5px solid rgba(106,166,200,0); border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; }
+  .map-wrap.show-areas .map-hot, .map-hot:hover { background: rgba(106,166,200,0.16); border-color: rgba(106,166,200,0.65); }
+  .map-hot.active { background: rgba(194,72,60,0.22); border-color: var(--gm-accent); }
+  .map-hot .hot-num { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #fff; background: rgba(16,18,24,0.72); border: 1px solid rgba(255,255,255,0.45); border-radius: 50%; min-width: 22px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; opacity: 0.8; }
+  .map-hot:hover .hot-num, .map-hot.active .hot-num { opacity: 1; }
+  .map-toggle { display: block; margin: 12px auto 0; font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); background: rgba(200,160,74,0.08); border: 1px solid var(--gm-divider); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
+  .map-toggle:hover { color: var(--gm-ink-bright); border-color: var(--gm-gold-dim); }
+  .map-detail { max-width: 800px; margin: 18px auto 0; min-height: 40px; }
+  .map-detail-empty { font-style: italic; color: var(--gm-ink-dim); text-align: center; }
 </style>
 </head>
 <body data-page="quest-venomqueen">
@@ -47,6 +60,7 @@
 
   <div class="gm-tabs">
     <button class="gm-tab-btn active" data-target="tab-hook">The Hook</button>
+    <button class="gm-tab-btn" data-target="tab-map">Cavern Map</button>
     <button class="gm-tab-btn" data-target="tab-descent">The Descent</button>
     <button class="gm-tab-btn" data-target="tab-upper">Upper Cavern</button>
     <button class="gm-tab-btn" data-target="tab-deep">Deep Cavern</button>
@@ -88,6 +102,28 @@
         <div class="warn-label">The Queen's Intelligence</div>
         <div class="warn-text">She is not sapient. She does not speak, plan in the abstract, or have goals beyond territory, feeding, and the protection of her eggs. What she has is awareness: she knows how many creatures are in her cavern at any moment, she remembers what hurt her and what did not, she adapts her approach between encounters, and she uses her brood as extensions of her senses. By the time the party reaches her chamber, she knows exactly how many of them there are, which direction they came from, and roughly how dangerous they are. She has been preparing since they entered. She is not angry. She is efficient.</div>
       </div>
+    </div>
+  </div>
+
+  <!-- ══ CAVERN MAP ══ -->
+  <div class="gm-panel" id="tab-map">
+    <div class="section">
+      <div class="section-title">Cavern Map · Clickable Areas</div>
+      <div class="map-hint">Click a numbered area for its notes · these are placeholder areas, rename / move / fill as needed</div>
+      <div class="map-wrap" id="mapWrap">
+        <img src="/campaigns/furrious-five/assets/maps/cavern-of-the-venom-queen.jpg" alt="Cavern of the Venom Queen battlemap (downsized reference)">
+        <button class="map-hot" data-area="spore"     style="left:31%;top:3%;width:65%;height:33%"><span class="hot-num">1</span></button>
+        <button class="map-hot" data-area="warehouse" style="left:14%;top:14%;width:18%;height:14%"><span class="hot-num">2</span></button>
+        <button class="map-hot" data-area="canal"     style="left:0%;top:38%;width:12%;height:40%"><span class="hot-num">3</span></button>
+        <button class="map-hot" data-area="mainfloor" style="left:17%;top:44%;width:29%;height:23%"><span class="hot-num">4</span></button>
+        <button class="map-hot" data-area="flooded"   style="left:47%;top:46%;width:21%;height:18%"><span class="hot-num">5</span></button>
+        <button class="map-hot" data-area="eastern"   style="left:69%;top:43%;width:29%;height:23%"><span class="hot-num">6</span></button>
+        <button class="map-hot" data-area="alcove"    style="left:2%;top:68%;width:20%;height:28%"><span class="hot-num">7</span></button>
+        <button class="map-hot" data-area="web"       style="left:25%;top:67%;width:45%;height:25%"><span class="hot-num">8</span></button>
+        <button class="map-hot" data-area="dock"      style="left:55%;top:90%;width:43%;height:9%"><span class="hot-num">9</span></button>
+      </div>
+      <button class="map-toggle" id="mapToggle" type="button">Show all areas</button>
+      <div class="map-detail" id="mapDetail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
     </div>
   </div>
 
@@ -290,6 +326,42 @@
   <div class="gm-footer">THE FURRIOUS FIVE · BELOW THE QUIET DOCKS · NOT PLAYER-FACING</div>
 
 </div>
+
+<script>
+(function () {
+  var AREAS = {
+    spore:     { n: '1 · The Spore Field (Egg Clusters)', t: 'The glowing ceiling-carpet of egg clusters. <i>Placeholder.</i> Suggested source: the egg-cluster ceiling / <b>D4 · The Egg Chamber</b> (Deep Cavern tab). Write this area’s notes here, or tell me to pull the existing room text in.' },
+    warehouse: { n: '2 · The Warehouse', t: 'The smugglers’ staging area; the cargo crate is buried here. <i>Placeholder.</i> Suggested source: <b>U1 · The Warehouse Room</b> (Upper Cavern tab).' },
+    canal:     { n: '3 · The Canal Passage', t: 'The underground canal and the cocooned smuggler (Petra Voss). <i>Placeholder.</i> Suggested source: <b>U2 · The Canal Passage</b> (Upper Cavern tab).' },
+    mainfloor: { n: '4 · The Main Cavern Floor', t: 'Open stone, brood spiders, cocooned figures (Davo Kenn). <i>Placeholder.</i> Suggested source: <b>U3 · The Main Cavern Floor</b> (Upper Cavern tab).' },
+    flooded:   { n: '5 · The Flooded Chambers', t: 'Glowing pools and carved columns. <i>Placeholder.</i> Suggested source: <b>D1 · The Flooded Chambers</b> (Deep Cavern tab).' },
+    eastern:   { n: '6 · The Eastern Chambers', t: 'The furnished eastern rooms. <i>Placeholder.</i> No existing room maps cleanly here yet — name and write it, or merge it into a neighbour.' },
+    alcove:    { n: '7 · The Ritual Alcove', t: 'The glowing floor-sigil chamber and the circular room below it. <i>Placeholder.</i> Possible pre-smuggler ritual space; tie to the statue-culture thread or write fresh.' },
+    web:       { n: '8 · The Web Approaches', t: 'The silk-walled killing ground (Corin’s body; Lena Marsh embedded). <i>Placeholder.</i> Suggested source: <b>D3 · The Web Approaches</b> (Deep Cavern tab).' },
+    dock:      { n: '9 · The Statue Dock', t: 'The stone dock, the statues, and the boat exit. <i>Placeholder.</i> Suggested source: <b>D2 · The Statue Room</b> (Deep Cavern tab).' }
+  };
+  var detail = document.getElementById('mapDetail');
+  var wrap = document.getElementById('mapWrap');
+  var toggle = document.getElementById('mapToggle');
+  document.querySelectorAll('.map-hot').forEach(function (h) {
+    h.addEventListener('click', function () {
+      document.querySelectorAll('.map-hot.active').forEach(function (x) { x.classList.remove('active'); });
+      h.classList.add('active');
+      var a = AREAS[h.getAttribute('data-area')];
+      if (a && detail) {
+        detail.innerHTML = '<div class="section-title">' + a.n + '</div><div class="prose"><p>' + a.t + '</p></div>';
+        detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+  if (toggle && wrap) {
+    toggle.addEventListener('click', function () {
+      var on = wrap.classList.toggle('show-areas');
+      toggle.textContent = on ? 'Hide areas' : 'Show all areas';
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
