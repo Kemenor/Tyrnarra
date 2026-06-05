@@ -4,3 +4,5 @@
 #   - settings.local.json: local permission grants, not meant to be shared.
 .claude/settings.local.json
 *.local.json
+#   - transient runtime state (lock files, etc.)
+.claude/*.lock
