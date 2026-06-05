@@ -7,7 +7,7 @@ How the persistent sidebar on every page is built and how to extend it.
 ## How it works
 
 - The sidebar structure lives in `/assets/site-nav.js`. **Every section is a data-driven array** of `{ slug, label, href, children }` nodes, rendered by the recursive `buildAccordionRow`; there is no hand-written `<li>` nav markup anymore. One array per section:
-  - **`WORLD_PAGES`**: World & Cosmos (the 13 Bound Gods, Non-Bound Gods → Bolverk, the Gods' Law, Magic, PF2e Registrar).
+  - **`WORLD_PAGES`**: World & Cosmos. A **Gods & Powerful Beings** group (→ `gods.html` hub) nests the four divine-roster pages by planar layer: The Primordials (Prelife), The 13 Bound Gods (Material), Layer-3 Gods (Postlife), and Bolverk (the Abyss megacity). Alongside it sit the Gods' Law, Magic, and PF2e Registrar.
   - **`TALAN_PAGES`**: continent-level reference pages (Maps, History, The Binding, Ancestries, Historical).
   - **`DOMAINS`**: the 13 god-domains and their promoted sub-regions / settlements.
   - **`FACTION_PAGES`**: the cross-domain organisations.

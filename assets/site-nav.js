@@ -107,9 +107,11 @@
   // The section header links to the Cosmology landing (index.html),
   // so that page is not repeated as a leaf here.
   var WORLD_PAGES = [
-    { slug: 'gods',           label: 'The 13 Bound Gods',           href: '/grand-gods.html',     children: [] },
-    { slug: 'non-bound-gods', label: 'Non-Bound Gods &amp; Beings', href: '/non-bound-gods.html', children: [
-      { slug: 'bolverk', label: 'Bolverk &middot; the Megacity in Abyss', href: '/bolverk.html', children: [] }
+    { slug: 'gods-hub', label: 'Gods &amp; Powerful Beings', href: '/gods.html', children: [
+      { slug: 'primordials',  label: 'The Primordials &middot; Prelife',      href: '/primordials.html',  children: [] },
+      { slug: 'gods',         label: 'The 13 Bound Gods &middot; Material',    href: '/grand-gods.html',   children: [] },
+      { slug: 'layer-3-gods', label: 'Layer-3 Gods &middot; Postlife',        href: '/layer-3-gods.html', children: [] },
+      { slug: 'bolverk',      label: 'Bolverk &middot; the Megacity in Abyss', href: '/bolverk.html',      children: [] }
     ]},
     { slug: 'gods-law',       label: 'The Gods&rsquo; Law',         href: '/gods-law.html',       children: [] },
     { slug: 'magic',          label: 'Magic &amp; Faith',           href: '/magic.html',          children: [] },
