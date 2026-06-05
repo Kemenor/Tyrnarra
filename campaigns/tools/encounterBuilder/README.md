@@ -115,10 +115,25 @@ python loot.py search --type consumable --text healing --level 1-3 -v
 | `--text` | fuzzy FTS5 over name / traits / flavor |
 | `--json` / `-v` | JSON output / print traits inline |
 
-**Planned (Phase B):** a `loot.py build` treasure-budget builder over the GM Core
-Treasure-by-Level table (permanent/consumable/currency split scaled by party
-size), assembling a themed basket from `search`. Pending sign-off on the table
-constants so the math is exact, like the encounter budgets.
+### Treasure builder
+
+```bash
+python loot.py build --party-level 5 --party-size 4 --text "fire cult"      # a full level's haul
+python loot.py build --party-level 8 --party-size 5 --share 0.33 --seed 1    # a third of the level
+python loot.py build --party-level 3 --value 250                            # absolute gp target
+```
+
+Assembles a themed haul to a target value: `--share` is a fraction of the level's
+treasure (from `TREASURE_BY_LEVEL`, party-size scaled); `--value` sets gp directly.
+Both halves follow the GM Core spread (2x level+1, 2x level, +/-1 item per PC off 4):
+permanent items (held to `--perm-share`, default 0.5, of the target) then consumables
+(type=consumable only), each a real level-appropriate pick priced from `items.db`;
+coins absorb the remainder so the haul lands on target. Theme it with `--text /
+--trait / --not-trait / --rarity / --source`; `--seed` reproduces; `--json` for structured.
+
+> The `TREASURE_BY_LEVEL` table at the top of `loot.py` is the one set of typed-in
+> constants (party-of-4 total per level). It's marked **VET THESE** — confirm the
+> column against GM Core before trusting a haul's absolute value.
 
 ## Adding Tyrnarra / Azkataria homebrew
 

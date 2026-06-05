@@ -62,7 +62,7 @@ function buildBeingCard(being, gridId) {
         <div class="exp-text">${being.nature}</div>
       </div>
       <div class="exp-section">
-        <div class="exp-label">GM Note</div>
+        <div class="exp-label">Of Note</div>
         <div class="exp-text" style="color:var(--text-dim);font-style:italic">${being.note}</div>
       </div>
       ${being.secret ? `
@@ -89,6 +89,18 @@ function buildBeingCard(being, gridId) {
 
   grid.appendChild(card);
 }
+
+// ── Honour an inbound #fragment after deferred card render ─────
+// Cards inject on DOMContentLoaded (the builders load via `defer`),
+// which is after the browser's initial scroll-to-fragment attempt,
+// so a cross-page link like voroir-daua.html → layer-3-gods.html#epairima
+// lands at the top of the page on cold navigation. Re-scroll once the
+// cards exist. Runs on `load`, after every page's build calls have fired.
+window.addEventListener('load', function () {
+  if (!location.hash) return;
+  var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (el) el.scrollIntoView();
+});
 
 function buildDemonCard(d, gridId) {
   const grid = document.getElementById(gridId);

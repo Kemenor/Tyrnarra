@@ -14,7 +14,19 @@ Examples:
 """
 import argparse
 import json
+import random
 import sqlite3
+
+# --- PF2e treasure tables (GM Core) -----------------------------------------
+# Total treasure value gained per character level, for a party of 4. VET THESE.
+TREASURE_BY_LEVEL = {
+    1: 175, 2: 300, 3: 500, 4: 850, 5: 1350, 6: 2000, 7: 2900, 8: 4000,
+    9: 5700, 10: 8000, 11: 11500, 12: 16500, 13: 25000, 14: 36500, 15: 54500,
+    16: 82500, 17: 128000, 18: 208000, 19: 355000, 20: 490000,
+}
+# Canonical permanent-item spread per level: two at level+1, two at level.
+# (One extra at `level` per PC above 4; one fewer per PC below.)
+PERM_PATTERN = [1, 1, 0, 0]  # offsets from party level
 
 
 def connect(db):
@@ -81,6 +93,75 @@ def search(con, item_type=None, traits=None, not_traits=None, level=None,
     return [dict(r) for r in con.execute(sql, join_params + where_params)]
 
 
+def build(con, party_level, party_size=4, share=None, value=None,
+          perm_share=0.5, seed=None, **filters):
+    """Assemble a themed treasure haul to a target value.
+
+    Both halves follow the GM Core spread (2x level+1, 2x level, +/-1 per PC off
+    4): permanent items, then consumables (type=consumable only, so ammo/gems are
+    excluded), each a real level-appropriate pick priced from item data. Permanent
+    items are held to ~perm_share of the target so they don't eat the haul; coins
+    absorb the remainder. `filters` are theme filters (text/trait/rarity/source).
+    """
+    rng = random.Random(seed)
+    cap = lambda lv: max(0, min(20, lv))
+    if value is not None:
+        target = float(value)
+    else:
+        base = TREASURE_BY_LEVEL[party_level] * (share if share is not None else 1.0)
+        target = base * (party_size / 4)
+    target_cp = round(target * 100)
+
+    # Item slots (offsets from party level), scaled by party size.
+    offsets = list(PERM_PATTERN)
+    extra = party_size - 4
+    if extra > 0:
+        offsets += [0] * extra
+    elif extra < 0:
+        offsets = offsets[:max(1, len(offsets) + extra)]
+
+    def pick(lv, budget, item_type, consumable):
+        last = []
+        for lo in (lv, lv - 1, lv - 2, lv - 3):      # relax downward if theme is thin
+            pool = [p for p in search(con, item_type=item_type, level=(cap(lo), cap(lv)),
+                                      consumable=consumable, limit=400, **filters)
+                    if p["price_cp"]]
+            if pool:
+                last = pool
+                afford = [p for p in pool if p["price_cp"] <= budget]
+                if afford:
+                    return rng.choice(afford)
+        return min(last, key=lambda p: p["price_cp"]) if last else None
+
+    # Permanent items, each capped near an even slice of the permanent portion.
+    perm_slot = max(100, round(target_cp * perm_share / max(1, len(offsets))))
+    perms = [pick(party_level + off, perm_slot, None, False) for off in offsets]
+    perms = [p for p in perms if p]
+    perm_spent = sum(p["price_cp"] for p in perms)
+
+    # Consumables: same slot spread, type=consumable only (no ammo/treasure spam).
+    cons = [pick(party_level + off, 10 ** 12, ["consumable"], None) for off in offsets]
+    cons = [c for c in cons if c]
+    cons_spent = sum(c["price_cp"] for c in cons)
+
+    coin_cp = max(0, target_cp - perm_spent - cons_spent)
+    total_cp = perm_spent + cons_spent + coin_cp
+
+    def agg(picks):
+        out = {}
+        for p in picks:
+            e = out.setdefault(p["slug"], {"item": p, "n": 0})
+            e["n"] += 1
+        return [{"name": v["item"]["name"], "level": v["item"]["level"],
+                 "type": v["item"]["item_type"], "count": v["n"],
+                 "price": gp(v["item"]["price_cp"]), "source": v["item"]["source"]}
+                for v in out.values()]
+
+    return {"target": gp(target_cp), "total": gp(total_cp),
+            "fill_pct": round(100 * total_cp / target_cp) if target_cp else 0,
+            "currency": gp(coin_cp), "permanent": agg(perms), "consumables": agg(cons)}
+
+
 def parse_level(s):
     if "-" in s:
         a, b = s.split("-"); return (int(a), int(b))
@@ -111,23 +192,54 @@ def main():
     s.add_argument("--json", action="store_true")
     s.add_argument("-v", "--verbose", action="store_true", help="Print traits per item.")
 
+    b = sub.add_parser("build")
+    b.add_argument("--party-level", type=int, required=True)
+    b.add_argument("--party-size", type=int, default=4)
+    b.add_argument("--share", type=float, help="Fraction of the level's treasure this haul is (default 1.0).")
+    b.add_argument("--value", type=float, help="Absolute target in gp (overrides --share).")
+    b.add_argument("--perm-share", type=float, default=0.5,
+                   help="Fraction of the target steered into permanent items (rest is consumables + coins).")
+    b.add_argument("--trait", action="append", dest="traits", help="Theme: repeatable, ANDed.")
+    b.add_argument("--not-trait", action="append", dest="not_traits")
+    b.add_argument("--rarity")
+    b.add_argument("--source")
+    b.add_argument("--text", help="Theme: fuzzy FTS5 over name/traits/flavor.")
+    b.add_argument("--seed", type=int)
+    b.add_argument("--json", action="store_true")
+
     a = ap.parse_args()
     con = connect(a.db)
 
-    consumable = True if a.consumable else (False if a.permanent else None)
-    rows = search(con, item_type=a.item_type, traits=a.traits, not_traits=a.not_traits,
-                  level=a.level, price_min=a.price_min, price_max=a.price_max,
-                  rarity=a.rarity, category=a.category, group=a.group,
-                  consumable=consumable, source=a.source, text=a.text, limit=a.limit)
+    if a.cmd == "search":
+        consumable = True if a.consumable else (False if a.permanent else None)
+        rows = search(con, item_type=a.item_type, traits=a.traits, not_traits=a.not_traits,
+                      level=a.level, price_min=a.price_min, price_max=a.price_max,
+                      rarity=a.rarity, category=a.category, group=a.group,
+                      consumable=consumable, source=a.source, text=a.text, limit=a.limit)
+        if a.json:
+            print(json.dumps(rows, indent=2)); return
+        for r in rows:
+            print(f"  L{r['level']:>2} {gp(r['price_cp']):>9}  {r['name']:<38} "
+                  f"{r['item_type']:<10} {r['rarity']:<8} {r['source']}")
+            if a.verbose and r["traits_text"]:
+                print(f"              traits: {r['traits_text']}")
+        print(f"\n{len(rows)} result(s)")
+        return
 
+    res = build(con, a.party_level, a.party_size, share=a.share, value=a.value,
+                perm_share=a.perm_share, seed=a.seed, traits=a.traits,
+                not_traits=a.not_traits, rarity=a.rarity, source=a.source, text=a.text)
     if a.json:
-        print(json.dumps(rows, indent=2)); return
-    for r in rows:
-        print(f"  L{r['level']:>2} {gp(r['price_cp']):>9}  {r['name']:<38} "
-              f"{r['item_type']:<10} {r['rarity']:<8} {r['source']}")
-        if a.verbose and r["traits_text"]:
-            print(f"              traits: {r['traits_text']}")
-    print(f"\n{len(rows)} result(s)")
+        print(json.dumps(res, indent=2)); return
+    print(f"\nTreasure for {a.party_size}x level {a.party_level}  |  target {res['target']}, "
+          f"assembled {res['total']} ({res['fill_pct']}%)\n")
+    print("  Permanent:")
+    for m in res["permanent"]:
+        print(f"    {m['count']}x  L{m['level']:>2}  {m['price']:>9}  {m['name']:<36} {m['source']}")
+    print("  Consumables:")
+    for m in res["consumables"]:
+        print(f"    {m['count']}x  L{m['level']:>2}  {m['price']:>9}  {m['name']:<36} {m['source']}")
+    print(f"  Coins: {res['currency']}\n")
 
 
 if __name__ == "__main__":
