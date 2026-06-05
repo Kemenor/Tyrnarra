@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millhaven · Lautara · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style-b.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #5aa8c8;
+    --card-bg: rgba(14,24,30,0.5);
+  }
+
+  /* Three-faces district cards: a coloured side-label per bank */
+  .faces-grid { --col-min: 250px; --grid-max: 1000px; }
+  .face-side { font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
+  .face-card.cape .face-side { color: #7fb8d8; }
+  .face-card.cape .card-name { color: #9fd0e8; }
+  .face-card.bridge .face-side { color: #b69ad8; }
+  .face-card.bridge .card-name { color: #c8b0e8; }
+  .face-card.still .face-side { color: #c8a85a; }
+  .face-card.still .card-name { color: #e0c478; }
+
+  /* Faith cards: a band naming which part of town the god holds */
+  .faith-grid { --card-pad: 16px 18px; }
+  .faith-band { font-style: italic; color: var(--gold-dim); font-size: 0.8rem; margin-bottom: 8px; }
+
+  /* River-crossing callout (left-bordered) */
+  .crossing-call { max-width: 840px; margin: 22px auto; padding: 20px 26px; background: rgba(14,28,36,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .crossing-call .cc-label { font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .crossing-call p { margin: 0 0 12px; line-height: 1.6; }
+  .crossing-call p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body data-page="millhaven">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/talan/talan.html">Talan</a><span class="sep">›</span><a href="/talan/domains/lautara/lautara.html">Lautara</a><span class="sep">›</span><span>Millhaven</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Millhaven</div>
+    <div class="page-subtitle">Lautara Settlement · The River-Border Town</div>
+    <div class="page-flavor">Two banks, three bridges, and the river drawing the line down the middle.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Plain English (modern stratum); <i>mill</i> + <i>haven</i>, a working river-crossing's plain self-description, undrifted. A market-town grown by accident, not a kingdom claiming an old name.</dd>
+    <dt>Position</dt><dd>A town of some 6,400 at the mouth of the <b>Smáa</b> on the <b>Midarra</b>'s southern shore, straddling the border river that parts the <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a> (its west bank) from <a href="/talan/domains/lautara/itsasalda/itsasalda.html"><b>Itsasalda</b></a> (its east bank); east of the Cape's bay-mouth headland and west of Itsasalda's Muino-saila ports.</dd>
+    <dt>Government</dt><dd><b>Self-governing.</b> A nineteen-seat <b>Merchant Council</b> (Cape side 8 · Stillside 8 · Bridge merchants 3, the swing vote; ten to pass) that neither the Cape's <b>Twin Lantern</b> nor Itsasalda's <b>Vordsbench</b> has ever fully drawn in.</dd>
+    <dt>Faith</dt><dd>Three parts, three gods. <b>Bikiargi</b> of the twin moons holds the <b>Cape side</b>; <b>Jianna</b> of Commerce holds the <b>Stillside</b> in her held-deal register; <b>Shuun</b> of the water holds <b>the bridges</b> and the river beneath them.</dd>
+    <dt>Character</dt><dd>
+      <i>Where the Cape's dream meets the dock that will not move</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">River-Border Town</span><span class="pill">The Drift's Edge</span><span class="pill">Merchant Council</span><span class="pill">No-Jurisdiction Bridges</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Cosmopolitan over a settled core: Cape-side <b>Halfling</b> fisher-and-inn families, Stillside dock-families and grain-handlers in the steadfast Itsasaldan temper, <b>Vishkanya</b> at the registries and the scales, a thin <b>kitsune</b> information-broker presence working the bridge trade, and the season's churn of boatmen and caravan-agents.</dd>
+    <dt>The Guild</dt><dd>The <a href="/talan/domains/lautara/millhaven/wayward-compass.html"><b>Wayward Compass</b></a>, Millhaven's Adventurers' Guild Office, sits on the central bridge under a faded gold compass-rose.</dd>
+  </dl>
+
+  <div class="crossing-call">
+    <div class="cc-label">The Crossing · the Smáa-mouth</div>
+    <p>Millhaven grew the way river-crossings grow: a mill where the water narrowed before its last run to the coast, then a waystation, then a market, then a second market for the boatmen the first market drew, and then someone roofed a tavern over the middle bridge and discovered they were printing coin. The <b>Smáa</b> is the border river itself, running down alongside the Vordfjall range to part the Dreaming Cape from Itsasalda, so a town that straddles the Smáa straddles the line between the two. Millhaven has spent its whole existence being two places that share a name and a set of bridges.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-three-faces" class="section-heading">The Three Faces</h2>
+  <div class="prose">
+    <p>Ask where someone is from in Millhaven and they answer with a bank, never the town. The two shores keep two tempers, and the bridges between them keep a third; the place is best read as three towns that agreed, grudgingly, to share a river.</p>
+  </div>
+
+  <div class="card-grid faces-grid">
+    <div class="accent-card face-card cape">
+      <div class="face-side">West bank · Dreaming Cape ground</div>
+      <div class="card-name">The Cape Side</div>
+      <p>Weathered wood and salt-stone, a fishing fleet and the boats that would rather their cargo went unlisted, dock-inns that trade on a good night's sleep. The Cape's <b>drift</b> bleeds this far east and thins as it comes, strongest in the oldest lanes the locals call the <b>Drift Quarter</b>. It keeps <b>Bikiargi</b> of the twin moons after the Cape fashion, and <b>Shuun</b> for the working water.</p>
+    </div>
+    <div class="accent-card face-card bridge">
+      <div class="face-side">The middle · no bank's ground</div>
+      <div class="card-name">The Bridges</div>
+      <p>Three bridges never built to carry this many buildings, where shops and offices and stairs that don't quite meet are cantilevered over the water and lately spilling onto pilings driven into the riverbed. A floating quarter that pays no bank's tax: the Cape claims the footings on the far bank and the Stillside claims the footings on theirs, the two claims cancel over the middle, and the bridges answer to no one at all. The <b>Wayward Compass</b> and the <b>Low Span</b> both sit here.</p>
+    </div>
+    <div class="accent-card face-card still">
+      <div class="face-side">East bank · Itsasalda ground</div>
+      <div class="card-name">The Stillside</div>
+      <p>Wider streets, taller granaries, a proper market square, and the steadfast tide-watching temper of a people whose oldest saying is <i>the king will go; the dock will not</i>. It takes its name from the plain fact that the Cape's drift dies at the river: cross the Smáa and the world holds <i>still</i> and the clocks agree again. Imported Brauogi grain is weighed here under a Reckoner's held-deal registry, and a Watcher or two of the <b>Vordsbench</b> keep the tide-count from the same windows their families have kept for lifetimes.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-drift" class="section-heading">The Drift's Edge</h2>
+  <div class="prose">
+    <p>The <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>Dreaming Cape</b></a>'s <i>drift</i>, the waking mind half-touched by dream that Moonwatch built a whole theocracy around, reaches Millhaven thinned by the distance from the Cape's heart. Here it is a fractional gap between a sound and its source; a fisherman sure he has hauled the same net twice; clocks on the Cape side that never quite agree with the clocks on the Stillside. It pools strongest in the oldest Cape-side lanes, the <b>Drift Quarter</b>, which locals avoid after dark, not for danger but for the disorientation, and it stops dead at the river, which is the whole reason the far bank is called the Stillside.</p>
+
+    <p>What causes it is genuinely disputed. Cape-side doctrine names it Bikiargi's blessing spilling east off the Cape; Stillside folk name it sea-fog, or forge-smoke off the bay, or simply <i>the Cape being the Cape</i>. The chronicle carries all of these and settles none.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · What the Drift Quarter Does to You</button>
+    <div class="legend-era-content">
+      <p>The Cape-side taverns trade on the drift as readily as they trade on fish-stew, and the tales thicken with the hour. They say a night in the Drift Quarter shows you the next morning before you live it, that two fishers once woke on the same Tuesday twice and one found a note in his own hand he had no memory of writing, that a child born in the oldest lanes answers a question a breath before it is asked and grows out of it by ten. They say the clocks on the two banks were set true to each other once, on a single bell, and have never agreed since the bridges went up, and that this is the river's doing and not the clockmaker's.</p>
+      <p>The Stillside hears all this with the patience of people whose own clocks keep fine time, and says the Cape would sell you the fog if it could bottle it. What everyone agrees on, Cape side and Stillside both, is that you do not make firm plans in the Drift Quarter past noon, and you do not go looking for the morning before it comes to find you.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The River Drinks From the Same Well</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What the Drift Actually Is</div>
+      <p class="secret-reveal">Millhaven's drift is the Dreaming Cape's drift, and the Cape's drift is <b>Wellspring-residue</b>. The subsurface <b>Stillpool-river</b> that suffuses the Cape (see <a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html">the Dreaming Cape</a>, <i>The Real History</i>) runs its eastern margin near enough to the surface under Millhaven's Cape bank to produce the thinned drift the town lives with.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">a Stillpool drawn into a flow</span>
+        <span class="secret-pill">strong in the Drift Quarter</span>
+        <span class="secret-pill">dead across the Smáa</span>
+        <span class="secret-pill">the Compact's blind spot</span>
+      </div>
+
+      <div class="prose" style="margin-top:14px;">
+        <p>Millhaven sits at the residue's fading edge: strong in the Drift Quarter's oldest lanes, negligible across the river on the Stillside, which is exactly why the two banks' clocks disagree and why the effect stops at the water. The folk-readings (Bikiargi's blessing, sea-fog, forge-smoke) are all wrong in the same way the Cape's own are.</p>
+        <p>The structural implications follow the Cape's. Living <b>Reflections</b> are faintly drawn to the Smáa-mouth as they are to the Cape, the residue feeling to them like home; ordinary sight cannot pick them out, and Millhaven has no temple-apparatus like the Twin Lantern's to find or shelter them, so any Reflection who drifts here lives wholly unrecognised. Whether the Adventurers' Guild's sealed Stillpool atlas carries Millhaven as an edge-coordinate of the Cape's entry is open; the Wayward Compass's Guildmaster keeps the Guild's chartered silences and has never been heard to ask.</p>
+      </div>
+
+      <p class="secret-coda"><i>The town reads the drift as weather, or as blessing, or as the Cape's bad habit reaching across the water. None of them are looking down.</i></p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-merchant-council" class="section-heading">The Merchant Council</h2>
+  <div class="prose">
+    <p>Millhaven governs its own river-crossing, and has for centuries, because neither power on the banks has ever fully closed its hand on it. Each bank answers, in the end, to its own region: the Cape side to the <b>Twin Lantern</b> at Moonwatch, the Stillside to the <b>Vordsbench</b> at Bellhalt. But the two banks are bound to each other by the bridges and the trade that crosses them, so in every matter that is actually Millhaven's the banks answer to <i>each other</i> as well, and the town runs on the muddle. Nobody is wholly sovereign and nobody pretends to be; everyone accepts the arrangement because the alternative, one region swallowing the crossing whole, suits no one on either bank and least of all the people in the middle.</p>
+
+    <p>To work the muddle the town keeps a <b>Merchant Council</b> of nineteen seats: eight to the Cape side, eight to the Stillside, three to the Bridge merchants, and ten votes to pass anything. Locked at eight apiece, neither bank carries a thing alone, so every contested ruling turns on the three Bridge seats, and the Bridge merchants love it: their swing vote and their tax-free district both run on exactly the ambiguity that everyone else calls a headache. The council is loud, slow, and quietly proud of having built a working town out of a contradiction.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · Three Parts, Three Gods</h2>
+  <div class="prose">
+    <p>The town's gods sort themselves by its three parts, and the deal struck across all of them is Jianna's whether it was blessed on her bank or not.</p>
+  </div>
+
+  <div class="card-grid faith-grid">
+    <div class="accent-card faith-card">
+      <div class="card-name">Bikiargi</div>
+      <div class="faith-band">the Cape side · the twin moons</div>
+      <p>Bikiargi of the twin moons holds the Cape side, in her paired aspect, acknowledged at the dock-inns and strongest in the Drift Quarter. Hers is the bank where the dream comes closest to the waking street.</p>
+    </div>
+    <div class="accent-card faith-card">
+      <div class="card-name">Jianna</div>
+      <div class="faith-band">the Stillside · the held deal</div>
+      <p>Jianna of Commerce, the domain's own goddess, holds the Stillside in her Itsasaldan register: the closed hand of the <i>running, kept contract</i>, the held deal blessed in its honouring rather than its striking. She is the faith of a bank that prizes the deal that does not break the way it prizes the dock that does not move.</p>
+    </div>
+    <div class="accent-card faith-card">
+      <div class="card-name">Shuun</div>
+      <div class="faith-band">the bridges · the water</div>
+      <p>Shuun of the water holds the bridges, which is only fitting, for the bridge-folk live over the river and on it, their pilings in the current and their floors above it. The Smáa is Shuun's road through the town; the fishers and barge-captains of both banks keep her too, tossing a token to the current when they retire a route.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-low-span" class="section-heading">The Low Span</h2>
+  <div class="prose">
+    <p>Under the southernmost and lowest of the three bridges runs the <b>Low Span</b>, a fighting pit grown out of a dockworkers' grudge-match forty years gone into a tiered ring with open betting, taxed in theory by the bridge district's self-appointed revenue collector. The ground-floor ring is above board: agreed rules, consenting fighters, a halfling bookkeeper who has memorised every face in the crowd and the credit behind it. Its deed is held in three names and answers a simple question of ownership three different ways, which is considered, in the bridge district, entirely normal.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · What's Below the Ring</button>
+    <div class="legend-era-content">
+      <p>Everyone in Millhaven knows the real betting is downstairs, and everyone is a little vague on how they know. The story goes that under the public ring there is a second floor reached by a trapdoor behind the bar, where the rules are fewer and the stakes are higher and the bridge district's actual business gets done across card tables; and under <i>that</i>, a third room that is not a room at all but a platform out over the river, where what is decided is decided where the current takes the sound away. Whether any of this is so, nobody who has seen it is saying, and the people who use those floors prefer the rumour to the truth, because a rumour you can deny.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wayward-compass" class="section-heading">The Wayward Compass</h2>
+  <div class="prose">
+    <p>Millhaven's <b>Guild Office</b> of the Adventurers' Guild sits on the widest of the three bridges, under a gold compass-rose sign gone slightly faded, and has held that spot since the late Dark Era. It began as a rented storage shed a party of adventurers could not stop renting and quietly bought when the owner died without heirs, and it has grown up, then out, then down onto river pilings ever since. Its Guildmaster, <b>Aldric Fenn</b>, also holds one of the three Bridge council seats and votes the Guild's chartered neutrality, which infuriates both banks equally.</p>
+  </div>
+
+  <a class="subregion-card" href="/talan/domains/lautara/millhaven/wayward-compass.html" style="display:block; max-width:840px; margin:18px auto;">
+    <div class="subregion-name">The Wayward Compass →</div>
+    <div class="subregion-etym">The Adventurers' Guild Office on the central bridge</div>
+    <div class="subregion-desc">Six centuries of guild history on a bridge that should not hold it: the storage-shed origin, the grew-up-then-out-then-down building, the maps on every wall and the trophy cases on the stairs, and the named staff a visitor meets at the desk and the bar. <b>See dedicated page.</b></div>
+    <div class="subregion-tags"><span class="subregion-tag">Guild Office</span><span class="subregion-tag">Aldric Fenn</span><span class="subregion-tag">Bridge Council Seat</span></div>
+  </a>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/talan/domains/lautara/millhaven/wayward-compass.html"><b>The Wayward Compass →</b></a> · Millhaven's Adventurers' Guild Office, on the central bridge; its building, its history, and its staff.</li>
+      <li><a href="/talan/domains/lautara/dreaming-cape/dreaming-cape.html"><b>The Dreaming Cape →</b></a> · The lunar theocracy on Millhaven's west; the source of the drift that bleeds across the Cape bank.</li>
+      <li><a href="/talan/domains/lautara/itsasalda/itsasalda.html"><b>Itsasalda →</b></a> · The harbour-region on Millhaven's east; the tide-watching temper the Stillside keeps and the Vordsbench that lightly touches it.</li>
+      <li><a href="/talan/domains/lautara/lautara.html"><b>Lautara →</b></a> · The Commerce domain overview; the silk-road plains Millhaven's grain and goods move inland to.</li>
+      <li><a href="/talan/domains/lautara/merkavar/merkavar.html"><b>Merkavar →</b></a> · The market god-city where the grain that lands at the Stillside is finally sorted and priced.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Even with the town's central canon settled, several details about Millhaven remain open · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Named council figures.</b> The Cape-side and Stillside speakers and the three Bridge merchants who actually hold the swing seats have names the town all knows; the chronicle has not yet written them down.</li>
+      <li><b>The reach of the drift.</b> Where exactly the residue rises near the surface (which Cape-side wells, which lanes, which seasons run strangest) is the lived map the Drift Quarter keeps by habit and no scholar has set down.</li>
+      <li><b>The Smáa above the town.</b> The river runs down from the Vordfjall through mills and crossings older than Millhaven; the upriver settlements that feed the grain-and-timber trade to the Stillside wharves await naming.</li>
+      <li><b>The unlisted trade.</b> The wary three-way understanding between the Stillside Watch, the Guild Office, and the Cape-side boats that move cargo no manifest lists holds precisely because none of them names it aloud; the named incidents that tested it are open.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LAUTARA · MILLHAVEN</div>
+
+</div>
+
+</body>
+</html>

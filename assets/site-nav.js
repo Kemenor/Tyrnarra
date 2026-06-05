@@ -55,6 +55,9 @@
       { slug: 'rika-tikur', label: 'Rika Tikur · the Plutocracy', href: '/talan/domains/lautara/rika-tikur/rika-tikur.html', children: [] },
       { slug: 'itsasalda', label: 'Itsasalda · The Vordsbench', href: '/talan/domains/lautara/itsasalda/itsasalda.html', children: [] },
       { slug: 'atarialda', label: 'Atarialda · Hearth-Halflings', href: '/talan/domains/lautara/atarialda/atarialda.html', children: [] },
+      { slug: 'millhaven', label: 'Millhaven · River-Border Town', href: '/talan/domains/lautara/millhaven/millhaven.html', children: [
+        { slug: 'wayward-compass', label: 'The Wayward Compass', href: '/talan/domains/lautara/millhaven/wayward-compass.html', children: [] }
+      ] },
       { slug: 'emarrea', label: 'Emarrea · Kitsune Kingdom', href: '/talan/domains/lautara/emarrea/emarrea.html', children: [
         { slug: 'heartcourt', label: 'The Heartcourt', href: '/talan/domains/lautara/emarrea/heartcourt.html', children: [] }
       ]}
