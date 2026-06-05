@@ -56,7 +56,7 @@ Some domain names in the Tyrnarra canon are **theological-flavour names**, not e
 | **Arcane Magic** | Forseti | Truth · Secrecy · Star · Glyph; the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be. |
 | **Divine Magic** | Iro & Araphel | Sun · Healing · Dust · Zeal (Iro) and Darkness · Nothingness · Protection (Araphel); the god-granted tradition at both its poles: dawn and dusk, blessing and rebirth, faith made power whether by sunlight or shadow. |
 | **Occult Magic** | Enki | Knowledge · Magic · Perfection; knowledge in all its forms, including the felt, the sung, and the told: the recipe, the lullaby, the dissertation. |
-| **Primal Magic** | The Four Elemental Gods (Sarrum · Komo · Shuun · Fisaya) | Earth · Fire · Water · Air, the substrate of the material plane. Primal magic is the four-fold balance made channelable, what every living thing is composed of. |
+| **Primal Magic** | The Four Elemental Gods (Sarrum · Komo · Shuun · Fisaya); and Jianna | Earth · Fire · Water · Air, the substrate of the material plane: Primal magic is the four-fold balance made channelable, what every living thing is composed of. Jianna carries it a step on, as civilization read as a living system: the city as an ecology, trade as the flow that feeds it, the family as the first ecology. |
 
 **The convention.** When the Tyrnarra canon uses a domain name not on the official PF2e register, treat it as Tyrnarra theological flavour for the god's PF2e-canonical portfolio. Players selecting a cleric of, say, Forseti pick from the PF2e domains Forseti grants (Truth, Secrecy, Star, Glyph). *Arcane Magic* is the in-world name Forseti's clergy use for their work, not a separate domain at character-build time.
 

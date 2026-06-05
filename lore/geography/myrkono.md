@@ -37,7 +37,7 @@ On the Shadow Steppes the two peoples are the two halves of one watch: the Eizha
 
 Seven monumental relics forged at the end of the Age of Corruption. Together they **bind the Corrupted God deep beneath the earth**, anchoring the chains of divine law sealed at the Week of Crimson Rain (see [`../cosmology.md`](../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity* and the *Age of Corruption: Mortal Myth* in [`../timeline.md`](../timeline.md)).
 
-**Geography.** All seven Wardstones rest in Araphel's domain (Myrkono), distributed across four of its sub-regions: three "kingdoms" and one divine city-state. The geographic concentration is not accidental: Araphel was the first Grand God to stand with Cronus, and the binding was anchored under his watch. The chains of the bound run through *his* domain.
+**Geography.** All seven Wardstones rest in Araphel's domain (Myrkono), distributed across four of its sub-regions: three "kingdoms" and one divine city-state. The geographic concentration is not accidental: the adventurer-fellowship that bound the Corrupted God was raised out of **Myrria**, the City of Second Chances, and the binding was anchored under Araphel's watch (he was the first Grand God to stand with Cronus). The chains of the bound run through *his* domain.
 
 | # | Wardstone | Location | Description |
 |---|---|---|---|

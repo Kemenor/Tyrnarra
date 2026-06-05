@@ -2,11 +2,11 @@
 
 **Borders:** Floteyn, Lioaru, Lautara
 
-**Seas:** Hafra (north and west coasts) and Midarra (Burdineyja island chain; Order of Steam bay's west coast and uninhabited NW headland; Tahu Tangata's south-west bay arc).
+**Seas:** Hafra (south and west coasts) and Midarra (Burdineyja island chain; Order of Steam bay's west coast and uninhabited NW headland; Tahu Tangata's south-west bay arc).
 
 **Etymology:** Basque *su* (fire) + *mendi* (mountain) → *sumendi* (Basque word for volcano, literally fire-mountain) → drifted to *Sumendar*.
 
-**Position:** South-southwest Talan, coastal on Hafra to the north and west
+**Position:** South-southwest Talan, coastal on Hafra to the south and west
 
 **Terrain:** Very mountainous. Distinctive circular mountain ring at the center with a river encircling it. Volcanic activity: cluster of active volcanoes to the west. Sandy/steppe terrain, patches of forest. The orange-brown ridge along the southern border is a major geographical divider separating Sumendar from Lioaru.
 
@@ -42,7 +42,7 @@
 
   **Highforge Matriarch: Tharka Eisenhart.**
   - **Race:** Forge Dwarf.
-  - **Age:** 217.
+  - **Age:** 72.
   - **Titles:** Lady of the Anvil Throne, Warden of the Steel Marches, Keeper of the Furnace-Law.
   - **Profile:** Stern, unsmiling, pragmatic. Runs the House like a war campaign: ruthlessly efficient, zero tolerance for incompetence. Famous for field-testing new weapons in live combat, and once for silencing a noble critic by hurling a prototype cannonball across a boardroom table.
   - **Wears an adaptive exo-frame** (part armour, part medical brace) built after an assassination attempt that left her with lasting spinal injury.

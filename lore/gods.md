@@ -83,7 +83,7 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 
 > **Note on weapons:** these are the favoured/iconic forms in which each god is depicted. They are symbolic and ceremonial as well as practical; clergy and devoted faithful often wield them in ritual or actual combat.
 
-> **Lore-implicit magic schools.** Eight of the Thirteen carry one of the four PF2e magic-tradition names as in-world theological flavour: *Arcane Magic* (Forseti), *Divine Magic* (Iro & Araphel, the two poles), *Occult Magic* (Enki), *Primal Magic* (the four Elemental Gods collectively: Sarrum · Komo · Shuun · Fisaya). These are theological flavour, not mechanical grants; full convention and reasoning in `pf2e-notes.md`, *Lore-implicit domains*.
+> **Lore-implicit magic schools.** Nine of the Thirteen carry one of the four PF2e magic-tradition names as in-world theological flavour: *Arcane Magic* (Forseti), *Divine Magic* (Iro & Araphel, the two poles), *Occult Magic* (Enki), *Primal Magic* (the four Elemental Gods collectively: Sarrum · Komo · Shuun · Fisaya, as the elemental substrate; and Jianna, who carries Primal as what grows from that substrate when mortals build together: civilization read as a living system). These are theological flavour, not mechanical grants; full convention and reasoning in `pf2e-notes.md`, *Lore-implicit domains*.
 
 ### Vesuna: Goddess of Chaos (Female)
 - **Aspects:** Change · Creativity · Spontaneity · Madness.
@@ -95,6 +95,7 @@ Aspects, depictions, favoured weapons, and mortal perception for each Grand God.
 - **Aspects:** Trade · Wealth · Greed · Generosity.
 - **Depiction:** a **Vishkanya**, elegant, precise, with beauty that has an edge; one hand open in offering and one hand closed.
 - **Favoured weapon:** *Tamchal Chakram*, a spinning ring of edged metal, thrown and caught; the wheel of trade, profit and loss in motion.
+- **Lore-implicit school:** *Primal Magic*, civilization read as a living system: the city as an ecology, trade as the flow that feeds it, the family as the first ecology. Where the Four Elementals carry Primal as the raw substrate, Jianna carries it as what grows from that substrate when mortals decide to build together.
 - **Mortals see her as:** the market's lifeblood, honest exchange or ruthless exploitation.
 
 ### Araphel: God of Darkness (Male)
