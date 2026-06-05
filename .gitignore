@@ -6,3 +6,9 @@
 *.local.json
 #   - transient runtime state (lock files, etc.)
 .claude/*.lock
+
+# Full-resolution dungeon / battlemap sources (CzePeku and other paid assets)
+# are kept LOCAL ONLY and never published to GitHub Pages. Drop full-res
+# originals in a `_full/` subfolder under any campaign's maps/; only the
+# downsized web copies that sit directly in maps/ get committed.
+campaigns/**/assets/maps/_full/
