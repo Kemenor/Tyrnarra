@@ -1055,6 +1055,29 @@ a.accent-card {
 .see-also li a:hover { color: var(--gold-bright); }
 .see-also li a b { color: var(--gold-bright); }
 
+/* ── FEATURE PANEL ───────────────────────────────────────────
+   Narrow centred wrapper for an inline "feature" block that sits
+   in the prose flow at reading width. (Previously re-declared
+   inline, identically, on ~14 pages.) */
+.feature-panel { max-width: 880px; margin: 18px auto; }
+
+/* ── PRINCIPLE CALLOUT ───────────────────────────────────────
+   Left-bordered callout stating a polity's governing principle.
+   The left stripe carries the page's --domain-accent; the tint is
+   set per page via --call-bg (defaults to neutral dark). Markup:
+   <div class="principle-call"><div class="p-label">…</div><p>…</p></div> */
+.principle-call {
+  max-width: 780px;
+  margin: 24px auto;
+  padding: 22px 28px;
+  background: var(--call-bg, rgba(20,16,8,0.45));
+  border-left: 3px solid var(--domain-accent);
+  border-radius: 0 4px 4px 0;
+}
+.principle-call .p-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+.principle-call p { margin: 0 0 12px; line-height: 1.6; }
+.principle-call p:last-child { margin-bottom: 0; }
+
 /* ── PILL ROW (used on domain "Character" rows) ────────────── */
 
 .pill-row {
