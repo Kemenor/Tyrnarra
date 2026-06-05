@@ -42,10 +42,13 @@
   .help-list { list-style: none; font-size: 0.86rem; line-height: 1.6; color: var(--gm-ink); }
   .help-list li { padding: 2px 0 2px 14px; position: relative; }
   .help-list li::before { content: '›'; position: absolute; left: 0; color: var(--gm-gold-dim); }
-  .box-row { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-top: 1px solid var(--gm-divider); }
+  .box-row { padding: 7px 0; border-top: 1px solid var(--gm-divider); }
+  .box-row.sel { background: rgba(200,160,74,0.06); }
+  .box-row-head { display: flex; gap: 8px; align-items: center; }
   .box-row .bnum { font-family: 'Cinzel', serif; color: var(--gm-gold); width: 22px; text-align: center; flex-shrink: 0; cursor: pointer; }
   .box-row.sel .bnum { color: var(--gm-ink-bright); }
-  .box-row input { flex: 1; min-width: 0; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 4px 7px; }
+  .box-row .lbl { flex: 1; min-width: 0; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 4px 7px; }
+  .box-row .desc { width: 100%; margin-top: 5px; min-height: 36px; box-sizing: border-box; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.85rem; line-height: 1.4; padding: 5px 7px; resize: vertical; }
   .box-row .del { background: none; border: none; color: #c2766a; cursor: pointer; font-size: 0.9rem; flex-shrink: 0; }
   .box-empty { font-style: italic; color: var(--gm-ink-dim); font-size: 0.86rem; }
   textarea#json { width: 100%; height: 200px; background: rgba(0,0,0,0.3); border: 1px solid var(--gm-divider); border-radius: 4px; color: var(--gm-ink); font-family: 'Consolas','Courier New',monospace; font-size: 0.78rem; line-height: 1.45; padding: 10px; resize: vertical; }
@@ -94,7 +97,7 @@
           <li><b>Select:</b> click a box or its number in the list.</li>
           <li><b>Nudge:</b> arrow keys move; <b>Shift</b>+arrows resize.</li>
           <li><b>Delete:</b> Delete/Backspace, or the ✕ in the list.</li>
-          <li>Label each box (optional), then <b>Copy</b> or <b>Download</b> the JSON and hand it to me.</li>
+          <li>Give each box a <b>label</b> and a <b>description</b> (the feel / contents), then <b>Copy</b> or <b>Download</b> the JSON and hand it to me.</li>
         </ul>
       </div>
 
@@ -163,10 +166,10 @@
     if (e.target !== overlay) return;     // clicks on boxes/handles handled separately
     sel = -1;
     var p = pt(e);
-    boxes.push({ label: '', left: p.x, top: p.y, width: 0, height: 0 });
+    boxes.push({ label: '', desc: '', left: p.x, top: p.y, width: 0, height: 0 });
     sel = boxes.length - 1;
     drag = { mode: 'draw', startX: p.x, startY: p.y };
-    render();
+    renderAll();
     e.preventDefault();
   });
 
@@ -175,14 +178,14 @@
     sel = i;
     var p = pt(e);
     drag = { mode: 'move', startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
-    render();
+    renderBoxes(); updateRowHighlight();
   }
   function startResize(e, i, dir) {
     e.stopPropagation(); e.preventDefault();
     sel = i;
     var p = pt(e);
     drag = { mode: 'resize', dir: dir, startX: p.x, startY: p.y, init: Object.assign({}, boxes[i]) };
-    render();
+    renderBoxes(); updateRowHighlight();
   }
 
   document.addEventListener('mousemove', function (e) {
@@ -200,15 +203,16 @@
     } else if (drag.mode === 'resize') {
       applyResize(b, drag.init, drag.dir, p.x - drag.startX, p.y - drag.startY);
     }
-    render();
+    renderBoxes(); renderJSON();
   });
   document.addEventListener('mouseup', function () {
-    if (drag && drag.mode === 'draw') {
+    if (!drag) return;   // a mouseup that wasn't a box drag (e.g. clicking a label / description field) must not re-render
+    if (drag.mode === 'draw') {
       var b = boxes[sel];
       if (!b || b.width < 1 || b.height < 1) { boxes.splice(sel, 1); sel = -1; }
     }
     drag = null;
-    render();
+    renderAll();
   });
 
   function applyResize(b, init, dir, dx, dy) {
@@ -227,7 +231,7 @@
     var tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea') return;
     var b = boxes[sel], step = e.shiftKey ? 0.5 : 0.5;
-    if (e.key === 'Delete' || e.key === 'Backspace') { boxes.splice(sel, 1); sel = -1; render(); e.preventDefault(); return; }
+    if (e.key === 'Delete' || e.key === 'Backspace') { boxes.splice(sel, 1); sel = -1; renderAll(); e.preventDefault(); return; }
     var moved = true;
     if (e.shiftKey) {
       if (e.key === 'ArrowRight') b.width = clamp(b.width + step, 1, 100 - b.left);
@@ -242,11 +246,15 @@
       else if (e.key === 'ArrowUp') b.top = clamp(b.top - step, 0, 100 - b.height);
       else moved = false;
     }
-    if (moved) { render(); e.preventDefault(); }
+    if (moved) { renderBoxes(); renderJSON(); e.preventDefault(); }
   });
 
   // ── Render ──
-  function render() {
+  // render is split so that editing a label/description (which only needs
+  // renderJSON) never rebuilds the panel inputs and steals their focus.
+  function renderAll() { renderBoxes(); renderList(); renderJSON(); }
+
+  function renderBoxes() {
     Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (n) { n.remove(); });
     boxes.forEach(function (b, i) {
       var d = document.createElement('div');
@@ -264,8 +272,10 @@
       }
       overlay.appendChild(d);
     });
-    renderList();
-    renderJSON();
+  }
+
+  function updateRowHighlight() {
+    Array.prototype.slice.call(boxList.querySelectorAll('.box-row')).forEach(function (r, i) { r.classList.toggle('sel', i === sel); });
   }
 
   function renderList() {
@@ -275,26 +285,28 @@
     boxes.forEach(function (b, i) {
       var row = document.createElement('div');
       row.className = 'box-row' + (i === sel ? ' sel' : '');
-      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1;
-      num.addEventListener('click', function () { sel = i; render(); });
-      var inp = document.createElement('input'); inp.type = 'text'; inp.placeholder = 'label (optional)'; inp.value = b.label || '';
-      inp.addEventListener('input', function () { b.label = inp.value; renderJSON(); });
-      inp.addEventListener('focus', function () { sel = i; renderHighlight(); });
+      var head = document.createElement('div'); head.className = 'box-row-head';
+      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1; num.title = 'Select';
+      num.addEventListener('click', function () { sel = i; renderBoxes(); updateRowHighlight(); });
+      var lbl = document.createElement('input'); lbl.type = 'text'; lbl.className = 'lbl'; lbl.placeholder = 'label (short name)'; lbl.value = b.label || '';
+      lbl.addEventListener('focus', function () { sel = i; renderBoxes(); updateRowHighlight(); });
+      lbl.addEventListener('input', function () { b.label = lbl.value; renderJSON(); });
       var del = document.createElement('button'); del.className = 'del'; del.textContent = '✕'; del.title = 'Delete';
-      del.addEventListener('click', function () { boxes.splice(i, 1); sel = -1; render(); });
-      row.appendChild(num); row.appendChild(inp); row.appendChild(del);
+      del.addEventListener('click', function () { boxes.splice(i, 1); sel = -1; renderAll(); });
+      head.appendChild(num); head.appendChild(lbl); head.appendChild(del);
+      var desc = document.createElement('textarea'); desc.className = 'desc'; desc.placeholder = 'description · the feel / contents (optional)'; desc.value = b.desc || '';
+      desc.addEventListener('focus', function () { sel = i; renderBoxes(); updateRowHighlight(); });
+      desc.addEventListener('input', function () { b.desc = desc.value; renderJSON(); });
+      row.appendChild(head); row.appendChild(desc);
       boxList.appendChild(row);
     });
-  }
-  function renderHighlight() {
-    Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (d, i) { d.classList.toggle('sel', i === sel); });
   }
 
   function renderJSON() {
     var out = {
       image: imageName || '',
       areas: boxes.map(function (b) {
-        return { label: b.label || '', left: round(b.left), top: round(b.top), width: round(b.width), height: round(b.height) };
+        return { label: b.label || '', desc: b.desc || '', left: round(b.left), top: round(b.top), width: round(b.width), height: round(b.height) };
       })
     };
     jsonBox.value = JSON.stringify(out, null, 2);
@@ -303,7 +315,7 @@
   // ── Buttons ──
   document.getElementById('clearBtn').addEventListener('click', function () {
     if (boxes.length && !confirm('Delete all ' + boxes.length + ' boxes?')) return;
-    boxes = []; sel = -1; render();
+    boxes = []; sel = -1; renderAll();
   });
   document.getElementById('copyBtn').addEventListener('click', function () {
     jsonBox.select();
@@ -321,13 +333,13 @@
       var data = JSON.parse(jsonBox.value);
       if (data.image) { imageName = data.image; imgNameEl.textContent = data.image + ' (from JSON)'; }
       boxes = (data.areas || []).map(function (a) {
-        return { label: a.label || '', left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 };
+        return { label: a.label || '', desc: a.desc || a.note || '', left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 };
       });
-      sel = -1; render();
+      sel = -1; renderAll();
     } catch (err) { alert('Could not parse JSON: ' + err.message); }
   });
 
-  render();
+  renderAll();
 })();
 </script>
 
