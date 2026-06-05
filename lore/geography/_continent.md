@@ -37,7 +37,7 @@ Talan runs on **Magitrains**, common-place Arcanotech infrastructure. The contin
 - **Northern Talan network**: connects the northern domains and their major cities.
 - **Southern Talan network**: connects the southern domains; Sumendar (Order of Steam manufacturing) is its industrial heart.
 
-The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **ships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight; Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** serve the Cloud Sea crossing only; they are rare specialist craft, never deployed for domestic transport. Full canon in [`../cosmology.md`](../cosmology.md), *Technology: Magitech and Infrastructure*.
+The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **stillships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight; Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** serve the Cloud Sea crossing only; they are rare specialist craft, never deployed for domestic transport. Full canon in [`../cosmology.md`](../cosmology.md), *Technology: Magitech and Infrastructure*.
 
 ---
 
@@ -54,6 +54,8 @@ Both move as one. The Twin Cities answer to no god and no kingdom; they are the 
 *Etymology: Icelandic haf (ocean, open sea) → shortened and drifted to Hafra.*
 
 **The Cloud Sea**: the vast luminous white expanse beyond Hafra. Surrounds the known world. **Crossing it requires a cloudship.** The vapor will not support weight: any ordinary hull that crosses the boundary sinks fast and the crew sinks with it; a swimmer who falls in drowns the same way they would in deep water (the surrounding cloud reads as solid until they try to grip it). Cloudships (purpose-built dual-school Magitech vessels) are the only craft that cross safely. Full canon in [`../cosmology.md`](../cosmology.md), *The Cloud Sea* and *Technology: Magitech and Infrastructure*.
+
+**Sea-craft.** Talanese hulls divide by the water they are built for. A **saltkeel** is a Hafra craft: sealed and timbered against brine, deep-keeled for the open saltwater ring and its storms. A **stillship** is a Midarra craft: lighter, shallower, untreated for brine, built for the calm freshwater inner sea and its bulk runs. The split is a hull-class, independent of whether the vessel is plain wood-and-sail or Magitech. Each *can* cross onto the other sea, but poorly: a stillship pushed onto the Hafra is eaten by salt within a season and swamped far more easily by open-water swell, while a saltkeel on the Midarra rides too deep and handles heavy and slow. **Cloudships are a separate matter entirely**, the rare dual-school craft built for the Cloud Sea alone; they are never the everyday hull of either sea.
 
 ### Domain sea-access summary
 

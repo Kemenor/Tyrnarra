@@ -202,6 +202,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Surface phase boundaries rather than chaining them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions; they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
+**The GM-Vetted badge.** A page the GM has personally read through and corrected carries a **GM-Vetted** badge at the top of the page, under the title (so players see at a glance that the page is current): an HTML comment `<!-- gm-vetted: YYYY-MM-DD ... -->` plus a `<div class="gm-vetted">` pill (styled in `/assets/site-nav.css`). The badge is the visible mark that a human signed off on that page's prose. **Only the GM grants it** (when he says a page is vetted); never add or re-add a badge on your own initiative. A `PostToolUse` hook (`.claude/hooks/gm-vetted-check.ps1`, registered in `.claude/settings.json`) fires whenever a vetted `.html` page is edited and reminds you to **judge whether the edit was more than minor**. If it was a real prose, structural, or canon change, **strip the badge** (delete both the comment line and the `gm-vetted` div) so the page no longer claims a sign-off it no longer has; if it was trivial (typo, single word, whitespace, one punctuation swap), leave the badge in place. The hook only flags; the minor-vs-major call is yours, and stripping is the conservative default when unsure.
+
 **Where new content goes:**
 
 | Topic | File |

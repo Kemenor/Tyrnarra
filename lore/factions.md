@@ -217,13 +217,13 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 | **The Flesh-Sculptor** | Butcher who remakes flesh to the Corrupted God's design | Lair of stitched horrors and alchemical vats. |
 | ~~**The Ash-Binder**~~ | *Defeated.* Once a corrupted elemental beast | Lair was a volcanic furnace of stone and fire. Now scattered, but the lair still leaks dangerous slag-born remnants. The defeat is celebrated across the kingdoms as proof the Nine can fall. |
 | **The Whisperer in Dreams** | Shadowbound cultist turned nightmare-made-flesh | Temple of illusions warping dream and waking; intruders wander lost. |
-| **The Maw Serpent** | Colossal venomous serpent pulled from the world's depths | Cavern-dungeon of sinkholes, acid pools, and tunnels wide enough to swallow caravans. |
+| **The Maw Serpent** | Colossal venomous serpent pulled from the world's depths | A drowned trench-cavern beneath the **north pack-ice of Baerfrost** (Vindul): flooded sinkholes, acid-cold brine pools, and under-ice tunnels wide enough to swallow a winter-camp. **Erupted in the 2524 MR wave**; the Baerfrost clans fought the first-wave campaign (2524–2528) and **sealed it without southern help, but could not clear it.** Containment-only since, with spawn still leaking through under-ice tunnels the seal does not reach; the sealed-not-cleared General now splits the Hunt-League over whether to finish it alone or call in allies. See `geography/vindul.md`, *Baerfrost*. |
 | **The False Saint** | Once a holy woman, now a mockery of faith | Underground chapel oozing false miracles; prayers rot into curses, faithful rise as zealots of corruption. |
 | **The Root-Twister** | Beast of wild growth remade into a lord of rot | Living dungeon: an underground jungle of strangling vines, carnivorous trees, choking spores. |
 
 **Eight remain.** Each that falls delays the master's freedom. But the wrath of the remaining eight burns hotter with every loss.
 
-The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in [`geography/myrkono.md`](geography/myrkono.md); the other seven dungeons' precise locations remain TBD.
+The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in [`geography/myrkono.md`](geography/myrkono.md), and the Maw Serpent's is sited beneath the north pack-ice of Baerfrost ([`geography/vindul.md`](geography/vindul.md), *Baerfrost*); the other six dungeons' precise locations remain TBD.
 
 #### The Wardstones (counter-pressure)
 

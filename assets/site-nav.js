@@ -90,7 +90,9 @@
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/talan/domains/ehizahar/ehizahar.html', children: [
       { slug: 'fenurra', label: 'Fenurra · The Flame-Source', href: '/talan/domains/ehizahar/fenurra.html', children: [] }
     ]},
-    { slug: 'askamira', label: 'Askamira · Freedom',  href: '/talan/domains/askamira/askamira.html', children: [] }
+    { slug: 'askamira', label: 'Askamira · Freedom',  href: '/talan/domains/askamira/askamira.html', children: [
+      { slug: 'frae-city',     label: 'Frae City &middot; the Unchained City', href: '/talan/domains/askamira/frae-city/frae-city.html', children: [] }
+    ] }
   ];
 
   // ── Walk the tree for the current slug, return ancestor path ──
