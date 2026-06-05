@@ -148,3 +148,19 @@ The canon source of truth. **When the pre-read rule in [`../CLAUDE.md`](../CLAUD
 - **`off-continent.html`**: Hub. Two continent cards (Sortalde, Red Empire) + Unmapped placeholder + Hafra-vs-Cloud-Sea crossing note.
 - **`sortalde.html`**: Sortalde · *Tao Hua Yuan* · The Petal Continent. Seven-petal archipelago, Concord of Courts, six ancestral petals + central Heting seat, veil-mediated clerical theology, cloudship crossing to Emerald Isles, six Tian Xia ancestries.
 - **`red-empire.html`**: The Red Empire, godless mortal-supremacist state. Crimson Emperor, Pyre Throne, social hierarchy, the Iron Tide (navy) and the Menagerie (war-mage / surgeon corps with Collectors operating on Talan).
+
+## `/campaigns/`: GM campaign layer (NOT published to players)
+
+GM / table material, **unlinked from the player sidebar**; not part of the published-site rosters above. Architecture: [`campaign-layer.md`](campaign-layer.md).
+
+- **`campaigns/index.html`**: Base landing for the GM layer (what it is + a card per campaign + a Tools card).
+- **`campaigns/assets/`**: Shared GM chrome — `gm.css` (behind-the-screen styling, incl. the clickable-battlemap `.map-hot` styles), `gm.js` (delegated interactions: tabs, `⚿` secrets, NPC cards, floorplan room-cells via `window.GM_ROOMS`, battlemap hotspots via `window.GM_MAP_AREAS`), `gm-nav.css` / `gm-nav.js` (GM left-sidebar drawer, its own source-of-truth tree).
+- **`campaigns/tools/map-area-editor.html`**: GM tool — load a battlemap, draw / move / resize / delete + label / describe clickable areas (union-of-rectangles for L/T/plus shapes), reorder, export JSON for a quest's map tab; imports back-compatibly.
+- **`campaigns/furrious-five/`** — the *Furrious Five* campaign (starting town Millhaven):
+  - **`index.html`**: campaign hub.
+  - **`millhaven-gm.html`**: GM town notes (read-aloud arrival, tone notes, three districts, Merchant Council + current crisis, townsfolk with hooks, rumour table).
+  - **`wayward-compass-gm.html`**: Guild Office dossier — room-by-room floorplan (`GM_ROOMS`) + the six staff with stat blocks, secrets, hooks.
+  - **`low-span-gm.html`**: fighting-pit dossier — the three descending floors, odds board, regulars, the deed / informant secrets.
+  - **`quest-veldtmark.html`**: module *The Veldtmark Invitation* (drift-touched estate; reconciled Tani→Bikiargi/Wellspring, Rika-Tikur deed→Muino-saila).
+  - **`quest-venomqueen.html`**: module *Below the Quiet Docks* (cavern crawl + Venom Queen stat block + encounter tags; carries the **Cavern Map** clickable-area tab, 16 areas incl. an L-shape example).
+  - **`assets/maps/`**: 800px web copies of the CzePeku maps (committed); full-res originals live in `maps/_full/`, **gitignored** (paid art stays local — see campaign-layer.md).

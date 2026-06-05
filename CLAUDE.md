@@ -2,7 +2,7 @@
 
 This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages. Pages are hand-crafted HTML; **shared chrome lives in `/assets/`** (sidebar nav, Style A and Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
 
-For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see the `sub-region-workflow` skill at [`.claude/skills/sub-region-workflow/SKILL.md`](.claude/skills/sub-region-workflow/SKILL.md).
+For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see the `sub-region-workflow` skill at [`.claude/skills/sub-region-workflow/SKILL.md`](.claude/skills/sub-region-workflow/SKILL.md). For the in-repo **GM / campaign layer** (table material under `/campaigns/`, kept out of the player site), see [`docs/campaign-layer.md`](docs/campaign-layer.md).
 
 ---
 
@@ -83,10 +83,13 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
     accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
+    campaign-layer.md                  ← architecture of the GM /campaigns/ layer (chrome, clickable maps, map assets)
 
   campaigns/                           ← GM / table material (in repo, NOT for players; unlinked from sidebar)
     assets/                            ← gm.css / gm.js / gm-nav.css / gm-nav.js (shared GM chrome)
+    tools/                             ← GM utilities (map-area-editor.html: draw clickable map areas → JSON)
     <campaign>/                        ← per-campaign hub: GM town notes, location dossiers, quests
+      assets/maps/                     ← downsized web map copies (committed); _full/ = full-res, gitignored (paid art stays local)
 
   CLAUDE.md · README.md · CNAME · serve.bat / serve.sh
 ```
@@ -202,7 +205,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Always pause between lore-write and HTML-publish, even with a publish signal.** When the content is *new* (not polishing existing canon), the lore-write and HTML-mirror are two phases. Even if the original instruction was *"write out the history"* or *"publish this"*: write the lore, then **stop and surface what landed** so the user can correct details (timing, characters, public-vs-secret partition, canon implications) before HTML lock-in. The user will say *"go ahead and publish"* to release it. Polish-only or wiring-only follow-ups (sidebar nav, site-inventory, open-threads) can chain after the HTML publish without a second pause.
 
-**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material (quests, stat blocks, read-aloud boxes, adventure hooks, GM-tier location detail) belongs in the in-repo **campaign layer** at `/campaigns/<campaign>/`, which is GM-only and deliberately unlinked from the player sidebar (see the file-layout schematic above); the *Furrious Five* layer is the reference implementation. World-flavour expandables are welcome: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
+**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material (quests, stat blocks, read-aloud boxes, adventure hooks, GM-tier location detail) belongs in the in-repo **campaign layer** at `/campaigns/<campaign>/`, which is GM-only and deliberately unlinked from the player sidebar (see the file-layout schematic above); the *Furrious Five* layer is the reference implementation; see [`docs/campaign-layer.md`](docs/campaign-layer.md) for the layer's architecture (GM chrome, the clickable-battlemap pattern + the `map-area-editor` tool, and the rule that paid full-res maps stay local-only in `maps/_full/`). World-flavour expandables are welcome: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
 
 **Surface phase boundaries rather than chaining them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions; they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
