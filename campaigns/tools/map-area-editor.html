@@ -45,8 +45,10 @@
   .box-row { padding: 7px 0; border-top: 1px solid var(--gm-divider); }
   .box-row.sel { background: rgba(200,160,74,0.06); }
   .box-row-head { display: flex; gap: 8px; align-items: center; }
-  .box-row .bnum { font-family: 'Cinzel', serif; color: var(--gm-gold); width: 22px; text-align: center; flex-shrink: 0; cursor: pointer; }
+  .box-row .bnum { font-family: 'Cinzel', serif; color: var(--gm-gold); width: 22px; text-align: center; flex-shrink: 0; cursor: grab; }
   .box-row.sel .bnum { color: var(--gm-ink-bright); }
+  .box-row.dragging { opacity: 0.45; }
+  .box-row.drag-over { box-shadow: inset 0 2px 0 0 var(--gm-gold); }
   .box-row .lbl { flex: 1; min-width: 0; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 4px 7px; }
   .box-row .desc { width: 100%; margin-top: 5px; min-height: 36px; box-sizing: border-box; background: rgba(0,0,0,0.25); border: 1px solid var(--gm-divider); border-radius: 3px; color: var(--gm-ink); font-family: 'Crimson Pro', serif; font-size: 0.85rem; line-height: 1.4; padding: 5px 7px; resize: vertical; }
   .box-row .del { background: none; border: none; color: #c2766a; cursor: pointer; font-size: 0.9rem; flex-shrink: 0; }
@@ -95,6 +97,7 @@
           <li><b>Draw:</b> click-drag on empty map.</li>
           <li><b>Move:</b> drag a box. <b>Resize:</b> drag its handles.</li>
           <li><b>Select:</b> click a box or its number in the list.</li>
+          <li><b>Reorder:</b> drag a box's number in the list (the numbers renumber to match).</li>
           <li><b>Nudge:</b> arrow keys move; <b>Shift</b>+arrows resize.</li>
           <li><b>Delete:</b> Delete/Backspace, or the ✕ in the list.</li>
           <li>Give each box a <b>label</b> and a <b>description</b> (the feel / contents), then <b>Copy</b> or <b>Download</b> the JSON and hand it to me.</li>
@@ -126,10 +129,11 @@
 <script>
 (function () {
   'use strict';
-  var boxes = [];      // { label, left, top, width, height }  (all % , 0-100)
+  var boxes = [];      // { label, desc, left, top, width, height }  (geometry % , 0-100)
   var sel = -1;
   var imageName = '';
   var drag = null;     // { mode:'draw'|'move'|'resize', dir, startX, startY, init }
+  var dragIndex = -1;  // list-reorder: index of the row being dragged
 
   var wrap = document.getElementById('wrap');
   var img = document.getElementById('mapImg');
@@ -253,6 +257,7 @@
   // render is split so that editing a label/description (which only needs
   // renderJSON) never rebuilds the panel inputs and steals their focus.
   function renderAll() { renderBoxes(); renderList(); renderJSON(); }
+  function moveBox(from, to) { if (from === to) return; var b = boxes.splice(from, 1)[0]; boxes.splice(to, 0, b); sel = to; renderAll(); }
 
   function renderBoxes() {
     Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (n) { n.remove(); });
@@ -285,9 +290,14 @@
     boxes.forEach(function (b, i) {
       var row = document.createElement('div');
       row.className = 'box-row' + (i === sel ? ' sel' : '');
+      row.addEventListener('dragover', function (e) { if (dragIndex < 0) return; e.preventDefault(); e.dataTransfer.dropEffect = 'move'; row.classList.add('drag-over'); });
+      row.addEventListener('dragleave', function () { row.classList.remove('drag-over'); });
+      row.addEventListener('drop', function (e) { e.preventDefault(); row.classList.remove('drag-over'); if (dragIndex >= 0 && dragIndex !== i) moveBox(dragIndex, i); });
       var head = document.createElement('div'); head.className = 'box-row-head';
-      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1; num.title = 'Select';
+      var num = document.createElement('span'); num.className = 'bnum'; num.textContent = i + 1; num.title = 'Click to select · drag to reorder'; num.draggable = true;
       num.addEventListener('click', function () { sel = i; renderBoxes(); updateRowHighlight(); });
+      num.addEventListener('dragstart', function (e) { dragIndex = i; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', String(i)); } catch (_) {} row.classList.add('dragging'); });
+      num.addEventListener('dragend', function () { dragIndex = -1; Array.prototype.slice.call(boxList.querySelectorAll('.dragging, .drag-over')).forEach(function (r) { r.classList.remove('dragging'); r.classList.remove('drag-over'); }); });
       var lbl = document.createElement('input'); lbl.type = 'text'; lbl.className = 'lbl'; lbl.placeholder = 'label (short name)'; lbl.value = b.label || '';
       lbl.addEventListener('focus', function () { sel = i; renderBoxes(); updateRowHighlight(); });
       lbl.addEventListener('input', function () { b.label = lbl.value; renderJSON(); });
