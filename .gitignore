@@ -19,3 +19,4 @@ campaigns/**/assets/maps/_full/
 campaigns/tools/encounterBuilder/_sources/
 campaigns/tools/encounterBuilder/bestiary.db
 campaigns/tools/encounterBuilder/items.db
+campaigns/tools/encounterBuilder/__pycache__/
