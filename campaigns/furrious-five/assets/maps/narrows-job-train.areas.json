@@ -2,34 +2,358 @@
   "image": "narrows-job-train.webp",
   "areas": [
     {
-      "label": "Locomotive Cab",
-      "desc": "Engine (ST 01). The driver and stoker work here; the boiler the signal-wright rigged to overpressure is vented from this cab. This is the front objective of the split-the-party clock: vent it or it ruptures. Open-top, with the cowcatcher and footplate exposed at the nose.",
-      "rects": [ { "left": 0, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "Plow",
+      "desc": "",
+      "rects": [
+        {
+          "left": 0.067,
+          "top": 30.357,
+          "width": 1.817,
+          "height": 37.857
+        }
+      ]
     },
     {
-      "label": "Coal Tender",
-      "desc": "Cargo Coal (ST 28). The open coal hopper between engine and cars. A kinetic exterior position with no cover but the coal pile; the natural place to climb up onto the roofs.",
-      "rects": [ { "left": 16.667, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "Engine",
+      "desc": "",
+      "rects": [
+        {
+          "left": 2.017,
+          "top": 29.929,
+          "width": 6.633,
+          "height": 38.571
+        }
+      ]
     },
     {
-      "label": "Strongbox Car",
-      "desc": "Military Transport (ST 24). The armoured car: a locked strongroom holds the featured crate, and the twitchy Eisenhart factor guards his manifest at the central strategy table, weapon racks to the walls. The signal-wright converges here for the crate. The climax room and the marquee loot.",
-      "rects": [ { "left": 33.333, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "Coal Storage",
+      "desc": "Coal Storage for the fireman to shovel coal from",
+      "rects": [
+        {
+          "left": 11.867,
+          "top": 27.071,
+          "width": 4.467,
+          "height": 45.857
+        }
+      ]
     },
     {
-      "label": "Passenger Car",
-      "desc": "Steerage (ST 14). Where the party starts the ride, on the benches among the civilians. The planted accomplice turns here; bystanders to protect. 44 seats in two cushioned rows down a central aisle.",
-      "rects": [ { "left": 50, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "Cab/Footplate",
+      "desc": "",
+      "rects": [
+        {
+          "left": 8.583,
+          "top": 27.071,
+          "width": 2.767,
+          "height": 44.5
+        }
+      ]
     },
     {
-      "label": "Gun Flat",
-      "desc": "Cannons (ST 23). An open car of mounted Eisenhart cannons in transit; the mounts are both cover and hazard. A moderate exterior fight, exposed to the roofs above.",
-      "rects": [ { "left": 66.667, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "28 Cargo Coal",
+      "desc": "",
+      "rects": [
+        {
+          "left": 16.667,
+          "top": 14.286,
+          "width": 16.667,
+          "height": 71.429
+        }
+      ]
     },
     {
-      "label": "Brakeman's Van",
-      "desc": "Crew Quarters (ST 03). The rear car: hammocks, a galley, storage, and the brake-wheel that matters. Where the rear boarders force their entry.",
-      "rects": [ { "left": 83.333, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+      "label": "Munitions storage",
+      "desc": "Gunpower, arrows, cannon balls etc...",
+      "rects": [
+        {
+          "left": 34.417,
+          "top": 27.071,
+          "width": 2.567,
+          "height": 16.5
+        }
+      ]
+    },
+    {
+      "label": "Weapon Racks",
+      "desc": "Weapon racks for every kind of weapon, small and big",
+      "rects": [
+        {
+          "left": 36.95,
+          "top": 26.929,
+          "width": 0.533,
+          "height": 16.143
+        },
+        {
+          "left": 36.95,
+          "top": 56.286,
+          "width": 0.517,
+          "height": 14.429
+        },
+        {
+          "left": 37.95,
+          "top": 43.929,
+          "width": 6.15,
+          "height": 12.286
+        },
+        {
+          "left": 45.183,
+          "top": 66.429,
+          "width": 2.333,
+          "height": 5.214
+        },
+        {
+          "left": 45.483,
+          "top": 28.143,
+          "width": 2.033,
+          "height": 7.071
+        }
+      ]
+    },
+    {
+      "label": "Benches",
+      "desc": "Two benches for troop to sit on",
+      "rects": [
+        {
+          "left": 37.983,
+          "top": 28.143,
+          "width": 6.133,
+          "height": 7.071
+        },
+        {
+          "left": 38.067,
+          "top": 64.357,
+          "width": 5.983,
+          "height": 6.143
+        }
+      ]
+    },
+    {
+      "label": "Table",
+      "desc": "Table with two benches to strategize or gamble on",
+      "rects": [
+        {
+          "left": 44.7,
+          "top": 39.214,
+          "width": 3.05,
+          "height": 21.071
+        }
+      ]
+    },
+    {
+      "label": "Armory",
+      "desc": "Helmets, armor, etc...",
+      "rects": [
+        {
+          "left": 34.283,
+          "top": 55.357,
+          "width": 2.617,
+          "height": 16.071
+        }
+      ]
+    },
+    {
+      "label": "Luggage Area",
+      "desc": "",
+      "rects": [
+        {
+          "left": 64.217,
+          "top": 56.714,
+          "width": 1.267,
+          "height": 14.857
+        },
+        {
+          "left": 64.183,
+          "top": 27.643,
+          "width": 1.367,
+          "height": 15.714
+        }
+      ]
+    },
+    {
+      "label": "Bench Area",
+      "desc": "22 benches with two seats each, 11 top, 11 bottom",
+      "rects": [
+        {
+          "left": 51.683,
+          "top": 55.357,
+          "width": 12.533,
+          "height": 16.571
+        },
+        {
+          "left": 51.683,
+          "top": 27.643,
+          "width": 12.45,
+          "height": 15.857
+        }
+      ]
+    },
+    {
+      "label": "23 Cannons",
+      "desc": "",
+      "rects": [
+        {
+          "left": 66.667,
+          "top": 14.286,
+          "width": 16.667,
+          "height": 71.429
+        }
+      ]
+    },
+    {
+      "label": "Toilet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 84.533,
+          "top": 29.214,
+          "width": 1.133,
+          "height": 14.857
+        }
+      ]
+    },
+    {
+      "label": "Washroom",
+      "desc": "",
+      "rects": [
+        {
+          "left": 84.45,
+          "top": 57.0,
+          "width": 1.333,
+          "height": 14.857
+        }
+      ]
+    },
+    {
+      "label": "Table",
+      "desc": "A central table with two windows",
+      "rects": [
+        {
+          "left": 86.583,
+          "top": 35.5,
+          "width": 1.667,
+          "height": 28.286
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 91.633,
+          "top": 29.429,
+          "width": 2.35,
+          "height": 14.143
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 94.067,
+          "top": 29.071,
+          "width": 2.333,
+          "height": 13.429
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 96.55,
+          "top": 29.071,
+          "width": 2.2,
+          "height": 13.143
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 91.667,
+          "top": 57.071,
+          "width": 2.35,
+          "height": 14.571
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 93.933,
+          "top": 56.857,
+          "width": 2.433,
+          "height": 14.143
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 96.35,
+          "top": 57.571,
+          "width": 2.45,
+          "height": 12.5
+        }
+      ]
+    },
+    {
+      "label": "Kitchen",
+      "desc": "A kitchen stove, with pots, pans and a water boiler",
+      "rects": [
+        {
+          "left": 89.083,
+          "top": 28.5,
+          "width": 2.5,
+          "height": 12.0
+        }
+      ]
+    },
+    {
+      "label": "Cabinet",
+      "desc": "Cabinet for dishes and produce",
+      "rects": [
+        {
+          "left": 85.733,
+          "top": 29.071,
+          "width": 0.467,
+          "height": 15.143
+        }
+      ]
+    },
+    {
+      "label": "Drink Cabinet",
+      "desc": "A cabinet with mugs and two kegs",
+      "rects": [
+        {
+          "left": 85.733,
+          "top": 56.5,
+          "width": 0.55,
+          "height": 14.429
+        }
+      ]
+    },
+    {
+      "label": "General Storage Cabinet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 89.2,
+          "top": 62.857,
+          "width": 2.367,
+          "height": 8.5
+        }
+      ]
     }
   ]
 }
