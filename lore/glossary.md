@@ -692,6 +692,8 @@ Full ancestry entries live in `lore/ancestries.md`. Listed here are the named be
 **Otherworldly entities:**
 - **The Virtue Devils**: Plain English category-name. Fourteen Aristotelian-pattern devils, one per virtue, each holding both excess and deficiency. Full canon: `geography/bolverk.md`, *Virtue Devils: the Fourteen* (canonical fourteen virtues, the doctrine-of-the-mean mechanic, tetradecagram architecture). No individual Virtue Devils named in current canon.
 - **The Vice Demons**: Plain English category-name. Seven Aquinas-pattern demons, one per Vice. Current holders (Drambur, Nirfel, Lostar, Ofunda, Veislur, Reidar, Lethar) have their own coined names; see *Vice Demons: Bolverk's seven seat-holders* above. Full canon: `geography/bolverk.md`, *Vice Demons: the Seven*.
+- **Urgazi**: Basque *ur* (water) + *gazi* (brackish, briny) → *ur-gazi* → drift → **Urgazi**. Brine-spirits of brackish deep water and flooded underdark pools; water elementals that drag prey under and will not stray far from their pool. Mechanically Brine Sharks. (First detailed in the Quiet Docks cavern, Furrious Five.)
+- **Lezuga**: Basque *leze* (cavern, chasm) + *suge* (serpent) → *leze-suge* → drift → **Lezuga**. A great cave-serpent of the deep places, lightning in its throat, that swallows prey whole; sleeps long on its larder of bones. Mechanically a Behir.
 
 **Versatile heritage placements (Tyrnarra source mapping):**
 
