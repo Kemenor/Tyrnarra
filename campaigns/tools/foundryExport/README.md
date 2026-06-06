@@ -7,7 +7,8 @@ when you run it as GM, builds the quest's actor folder (with tidy
 - one **Actor** per distinct monster (you drop *N* tokens yourself — one actor, many tokens),
 - named **NPCs**, either imported from a stat-block base and renamed, or created as a blank statless `npc` (generic token, art later),
 - one **loot-actor "chest"** per haul, with its items (correct quantities) and coins,
-- *(optional)* **pre-placed tokens** on the scene you have open — fanned out, grid-snapped, disposition set.
+- *(optional)* **pre-placed tokens** on the scene you have open — fanned out, grid-snapped, disposition set,
+- *(optional)* **portrait + circle-masked token art** on NPCs from generated images (Dynamic Token Ring).
 
 Subfolders are created only for non-empty categories. Imports use `keepId:false`
 so a boss that shares a base creature with regular monsters (e.g. a renamed
@@ -64,7 +65,8 @@ blocked if the folder already exists — delete that folder first to rebuild.
 |---|---|
 | `folder` | **required.** The Actor folder the quest's actors are imported into. |
 | `monsters[]` | `name` (exact compendium name) + `count` (tokens you'll drop). One actor is imported per entry. |
-| `npcs[]` | `name`. With `actor` → create a full **custom statblock** (an embedded pf2e `npc` document) for bespoke benchmark monsters. With `base` → import that creature and rename it to `name`. With neither → a blank statless `npc`. |
+| `npcs[]` | `name`. With `actor` → create a full **custom statblock** (an embedded pf2e `npc` document) for bespoke benchmark monsters. With `base` → import that creature and rename it to `name`. With neither → a blank statless `npc`. Optional `image` → portrait + circle-masked token (see below). |
+| `imageBase` *(optional)* | Path prefix joined to bare `image` filenames (the folder you upload portraits into, e.g. `"portraits/"`). A per-npc `image` containing a `/` is used as-is. |
 | `chests[]` | A loot actor: `name`, `items[]` (`name` + `count`), and `coins`. |
 | `coins` | A `{pp,gp,sp,cp}` dict, a plain gp number, or a loot.py-style string (`"120 gp"`, `"1.5 gp"`, `"50 cp"`). |
 | `pack` *(optional, on any monster/npc/item)* | Exact-pack hint. A bare repo folder name (`"pathfinder-monster-core"`) is read as `pf2e.<name>`; a dotted value (`"my-module.my-pack"`) is used verbatim. |
@@ -98,6 +100,35 @@ Use an exact `pack` hint when a name is ambiguous across packs, or to force a
 homebrew version. Unresolved names are **reported in the chat summary, never
 silently dropped** — fix the spelling (names must match the compendium exactly,
 e.g. `Healing Potion (Minor)`, not `Minor Healing Potion`) or add a `pack` hint.
+
+## NPC portrait / token images
+
+The tool doesn't generate art (no image model here), but it owns everything
+around it: tuned prompts and the Foundry-side assignment. NPC tokens use
+**portrait busts as circle-masked tokens** via Foundry's **Dynamic Token Ring**
+(disposition-coloured), the same image doubling as the actor portrait.
+
+The four steps:
+
+1. **Prompts.** A per-quest `*.portraits.json` holds each NPC's invented
+   appearance (ancestry/age/looks) + a style-consistent `prompt`, with a shared
+   `style` suffix so the whole cast looks like one artist.
+2. **Generate.** `gen_portraits.py` batch-renders one square image per entry via
+   fal.ai, model-agnostic (`--model`, e.g. Flux.2 [dev] now, swap later); the
+   same prompts JSON is reusable by a local ComfyUI/Replicate runner.
+   `pip install fal-client requests`, `set FAL_KEY=...`, then:
+   `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux/dev`
+3. **Upload.** Drop the `<dir>` of images into your Foundry/Forge assets (the
+   file picker, or the Forge asset library) under the folder you'll point
+   `imageBase` at.
+4. **Assign.** Either bake `image` filenames into the spec so a fresh import
+   sets them, or, for an already-imported quest, generate a one-off assignment
+   macro that matches names → files on the existing actors (and re-skins their
+   placed tokens):
+   `python foundry_macro.py assign-images --folder "<quest folder>" --base "portraits/" --map "Davo Kenn=davo-kenn.webp" --map ...`
+
+The assignment sets `actor.img` + `prototypeToken.texture.src` + enables the
+token ring; placed tokens inherit it (or are re-skinned by `assign-images`).
 
 ## Assembling a spec from the leaf tools (Phase 7)
 

@@ -1,12 +1,13 @@
 {
   "folder": "Venomqueen's Lair",
+  "imageBase": "portraits/",
   "monsters": [
     { "name": "Goblin Warrior", "count": 6 },
     { "name": "Giant Rat", "count": 3 }
   ],
   "npcs": [
-    { "name": "The Venomqueen", "base": "Drow Priestess" },
-    { "name": "Innkeeper Bren" }
+    { "name": "The Venomqueen", "base": "Drow Priestess", "image": "the-venomqueen.webp" },
+    { "name": "Innkeeper Bren", "image": "innkeeper-bren.webp" }
   ],
   "chests": [
     {

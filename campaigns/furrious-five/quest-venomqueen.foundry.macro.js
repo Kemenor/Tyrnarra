@@ -1120,28 +1120,33 @@
     made.push(`${m.count || 1}x ${a.name}  (drop ${m.count || 1} token${(m.count || 1) === 1 ? "" : "s"})`);
   }
 
+  // Resolve a spec image (filename joined to SPEC.imageBase, or a full path/URL).
+  const imgSrc = img => !img ? null : (String(img).includes("/") ? img : ((SPEC.imageBase || "") + img));
+
   for (const n of (SPEC.npcs || [])) {
+    let a;
     if (n.actor) {
       // Full custom statblock embedded in the spec (a bespoke benchmark monster).
       const doc = foundry.utils.deepClone(n.actor);
       doc.name = n.name; doc.type = doc.type || "npc"; doc.folder = await sub("NPCs");
       doc.prototypeToken = Object.assign({}, doc.prototypeToken, { name: n.name });
-      const a = await Actor.create(doc);
-      byName[a.name] = a;
+      a = await Actor.create(doc);
       made.push("NPC " + a.name + "  (custom statblock)");
     } else if (n.base) {
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
       // Rename both the actor and its prototype token, else placed/dropped tokens
       // keep the base creature's name (the actor is renamed but the token is not).
-      const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name, "prototypeToken.name": n.name }, { keepId: false });
-      byName[a.name] = a;
+      a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name, "prototypeToken.name": n.name }, { keepId: false });
       made.push("NPC " + a.name + "  (from " + n.base + ")");
     } else {
-      const a = await Actor.create({ name: n.name, type: "npc", folder: await sub("NPCs") });
-      byName[a.name] = a;
+      a = await Actor.create({ name: n.name, type: "npc", folder: await sub("NPCs") });
       made.push("NPC " + a.name + "  (blank - statless)");
     }
+    byName[a.name] = a;
+    // Portrait + circle-masked token (Dynamic Token Ring) from a generated image.
+    const src = imgSrc(n.image);
+    if (src) await a.update({ img: src, "prototypeToken.texture.src": src, "prototypeToken.ring.enabled": true });
   }
 
   for (const c of (SPEC.chests || [])) {
