@@ -1,0 +1,5 @@
+# Full-resolution, subscription/licensed battlemap sources live here
+# (CzePeku and Tom Cartos downloads). Everything in this folder is gitignored
+# and stays on this machine only; only the downsized copies in the parent
+# maps/ folder are committed and published. This .gitkeep keeps the folder
+# present on a fresh clone so there is an obvious place to drop downloads.

@@ -52,13 +52,13 @@ Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** 
 
 The companion authoring tool. Load a map PNG, draw / move / resize / delete rectangles, label + describe each area, reorder, and export JSON. An **area is a union of rectangles** (`{ label, desc, rects:[{left,top,width,height}] }`, all `%`); Shift+draw (or a row's `＋`) adds a piece to the selected area for irregular shapes. The exported JSON is what you hand back to generate the map tab's hotspot markup + `GM_MAP_AREAS` scaffold. Import is back-compatible with the old single-rect format.
 
-## Map assets (paid battlemaps stay local)
+## Map assets (subscription battlemaps stay local)
 
-Commercial battlemaps (CzePeku, Tom Cartos, etc.) **must not be published**. Convention:
-- Full-resolution originals (and any full purchased pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/assets/maps/_full/`**, which is **gitignored** (`.gitignore`: `campaigns/**/assets/maps/_full/`). They stay on local disk only and never reach GitHub.
-- The user supplies the full-res; **Claude generates the downsized ~800px web copy** (degraded reference, useless at table resolution) that sits directly in `maps/` and *is* committed; the page references that. ImageMagick does it in one line: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (the committed maps are 800px-wide). Any paid art a user drops loose in `maps/` should be moved into `_full/` before staging.
+Subscription battlemaps (the user's CzePeku / Tom Cartos subscriptions, etc.) **must not be published**. Convention:
+- Full-resolution originals (and any full downloaded pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/assets/maps/_full/`**, which is **gitignored** (`.gitignore`: `campaigns/**/assets/maps/_full/`). They stay on local disk only and never reach GitHub.
+- The user supplies the full-res; **Claude generates the downsized ~800px web copy** (degraded reference, useless at table resolution) that sits directly in `maps/` and *is* committed; the page references that. ImageMagick does it in one line: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (the committed maps are 800px-wide). Any subscription art a user drops loose in `maps/` should be moved into `_full/` before staging.
 
-If you ever find a full-res original tracked outside `_full/`, untrack it (`git rm --cached`) and, for true removal, scrub it from history — paid art on a public repo is the thing to avoid.
+If you ever find a full-res original tracked outside `_full/`, untrack it (`git rm --cached`) and, for true removal, scrub it from history — subscription art on a public repo is the thing to avoid.
 
 ---
 

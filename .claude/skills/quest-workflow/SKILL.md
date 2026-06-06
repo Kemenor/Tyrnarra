@@ -1,6 +1,6 @@
 ---
 name: quest-workflow
-description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you buy + draw areas) -> encounters -> loot -> quest HTML, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
+description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you download + draw areas) -> encounters -> loot -> quest HTML, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
 ---
 
 # quest-workflow
@@ -14,7 +14,7 @@ This is the capstone that the `pf2e-encounter` and `pf2e-loot` leaf skills feed.
 Read these. Skipping is the largest source of rework.
 
 1. **`CLAUDE.md`** (no em-dashes, affirmative prose, mortals-not-humans, the campaign-layer rule that quests live in `/campaigns/` and never in the player sidebar).
-2. **`docs/campaign-layer.md`** end-to-end: folder layout, chrome conventions (`gm.css`/`gm.js`/`gm-nav.css`/`gm-nav.js`), the clickable-battlemap contract, and the paid-map rule (`maps/_full/` gitignored).
+2. **`docs/campaign-layer.md`** end-to-end: folder layout, chrome conventions (`gm.css`/`gm.js`/`gm-nav.css`/`gm-nav.js`), the clickable-battlemap contract, and the subscription-map rule (`maps/_full/` gitignored).
 3. **The reference implementation**: `campaigns/furrious-five/quest-venomqueen.html` (the Cavern Map battlemap pattern) and `campaigns/furrious-five/quest-veldtmark.html`. Read one end-to-end as the page template.
 4. **The player-facing canon for where the quest is set** — the relevant `talan/domains/<domain>/…` page(s) and `lore/geography/<region>.md`, so NPCs, place-names, gods, and neighbours are consistent. Quest material may reveal GM-tier truth, but it must not contradict committed canon.
 5. **Tooling check**: confirm `campaigns/tools/encounterBuilder/bestiary.db` and `items.db` exist; if not, run `python rebuild.py` from that directory once (first run clones the Foundry repo, a few minutes).
@@ -28,7 +28,7 @@ If anything you are about to design contradicts committed canon, the canon wins.
 | **0. Read** | CLAUDE.md + campaign-layer.md + a reference quest + the setting's player canon + tooling check | Do not start Phase 1 until done |
 | **1. Intake + seeds** | Chat: take the intake text, lock **party level + size**, generate **3-5 distinct seeds**, user picks, workshop the winner into a premise | Chat only. No writes. |
 | **2. Structure** | Chat: the beats / scenes / rooms and the throughline; which scenes are combat vs social vs exploration; the climax. Surface a beat -> area outline | Chat only. No writes. |
-| **3. Map + areas** | Claude searches CzePeku / Tom Cartos / Lost Atlas and surfaces **3-5 map options**; **user buys + downloads** the pick; **user draws the areas** in `map-area-editor.html` and hands back the exported JSON | Human handoff. Skill waits for the area JSON. |
+| **3. Map + areas** | Claude searches CzePeku / Tom Cartos / Lost Atlas and surfaces **3-5 map options**; **user downloads** the pick; **user draws the areas** in `map-area-editor.html` and hands back the exported JSON | Human handoff. Skill waits for the area JSON. |
 | **4. Encounters** | Invoke **pf2e-encounter** per combat area (party params + area theme), grounded in real stat blocks. Surface the encounter set | Surface for tweaks before Phase 6 |
 | **5. Loot** | Invoke **pf2e-loot** (level hand-out, or per-area/milestone), place rewards in areas. Surface | Surface for tweaks before Phase 6 |
 | **6. Assemble quest HTML** | Build `quest-<slug>.html` per campaign-layer conventions + wire it in. Surface the content plan first, build on the go | Surface-before-HTML pause |
@@ -68,7 +68,7 @@ Surface the outline. The user may reorder, cut, or add scenes before any map wor
 
 ## Phase 3: Map — search, buy, draw areas (web search + human handoff)
 
-Three steps: Claude surfaces map options from the commercial catalogs, the user buys/downloads the pick, then the user draws the areas.
+Three steps: Claude surfaces map options from the user's CzePeku / Tom Cartos subscription catalogs, the user downloads the pick, then the user draws the areas.
 
 **1. Search the catalogs and surface 3-5 options.** Using the Phase 2 mood + room list as the theme, search CzePeku and Tom Cartos for fitting battlemaps and present a shortlist of titled links for the user to choose from. These are visual, JS-heavy galleries, so drive the search with `WebSearch` scoped by domain rather than trying to scrape the gallery pages:
    - **CzePeku** — `WebSearch` with `allowed_domains: ["czepeku.com"]` (fantasy maps live under `/fantasy/maps`, sci-fi under `/scifi/maps`).
@@ -77,7 +77,7 @@ Three steps: Claude surfaces map options from the commercial catalogs, the user 
 
    Surface each candidate as a titled link with a one-line "why it fits" (the cavern with the central pool; the three-storey manor; the flooded crypt). `WebFetch` a candidate page only to confirm what is actually on it. Present 3-5 and let the user pick.
 
-**2. The user buys / downloads; Claude downsizes.** These are paid (Patreon / marketplace) maps, so **the user does the download** — Claude never fetches or commits the paid image. The user hands over the full-res original (and any full purchased pack, which often bundles extra art + Foundry module files); it belongs in `campaigns/<campaign>/assets/maps/_full/` (gitignored, local only). **Claude generates the downsized ~800px web copy** that sits directly in `maps/` (committed; the page references this one), with ImageMagick: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (match the 800px-wide precedent of the existing committed maps). If the user dropped paid art loose in `maps/`, move it into `_full/` before staging anything. See campaign-layer.md "Map assets".
+**2. The user downloads; Claude downsizes.** These come from the user's **CzePeku / Tom Cartos subscriptions**, so **the user does the download** — Claude never fetches or commits the art. The user hands over the full-res original (and any full downloaded pack, which often bundles extra art + Foundry module files); it belongs in `campaigns/<campaign>/assets/maps/_full/` (gitignored, local only). **Claude generates the downsized ~800px web copy** that sits directly in `maps/` (committed; the page references this one), with ImageMagick: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (match the 800px-wide precedent of the existing committed maps). If the user dropped subscription art loose in `maps/`, move it into `_full/` before staging anything. See campaign-layer.md "Map assets".
 
 **3. Hand off to the editor.** Tell the user to open `campaigns/tools/map-area-editor.html`, load the map (the full-res original is fine — area coordinates are stored as percentages, so the same JSON applies to the downsized copy the page references), draw one area per room/scene from the Phase 2 outline (Shift+draw to add rectangles for L/T/plus shapes), label + describe each, and export the JSON. **Wait** for it: this is the user's step ("I create areas and notes"). Do not fabricate areas; consume the exported JSON they hand back as the authoritative room list. Each area is `{ label, desc, rects:[{left,top,width,height}] }` in percentages.
 
@@ -132,7 +132,7 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Real data, never invented.** Encounter budgets, creature stats, item levels and prices come from the tools and the source JSON via the leaf skills. If a number is not grounded, it does not ship.
 - **Party level + size first.** Capture them in Phase 1; all encounter and loot math depends on them.
 - **Canon-consistent.** NPCs, places, gods, and neighbours reconcile with the player lore. A quest may reveal GM-tier truth; it may not contradict committed canon.
-- **Claude surfaces map links and downsizes; the user buys, downloads, and draws.** Claude searches the CzePeku / Tom Cartos / Lost Atlas catalogs and presents 3-5 options as links, but never fetches or commits a paid image — the user downloads it. The user provides the full-res (it lives in gitignored `_full/`); **Claude generates the committed ~800px web copy** the page references. Areas come from `map-area-editor.html` (or an explicit chat room-list), not from invention.
+- **Claude surfaces map links and downsizes; the user downloads and draws.** Claude searches the CzePeku / Tom Cartos / Lost Atlas catalogs and presents 3-5 options as links, but never fetches or commits the art — the user downloads it from their subscription. The user provides the full-res (it lives in gitignored `_full/`); **Claude generates the committed ~800px web copy** the page references. Areas come from `map-area-editor.html` (or an explicit chat room-list), not from invention.
 - **Surface at every seam.** Premise -> structure -> areas -> encounters -> loot -> page. Pause and surface before each write, and before the HTML build.
 - **No em-dashes; affirmative prose; mortals not humans.** The project-wide prose rules apply to GM pages too.
 
@@ -143,5 +143,5 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Inventing stats to save a tool run.** Run the leaf skills; read the JSON. The whole point of the tooling is reality-accurate numbers.
 - **Flat difficulty.** Vary threat and shape per room (Phase 4) so the crawl has an arc; a dungeon of five identical moderate fights reads dead.
 - **Loot off the party's level.** Use the hand-out or value math; do not drop a high-level item because it fits the theme.
-- **Publishing a paid map.** Full-res stays in `_full/`; the page references the downsized copy only.
+- **Publishing subscription map art.** Full-res stays in `_full/`; the page references the downsized copy only.
 - **Chronicler-voice creep.** This is GM material; write plainly and mechanically. Save the in-world voice for the read-aloud boxes.
