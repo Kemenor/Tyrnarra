@@ -250,7 +250,9 @@ _TEMPLATE = r"""/* =============================================================
     if (n.base) {
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
-      const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name }, { keepId: false });
+      // Rename both the actor and its prototype token, else placed/dropped tokens
+      // keep the base creature's name (the actor is renamed but the token is not).
+      const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name, "prototypeToken.name": n.name }, { keepId: false });
       byName[a.name] = a;
       made.push("NPC " + a.name + "  (from " + n.base + ")");
     } else {
