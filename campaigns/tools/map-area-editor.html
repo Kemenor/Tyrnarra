@@ -109,6 +109,7 @@
           <li><b>Nudge:</b> arrow keys move the active piece; <b>Shift</b>+arrows resize it.</li>
           <li><b>Delete:</b> Delete/Backspace removes the active piece; the ✕ removes the whole area.</li>
           <li>Give each area a <b>label</b> + <b>description</b>, then <b>Copy</b> / <b>Download</b> the JSON for me.</li>
+          <li><b>Auto-saves</b> to this browser as you work; reloading the page restores your areas (and the map, if it fit storage). <b>Clear all</b> wipes it.</li>
         </ul>
       </div>
 
@@ -145,6 +146,9 @@
   var drag = null;     // { mode:'draw'|'move'|'resize', dir, startX, startY, init }
   var dragIndex = -1;  // list-reorder: area index being dragged
   var armed = false;   // when true, the next draw adds a piece to the selected area
+  var imageData = '';  // data-URL of the loaded image, persisted to localStorage when it fits the quota
+  var saveTimer = null;
+  var STORE = 'tyrnarra-map-area-editor';
 
   var img = document.getElementById('mapImg');
   var empty = document.getElementById('empty');
@@ -173,9 +177,15 @@
     if (!f) return;
     imageName = f.name;
     imgNameEl.textContent = f.name;
-    img.onload = function () { empty.style.display = 'none'; img.style.display = 'block'; overlay.style.display = 'block'; renderJSON(); };
-    img.src = URL.createObjectURL(f);
+    var reader = new FileReader();
+    reader.onload = function () { imageData = reader.result; showImage(); save(); };
+    reader.readAsDataURL(f);   // data URL so the image can be autosaved and survive a reload
   });
+
+  function showImage() {
+    img.onload = function () { empty.style.display = 'none'; img.style.display = 'block'; overlay.style.display = 'block'; renderAll(); };
+    img.src = imageData;
+  }
 
   // ── Draw on empty overlay (new area, or a piece of the selected area) ──
   overlay.addEventListener('mousedown', function (e) {
@@ -360,6 +370,40 @@
       })
     };
     jsonBox.value = JSON.stringify(out, null, 2);
+    scheduleSave();
+  }
+
+  // ── Autosave to localStorage (debounced) ──
+  function save() {
+    try {
+      var areasJson = areas.map(function (area) {
+        return { label: area.label || '', desc: area.desc || '', rects: area.rects.map(function (r) { return { left: round(r.left), top: round(r.top), width: round(r.width), height: round(r.height) }; }) };
+      });
+      try { localStorage.setItem(STORE, JSON.stringify({ v: 1, image: imageName, imageData: imageData, areas: areasJson })); }
+      catch (quota) { localStorage.setItem(STORE, JSON.stringify({ v: 1, image: imageName, imageData: '', areas: areasJson })); }  // image too big for quota → keep the areas
+    } catch (e) { /* localStorage unavailable (private mode / disabled) → just skip */ }
+  }
+  function scheduleSave() { if (saveTimer) clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
+
+  function restore() {
+    var raw; try { raw = localStorage.getItem(STORE); } catch (e) { return; }
+    if (!raw) return;
+    var data; try { data = JSON.parse(raw); } catch (e) { return; }
+    if (!data || !Array.isArray(data.areas) || !data.areas.length) return;
+    imageName = data.image || '';
+    areas = data.areas.map(function (a) {
+      var rects = (Array.isArray(a.rects) && a.rects.length)
+        ? a.rects.map(function (r) { return { left: +r.left || 0, top: +r.top || 0, width: +r.width || 0, height: +r.height || 0 }; })
+        : [{ left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 }];
+      return { label: a.label || '', desc: a.desc || '', rects: rects };
+    });
+    if (data.imageData) {
+      imageData = data.imageData;
+      imgNameEl.textContent = (imageName || 'map') + ' · restored';
+      showImage();
+    } else {
+      imgNameEl.textContent = (imageName || '') + ' · areas restored — re-load the map image to see them';
+    }
   }
 
   // ── Buttons ──
@@ -395,6 +439,7 @@
     } catch (err) { alert('Could not parse JSON: ' + err.message); }
   });
 
+  restore();
   renderAll();
 })();
 </script>
