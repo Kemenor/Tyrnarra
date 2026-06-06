@@ -1,0 +1,173 @@
+{
+  "image": "train-station-concourse.webp",
+  "areas": [
+    {
+      "label": "Main Entrance",
+      "desc": "Main Entrance for the commoners and those travelling by coach",
+      "rects": [
+        {
+          "left": 0.9,
+          "top": 42.2,
+          "width": 14.1,
+          "height": 25.3
+        }
+      ]
+    },
+    {
+      "label": "Shops",
+      "desc": "Two circular shops, staffed by friendly seeming shopkeeps and clerks, ready to sell you newspapers, gadgets, souvenirs, Merkavar Bread, Azkataria Tea, Atarialda Cheese, Itsasalda rum, Emarrea Sake or whatever you might need before you go home ",
+      "rects": [
+        {
+          "left": 24.5,
+          "top": 26.7,
+          "width": 11.9,
+          "height": 16.4
+        },
+        {
+          "left": 24.5,
+          "top": 63.4,
+          "width": 11.3,
+          "height": 17.8
+        }
+      ]
+    },
+    {
+      "label": "The Information Board",
+      "desc": "A Board showing all arrivals on one half and all departures on the other, magically updated, arcanotech driven",
+      "rects": [
+        {
+          "left": 32,
+          "top": 47,
+          "width": 4.5,
+          "height": 14.1
+        }
+      ]
+    },
+    {
+      "label": "The Waiting Rooms",
+      "desc": "Two areas to simply sit and wait, while watching out over the busy Market plaza in front of the train station",
+      "rects": [
+        {
+          "left": 6.6,
+          "top": 21,
+          "width": 11.1,
+          "height": 19.5
+        },
+        {
+          "left": 6.3,
+          "top": 68.5,
+          "width": 10.8,
+          "height": 18.7
+        }
+      ]
+    },
+    {
+      "label": "Staff Office",
+      "desc": "Three tables for clerks, shelves for books, the place for lost & found",
+      "rects": [
+        {
+          "left": 33.4,
+          "top": 8.3,
+          "width": 9.5,
+          "height": 11.9
+        }
+      ]
+    },
+    {
+      "label": "Ticket Office",
+      "desc": "The main Ticket Office for everyone, four clerks work here at rush hour handling customers",
+      "rects": [
+        {
+          "left": 18.2,
+          "top": 8.5,
+          "width": 14.6,
+          "height": 11.5
+        }
+      ]
+    },
+    {
+      "label": "The public bathroom",
+      "desc": "",
+      "rects": [
+        {
+          "left": 6.5,
+          "top": 8.8,
+          "width": 11.5,
+          "height": 11.3
+        }
+      ]
+    },
+    {
+      "label": "Post Office Desk",
+      "desc": "A desk for two clerks of the adventurer guild handling letters and packages",
+      "rects": [
+        {
+          "left": 65.7,
+          "top": 8.9,
+          "width": 9.4,
+          "height": 5.7
+        }
+      ]
+    },
+    {
+      "label": "Post Office Storage",
+      "desc": "A room half filled with packages and letter meant for other cities, relatives, friends, businesses",
+      "rects": [
+        {
+          "left": 61.1,
+          "top": 8.2,
+          "width": 5,
+          "height": 12.6
+        }
+      ]
+    },
+    {
+      "label": "Fresh Produce Stand",
+      "desc": "A shop off to the side, selling local fresh produce and bread, loved by locals, overlooked by tourists.",
+      "rects": [
+        {
+          "left": 81.5,
+          "top": 8.4,
+          "width": 7,
+          "height": 6
+        }
+      ]
+    },
+    {
+      "label": "The train tracks",
+      "desc": "Three train tracks, sometimes filled with waiting trains, sometimes waiting for the next train",
+      "rects": [
+        {
+          "left": 43.1,
+          "top": 70.1,
+          "width": 56.9,
+          "height": 9.8
+        },
+        {
+          "left": 43.4,
+          "top": 49.3,
+          "width": 56.6,
+          "height": 9.3
+        },
+        {
+          "left": 43.2,
+          "top": 28.9,
+          "width": 56.8,
+          "height": 9.6
+        }
+      ]
+    },
+    {
+      "label": "ViP Entrance",
+      "desc": "If you've got the money or status this is your entrance, up to four clerks handling important people through their own entrance",
+      "rects": [
+        {
+          "left": 43.3,
+          "top": 2.7,
+          "width": 16.6,
+          "height": 15.6
+        }
+      ]
+    }
+  ]
+}
