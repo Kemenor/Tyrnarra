@@ -21,6 +21,7 @@ campaigns/
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (see below)
   map-library/                ← reusable map catalogues, shared across campaigns
     magirail-stock.md         ← modular train-car library (Tom Cartos "Steam Train" set)
+    _full/                    ← the catalogues' local-only source art (gitignored)
   <campaign>/                 ← e.g. furrious-five/
     index.html                ← campaign hub (links the town notes, dossiers, quests)
     <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)

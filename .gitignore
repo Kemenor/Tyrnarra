@@ -9,11 +9,13 @@
 
 # Full-resolution dungeon / battlemap sources (the user's CzePeku / Tom Cartos
 # subscription downloads and other licensed assets) are kept LOCAL ONLY and never
-# published to GitHub Pages. Drop full-res originals in a `_full/` subfolder under
-# any campaign's maps/; only the downsized web copies that sit directly in maps/
-# get committed. The `.gitkeep` is tracked so the folder exists on a fresh clone.
-campaigns/**/assets/maps/_full/*
-!campaigns/**/assets/maps/_full/.gitkeep
+# published to GitHub Pages. Drop full-res originals in a `_full/` subfolder:
+# under a campaign's maps/ for campaign-specific art, or under the shared
+# campaigns/map-library/ for reusable libraries. Only the downsized web copies
+# (and the committed text catalogues) reach GitHub. The `.gitkeep` keeps each
+# `_full/` present on a fresh clone.
+campaigns/**/_full/*
+!campaigns/**/_full/.gitkeep
 
 # pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
 # and the rebuildable SQLite snapshot are local-only build artifacts. Run
