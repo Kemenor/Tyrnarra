@@ -1,0 +1,35 @@
+{
+  "image": "narrows-job-train.webp",
+  "areas": [
+    {
+      "label": "Locomotive Cab",
+      "desc": "Engine (ST 01). The driver and stoker work here; the boiler the signal-wright rigged to overpressure is vented from this cab. This is the front objective of the split-the-party clock: vent it or it ruptures. Open-top, with the cowcatcher and footplate exposed at the nose.",
+      "rects": [ { "left": 0, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    },
+    {
+      "label": "Coal Tender",
+      "desc": "Cargo Coal (ST 28). The open coal hopper between engine and cars. A kinetic exterior position with no cover but the coal pile; the natural place to climb up onto the roofs.",
+      "rects": [ { "left": 16.667, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    },
+    {
+      "label": "Strongbox Car",
+      "desc": "Military Transport (ST 24). The armoured car: a locked strongroom holds the featured crate, and the twitchy Eisenhart factor guards his manifest at the central strategy table, weapon racks to the walls. The signal-wright converges here for the crate. The climax room and the marquee loot.",
+      "rects": [ { "left": 33.333, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    },
+    {
+      "label": "Passenger Car",
+      "desc": "Steerage (ST 14). Where the party starts the ride, on the benches among the civilians. The planted accomplice turns here; bystanders to protect. 44 seats in two cushioned rows down a central aisle.",
+      "rects": [ { "left": 50, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    },
+    {
+      "label": "Gun Flat",
+      "desc": "Cannons (ST 23). An open car of mounted Eisenhart cannons in transit; the mounts are both cover and hazard. A moderate exterior fight, exposed to the roofs above.",
+      "rects": [ { "left": 66.667, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    },
+    {
+      "label": "Brakeman's Van",
+      "desc": "Crew Quarters (ST 03). The rear car: hammocks, a galley, storage, and the brake-wheel that matters. Where the rear boarders force their entry.",
+      "rects": [ { "left": 83.333, "top": 14.286, "width": 16.667, "height": 71.429 } ]
+    }
+  ]
+}
