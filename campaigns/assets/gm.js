@@ -81,7 +81,9 @@
     var hot = e.target.closest('.map-hot');
     if (hot && hot.dataset.area && window.GM_MAP_AREAS) {
       var area = window.GM_MAP_AREAS[hot.dataset.area];
-      var mdetail = document.getElementById('mapDetail');
+      // scope the detail panel to the clicked map's section so a page can carry
+      // more than one clickable map; fall back to the legacy global #mapDetail.
+      var mdetail = (hot.closest('.section') || document).querySelector('.map-detail') || document.getElementById('mapDetail');
       if (area && mdetail) {
         document.querySelectorAll('.map-hot.active').forEach(function (x) { x.classList.remove('active'); });
         // an area may be several rectangles (L / T shapes) sharing one data-area; light them all

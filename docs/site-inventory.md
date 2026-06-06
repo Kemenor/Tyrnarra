@@ -156,6 +156,7 @@ GM / table material, **unlinked from the player sidebar**; not part of the publi
 - **`campaigns/index.html`**: Base landing for the GM layer (what it is + a card per campaign + a Tools card).
 - **`campaigns/assets/`**: Shared GM chrome — `gm.css` (behind-the-screen styling, incl. the clickable-battlemap `.map-hot` styles), `gm.js` (delegated interactions: tabs, `⚿` secrets, NPC cards, floorplan room-cells via `window.GM_ROOMS`, battlemap hotspots via `window.GM_MAP_AREAS`), `gm-nav.css` / `gm-nav.js` (GM left-sidebar drawer, its own source-of-truth tree).
 - **`campaigns/tools/map-area-editor.html`**: GM tool — load a battlemap, draw / move / resize / delete + label / describe clickable areas (union-of-rectangles for L/T/plus shapes), reorder, export JSON for a quest's map tab; imports back-compatibly.
+- **`campaigns/map-library/`**: shared reusable map catalogues. `magirail-stock.md` (the Tom Cartos modular train-car library: per-car descriptions, role tags, consist recipes), `stitch.py` (assemble a consist → composite image + merged areas JSON, with a `token:variant` selector for per-car detail files), `areas/` (committed per-car interior area files). Source art is local-only in `_full/`, synced between machines via Proton Drive (see `map-library/README.md`).
 - **`campaigns/furrious-five/`** — the *Furrious Five* campaign (starting town Millhaven):
   - **`index.html`**: campaign hub.
   - **`millhaven-gm.html`**: GM town notes (read-aloud arrival, tone notes, three districts, Merchant Council + current crisis, townsfolk with hooks, rumour table).
@@ -163,4 +164,5 @@ GM / table material, **unlinked from the player sidebar**; not part of the publi
   - **`low-span-gm.html`**: fighting-pit dossier — the three descending floors, odds board, regulars, the deed / informant secrets.
   - **`quest-veldtmark.html`**: module *The Veldtmark Invitation* (drift-touched estate; reconciled Tani→Bikiargi/Wellspring, Rika-Tikur deed→Muino-saila).
   - **`quest-venomqueen.html`**: module *Below the Quiet Docks* (cavern crawl + Venom Queen stat block + encounter tags; carries the **Cavern Map** clickable-area tab, 16 areas incl. an L-shape example).
+  - **`quest-the-narrows-job.html`**: module *The Narrows Job* (boat-to-Merkavar opener + the Arrol Cut train heist). Two clickable maps (station concourse + the stitched 6-car consist); per-car encounters from a dwarven Order-of-Steam crew + the **Brannek Vael** boss (reskinned Aliver "Pillbug" Podiker); themed loot; Recall Knowledge (Religion) + Diplomacy skill-checks with four degrees and challenge-anchored DCs.
   - **`assets/maps/`**: 800px web copies of the CzePeku maps (committed); full-res originals live in `maps/_full/`, **gitignored** (paid art stays local — see campaign-layer.md).

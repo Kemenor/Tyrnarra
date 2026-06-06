@@ -49,8 +49,9 @@
         { slug: 'low-span-gm',        label: 'The Low Span',        href: '/campaigns/furrious-five/low-span-gm.html',       children: [] }
       ]},
       { slug: 'quests', label: 'Quests', href: null, children: [
-        { slug: 'quest-veldtmark',  label: 'The Veldtmark Invitation', href: '/campaigns/furrious-five/quest-veldtmark.html',   children: [] },
-        { slug: 'quest-venomqueen', label: 'Below the Quiet Docks',    href: '/campaigns/furrious-five/quest-venomqueen.html',  children: [] }
+        { slug: 'quest-veldtmark',       label: 'The Veldtmark Invitation', href: '/campaigns/furrious-five/quest-veldtmark.html',        children: [] },
+        { slug: 'quest-venomqueen',      label: 'Below the Quiet Docks',    href: '/campaigns/furrious-five/quest-venomqueen.html',       children: [] },
+        { slug: 'quest-the-narrows-job', label: 'The Narrows Job',          href: '/campaigns/furrious-five/quest-the-narrows-job.html',  children: [] }
       ]}
     ]},
     { slug: 'tools', label: 'Tools', href: null, children: [

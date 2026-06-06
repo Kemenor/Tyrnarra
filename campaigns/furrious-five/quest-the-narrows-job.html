@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Narrows Job · Quest · The Furrious Five</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/campaigns/assets/gm.css">
+<link rel="stylesheet" href="/campaigns/assets/gm-nav.css">
+<script defer src="/campaigns/assets/gm-nav.js"></script>
+<script defer src="/campaigns/assets/gm.js"></script>
+<style>
+  .warn-box { background: rgba(58,20,16,0.34); border: 1px solid rgba(194,72,60,0.3); border-left: 3px solid var(--gm-accent); border-radius: 0 4px 4px 0; padding: 13px 17px; margin: 14px 0; }
+  .warn-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 6px; }
+  .warn-text { font-size: 0.94rem; line-height: 1.72; }
+  .sb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; }
+  .sb-item { background: rgba(255,255,255,0.03); border: 1px solid var(--gm-divider); border-radius: 4px; padding: 8px 11px; }
+  .sb-item .l { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); }
+  .sb-item .v { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gm-gold); }
+  .ability-list { list-style: none; margin-top: 8px; }
+  .ability-list li { padding: 8px 0; border-top: 1px solid var(--gm-divider); font-size: 0.92rem; line-height: 1.65; }
+  .ability-name { font-family: 'Cinzel', serif; color: var(--gm-accent); font-size: 0.92rem; }
+  /* compact crew reference */
+  .crew { background: rgba(255,255,255,0.02); border: 1px solid var(--gm-divider); border-radius: 5px; padding: 11px 14px; margin: 10px 0; }
+  .crew-name { font-family: 'Cinzel', serif; color: var(--gm-gold); font-size: 0.98rem; }
+  .crew-meta { font-size: 0.82rem; color: var(--gm-ink-dim); margin: 2px 0 6px; }
+  .crew-line { font-size: 0.9rem; line-height: 1.6; }
+  .crew-line b { color: var(--gm-accent); font-family: 'Cinzel', serif; font-weight: 400; }
+  /* skill-check callout */
+  .check { background: rgba(20,40,52,0.4); border: 1px solid rgba(110,160,190,0.28); border-left: 3px solid #6ea4be; border-radius: 0 4px 4px 0; padding: 13px 17px; margin: 14px 0; }
+  .check-head { font-family: 'Cinzel', serif; color: #9fcbe0; font-size: 0.98rem; margin-bottom: 4px; }
+  .check-dc { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 8px; }
+  .deg { font-size: 0.9rem; line-height: 1.62; padding: 5px 0; border-top: 1px solid rgba(110,160,190,0.18); }
+  .deg b { font-family: 'Cinzel', serif; font-weight: 400; color: #9fcbe0; }
+  .deg.crit-s b { color: #84c98a; } .deg.crit-f b { color: var(--gm-accent); }
+  /* loot */
+  .loot-row { display: grid; grid-template-columns: 1.3fr 0.5fr 2fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--gm-divider); font-size: 0.9rem; line-height: 1.58; }
+  .loot-row .ln { font-family: 'Cinzel', serif; color: var(--gm-gold); }
+  .loot-row .lv { color: var(--gm-ink-dim); font-size: 0.84rem; }
+  @media (max-width: 600px){ .loot-row{ grid-template-columns: 1fr; gap: 2px; } }
+</style>
+</head>
+<body data-page="quest-the-narrows-job">
+
+<div class="gm-banner">
+  <span>⚔ &nbsp; GM Material · Behind the Screen · Not Player-Facing</span>
+  <span class="gm-banner-sep">·</span>
+  <a href="/campaigns/furrious-five/index.html">Campaign hub ↗</a>
+</div>
+
+<div class="gm-container">
+
+  <div class="breadcrumb">
+    <a href="/campaigns/furrious-five/index.html">The Furrious Five</a><span class="sep">›</span><a href="/campaigns/furrious-five/millhaven-gm.html">Millhaven</a><span class="sep">›</span><span>Quest · The Narrows Job</span>
+  </div>
+
+  <div class="gm-header">
+    <div class="gm-kicker">Adventure Module · Guild Contract · Train Heist</div>
+    <div class="gm-title">The Narrows Job</div>
+    <div class="gm-flavor">The line goes dead at the Arrol Cut. The doors bang open at both ends. A calm voice calls a signal you don't know.</div>
+    <div class="pill-row" style="margin-top:16px">
+      <span class="pill">Party Level 5 · ×5</span><span class="pill">1–2 Sessions</span><span class="pill">Merkavar Line · the Arrol Cut</span><span class="pill">Magitech-Western · Running Fight</span><span class="pill">Contract: the Wayward Compass</span>
+    </div>
+  </div>
+
+  <div class="gm-tabs">
+    <button class="gm-tab-btn active" data-target="tab-job">The Job</button>
+    <button class="gm-tab-btn" data-target="tab-merkavar">To Merkavar</button>
+    <button class="gm-tab-btn" data-target="tab-train">The Train</button>
+    <button class="gm-tab-btn" data-target="tab-run">The Run</button>
+    <button class="gm-tab-btn" data-target="tab-npcs">NPCs</button>
+    <button class="gm-tab-btn" data-target="tab-treasure">Treasure</button>
+    <button class="gm-tab-btn" data-target="tab-after">Aftermath</button>
+  </div>
+
+  <!-- ══ THE JOB ══ -->
+  <div class="gm-panel active" id="tab-job">
+    <div class="section">
+      <div class="section-title">The Contract</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud · Posted at the Wayward Compass</div>
+        <div class="read-aloud-text">GUARD WANTED — RAIL CONSIGNMENT, MERKAVAR LINE. Chartered escort sought for a sealed shipment leaving Merkavar by rail. Two prior runs through the hill country were stopped and stripped; the line wants blades aboard who can hold a car. Travel to Merkavar at the Guild's coin, board the consignment, ride it through, deliver it whole. Pay on delivery. The Compass vouches the contract; it does not vouch the cargo. — See Aldric Fenn. Neutral charter applies.</div>
+      </div>
+      <div class="gm-note">
+        <div class="gm-note-label">GM Note · Fenn's Position</div>
+        <div class="gm-note-text">Aldric Fenn votes the Guild's chartered neutrality and asks nothing about the manifest, which is exactly why the job is here and not with the Stillside Watch. The real client is House Eisenhart, through a Merkavar broker; Fenn knows only that the coin is good and the route is cursed. He briefs the party flat: ride it, hold it, deliver it. He mentions that two crews already tried and failed, and lets that sit.</div>
+      </div>
+      <div class="gm-note">
+        <div class="gm-note-label">GM Note · Why the Job Came to Millhaven</div>
+        <div class="gm-note-text">Merkavar is the densest information-market on the continent: kitsune brokers read every freight-yard, the smile-watching crowd clocks every stranger. Hire escorts <i>in</i> Merkavar and the cargo's existence is market-gossip before the ink dries; the buyer hears, the robbers hear. The first two runs were leaked exactly that way. So Eisenhart's broker reached past the city to the Wayward Compass at Millhaven: a neutral-chartered office under a man who asks nothing, in a bridge-town where unlisted cargo is a way of life. Outsider blades nobody in Merkavar is watching. <b>Stahl wants people who do not ask, because in Merkavar everyone who asks, tells.</b></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">The Beats</div>
+      <div class="prose">
+        <p><b>1 · Take the job</b> at the Wayward Compass in Millhaven. Sister Wenna and the factor Edrik Stahl are travelling the same run.</p>
+        <p><b>2 · The river to Merkavar</b> — two days by barge up the Itsasalda water-route, into the lake and the grand arrival.</p>
+        <p><b>3 · The rail station</b> — meet Stahl, see the consignment loaded, board the outbound train.</p>
+        <p><b>4 · The ride out</b> — Wenna slips rear; the line dies at the Arrol Cut; the ambush.</p>
+        <p><b>5 · The running fight</b> — ambush in Steerage → rearward under fire across the Gun Flat → free Wenna in the Brakeman's Van → the lull, heal up → forward, fresh, into the Strongbox and Brannek Vael.</p>
+        <p><b>6 · Aftermath</b> — the crate, the Wright's claim, who walks away holding it.</p>
+      </div>
+      <div class="warn-box">
+        <div class="warn-label">The Throughline</div>
+        <div class="warn-text">The Wright's footprint is everywhere if you look: a brass three-spoke maker's mark stamped on a coupling at the yard, on the jammed brake, on the over-pressured furnace-tap. Players who clock the mark early piece together that it is an inside job before the reveal. The planted accomplice in Steerage is the same hand at work.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TO MERKAVAR ══ -->
+  <div class="gm-panel" id="tab-merkavar">
+    <div class="section">
+      <div class="section-title">The Approach · By Boat</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud · Into the Lake</div>
+        <div class="read-aloud-text">For two days the river holds you close: brown water, overhanging green, the bargeman's pole finding the bottom. Then the banks fall away on both sides at once, the current goes still and wide and impossibly clear beneath the hull, and you understand you are no longer on a river. The lake of Merkavar opens like a held breath let go. At its centre, rising straight from the water with no shore to stand on, is Helgafjall: a peak crowned in snow that no summer has ever taken, mirrored perfectly in water that no winter has ever frozen. The bargeman touches two fingers to his brow without being asked.
+
+And on the far shore, the city. It does not resolve so much as accumulate — wharves, then market-tiers stacked on the wharves, then whole quarters stacked on the tiers, then the great pale domes of the Assembly over all of it, and the nearer you draw the larger it refuses to stop being, until the masts in the harbour are a burned forest and the sound carries to you across the water: one vast murmur, the tide-roar of a hundred thousand bargains struck at once in more tongues than you can sort, threaded through with bells, and every bell a deal sealed. You have seen cities. You have not seen this. A god lives here, and the city has grown to the size of the saying so.
+
+Your boat slips in among a thousand others, and over the harbour-mouth she stands to receive you: Jianna, three storeys of lake-pale stone, a veiled woman with one hand open and offered to every hull that comes in, and one hand closed at her side. Beneath her bare feet, worked into the plinth so you pass over it as you dock, a thing is trodden into the stone: a taloned, gilded shape, a demon of hoarded gold, her clawed reach broken under the goddess's heel. The bargeman spits neatly into the water as you pass it. "Merkavar," he says, as if that explains it. "Where the deal is honest." He does not say tries to be. He doesn't have to. You're already close enough to see the beggars under the open hand.</div>
+      </div>
+      <div class="check">
+        <div class="check-head">◈ The Statue — Recall Knowledge (Religion)</div>
+        <div class="check-dc">DC 17 · Trained 15 + Hard 2 (the demon is unlabelled; you're inferring it)</div>
+        <div class="deg crit-s"><b>Critical Success (≥27):</b> The full reading. The trodden figure is Nirfel, the Vice Demon of Greed, her Gilded Talon snapped — and the irony: far out in the Order of Steam bay at Rika Tikur she is worshipped openly, and Greed is one of Jianna's own four faces. The city treads her in marble and haggles her in its heart every hour. What Merkavar stands for. Or tries to.</div>
+        <div class="deg"><b>Success (≥17):</b> It is Nirfel, the Vice Demon of Greed (the Gilded Talon). The statue is Merkavar's civic creed in stone: honest commerce mastering predatory greed.</div>
+        <div class="deg"><b>Failure (&lt;17):</b> The surface read only — a greed-demon under the goddess of fair trade. No name.</div>
+        <div class="deg crit-f"><b>Critical Failure (≤7):</b> A confident misread (wrong vice, or "Merkavar banned greed outright"). A local within earshot winces.</div>
+      </div>
+      <div class="gm-note">
+        <div class="gm-note-label">GM Note · The Statue</div>
+        <div class="gm-note-text">Merkavar's civic boast: honest commerce mastering predatory greed. The irony runs two ways and stays GM/folk-tier — far out in the Order of Steam bay, Rika Tikur keeps Nirfel's shrines openly and prospers on her closed fist, and Greed is one of Jianna's own four faces, weighed in every Merkavar deal. <b>A Lore (Merkavar / Mercantile) reaches the Success tier but not the Critical irony; Society gets only the civic-boast read.</b></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Merkavar Station · Clickable Concourse</div>
+      <div class="map-hint">The boarding scene. Click a numbered area for what it is.</div>
+      <div class="map-wrap">
+        <img src="/campaigns/furrious-five/assets/maps/train-station-concourse.webp" alt="Merkavar station concourse battlemap (downsized reference)">
+        <button class="map-hot" data-area="st-main-entrance" style="left:0.9%;top:42.2%;width:14.1%;height:25.3%"><span class="hot-num">1</span></button>
+        <button class="map-hot" data-area="st-shops" style="left:24.5%;top:26.7%;width:11.9%;height:16.4%"><span class="hot-num">2</span></button>
+        <button class="map-hot" data-area="st-shops" style="left:24.5%;top:63.4%;width:11.3%;height:17.8%"></button>
+        <button class="map-hot" data-area="st-information-board" style="left:32%;top:47%;width:4.5%;height:14.1%"><span class="hot-num">3</span></button>
+        <button class="map-hot" data-area="st-waiting-rooms" style="left:6.6%;top:21%;width:11.1%;height:19.5%"><span class="hot-num">4</span></button>
+        <button class="map-hot" data-area="st-waiting-rooms" style="left:6.3%;top:68.5%;width:10.8%;height:18.7%"></button>
+        <button class="map-hot" data-area="st-staff-office" style="left:33.4%;top:8.3%;width:9.5%;height:11.9%"><span class="hot-num">5</span></button>
+        <button class="map-hot" data-area="st-ticket-office" style="left:18.2%;top:8.5%;width:14.6%;height:11.5%"><span class="hot-num">6</span></button>
+        <button class="map-hot" data-area="st-bathroom" style="left:6.5%;top:8.8%;width:11.5%;height:11.3%"><span class="hot-num">7</span></button>
+        <button class="map-hot" data-area="st-post-desk" style="left:65.7%;top:8.9%;width:9.4%;height:5.7%"><span class="hot-num">8</span></button>
+        <button class="map-hot" data-area="st-post-storage" style="left:61.1%;top:8.2%;width:5%;height:12.6%"><span class="hot-num">9</span></button>
+        <button class="map-hot" data-area="st-produce" style="left:81.5%;top:8.4%;width:7%;height:6%"><span class="hot-num">10</span></button>
+        <button class="map-hot" data-area="st-tracks" style="left:43.1%;top:70.1%;width:56.9%;height:9.8%"><span class="hot-num">11</span></button>
+        <button class="map-hot" data-area="st-tracks" style="left:43.4%;top:49.3%;width:56.6%;height:9.3%"></button>
+        <button class="map-hot" data-area="st-tracks" style="left:43.2%;top:28.9%;width:56.8%;height:9.6%"></button>
+        <button class="map-hot" data-area="st-vip" style="left:43.3%;top:2.7%;width:16.6%;height:15.6%"><span class="hot-num">12</span></button>
+      </div>
+      <button class="map-toggle" type="button">Hide areas</button>
+      <div class="map-detail" id="mapDetailStation"><div class="map-detail-empty">Select a numbered area on the concourse above.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Meeting the Factor</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud · The Platform</div>
+        <div class="read-aloud-text">He finds you before you find him: a short, damp Dwarf in a too-good coat, a strongbox chained to his wrist and a ledger clamped under the other arm like a man holding his own ribs in. "You're the Compass blades. Good. You're late, the schedule is not mine to move, and the cargo does not get discussed." Edrik Stahl says his own name as though it costs him. He counts you twice, glances down the platform at nothing, and lowers his voice. "Whatever you were told the run is worth, it is worth more to the wrong people. Get it to the bay. Ask me nothing." Behind him, a broad Halfling woman with a coin already in her fingers tips it into the gutter-stream and murmurs something to the water.</div>
+      </div>
+      <div class="check">
+        <div class="check-head">◈ Asking Edrik What's Inside — Diplomacy</div>
+        <div class="check-dc">DC 23 · Edrik L3 (DC 18) + Very Hard 5 (under orders to say nothing) · soften to DC 20 with real leverage · Deception or Intimidation substitute</div>
+        <div class="deg crit-s"><b>Critical Success (≥33):</b> A half-truth — "Order work. Reclaimed. Going somewhere it'll be locked away and forgotten, which is where it belongs. That's the most you get."</div>
+        <div class="deg"><b>Success (≥23):</b> He grumbles something useful despite himself — "It's worth robbing, that's why you're aboard. Two crews already tried. Now shut yer trap."</div>
+        <div class="deg"><b>Failure (&lt;23):</b> Grumpy stonewall — "The cargo is not discussed. Watch the doors, not my ledger."</div>
+        <div class="deg crit-f"><b>Critical Failure (≤13, realistically a fumble):</b> He decides you ask far too many questions to trust and moves to cancel the contract. <i>(Fenn can salvage it, or the party rides on uncontracted — the train still gets robbed.)</i></div>
+      </div>
+      <div class="gm-note">
+        <div class="gm-note-label">GM Note · Boarding</div>
+        <div class="gm-note-text">Stahl rides the Strongbox car with the sealed crate; the party and Sister Wenna take Steerage. The consignment is brokered Eisenhart steel and a single chained "almost," outbound to a buyer. Let the players settle and meet a civilian or two before Wenna excuses herself rearward (the toilet) and the train rolls.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ THE TRAIN ══ -->
+  <div class="gm-panel" id="tab-train">
+    <div class="section">
+      <div class="section-title">The Line Dies</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud · The Arrol Cut</div>
+        <div class="read-aloud-text">The clatter of the rail is the kind of sound you stop hearing. Which is why you feel it before you understand it: the song under the wheels goes wrong, a long iron groan, and the car lurches as the brakes bite hard enough to throw the standing. Through the window the canyon walls of the Arrol Cut close in on both sides, and ahead, where the track should run on, a fresh fall of rock sits across the rails like it grew there. Then the doors at both ends of the car bang open at once, and the first voice you hear is calm, almost kind, calling a signal you don't know: "Forward car, hold. Rear car, take them."</div>
+      </div>
+      <div class="gm-note">
+        <div class="gm-note-label">GM Note · The Trigger</div>
+        <div class="gm-note-text">That calm voice is Brannek Vael, forward at the Strongbox, already cracking the crate. The crew boards from both ends; the planted accomplice (the Hryngar Taskmaster seeded in Steerage) drops their disguise and calls the boarders in. The party is between the rear press and the forward objective, exactly as Vael wants them.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">The Train · Clickable Consist</div>
+      <div class="map-hint">Six cars, front (engine) to rear. Click a car for its role; full run-notes are under <b>The Run</b>.</div>
+      <div class="map-wrap">
+        <img src="/campaigns/furrious-five/assets/maps/narrows-job-train.webp" alt="The Narrows Job train consist battlemap (downsized reference)">
+        <button class="map-hot" data-area="tr-engine" style="left:0%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">1</span></button>
+        <button class="map-hot" data-area="tr-coal" style="left:16.667%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">2</span></button>
+        <button class="map-hot" data-area="tr-strongbox" style="left:33.333%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">3</span></button>
+        <button class="map-hot" data-area="tr-steerage" style="left:50%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">4</span></button>
+        <button class="map-hot" data-area="tr-cannons" style="left:66.667%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">5</span></button>
+        <button class="map-hot" data-area="tr-van" style="left:83.333%;top:14.286%;width:16.667%;height:71.429%"><span class="hot-num">6</span></button>
+      </div>
+      <button class="map-toggle" type="button">Hide areas</button>
+      <div class="map-detail" id="mapDetailTrain"><div class="map-detail-empty">Select a car above.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Run-of-Play</div>
+      <div class="prose">
+        <p>The party starts in <b>Steerage (4)</b>. The rear is <b>Gun Flat (5)</b> then <b>Brakeman's Van (6)</b>; the <b>Strongbox (3)</b> is forward. The intended shape is three real fights plus a rescue:</p>
+        <p>Steerage ambush → rearward through the Gun Flat's fire → free Wenna in the Van → the lull, <b>heal to full</b> → turn forward, fresh, into the Strongbox climax. The party doubles back because you don't leave a captured ally and a flanking crew at your back. The boiler clock in the Cab and the Coal Tender stay forward and optional.</p>
+      </div>
+      <div class="warn-box">
+        <div class="warn-label">Pacing · ~540 XP across the train</div>
+        <div class="warn-text">This is a running set-piece, not six rest-separated fights. Run it as escalating waves: the boarders press over rounds, the party fights forward, and only the Strongbox needs them fresh — which the rescued healer guarantees. Scale how many board to the party's attrition. The freed Sister Wenna resets the party <i>after</i> the lead-up fights, so the severe boss math (150 XP) holds.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ THE RUN ══ -->
+  <div class="gm-panel" id="tab-run">
+    <div class="section">
+      <div class="section-title">The Crew · Stat Reference</div>
+      <div class="prose"><p>A renegade Order of Steam sapper-band: dwarven warriors and grenade-bombardiers, gnome blasting-mages, led by the cashiered signal-wright. One faction, one bestiary family (Monster Core), plus the boss. Full blocks under the source names; the lines below are what you need at the table.</p></div>
+
+      <div class="crew"><div class="crew-name">Dwarf Warrior</div><div class="crew-meta">Monster Core · Creature 1 · melee chaff</div>
+        <div class="crew-line">HP 20 · AC 17 · Per +7 · Fort +8 / Ref +3 / Will +5 · Speed 20</div>
+        <div class="crew-line"><b>Warhammer</b> +8, 1d8+2 B (shove) · <b>Clan Dagger</b> +8, 1d4+2 P (agile, parry) · <b>Shield Block</b>, <b>Shielded Charge</b> (Raise a Shield + Stride twice)</div>
+      </div>
+      <div class="crew"><div class="crew-name">Hryngar Bombardier</div><div class="crew-meta">Monster Core · Creature 1 · grenade-thrower</div>
+        <div class="crew-line">HP 20 · AC 18 · Per +4 · Fort +7 / Ref +8 / Will +4 · Speed 20</div>
+        <div class="crew-line"><b>Alchemical Grenade</b> +8, 1d6 acid/cold/fire + 1 persistent + 1 splash (carries 6/day) · <b>Quick Bombardier</b> (draw + throw in one action) · Warhammer +4, 1d8+1 B</div>
+      </div>
+      <div class="crew"><div class="crew-name">Hryngar Taskmaster</div><div class="crew-meta">Monster Core · Creature 2 · the accomplice / sub-leader</div>
+        <div class="crew-line">HP 30 · AC 18 · Per +8 · Fort +8 / Ref +4 / Will +8 · Speed 20</div>
+        <div class="crew-line"><b>Pick</b> +8, 1d6+6 P (fatal d10) · <b>Take Them Down!</b> (allied hryngars within range gain +1 status to attack & damage) · <b>Iron Mind</b> · innate casting DC 18 (Fear, Harm, Shield, Runic Weapon)</div>
+      </div>
+      <div class="crew"><div class="crew-name">Umbral Gnome Warrior</div><div class="crew-meta">Monster Core · Creature 2 · crossbow skirmisher</div>
+        <div class="crew-line">HP 34 · AC 18 · Per +7 · Fort +9 / Ref +8 / Will +5 · Speed 20</div>
+        <div class="crew-line"><b>Spear</b> +10, 1d6+4 P · <b>Heavy Crossbow</b> +8, 1d10 P (reload 2) · <b>Reactive Strike</b>, <b>Shield Block</b></div>
+      </div>
+      <div class="crew"><div class="crew-name">Dwarf Stonecaster</div><div class="crew-meta">Monster Core · Creature 4 · earth-caster lieutenant</div>
+        <div class="crew-line">HP 70 · AC 20 · Per +13 · Fort +11 / Ref +8 / Will +14 · Speed 20 · Tremorsense 10 ft</div>
+        <div class="crew-line"><b>Staff</b> +12, 1d4+4 B (two-hand d8) · <b>Boulder Roll</b> (rolling boulder, area, save) · <b>Tremor</b> (ground-shake, area, knocks prone on crit fail) · <b>Dwarven Doughtiness</b></div>
+      </div>
+      <div class="crew"><div class="crew-name">Umbral Gnome Rockwarden</div><div class="crew-meta">Monster Core · Creature 5 · blasting-mage lieutenant</div>
+        <div class="crew-line">HP 63 · AC 22 · Per +14 · Speed 15</div>
+        <div class="crew-line">Primal prepared DC 24 / innate DC 21 · key spells: <b>Caustic Blast</b>, <b>Thunderstrike</b>, <b>Ignition</b>, <b>Acid Grip</b>, <b>Blindness</b>, <b>One With Stone</b> · Pick +10, 1d6 P (fatal d10) · Sling +11, 1d6 B</div>
+      </div>
+
+      <div class="gm-note"><div class="gm-note-label">Difficulty Arc (5×L5: trivial 50 / low 80 / moderate 100 / severe 150)</div><div class="gm-note-text">Low skirmishes (Steerage, Van) → kinetic moderate (Cannons; Tender if engaged) → the severe boss at the Strongbox, with the boiler clock optional up in the Cab.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Car by Car</div>
+      <div class="level-stack">
+
+        <div class="level-card"><div class="level-header"><div class="level-number">4</div><div class="level-info"><div class="level-name">Steerage · The Ambush</div><div class="level-desc">Party start · Low 80 · the accomplice turns</div></div><span class="level-tag tag-dark">Fight 1</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-combat">⚔ Combat</span></div>
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The man two benches up, the quiet one in the travelling coat, stands without hurry and sets a brass three-spoke badge on the seatback where you can see it. "Stay down and you keep your teeth," he says, conversationally, as the rear door bangs and boots come through. The bystanders start screaming. He does not raise his voice.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · 75 XP</div><div class="gm-note-text">1× <b>Hryngar Taskmaster</b> (the accomplice, 15) + 1× <b>Dwarf Stonecaster</b> (30) + 3× <b>Dwarf Warrior</b> (30). Civilians on the benches (0 XP) are the protect-the-bystanders beat. The Taskmaster opens with <i>Take Them Down!</i> to buff the boarders.</div></div>
+            <div class="exp-label">Notes</div><ul class="trait-list"><li>The accomplice carries the Wright's brass maker's-mark badge — a clean clue if recovered (◈ Society/Thievery to read the Order stamp).</li><li>Sister Wenna is already gone rearward; the party realises mid-fight she isn't with them.</li><li>Steerage is 44 bench-seats in two rows down a central aisle: cover everywhere, civilians underfoot.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">5</div><div class="level-info"><div class="level-name">Gun Flat · Under Fire</div><div class="level-desc">Open car · Moderate 100 · cannon pressure</div></div><span class="level-tag tag-grey">Pressure</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-combat">⚔ Combat</span><span class="enc-tag enc-hazard">⚠ Hazard</span></div>
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The next car has no roof and no walls worth the name: an open deck of mounted cannons lashed under tarps, Eisenhart steel still stamped with the foundry mark. Bandits are already among them, swinging a barrel around to bear back up the train at you, and the wind off the canyon takes your coat like a hand.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · 100 XP</div><div class="gm-note-text">1× <b>Dwarf Stonecaster</b> (30) + 2× <b>Umbral Gnome Warrior</b> (30) + 4× <b>Dwarf Warrior</b> (40). The mounted cannons are usable: a crew member can Interact to swing and fire one as a line hazard. This is your "shoot into" beat — the party can push through, suppress, or seize a cannon.</div></div>
+            <div class="exp-label">Notes</div><ul class="trait-list"><li>Loot here: the <b>Acid Spitter</b> (L4 clockwork acid trap) stashed among the cannons — a reason to actually engage the deck.</li><li>Open-top: exposed to weather and to anyone on the roofs; no cover but the gun-mounts.</li><li>The party crosses this car going rearward to reach the Van; they will cross it again coming back forward.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">6</div><div class="level-info"><div class="level-name">Brakeman's Van · The Rescue</div><div class="level-desc">Rear car · Low 80 (horde) · free Wenna</div></div><span class="level-tag tag-dark">Fight 2</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-combat">⚔ Combat</span><span class="enc-tag enc-discovery">◉ Rescue</span></div>
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The rearmost car is hammocks and a cold galley, and a knot of boarders has a short broad woman backed into the corner by the brake-wheel, a coin clutched white-knuckled in one fist. "I'm a healer, you great idiots," Sister Wenna is saying, with more exasperation than fear, "and you are going to need one." She is not wrong.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · 80 XP (horde)</div><div class="gm-note-text">2× <b>Umbral Gnome Warrior</b> (30) + 1× <b>Gnome Bard</b> (10, HP 16, <i>Do a Jig!</i>) + 3× <b>Dwarf Warrior</b> (30) + 1× <b>Hryngar Bombardier</b> (10). A press of seven forcing the rear. Free Wenna and the fight tips fast.</div></div>
+            <div class="warn-box"><div class="warn-label">The Reset</div><div class="warn-text">Once Wenna is free and the rear is clear, the party gets the lull — the boss is still cracking the strongroom forward. The rescued healer patches them to full (treat it as a scene-transition reset; do not count her L1 spell slots). They turn forward fresh, which is what the severe Strongbox math assumes.</div></div>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">3</div><div class="level-info"><div class="level-name">Strongbox Car · The Climax</div><div class="level-desc">Armoured car · Severe 150 · Vael + the crate</div></div><span class="level-tag tag-dark">Boss</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-boss">★ Boss</span></div>
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The armoured car is a strongroom on rails: weapon-racks along the walls, a central table scattered with someone's half-finished plan, and at the back a steel vault standing open. A Forge Dwarf is crouched at it, one hand inside, not turning around. "You held a car. Two crews didn't." He withdraws his hand; there is a chained crate beside him and a brass tool already folding shut in his fist. "I'm nearly done. You can leave, or you can be the part of tonight I have to explain." Edrik Stahl is pressed into the far corner, very pale, very quiet.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · 150 XP</div><div class="gm-note-text">1× <b>Brannek Vael</b> (the Signal-Wright, 80) + 1× <b>Umbral Gnome Rockwarden</b> (40) + 1× <b>Dwarf Stonecaster</b> (30). His two caster-lieutenants screen him while he finishes with the crate. See the <b>NPCs</b> tab for Vael's full block and tactics. The factor Edrik is a non-combatant here; Vael has not bothered to kill him.</div></div>
+            <div class="exp-label">Notes</div><ul class="trait-list"><li>Loot: <b>Traveler's Any-Tool</b> on Vael; the <b>Bomb Snare</b> and the valuables in the strongroom / munitions racks.</li><li>The chained "almost" is the crate (see Aftermath · the GM Secret).</li><li>Vael announces his moves before he makes them, the way he used to call signals. He is not cruel; he is reclaiming.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">1</div><div class="level-info"><div class="level-name">Locomotive Cab · The Boiler Clock</div><div class="level-desc">Forward · optional · complex hazard</div></div><span class="level-tag tag-grey">Optional</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-hazard">⚠ Hazard</span></div>
+            <div class="gm-note"><div class="gm-note-label">GM Note · The Over-Pressured Boiler</div><div class="gm-note-text">Vael rigged the cab's mana-furnace to over-pressure: a rising-pressure complex hazard with the Wright's brass maker's-mark on the tap. Ignore it and the engine ruptures after the fight (a problem for the cargo and the line, not the party); vent it with a <b>Crafting or Thievery</b> check against the hazard DC. It is the same lesson the crate teaches in miniature — the line answers to him. <i>Stat the full hazard (DC, stages, steam damage) from PF2e GM Core when you bring it into play; ~Complex Hazard, level 5–6.</i> Two crew (1× Stonecaster + 1–2 Bombardier) hold the cab if the party comes forward early.</div></div>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">2</div><div class="level-info"><div class="level-name">Coal Tender / Roofs</div><div class="level-desc">Open hopper · optional · Moderate 100 if engaged</div></div><span class="level-tag tag-grey">Optional</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div style="margin-bottom:8px"><span class="enc-tag enc-combat">⚔ Combat</span></div>
+            <div class="gm-note"><div class="gm-note-label">GM Note · The Kinetic Beat</div><div class="gm-note-text">An open coal hopper between engine and strongbox, and the climb-point onto the car roofs. If the party drives forward over the top instead of through the cars, run the tender as a moving-train roof skirmish: 1× <b>Rockwarden</b> (40) + 1× <b>Hryngar Taskmaster</b> (15) + 4× <b>Hryngar Bombardier</b> (40), grenades lobbed across the coal and the roofline. Skip it entirely if the party goes Strongbox-direct.</div></div>
+          </div></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ NPCS ══ -->
+  <div class="gm-panel" id="tab-npcs">
+    <div class="section">
+      <div class="section-title">Brannek Vael · The Signal-Wright</div>
+      <div class="read-aloud">
+        <div class="read-aloud-label">Read Aloud · First Words</div>
+        <div class="read-aloud-text">He does not look like a bandit-lord. He looks like a foreman near the end of a long shift: square, grey-bearded, an exo-frame of fine brass-and-leather bracing one shoulder, ember-patient eyes that have read a hundred gauges. When he speaks it is the unhurried cadence of a man calling signals down a line he built. "Twenty years I set the gear that keeps this stretch from killing fools. They broke me over the one thing that was mine. Tonight I take it back. You can stand aside, or you can be in the way of a man who is only here for one box."</div>
+      </div>
+      <div class="statblock">
+        <div class="statblock-name">Brannek Vael</div>
+        <div class="statblock-meta">Reskin: Aliver "Pillbug" Podiker · Creature 7 · Forge Dwarf · cashiered Order signal-wright · sabotage alchemist</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+16</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">21</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">125</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+16 / +13 / +16</div></div>
+          <div class="sb-item"><div class="l">Speed</div><div class="v">25 ft</div></div>
+          <div class="sb-item"><div class="l">Skills</div><div class="v">Crafting / Engineering high</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Frost Vial / Sabotage Charge (bomb)</span> +14 ranged, 2d6 cold + 2 cold splash. Reflavour his alchemy as caustic engine-chemistry and rigged charges.</li>
+          <li><span class="ability-name">Hand Crossbow / Bolt-Gun</span> +14, 2d6 piercing (magical, reload 1).</li>
+          <li><span class="ability-name">Dagger</span> +14, 1d4+5 piercing (agile, finesse, versatile S; thrown 10 ft variant).</li>
+          <li><span class="ability-name">Quick Bomber</span> Interact to draw a bomb, then Strike with it — he leads with thrown charges.</li>
+          <li><span class="ability-name">Precise Poisoning</span> Applies a poison dose to a bolt, then a hand-crossbow Strike; on a hit, +1d6 piercing plus the poison effect.</li>
+          <li><span class="ability-name">Foul Concoction (1/day)</span> A burst of foul smoke fills an area (functions as a stinking cloud); Vael is immune to his own stench. He uses it to cover the crate or split the party.</li>
+          <li><span class="ability-name">Infused Items</span> Carries the day's run of bombs, elixirs, and pre-rigged gadgets — the boiler tap, the dropped rockface, the jammed brake are all his work in advance.</li>
+        </ul>
+      </div>
+      <div class="gm-note"><div class="gm-note-label">GM Note · Running Vael</div><div class="gm-note-text">He announces his moves before he makes them, the way he called signals. He fights to <i>finish and leave</i>, not to wipe the party: he wants the crate, not a massacre. He opens with thrown charges from behind his two casters, uses Foul Concoction to screen the vault, and will cut and run with the crate the moment he can — a fleeing Vael with the prize is a better story than a dead one. He kills Edrik only if the factor does something stupid.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Travelling Companions</div>
+      <div class="npc-grid">
+
+        <div class="npc-card"><div class="npc-card-header"><div class="npc-icon">🪙</div><div><div class="npc-name">Sister Wenna Stilford</div><div class="npc-role">Cleric of Shuun · the healer (Acolyte, L1)</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">A Cape-side Halfling of Millhaven, bargewoman's daughter, cleric of Shuun of the working water. Broad, unhurried, river-calloused; tips a coin to any current she crosses and means it.</div>
+          <div class="npc-body"><div class="exp-body">She took passage to Merkavar to carry her temple's tithe and is glad of company on the rail. In a fight she is no use and knows it: she gets low, gets the hurt behind her, and pours Shuun's tide back into torn flesh once the steel stops. Warm, blunt, unimpressed by heroics, fierce about the wounded. <b>Stats:</b> Acolyte (Monster Core / GMG) — HP 16, AC 15, Will +9, divine prepared casting with Heal. She hangs back from the Strongbox; if talked into it she dies to the first thing Vael throws, so let the party learn that the easy way.</div><div class="hook-box"><div class="exp-label">⚓ Hook</div>She is the party's reset between the lead-up fights and the boss. Freeing her in the Van and getting the lull is the mechanical permission to enter the climax at full HP.</div></div>
+        </div>
+
+        <div class="npc-card"><div class="npc-card-header"><div class="npc-icon">📒</div><div><div class="npc-name">Edrik Stahl</div><div class="npc-role">Eisenhart factor · non-combatant (L3)</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">A fussy, sweating Eisenhart house-clerk shepherding the consignment and a locked manifest he will not let out of his sight. He knows what is in the crate and dreads anyone learning it.</div>
+          <div class="npc-body"><div class="exp-body">Useless in a brawl, invaluable after: he can name every car, every seal, and — under pressure (see the Diplomacy check) — what the Wright is really after. He rides the Strongbox with the crate and spends the climax pressed into a corner. If the party saves the shipment and him, he pays the Guild fee in full and never speaks of it again. If they let Vael take the crate, his terror turns to a quiet, professional dread that is its own kind of clue.</div><div class="hook-box"><div class="exp-label">⚓ Hook</div>"This city has ears the way the lake has fish." Stahl is the voice of why the job is quiet, why it came to Millhaven, and why the crate matters more than the steel around it.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TREASURE ══ -->
+  <div class="gm-panel" id="tab-treasure">
+    <div class="section">
+      <div class="section-title">The Haul · ~520 gp</div>
+      <div class="prose"><p>Themed to the Wright and the Eisenhart cargo: an engineer's tool, his sabotage charges, a clockwork trap, a bomber's elixir, and a taste of the cargo. Read the source JSON for exact activation when you hand each out.</p></div>
+
+      <div class="loot-row" style="border-top:none"><div><span class="ln">Quest payment</span></div><div class="lv">— · 150 gp</div><div>The Guild / Eisenhart fee for recovering the consignment and breaking the robbery. Paid on completion, off-train.</div></div>
+      <div class="loot-row"><div><span class="ln">Traveler's Any-Tool</span> <span style="color:var(--gm-gold)">⭐</span></div><div class="lv">L6 · 200 gp</div><div>An ash-and-steel rod that transforms into any simple tool (Tap 2 to concentrate). The Wright's prized master tool — <b>carried by Vael</b>.</div></div>
+      <div class="loot-row"><div><span class="ln">Bomb Snare</span></div><div class="lv">L6 · 40 gp</div><div>A rigged charge of three 3rd-level moderate bombs; one trigger deals ~6d6 of the component element in a burst (run as electricity for the Magitech read). In the <b>strongroom / munitions</b>.</div></div>
+      <div class="loot-row"><div><span class="ln">Acid Spitter</span></div><div class="lv">L4 · 15 gp</div><div>A tin clockwork lizard that spits acid when a creature steps adjacent (save or acid + persistent acid). On the <b>Gun Flat</b> cannon platform.</div></div>
+      <div class="loot-row"><div><span class="ln">Bomber's Eye Elixir (Lesser)</span></div><div class="lv">L4 · 14 gp</div><div>For 5 minutes, your bomb Strikes cut targets' cover bonus to AC. On a <b>Hryngar Bombardier</b>.</div></div>
+      <div class="loot-row"><div><span class="ln">Valuables</span></div><div class="lv">— · ~50 gp</div><div>A shard of raw Eldaran "almost" crystal (~30 gp, a sample of the cargo) + Eisenhart-stamped silver (~20 gp). The <b>strongroom crate</b> and the Armory.</div></div>
+    </div>
+  </div>
+
+  <!-- ══ AFTERMATH ══ -->
+  <div class="gm-panel" id="tab-after">
+    <div class="section">
+      <div class="section-title">What Happens After</div>
+      <div class="gm-secret">
+        <button class="gm-secret-toggle">⚿ GM Secret · What's in the Crate</button>
+        <div class="gm-secret-body">
+          <div class="prose">
+            <p>The chained "almost" is the Wright's own work: a <b>signal-relay device that can seize a Magitrain's safety-gear from outside the cab</b> — a master-key to the southern line's signals. The Order confiscated it when they broke him and quietly sold it onward; tonight it was riding to a buyer who should never hold it. Brannek robs the train to take it back, and he is not wrong that it is his.</p>
+            <p>The open question the party inherits: it cannot stay with Vael, it cannot reach the buyer, and the Order does not want it found. <b>Whoever carries it off the Arrol Cut decides who owns the rail's blind spots.</b> The boiler Vael over-pressured in the cab is the same lesson in miniature — he wanted the party to see that the line answers to him.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gm-note"><div class="gm-note-label">If the Party Holds the Crate</div><div class="gm-note-text">Stahl pays in full and wants it locked away and forgotten. The Guild takes no position. But the device is worth a kingdom's ransom to a Pirate Lord, an Order rival, or the original buyer, and someone will come asking. A thread for later: who told the buyer it was on this run, and is that the same someone who leaked the first two?</div></div>
+      <div class="gm-note"><div class="gm-note-label">If Vael Escapes with It</div><div class="gm-note-text">A fleeing Wright with the master-key is the better hook. He vanishes back into the Order of Steam's volcanic belt, and within a season the southern line starts having "accidents" only he can explain. The party may be hired to bring him in — or to decide he was right.</div></div>
+      <div class="gm-note"><div class="gm-note-label">The Wright's Claim</div><div class="gm-note-text">Vael is sympathetic on purpose. If the party talked to him, they may not want to hand the device to the Order any more than to the buyer. Leave it unresolved. Let them argue about who deserves to hold the rail's blind spots.</div></div>
+    </div>
+  </div>
+
+  <div class="gm-footer">THE FURRIOUS FIVE · THE NARROWS JOB · NOT PLAYER-FACING</div>
+
+</div>
+
+<!-- Per-page area notes for the clickable maps; behaviour lives in gm.js. -->
+<script>
+window.GM_MAP_AREAS = {
+  // ── Merkavar station concourse ──
+  'st-main-entrance':   { n: '1 · Main Entrance', t: '<p>The commoners\' entrance, for those arriving by coach.</p>' },
+  'st-shops':           { n: '2 · Shops', t: '<p>Two circular shops selling newspapers, gadgets, souvenirs — Merkavar bread, Azkataria tea, Atarialda cheese, Itsasalda rum, Emarrea sake.</p>' },
+  'st-information-board':{ n: '3 · The Information Board', t: '<p>Arrivals on one half, departures on the other, arcanotech-updated in real time.</p>' },
+  'st-waiting-rooms':   { n: '4 · The Waiting Rooms', t: '<p>Two rooms to sit and wait, looking out over the busy market plaza before the station.</p>' },
+  'st-staff-office':    { n: '5 · Staff Office', t: '<p>Clerks\' tables, shelves, and the lost & found.</p>' },
+  'st-ticket-office':   { n: '6 · Ticket Office', t: '<p>Four clerks at rush hour. Where the party\'s passes are stamped.</p>' },
+  'st-bathroom':        { n: '7 · Public Bathroom', t: '<p>Public washrooms.</p>' },
+  'st-post-desk':       { n: '8 · Post Office Desk', t: '<p>Two Guild clerks handling letters and packages.</p>' },
+  'st-post-storage':    { n: '9 · Post Office Storage', t: '<p>Half-filled with parcels and letters bound for other cities.</p>' },
+  'st-produce':         { n: '10 · Fresh Produce Stand', t: '<p>Local produce and bread, loved by locals, overlooked by tourists.</p>' },
+  'st-tracks':          { n: '11 · The Train Tracks', t: '<p>Three platform tracks. The consignment loads here; the party boards from this platform.</p>' },
+  'st-vip':             { n: '12 · VIP Entrance', t: '<p>For money or status: its own clerks and its own door. Where Edrik Stahl prefers to be seen, and isn\'t.</p>' },
+  // ── The Narrows Job consist (front to rear) ──
+  'tr-engine':    { n: '1 · Locomotive Cab', t: '<p>The boiler clock (optional complex hazard). Forward-most; the Wright rigged the furnace-tap. See <b>The Run · Locomotive Cab</b>.</p>' },
+  'tr-coal':      { n: '2 · Coal Tender / Roofs', t: '<p>Open coal hopper and the climb-point onto the roofs. Optional roof skirmish. See <b>The Run · Coal Tender</b>.</p>' },
+  'tr-strongbox': { n: '3 · Strongbox Car', t: '<p>The climax: Brannek Vael at the open vault, the chained crate, two caster-lieutenants, and Edrik in the corner. Severe boss. See <b>The Run · Strongbox</b>.</p>' },
+  'tr-steerage':  { n: '4 · Steerage', t: '<p>The party starts here. The ambush opens; the planted accomplice turns; civilians to protect. See <b>The Run · Steerage</b>.</p>' },
+  'tr-cannons':   { n: '5 · Gun Flat', t: '<p>Open deck of mounted Eisenhart cannons. Ranged pressure; the Acid Spitter loot is stashed here. See <b>The Run · Gun Flat</b>.</p>' },
+  'tr-van':       { n: '6 · Brakeman\'s Van', t: '<p>The rear. Free Sister Wenna from the boarders, then take the lull to heal to full. See <b>The Run · Brakeman\'s Van</b>.</p>' }
+};
+</script>
+
+</body>
+</html>
