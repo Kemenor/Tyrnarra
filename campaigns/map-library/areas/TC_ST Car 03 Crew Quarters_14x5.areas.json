@@ -1,0 +1,161 @@
+{
+  "image": "TC_ST Car 03 Crew Quarters_14x5.webp",
+  "areas": [
+    {
+      "label": "Toilet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 7.2,
+          "top": 20.9,
+          "width": 6.8,
+          "height": 20.8
+        }
+      ]
+    },
+    {
+      "label": "Washroom",
+      "desc": "",
+      "rects": [
+        {
+          "left": 6.7,
+          "top": 59.8,
+          "width": 8,
+          "height": 20.8
+        }
+      ]
+    },
+    {
+      "label": "Table",
+      "desc": "A central table with two windows",
+      "rects": [
+        {
+          "left": 19.5,
+          "top": 29.7,
+          "width": 10,
+          "height": 39.6
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 49.8,
+          "top": 21.2,
+          "width": 14.1,
+          "height": 19.8
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 64.4,
+          "top": 20.7,
+          "width": 14,
+          "height": 18.8
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 79.3,
+          "top": 20.7,
+          "width": 13.2,
+          "height": 18.4
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 50,
+          "top": 59.9,
+          "width": 14.1,
+          "height": 20.4
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 63.6,
+          "top": 59.6,
+          "width": 14.6,
+          "height": 19.8
+        }
+      ]
+    },
+    {
+      "label": "Hammock Compartment",
+      "desc": "A compartment with a hammock",
+      "rects": [
+        {
+          "left": 78.1,
+          "top": 60.6,
+          "width": 14.7,
+          "height": 17.5
+        }
+      ]
+    },
+    {
+      "label": "Kitchen",
+      "desc": "A kitchen stove, with pots, pans and a water boiler",
+      "rects": [
+        {
+          "left": 34.5,
+          "top": 19.9,
+          "width": 15,
+          "height": 16.8
+        }
+      ]
+    },
+    {
+      "label": "Cabinet",
+      "desc": "Cabinet for dishes and produce",
+      "rects": [
+        {
+          "left": 14.4,
+          "top": 20.7,
+          "width": 2.8,
+          "height": 21.2
+        }
+      ]
+    },
+    {
+      "label": "Drink Cabinet",
+      "desc": "A cabinet with mugs and two kegs",
+      "rects": [
+        {
+          "left": 14.4,
+          "top": 59.1,
+          "width": 3.3,
+          "height": 20.2
+        }
+      ]
+    },
+    {
+      "label": "General Storage Cabinet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 35.2,
+          "top": 68,
+          "width": 14.2,
+          "height": 11.9
+        }
+      ]
+    }
+  ]
+}
