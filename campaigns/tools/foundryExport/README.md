@@ -1,0 +1,92 @@
+# foundryExport — quest → Foundry VTT import macro
+
+Turns a compact **quest spec** into a paste-and-run **Foundry Script Macro** that,
+when you run it as GM, builds the quest's actor folder and fills it:
+
+- one **Actor** per distinct monster (you drop *N* tokens yourself — one actor, many tokens),
+- named **NPCs**, either imported from a stat-block base and renamed, or created as a blank statless `npc` (generic token, art later),
+- one **loot-actor "chest"** per haul, with its items (correct quantities) and coins.
+
+This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../../.claude/skills/quest-workflow/SKILL.md) skill, and a standalone tool you can point at *any* quest (including ones already built) to generate its macro on demand.
+
+## Why a macro, not a REST push
+
+A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works identically on Forge-hosted and self-hosted worlds. It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
+
+> Verified live against **Foundry VTT 14.363 / pf2e 8.2.0**: the full
+> create → verify → delete cycle (`Folder.create`, `importFromCompendium` with
+> rename, blank-`npc` `Actor.create`, loot `Actor.create`,
+> `createEmbeddedDocuments`, and the pf2e `inventory.addCoins` coin API) passes.
+
+## Usage
+
+```bash
+python foundry_macro.py build --spec example-spec.json --out lair.js   # macro -> file
+python foundry_macro.py build --spec example-spec.json                 # macro -> stdout
+cat spec.json | python foundry_macro.py build                          # spec on stdin
+```
+
+Then in Foundry: **Macros (or the hotbar) → Create Macro → Type: `script` →
+paste the generated JS → Save → double-click to run** (as GM). A whispered chat
+summary lists everything created, plus any unresolved names. Re-running is
+blocked if the folder already exists — delete that folder first to rebuild.
+
+## The spec
+
+```json
+{
+  "folder": "Venomqueen's Lair",
+  "monsters": [
+    { "name": "Giant Viper", "count": 4 },
+    { "name": "Goblin Warrior", "count": 6, "pack": "pathfinder-monster-core" }
+  ],
+  "npcs": [
+    { "name": "The Venomqueen", "base": "Drow Priestess" },
+    { "name": "Innkeeper Bren" }
+  ],
+  "chests": [
+    { "name": "Hoard Chest",
+      "items": [ { "name": "Dagger", "count": 1 },
+                 { "name": "Healing Potion (Minor)", "count": 3 } ],
+      "coins": "120 gp" }
+  ]
+}
+```
+
+| Field | Meaning |
+|---|---|
+| `folder` | **required.** The Actor folder the quest's actors are imported into. |
+| `monsters[]` | `name` (exact compendium name) + `count` (tokens you'll drop). One actor is imported per entry. |
+| `npcs[]` | `name`. With `base` → import that creature and rename it to `name`. Without `base` → a blank statless `npc`. |
+| `chests[]` | A loot actor: `name`, `items[]` (`name` + `count`), and `coins`. |
+| `coins` | A `{pp,gp,sp,cp}` dict, a plain gp number, or a loot.py-style string (`"120 gp"`, `"1.5 gp"`, `"50 cp"`). |
+| `pack` *(optional, on any monster/npc/item)* | Exact-pack hint. A bare repo folder name (`"pathfinder-monster-core"`) is read as `pf2e.<name>`; a dotted value (`"my-module.my-pack"`) is used verbatim. |
+
+## Name resolution
+
+Names are matched against the world's compendiums, **remaster-first**, mirroring
+`encounter.py`'s dedup preference:
+
+- **Actors:** `pf2e.pathfinder-monster-core`, `-monster-core-2`, `pathfinder-npc-core`, `npc-gallery`, `pathfinder-bestiary`, `-2`, `-3`, then **every other** Actor compendium in the world (your homebrew / Forge-shared packs included) as fallback.
+- **Items:** `pf2e.equipment-srd` first (where `loot.py`'s item DB comes from), then every other Item compendium.
+
+Use an exact `pack` hint when a name is ambiguous across packs, or to force a
+homebrew version. Unresolved names are **reported in the chat summary, never
+silently dropped** — fix the spelling (names must match the compendium exactly,
+e.g. `Healing Potion (Minor)`, not `Minor Healing Potion`) or add a `pack` hint.
+
+## Assembling a spec from the leaf tools (Phase 7)
+
+The spec maps directly off the `--json` output of the encounter/loot tools:
+
+- `encounter.py build --json` → `members[]` (`name`, `count`) become `monsters[]`. Pull the antagonist out into `npcs[]` with a `base` if you renamed it for the quest.
+- `loot.py build --json` → `permanent[]` + `consumables[]` (`name`, `count`) become a chest's `items[]`; `currency` (e.g. `"120 gp"`) becomes the chest's `coins`. Item names match exactly, because `items.db` is built from the same `equipment-srd` pack the macro resolves against.
+
+`make_macro(spec)` and `coins_to_dict(value)` are importable for an orchestrator
+that builds the spec in-process.
+
+## Conventions
+
+- **One actor, many tokens.** Six goblins = one imported Goblin Warrior actor; you place six tokens at the table. Each token is its own combatant.
+- **You place tokens and add art.** The macro stops at "folder full of ready actors + a loot chest." Token placement, prototype-token art, and scene work stay manual by design.
+- **Idempotency guard.** The folder-exists check prevents accidental double-imports; delete and re-run to rebuild from an edited spec.

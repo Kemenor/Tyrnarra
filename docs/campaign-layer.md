@@ -19,6 +19,8 @@ campaigns/
     gm-nav.css / gm-nav.js    ← GM left-sidebar drawer (its own tree; NOT the player site-nav)
   tools/                      ← GM utilities
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (see below)
+    encounterBuilder/         ← PF2e encounter + loot builders over the Foundry pf2e data (pf2e-encounter / pf2e-loot skills)
+    foundryExport/            ← quest spec → paste-and-run Foundry VTT import macro (see below)
   map-library/                ← reusable map catalogues, shared across campaigns
     magirail-stock.md         ← modular train-car library (Tom Cartos "Steam Train" set)
     stitch.py                 ← assemble a consist: composite image + merged areas JSON
@@ -58,6 +60,20 @@ Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** 
 ### Map Area Editor (`tools/map-area-editor.html`)
 
 The companion authoring tool. Load a map PNG, draw / move / resize / delete rectangles, label + describe each area, reorder, and export JSON. An **area is a union of rectangles** (`{ label, desc, rects:[{left,top,width,height}] }`, all `%`); Shift+draw (or a row's `＋`) adds a piece to the selected area for irregular shapes. The exported JSON is what you hand back to generate the map tab's hotspot markup + `GM_MAP_AREAS` scaffold. Import is back-compatible with the old single-rect format.
+
+## Foundry VTT export (`tools/foundryExport/`)
+
+For tables run on Foundry VTT, `foundry_macro.py` turns a compact quest spec
+(folder + monsters + NPCs + loot chests) into a **paste-and-run Foundry Script
+Macro**. Run as GM, it creates the quest's actor folder, imports one actor per
+distinct monster (the GM places *N* tokens), renames imported NPCs or makes a
+blank `npc` for narrative-only ones, and builds a loot-actor "chest" per haul
+with items + coins. It resolves everything **by name** from the world's own
+compendiums, so it redistributes no Paizo data and always matches the installed
+system version; it needs no module, relay, or API key and works on Forge-hosted
+worlds. It is the **Phase 7** step of the `quest-workflow` skill and a standalone
+tool you can run against any quest. Verified live on Foundry VTT 14.363 / pf2e
+8.2.0. Full reference: [`campaigns/tools/foundryExport/README.md`](../campaigns/tools/foundryExport/README.md).
 
 ## Map assets (subscription battlemaps stay local)
 

@@ -1,0 +1,21 @@
+{
+  "folder": "Venomqueen's Lair",
+  "monsters": [
+    { "name": "Goblin Warrior", "count": 6 },
+    { "name": "Giant Rat", "count": 3 }
+  ],
+  "npcs": [
+    { "name": "The Venomqueen", "base": "Drow Priestess" },
+    { "name": "Innkeeper Bren" }
+  ],
+  "chests": [
+    {
+      "name": "Hoard Chest",
+      "items": [
+        { "name": "Dagger", "count": 1 },
+        { "name": "Healing Potion (Minor)", "count": 3 }
+      ],
+      "coins": "120 gp"
+    }
+  ]
+}

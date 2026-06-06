@@ -1,6 +1,6 @@
 ---
 name: quest-workflow
-description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you download + draw areas) -> encounters -> loot -> quest HTML, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
+description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /campaigns/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /campaigns/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from campaigns/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you download + draw areas) -> encounters -> loot -> quest HTML -> Foundry import macro, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /campaigns/.
 ---
 
 # quest-workflow
@@ -32,6 +32,7 @@ If anything you are about to design contradicts committed canon, the canon wins.
 | **4. Encounters** | Invoke **pf2e-encounter** per combat area (party params + area theme), grounded in real stat blocks. Surface the encounter set | Surface for tweaks before Phase 6 |
 | **5. Loot** | Invoke **pf2e-loot** (level hand-out, or per-area/milestone), place rewards in areas. Surface | Surface for tweaks before Phase 6 |
 | **6. Assemble quest HTML** | Build `quest-<slug>.html` per campaign-layer conventions + wire it in. Surface the content plan first, build on the go | Surface-before-HTML pause |
+| **7. Foundry export** (optional) | Assemble a spec from the encounter + loot results, run `foundry_macro.py` to emit the import macro, surface it for the user to paste-run in Foundry | Surface the macro + spec |
 
 Pause at each seam even under broad "work through it" framing. Reading is fine within a phase; writes (and the big HTML build) trigger the boundary.
 
@@ -125,6 +126,14 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 2. **`campaigns/<campaign>/index.html`** — add a card for the quest in the campaign hub.
 3. **`docs/site-inventory.md`** — add the page to the GM-only roster section (campaign layer is not in the published rosters).
 4. **Maps** — confirm the committed copy is the downsized web image and any full-res original is in `_full/` (gitignored). If a full-res file is tracked outside `_full/`, untrack it.
+
+## Phase 7: Foundry export (optional, invoke foundryExport)
+
+If the user runs their table on Foundry VTT, turn the quest's encounters + loot into a **paste-and-run Foundry Script Macro** that builds the quest's actor folder, imports one actor per distinct monster (the GM drops *N* tokens), renames imported NPCs (or makes a blank `npc` for narrative-only ones), and creates a loot-actor "chest" per haul with items + coins. The macro resolves everything **by name** from the user's own installed compendiums, so it ships no Paizo data and always matches their system version. No module, relay, or API key; it runs in the GM browser and works on Forge-hosted worlds. Full reference: [`campaigns/tools/foundryExport/README.md`](../../../campaigns/tools/foundryExport/README.md).
+
+1. **Assemble the spec** from the phase results: `encounter.py`'s `members[]` (`name`, `count`) → `monsters[]`; the renamed antagonist → `npcs[]` with a `base`; purely narrative figures → `npcs[]` without a `base`; `loot.py`'s `permanent[]` + `consumables[]` → a chest's `items[]` and its `currency` → the chest's `coins`. Loot item names match the compendium exactly because `items.db` is built from the same `equipment-srd` pack.
+2. **Generate the macro:** `python foundry_macro.py build --spec <spec.json> --out <slug>.js` from `campaigns/tools/foundryExport/`.
+3. **Surface it.** Hand back the macro (and the spec) and the one-line paste-instructions; the user runs it as GM. Do not attempt to push into a live world; the macro is the deliverable.
 
 ---
 
