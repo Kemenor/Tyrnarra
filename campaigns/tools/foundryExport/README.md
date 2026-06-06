@@ -1,11 +1,17 @@
 # foundryExport — quest → Foundry VTT import macro
 
 Turns a compact **quest spec** into a paste-and-run **Foundry Script Macro** that,
-when you run it as GM, builds the quest's actor folder and fills it:
+when you run it as GM, builds the quest's actor folder (with tidy
+**Monsters / NPCs / Loot** subfolders) and fills it:
 
 - one **Actor** per distinct monster (you drop *N* tokens yourself — one actor, many tokens),
 - named **NPCs**, either imported from a stat-block base and renamed, or created as a blank statless `npc` (generic token, art later),
 - one **loot-actor "chest"** per haul, with its items (correct quantities) and coins.
+
+Subfolders are created only for non-empty categories. Imports use `keepId:false`
+so a boss that shares a base creature with regular monsters (e.g. a renamed
+Goblin Warrior boss alongside Goblin Warrior chaff) imports as two distinct
+actors rather than colliding on the compendium's id.
 
 This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../../.claude/skills/quest-workflow/SKILL.md) skill, and a standalone tool you can point at *any* quest (including ones already built) to generate its macro on demand.
 

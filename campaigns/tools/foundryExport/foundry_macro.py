@@ -192,12 +192,22 @@ _TEMPLATE = r"""/* =============================================================
     return ui.notifications.error(`An Actor folder "${SPEC.folder}" already exists. Delete it, then re-run.`);
   const folder = await Folder.create({ name: SPEC.folder, type: "Actor" });
 
+  // Tidy subfolders, created lazily so empty categories leave no empty folder.
+  const _sub = {};
+  const sub = async name => {
+    if (!_sub[name]) _sub[name] = await Folder.create({ name, type: "Actor", folder: folder.id });
+    return _sub[name].id;
+  };
+
   const made = [], missing = [];
 
   for (const m of (SPEC.monsters || [])) {
     const hit = await resolve(m.name, m.pack, actorPacks);
     if (!hit) { missing.push("monster: " + m.name); continue; }
-    const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: folder.id });
+    // keepId:false: Foundry v14 keeps the source _id by default, so importing the
+    // same creature twice (e.g. a boss sharing a base with regular monsters) would
+    // collide; a fresh id per import keeps them distinct.
+    const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("Monsters") }, { keepId: false });
     made.push(`${m.count || 1}x ${a.name}  (drop ${m.count || 1} token${(m.count || 1) === 1 ? "" : "s"})`);
   }
 
@@ -205,16 +215,16 @@ _TEMPLATE = r"""/* =============================================================
     if (n.base) {
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
-      const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: folder.id, name: n.name });
+      const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name }, { keepId: false });
       made.push("NPC " + a.name + "  (from " + n.base + ")");
     } else {
-      const a = await Actor.create({ name: n.name, type: "npc", folder: folder.id });
+      const a = await Actor.create({ name: n.name, type: "npc", folder: await sub("NPCs") });
       made.push("NPC " + a.name + "  (blank - statless)");
     }
   }
 
   for (const c of (SPEC.chests || [])) {
-    const chest = await Actor.create({ name: c.name, type: "loot", folder: folder.id });
+    const chest = await Actor.create({ name: c.name, type: "loot", folder: await sub("Loot") });
     const objs = [];
     for (const it of (c.items || [])) {
       const hit = await resolve(it.name, it.pack, itemPacks);
