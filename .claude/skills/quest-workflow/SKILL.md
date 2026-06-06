@@ -91,6 +91,7 @@ For each combat area from the outline, **invoke the `pf2e-encounter` skill** wit
 - Keep the theme coherent with the antagonist (one faction reads as one bestiary family + a few outliers).
 - Pull the real stat block (HP/AC/Perception/saves/attacks/abilities) for every creature from its source JSON; the page needs runnable numbers.
 - Surface the full encounter set (area -> creatures -> budget line) for the user to tweak before assembly.
+- If Foundry export (Phase 7) is in scope, save each area's `encounter.py build --json` output; Phase 7 assembles the import spec straight from it.
 
 ## Phase 5: Loot (invoke pf2e-loot)
 
@@ -99,6 +100,7 @@ For each combat area from the outline, **invoke the `pf2e-encounter` skill** wit
 - Place the marquee permanent items in fitting rooms (the boss carries the magic weapon; the vault holds the coins).
 - Read the source JSON for any item that needs its activation/effect written into the page.
 - Surface the haul (permanent / consumable / coins + placement) before assembly.
+- If Foundry export (Phase 7) is in scope, save the `loot.py build --json` output; Phase 7 turns it into the chest's items + coins.
 
 ## Phase 6: Assemble the quest HTML (surface first, then build)
 
@@ -131,9 +133,13 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 
 If the user runs their table on Foundry VTT, turn the quest's encounters + loot into a **paste-and-run Foundry Script Macro** that builds the quest's actor folder, imports one actor per distinct monster (the GM drops *N* tokens), renames imported NPCs (or makes a blank `npc` for narrative-only ones), and creates a loot-actor "chest" per haul with items + coins. The macro resolves everything **by name** from the user's own installed compendiums, so it ships no Paizo data and always matches their system version. No module, relay, or API key; it runs in the GM browser and works on Forge-hosted worlds. Full reference: [`campaigns/tools/foundryExport/README.md`](../../../campaigns/tools/foundryExport/README.md).
 
-1. **Assemble the spec** from the phase results: `encounter.py`'s `members[]` (`name`, `count`) → `monsters[]`; the renamed antagonist → `npcs[]` with a `base`; purely narrative figures → `npcs[]` without a `base`; `loot.py`'s `permanent[]` + `consumables[]` → a chest's `items[]` and its `currency` → the chest's `coins`. Loot item names match the compendium exactly because `items.db` is built from the same `equipment-srd` pack.
-2. **Generate the macro:** `python foundry_macro.py build --spec <spec.json> --out <slug>.js` from `campaigns/tools/foundryExport/`.
-3. **Surface it.** Hand back the macro (and the spec) and the one-line paste-instructions; the user runs it as GM. Do not attempt to push into a live world; the macro is the deliverable.
+To make the spec **fall out of the build**, save the `--json` from each
+`pf2e-encounter` (Phase 4) and `pf2e-loot` (Phase 5) run; the `spec` subcommand
+turns them straight into a spec, no hand-mapping.
+
+1. **Assemble the spec** with `foundry_macro.py spec` (from `campaigns/tools/foundryExport/`): pass the saved encounter JSONs (`--encounter room1.json room2.json …`, members merged by name), the loot JSON(s) (`--loot haul.json`, one chest each, `--chest-name` to name them), and the NPCs (`--npc "The Venomqueen=Drow Priestess"` promotes a boss out of the monster list into a renamed import; `--npc "Innkeeper Bren"` makes a blank statless npc). Save to `<slug>.spec.json`. To grow the spec area-by-area as you build, add `--merge <prior.spec.json>`.
+2. **Generate the macro:** `python foundry_macro.py build --spec <slug>.spec.json --out <slug>.js`.
+3. **Surface it.** Hand back the macro (and the spec) plus the one-line paste-instructions (Create Macro → type `script` → paste → run as GM). Do not attempt to push into a live world; the macro is the deliverable. Loot item names resolve exactly because `items.db` is built from the same `equipment-srd` pack the macro reads.
 
 ---
 

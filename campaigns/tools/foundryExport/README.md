@@ -77,13 +77,36 @@ e.g. `Healing Potion (Minor)`, not `Minor Healing Potion`) or add a `pack` hint.
 
 ## Assembling a spec from the leaf tools (Phase 7)
 
-The spec maps directly off the `--json` output of the encounter/loot tools:
+The `spec` subcommand builds a spec straight from the encounter/loot tools'
+`--json` output, so the spec **falls out of the quest build** instead of being
+hand-mapped:
 
-- `encounter.py build --json` → `members[]` (`name`, `count`) become `monsters[]`. Pull the antagonist out into `npcs[]` with a `base` if you renamed it for the quest.
-- `loot.py build --json` → `permanent[]` + `consumables[]` (`name`, `count`) become a chest's `items[]`; `currency` (e.g. `"120 gp"`) becomes the chest's `coins`. Item names match exactly, because `items.db` is built from the same `equipment-srd` pack the macro resolves against.
+```bash
+python foundry_macro.py spec --folder "Broodmother's Hollow" \
+    --encounter room1.json room2.json \      # encounter.py build --json (one per area)
+    --loot haul.json --chest-name "Egg-Sac Cache" \   # loot.py build --json (one chest each)
+    --npc "The Broodmother=Giant Tarantula" \  # promote a boss: import base + rename
+    --npc "Trapped Miner Sela" \               # blank narrative npc
+    --out broodmother.spec.json
+python foundry_macro.py build --spec broodmother.spec.json --out broodmother.js
+```
 
-`make_macro(spec)` and `coins_to_dict(value)` are importable for an orchestrator
-that builds the spec in-process.
+The mapping:
+
+- `encounter.py build --json` → `members[]` are merged across all `--encounter` files (counts summed by name) into `monsters[]`.
+- `--npc "Name=Base"` promotes a creature: it becomes an NPC imported from `Base` and renamed to `Name`, and one count of `Base` is removed from `monsters` (the boss is no longer chaff). `--npc "Name"` (no `=`) makes a blank statless npc.
+- `loot.py build --json` → each `--loot` file becomes one chest: `permanent[]` + `consumables[]` → `items[]`, `currency` (e.g. `"120 gp"`) → `coins`. Names match exactly, because `items.db` is built from the same `equipment-srd` pack the macro resolves against.
+
+**Accumulate while building.** Pass `--merge <existing.spec.json>` to extend a
+saved spec as each area is finished (monsters summed, npcs/chests appended), so
+the spec grows room-by-room through the quest build and is ready at Phase 7.
+
+`make_macro(spec)`, `spec_from_tools(...)` and `coins_to_dict(value)` are
+importable for an orchestrator that builds the spec in-process.
+
+> Verified live end-to-end: real `encounter.py` picks (Giant Tarantula boss +
+> Wasp Swarm) and a real `loot.py` handout (10 items + 120 gp) assembled into a
+> spec and imported into Foundry with **zero unresolved names**.
 
 ## Conventions
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 foundry_macro.py - Turn a compact quest spec into a paste-and-run Foundry VTT
 Script Macro that builds the quest's actor folder, imports its monsters + NPCs
 from your installed compendiums, and creates loot-actor "chests" with items and
@@ -47,8 +47,19 @@ CLI:
   python foundry_macro.py build --spec spec.json --out lair.js
   cat spec.json | python foundry_macro.py build              # spec on stdin
 
-make_macro(spec) and coins_to_dict(value) are importable for the quest-workflow
-Phase-7 orchestrator.
+Assemble a spec straight from the leaf tools' --json (quest-workflow Phase 7),
+so the spec falls out of the build instead of being hand-mapped:
+
+  python foundry_macro.py spec --folder "Venomqueen's Lair" \
+      --encounter room1.json room2.json \      # encounter.py build --json
+      --loot haul.json --chest-name "Hoard Chest" \   # loot.py build --json
+      --npc "The Venomqueen=Drow Priestess" \  # promote a boss: rename + base
+      --npc "Innkeeper Bren" \                  # blank narrative npc
+      --merge venomqueen.spec.json \            # extend a saved spec (optional)
+      --out venomqueen.spec.json
+
+make_macro(spec), spec_from_tools(...) and coins_to_dict(value) are importable
+for an in-process Phase-7 orchestrator.
 """
 import argparse
 import json
@@ -228,6 +239,66 @@ _TEMPLATE = r"""/* =============================================================
 """
 
 
+def spec_from_tools(folder, encounters=None, loots=None, npcs=None,
+                    chest_names=None, merge=None):
+    """Assemble a foundryExport spec from the leaf tools' --json output.
+
+    folder       : the Actor folder name.
+    encounters   : list of `encounter.py build --json` dicts (one per combat
+                   area). Their members are merged by name, summing counts.
+    loots        : list of `loot.py build --json` dicts; each becomes one chest
+                   (permanent + consumables -> items, currency -> coins).
+    npcs         : list of "Name" (blank npc) or "Name=Base" (import Base, rename
+                   to Name). A promoted Base that appears among the merged
+                   monsters has one count removed there (the boss is now an NPC).
+    chest_names  : optional names for the chests, positional with `loots`.
+    merge        : an existing spec dict to extend (monsters summed, npcs/chests
+                   appended) so the spec can accumulate while the quest is built.
+    """
+    base = merge if isinstance(merge, dict) else {}
+    # Merge monster counts by name across this call's encounters + any prior spec.
+    monsters = {}
+    for m in base.get("monsters") or []:
+        monsters[m["name"]] = monsters.get(m["name"], 0) + int(m.get("count", 1))
+    for enc in encounters or []:
+        for mem in enc.get("members") or []:
+            monsters[mem["name"]] = monsters.get(mem["name"], 0) + int(mem.get("count", 1))
+
+    npc_entries = list(base.get("npcs") or [])
+    for raw in npcs or []:
+        name, sep, b = raw.partition("=")
+        name, b = name.strip(), b.strip()
+        if sep and b:
+            npc_entries.append({"name": name, "base": b})
+            if b in monsters:                      # the boss is no longer chaff
+                monsters[b] -= 1
+                if monsters[b] <= 0:
+                    del monsters[b]
+        else:
+            npc_entries.append({"name": name})
+
+    chests = list(base.get("chests") or [])
+    names = list(chest_names or [])
+    many = len(loots or []) > 1
+    for i, haul in enumerate(loots or []):
+        items = [{"name": it["name"], "count": int(it.get("count", 1))}
+                 for it in (haul.get("permanent") or []) + (haul.get("consumables") or [])]
+        cname = names[i] if i < len(names) else (f"Treasure {i + 1}" if many else "Treasure")
+        chest = {"name": cname, "items": items}
+        if haul.get("currency"):
+            chest["coins"] = haul["currency"]
+        chests.append(chest)
+
+    spec = {"folder": folder}
+    if monsters:
+        spec["monsters"] = [{"name": n, "count": c} for n, c in monsters.items()]
+    if npc_entries:
+        spec["npcs"] = npc_entries
+    if chests:
+        spec["chests"] = chests
+    return spec
+
+
 def make_macro(spec):
     """Return the Foundry Script Macro text for a quest spec (dict)."""
     norm = _normalize(spec)
@@ -243,9 +314,39 @@ def main():
     b = sub.add_parser("build", help="Build a macro from a spec JSON.")
     b.add_argument("--spec", help="Path to the spec JSON (default: stdin).")
     b.add_argument("--out", help="Write the macro here (default: stdout).")
+
+    s = sub.add_parser("spec", help="Assemble a spec from encounter/loot --json output.")
+    s.add_argument("--folder", required=True, help="The Actor folder name for the quest.")
+    s.add_argument("--encounter", nargs="*", default=[], help="encounter.py build --json file(s).")
+    s.add_argument("--loot", nargs="*", default=[], help="loot.py build --json file(s); one chest each.")
+    s.add_argument("--chest-name", nargs="*", default=[], help="Chest names, positional with --loot.")
+    s.add_argument("--npc", action="append", default=[],
+                   help='"Name" (blank npc) or "Name=Base" (import Base, rename to Name). Repeatable.')
+    s.add_argument("--merge", help="Existing spec JSON to extend (accumulate while building).")
+    s.add_argument("--out", help="Write the spec here (default: stdout).")
+
     a = ap.parse_args()
 
-    raw = open(a.spec, encoding="utf-8").read() if a.spec else sys.stdin.read()
+    if a.cmd == "spec":
+        load = lambda p: json.load(open(p, encoding="utf-8-sig"))
+        spec = spec_from_tools(
+            a.folder,
+            encounters=[load(p) for p in a.encounter],
+            loots=[load(p) for p in a.loot],
+            npcs=a.npc,
+            chest_names=a.chest_name,
+            merge=load(a.merge) if a.merge else None,
+        )
+        out = json.dumps(spec, ensure_ascii=False, indent=2)
+        if a.out:
+            with open(a.out, "w", encoding="utf-8") as fh:
+                fh.write(out + "\n")
+            print(f"Wrote {a.out}.", file=sys.stderr)
+        else:
+            sys.stdout.write(out + "\n")
+        return
+
+    raw = open(a.spec, encoding="utf-8-sig").read() if a.spec else sys.stdin.read()
     spec = json.loads(raw)
     macro = make_macro(spec)
     if a.out:
