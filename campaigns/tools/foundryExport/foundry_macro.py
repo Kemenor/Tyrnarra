@@ -153,7 +153,9 @@ def _normalize(spec):
                                 **({"pack": m["pack"]} if m.get("pack") else {})})
     for n in spec.get("npcs") or []:
         e = {"name": n["name"]}
-        if n.get("base"):
+        if n.get("actor"):
+            e["actor"] = n["actor"]          # full custom statblock (pf2e npc document)
+        elif n.get("base"):
             e["base"] = n["base"]
         if n.get("pack"):
             e["pack"] = n["pack"]
@@ -247,7 +249,15 @@ _TEMPLATE = r"""/* =============================================================
   }
 
   for (const n of (SPEC.npcs || [])) {
-    if (n.base) {
+    if (n.actor) {
+      // Full custom statblock embedded in the spec (a bespoke benchmark monster).
+      const doc = foundry.utils.deepClone(n.actor);
+      doc.name = n.name; doc.type = doc.type || "npc"; doc.folder = await sub("NPCs");
+      doc.prototypeToken = Object.assign({}, doc.prototypeToken, { name: n.name });
+      const a = await Actor.create(doc);
+      byName[a.name] = a;
+      made.push("NPC " + a.name + "  (custom statblock)");
+    } else if (n.base) {
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
       // Rename both the actor and its prototype token, else placed/dropped tokens

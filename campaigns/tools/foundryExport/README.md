@@ -64,7 +64,7 @@ blocked if the folder already exists — delete that folder first to rebuild.
 |---|---|
 | `folder` | **required.** The Actor folder the quest's actors are imported into. |
 | `monsters[]` | `name` (exact compendium name) + `count` (tokens you'll drop). One actor is imported per entry. |
-| `npcs[]` | `name`. With `base` → import that creature and rename it to `name`. Without `base` → a blank statless `npc`. |
+| `npcs[]` | `name`. With `actor` → create a full **custom statblock** (an embedded pf2e `npc` document) for bespoke benchmark monsters. With `base` → import that creature and rename it to `name`. With neither → a blank statless `npc`. |
 | `chests[]` | A loot actor: `name`, `items[]` (`name` + `count`), and `coins`. |
 | `coins` | A `{pp,gp,sp,cp}` dict, a plain gp number, or a loot.py-style string (`"120 gp"`, `"1.5 gp"`, `"50 cp"`). |
 | `pack` *(optional, on any monster/npc/item)* | Exact-pack hint. A bare repo folder name (`"pathfinder-monster-core"`) is read as `pf2e.<name>`; a dotted value (`"my-module.my-pack"`) is used verbatim. |

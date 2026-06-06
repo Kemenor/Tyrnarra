@@ -43,11 +43,637 @@
   "npcs": [
     {
       "name": "The Venom Queen",
-      "base": "Giant Tarantula"
+      "actor": {
+        "name": "The Venom Queen",
+        "type": "npc",
+        "system": {
+          "abilities": {
+            "str": {
+              "mod": 6
+            },
+            "dex": {
+              "mod": 4
+            },
+            "con": {
+              "mod": 5
+            },
+            "int": {
+              "mod": -4
+            },
+            "wis": {
+              "mod": 4
+            },
+            "cha": {
+              "mod": 2
+            }
+          },
+          "attributes": {
+            "ac": {
+              "value": 25,
+              "details": ""
+            },
+            "allSaves": {
+              "value": ""
+            },
+            "hp": {
+              "value": 145,
+              "max": 145,
+              "details": "egg-rage"
+            },
+            "speed": {
+              "value": 35,
+              "otherSpeeds": [
+                {
+                  "type": "climb",
+                  "value": 35
+                }
+              ]
+            }
+          },
+          "details": {
+            "blurb": "Unique giant spider · aware predator",
+            "languages": {
+              "value": []
+            },
+            "level": {
+              "value": 7
+            },
+            "publicNotes": "<p>A giant spider of unusual age and awareness who nests in the great chamber; not sapient, but acutely aware. She tracks numbers, remembers what hurt her, and uses her brood as extra senses.</p>"
+          },
+          "initiative": {
+            "statistic": "perception"
+          },
+          "perception": {
+            "mod": 18,
+            "senses": [
+              {
+                "type": "darkvision"
+              },
+              {
+                "type": "tremorsense",
+                "acuity": "imprecise",
+                "range": 60
+              }
+            ]
+          },
+          "resources": {},
+          "saves": {
+            "fortitude": {
+              "value": 18
+            },
+            "reflex": {
+              "value": 18
+            },
+            "will": {
+              "value": 12
+            }
+          },
+          "skills": {
+            "athletics": {
+              "base": 18
+            },
+            "stealth": {
+              "base": 16
+            },
+            "acrobatics": {
+              "base": 14
+            }
+          },
+          "traits": {
+            "rarity": "unique",
+            "size": {
+              "value": "lg"
+            },
+            "value": [
+              "animal"
+            ]
+          }
+        },
+        "items": [
+          {
+            "name": "Fangs",
+            "type": "melee",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "system": {
+              "attack": {
+                "value": ""
+              },
+              "attackEffects": {
+                "custom": "",
+                "value": [
+                  "queens-venom"
+                ]
+              },
+              "bonus": {
+                "value": 18
+              },
+              "damageRolls": {
+                "a": {
+                  "damage": "2d10+9",
+                  "damageType": "piercing"
+                }
+              },
+              "description": {
+                "value": ""
+              },
+              "range": null,
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Queen's Venom",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:25]</p><hr /><p><strong>Failure</strong> @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} (1 minute).</p><p><strong>Success</strong> @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1}.</p><p><strong>Critical Failure</strong> Enfeebled 2 and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] for 1 round.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": [
+                  "poison"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Web Throw",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/OneAction.webp",
+            "system": {
+              "actionType": {
+                "value": "action"
+              },
+              "actions": {
+                "value": 1
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p><strong>Ranged 60 feet</strong>, attack +18 vs AC. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] (Escape @Check[athletics|dc:25] or @Check[acrobatics|dc:25]).</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Ceiling Drop",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Reaction.webp",
+            "system": {
+              "actionType": {
+                "value": "reaction"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p><strong>Trigger</strong> A creature moves beneath her web position. <strong>Effect</strong> She descends to an adjacent space and makes one Fangs Strike.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Brood Call (Recharge 5–6)",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/OneAction.webp",
+            "system": {
+              "actionType": {
+                "value": "action"
+              },
+              "actions": {
+                "value": 1
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p>2 Hunting Spiders descend from the egg clusters at the start of her next turn. She will not use it if doing so would harm an egg cluster.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Adaptive Memory",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "defensive",
+              "description": {
+                "value": "<p>+2 circumstance bonus to saves against any effect that already affected her this fight; she repositions to minimize the attacks that hurt her most.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Egg-Rage",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "defensive",
+              "description": {
+                "value": "<p>An egg cluster has AC 14, HP 15, and is immune to piercing. Destroying one deals her @Damage[2d6[mental]] damage and, against her low Will, overrides her tactics: she fixates on the destroyer for 1 round, abandoning her careful play.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": [
+                  "mental"
+                ]
+              }
+            }
+          }
+        ]
+      }
     },
     {
       "name": "The Tomb-Keeper",
-      "base": "Ghost Commoner"
+      "actor": {
+        "name": "The Tomb-Keeper",
+        "type": "npc",
+        "system": {
+          "abilities": {
+            "str": {
+              "mod": -5
+            },
+            "dex": {
+              "mod": 4
+            },
+            "con": {
+              "mod": 0
+            },
+            "int": {
+              "mod": 2
+            },
+            "wis": {
+              "mod": 5
+            },
+            "cha": {
+              "mod": 5
+            }
+          },
+          "attributes": {
+            "ac": {
+              "value": 27,
+              "details": ""
+            },
+            "allSaves": {
+              "value": ""
+            },
+            "hp": {
+              "value": 120,
+              "max": 120,
+              "details": "rejuvenation, void healing, incorporeal"
+            },
+            "immunities": [
+              {
+                "type": "death-effects",
+                "exceptions": []
+              },
+              {
+                "type": "disease",
+                "exceptions": []
+              },
+              {
+                "type": "paralyzed",
+                "exceptions": []
+              },
+              {
+                "type": "poison",
+                "exceptions": []
+              },
+              {
+                "type": "precision",
+                "exceptions": []
+              },
+              {
+                "type": "unconscious",
+                "exceptions": []
+              },
+              {
+                "type": "bleed",
+                "exceptions": []
+              }
+            ],
+            "resistances": [
+              {
+                "type": "all-damage",
+                "value": 10,
+                "doubleVs": [
+                  "non-magical"
+                ],
+                "exceptions": [
+                  "force",
+                  "ghost-touch",
+                  "spirit",
+                  "vitality"
+                ]
+              }
+            ],
+            "speed": {
+              "value": 0,
+              "otherSpeeds": [
+                {
+                  "type": "fly",
+                  "value": 25
+                }
+              ]
+            }
+          },
+          "details": {
+            "blurb": "Ghost · the effigy-people's last warden",
+            "languages": {
+              "value": [
+                "common"
+              ]
+            },
+            "level": {
+              "value": 9
+            },
+            "publicNotes": "<p>The last warden of the effigy-people, risen to answer a theft. Site Bound and grudge-bound: it meets every intruder as the thief returning, and cannot be ended by force.</p>"
+          },
+          "initiative": {
+            "statistic": "perception"
+          },
+          "perception": {
+            "mod": 21,
+            "senses": [
+              {
+                "type": "darkvision"
+              }
+            ]
+          },
+          "resources": {},
+          "saves": {
+            "fortitude": {
+              "value": 18
+            },
+            "reflex": {
+              "value": 18
+            },
+            "will": {
+              "value": 21
+            }
+          },
+          "skills": {
+            "stealth": {
+              "base": 20
+            },
+            "intimidation": {
+              "base": 21
+            }
+          },
+          "traits": {
+            "rarity": "unique",
+            "size": {
+              "value": "med"
+            },
+            "value": [
+              "ghost",
+              "incorporeal",
+              "spirit",
+              "undead",
+              "unholy"
+            ]
+          }
+        },
+        "items": [
+          {
+            "name": "Ghostly Grasp",
+            "type": "melee",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "system": {
+              "attack": {
+                "value": ""
+              },
+              "attackEffects": {
+                "custom": "",
+                "value": [
+                  "enfeeble-1"
+                ]
+              },
+              "bonus": {
+                "value": 21
+              },
+              "damageRolls": {
+                "a": {
+                  "damage": "2d10+13",
+                  "damageType": "void"
+                }
+              },
+              "description": {
+                "value": ""
+              },
+              "range": null,
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": [
+                  "agile",
+                  "finesse",
+                  "magical"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Enfeebling Drain",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p>A creature hit by Ghostly Grasp is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} for 1 round.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Frightful Moan (Recharge 5–6)",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/OneAction.webp",
+            "system": {
+              "actionType": {
+                "value": "action"
+              },
+              "actions": {
+                "value": 1
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p>Each living creature within @Template[emanation|distance:30] must attempt a @Check[will|dc:28|options:area-effect,inflicts:frightened] save. <strong>Failure</strong> @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}. <strong>Critical Failure</strong> @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} and Fleeing 1 round. <strong>Success</strong> @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": [
+                  "auditory",
+                  "emotion",
+                  "fear",
+                  "mental"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Wailing Pursuit",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Reaction.webp",
+            "system": {
+              "actionType": {
+                "value": "reaction"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "offensive",
+              "description": {
+                "value": "<p><strong>Trigger</strong> A creature within 30 feet Strikes the Keeper. <strong>Effect</strong> It glides up to 10 feet and makes a Ghostly Grasp Strike.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Void Healing",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "defensive",
+              "description": {
+                "value": "<p>The Keeper is healed by void damage rather than harmed.</p>"
+              },
+              "rules": [
+                {
+                  "key": "ActiveEffectLike",
+                  "mode": "override",
+                  "path": "system.attributes.hp.negativeHealing",
+                  "value": true
+                }
+              ],
+              "slug": "void-healing",
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Rejuvenation",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "defensive",
+              "deathNote": true,
+              "description": {
+                "value": "<p>If destroyed, it re-forms in [[/br 2d4 #days]]{2d4 days} within the Old Crypt, fully healed, unless the grudge that binds it is settled. Force alone never ends it.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          },
+          {
+            "name": "Site Bound",
+            "type": "action",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "system": {
+              "actionType": {
+                "value": "passive"
+              },
+              "actions": {
+                "value": null
+              },
+              "category": "interaction",
+              "description": {
+                "value": "<p>The Keeper cannot leave the Old Crypt. A party can flee; the grudge (and its curse) follows them out.</p>"
+              },
+              "rules": [],
+              "slug": null,
+              "traits": {
+                "rarity": "common",
+                "value": []
+              }
+            }
+          }
+        ]
+      }
     },
     {
       "name": "Sable Rei"
@@ -495,7 +1121,15 @@
   }
 
   for (const n of (SPEC.npcs || [])) {
-    if (n.base) {
+    if (n.actor) {
+      // Full custom statblock embedded in the spec (a bespoke benchmark monster).
+      const doc = foundry.utils.deepClone(n.actor);
+      doc.name = n.name; doc.type = doc.type || "npc"; doc.folder = await sub("NPCs");
+      doc.prototypeToken = Object.assign({}, doc.prototypeToken, { name: n.name });
+      const a = await Actor.create(doc);
+      byName[a.name] = a;
+      made.push("NPC " + a.name + "  (custom statblock)");
+    } else if (n.base) {
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
       // Rename both the actor and its prototype token, else placed/dropped tokens
