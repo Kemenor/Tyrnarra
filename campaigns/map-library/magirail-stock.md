@@ -7,10 +7,12 @@ This catalogue is the part that travels in the repo. The **art itself is subscri
 ## How to use it
 
 1. Tell Claude the scene (a freight robbery, a luxury express heist, a prison-train break). Claude reads this catalogue and proposes a **consist**: an ordered list of cars front-to-rear.
-2. **Claude stitches the chosen cars into one composite image** with ImageMagick (the cars append left-to-right over the track background; the 14 × 5 grid makes the seams clean), then downsizes it to the committed ~800px web copy the quest page references. The full-res composite stays in `_full/`.
+2. **Claude runs `stitch.py`** to assemble the consist: it appends the cars over the chosen terrain background, writes the full-res composite (local in `_full/`) plus a downsized web copy, and builds the merged `*.areas.json`. Any car with a per-car area file in `areas/` (see below) has its interior hotspots offset into place; cars without one get a single whole-car area. Pass `--verify` for an overlay check.
 3. You load the composite in `campaigns/tools/map-area-editor.html`, draw one area per car, and export the JSON (the quest-workflow Phase 3 handoff).
 
 **Variants.** Most common cars also ship a **Clean** version (less grime/blood; same layout) for a freshly-built or higher-class train. Four **roof tiles** (`TC_ST Roof 01–04`) give the over-the-top traversal layer for running fights. **Prop overlays** (`Luggage and Cargo/`: crates, barrels, parcels, suitcases) dress any car; the **seamless backgrounds** (five terrains, day/night) tile the ground under an assembled consist (see *Seamless backgrounds & track* below).
+
+**Per-car detail areas (optional).** Draw a car's interior once on the bare 14 × 5 car image in `map-area-editor.html` (benches, compartments, the strongroom) and save the export to `areas/<car filename>.areas.json` (committed: it is coordinates, not art). Every consist `stitch.py` builds then auto-inherits those hotspots, offset into the car's slot, with no redrawing; a car without a detail file falls back to one whole-car area. Detailing is incremental, so do the set-piece cars and skip the cargo hoppers.
 
 ---
 

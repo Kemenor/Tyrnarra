@@ -21,6 +21,8 @@ campaigns/
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (see below)
   map-library/                ← reusable map catalogues, shared across campaigns
     magirail-stock.md         ← modular train-car library (Tom Cartos "Steam Train" set)
+    stitch.py                 ← assemble a consist: composite image + merged areas JSON
+    areas/                    ← per-car interior area files (committed coordinates)
     _full/                    ← the catalogues' local-only source art (gitignored)
   <campaign>/                 ← e.g. furrious-five/
     index.html                ← campaign hub (links the town notes, dossiers, quests)

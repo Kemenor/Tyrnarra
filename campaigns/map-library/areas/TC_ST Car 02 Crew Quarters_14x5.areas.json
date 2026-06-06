@@ -1,0 +1,155 @@
+{
+  "image": "TC_ST Car 02 Crew Quarters_14x5.webp",
+  "areas": [
+    {
+      "label": "Toilet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 7.2,
+          "top": 20.9,
+          "width": 6.8,
+          "height": 20.8
+        }
+      ]
+    },
+    {
+      "label": "Washroom",
+      "desc": "",
+      "rects": [
+        {
+          "left": 6.7,
+          "top": 59.8,
+          "width": 8,
+          "height": 20.8
+        }
+      ]
+    },
+    {
+      "label": "Table",
+      "desc": "A central table with two windows",
+      "rects": [
+        {
+          "left": 19.6,
+          "top": 37.7,
+          "width": 17.8,
+          "height": 28
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 49.8,
+          "top": 21.2,
+          "width": 14.1,
+          "height": 19.8
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 64.4,
+          "top": 20.7,
+          "width": 14,
+          "height": 18.8
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 79.3,
+          "top": 20.7,
+          "width": 13.2,
+          "height": 18.4
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 50,
+          "top": 59.9,
+          "width": 14.1,
+          "height": 20.4
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 63.6,
+          "top": 59.6,
+          "width": 14.6,
+          "height": 19.8
+        }
+      ]
+    },
+    {
+      "label": "Bed Compartment",
+      "desc": "A compartment with a single bed",
+      "rects": [
+        {
+          "left": 78.1,
+          "top": 60.6,
+          "width": 14.7,
+          "height": 17.5
+        }
+      ]
+    },
+    {
+      "label": "Cabinets",
+      "desc": "",
+      "rects": [
+        {
+          "left": 35.3,
+          "top": 19.6,
+          "width": 14.1,
+          "height": 8.9
+        },
+        {
+          "left": 35.4,
+          "top": 72.3,
+          "width": 13.9,
+          "height": 8.1
+        }
+      ]
+    },
+    {
+      "label": "Small Area to get ready",
+      "desc": "Mirror, brush, comb, shaver",
+      "rects": [
+        {
+          "left": 14.4,
+          "top": 20.7,
+          "width": 2.8,
+          "height": 21.2
+        }
+      ]
+    },
+    {
+      "label": "Towel Cabinet",
+      "desc": "",
+      "rects": [
+        {
+          "left": 14.4,
+          "top": 59.1,
+          "width": 2.2,
+          "height": 20.2
+        }
+      ]
+    }
+  ]
+}
