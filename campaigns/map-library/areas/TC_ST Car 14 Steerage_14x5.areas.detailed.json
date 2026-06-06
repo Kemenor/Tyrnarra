@@ -1,0 +1,287 @@
+{
+  "image": "TC_ST Car 14 Steerage_14x5.webp",
+  "areas": [
+    {
+      "label": "Luggage Area",
+      "desc": "",
+      "rects": [
+        {
+          "left": 85.3,
+          "top": 59.4,
+          "width": 7.6,
+          "height": 20.8
+        },
+        {
+          "left": 85.1,
+          "top": 18.7,
+          "width": 8.2,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 10.4,
+          "top": 58.8,
+          "width": 4.3,
+          "height": 20.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 17.8,
+          "top": 58.8,
+          "width": 4.4,
+          "height": 20.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 25.3,
+          "top": 58.8,
+          "width": 3.4,
+          "height": 18.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 32.3,
+          "top": 58.8,
+          "width": 3.9,
+          "height": 20.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 39.5,
+          "top": 59.8,
+          "width": 3.8,
+          "height": 18.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 46.8,
+          "top": 58.1,
+          "width": 3.9,
+          "height": 21.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 53.9,
+          "top": 58.5,
+          "width": 4,
+          "height": 20.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 60.6,
+          "top": 58.1,
+          "width": 4.3,
+          "height": 20.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 67.9,
+          "top": 58.5,
+          "width": 4.1,
+          "height": 20.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 75,
+          "top": 58.8,
+          "width": 3.8,
+          "height": 19.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 82,
+          "top": 59.5,
+          "width": 3.4,
+          "height": 20.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 82.4,
+          "top": 16.7,
+          "width": 2.8,
+          "height": 24.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 75.3,
+          "top": 19,
+          "width": 4.1,
+          "height": 22.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 68.4,
+          "top": 17.7,
+          "width": 3.4,
+          "height": 22.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 61.2,
+          "top": 18,
+          "width": 3.4,
+          "height": 21.5
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 53.9,
+          "top": 18,
+          "width": 3.4,
+          "height": 22.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 46.8,
+          "top": 17.4,
+          "width": 3.4,
+          "height": 23.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 39.4,
+          "top": 18.4,
+          "width": 3.3,
+          "height": 22.2
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 32.3,
+          "top": 19,
+          "width": 3.7,
+          "height": 21.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 25,
+          "top": 18,
+          "width": 3.9,
+          "height": 23.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 18.1,
+          "top": 18.4,
+          "width": 3.4,
+          "height": 22.9
+        }
+      ]
+    },
+    {
+      "label": "Bench with two seats",
+      "desc": "",
+      "rects": [
+        {
+          "left": 10.9,
+          "top": 17.7,
+          "width": 3.9,
+          "height": 22.9
+        }
+      ]
+    }
+  ]
+}

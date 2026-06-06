@@ -40,6 +40,20 @@ BAND_H = CAR_H / BG_H * 100                  # 71.4286
 Y_OFFSET = (BG_H - CAR_H) // 2               # 140 px
 
 
+def parse_token(token):
+    """'14 Steerage:detailed' -> ('14 Steerage', 'detailed'); else (token, None)."""
+    if ":" in token:
+        base, variant = token.split(":", 1)
+        return base.strip(), variant.strip()
+    return token.strip(), None
+
+
+def area_file(token):
+    base, variant = parse_token(token)
+    suffix = f".{variant}" if variant else ""
+    return AREAS / f"TC_ST Car {base}_14x5.areas{suffix}.json"
+
+
 def car_path(token):
     p = TRAINS / f"TC_ST Car {token}_14x5.webp"
     if not p.exists():
@@ -80,7 +94,7 @@ def merge_areas(tokens, out_name):
     slot = 100.0 / n
     out = {"image": f"{out_name}.webp", "areas": []}
     for i, token in enumerate(tokens):
-        af = AREAS / f"TC_ST Car {token}_14x5.areas.json"
+        af = area_file(token)
         if af.exists():
             data = json.loads(af.read_text(encoding="utf-8"))
             for a in data["areas"]:
@@ -93,7 +107,7 @@ def merge_areas(tokens, out_name):
                 out["areas"].append({"label": a["label"], "desc": a.get("desc", ""), "rects": rects})
         else:
             out["areas"].append({
-                "label": token,
+                "label": parse_token(token)[0],
                 "desc": "",
                 "rects": [{"left": round(i * slot, 3), "top": round(BAND_TOP, 3),
                            "width": round(slot, 3), "height": round(BAND_H, 3)}],
@@ -138,7 +152,7 @@ def main():
     out_web = maps / f"{a.out}.webp"
 
     if not a.no_image:
-        cars = [car_path(t) for t in tokens]
+        cars = [car_path(parse_token(t)[0]) for t in tokens]
         stitch_image(cars, bg_path(a.terrain), out_full, out_web, a.web_width)
 
     areas = merge_areas(tokens, a.out)
@@ -147,7 +161,7 @@ def main():
     if a.verify and not a.no_image:
         verify_overlay(out_web, areas, maps / "_full" / f"{a.out}_verify.png")
 
-    detail = sum(1 for t in tokens if (AREAS / f"TC_ST Car {t}_14x5.areas.json").exists())
+    detail = sum(1 for t in tokens if area_file(t).exists())
     print(f"cars: {len(tokens)}  ({detail} with per-car detail)  "
           f"areas: {len(areas['areas'])}  -> {out_web} (+ .areas.json)")
 

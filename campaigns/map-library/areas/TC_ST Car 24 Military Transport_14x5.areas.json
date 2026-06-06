@@ -1,0 +1,95 @@
+{
+  "image": "TC_ST Car 24 Military Transport_14x5.webp",
+  "areas": [
+    {
+      "label": "Munitions storage",
+      "desc": "Gunpower, arrows, cannon balls etc...",
+      "rects": [
+        {
+          "left": 6.5,
+          "top": 17.9,
+          "width": 15.4,
+          "height": 23.1
+        }
+      ]
+    },
+    {
+      "label": "Weapon Racks",
+      "desc": "Weapon racks for every kind of weapon, small and big",
+      "rects": [
+        {
+          "left": 21.7,
+          "top": 17.7,
+          "width": 3.2,
+          "height": 22.6
+        },
+        {
+          "left": 21.7,
+          "top": 58.8,
+          "width": 3.1,
+          "height": 20.2
+        },
+        {
+          "left": 27.7,
+          "top": 41.5,
+          "width": 36.9,
+          "height": 17.2
+        },
+        {
+          "left": 71.1,
+          "top": 73,
+          "width": 14,
+          "height": 7.3
+        },
+        {
+          "left": 72.9,
+          "top": 19.4,
+          "width": 12.2,
+          "height": 9.9
+        }
+      ]
+    },
+    {
+      "label": "Benches",
+      "desc": "Two benches for troop to sit on",
+      "rects": [
+        {
+          "left": 27.9,
+          "top": 19.4,
+          "width": 36.8,
+          "height": 9.9
+        },
+        {
+          "left": 28.4,
+          "top": 70.1,
+          "width": 35.9,
+          "height": 8.6
+        }
+      ]
+    },
+    {
+      "label": "Table",
+      "desc": "Table with two benches to strategize or gamble on",
+      "rects": [
+        {
+          "left": 68.2,
+          "top": 34.9,
+          "width": 18.3,
+          "height": 29.5
+        }
+      ]
+    },
+    {
+      "label": "Armory",
+      "desc": "Helmets, armor, etc...",
+      "rects": [
+        {
+          "left": 5.7,
+          "top": 57.5,
+          "width": 15.7,
+          "height": 22.5
+        }
+      ]
+    }
+  ]
+}

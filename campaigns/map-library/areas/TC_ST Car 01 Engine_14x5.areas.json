@@ -1,0 +1,53 @@
+{
+  "image": "TC_ST Car 01 Engine_14x5.webp",
+  "areas": [
+    {
+      "label": "Plow",
+      "desc": "",
+      "rects": [
+        {
+          "left": 0.4,
+          "top": 22.5,
+          "width": 10.9,
+          "height": 53
+        }
+      ]
+    },
+    {
+      "label": "Engine",
+      "desc": "",
+      "rects": [
+        {
+          "left": 12.1,
+          "top": 21.9,
+          "width": 39.8,
+          "height": 54
+        }
+      ]
+    },
+    {
+      "label": "Coal Storage",
+      "desc": "Coal Storage for the fireman to shovel coal from",
+      "rects": [
+        {
+          "left": 71.2,
+          "top": 17.9,
+          "width": 26.8,
+          "height": 64.2
+        }
+      ]
+    },
+    {
+      "label": "Cab/Footplate",
+      "desc": "",
+      "rects": [
+        {
+          "left": 51.5,
+          "top": 17.9,
+          "width": 16.6,
+          "height": 62.3
+        }
+      ]
+    }
+  ]
+}

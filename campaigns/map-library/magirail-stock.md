@@ -14,6 +14,8 @@ This catalogue is the part that travels in the repo. The **art itself is subscri
 
 **Per-car detail areas (optional).** Draw a car's interior once on the bare 14 × 5 car image in `map-area-editor.html` (benches, compartments, the strongroom) and save the export to `areas/<car filename>.areas.json` (committed: it is coordinates, not art). Every consist `stitch.py` builds then auto-inherits those hotspots, offset into the car's slot, with no redrawing; a car without a detail file falls back to one whole-car area. Detailing is incremental, so do the set-piece cars and skip the cargo hoppers.
 
+A car can also carry a finer **variant** named `areas/<car filename>.areas.<variant>.json` (e.g. `.detailed`, marking every bench). The base file is the default; opt one car of a consist into its variant with a `token:variant` suffix, for example `14 Steerage:detailed`. Keep the base **coarse** (a few meaningful zones) for the clickable page and reserve a per-feature variant for when you want exact token or NPC placement (a VTT run, a set-piece car). NPC identities stay at the quest layer; the car file only gives generic structure.
+
 ---
 
 ## The roster
