@@ -110,10 +110,12 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Overview**: premise, party level/size, hook, stakes, the throughline.
 - **Tabbed sections** (`.gm-tab-btn` + `.gm-panel`) or a linear flow: overview, the map, the rooms, NPCs, rewards.
 - **The clickable battlemap tab** (if a map was drawn): the map `<img>` + one `.map-hot` button per rectangle (percentage-positioned, same `data-area` key for multi-rect areas, `hot-num` badge on the first only) + `window.GM_MAP_AREAS = { key: { n: "1 · Title", t: "<p>room notes</p>" }, … }` generated from the exported area JSON. Behaviour is already in `gm.js`.
-- **Per-room blocks**: read-aloud box, GM notes, the encounter (creatures with real stat lines), traps/secrets (`.gm-secret`), and the room's loot.
+- **Per-room blocks**: read-aloud box, GM notes, the encounter (creatures with real stat lines), **skill-check callouts** (Recall Knowledge / social / exploration, each with skill + DC + four degrees), traps/secrets (`.gm-secret`), and the room's loot.
 - **NPC cards** (`.npc-card`) for the antagonist and key figures: real stat block, motive, tactics, voice.
 - **Rewards section**: the full haul with item levels, prices, and effects; where each piece is found.
 - **Hooks / aftermath**: where the story can go next.
+
+**Skill checks (weave them in).** A quest is not only fights. Seed Recall Knowledge, social, and exploration checks through the scenes and write each as **skill + DC + four degrees** (Critical Success / Success / Failure / Critical Failure; a nat 20 shifts up one step, a nat 1 down one). **Set the DC by the challenge, not the party level**: knowledge from the Simple-DC proficiency that would know it; NPC interaction from the NPC's level-based DC; a hazard from its own level; then layer difficulty (±2/±5/±10) and rarity (+2/+5/+10). Full tables, the degree rules, and worked examples live in `campaigns/gm-reference/dc-cheatsheet.md`. Reference implementation: the statue (Religion, DC 17) and factor (Diplomacy, DC 23) checks on `quest-the-narrows-job.html`.
 
 **Conventions:** no em-dashes (en-dashes for numeric ranges only); affirmative prose; mortals not humans; all links absolute; canon-consistent names. GM-tier content is welcome and expected here.
 
@@ -131,6 +133,7 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **GM-only, always.** Everything this skill writes lives under `/campaigns/` and is never added to the player sidebar (`assets/site-nav.js`). The GM sidebar is `campaigns/assets/gm-nav.js`.
 - **Real data, never invented.** Encounter budgets, creature stats, item levels and prices come from the tools and the source JSON via the leaf skills. If a number is not grounded, it does not ship.
 - **Party level + size first.** Capture them in Phase 1; all encounter and loot math depends on them.
+- **DCs are the challenge, not the party.** Set every skill-check DC from the task's own level or proficiency (Simple DC for knowledge, the NPC's level for social, the hazard's level for traps), then adjust for difficulty and rarity; never default to the party level. Reference: `campaigns/gm-reference/dc-cheatsheet.md`.
 - **Canon-consistent.** NPCs, places, gods, and neighbours reconcile with the player lore. A quest may reveal GM-tier truth; it may not contradict committed canon.
 - **Claude surfaces map links and downsizes; the user downloads and draws.** Claude searches the CzePeku / Tom Cartos / Lost Atlas catalogs and presents 3-5 options as links, but never fetches or commits the art — the user downloads it from their subscription. The user provides the full-res (it lives in gitignored `_full/`); **Claude generates the committed ~800px web copy** the page references. Areas come from `map-area-editor.html` (or an explicit chat room-list), not from invention.
 - **Surface at every seam.** Premise -> structure -> areas -> encounters -> loot -> page. Pause and surface before each write, and before the HTML build.

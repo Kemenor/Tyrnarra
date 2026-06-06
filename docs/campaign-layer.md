@@ -24,6 +24,8 @@ campaigns/
     stitch.py                 ← assemble a consist: composite image + merged areas JSON
     areas/                    ← per-car interior area files (committed coordinates)
     _full/                    ← the catalogues' local-only source art (gitignored)
+  gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)
+    dc-cheatsheet.md          ← PF2e DCs: challenge-anchored, simple, adjustments, four degrees
   <campaign>/                 ← e.g. furrious-five/
     index.html                ← campaign hub (links the town notes, dossiers, quests)
     <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
