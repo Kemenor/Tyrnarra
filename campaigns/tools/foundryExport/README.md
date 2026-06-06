@@ -6,7 +6,8 @@ when you run it as GM, builds the quest's actor folder (with tidy
 
 - one **Actor** per distinct monster (you drop *N* tokens yourself — one actor, many tokens),
 - named **NPCs**, either imported from a stat-block base and renamed, or created as a blank statless `npc` (generic token, art later),
-- one **loot-actor "chest"** per haul, with its items (correct quantities) and coins.
+- one **loot-actor "chest"** per haul, with its items (correct quantities) and coins,
+- *(optional)* **pre-placed tokens** on the scene you have open — fanned out, grid-snapped, disposition set.
 
 Subfolders are created only for non-empty categories. Imports use `keepId:false`
 so a boss that shares a base creature with regular monsters (e.g. a renamed
@@ -67,6 +68,23 @@ blocked if the folder already exists — delete that folder first to rebuild.
 | `chests[]` | A loot actor: `name`, `items[]` (`name` + `count`), and `coins`. |
 | `coins` | A `{pp,gp,sp,cp}` dict, a plain gp number, or a loot.py-style string (`"120 gp"`, `"1.5 gp"`, `"50 cp"`). |
 | `pack` *(optional, on any monster/npc/item)* | Exact-pack hint. A bare repo folder name (`"pathfinder-monster-core"`) is read as `pf2e.<name>`; a dotted value (`"my-module.my-pack"`) is used verbatim. |
+| `areas` *(optional)* | The map-area-editor export verbatim: `[{label, rects:[{left,top,width,height}]}]`, all percentages of the map image. Used only to position tokens. |
+| `placement` *(optional)* | `[{area, name, count, disposition}]` — drop `count` tokens of imported actor `name` into `area` (matched to `areas` by label, or a numeric index). `disposition` is `hostile` (default) / `neutral` / `friendly` / `secret`. |
+
+## Token placement (optional)
+
+Your scenes are already prepared (Tom Cartos / Czepeku Foundry modules ship the
+scene with walls + lighting). So the macro **never creates a scene** — it places
+tokens onto the scene you currently have **open** (`game.scenes.viewed`, else the
+active scene). Your flow stays: upload the module, open the scene, run the macro.
+
+If the spec carries `areas` + `placement`, the macro converts each area's
+percentage rectangle (same map-area-editor coordinates the quest's clickable map
+tab uses) into scene pixels via `scene.dimensions`, fans `count` tokens out in a
+grid-snapped block centered on the area, and sets disposition. Multiple tokens of
+one actor don't stack. The scene name is reported in the summary so a wrong open
+scene is obvious. No `placement`, or no scene open → it simply skips placement and
+still builds the folder; an unmatched area or actor is reported, never guessed.
 
 ## Name resolution
 
@@ -93,6 +111,9 @@ python foundry_macro.py spec --folder "Broodmother's Hollow" \
     --loot haul.json --chest-name "Egg-Sac Cache" \   # loot.py build --json (one chest each)
     --npc "The Broodmother=Giant Tarantula" \  # promote a boss: import base + rename
     --npc "Trapped Miner Sela" \               # blank narrative npc
+    --areas areas.json \                       # map-area-editor export (token positions)
+    --place "1 . Entry=Giant Tarantula*3" \    # AREA=Name[*N][:disp]; default disp hostile
+    --place "5 . Brood=The Broodmother:hostile" \
     --out broodmother.spec.json
 python foundry_macro.py build --spec broodmother.spec.json --out broodmother.js
 ```

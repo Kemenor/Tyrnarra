@@ -118,6 +118,31 @@ def coins_to_dict(value):
     return out
 
 
+_DISPOSITIONS = ("hostile", "neutral", "friendly", "secret")
+
+
+def _parse_place(s):
+    """Parse a --place string 'AREA=Name[*N][:disposition]' into a placement dict.
+
+    Examples: "1 . Entry=Goblin Warrior*3", "5 . Brood=The Broodmother:hostile".
+    """
+    label, sep, rest = s.partition("=")
+    if not sep:
+        raise ValueError(f"--place needs AREA=Name[*N][:disp]: {s!r}")
+    label, rest = label.strip(), rest.strip()
+    disp = None
+    for d in _DISPOSITIONS:
+        if rest.lower().endswith(":" + d):
+            disp, rest = d, rest[:-(len(d) + 1)].strip()
+            break
+    name, star, cnt = rest.partition("*")
+    out = {"area": label, "name": name.strip(),
+           "count": int(cnt) if star and cnt.strip().isdigit() else 1}
+    if disp:
+        out["disposition"] = disp
+    return out
+
+
 def _normalize(spec):
     """Validate + canonicalize a spec (coins -> dict, defaults filled)."""
     if not isinstance(spec, dict) or not spec.get("folder"):
@@ -139,6 +164,15 @@ def _normalize(spec):
                  for it in (c.get("items") or [])]
         out["chests"].append({"name": c.get("name", "Treasure"), "items": items,
                               "coins": coins_to_dict(c.get("coins"))})
+    # Optional token-placement data: areas are the map-area-editor export (% rects),
+    # placement says which actor goes in which area on the active scene.
+    if spec.get("areas"):
+        out["areas"] = spec["areas"]
+    if spec.get("placement"):
+        out["placement"] = [{"area": p["area"], "name": p["name"],
+                             "count": int(p.get("count", 1)),
+                             **({"disposition": p["disposition"]} if p.get("disposition") else {})}
+                            for p in spec["placement"]]
     return out
 
 
@@ -199,7 +233,7 @@ _TEMPLATE = r"""/* =============================================================
     return _sub[name].id;
   };
 
-  const made = [], missing = [];
+  const made = [], missing = [], byName = {};
 
   for (const m of (SPEC.monsters || [])) {
     const hit = await resolve(m.name, m.pack, actorPacks);
@@ -208,6 +242,7 @@ _TEMPLATE = r"""/* =============================================================
     // same creature twice (e.g. a boss sharing a base with regular monsters) would
     // collide; a fresh id per import keeps them distinct.
     const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("Monsters") }, { keepId: false });
+    byName[a.name] = a;
     made.push(`${m.count || 1}x ${a.name}  (drop ${m.count || 1} token${(m.count || 1) === 1 ? "" : "s"})`);
   }
 
@@ -216,9 +251,11 @@ _TEMPLATE = r"""/* =============================================================
       const hit = await resolve(n.base, n.pack, actorPacks);
       if (!hit) { missing.push("npc base: " + n.base + " (for " + n.name + ")"); continue; }
       const a = await game.actors.importFromCompendium(hit.pack, hit.id, { folder: await sub("NPCs"), name: n.name }, { keepId: false });
+      byName[a.name] = a;
       made.push("NPC " + a.name + "  (from " + n.base + ")");
     } else {
       const a = await Actor.create({ name: n.name, type: "npc", folder: await sub("NPCs") });
+      byName[a.name] = a;
       made.push("NPC " + a.name + "  (blank - statless)");
     }
   }
@@ -239,18 +276,62 @@ _TEMPLATE = r"""/* =============================================================
       (c.coins && Object.keys(c.coins).length ? " + coins" : "") + ")");
   }
 
+  // ---- optional token placement on the active/viewed scene ----------------
+  // Areas are the map-area-editor export (% rects); placement says which actor
+  // goes in which area. Tokens fan out, grid-snapped, on the scene you have open.
+  const placements = SPEC.placement || [];
+  const scene = game.scenes.viewed || game.scenes.active;
+  let placed = 0;
+  if (placements.length && !scene) {
+    missing.push("no active scene - tokens not placed (open the quest scene, delete the folder, re-run)");
+  } else if (placements.length) {
+    const d = scene.dimensions, g = d.size;
+    const DISP = { hostile: -1, neutral: 0, friendly: 1, secret: -2 };
+    const areas = SPEC.areas || [];
+    const findArea = ref => {
+      if (typeof ref === "number") return areas[ref];
+      const k = String(ref).trim().toLowerCase();
+      return areas.find(a => String(a.label || "").trim().toLowerCase() === k);
+    };
+    const center = a => {                      // bounding box of the area's rects -> center px
+      const rs = a.rects || [];
+      const L = Math.min(...rs.map(r => r.left)), T = Math.min(...rs.map(r => r.top));
+      const R = Math.max(...rs.map(r => r.left + r.width)), B = Math.max(...rs.map(r => r.top + r.height));
+      return { cx: d.sceneX + (L + R) / 200 * d.sceneWidth, cy: d.sceneY + (T + B) / 200 * d.sceneHeight };
+    };
+    const tokenData = [];
+    for (const p of placements) {
+      const area = findArea(p.area), actor = byName[p.name];
+      if (!area || !(area.rects || []).length) { missing.push("placement area: " + p.area); continue; }
+      if (!actor) { missing.push("placement actor: " + p.name + " (import it first)"); continue; }
+      const { cx, cy } = center(area);
+      const n = p.count || 1, tw = actor.prototypeToken?.width || 1, step = g * Math.max(1, tw);
+      const cols = Math.ceil(Math.sqrt(n)), rows = Math.ceil(n / cols);
+      const disp = (p.disposition in DISP) ? DISP[p.disposition] : -1;
+      for (let i = 0; i < n; i++) {
+        const ox = (i % cols - (cols - 1) / 2) * step, oy = (Math.floor(i / cols) - (rows - 1) / 2) * step;
+        const x = Math.round((cx + ox - tw * g / 2) / g) * g, y = Math.round((cy + oy - tw * g / 2) / g) * g;
+        tokenData.push((await actor.getTokenDocument({ x, y, disposition: disp })).toObject());
+      }
+      placed += n;
+    }
+    if (tokenData.length) await scene.createEmbeddedDocuments("Token", tokenData);
+    if (placed) made.push(`Placed ${placed} token(s) on scene "${scene.name}"`);
+  }
+
   const body = `<h3>Imported "${SPEC.folder}"</h3><ul>${made.map(x => "<li>" + x + "</li>").join("")}</ul>` +
     (missing.length ? `<p style="color:#b33"><b>Unresolved (${missing.length}):</b><br>${missing.join("<br>")}</p>`
       + `<p><i>Check the name spelling, or add a "pack" hint for the exact compendium.</i></p>` : "");
   await ChatMessage.create({ content: body, whisper: [game.user.id] });
   ui.notifications.info(`Imported "${SPEC.folder}": ${made.length} actor(s)` +
+    (placed ? `, ${placed} token(s) on "${scene.name}"` : "") +
     (missing.length ? `, ${missing.length} unresolved (see chat)` : "") + ".");
 })();
 """
 
 
 def spec_from_tools(folder, encounters=None, loots=None, npcs=None,
-                    chest_names=None, merge=None):
+                    chest_names=None, merge=None, areas=None, placements=None):
     """Assemble a foundryExport spec from the leaf tools' --json output.
 
     folder       : the Actor folder name.
@@ -264,6 +345,9 @@ def spec_from_tools(folder, encounters=None, loots=None, npcs=None,
     chest_names  : optional names for the chests, positional with `loots`.
     merge        : an existing spec dict to extend (monsters summed, npcs/chests
                    appended) so the spec can accumulate while the quest is built.
+    areas        : the map-area-editor export (a list of {label, rects}, or the
+                   {"areas":[...]} wrapper) used to position tokens.
+    placements   : list of {area, name, count, disposition} token placements.
     """
     base = merge if isinstance(merge, dict) else {}
     # Merge monster counts by name across this call's encounters + any prior spec.
@@ -306,6 +390,12 @@ def spec_from_tools(folder, encounters=None, loots=None, npcs=None,
         spec["npcs"] = npc_entries
     if chests:
         spec["chests"] = chests
+    area_list = (areas.get("areas") if isinstance(areas, dict) else areas) or base.get("areas")
+    if area_list:
+        spec["areas"] = area_list
+    place = list(base.get("placement") or []) + list(placements or [])
+    if place:
+        spec["placement"] = place
     return spec
 
 
@@ -332,6 +422,10 @@ def main():
     s.add_argument("--chest-name", nargs="*", default=[], help="Chest names, positional with --loot.")
     s.add_argument("--npc", action="append", default=[],
                    help='"Name" (blank npc) or "Name=Base" (import Base, rename to Name). Repeatable.')
+    s.add_argument("--areas", help="map-area-editor export JSON (area rects) for token placement.")
+    s.add_argument("--place", action="append", default=[], metavar="AREA=Name[*N][:disp]",
+                   help="Place N tokens of an imported actor in an area. Repeatable. "
+                        "disp = hostile (default) / neutral / friendly / secret.")
     s.add_argument("--merge", help="Existing spec JSON to extend (accumulate while building).")
     s.add_argument("--out", help="Write the spec here (default: stdout).")
 
@@ -346,6 +440,8 @@ def main():
             npcs=a.npc,
             chest_names=a.chest_name,
             merge=load(a.merge) if a.merge else None,
+            areas=load(a.areas) if a.areas else None,
+            placements=[_parse_place(p) for p in a.place],
         )
         out = json.dumps(spec, ensure_ascii=False, indent=2)
         if a.out:

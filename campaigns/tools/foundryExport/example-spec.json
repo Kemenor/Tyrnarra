@@ -17,5 +17,16 @@
       ],
       "coins": "120 gp"
     }
+  ],
+
+  "_comment": "areas + placement are OPTIONAL. areas is the map-area-editor export (% rects); placement drops tokens onto the active scene. Omit both to just build the actor folder.",
+  "areas": [
+    { "label": "1 · Entry Cavern", "rects": [{ "left": 18, "top": 22, "width": 14, "height": 14 }] },
+    { "label": "5 · Brood Chamber", "rects": [{ "left": 58, "top": 62, "width": 18, "height": 18 }] }
+  ],
+  "placement": [
+    { "area": "1 · Entry Cavern", "name": "Goblin Warrior", "count": 6, "disposition": "hostile" },
+    { "area": "1 · Entry Cavern", "name": "Giant Rat", "count": 3 },
+    { "area": "5 · Brood Chamber", "name": "The Venomqueen", "count": 1 }
   ]
 }
