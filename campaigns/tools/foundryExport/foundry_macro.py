@@ -289,6 +289,9 @@ _TEMPLATE = r"""/* =============================================================
   } else if (placements.length) {
     const d = scene.dimensions, g = d.size;
     const DISP = { hostile: -1, neutral: 0, friendly: 1, secret: -2 };
+    // pf2e derives a token's disposition from its actor's alliance and ignores a
+    // bare disposition arg, so set alliance to colour survivors/foes correctly.
+    const ALLIANCE = { hostile: "opposition", friendly: "party", neutral: null };
     const areas = SPEC.areas || [];
     const findArea = ref => {
       if (typeof ref === "number") return areas[ref];
@@ -306,6 +309,9 @@ _TEMPLATE = r"""/* =============================================================
       const area = findArea(p.area), actor = byName[p.name];
       if (!area || !(area.rects || []).length) { missing.push("placement area: " + p.area); continue; }
       if (!actor) { missing.push("placement actor: " + p.name + " (import it first)"); continue; }
+      if (p.disposition && p.disposition in ALLIANCE && actor.system?.details && "alliance" in actor.system.details) {
+        await actor.update({ "system.details.alliance": ALLIANCE[p.disposition] });
+      }
       const { cx, cy } = center(area);
       const n = p.count || 1, tw = actor.prototypeToken?.width || 1, step = g * Math.max(1, tw);
       const cols = Math.ceil(Math.sqrt(n)), rows = Math.ceil(n / cols);
