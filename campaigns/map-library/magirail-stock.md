@@ -2,7 +2,7 @@
 
 A reusable catalogue of modular train-car battlemaps for any magirail scene on Talan. Source art is Tom Cartos's **"Steam Train" (ST)** modular set: 36 numbered cars, "Clean" (ungrimed) variants, roof tiles, plus prop overlays and a seamless track background. Every car is a uniform **14 × 5 grid**, so consists line up tile-to-tile with no fiddling.
 
-This catalogue is the part that travels in the repo. The **art itself is subscription/licensed and local-only**: it lives (gitignored) under `campaigns/map-library/_full/trains/`, re-downloadable from Tom Cartos onto any machine. The descriptions below let Claude pick cars for a scene without the images being committed.
+This catalogue is the part that travels in the repo. The **art itself is subscription/licensed and local-only**: it lives (gitignored) under `campaigns/map-library/_full/trains/`, synced between machines via the user's private Proton Drive (restore steps in [`README.md`](README.md)). The descriptions below let Claude pick cars for a scene without the images being committed.
 
 ## How to use it
 

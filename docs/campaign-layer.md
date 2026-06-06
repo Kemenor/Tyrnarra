@@ -63,7 +63,7 @@ Subscription battlemaps (the user's CzePeku / Tom Cartos subscriptions, etc.) **
 
 If you ever find a full-res original tracked outside `_full/`, untrack it (`git rm --cached`) and, for true removal, scrub it from history — subscription art on a public repo is the thing to avoid.
 
-**Reusable map catalogues** live in `campaigns/map-library/` (e.g. `magirail-stock.md`, the modular train-car library). They are committed *text* descriptions of local-only art, so Claude can pick cars for a scene and stitch them into a consist (cars append on the uniform 14 × 5 grid; the composite downsizes to the committed web copy) without the source images ever being published.
+**Reusable map catalogues** live in `campaigns/map-library/` (e.g. `magirail-stock.md`, the modular train-car library). They are committed *text* descriptions of local-only art, so Claude can pick cars for a scene and stitch them into a consist (cars append on the uniform 14 × 5 grid; the composite downsizes to the committed web copy) without the source images ever being published. On a fresh clone the `_full/` art is restored from the user's private Proton Drive sync, not from git; see [`campaigns/map-library/README.md`](../campaigns/map-library/README.md).
 
 ---
 

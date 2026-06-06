@@ -1,5 +1,5 @@
 # Local-only source art for the shared map-library catalogues (e.g. the Tom
 # Cartos train set described in ../magirail-stock.md). Everything in this folder
 # is gitignored and stays on this machine only; only the text catalogues beside
-# it are committed. Re-downloadable from the user's CzePeku / Tom Cartos
-# subscriptions. This .gitkeep keeps the folder present on a fresh clone.
+# it are committed. Restore on a fresh clone by syncing from the user's private
+# Proton Drive (see ../README.md). This .gitkeep keeps the folder present.
