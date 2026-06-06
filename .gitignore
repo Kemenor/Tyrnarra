@@ -24,3 +24,12 @@ campaigns/tools/encounterBuilder/_sources/
 campaigns/tools/encounterBuilder/bestiary.db
 campaigns/tools/encounterBuilder/items.db
 campaigns/tools/encounterBuilder/__pycache__/
+
+# Python bytecode caches anywhere under the GM tools.
+__pycache__/
+*.pyc
+
+# Generated NPC portraits (the user's image-gen output) stay local until uploaded
+# to Foundry; the prompts (*.portraits.json) are committed, the rendered images
+# are not.
+campaigns/**/portraits/
