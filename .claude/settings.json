@@ -14,6 +14,11 @@
             "type": "command",
             "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/gm-vetted-check.ps1",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/gm-notes-link-guard.ps1",
+            "timeout": 10
           }
         ]
       }
