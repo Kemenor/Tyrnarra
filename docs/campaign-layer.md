@@ -15,7 +15,7 @@ The **Furrious Five** layer (`/gm-notes/furrious-five/`) is the reference implem
 There are **two** campaign trees, and they are different sides of the screen:
 
 - **`/gm-notes/`** (this document) — **GM-only**, unlinked from the player sidebar, GM chrome (`gm.css` / `gm-nav.*`). Stat blocks, secrets, read-aloud, hooks, the floors below the floors.
-- **`/player-campaigns/`** — **player-facing and published**, linked in the sidebar under its own **Campaigns** section. It is the players' companion to a running campaign: town/location handouts and an interactive **quest board**, with all GM-tier content stripped. It mirrors selected `/gm-notes/` material down to the player tier and cross-links out to the canonical worldbuilding pages for the world layer.
+- **`/player-campaigns/`** — **player-facing and published**, reached from the world sidebar via a foot button to its **own** off-canvas menu (`pc-nav`, a separate Campaigns tree, not a section inside the world `site-nav`). It is the players' companion to a running campaign: town/location handouts and an interactive **quest board**, with all GM-tier content stripped. It mirrors selected `/gm-notes/` material down to the player tier and cross-links out to the canonical worldbuilding pages for the world layer.
 
 The player layer has its **own themeable chrome**, deliberately rooted in the GM look rather than the worldbuilding Style A/B:
 
