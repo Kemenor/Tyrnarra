@@ -46,7 +46,8 @@
     { slug: 'furrious-five', label: 'The Furrious Five', href: '/gm-notes/furrious-five/index.html', children: [
       { slug: 'millhaven-gm', label: 'Millhaven · GM Notes', href: '/gm-notes/furrious-five/millhaven-gm.html', children: [
         { slug: 'wayward-compass-gm', label: 'The Wayward Compass', href: '/gm-notes/furrious-five/wayward-compass-gm.html', children: [] },
-        { slug: 'low-span-gm',        label: 'The Low Span',        href: '/gm-notes/furrious-five/low-span-gm.html',       children: [] }
+        { slug: 'low-span-gm',        label: 'The Low Span',        href: '/gm-notes/furrious-five/low-span-gm.html',       children: [] },
+        { slug: 'sable-rei-gm',       label: 'Sable Rei · Dossier', href: '/gm-notes/furrious-five/sable-rei-gm.html',      children: [] }
       ]},
       { slug: 'quests', label: 'Quests', href: null, children: [
         { slug: 'quest-veldtmark',       label: 'The Veldtmark Invitation', href: '/gm-notes/furrious-five/quest-veldtmark/quest-veldtmark.html',             children: [] },
