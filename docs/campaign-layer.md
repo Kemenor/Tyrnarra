@@ -43,6 +43,7 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (the only tool that stays here; see below)
   gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)
     dc-cheatsheet.md          ← PF2e DCs: challenge-anchored, simple, adjustments, four degrees
+    npc-block.md              ← NPC definition standard: 3 depths (Cardboard/Semi/Full) + Level/Skills off Table 2-3
   <campaign>/                 ← e.g. furrious-five/
     index.html                ← campaign hub (links the town notes, dossiers, quests)
     <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
