@@ -1,4 +1,6 @@
-# The Campaign Layer (`/gm-notes/`)
+# The Campaign Layers (GM `/gm-notes/` + player `/player-campaigns/`)
+
+There are **two** campaign trees: the GM-only `/gm-notes/` and the player-facing, published `/player-campaigns/`. The split is detailed in *Two campaign layers* below; this intro and the next two paragraphs cover the GM tree.
 
 GM / table material for running actual campaigns. **Everything under `/gm-notes/` is GM-only.** It lives in the repo but is deliberately **unlinked from the player sidebar** (`published/setting/assets/site-nav.js` never references it), so it does not appear in normal player navigation. It is still served by GitHub Pages at its (unguessed) URLs; treat it as behind the screen, not as secret-from-the-internet.
 
@@ -51,6 +53,21 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
       _full/                  ← FULL-RES originals, gitignored — see "Map assets" below
     assets/portraits/         ← generated NPC portrait art (committed)
     assets/tokens/            ← baked token art (portrait + frame, committed)
+```
+
+The player-facing tree mirrors the same shape, with player chrome instead of GM chrome:
+
+```
+published/player-campaigns/     ← served at /player-campaigns/ (the published/ prefix is stripped)
+  index.html                  ← section landing: what the layer is + a card per campaign
+  assets/                     ← shared player chrome (loaded by every campaign page)
+    campaign.css              ← shared base ("companion to the table": themeable via --c-* tokens)
+    campaign.js               ← shared interactions (quest board, room map, reveal toggles)
+    pc-nav.css / pc-nav.js    ← player off-canvas menu (its own tree; NOT the world site-nav)
+  <campaign>/                 ← e.g. furrious-five/
+    <campaign>.html           ← campaign hub (links the player location pages + quest board)
+    <location>.html           ← player-tier location pages (GM content stripped)
+    theme.css                 ← the per-campaign skin (overrides only the --c-* tokens)
 ```
 
 The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), and `tools/token-frames/` (the shared Foundry token-frame library). Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.

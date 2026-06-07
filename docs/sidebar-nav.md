@@ -90,13 +90,15 @@ One file edited. No find-and-replace across pages.
 
 The sidebar carries five sections, each with its own clickable header (see *Section headers are clickable* above):
 
-- **World & Cosmos**: Cosmology, the 13 Bound Gods, Magic & Faith.
-- **Talan**: continent-level reference pages (History, The Binding with nested dungeons, Bestiary, Historical with nested fallen civilisations).
+- **World & Cosmos**: Cosmology, the **Gods & Powerful Beings** group under the Gods hub (The Primordials, The 13 Bound Gods, Layer-3 Gods, Bolverk), Gods' Law, Magic, and the PF2e Registrar.
+- **Talan**: continent-level reference pages (History, The Binding with nested dungeons, Ancestries, Historical with nested fallen civilisations).
 - **Domains**: the 13 god-domains, each with an optional accordion of promoted sub-region and settlement pages.
 - **Factions**: independent organisations (Adventurers Guild, Mercenary Guild, God Churches, Remnants).
 - **Off-Continent**: non-Talan continents and powers (Sortalde, Red Empire).
 
 To avoid bloat, only **promoted** sub-regions get a sidebar entry: those with their own HTML page (Fenurra, Emarrea, Myrria, etc.). Sub-regions and settlements that exist only as cards or sections on a domain page are not in the sidebar; visitors reach them via the parent domain page.
+
+The two campaign layers carry their **own** menus, separate from this worldbuilding sidebar: `/player-campaigns/` uses `pc-nav.*` and `/gm-notes/` uses `gm-nav.*`, each its own source-of-truth tree (see [`campaign-layer.md`](campaign-layer.md)).
 
 ---
 
@@ -111,7 +113,7 @@ The sidebar isn't the only thing extracted from per-page inline code. Two other 
   <script defer src="/setting/assets/site-interactions.js"></script>
   ```
 
-- **`site-starfield.js`**: generates the ambient star field for Style A "cosmic" pages. Picks up `<div class="starfield" id="starfield" data-stars="180"></div>` and fills it. `data-stars` is optional (defaults to 180). No-ops on pages without the placeholder, so it is safe to include anywhere, though it is only included on the three Style A pages today (`index.html`, `grand-gods.html`, `magic.html`).
+- **`site-starfield.js`**: generates the ambient star field for Style A "cosmic" pages. Picks up `<div class="starfield" id="starfield" data-stars="180"></div>` and fills it. `data-stars` is optional (defaults to 180). No-ops on pages without the placeholder, so it is safe to include anywhere, though it is only included on the Style A cosmic pages: the `/setting/index.html` landing plus the `/setting/cosmology/` pages.
 
   ```html
   <script defer src="/setting/assets/site-starfield.js"></script>

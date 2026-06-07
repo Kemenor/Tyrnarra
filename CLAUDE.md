@@ -2,7 +2,7 @@
 
 This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages from the **`published/`** folder (served as the site root by a GitHub Actions workflow; the `/published/` prefix is stripped at deploy, so the worldbuilding site is live under `/setting/…`). Pages are hand-crafted HTML; **shared chrome lives in `/setting/assets/`** (sidebar nav, Style A and Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
 
-For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see the `sub-region-workflow` skill at [`.claude/skills/sub-region-workflow/SKILL.md`](.claude/skills/sub-region-workflow/SKILL.md). For the in-repo **GM / campaign layer** (table material under `/gm-notes/`, kept out of the player site), see [`docs/campaign-layer.md`](docs/campaign-layer.md).
+For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the session-spanning workflows that take content from idea to published page, see the workflow skills (`sub-region-workflow`, `god-city-workflow`, `quest-workflow`, `virtue-devil-workflow`, plus the `pf2e-encounter` / `pf2e-loot` / `grill-me` helpers) under [`.claude/skills/`](.claude/skills/). For the in-repo **campaign layers** (the GM-only `/gm-notes/` table material and the player-facing, published `/player-campaigns/` companion), see [`docs/campaign-layer.md`](docs/campaign-layer.md).
 
 ---
 
@@ -81,21 +81,12 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
     token-frames/                      ← shared Foundry token-frame library
 
-  lore/                                ← worldbuilding canon (NOT served)
-    cosmology.md, gods.md, factions.md,
-    ancestries.md, glossary.md, timeline.md
-    geography/                          ← per-place canon (Talan domains + off-continent + Bolverk)
-      _continent.md                     ← Talan-continental frame: structure, seas, rail, domain index, languages
-      _off-continent.md                 ← Sortalde (+ six petal-peoples) and the Red Empire / Iron Tide / Menagerie
-      bolverk.md                        ← the megacity in Abyss (city geography, Vice Demons, Virtue Devils)
-      vindul.md, lautara.md, myrkono.md, floteyn.md, sumendar.md,
-      lioaru.md, brauogi.md, ezkudon.md, egulon.md, zuzental.md,
-      nashavel.md, ehizahar.md, askamira.md
-      vindul/haizetsua.md               ← Haizetsua sub-region: place + Tengu culture combined
-      lautara/emarrea.md                ← Emarrea sub-region: place + Kitsune culture combined
-      lautara/heartcourt-letters.md     ← Golivander's Letters from Biozuri (in-world document)
-      ehizahar/fenurra.md               ← Fenurra sub-region: place + Fenurran culture combined
-    (see "Where new content goes" below for what lives in each)
+  lore/                                ← worldbuilding canon (NOT served; full roster in site-inventory)
+    cosmology.md · gods.md · factions.md · ancestries.md · glossary.md · timeline.md
+    geography/                          ← per-place canon: one <domain>.md per god domain, plus
+                                          _continent.md · _off-continent.md · bolverk.md, and
+                                          deep-culture sub-region files (e.g. lautara/emarrea.md)
+    (the topic → file map is the "Where new content goes" table below)
 
   docs/                                ← site documentation (NOT served)
     site-inventory.md                  ← canonical roster of every page + publish status
@@ -103,7 +94,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
     accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
-    campaign-layer.md                  ← architecture of the GM /gm-notes/ layer (chrome, clickable maps, map assets)
+    campaign-layer.md                  ← architecture of the campaign layers (GM /gm-notes/ + player /player-campaigns/)
 
   .github/workflows/pages.yml          ← deploy: upload published/ → GitHub Pages (Actions)
   CLAUDE.md · README.md · .gitignore · serve.bat / serve.sh
@@ -121,7 +112,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 | Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
 | Settlement | folder under its domain | `/setting/talan/domains/lautara/millhaven/millhaven.html` |
 | Sub-location of settlement | sibling file in settlement folder | `/setting/talan/domains/lautara/millhaven/wayward-compass.html` |
-| Quest / GM table material | campaign layer (GM-only, served at `/gm-notes/`, unlinked) | `/gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (own folder, folder-named page) |
+| Quest / GM table material | GM campaign layer (GM-only, served at `/gm-notes/`, unlinked from the sidebar) | `/gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (own folder, folder-named page) |
+| Player campaign companion | player campaign layer (player-facing, published, its own `pc-nav` menu) | `/player-campaigns/<campaign>/<page>.html` |
 | Faction (independent org) | `/setting/talan/factions/` | `/setting/talan/factions/adventurers-guild.html` |
 | God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/setting/talan/factions/god-churches.html` |
 
@@ -143,7 +135,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
 ## Persistent sidebar navigation
 
-Every page references the shared sidebar by including two tags in `<head>`:
+Every **setting** page references the shared worldbuilding sidebar by including two tags in `<head>`:
 
 ```html
 <link rel="stylesheet" href="/setting/assets/site-nav.css">
@@ -154,11 +146,13 @@ The page declares its location for the highlight via `<body data-page="vindul">`
 
 To add or rename a page in the sidebar, edit `/setting/assets/site-nav.js`: one file, one place. Full architecture (data arrays, section-header pattern, accordion behaviour) in [`docs/sidebar-nav.md`](docs/sidebar-nav.md).
 
+The campaign layers carry their **own** menus, not this one: `/gm-notes/` uses `gm-nav.*` and `/player-campaigns/` uses `pc-nav.*`, each its own source-of-truth tree (see [`docs/campaign-layer.md`](docs/campaign-layer.md)).
+
 ---
 
-## Two page styles
+## Two page styles (worldbuilding pages)
 
-The existing pages establish two visual modes. New pages should pick one and match it closely; don't invent a third style without asking.
+Worldbuilding pages under `/setting/` use one of two visual modes. New setting pages should pick one and match it closely; don't invent a third without asking. (The campaign layers carry their own chrome, not Style A/B: `/gm-notes/` uses `gm.css` and `/player-campaigns/` uses the themeable `campaign.css`; see [`docs/campaign-layer.md`](docs/campaign-layer.md).)
 
 ### Style A: Cosmic / World-level
 Used for: the landing/cosmology, the 13 gods, magic; anything world-scale or mythic.
@@ -182,7 +176,7 @@ Used for: continent primer, domain pages, faction pages, town primers, district 
 
 ## Chronicler's voice: what's public, what's behind the seal
 
-Published HTML pages are **player-facing**. Open prose reads as something an in-world chronicler of Talan would actually write, hedged where the chronicle-record is hedged, ignorant where mortals are ignorant. **GM-tier truth never goes in open prose**; it lives inside expandable boxes only. **The lore files mark GM-tier inline** with a `⚿ GM Secret:` heading prefix (the lore-side equivalent of the HTML expandable; same content, same visibility-discipline). HTML pages stratify the same content into expandable boxes. This applies to both Style A and Style B pages.
+Published **worldbuilding** (`/setting/`) pages are **player-facing**. Open prose reads as something an in-world chronicler of Talan would actually write, hedged where the chronicle-record is hedged, ignorant where mortals are ignorant. **GM-tier truth never goes in open prose**; it lives inside expandable boxes only. **The lore files mark GM-tier inline** with a `⚿ GM Secret:` heading prefix (the lore-side equivalent of the HTML expandable; same content, same visibility-discipline). HTML pages stratify the same content into expandable boxes. This applies to both Style A and Style B pages.
 
 **Three tiers, three treatments:**
 
@@ -220,7 +214,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Always pause between lore-write and HTML-publish, even with a publish signal.** When the content is *new* (not polishing existing canon), the lore-write and HTML-mirror are two phases. Even if the original instruction was *"write out the history"* or *"publish this"*: write the lore, then **stop and surface what landed** so the user can correct details (timing, characters, public-vs-secret partition, canon implications) before HTML lock-in. The user will say *"go ahead and publish"* to release it. Polish-only or wiring-only follow-ups (sidebar nav, site-inventory, open-threads) can chain after the HTML publish without a second pause.
 
-**Published HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…"). Campaign-side material (quests, stat blocks, read-aloud boxes, adventure hooks, GM-tier location detail) belongs in the in-repo **campaign layer** at `/gm-notes/<campaign>/`, which is GM-only and deliberately unlinked from the player sidebar (see the file-layout schematic above); the *Furrious Five* layer is the reference implementation; see [`docs/campaign-layer.md`](docs/campaign-layer.md) for the layer's architecture (GM chrome, the clickable-battlemap pattern + the `map-area-editor` tool, and the rule that paid full-res maps stay local-only in `maps/_full/`). World-flavour expandables are welcome: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
+**Published worldbuilding HTML is reference material, not a campaign starter.** **Do not add "Hooks" or "Adventure Seeds" sections** with campaign prompts ("a campaign that crosses the two…", "a Yaksha exile whose bond was broken could open…") to `/setting/` pages. Campaign-side material lives in the in-repo **campaign layers** instead: GM-tier material (quests, stat blocks, read-aloud boxes, adventure hooks, GM-tier location detail) in the GM-only, sidebar-unlinked `/gm-notes/<campaign>/`; the player-facing companion (town/location handouts, the interactive quest board, with all GM-tier content stripped) in the published `/player-campaigns/<campaign>/`. The *Furrious Five* layer (present in both) is the reference implementation; see [`docs/campaign-layer.md`](docs/campaign-layer.md) for the architecture (the GM/player split, the GM chrome, the clickable-battlemap pattern + the `map-area-editor` tool, and the rule that paid full-res maps stay local-only in `maps/_full/`). World-flavour expandables are welcome on worldbuilding pages: folkloric *Popular Belief* (amber ◈), in-world tavern rumours, *What People Say* speculation. They characterise *the world*, not *what to do in it*.
 
 **Surface phase boundaries rather than chaining them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions; they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
@@ -246,7 +240,7 @@ When coining new names, always record the source language, literal meaning, and 
 
 **On the publish signal**, identify the target HTML page from the layer-to-folder mapping above, pick the matching style (A or B), and either edit the existing page or create a new one. After publishing, update `docs/site-inventory.md` to reflect any new or now-populated pages.
 
-**Commit and push per completed phase.** When a lore-write phase is complete and surfaced, or an HTML-publish phase is complete (the page edited or created, plus its wiring: sidebar nav, `docs/site-inventory.md`, `docs/open-threads.md`), commit that work with a descriptive message and push. Commit at the phase boundary, not per file edit, and hold off on committing mid-phase or un-reviewed drafts. The lore-write and the HTML-publish are separate phases (see the pause rule above), so they are separate commits. **Stage only the files this session touched since its last commit.** Multiple Claude sessions routinely run in this one working tree at the same time, so `git add -A`, `git add .`, and `git commit -a` are forbidden: they sweep another session's in-progress edits into your commit and push them half-finished under your message. Always stage explicit paths you created or changed this session (e.g. `git add lore/geography/vindul.md published/setting/talan/domains/vindul/vindul.html`); run `git status` first and confirm every staged file is one you actually touched. If `git status` shows modified files you did not edit, leave them unstaged: they belong to a concurrent session. Write a real message naming what landed (`Add Itsasalda Vordsbench canon`, `Publish Frae City god-city page`), not a generic one. This is the project's standing authorization to commit and push straight to `main` for these phases: no need to ask each time, and no need to branch first (the site auto-deploys from `main`). A `PostToolUse` reminder hook (`.claude/hooks/git-commit-reminder.ps1`, registered in `.claude/settings.json`) nudges you after any `lore/` or `.html` edit; it only reminds and never runs git. You run the commit and the push yourself, with judgment about whether the phase is truly done.
+**Commit and push per completed phase.** When a lore-write phase is complete and surfaced, or an HTML-publish phase is complete (the page edited or created, plus its wiring: sidebar nav, `docs/site-inventory.md`, `docs/open-threads.md`), commit that work with a descriptive message and push. Commit at the phase boundary, not per file edit, and hold off on committing mid-phase or un-reviewed drafts. The lore-write and the HTML-publish are separate phases (see the pause rule above), so they are separate commits. **Stage only the files this session touched since its last commit.** Multiple Claude sessions routinely run in this one working tree at the same time, so `git add -A`, `git add .`, and `git commit -a` are forbidden: they sweep another session's in-progress edits into your commit and push them half-finished under your message. Always stage explicit paths you created or changed this session (e.g. `git add lore/geography/vindul.md published/setting/talan/domains/vindul/vindul.html`); run `git status` first and confirm every staged file is one you actually touched. If `git status` shows modified files you did not edit, leave them unstaged: they belong to a concurrent session. Write a real message naming what landed (`Add Itsasalda Vordsbench canon`, `Publish Frae City god-city page`), not a generic one. This is the project's standing authorization to commit and push straight to `main` for these phases: no need to ask each time, and no need to branch first (a push to `main` triggers the GitHub Actions deploy of `published/`). A `PostToolUse` reminder hook (`.claude/hooks/git-commit-reminder.ps1`, registered in `.claude/settings.json`) nudges you after any `lore/` or `.html` edit; it only reminds and never runs git. You run the commit and the push yourself, with judgment about whether the phase is truly done.
 
 ---
 
@@ -258,5 +252,6 @@ This project is designed so a fresh Claude session can pick it up with no prior 
 2. **Skim `docs/site-inventory.md`** to know what's already published, what's stub, and (in the *Lore files* section at the top) which `lore/` file covers which topics. The pre-read rule routes through this table.
 3. **Read the relevant `lore/` files end-to-end** before drafting content that touches their canon; the *Lore files* section tells you which.
 4. **Check `docs/open-threads.md`** if the user references an ongoing canon question; it lists every TBD/unresolved thread with status and where it lives.
+5. **For GM table / quest work**, read [`docs/campaign-layer.md`](docs/campaign-layer.md) and drive the relevant workflow skill (`quest-workflow`, `pf2e-encounter`, `pf2e-loot`); that material lives in the campaign layers, never on the worldbuilding pages.
 
 Don't rely on the user's in-session memory file for canon; that's a summary, not the source. The lore files win.
