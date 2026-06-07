@@ -61,50 +61,58 @@ def _has_alpha(img):
     return lo < 240  # has meaningful transparency
 
 
-def prep(frame_in, out, chroma=None, tol=70, feather=1.5, despill=True):
-    """Chroma-key a flat-field AI frame into a transparent ring PNG."""
+def prep(frame_in, out, hue=None, hue_tol=26, sat_min=55, feather=1.5, despill=True):
+    """Key a magenta-field AI frame into a transparent ring PNG, by HUE.
+
+    Hue keying (not brightness) removes the bright field AND the ring's darker
+    drop-shadow (same magenta hue, lower value), which a distance key leaves as a
+    magenta halo. A magenta despill then neutralises any residual edge fringe.
+    """
     try:
         import numpy as np
     except ImportError:
         sys.exit("prep needs numpy. Run: pip install numpy")
-    im = Image.open(frame_in).convert("RGBA")
-    w, h = im.size
-    if chroma is None:                       # average the four corners as the key colour
-        cs = [im.getpixel((2, 2)), im.getpixel((w - 3, 2)), im.getpixel((2, h - 3)), im.getpixel((w - 3, h - 3))]
-        chroma = tuple(sum(c[i] for c in cs) // 4 for i in range(3))
-    arr = np.asarray(im).astype(np.float32)
-    rgb, key = arr[:, :, :3], np.array(chroma[:3], dtype=np.float32)
-    dist = np.sqrt(((rgb - key) ** 2).sum(2))
-    alpha = np.clip((dist - tol) / (tol * 0.6), 0, 1) * 255.0   # soft edge around the key
-    if despill:                              # pull colour away from the key where near it
-        near = (alpha < 255)[:, :, None]
-        mean = rgb.mean(2, keepdims=True)
-        arr[:, :, :3] = np.where(near, rgb * 0.5 + mean * 0.5, rgb)
-    arr[:, :, 3] = alpha
-    cut = Image.fromarray(arr.clip(0, 255).astype("uint8"), "RGBA")
+    im = Image.open(frame_in).convert("RGB")
+    rgb = np.asarray(im).astype(np.float32)
+    hsv = np.asarray(im.convert("HSV")).astype(np.float32)
+    H, S = hsv[:, :, 0], hsv[:, :, 1]                  # PIL HSV: 0-255 each
+    if hue is None:                                    # key hue = median of the four corners
+        h, w = H.shape
+        hue = float(np.median([H[2, 2], H[2, w - 3], H[h - 3, 2], H[h - 3, w - 3]]))
+    hue_dist = np.minimum(np.abs(H - hue), 255 - np.abs(H - hue))
+    keyness = np.clip(1 - hue_dist / hue_tol, 0, 1) * np.clip((S - sat_min) / (sat_min * 0.5), 0, 1)
+    alpha = (1 - keyness) * 255.0
+    if despill:                                        # remove magenta excess = (R+B)/2 - G
+        m = np.clip((rgb[:, :, 0] + rgb[:, :, 2]) / 2 - rgb[:, :, 1], 0, None)
+        rgb[:, :, 0] -= m
+        rgb[:, :, 2] -= m
+    arr = np.dstack([rgb, alpha]).clip(0, 255).astype("uint8")
+    cut = Image.fromarray(arr, "RGBA")
     if feather:
-        a = cut.split()[3].filter(ImageFilter.GaussianBlur(feather))
-        cut.putalpha(a)
+        cut.putalpha(cut.split()[3].filter(ImageFilter.GaussianBlur(feather)))
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     cut.save(out)
-    return out, chroma
+    return out, hue
 
 
 def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="auto"):
     """Circle-crop portrait; layer frame (transparent -> exact; opaque -> annulus)."""
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     p = _crop_square(Image.open(portrait).convert("RGBA")).resize((size, size), Image.LANCZOS)
-    canvas.paste(p, (0, 0), _circle_mask(size, feather))
+    # Portrait sits inside the ring (0.96 radius) so the band always overlaps its
+    # rim and the art never spills past the frame.
+    canvas.paste(p, (0, 0), _circle_mask(size, feather, 0.96))
     if frame:
         f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
         use_alpha = frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f))
         if use_alpha:
             # Auto-fit: scale the ring so its opaque extent reaches the token edge,
             # regardless of how large the model drew it. Then composite its own alpha.
-            bbox = f.split()[3].getbbox()
+            # Threshold the alpha first so faint key remnants don't inflate the bbox.
+            bbox = f.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
             if bbox:
                 bw, bh = bbox[2] - bbox[0], bbox[3] - bbox[1]
-                scale = (size * 0.99) / max(bw, bh)
+                scale = (size * 0.995) / max(bw, bh)
                 ring = f.crop(bbox).resize((max(1, round(bw * scale)), max(1, round(bh * scale))), Image.LANCZOS)
                 f = Image.new("RGBA", (size, size), (0, 0, 0, 0))
                 f.paste(ring, ((size - ring.width) // 2, (size - ring.height) // 2), ring)
@@ -137,8 +145,9 @@ def main():
     pr = sub.add_parser("prep", help="Chroma-key a flat-field AI frame into a transparent ring.")
     pr.add_argument("--in", dest="src", required=True)
     pr.add_argument("--out", required=True)
-    pr.add_argument("--chroma", help="Key colour hex (e.g. #ff00ff); default = average of corners.")
-    pr.add_argument("--tol", type=float, default=70)
+    pr.add_argument("--hue", type=float, help="Key hue 0-255 (PIL HSV); default = corner median (the field).")
+    pr.add_argument("--hue-tol", type=float, default=26, help="Hue half-width keyed out.")
+    pr.add_argument("--sat-min", type=float, default=55, help="Min saturation to count as the key (protects grey ring metal).")
     pr.add_argument("--feather", type=float, default=1.5)
 
     b = sub.add_parser("bake", help="One portrait + frame -> one token.")
@@ -163,12 +172,8 @@ def main():
 
     a = ap.parse_args()
     if a.cmd == "prep":
-        chroma = None
-        if a.chroma:
-            h = a.chroma.lstrip("#")
-            chroma = tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
-        _, used = prep(a.src, a.out, chroma, a.tol, a.feather)
-        print(f"{a.out}  (keyed colour {used})")
+        _, used = prep(a.src, a.out, a.hue, a.hue_tol, a.sat_min, a.feather)
+        print(f"{a.out}  (keyed hue {used:.0f})")
     elif a.cmd == "bake":
         print(bake(a.portrait, a.frame, a.out, a.size, a.inner, a.feather, a.frame_mode))
     else:

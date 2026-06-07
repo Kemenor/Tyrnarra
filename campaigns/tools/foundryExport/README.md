@@ -141,16 +141,16 @@ per-faction / special-monster borders, bake a frame into the token image:
    (same shape as the portraits file); render with `gen_portraits.py` into a
    `frames/` dir. Render the ring on a **solid magenta field** (background AND
    centre) so only the ring is non-magenta.
-2. **Cut.** `tokenize.py prep` chroma-keys the magenta away, leaving the ornate
+2. **Cut.** `bake_token.py prep` chroma-keys the magenta away, leaving the ornate
    ring with real transparency (no gray edge):
-   `python tokenize.py prep --in frames/bridge-council.webp --out frames/bridge-council.cut.png`
+   `python bake_token.py prep --in frames/bridge-council.webp --out frames/bridge-council.cut.png`
    (Hand-cut transparent frame PNGs skip this step and bake directly.)
-3. **Bake.** `tokenize.py` circle-crops the portrait and composites the
+3. **Bake.** `bake_token.py` circle-crops the portrait and composites the
    transparent ring, **auto-fitting** it to the token edge (scales by its alpha
    bbox, so any ring size lands as a proper border) -> one RGBA token PNG with
    transparent corners:
-   `python tokenize.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.cut.png --out tokens/sable-rei.png`
-   or `tokenize.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.cut.png`.
+   `python bake_token.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.cut.png --out tokens/sable-rei.png`
+   or `bake_token.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.cut.png`.
    (Opaque frames with no alpha fall back to an annulus mask; `--inner` tunes that band.)
 3. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign the framed
    image to the **token only** with the ring **off** - keep the un-framed
