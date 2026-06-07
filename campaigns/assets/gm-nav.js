@@ -126,12 +126,18 @@
   title.setAttribute('href', '/campaigns/index.html');
   if (current === 'campaigns-home') title.classList.add('is-current');
   nav.appendChild(title);
-  nav.appendChild(el('div', 'gm-nav-sub', 'Behind the Screen'));
-  nav.appendChild(buildList(TREE, 1));
 
+  // Scrollable middle: title (above) and foot (below) stay pinned.
+  var scroll = el('div', 'gm-nav-scroll');
+  scroll.appendChild(el('div', 'gm-nav-sub', 'Behind the Screen'));
+  scroll.appendChild(buildList(TREE, 1));
+  nav.appendChild(scroll);
+
+  // Cross-over to the player-facing mirror of this layer (the player
+  // campaigns), not the world site root.
   var foot = el('div', 'gm-nav-foot');
-  var back = el('a', null, '← Player Site');
-  back.setAttribute('href', '/index.html');
+  var back = el('a', null, '← Player Campaigns');
+  back.setAttribute('href', '/player-campaigns/index.html');
   foot.appendChild(back);
   nav.appendChild(foot);
 
