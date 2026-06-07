@@ -44,6 +44,9 @@ campaigns/
     stitch.py                 ← assemble a consist: composite image + merged areas JSON
     areas/                    ← per-car interior area files (committed coordinates)
     _full/                    ← the catalogues' local-only source art (gitignored)
+  token-frames/               ← shared Foundry token-frame library (reusable across campaigns)
+    faction-frames.json       ← frame prompts (domains, regions, world factions, monster types)
+    *.webp / *.cut.png        ← the generated ring art + chroma-keyed transparent rings
   gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)
     dc-cheatsheet.md          ← PF2e DCs: challenge-anchored, simple, adjustments, four degrees
   <campaign>/                 ← e.g. furrious-five/

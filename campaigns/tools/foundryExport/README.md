@@ -46,7 +46,7 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 7. **Upload** — `upload_forge.py --dir portraits` (or `tokens`) `--target <campaign>/<quest>` → asset URLs.
 8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
 
-Frame prompts live in `campaigns/<campaign>/faction-frames.json` (the reusable library); the per-quest actor→frame map in `campaigns/<campaign>/<quest>.token-map.json`. Generated images (`portraits/ frames/ tokens/`) **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
+The frame library is **shared, world-wide**: prompts + art live in `campaigns/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`campaigns/<campaign>/<quest>.token-map.json`) and the per-quest **portraits/tokens** stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
 
 ## Why a macro, not a REST push
 
@@ -168,10 +168,12 @@ token ring; placed tokens inherit it (or are re-skinned by `assign-images`).
 Foundry's Dynamic Token Ring only gives a generic disposition ring. For custom
 per-faction / special-monster borders, bake a frame into the token image:
 
-1. **Frame art.** Faction/monster frame prompts live in `faction-frames.json`
-   (same shape as the portraits file); render with `gen_portraits.py` into a
-   `frames/` dir. Render the ring on a **solid magenta field** (background AND
-   centre) so only the ring is non-magenta.
+1. **Frame art.** Frame prompts live in the shared library
+   `campaigns/token-frames/faction-frames.json` (same shape as the portraits
+   file); render with `gen_portraits.py` into `campaigns/token-frames/`. Render
+   the ring on a **solid magenta field** (background AND centre) so only the ring
+   is non-magenta. Frames are reusable across campaigns — add a new one once, map
+   to it from any quest's token-map.
 2. **Cut.** `bake_token.py prep` chroma-keys the magenta away, leaving the ornate
    ring with real transparency (no gray edge):
    `python bake_token.py prep --in frames/bridge-council.webp --out frames/bridge-council.cut.png`
@@ -181,7 +183,7 @@ per-faction / special-monster borders, bake a frame into the token image:
    bbox, so any ring size lands as a proper border) -> one RGBA token PNG with
    transparent corners:
    `python bake_token.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.cut.png --out tokens/sable-rei.png`
-   or `bake_token.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.cut.png`.
+   or `bake_token.py batch --portraits <campaign>/portraits --frames ../../token-frames --out <campaign>/tokens --map <quest>.token-map.json` (frames resolve from the shared library by stem).
    (Opaque frames with no alpha fall back to an annulus mask; `--inner` tunes that band.)
 4. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign with the
    token-only / ring-off flags (keeps the un-framed portrait as the actor `img`,
