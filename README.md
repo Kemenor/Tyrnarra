@@ -6,11 +6,27 @@ For project conventions (naming rule, folder layout, style guide) see [`CLAUDE.m
 
 ---
 
+## Repo shape
+
+Everything that ships to the web lives under **`/published/`**; everything else in the repo is private and never served.
+
+GitHub Pages serves `/published/` *as the site root*, so `/published/setting/talan/x.html` is live at `/setting/talan/x.html` — the `/published/` prefix is stripped at deploy and never appears in a link.
+
+- **`/published/`** — the deploy artifact (served as root).
+  - **`setting/`** — the worldbuilding site (served at `/setting/…`): `index.html` (the cosmology/world-primer homepage) + `cosmology/` (world-level Style A pages) + `talan/` (the continent) + `off-continent/` + `assets/` (shared chrome).
+  - **`gm-notes/`** — GM / table material (served at `/gm-notes/`, unlinked from the player nav). Keeps the in-browser `tools/map-area-editor.html`.
+  - **`player-campaigns/`** — the player companion (served at `/player-campaigns/`).
+  - `index.html` (root redirect → `/setting/`), `CNAME`, `robots.txt`, `favicon*`, `site.webmanifest`.
+- **`/tools/`** — private GM build tooling, **not served**: `encounterBuilder/`, `foundryExport/`, `map-library/`, `token-frames/`.
+- **`/lore/`**, **`/docs/`** — private canon + site docs, **not served**.
+
+---
+
 ## Local preview
 
-The site uses absolute paths (e.g. `/assets/site-nav.css`), so opening a page directly with `file://` won't work; the browser can't resolve `/assets/...` from the filesystem root. You need a local webserver.
+The site uses absolute paths (e.g. `/setting/assets/site-nav.css`), so opening a page with `file://` won't work; you need a local webserver that serves **`published/` as the root** (matching production).
 
-Two helper scripts are included. They use **`live-server`** via `npx`, which auto-opens the browser and refreshes it whenever an HTML/CSS/JS file changes. Requires Node.js.
+Two helper scripts do exactly that via **`live-server`** (npx; auto-opens the browser and live-reloads on HTML/CSS/JS changes). Requires Node.js.
 
 **Windows**: double-click `serve.bat`, or run it from a terminal:
 
@@ -20,46 +36,43 @@ serve.bat
 
 **macOS / Linux / WSL**: run `./serve.sh`.
 
-Either way:
-
-- The site is served at <http://localhost:8000>.
-- Your default browser opens automatically.
-- Edit any HTML/CSS/JS file → browser refreshes itself.
-- Edits to `lore/**`, `docs/**`, and `.git/**` are ignored (so taking notes doesn't trigger reloads).
-- Press `Ctrl+C` in the terminal to stop.
+Both serve the `published/` folder as the site root, so local URLs (`/setting/…`, `/gm-notes/…`, the `/` redirect) match production exactly. Windows serves at <http://localhost:8008>, the shell script at <http://localhost:8000>; the browser opens automatically and refreshes on edit. `Ctrl+C` to stop.
 
 **First run note:** `npx --yes live-server` downloads `live-server` on its first invocation (~25 MB, one time). Subsequent runs start instantly.
 
 ### Fallback: Python's built-in server
 
-If Node isn't available, Python's `http.server` works fine, though it doesn't auto-reload:
+If Node isn't available, Python's `http.server` works (no auto-reload). Serve the `published/` folder as root:
 
 ```bash
-python -m http.server 8000   # Windows
-python3 -m http.server 8000  # macOS / Linux
+python -m http.server 8000 --directory published    # Windows
+python3 -m http.server 8000 --directory published   # macOS / Linux
 ```
 
-Run it from the repo root and open <http://localhost:8000>. You'll need to hit `Ctrl+R` after every edit.
+Open <http://localhost:8000>; hit `Ctrl+R` after each edit.
 
 ---
 
 ## Deployment
 
-GitHub Pages deploys automatically on push to `main`. No build step, no GitHub Actions workflow.
+GitHub Pages deploys via a **GitHub Actions workflow** ([`.github/workflows/pages.yml`](.github/workflows/pages.yml)) on every push to `main`: it uploads the **`published/`** folder as the Pages artifact and deploys it as the site root. No other build step.
 
-- `index.html` at the repo root is the landing page (the cosmology primer).
-- All sub-pages use absolute paths (start with `/`).
-- The custom domain is `tyrnarra.kunkel.swiss` (configured via `CNAME`).
+- Repo **Settings → Pages → Source** must be set to **GitHub Actions** (not branch deploy).
+- The served root needs a homepage: `published/index.html` is a meta-refresh redirect to `/setting/` (the cosmology primer lives at `/setting/index.html`).
+- All pages use absolute paths (start with `/`), resolved against the served root.
+- The custom domain `tyrnarra.kunkel.swiss` is configured via `published/CNAME`.
 
-To preview a change live, push to `main` and wait ~30 seconds for the Pages build.
+To preview a change live, push to `main` and wait ~1–2 min for the Actions deploy.
 
 ---
 
 ## Where things live (quick orientation)
 
-- **HTML pages**: root for world-level (`index.html`, `grand-gods.html`, `magic.html`); `/talan/` for continent-level; `/talan/domains/<slug>/` for the 13 god domains; `/talan/factions/` for independent organisations.
-- **Shared CSS + sidebar nav**: `/assets/` (loaded by every page).
-- **Worldbuilding canon** (not published): `/lore/`. Five markdown files of authoritative world notes.
-- **Site documentation** (not published): `/docs/`. site-inventory.md (status) and sidebar-nav.md (architecture).
+- **Worldbuilding HTML**: `/published/setting/` — `cosmology/` for world-level pages (cosmology, gods, magic, …), `talan/` for the continent, `talan/domains/<slug>/` for the 13 god domains, `talan/factions/` for organisations, `off-continent/` for non-Talan powers.
+- **Shared CSS + sidebar nav**: `/published/setting/assets/` (loaded by every worldbuilding page).
+- **Campaign layers**: `/published/gm-notes/` (GM-only, behind the screen) and `/published/player-campaigns/` (player-facing companion).
+- **Private GM tooling** (not served): `/tools/` — the PF2e encounter/loot builders, the Foundry export pipeline, the map library, the token frames.
+- **Worldbuilding canon** (not served): `/lore/`. The authoritative world notes.
+- **Site documentation** (not served): `/docs/`. site-inventory.md (status), sidebar-nav.md, campaign-layer.md, and the rest.
 
 For the full folder tree, layer-to-folder mapping, and conventions, see [`CLAUDE.md`](CLAUDE.md).

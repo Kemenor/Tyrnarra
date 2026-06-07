@@ -1,6 +1,6 @@
 ---
 name: quest-workflow
-description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /gm-notes/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /gm-notes/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from gm-notes/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you download + draw areas) -> encounters -> loot -> quest HTML -> Foundry import macro, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /gm-notes/.
+description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adventure module from premise to a fully-built GM page in the /gm-notes/ layer. Trigger on "build a quest", "design a dungeon/adventure/module", "stat out this dungeon", "make an encounter crawl for [location]", "flesh out the [location] for my party", "prep the [place] session", working on a quest-<slug>.html under /gm-notes/, or any session that takes a session idea to encounters + loot + a runnable GM page. Orchestrates the pf2e-encounter and pf2e-loot leaf skills for the math, consumes clickable-map area JSON from published/gm-notes/tools/map-area-editor.html, and assembles the page per docs/campaign-layer.md (the Furrious Five layer is the reference). The arc is: intake -> 3-5 seeds -> premise -> structure -> map (Claude searches the CzePeku / Tom Cartos catalogs, you download + draw areas) -> encounters -> loot -> quest HTML -> Foundry import macro, with a surface-before-writing pause at every seam. Do not use for player-facing worldbuilding pages (that is sub-region-workflow / god-city-workflow) or for lore canon; quest material is GM-only and lives only in /gm-notes/.
 ---
 
 # quest-workflow
@@ -15,8 +15,8 @@ Read these. Skipping is the largest source of rework.
 
 1. **`CLAUDE.md`** (no em-dashes, affirmative prose, mortals-not-humans, the campaign-layer rule that quests live in `/gm-notes/` and never in the player sidebar).
 2. **`docs/campaign-layer.md`** end-to-end: folder layout, chrome conventions (`gm.css`/`gm.js`/`gm-nav.css`/`gm-nav.js`), the clickable-battlemap contract, and the subscription-map rule (`maps/_full/` gitignored).
-3. **The reference implementation**: `gm-notes/furrious-five/quest-venomqueen/quest-venomqueen.html` (the Cavern Map battlemap pattern) and `gm-notes/furrious-five/quest-veldtmark/quest-veldtmark.html`. Read one end-to-end as the page template.
-4. **The player-facing canon for where the quest is set** — the relevant `talan/domains/<domain>/…` page(s) and `lore/geography/<region>.md`, so NPCs, place-names, gods, and neighbours are consistent. Quest material may reveal GM-tier truth, but it must not contradict committed canon.
+3. **The reference implementation**: `published/gm-notes/furrious-five/quest-venomqueen/quest-venomqueen.html` (the Cavern Map battlemap pattern) and `published/gm-notes/furrious-five/quest-veldtmark/quest-veldtmark.html`. Read one end-to-end as the page template.
+4. **The player-facing canon for where the quest is set** — the relevant `published/setting/talan/domains/<domain>/…` page(s) and `lore/geography/<region>.md`, so NPCs, place-names, gods, and neighbours are consistent. Quest material may reveal GM-tier truth, but it must not contradict committed canon.
 5. **Tooling check**: confirm `tools/encounterBuilder/bestiary.db` and `items.db` exist; if not, run `python rebuild.py` from that directory once (first run clones the Foundry repo, a few minutes).
 
 If anything you are about to design contradicts committed canon, the canon wins. Surface the conflict in chat before adapting.
@@ -78,9 +78,9 @@ Three steps: Claude surfaces map options from the user's CzePeku / Tom Cartos su
 
    Surface each candidate as a titled link with a one-line "why it fits" (the cavern with the central pool; the three-storey manor; the flooded crypt). `WebFetch` a candidate page only to confirm what is actually on it. Present 3-5 and let the user pick.
 
-**2. The user downloads; Claude downsizes.** These come from the user's **CzePeku / Tom Cartos subscriptions**, so **the user does the download** — Claude never fetches or commits the art. The user hands over the full-res original (and any full downloaded pack, which often bundles extra art + Foundry module files); it belongs in `gm-notes/<campaign>/assets/maps/_full/` (gitignored, local only). **Claude generates the downsized ~800px web copy** that sits directly in `maps/` (committed; the page references this one), with ImageMagick: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (match the 800px-wide precedent of the existing committed maps). If the user dropped subscription art loose in `maps/`, move it into `_full/` before staging anything. See campaign-layer.md "Map assets".
+**2. The user downloads; Claude downsizes.** These come from the user's **CzePeku / Tom Cartos subscriptions**, so **the user does the download** — Claude never fetches or commits the art. The user hands over the full-res original (and any full downloaded pack, which often bundles extra art + Foundry module files); it belongs in `published/gm-notes/<campaign>/assets/maps/_full/` (gitignored, local only). **Claude generates the downsized ~800px web copy** that sits directly in `maps/` (committed; the page references this one), with ImageMagick: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (match the 800px-wide precedent of the existing committed maps). If the user dropped subscription art loose in `maps/`, move it into `_full/` before staging anything. See campaign-layer.md "Map assets".
 
-**3. Hand off to the editor.** Tell the user to open `gm-notes/tools/map-area-editor.html`, load the map (the full-res original is fine — area coordinates are stored as percentages, so the same JSON applies to the downsized copy the page references), draw one area per room/scene from the Phase 2 outline (Shift+draw to add rectangles for L/T/plus shapes), label + describe each, and export the JSON. **Wait** for it: this is the user's step ("I create areas and notes"). Do not fabricate areas; consume the exported JSON they hand back as the authoritative room list. Each area is `{ label, desc, rects:[{left,top,width,height}] }` in percentages. The same export feeds the Phase-7 Foundry token placement (`--areas`), so the area labels become the placement targets; keep them stable.
+**3. Hand off to the editor.** Tell the user to open `published/gm-notes/tools/map-area-editor.html`, load the map (the full-res original is fine — area coordinates are stored as percentages, so the same JSON applies to the downsized copy the page references), draw one area per room/scene from the Phase 2 outline (Shift+draw to add rectangles for L/T/plus shapes), label + describe each, and export the JSON. **Wait** for it: this is the user's step ("I create areas and notes"). Do not fabricate areas; consume the exported JSON they hand back as the authoritative room list. Each area is `{ label, desc, rects:[{left,top,width,height}] }` in percentages. The same export feeds the Phase-7 Foundry token placement (`--areas`), so the area labels become the placement targets; keep them stable.
 
 If the user would rather skip the visual map (theatre-of-mind), take an ordered room list in chat instead and build the page without the map tab.
 
@@ -104,7 +104,7 @@ For each combat area from the outline, **invoke the `pf2e-encounter` skill** wit
 
 ## Phase 6: Assemble the quest HTML (surface first, then build)
 
-Surface the content plan (sections, which areas, which secrets, the map tab) before writing the page. On the go-ahead, build `gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (the quest gets its own folder; the page is folder-named, like a settlement, and its Foundry artifacts live beside it).
+Surface the content plan (sections, which areas, which secrets, the map tab) before writing the page. On the go-ahead, build `published/gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (the quest gets its own folder; the page is folder-named, like a settlement, and its Foundry artifacts live beside it).
 
 **Structure (model on `quest-venomqueen/quest-venomqueen.html`):**
 
@@ -118,14 +118,14 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Rewards section**: the full haul with item levels, prices, and effects; where each piece is found.
 - **Hooks / aftermath**: where the story can go next.
 
-**Skill checks (weave them in).** A quest is not only fights. Seed Recall Knowledge, social, and exploration checks through the scenes and write each as **skill + DC + four degrees** (Critical Success / Success / Failure / Critical Failure; a nat 20 shifts up one step, a nat 1 down one). **Set the DC by the challenge, not the party level**: knowledge from the Simple-DC proficiency that would know it; NPC interaction from the NPC's level-based DC; a hazard from its own level; then layer difficulty (±2/±5/±10) and rarity (+2/+5/+10). Full tables, the degree rules, and worked examples live in `gm-notes/gm-reference/dc-cheatsheet.md`. Reference implementation: the statue (Religion, DC 17) and factor (Diplomacy, DC 23) checks on `quest-the-narrows-job/quest-the-narrows-job.html`.
+**Skill checks (weave them in).** A quest is not only fights. Seed Recall Knowledge, social, and exploration checks through the scenes and write each as **skill + DC + four degrees** (Critical Success / Success / Failure / Critical Failure; a nat 20 shifts up one step, a nat 1 down one). **Set the DC by the challenge, not the party level**: knowledge from the Simple-DC proficiency that would know it; NPC interaction from the NPC's level-based DC; a hazard from its own level; then layer difficulty (±2/±5/±10) and rarity (+2/+5/+10). Full tables, the degree rules, and worked examples live in `published/gm-notes/gm-reference/dc-cheatsheet.md`. Reference implementation: the statue (Religion, DC 17) and factor (Diplomacy, DC 23) checks on `quest-the-narrows-job/quest-the-narrows-job.html`.
 
 **Conventions:** no em-dashes (en-dashes for numeric ranges only); affirmative prose; mortals not humans; all links absolute; canon-consistent names. GM-tier content is welcome and expected here.
 
 **Wire it in:**
 
-1. **`gm-notes/assets/gm-nav.js`** — add the quest to the GM sidebar tree under its campaign; the entry's slug must match the page's `data-page`.
-2. **`gm-notes/<campaign>/index.html`** — add a card for the quest in the campaign hub.
+1. **`published/gm-notes/assets/gm-nav.js`** — add the quest to the GM sidebar tree under its campaign; the entry's slug must match the page's `data-page`.
+2. **`published/gm-notes/<campaign>/index.html`** — add a card for the quest in the campaign hub.
 3. **`docs/site-inventory.md`** — add the page to the GM-only roster section (campaign layer is not in the published rosters).
 4. **Maps** — confirm the committed copy is the downsized web image and any full-res original is in `_full/` (gitignored). If a full-res file is tracked outside `_full/`, untrack it.
 
@@ -146,7 +146,7 @@ turns them straight into a spec, no hand-mapping.
 
 ## Hard rules
 
-- **GM-only, always.** Everything this skill writes lives under `/gm-notes/` and is never added to the player sidebar (`assets/site-nav.js`). The GM sidebar is `gm-notes/assets/gm-nav.js`.
+- **GM-only, always.** Everything this skill writes lives under `/gm-notes/` and is never added to the player sidebar (`published/setting/assets/site-nav.js`). The GM sidebar is `published/gm-notes/assets/gm-nav.js`.
 - **Real data, never invented.** Encounter budgets, creature stats, item levels and prices come from the tools and the source JSON via the leaf skills. If a number is not grounded, it does not ship.
 - **Party level + size first.** Capture them in Phase 1; all encounter and loot math depends on them.
 - **DCs are the challenge, not the party.** Set every skill-check DC from the task's own level or proficiency (Simple DC for knowledge, the NPC's level for social, the hazard's level for traps), then adjust for difficulty and rarity; never default to the party level. Reference: `gm-notes/gm-reference/dc-cheatsheet.md`.

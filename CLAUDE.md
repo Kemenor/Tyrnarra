@@ -1,6 +1,6 @@
 # Tyrnarra: Worldbuilding Project
 
-This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages. Pages are hand-crafted HTML; **shared chrome lives in `/assets/`** (sidebar nav, Style A and Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
+This repo is a personal worldbuilding project for the setting **Tyrnarra**. The deliverable is a static HTML site published via GitHub Pages from the **`published/`** folder (served as the site root by a GitHub Actions workflow; the `/published/` prefix is stripped at deploy, so the worldbuilding site is live under `/setting/…`). Pages are hand-crafted HTML; **shared chrome lives in `/setting/assets/`** (sidebar nav, Style A and Style B base CSS) and is referenced via `<link>` and `<script defer src>` tags. Page-specific styling and unique content stay inline in the page itself.
 
 For getting the site running locally, see [`README.md`](README.md). For what's currently published vs. stub, see [`docs/site-inventory.md`](docs/site-inventory.md). For how the persistent sidebar works, see [`docs/sidebar-nav.md`](docs/sidebar-nav.md). For the full session-spanning workflow that takes a sub-region from name-on-the-map to fully published dedicated page, see the `sub-region-workflow` skill at [`.claude/skills/sub-region-workflow/SKILL.md`](.claude/skills/sub-region-workflow/SKILL.md). For the in-repo **GM / campaign layer** (table material under `/gm-notes/`, kept out of the player site), see [`docs/campaign-layer.md`](docs/campaign-layer.md).
 
@@ -32,36 +32,56 @@ For getting the site running locally, see [`README.md`](README.md). For what's c
 
 ## File layout
 
-The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingdoms → Settlements.** The folder tree mirrors the world. World-level (cosmic) content lives at root; continent-level content lives under `/talan/`. The schematic below shows the *pattern*; for the actual file roster + publish status, see [`docs/site-inventory.md`](docs/site-inventory.md).
+The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingdoms → Settlements.** The folder tree mirrors the world. The whole worldbuilding site ships from `published/setting/` and is served at `/setting/…`: world-level (cosmic) content under `/setting/cosmology/`, continent-level content under `/setting/talan/`. The schematic below shows the *pattern*; for the actual file roster + publish status, see [`docs/site-inventory.md`](docs/site-inventory.md).
 
 ```
-/                                      ← GitHub Pages serves from here
-  <world-level>.html                   ← cosmology, gods, magic; Style A pages live at root
+/                                      ← repo root (NOT served; only published/ ships to the web)
 
-  talan/                               ← continent-level content (Style B)
-    talan.html                         ← continent overview
-    history.html, ancestries.html, …   ← other continent-level pages
-    domains/                           ← the 13 god domains
-      <domain>/<domain>.html           ← e.g. vindul/vindul.html, domain entry page
-      <domain>/<sub-region>.html       ← optional: promoted sub-region with its own page
-      <domain>/<settlement>/           ← settlement folder, when content warrants
-        <settlement>.html              ← folder's main page, same name as the folder
-        <sub-location>.html            ← location within the settlement
+  published/                           ← GitHub Pages serves THIS folder as the site root
+    index.html                         ← root redirect → /setting/
+    CNAME · robots.txt · favicon* · site.webmanifest   ← served-root files
+
+    setting/                           ← the worldbuilding site (served at /setting/…)
+      index.html                       ← cosmology / world primer (the homepage the / redirect targets)
+      cosmology/                       ← world-level (cosmic) Style A pages
+        grand-gods.html, gods.html, gods-law.html, magic.html,
+        bolverk.html, primordials.html, layer-3-gods.html, pf2e-registrar.html
+      talan/                           ← continent-level content (Style B)
+        talan.html                     ← continent overview
+        history.html, ancestries.html, …   ← other continent-level pages
+        domains/                       ← the 13 god domains
+          <domain>/<domain>.html       ← e.g. vindul/vindul.html, domain entry page
+          <domain>/<sub-region>.html   ← optional: promoted sub-region with its own page
+          <domain>/<settlement>/       ← settlement folder, when content warrants
+            <settlement>.html          ← folder's main page, same name as the folder
+            <sub-location>.html        ← location within the settlement
                                          (quests + GM/table material live in /gm-notes/, NOT here)
-    factions/                          ← independent organisations
-    historical/                        ← fallen civilisations
-    the-binding/                       ← Nine Generals dungeons
+        factions/                      ← independent organisations
+        historical/                    ← fallen civilisations
+        the-binding/                   ← Nine Generals dungeons
+      off-continent/                   ← non-Talan continents & powers
+      assets/                          ← shared chrome (loaded by every setting page)
+        site-nav.css / site-nav.js     ← sidebar (single source of truth for menu)
+        site-interactions.js           ← shared toggle handlers (Popular Belief ◈, GM Secret ⚿, era cards)
+        site-starfield.js              ← generates the cosmic-page starfield (Style A only)
+        style-a.css                    ← Style A base, /setting/cosmology/ pages
+        style-b.css                    ← Style B base, every page under /setting/talan/ and /setting/off-continent/
 
-  off-continent/                       ← non-Talan continents & powers
+    gm-notes/                          ← GM / table material (served at /gm-notes/, unlinked from sidebar)
+      assets/                          ← gm.css / gm.js / gm-nav.css / gm-nav.js (shared GM chrome)
+      tools/map-area-editor.html       ← the one browser tool kept published (draw clickable map areas → JSON)
+      <campaign>/                      ← per-campaign hub: GM town notes, location dossiers, quests
+        assets/maps/                   ← downsized web map copies (committed); _full/ = full-res, gitignored (paid art stays local)
 
-  assets/                              ← shared chrome (loaded by every page)
-    site-nav.css / site-nav.js         ← sidebar (single source of truth for menu)
-    site-interactions.js               ← shared toggle handlers (Popular Belief ◈, GM Secret ⚿, era cards)
-    site-starfield.js                  ← generates the cosmic-page starfield (Style A only)
-    style-a.css                        ← Style A base, world-level cosmic pages
-    style-b.css                        ← Style B base, every page under /talan/ and /off-continent/
+    player-campaigns/                  ← player companion (served at /player-campaigns/; its own pc-nav menu)
 
-  lore/                                ← worldbuilding canon (NOT published)
+  tools/                               ← PRIVATE GM build tooling (NOT served)
+    encounterBuilder/                  ← PF2e encounter + loot builders (pf2e-encounter / pf2e-loot skills)
+    foundryExport/                     ← quest spec → paste-and-run Foundry VTT import macro
+    map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
+    token-frames/                      ← shared Foundry token-frame library
+
+  lore/                                ← worldbuilding canon (NOT served)
     cosmology.md, gods.md, factions.md,
     ancestries.md, glossary.md, timeline.md
     geography/                          ← per-place canon (Talan domains + off-continent + Bolverk)
@@ -77,7 +97,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
       ehizahar/fenurra.md               ← Fenurra sub-region: place + Fenurran culture combined
     (see "Where new content goes" below for what lives in each)
 
-  docs/                                ← site documentation (NOT published)
+  docs/                                ← site documentation (NOT served)
     site-inventory.md                  ← canonical roster of every page + publish status
     sidebar-nav.md                     ← architecture notes on shared sidebar + assets
     open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
@@ -85,13 +105,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
     campaign-layer.md                  ← architecture of the GM /gm-notes/ layer (chrome, clickable maps, map assets)
 
-  gm-notes/                           ← GM / table material (in repo, NOT for players; unlinked from sidebar)
-    assets/                            ← gm.css / gm.js / gm-nav.css / gm-nav.js (shared GM chrome)
-    tools/                             ← GM utilities (map-area-editor.html: draw clickable map areas → JSON)
-    <campaign>/                        ← per-campaign hub: GM town notes, location dossiers, quests
-      assets/maps/                     ← downsized web map copies (committed); _full/ = full-res, gitignored (paid art stays local)
-
-  CLAUDE.md · README.md · CNAME · serve.bat / serve.sh
+  .github/workflows/pages.yml          ← deploy: upload published/ → GitHub Pages (Actions)
+  CLAUDE.md · README.md · .gitignore · serve.bat / serve.sh
 ```
 
 **`lore/` vs. `docs/`**: `lore/` is the source of truth for what's *true in the world*. When an HTML page disagrees with a lore file, the lore wins. `docs/` is the source of truth for *how the site is built*. They have different update rhythms: canon evolves with the world; docs drift with the code.
@@ -100,15 +115,15 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
 | World layer | Folder | Example |
 |---|---|---|
-| World (Tyrnarra) | root | `index.html` (cosmology), `grand-gods.html`, `magic.html` |
-| Continent (Talan) | `/talan/` | `talan.html`, `history.html` |
-| Region (god domain) | `/talan/domains/<domain>/` | `/talan/domains/vindul/vindul.html` |
+| World (Tyrnarra) | `/setting/` + `/setting/cosmology/` | `index.html` at `/setting/index.html`; `grand-gods.html`, `magic.html` at `/setting/cosmology/…` |
+| Continent (Talan) | `/setting/talan/` | `talan.html`, `history.html` |
+| Region (god domain) | `/setting/talan/domains/<domain>/` | `/setting/talan/domains/vindul/vindul.html` |
 | Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
-| Settlement | folder under its domain | `/talan/domains/lautara/millhaven/millhaven.html` |
-| Sub-location of settlement | sibling file in settlement folder | `/talan/domains/lautara/millhaven/wayward-compass.html` |
-| Quest / GM table material | campaign layer (GM-only, NOT published) | `/gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (own folder, folder-named page) |
-| Faction (independent org) | `/talan/factions/` | `/talan/factions/adventurers-guild.html` |
-| God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/talan/factions/god-churches.html` |
+| Settlement | folder under its domain | `/setting/talan/domains/lautara/millhaven/millhaven.html` |
+| Sub-location of settlement | sibling file in settlement folder | `/setting/talan/domains/lautara/millhaven/wayward-compass.html` |
+| Quest / GM table material | campaign layer (GM-only, served at `/gm-notes/`, unlinked) | `/gm-notes/<campaign>/quest-<slug>/quest-<slug>.html` (own folder, folder-named page) |
+| Faction (independent org) | `/setting/talan/factions/` | `/setting/talan/factions/adventurers-guild.html` |
+| God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/setting/talan/factions/god-churches.html` |
 
 ### Conventions
 
@@ -131,13 +146,13 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 Every page references the shared sidebar by including two tags in `<head>`:
 
 ```html
-<link rel="stylesheet" href="/assets/site-nav.css">
-<script defer src="/assets/site-nav.js"></script>
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
 ```
 
 The page declares its location for the highlight via `<body data-page="vindul">`.
 
-To add or rename a page in the sidebar, edit `/assets/site-nav.js`: one file, one place. Full architecture (data arrays, section-header pattern, accordion behaviour) in [`docs/sidebar-nav.md`](docs/sidebar-nav.md).
+To add or rename a page in the sidebar, edit `/setting/assets/site-nav.js`: one file, one place. Full architecture (data arrays, section-header pattern, accordion behaviour) in [`docs/sidebar-nav.md`](docs/sidebar-nav.md).
 
 ---
 
@@ -148,20 +163,20 @@ The existing pages establish two visual modes. New pages should pick one and mat
 ### Style A: Cosmic / World-level
 Used for: the landing/cosmology, the 13 gods, magic; anything world-scale or mythic.
 
-- **Source:** `/assets/style-a.css`. Page-specific tweaks (orb effects, soul bars) stay inline in the page itself.
+- **Source:** `/setting/assets/style-a.css`. Page-specific tweaks (orb effects, soul bars) stay inline in the page itself.
 - **Fonts:** Cinzel Decorative (page titles), Cinzel (labels, small caps), Crimson Pro (body)
 - **Palette:** deep void (`--bg: #06060a`), purple/blue ambient gradients, gold accents (`--gold: #c8a84a`, `--gold-bright: #f0d080`), parchment text (`--text: #c8c4d8`), per-god accent colours
 - **Signature elements:** animated starfield, god orbs that gently float, group dividers with sub-labels, expandable god cards with red `⚿ GM Secret` pills, planar-layer expandables
-- **References:** `index.html` (cosmology landing), `grand-gods.html` (the pantheon), `magic.html`
+- **References:** `/setting/index.html` (cosmology landing), `/setting/cosmology/grand-gods.html` (the pantheon), `/setting/cosmology/magic.html`
 
 ### Style B: Grounded / Continent + Settlement-level
-Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, off-continent powers, anything ground-level and lived-in. Every page under `/talan/` and `/off-continent/` uses Style B.
+Used for: continent primer, domain pages, faction pages, town primers, district guides, NPC rosters, off-continent powers, anything ground-level and lived-in. Every page under `/setting/talan/` and `/setting/off-continent/` uses Style B.
 
-- **Source:** `/assets/style-b.css`. Pages set a custom `--domain-accent` in a small inline `<style>` when they want one.
+- **Source:** `/setting/assets/style-b.css`. Pages set a custom `--domain-accent` in a small inline `<style>` when they want one.
 - **Fonts:** Uncial Antiqua (page titles), Crimson Pro (body), Cinzel (labels/small caps)
 - **Palette:** warm dark (`--bg: #0f0c08`), gold accents (`--gold: #c8900a`, `--gold-bright: #f0b020`), parchment text (`--text: #d0c8a8`), per-domain accent colour driven by the location's character
 - **Signature elements:** parchment noise overlay, ornament dividers (`✦ · ✦ · ✦`), "At a Glance" facts panel, god-city callout boxes, sub-region grid cards, timeline + era cards, amber `◈` Popular Belief + red `⚿` GM Secret expandables
-- **References:** `talan/talan.html` (continent overview), any of `talan/domains/<domain>/<domain>.html` (domain page), `talan/factions/adventurers-guild.html` (faction page)
+- **References:** `/setting/talan/talan.html` (continent overview), any of `/setting/talan/domains/<domain>/<domain>.html` (domain page), `/setting/talan/factions/adventurers-guild.html` (faction page)
 
 ---
 
@@ -184,8 +199,8 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 **Theme secret boxes with the page's full visual vocabulary.** Cards, grids, pill rows, italic reveal-intros, side-by-side comparisons, codas: same scaffolding you'd use in open prose, just inside the box. If cards need a darker background to read against the secret-box tint, override `--card-bg` with a darker tinted value (e.g. `rgba(46,14,18,0.55)` for red-secret-tinted cards). Treat each secret as a structured reveal, not a paragraph.
 
 **Reference implementations:**
-- [`talan/historical/storveldi-denbora.html`](talan/historical/storveldi-denbora.html): four thematic GM Secret boxes, each with reveal-pills, themed cards (claim-vs-truth, three-tier court, three fragment-locations) and italic codas. The model for *multiple themed secrets per page*.
-- [`talan/historical/golden-empire.html`](talan/historical/golden-empire.html): a single consolidated GM Secret box. The model for when *one continuous reveal arc* makes more sense than splitting.
+- [`published/setting/talan/historical/storveldi-denbora.html`](published/setting/talan/historical/storveldi-denbora.html): four thematic GM Secret boxes, each with reveal-pills, themed cards (claim-vs-truth, three-tier court, three fragment-locations) and italic codas. The model for *multiple themed secrets per page*.
+- [`published/setting/talan/historical/golden-empire.html`](published/setting/talan/historical/golden-empire.html): a single consolidated GM Secret box. The model for when *one continuous reveal arc* makes more sense than splitting.
 
 ---
 
@@ -209,7 +224,7 @@ A useful gut check: **if a chronicler reading the open prose would learn somethi
 
 **Surface phase boundaries rather than chaining them.** On multi-step work (publishing several pages, restructuring multiple docs, a coherent lore restructure across files), pause at the seam between phases and surface what landed + what's next, even under a broad "work through it" instruction. Phase boundaries are review checkpoints, not clarifying questions; they're wanted under "work without stopping for clarifying questions" framing too. Reading is fine within a phase; *writes* trigger the boundary.
 
-**The GM-Vetted badge.** A page the GM has personally read through and corrected carries a **GM-Vetted** badge at the top of the page, under the title (so players see at a glance that the page is current): an HTML comment `<!-- gm-vetted: YYYY-MM-DD ... -->` plus a `<div class="gm-vetted">` pill (styled in `/assets/site-nav.css`). The badge is the visible mark that a human signed off on that page's prose. **Only the GM grants it** (when he says a page is vetted); never add or re-add a badge on your own initiative. A `PostToolUse` hook (`.claude/hooks/gm-vetted-check.ps1`, registered in `.claude/settings.json`) fires whenever a vetted `.html` page is edited and reminds you to **judge whether the edit was more than minor**. If it was a real prose, structural, or canon change, **strip the badge** (delete both the comment line and the `gm-vetted` div) so the page no longer claims a sign-off it no longer has; if it was trivial (typo, single word, whitespace, one punctuation swap), leave the badge in place. The hook only flags; the minor-vs-major call is yours, and stripping is the conservative default when unsure. **The badge is about prose/canon, not chrome:** adding or restyling pure-navigation furniture that doesn't touch the page's lore (a shared `.see-also` "Continue Reading" panel, an `.open-canon` re-wrap, a sidebar/cross-link change) is **not** a badge-stripping edit; leave the badge in place.
+**The GM-Vetted badge.** A page the GM has personally read through and corrected carries a **GM-Vetted** badge at the top of the page, under the title (so players see at a glance that the page is current): an HTML comment `<!-- gm-vetted: YYYY-MM-DD ... -->` plus a `<div class="gm-vetted">` pill (styled in `/setting/assets/site-nav.css`). The badge is the visible mark that a human signed off on that page's prose. **Only the GM grants it** (when he says a page is vetted); never add or re-add a badge on your own initiative. A `PostToolUse` hook (`.claude/hooks/gm-vetted-check.ps1`, registered in `.claude/settings.json`) fires whenever a vetted `.html` page is edited and reminds you to **judge whether the edit was more than minor**. If it was a real prose, structural, or canon change, **strip the badge** (delete both the comment line and the `gm-vetted` div) so the page no longer claims a sign-off it no longer has; if it was trivial (typo, single word, whitespace, one punctuation swap), leave the badge in place. The hook only flags; the minor-vs-major call is yours, and stripping is the conservative default when unsure. **The badge is about prose/canon, not chrome:** adding or restyling pure-navigation furniture that doesn't touch the page's lore (a shared `.see-also` "Continue Reading" panel, an `.open-canon` re-wrap, a sidebar/cross-link change) is **not** a badge-stripping edit; leave the badge in place.
 
 **Where new content goes:**
 
@@ -231,7 +246,7 @@ When coining new names, always record the source language, literal meaning, and 
 
 **On the publish signal**, identify the target HTML page from the layer-to-folder mapping above, pick the matching style (A or B), and either edit the existing page or create a new one. After publishing, update `docs/site-inventory.md` to reflect any new or now-populated pages.
 
-**Commit and push per completed phase.** When a lore-write phase is complete and surfaced, or an HTML-publish phase is complete (the page edited or created, plus its wiring: sidebar nav, `docs/site-inventory.md`, `docs/open-threads.md`), commit that work with a descriptive message and push. Commit at the phase boundary, not per file edit, and hold off on committing mid-phase or un-reviewed drafts. The lore-write and the HTML-publish are separate phases (see the pause rule above), so they are separate commits. **Stage only the files this session touched since its last commit.** Multiple Claude sessions routinely run in this one working tree at the same time, so `git add -A`, `git add .`, and `git commit -a` are forbidden: they sweep another session's in-progress edits into your commit and push them half-finished under your message. Always stage explicit paths you created or changed this session (e.g. `git add lore/geography/vindul.md talan/domains/vindul/vindul.html`); run `git status` first and confirm every staged file is one you actually touched. If `git status` shows modified files you did not edit, leave them unstaged: they belong to a concurrent session. Write a real message naming what landed (`Add Itsasalda Vordsbench canon`, `Publish Frae City god-city page`), not a generic one. This is the project's standing authorization to commit and push straight to `main` for these phases: no need to ask each time, and no need to branch first (the site auto-deploys from `main`). A `PostToolUse` reminder hook (`.claude/hooks/git-commit-reminder.ps1`, registered in `.claude/settings.json`) nudges you after any `lore/` or `.html` edit; it only reminds and never runs git. You run the commit and the push yourself, with judgment about whether the phase is truly done.
+**Commit and push per completed phase.** When a lore-write phase is complete and surfaced, or an HTML-publish phase is complete (the page edited or created, plus its wiring: sidebar nav, `docs/site-inventory.md`, `docs/open-threads.md`), commit that work with a descriptive message and push. Commit at the phase boundary, not per file edit, and hold off on committing mid-phase or un-reviewed drafts. The lore-write and the HTML-publish are separate phases (see the pause rule above), so they are separate commits. **Stage only the files this session touched since its last commit.** Multiple Claude sessions routinely run in this one working tree at the same time, so `git add -A`, `git add .`, and `git commit -a` are forbidden: they sweep another session's in-progress edits into your commit and push them half-finished under your message. Always stage explicit paths you created or changed this session (e.g. `git add lore/geography/vindul.md published/setting/talan/domains/vindul/vindul.html`); run `git status` first and confirm every staged file is one you actually touched. If `git status` shows modified files you did not edit, leave them unstaged: they belong to a concurrent session. Write a real message naming what landed (`Add Itsasalda Vordsbench canon`, `Publish Frae City god-city page`), not a generic one. This is the project's standing authorization to commit and push straight to `main` for these phases: no need to ask each time, and no need to branch first (the site auto-deploys from `main`). A `PostToolUse` reminder hook (`.claude/hooks/git-commit-reminder.ps1`, registered in `.claude/settings.json`) nudges you after any `lore/` or `.html` edit; it only reminds and never runs git. You run the commit and the push yourself, with judgment about whether the phase is truly done.
 
 ---
 

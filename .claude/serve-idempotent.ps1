@@ -10,5 +10,5 @@ if ($inUse) {
     while ($true) { Start-Sleep -Seconds 3600 }
 } else {
     Write-Host "[serve] Starting live-server on port $port."
-    & npx --yes live-server "--port=$port" "--ignore=lore/**,.git/**,outputs/**"
+    & npx --yes live-server published "--port=$port"
 }
