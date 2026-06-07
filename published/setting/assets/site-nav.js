@@ -138,16 +138,16 @@
   // The section header links to the Cosmology landing (index.html),
   // so that page is not repeated as a leaf here.
   var WORLD_PAGES = [
-    { slug: 'gods-hub', label: 'Gods &amp; Powerful Beings', href: '/setting/gods.html', children: [
-      { slug: 'primordials',  label: 'The Primordials &middot; Prelife',   href: '/setting/primordials.html',  children: [] },
-      { slug: 'gods',         label: 'The 13 Bound Gods &middot; Material', href: '/setting/grand-gods.html',   children: [] },
-      { slug: 'layer-3-gods', label: 'Layer-3 Gods &middot; Postlife',     href: '/setting/layer-3-gods.html', children: [
-        { slug: 'bolverk',    label: 'Bolverk &middot; the Megacity in Abyss', href: '/setting/bolverk.html', children: [] }
+    { slug: 'gods-hub', label: 'Gods &amp; Powerful Beings', href: '/setting/cosmology/gods.html', children: [
+      { slug: 'primordials',  label: 'The Primordials &middot; Prelife',   href: '/setting/cosmology/primordials.html',  children: [] },
+      { slug: 'gods',         label: 'The 13 Bound Gods &middot; Material', href: '/setting/cosmology/grand-gods.html',   children: [] },
+      { slug: 'layer-3-gods', label: 'Layer-3 Gods &middot; Postlife',     href: '/setting/cosmology/layer-3-gods.html', children: [
+        { slug: 'bolverk',    label: 'Bolverk &middot; the Megacity in Abyss', href: '/setting/cosmology/bolverk.html', children: [] }
       ]}
     ]},
-    { slug: 'gods-law',       label: 'The Gods&rsquo; Law',         href: '/setting/gods-law.html',       children: [] },
-    { slug: 'magic',          label: 'Magic &amp; Faith',           href: '/setting/magic.html',          children: [] },
-    { slug: 'pf2e-registrar', label: 'PF2e Registrar',              href: '/setting/pf2e-registrar.html', children: [] }
+    { slug: 'gods-law',       label: 'The Gods&rsquo; Law',         href: '/setting/cosmology/gods-law.html',       children: [] },
+    { slug: 'magic',          label: 'Magic &amp; Faith',           href: '/setting/cosmology/magic.html',          children: [] },
+    { slug: 'pf2e-registrar', label: 'PF2e Registrar',              href: '/setting/cosmology/pf2e-registrar.html', children: [] }
   ];
 
   // ── Factions section (collapsible) ────────────────────────────
