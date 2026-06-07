@@ -452,7 +452,9 @@ _ASSIGN_TEMPLATE = r"""/* ======================================================
     const a = game.actors.find(x => ids.has(x.folder?.id) && x.name === name);
     if (!a) { missing.push(name); continue; }
     const src = String(file).includes("/") ? file : (BASE + file);
-    await a.update({ img: src, "prototypeToken.texture.src": src, "prototypeToken.ring.enabled": true });
+    const upd = { "prototypeToken.texture.src": src, "prototypeToken.ring.enabled": __RING__ };
+    if (__SETIMG__) upd.img = src;   // baked-frame tokens keep the un-framed portrait as img
+    await a.update(upd);
     // pf2e reverts a direct texture.src update on an existing token, so re-skin
     // already-placed tokens by recreating them from the updated prototype,
     // preserving position/disposition.
@@ -474,15 +476,21 @@ _ASSIGN_TEMPLATE = r"""/* ======================================================
 """
 
 
-def make_assign_macro(folder, base, mapping):
+def make_assign_macro(folder, base, mapping, set_img=True, ring=True):
     """Macro that assigns uploaded images to existing actors in `folder` by name.
 
     mapping: {actor name -> image filename (joined to base) or full path}.
+    set_img : also set the actor portrait (img). False = token texture only
+              (for baked-frame tokens, keeping the un-framed portrait as img).
+    ring    : enable the Dynamic Token Ring. False for baked frames (border is
+              already in the image; the ring would double it).
     """
     return (_ASSIGN_TEMPLATE
             .replace("__FOLDER__", json.dumps(folder, ensure_ascii=False))
             .replace("__BASE__", json.dumps(base or "", ensure_ascii=False))
-            .replace("__MAP__", json.dumps(mapping, ensure_ascii=False, indent=2)))
+            .replace("__MAP__", json.dumps(mapping, ensure_ascii=False, indent=2))
+            .replace("__SETIMG__", "true" if set_img else "false")
+            .replace("__RING__", "true" if ring else "false"))
 
 
 def main():
@@ -511,6 +519,10 @@ def main():
     ai.add_argument("--base", default="", help="Path prefix joined to bare image filenames (the upload folder).")
     ai.add_argument("--map", action="append", default=[], metavar='Name=file',
                     help='"Actor Name=file.webp" (or a full path). Repeatable.')
+    ai.add_argument("--token-only", action="store_true",
+                    help="Set the token texture only, not the actor portrait (for baked-frame tokens).")
+    ai.add_argument("--no-ring", action="store_true",
+                    help="Do not enable the Dynamic Token Ring (use for baked-frame tokens).")
     ai.add_argument("--out", help="Write the macro here (default: stdout).")
 
     a = ap.parse_args()
@@ -522,7 +534,8 @@ def main():
             if not sep:
                 sys.exit(f"--map needs Name=file: {raw!r}")
             mapping[name.strip()] = file.strip()
-        macro = make_assign_macro(a.folder, a.base, mapping)
+        macro = make_assign_macro(a.folder, a.base, mapping,
+                                  set_img=not a.token_only, ring=not a.no_ring)
         if a.out:
             with open(a.out, "w", encoding="utf-8") as fh:
                 fh.write(macro)

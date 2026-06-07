@@ -152,11 +152,17 @@ per-faction / special-monster borders, bake a frame into the token image:
    `python bake_token.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.cut.png --out tokens/sable-rei.png`
    or `bake_token.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.cut.png`.
    (Opaque frames with no alpha fall back to an annulus mask; `--inner` tunes that band.)
-3. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign the framed
-   image to the **token only** with the ring **off** - keep the un-framed
-   portrait as the actor `img`. (assign-images sets both with the ring on; for
-   baked frames assign the token texture and set `prototypeToken.ring.enabled`
-   false so the border is not doubled.)
+3. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign with the
+   token-only / ring-off flags (keeps the un-framed portrait as the actor `img`,
+   no doubled ring):
+   `python foundry_macro.py assign-images --folder "<quest>" --base "<tokens-url>/" --token-only --no-ring --map "Sable Rei=sable-rei.png" --map ...`
+
+> **Caution on a live scene.** `assign-images` re-skins already-placed tokens by
+> **deleting and recreating** them (pf2e reverts a direct texture update), which
+> gives them new ids. On a scene with an **active combat**, recreating a
+> *combatant's* token orphans it from the tracker. Re-skin before a session, or
+> on a paused scene check the Combat Tracker afterward and re-add any boss whose
+> token you replaced.
 
 ## Assembling a spec from the leaf tools (Phase 7)
 
