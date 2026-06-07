@@ -5,7 +5,7 @@
    This layer carries its OWN menu and does NOT load site-nav.js: the
    world/setting menu and the campaigns menu are separate. A foot
    button crosses back to the setting; the setting nav has the mirror
-   button crossing here. (The GM /campaigns/ layer is deliberately NOT
+   button crossing here. (The GM /gm-notes/ layer is deliberately NOT
    linked from any player-facing menu.)
 
    Single source of truth for the campaigns menu is TREE below.
