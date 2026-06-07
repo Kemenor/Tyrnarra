@@ -23,19 +23,22 @@
   background: rgba(8, 10, 18, 0.96);
   backdrop-filter: blur(10px);
   border-right: 1px solid rgba(200, 168, 75, 0.18);
-  padding: 64px 20px 30px;
-  overflow-y: auto;
+  padding: 64px 20px 26px;
   z-index: 190;
   font-family: 'Cormorant Garamond', 'Crimson Pro', Georgia, serif;
+  display: flex; flex-direction: column; overflow: hidden;
   transform: translateX(-100%);
   transition: transform 0.28s ease;
 }
+/* scrollable middle — title above and foot below stay pinned */
+.nav-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; }
 .site-nav.open {
   transform: translateX(0);
   box-shadow: 4px 0 32px rgba(0, 0, 0, 0.6);
 }
 
 .site-nav-title {
+  flex-shrink: 0;
   display: block;
   font-family: 'Cormorant SC', 'Cinzel', serif;
   font-size: 1.2rem;
@@ -43,7 +46,7 @@
   color: var(--gold-bright, var(--gold, #c8a84b));
   text-decoration: none;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(200, 168, 75, 0.18);
 }
@@ -72,7 +75,8 @@
   border-bottom-color: var(--gold, #c8a84b);
 }
 .nav-foot {
-  margin-top: 28px; padding-top: 18px;
+  flex-shrink: 0;
+  margin-top: 16px; padding-top: 16px;
   border-top: 1px solid rgba(200, 168, 75, 0.18);
 }
 .nav-foot-link {

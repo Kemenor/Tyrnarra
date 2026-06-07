@@ -123,8 +123,12 @@
   title.setAttribute('href', '/player-campaigns/index.html');
   if (current === 'campaigns') title.classList.add('is-current');
   nav.appendChild(title);
-  nav.appendChild(el('div', 'pc-nav-sub', 'Player Companions'));
-  nav.appendChild(buildList(TREE, 1));
+
+  // Scrollable middle: title (above) and foot (below) stay pinned.
+  var scroll = el('div', 'pc-nav-scroll');
+  scroll.appendChild(el('div', 'pc-nav-sub', 'Player Companions'));
+  scroll.appendChild(buildList(TREE, 1));
+  nav.appendChild(scroll);
 
   var foot = el('div', 'pc-nav-foot');
   var back = el('a', null, '← The World · Setting');

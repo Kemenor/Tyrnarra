@@ -1,57 +1,85 @@
 /* ───────────────────────────────────────────────────────────────
    pc-nav.css: left-side menu for the PLAYER-facing campaign layer
    (/player-campaigns/). Off-canvas drawer + toggle + scrim, mirroring
-   the GM gm-nav pattern but themed to campaign.css (ink-slate ground,
-   warm gold accent). This layer carries its OWN menu and does NOT load
-   the shared site-nav: the world/setting menu and the campaigns menu
-   are separate, each crossing to the other via a foot button.
+   the GM gm-nav pattern. This layer carries its OWN menu and does NOT
+   load the shared site-nav: the world/setting menu and the campaigns
+   menu are separate, each crossing to the other via a foot button.
+
+   The menu has its own fixed IDENTITY palette (lamplit teal/cyan),
+   deliberately distinct from the setting menu's warm gold and the GM
+   menu's red, and intentionally INDEPENDENT of the per-campaign page
+   theme (--c-*): the menu colour signals "you're in the Campaigns
+   layer" the same way on every campaign's pages. Re-skinning happens in
+   the page body via theme.css, not in the menu chrome.
+
+   Layout: flex column. The title pins to the top, the foot (cross-over
+   button) pins to the bottom, and only the middle (.pc-nav-scroll)
+   scrolls, so the cross-over button is always visible without scrolling.
    Loaded by every page under /player-campaigns/.
    ─────────────────────────────────────────────────────────────── */
 
+:root {
+  --pc-accent: #4cb5ba;          /* lamplit teal — the layer signature */
+  --pc-accent-bright: #82dadf;
+  --pc-accent-dim: #2c6e72;
+  --pc-ground: rgba(12,16,18,0.97);
+  --pc-ink: #cfd6d4;
+  --pc-ink-bright: #eef4f2;
+  --pc-ink-dim: #7e8a88;
+  --pc-divider: rgba(120,170,170,0.15);
+  --pc-nav-title-font: 'Cinzel', serif;
+  --pc-nav-body-font: 'Crimson Pro', Georgia, serif;
+  --pc-nav-label-font: 'Josefin Sans', sans-serif;
+}
+
 .pc-nav-toggle {
   position: fixed; top: 3px; left: 10px; z-index: 210;
-  background: rgba(30,26,16,0.9);
-  color: var(--c-ink-bright, #f0ece0);
-  border: 1px solid var(--c-accent-dim, #7a6028);
-  font-family: var(--c-label-font, 'Josefin Sans', sans-serif);
+  background: rgba(14,30,32,0.9);
+  color: var(--pc-ink-bright);
+  border: 1px solid var(--pc-accent-dim);
+  font-family: var(--pc-nav-label-font);
   font-size: 0.56rem; letter-spacing: 0.2em;
   padding: 5px 11px; border-radius: 3px;
   cursor: pointer; text-transform: uppercase;
 }
-.pc-nav-toggle:hover { background: rgba(60,50,24,0.95); color: #fff; }
+.pc-nav-toggle:hover { background: rgba(22,48,52,0.95); color: #fff; border-color: var(--pc-accent); }
 
 .pc-nav {
   position: fixed; top: 0; left: 0; bottom: 0;
   width: 286px;
-  background: rgba(14,15,19,0.97);
+  background: var(--pc-ground);
   backdrop-filter: blur(10px);
-  border-right: 1px solid var(--c-accent-dim, rgba(200,160,74,0.35));
-  padding: 58px 18px 30px;
-  overflow-y: auto;
+  border-right: 1px solid var(--pc-accent-dim);
+  padding: 58px 18px 26px;
   z-index: 220;
-  font-family: var(--c-body-font, 'Crimson Pro', Georgia, serif);
+  font-family: var(--pc-nav-body-font);
+  display: flex; flex-direction: column; overflow: hidden;
   transform: translateX(-100%);
   transition: transform 0.28s ease;
 }
 .pc-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
 
 .pc-nav-title {
+  flex-shrink: 0;
   display: block;
-  font-family: var(--c-title-font, 'Cinzel', serif);
+  font-family: var(--pc-nav-title-font);
   font-size: 1rem; letter-spacing: 0.22em;
-  color: var(--c-accent, #c8a04a);
+  color: var(--pc-accent);
   text-decoration: none; text-align: center;
   text-transform: uppercase;
   margin-bottom: 6px; padding-bottom: 12px;
-  border-bottom: 1px solid var(--c-divider, rgba(200,190,160,0.12));
+  border-bottom: 1px solid var(--pc-divider);
 }
 .pc-nav-sub {
   display: block; text-align: center;
-  font-family: var(--c-label-font, 'Josefin Sans', sans-serif);
+  font-family: var(--pc-nav-label-font);
   font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--c-ink-dim, #8a8676);
+  color: var(--pc-ink-dim);
   margin: -2px 0 18px;
 }
+
+/* scrollable middle — title above and foot below stay pinned */
+.pc-nav-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; }
 
 .pc-nav-list, .pc-nav-sublist { list-style: none; padding: 0; margin: 0; }
 
@@ -59,7 +87,7 @@
 .pc-nav-row > a {
   flex: 1; min-width: 0; display: block;
   padding: 5px 10px;
-  color: var(--c-ink-dim, #8a8676);
+  color: var(--pc-ink-dim);
   text-decoration: none; border: none;
   font-size: 0.94rem;
   border-left: 2px solid transparent;
@@ -67,31 +95,31 @@
 }
 .pc-nav-row > span.pc-nav-grouplabel {
   flex: 1; padding: 7px 10px 3px;
-  font-family: var(--c-label-font, 'Josefin Sans', sans-serif);
+  font-family: var(--pc-nav-label-font);
   font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--c-accent, #c8a04a);
+  color: var(--pc-accent);
 }
 .pc-nav-row > a:hover {
-  color: var(--c-ink-bright, #f0ece0);
-  border-left-color: var(--c-accent-dim, #7a6028);
-  background: rgba(200,160,74,0.06);
+  color: var(--pc-ink-bright);
+  border-left-color: var(--pc-accent-dim);
+  background: rgba(76,181,186,0.08);
 }
 .pc-nav-row > a.is-current {
-  color: var(--c-ink-bright, #f0ece0);
-  border-left-color: var(--c-accent, #c8a04a);
-  background: rgba(200,160,74,0.1);
+  color: var(--pc-ink-bright);
+  border-left-color: var(--pc-accent);
+  background: rgba(76,181,186,0.12);
 }
 
 .pc-nav-expand {
   background: transparent; border: 0;
-  color: var(--c-accent-dim, #7a6028);
+  color: var(--pc-accent-dim);
   cursor: pointer; padding: 4px 10px;
   font-size: 0.8rem; font-family: inherit; line-height: 1;
   display: flex; align-items: center;
   transition: transform 0.22s ease, color 0.15s;
 }
-.pc-nav-expand:hover { color: var(--c-accent, #c8a04a); }
-.pc-nav-item.expanded > .pc-nav-row > .pc-nav-expand { transform: rotate(90deg); color: var(--c-accent, #c8a04a); }
+.pc-nav-expand:hover { color: var(--pc-accent); }
+.pc-nav-item.expanded > .pc-nav-row > .pc-nav-expand { transform: rotate(90deg); color: var(--pc-accent); }
 
 .pc-nav-sublist { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
 .pc-nav-item.expanded > .pc-nav-sublist { max-height: 1600px; }
@@ -101,16 +129,24 @@
 .pc-nav-item[data-depth="3"] > .pc-nav-row > a { padding-left: 36px; font-size: 0.86rem; opacity: 0.94; }
 
 .pc-nav-foot {
-  margin-top: 24px; padding-top: 16px;
-  border-top: 1px solid var(--c-divider, rgba(200,190,160,0.12));
+  flex-shrink: 0;
+  margin-top: 16px; padding-top: 16px;
+  border-top: 1px solid var(--pc-divider);
 }
 .pc-nav-foot a {
-  display: block; padding: 6px 10px;
-  color: var(--c-accent-dim, #7a6028); border: none;
-  font-family: var(--c-label-font, 'Josefin Sans', sans-serif);
+  display: block; text-align: center;
+  padding: 9px 10px;
+  color: var(--pc-accent); border: 1px solid var(--pc-accent-dim);
+  border-radius: 3px;
+  font-family: var(--pc-nav-label-font);
   font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.pc-nav-foot a:hover { color: var(--c-accent, #c8a04a); }
+.pc-nav-foot a:hover {
+  color: var(--pc-accent-bright);
+  border-color: var(--pc-accent);
+  background: rgba(76,181,186,0.08);
+}
 
 .pc-nav-scrim {
   position: fixed; inset: 0;

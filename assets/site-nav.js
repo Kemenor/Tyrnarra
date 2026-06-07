@@ -248,6 +248,9 @@
       '<aside class="site-nav" id="siteNav" aria-label="Site navigation">',
       '  <a href="/index.html" class="site-nav-title">Tyrnarra</a>',
 
+      // Scrollable middle: title (above) and foot (below) stay pinned.
+      '  <div class="nav-scroll">',
+
       '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/index.html" data-page="cosmology">World &amp; Cosmos</a>',
       '    <ul class="nav-list">',
@@ -283,6 +286,7 @@
       '    </ul>',
       '  </div>',
 
+      '  </div>', // close .nav-scroll
       '  <div class="nav-foot">',
       '    <a class="nav-foot-link" href="/player-campaigns/index.html">Player Campaigns &rarr;</a>',
       '  </div>',
