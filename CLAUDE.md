@@ -106,7 +106,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 | Sub-region / Kingdom | section in domain page, or own file when promoted | `Thousand Kingdom` lives inside `zuzental.html` until it earns its own file |
 | Settlement | folder under its domain | `/talan/domains/lautara/millhaven/millhaven.html` |
 | Sub-location of settlement | sibling file in settlement folder | `/talan/domains/lautara/millhaven/wayward-compass.html` |
-| Quest / GM table material | campaign layer (GM-only, NOT published) | `/campaigns/<campaign>/quest-<slug>.html` |
+| Quest / GM table material | campaign layer (GM-only, NOT published) | `/campaigns/<campaign>/quest-<slug>/quest-<slug>.html` (own folder, folder-named page) |
 | Faction (independent org) | `/talan/factions/` | `/talan/factions/adventurers-guild.html` |
 | God church | umbrella `god-churches.html`; promoted to its own file when content warrants | `/talan/factions/god-churches.html` |
 

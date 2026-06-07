@@ -5,7 +5,7 @@ description: Use this skill to take a Tyrnarra campaign quest, dungeon, or adven
 
 # quest-workflow
 
-Takes a session idea to a runnable, GM-only quest page in `/campaigns/<campaign>/quest-<slug>.html`, with PF2e-accurate encounters and treasure, a clickable battlemap, and the user's voice setting direction at every phase boundary.
+Takes a session idea to a runnable, GM-only quest page in `/campaigns/<campaign>/quest-<slug>/quest-<slug>.html` (each quest in its own folder, page folder-named like a settlement), with PF2e-accurate encounters and treasure, a clickable battlemap, and the user's voice setting direction at every phase boundary.
 
 This is the capstone that the `pf2e-encounter` and `pf2e-loot` leaf skills feed. It is **GM-side** work: unlike the player-facing workflows, stat blocks, read-aloud boxes, adventure hooks, and GM-tier truth are the *point* here, not leaks. Quest pages get no chronicler-voice constraint and no GM-Vetted badge. What still holds: canon-consistency with the player lore, no em-dashes, affirmative prose.
 
@@ -15,7 +15,7 @@ Read these. Skipping is the largest source of rework.
 
 1. **`CLAUDE.md`** (no em-dashes, affirmative prose, mortals-not-humans, the campaign-layer rule that quests live in `/campaigns/` and never in the player sidebar).
 2. **`docs/campaign-layer.md`** end-to-end: folder layout, chrome conventions (`gm.css`/`gm.js`/`gm-nav.css`/`gm-nav.js`), the clickable-battlemap contract, and the subscription-map rule (`maps/_full/` gitignored).
-3. **The reference implementation**: `campaigns/furrious-five/quest-venomqueen.html` (the Cavern Map battlemap pattern) and `campaigns/furrious-five/quest-veldtmark.html`. Read one end-to-end as the page template.
+3. **The reference implementation**: `campaigns/furrious-five/quest-venomqueen/quest-venomqueen.html` (the Cavern Map battlemap pattern) and `campaigns/furrious-five/quest-veldtmark/quest-veldtmark.html`. Read one end-to-end as the page template.
 4. **The player-facing canon for where the quest is set** — the relevant `talan/domains/<domain>/…` page(s) and `lore/geography/<region>.md`, so NPCs, place-names, gods, and neighbours are consistent. Quest material may reveal GM-tier truth, but it must not contradict committed canon.
 5. **Tooling check**: confirm `campaigns/tools/encounterBuilder/bestiary.db` and `items.db` exist; if not, run `python rebuild.py` from that directory once (first run clones the Foundry repo, a few minutes).
 
@@ -31,7 +31,7 @@ If anything you are about to design contradicts committed canon, the canon wins.
 | **3. Map + areas** | Claude searches CzePeku / Tom Cartos / Lost Atlas and surfaces **3-5 map options**; **user downloads** the pick; **user draws the areas** in `map-area-editor.html` and hands back the exported JSON | Human handoff. Skill waits for the area JSON. |
 | **4. Encounters** | Invoke **pf2e-encounter** per combat area (party params + area theme), grounded in real stat blocks. Surface the encounter set | Surface for tweaks before Phase 6 |
 | **5. Loot** | Invoke **pf2e-loot** (level hand-out, or per-area/milestone), place rewards in areas. Surface | Surface for tweaks before Phase 6 |
-| **6. Assemble quest HTML** | Build `quest-<slug>.html` per campaign-layer conventions + wire it in. Surface the content plan first, build on the go | Surface-before-HTML pause |
+| **6. Assemble quest HTML** | Build `quest-<slug>/quest-<slug>.html` (its own folder) per campaign-layer conventions + wire it in. Surface the content plan first, build on the go | Surface-before-HTML pause |
 | **7. Foundry export** (optional) | Assemble a spec from the encounter + loot results, run `foundry_macro.py` to emit the import macro, surface it for the user to paste-run in Foundry | Surface the macro + spec |
 
 Pause at each seam even under broad "work through it" framing. Reading is fine within a phase; writes (and the big HTML build) trigger the boundary.
@@ -104,9 +104,9 @@ For each combat area from the outline, **invoke the `pf2e-encounter` skill** wit
 
 ## Phase 6: Assemble the quest HTML (surface first, then build)
 
-Surface the content plan (sections, which areas, which secrets, the map tab) before writing the page. On the go-ahead, build `campaigns/<campaign>/quest-<slug>.html`.
+Surface the content plan (sections, which areas, which secrets, the map tab) before writing the page. On the go-ahead, build `campaigns/<campaign>/quest-<slug>/quest-<slug>.html` (the quest gets its own folder; the page is folder-named, like a settlement, and its Foundry artifacts live beside it).
 
-**Structure (model on `quest-venomqueen.html`):**
+**Structure (model on `quest-venomqueen/quest-venomqueen.html`):**
 
 - `<head>`: links `gm.css` + `gm-nav.css`, defers `gm-nav.js` + `gm.js`. `<body data-page="quest-<slug>">`.
 - **`.gm-banner`** ("⚔ GM Material · Behind the Screen · Not Player-Facing") + a link back to the campaign hub and the relevant player page.
@@ -118,7 +118,7 @@ Surface the content plan (sections, which areas, which secrets, the map tab) bef
 - **Rewards section**: the full haul with item levels, prices, and effects; where each piece is found.
 - **Hooks / aftermath**: where the story can go next.
 
-**Skill checks (weave them in).** A quest is not only fights. Seed Recall Knowledge, social, and exploration checks through the scenes and write each as **skill + DC + four degrees** (Critical Success / Success / Failure / Critical Failure; a nat 20 shifts up one step, a nat 1 down one). **Set the DC by the challenge, not the party level**: knowledge from the Simple-DC proficiency that would know it; NPC interaction from the NPC's level-based DC; a hazard from its own level; then layer difficulty (±2/±5/±10) and rarity (+2/+5/+10). Full tables, the degree rules, and worked examples live in `campaigns/gm-reference/dc-cheatsheet.md`. Reference implementation: the statue (Religion, DC 17) and factor (Diplomacy, DC 23) checks on `quest-the-narrows-job.html`.
+**Skill checks (weave them in).** A quest is not only fights. Seed Recall Knowledge, social, and exploration checks through the scenes and write each as **skill + DC + four degrees** (Critical Success / Success / Failure / Critical Failure; a nat 20 shifts up one step, a nat 1 down one). **Set the DC by the challenge, not the party level**: knowledge from the Simple-DC proficiency that would know it; NPC interaction from the NPC's level-based DC; a hazard from its own level; then layer difficulty (±2/±5/±10) and rarity (+2/+5/+10). Full tables, the degree rules, and worked examples live in `campaigns/gm-reference/dc-cheatsheet.md`. Reference implementation: the statue (Religion, DC 17) and factor (Diplomacy, DC 23) checks on `quest-the-narrows-job/quest-the-narrows-job.html`.
 
 **Conventions:** no em-dashes (en-dashes for numeric ranges only); affirmative prose; mortals not humans; all links absolute; canon-consistent names. GM-tier content is welcome and expected here.
 

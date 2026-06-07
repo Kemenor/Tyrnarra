@@ -53,9 +53,10 @@ campaigns/
     index.html                ← campaign hub (links the town notes, dossiers, quests)
     <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
     <location>-gm.html        ← location dossiers (floorplans + stat blocks + secrets + hooks)
-    quest-<slug>.html         ← adventure modules
-    quest-<slug>.foundry.json / .foundry.macro.js   ← Foundry import spec + generated macro
-    quest-<slug>.portraits.json / .token-map.json   ← NPC portrait prompts + actor→frame map
+    quest-<slug>/             ← per-quest folder (one per adventure module)
+      quest-<slug>.html       ← the module page (folder-named, like settlements)
+      quest-<slug>.foundry.json / .foundry.macro.js   ← Foundry import spec + generated macro
+      quest-<slug>.portraits.json / .token-map.json   ← NPC portrait prompts + actor→frame map
     assets/maps/              ← downsized web map copies (committed)
       _full/                  ← FULL-RES originals, gitignored — see "Map assets" below
     assets/portraits/         ← generated NPC portrait art (committed)
@@ -80,7 +81,7 @@ A quest page can carry a **map tab** where clicking an area expands its notes be
 - the map `<img>` + one `.map-hot` button per rectangle (percentage-positioned), and
 - `window.GM_MAP_AREAS = { key: { n: "1 · Title", t: "<p>notes html</p>" }, … }`.
 
-Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** `.map-hot` sharing that `data-area` key. Area outlines + numbers show by default; a `.map-toggle` button hides them. An area can span several rectangles (L / T / plus shapes): give each rectangle a `.map-hot` with the **same `data-area`** and put the `hot-num` badge on only the first. Reference implementation: the **Cavern Map** tab on `furrious-five/quest-venomqueen.html`.
+Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** `.map-hot` sharing that `data-area` key. Area outlines + numbers show by default; a `.map-toggle` button hides them. An area can span several rectangles (L / T / plus shapes): give each rectangle a `.map-hot` with the **same `data-area`** and put the `hot-num` badge on only the first. Reference implementation: the **Cavern Map** tab on `furrious-five/quest-venomqueen/quest-venomqueen.html`.
 
 ### Map Area Editor (`tools/map-area-editor.html`)
 
