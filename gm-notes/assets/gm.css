@@ -1,7 +1,7 @@
 /* ───────────────────────────────────────────────────────────────
    gm.css: shared chrome for the campaign / GM layer (NOT player-facing)
 
-   Loaded by every page under /campaigns/. Deliberately distinct from
+   Loaded by every page under /gm-notes/. Deliberately distinct from
    the player-facing style-a / style-b: cooler ink-slate ground, a red
    "behind the screen" accent, and a persistent GM banner, so there is
    never any doubt which side of the screen a page belongs to.

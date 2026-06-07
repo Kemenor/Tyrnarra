@@ -2,13 +2,13 @@
 
 A reusable catalogue of modular train-car battlemaps for any magirail scene on Talan. Source art is Tom Cartos's **"Steam Train" (ST)** modular set: 36 numbered cars, "Clean" (ungrimed) variants, roof tiles, plus prop overlays and seamless terrain backgrounds. Every car is a uniform **14 × 5 grid**, so consists line up tile-to-tile with no fiddling.
 
-This catalogue is the part that travels in the repo. The **art itself is subscription/licensed and local-only**: it lives (gitignored) under `campaigns/map-library/_full/trains/`, synced between machines via the user's private Proton Drive (restore steps in [`README.md`](README.md)). The descriptions below let Claude pick cars for a scene without the images being committed.
+This catalogue is the part that travels in the repo. The **art itself is subscription/licensed and local-only**: it lives (gitignored) under `gm-notes/map-library/_full/trains/`, synced between machines via the user's private Proton Drive (restore steps in [`README.md`](README.md)). The descriptions below let Claude pick cars for a scene without the images being committed.
 
 ## How to use it
 
 1. Tell Claude the scene (a freight robbery, a luxury express heist, a prison-train break). Claude reads this catalogue and proposes a **consist**: an ordered list of cars front-to-rear.
 2. **Claude runs `stitch.py`** to assemble the consist: it appends the cars over the chosen terrain background, writes the full-res composite (local in `_full/`) plus a downsized web copy, and builds the merged `*.areas.json`. Any car with a per-car area file in `areas/` (see below) has its interior hotspots offset into place; cars without one get a single whole-car area. Pass `--verify` for an overlay check.
-3. You load the composite in `campaigns/tools/map-area-editor.html`, draw one area per car, and export the JSON (the quest-workflow Phase 3 handoff).
+3. You load the composite in `gm-notes/tools/map-area-editor.html`, draw one area per car, and export the JSON (the quest-workflow Phase 3 handoff).
 
 **Variants.** Most common cars also ship a **Clean** version (less grime/blood; same layout) for a freshly-built or higher-class train. Four **roof tiles** (`TC_ST Roof 01–04`) give the over-the-top traversal layer for running fights. **Prop overlays** (`Luggage and Cargo/`: crates, barrels, parcels, suitcases) dress any car; the **seamless backgrounds** (five terrains, day/night) tile the ground under an assembled consist (see *Seamless backgrounds & track* below).
 

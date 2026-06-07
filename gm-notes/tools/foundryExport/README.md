@@ -19,7 +19,7 @@ This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../..
 
 ## Setup (dependencies + API keys)
 
-Run every command from this directory (`campaigns/tools/foundryExport/`), `python` (not `python3`) on Windows.
+Run every command from this directory (`gm-notes/tools/foundryExport/`), `python` (not `python3`) on Windows.
 
 **Dependencies** (one-time): `pip install fal-client requests pillow numpy`
 (encounters/loot also need the encounterBuilder DBs: `python ../encounterBuilder/rebuild.py`.)
@@ -42,11 +42,11 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 3. **Import macro** — `foundry_macro.py build --spec …` → paste-run in Foundry: foldered actors + loot, tokens placed on the open scene.
 4. **Portrait prompts** — author `<quest>.portraits.json` (per-NPC appearance + prompt).
 5. **Generate portraits** — `gen_portraits.py --model fal-ai/flux-2` → `<campaign>/assets/portraits/<slug>.webp`.
-6. **(optional) Faction frames** — extend the shared `campaigns/token-frames/faction-frames.json`; render on a **magenta field** with `gen_portraits.py` into `campaigns/token-frames/`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `<campaign>/assets/tokens/<slug>.png`.
+6. **(optional) Faction frames** — extend the shared `gm-notes/token-frames/faction-frames.json`; render on a **magenta field** with `gen_portraits.py` into `gm-notes/token-frames/`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `<campaign>/assets/tokens/<slug>.png`.
 7. **Upload** — `upload_forge.py --dir <campaign>/assets/portraits` (or `.../tokens`) `--target <campaign>/<quest>` → asset URLs.
 8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
 
-The frame library is **shared, world-wide**: prompts + art live in `campaigns/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`campaigns/<campaign>/<quest>.token-map.json`, beside the quest HTML) and the per-quest **portrait/token art** (`campaigns/<campaign>/assets/portraits/` + `assets/tokens/`, beside `assets/maps/`) stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
+The frame library is **shared, world-wide**: prompts + art live in `gm-notes/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`gm-notes/<campaign>/<quest>.token-map.json`, beside the quest HTML) and the per-quest **portrait/token art** (`gm-notes/<campaign>/assets/portraits/` + `assets/tokens/`, beside `assets/maps/`) stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
 
 ## Why a macro, not a REST push
 
@@ -169,8 +169,8 @@ Foundry's Dynamic Token Ring only gives a generic disposition ring. For custom
 per-faction / special-monster borders, bake a frame into the token image:
 
 1. **Frame art.** Frame prompts live in the shared library
-   `campaigns/token-frames/faction-frames.json` (same shape as the portraits
-   file); render with `gen_portraits.py` into `campaigns/token-frames/`. Render
+   `gm-notes/token-frames/faction-frames.json` (same shape as the portraits
+   file); render with `gen_portraits.py` into `gm-notes/token-frames/`. Render
    the ring on a **solid magenta field** (background AND centre) so only the ring
    is non-magenta. Frames are reusable across campaigns — add a new one once, map
    to it from any quest's token-map.

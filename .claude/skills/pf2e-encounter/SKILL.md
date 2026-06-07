@@ -1,19 +1,19 @@
 ---
 name: pf2e-encounter
-description: Build a PF2e (2e Remaster) combat encounter to an exact XP budget from a theme, using the local bestiary tool at campaigns/tools/encounterBuilder/. Trigger on "build an encounter", "encounter for the [room/dungeon]", "[trivial/low/moderate/severe/extreme] fight for N level-M PCs", "what monsters for [theme]", "give me a [boss/horde] of [creature type]", "search the bestiary for [theme]", or any request to staff a room/scene with thematically-matched creatures at a correct PF2e difficulty. Used standalone and as the encounter phase of the quest-workflow skill. The tool draws on ~5,900 real Foundry creatures (every bestiary + Monster Core + NPC gallery), so picks and budgets come from real data, not memory. Do not use for loot/treasure (that is pf2e-loot) or for non-PF2e systems.
+description: Build a PF2e (2e Remaster) combat encounter to an exact XP budget from a theme, using the local bestiary tool at gm-notes/tools/encounterBuilder/. Trigger on "build an encounter", "encounter for the [room/dungeon]", "[trivial/low/moderate/severe/extreme] fight for N level-M PCs", "what monsters for [theme]", "give me a [boss/horde] of [creature type]", "search the bestiary for [theme]", or any request to staff a room/scene with thematically-matched creatures at a correct PF2e difficulty. Used standalone and as the encounter phase of the quest-workflow skill. The tool draws on ~5,900 real Foundry creatures (every bestiary + Monster Core + NPC gallery), so picks and budgets come from real data, not memory. Do not use for loot/treasure (that is pf2e-loot) or for non-PF2e systems.
 ---
 
 # pf2e-encounter
 
-Drive `campaigns/tools/encounterBuilder/encounter.py` to assemble a PF2e encounter to a precise XP budget from a theme, then ground it in the real creature data. **The DB is a search index; the authoritative stat block is the creature's source JSON.** Never invent stats.
+Drive `gm-notes/tools/encounterBuilder/encounter.py` to assemble a PF2e encounter to a precise XP budget from a theme, then ground it in the real creature data. **The DB is a search index; the authoritative stat block is the creature's source JSON.** Never invent stats.
 
 ## Preconditions
 
 The tool runs fully offline against two SQLite snapshots that are **gitignored** (rebuildable), so on a fresh checkout they may be absent.
 
-1. Check `campaigns/tools/encounterBuilder/bestiary.db` exists.
-2. If missing, run `python rebuild.py` from `campaigns/tools/encounterBuilder/` once. First run clones the Foundry pf2e repo sparsely (a few minutes, network); later runs are instant and offline.
-3. Run all commands from the `campaigns/tools/encounterBuilder/` directory (`python encounter.py …`). Windows: PowerShell or the Bash tool, `python` (not `python3`).
+1. Check `gm-notes/tools/encounterBuilder/bestiary.db` exists.
+2. If missing, run `python rebuild.py` from `gm-notes/tools/encounterBuilder/` once. First run clones the Foundry pf2e repo sparsely (a few minutes, network); later runs are instant and offline.
+3. Run all commands from the `gm-notes/tools/encounterBuilder/` directory (`python encounter.py …`). Windows: PowerShell or the Bash tool, `python` (not `python3`).
 
 ## The math (so you can explain it)
 
@@ -44,7 +44,7 @@ Budgets are GM Core, exact. Party of 4: trivial 40 / low 60 / moderate 80 / seve
 | Machine-readable | `--json` (search and build both) |
 | Reproducible build | `--seed K` |
 
-Full reference: `campaigns/tools/encounterBuilder/README.md`.
+Full reference: `gm-notes/tools/encounterBuilder/README.md`.
 
 ## Rules
 

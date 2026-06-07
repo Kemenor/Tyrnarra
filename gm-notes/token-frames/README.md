@@ -14,7 +14,7 @@ live-combat caution are documented in
 - **`<slug>.cut.png`** — the chroma-keyed transparent ring `bake_token.py bake` composites.
 
 **Using a frame on a quest:** map each NPC actor to a frame `slug` in that quest's
-`campaigns/<campaign>/<quest>.token-map.json`, then
+`gm-notes/<campaign>/<quest>.token-map.json`, then
 `bake_token.py batch --frames ../../token-frames …`. Adding a new frame = one new
 prompt here + render + prep; every campaign can then map to it.
 

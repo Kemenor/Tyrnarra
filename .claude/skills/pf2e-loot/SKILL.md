@@ -1,18 +1,18 @@
 ---
 name: pf2e-loot
-description: Assemble a PF2e (2e Remaster) treasure haul, either the official Party-Treasure-by-Level hand-out or an arbitrary gp value, themed and priced from real Foundry item data, using the local tool at campaigns/tools/encounterBuilder/loot.py. Trigger on "assign loot", "treasure for [the dungeon/level/party]", "what loot for N level-M PCs", "a [theme] haul", "reward for this quest", "search the items/equipment for [theme]", or any request to give out level-appropriate, themed treasure (permanent items, consumables, coins). Used standalone and as the loot phase of the quest-workflow skill. Draws on ~5,600 real items with real level, price, type, traits. Do not use for building combat encounters (that is pf2e-encounter).
+description: Assemble a PF2e (2e Remaster) treasure haul, either the official Party-Treasure-by-Level hand-out or an arbitrary gp value, themed and priced from real Foundry item data, using the local tool at gm-notes/tools/encounterBuilder/loot.py. Trigger on "assign loot", "treasure for [the dungeon/level/party]", "what loot for N level-M PCs", "a [theme] haul", "reward for this quest", "search the items/equipment for [theme]", or any request to give out level-appropriate, themed treasure (permanent items, consumables, coins). Used standalone and as the loot phase of the quest-workflow skill. Draws on ~5,600 real items with real level, price, type, traits. Do not use for building combat encounters (that is pf2e-encounter).
 ---
 
 # pf2e-loot
 
-Drive `campaigns/tools/encounterBuilder/loot.py` to assemble a level-appropriate, themed treasure haul from real item data. The treasure tables are verified column-for-column against [AoN Rules 2656](https://2e.aonprd.com/Rules.aspx?ID=2656). **The DB indexes items; read an item's source JSON for its full rules/activation when writing it up.**
+Drive `gm-notes/tools/encounterBuilder/loot.py` to assemble a level-appropriate, themed treasure haul from real item data. The treasure tables are verified column-for-column against [AoN Rules 2656](https://2e.aonprd.com/Rules.aspx?ID=2656). **The DB indexes items; read an item's source JSON for its full rules/activation when writing it up.**
 
 ## Preconditions
 
 Same as pf2e-encounter: the snapshots are gitignored/rebuildable.
 
-1. Check `campaigns/tools/encounterBuilder/items.db` exists.
-2. If missing, run `python rebuild.py` from `campaigns/tools/encounterBuilder/` once (it builds both `bestiary.db` and `items.db`).
+1. Check `gm-notes/tools/encounterBuilder/items.db` exists.
+2. If missing, run `python rebuild.py` from `gm-notes/tools/encounterBuilder/` once (it builds both `bestiary.db` and `items.db`).
 3. Run from the tool directory (`python loot.py …`), `python` not `python3`.
 
 ## Two modes

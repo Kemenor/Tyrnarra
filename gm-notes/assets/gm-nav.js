@@ -1,6 +1,6 @@
 /* ───────────────────────────────────────────────────────────────
    gm-nav.js: left-side menu for the campaign / GM layer.
-   Loaded with `defer` by every page under /campaigns/.
+   Loaded with `defer` by every page under /gm-notes/.
 
    Single source of truth for the GM menu is TREE below.
    Each page declares its location with <body data-page="<slug>">;
@@ -43,19 +43,19 @@
   })();
 
   var TREE = [
-    { slug: 'furrious-five', label: 'The Furrious Five', href: '/campaigns/furrious-five/index.html', children: [
-      { slug: 'millhaven-gm', label: 'Millhaven · GM Notes', href: '/campaigns/furrious-five/millhaven-gm.html', children: [
-        { slug: 'wayward-compass-gm', label: 'The Wayward Compass', href: '/campaigns/furrious-five/wayward-compass-gm.html', children: [] },
-        { slug: 'low-span-gm',        label: 'The Low Span',        href: '/campaigns/furrious-five/low-span-gm.html',       children: [] }
+    { slug: 'furrious-five', label: 'The Furrious Five', href: '/gm-notes/furrious-five/index.html', children: [
+      { slug: 'millhaven-gm', label: 'Millhaven · GM Notes', href: '/gm-notes/furrious-five/millhaven-gm.html', children: [
+        { slug: 'wayward-compass-gm', label: 'The Wayward Compass', href: '/gm-notes/furrious-five/wayward-compass-gm.html', children: [] },
+        { slug: 'low-span-gm',        label: 'The Low Span',        href: '/gm-notes/furrious-five/low-span-gm.html',       children: [] }
       ]},
       { slug: 'quests', label: 'Quests', href: null, children: [
-        { slug: 'quest-veldtmark',       label: 'The Veldtmark Invitation', href: '/campaigns/furrious-five/quest-veldtmark/quest-veldtmark.html',             children: [] },
-        { slug: 'quest-venomqueen',      label: 'Below the Quiet Docks',    href: '/campaigns/furrious-five/quest-venomqueen/quest-venomqueen.html',           children: [] },
-        { slug: 'quest-the-narrows-job', label: 'The Narrows Job',          href: '/campaigns/furrious-five/quest-the-narrows-job/quest-the-narrows-job.html', children: [] }
+        { slug: 'quest-veldtmark',       label: 'The Veldtmark Invitation', href: '/gm-notes/furrious-five/quest-veldtmark/quest-veldtmark.html',             children: [] },
+        { slug: 'quest-venomqueen',      label: 'Below the Quiet Docks',    href: '/gm-notes/furrious-five/quest-venomqueen/quest-venomqueen.html',           children: [] },
+        { slug: 'quest-the-narrows-job', label: 'The Narrows Job',          href: '/gm-notes/furrious-five/quest-the-narrows-job/quest-the-narrows-job.html', children: [] }
       ]}
     ]},
     { slug: 'tools', label: 'Tools', href: null, children: [
-      { slug: 'map-area-editor', label: 'Map Area Editor', href: '/campaigns/tools/map-area-editor.html', children: [] }
+      { slug: 'map-area-editor', label: 'Map Area Editor', href: '/gm-notes/tools/map-area-editor.html', children: [] }
     ]}
   ];
 
@@ -123,7 +123,7 @@
   // ── Drawer ──
   var nav = el('nav', 'gm-nav');
   var title = el('a', 'gm-nav-title', 'Campaign Layer');
-  title.setAttribute('href', '/campaigns/index.html');
+  title.setAttribute('href', '/gm-notes/index.html');
   if (current === 'campaigns-home') title.classList.add('is-current');
   nav.appendChild(title);
 

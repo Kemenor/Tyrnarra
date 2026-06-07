@@ -169,7 +169,7 @@
 
   // The player-facing Campaigns layer (/player-campaigns/) carries its
   // OWN menu (pc-nav.js) and is reached via the foot button below, so it
-  // is NOT a section in this setting menu. The GM-only /campaigns/ tree
+  // is NOT a section in this setting menu. The GM-only /gm-notes/ tree
   // is likewise deliberately absent from any player-facing nav.
 
   // ── Walk the tree for the current slug, return ancestor path ──

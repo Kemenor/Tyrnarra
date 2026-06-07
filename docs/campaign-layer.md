@@ -1,10 +1,10 @@
-# The Campaign Layer (`/campaigns/`)
+# The Campaign Layer (`/gm-notes/`)
 
-GM / table material for running actual campaigns. **Everything under `/campaigns/` is GM-only.** It lives in the repo but is deliberately **unlinked from the player sidebar** (`assets/site-nav.js` never references it), so it does not appear in normal player navigation. It is still served by GitHub Pages at its (unguessed) URLs; treat it as behind the screen, not as secret-from-the-internet.
+GM / table material for running actual campaigns. **Everything under `/gm-notes/` is GM-only.** It lives in the repo but is deliberately **unlinked from the player sidebar** (`assets/site-nav.js` never references it), so it does not appear in normal player navigation. It is still served by GitHub Pages at its (unguessed) URLs; treat it as behind the screen, not as secret-from-the-internet.
 
 This is the home for the things CLAUDE.md keeps *out* of the published site: quests, stat blocks, read-aloud boxes, adventure hooks, hidden-location detail, and GM-tier mechanisms. The published worldbuilding pages stay chronicler-tier and player-facing; their GM truths live in `⚿` boxes; the *campaign* truths and table-prep live here.
 
-The **Furrious Five** layer (`/campaigns/furrious-five/`) is the reference implementation.
+The **Furrious Five** layer (`/gm-notes/furrious-five/`) is the reference implementation.
 
 ---
 
@@ -12,14 +12,14 @@ The **Furrious Five** layer (`/campaigns/furrious-five/`) is the reference imple
 
 There are **two** campaign trees, and they are different sides of the screen:
 
-- **`/campaigns/`** (this document) — **GM-only**, unlinked from the player sidebar, GM chrome (`gm.css` / `gm-nav.*`). Stat blocks, secrets, read-aloud, hooks, the floors below the floors.
-- **`/player-campaigns/`** — **player-facing and published**, linked in the sidebar under its own **Campaigns** section. It is the players' companion to a running campaign: town/location handouts and an interactive **quest board**, with all GM-tier content stripped. It mirrors selected `/campaigns/` material down to the player tier and cross-links out to the canonical worldbuilding pages for the world layer.
+- **`/gm-notes/`** (this document) — **GM-only**, unlinked from the player sidebar, GM chrome (`gm.css` / `gm-nav.*`). Stat blocks, secrets, read-aloud, hooks, the floors below the floors.
+- **`/player-campaigns/`** — **player-facing and published**, linked in the sidebar under its own **Campaigns** section. It is the players' companion to a running campaign: town/location handouts and an interactive **quest board**, with all GM-tier content stripped. It mirrors selected `/gm-notes/` material down to the player tier and cross-links out to the canonical worldbuilding pages for the world layer.
 
 The player layer has its **own themeable chrome**, deliberately rooted in the GM look rather than the worldbuilding Style A/B:
 
 - **`/player-campaigns/assets/campaign.css`** — shared base. Every visual token is a CSS variable with a default. Components: `.c-header`, `.section-heading`, the quest board (`.board` / `.quest-pin` / `.quest-detail`), the clickable room map (`.floor-stack` / `.room-cell` / `#roomDetail`), `.person-card`, `.reveal`, `.link-card`, `.callout`.
 - **`/player-campaigns/assets/campaign.js`** — delegated interactions (no inline handlers): quest-board expand (`.quest-head` ↔ `.quest-detail`, `aria-expanded` tracked), the room map (`.room-cell[data-room]` renders `window.CAMPAIGN_ROOMS[key]` into `#roomDetail`; cells without `data-room` are inert, e.g. `.room-cell.locked`), and `.reveal` rumour toggles.
-- **`/player-campaigns/assets/pc-nav.css` / `pc-nav.js`** — the layer's **own off-canvas menu**, separate from the world `/assets/site-nav.*` (mirrors the GM `gm-nav.*` pattern: same drawer/toggle/scrim machinery, themed to `campaign.css`). The world/setting menu and the campaigns menu are not shared; each crosses to the other with a foot button (`site-nav`'s *Player Campaigns →* ↔ `pc-nav`'s *← The World · Setting*). Single source of truth for the campaigns menu is the `TREE` in `pc-nav.js`; slugs must match each page's `data-page`. The GM `/campaigns/` tree is linked from neither.
+- **`/player-campaigns/assets/pc-nav.css` / `pc-nav.js`** — the layer's **own off-canvas menu**, separate from the world `/assets/site-nav.*` (mirrors the GM `gm-nav.*` pattern: same drawer/toggle/scrim machinery, themed to `campaign.css`). The world/setting menu and the campaigns menu are not shared; each crosses to the other with a foot button (`site-nav`'s *Player Campaigns →* ↔ `pc-nav`'s *← The World · Setting*). Single source of truth for the campaigns menu is the `TREE` in `pc-nav.js`; slugs must match each page's `data-page`. The GM `/gm-notes/` tree is linked from neither.
 - **Per-campaign theme** — one file, e.g. `/player-campaigns/furrious-five/theme.css`, loaded *after* `campaign.css`, overriding only the `--c-*` tokens (palette, accents, fonts, background glow). **One theme file = one campaign's entire look.** A new campaign drops its own `theme.css` beside its pages and gets a distinct skin on the same machinery. Pages load the layer's own menu (`/player-campaigns/assets/pc-nav.*`), not the world sidebar; only the page body is themed.
 
 The room map is the player analogue of the GM floorplan: the GM `wayward-compass-gm.html` carries the full `GM_ROOMS` floor-stack including restricted rooms; the player `wayward-compass.html` carries a `CAMPAIGN_ROOMS` subset (accessible rooms only, player-safe text) with the off-limits doors shown as greyed `.locked` cells.
@@ -29,7 +29,7 @@ The room map is the player analogue of the GM floorplan: the GM `wayward-compass
 ## Folder layout
 
 ```
-campaigns/
+gm-notes/
   index.html                  ← base landing: what the layer is + a card per campaign
   assets/                     ← shared GM chrome (loaded by every campaign page)
     gm.css                    ← GM stylesheet ("behind the screen": ink-slate ground, red GM accent)
@@ -99,17 +99,17 @@ compendiums, so it redistributes no Paizo data and always matches the installed
 system version; it needs no module, relay, or API key and works on Forge-hosted
 worlds. It is the **Phase 7** step of the `quest-workflow` skill and a standalone
 tool you can run against any quest. Verified live on Foundry VTT 14.363 / pf2e
-8.2.0. Full reference: [`campaigns/tools/foundryExport/README.md`](../campaigns/tools/foundryExport/README.md).
+8.2.0. Full reference: [`gm-notes/tools/foundryExport/README.md`](../gm-notes/tools/foundryExport/README.md).
 
 ## Map assets (subscription battlemaps stay local)
 
 Subscription battlemaps (the user's CzePeku / Tom Cartos subscriptions, etc.) **must not be published**. Convention:
-- Full-resolution originals (and any full downloaded pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/assets/maps/_full/`**, which is **gitignored** (`.gitignore`: `campaigns/**/assets/maps/_full/`). They stay on local disk only and never reach GitHub.
+- Full-resolution originals (and any full downloaded pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/assets/maps/_full/`**, which is **gitignored** (`.gitignore`: `gm-notes/**/assets/maps/_full/`). They stay on local disk only and never reach GitHub.
 - The user supplies the full-res; **Claude generates the downsized ~800px web copy** (degraded reference, useless at table resolution) that sits directly in `maps/` and *is* committed; the page references that. ImageMagick does it in one line: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (the committed maps are 800px-wide). Any subscription art a user drops loose in `maps/` should be moved into `_full/` before staging.
 
 If you ever find a full-res original tracked outside `_full/`, untrack it (`git rm --cached`) and, for true removal, scrub it from history — subscription art on a public repo is the thing to avoid.
 
-**Reusable map catalogues** live in `campaigns/map-library/` (e.g. `magirail-stock.md`, the modular train-car library). They are committed *text* descriptions of local-only art, so Claude can pick cars for a scene and stitch them into a consist (cars append on the uniform 14 × 5 grid; the composite downsizes to the committed web copy) without the source images ever being published. On a fresh clone the `_full/` art is restored from the user's private Proton Drive sync, not from git; see [`campaigns/map-library/README.md`](../campaigns/map-library/README.md).
+**Reusable map catalogues** live in `gm-notes/map-library/` (e.g. `magirail-stock.md`, the modular train-car library). They are committed *text* descriptions of local-only art, so Claude can pick cars for a scene and stitch them into a consist (cars append on the uniform 14 × 5 grid; the composite downsizes to the committed web copy) without the source images ever being published. On a fresh clone the `_full/` art is restored from the user's private Proton Drive sync, not from git; see [`gm-notes/map-library/README.md`](../gm-notes/map-library/README.md).
 
 ---
 

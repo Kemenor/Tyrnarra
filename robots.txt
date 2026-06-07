@@ -1,5 +1,5 @@
 # Tyrnarra — https://tyrnarra.kunkel.swiss/
-# GM / campaign material under /campaigns/ is for the table, not for players or crawlers.
+# GM / campaign material under /gm-notes/ is for the table, not for players or crawlers.
 
 User-agent: *
-Disallow: /campaigns/
+Disallow: /gm-notes/

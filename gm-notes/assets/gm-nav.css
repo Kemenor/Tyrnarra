@@ -2,7 +2,7 @@
    gm-nav.css: left-side menu for the campaign / GM layer.
    Off-canvas drawer + toggle + scrim, mirroring the player site-nav
    pattern but themed to gm.css (ink-slate ground, red GM accent).
-   Loaded by every page under /campaigns/.
+   Loaded by every page under /gm-notes/.
    ─────────────────────────────────────────────────────────────── */
 
 .gm-nav-toggle {

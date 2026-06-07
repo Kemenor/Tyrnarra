@@ -1,6 +1,6 @@
 /* ───────────────────────────────────────────────────────────────
    gm.js: shared interactions for the campaign / GM layer.
-   Loaded with `defer` by every page under /campaigns/.
+   Loaded with `defer` by every page under /gm-notes/.
 
    All behaviour is wired by delegation on click, so pages only need
    the right classes / data-attributes (no inline onclick required):
