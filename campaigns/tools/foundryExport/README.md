@@ -46,7 +46,7 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 7. **Upload** — `upload_forge.py --dir portraits` (or `tokens`) `--target <campaign>/<quest>` → asset URLs.
 8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
 
-Frame prompts live in `campaigns/<campaign>/faction-frames.json` (the reusable library); the per-quest actor→frame map in `campaigns/<campaign>/<quest>.token-map.json`. Generated images (`portraits/ frames/ tokens/`) and the key files are **gitignored**; the prompts, maps, and specs are committed.
+Frame prompts live in `campaigns/<campaign>/faction-frames.json` (the reusable library); the per-quest actor→frame map in `campaigns/<campaign>/<quest>.token-map.json`. Generated images (`portraits/ frames/ tokens/`) **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
 
 ## Why a macro, not a REST push
 
