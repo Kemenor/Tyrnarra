@@ -222,11 +222,12 @@ a:hover { color: var(--c-ink-bright); border-bottom-color: var(--c-accent); }
    links OUT to the canonical /setting/ worldbuilding only. Links to sibling
    player pages never go here; they live above as .card-stack link-cards.
    One foot panel, one name, worldbuilding-only. See docs/campaign-layer.md. */
-.see-also { max-width: 840px; margin: 30px auto 0; border-top: 1px solid var(--c-divider); padding-top: 24px; }
-.see-also h3 { font-family: var(--c-title-font); font-size: 1.15rem; color: var(--c-accent); margin-bottom: 14px; }
+.see-also { max-width: 840px; margin: 38px auto 0; background: rgba(255,255,255,0.03); border: 1px solid var(--c-divider); border-left: 3px solid var(--c-accent2); border-radius: 0 7px 7px 0; padding: 20px 26px; }
+.see-also h3 { font-family: var(--c-label-font); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-accent2); margin-bottom: 12px; }
 .see-also ul { list-style: none; }
-.see-also li { padding: 8px 0; border-bottom: 1px solid var(--c-divider); line-height: 1.55; font-size: 0.98rem; }
-.see-also li:last-child { border-bottom: none; }
+.see-also li { padding: 9px 0; border-bottom: 1px solid var(--c-divider); line-height: 1.55; font-size: 0.96rem; }
+.see-also li:first-child { padding-top: 0; }
+.see-also li:last-child { border-bottom: none; padding-bottom: 0; }
 
 .c-footer { text-align: center; font-family: var(--c-label-font); font-size: 0.52rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--c-ink-dim); opacity: 0.6; margin-top: 54px; padding-top: 22px; border-top: 1px solid var(--c-divider); }
 
