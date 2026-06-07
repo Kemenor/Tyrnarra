@@ -27,8 +27,8 @@ cat <<'EOF'
 
 EOF
 
-# --yes:    skip the "OK to install?" prompt on first run
-# --port:   match the GitHub Pages local convention
-# --ignore: skip lore/ markdown and git internals to avoid
-#           reloads on notes/commits
-exec npx --yes live-server --port=8000 --ignore="lore/**,.git/**,outputs/**"
+# --yes:     skip the "OK to install?" prompt on first run
+# --port:    match the GitHub Pages local convention
+# published: serve the deploy folder as the site root, so local URLs
+#            (/setting/..., /gm-notes/..., the / redirect) match production
+exec npx --yes live-server published --port=8000

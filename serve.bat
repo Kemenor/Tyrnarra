@@ -24,8 +24,8 @@ echo  │   Ctrl+C to stop                            │
 echo  ╰─────────────────────────────────────────────╯
 echo.
 
-REM --yes:    skip the "OK to install?" prompt on first run
-REM --port:   match the GitHub Pages local convention
-REM --ignore: skip lore/ markdown and git internals to avoid
-REM           reloads on notes/commits
-npx --yes live-server --port=8008 --ignore="lore/**,.git/**,outputs/**"
+REM --yes:     skip the "OK to install?" prompt on first run
+REM --port:    match the GitHub Pages local convention
+REM published: serve the deploy folder as the site root, so local URLs
+REM            (/setting/..., /gm-notes/..., the / redirect) match production
+npx --yes live-server published --port=8008
