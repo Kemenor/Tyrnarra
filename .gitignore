@@ -9,30 +9,32 @@
 
 # Full-resolution dungeon / battlemap sources (the user's CzePeku / Tom Cartos
 # subscription downloads and other licensed assets) are kept LOCAL ONLY and never
-# published to GitHub Pages. Drop full-res originals in a `_full/` subfolder:
-# under a campaign's maps/ for campaign-specific art, or under the shared
-# map-library/ for reusable libraries. Only the downsized web copies
-# (and the committed text catalogues) reach GitHub. The `.gitkeep` keeps each
-# `_full/` present on a fresh clone.
+# published. Drop full-res originals in a `_full/` subfolder: under a campaign's
+# maps/ (published/gm-notes/...) for campaign-specific art, or under the shared
+# map-library/ (now the private tools/map-library/) for reusable libraries. Only
+# the downsized web copies (and committed text catalogues) reach GitHub. The
+# `.gitkeep` keeps each `_full/` present on a fresh clone.
 published/gm-notes/**/_full/*
 !published/gm-notes/**/_full/.gitkeep
+tools/**/_full/*
+!tools/**/_full/.gitkeep
 
 # pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
 # and the rebuildable SQLite snapshot are local-only build artifacts. Run
 # `python rebuild.py` to regenerate both. Homebrew creature JSON IS committed.
-published/gm-notes/tools/encounterBuilder/_sources/
-published/gm-notes/tools/encounterBuilder/bestiary.db
-published/gm-notes/tools/encounterBuilder/items.db
-published/gm-notes/tools/encounterBuilder/__pycache__/
+tools/encounterBuilder/_sources/
+tools/encounterBuilder/bestiary.db
+tools/encounterBuilder/items.db
+tools/encounterBuilder/__pycache__/
 
 # Python bytecode caches anywhere under the GM tools.
 __pycache__/
 *.pyc
 
 # API keys / secrets for the GM tools (fal.ai, Forge, etc.) - LOCAL ONLY, never committed.
-published/gm-notes/tools/**/*_key.txt
+tools/**/*_key.txt
 **/*.secret
-published/gm-notes/tools/**/.env
+tools/**/.env
 
 # Generated image-gen output (the user's own fal.ai art) IS committed for
 # portability: portraits/, frames/, and the baked tokens/ travel with the repo
@@ -40,5 +42,6 @@ published/gm-notes/tools/**/.env
 # exact approved cast). Only genuine scratch is ignored: Forge URL maps, variant
 # test-bakes, and re-upload temp dirs. (Keys and __pycache__ are ignored above.)
 published/gm-notes/**/forge_urls.json
+tools/**/forge_urls.json
 published/gm-notes/**/tokens/_variant-*
 published/gm-notes/**/tokens/_reup/

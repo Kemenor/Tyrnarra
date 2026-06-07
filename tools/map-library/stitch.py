@@ -12,9 +12,9 @@ Image stitching uses ImageMagick (`magick`); the area math is pure Python.
 
 Run from the repo root, e.g.:
 
-  python gm-notes/map-library/stitch.py \
+  python tools/map-library/stitch.py \
     --consist "01 Engine,28 Cargo Coal,24 Military Transport,14 Steerage,23 Cannons,03 Crew Quarters" \
-    --terrain Rock --out narrows-job-train --maps gm-notes/furrious-five/assets/maps
+    --terrain Rock --out narrows-job-train --maps published/gm-notes/furrious-five/assets/maps
 
 Outputs: <maps>/_full/<out>.webp (full-res, gitignored), <maps>/<out>.webp
 (downsized web copy), and <maps>/<out>.areas.json. Pass --verify to also write
@@ -140,7 +140,7 @@ def main():
     ap.add_argument("--terrain", default="Rock")
     ap.add_argument("--out", required=True)
     ap.add_argument("--maps", required=True,
-                    help="campaign maps dir, e.g. gm-notes/furrious-five/assets/maps")
+                    help="campaign maps dir, e.g. published/gm-notes/furrious-five/assets/maps")
     ap.add_argument("--web-width", type=int, default=3000)
     ap.add_argument("--no-image", action="store_true", help="only (re)generate the areas JSON")
     ap.add_argument("--verify", action="store_true", help="also write _verify.png with areas drawn")
