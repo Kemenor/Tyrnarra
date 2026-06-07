@@ -43,7 +43,6 @@ magenta, nothing else.*
 | `crypt` | monster / theme | undead & funerary — gravestone, bone, ghost-light |
 | `brood` | monster | spiders — chitin, web, violet egg-glow |
 | `sable-rei` | faction | the Sable-rei (Millhaven & *Below the Quiet Docks*) — fox + theatrical-mask |
-| `lautara-tilework` | parked variant | unused Lautara alt — Samarkand tilework (art kept; not in faction-frames.json) |
 
 ## Authoring a new frame
 
