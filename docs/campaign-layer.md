@@ -8,6 +8,23 @@ The **Furrious Five** layer (`/campaigns/furrious-five/`) is the reference imple
 
 ---
 
+## Two campaign layers: GM and player
+
+There are **two** campaign trees, and they are different sides of the screen:
+
+- **`/campaigns/`** (this document) — **GM-only**, unlinked from the player sidebar, GM chrome (`gm.css` / `gm-nav.*`). Stat blocks, secrets, read-aloud, hooks, the floors below the floors.
+- **`/player-campaigns/`** — **player-facing and published**, linked in the sidebar under its own **Campaigns** section. It is the players' companion to a running campaign: town/location handouts and an interactive **quest board**, with all GM-tier content stripped. It mirrors selected `/campaigns/` material down to the player tier and cross-links out to the canonical worldbuilding pages for the world layer.
+
+The player layer has its **own themeable chrome**, deliberately rooted in the GM look rather than the worldbuilding Style A/B:
+
+- **`/player-campaigns/assets/campaign.css`** — shared base. Every visual token is a CSS variable with a default. Components: `.c-header`, `.section-heading`, the quest board (`.board` / `.quest-pin` / `.quest-detail`), the clickable room map (`.floor-stack` / `.room-cell` / `#roomDetail`), `.person-card`, `.reveal`, `.link-card`, `.callout`.
+- **`/player-campaigns/assets/campaign.js`** — delegated interactions (no inline handlers): quest-board expand (`.quest-head` ↔ `.quest-detail`, `aria-expanded` tracked), the room map (`.room-cell[data-room]` renders `window.CAMPAIGN_ROOMS[key]` into `#roomDetail`; cells without `data-room` are inert, e.g. `.room-cell.locked`), and `.reveal` rumour toggles.
+- **Per-campaign theme** — one file, e.g. `/player-campaigns/furrious-five/theme.css`, loaded *after* `campaign.css`, overriding only the `--c-*` tokens (palette, accents, fonts, background glow). **One theme file = one campaign's entire look.** A new campaign drops its own `theme.css` beside its pages and gets a distinct skin on the same machinery. Pages still load the player sidebar (`/assets/site-nav.*`); only the page body is themed.
+
+The room map is the player analogue of the GM floorplan: the GM `wayward-compass-gm.html` carries the full `GM_ROOMS` floor-stack including restricted rooms; the player `wayward-compass.html` carries a `CAMPAIGN_ROOMS` subset (accessible rooms only, player-safe text) with the off-limits doors shown as greyed `.locked` cells.
+
+---
+
 ## Folder layout
 
 ```

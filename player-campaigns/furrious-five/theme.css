@@ -1,0 +1,32 @@
+/* ───────────────────────────────────────────────────────────────
+   theme.css — The Furrious Five
+   The campaign's visual identity. Loaded AFTER campaign.css; overrides
+   only the --c-* theme tokens. To re-skin the whole campaign, edit
+   this one file.
+
+   Mood: a lamplit guild office on a river bridge at night. Deep
+   blue-slate ground with a teal Smáa-underglow; warm brass accent
+   for the guild's gold compass-rose; harbour-blue secondary for the
+   water (postings, the river, map hotspots).
+   ─────────────────────────────────────────────────────────────── */
+
+:root {
+  --c-bg: #0e1217;
+  --c-bg2: #141a21;
+  --c-bg3: #1a222b;
+  --c-bg-grad:
+    radial-gradient(ellipse at 50% -5%, #18232c 0%, transparent 58%),
+    radial-gradient(ellipse at 85% 105%, #122027 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 90%, #1a160e 0%, transparent 50%);
+  --c-ink: #cfd2cc;
+  --c-ink-bright: #f0ece0;
+  --c-ink-dim: #7e8a8c;
+  --c-accent: #d2a24e;        /* guild brass / faded compass-rose gold */
+  --c-accent-dim: #836230;
+  --c-accent2: #6aa6c8;       /* the Smáa · harbour-blue */
+  --c-divider: rgba(180,190,180,0.13);
+  --c-card-bg: rgba(255,255,255,0.024);
+  --c-title-font: 'Uncial Antiqua', 'Cinzel', serif;
+  --c-body-font: 'Crimson Pro', Georgia, serif;
+  --c-label-font: 'Josefin Sans', sans-serif;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wayward Compass · Quest Board · The Furrious Five</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/player-campaigns/assets/campaign.css">
+<link rel="stylesheet" href="/player-campaigns/furrious-five/theme.css">
+<link rel="stylesheet" href="/assets/site-nav.css">
+<script defer src="/assets/site-nav.js"></script>
+<script defer src="/player-campaigns/assets/campaign.js"></script>
+</head>
+<body data-page="ff-wayward-compass">
+
+<div class="c-container">
+
+  <div class="breadcrumb">
+    <a href="/index.html">Tyrnarra</a><span class="sep">›</span><a href="/player-campaigns/player-campaigns.html">Campaigns</a><span class="sep">›</span><a href="/player-campaigns/furrious-five/furrious-five.html">The Furrious Five</a><span class="sep">›</span><span>The Wayward Compass</span>
+  </div>
+
+  <div class="c-header">
+    <div class="c-ornament">✦ · ✦ · ✦</div>
+    <div class="c-kicker">Guild Office · the central bridge · Millhaven</div>
+    <div class="c-title">The Wayward Compass</div>
+    <div class="c-subtitle">Adventurers' Guild Office</div>
+    <div class="c-flavor">A respectable face from the bridge; from the river, a building that wanted to be a boat and couldn't commit. The work hangs by the door.</div>
+  </div>
+
+  <h2 class="section-heading">The Quest Board</h2>
+  <div class="prose map-intro">
+    <p>The board covers the whole right wall of reception, contracts pinned edge to edge, a few of them yellowed enough to have become part of the architecture. Mira Seld updates it every morning before she opens the door. Three postings are worth your time right now. Tap one to read the full notice and what the Compass can tell you across the desk.</p>
+  </div>
+
+  <div class="board">
+
+    <!-- ── Quest 1 ── -->
+    <div class="quest-pin">
+      <button class="quest-head" aria-expanded="false" aria-controls="q-docks">
+        <div class="quest-headmain">
+          <div class="quest-kicker">Private Contract · filed through Mira Seld</div>
+          <div class="quest-title">Below the Quiet Docks</div>
+          <div class="quest-teaser">A cargo drop, and the four sent to find it, both went under the east bank. None came back up.</div>
+          <div class="pill-row"><span class="pill">Recovery</span><span class="pill">250 gp + 100 gp</span><span class="pill">Beneath Millhaven</span><span class="pill">Discretion absolute</span></div>
+        </div>
+        <div class="quest-expand">Read <span class="chev">▾</span></div>
+      </button>
+      <div class="quest-detail" id="q-docks">
+        <div class="posting">
+          <div class="posting-label">The Posting · in the client's hand</div>
+          <div class="posting-text">"Missing: one consignment of goods, offloaded via private dock, bridge district, three nights past. Also missing: four-person retrieval team sent to locate same. Contract offers 250gp upon recovery of personnel, 100gp additional upon recovery of cargo. Enquire with Mira Seld for access details. Discretion absolute. — S.R."</div>
+        </div>
+        <div class="known">
+          <div class="known-label">What the Compass Will Tell You</div>
+          <p>Three nights ago a private cargo came ashore at one of the bridge district's unlisted docks, the kind of landing nobody asks about. It did not turn up where it was meant to. The client sent a four-person team after it: experienced people, known to the office, the sort who check in. They went down into the old passages under the Cape-side bank, and the office has not heard from them in two days.</p>
+          <p>The passages are old, older than Millhaven, and no one keeps a clean map of them. Mira holds the access route and a description of the missing team. The client wants the people back first and the cargo back second, and will not say what the cargo is. <i>"Sensitive documents,"</i> is all you'll get, and then the subject changes.</p>
+        </div>
+        <div class="terms">
+          <div class="term"><div class="t-l">Reward</div><div class="t-v">250 gp for the team · 100 gp more for the cargo</div></div>
+          <div class="term"><div class="t-l">Ask For</div><div class="t-v">Mira Seld, at the desk (access details)</div></div>
+          <div class="term"><div class="t-l">Where</div><div class="t-v">The caverns under the east bank</div></div>
+          <div class="term"><div class="t-l">Client</div><div class="t-v">"S.R." · pays well, says little</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Quest 2 ── -->
+    <div class="quest-pin">
+      <button class="quest-head" aria-expanded="false" aria-controls="q-narrows">
+        <div class="quest-headmain">
+          <div class="quest-kicker">Guild Contract · the Wayward Compass</div>
+          <div class="quest-title">The Narrows Job</div>
+          <div class="quest-teaser">A sealed shipment leaving Merkavar by rail. Two escorts already tried. Two escorts already failed.</div>
+          <div class="pill-row"><span class="pill">Escort</span><span class="pill">Pay on delivery</span><span class="pill">Merkavar line</span><span class="pill">Neutral charter</span></div>
+        </div>
+        <div class="quest-expand">Read <span class="chev">▾</span></div>
+      </button>
+      <div class="quest-detail" id="q-narrows">
+        <div class="posting">
+          <div class="posting-label">The Posting · Guild notice</div>
+          <div class="posting-text">"GUARD WANTED — RAIL CONSIGNMENT, MERKAVAR LINE. Chartered escort sought for a sealed shipment leaving Merkavar by rail. Two prior runs through the hill country were stopped and stripped; the line wants blades aboard who can hold a car. Travel to Merkavar at the Guild's coin, board the consignment, ride it through, deliver it whole. Pay on delivery. The Compass vouches the contract; it does not vouch the cargo. — See Aldric Fenn. Neutral charter applies."</div>
+        </div>
+        <div class="known">
+          <div class="known-label">What the Compass Will Tell You</div>
+          <p>You travel to <b>Merkavar</b> on the Guild's coin, board a sealed consignment, and ride it home through the hill country to deliver it whole. Simple work, except that the last two crews to try it were stopped and stripped on the same stretch of line, at a cutting the trainmen call the <b>Arrol Cut</b>. Whoever is hitting the shipments knows when they run and what they carry.</p>
+          <p>Aldric Fenn briefs it flat and asks nothing about the manifest, which is the whole reason the job came to a neutral-chartered office in a bridge-town instead of being hired in Merkavar. The Compass vouches that the contract is real and the coin is good. It does not vouch the cargo, and Fenn expects you not to ask about it either.</p>
+        </div>
+        <div class="terms">
+          <div class="term"><div class="t-l">Reward</div><div class="t-v">Paid on delivery (negotiated with Fenn)</div></div>
+          <div class="term"><div class="t-l">Ask For</div><div class="t-v">Aldric Fenn, the Guildmaster</div></div>
+          <div class="term"><div class="t-l">Where</div><div class="t-v">Merkavar line · the Arrol Cut</div></div>
+          <div class="term"><div class="t-l">Note</div><div class="t-v">Two prior escorts failed the same run</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Quest 3 ── -->
+    <div class="quest-pin">
+      <button class="quest-head" aria-expanded="false" aria-controls="q-veldtmark">
+        <div class="quest-headmain">
+          <div class="quest-kicker">Welfare Check · posted by Harlen Doss</div>
+          <div class="quest-title">The Veldtmark Invitation</div>
+          <div class="quest-teaser">A Cape-side merchant lord stopped answering three weeks ago. His partner wants him alive, and wants his money.</div>
+          <div class="pill-row"><span class="pill">Welfare check + debt</span><span class="pill">Modest pay</span><span class="pill">Cape district</span><span class="pill">"Social, low risk"</span></div>
+        </div>
+        <div class="quest-expand">Read <span class="chev">▾</span></div>
+      </button>
+      <div class="quest-detail" id="q-veldtmark">
+        <div class="posting">
+          <div class="posting-label">The Posting · Quest board</div>
+          <div class="posting-text">"Lord Caevan Veldtmark, merchant and landowner of the Cape district, has failed to respond to correspondence or attend any scheduled appointments for the past three weeks. His business partner, one Harlen Doss, requests a welfare check and, if the lord is well, collection of a debt of record. Inquire at the Wayward Compass for details. Discretion expected."</div>
+        </div>
+        <div class="known">
+          <div class="known-label">What the Compass Will Tell You</div>
+          <p>A Cape-side merchant lord has gone quiet: no answered letters, no kept appointments, three weeks of silence. His business partner <b>Harlen Doss</b>, who is owed a debt of record, wants someone to confirm the man is alive and, if he is, to collect. The pay is modest and the work reads as a knock-on-a-door errand. Kael posted it rated <i>social, low risk</i>.</p>
+          <p>Kael rated it before he thought about it too hard, and he has not changed the rating. He did mention to Mira that something about the posting sits wrong with him, and Mira did not argue. Neither of them said so on the notice. The estate is on the Cape side's northern edge, where the drift sits heavier in the air.</p>
+        </div>
+        <div class="terms">
+          <div class="term"><div class="t-l">Reward</div><div class="t-v">Modest fee · plus a cut of the collected debt</div></div>
+          <div class="term"><div class="t-l">Ask For</div><div class="t-v">The desk · referral to Harlen Doss</div></div>
+          <div class="term"><div class="t-l">Where</div><div class="t-v">Veldtmark estate, the Cape district</div></div>
+          <div class="term"><div class="t-l">Rated</div><div class="t-v">"Social, low risk" (Kael)</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="prose map-intro" style="margin-top:14px; text-align:center;">
+    <p style="font-style:italic; color:var(--c-ink-dim);">Take what suits the party. Mira logs who took what and when it is due; the office likes to know its people came back.</p>
+  </div>
+
+  <div class="c-divider"><span>✦</span></div>
+
+  <h2 class="section-heading">The Office, Room by Room</h2>
+  <div class="prose map-intro">
+    <p>The Compass climbs two floors up from the bridge street and drops two more onto river pilings below. Tap any room you can get into to step inside it. The doors marked otherwise are staff-only, and stay shut to you for now.</p>
+  </div>
+
+  <div class="floor-stack">
+    <div class="floor-row">
+      <div class="floor-label">Bridge Level</div>
+      <div class="floor-rooms">
+        <div class="room-cell" data-room="reception"><div class="room-name">Reception &amp; Quest Board</div><div class="room-sub">The front desk · Mira Seld</div></div>
+        <div class="room-cell" data-room="briefing"><div class="room-name">Briefing Room</div><div class="room-sub">Contract talks · maps</div></div>
+        <div class="room-cell" data-room="velka"><div class="room-name">Quartermaster's Den</div><div class="room-sub">Velka Dorn · gear loans</div></div>
+      </div>
+    </div>
+    <div class="floor-row">
+      <div class="floor-label">Second Floor</div>
+      <div class="floor-rooms">
+        <div class="room-cell" data-room="drinkinghall"><div class="room-name">The Drinking Hall</div><div class="room-sub">Social heart · trophies</div></div>
+        <div class="room-cell" data-room="bunks"><div class="room-name">Adventurer Bunks</div><div class="room-sub">1 silver / night</div></div>
+        <div class="room-cell locked"><div class="room-name">Storage Rooms</div><div class="room-sub">Supplies</div><div class="room-tag">Staff only</div></div>
+      </div>
+    </div>
+    <div class="floor-row">
+      <div class="floor-label">Third Floor</div>
+      <div class="floor-rooms">
+        <div class="room-cell" data-room="library"><div class="room-name">The Knowledge Dock</div><div class="room-sub">Maps &amp; field records</div></div>
+        <div class="room-cell locked"><div class="room-name">Guildmaster's Office</div><div class="room-sub">Aldric Fenn</div><div class="room-tag">Restricted</div></div>
+        <div class="room-cell locked"><div class="room-name">Staff Quarters</div><div class="room-sub">Permanent staff</div><div class="room-tag">Private</div></div>
+      </div>
+    </div>
+    <div class="river-divider"><div class="river-line"></div><div class="river-text">↓ down onto the Millwater pilings ↓</div><div class="river-line"></div></div>
+    <div class="floor-row">
+      <div class="floor-label">↓ Piling 1</div>
+      <div class="floor-rooms">
+        <div class="room-cell" data-room="training"><div class="room-name">Training Hall</div><div class="room-sub">Kael · open at dawn</div></div>
+        <div class="room-cell" data-room="dova"><div class="room-name">Dova's Bar</div><div class="room-sub">The real drinking hall</div></div>
+      </div>
+    </div>
+    <div class="floor-row">
+      <div class="floor-label">↓ Piling 2</div>
+      <div class="floor-rooms">
+        <div class="room-cell locked"><div class="room-name">Guild Dock</div><div class="room-sub">Private berth</div><div class="room-tag">Staff only</div></div>
+        <div class="room-cell locked"><div class="room-name">Deep Storage</div><div class="room-sub">Velka's key only</div><div class="room-tag">Restricted</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="roomDetail"><div class="room-detail-empty">Tap a room above to step into it.</div></div>
+
+  <div class="c-divider"><span>✦</span></div>
+
+  <h2 class="section-heading">The Guildhall</h2>
+  <div class="prose">
+    <p>The Wayward Compass did not start as a guildhall. It started as a storage shed a party of adventurers rented by the week, could not stop renting because it was convenient, and quietly bought when the owner died without heirs. It has grown the way the bridge district itself has grown: upward first, then outward, then down onto pilings that were only ever meant to hold a practice-post. The original shed is somewhere inside the walls of the second floor; nobody is entirely sure which walls.</p>
+    <p>From the bridge street it presents a respectable face: a wide door, the gold compass-rose sign gone slightly faded, Mira's desk visible through the front window. From the river it looks like something that decided it wanted to be a boat and could not commit. The sound of the Smáa is constant, louder the lower you go, and the regulars stopped hearing it years ago.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">What Makes It Feel Like Home</div>
+    <p>Trophy cases line the stairs to the drinking hall: a basilisk scale, a piece of what might be Elden stonework, a handful of weapons of unusual make, each under a small plaque listing the one who brought it back and the year it was recovered. The plaques record when. They do not always record what became of the person who recovered it, and the regulars know which ones to avoid reading. It is, all the same, the warmest room on the bridge, and the place a new arrival is handed a pint they did not ask for and assessed over it.</p>
+  </div>
+
+  <div class="c-divider"><span>✦</span></div>
+
+  <h2 class="section-heading">The Staff</h2>
+  <div class="prose map-intro" style="text-align:center;">
+    <p>A small, settled cast you'll meet in a fixed order: the desk, then the bar, then whoever is running the floor that morning.</p>
+  </div>
+
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="person-role">Guildmaster · Bridge Council Seat</div>
+      <div class="person-name">Aldric Fenn</div>
+      <div class="person-kin">Human, late fifties</div>
+      <p>A bear of a man running a small-town office for the most powerful organisation in the known world, and acutely aware of both halves of that sentence. Direct, pragmatic, occasionally volcanic; he prefers to solve a problem with a handshake and keeps a shortsword on the desk for symbolic reasons. He treats the branch like family and tucks his guildmaster's medallion under his collar when he meets locals.</p>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Branch Receptionist</div>
+      <div class="person-name">Mira Seld</div>
+      <div class="person-kin">Half-elf, mid-thirties</div>
+      <p>The first face every adventurer sees, and the last one they want to disappoint. She runs the front desk with terrifying competence and a smile that never quite reaches her eyes, and remembers every name, every face, and every outstanding fee. Ink-stained fingers, three quills behind one ear, a navy-and-gold uniform ironed that morning and to be ironed again tomorrow.</p>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Quartermaster &amp; Archivist</div>
+      <div class="person-name">Velka Dorn</div>
+      <div class="person-kin">Human (lapsed cleric), forties</div>
+      <p>She manages the equipment locker and six centuries of contract archive with a precision that feels almost aggressive. Dry, with flashes of dark humour that arrive without warning; she will lend equipment to a party she trusts and will not lend her good ink to anyone. Silver-haired early, reading glasses she refuses to admit she needs, a ring of keys too large for the building's known doors.</p>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Field Trainer &amp; Combat Coordinator</div>
+      <div class="person-name">Kael Orvaine</div>
+      <div class="person-kin">Half-orc, late thirties</div>
+      <p>He runs orientation for new recruits, posts the difficulty ratings on the board, and is responsible for the sign that reads <i>DEAD MEMBERS COMPLETE NO QUESTS</i>. Measured and economical with words; he will give you exactly the advice you need to not die, once, and will pull a contract from a group he thinks is not ready and tell them precisely why. Open sparring at dawn, anyone welcome.</p>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Guildhall Barkeeper</div>
+      <div class="person-name">Dova Crestmark</div>
+      <div class="person-kin">Dwarf, ageless</div>
+      <p>She runs the bar down on the pilings with iron authority and an endless supply of something she calls <i>the good stuff</i>. Blunt, generous in unexpected moments, and possessed of an unsettling knack for knowing what you need before you say it. Copper-streaked braids, burn-scarred forearms she does not explain, and a brown bottle of house brew under the bar for the people she is quietly worried about.</p>
+    </div>
+    <div class="person-card">
+      <div class="person-role">Server &amp; Odd-Jobs</div>
+      <div class="person-name">Pip Sallow</div>
+      <div class="person-kin">Halfling, early twenties</div>
+      <p>The fastest-moving thing in the guildhall, somehow always where he is needed and almost never where he is not. Relentlessly cheerful, desperate to be an adventurer, and being gently protected from that ambition by everyone who likes him. He has memorised everyone's usual order, draws maps of the adventures he means to have someday, and is followed everywhere by the guildhall cats, all of them.</p>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <button class="reveal-toggle" aria-expanded="false">◈ &nbsp; What the Regulars Say · The Thing in the Walls</button>
+    <div class="reveal-body">
+      <p>The regulars will tell you, after a pint or two, that the original shed is still in there, walled up somewhere inside the second floor, and that it still holds something the three adventurers who founded the hall brought back and never sold. The stories differ on what: a map to a place that is not on any other map, a weapon nobody living can lift, a sealed thing the founders agreed was better kept than carried. They agree on one point. If you go looking for it, Aldric will scowl, the conversation will be over, and somehow you will find yourself back out on the bridge with your pint finished and no memory of standing up.</p>
+    </div>
+  </div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/player-campaigns/furrious-five/millhaven.html"><b>Millhaven →</b></a> · The river-border town the Compass serves; its three faces and the drift along the Cape bank.</li>
+      <li><a href="/player-campaigns/furrious-five/low-span.html"><b>The Low Span →</b></a> · The fighting pit under the southern bridge, and the merchant lord always at its rail.</li>
+      <li><a href="/talan/domains/lautara/millhaven/wayward-compass.html"><b>The Wayward Compass (worldbuilding) →</b></a> · The canonical entry, with the chronicle's full reading of the building and its six centuries.</li>
+      <li><a href="/talan/factions/adventurers-guild.html"><b>The Adventurers' Guild →</b></a> · The continental order the Compass is a Guild Office of.</li>
+    </ul>
+  </div>
+
+  <div class="c-footer">TYRNARRA · CAMPAIGNS · THE FURRIOUS FIVE · THE WAYWARD COMPASS</div>
+
+</div>
+
+<script>
+window.CAMPAIGN_ROOMS = {
+  reception: {
+    name: "Reception & Quest Board", floor: "Bridge Level · the main entrance",
+    read: "The first thing you notice is the board. It covers the entire right wall, contracts pinned edge to edge, some crisp and new, some yellowed at the corners in a way that suggests they have been there long enough to become part of the architecture. To the left, behind a desk angled to see both the door and the stairs, a half-elf woman with ink-stained fingers looks up from a ledger. She already knows you are here.",
+    desc: "The first room anyone sees: wide enough for a small crowd, low enough to feel close. Mira Seld's desk sits left of the door; the quest board dominates the wall opposite.",
+    details: ["The board is updated every morning before the doors open", "A second board marked 'COMPLETED', where Mira tracks the parties that came back", "A worn bench, and a sleeping hound nobody admits to owning", "A small bell that can be heard anywhere in the building"]
+  },
+  briefing: {
+    name: "Briefing Room", floor: "Bridge Level",
+    read: "A long table, eight chairs, and more maps than any room this size should reasonably hold, layered on every wall with their corners overlapping. The table has a shallow channel running down its centre; someone has been rolling dice in it recently. The window looks over the river. The room smells of old paper, candle wax, and decisions.",
+    desc: "Where contract details get hammered out before you head out, and where the debrief happens when you come back. Kael uses it for mission briefings, Mira for sensitive clients.",
+    details: ["A locked cabinet holds regional maps not posted publicly", "The table's centre channel was meant for scroll-maps; it is mostly used for dice", "One chair is slightly taller than the rest. Everyone wants it."]
+  },
+  velka: {
+    name: "Quartermaster's Den", floor: "Bridge Level",
+    read: "The smell hits first: old paper, metal polish, and something faintly herbal you cannot place. Every surface is organised with a precision that feels almost aggressive. A tall woman with silver hair and reading glasses she clearly does not think she needs is writing in a ledger without looking up. After a moment she says, flatly: 'Sign the log. Touch nothing until I have noted it.'",
+    desc: "Half equipment locker, half filing office, entirely Velka Dorn's domain. Loans in front, six centuries of archive behind.",
+    details: ["Every loaned item is logged with your name and an expected return", "Equipment sorted by category then alphabetically; do not rearrange it", "A locked door at the back she does not open for anyone"]
+  },
+  drinkinghall: {
+    name: "The Drinking Hall", floor: "Second Floor",
+    read: "The stairs open into noise and warmth. Long tables, mismatched chairs, a ceiling gone dark with smoke from a fireplace older than the current chimney. The walls are covered: maps, sketches, a large painting of a landscape nobody can quite identify. Trophy cases flank the stairwell, and one carries a plaque with a name and a date but no explanation.",
+    desc: "The social heart of the upper building: where parties form, contracts get celebrated or mourned, and a new recruit is assessed over a pint they did not ask for.",
+    details: ["Trophy cases: a basilisk scale, a piece of something old, weapons with memorial plaques", "A painting three people have separately sworn they once visited", "A dumbwaiter runs down to the bar below"]
+  },
+  bunks: {
+    name: "Adventurer Bunks", floor: "Second Floor",
+    read: "Eight doors, eight rooms, each holding a bunk, a hook, and a window over the river. The window is the only point of character. Through it you can hear the river against the pilings and, if the wind is right, the sound of the bar two floors down. The rooms are clean. They are not comfortable. They were never meant to be.",
+    desc: "Eight small rooms for guild members: a bunk, a hook, a narrow river window. One silver a night.",
+    details: ["Room 3 has the larger window; there is always a waiting list", "Pip runs the laundry on Tuesdays and Thursdays", "Shared washroom: cold water, and a copper you light for hot"]
+  },
+  library: {
+    name: "The Knowledge Dock", floor: "Third Floor · guild members",
+    read: "Floor-to-ceiling shelves, two reading alcoves built into window bays over the river, and a long central table with a candelabra that is never fully extinguished. The smell is paper, old leather, and something mineral you cannot place. The organisation is meticulous and entirely opaque: Velka's index, in Velka's shorthand.",
+    desc: "Regional maps, bestiary records, historical contracts, and six centuries of guild field notes, all under Velka's cross-referenced index.",
+    details: ["Two river-view alcoves, quietly competed over", "A locked gate guards a restricted section you may not enter", "One shelf reads 'UNCLASSIFIED, DO NOT REMOVE', and means it"]
+  },
+  training: {
+    name: "Training Hall", floor: "Piling 1 · below the bridge",
+    read: "One wall is open to the river behind a heavy rope barrier, and the sound of the water fills the room completely. The floor is hardwood worn smooth in the centre, rougher at the edges. A fresh chalk circle sits at the middle. The ceiling is lower than you would expect, and a large half-orc in scale mail is watching you work out exactly how low.",
+    desc: "Built onto the first piling, half over the river. Kael runs open sparring here every dawn; anyone may join.",
+    details: ["Practice weapons on the racks: dulled blades, weighted staffs, blunt-tipped bows", "The chalk circle is refreshed each morning; stepping in uninvited is noted", "Ceiling 6'8\" at centre, 6'2\" at the edges. Kael knows who will hit it."]
+  },
+  dova: {
+    name: "Dova's Bar", floor: "Piling 1 · below the bridge",
+    read: "Lower than the hall upstairs, darker, closer to the water. You can hear the river against the pilings from any stool, a constant low rhythm under everything. The bar is a single plank of dark wood, grain unlike anything local. Behind it, a dwarf woman with copper-streaked braids sets a glass in front of you without asking what you want. It is what you needed.",
+    desc: "Where the guild actually drinks: darker and closer to the water than the hall upstairs.",
+    details: ["The bar plank is claimed to be from a ship no record confirms existed", "Brown bottles under the bar: a house brew for people she's worried about", "Conversations here stay private. Dova sees to it; nobody is sure how."]
+  }
+};
+</script>
+
+</body>
+</html>

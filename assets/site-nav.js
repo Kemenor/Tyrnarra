@@ -167,6 +167,19 @@
     { slug: 'red-empire', label: 'The Red Empire',             href: '/off-continent/red-empire.html', children: [] }
   ];
 
+  // ── Campaigns section (collapsible) ───────────────────────────
+  // Player-facing campaign companions (the play layer), distinct from
+  // the GM-only /campaigns/ tree, which is deliberately NOT in this nav.
+  // The section header links to the Campaigns landing, so it is not
+  // repeated as a leaf here.
+  var CAMPAIGNS_PAGES = [
+    { slug: 'ff-hub', label: 'The Furrious Five', href: '/player-campaigns/furrious-five/furrious-five.html', children: [
+      { slug: 'ff-wayward-compass', label: 'Wayward Compass · Quest Board', href: '/player-campaigns/furrious-five/wayward-compass.html', children: [] },
+      { slug: 'ff-millhaven',       label: 'Millhaven',                      href: '/player-campaigns/furrious-five/millhaven.html',       children: [] },
+      { slug: 'ff-low-span',        label: 'The Low Span',                   href: '/player-campaigns/furrious-five/low-span.html',        children: [] }
+    ]}
+  ];
+
   // ── Walk the tree for the current slug, return ancestor path ──
   // Returns an array of slugs from the root of the tree down to and
   // including the matched node. Used to decide which rows auto-expand.
@@ -231,11 +244,13 @@
     var worldExpanded  = buildExpandedSet(WORLD_PAGES,        currentPage);
     var factionExpanded= buildExpandedSet(FACTION_PAGES,      currentPage);
     var offExpanded    = buildExpandedSet(OFFCONTINENT_PAGES, currentPage);
+    var campaignExpanded = buildExpandedSet(CAMPAIGNS_PAGES,  currentPage);
     var talanItems     = TALAN_PAGES.map(function (d) { return buildAccordionRow(d, talanExpanded,  1); }).join('\n');
     var domainItems    = DOMAINS.map(    function (d) { return buildAccordionRow(d, domainExpanded, 1); }).join('\n');
     var worldItems     = WORLD_PAGES.map(function (d) { return buildAccordionRow(d, worldExpanded,  1); }).join('\n');
     var factionItems   = FACTION_PAGES.map(function (d) { return buildAccordionRow(d, factionExpanded, 1); }).join('\n');
     var offItems       = OFFCONTINENT_PAGES.map(function (d) { return buildAccordionRow(d, offExpanded, 1); }).join('\n');
+    var campaignItems  = CAMPAIGNS_PAGES.map(function (d) { return buildAccordionRow(d, campaignExpanded, 1); }).join('\n');
 
     return [
       '<button class="nav-toggle" id="navToggle" aria-label="Open navigation" type="button">≡ Menu</button>',
@@ -275,6 +290,13 @@
       '    <a class="nav-section-label nav-section-link" href="/off-continent/off-continent.html" data-page="off-continent-hub">Off-Continent</a>',
       '    <ul class="nav-list">',
            offItems,
+      '    </ul>',
+      '  </div>',
+
+      '  <div class="nav-section">',
+      '    <a class="nav-section-label nav-section-link" href="/player-campaigns/player-campaigns.html" data-page="campaigns">Campaigns</a>',
+      '    <ul class="nav-list">',
+           campaignItems,
       '    </ul>',
       '  </div>',
       '</aside>'
