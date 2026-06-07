@@ -54,8 +54,12 @@ campaigns/
     <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
     <location>-gm.html        ← location dossiers (floorplans + stat blocks + secrets + hooks)
     quest-<slug>.html         ← adventure modules
+    quest-<slug>.foundry.json / .foundry.macro.js   ← Foundry import spec + generated macro
+    quest-<slug>.portraits.json / .token-map.json   ← NPC portrait prompts + actor→frame map
     assets/maps/              ← downsized web map copies (committed)
       _full/                  ← FULL-RES originals, gitignored — see "Map assets" below
+    assets/portraits/         ← generated NPC portrait art (committed)
+    assets/tokens/            ← baked token art (portrait + frame, committed)
 ```
 
 ## Chrome conventions
