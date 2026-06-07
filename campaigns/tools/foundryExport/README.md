@@ -132,6 +132,27 @@ The four steps:
 The assignment sets `actor.img` + `prototypeToken.texture.src` + enables the
 token ring; placed tokens inherit it (or are re-skinned by `assign-images`).
 
+## Token frames (faction borders, Tokenizer-style)
+
+Foundry's Dynamic Token Ring only gives a generic disposition ring. For custom
+per-faction / special-monster borders, bake a frame into the token image:
+
+1. **Frame art.** Faction/monster frame prompts live in `faction-frames.json`
+   (same shape as the portraits file); render them with `gen_portraits.py` into a
+   `frames/` dir. They can be ornate rings on any background - transparency is
+   not required.
+2. **Bake.** `tokenize.py` circle-crops the portrait, masks the frame to a clean
+   circular **annulus** (keeps the outer band, drops center + corners), and lays
+   it over the rim -> one RGBA token PNG with transparent corners:
+   `python tokenize.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.webp --out tokens/sable-rei.png`
+   or `tokenize.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.webp`.
+   `--inner` controls the portrait/band split (default 0.84).
+3. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign the framed
+   image to the **token only** with the ring **off** - keep the un-framed
+   portrait as the actor `img`. (assign-images sets both with the ring on; for
+   baked frames assign the token texture and set `prototypeToken.ring.enabled`
+   false so the border is not doubled.)
+
 ## Assembling a spec from the leaf tools (Phase 7)
 
 The `spec` subcommand builds a spec straight from the encounter/loot tools'

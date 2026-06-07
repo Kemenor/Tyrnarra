@@ -34,7 +34,9 @@ campaigns/tools/**/*_key.txt
 **/*.secret
 campaigns/tools/**/.env
 
-# Generated NPC portraits (the user's image-gen output) stay local until uploaded
-# to Foundry; the prompts (*.portraits.json) are committed, the rendered images
-# are not.
+# Generated images (the user's image-gen output) stay local until uploaded to
+# Foundry; the prompts (*.portraits.json / *.frames.json / faction-frames.json)
+# are committed, the rendered images and baked tokens are not.
 campaigns/**/portraits/
+campaigns/**/frames/
+campaigns/**/tokens/

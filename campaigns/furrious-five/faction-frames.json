@@ -1,0 +1,7 @@
+{
+  "_note": "Faction / special-monster token FRAMES (ornate rings). Rendered like portraits via gen_portraits.py, then tokenize.py masks each to a circular annulus and bakes it over a portrait. 'slug' is the frame name. Center content is irrelevant - the annulus mask keeps only the outer band.",
+  "portraits": [
+    { "slug": "bridge-council", "prompt": "Ornate circular token border frame, a thick decorative ring occupying the outer third with a hollow flat empty dark center, art-nouveau fox and theatrical-mask motifs worked into tarnished silver and deep teal enamel, perfectly centered and symmetrical, top-down flat view, plain flat dark background, no text, no portrait, no face in the center." },
+    { "slug": "brood", "prompt": "Ornate circular token border frame, a thick chitinous ring occupying the outer third with a hollow flat empty dark center, spider legs and webbing and faint violet egg-glow worked into black carapace, perfectly centered and symmetrical, top-down flat view, plain flat dark background, no text, no portrait, no creature in the center." }
+  ]
+}
