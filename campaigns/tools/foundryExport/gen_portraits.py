@@ -21,8 +21,8 @@ Usage:
   # add --force to overwrite, --only sable-rei,moss to render a subset
 
 Notes:
-  - Default --model is "fal-ai/flux/dev"; set it to the current Flux.2 [dev] slug
-    on fal when you want Flux.2 (check fal.ai's model list for the exact name).
+  - Default --model is "fal-ai/flux-2" (confirmed working). Key in fal_key.txt
+    (gitignored, next to this script) or the FAL_KEY env var.
   - Replicate users: this script is fal-specific; the prompts JSON is portable,
     so a Replicate or local-ComfyUI runner can consume the same file.
 """
@@ -36,7 +36,7 @@ def main():
     ap = argparse.ArgumentParser(description="Batch-render NPC portraits from a portraits JSON via fal.ai.")
     ap.add_argument("--portraits", required=True, help="portraits JSON ({portraits:[{slug,prompt}]}).")
     ap.add_argument("--out", required=True, help="Output directory for <slug>.<ext> images.")
-    ap.add_argument("--model", default="fal-ai/flux/dev", help="fal image model slug (default fal-ai/flux/dev).")
+    ap.add_argument("--model", default="fal-ai/flux-2", help="fal image model slug (default fal-ai/flux-2, confirmed working).")
     ap.add_argument("--size", default="square_hd", help="fal image_size (default square_hd = 1024x1024).")
     ap.add_argument("--ext", default="png", help="Output extension (png/webp/jpg). Default png.")
     ap.add_argument("--only", help="Comma-separated slugs to render (default: all).")

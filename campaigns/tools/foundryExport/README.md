@@ -17,6 +17,37 @@ actors rather than colliding on the compendium's id.
 
 This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../../.claude/skills/quest-workflow/SKILL.md) skill, and a standalone tool you can point at *any* quest (including ones already built) to generate its macro on demand.
 
+## Setup (dependencies + API keys)
+
+Run every command from this directory (`campaigns/tools/foundryExport/`), `python` (not `python3`) on Windows.
+
+**Dependencies** (one-time): `pip install fal-client requests pillow numpy`
+(encounters/loot also need the encounterBuilder DBs: `python ../encounterBuilder/rebuild.py`.)
+
+**API keys.** Image generation and Forge upload each need a key. Both key files are **gitignored** (`*_key.txt`), so they are **not in the repo — a fresh clone or new session will not have them.** Recreate them (or ask the GM), then the scripts read the env var first, else the local file:
+
+| Key | File (here) / env | For | Get it |
+|---|---|---|---|
+| fal.ai | `fal_key.txt` / `FAL_KEY` | `gen_portraits.py` (image gen) | https://fal.ai/dashboard/keys (`id:secret`) |
+| The Forge | `forge_key.txt` / `FORGE_KEY` | `upload_forge.py` (asset upload) | The Forge → Account → API Keys (**write-assets**) |
+
+**Confirmed working:** Foundry VTT **14.363** / pf2e **8.2.0**; image model **`fal-ai/flux-2`** (fal.ai), ~$0.012/megapixel (≈ $0.013 per 1024² image). Forge assets serve at `https://assets.forge-vtt.com/<your-id>/<target-path>/<file>`.
+
+## The full pipeline, end to end
+
+A quest goes from premise to a populated, art-framed Foundry scene through these steps. Each is a standalone command; stop at any layer.
+
+1. **Encounters + loot** — drive `pf2e-encounter` / `pf2e-loot` (../encounterBuilder), saving each `--json`.
+2. **Spec** — `foundry_macro.py spec …` → `<quest>.spec.json` (monsters, NPCs, chests, areas, placement).
+3. **Import macro** — `foundry_macro.py build --spec …` → paste-run in Foundry: foldered actors + loot, tokens placed on the open scene.
+4. **Portrait prompts** — author `<quest>.portraits.json` (per-NPC appearance + prompt).
+5. **Generate portraits** — `gen_portraits.py --model fal-ai/flux-2` → `portraits/<slug>.webp`.
+6. **(optional) Faction frames** — extend `faction-frames.json`; render on a **magenta field** with `gen_portraits.py` → `frames/`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `tokens/<slug>.png`.
+7. **Upload** — `upload_forge.py --dir portraits` (or `tokens`) `--target <campaign>/<quest>` → asset URLs.
+8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
+
+Frame prompts live in `campaigns/<campaign>/faction-frames.json` (the reusable library); the per-quest actor→frame map in `campaigns/<campaign>/<quest>.token-map.json`. Generated images (`portraits/ frames/ tokens/`) and the key files are **gitignored**; the prompts, maps, and specs are committed.
+
 ## Why a macro, not a REST push
 
 A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works identically on Forge-hosted and self-hosted worlds. It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
@@ -116,8 +147,8 @@ The four steps:
 2. **Generate.** `gen_portraits.py` batch-renders one square image per entry via
    fal.ai, model-agnostic (`--model`, e.g. Flux.2 [dev] now, swap later); the
    same prompts JSON is reusable by a local ComfyUI/Replicate runner.
-   `pip install fal-client requests`, `set FAL_KEY=...`, then:
-   `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux/dev`
+   key in `fal_key.txt` (or `FAL_KEY`), then:
+   `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux-2 --ext webp`
 3. **Upload.** On The Forge, `upload_forge.py` pushes the folder into your Assets
    Library via the Forge API (needs a Forge API key with write-assets, in a
    gitignored `forge_key.txt`); it prints + saves a `{filename: asset URL}` map:
@@ -152,7 +183,7 @@ per-faction / special-monster borders, bake a frame into the token image:
    `python bake_token.py bake --portrait portraits/sable-rei.webp --frame frames/bridge-council.cut.png --out tokens/sable-rei.png`
    or `bake_token.py batch --portraits portraits --frames frames --out tokens --map faction_frames.json --default frames/generic.cut.png`.
    (Opaque frames with no alpha fall back to an annulus mask; `--inner` tunes that band.)
-3. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign with the
+4. **Use it.** Upload the `tokens/` dir (upload_forge.py), then assign with the
    token-only / ring-off flags (keeps the un-framed portrait as the actor `img`,
    no doubled ring):
    `python foundry_macro.py assign-images --folder "<quest>" --base "<tokens-url>/" --token-only --no-ring --map "Sable Rei=sable-rei.png" --map ...`
