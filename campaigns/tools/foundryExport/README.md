@@ -118,9 +118,11 @@ The four steps:
    same prompts JSON is reusable by a local ComfyUI/Replicate runner.
    `pip install fal-client requests`, `set FAL_KEY=...`, then:
    `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux/dev`
-3. **Upload.** Drop the `<dir>` of images into your Foundry/Forge assets (the
-   file picker, or the Forge asset library) under the folder you'll point
-   `imageBase` at.
+3. **Upload.** On The Forge, `upload_forge.py` pushes the folder into your Assets
+   Library via the Forge API (needs a Forge API key with write-assets, in a
+   gitignored `forge_key.txt`); it prints + saves a `{filename: asset URL}` map:
+   `python upload_forge.py --dir <dir> --target furrious-five/below-the-quiet-docks --out forge_urls.json`
+   (Self-hosted, or no key: drag the `<dir>` into a Foundry file-picker instead.)
 4. **Assign.** Either bake `image` filenames into the spec so a fresh import
    sets them, or, for an already-imported quest, generate a one-off assignment
    macro that matches names → files on the existing actors (and re-skins their
