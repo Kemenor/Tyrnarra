@@ -217,7 +217,11 @@ a:hover { color: var(--c-ink-bright); border-bottom-color: var(--c-accent); }
 .reveal-body p { line-height: 1.7; margin-bottom: 12px; }
 .reveal-body p:last-child { margin-bottom: 0; }
 
-/* ════ SEE ALSO + FOOTER ════ */
+/* ════ SEE ALSO + FOOTER ════
+   .see-also is the page-foot "The World Behind the Table" panel: cross-layer
+   links OUT to the canonical /setting/ worldbuilding only. Links to sibling
+   player pages never go here; they live above as .card-stack link-cards.
+   One foot panel, one name, worldbuilding-only. See docs/campaign-layer.md. */
 .see-also { max-width: 840px; margin: 30px auto 0; border-top: 1px solid var(--c-divider); padding-top: 24px; }
 .see-also h3 { font-family: var(--c-title-font); font-size: 1.15rem; color: var(--c-accent); margin-bottom: 14px; }
 .see-also ul { list-style: none; }

@@ -26,6 +26,8 @@ The player layer has its **own themeable chrome**, deliberately rooted in the GM
 
 The room map is the player analogue of the GM floorplan: the GM `wayward-compass-gm.html` carries the full `GM_ROOMS` floor-stack including restricted rooms; the player `wayward-compass.html` carries a `CAMPAIGN_ROOMS` subset (accessible rooms only, player-safe text) with the off-limits doors shown as greyed `.locked` cells.
 
+**Player page foot convention.** Every player page ends with a single `.see-also` panel titled **"The World Behind the Table"**, and it holds *only* cross-layer links out to the canonical `/setting/` worldbuilding the campaign dramatizes (each link glossed; worldbuilding counterparts tagged "(worldbuilding)"). Links to *sibling* player pages never go in this panel; they live above it as `.card-stack` link-cards under a `<h2 class="section-heading">` (e.g. "Elsewhere in Millhaven", "On the Bridges", "Your Millhaven"), the same way the campaign hub lists its locations. One foot panel, one name, worldbuilding-only: the player layer's twin of the Setting layer's "Continue Reading" panel (`.see-also` in `style-a.css` / `style-b.css`).
+
 ---
 
 ## Folder layout
