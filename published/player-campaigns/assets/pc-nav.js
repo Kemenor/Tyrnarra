@@ -132,7 +132,7 @@
 
   var foot = el('div', 'pc-nav-foot');
   var back = el('a', null, '← The World · Setting');
-  back.setAttribute('href', '/index.html');
+  back.setAttribute('href', '/setting/index.html');
   foot.appendChild(back);
   nav.appendChild(foot);
 

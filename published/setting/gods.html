@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gods &amp; Powerful Beings · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-a.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<script defer src="/setting/assets/site-starfield.js"></script>
+<style>
+  /* Hub link-cards, grouped by planar layer. */
+  .hub-group { max-width: 940px; margin: 0 auto; }
+  .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 14px auto 8px; }
+  .hub-card {
+    display: block; text-decoration: none; color: inherit;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--divider);
+    border-left: 3px solid var(--accent, var(--gold-dim));
+    border-radius: 4px;
+    padding: 18px 20px;
+    transition: transform 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .hub-card:hover { transform: translateY(-2px); border-color: rgba(200,168,75,0.45); background: rgba(255,255,255,0.045); }
+  .hub-layer { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .hub-name { font-family: 'Cinzel', serif; font-size: 1.05rem; letter-spacing: 0.08em; color: var(--gold-bright); margin-bottom: 6px; }
+  .hub-desc { font-size: 0.9rem; line-height: 1.6; color: var(--text); }
+  /* per-layer accent tints */
+  .l-prelife  { --accent: #c084fc; }
+  .l-life     { --accent: #34d399; }
+  .l-postlife { --accent: #f87171; }
+</style>
+</head>
+<body data-page="gods-hub">
+
+<div class="starfield" id="starfield"></div>
+
+<div class="header">
+  <span class="header-ornament">⸻ The Divine of Tyrnarra ⸻</span>
+  <div class="header-title">Gods &amp; Powerful Beings</div>
+  <div class="header-sub">Prelife · Life · Postlife · The Three Layers</div>
+  <div class="header-flavor">
+    Every god and powerful being of Tyrnarra, gathered in one place and ordered as the cosmos is: by <b>layer</b>. <b>Prelife</b> (Layer 1) holds the primordials, the elements given will. <b>Life</b> (Layer 2) is where mortals dwell and the Bound Thirteen walk the world under the Gods' Law. <b>Postlife</b> (Layer 3) is home to the belief-shaped gods who answer prayer from across the veil. Only the Thirteen are bound by the Compact; the rest reach Talan through grants, omens, and dreams.
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- LAYER 1 -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Prelife · Layer 1<span class="gdiv-sublabel">The substrate · older than worship</span></div>
+    <div class="gdiv-line"></div>
+  </div>
+  <div class="hub-group">
+    <div class="hub-grid">
+      <a class="hub-card l-prelife" href="/setting/primordials.html">
+        <div class="hub-layer">Prelife · The Substrate</div>
+        <div class="hub-name">The Primordials →</div>
+        <div class="hub-desc">The nine plane-bound embodiments of the elements, shaped by the undirected awe mortals hold for wind, stone, flame, and void. Seven in Prelife; two on the Layer-2 sibling-planes (Feyworld, Shadowplane).</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- LAYER 2 -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Life · Layer 2<span class="gdiv-sublabel">The Material Plane · the Bound Thirteen walk the world</span></div>
+    <div class="gdiv-line"></div>
+  </div>
+  <div class="hub-group">
+    <div class="hub-grid">
+      <a class="hub-card l-life" href="/setting/grand-gods.html">
+        <div class="hub-layer">Life · Material Plane</div>
+        <div class="hub-name">The 13 Bound Gods →</div>
+        <div class="hub-desc">The pantheon that walks the Material Plane under the Compact: the Primordial Six, the Ascendant Six, and Cronus, each with a domain, a city-state, and a sanctum.</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- LAYER 3 -->
+  <div class="group-divider">
+    <div class="gdiv-line"></div>
+    <div class="gdiv-label">Postlife · Layer 3<span class="gdiv-sublabel">Belief-shaped · prayed-to across the veil</span></div>
+    <div class="gdiv-line"></div>
+  </div>
+  <div class="hub-group">
+    <div class="hub-grid">
+      <a class="hub-card l-postlife" href="/setting/layer-3-gods.html">
+        <div class="hub-layer">Postlife · Elysium · Diyu · Abyss</div>
+        <div class="hub-name">Layer-3 Gods →</div>
+        <div class="hub-desc">The belief-shaped gods of the three Postlife planes: Elysium (mercy and benevolent patrons), Diyu (balance and judgment), and Abyss (malice). A small selection from a vast field.</div>
+      </a>
+      <a class="hub-card l-postlife" href="/setting/bolverk.html">
+        <div class="hub-layer">Postlife · Abyss</div>
+        <div class="hub-name">Bolverk · the Megacity in Abyss →</div>
+        <div class="hub-desc">The infernal hierarchy where souls harvested on Talan are processed into power: the seven Vice Demons and the fourteen Virtue Devils, across the Tunsund.</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/gods-law.html"><b>The Gods' Law →</b></a> · The Compact that binds the Thirteen, and why the Layer-3 gods are not bound by it.</li>
+      <li><a href="/setting/magic.html"><b>Magic &amp; Faith →</b></a> · How belief, the Wellspring, and clerical grants actually work.</li>
+      <li><a href="/setting/pf2e-registrar.html"><b>PF2e Registrar →</b></a> · The cleric-domain table mapping every domain to its in-world granter across all the pantheons.</li>
+      <li><a href="/setting/talan/the-binding.html"><b>The Binding →</b></a> · The Corrupted God and his Nine Generals: a non-bound power of a different, hostile cosmological class.</li>
+    </ul>
+  </div>
+
+  <div class="footer-note">TYRNARRA · GODS &amp; POWERFUL BEINGS · THE THREE LAYERS</div>
+
+</div>
+
+</body>
+</html>
