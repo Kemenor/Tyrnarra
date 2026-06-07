@@ -77,7 +77,7 @@ The twelve are split into two groups of six with a real cosmological distinction
 
 Aspects, depictions, favoured weapons, and mortal perception for each Grand God. **Each is neutral in essence**; they embody both the light and shadow of their portfolio. Mortals tend to **worship aspects, not the whole** (invoking Iro for warmth while fearing his zealotry; praying to Araphel for rest while avoiding his despair). The gods abide by the Gods' Law: no direct rule, but their presence shapes the world through symbols, omens, and the powers granted to the faithful.
 
-> **PF2e cleric domain grants are mechanical reference and live in [`pf2e-registrar.html`](../pf2e-registrar.html), not here.** The aspects below are the in-world theological flavour each god embodies, separate from the cleric-domain selection a player makes at character build. See `pf2e-notes.md` for the lore-implicit naming convention (how some aspects get reflected as domain names without granting discrete PF2e domains).
+> **PF2e cleric domain grants are mechanical reference and live in [`pf2e-registrar.html`](../published/setting/cosmology/pf2e-registrar.html), not here.** The aspects below are the in-world theological flavour each god embodies, separate from the cleric-domain selection a player makes at character build. See `pf2e-notes.md` for the lore-implicit naming convention (how some aspects get reflected as domain names without granting discrete PF2e domains).
 
 > **Each god has four aspects** chosen to show who they are: typically one neutral, two positive (the gift), one negative (the shadow). Aspects are theological flavour, not mechanical: a cleric still picks PF2e cleric domains for their character via the registrar.
 
@@ -402,4 +402,4 @@ The six plane-bound primordials share the **-zar suffix** that marks the deep-an
 
 ## Cleric domain mappings: see the PF2e Registrar
 
-PF2e cleric domain grants (for both the Thirteen and the non-bound granters: Corrupted God, Generals, Vice Demons, Virtue Devils, Betibizi) are mechanical reference and live on [`pf2e-registrar.html`](../pf2e-registrar.html). This file used to carry the Domains Outside the Thirteen table; that table has moved to the registrar so that all PF2e domain bookkeeping has a single home. See `pf2e-notes.md` for the lore-implicit naming convention.
+PF2e cleric domain grants (for both the Thirteen and the non-bound granters: Corrupted God, Generals, Vice Demons, Virtue Devils, Betibizi) are mechanical reference and live on [`pf2e-registrar.html`](../published/setting/cosmology/pf2e-registrar.html). This file used to carry the Domains Outside the Thirteen table; that table has moved to the registrar so that all PF2e domain bookkeeping has a single home. See `pf2e-notes.md` for the lore-implicit naming convention.

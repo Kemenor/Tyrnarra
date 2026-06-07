@@ -52,7 +52,7 @@ The common trigger is a bare *"flesh out [REGION]"* with no other context. The o
 | **4. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
 | **5. Surface the prose draft** | Draft the `geography/<region>.md` bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
 | **6. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/ancestries.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
-| **7. HTML publish (mirror + optional promotion)** | On an explicit publish signal: upgrade the parent domain HTML card, update cross-page links (ancestries, registrar, prose mentions). On an explicit "promote" signal in the same phase: build `talan/domains/<domain>/<slug>/<slug>.html`, wire `assets/site-nav.js`, the parent domain card, `docs/site-inventory.md`, fold any agent-committed canon back to glossary.md | For multi-page promotion, see *Parallelization* below |
+| **7. HTML publish (mirror + optional promotion)** | On an explicit publish signal: upgrade the parent domain HTML card, update cross-page links (ancestries, registrar, prose mentions). On an explicit "promote" signal in the same phase: build `published/setting/talan/domains/<domain>/<slug>/<slug>.html`, wire `published/setting/assets/site-nav.js`, the parent domain card, `docs/site-inventory.md`, fold any agent-committed canon back to glossary.md | For multi-page promotion, see *Parallelization* below |
 
 The phase boundaries are review checkpoints. Pause at each one even under broad "work through it" framing. Reading is fine within a phase; writes trigger the boundary.
 
@@ -66,7 +66,7 @@ Per CLAUDE.md's pre-read rule, read the relevant lore end-to-end before drafting
 2. **`lore/glossary.md`** — sub-regions block for the domain; Faction proper nouns if any anchor institutions exist
 3. **`lore/ancestries.md`** — any ancestry already anchored to this sub-region, or candidate ancestries that could be. **Read the full ancestry entry for any ancestry you might place here.** A one-liner lore note ("Halflings are the traveling folk") is not the ancestry; it's a seed for one. Read the full entry so you know what else there is.
 4. **`docs/open-threads.md`** — search the target name; flesh-out spec may already be partially drafted
-5. **The parent domain's HTML** (`talan/domains/<domain>/<domain>.html`) — see how the existing card frames it
+5. **The parent domain's HTML** (`published/setting/talan/domains/<domain>/<domain>.html`) — see how the existing card frames it
 6. **The sibling sub-regions** in the same domain — read their full bullets in `geography/<region>.md` and skim their HTML if promoted. The new sub-region must feel distinct from its siblings; reading them surfaces the same-iness risk early.
 7. **Grep the project** for the sub-region name; other pages may cross-reference it and constrain the design
 
@@ -264,7 +264,7 @@ This phase folds the old "minimum mirror" and "promote to dedicated page" steps.
 
 ### Part A: Minimum mirror (every publish signal)
 
-1. **Parent domain HTML card** (`talan/domains/<domain>/<domain>.html`): upgrade the sub-region card from a one-liner `<div>` to a richer card with the new description and updated tags. If the sub-region is also being promoted (Part B below), make the card a clickable `<a class="subregion-card">` with trailing ` →` in the title per `docs/card-conventions.md`.
+1. **Parent domain HTML card** (`published/setting/talan/domains/<domain>/<domain>.html`): upgrade the sub-region card from a one-liner `<div>` to a richer card with the new description and updated tags. If the sub-region is also being promoted (Part B below), make the card a clickable `<a class="subregion-card">` with trailing ` →` in the title per `docs/card-conventions.md`.
 2. **Cross-page links** if the ancestry-anchor changed:
    - `pf2e-registrar.html` ancestry rows (wrap the sub-region in `<a>` inside the location parenthetical)
    - `talan/ancestries.html` table row (same)
@@ -279,8 +279,8 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 
 **Build the page:**
 
-- Path: `talan/domains/<domain>/<slug>/<slug>.html`
-- Template: copy the structure of **`talan/domains/vindul/haizetsua/haizetsua.html`**. Gold-standard Style B sub-region page.
+- Path: `published/setting/talan/domains/<domain>/<slug>/<slug>.html`
+- Template: copy the structure of **`published/setting/talan/domains/vindul/haizetsua/haizetsua.html`**. Gold-standard Style B sub-region page.
 - Standard structure:
   - `<head>` with Style B CSS link, `site-nav.js`, custom `<style>` with per-page `--domain-accent` (verify ≥3:1 contrast against `#0f0c08` via `docs/accessibility.md`'s PowerShell snippet)
   - `<body data-page="<slug>">`
@@ -291,7 +291,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
   - **5-8 themed sections**, each with a divider and section-heading. The first themed section should expand the seed; don't lead with governance.
   - **Signature feature panels** (`.feature-panel`) for the kingdom's distinctive crafts or institutions
   - **Card grids** where appropriate (clans, departments, named artifacts, named bells, named seasons)
-  - **Optional amber `◈ Popular Belief` and red `⚿ GM Secret` expandables**. Load `/assets/site-interactions.js` if used. Folk-belief boxes work well for tavern-tales about the institution; GM secrets are reserved for canon the chronicler couldn't reasonably know.
+  - **Optional amber `◈ Popular Belief` and red `⚿ GM Secret` expandables**. Load `/setting/assets/site-interactions.js` if used. Folk-belief boxes work well for tavern-tales about the institution; GM secrets are reserved for canon the chronicler couldn't reasonably know.
   - **Open in the Chronicle Record** list at the bottom (remaining TBDs in chronicler voice)
 
 **Style and convention rules:**
@@ -305,7 +305,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 
 **Wire it in:**
 
-1. **`assets/site-nav.js`** — add the new page to the `DOMAINS` tree under its domain, with a descriptive label (`'Baerfrost · Hunt-League'`, `'Air Monastery · Wyndwalken'`). Order alphabetically or by canonical sub-region listing.
+1. **`published/setting/assets/site-nav.js`** — add the new page to the `DOMAINS` tree under its domain, with a descriptive label (`'Baerfrost · Hunt-League'`, `'Air Monastery · Wyndwalken'`). Order alphabetically or by canonical sub-region listing.
 2. **Parent domain HTML** — upgrade the sub-region card to clickable (Haizetsua pattern: `<a class="subregion-card" href="...">` with `→` in the title and a "Promoted" tag).
 3. **`docs/site-inventory.md`** — add an entry to the Promoted sub-regions section describing the new page's structure. Model on the Haizetsua entry (the most detailed precedent).
 4. **Cross-page links** — same as Part A above.
@@ -327,7 +327,7 @@ When a page-building agent invents canon-additive content (new place-names, gove
 When promoting two or more sub-regions at once, **spawn one general-purpose agent per page in parallel** with the Agent tool. Each agent gets:
 
 - **Canon source pointers** — the lore source files for its target (`geography/<region>.md` bullet + glossary entries + bestiary if relevant)
-- **Template pointer** — `talan/domains/vindul/haizetsua/haizetsua.html` as the model
+- **Template pointer** — `published/setting/talan/domains/vindul/haizetsua/haizetsua.html` as the model
 - **Convention pointers** — `CLAUDE.md`, `docs/card-conventions.md`, `docs/accessibility.md`, `docs/sidebar-nav.md`
 - **Explicit guidance** on the page's `--domain-accent` (suggest 2-3 hex options + tell the agent to verify contrast against `#0f0c08`)
 - **The fixed style rules**: commit no em-dashes, write affirmative prose, stay chronicler-tier in open prose, all links absolute
@@ -390,8 +390,8 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 
 ### The full-workflow precedents (Vindul 2026-05-24)
 
-- **Baerfrost** (clan-confederation under rotating meritocracy). `lore/geography/vindul.md` *Baerfrost*; `lore/glossary.md` sub-regions block; `talan/domains/vindul/baerfrost/baerfrost.html`.
-- **Air Monastery / The Wyndwalken** (mendicant order with fixed mother-house). `lore/geography/vindul.md` *Air Monastery*; `lore/glossary.md` sub-regions + *The Wyndwalken (Air Monastery cartographer order)*; `talan/domains/vindul/air-monastery/air-monastery.html`.
-- **Fellibylur** (chartered merchant kingdom, parallel coast/interior seats). `lore/geography/vindul.md` *Fellibylur*; `lore/glossary.md` sub-regions + *Fellibylur (storm-people merchant kingdom of Vindul)*; `talan/domains/vindul/fellibylur/fellibylur.html`.
+- **Baerfrost** (clan-confederation under rotating meritocracy). `lore/geography/vindul.md` *Baerfrost*; `lore/glossary.md` sub-regions block; `published/setting/talan/domains/vindul/baerfrost/baerfrost.html`.
+- **Air Monastery / The Wyndwalken** (mendicant order with fixed mother-house). `lore/geography/vindul.md` *Air Monastery*; `lore/glossary.md` sub-regions + *The Wyndwalken (Air Monastery cartographer order)*; `published/setting/talan/domains/vindul/air-monastery/air-monastery.html`.
+- **Fellibylur** (chartered merchant kingdom, parallel coast/interior seats). `lore/geography/vindul.md` *Fellibylur*; `lore/glossary.md` sub-regions + *Fellibylur (storm-people merchant kingdom of Vindul)*; `published/setting/talan/domains/vindul/fellibylur/fellibylur.html`.
 
-Read the prose in `lore/geography/<region>.md` + the etymology entries in `lore/glossary.md` + the HTML at `talan/domains/<domain>/<slug>/<slug>.html` for each. The Vindul three teach the full eight-phase rhythm; the Lautara resketch and Emarrea teach what a seed-led design feels like in the prose.
+Read the prose in `lore/geography/<region>.md` + the etymology entries in `lore/glossary.md` + the HTML at `published/setting/talan/domains/<domain>/<slug>/<slug>.html` for each. The Vindul three teach the full eight-phase rhythm; the Lautara resketch and Emarrea teach what a seed-led design feels like in the prose.

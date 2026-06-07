@@ -1,6 +1,6 @@
 # Letters from Biozuri
 
-The Emarrea-specific section of Golivander's periodical ***The Travelling Chronicle***. Sixteen years of running coverage of the Heartcourt and its surrounding kingdom-life, circulated to the literate classes of Lautara, Frae City, and Sumendar. This file holds the canonical text of the present dispatches, quoted in-world on the Heartcourt page (`/talan/domains/lautara/emarrea/heartcourt.html`).
+The Emarrea-specific section of Golivander's periodical ***The Travelling Chronicle***. Sixteen years of running coverage of the Heartcourt and its surrounding kingdom-life, circulated to the literate classes of Lautara, Frae City, and Sumendar. This file holds the canonical text of the present dispatches, quoted in-world on the Heartcourt page (`/setting/talan/domains/lautara/emarrea/heartcourt.html`).
 
 Golivander writes as the kingdom-knowing chronicler: arch, deeply familiar with everyone at court, never spiteful but never blandly neutral. Tone is folk-belief-tier reportage; he reports what the kingdom is saying, names what can be named, and pointedly leaves unresolved what cannot. Some Hearts cultivate him; some pointedly do not.
 

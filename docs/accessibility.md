@@ -10,9 +10,9 @@ The target is **WCAG 2.1 Level AA**. We are not chasing AAA; some of the visual 
 
 ### Base palettes pass strongly
 
-Every text-on-background pairing in [`/assets/style-b.css`](../assets/style-b.css) and [`/assets/style-a.css`](../assets/style-a.css) clears WCAG AA (≥4.5:1 for normal text, ≥3:1 for large text and graphic components).
+Every text-on-background pairing in [`/setting/assets/style-b.css`](../published/setting/assets/style-b.css) and [`/setting/assets/style-a.css`](../published/setting/assets/style-a.css) clears WCAG AA (≥4.5:1 for normal text, ≥3:1 for large text and graphic components).
 
-**Style B (grounded; every page under `/talan/` and `/off-continent/`):**
+**Style B (grounded; every page under `/setting/talan/` and `/setting/off-continent/`):**
 
 | Foreground | Background | Ratio |
 |---|---|---|
@@ -42,7 +42,7 @@ Every text-on-background pairing in [`/assets/style-b.css`](../assets/style-b.cs
 
 ### Per-domain accents must clear 3 : 1
 
-Each Style-B page sets `--domain-accent` in a tiny inline `<style>`. The variable is used in [`/assets/style-b.css`](../assets/style-b.css) for:
+Each Style-B page sets `--domain-accent` in a tiny inline `<style>`. The variable is used in [`/setting/assets/style-b.css`](../published/setting/assets/style-b.css) for:
 
 - `.subregion-card::before` left stripe (graphic)
 - `.gods-city` border, `.gods-city::before/::after` ✦ glyphs (graphic + small text)
@@ -89,7 +89,7 @@ The 13 per-god `--<god>` / `--<god>-light` pairs in style-a.css are used as grap
 
 ## Keyboard focus (WCAG 2.4.7)
 
-A universal `:focus-visible` rule lives at the bottom of [`/assets/site-nav.css`](../assets/site-nav.css):
+A universal `:focus-visible` rule lives at the bottom of [`/setting/assets/site-nav.css`](../published/setting/assets/site-nav.css):
 
 ```css
 a:focus-visible,
@@ -110,7 +110,7 @@ This loads on every page (site-nav.css is in every page's `<head>`), so it cover
 
 ## Toggle button state (WCAG 4.1.2)
 
-The reveal-toggles for amber `◈ Popular Belief` and red `⚿ GM Secret` boxes are `<button>` elements that swap label and toggle a `.revealed` class on the next sibling. To announce state changes to assistive tech, [`/assets/site-interactions.js`](../assets/site-interactions.js):
+The reveal-toggles for amber `◈ Popular Belief` and red `⚿ GM Secret` boxes are `<button>` elements that swap label and toggle a `.revealed` class on the next sibling. To announce state changes to assistive tech, [`/setting/assets/site-interactions.js`](../published/setting/assets/site-interactions.js):
 
 1. Calls `btn.setAttribute('aria-expanded', revealed ? 'true' : 'false')` inside `toggleReveal` on every click.
 2. Runs an `initAria()` pass on `DOMContentLoaded` that seeds `aria-expanded="false"` on every `.secret-toggle`, `.secret-era-toggle`, and `.legend-era-toggle`.

@@ -19,7 +19,7 @@ The shared machinery lives there; **do not duplicate it, reuse it**. From `sub-r
 - The **naming-stratum rule** (old → Basque/Icelandic drift; modern/institutional → English drift; regional registers) and the **collision check** (*Compact* reserved, *Order* heavy).
 - **Surface-before-writing**, **lore-first**, and the **commit / publish signal** protocol (commit to lore only on "commit"; touch HTML only on an explicit publish/promote signal).
 - The **single-page rule**: a god-city is one page, so **build it directly, no agent**, especially when you just wrote its lore and hold the canon in context.
-- The **Style B page conventions** (template `talan/domains/vindul/haizetsua/haizetsua.html`; accent must clear 3:1 against `#0f0c08`; card conventions; absolute links; no em-dashes).
+- The **Style B page conventions** (template `published/setting/talan/domains/vindul/haizetsua/haizetsua.html`; accent must clear 3:1 against `#0f0c08`; card conventions; absolute links; no em-dashes).
 
 What this skill **adds** is everything below: the pre-locked seed, the depth axes, the manifestation pattern, the two-tier reveal, and the god-city-specific conventions.
 
@@ -33,7 +33,7 @@ What this skill **adds** is everything below: the pre-locked seed, the depth axe
 - The **domain file** (`lore/geography/<domain>.md`) and each **bordering domain** end-to-end.
 - The **god's per-god sheet in `gods.md`, including the per-god `⚿ GM Secret`** (Cronus's mortality, Tani's death/rebirth, etc.). The GM-tier seam of a god-city usually grows from the god's own secret, so read it.
 - The **`docs/god-city-seeds.md` entry** (seed + uniqueness + build-notes + build flags) and the **sibling god-cities** for the uniqueness test.
-- **Grep the city name** across the repo: god-cities accrete stray canon (Frae City had The Lantern Press and the Cronus-clergy envoys; Thekkavar had the Helgaft and Jeanne Pintos). The **`grand-gods.html` per-god `city` field and worship/depiction lines** are player-facing canon to honor and elaborate, not contradict.
+- **Grep the city name** across the repo: god-cities accrete stray canon (Frae City had The Lantern Press and the Cronus-clergy envoys; Thekkavar had the Helgaft and Jeanne Pintos). The **`published/setting/cosmology/grand-gods.html` per-god `city` field and worship/depiction lines** are player-facing canon to honor and elaborate, not contradict.
 - If the seed touches loaded canon (Crimson Rain, the Storveldi Denbora, a god's death), pre-read the relevant `timeline.md` / `cosmology.md` section too.
 
 **Phases 1-2 — the seed is already locked.** Do not run the seed-questions or generate seeds. **Confirm the locked seed back to the user from the roster** and short-circuit, the way the Lautara resketch did. The per-city build-notes often carry extra design the user set in an earlier workshop; fold it in.
@@ -46,7 +46,7 @@ What this skill **adds** is everything below: the pre-locked seed, the depth axe
 
 **Phase 6 — commit lore** on the explicit go: the city section in `lore/geography/<domain>.md`, glossary (sub-region etymology + faction proper-nouns block), `lore/ancestries.md` notes for the anchor peoples, `docs/open-threads.md`, and the **status cell in `docs/god-city-seeds.md`**.
 
-**Phase 7 — HTML promotion** on the explicit publish/promote signal: build `talan/domains/<domain>/<slug>/<slug>.html` directly; upgrade the domain page's **God's-City callout** from a plain `<div>` to a clickable `<a class="gods-city">` with trailing ` →`; wire `assets/site-nav.js`, `docs/site-inventory.md`; mirror any **rename ripple** onto `domains.html` and `grand-gods.html` (the Denbora → Valreka case); update the seeds-doc status to done.
+**Phase 7 — HTML promotion** on the explicit publish/promote signal: build `published/setting/talan/domains/<domain>/<slug>/<slug>.html` directly; upgrade the domain page's **God's-City callout** from a plain `<div>` to a clickable `<a class="gods-city">` with trailing ` →`; wire `published/setting/assets/site-nav.js`, `docs/site-inventory.md`; mirror any **rename ripple** onto `published/setting/talan/domains/domains.html` and `published/setting/cosmology/grand-gods.html` (the Denbora → Valreka case); update the seeds-doc status to done.
 
 ## The depth axes (grill all of these)
 
@@ -66,20 +66,20 @@ Render them in the Phase 5 lore and the Phase 7 page. A full god-city build hits
 
 - **A god rules his temple, not his city** (canon, `gods.md`, *The Gods' City-States*). The city-state is self-governing; the god governs only his sanctum and **walks among the citizens** (the manifestation). Design the civic government as a mortal polity; keep the god's seat a separate beat.
 - **The God's-City callout** renders the city's heart as a `.gods-city` block (the Eye, the Open Forge, the Mother Whale, the Leize, the seven-chained rock). On promotion it becomes the clickable link from the domain page.
-- **Accent**: pick a hue that fits the god and clears 3:1 against `#0f0c08`; where the god has a pantheon orb accent in `grand-gods.html`, harmonising with it is a nice touch (Tani's `#9070b0` → Valreka's amethyst).
-- **Honor the `grand-gods.html` canon.** Each god-city has a `city` field plus worship/depiction lines there; the page should elaborate them, never contradict (Thekkavar's Infinite Library test; Frae City's lightest-touch clergy and the tavern claims that hold up).
+- **Accent**: pick a hue that fits the god and clears 3:1 against `#0f0c08`; where the god has a pantheon orb accent in `published/setting/cosmology/grand-gods.html`, harmonising with it is a nice touch (Tani's `#9070b0` → Valreka's amethyst).
+- **Honor the `published/setting/cosmology/grand-gods.html` canon.** Each god-city has a `city` field plus worship/depiction lines there; the page should elaborate them, never contradict (Thekkavar's Infinite Library test; Frae City's lightest-touch clergy and the tavern claims that hold up).
 
 ## The built seven (depth-bar and reference implementations)
 
 | City | File(s) | ◈ / ⚿ seam |
 |---|---|---|
-| **Merkavar** | `lore/geography/lautara.md` *(Notable Locations)*; `talan/domains/lautara/merkavar/merkavar.html` | the smile-touched ◈; the Stall Jianna Keeps ⚿ |
+| **Merkavar** | `lore/geography/lautara.md` *(Notable Locations)*; `published/setting/talan/domains/lautara/merkavar/merkavar.html` | the smile-touched ◈; the Stall Jianna Keeps ⚿ |
 | **Myrria** | `lore/geography/myrkono.md`; promoted page | reference-depth (sanctuary / second chances) |
-| **Haizava** | `lore/geography/vindul.md`; `talan/domains/vindul/haizava/haizava.html` | the Stranger on the Svif ◈; Who Banishes the Grasping ⚿ |
-| **Eldara** | `lore/geography/sumendar.md`; `talan/domains/sumendar/eldara/eldara.html` | the Apprentice ◈; the eruption-clock + the Odain tie ⚿⚿ |
-| **Valreka** | `lore/geography/lioaru.md`; `talan/domains/lioaru/valreka/valreka.html` | the old woman at the dig ◈; Amona is Tani + the water-bearers' atonement ⚿⚿ |
-| **Thekkavar** | `lore/geography/ezkudon.md`; `talan/domains/ezkudon/thekkavar/thekkavar.html` | Enki teaches ◈; the price in the deep + what waits in the Leize ⚿⚿ |
-| **Frae City** | `lore/geography/askamira.md`; `talan/domains/askamira/frae-city/frae-city.html` | the broken-chain man ◈; Cronus was mortal ⚿ |
+| **Haizava** | `lore/geography/vindul.md`; `published/setting/talan/domains/vindul/haizava/haizava.html` | the Stranger on the Svif ◈; Who Banishes the Grasping ⚿ |
+| **Eldara** | `lore/geography/sumendar.md`; `published/setting/talan/domains/sumendar/eldara/eldara.html` | the Apprentice ◈; the eruption-clock + the Odain tie ⚿⚿ |
+| **Valreka** | `lore/geography/lioaru.md`; `published/setting/talan/domains/lioaru/valreka/valreka.html` | the old woman at the dig ◈; Amona is Tani + the water-bearers' atonement ⚿⚿ |
+| **Thekkavar** | `lore/geography/ezkudon.md`; `published/setting/talan/domains/ezkudon/thekkavar/thekkavar.html` | Enki teaches ◈; the price in the deep + what waits in the Leize ⚿⚿ |
+| **Frae City** | `lore/geography/askamira.md`; `published/setting/talan/domains/askamira/frae-city/frae-city.html` | the broken-chain man ◈; Cronus was mortal ⚿ |
 
 ## Hard rules (inherited, restated)
 

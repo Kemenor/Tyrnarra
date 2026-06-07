@@ -32,7 +32,7 @@ All three conventions are non-negotiable for new cards. Mixed-state cards (links
 </a>
 ```
 
-What this gets you, from the shared rules in [`/assets/style-b.css`](../assets/style-b.css) (`a.accent-card`, `.accent-card.is-link`, `.accent-card.is-link:hover`):
+What this gets you, from the shared rules in [`/setting/assets/style-b.css`](../published/setting/assets/style-b.css) (`a.accent-card`, `.accent-card.is-link`, `.accent-card.is-link:hover`):
 
 - `cursor: pointer` over the whole card surface.
 - `color: inherit; text-decoration: none;` so the body prose looks like card content, not a link.
@@ -43,12 +43,12 @@ The title's trailing `→` is part of the text content, not a CSS pseudo-element
 
 ### Reference implementations
 
-- **Sub-region cards on sumendar.html** ([`/talan/domains/sumendar/sumendar.html`](../talan/domains/sumendar/sumendar.html)): *Order of Steam →* and *Dragon's Reach →* use the canonical `<a class="subregion-card">` pattern. Other sub-regions on the same page are non-clickable `<div class="subregion-card">` because they have no dedicated page yet. This is the strictest model: the same hub displays both states side-by-side cleanly.
-- **Domain cards on talan.html** ([`/talan/talan.html`](../talan/talan.html)): 13 `<a class="domain-card">` cards, one per god domain.
-- **Ancestry cards on ancestries.html** ([`/talan/ancestries.html`](../talan/ancestries.html)): 13 `<a class="accent-card ... ancestry-card is-link">` cards.
-- **Historical civilisation cards on historical.html** ([`/talan/historical/historical.html`](../talan/historical/historical.html)): three `<a class="subregion-card">` cards (Golden Empire, Storveldi Denbora, Elden).
+- **Sub-region cards on sumendar.html** ([`/setting/talan/domains/sumendar/sumendar.html`](../published/setting/talan/domains/sumendar/sumendar.html)): *Order of Steam →* and *Dragon's Reach →* use the canonical `<a class="subregion-card">` pattern. Other sub-regions on the same page are non-clickable `<div class="subregion-card">` because they have no dedicated page yet. This is the strictest model: the same hub displays both states side-by-side cleanly.
+- **Domain cards on talan.html** ([`/setting/talan/talan.html`](../published/setting/talan/talan.html)): 13 `<a class="domain-card">` cards, one per god domain.
+- **Ancestry cards on ancestries.html** ([`/setting/talan/ancestries.html`](../published/setting/talan/ancestries.html)): 13 `<a class="accent-card ... ancestry-card is-link">` cards.
+- **Historical civilisation cards on historical.html** ([`/setting/talan/historical/historical.html`](../published/setting/talan/historical/historical.html)): three `<a class="subregion-card">` cards (Golden Empire, Storveldi Denbora, Elden).
 - **Continent cards on talan.html** Other Continents section: Sortalde and the Red Empire continent are `<a class="accent-card framed is-link continent-card">`; the *Unmapped* placeholder is a plain `<div>`.
-- **The Vermin Queen card on the-binding.html** ([`/talan/the-binding.html`](../talan/the-binding.html)): the only General with a sited dungeon page, so the only one of nine that's clickable. Pattern: `<a class="accent-card framed general-card is-link">` linking to the Hollow.
+- **The Vermin Queen card on the-binding.html** ([`/setting/talan/the-binding.html`](../published/setting/talan/the-binding.html)): the only General with a sited dungeon page, so the only one of nine that's clickable. Pattern: `<a class="accent-card framed general-card is-link">` linking to the Hollow.
 
 ---
 
@@ -69,7 +69,7 @@ For cards that reveal more content in place when clicked (rather than navigating
 </div>
 ```
 
-Styling (from [`/assets/style-a.css`](../assets/style-a.css) `.expand-hint`):
+Styling (from [`/setting/assets/style-a.css`](../published/setting/assets/style-a.css) `.expand-hint`):
 
 - Small Cinzel uppercase text in a thin gold-bordered pill.
 - Brightens on card hover.
@@ -79,7 +79,7 @@ The pill is the universal affordance for *click me to reveal more*. Don't replac
 
 ### Reference implementations
 
-- **God cards on grand-gods.html** ([`/grand-gods.html`](../grand-gods.html)): each of the 13 gods. The pill sits in the top-right of the card header alongside the orb and title block, and disappears when the card is expanded.
+- **God cards on grand-gods.html** ([`/setting/cosmology/grand-gods.html`](../published/setting/cosmology/grand-gods.html)): each of the 13 gods. The pill sits in the top-right of the card header alongside the orb and title block, and disappears when the card is expanded.
 
 ### When to use the expand pill
 

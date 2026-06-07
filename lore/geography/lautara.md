@@ -120,7 +120,7 @@ The clergy also do the slower political work of **agenda-control**, which is the
 
 **The relationship between the clergy and the assembly** is the deepest political question in Merkavar and one neither institution has formally resolved. The clergy interpret commercial law that the assembly enacts; the line between *interpretation* and *governance* is the same line every legal-religious tradition argues about, and Merkavar's version is no easier to settle. An assembly-passed trade standard supersedes prior church arbitration in principle; the clergy's role in shaping what the assembly votes on means the church's interpretations are inscribed in legislation before the legislators ever see it. Three different arbitration bodies in the last century have produced different answers to the supremacy question, and none has been accepted as final by both sides. The city runs anyway, because in Merkavar the well-functioning market is the highest civic good, and both clergy and assembly understand that an unresolvable structural argument is a small price for a functioning Market City.
 
-Merkavar has a dedicated page at [/talan/domains/lautara/merkavar/merkavar.html](../../talan/domains/lautara/merkavar/merkavar.html).
+Merkavar has a dedicated page at [/setting/talan/domains/lautara/merkavar/merkavar.html](../../published/setting/talan/domains/lautara/merkavar/merkavar.html).
 
 ---
 

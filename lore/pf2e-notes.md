@@ -41,11 +41,11 @@ Full source-mapping table (which god / plane each heritage descends from) lives 
 
 ## Cleric Domains
 
-The official PF2e cleric-domain register (61 domains as of the Remaster + Tian Xia + War of Immortals expansions) is the authoritative mechanical list. The published reference page at [`pf2e-registrar.html`](../pf2e-registrar.html) holds the master mapping from each PF2e domain to its in-world Tyrnarra granter (Bound 13 god, non-bound god, Vice Demon, Virtue Devil, General of Corruption, or Open / canon-pending).
+The official PF2e cleric-domain register (61 domains as of the Remaster + Tian Xia + War of Immortals expansions) is the authoritative mechanical list. The published reference page at [`pf2e-registrar.html`](../published/setting/cosmology/pf2e-registrar.html) holds the master mapping from each PF2e domain to its in-world Tyrnarra granter (Bound 13 god, non-bound god, Vice Demon, Virtue Devil, General of Corruption, or Open / canon-pending).
 
 ### The Thirteen's domains
 
-The 13 Bound Gods' grantable cleric domains live on [`pf2e-registrar.html`](../pf2e-registrar.html). Bound god assignments follow a **no-sharing rule**: each PF2e domain that any of the Thirteen grants is granted by exactly one god, the deity it fits most strongly. Cross-portfolio overlap (a domain credibly fitting two gods) is resolved by giving the domain to whichever god's *primary* aspects align most directly; the other god keeps the *flavour* of the domain in lore but not the mechanical grant. The Thirteen between them currently claim **46 of the 61 PF2e cleric domains**.
+The 13 Bound Gods' grantable cleric domains live on [`pf2e-registrar.html`](../published/setting/cosmology/pf2e-registrar.html). Bound god assignments follow a **no-sharing rule**: each PF2e domain that any of the Thirteen grants is granted by exactly one god, the deity it fits most strongly. Cross-portfolio overlap (a domain credibly fitting two gods) is resolved by giving the domain to whichever god's *primary* aspects align most directly; the other god keeps the *flavour* of the domain in lore but not the mechanical grant. The Thirteen between them currently claim **46 of the 61 PF2e cleric domains**.
 
 ### Lore-implicit domains: Tyrnarra theological flavour, not PF2e-mechanical
 
