@@ -11,39 +11,34 @@
 # subscription downloads and other licensed assets) are kept LOCAL ONLY and never
 # published to GitHub Pages. Drop full-res originals in a `_full/` subfolder:
 # under a campaign's maps/ for campaign-specific art, or under the shared
-# gm-notes/map-library/ for reusable libraries. Only the downsized web copies
+# map-library/ for reusable libraries. Only the downsized web copies
 # (and the committed text catalogues) reach GitHub. The `.gitkeep` keeps each
 # `_full/` present on a fresh clone.
-gm-notes/**/_full/*
-!gm-notes/**/_full/.gitkeep
+published/gm-notes/**/_full/*
+!published/gm-notes/**/_full/.gitkeep
 
 # pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
 # and the rebuildable SQLite snapshot are local-only build artifacts. Run
 # `python rebuild.py` to regenerate both. Homebrew creature JSON IS committed.
-gm-notes/tools/encounterBuilder/_sources/
-gm-notes/tools/encounterBuilder/bestiary.db
-gm-notes/tools/encounterBuilder/items.db
-gm-notes/tools/encounterBuilder/__pycache__/
+published/gm-notes/tools/encounterBuilder/_sources/
+published/gm-notes/tools/encounterBuilder/bestiary.db
+published/gm-notes/tools/encounterBuilder/items.db
+published/gm-notes/tools/encounterBuilder/__pycache__/
 
 # Python bytecode caches anywhere under the GM tools.
 __pycache__/
 *.pyc
 
 # API keys / secrets for the GM tools (fal.ai, Forge, etc.) - LOCAL ONLY, never committed.
-gm-notes/tools/**/*_key.txt
+published/gm-notes/tools/**/*_key.txt
 **/*.secret
-gm-notes/tools/**/.env
+published/gm-notes/tools/**/.env
 
 # Generated image-gen output (the user's own fal.ai art) IS committed for
 # portability: portraits/, frames/, and the baked tokens/ travel with the repo
 # (generation is non-deterministic, so the prompts alone can't reproduce the
 # exact approved cast). Only genuine scratch is ignored: Forge URL maps, variant
 # test-bakes, and re-upload temp dirs. (Keys and __pycache__ are ignored above.)
-gm-notes/**/forge_urls.json
-gm-notes/**/tokens/_variant-*
-gm-notes/**/tokens/_reup/
-
-# Stray old campaigns/ dir left by the gm-notes rename: only the locked,
-# regenerable pf2e _sources clone remains there. Delete it when its lock clears
-# (rebuild.py re-clones under gm-notes/), then drop this line.
-campaigns/
+published/gm-notes/**/forge_urls.json
+published/gm-notes/**/tokens/_variant-*
+published/gm-notes/**/tokens/_reup/
