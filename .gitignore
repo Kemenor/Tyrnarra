@@ -29,6 +29,11 @@ campaigns/tools/encounterBuilder/__pycache__/
 __pycache__/
 *.pyc
 
+# API keys / secrets for the GM tools (fal.ai etc.) - LOCAL ONLY, never committed.
+campaigns/tools/**/fal_key.txt
+**/*.secret
+campaigns/tools/**/.env
+
 # Generated NPC portraits (the user's image-gen output) stay local until uploaded
 # to Foundry; the prompts (*.portraits.json) are committed, the rendered images
 # are not.

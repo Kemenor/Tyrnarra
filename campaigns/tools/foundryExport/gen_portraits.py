@@ -44,7 +44,13 @@ def main():
     a = ap.parse_args()
 
     if not os.environ.get("FAL_KEY"):
-        sys.exit("Set FAL_KEY in your environment (get one at https://fal.ai/dashboard/keys).")
+        # Fallback: a gitignored fal_key.txt next to this script.
+        keyfile = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fal_key.txt")
+        if os.path.exists(keyfile):
+            os.environ["FAL_KEY"] = open(keyfile, encoding="utf-8").read().strip()
+    if not os.environ.get("FAL_KEY"):
+        sys.exit("Set FAL_KEY in the environment, or put it in fal_key.txt next to this "
+                 "script (gitignored). Get a key at https://fal.ai/dashboard/keys.")
     try:
         import fal_client
         import requests
@@ -70,9 +76,11 @@ def main():
             continue
         print(f"  render {slug} ...", flush=True)
         try:
-            result = fal_client.subscribe(a.model, arguments={
-                "prompt": prompt, "image_size": a.size, "num_images": 1,
-            })
+            args = {"prompt": prompt, "image_size": a.size, "num_images": 1}
+            fmt = {"jpg": "jpeg"}.get(a.ext, a.ext)
+            if fmt in ("png", "jpeg", "webp"):
+                args["output_format"] = fmt
+            result = fal_client.subscribe(a.model, arguments=args)
             url = (result.get("images") or [{}])[0].get("url")
             if not url:
                 raise RuntimeError(f"no image url in result: {result}")
