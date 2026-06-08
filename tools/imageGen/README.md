@@ -70,9 +70,15 @@ anthro/furry phrasing and push the human trope out via the negatives:
 }
 ```
 
-`mj.character` / `mj.wardrobe` / `mj.style` / `mj.version` / `mj.stylize` /
-`mj.negative` / `mj.ow` override the fal text **for Midjourney only**; the fal
-pipeline ignores the block. Worked example: `sable-rei.set.json`.
+`mj.character` / `mj.wardrobe` / `mj.style` / `mj.artists` / `mj.version` /
+`mj.stylize` / `mj.negative` / `mj.ow` override the fal text **for Midjourney only**;
+the fal pipeline ignores the block. Worked example: `sable-rei.set.json`.
+
+**Grounding the style.** If Midjourney comes out cartoony, name painter anchors via
+`mj.artists` (a list) or `--artists "Brom, Donato Giancola"`; the tool appends "in
+the style of …". Pair that with cartoon-pushing negatives (`cartoon, cel shaded,
+flat colors, chibi`) and drop fandom-style words from `mj.style`. Sable uses Brom +
+Donato Giancola + Charles R. Knight for a grounded oil-painting look.
 
 Generated art **is committed** (generation is non-deterministic, so the prompts
 alone can't reproduce the exact approved images). Downstream Foundry steps

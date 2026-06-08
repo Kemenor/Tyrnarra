@@ -9,8 +9,9 @@
   "mj": {
     "_note": "Midjourney-only overrides. MJ reads 'kitsune' as a human with fox ears, so describe Sable as anthro/furry fox-folk and push the human trope out in the negatives. The fal pipeline ignores this block.",
     "character": "an anthropomorphic fox character (anthro, furry), a bipedal humanoid fox-folk with a full fox head and muzzle and fur over the whole face and body; slim mid-thirties build; silver-black fur, dark through the body with a cold silver wash at the muzzle, brow and temples and along a single bushy silver-tipped fox tail; tall pointed fox ears, one upright and one tucked under dark head-hair; sharp clever amber eyes; a knowing toothy half-smile with a hint of sharp teeth",
-    "style": "anthropomorphic animal character concept art, painterly semi-realistic furry-fandom style, dramatic chiaroscuro lighting, muted earthy palette with cool silver rim light, dark vignette background",
-    "negative": "human face, human skin, bare human face, anime girl, kitsune woman, woman with fox ears, realistic wild fox, fox on all fours, photo, text, watermark, frame, border, signature",
+    "style": "naturalistic anthropomorphic creature design, grounded semi-realistic oil and digital painting, detailed realistic fur and animal anatomy, dramatic chiaroscuro lighting, muted earthy palette with cool silver rim light, dark vignette background",
+    "artists": ["Brom", "Donato Giancola", "Charles R. Knight"],
+    "negative": "cartoon, cartoony, cel shaded, flat colors, chibi, cute mascot, sticker, anime, human face, human skin, bare human face, kitsune woman, woman with fox ears, realistic wild fox, fox on all fours, photo, text, watermark, frame, border, signature",
     "version": "7",
     "ow": 400
   },

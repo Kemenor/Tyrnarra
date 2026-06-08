@@ -15,7 +15,7 @@ optional `--s` (stylize), and `--no`.
 Midjourney-only overrides: if the spec has an `mj` block, its keys replace the fal
 text for MJ output: `mj.character` / `mj.wardrobe` / `mj.style` (e.g. anthro/furry
 vocabulary so a beast-ancestry reads as fox-folk, not a human with fox ears), plus
-`mj.version` / `mj.stylize` / `mj.negative` / `mj.ow`. CLI flags beat the mj block,
+`mj.artists` (style anchors) / `mj.version` / `mj.stylize` / `mj.negative` / `mj.ow`. CLI flags beat the mj block,
 which beats the top-level fal values.
 
 Consistency: Midjourney's character lock is the **omni-reference** (`--oref <image
@@ -66,8 +66,18 @@ def clean_style(style):
     return style.strip().rstrip(",;. ").strip()
 
 
-def build_prompt(shot, character, wardrobe, style, version, stylize, raw, negative):
+def as_list(v):
+    if not v:
+        return []
+    if isinstance(v, str):
+        return [s.strip() for s in v.split(",") if s.strip()]
+    return [str(s).strip() for s in v if str(s).strip()]
+
+
+def build_prompt(shot, character, wardrobe, style, artists, version, stylize, raw, negative):
     desc = f"{shot['framing'].strip()} {character.strip()}, {wardrobe.strip()}. {clean_style(style)}."
+    if artists:
+        desc += " in the style of " + ", ".join(artists) + "."
     parts = [desc, f"--ar {ar_of(shot.get('size'))}", f"--v {version}"]
     if raw:
         parts.append("--style raw")
@@ -84,6 +94,7 @@ def main():
     ap.add_argument("--stylize", type=int, help="--s value (0-1000). Overrides spec mj.stylize.")
     ap.add_argument("--ow", type=int, help="Omni-weight for the consistency hint (0-1000, default 100). Overrides spec mj.ow.")
     ap.add_argument("--negative", help="Terms for --no. Overrides spec mj.negative.")
+    ap.add_argument("--artists", help="Comma-separated style anchors -> 'in the style of ...'. Overrides spec mj.artists.")
     ap.add_argument("--no-raw", action="store_true", help="Drop --style raw.")
     a = ap.parse_args()
 
@@ -100,6 +111,7 @@ def main():
     character = mj.get("character", spec.get("character", ""))
     wardrobe = mj.get("wardrobe", spec.get("wardrobe", ""))
     style = mj.get("style", spec.get("style", ""))
+    artists = as_list(a.artists) if a.artists else as_list(mj.get("artists"))
     version = a.version or mj.get("version") or "7"
     stylize = a.stylize if a.stylize is not None else mj.get("stylize")
     negative = a.negative or mj.get("negative") or DEFAULT_NEG
@@ -113,7 +125,7 @@ def main():
     for key in order:
         tag = "  (anchor, make this first)" if key == anchor else ""
         print(f"## {key}{tag}")
-        print(build_prompt(shots[key], character, wardrobe, style, version, stylize, raw, negative))
+        print(build_prompt(shots[key], character, wardrobe, style, artists, version, stylize, raw, negative))
         if key != anchor:
             print(f"#  consistent: append  --oref <{anchor} image URL> --ow {ow}")
         print()
