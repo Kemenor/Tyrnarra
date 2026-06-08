@@ -48,14 +48,17 @@ calls nothing and needs no key; you paste the prompts manually.
 
 ```
 python mj_prompts.py --spec <path>/<slug>.set.json
+# after rendering the anchor, bake its omni-reference into the other shots:
+python mj_prompts.py --spec <path>/<slug>.set.json --anchor-url <anchor image URL>
 # --profile <id>; --version 8.1; --stylize 250; --ow 400; --artists "Brom, Donato Giancola"
 ```
 
 It maps each shot's `size` to `--ar` and adds `--v` and `--raw`, plus any of `--s`,
 `--profile`, and `--no` that are set. For a **consistent set**, Midjourney's
 character lock is the omni-reference (`--oref <image URL> --ow 0-1000`, **V7-only**):
-generate the anchor shot first, then append `--oref <its URL> --ow 100` to the
-others (or drag the anchor image in). The output prints that hint per shot.
+generate the anchor shot first, then pass `--anchor-url <its URL>` to bake
+`--oref … --ow` into the other shots (or append it by hand / drag the anchor image
+in). With no anchor URL given, the output prints the hint per shot instead.
 
 ### Config layers (each overrides the previous)
 

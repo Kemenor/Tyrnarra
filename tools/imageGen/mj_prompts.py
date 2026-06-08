@@ -114,6 +114,7 @@ def main():
     ap.add_argument("--ow", type=int, help="Omni-weight for the consistency hint (default 100). Overrides mj.ow / defaults.")
     ap.add_argument("--negative", help="Terms for --no (off unless set). Overrides mj.negative / defaults.")
     ap.add_argument("--artists", help="Comma-separated style anchors -> 'in the style of ...' (off unless set). Overrides mj.artists / defaults.")
+    ap.add_argument("--anchor-url", help="URL of the rendered anchor image; bakes --oref <url> --ow into the non-anchor prompts.")
     ap.add_argument("--no-raw", action="store_true", help="Drop --raw.")
     a = ap.parse_args()
 
@@ -155,8 +156,11 @@ def main():
     for key in order:
         tag = "  (anchor, make this first)" if key == anchor else ""
         print(f"## {key}{tag}")
-        print(build_prompt(shots[key], character, wardrobe, style, artists, profile, version, stylize, raw, negative))
-        if key != anchor:
+        line = build_prompt(shots[key], character, wardrobe, style, artists, profile, version, stylize, raw, negative)
+        if key != anchor and a.anchor_url:
+            line += f" --oref {a.anchor_url} --ow {ow}"
+        print(line)
+        if key != anchor and not a.anchor_url:
             print(f"#  consistent: append  --oref <{anchor} image URL> --ow {ow}")
         print()
 
