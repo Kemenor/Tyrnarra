@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nahaskel · The Unmapped City · Nashavel · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #c09030;
+    --card-bg: rgba(40,32,12,0.55);
+  }
+
+  /* Coin / Casting governance cards */
+  .coin-grid { --card-pad: 16px 18px; }
+  .coin-grid .card-name { font-size: 1rem; line-height: 1.55; }
+  .coin-grid p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+  /* The anti-tyranny principle callout (left-bordered, coin-toned) */
+  .principle-call { --call-bg: rgba(46,38,14,0.4); }
+</style>
+</head>
+<body data-page="nahaskel">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/nashavel/nashavel.html">Nashavel</a><span class="sep">›</span><span>Nahaskel</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Nahaskel</div>
+    <div class="page-subtitle">The Unmapped City · Vesuna's God-City</div>
+    <div class="page-flavor">The cartographers gave up centuries ago; the locals never bothered. The city its own people will not stop remaking, and the one thing that never changes is that the people do not mind.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>nahas</i> (chaos, disorder, to mix) → scrambled and drifted to <b>Nahaskel</b>. The chaos of the domain is in the name itself, the root jumbled on its way to the present.</dd>
+    <dt>Position</dt><dd>The heart of the <b>Vernua Dominion</b>, in Nashavel's dense old-growth forest, set on ground where even the wild paths do not stay fixed. The one place on the continent that out-changes the forest around it.</dd>
+    <dt>Terrain</dt><dd>Ancient wild-magic woodland that will not hold a path for long, and a city that holds one even less. Provisioned off the Dominion's settled countryside, because no dependable chain runs from farm to market inside the churn.</dd>
+    <dt>Character</dt><dd>
+      <i>A city its own people remake overnight, where what is shared is decided by the toss of a coin; read it never, ask your way always.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Self-Remaking</span><span class="pill">Coin-Governed</span><span class="pill">Unmapped</span><span class="pill">Wonders &amp; Abominations</span></div>
+    </dd>
+    <dt>Peoples</dt><dd><b>Gnomes</b> above all, the chaos-feyfolk who hold the city's temperament; <b>Ganzi</b> with the planes in their blood; and the more cautious <b>Conrasu</b>, chaos given a body, the thread of restraint in a city short on it.</dd>
+    <dt>Tongue</dt><dd>Talanese for trade and abroad; the civic common ground is the cheerful, shameless <b>ask</b>, the universal habit of a city no one fully knows their way around.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Vesuna</b>-devotional, with no fixed liturgy anywhere and the <b>coin</b> in every rite. The goddess of many forms walks her own city as <b>the New Face</b>, the unknown newcomer with the next idea.</dd>
+    <dt>Rule</dt><dd>No standing ruler and no standing government. What is yours you remake freely; what is shared is settled by the open coin-throw, <b>the Casting</b>, and no office outlasts the cast that made it.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">Vesuna's Seat</div>
+    <div class="gods-city-name">The Sanctum</div>
+    <div class="gods-city-byname">the seat that wanders · no one finds it the same way twice</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-unmapped-city" class="section-heading">The Unmapped City</h2>
+  <div class="prose">
+    <p>Nahaskel is the city its own people will not stop remaking, and the line that governs everything runs between what is yours and what is shared. <b>What is yours, you remake freely.</b> Your home, your shop, your craft, the trade you ply: all of it changed overnight on nothing but a notion, no permission asked and no authority to ask. The baker who was here yesterday is a nail-shop this morning because the baker simply decided, and no register tracks it because none could. The cityscape churns a thousand small changes a day and a few enormous ones a week, and a Nahaskeli finds the churn no stranger than weather.</p>
+
+    <p><b>What is shared answers to the coin.</b> A bridge, a public square, a rule that would bind a neighbour, the very government of a quarter: those go up as a proposal, and the proposal is settled by a throw. So the city erupts new things without end and yet holds together, because the line between the private notion and the shared cast is the one thing every Nahaskeli keeps. Wonders come of it, and abominations too, the <b>Chaos tax</b> on a city that will try anything once: some overnight makings are marvels and some are dangerous or monstrous, and the city has learned to live beside both, never the same twice.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-coin-decides" class="section-heading">The Coin Decides What Is Shared</h2>
+  <div class="prose">
+    <p>Vesuna's worship keeps no fixed liturgy anywhere on Talan, and in her own city the coin that unifies all her rites is also the machinery of state. When a shared matter comes due, the quarter gathers and the coin is thrown in the open. A throw is sacred and final: you do not appeal a cast, you propose again next time, and the city has often reinvented itself out from under your grievance before the bitterness can set.</p>
+  </div>
+
+  <div class="card-grid coin-grid">
+    <div class="accent-card">
+      <div class="card-name">The Casting</div>
+      <p>The open coin-throw where shared proposals resolve, governance and worship in a single act, and the one event a city that schedules nothing reliably turns out for. Anyone may put up a change; the whole quarter watches the throw; the result binds until the next is proposed. There is no office to capture and no roll to rig under that many eyes.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Personal Coin</div>
+      <p>Below the civic scale, the faith lives in the coin most Nahaskeli carry, spent on the small private ties of a day. <i>Heads I take the river path, tails I try the new baker.</i> You let the coin pick to keep yourself limber, practising letting go of the wheel where it costs nothing, so that when it costs something you already know how.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Tellers</div>
+      <p>Vesuna's clergy keep no creed to preach, so the Tellers do other work: they call the coin at a Casting and witness the throw, they read it in divination for those who ask, and they keep <b>the telling</b>, the running memory of what the city was last week and the week before, the nearest thing a place with no archive has to one. The eldest is <b>Old Tally</b>, a Gnome who can name three vanished versions of any street you point to.</p>
+    </div>
+  </div>
+
+  <div class="principle-call">
+    <div class="p-label">The Principle That Holds It Together</div>
+    <p><i>You cannot keep what the coin can reassign.</i></p>
+    <p>It is the deepest reason no tyrant has ever held Nahaskel. You cannot hold an office the coin gives away, nor make a seizure stick in a city that will have rebuilt around it by next week. Where Lograth's law is absolute and forever, Nahaskel's churn is the safeguard itself: the very thing that would let a strongman entrench is the thing the city reinvents out from under him. The wise here ride a good idea as far as it carries and let go before they are asked to.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="getting-around" class="section-heading">Getting Around · or Not</h2>
+  <div class="prose">
+    <p>A Nahaskeli wakes not quite knowing what changed in the night, and the first hour of the day is <b>re-learning the city</b>, neighbours calling across the street what moved and what is gone and what somebody built where the well used to be. It is not a burden; it is the day's first small pleasure, weather you can talk to. Nahaskel has no map and wants none. Where Haizava hires a wind-reader to read its skies, Nahaskel keeps no one whose trade is knowing where things are, because no one fully does. A native is not oriented; a native is at peace with being a little lost.</p>
+
+    <p>There are no fixed addresses. You go toward a thing and ask the last few yards, and asking a stranger the way is constant, universal, and carries no shame whatever. What floors a visitor is that there is nothing to master: they keep trying to learn the city the way you learn any other, and it will not hold still long enough, and the local finds their suffering gently funny.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The ask.</b> The closest thing Nahaskel has to a signature way of moving is the absence of one, and the social fabric that fills the gap: directions given by landmark and rumour (<i>past where the glassblower was last week, ask again there</i>), passed hand to hand, always a little out of date and never resented. Deliveries, messages, and meeting a friend all run on description and the ask, not coordinates. It is the rare craft a visitor cannot fake, because they do not know who to ask or what the answer assumes.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The churn of conveyances.</b> How people move is its own reinvention, and it answers to no schedule. One quarter is deep in a one-wheel craze while the next has gone back to horses; a man rides a friendly summoned thing named <b>Grumble</b> that bites only when its stomach growls; somebody walks because why not. Every so often a fad blooms across the whole city the way starlings turn together, three weeks of everyone on scooters that nobody decreed, then it shatters and scatters back into the jumble. The conveyances pay the Chaos tax too: Grumble is the charming end of a spectrum whose far end is the contraption that throws its rider and the summons that did not come out friendly.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-young" class="section-heading">The Young · Where Staying the Same Is the Daring Thing</h2>
+  <div class="prose">
+    <p>Where reinvention is the establishment, rebellion has to invert, and in Nahaskel it does, two ways at once. A Nahaskeli comes of age with their <b>own coin</b>, the one they will carry for life, given or struck or won, and stakes their first binding cast: the first throw on something real and shared that they must then live by, un-taken-back. A child has others throw for them. You are an adult the day you let the coin decide a thing you cannot undo.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Thrill-Crews</div>
+      <p>The young who chase the Chaos tax their elders will not: summon the beast that might not stay friendly, ride the rebuild that might fall, stake casts no sensible adult would touch, for the thrill and the standing of having ridden the thing and lived. They are where the tax takes its casualties, and where half the city's new ideas are first tried by someone too young to be cautious.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Permanence-Rebels</div>
+      <p>The quieter rebels do the genuinely shocking thing, which in Nahaskel is to <i>stay the same</i>: pick one trade, one face, one shopfront, and refuse to change it out of sheer principle while their parents fret that they have gone rigid. It is the only city on Talan where <i>you never change</i> is the daring thing to say.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Dossa's Stall</div>
+      <p>The famous permanence-rebel is <b>Dossa</b>, a Conrasu, chaos given a body and choosing to hold still, who has kept the same tea-stall on the same corner for two scandalous years and will not alter so much as the sign. Her neighbours fret; lost visitors adore her, because Dossa's stall is the one place in Nahaskel you can find <i>twice</i>, which has made a rebel into the most reliable direction-giver in a city that gives directions by asking.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-the-city-makes" class="section-heading">What the City Makes and Cannot Keep</h2>
+  <div class="prose">
+    <p>Nahaskel exports novelty itself, in every form: an invention, a spell, a new working of magic, an item, a technique, a recipe no stable workshop would have risked. It cannot make the same thing twice, because no process survives the week, so it ships the spark and never the product line. Eldara's devotional crafters come not to copy but to be <i>inspired</i>, to carry a new idea home into their singular wonders; the actual mass-production happens far downstream, in the <a href="/setting/talan/domains/sumendar/sumendar.html">Order of Steam</a>'s works and Lautara's markets. <b>Prospectors</b> from all of them haunt Nahaskel as a perpetual idea-fair, racing to be first to the week's inventions and first to sign the mind behind one before it burns out or wanders off.</p>
+
+    <p>What the city cannot do is hold still, so it sends its permanence outward: its banking to <a href="/setting/talan/domains/lautara/merkavar/merkavar.html">Merkavar</a>, its binding law to <a href="/setting/talan/domains/zuzental/lograth/lograth.html">Lograth</a>, its manufacture to the Order of Steam. A city whose counterparty might be a nail-shop by Tuesday can anchor no bank, honour no year-long contract, seat no permanent institution; so it keeps none, and is unbothered.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>Pim, and the eponym that outlived its home.</b> The standing example of the city's quiet drain is <b>Pim</b>, a Gnome who one night cast a small clockwork into being on the Casting-floor and, finding no way to make a second, carried it to the Order of Steam, where it became a thing now sold in half the kitchens on Talan as a <i>pim</i>. He lives rich and far away now, but he comes back every so often, throws in on a rebuild for a few weeks for the sheer joy of it, and leaves again. In Nahaskel the night he first cast it is forgotten; nobody quite connects the cheerful Gnome lending a hand on the scaffolding to the <i>pim</i> in their own kitchen, the name outliving its origin everywhere except the city that birthed it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">Peoples</h2>
+  <div class="prose">
+    <p>Nahaskel draws the ancestries that thrive on change, and the cheerful ask is the common ground that holds them together. Who your people are matters less here than whether you can wake to a new street and grin at it.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Gnomes</div>
+      <p>The chaos-feyfolk who hold the city's temperament. A people who treat <i>let us try it differently this week</i> as the resting state are the engine of a city that remakes itself overnight, and the dominant folk of Nashavel besides. Where another domain made its Gnomes wanderers, Nahaskel made them its citizens, and its citizens its weather.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Ganzi</div>
+      <p>The planes in their blood, chaos-aligned and most at home where reality is least fixed. They take to Nahaskel's churn as if born to it, which by the measure of their heritage they nearly were, and they cluster thickest toward the Kaosadaemi side of the Dominion.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Conrasu</div>
+      <p>Chaos given a body and a careful disposition, the steady current in a city short on caution. A Conrasu is the one at the Casting who asks what happens if the cast goes the other way, and the city is better for the question. That the most measured folk in Nahaskel are themselves made of chaos is a joke the city enjoys.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, The New Face</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; The Stranger With the Next Idea</div>
+      Vesuna wears no fixed form, no gender, no ancestry, so in her own city she is the face nobody knows. The newcomer at the Casting with the mad proposal; the unfamiliar voice in the crowd that says <i>what if we tried it the other way</i> and watches it catch. The Nahaskeli instinct to hear out the stranger with the impossible notion is older than the city's manners and deeper than its patience: in a place where everyone is a little lost and any new face might be the goddess, no one is turned away unheard. The one time you waved off the stranger, the chronicles like to say, that was Her, and the city you woke to the next morning was the one she made to spite you.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, The Coin Is Honest, Except at the Two Edges</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Whose Hand Keeps the City Free</div>
+      <p style="font-style:italic; margin-top:0;">By every count Nahaskel should have torn itself apart a thousand times over, and never quite has. The people credit fair luck and their own resilience. Ninety-nine throws in a hundred, they are exactly right.</p>
+
+      <div class="card-grid coin-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Daily Churn Is Theirs</div>
+          <p>The everyday reinvention, the fads, the mad rebuilds, the ordinary casts, all of it is genuinely the people's own and genuinely chance. That is what keeps Nahaskel itself and not a second Haizava: here the people remake the city, and the wind does not do it to them. Vesuna's hand rests on the coin at two thresholds and nowhere else.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Floor · Against Tyranny</div>
+          <p>When a throw would let someone entrench for good, seize a quarter, make an office stick, the coin comes up against him. The safeguard the city calls structural fairness is Her, on purpose. No tyrant has <i>ever</i> held Nahaskel because the largest gamble has never once gone the tyrant's way, and that is not luck.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Ceiling · Against Dissolution</div>
+          <p>When the Chaos tax would go lethal, a summons that would not stay bound, a rebuild that would collapse the last coherence the city has, the coin turns against that too. <i>Luck is a coin; it has two sides; she is both,</i> and she only ever turns it at the brink, and lets the people own everything in between.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Unthrown</div>
+          <p>At the city's innermost point is a room whose door never opens onto twice, but the room itself never changes, the one fixed thing in a city that fixes nothing. A table, a coin atop it, two chairs: one carved and beautiful, a seat that would shame any mortal throne; the other plain bare wood, splinter-ready. The coin between them is the only gamble Vesuna has never finished, never thrown to learn heads or tails: whether she takes the throne and rules, or sits among them as one more lost soul. The city is free for exactly as long as it stays in the air. The Tellers tend a Sanctum they believe wanders, and only a few suspect this room is always there.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/nashavel/nashavel.html"><b>Nashavel →</b></a> · The Chaos Domain overview; the wild-magic forest Nahaskel sits at the heart of.</li>
+      <li><a href="/setting/cosmology/grand-gods.html"><b>The Bound Gods →</b></a> · Vesuna's full entry: her formless depiction, the coin theology, her place among the Thirteen.</li>
+      <li><a href="/setting/talan/domains/zuzental/lograth/lograth.html"><b>Lograth →</b></a> · The Judgment City, law made flesh and absolute; Nahaskel's exact inverse, the foil to the churn.</li>
+      <li><a href="/setting/talan/domains/vindul/haizava/haizava.html"><b>Haizava →</b></a> · The Shifting City; the other city that will not hold still, but reshaped by the wind, not by its own people.</li>
+      <li><a href="/setting/talan/domains/askamira/frae-city/frae-city.html"><b>Frae City →</b></a> · The Unchained City; sane and deliberately ungoverned where Nahaskel is gloriously mad. Liberty beside chaos.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Unmapped City's central canon is settled; several specifics remain open, the kind future story or future scholarship will close.</div>
+    <ol>
+      <li><b>The quarters.</b> Nahaskel holds no fixed districts the way other cities do, but the loose, drifting neighbourhoods that gather and disperse, and the few semi-stable anchors a Casting reliably gathers at, are open to name as stories want them.</li>
+      <li><b>Named Tellers.</b> Old Tally is the eldest; the wider clergy, the Teller who calls the dawn's first cast, the one who reads the coin for the desperate, the one who suspects what the Sanctum really is, are unnamed.</li>
+      <li><b>The fad-cycle's famous crazes.</b> The conveyance-fads and overnight wonders that swept the whole city and are still told of, the great abominations the Chaos tax once produced, and the casts that decided them, are open.</li>
+      <li><b>The Casting's forms.</b> Whether a quarter casts on a fixed day or whenever a proposal ripens, the customary words spoken over a throw, and how a contested proposal is worded before it goes to the coin, are canon-pending.</li>
+      <li><b>The prospectors' standing.</b> The buyers, scouts, and recruiters who haunt the idea-fair, their houses, their rivalries, and the famous signings that made a Nahaskeli spark someone else's fortune, are open for stories to cast.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · NASHAVEL · NAHASKEL</div>
+
+</div>
+
+</body>
+</html>
