@@ -49,13 +49,13 @@
         { slug: 'low-span-gm',        label: 'The Low Span',        href: '/gm-notes/furrious-five/low-span-gm.html',       children: [] },
         { slug: 'sable-rei-gm',       label: 'Sable Rei · Dossier', href: '/gm-notes/furrious-five/sable-rei-gm.html',      children: [] }
       ]},
-      { slug: 'quests', label: 'Quests', href: null, children: [
+      { slug: 'quests', label: 'Quests', href: '/gm-notes/furrious-five/quests.html', group: true, children: [
         { slug: 'quest-veldtmark',       label: 'The Veldtmark Invitation', href: '/gm-notes/furrious-five/quest-veldtmark/quest-veldtmark.html',             children: [] },
         { slug: 'quest-venomqueen',      label: 'Below the Quiet Docks',    href: '/gm-notes/furrious-five/quest-venomqueen/quest-venomqueen.html',           children: [] },
         { slug: 'quest-the-narrows-job', label: 'The Narrows Job',          href: '/gm-notes/furrious-five/quest-the-narrows-job/quest-the-narrows-job.html', children: [] }
       ]}
     ]},
-    { slug: 'tools', label: 'Tools', href: null, children: [
+    { slug: 'tools', label: 'Tools', href: null, group: true, children: [
       { slug: 'map-area-editor', label: 'Map Area Editor', href: '/gm-notes/tools/map-area-editor.html', children: [] }
     ]}
   ];
@@ -93,7 +93,16 @@
       if (openChain[n.slug]) li.classList.add('expanded');
 
       var row = el('div', 'gm-nav-row');
-      if (n.href) {
+      if (n.group) {
+        // Gold chapter-header. Clickable (→ hub) when it carries an href,
+        // a plain label otherwise; either way it keeps the small group size.
+        var head = el(n.href ? 'a' : 'span', 'gm-nav-grouplabel', n.label);
+        if (n.href) {
+          head.setAttribute('href', n.href);
+          if (n.slug === current) head.classList.add('is-current');
+        }
+        row.appendChild(head);
+      } else if (n.href) {
         var a = el('a', null, n.label);
         a.setAttribute('href', n.href);
         if (n.slug === current) a.classList.add('is-current');

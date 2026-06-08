@@ -66,12 +66,16 @@
   border-left: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.gm-nav-row > span.gm-nav-grouplabel {
-  flex: 1; padding: 7px 10px 3px;
+.gm-nav-row > .gm-nav-grouplabel {
+  flex: 1; min-width: 0; padding: 7px 10px 3px;
+  border: none; background: none;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--gm-gold, #c8a04a);
+  text-decoration: none; transition: color 0.15s;
 }
+a.gm-nav-grouplabel:hover,
+a.gm-nav-grouplabel.is-current { color: var(--gm-gold-bright, #e0bd66); background: none; }
 .gm-nav-row > a:hover {
   color: var(--gm-ink-bright, #f0ece0);
   border-left-color: rgba(194,72,60,0.5);
@@ -98,7 +102,8 @@
 .gm-nav-item.expanded > .gm-nav-sublist { max-height: 1600px; }
 
 .gm-nav-item[data-depth="2"] > .gm-nav-row > a,
-.gm-nav-item[data-depth="2"] > .gm-nav-row > span.gm-nav-grouplabel { padding-left: 22px; font-size: 0.9rem; }
+.gm-nav-item[data-depth="2"] > .gm-nav-row > .gm-nav-grouplabel { padding-left: 22px; }
+.gm-nav-item[data-depth="2"] > .gm-nav-row > a:not(.gm-nav-grouplabel) { font-size: 0.9rem; }
 .gm-nav-item[data-depth="3"] > .gm-nav-row > a { padding-left: 36px; font-size: 0.86rem; opacity: 0.94; }
 
 .gm-nav-foot {
