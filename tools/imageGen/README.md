@@ -48,37 +48,48 @@ calls nothing and needs no key; you paste the prompts manually.
 
 ```
 python mj_prompts.py --spec <path>/<slug>.set.json
-# --version 8.1 to test the newer model; --stylize 250; --ow 400
+# --profile <id>; --version 8.1; --stylize 250; --ow 400; --artists "Brom, Donato Giancola"
 ```
 
-It maps each shot's `size` to `--ar`, moves the fal "no text / frame / watermark"
-tail into `--no`, and adds `--v 7 --style raw`. For a **consistent set**,
-Midjourney's character lock is the omni-reference (`--oref <image URL> --ow 0-1000`,
-**V7-only**): generate the anchor shot first, then append `--oref <its URL> --ow 100`
-to the others (or drag the anchor image in). The output prints that hint per shot.
+It maps each shot's `size` to `--ar` and adds `--v` and `--raw`, plus any of `--s`,
+`--profile`, and `--no` that are set. For a **consistent set**, Midjourney's
+character lock is the omni-reference (`--oref <image URL> --ow 0-1000`, **V7-only**):
+generate the anchor shot first, then append `--oref <its URL> --ow 100` to the
+others (or drag the anchor image in). The output prints that hint per shot.
+
+### Config layers (each overrides the previous)
+
+1. the spec's top-level **fal** fields,
+2. **`mj.defaults.json`** (here) — house-wide MJ settings shared by every character:
+   your personalization `profile`, default `style`, `version`, `raw`, `ow`,
+3. the spec's optional **`mj` block** — per-character overrides,
+4. **CLI flags**.
+
+So your profile and house style live once in `mj.defaults.json`; a character's `mj`
+block only carries what is specific to it. With a profile set, the profile carries
+the look, so you usually drop artists and heavy style strings; negatives (`--no`)
+and artists are **off unless set**.
 
 **Beast ancestries (the `mj` block).** Midjourney reads "kitsune", "tengu",
 "catfolk" as a human with animal features, not the PF2e anthro folk that FLUX
-renders. Give such a character an optional `mj` block in its `*.set.json` with
-anthro/furry phrasing and push the human trope out via the negatives:
+renders. Give such a character an `mj` block with anthro/furry phrasing so it reads
+as fox-folk, not a human with fox ears:
 
 ```json
 "mj": {
-  "character": "an anthropomorphic fox character (anthro, furry), a bipedal humanoid fox-folk, full muzzle, fur over the whole face and body, ...",
-  "negative": "human face, human skin, woman with fox ears, realistic wild fox, ...",
-  "version": "7", "ow": 400
+  "character": "an anthropomorphic fox character (anthro, furry), a bipedal humanoid fox-folk, full muzzle, fur over the whole face and body, ..."
 }
 ```
 
-`mj.character` / `mj.wardrobe` / `mj.style` / `mj.artists` / `mj.version` /
-`mj.stylize` / `mj.negative` / `mj.ow` override the fal text **for Midjourney only**;
-the fal pipeline ignores the block. Worked example: `sable-rei.set.json`.
+`mj.character` / `mj.wardrobe` / `mj.style` / `mj.artists` / `mj.profile` /
+`mj.version` / `mj.stylize` / `mj.negative` / `mj.ow` override the fal text **for
+Midjourney only**; the fal pipeline ignores the block. Worked example:
+`sable-rei.set.json` (anthro `character`) + `mj.defaults.json` (profile + style).
 
-**Grounding the style.** If Midjourney comes out cartoony, name painter anchors via
-`mj.artists` (a list) or `--artists "Brom, Donato Giancola"`; the tool appends "in
-the style of …". Pair that with cartoon-pushing negatives (`cartoon, cel shaded,
-flat colors, chibi`) and drop fandom-style words from `mj.style`. Sable uses Brom +
-Donato Giancola + Charles R. Knight for a grounded oil-painting look.
+**No profile? Ground it manually.** Name painter anchors via `mj.artists` (or
+`--artists "Brom, Donato Giancola"`) and add cartoon-pushing negatives
+(`--negative "cartoon, cel shaded, flat colors, chibi"`). With a personalization
+profile, the profile carries the look and you can skip both.
 
 Generated art **is committed** (generation is non-deterministic, so the prompts
 alone can't reproduce the exact approved images). Downstream Foundry steps
