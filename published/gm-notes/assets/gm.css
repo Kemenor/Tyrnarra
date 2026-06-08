@@ -18,6 +18,7 @@
      .gm-secret            boxed reveal (collapsible)
      .statblock            NPC / creature stat block
      .npc-grid/.npc-card   expandable NPC roster
+     .stat-grid            skimmable skills / saves / DC cells
      .floor-stack/.room-cell   floorplans & level stacks
      .enc-tag              encounter-type chips
      .odds-board           betting / odds table
@@ -175,6 +176,24 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .trait-list li::before { content: '›'; position: absolute; left: 0; color: var(--gm-gold-dim); }
 .secret-box { background: rgba(58,20,16,0.4); border: 1px solid rgba(194,72,60,0.22); border-radius: 4px; padding: 11px 13px; margin-top: 12px; }
 .hook-box { background: rgba(122,96,40,0.08); border-left: 2px solid var(--gm-gold-dim); border-radius: 0 3px 3px 0; padding: 10px 13px; margin-top: 12px; }
+
+/* ── STAT GRID (skimmable skills / saves / DCs) ──
+   Cells of name + big value + a tier tag (extreme/high/moderate/low). The
+   .dc variant (red) carries the "to act against them" DCs, each with an
+   .sg-sub line naming which actions it resists. */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(94px, 1fr)); gap: 8px; margin: 4px 0 8px; }
+.sg-cell { background: var(--gm-bg2); border: 1px solid var(--gm-divider); border-radius: 5px; padding: 9px 8px 8px; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.sg-name { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); }
+.sg-val { font-family: 'Cinzel', serif; font-size: 1.3rem; line-height: 1; color: var(--gm-gold); }
+.sg-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.44rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gm-ink-dim); line-height: 1.35; }
+.sg-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 9px; border: 1px solid var(--gm-divider); color: var(--gm-ink-dim); }
+.sg-tag.extreme { background: rgba(200,160,74,0.16); color: var(--gm-gold); border-color: rgba(200,160,74,0.32); }
+.sg-tag.high { background: rgba(176,122,208,0.16); color: var(--enc-boss); border-color: rgba(176,122,208,0.32); }
+.sg-tag.moderate { background: rgba(106,166,200,0.14); color: var(--enc-skill); border-color: rgba(106,166,200,0.28); }
+.sg-tag.low { background: rgba(255,255,255,0.04); color: var(--gm-ink-dim); }
+.sg-cell.dc { background: rgba(58,20,16,0.34); border-color: rgba(194,72,60,0.3); }
+.sg-cell.dc .sg-name { color: #d2766a; }
+.sg-cell.dc .sg-val { color: #e8927e; }
 
 /* ── FLOORPLANS / LEVEL STACKS ── */
 .floor-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }

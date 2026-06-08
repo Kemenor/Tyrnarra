@@ -183,6 +183,8 @@ These map straight onto the existing `.npc-card` (see [`gm.js`](../assets/gm.js)
 
 - **role row** → Occupation (+ Level, faction seat)
 - **`npc-summary`** → The Read
-- **`npc-body`** → one `exp-label` section per remaining field, with `trait-list` carrying Skills and any "What They Want" list
+- **`npc-body`** → one `exp-label` section per remaining field. **Skills and Defenses render as a `.stat-grid`** (cells of name + big value + a tier tag `extreme`/`high`/`moderate`/`low`); use `.sg-cell.dc` for the Will / Perception / Deception DCs, each with an `.sg-sub` line of the actions it resists. Other lists use `trait-list`.
+
+The Defenses field renders as two grids: **Saves & Perception**, then the red **DCs to act on them**. Reference implementation: `sable-rei-gm.html`, the *At the Table · Numbers* section.
 
 A Cardboard NPC needs only the header and summary; a Full Block fills the body.
