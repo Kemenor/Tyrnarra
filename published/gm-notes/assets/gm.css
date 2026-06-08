@@ -161,6 +161,7 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .npc-card.open { border-color: rgba(200,160,74,0.4); }
 .npc-card-header { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
 .npc-icon { font-size: 1.4rem; flex-shrink: 0; }
+.npc-face { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 22%; flex-shrink: 0; border: 1px solid var(--gm-divider); background: rgba(0,0,0,0.25); }
 .npc-name { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gm-ink-bright); }
 .npc-role { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); margin-top: 2px; }
 .npc-kin { font-style: italic; color: var(--gm-gold-dim); font-size: 0.82rem; }
@@ -168,6 +169,10 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .npc-summary { padding: 0 16px 14px; font-style: italic; color: var(--gm-ink); font-size: 0.92rem; }
 .npc-body { display: none; padding: 14px 16px; border-top: 1px solid var(--gm-divider); animation: gmFade 0.2s ease; }
 .npc-card.open .npc-body { display: block; }
+.npc-art { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 6px; }
+.npc-art figure { flex: 1 1 150px; margin: 0; }
+.npc-art img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--gm-divider); border-radius: 5px; display: block; background: rgba(0,0,0,0.25); }
+.npc-art figcaption { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin-top: 4px; }
 .exp-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-gold); margin: 12px 0 5px; }
 .exp-label:first-child { margin-top: 0; }
 .exp-body { font-size: 0.9rem; line-height: 1.65; }
