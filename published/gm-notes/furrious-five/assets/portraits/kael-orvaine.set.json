@@ -1,0 +1,31 @@
+{
+  "_note": "Consistent 3-shot set for Kael Orvaine (Wayward Compass field trainer, orc of the Hunt lands). The 'full' shot is the text-to-image anchor; 'portrait' and 'training' reference it so he stays one person. Regenerate from tools/imageGen: python gen_npc_set.py --spec ../../published/gm-notes/furrious-five/assets/portraits/kael-orvaine.set.json --force  (paste-test: python mj_prompts.py --spec <same>).",
+  "slug": "kael-orvaine",
+  "out": ".",
+  "anchor": "full",
+  "character": "a powerfully built orc man in his late thirties, built like a door, grey-green hide, a heavy brow, close-cropped dark hair; prominent lower tusks with one chipped; the economical stillness of a veteran who has been badly hurt before and decided to learn from it",
+  "wardrobe": "lightweight scale mail worn over a trainer's worn leathers even indoors, a brass guild badge riveted to a shoulder strap rather than pinned",
+  "style": "Painterly semi-realistic fantasy character illustration, dramatic chiaroscuro lighting, muted earthy palette, grounded and not cartoonish, dark desaturated vignette background, no text, no frame, no watermark.",
+  "mj": {
+    "_note": "Per-character Midjourney override. Keep the orc painterly and grounded rather than a green cartoon.",
+    "character": "a muscular orc man in his late thirties (grounded semi-realistic, not a cartoon), grey-green skin, a heavy brow, close-cropped dark hair, prominent lower tusks with one visibly chipped; broad and scarred, built like a door; a measured, watchful stillness"
+  },
+  "shots": {
+    "full": {
+      "file": "kael-orvaine-full",
+      "size": "portrait_4_3",
+      "framing": "Full-length character study, standing balanced and loose-armed like someone ready to move, weight settled; plain dark studio backdrop."
+    },
+    "portrait": {
+      "file": "kael-orvaine",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A tightly cropped head-and-shoulders portrait: head and tops of the shoulders fill the frame, the heavy brow and chipped lower tusk, a measured even gaze, scale at the shoulders. Close, intimate framing; only the head and shoulders, not the full body."
+    },
+    "training": {
+      "file": "kael-orvaine-training",
+      "size": "portrait_4_3",
+      "framing": "Three-quarter view in a river-level training hall, one wall open to the river behind a heavy rope barrier, a fresh chalk sparring circle on hardwood worn smooth at the centre, arms crossed in lightweight scale, watching a recruit out of frame with flat professional appraisal."
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_note": "Consistent 3-shot set for Pip Sallow (Wayward Compass server, Millhaven-foundling halfling). The 'full' shot is the text-to-image anchor; 'portrait' and 'hall' reference it so he stays one person. Regenerate from tools/imageGen: python gen_npc_set.py --spec ../../published/gm-notes/furrious-five/assets/portraits/pip-sallow.set.json --force  (paste-test: python mj_prompts.py --spec <same>).",
+  "slug": "pip-sallow",
+  "out": ".",
+  "anchor": "full",
+  "character": "a young adult male halfling in his early twenties, small even for a halfling, with unruly brown curls and ink smudges on his wrists; bright-eyed, eager, an open friendly face, always a little out of breath",
+  "wardrobe": "a tavern apron two sizes too big with the sleeves rolled and re-rolled, hand-me-down boots, a half-finished map-roll poking from a back pocket",
+  "style": "Painterly semi-realistic fantasy character illustration, dramatic chiaroscuro lighting, muted earthy palette, warm tavern light, dark desaturated vignette background, no text, no frame, no watermark.",
+  "mj": {
+    "_note": "Per-character Midjourney override. Force an adult halfling, not a human child: MJ renders 'halfling' young as an actual child otherwise.",
+    "character": "a young adult halfling man in his early twenties (small folk with adult proportions despite short stature, NOT a human child), small even for a halfling, unruly brown curls, an open eager face, ink smudges on the wrists"
+  },
+  "shots": {
+    "full": {
+      "file": "pip-sallow-full",
+      "size": "portrait_4_3",
+      "framing": "Full-length character study, caught mid-motion as if just skidded to a stop, a serving tray tucked under one arm, leaning forward on the balls of his feet; plain dark studio backdrop."
+    },
+    "portrait": {
+      "file": "pip-sallow",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A tightly cropped head-and-shoulders portrait: head and tops of the shoulders fill the frame, brown curls, bright eager eyes, a wide grin, an oversized apron collar at the shoulders. Close, intimate framing; only the head and shoulders, not the full body."
+    },
+    "hall": {
+      "file": "pip-sallow-hall",
+      "size": "portrait_4_3",
+      "framing": "Three-quarter view darting through a guildhall drinking hall carrying a loaded tray, maps and trophy-cases on the walls behind, a guildhall cat trailing at his heels, warm low tavern light, motion in the step."
+    }
+  }
+}

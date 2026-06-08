@@ -1,0 +1,27 @@
+{
+  "_note": "Consistent 3-shot set for Aldric Fenn (Wayward Compass guildmaster, Millhaven-born human). The 'full' shot is the text-to-image anchor; 'portrait' and 'office' reference it so he stays one person. Regenerate from tools/imageGen: python gen_npc_set.py --spec ../../published/gm-notes/furrious-five/assets/portraits/aldric-fenn.set.json --force  (paste-test: python mj_prompts.py --spec <same>).",
+  "slug": "aldric-fenn",
+  "out": ".",
+  "anchor": "full",
+  "character": "a large weathered human man in his late fifties, a bear of a man, heavy through the shoulders and a little slower than he was; a salt-and-pepper beard kept slightly unkempt, story-telling scars, the weather-creased face of a man who grew up where the river wind comes off a port; direct, warm-eyed, carrying a quiet tiredness",
+  "wardrobe": "a practical worn guildmaster's coat and boots resoled more times than replaced, a guildmaster's medallion on a chain tucked under the collar so only the chain shows",
+  "style": "Painterly semi-realistic fantasy character illustration, dramatic chiaroscuro lighting, muted earthy palette, warm low key, dark desaturated vignette background, no text, no frame, no watermark.",
+  "shots": {
+    "full": {
+      "file": "aldric-fenn-full",
+      "size": "portrait_4_3",
+      "framing": "Full-length character study, standing settled and square with weight on his heels, one hand near a shortsword resting on a cluttered desk; plain dark studio backdrop."
+    },
+    "portrait": {
+      "file": "aldric-fenn",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A tightly cropped head-and-shoulders portrait: head and tops of the shoulders fill the frame, the weathered scarred face and salt-and-pepper beard, a guarded warmth in the eyes, the medallion chain just visible at the collar. Close, intimate framing; only the head and shoulders, not the full body."
+    },
+    "office": {
+      "file": "aldric-fenn-office",
+      "size": "portrait_4_3",
+      "framing": "Three-quarter view in a cramped top-floor guildmaster's office, river-window light on one side, a shortsword and paper-strewn desk, leaning back in a worn chair with a cup of something dark, the weight of the most powerful organisation in the world resting on a small-town desk."
+    }
+  }
+}
