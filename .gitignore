@@ -47,3 +47,7 @@ published/gm-notes/**/forge_urls.json
 tools/**/forge_urls.json
 published/gm-notes/**/tokens/_variant-*
 published/gm-notes/**/tokens/_reup/
+
+# Local staging inbox for generated art (e.g. Midjourney PNGs) before they are
+# converted to the committed web webp. The source PNGs stay local only.
+/incoming/
