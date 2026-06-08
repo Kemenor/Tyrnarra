@@ -207,7 +207,7 @@ A handful of details inside the columns are deliberately under-specified in cano
 - **The Heart who walks the gardens at sunrise with Saemi (Column 1).** Norikaze. The column's coyness is Golivander's voice; canon has the bond fully named in `emarrea.md` and on the Heartcourt page.
 - **The "Heart who keeps that quiet" (Column 5).** Shirae. Same coyness pattern.
 - **The "another Heart" of Column 7.** Shirae writing about Yorume. The third such elision in the dispatch is intentional in Golivander's voice; the bond is canonised elsewhere.
-- **Golivander's race, age, education, home base, scholarly stance.** Committed in canon as of 2026-05-24: Tengu of Haizetsua, ~110, Thekkavar-apprenticed in natural philosophy, based at The Lantern Press in Frae City, naturalistic and unbound. Full character sheet in [`../../glossary.md`](../../glossary.md) under *Voices on the Compact → Golivander*. The Letters' voice does not reach for these facts; the elision in the columns is method, not vacancy.
+- **Golivander's race, age, education, home base, scholarly stance.** Committed in canon: Tengu of Haizetsua, ~110, Thekkavar-apprenticed in natural philosophy, based at The Lantern Press in Frae City, naturalistic and unbound. Full character sheet in [`../../glossary.md`](../../glossary.md) under *Voices on the Compact → Golivander*. The Letters' voice does not reach for these facts; the elision in the columns is method, not vacancy.
 
 ---
 
