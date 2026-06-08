@@ -57,6 +57,23 @@ Midjourney's character lock is the omni-reference (`--oref <image URL> --ow 0-10
 **V7-only**): generate the anchor shot first, then append `--oref <its URL> --ow 100`
 to the others (or drag the anchor image in). The output prints that hint per shot.
 
+**Beast ancestries (the `mj` block).** Midjourney reads "kitsune", "tengu",
+"catfolk" as a human with animal features, not the PF2e anthro folk that FLUX
+renders. Give such a character an optional `mj` block in its `*.set.json` with
+anthro/furry phrasing and push the human trope out via the negatives:
+
+```json
+"mj": {
+  "character": "an anthropomorphic fox character (anthro, furry), a bipedal humanoid fox-folk, full muzzle, fur over the whole face and body, ...",
+  "negative": "human face, human skin, woman with fox ears, realistic wild fox, ...",
+  "version": "7", "ow": 400
+}
+```
+
+`mj.character` / `mj.wardrobe` / `mj.style` / `mj.version` / `mj.stylize` /
+`mj.negative` / `mj.ow` override the fal text **for Midjourney only**; the fal
+pipeline ignores the block. Worked example: `sable-rei.set.json`.
+
 Generated art **is committed** (generation is non-deterministic, so the prompts
 alone can't reproduce the exact approved images). Downstream Foundry steps
 (upload to Forge, token frames, assign) live in

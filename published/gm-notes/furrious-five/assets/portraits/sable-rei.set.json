@@ -6,6 +6,14 @@
   "character": "a slim male kitsune fox-spirit, mid-thirties in appearance: silver-black fur dark through the coat with a cold silver wash at the temples and along a single bushy silver-tipped tail, one pointed fox ear out and the other tucked under dark hair, sharp clever amber eyes, a knowing half-smile showing a half-count too many teeth",
   "wardrobe": "a fine high-collared charcoal coat cut for movement, excellent well-worn boots, a signal-flag-red cravat, a heavy ring on the thumb",
   "style": "Painterly semi-realistic fantasy illustration, dramatic chiaroscuro lighting, muted earthy palette with cool silver rim light, dark desaturated vignette background, no text, no frame, no watermark.",
+  "mj": {
+    "_note": "Midjourney-only overrides. MJ reads 'kitsune' as a human with fox ears, so describe Sable as anthro/furry fox-folk and push the human trope out in the negatives. The fal pipeline ignores this block.",
+    "character": "an anthropomorphic fox character (anthro, furry), a bipedal humanoid fox-folk with a full fox head and muzzle and fur over the whole face and body; slim mid-thirties build; silver-black fur, dark through the body with a cold silver wash at the muzzle, brow and temples and along a single bushy silver-tipped fox tail; tall pointed fox ears, one upright and one tucked under dark head-hair; sharp clever amber eyes; a knowing toothy half-smile with a hint of sharp teeth",
+    "style": "anthropomorphic animal character concept art, painterly semi-realistic furry-fandom style, dramatic chiaroscuro lighting, muted earthy palette with cool silver rim light, dark vignette background",
+    "negative": "human face, human skin, bare human face, anime girl, kitsune woman, woman with fox ears, realistic wild fox, fox on all fours, photo, text, watermark, frame, border, signature",
+    "version": "7",
+    "ow": 400
+  },
   "shots": {
     "full": {
       "file": "sable-rei-full",
