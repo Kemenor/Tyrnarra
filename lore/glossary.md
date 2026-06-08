@@ -274,6 +274,19 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Kaosadaemi Principality**: Basque *kaosa* (chaos) + Icelandic *dæmi* (district/domain) = "the chaos district"
 - **Basogur Jungle**: Basque *baso* (forest/wood) → drifted to *Basogur*; shared with Ehizahar
 
+### Nahaskel proper nouns (English / plain register, not the deep-old stratum)
+
+Nahaskel itself is old-stratum (Basque *nahas* "chaos, to mix" → scrambled and drifted, recorded above under *the 13 Bound Gods*). Its *institutions* are not ancient: a city that remakes itself weekly keeps no old names, so its civic and folk proper nouns sit in the plain-English register. Full canon in `geography/nashavel.md`, *Nahaskel*.
+
+- **The Casting**: plain English. The civic coin-throw where shared proposals resolve; governance and Vesuna-worship in one act.
+- **The Tellers**: plain English (double sense: they *tell* the cast result, and they keep *the telling*, the city's running oral memory). Vesuna's loose clergy at Nahaskel; they officiate Castings, read the coin, and tend the Sanctum.
+- **The New Face**: plain English. The ◈ folk name for Vesuna walking Nahaskel as the unknown newcomer with the next idea (she wears no fixed form).
+- **The Unthrown**: plain English. ⚿ GM-tier name for the still room at the city's heart (the unthrown coin between a throne and a bare wooden chair). Folk call it only *the Sanctum* and believe it wanders.
+- **Grumble**: plain English. A named friendly summoned beast that bites only when its stomach growls; street-colour for the churn of personal conveyances.
+- **Old Tally**: plain English (*tally* = count / running record, worn into a name). The eldest Teller, a Gnome; the city's living memory.
+- **Pim**: plain personal name. A Gnome inventor; his Nahaskel-cast clockwork became an Order-of-Steam staple sold continent-wide as a *pim*, the eponym outliving its forgotten origin.
+- **Dossa**: plain personal name. A Conrasu permanence-rebel whose unchanging tea-stall is the one place in Nahaskel a visitor can find twice.
+
 **Ehizahar (Hunt):**
 - **Lands of Villtur**: Icelandic *villtur* (wild, lost, strayed); umbrella name for tribal territories
 - **Ardo Beroa**: Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; the small ice-isle archipelago off Ehizahar's northern arctic coast (literal meaning ironically opposite to the geography)

@@ -135,7 +135,7 @@ Both are rare everywhere outside their source. A Blackened Lands fleshwarp is ra
 "Guardians of Time." **Dominant in Lioaru (Time / Tani)**; they are explicitly aligned with Tani's domain and many serve as wardens of temporally unstable sites along the Lioaru-Lost-Kingdom border. Their plant-rooted longevity gives them a perspective on the slow currents of time that suits their domain. In **Valreka**, Tani's whale-borne god-city, the Ghoran are the majority and the heart: long-lived enough that each elder is a living archive of centuries the rest of the city holds only in fragments, which is exactly the work of a people whose city exists to remember (see `geography/lioaru.md`, *Valreka*).
 
 ### Gnome
-**Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest.
+**Dominant in Nashavel (Chaos / Vesuna)**. Native to the Feyworld; long migration into the Material Plane during the Gods' Era and after. Now found everywhere, with the chaos-aligned domains the densest. In **Nahaskel**, Vesuna's god-city, the Gnomes hold the civic temperament: a people who treat *let us try it differently this week* as the resting state are the engine of a city that remakes itself overnight and decides what is shared by the toss of a coin (see `geography/nashavel.md`, *Nahaskel*). Alongside them sit **Ganzi** (the planes in their blood) and the more cautious **Conrasu** (chaos given a body), the thread of restraint in a city short on it.
 
 ### Goblin
 **Dominant in Brauogi (Earth / Sarrum)** alongside Hobgoblins. The Goblin & Hobgoblin Kingdom is the major political sub-region of Brauogi shared between them.
