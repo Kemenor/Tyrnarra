@@ -40,6 +40,23 @@ python gen_npc_set.py --spec <path>/<slug>.set.json --force
 # --only shot1,shot2 for a subset (the on-disk anchor is uploaded as the reference)
 ```
 
+## `mj_prompts.py` — Midjourney prompts (no API), for parallel testing
+
+Emits ready-to-paste Midjourney `/imagine` prompts from the **same `*.set.json`**,
+so you can test a character in Midjourney alongside the fal render and compare. It
+calls nothing and needs no key; you paste the prompts manually.
+
+```
+python mj_prompts.py --spec <path>/<slug>.set.json
+# --version 8.1 to test the newer model; --stylize 250; --ow 400
+```
+
+It maps each shot's `size` to `--ar`, moves the fal "no text / frame / watermark"
+tail into `--no`, and adds `--v 7 --style raw`. For a **consistent set**,
+Midjourney's character lock is the omni-reference (`--oref <image URL> --ow 0-1000`,
+**V7-only**): generate the anchor shot first, then append `--oref <its URL> --ow 100`
+to the others (or drag the anchor image in). The output prints that hint per shot.
+
 Generated art **is committed** (generation is non-deterministic, so the prompts
 alone can't reproduce the exact approved images). Downstream Foundry steps
 (upload to Forge, token frames, assign) live in
