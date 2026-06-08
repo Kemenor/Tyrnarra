@@ -1,5 +1,5 @@
 {
-  "_note": "Consistent 3-shot set for Sable Rei, rendered by tools/foundryExport/gen_npc_set.py. The 'full' shot is the text-to-image anchor; 'portrait' and 'lowspan' reference it via fal-ai/flux-2/edit so the silver-black character stays one person. Regenerate: python ../../../../tools/foundryExport/gen_npc_set.py --spec sable-rei.set.json --force",
+  "_note": "Consistent 3-shot set for Sable Rei, rendered by tools/foundryExport/gen_npc_set.py. The 'full' shot is the text-to-image anchor; 'portrait' and 'lowspan' reference it via fal-ai/flux-2/edit so the silver-black character stays one person. Regenerate: python ../../../../tools/imageGen/gen_npc_set.py --spec sable-rei.set.json --force",
   "slug": "sable-rei",
   "out": ".",
   "anchor": "full",

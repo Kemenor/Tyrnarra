@@ -19,17 +19,17 @@ This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../.c
 
 ## Setup (dependencies + API keys)
 
-Run every command from this directory (`tools/foundryExport/`), `python` (not `python3`) on Windows.
+Run the Foundry commands here (`tools/foundryExport/`), `python` (not `python3`) on Windows. **Image generation moved to [`../imageGen/`](../imageGen/README.md)** — run `gen_portraits.py` / `gen_npc_set.py` from there.
 
-**Dependencies** (one-time): `pip install fal-client requests pillow numpy`
+**Dependencies** (one-time): `pip install requests pillow numpy` here (image generation also needs `fal-client`; see [`../imageGen/`](../imageGen/README.md)).
 (encounters/loot also need the encounterBuilder DBs: `python ../encounterBuilder/rebuild.py`.)
 
-**API keys.** Image generation and Forge upload each need a key. Both key files are **gitignored** (`*_key.txt`), so they are **not in the repo — a fresh clone or new session will not have them.** Recreate them (or ask the GM), then the scripts read the env var first, else the local file:
+**API keys.** The key files live in **[`../keys/`](../keys/README.md)** and are **gitignored** (`tools/**/*_key.txt`), so they are **not in the repo — a fresh clone copies them from Proton Drive.** Each script reads its env var first, else `../keys/<file>`:
 
-| Key | File (here) / env | For | Get it |
+| Key | File / env | For | Get it |
 |---|---|---|---|
-| fal.ai | `fal_key.txt` / `FAL_KEY` | `gen_portraits.py` (image gen) | https://fal.ai/dashboard/keys (`id:secret`) |
-| The Forge | `forge_key.txt` / `FORGE_KEY` | `upload_forge.py` (asset upload) | The Forge → Account → API Keys (**write-assets**) |
+| fal.ai | `../keys/fal_key.txt` / `FAL_KEY` | image gen (`../imageGen/`) | https://fal.ai/dashboard/keys (`id:secret`) |
+| The Forge | `../keys/forge_key.txt` / `FORGE_KEY` | `upload_forge.py` (asset upload) | The Forge → Account → API Keys (**write-assets**) |
 
 **Confirmed working:** Foundry VTT **14.363** / pf2e **8.2.0**; image model **`fal-ai/flux-2`** (fal.ai), ~$0.012/megapixel (≈ $0.013 per 1024² image). Forge assets serve at `https://assets.forge-vtt.com/<your-id>/<target-path>/<file>`.
 
@@ -144,10 +144,10 @@ The four steps:
 1. **Prompts.** A per-quest `*.portraits.json` holds each NPC's invented
    appearance (ancestry/age/looks) + a style-consistent `prompt`, with a shared
    `style` suffix so the whole cast looks like one artist.
-2. **Generate.** `gen_portraits.py` batch-renders one square image per entry via
-   fal.ai, model-agnostic (`--model`, e.g. Flux.2 [dev] now, swap later); the
-   same prompts JSON is reusable by a local ComfyUI/Replicate runner.
-   key in `fal_key.txt` (or `FAL_KEY`), then:
+2. **Generate.** `../imageGen/gen_portraits.py` batch-renders one square image per
+   entry via fal.ai, model-agnostic (`--model`, e.g. Flux.2 [dev] now, swap later);
+   the same prompts JSON is reusable by a local ComfyUI/Replicate runner. Key in
+   `../keys/fal_key.txt` (or `FAL_KEY`), then, from `../imageGen/`:
    `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux-2 --ext webp`
 3. **Upload.** On The Forge, `upload_forge.py` pushes the folder into your Assets
    Library via the Forge API (needs a Forge API key with write-assets, in a

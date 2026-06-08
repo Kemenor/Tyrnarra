@@ -1,0 +1,46 @@
+# imageGen — NPC art generation (fal.ai)
+
+Image generation for the campaign layer: turn text prompts into character art via
+fal.ai (FLUX.2). Kept separate from [`../foundryExport/`](../foundryExport/README.md)
+(which gets art *into* Foundry); this folder only **makes** the images.
+
+Run commands from here; use `python` (not `python3`) on Windows.
+
+- **Dependencies:** `pip install fal-client requests`
+- **Key:** `FAL_KEY` env var, or `../keys/fal_key.txt` (gitignored; see [`../keys/`](../keys/README.md)).
+- **Model:** `fal-ai/flux-2` (~$0.012/megapixel, ≈ $0.013 per 1024² image).
+
+## `gen_portraits.py` — independent portraits from a portraits JSON
+
+Batch-renders one square image per entry of a `{"portraits":[{slug,prompt}]}`
+file (the per-quest `*.portraits.json`). Used for quest casts and for token-frame
+art (rendered onto a magenta field, then cut + baked in `../foundryExport/`).
+
+```
+python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux-2 --ext webp
+# --only slug1,slug2 for a subset; --force to overwrite; skips existing by default
+```
+
+## `gen_npc_set.py` — a consistent multi-shot set for ONE character
+
+Renders a coherent set (e.g. portrait + full body + an in-scene shot) that stays
+one character: a text-to-image **anchor** first (usually the full body), then the
+other shots via FLUX.2's reference endpoint (`fal-ai/flux-2/edit`) with the anchor
+passed as a reference image. A shot can set `"mode": "text"` for a fresh
+composition the reference endpoint will not produce (e.g. a tight
+head-and-shoulders portrait, which it otherwise refuses to crop to).
+
+Driven by a co-located set-spec JSON (`<slug>.set.json`): shared
+`character` / `wardrobe` / `style` blocks reused in every shot, plus per-shot
+`file` / `size` / `framing` (+ optional `mode`). Reference spec:
+`published/gm-notes/furrious-five/assets/portraits/sable-rei.set.json`.
+
+```
+python gen_npc_set.py --spec <path>/<slug>.set.json --force
+# --only shot1,shot2 for a subset (the on-disk anchor is uploaded as the reference)
+```
+
+Generated art **is committed** (generation is non-deterministic, so the prompts
+alone can't reproduce the exact approved images). Downstream Foundry steps
+(upload to Forge, token frames, assign) live in
+[`../foundryExport/`](../foundryExport/README.md).

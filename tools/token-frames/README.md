@@ -76,8 +76,7 @@ Add the finished prompt as a new `{ "slug": "...", "prompt": "..." }` entry in
 
 ### 2. Render, cut, map
 
-Run these from **`tools/foundryExport/`** (where the scripts live); the paths are
-relative to there, and the fal key must be set (`fal_key.txt` or `$env:FAL_KEY`):
+Run the render from **`tools/imageGen/`** and the cut/bake from **`tools/foundryExport/`** (both sit under `tools/`, so the `../token-frames` paths resolve the same from either); set the fal key (`../keys/fal_key.txt` or `$env:FAL_KEY`):
 
 ```powershell
 # render ONLY the new slug (existing frames are skipped, so they are never re-rolled)

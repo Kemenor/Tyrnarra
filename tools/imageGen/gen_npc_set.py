@@ -33,7 +33,7 @@ non-anchor shots additionally instruct the model to keep the reference character
 
 Setup:
   pip install fal-client requests
-  FAL_KEY env var, or fal_key.txt next to this script (gitignored).
+  FAL_KEY env var, or tools/keys/fal_key.txt (gitignored).
 
 Usage:
   python gen_npc_set.py --spec ../../published/gm-notes/furrious-five/assets/portraits/sable-rei.set.json
@@ -67,14 +67,17 @@ def main():
     ap.add_argument("--force", action="store_true", help="Overwrite existing files.")
     a = ap.parse_args()
 
-    # Key: env var, or the gitignored fal_key.txt next to this script.
+    # Key: env var, or the gitignored fal_key.txt in tools/keys/ (legacy: next to this script).
     if not os.environ.get("FAL_KEY"):
-        keyfile = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fal_key.txt")
-        if os.path.exists(keyfile):
-            os.environ["FAL_KEY"] = open(keyfile, encoding="utf-8").read().strip()
+        here = os.path.dirname(os.path.abspath(__file__))
+        for keyfile in (os.path.join(here, os.pardir, "keys", "fal_key.txt"),
+                        os.path.join(here, "fal_key.txt")):
+            if os.path.exists(keyfile):
+                os.environ["FAL_KEY"] = open(keyfile, encoding="utf-8").read().strip()
+                break
     if not os.environ.get("FAL_KEY"):
-        sys.exit("Set FAL_KEY in the environment, or put it in fal_key.txt next to this "
-                 "script (gitignored). Get a key at https://fal.ai/dashboard/keys.")
+        sys.exit("Set FAL_KEY in the environment, or put it in tools/keys/fal_key.txt "
+                 "(gitignored). Get a key at https://fal.ai/dashboard/keys.")
     try:
         import fal_client
         import requests

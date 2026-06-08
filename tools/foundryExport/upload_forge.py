@@ -8,8 +8,8 @@ Forge's own FilePicker does. Prints, and optionally writes, a {filename -> asset
 URL} map you can feed straight into `foundry_macro.py assign-images` (the URLs
 are absolute, so they're used as-is).
 
-Key: reads FORGE_KEY from the environment, else a gitignored forge_key.txt next
-to this script. Get one at The Forge -> Account -> API Keys (needs write-assets).
+Key: reads FORGE_KEY from the environment, else a gitignored forge_key.txt in
+tools/keys/. Get one at The Forge -> Account -> API Keys (needs write-assets).
 
 Usage:
   python upload_forge.py --dir ../../furrious-five/portraits \
@@ -28,11 +28,14 @@ CONTENT_TYPES = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg
 def get_key():
     key = os.environ.get("FORGE_KEY")
     if not key:
-        kf = os.path.join(os.path.dirname(os.path.abspath(__file__)), "forge_key.txt")
-        if os.path.exists(kf):
-            key = open(kf, encoding="utf-8").read().strip()
+        here = os.path.dirname(os.path.abspath(__file__))
+        for kf in (os.path.join(here, os.pardir, "keys", "forge_key.txt"),
+                   os.path.join(here, "forge_key.txt")):
+            if os.path.exists(kf):
+                key = open(kf, encoding="utf-8").read().strip()
+                break
     if not key:
-        sys.exit("Set FORGE_KEY in the environment or put it in forge_key.txt (gitignored).")
+        sys.exit("Set FORGE_KEY in the environment or put it in tools/keys/forge_key.txt (gitignored).")
     return key
 
 

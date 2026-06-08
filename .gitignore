@@ -31,7 +31,9 @@ tools/encounterBuilder/__pycache__/
 __pycache__/
 *.pyc
 
-# API keys / secrets for the GM tools (fal.ai, Forge, etc.) - LOCAL ONLY, never committed.
+# API keys / secrets for the GM tools (fal.ai, Forge, etc.) - LOCAL ONLY, never
+# committed. They live in tools/keys/ (copied from Proton Drive on a fresh clone);
+# this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
 **/*.secret
 tools/**/.env

@@ -21,8 +21,8 @@ Usage:
   # add --force to overwrite, --only sable-rei,moss to render a subset
 
 Notes:
-  - Default --model is "fal-ai/flux-2" (confirmed working). Key in fal_key.txt
-    (gitignored, next to this script) or the FAL_KEY env var.
+  - Default --model is "fal-ai/flux-2" (confirmed working). Key in
+    tools/keys/fal_key.txt (gitignored) or the FAL_KEY env var.
   - Replicate users: this script is fal-specific; the prompts JSON is portable,
     so a Replicate or local-ComfyUI runner can consume the same file.
 """
@@ -44,13 +44,16 @@ def main():
     a = ap.parse_args()
 
     if not os.environ.get("FAL_KEY"):
-        # Fallback: a gitignored fal_key.txt next to this script.
-        keyfile = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fal_key.txt")
-        if os.path.exists(keyfile):
-            os.environ["FAL_KEY"] = open(keyfile, encoding="utf-8").read().strip()
+        # Fallback: a gitignored fal_key.txt in tools/keys/ (legacy: next to this script).
+        here = os.path.dirname(os.path.abspath(__file__))
+        for keyfile in (os.path.join(here, os.pardir, "keys", "fal_key.txt"),
+                        os.path.join(here, "fal_key.txt")):
+            if os.path.exists(keyfile):
+                os.environ["FAL_KEY"] = open(keyfile, encoding="utf-8").read().strip()
+                break
     if not os.environ.get("FAL_KEY"):
-        sys.exit("Set FAL_KEY in the environment, or put it in fal_key.txt next to this "
-                 "script (gitignored). Get a key at https://fal.ai/dashboard/keys.")
+        sys.exit("Set FAL_KEY in the environment, or put it in tools/keys/fal_key.txt "
+                 "(gitignored). Get a key at https://fal.ai/dashboard/keys.")
     try:
         import fal_client
         import requests

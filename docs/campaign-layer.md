@@ -73,7 +73,7 @@ published/player-campaigns/     ← served at /player-campaigns/ (the published/
     theme.css                 ← the per-campaign skin (overrides only the --c-* tokens)
 ```
 
-The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), and `tools/token-frames/` (the shared Foundry token-frame library). Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
+The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/imageGen/` (NPC art generation via fal.ai — `gen_portraits` / `gen_npc_set`), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro, plus Forge upload and token baking), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), `tools/token-frames/` (the shared Foundry token-frame library), and `tools/keys/` (gitignored API keys for fal.ai + Forge, copied from Proton Drive). Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
 
 ## Chrome conventions
 
