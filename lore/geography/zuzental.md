@@ -12,6 +12,14 @@
 
 **God's city:** Lograth, The Judgment City
 
+**Peoples:** Three dominant ancestries are anchored here: **Elf**, **Human**, and **Hobgoblin**. The domain-level read is a feeling of each people, never a practice; every sub-region below carries its own culture, and an Elf of the Emerald Isles, a Human of the Legea Empire, and a Hobgoblin of the Namur Republic live three different lives.
+
+- **The Elves carry the long view.** Patience as temperament: an Elf weighs a choice against decades, gives trust the way a bank gives credit, and is still watching a plan unfold when the mortals who started it beside her are grandparents. The elven side of any Zuzental polity is the side that remembers why the rule was made.
+- **The Humans carry the short fire.** Life is now, so the move is now: risk-takers and cycle-burners, the ones who force the question, take the loss, and start over twice in a working life. The human side of any Zuzental polity is the side that notices the rule has stopped working.
+- **The Hobgoblins carry the given word.** For a Hobgoblin the sworn word is load-bearing: slow to promise, immovable once sworn, still keeping what was agreed long after everyone else has moved on. It is a constancy the domain of judgment leans on, and it casts its own shadow, which Hobgoblin elders name before any outsider can: the grip that does not know when to let go, the word kept past its right life. Forseti holds Tyranny in the same hand as Justice, and no people on Talan understands that pairing from the inside the way the Hobgoblins do.
+
+In the **Thousand Kingdom**, the elven long view and the human short fire interlock as the famous volatility-and-longevity engine of its politics (see below); in the **Order of Law**, the oath-minded gather until the Hobgoblin is the dominant ancestry of the institution itself.
+
 **Sub-regions:**
 - **Emerald Isles**: an island kingdom of Zuzental. Three main forested islands sit off the eastern coast within Talan's coastal waters, plus a recently-acquired collection of smaller northeastern islands (**the Bridgelands**) sitting partly in Hafra and partly in the Cloud Sea. Modern English name throughout (the kingdom calls itself Emerald Isles in plain Talanese).
   - **The three main isles**:
@@ -83,7 +91,7 @@
   - The succession theology, whether the divine inheritance attenuates, is renewed at investiture, or is re-confirmed by the Faith's god at each transition.
   - The legal-theological doctrine: how does the Faith's law differ from Forseti's? Where do they conflict in practice?
 - **Namur Republic**: a democratic city-state network within Zuzental. Modern English name.
-- **Order of Law**: an institutional sub-region of Zuzental, central to Forseti's framework on Talan. Modern English name.
+- **Order of Law**: an institutional sub-region of Zuzental, central to Forseti's framework on Talan. Modern English name. **Hobgoblins are the dominant ancestry here**: the marshals' colleges, warden-garrisons, and verdict-escort companies that carry a judgment from the bench to the far end of the domain draw the oath-minded, and have for as long as the Order has stood. Elves and Humans serve throughout; the institution's temper is Hobgoblin.
 - **Crossroads**: trade-nexus settlement on the southern tri-domain border where **Zuzental** (Law), **Lautara** (Commerce), and **Egulon** (Light) meet. Modern English name. **Functionally independent** in the same way Frae City is independent: not legally sovereign, but every neighbouring power benefits from its neutrality and none will be the one to break it. Nominally a Zuzental sub-region by the geography of the tri-point but answers to no domain's law. Three roads broaden into a single sprawl of caravanserai, inn-yards, warehouses, chanceries, and notary halls. The town's defining institution is the **Spider's Silk Inn** (full canon below). The Mercenary Guild treats Crossroads as a major hub.
 
   #### The Spider's Silk Inn

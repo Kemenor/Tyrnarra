@@ -42,7 +42,7 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 
 1. **Egulon (Light)** ✅ — lore committed (`6f4deec`); HTML pending. *The Year of the Vine.*
 2. **Brauogi (Earth)** ✅ — lore committed; HTML pending. Earth = Minotaur/Kholo/Dragonet (Stone/Vigil/Metal). Cascade done: Goblin→Fire, Kholo→Earth, Hunt trio now Orc/Lizardfolk/Goloma.
-3. **Zuzental (Law)** ⬜ — Hobgoblin as the Thousand Kingdom's standing discipline
+3. **Zuzental (Law)** ✅ — lore committed; HTML pending. Feeling-level Peoples block (Elf long view / Human short fire / Hobgoblin given word); Order of Law = Hobgoblin-dominant.
 4. **Lioaru (Time)** ⬜ — Nagaji rebirth-cult
 5. **Ezkudon (Knowledge)** ⬜ — Ratfolk diggers
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
@@ -124,12 +124,51 @@ NOTE: no goblinoid-kingdom sub-region exists in `brauogi.md` — the rename is j
 ### Draft — 📝 written to `brauogi.md` (## The Three Faces of Sarrum's Earth) + cascade done in `ancestries.md`; committed.
 
 ### `ancestries.md` cascade edits — ✅ DONE
+
+---
+
+## § Zuzental (Law · Forseti) — 🔵 grilling
+
+**Canon (from `zuzental.md`):** Forseti = **Order · Justice · Oath · Tyranny**; she does NOT prescribe law —
+mortals write their own laws, her clergy are judges/oath-witnesses/contract-arbiters. Sub-regions: **Emerald
+Isles** (island kingdom + Bridgelands/Sortalde embassies), **Thousand Kingdom** (dominant; Lograth = god-city +
+capital; refounded 2457 MR by Aelis Fyrstgilt; GM-tier: forged lineage, Garaion lives as Aldwin Mero in
+Quietbarrow), **Legea Empire** (Layer-3 theocracy, Legaun, Divine Faith), **Namur Republic** (democratic
+city-state network), **Order of Law** (institutional sub-region, central to Forseti's framework), **Crossroads**
+(neutral tri-domain trade nexus; Spider's Silk Inn / Matron Charna).
+
+**The three peoples (target):**
+- **Elf** — long-planning ruling bloodline (Thousand Kingdom); generational politics.
+- **Human** — short-planning ruling bloodline; fast political cycles; the volatility-and-longevity engine.
+- **Hobgoblin** *(new)* — disciplined, hierarchical, oath-bound; Forseti's soldiery (marshals, border-wardens, regiments that hold a judgment). NO migration framing — always been Zuzental's.
+
+**Forseti corrected:** subtitle **Order · Justice · Oath · Tyranny**; domains **Truth · Secrecy · Star · Glyph**.
+
+**GENERAL RULE (user):** not every ancestry needs to map cleanly onto its god's portfolio/facets. Drop the facet-assignment reflex; a people's culture stands on its own.
+
+**STANDING RULE (user, 3rd correction — apply to ALL remaining regions):** the ancestry layer sets a
+**feeling of a people** (temperament, disposition, what they're like to meet), NEVER specific cultural
+practices. Practices (naming schemes, rites, institutions, dress) belong to **sub-region cultures**: a
+sub-region may have a dominant ancestry, but a Hobgoblin in the Thousand Kingdom, Namur Republic, Legea
+Empire, Order of Law, and Emerald Isles lives five different cultures. Domain-level peoples-prose must stay
+at the feeling level; cultural specifics get written per sub-region (later, in the sub-region flow).
+Example of the trap: the oath-honorific naming idea = a cultural practice → parked as possible
+Thousand-Kingdom/Order-of-Law colour for sub-region work, NOT an ancestry trait.
+
+### Grill log (decisions)
+- **Hobgoblin = the people of the kept oath.** Structural gap they fill: Forseti's clergy judge/witness but a judgment is just words; someone must HOLD it (escort verdicts, enforce contract terms, garrison disputed boundaries). Elves plan, Humans politick, Hobgoblins keep what was sworn. The sworn word is their load-bearing social unit.
+- **Heartland = the Order of Law** (institutional sub-region, previously people-less): marshals' colleges, warden-garrisons, verdict-escort companies. Disproportionately Hobgoblin, NOT "the Hobgoblin state" (Elves/Humans serve too; most Hobgoblins are ordinary folk whose oath-culture shows in daily life). No migration framing — always been Zuzental's.
+- **Feeling-level definitions locked (user confirmed):** **Hobgoblin** = the given word as load-bearing; slow to promise, immovable once sworn; shadow = the grip that doesn't let go (Tyranny-texture, written as the people's own acknowledged shadow). **Elf** = the long view; patience outlasting dynasties; trust accrued in decades. **Human** = the short fire; risk and renewal; the churn. Elf/Human volatility+longevity interplay stays as *Thousand Kingdom politics*, not ancestry.
+- **Order of Law: Hobgoblin = dominant ancestry there** (user). The institutional sub-region reads Hobgoblin-coded; note in the sub-region bullet. Still a place they're *many*, not what they *are*.
+- **Oath-honorific naming idea PARKED** for Thousand-Kingdom/Order-of-Law sub-region work (cultural practice, not ancestry trait).
+
+### Draft (culture prose) — not started
 - Table rows: **Earth** → Minotaur · Dragonet · Kholo; **Fire** → +Goblin; **Hunt** → Orc · Lizardfolk · Goloma.
 - **Goblin** entry → Fire/Sumendar alchemist (brief; full culture later). **Kholo** entry → Brauogi/Earth herder.
 - **Minotaur** entry: "alongside the Goblins" → "alongside the Kholo". **Dragonet** entry: re-frame to tradition/memory-keepers pulled up (not buried under-dark).
 - **Orc / Lizardfolk / Goloma** entries: drop "alongside Kholo"; Hunt trio is now Orc/Lizardfolk/Goloma (Goloma was "wary fourth" → now "wary third/watcher"). *(Deeper Villtur re-grill happens at the Ehizahar region.)*
 
-### Draft (culture prose) — not started
+### Draft — 📝 written to `zuzental.md` (Peoples block + Order of Law bullet) + `ancestries.md` Hobgoblin entry rewritten to feeling-level; committed.
 
 ---
 
