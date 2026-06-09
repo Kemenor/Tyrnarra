@@ -48,7 +48,7 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
 7. **Nashavel (Chaos)** ⬜ — Anadi web-holds
 8. **Sumendar (Fire)** ⬜ — Goblin homed (the appetite-alchemist; concept parked in Brauogi log for deep-dive)
-9. **Lautara (Commerce)** 📝 — feelings committed (`79b866b`), then **one-region-per-people rework** (surfaced, awaiting review):
+9. **Lautara (Commerce)** ✅ — feelings committed (`79b866b`) + **one-region-per-people rework committed** (`b9ea197`); HTML pending (itsasalda.html = real rework):
    - **Full-expression board:** Emarrea = Kitsune · Atarialda = Halfling · **Itsasalda = Vishkanya** (the steady watch IS the shaping hand; Watchers mostly Vishkanya, Reckoners the same people's scrivener arm; Watchroll "Vishkanya by gravity"). **Mountain-Halfling concept retired**; the HRA-vs-Vordsbench friction is now the two feelings meeting at one harbour ("the rails carry the deal, the dock holds the deal" = road in the blood vs the hand that stays).
    - **Azkataria + Dreaming Cape stay unsorted by people** (the floor and the faith define them); **Merkavar belongs to everyone**.
    - **Merkavar switch:** Vishkanya emphasis moved OUT of clergy (now plainly every-ancestry-at-every-rank) INTO the **fine-artisan guilds** — the parked maker-tradition LANDED (instruments, seal-craft, fine inks/glass, heirloom-grade work).
