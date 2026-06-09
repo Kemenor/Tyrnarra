@@ -121,6 +121,17 @@ NOTE: no goblinoid-kingdom sub-region exists in `brauogi.md` — the rename is j
   - **Kholo: Hunt → Earth (Brauogi).** Kholo = the **matriarchal herder-clans**, the *livestock* half of the breadbasket (canon already lists "grain, livestock"): drovers of the pasture-margins, meat/leather/milk to the Minotaurs' bread/walls. Bone-token clan-tradition → "Earth = tradition." Good agrarian fit.
 - **Balance:** Fire → 4 (Dragons/Dwarf/Kobold/**Goblin**); Earth → 3 (Minotaur/Dragonet/**Kholo**); Hunt → 3 (Orc/Lizardfolk/Goloma). Three 4s now Fire/Chaos/Wind (was Hunt/Chaos/Wind) — lateral, no net imbalance.
 
+### Feeling-vs-culture audit (post-Zuzental rule) — ✅ fixed
+- Kholo: dropped "bone-token-marked" + the winter-standing reckoning custom (both were domain-universal practices); kept **matriarchal as disposition**. **PARKED for sub-region work:** bone-token marks, clan-standing-by-winter-herd reckoning — Kholo clan-culture colour for wherever the clans concentrate.
+- Dragonet: "venerates the deep as Zaharsuge's own" softened to "most Dragonets feel a natural affinity toward Zaharsuge, whom their tradition holds as progenitor." Affinity IS ancestry-level here (his children, kind of — they believed him into shape).
+- Minotaur occupations ruled acceptable: occupations-at-domain-level = the economy (grain/herd/ore), not a practice.
+
+**FUTURE TASK — Zaharsuge rework.** The Zaharsuge canon (`gods.md`, Named Non-Bound Gods) likely still
+carries the old homeless-Dragonet framing (upper-Darklands concentrations etc.). Rework for: Dragonets as
+Brauogi Earth-people; the "his children, kind of — they believed him into shape" relationship (check what is
+public Dragonet tradition vs ⚿ GM-tier; the Wyrmkin Real History secret in `timeline.md` already complicates
+the progenitor claim). Do alongside or after the heritages pass.
+
 ### Draft — 📝 written to `brauogi.md` (## The Three Faces of Sarrum's Earth) + cascade done in `ancestries.md`; committed.
 
 ### `ancestries.md` cascade edits — ✅ DONE
