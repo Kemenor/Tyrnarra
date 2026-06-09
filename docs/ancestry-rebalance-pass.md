@@ -40,7 +40,7 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 
 ## Region queue (in working order)
 
-1. **Egulon (Light)** ✅ — lore committed (`6f4deec`); HTML pending. *The Year of the Vine.*
+1. **Egulon (Light)** 📝 — committed (`6f4deec`), then **restructured to feeling/culture split** (surfaced, awaiting re-review): feelings → peoples block, cultures → sub-region bullets (3↔3 mapping).
 2. **Brauogi (Earth)** ✅ — lore committed; HTML pending. Earth = Minotaur/Kholo/Dragonet (Stone/Vigil/Metal). Cascade done: Goblin→Fire, Kholo→Earth, Hunt trio now Orc/Lizardfolk/Goloma.
 3. **Zuzental (Law)** ✅ — lore committed; HTML pending. Feeling-level Peoples block (Elf long view / Human short fire / Hobgoblin given word); Order of Law = Hobgoblin-dominant.
 4. **Lioaru (Time)** ⬜ — Nagaji rebirth-cult
@@ -84,11 +84,15 @@ Lua Lasai (border w/ Ezkudon), Argia Esfera (sphere of light).
 - **Ljosarn (god-city) deferred** — combine all three peoples when built. Placement: in **Harro Distiratsue, on the lake bordering Argia Esfera** → sits right on the Sprite/Shoony seam, the natural meeting-ground of all three.
 - **Leshy = the domain's ballast.** They decline the Sprite/Shoony quarrel (a single-lifetime squabble; a Leshy line has watched ten lifetimes). Both hot peoples defer to them on anything touching the soil: no Sprite festival-claim on an unblessed grove, no Shoony first-pressing consecration the Leshy didn't see ripen. The hot two argue; the cool one holds the weight.
 
-### Draft (culture prose) — 📝 written to `egulon.md`, surfaced, awaiting review
-- God's-city line updated (Ljosarn in Harro Distiratsue on the lake bordering Argia Esfera).
-- Three sub-region bullets now name their heartland people.
-- New **## The Year of the Vine** section: seed + the three peoples + the two-lights/ballast dynamic.
-- **Open within Egulon (for later):** name the great kept flame/orb at Argia Esfera; Ljosarn god-city build (combines all three); Egulon wine-country economics (ties to the open-threads Azkataria→Egulon wine note); domain governance untouched.
+### Draft — committed (`6f4deec`), then RESTRUCTURED per the feeling-vs-culture rule (📝 surfaced, awaiting re-review)
+**The structure (the model for remaining regions):** ancestries get **feeling**, sub-regions get **culture**;
+Egulon's 3 peoples ↔ 3 sub-regions map one-to-one, but the layers stay differentiated (same feeling, different
+culture by place: a Harro Leshy works the light-craft register, a Lua Lasai Leshy the husbandry-courtesy).
+- **Peoples (feeling):** Leshy = *the ones who stay* (root, tend, remember); Sprite = *the ones who shine* (pride of making, brightness as self-expression); Shoony = *the ones who keep faith* (loyalty/constancy one temperament; welcome, zeal, healer's hope).
+- **Sub-region cultures:** Harro Distiratsue = **the light-craft** (standing by brightness made; made-light holy; craft belongs to the place, all peoples work it); Lua Lasai = **husbandry-courtesy** (planting finished when the grove's Leshy takes to the vine and names it; kept by every people farming there); Argia Esfera = **the kept flame** (unbroken-shift vigil as central institution; devout country; "a Sprite learns to dim, or to dazzle very carefully").
+- Two-lights tension + Leshy ballast kept at temperament level; the rite-list ("cannot claim a grove / consecrate a pressing") generalized to deference, "the courtesies that deference takes are each region's own."
+- `ancestries.md` Shoony entry aligned (three faces as feeling; liturgy-keeping line dropped).
+- **Open within Egulon (for later):** name the great kept flame/orb; Ljosarn god-city build; wine-country economics; domain governance.
 
 ---
 
