@@ -48,8 +48,9 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
 7. **Nashavel (Chaos)** ⬜ — Anadi web-holds
 8. **Sumendar (Fire)** ⬜ — Goblin homed (the appetite-alchemist; concept parked in Brauogi log for deep-dive)
-9. **Lautara (Commerce)** ⬜ — execute the Ratfolk/Gaps removal (tracked in open-threads)
-10. *(unchanged regions — grill-and-deepen only, lowest priority):* Myrkono, Floteyn, Vindul🔒, Lautara-heartland🔒, Askamira
+9. **Lautara (Commerce)** ⬜ — assignments stay locked (Kitsune·Halfling·Vishkanya), but full **feeling-vs-culture audit**: the Kitsune lookup entry blends three sub-cultures into ancestry text; the Vishkanya entry assigns civic crafts domain-wide; Halfling closest-to-model (Itsasalda/Atarialda = the original same-feeling-two-cultures exemplar). Plus: execute the Ratfolk/Gaps removal (tracked in open-threads), and the anything-missing check.
+10. **Vindul (Wind)** ✅ — audited + feelings layer committed. Quartet: Tengu *answer* the wind / Strix *ride* it / Kashrishi *watch* it / Jotunborn *stand in* it. Sub-regions needed NO changes (4↔4 mapping + cultures-with-places already correct). Strix/Kashrishi lookup entries de-institutionalized; stale "Nagaji of Egulon" cross-ref removed.
+11. *(unchanged regions — grill-and-deepen only, lowest priority):* Myrkono, Floteyn, Askamira
 
 *(Ehizahar (#6) also loses Kholo to Earth — handle the Villtur re-grill there.)*
 
