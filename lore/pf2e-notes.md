@@ -16,11 +16,11 @@ Tyrnarra uses the PF2e Remaster ancestry roster, plus the additions below.
 
 ### Access tags
 
-The PF2e *common / uncommon / rare* access tags apply at Talan scale. The Ancestry Distribution table at the top of `ancestries.md` lists per-domain dominance, uncommon access, and rare access for every placement.
+The PF2e *common / uncommon / rare* access tags apply at **Talan scale**: they describe how likely a people is to be met somewhere on the continent at random, and this is the system-facing access value. **In-region commonness is a separate axis.** A people native to and concentrated in a region is *common in that region* regardless of its Talan-scale tag, so a Talan-uncommon ancestry can still be the common, expected face of its own heartland (Jotunborn in Baerfrost, Automaton in Eldara, Conrasu in Nashavel). The two statements never collapse into one tag: the Talan-scale tag stays the PF2e access value; the in-region reading is set by where the people actually live. A corollary the Ancestry Distribution table obeys: a people with a heartland is never written up as uncommon or rare *everywhere*, only as Talan-scale uncommon or rare with its heartland named. The table at the top of `ancestries.md` lists per-domain heartland peoples (common where they live, sub-region noted when they cluster in one) alongside the peoples thin even within a domain.
 
 ### Sortalde (Tian Xia) ancestry placements
 
-The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Full per-ancestry detail in `ancestries.md`, *Sortalde Ancestries: The Six Petals*.
+The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai) are placed on **Sortalde**, the petal-archipelago continent east of Talan. Each occupies a single petal; on Talan they are vanishingly rare. Placement and access in `ancestries.md` (*Ancestry Distribution by Domain → Sortalde-native* and the combined alphabetical entry); full per-people canon in `geography/_off-continent.md`, *Sortalde → The Six Peoples*.
 
 **Hungerseed** is resolved as half-Oni; Oni are bound spirits of **Lingdao** (Spirit Island). Almost all Hungerseeds in canon are Sortalde-born.
 
