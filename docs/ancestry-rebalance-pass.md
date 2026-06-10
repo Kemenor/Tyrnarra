@@ -18,6 +18,14 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 
 ---
 
+## HTML reconciliation (started before the remaining lore regions, at user direction)
+
+- **Batch 1 — `ancestries.html` REBUILT 🌐** (ancestry-first): alphabetical feeling-led prose roster → rebalanced Who-Lives-Where table (full-expression sub-regions) → Heritages (content unchanged, pass pending) → Sortalde last. Old domain-card grid and Without-a-Homeland scatter-list removed. site-inventory description updated.
+- **Batch 2 — domain pages** ⬜: Peoples/feelings onto egulon/brauogi/zuzental/vindul/lautara pages; roster-line corrections on floteyn (−Leshy), sumendar (+Goblin), lioaru (+Nagaji), ezkudon (+Ratfolk), ehizahar (Kholo→Goloma), nashavel (+Anadi). Check GM-Vetted badges per page; strip where more than minor.
+- **Batch 3 — sub-region pages** ⬜: `itsasalda.html` REAL REWORK (Vishkanya watch); touch-ups: `atarialda.html` (contrast line), `merkavar.html` (clergy/artisan switch), Dreaming Cape page (broker→truth-guides), `rika-tikur.html` (Gaps line).
+
+---
+
 ## Locked board (already in `lore/ancestries.md` — reference only)
 
 | Domain · God | Heartland ancestries | New/Moved this pass |
