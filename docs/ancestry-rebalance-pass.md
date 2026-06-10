@@ -51,7 +51,7 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 1. **Egulon (Light)** 📝 — committed (`6f4deec`), then **restructured to feeling/culture split** (surfaced, awaiting re-review): feelings → peoples block, cultures → sub-region bullets (3↔3 mapping).
 2. **Brauogi (Earth)** ✅ — lore committed; HTML pending. Earth = Minotaur/Kholo/Dragonet (Stone/Vigil/Metal). Cascade done: Goblin→Fire, Kholo→Earth, Hunt trio now Orc/Lizardfolk/Goloma.
 3. **Zuzental (Law)** ✅ — lore committed; HTML pending. Feeling-level Peoples block (Elf long view / Human short fire / Hobgoblin given word); Order of Law = Hobgoblin-dominant.
-4. **Lioaru (Time)** ⬜ — Nagaji rebirth-cult
+4. **Lioaru (Time)** 🔵 — Nagaji rebirth-cult
 5. **Ezkudon (Knowledge)** ⬜ — Ratfolk diggers
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
 7. **Nashavel (Chaos)** ⬜ — Anadi web-holds
@@ -200,6 +200,31 @@ Thousand-Kingdom/Order-of-Law colour for sub-region work, NOT an ancestry trait.
 - **Orc / Lizardfolk / Goloma** entries: drop "alongside Kholo"; Hunt trio is now Orc/Lizardfolk/Goloma (Goloma was "wary fourth" → now "wary third/watcher"). *(Deeper Villtur re-grill happens at the Ehizahar region.)*
 
 ### Draft — 📝 written to `zuzental.md` (Peoples block + Order of Law bullet) + `ancestries.md` Hobgoblin entry rewritten to feeling-level; committed.
+
+---
+
+## § Lioaru (Time · Tani) — 🔵 grilling
+
+**Canon (from `lioaru.md`):** desert dominant, orange dunes; green river valley (**River Duchies**, noble
+houses, downstream trade from Emarrea); **Lost Kingdom / Blackened Lands** (Tani's death-site, cursed ground,
+Fleshwarp + Skeleton origin); **Lost Isle**; **Galdua Jendea** (sand-whale territory, holds **Valreka**);
+**Hareaveldi** (partially independent identity, name predates Tani, "flesh out during Lioaru work" — EMPTY).
+Valreka: whale-borne city, recovers Oroiri; Ghoran majority + Azarketi water-bearers; ◈ old-woman-at-the-dig;
+⚿ Amona of the Strays (Tani among the youth-riders).
+
+**The three peoples (target):**
+- **Ghoran** — memory rooted; the Guardians of Time; Valreka's heart. (Culture already lives with Valreka — correct.)
+- **Azarketi** — the past carried as daily labour; water-bearers; southern coast + offshore islands ancestral ground.
+- **Nagaji** *(new)* — shed-and-renewed; the fervent faithful of the goddess who died and returned. Needs a heartland; NO migration framing (always were Lioaru's).
+
+### Grill log (decisions)
+- **Hareaveldi = Nagaji heartland, approved in principle** ("a good idea"): the serpent-kingdom of the desert; the empty sub-region whose pre-Tani name becomes the feature (an old desert kingdom whose people found in the returned goddess what their own skins always told them; no migration). Mapping: Galdua Jendea ↔ Ghoran, southern coast/isles ↔ Azarketi, Hareaveldi ↔ Nagaji; River Duchies + Lost Kingdom unsorted. **Details deferred until the feelings are set** (user: feelings first).
+- **The tense-trio (user confirmed: "reads good"):** the three feelings stand in Tani's three tenses (her subtitle Fate · Patience · Memory · Decay as inspiration, not mapping). **Ghoran = the ones who hold what was** (past; memory as temperament; vs Elf = long view forward, vs Leshy = place-memory). **Azarketi = the ones who answer it now** (present; born carrying a story bigger than their life, defined by today's answer — pride daily, penance daily; unifies the Elden-blood-pride majority and Valreka's penance community as two answers to one inheritance). **Nagaji = the ones who become what's next** (future; shed-and-whole-again; selves laid down finished; Tani recognised, not zealously revered).
+- **Nagaji DE-ZEALED (user: zeal was an Egulon holdover).** The fervour was their old Light-domain function and the zeal-role already re-homed to Egulon's Shoony. Rewritten: the people who begin again completely; kinship with Tani instead of fervour. `ancestries.md` entry rewritten; `lioaru.html` + `ancestries.html` Nagaji lines need the same de-zeal at HTML mirror time.
+- **Decay over all:** "the sand that buries is also the goddess" closes the Peoples block.
+- **Hareaveldi seed placed in `lioaru.md`** (serpent-kingdom of the desert, kingdom of becoming, name older than its cult); **full region write deferred** to the sub-region flow.
+
+### Draft — 📝 written (lioaru.md Peoples block + Hareaveldi seed; ancestries.md Nagaji/Ghoran/Azarketi aligned), surfaced, awaiting review. HTML mirror after commit: lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
 
 ---
 

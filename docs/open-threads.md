@@ -230,6 +230,7 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 ### [Rika Tikur] Plutocracy: open follow-ups
 **Decided.** Rika Tikur is **Jianna's Greed-face**: the island-city in the Order of Steam bay, a full plutocracy run as the joint-stock **Company** (a berth = citizenship + weighted vote; the **Board**, the **Chair**, takeover-as-coup; the **Exchange** trading ownership; private infrastructure and **the Gaps**), worshipping Greed and **Nirfel** openly at the **Gilded Talon**; flagship **House Goldmoor**; **⚿ GM Secret: What Nirfel Actually Charges**. Canon complete in lore and HTML (see *Where*).
 **Open.** Follow-ups:
+- **Rework the Gaps' people** *(ancestry-rebalance fallout)*. The Ratfolk re-homing to Ezkudon removed the Gaps' anchor people; the current "settled dock-families and cosmopolitan transients" framing is a patch, not a design. The Gaps deserve a real rethink: who the berthless community actually is, what holds the mutual-aid fabric together without a single anchoring ancestry, and whether a people or an institution (or neither, deliberately) carries it. Do alongside the next Rika Tikur deepening pass.
 - **The rest of the trade-house roster** and the named districts of the berth-rich core (beyond Goldmoor and the Gaps) are unwritten; coin as stories need them.
 - **The OoS freight-factor quarter's name**, named factors, named Board figures, and a current Chair.
 - **House Goldmoor's reckoning** (GM-tier): which signs the lien is maturing, and what the house does when it learns the price.
