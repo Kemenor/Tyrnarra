@@ -54,7 +54,7 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 4. **Lioaru (Time)** ✅ — lore committed (`7db5441`). The tense-trio (hold/answer/become); Nagaji de-zealed; Hareaveldi seed placed. **HTML mirror PENDING (bundle):** lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
 5. **Ezkudon (Knowledge)** 🔵 — Ratfolk diggers
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
-7. **Nashavel (Chaos)** ⬜ — Anadi web-holds
+7. **Nashavel (Chaos)** 🔵 — Anadi web-holds (pulled ahead of Ehizahar at user direction)
 8. **Sumendar (Fire)** ⬜ — Goblin homed (the appetite-alchemist; concept parked in Brauogi log for deep-dive)
 9. **Lautara (Commerce)** ✅ — feelings committed (`79b866b`) + **one-region-per-people rework committed** (`b9ea197`); HTML pending (itsasalda.html = real rework):
    - **Full-expression board:** Emarrea = Kitsune · Atarialda = Halfling · **Itsasalda = Vishkanya** (the steady watch IS the shaping hand; Watchers mostly Vishkanya, Reckoners the same people's scrivener arm; Watchroll "Vishkanya by gravity"). **Mountain-Halfling concept retired**; the HRA-vs-Vordsbench friction is now the two feelings meeting at one harbour ("the rails carry the deal, the dock holds the deal" = road in the blood vs the hand that stays).
@@ -246,6 +246,26 @@ waits in the Leize.
 - **FUTURE PHASE (user): god-cities reconciliation pass** — go through ALL thirteen divine cities at the end, checking each against its domain's rebalanced peoples (Thekkavar handled here; the other twelve pending).
 
 ### Draft — 📝 written (ezkudon.md Peoples block + Jakinduria warrens + Thekkavar three-faces + Sealed line; ancestries.md Catfolk/Shisk/Ratfolk rewritten), surfaced, awaiting review. HTML mirror in the BUNDLE: ezkudon.html Peoples line (Shisk still says "divers of the sealed shelves" — fine — but Ratfolk line is digger-register and Shisk needs Mystery relabel) + thekkavar page if exists + ancestries.html entries.
+
+---
+
+## § Nashavel (Chaos · Vesuna) — 🔵 grilling
+
+**Canon (from `nashavel.md`):** dense old-growth forest, wild magic, paths don't stay fixed. Sub-regions:
+**Vernua Dominion** (holds **Nahaskel**, the Unmapped City: remake-what's-yours, the Casting/coin, Tellers,
+Dossa, Pim; ⚿ the coin honest except at the two edges; the Unthrown), **Kaosadaemi Principality**, **Basogur
+Jungle** (shared w/ Ehizahar; the continental rail-blocker; "indigenous Vanara/leshy/beast-spirits/druid
+resistance"). Nahaskel texture already names Gnomes (the temperament), Ganzi, Conrasu (the thread of caution).
+
+**The four peoples (target):** Gnome · Vanara · Conrasu · **Anadi** *(promoted)*. Feelings first.
+
+### Grill log (decisions)
+- **Vesuna's portfolio (user):** subtitle **Change · Creativity · Spontaneity · Madness**; domains **Change · Luck · Trickery · Disorientation**.
+- **The four stances, faces as inspiration (user: "reads good"):** **Gnome = Spontaneity, the ones who spin it** (the idea arrives and the hands are already moving; they generate the churn). **Vanara = Change, the ones who ride it** (change as their native element; sure-footed on moving ground). **Anadi = Creativity, the ones who re-weave** (making as devotion; the web tears and the weaving was the point; serene about destruction). **Conrasu = Madness known from the inside** (the Hobgoblin/Tyranny move: they have BEEN formlessness; the chosen shape is sanity as a daily act). **Luck stays in the coin** — the goddess's, no people's.
+- **Anadi in Nahaskel (user): the web-walks** — silken rooftop walkways re-strung weekly/overnight, walkable by all; the one transport that keeps pace with the city; "the nearest thing Nahaskel has to infrastructure," lasting because their makers never mind taking them down. Added to the conveyance paragraph + the ordinary-day peoples line.
+- Anadi added to the Basogur rail-blocker resistance list + Basogur bullet (web-holds in the deep interior).
+
+### Draft — 📝 written (nashavel.md Peoples block + Nahaskel web-walks + Basogur anchors; ancestries.md Gnome/Vanara/Conrasu/Anadi rewritten feeling-first), surfaced, awaiting review. HTML mirror in the BUNDLE: nashavel.html Peoples line + nahaskel.html (web-walks + peoples texture) + ancestries.html entries.
 
 ---
 
