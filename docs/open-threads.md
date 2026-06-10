@@ -190,7 +190,6 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 ### [Itsasalda] Vordsbench: open follow-ups
 **Decided.** Itsasalda is **the Vordsbench**: a seated slow council at Bellhalt (Watchers seated by a verified count of tides watched; Vishkanya **Reckoners** keeping the **Watchroll**; the Long Hearing's Open → Long Ruling's Close cycle), with the **HRA** as rail-labour and the HRA-Vordsbench friction at Bellhalt the region's political life. Canon complete in lore and HTML (see *Where*).
 **Open.** Chronicler-tier follow-ups (new and carried-forward):
-- **HTML rework (ancestry-rebalance).** `itsasalda.html` still presents the mountain-Halfling framing; in lore the watch is now **Vishkanya-anchored** (the people's fullest expression; Watchers mostly Vishkanya, Watchroll "Vishkanya by gravity", HRA as the Halfling counter-temper). The page needs a real rework at the HTML pass, beyond a mirror-touch.
 - **The Forgotten King's name and the named founding year of the Vordsbench.** Mid-1700s MR; both currently canon-pending.
 - **The Quietline's named founding year.** Mid-Adventurer Era; the Vordsbench Senior of the day and the Empire's regional governor signed; the Senior's name is also pending.
 - **Named seated Watchers.** Current Senior of the Vordsbench and the seated body's composition.
