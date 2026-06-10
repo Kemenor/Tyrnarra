@@ -16,6 +16,8 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 
 **Status legend:** ⬜ pending · 🔵 grilling (decisions being captured) · 📝 lore written (surfaced) · ✅ lore committed · 🌐 HTML published
 
+**METHOD DOC:** the distilled how-to-define-ancestries rules live in [`ancestry-conventions.md`](ancestry-conventions.md) (permanent; survives this tracker). Read it before any feeling-work.
+
 ---
 
 ## HTML reconciliation (started before the remaining lore regions, at user direction)
