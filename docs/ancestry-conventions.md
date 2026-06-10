@@ -63,7 +63,9 @@ their heartland?** If it only describes them in one region, it is culture; move 
 
 9. **Check the flanks.** A new feeling must not collide with an existing people's defining word, in its
    own domain or any other. When two peoples share a verb (Vanara ride change; Strix ride weather),
-   the elements must differ enough that meeting the two peoples feels different.
+   the elements must differ enough that meeting the two peoples feels different. And **an ancestry
+   describes itself, never itself-through-others**: cross-people contrasts belong in the flank-check
+   and the domain-structure coda, not inside a people's own feeling text.
 
 10. **One concrete proof per feeling.** Each entry earns one image or gesture that makes the
     temperament unmistakable: the sorrow is in the skin I left; reads wreckage the way a Dwarf reads a

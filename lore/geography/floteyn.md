@@ -12,6 +12,14 @@
 
 **God's city:** Uravel, The Floating Isles
 
+**Peoples:** Three dominant ancestries are anchored here: **Tripkee** (the Floating Isles), **Athamaru**, and **Merfolk**. The domain-level read is a feeling of each people, never a practice; the cultures live with the sub-regions, and the three feelings are three answers to water that will not hold still.
+
+- **The Tripkee make home; they do not find it.** A Tripkee builds wherever she stands, and if the island drifts, the home drifts with it, which troubles her not at all. Give a Tripkee three planks and a tide and there is a porch by evening; give her a season and there is a village. The most settled people of the least settled domain, at peace on moving ground because they build, never despite it.
+- **The Athamaru are at ease above the abyss.** An Athamaru is born suspended over a darkness that goes down past all light, and is fine. Equanimity as temperament: the floor has never been where they stand, so dread gets no purchase on them; panic is a land-emotion, learned by folk who believe the ground is owed them. When the ship founders, the Athamaru is the one whose voice does not change. Rest comes to them the way it comes to water: she sleeps anywhere, frets over nothing she cannot reach with her own hands today, and meets disaster the way the sea meets a thrown stone, closing back over, whole.
+- **The Merfolk move as water moves.** A Merfolk does not force: she meets an obstacle the way a current does, around it, over it, through the crack in it, unhurried and unstoppable, and arrives where she meant to arrive with no sign of having fought for it. The sea is hers because she is the sea's: never lost in it, never against it, going with the waves the way other folk go with their own breath. The dignity that surface-dwellers find magnificent or insufferable is simply the certainty of water: nothing has ever finally stopped it, and nothing has ever finally stopped her.
+
+The Tripkee build on the moving water, the Athamaru float at ease upon it, the Merfolk move as it moves. **Drowning**, the sea's own face, belongs to no people: none of the three can drown, and all three have pulled out those who can. The water does not need to be cruel to take, and the peoples of Floteyn are the ones who made their lives on it anyway.
+
 **Sub-regions:**
 - **Balatur Erui**: *whale-spit / whale shoals.* One of Floteyn's drifting-island sub-regions; Balaena the Skywhale City sits within its archipelago.
 - **Floating Isles of Shuun**: the collective name for the hundreds of drifting islands across the domain. Each island technically has its own name but this is the common reference for the archipelago as a whole.
