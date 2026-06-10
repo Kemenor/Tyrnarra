@@ -52,9 +52,9 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 2. **Brauogi (Earth)** ✅ — lore committed; HTML pending. Earth = Minotaur/Kholo/Dragonet (Stone/Vigil/Metal). Cascade done: Goblin→Fire, Kholo→Earth, Hunt trio now Orc/Lizardfolk/Goloma.
 3. **Zuzental (Law)** ✅ — lore committed; HTML pending. Feeling-level Peoples block (Elf long view / Human short fire / Hobgoblin given word); Order of Law = Hobgoblin-dominant.
 4. **Lioaru (Time)** ✅ — lore committed (`7db5441`). The tense-trio (hold/answer/become); Nagaji de-zealed; Hareaveldi seed placed. **HTML mirror PENDING (bundle):** lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
-5. **Ezkudon (Knowledge)** 🔵 — Ratfolk diggers
+5. **Ezkudon (Knowledge)** ✅ — lore committed (`6d96ef9`). Enki's three faces one-per-people (Catfolk Wisdom / Shisk Mystery / Ratfolk Discovery; Arrogance unclaimed); Thekkavar three-faces restructure. HTML in the bundle.
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
-7. **Nashavel (Chaos)** 🔵 — Anadi web-holds (pulled ahead of Ehizahar at user direction)
+7. **Nashavel (Chaos)** ✅ — lore committed (`98d36be`). Four stances toward change (Gnome spin / Vanara ride / Anadi re-weave / Conrasu know-what's-underneath); Nahaskel web-walks. HTML in the bundle.
 8. **Sumendar (Fire)** ⬜ — Goblin homed (the appetite-alchemist; concept parked in Brauogi log for deep-dive)
 9. **Lautara (Commerce)** ✅ — feelings committed (`79b866b`) + **one-region-per-people rework committed** (`b9ea197`); HTML pending (itsasalda.html = real rework):
    - **Full-expression board:** Emarrea = Kitsune · Atarialda = Halfling · **Itsasalda = Vishkanya** (the steady watch IS the shaping hand; Watchers mostly Vishkanya, Reckoners the same people's scrivener arm; Watchroll "Vishkanya by gravity"). **Mountain-Halfling concept retired**; the HRA-vs-Vordsbench friction is now the two feelings meeting at one harbour ("the rails carry the deal, the dock holds the deal" = road in the blood vs the hand that stays).
