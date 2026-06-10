@@ -51,8 +51,8 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 1. **Egulon (Light)** 📝 — committed (`6f4deec`), then **restructured to feeling/culture split** (surfaced, awaiting re-review): feelings → peoples block, cultures → sub-region bullets (3↔3 mapping).
 2. **Brauogi (Earth)** ✅ — lore committed; HTML pending. Earth = Minotaur/Kholo/Dragonet (Stone/Vigil/Metal). Cascade done: Goblin→Fire, Kholo→Earth, Hunt trio now Orc/Lizardfolk/Goloma.
 3. **Zuzental (Law)** ✅ — lore committed; HTML pending. Feeling-level Peoples block (Elf long view / Human short fire / Hobgoblin given word); Order of Law = Hobgoblin-dominant.
-4. **Lioaru (Time)** 🔵 — Nagaji rebirth-cult
-5. **Ezkudon (Knowledge)** ⬜ — Ratfolk diggers
+4. **Lioaru (Time)** ✅ — lore committed (`7db5441`). The tense-trio (hold/answer/become); Nagaji de-zealed; Hareaveldi seed placed. **HTML mirror PENDING (bundle):** lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
+5. **Ezkudon (Knowledge)** 🔵 — Ratfolk diggers
 6. **Ehizahar (Hunt)** ⬜ — Goloma watch-hunters
 7. **Nashavel (Chaos)** ⬜ — Anadi web-holds
 8. **Sumendar (Fire)** ⬜ — Goblin homed (the appetite-alchemist; concept parked in Brauogi log for deep-dive)
@@ -224,7 +224,28 @@ Valreka: whale-borne city, recovers Oroiri; Ghoran majority + Azarketi water-bea
 - **Decay over all:** "the sand that buries is also the goddess" closes the Peoples block.
 - **Hareaveldi seed placed in `lioaru.md`** (serpent-kingdom of the desert, kingdom of becoming, name older than its cult); **full region write deferred** to the sub-region flow.
 
-### Draft — 📝 written (lioaru.md Peoples block + Hareaveldi seed; ancestries.md Nagaji/Ghoran/Azarketi aligned), surfaced, awaiting review. HTML mirror after commit: lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
+### Draft — ✅ committed (`7db5441`). HTML mirror in the BUNDLE: lioaru.html Peoples line + ancestries.html Ghoran/Azarketi/Nagaji entries.
+
+---
+
+## § Ezkudon (Knowledge · Enki) — 🔵 grilling
+
+**Canon (from `ezkudon.md`):** the hidden domain; ring-fortress terrain around the archives. Sub-regions:
+**Jakinduria** (holds **Thekkavar**: the Lanterns, the descent, writs, Quiet Hour, Convocation; Catfolk=Wisdom
+pole / Shisk=Discovery pole — city culture, correctly placed), **the Wildreach** (wild people, wild-magic,
+Iratxobaso fey-forest), **the Golden Coast** (tea/paper/ink trade in, finished thought out), **Lua Lasai**
+(shared w/ Egulon; Leshy-dominant per the Egulon pass). ⚿ secrets: the price in the deep (the Sealed), what
+waits in the Leize.
+
+**The three peoples (target):** Shisk · Catfolk · **Ratfolk** *(new)*. Feelings first, then Ratfolk placement.
+
+### Grill log (decisions)
+- **The three faces sort one-per-people (user: "that split is better").** Enki = Wisdom · Discovery · Mystery · Arrogance (domains Knowledge · Magic · Perfection). Old city canon split him between two peoples; with three: **Catfolk = Wisdom** (curiosity that keeps; the keeping eye; closed door = kept promise), **Shisk = MYSTERY** (relabelled off Discovery — the ones the hidden calls; the people of Mystery becoming mysteries, feeding the Sealed), **Ratfolk = Discovery** (every question has an answer; nothing truly closed; discovery as motion — GENERALIZED off the digger/physical register per user). **Arrogance unclaimed**: the shared sin threatening each from its own side.
+- **Thekkavar restructured two-poles → three-faces** (user approved): Ratfolk thread = the page-runners (the city's vertical circulation) + warren-crews; the Sealed now drawn from all three peoples.
+- **Ratfolk anchor = the under-ring**: warrens threading Ezkudon's central mountain-fortress, older than any writ; the people of Discovery live inside the walls the rest of the domain lives behind.
+- **FUTURE PHASE (user): god-cities reconciliation pass** — go through ALL thirteen divine cities at the end, checking each against its domain's rebalanced peoples (Thekkavar handled here; the other twelve pending).
+
+### Draft — 📝 written (ezkudon.md Peoples block + Jakinduria warrens + Thekkavar three-faces + Sealed line; ancestries.md Catfolk/Shisk/Ratfolk rewritten), surfaced, awaiting review. HTML mirror in the BUNDLE: ezkudon.html Peoples line (Shisk still says "divers of the sealed shelves" — fine — but Ratfolk line is digger-register and Shisk needs Mystery relabel) + thekkavar page if exists + ancestries.html entries.
 
 ---
 
