@@ -13,7 +13,7 @@ A people of ash and will. To the prosperous southern kingdoms they are a nightma
 
 They are fiercely independent, brutally pragmatic, and passionate in their personal lives in a way the colder politics of their neighbours rarely matches. They argue with vigour, laugh without restraint, and love with fire-coloured intensity. Their celebrations are explosive and cathartic. Their wars are surgical and silent.
 
-**Demographics & ancestry.** The four Fenurran tribes are human-stock: per-ancestry placement in [`../../ancestries.md`](../../ancestries.md) treats the species; this file treats the culture and the place together.
+**Four peoples, one blood.** Each of the four tribes is its own people: the Draconis are Dwarves, the Vexiren are Goloma, the Brakkaun are Orcs, the Seravain are Hobgoblins, and all four carry the **Dragonblood** heritage thicker than anywhere else on Talan. The blood is the nation: four peoples who would be strangers anywhere else read each other as kin here, because under four temperaments runs one undertone, the old Wyrmkin line surfacing as scale, eye, and breath, and as the stillness every Fenurran goes to under threat. Ancestry-level feelings live in [`../../ancestries.md`](../../ancestries.md); the cultures belong to the tribes themselves, and this file treats them with the place.
 
 ## Where they live
 
@@ -33,6 +33,8 @@ Fenurran society rests on a single unshakeable pillar: **efficiency**.
 - **Individualism within tribe**: Fenurrans are deeply individualistic, yet fiercely loyal to their chosen tribe. The tribe is family, and a warrior's first duty is to ensure its survival.
 
 Politically, there are no kings or queens. There are no permanent generals. There is only the **Speaker's Mantle**, the leadership token held by whichever tribe has most recently proven itself competent enough to mediate the others (see *Politics* below).
+
+Chroniclers who ask why the blood runs strongest in a meteor crater get the answer the Dragonets' own tradition would give: the old line ran through deep ground, and the Scar of Aeris bleeds heat up from strata older than every map of Talan. Four peoples have lived on that ground as long as any of them has kept count, and the ground has been in all four bloods the whole time.
 
 ## The schism
 
@@ -55,7 +57,7 @@ Fenurra is composed of countless smaller tribes, but its strength is concentrate
 **Animal influence:** The **Ember Drake**, mythic winged-fire beasts said to have emerged from the meteor's core.
 **Home:** The depths of the Scar of Aeris itself; they hold the capital city. The earth there bleeds heat and the air hums with latent magic.
 
-**Character:** Measured, ceremonial, flame-tempered. The most refined of the Fenurran tribes, shaped by generations of slow exposure to the crater's magic; many Draconis are born with silver scales in patches across the skin, embers in their hair, or smouldering eye-colour. Their warriors are drilled to precision; their diplomats choose words like others choose blades. Their control does not mean coldness; Draconis burns beneath the surface, and when they celebrate, it is with the full heat of life.
+**Character:** A dwarven people, measured, ceremonial, flame-tempered. The Draconis temper is the dwarven method given ritual form: Blackglass is never a stroke of genius, it is ten thousand corrected errors in an alloy that punishes a wild blow, and the tribe's ceremony is the same correction applied to politics. The most refined of the Fenurran tribes; the Dragonblood runs thickest in them of the four, and many Draconis are born with silver scales in patches across the skin, embers in their hair, or smouldering eye-colour. Their warriors are drilled to precision; their diplomats choose words like others choose blades. Their control does not mean coldness; Draconis burns beneath the surface, and when they celebrate, it is with the full heat of life.
 
 **What they make:**
 - **Blackglass**: the legendary steel-and-obsidian alloy. Sharper than anything else on Talan, capable of cutting through plate, but brittle if struck wrong. The Draconis are its only forgers. A Blackglass blade is crafted for a single named bearer; it is said to *choose* its wielder and shatter in unworthy hands.
@@ -84,7 +86,7 @@ Fenurra is composed of countless smaller tribes, but its strength is concentrate
 **Animal influence:** The **Ash Fox**, agile, clever, adapted to hunt by heat and vibration through sulfurous haze.
 **Home:** The Sulfur Vents of Vehl. Villages carved into canyon walls or built on ashflow ridges that glow faintly from below. Steam and smoke rise in constant whispers; here you learn to see without light and speak without sound.
 
-**Character:** The Vexiren revere the silence between heartbeats. They define family not by blood but by action and trust; while no Fenurran honours family above tribe, the Vexiren live this with sacred clarity. You are only as strong as the pack that claims you, and that claim can be broken as easily as it was earned. Ruthless in war. Riotous in peace; their festivals erupt from silence into firelight duels, poetry shouted over drumfire, and direwolf howls.
+**Character:** A Goloma people, and the Goloma gift is the whole tribe's trade: the ones who see it first, the hunt known from the prey's side, turned hunter. Heat-sight through sulfur haze, the watcher who noticed before anyone else and said nothing yet; nobody reads a predator better than the watched, and the Vexiren kill predators silently. They revere the silence between heartbeats and define family not by blood but by action and trust; while no Fenurran honours family above tribe, the Vexiren live this with sacred clarity. You are only as strong as the pack that claims you, and that claim can be broken as easily as it was earned. Ruthless in war. Riotous in peace; their festivals erupt from silence into firelight duels, poetry shouted over drumfire, and direwolf howls.
 
 > *"To honour death tomorrow, we celebrate life tonight."*
 > Vexiren campfire proverb
@@ -114,7 +116,7 @@ Fenurra is composed of countless smaller tribes, but its strength is concentrate
 **Animal influence:** The **Ash Boar**, thick-skinned, smoke-bristled beasts that survive on what should kill them.
 **Home:** The cracked craterlands and the sulfur-blasted river gorges. Homes carved into black stone and ash-glass, with ancestral bones worked into walls and weapons. Each Brakkaun warrior carries a bone of a fallen comrade, not for grief but as a living vow. The dead are not mourned. They are used.
 
-**Character:** Blunt force and spiritual heart in one tribe. Shamans and warriors are not separate castes; many Brakkaun are both. They are the heaviest of the Fenurran tribes, both in build and disposition.
+**Character:** An orcish people: the ones who close, the world met head-on, now. Blunt force and spiritual heart in one tribe; shamans and warriors are not separate castes, and many Brakkaun are both. They are the heaviest of the Fenurran tribes, both in build and disposition, and the close runs through everything they keep: a Brakkaun ends what is open, the siege, the argument, the comrade's unfinished task, which is why the dead are carried until their work is done.
 
 **Shattervoice, the Brakkaun art:** The shamans train in the **Ashdrums**, massive resonant hide-and-stone instruments bound with heat-tempered metal and carved with dissonant runes. Played in rhythm with deep-throat chants, they disrupt the arcane harmonics that outsider magic depends on. Spells fracture mid-cast. Casters' concentration breaks. Magical wards fail as if caught in an earthquake of sound. The Brakkaun call this power the *Shattervoice*, and they wield it with booming precision.
 
@@ -143,7 +145,7 @@ Fenurra is composed of countless smaller tribes, but its strength is concentrate
 **Animal influence:** The **Sulfur Lynx**, solitary predator that mates for life and fights in synchronized pairs when defending shared territory. Sudden explosive motion, eerie fixed stares.
 **Home:** The high crags and sulfur-shadowed shelves of Mount Skel and the Ashwall Divide. Stone-roofed homes that cling to cliffs, **always built in pairs**; no Seravain home is built alone. Each home has two doors, two fires, two watchers.
 
-**Character:** Of all Fenurrans, the Seravain are the least outwardly expressive, but this is not coldness. It is concentration. Passion burns so brightly within them that they temper it with silence to survive. When the danger is gone, their joy is overwhelming. Laughter that echoes off canyon walls. Feasts where paired dancers leap flame-lines until dawn.
+**Character:** A hobgoblin people, and the bond-pairing is the hobgoblin feeling made a way of life: the given word as load-bearing, slow to promise, immovable once sworn. Of all Fenurrans, the Seravain are the least outwardly expressive, but this is not coldness. It is concentration: passion burns so brightly within them that they temper it with silence to survive, and the Dragonblood stillness doubles the temper. When the danger is gone, their joy is overwhelming. Laughter that echoes off canyon walls. Feasts where paired dancers leap flame-lines until dawn.
 
 **Bond-pairing, the central institution:** Almost every adult Seravain is *true-married*, whether romantically or in what they call **soul-pairing**: a warrior bond of eternal, chosen trust. Bonds are formalized through the **Dance of the Sulfur Fire**, the only sacred rite the Fenurrans recognize, and the Seravain take it more seriously than any other tribe. For them it is not merely a marriage ceremony. It is the proving of a bond in the only place that matters (together, through fire) and the demonstration of unity later mirrored in their fighting style.
 
