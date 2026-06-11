@@ -231,15 +231,35 @@ A heritage sits on a person who already carries a people's feeling, so these ent
 
 ### Sparks of the substrate (Layer 1 in the body)
 
-Seven heritages carry the substance of a primordial's stratum in a mortal line (see `gods.md`, *Layer-1 Primordials: The Nine*): the spark is substrate, never divine blood. The four bound elemental gods keep a doctrinal affinity with the corresponding spark, and spark-carrying communities cluster around those domains by cultural gravity, never by birth. *(Source-lock only for now; this family's carry-entries are the next pass.)*
+Seven heritages carry the substance of a primordial's stratum in a mortal line (see `gods.md`, *Layer-1 Primordials: The Nine*): the spark is substrate, never divine blood. The four bound elemental gods keep a doctrinal affinity with the corresponding spark, and spark-carrying communities cluster around those domains by cultural gravity, never by birth. The four classical sparks differ the way the elements differ: fire spends, water levels, earth bears, air alights; wood grows and metal is set; the Suli carries more than one.
 
-- **Ifrit**: Suzar's stratum, primordial flame.
-- **Undine**: Urzar's stratum, primordial water.
-- **Oread**: Lurzahar's stratum, primordial earth and stone.
-- **Sylph**: Haizar's stratum, primordial air.
-- **Ardande**: Zurzar's stratum, the wood-substance, carried from the Feyworld where the being wanders.
-- **Talos**: Burdinzar's stratum, the metal-substance, carried from the Shadowplane where the being wanders.
-- **Suli**: the blend, more than one stratum in one body, with no single specialisation.
+#### Ifrit (Suzar's spark)
+
+Primordial flame in a mortal line, and the body keeps fire's rules: an Ifrit runs warm to the hand, the air over her skin shimmers faintly on a cold morning, and the soup never goes cold at her table. The carry is the burn: fire warms the cold and consumes what stops moving, and an Ifrit's attention works the same way, kindling whatever it lands on and eating through whatever sits still too long. What burns is the ancestry's own, the Minotaur Ifrit a slow furnace, the Gnome Ifrit a shower of sparks, and in both a banked heat that never quite goes out. The reception is everywhere the same and everywhere double: welcome at the hearth, watched in the hayloft. The spark's shadow is consumption: a fire fed everything it asks for eats the table, then the house, and an Ifrit who follows the appetite of her own intensity can burn through friends, savings, and years like cordwood. Hold an Ifrit's hand in midwinter and you will understand why people marry them; ask the one who left why she did, and she will say she got tired of being fuel.
+
+#### Undine (Urzar's spark)
+
+Primordial water, and it shows as the level: whatever the day throws at an Undine thins, spreads, and settles, the way ink thins in a harbour. Insults shed, yesterday's weather slides off, and the temper beneath finds its level by morning; folk who live beside an Undine come to trust that levelness the way sailors trust deep water, it will hold your weight, and it makes no promises. The skin carries a cool dampness, the hair drifts a half-second behind the head, and grief moves through them visibly, like rain crossing a bay, here, heavy, then truly gone. The spark's shadow is the flood, for the rain that soothes and the flood that takes are one water: an Undine pushed past some unmarked line does not argue, the flood comes perhaps once in a decade and takes everything loose, and afterwards the water is calm and the furniture is gone. Watch one take terrible news: the surface moves, the depth holds, and by morning the level is back.
+
+#### Oread (Lurzahar's spark)
+
+Primordial earth and stone: weight is real to an Oread, and bearing it is the native act. They feel loads the way other folk feel temperature, the sag in a roof-beam, the strain in a friendship, the panic gathering in a crowd, and where an Oread stands, things settle onto her and hold. People lean without meaning to: the child is asleep against the Oread's shoulder inside three minutes, the whole table angles toward the one who has said the least. The pace is stone's pace, with no haste and no panic in it anywhere, and the ancestry decides the manner of the bearing, the Kholo Oread carrying her circle, the Tengu Oread the still point her loud household turns on. The spark's shadow is the swallow: earth holds everything up and eventually takes everything in, and an Oread can take a grief so deep that it stops being feelable and becomes geology, load-bearing, permanent, past anyone's reach, her own included. When the storm comes, the street shelters in the Oread's house, and nobody remembers deciding that.
+
+#### Sylph (Haizar's spark)
+
+Primordial air: gravity holds a Sylph loosely. The body is light on the floorboards, the voice arrives on the draft before the face arrives at the door, sleep is shallow as a bird's, and the lightness goes all the way in. A Sylph holds everything lightly, the grip, the grudge, the plan, the roof over her head, and what she loves she loves without putting weight on it, which the loved receive as the purest freedom or the deepest insult, depending on what they wanted held. The ancestry decides where the lightness lands: the Hobgoblin Sylph keeps her sworn word and sits loose to all else; the Kitsune Sylph is the lightest hand her stage has ever seen. The spark's shadow is the fickle, for air promises neither the storm nor the breeze: a Sylph who never once presses down leaves a life with nothing standing in it, rooms she brightened and left, people she eased and released. Hand a crying baby around the room; it quiets with the Sylph, because nothing in her hands has weight.
+
+#### Ardande (Zurzar's spark)
+
+The wood-substance, carried from the Feyworld, and it lives as wood lives: an Ardande grows around what happens to her. Whatever arrives, injury, love, a bad year, is grown over, kept, and built on, ring around ring, and the grain of an old Ardande is the truest record of her life that exists, knots where the wrongs were, the wood hardest exactly there. Forgiveness in an Ardande is growth: the friendship continues with a knot in it, changed and stronger at the joint. She is supple while she grows, bending where brittle folk break, and the bend becomes shape, kept like everything else. The spark's shadow is the dead branch: an Ardande who stops growing dries, and the same one who bent through forty winters snaps in an afternoon, at a touch. Plane her down to any year, and that year is still in the grain.
+
+#### Talos (Burdinzar's spark)
+
+The metal-substance, carried from the Shadowplane, and it takes shape as metal takes shape: by being worked. A Talos is formed, permanently, by what presses on her; the hungry year, the good master, the long war each leave a set in the self the way the hammer leaves a set in the blade, and the set holds. She changes slowly and forever: what a Talos learns is learned for life, the promise holds its edge long after softer material has rusted through, and knowing this, she chooses her forges with care, the trades, the teachers, the loves she will let work her, because for her there is no passing phase. The spark's shadow is the bad set: a shape taken in a cruel year is kept like any other, and bitterness in a Talos outlasts its cause by decades, true as a blade and just as indifferent to what it cuts. Ask her for the thing she learned at nine, and the motion arrives without rust.
+
+#### Suli (the blend)
+
+More than one stratum in one body, and the strata take turns: a Suli wakes to find which element has the morning, the warm hand or the cool one, the bearing day or the drifting one, an inner weather with real seasons and no calendar. The blend is the carry: a range no single-spark carrier has, and the price is that no rule of thumb works on her, her own included; the discipline every Suli builds, each in their own people's way, is the morning's first honest question, who is up today. The blend's shadow is the argument: strata that stop taking turns and start contesting, a soul like a strait where two tides meet, and the carrier standing in her own crossed weather. The proof is small and unmistakable: her tea goes cold while her bathwater steams, in the same hour.
 
 ### Essence of the sibling planes (Layer 2 in the blood)
 

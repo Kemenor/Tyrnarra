@@ -288,7 +288,7 @@ resistance"). Nahaskel texture already names Gnomes (the temperament), Ganzi, Co
 
 ---
 
-## § Heritages pass — 🔵 in progress (architecture LOCKED; first batch ✅ lore-committed; sparks grill next)
+## § Heritages pass — 🔵 in progress (architecture LOCKED; batches 1+2 ✅ lore-committed; mortal-mixes + old-powers carries next)
 
 **Design locks (user-confirmed, 2026-06-11):**
 1. **Carry-register, not full feelings.** A heritage entry describes the **carry** (what the blood/spark does to whatever ancestry-feeling is already there), the **reception** (how the world reads the visible trait), and **one concrete proof**. The text must hold on any ancestry (the test: a Duskwalker Goblin and a Duskwalker Elf both recognizable). The ancestry keeps deciding who the person is. Rule-9 analogue: a heritage describes itself, never the ancestries it sits on.
@@ -319,6 +319,8 @@ Forseti Order·Justice·Oath·Tyranny / Truth·Secrecy·Star·Glyph · Hinka Pre
 **REGION-FREE PRINCIPLE (user):** heritage entries carry no regional reception (Zuzental dropped from Aphorite; Nashavel/Kaosadaemi/Nahaskel dropped from Ganzi); regions mention heritages in their own files when wanted. Origin-site mechanics (Duskwalker's two sources) and explicitly approved folk-readings (Beastkin's Ehizahar, Changeling's Myrria) stay.
 
 **WRITTEN + COMMITTED:** `ancestries.md` Versatile Heritages fully restructured to the five families (all tables retired; spark and mortal-mix placeholders pending their grills); `glossary.md` mapping block remapped (also fixed the stale "Dragonblood → alien Dragon descent" line). **HTML mirrors for the end-of-pass bundle:** ancestries.html Heritages section (full restructure), registrar heritage rows (Aphorite/Beastkin/Changeling/Duskwalker/Ganzi source text, Dragonblood→Wyrmkin, Duskwalker+Soul Tree), mention checks on brauogi.html / lost-kingdom.html / nahaskel.html.
+
+**SPARKS BATCH ✅ (user-approved, committed):** the seven carry-entries written as one chord, somatic register (the spark is substance, the body keeps the element's rules): **fire spends, water levels, earth bears, air alights; wood grows, metal is set; the Suli carries more than one** (the chord line now opens the family intro; the source-lock bullets are replaced by full entries). Ifrit = the burn (shadow: consumption; proof: "tired of being fuel"). Undine = the level (shadow: the flood; flank held vs Merfolk-moves and Centaur-rides-it-out). Oread = the bearing, weight felt like temperature (shadow: the swallow, grief become geology; flank held vs Minotaur-pace and Athamaru-no-floor). Sylph = lightness-of-hold (shadow: the fickle; flank held vs Strix-weather and Halfling-road). Ardande = grows around what happens, ring on ring (shadow: the dead branch; flank held vs Nagaji-sheds and Leshy-place-memory). Talos = set by being worked, chooses her forges (shadow: the bad set; flank held vs Aphorite-order-sense and Dwarf-method). Suli = the strata take turns (shadow: the argument; proof: tea cold, bathwater steaming, same hour).
 
 ### Committed prose
 
