@@ -26,8 +26,19 @@ migration text). Every people on Talan now carries a conventions-judged feeling;
 pointer-entries by design. **The heritages pass is COMPLETE (2026-06-11): planar-strata architecture locked,
 all 19 carry-entries in lore AND mirrored to HTML** (see § Heritages pass at the bottom). **NEXT PHASE:
 Fenurra rework (per-tribe ancestry grill) + Zaharsuge rework (paired).** After it: god-cities reconciliation
-(10 remaining; Thekkavar/Nahaskel/Eldara done), seeded sub-regions (Hareaveldi + parked colour), pf2e
-rarity-pill mechanics note (heritage pills included).
+(10 remaining; Thekkavar/Nahaskel/Eldara done), seeded sub-regions (Hareaveldi + parked colour). **The pf2e
+rarity-pill pass is ✅ DONE (2026-06-11):** Tyrnarra rarity decoupled from Paizo book rarity entirely (user:
+the old pills mirrored the books and the rebalance broke them). New three-tier ruling, mechanics note in
+`pf2e-notes.md` (*Rarity: the Tyrnarra override*) + registrar intro rewritten: **Common = holds a heartland
+on Talan** (geography is flavour, lives in the Where-column); **Uncommon = real presence, built-in
+complication** (Automaton, Dragons [Rare→Uncommon, user: city-state + spread, familiar in big cities],
+Fleshwarp, Skeleton); **Rare = a story, not a demographic** (Android, Awakened Animal, Poppet, Reflection,
+Sortalde six). 12 ancestry rows re-pilled (Anadi/Conrasu/Dragonet/Goloma/Jotunborn/Leshy/Ratfolk/Sprite →
+Common; Azarketi dual → Common; Fleshwarp + Skeleton duals → Uncommon; Dragons → Uncommon); heritage duals
+(Beastkin/Changeling/Ganzi) → single Uncommon; heritages assigned the same ruling (Common:
+Nephilim/Aiuvarin/Dromaar · Uncommon: sparks + essences + Beastkin/Changeling/Duskwalker/Dragonblood · Rare:
+Dhampir/Hungerseed/Reflection); **stricter-pill rule**: a character's table-permission is the stricter of
+ancestry and heritage pill.
 
 ---
 

@@ -40,6 +40,20 @@ Full source mapping and the carry-register prose live in `ancestries.md`, *Versa
 
 ---
 
+## Rarity: the Tyrnarra override
+
+Tyrnarra sets its own PF2e rarities. The registrar's pills deliberately override the published book rarity wherever the two disagree (book-Rare Sprite and Goloma are Tyrnarra-Common; book-Rare Dragons are Tyrnarra-Uncommon): the old pills mirrored Paizo's defaults, and the 2026 ancestry rebalance broke that mapping, since on Talan every people holds a heartland and no ancestry is continent-wide dominant. The pill encodes exactly one thing: **how much explaining a character needs.**
+
+- **Common: the people holds a heartland on Talan.** A character of this people is from somewhere, and every corner of the continent has met them. No GM permission needed. Geography is flavour: where a Common people lives belongs to the Where-column and `ancestries.md`, never to the pill.
+- **Uncommon: real presence, built-in complication.** The people exists on Talan in numbers, but being one carries a story-fact the table should say yes to once. The four: **Automaton** (made; one city maintains them), **Dragons** (alien and Reach-anchored; an uncommon sight, familiar in great cities and a rumour in open country), **Fleshwarp** (cursed-born or Menagerie-made), **Skeleton** (post-mortal; hunted by the Voroir Daua outside the Blackened Lands).
+- **Rare: a story, not a demographic.** No native population on Talan, or none that produces travellers: **Android**, **Awakened Animal**, **Poppet**, **Reflection**, and the **Sortalde six**.
+
+**Heritages follow the same ruling.** Common: the line runs everywhere and needs no explaining (Nephilim, Aiuvarin, Dromaar). Uncommon: a real, visible trait worth one yes (the seven sparks, Aphorite, Ganzi, Beastkin, Changeling, Duskwalker, Dragonblood). Rare: a story (Dhampir, Hungerseed, Reflection). **A character's table-permission is the stricter of their ancestry pill and their heritage pill**: a Reflection Goblin plays as Rare, a Nephilim Skeleton as Uncommon.
+
+In-region commonness stays a separate narrative axis (see `ancestries.md`, *Ancestry Distribution by Domain*): a Talan-Common people is still met thickest in its heartland, and heritage concentrations (Beastkin in Ehizahar's tribes, Dragonblood in Fenurra) are Where-column facts, never permission gates.
+
+---
+
 ## Cleric Domains
 
 The official PF2e cleric-domain register (61 domains as of the Remaster + Tian Xia + War of Immortals expansions) is the authoritative mechanical list. The published reference page at [`pf2e-registrar.html`](../published/setting/cosmology/pf2e-registrar.html) holds the master mapping from each PF2e domain to its in-world Tyrnarra granter (Bound 13 god, non-bound god, Vice Demon, Virtue Devil, General of Corruption, or Open / canon-pending).
