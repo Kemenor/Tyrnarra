@@ -1,9 +1,10 @@
 # Defining Ancestries: the conventions
 
 How to write a Tyrnarra ancestry. Distilled from the 2026 ancestry-rebalance pass; applies to every
-future people, per-tribe pick, heritage, and god-city reconciliation. Companion to the feeling/culture
-split established in [`ancestry-rebalance-pass.md`](ancestry-rebalance-pass.md) (delete-after-pass
-tracker) and the standing rules in [`CLAUDE.md`](../CLAUDE.md).
+future people, per-tribe pick, heritage, and god-city reconciliation. Companion to the standing rules
+in [`CLAUDE.md`](../CLAUDE.md). The rebalance tracker (`ancestry-rebalance-pass.md`) closed with the
+pass and is deleted; its full decision log lives in git history, and the still-open items were
+harvested into [`open-threads.md`](open-threads.md) and [`god-city-seeds.md`](god-city-seeds.md).
 
 ## The core rule
 
