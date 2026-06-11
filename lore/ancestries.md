@@ -286,10 +286,15 @@ Manifestation follows the parent line:
 
 ### Mortal mixes
 
-Mortal lineages meeting: their place in the world is shaped by the mortal politics of the parent lines. *(Aiuvarin and Dromaar carry-entries pending.)*
+Mortal lineages meeting: their place in the world is shaped by the mortal politics of the parent lines.
 
-- **Aiuvarin**: Elven · any other ancestry. Most common where elves dominate (Zuzental); the half-and-half identity is its own social position.
-- **Dromaar**: Orcish · any other ancestry. Most common at the borders of Ehizahar (orcish lands meeting Brauogi to the west and Nashavel to the south).
+#### Aiuvarin (the elven mix)
+
+One parent line is elven, and the elven gift is the long view; the Aiuvarin carries it as a second clock. Whatever tempo her other people keep, the slow clock ticks under it, so she feels the day's urgency and the decade's arc at once, argues for the quick fix all morning and spends the afternoon drafting the twenty-year version, and means both. The half-and-half identity is its own social position, and the carrier learns early which rooms want which clock shown. The mix's shadow is the long escape: a carrier who moves into the twenty-year version and lives there, letting todays slide past unspent, patient with everything, including the things patience quietly kills. At the housewarming, the Aiuvarin is the one who plants the oak, and she plants it for herself.
+
+#### Dromaar (the orcish mix)
+
+One parent line is orcish, and what crosses is the close: the orcish gift of meeting the world head-on, now, arrives in the Dromaar as a finishing instinct. Open things pull at her, the unsettled argument, the unbanked fire, the door ajar; her body votes for action a beat before the rest of her is consulted, and waiting spends her like a held breath. Whatever her other people are, the close lives inside their manner: the Conrasu Dromaar's careful shape includes one door that opens fast, and the Elf Dromaar's century-plan has a clause for today. The mix's shadow is the foreclosure: things ended because unfinished was unbearable, the argument closed with a blow, the courtship closed too soon, the question closed that needed a year ajar. Ask a Dromaar to wait out an insult: she can, and you can watch what it costs her sitting in her shoulders.
 
 #### Beastkin (the Awakened line)
 
@@ -297,7 +302,7 @@ Somewhere up every Beastkin's family tree stands an Awakened Animal: an ancestor
 
 ### The old powers' lines
 
-A bound god's touch lands as blessing and leaves the bloodline unmarked; the lines below belong to older powers outside the Compact's bound form, and to lineages with no god in them at all. *(Dhampir, Dragonblood, Hungerseed, and Reflection keep their standing canon; their carry-entries are queued.)*
+A bound god's touch lands as blessing and leaves the bloodline unmarked; the lines below belong to older powers outside the Compact's bound form, and to lineages with no god in them at all.
 
 #### Duskwalker (Epairima's line: the cycle's children)
 
@@ -311,17 +316,25 @@ The becoming arrives on the Twins' tide: a Changeling lives with a standing invi
 
 Vampire heritage, undead-touched. Vampires are an independent lineage on Talan, and Dhampir descend from them directly. **Vampires themselves are categorical targets of the Voroir Daua** (Epairima's cycle-warden order; see `gods.md` and `factions.md`); **Dhampir are not**, since they remain within the cycle (mortal, ageing, dying), and the order draws the line at *they didn't choose this*. The order's posture toward a given Dhampir is not warm (the Voroir Daua are professional and reserved, not friendly), but it is not hostile either. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The welcome is cultural: a social courtesy, with the lineage itself staying its own.
 
+The carry is the threshold: a Dhampir is alive the way dusk is daylight, truly, and at an angle. The heart beats slow, the night reads as plainly as noon, and the pulse of a sleeping house is audible from the stair, which is the parent line's thirst arriving as an echo, a tide felt and never owed obedience. What the order holds as doctrine the Dhampir knows in the body: she is within the cycle, ageing, dying, and she insists on it; among no other people is the first grey hair a private festival, evidence at last against the accusation in every stranger's look. The line's shadow is the echo indulged: nights spent listening to pulses, the tide obeyed in small ways that grow. The proof is the grey hair, kept like a medal.
+
 #### Dragonblood (the Wyrmkin line)
 
 Wyrm-blood of Talan's indigenous serpent-stock (Zaharsuge's line): the same old line the Dragonets descend from, surfacing as scale, eye, or breath in mortal lineages. No kinship with the alien Dragons, whatever the name suggests; the folk-conflation of the two is widespread and wrong. Strongest in **Fenurra**, where the four tribes are united by the blood across their differing ancestries; it surfaces wherever the old line once ran.
+
+The carry is the undertone: the old line surfaces as scale at the temple, a slit catch in the eye, heat in the breath, and beneath all of it a stillness older than the person carrying it. Under threat a Dragonblood goes quiet where her people go loud; the voice drops into an undertone the bones hear before the ears do, and the room's hair stands up, because the old line never learned to bluster. The blood is older than the carrier and she feels it, a gravity toward what endures and a difficulty being impressed that her people read, by turns, as wisdom and as insolence. The line's shadow is the cold: the stillness can swallow the warm answer, and kin reaching for comfort in a hard hour sometimes find scale where they wanted skin.
 
 #### Hungerseed (half-Oni)
 
 **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra; a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. See [`geography/_off-continent.md`](geography/_off-continent.md), *Sortalde → The Six Peoples → Yaksha (Lingdao · Spirit Island)*.
 
+The carry is the second helping of want: the Oni are hungers bound to one place forever, and the child of that line is born with an appetite one size larger than any meal. The feast ends and the want is still at the table; praise, gold, victory, love, each arrives with its echo, *more*, in a voice older than her own. The want is the spirit's, bottomless by nature; the answer is the carrier's, and most Hungerseeds become connoisseurs of enough, generous at table beyond all custom because they know hungry from the inside, all the time. The line's shadow is the bargain: feeding the want whatever quiets it longest, and the list of what quiets it grows stranger by the year. Watch one at a feast: she finishes everything, thanks the host twice, and her eyes do one more lap of the table on the way out.
+
 #### Reflection (Wellspring-direct, Stillpool-born)
 
 **Public framing (cover):** ritual mishap, cosmic blip, or magical duplication; no parent lineage, made sometimes intentionally and often not; arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. **GM truth:** every Reflection is born near a **Stillpool** roughly one week after a mortal interacts with it (looks too long, bathes, drinks, leaves something behind). Stillpools are the residual Wellspring-touched sites left over from the **Lost-Era leak** (see `cosmology.md`, *Wellspring Outflow: Mediation, Leakage, and the Lost-Era Window*, and `timeline.md`, *Lost Era → ⚿ GM Secret: The Lost Era: The Real History*). Reflections are mortal-shaped but anchored directly to the Wellspring rather than to any deity-mediated ancestry line, and the Gods' Law's framework for binding mortal/divine ascension does not fully apply to them. **The Golden Emperor was a Reflection**: the only one in recorded history who learned to consciously pull on the connection. See `timeline.md`, *Golden Era → ⚿ GM Secret: The Golden Empire: The Real History*.
+
+The carry, felt from the inside, is the quiet: where other heritage-carriers describe a pull, a tide, an undertone, a Reflection reports still water, a deep unweathered hum at the bottom of herself. She is the one client Enki's lineage-readers refund: the divination slides off, the family trees dead-end, and the scholars rule out everything until what remains is *Reflection*, which is how most of them learn the word for what they are. Mortal-shaped and entire, her soul her own and nobody's heirloom, she walks through a world of inherited leans owing none of them, which is a freedom, and a freedom is a thing with no handrails. The line's shadow is the undertow: a carrier who leans over her own quiet too long, asking *what am I* of water that holds the question and gives back her face. Folk who learn what she is take a half-step back; the folk-tales about meeting your own double are kind in none of the tellings.
 
 ---
 
