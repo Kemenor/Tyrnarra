@@ -28,14 +28,15 @@ The six Tian Xia ancestries (Samsaran, Sarangay, Tanuki, Wayang, Yaksha, Yaoguai
 
 ## Versatile Heritages
 
-The PF2e versatile-heritage roster maps to Tyrnarra as follows:
+The PF2e versatile-heritage roster maps to Tyrnarra by source family (the 2026 planar-strata architecture):
 
-- **Nephilim**: celestial or fiendish parentage, with parentage determining the manifestation.
-- **Ardande** (Wood) and **Talos** (Metal) carry elemental heritages tied to the two non-Material planes of the Life Layer: Ardande to **Feyworld**, Talos to **Shadowplane**.
-- **Aiuvarin** and **Dromaar**: the canonical mixed-ancestry heritages (elf-blood and orc-blood respectively).
-- **Suli**: generic geniekin, no single-element specialisation.
+- **Sparks of the substrate (Layer 1)**: Ifrit/Suzar · Undine/Urzar · Oread/Lurzahar · Sylph/Haizar · Ardande/Zurzar (Feyworld wood) · Talos/Burdinzar (Shadowplane metal) · Suli (the blend).
+- **Essence of the sibling planes (Layer 2)**: Aphorite (Shadowplane, Order) · Ganzi (Feyworld, Chaos), the counterpart pair.
+- **Divine parentage (Layer 3)**: **Nephilim** only, any god or devil, the bound thirteen included; a god's touch never rides a bloodline, parentage is the one way in.
+- **Mortal mixes**: Aiuvarin (elf-blood) · Dromaar (orc-blood) · Beastkin (the Awakened line).
+- **The old powers' lines**: Duskwalker (Epairima) · Changeling (Bikiargi) · Dhampir (vampire-line) · Dragonblood (Wyrmkin line) · Hungerseed (half-Oni) · Reflection (Wellspring-direct).
 
-Full source-mapping table (which god / plane each heritage descends from) lives in `ancestries.md`, *Versatile Heritages*. The four bound gods whose blessing does not manifest as bloodline (Iro, Enki, Jianna, Cronus) are documented there as well.
+Full source mapping and the carry-register prose live in `ancestries.md`, *Versatile Heritages*; the quick-reference list is in `glossary.md`, *Versatile heritage placements*.
 
 ---
 

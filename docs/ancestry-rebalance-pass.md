@@ -23,9 +23,11 @@ conventions review-pass is **COMPLETE** (Brauogi/Shoony/Sprite reworked), the ma
 Awakened Animal are **judged**, and the **HTML is fully reconciled** (ancestries.html, all domain pages,
 eldara, nahaskel, itsasalda + Lautara sub-regions, registrar; grep-verified clean of Eizhalun/Seal-folk/
 migration text). Every people on Talan now carries a conventions-judged feeling; Sortalde six stay
-pointer-entries by design. **NEXT PHASE: the heritages pass.** After it: Fenurra rework (per-tribe ancestry
-grill) + Zaharsuge rework (paired), god-cities reconciliation (10 remaining; Thekkavar/Nahaskel/Eldara done),
-seeded sub-regions (Hareaveldi + parked colour), pf2e rarity-pill mechanics note.
+pointer-entries by design. **The heritages pass is COMPLETE (2026-06-11): planar-strata architecture locked,
+all 19 carry-entries in lore AND mirrored to HTML** (see § Heritages pass at the bottom). **NEXT PHASE:
+Fenurra rework (per-tribe ancestry grill) + Zaharsuge rework (paired).** After it: god-cities reconciliation
+(10 remaining; Thekkavar/Nahaskel/Eldara done), seeded sub-regions (Hareaveldi + parked colour), pf2e
+rarity-pill mechanics note (heritage pills included).
 
 ---
 
@@ -288,7 +290,7 @@ resistance"). Nahaskel texture already names Gnomes (the temperament), Ganzi, Co
 
 ---
 
-## § Heritages pass — ✅ LORE COMPLETE (all 19 carries written + committed; remaining: the end-of-pass HTML bundle)
+## § Heritages pass — 🌐 COMPLETE (all 19 carries in lore + HTML published)
 
 **Design locks (user-confirmed, 2026-06-11):**
 1. **Carry-register, not full feelings.** A heritage entry describes the **carry** (what the blood/spark does to whatever ancestry-feeling is already there), the **reception** (how the world reads the visible trait), and **one concrete proof**. The text must hold on any ancestry (the test: a Duskwalker Goblin and a Duskwalker Elf both recognizable). The ancestry keeps deciding who the person is. Rule-9 analogue: a heritage describes itself, never the ancestries it sits on.
@@ -318,7 +320,9 @@ Forseti Order·Justice·Oath·Tyranny / Truth·Secrecy·Star·Glyph · Hinka Pre
 
 **REGION-FREE PRINCIPLE (user):** heritage entries carry no regional reception (Zuzental dropped from Aphorite; Nashavel/Kaosadaemi/Nahaskel dropped from Ganzi); regions mention heritages in their own files when wanted. Origin-site mechanics (Duskwalker's two sources) and explicitly approved folk-readings (Beastkin's Ehizahar, Changeling's Myrria) stay.
 
-**WRITTEN + COMMITTED:** `ancestries.md` Versatile Heritages fully restructured to the five families (all tables retired; spark and mortal-mix placeholders pending their grills); `glossary.md` mapping block remapped (also fixed the stale "Dragonblood → alien Dragon descent" line). **HTML mirrors for the end-of-pass bundle:** ancestries.html Heritages section (full restructure), registrar heritage rows (Aphorite/Beastkin/Changeling/Duskwalker/Ganzi source text, Dragonblood→Wyrmkin, Duskwalker+Soul Tree), mention checks on brauogi.html / lost-kingdom.html / nahaskel.html.
+**WRITTEN + COMMITTED:** `ancestries.md` Versatile Heritages fully restructured to the five families (all tables retired); `glossary.md` mapping block remapped (also fixed the stale "Dragonblood → alien Dragon descent" line); `pf2e-notes.md` Versatile Heritages section remapped to the five families.
+
+**HTML PHASE 🌐 DONE (verified over the live local server):** `ancestries.html` Heritages section fully rebuilt in the people-entry pattern (five family h3 groups, one carry-led entry per heritage, all old ref-tables retired, Nephilim marks-callout kept; dead primordials/layer-3 anchor fragments stripped from new links — note: the registrar's own `primordials.html#x` fragment links are pre-existing dead anchors, page-top fallback, cosmetic). `pf2e-registrar.html` all 19 heritage Where-rows re-sourced (rarity pills untouched, mechanics pass still pending). `lost-kingdom.html` Duskwalker callout fixed (was "appear fully grown", now child-manifestation per canon; wound/door duality + Voroir Daua courtesy added). `brauogi.html` + `nahaskel.html` mention-checked, already compatible, untouched. `docs/site-inventory.md` ancestries.md + ancestries.html descriptions updated.
 
 **SPARKS BATCH ✅ (user-approved, committed):** the seven carry-entries written as one chord, somatic register (the spark is substance, the body keeps the element's rules): **fire spends, water levels, earth bears, air alights; wood grows, metal is set; the Suli carries more than one** (the chord line now opens the family intro; the source-lock bullets are replaced by full entries). Ifrit = the burn (shadow: consumption; proof: "tired of being fuel"). Undine = the level (shadow: the flood; flank held vs Merfolk-moves and Centaur-rides-it-out). Oread = the bearing, weight felt like temperature (shadow: the swallow, grief become geology; flank held vs Minotaur-pace and Athamaru-no-floor). Sylph = lightness-of-hold (shadow: the fickle; flank held vs Strix-weather and Halfling-road). Ardande = grows around what happens, ring on ring (shadow: the dead branch; flank held vs Nagaji-sheds and Leshy-place-memory). Talos = set by being worked, chooses her forges (shadow: the bad set; flank held vs Aphorite-order-sense and Dwarf-method). Suli = the strata take turns (shadow: the argument; proof: tea cold, bathwater steaming, same hour).
 
