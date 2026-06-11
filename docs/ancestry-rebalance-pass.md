@@ -18,6 +18,15 @@ status is not ✅, and continue from its grill/decision log. The locked board be
 
 **METHOD DOC:** the distilled how-to-define-ancestries rules live in [`ancestry-conventions.md`](ancestry-conventions.md) (permanent; survives this tracker). Read it before any feeling-work.
 
+**STATE SNAPSHOT (2026-06-11, end of session):** the thirteen-domain feelings sweep is **COMPLETE**, the
+conventions review-pass is **COMPLETE** (Brauogi/Shoony/Sprite reworked), the made-and-cursed peoples and
+Awakened Animal are **judged**, and the **HTML is fully reconciled** (ancestries.html, all domain pages,
+eldara, nahaskel, itsasalda + Lautara sub-regions, registrar; grep-verified clean of Eizhalun/Seal-folk/
+migration text). Every people on Talan now carries a conventions-judged feeling; Sortalde six stay
+pointer-entries by design. **NEXT PHASE: the heritages pass.** After it: Fenurra rework (per-tribe ancestry
+grill) + Zaharsuge rework (paired), god-cities reconciliation (10 remaining; Thekkavar/Nahaskel/Eldara done),
+seeded sub-regions (Hareaveldi + parked colour), pf2e rarity-pill mechanics note.
+
 ---
 
 ## HTML reconciliation (started before the remaining lore regions, at user direction)
