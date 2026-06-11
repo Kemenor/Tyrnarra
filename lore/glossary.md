@@ -712,18 +712,18 @@ Full ancestry entries live in `lore/ancestries.md`. Listed here are the named be
 
 **Versatile heritage placements (Tyrnarra source mapping):**
 
-Quick reference. Full prose in `ancestries.md`, *Versatile Heritages*; system-side Remaster reshuffle notes in `pf2e-notes.md`.
+Quick reference. Full prose in `ancestries.md`, *Versatile Heritages*; system-side Remaster reshuffle notes in `pf2e-notes.md`. Heritages stratify by source: primordial substance, sibling-plane essence, divine parentage, mortal mix, or an old power's line.
 
-- **Aphorite** → Forseti (Law). **Ganzi** → Vesuna (Chaos). **Beastkin** → Hinka (Hunt). **Changeling** → Araphel (Darkness). **Duskwalker** → Tani (Time): *created not born*, manifests at death-touched sites, the **Blackened Lands** are Talan's largest Duskwalker source.
-- **Nephilim** → any god (celestial) or any demon/devil (fiendish): the universal divine-blood / fiendish-blood heritage.
-- **Ifrit / Oread / Sylph / Undine** → Elemental Plane sparks (Komo / Sarrum / Fisaya / Shuun affinity by domain, not by blood). **Suli** → generic geniekin (no specific element).
-- **Ardande** → Feyworld lineage (Wood element). **Talos** → Shadowplane lineage (Metal element). Both are planar lineages of the Life Layer's sibling planes; neither plane belongs to a bound god.
-- **Aiuvarin** → elven-and-other mixed ancestry; **Dromaar** → orcish-and-other mixed ancestry. Genetic, not metaphysical.
+- **Ifrit / Undine / Oread / Sylph** → sparks of the primordials **Suzar / Urzar / Lurzahar / Haizar** (Layer-1 substance; the bound elemental gods keep doctrinal affinity by domain, never by blood). **Ardande** → Zurzar's wood-stratum (the Feyworld-resident primordial). **Talos** → Burdinzar's metal-stratum (the Shadowplane-resident primordial). **Suli** → the blend (more than one stratum, no specialisation).
+- **Aphorite** → the Shadowplane's essence (the plane of Order); counterpart to the Ganzi. **Ganzi** → the Feyworld's essence (the plane of Chaos); counterpart to the Aphorite.
+- **Nephilim** → divine parentage: any god (celestial) or any demon/devil (fiendish), the bound thirteen included. A god's touch lands as blessing and leaves the bloodline unmarked; parentage is the one way a god enters the veins.
+- **Aiuvarin** → elven-and-other mixed ancestry; **Dromaar** → orcish-and-other mixed ancestry. Genetic, not metaphysical. **Beastkin** → the Awakened line: descent from an Awakened Animal ancestor; the carried beast is the ancestor's.
+- **Duskwalker** → Epairima's line: *created not born*, the cycle's children, manifesting where death runs close to the surface. The two great sources: the **Blackened Lands** (the wound) and the **Soul Tree** island off Twin Suns (the door).
+- **Changeling** → Bikiargi's tide: the becoming arrives unbidden on the Twins' tide; mismatched eyes, one Unaru's and one Veyru's.
 - **Dhampir** → half-Vampire; undead-touched. Vampires are an independent lineage on Talan.
-- **Dragonblood** → alien Dragon descent (see *Dragons* ancestry).
+- **Dragonblood** → the Wyrmkin line (Zaharsuge): Talan's indigenous serpent-stock, the same old line the Dragonets descend from; no kinship with the alien Dragons.
 - **Hungerseed** → half-Oni. Oni are bound spirits of Sortalde, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Almost all Hungerseeds are Sortalde-born; Talan-side Hungerseeds typically descend from a Sortalde émigré whose Oni heritage is one or two generations back.
 - **Reflection** → Wellspring-direct (Stillpool-born). Public framing: ritual mishap / Wellspring blip. See `cosmology.md` and `ancestries.md` for the cover-vs-truth split.
-- **Bound gods whose touch is not bloodline-borne:** Iro (Light), Enki (Knowledge), Jianna (Commerce), Cronus (Freedom).
 
 **Folklore + claims (mortal-mouth, not always true):**
 - **"Elden blood"**: the persistent Azarketi inherited claim. **Wrong.** Azarketi descend from the Storveldi Denbora, who *imitated* the Elden but were not of their lineage. The claim has been transmitted forward across millennia and is still widespread.

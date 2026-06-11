@@ -225,80 +225,83 @@ Two populations, one people. The **Feyworld Sprites** are the original stock, na
 
 ## Versatile Heritages
 
-Heritages on Talan are explained in-world as either a god's blood, an Elemental Plane spark, a Life-Layer planar lineage, or another non-standard origin. The trait is rare, often visible, and varies in cultural reception: some are blessed, some are feared, most are simply *known* and lived around. The mapping below is the canonical placement for Tyrnarra; for the system-side mapping see `pf2e-notes.md`.
+Heritages on Talan stratify by where the otherness comes from: the substance of a primordial's stratum, the essence of a sibling plane, divine parentage, a mortal mix, or one of the old powers' lines. The trait is rare, often visible, and varies in cultural reception: some are blessed, some are feared, most are simply *known* and lived around. Heritage entries are written region-free; where a region receives a heritage in its own way, that reception lives in the region's file. For the system-side mapping see `pf2e-notes.md`.
 
-### Divine-blood heritages (god in the veins)
+A heritage sits on a person who already carries a people's feeling, so these entries are written in a different register from the ancestry roster above: each describes the **carry**, what the blood or spark does to whatever temperament was already there, how the world reads it, and one proof. The carry must hold on any ancestry; the ancestry keeps deciding who the person is.
 
-| Heritage | Source | Notes |
-|---|---|---|
-| **Aphorite** | Forseti (Law) | Axis-aligned; counterpart to Ganzi. Common in Zuzental, especially among the Thousand Kingdom's elder-bureaucracy lineages. |
-| **Beastkin** | Hinka (Hunt) | Partial-animal features; most common in Ehizahar tribal lineages. Read as Hinka's blessing or burden depending on the tribe. |
-| **Changeling** | Araphel (Darkness) | Tied to Araphel's *new faces* aspect; shapeshifters and identity-shifters fit his theology of becoming. Common in Myrria. |
-| **Duskwalker** | Tani (Time) | **Created, not born.** Manifests as a mortal child in a location with close ties to death (psychopomp-touched). The **Blackened Lands** produce more Duskwalkers than anywhere else on Talan; Tani's home domain of Lioaru is a steady second. They are doctrinally close to Tani's clergy. |
-| **Ganzi** | Vesuna (Chaos) | Chaos-aligned; counterpart to Aphorite. Common in Nashavel, especially the Kaosadaemi Principality. |
-| **Nephilim** | **Any divine or fiendish source** | See below; Nephilim is the universal divine-blood heritage on Talan and covers both divine and fiendish parentage. |
+### Sparks of the substrate (Layer 1 in the body)
 
-#### Nephilim: the universal divine-blood heritage
+Seven heritages carry the substance of a primordial's stratum in a mortal line (see `gods.md`, *Layer-1 Primordials: The Nine*): the spark is substrate, never divine blood. The four bound elemental gods keep a doctrinal affinity with the corresponding spark, and spark-carrying communities cluster around those domains by cultural gravity, never by birth. *(Source-lock only for now; this family's carry-entries are the next pass.)*
 
-**Nephilim covers both celestial and fiendish features** on Talan, with parentage determining the manifestation. The mapping broadens further:
+- **Ifrit**: Suzar's stratum, primordial flame.
+- **Undine**: Urzar's stratum, primordial water.
+- **Oread**: Lurzahar's stratum, primordial earth and stone.
+- **Sylph**: Haizar's stratum, primordial air.
+- **Ardande**: Zurzar's stratum, the wood-substance, carried from the Feyworld where the being wanders.
+- **Talos**: Burdinzar's stratum, the metal-substance, carried from the Shadowplane where the being wanders.
+- **Suli**: the blend, more than one stratum in one body, with no single specialisation.
 
-- **Celestial features** manifest in Nephilim descended from *any god*, most commonly Iro (Light), but any of the bound thirteen can produce a Nephilim. Banned/expelled gods (those driven from the Material Plane at the Gods' Law) sometimes also produce celestial Nephilim, depending on the god's nature.
+### Essence of the sibling planes (Layer 2 in the blood)
+
+The two planes flanking the Material each express in mortals twice: once as substance (Ardande and Talos above) and once as essence, the plane's own nature crossed into a bloodline. The essence pair are counterparts: the Aphorite carries a sense, the Ganzi a field.
+
+#### Aphorite (the Shadowplane's essence; counterpart to the Ganzi)
+
+The Shadowplane is the plane of Order, constant and eternal in structure, and somewhere up an Aphorite's line that constancy crossed into the blood. The line in the blood: an Aphorite is born with a sense the way other folk are born with hearing, and what it hears is order. A true statement and a crooked one feel different in the room; a promise being kept has a weight, and a promise breaking has a sound that only the Aphorite caught. The blood decides what they notice; what they do about it belongs to the person and the people they were born to, so a Goblin Aphorite distils with uncanny exactness while a Gnome Aphorite spins her chaos in perfect metre. The trait shows as ruled-straight markings or a faint metallic veining, and the carrier can make uneasy company, the guest who knows the scale is fixed. The blood's shadow: some carriers cannot stop hearing the crookedness, and set out to straighten the world by hand, one person at a time. At the swearing of a false oath, the Aphorite is the one who looked up.
+
+#### Ganzi (the Feyworld's essence; counterpart to the Aphorite)
+
+The Feyworld is the plane of Chaos, vibrant, shifting, unpredictable, and a Ganzi line carries that weather in the blood. The improbable leans in: around a Ganzi the stuck thing comes loose, the long odds land, the day swerves, and the blood does the swerving whether or not anyone asked. A Ganzi grows up with a fact other folk never have to learn, that the plan and the day are two different things, and the day wins; what a carrier builds on that fact is their own people's answer, the Dwarf Ganzi who carries three spares of everything, the Halfling Ganzi who lets the road choose the fork. The trait declines to settle even on the skin, an opal sheen one season, a patch of scale or feather the next, and no two carriers wear it alike. The card-houses split on them, half comping their drinks, half barring the door. The blood's shadow is the unravelling: a carrier who tires of broken plans can stop making them altogether, and a life that has stopped planning is the door the unravelling uses. Every Ganzi has one story that should have killed them and one that should have made them rich, and tells both with the same shrug.
+
+### Divine parentage (Layer 3 in the veins)
+
+#### Nephilim (any god or devil, the bound thirteen included)
+
+The one heritage that is a god in the veins, and the only way a god gets there: parentage. A god's touch never rides a bloodline on Talan; Jianna's blessing accumulates as trade fortune and the favoured merchant's child inherits nothing, Enki's lands as aptitude, Cronus's worshippers are made by choice. What crosses into blood crosses the old way, and the parent line runs from the bound thirteen through gods withdrawn beyond the veil to the Vice Demons and Virtue Devils of Bolverk. What a Nephilim carries is the parent's nature as a light pull, a lean in the blood, felt the way a riverbed feels the current. An Iro-line carrier finds hope coming easier than the evidence warrants; a Shuun-line carrier is steadied by still water and moved to tears by the tide; a Hinka-line carrier reads a room's exits before its faces; a Drambur-line carrier feels praise given to another land as a small debt unpaid; a Jafnar-line carrier keeps the ledger of favours by reflex and rests poorly while one stands open. The pull is light, a lean the carrier can stand against without effort, and the person and the people they were born to decide everything else, which is nearly everything. Two Nephilim may share nothing visible beyond the divinely-touched flag itself, one glowing faintly, one smelling of brimstone, one casting a shadow with three more limbs than the body has; identifying the parent line is itself a skill, and a service Enki's scholars sometimes sell, and plenty of carriers live and die with the line unread, feeling the lean without ever learning its name. The blood's shadow is feeding: a pull indulged daily thickens, and the carrier who never once leans away wakes one year to find the lean has become the direction.
+
+Manifestation follows the parent line:
+
+- **Celestial features** manifest in Nephilim descended from any god, most commonly Iro (Light), who is himself depicted as a Nephilim; the celestial-marked find Egulon's doors open accordingly. Gods withdrawn beyond the veil sometimes also produce celestial Nephilim, depending on the god's nature.
 - **Fiendish features** manifest in Nephilim descended from **any demon or devil**: a Vice Demon (vice-as-being lineage) or a Virtue Devil (corruption-of-virtue lineage). See `geography/bolverk.md` for the parent populations: *Vice Demons: the Seven* and *Virtue Devils: the Fourteen*.
 
-Nephilim is therefore the most cosmologically variable heritage on Talan. Two Nephilim from different parent lineages may share nothing physically beyond the *divinely-touched* flag: one might glow faintly, another might smell of brimstone, another might cast a shadow with three more limbs than the body has. Identifying the parent line is itself a skill (and a service Enki's scholars sometimes sell).
+### Mortal mixes
 
-#### Bound gods whose touch is not bloodline-borne
+Mortal lineages meeting: their place in the world is shaped by the mortal politics of the parent lines. *(Aiuvarin and Dromaar carry-entries pending.)*
 
-Four of the bound thirteen have no exclusive heritage on Talan; their blessing simply does not manifest as physical lineage:
+- **Aiuvarin**: Elven · any other ancestry. Most common where elves dominate (Zuzental); the half-and-half identity is its own social position.
+- **Dromaar**: Orcish · any other ancestry. Most common at the borders of Ehizahar (orcish lands meeting Brauogi to the west and Nashavel to the south).
 
-- **Iro** (Light): celestial Nephilim covers the divine-blood expression; Iro's worshippers are folded into the broader Nephilim line rather than carrying their own marker.
-- **Enki** (Knowledge): Enki's touch manifests as scholarly aptitude rather than physical change; generic Suli geniekin is the closest mechanical mirror but is not exclusively his.
-- **Jianna** (Commerce): blessing accumulates as trade fortune, not body trait. A Jianna-favoured merchant prospers; their child does not.
-- **Cronus** (Freedom): worshippers are made by choice, not blood (see `gods.md`, *Cronus → ⚿ GM Secret: Cronus was mortal*).
+#### Beastkin (the Awakened line)
 
-### Elemental Plane heritages (Layer 1 / Prelife origin)
+Somewhere up every Beastkin's family tree stands an Awakened Animal: an ancestor who began as a beast, woke into a someone, married into a mortal line, and left the waking in the blood. The animal in the blood is particular: every Beastkin carries one beast, their own, the ancestor's, hawk or boar or hare, and it shows in the features and in something faster than thought. Instinct arrives ahead of deliberation: the weather smelt a day out, the wrongness in a room felt before the door opens, the body already turning when something runs; the first life the ancestor lived before words resurfaces, generations on, as the knowing that needs none. The blood supplies the leaning; the choice stays the person's own, and the people they were born to shape what the leaning becomes, the long stalk, the early warning, the unerring market-nose. In Ehizahar the trait runs thickest, and the tribes read it as Hinka's blessing or her burden; the tribes are wrong about the source and right about everything else. Elsewhere the features make the carrier legible as wild, and rooms quiet accordingly. The blood's shadow is the reins: a chase joined too completely, the beast deciding before the person is consulted. Asked how she knew, the Beastkin has no answer; the knowing arrived without words.
 
-| Heritage | Element | Bound-god affinity |
-|---|---|---|
-| **Ifrit** | Primordial Flame | Komo (Fire) |
-| **Oread** | Primordial Earth | Sarrum (Earth) |
-| **Sylph** | Primordial Air | Fisaya (Wind) |
-| **Undine** | Primordial Water | Shuun (Water) |
-| **Suli** | Mixed elemental (general geniekin) | None specific |
+### The old powers' lines
 
-These heritages carry the **spark of the Elemental Plane** itself (Layer 1 of the planar structure; see `cosmology.md`). The Primordial Six who created Prelife include the four bound elemental gods, so each elemental-heritage individual has a doctrinal affinity with their corresponding god, but the lineage is properly *elemental-plane* lineage, not divine blood. Communities of these heritages cluster around their corresponding god's domain by cultural gravity, not by birth.
+A bound god's touch lands as blessing and leaves the bloodline unmarked; the lines below belong to older powers outside the Compact's bound form, and to lineages with no god in them at all. *(Dhampir, Dragonblood, Hungerseed, and Reflection keep their standing canon; their carry-entries are queued.)*
 
-**Suli** is the exception: generic geniekin without a single-element specialisation, suiting cross-elemental or mixed-blood lines. No specific bound-god affinity; tends to settle where they are welcome.
+#### Duskwalker (Epairima's line: the cycle's children)
 
-### Life-Layer planar heritages
+Created, not born: a Duskwalker arrives as a mortal child of some people, manifesting where death runs close to the surface, and the crossing is in them from the first breath, finished. Endings come gently where they are: the restless dead settle, grief quiets in their company, and undeath has never once taken a Duskwalker, for their soul is promised home. The certainty other folk spend a life avoiding is theirs at the start, that an ending is a place a life arrives at, and what each carrier builds on that certainty belongs to them and the people they were born among. Talan's two great sources are the **Blackened Lands**, the wound, and the **Soul Tree**, the island off the coast of Brauogi's Twin Suns, the door. In the wound, Betibizi's resonance pulls the dead back into motion and the cycle pushes back: the same cursed ground that raises Skeletons seeds Duskwalkers. At the Soul Tree, the Voroir Daua's oldest charter keeps watch over the place where their goddess's cycle touches the ground, and the order reads Duskwalkers as the cycle's own children, extending them a courtesy it extends almost nowhere else. The blood's shadow is the remove: a carrier too settled about endings can let go what should have been fought for, the harvest, the patient, the marriage, each released a season too soon. When the breath goes long, it is the Duskwalker's hand the dying reach for, strangers included.
 
-Two further elements (Wood and Metal) sit outside the classical four. On Talan they map to **the two non-Material planes of the Life Layer (Layer 2)**: the planes flanking the Material Plane in the canonical cosmology. The bound thirteen all reside on the Material Plane; the Feyworld and Shadowplane are sibling planes that stand without a god-claimant.
+#### Changeling (Bikiargi's tide)
 
-| Heritage | Element | Planar origin |
-|---|---|---|
-| **Ardande** | Wood | **Feyworld**: the plane of Chaos (vibrant, shifting, unpredictable) |
-| **Talos** | Metal | **Shadowplane**: the plane of Order (constant, unchanging, eternal in structure) |
+The becoming arrives on the Twins' tide: a Changeling lives with a standing invitation to be someone else, felt as a low tide under the life they have, and once or twice in a life the tide rises, and the carrier wakes with the certainty that the name in their mouth is finished. The blood offers; the person disposes, and disposes in their own people's tempo, the Minotaur Changeling laying the new course year by patient year, the Centaur Changeling riding it out by the next camp. The trait shows in the eyes, mismatched, one Unaru's and one Veyru's, and folk-belief reads the pair endlessly: which eye is looking decides whether the next face will be a delight or a woe. Myrria receives them warmly all the same, Araphel's new-faces doctrine extending its hospitality to becoming wherever it comes from, and a finished name has a rite waiting there; most of Talan keeps a warier eye on a friend who might be someone new by spring. The blood's shadow is the one the folk give to Veyru: the invitation accepted too many times, until none of the names was anyone and the face declines to settle.
 
-- **Ardande** carry the Feyworld's living-growth element: wild, lush, mutable; creatures of the chaos-plane substrate. Their planar lineage runs to the Feyworld itself, parallel to (rather than mediated by) the bound thirteen. Ardande lineages cluster wherever their kin are welcomed, by cultural gravity rather than domain alignment.
-- **Talos** carry the Shadowplane's eternal-structure element: fixed, ordered, durable. *Shadowplane* is the cosmological name; the plane's substance is order, and Talos express that order rather than the surface-verbal overlap with darkness. Their planar lineage runs to the Shadowplane itself, parallel to the bound thirteen. Talos communities form around craft and structure, gathering by trade rather than worship.
+#### Dhampir (half-Vampire)
 
-### Mortal-ancestry mixes
+Vampire heritage, undead-touched. Vampires are an independent lineage on Talan, and Dhampir descend from them directly. **Vampires themselves are categorical targets of the Voroir Daua** (Epairima's cycle-warden order; see `gods.md` and `factions.md`); **Dhampir are not**, since they remain within the cycle (mortal, ageing, dying), and the order draws the line at *they didn't choose this*. The order's posture toward a given Dhampir is not warm (the Voroir Daua are professional and reserved, not friendly), but it is not hostile either. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The welcome is cultural: a social courtesy, with the lineage itself staying its own.
 
-| Heritage | Mix | Notes |
-|---|---|---|
-| **Aiuvarin** | Elven · any other ancestry | Most common where elves dominate (Zuzental); the half-and-half identity is its own social position. |
-| **Dromaar** | Orcish · any other ancestry | Most common at the borders of Ehizahar (orcish lands meeting Brauogi to the west and Nashavel to the south). |
+#### Dragonblood (the Wyrmkin line)
 
-These are mortal-ancestry mixes: genetic lineages, with their place in the world shaped by the mortal politics of the two parent ancestries.
+Wyrm-blood of Talan's indigenous serpent-stock (Zaharsuge's line): the same old line the Dragonets descend from, surfacing as scale, eye, or breath in mortal lineages. No kinship with the alien Dragons, whatever the name suggests; the folk-conflation of the two is widespread and wrong. Strongest in **Fenurra**, where the four tribes are united by the blood across their differing ancestries; it surfaces wherever the old line once ran.
 
-### Other lineages
+#### Hungerseed (half-Oni)
 
-| Heritage | Source | Notes |
-|---|---|---|
-| **Dhampir** | Half-Vampire | Vampire heritage, undead-touched. Vampires are an independent lineage on Talan, and Dhampir descend from them directly. **Vampires themselves are categorical targets of the Voroir Daua** (Epairima's cycle-warden order; see `gods.md` and `factions.md`); **Dhampir are not**, since they remain within the cycle (mortal, ageing, dying), and the order draws the line at *they didn't choose this*. The order's posture toward a given Dhampir is not warm (the Voroir Daua are professional and reserved, not friendly), but it is not hostile either. Mistrusted across most of the continent for the obvious reasons; sometimes find easier acceptance in Myrkono, where Araphel's *new faces / second chances* doctrine extends limited hospitality. The welcome is cultural: a social courtesy, with the lineage itself staying its own. |
-| **Dragonblood** | The Wyrmkin line (Zaharsuge) | Wyrm-blood of Talan's indigenous serpent-stock: the same old line the Dragonets descend from, surfacing as scale, eye, or breath in mortal lineages. No kinship with the alien Dragons, whatever the name suggests; the folk-conflation of the two is widespread and wrong. Strongest in **Fenurra**, where the four tribes are united by the blood across their differing ancestries; it surfaces wherever the old line once ran. |
-| **Hungerseed** | Half-Oni | **Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra; a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. See [`geography/_off-continent.md`](geography/_off-continent.md), *Sortalde → The Six Peoples → Yaksha (Lingdao · Spirit Island)*. |
-| **Reflection** | Wellspring-direct (Stillpool-born) | **Public framing (cover):** ritual mishap, cosmic blip, or magical duplication; no parent lineage, made sometimes intentionally and often not; arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. **GM truth:** every Reflection is born near a **Stillpool** roughly one week after a mortal interacts with it (looks too long, bathes, drinks, leaves something behind). Stillpools are the residual Wellspring-touched sites left over from the **Lost-Era leak** (see `cosmology.md`, *Wellspring Outflow: Mediation, Leakage, and the Lost-Era Window*, and `timeline.md`, *Lost Era → ⚿ GM Secret: The Lost Era: The Real History*). Reflections are mortal-shaped but anchored directly to the Wellspring rather than to any deity-mediated ancestry line, and the Gods' Law's framework for binding mortal/divine ascension does not fully apply to them. **The Golden Emperor was a Reflection**: the only one in recorded history who learned to consciously pull on the connection. See `timeline.md`, *Golden Era → ⚿ GM Secret: The Golden Empire: The Real History*. |
+**Oni are bound spirits of Sortalde**, concentrated on **Lingdao** (Spirit Island) alongside the Yaksha; Yaksha are Lingdao's lighter spirit-cousins, Oni are the darker. Like Yaksha, Oni are tied to specific places and cannot wander. Hungerseeds result from the rare coupling of a manifest Oni with a mortal at the Oni's bound site. **Almost all Hungerseeds in canon are Sortalde-born**, mostly on Lingdao. Talan-side Hungerseeds are even rarer than the Sortalde-ancestry parents who carry their bloodlines across Hafra; a Hungerseed on Talan typically descends from a Sortalde émigré whose Oni heritage is one or two generations back. See [`geography/_off-continent.md`](geography/_off-continent.md), *Sortalde → The Six Peoples → Yaksha (Lingdao · Spirit Island)*.
+
+#### Reflection (Wellspring-direct, Stillpool-born)
+
+**Public framing (cover):** ritual mishap, cosmic blip, or magical duplication; no parent lineage, made sometimes intentionally and often not; arguably the only beings on Talan whose existence is purely Wellspring-mediated chance, with no source deity at all. **GM truth:** every Reflection is born near a **Stillpool** roughly one week after a mortal interacts with it (looks too long, bathes, drinks, leaves something behind). Stillpools are the residual Wellspring-touched sites left over from the **Lost-Era leak** (see `cosmology.md`, *Wellspring Outflow: Mediation, Leakage, and the Lost-Era Window*, and `timeline.md`, *Lost Era → ⚿ GM Secret: The Lost Era: The Real History*). Reflections are mortal-shaped but anchored directly to the Wellspring rather than to any deity-mediated ancestry line, and the Gods' Law's framework for binding mortal/divine ascension does not fully apply to them. **The Golden Emperor was a Reflection**: the only one in recorded history who learned to consciously pull on the connection. See `timeline.md`, *Golden Era → ⚿ GM Secret: The Golden Empire: The Real History*.
 
 ---
 
