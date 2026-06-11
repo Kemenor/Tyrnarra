@@ -22,9 +22,7 @@ magenta, nothing else.*
   frame). This is the **recipe for a new frame** and a record of each frame's
   design intent; it is **not** a way to reproduce the existing ones (image
   generation is non-deterministic, so re-rendering a prompt yields a *different*
-  ring). The committed `.cut.png` / `.webp` are the canonical art. Safe to re-run:
-  `gen_portraits.py` **skips any slug whose file already exists**, so adding an
-  entry and re-rendering only produces the new one.
+  ring). The committed `.cut.png` / `.webp` are the canonical art.
 - **`<slug>.webp`** — the raw magenta-field render (kept so a frame can be re-cut).
 - **`<slug>.cut.png`** — the chroma-keyed transparent ring; what `bake_token.py bake` composites.
 
@@ -76,18 +74,19 @@ Add the finished prompt as a new `{ "slug": "...", "prompt": "..." }` entry in
 
 ### 2. Render, cut, map
 
-Run the render from **`tools/imageGen/`** and the cut/bake from **`tools/foundryExport/`** (both sit under `tools/`, so the `../token-frames` paths resolve the same from either); set the fal key (`../keys/fal_key.txt` or `$env:FAL_KEY`):
+Run the render from **`tools/imageGen/`** (local ComfyUI, no key needed) and the
+cut/bake from **`tools/foundryExport/`** (both sit under `tools/`, so the
+`../token-frames` paths resolve the same from either):
 
-```powershell
-# render ONLY the new slug (existing frames are skipped, so they are never re-rolled)
-python gen_portraits.py --portraits ../token-frames/faction-frames.json --out ../token-frames --ext webp --only <slug>
+```bash
+# render the new ring on its magenta field (Claude-operated, local GPU)
+python3 npc_art.py frame --name <slug> --desc "<the motif clause>"
 # chroma-key the magenta field down to a transparent ring
-python bake_token.py prep --in ../token-frames/<slug>.webp --out ../token-frames/<slug>.cut.png
+python bake_token.py prep --in ../token-frames/<slug>.png --out ../token-frames/<slug>.cut.png
 ```
 
 Eyeball `<slug>.cut.png` (the centre and corners should be fully transparent, only
-the band visible). To deliberately re-roll an existing frame, add `--force` to the
-render. Then map an actor to the new `<slug>` in the quest's
+the band visible); re-run the render for a different roll. Then map an actor to the new `<slug>` in the quest's
 `published/gm-notes/<campaign>/<quest>.token-map.json` and batch-bake
 (`bake_token.py batch --frames ../token-frames …`); the full bake / upload / assign
 pipeline is in [`../foundryExport/README.md`](../foundryExport/README.md). Finally,

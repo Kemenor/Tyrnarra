@@ -242,7 +242,7 @@
 
       <div class="gm-note">
         <div class="gm-note-label">GM Note · Generating the Set</div>
-        <div class="gm-note-text">The committed set is the <b>Midjourney</b> version, built from <code>assets/portraits/aldric-fenn.set.json</code> via <code>tools/imageGen/mj_prompts.py</code> + the personalization profile, with the full body as the omni-reference anchor for the portrait and the office scene. To redo: run <code>mj_prompts.py --spec aldric-fenn.set.json --anchor-url &lt;anchor URL&gt;</code>, paste into Midjourney, drop the PNGs in <code>incoming/</code>, and convert them to webp here. The fal alternative is <code>gen_npc_set.py</code> from the same spec.</div>
+        <div class="gm-note-text">The committed set is the <b>Midjourney</b> version, built from <code>assets/portraits/aldric-fenn.set.json</code> (rendered 2026 via the retired MJ prompt tooling; the full body was the omni-reference anchor for the portrait and the office scene). To redo, use the local pipeline: the <code>npc-art</code> skill / <code>tools/imageGen/npc_art.py</code> with the same spec (variations &rarr; set &rarr; upscale, rendered on the local GPU).</div>
       </div>
     </div>
   </div>

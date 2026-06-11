@@ -31,14 +31,14 @@ tools/encounterBuilder/__pycache__/
 __pycache__/
 *.pyc
 
-# API keys / secrets for the GM tools (fal.ai, Forge, etc.) - LOCAL ONLY, never
+# API keys / secrets for the GM tools (Forge, etc.) - LOCAL ONLY, never
 # committed. They live in tools/keys/ (copied from Proton Drive on a fresh clone);
 # this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
 **/*.secret
 tools/**/.env
 
-# Generated image-gen output (the user's own fal.ai art) IS committed for
+# Generated image-gen output (the approved generated art) IS committed for
 # portability: portraits/, frames/, and the baked tokens/ travel with the repo
 # (generation is non-deterministic, so the prompts alone can't reproduce the
 # exact approved cast). Only genuine scratch is ignored: Forge URL maps, variant

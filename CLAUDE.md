@@ -77,11 +77,11 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
 
   tools/                               ← PRIVATE GM build tooling (NOT served)
     encounterBuilder/                  ← PF2e encounter + loot builders (pf2e-encounter / pf2e-loot skills)
-    imageGen/                          ← NPC art generation via fal.ai (gen_portraits / gen_npc_set)
+    imageGen/                          ← NPC art generation, local ComfyUI/FLUX.2, Claude-operated (npc_art.py + npc-art skill)
     foundryExport/                     ← quest spec → paste-and-run Foundry VTT import macro (+ token bake / Forge upload)
     map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
     token-frames/                      ← shared Foundry token-frame library
-    keys/                              ← gitignored API keys (fal.ai, Forge), copied from Proton Drive
+    keys/                              ← gitignored API keys (Forge), copied from Proton Drive
 
   lore/                                ← worldbuilding canon (NOT served; full roster in site-inventory)
     cosmology.md · gods.md · factions.md · ancestries.md · glossary.md · timeline.md

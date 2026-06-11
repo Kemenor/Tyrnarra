@@ -1,8 +1,0 @@
-{
-  "_note": "House-wide Midjourney defaults for mj_prompts.py: your personalization profile + default style/version/raw/ow, shared by every character. A character's set.json mj block overrides these; CLI flags override both. (This is config, not a credential. Move it to a gitignored spot if you'd rather not commit the profile id.)",
-  "profile": "ca3a05b6-c00d-480c-80e5-7ab64bf7e723",
-  "version": "7",
-  "raw": true,
-  "style": "digital art, high detail",
-  "ow": 400
-}

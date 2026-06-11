@@ -19,19 +19,18 @@ This is the **Foundry export step (Phase 7)** of the [`quest-workflow`](../../.c
 
 ## Setup (dependencies + API keys)
 
-Run the Foundry commands here (`tools/foundryExport/`), `python` (not `python3`) on Windows. **Image generation moved to [`../imageGen/`](../imageGen/README.md)** — run `gen_portraits.py` / `gen_npc_set.py` from there.
+Run the Foundry commands here (`tools/foundryExport/`). **Image generation lives in [`../imageGen/`](../imageGen/README.md)** — local ComfyUI/FLUX.2 via `npc_art.py`, Claude-operated through the `npc-art` skill, no API key.
 
-**Dependencies** (one-time): `pip install requests pillow numpy` here (image generation also needs `fal-client`; see [`../imageGen/`](../imageGen/README.md)).
+**Dependencies** (one-time): `pip install requests pillow numpy` here.
 (encounters/loot also need the encounterBuilder DBs: `python ../encounterBuilder/rebuild.py`.)
 
-**API keys.** The key files live in **[`../keys/`](../keys/README.md)** and are **gitignored** (`tools/**/*_key.txt`), so they are **not in the repo — a fresh clone copies them from Proton Drive.** Each script reads its env var first, else `../keys/<file>`:
+**API key.** The key file lives in **[`../keys/`](../keys/README.md)** and is **gitignored** (`tools/**/*_key.txt`), so it is **not in the repo — a fresh clone copies it from Proton Drive.** The script reads its env var first, else `../keys/<file>`:
 
 | Key | File / env | For | Get it |
 |---|---|---|---|
-| fal.ai | `../keys/fal_key.txt` / `FAL_KEY` | image gen (`../imageGen/`) | https://fal.ai/dashboard/keys (`id:secret`) |
 | The Forge | `../keys/forge_key.txt` / `FORGE_KEY` | `upload_forge.py` (asset upload) | The Forge → Account → API Keys (**write-assets**) |
 
-**Confirmed working:** Foundry VTT **14.363** / pf2e **8.2.0**; image model **`fal-ai/flux-2`** (fal.ai), ~$0.012/megapixel (≈ $0.013 per 1024² image). Forge assets serve at `https://assets.forge-vtt.com/<your-id>/<target-path>/<file>`.
+**Confirmed working:** Foundry VTT **14.363** / pf2e **8.2.0**; local renders are free (FLUX.2 dev on the machine's own GPU). Forge assets serve at `https://assets.forge-vtt.com/<your-id>/<target-path>/<file>`.
 
 ## The full pipeline, end to end
 
@@ -40,9 +39,8 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 1. **Encounters + loot** — drive `pf2e-encounter` / `pf2e-loot` (../encounterBuilder), saving each `--json`.
 2. **Spec** — `foundry_macro.py spec …` → `<quest>.spec.json` (monsters, NPCs, chests, areas, placement).
 3. **Import macro** — `foundry_macro.py build --spec …` → paste-run in Foundry: foldered actors + loot, tokens placed on the open scene.
-4. **Portrait prompts** — author `<quest>.portraits.json` (per-NPC appearance + prompt).
-5. **Generate portraits** — `gen_portraits.py --model fal-ai/flux-2` → `<campaign>/assets/portraits/<slug>.webp`.
-6. **(optional) Faction frames** — extend the shared `tools/token-frames/faction-frames.json`; render on a **magenta field** with `gen_portraits.py` into `tools/token-frames/`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `<campaign>/assets/tokens/<slug>.png`.
+4. **Portraits** — invoke the **`npc-art` skill**: Claude distills each NPC's block into a spec and renders locally (`../imageGen/npc_art.py`, variations → set → upscale, user picks in chat) → `<campaign>/assets/portraits/`.
+5. **(optional, user-directed) Faction frames** — tokens are per-faction and most NPCs get none. When a new frame is wanted: extend the shared `tools/token-frames/faction-frames.json`; render the magenta-field ring with `npc_art.py frame`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `<campaign>/assets/tokens/<slug>.png`.
 7. **Upload** — `upload_forge.py --dir <campaign>/assets/portraits` (or `.../tokens`) `--target <campaign>/<quest>` → asset URLs.
 8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
 
@@ -141,14 +139,12 @@ around it: tuned prompts and the Foundry-side assignment. NPC tokens use
 
 The four steps:
 
-1. **Prompts.** A per-quest `*.portraits.json` holds each NPC's invented
-   appearance (ancestry/age/looks) + a style-consistent `prompt`, with a shared
-   `style` suffix so the whole cast looks like one artist.
-2. **Generate.** `../imageGen/gen_portraits.py` batch-renders one square image per
-   entry via fal.ai, model-agnostic (`--model`, e.g. Flux.2 [dev] now, swap later);
-   the same prompts JSON is reusable by a local ComfyUI/Replicate runner. Key in
-   `../keys/fal_key.txt` (or `FAL_KEY`), then, from `../imageGen/`:
-   `python gen_portraits.py --portraits <quest>.portraits.json --out <dir> --model fal-ai/flux-2 --ext webp`
+1. **Prompts.** Claude distills each NPC's physical + clothing block into a
+   per-NPC `<slug>.set.json` spec at generation time, with the shared house style
+   (painterly) so the whole cast looks like one artist.
+2. **Generate.** The **`npc-art` skill** renders locally (`../imageGen/npc_art.py`,
+   ComfyUI/FLUX.2 on this machine, no key): Claude authors the spec from the NPC's
+   block and renders square portraits the user approves in chat.
 3. **Upload.** On The Forge, `upload_forge.py` pushes the folder into your Assets
    Library via the Forge API (needs a Forge API key with write-assets, in a
    gitignored `forge_key.txt`); it prints + saves a `{filename: asset URL}` map:
@@ -169,11 +165,11 @@ Foundry's Dynamic Token Ring only gives a generic disposition ring. For custom
 per-faction / special-monster borders, bake a frame into the token image:
 
 1. **Frame art.** Frame prompts live in the shared library
-   `tools/token-frames/faction-frames.json` (same shape as the portraits
-   file); render with `gen_portraits.py` into `tools/token-frames/`. Render
-   the ring on a **solid magenta field** (background AND centre) so only the ring
-   is non-magenta. Frames are reusable across campaigns — add a new one once, map
-   to it from any quest's token-map.
+   `tools/token-frames/faction-frames.json`; render with
+   `../imageGen/npc_art.py frame --name <slug> --desc "<motif>"` into
+   `tools/token-frames/`. The ring renders on a **solid magenta field**
+   (background AND centre) so only the ring is non-magenta. Frames are reusable
+   across campaigns — add a new one once, map to it from any quest's token-map.
 2. **Cut.** `bake_token.py prep` chroma-keys the magenta away, leaving the ornate
    ring with real transparency (no gray edge):
    `python bake_token.py prep --in frames/bridge-council.webp --out frames/bridge-council.cut.png`

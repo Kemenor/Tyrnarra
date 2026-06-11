@@ -241,10 +241,10 @@
 
       <div class="gm-note">
         <div class="gm-note-label">GM Note · Generating the Set</div>
-        <div class="gm-note-text">The committed set is the <b>Midjourney</b> version: the anthro fox via <code>tools/imageGen/mj_prompts.py</code> + a personalization profile, with the full body as the omni-reference anchor for the portrait and the Low Span scene. To redo: run <code>mj_prompts.py --spec sable-rei.set.json --anchor-url &lt;anchor URL&gt;</code>, paste into Midjourney, drop the PNGs in <code>incoming/</code>, and convert them to webp here. The fal alternative is <code>gen_npc_set.py</code> from the same spec. The Foundry token (<code>assets/tokens/sable-rei.png</code>) is still the old art; re-bake it from the new portrait when convenient.</div>
+        <div class="gm-note-text">The committed set is the <b>Midjourney</b> version (rendered 2026 via the retired MJ prompt tooling; the full body was the omni-reference anchor for the portrait and the Low Span scene). To redo, use the local pipeline: the <code>npc-art</code> skill / <code>tools/imageGen/npc_art.py</code> with <code>sable-rei.set.json</code> (variations &rarr; set &rarr; upscale, rendered on the local GPU). The Foundry token (<code>assets/tokens/sable-rei.png</code>) is still the old art; re-bake it from the new portrait when convenient.</div>
       </div>
 
-      <!-- Prompts + shot list live in sable-rei.set.json (this folder); gen_npc_set.py builds each prompt as framing + character + wardrobe + style. -->
+      <!-- Prompts + shot list live in sable-rei.set.json (this folder); npc_art.py builds each prompt as framing + character + wardrobe + style. -->
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 {
-  "_note": "Consistent 3-shot set for Dova Crestmark (Wayward Compass barkeeper, Itsasaldan kitsune). The 'full' shot is the text-to-image anchor; 'portrait' and 'bar' reference it so the silver-frosted anthro fox stays one person. Regenerate from tools/imageGen: python gen_npc_set.py --spec ../../published/gm-notes/furrious-five/assets/portraits/dova-crestmark.set.json --force  (paste-test: python mj_prompts.py --spec <same>).",
+  "_note": "Consistent 3-shot set for Dova Crestmark (Wayward Compass barkeeper, Itsasaldan kitsune). The 'full' shot is the text-to-image anchor; 'portrait' and 'bar' reference it so the silver-frosted anthro fox stays one person. Regenerate locally (Claude-operated, npc-art skill): python3 tools/imageGen/npc_art.py set --spec <this file> --force (variations/upscale stages: see tools/imageGen/README.md).",
   "slug": "dova-crestmark",
   "out": ".",
   "anchor": "full",
