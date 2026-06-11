@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/setting/assets/style-b.css">
 <link rel="stylesheet" href="/setting/assets/site-nav.css">
 <script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
 <style>
   :root { --domain-accent: #c84a2a; }
   .tribe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 24px auto; max-width: 980px; }
@@ -67,7 +68,8 @@
 
   <h2 id="the-four-tribes" class="section-heading">The Four Tribes</h2>
   <div class="prose">
-    <p>Fenurra is composed of countless small tribes, but its strength is concentrated in four major peoples. Each is shaped by a totem-animal influence, occupies a distinct part of the volcanic landscape, and contributes a distinct combat role.</p>
+    <p>Fenurra is composed of countless small tribes, but its strength is concentrated in four major peoples, and each is its own people in the fullest sense: the <b>Draconis are Dwarves</b>, the <b>Vexiren are Goloma</b>, the <b>Brakkaun are Orcs</b>, the <b>Seravain are Hobgoblins</b>. What makes four peoples one nation is the blood: all four carry the <b>Dragonblood</b> heritage thicker than anywhere else on Talan, the old Wyrmkin line surfacing as scale, eye, and breath, and as the stillness every Fenurran goes to under threat. Each tribe is shaped by a totem-animal influence, occupies a distinct part of the volcanic landscape, and contributes a distinct combat role.</p>
+    <p>Chroniclers who ask why the blood runs strongest in a meteor crater get the answer the Dragonets' own tradition would give: the old line ran through deep ground, and the Scar of Aeris bleeds heat up from strata older than every map of Talan. Four peoples have lived on that ground as long as any of them has kept count, and the ground has been in all four bloods the whole time.</p>
   </div>
 
   <div class="tribe-grid">
@@ -77,9 +79,10 @@
       <div class="tribe-byname">The Scaled Flame · Forgemasters of Fenurra</div>
       <div class="tribe-quote">"To temper steel, you need fire. To temper a people, you need something far hotter."</div>
       <div class="tribe-meta">
+        <b>People:</b> Dwarves: the methodical temper given ritual form. Blackglass is never a stroke of genius; it is ten thousand corrected errors in an alloy that punishes a wild blow.<br>
         <b>Totem:</b> Ember Drake: mythic winged-fire beasts said to have emerged from the meteor's core.<br>
         <b>Home:</b> The Scar of Aeris itself; they hold the capital city.<br>
-        <b>Mark of the Scar:</b> many Draconis are born with silver scales in patches, embers in their hair, or smouldering eye-colour: gifts of slow exposure to the crater's magic.<br>
+        <b>Mark of the blood:</b> the Dragonblood runs thickest in them of the four: many Draconis are born with silver scales in patches, embers in their hair, or smouldering eye-colour.<br>
         <b>They make:</b> Blackglass, Velthite, the Drakar Talons, and Spice Wine.<br>
         <b>Combat role:</b> Velthite Guard (elite spear-and-glaive), Talon-Climbers, Command Strikers, Spice-Wine Seers. Open battle with measured movement, ritual pace, and a single warhorn note.<br>
         <b>Symbol:</b> a silver-scaled wing wrapped around a rising flame.
@@ -91,6 +94,7 @@
       <div class="tribe-byname">The Ember-Eyed · Smoke-Touched · Ghostflame</div>
       <div class="tribe-quote">"We bury no kin. We light the sky in their name, then vanish."</div>
       <div class="tribe-meta">
+        <b>People:</b> Goloma: the ones who see it first, the prey's-eye gift turned ambush-craft. Nobody reads a predator better than the watched.<br>
         <b>Totem:</b> Ash Fox: agile, clever, hunts by heat and vibration through sulfurous haze.<br>
         <b>Home:</b> The Sulfur Vents of Vehl. Villages carved into canyon walls or built on ashflow ridges that glow faintly from below.<br>
         <b>Character:</b> revere the silence between heartbeats. Family is defined by action and trust, not blood, and the tribe is all.<br>
@@ -105,6 +109,7 @@
       <div class="tribe-byname">The Bone-Burdened · Ashdrummers · Dissonants</div>
       <div class="tribe-quote">"We do not cast spells. We cast echoes that scatter them."</div>
       <div class="tribe-meta">
+        <b>People:</b> Orcs: the ones who close. A Brakkaun ends what is open, which is why the dead are carried until their work is done.<br>
         <b>Totem:</b> Ash Boar: thick-skinned smoke-bristled beasts that survive on what should kill them.<br>
         <b>Home:</b> The cracked craterlands and sulfur-blasted river gorges. Homes carved into black stone and ash-glass; ancestral bones worked into walls and weapons.<br>
         <b>The Shattervoice:</b> their shamans wield massive Ashdrums and deep-throat chants that disrupt the arcane harmonics outsider magic depends on. Spells fracture mid-cast. Casters' wards fail as if caught in an earthquake of sound.<br>
@@ -119,6 +124,7 @@
       <div class="tribe-byname">The Soulbound · Twice-Chosen · Emberwelds</div>
       <div class="tribe-quote">"I did not choose you in peace. I chose you in fire. I choose you still."</div>
       <div class="tribe-meta">
+        <b>People:</b> Hobgoblins: the given word load-bearing, slow to promise, immovable once sworn. The bond-pairing is the feeling made a way of life.<br>
         <b>Totem:</b> Sulfur Lynx: solitary predators that mate for life and fight in synchronized pairs.<br>
         <b>Home:</b> The high crags of Mount Skel and the Ashwall Divide. Cliffside homes always built in pairs: two doors, two fires, two watchers.<br>
         <b>Bond-pairing:</b> almost every adult Seravain is true-married, romantically or in <i>soul-pairing</i>: a warrior bond of eternal chosen trust. Bonds are formalized through the Dance of the Sulfur Fire: Fenurra's only sacred rite.<br>
@@ -128,6 +134,15 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret: Perfect Servants for Perfect Jobs</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to No One Alive</div>
+      <p>Across most of Talan the Dragonblood is what the chronicle guesses: the old Wyrmkin country ran near the surface, mortal peoples lived beside it in the deep ages, and the lines crossed the ordinary way. Fenurra is the exception. During the <b>Elden Era</b>, an Elden culture sited itself on the Scar for the star-metals, and it ran a crossbreeding programme on its subject populations: conquered Wyrmkin stock, crossed into mortal servant-lines, to make <i>perfect servants for perfect jobs</i>. Heat-fast forge-hands for the star-metal works. Watchers for the sulfur dark. Breakers for the deep galleries. Paired teams for the work no single body survives. Four servant-stocks, four perfect jobs; the wyrm-blood was the tool that made bodies the crater could not kill, and the forge-stock got the deepest dose, which is why it runs thickest in the Draconis to this day.</p>
+      <p>When the Elden vanished in 2945 GR, the servants inherited the Scar with their memory of the masters broken, and four stocks became four tribes. Nothing of this survives in Fenurran memory; the chronicle line that four peoples have lived on this ground <i>as long as any of them has kept count</i> is true precisely because the count begins after the masters vanished. The ghost of the programme is visible everywhere in modern Fenurra and recognized nowhere: the four complementary war-roles, the efficiency creed, competence over birth, wasted talent as the only sin. The masters' design, kept as a people's pride. The deepest irony is the one nobody is positioned to see: the Elden became the <a href="/setting/talan/the-binding.html">Corrupted God</a>, so the blood Fenurra carries was bred by the thing bound under the world, and the evidence, whatever remains of it, sleeps in Elden workings somewhere beneath the Scar of Aeris.</p>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
