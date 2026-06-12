@@ -34,6 +34,7 @@ The 2-sentence test governs: a reader should know which city a description names
 - **The light-dark pair:** Ljosarn **exposes** (eternal light, nothing hides); Myrria **hides and forgives** (shadow, second chances).
 - **Frae City vs Nahaskel** ("no rules" could rhyme): Frae City is *free* (the people are sane and deliberately ungoverned, principled anti-authority); Nahaskel is *mad* (reality itself will not hold still). Liberty vs chaos.
 - **Thekkavar vs Azkataria vs Atarialda** (knowledge): Azkataria **argues** it (open-floor agora); Thekkavar **teaches and keeps** it (academy and stacks); Atarialda **remembers** it (oral, in the kitchen, the anti-library). Thekkavar is the formal-institutional pole.
+- **The manifestation strata** (locked 2026-06-13): each god walks their city in one of three registers, and a new build picks one deliberately. **Open** (the god as themselves, recognised): Haizava (Fisaya rides svifs) · Frae City (the broken chain names him) · Ljosarn (Iro in his own face, falling in step). **Both registers** (an open face and a hidden one): Merkavar (witnessed rite / veiled customer) · Valreka (elder + adult faces open, the child face secret: Amona) · Thekkavar (openly browsing the stacks, "wandered in by accident from the Infinite one" / the incognito lecturer) · Eldara (the open witness of finished masterworks / the hidden Apprentice). **Hidden** (the stranger): Myrria (the stranger who talks) · Nahaskel (the New Face) · Uravel (the One Who Sits). Lurrath, Lograth, and Veidrath choose at build time.
 
 ## Per-city build notes
 
