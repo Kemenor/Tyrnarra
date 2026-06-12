@@ -427,7 +427,7 @@ Pace as stories want them. Rolling work.
 **Where.** [lore/factions.md](../lore/factions.md), *God Churches* section is the natural anchor; [lore/gods.md](../lore/gods.md), per-god clerical-grant fields for the doctrinal core; future per-church files at `/setting/talan/factions/<church-slug>.html`.
 
 ### [Geography] Other god city-state pages: content maturation
-**Decided.** Three god city-states remain unpromoted to dedicated pages: **Lurrath** (Brauogi · Steadfast City) · **Ljosarn** (Egulon · Everbright City) · **Veidrath** (Ehizahar · Hunting City). Now promoted with their own pages: **Haizava**, **Merkavar**, **Eldara**, **Valreka** (formerly "Denbora"), **Thekkavar**, **Lograth**, **Frae City**, **Nahaskel** (Nashavel · Unmapped City; full lore + page promoted 2026-06-08), and **Uravel** (Floteyn · Floating Isles; full lore + page promoted 2026-06-12). Each still-unpromoted one has a name, byname, and one or two cultural details on `grand-gods.html` and the parent domain page.
+**Decided.** Two god city-states remain unpromoted to dedicated pages: **Lurrath** (Brauogi · Steadfast City) · **Veidrath** (Ehizahar · Hunting City). Now promoted with their own pages: **Haizava**, **Merkavar**, **Eldara**, **Valreka** (formerly "Denbora"), **Thekkavar**, **Lograth**, **Frae City**, **Nahaskel** (Nashavel · Unmapped City; full lore + page promoted 2026-06-08), **Uravel** (Floteyn · Floating Isles; full lore + page promoted 2026-06-12), and **Ljosarn** (Egulon · Everbright City; full lore + page promoted 2026-06-13). Each still-unpromoted one has a name, byname, and one or two cultural details on `grand-gods.html` and the parent domain page.
 **Open.** Each city needs its own districts, named figures, landmarks, faith/politics specifics, and visitor-facing flavour before it earns a Myrria-style dedicated page. Pace by story interest; none are blocking. **Frae City** has the most narrative pull (Council of Thirteen venue, Cronus's seat, most religiously diverse city on Talan); **Eldara** is the natural second pick (Order of Steam adjacency means the existing Sumendar build provides scaffolding).
 **Where.** [grand-gods.html](../published/setting/cosmology/grand-gods.html), per-god city fields; per-domain pages under [talan/domains/](../published/setting/talan/domains/).
 
@@ -447,6 +447,6 @@ Pace as stories want them. Rolling work.
 
 Items where the lore is written but the HTML side hasn't caught up. Pick one when you want to ship visible site progress.
 
-- **Ljosarn god-city page** (Egulon). Lore complete (`lore/geography/egulon.md`, *Ljosarn*, committed 2026-06-13); the dedicated page at `egulon/ljosarn/ljosarn.html` awaits the publish signal. Note: the regional map labels the city "Ljorsan"; the canon spelling is **Ljosarn** (light-hearth etymology), so the map needs a relabel whenever it is next touched.
+- **Map relabel: "Ljorsan" → Ljosarn.** The regional map labels Iro's god-city "Ljorsan"; the canon spelling is **Ljosarn** (light-hearth etymology, `lore/glossary.md`). Fix whenever the map is next touched.
 
-*The still-unpromoted god-cities (Lurrath, Veidrath) are tracked under the god-city-state maturation thread above.*
+*Nothing else is pending publish: every lore-complete page has shipped. The still-unpromoted god-cities (Lurrath, Veidrath) are tracked under the god-city-state maturation thread above.*

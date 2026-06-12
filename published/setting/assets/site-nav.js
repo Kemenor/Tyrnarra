@@ -119,7 +119,9 @@
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/setting/talan/domains/ezkudon/ezkudon.html',   children: [
       { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/setting/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }
     ] },
-    { slug: 'egulon',   label: 'Egulon · Light',      href: '/setting/talan/domains/egulon/egulon.html',     children: [] },
+    { slug: 'egulon',   label: 'Egulon · Light',      href: '/setting/talan/domains/egulon/egulon.html',     children: [
+      { slug: 'ljosarn', label: 'Ljosarn &middot; the Everbright City', href: '/setting/talan/domains/egulon/ljosarn/ljosarn.html', children: [] }
+    ]},
     { slug: 'zuzental', label: 'Zuzental · Law',      href: '/setting/talan/domains/zuzental/zuzental.html', children: [
       { slug: 'lograth',          label: 'Lograth · The Judgment City',        href: '/setting/talan/domains/zuzental/lograth/lograth.html',  children: [] },
       { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/setting/talan/domains/zuzental/thousand-kingdom.html', children: [] },
