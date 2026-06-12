@@ -101,7 +101,9 @@
     { slug: 'myrkono',  label: 'Myrkono · Darkness',  href: '/setting/talan/domains/myrkono/myrkono.html',   children: [
       { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/setting/talan/domains/myrkono/myrria/myrria.html', children: [] }
     ]},
-    { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [] },
+    { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [
+      { slug: 'uravel', label: 'Uravel &middot; the Floating Isles', href: '/setting/talan/domains/floteyn/uravel/uravel.html', children: [] }
+    ]},
     { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/setting/talan/domains/sumendar/sumendar.html', children: [
       { slug: 'eldara',         label: 'Eldara &middot; the Forge City', href: '/setting/talan/domains/sumendar/eldara/eldara.html', children: [] },
       { slug: 'order-of-steam', label: 'Order of Steam · Industrial Kingdom', href: '/setting/talan/domains/sumendar/order-of-steam/order-of-steam.html', children: [

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uravel · The Floating Isles · Floteyn · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #40a0c8;
+    --card-bg: rgba(12,30,42,0.55);
+  }
+
+  /* Tier / trade cards */
+  .tier-grid { --card-pad: 16px 18px; }
+  .tier-grid .card-name { font-size: 1rem; line-height: 1.55; }
+  .tier-grid p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+  /* The answering principle callout (left-bordered, water-toned) */
+  .principle-call { --call-bg: rgba(10,32,44,0.4); }
+</style>
+</head>
+<body data-page="uravel">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/floteyn/floteyn.html">Floteyn</a><span class="sep">›</span><span>Uravel</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Uravel</div>
+    <div class="page-subtitle">The Floating Isles · Shuun's God-City</div>
+    <div class="page-flavor">A city with no solid ground and no fixed extent, woven from drifting isles and the dry halls sunk beneath them. Adapt to the water or drown; the locals will tell you those are the only two careers in town.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>ur</i> (water) + Icelandic <i>vefur</i> (web, weave) → drifted to <b>Uravel</b>, "the water-weave." The name described the weave of isles, lines, and lanes long before mortals knew how literal it was.</dd>
+    <dt>Position</dt><dd>The open western Midarra, among the Floating Isles of Shuun: the one reliable anchorage in a domain where everything else moves, and the fixed market where the drifting isles' goods meet the Midarra lanes.</dd>
+    <dt>Terrain</dt><dd>Water, in tiers. Drifting isles and moored floats above the surface; dry, air-holding halls sunk below it, the oldest and heaviest lying far down in the dark. Locals sort the city by its light: <b>the Open</b>, <b>the Blue</b>, <b>the Dark</b>.</dd>
+    <dt>Character</dt><dd>
+      <i>Weight is fate: the light float high, move fast, and drown easy; whatever grows sinks deeper and slower. The city's census is taken by ear.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Tiered &amp; Sunken</span><span class="pill">Drifting Isles</span><span class="pill">Bell-Governed</span><span class="pill">The City That Keeps</span></div>
+    </dd>
+    <dt>Peoples</dt><dd><b>Merfolk</b>, the city's currents: pilots, couriers, deep-guides. <b>Athamaru</b>, its stations: the steady watch at the breath-bells. <b>Tripkee</b>, its Open: floats, boat-homes, a porch by evening on any new mooring. And the fitted fourth: every dry-born resident who earned their water and stopped being a visitor.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Shuun</b>-devotional. The clergy are <b>the Listeners</b>, who sit with anyone who asks, for as long as they need, speaking only when spoken to first. The god's sanctum lies at the city's true bottom.</dd>
+    <dt>Rule</dt><dd>City law ends at the hull-door. Districts rule themselves; the city governs only the between: lanes, lines, bells, moorage, dive-law. One voice per answering district at the monthly <b>Shoal</b>; the hired <b>Linewards</b> keep the works.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">Shuun's Seat</div>
+    <div class="gods-city-name">Urbarren</div>
+    <div class="gods-city-byname">the water's innermost · the structure that finished sinking long ago</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="weight-is-fate" class="section-heading">Weight Is Fate</h2>
+  <div class="prose">
+    <p>Everything in Uravel moves, and how it moves is decided by what it weighs. On the surface, the true isles wander on their deep-water roots at the pace of years, slowly enough that no one witnesses the change and everyone inherits it: the isle a grandmother could hail across the water is an hour's row for her grandchildren, and the boatwrights' children learn lanes their parents never needed. Tripkee-built floats move freer, casting off to dock somewhere new each year; the boat-homes, lightest of all, re-dock daily.</p>
+
+    <p>Below the waterline the same law runs downward. A small sunk district, an inn and a few houses on a frame, rides high, drifts fast, and drowns easy. A district that grows and collects sinks deeper into the Midarra as it gains, its movement slowing with every year of success, until the oldest and heaviest halls lie far down in the dark and barely move at all. <b>Sinking is succeeding.</b> Every deep hall was once a light knot of rooms bobbing near the surface, and every shallow one that survives is on its way down.</p>
+  </div>
+
+  <div class="card-grid tier-grid">
+    <div class="accent-card">
+      <div class="card-name">The Open</div>
+      <p>Everything above the surface: the isles, the floats, the boat-rows, the docks and markets. A full bright day, the fastest tempo, and the first place dawn arrives. The Tripkee's tier, and the only Uravel most visitors ever stand on.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Blue</div>
+      <p>The shallow sunk tiers, where the day comes down blue and shortened through the water. The working heart of the city: the gear-wrights, the bell-yards, the young districts still light enough to drift. High, quick, and exposed; the Blue drowns by water when it drowns.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Dark</div>
+      <p>Lamp-country: the great old halls far below, heavy with a century of collecting, hardly moving at all. Stable, wealthy, and visited least, which in Uravel is its own slow danger. The Dark keeps the latest hours and the deepest cellars.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-halls-hold-their-air" class="section-heading">The Halls Hold Their Air on Connection</h2>
+  <div class="prose">
+    <p>The sunk districts are dry rooms below the water, and what keeps the Midarra out differs hall by hall, the way everything in Uravel differs. The oldest halls stand on Shuun's standing blessing, and the Listeners teach that the blessing follows connection: a hall stays sound while its life stays woven into the city's, the visits, the trade, the bonds, the conversations. The newer tiers stand on maintained enchantment, mortal work that needs hands and coin. Either way the lesson is the same, and every Uravelin learns it as a proverb long before they learn what it costs: <i>a hall no one visits drowns.</i></p>
+
+    <p>You are never safe in Uravel; you only choose which end of the gradient is trying to take you. The shallow drown by water, light and exposed, swamped in a storm. The deep drown by silence, stable and heavy and far from visitors, which under the blessing is the slow death. The city's whole shape, the daily bell, the visits before nightfall, the tax assessed on connections, is the answer it built to both. And the chronicles note, without elaborating, that the city keeps one name it does not speak at the docks: the grave of the lesson, somewhere far below.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-bell" class="section-heading">The Day Comes Down From the Top</h2>
+  <div class="prose">
+    <p>Dawn reaches the Open first and works its way down, so the city wakes top-to-bottom: a full bright day in the Open, a short blue one in the middle tiers, lamplight in the Dark. Noon is the one hour the sun drives straight down and reaches deepest, so the heavy dive-work, the line-maintenance, and the deep deliveries all cluster at midday; <b>noon is the deep's morning.</b> And once a day the sound goes the other way.</p>
+  </div>
+
+  <div class="card-grid tier-grid">
+    <div class="accent-card">
+      <div class="card-name">Urdeia · the Water-Call</div>
+      <p>The Listeners' great bell at the city's true bottom, rung once a day, the peal rising through the whole water at once: heard clearest in the Dark, faintest through the hulls of the Open. The sermon of the deep, and the one shared moment that favours the bottom of the gradient the way the sun favours the top. Folk call it the Undervoice.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Answering</div>
+      <p>Then the city answers. Every district sounds its reply in its own voice, a hull-knock, a chime, a struck pipe, and neighbours listen for each other's notes the way villagers note whose chimney smokes. A district that fails to answer is visited before nightfall. The chronicles record it as courtesy; Uravel keeps it the way a body keeps breathing. <i>A hall that answers is breathing.</i></p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Calling</div>
+      <p>Once a week Urdeia rings longer, and the bell-day is the Calling, when folk earn their water. Youths of age, and any settler who would become Uravelian, ride a bonded bell down to the sanctum's threshold, dry as any visitor, and come up the whole way on their own breath and their own fitted gear. <i>To earn your water is to rise from the depths.</i></p>
+    </div>
+  </div>
+
+  <div class="principle-call">
+    <div class="p-label">The Constitution, in One Sentence</div>
+    <p><i>Uravel is whatever answers.</i></p>
+    <p>The city has no wall and no fixed extent; its census is taken by ear. A float that docks and takes up the Answering has joined the city. A hall that falls silent has left it, one way or the other. No other city on Talan can define itself this way, and no other city would survive trying.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-city-swims" class="section-heading">The City Swims · the Visitor Rides</h2>
+  <div class="prose">
+    <p>The amphibious three swim natively, and everyone else who truly lives here earns the water with <b>fitted gills</b>, the gear-wrights' masterwork, fitted to the wearer like a tailored coat: the Orc dockhand twenty years on the lines swims her commute like anyone born to it, and the day you are fitted is the day you stopped being a visitor. For the fast way down there are the <b>plunge-lines</b>, a weighted stone ridden down a guide-rope with <b>breath-bells</b> hung at intervals like lamp-posts, cheap and quick and exactly as dangerous as the proverb says.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The dry ways down.</b> Visitors ride instead: <b>the bells</b>, winched rooms of dry air lowered through the water on scheduled lines, and <b>glass-drops</b>, the piloted sink-gondolas of the well-off. A visitor can reach anything the city cares to make reachable, including the pilgrim-bell to the sanctum's vestibule; what a visitor cannot do is leave the vehicle. For the true deep and the places off the bell-lines there are hired deep-guides, Merfolk and Athamaru mostly, a respected trade and the only honest way to the city's strangest corners. Uravel's bell-yards are its one shipwrighting glory: every other yard on Talan builds hulls to keep the water out, and Uravel's wrights build hulls that sink on purpose and come back.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>Dry is the mark of the outsider.</b> Natives go perpetually a little damp, hair wet at the temples, gear-lines on their cheeks, and the dry faces in the bell-windows are the tourists. <i>Still dry</i> is what an Uravelin says of someone who has yet to commit, to the city or to anything else.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-young" class="section-heading">The Young Dare Their Own Doom</h2>
+  <div class="prose">
+    <p>Adult Uravel runs on gear, bells, and lines precisely so that no one has to gamble on one lungful, so the young gamble on one lungful for fun. Each dares the element that could kill them, and the games mirror across the waterline.</p>
+  </div>
+
+  <div class="card-grid tier-grid">
+    <div class="accent-card">
+      <div class="card-name">The Air-Born Dare Down</div>
+      <p>Racing the plunge-stones and free-swimming back; depth-marks touched on a single breath, each deeper than the last, down to the one almost nobody reaches: the lintel of the god's own door. Every Uravelin over forty knows their own best mark and will tell you about it after two drinks.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Water-Born Dare Dry</div>
+      <p>Their doom is the dry air, so their dares climb: the Merfolk girl stretched on a bell-tower roof through a noon heat while her crew counts; the Athamaru boy sitting a full market-day among the dry-folk, skin cracking, voice steady; the legendary crossing of a great isle overland at midsummer without once touching water.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Shared Games</div>
+      <p>The moving city itself, where the danger is the same for every body: threading the gaps where drifting districts close, racing the winch-cables, riding a rising bell's roof. The Linewards fine all of it equally, which is democratic.</p>
+    </div>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>No dare without an opposite.</b> Every serious attempt requires a watcher from the other element, the friend who can survive where you would die and pull you out when you fail. Air-born and water-born pair off into these keeper-bonds young, and plenty hold for life; asking someone to watch your dare is half a step from a confession, and every Uravelin knows it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-between" class="section-heading">The Hulls Are Sovereign · the City Is the Between</h2>
+  <div class="prose">
+    <p>City law ends at the hull-door. Inside, every district rules itself its own way: the deep halls by their elder-houses, a Tripkee float by whoever's porch it is, a boat-row by shouted consensus. Uravel as a city governs exactly what lies between the hulls: the lanes and lines, the bells and winches, moorage and docking rights, the breath-stations, dive-law, and the conduct of the water itself. The polity of connection governs connections, and nothing else.</p>
+  </div>
+
+  <div class="card-grid tier-grid">
+    <div class="accent-card">
+      <div class="card-name">The Shoal</div>
+      <p>Once a month the districts gather, one voice per answering district, a houseboat counting the same as a hundred-year hall, schooling on neutral water to keep the between fair and argue about everything else. Slow, bickering, egalitarian, and structurally unable to do more than its one job, which is the point.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Linewards</div>
+      <p>The city's hired hands: keepers of the winches, bells, lanes, and stations, collectors of the tolls, the ones who fine the cable-riders and fish out the deep-darers. A district may also simply pay them directly to have a thing done; the check is that every paid job is posted on the bell-tower board for any rival to read.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Tether-Rate</div>
+      <p>The city's tax, assessed openly on connections rather than coin-chests: every line a district holds, every bell-stop, lane-berth, and breath-station in reach, payable in money or in sworn line-shifts staffing the very works it uses. A district that cuts its lines to dodge the rate is disconnecting itself, and everyone knows what comes for a hall no one visits. <i>Cheap as a cut line</i> is the local word for a saving that costs everything.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-city-that-keeps" class="section-heading">The City That Keeps</h2>
+  <div class="prose">
+    <p>The gradient hands each tier its trade. <b>The Dark keeps:</b> strongrooms no thief can swim to, archives that never burn, and the deep-cellars where wine, cheese, and ferments age in the cold still dark and surface worth triple, <i>deep-aged</i> the luxury mark from Merkavar to Frae City. Kingdoms that distrust their neighbours bank their treaties at the bottom of Uravel, and everything goes down by bonded bell, posted on the board. <b>The Blue makes:</b> the fitted-gill craft above all, the continent's finest diver's kit, bought by every salvage outfit and pearl-fleet on Talan; the wreck-trade, since the drifting isles eat ships and Uravel's divers hold the salvage-custom of the western Midarra; and the bell-craft. <b>The Open trades:</b> the fixed market of the drifting domain, where Balatur Erui's whale-goods and the isles' pearls and reed and fish meet the lanes, and where the archipelago's pilots are hired and nowhere else.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>A season from darkness.</b> What the city needs is light. It feeds itself on fish and kelp, but the Dark burns lamps through every hour of its shortened day, and oil, wax, and glowstone all come from off the water; Eldara is forever a season from hunger, and Uravel is forever a season from darkness. A bad trade-year dims the city hall by hall from the bottom up, and a deep hall going dim is the first step of going quiet, so the Linewards keep a light-reserve the way other cities keep a granary.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · the Seat at the Bottom</h2>
+  <div class="prose">
+    <p>Shuun's sanctum is <b>Urbarren</b>, the water's innermost: the deepest thing in the city, the structure that finished sinking long ago, the one still point the whole restless weave floats above. The depiction enacted: the god seated and still, the water restless around them. The clergy are <b>the Listeners</b>, and they hold both ends of the gradient, the sanctum below and the surface post on the Open, where voyages are blessed, the grieving come after the burial, and the hard conversation is rehearsed before it is had. Their tradition is the city's oldest: a Listener will sit with anyone who asks, for as long as they need, speaking only when spoken to first.</p>
+
+    <p>The Listeners ring Urdeia, keep the Calling, and read the isles' years-long drift as Shuun's commentary on the conversations of the world; two isles closing over a decade get gossiped about on the docks like a courtship, and a pair drifting apart is read with a wince. An audition with the god is the deepest journey a mortal can make, down by bonded bell past every tier to the vestibule of Urbarren, and the Listeners neither promise nor forbid it; Shuun receives whom Shuun receives.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">Peoples</h2>
+  <div class="prose">
+    <p>The water makes one demand of every body it carries, and every people answers it in their own way; that is the city.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">Merfolk</div>
+      <p>Uravel's currents: the lane-pilots, the deep-couriers, the guides who carry the between in their bodies, arriving where they meant to arrive with no sign of having fought for it. The hired deep-guides who take you past the bell-lines are mostly theirs.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Athamaru</div>
+      <p>Uravel's stations: the backbone of the Linewards, the watch at the breath-bells, the voice that does not change when something goes wrong in the water, which is the voice you want there. Born at ease above the abyss, they keep everyone else at ease above it too.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Tripkee</div>
+      <p>Uravel's Open: the floats, boat-homes, and dock-wrights of the surface tiers, a porch by evening on any new mooring, the most settled people of the least settled city.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Fitted Fourth</div>
+      <p>Everyone else, assimilated by fitting: the Orcs and Kitsune and Dwarves and all the dry-born who earned their water, rose at a Calling, and stopped being visitors. In Uravel, ancestry decides how you answer the water; the answer is what counts.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, The One Who Sits</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; The Still Point in the Moving City</div>
+      Uravelins say Shuun comes to the city seated. The whole city moves; the god is the still point in it, found sitting beside you, on the dock-end at dusk, on the long bell-ride down, on the surface-post steps, at the lintel. They never speak first, after the manner of the Listeners, who learned the manner from somewhere. If you speak, they hear you out to the very bottom, the unsendable apology, the grief, the conversation you have been rehearsing at the rail, and people swear that afterwards the real conversation, the one with the living person, finally comes out of you findable. No two stories agree on the face; the tellers argue, and the arguing is itself the tell. The one constant is that the water sits wrong on them: dry in the deep, dripping on a dry roof at noon, spray that bends around them, a wake that stills. From this comes the courtesy every Uravelin keeps: you never turn a quiet stranger off a bench, a boat-end, or a bell-seat. The seat you refuse might be the god's, and worse, the person you refuse might have needed the bench. The deep-darers add their own chapter: that a diver who blacks out at the lintel sometimes wakes on the surface-post steps, soaked and alive, a damp stranger seated alongside who is gone by the time help comes.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, Isilun · the Silence</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Grave Beside the God</div>
+      <p style="font-style:italic; margin-top:0;">The city keeps one name it does not speak at the docks. This is what the name covers.</p>
+
+      <div class="card-grid tier-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Morning Without an Answer</div>
+          <p>A century past, Urdeia rang and one hall did not answer. The Linewards went down and found it drowned: the blessing withdrawn, the Midarra come in as a wall in the night, the doors burst inward, and many dead, for a hall's air fails all at once and the water arrives like a verdict. The quarter had been going quiet for years, feuding, turning inward, cutting lines to spare the tether-rate, and the city's proverbs had been watching it happen without anyone naming it.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Where It Lies</div>
+          <p>Flooded and suddenly heavy, the quarter dropped the rest of the way down; it lies at the true bottom now, close by Urbarren, and salvage is forbidden. The city renamed it <b>Isilun</b>, the Silence, and leaves its living name unspoken. The god sits beside the grave.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">What the Divers Reported</div>
+          <p>What the Listeners keep sealed is the recovery divers' testimony, gathered quietly and never repeated: that in the quarter's last weeks a damp stranger had been seen there, sitting in its halls, listening. Shuun attended the dying conversation to its end, heard the quarter all the way to the bottom the way the god hears everyone, and did not save it, because Drowning belongs to Shuun as truly as Rivers and Seas do, and water reflects what is.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">Why the Listeners Sit</div>
+          <p>Read again with that in hand, the sitting-tradition is its exact mirror and the city's whole pastoral mission: the Listeners sit with the lonely so that the god's seat is never the last one taken. The Answering, the Calling, the visit before nightfall: the world's gentlest, most relentless campaign against the silence, run by clergy who have never told the city what they are campaigning against.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/floteyn/floteyn.html"><b>Floteyn →</b></a> · The Water Domain overview; the drifting archipelago Uravel anchors, and Balaena the Island of Wonders.</li>
+      <li><a href="/setting/cosmology/grand-gods.html"><b>The Bound Gods →</b></a> · Shuun's full entry: the Undine depiction, the connection portfolio, the Listeners' tradition.</li>
+      <li><a href="/setting/talan/domains/vindul/haizava/haizava.html"><b>Haizava →</b></a> · The Shifting City; the wind rebuilds it by the day where Uravel drifts by the year, and the element does it to them where Uravel's weave is its own.</li>
+      <li><a href="/setting/talan/domains/sumendar/eldara/eldara.html"><b>Eldara →</b></a> · The Forge City; forever a season from hunger as Uravel is forever a season from darkness.</li>
+      <li><a href="/setting/talan/domains/lautara/merkavar/merkavar.html"><b>Merkavar →</b></a> · The Market City, where the deep-aged cellars and fitted gills of Uravel command their price.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The water-weave's central canon is settled; several specifics remain open, the kind future story or future scholarship will close.</div>
+    <ol>
+      <li><b>Named isles and halls.</b> The great isles of the Open, the famous halls of the Dark, and the bell-lines that link them are open to name as stories want them.</li>
+      <li><b>Named figures.</b> The eldest of the Listeners, the master of the Linewards, the gear-wright whose fittings command the highest price, and the current best lintel-mark among the deep-darers are all unnamed.</li>
+      <li><b>The Calling's forms.</b> The customary words at the threshold, what a keeper says when their opposite surfaces, and what is done for the one who fails and must wait a season to try again.</li>
+      <li><b>The fitted-gill craft.</b> Where the art came from, which workshop holds the oldest patterns, and what the fitting ceremony involves beyond the fitting.</li>
+      <li><b>The drowned years.</b> What the chronicle-record openly holds about the unspoken name, and how the city marks (or pointedly does not mark) the morning it learned its proverb was a warning.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · FLOTEYN · URAVEL</div>
+
+</div>
+
+</body>
+</html>
