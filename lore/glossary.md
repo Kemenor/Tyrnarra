@@ -206,6 +206,11 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 
 **Floteyn (Water):**
 - **Balatur Erui**: Basque *balea* (whale) + Icelandic *eyri* (sandbank, sea-spit of land) → *balea-eyri* → drifted to **Balatur Erui** "whale-spit / whale shoals." Hybrid Basque/Icelandic, echoing the Burdineyja pattern. Drifting islands and whales together fit Floteyn double; Balaena the Skywhale City sits within the same archipelago.
+- **Uravel**: Basque *ur* (water) + Icelandic *vefur* (web, weave) → *ur-vefur* → drifted to **Uravel**, "the water-weave." Shuun's god-city: drifting isles and sunk halls woven together by line, lane, and bell; the name predates the city's modern shape and named the weave before mortals knew how literal it was.
+  - **Urbarren**: Basque *ur* (water) + *barren* (the innermost, the deep interior) → **Urbarren**, "the water's innermost." Shuun's sanctum at Uravel's true bottom; folk say *the Bottom*.
+  - **Urdeia**: Basque *ur* (water) + *deia* (the call) → **Urdeia**, "the water-call." The Listeners' great bell at Urbarren; the sermon of the deep. Folk-name *the Undervoice*.
+  - **Isilun**: Basque *isilune* (a silence, a pause in speech; *isil* "silent" + *une* "moment") → drifted to **Isilun**, "the Silence." The drowned quarter at Uravel's bottom; its living name is deliberately unspoken.
+  - **Uravel, modern-stratum proper nouns** (plain English, drifted lightly): **the Shoal** (the monthly district-gathering; fish-school and shallow-water both) · **the Linewards** (the hired executive; keepers of lines, bells, lanes, stations) · **the Listeners** (Shuun's clergy; the sitting-tradition) · **the Answering** (the daily reply to Urdeia) · **the Calling** (the weekly rite; *to earn your water is to rise from the depths*) · **the tether-rate** (the connection-tax) · **the Open / the Blue / the Dark** (the light-tiers) · **fitted gills** (the residency gear) · **the bells, glass-drops, plunge-lines, breath-bells** (the dry and wet ways down).
 
 **Sumendar (Fire):**
 - **Burdineyja**: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
