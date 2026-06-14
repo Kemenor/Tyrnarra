@@ -115,7 +115,9 @@
       { slug: 'valreka',      label: 'Valreka &middot; the Whale-Borne City', href: '/setting/talan/domains/lioaru/valreka/valreka.html', children: [] },
       { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/setting/talan/domains/lioaru/lost-kingdom.html', children: [] }
     ]},
-    { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/setting/talan/domains/brauogi/brauogi.html',   children: [] },
+    { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/setting/talan/domains/brauogi/brauogi.html',   children: [
+      { slug: 'lurrath', label: 'Lurrath &middot; the Steadfast City', href: '/setting/talan/domains/brauogi/lurrath/lurrath.html', children: [] }
+    ]},
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/setting/talan/domains/ezkudon/ezkudon.html',   children: [
       { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/setting/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }
     ] },
