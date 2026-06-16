@@ -448,5 +448,4 @@ Pace as stories want them. Rolling work.
 Items where the lore is written but the HTML side hasn't caught up. Pick one when you want to ship visible site progress.
 
 - **Map relabel: "Ljorsan" → Ljosarn.** The regional map labels Iro's god-city "Ljorsan"; the canon spelling is **Ljosarn** (light-hearth etymology, `lore/glossary.md`). Fix whenever the map is next touched.
-
-*Nothing is currently pending publish: every lore-complete page has shipped. The one still-unpromoted god-city (Veidrath) is tracked under the god-city-state maturation thread above.*
+- **Veidrath god-city page** (Ehizahar). Lore complete (`lore/geography/ehizahar.md`, *Veidrath*, committed 2026-06-16); the dedicated page at `ehizahar/veidrath/veidrath.html` awaits the publish signal. With it, the full thirteen-god-city pass reaches lore-complete.
