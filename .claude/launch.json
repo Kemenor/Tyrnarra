@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "tyrnarra",
-      "runtimeExecutable": "powershell",
-      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/.claude/serve-idempotent.ps1"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["${workspaceFolder}/.claude/serve-idempotent.mjs"],
       "port": 8008
     }
   ]

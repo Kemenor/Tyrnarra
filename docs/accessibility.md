@@ -55,27 +55,14 @@ Each Style-B page sets `--domain-accent` in a tiny inline `<style>`. The variabl
 
 #### How to check a new accent
 
-```powershell
-function To-Linear([double]$c) {
-  $c = $c / 255.0
-  if ($c -le 0.03928) { return $c / 12.92 }
-  return [math]::Pow(($c + 0.055) / 1.055, 2.4)
-}
-function Luminance([string]$hex) {
-  $h = $hex.TrimStart('#')
-  $r = [Convert]::ToInt32($h.Substring(0,2),16)
-  $g = [Convert]::ToInt32($h.Substring(2,2),16)
-  $b = [Convert]::ToInt32($h.Substring(4,2),16)
-  return 0.2126*(To-Linear $r) + 0.7152*(To-Linear $g) + 0.0722*(To-Linear $b)
-}
-function Ratio([string]$fg, [string]$bg) {
-  $lf = Luminance $fg; $lb = Luminance $bg
-  $l1 = [math]::Max($lf, $lb); $l2 = [math]::Min($lf, $lb)
-  return ($l1 + 0.05) / ($l2 + 0.05)
-}
-Ratio '#yournewhex' '#0f0c08'   # Style B base
-Ratio '#yournewhex' '#06060a'   # Style A base
+Run the cross-platform checker at [`tools/contrast.mjs`](../tools/contrast.mjs) (Node; works on Windows and Linux):
+
+```bash
+node tools/contrast.mjs '#yournewhex'            # checks vs both Style A & B bases
+node tools/contrast.mjs '#yournewhex' '#0f0c08'  # checks vs a specific background
 ```
+
+It prints the WCAG ratio and a pass/fail verdict against `#0f0c08` (Style B base) and `#06060a` (Style A base). The maths, for reference: linearise each channel (`c/12.92` below 0.03928, else `((c+0.055)/1.055)^2.4`), luminance `= 0.2126·R + 0.7152·G + 0.0722·B`, ratio `= (Llight+0.05)/(Ldark+0.05)`.
 
 Aim for **≥ 3.2** to clear with a small safety margin against subpixel rendering and colour-profile drift. If you want the accent legible as text too, aim for **≥ 4.5**.
 

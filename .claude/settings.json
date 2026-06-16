@@ -7,17 +7,17 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/git-commit-reminder.ps1",
+            "command": "node .claude/hooks/git-commit-reminder.mjs",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/gm-vetted-check.ps1",
+            "command": "node .claude/hooks/gm-vetted-check.mjs",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/gm-notes-link-guard.ps1",
+            "command": "node .claude/hooks/gm-notes-link-guard.mjs",
             "timeout": 10
           }
         ]

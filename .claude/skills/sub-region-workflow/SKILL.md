@@ -282,7 +282,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 - Path: `published/setting/talan/domains/<domain>/<slug>/<slug>.html`
 - Template: copy the structure of **`published/setting/talan/domains/vindul/haizetsua/haizetsua.html`**. Gold-standard Style B sub-region page.
 - Standard structure:
-  - `<head>` with Style B CSS link, `site-nav.js`, custom `<style>` with per-page `--domain-accent` (verify ≥3:1 contrast against `#0f0c08` via `docs/accessibility.md`'s PowerShell snippet)
+  - `<head>` with Style B CSS link, `site-nav.js`, custom `<style>` with per-page `--domain-accent` (verify ≥3:1 contrast against `#0f0c08` via `node tools/contrast.mjs '#hex'`; see `docs/accessibility.md`)
   - `<body data-page="<slug>">`
   - Breadcrumb (absolute paths)
   - Header with title, subtitle, evocative flavor-line. **The flavor-line should evoke the seed**, not the political shape.
