@@ -202,6 +202,11 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 **Myrkono (Darkness):**
 - **Ilun Tasun**: Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself"
 - **Itzasoa**: echoes Basque *itsasoa* (sea/ocean); coastal sub-region
+- **Myrria depth-pass coinages** *(Araphel's god-city; full canon in `geography/myrkono.md`, *Notable Locations → Myrria*)*:
+  - **Birth-order identifiers** (Basque *sortu*, "to be born," drifted onto the ordinals; gender-neutral): **Lehensor** (firstborn) · **Bigarsor** (second) · **Hirsor** (third) · **Laursor** (fourth) · **Bossor** (fifth). The steady handle (used as *[identifier] [family name]*, e.g. *Lehensor Vaska*) for a Myrrian child, who reinvents their chosen name week to week until the **keeping-rite**.
+  - **The keeping-rite**: a Myrrian child's coming-of-age and first true Lantern Rite; where an adult sheds an old name, the child names every self they tried and keeps the one they mean to be.
+  - **The dark-ways**: the unlit, deliberately-unmapped inside-mountain warren the Surki hold; the city's second movement (taken to be no one) against the lit, witnessed Lantern Stairs (climbed to be seen and renamed).
+  - **The diggers**: Myrria's youth who break the city's one holy taboo (never ask about a *before*) for sport; the sanctioned transgression, grown out of.
 - **Bikitsa**: Basque *biki* (twin) + *itzal* (shadow) → *biki-itzal* → consonant assimilation and final-syllable drop → **Bikitsa** "twin-shadow." The coastal sub-region at the northern edge of Myrkono, sharing the two-sun phenomenon with the Brauogi-side **Twin Suns** (see Brauogi → Twin Suns); jointly governed with Twin Suns under a single shared structure (form canon-pending). Where Brauogi names what the two suns bring (light, harvest, gold), Myrkono names what they cast (twin shadows on the same coast). The cross-domain governance is unique on Talan and the closest the bound thirteen have come to permitting a polity that answers to two domains at once.
 
 **Floteyn (Water):**
