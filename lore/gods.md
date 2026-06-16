@@ -143,6 +143,14 @@ But neither is canonical. Araphel is also called the **God of Many Faces**. He w
 - **The Lantern Rite**: light a violet-flamed lantern while speaking your old name, then extinguish it while declaring a new one.
 - **The Shadow-Coin**: small blackened-silver coins, blank on one side and bearing the half-mask on the other. Pilgrims toss them into Myrria's shrines when renouncing old names.
 
+#### ⚿ GM Secret: What Araphel Keeps
+
+The faith says the old name is extinguished, forgotten, gone, and for the one who sets it down it is. The truth is that nothing is forgotten, because the God of forgotten things is the place forgotten things go. Every name renounced in Myrria, every *before* set down, every self a mortal killed to survive and begin again, Araphel keeps; and the **Many Faces** he is known by are not disguises he invents but the faces of everyone who ever gave a self into his keeping. He wears them because he holds them.
+
+He carries each **not forever, but until its soul is drawn through the Duskmire into the Wellspring** and sheds all it was. While a person exists anywhere, living or lingering in the Postlife, the part they erased is held whole and unjudged by the one who will not judge it; only when they are finally unmade at the source is the kept self let go, because there is no longer a *they* for it to belong to. A bounded vigil, not an eternal burden.
+
+It is the deepest mercy in his portfolio and its quiet weight at once: a mortal cannot truly unmake themselves, only entrust the unmade self to him. The exhaustion the chronicles mark in the god who first stood with Cronus may be the plainest thing about him, the weight of all of them at once. It rhymes with the Naming at Lurrath, where Sarrum speaks the souls still lingering in the Postlife: both gods are keepers of the not-yet-fully-gone, one calling the names, the other holding the faces. Full canon: [`geography/myrkono.md`](geography/myrkono.md), *Notable Locations → Myrria → ⚿ GM Secret: What Araphel Keeps*.
+
 #### ⚿ GM Secret: Araphel and the Crimson Rain
 
 - Was the **first Grand God to stand with Cronus** during the Week of Crimson Rain: a Grand God, one of the twelve original creators, backing a mortal man. This was a turning point.
@@ -196,6 +204,14 @@ But neither is canonical. Araphel is also called the **God of Many Faces**. He w
 - **Favoured weapon:** *Hook Sword*, paired blades hooked at the tip; they snag what flees and bind what would not be bound, the law's grip in two hands.
 - **Lore-implicit school:** *Arcane Magic*, the Wellspring channeled through law: rigid, mathematical, ritual lines drawn at exact angles because they must be.
 - **Mortals see her as:** arbiter of peace or oppressive enforcer.
+
+#### ⚿ GM Secret: The Keeper of the Law's Own Text
+
+Forseti's clergy keep her two rooms, the open court and the sealed archive, and swear never to confuse them. What none of them know is that beneath the highest court at Lograth, in the Goddess's own vault, lies a seal no petition has ever opened and no priest can read, and it holds the two truths whose exposure would unmake order.
+
+The first is the **original text of the Gods' Law**: the thirteen Articles as first set down at the forging, the master glyph of the binding itself. The Law enforces as physics, through the Ethereal, and tearing the page would change nothing of that; but the *text* names every exact boundary and every exact edge of the constraint on the bound thirteen, every loophole the bound and the unbound both live in, the shape of the binding within the binding. A mortal who could read it would hold the map of the rules the world is held by, and Forseti, the god of Law, is its keeper.
+
+The second shows plainly what she is: she knows the Thousand Kingdom's founding bloodline is a forgery, weighed it, ruled it irrelevant because the sworn oath of governance is real and a true oath needs no true grandfather, and **sealed it rather than speak it.** This is her Secrecy paradox at the god's own scale (*a secret kept in service of justice is not a lie*): the Android of perfect impartiality is also the keeper of the truths that must stay buried for the world to hold, and she keeps them in the one seat that is Law itself. Full canon: [`geography/zuzental.md`](geography/zuzental.md), *Lograth → ⚿ GM Secret: the Last Seal*.
 
 ### Iro: God of Light (Male)
 - **Aspects:** Sun · Hope · Growth · Zealotry.
