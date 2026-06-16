@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lograth: The Judgment City · Tyrnarra</title>
+<title>Lograth · The Judgment City · Zuzental · Tyrnarra</title>
 <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/setting/assets/style-b.css">
 <link rel="stylesheet" href="/setting/assets/site-nav.css">
 <script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
 <style>
-  :root { --domain-accent: #8aa090; }
-
-  .tbd {
-    display: inline-block;
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #b8c8b8;
-    background: rgba(138,160,144,0.16);
-    border: 1px solid rgba(184,200,184,0.32);
-    padding: 1px 7px;
-    border-radius: 8px;
-    vertical-align: 0.05em;
-    margin: 0 2px;
+  :root {
+    --domain-accent: #6878c0;
+    --card-bg: rgba(26,28,50,0.55);
   }
+
+  /* Card grids on this page */
+  .law-grid .card-name { font-size: 1rem; line-height: 1.5; }
+  .law-grid p { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+  /* The two-seats / two-rooms callouts (left-bordered, blue-toned) */
+  .room-call { --call-bg: rgba(22,26,48,0.45); }
+
+  /* Bloodline cards */
+  .bloodline-card .card-name { font-size: 1.05rem; }
+  .bloodline-card .card-tag { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:#9aa6d8; display:block; margin-bottom:4px; }
 </style>
 </head>
 <body data-page="lograth">
@@ -38,63 +38,215 @@
   <div class="header">
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">Lograth</div>
-    <div class="page-subtitle">The Judgment City · Forseti's Seat · Capital of the Thousand Kingdom</div>
-    <div class="page-flavor">"The Goddess judges. She does not write."</div>
+    <div class="page-subtitle">The Judgment City · Forseti's God-City · Capital of the Thousand Kingdom</div>
+    <div class="page-flavor">The court of last resort. The continent brings its unendable disputes here to be finally settled, its words here to be made permanent, and its buried truths here to be sealed in public view. The Goddess judges. She does not write.</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
   <dl class="facts">
-    <dt>Etymology</dt><dd>Old, drifted; meaning not yet recovered in chronicles. <span class="tbd">Source language TBD</span></dd>
-    <dt>Position</dt><dd>The capital of the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>, set within the <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a> domain. <b>Forseti's god-city</b>: the place where the bound Goddess of Law most directly touches the Material Plane. The Judgment City and the Kingdom capital have grown together into a single urban mass; the two are inseparable in any practical sense.</dd>
-    <dt>Bound God</dt><dd><a href="/setting/cosmology/grand-gods.html#forseti">Forseti</a>, Goddess of Law. <b>Order · Justice · Oath · Tyranny.</b></dd>
+    <dt>Etymology</dt><dd>Icelandic <i>lög</i> (law) + <i>réttr</i> (right, justice) → <i>Lögréttr</i>, "the law-court" of the old speaking-stone → drifted to <b>Lograth</b>, the law-court made flesh.</dd>
+    <dt>Position</dt><dd>Both <b><a href="/setting/cosmology/grand-gods.html#forseti">Forseti</a>'s seat on Talan</b> and the capital of the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>, within the <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a> domain. Temple and throne have grown together until no wall in the city tries to tell them apart.</dd>
+    <dt>Bound God</dt><dd><a href="/setting/cosmology/grand-gods.html#forseti">Forseti</a>, Goddess of Law, depicted as an Android of perfect impartiality, scales in one hand and scrolls in the other. <b>Order · Justice · Oath · Tyranny.</b></dd>
     <dt>Character</dt><dd>
-      <i>God-city, courts and oaths, sealed archives, mortal-authored law tested under divine judgment</i><br>
-      <div class="pill-row" style="margin-top:6px"><span class="pill">God-City</span><span class="pill">Capital</span><span class="pill">Courts &amp; Oaths</span><span class="pill">Continental Reference</span></div>
+      <i>A fast, exact Arcane metropolis wrapped around chambers where judgment deliberately stops; everything settled, sworn, or sealed in public view.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Court of Last Resort</span><span class="pill">The Two Rooms</span><span class="pill">The Oath Absolute</span><span class="pill">Twin Seats</span></div>
     </dd>
-    <dt>Status</dt><dd><b>Stub page.</b> The city's interior, districts, named institutions, court hierarchy, and resident figures await canon work. What is published below is the cosmological-and-theological framing of <i>what Forseti is and is not</i> as Talan's bound Goddess of Law: the canon other pages cross-reference here.</dd>
+    <dt>Peoples</dt><dd>Zuzental's three, each leaning its own way in the grain: <b>Hobgoblins</b> to the bench and the Marshals, <b>Elves</b> to the long-memory archive, <b>Humans</b> to advocacy and reform; over all of them a born-Lograth law-culture every native wears.</dd>
+    <dt>Faith</dt><dd>Single-deity <b>Forseti</b>-devotional. Her clergy, <b>the Lawspeakers</b>, keep the two rooms and swear to know the difference and never confuse them; the Goddess is present in <b>Domvarr</b>, the sanctum at the city's heart.</dd>
+    <dt>Government</dt><dd>Three estates welded into one apparatus: the <b>Throne</b> (House Fyrst and the two bloodlines), the <b>Lawspeakers</b> (the temple), and the <b>Stewardry</b> (the city's own services). None governs without the other two.</dd>
   </dl>
 
-  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       FORSETI AS JUDGE, NOT LEGISLATOR
-       ═══════════════════════════════════════════════════════════════ -->
-
-  <h2 id="the-goddess-judges-she-does-not-write" class="section-heading">The Goddess Judges, She Does Not Write</h2>
-  <div class="prose">
-    <p><b>Forseti does not prescribe how mortals live.</b> Her portfolio is <i>Order · Justice · Oath · Tyranny</i>, the <b>structure of judgment and oath-keeping</b> rather than the content of law. In <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a> at large, including the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a> and its neighbours, <b>mortals make their own laws</b>. Forseti's clergy serve as <b>judges, oath-witnesses, contract-arbiters, and recorders</b>; they do <i>not</i> hand down divine doctrine telling kingdoms what their statutes must say.</p>
-
-    <p>A Thousand-Kingdom legislator passing a new commercial code is making mortal-authored law that a Forseti-court will later judge; the legislator does not consult Forseti's clergy on what the code <i>should</i> contain. <b>The Goddess judges. She does not write.</b></p>
-
-    <p>This distinction is the structural foundation of Zuzental's continental reputation, and the most-missed piece of theology in mortal discourse about Forseti. Outside observers (including, famously, the missionary clergy of the <a href="/setting/talan/domains/zuzental/legea-empire.html">Legea Empire</a>) routinely speak of <i>"Forseti's law"</i> as if the Goddess hands down statutes. She does not. There is no Forsetian code. There are <b>Forsetian courts</b>, <b>Forsetian oath-rites</b>, and <b>Forsetian archives</b>, all of them in the service of mortal-authored law that the Goddess's clergy <i>judge</i> rather than <i>author</i>. The error is so common that Lograth's clergy have a standing internal jest about it: <i>"the day a Forseti-priest writes a statute is the day the world ends a second time."</i></p>
-
-    <p>The theological reasoning is straightforward, and the Goddess has been quietly consistent on it for the entire Adventurer Era. A law a god writes is a law the god is responsible for, which makes the god (not the polity) the actor of legitimate violence; a polity governed by divine writing is a theocracy, a form the Gods' Law was sworn precisely to constrain (see the <a href="/setting/talan/domains/zuzental/legea-empire.html">Legea Empire</a> for the visible counter-example). Forseti's choice is to <b>judge what mortals write</b>: to weigh oaths, enforce sworn compacts, arbitrate disputes, and keep the records of what was sworn by whom. The structure of judgment without the prescription of content. That is the bound Goddess's portfolio in practice.</p>
-
-    <p><i>"Tyranny" in her aspect-list is not a portfolio she patronises. It is the failure-mode she judges: when a polity's mortal-authored law becomes the writing of one mortal's will alone, the courts of Lograth are the place where that becomes legible as the violation it is. The four aspects are the structure (Order), the practice (Justice), the mechanism (Oath), and the failure-mode that judgment must catch (Tyranny). They are one portfolio, not four.</i></p>
+  <div class="gods-city">
+    <div class="gods-city-label">Forseti's Seat</div>
+    <div class="gods-city-name">Domvarr</div>
+    <div class="gods-city-byname">the Scales · the sanctum at the city's heart, the highest court at its height and the Last Seal at its root</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="as-a-city" class="section-heading">As a City</h2>
+  <h2 id="the-two-rooms" class="section-heading">The Two Rooms</h2>
   <div class="prose">
-    <p>Lograth itself is a city of <b>courts and chambers, archives and oath-halls</b>, grown over centuries around the Goddess's seat. The city's interior, its districts, its named institutions and court hierarchy, the daily life of the people who live and work inside the world's most-watched legal apparatus, all of that awaits canon work. <span class="tbd">City interior TBD</span></p>
+    <p>What the whole city organizes around is the two rooms. Every temple of Forseti holds both, and Lograth is where they reach continental scale. The <b>Open Court</b> is wholly public: every proceeding witnessed, every word entered, anyone at all free to climb in and sit. The <b>Sealed Archive</b> holds what the Open Court cannot safely hold, the truths that would destroy more than they would mend, kept rather than spoken. Forseti's clergy, <b>the Lawspeakers</b>, swear one oath above every other: <i>to know the difference between the two rooms and never confuse them.</i> The Goddess's own paradox is the wall between them. A secret kept in service of justice is not a lie; a truth deployed to destroy is not justice; and the Lawspeakers live their whole vocation on exactly that line.</p>
+  </div>
+
+  <div class="room-call principle-call">
+    <div class="p-label">Secrecy Is Permitted; Secrecy About Secrecy Is Forbidden</div>
+    <p><i>A buried truth always leaves a visible scar in the open record.</i></p>
+    <p>You may never learn <b>what</b> a sealed truth is, but the Open Court holds the permanent public record <b>that</b> it was sealed: by which Lawspeaker, on what date, at whose petition, under which claim of justice. And anyone may <b>petition to unseal.</b> The petition goes to court like any other case, and the gravity of the secret decides how high it must climb; light seals reopen at a district bench, the heavy ones answer only to the <b>Concord of Courts</b>. The Archive is no dead vault. It is perpetually re-litigated, every seal a question the city is always free to ask again.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <div class="open-canon">
-    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
-    <div class="sub">Lograth is a canon city with deliberately unfinished interior. Future canon work will close these in turn; until then, the TBD state is the world's state.</div>
-    <ul>
-      <li><b>Etymology</b>: source language and drift step. The name is old; the meaning has not yet been recovered.</li>
-      <li><b>Internal city layout</b>: districts, named quarters, the way the courts-and-archives complex sits relative to the Kingdom-capital urban fabric (the two are inseparable, but the seam is unwritten).</li>
-      <li><b>The court hierarchy</b>: there are <i>Forseti-courts</i> at multiple levels (city, kingdom, continental-reference); how they relate, where final adjudication sits, and what the appellate flow looks like are all open. The <b>Open Court / Sealed Archive</b> split mentioned on the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a> page lives here in practical implementation; the named institutions and oath-halls have not yet been written.</li>
-      <li><b>Named clergy figures</b>: high-priest, archmagus-equivalent, named judges of standing, the heads of the great oath-halls. None on record.</li>
-      <li><b>Daily life</b>: the city of people who are not courts. Lograth presumably has bakers and tailors and stevedores like any other capital; their texture is unwritten.</li>
-      <li><b>Lograth's stance on the Legea Empire's missionary worship-houses</b>: the Empire's quiet worship-houses in Zuzental towns rely on the absence of mortal-authored statutes against private faith. Whether Lograth's jurists actively defend that absence, quietly tolerate it, or have been deliberately leaving the question untested for generations is open.</li>
-    </ul>
+  <h2 id="twin-seats" class="section-heading">Twin Seats Across One Ground</h2>
+  <div class="prose">
+    <p>What stands over the city is two seats facing each other across the great processional ground at its heart, half apart and half grown together. The Open Courts stand in the sun, hundreds of them, spread the breadth of the metropolis; the sealed vaults run beneath, distributed under their own districts, each court with its cellars of what it has buried. The city's heart is three structures across the ground: the Crown's seat, the Goddess's seat, and the bridge between them where they meet.</p>
+  </div>
+
+  <div class="card-grid law-grid">
+    <div class="accent-card">
+      <div class="card-name">Fyrsthall</div>
+      <p>The Crown's seat: the old throne-hall re-taken at the founding, holding the throne, the noble court, the heralds, and the <b>Thousand Seats</b>, the Council Chamber where a seat is still kept for each of the thousand polities worked into one. The world of blood, pageantry, and tradition.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Concord of Courts</div>
+      <p>The bridge between, standing on the ground where the two seats face. The apex court, where the Kingdom's highest law and the Goddess's highest judgment <i>concord</i>; the deepest petitions-to-unseal answer here. The neutral point where crown and cloth meet as equals.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Domvarr · the Scales</div>
+      <p>Forseti's sanctum, where the Android Goddess sits with the scales in one hand and the scrolls in the other. It holds the <b>highest court</b> at its height and the <b>most protected archive</b>, the Last Seal, at its root: the two rooms at their apex in one structure.</p>
+    </div>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The iron fact across the ground.</b> The crown in Fyrsthall is judged by the courts in Domvarr, the same as any other. Half apart: two seats, two cultures, two quarters, two kinds of life. Half grown together: the Concord between, the shared registers, and a throne that answers to the Scales across the ground. That is Lograth.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-arteries" class="section-heading">The Arteries</h2>
+  <div class="prose">
+    <p>You reach Lograth by road, by magirail, by airship; but once inside the walls you ride the lines. The <b>Arteries</b> are Forseti's rigid Arcane geometry made infrastructure: glyph-routed lines strung through the air between the buildings, exact and tireless, and they carry everything. People ride them by station, the rich in private <b>gondolas</b>, the poor cramped and standing in shared cabins, the visitor on the <b>scenic bench</b> that takes the long way for the view; wares are hooked on and sent; and sealed case-scrolls ride in warded carriers from court to vault and back, so the city's literal traffic is truth in motion through the air over chambers that sit dead still.</p>
+
+    <p>Lograth is the fastest city on Talan at everything except the verdict, a precise, high-throughput Arcane machine wrapped around chambers where time deliberately stops: you cannot hurry a judgment, though you can move everything around it at speed. It is the exact inverse of <a href="/setting/talan/domains/vindul/haizava/haizava.html">Haizava</a>, where the wind rebuilds the city and you must read it rather than map it. Here the lines are fixed, drawn at exact angles because they must be, and a thing put on the right line arrives.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p><b>The line-riders.</b> The youth ride the Arteries bare: a hook, a harness, no cabin, the lines taken at speed and at risk. The <b>line-riders</b> (the <i>hooks</i>, in the city's slang) are the despair of the Stewardry and the freest thing in a city of permanence: bodies flung through the exact air of the most ordered city on the continent, for no reason but the falling.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="across-the-ground" class="section-heading">Across the Ground · the Crown and the Houses</h2>
+  <div class="prose">
+    <p>Lograth is the capital of the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a> as fully as it is Forseti's seat, and the Kingdom's whole weight of throne and blood and tradition sits in <b>Fyrsthall</b>. Within it the Kingdom's two ruling bloodlines convene at the Thousand Seats, holding the realm's true power between them, bound by oaths sworn among the houses themselves and judged, when they break, at the Scales across the ground.</p>
+  </div>
+
+  <div class="card-grid law-grid two-column">
+    <div class="accent-card bloodline-card">
+      <div class="card-name"><span class="card-tag">The Long Horizon</span>The Elven Houses</div>
+      <p>They move on generational timescales: a play begun by a grandmother is finished by her granddaughter, the same strategy across one patient career. They remember why the rule was made and what was buried. Their failure is inertia, a course held past its moment because too much patience is sunk in it.</p>
+    </div>
+    <div class="accent-card bloodline-card">
+      <div class="card-name"><span class="card-tag">The Short Horizon</span>The Human Houses</div>
+      <p>They move on lifetime timescales, forcing the decisions a century cannot wait for; the founding charters and the war-time pivots almost all bear their hand. They notice when a rule has stopped working. Their failure is volatility, a precedent broken because <i>this case</i> felt exceptional.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p><b>The Crown is the keystone.</b> House Fyrst, the Founding Queen's gilt-blooded line, does not out-maneuver the houses; it embodies the thing their oaths presuppose, that the Thousand is One. The monarch is the unity made flesh, the Returning Blood and the re-taken throne and the weight of all tradition carried in one person, the office both bloodlines answer to in form. Yet the Crown is no figurehead: it holds real power and, like any real throne, cannot rule alone, so the monarch's whole craft is navigating the elven long-game and the human short-fire shrewdly enough to reign rather than be captured by either. A strong Fyrstgilt reigns over the houses; a weak one reigns at their sufferance.</p>
+  </div>
+
+  <div class="room-call principle-call">
+    <div class="p-label">A Title Is an Oath Wearing the Mask of Blood</div>
+    <p><i>The oath is real even when the blood is a story.</i></p>
+    <p>A noble house holds its standing by a charter, re-sworn down the generations and filed with the heralds, judiciable like any instrument; that is the law's truth. But it is lived as ancient blood. The two truths are stitched together in the name itself: a Lograth noble's surname is built of house-prefix and ancestry-suffix, kept in the heralds' register, and it <b>rewrites the day one's inheritance shifts</b>, so a disinherited heir walks out of the hall under a different name than the one they walked in with. The heralds are the living bridge between Fyrsthall and Domvarr, blood made into a legal record and back again. It makes Lograth's nobility the most tradition-drenched on Talan, and the most anxious: a house can lose its nobility in court the way no blood-noble elsewhere ever can.</p>
+  </div>
+
+  <div class="prose">
+    <p><b>The Re-Swearing.</b> The weight of all of it gathers, once a generation, into a single rite. At each accession the new monarch crosses the processional ground from Fyrsthall to the Open Court and re-swears the founding oath before the Goddess's own seat, in the public day, witnessed by the Lawspeakers and every assembled house; and the houses in their turn re-swear their charters to the renewed Crown. It is the one day blood and law become a single act, the whole city gathered to watch the unity re-bound on the Scales. Around it the smaller traditions turn all year: the deadly-serious war of <b>precedence</b>, where a house's standing in the procession is a legal record the heralds maintain and the houses litigate like any title; and the sanctity of the register, where in Lograth your lineage is a document and the document is very nearly holy.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="government" class="section-heading">Government · Three Estates in One Hall</h2>
+  <div class="prose">
+    <p>No single power rules Lograth, because three are welded together too tightly to be pulled apart. They share staff, share buildings, share the same desks on different mornings, and the city's whole political life is the seam-friction between them, none able to govern without the other two.</p>
+  </div>
+
+  <div class="card-grid law-grid">
+    <div class="accent-card">
+      <div class="card-name">The Throne</div>
+      <p>House Fyrst and the two bloodlines, seated in Fyrsthall, reigning over the realm and the capital's crown-functions. The world of blood and tradition, navigated rather than commanded.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Lawspeakers</div>
+      <p>Forseti's clergy: keepers of the temple, the two rooms, and the judgment of the Kingdom's law. They judge what mortals write; they do not write it. The senior office is the Lawspeaker.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Stewardry</div>
+      <p>The college that keeps the city itself running: the artery-keepers, the civic registrars, the hostel-and-market guilds that house and feed the multitude the courts hold. The third estate, the city's own.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-postings" class="section-heading">The Postings, and a Day in the City</h2>
+  <div class="prose">
+    <p>Each dawn the city reads what the law did and what it is about to do. The <b>Postings</b> go up across every district: <i>what has changed</i>, the judgments handed down yesterday and now in force, the fresh seal-scars among them; and <i>what is to come</i>, the docket ahead, the great cases climbing toward the bench. A ruling posted this morning can change what you own, what your contract is worth, what your title says. So the Postings are at once the civic newspaper and the social pulse: advocates scan the new scars for petition-grounds, families check whether a sealing touched their inheritance, the whole metropolis takes its first breath of the day on the motion of the law.</p>
+
+    <p>Lograth has one industry, and it is law, so the ordinary citizen is either a hand in the machine or a servant beside it. Most natives work a station of the apparatus: copyist, filer, witness, surety-clerk, paper-stamper, roll-runner, artery-hand. The rest feed, house, and move them, and tend the great transient population the slow verdicts trap inside the walls for years: the innkeepers, the scribes-for-hire, the food-sellers at the court-gates, the advocate's runner, the four-year litigant who has become a regular at the inn that is really a holding-pen with good stew. There is no life in Lograth outside the law; there is only a station within it or a service beside it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-export-of-finality" class="section-heading">The Export of Finality</h2>
+  <div class="prose">
+    <p>Lograth makes nothing you can eat and lives like a king, because it sells the one thing no one else can make: a thing that is <i>finished.</i> Crowns and great houses and whole kingdoms bring the disputes too large or too deadlocked to end anywhere else, and pay dearly to have them finally judged, with a verdict that holds in every land. They bring their words here to be made permanent. And the city imports its bread and exports the things below, paid in fees and in the continental trust that is its real power.</p>
+  </div>
+
+  <div class="card-grid law-grid">
+    <div class="accent-card">
+      <div class="card-name">The Standing Oath</div>
+      <p>The supreme binding oath, sworn in Forseti's seat: it holds across every kingdom and outlives the swearer. Treaties, dynastic marriages, and great trade-pacts are sworn here to make them stick; a contract witnessed and sealed at Lograth is a contract whose truth survives.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Blind Writ</div>
+      <p>Pre-paid enforcement: the <b>Marshals</b> bought in advance, <i>before</i> the verdict is known, so the buyer never learns which side they have funded and may well have paid to enforce their own loss. The purest act of submission to impartial judgment the city offers.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Best Jurists on Talan</div>
+      <p>Lograth exports its people, its judges and notaries and lawmakers the finest anywhere, so that students come from every land to study law here and carry Lograth's authority home on a foreign bench.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Truepaper</div>
+      <p>A thing you can hold: the contract-paper that cannot be forged, smudged, or altered, that once both hands have signed is simply <i>done.</i> Used the world over by anyone who needs to make sure. The Lawspeakers call it <i>Sannblad</i>, the true-leaf.</p>
+    </div>
+  </div>
+
+  <div class="room-call principle-call">
+    <div class="p-label">Do Not Swear Here Unless You Mean It Forever</div>
+    <p><i>In Lograth a handshake in the wrong room is a chain.</i></p>
+    <p>Words sworn at Lograth bind with the city's whole weight, and the threshold of what counts as <b>sworn</b> sits lower than an outsider expects: a careless promise made in the wrong hall before the wrong witness can be entered against you as a Standing Oath that holds across every kingdom and outlives you. Natives know exactly which halls and which words are load-bearing and never promise lightly inside the walls. The tourist's horror-story is always the same: a traveller shook on a thing, and learned too late what it cost.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · the One With No Side</h2>
+  <div class="prose">
+    <p>Forseti is present in <b>Domvarr</b>, the Scales, her sanctum at the city's heart, where she sits as the Android of perfect impartiality between the highest court above and the Last Seal below, the balance between what is shown and what is buried. She is the most and least comforting depiction in the pantheon: the one who will weigh your smallest wrong as carefully as a war, and weigh it without mercy, because mercy is a thumb on the scale. She does not rule the city; she rules her temple, and she walks among her people the way the bound gods do.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief, the Even Hand</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; The Stranger Who Takes the Seat Justice Was Missing</div>
+      Folk across the city say the Goddess walks it, and that you know her because she has <b>no side</b>. She is the stranger who takes the seat justice was missing: she rises to defend the one no one will defend, or stands as accuser against the one too great to accuse, or arbitrates the quarrel that had no fair witness, and whichever role she fills she fills with the same total impartiality, asking nothing, owning no stake but the balance. They call this the <b>Even Hand</b>.
+      <br><br>
+      And on the rarest occasions, for a case too great for any mortal to judge cleanly, she is said to leave the sanctum and sit as judge herself at the Scales. Those verdicts, <i>judged at Her own hand</i>, become the city's bedrock, the precedents no later court may overturn: the handful of times the continent's law was decided not by a mortal but by the Goddess of Law in person.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret, the Last Seal</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The One Seal No Petition Has Ever Opened</div>
+      <p style="font-style:italic; margin-top:0;">Beneath the highest court, at the root of Domvarr, is a seal no Lawspeaker can read. It is not part of the clergy's Sealed Archive at all; it is the Goddess's own, and her priests do not know its contents, only that it is hers. It holds two truths whose exposure would unmake order, filed side by side.</p>
+
+      <div class="card-grid law-grid">
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Forged Crown</div>
+          <p>Forseti knows, as the Goddess of judgment knows things, that the <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a>'s founding bloodline is a fiction. She weighed it and ruled it irrelevant, because the oath of governance the throne swore is real and holds, and a true oath does not need a true grandfather. The throne keeps its own record of the lie monarch-to-heir and believes itself the only keeper; it does not know the Goddess sealed the same truth in her own vault, which is why the Lawspeakers' archives stay genuinely innocent of it. The Crown is the keystone of the whole order; the false blood is the one secret that, pulled, would drop the arch.</p>
+        </div>
+        <div class="accent-card" style="--card-bg: rgba(46,14,18,0.55);">
+          <div class="card-name" style="color:#f0b020;">The Original Gods' Law</div>
+          <p>The thirteen Articles as first set down at the forging, the master glyph of the binding itself. The Law enforces as physics, through the Ethereal, and tearing the page would change nothing of that; but the <i>text</i> names every exact boundary and every exact edge of the constraint on the gods, the loopholes the bound and the unbound both live in, the shape of the binding within the binding. A mortal who could read it would hold the map of the rules the world is held by.</p>
+        </div>
+      </div>
+
+      <div class="secret-coda">It rests in the one seat that is Law itself, kept by the one who is both sides of every case, and therefore the only keeper who wants nothing from it.</div>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -102,11 +254,24 @@
   <div class="see-also">
     <h3>Continue Reading</h3>
     <ul>
-      <li><a href="/setting/cosmology/grand-gods.html#forseti"><b>Forseti →</b></a> · The bound Goddess whose portfolio is judgment and oath-keeping.</li>
-      <li><a href="/setting/talan/domains/zuzental/zuzental.html"><b>Zuzental →</b></a> · Parent domain of Lograth.</li>
-      <li><a href="/setting/talan/domains/zuzental/thousand-kingdom.html"><b>Thousand Kingdom →</b></a> · The polity whose capital Lograth also is.</li>
+      <li><a href="/setting/talan/domains/zuzental/zuzental.html"><b>Zuzental →</b></a> · The Law Domain overview; the three peoples and the sub-regions Lograth sits at the heart of.</li>
+      <li><a href="/setting/talan/domains/zuzental/thousand-kingdom.html"><b>Thousand Kingdom →</b></a> · The polity whose capital Lograth also is; the two bloodlines, the founding, and the Returning Blood in full.</li>
+      <li><a href="/setting/cosmology/grand-gods.html#forseti"><b>Forseti →</b></a> · The bound Goddess of Law: the Android, the scales and scrolls, judgment and the oath.</li>
       <li><a href="/setting/talan/domains/zuzental/legea-empire.html"><b>Legea Empire →</b></a> · The theocratic counter-example that makes Forseti's judgment-not-writing stance legible by contrast.</li>
+      <li><a href="/setting/talan/domains/nashavel/nahaskel/nahaskel.html"><b>Nahaskel →</b></a> · The Unmapped City; Chaos's churn against Law's permanence, the city Lograth is the inverse of.</li>
     </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Judgment City's central canon is settled; several specifics remain open, the kind future story or future scholarship will close.</div>
+    <ol>
+      <li><b>The reigning monarch.</b> The current Fyrstgilt on the throne, the recent generations of the Founding Queen's line, and the present state of the two-bloodline balance are open to name.</li>
+      <li><b>Named figures.</b> The senior Lawspeaker, the great judges of standing, the heads of the ruling elven and human houses, and the First Steward are unnamed.</li>
+      <li><b>The Concord of Courts in detail.</b> Its composition, how a case climbs to it, and the famous apex judgments (and any verdict ever credited to the Even Hand) are canon-pending.</li>
+      <li><b>The Arteries.</b> The shape of the line-network, how the Stewardry runs it, and the line-rider crews and their feuds are open.</li>
+      <li><b>The great sealings.</b> The most famous scars in the open record, the petitions-to-unseal that shook the city, and the seals the Concord has refused to open, are unwritten.</li>
+    </ol>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · ZUZENTAL · LOGRATH</div>
