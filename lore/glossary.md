@@ -213,7 +213,12 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
   - **The lake is the street** *(descriptive)*: Merkavar's signature movement. The plazas ring the lake-shore and the quick way between any two is across the water, so the city moves by market-boats, ferries, and barges; trade followed the traffic onto the lake (partly-afloat markets, boat-vendors, stall-rafts off the larger plazas). Full canon in `geography/lautara.md`, *Merkavar*.
 
 **Myrkono (Darkness):**
-- **Ilun Tasun**: Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself"
+- **Ilun Tasun** *(byname the Kept Lamp)*: Basque *ilun* (dark) + *tasun* (-ness suffix) = "the darkness itself." The Fetchling heartland basin that cradles Myrria; the apothecary-garden of Talan. Full canon in `geography/myrkono.md`, *Ilun Tasun, the Kept Lamp*.
+  - **Osamun**: Basque *osasun* (health) + *muino* (hill) → *osa-muino* → **Osamun** "the health-hills"; the green hills where bizbelar grows.
+  - **Bakarmen**: Basque *bakar* (lone) + *mendi* (mountain) → **Bakarmen** "the lone mountain"; the central peak, seat of the Isilgorde and the Monastery Wardstone (joins the `-men` family: Mugamen, Iturmen, Eraztumen).
+  - **bizbelar**: Basque *bizi* (life) + *belar* (herb) → *bizibelar* → **bizbelar** "life-herb"; Osamun's shade-grown medicinal plant, source of the continent's healing potions, elixirs, and tonics.
+  - **Botbar**: Icelandic *bót* (remedy) + *bær* (town) → **Botbar** "remedy-town"; the apothecary-market and seat of the Measure.
+  - **Fiskhofn**: Icelandic *fiskur* (fish) + *höfn* (harbour) → **Fiskhofn** "fish-harbour"; the modest Hafra fishing-port, keeper of the Port Wardstone.
 - **Itzasoa**: echoes Basque *itsasoa* (sea/ocean); coastal sub-region
 - **Myrria depth-pass coinages** *(Araphel's god-city; full canon in `geography/myrkono.md`, *Notable Locations → Myrria*)*:
   - **Birth-order identifiers** (Basque *sortu*, "to be born," drifted onto the ordinals; gender-neutral): **Lehensor** (firstborn) · **Bigarsor** (second) · **Hirsor** (third) · **Laursor** (fourth) · **Bossor** (fifth). The steady handle (used as *[identifier] [family name]*, e.g. *Lehensor Vaska*) for a Myrrian child, who reinvents their chosen name week to week until the **keeping-rite**.
@@ -512,6 +517,12 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Branch Office / Guild Office / Guildhall / Kingshall / Godshall**: Plain English ladder of regional Guild facilities, smallest to largest.
 - **Lord Albrecht Lavisburg**: Modern personal name, Germanic-style. A 67-year-old human; minor demi-god of Order and Ethics by accumulated belief. See `factions.md`.
 - **Seraphel Duskbane**: Modern compound personal name. Fetchling Guild Sovereign of Myrria's Godshall. *Duskbane* earned epithet (English). See `factions.md`.
+
+**Ilun Tasun (the Measure and the Isilgorde):**
+- **The Isilgorde**: Basque *isil* (quiet) + *gorde* (to keep) → **Isilgorde** "the quiet-keepers." Bakarmen's Araphel-devoted healer-order: cure-keepers (*forget the person, keep the cure*), brewers of the Nattro, keepers of the Monastery Wardstone, and the guiding and lot-drawing organ of the Measure. Full canon in `geography/myrkono.md`, *Ilun Tasun, the Kept Lamp*.
+- **Nattro**: Icelandic *nótt* (night) + *ró* (calm) → *náttró* → **Nattro** "night-calm"; the Isilgorde's rest-draught, known abroad by the by-name *the Stilling*.
+- **The Measure**: Plain English. Ilun Tasun's government, run on the doctrine of the **Measured Dose** (every law a dosed, time-limited *course*; exceeding it is the *overdose*, the cardinal crime). Three organs: **the Seats** (lot-drawn prescribers, served anonymous and forgotten), **the Hand** (the executive college that measures and applies), and the **Isilgorde** (guide and draw).
+- **The Kept Lamp / the Unasked**: Plain English. The basin's host-custom (the lamp kept in the window for the night-traveller) and its grace (give all, ask nothing).
 
 **The Red Empire (off-continent, across the *Cloud Sea* from Talan; full entry in `geography/_off-continent.md`, *The Red Empire's home continent*):**
 - **The Crimson Emperor**: Plain English title.
