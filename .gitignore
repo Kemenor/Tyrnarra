@@ -1,5 +1,5 @@
 # Ship the whole .claude/ project config (skills, hooks, commands, agents,
-# settings.json) so both machines stay in sync.
+# settings.json, launch.json + serve-preview.mjs) so both machines stay in sync.
 # Exclude only the genuinely per-machine files:
 #   - settings.local.json: local permission grants, not meant to be shared.
 .claude/settings.local.json

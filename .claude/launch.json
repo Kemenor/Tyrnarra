@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tyrnarra",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["${workspaceFolder}/.claude/serve-preview.mjs"],
+      "port": 8008,
+      "autoPort": true
+    }
+  ]
+}
