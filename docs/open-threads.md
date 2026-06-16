@@ -47,6 +47,30 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Intra-Bolverk politics between the seven now that all are drafted: coup-likelihoods, alliances, rivalries (Drambur ignoring Lostar with effort, Veislur and Mara enjoying mutual incuriosity, Ofunda watching Lostar without progress, etc.) can be tightened where they want to be.
 **Where.** [lore/geography/bolverk.md](../lore/geography/bolverk.md), *Vice Demons: the Seven*; [lore/glossary.md](../lore/glossary.md), *Vice Demons: Bolverk's seven seat-holders*.
 
+### [Bestiary] Virtue Devils: the fourteen seat-holders *(rolling)*
+**Decided.** Fourteen Virtue Devils, one per virtue (Courage · Wisdom · Justice · Honesty · Hope · Faith · Loyalty · Compassion · Curiosity · Hospitality · Honor · Mercy · Magnanimity · Creativity), each holding both an excess-face and a deficiency-face on the false mean (table in [bolverk.md](../lore/geography/bolverk.md), *Virtue Devils: the Fourteen*). **Three seated:** **Jafnar** (Justice, the clerk Idazkar), **Sannar** (Honesty, the herald Bodar), **Vondar** (Hope, the healer Osane); full entries written. Council of Fourteen, consensus-bound; tetradecagram of vertically-split ziggurats. **Pattern locks** (glossary): seat-name = drifted Icelandic/Basque word for the virtue; favored weapon = PF2e Advanced-category, distinct across all 21 citywide seats (Vondar's martial Khakkara is a logged exception); domain grants = **2–3 per holder** (the fourteen run leaner than the seven demons' 3–4 because they carve one finite moral-domain pool), no duplicates within the fourteen, cross-pantheon co-grants welcome. Jafnar and Vondar were trimmed 4→3 to hold the cap (Jafnar dropped **Fate**, Vondar dropped **Luck**; both still granted elsewhere).
+**Open.** Name + full entry for the remaining eleven lines, each designed as a person-seed first (the *could-this-hold-any-other-line* test). Build-order note: the **domain-poor** lines (Magnanimity, Honor, Mercy) are best built earlier so they keep their contested domains; the **domain-rich** lines (Courage, Faith, Loyalty, Compassion, Curiosity) are safe anytime.
+
+**Domain allocation sketch (pencil; revisable per devil).** Seated locked: Justice = Duty · Glyph · Vigil; Honesty = Truth · Secrecy · Trickery; Hope = Sun · Dreams · Sorrow. Open eleven, proposed (2–3 each, zero collisions):
+- Courage (Recklessness/Cowardice) — Might · Confidence · Destruction
+- Wisdom (Cynicism/Folly) — Introspection · Nothingness · Disorientation
+- Faith (Fanaticism/Apostasy) — Zeal · Soul
+- Loyalty (Servility/Treachery) — Tyranny · Freedom · Family
+- Compassion (Sentimentality/Callousness) — Healing · Passion · Indulgence
+- Curiosity (Obsession/Apathy) — Knowledge · Change · Nature
+- Hospitality (Sycophancy/Xenophobia) — Cities · Travel · Protection
+- Honor (Vainglory/Perfidy) — Darkness · Toil
+- Mercy (Appeasement/Implacability) — Death · Pain · Repose
+- Magnanimity (Vanity/Pettiness) — Wealth · Ambition · Star
+- Creativity (Hubris/Sterility) — Creation · Perfection · Magic
+
+Total devil-claimed: 9 (seated) + 31 (open) = 40 of 61 registrar domains. **This spends nearly the entire abstract/moral domain pool**; the free remainder is elemental/creature (Fire, Dragon, Swarm, Undeath…), so the two 2-domain lines (Faith, Honor) stay at 2 unless a bridgeable elemental is found (the way Vondar took **Sun**). Each line's domains are confirmed at its own design pass and only then moved to the registrar.
+
+**Tenure ledger (devils, oldest→youngest):** Jafnar (~4,000 yrs, seated c. 1500 GR) → Sannar (~2,532 yrs, ~0 MR) → Vondar (~2,000 yrs, late Lost Era). Citywide longest-tenured: Lethar > Jafnar > Drambur > Reidar > Sannar > Vondar. Tenure skews ancient; a recently-seated devil is a Council-level event.
+
+**Diversity ledger (devils so far).** Origins: mortal clerk (Jafnar), mortal healer (Vondar), made celestial herald (Sannar). Secret-shapes: the one unperverted ledger + own complicity-entry (Jafnar), her-own-longest-patient (Vondar), the one undelivered message (Sannar). **Same-iness watch:** all three seated are *archive/keeper* designs (a records-building ziggurat, a "the one missing entry" secret); the next devils should break that mold. Weapons used: Sword Cane, Khakkara, Meteor Hammer. Live cross-canon hooks: Lostar's apprentices feed **Honor** (Vainglory/Perfidy), **Loyalty** (Treachery), and **Honesty** (Deceit, which Sannar already tracks to her); the Justice/Ofunda debt is closed canon (load-bearing, do not make incoherent).
+**Where.** [lore/geography/bolverk.md](../lore/geography/bolverk.md), *Virtue Devils: the Fourteen*; [lore/glossary.md](../lore/glossary.md), *Virtue Devils: Bolverk's fourteen seat-holders*; [pf2e-registrar.html](../published/setting/cosmology/pf2e-registrar.html); [bolverk.html](../published/setting/cosmology/bolverk.html), `virtueDevils` block.
+
 ### [Bestiary] Vampire origin on Talan
 **Decided.** Dhampir reframed as undead-touched (not god-touched), which makes vampires-as-an-independent-lineage canon. Vampires exist on Talan and produce Dhampir descendants.
 **Open.** Where vampires came from. Candidate hooks: failed Betibizi-integration attempts (strongest, since Betibizi holds the integration procedure); Blackened Lands émigrés (Storveldi-Denbora-descended); banned-god creations; Feyworld émigrés.
