@@ -585,7 +585,7 @@ Full canon in `geography/zuzental.md`, *Thousand Kingdom → Founding history*. 
 | Tengu / Aiuvarin | -wing | Ravenwing | Feathered |
 | Lizardfolk / Kobold / Iruxi | -scale | Ravenscale | Reptilian |
 | Catfolk | -prowl | Ravenprowl | Feline |
-| Fetchling | -dusk | Ravendusk | Shadow-Plane-touched |
+| Fetchling | -dusk | Ravendusk | Fetchling-line |
 | Anadi | -weft | Ravenweft | Spider-folk, woven |
 | *Ancestry without a registered precedent* | -heim (default) | Ravenheim | "Home"; generic Germanic. Used until the Lograth heralds coin a specific suffix for that ancestry, which becomes the new precedent. |
 
