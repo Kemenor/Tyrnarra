@@ -52,7 +52,7 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 **Open.** Name + full entry for the remaining nine lines, each designed as a person-seed first (the *could-this-hold-any-other-line* test). Build-order note: the **domain-poor** lines (Magnanimity, Honor, Mercy) are best built earlier so they keep their contested domains; the **domain-rich** lines (Courage, Faith, Loyalty, Compassion, Curiosity) are safe anytime.
 
 **Domain allocation sketch (pencil; revisable per devil).** Seated locked: Justice = Duty · Glyph · Vigil; Honesty = Truth · Secrecy · Trickery; Hope = Sun · Dreams · Sorrow; **Honor = Darkness · Confidence (Drengar)**. Open ten, proposed (2–3 each, zero collisions):
-- Courage (Recklessness/Cowardice) — Might · Destruction (+ bridge TBD; Confidence was reassigned to Honor/Drengar per the build-early-gets-first-pick rule)
+- Courage (Recklessness/Cowardice) — Might · Destruction (a lean 2; Confidence went to Honor/Drengar per the build-early-gets-first-pick rule; stays at 2 by default, an elemental bridge like Fire/Lightning optional at build-time)
 - Wisdom (Cynicism/Folly) — Introspection · Nothingness · Disorientation
 - Faith (Fanaticism/Apostasy) — Zeal · Soul
 - Loyalty (Servility/Treachery) — Tyranny · Freedom · Family
@@ -64,7 +64,7 @@ Items where the world has not yet decided what the answer is. Pick one when you 
 - Magnanimity (Vanity/Pettiness) — Wealth · Ambition · Star — **SEATED: Rausnar**
 - Creativity (Hubris/Sterility) — Creation · Perfection · Magic
 
-Total devil-claimed: 14 (the five seated devils) + 25 (the nine open lines, penciled) = 39 of 61 registrar domains. **This spends nearly the entire abstract/moral domain pool**; the free remainder is elemental/creature (Fire, Dragon, Swarm, Undeath…), so the two 2-domain lines (Faith, Honor) stay at 2 unless a bridgeable elemental is found (the way Vondar took **Sun**). Each line's domains are confirmed at its own design pass and only then moved to the registrar.
+Total devil-claimed: 14 (the five seated devils) + 25 (the nine open lines, penciled) = 39 of 61 registrar domains. **This spends nearly the entire abstract/moral domain pool**; the free remainder is elemental/creature (Fire, Dragon, Swarm, Undeath…), so the **three lean 2-domain lines (Faith, Honor, Courage** — Courage trimmed when Confidence went to Drengar) sit at 2 by design. **The firm invariant is the 2-floor: no line may drop below two.** With the abstract pool spent the allocation is effectively zero-sum, so giving any line a third usually takes a domain from another; the lean lines simply stay at 2 unless a bridgeable elemental turns up (the way Vondar took **Sun**). Each line's domains are confirmed at its own design pass and only then moved to the registrar.
 
 **Origin allocation sketch (pencil; locked where decided, TBD otherwise).** Origins are penciled across all fourteen the way domains are, so class-variety is designed in, not discovered late. Each origin must *illuminate* its virtue (the could-this-hold-any-other-line test at the origin level), not just be exotic flavour. Seated (fixed): Justice/Jafnar = mortal soul (god-king's clerk); Hope/Vondar = mortal soul (plague healer); Honesty/Sannar = made celestial (messenger-angel); Honor/Drengar = devilborn (House Prydar). Open lines, **locked**:
 - Hospitality — **banished fey** (guest-right + glamour; Sycophancy the fawning welcome, Xenophobia the barred threshold)
