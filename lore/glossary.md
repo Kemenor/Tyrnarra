@@ -224,7 +224,9 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
   - **bizbelar**: Basque *bizi* (life) + *belar* (herb) → *bizibelar* → **bizbelar** "life-herb"; Osamun's shade-grown medicinal plant, source of the continent's healing potions, elixirs, and tonics.
   - **Botbar**: Icelandic *bót* (remedy) + *bær* (town) → **Botbar** "remedy-town"; the apothecary-market and seat of the Measure.
   - **Fiskhofn**: Icelandic *fiskur* (fish) + *höfn* (harbour) → **Fiskhofn** "fish-harbour"; the modest Hafra fishing-port, keeper of the Port Wardstone.
-- **Itzasoa**: echoes Basque *itsasoa* (sea/ocean); coastal sub-region
+- **Itzasoa** *(byname the Woven Wood)*: echoes Basque *itsasoa* (sea/ocean); Myrkono's coastal shadow-forest, the Surki (the Woven) heartland. The name is the outsider's, for a forest people met only at their coast. Full canon in `geography/myrkono.md`, *Itzasoa, the Woven Wood*.
+  - **Ilunagin**: Basque *ilun* (dark) + *hagin* (yew) → **Ilunagin** "the dark-yew"; the shadow-forest yew and its druid-hardened metal-wood (light, quiet, rustless, and, once grown hard, impossible to reforge).
+  - **Ehunbaso**: Basque *ehun* (to weave; also "a hundred") + *baso* (forest) → **Ehunbaso** "the woven wood"; Itzasoa's grown arboreal capital, holding the Forest Wardstone.
 - **Myrria depth-pass coinages** *(Araphel's god-city; full canon in `geography/myrkono.md`, *Notable Locations → Myrria*)*:
   - **Birth-order identifiers** (Basque *sortu*, "to be born," drifted onto the ordinals; gender-neutral): **Lehensor** (firstborn) · **Bigarsor** (second) · **Hirsor** (third) · **Laursor** (fourth) · **Bossor** (fifth). The steady handle (used as *[identifier] [family name]*, e.g. *Lehensor Vaska*) for a Myrrian child, who reinvents their chosen name week to week until the **keeping-rite**.
   - **The keeping-rite**: a Myrrian child's coming-of-age and first true Lantern Rite; where an adult sheds an old name, the child names every self they tried and keeps the one they mean to be.
@@ -528,6 +530,10 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Nattro**: Icelandic *nótt* (night) + *ró* (calm) → *náttró* → **Nattro** "night-calm"; the Isilgorde's rest-draught, known abroad by the by-name *the Stilling*.
 - **The Measure**: Plain English. Ilun Tasun's government, run on the doctrine of the **Measured Dose** (every law a dosed, time-limited *course*; exceeding it is the *overdose*, the cardinal crime). Three organs: **the Seats** (lot-drawn prescribers, served anonymous and forgotten), **the Hand** (the executive college that measures and applies), and the **Isilgorde** (guide and draw).
 - **The Kept Lamp / the Unasked**: Plain English. The basin's host-custom (the lamp kept in the window for the night-traveller) and its grace (give all, ask nothing).
+
+**Itzasoa (the Woven):**
+- **The Woven (Ehuntar)**: English by-name + Basque demonym for the Surki of Itzasoa. *Ehuntar* = Basque *ehun* (weave) + *-tar* (demonym suffix, "of/from") → "those of the weave." Full canon in `geography/myrkono.md`, *Itzasoa, the Woven Wood*.
+- **The Weave / the Loom**: Plain English. Itzasoa's load-sharing government (a matter is carried, not voted: broken into pieces, each taken up as a bearable load, and it holds when no piece is left unclaimed; standing is how load-bearing you are) and the woven-band record kept at the Loom in Ehunbaso.
 
 **The Red Empire (off-continent, across the *Cloud Sea* from Talan; full entry in `geography/_off-continent.md`, *The Red Empire's home continent*):**
 - **The Crimson Emperor**: Plain English title.
