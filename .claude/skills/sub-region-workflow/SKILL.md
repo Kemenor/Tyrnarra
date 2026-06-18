@@ -243,6 +243,18 @@ Beyond the polity-shape and the signature institution, a sub-region reads alive 
 
 ---
 
+### Governance: the three specificity tests
+
+A region's government is hand-waving until it survives three questions, each testing a different axis. The trap: a *thematic* answer ("they decide together", "the gathering settles it", "it is woven") is not a mechanism. Demand the procedure, step by step, until a foreigner could predict the outcome.
+
+1. **How does it keep internal politics from fracturing?** Tests **unity**. If you cannot answer, the real question is: why did the region not fracture into pieces?
+2. **How does it broker a deal with a neighbouring kingdom?** Tests **external agency**. If you cannot answer: why is this one region and not four separate ones?
+3. **How does it decide to build new infrastructure (a road, a railway)?** Tests **internal provision**. If you cannot answer: why did the people not revolt?
+
+"There is no central authority" passes only if you can still answer 1 and 2: name the **non-governmental binding force** (a shared indivisible duty, a vital shared resource, a common enemy, a faith) that holds the region as one without a ruler, and the **standing place or custom** a foreigner deals with when there are no standing offices. Watch the economy corollary of test 3: if the answer is "they build and trade almost nothing", then *why bother, and what makes them worth the trouble?* A region that opts out of global connection has to be **special** (a knowledge or a good no one else has) or it is not a region anyone reaches. (Worked example, the Shadow Steppes: no ruler, but the Wardstone-vigil is an indivisible duty fracture would betray, the lake-city is the one address a foreigner deals with, and what they sell that no one else has is the sky.)
+
+---
+
 ## Phase 6: Commit lore (on explicit go)
 
 User green-lights with "commit" / "go ahead" / "publish to lore" / similar. Apply edits in parallel:
