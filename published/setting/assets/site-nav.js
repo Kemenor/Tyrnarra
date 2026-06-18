@@ -100,6 +100,7 @@
     ]},
     { slug: 'myrkono',  label: 'Myrkono · Darkness',  href: '/setting/talan/domains/myrkono/myrkono.html',   children: [
       { slug: 'ilun-tasun', label: 'Ilun Tasun · the Kept Lamp', href: '/setting/talan/domains/myrkono/ilun-tasun/ilun-tasun.html', children: [] },
+      { slug: 'itzasoa', label: 'Itzasoa · the Woven Wood', href: '/setting/talan/domains/myrkono/itzasoa/itzasoa.html', children: [] },
       { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/setting/talan/domains/myrkono/myrria/myrria.html', children: [] }
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [
