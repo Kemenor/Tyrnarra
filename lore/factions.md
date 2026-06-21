@@ -211,7 +211,7 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 
 | General | Identity | Domain |
 |---|---|---|
-| **The Vermin Queen** | Mistress of swarms | Hive-dungeon: the Hollow of Ten Thousand Threads (Shadow Steppes). Breeds endless spiders, locusts, crawling things. |
+| **The Vermin Queen** | Mistress of swarms | Hive-dungeon: the Hollow of Ten Thousand Threads (Itzasoa). Breeds endless spiders, locusts, crawling things. |
 | **The Rot-Tyrant** | Corpse-warlord in ruined armour | Ossuary-halls. Rusting legions whose every step spreads despair and decay. |
 | **The Blight-Seer** | Prophet twisted into living plague | A labyrinth of pits of contagion, diseased shrines, and clouds of foul miasma. |
 | **The Flesh-Sculptor** | Butcher who remakes flesh to the Corrupted God's design | Lair of stitched horrors and alchemical vats. |
@@ -223,7 +223,7 @@ The kingdoms united, rallied adventurers and militias, and after bloody campaign
 
 **Eight remain.** Each that falls delays the master's freedom. But the wrath of the remaining eight burns hotter with every loss.
 
-The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Shadow Steppes) is documented in [`geography/myrkono.md`](geography/myrkono.md), and the Maw Serpent's is sited beneath the north pack-ice of Baerfrost ([`geography/vindul.md`](geography/vindul.md), *Baerfrost*); the other six dungeons' precise locations remain TBD.
+The Vermin Queen's lair (the Hollow of Ten Thousand Threads, Itzasoa) is documented in [`geography/myrkono.md`](geography/myrkono.md), and the Maw Serpent's is sited beneath the north pack-ice of Baerfrost ([`geography/vindul.md`](geography/vindul.md), *Baerfrost*); the other six dungeons' precise locations remain TBD.
 
 #### The Wardstones (counter-pressure)
 

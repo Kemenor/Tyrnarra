@@ -865,7 +865,7 @@ Full lore distributed: Wardstones in `geography/myrkono.md`, *The Seven Wardston
   - **The Divine Wardstone** (Myrria, Sanctum of Veils; glows only beneath the stars)
 - **The War of Seals**: the ongoing struggle to keep the Wardstones safe and the Nine Generals contained.
 - **The Nine Generals of Corruption**: the Corrupted God's lieutenant-vessels; each commands one of the Nine Dungeons that erupted ~2524 MR. **The Ash-Binder is defeated.** Eight remain: Vermin Queen, Rot-Tyrant, Blight-Seer, Flesh-Sculptor, Whisperer in Dreams, Maw Serpent, False Saint, Root-Twister.
-- **The Nine Dungeons**: the subterranean fortresses of the Nine. Main entrances sealed after the first-wave campaigns; smaller leakage continues. One known: **the Hollow of Ten Thousand Threads** (Vermin Queen's lair, Shadow Steppes).
+- **The Nine Dungeons**: the subterranean fortresses of the Nine. Main entrances sealed after the first-wave campaigns; smaller leakage continues. One known: **the Hollow of Ten Thousand Threads** (Vermin Queen's lair, Itzasoa).
 
 ### Myrria (Araphel's city-state): proper nouns
 
