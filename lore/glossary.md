@@ -238,6 +238,9 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
   - **The dark-ways**: the unlit, deliberately-unmapped inside-mountain warren the Surki hold; the city's second movement (taken to be no one) against the lit, witnessed Lantern Stairs (climbed to be seen and renamed).
   - **The diggers**: Myrria's youth who break the city's one holy taboo (never ask about a *before*) for sport; the sanctioned transgression, grown out of.
 - **Bikitsa**: Basque *biki* (twin) + *itzal* (shadow) → *biki-itzal* → consonant assimilation and final-syllable drop → **Bikitsa** "twin-shadow." The coastal sub-region at the northern edge of Myrkono, sharing the two-sun phenomenon with the Brauogi-side **Twin Suns** (see Brauogi → Twin Suns); jointly governed with Twin Suns under a single shared structure (form canon-pending). Where Brauogi names what the two suns bring (light, harvest, gold), Myrkono names what they cast (twin shadows on the same coast). The cross-domain governance is unique on Talan and the closest the bound thirteen have come to permitting a polity that answers to two domains at once.
+- **Izarelai** *(byname the Star Plain)*: Basque *izar* (star) + *zelai* (open plain) → *izar-zelai*, fused and drifted to **Izarelai** "the star plain." Myrkono's open dark grass-sea in the south, the **Goloma** heartland; retires the old outsider-tongue name "Shadow Steppes." Full canon in `geography/myrkono.md`, *Izarelai, the Star Plain*.
+  - **Izaru**: Basque *izar* (star) + *ur* (water) → contracted to **Izaru** "the star-water"; the great central lake whose still black surface doubles the night sky, the reckoners' mirror.
+  - **Izarbil**: Basque *izar* (star) + *bil* (gathering) → **Izarbil** "the star-gathering"; the lake-city on Izaru's shore, observatory, larder, and market at once, seat of the Begiak, and holder of the Lakeside Wardstone.
 
 **Floteyn (Water):**
 - **Balatur Erui**: Basque *balea* (whale) + Icelandic *eyri* (sandbank, sea-spit of land) → *balea-eyri* → drifted to **Balatur Erui** "whale-spit / whale shoals." Hybrid Basque/Icelandic, echoing the Burdineyja pattern. Drifting islands and whales together fit Floteyn double; Balaena the Skywhale City sits within the same archipelago.
@@ -547,6 +550,13 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 **Itzasoa (the Woven):**
 - **The Woven (Ehuntar)**: English by-name + Basque demonym for the Surki of Itzasoa. *Ehuntar* = Basque *ehun* (weave) + *-tar* (demonym suffix, "of/from") → "those of the weave." Full canon in `geography/myrkono.md`, *Itzasoa, the Woven Wood*.
 - **The Weave / the Loom**: Plain English. Itzasoa's load-sharing government (a matter is carried, not voted: broken into pieces, each taken up as a bearable load, and it holds when no piece is left unclaimed; standing is how load-bearing you are) and the woven-band record kept at the Loom in Ehunbaso.
+
+**Izarelai (the Goloma):**
+- **The Begiak**: Basque *begi* (eye) + plural *-ak* → **Begiak** "the Eyes," Izarelai's governing diarchy; two who rule together because the Goloma hold that one eye sees flat and two see depth, so no shared matter is reckoned true until both Eyes have seen it. Each ruler is an **Eye**. Full canon in `geography/myrkono.md`, *Izarelai, the Star Plain*.
+- **Saldo**: Basque *saldo* (flock) → the Goloma small group of three or four, the unit of public dealing; outsiders never treat with a lone Goloma but with a saldo who confer and answer together (a Goloma is alone only at her own hearth and among kin).
+- **The Starwrights**: modern English (*star* + *-wright*, worker, as in shipwright). Izarelai's prestige craft: the star-reckoners and drift-pilots who read the doubled sky off Izaru and steer the drifting Isles of Shuun that no fixed chart can hold.
+- **The Open Eyes**: modern English. Izarelai's common craft, the watch-for-hire; eyes that see first and in the dark, bought by caravans and seal-wardens across Talan.
+- **Izaretar**: Basque demonym, Izarelai + *-tar* ("of/from"), drifted → a person of Izarelai.
 
 **The Red Empire (off-continent, across the *Cloud Sea* from Talan; full entry in `geography/_off-continent.md`, *The Red Empire's home continent*):**
 - **The Crimson Emperor**: Plain English title.
@@ -864,8 +874,8 @@ Full text and structure in `cosmology.md`, *The Gods' Law: The Compact of the Bo
 Full lore distributed: Wardstones in `geography/myrkono.md`, *The Seven Wardstones*; Nine Generals in `factions.md`, *Remnants of Corruption → The Nine Generals*; Corrupted God identity in `cosmology.md`, *⚿ GM Secret: The Corrupted God: True Identity*.
 
 - **The Seven Wardstones**: monumental relics forged at the end of the Age of Corruption that anchor the Corrupted God's binding. All seven sit inside Myrkono.
-  - **The Lakeside Wardstone** (Shadow Steppes, lake-shore city)
-  - **The Steppes Wardstone** (Shadow Steppes, open grasslands)
+  - **The Lakeside Wardstone** (Izarelai, the lake-city Izarbil)
+  - **The Plain Wardstone** (Izarelai, open grass)
   - **The Forest Wardstone** (Itzasoa, arboreal city in the canopy)
   - **The Temple Wardstone** (Itzasoa, temple-city ziggurats)
   - **The Monastery Wardstone** (Ilun Tasun, high mountain monastery)

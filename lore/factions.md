@@ -99,9 +99,9 @@ The Guild also runs the world's most reliable courier network.
 - **Recursive irony:** every story told about him strengthens him, which generates new stories. He has never tried to inspire fear. He is, by his own assessment, simply *being proper*.
 - **Demonstrates the canon mechanic:** belief generates real divine power for mortal figures (`cosmology.md`, The Wellspring & Belief). Lavisburg is the cleanest contemporary case study.
 
-**Guild Sovereign Seraphel Duskbane**: Fetchling, current Guild Sovereign of **Myrria's Godshall**, and thus the highest-ranking Guild leader across Myrkono (Shadow Steppes, Itzasoa, Ilun Tasun, Myrria).
+**Guild Sovereign Seraphel Duskbane**: Fetchling, current Guild Sovereign of **Myrria's Godshall**, and thus the highest-ranking Guild leader across Myrkono (Izarelai, Itzasoa, Ilun Tasun, Myrria).
 
-- **Origin:** Believed Myrria-born. Started as a Bronze-rank adventurer at a remote Shadow Steppes Branch Office, working as a scout/tracker on corruption-cult hunts.
+- **Origin:** Believed Myrria-born. Started as a Bronze-rank adventurer at a remote Izarelai Branch Office, working as a scout/tracker on corruption-cult hunts.
 - **Epithet:** *Duskbane*, earned from her record against corruption cults in the steppes.
 - **Promotion:** Elevated unanimously to Guild Sovereign of Myrkono after coordinating the defence of three provinces in Itzasoa's river valleys during the eruption of the Nine Dungeons (~2524 MR).
 - **Appearance:** Muted-shadow skin, faintly glowing silver eyes, tight silver-white braid, black-and-silver guild uniform with practical armour plate. Wisps of shadow trail her movement and never quite dissipate. Quill and sword at the belt: the Quill & Blade in literal form.
