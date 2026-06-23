@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugeiturri · Brauogi · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #3fa890;
+    --card-bg: rgba(12,26,24,0.55);
+  }
+
+  /* Left-bordered callout (river-toned) */
+  .source-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(16,34,30,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .source-call .sc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .source-call p { margin: 0 0 12px; line-height: 1.6; }
+  .source-call p:last-child { margin-bottom: 0; }
+
+  /* The succession triad (was / is / will be) */
+  .triad-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(16,34,30,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .triad-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .triad-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 8px; }
+  .triad-step { flex: 1 1 200px; min-width: 180px; padding: 12px 16px; background: rgba(20,38,34,0.6); border: 1px solid rgba(63,168,144,0.4); border-radius: 3px; text-align: center; }
+  .triad-step.now { background: rgba(28,52,46,0.75); border-color: var(--domain-accent); }
+  .triad-tense { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .triad-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--gold-bright); margin-bottom: 6px; }
+  .triad-step p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+  .triad-arrow { display: flex; align-items: center; color: var(--domain-accent); font-size: 1.2rem; font-weight: bold; }
+  .triad-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* House cards carry a small rank-band like the watch-band */
+  .house-band { font-style: italic; color: var(--gold-dim); font-size: 0.78rem; margin-bottom: 8px; line-height: 1.35; }
+  .house-card.royal .card-name { color: #6fd0b6; }
+
+  @media (max-width: 600px) {
+    .triad-row { flex-direction: column; }
+    .triad-arrow { transform: rotate(90deg); justify-content: center; }
+    .source-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="sugeiturri">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Sugeiturri</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Sugeiturri</div>
+    <div class="page-subtitle">Brauogi Sub-Region · The Source-Country</div>
+    <div class="page-flavor">"We took our water from the gods when the gods fell, and we have never once let it go."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>suge</i> (serpent) + <i>iturri</i> (source, spring) → <b>Sugeiturri</b>, "the serpent-source." <b>Deliberately undrifted</b>: the one place-name in Brauogi that never eroded, because the thing it names never changed. The name says the faith aloud, that the source is the serpent's and the rivers are its body.</dd>
+    <dt>Position</dt><dd>The green northern corridor of Brauogi, running west to east from the <b>Hafra coast</b>, past the south-western mountain gap that is the gateway into <b>Ilun Tasun</b> (Myrkono), along the <b>Iturmen passes</b> (which open north into <b>Fellibylur</b>, Vindul), to the source-mountains and <b>Iturburu</b> in the east. <b>The Earth Realm</b> lies south; <b>Azkamour</b> to the north-west. The magirail to <b>Lurrath's Gate</b> runs through it.</dd>
+    <dt>Terrain</dt><dd>Green, well-watered upland country, never desolate. The eastern <b>source-mountains</b> (Iturmen) hold the springs and <b>Iturburu</b>, the mother-lake; from them the rivers fan down and out. Hafra ports in the far west; pass-towns on the spine; hot-spring towns strung along the runs. Cold in the high east, warmer down the corridor.</dd>
+    <dt>Character</dt><dd>
+      <i>The source of the water, kept by the people who never changed. Lurrath's mirror: lasting stone against living water.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Source-Country</span><span class="pill">Keepers of the Current</span><span class="pill">River Blood</span><span class="pill">Every Town Drinks Their Water</span><span class="pill">The Northern Route</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Dragonet</b> old-blood heartland, at its fullest expression in the east: the River Houses and their commoner kin who keep the springs. The west is cosmopolitan, every people the traffic brings down the corridor, all of them drinking the same eastern water.</dd>
+    <dt>Faith</dt><dd><b>Zaharsuge</b>, the wyrm, read here as the living current: the spring is the deep-earth serpent surfacing, the river its body, Iturburu the great coil. The <b>River Houses are the priesthood</b>; keeping the water is the worship, and there is no separate clergy.</dd>
+    <dt>Rule</dt><dd>A blood-monarchy of <b>River Houses</b> under the crown at <b>Iturburu</b> (royal <b>House Amasuge</b>). Rank is closeness to the source. The crown is styled <b>the First Current</b>, with <b>the Still Water</b> (abdicated) and <b>the Rising Water</b> (named heir). Seat: <b>Amategi</b>.</dd>
+    <dt>Founding</dt><dd>The people, the faith, and the keeping are <b>Gods'-Era ancient</b>; the kingdom dates to the <b>Week of Crimson Rain</b>, when the mortals of the sources took the rivers from the dying gods. One of the oldest kingdoms on Talan, and its claim to age is the rare true one.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(63,168,144,0.5);">
+    <div class="gods-city-label">The Seat</div>
+    <div class="gods-city-name">Amategi</div>
+    <div class="gods-city-byname">the Mother-Hall · on an island in Iturburu · seat of House Amasuge and the First Current</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Amategi (Basque <i>ama</i> "mother" + <i>-tegi</i> "place, abode") stands on an island in the mother-lake, the crown sitting at the still centre of the one still water in a realm of moving currents. From it the First Current reads the whole watershed and grants the water.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="every-town-drinks" class="section-heading">Every Town Drinks Their Water</h2>
+  <div class="prose">
+    <p>Nearly every river in Brauogi rises in Sugeiturri, and the water runs out from here to the whole domain. Azkamour's water, the Hafra-coast towns', the breadbasket's, the cities': almost none of it begins anywhere but the eastern sources. This is the region's true power, and it is bigger than leverage, because it is never wielded. The old blood keeps; it does not grasp. The quiet, total fact under everything is that no one in Brauogi drinks water that did not begin in the Houses' keeping. The breadbasket grows on it, the cities drink it, and the Houses simply hold it flowing.</p>
+
+    <p>Sugeiturri is Lurrath's mirror inside the same domain. Where Lurrath persists by never moving, the city of lasting stone, Sugeiturri persists by never ceasing to move, the country of living water. Both are ancient, both are Sarrum's, and the two together are why the chronicles call the Earth domain the steady one: one survivor too strong to take, one too vital to destroy.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="keepers-of-the-current" class="section-heading">The Keepers of the Current</h2>
+  <div class="prose">
+    <p>Sugeiturri is the Dragonet old-blood heartland, and here the old blood is a vocation, not a disposition carried while living some other life. For a Lurrath or Earth Realm Dragonet the old blood is the colour under a craft; for a source Dragonet it is the craft. The ancient thing is not behind them as memory. It runs through their hands this morning. They do not merely rest on what persists; they keep it persisting, tending the spring so the current never stops. Their continuity is active and present-tense: they keep the <i>current</i>, the living now, not a record of the past.</p>
+
+    <p>The place turns the feeling outward into the body. A source Dragonet reads water the way the wind-folk read wind: the wyrm-undertone every Dragonet feels in the throat here hums with the flow, so they know a spring's mood and hear a river's health. And their belonging has an address. Not "something older than every map," but <i>my river, my House, my stretch of the god.</i></p>
+  </div>
+
+  <div class="source-call">
+    <div class="sc-label">The tell, abroad</div>
+    <p>A source Dragonet cannot rest where there is no running water. They stop at every brook, read its flow at a glance, and sleep badly in a dry place, because the sound of a current is the sound of the god still going. A Lurrath Dragonet abroad misses the stone; a source Dragonet abroad misses the water in their bones.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-river-tree" class="section-heading">The River-Tree is the House-Tree</h2>
+  <div class="feature-panel prose">
+    <p>Every river is bound to a House that keeps it, its springs and its run, and the two share one life. A river runs dry, and the House has run dry. The whole region is one watershed-family-tree rooted at Iturburu: a trunk-river is a Great House, its tributaries are the cadet branches, where two rivers meet two Houses are kin, and where a river forks a House has branched. You do not found a House, because you cannot found a river. You branch, and every House traces up the water to an older House, and up to the source.</p>
+
+    <p>The aristocracy is a living current, not a remembered pedigree: you are <b>River Blood</b> because your House is a branch of the one current still running. Rank is closeness to the source, read up the water as the number of forks between a House and Iturburu, so a trunk-House runs high and a feeder-stream cadet runs lesser. Geography, genealogy, and rank are one gradient. Below the River Blood are the <b>commoners</b> who live along the rivers and do the daily keeping under a House's name, carrying no current of their own.</p>
+  </div>
+
+  <div class="source-call">
+    <div class="sc-label">The cardinal crime</div>
+    <p>Each House owns and guards its own source outright. To seize, dam, or foul the spring a House holds is the one unforgivable act, the murder of a House and of a current that ran since before the bread. The rare exception is a House whose source has fallen partly into another's hands through some old bargain, a spring merged by marriage, held in trust after a defeat, or paid against a debt; such a House lives with a knife at its throat, and these arrangements are storied, fraught, and few, because no one enters one willingly.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="card-name">The Crown's Gift</div>
+      <p>Iturburu is a true crown, supreme in bestowal and bound in seizure: it alone makes and remakes Houses by granting water, and it cannot break or take a current that still runs, for the crown bends to the source like every House below it. Only the water unmakes a House. The crown has two kinds of water to give, both windfalls: a <b>new spring</b>, the rarest sacred event; and a <b>living current come free</b>, when a House ends by blood with no heir while its river runs on. A dry House prays for the first and schemes for the second.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Unrivered Houses</div>
+      <p>A House whose river runs dry is not erased. The current breaks but the blood persists, so the line becomes River Blood with no river: above the commoners, because the blood is real, and powerless, because no current runs. It holds only its name and waits, each one a name walking a riverbed. When the crown has water to give, it most often re-waters such a House, never onto its old current, because the broken thing stays broken.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Circling</div>
+      <p>A weakening House is the thing that moves the high country, because what it holds will be given again. The dry Houses court the crown, rivals press a faltering line toward its end, and the cardinal crime hangs over all of it, so the work is done at one remove, in marriages and debts and patience, and now and then in a drought no one can prove was made.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-crown" class="section-heading">The Crown: the Current, the Still, and the Rising</h2>
+  <div class="prose">
+    <p>The crown is styled in water, and the three styles make a succession out of one image. The honoured transition is for a First Current to pass the living current to the heir while alive and go still: the current moves to the next channel, it does not stop. The distinction is sacred and exact. <b>Houses run dry; rulers go still.</b> One is a grave, the other a retirement, and the words are never confused.</p>
+  </div>
+
+  <div class="triad-wrap">
+    <div class="triad-label">The Three Waters of the Crown</div>
+    <div class="triad-row">
+      <div class="triad-step">
+        <div class="triad-tense">was</div>
+        <div class="triad-title">The Still Water</div>
+        <p>The abdicated ruler, gone still and not run dry. Still waters run deep: they rule nothing and counsel everything, the realm's living memory, the pool the First Current comes to. The realm may carry several at once.</p>
+      </div>
+      <div class="triad-arrow">→</div>
+      <div class="triad-step now">
+        <div class="triad-tense">is</div>
+        <div class="triad-title">The First Current</div>
+        <p>The reigning ruler, man or woman, the original current from which every River House branches and the most direct expression of the god's living body.</p>
+      </div>
+      <div class="triad-arrow">→</div>
+      <div class="triad-step">
+        <div class="triad-tense">will be</div>
+        <div class="triad-title">The Rising Water</div>
+        <p>The named heir, the current gathering in the next channel. The First Current names the Rising Water as it grants a river, and may re-choose at will until death or going-still, because the heir holds only the promise of the flow, never a current.</p>
+      </div>
+    </div>
+    <p class="triad-note">The one cardinal sin of the crown is to refuse to go still in time, clinging to the flow into stagnation and holding the succession hostage: the one ruler in Sugeiturri fighting the current instead of riding it.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>The living court sits at Amategi. <b>Naroa Amasuge, the First Current</b> (<i>Naroa</i>, "abundant"), reigns and grants the waters; she took the flow when <b>Erro Amasuge, the Still Water</b> (<i>Erro</i>, "root, origin"), went still in good time, and she still comes to him for counsel, the root the present current grew from. She has named <b>Ibon Amasuge, the Rising Water</b> (<i>Ibon</i>, off <i>ibai</i>, "river") her heir, but keeps <b>Naia Amasuge</b> (<i>Naia</i>, "wave") a genuine close second, a cousin-branch backed by House Ibaizar, so Ibon's title is never safe and Ibaizar's pressure never lifts. The court reads the gap between Ibon and Naia the way it reads a river's level.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card house-card royal">
+      <div class="card-name">House Amasuge</div>
+      <div class="house-band">the royal House · holds Iturburu, the mother-coil</div>
+      <p>Basque <i>ama</i> + <i>suge</i>, "the mother-serpent," the canon Dragonet image of Zaharsuge as a vast mother-coil. The crown, the most direct current, the high keepers of the source of all sources. Kept undrifted like the region's own name.</p>
+    </div>
+    <div class="accent-card house-card">
+      <div class="card-name">House Ibaizar</div>
+      <div class="house-band">the Old River · greatest of the trunk-Houses</div>
+      <p>Basque <i>ibai</i> + <i>zahar</i>, "the Old River." Eldest and greatest of the non-royal Houses, holding a major river only a fork or two off Iturburu, so it ranks just under the crown: proud, secure, ancient, and the power-bloc pushing Naia toward the flow.</p>
+    </div>
+    <div class="accent-card house-card">
+      <div class="card-name">House Urbeltz</div>
+      <div class="house-band">the Black Water · the compromised House</div>
+      <p>Basque <i>ur</i> + <i>beltz</i>, "the Black Water," on a deep river running out through the shadowed gorges toward the Ilun Tasun side. The storied House whose source fell half into another's hands generations ago, scheming endlessly to make its spring whole again: the cautionary tale every River House tells its children.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Zaharsuge, the Living Current</h2>
+  <div class="prose">
+    <p>The region keeps its own faith, the Dragonet faith at its fullest: <b>Zaharsuge, the wyrm, read as the living current.</b> The spring is the deep-earth serpent surfacing into the light, the river is its body in motion, and Iturburu the mother-lake is the great coil where it gathers. The god has no spoken voice, so it speaks in the motion of the water, read and never heard, and the whole high country hums with the bone-deep pulse of the springs.</p>
+
+    <p>Because the rivers are the god's body, the politics and the faith are one thing. The watershed-family-tree <i>is</i> the god, branching. To hold a river is a priestly act before it is a noble one, so the River Houses are the priesthood, every noble a priest of their own water, with the royal House the high keepers of the mother-coil. There is no separate clergy, and the cardinal crime is deicide in miniature, the wounding of the god in that stretch.</p>
+
+    <p>The daily keeping is the worship. Every day begins at the water, where a keeper clears the channel and the springs and reads the current's strength and mood, chore and prayer in one act with no seam between them. The reading is a daily divination read like a pulse: a strong clear current means the god runs well and the House is sound, a thinning or muddying or cooling means dread, and a change in the current travels House to House up and down the watershed within days.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-route" class="section-heading">The Route, and the Warm Waters</h2>
+  <div class="prose">
+    <p>The Earth Realm feeds the domain, so Sugeiturri is not a food-region; it is <b>the route</b>. The corridor is the road merchants choose, and its signature is that every stop keeps its own hot springs, so crossing the north is a chain of warm waters, each town resting weary bones in its own pools. <i>Take the northern road and you'll never sleep cold.</i> The best-loved route on the continent runs straight through the source of its water.</p>
+
+    <p>The body of the region is working river-towns strung down the runs, each one belonging to the river it sits on and so to that river's House; pass-towns living off the crossings into Fellibylur and Ilun Tasun; Hafra ports in the west; and hot-spring towns as the warm waystations on all of it. The east is Dragonet-dense and holy at the sources; the west is cosmopolitan and busy, the world crossing the region while the Houses keep the holy water above it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="founding" class="section-heading">The Rivers Taken from the Gods</h2>
+  <div class="prose">
+    <p>Sugeiturri is one of the oldest kingdoms on Talan, and its claim to age is the rare true one. The people, the faith, and the keeping are Gods'-Era ancient: the old blood were at the sources before the bread. But in the Gods' Era the rivers were the <i>gods'</i>, and the old blood kept a source they did not own.</p>
+
+    <p>The Week of Crimson Rain was the founding act. As the gods died and the divine hand was torn off the world, the mortals of the sources took the rivers from the gods, seized the water no dying god could hold any longer, and never gave it back. That birth of self-rule fell in the same span Frae City rose as the seat of mortal resistance: Sugeiturri took its water the week Cronus's people took their freedom. Through the Lost Era the old blood kept on, holding the rivers through the lost, unrecorded centuries while the river-tree of Houses and the crown at Iturburu took their shape. It was lost in the Lost Era, fragmentary and unwritten, but always itself, because the source-keeping never changed across the fall. Its older-claim is not "we kept a king since the Gods' Era," for no one did, but "we took our water from the gods when the gods fell, and we have never once let it go."</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Water Knows First</button>
+    <div class="legend-era-content">
+      <p>Downstream they say the source-folk can hear a House die before it dies. A keeper who has read one current every dawn of her life, the tale runs, will feel the thinning a season before the spring fails, and will not say so, because to speak a dry word over living water is to call the drought. So when a River House goes suddenly quiet, sends no word to a wedding, lets a debt run long, the corridor reads it the way a fisher reads a slack net, and the careful merchant settles his accounts upstream before the news comes down.</p>
+      <p>They say, too, that a Sugeiturri oath sworn over running water binds harder than a Forseti contract, and that the worst thing you can do to a source-Dragonet is sour the spring she keeps, because she will feel it in her own throat. None of this is written anywhere. The keepers, asked, only say that the water is honest, and that a current tells you the truth if you have the patience to stand in it long enough, which is the kind of answer that ends the conversation.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Sugeiturri Made Its Own God</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to No Living Keeper</div>
+
+      <p class="secret-reveal">The faithful believe they descend from the serpent-god. The truth is the inverse: <b>the serpent-god descends from them.</b> Zaharsuge was born here. The first century of the Lost Era was the great Wellspring leak, the belief-easy years when concentrated faith crystallised into actual gods, and Sugeiturri held the most concentrated river-serpent faith on Talan, sitting on the source of all the water, in exactly those years. The Dragonets who had just taken the rivers from the dead gods worshipped the current as the great wyrm, and that belief, accumulated at the wellhead of the domain, brought Zaharsuge into actual being in Diyu.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">The Belief-Engine</span>
+        <span class="secret-pill">The God Answers</span>
+        <span class="secret-pill">The God Does Not Know</span>
+      </div>
+
+      <div class="secret-grid-3">
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Engine</div>
+          <div class="secret-card-title">Faith at the Wellhead</div>
+          <div class="secret-card-body">The source of all the domain's water, the most concentrated wyrm-faith on the continent, and the one window in history when belief crystallised easily into gods, all in the same place at the same time. The conditions that make a belief-formed god were met here as nowhere else. The source-country is the heartland of its own deity.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Answer</div>
+          <div class="secret-card-title">Real, and Inverted</div>
+          <div class="secret-card-body">Zaharsuge is real: it hears prayer, grants wyrm-affinity blessings, manifests in cultic dreams as image and sensation. The cycle works the way any belief-formed god's does, prayer up and blessing down. The relationship is simply the reverse of what the faithful hold: the wyrms made the god, not the god the wyrms.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">The Blind Spot</div>
+          <div class="secret-card-title">The God Believes Its Own</div>
+          <div class="secret-card-body">Zaharsuge's self-image is shaped by its believers, and the believers do not know the true history, so the god does not either. It experiences itself as the genuine ancient creator who shepherded the wyrm-line into being. The standard mechanism for a belief-formed god: where the belief carries a fictional history, the god inherits it as its own.</div>
+        </div>
+      </div>
+
+      <p class="secret-coda">This is the Dragonet heartland's true origin, and it sits over the older deep-substrate account of the line; it is reconciled against the wider Zaharsuge canon elsewhere. To a Sugeiturri keeper the suggestion would register as blasphemy, and the keepers are exactly the people who would never look closely enough at their own water to find it.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain overview; Sugeiturri as its high northern source-corridor, the wellhead the whole breadbasket drinks from.</li>
+      <li><a href="/setting/talan/domains/brauogi/lurrath/lurrath.html"><b>Lurrath →</b></a> · The Steadfast City at the end of the rail-approach; the lasting-stone mirror to Sugeiturri's living water.</li>
+      <li><a href="/setting/talan/domains/myrkono/ilun-tasun/ilun-tasun.html"><b>Ilun Tasun →</b></a> · Across the south-western mountain gateway; the Myrkono shadow-land the corridor opens onto.</li>
+      <li><a href="/setting/talan/domains/vindul/vindul.html"><b>Vindul →</b></a> · North over the Iturmen passes through Fellibylur; the Wind domain, and Azkamour's old other half.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Sugeiturri's central canon is settled; the corridor's smaller detail is the kind future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Named rivers and their Houses.</b> The river-tree is the House-tree, but only Amasuge, Ibaizar, and Urbeltz are named so far. The great trunk-rivers and the cadet branches that fill out the watershed await coining.</li>
+      <li><b>The second Iturmen lake.</b> A smaller lake east of Iturburu is recorded on the map and unnamed; its keeping and its place in the river-tree are open.</li>
+      <li><b>The Hafra ports and the pass-towns.</b> The western harbour-towns and the crossing-stations into Fellibylur and Ilun Tasun are recorded but unnamed; their coining awaits a story.</li>
+      <li><b>The compromised bargain.</b> The old marriage that put half of House Urbeltz's source into another's hands, and which House holds the other half, is the corridor's most storied arrangement and is canon-pending.</li>
+      <li><b>The reign of Naroa.</b> The current First Current's named rulings, the year Erro went still, and how long the Ibon-and-Naia question stays open before the flow passes.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · SUGEITURRI</div>
+
+</div>
+
+</body>
+</html>
