@@ -11,7 +11,7 @@ This file holds the continent-wide geography of Talan: structure, infrastructure
 | [Myrkono](myrkono.md) | Darkness | Araphel | Myrria |
 | [Floteyn](floteyn.md) | Water | Shuun | Uravel |
 | [Sumendar](sumendar.md) | Fire | Komo | Eldara |
-| [Lioaru](lioaru.md) | Time | Tani | Denbora |
+| [Lioaru](lioaru.md) | Time | Tani | Valreka |
 | [Brauogi](brauogi.md) | Earth | Sarrum | Lurrath |
 | [Ezkudon](ezkudon.md) | Knowledge | Enki | Thekkavar |
 | [Egulon](egulon.md) | Light | Iro | Ljosarn |
