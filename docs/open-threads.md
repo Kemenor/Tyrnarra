@@ -328,11 +328,6 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 **Open.** The form of the shared structure. Working hint: **liquid-democracy-style** (voters vote directly on issues or delegate to representatives, with re-delegation chains). Other possible forms: bicameral council (one chamber per domain), elected joint Reeve, rotating governance. The specific structure shapes who sits in the kingdom's chambers, how disputes between the two halves resolve, what happens when Sarrum or Araphel would object to a decision the shared body makes, and how the two-domain governance answers (or fails to answer) to the Council of the Bound Thirteen.
 **Where.** Future: [lore/geography/brauogi.md](../lore/geography/brauogi.md), *Twin Suns*, and [lore/geography/myrkono.md](../lore/geography/myrkono.md), *Bikitsa*; [lore/factions.md](../lore/factions.md) for the political body itself once shaped.
 
-### [Geography] The smaller Iturmen eastern lake
-**Decided.** Iturmen (Brauogi's central east-west source-mountain spine) has **two lakes** on it: the great central **Iturburu** (under the tallest peak, the headwaters of the domain's rivers) and a smaller lake to the east. Iturburu is named and characterised as the practical-livelihood mother-lake; the eastern lake is unnamed.
-**Open.** Whether the smaller eastern lake is independent or a daughter-lake of Iturburu (overflow drainage). Naming if independent. Specific role (separate watershed? hot spring? sacred site of a different rite from Iturburu? observation point?).
-**Where.** Future: [lore/geography/brauogi.md](../lore/geography/brauogi.md), *Iturmen*; [lore/glossary.md](../lore/glossary.md), Brauogi section.
-
 ---
 
 ## § Campaign hooks: story frames waiting on a write-up
