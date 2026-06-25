@@ -333,11 +333,6 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 **Open.** Whether the smaller eastern lake is independent or a daughter-lake of Iturburu (overflow drainage). Naming if independent. Specific role (separate watershed? hot spring? sacred site of a different rite from Iturburu? observation point?).
 **Where.** Future: [lore/geography/brauogi.md](../lore/geography/brauogi.md), *Iturmen*; [lore/glossary.md](../lore/glossary.md), Brauogi section.
 
-### [Geography] Mugamen's Myrkono-side counterpart name
-**Decided.** Mugamen (Basque *muga + mendi*, "border-mountain") is the Brauogi-side name for the southern mountain wall separating Brauogi from Myrkono. The wall is the same physical range from both sides; Myrkono mortals presumably have their own name for it from the darkness-domain perspective.
-**Open.** The Myrkono-side name. Candidates in Myrkono's naming register: an Itzal-prefix name (shadow-mountain, e.g., *Itzalmen*), an Ilun-prefix name (dark-mountain), or a different naming logic entirely (Myrkono's culture might name the wall by what's *on the other side* — the bread-mountain, the wall before the grain country). Best handled when fleshing out Myrkono. The Brauogi/Myrkono pair of names for the same wall is itself a piece of canon flavour (each culture naming the same border by what's behind it from their side).
-**Where.** Future: [lore/geography/myrkono.md](../lore/geography/myrkono.md), *Sub-regions* or *Notes*; [lore/glossary.md](../lore/glossary.md), Myrkono section.
-
 ---
 
 ## § Campaign hooks: story frames waiting on a write-up
