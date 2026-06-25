@@ -167,11 +167,6 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **Historical case-law on Compact-test incidents over the 2532 years.** In two and a half millennia, the bound thirteen have presumably each pushed against the Articles at least once. The Iro / Drambur Crimson-Rain incident is the only canon example currently (Iro cannot speak against his own zealots because of the Drambur wound; voluntary, Law-enforced, or both?). Named historical incidents per god would give future sessions case-law to reach for. Pace by per-god deep-dive interest.
 **Where.** [lore/cosmology.md](../lore/cosmology.md), *The Gods' Law*; [lore/timeline.md](../lore/timeline.md), *Week of Crimson Rain → ⚿ GM Secret*; [lore/gods.md](../lore/gods.md) for per-god behaviour-under-the-Compact specifics.
 
-### [Cosmology] Aeris / Scar of Aeris: naming-stratum decision *(low)*
-**Decided.** Aeris, Scar of Aeris, Hall of Shards, Sulfur Vents of Vehl exist in Fenurra with Latinate / Germanic / English-stylised names.
-**Open.** Decide whether these stay Fenurran-internal (matching the Fenurran cultural register, Latinate-feeling internal vocabulary, paralleling the kitsune's Japanese-internal and Sortalde's Chinese-internal registers) or get retrofitted to the deep-old Basque/Icelandic stratum. Recommended default: keep Fenurran-internal.
-**Where.** [lore/geography/ehizahar/fenurra.md](../lore/geography/ehizahar/fenurra.md); [lore/glossary.md](../lore/glossary.md), Fenurran proper nouns.
-
 ### [Cosmology] Planar Travel: mortal-side mechanics *(low)*
 **Decided.** Planes are traversable by gods and sufficiently powerful beings via the Astral Plane.
 **Open.** Mortal-side mechanics: what spells, rituals, or artefacts allow mortal planar travel, and what each costs.
@@ -284,8 +279,8 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 ### [Haizava] Shifting City: open follow-ups
 **Decided.** Haizava is **the Shifting City**, Fisaya's god-city: a fixed kinetic city the wind reconfigures (read, not mapped), where **the wind seats the government** (the Eye, the Windward, the Turning; the sworn-neutral **Windwatchers** keep the Eye and call the Turning), with **svif** board-culture, Fisaya present as herself, the **Fairwind** festival, and the **⚿ GM Secret** that the Windwatchers (not the wind) banish the grasping. Stands on the great river at the **Baerfrost / Fellibylur border**. Canon complete in lore and HTML (see *Where*).
 **Open.** Follow-ups:
-- **Festival name** confirm (**the Fairwind**; alts the Byrleik / the Windrace).
 - **Named figures and districts** (a current Windward, notable Windwatchers, named wards) unwritten.
+- **The Fairwind's specifics** (day-count, order of races, the rite by which a champion earns the challenge, the customary form the goddess's appearance takes) unwritten. *(Festival name itself is settled as **the Fairwind** across lore + HTML; the alts the Byrleik / the Windrace are retired.)*
 **Where.** [lore/geography/vindul.md](../lore/geography/vindul.md), *Haizava* (including ⚿ GM Secret); [lore/glossary.md](../lore/glossary.md), *Vindul → Haizava*; [lore/ancestries.md](../lore/ancestries.md), *Strix*, *Kashrishi*; [docs/god-city-seeds.md](god-city-seeds.md). HTML published at `/setting/talan/domains/vindul/haizava/haizava.html`.
 
 ### [Factions] Spice Wine + Dance of the Sulfur Fire: magic/faith integration *(low)*
