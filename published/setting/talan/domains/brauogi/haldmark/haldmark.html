@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haldmark · Brauogi · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #c47a4e;
+    --card-bg: rgba(34,22,16,0.55);
+  }
+
+  /* Left-bordered callout (hearth-clay) */
+  .keep-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(40,26,18,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .keep-call .kc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .keep-call p { margin: 0 0 12px; line-height: 1.6; }
+  .keep-call p:last-child { margin-bottom: 0; }
+
+  /* The three keepings (was / is / will be reused as kept / keep / kept) */
+  .triad-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(40,26,18,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .triad-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .triad-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 8px; }
+  .triad-step { flex: 1 1 200px; min-width: 180px; padding: 12px 16px; background: rgba(46,30,20,0.6); border: 1px solid rgba(196,122,78,0.4); border-radius: 3px; text-align: center; }
+  .triad-step.now { background: rgba(58,38,24,0.75); border-color: var(--domain-accent); }
+  .triad-tense { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .triad-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--gold-bright); margin-bottom: 6px; }
+  .triad-step p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+  .triad-arrow { display: flex; align-items: center; color: var(--domain-accent); font-size: 1.2rem; font-weight: bold; }
+  .triad-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* Beast cards carry a small role-band */
+  .beast-band { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .triad-row { flex-direction: column; }
+    .triad-arrow { transform: rotate(90deg); justify-content: center; }
+    .keep-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="haldmark">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Haldmark</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Haldmark</div>
+    <div class="page-subtitle">Brauogi Sub-Region · The Kept March</div>
+    <div class="page-flavor">"Ask a Kholo who she is, and she will answer with who she keeps."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Icelandic <i>halda</i> (to hold, to keep) + <i>mörk</i> (march, borderland) → <b>Haldmark</b>, "the kept march." Brauogi's cold northern frontier leans to the colder tongue, Icelandic, where the source-country east leans Basque (Sugeiturri); <i>halda</i> is the people's whole verb. The old march-name <b>Azkamour</b> now belongs only to its principal trade-town.</dd>
+    <dt>Position</dt><dd>The north-western march of Brauogi. <b>Hafra coast</b> to the west; the <b>Vindul / Fellibylur frontier</b> to the north, the hard edge against the storm-steppe; <b>Sugeiturri</b> the source-country to the east; the <b>Earth Realm</b> to the south.</dd>
+    <dt>Terrain</dt><dd>Cold green uplands between the breadbasket and the storm, colder and harder the further north you go: real winters, decent pasture-and-grain country, a Hafra coast, and a frontier that has always had to be guarded.</dd>
+    <dt>Character</dt><dd>
+      <i>A warm, matriarchal keeping-people. The inward-permanence to the Minotaur's outward: where the Minotaur builds to outlast, for everyone, the Kholo hold, for their own.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Kept March</span><span class="pill">Keep Your Own</span><span class="pill">Whose Are You</span><span class="pill">The Vaka</span><span class="pill">Haldis &amp; Vaki</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Kholo</b>, the Keepers, at their fullest expression. Women <b>hold</b> the family circles; men serve <b>the Vaka</b> and govern the commons. Three beasts only they keep run through the whole of it: the great <b>stone-ox</b>, the <b>Heimhund</b> home-hound, and the <b>Vetrhjort</b> winter-stag.</dd>
+    <dt>Faith</dt><dd>Their own belief-formed pair: <b>Haldis</b> the Mother and Keeper, who keeps even the unkept, and <b>Vaki</b> the Son and Watcher, who guards what she keeps. Homely and clergy-less, lived at the table and on the watch; <b>Sarrum</b> faint behind as the domain-earth.</dd>
+    <dt>Rule</dt><dd>No throne and no capital. Women hold autonomous family <b>circles</b> (a clan is many matriarchs, never one); men serve <b>the Vaka</b>, and on honourable discharge earn the <b>franchise</b> to govern the commons through ranked civil offices climbed by bearing.</dd>
+    <dt>Founding</dt><dd>An old people; a young government. The keeping-culture and Haldis run <b>Lost-Era</b> deep; the Vaka and its franchise are the <b>Dark Era's</b> survival made permanent, the breach-century guard turned peacetime livelihood.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(196,122,78,0.5);">
+    <div class="gods-city-label">No Seat, by Nature</div>
+    <div class="gods-city-name">Azkamour</div>
+    <div class="gods-city-byname">the principal trade-town · Haldmark keeps no capital, the clans hold themselves and the Vaka keeps the commons</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Keeping does not scale into governance, so Haldmark has no centre. The old name Azkamour, "the Swift March," now names only its busiest town, the Hafra-and-border trade-stop where the swift riders carry grain and storm-news both ways.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="whose-are-you" class="section-heading">Whose Are You</h2>
+  <div class="prose">
+    <p>The Kholo are the people for whom <i>keeping your own</i> is the whole of life. Ask a Kholo who she is and she answers with <i>who she keeps and whose she is</i>. To keep is to take total, lifelong, never-off-duty responsibility for those who are yours, and your worth is who depends on you and how well you carry them, not what you own or what you built.</p>
+
+    <p>So the first thing established about a person is <i>whose are you</i>: where you sit in the web of keeping. The genealogy that matters is <b>keeping-descent</b>, the chain of who carries whom, and because keeping outranks blood, your own is your circle and not your bloodline. A brother married away is your blood and no longer your own; his own is his wife's circle now. To be no one's is the void the whole society exists to prevent, so <b>the unkept</b>, a person no circle holds, sit in an uneasy nowhere, and the gravest sanction the Kholo have is to be <i>unkept</i>, cast out of every circle and made no one's.</p>
+  </div>
+
+  <div class="keep-call">
+    <div class="kc-label">Keep · Hold</div>
+    <p>Two words do the work, and they are not the same. To <b>keep</b> is to be responsible for your own charges, the children, elders, taken-in; almost everyone keeps. To <b>hold</b> is to be the matriarch who carries a whole circle and its standing, and a circle has one holder at a time. Keeping is universal; holding is matriarchal. A Kholo man keeps his own children and does much of the work the herd and household run on, but by custom he does not hold a circle; he marries into his wife's circle and is honoured there.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="circle-and-clan" class="section-heading">The Circle and the Clan</h2>
+  <div class="prose">
+    <p>A <b>circle</b> is a household-and-more held by a matriarch: her daughters and their married-in husbands and children, the elders, the taken-in. Within it each mother keeps her own children while the matriarch holds the whole, so almost everyone is both keeper and kept at once. Only two sit at a single pole: the child, kept and keeping no one yet, and the matriarch at the top, who holds all and is held by none, until age hands her back into being kept.</p>
+  </div>
+
+  <div class="triad-wrap">
+    <div class="triad-label">A Kholo Life Is Three Keepings</div>
+    <div class="triad-row">
+      <div class="triad-step">
+        <div class="triad-tense">first</div>
+        <div class="triad-title">You Are Kept</div>
+        <p>A child in someone's circle, carried and keeping no one yet.</p>
+      </div>
+      <div class="triad-arrow">→</div>
+      <div class="triad-step now">
+        <div class="triad-tense">your prime</div>
+        <div class="triad-title">You Keep</div>
+        <p>You carry your own, and a matriarch holds her whole circle. Standing is the size and health of what you keep.</p>
+      </div>
+      <div class="triad-arrow">→</div>
+      <div class="triad-step">
+        <div class="triad-tense">in age</div>
+        <div class="triad-title">You Are Kept Again</div>
+        <p>The keeper becomes the kept: handed your circle to your protégée, carried now by the one you raised, the circle's living counsel.</p>
+      </div>
+    </div>
+    <p class="triad-note">Keeping is active work, so a matriarch hands over in good time rather than at death. To die still keeping leaves your own to scramble in grief; the honoured thing is to pass the carrying on while you can still do it well.</p>
+  </div>
+
+  <div class="prose">
+    <p>Circles <b>bud</b>. A matriarch can hold only as many as she can know and carry, so when a sub-branch grows large enough and has someone strong enough to hold it, that branch stands up as its own circle. Budding is a triumph, not a loss: a matriarch's greatness is measured as much by how many circles have budded from her keeping as by the one she holds now, and to raise a daughter strong enough to leave and hold her own is the highest keeping there is.</p>
+  </div>
+
+  <div class="keep-call">
+    <div class="kc-label">A Clan Is Many Matriarchs</div>
+    <p>A <b>clan</b> is the cluster of independent kin-circles all budded from one mother, bound by kinship and loyalty, the senior circle carrying influence but never command. There is no single clan-matriarch. A keeper's standing is the size and health of what she keeps, read across a valley in her herd and her circle, grown in good years and tested in catastrophe (which can lift a clan, carried everyone through, or break it, lost its own). It is reckoned on the <b>Beintak</b>, the carved antler-bone tokens, the ledger of every life kept, the hard-season survivals worn as the great ones.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-vaka" class="section-heading">The Vaka</h2>
+  <div class="feature-panel prose">
+    <p>Haldmark has no throne and no central holding, because keeping does not scale into governance and the matriarchs, who hold the real power, are far too busy keeping to govern. So government is not where power lives, and it falls to those free of keeping: the <b>men.</b> They serve, voluntarily, in <b>the Vaka</b> (Icelandic <i>vaka</i>, "vigil, watch"), the order of Vaki: the frontier-watch against the dangers of the hard edge and, above all, the muster that rides out when catastrophe strikes to keep circles alive through the disaster no one matriarch survives alone. On honourable discharge a man earns the <b>franchise</b>, and the discharged govern the commons through <b>ranked civil offices climbed by bearing</b>. A man who never serves is no outcast, only a private man with a circle and no civic voice; women may serve and be franchised, but in practice they are keeping, so the government runs male.</p>
+  </div>
+
+  <div class="keep-call">
+    <div class="kc-label">The Hunt-League's Mirror</div>
+    <p>Like Baerfrost's clans across the frontier, the Vaka is a Dark-Era northern-frontier survival-institution. Unlike them, the army does not rule (service only qualifies you), and what earns a man his say is what he <i>kept safe</i>, never what he killed. <i>He wakes so his own may sleep.</i> A visitor sees men in every office and files Haldmark as a patriarchy; a Kholo knows the office is the chore and the keeping is the power. The men's sphere is the face to the world; the women's is the world.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="keeping-made-sellable" class="section-heading">Keeping Made Sellable</h2>
+  <div class="prose">
+    <p>Haldmark keeps herds in the cold uplands, and herding here is keeping made visible: your wealth is the living things you keep alive, carried through the winter the way a circle is, so a matriarch's standing is read in her herd as much as her people. The Kholo are the herd-leg of the breadbasket's cooperative triangle, meat and milk and leather and wool flowing out, <b>Earth Realm grain</b> and <b>Dragonet metal</b> flowing in. The cold uplands grow no bread of their own, so the grain-trade is how a circle gets people and beasts through the lean season, existential cooperation rather than a nicety.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="beast-band">Carry</div>
+      <div class="card-name">The Stone-Ox</div>
+      <p>The great hauler they breed for Lurrath's portage and the continent's heavy work. Patient, massive, enduring, the Kholo's gift to the world's carrying.</p>
+    </div>
+    <div class="accent-card">
+      <div class="beast-band">Protect</div>
+      <div class="card-name">The Heimhund</div>
+      <p>The home-hound, a fey bond-beast that can only be kept, never owned, leaving anyone who merely uses it and always finding its way back to its own. <i>You do not lose a Heimhund; it comes back, or it died coming back.</i> It runs with the Vaka on the frontier and at the matriarch's hearth alike.</p>
+    </div>
+    <div class="accent-card">
+      <div class="beast-band">Provide</div>
+      <div class="card-name">The Vetrhjort</div>
+      <p>The winter-stag, the fey-touched cervid that carries a circle through the dark with milk and meat and warmth, and sheds the antler-bone the <b>Beintak</b> are carved from. The beast that keeps them alive in winter is the one whose bone records the kept.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The three beasts make four value-added exports only Haldmark can offer: the <b>stone-oxen</b>; the <b>guard-companies</b>, Vaka-trained protectors hired across the continent (un-buyable elsewhere because they come with their Heimhunds, and hired to <i>keep something safe</i> rather than to raid, which sets them apart from the Mercenary Guild and funds the grain a circle cannot grow); <b>antler-beast leather and armour</b>, the warm tough hide worked with Dragonet metal into a guardsman's wear; and <b>antler-craft</b>, the fey-hard antler taking an edge and a polish ordinary horn will not. They breed what carries, hire out what protects, and craft what provides.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="haldis-and-vaki" class="section-heading">Haldis and Vaki</h2>
+  <div class="prose">
+    <p>The Kholo keep their own gods, a belief-formed pair their keeping made, with Sarrum faint behind them as the domain-earth that gives the grain and grass. The two map onto the society exactly: the Mother holds, the Son guards, the hearth and the wall.</p>
+  </div>
+
+  <div class="two-column">
+    <div class="accent-card framed">
+      <div class="card-name" style="color:#d89a6a;">Haldis, the Keeper</div>
+      <p>The Mother, the divine matriarch: the great holder whose circle is the whole people, the one keeper with no capacity-limit, so that <i>whose are you</i>, asked all the way up, ends at her. Every Kholo is hers. Her warmest article: <b>she keeps the unkept</b>, holding the orphan, the stranger, and the dropped charge whom no mortal circle will, so no Kholo is ever truly no one's.</p>
+    </div>
+    <div class="accent-card framed">
+      <div class="card-name" style="color:#cf8a55;">Vaki, the Watcher</div>
+      <p>The Son, who guards what the Mother keeps: the frontier, the danger, the wall between the circle and the dark. Patron of the Vaka, the son who left the hearth to hold the edge so his Mother's own may sleep warm within, the men's own life made divine. <i>He wakes so his own may sleep.</i></p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The faith is homely and has no clergy, lived at the table and on the watch. Its sacraments are the kept continuities of the home: every family's <b>starter</b> (each one named and fed daily for generations, a piece carried out when a circle buds), and the <b>Forever Stew</b>, the village's or district's ever-simmering pot, ladled to any who come, so that no one in a Kholo village goes hungry, the everyday face of the keeping the Vaka is for in catastrophe. Keeping is not preached here; it is eaten. Death is a tender footnote: a lost one's Beintak is retired with care, and a guardsman who falls on duty is said to have <i>gone to stand with the Son</i>.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="founding" class="section-heading">The People Old, the March Dark-Era</h2>
+  <div class="prose">
+    <p>The Kholo are an old people; the government is young. The keeping-feeling, the matrilineal circles, the budding clans, and Haldis herself run Lost-Era deep, a people long before they were a polity, the men always the mobile ones droving the herds to the hard pastures and guarding them against the edge.</p>
+
+    <p>The <b>Vaka</b> and its franchise are the <b>Dark Era's</b> survival made permanent. Through the breach centuries the frontier turned deadly, corrupted-spawn and worse atop the killing winters, and the clans guarded or died; the men who kept the circles alive earned the say in how the rest was run, and Vaki was forged here too, the guard-god born of the breach-century need. When the dark lifted, the killing-purpose that left the Hunt-League in crisis never troubled the Vaka, because keeping-safe never fades: the lean season comes every year and the skill exports, so Haldmark turned its survival-institution smoothly into a peacetime livelihood. The steady survivors beside their neighbour's restless ones, which is Brauogi to Vindul exactly.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Mother Keeps</button>
+    <div class="legend-era-content">
+      <p>They say in Haldmark that no one is ever truly no one's, because what no circle holds, the Mother holds. The orphan with no clan, the wanderer who belongs nowhere, the old guardsman whose circle died before him: the folk say Haldis has them on her own roll, kept at her own hearth, and that a stranger fed from the Forever Stew is eating at her table by proxy. It is the comfort offered at a Kholo deathbed to the one with no one left, and it is two words. <i>The Mother keeps.</i></p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Gods the Keeping Made, and the Triage No One Names</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Quiet Cosmology, and the Roster</div>
+
+      <p class="secret-reveal">Haldis and Vaki are belief-formed, like every non-bound god on Talan, coalesced across the Lost and Dark Eras out of a people's devotion to keeping, the Keeper and the Watcher their own faith made real in Diyu. This is not the buried, identity-cracking secret that Sugeiturri's Zaharsuge is; it is the quiet cosmological fact, and the Kholo would not be much troubled to hear it, because the gods answer and the duty is unchanged whether the keeping made the keepers or the other way round.</p>
+
+      <div class="secret-pills">
+        <span class="secret-pill">Belief-Formed</span>
+        <span class="secret-pill">The Gods Answer</span>
+        <span class="secret-pill">Left to the Mother</span>
+      </div>
+
+      <p class="secret-coda">The genuinely guarded thing is smaller and human. In a catastrophe too wide for the muster to reach everyone, the Vaka's senior offices decide which circles it rides to and which are left to the Mother. That triage is the most powerful and least-spoken act of government in Haldmark, and the phrase <i>left to the Mother</i>, warm in a sermon, is a death-sentence in a duty-roster.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain overview; Haldmark as its north-western keeping-march, the herd-leg of the cooperative triangle.</li>
+      <li><a href="/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html"><b>Sugeiturri →</b></a> · The Dragonet source-country to the east; the other freshly-built Brauogi heartland, water where Haldmark is keeping.</li>
+      <li><a href="/setting/talan/domains/brauogi/lurrath/lurrath.html"><b>Lurrath →</b></a> · Sarrum's steadfast city, which runs its haulage on the stone-oxen the Kholo breed.</li>
+      <li><a href="/setting/talan/domains/vindul/vindul.html"><b>Vindul →</b></a> · North across the frontier; Baerfrost's Hunt-League is the Vaka's restless mirror, killing for a name where the Kholo guard for their own.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Haldmark's culture is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>Named clans, circles, and a matriarch or two.</b> The keeping-clans, a great old holder and her protégée, a renowned stone-ox line, all await coining.</li>
+      <li><b>Azkamour the town.</b> The principal trade-town keeps its old swift-rider character, but its streets, families, and the workings of the border trade are unwritten.</li>
+      <li><b>The Vaka's offices.</b> The ranked civil posts the franchise climbs toward, and the senior offices that ride the triage, want names and faces.</li>
+      <li><b>Haldis and Vaki's cleric domains (PF2e).</b> The keeping-and-protection register is canon-pending for the registrar pass.</li>
+      <li><b>The guard-company captains.</b> The named companies hired across the continent, and the reputations they keep, are open.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · HALDMARK</div>
+
+</div>
+
+</body>
+</html>
