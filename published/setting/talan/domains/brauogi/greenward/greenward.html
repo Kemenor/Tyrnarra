@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenward · Brauogi · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #b8c24a;
+    --card-bg: rgba(28,30,16,0.5);
+  }
+
+  /* Left-bordered callout (the Made-Ground principles) */
+  .ground-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(26,30,14,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .ground-call .gc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .ground-call p { margin: 0 0 12px; line-height: 1.6; }
+  .ground-call p:last-child { margin-bottom: 0; }
+
+  /* The three stages of the basin: fell -> held -> reclaimed */
+  .stage-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(26,30,14,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .stage-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .stage-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 8px; }
+  .stage-step { flex: 1 1 200px; min-width: 180px; padding: 12px 16px; background: rgba(34,36,18,0.6); border: 1px solid rgba(184,194,74,0.35); border-radius: 3px; text-align: center; }
+  .stage-step.now { background: rgba(44,48,22,0.78); border-color: var(--domain-accent); }
+  .stage-when { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .stage-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--gold-bright); margin-bottom: 6px; }
+  .stage-step p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+  .stage-arrow { display: flex; align-items: center; color: var(--domain-accent); font-size: 1.2rem; font-weight: bold; }
+  .stage-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* Band atop the Four-That-Held cards */
+  .held-band { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .stage-row { flex-direction: column; }
+    .stage-arrow { transform: rotate(90deg); justify-content: center; }
+    .ground-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="greenward">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Greenward</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Greenward</div>
+    <div class="page-subtitle">Brauogi Sub-Region · the Furrowsworn</div>
+    <div class="page-flavor">"A field you start, your granddaughter will be the first to reap."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Modern English, lightly drifted: <i>green</i> + <i>ward</i> (a guarded place) → <b>Greenward</b>, "the warded green." The young name says the young thing, the regrowth and the guard that keeps it, named in one breath. Against the deep-old Basque of <b>Sugeiturri</b> and the Icelandic of <b>Haldmark</b>, Greenward wears a plain modern name on purpose, because the land it names is the one part of Brauogi that had to be made new.</dd>
+    <dt>Position</dt><dd>The broad central-southern basin of Brauogi: <b>Sugeiturri</b>'s source-uplands to the north, <b>Haldmark</b> to the north-west, <b>Baratalda</b>'s orchards to the east, and the <b>Mugamen</b> wall against Myrkono to the south. Lurrath's <b>Eraztumen</b> ring rises from its heart, and <b>Hirubaso</b> the grove sits as an enclave in its south-centre.</dd>
+    <dt>Terrain</dt><dd>Rolling golden lowland today: grain to the horizon, herds on the river-margins, market-towns at the road-forks. But most of this gold is <i>recent</i>, and along the southern and deeper margins the grey still shows, blighted ground not yet turned, the reclamation-line creeping into it one season at a time.</dd>
+    <dt>Character</dt><dd>
+      <i>The breadbasket that died and was brought back by hand. Where Lurrath builds permanence you can stand on, Greenward grows it out of ruined earth, stone against soil.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Made Ground</span><span class="pill">the Furrowsworn</span><span class="pill">the Four That Held</span><span class="pill">the Evenhand</span><span class="pill">the Seed-Keepers</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Minotaur</b>, the ones who outlast, at their fullest expression: the <b>makers of ground</b>, the reclaimers who brought the basin back furrow by furrow, and the <b>Seed-Keepers</b> who carried the living crop-lines true through the dark.</dd>
+    <dt>Faith</dt><dd><b>Sarrum</b>, plain and direct: this is the Earth god's own basin, and the reclamation is his liturgy made labour, Burden carried becoming Harvest taken. Beside the fields' devotion runs the Primal druidry of <b>Hirubaso</b>, the grove whose green stood when the ploughland fell.</dd>
+    <dt>Rule</dt><dd>The <b>Furrowsworn</b>, a confederation of four bastion-cantons bound by the never-again reclamation, no crown. A standing collegial council, <b>the Evenhand</b> (five seats, no seat above another), argues slowly within and speaks with one voice without; its chair, <b>the First Hand</b>, rotates a ceremonial year.</dd>
+    <dt>Founding</dt><dd>The land ancient, the polity young. The bastions held through the <b>Dark Era</b>; the Furrowsworn was sworn as the reclamation outgrew any one of them and formalised in the <b>Adventurer Era's</b> first century. A reclamation made into a state.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(184,194,74,0.5);">
+    <div class="gods-city-label">The Civic Seat · No Crown</div>
+    <div class="gods-city-name">Babesarri</div>
+    <div class="gods-city-byname">the stone refuge that took in the field-less · now Greenward's civic heart, where the Evenhand sits and the League speaks with one voice</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Greenward keeps no king. Power sits at Babesarri only as a table sits in a room, the five Hands of the Evenhand seated as equals, bound to carry together whatever they rule.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="ground-made-twice" class="section-heading">The Ground Made Twice</h2>
+  <div class="prose">
+    <p>Greenward is the breadbasket that died and was brought back by hand. When the miners' breach loosed the Corrupted God in 1321 MR and the Golden Empire broke, the corruption rose through the soil itself, and the bread-basin, the Earth domain's own ground, turned grey beneath the people who farmed it. The Minotaurs were driven to the edge of subsistence, surviving only where a handful of strongholds kept the blight at bay.</p>
+  </div>
+
+  <div class="stage-wrap">
+    <div class="stage-label">How a Breadbasket Comes Back</div>
+    <div class="stage-row">
+      <div class="stage-step">
+        <div class="stage-when">1321 MR · the Flood</div>
+        <div class="stage-title">It Fell</div>
+        <p>The Corrupted God's blight rose through the soil. The basin turned grey; its people were pushed to the edges of bare survival.</p>
+      </div>
+      <div class="stage-arrow">→</div>
+      <div class="stage-step">
+        <div class="stage-when">the Dark Era · the Bastions</div>
+        <div class="stage-title">It Held</div>
+        <p>The <b>Four That Held</b> kept the blight at bay, and from them the Minotaurs drove the grey back furrow by furrow, regrowing behind the lines.</p>
+      </div>
+      <div class="stage-arrow">→</div>
+      <div class="stage-step now">
+        <div class="stage-when">2135 MR → now</div>
+        <div class="stage-title">It Was Reclaimed</div>
+        <p>With the Corrupted God sealed, the true reclamation began, and four Adventurer-Era centuries have remade the basin into the breadbasket it is again, field by field.</p>
+      </div>
+    </div>
+    <p class="stage-note">By people who will not see it lost twice.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="four-that-held" class="section-heading">The Four That Held</h2>
+  <div class="prose">
+    <p>Greenward remembers the four strongholds that survived the blight as the <b>Four That Held</b>. They are the cantons of the Furrowsworn still, and their names sketch the reclamation between them: the grove that held the faith, the granary that held the food, the wall that held the line, the refuge that held the people.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="held-band">The Grove · Faith</div>
+      <div class="card-name">Hirubaso</div>
+      <p>The Primal druid grove where three rivers meet, whose green stood when the ploughland fell; its living craft turned the corruption from the waters where corruption scrambles all arcanotech. Independent still, it keeps its own druid order, and it is the only routine Primotech site on the continent.</p>
+    </div>
+    <div class="accent-card">
+      <div class="held-band">The Granary · Seed</div>
+      <div class="card-name">Garaztegi</div>
+      <p>The granary-hold, where the food and the seed were walled in and rationed through the dark. The heart of the <b>Seed-Keepers</b> and of the seed-library, the vault of clay seed-jars going back to the bastion years.</p>
+    </div>
+    <div class="accent-card">
+      <div class="held-band">The Edge · The Line</div>
+      <div class="card-name">Eutsalde</div>
+      <p>"The place that held": the bastion at the hardest edge, the line that never broke. It stands nearest the sealed dark now, the watch on the reclamation's frontier.</p>
+    </div>
+    <div class="accent-card">
+      <div class="held-band">The Refuge · The People</div>
+      <div class="card-name">Babesarri</div>
+      <p>The stone refuge that took in the people who had lost their fields. Greenward's civic heart now, the most peopled of the cantons and the seat of the Evenhand.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="made-ground" class="section-heading">The Made Ground</h2>
+  <div class="prose">
+    <p>A Greenwarder reckons ground the way Lurrath reckons stone, but where the god-city builds permanence you can stand on, Greenward grows it out of ruined earth, and the work outlasts the worker by design. You do not finish a reclamation; you advance it and hand it on. A draining-channel, a soil-bed laid course by course, a margin pushed one pace into the grey: each is a <i>work</i>, carried by a bearer and logged, and a Greenwarder's standing is the work she advanced and how cleanly she passed it to the next hand, never what she finished, because no one finishes.</p>
+  </div>
+
+  <div class="ground-call">
+    <div class="gc-label">The Boundary-Stones Tell the History</div>
+    <p>The stones are set out one pace at the turning of a good year, and never moved before their season, so the depth of the reclaimed margin since a grandfather's birth is read straight off the ground. The deepest courtesy in Greenward is the slowest: a field you start, your granddaughter will be the first to reap.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="seed-keepers" class="section-heading">The Seed-Keepers</h2>
+  <div class="feature-panel prose">
+    <p>When the basin rotted, the crop-lines that fed half the continent very nearly died with it, and the people who would not let them go became the <b>Seed-Keepers</b>, the lineages who carried the living seed through the dark behind Garaztegi's walls and kept the lines true while the world outside turned grey. They are not a place but an order, seed-lineages threaded through all four bastions, each holding and renewing a few named lines as a trust measured in centuries; their heart is the <b>seed-library</b> at Garaztegi.</p>
+    <p>The continent's harvests rest on them quietly: kingdoms borrow Greenward's true-bred lines and return a share of the renewed seed, and Lurrath's own <b>Iraungar</b>, the lasting-grain, descends from a keeping-line bred here. They know exactly what nearly went, because their grandmothers held it in their hands, and <i>never again</i> is not a slogan to them but a job.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="furrowsworn" class="section-heading">The Furrowsworn, and the Evenhand</h2>
+  <div class="prose">
+    <p>Greenward is a confederation of the four bastion-cantons, bound not by a crown but by the reclamation itself, the one indivisible duty fracture would betray, the way Myrkono's Wardstone-vigil binds the star-plains. The cantons swore the League as the reclamation outgrew any one bastion, and each canton keeps its own internal rule, Hirubaso its druid-order and the others their stewardships, sending one seat to a standing collegial council: <b>the Evenhand</b>, five seats in all, one per bastion and a standing seat for the Seed-Keepers, who hold what could be lost.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>The Evenhand is an even hand by law, no seat above another; its chair, <b>the First Hand</b>, rotates a ceremonial year and rules nothing alone. Within doors the Evenhand argues slowly and hard, because Greenward distrusts a fast decision the way Lurrath distrusts a quick foundation. But the moment it rules, every Hand carries the ruling as their own and the League speaks to the world with one voice, so that an outsider dealing with Greenward deals with all of it at once, and a thing the Evenhand has agreed is agreed for good.</p>
+  </div>
+
+  <div class="ground-call">
+    <div class="gc-label">The Minotaur Bond, Made a Constitution</div>
+    <p>The friendship and the grudge are both made slowly and to last; the Evenhand writes that into law. A deal struck with the council is struck by every Hand, and it binds. Greenward is the place the continent comes to when it wants an agreement that will not come apart.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · the Wounded Earth Healed</h2>
+  <div class="prose">
+    <p>Where Haldmark grew its own Keeper and Watcher and Sugeiturri worships the river as the wyrm, Greenward keeps the domain-god plain: this is <b>Sarrum</b>'s own basin, and the reclamation is his liturgy made labour, Burden carried becoming Harvest taken, a field turned from grey to gold consecrated as a healing and not merely a sowing.</p>
+    <p>Beside the fields' devotion runs the other craft that held the basin, the Primal druidry of <b>Hirubaso</b>, the grove whose green stood when the ploughland fell, where corruption scrambles all arcanotech but the living current does not. A Greenwarder prays to the god already standing and works the ground back to him; the grove keeps the older, wilder art; and the two have held the basin between them.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="day-and-young" class="section-heading">The Day, the Line, and the Young</h2>
+  <div class="prose">
+    <p>Greenward wakes to the field and the ledger: a steward walks her works at first light, reads the boundary-stones that moved one pace this year, and the talk of the market-towns is who advanced what and who handed on clean. The thing the region is known for is the <b>slow line</b>, the visible creep of gold into grey at the reclamation frontier, plus the seed going out to the kingdoms and coming home renewed.</p>
+    <p>The visitor sees golden fields and files Greenward as a peaceful breadbasket; the native sees the grey margin, the warded edge, the ledgers, and the bastion-watch, and knows the calm is <i>recent</i> and <i>kept</i>. The young earn the right to a settled furrow by standing a season on the frontier first, breaking new ground or keeping the blight-watch at the edge, and the country's one sanctioned transgression is the dare every Greenward child takes once: to slip out to the warded edge by lantern, as close to the sealed dark as nerve allows, and feel for themselves whether the ground truly holds.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="grey-at-margin" class="section-heading">The Grey at the Margin</h2>
+  <div class="prose">
+    <p>Greenward's reclamation was winning until it had to start over. One of the Corrupted God's Nine, the <b>Root-Twister</b>, the lord of growth-turned-to-rot, lies in a sealed dungeon beneath the basin, and when the Nine Dungeons erupted across Talan in the 2524 MR wave it tore up through the very fields the Minotaurs had spent four centuries healing. The cantons sealed its gate, as Baerfrost sealed the Maw Serpent's, but a sealed gate is not a cleared one: corruption seeps back through the smaller tunnels the seal does not reach, and the grey gnaws again at the southern margins, undoing furrows a generation took to make.</p>
+    <p>The Adventurers' Guild works the containment alongside the Furrowsworn, because no land on Talan turns the Guild away, and there lies the friction: Greenward made this ground with its own hands and prides itself on holding what is its own, and the sight of outside parties soldiering across reclaimed soil sits hard. The Evenhand speaks the Guild fair with one voice and grinds its teeth behind the door. The Seed-Keepers, who remember how close the lines came to dying, are the ones least troubled by the help and most troubled by the cause.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Ground Remembers</button>
+    <div class="legend-era-content">
+      <p>They say in Greenward that grey ground never wholly forgets what it was, and that a field reclaimed can be <i>woken</i> by a careless hand, worked wrong, or worked too greedily, or worked without the turning-rites the Hirubaso druids set down. So a Greenward farmer keeps the small consecrations a city merchant would call superstition: the first furrow cut slow and spoken-over, the handful of old seed buried at the field's corner, the boundary-stone never moved out of season. The folk say a hurried man can call the grey back into good earth, and no Greenwarder will be the one to test it.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain overview; Greenward as its central breadbasket, the grain-leg of the cooperative triangle.</li>
+      <li><a href="/setting/talan/domains/brauogi/lurrath/lurrath.html"><b>Lurrath →</b></a> · Sarrum's steadfast city, which builds permanence in stone where Greenward grows it in reclaimed soil; its lasting-grain descends from a Greenward seed-line.</li>
+      <li><a href="/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html"><b>Sugeiturri →</b></a> · The Dragonet source-country to the north; the metal-leg whose ore the breadbasket ploughs and reaps on.</li>
+      <li><a href="/setting/talan/domains/brauogi/haldmark/haldmark.html"><b>Haldmark →</b></a> · The Kholo keeping-march to the north-west; the herd-leg, fed on Greenward grain through the lean season.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Greenward's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>Named bastion-towns and stewards.</b> The market-towns of the basin, a great old reclamation-steward and the work she carries, the seated Hands of the Evenhand, all await coining.</li>
+      <li><b>The Seed-Keeper lineages.</b> The named lines kept in the Garaztegi library, the lineages that hold them, and the famous crop-strains the continent depends on.</li>
+      <li><b>The Root-Twister's dungeon.</b> The sealed General beneath the basin, the seal-history of the 2524 campaign, and the containment war's named victories and losses are unwritten.</li>
+      <li><b>The Evenhand's offices and the First Hand's year.</b> The procedure of the slow ruling, the rotation of the chair, and how a canton's seat is filled want their detail.</li>
+      <li><b>Sarrum's reclamation-rites and Greenward's cleric domains (PF2e).</b> The turning-rites, the consecration of healed ground, and the registrar mapping are canon-pending.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · GREENWARD</div>
+
+</div>
+
+</body>
+</html>
