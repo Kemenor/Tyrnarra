@@ -2,7 +2,7 @@
 
 **Etymology:** Icelandic *halda* (to hold, to keep) + *mörk* (march, borderland) → **Haldmark**, "the kept march." Brauogi's cold northern frontier leans to the colder tongue: where the source-country east is Basque (Sugeiturri), the keeping-north is Icelandic, one domain in two languages, split the way the land is. *Halda* is the people's whole verb, and the march is named for it. *(Haldmark is the fully-fleshed march that earlier maps labelled Azkamour; that older name now belongs only to its principal frontier trade-town on the Hafra-and-border edge, where the swift riders still carry grain and storm-news both ways.)*
 
-**Position:** the north-western march of Brauogi, cold green uplands between the breadbasket and the storm. **Hafra coast** to the west; the **Vindul / Fellibylur frontier** to the north, the hard edge against the storm-steppe; **Sugeiturri** the source-country to the east; the **Earth Realm** to the south. Decent green pasture-and-grain country, colder and harder the further north you go, with real winters and a frontier that has always had to be guarded.
+**Position:** the north-western march of Brauogi, cold green uplands between the breadbasket and the storm. **Hafra coast** to the west; the **Vindul / Fellibylur frontier** to the north, the hard edge against the storm-steppe; **Sugeiturri** the source-country to the east; **Greenward** (the breadbasket-basin) to the south. Decent green pasture-and-grain country, colder and harder the further north you go, with real winters and a frontier that has always had to be guarded.
 
 **The people: the Keepers.** Haldmark is the heartland of the **Kholo**, the people for whom *keeping your own* is the whole of life. Ask a Kholo who she is and she answers with *who she keeps and whose she is*. To keep is to take total, lifelong, never-off-duty responsibility for those who are yours, and your worth is who depends on you and how well you carry them. It is a warm, rooted, dependable people, the inward-permanence to the Minotaur's outward-permanence: where the Minotaur builds to outlast, for everyone, the Kholo hold, for their own.
 
@@ -30,7 +30,7 @@ It is the Hunt-League's mirror, made deliberate. Like Baerfrost's clans across t
 
 ## Keeping made sellable
 
-Haldmark keeps herds in the cold uplands, and herding here is keeping made visible: your wealth is the living things you keep alive, carried through the winter the way a circle is. The Kholo are the herd-leg of the breadbasket's cooperative triangle, meat and milk and leather and wool flowing out, **Earth Realm grain** and **Dragonet metal** flowing in, and because the cold uplands grow no bread of their own, the grain-trade is how a circle gets people and beasts through the lean season, existential cooperation rather than a nicety.
+Haldmark keeps herds in the cold uplands, and herding here is keeping made visible: your wealth is the living things you keep alive, carried through the winter the way a circle is. The Kholo are the herd-leg of the breadbasket's cooperative triangle, meat and milk and leather and wool flowing out, **Greenward grain** and **Dragonet metal** flowing in, and because the cold uplands grow no bread of their own, the grain-trade is how a circle gets people and beasts through the lean season, existential cooperation rather than a nicety.
 
 Three beasts only the Kholo keep, one for each face of keeping:
 - **The stone-ox**, the great hauler they breed for Lurrath's portage and the continent's heavy work: *carry*.

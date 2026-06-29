@@ -182,6 +182,8 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 
 **In Lurrath:** the cutters and layers, the stonemasons and road-builders and wall-keepers whose work raises the permanence the city sells; the Minotaur trade-houses abroad are the ones who climbed the ring-crest and chose out (see `geography/brauogi.md`, *Lurrath*).
 
+**In Greenward** (the full-expression homeland): the makers of ground, the reclaimers who brought the basin back from the Corrupted God's Dark-Era blight furrow by furrow across the Adventurer Era, and the **Seed-Keepers** who carried the living crop-lines true through the dark. Where Lurrath builds permanence in stone, Greenward grows it in reclaimed soil (see `geography/brauogi/greenward.md`).
+
 ### Nagaji
 **Dominant in Lioaru (Time / Tani)**, heartland **Hareaveldi**, the serpent-kingdom of the desert. Shed, and whole again: a self is a finished thing a Nagaji can lay down, and a Nagaji is always already growing the next one. The smith of thirty years sheds the trade and is wholly a riverman now; the mourner emerges from grief clean in a way other folk find uncanny, and answers that the sorrow is in the skin she left. What a Nagaji was is not denied, just done; what they are becoming is the real skin, and no people on Talan carries less of its own past on its back. Tani's death-and-return is something they recognise rather than merely revere, for her mystery is written in their own bodies, and the rebirth-rites of Valreka and the mourning-liturgies of the Tani church carry a Nagaji cadence.
 
