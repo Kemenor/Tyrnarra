@@ -9,7 +9,7 @@ description: Use this skill when building or fleshing out one of the thirteen Bo
 
 Taking one of the **thirteen Bound-god city-states** from its **locked seed** (in [`docs/god-city-seeds.md`](../../../docs/god-city-seeds.md)) to fully fleshed lore and a dedicated Style B HTML page, in a single session, with the user's voice setting direction at every phase boundary. A god-city is the seat of a Grand God; it is not a normal sub-region, and it earns a dedicated page by default (the seed roster exists precisely so each of the thirteen reads distinct).
 
-The depth bar is the seven already built: **Merkavar, Myrria, Haizava, Eldara, Valreka, Thekkavar, Frae City**. Read two or three of those side by side before designing; they are what a finished god-city reads like.
+The build pass is complete: **all thirteen god-cities carry full lore and a published page** (status roster in `docs/god-city-seeds.md`). The skill now serves the maturation passes: deepening an already-built city (the Myrria/Merkavar retro-pass of 2026-06-16 is the model), naming its figures, festivals, and landmarks, or mirroring new canon onto its page. The same phases apply, with Phase 7 an edit of the existing page rather than a build. Read two or three built cities side by side before designing; they are what a finished god-city reads like.
 
 ## This skill is built on `sub-region-workflow`
 
@@ -69,7 +69,7 @@ Render them in the Phase 5 lore and the Phase 7 page. A full god-city build hits
 - **Accent**: pick a hue that fits the god and clears 3:1 against `#0f0c08`; where the god has a pantheon orb accent in `published/setting/cosmology/grand-gods.html`, harmonising with it is a nice touch (Tani's `#9070b0` → Valreka's amethyst).
 - **Honor the `published/setting/cosmology/grand-gods.html` canon.** Each god-city has a `city` field plus worship/depiction lines there; the page should elaborate them, never contradict (Thekkavar's Infinite Library test; Frae City's lightest-touch clergy and the tavern claims that hold up).
 
-## The built seven (depth-bar and reference implementations)
+## Reference implementations (all thirteen are built; these seven are the annotated depth-bar)
 
 | City | File(s) | ◈ / ⚿ seam |
 |---|---|---|
@@ -80,6 +80,8 @@ Render them in the Phase 5 lore and the Phase 7 page. A full god-city build hits
 | **Valreka** | `lore/geography/lioaru.md`; `published/setting/talan/domains/lioaru/valreka/valreka.html` | the old woman at the dig ◈; Amona is Tani + the water-bearers' atonement ⚿⚿ |
 | **Thekkavar** | `lore/geography/ezkudon.md`; `published/setting/talan/domains/ezkudon/thekkavar/thekkavar.html` | Enki teaches ◈; the price in the deep + what waits in the Leize ⚿⚿ |
 | **Frae City** | `lore/geography/askamira.md`; `published/setting/talan/domains/askamira/frae-city/frae-city.html` | the broken-chain man ◈; Cronus was mortal ⚿ |
+
+The other six (**Lograth** · zuzental, **Veidrath** · ehizahar, **Nahaskel** · nashavel, **Uravel** · floteyn, **Lurrath** · brauogi, **Ljosarn** · egulon) follow the same pattern: lore in the domain's `lore/geography/<domain>.md`, page at `published/setting/talan/domains/<domain>/<slug>/<slug>.html`, each with its own ◈/⚿ seam on the page.
 
 ## Hard rules (inherited, restated)
 

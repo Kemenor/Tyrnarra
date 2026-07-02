@@ -38,7 +38,7 @@ Always proceed in this order. If a branch is already covered by canon, say so an
 ## Grilling principles
 
 - **Specificity over completeness.** Better deep on three things than shallow on ten.
-- **Recommend, don't interrogate.** Every question carries a recommended answer. Open-ended *"what do you think?"* questions are the failure mode; replace with *"I'd guess X because Y — does that land?"*.
+- **Recommend, don't interrogate.** Every question carries a recommended answer. Open-ended *"what do you think?"* questions are the failure mode; replace with *"I'd guess X because Y; does that land?"*.
 - **Read the canon first.** If a question is answerable from `lore/geography/<region>.md`, `glossary.md`, `ancestries.md`, or another lore file, read the file and incorporate the answer rather than asking the user.
 - **Apply the specificity test relentlessly.** *"Could this exist anywhere else in Tyrnarra?"* is the recurring test. If yes, the answer is generic; push harder.
 - **Catch ancestry-as-label.** If the user (or the draft) says "Halflings live here", ask what about *this* place changes how Halflings live here. Same ancestry in two different sub-regions must produce two different cultures.
@@ -48,11 +48,11 @@ Always proceed in this order. If a branch is already covered by canon, say so an
 
 ## What a good grill looks like (a fragment)
 
-> **Me:** Geography first. Itsasalda is the maritime gateway for half the continent — Brauogi grain, Myrkono wool, Floteyn timber, Order of Steam freight, Nashavel traders dodging Zuzental. That's the flow. My guess at the consequence: nothing stays. Everything is in motion. The people who run the docks don't get to know the people who use them, because by the time you'd learn their names they're on the next tide. Does that track, or is there a slower current under the throughput I'm missing?
+> **Me:** Geography first. Itsasalda is the maritime gateway for half the continent: Brauogi grain, Myrkono wool, Floteyn timber, Order of Steam freight, Nashavel traders dodging Zuzental. That's the flow. My guess at the consequence: nothing stays. Everything is in motion. The people who run the docks don't get to know the people who use them, because by the time you'd learn their names they're on the next tide. Does that track, or is there a slower current under the throughput I'm missing?
 >
-> **User:** Tracks. And the slower current is the locals — the ones who *did* stay. They watch.
+> **User:** Tracks. And the slower current is the locals, the ones who *did* stay. They watch.
 >
-> **Me:** Good. That gets us to the seed. The ones who stayed are the watchers — and they made watching a standing: a seated slow council (the Vordsbench) where your seat is reckoned by the verified count of tides you've watched, with Vishkanya Reckoners keeping the count. Specificity test: could this be any port in Tyrnarra? I don't think so — Floteyn ports are timber-hauler towns, Vindul ports are Storm-rider towns, Bolverk has no comparable maritime layer. Permanence earned by patience, set against a port where nothing else stays, is what makes it Itsasalda. Sibling contrast next: Atarialda answers the same Lautaran churn by carrying the hearth *with* it; Itsasalda answers it by sitting still and counting tides. Same domain, opposite reflex. Confirmed?
+> **Me:** Good. That gets us to the seed. The ones who stayed are the watchers, and they made watching a standing: a seated slow council (the Vordsbench) where your seat is reckoned by the verified count of tides you've watched, with Vishkanya Reckoners keeping the count. Specificity test: could this be any port in Tyrnarra? I don't think so: Floteyn ports are timber-hauler towns, Vindul ports are Storm-rider towns, Bolverk has no comparable maritime layer. Permanence earned by patience, set against a port where nothing else stays, is what makes it Itsasalda. Sibling contrast next: Atarialda answers the same Lautaran churn by carrying the hearth *with* it; Itsasalda answers it by sitting still and counting tides. Same domain, opposite reflex. Confirmed?
 
 That's the rhythm. One axis. One recommendation. One question. Wait for the answer. Move to the next axis.
 
