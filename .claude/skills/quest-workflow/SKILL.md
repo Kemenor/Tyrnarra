@@ -52,7 +52,7 @@ The user opens with a block of raw material: themes, story beats, a location, a 
 - **the shape** (one-shot vs multi-session; dungeon-crawl / investigation / set-piece),
 - **the stakes + tone** (what failure costs; how grim / pulpy / eerie it plays).
 
-Make the seeds pull in genuinely different directions (different antagonist, different shape, different moral texture) so the pick is a real choice. Run them against the specificity test: if a seed's antagonist is a stock villain or its hook could be lifted into any other quest unchanged, sharpen it or replace it. Use the `grill-me` skill if the whole set reads generic.
+Make the seeds pull in genuinely different directions (different antagonist, different shape, different moral texture) so the pick is a real choice. Run them against the specificity test: if a seed's antagonist is a stock villain or its hook could be lifted into any other quest unchanged, sharpen it or replace it. Use the `grill-me-lore` skill if the whole set reads generic.
 
 The user picks one seed (or splices two). **Workshop the winner into a 4-6 sentence premise** and surface that before Phase 2: setting + campaign, party level/size (plus any party weakness/strength that should shape encounters, e.g. no healer, a fire mage), hook, opposition, stakes, tone, and shape + length.
 

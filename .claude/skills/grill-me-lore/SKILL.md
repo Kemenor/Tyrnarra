@@ -1,6 +1,6 @@
 ---
-name: grill-me
-description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated. Walk down each branch of the lore design tree (geography → seed → sibling-contrast → politics → daily life → faith → ancestry → naming → chronicler-tier check), resolving dependencies one at a time. For each question, provide a recommended answer drawn from the canon and the seed so far. Ask one question at a time. If a question can be answered by reading a lore file (lore/geography/<region>.md, lore/glossary.md, lore/ancestries.md, lore/cosmology.md, lore/gods.md, lore/factions.md, lore/timeline.md, docs/open-threads.md) or an existing HTML page, read the file instead of asking. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a Phase 5 prose draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
+name: grill-me-lore
+description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated. Walk down each branch of the lore design tree (geography → seed → sibling-contrast → politics → daily life → faith → ancestry → naming → chronicler-tier check), resolving dependencies one at a time. For each question, provide a recommended answer drawn from the canon and the seed so far. Ask one question at a time. If a question can be answered by reading a lore file (lore/geography/<region>.md, lore/glossary.md, lore/ancestries.md, lore/cosmology.md, lore/gods.md, lore/factions.md, lore/timeline.md, docs/open-threads.md) or an existing HTML page, read the file instead of asking. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me-lore. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a Phase 5 prose draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
 ---
 
 # Grill me
@@ -58,7 +58,7 @@ That's the rhythm. One axis. One recommendation. One question. Wait for the answ
 
 ## When to use this skill
 
-- The user invokes `/grill-me`, says "grill me", or asks to be stress-tested on a draft.
+- The user invokes `/grill-me-lore`, says "grill me", or asks to be stress-tested on a draft.
 - **Mid-`sub-region-workflow`, inside a phase:**
   - **Phase 2 (Generate seeds):** grill the seed before locking it. The specificity test is the central grill move.
   - **Phase 3 (User picks + refines):** the clarifying questions phase *is* a grill, lightly held.

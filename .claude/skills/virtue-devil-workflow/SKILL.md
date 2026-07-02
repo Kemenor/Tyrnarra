@@ -212,9 +212,9 @@ Lore is now canon. **Do not touch HTML** without an explicit publish signal (*pu
 
 ---
 
-## Grilling the devil (grill-me integration)
+## Grilling the devil (grill-me-lore integration)
 
-Use the `grill-me` skill before Phase 5 commits to prose, and again on the surfaced draft if any section reads thin. One question at a time, each with a recommended answer drawn from canon; read the lore file instead of asking when the answer is on disk. The devil-adapted grilling axes, in order:
+Use the `grill-me-lore` skill before Phase 5 commits to prose, and again on the surfaced draft if any section reads thin. One question at a time, each with a recommended answer drawn from canon; read the lore file instead of asking when the answer is on disk. The devil-adapted grilling axes, in order:
 
 1. **The line.** What does this virtue look like the day before it breaks? Concrete mortal, concrete moment.
 2. **The seed.** Could this character hold any other line? Push until the answer is no.

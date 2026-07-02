@@ -1,5 +1,5 @@
 // gm-vetted-check.mjs
-// PostToolUse hook (Edit|Write|MultiEdit).
+// PostToolUse hook (Write|Edit) — matches the registration in .claude/settings.json.
 // When the edited file is an .html page that still carries a GM-Vetted badge,
 // remind Claude to judge whether the edit just made was more than minor and,
 // if so, strip the badge. Claude makes the minor-vs-major call; this hook only
