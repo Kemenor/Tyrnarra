@@ -6,6 +6,8 @@
 *.local.json
 #   - transient runtime state (lock files, etc.)
 .claude/*.lock
+#   - per-machine `claude --resume <id>` shortcut; session ids don't transfer.
+claude.session
 
 # Full-resolution dungeon / battlemap sources (the user's CzePeku / Tom Cartos
 # subscription downloads and other licensed assets) are kept LOCAL ONLY and never
