@@ -1,6 +1,6 @@
 ---
 name: grill-me-lore
-description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated. Walk down each branch of the lore design tree (geography → seed → sibling-contrast → politics → daily life → faith → ancestry → naming → chronicler-tier check), resolving dependencies one at a time. For each question, provide a recommended answer drawn from the canon and the seed so far. Ask one question at a time. If a question can be answered by reading a lore file (lore/geography/<region>.md, lore/glossary.md, lore/ancestries.md, lore/cosmology.md, lore/gods.md, lore/factions.md, lore/timeline.md, docs/open-threads.md) or an existing HTML page, read the file instead of asking. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me-lore. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a Phase 5 prose draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
+description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated, walking the lore design tree one branch at a time with a recommended answer per question. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me-lore. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a Phase 5 prose draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
 ---
 
 # Grill me
@@ -13,10 +13,13 @@ Useful at any point inside `sub-region-workflow` where a section feels generic, 
 
 ## How to grill
 
-- **Ask one question at a time.** Never two.
-- **Provide a recommended answer with every question.** Drawn from the canon and the seed so far. The user can say "yes", "no, actually...", or "I hadn't thought about that". Recommendations make the grill faster, not slower.
-- **If a question can be answered by reading a lore file, read the file instead of asking.** The lore files are the source of truth; the user is the source of *what isn't written yet*. Never grill the user on canon that's already on disk.
-- **Walk the design tree in order.** Don't bounce around. Geography constrains economy constrains culture constrains politics constrains daily life. Resolve upstream before downstream.
+- **One question, one axis at a time.** Never two. Walk the design tree in order; geography constrains economy constrains culture constrains politics constrains daily life. Resolve upstream before downstream; naming and the chronicler-tier check come last.
+- **Recommend, don't interrogate.** Every question carries a recommended answer drawn from the canon and the seed so far. Open-ended *"what do you think?"* questions are the failure mode; *"I'd guess X because Y; does that land?"* is the shape. The user can say "yes", "no, actually...", or "I hadn't thought about that". Recommendations make the grill faster, not slower.
+- **Read the canon instead of asking.** If a question is answerable from a lore file, read the file; the lore files are the source of truth, and the user is the source of *what isn't written yet*. Never grill the user on canon that's already on disk.
+- **Apply the specificity test relentlessly.** *"Could this exist anywhere else in Tyrnarra?"* is the recurring test; if yes, the answer is generic, push harder. Specificity over completeness: better deep on three things than shallow on ten.
+- **Catch ancestry-as-label.** If the user (or the draft) says "Halflings live here", ask what about *this* place changes how Halflings live here. Same ancestry in two different sub-regions must produce two different cultures.
+- **Concrete over abstract.** When the user gives an abstract answer ("a proud people", "deep tradition", "they value learning"), the follow-up asks for *one concrete sensory detail* that proves it. The smell, the gesture, the named object.
+- **The grill models the voice.** No em-dashes; affirmative prose. CLAUDE.md's prose rules apply to the grilling output, not just to committed lore.
 - **After each answer, look for the next thing that isn't specific.** If everything currently surfaced passes the specificity test, name the next layer of depth and ask.
 - **End when the user says enough, or when every question you'd ask is now answerable by the canon as it stands.**
 
@@ -34,17 +37,6 @@ Always proceed in this order. If a branch is already covered by canon, say so an
 8. **Naming.** For every coined name: stratum (old-Basque/Icelandic-drift vs. modern-English-drift vs. regional register), literal meaning, drift step, collision check (*Compact* reserved for the Bound Thirteen; *Order* heavy traffic; *Republic* / *League* / *Council* / *Court* / *Hall* / *House* open).
 9. **Founding era.** Default: Adventurer-Era or late-Dark-Era per the Kingdoms-Inherit-Names rule. If older, what is the story-reason for the older claim?
 10. **The chronicler-tier check.** Read the surfaced prose back. Anything a chronicler couldn't earn by reading the chronicles goes inside a `⚿ GM Secret` expandable. Name what should move.
-
-## Grilling principles
-
-- **Specificity over completeness.** Better deep on three things than shallow on ten.
-- **Recommend, don't interrogate.** Every question carries a recommended answer. Open-ended *"what do you think?"* questions are the failure mode; replace with *"I'd guess X because Y; does that land?"*.
-- **Read the canon first.** If a question is answerable from `lore/geography/<region>.md`, `glossary.md`, `ancestries.md`, or another lore file, read the file and incorporate the answer rather than asking the user.
-- **Apply the specificity test relentlessly.** *"Could this exist anywhere else in Tyrnarra?"* is the recurring test. If yes, the answer is generic; push harder.
-- **Catch ancestry-as-label.** If the user (or the draft) says "Halflings live here", ask what about *this* place changes how Halflings live here. Same ancestry in two different sub-regions must produce two different cultures.
-- **One axis at a time.** Don't ask about politics and faith in the same question. Resolve geography before economy; economy before culture; culture before politics; politics before daily life. Naming and the chronicler-tier check come last.
-- **Concrete over abstract.** When the user gives an abstract answer ("a proud people", "deep tradition", "they value learning"), the follow-up asks for *one concrete sensory detail* that proves it. The smell, the gesture, the named object.
-- **No em-dashes; affirmative prose.** Apply CLAUDE.md's prose rules to the grilling output, not just to committed lore. The grill itself models the voice.
 
 ## What a good grill looks like (a fragment)
 

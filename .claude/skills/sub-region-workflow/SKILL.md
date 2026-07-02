@@ -1,6 +1,6 @@
 ---
 name: sub-region-workflow
-description: Use this skill whenever working on a Talanese sub-region (kingdom, free city, theocracy, mendicant order, guild-state, merchant republic, federated free-towns, march, clan-confederation, nomadic confederacy, or any polity smaller than a continent) within the Tyrnarra worldbuilding project. Trigger on phrases like "flesh out [name]", "let's design [polity]", "new sub-region in [domain]", "what should [domain]'s [feature] be", "promote [name] to its own page", "build the page for [name]", "we have a label on the map but no canon for X", working with TBD sub-region entries in docs/open-threads.md, drafting bullets in lore/geography/<region>.md sub-region sections, or any session that takes a label-on-the-map to fully fleshed canon. Also use when the user references the Emarrea, Baerfrost, Air Monastery / Wyndwalken, or Fellibylur exemplars as patterns to follow, or the Lautara resketch (Itsasalda Vishkanya tide-watch, Azkataria philosopher-market, Atarialda welcome-threshold) as the seed pattern. The skill enforces an eight-phase workflow that opens with a seed-questions dialogue and a seed-generation pass (not a political-shape menu), with surface-before-writing pauses, the kingdoms-inherit-names rule, the Basque/Icelandic/English naming-stratum check, the collision check on reserved names (Compact, Order), the ancestry-is-not-culture rule, the specificity test, the lore-pre-read step, and the lore-first / surface-before-HTML protocol from CLAUDE.md. Do not use for cosmology or pantheon work, quest design unconnected to founding or refounding a polity, NPC dossiers in already-established sub-regions, or HTML edits to pages that already exist for unrelated reasons.
+description: Use this skill whenever working on a Talanese sub-region (kingdom, free city, theocracy, mendicant order, guild-state, merchant republic, federated free-towns, march, clan-confederation, nomadic confederacy, or any polity smaller than a continent) within the Tyrnarra worldbuilding project. Trigger on phrases like "flesh out [name]", "let's design [polity]", "new sub-region in [domain]", "what should [domain]'s [feature] be", "promote [name] to its own page", "build the page for [name]", "we have a label on the map but no canon for X", working with TBD sub-region entries in docs/open-threads.md, drafting bullets in lore/geography/<region>.md sub-region sections, or any session that takes a label-on-the-map to fully fleshed canon. Also use when the user references the Emarrea, Baerfrost, Air Monastery / Wyndwalken, or Fellibylur exemplars as patterns to follow, or the Lautara resketch (Itsasalda Vishkanya tide-watch, Azkataria philosopher-market, Atarialda welcome-threshold) as the seed pattern. Do not use for cosmology or pantheon work, quest design unconnected to founding or refounding a polity, NPC dossiers in already-established sub-regions, or HTML edits to pages that already exist for unrelated reasons.
 ---
 
 # Sub-region workflow
@@ -224,7 +224,7 @@ Once direction and names are settled, draft the actual prose. **Surface in chat.
 
 ### Standard draft contents
 
-- **A single extended bullet for `lore/geography/<region>.md`** under the domain's *Sub-regions* list. Model on the Haizetsua bullet pattern: one rich paragraph (or a small handful of paragraphs) packing geography, polity, institutions, signature export, tension, and faith. **Lead with the seed.** The first sentence should evoke the image, contradiction, or behavior the seed was built on. The political form follows from there. No em-dashes. Affirmative prose. Chronicler-tier voice (in-world scholar).
+- **A single extended bullet for `lore/geography/<region>.md`** under the domain's *Sub-regions* list. Model on the Haizetsua bullet pattern: one rich paragraph (or a small handful of paragraphs) packing geography, polity, institutions, signature export, tension, and faith. **Lead with the seed.** The first sentence should evoke the image, contradiction, or behavior the seed was built on. The political form follows from there. Prose rules per *Hard rules*; chronicler-tier voice (in-world scholar).
 - **Etymology entries for `lore/glossary.md`** (sub-region entry under *Sub-regions → <Domain>*, nested under parent if it's a place-within-a-place like *Hartzar Erruta* under *Air Monastery*).
 - **Faction subsection for `lore/glossary.md`** if institutions are coined (modeled on the Voroir Daua or Wyndwalken patterns).
 - **Bestiary updates** if an ancestry is being anchored, moved, or freshly placed (table cell + per-ancestry entry + cross-references in related entries). **Anchor the ancestry to its place-shaped version, not its generic lore.** "Vishkanya in Itsasalda" gets the tide-counting Reckoner specificity; "Vishkanya in Azkataria" gets the coffee-table philosopher specificity.
@@ -319,9 +319,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 
 **Style and convention rules:**
 
-- **No em-dashes anywhere**. En-dashes for numeric ranges only.
-- **Affirmative prose**. Avoid "not X but Y" framings; if the negation is the clearest framing for a fact with no affirmative form, fine, but verify.
-- **Chronicler-tier in open prose**; GM-tier inside `⚿ GM Secret` expandables only. If a chronicler reading the open prose would learn something the lore files mark as GM-only, it's leaking.
+- **Prose rules per *Hard rules*** (no em-dashes, affirmative prose, chronicler-tier in open prose with GM-tier only inside `⚿ GM Secret` expandables).
 - **Concrete sensory detail** (the smell of brass and salt at a port-tower, the gesture a Stormrider makes to read a cloud-front, the sound of iron tokens in a vote-bowl) over abstract worldbuilding.
 - **All links absolute paths** starting with `/`.
 - **Card conventions** per `docs/card-conventions.md`: clickable card = ` →` in title; expandable card = `Tap ▾` pill; plain `<div>` carries neither.
@@ -371,7 +369,8 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **Kingdoms inherit names, not continuity.** No Talanese kingdom predates 1 MR; few are older than the Dark Era. Default new polities to Adventurer-Era or late-Dark-Era founding unless the older claim is a deliberate story feature.
 - **Naming stratum + collision check** before committing any new name (full detail in Phase 4).
 - **Pre-read before designing.** If the user could reasonably point at the draft and say *"that contradicts what's in `<file>`,"* you should have read `<file>` first.
-- **Lore-first by default.** Brainstorm goes to lore files, not HTML, until an explicit publish signal.
+- **Surface before writing; pause at every phase boundary.** Surface actual prose for review before committing; axis-confirmation is not a green light. The seams: seed-questions → seeds → user picks → naming → prose draft → commit → publish.
+- **Lore-first by default.** Brainstorm goes to lore files, not HTML, until an explicit publish signal. Touch HTML only on an explicit publish or promote signal.
 
 ---
 
@@ -385,25 +384,9 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **Theorising the domain instead of reading the exemplars.** When the canon read surfaces a tension (who lives where, how the peoples distribute), the move is to see how Emarrea / Itsasalda / the Vindul four already resolve it, not to invent a domain-level meta-rule and pour it over the files. (The Brauogi session burned three turns on an invented "decoupling principle" the exemplars flatly contradict.)
 - **Reading a domain as a literal climate.** A domain is an aspect and disposition, not a weather system: Darkness is the quiet and the cover, not perpetual lightlessness; Earth is not all soil; Light is not eternal day. Do not build the literal-element society.
 - **Same-iness across siblings.** If the new sub-region reads as a variant of a sibling in the same domain, the seed has failed the specificity test. Read the sibling bullets in Phase 0 to surface this risk early.
-- **Skipping the canon-check.** Map labels and lore-file canon can disagree. Always grep the project for the sub-region name before drafting.
 - **Naming collisions.** Check *Compact* (reserved), *Order* (heavy traffic), and any institution name that sounds generic. Stormpact > Compact for Fellibylur was a forced rename mid-session.
 - **Damaging neighboring canon.** Moving an ancestry (Strix from Floteyn to Vindul) means cleaning up cross-references in *other* ancestries' entries (Athamaru, Tripkee). Always grep the project for the ancestry name and read each hit before editing.
-- **Em-dashes leaking in.** Especially in long extended bullets. The sweep on 2026-05-24 removed 1,786 em-dashes across the project; don't re-introduce any.
 - **Inner anchors in clickable cards.** `docs/card-conventions.md` forbids them. Per-domain card bodies on `ancestries.html` get text-only mentions; table cells and prose paragraphs can use anchors freely.
-- **GM-tier content in open prose.** If a fact wasn't earnable by an in-world scholar, it goes in a `⚿ GM Secret` expandable. The chronicler does not know.
-- **Touching HTML without a publish signal.** Stay in lore by default. Only publish when the user says so explicitly.
-
----
-
-## Working principles (reminder, from CLAUDE.md)
-
-- **Lore-first protocol.** Brainstorm goes to lore files, not HTML, until an explicit publish signal.
-- **Surface phase boundaries rather than chaining them.** Pause at: seed-questions → seeds → user picks → naming → prose draft → commit → publish.
-- **Pre-read the canon.** Read the relevant lore file end-to-end before designing on top of it.
-- **Surface before writing.** For Tyrnarra lore writes, surface actual prose for review before committing. Axis-confirmation is not a green light.
-- **Affirmative prose.** No "Not X" or "Not X but Y" openings unless the negation is the clearest framing.
-- **No em-dashes.** En-dashes for numeric ranges only.
-- **Kingdoms inherit names, not continuity.** Default new polities to Adventurer-Era or late-Dark-Era founding unless the older claim is a deliberate story feature.
 
 ---
 
