@@ -102,7 +102,8 @@
       { slug: 'ilun-tasun', label: 'Ilun Tasun · the Kept Lamp', href: '/setting/talan/domains/myrkono/ilun-tasun/ilun-tasun.html', children: [] },
       { slug: 'itzasoa', label: 'Itzasoa · the Woven Wood', href: '/setting/talan/domains/myrkono/itzasoa/itzasoa.html', children: [] },
       { slug: 'izarelai', label: 'Izarelai · the Star Plain', href: '/setting/talan/domains/myrkono/izarelai/izarelai.html', children: [] },
-      { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/setting/talan/domains/myrkono/myrria/myrria.html', children: [] }
+      { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/setting/talan/domains/myrkono/myrria/myrria.html', children: [] },
+      { slug: 'three-pines', label: 'Three Pines · the Forest That Sails', href: '/setting/talan/domains/myrkono/three-pines/three-pines.html', children: [] }
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [
       { slug: 'uravel', label: 'Uravel &middot; the Floating Isles', href: '/setting/talan/domains/floteyn/uravel/uravel.html', children: [] }
