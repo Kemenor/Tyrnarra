@@ -9,7 +9,7 @@ Parent domain: [`../vindul.md`](../vindul.md). *Haize* is wind in Basque; the is
 
 ## Demographics & ancestry placement
 
-**Tengu usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. The cultural and demographic heart is Haizetsua; smaller Tengu communities live in the coastal Skybell Republic ports of Fellibylur as sailors and Stormrider crew, and a thin scatter of Tengu travellers can be found anywhere in Talan that the Vornsketta took them. The Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan, often as Monks.
+**Tengu usually live in the lands of Fisaya (Vindul / Wind), centred on Haizetsua.** Uncommon everywhere outside Vindul. The cultural and demographic heart is Haizetsua; smaller Tengu communities live in the coastal Skybell Republic ports of Fellibylur as sailors and Stormrider crew, and a thin scatter of Tengu travellers can be found anywhere in Talan that the Vornsketta took them. A steady working presence also crosses to **Grannholm** (the Three Pines islet in Haizetsua's own lee, where the clan-saltkeels are built and refitted) and on to the Three Pines yards as wind-readers and riggers: a Vornsketta berth so established that half the eleven clans keep standing contracts with named yards (see [`../myrkono.md`](../myrkono.md), *Three Pines, the Forest That Sails*). The Vindul tradition of mountain monasticism produces a steady stream of Tengu wanderers across Talan, often as Monks.
 
 ## The Skarvorn Republic
 
