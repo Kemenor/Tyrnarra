@@ -103,7 +103,8 @@
       { slug: 'itzasoa', label: 'Itzasoa · the Woven Wood', href: '/setting/talan/domains/myrkono/itzasoa/itzasoa.html', children: [] },
       { slug: 'izarelai', label: 'Izarelai · the Star Plain', href: '/setting/talan/domains/myrkono/izarelai/izarelai.html', children: [] },
       { slug: 'myrria', label: 'Myrria · City of Second Chances', href: '/setting/talan/domains/myrkono/myrria/myrria.html', children: [] },
-      { slug: 'three-pines', label: 'Three Pines · the Forest That Sails', href: '/setting/talan/domains/myrkono/three-pines/three-pines.html', children: [] }
+      { slug: 'three-pines', label: 'Three Pines · the Forest That Sails', href: '/setting/talan/domains/myrkono/three-pines/three-pines.html', children: [] },
+      { slug: 'tvisol', label: 'Tvisol · the Kingdom of the Two Suns', href: '/setting/talan/domains/brauogi/tvisol/tvisol.html', children: [] }
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [
       { slug: 'uravel', label: 'Uravel &middot; the Floating Isles', href: '/setting/talan/domains/floteyn/uravel/uravel.html', children: [] }
@@ -123,7 +124,8 @@
       { slug: 'lurrath', label: 'Lurrath &middot; the Steadfast City', href: '/setting/talan/domains/brauogi/lurrath/lurrath.html', children: [] },
       { slug: 'sugeiturri', label: 'Sugeiturri &middot; the Source-Country', href: '/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html', children: [] },
       { slug: 'haldmark', label: 'Haldmark &middot; the Kept March', href: '/setting/talan/domains/brauogi/haldmark/haldmark.html', children: [] },
-      { slug: 'greenward', label: 'Greenward &middot; the Furrowsworn', href: '/setting/talan/domains/brauogi/greenward/greenward.html', children: [] }
+      { slug: 'greenward', label: 'Greenward &middot; the Furrowsworn', href: '/setting/talan/domains/brauogi/greenward/greenward.html', children: [] },
+      { slug: 'tvisol', label: 'Tvisol &middot; the Kingdom of the Two Suns', href: '/setting/talan/domains/brauogi/tvisol/tvisol.html', children: [] }
     ]},
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/setting/talan/domains/ezkudon/ezkudon.html',   children: [
       { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/setting/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }

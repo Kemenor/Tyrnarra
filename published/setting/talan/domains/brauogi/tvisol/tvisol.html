@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tvisol · Brauogi &amp; Myrkono · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #d99a4e;
+    --card-bg: rgba(36,26,14,0.5);
+  }
+
+  /* Left-bordered callout (customs of the two lights) */
+  .guest-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(34,24,12,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .guest-call .gc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .guest-call p { margin: 0 0 12px; line-height: 1.6; }
+  .guest-call p:last-child { margin-bottom: 0; }
+
+  /* The year in three movements: bright year -> second sowing -> Guestide */
+  .year-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(34,24,12,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .year-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .year-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 8px; }
+  .year-step { flex: 1 1 200px; min-width: 180px; padding: 12px 16px; background: rgba(44,32,16,0.6); border: 1px solid rgba(217,154,78,0.35); border-radius: 3px; text-align: center; }
+  .year-step.now { background: rgba(56,40,20,0.78); border-color: var(--domain-accent); }
+  .year-when { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .year-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--gold-bright); margin-bottom: 6px; }
+  .year-step p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+  .year-arrow { display: flex; align-items: center; color: var(--domain-accent); font-size: 1.2rem; font-weight: bold; }
+  .year-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* Band atop the goods / degree cards */
+  .two-band { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .year-row { flex-direction: column; }
+    .year-arrow { transform: rotate(90deg); justify-content: center; }
+    .guest-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="tvisol">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Tvisol</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Tvisol</div>
+    <div class="page-subtitle">the Kingdom of the Two Suns · Brauogi &amp; Myrkono, one people</div>
+    <div class="page-flavor">"The chronicles call the light the dead's sun. The kingdom calls it the Guest, and puts out chairs."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Icelandic <i>tví-</i> (two, twin) + <i>sól</i> (sun) → <i>Tvísól</i> → <b>Tvisol</b>, "the two suns." The deep-old name of the corner coast, reclaimed at the kingdom's refounding; the map-names <b>Twin Suns</b> (its plain modern translation, the Brauogi half) and <b>Bikitsa</b> ("twin-shadow," the Myrkono half) are the two domains' names for its halves.</dd>
+    <dt>Position</dt><dd>The corner where three countries meet: Brauogi's gold lowlands to the north and east, Myrkono's <b>Izarelai</b> to the west, and Floteyn's drifting Isles of Shuun across the water south. The kingdom fronts the <b>Midarra</b> only; the <b>Soul Tree</b> island stands offshore east, close enough to see from any sunward roof.</dd>
+    <dt>Terrain</dt><dd>The sunward half is harvest coast: grain, vine-terraces, the ferry-quays at <b>Solkai</b> where the standard Midarra crossing lands. The shadow half rises west into cooler hills around its lake: cellar-country, oven-country, the half where things are finished.</dd>
+    <dt>Character</dt><dd>
+      <i>The coast where the ground gives twice, and the second giving belongs to the dead. The warmest funeral country on Talan.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Dausol · the Guest</span><span class="pill">Guestide</span><span class="pill">Erfivin</span><span class="pill">the Waking Bread</span><span class="pill">the Stywards</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Everyone's, by accumulation: Minotaur terrace-families, Kholo ferry-clans, Dragonet cellar-wrights, Fetchling hospice-keepers, Goloma night-harvest saldos. And one of Talan's two great sources of <b>Duskwalkers</b>, the only place such a birth is entirely ordinary.</dd>
+    <dt>Faith</dt><dd>Both grandmothers of the house: <b>Sarrum</b> keeps the record and the names, <b>Araphel</b> the unasked and the letting-go. <b>Epairima</b>'s funerary folk-cult runs stronger here than anywhere on Talan; the <b>Voroir Daua</b> keep their oldest charter on the Soul Tree offshore.</dd>
+    <dt>Rule</dt><dd>The young. <b>The Stywards</b>: a wedded pair, one born on each half, crowned in their mid-twenties for a fixed ten-year reign, chosen by <b>the Old Pairs</b> from couples who completed <b>the Last Service</b>. Command belongs to the young; memory to the old.</dd>
+    <dt>Founding</dt><dd>The coast-name ancient; the constitution the Dark Era's handwriting. The corruption-waves took the grown generation, the children rebuilt, and the coast kept what the catastrophe wrote. The reigns run unbroken from the early Adventurer Era; the present pair is roughly the fortieth.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(217,154,78,0.5);">
+    <div class="gods-city-label">The Two Seats · One Court</div>
+    <div class="gods-city-name">Solkai &amp; Gaulabe</div>
+    <div class="gods-city-byname">the sun-quay of the ferries and the night-oven of the Waking Bread · the Stywards' court crosses with the light, the bright year sunward, Guestide in the shade</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    A visitor who talks of "the Brauogi side" is corrected by everyone from the harbourmaster to the child selling plums, kindly, the way you correct a person who has misread a family.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-guest" class="section-heading">The Guest</h2>
+  <div class="prose">
+    <p>On the first morning of Guestide the whole kingdom is on its roofs. Solyra rises where she always rises; then, low over the eastern water where the Soul Tree island rides, a second light stands up out of the sea, dimmer than the sun, warmer than either moon, and stays. For a few weeks each year this corner coast has two lights in its sky, two shadows under every cart and gull, and a second crop ripening in fields that already gave one.</p>
+    <p>What the light <i>is</i>, the learned dispute and the kingdom does not. Solyra's clergy, whose goddess is never paired and never doubled, have insisted for centuries that it is no sun at all, and the Tvisolans agree with them cheerfully: Solyra is the sun; <b>the Guest</b> is the Guest. The chronicles keep the older, colder name, <b>Dausol</b>, the dead's sun, and the kingdom's own quiet belief is the one its funerary shrines say plainly: the light is <b>Epairima's lamp</b>, the Judge of Souls holding her door open, and the coast beneath it is simply the one place on Talan near enough to see it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="year-gives-twice" class="section-heading">The Year Gives Twice</h2>
+  <div class="prose">
+    <p>The bright year is an ordinary golden coast: first harvest, the quays loading grain southward. At midsummer the kingdom sows again, a sowing every other country on Talan would call wasted, for the aftercrop will not ripen on Solyra's light alone. When the Guest rises, the second growing begins, and Guestide ends with the strangest harvest on the continent: grain and grapes brought in by the light of two suns, the sheaves throwing double shadows across the stubble.</p>
+  </div>
+
+  <div class="year-wrap">
+    <div class="year-label">The Year in Three Movements</div>
+    <div class="year-row">
+      <div class="year-step">
+        <div class="year-when">the Bright Year</div>
+        <div class="year-title">First Harvest</div>
+        <p>An ordinary golden Brauogi coast: grain in, ferries out, the Midarra crossing landing the north-south trade of half a continent at Solkai.</p>
+      </div>
+      <div class="year-arrow">→</div>
+      <div class="year-step">
+        <div class="year-when">Midsummer</div>
+        <div class="year-title">The Second Sowing</div>
+        <p>The aftercrop goes into fields that already gave, a crop that cannot ripen on one sun. Every other country calls it wasted seed.</p>
+      </div>
+      <div class="year-arrow">→</div>
+      <div class="year-step now">
+        <div class="year-when">Guestide</div>
+        <div class="year-title">The Second Harvest</div>
+        <p>The Guest rises over the Soul Tree's water and the second growing comes in under two lights, for the dead's table.</p>
+      </div>
+    </div>
+    <p class="year-note">The ground gives twice, and the second giving belongs to the dead.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="wine-and-bread" class="section-heading">Erfivin &amp; the Waking Bread</h2>
+  <div class="prose">
+    <p>Whatever the aftercrop gives is grown on the sunward half and finished on the shadow half, and one thing neither half can make alone has proven worth more than any treaty. Outsiders who try to deal with one half get politely handed the whole kingdom.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="two-band">Grown in the Sun · Aged in the Shade</div>
+      <div class="card-name">Erfivin, the Funeral Wine</div>
+      <p>The dark aftercrop vine, grown on the sunward terraces and pressed at the season's end; the young wine then crosses the line, every barrel of it, to age in Bikitsa's lake-cooled cellars. The cup poured at wakes from Merkavar to Vindboorg: custom on every coast reserves it for the dead's table, so a small corner kingdom is quietly present at every death on Talan.</p>
+    </div>
+    <div class="accent-card">
+      <div class="two-band">Harvested in the Sun · Baked in the Shade</div>
+      <div class="card-name">The Waking Bread</div>
+      <p>Aftercrop grain, harvested sunward and baked in Gaulabe over the <b>Guest-Fire</b>, flame taken from Dausol's first rising with mirror and tinder and let die when the Guest leaves. Kept fires remember; this fire is let go on purpose. Set out at every wake in two portions: the <b>named portion</b>, spoken over so the name is kept, and the <b>unnamed portion</b>, for the forgotten dead, no name asked.</p>
+    </div>
+  </div>
+
+  <div class="guest-call">
+    <div class="gc-label">The Whole Country in One Custom</div>
+    <p>The kingdom does at every table what Sarrum does at Lurrath with the scroll of the unremembered and what Araphel does on the Lantern Stairs, and it does both at once: the name kept, and the nameless fed.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="guestide" class="section-heading">Guestide</h2>
+  <div class="prose">
+    <p>The dead's season is the generous season, and the kingdom keeps it warm: harvest-tables in the streets, an empty chair at every table for the Guest, music that outsiders expect to be dirges and is not. The ferries run heavy those weeks, and some passengers are booked one way: the dying of a dozen kingdoms, come to end under the light they will cross into, hosted in the hospice houses by the young of the Last Service. A Guestide death is held here to be the gentlest there is, and the kingdom takes the hosting of it as its honour and its trade at once.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="stywards" class="section-heading">The Stywards · Rule by the Young</h2>
+  <div class="prose">
+    <p>Tvisol is governed by the young, on the kingdom's own logic: in a country whose business is death, choices belong to those who must live with them longest. Rule is held by <b>the Stywards</b>, a wedded or betrothed pair, one born on each half, crowned in their mid-twenties for a fixed term of ten years. Their court keeps two seats and crosses with the light: the bright year at Solkai, Guestide at Gaulabe.</p>
+    <p>Eligibility is earned, never bought, through <b>the Service</b>, and all of it is public: the choosers have watched every candidate carry grief well or badly since they were sixteen. The Service-years are famously where the matches form; the grandmothers say the kingdom's weddings are planned by the dead.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="two-band">First Degree</div>
+      <div class="card-name">The Crossing</div>
+      <p>A season worked on the other half: sun-half children cellaring and baking in the shade, shade-half children on the fields and quays. Most of the kingdom's children do it; it is half rite-of-passage, half how the one-people weave is rewoven each generation.</p>
+    </div>
+    <div class="accent-card">
+      <div class="two-band">Second Degree</div>
+      <div class="card-name">The House-Year</div>
+      <p>A live-in year across the line. The House-Year qualifies the lesser offices: reeve, quay-master, keeper of the record.</p>
+    </div>
+    <div class="accent-card">
+      <div class="two-band">Full Service</div>
+      <div class="card-name">The Last Service</div>
+      <p>The Guestide years with the funerals, the hospices, and the dying: vigils sat, biers carried, hospice houses hosted. A minority complete it, and it alone makes a couple eligible for the crown-office. A rich family can buy tutors; it cannot buy having sat well with a dying stranger at nineteen.</p>
+    </div>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>Pairs declare themselves; the choosing belongs to <b>the Old Pairs</b>, the living former Stywards, four to six couples at any time, the only people who know what the office costs. They hold voice, memory, and the choosing; command they set down at thirty-five and never take up again. A reign ends at its tenth Guestide, setting-down and crowning in one ceremony under the Guest, and abdication is a rite rather than a defeat: the first rehearsal of the release everyone here eventually makes. The reign's works are cut into the record forever, and the ex-Stywards live on for half a century as ordinary subjects of the laws they made, farming, ferrying, pouring wine at the festival. Foreign courts learn one thing quickly: sign a thirty-year treaty with Tvisol and the ruler who signed it will personally be alive, and a private citizen, to hold you to year thirty.</p>
+  </div>
+
+  <div class="guest-call">
+    <div class="gc-label">The Blame-Burning</div>
+    <p>The record keeps every deed, but an ex-Styward who can stand at the Guest-Fire and give the record their own whole account of a failure may burn the blame with the season; after that the reign may be cited and the ruler may not be cursed. Some do it the first Guestide after their term. Some carry it twenty years first. One or two never manage it, and everyone knows who.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">The Peoples, and the Children of the Door</h2>
+  <div class="prose">
+    <p>Tvisol anchors no single people; it collects them, the way ports and festivals do. Minotaur terrace-families whose patience turned from stone to vines; Kholo ferry-clans who keep the crossing the way their kin keep herds; Dragonet cellar-wrights entirely at home with time spent in the dark; Fetchling hospice-keepers whom the dying find easy company, being unasked; Goloma saldos hired every Guestide for the night-harvest, many eyes in the low light.</p>
+    <p>And Tvisol is one of Talan's two great sources of <b>Duskwalkers</b>, born where the door runs close, and the only place where such a birth is entirely ordinary: a Duskwalker baby here is a child the door smiled on, and the neighbours bring bread. Many take to the Last Service in time; as many grow up to be vintners, reeves, and ferry-masters, which the kingdom considers exactly as it should be.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · Both Grandmothers of the House</h2>
+  <div class="prose">
+    <p>The kingdom keeps both its gods the way a house keeps both grandmothers, and no one in it finds that strange: <b>Sarrum</b>'s chapels keep the record and the names, <b>Araphel</b>'s keep the unasked and the letting-go, and the year needs both. <b>Epairima</b>'s funerary folk-cult is stronger here than anywhere on Talan; her lamp is what most Tvisolans quietly believe the Guest to be. The <b>Voroir Daua</b> keep their island charter, oldest of their order, attend the festival every year, and watch the Guestide ferries with an attention the kingdom has learned to read.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="open-era" class="section-heading">The Season of More Wakes</h2>
+  <div class="prose">
+    <p>Since the dungeons stirred in 2524 MR the continent has held more wakes than any decade in living memory, and the dead's demand runs against a fixed supply: the aftercrop grows only under the Guest, and no acre of it can be hurried. Prices have tripled, and counterfeit Erfivin has appeared in foreign ports, ordinary wine sold black to grieving families, which the kingdom takes as the one insult it will spend treaty and coin to hunt; the present Stywards seal every true barrel and have made fraud on the dead a matter between crowns.</p>
+    <p>And the age has begun sending the island other visitors: powerful strangers whose interest in the door is not grief. The Voroir Daua have asked the kingdom, for the first time in the charter's long memory, to help them look at Guestide's pilgrims twice, and the country whose festival is an open table is deciding, carefully, what to do about the request.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Second Shadow</button>
+    <div class="legend-era-content">
+      <p>During Guestide everyone in Tvisol casts two shadows, and everyone in Tvisol will tell you what the second one is: your dead, walking with you. Widows note which side it keeps. Children born in the season are said to have a friendly shadow all their lives. And the old belief beneath it: the shadow the Guest throws is the shape the dead see of you, so a Tvisolan minds how they stand in the second light, because someone is looking.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Door's Light</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What Shines Through</div>
+      <p>Dausol is exactly what the kingdom's folk-faith almost knows. The Soul Tree is a standing passage between the Life Layer and the Postlife, and around it the veil is worn thin; when Dauria's moon-cycle channels run full, the thinning opens wide enough that the light of the other side stands visible in the living sky. What shines through is the <b>Duskmire</b>, the twilight sea where the stars are the lights of distant souls, and behind it the lamp of <b>Dauria</b> itself, the two indistinguishable at this distance: the glow of the dead going home, read by the living as a warm low sun. The season keys to the moons, which the Starwrights of Izarelai could confirm from their lake if anyone thought to ask them.</p>
+      <p>The aftercrop ripens under it because the light is thick with the Wellspring's returning charge, life answering the light of life going home. The vines are fed, in the plainest sense, by the crossing of souls, and the continent drinks that vintage at its funerals without knowing how exactly right the custom is.</p>
+      <p>The door has a second implication the Voroir Daua's founders understood perfectly. The Duskmire is one of the two veils where <b>shards of divinity</b> wash up, and the Soul Tree is a natural stair toward it that does not require dying. The order's oldest charter has never primarily been about the island's pilgrims: it is the watch on the one door through which a sufficiently learned mortal could walk toward the Mortal Ascent Ladder's raw material and come back. The door-seekers now arriving under Guestide's cover suggest that somewhere, someone has worked this out again.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain; Tvisol's sunward half is its Midarra corner, and its grain rides the ferries south.</li>
+      <li><a href="/setting/talan/domains/myrkono/myrkono.html"><b>Myrkono →</b></a> · The Darkness domain; Tvisol's shadow half, Bikitsa, is where the domain meets the inner sea, and where the funeral wine ages.</li>
+      <li><a href="/setting/talan/domains/brauogi/lurrath/lurrath.html"><b>Lurrath →</b></a> · Sarrum's steadfast city, whose dawn Naming reads the souls that linger in the Postlife; Tvisol's named and unnamed portions do at table what the Keepers do in liturgy.</li>
+      <li><a href="/setting/cosmology/layer-3-gods.html"><b>Layer-3 Gods →</b></a> · Epairima the Judge of Souls, Solyra the Sun of the Ages, and the moon Twins whose cycle Guestide quietly keeps.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Tvisol's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The present Stywards and the Old Pairs.</b> The reigning couple, the notable former pairs, and the reigns the record cites most are unnamed.</li>
+      <li><b>The shadow half's lake.</b> The lake that cools Bikitsa's cellars awaits its name.</li>
+      <li><b>The hospice houses and Solkai's quay-quarters.</b> The named houses of the Last Service, the ferry-companies, and the quay-side districts are uncoined.</li>
+      <li><b>The Voroir Daua charter-house.</b> Its named commander, its strength, and the kingdom's answer to the order's request to screen Guestide's pilgrims are open.</li>
+      <li><b>The hamlets of both coasts.</b> Between Solkai and Gaulabe the villages of the terraces, cellars, and ferry-landings await coining.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI &amp; MYRKONO · TVISOL</div>
+
+</div>
+
+</body>
+</html>
