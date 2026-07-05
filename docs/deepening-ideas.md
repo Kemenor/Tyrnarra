@@ -148,6 +148,11 @@ Pace as stories want them. Rolling work.
 **Open.** Named bastion-towns and stewards, the seated Hands of the Evenhand, the Seed-Keeper lineages, and the Root-Twister dungeon's seal-history, as story needs.
 **Where.** [lore/geography/brauogi/greenward.md](../lore/geography/brauogi/greenward.md).
 
+### [Tvisol] Post-build texture
+**Decided.** Built 2026-07-06 as **Tvisol, the Kingdom of the Two Suns**: the cross-domain kingdom spanning the Brauogi/Myrkono line (sunward **Twin Suns** + shadow-side **Bikitsa**, fiercely one people), under the seasonal second sun **Dausol** (⚿ the Duskmire's glow through the Soul Tree's thinned veil, keyed to Dauria's moon-cycle channels). Guestide, Erfivin, the Waking Bread and Guest-Fire, the **Stywards** (young paired ten-year reigns earned through the Service, chosen by the Old Pairs, the blame-burning). Full canon: [lore/geography/brauogi/tvisol.md](../lore/geography/brauogi/tvisol.md); page at `/setting/talan/domains/brauogi/tvisol/tvisol.html`.
+**Open.** The Bikitsa lake's name; the present Styward pair and notable Old Pairs, named; hospice-house roster and Solkai's quay-quarters; hamlet names along both coasts; the Voroir Daua charter-house's named commander; the kingdom's answer to the order's screening request, as story needs.
+**Where.** [lore/geography/brauogi/tvisol.md](../lore/geography/brauogi/tvisol.md).
+
 ---
 
 ## § Regions: Sumendar & Zuzental

@@ -7,3 +7,7 @@ Pending label work for the map art. The three views (terrain / kingdoms / domain
 ## Awaiting export + variant regeneration
 
 - **Harro Distiratsua → Harro Distiratsue** (Egulon). Canon is **Distiratsue** everywhere (glossary etymology *harro* + *distiratsu* with the drift to *-e*; egulon.md, ancestries table, and the Egulon HTML all agree). **Fixed in the map source 2026-07-05**, but the exported originals in `published/setting/assets/maps/` (and their display/thumb variants) still carry the old *-a* label. On the next map work: re-export the originals, then run `resize.mjs`.
+
+## Backlog for the next map edit
+
+- **Tvisol** (Brauogi/Myrkono corner). The Twin Suns + Bikitsa joint kingdom now carries the canon name **Tvisol** (2026-07-06 build); consider a kingdom-view label for it, keeping the two half-labels. Optional settlement marks: **Solkai** (sunward ferry-capital) and **Gaulabe** (shade-half oven-town).
