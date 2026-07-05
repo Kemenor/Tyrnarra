@@ -188,7 +188,7 @@ Four inline TBDs rendered on [legea-empire.html](../published/setting/talan/doma
 **Open.** Reconcile work left from the build:
 - The **Zaharsuge-origin reconcile** to [lore/gods.md](../lore/gods.md) / [lore/ancestries.md](../lore/ancestries.md) / [lore/timeline.md](../lore/timeline.md): the Sugeiturri-made-its-own-god origin supersedes the deep-substrate / Wyrmkin-enslavement origin. The HTML manifestations on layer-3-gods.html and ancestries.html were corrected 2026-06-28; the lore files still need the sweep.
 - The parked **Sarrum question**: water taken before the Compact carved his domain.
-- The **Azkamour fully-Brauogi** reconcile is done in `brauogi.md` / `vindul.md` / glossary; watch for stragglers.
+- The **Azkamour fully-Brauogi** reconcile is done in `brauogi.md` / `vindul.md` / glossary; the last stragglers (Fellibylur's neighbour-lists in `vindul.md` + glossary still naming the march Azkamour) were swept 2026-07-05, and the map rename is tracked in [`map-todo.md`](map-todo.md).
 **Where.** [lore/geography/brauogi/sugeiturri.md](../lore/geography/brauogi/sugeiturri.md); [lore/gods.md](../lore/gods.md), *Zaharsuge*; [lore/timeline.md](../lore/timeline.md), *Elden Era → ⚿ GM Secret: The Wyrmkin*.
 
 ### [Geography] Northern Magitrain hub: name TBD

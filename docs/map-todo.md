@@ -12,10 +12,11 @@ Verified against the kingdoms view on 2026-07-05.
 - **Ljorsan → Ljosarn** (city label, Egulon). Spelling fix; canon spelling **Ljosarn** (light-hearth etymology, `lore/glossary.md`).
 - **Thousand Kingdoms → Thousand Kingdom** (Zuzental). The map label carries a stray plural; canon is singular.
 - **Haeaveldi → Hareaveldi** (small island label off the southern coast). Typo of the Lioaru sub-region's name.
+- **Azkamour → Haldmark** (the north-western Brauogi march). The march was renamed at the Haldmark build (the Kholo Kept March, fully Brauogi now rather than a shared Vindul/Brauogi border); *Azkamour* survives only as its principal frontier trade-town, so the old name can stay on the map as a town label on the Hafra-and-border edge. Canon: `lore/geography/brauogi/haldmark.md`.
 
 ## Additions (canon exists, not yet drawn/labelled)
 
-- **Sugeiturri** (Brauogi): the Dragonet source-country, built 2026-06-23. Northern Brauogi from the Hafra coast up the **Iturmen** source-mountains, carved from the Earth Realm's northern uplands plus Azkamour's inland shoulder; the border between Greenward, Sugeiturri, and Azkamour needs drawing. Canon: `lore/geography/brauogi/sugeiturri.md`.
+- **Sugeiturri** (Brauogi): the Dragonet source-country, built 2026-06-23. Northern Brauogi from the Hafra coast up the **Iturmen** source-mountains, carved from the Earth Realm's northern uplands plus the inland shoulder of the march now called Haldmark; the border between Greenward, Sugeiturri, and Haldmark needs drawing. Canon: `lore/geography/brauogi/sugeiturri.md`.
 - **Bikitsa** (Myrkono): the northern coastal sub-region paired with Twin Suns across the domain border. Add when the Bikitsa/Twin Suns build lands (the last unbuilt Myrkono sub-region; see `open-threads.md`).
 
 ## Verify against current art
