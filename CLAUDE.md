@@ -94,6 +94,8 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     site-inventory.md                  ← canonical roster of every page + publish status
     sidebar-nav.md                     ← architecture notes on shared sidebar + assets
     open-threads.md                    ← gate-tracked canon work (Needs writing / fleshing / publishing)
+    deepening-ideas.md                 ← story-paced enrichment backlog for canon-complete material
+    map-todo.md                        ← pending label renames/additions for the map art
     accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
     campaign-layer.md                  ← architecture of the campaign layers (GM /gm-notes/ + player /player-campaigns/)
@@ -257,7 +259,7 @@ This project is designed so a fresh Claude session can pick it up with no prior 
 1. **Read `CLAUDE.md` first**: naming rule, folder layout, style guide, drafting protocol (including the pre-read rule and the affirmative-prose rule).
 2. **Skim `docs/site-inventory.md`** to know what's already published, what's stub, and (in the *Lore files* section at the top) which `lore/` file covers which topics. The pre-read rule routes through this table.
 3. **Read the relevant `lore/` files end-to-end** before drafting content that touches their canon; the *Lore files* section tells you which.
-4. **Check `docs/open-threads.md`** if the user references an ongoing canon question; it lists every TBD/unresolved thread with status and where it lives.
+4. **Check `docs/open-threads.md`** if the user references an ongoing canon question; it lists the genuinely pending threads (unanswered canon, blocked builds, reworks, publishing debts) with status and where each lives. Story-paced enrichment of canon-complete material lives in `docs/deepening-ideas.md`; pending map-label work in `docs/map-todo.md`.
 5. **For GM table / quest work**, read [`docs/campaign-layer.md`](docs/campaign-layer.md) and drive the relevant workflow skill (`quest-workflow`, `pf2e-encounter`, `pf2e-loot`); that material lives in the campaign layers, never on the worldbuilding pages.
 
 Don't rely on the user's in-session memory file for canon; that's a summary, not the source. The lore files win.

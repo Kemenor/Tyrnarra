@@ -2,7 +2,7 @@
 
 Live at **https://tyrnarra.kunkel.swiss** · Served from the `published/` folder via the GitHub Actions workflow ([`.github/workflows/pages.yml`](../.github/workflows/pages.yml); repo Settings → Pages → Source = GitHub Actions).
 
-A description of what is currently published, organised by section. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [`sidebar-nav.md`](sidebar-nav.md). For forward work (what needs writing, fleshing out, or publishing next), see [`open-threads.md`](open-threads.md).
+A description of what is currently published, organised by section. For repo conventions and folder layout, see [`../CLAUDE.md`](../CLAUDE.md). For sidebar architecture, see [`sidebar-nav.md`](sidebar-nav.md). For forward work (what needs writing, fleshing out, or publishing next), see [`open-threads.md`](open-threads.md); for story-paced enrichment of canon-complete material, see [`deepening-ideas.md`](deepening-ideas.md); for pending map-label work, see [`map-todo.md`](map-todo.md).
 
 ---
 
