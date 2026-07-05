@@ -10,6 +10,8 @@ Verified against the kingdoms view on 2026-07-05.
 - **Shadow Steppes → Izarelai** (Myrkono). The outsider-tongue name was retired at the Izarelai build; the rename is swept across lore + HTML, the map is the last holdout. Canon: `lore/geography/myrkono.md`, *Izarelai, the Star Plain*.
 - **Denbora → Valreka** (city label inside Galdua Jendea, Lioaru). Tani's whale-borne god-city was renamed. Canon: `lore/glossary.md`.
 - **Ljorsan → Ljosarn** (city label, Egulon). Spelling fix; canon spelling **Ljosarn** (light-hearth etymology, `lore/glossary.md`).
+- **Thousand Kingdoms → Thousand Kingdom** (Zuzental). The map label carries a stray plural; canon is singular.
+- **Haeaveldi → Hareaveldi** (small island label off the southern coast). Typo of the Lioaru sub-region's name.
 
 ## Additions (canon exists, not yet drawn/labelled)
 
@@ -19,6 +21,5 @@ Verified against the kingdoms view on 2026-07-05.
 ## Verify against current art
 
 - Whether **Gotorlekua** appears anywhere (retired 2026-06-13; its ground is the Eraztumen interior, Lurrath's territory). Not spotted on the kingdoms view; confirm on terrain/domains.
-- **"Thousand Kingdoms"** (map, plural) vs canon **Thousand Kingdom** (singular).
-- The small island label off the southern coast reading **"Haeaveldi"** (likely a typo of Hareaveldi).
-- **"Vernua Dominion"** (north-east, near Nashavel/Kaosadaemi): confirm which domain and canon region this is, and whether it relates to **Vonura** (the Egulon wine-country anchor named at the Ljosarn build) or is its own un-canonised label.
+
+*(Vernua Dominion, spotted north-east on the kingdoms view, checked out fine: it is the canon Nashavel sub-region housing Nahaskel; see `lore/geography/nashavel.md`.)*
