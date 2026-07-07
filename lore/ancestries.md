@@ -172,6 +172,8 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 
 **In Veidrath:** the long stalk carried into the long trade as readily as the long hunt; a settled Lizardfolk is the negotiator nobody outlasts, the patience of the circuit turned on the market (see [`geography/ehizahar.md`](geography/ehizahar.md), *Veidrath*).
 
+**In Baratalda:** the long stalk turned to the long graft: the tend-line grafters of Aldinskog, slow to start a line and impossible to shake off one, patient across the decades a fruit-forest needs (see [`geography/brauogi/baratalda.md`](geography/brauogi/baratalda.md)).
+
 ### Merfolk
 **Aquatic, dominant in Floteyn (Water / Shuun)** and the Hafra coasts. The Merfolk move as water moves: a Merfolk does not force, she meets an obstacle the way a current does, around it, over it, through the crack in it, unhurried and unstoppable, and arrives where she meant to arrive with no sign of having fought for it. The sea is hers because she is the sea's, never lost in it, never against it, and the dignity surface-dwellers find magnificent or insufferable is simply the certainty of water: nothing has ever finally stopped it, and nothing has ever finally stopped her. A small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty). They keep to water, and a wholly landlocked region sees none of them.
 
@@ -191,6 +193,8 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 **Dominant in Ehizahar (Hunt / Hinka)**, the Lands of Villtur. The ones who close: Predation as temperament, the world met head-on, now, holding back the one unbearable thing. Loudest, first in, most consistently in feud with their counterparts; Hinka is depicted as a red-headed orc, and the affinity runs deep. The hunt ends with them. Fenurra's **Brakkaun** are an orcish tribe apart from the Villtur sprawl, the close carried into drum-and-charge warfare (see [`geography/ehizahar/fenurra.md`](geography/ehizahar/fenurra.md)).
 
 **In Veidrath:** the keepers of the kill as the measure of standing, loudest for the old wild prestige against the settled coin; a settled Orc finds market-day carries something of a well-led charge (see [`geography/ehizahar.md`](geography/ehizahar.md), *Veidrath*).
+
+**In Baratalda:** the crews' captains and companies, the harvest-charge made a peacetime living: a three-day ripeness window met head-on, now, by a picking company that hits a valley like a well-led muster (see [`geography/brauogi/baratalda.md`](geography/brauogi/baratalda.md)).
 
 ### Poppet
 Made on purpose, and knows whose: a Poppet is the only kind of person who was wanted before they existed. Someone's hands made them, for something, and the Poppet knows exactly what and whose; that certainty is a warmth no born people has and a wound waiting to happen, because makers die and purposes end, and a Poppet who outlives theirs carries the question the rest of their days. Earnest, loyal to littleness, unembarrassed by having been a toy: the smallest people on Talan, and the only ones who have never once doubted they were meant. Rare everywhere; no domain-specific concentration.
