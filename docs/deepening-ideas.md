@@ -153,6 +153,11 @@ Pace as stories want them. Rolling work.
 **Open.** The Bikitsa lake's name; the present Styward pair and notable Old Pairs, named; hospice-house roster and Solkai's quay-quarters; hamlet names along both coasts; the Voroir Daua charter-house's named commander; the kingdom's answer to the order's screening request, as story needs.
 **Where.** [lore/geography/brauogi/tvisol.md](../lore/geography/brauogi/tvisol.md).
 
+### [Baratalda] Post-build texture
+**Decided.** Built 2026-07-07 as **the Orchard Country**: every fruit on Talan, the thousand clocks and the **Call**, the migratory picking **crews** (crew-books founding), the **Housen** plutocracy (staked depth in the **Deep Ledger**; the deepest house rules as **Sealhouse**, its head **Sealwarden**; the capital and **High Fair** move with the Standings; **Common Chest** + house-blind Registry fixed at **Negutei**, the **Winterclose**), **Aldinskog** the grafted march under tend-right, **Sagarri** frontier fairs. Full canon: [lore/geography/brauogi/baratalda.md](../lore/geography/brauogi/baratalda.md); page at `/setting/talan/domains/brauogi/baratalda/baratalda.html`.
+**Open.** The Midarra coast quay-town (name, character); the named roster of magical fruits; the Housen roster beyond Aldermore and Damsonhale (their towns, their signature cellars); the fair-peace terms sworn at Sagarri and who keeps them on the Villtur bank; the Winterclose season in detail, as story needs.
+**Where.** [lore/geography/brauogi/baratalda.md](../lore/geography/brauogi/baratalda.md).
+
 ---
 
 ## § Regions: Sumendar & Zuzental
