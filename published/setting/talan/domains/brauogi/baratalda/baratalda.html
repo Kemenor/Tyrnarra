@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baratalda · Brauogi · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #cf6b4e;
+    --card-bg: rgba(40,22,16,0.5);
+  }
+
+  /* Left-bordered callout (customs of the orchard country) */
+  .orchard-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(36,20,14,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .orchard-call .oc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .orchard-call p { margin: 0 0 12px; line-height: 1.6; }
+  .orchard-call p:last-child { margin-bottom: 0; }
+
+  /* The thousand clocks: three tempos side by side */
+  .clock-wrap { max-width: 900px; margin: 22px auto; padding: 18px 16px; background: rgba(36,20,14,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .clock-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 14px; text-align: center; }
+  .clock-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 8px; }
+  .clock-step { flex: 1 1 200px; min-width: 180px; padding: 12px 16px; background: rgba(48,26,18,0.6); border: 1px solid rgba(207,107,78,0.35); border-radius: 3px; text-align: center; }
+  .clock-when { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .clock-title { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--gold-bright); margin-bottom: 6px; }
+  .clock-step p { font-size: 0.86rem; line-height: 1.5; margin: 0; }
+  .clock-arrow { display: flex; align-items: center; color: var(--domain-accent); font-size: 1.2rem; font-weight: bold; }
+  .clock-note { font-size: 0.86rem; line-height: 1.5; color: var(--text); margin: 14px 0 0; text-align: center; font-style: italic; }
+
+  /* Band atop the office / town cards */
+  .seal-band { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .clock-row { flex-direction: column; }
+    .clock-arrow { transform: rotate(90deg); justify-content: center; }
+    .orchard-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="baratalda">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Baratalda</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Baratalda</div>
+    <div class="page-subtitle">the Orchard Country · Brauogi's east, from the grain to the Hunt</div>
+    <div class="page-flavor">"You smell the border before you see it: apple blossom, orange, cherry sticking to the back of the throat."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>baratze</i> (garden, orchard) + <i>aldea</i> (region) → <i>baratze-aldea</i> → drift drops the medial <i>z</i> → <b>Baratalda</b>, "the orchard-region."</dd>
+    <dt>Position</dt><dd>The broad eastern country of Brauogi: <b>Greenward</b>'s grain to the west, the skirts of <b>Sugeiturri</b>'s source-peaks to the north, and its own stretch of <b>Midarra</b> coast in the south. The eastern border runs in two halves: the northern half is <b>Aldinskog</b>, the great fruit-forest; the southern half is the frontier river, with the hunting-hills of the <b>Lands of Villtur</b> beyond the far bank.</dd>
+    <dt>Terrain</dt><dd>Golden plain and green orchard-country in bands: grain-margins toward Greenward, then orchard after orchard after orchard, blossom-belts in spring and fruit-heavy rows in autumn, cellar-towns dug into every hillside, and the dark mass of Aldinskog standing across the north-east like a green wall the rows are slowly walking into.</dd>
+    <dt>Character</dt><dd>
+      <i>Every fruit on Talan grows here, a famous few grow nowhere else, and everything that carries sugar is fermented. Never in one country were there so many variations of taste.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">the Housen</span><span class="pill">the High Fair</span><span class="pill">Aldinskog</span><span class="pill">the Call</span><span class="pill">pouring the year</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Sorted by clock, anchored by none: <b>Minotaur</b> orchard-families on the rows, <b>Dragonet</b> still-masters at the brandy-crafts, <b>Kholo</b> carting-lines racing fruit against rot, and the <b>hunters who stayed</b>: settled <b>Orcs</b> captaining the picking crews, settled <b>Lizardfolk</b> grafting the Aldinskog tend-lines.</dd>
+    <dt>Faith</dt><dd><b>Sarrum</b> kept plain and read as <b>the god who waits</b>: the first blossom spoken over, and the last fruit of every tree left unpicked, <i>for the god who waits</i>. The fairs open under his peace.</dd>
+    <dt>Rule</dt><dd><b>The Housen</b>, the great cellar-houses, ranked openly by staked depth in the Registry's <b>Deep Ledger</b>: the deepest house rules as <b>Sealhouse</b>, its head sits as <b>Sealwarden</b>, and the capital moves to the Sealhouse's own town. A plutocracy that has never once pretended otherwise.</dd>
+    <dt>Founding</dt><dd>The region-name deep-old; the kingdom the Adventurer Era's first century. Through the Dark Era the picking crews kept the abandoned orchards alive and kept books; when people crept back, the crew-books were the only record of who held what, and the kingdom's titles and constitution were rebuilt out of them.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(207,107,78,0.5);">
+    <div class="gods-city-label">The Capital That Moves</div>
+    <div class="gods-city-name">The High Fair</div>
+    <div class="gods-city-byname">convened in the Sealhouse's own town · when a frost turns the Standings, the capital packs up and moves · the paperwork stays at Negutei</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    Settled foreign powers keep a clerk whose whole duty is knowing where Baratalda is this year. The Villtur clans, travellers themselves, follow the fair without blinking and hold it to be the one sensible government on Talan.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-smell" class="section-heading">You Smell It Before You See It</h2>
+  <div class="prose">
+    <p>Travellers agree on the border of Baratalda even where the maps argue, because the border is in the air: apple blossom, orange, the cherry-sweetness that sticks to the back of the throat, changing valley by valley with whatever is ripe. Every fruit known on Talan grows somewhere in Baratalda, and a small famous handful grows nowhere else at all; and since everything that carries sugar can be fermented, the drink runs wider still than the fruit. Wine, cider, perry, brandy, cordial, vinegar, preserve: the chroniclers' line is that never in one country were there so many variations of taste, and the Baratalda table proves it three times a day. The scent is in the bread, the meat glaze, the winter cordial, the soap. A Baratalda native abroad is caught out by plain water.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="thousand-clocks" class="section-heading">The Thousand Clocks</h2>
+  <div class="prose">
+    <p>Every sibling of Baratalda masters time by enduring it: Lurrath holds, Greenward heals, Sugeiturri keeps the current flowing. Baratalda masters time by reading it. The country is a thousand clocks running at a thousand speeds, and the whole art of the place is knowing, for each living thing, the right moment to act.</p>
+  </div>
+
+  <div class="clock-wrap">
+    <div class="clock-label">A Thousand Clocks, Three Tempos</div>
+    <div class="clock-row">
+      <div class="clock-step">
+        <div class="clock-when">Days</div>
+        <div class="clock-title">The Cherry's Week</div>
+        <p>One perfect week a year. The Call goes out at first light, the horns sound, and a town that moved like honey yesterday brings in a whole crop in three frantic days.</p>
+      </div>
+      <div class="clock-arrow">→</div>
+      <div class="clock-step">
+        <div class="clock-when">Years</div>
+        <div class="clock-title">The Cider's Seasons</div>
+        <p>The middle clocks: the press, the rack, the cellar. Every household lays something down, and a family's cellar is its memory.</p>
+      </div>
+      <div class="clock-arrow">→</div>
+      <div class="clock-step">
+        <div class="clock-when">Decades</div>
+        <div class="clock-title">The Brandy's Forty Years</div>
+        <p>The long clocks: graft-lines that bear for grandchildren, barrels laid down for a reign. The depth of these is what the Housen count for rule.</p>
+      </div>
+    </div>
+    <p class="clock-note">A year of patience here detonates, then goes back to waiting.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="crews" class="section-heading">The Crews, and the Call</h2>
+  <div class="prose">
+    <p>The three days are the whole reason Baratalda is one country. Fruit rots where grain forgives, and no valley's own hands can meet its own window, so the harvest rides on <b>the crews</b>: professional migratory picking companies, captained and contracted, that work a circuit from valley to valley all year, southern soft fruit in early summer, the wine terraces in autumn, the late orchards and the Aldinskog tend-lines after. A crew hits a valley like a well-led muster and is gone before the bruising sets in.</p>
+    <p>The ripeness-verdict is <b>the Call</b>. When a valley's Call goes out, the <b>calling-horns</b> sound down the rows and the <b>call-riders</b> carry the word to the next fair and the next company, so the circuit turns on the fruit's own schedule and no other. A valley the circuit skips watches its year rot on the branch, and every soul in the country knows it, which is why the circuit, and never any crown, is the thing Baratalda cannot afford to break.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="housen" class="section-heading">The Housen, and the Seal</h2>
+  <div class="prose">
+    <p>Baratalda is ruled by <b>the Housen</b>, the great cellar-houses, and it is a plutocracy that has never once pretended otherwise. What a house counts is <b>depth</b>: the fair-assessed value of everything it has laid down and not yet broached or sold, its undelivered decades of wine, brandy, and preserved rarities. Each winter the Deep Ledger closes and the <b>Almanack</b> is cried, carrying the year's schedule and the <b>Standings</b> both, and the deepest house on the page rules.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="seal-band">The Seal</div>
+      <div class="card-name">Sealhouse &amp; Sealwarden</div>
+      <p>The deepest house holds the seal as <b>Sealhouse</b>; its head sits as <b>Sealwarden</b>, head of state. The government sits in the Sealhouse's own fair-town and the <b>High Fair</b> convenes there, so when the Standings turn, the capital moves. Treaties are entered in the registry and carry forward across changes of house; striking an inherited entry is the gravest act a new Sealhouse can take.</p>
+    </div>
+    <div class="accent-card">
+      <div class="seal-band">The Country's Money</div>
+      <div class="card-name">The Common Chest</div>
+      <p>Tithes on the fairs and fees on the seal belong to Baratalda, held in the <b>Common Chest</b> at Negutei. The Sealhouse directs that spending, the roads and bridges, the land's arms on the frontier, the clerks' wages, and owns none of it: lose the seal and the spending-hand passes overnight while the Chest stays exactly where it is. Hosting the High Fair comes from the Sealhouse's own cellars, never the Chest, so rule bleeds the very depth that earns it.</p>
+    </div>
+    <div class="accent-card">
+      <div class="seal-band">The Referees</div>
+      <div class="card-name">The Registry &amp; the Deep Ledger</div>
+      <p>The clerks of the Registry are paid from the Common Chest, assess every house's depth at fair-values, and keep the <b>Deep Ledger</b> and the treaty-registry. They cannot be bought without every rank in the Standings becoming worthless, which is why the Housen themselves police registry-fraud harder than any warden could.</p>
+    </div>
+  </div>
+
+  <div class="orchard-call">
+    <div class="oc-label">Every Child Can Recite It</div>
+    <p><b>No house picks its own trees.</b> Depth is future fruit, and future fruit needs growers who will sell to you and crews who will come. Tilt the Almanack too little in your own favour and you are out in two years; tilt it too much and the Housen combine against you, or the crews decline your valleys.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="founding" class="section-heading">The Books That Outlived the Kingdom</h2>
+  <div class="prose">
+    <p>Grain flees a catastrophe and replants in a year; an orchard is a generation, and it cannot run. When the Dark Era emptied these valleys the trees were the hostage, and the institution that survived was the crews: moving companies who rode the circuit through the blight-decades keeping abandoned orchards alive, pruning, grafting, and taking their pay in claims, and keeping books: whose trees, what tended, what owed. When people crept back after the sealing, those crew-books were the only surviving record of who held what in the whole east, and the kingdom's titles were rebuilt out of them, row by row. The refounded kingdom, early in the Adventurer Era, wrote its constitution around where power already lived: the ledgers and the circuit.</p>
+  </div>
+
+  <div class="orchard-call">
+    <div class="oc-label">The Tale Every Child Learns</div>
+    <p>The chronicles keep one reconstruction-era tale: the warlord who seized the books at Negutei and declared himself king, and found that every crew on the circuit simply declined his valleys, so his kingdom rotted on the branch in a single autumn. Nobody had to fight him. The country learned once that the calendar is the army.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="towns" class="section-heading">Negutei, Sagarri, and the Fair-Towns</h2>
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="seal-band">The Fixed Point</div>
+      <div class="card-name">Negutei · the Winter-Place</div>
+      <p>Basque <i>negutegi</i>, winter quarters, drifted. The Registry's town by the southern lake: the Deep Ledger's shelves, the Common Chest's vault, the treaty-registry, all dug into the cellars. Each winter it holds <b>the Winterclose</b>, the weeks when the Ledger closes, the Standings are read from the Registry steps, and the new Almanack is cried. The government moves; the paperwork stays.</p>
+    </div>
+    <div class="accent-card">
+      <div class="seal-band">The Frontier Fair</div>
+      <div class="card-name">Sagarri · Apple-Town</div>
+      <p>Basque <i>sagar</i> + <i>herri</i>, contracted. The great eastern fair-town under Aldinskog's skirts, where the frontier trade concentrates: the harvest-fairs that draw Villtur hunters down across the river to trade game and furs for wine, apple-brandy, and stone-fruit, and where the <b>fair-peace</b> is renewed with the clan-elders.</p>
+    </div>
+    <div class="accent-card">
+      <div class="seal-band">The Sea Road</div>
+      <div class="card-name">The Orchard Coast</div>
+      <p>Baratalda's own stretch of Midarra keeps the quays that ship the vintage south and east, toward Lautara's markets and the ferry-lanes of the Twin Suns crossing. The coast's port-town is its own open chapter in the chronicle.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="aldinskog" class="section-heading">Aldinskog · the Grafted March</h2>
+  <div class="prose">
+    <p>The northern half of the eastern frontier is <b>Aldinskog</b> (Icelandic <i>aldin</i>, tree-fruit, + <i>skógur</i>, forest, drifted), the fruit-forest, and the name is a claim before it is a description: the great wood is still mostly wild, and Baratalda is grafting it. Kept wood is married onto wild root, row by row, deeper each generation, under <b>tend-right</b>: you hold what you graft and keep only what you keep tending, the orchard cousin of Greenward's reclamation, taming rather than healing.</p>
+    <p>The work runs from the Baratalda side only. Walk east and the orchard loosens into forest with no line where the kingdom ends, only a depth to which the tending runs, read off the graft-scars ringing the trunks, old silver scars at the settled edge and raw new ones at the deep line. The deep wood is where the country's magical fruit grows wildest, the rare kinds that grow nowhere else on Talan and resist every attempt to move them; the deepest tend-lines exist half for the harvest and half for the hope of coaxing one more wild wonder onto kept root.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">The Peoples · Sorted by Clock</h2>
+  <div class="prose">
+    <p>Baratalda anchors no single people; it sorts them by clock. <b>Minotaur</b> orchard-families hold most of the rows, the patience that lays stone in Lurrath turned to rootstock, and Minotaur names fill the Housen rolls. <b>Dragonet</b> still-masters run the brandy-crafts, the old blood entirely at home with copper, fire, and forty years of waiting. <b>Kholo</b> carting-lines keep the loads: fruit that must race its own rot to the quays travels in the care of the people who reckon a life by what it kept safe.</p>
+    <p>And the east is thick with <b>the hunters who stayed</b>: Villtur folk who came down to a fair and kept coming, then kept staying. Settled <b>Orcs</b> captain the crews, the harvest-charge made a peacetime living, three-day windows met head-on, now, by companies that hit a valley like a muster; settled <b>Lizardfolk</b> run the long clocks, above all as the tend-line grafters of Aldinskog, slow to start a line and impossible to shake off one. At the fairs the two countries of their birth trade across a table, and a Sagarri Orc pours for her roaming cousins with a captain's arm-rings on.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="daily-life" class="section-heading">The Day, the Year, and the Young</h2>
+  <div class="prose">
+    <p>Mass life runs on the clocks: a family's morning begins with someone walking the rows and reading them, and its evenings end in the cellar, because every household, however small, lays something down. The custom is <b>pouring the year</b>: occasions are honoured with the bottle of the year they mark, a wedding with the year the couple met, a treaty with the year the border was drawn, a funeral with the year the dead was proudest of.</p>
+    <p>The visitor sees an idyll, blossom and festival and generous tables, and files Baratalda as the gentlest country on Talan; the native reads the Standings behind every toast, knows which house's depth a frost just cracked, and can tell you exactly how political a gift of the '19 pear brandy is. The young owe a <b>crew-year</b>: a season or three riding the circuit with a picking company before settling to rows or cellar, grower's child and Housen heir alike, and the friendships and marriages of the crew-year are how the country's east and west keep becoming one people. The sanctioned transgression is the night-run past the tend-line, deep into wild Aldinskog by lantern to taste something no one has grafted yet, and every Baratalda adult keeps the memory of one fruit they can never find again.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="faith" class="section-heading">Faith · the God Who Waits</h2>
+  <div class="prose">
+    <p>Baratalda keeps Sarrum plain, the way Greenward does, and reads him as the god who waits: patience is his liturgy here, and the harvest his answer. The orchard rites are small and universal: the first blossom of a row spoken over, and the last fruit of every tree left unpicked, <i>for the god who waits</i>, so that every orchard in the country ends its year with one deliberate act of patience. The fairs open under his peace, and the Housen seal their winter Standings with his name, the steadfast god asked to witness a ranking built out of forty-year promises.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="tensions" class="section-heading">Live Tensions</h2>
+  <div class="prose">
+    <p><b>The graft and the hunt.</b> Aldinskog deepens every generation, and the clans across the river run their hunts through a wood their grandmothers knew as wholly wild. The fair-peace holds, because the fairs are worth more to the clans than the deep wood's edge; but roaming voices in Villtur have begun calling the graft a slow theft dressed as gardening, and the settled cousins at Sagarri are asked to answer for it at tables on both sides of the river.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="seal-band">The Present Sealhouse</div>
+      <div class="card-name">Aldermore</div>
+      <p>Holds the seal on the deepest and most cautious book in three generations, depth laid in safe cider and safe years. The country's clerks admire the book; the country's poets do not.</p>
+    </div>
+    <div class="accent-card">
+      <div class="seal-band">The Arithmetic Rival</div>
+      <div class="card-name">Damsonhale</div>
+      <p>Unseated eight winters ago by a frost that cracked its plum terraces, and re-laying bold and long ever since, making no secret of the arithmetic. The country watches the gap the way Sugeiturri's court watches the Rising Water, and every hard spring is read twice, once for the trees and once for the government.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The First Tree</button>
+    <div class="legend-era-content">
+      <p>They say that somewhere past the deepest tend-line in Aldinskog stands the First Tree, the wild mother from which every graft in Baratalda ultimately descends, and half the old families swear their oldest scion was cut from it in the crew-book years. The wood-crews say you know its ground when you reach it, because nothing grows crooked there and nothing carries thorns; and the children's version, told at every hearth, is that a fruit eaten from the First Tree tastes of the best year of your life. The tellers disagree on whether that year is behind you or ahead of you, and a Baratalda listener will tell you the disagreement is the whole point.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain; Baratalda is its eastern country, the orchard beside the bread.</li>
+      <li><a href="/setting/talan/domains/ehizahar/ehizahar.html"><b>Ehizahar →</b></a> · The Hunt domain across the frontier river; its hunters trade furs at Sagarri, and its settling clans became Baratalda's crews and grafters.</li>
+      <li><a href="/setting/talan/domains/brauogi/greenward/greenward.html"><b>Greenward →</b></a> · The breadbasket-basin west of the orchards; its reclamation is the healing that Aldinskog's grafting rhymes with.</li>
+      <li><a href="/setting/talan/domains/brauogi/tvisol/tvisol.html"><b>Tvisol →</b></a> · The Kingdom of the Two Suns on the coast south-west; its Erfivin is poured for the dead, and Baratalda pours for everything else.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Baratalda's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The orchard coast's port-town.</b> The quays that ship the vintage south await their town's name and character.</li>
+      <li><b>The magical fruits.</b> The famous handful that grows nowhere else on Talan is unnamed, and no chronicler has explained why every fruit grows here at all; the learned dispute it.</li>
+      <li><b>The Housen roster.</b> Beyond Aldermore and Damsonhale, the great houses, their towns, and their signature cellars are uncoined.</li>
+      <li><b>The fair-peace.</b> The terms sworn with the Villtur clan-elders at Sagarri, and who keeps them on the far bank, are unwritten.</li>
+      <li><b>The Winterclose in detail.</b> The reading of the Standings, the crying of the Almanack, and the winter season at Negutei await their full chronicle.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · BARATALDA</div>
+
+</div>
+
+</body>
+</html>
