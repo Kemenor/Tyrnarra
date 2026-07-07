@@ -41,7 +41,7 @@ The common trigger is a bare *"flesh out [REGION]"* with no other context. The o
 
 **Read the quality bar first.** Before designing, read the **Itsasalda**, **Atarialda**, and **Azkataria** bullets and the **Merkavar** section in `lore/geography/lautara.md`. They are the freshest seed-led builds (2026-05-29 to 2026-05-30, lore plus dedicated HTML pages) and show what a region reads like when the soul comes before the system; Merkavar is the model for *deepening* an already-built place. Emarrea and the Vindul three (Baerfrost, Air Monastery, Fellibylur) are the older exemplars.
 
-## The eight phases at a glance
+## The phases at a glance
 
 | Phase | What happens | Phase boundary discipline |
 |---|---|---|
@@ -49,6 +49,7 @@ The common trigger is a bare *"flesh out [REGION]"* with no other context. The o
 | **1. Seed questions** | Ask the user 3-5 targeted questions about geography, flow, atmosphere, and the traveler's-impression of the place. Surface the answers back as a summary before generating | Chat only. No writes. |
 | **2. Generate seeds** | Generate **2-3 distinct seeds**. Each is an image, a contradiction, a behavior, or a collision of forces; each must pass the specificity test ("could this place exist anywhere else? if yes, not specific enough"); each names what political form and ancestry role *naturally emerge*. End with a recommended pick. | Chat only. No writes. |
 | **3. User picks + refines** | User picks one or combines two. Axis-confirmation only. Ask one or two clarifying questions on placement, neighbors, ancestry-anchor, naming-axis | **Axis-confirmation is not a green light to draft prose.** Do not start Phase 5 yet |
+| **3.5. Government seed round** | For polities: offer **3-5 distinct government seeds**, each naming who concretely rules, why they are *fit* to rule, why the ruled accept it, and the honest cost. The government grows *from* the seed's world and *contains* the seed; it is never the seed generalized into rule. Census the continent's existing forms first. End with a recommended pick | Chat only. No writes. |
 | **4. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
 | **5. Surface the prose draft** | Draft the `geography/<region>.md` bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
 | **6. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/ancestries.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
@@ -140,7 +141,7 @@ Each seed must pass all three:
 For each of the 2-3 seeds, write:
 
 - **A 2-3 sentence pitch** that leads with the image / contradiction / behavior / collision. Politics does not appear in the pitch.
-- **"What follows from this"** — one short paragraph naming the political form, ancestry role, signature institution, and one concrete sensory detail that all emerge naturally from the seed. *(Example, Atarialda: "The hearth-rule. Hospitality is a near-sacred obligation; refusing someone a seat is a civic wrong. Governance is the council of those who keep the best tables; stay-at-home families and traveling families are equals with complementary roles. Population is mixed by accumulation — strangers who got fed kept coming back.")*
+- **"What follows from this"** — one short paragraph naming the political form, ancestry role, signature institution, and one concrete sensory detail that all emerge naturally from the seed. The political form named here is a first sketch only; the government itself is settled in Phase 3.5 and must not simply be the seed generalized into rule. *(Example, Atarialda: "The hearth-rule. Hospitality is a near-sacred obligation; refusing someone a seat is a civic wrong. Governance is the council of those who keep the best tables; stay-at-home families and traveling families are equals with complementary roles. Population is mixed by accumulation — strangers who got fed kept coming back.")*
 - **Cross-canon hook** — how this rhymes with locked canon (Halflings' "they got faster" with trains; Lautara's Commerce-domain texture; the trade corridor from Egulon and Zuzental).
 - **The specificity test result** — one line confirming the seed passes the test and naming what would have to change to put this place elsewhere. If the answer is "the kingdom's name", the seed has failed; rewrite.
 
@@ -184,6 +185,29 @@ User picks one (or combines two). Often they refine the framing significantly, s
 This phase is for follow-up questions: geographic placement, neighbors, ancestry-anchor, naming-axis preferences. Ask one or two clarifying questions in chat, get the answers, then move to naming.
 
 If the user provides a map image with hand-drawn borders, treat the geographic corrections as authoritative over any prior canon. Note the canon-mismatches you'll need to fix at commit time.
+
+---
+
+## Phase 3.5: Government seed round (chat only)
+
+Added 2026-07-07 after the Baratalda build spent five rebuild-turns on governments that were the seed wearing offices. When the sub-region is a polity, run this round after the seed is picked and before naming.
+
+**The core rule: the government grows FROM the seed's world and CONTAINS the seed; it is never the seed generalized into rule.** Tvisol is the exemplar. Its seed is the two suns and the dead's season; its government is rule by the young in paired ten-year reigns. The form was born from the seed's logic ("in a country whose business is death, choices belong to those who must live with them longest") and contains the seed (reigns end at Guestide; the Service passes through the hospices), but what it is *about* is a different human axis: youth, accountability, the setting-down. The Baratalda anti-pattern: a timing-craft seed became a timing-court government three rebuilds running (callers' council, calendar-state, staked-future ranking), each one the seed poured into every cavity of the state, the same error the 2026-05-28 rewrite fixed for ancestries ("the feeling must *fit into* a full culture, not *fill* it") applied to governments.
+
+**Offer 3-5 distinct government seeds.** Each must name:
+
+- **Who concretely rules**: the office, not the vibe, with the four concrete answers a foreigner needs. Who rules day-to-day? Who receives a foreign envoy? Who signs the treaty? Who decides to build the bridge?
+- **Why they are FIT to rule.** Actual statecraft competence, stated explicitly. Craft-prestige is not competence: calling a cherry ripe negotiates no trade deficit and engineers no bridge. Find where the skills of rule (planning at scale, logistics, contract-law, generational diplomacy) are *already practiced* in this society, and give power to the people who practice them.
+- **Why the ruled accept it**: the founding story (usually a Dark-Era survival institution turned peacetime government) plus the standing reason the ordinary baker tolerates it today.
+- **The honest cost, and the nearest-neighbor polity** on the continent.
+
+**Name the form honestly.** If it is a plutocracy, write plutocracy. The user does not mind an ugly form; he minds a mislabeled one. A claimed constraint that is false on inspection ("the state cannot say no" when letting a petition wither *is* the no) discredits the whole design.
+
+**Census the shape before proposing it.** Grep the built regions for the form. As of 2026-07 roughly half the built polities rule by council or assembly (Evenhand, Vordsbench, hearth-council, Open Floor, Hightable, Baerfrost's chieftains, Wyndwalken's chapter, Fenurra's War Council, Skarvorn); a new council needs deliberate justification, and a second council in the same domain is same-iness at its laziest.
+
+**Run the incentive-math before surfacing.** Re-derive who actually wins any standing-metric: a "contested-call record" invites manufactured contests; clock-length seniority reduces to age (the Vordsbench again); staked-wealth depth reduces to the largest purse (a plutocracy; name it or change it). Then run the three governance specificity tests (below, after *Depth axes*): unity, external agency, internal provision.
+
+**End with a recommended pick.** The user picks, combines, or inverts, same as Phase 2.
 
 ---
 
@@ -256,7 +280,7 @@ Beyond the polity-shape and the signature institution, a sub-region reads alive 
 
 ### Governance: the three specificity tests
 
-A region's government is hand-waving until it survives three questions, each testing a different axis. The trap: a *thematic* answer ("they decide together", "the gathering settles it", "it is woven") is not a mechanism. Demand the procedure, step by step, until a foreigner could predict the outcome.
+These run inside the Phase 3.5 government round (and again on the Phase 5 draft). A region's government is hand-waving until it survives three questions, each testing a different axis. The trap: a *thematic* answer ("they decide together", "the gathering settles it", "it is woven") is not a mechanism. Demand the procedure, step by step, until a foreigner could predict the outcome.
 
 1. **How does it keep internal politics from fracturing?** Tests **unity**. If you cannot answer, the real question is: why did the region not fracture into pieces?
 2. **How does it broker a deal with a neighbouring kingdom?** Tests **external agency**. If you cannot answer: why is this one region and not four separate ones?
@@ -369,7 +393,7 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **Kingdoms inherit names, not continuity.** No Talanese kingdom predates 1 MR; few are older than the Dark Era. Default new polities to Adventurer-Era or late-Dark-Era founding unless the older claim is a deliberate story feature.
 - **Naming stratum + collision check** before committing any new name (full detail in Phase 4).
 - **Pre-read before designing.** If the user could reasonably point at the draft and say *"that contradicts what's in `<file>`,"* you should have read `<file>` first.
-- **Surface before writing; pause at every phase boundary.** Surface actual prose for review before committing; axis-confirmation is not a green light. The seams: seed-questions → seeds → user picks → naming → prose draft → commit → publish.
+- **Surface before writing; pause at every phase boundary.** Surface actual prose for review before committing; axis-confirmation is not a green light. The seams: seed-questions → seeds → user picks → government seeds → naming → prose draft → commit → publish.
 - **Lore-first by default.** Brainstorm goes to lore files, not HTML, until an explicit publish signal. Touch HTML only on an explicit publish or promote signal.
 
 ---
@@ -379,6 +403,7 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **Leading Phase 2 with the archetype menu.** The menu is a sanity-check *after* the seed. If you find yourself opening with "a merchant republic of Halflings", the seed-questions weren't deep enough — go back to Phase 1.
 - **Reducing the ancestry to its one-line lore.** "Halflings travel" is a seed, not an identity. A Halfling-anchored sub-region must answer "what about *this* place changes how Halflings live here?" before commit.
 - **Building a value-society instead of a culture.** Extracting the ancestry feeling and making a whole society that *is* that one value (Ilun Tasun's first drafts were "the society of *the self is made*"). The feeling must *fit into* a full culture, not *fill* it. A culture needs a concrete engine (a craft, a trade, a place, a collision) that throws off economy, governance, daily life, and faith; the people-feeling is one colour in the weave, the way the Tengu disposition is one thread among Haizetsua's wind, carving, song, teas, and clans. If your culture reduces to one value, you have not found the engine yet.
+- **Making the government BE the seed.** The seed generalized into rule (the cherry-caller as head of state, however many mechanisms are stacked on top) is the ancestry-as-label error applied to governments. The government is born from the seed's world and contains the seed, and is *about* something else. Run Phase 3.5; Tvisol is the model. (The Baratalda build rebuilt its government five times before this clicked.)
 - **Letting pre-placed canon drive the seed.** Features the domain file already lists (a Wardstone, a named port, a labelled peak) are NOT the seed. Build the seed from people-and-place; existing features attach to it once it lives, or get reinterpreted by it. If you are inventing a people to justify a feature already on the map, stop: that is lore-first, backwards. ("Forget the Wardstones, forget the port" was the turning point on the Ilun Tasun build.)
 - **Treating a stub bullet as built canon.** A one-line sub-region label is a placeholder, not a settled fact. Do not assume who lives there, what its character is, or that its edge is fixed; do not design around it. (The Brauogi session stalled by reading thin one-liners as gospel and trying to slot ancestries around them.)
 - **Theorising the domain instead of reading the exemplars.** When the canon read surfaces a tension (who lives where, how the peoples distribute), the move is to see how Emarrea / Itsasalda / the Vindul four already resolve it, not to invent a domain-level meta-rule and pour it over the files. (The Brauogi session burned three turns on an invented "decoupling principle" the exemplars flatly contradict.)
