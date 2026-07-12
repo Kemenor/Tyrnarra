@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hirubaso · Brauogi · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #4fae5c;
+    --card-bg: rgba(16,28,18,0.5);
+  }
+
+  /* Left-bordered callout (the household's terms) */
+  .grove-call { max-width: 880px; margin: 22px auto; padding: 20px 26px; background: rgba(14,26,16,0.42); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .grove-call .gc-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .grove-call p { margin: 0 0 12px; line-height: 1.6; }
+  .grove-call p:last-child { margin-bottom: 0; }
+
+  /* Band atop the welcome / terms cards */
+  .grove-band { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .grove-call { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body data-page="hirubaso">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Hirubaso</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Hirubaso</div>
+    <div class="page-subtitle">the Three-River Grove · the wild at the heart of the breadbasket</div>
+    <div class="page-flavor">"Everyone can visit. Not everyone is heard."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>hiru</i> (three) + <i>baso</i> (forest), drifted from the longer <i>hiru-ibai-baso</i> "three-river-forest" with loss of the medial <i>ibai</i> → <b>Hirubaso</b>. The deep-old name of the wood itself; the forest carried it before any order lived there.</dd>
+    <dt>Position</dt><dd>An enclave in the south-centre of <b>Greenward</b>'s basin, the one stand of old wild wood in the plough-country, grown over the meeting of three rivers. Independent of the League that surrounds it; the Furrowsworn treat its border the way they treat weather, as a thing respected rather than negotiated.</dd>
+    <dt>Terrain</dt><dd>Old-growth forest closed over its own interior; three rivers run in under the canopy and join at the centre. From outside, a dark green island on a golden sea, visible for a day's ride in every direction.</dd>
+    <dt>Character</dt><dd>
+      <i>The still point of the breadbasket: the forest that screens its own guests, and the household that lives with it.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">the three welcomes</span><span class="pill">the Elkaride</span><span class="pill">the Heart</span><span class="pill">the Lending</span><span class="pill">Primotech</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>All three of Brauogi's, without preference: Minotaur patience, Kholo keeping, and the Dragonets' old blood each arrive at the same practice from a different door. The grove has never had a founding people.</dd>
+    <dt>Faith</dt><dd>The Primal current itself, kept as practice rather than worship: the older, wilder art beside Sarrum's basin (see <b>Greenward</b>, whose turning-rites the grove set down). A hierocracy with no god at its head.</dd>
+    <dt>Rule</dt><dd>The <b>Elkaride</b>, the druid order, and their doctrine: order and forest keep each other, and neither is master in the house. At the head stands <b>the Sustra</b>, the household's deepest junction, with last call on everything that leaves the grove.</dd>
+    <dt>Founding</dt><dd>The order's unbroken record runs from the post-Crimson-Rain reconstruction, roughly as old as any charter on Talan. The household dates its real founding to the Dark Era, in the keeping and the being-kept.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(79,174,92,0.5);">
+    <div class="gods-city-label">The Enclave · Where the Three Rivers Meet</div>
+    <div class="gods-city-name">The Heart</div>
+    <div class="gods-city-byname">a settlement grown as much as built · halls trained out of living trees, store-houses in trunks that go on growing around their contents</div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; margin:18px 32px 0; opacity:0.85;">
+    A druid who speaks of <i>my forest</i> is corrected the same way as a visitor who speaks of <i>your forest</i>.
+  </p>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="three-welcomes" class="section-heading">The Three Welcomes</h2>
+  <div class="prose">
+    <p>Hirubaso keeps no wall, no warden, and no gate. Anyone on Talan can walk to the treeline and walk in, and the roads of Greenward will take them most of the way. What happens under the canopy is the household's business. Three welcomes are known, and every traveller receives exactly one.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="grove-band">Most Travellers</div>
+      <div class="card-name">The Empty Walk</div>
+      <p>Hours of handsome unremarkable forest in which no bird sings close, no path holds its line, no smoke shows, and no living soul appears, until the trees thin and the walker steps out onto open plough-land, usually facing the way they came. There is no menace in it. The forest has simply declined to be at home.</p>
+    </div>
+    <div class="accent-card">
+      <div class="grove-band">Those With an Errand</div>
+      <div class="card-name">Being Met</div>
+      <p>A druid steps out of the trees as though the meeting were long arranged, greets the traveller by asking what they carry and what they want, and decides, over an hour or a day, whether the errand warrants the Heart. Petitioners for the grove's grown work, Evenhand messengers, the sick past a healer's art: these are the met.</p>
+    </div>
+    <div class="accent-card">
+      <div class="grove-band">The Few</div>
+      <div class="card-name">Being Led</div>
+      <p>A traveller who never asked for Hirubaso finds an animal keeping pace with them, a stag, a river-otter, a plough-horse gone suddenly certain, and follows it for reasons they explain badly afterwards, and arrives at the Heart having surprised themselves and the order both. A led arrival turns the whole enclave out to discover what the forest has seen. Many of the led, in time, stay.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="household" class="section-heading">The Household</h2>
+  <div class="prose">
+    <p>The Elkaride teach their history plainly. In the Dark Era the basin died around the grove: the corruption came up through the soil, the ploughland turned grey, and desperate people came to the last standing wood for timber, for game, for anything. The order stood between the forest and the axes, and turned the blight from the three rivers where they meet; and the forest, in its turn, fed the order through the dark, hid them from what hunted, and kept them warm on its own fallen wood through winters that killed the protected and provisioned elsewhere. Each kept the other alive for eight centuries, and neither has forgotten it.</p>
+    <p>That is the whole doctrine. The order does not serve the forest, and the forest does not obey the order; they live together, guide each other, and are not separable. The word the Elkaride use for their practice is <b>communing</b>: to decide anything that matters, druids and forest decide together, and how the forest's side of the conversation arrives (in the behaviour of the animals, the turn of the water, the way a grove stands one morning) is a craft the order spends a lifetime learning and declines to explain.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="elkaride" class="section-heading">The Elkaride</h2>
+  <div class="prose">
+    <p><i>(Basque</i> elkar <i>"each other" +</i> kide <i>"companion" →</i> elkarkide <i>"each-other's-companions," the medial k worn away in drift.)</i> The order draws from all three of Brauogi's peoples without preference, and the grove has never had a founding people. Most Elkaride arrive as the led; some are born in the Heart to druid families; a few are met-and-stayed, petitioners whose errand ended and who asked to remain. Admission belongs to the household, and the forest has a voice in it: a candidate the order favours whom the forest ignores is not admitted, and the reverse has happened often enough that the order has learned to trust it.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>Seniority runs by depth of communing rather than years, and at the head stands <b>the Sustra</b> <i>(Basque</i> sustrai <i>"root," the trailing vowel lost in drift)</i>: the root is the organ through which tree and soil feed each other, and the Sustra is the household's deepest junction, the one through whom the hardest conversations pass. The Sustra has last call on everything that leaves the grove, and above all on the Lending.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-heart" class="section-heading">The Heart</h2>
+  <div class="prose">
+    <p>The enclave stands where the three rivers meet, and everyone, druid and farmer and chronicler, calls it <b>the Heart</b>. It is a settlement grown as much as built: halls trained out of living trees over centuries, roofs of woven canopy, store-houses in hollowed trunks that go on growing around their contents, and between them ordinary benches, ovens, and looms, because the household includes mortals and mortals like bread and wool. Life at the Heart is work like life anywhere: tending, growing, teaching, the rites of the year, the long slow craft of the grown things, and the endless conversation with the forest that the order calls practice.</p>
+    <p>Children raised there, druid-born and led alike, learn the forest as a sibling rather than a mystery. The young Elkaride's coming-of-age runs opposite to Greenward's: where the basin's children dare <i>inward</i> to the warded edge, the grove's young are sent <i>out</i>, a year in the worked world, on farms and barges and market-towns, because a druid who has never lived the plough cannot commune on behalf of a household that sits in the middle of one.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-lending" class="section-heading">The Grown Things &amp; the Lending</h2>
+  <div class="prose">
+    <p>Hirubaso is the one place on the continent where <b>Primotech</b> is routine: the grove does not manufacture, it grows, and what it grows it grows in communing, the order asking and the forest answering, over seasons or decades. What leaves the grove leaves on the household's terms, and the druids decide, the Sustra holding last call.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card">
+      <div class="grove-band">The Small Things</div>
+      <div class="card-name">Sold</div>
+      <p>Through the Greenward market-towns, at prices set to keep the curious away rather than to enrich anyone.</p>
+    </div>
+    <div class="accent-card">
+      <div class="grove-band">The Chosen</div>
+      <div class="card-name">Gifted</div>
+      <p>Arriving with a led traveller or a departing guest, chosen by a logic the recipient rarely understands for years.</p>
+    </div>
+    <div class="accent-card">
+      <div class="grove-band">The Deserved</div>
+      <div class="card-name">Earned</div>
+      <p>Grown for a person the household judges to have stood for the living world at cost.</p>
+    </div>
+    <div class="accent-card">
+      <div class="grove-band">The Great Works</div>
+      <div class="card-name">Only Ever Lent</div>
+      <p>A lent thing is never sold on, never inherited, never lost: when its work is done, or its bearer fails it, nature collects.</p>
+    </div>
+  </div>
+
+  <div class="grove-call">
+    <div class="gc-label">Nature Collects</div>
+    <p>A stag walks into a camp and stands until the polearm is strapped to its back; vines take a treasury wall in a night and are gone by morning with the vault empty. The item is simply <i>going home</i>, and the wise do not argue. Two centuries of failed thefts have taught the continent's powers the terms, and the terms are the reason Hirubaso needs no wall.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="grove-and-plough" class="section-heading">The Grove &amp; the Plough</h2>
+  <div class="prose">
+    <p>The grove and the basin meet constantly, on purpose, in three standing ways. The <b>turning-rites</b> are the grove's gift to the furrow: the small consecrations a Greenward farmer keeps (the slow first furrow, the old seed at the field's corner) were set down by Elkaride hands, and each spring a walking of druids goes out along the reclamation line to renew them where the gold meets the grey. The grove's <b>Hand</b> sits on Greenward's Evenhand, one seat of the five, always an Elkaride who has done their year outside and can argue drainage with a steward without communing about it. And the rivers themselves are the third meeting: the three that join at the Heart water half the basin downstream, and the basin has never forgotten whose craft kept them clean through the dark.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="sustra-and-forest" class="section-heading">The Sustra &amp; the Forest</h2>
+  <div class="prose">
+    <p>Since the Root-Twister's eruption tore up the southern fields (2524 MR) and its sealed gate began seeping grey back into ground a generation spent healing, the household has been having, quietly, the first real argument anyone living can remember. The present Sustra holds that the grove must go out to meet it: that the household's whole history is protection given outward, and that waiting behind the treeline while the basin's south is eaten again betrays the debt of the dark years. The forest, in every register the order knows how to read, says stay. Trails toward the south margin close. Animals will not walk it. The communing, on this one subject, goes silent.</p>
+    <p>The order splits along the grain of its own doctrine: to follow the Sustra against the forest breaks the household one way, to keep the household and watch the grey advance breaks it another, and every Elkaride knows the question no one asks at the evening tables. What if the Sustra is right?</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Guides</button>
+    <div class="legend-era-content">
+      <p>The folk of Greenward say the animals that lead the led are the grove's own dead druids, gone back into the forest's keeping and still doing the door-work of the household. A farmer whose plough-horse once walked her to the Heart will tell you the horse was never quite the same horse that morning, and Greenward families that count a led arrival in their line leave a corner of the barn swept and empty, in case the guide should ever want somewhere to stand. The Elkaride, asked directly, answer that the forest does not explain its messengers, which the folk correctly note is neither a yes nor a no.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Muinarri</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Marrow-Stone</div>
+      <p>The rumoured Brauogi heart-stone is real, and its name in the household is <b>the Muinarri</b> <i>(Basque</i> muin <i>"marrow, pith, the living core" +</i> harri <i>"stone": the marrow-stone; the continent's "heart-stone" is a loose translation of a name half-heard)</i>. It was grown through the Dark Era by the order and the forest together, decades of communing under siege, and it is the household's founding act made object: a grown stone, alive in the way the grove's works are alive, that re-tunes the flow of minerals through ground and water across a whole landscape.</p>
+      <p>The Muinarri is how Hirubaso turned the blight from the three rivers; it has sat at the Heart ever since, holding the watershed clean, and it is the true reason the enclave hides and the forest screens its guests. The tavern-version ("it adjusts a mountainside's mineral flow") is garbled truth: it has never touched a mountain, but it could.</p>
+      <p>And it is the silent centre of the household's argument. The Sustra believes the Muinarri could be carried south and set against the Root-Twister's seepage, and is probably correct; the forest refuses, because the marrow-stone unmoored leaves the three rivers unheld, and the last time the rivers ran unheld was the blight. Both sides of the household are right, which is what makes it the first argument the doctrine cannot settle: the living-with has no procedure for the day the two keepers disagree about which protection the debt demands.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain; the grove is the wild left standing at the heart of its breadbasket.</li>
+      <li><a href="/setting/talan/domains/brauogi/greenward/greenward.html"><b>Greenward →</b></a> · The Made Ground around the grove; Hirubaso is one of its Four That Held, and the turning-rites its farmers keep were set down by Elkaride hands.</li>
+      <li><a href="/setting/talan/domains/brauogi/lurrath/lurrath.html"><b>Lurrath →</b></a> · Sarrum's steadfast city, whose divinotech runs on kept faith the way the grove's works run on communing: Brauogi holds the continent's two Magitech traditions that cannot be carried away.</li>
+      <li><a href="/setting/cosmology/magic.html"><b>Magic &amp; Magitech →</b></a> · Where Primotech sits among the four schools' craft: grown, legendary, and routine nowhere on Talan except here.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The grove's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The present Sustra.</b> The druid at the head of the household's first real argument is unnamed, and so are the elders around them.</li>
+      <li><b>The three rivers.</b> The rivers that meet at the Heart await their names.</li>
+      <li><b>The great works abroad.</b> Which of the grove's lent works are out in the world, and in whose hands, the chronicles do not say.</li>
+      <li><b>The grove's Hand.</b> The Elkaride who currently holds the Evenhand seat at Babesarri is unnamed.</li>
+      <li><b>The year outside.</b> The farms and market-town families that host the grove's young on their year in the worked world are uncoined.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · HIRUBASO</div>
+
+</div>
+
+</body>
+</html>

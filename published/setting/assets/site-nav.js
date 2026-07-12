@@ -125,6 +125,7 @@
       { slug: 'sugeiturri', label: 'Sugeiturri &middot; the Source-Country', href: '/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html', children: [] },
       { slug: 'haldmark', label: 'Haldmark &middot; the Kept March', href: '/setting/talan/domains/brauogi/haldmark/haldmark.html', children: [] },
       { slug: 'greenward', label: 'Greenward &middot; the Furrowsworn', href: '/setting/talan/domains/brauogi/greenward/greenward.html', children: [] },
+      { slug: 'hirubaso', label: 'Hirubaso &middot; the Three-River Grove', href: '/setting/talan/domains/brauogi/hirubaso/hirubaso.html', children: [] },
       { slug: 'baratalda', label: 'Baratalda &middot; the Orchard Country', href: '/setting/talan/domains/brauogi/baratalda/baratalda.html', children: [] },
       { slug: 'tvisol', label: 'Tvisol &middot; the Kingdom of the Two Suns', href: '/setting/talan/domains/brauogi/tvisol/tvisol.html', children: [] }
     ]},
