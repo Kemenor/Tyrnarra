@@ -213,7 +213,7 @@ A handful of details inside the columns are deliberately under-specified in cano
 
 ## About the chronicler (canon summary)
 
-Quick-reference for readers of these columns who want the chronicler's shape without leaving the file. Full sheet in [`../../glossary.md`](../../glossary.md).
+Quick-reference for readers of these columns who want the chronicler's shape without leaving the file. Full sheet in [`../../glossary.md`](../../glossary.md); the voice-and-registers canon (the four rings, the dial, the tea rule, Vyrenna) in [`../../voices.md`](../../voices.md).
 
 - **Golivander Tessek.** Tengu, ~110, born on Haizetsua (the western tengu island of Vindul); white-brow mature feathering, spectacled, ink-stained claws, a worn travelling satchel.
 - **Trained at Thekkavar** (City of Learning, Ezkudon) in natural philosophy and rhetoric, apprentice-and-leave path; modest Occult training picked up alongside. Cites Jeanne Pintos as model.

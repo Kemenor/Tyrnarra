@@ -27,7 +27,7 @@ The eleven clans are:
 
 **Tessek** · **Karrok** · **Vorrek** · **Drennok** · **Brakkar** · **Nottek** · **Vellok** · **Holkar** · **Marskenn** · **Skenrak** · **Drakkun**
 
-Their particular characters will land as stories want them; what is locked is the number, the names, and the structural equality between them. **Tessek** is currently the most-known abroad, as the chronicler **Golivander Tessek**'s clan; the chronicler-and-record-keeping reputation that has built up around the name in mainland literate circles is one of many clan-colours that future canon will shade in.
+Their particular characters will land as stories want them; what is locked is the number, the names, and the structural equality between them. **Tessek** is currently the most-known abroad, as the chronicler **Golivander Tessek**'s clan; the chronicler-and-record-keeping reputation that has built up around the name in mainland literate circles is one of many clan-colours that future canon will shade in. The clan's other rising name abroad is **Vyrenna Tessek**, Golivander's grand-niece, author of the *One Line Further* dispatches; full canon for both voices in [`../../voices.md`](../../voices.md).
 
 ## Living well · the Tengu disposition
 
