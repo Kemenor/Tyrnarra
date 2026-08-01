@@ -198,6 +198,8 @@ Canonical in-world text, written for the Notable People page. In-world frame: bo
 >
 > *She writes too long, cries in print, and stays a week where a day was penciled, and each of these is a reason her column is better than mine. I have spent a career deciding what a noticed thing is owed. She pays everything, immediately, in full. It is a ruinous way to keep accounts and the readers of this periodical are the richer for it.*
 >
+> *If you want the difference between us in one piece, read her column on the calling-horns of the orchard country. The Guide gives the horns half a sentence, and I stand by the half-sentence; it is accurate. She stood in the same orchards, heard a crew called home by name, and filed a page that has been sending readers east every harvest since, to stand in a fruit-town at dawn and be moved by freight logistics. Accuracy tells you where the horns are. My niece tells you why you will cry when you hear them.*
+>
 > *The reader will notice I say nothing of where she is now. The reader may assume this costs me nothing. My niece has gone further than her old uncle ever went, and I am told the tea there is excellent.*
 
 ### Vyrenna on Golivander (One Line Further register)
@@ -207,6 +209,8 @@ Canonical in-world text, written for the Notable People page. In-world frame: bo
 > *Here is what the famous books will never tell you. When he came home, the elders wanted the Heartcourt out of him, and the god-cities, and he gave all of it, gladly, like a man unpacking gifts. But I asked him about a ferry crossing he had given one line, and he stopped, and looked at me like I had knocked at a door he thought no one remembered, and then he talked for an hour, and the hour was better than the books. It was all in him the whole time. The Guide is what he judged the world was owed. It is the smallest thing he carries.*
 >
 > *People say he is objective. The man once declined to speak to me for a full afternoon because I let the pot stand too long. Pure Drekkir, that afternoon, dry in every direction. And people say he is reserved, which is the funniest thing the literate classes believe: he is the warmest soul I know, and he hides it in plain sight, in what he loves, and he loves nearly everything. Read the meals.*
+>
+> *If you doubt me, find the Kawaakari letter, the one about the retired Crimson Heart's tasting. He tells you one of the pours drank like a memory. He admits he wrote the closing three times and failed three times. He signs off saying some afternoons are not, in fact, for the column, and then he files the column anyway, because he could not bear for us to have missed the afternoon. That is the warmest sentence in Talanese print, wearing an apology's clothes. Nobody objective writes like that.*
 >
 > *He taught me one thing, in a letter I keep: write nothing down until your heart stops shaking; then write everything. That is the whole trade. Everything else is luggage.*
 >
