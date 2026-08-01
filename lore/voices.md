@@ -186,6 +186,34 @@ The fey who set down her court life set down her court name with it. Her true na
 
 ---
 
+## The portraits: each on the other
+
+Canonical in-world text, written for the Notable People page. In-world frame: both pieces ran in the same number of *The Travelling Chronicle*, at Maren Erikson's suggestion; each author was shown the other's piece only after it had gone to set. Neither has ever commented on the arrangement, which both of them clearly enjoyed.
+
+### Golivander on Vyrenna (Chronicle register)
+
+> *I am asked, with a frequency my publisher finds profitable, whether the author of One Line Further is truly my grand-niece. She is. I am asked next whether I taught her. I did not, and I will thank the reader to stop repeating the claim; it flatters me and slanders her.*
+>
+> *What happened is this. I went home, rarely, as I do, and at a flock-meal a young Tengu asked me about a village I had given one line. The village, mind. I have spent seventy years being asked about the famous cities. I gave her the address of my editor's daughter and considered my life's work to be in reasonable hands.*
+>
+> *She writes too long, cries in print, and stays a week where a day was penciled, and each of these is a reason her column is better than mine. I have spent a career deciding what a noticed thing is owed. She pays everything, immediately, in full. It is a ruinous way to keep accounts and the readers of this periodical are the richer for it.*
+>
+> *The reader will notice I say nothing of where she is now. The reader may assume this costs me nothing. My niece has gone further than her old uncle ever went, and I am told the tea there is excellent.*
+
+### Vyrenna on Golivander (One Line Further register)
+
+> *My grand-uncle is the reason half of Talan can name my island, and the reason nobody visits my village. Both of these are true, and I have decided to forgive him for the second one publicly, in his own periodical, because Maren says I am allowed one impertinence per column and this is it.*
+>
+> *Here is what the famous books will never tell you. When he came home, the elders wanted the Heartcourt out of him, and the god-cities, and he gave all of it, gladly, like a man unpacking gifts. But I asked him about a ferry crossing he had given one line, and he stopped, and looked at me like I had knocked at a door he thought no one remembered, and then he talked for an hour, and the hour was better than the books. It was all in him the whole time. The Guide is what he judged the world was owed. It is the smallest thing he carries.*
+>
+> *People say he is objective. The man once declined to speak to me for a full afternoon because I let the pot stand too long. Pure Drekkir, that afternoon, dry in every direction. And people say he is reserved, which is the funniest thing the literate classes believe: he is the warmest soul I know, and he hides it in plain sight, in what he loves, and he loves nearly everything. Read the meals.*
+>
+> *He taught me one thing, in a letter I keep: write nothing down until your heart stops shaking; then write everything. That is the whole trade. Everything else is luggage.*
+>
+> *(Maren cut four pages of this. The four pages were also true.)*
+
+---
+
 ## Writing the voices: the authoring guide
 
 How the two bylines are used across the published site.
