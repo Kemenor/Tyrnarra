@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Voices of the Chronicle · Golivander &amp; Vyrenna · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #c9a86a;   /* chronicler's brass-and-ink gold · 8.63:1 on Style B bg */
+    --vyr-accent: #7fb4c8;      /* Vyrenna's high-sky blue · 8.61:1 on Style B bg */
+    --card-bg: rgba(30,24,12,0.5);
+  }
+
+  /* The two fact-cards */
+  .voice-grid { --col-min: 300px; --grid-max: 980px; }
+  .voice-role { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 2px; }
+  .voice-kin { font-style: italic; color: var(--gold-dim); font-size: 0.84rem; margin-bottom: 10px; }
+  .voice-facts { margin: 0; }
+  .voice-facts p { margin: 0 0 8px; font-size: 0.95rem; line-height: 1.55; }
+  .voice-facts p:last-child { margin-bottom: 0; }
+  .vyr-card .voice-role { color: var(--vyr-accent); }
+  .vyr-card { border-color: rgba(127,180,200,0.35); }
+
+  /* In-world periodical quotation panels (the heartcourt .golivander-letter, generalised) */
+  .voice-letter { max-width: 760px; margin: 22px auto; padding: 20px 28px; background: rgba(48,36,16,0.5); border-left: 2px solid rgba(201,168,106,0.55); border-radius: 3px; }
+  .voice-letter .v-masthead { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); text-align: center; margin-bottom: 12px; }
+  .voice-letter .letter-title { font-family: 'Cinzel', serif; font-size: 0.92rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); text-align: center; margin-bottom: 12px; }
+  .voice-letter p { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1rem; color: var(--text); margin: 0 0 12px; line-height: 1.65; }
+  .voice-letter p:last-of-type { margin-bottom: 0; }
+  .voice-letter .attribution { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-style: normal; margin-top: 14px; text-align: right; }
+  .voice-letter strong, .voice-letter b { color: var(--gold-bright); font-style: normal; }
+  .voice-letter.vyr { background: rgba(20,36,44,0.42); border-left-color: rgba(127,180,200,0.55); }
+  .voice-letter.vyr .attribution { color: var(--vyr-accent); }
+
+  /* Works cards */
+  .works-grid { --col-min: 250px; --grid-max: 1000px; }
+</style>
+</head>
+<body data-page="the-voices">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><span>The Voices of the Chronicle</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Voices of the Chronicle</div>
+    <div class="page-subtitle">Notable People · Golivander &amp; Vyrenna Tessek</div>
+    <div class="page-flavor">Two bylines, one clan: the Guide that mapped the world, and the column now writing what lies past its final page.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="prose">
+    <p>Ask a literate household anywhere on Talan to name a living writer and you will hear the same name from Lograth to the Emerald Isles: <b>Golivander</b>, the Tengu chronicler whose <i>A Traveller's Guide to Tyrnarra</i> sits on the shelf and whose <i>Travelling Chronicle</i> arrives, subscription permitting, with the season's freight. Ask the same household a second name and, increasingly, you will hear his grand-niece's. <b>Vyrenna Tessek</b> writes <i>One Line Further</i>, the column that began in the villages her uncle's Guide gave a single sentence and now arrives, wind-dated, from places no mainland calendar reaches at all.</p>
+    <p>The pairing has become its own institution. He tells you what is the case; she tells you what it feels like to stand there. He has spent seventy years deciding what a noticed thing is owed; she pays everything, immediately, in full. Talan reads them together, argues about which is the better writer at tea-houses that stock both, and knows, in the way a readership knows things no one has printed, that each is the other's favourite author.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-two" class="section-heading">The Two of Them</h2>
+  <div class="card-grid voice-grid">
+    <div class="accent-card">
+      <div class="voice-role">The Chronicler of Talan</div>
+      <div class="card-name">Golivander Tessek</div>
+      <div class="voice-kin">Tengu of clan Tessek, Haizetsua · around one hundred and ten · signs <i>G.</i></div>
+      <div class="voice-facts">
+        <p><b>Works:</b> <i>A Traveller's Guide to Tyrnarra</i> (the standing reference of the literate classes) and <i>The Travelling Chronicle</i> (the periodical; its Emarrea section is <i>Letters from Biozuri</i>).</p>
+        <p><b>Trained:</b> apprenticed at <a href="/setting/talan/domains/ezkudon/thekkavar/thekkavar.html"><b>Thekkavar</b></a> in natural philosophy and rhetoric; cites Jeanne Pintos as his model.</p>
+        <p><b>Based:</b> one small room above The Lantern Press in <a href="/setting/talan/domains/askamira/frae-city/frae-city.html"><b>Frae City</b></a>; on the road three-quarters of every year, alone. His letters home are read aloud at clan Tessek's flock-meals.</p>
+        <p><b>Range:</b> has stood in all thirteen god-cities and made the Cloud Sea crossing to Sortalde once; the Guide marks what he compiled from other mouths, and keeps a famous silence on the places no chronicler goes.</p>
+        <p><b>Known for:</b> refusing coin from subjects, revising when corrected in print, and the one complaint the Guide permits itself. Readers hunt his entries for whether he ate, and for the tea.</p>
+      </div>
+    </div>
+    <div class="accent-card vyr-card">
+      <div class="voice-role">The Voice From Further</div>
+      <div class="card-name">Vyrenna Tessek</div>
+      <div class="voice-kin">Tengu of clan Tessek, Haizetsua · fourth decade · mid-Vornsketta</div>
+      <div class="voice-facts">
+        <p><b>Work:</b> <i>One Line Further</i>, her running column in <i>The Travelling Chronicle</i>; edited, and considerably shortened, by Maren Erikson of The Lantern Press.</p>
+        <p><b>Beat:</b> began in the one-line places, the hamlets and rail-halts the Guide covers in a sentence; now files from past the map. Literate Talan is learning the eight Tengu winds from her prose one feeling at a time.</p>
+        <p><b>Travels with:</b> <b>Wren</b>, her partner: a fey musician of the Feyworld. Of Wren's past, the column that publishes everything publishes nothing, and readers have concluded what that means.</p>
+        <p><b>Range:</b> the first chronicler of the planes. Her dispatches established what mainland scholarship had never confirmed: the Feyworld admits no one alone. You are brought, by someone the plane already holds, or you do not go.</p>
+        <p><b>Known for:</b> over-staying, over-writing, crying in print, and a fierce ear: the passionate beginner who misses and means it will always, in her column, defeat the flawless master playing the expected concert.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-portraits" class="section-heading">Each on the Other</h2>
+  <div class="prose">
+    <p>Both pieces below ran in the same number of <i>The Travelling Chronicle</i>, at Maren Erikson's suggestion; each author was shown the other's piece only after it had gone to set. Neither has ever commented on the arrangement, which both of them clearly enjoyed.</p>
+  </div>
+
+  <div class="voice-letter">
+    <div class="v-masthead">✦ The Travelling Chronicle ✦</div>
+    <div class="letter-title">On the Author of One Line Further</div>
+    <p>I am asked, with a frequency my publisher finds profitable, whether the author of <i>One Line Further</i> is truly my grand-niece. She is. I am asked next whether I taught her. I did not, and I will thank the reader to stop repeating the claim; it flatters me and slanders her.</p>
+    <p>What happened is this. I went home, rarely, as I do, and at a flock-meal a young Tengu asked me about a village I had given one line. The village, mind. I have spent seventy years being asked about the famous cities. I gave her the address of my editor's daughter and considered my life's work to be in reasonable hands.</p>
+    <p>She writes too long, cries in print, and stays a week where a day was penciled, and each of these is a reason her column is better than mine. I have spent a career deciding what a noticed thing is owed. She pays everything, immediately, in full. It is a ruinous way to keep accounts and the readers of this periodical are the richer for it.</p>
+    <p>The reader will notice I say nothing of where she is now. The reader may assume this costs me nothing. My niece has gone further than her old uncle ever went, and I am told the tea there is excellent.</p>
+    <div class="attribution">– G., The Travelling Chronicle, 2532 MR</div>
+  </div>
+
+  <div class="voice-letter vyr">
+    <div class="v-masthead">✦ One Line Further ✦</div>
+    <div class="letter-title">On the Author of Everything Else</div>
+    <p>My grand-uncle is the reason half of Talan can name my island, and the reason nobody visits my village. Both of these are true, and I have decided to forgive him for the second one publicly, in his own periodical, because Maren says I am allowed one impertinence per column and this is it.</p>
+    <p>Here is what the famous books will never tell you. When he came home, the elders wanted the Heartcourt out of him, and the god-cities, and he gave all of it, gladly, like a man unpacking gifts. But I asked him about a ferry crossing he had given one line, and he stopped, and looked at me like I had knocked at a door he thought no one remembered, and then he talked for an hour, and the hour was better than the books. It was all in him the whole time. The Guide is what he judged the world was owed. It is the smallest thing he carries.</p>
+    <p>People say he is objective. The man once declined to speak to me for a full afternoon because I let the pot stand too long. Pure Drekkir, that afternoon, dry in every direction. And people say he is reserved, which is the funniest thing the literate classes believe: he is the warmest soul I know, and he hides it in plain sight, in what he loves, and he loves nearly everything. Read the meals.</p>
+    <p>He taught me one thing, in a letter I keep: write nothing down until your heart stops shaking; then write everything. That is the whole trade. Everything else is luggage.</p>
+    <p>(Maren cut four pages of this. The four pages were also true.)</p>
+    <div class="attribution">– Vyrenna Tessek, One Line Further, 2532 MR</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-works" class="section-heading">The Works</h2>
+  <div class="card-grid works-grid">
+    <div class="accent-card">
+      <div class="card-name">A Traveller's Guide to Tyrnarra</div>
+      <p>The formal multi-volume reference, reprinted wherever books are sold. Its voice is measured and its judgments live in what it lingers on: when Golivander loved a place the entry eats a meal and names the innkeeper's dog, and when a place disappointed him the entry is impeccably complete and contains no meal. The single complaint the Guide permits itself concerns tea, badly brewed, and it fires even in places he otherwise adored; collectors keep lists.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Travelling Chronicle</div>
+      <p>The periodical: regional dispatches written wherever he is, circulating across Lautara, Frae City, Sumendar and a smaller Sortalde list. Warmer and freer than the Guide, deeply familiar with the people it covers, and famously careful with what it declines to print. Its Emarrea section, <i>Letters from Biozuri</i>, has covered the <a href="/setting/talan/domains/lautara/emarrea/heartcourt.html"><b>Heartcourt</b></a> for sixteen years.</p>
+    </div>
+    <div class="accent-card vyr-card">
+      <div class="card-name">One Line Further</div>
+      <p>Vyrenna's column, and the Chronicle's fastest-growing reason to subscribe. The early years un-flattened the Guide's shortest entries; the current ones arrive from the Feyworld and beyond, wind-dated, homesick, and alight. The title is a loving joke at the Guide's expense. Golivander reportedly laughed for a full minute, then entered it into his will as the only correction the Guide has ever accepted.</p>
+    </div>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Chronicler Who Doesn't Grey</button>
+    <div class="legend-era-content">
+      <p>The tavern tier has its own edition of the man. They say Golivander has been further than any living mortal, further than the Guide admits, further than the Guild's Starsteel parties. They say he once took tea somewhere the dead take it, and that whatever was in the pot is why his feathers have stopped keeping count of his years; any Tengu will tell you feather-state reads age within a decade, and his reads wrong, and no one is rude enough to say so twice. Asked directly, on the record, the chronicler has answered the same way for thirty years: he neither confirms nor denies it, which everyone agrees is exactly what he would do either way.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Where the Silence Has Been</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Guide's Silence Is Not Ignorance</div>
+      <p>The famous silent entries, Bolverk, the sealed dungeons, the far continent, are the dial closed all the way, and behind two of them the man has stood in person. Golivander has walked the Postlife planes: <b>Diyu, Elysium, and the Abyss</b>, some of each, never all of any. He has stood in <b>Bolverk</b>. He has sat with <b>Hahane</b>, Mother-Root of the Kyūbi-no-Den, in Elysium, and drunk her tea: the summit of his life's one true peeve, inverted into its peak, and the published work will never review it. His printed line that he writes the Vice Demons <i>by rumour only</i> is true on the page and is his public posture entire: he will not print what he cannot say he saw.</p>
+      <p>The full accounts exist in exactly two places. The field notebooks in the satchel, which no press will ever set; and his truly private letters to Vyrenna, the innermost of his four rings of writing, where the sights, the roads, and the recounting of Hahane's tea have been arriving for years. The letters are also an apprenticeship: she is the person being prepared, without ever quite being told so, to inherit the satchel. Three of her celebrated firsts retrace journeys her grand-uncle made in secret decades before her. He has known it every column, cheered loudest anyway, and never said; she learns it the day the satchel is hers. Do not spend that reveal early.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Kept Years and the One Door</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What Keeps Him, and What Kept Him Out</div>
+      <p>The tavern tier is right in shape and wrong in mechanism. Belief is power, and Golivander is read aloud in tea-houses on two continents; every apprentice who learns Talan from the Guide feeds, at low heat, the same mechanism that raised Lord Albrecht Lavisburg. Accumulated mortal belief is quietly slowing his aging. Nothing about him is divine; he is being kept, gently, by the breadth of mortals who hold him in mind. He has noticed. He is a naturalist of the Jeanne Pintos school, and somewhere in the notebooks is a page of dates and feather-moult measurements under a hypothesis he has not yet allowed himself to write in full.</p>
+      <p>And the one door: the Feyworld admits mortals by accompaniment only, and Golivander was never refused. He was simply never accompanied. Seventy years of travelling alone, the strength that built the Guide and carried him through Diyu and Elysium and the Abyss, is the exact shape of the one lock he cannot fit. From a letter to Vyrenna, the innermost ring:</p>
+      <p><i>They will let you in. They would never let me. One does not enter alone, and alone is the only way I ever learned. Go and see what your old uncle could not. Write nothing down until your heart stops shaking; then write everything.</i></p>
+      <p>She has quoted the last sentence in print. She has never quoted the first three.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/vindul/haizetsua/haizetsua.html"><b>Haizetsua →</b></a> · The Tengu island both were born on: clan Tessek, the Vornsketta, the eight winds, and the singing cities that taught Vyrenna what honest music is.</li>
+      <li><a href="/setting/talan/domains/lautara/emarrea/heartcourt.html"><b>The Heartcourt →</b></a> · Sixteen years of <i>Letters from Biozuri</i>, quoted in full: Golivander's column-craft at its most at-home.</li>
+      <li><a href="/setting/cosmology/gods-law.html"><b>The Gods' Law →</b></a> · The Compact, opened by the most-quoted epigraph the Guide ever produced.</li>
+      <li><a href="/setting/talan/domains/askamira/frae-city/frae-city.html"><b>Frae City →</b></a> · Home of The Lantern Press, the publisher both voices answer to, and the one fixed address between them.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">Two careers, one of them barely begun · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The village.</b> The one-line village where Vyrenna over-stayed her week and heard the tavern's once-a-week musician has never been named in the column. Its name, she has written, is hers to publish, and she has not.</li>
+      <li><b>Wren.</b> What instrument she plays, which court she left, and what she was called there: the column that publishes everything publishes nothing of it, and the chronicle record respects the omission.</li>
+      <li><b>The Guide's roster.</b> Beyond the Gods' Law and Haizetsua volumes, the Guide's named volumes, their editions, and which entries changed between printings await cataloguing.</li>
+      <li><b>The next dispatch.</b> Which plane <i>One Line Further</i> files from next is, at press time, unknown even to The Lantern Press, which has stopped pretending to predict it.</li>
+      <li><b>The four pages.</b> Maren Erikson cut four pages from Vyrenna's portrait of her grand-uncle. Vyrenna says the four pages were also true. Maren has declined to return them.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · NOTABLE PEOPLE · THE VOICES OF THE CHRONICLE</div>
+
+</div>
+
+</body>
+</html>

@@ -300,6 +300,12 @@
       '  </div>',
 
       '  <div class="nav-section">',
+      '    <a class="nav-section-label nav-section-link" href="/setting/talan/people/the-voices.html" data-page="the-voices">Notable People</a>',
+      '    <ul class="nav-list">',
+      '    </ul>',
+      '  </div>',
+
+      '  <div class="nav-section">',
       '    <a class="nav-section-label nav-section-link" href="/setting/off-continent/off-continent.html" data-page="off-continent-hub">Off-Continent</a>',
       '    <ul class="nav-list">',
            offItems,
