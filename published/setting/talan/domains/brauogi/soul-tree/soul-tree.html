@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soul Tree · the Island of the Door · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #c4d4c2;   /* the Tree's grave-light pale · 12.58:1 on Style B bg */
+    --card-bg: rgba(22,28,22,0.55);
+  }
+
+  /* Left-bordered island callout */
+  .door-call { max-width: 840px; margin: 22px auto; padding: 20px 26px; background: rgba(26,34,26,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .door-call .d-label { font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .door-call p { margin: 0 0 12px; line-height: 1.6; }
+  .door-call p:last-child { margin-bottom: 0; }
+
+  /* The rings, rendered as a ladder of permission */
+  .ring-ladder { max-width: 760px; margin: 20px auto; padding: 0; list-style: none; counter-reset: ring; }
+  .ring-ladder li { counter-increment: ring; padding: 12px 16px 12px 54px; margin-bottom: 8px; background: var(--card-bg); border-left: 2px solid var(--domain-accent); border-radius: 0 3px 3px 0; position: relative; line-height: 1.55; }
+  .ring-ladder li::before { content: counter(ring); position: absolute; left: 18px; top: 12px; font-family: 'Cinzel', serif; color: var(--domain-accent); font-size: 1.05rem; }
+  .ring-ladder .ring-name { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); display: block; margin-bottom: 3px; }
+  .ring-exception { max-width: 760px; margin: 14px auto 0; text-align: center; font-style: italic; color: var(--gold-bright); }
+
+  /* Ferment cards */
+  .ferment-grid { --col-min: 280px; --grid-max: 840px; }
+</style>
+</head>
+<body data-page="soul-tree">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/brauogi/brauogi.html">Brauogi</a><span class="sep">›</span><span>Soul Tree</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Soul Tree</div>
+    <div class="page-subtitle">Brauogi Sub-Region · the Island of the Door</div>
+    <div class="page-flavor">The dying outrank the living here. Everything else is administration.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd><b>Soul Tree</b> is modern English, and the island has never needed a grander name; the thing itself outranks any word for it. The port town is <b>Hinstavor</b>: Icelandic <i>hinsta</i> (last, final) + <i>vör</i> (small boat-landing), "the Last Landing."</dd>
+    <dt>Position</dt><dd>A small rocky island in its own grey water off the <a href="/setting/talan/domains/brauogi/tvisol/tvisol.html"><b>Tvisol</b></a> coast, close enough to see from any sunward roof. The ferries run from <b>Solkai</b>; at Guestide, some passengers are booked one way.</dd>
+    <dt>Terrain</dt><dd>One town, one tree, and the tree is visible from every window of the town. The Tree stands at moon-scale, pale at all hours; the island has never known a dark night.</dd>
+    <dt>Character</dt><dd>
+      <i>Warmth at the rim, otherness at the core. The terminus where the dying are the nobility.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Soul-Passage</span><span class="pill">Grief-Trade</span><span class="pill">Two Ledgers</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Everyone's, the way terminuses are: a few thousand islanders swelling to several times that every Guestide. One of Talan's two great sources of <b>Duskwalkers</b>, born where the door runs close.</dd>
+    <dt>Faith</dt><dd><b>Epairima</b>'s funerary folk-cult runs deep, as across the strait; Sarrum's chapels keep the records, Araphel's keep the unasked. Every church on Talan keeps at least a death-room in Hinstavor.</dd>
+    <dt>Rule</dt><dd>Two ledgers. The <b>Voroir Daua</b>'s oldest charter holds everything from the gate inward, sovereign on its own ground; the town elects a <b>Harbourward</b> each spring by the <b>Winter Roll</b>. Foreign powers learn to write two letters.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">The Centre</div>
+    <div class="gods-city-name">The Tree</div>
+    <div class="gods-city-byname">the door through which souls walk on · no one touches it · no exceptions</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-dying-outrank" class="section-heading">The Dying Outrank the Living</h2>
+  <div class="prose">
+    <p>Standing on the Soul Tree island is trust, trust runs inward toward the Tree, and the deepest trust belongs to those closest to death. A living king stops at the order's gate with everyone else; a dying beggar is carried past him at dusk, because the closer you die to the door, the shorter the crossing. That is the island's whole constitution, and everything else on this page is administration.</p>
+    <p>Ask an islander about anyone and the answer measures the same way. <i>How far in have you been?</i> is what a life amounts to here, and the question is asked without envy, the way sailors ask about weather. The chronicle knows of no other place on Talan where standing runs toward the grave and the whole town finds that ordinary.</p>
+  </div>
+
+  <div class="door-call">
+    <div class="d-label">The Crossing</div>
+    <p>The crossing itself is ordinarily invisible: a soul walks on, and the living see a pale tree in a grey sea. At the thin times, Guestide and the full moon-channels, it shows imperfectly: a silhouette, a hint; vanishingly rarely, a face. Islanders do not gather to watch. It would be, they say, like watching someone undress for bed.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rings" class="section-heading">The Rings</h2>
+  <div class="prose">
+    <p>Geography here is measured in permission rather than miles. The island runs in rings of trust, and every islander can recite them the way mainland children recite the months:</p>
+  </div>
+  <ol class="ring-ladder">
+    <li><span class="ring-name">The Port</span>Hinstavor's quays and streets; everyone lands here, and everyone is welcome to.</li>
+    <li><span class="ring-name">The Viewing Platform</span>The common ground with the long sight of the Tree; open to all, and most pilgrims go no further.</li>
+    <li><span class="ring-name">The Order's Gate</span>Where the charter begins; entry is written into the order's gate-book, and past this line the town's law ends.</li>
+    <li><span class="ring-name">Granted Ground</span>Case-by-case, by the order's leave, for reasons the order does not explain.</li>
+    <li><span class="ring-name">The Hospice-Ground</span>The order's own, where the carried spend their last days.</li>
+    <li><span class="ring-name">The Tree</span>No one touches it. No one.</li>
+  </ol>
+  <div class="ring-exception">One exception crosses every ring: a death in progress.</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="hinstavor" class="section-heading">Hinstavor · the Last Landing</h2>
+  <div class="prose">
+    <p>A town of a few thousand that swells to several times itself every Guestide, and the warmest town on the Midarra, which it knows exactly why: everyone who lands here feels found, even when the place found for them is to die well. No one in Hinstavor says goodbye. The trade is the good death entire: the welcome, the doctors, the priests of a dozen faiths keeping death-rooms so every pilgrim can end under their own god's rites, the litters, the burials, the letters home. Fishers work the grey water; the bee-keepers work the pale light; and the island's two tables travel to mainland markets that pay well for a taste of here.</p>
+  </div>
+
+  <div class="card-grid ferment-grid">
+    <div class="accent-card">
+      <div class="card-name">Grafisk · the Grave-Fish</div>
+      <p>Fish cured buried beneath the standing glow, and nothing cured on any mainland shore ferments like it. The name is exact: <i>gröf</i>, the grave, <i>fiskur</i>, the fish, a dish named with the island's own frankness. Sharp, strange, and beloved; mainlanders manage one bite or a lifelong habit, and nothing between.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Folmjod · the Pale Mead</div>
+      <p>The island has never known a dark night, so its bees never fully rest, and honey from bees that do not sleep ferments into a mead the mainland cannot copy. Poured at wakes and welcomes both, which in Hinstavor are usually the same table.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-winter-roll" class="section-heading">The Winter Roll</h2>
+  <div class="prose">
+    <p>The town governs itself by the simplest constitution on Talan. Every spring <b>the Wintered</b>, those who kept the island through the empty season, elect a <b>Harbourward</b> to run the small things: the quays, the wells, the landing-dues, the watch. The franchise is the winter itself. Guestide fills every bed with strangers and coin, and the cold empties them again, and whoever remains when the last ferry has gone home is the town.</p>
+    <p>The government is deliberately small, and that is the statement: the port keeps its politics modest because the island's real authority runs inward and belongs to death. A foreign power learns to write two letters, to the Harbourward for anything on the water and the quays, and to the charter for anything past the gate.</p>
+  </div>
+
+  <div class="door-call">
+    <div class="d-label">The Wall the Winter Builds</div>
+    <p>A broker can rent the whole quay for a season and it buys him nothing in spring, because he sailed home in the cold. Money can court the Winter Roll; it cannot join it. Wintering cannot be purchased, only lived, and the islanders regard this as the one piece of political theory they have ever needed.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-filgja" class="section-heading">The Filgja</h2>
+  <div class="prose">
+    <p>The island's coming-of-age is the carrying. At dusk the dying are borne inward by litter from the hospice-houses toward the order's ground, and the bearers are Hinstavor's young, serving their <b>Filgja</b> years: <i>fylgja</i>, to accompany, the old word for the attendant spirit that walks beside a soul. A Filgjur walks beside the dying as their brief attendant spirit, learns their names, carries them to the gate the bearer cannot yet pass, and hands them on.</p>
+    <p>Islanders reckon adulthood from the first carry. And no one who has done the work ever quite manages to fear the Tree again, which is, the old Filgjur say, the point.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-charter" class="section-heading">The Charter</h2>
+  <div class="prose">
+    <p>The <a href="/setting/talan/factions/voroir-daua.html"><b>Voroir Daua</b></a> hold everything from the gate inward, under the oldest charter their order keeps: church, hall, and barracks in one, sovereign on its own ground, answering to no one off the island. The order keeps the gate-book of everyone written past the threshold, keeps the hospice-ground where the carried spend their last days, and keeps the watch. Between the charter's book at the gate and the town's Winter Roll at the quay, the island's whole government fits in two ledgers, and the islanders consider this exactly enough.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-again" class="section-heading">The Again</h2>
+  <div class="prose">
+    <p>Once in living memory, the door worked backwards. A pilgrim died in the order's own hospice-rooms, was carried through, stood judgment at Dauria, and walked back out of the Tree alive, carrying the rarest verdict the <a href="/setting/cosmology/layer-3-gods.html#epairima"><b>Warden of the Cycle</b></a> gives: the reversal, a second pass at the life they failed. The order did nothing, because there was nothing to do; their own goddess had sent them, and the cycle cannot be broken by the cycle's own hand.</p>
+    <p>Hinstavor calls them <b>the Again</b>, and does not press. What a town does with a person who has already been all the way in, spent the island's highest standing, and come back to being ordinary is a question Hinstavor is still, gently, working out.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-pressure" class="section-heading">The Pressure of the Open Era</h2>
+  <div class="prose">
+    <p>Two pressures, and they feed each other. Since powerful strangers began arriving under Guestide's cover (~2524 MR; see <a href="/setting/talan/domains/brauogi/tvisol/tvisol.html"><b>Tvisol</b></a>), the order's gentle old guarding of the rings has hardened, and every pretender caught makes the gate colder for every honest pilgrim. And the grief-trade has begun to curdle into a grief economy: mainland brokers work the quays at Solkai and Merkavar selling <i>the good death, arranged</i>, a few island houses have taken the coin, and the old hosting-families who gave freely are being outbid for the very rooms they used to give. The two knots tie: every gilded deathbed makes a rich pilgrim harder to tell from a rich pretender.</p>
+    <p>In Hinstavor the fight is now electoral, fought openly every spring over a few hundred wintered votes, broker-funded candidates against the old families, money courting the roll it can never join.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Leaves</button>
+    <div class="legend-era-content">
+      <p>Every islander will tell you the Tree's pale leaves wink out, one per soul that passes, and half of them will tell you which leaf was whose. Widows pick one out the first Guestide and greet it. And the bee-keepers will tell you, entirely unbothered, that their bees visit the Tree itself, that nobody stops them because nobody stops anything on its way to that tree, and that this is what Folmjod actually is: the one drink on Talan with a little of the door in it. The order has never confirmed a word of this, which the keepers point out is not a denial.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Watch Is For</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Charter's True Object</div>
+      <p>The Soul Tree is a standing passage between the Life Layer and the Postlife, and the veil around it thins on Dauria's moon-cycle channels; Dausol, Tvisol's second sun, is that thinning made visible (the full mechanism lives with <i>⚿ the door's light</i> on the Tvisol page). The Duskmire beyond is one of the two veils where <b>shards of divinity</b> wash up, and the Soul Tree is a natural stair toward it that does not require dying.</p>
+      <p>The order's oldest charter has never primarily been about pilgrims. It is the watch on the one door through which a sufficiently learned mortal could walk toward the Mortal Ascent Ladder's raw material and come back, and the door-seekers arriving since 2524 MR suggest that somewhere, someone has worked this out again. The hardening of the rings is the mortal-visible surface of that watch. Neither the Harbourward, nor the Wintered, nor most of the order's own Greenears know what the gate-book is actually screening for.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/brauogi/tvisol/tvisol.html"><b>Tvisol →</b></a> · The Kingdom of the Two Suns across the strait: Guestide, the one-way ferries from Solkai, and the second sun that stands over this island's water.</li>
+      <li><a href="/setting/talan/factions/voroir-daua.html"><b>The Voroir Daua →</b></a> · Epairima's cycle-warden order, whose oldest charter holds the island from the gate inward.</li>
+      <li><a href="/setting/cosmology/layer-3-gods.html"><b>Layer-3 Gods →</b></a> · Epairima, Judge of Souls and Warden of the Cycle, whose court the door leads to.</li>
+      <li><a href="/setting/talan/domains/brauogi/brauogi.html"><b>Brauogi →</b></a> · The Earth domain the island answers to, where a great rooted tree through which souls pass reads as Sarrum's own iconography.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">A small island with a large door · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The Again.</b> Who they are now, what people they were born of, and what a person does with an ordinary life after Dauria has handed it back: the chronicle record keeps their title and their privacy both.</li>
+      <li><b>The charter's interior.</b> The order's Charter Leader, the size of the garrison, and the shape of a Greenear's first posting on the quietest and strangest charter the order keeps are unrecorded.</li>
+      <li><b>The brokers and the turned houses.</b> The mainland outfits selling the arranged death, and the island houses that took their coin, go unnamed until the chronicle catches one in the act.</li>
+      <li><b>The empty season.</b> What the Wintered actually do between the last ferry and the first, the island's own festivals and quarrels with no pilgrims watching, awaits a chronicler willing to winter.</li>
+      <li><b>The platform's customs.</b> The viewing platform has two millennia of pilgrim-custom (tokens left, names spoken, the right way to look) that no one has written down.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · BRAUOGI · SOUL TREE</div>
+
+</div>
+
+</body>
+</html>

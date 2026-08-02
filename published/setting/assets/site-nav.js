@@ -127,7 +127,8 @@
       { slug: 'greenward', label: 'Greenward &middot; the Furrowsworn', href: '/setting/talan/domains/brauogi/greenward/greenward.html', children: [] },
       { slug: 'hirubaso', label: 'Hirubaso &middot; the Three-River Grove', href: '/setting/talan/domains/brauogi/hirubaso/hirubaso.html', children: [] },
       { slug: 'baratalda', label: 'Baratalda &middot; the Orchard Country', href: '/setting/talan/domains/brauogi/baratalda/baratalda.html', children: [] },
-      { slug: 'tvisol', label: 'Tvisol &middot; the Kingdom of the Two Suns', href: '/setting/talan/domains/brauogi/tvisol/tvisol.html', children: [] }
+      { slug: 'tvisol', label: 'Tvisol &middot; the Kingdom of the Two Suns', href: '/setting/talan/domains/brauogi/tvisol/tvisol.html', children: [] },
+      { slug: 'soul-tree', label: 'Soul Tree &middot; the Island of the Door', href: '/setting/talan/domains/brauogi/soul-tree/soul-tree.html', children: [] }
     ]},
     { slug: 'ezkudon',  label: 'Ezkudon · Knowledge', href: '/setting/talan/domains/ezkudon/ezkudon.html',   children: [
       { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/setting/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }
