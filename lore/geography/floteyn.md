@@ -8,7 +8,7 @@
 
 **Position:** West Talan, covering the western portion of Midarra and extending into Hafra
 
-**Terrain:** Overwhelmingly water. One large forested island with mountains (west). Hundreds of smaller islands of varying sizes scattered throughout. The islands drift on deep-water roots; navigation requires local knowledge or magic.
+**Terrain:** Overwhelmingly water. One large fixed forested island in the west (**Balatur Erui**, with the mountain **Lomendi** at its heart), standing in the mouth of the Midarra where the domain meets the Hafra. Hundreds of smaller islands of varying sizes scattered throughout. The smaller islands drift on deep-water roots; navigation requires local knowledge or magic, and the drifting isles reckon their wandering by the one island that stays.
 
 **God's city:** Uravel, The Floating Isles (see *Uravel* below)
 
@@ -21,8 +21,8 @@
 The Tripkee build on the moving water, the Athamaru float at ease upon it, the Merfolk move as it moves. **Drowning**, the sea's own face, belongs to no people: none of the three can drown, and all three have pulled out those who can. The water does not need to be cruel to take, and the peoples of Floteyn are the ones who made their lives on it anyway.
 
 **Sub-regions:**
-- **Balatur Erui**: *whale-spit / whale shoals.* One of Floteyn's drifting-island sub-regions; Balaena the Skywhale City sits within its archipelago.
-- **Floating Isles of Shuun**: the collective name for the hundreds of drifting islands across the domain. Each island technically has its own name but this is the common reference for the archipelago as a whole.
+- **Balatur Erui** *(the Gate of Two Waters)*: the one fixed island of the domain, standing in the mouth of the Midarra where the sweet inner sea meets the salt Hafra; the boundary of the two waters, **Gazmuga** (everyone alive says *the Line*), touches its western shore. Every cargo passing between the seas changes hulls at the port of **Gesalkai**, and the skywhales change worlds: they come in from the salt singing, breach past the Line, and rise into the sky along the **Riseway** (**a whale's crescendo**), letting fall everything the ocean lodged in them (**a whale's lading**): sloughed hide, deep-oil, barnacle crusts, ambergris, wreck-timber, coin from seas no islander has sailed. The island is governed by **the Undertaking**, the underwriters' mutual become a republic: subscribed families (**Names**) pay every catch's share into **the Sharehold** and draw their catchment **skies** by lot each seventh year at **the Seventh Luck**; every Name holds a horn, and the answering chorus that clears the gate for a rising whale is the people's whale-song sung back. Around the sleeping mountain **Lomendi** live **the Stillfolk**, who subscribe nothing and want nothing that falls. Full canon: [Balatur Erui](floteyn/balatur-erui.md).
+- **Floating Isles of Shuun**: the collective name for the hundreds of drifting islands across the domain. Each island technically has its own name but this is the common reference for the archipelago as a whole. Uravel gathers at their heart, and **Balaena**, the Skywhale City (below), drifts among them.
 
 ## Uravel, the Floating Isles (god's city-state)
 

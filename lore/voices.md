@@ -227,3 +227,8 @@ How the two bylines are used across the published site.
 - **Tier discipline.** Guide, Chronicle, and *One Line Further* excerpts are open prose (chronicler-tier). The tavern-shapes of his agelessness and his rumoured journeys are amber ◈ material. The letters to Vyrenna, the silent journeys, the aging mechanism, the retrace, and Wren's true name are red ⚿ and never leak into open prose.
 - **The don'ts.** The elision is varied, never a catchphrase. The wit never punches down. The tea reflex and the music peeve are rationed like any signature: one firing per piece at most. Vyrenna's wind-images run about one per passage. Register 4 cargo never appears on a player-facing page outside a ⚿ box.
 - **The samples above are canonical reference passages.** Match their cadence before coining new ones, and add substantial new in-world texts to this file (the `heartcourt-letters.md` model) so the corpus stays auditable.
+
+## Corpus index (off-file passages)
+
+- **The Heartcourt letters**: Golivander's Emarrea correspondence, [`geography/lautara/heartcourt-letters.md`](geography/lautara/heartcourt-letters.md).
+- **Balatur Erui, two passages (2026-08-10)**: Golivander in the Chronicle register on Gesalkai and the horn-stoppage (elision lands on Lomendi; no tea clause); Vyrenna in *One Line Further*, the Talan years, on the moving after the Seventh Luck (one wind-image, Skarrenn). Both live in [`geography/floteyn/balatur-erui.md`](geography/floteyn/balatur-erui.md), *Voices at the gate*.

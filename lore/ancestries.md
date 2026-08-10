@@ -57,7 +57,9 @@ The Golden Empire's attempt to recreate them (1325 MR scholarly project) produce
 > The popular misconception that Androids were "built by the Storveldi Denbora" is a folk-myth artefact of the same conflation that makes mortals think the Storveldi Denbora were the Elden (see `timeline.md`, *Gods' Era → ⚿ GM Secret: The Storveldi Denbora: The Real History*). Androids are Elden work, not Storveldi Denbora work.
 
 ### Athamaru
-**Fish-folk, dominant in Floteyn (Water / Shuun)**; their pods range the spray-zone islets and the saltwater shorelines of Hafra. At ease above the abyss: an Athamaru is born suspended over a darkness that goes down past all light, and is fine. Equanimity as temperament, the floor has never been where they stand, so dread gets no purchase on them; panic is a land-emotion, learned by folk who believe the ground is owed them. When the ship founders, the Athamaru is the one whose voice does not change, and she meets disaster the way the sea meets a thrown stone, closing back over, whole. Beyond Floteyn their pods keep to the saltwater, following the Hafra coasts and growing thin inland where the water runs fresh. The pod-and-islet life beside the Tripkee settled its boundaries long ago.
+**Fish-folk, dominant in Floteyn (Water / Shuun)**; their pods follow deep water wherever it runs, salt and sweet alike. At ease above the abyss: an Athamaru is born suspended over a darkness that goes down past all light, and is fine. Equanimity as temperament, the floor has never been where they stand, so dread gets no purchase on them; panic is a land-emotion, learned by folk who believe the ground is owed them. When the ship founders, the Athamaru is the one whose voice does not change, and she meets disaster the way the sea meets a thrown stone, closing back over, whole. Beyond Floteyn their pods follow the coasts and the great rivers, growing thin only where the water does.
+
+**In Balatur Erui:** the ancestry at its fullest expression on Talan: the boundary-divers and gleaning-crews of the Gate of Two Waters, down in the shallows before a whale's lading stops sinking, the voice on the boat that does not change when three hundred tons breaches alongside (see `geography/floteyn/balatur-erui.md`).
 
 **In Uravel:** the city's stations: the backbone of the Linewards, the watch at the breath-bells, the unchanging voice on the line when something goes wrong in the water (see `geography/floteyn.md`, *Uravel*).
 
@@ -179,6 +181,8 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 
 **In Uravel:** the city's currents: lane-pilots, deep-couriers, and the hired deep-guides who carry visitors past the bell-lines; the between of the water-weave moves through Merfolk hands (see `geography/floteyn.md`, *Uravel*).
 
+**In Balatur Erui:** the Line-pilots of the gate, who read the border of salt and sweet from inside it and thread hulls through the way a current threads a crack (see `geography/floteyn/balatur-erui.md`).
+
 ### Minotaur
 **Dominant in Brauogi (Earth / Sarrum).** The ones who outlast: nothing about a Minotaur moves quickly. Anger arrives slowly and forgiveness slower, trust is laid course by course, and a task once shouldered is carried to the end, because setting it down half-done never occurs to them. A Minotaur's grudge and a Minotaur's friendship are made the same way, slowly, and to last. **Sarrum himself is depicted as a Minotaur** (see `gods.md`, per-god sheet), and his cousins wear the resemblance without ceremony. Excellent stonecutters, farmers, and contract negotiators (the patience is professional, not personal); most kingdoms across Talan host small Minotaur trade-houses, and Brauogi is where they are at home.
 
@@ -234,6 +238,8 @@ Two populations, one people. The **Feyworld Sprites** are the original stock, na
 **Dominant in Floteyn (Water / Shuun)**, the Floating Isles. Home is made, not found: a Tripkee builds wherever she stands, and if the island drifts, the home drifts with it, which troubles her not at all. Give a Tripkee three planks and a tide and there is a porch by evening; give her a season and there is a village. The most settled people of the least settled domain, at peace on moving ground because they build, never despite it.
 
 **In Uravel:** the city's Open: the floats, boat-homes, and dock-wrights of the surface tiers, building a porch by evening on every new mooring (see `geography/floteyn.md`, *Uravel*).
+
+**In Balatur Erui:** the quay-wrights of Gesalkai, whose porch-built quarters walk to their new skies plank by plank at every Seventh Luck; on the one island that never moves, the town does (see `geography/floteyn/balatur-erui.md`).
 
 ### Vanara
 **Dominant in Nashavel (Chaos / Vesuna)**, at home in the Basogur Jungle that straddles Nashavel and Ehizahar. The ones who ride the change: change is the element they are native to, the way the Strix are native to moving air. Neither seeking the current nor resisting it, sure-footed on ground that will not hold still; where others need the world fixed or need it changing, a Vanara needs only to know which way it is moving today. The Jungle is their home, and the politics of the two domains around it are something they navigate rather than belong to.

@@ -11,3 +11,4 @@ Pending label work for the map art. The three views (terrain / kingdoms / domain
 ## Backlog for the next map edit
 
 - **Tvisol** (Brauogi/Myrkono corner). The Twin Suns + Bikitsa joint kingdom now carries the canon name **Tvisol** (2026-07-06 build); consider a kingdom-view label for it, keeping the two half-labels. Optional settlement marks: **Solkai** (sunward ferry-capital) and **Gaulabe** (shade-half oven-town).
+- **Balatur Erui** (Floteyn). The 2026-08-10 build places the island *on* the Hafra/Midarra boundary: shift the island (or the sea-boundary art) so the salt/sweet line (**Gazmuga**) touches its western shore. The settlement mark on the south coast is canon-named **Gesalkai**; the central mountain is **Lomendi**. Optional: mark the **Riseway** on no view (it is a sky-lane; charts carry it, terrain art should not).
