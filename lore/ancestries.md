@@ -28,7 +28,7 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 | **Light** · Egulon | Iro | Shoony · Leshy · Sprite | – |
 | **Darkness** · Myrkono | Araphel | Fetchling (Ilun Tasun) · Goloma (Izarelai) · Surki (Itzasoa) | – |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold · Goblin | Automaton (common in Eldara) |
-| **Water** · Floteyn | Shuun | Tripkee · Athamaru · Merfolk | – |
+| **Water** · Floteyn | Shuun | Tripkee · Athamaru (Balatur Erui) · Merfolk | – |
 | **Earth** · Brauogi | Sarrum | Minotaur · Kholo · Dragonet | – |
 | **Wind** · Vindul | Fisaya | Kashrishi · Tengu (Haizetsua) · Strix (Fellibylur) · Jotunborn (Baerfrost) | – |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi · Nagaji | – |
