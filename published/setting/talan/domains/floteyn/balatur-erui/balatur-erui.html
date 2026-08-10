@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balatur Erui · the Gate of Two Waters · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #4fb8a8;   /* brackish teal, between the two seas · 8.13:1 on Style B bg */
+    --card-bg: rgba(18,30,28,0.55);
+  }
+
+  /* Left-bordered island callout */
+  .gate-call { max-width: 840px; margin: 22px auto; padding: 20px 26px; background: rgba(20,32,30,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .gate-call .g-label { font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .gate-call p { margin: 0 0 12px; line-height: 1.6; }
+  .gate-call p:last-child { margin-bottom: 0; }
+
+  /* The two waters, as a split rule */
+  .two-waters { max-width: 520px; margin: 18px auto 0; display: flex; height: 5px; border-radius: 3px; overflow: hidden; }
+  .two-waters .salt { flex: 1; background: #3a8a7d; }
+  .two-waters .sweet { flex: 1; background: #35648f; }
+  .two-waters-caption { text-align: center; font-size: 0.85rem; font-style: italic; color: var(--text-dim, #9a917a); margin: 6px auto 0; }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  .office-grid { --col-min: 250px; --grid-max: 900px; }
+  .people-grid { --col-min: 250px; --grid-max: 900px; }
+</style>
+</head>
+<body data-page="balatur-erui">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/floteyn/floteyn.html">Floteyn</a><span class="sep">›</span><span>Balatur Erui</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Balatur Erui</div>
+    <div class="page-subtitle">Floteyn Sub-Region · the Gate of Two Waters</div>
+    <div class="page-flavor">Everything that passes here changes state or turns back.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>balea</i> (whale) + Icelandic <i>eyri</i> (sandbank, sea-spit), "whale-spit, whale-shoals": the whale-crowded waters off both coasts, where the great ones gather before the gate. The port is <b>Gesalkai</b>: Basque <i>gezal</i> (brackish water) + <i>kai</i> (quay), "the brackish quay."</dd>
+    <dt>Position</dt><dd>The one fixed island of Floteyn, standing in the mouth of the Midarra where the sweet inner sea meets the salt Hafra. The boundary of the two waters, <b>Gazmuga</b> (everyone alive says <i>the Line</i>), touches its western shore. <a href="/setting/talan/domains/myrkono/itzasoa/itzasoa.html"><b>Itzasoa</b></a>'s shadow-coast lies north across the gate; the Sumendar shore south; the Floating Isles begin to the east.</dd>
+    <dt>Terrain</dt><dd>Forested throughout, rising to the sleeping mountain <b>Lomendi</b> at the island's heart, one river running from its southern flank down to Gesalkai. Every other island in the domain drifts. This one stays, and the drifting isles reckon their wandering by it.</dd>
+    <dt>Character</dt><dd>
+      <i>The threshold of the inner sea. The people who inherit what the sky lets fall.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Mutual Republic</span><span class="pill">The Gate</span><span class="pill">Skywhale Crossing</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The domain's three and everyone the gate ever deposited: <b>Athamaru</b> at their fullest expression anywhere on Talan, <b>Merfolk</b> pilots, <b>Tripkee</b> quay-wrights, and inland, around the mountain, <b>the Stillfolk</b>, whose own name the coast has never been given.</dd>
+    <dt>Faith</dt><dd>Shuun's, read in verdicts: the water lets go of what it lets go of, and chance is taken the way the island takes weather. A <b>Listener</b> keeps a bench on the Gesalkai quay, and islanders sit down beside them mostly after the draw.</dd>
+    <dt>Rule</dt><dd><b>The Undertaking</b>, the underwriters' mutual become a republic. Citizenship is subscription; the visible state is a claims court and an actuary's ledger; the catchment skies redraw by lot every seventh year, so nobody inherits the best sky.</dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">The Port</div>
+    <div class="gods-city-name">Gesalkai</div>
+    <div class="gods-city-byname">the brackish quay · a salt front, a sweet front, and the Weighhouse between them</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-line" class="section-heading">The Line and the Gate</h2>
+  <div class="prose">
+    <p>Stand on the western shore and the two waters are simply <i>there</i>, side by side to the horizon, the Hafra's cold teal and the Midarra's deep blue holding a border no wind erases. The waters meet and refuse each other, and the refusal is visible from a rooftop in town. The island smells of the argument: clean inland air off the forest, the sweet weed-and-rain waft of the Midarra, salt on the west wind, and which one wins the morning depends on the weather.</p>
+    <p>Every hull passing between the seas threads the gate under the eyes of Gesalkai's pilots, who read the Line's moods the way Stormriders read a front. Most cargo goes no further than the town: a saltkeel rides the fresh water heavy and a stillship dies in brine within a season, so freight comes off one civilisation of hull, crosses the Weighhouse scales, and boards the other. The salt hulls are mostly <a href="/setting/talan/domains/myrkono/three-pines/three-pines.html"><b>Three Pines</b></a> work, and the gate is where their water ends. The island's pilot-craft governs the gate crossing; the deep charts of the inner sea beyond are another power's business, and Gesalkai is politely definite about the difference.</p>
+  </div>
+  <div class="two-waters"><div class="salt"></div><div class="sweet"></div></div>
+  <div class="two-waters-caption">Gazmuga, the salt-border: two seas, one shore, no mixing.</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-crescendo" class="section-heading">The Crescendo</h2>
+  <div class="prose">
+    <p>The chronicles can write of skywhales only what Balatur Erui sees, and Balatur Erui sees this: a whale comes in from the Hafra already singing, and the song climbs as it nears the gate. The town hears the deep of it in the floorboards before any ear catches it; then the blow, then the answering horns. In the sweet water beyond the Line the whale breaches, and keeps breaching, and on the last breach it does not come down: it rises, streaming both seas off its flanks, and climbs the air along the <b>Riseway</b>, the lane over the island every chart marks and no keel uses.</p>
+    <p>Islanders call the whole of it <b>a whale's crescendo</b>: the song builds for days and the rising is its peak, and what happens above the sky's weather is the whale's own business. Where they go, no page of the chronicle-record can say; the folk-guess, said with a shrug toward the horizon, is the Cloud Sea, the one pasture big enough. The crescendos come thickest in two runs, spring and autumn, and no scholar has a cause for that either.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-lading" class="section-heading">A Whale's Lading</h2>
+  <div class="prose">
+    <p>A skywhale rises clean and arrives in the sky carrying what a lifetime in the ocean lodged in it, and over the island it lets all of it go. The sloughed salt-hide comes down in sheets that hit like wet thunder. The deep-oil comes down. And with them comes <b>the whale's lading</b>, the bill nobody wrote: barnacle crusts the size of carts, ambergris, wreck-timber, coins and cargo scraped off ships in seas no islander has sailed, kelp from coasts no chart shows, sea-life still gripping the hide it rode up on.</p>
+    <p>The island does not harvest whales. It harvests the whole ocean, delivered to one address. What falls along the Riseway lands on the inward skies; what falls short goes into the shallows, where the boats are already rowing and the divers are already down. No one has ever taken anything <i>from</i> a whale here, and the distinction is the island's whole honour: the sky lets go of what the sea lodged, and the people below inherit it.</p>
+  </div>
+
+  <div class="gate-call">
+    <div class="g-label">The Sea, Re-Deciding</div>
+    <p>A lading arrives with owners: a fall that surfaces another kingdom's drowned property starts a claim, and half the standing treaties the island holds are standing salvage-settlements. Twice in the record a lading has surfaced cargo the Twin Cities' lords had already stolen once, and the Fall Judge ruled both times that the sea had re-decided the matter.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-undertaking" class="section-heading">The Undertaking</h2>
+  <div class="prose">
+    <p>The polity grew out of a shed. In the late Dark Era, when the falls were the only wealth arriving anywhere, the net-holding families of Gesalkai swore in someone's tackle-shed to cover each other's crushed roofs, and the oath outgrew the shed, then the harbour, then every other authority on the island. Today the island is governed by <b>the Undertaking</b>, and the name means both halves of it: the mutual that underwrites you, and the burial it owes you at the end.</p>
+    <p>Citizenship is membership. A subscribed family is a <b>Name</b>, written into <b>the Subscription</b> (the oldest surviving page is dated 2151 MR), and every Name pays a share of every catch into <b>the Sharehold</b>, the common pool. In exchange the Sharehold rebuilds you when a two-ton barnacle crust comes through your ceiling, feeds you through a lean sky, and buries you properly when you die. Folk who live on the island unsubscribed are tolerated and unenvied: they catch nothing legally, and nobody pays for their funeral. The state's whole visible apparatus is a claims court and an actuary's ledger, and islanders regard grander governments the way a sober man regards an expensive hat.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-seventh-luck" class="section-heading">The Skies and the Seventh Luck</h2>
+  <div class="prose">
+    <p>The catchment plots under and around the Riseway are called <b>skies</b>, and no family owns one for long: every seventh year the island redraws them all by lot at <b>the Seventh Luck</b>. There are no bad skies. The inward skies catch the heavier lading; the outward skies sit near the quays where the trade-work is; the draw decides which life a family leads for seven years, never whether it eats. The lot-tokens are <b>ear-stones</b>, the dense ear-bones of whales that completed their crescendo, one per sky, drawn blind from the drum, so a family draws its next seven years from the hearing of whales.</p>
+    <p>The Seventh Luck is the island's great festival and its most dangerous political week: the catch-works and porch-homes of the Tripkee-built quarters walk to their new skies plank by plank, marriages are brokered between families whose draws complement, old grudges are re-seated along new fence-lines, and the whole town is nervous, festive, and awake. Rigging the drum is the island's unforgivable crime; the last mortal convicted of it is remembered by name, and by nothing else he ever did.</p>
+  </div>
+
+  <div class="gate-call">
+    <div class="g-label">Why the Lot Holds</div>
+    <p>The lot and the pool keep each other honest. Without the redraw, whoever held the best sky forever would become the pool's permanent paymaster and walk away from it; without the pool, seven years on a lean sky would ruin a family. Each institution is the other's reason to exist, and no dynasty has ever grown roots in ground that reshuffles under it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-offices" class="section-heading">The Offices</h2>
+  <div class="card-grid office-grid">
+    <div class="accent-card">
+      <div class="card-name">The Fall Judge</div>
+      <p>Justice is one office, grown. The first Fall Judge was whoever kept a division of a fall from ending in blood, back when a single crust of drowned silver could feed the island for a winter; the office has passed by acclamation of the Names ever since, and it has acquired clerks, a docket, and four centuries of precedent without ever acquiring a second judge. The island's law is precedent entire, custom risen up rather than statute handed down, and the jurists of Lograth find the place scandalous and cannot stop citing it.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Weighhouse</div>
+      <p>Every cargo changing hulls and every fall awaiting judgment sits in the Weighhouse's bonded floors, under the custody of <b>the Weighmaster</b>, whose entire personal fortune stands posted as surety against the goods. The same scales weigh a grain transshipment and a crust of foreign coin. The Weighmaster is the one mortal on Talan who is ruined first if the island cheats, which is precisely why the island has never needed to.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Underwriter</div>
+      <p>The pool's one face and one signature. Envoys are received, treaties signed, and the Sharehold's word given by the Underwriter, chosen by the Names. To the island's law a treaty is a standing division of rights, the same object as a fall: divided once, honoured forever.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-horns" class="section-heading">The Horns</h2>
+  <div class="prose">
+    <p>Every subscribed family holds a horn, and the horn is the office everyone holds. Some families are watching from the sky-towers, some are on boats around the island, most are simply living in earshot; the first to sight an incoming whale blows, and every horn that hears it answers in kind, relaying the call across the island in under a minute. The chorus is three things at once: the sighting, the clearing-order, and the greeting. The gate empties, cranes freeze mid-swing, half-loaded hulls stand off, and the strait belongs to the whale until it is in the sky. The whales sing coming in, and the horns are the people's whale-song sung back.</p>
+    <p>Nobody commands a clearing; the custom is the commander, every Name knows their part, and the one law over all traffic is that the whale has right of way, always. Foreign captains fume about the stoppage in every port on two seas, and islanders find the fuming funnier than the captains ever learn. A young Name's coming-of-age is <b>earning your horn</b>: the day the family judges you able to tell a whale's deep from a swell's, you carry your own voice in the chorus. The youths dare each other at the edges of all of it: swimming the Line with one arm in salt and one in sweet, diving the shallows for loose ear-stones, standing a Riseway sky during a fall-run for the count of ten. The Fall Judge fines all of it equally, which is democratic.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="gesalkai" class="section-heading">Gesalkai · the Brackish Quay</h2>
+  <div class="prose">
+    <p>The town holds a few thousand souls and two waterfronts: the salt front facing the Hafra roads, the sweet front facing the Midarra, with the Weighhouse and its cranes between them where the whole town narrows to a scale-beam. It smells of two seas at once, in proportions the wind decides. <a href="/setting/talan/domains/floteyn/uravel/uravel.html"><b>Uravel</b></a>'s lamps burn Balatur Erui oil; the Dark's light is the island's steadiest customer, and the island knows exactly whose season it would be if the runs failed.</p>
+  </div>
+
+  <div class="card-grid people-grid">
+    <div class="accent-card">
+      <div class="card-name">Athamaru · the Divers</div>
+      <p>At their fullest expression anywhere on Talan: the boundary-divers and gleaning-crews at ease above the abyss, down in the shallows before a lading stops sinking, the voice on the boat that does not change when three hundred tons breaches alongside.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Merfolk · the Line-Pilots</div>
+      <p>They read the border of salt and sweet from inside it, and thread hulls through the gate the way a current threads a crack: unhurried, unstoppable, arriving with no sign of having fought for it.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Tripkee · the Walking Town</div>
+      <p>The quay-wrights of Gesalkai, whose porch-built quarters walk to their new skies plank by plank at every Seventh Luck. The standing joke: on the one island that never moves, the town does.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="lomendi" class="section-heading">Lomendi and the Stillfolk</h2>
+  <div class="prose">
+    <p>Past the last ring of skies the forest climbs Lomendi's flanks, and the coast does not settle there. The mountain's people are <b>the Stillfolk</b>, and the name is the coast's; their own they do not give. They hold no horns, draw no skies, subscribe nothing, and want nothing that falls: the mountain does not gamble. They descend rarely, trade little, and answer questions about their arriving with the same patience the mountain answers weather. No chronicle records them coming to the island, and the honest chroniclers say so.</p>
+    <p>What every islander knows is this: on still nights Lomendi rumbles, low and long, and the whales in both waters answer it.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The First Whale</button>
+    <div class="legend-era-content">
+      <p>The coast says the mountain is the oldest whale, the first one, who rose from the sea in the world's youth, looked at the sky, and chose to root instead; the island is its body, the forest its pasture, the warmth at its roots its old blood still moving. The Stillfolk, the stories say, are the folk it dreamed, or the folk who came down with it, depending on the teller; the tellers argue, and the arguing is itself the tell. Every version ends the same way: the whales rise <i>here</i> because the old one likes to hear them go.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The One That Came Down</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What the Coast Has Backwards</div>
+      <p>The coast has the story backwards, and the Stillfolk have never corrected them. Lomendi is a skywhale that <b>descended</b>: the only one that ever came back. At the end of a sky-life longer than the chronicle-record it came down through the weather, settled into the gate's shallows, and rooted; the forest grew on its back, and its warmth is living blood, moving slow. The Stillfolk came down with it. They are the descendants of a people who lived aloft on the sky-pastures, tending the great ones between the clouds, and when their whale turned home they stayed with it. They keep its sleep the way the coast keeps the crossing, and they refuse the falls because you do not gamble on what you are keeping.</p>
+      <p>The crescendos at this gate are a courtesy: the whales rise where the old one can hear them, and the rumble the island loves is exactly what the coast believes it is, the sleeper answering. Whether Lomendi will ever wake, no one knows; the Stillfolk believe it is deciding, and have believed so for two thousand years. A GM reading this beside <a href="/setting/talan/domains/floteyn/floteyn.html">Balaena</a>'s entry will find the rhyme: one young whale held down in secret so a city can keep it, one old whale that came down by choice and is kept in love. The two stories have never met. They could.</p>
+      <p><i>(Draft canon: this account may be revised when the skywhales' full lifecycle is written.)</i></p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="voices" class="section-heading">Voices at the Gate</h2>
+  <div class="prose">
+    <p>Both passages ran in <i>The Travelling Chronicle</i>; the bylines are the chronicle's own (see <a href="/setting/talan/people/the-voices.html"><b>Notable People</b></a>).</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>Gesalkai keeps two waterfronts and one opinion, which is that the sea may be two seas if it insists, provided both pay wharfage. I had been an hour on the salt front, watching a crane translate a Vindul cargo out of one civilisation of hull and into the other, when the horn went. Understand that nobody shouts. A horn sounds, far off; every horn in town answers it; and the crane simply stops, mid-swing, a season of grain hanging over open water with the dignity of a held breath. A captain beside me, three days out of Rika Tikur, began composing an opinion about schedules. The stevedores had already gone to the rail. The whale came through the gate singing, and the town sang back in brass, and for the length of that exchange I could not have told you the price of anything, which in a port of this consequence I am prepared to call a miracle.</p>
+    <p>The mountain rumbled on my last night, low, a word underneath the conversation. I asked my landlady what answers to it. She poured, looked at me the way one looks at a promising student who has asked the examination question a week early, and told me to come back for the Seventh Luck.</p>
+  </div>
+  <div class="voice-attrib">Golivander Tessek · The Travelling Chronicle</div>
+
+  <div class="voice-quote">
+    <p>Everyone comes for the draw. The Chronicle penciled me two days: the drum, the stones, the famous nerves, and the boat out. I stayed nine, because on the third morning I looked out my window and the house across the lane had begun to walk.</p>
+    <p>Here is what the visitors miss, leaving with the festival. The Seventh Luck is the loud day, but the moving is the true one. A family that has caught the sky for seven years picks up its porch, plank by numbered plank, and carries it down to the quays to learn cranes; a quay family walks up into the fall-country to learn the sound a fortune makes coming down through the trees. Neighbours carry each other's kitchens. Somebody's grandmother rode the last stretch to her new sky in the rocking chair she was carried in as a bride, laughing the whole way. I helped carry a doorframe, and was paid in plums, and I have never been paid better.</p>
+    <p>I asked a woman on the salt front whether she grieved the house she was leaving. She said the house was coming with her; it was only the luck that stayed behind. I cried, obviously. The whole island went home that week, to homes none of them had ever lived in, and it felt like Skarrenn blowing both directions at once.</p>
+  </div>
+  <div class="voice-attrib">Vyrenna Tessek · One Line Further</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="live-tensions" class="section-heading">The Live Tensions</h2>
+  <div class="prose">
+    <p><b>The subscription trade.</b> Off-island money wants in. Merkavar factors and <a href="/setting/talan/domains/lautara/rika-tikur/rika-tikur.html"><b>Rika Tikur</b></a> berths court the quay-leaning Names every trade season, offering coin now against shares of draws to come; the Fall Judge has twice ruled that a Name's share can pass only with the name itself, and the brokers have twice invented instruments to reach around the ruling. The mutual is holding the line against becoming a commodity, and the line is thinnest where the island talks to foreigners daily.</p>
+    <p><b>The unspoken claim.</b> The Sharehold reinsures nowhere. The island has priced every fall except the one it will not say aloud: a whale that fails its crescendo and comes down entire. It has happened once in living memory, in 2489 MR, in the shallows off the Riseway's end; the Undertaking paid for years, and the ear-stone of that whale is kept in the Weighhouse, out of the drum, drawn by no one.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/floteyn/floteyn.html"><b>Floteyn →</b></a> · The Water domain: the drifting isles that reckon their wandering by this one fixed island.</li>
+      <li><a href="/setting/talan/domains/floteyn/uravel/uravel.html"><b>Uravel →</b></a> · Shuun's god-city among the Floating Isles, whose deep halls burn this island's oil.</li>
+      <li><a href="/setting/talan/domains/myrkono/three-pines/three-pines.html"><b>Three Pines →</b></a> · The premier shipwright of the Hafra, whose saltkeels end their water at this gate.</li>
+      <li><a href="/setting/talan/people/the-voices.html"><b>Notable People →</b></a> · The two chroniclers quoted above, and the registers they write in.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">A small island with a large sky · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>The Stillfolk's own name.</b> They do not give it to the coast, and the chronicle record respects what it cannot obtain.</li>
+      <li><b>The skywhales entire.</b> Where the risen go, what they graze, whether they return anywhere: the chronicle holds only what this island sees.</li>
+      <li><b>The inner sea's charts.</b> The gate's pilotage is Gesalkai's; the Midarra's deep charter belongs to a power the record has yet to name.</li>
+      <li><b>The Names themselves.</b> The sitting Fall Judge, the current Underwriter and Weighmaster, and the old subscribed families go unnamed until a story seats them.</li>
+      <li><b>The fall of 2489.</b> The whale that came down entire, the years the Sharehold bled, and the family whose sky it struck: the island does not talk about it, and the chronicle has so far obliged.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · FLOTEYN · BALATUR ERUI</div>
+
+</div>
+
+</body>
+</html>
