@@ -28,7 +28,7 @@ Each god's domain has one or more **dominant** ancestries: peoples for whom that
 | **Light** · Egulon | Iro | Shoony · Leshy · Sprite | – |
 | **Darkness** · Myrkono | Araphel | Fetchling (Ilun Tasun) · Goloma (Izarelai) · Surki (Itzasoa) | – |
 | **Fire** · Sumendar | Komo | Dragons (Dragon's Reach) · Dwarf · Kobold · Goblin | Automaton (common in Eldara) |
-| **Water** · Floteyn | Shuun | Tripkee · Athamaru (Balatur Erui) · Merfolk | – |
+| **Water** · Floteyn | Shuun | Tripkee (Floating Isles) · Athamaru (Balatur Erui) · Merfolk | – |
 | **Earth** · Brauogi | Sarrum | Minotaur · Kholo · Dragonet | – |
 | **Wind** · Vindul | Fisaya | Kashrishi · Tengu (Haizetsua) · Strix (Fellibylur) · Jotunborn (Baerfrost) | – |
 | **Time** · Lioaru | Tani | Ghoran · Azarketi · Nagaji | – |
@@ -177,7 +177,7 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 **In Baratalda:** the long stalk turned to the long graft: the tend-line grafters of Aldinskog, slow to start a line and impossible to shake off one, patient across the decades a fruit-forest needs (see [`geography/brauogi/baratalda.md`](geography/brauogi/baratalda.md)).
 
 ### Merfolk
-**Aquatic, dominant in Floteyn (Water / Shuun)** and the Hafra coasts. The Merfolk move as water moves: a Merfolk does not force, she meets an obstacle the way a current does, around it, over it, through the crack in it, unhurried and unstoppable, and arrives where she meant to arrive with no sign of having fought for it. The sea is hers because she is the sea's, never lost in it, never against it, and the dignity surface-dwellers find magnificent or insufferable is simply the certainty of water: nothing has ever finally stopped it, and nothing has ever finally stopped her. A small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty). They keep to water, and a wholly landlocked region sees none of them.
+**Aquatic, dominant in Floteyn (Water / Shuun)** and the Hafra coasts. The Merfolk move as water moves: a Merfolk does not force, she meets an obstacle the way a current does, around it, over it, through the crack in it, unhurried and unstoppable, and arrives where she meant to arrive with no sign of having fought for it. The sea is hers because she is the sea's, never lost in it, never against it, and the dignity surface-dwellers find magnificent or insufferable is simply the certainty of water: nothing has ever finally stopped it, and nothing has ever finally stopped her. A small freshwater pod community lives in **Midarra** and maintains an informal alliance with the Twin Cities pirate council (the pirates value the merfolk's underwater reconnaissance, the merfolk value the pirates' surface-side legal cover for their submerged sovereignty); the same pods also pilot for the Sweetwater League's crews (see `geography/floteyn/floating-isles.md`). They keep to water, and a wholly landlocked region sees none of them.
 
 **In Uravel:** the city's currents: lane-pilots, deep-couriers, and the hired deep-guides who carry visitors past the bell-lines; the between of the water-weave moves through Merfolk hands (see `geography/floteyn.md`, *Uravel*).
 
@@ -236,6 +236,8 @@ Two populations, one people. The **Feyworld Sprites** are the original stock, na
 
 ### Tripkee
 **Dominant in Floteyn (Water / Shuun)**, the Floating Isles. Home is made, not found: a Tripkee builds wherever she stands, and if the island drifts, the home drifts with it, which troubles her not at all. Give a Tripkee three planks and a tide and there is a porch by evening; give her a season and there is a village. The most settled people of the least settled domain, at peace on moving ground because they build, never despite it.
+
+**In the Floating Isles:** the ancestry at its fullest expression: ordinary on a hundred unlike islands at once, and the first aboard for the crew-years, because a berth is a porch by evening too; much of the Nation Afloat's ship-craft and most of its patience is Tripkee work (see `geography/floteyn/floating-isles.md`).
 
 **In Uravel:** the city's Open: the floats, boat-homes, and dock-wrights of the surface tiers, building a porch by evening on every new mooring (see `geography/floteyn.md`, *Uravel*).
 
