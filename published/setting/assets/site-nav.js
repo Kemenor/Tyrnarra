@@ -108,7 +108,8 @@
     ]},
     { slug: 'floteyn',  label: 'Floteyn · Water',     href: '/setting/talan/domains/floteyn/floteyn.html',   children: [
       { slug: 'uravel', label: 'Uravel &middot; the Floating Isles', href: '/setting/talan/domains/floteyn/uravel/uravel.html', children: [] },
-      { slug: 'balatur-erui', label: 'Balatur Erui · the Gate of Two Waters', href: '/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html', children: [] }
+      { slug: 'balatur-erui', label: 'Balatur Erui · the Gate of Two Waters', href: '/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html', children: [] },
+      { slug: 'floating-isles', label: 'Floating Isles · the Sweetwater League', href: '/setting/talan/domains/floteyn/floating-isles/floating-isles.html', children: [] }
     ]},
     { slug: 'sumendar', label: 'Sumendar · Fire',     href: '/setting/talan/domains/sumendar/sumendar.html', children: [
       { slug: 'eldara',         label: 'Eldara &middot; the Forge City', href: '/setting/talan/domains/sumendar/eldara/eldara.html', children: [] },

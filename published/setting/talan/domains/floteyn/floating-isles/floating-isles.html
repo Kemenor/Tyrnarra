@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Isles of Shuun · the Sweetwater League · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #5aa8d8;   /* sweetwater blue · 7.46:1 on Style B bg */
+    --card-bg: rgba(16,26,34,0.55);
+  }
+
+  /* Left-bordered callout */
+  .isle-call { max-width: 840px; margin: 22px auto; padding: 20px 26px; background: rgba(18,28,38,0.45); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .isle-call .i-label { font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .isle-call p { margin: 0 0 12px; line-height: 1.6; }
+  .isle-call p:last-child { margin-bottom: 0; }
+
+  /* The pale test, rendered as paired cards */
+  .pale-grid { --col-min: 280px; --grid-max: 840px; }
+  .pale-grid .accent-card.pale { border-top: 3px solid #d8d4c8; }
+
+  .organ-grid { --col-min: 250px; --grid-max: 940px; }
+  .island-grid { --col-min: 260px; --grid-max: 940px; }
+</style>
+</head>
+<body data-page="floating-isles">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/floteyn/floteyn.html">Floteyn</a><span class="sep">›</span><span>Floating Isles</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Floating Isles of Shuun</div>
+    <div class="page-subtitle">Floteyn Sub-Region · the Sweetwater League</div>
+    <div class="page-flavor">A hundred worlds ashore. One people afloat.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd><b>Floating Isles of Shuun</b> is the collective name and the only one the whole archipelago answers to; every island carries its own. The <b>Sweetwater League</b> is the pact of the water between, plain English on the Hanseatic pattern, coined for the freshwater sea it swears to.</dd>
+    <dt>Position</dt><dd>The hundreds of drifting islands scattered across the open western Midarra, with <a href="/setting/talan/domains/floteyn/uravel/uravel.html"><b>Uravel</b></a> gathered at their heart. <a href="/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html"><b>Balatur Erui</b></a> and the gate of the two waters lie west; the Order of Steam's bay-mouth opens into the same sea from the south.</dd>
+    <dt>The Isles</dt><dd>Grown things, drifting on deep-water roots at the pace of years. An island surfaces pale (<b>a Nyey</b>, the new isle), greens over generations, and when its root dies it stills and bleaches (<b>a Kyrey</b>, the stilled isle). <i>A pale island that moves is a beginning; a pale island that holds still is an ending.</i></dd>
+    <dt>Character</dt><dd>
+      <i>Every island its own world; the country lives on the boats.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Anthology of Islands</span><span class="pill">Sweetwater League</span><span class="pill">Nation Afloat</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>Different on every island, blended on every deck. <b>Tripkee</b> at their fullest expression anywhere on Talan; <b>Merfolk</b>, <b>Athamaru</b>, and every people a crew ever took aboard; and the <b>Keelborn</b>, ship-raised folk of no island at all.</dd>
+    <dt>Faith</dt><dd>Shuun's, a hundred ways: one island worships through silence and its neighbor through drums, and the crews blend all of it the way they blend everything else. The <b>Listeners</b> keep the sitting-tradition at Uravel.</dd>
+    <dt>Rule</dt><dd>Ashore, each island entirely its own. On the water, the <b>Sweetwater League</b>, whose constitution is one sentence: <i>the League ends at the waterline.</i></dd>
+  </dl>
+
+  <div class="gods-city">
+    <div class="gods-city-label">The One Address</div>
+    <div class="gods-city-name">The List-house</div>
+    <div class="gods-city-byname">at Uravel · the master charts, the sailing-lists, and the Rounds · the League's whole visible apparatus</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="a-hundred-worlds" class="section-heading">A Hundred Worlds</h2>
+  <div class="prose">
+    <p>No two islands of Shuun keep the same table. Every docking is a new taste, a new dialect, a new right way of doing the same thing done differently one hour's sail behind you: an island that salts everything and an island that salts nothing, an island of one family and an island of nine feuds, an island that worships Shuun through silence and its neighbor that worships through drums. The plurality is the point, and it is absolute: <b>every island governs itself entirely</b>, and the chronicle-record treats each as its own entry. This page holds only what the Isles share, and what they share fits on a ship.</p>
+  </div>
+
+  <div class="card-grid pale-grid">
+    <div class="accent-card pale">
+      <div class="card-name">Nyey · the New Isle</div>
+      <p>A pale island still moving: a bare root-crown of chalk, new-surfaced, not yet greened. Claimable, and claimed, and every claim lands on the List-house's desk, which is exactly the kind of question the League was never meant to answer and now answers anyway.</p>
+    </div>
+    <div class="accent-card pale">
+      <div class="card-name">Kyrey · the Stilled Isle</div>
+      <p>A pale island that holds still: the root dead, the green bleaching, the long settling begun. A Kyrey is evacuated on the League's oldest duty, and its people carry their island's name aboard until they choose a new shore or stop wanting one.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-nation-afloat" class="section-heading">The Nation Afloat</h2>
+  <div class="prose">
+    <p>Ask an islander what country they are from and you get the island's name; ask a sailor and you get <i>the Isles</i>. The Isles' one shared culture has no land under it. Every crew is a blend of a dozen islands, each sailor's home still shining through in an accent or a knife-grip or a way of blessing the wind, and by pure osmosis the boat-folk have become a people: one working tongue, one rough courtesy, one calendar. Aboard, the year turns on <b>the Standin</b>, the crews' festival that stands in for the fifteen island feasts it replaced; no island would recognize the Standin as its own, but all fifteen would find it feels almost like home.</p>
+    <p>The engine of the osmosis is the <b>crew-years</b>: nearly every island sends its young to the boats for a few years, and nearly every family therefore has a sailor who comes home each season a little less <i>theirs</i> and a little more <i>Isles</i>. And some never had an island at all: the <b>Keelborn</b>, ship-raised folk of no shore, the purest distillation of the boat-culture and the League's working muscle.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-league" class="section-heading">The Sweetwater League</h2>
+  <div class="prose">
+    <p>The pact is old, thin, and proud of both. It was sworn in the late Dark Era on the plainest arithmetic the archipelago ever did: the islands that were visited survived, and the dark years took the rest quietly, one unanswered season at a time. The League's constitution has held to one sentence since: <b>the League ends at the waterline.</b> Every island ashore is sovereign without remainder; the water between is common; and the pact governs only what floats. Dues are paid in coin or crewed shifts and fund everything afloat: the way-buoys, the beacon-hulks, the charts, the Rounds. The League owns nothing ashore anywhere, on principle.</p>
+  </div>
+
+  <div class="card-grid organ-grid">
+    <div class="accent-card">
+      <div class="card-name">The List-house</div>
+      <p>The clerks at Uravel who keep the master charts, the sailing-lists, and <b>the Rounds</b>, the visit-roster that misses no island. An island lives <i>on the Lists</i>; a foreign envoy writes here because no other address exists.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Firsthail</div>
+      <p>The League's one voice, deliberately weak: the office receives envoys and signs treaties, and a signature binds nothing without the seal of the Raft.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Raft</div>
+      <p>The League deciding. Ships lash gunwale to gunwale on open water until the parliament is a temporary island, one island one voice, and unlash when it is done. The oldest sealed ruling is dated 2139 MR. The Keelborn, who crew the League's every working hull, hold no vote here, and the injustice of that is said out loud on every deck and in no ruling.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Rounds</div>
+      <p>The oldest duty: the standing schedule of calls, so that no island is ever long unvisited. An island that answers its hails is well. An island that goes quiet is visited, and the visit is rescue, census, and army in one act, because nobody knows which is needed until someone stands on the dock.</p>
+    </div>
+  </div>
+
+  <div class="isle-call">
+    <div class="i-label">The One Sentence</div>
+    <p>The League's only punishment is exclusion: an island struck from the Lists stops being visited, and in a domain where <i>a hall no one visits drowns</i>, the strike is a death carried out by omission. The Raft has pronounced it rarely, argues it longer than any other business, and seals every such ruling with its reasons written out in full, because a sentence this heavy must be able to answer for itself.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-living-chart" class="section-heading">The Living Chart</h2>
+  <div class="prose">
+    <p>Every printed map of the Isles is wrong by the time the ink dries; the sea rearranges itself at the pace of years, and only the people who never stop sailing it know where anything is. So the League's fleet keeps <b>the living chart</b>, corrected voyage by voyage at the List-house, and this makes the Isles the <b>master charter of the Midarra</b>: the Wyndwalken map the land, the Stormriders chart the salt, and the sweet inner sea belongs to the crews of Shuun.</p>
+    <p>Because the charts are theirs, the crews are everywhere: League hulls run mail, passengers, and small freight to every point of the Midarra, coasts the Isles hold no claim on, because they are passing anyway and know the week's water. The Isles' ships are far from the only ones on the inner sea; every nation sails its own bottoms and several float their own navies. The Isles' are simply the best: the fastest merchants on the sweet water, built and crewed so that a trading hull turns warship on a single call, and every power that has counted the cost of testing this has decided that other victories come cheaper. The Dreaming Cape's Wakehelm keep their bay-mouth pilotage and <a href="/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html">Gesalkai</a> keeps the gate, and neither disputes the open water. The Twin Cities run the same sea as pirates, and how the League's mail keeps sailing through pirate water is a question Isles captains answer with a shrug.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Accommodation</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Never Signed, Always Honoured</div>
+      <p>The Twin Cities' council and the Sweetwater League have never signed anything, and both would deny on oath that there is anything to sign. The terms, honoured for two generations: League hulls and everything flying the mail-pennant sail unharried, and the pirate council receives the living chart's corrections, a season stale, through the Merfolk pods who scout for the pirates and pilot for the League in the same lifetime. A season's lag keeps the pirates competent and the League indispensable; the mail-pennant keeps the accommodation invisible inside ordinary luck. The Raft could never ratify it, the pirate lords could never admit it, and the handful of List-house clerks and pirate quartermasters who administer it have never once met.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-presses" class="section-heading">What Presses On It</h2>
+  <div class="prose">
+    <p>The League is a Dark-Era rope carrying an Adventurer-Era load, and everyone can hear it creak. In <b>2524 MR</b>, in the continent's eruption wave, a dungeon of the Nine broke open in the lightless deep beneath League water: the drowned temple of <b>the Whisperer in Dreams</b> (see <a href="/setting/talan/the-binding.html">the Binding</a>). The first wave surfaced among the isles, and worse traveled ahead of it: crews near the deep sailed into waking dreams, and two islands answered their hails <i>wrong</i> for a season before anyone understood why. The musters broke the wave at sea, and League divers with Guild deep-teams sealed the drowned gate without ever entering it. Since then the Rounds are made armed, and a hail-answer is listened to for more than its presence.</p>
+    <p>The <b>Order of Steam's</b> freight lane runs the same water, under escort the League never requested. And so the Raft keeps almost holding the vote everyone dreads: <b>the Standing Watch</b>, a permanent subscribed patrol-fleet, correct on every military merit and priced in everything the League was founded to refuse, for a standing fleet needs standing dues, standing dues need assessments, and assessments cross the waterline. The fight has three battlegrounds: the schedule, the franchise, and the Watch vote itself. Osmosis has no party and cannot be voted down; the islands fear being ruled by the fleet, and the fleet is their own children.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-islands" class="section-heading">Three Islands, and the Rest</h2>
+  <div class="prose">
+    <p>The chronicle-record holds each island as its own entry, and most entries are short; these are the ones the Raft cannot stop talking about. Each is a sketch awaiting its own chronicler.</p>
+  </div>
+
+  <div class="card-grid island-grid">
+    <div class="accent-card">
+      <div class="card-name">Systrey · the Sister-Isles</div>
+      <p>Seven small islands whose deep roots grew together generations ago, so they drift as one school. Their folk treat the entanglement as a marriage, run one economy across rope-bridges, and are the integrationists' favorite proof of what union could be. Systrey's elders answer that <i>the roots chose; clerks didn't</i>, which pleases nobody at the Raft.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Bakarey · the Lone Isle</div>
+      <p>Bakarey answers every hail, correctly, with the same single bell-note; pays its dues in fine goods left on a tide-raft; and has admitted no visitor in living memory. The Rounds exist to check on silence, and Bakarey has made minimal-answer an art the League's law cannot touch. What is on Bakarey, and who rings the bell, the chronicle-record cannot say.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Breidey · the Broad Isle</div>
+      <p>East of Uravel: the Isles' granary, biggest shipyard-town, and fielder of more keels than the next five islands together, holding exactly one vote for it. Its great families bankroll half the fleet and cannot command a hull of it; Breidey is the loudest voice for the keel-franchise and the Standing Watch, which it would, inevitably, lead. The grievance is genuinely fair, which is what makes it dangerous.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Balaena · the Island of Wonders</div>
+      <p>The Skywhale City drifts among the Isles and keeps its own strange civic rituals (see <a href="/setting/talan/domains/floteyn/floteyn.html">Floteyn</a>); it speaks loudly for island sovereignty at every Raft, on principles it is very sincere about.</p>
+    </div>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Roots</button>
+    <div class="legend-era-content">
+      <p>Sailors say the roots all meet, far down where the light gives out: that the whole archipelago is one tree, the isles its leaves, and the drift just the slow stirring of something that is, on the whole, asleep. A Nyey is a new leaf; a Kyrey is a leaf let go. The Listeners, asked, say only that Shuun has never described the bottom to them, which the sailors point out is a strange thing to say instead of no.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Charts Know</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Second Chart</div>
+      <p>The List-house's drift-tracks, laid over eighty years, show what no single voyage can see: since 2524 the isles' wandering has bent, slowly and without exception, <i>away</i> from the sealed gate in the deep. The sea's own islands are recoiling from the spot at the pace of years, which means the roots know something about the drowned court that the divers who sealed it do not. Three senior clerks have noticed the Rounds running longer in that quarter. They have published nothing, told the Raft nothing, and begun, quietly, keeping a second chart. And if the sailors' one-tree tale holds any water at all, the arithmetic is worse than a hazard chart: the thing below League water warps dreams, and the archipelago, by its own folklore, is asleep.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/floteyn/floteyn.html"><b>Floteyn →</b></a> · The Water domain, and Balaena's full entry.</li>
+      <li><a href="/setting/talan/domains/floteyn/uravel/uravel.html"><b>Uravel →</b></a> · The god-city at the Isles' heart, host of the List-house and the one reliable anchorage.</li>
+      <li><a href="/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html"><b>Balatur Erui →</b></a> · The Gate of Two Waters, where the sweet sea meets the salt and the skywhales rise.</li>
+      <li><a href="/setting/talan/the-binding.html"><b>The Binding →</b></a> · The Nine Generals, one of whom dreams beneath League water.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">An anthology of a hundred islands, deliberately unfinished · these are the kinds of detail that future scholarship or future story will close.</div>
+    <ol>
+      <li><b>Every island's own entry.</b> Systrey, Bakarey, and Breidey are sketches awaiting their chroniclers, and the roster past them is open by design: the Isles are built one island at a time, as stories reach them.</li>
+      <li><b>Bakarey's bell.</b> Who rings it, what the tide-raft goods are payment for, and why the answers are always correct: the record respects what it cannot obtain.</li>
+      <li><b>The Watch vote.</b> Whether the Raft ever passes the Standing Watch, and what the League becomes on the day after either answer.</li>
+      <li><b>The Keelborn question.</b> A people who crew the pact and hold no vote in it; the franchise argument is aging badly and everyone at the Raft knows it.</li>
+      <li><b>The Standin's forms.</b> What the crews' festival actually looks like aboard, and which fifteen feasts it swallowed, awaits a chronicler willing to serve a crew-year.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · FLOTEYN · FLOATING ISLES</div>
+
+</div>
+
+</body>
+</html>
