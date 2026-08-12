@@ -30,6 +30,22 @@ The Service's known flaw is written on its face, and the Baleni name it with a s
 
 A Baleni childhood is a geography lesson in trust: which yards are yours, which will feed you anyway, which threads a child may run and which belong to the grown. The young rebel outward, as Isles young do, taking their **crew-years** on the League hulls, and Balaena's return-rate is the archipelago's quiet envy; the standing joke is that you can take the Baleni out of the yards, and that is the whole joke, because you cannot do the second half. Coming of age is domestic and exact: the day the family lets you run the still alone, start to finish, and pours what you made at the table without correcting it. Your first Ours. Nobody forgets theirs, and most are honestly bad, and are drunk anyway, ceremonially, by everyone who loves you.
 
+## Voices in the yards
+
+*Two passages, quoted on the island's page: the Guide's entry and the column that answered it, side by side without either naming the other (see [`../../voices.md`](../../voices.md)).*
+
+**Golivander Tessek, *A Traveller's Guide to Tyrnarra*:**
+
+> *Balaena is reached by League hull from Uravel or, at low water, on foot by the submerged bridge, which is sound, slick, and best crossed in daylight. The weight-gates are quick if you declare your baggage honestly; keep the tally-token, for departure without it is slow. The fountain shows twice daily and is worth one viewing. Rooms at the Landing are clean and cost double in the Glass; book the boat out before booking the bed. The draughts are the finest on the inner sea, and unlike most goods so described, this is simply true; buy at an assay-house, never on the quay. The alleys inward are residential, and the visitor's business is at the front. The tea is boiled.*
+
+**Vyrenna Tessek, *One Line Further*, the Talan years:**
+
+> *The harbour of Balaena is loud in the way a smile can be loud, and I lasted about an hour in it. There was an alley to my left. It looked like the sort of place my editor makes me promise to avoid, so I promised myself I would only look, and then it bent, and then there was a courtyard, and a woman shelling beans looked up at me the way you look at a niece who is late.*
+>
+> *I was to stay two nights at the Landing. I stayed eight days, with five families, and I can tell you the truth of Balaena is counted in courtyards. Every family poured me theirs; it is called Ours, all five of them, and all five are different, and each family watched me taste it wearing the exact same face, which is the face of someone showing you a child they are pretending not to be proud of. The first glass was pure Vorkat, and I said so, and had to explain what that means, and the explaining took the evening and made the friendship. By the third yard I had stopped taking notes at the table, because a notebook makes a conversation formal; the fourth family taught me the trick of remembering by heart, which is to be so happy you cannot forget.*
+>
+> *I never drank the mirrorshine. I am told it is perfectly nice. But you cannot pour Ours for a stranger, only for a guest, and I have never once managed to stay a stranger anywhere for longer than a day. The fifth family walked me to the boat, all of them, and the grandmother put a bottle in my bag with no label on it, because it does not need one, because I know whose it is.*
+
 ## Live tensions
 
 **The Glass money.** The Loud creeps. Every season the tourist front wants one more street of the city behind it: outside money offers yard-families sums no still earns for house-room the yards were never selling, and a few have sold, and the sold yards die into lodging-houses within a generation. The yardholders now refuse as a bloc, the Service taxes conversions hard, and the question of whether Balaena can stay Balaena while the Glass pays for everything is argued at every deep table, right after the toast that spends the Glass's coin.
