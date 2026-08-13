@@ -135,3 +135,25 @@ Several languages persist alongside Talanese rather than being absorbed by it:
 - **Local survivals**: pockets in nearly every domain preserve a pre-Imperial tongue at the household and ritual level (the older Lioaru desert tribes, certain Floteyn islet communities, the Hareaveldi sand-realm's deep-old idiom).
 
 Imperial Dwarvish itself is now an antique: read by scholars to parse Empire-era law-books, spoken by no community as a living tongue. The Golden Empire's spine is the spine of Talanese itself, and that is the form in which the Empire still speaks.
+
+---
+
+## Common culture
+
+Practices that belong to a trade or a way of life rather than to a domain, and travel with the people who keep them.
+
+### Overlade, the game of the quays
+
+Every working waterfront on Talan plays **Overlade**, and nobody says the whole word. On the quay it is **Lade**: two players, a scratched grid, and a pocketful of flat discs.
+
+The form is an answer to weather. The pieces are **bales**, discs of lead, bone, holystone, ballast-chip, or coin worn faceless, cut wide and low and heavy enough to sit still in a blow. Inland taverns play with tall carved figures and painted cards, and any quay in a wind delivers those to the harbour. The board is dock furniture: cut into a bollard cap, burned into a hatch cover, chalked onto a mooring block, gone glossy under generations of thumbs. A docker owns bales and borrows boards.
+
+Play is loading. Moving onto an opposing bale takes it *under* yours rather than off the board, so a capture is cargo picked up and a stack in play is a **lift**. A lift moves as many squares as it stands tall, which makes a heavy lift the fastest thing on the board, and a lift walked to the far edge is **landed**, its whole load counted to the player who carried it.
+
+The counterweight is **the mark**, the height a lift may stand before it is loaded past safety. Most ports set the mark at four. A lift over the mark can no longer be taken; it is **spilled**. An opposing bale moves onto it, the stack scatters to the squares around it, and every bale that goes off the edge leaves the game for both players, in the water. The strongest position on the board is the only fragile one, and most of any match is one player trying to walk a fat lift the last three squares to the edge while the other works out where to hit it.
+
+On an open quay the wind spills lifts on its own, and the convention at every port is that a spill counts however it came. Players pick which side of a bollard to sit on the way a duelist picks ground, and a docker who loses four bales to a gust is told he loaded them.
+
+Ports disagree about the rest. The mark stands at five along the Breidey arm and at three at some of the Hafra fishing stations; some boards hold that a bale in the water is salvage for whoever fishes it out, some that wagers ride on landed bales only, some that the loser owes the next round. Every port also claims the game, and none can produce the older board, because the boards that would settle it are cut into furniture that gets replaced.
+
+The vocabulary has walked inland. *Over the mark* is said of any overreach, *carrying five* of someone whose ambition has outgrown their footing, *he landed it* of a thing brought off against the odds, and *that one went in the water* of a loss nobody is getting back; all four are heard in counting-houses and barrack rooms a long way from salt.
