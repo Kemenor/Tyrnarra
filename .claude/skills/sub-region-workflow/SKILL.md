@@ -343,7 +343,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 
 **Style and convention rules:**
 
-- **Prose rules per *Hard rules*** (no em-dashes, affirmative prose, chronicler-tier in open prose with GM-tier only inside `⚿ GM Secret` expandables).
+- **Prose rules per *Hard rules*** (no em-dashes, affirmative prose, chronicler-tier in open prose with GM-tier only inside `⚿ GM Secret` expandables) **and per [`docs/region-prose.md`](../../../docs/region-prose.md)** (register, section endings, name-glossing ban, ornament budget, banned constructions).
 - **Concrete sensory detail** (the smell of brass and salt at a port-tower, the gesture a Stormrider makes to read a cloud-front, the sound of iron tokens in a vote-bowl) over abstract worldbuilding.
 - **All links absolute paths** starting with `/`.
 - **Card conventions** per `docs/card-conventions.md`: clickable card = ` →` in title; expandable card = `Tap ▾` pill; plain `<div>` carries neither.
@@ -389,6 +389,7 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **The specificity test.** Every seed and every committed sub-region must pass: could this place exist anywhere else in the setting? If yes, the seed isn't specific enough. Rework before commit.
 - **No em-dashes anywhere.** En-dashes for numeric ranges only (e.g. `1321 MR – 2135 MR`). The 2026-05-24 sweep removed 1,786 em-dashes; do not re-introduce any.
 - **Affirmative prose.** No "Not X" or "Not X but Y" openings. Exception: when a true negation is the clearest framing for a fact with no affirmative form (*"his cult kept no records"*).
+- **Region-entry prose contract per [`docs/region-prose.md`](../../../docs/region-prose.md).** Eye-level register, sections end on the last fact, no name-glossing in prose, the ornament budget, wit only in the attributed Voices, required live tension plus one uncontested defect, banned constructions. **Section mass is the user's decision**: before drafting Phase 5, get the user's call on which one or two topics carry the weight.
 - **Chronicler-tier in open prose; GM-tier inside `⚿ GM Secret` expandables only.** If a chronicler reading the open prose would learn something the lore files mark as GM-only, it is leaking; move it inside a secret box.
 - **Kingdoms inherit names, not continuity.** No Talanese kingdom predates 1 MR; few are older than the Dark Era. Default new polities to Adventurer-Era or late-Dark-Era founding unless the older claim is a deliberate story feature.
 - **Naming stratum + collision check** before committing any new name (full detail in Phase 4).
