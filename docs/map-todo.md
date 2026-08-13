@@ -6,7 +6,7 @@ Pending label work for the map art. The three views (terrain / kingdoms / domain
 
 ## Awaiting export + variant regeneration
 
-- **Harro Distiratsua → Harro Distiratsue** (Egulon). Canon is **Distiratsue** everywhere (glossary etymology *harro* + *distiratsu* with the drift to *-e*; egulon.md, ancestries table, and the Egulon HTML all agree). **Fixed in the map source 2026-07-05**, but the exported originals in `published/setting/assets/maps/` (and their display/thumb variants) still carry the old *-a* label. On the next map work: re-export the originals, then run `resize.mjs`.
+- **Harro Distiratsua map label: keep the *-a*.** Canon adopted the map's *-a* spelling on 2026-08-13 (the authentic Basque definite form; glossary and lore updated at the Harro Distiratsua build), reversing the 2026-07-05 map-source fix to *-tsue*. **Action: revert the map source label back to "Harro Distiratsua"** so source and exports agree again. The currently-published exports already carry the correct *-a* label; no re-export needed unless the source is touched for other reasons.
 
 ## Backlog for the next map edit
 

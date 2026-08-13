@@ -225,6 +225,8 @@ Two populations, one people. The **Feyworld Sprites** are the original stock, na
 
 **In Ljosarn:** the made light: the lamp-glass and glamour, the festival-rites staged over Vonura, the brilliance that fills the lanes no window reaches (see `geography/egulon.md`, *Ljosarn*).
 
+**In Harro Distiratsua:** the fitters of the continent's light and the courts of the Bright Ring; the people who sell brightness keep dusk for their own streets, the tuned half-light where a Sprite is read only as much as matters (see `geography/egulon/harro-distiratsua.md`).
+
 ### Strix
 **Dominant in Vindul (Wind / Fisaya)**, anchored in the storm-wracked steppe of **Fellibylur**. Winged sky-people with weather in the blood: restless in still air, most alive when the sky is moving, reading a front the way other folk read a face. Flight is the disposition, whatever the trade, and their storm-attunement makes them the deepest keepers of storm-lore on Talan. The institutions that grew around that gift (the Stormriders, the Thunderhost moot) are Fellibylur's own (see [`geography/vindul.md`](geography/vindul.md), *Fellibylur*). Outside Vindul they are met mostly as travellers or hired pilots.
 
