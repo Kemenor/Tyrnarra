@@ -87,5 +87,6 @@ The other six (**Lograth** · zuzental, **Veidrath** · ehizahar, **Nahaskel** �
 
 - **Chronicler-tier in open prose; GM-tier only inside `⚿ GM Secret` boxes.** If a chronicler reading the open prose would learn something the lore marks GM-only (a god's secret, a hidden mechanism), move it into the box.
 - **No em-dashes** anywhere (en-dashes for numeric ranges only). **Affirmative prose.** **Mortals, not humans.**
+- **Region-entry prose contract per [`docs/region-prose.md`](../../../docs/region-prose.md)**: eye-level register, sections end on the last fact, user-decided section mass, no name-glossing in prose, the ornament budget, wit only in the attributed Voices, required live tension plus one uncontested defect, banned constructions.
 - **Lore-first; surface before writing; commit only on an explicit go; touch HTML only on an explicit publish/promote signal.**
 - **Pre-read before designing.** A god-city sits on top of the most loaded canon in the setting; read the god's sheet (and its `⚿` secret) and the touched `timeline.md` / `cosmology.md` sections first.
