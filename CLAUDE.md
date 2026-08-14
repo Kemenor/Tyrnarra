@@ -192,7 +192,7 @@ Published **worldbuilding** (`/setting/`) pages are **player-facing**. Open pros
 | **Folk-belief** | Amber `◈ Popular Belief` expandable | Tavern-tales, sermons, traveller's accounts; what mortals *say*, including the parts that are wrong. |
 | **GM-tier** | Red `⚿ GM Secret` expandable | The actual truth: mechanisms, identities, cosmological reality. Hidden until clicked. |
 
-A useful gut check: **if a chronicler reading the open prose would learn something the lore files mark as GM-only, it's leaking.** Move it inside the secret box. The *Open in Canon* panel at the bottom of a page is open prose too. Keep it chronicler-tier; put GM-tier "open threads" inside the secret block they relate to.
+A useful gut check: **if a chronicler reading the open prose would learn something the lore files mark as GM-only, it's leaking.** Move it inside the secret box. The *Open in the Chronicle Record* panel at the bottom of a page is open prose too. Keep it chronicler-tier; put GM-tier "open threads" inside the secret block they relate to.
 
 **Use multiple secret boxes per page.** A single secret at the bottom of a long page is a wall of text. Split secrets by topic and place each one immediately after the open-prose section it answers; the reader gets *"the chronicles disagree about X"* in the prose, clicks, and sees *"what X actually was."* Four or five thematic boxes on a long page is fine.
 
