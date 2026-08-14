@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lua Lasai · Egulon · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #8fba4a;
+    --card-bg: rgba(20,26,10,0.55);
+  }
+
+  /* Entry cards of the Orosoro */
+  .entry-grid { --col-min: 240px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .entry-grid .card-name { font-size: 1.1rem; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .e-white .card-name { color: #e8e4d8; }
+  .e-black .card-name { color: #b09a8a; }
+  .e-agreed .card-name { color: #a3c65a; }
+
+  /* Surety callout (left-bordered, meadow-toned) */
+  .surety-call { max-width: 780px; margin: 24px auto; padding: 22px 28px; background: rgba(24,32,12,0.4); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; }
+  .surety-call .s-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .surety-call p { margin: 0 0 12px; line-height: 1.6; }
+  .surety-call p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body data-page="lua-lasai">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/egulon/egulon.html">Egulon</a><span class="sep">›</span><span>Lua Lasai</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Lua Lasai</div>
+    <div class="page-subtitle">Egulon Sub-Region · The Guaranteed Country</div>
+    <div class="page-flavor">"Nothing is fought over, because nothing is forgotten."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>lur</i> (land) + <i>lasai(a)</i> (calm): "Calm Country." The build's coinages (Margolora, Orosoro, Jadrey, hodai, egunai, Izarexa) carry their derivations in the chronicle glossary.</dd>
+    <dt>Position</dt><dd>Southwestern Egulon, coastal on Hafra. Jakinduria and the Golden Coast (Ezkudon) to the west, Atarialda (Lautara) north beyond the lake and border mountains, Harro Distiratsua to the northeast, Argia Esfera east across the southern ranges. The island of Jadrey lies off the southeast coast and reaches from Hafra into the Cloud Sea.</dd>
+    <dt>Terrain</dt><dd>River-valleys running south from the border mountains to the coast, planted edge to edge in colored fields; scattered forests, small central mountains, drier ground toward the southeast. The Thekkavar rail crosses it to the lakeshore and Ljosarn.</dd>
+    <dt>Character</dt><dd>
+      <i>The record kept in bloom, and the calm it buys</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Fieldcloth</span><span class="pill">Guaranteed Country</span><span class="pill">Wine Country</span><span class="pill">The Unused Door</span></div>
+    </dd>
+    <dt>People</dt><dd>Leshy-dominant, their fullest expression on Talan, with the domain's Shoony and Sprites living throughout and the corridor's usual mix in the rail towns.</dd>
+    <dt>Signature</dt><dd>The <b>egunai</b>, the day wine on ordinary tables continent-wide, and the <b>hodai</b> of Jadrey, grown where Hafra's air gives way to the Cloud Sea's.</dd>
+    <dt>Faith</dt><dd>Iro read as the warmth that ripens; the year of the vine kept as the working calendar. The two-lights argument of the bright peoples is declined here, on the standing of lineages that have watched it outlive ten generations of arguers.</dd>
+    <dt>Rule</dt><dd>The <b>Primocracy</b> under the <b>Double Surety</b>: the <b>Landsworn</b> hold the offices for exactly as long as the land answers them, the <b>valley-reeves</b> hold the purse, and the lineages hold the record.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(143,186,74,0.5);">
+    <div class="gods-city-label">Grown Capital</div>
+    <div class="gods-city-name">Margolora</div>
+    <div class="gods-city-byname">Living architecture in every field-color · raised, never owned</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-orosoro" class="section-heading">The Orosoro</h2>
+  <div class="feature-panel prose">
+    <p>The fields of Lua Lasai are planted in color: vineyard green against lavender purple, yellow against ice blue, whole hillsides white, whole hollows black, laid edge to edge down the river-valleys like dye-lots in a weaver's yard. Travelers cross it by rail and call it the most beautiful country on Talan. The locals read it. The patchwork is the Orosoro, and the Orosoro is a record: what a field grows, and in which color, is an entry the lineage tending it has chosen to keep, and the country's harvests, marriages, debts, griefs, and quarrels are written on the hillsides in living planting, maintained season after season by the Leshy lineages that remember what every row means.</p>
+    <p>The naming-rite is the record's smallest unit. A planting in Lua Lasai is finished when the grove's Leshy has taken to the young stock and given it a name, and the name files the vine into the record the way a clerk files a page. From there the entries compound. A grudge in Lua Lasai is planted, and it flowers on schedule every year until it is forgiven. The country's calm rests on this. Nothing is fought over because nothing is forgotten, and the fighting that elsewhere fills courtrooms and alleys is conducted here in slow color along the field-edges, in view of every neighbor who can read.</p>
+  </div>
+
+  <div class="card-grid entry-grid">
+    <div class="accent-card e-white">
+      <div class="card-name">The White Hillside</div>
+      <p>A mourning, kept white until the family resows it. A hillside gone white in a spring quiets every grown local on the platform; the sketching traveler sees only the loveliest field of the journey.</p>
+    </div>
+    <div class="accent-card e-black">
+      <div class="card-name">The Black Row</div>
+      <p>A quarrel: a boundary row of black bloom, resown every spring by both households until one of them consents to let it go to seed. Some rows are a century old and flower on schedule.</p>
+    </div>
+    <div class="accent-card e-agreed">
+      <div class="card-name">The Agreed Planting</div>
+      <p>How disputes end. The parties, their lineages, and whichever neighbors both sides trust settle what the record will say happened; the settlement is planted jointly, and once it blooms the matter is closed in the only ledger the country keeps.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The record belongs to the lineages and the families. No office writes to it, no office seals it, and the government reads it at the standing of any other neighbor. The domain's other two peoples live inside it at their own angles: the Shoony of Lua Lasai are the tenders, trusted to keep other families' entries exactly as they stand for households too old or too few to keep their own rows, and the Sprites are the readers, learning the hillside-language youngest and reading it fastest; a Sprite field-broker who can take in a valley's standing at one look from the train is a common first career.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="margolora" class="section-heading">Margolora</h2>
+  <div class="prose">
+    <p>Margolora is grown. Every building in the capital is alive: house-walls of trained trunk and espaliered bough, roofbeams that leaf in spring, whole streets wearing the field-colors in bloom, green and red and white and purple and navy and gold, because a district plants its architecture the way a family plants its rows. A house is raised room by room over years, a family's fortunes can be dated wing by wing in ring-counts, and the front door of one old house has been the same living arch for nine generations. Visitors on a through-ticket to Ljosarn step down for the two-hour stop and are still there two days later; innkeeping is the city's second industry.</p>
+    <p>Nothing in Margolora is deeded, and nothing in Lua Lasai is either. A family's claim on its ground is its standing with the lineage that remembers that ground, renewed through the courtesy every season, and inheritance passes the relationship itself. The system has teeth. An heir who plants in haste, who skips the courtesy or muscles a grove, loses the farm without any court sitting: the vines decline their names, the house stops growing new rooms, and within a few seasons the lineage has taken up with a household that keeps the custom.</p>
+    <p>Outside money finds this maddening. Golden Coast factors and rail capital arrive yearly with offers of purchase and go home holding contracts of use, terms of years, renewable by standing. A market in those contracts trades in the coast ports as if they were deeds; the resale prices assume a title that exists only on the paper, and someday a buyer with paper three owners deep will arrive with Golden Coast law behind him and meet a lineage that has never heard his name.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-landsworn" class="section-heading">The Landsworn</h2>
+  <div class="prose">
+    <p>Lua Lasai is ruled by its druids, and the scholars' word for the arrangement is Primocracy. The offices belong to the Landsworn: practitioners of the Primal craft whom the country itself has accepted, and the acceptance is the whole constitution. Primal magic is attunement to the living world, and in a country where every field is a named and tended being, attunement is a relationship. A Landsworn in good standing works weather and water and growth with the ease of a trusted neighbor; one the groves have turned from finds the current answering thinner each season until it stops. The word for that is <b>unanswered</b>, and it ends an office without a vote or a trial. Everyone sees it: the rains miss her valley's asking, the vines decline her namings, and the seat stands vacant.</p>
+    <p>The fitness is practical before it is mystical. In Lua Lasai, Primal craft is the infrastructure: Margolora is raised and maintained by Landsworn wrights, the rivers are spoken into their channels and the winter storage, the color-harvest across a thousand smallholdings is timed by weather-work, and the great namings that anchor the record are witnessed by a Landsworn as a matter of form. The offices grew out of the work. Day to day, each valley keeps its own Landsworn; at Margolora sits the <b>First of the Landsworn</b>, who receives envoys, holds the treaty-pen, and answers to the Surety's guarantors for the country's neutrality. The purse belongs elsewhere. The valley-reeves, mortal householders elected valley by valley, hold the tolls and levies and vote the works, and a Landsworn the people have soured on keeps her craft and starves of funds.</p>
+    <p>Anyone's child can be Landsworn. The land reads no blood and keeps no register of ancestry; Leshy, Shoony, Sprite, and every people of the corridor have held valley offices, and a lineage's acceptance goes to the person. The credential's one blindness is structural, and the country knows it: the land recalls those who fail the land. It has no mechanism for those who fail only people. A Landsworn can be exact with the groves and hard on tenants, keep every vine named and every wage thin, and the current will answer her to her last day; what checks her is the reeves' purse and the neighbors' reading of her rows, and there have been valleys where that was too little for too long.</p>
+    <p>The shape was made in the dark. Through the Dark Era this country was the corridor between the fortress-ring and the beacon-roads, kept unarmed by both sides so grain and refugee columns could keep moving, and feeding those columns through ash-years meant coaxing harvests out of a wounded land: the convoy-stewards who ran the corridor were its druids, because no one else could make the ground yield. The Reconstruction formalized what the war had built. The feeders became the government, the guarantee became the Double Surety, and the corridor became a country.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-double-surety" class="section-heading">The Double Surety</h2>
+  <div class="prose">
+    <p>The country's neutrality is a written thing, twice signed. Under the Double Surety the powers of either side, the crown that holds the beacon-roads and the authority that holds the fortress-ring, each guarantee Lua Lasai against the other: no levy raised here, no soldiery quartered, no war carried across, each guarantor's bond held against the other's breach. The charter wall at Margolora carries both seals. Treaties are signed by the First of the Landsworn and deposited with both guarantors; the country keeps no army; when the guarantors disagree, Lua Lasai's foreign policy is to wait. The arrangement is cheap, old, and honored, and every mortal in the country can say why the quiet holds: neither neighbor can afford the other holding this ground.</p>
+  </div>
+
+  <div class="surety-call">
+    <div class="s-label">The Surety's Age</div>
+    <p>The Line pressure in Harro, charter renewal within the decade and house-debts bought, presses the Surety from the north: a guarantor whose own roads are half rail-money is a guarantor whose bond is worth asking about, and the Firsts have begun asking quietly who guarantees the guarantors.</p>
+    <p>The age shows at the edges too. The Surety's road-schedule assigned upkeep of the old corridor's western stretch to a guarantor office abolished in the Reconstruction's own second decade; three bridges on that stretch have been condemned for eighty years, carters ford the stream beside them in all but flood season, and no office now exists that could order the repair.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rail" class="section-heading">The Rail</h2>
+  <div class="prose">
+    <p>The Thekkavar line crosses Lua Lasai to the lakeshore and Ljosarn, one of the fortress-ring's open sides, and the country takes real through-trade off it: archive-traffic and scholars eastbound, wine and cut flowers west, pilgrims in both directions. It stays a route rather than an artery. The expresses cross in half a day with two stops, Margolora and the junction for the coast ferry, and rail capital's standing petition for a southern branch to a Hafra quay has been declined by three Firsts running.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wines" class="section-heading">The Wines</h2>
+  <div class="feature-panel prose">
+    <p><b>Egunai</b> is the country's wine and the continent's: the day wine, pressed in every valley in every color the fields keep, and sold in volumes no other wine-land approaches. The barrel-stamp of a Lua Lasai valley is on the house-pour of ordinary taverns from Merkavar to Frae City; coast factors buy it sight unseen, by the valley, off the Fieldcloth. It is cheap, good, and various, and the trade's prestige runs the other way.</p>
+    <p><b>Hodai</b> comes from Jadrey alone: grown on the island heights where Hafra's air gives way to the Cloud Sea's, pale and faintly opalescent in the glass, pressed in quantities that fit in one hold, and priced like relic-work. Skymilk, the coast calls it. A vintage's release is decided by the island lineages, announced at Margolora, and sold before the announcement finishes.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="jadrey" class="section-heading">Jadrey</h2>
+  <div class="prose">
+    <p>Jadrey lies off the southeast coast, green, steep, and small, and beside the Bridgelands it is the only ground on Talan that reaches from Hafra into the Cloud Sea. Everything the Bridgelands made of that fact, Jadrey declined. There is no cloud-quay and no mast; island law under the Surety builds none, and cloudship envoys who have circled the heights looking for a landing have anchored off a vineyard terrace and been offered wine. The islanders ferry to the coast on the Hafra side, keep the hodai terraces, and hold the answer their grandmothers held: the door is worth more shut, because a door worth arguing over is the one thing the Surety could not survive.</p>
+    <p>Every generation does the sum again, and the young do it loudest: a cloud-quay would make Lua Lasai the second landing on Talan, and the grandmothers' answer holds by a narrower margin each time the hodai price climbs. Rail capital has already priced the branch it would need. The mainland young cross anyway. The dare is to climb past the terraces at night, sit the far cliff-edge, and dangle your feet off Talan into the Cloud Sea's air; every summer the island keeps a small harvest of lost shoes.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="izarexa" class="section-heading">Izarexa</h2>
+  <div class="prose">
+    <p>East of Margolora, in the border mountains toward Argia Esfera, stands Izarexa. The house reads sky where the rest of the country reads soil: its keepers hold the planting-calendar, observing the turnings that time the namings, the resowings, and the harvest across every valley, and its almanac goes out each winter, copied valley to valley and carried free on the rail. It predates the Surety, the offices, and every kingdom that has claimed this ground; lineages that agree on nothing else keep its dates. The keepers take no part in the record and hold no office, and Landsworn candidates commonly serve a year there before their valleys put them forward.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Crooked Row and the Lights</button>
+    <div class="legend-era-content">
+      <p>Folk truth in Lua Lasai: the land can tell. Plant a settlement one party signed hollow and the row comes up crooked, yellows early, wants resowing every year; every valley has a boundary planting everyone watches and nobody discusses, and a marriage-row that came up crooked has ended betrothals.</p>
+      <p>On Jadrey the islanders keep a quieter one: that some autumns there are lights far out on the cloud-line where nothing is charted, seen from the high terraces on moonless nights, and that the terraces' best years follow. Islanders asked about the lights pour the questioner a glass and talk about the weather.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The One That Is Learning to Answer</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Accumulation</div>
+      <p>Belief is a mechanism of the Wellspring, and enough of it, held long enough, builds something real. For ten generations the Orosoro has named, tended, and believed in every growing thing in Lua Lasai, field by field, vine by vine: a country-sized ritual of attention no one designed and no one has noticed, because it was never called worship. Something has been accumulating inside it. What answers the Landsworn is, increasingly, one thing rather than many: a single slow attention assembling itself out of centuries of names, not yet awake, no longer entirely asleep.</p>
+      <p>The folk belief about the crooked row is symptom and fuel at once; every mortal who believes the land can tell is feeding the thing that increasingly can. The answering has grown more particular within lineage-memory, and the oldest lineages keep what they have noticed to themselves. If it wakes, the Primocracy's constitution acquires an author: the audit that unmakes the unanswered becomes a judgment with a judge, the door at Jadrey stays shut or opens by something's preference rather than policy, and no rite exists for asking it anything.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/egulon/egulon.html"><b>Egulon →</b></a> · The Light domain overview; the year of the vine and the two-lights argument the country declines.</li>
+      <li><a href="/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html"><b>Harro Distiratsua →</b></a> · The light-craft kingdom to the northeast, where the Line pressure on the Surety begins.</li>
+      <li><a href="/setting/talan/domains/egulon/ljosarn/ljosarn.html"><b>Ljosarn →</b></a> · The Everbright City where the rail ends and the prestige casks finish in the holy lake.</li>
+      <li><a href="/setting/talan/domains/ezkudon/ezkudon.html"><b>Ezkudon →</b></a> · The Knowledge domain west: Jakinduria's fortress-ring, whose open side the country is, and the Golden Coast ports where the egunai ships.</li>
+      <li><a href="/setting/talan/domains/lautara/atarialda/atarialda.html"><b>Atarialda →</b></a> · The hearth-country north beyond the lake and border mountains.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The country's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The valleys and rail towns.</b> The valleys, their reeves, and the junction for the coast ferry await naming.</li>
+      <li><b>The guarantor offices.</b> The crown of the beacon-roads and the authority of the fortress-ring sign the Surety; which offices hold the pens today, the chronicles leave to the guarantors' own records.</li>
+      <li><b>The island lineages of Jadrey.</b> The households that decide a hodai release are uncoined.</li>
+      <li><b>The keepers of Izarexa.</b> The star-house's order, its rolls, and its almanac's form are open.</li>
+      <li><b>The great entries of the Orosoro.</b> The oldest plantings still blooming, and what they record, await their stories.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · EGULON · LUA LASAI</div>
+
+</div>
+
+</body>
+</html>
