@@ -45,6 +45,8 @@ The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevent
 
 **Midarra**: the central freshwater inner sea of Talan. Cronus's island (Freedom domain) sits within it. Millhaven is on its southern shore. Etymology TBD; name is old, predates mortal settlements.
 
+**The Villveder.** The Midarra is rarely violent and occasionally strange. Without warning that any chronicler has learned to read, magic turns unreliable across a stretch of open water: a needle wanders, a bearing true at dawn is wrong by noon, worked charms slip their intent, and the sky over the affected water carries weather the crews cannot place. The record calls these the **Villveder**. Scholarship agrees on little beyond that they are something other than ordinary storm, and the reading most often written down is a fluctuation in the Wellspring itself, reaching the inner sea and unsettling it; the Listeners at Uravel have been asked and decline to be drawn. They are rare enough that a working captain may cross the Midarra for thirty years and meet one, or none. Crews caught in a Villveder steer by eye, by shore-shape, and by the sea's own behaviour until it lifts. The Villveder is the standing reason the inner sea demands instruments that do not lie, and the reason Breidey's helmworks hold the trust of every serious captain on it.
+
 **Notable feature, Twin Cities** (the pirate capital). A paired settlement that drifts together through Midarra on a course set by the council of pirate lords; never in the same place twice. The two halves are:
 - A floating raft-city of lashed-together hulls and ship-decks, sitting on the water.
 - A sky-suspended sister-city of tethered airships and lifted islets, hanging directly above the water-city.
