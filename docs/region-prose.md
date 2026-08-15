@@ -15,7 +15,7 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 
 - Narration states facts, mechanisms, and causality. No significance-lines, no "what this reveals."
 - Elevation is spent at peaks: a short flat-out line where a section's facts crest (*"Fyrsta sings. The work for today is done."*). Earned, sparing, and zero where the facts haven't built to it.
-- The chronicler may step into first person when the record itself is the point: what was searched, what was not found (*"I have found no clause, no section, no ruling, no precedent for leaving."*).
+- The chronicler steps into first person **only for missing things**: what was searched and not found (*"I have found no clause, no section, no ruling, no precedent for leaving."*). The I is for absences in the record; everything present is narrated plainly, without it.
 
 ## Structure
 
@@ -42,6 +42,6 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 ## Content requirements
 
 - Live tensions are required. They are campaign seeds; state the tension as fact and leave it open, unresolved, and unarbitrated.
-- One defect per region: something merely broken. Uncontested, no advocates, no faction benefiting, nobody in-world wise about it. The structural register is the strongest form: a rule-shaped hole rather than a broken object (the Rolls keep no way to unregister; the register only grows, and names of the long-departed stay listed). The chronicler's first person is the defect's natural vehicle: the search that finds no clause is the demonstration.
+- One defect per region: something merely broken. Uncontested, no advocates, no faction benefiting; **outsiders notice it, locals know it and accept it, because changing it is not worth the trouble to them.** Two registers among the exemplars: the everyday kind (the Harro Distiratsua junction platform-board that still lists a gem-town's attraction forty years dried up; travelers detour and come back sour, and repainting the board is nobody's job) and the missing kind (the Rolls keep no way to unregister; the register only grows, and names of the long-departed stay listed). A defect needs no first person; the chronicler's-I enters only when the defect is a missing thing and the failed search is the demonstration.
 
 **Dropped from v1 (2026-08-13, Breidey exemplar ruling):** the one-per-page ornament arithmetic; the never-budget bookkeeping; the blanket quotation ban; uniform "end on the last fact."
