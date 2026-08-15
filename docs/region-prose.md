@@ -33,6 +33,8 @@ Each page gets a small ornament budget, spent deliberately on its best moments:
 
 Everything outside the budget earns its place as fact. If a draft has three lovely lines, two of them are over budget. Underspending is always allowed.
 
+- **HTML card-grids may restate prose facts** (GM ruling, 2026-08-13, from the Breidey comparison): a card is reference furniture, not decoration, and clarity earns the repetition. The prettier-restatement budget governs prose, not cards. Card text follows the register rules like all prose.
+
 ## Voices and wit
 
 - In-world quotation in narration only as formula: a legal formula, a ritual sentence, a standing folk-phrase or craft-proverb. Never as wit delivered through an invented mouth ("given with a fitter's shrug").
