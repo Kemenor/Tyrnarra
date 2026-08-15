@@ -237,3 +237,23 @@ summary:focus-visible,
   opacity: 0.8;
 }
 .gm-vetted time { letter-spacing: 0.12em; }
+
+/* ── GM-WRITTEN BADGE ──────────────────────────────────────────
+   The tier above GM-Vetted: a page whose prose the GM wrote by
+   hand. Same shape, full strength; every prose edit to such a
+   page is a major edit. Only the GM grants it. */
+.gm-written {
+  display: block;
+  width: fit-content;
+  margin: 14px auto 0;
+  padding: 5px 18px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-family: 'Cinzel', 'Cormorant SC', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright, var(--gold, #c8a84b));
+  opacity: 1;
+}
+.gm-written time { letter-spacing: 0.12em; }
