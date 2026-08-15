@@ -51,6 +51,7 @@ The common trigger is a bare *"flesh out [REGION]"* with no other context. The o
 | **3. User picks + refines** | User picks one or combines two. Axis-confirmation only. Ask one or two clarifying questions on placement, neighbors, ancestry-anchor, naming-axis | **Axis-confirmation is not a green light to draft prose.** Do not start Phase 5 yet |
 | **3.5. Government seed round** | For polities: offer **3-5 distinct government seeds**, each naming who concretely rules, why they are *fit* to rule, why the ruled accept it, and the honest cost. The government grows *from* the seed's world and *contains* the seed; it is never the seed generalized into rule. Census the continent's existing forms first. End with a recommended pick | Chat only. No writes. |
 | **4. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
+| **4.5. Reveal + defect round** | Offer **2-3 GM-secret candidates** (a deliberate *none-yet* is a valid candidate) and **2-3 defect candidates** per `docs/region-prose.md`, each with a recommendation; get the user's **section-mass call** for the draft in the same exchange | Chat only. No writes. |
 | **5. Surface the prose draft** | Draft the `geography/<region>.md` bullet, glossary entries, faction subsection, bestiary updates. Surface in chat. Flag every derivation that went beyond the user's explicit picks | **Do not commit to files yet.** Surface first |
 | **6. Commit lore** | On explicit "commit" / "go ahead" / "publish to lore", apply edits in parallel to `lore/geography/<region>.md`, `lore/glossary.md`, `lore/ancestries.md`, `docs/open-threads.md` | Lore is now canon. **Do not touch HTML.** |
 | **7. HTML publish (mirror + optional promotion)** | On an explicit publish signal: upgrade the parent domain HTML card, update cross-page links (ancestries, registrar, prose mentions). On an explicit "promote" signal in the same phase: build `published/setting/talan/domains/<domain>/<slug>/<slug>.html`, wire `published/setting/assets/site-nav.js`, the parent domain card, `docs/site-inventory.md`, fold any agent-committed canon back to glossary.md | For multi-page promotion, see *Parallelization* below |
@@ -242,6 +243,14 @@ Source language, literal meaning, drift step. The glossary is the source of trut
 
 ---
 
+## Phase 4.5: Reveal-and-defect round (chat only)
+
+Added 2026-08-13 with the [`docs/region-prose.md`](../../../docs/region-prose.md) contract. The page's hidden layer and its flaw get the same treatment as seeds and governments: candidates offered, user picks. Run it after naming so candidates can use the settled names, and close the round by getting the user's **section-mass call** (which one or two topics carry the weight); that decision belongs to the user per the contract, and Phase 5 must not start without it.
+
+**GM-secret candidates.** Offer 2-3, each naming: the chronicle-visible surface (what open prose can hedge at), the hidden truth, and what future story it loads. Two legitimate non-answers are part of the menu: **deliberately none-yet** (the Baratalda precedent: the slot held open for a considered pass rather than filled with page-filler) and **placed-but-draft** (the Lomendi precedent: the box written, flagged as revisable against pending canon). ◈ Popular Belief material rides the same round: the folk-shape that hedges at the secret, or plain folk flavour where there is no secret to hedge at. Recommend one.
+
+**Defect candidates.** Offer 2-3 per the contract's definition: something merely broken, uncontested, no advocates, no faction benefiting; **outsiders notice it, locals know it and accept it, because changing it is not worth the trouble to them.** Two registers among the exemplars: the everyday kind (Harro Distiratsua's junction platform-board, forty years stale, repainting nobody's job) and the missing kind (Breidey's Rolls keep no way to unregister). The chronicler's-I is used only for the missing kind, where the failed search is the demonstration. **A defect is not a tension:** if anyone in-world argues about the candidate, it is a second tension; rework it or move it. Recommend one.
+
 ## Phase 5: Surface the prose draft for review
 
 Once direction and names are settled, draft the actual prose. **Surface in chat. Do not commit yet.**
@@ -272,7 +281,7 @@ Beyond the polity-shape and the signature institution, a sub-region reads alive 
 
 **2. The live tension (what presses on it, what is changing).** A region reads alive when something pushes on it and dead when it is only described. Name the pressure: the conflict, the drift, the change the place is living through. Nearly every built sub-region closes on one (Itsasalda, Rika Tikur, and the Dreaming Cape end on explicit *Live Tensions*; Baerfrost on the Open-Era pressure dwindling its beasts and raising its jarldoms). A static description is a museum label; a tension is a place a story can happen.
 
-**3. The two-tier reveal (◈ Popular Belief + ⚿ GM Secret).** A region usually earns an amber **◈ Popular Belief** for folk flavour (tavern-tales, what people *say*, including the parts that are wrong) and, where there is hidden canon beneath the chronicle, a red **⚿ GM Secret** box. Examples in committed sub-regions: Itsasalda's *the Wax Remembers a Dead God*, Atarialda's *the Archive Keeps No Index*, the Dreaming Cape's three themed secrets. Open prose stays chronicler-tier; the hidden truth lives in the box.
+**3. The two-tier reveal (◈ Popular Belief + ⚿ GM Secret), and the defect.** A region usually earns an amber **◈ Popular Belief** for folk flavour (tavern-tales, what people *say*, including the parts that are wrong) and, where there is hidden canon beneath the chronicle, a red **⚿ GM Secret** box. Examples in committed sub-regions: Itsasalda's *the Wax Remembers a Dead God*, Atarialda's *the Archive Keeps No Index*, the Dreaming Cape's three themed secrets. Open prose stays chronicler-tier; the hidden truth lives in the box. The region also carries its **one defect** per `docs/region-prose.md`. Both are settled by candidate-round in **Phase 4.5**, never improvised at draft time.
 
 *(God-cities run an expanded version of axis 1 plus the standalone signature-movement beat, the god-in-the-city manifestation pattern, and a near-mandatory two-tier reveal; that lives in the `god-city-workflow` skill.)*
 
@@ -343,7 +352,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
 
 **Style and convention rules:**
 
-- **Prose rules per *Hard rules*** (no em-dashes, affirmative prose, chronicler-tier in open prose with GM-tier only inside `⚿ GM Secret` expandables) **and per [`docs/region-prose.md`](../../../docs/region-prose.md)** (register, section endings, name-glossing ban, ornament budget, banned constructions).
+- **Prose rules per *Hard rules*** (no em-dashes, chronicler-tier in open prose with GM-tier only inside `⚿ GM Secret` expandables) **and per [`docs/region-prose.md`](../../../docs/region-prose.md)** (eye-level narration with attributed in-world quotes carrying the color, elevation at peaks, hook-forward endings, name-glossing ban, banned constructions; the GM-written Breidey page is the exemplar and the ruling).
 - **Concrete sensory detail** (the smell of brass and salt at a port-tower, the gesture a Stormrider makes to read a cloud-front, the sound of iron tokens in a vote-bowl) over abstract worldbuilding.
 - **All links absolute paths** starting with `/`.
 - **Card conventions** per `docs/card-conventions.md`: clickable card = ` →` in title; expandable card = `Tap ▾` pill; plain `<div>` carries neither.
@@ -389,7 +398,7 @@ Wait for all agents to complete. Each will report its committed canon-additive c
 - **The specificity test.** Every seed and every committed sub-region must pass: could this place exist anywhere else in the setting? If yes, the seed isn't specific enough. Rework before commit.
 - **No em-dashes anywhere.** En-dashes for numeric ranges only (e.g. `1321 MR – 2135 MR`). The 2026-05-24 sweep removed 1,786 em-dashes; do not re-introduce any.
 - **Affirmative prose.** No "Not X" or "Not X but Y" openings. Exception: when a true negation is the clearest framing for a fact with no affirmative form (*"his cult kept no records"*).
-- **Region-entry prose contract per [`docs/region-prose.md`](../../../docs/region-prose.md).** Eye-level register, sections end on the last fact, no name-glossing in prose, the ornament budget, wit only in the attributed Voices, required live tension plus one uncontested defect, banned constructions. **Section mass is the user's decision**: before drafting Phase 5, get the user's call on which one or two topics carry the weight.
+- **Region-entry prose contract per [`docs/region-prose.md`](../../../docs/region-prose.md).** Eye-level narration with attributed in-world quotes carrying the color; elevation at peaks; sections end on a fact or a hook forward; no name-glossing in prose; the chronicler's-I only for missing things; required live tension plus one defect, both settled in the Phase 4.5 round; banned constructions. **Section mass is the user's decision**, taken at the Phase 4.5 close, before any drafting. The GM-written Breidey (`lore/geography/floteyn/breidey.md` and its page) is the exemplar; when a rule reads unclear, the exemplar is the ruling.
 - **Chronicler-tier in open prose; GM-tier inside `⚿ GM Secret` expandables only.** If a chronicler reading the open prose would learn something the lore files mark as GM-only, it is leaking; move it inside a secret box.
 - **Kingdoms inherit names, not continuity.** No Talanese kingdom predates 1 MR; few are older than the Dark Era. Default new polities to Adventurer-Era or late-Dark-Era founding unless the older claim is a deliberate story feature.
 - **Naming stratum + collision check** before committing any new name (full detail in Phase 4).
