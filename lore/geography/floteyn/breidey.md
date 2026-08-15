@@ -1,46 +1,149 @@
 # Breidey: the Broad Isle (Floteyn · the Floating Isles)
 
+*Prose hand-written by the GM (2026-08-13); the exemplar for [`../../../docs/region-prose.md`](../../../docs/region-prose.md). Treat every prose edit as major.*
+
 **Etymology:** Icelandic *breið* (broad) + *ey* (island) → **Breidey**, "the broad isle." The port town is **Breidhofn**: *breið* + *höfn* (harbour), diacritics worn off, "the broad harbour." Demonym: **Breideyer**.
 
-**Position:** east of Uravel, the largest island of the drifting archipelago; a League island, on the Lists, fielding more keels than the next five islands together and holding one vote for it (see [the Floating Isles](floating-isles.md)).
+**Position:** east of Uravel; the largest island of the drifting archipelago, a League island, on the Lists (see [the Floating Isles](floating-isles.md)).
 
-**The island:** room is the scarce thing in a drifting archipelago, and Breidey has it: fields, slipways, workshop-quarters, and quays on one island, with acreage left over.
+**The island:** Breidey has what is a rarity for an island in the archipelago, ample space. Space for fields, space for workshops, space for quays and slipways, and room left over.
+
+**Character:** honest work for honest coin, including a well-earned rest.
+
+**Peoples:** open, ready with a warm greeting and a strong arm-shake. Most families find their origin elsewhere: thirty percent of the parents were born on another island, another twenty come from the rest of Talan and ten were probably born on ships.
+
+> "The difference between a Keelborn and a Breideyer is only how fast their home moves." - Dockmaster Silverbeak on who counts as a Breideyer
+
+Anyone willing to work finds a home.
+
+**Faith:** Shuun majority, ships blessed, rain thanked, harvest attributed. The evening belongs to Fyrsta; her song releases the breath the island held all day.
+
+**Rule:** Houses control the lands and the Rolls controls the rest. Both bind themselves in the Settlement, renegotiated every four years. The Chair of the Settlement speaks for all, noble and worker alike.
 
 ---
 
 ## Breidhofn
 
-You step off the boat, and before you have taken a full breath you hear a shout and step aside: three barrels roll past you onto the boat you just left. Breidhofn at working hours is loading, unloading, counting, weighing, and running calculations, at every counter and every crane. Your contact finds you with a shout. He is well-dressed and sun-baked, and when he grabs your forearm and shakes it, the way all Breideyers greet, the arm is strong from years of work: he rolled barrels before he owned any, and rolls one now and then when the day runs short-handed. He shows you the workshop, the workers, and the product before the office. When you reach consensus, price, prototype delivery, and assay-terms settled before supper, he grabs your arm again and you shake on it, and the shake is the contract. Then he invites you to dinner at his house. He would have if the deal had died on the table.
+> "I knew we were close to Breidey once the screams of gulls were drowned out by the din of a busy dock. I stepped off as soon as the captain gave the signal to go ashore; my feet had barely hit the planks when a shout reached my ears. I stepped aside and three barrels were rolled past me onto the ship I had just left. The whole dock felt busy. I hardly saw youths lingering, old men playing Overlade, nary a dockworker drinking on a House's coin. It seemed everyone had a job and was busy at it.
+>
+> Before I had reached the shore end of the dock, my contact, Silvius, had found me. He was dressed like a merchant from Rika Tikur, with the stature of a man from Baerfrost and skin sun-baked the way only Isles people are. The captain had warned me of the local custom; the warning had not prepared me nearly enough.
+>
+> The local custom is not a handshake but an arm-shake, and it felt like gripping a steel beam, though I think Silvius held back during the shake part, since I was still standing at the end.
+>
+> On the way to the workshop I commented on his build. He wore a smile and told me he started out rolling barrels and lifting cargo; he leaned in and told me he still does when the day demands it.
+>
+> In his workshop he introduced me to the workers, and I saw how they organized their tools before I ever saw his office.
+>
+> The wrangle ran quite a while before we came to terms on price, prototype delivery, and assay-terms. It was unlike most bartering sessions I'd had. He seemed honest, but not naive; he knew what his people's work was worth and wouldn't have settled for less.
+>
+> After another Breidey arm (I had gotten better, I have to admit) he invited me to dinner, and I have an inkling he would have done so even if we hadn't come to an agreement."
+> - Merchant Tullivan, in a letter to his husband, on the commissioning of weatherclocks for his small fleet
 
-Above the working quays stands the port's one idle thing. Slip Nine, the longest slipway in Breidhofn, was cut for a grain-hauler class no yard has laid down since the Settlement before last: too long for the hulls now built, and it drains badly at the head. The yard-crews store seasoning timber in it, haul the timber out whenever a big keel is rumored, and haul it back when the rumor dies. Regrading the slip falls in no House's holding and no clause of the Settlement, and it has stood that way for thirty years.
+Breidey is the promise of honest work for honest coin. And Breidhofn is the biggest port showcasing that every day. Its prosperity draws youths from other islands in search of work, and Keelborn in search of ground that drifts slower than a deck.
 
-## Fyrsta sings
+The port city is where the Nation Afloat comes ashore and blends into one people that hauls on the same line. Different faces of different stations, all meeting on the Breidey arm.
 
-At day's end an instrument sounds across the island, and Breidey stops. The instrument is the **Fyrsta**, the first hull Breidey launched, retired into music instead of salvage: her hull is strung as a resonating body the size of a house, a **hullharp**, played from within. Her song carries over water and workshop alike, and the daily stop is a clause of the Settlement made audible. At the first phrase, tools go down. Top buttons open. Within a quarter hour the port is tables, talk, and dockhands swimming where the barrels rolled at noon; the restlessness of the working day is appetite for an evening that is guaranteed. The island-wide phrase for day's end is **"Fyrsta sings."** Visitors are told to finish their business before she does.
+Yet to imagine Breidey as all work and no play would be missing the second half of the coin...
 
-## Honest work for honest money
+## Fyrsta's Song
 
-The sentence is Breidey's constitution, and it binds the Houses with everyone else. The island is owned by its nobility: **Houses**, holdings, and titles as real as their ledgers. A House does its due diligence, meets its payroll, and is honored for it. A House that stops working finds its workshops without workers, its boats full of barrels no one will unload, and its own cook serving bread and water at the long table until the lesson lands. A House that hemorrhages money finds a merchant ready to buy the title and the land; Breidey calls it **a restructuring**.
+On the Hill, Sjornahol, overlooking the whole dock and part of the city, sits Fyrsta, the first hull Breidey ever launched, repurposed for music and relaxation.
 
-The island is open. Half the population's parents were born somewhere else; folk come to work and find a home, and the saying runs that *the difference between a Breideyer and a Keelborn is only how fast their home moves*. A newcomer who works an honest day is on **the Rolls** by evening. Declining is possible; the unrolled meet **the Closed Counter**: no bread from any baker, no room from any landlord, no passage from any ferryman, until an honest day's work opens the counters again.
+Her hull is strung as a resonating body the size of a house, a hullharp, not the only one of her kind, but as far as historical records show, the first.
+
+Her conductor stands within, and the players follow his lead. They play from a wide list of songs, and the conductor picks a different one each day. Sometimes he adds a new one. But all songs mean the same thing: the end of the working day.
+
+**◈ Popular Belief: Fyrsta's ear.** She sings a little early on days a storm is coming in, a little late on launch days, as if she wants to watch the new hull down the slip before she calls the island home. The players insist they keep the hour to the minute, every day, per the first Settlement. Each Breideyer still believes their own.
+
+When the notes carry over the workshops and docks alike, the tools go find their homes, the top buttons open, a barrel gets placed one last time for today, and everyone takes a deep breath.
+
+Fyrsta sings. The work for today is done.
+
+The last notes of Fyrsta's song still hang in the air when you notice the island has already changed key.
+
+Within a quarter hour, the docks have filled with people playing Overlade, dockhands are swimming in the sea, and families are picnicking on the Hill.
+
+And any of them might be one of the nobles who own the island.
+
+## Houses
+
+The whole of Breidey is owned by the Houses, a nobility with titles and no royalty. Silverbeak's home sits on land leased from House Lunnar; as Dockmaster he oversees three docks for House Kjolur; his favorite fistloaf maker is owned by House Reki.
+
+Wards, docks, fields, or works, all of it finds its place in an old ledger the Houses keep, and they decide which to lease, which to rent and which to keep.
+
+But even these ledgers can be bought and sold. Once a House finds their coffers run dry, their vaults harboring hardly more than dust, there are always offers from merchants to relieve them of debt and title, the practice Breidey calls a Restructuring.
+
+So the Houses do what they need to do, work honestly. They do their diligence in maintaining public infrastructure, to meet their end of the bargain, to be fair employers. The Houses do what they need to be honored. Should they not, they will find workshops without workers, boats full of barrels nobody will unload, their own cook serving nothing but bread and water.
+
+Because on Breidey the Houses are bound.
 
 ## The Settlement
 
-Each House governs its own holdings: wards, docks, fields, and works. What binds the island is **the Settlement**, the master-agreement between the Houses and the Rolls, renegotiated every fourth year at **the Long Table** and signed with the arm. It fixes wages, hours, dues, walkout rules, the joint fund for roads and quays, and the hour of the song. Both tables elect **the Chair of the Settlement** for the cycle; the Chair receives envoys, signs treaties, and instructs Breidey's voice at the Raft.
+The master-agreement binding every soul on Breidey, the Settlement. Terms renegotiated every four years at the Long Table, between the Houses and the people.
 
-The founding is told on both sides of the table: **the Year the Barrels Sat**, when the boats filled and nothing moved, and the proudest Houses ended it rolling barrels beside their crews, with the first Settlement signed. A failed Settlement stops the island's work entirely. It has happened once since the founding, and the Long Table that followed ran nineteen days.
+All of island life is argued, negotiated and discussed at the Long Table; some topics come up every time, some are brought up once every twenty years. Wages, working hours, dues, walkout rules, as well as joint funds for many a thing, infrastructure, education and the maimed's share, to name a few.
 
-## The helmworks
+The first topic is always the same: the selection of Breidey's voice, the Chair of the Settlement. They receive envoys, sign treaties, and speak for Breidey at the Raft, a position open to worker and noble alike.
 
-A sea whose islands move demands instruments that do not lie, and generations of building them made Breidey's **helmworks** the standard of the Midarra: bearing-keepers, drift-clocks, the fine Magitech of position. The **helmwrights** make them in small numbers to exacting patterns; every piece is **Breidhofn-sealed**, and captains cross the inner sea to buy at the workshop and seal the terms with the arm.
+The Long Table is the island's political fever, some years it's quiet, fast, a done deal in the first day of negotiations. Some years it's loud, it drags itself out the whole week. Most Long Tables find their Breidey arm within the week, because both sides fear running out the week without one.
 
-## The investment
+A hung Settlement, when the old Settlement runs out and the new one isn't agreed upon. The moment when no work is done, for no guarantee is given, the sudden halt to the whole industrial marvel of the Isles.
 
-Breidey fielded most of the League's fighting keels in 2524, and fields most of them still. Ask a Breideyer about the cost and the correction comes with mild impatience: it is an **investment**. Breidey keels broke the corruption wave at sea; Breidey timber went down in the sealing of the drowned gate; the House books carry all of it in the asset column. The keel-franchise argument and the Standing Watch campaign are, in Breidey's accounting, the dividend coming due: the Watch would need hulls, patterns, yards, and a leader, and Breidey has all four. What the family boards argue about is the payout horizon, and the arguments are getting shorter.
+Though one topic never gets brought up, Fyrsta's hour. The time the hullharp plays has been the same since it rang the first time in the Year the Barrels Sat.
 
-**◈ Popular Belief: Fyrsta's ear.** Islanders swear the old hull chooses her moment: that she sings a little early on days a storm is coming in, and a little late on launch days, as if she wants to watch the new hull down the slip before she calls the island home. The players keep the hour to the minute, per the Settlement, and say so. The island believes its own version.
+A moment in time when wages were lowered or frozen outright, when working hours ate the leisure, when the crews had had enough and planned the founding walkout. Fyrsta's song rang out and the island stopped, boats sat with barrels no one unloaded, cooks walked out of the kitchen, barmen left kegs untapped. The moment the proudest Houses learned who truly moves what.
 
-**⚿ GM Secret: The Spec Fleet.** On three covered slips above Breidhofn stand three hulls that no one ordered. They are built to patrol patterns, provisioned for standing crews, and entered in the House ledgers as *inventory*; the yard-crews working them are on quiet wages under closed contracts. Breidey is building the Standing Watch before the Raft has voted for it. If the vote passes, Breidey delivers a working Watch in months and expects to lead it. If the vote keeps failing, the island holds three warship-pattern hulls it must eventually sell, and the family boards have so far kept the question of the buyer off the agenda. The Chair knows. The Rolls' senior stewards know, because their members are building them. The Raft does not.
+It ended with nobles rolling the barrels beside their crews. Both sides still talk of it with pride, the moment the Houses and the Rolls signed the first Settlement and Fyrsta sang.
+
+## The Rolls
+
+The Rolls, the other arm that shakes on the Settlement. The Breidey promise turned into an institution, an all-trades-spanning union.
+
+The entry requirement is simple: work an honest day and you're on the Rolls by Fyrsta's first note.
+
+> "Why it's called the Rolls? Lad, are ye daft? You roll barrels like we made the nobles do and then you're on the Rolls." - a snippet caught on the docks during a game of Overlade
+
+Declining the Rolls is technically a possibility, though practically highly inadvisable. For anyone declining the Rolls will find the Closed Counter: no bread from any baker, no room from any landlord, no passage from any ferryman. No exceptions and no hard feelings, until an honest day's work opens every counter at once.
+
+While declining is a possibility, leaving is not. I have found no clause, no section, no ruling, no precedent for leaving. The register carries names that long have left the island. I have found one account of a person returning and finding their name still listed.
+
+So the Rolls contains every person not part of the Houses, be that cleaning maid, Dockmaster or inventor. Every craft is included, from wheat to the Helmworks.
+
+## The Helmworks
+
+Midarra, the central sweetwater sea, changes with the weather, and the weather flips on a moment's notice. A tenth of it is the floating isles, charted ground that has moved since the chart, and every hull bound for Balatur Erui and the Hafra beyond has to cross it. And rarely the sea turns strange altogether. The Villveder comes without warning: magic takes hold of whatever a navigator carries, a needle wanders, a bearing true at dawn is wrong by noon.
+
+A Helmworks reads through all of it. Hulls from every shore of Midarra put in at Breidhofn to buy their own and have it kept.
+
+> "Aye, sure quite a lot of things on deck come from the Order of Steam, a few things come even all the way from Vindul. But if pirates would let me only keep one thing? I'd choose Breidey Helmworks before they finished their demands. I would never want to face the rolling fog without one in my hand and I damn well make sure to bring them in for scheduled maintenance. An Order of Steam's needle may break while on guarantee but a Helmworks, properly maintained, will probably outlive me." - Lautara Naval News, an interview with Captain Dunstroem
+
+Breidey workshops are the only ones that are licensed and able to create the Helmworks, precision Occultech to find out where you are and where you're headed on an ever-changing sea.
+
+Works include such creations as bearing-keepers, drift-clocks, and weatherclocks.
+
+A weatherclock is an ingenious piece of instrumentation that reports weather as time rather than condition, how much fair is left, when it turns and how long the turning lasts. It always reads the air where it stands, and no further than a day's sail, which is why a fleet buys one per hull.
+
+And every Helmworks comes Breidhofn-sealed with a small number leading back to the Helmwright standing for it.
+
+The island not only makes the instruments for sailing but also the hulls when they are needed.
+
+## The Investment
+
+Breidey builds hulls not only for merchants and on order, but for the Isles as well.
+
+Breidey fields more keels for the League than the next five islands together, and holds exactly one vote at the Raft for it.
+
+When in 2524 the second wave of corruption broke and the dungeons surfaced, Breidey was fielding most of the League's fighting keels and still is.
+
+Two facts no one in the Isles can deny. Breidey keels broke the corruption wave at sea and Breidey timber sealed the drowned gate.
+
+The Houses' ledgers keep track of all of it. The keel-franchise argument and Standing Watch campaign are marked in the books on the asset side. A Watch needs hulls, Helmworks, yards and most of all, a leader. Breidey could offer all four.
+
+> "A loss? A sacrifice? You misunderstand, this, this is an investment in the future of the Isles and who will lead them, dear Chairman." - Holder Ulraken of House Kjolur at the Settlement of 2524
+
+Since then two Long Tables have come and gone, and the confidence has not changed, only the patience under it.
+
+**⚿ GM Secret: The Spec Fleet.** The Houses have already started preparing for the Standing Watch, assured of its eventual creation. Three covered shapes, resting on slips, waiting for a command yet to be voted on. Hulls made to patrol the Isles, being carried in the Houses' ledgers as an asset, maintained by quiet yard-crews hardly on any Houses' ledger. An asset they are assured will pay off. If the vote passes, they can deliver the Standing Watch in months instead of years. If it keeps failing, they still have three warships to sell, though the Houses do find any non-League buyer ill-suited. Not that any House would ever sign them away unless it is to the Standing Watch.
 
 ---
 
@@ -54,4 +157,4 @@ Breidey fielded most of the League's fighting keels in 2524, and fields most of 
 
 ---
 
-**Still open:** the sitting Chair; the helmwrights' named master-pieces; Breidhofn's districts; the acre-and-slip texture of the countryside beyond the port; the next Long Table. (The Houses are named: **Kjolur**, **Lunnar**, **Reki**; see `../../glossary.md`, *The Houses of Breidey*.)
+**Still open:** the sitting Chair; Fyrsta's conductor; the helmwrights' named master-pieces; Breidhofn's districts; the acre-and-slip texture of the countryside beyond the port; the next Long Table. (The Houses are named: **Kjolur**, **Lunnar**, **Reki**; see `../../glossary.md`, *The Houses of Breidey*.)

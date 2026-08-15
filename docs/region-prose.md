@@ -1,56 +1,47 @@
 # Region-entry prose rules
 
-How to write a region entry: sub-region deep files, domain-file bullets, god-city sections, and their HTML mirrors. These rules sit on top of CLAUDE.md's global prose rules (no em-dashes, affirmative prose, *mortals* never *humans*, chronicler-tier voice with GM-tier only in secret boxes) and are checked at every Phase 5 draft. Workshopped 2026-08-13 during the Harro Distiratsua build.
+How to write a region entry: sub-region deep files, domain-file bullets, god-city sections, and their HTML mirrors. These rules sit on top of CLAUDE.md's global prose rules (no em-dashes, *mortals* never *humans*, chronicler-tier voice with GM-tier only in secret boxes) and are checked at every Phase 5 draft. First workshopped 2026-08-13 during the Harro Distiratsua build; rewritten the same day from the GM-written Breidey exemplar.
+
+**The exemplar is Breidey** (`lore/geography/floteyn/breidey.md` and its page, prose hand-written by the GM, 2026-08-13). When a rule below is unclear, the exemplar is the ruling.
+
+## Voices carry the color
+
+- Attributed in-world quotation is the primary color channel: letters, interviews, overheard snippets, words spoken on the record, each from a named mortal, with an attribution line that carries incidental world-fact ("Merchant Tullivan, in a letter to his husband, on the commissioning of weatherclocks for his small fleet").
+- Wit, judgment, praise, complaint, scene-work, and even a name's explanation live in quotes. Narration between them stays at eye level.
+- The site-wide bylines (Golivander, Vyrenna) keep their own rules in [`../lore/voices.md`](../lore/voices.md). Ordinary named voices need no corpus entry; load-bearing facts their quotes introduce go to the glossary.
+- Unattributed folk-belief stays in the amber ◈ register.
 
 ## Register
 
-- Stay at eye level with the brief. Never write at a higher register than the brief gives you. No summarizing sentence, no significance line, no "what this reveals about."
-- If the brief describes three barrels, write three barrels, not "the choreography of commerce."
-- Mechanism stays, elevation goes. Causal explanation ("the crown keeps the bargain because the Ring is too strong to suppress") is content and belongs. Meaning-making ("a marriage of the kind that works because neither party calls it one") is elevation and goes. Do not delete causality along with significance; a page of facts that don't connect is the opposite failure.
+- Narration states facts, mechanisms, and causality. No significance-lines, no "what this reveals."
+- Elevation is spent at peaks: a short flat-out line where a section's facts crest (*"Fyrsta sings. The work for today is done."*). Earned, sparing, and zero where the facts haven't built to it.
+- The chronicler may step into first person when the record itself is the point: what was searched, what was not found (*"I have found no clause, no section, no ruling, no precedent for leaving."*).
 
 ## Structure
 
-- No section ends on a conclusion. End on the last fact. No epigram, no wry closer, no line that resolves the section's argument for the reader.
-- Vary section mass. Overviews are lopsided because the writer cares unevenly; one topic gets four hundred words, another gets sixty. Uniform section length is a tell. **The mass distribution is the user's decision**, settled at the phase boundary before drafting: which one or two topics carry the weight.
-- Vary sentence and paragraph rhythm within sections. Not every paragraph is one long accumulating sentence.
-- Headings do structure; bold does not, wherever headings are available. Deep files (a sub-region's own `.md` file) use real `###` headings and unbolded prose. Domain-file sub-region bullets are list items where headings cannot nest, so they keep the `**Lead.**` opener convention. HTML pages section with real headings as they always have.
+- A section ends on a fact or on a hook into the next section (*"And any of them might be one of the nobles who own the island."*). The banned ending is the epigram that resolves the section's meaning for the reader.
+- Mass follows care: lopsided sections, distribution settled with the GM at the phase boundary.
+- Real headings in deep files and HTML; `**Lead.**` bold openers only where headings cannot nest (domain-file bullets).
+- ◈ and ⚿ boxes may sit mid-section where the flow wants them.
+- HTML card-grids may restate prose facts (furniture ruling, 2026-08-13); card text follows the register rules like all prose.
 
-## Names
+## Names and things
 
-- Never explain a name in prose. No gloss, no "X, meaning Y." Etymology lives in the glossary and in a facts-frame etymology row (the file header, the At-a-Glance panel) only.
-- Introduce a coined term once and let context carry it. Do not follow it with a definition clause.
-- Old-stratum names are opaque by design; leave them opaque.
-- Translation-bynames (two names for one thing, one of them common-tongue) are world-facts and allowed, bound by context: use the names in different places and let the reader bind them. The appositive introduction ("Sidijos, the Last Lamp in common speech") is a gloss and banned.
+- Never etymologize a name in narration; etymology lives in the glossary and the facts-frame (file header, At-a-Glance). Old-stratum names stay opaque in prose (Sjornahol and the Villveder are dropped in unexplained).
+- Defining a *thing* is content (the weatherclock paragraph; an institution; a custom). Explaining a *name* is not, unless a mortal explains it in quotation (*"Why it's called the Rolls? Lad, are ye daft?"*).
+- Ground the abstract in named incidentals: show an institution through one person's day (the Dockmaster's lease, his three docks, his fistloaf maker); prefer a number to "half."
 
-## The ornament budget
+## Still banned
 
-Each page gets a small ornament budget, spent deliberately on its best moments:
-
-- **one** elevation line;
-- **one** prettier restatement of a fact already stated plainly (everywhere else: say it once; a second phrasing is decoration, not emphasis);
-- **one** narrated "never", and only as a genuine inversion of expectation (the tic forms below stay banned regardless);
-- **one or two** metaphors drawn from the region's own theme. The theme is content, not a metaphor bank; state the theme in facts and draw figurative language from anywhere else, or skip it.
-
-Everything outside the budget earns its place as fact. If a draft has three lovely lines, two of them are over budget. Underspending is always allowed.
-
-- **HTML card-grids may restate prose facts** (GM ruling, 2026-08-13, from the Breidey comparison): a card is reference furniture, not decoration, and clarity earns the repetition. The prettier-restatement budget governs prose, not cards. Card text follows the register rules like all prose.
-
-## Voices and wit
-
-- In-world quotation in narration only as formula: a legal formula, a ritual sentence, a standing folk-phrase or craft-proverb. Never as wit delivered through an invented mouth ("given with a fitter's shrug").
-- Wit, judgment, and absolutes live in the attributed bylines, **Golivander Tessek** and **Vyrenna Tessek**, under the register rules of [`../lore/voices.md`](../lore/voices.md). Read that file end-to-end before writing any quotation in either voice.
-- Unattributed traveler-phrases and folk-sayings are folk-material: they belong in the amber `◈ Popular Belief` register, never in narration.
+- "never once" / "never quite" / "has never yet" / "not once" in narration.
+- Negation as empty rhetoric. The test: does the negation state a fact the reader needs (*"While declining is a possibility, leaving is not."*), or only decorate one?
+- Aphoristic closers: the epigram that resolves.
+- "worth noting" / "what's actually" / "here's the thing".
+- Unattributed wit in narration: give it a mouth and a name, or cut it.
 
 ## Content requirements
 
-- Live tensions are required. They are campaign seeds; leave them open, unresolved, and unarbitrated. State the tension as fact; do not close it.
-- One defect per region: something merely broken. Uncontested, no advocates, no faction benefiting, nobody in-world wise about it. If someone is arguing about it, it is a second tension, not a defect. (Register example: a junction platform-board still lists a gem-town's attraction that dried up forty years ago; travelers detour and come back sour, and repainting the board is nobody's job.)
+- Live tensions are required. They are campaign seeds; state the tension as fact and leave it open, unresolved, and unarbitrated.
+- One defect per region: something merely broken. Uncontested, no advocates, no faction benefiting, nobody in-world wise about it. The structural register is the strongest form: a rule-shaped hole rather than a broken object (the Rolls keep no way to unregister; the register only grows, and names of the long-departed stay listed). The chronicler's first person is the defect's natural vehicle: the search that finds no clause is the demonstration.
 
-## Banned constructions
-
-- "never once" / "never quite" / "has never yet" / "not once" in narration (the ornament budget's single plain "never" is the only licensed form)
-- "It's not X, it's Y" and all negative parallelism, including the semicolon reversal ("did not bow; it contracted")
-- Aphoristic closers of any form
-- Reflexive tricolons; vary list length
-- "worth noting" / "what's actually" / "Here's the thing"
-- Bolded inline headers in prose where real headings are available (see Structure)
+**Dropped from v1 (2026-08-13, Breidey exemplar ruling):** the one-per-page ornament arithmetic; the never-budget bookkeeping; the blanket quotation ban; uniform "end on the last fact."
