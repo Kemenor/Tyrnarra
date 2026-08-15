@@ -40,4 +40,14 @@ Breidey fielded most of the League's fighting keels in 2524, and fields most of 
 
 ---
 
-**Still open:** the named Houses and the sitting Chair; the helmwrights' named master-pieces; Breidhofn's districts; the acre-and-slip texture of the countryside beyond the port; the next Long Table.
+## Named figures
+
+- **Silvius**: helmwright and workshop owner in Breidhofn. Rolled barrels and lifted cargo before he owned anything and still does when the day demands it; shows a buyer the workshop, the workers, and the product before the office, because that is the honest order. His name is foreign-rooted in the island's most ordinary way, sixty percent of Breideyer parents having been born somewhere else. On the Rolls, like everyone who is not a House. The subject of Merchant Tullivan's letter home on the commissioning of weatherclocks.
+- **Dockmaster Silverbeak**: oversees three of Breidhofn's docks for **House Kjolur**, rents his home from **House Lunnar**, and buys his fistloaf from a maker held by **House Reki**, which is a fair sketch of how an ordinary Breideyer's week is divided between the Houses. Source of the island's most-quoted line on who counts as a Breideyer: *"The difference between a Keelborn and a Breideyer is only how fast their home moves."* The byname sits in the same register as the Tengu pirate-lord names of the inner sea.
+- **Holder Ulraken of House Kjolur**: put his House's position on the record at the Settlement of 2524, in the season the keels went out. *"A loss? A sacrifice? You misunderstand, this, this is an investment in the future of the Isles and who will lead them, dear Chairman."* Two Long Tables have passed since and the position has not paid.
+- **Captain Dunstroem**: a Midarra master interviewed by the *Lautara Naval News*, on why the one thing he would keep off his deck is his Helmworks.
+- **Merchant Tullivan**: an off-island buyer of weatherclocks for his small fleet, whose letter to his husband is the most-copied outsider account of arriving at Breidhofn.
+
+---
+
+**Still open:** the sitting Chair; the helmwrights' named master-pieces; Breidhofn's districts; the acre-and-slip texture of the countryside beyond the port; the next Long Table. (The Houses are named: **Kjolur**, **Lunnar**, **Reki**; see `../../glossary.md`, *The Houses of Breidey*.)
