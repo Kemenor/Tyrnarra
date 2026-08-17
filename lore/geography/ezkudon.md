@@ -24,7 +24,7 @@ Wisdom keeps, Mystery calls, Discovery finds; and **Arrogance**, Enki's fourth f
 - **The Wildreach**: a sub-region of Ezkudon. The wild people live here, and the area carries a strong wild-magic / wild-fey character. Internal landmark: **Iratxobaso** (the fey-forest), a cluster of multicoloured trees at the sub-region's centre whose presence reads as the source or focus of the surrounding wild-magic. Whether the trees *produce* the wild-magic or merely *cluster where it is densest* is a question the wild people answer differently.
 - **Jakinduria**: the sub-region housing Thekkavar, Enki's city-state. The great archives sit at the center of this protected interior territory. *(Basque jakinduria = wisdom, knowledge.)* The central mountains, the natural fortress the whole domain shelters behind, are threaded with **Ratfolk warrens** older than any writ: the people of Discovery live inside the walls the rest of the domain lives behind, and the ways through the mountain are theirs.
 - **The Golden Coast**: coastal sub-region of Ezkudon. Despite the domain's secretive reputation, this stretch of southeastern coast sees more trade traffic than most would expect.
-- **Lua Lasai**: border territory shared with Egulon. See also [Egulon](egulon.md).
+- **Lua Lasai**: the guaranteed country on the Egulon border, fronting Jakinduria and the Golden Coast; kept unarmed under the Double Surety, the twin guarantee the powers of both sides countersign. Egulon-primary. Full canon: [`egulon/lua-lasai.md`](egulon/lua-lasai.md).
 
 ## Thekkavar, the City of Learning (Jakinduria)
 

@@ -169,6 +169,8 @@ Plant-spirits, **dominant in Egulon (Light / Iro)**, their heartland: the grove-
 
 **In Ljosarn:** the ground both lights stand on: the lantern-vine terraces and light-orchards of the Vonura shore, and the soil-memory of the lake-country (see `geography/egulon.md`, *Ljosarn*).
 
+**In Lua Lasai** (the full-expression homeland): the lineages that keep the Orosoro, the country's record in living planting; every tenure in the country is a standing with the lineage that remembers the ground, and a planting is finished when the grove's Leshy has taken to the young stock and named it (see `geography/egulon/lua-lasai.md`).
+
 ### Lizardfolk
 **Dominant in Ehizahar (Hunt / Hinka)**, the Lands of Villtur. The ones who never stop coming: Patience as temperament, slow to start and impossible to shake. A Lizardfolk decision takes its time arriving, and once made it is inevitable; the people of the long stalk, deliberate at the kill, unhurried in a way that frightens prey more than speed would.
 
@@ -217,6 +219,8 @@ Made on purpose, and knows whose: a Poppet is the only kind of person who was wa
 
 **In Ljosarn:** the kept flames: the family fires, the vigils, the hospice wards, and most of the city's clergy in both the Healing Orders and the Ordained (see `geography/egulon.md`, *Ljosarn*).
 
+**In Lua Lasai:** the tenders: the ones trusted to keep other families' entries in the Orosoro exactly as they stand, a mourning white or a quarrel black, for households too old or too few to keep their own rows (see `geography/egulon/lua-lasai.md`).
+
 ### Skeleton
 The ones who already paid: a Skeleton has settled the one debt everyone else is still dreading, and fear has lost its biggest lever on them forever. What remains is the question the living never have to face plainly, *why get up?*, and every aware Skeleton is, by definition, one who had an answer. Patient as only the deathless can be, unhurried by any clock, and possessed of a strange lightness the living find unsettling in the bones of the dead: the worst has happened, and here they still are. **Native to the Blackened Lands**: the same cursed-ground sub-region as the Fleshwarp ancestry. The wound in the land pulls the dead back into motion. Some are aware, some are not; the aware ones become the PF2e Skeleton ancestry. **Common in the Blackened Lands; rare to nonexistent everywhere else.** Skeleton characters elsewhere on Talan are almost always Blackened Lands émigrés, and they carry the politics of that origin with them. Many kingdoms refuse them entry; the Adventurers' Guild does not. **Spiritually tied to Betibizi**, the Storveldi Denbora ruling-class survivor who ascended to Minor God of Undeath and to whom the Blackened Lands' ambient necromancy traces back (see `gods.md`, *Named Non-Bound Gods*). Aware Skeletons sometimes report feeling drawn toward Abyss; few investigate. **Categorically targeted by the Voroir Daua** (Epairima's cycle-warden order; see `gods.md` and `factions.md`): as post-mortal beings sustained outside the natural cycle, Skeletons are read by the order as cycle-breakers by their existence. The order does not extend the *they-didn't-choose* clemency that protects Dhampir; a Skeleton's existence is outside the cycle by nature, not within it. Blackened-Lands-native Skeletons in the cursed-ground sub-region are largely left alone (the order has limited operational reach inside the Blackened Lands themselves); émigré Skeletons elsewhere on Talan are watched and, in some charters' practice, hunted on sight.
 
@@ -226,6 +230,8 @@ Two populations, one people. The **Feyworld Sprites** are the original stock, na
 **In Ljosarn:** the made light: the lamp-glass and glamour, the festival-rites staged over Vonura, the brilliance that fills the lanes no window reaches (see `geography/egulon.md`, *Ljosarn*).
 
 **In Harro Distiratsua:** the fitters of the continent's light and the courts of the Bright Ring; the people who sell brightness keep dusk for their own streets, the tuned half-light where a Sprite is read only as much as matters (see `geography/egulon/harro-distiratsua.md`).
+
+**In Lua Lasai:** the readers: the hillside-language of the Orosoro learned youngest and read fastest, and the field-brokers who take in a valley's standing at one look from the train (see `geography/egulon/lua-lasai.md`).
 
 ### Strix
 **Dominant in Vindul (Wind / Fisaya)**, anchored in the storm-wracked steppe of **Fellibylur**. Winged sky-people with weather in the blood: restless in still air, most alive when the sky is moving, reading a front the way other folk read a face. Flight is the disposition, whatever the trade, and their storm-attunement makes them the deepest keepers of storm-lore on Talan. The institutions that grew around that gift (the Stormriders, the Thunderhost moot) are Fellibylur's own (see [`geography/vindul.md`](geography/vindul.md), *Fellibylur*). Outside Vindul they are met mostly as travellers or hired pilots.
