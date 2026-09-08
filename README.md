@@ -66,6 +66,12 @@ To preview a change live, push to `main` and wait ~1–2 min for the Actions dep
 
 ---
 
+## Reading the lore in Obsidian
+
+The `lore/` canon is plain markdown with relative links, so it reads well in [Obsidian](https://obsidian.md): open the **repo root** as a vault (not just `lore/`, since a few lore links point into `docs/`). The committed `.obsidian/app.json` already pins the two settings that matter: new links are written as standard markdown links with relative paths (so they keep working on GitHub and in plain editors; leave wikilinks off), and the non-markdown folders (`published/`, `tools/`, `.claude/`) are hidden from search and the graph. Everything else under `.obsidian/` is per-machine state and is gitignored. Backlinks are the useful part: a lore file with none is canon nothing else references.
+
+---
+
 ## Where things live (quick orientation)
 
 - **Worldbuilding HTML**: `/published/setting/` — `cosmology/` for world-level pages (cosmology, gods, magic, …), `talan/` for the continent, `talan/domains/<slug>/` for the 13 god domains, `talan/factions/` for organisations, `off-continent/` for non-Talan powers.

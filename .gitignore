@@ -53,3 +53,11 @@ published/gm-notes/**/tokens/_reup/
 # Local staging inbox for generated art (e.g. Midjourney PNGs) before they are
 # converted to the committed web webp. The source PNGs stay local only.
 /incoming/
+
+# Obsidian vault (open the repo root as a vault to read lore/ with backlinks).
+# Only app.json is committed: it pins standard markdown links with relative
+# paths (so links keep working on GitHub and in plain editors) and hides the
+# non-markdown folders from the graph. Everything else in .obsidian/ is
+# per-machine state (workspace, cache, plugins) and changes on every open.
+.obsidian/*
+!.obsidian/app.json
