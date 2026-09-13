@@ -21,5 +21,9 @@
       "size": "portrait_4_3",
       "framing": "Sitting cross-legged on the stone floor of a dim cell, bent over his own outstretched sleeve, writing tiny careful notes on the cloth with a fingernail dipped in blood, entirely absorbed and calm."
     }
+  },
+  "render": {
+    "variations_seed": 3099043869,
+    "variations_count": 1
   }
 }

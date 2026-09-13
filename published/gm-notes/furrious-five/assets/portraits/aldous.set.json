@@ -3,27 +3,29 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A tall thin human butler in his late fifties, standing very straight. His skin is the colour of old bone, not pale but genuinely bone-coloured, dry and matte. His eyes are flat grey and utterly incurious, and he does not blink. His face is composed into perfect professional courtesy with nothing behind it. He hovers perhaps an inch clear of the floor",
+  "character": "A living human man in his late fifties, tall and thin and gaunt, a butler standing very straight with perfect statuesque posture, utterly still. His complexion is pale and sickly, grey and unhealthy, with no colour in his face at all: but unmistakably living flesh, a full fleshed face with lips, cheeks and nose intact. Flat pale grey eyes, wide open, calm and incurious, with an expression of perfect professional courtesy and nothing behind it. Neatly combed thin white hair. He is a living man, not a skeleton and not a corpse",
   "wardrobe": "immaculate black butler's tailcoat and waistcoat over a white high-collared shirt, brushed spotless, white gloves, everything correct to the millimetre",
   "shots": {
     "full": {
       "file": "aldous-full",
       "size": "portrait_4_3",
-      "framing": "Full body standing portrait, front view, hands folded precisely in front of him, feet hovering a fraction clear of the floor."
+      "framing": "Full body standing portrait of a living man, front view, feet flat on the floor, hands folded precisely in front of him, impeccable posture."
     },
     "portrait": {
       "file": "aldous",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, facing the viewer directly, unblinking flat grey eyes, polite empty expression, head and upper chest filling the frame."
+      "framing": "Head and shoulders portrait, square crop, a living man's fully fleshed face, pale and sickly, facing the viewer directly, unblinking flat pale grey eyes, polite empty expression, head and upper chest filling the frame."
     },
     "scene": {
       "file": "aldous-door",
       "size": "portrait_4_3",
-      "framing": "Standing in an opened front door of a grand manor house at dusk, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
+      "framing": "A living human butler standing in the opened front door of a grand manor house at dusk, feet on the threshold, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
     }
   },
   "render": {
-    "variations_seed": 3204751361,
-    "variations_count": 1
+    "variations_seed": 698552440,
+    "variations_count": 1,
+    "set_seed": 3667592886,
+    "chosen_variation": 1
   }
 }

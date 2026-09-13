@@ -68,3 +68,7 @@ published/gm-notes/**/tokens/_reup/
 # per-machine state (workspace, cache, plugins) and changes on every open.
 .obsidian/*
 !.obsidian/app.json
+
+# ComfyUI server log captured by npc_art.ensure_server() - runtime artifact,
+# truncated every server start, regenerated on demand.
+tools/imageGen/comfy-server.log

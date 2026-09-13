@@ -21,5 +21,9 @@
       "size": "portrait_4_3",
       "framing": "Gripping the iron bars of a barred cell in a dim stone basement with both hands, leaning into them, snarling something at whoever is on the other side, red light from somewhere behind her."
     }
+  },
+  "render": {
+    "variations_seed": 2147396044,
+    "variations_count": 1
   }
 }

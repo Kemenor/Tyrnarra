@@ -67,6 +67,18 @@ import uuid
 API = "http://127.0.0.1:8188"
 LAUNCHER = "/var/mnt/games1tb/comfyui/run-comfyui-lan.sh"
 CONTAINER = "comfyui"   # podman/distrobox container the ComfyUI venv runs in
+SERVER_LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "comfy-server.log")
+
+
+def _server_logfile():
+    """Log the server; never discard it. When ComfyUI dies mid-prompt (VRAM OOM,
+    gfxhub page fault) its stdout is the ONLY place that says why. With DEVNULL
+    the failure is invisible and all you see is a driver polling a corpse.
+    Truncated per start, so it always describes the current run."""
+    try:
+        return open(SERVER_LOG, "wb")
+    except OSError:
+        return subprocess.DEVNULL
 
 MODELS = {
     "unet": "flux2-dev-Q4_K_M.gguf",
@@ -127,8 +139,32 @@ def ensure_server(timeout=180):
     # The documented cost ("executes every node each run") is real - every pass
     # reloads the stack - but it is FASTER here, 221 s/image vs 432 s and
     # climbing, because the reload is trivial next to the paging it avoids.
-    subprocess.Popen(["bash", LAUNCHER, "--cache-none"], stdout=subprocess.DEVNULL,
-                     stderr=subprocess.DEVNULL, start_new_session=True)
+    # VRAM budget: the card is 24 GB and the two big loads are the text encoder
+    # (17.2 GB) and the unet (19.6 GB), which already cannot be resident
+    # together. On top of the unet the Turbo LoRA needs ~650 MB more, and that
+    # is the allocation that decides whether a render survives.
+    #   --reserve-vram 1.0 -> KWin starves: amdgpu "Failed to pin framebuffer
+    #                         with error -12" (ENOMEM), desktop resets, stutter.
+    #   --reserve-vram 3.0 -> ComfyUI starves: the LoRA OOMs applying to the
+    #                         unet ("Tried to allocate 648.00 MiB", 768 MB
+    #                         free), then a gfxhub page fault kills the server.
+    # 2.0 is the middle, with expandable_segments to reclaim the fragmentation
+    # the OOM message itself flagged (558 MB reserved-but-unallocated).
+    # --cpu-vae is NOT about memory. The GPU VAE path faults on this card:
+    #   "Requested to load AutoencoderKL / Memory access fault by GPU node-1 on
+    #    address 0x... Reason: Page not present or supervisor privilege"
+    # That is an ILLEGAL ACCESS (ROCm driver bug), not an OOM: it killed the
+    # server 31 s in with VRAM at 1.1 GB, before the unet or text encoder
+    # loaded, so no --reserve-vram value can reach it. The VAE is 160 MB and
+    # does one encode + one decode per image, so CPU costs seconds and removes
+    # the fault by construction.
+    env = dict(os.environ)
+    env.setdefault("PYTORCH_HIP_ALLOC_CONF", "expandable_segments:True")
+    env.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+    subprocess.Popen(["bash", LAUNCHER, "--cache-none", "--reserve-vram", "2.0", "--cpu-vae"],
+                     stdout=_server_logfile(), stderr=subprocess.STDOUT,
+                     start_new_session=True, env=env)
+    print(f"  (server log: {SERVER_LOG})", flush=True)
     t0 = time.time()
     while time.time() - t0 < timeout:
         if server_up():
@@ -236,6 +272,7 @@ def run_graph(graph, save_nodes, label, timeout=3600):
     except urllib.error.HTTPError as e:
         sys.exit(f"{label}: graph rejected: {e.read().decode()[:800]}")
     t0 = last = time.time()
+    dead = 0
     while True:
         time.sleep(5)
         now = time.time()
@@ -255,12 +292,28 @@ def run_graph(graph, save_nodes, label, timeout=3600):
             state, ahead = queue_position(pid)
             if state == "queued":
                 where = f"NOT STARTED, queued behind {ahead - 1} job(s)"
+                dead = 0
             elif state == "running":
                 where = "rendering"
+                dead = 0
             elif state == "gone":
                 where = "finishing (left the queue, writing output)"
+                dead = 0
             else:
-                where = "rendering (queue unreadable)"
+                # queue_position() returns None when the API is UNREACHABLE, which
+                # is not the same as "still working". A server that dies mid-prompt
+                # (VRAM OOM into a gfxhub page fault, say) leaves this loop polling
+                # /history for a prompt that will never complete, and reporting
+                # "rendering" the whole time. That cost 11 minutes once. Confirm the
+                # server is actually up, and bail loudly if it is not.
+                dead += 1
+                if not server_up():
+                    sys.exit(f"{label}: ComfyUI is GONE after {el} "
+                             f"(API unreachable, prompt {pid[:8]} will never "
+                             f"complete). It most likely died mid-prompt - check "
+                             f"the server log for 'out of memory' or a gfxhub page "
+                             f"fault, then restart_server() and re-run.")
+                where = f"queue unreadable x{dead} (server still answering)"
             print(f"    ... {label}: {el} elapsed, {where}", flush=True)
         try:
             h = json.load(_req(f"/history/{pid}"))
