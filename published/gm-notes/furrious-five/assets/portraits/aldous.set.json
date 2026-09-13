@@ -14,8 +14,7 @@
     "portrait": {
       "file": "aldous",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, facing the viewer directly, unblinking flat grey eyes, polite empty expression.",
-      "mode": "text"
+      "framing": "Head and shoulders portrait, square crop, facing the viewer directly, unblinking flat grey eyes, polite empty expression, head and upper chest filling the frame."
     },
     "scene": {
       "file": "aldous-door",

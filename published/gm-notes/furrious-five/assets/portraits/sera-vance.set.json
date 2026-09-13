@@ -14,8 +14,7 @@
     "portrait": {
       "file": "sera-vance",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, jaw set, angry alert eyes, shorn dark hair.",
-      "mode": "text"
+      "framing": "Head and shoulders portrait, square crop, jaw set, angry alert eyes, shorn dark hair, head and upper chest filling the frame."
     },
     "scene": {
       "file": "sera-vance-cell",

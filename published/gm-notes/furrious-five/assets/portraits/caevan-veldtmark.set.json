@@ -14,13 +14,18 @@
     "portrait": {
       "file": "caevan-veldtmark",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, facing the viewer, faintly luminous eyes, courteous and hollow.",
-      "mode": "text"
+      "framing": "Head and shoulders portrait, square crop, head and upper chest filling the frame, facing the viewer, faintly luminous eyes, courteous and hollow expression."
     },
     "scene": {
       "file": "caevan-veldtmark-conservatory",
       "size": "portrait_4_3",
       "framing": "Seated on a white iron bench in a humid glass conservatory crowded with overgrown green plants, an open untitled book in his lap, looking up with a warm welcoming smile as though he has been expecting you."
     }
+  },
+  "render": {
+    "variations_seed": 3462636792,
+    "variations_count": 4,
+    "set_seed": 205364551,
+    "chosen_variation": 4
   }
 }

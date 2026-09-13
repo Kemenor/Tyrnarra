@@ -12,8 +12,11 @@ the conversational flow defined in .claude/skills/npc-art/SKILL.md:
 
 Consistency: the anchor is rendered with the chosen variation as a
 ReferenceLatent reference, and every ref-mode shot references the anchor.
-A shot with "mode": "text" renders fresh (use for tight crops the reference
-path resists, e.g. head-and-shoulders portraits).
+A shot with "mode": "text" renders fresh, with NO reference to the anchor, so
+it comes back as a DIFFERENT PERSON. Do not use it for portraits: identity is
+not preserved by a shared seed across different sizes and framings (that claim
+was wrong and shipped mismatched close-ups). Keep portraits on "ref" and fight
+the loose crop in the framing text instead.
 
 House styles (the "style" field, or any literal style string):
   painterly (default) - hand-painted fantasy book illustration (approved 2026-06)
@@ -36,7 +39,7 @@ Spec (<slug>.set.json, Claude-authored, lives beside the output art):
 }
 
 Stages (also importable as functions):
-  python3 npc_art.py variations --spec <spec> [--count 4] [--seed N]
+  python3 npc_art.py variations --spec <spec> [--count 1] [--seed N]
   python3 npc_art.py set        --spec <spec> --draft N [--scene "extra"] [--only k,k] [--force]
   python3 npc_art.py upscale    --spec <spec> [--scale 2]
   python3 npc_art.py frame      --name <frame> --desc "ring description"   # token-frame ring art
@@ -63,6 +66,7 @@ import uuid
 
 API = "http://127.0.0.1:8188"
 LAUNCHER = "/var/mnt/games1tb/comfyui/run-comfyui-lan.sh"
+CONTAINER = "comfyui"   # podman/distrobox container the ComfyUI venv runs in
 
 MODELS = {
     "unet": "flux2-dev-Q4_K_M.gguf",
@@ -122,10 +126,38 @@ def ensure_server(timeout=180):
     sys.exit("ComfyUI server did not come up; check the comfyui install.")
 
 
-def restart_server():
-    """Use when RAM is poisoned by another engine's cached weights (a Flux load
-    grinding >5 min means exactly that). 30s restart beats a 20-min thrash."""
-    subprocess.run(["pkill", "-9", "-f", "main.py"], check=False)
+def _kill_server_procs():
+    """Kill ComfyUI wherever it actually runs.
+
+    This install runs ComfyUI *inside a podman (distrobox) container*, so a host
+    `pkill -f main.py` matches only the distrobox wrapper and the `podman exec`
+    shim: the real Python survives, still holding ~50 GB, while the API goes
+    away. That is strictly worse than doing nothing, so kill inside the
+    container first and only then sweep the host-side wrappers.
+    """
+    subprocess.run(["podman", "exec", CONTAINER, "pkill", "-9", "-f", "main.py"],
+                   check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    for pat in ("main.py --reserve-vram", "run-comfyui", f"distrobox enter {CONTAINER}"):
+        subprocess.run(["pkill", "-9", "-f", pat], check=False,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def restart_server(timeout=60):
+    """Use when RAM is poisoned by another engine's cached weights, or when a
+    prompt is wedged in a non-interruptible load (/interrupt returns 200 and
+    nothing happens). 30s restart beats a 20-min thrash.
+
+    Verifies the API is really gone before restarting, so a half-killed server
+    holding tens of GB cannot masquerade as a fresh one.
+    """
+    _kill_server_procs()
+    t0 = time.time()
+    while server_up() and time.time() - t0 < timeout:
+        time.sleep(2)
+        _kill_server_procs()
+    if server_up():
+        sys.exit("restart_server: ComfyUI would not die; kill it by PID "
+                 "(ps -eo rss,pid,comm --sort=-rss | head) and retry.")
     time.sleep(3)
     ensure_server()
 
@@ -137,18 +169,88 @@ def _req(path, data=None, headers=None, timeout=120):
     return urllib.request.urlopen(req, timeout=timeout)
 
 
+def queue_state():
+    """(running, pending) prompt counts, or (0, 0) if the API is unreachable."""
+    try:
+        d = json.load(_req("/queue", timeout=10))
+        return len(d.get("queue_running", [])), len(d.get("queue_pending", []))
+    except Exception:
+        return 0, 0
+
+
+def queue_position(pid):
+    """Where our prompt is: ('running'|'queued'|'gone', jobs_ahead)."""
+    try:
+        d = json.load(_req("/queue", timeout=10))
+    except Exception:
+        return None, 0
+    for it in d.get("queue_running", []):
+        if it[1] == pid:
+            return "running", 0
+    for i, it in enumerate(d.get("queue_pending", [])):
+        if it[1] == pid:
+            return "queued", i + 1 + len(d.get("queue_running", []))
+    return "gone", 0
+
+
+def preflight_queue(label):
+    """Shout if the queue is already busy.
+
+    Submitting behind someone else's prompt is invisible otherwise: the pass
+    reports 'still rendering' for as long as the job in front takes, which is
+    forever if that job is wedged. One driver at a time is the rule; this is
+    the check that the rule was followed.
+    """
+    r, p = queue_state()
+    if r or p:
+        print(f"  ! {label}: ComfyUI queue is NOT empty ({r} running, {p} pending).",
+              flush=True)
+        print("    Another driver is rendering, or a stale prompt is wedged; this "
+              "pass will sit behind it.", flush=True)
+        print("    Clear it:  curl -X POST http://127.0.0.1:8188/queue "
+              "-H 'Content-Type: application/json' -d '{\"clear\":true}'", flush=True)
+        print("    If the running job ignores /interrupt it is wedged in a model "
+              "load: npc_art.restart_server()", flush=True)
+    return r, p
+
+
 def run_graph(graph, save_nodes, label, timeout=3600):
     """Queue; wait; {save_node: [(filename, subfolder)]}. Tolerates the API
     blocking during model loads."""
+    preflight_queue(label)
     body = json.dumps({"prompt": graph, "client_id": str(uuid.uuid4())}).encode()
     try:
         pid = json.load(_req("/prompt", body,
                              {"Content-Type": "application/json"}))["prompt_id"]
     except urllib.error.HTTPError as e:
         sys.exit(f"{label}: graph rejected: {e.read().decode()[:800]}")
-    t0 = time.time()
+    t0 = last = time.time()
     while True:
         time.sleep(5)
+        now = time.time()
+        if now - last >= 30:
+            # ComfyUI only fills /history when the WHOLE prompt is done, so a
+            # multi-shot pass writes nothing until the end and looks dead. Say
+            # so, rather than leaving a silent terminal for 15 minutes. A cold
+            # first pass spends several of those loading ~38 GB; if the elapsed
+            # time climbs with no GPU activity (rocm-smi --showuse), the load
+            # has thrashed and restart_server() is the fix.
+            #
+            # Report QUEUE POSITION, not just elapsed: "still rendering" is a
+            # lie when the prompt has not started because something ahead of it
+            # is wedged, and that lie cost 16 minutes once.
+            last = now
+            el = f"{int(now - t0) // 60}m{int(now - t0) % 60:02d}s"
+            state, ahead = queue_position(pid)
+            if state == "queued":
+                where = f"NOT STARTED, queued behind {ahead - 1} job(s)"
+            elif state == "running":
+                where = "rendering"
+            elif state == "gone":
+                where = "finishing (left the queue, writing output)"
+            else:
+                where = "rendering (queue unreadable)"
+            print(f"    ... {label}: {el} elapsed, {where}", flush=True)
         try:
             h = json.load(_req(f"/history/{pid}"))
         except Exception:
@@ -283,8 +385,15 @@ def save_render_meta(spec_path, spec, **kv):
 
 # ----------------------------------------------------------------- stages
 
-def variations(spec_path, count=4, seed=None):
-    """N full-body variations of the anchor shot. Returns list of paths."""
+def variations(spec_path, count=1, seed=None):
+    """N full-body variations of the anchor shot. Returns list of paths.
+
+    Default 1, not 4. FLUX.2 with the Turbo LoRA at 8 steps barely moves
+    between seeds on an identical prompt: four "variations" come back as four
+    near-identical images, so the extra three are pure render time. If the one
+    shot is wrong, the fix is the spec (character / wardrobe / framing), not
+    another roll of the dice.
+    """
     spec, out_dir = load_spec(spec_path)
     ensure_server()
     anchor = spec["shots"][spec.get("anchor") or next(iter(spec["shots"]))]
@@ -446,7 +555,9 @@ def main():
     ap = argparse.ArgumentParser(description="Local NPC art renderer (Claude-operated).")
     ap.add_argument("stage", choices=["variations", "set", "upscale", "frame"])
     ap.add_argument("--spec", help="Spec JSON (variations/set/upscale).")
-    ap.add_argument("--count", type=int, default=4)
+    ap.add_argument("--count", type=int, default=1,
+                help="variations to render (default 1; FLUX seeds barely "
+                     "differ - fix the spec instead of rolling again)")
     ap.add_argument("--seed", type=int)
     ap.add_argument("--draft", type=int, help="set: chosen variation number.")
     ap.add_argument("--scene", default="", help="set: extra scene detail.")
