@@ -24,6 +24,7 @@
   },
   "render": {
     "variations_seed": 2147396044,
-    "variations_count": 1
+    "variations_count": 1,
+    "set_renderer": "Midjourney V8.2, anchor attached to prompt"
   }
 }

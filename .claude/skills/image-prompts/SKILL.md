@@ -105,18 +105,24 @@ them draw it.
 
 ---
 
-## The `negative` field: use it almost never
+## The `negative` field: fix the prompt instead
 
-A spec may carry `negative`, which reaches Midjourney as `--no`. **The default
-is to have none.** Both specs that were given one had it removed again within
-the hour, each time because the flag was fighting something the prompt wanted.
-Reach for it only when a specific failure has repeated across several renders
-and no positive phrasing has moved it, and expect to delete it once an anchor
+A spec may carry `negative`, which reaches Midjourney as `--no`. **In roughly
+99% of cases the right move is to change the prompt, not to add a negative.**
+The default is to have none.
+
+If a render is wrong, the prompt described the wrong thing. Say the right thing
+and the wrong thing usually leaves on its own: a too-cheerful face is fixed by
+describing the brow, not by forbidding *cheerful*; a skeletal man is fixed by
+describing flesh, not by forbidding *skeleton*.
+
+`--no` is blunt. It suppresses a **concept**, not the excess of a concept, and
+it cannot tell the difference between the version you hate and the version you
+want. Both specs that were given one had it removed again within the hour, each
+time because the flag was fighting something the prompt wanted.
+
+If you do add one, expect it to be temporary, and delete it as soon as an anchor
 exists.
-
-It is a blunt instrument: `--no` suppresses a **concept**, not the excess of a
-concept, and it cannot tell the difference between the version you hate and the
-version you want.
 
 A list written to curb a too-cheerful Harlen (`grin, broad smile, cheerful,
 jolly`) removed his smile altogether, because every one of those entries carries
