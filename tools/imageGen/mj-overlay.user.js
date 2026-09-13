@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tyrnarra NPC helper for Midjourney
 // @namespace    tyrnarra
-// @version      1.4
+// @version      1.5
 // @description  Serve <slug>.set.json prompts into the Midjourney prompt bar, and save the open image into the spec's folder.
 // @match        https://www.midjourney.com/*
 // @grant        GM_xmlhttpRequest
@@ -58,7 +58,8 @@
   const recall = () => {
     try { return JSON.parse(localStorage.getItem(MEM)) || {}; } catch (e) { return {}; }
   };
-  const state = { slug: null, shot: null, data: null, style: 'none' };
+  const state = { slug: null, shot: null, data: null, style: 'none',
+                specs: [], showDone: false };
 
   // ---------------------------------------------------------------- transport
   // GM_xmlhttpRequest rather than fetch. A plain fetch does work today, because
@@ -137,6 +138,14 @@
       const r = await api('POST', '/save', { slug: state.slug, shot: state.shot, data });
       if (r.error) throw new Error(r.error);
       toast('saved ' + r.name);
+      // Re-read so the shot gets its tick and, if that was the last one, the
+      // set drops out of the list on its own.
+      state.data = await api('GET', '/prompts?slug='
+                             + encodeURIComponent(state.slug)
+                             + '&style=' + state.style);
+      renderShots();
+      await refreshSpecs();
+      if (state.data.done) toast(`${state.slug} complete`);
     } catch (e) { toast(e.message, true); }
   }
 
@@ -162,6 +171,9 @@
       <label style="display:flex;align-items:center;gap:6px;margin-top:8px;opacity:.8">
         <input type="checkbox" id="ty-style"> add the house style sentence
       </label>
+      <label style="display:flex;align-items:center;gap:6px;margin-top:4px;opacity:.8">
+        <input type="checkbox" id="ty-done"> show finished sets
+      </label>
       <div style="margin-top:8px;opacity:.6;font-size:11px">
         Click a shot to fill the prompt bar. For the ref shots, first
         <b>Quick Edit</b> your chosen anchor so it attaches with the role
@@ -186,6 +198,8 @@
   };
 
   $('#ty-save').onclick = saveOpenImage;
+
+  $('#ty-done').onchange = e => { state.showDone = e.target.checked; fillSelect(); };
 
   // The site is a single-page app, so the URL changes without a load event.
   // Polling beats patching history.pushState: it also catches back/forward and
@@ -227,8 +241,9 @@
       const b = document.createElement('button');
       const tag = s.key === state.data.anchor ? 'anchor' : s.mode;
       const warn = s.long ? ' style="color:#ff9c6e"' : ' style="opacity:.55"';
-      b.innerHTML = `<b>${s.key}</b> <span${warn}>${tag} · ${s.ar} · ${s.words}w`
-                  + `${s.long ? ' LONG' : ''}</span>`;
+      const tick = s.saved ? '<span style="color:#7fd17f">\u2713</span> ' : '';
+      b.innerHTML = `${tick}<b>${s.key}</b> <span${warn}>${tag} · ${s.ar} · `
+                  + `${s.words}w${s.long ? ' LONG' : ''}</span>`;
       b.style.cssText = 'text-align:left;background:#0f0c08;color:inherit;cursor:pointer;' +
         'border:1px solid ' + (state.shot === s.key ? '#f0b020' : '#c8900a33') +
         ';border-radius:6px;padding:5px 7px';
@@ -237,6 +252,28 @@
                           toast('prompt bar filled: ' + s.key); };
       box.appendChild(b);
     });
+  }
+
+  // A set with every shot on disk leaves the list. Derived from the files,
+  // so it happens by itself the moment the last image is saved and reverses
+  // itself if one is deleted; there is nothing to keep in sync by hand.
+  function fillSelect() {
+    const sel = $('#ty-slug');
+    const show = state.specs.filter(x => state.showDone || !x.done
+                                         || x.slug === state.slug);
+    sel.innerHTML = '';
+    show.forEach(x => sel.add(new Option(
+      x.done ? `\u2713 ${x.slug}` : `${x.slug} (${x.saved}/${x.total})`, x.slug)));
+    if (state.slug) sel.value = state.slug;
+    const hidden = state.specs.filter(x => x.done).length;
+    $('#ty-status').textContent = state.showDone
+      ? `${state.specs.length} specs`
+      : `${state.specs.length - hidden} open` + (hidden ? ` · ${hidden} done` : '');
+  }
+
+  async function refreshSpecs() {
+    state.specs = await api('GET', '/specs');
+    fillSelect();
   }
 
   async function loadSlug(slug, keepShot) {
@@ -268,6 +305,7 @@
         }
         if (!known && want.slug) toast(`"${want.slug}" is gone; showing ${slug}`, true);
       }
+      fillSelect();
     } catch (e) {
       $('#ty-status').textContent = 'offline';
       toast(e.message, true);

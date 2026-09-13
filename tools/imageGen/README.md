@@ -360,6 +360,26 @@ Three things measured on the live site (2026-09-13), all load-bearing:
   `<img>` is a 640 px webp thumbnail, so scraping its `src` would save a
   downscaled copy.
 
+### Finished sets leave the list by themselves
+
+A set is **done when every shot has an image beside its spec**, and the panel
+drops it from the NPC dropdown. Save the third image and the set disappears; the
+shot buttons carry a green tick as each one lands, so a half-finished NPC shows
+`harlen-doss (2/3)` and you can see which shot is missing.
+
+This is **derived from the files, never flagged by hand.** A stored flag would
+go stale the first time a shot was deleted or re-rolled; this reverses itself
+automatically. `shot_file()` looks under every extension the renderers produce,
+so a Seedream `.jpg` counts the same as a Midjourney `.png`.
+
+Two escape hatches. **Show finished sets** in the panel brings them all back,
+marked `✓`, for when you want to re-roll a shot in a set you had finished. And a
+spec may carry `"done": true` to opt out explicitly, for a set deliberately left
+part-rendered.
+
+The set you currently have selected stays in the dropdown even once it completes,
+so finishing an NPC never yanks the panel out from under you mid-session.
+
 ### The prompt bar is a React-controlled `<textarea>`
 
 Assigning `.value` updates the DOM but not React's state, so the text vanishes

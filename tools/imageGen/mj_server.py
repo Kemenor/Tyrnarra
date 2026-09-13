@@ -21,9 +21,9 @@ Run:
     python3 mj_server.py --port 9000 --root /path/to/repo
 
 Endpoints:
-    GET  /specs                 -> [{slug, path, shots:[key]}]
+    GET  /specs                 -> [{slug, shots:[key], saved, total, done}]
     GET  /prompts?slug=<slug>   -> {slug, shots:[{key, file, mode, ar, prompt}]}
-    POST /save {slug,shot,url}  -> {path}   downloads url into the spec's out dir
+    POST /save {slug,shot,data} -> {path}   writes base64 image into the spec dir
 
 Binds 127.0.0.1 only. It writes files and fetches URLs, so it has no business
 listening to anything but this machine.
@@ -105,8 +105,28 @@ def styled(spec, style):
     return fal_art.with_style(spec, style)
 
 
+def shot_file(out_dir, shot):
+    """The saved image for a shot, whatever extension it landed with, or None.
+
+    Mirrors fal_art.existing(): Seedream returns JPEG and Midjourney PNG, so a
+    shot asked for as <file>.png can be on disk under any of these.
+    """
+    for e in ("png", "jpg", "jpeg", "webp"):
+        f = os.path.join(out_dir, f"{shot['file']}.{e}")
+        if os.path.exists(f):
+            return f
+    return None
+
+
 def find_specs():
-    """Every <slug>.set.json under the GM notes, newest first."""
+    """Every <slug>.set.json under the GM notes, newest first.
+
+    Each carries how many of its shots are already saved. A set is DONE when
+    every shot has an image beside the spec, which is derived from the files
+    rather than flagged by hand: a flag would go stale the first time a shot was
+    deleted or re-rolled, and this cannot. A spec can still opt out explicitly
+    with "done": true, for a set deliberately left part-rendered.
+    """
     pat = os.path.join(ROOT, "published", "gm-notes", "**", "*.set.json")
     out = []
     for p in sorted(glob.glob(pat, recursive=True), key=os.path.getmtime,
@@ -117,8 +137,14 @@ def find_specs():
             continue                      # a spec mid-edit must not break the list
         if not spec.get("shots"):
             continue
+        d = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(p)),
+                                          spec.get("out", ".")))
+        shots = spec["shots"]
+        saved = sum(1 for s in shots.values() if shot_file(d, s))
         out.append({"slug": spec.get("slug") or os.path.basename(p)[:-9],
-                    "path": p, "shots": list(spec["shots"])})
+                    "path": p, "shots": list(shots),
+                    "saved": saved, "total": len(shots),
+                    "done": bool(spec.get("done")) or saved == len(shots)})
     return out
 
 
@@ -169,7 +195,7 @@ def build_prompts(slug, style=DEFAULT_STYLE):
     entry = spec_by_slug(slug)
     if not entry:
         return None
-    spec, _out = npc_art.load_spec(entry["path"])
+    spec, out_dir = npc_art.load_spec(entry["path"])
     spec = styled(spec, style)
     anchor = spec.get("anchor") or next(iter(spec["shots"]))
     shots = []
@@ -201,9 +227,11 @@ def build_prompts(slug, style=DEFAULT_STYLE):
         shots.append({
             "key": key, "file": shot["file"], "mode": mode, "ar": ar,
             "prompt": text, "words": words, "long": words > MJ_WORD_LIMIT,
+            "saved": bool(shot_file(out_dir, shot)),
         })
+    done = all(s["saved"] for s in shots)
     return {"slug": slug, "path": entry["path"], "anchor": anchor,
-            "out_dir": os.path.dirname(entry["path"]), "shots": shots}
+            "out_dir": out_dir, "shots": shots, "done": done}
 
 
 def save_image(slug, shot_key, b64):
@@ -257,7 +285,8 @@ class Handler(BaseHTTPRequestHandler):
         u = urllib.parse.urlparse(self.path)
         q = urllib.parse.parse_qs(u.query)
         if u.path == "/specs":
-            return self._send([{"slug": s["slug"], "shots": s["shots"]}
+            # Everything but the absolute path, which the browser has no use for.
+            return self._send([{k: v for k, v in s.items() if k != "path"}
                                for s in find_specs()])
         if u.path == "/prompts":
             slug = (q.get("slug") or [""])[0]
