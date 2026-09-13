@@ -18,6 +18,10 @@
     "  absent     not catalogued yet. The builder warns rather than guessing.",
     "",
     "Entries are short by design, 15 to 30 words. They are prepended to a spec's",
+    "  and see _midjourney_weak: some ancestries Midjourney renders badly no",
+    "  matter how they are described. The description still stands, because the",
+    "  other renderers use it; the anchor just has to come from one of them.",
+    "",
     "`character` text, so they compete with it for the ~150-word Midjourney",
     "budget, and the individual matters more than the species. A spec's own",
     "`character` may contradict the catalog freely: a regional kitsune should not",
@@ -32,17 +36,18 @@
     "athamaru, surki, yaksha, yaoguai, jotunborn, samsaran, sarangay, conrasu"
   ],
   "_verified": [
-    "Tested on Midjourney V8.2 with the name alone, 2026-09-14.",
+    "Tested on Midjourney V8.2, 2026-09-14.",
     "",
     "CONFIRMED name-is-enough (15): catfolk, dwarf, elf, goblin, halfling,",
     "hobgoblin, human, kitsune, kobold, lizardfolk, minotaur, orc, ratfolk,",
-    "skeleton, tengu. These are not assumptions any more.",
+    "skeleton, tengu. Not assumptions any more.",
     "",
-    "FAILED the name-alone test and now carry a description (4):",
-    "  centaur  the name alone rendered badly and inconsistently",
-    "  gnome    rendered a ceramic garden ornament",
-    "  merfolk  wrong",
-    "  sprite   wrong"
+    "FAILED on the name alone, FIXED by a description (3): gnome rendered a",
+    "ceramic garden ornament; merfolk and sprite were wrong. All three verified",
+    "correct with the catalog text.",
+    "",
+    "FAILED on the name AND on the description (1): centaur. See",
+    "_midjourney_weak."
   ],
   "human": "",
   "elf": "",
@@ -93,5 +98,8 @@
   "vishkanya": "fine jewel-toned scaling laid over otherwise human features, catching the light across the temples and the backs of the hands, eyes with a faint cold luminescence",
   "wayang": "a small shadow-touched folk, skin in flat greys and blacks that swallow light, angular features, no highlights anywhere on them",
   "yaksha": "a nature spirit wearing a person's shape, skin the colour of bark or river stone, small horns or budding growth at the brow",
-  "yaoguai": "a beast that became a person and kept the evidence: a mostly human shape carrying the ears, eyes or hands of the animal it was"
+  "yaoguai": "a beast that became a person and kept the evidence: a mostly human shape carrying the ears, eyes or hands of the animal it was",
+  "_midjourney_weak": {
+    "centaur": "Midjourney renders centaurs badly with or without the description, and adding one made it worse. Anchor on local FLUX and attach that to the prompt for the rest of the set, the way Harlen Doss and Aldous were done."
+  }
 }

@@ -432,6 +432,7 @@ def style_of(spec):
 
 
 _ANCESTRIES = None
+_MJ_WEAK = {}
 
 
 def ancestry_line(spec):
@@ -446,7 +447,7 @@ def ancestry_line(spec):
     contradict it freely, which is how a regional kitsune avoids being forced to
     look like every other kitsune.
     """
-    global _ANCESTRIES
+    global _ANCESTRIES, _MJ_WEAK
     name = (spec.get("ancestry") or "").strip().lower()
     if not name:
         return ""
@@ -454,8 +455,13 @@ def ancestry_line(spec):
         path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "ancestries.json")
         with open(path, encoding="utf-8") as fh:
-            _ANCESTRIES = {k: v for k, v in json.load(fh).items()
-                           if not k.startswith("_")}
+            raw = json.load(fh)
+        _MJ_WEAK = raw.get("_midjourney_weak", {})
+        _ANCESTRIES = {k: v for k, v in raw.items() if not k.startswith("_")}
+    if name in _MJ_WEAK:
+        # Said out loud at render time, because a note in a JSON file is a note
+        # nobody reads at the moment it would have helped.
+        print(f"  ! {name}: {_MJ_WEAK[name]}", file=sys.stderr, flush=True)
     if name not in _ANCESTRIES:
         print(f"  ! ancestry '{name}' is not in ancestries.json; sending the "
               f"name alone. Add an entry (\"\" if the name is enough).",
