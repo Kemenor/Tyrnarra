@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tyrnarra NPC helper for Midjourney
 // @namespace    tyrnarra
-// @version      1.3
+// @version      1.4
 // @description  Serve <slug>.set.json prompts into the Midjourney prompt bar, and save the open image into the spec's folder.
 // @match        https://www.midjourney.com/*
 // @grant        GM_xmlhttpRequest
@@ -42,6 +42,22 @@
   'use strict';
 
   const API = 'http://127.0.0.1:8765';
+  const MEM = 'tyrnarra-mj-selection';
+
+  // Remember which NPC and shot were selected. Without this the panel falls
+  // back to the first spec the server lists, and the server lists them by FILE
+  // MODIFICATION TIME - so the default silently moves to whichever spec was
+  // edited last. Reload the page mid-session and you can be pointed at a
+  // different character while believing you are still on the old one, which is
+  // exactly the kind of mistake that ends with one NPC's art saved under
+  // another's name.
+  const remember = () => {
+    try { localStorage.setItem(MEM, JSON.stringify({ slug: state.slug, shot: state.shot })); }
+    catch (e) { /* private window, or storage disabled: selection just will not persist */ }
+  };
+  const recall = () => {
+    try { return JSON.parse(localStorage.getItem(MEM)) || {}; } catch (e) { return {}; }
+  };
   const state = { slug: null, shot: null, data: null, style: 'none' };
 
   // ---------------------------------------------------------------- transport
@@ -217,14 +233,16 @@
         'border:1px solid ' + (state.shot === s.key ? '#f0b020' : '#c8900a33') +
         ';border-radius:6px;padding:5px 7px';
       b.onclick = () => { state.shot = s.key; fillPrompt(s.prompt); renderShots();
-                          refreshSaveButton();
+                          refreshSaveButton(); remember();
                           toast('prompt bar filled: ' + s.key); };
       box.appendChild(b);
     });
   }
 
-  async function loadSlug(slug) {
-    state.slug = slug; state.shot = null;
+  async function loadSlug(slug, keepShot) {
+    state.slug = slug;
+    if (!keepShot) state.shot = null;
+    remember();
     state.data = await api('GET', '/prompts?slug=' + encodeURIComponent(slug)
                            + '&style=' + state.style);
     renderShots();
@@ -237,7 +255,19 @@
       const sel = $('#ty-slug');
       specs.forEach(s => sel.add(new Option(s.slug, s.slug)));
       sel.onchange = () => loadSlug(sel.value);
-      if (specs.length) await loadSlug(specs[0].slug);
+      const want = recall();
+      const known = specs.some(x => x.slug === want.slug);
+      const slug = known ? want.slug : (specs[0] && specs[0].slug);
+      if (slug) {
+        sel.value = slug;
+        await loadSlug(slug, known);
+        // only restore the shot if it still exists in this spec
+        if (known && want.shot && state.data.shots.some(x => x.key === want.shot)) {
+          state.shot = want.shot;
+          renderShots();
+        }
+        if (!known && want.slug) toast(`"${want.slug}" is gone; showing ${slug}`, true);
+      }
     } catch (e) {
       $('#ty-status').textContent = 'offline';
       toast(e.message, true);

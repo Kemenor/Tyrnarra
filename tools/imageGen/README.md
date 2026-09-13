@@ -322,6 +322,15 @@ button polls twice a second rather than patching `history.pushState`, which also
 catches back/forward and anything the app does internally, and reports its own
 state (`open an image` / `pick a shot` / `save as <file>`).
 
+**The selected NPC and shot persist across reloads** (`localStorage`, v1.4).
+This is a safety feature, not a convenience: `find_specs` lists specs by file
+modification time, so before v1.4 the panel's default moved to whichever spec
+was edited last. Reloading mid-session could silently repoint you at a different
+character while you believed you were still on the old one, and the first sign
+would be one NPC's art saved under another's filename. If the remembered NPC has
+since disappeared from the roster, the panel says so rather than quietly
+choosing another.
+
 Three things measured on the live site (2026-09-13), all load-bearing:
 
 - **The server cannot download the images.** `cdn.midjourney.com` serves a page
