@@ -78,15 +78,26 @@ what it looks like and guessed wrong.
 
 Name the muscles instead. What that sentence was reaching for was:
 
-> His eyebrows are raised and drawn together at the inner ends, creasing the
-> middle of his forehead. A small closed-mouth smile, the corners of the mouth
-> turned slightly up, the lips pressed and strained. The eyes above it are
-> worried and uncrinkled.
+> A wide warm open smile, cheeks lifted, the easy smile of a habitually
+> cheerful man. Above it his eyebrows are raised and drawn hard together at the
+> inner ends, deeply creasing the middle of his forehead, and his eyes are wide
+> and frightened, glassy and unsteady.
 
-The mask reads as a mask because the **mouth and the eyes are given
-contradictory instructions**. That contradiction is the whole effect, and it has
-to be stated, because "does not reach his eyes" only carries it for a reader who
-already knows the idiom.
+The mask reads as a mask because the **features are given contradictory
+instructions**. That contradiction is the whole effect, and it has to be stated,
+because "does not reach his eyes" only carries it for a reader who already knows
+the idiom.
+
+**Work out which feature actually carries the tell.** Two drafts of this failed
+by weakening the smile: "a smile that does not reach his eyes", then "a small
+closed-mouth smile, the lips pressed and strained". Both were wrong about the
+character. Harlen is a cheerful man *trying to be cheerful*, so the smile is
+wide and genuine and the fear is entirely above it, in the eyes and harder still
+in the brow. Weakening the mouth produced a man who was visibly not-smiling,
+which is a different person.
+
+Ask the author which feature betrays him and which feature is doing its job. Do
+not assume the tell is spread evenly across the face; it usually is not.
 
 Same trap in a different coat: *composed*, *guarded*, *haunted*, *steely*,
 *kind-faced*. Each is a conclusion a viewer draws. Give the features that make
