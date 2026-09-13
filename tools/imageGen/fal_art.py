@@ -105,7 +105,24 @@ BACKENDS = {
         "extra": {},
         "note": "won the 2026-09-13 bake-off; best style match, highest res, cheapest",
     },
+    "seedream45": {
+        # Point release on the model that won the trial, not a new
+        # architecture. Flat $0.04, up to 10 refs, up to 2048x2048.
+        "t2i": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "edit": "fal-ai/bytedance/seedream/v4.5/edit",
+        "size": _size_flux,
+        "max_refs": 10,
+        "price": {"t2i": 0.040, "edit": 0.040},
+        "extra": {},
+        "note": "v4's successor; a penny more, faster, higher ceiling",
+    },
 }
+
+# Seedream 5 (pro and lite) was evaluated and REJECTED (2026-09-13): on Caevan
+# it all but erased the jewel-toned scaling that makes him read as Vishkanya,
+# invented a stone-hall background against an explicit "uncluttered", and came
+# back flatter and greyer than v4 at 4.5x the price. It also takes no seed
+# input, so its shots cannot be pinned for comparison. Newer was worse here.
 DEFAULT_MODEL = "seedream4"
 
 # Nano Banana Pro was evaluated and REJECTED (2026-09-13): it held identity
@@ -224,7 +241,7 @@ def data_uri(path):
     return f"data:{mime};base64," + base64.b64encode(open(path, "rb").read()).decode()
 
 
-def submit(endpoint, args, key, label, timeout=900):
+def submit(endpoint, args, key, label, timeout=900, metrics=None):
     """Queue one job and wait for it. Returns the result JSON.
 
     Polls the status_url fal hands back rather than rebuilding the path: model
@@ -247,6 +264,12 @@ def submit(endpoint, args, key, label, timeout=900):
             continue                                # transient; keep polling
         state = st.get("status")
         if state == "COMPLETED":
+            if metrics is not None:
+                # fal reports the GPU time it actually spent. The gap between
+                # this and our wall clock is queue wait + transfer, which is
+                # the part that varies with fal's load rather than with the
+                # model, and the part a single sample can badly misrepresent.
+                metrics["infer_s"] = (st.get("metrics") or {}).get("inference_time")
             # COMPLETED means the job left the queue, NOT that it succeeded: a
             # validation or policy rejection surfaces as a 4xx with the reason
             # in the body of the result fetch.
@@ -268,9 +291,27 @@ def submit(endpoint, args, key, label, timeout=900):
             raise FalError(f"{label}: timed out after {timeout // 60} min")
 
 
+_MAGIC = ((b"\x89PNG\r\n\x1a\n", "png"), (b"\xff\xd8\xff", "jpg"),
+          (b"RIFF", "webp"))
+
+
 def download(url, dest):
-    with urllib.request.urlopen(url, timeout=300) as r, open(dest, "wb") as fh:
-        fh.write(r.read())
+    """Write the image, naming it for what it ACTUALLY is. Returns the path.
+
+    Seedream has no `output_format` input and ignores the one we send, so it
+    returns JPEG however politely we ask for PNG. Writing those bytes to a
+    .png is a lie that breaks downstream: bake_token.py chroma-keys ring art
+    and composites portraits expecting real PNG with alpha. Sniff the magic
+    bytes and use the true extension instead.
+    """
+    with urllib.request.urlopen(url, timeout=300) as r:
+        data = r.read()
+    ext = next((e for sig, e in _MAGIC if data.startswith(sig)), None)
+    if ext and not dest.lower().endswith("." + ext):
+        dest = os.path.splitext(dest)[0] + "." + ext
+    with open(dest, "wb") as fh:
+        fh.write(data)
+    return dest
 
 
 def first_url(res, label):
@@ -281,6 +322,32 @@ def first_url(res, label):
 
 
 # ----------------------------------------------------------------- spend
+
+class Pace:
+    """Per-shot timings for a pass, printed at the end.
+
+    The comparison this exists for: the local renderer takes ~220 s per image
+    warm, plus a multi-minute cold model load, which is why npc_art renders a
+    whole set in ONE graph. Compare set against set, not image against image.
+    """
+
+    def __init__(self):
+        self.rows = []          # (label, wall_seconds, fal_inference_seconds)
+
+    def add(self, label, wall, infer):
+        self.rows.append((label, wall, infer))
+
+    def report(self):
+        if not self.rows:
+            return
+        total = sum(w for _, w, _ in self.rows)
+        for label, wall, infer in self.rows:
+            got = f"{infer:.1f}s gpu" if infer else "gpu time not reported"
+            print(f"      {label}: {wall:.1f}s wall ({got})", flush=True)
+        n = len(self.rows)
+        print(f"  {total:.0f}s for {n} shot(s), {total / n:.0f}s/shot avg "
+              f"(local FLUX.2 is ~220s/image warm)", flush=True)
+
 
 class Spend:
     """Running cost estimate for one pass, printed at the end. Cheap insurance
@@ -301,7 +368,7 @@ class Spend:
 # ----------------------------------------------------------------- render
 
 def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
-                dry_run=False, label="shot"):
+                dry_run=False, label="shot", pace=None):
     """One shot. With ref_path it is an edit referencing that image (identity
     carries over); without, a fresh text-to-image."""
     b = backend(model)
@@ -318,10 +385,16 @@ def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
             "output_format": "png"}
     args.update(b["size"](size))
     args.update(b.get("extra", {}))             # per-backend flags, e.g. safety
+    for k in b.get("omit", ()):                 # fields this backend has no input for
+        args.pop(k, None)
     if is_edit:
         args["image_urls"] = [data_uri(ref_path)]
-    return first_url(submit(b["edit"] if is_edit else b["t2i"], args, key, label),
-                     label)
+    metrics, t0 = {}, time.monotonic()
+    res = submit(b["edit"] if is_edit else b["t2i"], args, key, label,
+                 metrics=metrics)
+    if pace is not None:
+        pace.add(label, time.monotonic() - t0, metrics.get("infer_s"))
+    return first_url(res, label)
 
 
 def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False,
@@ -340,20 +413,21 @@ def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False
     seed = seed if seed is not None else int.from_bytes(os.urandom(4), "big")
     vdir = os.path.join(out_dir, "variations")
     os.makedirs(vdir, exist_ok=True)
-    spend, paths = Spend(model), []
+    spend, pace, paths = Spend(model), Pace(), []
     print(f"  {count} variations on {model} (base seed {seed}) ...", flush=True)
     for i in range(count):
         lbl = f"v{i + 1}"
         url = render_shot(spec, anchor, model, key, seed + i, dry_run=dry_run,
-                          label=lbl)
+                          label=lbl, pace=pace)
         spend.add("t2i")
         if dry_run:
             continue
         dest = os.path.join(vdir, f"{spec.get('slug', 'npc')}-{lbl}.png")
-        download(url, dest)
+        dest = download(url, dest)
         paths.append(dest)
         print(f"        -> {dest}", flush=True)
     spend.report()
+    pace.report()
     if not dry_run and write_meta:
         npc_art.save_render_meta(spec_path, spec, variations_seed=seed,
                                  variations_count=count, variations_model=model)
@@ -381,7 +455,7 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
     seed = (seed if seed is not None
             else spec.get("render", {}).get("set_seed")
             or int.from_bytes(os.urandom(4), "big"))
-    spend, out = Spend(model), {}
+    spend, pace, out = Spend(model), Pace(), {}
 
     def dest_of(k):
         return os.path.join(out_dir, f"{shots[k]['file']}.png")
@@ -407,10 +481,11 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
         print(f"  anchor {anchor_key} "
               f"[{'variation-ref' if ref else 'text'}] ...", flush=True)
         url = render_shot(spec, shots[anchor_key], model, key, seed, ref_path=ref,
-                          dry_run=dry_run, label=f"anchor {anchor_key}")
+                          dry_run=dry_run, label=f"anchor {anchor_key}",
+                          pace=pace)
         spend.add("edit" if ref else "t2i")
         if not dry_run:
-            download(url, anchor_dest)
+            anchor_dest = download(url, anchor_dest)
             print(f"        -> {anchor_dest}", flush=True)
             out[anchor_key] = anchor_dest
     elif anchor_key in want:
@@ -432,7 +507,7 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
             url = render_shot(spec, shots[k], model, key, seed,
                               ref_path=anchor_dest if m == "ref" else None,
                               extra=scene_extra if k == "scene" else "",
-                              dry_run=dry_run, label=f"shot {k}")
+                              dry_run=dry_run, label=f"shot {k}", pace=pace)
         except FalError as e:
             # Keep going: a refused portrait should not cost us the scene shot.
             print(f"        ! {e}", file=sys.stderr, flush=True)
@@ -441,11 +516,12 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
         spend.add("edit" if m == "ref" else "t2i")
         if dry_run:
             continue
-        download(url, dest_of(k))
-        print(f"        -> {dest_of(k)}", flush=True)
-        out[k] = dest_of(k)
+        written = download(url, dest_of(k))
+        print(f"        -> {written}", flush=True)
+        out[k] = written
 
     spend.report()
+    pace.report()
     if refused:
         print(f"  ! {len(refused)} shot(s) refused by fal: {', '.join(refused)}. "
               f"Render these locally (npc_art.py has no content checker).",
@@ -480,7 +556,7 @@ def upscale(spec_path, scale=2, only=None, dry_run=False, model="fal-ai/esrgan")
         res = submit(model, {"image_url": data_uri(src), "scale": scale}, key,
                      f"upscale {k}")
         dest = os.path.join(out_dir, f"{s['file']}-{scale}x.png")
-        download(first_url(res, f"upscale {k}"), dest)
+        dest = download(first_url(res, f"upscale {k}"), dest)
         print(f"        -> {dest}", flush=True)
         done[k] = dest
     return done
@@ -501,10 +577,17 @@ def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False,
     seed = seed if seed is not None else int.from_bytes(os.urandom(4), "big")
     results = {}
     for m in models:
-        backend(m)                                   # fail fast on a typo
+        b = backend(m)                               # fail fast on a typo
         d = os.path.join(spec_out, subdir, m)
         os.makedirs(d, exist_ok=True)
-        print(f"\n=== {m} ({BACKENDS[m]['note']}) -> {d}", flush=True)
+        print(f"\n=== {m} ({b['note']}) -> {d}", flush=True)
+        if "seed" in b.get("omit", ()):
+            # Say it out loud: the pinned seed is the thing that makes a
+            # bake-off a comparison rather than three separate rolls, and this
+            # backend simply has no seed input to pin.
+            print(f"    (note: {m} takes no seed; its shots are an unpinned "
+                  f"roll, so judge style and identity, not framing luck)",
+                  flush=True)
         if draft:
             variations(spec_path, count=1, seed=seed, model=m, dry_run=dry_run,
                        out_dir=d, write_meta=False, style=style)
@@ -557,6 +640,13 @@ def _dispatch(a):
         return
     if not a.spec:
         sys.exit(f"{a.stage} needs --spec")
+    if a.subdir != "falai" and a.stage != "bakeoff":
+        # Caught this the hard way: --subdir looks like "put the output over
+        # there" and is bakeoff-only, so a `set` carrying it writes straight
+        # into the spec's own directory, on top of the approved art.
+        sys.exit("--subdir only applies to bakeoff. For a throwaway render "
+                 "elsewhere, copy the spec into a scratch directory and run "
+                 "against the copy.")
     only = set(s.strip() for s in a.only.split(",")) if a.only else None
     if a.stage == "variations":
         variations(a.spec, a.count, a.seed, a.model, a.dry_run, style=a.style)
