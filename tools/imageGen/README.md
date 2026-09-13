@@ -207,8 +207,8 @@ under `digital` but flatter, greyer, 768×1024, and it renders ancestry markers
 (Caevan's jewel-toned scaling) as plain grey. Both rejected models are described
 in the `BACKENDS` comments with the reasons.
 
-Sample set: `published/gm-notes/furrious-five/assets/portraits/fal-trial/`
-(untracked; trial art, not approved art).
+Sample set: `~/Documents/tyrnarra-art-trials/seedream45-bakeoff-2026-09-13/`
+(kept outside the repo: trial art, not approved art).
 
 ### Speed, measured 2026-09-13
 

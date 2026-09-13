@@ -46,17 +46,35 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
     npc-block.md              ← NPC definition standard: 3 depths (Cardboard/Semi/Full) + Level/Skills off Table 2-3
   <campaign>/                 ← e.g. furrious-five/
     index.html                ← campaign hub (links the town notes, dossiers, quests)
-    <town>-gm.html            ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
-    <location>-gm.html        ← location dossiers (floorplans + stat blocks + secrets + hooks)
+    <town>/                   ← per-town folder, e.g. millhaven/
+      <town>-gm.html          ← GM town notes (read-aloud, tone, districts, council, NPCs, rumours)
+      <location>-gm.html      ← its districts and venues (floorplans, stat blocks, secrets)
+      <npc>-gm.html           ← dossiers for NPCs who belong to the PLACE, not to a quest
+      art/                    ← their portrait art + <slug>.set.json specs (committed)
     quest-<slug>/             ← per-quest folder (one per adventure module)
       quest-<slug>.html       ← the module page (folder-named, like settlements)
       quest-<slug>.foundry.json / .foundry.macro.js   ← Foundry import spec + generated macro
       quest-<slug>.portraits.json / .token-map.json   ← NPC portrait prompts + actor→frame map
-    assets/maps/              ← downsized web map copies (committed)
-      _full/                  ← FULL-RES originals, gitignored — see "Map assets" below
-    assets/portraits/         ← generated NPC portrait art (committed)
-    assets/tokens/            ← baked token art (portrait + frame, committed)
+      art/                    ← the quest cast's art + specs (committed)
+      maps/                   ← downsized web map copies (committed)
+        _full/                ← FULL-RES originals, gitignored, see "Map assets" below
+      tokens/                 ← baked token art (portrait + frame, committed)
 ```
+
+**Everything lives beside the thing it belongs to.** A campaign-wide
+`assets/portraits/` was tried and abandoned (2026-09): with three quests running
+it became one flat folder holding three unrelated casts, and nothing in a
+filename said which adventure an NPC came from.
+
+The split follows one question: **is this NPC tied to a place, or to an
+adventure?** A recurring innkeeper belongs to his town's folder and outlives any
+quest; a quest's cast belongs to the quest. The folder tree mirrors the
+`gm-nav.js` tree, so a page's place in the menu and its place on disk agree.
+
+Sub-splitting is **earned, not pre-built**. Millhaven holds its town page, its
+two districts and its two dossiers in one folder because that is still readable;
+split a location into its own sub-folder when it grows enough to clutter, not
+before.
 
 The player-facing tree mirrors the same shape, with player chrome instead of GM chrome:
 
@@ -116,7 +134,7 @@ tool you can run against any quest. Verified live on Foundry VTT 14.363 / pf2e
 ## Map assets (subscription battlemaps stay local)
 
 Subscription battlemaps (the user's CzePeku / Tom Cartos subscriptions, etc.) **must not be published**. Convention:
-- Full-resolution originals (and any full downloaded pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/assets/maps/_full/`**, which is **gitignored** (`.gitignore`: `published/gm-notes/**/_full/`). They stay on local disk only and never reach GitHub.
+- Full-resolution originals (and any full downloaded pack folder, which often bundles extra art and Foundry module files) live in **`<campaign>/quest-<slug>/maps/_full/`**, which is **gitignored** (`.gitignore`: `published/gm-notes/**/_full/`). They stay on local disk only and never reach GitHub.
 - The user supplies the full-res; **Claude generates the downsized ~800px web copy** (degraded reference, useless at table resolution) that sits directly in `maps/` and *is* committed; the page references that. ImageMagick does it in one line: `magick "<_full>/<original>" -resize 800x "<maps>/<slug>.webp"` (the committed maps are 800px-wide). Any subscription art a user drops loose in `maps/` should be moved into `_full/` before staging.
 
 If you ever find a full-res original tracked outside `_full/`, untrack it (`git rm --cached`) and, for true removal, scrub it from history — subscription art on a public repo is the thing to avoid.

@@ -40,7 +40,7 @@ One driver at a time. **Never run two**; the machine has no headroom for it.
 
 ```bash
 cd tools/imageGen
-P=../../published/gm-notes/furrious-five/assets/portraits
+P=../../published/gm-notes/furrious-five/quest-veldtmark/art
 
 # Veldtmark's portrait, in ref mode this time (fixes the mismatched face)
 python3 npc_art.py set --spec $P/caevan-veldtmark.set.json --draft 4 --only portrait
