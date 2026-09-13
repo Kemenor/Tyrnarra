@@ -263,16 +263,30 @@ the one this flow wants), *Style reference*, and *Image Prompts*.
 Midjourney shows a **"Long Prompt"** warning past roughly 150 words. Measured by
 bisection on the live prompt bar (2026-09-13): 148 words is clean, 152 warns.
 
-`npc_art.prompt_for` repeats `character` and `wardrobe` in every shot. That is
-right for fal, whose edit endpoint leans on the words, and wrong here: the
-attached image *is* the identity, so the description is redundant and it was
-most of a 175-word prompt. `ref_prompt()` builds ref shots from the KEEP clause,
-the framing, and a shortened recompose line only.
+**A ref shot's prompt is its framing and nothing else.** The attached image is
+the identity, so everything that restates the identity is dead weight:
 
-Result on this roster: ref shots fell from ~175 words to 61–76, anchors sit at
-105–125, and no shot trips the warning. Every shot in the `/prompts` response
-carries `words` and `long`, and the panel prints the count and flags anything
-over budget.
+- `character` + `wardrobe`, which `npc_art.prompt_for` repeats in every shot.
+  Right for fal, whose edit endpoint leans on the words; redundant here, and it
+  was most of a 175-word prompt.
+- `npc_art.KEEP` ("keep the exact same character…"), which restates what
+  attaching a reference already means.
+- The recompose line. **Note this one was empirical on fal, not decorative:**
+  without it, FLUX and Seedream returned the anchor's three-quarter body for a
+  portrait that asked for head-and-shoulders. Midjourney's Edit Model is
+  instruction-driven and may not need it. **If Midjourney ref shots start coming
+  back with the anchor's crop instead of the framing's, put it back first** —
+  the exact wording is in `ref_prompt()`'s docstring.
+
+Result on this roster: ref shots fell from ~175 words to **24–39**, anchors sit
+at 105–125, and nothing trips the warning. Every shot in the `/prompts` response
+carries `words` and `long`; the panel prints the count and flags anything over
+budget.
+
+The anchors are the remaining exposure: at 105–125 words they have ~25 to spare,
+and an NPC with a richer `character` paragraph will cross the line on the
+full-body shot. The compaction trick cannot help there, since an anchor has no
+reference to lean on.
 
 - **Same prompts as the other two renderers.** It builds through
   `npc_art.prompt_for` with `fal_art`'s `RECOMPOSE`, so Midjourney art comes out

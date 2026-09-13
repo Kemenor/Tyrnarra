@@ -128,28 +128,32 @@ MJ_WORD_LIMIT = 150
 
 
 def ref_prompt(spec, shot, style):
-    """The compact prompt for a shot whose anchor is ATTACHED TO PROMPT.
+    """The prompt for a shot whose anchor is ATTACHED TO PROMPT: the framing,
+    and nothing else.
 
     Deliberately NOT npc_art.prompt_for. That builder repeats `character` and
     `wardrobe` in every shot, which is right for fal (its edit endpoint leans on
-    the words) and wrong here: Midjourney's Edit Model takes the attached image
-    as the identity, so the description is redundant, and on this NPC roster it
-    is most of a 175-word prompt against a ~150-word budget.
+    the words) and wrong here: the attached image IS the identity, so describing
+    the character again is redundant, and on this roster it was most of a
+    175-word prompt against a ~150-word budget.
 
-    What survives is the part the attached image cannot express: keep this
-    character, frame it like THIS, and recompose rather than copying the
-    reference's composition.
+    Two clauses that fal needs are also gone, for the same reason:
+
+    * npc_art.KEEP ("keep the exact same character ...") - restating what
+      attaching a reference already means.
+    * A recompose instruction. NOTE this one was empirical on fal, not
+      decorative: without it, FLUX and Seedream returned the anchor's
+      three-quarter body for a portrait shot that asked for head-and-shoulders
+      (measured on Odo Mast). Midjourney's Edit Model is instruction-driven and
+      may not need it. IF Midjourney ref shots start coming back with the
+      anchor's crop instead of the framing's, this is the first thing to put
+      back: "Use the attached image for identity only, never for composition:
+      the framing above wins."
     """
-    parts = [npc_art.KEEP, shot["framing"], RECOMPOSE_MJ]
+    parts = [shot["framing"]]
     if style != "none":
         parts.append(fal_art.resolve_style(style))
     return " ".join(p.strip() for p in parts if p and p.strip())
-
-
-# Shorter than fal_art.RECOMPOSE, saying the same thing: the words are competing
-# for a word budget here in a way they are not on fal.
-RECOMPOSE_MJ = ("Use the attached image for identity only, never for "
-                "composition: the framing above wins.")
 
 
 def build_prompts(slug, style=DEFAULT_STYLE):
