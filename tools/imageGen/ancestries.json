@@ -61,7 +61,14 @@
     "FOURTH STATE, null: this ancestry has no generic look at all. A poppet is",
     "whatever it was sewn to be, so there is nothing true to say about poppets",
     "in general; the builder sends nothing and tells the spec to describe this",
-    "one in full. Distinct from \"\", which says the name carries it."
+    "one in full. Distinct from \"\", which says the name carries it.",
+    "",
+    "GENRE ANCHOR: an ancestry whose NAME belongs to another genre can be fixed",
+    "by naming this one, not by describing features. android drags toward",
+    "science fiction, so \"a medieval fantasy android\" works where every",
+    "feature-level attempt failed: plain humans when the tells were subtle, full",
+    "machines when they were not. Reach for this when a failure looks like the",
+    "wrong SETTING rather than the wrong creature."
   ],
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
@@ -236,7 +243,12 @@
     "register, but half the grid came back as plain humans, so it is a coin",
     "flip rather than a pass. Retesting with one quiet tell, \"fine synthetic",
     "seams on the skin\", avoiding circuitry and glowing, which were the words",
-    "that overshot into full machines."
+    "that overshot into full machines.",
+    "",
+    "android CONFIRMED as \"a medieval fantasy android\". Four attempts to",
+    "describe its features failed in both directions before the actual problem",
+    "turned out to be genre: the word pulls to science fiction, and two words of",
+    "setting fix what no amount of seams and circuitry could."
   ],
   "human": "",
   "elf": "",
@@ -258,7 +270,7 @@
   "skeleton": "",
   "sprite": "a tiny fey no taller than a hand, translucent insect wings, sharp delicate features, built to the scale of a flower",
   "anadi": "a human-sized spider with bright distinctive colour markings",
-  "android": "an android with fine synthetic seams on the skin",
+  "android": "a medieval fantasy android",
   "athamaru": "a sea-dwelling folk, sleek skin in deep blue-grey, webbed fingers, a low finned crest instead of hair, wide dark eyes",
   "automaton": "a humanoid construct",
   "awakened animal": null,
@@ -339,7 +351,8 @@
       "leshy",
       "leshy-fungus",
       "leshy-cactus",
-      "leshy-lotus"
+      "leshy-lotus",
+      "android"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -359,7 +372,6 @@
     "untested": [
       "anadi",
       "anadi-human",
-      "android",
       "athamaru",
       "conrasu",
       "fetchling",
