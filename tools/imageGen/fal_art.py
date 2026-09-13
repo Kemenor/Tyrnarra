@@ -148,6 +148,15 @@ def _get(url, key, timeout=60):
     return json.load(urllib.request.urlopen(req, timeout=timeout))
 
 
+def _http_detail(e):
+    """fal puts the useful part (which field it disliked, and why) in the
+    RESPONSE BODY of a 4xx, not in the status line. Read it or debug blind."""
+    try:
+        return e.read().decode()[:900]
+    except Exception:
+        return "<no body>"
+
+
 def data_uri(path):
     """Reference images travel inline as base64. Avoids fal's upload endpoint
     (and therefore the fal-client dependency) at the cost of a fatter request;
@@ -166,8 +175,8 @@ def submit(endpoint, args, key, label, timeout=900):
     try:
         sub = _post(f"{QUEUE}/{endpoint}", args, key)
     except urllib.error.HTTPError as e:
-        sys.exit(f"{label}: fal rejected the request ({e.code}): "
-                 f"{e.read().decode()[:600]}")
+        sys.exit(f"{label}: fal rejected the submit ({e.code}) on {endpoint}: "
+                 f"{_http_detail(e)}")
     status_url, result_url = sub["status_url"], sub["response_url"]
     t0 = last = time.time()
     while True:
@@ -179,7 +188,14 @@ def submit(endpoint, args, key, label, timeout=900):
             continue                                # transient; keep polling
         state = st.get("status")
         if state == "COMPLETED":
-            return _get(result_url, key, timeout=120)
+            # COMPLETED means the job left the queue, NOT that it succeeded: a
+            # validation or policy rejection surfaces as a 4xx with the reason
+            # in the body of the result fetch.
+            try:
+                return _get(result_url, key, timeout=120)
+            except urllib.error.HTTPError as e:
+                sys.exit(f"{label}: fal returned no result ({e.code}) from "
+                         f"{endpoint}: {_http_detail(e)}")
         if state in ("FAILED", "ERROR"):
             sys.exit(f"{label}: render failed: {json.dumps(st)[:600]}")
         if now - last >= 20:                        # same heartbeat habit as npc_art
@@ -249,7 +265,7 @@ def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
 
 
 def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False,
-               out_dir=None):
+               out_dir=None, write_meta=True):
     """N takes on the anchor shot, for the user to pick from.
 
     Default 2 here rather than npc_art's 1: hosted models actually move between
@@ -277,14 +293,15 @@ def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False
         paths.append(dest)
         print(f"        -> {dest}", flush=True)
     spend.report()
-    if not dry_run:
+    if not dry_run and write_meta:
         npc_art.save_render_meta(spec_path, spec, variations_seed=seed,
                                  variations_count=count, variations_model=model)
     return paths
 
 
 def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
-               seed=None, model=DEFAULT_MODEL, dry_run=False, out_dir=None):
+               seed=None, model=DEFAULT_MODEL, dry_run=False, out_dir=None,
+               write_meta=True):
     """Anchor first, then every other shot referencing it.
 
     Identity chain, same as npc_art: the chosen variation anchors the anchor
@@ -360,7 +377,7 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
         out[k] = dest_of(k)
 
     spend.report()
-    if not dry_run:
+    if not dry_run and write_meta:
         npc_art.save_render_meta(
             spec_path, spec, set_seed=seed, set_model=model,
             chosen_variation=draft or spec.get("render", {}).get("chosen_variation"))
@@ -396,11 +413,15 @@ def upscale(spec_path, scale=2, only=None, dry_run=False, model="fal-ai/esrgan")
     return done
 
 
-def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False):
-    """The same spec through several models, into <out>/bakeoff/<model>/.
+def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False,
+            subdir="falai"):
+    """The same spec through several models, into <out>/<subdir>/<model>/.
 
-    Writes nowhere near the committed art, and pins ONE seed across all models
-    so the comparison is of the models and not of the dice.
+    Two deliberate properties. It pins ONE seed across every model, so the
+    comparison is of the models and not of the dice. And it writes NO render
+    metadata back into the spec: a bake-off is a comparison, not an approved
+    render, and the specs it reads are live files another session may be
+    editing.
     """
     models = models or list(BACKENDS)
     spec, spec_out = npc_art.load_spec(spec_path)
@@ -408,16 +429,17 @@ def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False):
     results = {}
     for m in models:
         backend(m)                                   # fail fast on a typo
-        d = os.path.join(spec_out, "bakeoff", m)
+        d = os.path.join(spec_out, subdir, m)
         os.makedirs(d, exist_ok=True)
         print(f"\n=== {m} ({BACKENDS[m]['note']}) -> {d}", flush=True)
         if draft:
             variations(spec_path, count=1, seed=seed, model=m, dry_run=dry_run,
-                       out_dir=d)
+                       out_dir=d, write_meta=False)
         results[m] = render_set(spec_path, draft=draft, seed=seed, model=m,
-                                dry_run=dry_run, out_dir=d, force=True)
+                                dry_run=dry_run, out_dir=d, force=True,
+                                write_meta=False)
     print(f"\nBake-off seed {seed}. Compare the sets under "
-          f"{os.path.join(spec_out, 'bakeoff')}/.", flush=True)
+          f"{os.path.join(spec_out, subdir)}/.", flush=True)
     return results
 
 
@@ -432,6 +454,8 @@ def main():
     ap.add_argument("--model", default=DEFAULT_MODEL,
                     help=f"backend ({', '.join(BACKENDS)}); default {DEFAULT_MODEL}")
     ap.add_argument("--models", help="bakeoff: comma-separated backends.")
+    ap.add_argument("--subdir", default="falai",
+                    help="bakeoff: output folder under the spec's out dir.")
     ap.add_argument("--count", type=int, default=2, help="variations to render.")
     ap.add_argument("--seed", type=int)
     ap.add_argument("--draft", type=int, help="set: chosen variation number.")
@@ -460,7 +484,7 @@ def main():
         upscale(a.spec, a.scale, only, a.dry_run)
     elif a.stage == "bakeoff":
         models = [m.strip() for m in a.models.split(",")] if a.models else None
-        bakeoff(a.spec, models, a.draft, a.seed, a.dry_run)
+        bakeoff(a.spec, models, a.draft, a.seed, a.dry_run, a.subdir)
 
 
 if __name__ == "__main__":

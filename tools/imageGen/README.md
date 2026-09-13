@@ -97,9 +97,12 @@ python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4]
 - **Every pass prints a cost estimate.** It is an *estimate* from a hardcoded
   per-image table; fal moves prices without notice, so the dashboard is the
   authority. The number is there to answer "cents or dollars", not to bill.
-- `bakeoff` renders one spec through several models into `<out>/bakeoff/<model>/`,
-  pinning **one seed across all of them** so the comparison is of the models and
-  not of the dice. It writes nowhere near the committed art.
+- `bakeoff` renders one spec through several models into `<out>/falai/<model>/`
+  (`--subdir` to change it), pinning **one seed across all of them** so the
+  comparison is of the models and not of the dice. It writes nowhere near the
+  committed art and writes **no** `render` metadata back into the spec: a
+  comparison is not an approved render, and the specs it reads are live files
+  another session may be editing.
 - **Sizes differ slightly from local.** fal's `portrait_4_3` preset is 768×1024;
   `npc_art.SIZES` maps the same name to 896×1184. Same aspect, ~30% fewer pixels.
   Fine for comparison, worth knowing before mixing outputs in one set.
@@ -112,8 +115,43 @@ Key: `FAL_KEY` in the environment, else `../keys/falai.key`. The whole
 in there cannot be committed whatever it is named.
 
 Validated 2026-09-13: `models`, `--dry-run` prompt assembly (byte-identical to
-the local builder), and one real `variations` render end to end (auth, queue
-polling, download, spec write-back).
+the local builder), and full three-model bake-offs end to end (auth, queue
+polling, data-URI references, download, spec write-back).
+
+### The content checker rejects wounded reference images
+
+**This is the one that will keep biting.** fal runs a content checker over the
+`image_urls` you send to an *edit* endpoint, and it refuses reference pictures of
+visibly injured characters. Sera Vance's anchor (a beaten prisoner, blood on her
+shirt) came back `422 content_policy_violation` on `image_urls`, so the whole
+identity chain stops: the anchor renders fine text-to-image, and then every shot
+that references it fails. Caevan's unbloodied anchor went through the identical
+code path with a 1.8 MB data URI and no complaint, so it is the picture's
+content, not the transport, the payload size, or the C2PA metadata FLUX.2 embeds.
+
+A PF2e cast is full of wounded, scarred, and beaten people, so expect this
+regularly. The ways out, none of them free:
+
+1. `enable_safety_checker: false` on the FLUX.2 edit call. A documented fal
+   parameter, **not currently wired into this module** — it is a GM decision,
+   not a default.
+2. Write the anchor shot clean and put the injuries only in the scene shot's
+   `framing`. Costs the beaten look in the portrait.
+3. Render wounded characters locally. `npc_art.py` has no content checker.
+
+`_http_detail()` exists because of this: fal puts the reason in the **body** of
+the 4xx, and `COMPLETED` only means the job left the queue, so the result fetch
+is where a policy rejection actually surfaces.
+
+### Bake-off result, 2026-09-13 (Caevan Veldtmark, Vishkanya)
+
+**Seedream 4 won, and it is also the cheapest.** Fine jewel-toned iridescent
+scaling, luminescent eyes, genuine oil-painting texture, tight identity carry-over
+into the referenced portrait, and it returned 1536×2048 / 2048×2048 where the
+others gave ~1MP. Nano Banana Pro held identity just as well but invented a stone
+library background, painted a white sketchy border, and rendered the scaling so
+faintly the character stopped reading as Vishkanya. FLUX.2 was solid and
+on-brief but flatter, and its scaling read grey rather than jewel-toned.
 
 ## Tokens are a separate, user-directed flow
 
