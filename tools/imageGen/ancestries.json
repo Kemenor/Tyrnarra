@@ -218,7 +218,19 @@
     "vishkanya, second failure, overcorrected the other way: small scales plus",
     "vertical pupils plus a forked tongue is three snake traits and renders a",
     "snake person. Canon is humanlike with the traits clear only close up, so",
-    "the entry now leads on \"human person\" and keeps two faint tells."
+    "the entry now leads on \"human person\" and keeps two faint tells.",
+    "",
+    "android CONFIRMED as name-is-enough, after two descriptions failed in",
+    "opposite directions. \"a synthetic person with glowing circuitry\" rendered",
+    "plain humans; \"a humanoid robot with pale synthetic skin\" rendered full",
+    "machines; the bare name renders people who happen to be androids, some with",
+    "a visible seam or a mechanical limb, which is the register a character",
+    "portrait wants.",
+    "",
+    "AND THE PROFILE IS NOT THE PROBLEM. Running the same description with",
+    "--profile REMOVED made it worse, not better: glowing neon figures with no",
+    "clothing. The profile keeps prompts in character-art register, so do not",
+    "reach for dropping it when an entry misbehaves. Hypothesis tested and dead."
   ],
   "human": "",
   "elf": "",
@@ -240,7 +252,7 @@
   "skeleton": "",
   "sprite": "a tiny fey no taller than a hand, translucent insect wings, sharp delicate features, built to the scale of a flower",
   "anadi": "a human-sized spider with bright distinctive colour markings",
-  "android": "a synthetic person with glowing circuitry lines running across the skin and visible seams at the joints",
+  "android": "",
   "athamaru": "a sea-dwelling folk, sleek skin in deep blue-grey, webbed fingers, a low finned crest instead of hair, wide dark eyes",
   "automaton": "a humanoid construct",
   "awakened animal": null,
@@ -321,7 +333,8 @@
       "leshy",
       "leshy-fungus",
       "leshy-cactus",
-      "leshy-lotus"
+      "leshy-lotus",
+      "android"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -340,7 +353,6 @@
     ],
     "untested": [
       "anadi",
-      "android",
       "athamaru",
       "conrasu",
       "fetchling",
