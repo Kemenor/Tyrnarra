@@ -281,5 +281,76 @@
   "leshy-vine": "a small plant creature with a body of coiled prehensile vines and a simple face",
   "leshy-lotus": "a small plant creature with a body of lotus petals and water lilies and a simple face",
   "leshy-pine": "a small plant creature with a body of pine bark and needles and a simple face",
-  "leshy-root": "a small plant creature with a body of knotted woody roots and a simple face"
+  "leshy-root": "a small plant creature with a body of knotted woody roots and a simple face",
+  "_status": {
+    "verified": [
+      "catfolk",
+      "dwarf",
+      "elf",
+      "goblin",
+      "halfling",
+      "hobgoblin",
+      "human",
+      "kitsune",
+      "kobold",
+      "lizardfolk",
+      "minotaur",
+      "orc",
+      "ratfolk",
+      "skeleton",
+      "tengu",
+      "gnome",
+      "merfolk",
+      "sprite",
+      "shisk",
+      "kholo",
+      "tripkee",
+      "vanara",
+      "shoony",
+      "tanuki",
+      "nagaji",
+      "kashrishi",
+      "ghoran",
+      "strix",
+      "goloma",
+      "azarketi",
+      "dragonet",
+      "automaton",
+      "wayang",
+      "vishkanya",
+      "leshy",
+      "leshy-fungus",
+      "leshy-cactus",
+      "leshy-lotus"
+    ],
+    "same_pattern_as_a_verified_sibling": [
+      "leshy-leaf",
+      "leshy-fruit",
+      "leshy-pine",
+      "leshy-root",
+      "leshy-vine"
+    ],
+    "no_default_the_spec_describes_it": [
+      "poppet",
+      "awakened animal",
+      "fleshwarp"
+    ],
+    "midjourney_cannot_render_it": [
+      "centaur"
+    ],
+    "untested": [
+      "anadi",
+      "android",
+      "athamaru",
+      "conrasu",
+      "fetchling",
+      "jotunborn",
+      "samsaran",
+      "sarangay",
+      "surki",
+      "yaksha",
+      "yaoguai",
+      "anadi-human"
+    ]
+  }
 }
