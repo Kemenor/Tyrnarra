@@ -70,7 +70,18 @@ CONTAINER = "comfyui"   # podman/distrobox container the ComfyUI venv runs in
 
 MODELS = {
     "unet": "flux2-dev-Q4_K_M.gguf",
-    "clip": "mistral_3_small_flux2_fp8.safetensors",
+    # fp4_mixed, NOT fp8, on this AMD box. supports_fp8_compute() returns False
+    # for every non-NVIDIA device, so an fp8 encoder can never run as fp8 here:
+    # unet_manual_cast() upcasts it to fp16 per layer (comfy/ops.py
+    # cast_bias_weight), torch's caching allocator keeps the upcast blocks, and
+    # RSS ratchets by roughly the encoder's own size each pass (measured 40 GB
+    # -> 55 GB across two passes, ~+16.8 GB = the encoder). fp4 cannot compute
+    # natively either, but it casts from an 11.4 GB base instead of 16.8, which
+    # takes the whole stack from 38.4 GB to 33.0 GB on a 62.7 GB machine.
+    # bf16 (33.1 GB) would avoid the cast entirely but makes the baseline
+    # 54.7 GB, trading a growth problem for a permanent one.
+    # To revert: put mistral_3_small_flux2_fp8.safetensors back here.
+    "clip": "mistral_3_small_flux2_fp4_mixed.safetensors",
     "vae": "flux2-vae.safetensors",
     "turbo_lora": "Flux_2-Turbo-LoRA_comfyui.safetensors",
     "upscaler": "4x-UltraSharp.pth",

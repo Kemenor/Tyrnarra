@@ -101,10 +101,34 @@ Things that are NOT the cause, each checked against the source:
   set (38 nodes, 3.17 MP) are near-identical; the growth is pass-to-pass, not
   shots-per-pass.
 
-What remains: model pins plus PyTorch's caching allocator, which never returns
-freed blocks to the OS, so RSS only ratchets up. **The only lever that shrinks
-the baseline is a smaller text encoder** — the fp8 Mistral is 16.8 GB while the
-unet is already Q4; a GGUF quant of the encoder is the obvious asymmetry to fix.
+**The cause is fp8 on a non-NVIDIA card.** `supports_fp8_compute()` returns
+False for every non-NVIDIA device unconditionally, so an fp8 text encoder can
+never execute as fp8 here. `unet_manual_cast()` therefore selects fp16/bf16 and
+`comfy/ops.py: cast_bias_weight()` upcasts each layer at the point of use — 2x
+the bytes — while torch's caching allocator never returns those blocks to the
+OS. RSS ratchets by roughly the encoder's own size per pass, which is exactly
+the +16.8 GB measured.
+
+**Fix applied 2026-09: the encoder is `mistral_3_small_flux2_fp4_mixed`**
+(11.4 GB) rather than `..._fp8` (16.8 GB), taking the stack from 38.4 GB to
+33.0 GB. **This is a mitigation, not a cure**: the file's own header is
+`{U8: 398, F8_E4M3: 208, F32: 208, BF16: 63}`, so 208 tensors are still fp8 and
+fp4 has no native path either (`supports_nvfp4_compute` is also NVIDIA-only).
+The cast still happens, just over a smaller model. **Unverified** as of the
+swap: the test is a two-pass run watching whether RSS stays near 33 GB instead
+of climbing to 55.
+
+Options considered and rejected:
+- **A GGUF text encoder.** None exists from a canonical publisher: city96's
+  FLUX.2-dev-gguf is unet-only, and HF search returns only unofficial
+  "uncensored" forks of a different 9B encoder. Do not go looking again.
+- **bf16 (33.1 GB).** RDNA3 supports bf16 natively so it would remove the cast
+  entirely, but the baseline becomes 54.7 GB of 62.7 GB — a permanent squeeze
+  instead of a growing one. Worth revisiting only with more RAM.
+
+All three encoder variants live at `Comfy-Org/flux2-dev` under
+`split_files/text_encoders/`. The fp8 file is kept on disk; reverting is one
+line in `MODELS["clip"]`.
 
 Practical rules until then: **one driver at a time**, and expect the second pass
 in a server session to be slower than the first. A restart costs ~12 min of
