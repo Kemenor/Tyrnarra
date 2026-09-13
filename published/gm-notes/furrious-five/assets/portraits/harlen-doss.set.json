@@ -1,0 +1,26 @@
+{
+  "slug": "harlen-doss",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A halfling cloth merchant in his forties, short and neat and carefully groomed, with tidy brown curls and an anxious open face. He stands with the braced posture of a man expecting bad news, shoulders slightly raised. Careful clever eyes with dark circles under them",
+  "wardrobe": "a very good merchant's coat of fine russet cloth, bought on the strength of one enormous sale and kept immaculate, now slightly finer than he can currently afford; a neat waistcoat, a folded square of deep rose-coloured Emarrean silk in his breast pocket",
+  "shots": {
+    "full": {
+      "file": "harlen-doss-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, three-quarter view, hands clasped in front of him, braced and neat."
+    },
+    "portrait": {
+      "file": "harlen-doss",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, anxious and earnest, dark circles under careful eyes.",
+      "mode": "text"
+    },
+    "scene": {
+      "file": "harlen-doss-counter",
+      "size": "portrait_4_3",
+      "framing": "Standing behind a cloth merchant's counter stacked with bolts of fabric, a single length of deep rose silk framed on the wall behind him, touching the silk square in his pocket, worried."
+    }
+  }
+}

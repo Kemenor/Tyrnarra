@@ -1,0 +1,26 @@
+{
+  "slug": "sera-vance",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "An orc woman in her late twenties, broad through the shoulders and built for dock work, now three weeks underfed and running on pure temper. Greenish-grey skin, small lower tusks, dark hair shorn short and growing out unevenly. Knuckles scarred, a hard furious set to her jaw, eyes alert and angry. A small guild tattoo on the inside of one forearm",
+  "wardrobe": "dock canvas trousers and a heavy work shirt worn soft with use and filthy from three weeks in a cell, one sleeve torn away at the shoulder, a length of rag knotted around one wrist",
+  "shots": {
+    "full": {
+      "file": "sera-vance-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, three-quarter view, weight forward, fists loose, furious and unbowed."
+    },
+    "portrait": {
+      "file": "sera-vance",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, jaw set, angry alert eyes, shorn dark hair.",
+      "mode": "text"
+    },
+    "scene": {
+      "file": "sera-vance-cell",
+      "size": "portrait_4_3",
+      "framing": "Gripping the iron bars of a barred cell in a dim stone basement with both hands, leaning into them, snarling something at whoever is on the other side, red light from somewhere behind her."
+    }
+  }
+}

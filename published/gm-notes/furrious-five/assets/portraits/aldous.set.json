@@ -1,0 +1,26 @@
+{
+  "slug": "aldous",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A tall thin human butler in his late fifties, standing very straight. His skin is the colour of old bone, not pale but genuinely bone-coloured, dry and matte. His eyes are flat grey and utterly incurious, and he does not blink. His face is composed into perfect professional courtesy with nothing behind it. He hovers perhaps an inch clear of the floor",
+  "wardrobe": "immaculate black butler's tailcoat and waistcoat over a white high-collared shirt, brushed spotless, white gloves, everything correct to the millimetre",
+  "shots": {
+    "full": {
+      "file": "aldous-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, hands folded precisely in front of him, feet hovering a fraction clear of the floor."
+    },
+    "portrait": {
+      "file": "aldous",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, facing the viewer directly, unblinking flat grey eyes, polite empty expression.",
+      "mode": "text"
+    },
+    "scene": {
+      "file": "aldous-door",
+      "size": "portrait_4_3",
+      "framing": "Standing in an opened front door of a grand manor house at dusk, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
+    }
+  }
+}

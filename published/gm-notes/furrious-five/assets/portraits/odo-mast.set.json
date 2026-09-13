@@ -1,0 +1,26 @@
+{
+  "slug": "odo-mast",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "An elderly kitsune scholar, a slight stooped fox-featured man with silver-white fur going thin at the muzzle, large amber eyes, and several tails held low and untidy. His expression is mild, patient and unnervingly calm. He looks frail and three weeks unfed, and one hand is dark to the wrist with dried blood",
+  "wardrobe": "a travelling scholar's good grey robe and waistcoat, now filthy and torn at the hem, and covered edge to edge in his own small precise handwriting in dried rust-brown blood, columns of notes running down both sleeves and across the chest",
+  "shots": {
+    "full": {
+      "file": "odo-mast-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, three-quarter view, stooped and frail, a robe covered in handwritten notes in dried blood."
+    },
+    "portrait": {
+      "file": "odo-mast",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, silver-white fox features, large amber eyes, mild and calm.",
+      "mode": "text"
+    },
+    "scene": {
+      "file": "odo-mast-cell",
+      "size": "portrait_4_3",
+      "framing": "Sitting cross-legged on the stone floor of a dim cell, bent over his own outstretched sleeve, writing tiny careful notes on the cloth with a fingernail dipped in blood, entirely absorbed and calm."
+    }
+  }
+}
