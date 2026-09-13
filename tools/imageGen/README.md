@@ -243,8 +243,8 @@ Then install `mj-overlay.user.js` in Tampermonkey and open midjourney.com.
 
 The working loop (V8.2): pick an NPC in the panel → click the anchor shot (prompt
 bar fills) → enter → on the grid image you like hit **Quick Edit**, which
-attaches it with the role *Attach to prompt* → click the next shot → enter.
-Saving is manual for now; see below.
+attaches it with the role *Attach to prompt* → click the next shot → enter →
+click the image you want and hit **save** in the panel.
 
 ### Do not use Omni Reference on V8.2
 
@@ -306,27 +306,33 @@ reference to lean on.
 - `--ar` comes from each shot's `size`. With the style off, that plus the
   description is the whole prompt.
 
-### Save-back: built, working, and currently removed
+### Save-back lives in the panel, not on the image
 
-A `⤓` button was drawn on each grid image and saved it into the spec folder. It
-worked end to end, and it was **removed in v1.1**: drawn on the image, it sat on
-top of the zoom view. The complaint was placement, not function.
+Click the image you want, then **save** in the panel. It writes the full-res
+original into the spec's folder as `<shot file>.<real extension>`.
 
-`mj_server`'s `/save` endpoint is still live, and the userscript's history has
-the client half, so re-wiring it to a control that does not overlap the image is
-a small job rather than a rebuild. Everything it needs was measured on the live
-site (2026-09-13):
+The first version drew a `⤓` on every grid thumbnail and was removed in v1.1: on
+the image, it sat on top of the zoom view. The panel is out of the way, needs no
+per-image decoration (so no `MutationObserver`, no fighting the virtualised
+feed), and matches how the images actually get picked — one at a time, zoomed.
+
+Which image is open comes from the **URL**: clicking a thumbnail pushes
+`/jobs/<uuid>?index=N`, so that is authoritative and needs no DOM scraping. The
+button polls twice a second rather than patching `history.pushState`, which also
+catches back/forward and anything the app does internally, and reports its own
+state (`open an image` / `pick a shot` / `save as <file>`).
+
+Three things measured on the live site (2026-09-13), all load-bearing:
 
 - **The server cannot download the images.** `cdn.midjourney.com` serves a page
-  fetch but answers a plain server-side one with **403**. The bytes must be read
-  in the page and posted base64; `/save` takes bytes, not a URL. Do not
-  "simplify" it back into a server-side download; it cannot work.
+  fetch but answers a plain server-side one with **403**. The bytes are read in
+  the page and posted base64; `/save` takes bytes, not a URL. Do not "simplify"
+  it back into a server-side download; it cannot work.
 - **The page fetch must be bare.** Adding `credentials: 'include'` turns a
   working cross-origin read into `Failed to fetch`.
-- **Full-resolution is `cdn.midjourney.com/<uuid>/0_<index>.png`,** derived from
-  the job link. The rendered `<img>` is a 640 px webp thumbnail.
-- **The feed is virtualised,** so anything attached per-image needs a
-  `MutationObserver`; a one-shot pass decorates only what is on screen at load.
+- **Full-resolution is `cdn.midjourney.com/<uuid>/0_<index>.png`.** The rendered
+  `<img>` is a 640 px webp thumbnail, so scraping its `src` would save a
+  downscaled copy.
 
 ### The prompt bar is a React-controlled `<textarea>`
 

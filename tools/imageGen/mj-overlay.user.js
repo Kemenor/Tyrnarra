@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Tyrnarra NPC helper for Midjourney
 // @namespace    tyrnarra
-// @version      1.2
-// @description  Serve <slug>.set.json prompts into the Midjourney prompt bar.
+// @version      1.3
+// @description  Serve <slug>.set.json prompts into the Midjourney prompt bar, and save the open image into the spec's folder.
 // @match        https://www.midjourney.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      127.0.0.1
@@ -16,14 +16,12 @@
  * --oref, never navigates. Those stay manual on purpose: they are the judgment
  * steps, and unattended clicking is what a ToS-forbidden bot looks like.
  *
- * Save-back was built and then REMOVED (2026-09-13): a button drawn on each
- * grid image sat on top of the zoom view. The mechanism worked and is in git
- * (and mj_server's /save endpoint is still live), so re-wiring it to a control
- * that does not overlap the image is a small job, not a rebuild. What it needs:
- * the full-res image is cdn.midjourney.com/<uuid>/0_<index>.png, derived from
- * the job link; the bytes must be fetched IN THE PAGE with a bare fetch (the
- * CDN 403s a server-side fetch, and credentials:'include' breaks CORS) and
- * posted to /save base64.
+ * Save-back lives in the PANEL, not on the image. A first version drew a
+ * button on every grid thumbnail and it sat on top of the zoom view; the panel
+ * is out of the way and needs no per-image decoration, so no MutationObserver
+ * and no fighting the virtualised feed. It reads whichever image is open:
+ * clicking a thumbnail pushes /jobs/<uuid>?index=N, so the URL is the source of
+ * truth for "which image".
  *
  * Needs mj_server.py running (python3 tools/imageGen/mj_server.py).
  *
@@ -32,6 +30,7 @@
  *   2. on the grid image you like: Quick Edit, which attaches it to the prompt
  *      with the role "Attach to prompt"
  *   3. click the next shot -> prompt bar filled -> enter
+ *   4. click the image you want, then "save as ..." in the panel
  *
  * Do NOT use Omni Reference (--oref) on V8.2. It still appears on older jobs
  * and it still works, but a prompt carrying --oref renders in V7: the anchor
@@ -84,6 +83,47 @@
     ta.focus();
   }
 
+  // ------------------------------------------------------------------- saving
+  // Which image is open, from the URL. Clicking a thumbnail pushes
+  // /jobs/<uuid>?index=N, so this is authoritative and costs no DOM scraping.
+  function currentJob() {
+    const m = location.pathname.match(/^\/jobs\/([0-9a-f-]+)/i);
+    if (!m) return null;
+    const idx = new URLSearchParams(location.search).get('index') || '0';
+    return { id: m[1], index: idx };
+  }
+
+  // Full-res, derived from the job id: the rendered <img> is a 640px webp
+  // thumbnail (0_0_640_N.webp), the original is /<uuid>/0_<index>.png.
+  const fullResUrl = j => `https://cdn.midjourney.com/${j.id}/0_${j.index}.png`;
+
+  async function blobToB64(blob) {
+    const buf = new Uint8Array(await blob.arrayBuffer());
+    let out = '';
+    for (let i = 0; i < buf.length; i += 0x8000) {        // chunked: a spread
+      out += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000));
+    }                                                     // over 2 MB would
+    return btoa(out);                                     // blow the stack
+  }
+
+  async function saveOpenImage() {
+    const job = currentJob();
+    if (!job) { toast('open an image first', true); return; }
+    if (!state.shot) { toast('pick a shot first', true); return; }
+    toast(`saving as ${state.shot}...`);
+    try {
+      // The bytes MUST be read here in the page: cdn.midjourney.com serves a
+      // page fetch but answers a server-side one with 403. And the fetch must
+      // be bare - credentials:'include' turns it into "Failed to fetch".
+      const res = await fetch(fullResUrl(job));
+      if (!res.ok) throw new Error('CDN returned ' + res.status);
+      const data = await blobToB64(await res.blob());
+      const r = await api('POST', '/save', { slug: state.slug, shot: state.shot, data });
+      if (r.error) throw new Error(r.error);
+      toast('saved ' + r.name);
+    } catch (e) { toast(e.message, true); }
+  }
+
   // --------------------------------------------------------------------- panel
   const panel = document.createElement('div');
   panel.style.cssText = 'position:fixed;left:12px;bottom:12px;z-index:99999;' +
@@ -100,6 +140,9 @@
       <select id="ty-slug" style="width:100%;margin-bottom:8px;background:#0f0c08;
         color:inherit;border:1px solid #c8900a44;border-radius:6px;padding:4px"></select>
       <div id="ty-shots" style="display:flex;flex-direction:column;gap:4px"></div>
+      <button id="ty-save" style="width:100%;margin-top:8px;padding:6px;
+        background:#0f0c08;color:inherit;border:1px solid #c8900a55;
+        border-radius:6px;cursor:pointer">save</button>
       <label style="display:flex;align-items:center;gap:6px;margin-top:8px;opacity:.8">
         <input type="checkbox" id="ty-style"> add the house style sentence
       </label>
@@ -107,7 +150,7 @@
         Click a shot to fill the prompt bar. For the ref shots, first
         <b>Quick Edit</b> your chosen anchor so it attaches with the role
         <i>Attach to prompt</i>. Do not use <i>--oref</i>: it renders in V7.
-        Saving is manual for now.
+        Click the image you want, then <b>save</b>.
       </div>
     </div>`;
   document.body.appendChild(panel);
@@ -125,6 +168,25 @@
     state.style = e.target.checked ? 'digital' : 'none';
     if (state.slug) loadSlug(state.slug);
   };
+
+  $('#ty-save').onclick = saveOpenImage;
+
+  // The site is a single-page app, so the URL changes without a load event.
+  // Polling beats patching history.pushState: it also catches back/forward and
+  // anything the app does internally, and twice a second is free.
+  function refreshSaveButton() {
+    const btn = $('#ty-save');
+    const job = currentJob();
+    const shot = state.data && state.data.shots.find(x => x.key === state.shot);
+    const ready = !!(job && shot);
+    btn.disabled = !ready;
+    btn.style.opacity = ready ? '1' : '.45';
+    btn.style.cursor = ready ? 'pointer' : 'default';
+    btn.textContent = !job ? 'save (open an image)'
+                    : !shot ? 'save (pick a shot)'
+                    : `\u2913 save as ${shot.file}`;
+  }
+  setInterval(refreshSaveButton, 500);
 
   let toastEl;
   function toast(msg, bad) {
@@ -155,6 +217,7 @@
         'border:1px solid ' + (state.shot === s.key ? '#f0b020' : '#c8900a33') +
         ';border-radius:6px;padding:5px 7px';
       b.onclick = () => { state.shot = s.key; fillPrompt(s.prompt); renderShots();
+                          refreshSaveButton();
                           toast('prompt bar filled: ' + s.key); };
       box.appendChild(b);
     });
