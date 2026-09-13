@@ -152,15 +152,34 @@ Keep them in their lanes. A `character` field that describes a coat, or a
 
 ---
 
-## Length
+## Length: shorter is not a compromise, it is the technique
 
-Midjourney shows a **"Long Prompt"** warning past roughly 150 words (measured:
-148 clean, 152 warns). The server reports `words` per shot and flags `long`.
+**Every word competes with every other word.** Midjourney weights the whole
+prompt, so a detail described at length does not come out stronger, it comes out
+sharing the frame with everything else you said. Harlen's anchor ran 142 words,
+of which the face was about fifteen percent and the brocade rather more; he
+rendered barely worried. The same face in three short sentences, in a 58-word
+prompt, is a third of the prompt instead of a seventh.
+
+> A beaming wide smile. Frightened eyes. Eyebrows raised and pinched together.
+
+**Aim for 50 to 70 words on an anchor**, not 150. Short sentences, one feature
+each, so nothing is buried in a subordinate clause. Trust the model on anything
+it already knows how to draw: it does not need to be told that curls are tidy
+and combed and neat, and a coat does not need its buttons counted.
+
+The 150-word figure is a **warning line, not a target** (measured: 148 clean,
+152 warns). The server reports `words` per shot and flags `long`. Being far
+under it is the goal, not a near miss of it.
+
+**What to cut first**, in order: wardrobe detail that will be a few pixels wide
+in the shot, adjectives stacked on one noun, anything the framing already says,
+and any clause explaining a thing already shown.
 
 - **Anchor shot** (the text-to-image full body) carries `character` + `wardrobe`
-  + `framing` and is the shot at risk. Current specs run 105-125 words. If a new
-  one crosses the line, trim `character` and `wardrobe`; they are shared by
-  every shot, so the trim pays three times.
+  + `framing`, so it is the long one and the one to keep lean. Trim `character`
+  and `wardrobe` first: they are shared by every shot, so the trim pays three
+  times.
 - **Ref shots** (portrait, scene) send **framing only**. The attached anchor
   carries identity, so the description is redundant there. This is handled by
   the server, not by you: do not hand-write identity back into a `framing`.

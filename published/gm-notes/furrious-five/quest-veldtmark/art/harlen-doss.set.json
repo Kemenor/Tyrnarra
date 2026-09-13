@@ -3,18 +3,18 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A halfling man in his forties, about four feet tall, short and stocky, broad through the shoulders. Tidy brown curls, neatly groomed, clean-shaven. A wide warm open smile, cheeks lifted, the easy smile of a habitually cheerful man. Above it his eyebrows are raised and drawn hard together at the inner ends, deeply creasing the middle of his forehead, and his eyes are wide and frightened, glassy and unsteady, shadowed underneath",
-  "wardrobe": "a long deep wine-red coat of figured silk brocade with a subtle woven pattern, gold-thread edging at the cuffs and collar, polished brass buttons, over an embroidered waistcoat in deep rose silk and a soft cream cravat pinned with a small gold pin. Every piece immaculate and slightly too formal for the wearer",
+  "character": "A halfling man in his forties, short and stocky, tidy brown curls, clean-shaven. A beaming wide smile. Frightened eyes. Eyebrows raised and pinched together",
+  "wardrobe": "a fine wine-red brocade coat with gold-thread edging, a rose silk waistcoat, a cream cravat, immaculate and slightly too formal for him",
   "shots": {
     "full": {
       "file": "harlen-doss-full",
       "size": "portrait_4_3",
-      "framing": "Full body standing portrait of a short stocky halfling, three-quarter view, hands clasped neatly in front of him."
+      "framing": "Full body standing portrait, three-quarter view, hands clasped in front of him."
     },
     "portrait": {
       "file": "harlen-doss",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, head and upper chest filling the frame, the same wide smile under frightened eyes and a creased worried brow."
+      "framing": "Head and shoulders portrait, square crop, filling the frame."
     },
     "scene": {
       "file": "harlen-doss-counter",
