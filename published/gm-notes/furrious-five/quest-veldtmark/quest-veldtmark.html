@@ -20,6 +20,14 @@
   .warn-text { font-size: 0.94rem; line-height: 1.72; }
   .exp-body p, .gm-note-text p { margin-bottom: 0.9em; }
   .exp-body p:last-child, .gm-note-text p:last-child { margin-bottom: 0; }
+  .sb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; }
+  .sb-item { background: rgba(255,255,255,0.03); border: 1px solid var(--gm-divider); border-radius: 4px; padding: 8px 11px; }
+  .sb-item .l { font-family: 'Josefin Sans', sans-serif; font-size: 0.48rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-ink-dim); }
+  .sb-item .v { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gm-gold); }
+  .ability-list { list-style: none; margin-top: 8px; }
+  .ability-list li { padding: 8px 0; border-top: 1px solid var(--gm-divider); font-size: 0.92rem; line-height: 1.65; }
+  .ability-name { font-family: 'Cinzel', serif; color: var(--gm-accent); font-size: 0.92rem; }
+  .gm-note .warn-box { margin: 12px 0 0; }
 </style>
 </head>
 <body data-page="quest-veldtmark">
@@ -41,7 +49,7 @@
     <div class="gm-title">The Veldtmark Invitation</div>
     <div class="gm-flavor">Someone stopped answering. Someone always stops answering.</div>
     <div class="pill-row" style="margin-top:16px">
-      <span class="pill">Party Level 7</span><span class="pill">3–4 Sessions</span><span class="pill">Cape Side · the Drift</span><span class="pill">Investigation + Combat</span><span class="pill">Multiple Endings</span>
+      <span class="pill">Party Level 7 · 4 PCs</span><span class="pill">3–4 Sessions</span><span class="pill">Cape Side · the Drift</span><span class="pill">Investigation + Combat</span><span class="pill">Escalating Finale</span><span class="pill">Multiple Endings</span>
     </div>
   </div>
 
@@ -49,7 +57,9 @@
     <button class="gm-tab-btn active" data-target="tab-hook">The Hook</button>
     <button class="gm-tab-btn" data-target="tab-approach">The Approach</button>
     <button class="gm-tab-btn" data-target="tab-ground">Ground Floor</button>
+    <button class="gm-tab-btn" data-target="tab-top">Top Floor</button>
     <button class="gm-tab-btn" data-target="tab-basement">The Basement</button>
+    <button class="gm-tab-btn" data-target="tab-bestiary">Bestiary</button>
     <button class="gm-tab-btn" data-target="tab-npcs">NPCs</button>
     <button class="gm-tab-btn" data-target="tab-truth">The Truth</button>
     <button class="gm-tab-btn" data-target="tab-endings">Endings</button>
@@ -124,14 +134,36 @@
   <!-- ══ GROUND FLOOR ══ -->
   <div class="gm-panel" id="tab-ground">
     <div class="section">
+      <div class="section-title">The Ground Floor · Map</div>
+      <div class="prose"><p>The estate presents as a wealthy, well-maintained home. Everything is correct. Everything is slightly wrong. Click an area for its encounter and the short of what is there; the full read-aloud and search results are in the room cards below.</p></div>
+      <div class="map-wrap">
+        <img src="/gm-notes/furrious-five/assets/maps/veldtmark-estate.jpg" alt="Veldtmark estate, ground floor">
+        <button class="map-hot" data-area="g1" style="left:8%;top:7.5%;width:14.5%;height:42%"><span class="hot-num">I</span></button>
+        <button class="map-hot" data-area="g3" style="left:8.5%;top:6%;width:12%;height:6.5%"></button>
+        <button class="map-hot" data-area="g2" style="left:8.5%;top:49.5%;width:14%;height:30%"><span class="hot-num">II</span></button>
+        <button class="map-hot" data-area="g4" style="left:23.5%;top:10%;width:31%;height:12%"><span class="hot-num">IV</span></button>
+        <button class="map-hot" data-area="g5" style="left:29%;top:45.5%;width:14%;height:15%"><span class="hot-num">V</span></button>
+        <button class="map-hot" data-area="g6" style="left:36.5%;top:68%;width:12.5%;height:12.5%"><span class="hot-num">VI</span></button>
+        <button class="map-hot" data-area="g7" style="left:74%;top:12%;width:21%;height:50%"><span class="hot-num">VII</span></button>
+        <button class="map-hot" data-area="g8" style="left:23%;top:60.5%;width:13.5%;height:19.5%"><span class="hot-num">VIII</span></button>
+        <button class="map-hot" data-area="g9" style="left:24.5%;top:80%;width:8%;height:6.5%"><span class="hot-num">IX</span></button>
+        <button class="map-hot" data-area="g10" style="left:69.5%;top:6.5%;width:4.5%;height:4%"><span class="hot-num">X</span></button>
+      </div>
+      <button class="map-toggle">Hide areas</button>
+      <div class="map-detail"></div>
+      <div class="map-hint">The four basement entries are areas III (organ), IV (kitchen storage), VII (church) and X (the dry well).</div>
+    </div>
+
+    <div class="section">
       <div class="section-title">Ground Floor Rooms</div>
-      <div class="prose"><p>The estate presents as a wealthy, well-maintained home. Everything is correct. Everything is slightly wrong. Open each room for description, read-aloud, and what can be found there.</p></div>
+      <div class="prose"><p>Open each room for description, read-aloud, and what can be found there.</p></div>
       <div class="level-stack">
 
         <div class="level-card"><div class="level-header"><div class="level-number">I</div><div class="level-info"><div class="level-name">The Grand Hall / Ballroom</div><div class="level-desc">Top Left · Blue Floor</div></div><div class="level-chevron">▾</div></div>
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The ballroom is impeccable. Blue silk on the walls, candelabras burning low, chairs arranged as if for an event that ended recently or is about to begin. The flowers in the arrangements are fresh. Someone tended them this morning. There is a single wineglass on a side table, half full, the wine inside perfectly still.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The glass has been half full for six days. The wine does not spoil. This is a minor effect of the Thing's proximity: time moves strangely near objects the cult has touched. A Nature or Arcana check notes that the wine should be vinegar by now.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Moderate 90</span></div><div class="gm-note-text"><b>6× the Guests</b> (Creature 4, 15 XP each). They are the party this room keeps almost having: the murmur of a gathering that never resolves into words. They do not attack on sight. They drift toward warmth, and the fight begins the moment a PC realises the sound has been getting closer.<br><br><b>Run it as a pressure, not a charge.</b> Their Aura of Sobs (10 ft, Will DC 19 or stupefied 1) stacks as they close, so a party that lets them converge fights stupefied. Steal Voice on a Bony Hand hit costs a caster their verbal components for a minute, which is the real threat here: separate the casters early or the Guests will do it for you.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>A framed portrait of Veldtmark near the fireplace, painted six months ago; he looks healthy. The eyes follow nobody. This is not supernatural. It just feels that way.</li><li>Three invitations on the mantelpiece, unopened, dated three weeks ago: social events he missed.</li><li>A locked writing desk holds correspondence about "the Society" in veiled language. The cipher requires an hour and a Cryptography check.</li></ul>
           </div></div>
 
@@ -139,6 +171,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A table set for fourteen. Fourteen chairs, fourteen place settings, fourteen glasses, all clean, all waiting. The room smells of beeswax and something faintly metallic underneath. The candles here burn red-orange rather than white. They have always burned that colour, the butler will say, if asked. The butler is lying.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The table is set for cult meetings; fourteen is the full membership of Veldtmark's philosophical society, though only six are still active. The red-orange candles are treated with a compound that mildly suppresses Perception: anyone sitting at this table for more than ten minutes takes a -1 circumstance penalty to Perception until they leave and rest. Veldtmark uses these meetings to make the cult members easier to manage.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Severe 120</span></div><div class="gm-note-text"><b>6× the Seated</b> (Elite Creature 5, 20 XP each). <b>These are the six still active.</b> They are sitting the dinner they sit every night, and they will go on sitting it while the party searches the room; the fight starts when someone reads the names under the table aloud, takes a journal off the sideboard, or sits down in the seventh chair.<br><br><b>The hardest fight above ground, and it should be.</b> Funereal Dirge (Will DC 21, frightened, 50 ft, recharge 1d4) opens the encounter as the grace before the meal, and a frightened party in a room where every hit carries Drain Life (Fort DC 18 or drained 1) loses ground fast. Do not forget <b>Final Spite</b>: each one gets a Strike as it drops, so the last round is more dangerous than the first. Anyone killed here rises at the table in 1d4 rounds, which is the point: this is how the fourteen were made.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>Under the table, carved into the wood: fourteen names in a spiral. One of them is a sitting member of the Millhaven Merchant Council.</li><li>The metallic smell is dried blood, faint enough that only high Perception or a Scent ability identifies it.</li><li>A sideboard holds fourteen identical small journals, cult members' devotional logs. Most are banal. Two are not.</li></ul>
           </div></div>
 
@@ -146,6 +179,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The organ fills the entire north wall, pipes running floor to ceiling. It is playing. Softly, slowly, a melody that has no beginning you can identify; it feels as though it has always been playing and you have only just walked into earshot. There is no one at the keys.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The organ is playing itself, a minor enchantment Veldtmark commissioned two months ago. The melody is the cipher sequence for Entry II played on loop. A Performance or Arcana check reveals the enchantment; a second check identifies the sequence. The room feels like standing inside a held breath.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-hazard">⚠ Haunt 8</span></div><div class="gm-note-text"><b>The Meditation</b> (simple haunt, Hazard 7, Stealth +20). The haunt <i>is</i> the piece on the stand. When someone reads the sheet music, plays the organ, or stays long enough for the loop to come around, Mental Bind triggers: every creature within 30 ft is wrapped in spectral chains forged out of its own regrets (<b>Will DC 25</b>).<br><br><b>Disable</b> with Religion DC 26 (expert) to disrupt it through prayer, or Deception DC 27 (expert) to openly defy your regrets. A character with nothing to regret, or who has already made amends, is simply unaffected, which is worth knowing before you roll: this haunt reads the party, and what it catches tells them something about themselves. Trivial as a budget line (8 XP); it earns its place as the first thing in the house that is openly hostile.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>Sheet music on the stand: "Meditation on the Spaces Between," not a real composition, the entry cipher.</li><li>A locked music cabinet holds compositions in a notation system nobody uses anymore. Pre-Lost Era, a History check confirms.</li><li>One organ pipe has been sealed; something was stored inside it. The seal is recent wax, stamped with the cult's mark.</li></ul>
           </div></div>
 
@@ -153,6 +187,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The kitchen is working. Pots on the fire, bread in the oven, two kitchen staff moving with the mechanical precision of people who have stopped thinking about what they are doing. They look up when you enter. They smile. The smiles arrive a half-second after the looking, as if loaded separately.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The kitchen staff, two humans, middle-aged, have been in proximity to the Thing long enough to develop mild drift effects. They are not hostile, not thralled, just blurred at the edges. They answer questions with cheerful irrelevance. The bread in the oven has been baking for four days and is not burned. The locked storage door is behind the largest rack of shelves.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Moderate 80</span></div><div class="gm-note-text"><b>The Provisioner</b> (Elite Creature 9, 80 XP) works the larder. He is the one who signs for "the requirement," and he is the only thing the party fights in this house that is entirely mortal and entirely willing. He knows exactly what the deliveries are. He has known for four months.<br><br><b>He opens with conversation, not a weapon.</b> He will chat, offer the party bread, and put himself between them and the storage door without ever saying that is what he is doing. He fights when they reach for the lock. Running Poison Strike (3/day: Stride + Strike, +2d8 poison) means he opens at range and closes on his own terms, and he will use the shelving to break line of sight rather than stand and trade. If he is losing, he runs for the basement stair to raise the alarm, which is a worse outcome for the party than letting him go.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>The staff cannot tell you what day it is. They will tell you with complete confidence, and they will be wrong.</li><li>A ledger on the kitchen table logs deliveries, including a weekly delivery of something listed only as "the requirement," signed for by Aldous.</li><li>The locked storage door: Aldous has the key, or DC 18 Thievery to open.</li></ul>
           </div></div>
 
@@ -160,21 +195,109 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The conservatory is humid and green and smells of living things. Plants crowd every surface, not wildly, but insistently, with the confidence of things that have been growing unopposed for some time. In the centre, on a white iron bench, Lord Caevan Veldtmark sits reading a book. He looks up when you enter and smiles with the warmth of a man who has been expecting you for some time. "Ah," he says. "The guild sends representatives. How perfectly timed."</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The party's first encounter with Veldtmark. He is not hostile. He is gracious, articulate, and wrong in ways that take time to notice. He knows who sent them (Harlen Doss) and finds it gently amusing. He will offer tea. He will pay the debt immediately, in full, from a purse he produces without counting it. He is trying to make this easy. He wants them to leave. He answers questions with partial truths. He will not discuss the church or the basement. If pushed, he becomes vague rather than defensive: "private spiritual matters, you understand." He is not afraid of the party. He should be, but he is too far gone to know it.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-skill">◈ Social</span> <span class="enc-tag enc-combat">⚔ Trivial 10</span></div><div class="gm-note-text"><b>Lord Caevan Veldtmark</b> (Noble, Creature 3, 10 XP) — and he stays Creature 3 all the way to the basement. <b>He is deliberately not a fight.</b> A party that decides to cut him down in his own conservatory can do it in a round and a half, and that is the correct outcome of that decision: he is a logistics man who has been hollowing himself out for eight months, not a boss.<br><br><b>What killing him costs comes later, not here.</b> He is the only person alive who understands the terms of the bargain, so his death closes the <i>Save Veldtmark</i> ending, removes the one lever that can call off the finale, and leaves the party holding a dead lord, a Council member's name carved under a table, and no one to explain any of it to the Guild. Let them do it. Let the bill arrive in a later session.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>His eyes have a faint luminescence in low light, visible on a high Perception check.</li><li>The book he is reading has no title on the cover. Its pages appear blank from a distance. Up close, text appears in peripheral vision only.</li><li>Plants nearest him thrive abnormally. Plants nearest the door wilt slightly, as if the room's energy flows toward him.</li></ul>
           </div></div>
 
-        <div class="level-card"><div class="level-header"><div class="level-number">VI</div><div class="level-info"><div class="level-name">The Bedroom &amp; Sitting Room</div><div class="level-desc">Bottom Right</div></div><div class="level-chevron">▾</div></div>
+        <div class="level-card"><div class="level-header"><div class="level-number">VI</div><div class="level-info"><div class="level-name">The Lower Bedroom</div><div class="level-desc">Bottom Right · the room he left</div></div><div class="level-chevron">▾</div></div>
           <div class="level-body">
-            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The bedroom is barely used, the bed made with the precision of habit rather than rest. A sitting room connects through an open door. On the sitting room desk: correspondence, ledgers, and a wooden box with a lock that has been forced open from the inside.</div></div>
-            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">Veldtmark rarely sleeps now. The desk holds the clearest evidence of his decline: early letters to Society members describing their research excitedly; middle letters becoming more intense and esoteric; recent letters partly in a script nobody recognises. The forced-open box held what he describes in an earlier letter as "the terms of the agreement." It is empty now, and the inside of the lid is scored with what look like claw marks, though they could be fingernails.</div></div>
-            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The foreign-script letters translate with Linguistics DC 22: they describe the Thing's nature in terms that match nothing in the guild's bestiary.</li><li>A mirror reflects the room accurately except that Veldtmark does not appear in it. A small note taped to the frame reads "normal, do not worry." It is in his handwriting.</li><li>Under the bed, a locked iron strongbox: 200gp, a deed to a property up the coast in the Muino-saila ports, and a letter addressed to "whoever finds this first, if I cannot finish it."</li></ul>
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">This was the master bedroom once; the proportions say so, and so does the view. It is barely used now. The bed is made with the precision of habit rather than rest, and the linen has the flat, pressed smell of cloth that has been folded a long time. A reading chair faces a cold hearth. On the side table, a book lies open and face-down at page two hundred and eleven, holding a place for somebody who stopped coming back to it.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">Veldtmark moved upstairs about five months ago and told the staff it was the light. It was not the light. The upper floor is closer to nothing in particular; he moved because the room he sleeps in now is directly above the ritual hall, and he wanted to be able to hear it. The staff still turn this bed down every evening out of habit, which is why it looks tended and feels abandoned at the same time.<br><br>A party that searches carefully finds the room is a record of the man before: a ledger-hand's bedroom, orderly, unmysterious, with nothing hidden in it at all. That absence is the clue. Everything worth finding moved up with him.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The book is a dry treatise on river-freight tariff law, annotated in a careful hand as far as page two hundred and eleven and untouched after it. The annotations stop mid-sentence.</li><li>The hearth has not been lit in months, but it has been swept. Every hearth in the house has been swept.</li><li>A wardrobe of good, plain, well-maintained clothes, all of them at least a year old. Nothing has been bought since the church was built.</li><li>The door to the upper stair is at the end of the corridor outside, and it is the only door on the ground floor that Aldous will physically place himself in front of.</li></ul>
           </div></div>
 
         <div class="level-card"><div class="level-header"><div class="level-number">VII</div><div class="level-info"><div class="level-name">The Church</div><div class="level-desc">Right Side Building · Entry Point I</div></div><div class="level-chevron">▾</div></div>
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The church is small, stone-built, with genuine craft in its construction. Pews of dark wood, candles on the altar, a stained-glass window at the far end depicting a figure standing between two moons, one bright and one dark, over a field of still water: a common Bikiargi motif. The air here is different. Quieter than quiet, as if sound is being absorbed rather than reflected. Your footsteps do not echo.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The church looks like a Bikiargi chapel. The stained glass is a Bikiargi motif. The hymnal in the pews is genuine Bikiargi liturgy, except for the last section, which contains the cipher. The altar's prayer rail slides aside when pressed in sequence (Religion DC 16 to identify the sequence from the cipher). Below the altar, carved into the stone floor, is the cult's true symbol: not the twin moons, but something older, asymmetric, that makes the eye want to slide away from it.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Moderate 90</span></div><div class="gm-note-text"><b>3× the Answerers</b> (Creature 6, 30 XP each). The first three things that came through when the society made contact: small, incomplete, and left here because the church is where the door is thinnest. They are why the room has no echo.<br><br><b>They wait in the rafters and the window-glass</b> and drop on whoever reaches for the altar rail. Burning Cold (+17, 2d8 cold + 1d8 persistent cold) outranges most of the party's openers, and <b>Curse of Darkness</b> (Fort DC 23) is the fight's signature: it drains the colour out of a character, permanently until removed, and gives them Light Blindness. A PC who walks out of this church grey is carrying a visible mark of the thing downstairs, and every NPC in Millhaven will notice. Their own Light Blindness cuts both ways: a bright light in the nave is the single best tactical answer the party has.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>The absence of echo is unnatural, a consecration effect for something that is not Bikiargi.</li><li>Six offering bowls on the altar, five holding dried flowers, one holding a dark dried substance that is not flowers.</li><li>The cipher in the hymnal: last 12 pages, Bikiargi's lunar symbols used as numbers corresponding to organ keys.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">VIII</div><div class="level-info"><div class="level-name">The Rotunda</div><div class="level-desc">Bottom Centre · the round room</div></div><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The round room is the hinge of the house: every corridor on this floor arrives here eventually. The floor is one enormous burgundy medallion, worked in a pattern that resolves differently depending on where you stand on it. Chairs are set around the curve of the wall, facing inward, spaced with the evenness of something measured rather than arranged. There is no table. There is nothing to sit around.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The room the party will cross most often, and the room they should grow least comfortable in. Nothing happens here on the first pass. On the second, one of the chairs has moved; on the third, a chair is facing the wrong way. Do not explain it and do not attach a mechanic to it. It is the house keeping count.<br><br>The medallion pattern is a spiral of fourteen arms, which anyone who has read the names under the dining table will recognise. A character who stands at the centre and looks down has the brief, strong impression of being looked at from directly below, which is correct: the ritual chamber is under this floor, and the coffin sits at the spiral's centre one storey down.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>Standing at the medallion's centre, Perception DC 20: something breathing, faintly, underneath the floor. It is not synchronised with anyone in the room.</li><li>The chairs are numbered underneath, one to fourteen, in the same hand that carved the dining table.</li><li>Nothing in this room can be searched to any useful result, and Aldous will let the party search it for as long as they like.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">IX</div><div class="level-info"><div class="level-name">The Front Door</div><div class="level-desc">South Porch · Aldous stands here</div></div><span class="level-tag tag-dark">Aldous</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The porch is swept. The gravel is raked. The door opens before you knock.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">Aldous's post, and where the party meets him (his full read-aloud and behaviour are under <b>The Approach</b>). He returns here between errands, always, and a party that circles the grounds will find him back at the door no matter how they came around. He does not appear to travel between the two points.<br><br>He is <b>not</b> an opening fight and should almost never be one. He deflects, he permits, he consults the lord's schedule. The party has to work quite hard to make this violent, and the module is better if they fail to.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Moderate 80</span> <span class="enc-tag enc-skill">◈ Only if forced</span></div><div class="gm-note-text"><b>Aldous</b> (Elite Creature 9, 80 XP) — <b>if and only if the party attacks him, or tries to force the upper stair.</b> Those are the two triggers. He does not initiate, he does not pursue beyond the threshold, and he stops the moment they do.<br><br>He <b>Floats</b>, so difficult terrain and the porch steps mean nothing to him, and he opens with <b>Synaptic Overload</b> (30-ft cone, 4d12 mental, Will DC 25 elite) because it is the most efficient thing available and he is nothing if not efficient. <b>Involuntary Reaction</b> (Reflex DC 28 elite on a Nerve Ending hit) shuts off reactions, which hurts the Guardian more than anyone. He has <b>weakness slashing 5</b> and no ranged option beyond the cone.<br><br><b>He does not gloat, threaten, or explain.</b> He fights with the same courtesy he answers the door with, and if the party disengages he stops immediately, straightens his coat, and resumes taking messages. Nothing in his manner will ever acknowledge that a fight occurred.</div></div>
+          </div></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TOP FLOOR ══ -->
+  <div class="gm-panel" id="tab-top">
+    <div class="section">
+      <div class="section-title">The Top Floor · Map</div>
+      <div class="prose">
+        <p>Veldtmark moved up here five months ago and told the staff it was the light. The upper floor is where he actually lives now, and where almost everything the party needs in order to understand him has ended up: the bed, the mirror, the desk, and the hall he built the circle in.</p>
+        <p><b>There is no fight on this floor.</b> That is deliberate. The party arrives here off the back of the dining room, which is the hardest thing above ground, and the basement is waiting below; this storey is the module's breathing room and its investigation payoff at once. If they never come upstairs, they can still finish the quest, and they will finish it understanding roughly a third of what happened.</p>
+      </div>
+      <div class="map-wrap">
+        <img src="/gm-notes/furrious-five/assets/maps/veldtmark-estate-top-floor.jpg" alt="Veldtmark estate, top floor">
+        <button class="map-hot" data-area="t1" style="left:8.5%;top:8.5%;width:12%;height:12%"><span class="hot-num">1</span></button>
+        <button class="map-hot" data-area="t2" style="left:7.5%;top:20.5%;width:12.5%;height:13%"><span class="hot-num">2</span></button>
+        <button class="map-hot" data-area="t3" style="left:20%;top:16.5%;width:42%;height:6%"><span class="hot-num">3</span></button>
+        <button class="map-hot" data-area="t4" style="left:8.5%;top:47%;width:13%;height:33%"><span class="hot-num">4</span></button>
+        <button class="map-hot" data-area="t5" style="left:35.5%;top:65%;width:13.5%;height:16%"><span class="hot-num">5</span></button>
+        <button class="map-hot" data-area="t6" style="left:50%;top:65.5%;width:13%;height:14.5%"><span class="hot-num">6</span></button>
+      </div>
+      <button class="map-toggle">Hide areas</button>
+      <div class="map-detail"></div>
+      <div class="map-hint">The church is roofed on this floor — there is no upper storey over it.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Top Floor Rooms</div>
+      <div class="level-stack">
+
+        <div class="level-card"><div class="level-header"><div class="level-number">1</div><div class="level-info"><div class="level-name">The Master Bedroom</div><div class="level-desc">North-West · where he sleeps now</div></div><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">This room is lived in, and it is the first room in the house that has been. The bed is unmade. There is a cup on the floor beside it. The canopy has been taken down and folded over a chair, as though the fabric overhead had begun to bother him. A chest sits at the foot of the bed with its lid closed and its lock hanging open, and the rug between the bed and the door has been walked into a visible path, back and forth, from one to the other.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The path in the rug is the detail to lean on. He walks it at night: bed to door, door to bed, for hours. He does this because the floor of this room is directly above the ritual hall and he is listening for it to start without him.<br><br>The cup on the floor is three weeks old and the tea in it has neither evaporated nor grown anything, which a Nature or Arcana check flags as the same effect as the wineglass in the ballroom. He is carrying the drift with him now; it does not stay in the rooms he leaves.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li><b>Under the bed, a locked iron strongbox</b> (Thievery DC 22): <b>200 gp</b>, a deed to a property up the coast in the Muino-saila ports, and a letter addressed to <i>"whoever finds this first, if I cannot finish it."</i></li><li>The letter is the single most valuable object on this floor. Handing it back to him is the key to the <b>Save Veldtmark</b> ending; read the NPC card for what it does to him.</li><li>The chest at the foot of the bed holds bedding and nothing else. The lock hangs open because he stopped seeing the point of locking it.</li><li>He has not slept in this bed in some time either. He lies on it. There is a difference, and the impression in the linen shows it: one shape, on top of the covers, always the same way round.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">2</div><div class="level-info"><div class="level-name">The Washroom</div><div class="level-desc">West · the mirror</div></div><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A washroom in pale tile, scrupulously clean. A bath, a basin, a small table with a razor laid square to its edge. Against the long wall stands a tall mirror in a heavy carved frame, tilted slightly back on its feet. It reflects the room correctly. It reflects you correctly. A slip of paper has been stuck to the bottom corner of the frame, and there is handwriting on it.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The mirror reflects the room accurately in every respect except one: <b>Veldtmark does not appear in it.</b> The note taped to the frame reads <i>"normal, do not worry"</i> and it is in his own handwriting. He wrote it to himself.<br><br>Play this straight and do not make it a puzzle. If a PC stands where he would stand, they appear normally. If the party later brings him up here, or fights him in this room, the absence is the fastest way to show a player what has been done to him, and it lands harder than any amount of exposition. Save it for a moment when he is present if you can.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The razor is sharp, clean, and has not been used in months. He has not needed to shave since roughly the time the church was built, and a Medicine check notices he has no stubble at all.</li><li>Behind the mirror, wedged between frame and backing: a second slip of paper in the same hand, older, reading only <i>"it started on the eleventh."</i> No year.</li><li>Every surface has been wiped down. Aldous cleans this room daily, including the mirror, which he also does not appear in.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">3</div><div class="level-info"><div class="level-name">The Upper Gallery</div><div class="level-desc">North Corridor · runs the length of the floor</div></div><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A long gallery runs the width of the house, windows on one side looking down into the courtyard, portraits on the other. The portraits are all of the same family and they are hung in order. The last four frames on the wall are empty.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The Veldtmark line, in sequence, ending with Caevan's father. The four empty frames past the end are not a mystery and should be allowed to be exactly as unsettling as they sound: he had them hung eight months ago, for the portraits he intends to have painted after the completion. He has already commissioned the first. The painter is expecting to begin in the spring.<br><br>If the party has read the Society correspondence in the study, a character can work out what the four frames imply about how long he expects to live afterward. He expects to live a very long time.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The portraits run four generations and stop. Society DC 18 places the family as Cape gentry of no particular distinction, which is accurate and which Caevan resented.</li><li>His father's portrait has been turned to face the wall. Only that one.</li><li>The courtyard windows look down on the tree. From up here, in the right light, the raked gravel path below shows a second set of tracks that are not visible from ground level: something has been dragged from the church to the house, repeatedly, along the same line.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">4</div><div class="level-info"><div class="level-name">The Ritual Hall</div><div class="level-desc">West Wing · directly above the dining room</div></div><span class="level-tag tag-dark">The circle</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The long hall above the dining room has been stripped of everything a hall like this is usually for. A great circle has been laid into the floor in white chalk and salt and something powdered and grey, and it has been laid many times: the current circle is crisp, and beneath it you can see the ghosts of older ones that were swept and redrawn. At the head of the hall and at its foot, mounted high, two long animal skulls face each other down the length of the room. The chalk is fresh. Somebody drew this within the last day.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">This is where the fourteen actually meet. <b>The dining room downstairs is the social face of the thing; this is the thing.</b> The room is directly above the dining table, and directly above that spiral of names, and the geometry is not a coincidence: the circle up here, the table below it, and the coffin below that are on one vertical line through the house.<br><br><b>The chalk being fresh is the clock.</b> It tells the party the completion is close without anybody having to say so. If you want to apply pressure to a slow-moving group, have them find this on their way through and let them draw the conclusion themselves.<br><br>The powdered grey component in the chalk is bone, and Medicine or Crafting identifies it as such. It is not human. Do not volunteer what it is; the party will assume the worst, and the truth (it came off the skulls, which are ordinary cattle) is a small mercy they have not earned yet.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The circle is a working, not a summoning: Arcana or Occultism DC 24 reads it as a <i>maintenance</i> diagram, something for keeping an existing arrangement stable rather than opening a new one. That is the bargain being held to its terms.</li><li>Scuffing or breaking the circle does nothing immediately and is noticed by Veldtmark within the hour, wherever he is.</li><li>Fourteen positions are marked around the circumference. Six are worn down to the boards. Eight are not.</li><li>The skulls are cattle, mounted for effect, and were bought from a Millhaven butcher eight months ago. Veldtmark paid far too much for them and the butcher still tells the story.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">5</div><div class="level-info"><div class="level-name">The Study</div><div class="level-desc">South Centre · the correspondence</div></div><span class="level-tag tag-dark">Evidence</span><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A working study, and the only room up here that looks like it belongs to the man whose name is on the freight. A good desk, a reading chair, shelves of tariff schedules and route books and bound ledgers in a dozen identical hands. Papers are spread across the desk in a fan. And on the corner of the desk, out of place among all that order, sits a wooden box with a lock that has been forced open from the inside.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The clearest evidence of his decline, and the room where a party that likes paperwork gets rewarded for it. The correspondence runs in three clear layers: <b>early</b> letters to Society members describing the research excitedly, in a clean hand; <b>middle</b> letters becoming more intense and more esoteric; <b>recent</b> letters written partly in a script nobody recognises.<br><br>The forced-open box held what he calls, in an earlier letter, <i>"the terms of the agreement."</i> It is empty now. The inside of the lid is scored with what look like claw marks, though they could as easily be fingernails, and a party that examines them closely can match them to the span of a mortal hand.<br><br><b>The ledgers are the other half of the room, and are worth as much.</b> His freight books are meticulous up to about eight months ago and then go strange: allocations sold and not filled, Harlen Doss's among them, and the money moving steadily out of the business and into something recorded only as <i>the work</i>. A character who reads them understands why Doss is ruined, and that Doss is one of eleven.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The foreign-script letters translate with <b>Linguistics DC 22</b>: they describe the Thing's nature in terms that match nothing in the guild's bestiary.</li><li>The ledgers name the other ten creditors. Several are Stillside houses. One is the same Merchant Council member whose name is carved under the dining table, and his loan is the largest and the only one that was never chased.</li><li>A drawer holds the commission contract for the four portraits in the gallery, paid in advance.</li><li>Society DC 20 on the whole desk: the man was solvent eight months ago and is not now. Everything he had went into the basement.</li></ul>
+          </div></div>
+
+        <div class="level-card"><div class="level-header"><div class="level-number">6</div><div class="level-info"><div class="level-name">The Guest Room</div><div class="level-desc">South-East · kept ready</div></div><div class="level-chevron">▾</div></div>
+          <div class="level-body">
+            <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A guest bedroom, made up and ready, with fresh water in the jug and the bed turned down at one corner. Somebody is expected. A travelling case sits at the foot of the bed with its straps still buckled.</div></div>
+            <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The case belongs to <b>Professor Odo Mast</b>, who arrived three weeks ago with a letter of introduction and was shown to this room before he was shown to the cell. Aldous carried it up, unpacked nothing, and has turned the bed down every evening since.<br><br>If the party reaches the basement and frees Odo before they come up here, this room becomes quietly horrible in retrospect. If they find it first, it is a straightforward lead: someone came and did not leave.</div></div>
+            <div class="exp-label">What's Here</div><ul class="trait-list"><li>The case holds a scholar's travelling kit, three changes of clothes, and a bound offprint of a paper on anomalous drift readings in the northern Cape, with the author's own corrections in the margins.</li><li>The letter of introduction is on the writing table, opened and re-folded. It is addressed to Veldtmark and is perfectly ordinary and collegial.</li><li>The water in the jug is fresh. Somebody changed it this morning.</li></ul>
           </div></div>
 
       </div>
@@ -196,6 +319,23 @@
     </div>
 
     <div class="section">
+      <div class="section-title">The Basement · Map</div>
+      <div class="prose"><p>Everything below is on one level. The ritual chamber sits at the centre, directly under the rotunda and the ritual hall; the pipe corridors thread around it and connect the four entries.</p></div>
+      <div class="map-wrap">
+        <img src="/gm-notes/furrious-five/assets/maps/veldtmark-estate-basement.jpg" alt="Veldtmark estate, basement">
+        <button class="map-hot" data-area="b1" style="left:29%;top:25%;width:29%;height:35%"><span class="hot-num">A</span></button>
+        <button class="map-hot" data-area="b2" style="left:21%;top:10%;width:29%;height:9%"><span class="hot-num">B</span></button>
+        <button class="map-hot" data-area="b3" style="left:79.5%;top:21%;width:14%;height:41%"><span class="hot-num">C</span></button>
+        <button class="map-hot" data-area="b4" style="left:58%;top:13%;width:11%;height:72%"><span class="hot-num">D</span></button>
+        <button class="map-hot" data-area="b4" style="left:10%;top:10%;width:11%;height:16%"></button>
+        <button class="map-hot" data-area="b5" style="left:64%;top:5%;width:13%;height:13%"><span class="hot-num">E</span></button>
+      </div>
+      <button class="map-toggle">Hide areas</button>
+      <div class="map-detail"></div>
+      <div class="map-hint">Area D (the pipe corridors) is drawn as two pieces: the long eastern run and the western stub above the cell.</div>
+    </div>
+
+    <div class="section">
       <div class="section-title">Basement Rooms</div>
       <div class="level-stack">
 
@@ -203,6 +343,16 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The room is red. Not decorated red, the light itself is red, emanating from four candles at the chamber's corners that burn without wax or wick, sustained by something else. In the centre, a coffin. Heavy chains wrap it, bound with locks that have no keyholes. The chains are warm. From inside the coffin, if you stand very close and breathe very quietly, you can hear something that is not breathing but fills the same space as breathing would.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The Thing is here, in its vessel. It is not asleep. It is patient. It is aware of the party the moment they enter and experiences them as interesting in the way a person might find a new smell interesting: noted, categorised, not yet important. The chains are ceremonial but also functional, part of the original bargain, holding the Thing to its agreement. Breaking them would free it from the terms, not free it physically, but free it from its obligations. Do not break the chains. Unless the party wants to find out what happens.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-boss">★ Escalating set-piece</span> <span class="enc-tag enc-combat">⚔ Severe 140 → Extreme</span></div><div class="gm-note-text">
+              <p><b>The fight opens with help already on the field.</b> The Thing does not leave its coffin and is never a stat block; what fights the party is <b>the Reach</b> (Creature 9, 80 XP), the part of it that extends past the chains when the chamber is disturbed, and <b>2× the Gordak</b> (Creature 6, 30 XP each) standing at the coffin's head and foot. They were already out of their boxes. They have been standing there some time.</p>
+              <p><b>Opening: 140 XP, Severe.</b> Then, each round the ritual is still running, <b>one more Gordak walks in from the sarcophagus corridor</b> and joins: 170 at the end of round 1 (<b>Extreme</b>), 200 at round 2, 230 at round 3. The chamber gets worse on a clock, and the party can hear it coming, because the corridor door is open and the footsteps are not hurried.</p>
+              <div class="warn-box">
+                <div class="warn-label">The Fuel Is Finite, and the Party Chose It Already</div>
+                <div class="warn-text">There are <b>six sarcophagi</b>. Two stand open at the coffin; <b>the other four are in the corridor</b>. Whatever the party killed on the way in is not available to walk through that door. A group that cleared the sarcophagus corridor first arrives at a Severe fight with <b>no escalation at all</b>, and gets to feel clever about it. A group that ran past the corridor to save time gets all four, one per round, and finds out what they bought. Do not warn them. The corridor is the choice, and it was made twenty minutes ago.</div>
+              </div>
+              <p><b>Three levers stop the climb</b>, and the party can reach all of them: <b>the four candles</b> (mundane means fail; magical suppression puts one out for a round, and all four out at once stalls the ritual entirely), <b>Veldtmark</b> (if they cracked his framework upstairs, he can call it off, and he is standing right there), and <b>the chains</b> — which stop the escalation instantly and are the worst idea available, because the terms end with them. That is the <i>Destroy the Vessel</i> ending, and the party should be allowed to take it while understanding what it costs.</p>
+              <p><b>Running the Reach.</b> Draining Presence (10 ft, Fort DC 26 or drained 1) punishes crowding, so it drifts into the melee rather than holding still. <b>Grip of Fear</b> (9d6 mental, Will DC 28 basic, paralysed on a critical failure) is the round-one opener and should land on whoever looks most load-bearing. Resistance 10 to all damage means chip damage is wasted and the party must commit. Its <b>Sunlight Powerlessness never matters</b> down here, which is worth remembering if the party finds a way to change that.</p>
+            </div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>The four candles cannot be extinguished by mundane means; magical suppression works for one round before they relight.</li><li>The floor beneath the coffin carries a symbol that predates the Elden Era (History DC 24). Nobody knows what it means, but it pulses faintly in time with whatever is breathing in the coffin.</li><li>Touching the coffin: three seconds of complete temporal displacement; the toucher sees themselves from outside, three seconds in the future, performing the same action. Unsettling, not harmful. First time only.</li><li>At maximum drift: ghost-images of the ritual that first summoned the Thing play on loop in the corners of vision.</li></ul>
           </div></div>
 
@@ -217,6 +367,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">Six stone sarcophagi stand upright along the corridor walls, three to a side, facing inward. They are old, older than the estate by centuries, which raises a question about where they came from and what they were doing before they were here. Their faces are worn smooth except for a repeating symbol around the lids. The symbol is the same one on the ritual chamber floor. They are sealed. The seals look recent.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The sarcophagi were acquired by Veldtmark over the past year from various sources: estate sales, a travelling merchant, one he will not account for. He believed them connected to the Thing's origin from the symbol. He was probably right. Currently: three are empty (recently emptied, the old remains removed, where they went is unclear); two hold preserved bodies in ceremonial dress that match no known culture; one is sealed with a newer lock and hums very quietly. Veldtmark does not have the key to the last one. He is looking for it.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-combat">⚔ Severe 120</span></div><div class="gm-note-text"><b>4× the Gordak</b> (Creature 6, 30 XP each), standing in the corridor between the sarcophagi. <b>This is where the emptied boxes went.</b> The room card above says the old remains were removed and where they went is unclear; this is the answer, and the party works it out by looking at them, because the ceremonial dress on the two bodies still in their boxes is the same dress.<br><br><b>They do not react to the party at first.</b> They are standing, not patrolling, and a group that moves quietly and does not touch a sarcophagus can get the length of the corridor without waking them (Stealth vs Perception +16). Opening a box, taking anything, or attacking one wakes all four at once.<br><br><b>Fight them properly and they hit hard</b>: Fist +16 for 2d10+7, then <b>Choking Pain</b> as a follow-up (3d8 void, Will DC 24 basic) sharing the moment they were put under. <b>Weakness fire 5 and alchemical 5</b> is the party's lever, and Blighted Consumption (Fort DC 24, sickened 2) punishes anyone who drinks a potion within 30 feet, which will catch a healer off guard exactly once.<br><br><div class="warn-box"><div class="warn-label">This Fight Is the Finale's Ammunition</div><div class="warn-text">Every Gordak the party puts down here is one that <b>cannot</b> walk into the ritual chamber later. Clearing this corridor is the single most consequential tactical decision in the module, and the party will make it without knowing that. Slipping past is legitimate, faster, and costs them dearly at the coffin. Say nothing either way.</div></div></div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>Opening the humming sarcophagus needs the key (location unknown) or DC 24 Thievery. What is inside is a hook for future sessions; leave it sealed this session.</li><li>The preserved bodies show no decay despite apparent age. A Medicine or Arcana check: a state of suspended animation rather than death.</li><li>The symbol predates the Elden Era, same as the ritual chamber floor. These things are connected and old.</li></ul>
           </div></div>
 
@@ -224,6 +375,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">The corridors are narrow and smell of damp stone and something faintly electrical that should not be possible. Pipes run along the ceiling, not water pipes, not gas pipes, something that pulses with a slow warmth. The sound of the ritual chamber is muffled here but present, like a heartbeat felt through a wall.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The pipes carry something, not water, not gas. They connect the ritual chamber to points throughout the estate, including directly beneath Veldtmark's bedroom and the organ room. Whatever flows through them is how the Thing maintains its influence over the household from below. Disrupting the pipes (Thievery DC 20 or significant physical effort) weakens the drift effects in the estate and causes mild distress in Aldous and the kitchen staff. It does not harm the Thing directly but slows its feeding.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-skill">◈ Optional</span> <span class="enc-tag enc-combat">⚔ Low 60 if it turns</span></div><div class="gm-note-text"><b>Three cult members</b> are in the corridor preparing an offering (this is the group the Entry 4 note refers to). They are ordinary Millhaven people of the eight still nominally in the society and not yet far enough gone to be dangerous: frightened, out of their depth, and holding a covered bowl.<br><br><b>Run them as a social encounter first.</b> They will try to bluff, then beg, then run for the ritual chamber to raise the alarm, and the alarm is the real stake here, not the fight. A party that takes them quietly keeps its surprise at the coffin; a party that lets one get past loses the Reach's opening round of not-knowing, and the two Gordak at the coffin are already facing the door when they arrive.<br><br><b>If they do fight</b>, use <b>the Seated</b> (Creature 4, 15 XP each; 45 XP, Low) and drop the undead package: these three are alive, and killing them is killing three frightened shopkeepers. The module is better if at least one of them survives to testify, which is also the single best evidence for the <i>Expose Veldtmark</i> ending.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>A valve junction in the north corridor controls flow to the entire system; closing it buys time and alerts Veldtmark immediately.</li><li>Chalk marks on the walls: a running tally in three different handwritings. Numbers. Dates. The tallies do not match.</li><li>Cult members use these corridors to move between the entry points without going through the ritual chamber. There are fresh footprints.</li></ul>
           </div></div>
 
@@ -231,6 +383,7 @@
           <div class="level-body">
             <div class="read-aloud"><div class="read-aloud-label">Read Aloud</div><div class="read-aloud-text">A circular room, a circular pool, still water that reflects the ceiling, except the ceiling reflected in the water is not the ceiling above you. It shows a night sky. Stars you do not recognise in patterns you have never seen. The water is perfectly cold. Nothing floats in it. Nothing sinks.</div></div>
             <div class="gm-note"><div class="gm-note-label">GM Notes</div><div class="gm-note-text">The pool shows the sky from the space the Thing comes from, the between-moments, rendered as starlight from a perspective that has no up or down. Looking into the pool for more than one round: a Wisdom save (DC 18) or fascinated for one minute, not charmed, just unable to look away, certain they are about to understand something. They never do. The pool is not dangerous by itself. Veldtmark uses it to speak with the Thing when he cannot go below: he speaks to his reflection and the Thing's responses arrive as temperature changes in the water.</div></div>
+            <div class="gm-note"><div class="gm-note-label">Encounter · <span class="enc-tag enc-hazard">⚠ Avoidable</span> <span class="enc-tag enc-combat">⚔ Trivial 40 by budget</span></div><div class="gm-note-text"><b>The Standing Water</b> (Creature 7, 40 XP) is in the pool, and it is not water. It has no mind, no plan, and no interest; it is what has been collecting at the bottom of the between since the pool was opened, and it moves when something warm leans over the edge.<br><br><div class="warn-box"><div class="warn-label">Read the Numbers Before You Run This</div><div class="warn-text">40 XP says Trivial. <b>AC 14 with 165 HP says otherwise</b>, and what it actually plays like is a twelve-round slog the party cannot lose and will not enjoy. It is immune to bludgeoning, critical hits, precision, and mental, so the Rogue and the Bard contribute almost nothing. <b>Treat it as a hazard to be avoided, not a fight to be won.</b> Nothing in the quest requires this room, and the party's own good sense is the intended solution.</div></div><b>If they engage anyway:</b> Adhesive Mass sticks the first weapon that hits it (Athletics DC 23 to pull free), <b>Grab</b> then <b>Engulf</b> (Reflex DC 22, 4d6 acid, Escape DC 22, Rupture 15) is its whole gameplan, and a swallowed PC is the only genuine danger in the encounter. Fire and acid-free energy damage end it fastest.<br><br><b>The reason to come here anyway</b> is the journal beside the pool and what the water shows, both of which are worth more to the party than the creature is dangerous. Let them take the room without taking the fight.</div></div>
             <div class="exp-label">What's Here</div><ul class="trait-list"><li>A journal beside the pool: Veldtmark's transcriptions of his pool conversations, mostly his interpretations of temperature fluctuations. They grow increasingly grandiose.</li><li>Touching the water: cold, sharp, and briefly the character sees their own reflection age forward by about ten years before snapping back.</li><li>The star patterns: an Arcana DC 26 identifies them as matching no known stellar map, including historical ones.</li></ul>
           </div></div>
 
@@ -239,6 +392,230 @@
   </div>
 
   <!-- ══ NPCS ══ -->
+  <!-- ══ BESTIARY ══ -->
+  <div class="gm-panel" id="tab-bestiary">
+    <div class="section">
+      <div class="section-title">What Is In This House</div>
+      <div class="prose">
+        <p>Every creature in the estate is a reskin. The numbers are stock Pathfinder blocks and can be run straight off the compendium; the names, the traits and the reasons are the estate's. <b>Nothing in this house is undead</b>, whatever the source book calls it. The drift under the Cape is Wellspring-residue, and what it does to the people who stand in it too long is dissolve them partway out of time. They are not dead. They have simply stopped arriving at each moment in the right order.</p>
+      </div>
+      <div class="warn-box">
+        <div class="warn-label">Run This Rule at the Table</div>
+        <div class="warn-text">If a player detects undead, turns undead, or throws holy damage at anything in this house, <b>it does not work, and that is a clue rather than a GM refusal.</b> The correct read-aloud is that the effect finds nothing to grip. A cleric who has spent three sessions confidently identifying the dead should get to feel the floor move here. The one deliberate exception is <b>the Reach</b> in the basement, which is not a person at all and which you may let holy damage bite if your table needs the win.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Above Ground</div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Guests</div>
+        <div class="statblock-meta">Attic Whisperer · Creature 4 · 15 XP · ballroom · 6 of them</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+10</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">21</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">60</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+8 / +13 / +12</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">bleed, disease, poison</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Jaws</span> +14, <b>2d8 piercing</b> (agile, finesse), plus Steal Breath.</li>
+          <li><span class="ability-name">Bony Hand</span> +12, <b>2d10 void</b> (agile), plus Steal Voice.</li>
+          <li><span class="ability-name">Aura of Sobs</span> 10 ft. Enter or start a turn inside: <b>Will DC 19</b> or stupefied 1. The sound is a room full of conversation you cannot quite make out, and it gets no clearer the closer you get.</li>
+          <li><span class="ability-name">Steal Voice</span> On a Bony Hand hit, <b>Will DC 21</b> or the victim's voice is pulled into the aura. A caster who fails loses verbal components for a minute. <b>This is the fight's real threat.</b></li>
+          <li><span class="ability-name">Steal Breath</span> On a Jaws hit, <b>Fort DC 21</b> or enfeebled and fatigued.</li>
+          <li><span class="ability-name">Whispered Despair (reaction)</span> When a creature with an active emotion effect enters the aura, counteract it at +13. The Bard will notice this immediately.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">The ballroom is set for an event that ended recently or is about to begin, and the Guests are the part of that event the house could not let go of. They have no faces to speak of and they are dressed for dinner. They drift rather than charge, and they are drawn to warmth and conversation, which means <b>they follow the party's talking</b>. A group that goes quiet is a group they lose track of.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Meditation</div>
+        <div class="statblock-meta">Weight of Guilt · simple haunt · Hazard 7 · 8 XP · organ room</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Stealth</div><div class="v">+20 (DC 30)</div></div>
+          <div class="sb-item"><div class="l">AC / HP</div><div class="v">10 / 10</div></div>
+          <div class="sb-item"><div class="l">Trigger</div><div class="v">the piece is played or read</div></div>
+          <div class="sb-item"><div class="l">Disable</div><div class="v">Religion DC 26 · Deception DC 27</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Mental Bind (reaction)</span> Every creature within 30 ft is wrapped in spectral chains forged out of its own sins and regrets: <b>Will DC 25</b>.</li>
+          <li><span class="ability-name">Disable</span> <b>Religion DC 26</b> (expert) to disrupt it through prayer, or <b>Deception DC 27</b> (expert) to openly defy your regrets and banish it.</li>
+          <li><span class="ability-name">Clean Conscience</span> A creature that has committed no sins, or has already made amends, is <b>immune</b>. Ask the player. Their answer is the interesting part.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">The haunt is the composition on the stand: <i>Meditation on the Spaces Between</i>, which is also the cipher for the basement entry. It is not a real piece of music and it was never meant to be played by anyone who had not already agreed to what it opens. Playing it to get downstairs and being caught by it in the process is the intended experience, and the party will not separate the two.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Seated</div>
+        <div class="statblock-meta">Elite Cairn Wight · Creature 5 · 20 XP · dining room · 6 of them, the six still active</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+13</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">22</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">77</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+14 / +12 / +13</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">bleed, disease, poison</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Longsword</span> +16, <b>1d8+9 slashing</b> (versatile P), plus Drain Life.</li>
+          <li><span class="ability-name">Claw</span> +16, <b>1d6+9 slashing</b> (agile), plus Drain Life.</li>
+          <li><span class="ability-name">Funereal Dirge</span> Living creatures within 50 ft, <b>Will DC 23</b> or frightened. Recharge 1d4 rounds. <b>This is the grace before the meal</b>, and it opens the fight.</li>
+          <li><span class="ability-name">Drain Life</span> On a melee hit, <b>Fort DC 20</b> or drained 1; the Seated gains 5 temporary HP.</li>
+          <li><span class="ability-name">Final Spite (reaction)</span> On being reduced to 0 HP, it makes one last Strike. <b>Six of these means six free Strikes at the end of the fight.</b></li>
+          <li><span class="ability-name">Spawn</span> A living humanoid slain here rises at the table in 1d4 rounds. This is how the fourteen were made, and the party is watching the process.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">They are the six still-active members of the society, and they are recognisable: a party that has read the names under the table, or asked around Millhaven, can put a name to at least two faces. They are dressed for dinner, seated, and mid-conversation when the party walks in, and the conversation does not stop. <b>They answer questions while they eat.</b> They will not discuss the basement, they will happily discuss the freight business, and the horror of the room is how ordinary they are about all of it until somebody sits in the seventh chair.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Provisioner</div>
+        <div class="statblock-meta">Elite Larder Guard · Creature 9 · 80 XP · kitchen · entirely mortal, entirely willing</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+18</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">29</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">150</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+19 / +20 / +16</div></div>
+          <div class="sb-item"><div class="l">Resistances</div><div class="v">poison 10</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Shortsword</span> +21, <b>1d6+12 slashing</b> (agile, finesse, versatile P).</li>
+          <li><span class="ability-name">Crossbow</span> +21, <b>2d8+8 piercing</b> (reload 1).</li>
+          <li><span class="ability-name">Running Poison Strike</span> Three times per day: Stride and Strike, poisoning the weapon as he moves, for an extra <b>2d8 poison</b>.</li>
+          <li><span class="ability-name">Poisoner's Constitution</span> +1 status to all saves against poison.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">No change needed: he was already a human poisoner and he stays one. He is the estate's provisioner, the man who signs for <i>the requirement</i> on the kitchen ledger every week, and he is the only opponent in the house who understood the arrangement, weighed it, and said yes for money. <b>Play him as pleasant.</b> He is good at his job, fond of the kitchen staff, and entirely clear about what he is doing. If the party gets him talking before they get him fighting, he is the fastest route to the whole truth, and he will trade it.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">Aldous</div>
+        <div class="statblock-meta">Elite Raw Nerve · Creature 9 · 80 XP · the front door · <b>alive, and not undead</b></div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+19</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">28</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">165</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+16 / +18 / +21</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">mental, electricity</div></div>
+          <div class="sb-item"><div class="l">Weaknesses</div><div class="v">slashing 5</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Nerve Ending</span> +22, <b>2d10+11 electricity</b> (agile, finesse, magical), plus Involuntary Reaction. <b>Describe it as a touch that arrives before his hand does.</b></li>
+          <li><span class="ability-name">Synaptic Overload</span> 30-ft cone, <b>4d12 mental</b>, <b>Will DC 25</b> basic, stunned on a failure. His opener, because it is the most efficient thing available.</li>
+          <li><span class="ability-name">Involuntary Reaction</span> A creature struck by Nerve Ending must succeed at <b>Reflex DC 28</b> or be unable to use reactions until the start of its next turn.</li>
+          <li><span class="ability-name">Accelerating Inquest</span> Occultism against a creature's Will DC within 100 ft; on a success he Steps and gains +2 circumstance AC against it. He is thinking faster than the fight.</li>
+          <li><span class="ability-name">Float</span> He hovers a few inches off the floor and ignores difficult terrain. <b>Nobody in the household has ever remarked on this.</b></li>
+          <li><span class="ability-name">Telepathy 100 ft · Thoughtsense 60 ft</span> He knows where every mind in the house is and answers questions a half-beat before they finish being asked.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin · <b>drop the undead package</b></div><div class="gm-note-text">The compendium block is tagged undead, evil and unholy. <b>Strip all three</b>, along with the undead immunity package (death effects, paralysed, poison, unconscious), and keep only the mental and electricity immunities and the slashing weakness. What is left is exactly right: a man who Floats, who senses thoughts, whose touch discharges, and who cannot be frightened or charmed because there is not enough of him left to grip.<br><br>He was an ordinary butler eight months ago and he is not dead now. He has been standing in Wellspring-residue for eight months and it has smoothed the investment out of him. <b>He has not slept in four months and has not noticed.</b> He does his job. He is not an enemy and not an ally, and the party has to work quite hard to make him fight.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Answerers</div>
+        <div class="statblock-meta">Owb · Creature 6 · 30 XP · the church · 3 of them</div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+13</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">24</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">90</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+14 / +15 / +13</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">cold</div></div>
+          <div class="sb-item"><div class="l">Weaknesses</div><div class="v">light blindness</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Claw</span> +16, <b>1d8+7 slashing plus 1d8 cold</b> (agile, magical).</li>
+          <li><span class="ability-name">Burning Cold</span> +17, <b>2d8 cold plus 1d8 persistent cold</b>. Outranges most of the party's openers.</li>
+          <li><span class="ability-name">Curse of Darkness</span> Against a creature taking persistent cold from Burning Cold: <b>Fort DC 23</b> or it gains Light Blindness and <b>its colouration drains away to grey</b>. The signature effect of this fight, and it does not wear off on its own.</li>
+          <li><span class="ability-name">Greater Darkvision · Telepathy 100 ft</span> They speak, and what they say is not language so much as the certainty of having been addressed.</li>
+          <li><span class="ability-name">Light Blindness</span> Their own weakness, and the party's best answer. A bright light in the nave turns the fight.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">The first three things that came through when the society made contact four months ago: small, partial, and not what anyone was expecting. They were left in the church because the ground is thinnest there, which is also why the room has no echo. <b>They are not the Thing and they are not its servants</b>, and they have no loyalty to Veldtmark whatsoever. They are simply here, and cold, and awake.<br><br>A PC who walks out of this church grey carries the mark for the rest of the campaign until it is removed, and every NPC in Millhaven will comment on it. That is worth more than the 90 XP.</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Below</div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Gordak</div>
+        <div class="statblock-meta">Mummy Guardian · Creature 6 · 30 XP · sarcophagus corridor · <i>the kept ones</i></div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+16</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">23</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">125</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+14 / +10 / +16</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">bleed, disease, poison</div></div>
+          <div class="sb-item"><div class="l">Weaknesses</div><div class="v">fire 5, alchemical 5</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Fist</span> +16, <b>2d10+7 bludgeoning</b> (agile).</li>
+          <li><span class="ability-name">Choking Pain</span> After a successful Fist Strike: the target takes <b>3d8 void</b>, <b>Will DC 24</b> basic, as the Gordak shares the moment it was put under. On a critical failure it also cannot breathe for a round.</li>
+          <li><span class="ability-name">Blighted Consumption (reaction)</span> A creature within 30 ft that eats or drinks anything, <b>potions included</b>, must make <b>Fort DC 24</b> or become sickened 2. This catches a healer off guard exactly once.</li>
+          <li><span class="ability-name">Slow to Start</span> They stand still until woken. Stealth vs Perception +16 gets a quiet party the length of the corridor.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin · <b>and the one coined name</b></div><div class="gm-note-text"><b>Gordak</b>, from Basque <i>gordeak</i>, "the kept ones," eroded by the centuries between their keeping and now. They are the estate's oldest residents and they long predate Veldtmark, who merely dug some of them up: the symbol on the corridor floor predates the Elden Era, and so do they. They were put outside of time by something, for some reason, and neither is recoverable this session.<br><br>They are <b>not</b> mummies and there is no rot on them. The page's own description is the right one: preserved bodies in ceremonial dress that match no known culture, in suspended animation rather than death. <b>Choking Pain is them sharing the moment they were put under</b>, and a PC who takes it gets a half-second of a place and a sky that are not Talan's.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Reach</div>
+        <div class="statblock-meta">War Wraith · Creature 9 · 80 XP · ritual chamber · <b>not the Thing itself</b></div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+19</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">27</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v">130</div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+16 / +19 / +21</div></div>
+          <div class="sb-item"><div class="l">Resistances</div><div class="v"><b>all damage 10</b></div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">bleed, disease, poison, precision</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Reaching Touch</span> +21, <b>2d12+6 void</b> (agile, finesse). It arrives from a direction the geometry of the room does not have.</li>
+          <li><span class="ability-name">Grip of Fear</span> Reaches into an adjacent creature's chest: <b>9d6 mental</b>, <b>Will DC 28</b> basic, paralysed until the start of its next turn on a critical failure. <b>The round-one opener.</b></li>
+          <li><span class="ability-name">Draining Presence</span> 10-ft aura. Enter it and make <b>Fort DC 26</b> or become drained 1. It punishes crowding, so it moves into the melee rather than away from it.</li>
+          <li><span class="ability-name">Robes of Welcome · Void's Embrace</span> Wraps an adjacent creature and inflicts a staged curse, <b>Will DC 28</b>: dazzled, then enfeebled, then worse. Only one victim at a time.</li>
+          <li><span class="ability-name">Resistance 10 to everything</span> Chip damage is wasted. The party has to commit, which is the point.</li>
+          <li><span class="ability-name">Sunlight Powerlessness</span> Stunned 2 and clumsy 2 in sunlight. <b>There is no sunlight in the basement</b> — but a party that engineers some has earned what it buys.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin</div><div class="gm-note-text">The Thing never leaves the coffin and never gets a stat block. <b>This is what it puts out through the chains when the chamber is disturbed</b>, and it is roughly the amount of itself it can currently spare: a reaching, not a body. Destroying it does not hurt the Thing meaningfully and the party should be allowed to believe otherwise for a while.<br><br>Describe it without a shape. It is where the room's attention goes. It has no face to read and no tells to spot, and the drained condition it leaves behind is time taken off the victim rather than blood: a PC who ends the fight drained 2 is two days older than they were an hour ago, and the Guild's healers will find that in their bones.</div></div>
+      </div>
+
+      <div class="statblock">
+        <div class="statblock-name">The Standing Water</div>
+        <div class="statblock-meta">Living Tar · Creature 7 · 40 XP · scrying pool · <b>avoid, do not fight</b></div>
+        <div class="sb-grid">
+          <div class="sb-item"><div class="l">Perception</div><div class="v">+9 (motion only)</div></div>
+          <div class="sb-item"><div class="l">AC</div><div class="v">14</div></div>
+          <div class="sb-item"><div class="l">HP</div><div class="v"><b>165</b></div></div>
+          <div class="sb-item"><div class="l">Fort / Ref / Will</div><div class="v">+18 / +6 / +11</div></div>
+          <div class="sb-item"><div class="l">Immunities</div><div class="v">acid, bludgeoning, crits, precision, mental, visual</div></div>
+        </div>
+        <ul class="ability-list">
+          <li><span class="ability-name">Pseudopod</span> +18, <b>2d8+7 bludgeoning plus 2d6 acid</b>, reach 10 ft, plus Grab.</li>
+          <li><span class="ability-name">Engulf</span> <b>Reflex DC 22</b> or be swallowed: <b>4d6 acid</b> per round, Escape DC 22, Rupture 15. <b>The only real danger in the room.</b></li>
+          <li><span class="ability-name">Constrict</span> 1d8+7 bludgeoning plus 1d6 acid, <b>Fort DC 26</b> basic.</li>
+          <li><span class="ability-name">Adhesive Mass</span> A weapon that hits it sticks; Athletics DC 23 to pull free.</li>
+          <li><span class="ability-name">Mindless</span> No plan, no interest, no morale. It moves when something warm leans over the edge.</li>
+        </ul>
+        <div class="gm-note"><div class="gm-note-label">The Reskin · <b>and a warning</b></div><div class="gm-note-text">It is what has been collecting at the bottom of the between since the pool was opened. It does not think and it never did.<br><br><b>The budget lies about this one.</b> 40 XP reads Trivial; AC 14 with 165 HP and immunity to bludgeoning, crits, precision and mental reads as a twelve-round slog in which the Rogue and the Bard contribute nothing. <b>Treat it as terrain.</b> Nothing in the quest requires this room, the journal and the pool are the actual rewards, and a party that takes the room without taking the fight has played it correctly.</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">The Encounter Ladder</div>
+      <div class="prose"><p>Budgets for <b>four PCs at level 7</b>: Trivial 40 · Low 60 · Moderate 80 · Severe 120 · Extreme 160. The module was originally costed for a level 5–6 party and has been re-tiered; the shape below is the intended arc.</p></div>
+      <ul class="trait-list">
+        <li><b>Ballroom</b> · 6× the Guests · 90 · <b>Moderate</b></li>
+        <li><b>Organ room</b> · the Meditation · 8 · <b>Haunt</b></li>
+        <li><b>Dining room</b> · 6× the Seated · 120 · <b>Severe</b> — the hardest thing above ground</li>
+        <li><b>Kitchen</b> · the Provisioner · 80 · <b>Moderate</b></li>
+        <li><b>Conservatory</b> · Veldtmark · 10 · <b>Trivial</b>, and meant to be a conversation</li>
+        <li><b>Church</b> · 3× the Answerers · 90 · <b>Moderate</b></li>
+        <li><b>Front door</b> · Aldous · 80 · <b>Moderate</b>, only if the party forces it</li>
+        <li><b>Top floor</b> · nothing · the investigation payoff and the module's breathing room</li>
+        <li><b>Pipe corridors</b> · three cult members · 45 · <b>Low</b>, and better as a social beat</li>
+        <li><b>Sarcophagus corridor</b> · 4× the Gordak · 120 · <b>Severe</b> — and the finale's ammunition</li>
+        <li><b>Scrying pool</b> · the Standing Water · 40 · <b>avoidable slog</b></li>
+        <li><b>Ritual chamber</b> · the Reach + 2 Gordak · 140 opening, climbing past 200 · <b>Severe → Extreme</b></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="gm-panel" id="tab-npcs">
     <div class="section">
       <div class="section-title">Cast of the Estate</div>
@@ -355,6 +732,37 @@
   <div class="gm-footer">THE FURRIOUS FIVE · THE VELDTMARK INVITATION · NOT PLAYER-FACING</div>
 
 </div>
+
+<script>
+window.GM_MAP_AREAS = {
+  /* ── Ground floor ── */
+  g1: { n: 'I · The Grand Hall / Ballroom', t: '<p>Blue silk, candelabras burning low, chairs set for an event that ended recently or is about to begin. The flowers are fresh. One wineglass, half full, six days unspoiled.</p><p><b>Encounter · ⚔ Moderate 90</b> — 6× <b>the Guests</b> (Creature 4). They drift toward warmth and conversation; the fight starts when a PC realises the murmur has been getting closer. Aura of Sobs stacks as they converge.</p>' },
+  g2: { n: 'II · The Dining Room', t: '<p>A table set for fourteen. Fourteen names carved beneath it in a spiral, one of them a sitting Merchant Council member. Fourteen devotional journals on the sideboard.</p><p><b>Encounter · ⚔ Severe 120</b> — 6× <b>the Seated</b> (Elite Creature 5), the six still active. Funereal Dirge opens as the grace before the meal; Final Spite means the last round is the worst one. <b>The hardest fight above ground.</b></p>' },
+  g3: { n: 'III · The Organ Room', t: '<p>The organ plays itself. The piece on the stand is <i>Meditation on the Spaces Between</i> — not a real composition, but the cipher for <b>basement Entry 2</b>.</p><p><b>Encounter · ⚠ Haunt 8</b> — <b>the Meditation</b> (Hazard 7). Mental Bind, Will DC 25, chains forged from your own regrets. Disable: Religion DC 26 or Deception DC 27.</p>' },
+  g4: { n: 'IV · The Kitchen & Storage', t: '<p>Two drift-blurred staff who cannot tell you what day it is. Bread four days in the oven and not burned. A ledger logging a weekly delivery of "the requirement," signed by Aldous. The locked storage door is <b>basement Entry 4</b>.</p><p><b>Encounter · ⚔ Moderate 80</b> — <b>the Provisioner</b> (Elite Creature 9). Entirely mortal, entirely willing, and the best source of the truth if the party talks before it fights. He runs for the basement stair if losing.</p>' },
+  g5: { n: 'V · The Conservatory', t: '<p>Humid, green, insistent. <b>Veldtmark is here</b>, reading, and looks up expecting you. He will pay the debt in full from a purse he does not count, offer tea, and answer in partial truths. He will not discuss the church or the basement.</p><p><b>Encounter · ◈ Social · ⚔ Trivial 10</b> — he is Creature 3 here and all the way down. Killing him is easy, legitimate, and closes the <i>Save Veldtmark</i> ending. The bill arrives later.</p>' },
+  g6: { n: 'VI · The Lower Bedroom', t: '<p>The room he left five months ago. Made from habit, not rest; a book face-down at page 211, annotations stopping mid-sentence. Nothing is hidden here, and that absence is the clue — everything worth finding moved upstairs with him.</p><p>The door to the upper stair is the only one on this floor that Aldous will physically stand in front of.</p>' },
+  g7: { n: 'VII · The Church', t: '<p>Looks like a Bikiargi chapel; the hymnal is genuine except the last twelve pages, which carry the cipher. The room has no echo. Beneath the altar, the cult\'s real symbol. The prayer rail is <b>basement Entry 1</b>.</p><p><b>Encounter · ⚔ Moderate 90</b> — 3× <b>the Answerers</b> (Creature 6). Curse of Darkness (Fort DC 23) drains a PC grey and gives them Light Blindness, permanently until removed. Bright light in the nave turns the fight.</p>' },
+  g8: { n: 'VIII · The Rotunda', t: '<p>The hinge of the house; every corridor arrives here. One enormous burgundy medallion worked as a spiral of fourteen arms. Chairs around the wall facing inward, numbered underneath one to fourteen.</p><p>Nothing happens on the first pass. On the second, a chair has moved. Do not explain it and do not attach a mechanic. <b>The coffin is directly below the spiral\'s centre.</b></p>' },
+  g9: { n: 'IX · The Front Door', t: '<p>Aldous\'s post. The door opens before you knock, and he returns here between errands no matter how the party circles the grounds.</p><p><b>Encounter · ⚔ Moderate 80 · only if forced</b> — <b>Aldous</b> (Elite Creature 9). Two triggers only: attacking him, or forcing the upper stair. He Floats, opens with Synaptic Overload, and stops the instant the party disengages. He will never acknowledge that a fight occurred.</p>' },
+  g10: { n: 'X · The Dry Well', t: '<p>Between church and mansion. It is dry, it has always been dry, and it was never a well. Iron rungs lead down to the passage between the ritual chamber and the sarcophagus corridor.</p><p><b>Basement Entry 3</b> — the most direct route and the most exposed. No cover once they are in the main passage.</p>' },
+
+  /* ── Top floor ── */
+  t1: { n: '1 · The Master Bedroom', t: '<p>The first lived-in room in the house. Bed unmade, canopy taken down and folded away, a three-week-old cup of tea on the floor that has neither evaporated nor grown anything. The rug is walked into a path, bed to door and back.</p><p><b>Under the bed: a locked iron strongbox</b> (Thievery DC 22) — <b>200 gp</b>, the Muino-saila deed, and the letter addressed to <i>"whoever finds this first, if I cannot finish it."</i> That letter is the key to the <i>Save Veldtmark</i> ending.</p>' },
+  t2: { n: '2 · The Washroom', t: '<p>Pale tile, scrupulously clean, a razor squared to the table edge that has not been used in months. A tall tilted mirror in a heavy frame.</p><p><b>The mirror reflects everything correctly except Veldtmark.</b> The note taped to the frame reads <i>"normal, do not worry"</i> in his own hand. Behind the frame, older: <i>"it started on the eleventh."</i> No year. Aldous cleans this mirror daily and does not appear in it either.</p>' },
+  t3: { n: '3 · The Upper Gallery', t: '<p>Four generations of Veldtmarks hung in order, ending with Caevan\'s father, whose portrait has been turned to face the wall. <b>The last four frames are empty</b> — hung eight months ago for the portraits he intends to have painted after the completion. The first is already commissioned and paid for.</p><p>From these windows the raked gravel below shows a second set of tracks invisible at ground level: something dragged from the church to the house, repeatedly, along one line.</p>' },
+  t4: { n: '4 · The Ritual Hall', t: '<p>Directly above the dining room, and above the spiral of names. A great circle in chalk, salt and powdered grey bone, laid many times over older swept circles. Two cattle skulls face each other down the length of the hall.</p><p><b>The chalk is fresh — somebody drew this within the last day.</b> That is the clock, and it tells the party the completion is close without anyone saying so. Arcana/Occultism DC 24 reads it as a <i>maintenance</i> diagram: the bargain being held to its terms. Fourteen positions marked; six worn to the boards.</p>' },
+  t5: { n: '5 · The Study', t: '<p>The correspondence, in three layers: early letters written excitedly in a clean hand, middle letters turning esoteric, recent letters partly in a script nobody recognises (<b>Linguistics DC 22</b>). The wooden box that held "the terms of the agreement" sits forced open <b>from the inside</b>, scored with marks that match a mortal hand.</p><p><b>The ledgers are worth as much.</b> Meticulous until eight months ago, then allocations sold and unfilled — Doss among eleven creditors — and the money moving steadily into something recorded only as <i>the work</i>.</p>' },
+  t6: { n: '6 · The Guest Room', t: '<p>Made up and ready, water fresh this morning, bed turned down at one corner. A travelling case at the foot, straps still buckled.</p><p>It is <b>Professor Odo Mast\'s</b>. He was shown to this room three weeks ago before he was shown to the cell, and Aldous has turned the bed down every evening since. Find this after freeing him and it is quietly horrible; find it first and it is a straightforward lead.</p>' },
+
+  /* ── Basement ── */
+  b1: { n: 'A · The Ritual Chamber', t: '<p>Red light, four candles that mundane means cannot extinguish, and the chained coffin at the centre of the spiral. The Thing is here, awake, patient, and has noted the party the way you note a new smell.</p><p><b>★ Escalating set-piece · Severe 140 → Extreme</b> — opens with <b>the Reach</b> (Creature 9) and <b>2× the Gordak</b> already standing at the coffin. Each round the ritual runs, <b>one more Gordak walks in from the corridor</b>: 170, 200, 230.</p><p><b>The fuel is whatever the party left alive in the corridor.</b> Levers: the four candles, Veldtmark himself, and the chains — which stop it instantly and end the terms.</p>' },
+  b2: { n: 'B · The Barred Cell', t: '<p><b>Sera Vance</b> and <b>Professor Odo Mast</b>, alive, physically unharmed, and temporally displaced: present one moment and absent the next. Fed to the Thing in small amounts, never enough. Recovery takes weeks and proper clerical care.</p><p>Odo has been taking notes on his clothing in his own blood, and they are genuinely valuable. The cell key hangs on a hook outside, visible and inviting. There are no guards. There were, twenty minutes ago.</p>' },
+  b3: { n: 'C · The Sarcophagus Corridor', t: '<p>Six standing sarcophagi. Three empty and recently so, two holding preserved bodies in ceremonial dress matching no known culture, one sealed with a newer lock, humming, and Veldtmark has no key. <b>Leave the sealed one sealed this session.</b></p><p><b>Encounter · ⚔ Severe 120</b> — 4× <b>the Gordak</b> (Creature 6). This is where the emptied boxes went. They stand still until woken; Stealth vs Perception +16 gets a quiet party through.</p><p><b>Every one killed here cannot walk into the finale.</b> This is the most consequential decision in the module, and the party makes it without knowing.</p>' },
+  b4: { n: 'D · The Pipe Corridors', t: '<p>The pipes carry something that is not water and not gas, connecting the chamber to points across the estate — including under the bedroom and the organ room. This is how the Thing holds the household. Disrupting them (Thievery DC 20) thins the drift and distresses Aldous and the staff.</p><p><b>Encounter · ◈ Optional · ⚔ Low 45 if it turns</b> — three cult members preparing an offering. Frightened shopkeepers, out of their depth. <b>The alarm is the stake, not the fight</b>: one that gets past costs the party its surprise at the coffin. Keeping one alive is the best evidence for <i>Expose Veldtmark</i>.</p>' },
+  b5: { n: 'E · The Scrying Pool', t: '<p>Starlight from a perspective with no up or down. Look longer than a round: <b>DC 18</b> or fascinated for a minute, certain you are about to understand something. You never do. Veldtmark speaks to his reflection here and the answers arrive as temperature.</p><p><b>⚠ Avoidable · ⚔ Trivial 40 by budget, a slog in practice</b> — <b>the Standing Water</b> (Creature 7): AC 14, HP 165, immune to bludgeoning, crits, precision and mental. <b>Treat it as terrain.</b> The journal and the pool are the rewards; the creature is not a fight worth having.</p>' }
+};
+</script>
 
 </body>
 </html>
