@@ -134,12 +134,14 @@ def build(con, party_level, party_size=4, share=None, value=None,
     handout = value is None and share is None
 
     perm_levels, cons_levels = slots(L)
-    if extra > 0:                       # +1 permanent & +1 consumable at L per extra PC
-        perm_levels += [L] * extra
-        cons_levels += [L] * extra
+    if extra > 0:
+        # Per AoN 2656: each PC beyond four adds one permanent item of the
+        # party's level or 1 higher, and TWO consumables (one at L, one at L+1).
+        perm_levels += [cap(L + 1)] * extra
+        cons_levels += [L, cap(L + 1)] * extra
     elif extra < 0:
         perm_levels = perm_levels[:max(1, len(perm_levels) + extra)]
-        cons_levels = cons_levels[:max(1, len(cons_levels) + extra)]
+        cons_levels = cons_levels[:max(1, len(cons_levels) + 2 * extra)]
 
     if handout:
         target_cp = None
@@ -276,6 +278,10 @@ def main():
     book = "by-the-book" if res["mode"] == "handout" else "target"
     print(f"\nTreasure for {a.party_size}x level {a.party_level}  |  {book} {res['reference']}, "
           f"assembled {res['total']} ({res['fill_pct']}%)\n")
+    if res["mode"] == "handout" and a.party_size > 4:
+        print(f"  note: the reference is the four-PC book total plus the currency column only;\n"
+              f"        the extra PCs' added items are assembled but not counted in it, so the\n"
+              f"        fill % reads high. Compare the assembled figure, not the percentage.\n")
     print("  Permanent:")
     for m in res["permanent"]:
         print(f"    {m['count']}x  L{m['level']:>2}  {m['price']:>9}  {m['name']:<36} {m['source']}")
