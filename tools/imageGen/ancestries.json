@@ -111,7 +111,13 @@
     "human-sized spiders with varied colorations, and Paizo's miniature is titled",
     "Anadi (Spider Form), so spiderfolk was the less accurate render despite",
     "looking more like a character. An anadi NPC met socially is usually in human",
-    "shape; use anadi-human for that."
+    "shape; use anadi-human for that.",
+    "",
+    "leshy is heritage-varied, so it gets a key per heritage the way anadi gets",
+    "one per form: leshy-leaf, -fungus, -fruit, -cactus, -vine, -lotus, -pine,",
+    "-root, all confirmed on Archives of Nethys. Plain leshy stays for when the",
+    "plant does not matter to the shot. Others may exist in later books; add",
+    "them on the same pattern."
   ],
   "human": "",
   "elf": "",
@@ -147,7 +153,7 @@
   "jotunborn": "giant-blooded, very tall and heavy through the bone, blunt broad features, a head that does not fit a mortal-sized doorway",
   "kashrishi": "smooth faintly translucent crystalline skin in a single soft hue, and a large clear crystal horn rising from the centre of the forehead",
   "kholo": "hyenafolk",
-  "leshy": "a small plant spirit in a made body of gourd, bark or bundled leaves, with a simple carved face and no skin beneath",
+  "leshy": "a small plant creature with a body of living plant matter and a simple face",
   "nagaji": "a humanoid person with fine scales and a snake's head",
   "poppet": "a living doll of stitched cloth and stuffing, button eyes, visible seams at the shoulders and neck, patched where it has worn through",
   "samsaran": "pale blue skin, white hair, calm unlined features, faint markings across the brow left by lives it does not remember",
@@ -166,5 +172,13 @@
   "_midjourney_weak": {
     "centaur": "Midjourney renders centaurs badly with or without the description, and adding one made it worse. Anchor on local FLUX and attach that to the prompt for the rest of the set, the way Harlen Doss and Aldous were done."
   },
-  "anadi-human": "a human person, with an odd lovely sheen to the dark eyes and stiff deliberate movements"
+  "anadi-human": "a human person, with an odd lovely sheen to the dark eyes and stiff deliberate movements",
+  "leshy-leaf": "a small plant creature with a body of layered leaves and foliage and a simple face",
+  "leshy-fungus": "a small plant creature with a body of mushroom caps and pale fungus and a simple face",
+  "leshy-fruit": "a small plant creature with a body of ripening fruit on the vine and a simple face",
+  "leshy-cactus": "a small plant creature with a body of spined green cactus and a simple face",
+  "leshy-vine": "a small plant creature with a body of coiled prehensile vines and a simple face",
+  "leshy-lotus": "a small plant creature with a body of lotus petals and water lilies and a simple face",
+  "leshy-pine": "a small plant creature with a body of pine bark and needles and a simple face",
+  "leshy-root": "a small plant creature with a body of knotted woody roots and a simple face"
 }
