@@ -139,6 +139,29 @@ empty.
 
 ---
 
+## When the words will not carry it, render the anchor elsewhere
+
+Some faces do not survive a text prompt. Harlen is a cheerful man in terror, and
+Midjourney would not produce it: not from a long description, not from a short
+one, not from `/describe` fed its own successful reference. Local FLUX got it on
+the first attempt.
+
+**The fix is not to give up on the primary renderer.** Render the *anchor*
+wherever the expression actually works, then attach it as the reference and let
+the primary renderer do the rest of the set. Midjourney could not invent that
+face, but it carried it faithfully into a portrait and a scene, matching the
+brow, the eyes and the smile.
+
+This is why the anchor matters more than the other shots and why it is worth
+spending a different renderer on. Record which renderer made what in the spec's
+`render` block, so a later session extending the set knows where to go back to.
+
+Before reaching for this: a subtle expression may also be getting smoothed away
+by Midjourney's aesthetic pull. Low `--stylize` and dropping `--profile` are
+worth one test each, since both bias toward a pleasant face.
+
+---
+
 ## The three fields
 
 | Field | Holds | Test |

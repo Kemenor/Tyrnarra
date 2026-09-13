@@ -24,6 +24,8 @@
   },
   "render": {
     "variations_seed": 3488628157,
-    "variations_count": 1
+    "variations_count": 1,
+    "anchor_renderer": "local FLUX.2 (npc_art) - Midjourney could not produce the worried-behind-the-smile expression from text",
+    "set_renderer": "Midjourney V8.2, anchor attached to prompt"
   }
 }
