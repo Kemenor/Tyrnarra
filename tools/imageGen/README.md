@@ -303,8 +303,25 @@ reference to lean on.
   so `split_negatives()` lifts every `no …` clause into the flag.
   "non-photorealistic" stays in the prompt: it describes the rendering, it is
   not an exclusion. With style off there are no negatives and no flag is emitted.
-- `--ar` comes from each shot's `size`. With the style off, that plus the
-  description is the whole prompt.
+- `--ar` comes from each shot's `size`.
+- **Every prompt carries `--profile 53lkvju --v 8.2`** (`MJ_FLAGS`). The profile
+  is the GM's character-set personalization, and it is *why* the style sentence
+  is off by default: the two compete. The version is pinned because Midjourney
+  moves its default, and a set half-rendered on one version and half on the next
+  will not match. Bump it deliberately, never by drifting.
+
+So with the style off, a ref shot's whole prompt is its framing plus those
+flags:
+
+```
+Head and shoulders portrait, square crop, silver-white fox features, large amber
+eyes, mild and calm, head and upper chest filling the frame.
+--ar 1:1 --profile 53lkvju --v 8.2
+```
+
+The reported `words` counts the **prose only**. The ~150-word threshold was
+measured on plain text, and flags are parameters rather than prompt, so counting
+them would creep the number up without the warning moving.
 
 ### Save-back lives in the panel, not on the image
 

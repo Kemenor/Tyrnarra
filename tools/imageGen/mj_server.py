@@ -56,6 +56,15 @@ AR = {"square_hd": "1:1", "square": "1:1", "portrait_4_3": "3:4",
 # Midjourney reads them as things to DRAW.
 MJ_NO = []
 
+# Appended to every prompt.
+#   --profile 53lkvju  the GM's character-set personalization profile. This is
+#                      what carries the house look, and it is why DEFAULT_STYLE
+#                      is "none": the profile and a long style sentence compete.
+#   --v 8.2            pin the version. Midjourney moves its default, and a set
+#                      half-rendered on one version and half on the next will
+#                      not match. Bump this deliberately, never by drifting.
+MJ_FLAGS = "--profile 53lkvju --v 8.2"
+
 
 def split_negatives(prompt):
     """(positive prompt, [negatives]) - every ", no X" clause moved to --no.
@@ -176,9 +185,13 @@ def build_prompts(slug, style=DEFAULT_STYLE):
         ar = AR.get(shot.get("size", "portrait_4_3"), "3:4")
         # Emit --no only when there is something to exclude; a bare "--no" is a
         # syntax error, and with the style off there are no negatives at all.
-        flags = f"--ar {ar}" + (f" --no {no}" if no else "")
-        text = f"{positive.rstrip('. ')}. {flags}"
-        words = len(text.split())
+        flags = f"--ar {ar}" + (f" --no {no}" if no else "") + f" {MJ_FLAGS}"
+        body = positive.rstrip(". ") + "."
+        text = f"{body} {flags}"
+        # Count the PROSE only. The ~150-word threshold was measured on plain
+        # text, and flags are parameters rather than prompt, so counting them
+        # would creep the number up without the warning moving.
+        words = len(body.split())
         shots.append({
             "key": key, "file": shot["file"], "mode": mode, "ar": ar,
             "prompt": text, "words": words, "long": words > MJ_WORD_LIMIT,
