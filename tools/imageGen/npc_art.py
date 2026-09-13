@@ -468,6 +468,14 @@ def ancestry_line(spec):
               file=sys.stderr, flush=True)
         return _as_subject(name)
     entry = _ANCESTRIES[name]
+    if entry is None:
+        # null means THIS ANCESTRY HAS NO GENERIC LOOK. A poppet is whatever it
+        # was sewn to be, so there is nothing true to say about poppets in
+        # general and the spec has to carry the whole description itself.
+        print(f"  ! {name} has no default appearance: every one is individual. "
+              f"The spec's `character` must describe this one in full.",
+              file=sys.stderr, flush=True)
+        return ""
     # "" means THE NAME WORKS, so send the name. It does not mean send nothing:
     # that was the original reading and it silently dropped the species out of
     # every prompt for a kitsune or an orc. A description REPLACES the name,
