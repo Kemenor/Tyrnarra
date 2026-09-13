@@ -69,6 +69,51 @@ working.
 
 ---
 
+## Describe the face, do not appraise the expression
+
+"A practised courteous smile that does not reach his eyes" passes the camera
+test and still failed: Midjourney rendered a warm open grin. The phrase is a
+**judgement about** a smile, not a description of one, so the model had to guess
+what it looks like and guessed wrong.
+
+Name the muscles instead. What that sentence was reaching for was:
+
+> His eyebrows are raised and drawn together at the inner ends, creasing the
+> middle of his forehead. A small closed-mouth smile, the corners of the mouth
+> turned slightly up, the lips pressed and strained. The eyes above it are
+> worried and uncrinkled.
+
+The mask reads as a mask because the **mouth and the eyes are given
+contradictory instructions**. That contradiction is the whole effect, and it has
+to be stated, because "does not reach his eyes" only carries it for a reader who
+already knows the idiom.
+
+Same trap in a different coat: *composed*, *guarded*, *haunted*, *steely*,
+*kind-faced*. Each is a conclusion a viewer draws. Give the features that make
+them draw it.
+
+---
+
+## The `negative` field, and when it backfires
+
+A spec may carry `negative`, which reaches Midjourney as `--no`. Use it for a
+**failure the renders keep repeating**, not as insurance. Aldous earned his: he
+came back skeletal, so `skeleton, skull, exposed bone, corpse` goes in the flag,
+where a prose "not a skeleton" would read as an instruction to draw one.
+
+**`--no` suppresses the concept, not the excess of it.** A list written to curb
+a too-cheerful Harlen (`grin, broad smile, cheerful, jolly`) removed his smile
+altogether, because every one of those entries carries *smile* with it and he
+needed one. The test before adding an entry:
+
+> If the model took this word completely away, would the image still be right?
+
+If the thing you want is a *small* version of the thing you are excluding, the
+flag is the wrong tool. Say the small version in the prompt and leave `--no`
+empty.
+
+---
+
 ## Prose rules
 
 - **No em-dashes.** House rule everywhere in this project, prompts included. A
