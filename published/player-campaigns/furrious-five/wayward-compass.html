@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="/player-campaigns/assets/pc-nav.css">
 <script defer src="/player-campaigns/assets/pc-nav.js"></script>
 <script defer src="/player-campaigns/assets/campaign.js"></script>
+<style>
+  .board-settled { margin-top: 26px; }
+  .board-settled-label { font-family: var(--c-label-font); font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--c-ink-dim); text-align: center; margin-bottom: 12px; }
+  .quest-pin.settled { opacity: 0.72; }
+  .quest-pin.settled .quest-title { text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: var(--c-accent-dim); }
+  .pill.pill-settled { border-color: var(--c-accent-dim); color: var(--c-accent); }
+</style>
 </head>
 <body data-page="ff-wayward-compass">
 
@@ -29,42 +36,12 @@
 
   <h2 class="section-heading">The Quest Board</h2>
   <div class="prose map-intro">
-    <p>The board covers the whole right wall of reception, contracts pinned edge to edge, a few of them yellowed enough to have become part of the architecture. Mira Seld updates it every morning before she opens the door. Three postings are worth your time right now. Tap one to read the full notice and what the Compass can tell you across the desk.</p>
+    <p>The board covers the whole right wall of reception, contracts pinned edge to edge, a few of them yellowed enough to have become part of the architecture. Mira Seld updates it every morning before she opens the door. Two postings are worth your time right now. Tap one to read the full notice and what the Compass can tell you across the desk. Below them, pinned lower and left up out of habit, is the one you already closed.</p>
   </div>
 
   <div class="board">
 
     <!-- ── Quest 1 ── -->
-    <div class="quest-pin">
-      <button class="quest-head" aria-expanded="false" aria-controls="q-docks">
-        <div class="quest-headmain">
-          <div class="quest-kicker">Private Contract · filed through Mira Seld</div>
-          <div class="quest-title">Below the Quiet Docks</div>
-          <div class="quest-teaser">A cargo drop, and the four sent to find it, both went under the east bank. None came back up.</div>
-          <div class="pill-row"><span class="pill">Recovery</span><span class="pill">250 gp + 100 gp</span><span class="pill">Beneath Millhaven</span><span class="pill">Discretion absolute</span></div>
-        </div>
-        <div class="quest-expand">Read <span class="chev">▾</span></div>
-      </button>
-      <div class="quest-detail" id="q-docks">
-        <div class="posting">
-          <div class="posting-label">The Posting · in the client's hand</div>
-          <div class="posting-text">"Missing: one consignment of goods, offloaded via private dock, bridge district, three nights past. Also missing: four-person retrieval team sent to locate same. Contract offers 250gp upon recovery of personnel, 100gp additional upon recovery of cargo. Enquire with Mira Seld for access details. Discretion absolute. — S.R."</div>
-        </div>
-        <div class="known">
-          <div class="known-label">What the Compass Will Tell You</div>
-          <p>Three nights ago a private cargo came ashore at one of the bridge district's unlisted docks, the kind of landing nobody asks about. It did not turn up where it was meant to. The client sent a four-person team after it: experienced people, known to the office, the sort who check in. They went down into the old passages under the Cape-side bank, and the office has not heard from them in two days.</p>
-          <p>The passages are old, older than Millhaven, and no one keeps a clean map of them. Mira holds the access route and a description of the missing team. The client wants the people back first and the cargo back second, and will not say what the cargo is. <i>"Sensitive documents,"</i> is all you'll get, and then the subject changes.</p>
-        </div>
-        <div class="terms">
-          <div class="term"><div class="t-l">Reward</div><div class="t-v">250 gp for the team · 100 gp more for the cargo</div></div>
-          <div class="term"><div class="t-l">Ask For</div><div class="t-v">Mira Seld, at the desk (access details)</div></div>
-          <div class="term"><div class="t-l">Where</div><div class="t-v">The caverns under the east bank</div></div>
-          <div class="term"><div class="t-l">Client</div><div class="t-v">"S.R." · pays well, says little</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Quest 2 ── -->
     <div class="quest-pin">
       <button class="quest-head" aria-expanded="false" aria-controls="q-narrows">
         <div class="quest-headmain">
@@ -94,29 +71,29 @@
       </div>
     </div>
 
-    <!-- ── Quest 3 ── -->
+    <!-- ── Quest 2 ── -->
     <div class="quest-pin">
       <button class="quest-head" aria-expanded="false" aria-controls="q-veldtmark">
         <div class="quest-headmain">
           <div class="quest-kicker">Welfare Check · posted by Harlen Doss</div>
           <div class="quest-title">The Veldtmark Invitation</div>
           <div class="quest-teaser">A Cape-side merchant lord stopped answering three weeks ago. His partner wants him alive, and wants his money.</div>
-          <div class="pill-row"><span class="pill">Welfare check + debt</span><span class="pill">Modest pay</span><span class="pill">Cape district</span><span class="pill">"Social, low risk"</span></div>
+          <div class="pill-row"><span class="pill">Welfare check + debt</span><span class="pill">50 gp + 300 gp</span><span class="pill">Cape district</span><span class="pill">"Social, low risk"</span></div>
         </div>
         <div class="quest-expand">Read <span class="chev">▾</span></div>
       </button>
       <div class="quest-detail" id="q-veldtmark">
         <div class="posting">
           <div class="posting-label">The Posting · Quest board</div>
-          <div class="posting-text">"Lord Caevan Veldtmark, merchant and landowner of the Cape district, has failed to respond to correspondence or attend any scheduled appointments for the past three weeks. His business partner, one Harlen Doss, requests a welfare check and, if the lord is well, collection of a debt of record. Inquire at the Wayward Compass for details. Discretion expected."</div>
+          <div class="posting-text">"Lord Caevan Veldtmark, merchant and landowner of the Cape district, has failed to respond to correspondence or attend any scheduled appointments for the past three weeks. His business partner, one Harlen Doss, requests a welfare check and, if the lord is well, collection of a debt of record. Fifty gold offered on confirmation of the lord's health; three hundred further on recovery of the debt. Inquire at the Wayward Compass for details. Discretion expected."</div>
         </div>
         <div class="known">
           <div class="known-label">What the Compass Will Tell You</div>
-          <p>A Cape-side merchant lord has gone quiet: no answered letters, no kept appointments, three weeks of silence. His business partner <b>Harlen Doss</b>, who is owed a debt of record, wants someone to confirm the man is alive and, if he is, to collect. The pay is modest and the work reads as a knock-on-a-door errand. Kael posted it rated <i>social, low risk</i>.</p>
+          <p>A Cape-side merchant lord has gone quiet: no answered letters, no kept appointments, three weeks of silence. His business partner <b>Harlen Doss</b>, who is owed a debt of record, wants someone to confirm the man is alive and, if he is, to collect. Doss is a cloth merchant on the way up, with a season's worth of bolts sitting in a warehouse and an agreement he cannot get anyone to honour. The work reads as a knock-on-a-door errand. Kael posted it rated <i>social, low risk</i>, at three hundred and fifty gold, and nobody at the desk has remarked on the gap between those two facts.</p>
           <p>Kael rated it before he thought about it too hard, and he has not changed the rating. He did mention to Mira that something about the posting sits wrong with him, and Mira did not argue. Neither of them said so on the notice. The estate is on the Cape side's northern edge, where the drift sits heavier in the air.</p>
         </div>
         <div class="terms">
-          <div class="term"><div class="t-l">Reward</div><div class="t-v">Modest fee · plus a cut of the collected debt</div></div>
+          <div class="term"><div class="t-l">Reward</div><div class="t-v">50 gp for the welfare check · 300 gp on the debt</div></div>
           <div class="term"><div class="t-l">Ask For</div><div class="t-v">The desk · referral to Harlen Doss</div></div>
           <div class="term"><div class="t-l">Where</div><div class="t-v">Veldtmark estate, the Cape district</div></div>
           <div class="term"><div class="t-l">Rated</div><div class="t-v">"Social, low risk" (Kael)</div></div>
@@ -124,6 +101,39 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="board board-settled">
+    <!-- ── Settled · Below the Quiet Docks ── -->
+    <div class="board-settled-label">✓ &nbsp;Settled &nbsp;·&nbsp; closed contracts, left pinned</div>
+    <div class="quest-pin settled">
+      <button class="quest-head" aria-expanded="false" aria-controls="q-docks">
+        <div class="quest-headmain">
+          <div class="quest-kicker">✓ Settled · Private Contract · filed through Mira Seld</div>
+          <div class="quest-title">Below the Quiet Docks</div>
+          <div class="quest-teaser">A cargo drop, and the four sent to find it, both went under the east bank. None came back up.</div>
+          <div class="pill-row"><span class="pill pill-settled">✓ Contract closed</span><span class="pill">Recovery</span><span class="pill">250 gp + 100 gp, paid</span><span class="pill">Beneath Millhaven</span></div>
+        </div>
+        <div class="quest-expand">Recap <span class="chev">▾</span></div>
+      </button>
+      <div class="quest-detail" id="q-docks">
+        <div class="posting">
+          <div class="posting-label">The Posting · in the client's hand</div>
+          <div class="posting-text">"Missing: one consignment of goods, offloaded via private dock, bridge district, three nights past. Also missing: four-person retrieval team sent to locate same. Contract offers 250gp upon recovery of personnel, 100gp additional upon recovery of cargo. Enquire with Mira Seld for access details. Discretion absolute. — S.R."</div>
+        </div>
+        <div class="known">
+          <div class="known-label">What the Compass Will Tell You</div>
+          <p>Three nights ago a private cargo came ashore at one of the bridge district's unlisted docks, the kind of landing nobody asks about. It did not turn up where it was meant to. The client sent a four-person team after it: experienced people, known to the office, the sort who check in. They went down into the old passages under the Cape-side bank, and the office has not heard from them in two days.</p>
+          <p>The passages are old, older than Millhaven, and no one keeps a clean map of them. Mira holds the access route and a description of the missing team. The client wants the people back first and the cargo back second, and will not say what the cargo is. <i>"Sensitive documents,"</i> is all you'll get, and then the subject changes.</p>
+        </div>
+        <div class="terms">
+          <div class="term"><div class="t-l">Reward</div><div class="t-v">250 gp for the team · 100 gp for the cargo · paid in full</div></div>
+          <div class="term"><div class="t-l">Ask For</div><div class="t-v">Mira Seld, at the desk (access details)</div></div>
+          <div class="term"><div class="t-l">Where</div><div class="t-v">The caverns under the east bank</div></div>
+          <div class="term"><div class="t-l">Client</div><div class="t-v">"S.R." · paid without quibbling, said less</div></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="prose map-intro" style="margin-top:14px; text-align:center;">
