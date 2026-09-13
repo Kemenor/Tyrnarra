@@ -48,10 +48,10 @@ Then apply **difficulty** (±) and **rarity** (+) adjustments.
 
 Write every quest check with all four:
 
-- **Critical Success** — beat the DC by 10 or more.
-- **Success** — meet or beat the DC.
-- **Failure** — miss the DC.
-- **Critical Failure** — miss by 10 or more.
+- **Critical Success**: beat the DC by 10 or more.
+- **Success**: meet or beat the DC.
+- **Failure**: miss the DC.
+- **Critical Failure**: miss by 10 or more.
 
 A natural 20 shifts the degree one step **up**; a natural 1 shifts it one step **down**.
 
@@ -61,5 +61,5 @@ Acrobatics · Arcana · Athletics · Crafting · Deception · Diplomacy · Intim
 
 ## Worked examples (*The Narrows Job*)
 
-- **The Jianna/Nirfel statue — Recall Knowledge (Religion), DC 17.** Identifying a specific Vice Demon is trained-scholar knowledge → Simple DC 15 (Trained); the demon is unlabelled, so you are inferring it → Hard **+2** → **17**. Critical Success adds the GM-tier irony; Failure gives only the surface read.
-- **Prying the cargo out of Edrik — Diplomacy, DC 23.** Anchor on Edrik, a level-3 NPC → DC 18; he is under standing orders to say nothing → Very Hard **+5** → **23**. Critical Failure (realistically a fumble) sees him move to cancel the contract.
+- **The Jianna/Nirfel statue: Recall Knowledge (Religion), DC 17.** Identifying a specific Vice Demon is trained-scholar knowledge → Simple DC 15 (Trained); the demon is unlabelled, so you are inferring it → Hard **+2** → **17**. Critical Success adds the GM-tier irony; Failure gives only the surface read.
+- **Prying the cargo out of Edrik: Diplomacy, DC 23.** Anchor on Edrik, a level-3 NPC → DC 18; he is under standing orders to say nothing → Very Hard **+5** → **23**. Critical Failure (realistically a fumble) sees him move to cancel the contract.

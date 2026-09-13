@@ -10,9 +10,9 @@ Sources: AoN [NPCs (2919)](https://2e.aonprd.com/Rules.aspx?ID=2919), [Skills 2�
 
 ## The three depths
 
-- **Cardboard** — a merchant, a barmaid, some dock-hand. Enough to play for one scene and never again. Six or seven lines, all one-liners.
-- **Semi-Important** — might come up again; needs enough to hold a real conversation or carry a quest beat, even if the party only talks to them once. Adds the performance layer, a motive, and a starting attitude.
-- **Full Block** — recurring, important, in-depth: Aldric Fenn, Sable Rei, Vara Mink. Turns on the relationship web, the fears and secrets, the portrait, and arc-tracking across sessions.
+- **Cardboard**: a merchant, a barmaid, some dock-hand. Enough to play for one scene and never again. Six or seven lines, all one-liners.
+- **Semi-Important**: might come up again; needs enough to hold a real conversation or carry a quest beat, even if the party only talks to them once. Adds the performance layer, a motive, and a starting attitude.
+- **Full Block**: recurring, important, in-depth: Aldric Fenn, Sable Rei, Vara Mink. Turns on the relationship web, the fears and secrets, the portrait, and arc-tracking across sessions.
 
 ## Field allocation
 

@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────
-   theme.css — The Furrious Five
+   theme.css: The Furrious Five
    The campaign's visual identity. Loaded AFTER campaign.css; overrides
    only the --c-* theme tokens. To re-skin the whole campaign, edit
    this one file.

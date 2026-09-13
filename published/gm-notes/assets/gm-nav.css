@@ -32,7 +32,7 @@
 }
 .gm-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
 
-/* scrollable middle — title above and foot below stay pinned */
+/* scrollable middle: title above and foot below stay pinned */
 .gm-nav-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; }
 
 .gm-nav-title {

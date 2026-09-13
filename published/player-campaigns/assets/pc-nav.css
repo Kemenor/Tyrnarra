@@ -19,7 +19,7 @@
    ─────────────────────────────────────────────────────────────── */
 
 :root {
-  --pc-accent: #4cb5ba;          /* lamplit teal — the layer signature */
+  --pc-accent: #4cb5ba;          /* lamplit teal: the layer signature */
   --pc-accent-bright: #82dadf;
   --pc-accent-dim: #2c6e72;
   --pc-ground: rgba(12,16,18,0.97);
@@ -78,7 +78,7 @@
   margin: -2px 0 18px;
 }
 
-/* scrollable middle — title above and foot below stay pinned */
+/* scrollable middle: title above and foot below stay pinned */
 .pc-nav-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; }
 
 .pc-nav-list, .pc-nav-sublist { list-style: none; padding: 0; margin: 0; }
