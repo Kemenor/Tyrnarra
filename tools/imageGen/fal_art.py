@@ -58,6 +58,13 @@ except Exception as e:                      # a half-edited npc_art must say so
 QUEUE = "https://queue.fal.run"
 
 
+class FalError(Exception):
+    """A render fal refused. Raised rather than exited so one rejected shot
+    does not take the rest of the pass down with it: content rejections are
+    per-shot and common (see the README), and the shots that would have
+    succeeded are worth having."""
+
+
 # ----------------------------------------------------------------- backends
 #
 # One entry per model family. The three differ in how they take a size and
@@ -73,17 +80,6 @@ def _size_flux(size):
     return {"image_size": size}
 
 
-_ASPECT = {"square_hd": "1:1", "square": "1:1", "portrait_4_3": "3:4",
-           "portrait_16_9": "9:16", "landscape_4_3": "4:3",
-           "landscape_16_9": "16:9"}
-
-
-def _size_nb(size):
-    """Nano Banana Pro takes aspect_ratio + resolution, not a size enum.
-    portrait_4_3 is a PORTRAIT of 4:3 proportions, i.e. 3:4 width:height."""
-    return {"aspect_ratio": _ASPECT.get(size, "3:4"), "resolution": "1K"}
-
-
 BACKENDS = {
     "flux2": {
         "t2i": "fal-ai/flux-2",
@@ -91,35 +87,79 @@ BACKENDS = {
         "size": _size_flux,
         "max_refs": 4,
         "price": {"t2i": 0.030, "edit": 0.045},
-        "note": "the local pipeline's model; the like-for-like comparison",
-    },
-    "nano-banana-pro": {
-        "t2i": "fal-ai/nano-banana-pro",
-        "edit": "fal-ai/nano-banana-pro/edit",
-        "size": _size_nb,
-        "max_refs": 14,
-        "price": {"t2i": 0.150, "edit": 0.150},
-        "note": "strongest identity consistency; pulls toward photoreal",
+        # GM decision, 2026-09-13: the content checker refuses reference images
+        # of wounded characters, which is most of a PF2e cast (see the README).
+        # Off for FLUX.2; anything it still refuses goes to the local renderer,
+        # which has no checker at all.
+        "extra": {"enable_safety_checker": False},
+        "note": "sharp linework; needs the style string to carry the look",
     },
     "seedream4": {
         # NOTE: the /edit id is confirmed from fal's docs; the text-to-image id
-        # follows fal's naming and is unverified. A wrong id fails loudly at
-        # submit with a 404, so it cannot silently render the wrong thing.
+        # follows fal's naming and was verified by a successful render.
         "t2i": "fal-ai/bytedance/seedream/v4/text-to-image",
         "edit": "fal-ai/bytedance/seedream/v4/edit",
         "size": _size_flux,
         "max_refs": 10,
         "price": {"t2i": 0.030, "edit": 0.030},
-        "note": "cheapest; reviews favour it for stylised fantasy lighting",
+        "extra": {},
+        "note": "won the 2026-09-13 bake-off; best style match, highest res, cheapest",
     },
 }
-DEFAULT_MODEL = "flux2"
+DEFAULT_MODEL = "seedream4"
+
+# Nano Banana Pro was evaluated and REJECTED (2026-09-13): it held identity
+# well but invented backgrounds, painted a white sketchy border, rendered
+# ancestry markers too faintly to read, and cost 5x the alternatives. The
+# adapter is in git history if it is ever wanted back; do not re-add it on a
+# hunch.
 
 
 def backend(name):
     if name not in BACKENDS:
         sys.exit(f"unknown model '{name}'; known: {', '.join(BACKENDS)}")
     return BACKENDS[name]
+
+
+# ----------------------------------------------------------------- styles
+#
+# Overlay on npc_art.STYLES rather than an edit to it: styles are being tried
+# out here, npc_art.py is open in another session, and a preset that proves
+# itself can move into npc_art later so the local renderer gets it too.
+#
+# "digital" is the house direction as of 2026-09-13. The brief: it should read
+# as a DIGITAL PAINTING, crisp rather than smudged. The older "painterly" oil
+# language existed to drag FLUX.2 away from photoreal and took the look further
+# into smeared oils than wanted; crisper is explicitly fine.
+
+STYLE_OVERRIDES = {
+    "digital": ("Stylised digital painting, fantasy character illustration, "
+                "crisp clean rendering, confident visible linework, cel-influenced "
+                "shading with soft gradients, muted desaturated palette, "
+                "uncluttered background, digital concept art, non-photorealistic, "
+                "no oil paint texture, no canvas texture, no photographic detail."),
+}
+
+
+def resolve_style(name):
+    """Preset name -> the literal style sentence. Overlay first, then npc_art's
+    presets, then treat the string as a literal (npc_art.style_of's rule)."""
+    if name in STYLE_OVERRIDES:
+        return STYLE_OVERRIDES[name]
+    return npc_art.STYLES.get(name, name)
+
+
+def with_style(spec, style):
+    """A shallow copy of the spec carrying a literal style string.
+
+    Never mutates the caller's spec: these specs are live files, and a style
+    trial must not leave a fingerprint on one.
+    """
+    if not style:
+        return spec
+    s = dict(spec)
+    s["style"] = resolve_style(style)
+    return s
 
 
 # ----------------------------------------------------------------- key + http
@@ -151,10 +191,29 @@ def _get(url, key, timeout=60):
 def _http_detail(e):
     """fal puts the useful part (which field it disliked, and why) in the
     RESPONSE BODY of a 4xx, not in the status line. Read it or debug blind."""
+    # Read it WHOLE. fal replays the entire request in the error body, base64
+    # reference included, so a truncated read cuts the JSON mid-object and the
+    # summariser below falls back to dumping raw text. Truncate after parsing.
     try:
-        return e.read().decode()[:900]
+        return e.read().decode()
     except Exception:
         return "<no body>"
+
+
+def _summarise(body):
+    """The failure reason plus WHICH FIELD it came from, without the echoed
+    input (fal replays the whole request, base64 reference and all, which
+    buries the one useful sentence under a megabyte of noise).
+
+    The field matters: 'image_urls' means the reference picture was refused,
+    'prompt' means the words were. They are separate checks with separate
+    remedies, and telling them apart is the whole diagnosis.
+    """
+    try:
+        d = json.loads(body)["detail"][0]
+        return f"[{'.'.join(str(x) for x in d.get('loc', []))}] {d.get('msg', '')}"
+    except Exception:
+        return body[:300]
 
 
 def data_uri(path):
@@ -175,8 +234,8 @@ def submit(endpoint, args, key, label, timeout=900):
     try:
         sub = _post(f"{QUEUE}/{endpoint}", args, key)
     except urllib.error.HTTPError as e:
-        sys.exit(f"{label}: fal rejected the submit ({e.code}) on {endpoint}: "
-                 f"{_http_detail(e)}")
+        raise FalError(f"{label}: fal rejected the submit ({e.code}) on "
+                       f"{endpoint}: {_summarise(_http_detail(e))}")
     status_url, result_url = sub["status_url"], sub["response_url"]
     t0 = last = time.time()
     while True:
@@ -194,10 +253,11 @@ def submit(endpoint, args, key, label, timeout=900):
             try:
                 return _get(result_url, key, timeout=120)
             except urllib.error.HTTPError as e:
-                sys.exit(f"{label}: fal returned no result ({e.code}) from "
-                         f"{endpoint}: {_http_detail(e)}")
+                raise FalError(f"{label}: fal returned no result ({e.code}) "
+                               f"from {endpoint}: "
+                               f"{_summarise(_http_detail(e))}")
         if state in ("FAILED", "ERROR"):
-            sys.exit(f"{label}: render failed: {json.dumps(st)[:600]}")
+            raise FalError(f"{label}: render failed: {json.dumps(st)[:400]}")
         if now - last >= 20:                        # same heartbeat habit as npc_art
             last = now
             el = f"{int(now - t0) // 60}m{int(now - t0) % 60:02d}s"
@@ -205,7 +265,7 @@ def submit(endpoint, args, key, label, timeout=900):
                      if state == "IN_QUEUE" else "rendering")
             print(f"    ... {label}: {el} elapsed, {where}", flush=True)
         if now - t0 > timeout:
-            sys.exit(f"{label}: timed out after {timeout // 60} min")
+            raise FalError(f"{label}: timed out after {timeout // 60} min")
 
 
 def download(url, dest):
@@ -216,7 +276,7 @@ def download(url, dest):
 def first_url(res, label):
     imgs = res.get("images") or []
     if not imgs or not imgs[0].get("url"):
-        sys.exit(f"{label}: no image in result: {json.dumps(res)[:500]}")
+        raise FalError(f"{label}: no image in result: {json.dumps(res)[:400]}")
     return imgs[0]["url"]
 
 
@@ -254,10 +314,10 @@ def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
         print(f"  [dry-run] {label} [{'ref' if is_edit else 'text'}] {size}\n"
               f"           {prompt}", flush=True)
         return None
-    args = {"prompt": prompt, "num_images": 1, "seed": seed}
+    args = {"prompt": prompt, "num_images": 1, "seed": seed,
+            "output_format": "png"}
     args.update(b["size"](size))
-    if model != "nano-banana-pro":
-        args["output_format"] = "png"           # nb-pro defaults to png already
+    args.update(b.get("extra", {}))             # per-backend flags, e.g. safety
     if is_edit:
         args["image_urls"] = [data_uri(ref_path)]
     return first_url(submit(b["edit"] if is_edit else b["t2i"], args, key, label),
@@ -265,7 +325,7 @@ def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
 
 
 def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False,
-               out_dir=None, write_meta=True):
+               out_dir=None, write_meta=True, style=None):
     """N takes on the anchor shot, for the user to pick from.
 
     Default 2 here rather than npc_art's 1: hosted models actually move between
@@ -273,6 +333,7 @@ def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False
     differing), and a second take costs cents.
     """
     spec, spec_out = npc_art.load_spec(spec_path)
+    spec = with_style(spec, style)
     out_dir = out_dir or spec_out
     key = load_key()
     anchor = spec["shots"][spec.get("anchor") or next(iter(spec["shots"]))]
@@ -301,7 +362,7 @@ def variations(spec_path, count=2, seed=None, model=DEFAULT_MODEL, dry_run=False
 
 def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
                seed=None, model=DEFAULT_MODEL, dry_run=False, out_dir=None,
-               write_meta=True):
+               write_meta=True, style=None):
     """Anchor first, then every other shot referencing it.
 
     Identity chain, same as npc_art: the chosen variation anchors the anchor
@@ -310,6 +371,7 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
     it is wrong for portraits.
     """
     spec, spec_out = npc_art.load_spec(spec_path)
+    spec = with_style(spec, style)
     out_dir = out_dir or spec_out
     os.makedirs(out_dir, exist_ok=True)
     key = load_key()
@@ -362,13 +424,20 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
     if pend and any(mode_of(k) == "ref" for k in pend) and not dry_run:
         if not os.path.exists(anchor_dest):
             sys.exit(f"anchor missing ({anchor_dest}); render it first")
+    refused = []
     for k in pend:
         m = mode_of(k)
         print(f"  shot {k} [{m}] ...", flush=True)
-        url = render_shot(spec, shots[k], model, key, seed,
-                          ref_path=anchor_dest if m == "ref" else None,
-                          extra=scene_extra if k == "scene" else "",
-                          dry_run=dry_run, label=f"shot {k}")
+        try:
+            url = render_shot(spec, shots[k], model, key, seed,
+                              ref_path=anchor_dest if m == "ref" else None,
+                              extra=scene_extra if k == "scene" else "",
+                              dry_run=dry_run, label=f"shot {k}")
+        except FalError as e:
+            # Keep going: a refused portrait should not cost us the scene shot.
+            print(f"        ! {e}", file=sys.stderr, flush=True)
+            refused.append(k)
+            continue
         spend.add("edit" if m == "ref" else "t2i")
         if dry_run:
             continue
@@ -377,6 +446,10 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
         out[k] = dest_of(k)
 
     spend.report()
+    if refused:
+        print(f"  ! {len(refused)} shot(s) refused by fal: {', '.join(refused)}. "
+              f"Render these locally (npc_art.py has no content checker).",
+              flush=True)
     if not dry_run and write_meta:
         npc_art.save_render_meta(
             spec_path, spec, set_seed=seed, set_model=model,
@@ -414,7 +487,7 @@ def upscale(spec_path, scale=2, only=None, dry_run=False, model="fal-ai/esrgan")
 
 
 def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False,
-            subdir="falai"):
+            subdir="falai", style=None):
     """The same spec through several models, into <out>/<subdir>/<model>/.
 
     Two deliberate properties. It pins ONE seed across every model, so the
@@ -434,10 +507,10 @@ def bakeoff(spec_path, models=None, draft=None, seed=None, dry_run=False,
         print(f"\n=== {m} ({BACKENDS[m]['note']}) -> {d}", flush=True)
         if draft:
             variations(spec_path, count=1, seed=seed, model=m, dry_run=dry_run,
-                       out_dir=d, write_meta=False)
+                       out_dir=d, write_meta=False, style=style)
         results[m] = render_set(spec_path, draft=draft, seed=seed, model=m,
                                 dry_run=dry_run, out_dir=d, force=True,
-                                write_meta=False)
+                                write_meta=False, style=style)
     print(f"\nBake-off seed {seed}. Compare the sets under "
           f"{os.path.join(spec_out, subdir)}/.", flush=True)
     return results
@@ -456,6 +529,10 @@ def main():
     ap.add_argument("--models", help="bakeoff: comma-separated backends.")
     ap.add_argument("--subdir", default="falai",
                     help="bakeoff: output folder under the spec's out dir.")
+    ap.add_argument("--style",
+                    help="override the spec's style: a preset name "
+                         f"({', '.join(list(STYLE_OVERRIDES) + list(npc_art.STYLES))}) "
+                         "or a literal style sentence.")
     ap.add_argument("--count", type=int, default=2, help="variations to render.")
     ap.add_argument("--seed", type=int)
     ap.add_argument("--draft", type=int, help="set: chosen variation number.")
@@ -466,7 +543,13 @@ def main():
     ap.add_argument("--dry-run", action="store_true",
                     help="print prompts + cost estimate, spend nothing.")
     a = ap.parse_args()
+    try:
+        _dispatch(a)
+    except FalError as e:               # anchor-level refusal, nothing to salvage
+        sys.exit(str(e))
 
+
+def _dispatch(a):
     if a.stage == "models":
         for n, b in BACKENDS.items():
             print(f"  {n:18s} {b['t2i']:42s} ~${b['price']['t2i']:.3f}/img  "
@@ -476,15 +559,15 @@ def main():
         sys.exit(f"{a.stage} needs --spec")
     only = set(s.strip() for s in a.only.split(",")) if a.only else None
     if a.stage == "variations":
-        variations(a.spec, a.count, a.seed, a.model, a.dry_run)
+        variations(a.spec, a.count, a.seed, a.model, a.dry_run, style=a.style)
     elif a.stage == "set":
         render_set(a.spec, a.draft, a.scene, only, a.force, a.seed, a.model,
-                   a.dry_run)
+                   a.dry_run, style=a.style)
     elif a.stage == "upscale":
         upscale(a.spec, a.scale, only, a.dry_run)
     elif a.stage == "bakeoff":
         models = [m.strip() for m in a.models.split(",")] if a.models else None
-        bakeoff(a.spec, models, a.draft, a.seed, a.dry_run, a.subdir)
+        bakeoff(a.spec, models, a.draft, a.seed, a.dry_run, a.subdir, a.style)
 
 
 if __name__ == "__main__":

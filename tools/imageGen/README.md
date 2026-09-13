@@ -78,7 +78,7 @@ to reach a model the local install does not have.
 python3 fal_art.py models                                    # backends + est. price
 python3 fal_art.py variations --spec <spec> [--count 2] [--model flux2]
 python3 fal_art.py set        --spec <spec> --draft 1 [--scene "extra"]
-python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4]
+python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4] [--style digital]
 #   any render stage also takes --dry-run: prints prompts + cost, spends nothing
 ```
 
@@ -89,11 +89,10 @@ python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4]
   would drift, and a local-vs-hosted comparison would be measuring the prompt
   difference rather than the model difference. Nothing in `npc_art` runs at
   import time, so importing it never touches the local ComfyUI server.
-- **Backends** are `flux2` (default, the local pipeline's model, the
-  like-for-like comparison), `nano-banana-pro` (strongest identity consistency,
-  pulls photoreal) and `seedream4` (cheapest, favoured for stylised fantasy
-  lighting). Adding one is a `BACKENDS` entry: the families differ only in how
-  they take a size and what a reference costs.
+- **Backends** are `seedream4` (**default**, see the results below) and `flux2`
+  (the local pipeline's model, kept as the like-for-like second opinion). Adding
+  one is a `BACKENDS` entry: the families differ only in how they take a size,
+  what a reference costs, and which `extra` args they want.
 - **Every pass prints a cost estimate.** It is an *estimate* from a hardcoded
   per-image table; fal moves prices without notice, so the dashboard is the
   authority. The number is there to answer "cents or dollars", not to bill.
@@ -118,40 +117,68 @@ Validated 2026-09-13: `models`, `--dry-run` prompt assembly (byte-identical to
 the local builder), and full three-model bake-offs end to end (auth, queue
 polling, data-URI references, download, spec write-back).
 
-### The content checker rejects wounded reference images
+### FLUX.2 has TWO content checkers, and only one of them is a flag
 
-**This is the one that will keep biting.** fal runs a content checker over the
-`image_urls` you send to an *edit* endpoint, and it refuses reference pictures of
-visibly injured characters. Sera Vance's anchor (a beaten prisoner, blood on her
-shirt) came back `422 content_policy_violation` on `image_urls`, so the whole
-identity chain stops: the anchor renders fine text-to-image, and then every shot
-that references it fails. Caevan's unbloodied anchor went through the identical
-code path with a 1.8 MB data URI and no complaint, so it is the picture's
-content, not the transport, the payload size, or the C2PA metadata FLUX.2 embeds.
+This is the constraint that shapes which renderer a given NPC goes to.
 
-A PF2e cast is full of wounded, scarred, and beaten people, so expect this
-regularly. The ways out, none of them free:
+- **The image check**, over `image_urls` on an *edit* call, refuses reference
+  pictures of visibly injured characters. Sera Vance's anchor (a beaten
+  prisoner, blood on her shirt) came back `422 content_policy_violation` with
+  `loc: ["body","image_urls"]`. Caevan's unbloodied anchor went through the
+  identical code path with a 1.8 MB data URI and no complaint, so it is the
+  picture's content, not the transport, the payload size, or the C2PA metadata
+  FLUX.2 embeds. **`enable_safety_checker: false` governs this one**, and it is
+  on (i.e. checking disabled) for FLUX.2 in `BACKENDS` by GM decision.
+- **The prompt check**, over the edit call's prompt text, is **separate and has
+  no flag**. With the safety checker already disabled, Odo Mast's shots still
+  came back 422 with `loc: ["body","prompt"]`: his wardrobe is written in dried
+  blood, and the words alone are enough. Note the asymmetry: the *same* blood
+  text passed on the text-to-image anchor, so the edit endpoint screens prompts
+  harder than t2i does.
 
-1. `enable_safety_checker: false` on the FLUX.2 edit call. A documented fal
-   parameter, **not currently wired into this module** — it is a GM decision,
-   not a default.
-2. Write the anchor shot clean and put the injuries only in the scene shot's
-   `framing`. Costs the beaten look in the portrait.
-3. Render wounded characters locally. `npc_art.py` has no content checker.
+**Seedream 4 refused nothing.** Odo Mast rendered his full three-shot set there,
+blood-writing and all, while FLUX.2 refused two of three. Combined with the style
+result below, that is the reason Seedream is the default.
 
-`_http_detail()` exists because of this: fal puts the reason in the **body** of
-the 4xx, and `COMPLETED` only means the job left the queue, so the result fetch
-is where a policy rejection actually surfaces.
+So the routing rule is: **Seedream for almost everything; the local renderer for
+anything Seedream also refuses** (`npc_art.py` has no checker at all). A refused
+shot no longer kills the pass, so a partial set comes back with a line naming
+what to re-render locally.
 
-### Bake-off result, 2026-09-13 (Caevan Veldtmark, Vishkanya)
+`_summarise()` exists for this: fal replays the whole request in the error body,
+so the one useful sentence is buried under a megabyte of echoed base64. It prints
+the message *and the field*, because `image_urls` and `prompt` are different
+problems with different remedies.
 
-**Seedream 4 won, and it is also the cheapest.** Fine jewel-toned iridescent
-scaling, luminescent eyes, genuine oil-painting texture, tight identity carry-over
-into the referenced portrait, and it returned 1536×2048 / 2048×2048 where the
-others gave ~1MP. Nano Banana Pro held identity just as well but invented a stone
-library background, painted a white sketchy border, and rendered the scaling so
-faintly the character stopped reading as Vishkanya. FLUX.2 was solid and
-on-brief but flatter, and its scaling read grey rather than jewel-toned.
+### House style: `digital` (2026-09-13)
+
+`--style digital` (in `STYLE_OVERRIDES`, an overlay on `npc_art.STYLES` so the
+other session's `npc_art.py` stays untouched). Stylised digital painting, crisp
+clean rendering, confident linework, cel-influenced shading, muted palette,
+uncluttered background, with explicit negatives against oil/canvas/photographic
+texture.
+
+It replaces the older `painterly` oil language, which existed mainly to drag
+FLUX.2 off photorealism and pulled the look further into smeared oils than
+wanted. Crisper is explicitly fine; the ceiling is a confident digital
+illustration, not an oil painting.
+
+### Model results, 2026-09-13
+
+**Seedream 4 is the house model.** Across Caevan (Vishkanya), Odo Mast (kitsune)
+and Aldous (hovering revenant butler) it held identity tightly through the
+reference chain, matched the `digital` brief closely, returned 1536×2048 where
+FLUX.2 gave 768×1024, refused nothing, and is the cheapest of the three. It also
+rendered the awkward specifics without being asked twice: Odo's blood-written
+sleeves, Aldous's feet dissolving where he hovers clear of the floor.
+
+FLUX.2 stays wired as the second opinion: crisp and clean under the `digital`
+style, but flatter, greyer, lower-resolution, and it renders ancestry markers
+(Caevan's jewel-toned scaling) as plain grey.
+
+Nano Banana Pro was evaluated and **rejected**: good identity, but it invented
+backgrounds, painted a white sketchy border, rendered ancestry markers too
+faintly to read, and cost 5× the alternatives. Its adapter is in git history.
 
 ## Tokens are a separate, user-directed flow
 
