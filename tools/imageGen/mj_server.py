@@ -46,11 +46,15 @@ import npc_art          # for prompt_for / load_spec: one prompt builder
 AR = {"square_hd": "1:1", "square": "1:1", "portrait_4_3": "3:4",
       "portrait_16_9": "9:16", "landscape_4_3": "4:3", "landscape_16_9": "16:9"}
 
-# Midjourney expresses exclusions as --no. Left inline as "no oil paint
-# texture", the words read as things to DRAW, which is the opposite of the
-# intent - so split_negatives() lifts every "no ..." clause out of the prompt
-# and folds it into the flag, alongside these standing ones.
-MJ_NO = ["photo", "photorealistic", "3d render", "text", "watermark", "signature"]
+# No standing --no list. A defensive "photo, 3d render, text, watermark" set was
+# tried and dropped (2026-09-13): the personalization profile already holds the
+# look, and the renderings showed none of the problems it was guarding against.
+# Exclusions that are not happening cost prompt weight and buy nothing.
+#
+# split_negatives() stays, because it is not defensive: when the style sentence
+# IS switched on, its "no oil paint texture" clauses have to move to the flag or
+# Midjourney reads them as things to DRAW.
+MJ_NO = []
 
 
 def split_negatives(prompt):
@@ -135,9 +139,12 @@ def build_prompts(slug, style=DEFAULT_STYLE):
         positive, negs = split_negatives(prompt)
         no = ", ".join(dict.fromkeys(negs + MJ_NO))     # dedupe, keep order
         ar = AR.get(shot.get("size", "portrait_4_3"), "3:4")
+        # Emit --no only when there is something to exclude; a bare "--no" is a
+        # syntax error, and with the style off there are no negatives at all.
+        flags = f"--ar {ar}" + (f" --no {no}" if no else "")
         shots.append({
             "key": key, "file": shot["file"], "mode": mode, "ar": ar,
-            "prompt": f"{positive.rstrip('. ')}. --ar {ar} --no {no}",
+            "prompt": f"{positive.rstrip('. ')}. {flags}",
         })
     return {"slug": slug, "path": entry["path"], "anchor": anchor,
             "out_dir": os.path.dirname(entry["path"]), "shots": shots}

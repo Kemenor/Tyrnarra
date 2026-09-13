@@ -252,11 +252,17 @@ folder under the shot's filename.
 - **Style is off by default.** Midjourney carries the house look in a
   personalization profile (`--profile`), which the long style sentence competes
   with; the panel has a checkbox to add it back for a one-off.
-- **Negatives become `--no`.** Left inline, "no oil paint texture" reads to
-  Midjourney as a thing to *draw*. `split_negatives()` lifts every `no …` clause
-  into the flag. "non-photorealistic" stays in the prompt: it describes the
-  rendering, it is not an exclusion.
-- `--ar` comes from each shot's `size`.
+- **No standing `--no` list.** A defensive `photo, 3d render, text, watermark`
+  set was tried and dropped: the profile already holds the look, and the
+  renderings showed none of the problems it guarded against. Exclusions for
+  things that are not happening cost prompt weight and buy nothing.
+- **Style negatives still become `--no`,** when the style *is* switched on.
+  Left inline, "no oil paint texture" reads to Midjourney as a thing to *draw*,
+  so `split_negatives()` lifts every `no …` clause into the flag.
+  "non-photorealistic" stays in the prompt: it describes the rendering, it is
+  not an exclusion. With style off there are no negatives and no flag is emitted.
+- `--ar` comes from each shot's `size`. With the style off, that plus the
+  description is the whole prompt.
 
 ### Two things measured on the live site (2026-09-13), both load-bearing
 
