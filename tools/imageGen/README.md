@@ -228,6 +228,57 @@ that local pays on a first pass. Compare set against set, not image against
 image: `npc_art.py` renders a whole set in one graph precisely to pay that load
 once.
 
+## `mj_server.py` + `mj-overlay.user.js` — the Midjourney helper
+
+The third tier, and the odd one out: **the GM drives this one, not Claude.**
+Midjourney has no API and forbids automated access, so there is nothing to
+drive. The helper removes the tedium around the manual flow and touches nothing
+else: it fills the prompt bar and it saves images. It never presses generate,
+never clicks `--oref`, never navigates.
+
+```bash
+python3 mj_server.py            # http://127.0.0.1:8765, loopback only
+```
+Then install `mj-overlay.user.js` in Tampermonkey and open midjourney.com.
+
+The working loop: pick an NPC in the panel → click the anchor shot (prompt bar
+fills) → enter → click Midjourney's own `--oref` on the grid image you like →
+click the next shot → enter → click `⤓` on any image to save it into the spec's
+folder under the shot's filename.
+
+- **Same prompts as the other two renderers.** It builds through
+  `npc_art.prompt_for` with `fal_art`'s `RECOMPOSE`, so Midjourney art comes out
+  of the same `<slug>.set.json` rather than hand-retyped prose that drifts.
+- **Style is off by default.** Midjourney carries the house look in a
+  personalization profile (`--profile`), which the long style sentence competes
+  with; the panel has a checkbox to add it back for a one-off.
+- **Negatives become `--no`.** Left inline, "no oil paint texture" reads to
+  Midjourney as a thing to *draw*. `split_negatives()` lifts every `no …` clause
+  into the flag. "non-photorealistic" stays in the prompt: it describes the
+  rendering, it is not an exclusion.
+- `--ar` comes from each shot's `size`.
+
+### Two things measured on the live site (2026-09-13), both load-bearing
+
+**The server cannot download the images.** `cdn.midjourney.com` serves a page
+fetch but answers a plain server-side one with **403**. So the userscript reads
+the blob in the page and posts it base64, and `/save` takes bytes, not a URL.
+Do not "simplify" that back into a server-side download; it cannot work. Note
+also that the page fetch must be bare: adding `credentials: 'include'` turns a
+working cross-origin read into `Failed to fetch`.
+
+**The prompt bar is a React-controlled `<textarea>`.** Assigning `.value`
+updates the DOM but not React's state, so the text vanishes on the next render
+and submitting sends an empty prompt. Going through the native value setter and
+dispatching an `input` event is what makes it stick (verified: the fill survives
+a re-render).
+
+Two smaller notes. Full-resolution images are at
+`cdn.midjourney.com/<uuid>/0_<index>.png`, derived from the job link, because
+the rendered `<img>` is a 640 px webp thumbnail. And the save button is attached
+by a `MutationObserver` because the feed is virtualised, so a one-shot pass
+decorates only what happened to be on screen at load.
+
 ## Tokens are a separate, user-directed flow
 
 Most NPCs do **not** get a token; tokens are essentially **per-faction**. The
