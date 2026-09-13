@@ -431,14 +431,52 @@ def style_of(spec):
     return STYLES.get(s, s)
 
 
+_ANCESTRIES = None
+
+
+def ancestry_line(spec):
+    """The catalog's visual line for this spec's `ancestry`, or "".
+
+    Image models draw an elf without help and have never heard of a Shisk, so
+    ancestries.json carries a description only where one is needed. An entry of
+    "" means the name alone works and is a finding, not a gap; a MISSING entry
+    is the gap, and says so rather than silently sending nothing.
+
+    The line is a default. A spec's own `character` follows it and may
+    contradict it freely, which is how a regional kitsune avoids being forced to
+    look like every other kitsune.
+    """
+    global _ANCESTRIES
+    name = (spec.get("ancestry") or "").strip().lower()
+    if not name:
+        return ""
+    if _ANCESTRIES is None:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "ancestries.json")
+        with open(path, encoding="utf-8") as fh:
+            _ANCESTRIES = {k: v for k, v in json.load(fh).items()
+                           if not k.startswith("_")}
+    if name not in _ANCESTRIES:
+        print(f"  ! ancestry '{name}' is not in ancestries.json; sending the "
+              f"name alone. Add an entry (\"\" if the name is enough).",
+              file=sys.stderr, flush=True)
+        return ""
+    return _ANCESTRIES[name]
+
+
 def prompt_for(spec, shot, is_edit=False, extra=""):
     framing = shot["framing"]
     if extra:
         framing = framing.rstrip(". ") + ". " + extra
     parts = [KEEP] if is_edit else []
-    parts += [framing,
-              spec["character"].strip() + ", " + spec["wardrobe"].strip() + ".",
-              style_of(spec)]
+    # Ancestry first, then the individual: establish what kind of person this is
+    # before describing which one. An edit shot skips it, since the attached
+    # reference already carries the species.
+    ancestry = "" if is_edit else ancestry_line(spec)
+    body = spec["character"].strip() + ", " + spec["wardrobe"].strip() + "."
+    if ancestry:
+        body = ancestry.rstrip(". ") + ". " + body
+    parts += [framing, body, style_of(spec)]
     return " ".join(p.strip() for p in parts if p and p.strip())
 
 

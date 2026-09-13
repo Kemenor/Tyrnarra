@@ -42,6 +42,8 @@ python3 npc_art.py upscale    --spec <slug>.set.json [--scale 2]
 python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
 ```
 
+- A spec may name an `ancestry`; `ancestries.json` supplies its visual line to
+  the anchor shot (see below).
 - The spec (`<slug>.set.json`, schema in the module docstring) is
   **Claude-authored**: `character` / `wardrobe` are distilled at generation
   time from the NPC block's *physical description* + *clothing & dress*
@@ -66,6 +68,41 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
   is parked behind a wedged prompt says `NOT STARTED, queued behind 1 job(s)`
   instead of claiming to render. `/interrupt` returns 200 but does nothing to a
   prompt wedged inside a model load; that needs `restart_server()`.
+
+## `ancestries.json` — what a PF2e ancestry looks like
+
+A spec may carry `"ancestry": "shisk"`, and the catalog's line is prepended to
+the **anchor** shot's description. Ref shots skip it: the attached image already
+carries the species.
+
+**It lives here and not in `lore/ancestries.md` for two reasons.** That file is
+feeling-first by convention (`docs/ancestry-conventions.md`): it says what a
+people *is*, the temperament and the disposition, and carries no appearance at
+all. The Shisk entry there is about the pull of the locked drawer and the sealed
+cellar, not about quills. And the appearance is not Tyrnarra's to define anyway:
+these are Paizo's ancestries. Check anything doubtful against Archives of Nethys.
+
+**Three states, and the difference is the point:**
+
+| Entry | Means |
+|---|---|
+| `""` | The name alone is enough; the model draws it correctly already. **A finding, not a gap.** |
+| `"text…"` | The model does not know it, or knows something else by that name. |
+| absent | Not catalogued. The builder warns rather than guessing. |
+
+Currently 50 entries: **19 name-is-enough** (human, elf, dwarf, halfling, orc,
+kitsune, tengu, minotaur and the rest of the common fantasy roster) and **31
+described** (anadi, conrasu, goloma, kashrishi, shisk, surki, tripkee, vishkanya
+and company). That split is the useful part: it records which ancestries were
+*checked and found fine*, so nobody researches `elf` twice.
+
+Entries run 15 to 30 words, because they compete with the individual for the
+~150-word Midjourney budget and the individual matters more. **A spec's
+`character` may contradict the catalog freely**, which is how a regional kitsune
+avoids being forced to look like every other kitsune.
+
+The `_verify` key lists entries written from memory and not yet checked against
+Archives of Nethys. Clear them as they are confirmed.
 
 ## `fal_art.py` — the hosted renderer
 
