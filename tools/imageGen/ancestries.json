@@ -52,7 +52,11 @@
     "<animal>folk and <animal>kin compositionally, which is why ratfolk, catfolk,",
     "lizardfolk and merfolk passed on the name alone: not because Midjourney",
     "knows Pathfinder, but because it can parse rat + folk. kholo tested best as",
-    "\"hyenakin\" for the same reason. Try the compound before writing a sentence."
+    "\"hyenakin\" for the same reason. Try the compound before writing a sentence.",
+    "",
+    "An ancestry with more than one canon form gets more than one key: anadi is",
+    "the true form, a human-sized spider, and anadi-human is the shape they wear",
+    "in company. Pick the one the scene actually shows."
   ],
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
@@ -98,7 +102,16 @@
     "most likely CORRECT. Archives of Nethys gives the natural form as humanoid",
     "spiders with distinctive markings, and a separate fully human shape they",
     "assume magically. A spec meeting one in human shape must say so; the",
-    "catalog describes the natural form."
+    "catalog describes the natural form.",
+    "",
+    "nagaji CONFIRMED person-first: \"a humanoid person with fine scales and a",
+    "snake's head\".",
+    "",
+    "anadi: the lore leans SPIDER. PathfinderWiki gives the true form as",
+    "human-sized spiders with varied colorations, and Paizo's miniature is titled",
+    "Anadi (Spider Form), so spiderfolk was the less accurate render despite",
+    "looking more like a character. An anadi NPC met socially is usually in human",
+    "shape; use anadi-human for that."
   ],
   "human": "",
   "elf": "",
@@ -119,7 +132,7 @@
   "tengu": "",
   "skeleton": "",
   "sprite": "a tiny fey no taller than a hand, translucent insect wings, sharp delicate features, built to the scale of a flower",
-  "anadi": "a humanoid spider with bright distinctive markings",
+  "anadi": "a human-sized spider with bright distinctive colour markings",
   "android": "a synthetic person, smooth even skin with faint circuitry seams tracing the temples and forearms, symmetrical features, steady luminous eyes",
   "athamaru": "a sea-dwelling folk, sleek skin in deep blue-grey, webbed fingers, a low finned crest instead of hair, wide dark eyes",
   "automaton": "a walking construct of dark brass and iron, articulated plate limbs with visible joints, a soft glow in the chest cavity, a faceplate rather than a face",
@@ -152,5 +165,6 @@
   "yaoguai": "a beast that became a person and kept the evidence: a mostly human shape carrying the ears, eyes or hands of the animal it was",
   "_midjourney_weak": {
     "centaur": "Midjourney renders centaurs badly with or without the description, and adding one made it worse. Anchor on local FLUX and attach that to the prompt for the rest of the set, the way Harlen Doss and Aldous were done."
-  }
+  },
+  "anadi-human": "a human person, with an odd lovely sheen to the dark eyes and stiff deliberate movements"
 }
