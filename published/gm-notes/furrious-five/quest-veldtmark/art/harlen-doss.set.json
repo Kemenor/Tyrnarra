@@ -3,23 +3,24 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A halfling man in his forties, about four feet tall, short and stocky, broad through the shoulders. Tidy brown curls, neatly groomed, clean-shaven. A practised courteous smile that does not reach his eyes, tight skin at the corners, dark circles beneath. Hands held very still, clasped in front of him",
+  "character": "A halfling man in his forties, about four feet tall, short and stocky, broad through the shoulders. Tidy brown curls, neatly groomed, clean-shaven. His eyebrows are raised and drawn together at the inner ends, creasing the middle of his forehead. A small closed-mouth smile, the lips pressed and slightly strained. The eyes above it are anxious and uncrinkled, shadowed underneath. Hands held very still, clasped in front of him",
   "wardrobe": "a long deep wine-red coat of figured silk brocade with a subtle woven pattern, gold-thread edging at the cuffs and collar, polished brass buttons, over an embroidered waistcoat in deep rose silk and a soft cream cravat pinned with a small gold pin. Every piece immaculate and slightly too formal for the wearer",
+  "negative": "grin, broad smile, laughing, open mouth, visible teeth, crinkled smiling eyes, cheerful, jolly",
   "shots": {
     "full": {
       "file": "harlen-doss-full",
       "size": "portrait_4_3",
-      "framing": "Full body standing portrait of a short stocky halfling, three-quarter view, hands clasped neatly in front of him, composed and courteous."
+      "framing": "Full body standing portrait of a short stocky halfling, three-quarter view, hands clasped neatly in front of him."
     },
     "portrait": {
       "file": "harlen-doss",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, composed polite expression, a practised courteous smile that does not reach the eyes, head and upper chest filling the frame."
+      "framing": "Head and shoulders portrait, square crop, head and upper chest filling the frame, the same strained closed-mouth smile and worried brow."
     },
     "scene": {
       "file": "harlen-doss-counter",
       "size": "portrait_4_3",
-      "framing": "A short halfling merchant standing behind a cloth merchant's counter stacked with bolts of fabric, a length of deep rose silk framed on the wall behind him, composed and courteous, one hand resting near the silk square in his pocket."
+      "framing": "A short halfling merchant standing behind a cloth merchant's counter stacked with bolts of fabric, a length of deep rose silk framed on the wall behind him, one hand resting near the silk square in his pocket."
     }
   },
   "render": {
