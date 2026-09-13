@@ -466,8 +466,19 @@ def ancestry_line(spec):
         print(f"  ! ancestry '{name}' is not in ancestries.json; sending the "
               f"name alone. Add an entry (\"\" if the name is enough).",
               file=sys.stderr, flush=True)
-        return ""
-    return _ANCESTRIES[name]
+        return _as_subject(name)
+    entry = _ANCESTRIES[name]
+    # "" means THE NAME WORKS, so send the name. It does not mean send nothing:
+    # that was the original reading and it silently dropped the species out of
+    # every prompt for a kitsune or an orc. A description REPLACES the name,
+    # because a name the model cannot read is noise at best.
+    return entry or _as_subject(name)
+
+
+def _as_subject(name):
+    """"elf" -> "an elf"; "ratfolk" -> "a ratfolk person"."""
+    noun = f"{name} person" if name.endswith("folk") else name
+    return ("an " if noun[0] in "aeiou" else "a ") + noun
 
 
 def prompt_for(spec, shot, is_edit=False, extra=""):

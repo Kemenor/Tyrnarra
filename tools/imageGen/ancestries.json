@@ -36,7 +36,17 @@
     "else competes with the individual the spec is actually about.",
     "",
     "Lead with the person. An entry that opens on an animal feature renders the",
-    "animal, because the ancestry name carries no meaning to anchor it."
+    "animal, because the ancestry name carries no meaning to anchor it.",
+    "",
+    "A DESCRIPTION REPLACES THE NAME; it is not added to it. An ancestry name",
+    "the model cannot read is noise at best, so the prompt carries the",
+    "description instead. An entry of \"\" sends the NAME, because that is what",
+    "\"the name is enough\" means. It does not mean send nothing, which was the",
+    "first reading and silently dropped the species out of every kitsune prompt.",
+    "",
+    "A coined compound can beat a sentence: kholo tested best as the single word",
+    "\"hyenakin\", which the model reads compositionally where \"kholo\" means",
+    "nothing to it."
   ],
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
@@ -98,7 +108,7 @@
   "goloma": "a person whose head and shoulders are covered in many open eyes of different sizes, a short dense pelt over the rest",
   "jotunborn": "giant-blooded, very tall and heavy through the bone, blunt broad features, a head that does not fit a mortal-sized doorway",
   "kashrishi": "smooth faintly translucent crystalline skin in a single soft hue, and a large clear crystal horn rising from the centre of the forehead",
-  "kholo": "a humanoid person with a hyena's head and a spotted coat",
+  "kholo": "hyenakin",
   "leshy": "a small plant spirit in a made body of gourd, bark or bundled leaves, with a simple carved face and no skin beneath",
   "nagaji": "serpent-folk, fine scales across the skin, a flat snake-like nose and lidless eyes, a low hood of scale at the neck",
   "poppet": "a living doll of stitched cloth and stuffing, button eyes, visible seams at the shoulders and neck, patched where it has worn through",
