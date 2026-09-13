@@ -3,8 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "An elderly kitsune scholar, a slight stooped fox-featured man with silver-white fur going thin at the muzzle, large amber eyes, and several tails held low and untidy. His expression is mild, patient and unnervingly calm. He looks frail and three weeks unfed, and one hand is dark to the wrist with dried blood",
-  "wardrobe": "a travelling scholar's good grey robe and waistcoat, now filthy and torn at the hem, and covered edge to edge in his own small precise handwriting in dried rust-brown blood, columns of notes running down both sleeves and across the chest",
+  "character": "An elderly kitsune, a slight stooped fox-featured man with silver-white fur thinning at the muzzle, large amber eyes, and several tails held low and untidy. His expression is mild and still, the gaze level. Gaunt and frail, hollow beneath the cheekbones. One hand is dark to the wrist with dried blood",
+  "wardrobe": "a scholar's good grey robe and waistcoat, filthy and torn at the hem, covered edge to edge in small precise handwriting in dried rust-brown blood, columns of notes running down both sleeves and across the chest",
   "shots": {
     "full": {
       "file": "odo-mast-full",

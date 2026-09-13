@@ -3,8 +3,9 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A living human man in his late fifties, tall and thin and gaunt, a butler standing very straight with perfect statuesque posture, utterly still. His complexion is pale and sickly, grey and unhealthy, with no colour in his face at all: but unmistakably living flesh, a full fleshed face with lips, cheeks and nose intact. Flat pale grey eyes, wide open, calm and incurious, with an expression of perfect professional courtesy and nothing behind it. Neatly combed thin white hair. He is a living man, not a skeleton and not a corpse",
-  "wardrobe": "immaculate black butler's tailcoat and waistcoat over a white high-collared shirt, brushed spotless, white gloves, everything correct to the millimetre",
+  "character": "A human man in his late fifties, tall, thin and gaunt, standing very straight with statuesque posture, utterly still. A pale grey unhealthy complexion with no colour in the face. Full soft flesh over the cheeks, intact lips and nose, living skin. Flat pale grey eyes, wide open, calm and incurious, an expression of perfect professional courtesy. Neatly combed thin white hair",
+  "wardrobe": "an immaculate black butler's tailcoat and waistcoat over a white high-collared shirt, brushed spotless, white gloves, every line exact",
+  "negative": "skeleton, skull, exposed bone, corpse, undead, rotting flesh",
   "shots": {
     "full": {
       "file": "aldous-full",

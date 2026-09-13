@@ -181,7 +181,13 @@ def build_prompts(slug, style=DEFAULT_STYLE):
         prompt = (ref_prompt(spec, shot, style) if is_ref
                   else npc_art.prompt_for(spec, shot, is_edit=False))
         positive, negs = split_negatives(prompt)
-        no = ", ".join(dict.fromkeys(negs + MJ_NO))     # dedupe, keep order
+        # A spec may carry its own "negative": the things a render keeps getting
+        # wrong. Aldous is the case that earned it - he came back skeletal, and
+        # the fix had been a prose clause ("not a skeleton, not a corpse") that
+        # Midjourney reads as an instruction to DRAW a skeleton. Same words, in
+        # the flag where they work.
+        own = [n.strip() for n in (spec.get("negative") or "").split(",") if n.strip()]
+        no = ", ".join(dict.fromkeys(negs + own + MJ_NO))   # dedupe, keep order
         ar = AR.get(shot.get("size", "portrait_4_3"), "3:4")
         # Emit --no only when there is something to exclude; a bare "--no" is a
         # syntax error, and with the style off there are no negatives at all.
