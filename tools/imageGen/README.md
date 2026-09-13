@@ -241,9 +241,38 @@ python3 mj_server.py            # http://127.0.0.1:8765, loopback only
 ```
 Then install `mj-overlay.user.js` in Tampermonkey and open midjourney.com.
 
-The working loop: pick an NPC in the panel → click the anchor shot (prompt bar
-fills) → enter → click Midjourney's own `--oref` on the grid image you like →
-click the next shot → enter. Saving is manual for now; see below.
+The working loop (V8.2): pick an NPC in the panel → click the anchor shot (prompt
+bar fills) → enter → on the grid image you like hit **Quick Edit**, which
+attaches it with the role *Attach to prompt* → click the next shot → enter.
+Saving is manual for now; see below.
+
+### Do not use Omni Reference on V8.2
+
+`--oref` still appears on older jobs and still works, but **a prompt carrying
+`--oref` renders in V7.** The anchor would come back as 8.2 and the ref shots as
+7, with nothing in the UI saying so, and the set would quietly fail to match.
+
+The **Edit Model** replaced it in V8.2, absorbing Omni Reference, Character
+Reference and Retexture. It takes up to 4 reference images, reached by Quick
+Edit on an image, dragging into the prompt bar, the Edit tab, or `--edit <url>`.
+Attaching offers three roles: *Attach to prompt* (the `--oref` successor, and
+the one this flow wants), *Style reference*, and *Image Prompts*.
+
+### Ref-shot prompts are compact, deliberately
+
+Midjourney shows a **"Long Prompt"** warning past roughly 150 words. Measured by
+bisection on the live prompt bar (2026-09-13): 148 words is clean, 152 warns.
+
+`npc_art.prompt_for` repeats `character` and `wardrobe` in every shot. That is
+right for fal, whose edit endpoint leans on the words, and wrong here: the
+attached image *is* the identity, so the description is redundant and it was
+most of a 175-word prompt. `ref_prompt()` builds ref shots from the KEEP clause,
+the framing, and a shortened recompose line only.
+
+Result on this roster: ref shots fell from ~175 words to 61–76, anchors sit at
+105–125, and no shot trips the warning. Every shot in the `/prompts` response
+carries `words` and `long`, and the panel prints the count and flags anything
+over budget.
 
 - **Same prompts as the other two renderers.** It builds through
   `npc_art.prompt_for` with `fal_art`'s `RECOMPOSE`, so Midjourney art comes out

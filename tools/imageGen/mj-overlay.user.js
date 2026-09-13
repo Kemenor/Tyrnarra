@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tyrnarra NPC helper for Midjourney
 // @namespace    tyrnarra
-// @version      1.1
+// @version      1.2
 // @description  Serve <slug>.set.json prompts into the Midjourney prompt bar.
 // @match        https://www.midjourney.com/*
 // @grant        GM_xmlhttpRequest
@@ -27,10 +27,16 @@
  *
  * Needs mj_server.py running (python3 tools/imageGen/mj_server.py).
  *
- * Flow it supports:
+ * Flow it supports (V8.2):
  *   1. pick an NPC, click the anchor shot -> prompt bar filled -> you press enter
- *   2. click --oref on the grid image you like (Midjourney's own button)
+ *   2. on the grid image you like: Quick Edit, which attaches it to the prompt
+ *      with the role "Attach to prompt"
  *   3. click the next shot -> prompt bar filled -> enter
+ *
+ * Do NOT use Omni Reference (--oref) on V8.2. It still appears on older jobs
+ * and it still works, but a prompt carrying --oref renders in V7: the anchor
+ * would come back as 8.2 and the ref shots as 7, and nothing in the UI says so.
+ * The Edit Model ("Attach to prompt", up to 4 images) replaced it.
  */
 
 (function () {
@@ -98,9 +104,10 @@
         <input type="checkbox" id="ty-style"> add the house style sentence
       </label>
       <div style="margin-top:8px;opacity:.6;font-size:11px">
-        Click a shot to fill the prompt bar. Use Midjourney's own
-        <i>--oref</i> button on your chosen anchor before the ref shots.
-        Saving is manual for now: the in-image button overlapped the zoom view and was removed.
+        Click a shot to fill the prompt bar. For the ref shots, first
+        <b>Quick Edit</b> your chosen anchor so it attaches with the role
+        <i>Attach to prompt</i>. Do not use <i>--oref</i>: it renders in V7.
+        Saving is manual for now.
       </div>
     </div>`;
   document.body.appendChild(panel);
@@ -141,7 +148,9 @@
     (state.data ? state.data.shots : []).forEach(s => {
       const b = document.createElement('button');
       const tag = s.key === state.data.anchor ? 'anchor' : s.mode;
-      b.innerHTML = `<b>${s.key}</b> <span style="opacity:.55">${tag} · ${s.ar}</span>`;
+      const warn = s.long ? ' style="color:#ff9c6e"' : ' style="opacity:.55"';
+      b.innerHTML = `<b>${s.key}</b> <span${warn}>${tag} · ${s.ar} · ${s.words}w`
+                  + `${s.long ? ' LONG' : ''}</span>`;
       b.style.cssText = 'text-align:left;background:#0f0c08;color:inherit;cursor:pointer;' +
         'border:1px solid ' + (state.shot === s.key ? '#f0b020' : '#c8900a33') +
         ';border-radius:6px;padding:5px 7px';

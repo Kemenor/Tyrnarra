@@ -120,6 +120,38 @@ def spec_by_slug(slug):
     return None
 
 
+# Midjourney shows a "Long Prompt" warning past roughly 150 words. Measured on
+# the live prompt bar 2026-09-13 by bisection: 148 words (1022 chars) is clean,
+# 152 words (1049 chars) warns. Treated as a budget to stay under, not a hard
+# limit; Midjourney still accepts a long prompt, it just weights it worse.
+MJ_WORD_LIMIT = 150
+
+
+def ref_prompt(spec, shot, style):
+    """The compact prompt for a shot whose anchor is ATTACHED TO PROMPT.
+
+    Deliberately NOT npc_art.prompt_for. That builder repeats `character` and
+    `wardrobe` in every shot, which is right for fal (its edit endpoint leans on
+    the words) and wrong here: Midjourney's Edit Model takes the attached image
+    as the identity, so the description is redundant, and on this NPC roster it
+    is most of a 175-word prompt against a ~150-word budget.
+
+    What survives is the part the attached image cannot express: keep this
+    character, frame it like THIS, and recompose rather than copying the
+    reference's composition.
+    """
+    parts = [npc_art.KEEP, shot["framing"], RECOMPOSE_MJ]
+    if style != "none":
+        parts.append(fal_art.resolve_style(style))
+    return " ".join(p.strip() for p in parts if p and p.strip())
+
+
+# Shorter than fal_art.RECOMPOSE, saying the same thing: the words are competing
+# for a word budget here in a way they are not on fal.
+RECOMPOSE_MJ = ("Use the attached image for identity only, never for "
+                "composition: the framing above wins.")
+
+
 def build_prompts(slug, style=DEFAULT_STYLE):
     entry = spec_by_slug(slug)
     if not entry:
@@ -131,20 +163,21 @@ def build_prompts(slug, style=DEFAULT_STYLE):
     for key, shot in spec["shots"].items():
         mode = "text" if key == anchor else shot.get("mode", "ref")
         is_ref = mode == "ref"
-        # The KEEP clause and RECOMPOSE earn their place here too: with --oref,
-        # Midjourney inherits the reference's composition exactly as fal's edit
-        # endpoint does.
-        extra = fal_art.RECOMPOSE if is_ref else ""
-        prompt = npc_art.prompt_for(spec, shot, is_edit=is_ref, extra=extra)
+        # The anchor has no reference to lean on, so it carries the full
+        # description; every ref shot gets the compact form.
+        prompt = (ref_prompt(spec, shot, style) if is_ref
+                  else npc_art.prompt_for(spec, shot, is_edit=False))
         positive, negs = split_negatives(prompt)
         no = ", ".join(dict.fromkeys(negs + MJ_NO))     # dedupe, keep order
         ar = AR.get(shot.get("size", "portrait_4_3"), "3:4")
         # Emit --no only when there is something to exclude; a bare "--no" is a
         # syntax error, and with the style off there are no negatives at all.
         flags = f"--ar {ar}" + (f" --no {no}" if no else "")
+        text = f"{positive.rstrip('. ')}. {flags}"
+        words = len(text.split())
         shots.append({
             "key": key, "file": shot["file"], "mode": mode, "ar": ar,
-            "prompt": f"{positive.rstrip('. ')}. {flags}",
+            "prompt": text, "words": words, "long": words > MJ_WORD_LIMIT,
         })
     return {"slug": slug, "path": entry["path"], "anchor": anchor,
             "out_dir": os.path.dirname(entry["path"]), "shots": shots}
