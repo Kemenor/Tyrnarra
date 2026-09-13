@@ -243,8 +243,7 @@ Then install `mj-overlay.user.js` in Tampermonkey and open midjourney.com.
 
 The working loop: pick an NPC in the panel → click the anchor shot (prompt bar
 fills) → enter → click Midjourney's own `--oref` on the grid image you like →
-click the next shot → enter → click `⤓` on any image to save it into the spec's
-folder under the shot's filename.
+click the next shot → enter. Saving is manual for now; see below.
 
 - **Same prompts as the other two renderers.** It builds through
   `npc_art.prompt_for` with `fal_art`'s `RECOMPOSE`, so Midjourney art comes out
@@ -264,26 +263,34 @@ folder under the shot's filename.
 - `--ar` comes from each shot's `size`. With the style off, that plus the
   description is the whole prompt.
 
-### Two things measured on the live site (2026-09-13), both load-bearing
+### Save-back: built, working, and currently removed
 
-**The server cannot download the images.** `cdn.midjourney.com` serves a page
-fetch but answers a plain server-side one with **403**. So the userscript reads
-the blob in the page and posts it base64, and `/save` takes bytes, not a URL.
-Do not "simplify" that back into a server-side download; it cannot work. Note
-also that the page fetch must be bare: adding `credentials: 'include'` turns a
-working cross-origin read into `Failed to fetch`.
+A `⤓` button was drawn on each grid image and saved it into the spec folder. It
+worked end to end, and it was **removed in v1.1**: drawn on the image, it sat on
+top of the zoom view. The complaint was placement, not function.
 
-**The prompt bar is a React-controlled `<textarea>`.** Assigning `.value`
-updates the DOM but not React's state, so the text vanishes on the next render
-and submitting sends an empty prompt. Going through the native value setter and
-dispatching an `input` event is what makes it stick (verified: the fill survives
-a re-render).
+`mj_server`'s `/save` endpoint is still live, and the userscript's history has
+the client half, so re-wiring it to a control that does not overlap the image is
+a small job rather than a rebuild. Everything it needs was measured on the live
+site (2026-09-13):
 
-Two smaller notes. Full-resolution images are at
-`cdn.midjourney.com/<uuid>/0_<index>.png`, derived from the job link, because
-the rendered `<img>` is a 640 px webp thumbnail. And the save button is attached
-by a `MutationObserver` because the feed is virtualised, so a one-shot pass
-decorates only what happened to be on screen at load.
+- **The server cannot download the images.** `cdn.midjourney.com` serves a page
+  fetch but answers a plain server-side one with **403**. The bytes must be read
+  in the page and posted base64; `/save` takes bytes, not a URL. Do not
+  "simplify" it back into a server-side download; it cannot work.
+- **The page fetch must be bare.** Adding `credentials: 'include'` turns a
+  working cross-origin read into `Failed to fetch`.
+- **Full-resolution is `cdn.midjourney.com/<uuid>/0_<index>.png`,** derived from
+  the job link. The rendered `<img>` is a 640 px webp thumbnail.
+- **The feed is virtualised,** so anything attached per-image needs a
+  `MutationObserver`; a one-shot pass decorates only what is on screen at load.
+
+### The prompt bar is a React-controlled `<textarea>`
+
+Assigning `.value` updates the DOM but not React's state, so the text vanishes
+on the next render and submitting sends an empty prompt. Going through the
+native value setter and dispatching an `input` event is what makes it stick
+(verified on the live page: the fill survives a re-render).
 
 ## Tokens are a separate, user-directed flow
 
