@@ -12,7 +12,10 @@ Foundry); this folder only **makes** the images.
 History: this folder previously held the fal.ai (`gen_portraits.py`,
 `gen_npc_set.py`) and Midjourney (`mj_prompts.py`) cloud tiers. Retired
 June 2026 — git history has them if ever needed. The committed art they
-produced stays where it is.
+produced stays where it is. A hosted tier came **back** in September 2026 as
+[`fal_art.py`](#fal_artpy--the-hosted-renderer), on a different footing: it
+shares `npc_art.py`'s spec and prompt builder instead of being a parallel
+implementation that drifts.
 
 ## `npc_art.py` — the renderer
 
@@ -63,6 +66,54 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
   is parked behind a wedged prompt says `NOT STARTED, queued behind 1 job(s)`
   instead of claiming to render. `/interrupt` returns 200 but does nothing to a
   prompt wedged inside a model load; that needs `restart_server()`.
+
+## `fal_art.py` — the hosted renderer
+
+The cloud sibling of `npc_art.py`, added September 2026. **Same spec file, same
+prompts, same stage names**; the render happens on fal.ai. Use it when the local
+box is busy or wedged, when a set is wanted without a 12-minute model load, or
+to reach a model the local install does not have.
+
+```bash
+python3 fal_art.py models                                    # backends + est. price
+python3 fal_art.py variations --spec <spec> [--count 2] [--model flux2]
+python3 fal_art.py set        --spec <spec> --draft 1 [--scene "extra"]
+python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4]
+#   any render stage also takes --dry-run: prints prompts + cost, spends nothing
+```
+
+- **Stdlib only**, like `npc_art` — no `fal-client`, no `requests`, no pip step.
+  Reference images go up inline as base64 data URIs, so there is no upload step.
+- **It imports `npc_art`** for `prompt_for()`, `SIZES`, `STYLES` and `KEEP`. That
+  is deliberate and load-bearing: if this module built its own prompts they
+  would drift, and a local-vs-hosted comparison would be measuring the prompt
+  difference rather than the model difference. Nothing in `npc_art` runs at
+  import time, so importing it never touches the local ComfyUI server.
+- **Backends** are `flux2` (default, the local pipeline's model, the
+  like-for-like comparison), `nano-banana-pro` (strongest identity consistency,
+  pulls photoreal) and `seedream4` (cheapest, favoured for stylised fantasy
+  lighting). Adding one is a `BACKENDS` entry: the families differ only in how
+  they take a size and what a reference costs.
+- **Every pass prints a cost estimate.** It is an *estimate* from a hardcoded
+  per-image table; fal moves prices without notice, so the dashboard is the
+  authority. The number is there to answer "cents or dollars", not to bill.
+- `bakeoff` renders one spec through several models into `<out>/bakeoff/<model>/`,
+  pinning **one seed across all of them** so the comparison is of the models and
+  not of the dice. It writes nowhere near the committed art.
+- **Sizes differ slightly from local.** fal's `portrait_4_3` preset is 768×1024;
+  `npc_art.SIZES` maps the same name to 896×1184. Same aspect, ~30% fewer pixels.
+  Fine for comparison, worth knowing before mixing outputs in one set.
+- The `upscale` stage is **unverified** (`fal-ai/esrgan`, never run here). The
+  local `npc_art.py upscale` with 4x-UltraSharp is the proven path and is free;
+  prefer it whenever the local box is up.
+
+Key: `FAL_KEY` in the environment, else `../keys/falai.key`. The whole
+`tools/keys/` directory is gitignored (plus a `**/*.key` glob), so a key dropped
+in there cannot be committed whatever it is named.
+
+Validated 2026-09-13: `models`, `--dry-run` prompt assembly (byte-identical to
+the local builder), and one real `variations` render end to end (auth, queue
+polling, download, spec write-back).
 
 ## Tokens are a separate, user-directed flow
 
