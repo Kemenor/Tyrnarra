@@ -159,6 +159,24 @@ so the one useful sentence is buried under a megabyte of echoed base64. It print
 the message *and the field*, because `image_urls` and `prompt` are different
 problems with different remedies.
 
+### The reference governs identity, the framing governs composition
+
+An edit call inherits the **reference image's composition** unless told not to.
+That is why a portrait shot whose framing already said *"head and upper chest
+filling the frame"* kept coming back as the anchor's three-quarter body: the
+words described the crop, but nothing overrode what the reference showed.
+
+Writing stronger framing prose does not fix it. Tested on Odo Mast 2026-09-13:
+the wording had to explicitly contradict the reference before the crop moved. So
+`RECOMPOSE` is appended to **every ref-mode shot**, saying the reference is for
+identity only and the framing overrides how it is cropped, posed and staged. The
+unmodified spec then produced a correct head-and-shoulders portrait.
+
+It goes on every ref shot rather than only tight ones, because a scene shot is a
+recomposition too. **Specs need no change**; do not hand-write crop overrides
+into `framing` and do not "fix" a loose crop by moving a portrait to `mode:
+text`, which returns a different person.
+
 ### House style: `digital` (2026-09-13)
 
 `--style digital` (in `STYLE_OVERRIDES`, an overlay on `npc_art.STYLES` so the

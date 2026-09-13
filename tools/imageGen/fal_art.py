@@ -163,6 +163,20 @@ STYLE_OVERRIDES = {
 }
 
 
+# An edit call inherits the REFERENCE's composition unless told otherwise, which
+# is why a portrait shot asking for "head and upper chest filling the frame"
+# kept coming back as the anchor's three-quarter body: the words described the
+# crop but nothing said to override what the reference showed. Tested on Odo
+# Mast 2026-09-13; adding an explicit recompose instruction fixed it, and
+# strengthening the framing wording alone did not.
+#
+# Appended to every ref-mode shot, not just tight ones: a scene shot is also a
+# recomposition, and the reference's job is identity in both cases.
+RECOMPOSE = ("Use the reference image for identity only, never for composition: "
+             "the framing described here overrides how the reference is cropped, "
+             "posed and staged.")
+
+
 def resolve_style(name):
     """Preset name -> the literal style sentence. Overlay first, then npc_art's
     presets, then treat the string as a literal (npc_art.style_of's rule)."""
@@ -394,6 +408,8 @@ def render_shot(spec, shot, model, key, seed, ref_path=None, extra="",
     carries over); without, a fresh text-to-image."""
     b = backend(model)
     is_edit = ref_path is not None
+    if is_edit:
+        extra = (extra.rstrip(". ") + ". " + RECOMPOSE) if extra else RECOMPOSE
     prompt = npc_art.prompt_for(spec, shot, is_edit=is_edit, extra=extra)
     size = shot.get("size", "portrait_4_3")
     # Before anything touches the reference file: a dry run must work when the
