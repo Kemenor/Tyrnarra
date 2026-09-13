@@ -38,7 +38,14 @@ __pycache__/
 # this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
 **/*.secret
+**/*.key
 tools/**/.env
+# Belt and braces: ignore EVERYTHING in tools/keys/ except the two files that
+# are meant to be tracked. The *_key.txt glob above missed falai.key (2026-09),
+# which sat untracked-but-visible and would have been swept up by `git add -A`.
+tools/keys/*
+!tools/keys/.gitkeep
+!tools/keys/README.md
 
 # Generated image-gen output (the approved generated art) IS committed for
 # portability: portraits/, frames/, and the baked tokens/ travel with the repo
