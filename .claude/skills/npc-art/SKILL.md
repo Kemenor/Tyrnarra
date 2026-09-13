@@ -72,27 +72,32 @@ then bake with `../foundryExport/bake_token.py bake/batch` and assign per
 
 ## Performance notes (this machine)
 
-First render after a server start loads ~38 GB (several minutes); warm shots
-take ~1-2 min each. **Every pass is ONE graph on purpose**, variations
-included: this box is swap-bound and splitting a pass into one prompt per image
-evicts and reloads the text encoder between shots (tried 2026-09, materially
-slower). The consequence is that **no file appears until the whole pass
-finishes** — a 4-variation batch writes zero files and then four at once — so
-`run_graph` prints a 30 s heartbeat. A cold first batch is ~15-18 min all in
-and looks dead for the first several minutes while ~38 GB loads.
+**Measured 2026-09-13: ~221 s per image**, flat memory, no swap — *provided*
+ComfyUI runs with `--cache-none`, which `ensure_server()` passes automatically.
+Without it every pass retains another copy of the loaded models (+14.7 GB per
+pass, RSS 38 → 55 GB, then swap thrash) because ComfyUI's `objects` cache is
+exempt from RAM-pressure eviction. Measured passes: 251 / 221 / 241 / 170 s,
+RSS after each 2446 / 2642 / 2533 / 2610 MB — **+164 MB drift over four**.
+Full data and the list of dead ends (pinned memory, `--cache-ram`,
+`--disable-smart-memory`, the fp8 encoder, graph shape) are in
+`tools/imageGen/README.md`. **Read that before changing any memory flag** —
+several plausible-sounding ones were tested and make things worse.
 
-**Before calling a run hung**, read the heartbeat: it now reports queue
-position, so `NOT STARTED, queued behind 1 job(s)` means something else is
-wedged and this pass has not begun. Then check `rocm-smi --showuse` (74-87% =
-working; a single sample can catch a legitimate lull between steps) and
-`free -g` (swap climbing = thrashing).
+Every pass is ONE graph and **no file appears until the whole pass finishes**,
+so a multi-shot batch writes nothing and then all of them at once; `run_graph`
+prints a 30 s heartbeat carrying queue position.
 
-**A wedged prompt ignores `/interrupt`** (it returns 200 and nothing happens)
-because it is stuck inside a model load; `npc_art.restart_server()` is the only
-way out. **Never run two render drivers at once** — it doubles memory pressure
-on a machine with none to spare, and the second one silently queues behind the
-first. The stack peaks around **53 GB RSS on a 64 GB box**, so there is no
-headroom for a second anything. If a Flux load grinds >5 min, another model family has
-poisoned RAM: `python3 -c "import npc_art; npc_art.restart_server()"` (30 s)
-and re-run. Do not run other model families (SDXL checkpoints) between stages
-of a set.
+**Before calling a run hung**, read that heartbeat — `NOT STARTED, queued
+behind N job(s)` means something else is wedged and this pass never began.
+Then `rocm-smi --showuse` (74-87% = working; a single sample can catch a
+legitimate lull between steps) and `vmstat` (si/so in the hundreds of MB/s is
+thrashing, not slowness).
+
+**A wedged prompt ignores `/interrupt`** — it returns 200 and nothing happens,
+because it is stuck inside a model load. `npc_art.restart_server()` is the only
+way out, and it must kill inside the podman container: a host-side
+`pkill -f main.py` matches only the wrapper and leaves the real Python alive
+holding ~50 GB with the API down.
+
+**Never run two render drivers at once** — it doubles memory pressure on a
+machine with none to spare, and the second silently queues behind the first.

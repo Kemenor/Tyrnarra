@@ -21,5 +21,9 @@
       "size": "portrait_4_3",
       "framing": "Standing in an opened front door of a grand manor house at dusk, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
     }
+  },
+  "render": {
+    "variations_seed": 3204751361,
+    "variations_count": 1
   }
 }

@@ -82,54 +82,67 @@ Full runbook: [`../foundryExport/README.md`](../foundryExport/README.md).
 Generated art **is committed** (generation is non-deterministic; the approved
 images are the canon record). Specs are committed beside them.
 
-## Memory on this machine (measured 2026-09)
+## Memory on this machine (measured 2026-09-13)
 
-The stack is **38.4 GB of weights** (Mistral fp8 text encoder 16.8, Q4 unet
-18.7, Turbo LoRA 2.6, VAE 0.3) on a 64 GB box, and ComfyUI keeps models in
-**system RAM** between runs by design (see `--highvram`'s help text). Measured
-RSS: **40 GB on the first pass, 51 GB peaking at 55 GB on the second**, after
-which the machine swaps at ~480 MB/s and a 2-minute image takes 15.
+The stack is **38.4 GB of weights** on a 64 GB box, and ComfyUI keeps models in
+system RAM between runs by design. **The pipeline had never actually been run
+end to end before this** (all committed art up to 2026-06-08 is Midjourney/fal;
+the `~1-2 min/image` figure in the original commit was an estimate, never a
+measurement), so the following is its first real benchmark.
 
-Things that are NOT the cause, each checked against the source:
-- **Node-output cache.** The default is `RAM_PRESSURE`, and `ram_release()`
-  returns early only when `available >= target`. The default inactive target is
-  `min(96, total_ram)` = the whole machine, so it already evicts after *every
-  node*. `--cache-ram` cannot beat "always evict"; leave it alone.
-- **`--disable-smart-memory`.** Its help reads "offload to regular ram instead
-  of keeping models in vram" — it moves pressure *onto* system RAM. Wrong way.
-- **Graph shape.** A 4-shot variations graph (41 nodes, 4.24 MP) and a 3-shot
-  set (38 nodes, 3.17 MP) are near-identical; the growth is pass-to-pass, not
-  shots-per-pass.
+### The one setting that matters: `--cache-none`
 
-**The cause is fp8 on a non-NVIDIA card.** `supports_fp8_compute()` returns
-False for every non-NVIDIA device unconditionally, so an fp8 text encoder can
-never execute as fp8 here. `unet_manual_cast()` therefore selects fp16/bf16 and
-`comfy/ops.py: cast_bias_weight()` upcasts each layer at the point of use — 2x
-the bytes — while torch's caching allocator never returns those blocks to the
-OS. RSS ratchets by roughly the encoder's own size per pass, which is exactly
-the +16.8 GB measured.
+ComfyUI's `objects` cache holds the loaded model instances produced by the
+loader nodes, and it is **exempt from RAM-pressure eviction** - `execution.py`
+`init_ram_cache()` and `init_lru_cache()` both leave it a plain
+`HierarchicalCache`, and only `init_null_cache()` clears it. Without the flag,
+every pass stacks another copy of the model patchers on the previous one.
 
-**Fix applied 2026-09: the encoder is `mistral_3_small_flux2_fp4_mixed`**
-(11.4 GB) rather than `..._fp8` (16.8 GB), taking the stack from 38.4 GB to
-33.0 GB. **This is a mitigation, not a cure**: the file's own header is
-`{U8: 398, F8_E4M3: 208, F32: 208, BF16: 63}`, so 208 tensors are still fp8 and
-fp4 has no native path either (`supports_nvfp4_compute` is also NVIDIA-only).
-The cast still happens, just over a smaller model. **Unverified** as of the
-swap: the test is a two-pass run watching whether RSS stays near 33 GB instead
-of climbing to 55.
+Measured, four identical single-image passes, one per NPC:
 
-Options considered and rejected:
-- **A GGUF text encoder.** None exists from a canonical publisher: city96's
-  FLUX.2-dev-gguf is unet-only, and HF search returns only unofficial
-  "uncensored" forks of a different 9B encoder. Do not go looking again.
-- **bf16 (33.1 GB).** RDNA3 supports bf16 natively so it would remove the cast
-  entirely, but the baseline becomes 54.7 GB of 62.7 GB — a permanent squeeze
-  instead of a growing one. Worth revisiting only with more RAM.
+| config | pass 1 | RSS growth per pass |
+|---|---|---|
+| default (RAM cache, pinning on) | 432 s | **+14.7 GB** |
+| `--disable-pinned-memory` | 462 s | **+12.2 GB** |
+| **`--cache-none`** | **251 s** | **+164 MB over FOUR passes** |
 
-All three encoder variants live at `Comfy-Org/flux2-dev` under
-`split_files/text_encoders/`. The fp8 file is kept on disk; reverting is one
-line in `MODELS["clip"]`.
+`--cache-none` run in full: 251 / 221 / 241 / 170 s, RSS after each pass
+2446 / 2642 / 2533 / 2610 MB. **Mean 221 s per image, flat memory, no swap.**
+`npc_art.ensure_server()` passes the flag, so it applies automatically.
 
-Practical rules until then: **one driver at a time**, and expect the second pass
-in a server session to be slower than the first. A restart costs ~12 min of
-reload, so restarting between NPCs is not free either.
+Its documented cost ("executes every node for each run") is real - every pass
+reloads the stack - but it is *faster* here, because the reload is trivial next
+to the paging it avoids.
+
+### Dead ends, so nobody re-walks them
+
+- **`--disable-pinned-memory`** - pinning (`ram * 0.90` = 57.8 GB cap,
+  `cudaHostRegister`, registers in place, does not copy) makes that memory
+  unreclaimable, but it is NOT the growth. Disabling cost 7% and left a
+  +12.2 GB ratchet.
+- **`--cache-ram`** - cannot help. `ram_release()` returns early only when
+  `available >= target`, and the default inactive target is the whole machine,
+  so the *outputs* cache already evicts after every node. It never touched
+  `objects`.
+- **`--disable-smart-memory`** - its help says "offload to regular ram instead
+  of keeping models in vram": moves pressure onto system RAM, the wrong way.
+- **The fp8 text encoder** - `supports_fp8_compute()` is false on all
+  non-NVIDIA, so it does manual-cast per layer, but this is NOT the growth
+  either. fp8 is fine with `--cache-none`. A `mistral_3_small_flux2_fp4_mixed`
+  (11.4 GB) was downloaded chasing this and is unnecessary; fp8 is still the
+  configured encoder. No GGUF of this encoder exists (every flux2 text-encoder
+  GGUF on HF targets *klein*, a different architecture).
+- **Graph shape** - a 4-shot variations graph (41 nodes) and a 3-shot set
+  (38 nodes) are near-identical, and growth happened between two passes of the
+  *same* shape. Shape was never the variable.
+
+### Operating rules
+
+**One driver at a time** - two concurrent renders doubled pressure on a machine
+with none to spare. ComfyUI runs inside the `comfyui` podman container, so
+killing it needs `podman exec comfyui pkill -f main.py`; a host-side pkill
+matches only the wrapper and leaves the real Python alive holding ~50 GB with
+the API down. `restart_server()` does this correctly. A prompt wedged in a
+model load ignores `/interrupt` (returns 200, does nothing); only a restart
+clears it, and `run_graph`'s heartbeat reports queue position so a pass parked
+behind a wedged prompt says so instead of claiming to render.
