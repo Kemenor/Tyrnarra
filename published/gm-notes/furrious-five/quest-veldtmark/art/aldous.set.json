@@ -5,28 +5,29 @@
   "anchor": "full",
   "character": "A human man in his late fifties, tall, thin and gaunt, standing very straight with statuesque posture, utterly still. A pale grey unhealthy complexion with no colour in the face. Full soft flesh over the cheeks, intact lips and nose, living skin. Flat pale grey eyes, wide open, calm and incurious, an expression of perfect professional courtesy. Neatly combed thin white hair",
   "wardrobe": "an immaculate black butler's tailcoat and waistcoat over a white high-collared shirt, brushed spotless, white gloves, every line exact",
-  "negative": "skeleton, skull, exposed bone, corpse, undead, rotting flesh",
   "shots": {
     "full": {
       "file": "aldous-full",
       "size": "portrait_4_3",
-      "framing": "Full body standing portrait of a living man, front view, feet flat on the floor, hands folded precisely in front of him, impeccable posture."
+      "framing": "Full body standing portrait, front view, feet flat on the floor, hands folded precisely in front of him, impeccable posture."
     },
     "portrait": {
       "file": "aldous",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, a living man's fully fleshed face, pale and sickly, facing the viewer directly, unblinking flat pale grey eyes, polite empty expression, head and upper chest filling the frame."
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer directly, unblinking, a polite empty expression."
     },
     "scene": {
       "file": "aldous-door",
       "size": "portrait_4_3",
-      "framing": "A living human butler standing in the opened front door of a grand manor house at dusk, feet on the threshold, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
+      "framing": "A butler standing in the opened front door of a grand manor house at dusk, one hand still on the handle, inclining his head at exactly the angle courtesy requires and no further, warm lamplight behind him."
     }
   },
   "render": {
     "variations_seed": 698552440,
     "variations_count": 1,
     "set_seed": 3667592886,
-    "chosen_variation": 1
+    "chosen_variation": 1,
+    "anchor_renderer": "local FLUX.2 (npc_art); the living-flesh wording is a text-to-image defence against skeletal renders and belongs only to the anchor",
+    "set_renderer": "Midjourney V8.2, anchor attached to prompt"
   }
 }

@@ -105,23 +105,54 @@ them draw it.
 
 ---
 
-## The `negative` field, and when it backfires
+## The `negative` field: use it almost never
 
-A spec may carry `negative`, which reaches Midjourney as `--no`. Use it for a
-**failure the renders keep repeating**, not as insurance. Aldous earned his: he
-came back skeletal, so `skeleton, skull, exposed bone, corpse` goes in the flag,
-where a prose "not a skeleton" would read as an instruction to draw one.
+A spec may carry `negative`, which reaches Midjourney as `--no`. **The default
+is to have none.** Both specs that were given one had it removed again within
+the hour, each time because the flag was fighting something the prompt wanted.
+Reach for it only when a specific failure has repeated across several renders
+and no positive phrasing has moved it, and expect to delete it once an anchor
+exists.
 
-**`--no` suppresses the concept, not the excess of it.** A list written to curb
-a too-cheerful Harlen (`grin, broad smile, cheerful, jolly`) removed his smile
-altogether, because every one of those entries carries *smile* with it and he
-needed one. The test before adding an entry:
+It is a blunt instrument: `--no` suppresses a **concept**, not the excess of a
+concept, and it cannot tell the difference between the version you hate and the
+version you want.
+
+A list written to curb a too-cheerful Harlen (`grin, broad smile, cheerful,
+jolly`) removed his smile altogether, because every one of those entries carries
+*smile* with it and he needed one. The test before adding an entry:
 
 > If the model took this word completely away, would the image still be right?
 
 If the thing you want is a *small* version of the thing you are excluding, the
 flag is the wrong tool. Say the small version in the prompt and leave `--no`
 empty.
+
+### A defence belongs to the anchor, never to a ref shot
+
+Aldous kept rendering as a skeleton, so his spec grew defences: "full soft
+flesh", "intact lips and nose", "living skin", and the word *living* in all
+three framings. That was correct for text-to-image and **actively wrong once an
+anchor existed.** A ref shot's framing is its entire prompt, so with the face
+already carried by the attached image, the whole instruction became "living man,
+fully fleshed" and Midjourney obliged: an ordinary healthy butler, the uncanny
+gone.
+
+The `--no` went the same way. `skeleton, corpse, undead` was right while the
+model was inventing him from words, and wrong once it was copying a face:
+suppressing *undead* and *corpse* strips the deathliness that makes him work.
+His spec now carries no negative at all.
+
+The rule: **a defence protects the shot that has nothing else to go on.** It
+belongs to a text-to-image anchor and nowhere else. Once an anchor exists and is
+attached, drop the defensive wording from the framings and drop the `negative`
+field. What makes Aldous wrong is the stillness and the empty courtesy, not a
+reminder that he has skin.
+
+Check for this whenever a spec has been fought with. The wording that won the
+text-to-image battle tends to migrate into the framings and the negative, where
+it is dead weight at best and, once a reference is doing the work, a straight
+instruction to undo the thing you wanted.
 
 ---
 
