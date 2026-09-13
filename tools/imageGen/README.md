@@ -89,10 +89,19 @@ python3 fal_art.py bakeoff    --spec <spec> [--models flux2,seedream4] [--style 
   would drift, and a local-vs-hosted comparison would be measuring the prompt
   difference rather than the model difference. Nothing in `npc_art` runs at
   import time, so importing it never touches the local ComfyUI server.
-- **Backends** are `seedream4` (**default**, see the results below) and `flux2`
-  (the local pipeline's model, kept as the like-for-like second opinion). Adding
-  one is a `BACKENDS` entry: the families differ only in how they take a size,
-  what a reference costs, and which `extra` args they want.
+- **Backends** are `seedream45` (**default**, the house model), `seedream4` (its
+  predecessor) and `flux2` (the local pipeline's model, kept as the like-for-like
+  second opinion). Adding one is a `BACKENDS` entry: the families differ only in
+  how they take a size, what a reference costs, which `extra` args they want, and
+  which fields they have no input for (`omit`).
+- **Output format is whatever the model returns, and the file is named for it.**
+  Seedream has no `output_format` input and ignores the one we send, so it
+  returns JPEG however politely we ask for PNG. `download()` sniffs the magic
+  bytes and writes `<file>.jpg` rather than lying in a `.png`, which matters
+  downstream: `bake_token.py` composites expecting real PNG with alpha. Every
+  skip-if-exists and anchor lookup therefore goes through `existing()`, which
+  finds the shot under any known extension. Without it, a set cannot find the
+  anchor it just rendered and re-renders everything, every run.
 - **Every pass prints a cost estimate.** It is an *estimate* from a hardcoded
   per-image table; fal moves prices without notice, so the dashboard is the
   authority. The number is there to answer "cents or dollars", not to bill.
@@ -165,20 +174,41 @@ illustration, not an oil painting.
 
 ### Model results, 2026-09-13
 
-**Seedream 4 is the house model.** Across Caevan (Vishkanya), Odo Mast (kitsune)
-and Aldous (hovering revenant butler) it held identity tightly through the
-reference chain, matched the `digital` brief closely, returned 1536×2048 where
-FLUX.2 gave 768×1024, refused nothing, and is the cheapest of the three. It also
-rendered the awkward specifics without being asked twice: Odo's blood-written
-sleeves, Aldous's feet dissolving where he hovers clear of the floor.
+**Seedream 4.5 is the house model.** Across the four-NPC trial (Caevan the
+Vishkanya, Odo Mast the kitsune, Aldous the hovering revenant butler, Sera Vance
+the orc) it refused nothing, held identity through the reference chain, matched
+the `digital` brief, kept the `seed` input, and returned **3072×4096** for a flat
+$0.04. Sera is the proof: FLUX.2 refused her outright, and 4.5 rendered her
+correctly, as a woman, which FLUX.2 had also got wrong. It handles awkward
+specifics unprompted too: Odo's blood-written sleeves, Aldous's feet dissolving
+where he hovers clear of the floor.
 
-FLUX.2 stays wired as the second opinion: crisp and clean under the `digital`
-style, but flatter, greyer, lower-resolution, and it renders ancestry markers
-(Caevan's jewel-toned scaling) as plain grey.
+Seedream 4 stays wired: same character, half the wall time, a quarter of the
+pixels, a penny cheaper. FLUX.2 stays as the second opinion, crisp and clean
+under `digital` but flatter, greyer, 768×1024, and it renders ancestry markers
+(Caevan's jewel-toned scaling) as plain grey. Both rejected models are described
+in the `BACKENDS` comments with the reasons.
 
-Nano Banana Pro was evaluated and **rejected**: good identity, but it invented
-backgrounds, painted a white sketchy border, rendered ancestry markers too
-faintly to read, and cost 5× the alternatives. Its adapter is in git history.
+Sample set: `published/gm-notes/furrious-five/assets/portraits/fal-trial/`
+(untracked; trial art, not approved art).
+
+### Speed, measured 2026-09-13
+
+| | per shot | 3-shot set |
+|---|---|---|
+| Seedream 4 | 20 s | 61 s |
+| Seedream 4.5 | 34–43 s | ~110 s |
+| local FLUX.2 | ~220 s | ~660 s + cold load |
+
+fal's reported GPU time is 85–90% of wall clock, so queueing is a rounding error
+and these numbers should hold rather than swinging with fal's load.
+
+4.5 reads as slower than 4 until you account for output size: **four times the
+pixels in 1.7× the time**, so ~2.3× more efficient per pixel. Against local, a
+set is ~6× faster on 4.5 and ~11× on v4, before the multi-minute cold model load
+that local pays on a first pass. Compare set against set, not image against
+image: `npc_art.py` renders a whole set in one graph precisely to pay that load
+once.
 
 ## Tokens are a separate, user-directed flow
 

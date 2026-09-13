@@ -118,18 +118,23 @@ BACKENDS = {
     },
 }
 
-# Seedream 5 (pro and lite) was evaluated and REJECTED (2026-09-13): on Caevan
-# it all but erased the jewel-toned scaling that makes him read as Vishkanya,
-# invented a stone-hall background against an explicit "uncluttered", and came
-# back flatter and greyer than v4 at 4.5x the price. It also takes no seed
-# input, so its shots cannot be pinned for comparison. Newer was worse here.
-DEFAULT_MODEL = "seedream4"
+# House model as of 2026-09-13: Seedream 4.5. It refused nothing across the
+# four-NPC trial (Sera Vance included, whom FLUX.2 refused outright), keeps the
+# seed input, and returns 3072x4096 against v4's 1536x2048 for a penny more.
+DEFAULT_MODEL = "seedream45"
 
-# Nano Banana Pro was evaluated and REJECTED (2026-09-13): it held identity
-# well but invented backgrounds, painted a white sketchy border, rendered
-# ancestry markers too faintly to read, and cost 5x the alternatives. The
-# adapter is in git history if it is ever wanted back; do not re-add it on a
-# hunch.
+# Two models were evaluated and REJECTED. Do not re-add either on a hunch; the
+# adapters are in git history if the case ever changes.
+#
+# Nano Banana Pro (2026-09-13): held identity well, but invented backgrounds,
+# painted a white sketchy border, rendered ancestry markers too faintly to read,
+# and cost 5x the alternatives.
+#
+# Seedream 5, pro and lite (2026-09-13): on Caevan it all but erased the
+# jewel-toned scaling that makes him read as Vishkanya, invented a stone-hall
+# background against an explicit "uncluttered", and came back flatter and greyer
+# than v4 at 4.5x the price. It also takes no seed input, so its shots cannot be
+# pinned for comparison. Newer was worse here.
 
 
 def backend(name):
@@ -293,6 +298,22 @@ def submit(endpoint, args, key, label, timeout=900, metrics=None):
 
 _MAGIC = ((b"\x89PNG\r\n\x1a\n", "png"), (b"\xff\xd8\xff", "jpg"),
           (b"RIFF", "webp"))
+_EXTS = ("png", "jpg", "webp")
+
+
+def existing(dest):
+    """The already-rendered file for `dest`, whatever extension it landed with.
+
+    Needed because download() names files for their real format: a Seedream
+    shot asked for as <file>.png is on disk as <file>.jpg. Without this, the
+    skip-if-exists checks never match, every run re-renders everything, and
+    a set that references its anchor cannot find the anchor it just made.
+    """
+    stem = os.path.splitext(dest)[0]
+    for e in _EXTS:
+        if os.path.exists(f"{stem}.{e}"):
+            return f"{stem}.{e}"
+    return None
 
 
 def download(url, dest):
@@ -465,11 +486,13 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
 
     # 1) the anchor, referencing the chosen variation when there is one
     anchor_dest = dest_of(anchor_key)
-    if anchor_key in want and (force or not os.path.exists(anchor_dest)):
+    anchor_have = existing(anchor_dest)
+    if anchor_key in want and (force or not anchor_have):
         ref = None
         if draft:
             ref = os.path.join(out_dir, "variations",
                                f"{spec.get('slug', 'npc')}-v{draft}.png")
+            ref = existing(ref) or ref
             if not os.path.exists(ref):
                 # A dry run never opens the file, so a missing variation must
                 # not stop it: previewing the prompts BEFORE rendering any
@@ -493,12 +516,14 @@ def render_set(spec_path, draft=None, scene_extra="", only=None, force=False,
 
     # 2) the rest, each referencing the anchor on disk
     pend = [k for k in want if k != anchor_key
-            and (force or not os.path.exists(dest_of(k)))]
+            and (force or not existing(dest_of(k)))]
     for k in [k for k in want if k != anchor_key and k not in pend]:
         print(f"  skip {k} (exists)")
     if pend and any(mode_of(k) == "ref" for k in pend) and not dry_run:
-        if not os.path.exists(anchor_dest):
+        anchor_have = existing(anchor_dest)
+        if not anchor_have:
             sys.exit(f"anchor missing ({anchor_dest}); render it first")
+        anchor_dest = anchor_have
     refused = []
     for k in pend:
         m = mode_of(k)
@@ -546,8 +571,8 @@ def upscale(spec_path, scale=2, only=None, dry_run=False, model="fal-ai/esrgan")
     for k, s in spec["shots"].items():
         if only and k not in only:
             continue
-        src = os.path.join(out_dir, f"{s['file']}.png")
-        if not os.path.exists(src):
+        src = existing(os.path.join(out_dir, f"{s['file']}.png"))
+        if not src:
             print(f"  skip {k} (no render)")
             continue
         print(f"  upscale {k} {scale}x ...", flush=True)
