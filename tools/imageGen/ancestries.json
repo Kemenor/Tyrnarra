@@ -77,7 +77,7 @@
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "yaksha, yaoguai, conrasu"
+    "yaoguai, conrasu"
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -313,7 +313,17 @@
     "with rust-brown or orange chitin plates along the back. Evolved, after the",
     "grand metamorphosis: the magical nodes become organs projecting tangible",
     "magic, including glowing wings that defy gravity, which is what the",
-    "reference art shows."
+    "reference art shows.",
+    "",
+    "surki CONFIRMED, adult and evolved both.",
+    "",
+    "yaksha was invented, not merely wrong. I had bark or river-stone skin and",
+    "small horns budding at the brow; the source has them appearing AS HUMANS",
+    "with strikingly distinctive physiques. The one constant is a luxurious",
+    "banyan-like mane bound in a topknot or under a headscarf. Build varies on",
+    "purpose, from seven feet of muscle to four feet of portliness, so pinning",
+    "one would be wrong for half of them. They manifest rather than being born,",
+    "which a portrait cannot show."
   ],
   "human": "",
   "elf": "",
@@ -363,7 +373,7 @@
   "vanara": "monkeyfolk",
   "vishkanya": "a tall lithe human person with golden eyes with vertical pupils and faint fine scales on the skin",
   "wayang": "a small humanoid person with dark grey skin, white painted patterns on the face and arms, and long black hair",
-  "yaksha": "a nature spirit wearing a person's shape, skin the colour of bark or river stone, small horns or budding growth at the brow",
+  "yaksha": "a human person with a thick heavy mane of hair bound in a topknot",
   "yaoguai": "a beast that became a person and kept the evidence: a mostly human shape carrying the ears, eyes or hands of the animal it was",
   "_midjourney_weak": {
     "centaur": "Midjourney renders centaurs badly with or without the description, and adding one made it worse. Anchor on local FLUX and attach that to the prompt for the rest of the set, the way Harlen Doss and Aldous were done."
@@ -424,7 +434,9 @@
       "athamaru",
       "jotunborn",
       "samsaran",
-      "sarangay"
+      "sarangay",
+      "surki",
+      "surki-evolved"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -443,7 +455,6 @@
     ],
     "untested": [
       "conrasu",
-      "surki",
       "yaksha",
       "yaoguai"
     ]
