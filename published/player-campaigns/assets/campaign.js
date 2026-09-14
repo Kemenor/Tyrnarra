@@ -16,9 +16,13 @@
                    room data on window.CAMPAIGN_ROOMS[key]:
                      { name, floor, tags:[], read, desc, details:[] }
 
-     Portraits:    <img class="person-face"> inside a .person-card opens
-                   full-size on click, Enter or Space; Esc, the close button
-                   or a click on the overlay dismisses it.
+     Portraits:    <img class="person-face" data-scene="…" data-scene-label="…">
+                   inside a .person-card. Clicking it (or Enter / Space) opens
+                   the data-scene picture full-size, NOT a bigger copy of the
+                   avatar: the face is already on the card, the in-scene shot
+                   is the thing worth revealing. Without data-scene it falls
+                   back to opening the avatar itself. Esc, the close button or
+                   a click on the overlay dismisses it.
 
      Reveal:       <div class="reveal">
                       <button class="reveal-toggle">◈ …</button>
@@ -119,11 +123,18 @@
     var box = buildLightbox();
     var card = img.closest('.person-card');
     var nameEl = card ? card.querySelector('.person-name') : null;
+    var name = nameEl ? nameEl.textContent : (img.alt || '');
+    // The avatar is the doorway to the in-scene picture, which is the shot a
+    // player never otherwise sees: the card already shows the face. An avatar
+    // with no scene wired falls back to opening itself.
+    var scene = img.getAttribute('data-scene');
+    var label = img.getAttribute('data-scene-label');
     var big = box.querySelector('img');
-    big.src = img.currentSrc || img.src;
-    big.alt = img.alt || '';
-    box.querySelector('figcaption').textContent = nameEl ? nameEl.textContent : (img.alt || '');
-    box.setAttribute('aria-label', img.alt || 'Portrait');
+    big.src = scene || img.currentSrc || img.src;
+    big.alt = scene && label ? name + ', ' + label.toLowerCase() : (img.alt || '');
+    box.querySelector('figcaption').innerHTML = esc(name)
+      + (scene && label ? ' <span class="pc-lightbox-where">' + esc(label) + '</span>' : '');
+    box.setAttribute('aria-label', big.alt || 'Portrait');
     lbOpener = img;
     box.hidden = false;
     document.body.classList.add('pc-lightbox-open');
