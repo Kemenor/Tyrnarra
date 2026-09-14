@@ -125,6 +125,19 @@ a:hover { color: var(--c-ink-bright); border-bottom-color: var(--c-accent); }
 .callout p { margin: 0 0 12px; line-height: 1.6; }
 .callout p:last-child { margin-bottom: 0; }
 
+/* ── DRAFT NOTE ────────────────────────────────────────────────
+   Marks material that is Claude-drafted and still provisional, so a
+   reader never mistakes an unreviewed page for settled canon. The
+   deliberate opposite of the setting layer's gm-vetted / gm-written
+   badges: those say a human signed off, this says nobody has yet.
+   Neutral slate rather than the campaign accent, so it reads as
+   apparatus instead of decoration. */
+.draft-note { max-width: 840px; margin: 22px auto; border: 1px dashed var(--c-ink-dim); border-radius: 5px; background: rgba(255,255,255,0.018); padding: 16px 22px; }
+.draft-note .draft-label { font-family: var(--c-label-font); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-ink-dim); margin-bottom: 9px; }
+.draft-note p { margin: 0 0 10px; line-height: 1.62; font-size: 0.95rem; color: var(--c-ink); }
+.draft-note p:last-child { margin-bottom: 0; }
+.draft-note b { color: var(--c-ink-bright); }
+
 .pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .pill { font-family: var(--c-label-font); font-size: 0.56rem; letter-spacing: 0.1em; padding: 4px 11px; border-radius: 11px; background: rgba(255,255,255,0.04); border: 1px solid var(--c-divider); color: var(--c-ink); text-transform: uppercase; }
 

@@ -1,0 +1,43 @@
+/* ───────────────────────────────────────────────────────────────
+   theme.css: Available on Short Notice
+   The campaign's visual identity. Loaded AFTER campaign.css; overrides
+   only the --c-* theme tokens. To re-skin the whole campaign, edit
+   this one file.
+
+   Mood: a lantern hung on a moving city, and a kit packed by the door.
+   Road-dust ground the colour of the dune-sea at dusk; signal-lantern
+   orange for the accent (the outrider's light coming across the sand);
+   waystone green for the secondary (water, safe ground, the far edge
+   of the green valley).
+
+   Contrast (tools/contrast.mjs, against the Style B base #0f0c08):
+     --c-accent      #d8863a  6.87:1   pass, graphic + text
+     --c-accent2     #8fa878  7.47:1   pass, graphic + text
+     --c-accent-dim  #9c6630  4.05:1   pass, graphic
+     --c-ink-dim     #8e8474  5.30:1   pass, graphic + text
+
+   Type: Cinzel for titles rather than the Furrious Five's Uncial
+   Antiqua. This campaign runs off a Guild register, and the register
+   should look like paperwork kept by people who are good at it.
+   ─────────────────────────────────────────────────────────────── */
+
+:root {
+  --c-bg: #12100d;
+  --c-bg2: #191611;
+  --c-bg3: #221d16;
+  --c-bg-grad:
+    radial-gradient(ellipse at 50% -5%, #221a12 0%, transparent 58%),
+    radial-gradient(ellipse at 88% 102%, #1b1a12 0%, transparent 52%),
+    radial-gradient(ellipse at 8% 88%, #15190f 0%, transparent 50%);
+  --c-ink: #d2cbbc;
+  --c-ink-bright: #f2ece0;
+  --c-ink-dim: #8e8474;
+  --c-accent: #d8863a;        /* signal-lantern orange · the outrider's light */
+  --c-accent-dim: #9c6630;
+  --c-accent2: #8fa878;       /* waystone green · water and safe ground */
+  --c-divider: rgba(200,185,155,0.13);
+  --c-card-bg: rgba(255,255,255,0.024);
+  --c-title-font: 'Cinzel', serif;
+  --c-body-font: 'Crimson Pro', Georgia, serif;
+  --c-label-font: 'Josefin Sans', sans-serif;
+}

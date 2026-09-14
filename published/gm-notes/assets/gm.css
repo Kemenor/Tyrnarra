@@ -15,6 +15,7 @@
      .section / .section-title
      .read-aloud           boxed read-to-players prose
      .gm-note              boxed GM-only aside
+     .draft-note           provisional / Claude-drafted marker
      .gm-secret            boxed reveal (collapsible)
      .statblock            NPC / creature stat block
      .npc-grid/.npc-card   expandable NPC roster
@@ -136,6 +137,17 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .gm-note { background: rgba(122,96,40,0.07); border: 1px solid var(--gm-divider); border-left: 3px solid var(--gm-gold-dim); border-radius: 0 4px 4px 0; padding: 13px 17px; margin: 14px 0; }
 .gm-note-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gm-gold); margin-bottom: 6px; }
 .gm-note-text { font-size: 0.94rem; line-height: 1.72; color: var(--gm-ink); }
+
+/* ── DRAFT NOTE ────────────────────────────────────────────────
+   Marks material that is Claude-drafted and still provisional, so a
+   page is never mistaken for settled canon. The deliberate opposite
+   of the setting layer's gm-vetted / gm-written badges: those say a
+   human signed off, this says nobody has yet. Neutral slate and a
+   dashed edge, so it reads as apparatus rather than as content. */
+.draft-note { border: 1px dashed var(--gm-ink-dim); border-radius: 5px; background: rgba(255,255,255,0.018); padding: 15px 20px; margin: 16px 0; }
+.draft-note .draft-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 8px; }
+.draft-note p { margin: 0 0 10px; line-height: 1.68; font-size: 0.94rem; color: var(--gm-ink); }
+.draft-note p:last-child { margin-bottom: 0; }
 
 /* ── GM SECRET (collapsible) ── */
 .gm-secret { border: 1px solid rgba(194,72,60,0.28); border-left: 3px solid var(--gm-accent); background: rgba(58,20,16,0.32); border-radius: 0 4px 4px 0; margin: 16px 0; overflow: hidden; }
