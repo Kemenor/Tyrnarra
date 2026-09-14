@@ -1,0 +1,26 @@
+{
+  "slug": "aldric-fenn",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "human",
+  "anchor": "full",
+  "character": "A man in his late fifties, very big and heavy through the shoulders, thickening with age. A broad weather-creased face, deep lines at the eyes, a salt-and-pepper beard kept slightly unkempt. Thick grey-brown hair. An old scar through one eyebrow. Heavy-lidded and level, watching",
+  "wardrobe": "a heavy worn dark brown coat, practical and unadorned, cuffs gone shiny with use, over a plain shirt open at the throat, a leather cord disappearing under the collar, and scuffed boots resoled many times",
+  "shots": {
+    "full": {
+      "file": "aldric-fenn-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing squarely with his weight settled back, arms loose at his sides, plain neutral background."
+    },
+    "portrait": {
+      "file": "aldric-fenn",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer directly, chin slightly lowered."
+    },
+    "scene": {
+      "file": "aldric-fenn-office",
+      "size": "portrait_4_3",
+      "framing": "A guildmaster standing behind a heavy desk in a small cluttered upper floor office, maps pinned across the wall behind him, a shortsword lying on the desktop, one hand flat on a stack of papers, low lamplight, a narrow window showing a river bridge at dusk."
+    }
+  }
+}

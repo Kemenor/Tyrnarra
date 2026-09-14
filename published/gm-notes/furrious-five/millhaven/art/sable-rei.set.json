@@ -1,0 +1,26 @@
+{
+  "slug": "sable-rei",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "kitsune",
+  "anchor": "full",
+  "character": "A slim fox-featured man of about thirty-five, silver-black fur dark through the coat with a cold silver wash at the temples and along the tail. One fox ear stands upright and the other lies flat under his dark hair. Sharp amber eyes. A narrow closed smile with slightly too many teeth",
+  "wardrobe": "an immaculate high-collared dark coat cut close for movement rather than display, a cravat in vivid signal-flag red, a heavy ring on one thumb, a small ship-shaped brooch at the lapel, excellent well-worn boots",
+  "shots": {
+    "full": {
+      "file": "sable-rei-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing at ease with his hands clasped behind his back, plain neutral background."
+    },
+    "portrait": {
+      "file": "sable-rei",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer, the narrow smile held."
+    },
+    "scene": {
+      "file": "sable-rei-lowspan",
+      "size": "portrait_4_3",
+      "framing": "A well dressed man leaning on a wooden rail above a sunken fighting pit, forearms crossed on the rail, looking down into the ring, a torchlit crowd behind him in shadow, sand and rope below."
+    }
+  }
+}
