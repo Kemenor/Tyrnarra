@@ -674,6 +674,8 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The memory-keepers**: descriptive. The whale-less house turned archaeologist, holding the old noble quarter on the mother whale and leading the recovery of Oroiri.
 - **Stokkul**: Icelandic *stökkull* (the leaper; a leaping-cetacean word) → umlaut-loss → **Stokkul**. The small leaping sand-kin of the whales; symbiotic shoals attend every sand-whale, and the city breaks its mounts from them.
 - **Amona** *(⚿ GM-tier)*: Basque "grandmother." The handle Tani rides under among the mother whale's Strays; the crew dubbed her for her old-soul fretting and never learn she is the goddess. See `geography/lioaru.md`, *Valreka → ⚿ GM Secret: Amona of the Strays*.
+- **The Whalehall**: plain English compound. The city's own name for Valreka's Godshall, the Adventurers' Guild's seat in the god-city; it rides the mother whale at the crown's leave, beside the memory-keepers, the Guild being no house and guiding no whale. The paperwork says *Valreka's Godshall* and the street says *the Whalehall*.
+- **The Standing Roll**: plain English. The Whalehall desk's register of parties who have declared themselves available on short notice, kept between the bursts of postings the roaming board lives on; an entry gives name, rank, what the crew will take, and where on the herd an outrider can find them.
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.
