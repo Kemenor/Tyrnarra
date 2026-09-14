@@ -4,13 +4,13 @@
   "style": "painterly",
   "ancestry": "human",
   "anchor": "full",
-  "character": "A man in his late fifties, very big and heavy through the shoulders, thickening with age. A broad weather-creased face, deep lines at the eyes, a salt-and-pepper beard kept slightly unkempt. Thick grey-brown hair. An old scar through one eyebrow. Heavy-lidded and level, watching",
-  "wardrobe": "a heavy worn dark brown coat, practical and unadorned, cuffs gone shiny with use, over a plain shirt open at the throat, a leather cord disappearing under the collar, and scuffed boots resoled many times",
+  "character": "A man in his late fifties, very big and heavy through the shoulders, thickening with age. A broad weather-creased face, deep lines at the eyes, a full salt-and-pepper beard trimmed close. Thick grey-brown hair swept back. An old scar through one eyebrow. Heavy-lidded and level, watching",
+  "wardrobe": "a heavy dark brown coat of good make, plain and unadorned but brushed clean and carefully kept, the cuffs worn smooth with long use, over a clean grey shirt, a leather cord at the collar, and solid well-polished boots",
   "shots": {
     "full": {
       "file": "aldric-fenn-full",
       "size": "portrait_4_3",
-      "framing": "Full body standing portrait, front view, standing squarely with his weight settled back, arms loose at his sides, plain neutral background."
+      "framing": "Full body standing portrait, front view, standing squarely, shoulders set, weight settled back, arms loose at his sides, plain neutral background."
     },
     "portrait": {
       "file": "aldric-fenn",
