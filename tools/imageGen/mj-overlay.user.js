@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tyrnarra NPC helper for Midjourney
 // @namespace    tyrnarra
-// @version      1.5
+// @version      1.6
 // @description  Serve <slug>.set.json prompts into the Midjourney prompt bar, and save the open image into the spec's folder.
 // @match        https://www.midjourney.com/*
 // @grant        GM_xmlhttpRequest
@@ -287,16 +287,22 @@
 
   (async function init() {
     try {
-      const specs = await api('GET', '/specs');
-      $('#ty-status').textContent = specs.length + ' specs';
+      // fillSelect owns the list and the counter, and reads state.specs, so
+      // this has to fill that rather than the <select> directly. Populating
+      // the element here instead left fillSelect looking at an empty array,
+      // which blanked the dropdown it had just built and reported "0 open".
+      state.specs = await api('GET', '/specs');
       const sel = $('#ty-slug');
-      specs.forEach(s => sel.add(new Option(s.slug, s.slug)));
       sel.onchange = () => loadSlug(sel.value);
       const want = recall();
-      const known = specs.some(x => x.slug === want.slug);
-      const slug = known ? want.slug : (specs[0] && specs[0].slug);
+      const known = state.specs.some(x => x.slug === want.slug);
+      // Otherwise open on the first set with work left, rather than on a
+      // finished one that the default filter is about to hide anyway.
+      const first = state.specs.find(x => !x.done) || state.specs[0];
+      const slug = known ? want.slug : (first && first.slug);
       if (slug) {
-        sel.value = slug;
+        state.slug = slug;
+        fillSelect();
         await loadSlug(slug, known);
         // only restore the shot if it still exists in this spec
         if (known && want.shot && state.data.shots.some(x => x.key === want.shot)) {
