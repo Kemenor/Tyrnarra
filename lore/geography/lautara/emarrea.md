@@ -243,7 +243,15 @@ All three Kyūbi-no-Den gods reside in **Elysium** (Layer 3, good): not bound to
 - **Adulthood:** ~18. **Tail awakening (magical maturity):** ~25+, with new tails manifesting over time through spiritual, emotional, or magical growth.
 - **Elderhood:** begins around 120.
 
-Kitsune do not age evenly. Gaining tails **slows the physical signs of ageing**, especially after the third tail. A seven-tailed kitsune at 130 may look and move like a healthy human 60-year-old, not youthful, but still sharp and full of grace. Nine-tailed kitsune are vanishingly rare not just because of power, but because reaching nine tails requires a long, steady, spiritually rich life. Most never live long enough or grow enough.
+**The first six tails are a life lived.** Age is the floor and the main driver: a kitsune in her twenties carries one or two, and most who live into elderhood carry five or six. Spiritual, emotional and magical growth set the pace rather than the calendar alone, so two kitsune of an age sit a tail or two apart without anyone finding it worth remarking on. A foxfire master of forty-five holds five where a diplomat of fifty-eight holds three, and both are ordinary. Six is the ceiling a long rich life reaches on its own.
+
+**The seventh tail is a different thing.** Seven, eight and nine are power, and no amount of living buys them. A kitsune may pass a hundred and eighty years in steady happiness and die with six. The kingdom holds a handful of seven-tails in a generation, one or two eights, and tells stories about the nines.
+
+So the question *how many tails* asks a kitsune's age up to six and her capability above it, and it is rude in a different way on each side of the line.
+
+Kitsune do not age evenly. Gaining tails **slows the physical signs of ageing**, especially after the third tail. A seven-tailed kitsune at 130 may look and move like a healthy human 60-year-old, not youthful, but still sharp and full of grace.
+
+> **A deliberate divergence from PF2e.** Pathfinder treats every extra tail as a mark of magical power and holds that fewer than one kitsune in a thousand can grow any at all. Tyrnarra splits the ladder: one through six are ordinary and come with a life, and only the top three carry the Pathfinder meaning. This is why an elderly Tyrnarran kitsune with several tails is unremarkable, and why the Catjomin stripe-tiers stay achievable to six and turn legendary above it. Future passes should keep the split rather than restore the Pathfinder reading.
 
 Their long midlife and shortened elderhood reinforce the cultural focus on relationships, memory, and legacy through family and festival.
 
