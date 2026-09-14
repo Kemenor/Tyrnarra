@@ -73,7 +73,7 @@
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "athamaru, surki, yaksha, yaoguai, jotunborn, samsaran, sarangay, conrasu"
+    "surki, yaksha, yaoguai, jotunborn, samsaran, sarangay, conrasu"
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -257,7 +257,13 @@
     "sheen in the eyes and the stiff deliberate movement, do not survive a still",
     "portrait, so the entry effectively reads as \"a human person\". Kept as",
     "written because it documents what the form is for, but a spec wanting the",
-    "wrongness visible has to put it there itself."
+    "wrongness visible has to put it there itself.",
+    "",
+    "athamaru source: fish-like, brightly coloured skin matching their reefs,",
+    "frills, barbels and crested fins, flamboyant, and communities share features",
+    "so individuals vary a lot. Also a strong pheromone smell, which no portrait",
+    "can carry. Trying the compound first on the 7-for-7 record; the fallback",
+    "below adds the reef colour and the fins if plain fishfolk comes back drab."
   ],
   "human": "",
   "elf": "",
@@ -280,7 +286,7 @@
   "sprite": "a tiny fey no taller than a hand, translucent insect wings, sharp delicate features, built to the scale of a flower",
   "anadi": "a human-sized spider with bright distinctive colour markings",
   "android": "a medieval fantasy android",
-  "athamaru": "a sea-dwelling folk, sleek skin in deep blue-grey, webbed fingers, a low finned crest instead of hair, wide dark eyes",
+  "athamaru": "fishfolk",
   "automaton": "a humanoid construct",
   "awakened animal": null,
   "azarketi": "a humanoid person with smooth blue-green skin, webbed hands and gills at the neck",
