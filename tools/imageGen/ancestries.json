@@ -77,7 +77,7 @@
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "yaoguai, conrasu"
+    "All entries are now written from source or tested. Nothing is left on memory."
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -323,7 +323,19 @@
     "banyan-like mane bound in a topknot or under a headscarf. Build varies on",
     "purpose, from seven feet of muscle to four feet of portliness, so pinning",
     "one would be wrong for half of them. They manifest rather than being born,",
-    "which a portrait cannot show."
+    "which a portrait cannot show.",
+    "",
+    "yaksha is simply \"a human person\". They look human, and the banyan mane is",
+    "canon-constant but was judged unnecessary in the render. The entry does not",
+    "send the NAME, because yaksha pulls toward specific religious iconography",
+    "that is not what this ancestry is.",
+    "",
+    "yaoguai is null, and it is the clearest null in the catalog. The source says",
+    "the original form can be virtually anything: features are inherited from",
+    "whatever it was before awakening, so an animal-derived yaoguai has fur and",
+    "pointed ears and an object-derived one has stone or metal skin. They",
+    "usually appear in a humanoid form that keeps some of those features. A spec",
+    "has to say what this one was."
   ],
   "human": "",
   "elf": "",
@@ -373,8 +385,8 @@
   "vanara": "monkeyfolk",
   "vishkanya": "a tall lithe human person with golden eyes with vertical pupils and faint fine scales on the skin",
   "wayang": "a small humanoid person with dark grey skin, white painted patterns on the face and arms, and long black hair",
-  "yaksha": "a human person with a thick heavy mane of hair bound in a topknot",
-  "yaoguai": "a beast that became a person and kept the evidence: a mostly human shape carrying the ears, eyes or hands of the animal it was",
+  "yaksha": "a human person",
+  "yaoguai": null,
   "_midjourney_weak": {
     "centaur": "Midjourney renders centaurs badly with or without the description, and adding one made it worse. Anchor on local FLUX and attach that to the prompt for the rest of the set, the way Harlen Doss and Aldous were done."
   },
@@ -436,7 +448,8 @@
       "samsaran",
       "sarangay",
       "surki",
-      "surki-evolved"
+      "surki-evolved",
+      "yaksha"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -448,15 +461,14 @@
     "no_default_the_spec_describes_it": [
       "poppet",
       "awakened animal",
-      "fleshwarp"
+      "fleshwarp",
+      "yaoguai"
     ],
     "midjourney_cannot_render_it": [
       "centaur"
     ],
     "untested": [
-      "conrasu",
-      "yaksha",
-      "yaoguai"
+      "conrasu"
     ]
   },
   "surki-larva": "a two-foot translucent grub with glowing nodes inside it, a round eyeless head, and large digging claws",
