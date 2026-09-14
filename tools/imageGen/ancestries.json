@@ -77,7 +77,7 @@
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "surki, yaksha, yaoguai, sarangay, conrasu"
+    "surki, yaksha, yaoguai, conrasu"
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -288,7 +288,19 @@
     "narrative. Canon: blue skin from pale to deepest midnight navy, and",
     "PUPILLESS pallid eyes like the moon. Everything else varies, because a",
     "samsaran carries the features of whatever ancestry it first lived as.",
-    "Transparent blood is canon and cannot appear in a portrait."
+    "Transparent blood is canon and cannot appear in a portrait.",
+    "",
+    "samsaran CONFIRMED as \"a person with blue skin and pale eyes\". Pupilless",
+    "tips it into horror and pale eyes already carries the moon-like look, so",
+    "the word is dropped: another canon trait that reads wrong in a render.",
+    "",
+    "sarangay from source, and the compound beats the description again: a",
+    "cowfolk with a gem in the forehead. The head gem is from birth, houses the",
+    "soul, and is swapped with a partner for life, so it is the one feature that",
+    "must survive. Also canon: 6 to 7 feet, heavily muscled, black eyes with",
+    "WHITE CRESCENT pupils, large clawed hands, hooved legs, horns that mark",
+    "adulthood at two feet, and gold bangles and nose rings. All left out; the",
+    "compound carries the shape and the gem carries the identity."
   ],
   "human": "",
   "elf": "",
@@ -327,8 +339,8 @@
   "leshy": "a small plant creature with a body of living plant matter and a simple face",
   "nagaji": "a humanoid person with fine scales and a snake's head",
   "poppet": null,
-  "samsaran": "a person with blue skin and pale pupilless eyes",
-  "sarangay": "a bull-headed person, heavy horns, a short coat over powerful shoulders, and a single gem set into the centre of the forehead",
+  "samsaran": "a person with blue skin and pale eyes",
+  "sarangay": "a cowfolk with a gem in the forehead",
   "shisk": "a humanoid person, with short quills in place of hair",
   "shoony": "dogfolk",
   "strix": "a winged person, large feathered wings at the back",
@@ -397,7 +409,8 @@
       "anadi-human",
       "fetchling",
       "athamaru",
-      "jotunborn"
+      "jotunborn",
+      "samsaran"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -416,7 +429,6 @@
     ],
     "untested": [
       "conrasu",
-      "samsaran",
       "sarangay",
       "surki",
       "yaksha",
