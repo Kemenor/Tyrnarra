@@ -1,0 +1,26 @@
+{
+  "slug": "kael-orvaine",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "orc",
+  "anchor": "full",
+  "character": "A man in his late thirties, very broad and heavily built, grey-green skin, a heavy brow, deep-set dark eyes. Black hair cropped close to the skull. The lower left tusk is chipped short. Old pale scarring across one forearm. A flat measuring expression, mouth closed",
+  "wardrobe": "lightweight steel scale over worn brown leathers, plain and undecorated, a brass badge riveted to one shoulder strap, every buckle scuffed grey at the edges",
+  "shots": {
+    "full": {
+      "file": "kael-orvaine-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing square with arms folded, plain neutral background."
+    },
+    "portrait": {
+      "file": "kael-orvaine",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer directly, chin level."
+    },
+    "scene": {
+      "file": "kael-orvaine-hall",
+      "size": "portrait_4_3",
+      "framing": "A trainer standing in a low timber hall built out over water, wooden practice posts and racked blunted weapons around him, sleeves pushed back, one hand raised mid-instruction, dawn light coming in flat off the river."
+    }
+  }
+}

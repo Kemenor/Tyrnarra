@@ -1,0 +1,26 @@
+{
+  "slug": "velka-dorn",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "shisk",
+  "anchor": "full",
+  "character": "A woman in her forties, tall and angular, pebbled grey-green hide. Her quills are silver-white. Small round reading lenses perched high on the brow. Dark ink dried under the claws. A dry narrow mouth, one brow raised, looking at the viewer over the top of the lenses",
+  "wardrobe": "simple grey robes, a high covered collar buttoned to the jaw, a brass badge pinned exactly level, a heavy iron ring of keys hung at the belt",
+  "shots": {
+    "full": {
+      "file": "velka-dorn-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing straight, one hand resting on the ring of keys at her belt, plain neutral background."
+    },
+    "portrait": {
+      "file": "velka-dorn",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer, looking over the top of the reading lenses."
+    },
+    "scene": {
+      "file": "velka-dorn-den",
+      "size": "portrait_4_3",
+      "framing": "An archivist standing in a narrow storeroom lined floor to ceiling with shelves of crates, ledgers and racked equipment, holding a lantern up in one hand, turned toward the viewer, a single warm light in a dim room."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "pip-sallow",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "halfling",
+  "anchor": "full",
+  "character": "A young man barely out of his teens, small and slight, unruly brown curls falling into his face. Round cheeks, a wide eager grin, eyebrows up. Ink smudged along both wrists. Flushed in the face and slightly out of breath",
+  "wardrobe": "a tavern apron several sizes too big, sleeves rolled and re-rolled at the elbow, scuffed hand-me-down boots, a rolled sheet of paper poking out of a back pocket",
+  "shots": {
+    "full": {
+      "file": "pip-sallow-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, caught mid-stride, leaning slightly forward, plain neutral background."
+    },
+    "portrait": {
+      "file": "pip-sallow",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, looking up at the viewer, grinning."
+    },
+    "scene": {
+      "file": "pip-sallow-hall",
+      "size": "portrait_4_3",
+      "framing": "A young server crossing a crowded tavern floor with a loaded tray balanced on one hand above his head, weaving between benches, three cats following at his heels, warm lamplight."
+    }
+  }
+}

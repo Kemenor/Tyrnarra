@@ -1,0 +1,26 @@
+{
+  "slug": "dova-crestmark",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "kitsune",
+  "anchor": "full",
+  "character": "A fox-featured woman, compact and broad through the shoulders, russet and cream fur frosted silver at the muzzle and the ear tips. Several tails held loose behind her. Warm dark eyes, creased at the corners. Pale burn scars up both forearms where the fur grew back white. A broad open grin, teeth showing",
+  "wardrobe": "a heavy canvas apron worn soft, crowded with deep pockets, bar cloths and bottle keys hung from it, sleeves shoved back to the elbow, nothing ornamental",
+  "shots": {
+    "full": {
+      "file": "dova-crestmark-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing with hands on hips, plain neutral background."
+    },
+    "portrait": {
+      "file": "dova-crestmark",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer, mid-laugh."
+    },
+    "scene": {
+      "file": "dova-crestmark-bar",
+      "size": "portrait_4_3",
+      "framing": "A barkeeper behind a low wooden bar in a cramped cellar room built on river pilings, bottles racked behind her, a single blue-white flame burning in a lamp at her shoulder, pouring into a cup without looking down."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "mira-seld",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "vishkanya",
+  "anchor": "full",
+  "character": "A woman in her mid-thirties, narrow-faced, still and composed. Dark hair pinned back tight and flat. Ink stains on the fingers, three quills tucked behind one ear. A small courteous smile, the eyes flat and steady above it",
+  "wardrobe": "a navy uniform coat with gold piping and a high collar, sleeves buttoned to the wrist, a brass badge pinned exactly level on the chest, a fine silver chain at one wrist, every line pressed sharp",
+  "shots": {
+    "full": {
+      "file": "mira-seld-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, standing straight with hands clasped in front of her, plain neutral background."
+    },
+    "portrait": {
+      "file": "mira-seld",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer directly, chin slightly lifted."
+    },
+    "scene": {
+      "file": "mira-seld-desk",
+      "size": "portrait_4_3",
+      "framing": "A receptionist standing behind a tall wooden desk in the lamplit front room of a guild hall, a cork board of pinned notices on the wall behind her, one hand flat on an open ledger, looking up at the viewer."
+    }
+  }
+}
