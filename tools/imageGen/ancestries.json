@@ -68,12 +68,16 @@
     "science fiction, so \"a medieval fantasy android\" works where every",
     "feature-level attempt failed: plain humans when the tells were subtle, full",
     "machines when they were not. Reach for this when a failure looks like the",
-    "wrong SETTING rather than the wrong creature."
+    "wrong SETTING rather than the wrong creature.",
+    "",
+    "The compound suffix is not only -folk and -kin. jotunborn tested best as",
+    "\"titanborn\": -born works too, and the rule is really that a coined compound",
+    "beats a sentence whenever the model can read its halves."
   ],
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "surki, yaksha, yaoguai, samsaran, sarangay, conrasu"
+    "surki, yaksha, yaoguai, sarangay, conrasu"
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -273,7 +277,18 @@
     "shows as rows of fine white stitching. Also twice human height, about twelve",
     "feet, thick through the shoulders and neck, skin in pale purples, blues and",
     "light greys. The threads can be made to glow; left out of the default since",
-    "that is a thing they do rather than a thing they look like."
+    "that is a thing they do rather than a thing they look like.",
+    "",
+    "jotunborn CONFIRMED as \"titanborn\", beating the sourced description. Nine",
+    "compounds out of nine.",
+    "",
+    "samsaran rewritten from source, and the old entry was substantially",
+    "invented. White hair is wrong, the art has dark hair, and \"faint markings",
+    "across the brow left by lives it does not remember\" was fiction on top of",
+    "narrative. Canon: blue skin from pale to deepest midnight navy, and",
+    "PUPILLESS pallid eyes like the moon. Everything else varies, because a",
+    "samsaran carries the features of whatever ancestry it first lived as.",
+    "Transparent blood is canon and cannot appear in a portrait."
   ],
   "human": "",
   "elf": "",
@@ -306,13 +321,13 @@
   "fleshwarp": null,
   "ghoran": "plantfolk",
   "goloma": "a humanoid person whose face is a smooth chitin plate like a wooden mask, with eight shining eyes and a bony crest above",
-  "jotunborn": "a giant humanoid person twice human height, pale blue skin, and rows of fine white threads woven into the skin",
+  "jotunborn": "titanborn",
   "kashrishi": "rhinofolk",
   "kholo": "hyenafolk",
   "leshy": "a small plant creature with a body of living plant matter and a simple face",
   "nagaji": "a humanoid person with fine scales and a snake's head",
   "poppet": null,
-  "samsaran": "pale blue skin, white hair, calm unlined features, faint markings across the brow left by lives it does not remember",
+  "samsaran": "a person with blue skin and pale pupilless eyes",
   "sarangay": "a bull-headed person, heavy horns, a short coat over powerful shoulders, and a single gem set into the centre of the forehead",
   "shisk": "a humanoid person, with short quills in place of hair",
   "shoony": "dogfolk",
@@ -381,7 +396,8 @@
       "anadi",
       "anadi-human",
       "fetchling",
-      "athamaru"
+      "athamaru",
+      "jotunborn"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -400,7 +416,6 @@
     ],
     "untested": [
       "conrasu",
-      "jotunborn",
       "samsaran",
       "sarangay",
       "surki",
