@@ -480,5 +480,9 @@
     ]
   },
   "surki-larva": "a two-foot translucent grub with glowing nodes inside it, a round eyeless head, and large digging claws",
-  "surki-evolved": "insectfolk with large glowing translucent wings and luminous patterns in the chitin"
+  "surki-evolved": "insectfolk with large glowing translucent wings and luminous patterns in the chitin",
+  "_overridden_by_the_spec": {
+    "kitsune": "The name alone renders the true fox-headed form correctly, and did so when it was tested. It loses to human-head vocabulary in the character field: Sable Rei came back as a man with fox ears from \"a young sharp face of about thirty-five\", \"the temples\" and \"his dark hair\". PF2e kitsune have a human-passing form, so those words are not noise, they are a rival reading the model can satisfy. Both kitsune that rendered correctly, Odo Mast and Dova Crestmark, happen to say \"muzzle\". Name the muzzle, and keep face, hair and temples out.",
+    "_rule": "The general form of this is the Velka Dorn failure: an entry describes the species, so a character field that describes it again competes with the entry instead of adding to it. Contradict it and you get a heron; merely echo a rival form and you get the wrong one."
+  }
 }
