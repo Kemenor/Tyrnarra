@@ -19,6 +19,11 @@
      Rooms:     <div class="room-cell" data-room="key">…</div>  +  a
                 <div id="roomDetail"> target; room data on window.GM_ROOMS[key]
 
+     Lightbox:  any <img> inside a .npc-art block opens full-size in an
+                overlay on click, Enter or Space; Esc, the close button or a
+                click anywhere on the overlay dismisses it. No markup needed
+                beyond the .npc-art figure itself.
+
      Battlemap: <div class="map-wrap"> <img …>
                   <button class="map-hot" data-area="key" style="left/top/width/height %">
                     <span class="hot-num">1</span></button> …
@@ -106,6 +111,14 @@
       return;
     }
 
+    // ── NPC art lightbox ──────────────────────────────────
+    // This sits ABOVE the .npc-card branch on purpose: a click anywhere in a
+    // card toggles it, so without stopping here, opening a picture would also
+    // collapse the card it came from.
+    if (e.target.closest('.gm-lightbox')) { closeLightbox(); return; }
+    var shot = e.target.closest('.npc-art img');
+    if (shot) { e.stopPropagation(); openLightbox(shot); return; }
+
     // ── NPC cards (expand) ────────────────────────────────
     var npc = e.target.closest('.npc-card');
     if (npc) {
@@ -113,6 +126,59 @@
       npc.classList.toggle('open');
     }
   });
+
+  // ── Lightbox ──────────────────────────────────────────
+  // One overlay, built on first use and reused. The trigger images are made
+  // focusable here rather than in every page's markup, so a picture is
+  // reachable and openable from the keyboard as well as the mouse.
+  var lbox = null, lbOpener = null;
+
+  document.querySelectorAll('.npc-art img').forEach(function (img) {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeLightbox(); return; }
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target;
+    if (t && t.closest && t.closest('.npc-art img')) { e.preventDefault(); openLightbox(t); }
+  });
+
+  function buildLightbox() {
+    if (lbox) return lbox;
+    lbox = document.createElement('div');
+    lbox.className = 'gm-lightbox';
+    lbox.setAttribute('role', 'dialog');
+    lbox.setAttribute('aria-modal', 'true');
+    lbox.hidden = true;
+    lbox.innerHTML = '<button class="gm-lightbox-close" aria-label="Close image">\u2715</button>'
+                   + '<figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(lbox);
+    return lbox;
+  }
+
+  function openLightbox(img) {
+    var box = buildLightbox();
+    var fig = img.closest('figure');
+    var cap = fig ? fig.querySelector('figcaption') : null;
+    var big = box.querySelector('img');
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || '';
+    box.querySelector('figcaption').textContent = cap ? cap.textContent : (img.alt || '');
+    box.setAttribute('aria-label', img.alt || 'Image');
+    lbOpener = img;
+    box.hidden = false;
+    document.body.classList.add('gm-lightbox-open');
+    box.querySelector('.gm-lightbox-close').focus();
+  }
+
+  function closeLightbox() {
+    if (!lbox || lbox.hidden) return;
+    lbox.hidden = true;
+    document.body.classList.remove('gm-lightbox-open');
+    if (lbOpener) { lbOpener.focus(); lbOpener = null; }
+  }
 
   function esc(s) { return String(s == null ? '' : s); }
 

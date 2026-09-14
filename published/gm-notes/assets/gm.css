@@ -312,3 +312,19 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
   .floor-label { padding-top: 0; }
   .level-body { padding-left: 18px; }
 }
+
+/* ════ NPC ART LIGHTBOX ════
+   Click any picture in an .npc-art triptych to see it large. The overlay is
+   created once by gm.js and reused; [hidden] needs an explicit rule here
+   because the display:flex below would otherwise win over it. */
+.gm-lightbox { position: fixed; inset: 0; z-index: 900; display: flex; align-items: center; justify-content: center; padding: 28px; background: rgba(8,9,11,0.92); backdrop-filter: blur(3px); cursor: zoom-out; }
+.gm-lightbox[hidden] { display: none; }
+.gm-lightbox figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 100%; max-height: 100%; }
+.gm-lightbox img { max-width: min(1100px, 100%); max-height: calc(100vh - 96px); width: auto; height: auto; object-fit: contain; border: 1px solid var(--gm-divider); border-radius: 6px; display: block; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }
+.gm-lightbox figcaption { font-family: 'Josefin Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; }
+.gm-lightbox-close { position: absolute; top: 14px; right: 16px; background: rgba(0,0,0,0.45); border: 1px solid var(--gm-divider); border-radius: 4px; color: var(--gm-ink); font-size: 1rem; line-height: 1; padding: 7px 11px; cursor: pointer; }
+.gm-lightbox-close:hover { color: var(--gm-ink-bright); border-color: var(--gm-gold-dim); }
+.gm-lightbox-close:focus-visible, .npc-art img:focus-visible { outline: 2px solid var(--gm-gold); outline-offset: 2px; }
+.npc-art img { cursor: zoom-in; }
+body.gm-lightbox-open { overflow: hidden; }
+@media (max-width: 600px) { .gm-lightbox { padding: 14px; } .gm-lightbox img { max-height: calc(100vh - 78px); } }

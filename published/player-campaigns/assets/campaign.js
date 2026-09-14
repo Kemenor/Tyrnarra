@@ -16,6 +16,10 @@
                    room data on window.CAMPAIGN_ROOMS[key]:
                      { name, floor, tags:[], read, desc, details:[] }
 
+     Portraits:    <img class="person-face"> inside a .person-card opens
+                   full-size on click, Enter or Space; Esc, the close button
+                   or a click on the overlay dismisses it.
+
      Reveal:       <div class="reveal">
                       <button class="reveal-toggle">◈ …</button>
                       <div class="reveal-body">…</div>
@@ -42,6 +46,11 @@
   }
 
   document.addEventListener('click', function (e) {
+
+    /* ── Portrait lightbox ── */
+    if (e.target.closest('.pc-lightbox')) { closeLightbox(); return; }
+    var face = e.target.closest('.person-face');
+    if (face) { openLightbox(face); return; }
 
     /* ── Quest board: expand a pinned notice ── */
     var head = e.target.closest('.quest-head');
@@ -81,11 +90,63 @@
     }
   });
 
+  /* ── Lightbox: a cast portrait opens full-size ──
+     One overlay, built on first use. The avatars are made focusable here
+     rather than in page markup, so a portrait opens from the keyboard too. */
+  var lbox = null, lbOpener = null;
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeLightbox(); return; }
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target;
+    if (t && t.closest && t.closest('.person-face')) { e.preventDefault(); openLightbox(t); }
+  });
+
+  function buildLightbox() {
+    if (lbox) return lbox;
+    lbox = document.createElement('div');
+    lbox.className = 'pc-lightbox';
+    lbox.setAttribute('role', 'dialog');
+    lbox.setAttribute('aria-modal', 'true');
+    lbox.hidden = true;
+    lbox.innerHTML = '<button class="pc-lightbox-close" aria-label="Close portrait">\u2715</button>'
+                   + '<figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(lbox);
+    return lbox;
+  }
+
+  function openLightbox(img) {
+    var box = buildLightbox();
+    var card = img.closest('.person-card');
+    var nameEl = card ? card.querySelector('.person-name') : null;
+    var big = box.querySelector('img');
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || '';
+    box.querySelector('figcaption').textContent = nameEl ? nameEl.textContent : (img.alt || '');
+    box.setAttribute('aria-label', img.alt || 'Portrait');
+    lbOpener = img;
+    box.hidden = false;
+    document.body.classList.add('pc-lightbox-open');
+    box.querySelector('.pc-lightbox-close').focus();
+  }
+
+  function closeLightbox() {
+    if (!lbox || lbox.hidden) return;
+    lbox.hidden = true;
+    document.body.classList.remove('pc-lightbox-open');
+    if (lbOpener) { lbOpener.focus(); lbOpener = null; }
+  }
+
   /* Seed aria-expanded so assistive tech reads correct state at load. */
   function initAria() {
     var btns = document.querySelectorAll('.quest-head, .reveal-toggle');
     for (var i = 0; i < btns.length; i++) {
       if (!btns[i].hasAttribute('aria-expanded')) btns[i].setAttribute('aria-expanded', 'false');
+    }
+    var faces = document.querySelectorAll('.person-face');
+    for (var j = 0; j < faces.length; j++) {
+      faces[j].tabIndex = 0;
+      faces[j].setAttribute('role', 'button');
     }
   }
   if (document.readyState === 'loading') {
