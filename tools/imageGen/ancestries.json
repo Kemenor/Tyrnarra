@@ -73,7 +73,7 @@
   "_verify": [
     "Written from memory of PF2e and not yet checked against Archives of Nethys.",
     "These are the ones worth a look before they reach a render:",
-    "surki, yaksha, yaoguai, jotunborn, samsaran, sarangay, conrasu"
+    "surki, yaksha, yaoguai, samsaran, sarangay, conrasu"
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -263,7 +263,17 @@
     "frills, barbels and crested fins, flamboyant, and communities share features",
     "so individuals vary a lot. Also a strong pheromone smell, which no portrait",
     "can carry. Trying the compound first on the 7-for-7 record; the fallback",
-    "below adds the reef colour and the fins if plain fishfolk comes back drab."
+    "below adds the reef colour and the fins if plain fishfolk comes back drab.",
+    "",
+    "athamaru CONFIRMED as fishfolk. Compounds are 8 for 8.",
+    "",
+    "jotunborn rewritten from source. The old entry had the size and missed the",
+    "defining feature entirely: threads of iivlar silk woven along the surface of",
+    "the skin, which the source calls their most notable trait and which the art",
+    "shows as rows of fine white stitching. Also twice human height, about twelve",
+    "feet, thick through the shoulders and neck, skin in pale purples, blues and",
+    "light greys. The threads can be made to glow; left out of the default since",
+    "that is a thing they do rather than a thing they look like."
   ],
   "human": "",
   "elf": "",
@@ -296,7 +306,7 @@
   "fleshwarp": null,
   "ghoran": "plantfolk",
   "goloma": "a humanoid person whose face is a smooth chitin plate like a wooden mask, with eight shining eyes and a bony crest above",
-  "jotunborn": "giant-blooded, very tall and heavy through the bone, blunt broad features, a head that does not fit a mortal-sized doorway",
+  "jotunborn": "a giant humanoid person twice human height, pale blue skin, and rows of fine white threads woven into the skin",
   "kashrishi": "rhinofolk",
   "kholo": "hyenafolk",
   "leshy": "a small plant creature with a body of living plant matter and a simple face",
@@ -370,7 +380,8 @@
       "android",
       "anadi",
       "anadi-human",
-      "fetchling"
+      "fetchling",
+      "athamaru"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -388,7 +399,6 @@
       "centaur"
     ],
     "untested": [
-      "athamaru",
       "conrasu",
       "jotunborn",
       "samsaran",
