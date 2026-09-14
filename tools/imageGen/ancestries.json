@@ -248,7 +248,16 @@
     "android CONFIRMED as \"a medieval fantasy android\". Four attempts to",
     "describe its features failed in both directions before the actual problem",
     "turned out to be genre: the word pulls to science fiction, and two words of",
-    "setting fix what no amount of seams and circuitry could."
+    "setting fix what no amount of seams and circuitry could.",
+    "",
+    "anadi, anadi-human and fetchling all CONFIRMED.",
+    "",
+    "anadi-human renders plain humans, which is the correct answer rather than a",
+    "failure: the whole point of the form is that it passes. Its two tells, the",
+    "sheen in the eyes and the stiff deliberate movement, do not survive a still",
+    "portrait, so the entry effectively reads as \"a human person\". Kept as",
+    "written because it documents what the form is for, but a spec wanting the",
+    "wrongness visible has to put it there itself."
   ],
   "human": "",
   "elf": "",
@@ -352,7 +361,10 @@
       "leshy-fungus",
       "leshy-cactus",
       "leshy-lotus",
-      "android"
+      "android",
+      "anadi",
+      "anadi-human",
+      "fetchling"
     ],
     "same_pattern_as_a_verified_sibling": [
       "leshy-leaf",
@@ -370,11 +382,8 @@
       "centaur"
     ],
     "untested": [
-      "anadi",
-      "anadi-human",
       "athamaru",
       "conrasu",
-      "fetchling",
       "jotunborn",
       "samsaran",
       "sarangay",
