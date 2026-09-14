@@ -75,9 +75,7 @@
     "beats a sentence whenever the model can read its halves."
   ],
   "_verify": [
-    "Written from memory of PF2e and not yet checked against Archives of Nethys.",
-    "These are the ones worth a look before they reach a render:",
-    "All entries are now written from source or tested. Nothing is left on memory."
+    "Every entry is now written from source or tested. Nothing is left standing on memory."
   ],
   "_verified": [
     "Tested on Midjourney V8.2, 2026-09-14.",
@@ -335,7 +333,17 @@
     "whatever it was before awakening, so an animal-derived yaoguai has fur and",
     "pointed ears and an object-derived one has stone or metal skin. They",
     "usually appear in a humanoid form that keeps some of those features. A spec",
-    "has to say what this one was."
+    "has to say what this one was.",
+    "",
+    "conrasu, the last one and the one flagged from the start as the worst",
+    "guess, was half right. Bodiless spirit in a carved shell of living wood was",
+    "correct. Wrong: there is no hood and no light at the seams. The core is a",
+    "visible ORB of light, darkness or space with floating pinpricks of",
+    "illumination inside it, and the wooden exoskeleton is built AROUND that.",
+    "Also missed: the many arms, and that older limbs harden and are left as",
+    "immobile effigies along the shell while new ones grow. Conrasu shape their",
+    "own frames, so appearance varies widely, but the orb and the living wood",
+    "are shared and a default is legitimate."
   ],
   "human": "",
   "elf": "",
@@ -362,7 +370,7 @@
   "automaton": "a humanoid construct",
   "awakened animal": null,
   "azarketi": "a humanoid person with smooth blue-green skin, webbed hands and gills at the neck",
-  "conrasu": "a bodiless spirit wearing a carved shell of pale wood and living growth, no face inside the hood, faint light at the seams",
+  "conrasu": "a figure of living carved wood built around a dark starry orb, with many wooden arms and creeping vines",
   "dragonet": "dragonkin",
   "fetchling": "a person with ash-grey skin, colourless hair, and eyes with no whites",
   "fleshwarp": null,
