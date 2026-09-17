@@ -4,7 +4,7 @@
 
 **Fate of the author (GM ruling, 2026-09-15):** Zenerious made it out. He made more deals on the way back, walked out of Villtur, and handed the journal to the Air Monastery in person.
 
-**Status:** the Veidrath entries (Days 38 and 40, possibly a third) are sketched below and will be written with the GM after the Veidrath canon has been re-read. The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 (Etxaber, Lurresna, hearthrune, Vindrakar Hooves, Skoga, Modurtre, the strings, the Handing, Sagarri, Aymuru); the lone wolf *x* on Day 54 is still unnamed.
+**Status:** **TODO (GM): rewrite the Veidrath section (Days 38, 40, 42).** The three entries are Claude drafts from the GM's sketches (2026-09-15, redrafted flatter the same day); the GM has read them, judged them okay for now, and will rewrite them in his own hand. They do not carry the GM-Written status until then. The GM's original listing of what the days must contain sits at the head of the section below. The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 (Etxaber, Lurresna, hearthrune, Vindrakar Hooves, Skoga, Modurtre, the strings, the Handing, Sagarri, Aymuru); the lone wolf *x* on Day 54 is still unnamed.
 
 Parent region: [`../ehizahar.md`](../ehizahar.md), *Lands of Villtur*.
 
@@ -72,13 +72,36 @@ The city has been nice, they also have their own milk of the land, which I will 
 It is interesting to see the similarities and the differences. We still travel on the road, people, mounts, the tents are just placed differently but the same basis of the power in the middle as the nomads exists here as well. The tents are more orderly placed along lines perhaps. Also the roles are more defined. In every clan before the people themselves simply decided if they wanted to ride out that day to hunt, to gather, to explore. Here it is planned and assigned. Who goes, when he should be back.
 The kinrider just said dinner is served, so I'm ending the entry for today here.
 
-## Day 38 *(sketch, to be written)*
+---
 
-Veidrath. Clan = district, especially for the nomadic parts: there are no fixed spots for the nomads, it is first come first serve, but you can read the politics in where they tent and how close they are, next to whom they take spots, how loud they want to be. Contrast that with the static part, where clans decided to stay and built permanent, how those clan lines muddy, the people start to become Veidrath first and clan second.
+## TODO: Veidrath section, needs the GM's rewrite
 
-## Day 40 *(sketch, to be written; Veidrath may need three entries)*
+Days 38, 40, 42 below are Claude drafts. The GM's own listing of what the days should contain (2026-09-15), kept here so it is easy to find:
 
-Visits the temple, sees the priests. Watches a fight of clan leaders in an arena about grazing fields (combat). Goes to a tavern that used to be a big tent, then an addition was made and another and another until it was permanent; there he watches two clans deal politely, like merchants of Lautara. On his way home he walks past a wedding, the daughter of Aymuru marrying a rather important local Villturian; the couple seemed happy, the parents seemed happier as they shook hands.
+- **Day 38:** clan = district, especially for the nomadic parts. There are no fixed spots for the nomads, it is first come first serve, but you can read politics in where they tent and how close they are, next to whom they take spots, how loud they want to be. Then contrast that with the static part, where clans decided to stay and built permanent; how those clan lines muddy, the people start to become Veidrath first and clan second.
+- **Day 40:** visits the temple, sees the priests. Watches a fight of clan leaders in an arena about grazing fields (combat). Goes to a tavern that used to be a big tent, then an addition was made and another and another until it was permanent; there he watches two clans deal politely, like merchants of Lautara. On his way home he walks past a wedding, the daughter of Aymuru marrying a rather important local Villturian; the couple seemed happy, the parents seemed happier as they shook hands.
+- **Maybe a third day** to encompass everything. Rulings to hold: the Stillhands are fine with the arena fights (some fight, some deal with words, both are fine as long as it does not lead to bloodshed on the streets); Hinka is out with the hunts at this season and the sanctum stands empty (pre-rail, pre-tower, late autumn); Claude's suggested beat for the third day is what Veidrath makes of a Wyndwalken (someone here knows what a map is for).
+
+---
+
+## Day 38 *(Claude redraft, 2026-09-15; pending the GM's read-through and rewrite. Not GM-Written until then.)*
+
+Veidrath. We arrived with the delegation past midday. I have my desk again, Aymuru keeps a quarter here with a gate and a roof, and I have not opened my field-book, there is nothing to measure in the outer part that will be here next month.
+The nomads have no fixed spots. A clan rides in and takes what is free, the priests say what is free. I asked the kinrider if that was all of it and he laughed and walked me around the rings for an hour. Who pitches next to whom. How close to the sanctum, how close to the market. How many fires. How loud the beasts are picketed. He showed me a gap between two clans wide enough for a third and said nobody will take that spot. I asked why. He said I would have to be from here.
+The inner part is houses and walls, the clans that stayed. I asked a woman in our quarter which clan she was and she said Veidrath, and then she thought about it and gave me a clan name as well. Nobody in the rings would have needed to think.
+
+## Day 40 *(Claude redraft, 2026-09-15; pending the GM's read-through and rewrite.)*
+
+The sanctum this morning. The priests call it the Crossing. Two sorts of priest, the ones who go out with the hunts and the ones who sit with the dying, and only the second sort was in. The goddess is out with the hunts and comes back with the winter, the clans come back with her, they told me the rings fill up then and I should be gone by then if I like sleep. The sanctum is open and empty and somebody sweeps it.
+Afterwards they took me to watch two clan leaders fight. Over grazing, a stretch of river-grass both circuits use. A ring of packed earth, a priest standing at the edge, the two of them hitting each other with the haft and the flat until one stayed down and said so. The priest did nothing. I asked if the priests permit this. Some fight and some talk, she said, both are fine as long as no blood runs in the streets. The loser walked out on his own and his clan will go around that grass next year. Nobody wrote anything down.
+In the evening the kinrider took me to a tavern that used to be a tent. A wall was added, then a room, then more rooms, and the tent poles are still standing in the middle of a stone floor. At the back two clans were dealing over hides and beasts, quiet, numbers back and forth, like the fair-tables in Lautara. The kinrider told me they hate each other. I would not have known.
+On the way back a wedding at the edge of the inner part. A daughter of Aymuru and a Villturian who seemed important. The couple looked happy. The parents looked happier, they shook hands and held it a long time.
+
+## Day 42 *(Claude redraft, 2026-09-15; a third Veidrath day. Pending the GM's read-through and rewrite.)*
+
+They know the Wyndwalken here. Not the name, the instruments. A priest on the sanctum steps asked to hold the compass and the rule and turned them over for a while. She asked who would get the map. I said whoever can pay for a copy. She handed them back and did not say anything else, and I have been thinking about that all afternoon.
+I understand the ground now. Nobody rules Veidrath. The priests give out the ground and keep the peace and that is all they do, and it is enough. If an envoy came here he would look for the man to talk to and there is none, only the priests, and they would give him a fire and a place in the rings.
+My passage is arranged. A group of the field-priests leaves in three days for Modurtre, the mountain with the three trees, and I go with them as far as they go. After that they say they will find someone. They did not say who. I have stopped asking that early.
 
 ## Day 43
 
