@@ -138,6 +138,31 @@ Several languages persist alongside Talanese rather than being absorbed by it:
 
 Imperial Dwarvish itself is now an antique: read by scholars to parse Empire-era law-books, spoken by no community as a living tongue. The Golden Empire's spine is the spine of Talanese itself, and that is the form in which the Empire still speaks.
 
+### Naming strata across the eras
+
+What a thing is called depends on when it was named, and a place carries its history on the surface of its names. Chroniclers who date a house, a hall, or a road by the sound of its name are usually right.
+
+| Era | Stratum | What it sounds like |
+|---|---|---|
+| Before the Crimson Rain, and the Lost Era | **Deep** | The old tongues (Basque/Icelandic with drift in our voice). Few things were named in those years, and the namers held to the old ways; a name from this stratum is opaque and worn. |
+| Late Lost Era | Deep giving way to **regional** | Each region's own tongue begins naming what it founds. |
+| Golden Era (560 MR – 1325 MR) | **Talanese** | The Imperial braid, rendered as English with drift; the Empire named nearly the whole continent in it, and Golden-Era foundations still carry those names. |
+| Dark Era (1321 MR – 2135 MR) to today | **Regional** | The Empire gone, the regions named in their own registers again, and the Dark-Era refoundings are the reason most living names sound local. |
+| The Adventurer Era, tending | Talanese returning | The rail and the Guild connect everyone, and plain Talanese is creeping back for the simple reason that everyone understands it. |
+
+**The regional registers.** A register has two parts. Its **word-base** names the region's places and things, and neighbouring regions may share one. Its **personal-name structure** is the region's fingerprint: no two regions are alike, and a mortal's name says where their family is from even two generations after it moved. The structures are recorded in [`../glossary.md`](../glossary.md) under each region's block; the word-bases are listed here.
+
+| Region | Word-base (in our voice) | Personal-name structure | Recorded |
+|---|---|---|---|
+| Emarrea (Lautara) | Japanese (Kotokoe) | kitsune convention | `glossary.md`, *Kitsune proper nouns*; `geography/lautara/emarrea.md` |
+| Fenurra (Ehizahar) | Latinate / Germanic | Fenurran tribal convention | `glossary.md`, *Fenurran proper nouns*; `geography/ehizahar/fenurra.md` |
+| Thousand Kingdom (Zuzental) | Germanic / French | house prefix + ancestry suffix, heir-status mobility | `glossary.md`, *Thousand Kingdom: the noble-naming convention* |
+| Haizetsua (Vindul) | Tengu register | Tengu convention | `geography/vindul/haizetsua.md` |
+| Sortalde (off-continent) | Chinese-flavoured | dynastic | `_off-continent.md` |
+| Valreka and Galdua Jendea (Lioaru) | Tamazight | given + birth-whale + chosen whale; *u* / *ult* for the guiding blood; *Mez-* child prefix, *-ghar* elder suffix | `glossary.md`, *Valreka → the Valrekan register*; `geography/lioaru.md`, *Valreka → What a Valrekan is called* |
+
+Regions without a row have no defined register yet; define one at the region's build, choosing a word-base that keeps the region's sound distinct from its neighbours' and a personal-name structure that no other region uses.
+
 ---
 
 ## Common culture

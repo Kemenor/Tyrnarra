@@ -1,8 +1,9 @@
 ﻿# Glossary: Coined Names & Etymologies
 
 A working record of names in the setting. Per the naming convention in `CLAUDE.md`:
-- **Old/ancient things** → Basque or Icelandic source, with linguistic drift
-- **New/modern things** → plain English
+- **Old/ancient things** (named before the Crimson Rain, in the Lost Era, or at the hinge of 1 MR) → Basque or Icelandic source, with linguistic drift
+- **Golden-Era and modern things** → plain English (Talanese in our voice), lightly drifted
+- **Regional registers** (Dark Era to today, and the late Lost Era) → the region's own word-base for places and things, and a personal-name structure unique to that region; recorded under the region's block below and in `geography/_continent.md`, *Naming strata across the eras*
 
 When adding a new coined name, record: **Name · Source language · Literal meaning · Drift notes**.
 
@@ -674,8 +675,40 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The memory-keepers**: descriptive. The whale-less house turned archaeologist, holding the old noble quarter on the mother whale and leading the recovery of Oroiri.
 - **Stokkul**: Icelandic *stökkull* (the leaper; a leaping-cetacean word) → umlaut-loss → **Stokkul**. The small leaping sand-kin of the whales; symbiotic shoals attend every sand-whale, and the city breaks its mounts from them.
 - **Amona** *(⚿ GM-tier)*: Basque "grandmother." The handle Tani rides under among the mother whale's Strays; the crew dubbed her for her old-soul fretting and never learn she is the goddess. See `geography/lioaru.md`, *Valreka → ⚿ GM Secret: Amona of the Strays*.
-- **The Whalehall**: plain English compound. The city's own name for Valreka's Godshall, the Adventurers' Guild's seat in the god-city; it rides the mother whale at the crown's leave, beside the memory-keepers, the Guild being no house and guiding no whale. The paperwork says *Valreka's Godshall* and the street says *the Whalehall*.
+- **The Whalehall**: plain English compound. The city's own name for Valreka's Godshall, the Adventurers' Guild's seat in the god-city; it rides **Anzar**, the Guild's own whale, at the herd's leading edge. The paperwork says *Valreka's Godshall* and the street says *the Whalehall*.
 - **The Standing Roll**: plain English. The Whalehall desk's register of parties who have declared themselves available on short notice, kept between the bursts of postings the roaming board lives on; an entry gives name, rank, what the crew will take, and where on the herd an outrider can find them.
+- **The bond-line**: plain English. The Anzar blood that still guides the Guild's whale, sworn Guild members on a Guild wage since 2296 MR, holding no seat among the houses.
+- **The Eskua**: Basque *eskua* "the hand" → **Eskua**, unchanged. The monarch's title: a whale answers her bloodline's hand, and the herd answers Lenama. Deep stratum, from the refounding.
+- **The draw-up**: plain English. The two rings the herd forms around Lenama at rest; a house's ring is its standing.
+
+*The whales and houses (a house is called by its whale's name; the name's stratum tells the house's age):*
+- **Lenama**: Basque *lehen* (first) + *ama* (mother) → *lehenama* → h lost → **Lenama**. The mother whale, alive since the rebirth, bonded at the refounding; carries palace, sanctum, the old noble quarter, and five thousand people.
+- **Eramun**: Basque *eraman* (to carry, to lead away) → vowel shift → **Eramun**. The royal line, who led the faithful onto the whales and have guided Lenama since; a line before it was a house, so it keeps its own name where other houses take their whale's.
+- **Ardats**: Basque *ardatz* (axle, axis) → *tz* → *ts* → **Ardats**. Lost-Era house; the market-whale who rides at Lenama's side, on whom most of the city's bridges land.
+- **Errok**: Basque *erroak* (roots) → final vowel lost → **Errok**. Lost-Era house; the dig-crews' quarter; claims Oroiri nobility older than the Eramun and the right to lead the recovery.
+- **Greymantel**: Golden-Era Talanese, *Grey-mantle* (a grey-hided whale) → **Greymantel**. The memory-keepers' whale, dead since 2131 MR; the only dead whale whose name a house still carries.
+- **Caldwel**: Golden-Era Talanese, *Cold-well* → **Caldwel**. The cistern-whale; most of the water-bearers live on her back.
+- **Tiwiz**: Tamazight *tiwizi* (communal work, the shared labour of a village) → final vowel lost → **Tiwiz**. Dark-Era house; the wrights' yard.
+- **Anzar**: Tamazight *anzar* (rain) → **Anzar**, unchanged. The Guild's whale, bonded wild by an outrider in the last decades of the Dark Era; a whale with a district and no house. The name is the desert's word for a windfall, which the city notes matches its own.
+- **Tizir**: Tamazight *tiziri* (moonlight; the herd travels in the cool of the night) → final vowel lost → **Tizir**. The youngest house, founded 2461 MR by a Stray who rode out.
+
+*Named Valrekans (all in the Valrekan register, below):*
+- **Itri ult Eramun**: Tamazight *itri* (star). The Eskua, Ghoran, Lenama's hand for one hundred and forty years.
+- **Massin Eramun Anzar**: Tamazight *Massin* (a short form of the old royal name *Massinissa*). The Eskua's younger brother, who took the Guild oath in 2470 MR; the particle struck, the birth-line kept, Anzar added.
+- **Tasa ult Anzar**: Tamazight *tasa* (the liver, the seat of affection in the old idiom, as *heart* is in Talanese). The child of six who was the last of the Anzar blood in 2287 MR, took the bond at fifteen, and gave the house to the Guild.
+- **Amestan Anzar**: Tamazight *amestan* (protector). Guild Sovereign since 2489 MR, Ghoran, born on Caldwel; refused the crown's third offer of a seat. The clerks call him *Amestanghar*.
+- **Amnay u Tizir**: Tamazight *amnay* (rider). The Stray off Ardats who rode out at nineteen and came home with a wild whale, founding Tizir in 2461 MR.
+- **Tafsut Caldwel Anzar**: Tamazight *tafsut* (spring, the season). A Whalehall clerk; her quote carries the personal-name convention in the lore.
+- **Ilel Errok**: Tamazight *ilel* (sea). A bridge-warden of the Errok; her quote carries the Guild's not-quite-noble standing.
+
+**The Valrekan register: the personal-name convention.** Word-base Tamazight, English alphabet, drift as normal. Full canon in `geography/lioaru.md`, *Valreka → What a Valrekan is called*.
+- **Form.** *[given] [birth-whale] [chosen whale]*. The second name is the whale a person was born to and never changes. The third is the whale they live on, taken by choice and read as a declaration of belonging; moving to a whale does not add it, deciding you belong there does.
+- **The guiding blood.** Only a house's guiding bloodline puts the particle **u** (a son) or **ult** (a daughter) before their whale, claiming the beast as a parent. The Eramun use their line-name where the whale would stand. One syllable tells noble from commoner.
+- **The child prefix.** **Mez-** (Tamazight *meẓẓi*, little) on the given name until the coming-of-age, when it drops and the name may be changed; most keep the name they had.
+- **The elder suffix.** **-ghar** (Tamazight *amghar*, elder). No ritual and no date. One day someone younger uses it for you; some years after that you begin writing it yourself.
+- **The dead whale.** A fallen house's people take their new whale's name; the Greymantel alone carry a dead whale's name for life, because the crown took them aboard.
+- **The Guild.** Taking the Guild oath always adds **Anzar** and always strikes the particle. Dropping the birth-whale is the member's own choice, unless Anzar was their birth-whale already.
+- **Scope.** Valreka and Galdua Jendea. Hareaveldi and the River Duchies define their own registers at their builds.
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.
