@@ -20,6 +20,28 @@ This file holds the continent-wide geography of Talan: structure, infrastructure
 | [Ehizahar](ehizahar.md) | Hunt | Hinka | Veidrath |
 | [Askamira](askamira.md) | Freedom | Cronus | Frae City |
 
+### The thirteen god-cities by size
+
+**Every god-city is settlement level 20**, whatever its headcount. In PF2e terms a settlement's level is its economic capacity and the ceiling of what can be found there; a resident Grand God puts all thirteen at the top of the scale, so any common item up to 20th level is somewhere in the city and the person pouring your drink may be the most dangerous mortal in the domain. Population is a separate axis, and it varies by a factor of fifteen. The bands below are canon; the figures are 2532 MR and round.
+
+| Band | City | Population | What sets the size |
+|---|---|---|---|
+| **I · the continent's city** | **Frae City** | 1,100,000 | Outgrew its rock, grew upward into towers, then spilled down the seven chains onto the lakeshore; about 350,000 on the rock and in the towers, 750,000 around the anchor-points on the shore. The great airship port and the centre of the continent. |
+| **II · the great cities** | **Merkavar** | 420,000 | The market city, the lake for a street, the trains delivering the continent to it daily. |
+| | **Lograth** | 380,000 | God-city and capital of the Thousand Kingdom in one; the Arteries stack it high. |
+| **III · the great seats** | **Myrria** | 240,000 | Every exile and second-chancer on Talan heads there; carved into a mountain, dense and finite. |
+| | **Ljosarn** | 220,000 | Pilgrimage city on Vonura; the Healing Orders; every Iro church relays lanterns home. |
+| | **Thekkavar** | 180,000 | The university city; the Lanterns draw the continent's students and send them home again. |
+| | **Eldara** | 160,000 | Forge and industry inside a volcano; the mountain sets the limit. |
+| | **Lurrath** | 150,000 | Never fallen and always prosperous, but the rail dies at the Harrate gate and the last miles are portage. |
+| **IV · the shaped cities** | **Nahaskel** | 120,000 | A city remade overnight holds only as many as can re-learn it each morning. |
+| | **Haizava** | 110,000 | Sails, vanes and rope-bridges carry only so much weight in a wind that rebuilds them. |
+| | **Uravel** | 90,000 | A hall no one visits drowns; the city is as large as the halls it can keep answering. |
+| | **Veidrath** | 80,000 settled · up to 200,000 at a gathering-peak | Mid-settling: the Core and the belt hold the floor, the tent-rings triple it in season and empty again. |
+| **the floor** | **Valreka** | 70,000 | Nineteen whales. The smallest of the thirteen, and the only one that cannot grow except by bonding a new whale. |
+
+The thirteen together hold about 3.4 million people. The kingdom capitals sit below them; a Kingshall city of 60,000 to 150,000 is a large one.
+
 ## Structure
 
 - **Tyrnarra**: the world. Encompasses all planes (Prelife, Life Layer, Postlife) and the Cloud Sea.
