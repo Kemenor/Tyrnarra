@@ -22,7 +22,7 @@ This doc is no longer a build tracker; it is the **standing god-city design refe
 | **Valreka** · The Whale-Borne City | Time / Tani | Fate · Patience · Memory · Decay | A whale-borne nomad city roaming to recover **Oroiri**, its buried holy city; lives in three tenses. (Renamed from *Denbora*, now reserved for the Storveldi Denbora empire alone.) | **Done** (lore + HTML) |
 | **Frae City** · the Unchained City | Freedom / Cronus | Choice · Defiance · Wandering · Lawlessness | The first free city, a chained rock floating over the lake where the man who became Cronus gathered the free against the gods. No throne and no master: house, guild, and commoner equal, offices by lot and rotation, and you belong by climbing the chains and choosing it. | **Done** (lore + HTML) |
 
-**Scale.** All thirteen are settlement level 20; population runs from Frae City's 1.1 million to Valreka's 70,000 on the canon ladder in [`lore/geography/_continent.md`](../lore/geography/_continent.md), *The thirteen god-cities by size* (set 2026-09-17). Pages carry the figure in At-a-Glance as they are touched.
+**Scale.** All thirteen are settlement level 20; population runs from Frae City's 1.1 million to Valreka's 70,000 on the canon ladder in [`lore/geography/_continent.md`](../lore/geography/_continent.md), *The thirteen god-cities by size* (set 2026-09-17). Every god-city page carries its figure as a **Size** row in At-a-Glance.
 
 ## Uniqueness architecture
 
