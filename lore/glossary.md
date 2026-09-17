@@ -688,7 +688,19 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Errok**: Basque *erroak* (roots) → final vowel lost → **Errok**. Lost-Era house; the dig-crews' quarter; claims Oroiri nobility older than the Eramun and the right to lead the recovery.
 - **Greymantel**: Golden-Era Talanese, *Grey-mantle* (a grey-hided whale) → **Greymantel**. The memory-keepers' whale, dead since 2131 MR; the only dead whale whose name a house still carries.
 - **Caldwel**: Golden-Era Talanese, *Cold-well* → **Caldwel**. The cistern-whale; most of the water-bearers live on her back.
-- **Tiwiz**: Tamazight *tiwizi* (communal work, the shared labour of a village) → final vowel lost → **Tiwiz**. Dark-Era house; the wrights' yard.
+- **Skjol**: Icelandic *skjól* (shelter) → accent lost → **Skjol**. Lost-Era house; guided to windward in a storm to take the sand for the herd.
+- **Ekaits**: Basque *ekaitz* (storm) → *tz* → *ts* → **Ekaits**. Lost-Era house; the weather-readers who call the herd's moves.
+- **Langback**: Golden-Era Talanese, *Long-back* → **Langback**. The longest whale; the granaries.
+- **Duncrest**: Golden-Era Talanese, *Dun-crest* → **Duncrest**, unchanged. The second-best guiding line; Ardats's rival for the place at Lenama's side.
+- **Ketelback**: Golden-Era Talanese, *Kettle-back* → **Ketelback**. Her back runs hot; the bake-ovens and kitchens.
+- **Redwallow**: Golden-Era Talanese, *Red-wallow* → **Redwallow**, unchanged. She rolls in the red dune; the dyers and hide-workers.
+- **Tiwiz**: Tamazight *tiwizi* (communal work, the shared labour of a village) → final vowel lost → **Tiwiz**. Bonded 2150 MR in the reconstruction; the wrights' yard.
+- **Urti**: Tamazight *urti* (orchard, garden) → **Urti**, unchanged. Bonded in the 2160s MR; the garden-whale.
+- **Asif**: Tamazight *asif* (river) → **Asif**, unchanged. Bonded in the 2200s MR; the house that faces the River Duchies.
+- **Tafat**: Tamazight *tafat* (light) → **Tafat**, unchanged. Bonded in the 2300s MR; the lantern-house that lights the night transits.
+- **Ushen**: Tamazight *uccen* (jackal; the *cc* is the sound *sh*) → respelled to the sound → **Ushen**. Bonded in the 2340s MR; the fall-work, dismantling a dead whale's district.
+- **Amellal**: Tamazight *amellal* (white) → **Amellal**, unchanged. Calved of Lenama in 2388 MR; the one cadet house of the royal line, a younger Eramun branch that took the whale's name.
+- **Adrar**: Tamazight *adrar* (mountain) → **Adrar**, unchanged. Bonded in the 2410s MR; the tallest back, terraced; the crowded outer-ring house.
 - **Anzar**: Tamazight *anzar* (rain) → **Anzar**, unchanged. The Guild's whale, bonded wild by an outrider in the last decades of the Dark Era; a whale with a district and no house. The name is the desert's word for a windfall, which the city notes matches its own.
 - **Tizir**: Tamazight *tiziri* (moonlight; the herd travels in the cool of the night) → final vowel lost → **Tizir**. The youngest house, founded 2461 MR by a Stray who rode out.
 
@@ -703,7 +715,7 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 
 **The Valrekan register: the personal-name convention.** Word-base Tamazight, English alphabet, drift as normal. Full canon in `geography/lioaru.md`, *Valreka → What a Valrekan is called*.
 - **Form.** *[given] [birth-whale] [chosen whale]*. The second name is the whale a person was born to and never changes. The third is the whale they live on, taken by choice and read as a declaration of belonging; moving to a whale does not add it, deciding you belong there does.
-- **The guiding blood.** Only a house's guiding bloodline puts the particle **u** (a son) or **ult** (a daughter) before their whale, claiming the beast as a parent. The Eramun use their line-name where the whale would stand. One syllable tells noble from commoner.
+- **The guiding blood.** Only a house's guiding bloodline puts the particle **u** (a son) or **ult** (a daughter) before their whale, claiming the beast as a parent. The Eramun use their line-name where the whale would stand. One syllable tells noble from commoner. A cadet branch that takes a calf takes the calf's name, so the Eramun branch on Amellal is *ult Amellal*, and says *Eramun* only at home.
 - **The child prefix.** **Mez-** (Tamazight *meẓẓi*, little) on the given name until the coming-of-age, when it drops and the name may be changed; most keep the name they had.
 - **The elder suffix.** **-ghar** (Tamazight *amghar*, elder). No ritual and no date. One day someone younger uses it for you; some years after that you begin writing it yourself.
 - **The dead whale.** A fallen house's people take their new whale's name; the Greymantel alone carry a dead whale's name for life, because the crown took them aboard.
