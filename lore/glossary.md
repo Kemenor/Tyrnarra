@@ -712,6 +712,8 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Amnay u Tizir**: Tamazight *amnay* (rider). The Stray off Ardats who rode out at nineteen and came home with a wild whale, founding Tizir in 2461 MR.
 - **Tafsut Caldwel Anzar**: Tamazight *tafsut* (spring, the season). A Whalehall clerk; her quote carries the personal-name convention in the lore.
 - **Ilel Errok**: Tamazight *ilel* (sea). A bridge-warden of the Errok; her quote carries the Guild's not-quite-noble standing.
+- **Tilelli Anzar**: Tamazight *tilelli* (freedom). Chief guide of the bond-line, sixth of Tasa's blood to hold Anzar's guiding; carries no particle, being sworn Guild.
+- **The Forty-One**: plain English. The adventurers who died keeping Anzar with the herd through the nine unguided years, 2287–2296 MR; their plaque hangs in the Whalehall's entry hall.
 
 **The Valrekan register: the personal-name convention.** Word-base Tamazight, English alphabet, drift as normal. Full canon in `geography/lioaru.md`, *Valreka → What a Valrekan is called*.
 - **Form.** *[given] [birth-whale] [chosen whale]*. The second name is the whale a person was born to and never changes. The third is the whale they live on, taken by choice and read as a declaration of belonging; moving to a whale does not add it, deciding you belong there does.

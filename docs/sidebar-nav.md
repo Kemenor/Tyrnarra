@@ -113,6 +113,8 @@ The sidebar isn't the only thing extracted from per-page inline code. Two other 
   <script defer src="/setting/assets/site-interactions.js"></script>
   ```
 
+- **The place-map widget** (in `style-b.css` + `site-interactions.js`, 2026-09-17): a clickable map with a detail panel, in two renderings on one data model. *Schematic* mode is rows of `<button class="pm-cell" data-area="…">` under `.pm-row-label`s (a herd's draw-up, a hall's decks); *image* mode is an `<img>` with percentage-positioned `<button class="pm-hot">` hotspots (the map-area-editor's JSON). Both render `window.PLACE_AREAS[data-areas][data-area]` (`{k, n, t}`) into the map's `.pm-detail`, by delegation, no inline handlers; `aria-expanded` / `aria-controls` are seeded and kept in step. Reference: the draw-up on `lioaru/valreka/valreka.html` and the deck plan on `lioaru/valreka/whalehall.html`. Setting pages use this, never the campaign layer's `room-cell` / `map-hot` markup.
+
 - **`site-starfield.js`**: generates the ambient star field for Style A "cosmic" pages. Picks up `<div class="starfield" id="starfield" data-stars="180"></div>` and fills it. `data-stars` is optional (defaults to 180). No-ops on pages without the placeholder, so it is safe to include anywhere, though it is only included on the Style A cosmic pages: the `/setting/index.html` landing plus the `/setting/cosmology/` pages.
 
   ```html

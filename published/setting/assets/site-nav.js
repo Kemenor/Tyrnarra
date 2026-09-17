@@ -122,7 +122,9 @@
       { slug: 'dragons-reach', label: 'Dragon\'s Reach · Dragon Capital', href: '/setting/talan/domains/sumendar/dragons-reach.html', children: [] }
     ]},
     { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/setting/talan/domains/lioaru/lioaru.html',     children: [
-      { slug: 'valreka',      label: 'Valreka &middot; the Whale-Borne City', href: '/setting/talan/domains/lioaru/valreka/valreka.html', children: [] },
+      { slug: 'valreka',      label: 'Valreka &middot; the Whale-Borne City', href: '/setting/talan/domains/lioaru/valreka/valreka.html', children: [
+        { slug: 'whalehall', label: 'The Whalehall &middot; Valreka\'s Godshall', href: '/setting/talan/domains/lioaru/valreka/whalehall.html', children: [] }
+      ]},
       { slug: 'lost-kingdom', label: 'Lost Kingdom · Blackened Lands', href: '/setting/talan/domains/lioaru/lost-kingdom.html', children: [] }
     ]},
     { slug: 'brauogi',  label: 'Brauogi · Earth',     href: '/setting/talan/domains/brauogi/brauogi.html',   children: [

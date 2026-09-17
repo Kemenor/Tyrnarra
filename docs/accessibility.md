@@ -104,6 +104,8 @@ The reveal-toggles for amber `◈ Popular Belief` and red `⚿ GM Secret` boxes 
 
 **The HTML doesn't need to declare `aria-expanded` itself**; the JS seeds it. But if you add a new toggle-button class, add it to the selector list in `initAria()`.
 
+The **place-map** cells (`.pm-cell`, `.pm-hot`) are real `<button>`s wired by delegation in the same script: `pmInit()` seeds `aria-expanded="false"` and `aria-controls` pointing at the map's `.pm-detail`, and each click updates `aria-expanded` on every cell sharing the key. They inherit the universal focus rule.
+
 The era-card click target (`.era-card`) is a `<div>` toggled by `toggleEra`. It doesn't currently carry button semantics. If accessibility for keyboard users browsing the history-page eras becomes a priority, this is the next thing to address (give the card `role="button"`, `tabindex="0"`, and a keypress handler).
 
 ---

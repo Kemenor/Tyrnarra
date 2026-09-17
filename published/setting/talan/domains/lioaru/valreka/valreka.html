@@ -20,9 +20,6 @@
 
   .principle-call { --call-bg: rgba(38,26,44,0.45); }
 
-  .house-grid { --col-min: 230px; }
-  .house-grid .card-era { display: block; font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--domain-accent); margin: -4px 0 8px; }
-
   /* Attributed in-world voices (region-prose v2) */
   .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
   .voice-quote p { margin: 0 0 12px; }
@@ -105,37 +102,59 @@
     <p><b>You can hear how old a house is.</b> A house bonded in the Lost Era wears a name from the deep desert, a house bonded under the Golden Empire wears an Imperial one, and a house bonded since the Dark Era wears a name in the city's own tongue. Any Valrekan hears a house's age before anyone says it, and the Errok's claim to Oroiri nobility has an argument built into its name, as does any chronicler who doubts it.</p>
   </div>
 
-  <div class="card-grid house-grid">
-    <div class="accent-card">
-      <div class="card-name">Ardats</div>
-      <span class="card-era">Lost Era · the market</span>
-      <p>The market rides on her back, and when the herd draws up she rides at Lenama's side, so most bridges in the city land on Ardats. Her guiding-line is the best in the herd after the crown's, and holds a moving bridge for two hours when the Eramun work with them.</p>
+  <div class="place-map" data-areas="herd">
+    <p class="pm-hint">The herd as it draws up at rest. Tap a whale to read her house.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">Out front</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell pm-cell--apart" data-area="anzar"><span class="pm-name">Anzar</span><span class="pm-sub">the Guild's whale · a district and no house</span></button>
+      </div>
     </div>
-    <div class="accent-card">
-      <div class="card-name">Errok</div>
-      <span class="card-era">Lost Era · the dig-crews</span>
-      <p>The dig-crews' quarter. The Errok hold that their line stood among Oroiri's nobility while the Eramun were still priests, and that the recovery of the buried city belongs by right to them; the crown gave it to the Greymantel instead, four hundred years ago, and the Errok have contested the gift at every Eskua's accession since. The argument stands open.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">The heart</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell pm-cell--crown" data-area="lenama"><span class="pm-name">Lenama</span><span class="pm-sub">the mother whale · the Eramun</span></button>
+        <button type="button" class="pm-cell pm-cell--muted" data-area="greymantel"><span class="pm-name">the Greymantel</span><span class="pm-sub">on Lenama's back · the house with no whale</span></button>
+      </div>
     </div>
-    <div class="accent-card">
-      <div class="card-name">Caldwel</div>
-      <span class="card-era">Golden Era · the cisterns</span>
-      <p>Most of the water-bearers live on Caldwel, and every halt-argument in the city runs through her house, because a dig goes one more day only as long as Caldwel says the water holds. A plain house nobody courts and nobody crosses.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">At her side</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell" data-area="ardats"><span class="pm-name">Ardats</span><span class="pm-sub">Lost Era · the market</span></button>
+        <button type="button" class="pm-cell" data-area="duncrest"><span class="pm-name">Duncrest</span><span class="pm-sub">Golden Era · waiting to take the place</span></button>
+      </div>
     </div>
-    <div class="accent-card">
-      <div class="card-name">Tiwiz</div>
-      <span class="card-era">Dark Era · the yard</span>
-      <p>The wrights' yard, where recovered Oroiri stone is dressed and the first hall for a newly bonded whale is framed before it is carried across. The Nagaji's whale in all but bloodline.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">The inner ring</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell" data-area="errok"><span class="pm-name">Errok</span><span class="pm-sub">Lost Era · the dig-crews</span></button>
+        <button type="button" class="pm-cell" data-area="skjol"><span class="pm-name">Skjol</span><span class="pm-sub">Lost Era · the storm side</span></button>
+        <button type="button" class="pm-cell" data-area="ekaits"><span class="pm-name">Ekaits</span><span class="pm-sub">Lost Era · the weather-readers</span></button>
+        <button type="button" class="pm-cell" data-area="caldwel"><span class="pm-name">Caldwel</span><span class="pm-sub">Golden Era · the cisterns</span></button>
+        <button type="button" class="pm-cell" data-area="langback"><span class="pm-name">Langback</span><span class="pm-sub">Golden Era · the granaries</span></button>
+        <button type="button" class="pm-cell" data-area="ketelback"><span class="pm-name">Ketelback</span><span class="pm-sub">Golden Era · the kitchens</span></button>
+        <button type="button" class="pm-cell" data-area="redwallow"><span class="pm-name">Redwallow</span><span class="pm-sub">Golden Era · the dyers</span></button>
+      </div>
     </div>
-    <div class="accent-card">
-      <div class="card-name">Tizir</div>
-      <span class="card-era">2461 MR · the upstart</span>
-      <p>The youngest house. <b>Amnay u Tizir</b> was a Stray off Ardats who rode out at nineteen and came back at twenty-two with a wild whale; the house is three generations old, its district half-built, and its bridging poor enough that Tizir is a guest on someone's deck more often than any other house. The old houses say <i>the Tizir</i> with a pause in front of it.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">The outer ring</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell" data-area="tiwiz"><span class="pm-name">Tiwiz</span><span class="pm-sub">2150 MR · the yard</span></button>
+        <button type="button" class="pm-cell" data-area="urti"><span class="pm-name">Urti</span><span class="pm-sub">2160s MR · the gardens</span></button>
+        <button type="button" class="pm-cell" data-area="asif"><span class="pm-name">Asif</span><span class="pm-sub">2200s MR · faces the Duchies</span></button>
+        <button type="button" class="pm-cell" data-area="tafat"><span class="pm-name">Tafat</span><span class="pm-sub">2300s MR · the lanterns</span></button>
+        <button type="button" class="pm-cell" data-area="amellal"><span class="pm-name">Amellal</span><span class="pm-sub">2388 MR · calved of Lenama</span></button>
+        <button type="button" class="pm-cell" data-area="adrar"><span class="pm-name">Adrar</span><span class="pm-sub">2410s MR · the tallest back</span></button>
+        <button type="button" class="pm-cell" data-area="tizir"><span class="pm-name">Tizir</span><span class="pm-sub">2461 MR · the upstart</span></button>
+      </div>
     </div>
-    <div class="accent-card">
-      <div class="card-name">Twelve More</div>
-      <span class="card-era">unnamed</span>
-      <p>Twelve more house-whales ride in the herd, their names and their quarrels still to be set down.</p>
+    <div class="pm-row">
+      <div class="pm-row-label">Last</div>
+      <div class="pm-cells">
+        <button type="button" class="pm-cell" data-area="ushen"><span class="pm-name">Ushen</span><span class="pm-sub">2340s MR · the fall-work</span></button>
+      </div>
     </div>
+    <div class="pm-detail"></div>
   </div>
 
   <div class="prose">
@@ -213,6 +232,13 @@
 
   <div class="feature-panel prose">
     <p><b>The Sovereign.</b> A <b>Guild Sovereign</b> holds the seat, by long custom a Ghoran elder, on the reasoning that an office whose whole weight is precedent belongs to someone who was present for the precedent. <b>Amestan Anzar</b> holds it now, born on Caldwel, Sovereign since 2489 MR, and the one who refused the third offer; the Roll's clerks call him Amestanghar to his face. His authority covers Galdua Jendea, Hareaveldi, the River Duchies and the Lost Isle, and the perpetual standing warning posted over the Blackened Lands is signed from his desk.</p>
+  </div>
+
+  <div class="card-grid" style="max-width:880px; margin-left:auto; margin-right:auto;">
+    <a class="accent-card" href="/setting/talan/domains/lioaru/valreka/whalehall.html">
+      <div class="card-name">The Whalehall →</div>
+      <p>Anzar deck by deck: the guides' deck and the forward watch at the head, the entry hall with the counter, the Standing Roll and the plaque of the Forty-One at the shoulder, the Bank hall and the Sovereign's rooms amidships, the taproom and the pens astern. Who serves, who guides, and how a party gets its name on the Roll.</p>
+    </a>
   </div>
 
   <div class="feature-panel prose">
@@ -317,7 +343,7 @@
     <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
     <div class="sub">Valreka's central canon is settled; several specifics remain open, the kind future scholarship or future story will close.</div>
     <ol>
-      <li><b>The twelve unnamed houses.</b> Lenama, the Eramun, and five houses are set down; twelve house-whales, their names, their characters, and their standing quarrels beyond the Errok's claim, are open for stories to cast.</li>
+      <li><b>The houses' quarrels.</b> All seventeen houses are named; beyond the Errok's claim, Duncrest's rivalry with Ardats, and Amellal's silence, their standing feuds, marriages, and debts are open for stories to cast.</li>
       <li><b>How the houses meet.</b> The council in which the houses sit and the Sovereign does not: when it convenes, what it decides, and what the Eskua may do without it.</li>
       <li><b>Named memory-keepers.</b> The Greymantel are named as a house; the senior archaeologist, the reader who calls a halt, and the elder who holds the deepest part of the dig are not.</li>
       <li><b>What Oroiri gives back.</b> The recovered fragments of the buried holy city, the great finds and the famous digs, and what the recovered past has taught the present, are open.</li>
@@ -330,5 +356,30 @@
 
 </div>
 
+<script>
+window.PLACE_AREAS = window.PLACE_AREAS || {};
+window.PLACE_AREAS.herd = {
+  anzar: { k: "Out front · bonded wild, late Dark Era", n: "Anzar", t: "<p>The Guild's whale, and the one whale in the herd with a district and no house. Bonded wild by an outrider in the last decades of the Dark Era; the rising house took the Guild as a paying tenant, lost its guiding blood to a bad crossing and a sand-fever in 2287 MR, and was kept with the herd by hand for nine years until the last child of the blood took the bond and gave the house to the Guild. She rides apart at the leading edge with her own Stokkul shoal, about four thousand people on her back, the first whale a stranger reaches and the last the departing see. The hall itself is <a href=\"/setting/talan/domains/lioaru/valreka/whalehall.html\">the Whalehall</a>.</p>" },
+  lenama: { k: "The heart · bonded at the refounding", n: "Lenama", t: "<p>The mother whale, alive since Tani came back, the oldest living thing in the city and a relic in her own right. She carries the palace, the sanctum, the old noble quarter and about twelve thousand people. The <b>Eramun</b> guide her, a line before it was a house, who led the faithful onto the whales and have held her bond since; the Eskua now is <b>Itri ult Eramun</b>, one hundred and forty years on the guiding. The herd follows her, and to guide her is to rule.</p>" },
+  greymantel: { k: "On Lenama's back · Golden Era, whale dead 2131 MR", n: "The Greymantel", t: "<p>The memory-keepers. A Golden-Era house whose whale died in the last years of the Dark Era, the fifth to fall in forty years, and who turned to the past instead of scattering. The crown took them onto Lenama and gave them the old noble quarter, and they lead the recovery of Oroiri. A fallen house's name goes to the sand; theirs stayed because the crown took them aboard, and they are the only people in Valreka who carry a dead whale's name.</p>" },
+  ardats: { k: "At her side · Lost Era", n: "Ardats", t: "<p>The market rides on her back, and when the herd draws up she rides at Lenama's side, so most bridges in the city land on Ardats. About five thousand people. Her guiding-line is the best in the herd after the crown's, and holds a moving bridge for two hours when the Eramun work with them.</p>" },
+  duncrest: { k: "At her side · Golden Era", n: "Duncrest", t: "<p>The herd's second-best guiding line, and Ardats's rival for the place at Lenama's side for three centuries. Duncrest takes the inner place whenever an Ardats guide falters, and gives it back with ceremony.</p>" },
+  errok: { k: "The inner ring · Lost Era", n: "Errok", t: "<p>The dig-crews' quarter. The Errok hold that their line stood among Oroiri's nobility while the Eramun were still priests, and that the recovery of the buried city belongs by right to them; the crown gave it to the Greymantel instead, four hundred years ago, and the Errok have contested the gift at every Eskua's accession since. The argument stands open.</p>" },
+  skjol: { k: "The inner ring, storm side · Lost Era", n: "Skjol", t: "<p>When a storm comes up she is guided to windward and takes the sand for the rest of the herd, and her district is built low and shuttered for it. The house the others owe after every storm and thank at the next feast, if they remember.</p>" },
+  ekaits: { k: "The inner ring · Lost Era", n: "Ekaits", t: "<p>The weather-readers. An Ekaits reader stands on the high deck through the night watches, and when Ekaits says the herd moves, the wardens move it and the keepers lose their dig. Every halt-argument ends when Ekaits speaks, and the keepers have accused the house of speaking early for three hundred years.</p>" },
+  caldwel: { k: "The inner ring · Golden Era", n: "Caldwel", t: "<p>The cisterns. Most of the water-bearers live on Caldwel, and every halt-argument in the city runs through her house, because a dig goes one more day only as long as Caldwel says the water holds. A plain house nobody courts and nobody crosses.</p>" },
+  langback: { k: "The inner ring · Golden Era", n: "Langback", t: "<p>The longest whale in the herd; the granaries run her whole length, and the house's whole standing is that the city eats from her back between the green places.</p>" },
+  ketelback: { k: "The inner ring · Golden Era", n: "Ketelback", t: "<p>Her back runs hot, hotter than any whale in the herd, and the city built its bake-ovens and its kitchens on her for it. Every feast in Valreka is cooked on Ketelback and carried across the bridges, and the house has never guided well and has never needed to.</p>" },
+  redwallow: { k: "The inner ring · Golden Era", n: "Redwallow", t: "<p>She rolls in the red dune when the herd rests, and the dyers and hide-workers keep their vats on her back; the city's reds are hers.</p>" },
+  tiwiz: { k: "The outer ring · 2150 MR, the reconstruction", n: "Tiwiz", t: "<p>The wrights' yard, where recovered Oroiri stone is dressed and the first hall for a newly bonded whale is framed before it is carried across. The Nagaji's whale in all but bloodline.</p>" },
+  urti: { k: "The outer ring · 2160s MR", n: "Urti", t: "<p>The garden-whale: planted terraces on her back that the Ghoran tend, the herd's green, watered first after the Stokkul.</p>" },
+  asif: { k: "The outer ring · 2200s MR", n: "Asif", t: "<p>Faces the River Duchies. The Duchy trade and the Duchy marriages run through Asif, and half the house speaks with a valley accent.</p>" },
+  tafat: { k: "The outer ring · 2300s MR", n: "Tafat", t: "<p>The lantern-house. Her riders light the transit lanes when the herd moves by night, lantern to lantern across the sand, and a Tafat lantern left burning on a dune marks where an outrider was lost.</p>" },
+  amellal: { k: "The outer ring · calved of Lenama, 2388 MR", n: "Amellal", t: "<p>The one cadet house of the royal line. A younger Eramun branch took her bond and took her name, as the rule requires, so the house is <i>ult Amellal</i> and <i>u Amellal</i> and says <i>Eramun</i> only in its own halls. The claim is never spoken and everyone at court can recite it.</p>" },
+  adrar: { k: "The outer ring · 2410s MR", n: "Adrar", t: "<p>The tallest back in the herd, terraced to the top; the crowded outer-ring house, where the poorest of the city live highest and the stairs are the district.</p>" },
+  tizir: { k: "The outer ring · 2461 MR", n: "Tizir", t: "<p>The youngest house. <b>Amnay u Tizir</b> was a Stray off Ardats who rode out at nineteen and came back at twenty-two with a wild whale; the house is three generations old, its district half-built, about twelve hundred people, and its bridging poor enough that Tizir is a guest on someone's deck more often than any other house. The old houses say <i>the Tizir</i> with a pause in front of it.</p>" },
+  ushen: { k: "Last · 2340s MR", n: "Ushen", t: "<p>The fall-work. When a whale dies, the Ushen board her before she is cold, dismantle the district, and see the people scattered among the other whales; when the herd must leave a whale on the sand, it is Ushen who stays to the last. Needed by every house and befriended by none, and the house wears it plainly.</p>" }
+};
+</script>
 </body>
 </html>
