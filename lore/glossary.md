@@ -722,6 +722,10 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Tafsut Caldwel Anzar**: Tamazight *tafsut* (spring, the season). A Whalehall clerk; her quote carries the personal-name convention in the lore.
 - **Ilel Errok**: Tamazight *ilel* (sea). A bridge-warden of the Errok; her quote carries the Guild's not-quite-noble standing.
 - **Tilelli Anzar**: Tamazight *tilelli* (freedom). Chief guide of the bond-line, sixth of Tasa's blood to hold Anzar's guiding; carries no particle, being sworn Guild.
+- **Yidir Asif Anzar**: Tamazight *yidir* (he lives). The Sovereign's steward on Anzar, born on Asif and chosen Anzar; renews the leases and hears the grievances at Assemur.
+- **The Tigemmi**: Tamazight *tigemmi* (house, home) → **Tigemmi**, unchanged. The dead house of Anzar's own hall, the oldest core of the Whalehall, where the Guild first rented rooms and where the Sovereign now sits.
+- **Assemur**: Tamazight *ass* (day) + *amur* (share, portion) → *ass n wemur*, "the day of shares" → contracted → **Assemur**. Anzar's lease-day, once a year, when a fifth of the five-year plot-leases are renewed and the steward hears every grievance on the whale.
+- **Smiths' Flank · the Rows · Hospice Row · the Brokers' Walk**: plain English, Guild-named. Anzar's four quarters (armourers and outfitters; drinking and gambling halls and boarding houses; healers, apothecaries and the shrine; appraisers, relic-brokers and scribes). Guild names on a whale in a Tamazight-named herd, per the rule that Talanese creeps back wherever the Guild connects things.
 - **The Forty-One**: plain English. The adventurers who died keeping Anzar with the herd through the nine unguided years, 2287–2296 MR; their plaque hangs in the Whalehall's entry hall.
 
 **The Valrekan register: the personal-name convention.** Word-base Tamazight, English alphabet, drift as normal. Full canon in `geography/lioaru.md`, *Valreka → What a Valrekan is called*.
