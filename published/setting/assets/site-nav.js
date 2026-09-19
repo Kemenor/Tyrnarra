@@ -157,6 +157,7 @@
     ]},
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/setting/talan/domains/ehizahar/ehizahar.html', children: [
       { slug: 'veidrath', label: 'Veidrath &middot; the Hunting City', href: '/setting/talan/domains/ehizahar/veidrath/veidrath.html', children: [] },
+      { slug: 'villtur', label: 'Lands of Villtur &middot; the Blank Lands', href: '/setting/talan/domains/ehizahar/villtur/villtur.html', children: [] },
       { slug: 'fenurra', label: 'Fenurra · The Flame-Source', href: '/setting/talan/domains/ehizahar/fenurra.html', children: [] }
     ]},
     { slug: 'askamira', label: 'Askamira · Freedom',  href: '/setting/talan/domains/askamira/askamira.html', children: [
