@@ -1,0 +1,132 @@
+# The Lands of Villtur (Ehizahar)
+
+*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract (2026-09-19); by GM ruling this entry carries no region-wide ⚿ secret and no defect, because Villtur has no unity to hang either on; both live with clans and cities. Parent domain: [`../ehizahar.md`](../ehizahar.md).*
+
+**Etymology:** Icelandic *villtur* (wild, lost, strayed), undrifted. The name is an outsider's: it is what the land is to someone who does not belong to it. I have looked for the word the clans use for the whole of it and found none; a clan names its circuit, a city names its walls, and the whole has only the name the rest of Talan gave it.
+
+**Position:** the whole of Ehizahar outside Fenurra and the Basogur fringe: the arctic coast, the high ranges of the north, the great river across the middle, the grass of the center, the old conifer country east and northwest, down to where the jungle's northmost spur reaches into the grass. Veidrath sits inside it, toward the southeast. Ardo Beroa lies offshore and outside.
+
+**Terrain:** ice, tundra, mountain, grass, old forest, river, the jungle's edge; the most varied ground on Talan under one name.
+
+**Character:** a court that meets on open ground.
+
+**Peoples:** every people of Ehizahar lives across all of it. Orc, Lizardfolk, and Centaur clans ride the circuits, mixed and near-pure both; the cities are the same mix stopped. The three feelings are the domain's (see [`../ehizahar.md`](../ehizahar.md)); the cultures are the clans' own, and a clan is sorted by its circuit and its proof, never by its blood.
+
+**Tongue:** Talanese, carried in by the Adventurers' Guild; the deep clans keep their own and some refuse the other.
+
+**Faith:** Hinka's, in the field-priests' register: the hunt blessed out, the kill clean, the dying crossed over. The land keeps her Cruelty and the clans leave it there.
+
+**Rule:** none. There is no leader and no speaker, and a foreign power has no one to send to. The Stillhands at Veidrath host the gathering and assign its ground; every deal in Villtur is made between one clan and one other, and holds as long as the clan that made it can hold it.
+
+**Source:** the field-log of Master Zenerious of the Air Monastery, who crossed Villtur from the Baratalda fairs to Fenurra at the opening of the Adventurer Era, before the rail, and brought the log home ([`zenerious-log.md`](zenerious-log.md)). It is quoted throughout.
+
+---
+
+## The blank lands
+
+> "The Lands of Villtur are colloquially known as the blank lands among my colleagues. Few dare to travel into it to map it out, most of them seem to not come back."
+> Master Zenerious of the Air Monastery, Day 0 of his log
+
+The Wyndwalken maps are the standard reference at every court on Talan that can afford a copy, and their sheets of Ehizahar show the coast, the ranges, the great river, Veidrath, and green. Zenerious crossed the green in sixty days and measured every hill he sat on, and his colleagues have the log. The land is not the difficulty. A surveyor with a rule and a compass can fix a hill on the grass to the yard and come back to it, and he did.
+
+> "I have to admit, I have no idea how the Villturians do it, by eye alone I wouldn't be able to distinguish one green rolling hill from the next. Now I sit on this hill I couldn't distinguish with a token in my hand, they bound three colored strings to it, told me the Vindrakar Hooves would accept it and bring me to Veidrath."
+> Zenerious, Day 14
+
+What a map of Villtur cannot hold is where you are. Every clan rides a circuit, a seasonal loop that runs for hundreds of miles from pasture to water to growing-ground and back, and the circuits are the borders: a clan's grass is wherever its circuit runs, for as long as the clan can hold it, and the circuits are redrawn every year by who arrived at the gathering fat and who arrived thin. Two clans whose loops touch at a river-crossing this spring may not touch next spring. A city sits fixed inside its pasture-ring, and the ring's edge is wherever the nearest circuit stopped taking it. None of this is on the ground. It is in who will meet you on it.
+
+Crossing Villtur is done the way Zenerious did it, and the way it has been done since: **the Handing.** You make a deal with the first clan whose grass you enter, at a fair or a river-ford or wherever a clan can be found, and the clan carries you to the edge of its circuit and hands you on. The instrument is **the strings**: three colored cords in the clan's own colors, bound to a token, which the next clan reads as the first clan's word that you are theirs to carry. Each clan honors the strings of the clans it has agreed to honor, and no others, and each carries you exactly as far as its own grass runs. Zenerious was handed nine times between Sagarri and the Scar of Aeris: two grass-clans, a river-clan, a city's delegation, the field-priests, a band of the clanless, a snow-clan. Nobody arranged the whole of it. Every clan arranged the next.
+
+> "The kinrider just said dinner is served, so I'm ending the entry for today here."
+> Zenerious, Day 34, traveling with the Aymuru delegation
+
+So a foreign court that wants to cross Villtur deals with every circuit it crosses, one clan at a time, and each deal is honored by one clan and binds one clan. The court's envoy looks for the man who speaks for the land and there is no such man; he finds instead a chain of small deals that each end at a hill with a tree on it. The clans sell passage this way to anyone who asks. The ones who do not ask are the ones the Wyndwalken lost.
+
+## What you show is yours
+
+A clan is a claim, and the claim is a proof of survival, renewed every year in front of everyone.
+
+> "You bring the herd in fat and the young are loud and the beasts are picketed close to the sanctum, and everyone who rides in after you counts. You bring the herd in thin and everyone counts that too. Nobody says anything at the gathering. In spring your neighbor's circuit runs across your best grass and you find out what they counted."
+> Orrun, a rider of the Snow Lions, on the record to the Stillhands at the winter gathering of 2531
+
+The gathering at Veidrath is the one place every clan in Villtur can be seen at once, and the Gathering-Peace, which the Stillhands guarantee and every clan holds unbreakable, means it is the one place nothing can be done about what is seen. A clan that arrives short of beasts or short of young has shown it. A clan that arrives strong has shown that. The showing is the whole politics of the year, and the answer to it comes months later and hundreds of miles away, on the circuit, where a clan that has weakened finds its river-crossing taken by a clan that has not, and has no one to complain to, because the clans that honor Hinka take the cut the way the winter does. Some dying so that others may live is the land's own face, and the tribes leave it there.
+
+The game runs on every instrument a court runs on. Two clans whose circuits meet at the same ford every autumn are allies until one of them arrives at the gathering thin. A marriage between two clans is a treaty and the parents shake on it longer than the couple does. A meeting on the open plain between two clans that had no reason to be there is a meeting, and everyone who hears of it reads it. A raid on a clan's picket-line at the far end of its circuit, when its riders are three weeks out, is an argument made with the ground. And a clan that wants to know who is watching it arrives at the gathering thinner than it is, pitches loud anyway, and rides out in spring to see who comes.
+
+> "A courtier from the Thousand Kingdom would take a season to see that it is a court. He would then find nothing in it he did not know."
+> Field-priest Ymra of the Stillhands, on the record at the gathering of 2531
+
+The one law of the game is the Gathering-Peace, and inside the Peace a dispute is settled by talk or by a bout. Two clan leaders with a claim on the same river-grass go into a ring of packed earth at Veidrath with a Stillhand at the edge, and fight with the haft and the flat until one stays down and says so; the priest watches and does nothing, and the loser's clan rides around that grass next year. The Stillhands hold that some fight and some talk and both are fine so long as no blood runs in the streets. Nothing is written down. Nothing in Villtur is.
+
+When a clan's proof lapses, when a winter or a sickness or a lost generation leaves it unable to hold its circuit, the circuit goes, and what is left of the clan goes too. **The lone wolves** are what remains: bands of the clanless, the last of a broken clan or the banished of a whole one, together by choice and apart by choice, some under a name they chose and most under none. They hold no grass and ride no circuit and are handed nothing, and they get people through anyway, for pay, across the ground between the circuits that no clan will grant.
+
+> "Yesternight there was a fight, three people left, now we are 12, 13 if I include myself. They tell me not to worry, I hope they are right, because these cold winds seem hungrier than those I know from the Air Monastery."
+> Zenerious, Day 50, in the north
+
+## The circuit and the wall
+
+Some clans stopped. A Villtur city is a clan whose circuit ended where it stood: the wall is for the people and the herds graze outside it, so the city holds its pasture-ring by the same proof as any clan holds its grass, and what a rival takes from a city is its pasture and never the city. A held place and its pastures can be watched. A circuit across the open plain can only be ridden, and a clan that cannot be everywhere on its loop at once is claimed against at the far end. Stopping buys a claim that can be kept, and pays for it in reach: a city that wants more grass finds the grass already ridden by clans with deals and rivals of their own, and grows by negotiation or stops growing. That is why, in four centuries, no city in Villtur has become a country. Fenurra did, on ground nobody wanted (see below).
+
+> "This city was built by nomads and you can feel it, somewhat see it maybe. I have seen houses and next to it spaces for tents, I overheard a worker said he got a new job and is giddy to move to a different quarter, it seems people overwhelmingly live where they work here. A change in employer means a change in location, not by law but by custom."
+> Zenerious, Day 32, at Aymuru
+
+**Aymuru** is the one Zenerious rested in, and it was already a city with a delegation when he did. It stands where several circuits cross, and it stopped there because being findable was worth more than the loop: in a country where a clan is found by learning its circuit and riding to intercept it, a city is the one fixed address, the place strings are given and honored and a stranger can wait indoors. A few thousand live there, every people of the domain mixed. The clan's shape is the city's, transposed: a chief where the clan had a leader, and where a clan leader's chosen close ride out with him by his choice and theirs, the city's **kinrider** is a standing post, the guard at the gate and the escort on the road, the same word for a position that stopped moving. Every household keeps a tent-plot beside its house; kin off the road pitch on it, and in the traveling season the household pitches on it itself, when part of the city rides out. A plot that has grown over is read by the neighbors, and they say so. Quarters are work-quarters, and a household moves when its work does, by custom and never by law. And the ride-outs are rostered: who goes, when back, where a clan on the grass lets each rider decide at dawn.
+
+> "The city has been nice, they also have their own milk of the land, which I will taste tonight for the first time, they have told me it is a traveling drink. They don't consume it unless on the road."
+> Zenerious, Day 34
+
+The settled tier runs from clan-towns that are one clan stopped, near-pure in blood and circuit, to mixes like Aymuru, and the pull toward it is stronger every generation. Stopping makes the proof easier to keep. The deep clans know it, and their argument against the wall is the argument of people who can feel it losing, made to a goddess who has already begun to settle with her people (see [`../ehizahar.md`](../ehizahar.md), *Veidrath → Faith*).
+
+## The gathering, from the grass
+
+From Villtur the god-city is the board. A clan rides in when its circuit brings it, takes what ground the Stillhands say is free, and where it pitches is read by every clan after it: next to whom, how near the sanctum, how near the market, how many fires, how loud the beasts are picketed. A city sends a delegation and keeps a gated quarter in the belt of stone. The clans that stopped at Veidrath itself have begun to answer *Veidrath* when asked their clan, and then to think, and then to give a clan name as well. The rest of the city, its three strata and its two governments that do not mesh, is written with the god-city.
+
+## The enemy every age
+
+Villtur has been one thing exactly as often as something has come for the land. The Golden Empire held two thirds of the continent for seven centuries and held none of Ehizahar, and left no record of a battle it lost there; what it found was a chain of small wars that each ended at a hill, and no one to make peace with. When the Corrupted God's spawn came north in the Dark Era the clans met them the same way. No call went out either time. A clan whose grass is taken by an outsider is at war already, alone; the clans whose circuits touch its grass come because the taking arrives at their own picket-line next; and the fire runs along the circuits until the thing that came is gone. The clans do not fight the outsider's cause. They ride against the imported claim: a writ, a charter, a fort, a right-of-way, anything that says the ground is held by a rule from outside the game. A rival clan taking your grass is the game. An outsider building on Hinka's land is a hand that will take more, so the clans take the head first.
+
+> "We hold no ground we cannot ride to. Nothing in Villtur is anyone's by paper. If a lord from the south wants that grass he can bring his herd to the gathering and show it like the rest of us."
+> Orrun of the Snow Lions, 2531
+
+The rail is the first thing to come for the land that the clans cannot ride against, because it was invited. The Northern line touches the domain at its settled edges, in towns that wanted it, and from there it has bent inward toward the railhead bid at Veidrath's edge one clan at a time, on strings: every stretch of it lies on grass some clan agreed to, and every bend is a clan that refused, or a city that took payment where the cheaper line ran through a clan that would not. The route is the political map of Villtur drawn by a surveyor who was answering to the ground the whole way.
+
+> "The line goes left at the Skoga crossing where right was three days shorter and a quarter the earthwork. I was asked to note the reason in the survey and I have noted it: the clan on the right bank said no."
+> Surveyor Coll Brannock of the Northern line, in a report to the consortium, 2529
+
+The settled half of Villtur reads the rail as the road the settled world was always going to send, and the deep clans read it as a disease with a schedule, and the rail bends where the second reading holds and runs straight where the first does. The common enemy has ridden together against an empire and a god. Against a full belly nobody has found the horn to blow.
+
+**◈ Popular Belief: the horn from Modurtre.** Every Villturian will tell you that when an enemy comes for the land itself, a horn sounds from the mountain with the three mother trees, and every clan on every circuit hears it and rides. Nobody alive has heard it. Nobody's grandmother did. The Empire was turned back all the same, and the clans hold that the horn sounded then, and that it will sound again when it is needed, and that the rail has not needed it yet.
+
+## Things
+
+**The Etxaber.** The Villtur mount: a beast that carries five or six adults or a household, and a clan's wealth is counted in them at the gathering. The city folk keep them too, grazing outside the walls. **The bond-beasts**, the smaller mounts the scouts and hunters ride and raise, differ by ground; a jungle clan, a snow clan, and a grass clan hunt with different animals, or different breeds of one, and the bond-beast trade at Veidrath sorts them by circuit.
+
+**Lurresna**, milk of the land: the Etxaber's milk, fermented, and one drink with a different recipe everywhere. Every clan's is its own and secret; the Frogged Tribe's on the Skoga comes out fruity; Aymuru's is drunk only on the road; the field-priests call theirs Hinka's offering and it is spiced.
+
+> "It certainly made me sputter much to the enjoyment of my guides."
+> Zenerious, Day 6
+
+**◈ Popular Belief: the milk tells you where you are.** A Villturian will claim to place a clan's grass by the taste of its Lurresna, and to tell the year by the strength of it. Ask two and they will place the same cup on opposite sides of the river.
+
+**The strings** are kept. There is no custom for giving them back, and a traveler who has been handed across Villtur carries every clan's colors afterward. Zenerious brought eleven sets home to the Air Monastery and the order still has them.
+
+## Fenurra, beside
+
+Fenurra is a Villtur country that finished becoming itself. It has a capital carved into the Scar, a Speaker's Mantle, a Bone Gong that calls a War Council, and a marriage treaty with a foreign empire, and it holds itself apart even from its tribal neighbors. It could grow because it grew on ground no circuit wanted: the crater is harsh and resource-poor in everything but the star-metals, and a power rising there took no clan's grass. On the map it is a name that appears suddenly inside the green. The strings are honored to its border, and beyond the border the Fenurrans do their own watching (see [`fenurra.md`](fenurra.md)).
+
+> "I feel like being watched, I know I feel like that because they want me to know they are watching."
+> Zenerious, Day 60
+
+---
+
+## Named clans and figures
+
+- **Harahari Iron Fangs**: the grass-clan that took Zenerious's first deal at the Sagarri fair and carried him from the mountains to the hill with the tree. Their leader then was **Trenbeom**, who told him he would miss the mountains.
+- **Vindrakar Hooves**: the grass-clan whose circuit runs from the hill to the Skoga; they think the Frogged Tribe are strange.
+- **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
+- **The Snow Lions**: a northern clan of the ice-country. **Orrun**, one of their riders, put the clans' position on the rail on the record at the gathering of 2531.
+- **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed; its **kinrider** post.
+- **Field-priest Ymra** of the Stillhands: a hunt-priest who goes out with the clans and speaks for none of them.
+- **Surveyor Coll Brannock** of the Northern line: the consortium's surveyor on the Villtur stretch, whose reports note each bend by the clan that caused it.
+- **Master Zenerious** of the Air Monastery, whose log is the record (see [`zenerious-log.md`](zenerious-log.md)).
+
+**Still open:** the Centaur people-pass (the herd, the unrescuable, the horse question against the Etxaber; their own countries and clans); the Orc and Lizardfolk passes; the Villtur personal-name structure (Trenbeom, Orrun, Ymra are placeholders in the shape; the structure is unrecorded); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
