@@ -109,6 +109,15 @@ A group of five hunters arrived from the (Clan name), I saw them approach the St
 
 *Day 40.* Today I visited the temple, like the rest of Veidrath it is missing its host. The Lady Hinka is out on her hunting season, the remaining Stillhands explained. If I needed to petition her it would be best to come back when the grass lands are white or go out and hunt for the huntress herself.
 For Lunch I had a Yearspit, a local custom where they prepare little of all types of meat a clan has gotten over the year.
+Yearspit in hand I wandered the fields were a few clans had already found their way to Veidrath. I visited an arena and witnessed a bout between two clans leaders. A kinrider explained they were settling the circuits for next year.
+They fight until one of them surrenders or can't go on anymore, they try to avoid deaths, but sometimes it does happen, she tells me.
+My feet carried me on before the fight ended and they carried me to the Taptent next, it was rather empty, which was normal during these times but it also meant the waitress had ample time to tell me of the Taptent.
+It had started with a single person selling homebrew from his tent. People like it, it grew. It gained benches, then tables, then different alcohol, then food, then a roof for the benches, then more space and so on and so forth.
+Nowadays the Taptent is a grown location, it takes up vast amounts of space of which most lies unused for 9 months out of the year.
+But the other three months it's filled to the brim every night she assured me.
+I saw some people here and there and two groups, the clan leaders were in a heated discussion. A kinrider explained they were settling the circuits for next year.
+On my way home, I stumbled upon a wedding, an Aymuru woman was marrying a (insert name here) the bride and groom to be looked happy, brimming.
+The father of the bride and the mother of the groom looked happier when they shook hands. A kinrider explained they were settling the circuits for the next generation.
 
 *(still writing)*
 
