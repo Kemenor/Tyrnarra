@@ -99,6 +99,19 @@ I have my next passage. A cluster of the field-priests is leaving in three days 
 
 **The second version (flatter, 2026-09-15) is the one standing in the entries below.**
 
+**GM rewrite in progress (2026-09-20, from the flight; verbatim, GM-Written once done):**
+
+*Day 38.* Every Divine City is special, every one unique. Though it is something else to see the divine city when the city is not there. Most are impressive, imposing, a sight you will never forget. Though I suppose neither will I forget these sights, I have reached Veidrath, but Veidrath has not arrived yet. I see open grass lands sitting between dirt roads, space waiting to be claimed by clans that will come in a month or two. Next to districts reminiscent of villages or towns, made to last, meant to stay. I'm still staying with the Aymurus, they tell me fifteen years ago the delegation stopped packing everything up and decided to stay and it grew from there, more people looking to stay, from Aymuru, from others. Still Aymurus, but half Veidrath as well. I saw them send the kids to the Moon glow tribe? district? next plot over. Where they are taught by Grandmother Lori as I have been told.
+Lunch I have taken with the moon glows, they have given me a small bottle of their Milk of the land and made me promise to hold it in the moon's shine before drinking it. They live here, fully, all year round, third generation now, they have staked claim to a third plot this year and have started building on it.
+They tell me the plots are first come first serve as long as they are free and since they live here, they are always first.
+In the afternoon I have walked the roads and circuits, I mentally mapped the spaces, the plots where a city grows for a single season before riding out again. There's different shapes, different sizes, distance to the center with temple and all of it waiting.
+A group of five hunters arrived from the (Clan name), I saw them approach the Stillhands, who instructed them which plots are still free, the (Clan name) took a big one, central, visible. The Stillhands told me only few are reserved and the one next to the (clan name) is going to be a market. ((GM note: need to show politics here in a natural way, sending five hunters to come here first is a statement, going central, visible. Maybe one or two more sentences, maybe a quote from the Stillhands.))
+
+*Day 40.* Today I visited the temple, like the rest of Veidrath it is missing the (people, content, heart, choose a good word). The Lady Hinka is out on her hunting season, the remaining Stillhands explained. If I needed an (Audience? What's the word to speak to a god? Need one, specific custom on Tyrnarra) it would be best to come back when the grass lands are white or go out and hunt for the huntress herself.
+For Lunch I had a Meat Spear (Maybe special name), a local custom where they prepare little of all types of meat a clan has gotten over the year.
+
+*(still writing)*
+
 ---
 
 ## Day 38 *(Claude redraft, 2026-09-15; pending the GM's read-through and rewrite. Not GM-Written until then.)*
