@@ -12,7 +12,7 @@ Parent region: [`../ehizahar.md`](../ehizahar.md), *Lands of Villtur*.
 
 ## Day 0
 
-The Lands of Villtur are colloquially known as the blank lands among my colleagues. Few dare to travel into it to map it out, most of them seem to not come back. I am currently located in Baratalda Country, the high fair recently convened in Sagarri, it was an interesting affair but hardly worth mentioning for geographic purposes.
+The Lands of Villtur are colloquially known as the blank lands among my colleagues. Few dare to travel into it to map it out, most of them seem to not come back. I am currently located in Baratalda Country, the harvest fair recently convened in Sagarri, it was an interesting affair but hardly worth mentioning for geographic purposes.
 What was notable though was the presence of two Villtur clans.
 The more surprising thing was that I negotiated with Harahari Iron Fangs and made a deal of safe passage through their circuit and from then on through a few other clans until I reach Veidrath and from there I was promised safe passage to the harsh north all the way to the Sky scar of Fenurra.
 I doubt this endeavor will end fruitful but I can hope my log book survives.
