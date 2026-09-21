@@ -476,6 +476,7 @@ Nahaskel itself is old-stratum (Basque *nahas* "chaos, to mix" → scrambled and
     - **The stopped carry the place.** A city's people carry the city as their clan (*Lori Aymuru*); a district half become Veidrath adds the place after the clan (*Lori Moonglow, Veidrath*).
     - **Standing-words** before the given name, given by the clan and never by yourself: *Grandmother* (the teacher of the young, no kin to them), *Rider*, *Kinrider*, *Leader*.
     - **Given names**, drifted from the base: *Batou, Temor, Sarna, Oyun, Naran, Altan, Bolt, Chulun, Delgar, Erdan, Ganbat, Hulan, Nomin, Tuya, Zaya, Bayar, Munk, Setseg, Suk, Gerel*; **Orrun** and **Ymra** fit the sound; **Trenbeom** is GM-coined and stands.
+    - **Sample hunt names** (plain Talanese): Whitepelt, Redstag, Longwinter, Threeriver, Ashfoot, Coldford, Nightbull, Sixpoint, Bluehare, Stillwater, Ironhorn, Firstsnow. **Further clan bynames** coined as samples: Grey Manes, River Teeth, Longgrass.
     - **Scope.** The Lands of Villtur, clans and cities alike. Fenurra keeps its Latinate register.
   - **The Taptent**: plain Talanese; Veidrath's tavern, grown from one man selling homebrew out of a tent into a sprawling permanent house that stands mostly empty nine months of the year and full every night for three. GM-coined in the Zenerious log.
   - **Yearspit**: plain Talanese; a spit of a little of every kind of meat a clan took over the year, eaten at Veidrath. GM-coined in the Zenerious log.
