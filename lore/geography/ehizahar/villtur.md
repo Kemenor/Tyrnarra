@@ -94,6 +94,19 @@ The slack is what buys the halt. A grass clan's loop is long because a clan that
 
 The Centaur clans stop least of the three peoples. The ones who do stop are the ones who learned to wait, and a Centaur in Aymuru still rides out at dawn after whatever moved in the night and cannot make herself stop. Where the settle-pull is weakest in Villtur, it is weakest in a Centaur clan, and the deep-clan argument has its firmest ground there.
 
+## The Orc clans
+
+> "I do not care where it ends. In the ring, at a table, on the grass in spring. It ends, and I sleep."
+> Ganbat Ironhorn is Harahari Iron Fangs, at the ring's edge, the gathering of 2531
+
+An Orc and her mount are one body. Where the Centaur's beast runs beside her, the Orc's is under her and the two move as one thing in the charge, and the beast is the **vigross**, bred by ground the way the lasterki is: long-boned on the grass, thick and short in the snow, and at the jungle's edge a low, broad animal that goes through what a runner cannot. The Orc clans ride the Basogur's fringe where the Centaur clans are few; the jungle itself is the Lizardfolk clans' ground.
+
+The gathering is the one place on Talan where nothing can be finished, and for an Orc that is the unbearable place. The Gathering-Peace holds; nobody breaks it; and every open thing a clan brought in has to be carried around the rings for the length of the winter. The ring of packed earth is the shortest road out. An Orc does not care whether a thing ends in the ring or at a table in the Taptent, only that it ends, and the ring is simply the way that ends it fastest; a Lizardfolk at the same table waits for the moment to be ripe and strikes then. So the arena fills with Orc leaders and the Taptent's back tables with Lizardfolk, and the Stillhands, who hold that some fight and some talk, watch both.
+
+A feud is an open thing, and the Orc clans carry more of them than anyone. An Orc clan's circuit is shaped by its feuds the way a Centaur's is shaped by its slack: the loop bends toward the clan it has business with and away from the one it has settled. A feud closes in the ring, or at a table, or by a marriage that moves a name, and the closing of one is generally the opening of the next, which the Orc clans know and do anyway.
+
+The stop is the hardest closing there is. A wall is a thing finished, a city is a circuit ended, and the Orc clans stop most of the three peoples: the clan-towns that are one clan stopped are Orc-heavy more often than not, and the Moonglow at Veidrath, three generations stopped and building on a third plot, are an Orc clan. A settled Orc finds market-day carries something of a well-led charge, and the settle-pull, which is a rail story on the map, is an Orc story on the ground.
+
 ## The gathering, from the grass
 
 From Villtur the god-city is the board. A clan rides in when its circuit brings it, takes what ground the Stillhands say is free, and where it pitches is read by every clan after it: next to whom, how near the sanctum, how near the market, how many fires, how loud the beasts are picketed. A city sends a delegation and keeps a gated quarter in the belt of stone. The clans that stopped at Veidrath itself have begun to answer *Veidrath* when asked their clan, and then to think, and then to give a clan name as well. The rest of the city, its three strata and its two governments that do not mesh, is written with the god-city.
@@ -151,11 +164,12 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 
 ## Named clans and figures
 
-- **Harahari Iron Fangs**: the grass-clan that took Zenerious's first deal at the Sagarri fair and carried him from the mountains to the hill with the tree. Their leader then was **Trenbeom**, who told him he would miss the mountains.
+- **Harahari Iron Fangs**: an Orc-heavy grass-clan, the one that took Zenerious's first deal at the Sagarri fair and carried him from the mountains to the hill with the tree. Their leader then was **Trenbeom**, who told him he would miss the mountains; their leader now is **Ganbat Ironhorn**, who does not care where a thing ends.
+- **Oihandar Red Tusks**: an Orc clan of the Basogur fringe, riding the low broad vigross through ground a runner cannot cross.
 - **Vindrakar Hooves**: the grass-clan whose circuit runs from the hill to the Skoga; they think the Frogged Tribe are strange.
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
 - **Sarnakhar Ash Runners**: a younger grass-clan, whose five riders sent ahead took the big central plot beside the market at the gathering Zenerious watched fill.
-- **Moonglow**: a clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
+- **Moonglow**: an Orc clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
 - **Chulun was Sarnakhar Ash Runners**: a lone wolf of the band that carried Zenerious through the north; the one who stepped out on the third day of the storm and heard the Snow Lions first. Banished from the clan Zenerious had watched pitch beside the market at Veidrath sixteen days earlier; the log does not know it.
 - **Ohrvindar Long Loop**: a Centaur-heavy grass clan whose loop is the longest in the country; they carry word across the centre. The Snow Lions took their river-bend the year they halted nine days at a Geldune.
 - **Elurzahar White Halt**: a Centaur-heavy snow clan of the north, whose byname is the Geldune in the Guild's tongue; the standing ones are commonest there.
@@ -186,4 +200,4 @@ The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty
 - **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
 - **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
-**Still open:** the Orc and Lizardfolk passes (the Centaur pass landed 2026-09-21); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
+**Still open:** the Lizardfolk pass (the Centaur and Orc passes landed 2026-09-21); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
