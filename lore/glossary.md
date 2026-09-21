@@ -480,6 +480,7 @@ Nahaskel itself is old-stratum (Basque *nahas* "chaos, to mix" → scrambled and
     - **Scope.** The Lands of Villtur, clans and cities alike. Fenurra keeps its Latinate register.
   - **The Taptent**: plain Talanese; Veidrath's tavern, grown from one man selling homebrew out of a tent into a sprawling permanent house that stands mostly empty nine months of the year and full every night for three. GM-coined in the Zenerious log.
   - **Yearspit**: plain Talanese; a spit of a little of every kind of meat a clan took over the year, eaten at Veidrath. GM-coined in the Zenerious log.
+  - **Chulun was Sarnakhar Ash Runners**: the lone wolf who heard the Snow Lions on Day 54 of the log; a banished Ash Runner, in the register's clanless form. Given name from the Villtur base.
   - **Zenerious**: Master Zenerious of the Air Monastery, Wyndwalken; author of the GM-written field-log of the Villtur crossing (`geography/ehizahar/zenerious-log.md`). Wyndwalken-register name. His **hearthrune**: plain English compound, the Air Monastery's rune-warmer, lit and doused like a campfire.
   - **Coll Brannock**: Talanese, plain; surveyor of the Northern line's Villtur stretch, whose reports note each bend by the clan that caused it.
 - **Ardo Beroa**: Basque *ardo* (wine) + *beroa* (hot/warm) = "warm wine"; the small ice-isle archipelago off Ehizahar's northern arctic coast (literal meaning ironically opposite to the geography)

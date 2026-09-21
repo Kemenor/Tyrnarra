@@ -138,6 +138,7 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
 - **Sarnakhar Ash Runners**: a younger grass-clan, whose five riders sent ahead took the big central plot beside the market at the gathering Zenerious watched fill.
 - **Moonglow**: a clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
+- **Chulun was Sarnakhar Ash Runners**: a lone wolf of the band that carried Zenerious through the north; the one who stepped out on the third day of the storm and heard the Snow Lions first. Banished from the clan Zenerious had watched pitch beside the market at Veidrath sixteen days earlier; the log does not know it.
 - **The Snow Lions**: a northern clan of the ice-country. **Orrun**, one of their riders, put the clans' position on the rail on the record at the gathering of 2531.
 - **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed; its **kinrider** post.
 - **Field-priest Ymra** of the Stillhands: a hunt-priest who goes out with the clans and speaks for none of them.

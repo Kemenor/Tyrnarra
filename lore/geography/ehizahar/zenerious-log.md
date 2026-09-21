@@ -4,7 +4,7 @@
 
 **Fate of the author (GM ruling, 2026-09-15):** Zenerious made it out. He made more deals on the way back, walked out of Villtur, and handed the journal to the Air Monastery in person.
 
-**Status:** complete from Day 0 to Day 60 in the GM's hand (the Veidrath days 38 and 40 rewritten by the GM 2026-09-20/21, replacing Claude's drafts; a third Veidrath day was considered and is not needed). The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 and the Villtur register of 2026-09-21; the lone wolf *x* on Day 54 is still unnamed.
+**Status:** complete from Day 0 to Day 60 in the GM's hand (the Veidrath days 38 and 40 rewritten by the GM 2026-09-20/21, replacing Claude's drafts; a third Veidrath day was considered and is not needed). The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 and the Villtur register of 2026-09-21. Every name in the log is filled.
 
 Parent region: [`../ehizahar.md`](../ehizahar.md), *Lands of Villtur*.
 
@@ -110,7 +110,7 @@ They tell me not to worry, I hope they are right, because these cold winds seem 
 ## Day 54
 
 Things had gone bad when a snowstorm broke over us, it came in a flash and then you barely could see your own hand. The lone wolves hunkered down and we erected tents, no cave was close by, tents within snow walls. They were more efficient than I have ever seen. I helped out best I could, my fingers were freezing but we got it done, protected at least. The unofficial leader quickly made a rationing plan. Two days we were stuck, getting burried, with nothing but us and a snowstorm. One disappeared in the middle of the second night, I know not where, I don't think I will see her again.
-The storm started subsiding on the third day, when *x* left to check we heard voices, it seems The Snow Lions had found us. It was a tense stand off for a while. The lone wolves were able to make a deal, they had given them what I had paid them and then some. I feel the Snow Lions accepted out of pity. They gave us enough provisions to get the rest of the way.
+The storm started subsiding on the third day, when Chulun left to check we heard voices, it seems The Snow Lions had found us. It was a tense stand off for a while. The lone wolves were able to make a deal, they had given them what I had paid them and then some. I feel the Snow Lions accepted out of pity. They gave us enough provisions to get the rest of the way.
 
 ## Day 60
 
