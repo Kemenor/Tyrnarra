@@ -42,6 +42,8 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 ## Content requirements
 
 - Live tensions are required. They are campaign seeds; state the tension as fact and leave it open, unresolved, and unarbitrated.
-- One defect per region: something merely broken. Uncontested, no advocates, no faction benefiting; **outsiders notice it, locals know it and accept it, because changing it is not worth the trouble to them.** Two registers among the exemplars: the everyday kind (the Harro Distiratsua junction platform-board that still lists a gem-town's attraction forty years dried up; travelers detour and come back sour, and repainting the board is nobody's job) and the missing kind (the Rolls keep no way to unregister; the register only grows, and names of the long-departed stay listed). A defect needs no first person; the chronicler's-I enters only when the defect is a missing thing and the failed search is the demonstration.
+- **The defect requirement is dropped (GM ruling, 2026-09-19, at the Villtur build).** v2 asked for one uncontested defect per region (the stale platform-board, the Rolls with no way to unregister). In practice it produced candidates the GM had to correct every time and added little at region scale, so it is no longer required. An existing defect in a built entry stays; a broken thing may still appear where it is genuinely there, written as any other fact; nothing is invented to fill the slot.
+
+**Dropped from v2 (2026-09-19, Villtur ruling):** the one-defect-per-region requirement.
 
 **Dropped from v1 (2026-08-13, Breidey exemplar ruling):** the one-per-page ornament arithmetic; the never-budget bookkeeping; the blanket quotation ban; uniform "end on the last fact."
