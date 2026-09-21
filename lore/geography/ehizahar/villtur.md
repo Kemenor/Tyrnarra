@@ -107,6 +107,21 @@ A feud is an open thing, and the Orc clans carry more of them than anyone. An Or
 
 The stop is the hardest closing there is. A wall is a thing finished, a city is a circuit ended, and the Orc clans stop most of the three peoples: the clan-towns that are one clan stopped are Orc-heavy more often than not, and the Moonglow at Veidrath, three generations stopped and building on a third plot, are an Orc clan. A settled Orc finds market-day carries something of a well-led charge, and the settle-pull, which is a rail story on the map, is an Orc story on the ground.
 
+## The Lizardfolk clans
+
+> "The Iron Fangs took the bend the spring after the Loop halted. Good grass, and they rode it hard. We took the ford above the bend, which nobody wanted. In four years the bend floods and the ford does not. We will be there."
+> Nomin Threeriver of Myrkvid Long Web, at a back table of the Taptent, 2531
+
+A Lizardfolk and her beast extend each other. The beast is neither ridden nor run beside; it is the reach the hunter lacks, and each ground supplies a different one. In the jungle it is the **armiar**, the great spider, its web the hunter's patience given legs and her senses spread across a hundred yards of canopy. On the grass it is the **nadra**, the serpent, the strike from stillness on ground with nowhere to hide. In the snow it is the **hontz**, the white owl, the silent watch over a field where nothing moves for days. The Lizardfolk clans are most numerous in the jungle and along its rivers, where the runners cannot run and the chargers cannot charge, and the river-clans on the Skoga are theirs.
+
+The cut in Villtur is taken three ways. A thinned clan's best grass goes in spring to whoever is there first, and that is the Orcs' and the Centaurs' game, won by the charge and the run. The Lizardfolk clans watch it go and take the ground beside it: the ford above the bend, the slope that drains, the winter camp nobody rates. They have seen the river in four years' time and they will be there. The patient inherit Villtur slowly, and by the time anyone counts, the count is theirs.
+
+At the gathering the Lizardfolk leaders keep the back tables of the Taptent. A matter is walked around for the length of the winter and struck once, at the moment that is ripe, in one sentence; if the sentence does not land, the matter is walked around again. The Orcs at the ring find this maddening; the Stillhands find it restful.
+
+A Lizardfolk feud is silent, and it lasts. It is opened by nothing anyone outside the clan can point to, held for years without a raid, and the strike, when it comes, is the first anyone else hears of it. If the strike does not end it, the clan goes back to the stalk, and the next strike comes when the next moment is ripe. The Frogged Tribe's feud with the other Lizardfolk tribes is over the Skoga itself: the one river worth waiting a lifetime for, and each of them is waiting.
+
+The Lizardfolk clans stop last and for good. A clan that decides to stop has taken a season over it and does not unstop, and the oldest stopped places in Villtur are theirs. Aymuru's founding clan was Lizardfolk, which is why the fixed address has stayed exactly what it decided to be and grown into nothing more.
+
 ## The gathering, from the grass
 
 From Villtur the god-city is the board. A clan rides in when its circuit brings it, takes what ground the Stillhands say is free, and where it pitches is read by every clan after it: next to whom, how near the sanctum, how near the market, how many fires, how loud the beasts are picketed. A city sends a delegation and keeps a gated quarter in the belt of stone. The clans that stopped at Veidrath itself have begun to answer *Veidrath* when asked their clan, and then to think, and then to give a clan name as well. The rest of the city, its three strata and its two governments that do not mesh, is written with the god-city.
@@ -168,13 +183,15 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 - **Oihandar Red Tusks**: an Orc clan of the Basogur fringe, riding the low broad vigross through ground a runner cannot cross.
 - **Vindrakar Hooves**: the grass-clan whose circuit runs from the hill to the Skoga; they think the Frogged Tribe are strange.
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
+- **Myrkvid Long Web**: a Lizardfolk clan of the jungle, hunting through the armiar; **Nomin Threeriver** sits for it at the Taptent's back tables.
+- **Geldibel Still Grass**: a Lizardfolk grass-clan, hunting through the nadra, who took the ford above the bend the year the Iron Fangs took the bend.
 - **Sarnakhar Ash Runners**: a younger grass-clan, whose five riders sent ahead took the big central plot beside the market at the gathering Zenerious watched fill.
 - **Moonglow**: an Orc clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
 - **Chulun was Sarnakhar Ash Runners**: a lone wolf of the band that carried Zenerious through the north; the one who stepped out on the third day of the storm and heard the Snow Lions first. Banished from the clan Zenerious had watched pitch beside the market at Veidrath sixteen days earlier; the log does not know it.
 - **Ohrvindar Long Loop**: a Centaur-heavy grass clan whose loop is the longest in the country; they carry word across the centre. The Snow Lions took their river-bend the year they halted nine days at a Geldune.
 - **Elurzahar White Halt**: a Centaur-heavy snow clan of the north, whose byname is the Geldune in the Guild's tongue; the standing ones are commonest there.
 - **The Snow Lions**: a northern clan of the ice-country. **Orrun**, one of their riders, put the clans' position on the rail on the record at the gathering of 2531.
-- **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed; its **kinrider** post.
+- **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed, founded by a Lizardfolk clan whose name the city dropped; its **kinrider** post.
 - **Field-priest Ymra** of the Stillhands: a hunt-priest who goes out with the clans and speaks for none of them.
 - **Surveyor Coll Brannock** of the Northern line: the consortium's surveyor on the Villtur stretch, whose reports note each bend by the clan that caused it.
 - **Master Zenerious** of the Air Monastery, whose log is the record (see [`zenerious-log.md`](zenerious-log.md)).
@@ -200,4 +217,4 @@ The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty
 - **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
 - **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
-**Still open:** the Lizardfolk pass (the Centaur and Orc passes landed 2026-09-21); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
+**Still open:** the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.

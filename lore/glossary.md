@@ -471,6 +471,11 @@ Nahaskel itself is old-stratum (Basque *nahas* "chaos, to mix" → scrambled and
   - **Vigross**: Icelandic *vígr* (fighting, battle-ready) + *hross* (horse) → compounded and worn → **Vigross**. The Orc's bond-beast, ridden, the two one body in the charge; one species in three breeds by ground (long-boned on the grass, thick and short in the snow, low and broad at the jungle's edge).
   - **Oihandar Red Tusks**: Basque *oihan* (forest, jungle) + *-dar* (of, belonging to) → **Oihandar**; byname plain. An Orc clan of the Basogur fringe.
   - **Ganbat Ironhorn is Harahari Iron Fangs**: the Iron Fangs' present leader, in the register's leader form; on the record at the ring's edge, 2531.
+  - **Armiar**: Basque *armiarma* (spider), the doubled syllable worn away → **Armiar**. The Lizardfolk's jungle beast, the great spider whose web extends the hunter's senses; neither ridden nor run beside.
+  - **Nadra**: Icelandic *naðra* (adder), *ð* hardened → **Nadra**. The Lizardfolk's grass beast, the strike from stillness.
+  - **Hontz**: Basque *hontz* (owl), undrifted; folk say *the white hontz*. The Lizardfolk's snow beast, the silent watch.
+  - **Myrkvid Long Web**: Icelandic *myrkviðr* (dark wood), *ð* hardened → **Myrkvid**; byname plain. A Lizardfolk jungle clan; **Nomin Threeriver** speaks for it at the Taptent.
+  - **Geldibel Still Grass**: Basque *geldi* (still) + *belar* (grass) → *geldibelar*, worn → **Geldibel**; byname plain. A Lizardfolk grass clan.
   - **Ohrvindar Long Loop**: Icelandic *ör* (arrow) + *vindr* (wind) → *örvindr*, flattened → **Ohrvindar**; byname plain. A Centaur-heavy grass clan with the longest loop in Villtur.
   - **Elurzahar White Halt**: Basque *elur* (snow) + *zahar* (old) → **Elurzahar**; byname plain, the Geldune in the Guild's tongue. A Centaur-heavy snow clan of the north.
   - **Aymuru**: Villtur regional register (coined by the GM, no deep-stratum derivation recorded). The crossing-city of the central grass, level 3–4, mixed; a clan whose circuit stopped where several circuits cross; the country's fixed address.
