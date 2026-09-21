@@ -28,6 +28,13 @@
   /* Card grids: the moves of the game, the customs of a stopped clan, the clans */
   .game-grid, .city-grid, .clan-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
   .game-grid .card-name, .city-grid .card-name, .clan-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+
+  /* The crossing, day by day: a static timeline of the log */
+  .log-day { position: relative; padding: 8px 0 8px 16px; display: flex; gap: 14px; align-items: baseline; }
+  .log-day::before { content: ''; position: absolute; left: -21px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--domain-accent); border: 2px solid var(--bg); }
+  .log-day .ld-date { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.15em; color: var(--domain-accent); min-width: 62px; flex-shrink: 0; text-transform: uppercase; }
+  .log-day .ld-text { line-height: 1.55; }
+  @media (max-width: 600px) { .log-day { flex-direction: column; gap: 2px; } }
 </style>
 </head>
 <body data-page="villtur">
@@ -64,12 +71,6 @@
     </dd>
     <dt>Source</dt><dd>The field-log of <b>Master Zenerious</b> of the Air Monastery, who crossed Villtur from the Baratalda fairs to Fenurra at the opening of the Adventurer Era, before the rail, and brought the log home. It is quoted throughout.</dd>
   </dl>
-
-  <div class="gods-city" style="border-color: rgba(168,176,112,0.5);">
-    <div class="gods-city-label">The Fixed Address</div>
-    <div class="gods-city-name">Aymuru</div>
-    <div class="gods-city-byname">The crossing-city of the central grass · a clan whose circuit stopped where several circuits cross</div>
-  </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
@@ -347,6 +348,31 @@
       <div class="card-name">Surveyor Coll Brannock</div>
       <p>The consortium's surveyor on the Northern line's Villtur stretch, whose reports note each bend by the clan that caused it.</p>
     </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-crossing" class="section-heading">The Crossing, Day by Day</h2>
+  <div class="prose">
+    <p>The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty days, nine Handings, and one stretch alone.</p>
+  </div>
+  <div class="timeline">
+    <div class="log-day"><div class="ld-date">Day 0</div><div class="ld-text">Sagarri, the Baratalda fair. Two Villtur clans present; a deal of safe passage struck with the Harahari Iron Fangs, through their circuit and on, clan by clan, to Veidrath and the north.</div></div>
+    <div class="log-day"><div class="ld-date">Day 2</div><div class="ld-text">The grass plains with the mountains still close. First ride on the Etxaber, a beast that carries a family; the scouts on smaller mounts. Trenbeom says he will miss the mountains.</div></div>
+    <div class="log-day"><div class="ld-date">Day 6</div><div class="ld-text">The mountains left behind, rolling green ahead. The first Lurresna, every clan's own secret; it makes him sputter.</div></div>
+    <div class="log-day"><div class="ld-date">Day 14</div><div class="ld-text">The edge of the Iron Fangs' circuit: a hill with a tree on it, three colored strings on a token, and a wait for the Vindrakar Hooves.</div></div>
+    <div class="log-day"><div class="ld-date">Day 20</div><div class="ld-text">With the Hooves, the Basogur in sight. Their Lurresna goes down easier. Ahead, the Skoga and the Frogged Tribe.</div></div>
+    <div class="log-day"><div class="ld-date">Day 23</div><div class="ld-text">On the river with the Frogged Tribe, floating on timber; they vanish into the jungle for days and come back with meat. Fruity Lurresna. Different traditions, one root.</div></div>
+    <div class="log-day"><div class="ld-date">Day 28</div><div class="ld-text">The peak of the bend, the closest point to Veidrath. The Frogged Tribe turns back; he goes on alone, and asks Fisaya for her winds.</div></div>
+    <div class="log-day"><div class="ld-date">Day 30</div><div class="ld-text">Two nights without a person. A hearthrune under a tree, Aymuru visible and two days off, and a hunter in colors he does not know, or nothing.</div></div>
+    <div class="log-day"><div class="ld-date">Day 32</div><div class="ld-text">Aymuru: a city built by nomads, houses with tent-plots beside them, a worker glad to move quarters with his work.</div></div>
+    <div class="log-day"><div class="ld-date">Day 34</div><div class="ld-text">On the road with the Aymuru delegation. The same shape as a clan, tents on lines, ride-outs rostered. The city's Lurresna, drunk only on the road. The kinrider calls dinner.</div></div>
+    <div class="log-day"><div class="ld-date">Day 38</div><div class="ld-text">Veidrath, with the city not there yet: empty plots between dirt roads, waiting for the clans; the Aymuru quarter that stopped packing fifteen years ago; the Moonglow, three generations stopped, teaching the young; five Sarnakhar Ash Runners taking the plot beside the market, which says what it says.</div></div>
+    <div class="log-day"><div class="ld-date">Day 40</div><div class="ld-text">The Crossing without its host, the Lady out on her hunting season; the Yearspit; a bout in the arena, two clans at a table in the Taptent, a wedding on the way home, and each time a kinrider explains they are settling the circuits.</div></div>
+    <div class="log-day"><div class="ld-date">Day 43</div><div class="ld-text">Out of Veidrath with a cluster of field-priests bound for Modurtre, the mountain the mother trees ring; a solid bed missed already; the priests' Lurresna, Hinka's offering, spiced.</div></div>
+    <div class="log-day"><div class="ld-date">Day 50</div><div class="ld-text">The priests gone, a cave, the cold beyond what a hearthrune answers. The lone wolves find him: the clanless, together and apart by choice; twelve of them after a fight, thirteen with him.</div></div>
+    <div class="log-day"><div class="ld-date">Day 54</div><div class="ld-text">The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.</div></div>
+    <div class="log-day"><div class="ld-date">Day 60</div><div class="ld-text">Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.</div></div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
