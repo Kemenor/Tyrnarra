@@ -144,4 +144,25 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 - **Surveyor Coll Brannock** of the Northern line: the consortium's surveyor on the Villtur stretch, whose reports note each bend by the clan that caused it.
 - **Master Zenerious** of the Air Monastery, whose log is the record (see [`zenerious-log.md`](zenerious-log.md)).
 
+## The crossing, day by day
+
+The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty days, nine Handings, and one stretch alone.
+
+- **Day 0.** Sagarri, the Baratalda fair. Two Villtur clans present; a deal of safe passage struck with the Harahari Iron Fangs, through their circuit and on, clan by clan, to Veidrath and the north.
+- **Day 2.** The grass plains with the mountains still close. First ride on the Etxaber, a beast that carries a family; the scouts on smaller mounts. Trenbeom says he will miss the mountains.
+- **Day 6.** The mountains left behind, rolling green ahead. The first Lurresna, every clan's own secret; it makes him sputter.
+- **Day 14.** The edge of the Iron Fangs' circuit: a hill with a tree on it, three colored strings on a token, and a wait for the Vindrakar Hooves.
+- **Day 20.** With the Hooves, the Basogur in sight. Their Lurresna goes down easier. Ahead, the Skoga and the Frogged Tribe.
+- **Day 23.** On the river with the Frogged Tribe, floating on timber; they vanish into the jungle for days and come back with meat. Fruity Lurresna. Different traditions, one root.
+- **Day 28.** The peak of the bend, the closest point to Veidrath. The Frogged Tribe turns back; he goes on alone, and asks Fisaya for her winds.
+- **Day 30.** Two nights without a person. A hearthrune under a tree, Aymuru visible and two days off, and a hunter in colors he does not know, or nothing.
+- **Day 32.** Aymuru: a city built by nomads, houses with tent-plots beside them, a worker glad to move quarters with his work.
+- **Day 34.** On the road with the Aymuru delegation. The same shape as a clan, tents on lines, ride-outs rostered. The city's Lurresna, drunk only on the road. The kinrider calls dinner.
+- **Day 38.** Veidrath, with the city not there yet: empty plots between dirt roads, waiting for the clans; the Aymuru quarter that stopped packing fifteen years ago; the Moonglow, three generations stopped, teaching the young; five Sarnakhar Ash Runners taking the plot beside the market, which says what it says.
+- **Day 40.** The Crossing without its host, the Lady out on her hunting season; the Yearspit; a bout in the arena, two clans at a table in the Taptent, a wedding on the way home, and each time a kinrider explains they are settling the circuits.
+- **Day 43.** Out of Veidrath with a cluster of field-priests bound for Modurtre, the mountain the mother trees ring; a solid bed missed already; the priests' Lurresna, Hinka's offering, spiced.
+- **Day 50.** The priests gone, a cave, the cold beyond what a hearthrune answers. The lone wolves find him: the clanless, together and apart by choice; twelve of them after a fight, thirteen with him.
+- **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
+- **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
+
 **Still open:** the Centaur people-pass (the run against the Etxaber and the bond-beasts: what a people that runs rides, if anything; their own countries and clans); the Orc and Lizardfolk passes; the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
