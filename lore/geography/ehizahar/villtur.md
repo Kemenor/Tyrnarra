@@ -76,6 +76,24 @@ Some clans stopped. A Villtur city is a clan whose circuit ended where it stood:
 
 The settled tier runs from clan-towns that are one clan stopped, near-pure in blood and circuit, to mixes like Aymuru, and the pull toward it is stronger every generation. Stopping makes the proof easier to keep. The deep clans know it, and their argument against the wall is the argument of people who can feel it losing, made to a goddess who has already begun to settle with her people (see [`../ehizahar.md`](../ehizahar.md), *Veidrath → Faith*).
 
+## The Centaur clans
+
+> "It's always a sight to behold when you sit on a hill and watch a circuit when you hear the thundering and not know where beast begins and man ends. There is a difference between centaurs and the others with their bond beasts. Where an orc seems to merge with theirs and a Lizardfolk and their bond beast extends each other. The centaur and their bond beast become the same on some level."
+> Field-priest Ymra of the Stillhands, on a hill above the Ohrvindar loop
+
+A Centaur clan on the move is a column of laden beasts with the people out in front of it. The Etxaber carry what a Centaur cannot: the tents, the gear, the young too small to run, and a Centaur clan keeps fewer of them than any other clan in Villtur, because its wealth is in legs. Beside each runner runs a **lasterki**, the beast a Centaur hunts with, and it runs beside her and never under her. On the grass the lasterki is long and lean and the loops are the longest in the country; in the snow it is heavy-coated, the runs are short and the waits are long; in the old conifer country it is short-legged for the trunks. The jungle holds few Centaur clans, because a runner cannot run in it.
+
+Word runs on Centaur legs. A message crosses Villtur the way a traveler does, clan to clan, and the clans that carry it fastest are the ones that can be at the far end of their loop and back before another clan has struck camp. A Centaur clan that carries word is paid in the coin the country has, grass and strings, and an Ohrvindar rider with a message has crossed three circuits by the time the sender's own clan has saddled.
+
+**The Geldune.** Villtur does not carry the fallen. A clan whose proof lapses loses its grass and nobody rides to help it, and that is the game and every clan plays it. The Centaur clans play it too, in every respect but one. When a leg breaks on the run, the run stops. The clan halts where she fell and stays, and the halt is the Geldune: the circuit broken for as long as it takes, the loop's timing lost, the grass at the far end left for whoever reaches it first. The one who stays beside her is the standing one, the rare Centaur who has learned to wait, and the crossing is done there on the loop by the clan, with no Stillhand within a hundred miles. Every clan in Villtur knows this about them. The game does not pause for it. A Centaur clan at its Geldune has lost grass for it, more than once, and does it anyway.
+
+> "We took the river-bend from the Long Loop the year they halted for a girl with a shattered foreleg. Nine days. We rode it and it was ours by the gathering. They knew. They would halt again tomorrow."
+> Orrun of the Snow Lions, 2531
+
+The slack is what buys the halt. A grass clan's loop is long because a clan that may have to stop for nine days needs nine days it can lose, and the running of word is what the slack is spent on in a year nobody falls.
+
+The Centaur clans stop least of the three peoples. The ones who do stop are the ones who learned to wait, and a Centaur in Aymuru still rides out at dawn after whatever moved in the night and cannot make herself stop. Where the settle-pull is weakest in Villtur, it is weakest in a Centaur clan, and the deep-clan argument has its firmest ground there.
+
 ## The gathering, from the grass
 
 From Villtur the god-city is the board. A clan rides in when its circuit brings it, takes what ground the Stillhands say is free, and where it pitches is read by every clan after it: next to whom, how near the sanctum, how near the market, how many fires, how loud the beasts are picketed. A city sends a delegation and keeps a gated quarter in the belt of stone. The clans that stopped at Veidrath itself have begun to answer *Veidrath* when asked their clan, and then to think, and then to give a clan name as well. The rest of the city, its three strata and its two governments that do not mesh, is written with the god-city.
@@ -139,6 +157,8 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 - **Sarnakhar Ash Runners**: a younger grass-clan, whose five riders sent ahead took the big central plot beside the market at the gathering Zenerious watched fill.
 - **Moonglow**: a clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
 - **Chulun was Sarnakhar Ash Runners**: a lone wolf of the band that carried Zenerious through the north; the one who stepped out on the third day of the storm and heard the Snow Lions first. Banished from the clan Zenerious had watched pitch beside the market at Veidrath sixteen days earlier; the log does not know it.
+- **Ohrvindar Long Loop**: a Centaur-heavy grass clan whose loop is the longest in the country; they carry word across the centre. The Snow Lions took their river-bend the year they halted nine days at a Geldune.
+- **Elurzahar White Halt**: a Centaur-heavy snow clan of the north, whose byname is the Geldune in the Guild's tongue; the standing ones are commonest there.
 - **The Snow Lions**: a northern clan of the ice-country. **Orrun**, one of their riders, put the clans' position on the rail on the record at the gathering of 2531.
 - **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed; its **kinrider** post.
 - **Field-priest Ymra** of the Stillhands: a hunt-priest who goes out with the clans and speaks for none of them.
@@ -166,4 +186,4 @@ The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty
 - **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
 - **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
-**Still open:** the Centaur people-pass (the run against the Etxaber and the bond-beasts: what a people that runs rides, if anything; their own countries and clans); the Orc and Lizardfolk passes; the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
+**Still open:** the Orc and Lizardfolk passes (the Centaur pass landed 2026-09-21); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
