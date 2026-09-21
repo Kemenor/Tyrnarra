@@ -4,7 +4,7 @@
 
 **Fate of the author (GM ruling, 2026-09-15):** Zenerious made it out. He made more deals on the way back, walked out of Villtur, and handed the journal to the Air Monastery in person.
 
-**Status:** **TODO (GM): rewrite the Veidrath section (Days 38, 40, 42).** The three entries are Claude drafts from the GM's sketches (2026-09-15, redrafted flatter the same day); the GM has read them, judged them okay for now, and will rewrite them in his own hand. They do not carry the GM-Written status until then. The GM's original listing of what the days must contain sits at the head of the section below. The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 (Etxaber, Lurresna, hearthrune, Vindrakar Hooves, Skoga, Modurtre, the strings, the Handing, Sagarri, Aymuru); the lone wolf *x* on Day 54 is still unnamed.
+**Status:** **TODO (GM): rewrite the Veidrath section (Days 38, 40, 42).** The three entries are Claude drafts from the GM's sketches (2026-09-15, redrafted flatter the same day); the GM has read them, judged them okay for now, and will rewrite them in his own hand. They do not carry the GM-Written status until then. The GM's original listing of what the days must contain sits at the head of the section below. The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 (Etxaber, Lurresna, hearthrune, Vindrakar Hooves, Skoga, Modurtre, the strings, the Handing, Sagarri, Aymuru); the lone wolf *x* on Day 54 is still unnamed; the Villtur register (given + hunt + clan) was recorded 2026-09-21 and the Day 38/40 placeholders filled (Sarnakhar Ash Runners; Bayar Moonglow).
 
 Parent region: [`../ehizahar.md`](../ehizahar.md), *Lands of Villtur*.
 
@@ -105,7 +105,7 @@ I have my next passage. A cluster of the field-priests is leaving in three days 
 Lunch I have taken with the moon glows, they have given me a small bottle of their Milk of the land and made me promise to hold it in the moon's shine before drinking it. They live here, fully, all year round, third generation now, they have staked claim to a third plot this year and have started building on it.
 They tell me the plots are first come first serve as long as they are free and since they live here, they are always first.
 In the afternoon I have walked the roads and circuits, I mentally mapped the spaces, the plots where a city grows for a single season before riding out again. There's different shapes, different sizes, distance to the center with temple and all of it waiting.
-A group of five hunters arrived from the (Clan name), I saw them approach the Stillhands, who instructed them which plots are still free, the (Clan name) took a big one, central, visible. The Stillhands told me only few are reserved and the one next to the (clan name) is going to be a market. The Stillhand who walked me back said five riders sent ahead is a clan telling everyone it can spare five riders. She said the plot beside the market is the one every clan has to walk past to buy anything, and that they knew that when they took it.
+A group of five hunters arrived from the Sarnakhar Ash Runners, I saw them approach the Stillhands, who instructed them which plots are still free, the Ash Runners took a big one, central, visible. The Stillhands told me only few are reserved and the one next to the Ash Runners is going to be a market. The Stillhand who walked me back said five riders sent ahead is a clan telling everyone it can spare five riders. She said the plot beside the market is the one every clan has to walk past to buy anything, and that they knew that when they took it.
 
 *Day 40.* Today I visited the temple, like the rest of Veidrath it is missing its host. The Lady Hinka is out on her hunting season, the remaining Stillhands explained. If I needed to petition her it would be best to come back when the grass lands are white or go out and hunt for the huntress herself.
 For Lunch I had a Yearspit, a local custom where they prepare little of all types of meat a clan has gotten over the year.
@@ -116,7 +116,7 @@ It had started with a single person selling homebrew from his tent. People like 
 Nowadays the Taptent is a grown location, it takes up vast amounts of space of which most lies unused for 9 months out of the year.
 But the other three months it's filled to the brim every night she assured me.
 I saw some people here and there and two groups, the clan leaders were in a heated discussion. A kinrider explained they were settling the circuits for next year.
-On my way home, I stumbled upon a wedding, an Aymuru woman was marrying a (insert name here) the bride and groom to be looked happy, brimming.
+On my way home, I stumbled upon a wedding, an Aymuru woman was marrying a Bayar Moonglow the bride and groom to be looked happy, brimming.
 The father of the bride and the mother of the groom looked happier when they shook hands. A kinrider explained they were settling the circuits for the next generation.
 
 *(still writing)*

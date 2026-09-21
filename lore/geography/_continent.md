@@ -181,6 +181,7 @@ What a thing is called depends on when it was named, and a place carries its his
 | Thousand Kingdom (Zuzental) | Germanic / French | house prefix + ancestry suffix, heir-status mobility | `glossary.md`, *Thousand Kingdom: the noble-naming convention* |
 | Haizetsua (Vindul) | Tengu register | Tengu convention | `geography/vindul/haizetsua.md` |
 | Sortalde (off-continent) | Chinese-flavoured | dynastic | `_off-continent.md` |
+| Lands of Villtur (Ehizahar) | Mongolian (Khalkha) | given + hunt + clan; the clan half is current belonging, with the Talanese particles *of* (kinrider), *is* (leader), *was* (clanless); marriage moves a name; the stopped carry the place | `glossary.md`, *Lands of Villtur → the Villtur register*; `geography/ehizahar/villtur.md`, *What a Villturian is called* |
 | Valreka and Galdua Jendea (Lioaru) | Tamazight | given + birth-whale + chosen whale; *u* / *ult* for the guiding blood; *Mez-* child prefix, *-ghar* elder suffix | `glossary.md`, *Valreka → the Valrekan register*; `geography/lioaru.md`, *Valreka → What a Valrekan is called* |
 
 Regions without a row have no defined register yet; define one at the region's build, choosing a word-base that keeps the region's sound distinct from its neighbours' and a personal-name structure that no other region uses.

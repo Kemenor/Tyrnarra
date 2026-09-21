@@ -109,6 +109,17 @@ The settled half of Villtur reads the rail as the road the settled world was alw
 
 **The strings** are kept. There is no custom for giving them back, and a traveler who has been handed across Villtur carries every clan's colors afterward. Zenerious brought eleven sets home to the Air Monastery and the order still has them.
 
+## What a Villturian is called
+
+A Villturian has a given name, a hunt name if they have taken one, and a clan, and says all three as one thing: **Orrun Whitepelt Snow Lions**. Nothing is inherited. The clan half is what a person belongs to now; children take the clan and never a parent, and the half changes when the belonging does. The hunt name is the one part a person chooses, taken at the first hunt or after one worth naming, for the kill or for the ground, and set aside for a greater one.
+
+Between the hunt name and the clan stands a word, or none. An ordinary rider says nothing. A kinrider, the leader's chosen close, says *of*: **Bayar Redstag of Snow Lions**. The leader says *is*, because the leader is the clan: **Temor Longwinter is Snow Lions**. The clanless say *was*, and a band of lone wolves is a row of them: **Orrun Whitepelt was Snow Lions**. Banishment is the clan saying *was* of you before you say it yourself.
+
+A marriage between clans moves one name. Which of the two changes their clan half is the settlement read aloud at the wedding, and the clan that gained a name won the circuits. The stopped carry the place the way a clan carries its name: **Lori Aymuru**; a district that has half become Veidrath adds it after, **Lori Moonglow, Veidrath**. Standing-words go before the given name and are given by the clan, never taken: *Grandmother*, who teaches the young and is no kin to them; *Rider*; *Kinrider*; *Leader*.
+
+> "I saw them send the kids to the Moon glow tribe? district? next plot over. Where they are taught by Grandmother Lori as I have been told."
+> Zenerious, Day 38, at Veidrath
+
 ## Fenurra, beside
 
 Fenurra is a Villtur country that finished becoming itself. It has a capital carved into the Scar, a Speaker's Mantle, a Bone Gong that calls a War Council, and a marriage treaty with a foreign empire, and it holds itself apart even from its tribal neighbors. It could grow because it grew on ground no circuit wanted: the crater is harsh and resource-poor in everything but the star-metals, and a power rising there took no clan's grass. On the map it is a name that appears suddenly inside the green. The strings are honored to its border, and beyond the border the Fenurrans do their own watching (see [`fenurra.md`](fenurra.md)).
@@ -123,10 +134,12 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 - **Harahari Iron Fangs**: the grass-clan that took Zenerious's first deal at the Sagarri fair and carried him from the mountains to the hill with the tree. Their leader then was **Trenbeom**, who told him he would miss the mountains.
 - **Vindrakar Hooves**: the grass-clan whose circuit runs from the hill to the Skoga; they think the Frogged Tribe are strange.
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
+- **Sarnakhar Ash Runners**: a younger grass-clan, whose five riders sent ahead took the big central plot beside the market at the gathering Zenerious watched fill.
+- **Moonglow**: a clan stopped at Veidrath three generations ago, holding three plots and building on the third; **Grandmother Lori** teaches its young and the Aymuru quarter's beside them. **Bayar Moonglow** married a daughter of Aymuru on Day 40 of the log.
 - **The Snow Lions**: a northern clan of the ice-country. **Orrun**, one of their riders, put the clans' position on the rail on the record at the gathering of 2531.
 - **Aymuru**: the crossing-city of the central grass, level 3 or 4, mixed; its **kinrider** post.
 - **Field-priest Ymra** of the Stillhands: a hunt-priest who goes out with the clans and speaks for none of them.
 - **Surveyor Coll Brannock** of the Northern line: the consortium's surveyor on the Villtur stretch, whose reports note each bend by the clan that caused it.
 - **Master Zenerious** of the Air Monastery, whose log is the record (see [`zenerious-log.md`](zenerious-log.md)).
 
-**Still open:** the Centaur people-pass (the run against the Etxaber and the bond-beasts: what a people that runs rides, if anything; their own countries and clans); the Orc and Lizardfolk passes; the Villtur personal-name structure (Trenbeom, Orrun, Ymra are placeholders in the shape; the structure is unrecorded); the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
+**Still open:** the Centaur people-pass (the run against the Etxaber and the bond-beasts: what a people that runs rides, if anything; their own countries and clans); the Orc and Lizardfolk passes; the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
