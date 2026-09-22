@@ -217,4 +217,4 @@ The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty
 - **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
 - **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
-**Still open:** the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); Ardo Beroa; the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
+**Still open:** the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.
