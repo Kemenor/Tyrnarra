@@ -181,6 +181,7 @@ What a thing is called depends on when it was named, and a place carries its his
 | Thousand Kingdom (Zuzental) | Germanic / French | house prefix + ancestry suffix, heir-status mobility | `glossary.md`, *Thousand Kingdom: the noble-naming convention* |
 | Haizetsua (Vindul) | Tengu register | Tengu convention | `geography/vindul/haizetsua.md` |
 | Sortalde (off-continent) | Chinese-flavoured | dynastic | `_off-continent.md` |
+| Nahaskel (Nashavel) | Welsh; field-words in old Talanese | whim-name + coin-name + felt-family, field last; the coin-name is the one fixed part, the rest changes freely; eight fields (beod · wyrht · bytel · fare · laec · ceap · lar · wraec) | `glossary.md`, *Nahaskel → the Nahaskel register*; `geography/nashavel.md`, *Nahaskel → What a Nahaskeli is called* |
 | Lands of Villtur (Ehizahar) | Mongolian (Khalkha) | given + hunt + clan; the clan half is current belonging, with the Talanese particles *of* (kinrider), *is* (leader), *was* (clanless); marriage moves a name; the stopped carry the place | `glossary.md`, *Lands of Villtur → the Villtur register*; `geography/ehizahar/villtur.md`, *What a Villturian is called* |
 | Valreka and Galdua Jendea (Lioaru) | Tamazight | given + birth-whale + chosen whale; *u* / *ult* for the guiding blood; *Mez-* child prefix, *-ghar* elder suffix | `glossary.md`, *Valreka → the Valrekan register*; `geography/lioaru.md`, *Valreka → What a Valrekan is called* |
 
