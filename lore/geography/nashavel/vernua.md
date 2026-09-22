@@ -24,30 +24,33 @@
 
 ## The weather
 
-> Under the great tree on the Hegandi's lip
-> the shade is old enough to have a name,
-> and I have sat in it since the sun was low
-> and let the day come up around my boots.
+> Under the great tree on the Hegandi's brow
+> the shade has lain so long it has a name,
+> and I have sat in it since the light was low
+> and watched the morning fill the bowl below.
 >
-> A nut fell. I did not see the branch it left.
-> I cracked it on the root and ate it, and it was good,
-> and I have no idea which tree it belongs to,
-> which is the whole of this country in one mouthful.
+> A nut came down beside me, small and brown,
+> from a branch I never saw. I cracked it on the root.
+> Sweet, and a little green, and gone;
+> and I could not tell you what tree it was.
+> That is this country, whole, in one mouthful.
 >
-> Below me the green goes on to the water,
-> patched in colours no two alike, a garden here,
-> a field there, a strip of something purple I cannot name,
-> as if someone spilled a paintbox and decided to farm it.
+> Below me the green runs down to the water
+> in patches no two alike: a plot of blue,
+> a strip of something purple I have no word for,
+> gold beside it, as if a paintbox had been spilled
+> and someone had the sense to farm it.
 >
-> And out past all of it, over the far hills,
+> And past all that, over the far hills,
 > a storm is standing on the country like a guest
 > who has not said how long he means to stay.
-> The light under it is green. The farms under it are drinking.
+> The light beneath him is green. The farms beneath him drink.
 >
-> It may come here. It may turn at the lake and go north into the trees.
-> The people below me have stopped looking up at it.
-> I eat the nut.
-> The shade is cool. Whatever it is, it is not here.
+> It may come here. It may turn at the lake
+> and go north into the trees and be forgotten.
+> The people below have stopped looking up at it.
+> I eat the nut. The shade is cool.
+> Whatever it is, it is not here.
 > Tomas Bourdin, a poet of the Thousand Kingdom, written under a tree on the Hegandi in the summer of 2530
 
 The Dominion sits in a bowl. The Midarra sends its air in from the west, the canopy holds the north wet and warm, the Hegandi stops the south, and the hills in the middle turn what comes into weather that has never happened before. A storm can stand on one valley for a week and leave the next one dry; hail falls on a single farm; a spring comes in three days late on one side of Einbui and three weeks early on the other. The Dominion's farmers plant knowing none of it, and the coin comes out at sowing, over which field gets which seed, because there is nothing to predict with.
