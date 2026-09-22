@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ardo Beroa · Ehizahar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #8fd3d8;   /* steam over cold water · 11.59:1 on Style B bg */
+    --card-bg: rgba(14,24,26,0.55);
+  }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids: the islands, the parts of the count, the figures */
+  .isle-grid, .ring-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .isle-grid .card-name, .ring-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="ardo-beroa">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/ehizahar/ehizahar.html">Ehizahar</a><span class="sep">›</span><span>Ardo Beroa</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Ardo Beroa</div>
+    <div class="page-subtitle">Ehizahar Sub-Region · The Island of <i>Was</i></div>
+    <div class="page-flavor">"Snow falls and never reaches the ground."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>ardo</i> (wine) + <i>beroa</i> (warm): the warm wine. Read on the mainland as a joke about an arctic archipelago; read on the islands as the plain name of what they drink.</dd>
+    <dt>Position</dt><dd>Three large islands and a scatter of rock off Ehizahar's northern arctic coast, in the Hafra. <b>Urbero</b>, the southernmost, carries the warm ground and the town, <b>Hverhofn</b>; <b>Igeria</b> lies northwest, apart from the others; <b>Kaldey</b> lies north, and the snow stays on it. Baerfrost's coast runs west; the Villtur tundra faces the islands across the strait; the saltkeels of the northern Hafra arc pass the door.</dd>
+    <dt>Terrain</dt><dd>Hot springs on Urbero, pouring mineral streams out of the rock down to a harbour the warm outflow keeps open all winter. Snow falls the year round and melts before it lands. Mist off the warm water lies on everything.</dd>
+    <dt>Character</dt><dd>
+      <i>Nothing stays, except what they make</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Warm Ground</span><span class="pill">The Island of Was</span><span class="pill">The Rings</span><span class="pill">Hardfisk</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The clanless of Villtur, all three peoples and their mixes, and whoever else the arc ships left. No people is at home here; everyone was something else first.</dd>
+    <dt>Tongue</dt><dd>Talanese, and the Villtur register with its last word.</dd>
+    <dt>Faith</dt><dd>Tani, kept without a house. The goddess of the sky over the islands is Hinka, and nobody looks up.</dd>
+    <dt>Rule</dt><dd>The <b>Following</b>. Everyone follows someone, for as long as they think she chooses right; the count is read weekly off the rings on the harbour posts, and the leader with the fullest post speaks for the island until she does not.</dd>
+    <dt>Founded</dt><dd>The Dark Era, when the Corrupted God's spawn broke more clans in two centuries than the winters had in ten, and the <i>was</i>es of that age filled Hverhofn.</dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-warm-ground" class="section-heading">The Warm Ground</h2>
+
+  <div class="voice-quote">
+    <p>"Snow falls and never reaches the ground. For the week I have spent here, I haven't seen a day without snow falling from the sky and not a single one ever stayed on the ground.</p>
+    <p>You know you're reaching Ardo Beroa by the fact that the mist is a companion on these islands. It doesn't obfuscate fully but it wraps everything in this layer of mystique and distance becomes hard to estimate. I find that also applies to the people. You never know how close you've gotten and there's always the air of more to find out around them."</p>
+  </div>
+  <div class="voice-attrib">Merchant Ansel Torvane of Brasswatch, in a letter to his wife from a saltkeel of the northern arc</div>
+
+  <div class="prose">
+    <p>The ground on Urbero is warm. Springs come up through the rock in a dozen places above Hverhofn and run down to the harbour in mineral streams that steam in the air, and the town is built along them, house by house, each with its channel. The snow that falls on Urbero all year lands on warm stone and is water before anyone looks at it. The harbour is open in the deepest winter because the streams are led into it, and the mist that the warm water throws up on cold air is the islands' weather: a ship raises Ardo Beroa as a paleness on the sea before it raises land.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>Along the streams, where the water is warmest and the minerals thickest, grows the <b>hverber</b>, a low dark berry that fruits under falling snow. Pressed and fermented it is <b>ardo beroa</b>, the warm wine, and a cup of it puts the springs' heat into the blood for an hour; the arc crews buy it by the cask for the crossing north, and a man who has drunk it can stand a watch on the ice he could not stand without.</p>
+  </div>
+
+  <div class="prose">
+    <p>Kaldey has no springs, and the snow stays on it; the islanders graze it in summer and leave it in winter. Igeria sits apart to the northwest with a spring or two of its own and a hamlet on the warm side of it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-island-of-was" class="section-heading">The Island of <i>Was</i></h2>
+  <div class="prose">
+    <p>Everyone on Ardo Beroa was something else first. Villtur's clans are proofs of survival, renewed every year, and a clan whose proof lapses loses its grass and its people; a person banished from a clan loses it in a sentence. The Villtur register has a word for both: <i>was</i>. <b>Chulun was Sarnakhar Ash Runners.</b> The clanless on the mainland ride in bands and get travelers through for pay across ground no clan will grant. The ones who are done with the grass come here.</p>
+    <p>Nobody on the islands has a clan, a circuit, or a string, and nobody arrives with anything but a name. The register keeps the <i>was</i> and adds the place after it, the way Villtur's stopped clans do: <b>Setseg Coldford was Grey Manes, Hverhofn.</b> Crews say the boat among themselves and it never enters the name.</p>
+    <p>The islanders came here rather than to Myrria. The city of second chances would have taken the old name off them and given them a new face, and Araphel keeps every self that is set down. These are the ones who would not set it down. They kept the <i>was</i>, went to the ice, and keep Tani instead: the goddess of what is remembered and what decays, whose whale-city lies at the far end of the continent and whom none of them will ever see. There is no house of hers on the islands and no priest. The boats cross their own dead.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"There is no priest on a boat. We say what the mourning-liturgy says as far as we know it, and the sea takes the rest. She has never asked for more."</p>
+  </div>
+  <div class="voice-attrib">Batou Firstsnow was Elurzahar White Halt, Hverhofn, master of a fishing boat</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-an-islander-is-called" class="section-heading">What an Islander Is Called</h2>
+  <div class="prose">
+    <p>An islander carries the Villtur register with one word changed and two dropped. The form is the mainland's clanless form with the place after it: <b>Setseg Coldford was Grey Manes, Hverhofn</b>. The given name is whatever the grass gave. The middle name is the one part a person chooses, and on the islands it is a <b>sea-name</b> rather than a hunt name, taken from the water the way a hunt name was taken from a kill or a ground; a <i>was</i> who arrives with a hunt name keeps it or sets it aside for a sea-name, and most set it aside within the year. The <i>was</i> and the old clan stay exactly as they were said on the grass. The town comes last: <i>Hverhofn</i>, or <i>Igeria</i> for the hamlet.</p>
+    <p>Two of the mainland's particles do not exist here. Nobody says <i>of</i>, because there are no kinriders, and nobody says <i>is</i>, because no one on the islands is a clan; a leader at the Fullest Post says her name like anyone else, and the post is the only thing that ranks her. The ones born on the islands have no <i>was</i> and say none: <b>Naran, Hverhofn</b>, the given name and the town.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b> (the Villtur base)</p>
+    <div class="pill-row"><span class="pill">Altan</span><span class="pill">Batou</span><span class="pill">Bayar</span><span class="pill">Chulun</span><span class="pill">Delgar</span><span class="pill">Erdan</span><span class="pill">Gerel</span><span class="pill">Hulan</span><span class="pill">Naran</span><span class="pill">Nomin</span><span class="pill">Orrun</span><span class="pill">Oyun</span><span class="pill">Setseg</span><span class="pill">Suk</span><span class="pill">Temor</span><span class="pill">Tuya</span><span class="pill">Zaya</span></div>
+    <p style="margin:14px 0 6px;"><b>Sea-names</b> (for the water)</p>
+    <div class="pill-row"><span class="pill">Firstsnow</span><span class="pill">Coldford</span><span class="pill">Longnet</span><span class="pill">Greywater</span><span class="pill">Sixfathom</span><span class="pill">Stillmist</span><span class="pill">Warmquay</span><span class="pill">Icehole</span><span class="pill">Lastcast</span><span class="pill">Openwater</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b> (the <i>was</i> half is any clan of Villtur)</p>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.7;">
+      <li><i>Batou Firstsnow was Elurzahar White Halt, Hverhofn</i></li>
+      <li><i>Hulan Longnet was Harahari Iron Fangs, Igeria</i></li>
+      <li><i>Oyun was Frogged Tribe, Hverhofn</i>, a <i>was</i> who took no sea-name</li>
+      <li><i>Naran, Hverhofn</i>, born here</li>
+      <li><i>Zaya Greywater, Hverhofn</i>, born here, with a sea-name taken at her first winter on the boats</li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rings" class="section-heading">The Rings</h2>
+  <div class="prose">
+    <p>Ardo Beroa is governed the way a band of lone wolves is governed, scaled to an island. Everyone follows someone. A leader is whoever people follow, and they follow her for as long as they think she chooses right; the day they think she chose wrong they follow someone else, and nothing is said.</p>
+    <p>The count is kept on the harbour. Every adult on the islands has an iron ring, and every leader has a post on the quay, and a ring hangs on the post of the leader its owner follows. Anyone may move their ring on any day. Once a week, at the <b>Reading</b>, the rings are counted post by post in front of everyone, and the leader with the <b>Fullest Post</b> speaks for the island until the next Reading. A leader who watches rings leave her post on a Tuesday has until the Reading to win them back, and the ones who have held the Fullest Post longest are the ones who learned to read the posts every morning.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"I have had the Fullest Post nine Readings running and I have never thought I would have it at the tenth. That is the point of the rings. They do not let you forget."</p>
+  </div>
+  <div class="voice-attrib">Setseg Coldford was Grey Manes, Hverhofn, at the Fullest Post</div>
+
+  <div class="card-grid ring-grid">
+    <div class="accent-card">
+      <div class="card-name">A Following</div>
+      <p>Runs itself: its boats, its halls, its channel. A quarrel inside a following is the leader's to settle; a quarrel between followings is settled by the two leaders, or by rings moving until one of them has nothing left to quarrel with.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Fullest Post</div>
+      <p>Receives the arc ships' factors and signs with them, and a contract binds her following and nobody else, which is Villtur's rule kept on the water. A factor learns to sign with the largest following and hope it holds the season; the careful ones sign with two.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Channels</div>
+      <p>The island's one shared work. They silt, they ice at the mouths, and they shift when the ground shifts; the following at the Fullest Post organizes the digging and calls the others to their stretches. The founding story every child hears is the winter no following was large enough to call it, when the channels froze and half of Hverhofn died.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Every person on the islands has followed a leader who chose wrong once. It is how most of them came to be <i>was</i>. The island is governed by people who have each been failed by a leader and learned to read one, and it has as many governments as it has leaders, and one of them is the largest.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-sea-and-the-cure" class="section-heading">The Sea and the Cure</h2>
+  <div class="prose">
+    <p>The islanders fish, and they are the best fishers on Talan's northern water. What Hinka's clans do on the grass the islanders do on the ice: the Orc-born go straight through it, the Lizardfolk-born wait at a hole for a day, the Centaur-born run the sledge-lines between the boats, and none of them calls it her hunt. Under the ice runs seal, the great cold fish, and things that come up in the nets once a winter and are eaten anyway.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <p>What comes off the boats goes to the drying-halls, which need what only Urbero has: warm ground under the floor and arctic air through the slats. Meat cured there is <b>hardfisk</b>, and it keeps. A side of it will outlast the boat it came off and the man who cured it, and the arc ships carry it north as the provision that does not fail; a Baerfrost winter-hall with a Hverhofn cask in its store has eaten through worse than one bad season. The islanders eat the fresh catch the other way, sliced raw and laid on a slab of harbour ice, the <b>iceboard</b>, and a stranger who is offered one has been offered something.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"They sold me a cask of hardfisk with a cure-mark on it older than my grandmother, and told me it would be good when my grandchildren opened it. I believe them. The wine I have already drunk."</p>
+  </div>
+  <div class="voice-attrib">Merchant Ansel Torvane, in the same letter</div>
+
+  <div class="prose">
+    <p>The arc ships are why the islands are reached at all: a warm berth in a white sea, a pilot who knows the strait, a cask of the warm wine and a hold of what keeps. The trade is small, steady, and paid in iron, timber, and grain, none of which Urbero grows.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Unforgiven</button>
+    <div class="legend-era-content">
+      <p>On the coast they say the islands keep the ones Villtur put out for cause, the clan-breakers among the <i>was</i>es, and that a clan with a name to settle has crossed the strait after one of them more than once. They also say how it went. The island keeps one thing from the grass besides the register: a stranger coming to take one of theirs is an outsider's claim on the ground, and on the day the boats are sighted every ring on the harbour moves to one post. The clans that tried found the whole island at the quay and no one to negotiate with, and the ones that came back did not come back whole.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-three-islands" class="section-heading">The Three Islands</h2>
+  <div class="card-grid isle-grid">
+    <div class="accent-card">
+      <div class="card-name">Urbero</div>
+      <p>The springs, the streams, the drying-halls, and <b>Hverhofn</b>, where nearly everyone lives, along the channels and up the warm slope behind the harbour.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Igeria</div>
+      <p>Floats apart to the northwest: a spring or two on its leeward side and a hamlet that fishes its own water and moves its rings to Hverhofn by boat for the Reading.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Kaldey</div>
+      <p>The cold one: no warm ground, snow that stays, summer grazing, and the place the island goes to be alone, which the <i>was</i>es understand.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-ones-who-were-never-anything" class="section-heading">The Ones Who Were Never Anything</h2>
+  <div class="prose">
+    <p>Children are born on Ardo Beroa. Everyone who came here was something first, and the ones born here were never anything; their names end at the town with nothing before it, <b>Naran, Hverhofn</b>, and they are the first people in Ehizahar who were never in the game and have no <i>was</i> to keep. The islanders have not decided whether that is what they wanted. The followings that have held the Fullest Post longest have begun, among themselves, to sound like something with a name, and the children of those followings ask why theirs is the only family on the island that does not say what it was.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"My mother was Snow Lions. I am Hverhofn. She says it like I am missing something."</p>
+  </div>
+  <div class="voice-attrib">Naran, Hverhofn, fourteen, at the Reading</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Merchant Ansel Torvane of Brasswatch</div>
+      <p>A Skybell Republic merchant off a saltkeel of the northern arc, whose letter to his wife is the most-copied outsider account of the islands.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Setseg Coldford was Grey Manes, Hverhofn</div>
+      <p>At the Fullest Post nine Readings running, and never sure of the tenth.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Batou Firstsnow was Elurzahar White Halt, Hverhofn</div>
+      <p>Master of a fishing boat, who crosses his own dead.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Naran, Hverhofn</div>
+      <p>Fourteen, born on the island, with nothing before the town.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/ehizahar/villtur/villtur.html"><b>Lands of Villtur →</b></a> · The country the islanders were put out of: the clans, the game, the lone wolves, and the register with its last word.</li>
+      <li><a href="/setting/talan/domains/ehizahar/ehizahar.html"><b>Ehizahar →</b></a> · The Hunt domain, whose goddess owns the sky over the islands.</li>
+      <li><a href="/setting/talan/domains/vindul/baerfrost/baerfrost.html"><b>Baerfrost →</b></a> · The Hunt-League along the coast to the west, whose winter-halls store Hverhofn casks.</li>
+      <li><a href="/setting/talan/domains/vindul/fellibylur/fellibylur.html"><b>Fellibylur →</b></a> · The Skybell coast the arc ships sail from, and Brasswatch, Torvane's home port.</li>
+      <li><a href="/setting/talan/domains/lioaru/valreka/valreka.html"><b>Valreka →</b></a> · Tani's whale-borne city at the far end of the continent, which none of her islanders will see.</li>
+      <li><a href="/setting/talan/domains/myrkono/myrria/myrria.html"><b>Myrria →</b></a> · The city of second chances the islanders did not go to.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The islands' shape is settled; their named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>Igeria's hamlet and Kaldey's grazing.</b> Both await names.</li>
+      <li><b>The arc ships' route.</b> The saltkeel run past the islands, and the Baerfrost trade in detail.</li>
+      <li><b>What comes up in the nets once a winter.</b> Eaten anyway, and unnamed.</li>
+      <li><b>The Unforgiven.</b> The crossings the coast tells of, by name.</li>
+      <li><b>The first name before the town.</b> Which following gives one first, and what happens at the next Reading.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · EHIZAHAR · ARDO BEROA</div>
+
+</div>
+
+</body>
+</html>
