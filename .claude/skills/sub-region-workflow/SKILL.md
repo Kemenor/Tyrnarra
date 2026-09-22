@@ -264,6 +264,10 @@ Once direction and names are settled, draft the actual prose. **Surface in chat.
 - **Faction subsection for `lore/glossary.md`** if institutions are coined (modeled on the Voroir Daua or Wyndwalken patterns).
 - **Bestiary updates** if an ancestry is being anchored, moved, or freshly placed (table cell + per-ancestry entry + cross-references in related entries). **Anchor the ancestry to its place-shaped version, not its generic lore.** "Vishkanya in Itsasalda" gets the tide-counting Reckoner specificity; "Vishkanya in Azkataria" gets the coffee-table philosopher specificity.
 
+### The ending audit (run before surfacing, every time)
+
+Added 2026-09-23 after the Vernua draft surfaced with six epigram endings the GM had to strike. The banned-word grep does not catch these; only reading the endings does. **Before surfacing any draft, read the last sentence of every paragraph and every section and sort it: a fact, a hook into the next section, or an epigram that resolves the paragraph's meaning.** Rewrite every epigram. The tells: a short declarative that lands the paragraph (*The city has never minded.*), a paired antithesis (*The city takes it for X. The Dominion takes it for Y.*), a significance line (*which is the whole of this country*), a *never*-family closer. Breidey is the model: every section there ends on a fact or leads into the next heading (*And any of them might be one of the nobles who own the island* opens the Houses). Prefer the hook where the next section exists; prefer the fact otherwise. Attributed quotes are exempt; narration is not.
+
 ### Flag every derivation that goes beyond the user's explicit picks
 
 If you inferred something from canon ("Kashrishi are secular per bestiary, so the order is secular-contemplative not religious-monastic"), state it explicitly in the surface message so the user can correct before commit.

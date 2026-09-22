@@ -19,7 +19,7 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 
 ## Structure
 
-- A section ends on a fact or on a hook into the next section (*"And any of them might be one of the nobles who own the island."*). The banned ending is the epigram that resolves the section's meaning for the reader.
+- A section ends on a fact or on a hook into the next section, and so does every paragraph; the drafting step that checks this is the sub-region-workflow's *ending audit* (read the last sentence of each paragraph before surfacing) (*"And any of them might be one of the nobles who own the island."*). The banned ending is the epigram that resolves the section's meaning for the reader.
 - Mass follows care: lopsided sections, distribution settled with the GM at the phase boundary.
 - Real headings in deep files and HTML; `**Lead.**` bold openers only where headings cannot nest (domain-file bullets).
 - ◈ and ⚿ boxes may sit mid-section where the flow wants them.
