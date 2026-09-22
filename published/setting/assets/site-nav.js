@@ -153,7 +153,8 @@
       { slug: 'crossroads',       label: 'Crossroads · Southern Tri-Domain Nexus', href: '/setting/talan/domains/zuzental/crossroads.html',  children: [] }
     ]},
     { slug: 'nashavel', label: 'Nashavel · Chaos',    href: '/setting/talan/domains/nashavel/nashavel.html', children: [
-      { slug: 'nahaskel', label: 'Nahaskel &middot; the Unmapped City', href: '/setting/talan/domains/nashavel/nahaskel/nahaskel.html', children: [] }
+      { slug: 'nahaskel', label: 'Nahaskel &middot; the Unmapped City', href: '/setting/talan/domains/nashavel/nahaskel/nahaskel.html', children: [] },
+      { slug: 'vernua', label: 'Vernua Dominion &middot; the Country Across the Water', href: '/setting/talan/domains/nashavel/vernua/vernua.html', children: [] }
     ]},
     { slug: 'ehizahar', label: 'Ehizahar · Hunt',     href: '/setting/talan/domains/ehizahar/ehizahar.html', children: [
       { slug: 'veidrath', label: 'Veidrath &middot; the Hunting City', href: '/setting/talan/domains/ehizahar/veidrath/veidrath.html', children: [] },

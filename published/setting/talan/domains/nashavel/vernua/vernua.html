@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vernua Dominion · Nashavel · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #9fd06a;   /* new-growth green after rain · 10.87:1 on Style B bg */
+    --card-bg: rgba(20,30,12,0.55);
+  }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* The poem: stanzas kept as lines */
+  .poem { max-width: 640px; margin: 20px auto; padding: 22px 28px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.7; }
+  .poem p { margin: 0 0 14px; white-space: pre-line; }
+  .poem p:last-child { margin-bottom: 0; }
+
+  /* Card grids */
+  .share-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .share-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="vernua">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/nashavel/nashavel.html">Nashavel</a><span class="sep">›</span><span>Vernua Dominion</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Vernua Dominion</div>
+    <div class="page-subtitle">Nashavel Sub-Region · The Country Across the Water</div>
+    <div class="page-flavor">Never the same twice, delivered every morning.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd><i>Vernua</i> is Vesuna's name worn down in the late Lost Era, the country named in her shadow; <i>Dominion</i> is the Golden Empire's word for what it held here, and the Dark-Era houses kept the Imperial title because it was the one that said whose the land was.</dd>
+    <dt>Position</dt><dd>The open middle of Nashavel: the Midarra to the west, the Basogur canopy to the north, the <b>Hegandi</b> escarpment walling it from Zuzental to the south, Kaosadaemi's mountains to the east. The lake <b>Ispilur</b> lies against the forest's edge in the northwest with two cities on it: <b>Nahaskel</b> on one shore and <b>Dunloch</b>, the Dominion's capital, across the water. Rivers converge on the middle around the lone mountain <b>Einbui</b>.</dd>
+    <dt>Terrain</dt><dd>River-grassland and low hills, farmed edge to edge; the escarpment, the lake, the mountain. Weather that never repeats.</dd>
+    <dt>Character</dt><dd>
+      <i>Never the same twice, delivered every morning</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Weather</span><span class="pill">The Anois</span><span class="pill">The Share</span><span class="pill">Across the Water</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Conrasu</b>, at their fullest expression on Talan; Gnomes throughout, thickest near the lake; Vanara and Anadi along the forest's edge.</dd>
+    <dt>Tongue</dt><dd>Talanese, with the Dominion's own register for its names.</dd>
+    <dt>Faith</dt><dd>Vesuna, kept the countryside's way: the weather is hers, and the coin comes out at sowing.</dd>
+    <dt>Rule</dt><dd>The <b>Maors</b>, the hereditary houses of the chain, over a countryside of <b>comhar</b>, the voluntary fellowships that grow and make everything; the two bound by <b>the Share</b>. An oligarchy of the chain over a country of fellowships.</dd>
+    <dt>Founded</dt><dd>The Dark Era, by the houses that held the granaries and the boats when the Empire's order failed, and fed the god's city through the dark.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(159,208,106,0.5);">
+    <div class="gods-city-label">The Capital</div>
+    <div class="gods-city-name">Dunloch</div>
+    <div class="gods-city-byname">The granary-fort on Ispilur · across the water from the god's city</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-weather" class="section-heading">The Weather</h2>
+
+  <div class="poem">
+    <p>Under the great tree on the Hegandi's brow
+the shade has lain so long it has a name,
+and I have sat in it since the light was low
+and watched the morning fill the bowl below.</p>
+    <p>A nut came down beside me, small and brown,
+from a branch I never saw. I cracked it on the root.
+Sweet, and a little green, and gone;
+and I could not tell you what tree it was.
+That is this country, whole, in one mouthful.</p>
+    <p>Below me the green runs down to the water
+in patches no two alike: a plot of blue,
+a strip of something purple I have no word for,
+gold beside it, as if a paintbox had been spilled
+and someone had the sense to farm it.</p>
+    <p>And past all that, over the far hills,
+a storm is standing on the country like a guest
+who has not said how long he means to stay.
+The light beneath him is green. The farms beneath him drink.</p>
+    <p>It may come here. It may turn at the lake
+and go north into the trees and be forgotten.
+The people below have stopped looking up at it.
+I eat the nut. The shade is cool.
+Whatever it is, it is not here.</p>
+  </div>
+  <div class="voice-attrib">Tomas Bourdin, a poet of the Thousand Kingdom, written under a tree on the Hegandi in the summer of 2530</div>
+
+  <div class="prose">
+    <p>The Dominion sits in a bowl. The Midarra sends its air in from the west, the canopy holds the north wet and warm, the Hegandi stops the south, and the hills in the middle turn what comes into weather that has never happened before. A storm can stand on one valley for a week and leave the next one dry; hail falls on a single farm; a spring comes in three days late on one side of Einbui and three weeks early on the other. The Dominion's farmers plant knowing none of it, and the coin comes out at sowing, over which field gets which seed, because there is nothing to predict with.</p>
+    <p>So nothing grows the same twice. The same field yields a different thing every year, and the farm across the lane tastes different from this one; a vine that gave a sharp black grape last summer gives a sweet green one this, and the seed-comhar keep the line anyway, because it may give the black grape again. Every fruit and root and grain on Talan grows somewhere in the Dominion in some year. What the weather gives goes to the kitchens.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-table" class="section-heading">The Table</h2>
+
+  <div class="voice-quote">
+    <p>"You ask me what is in it. Whatever came. I tasted the cart at dawn and I decided. Tomorrow a different cart, a different deciding. If you want the same thing twice, the Thousand Kingdom is over the ridge."</p>
+  </div>
+  <div class="voice-attrib">Grainne Brid Tully Gort, of a kitchen-comhar at Dunloch, on the anois</div>
+
+  <div class="feature-panel prose">
+    <p>What the weather gives, the Dominion makes into something. Everything that grows is eaten, conserved, or distilled, because a harvest that cannot be repeated cannot be planned for and cannot be wasted. The kitchen is the Dominion's craft the way the orchard is Baratalda's, and the cook is the one who decides: she tastes what came in this morning and makes the <b>anois</b>, the dish of what came, and a dish will never taste the same twice by ingredients alone. Every kitchen-comhar puts up conserves from the surplus, and every farm runs a still, and the spirit is <b>potin</b>, made from whatever the year gave; no two farms' bottles match and no farm's matches its own from the year before. The Dominion sells conserves and potin to the Thousand Kingdom over the escarpment and to the Legea beyond it, by the cask, each marked with the farm, the year, and the batch, and no two casks alike.</p>
+  </div>
+
+  <div class="prose">
+    <p>The city across the water eats all of it. Nahaskel cannot keep a kitchen running the same way for a week, so it buys its bread and its staples from the Dominion, and what the Dominion promises is the boat, every morning, at the quay. What is in the boat is never the same. The boat belongs to a Maor.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-share" class="section-heading">The Share</h2>
+
+  <div class="voice-quote">
+    <p>"I do not own a field. I own the boat the field's harvest crosses in and the granary it sits in over winter, and the charter that says what the ground under the city is. Nobody in the Dominion needs me until the day the crop comes in, and on that day everybody does."</p>
+  </div>
+  <div class="voice-attrib">Ruari Fionn O Dunloch, Maor, at the Dunloch quay</div>
+
+  <div class="prose">
+    <p>The Dominion is governed twice.</p>
+  </div>
+
+  <div class="card-grid share-grid">
+    <div class="accent-card">
+      <div class="card-name">The Maors</div>
+      <p>On the water and at the granary door. The hereditary houses that held the granaries and the boats through the Dark Era and kept the god's city fed when nothing else could be promised. They own the chain, the quays, the granaries, the ferries, and the roads over the Hegandi, and they receive envoys, sign with the Thousand Kingdom, and answer the city.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Comhar</div>
+      <p>On the ground. The fellowships: a farm-comhar sharing a valley's tools, a kitchen-comhar pooling a season's conserve, a seed-comhar keeping the lines, a ferry-crew, the mutual that carries a farm through a hailed-out year. Every Vernuan belongs to several and leaves any of them by walking out. The Maors do not govern the comhar and could not; a country whose weather never repeats cannot be farmed by decree.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Share</div>
+      <p>What binds the two. A fixed rent on a crop that is never the same twice is absurd, so the Maors take a share of whatever came, and carry it. A comhar that will not sell to the chain watches its surplus rot; a Maor house that will not send the boats to a valley watches the valley's comhar walk to another house's quay.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>The argument between them runs every year: which house carries the western valleys, what the share is on a crop nobody has seen before, whether a kitchen-comhar may sell over the ridge without a Maor's boat. It is argued at the quays in autumn, settled by spring, and argued again the next autumn. The Maors' other argument is with the city.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="across-the-water" class="section-heading">Across the Water</h2>
+
+  <div class="voice-quote">
+    <p>"I cross before light and I am back before the Casting starts. They buy what is in the boat. In the four years I have crossed they have not asked what it is."</p>
+  </div>
+  <div class="voice-attrib">Tadg Padraig Inis Rath, a ferry-crew hand of Dunloch</div>
+
+  <div class="prose">
+    <p>From the Dunloch quay you can see Nahaskel's roofline change week to week; from Nahaskel's you can see Dunloch's granaries, which have stood since the dark. The boats cross every morning with the Dominion's food and come back with the city's coin and its novelties.</p>
+    <p>The Maors hold a Dark-Era charter that says the ground the god's city stands on is the Dominion's, and the roads into it, and the quays. Every few years the question comes to the Casting, and the city casts on it, and the coin has come up against the Maors every time. The houses have sent a different face across the water each cast, in case it was the face, and the coin turns the same way. Between casts the charter is kept in the granary at Dunloch.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Lake Gives Back</button>
+    <div class="legend-era-content">
+      <p>Whatever Nahaskel loses in a rebuild turns up on the Dunloch shore by spring, the Dominion's children say, and they comb the shingle for the city's last week: a shop-sign, a Teller's slate, a coin with somebody's name on the rim. What the city sets down, the lake carries over, and the Dominion keeps.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="dunloch" class="section-heading">Dunloch</h2>
+  <div class="prose">
+    <p>Dunloch began as the granary-fort the first Maors held through the dark, and it is still a granary with a town around it. The houses' halls stand on the quay, each with its granary behind and its boats before it, and the town climbs the low hill behind them in kitchens and cooperages and stills. One street has been the same street for four hundred years, and the house that holds the quay at its foot has carried the town's name as long as the street has stood.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-a-vernuan-is-called" class="section-heading">What a Vernuan Is Called</h2>
+  <div class="prose">
+    <p>A Vernuan carries four names, two from each parent, and the order says whose child you are first. Two given names, one chosen by each parent: a daughter wears her mother's gift first, a son his father's, and the first is the one used day to day. Two steadings, the mother's and the father's, in the same order. A steading is the farm a person was born on and it is never changed, because ground is the one thing that stays where it was; marrying changes nothing, and a child gets both. So a daughter of a Cluain mother and a Carrick father is <b>Niamh Roisin Cluain Carrick</b>, and her brother is <b>Cormac Oisin Carrick Cluain</b>, and hearing the two you know they are siblings and which is which.</p>
+    <p>The Maors carry the two given names the same way and one house instead of two steadings, with the descent-particle: <b>Ruari Fionn O Dunloch</b>. A Maor child takes the house whose granary he will sit in. Descent is the Maors' claim and their names say so, where everyone else's say ground. The ground-named are, more often than not, Conrasu.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b></p>
+    <div class="pill-row"><span class="pill">Niamh</span><span class="pill">Aoife</span><span class="pill">Ciara</span><span class="pill">Saoirse</span><span class="pill">Roisin</span><span class="pill">Grainne</span><span class="pill">Sorcha</span><span class="pill">Brid</span><span class="pill">Cormac</span><span class="pill">Oisin</span><span class="pill">Tadg</span><span class="pill">Fionn</span><span class="pill">Ruari</span><span class="pill">Padraig</span><span class="pill">Eoan</span><span class="pill">Darragh</span></div>
+    <p style="margin:14px 0 6px;"><b>Steadings</b></p>
+    <div class="pill-row"><span class="pill">Cluain</span><span class="pill">Gort</span><span class="pill">Ard</span><span class="pill">Derry</span><span class="pill">Bally</span><span class="pill">Rath</span><span class="pill">Liss</span><span class="pill">Inis</span><span class="pill">Carrick</span><span class="pill">Tully</span></div>
+    <p style="margin:14px 0 6px;"><b>Maor houses</b></p>
+    <div class="pill-row"><span class="pill">O Dunloch</span><span class="pill">O Derry</span><span class="pill">O Carrick</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.7;">
+      <li><i>Niamh Roisin Cluain Carrick</i>, a daughter of a Cluain mother and a Carrick father</li>
+      <li><i>Cormac Oisin Carrick Cluain</i>, her brother</li>
+      <li><i>Grainne Brid Tully Gort</i></li>
+      <li><i>Tadg Padraig Inis Rath</i></li>
+      <li><i>Ruari Fionn O Dunloch</i>, a Maor</li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-conrasu" class="section-heading">The Conrasu of the Dominion</h2>
+  <div class="prose">
+    <p>Chaos given a body, keeping a chosen shape by daily practice: the Conrasu are at home here as nowhere else on Talan. A people who know what is underneath farm a country whose weather is the goddess's mood, and they do it by keeping the shape of the work when the work's material never holds still: the same sowing-rite, the same share, the same boat at the same hour, over fields that are never the same. In Nahaskel a Conrasu is the thread of caution in the room; in the Dominion the same temperament runs a farm.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Ruari Fionn O Dunloch</div>
+      <p>A Maor, who speaks for the houses at the quay.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Grainne Brid Tully Gort</div>
+      <p>A cook of a Dunloch kitchen-comhar, on the anois.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Tadg Padraig Inis Rath</div>
+      <p>A ferry-crew hand who crosses to the city before light.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Tomas Bourdin</div>
+      <p>A poet of the Thousand Kingdom, who sat under a tree on the Hegandi in 2530.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/nashavel/nahaskel/nahaskel.html"><b>Nahaskel →</b></a> · The city across the water: the coin, the Casting, and the reason the charter-cast turns the way it does.</li>
+      <li><a href="/setting/talan/domains/nashavel/nashavel.html"><b>Nashavel →</b></a> · The Chaos domain overview and its four peoples.</li>
+      <li><a href="/setting/talan/domains/zuzental/thousand-kingdom.html"><b>Thousand Kingdom →</b></a> · Over the Hegandi: the buyer of the Dominion's casks, and Bourdin's home.</li>
+      <li><a href="/setting/talan/domains/brauogi/baratalda/baratalda.html"><b>Baratalda →</b></a> · The other country of every fruit on Talan, run on clocks where the Dominion runs on the cook.</li>
+      <li><a href="/setting/talan/ancestries.html"><b>Peoples & Heritages →</b></a> · The Conrasu, and the domain's other three.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Dominion's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The Maor houses.</b> Beyond O Dunloch, O Derry, and O Carrick.</li>
+      <li><b>The valleys and their comhar.</b> Which house carries which, by name.</li>
+      <li><b>Einbui.</b> What grows on the lone mountain, and who farms its two springs.</li>
+      <li><b>Over the ridge.</b> Whether the Legea Faith's missionaries have crossed the Hegandi, and what the Maors said.</li>
+      <li><b>The next charter-cast.</b> Which house's face, and which way the coin.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · NASHAVEL · VERNUA DOMINION</div>
+
+</div>
+
+</body>
+</html>
