@@ -440,7 +440,18 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Crossroads**: modern English. Trade-nexus settlement on the southern tri-domain border where Zuzental, Lautara (Commerce), and Egulon (Light) meet. **Functionally independent** of all three; nominally a Zuzental sub-region by the geography of the tri-point but answers to no domain's law. Home of the **Spider's Silk Inn** (Matron Charna, ancient Anadi, weaver of enchanted silver silk that suppresses hostile magic). See `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*.
 
 **Nashavel (Chaos):**
-- **Vernua Dominion**: likely drifted from Vesuna's name; houses Nahaskel
+- **Vernua Dominion**: *Vernua* is Vesuna's name worn down in the late Lost Era; *Dominion* is the Golden Empire's Talanese title for what it held here, kept by the Dark-Era houses. Houses Nahaskel. Full canon: `geography/nashavel/vernua.md`. Nested names (build of 2026-09-23):
+  - **Ispilur**: Basque *ispilu* (mirror) + *ur* (water) → **Ispilur**, the mirror-water. The lake against the forest's edge with Nahaskel on one shore and Dunloch on the other.
+  - **Dunloch**: Irish *dún* (fort) + *loch* (lake) → **Dunloch**, the lake-fort. The Dominion's capital, the granary-fort the first Maors held through the dark, across the water from the god's city.
+  - **Hegandi**: Basque *hegi* (ridge, edge) + *handi* (great) → **Hegandi**. The escarpment walling the Dominion from Zuzental.
+  - **Einbui**: Icelandic *einbúi* (the one who lives alone), accent lost → **Einbui**. The lone mountain in the Dominion's middle.
+  - **The Maors**: Irish *maor* (a steward, an overseer), undrifted. The hereditary houses of the chain: granaries, boats, quays, the roads over the Hegandi, and the charter over the city's ground. *A Maor* is one of them; *the Maors* is the government.
+  - **The comhar**: Irish *comhar* (shared labour, a working-together), undrifted. The voluntary fellowships: farm-comhar, kitchen-comhar, seed-comhar, ferry-crews, mutuals. You belong to several and leave any by walking out.
+  - **The Share**: plain Talanese. The constitution: every comhar gives the Maors a share of whatever came, and the Maors carry it; a fixed rent on a crop that never repeats being absurd.
+  - **The anois**: Irish *anois* (now). The dish of what came in today; never the same twice by ingredients alone.
+  - **Potin**: Irish *poitín* (the small still's spirit), accent lost → **Potin**. The Dominion's drink, from whatever the year gave; casks marked with the farm, the year, and the batch.
+  - **The Vernua register: the personal-name convention.** Word-base **Irish**, drifted lightly. *[given] [given] [steading] [steading]*, two names from each parent: a daughter wears her mother's chosen name and her mother's steading first, a son his father's; the first given name is the one used. A **steading** is the farm a person was born on and is never changed. The **Maors** carry the two given names and one house with the descent-particle *O* (*Ó* worn): **Ruari Fionn O Dunloch**. Samples: given *Niamh, Aoife, Ciara, Saoirse, Roisin, Grainne, Sorcha, Brid, Cormac, Oisin, Tadg, Fionn, Ruari, Padraig, Eoan, Darragh*; steadings *Cluain, Gort, Ard, Derry, Bally, Rath, Liss, Inis, Carrick, Tully*; houses *O Dunloch, O Derry, O Carrick*. Whole: *Niamh Roisin Cluain Carrick* · *Cormac Oisin Carrick Cluain*. Scope: the Dominion; Kaosadaemi defines its own.
+  - **Named figures**: **Ruari Fionn O Dunloch** (a Maor, at the quay) · **Grainne Brid Tully Gort** (a kitchen-comhar cook) · **Tadg Padraig Inis Rath** (a ferry-crew hand) · **Tomas Bourdin** (a poet of the Thousand Kingdom, Zuzental register; the Hegandi poem, 2530).
 - **Kaosadaemi Principality**: Basque *kaosa* (chaos) + Icelandic *dæmi* (district/domain) = "the chaos district"
 - **Basogur Jungle**: Basque *baso* (forest/wood) → drifted to *Basogur*; shared with Ehizahar
 
