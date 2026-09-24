@@ -26,6 +26,8 @@ And I saw the Prince in Ringhold! Young, and a streak of grey straight back from
 
 We go in at first light.
 
+Count on the roll: five.
+
 ## Day 1
 
 The light went green inside the first hour, Papa, green the way the millpond goes in June when you look up at the sky from under it. Sound does something odd under the leaves: a bird beside you sounds a field away, and the sledge-runners sound like they are coming up behind.
@@ -48,15 +50,19 @@ At midmorning two Vanara dropped out of the canopy and took the lead as easily a
 
 "Whatever you call him," Ravi said. I am still thinking about it.
 
+Count: five, and two Marutar, who are not on our line.
+
 ## Day 4
 
-Two nights in a web-hold, Papa! The Hanging Hold is a floor of grey silk strung between four trunks as high up as the church roof at home, and you climb to it on a ladder that is silk as well and moves when you breathe. The beasts and your stones sleep below with one of the Marutar watching them.
+Two nights in a web-hold, Papa! I thought a web-hold would be one web. The Hanging Hold is a whole village strung between thirty trunks or more, as high up as the church roof at home: floors of grey silk for each household, walkways between them, a round common floor in the middle where the cooking is done, and ladders of silk that move when you breathe. The beasts and your stones sleep below with one of the Marutar watching them.
 
-At dawn the Anadi take the whole hold down and put it back up. Every strand. We sat on a branch and watched the floor we had slept on come apart and go back together a hand's width east of where it was. The hold-mother is called Zawadi The Night the Web Held, and I asked her why they do it every morning.
+At dawn the Anadi go out along the strands and re-string whatever the night pulled loose. This morning it was a walkway on the east side and one family's floor, which came down and went back up a hand's width from where it had been while the family sat on a branch and ate breakfast. The hold-mother is called Zawadi The Night the Web Held, and I asked her how they know which strands to mend.
 
 "The trees leaned in the night," she said. "The web has to agree with them."
 
 Her middle name is the title of the first story she ever wove, and she says it takes a whole night to tell. Madame Marchand went to bed. I stayed up. It is the best story I have ever heard and I promised Zawadi I would not write it down, because it is hers, so you will have to come and hear it yourself.
+
+Count: five.
 
 ## Day 5
 
@@ -78,11 +84,13 @@ We camped with a druid tribe, the Greyroot, at a place they call the Grove Where
 
 The Greyroot elder told me their grandparents and parents fought at the seal, beside the web-holds and the Marutar and a Guild captain whose name none of them could get their tongues round.
 
-"The Guild came with maps and asked all of us to the same fire," she said. "We came. Once."
+"The Guild came with maps and asked all of us to the same fire," she said.
+
+Count: five.
 
 ## Day 8
 
-Two posts today, so close together I stood between them and put a hand on each. One is cut with the coin-mark of Nahaskel and the other with the antlers of Veidrath, and each says the ground belongs to it. Both are green to the top with moss. Irmen says the surveyors who set them each came once, a very long time ago, and nobody has come to look at either since. Two whole domains, Papa, and the moss is winning.
+Two posts today, so close together I stood between them and put a hand on each. One is cut with the coin-mark of Nahaskel and the other with the antlers of Veidrath, and each says the ground belongs to it. Both are green to the top with moss. Irmen says the surveyors who set them came a very long time ago, and nobody has come to look at either since. Two whole domains, Papa, and the moss is winning.
 
 In the afternoon a line of Lizardfolk crossed the path carrying fish on poles, eleven of them. Their leader stopped, looked at Irmen, and counted us with one finger. So I counted them back with mine. He liked that, I think; he gave me his name in the Villtur way when I gave him mine, Jargal Slowwater of Myrkvid Long Web, and then they were gone into the green on the other side.
 
@@ -100,6 +108,8 @@ In the afternoon the trees opened and there was water, Aintzir, the lake, and sk
 
 Nikhil led today. His first leg. Ravi walked at the very back and said nothing all day long, which Irmen tells me is how it is done.
 
+Count: five.
+
 ## Day 11
 
 We came out of the trees at noon on the eleventh day, exactly as the roll said we would.
@@ -109,5 +119,7 @@ The northern gate belongs to the Oihandar Red Tusks: a wall of whole trunks, orc
 Then Ravi stood Nikhil in front of me and said he had led his first crossing, and his third name was mine to give, in my own words. I had been turning it over for four days and in the end it was easy. I named him for the fifth day: Stepped-Between. He said it back to me twice, trying it on, and Irmen wrote it into the roll after his other two.
 
 Nikhil Marutar Stepped-Between.
+
+Count at the gate: five.
 
 Kiss the dog for me. Your Lisette.
