@@ -1,8 +1,10 @@
-# The Crossing Log of Tadg Padraig Inis Rath, Silver, of the Adventurers' Guild
+# The Crossing Log of Lisette Carrow, Silver, of the Adventurers' Guild
 
-**In-world document. DRAFT (Claude, 2026-09-24), for GM review; nothing here is canon until the GM rules it.** The escort-log of a Guild Silver on a Roadwards' crossing of the Basogur, Greenmouth to the northern gate, twelve days, 2532 MR. Written to be quoted through the Basogur region entry the way Zenerious's log is quoted through Villtur (see [`../ehizahar/zenerious-log.md`](../ehizahar/zenerious-log.md)). Every entry stays at chronicler or folk tier: the narrator sees the surface of each secret and never its answer.
+**In-world document. DRAFT 2 (Claude, 2026-09-24), for GM review; nothing here is canon until the GM rules it.** The escort-log of a newly made Guild Silver on a Roadwards' crossing of the Basogur, Greenmouth to the northern gate, twelve days, 2532 MR, kept as letters to her father, a miller in the Thousand Kingdom. Written to be quoted through the Basogur region entry the way Zenerious's log is quoted through Villtur (see [`../ehizahar/zenerious-log.md`](../ehizahar/zenerious-log.md)). Every entry stays at chronicler or folk tier: the narrator sees the surface of each secret and never its answer. *(Draft 1, a Vernuan narrator in Zenerious's plain register, is in git history.)*
 
-**Cast (names drafted, not yet in the glossary):** Tadg Padraig Inis Rath (narrator, Vernua register) · Aveline Marchand (cargo factor, Thousand Kingdom commoner) · Wat and Hobb (her drovers) · Irmen Greenmouth Baxter (Roadward, Kaosadaemi register) · Ravi Marutar Eleven-Days and Nikhil Marutar (Vanara guides) · Zawadi The Night the Web Held, of the Hanging Hold (Anadi) · Ilarra of the Grove Where the Road Turned, Greyroot (druid child) · Jargal Slowwater of Myrkvid Long Web (Lizardfolk) · Khulan Deepfoot of Oihandar Red Tusks (Orc kinrider at the gate) · Prince Wenzel (seen in passing).
+**The voice.** Young, upbeat, a little flowery because she is writing to someone she loves, and pulled back to plain by the job; the Guild head-count is the habit she keeps. She meets every old custom as a gift and says so. Her father dresses millstones, so she sees the jungle in mill-words.
+
+**Cast (names drafted, not yet in the glossary):** Lisette Carrow (narrator, Thousand Kingdom commoner) · Aveline Marchand (cargo factor, Thousand Kingdom commoner) · Wat and Hobb (her drovers) · Irmen Greenmouth Baxter (Roadward, Kaosadaemi register) · Ravi Marutar Eleven-Days and Nikhil Marutar (Vanara guides) · Zawadi The Night the Web Held, of the Hanging Hold (Anadi) · Ilarra of the Grove Where the Road Turned, Greyroot (druid child) · Jargal Slowwater of Myrkvid Long Web (Lizardfolk) · Khulan Deepfoot of Oihandar Red Tusks (Orc kinrider at the gate) · Prince Wenzel (seen in passing) · Walbert (a tree).
 
 Parent region: [`../nashavel.md`](../nashavel.md), *Basogur Jungle*.
 
@@ -10,86 +12,102 @@ Parent region: [`../nashavel.md`](../nashavel.md), *Basogur Jungle*.
 
 ## Day 0
 
-Greenmouth is a gate with a village behind it. They told me that in Ringhold and I took it for modesty. It is a gate, the Roadwards' hall, a row of stables, and then the trees. There is no field between the last stable and the first trunk.
+Dear Papa,
 
-The contract: Silver escort, one factor and her freight, Greenmouth to the northern gate, eleven days on the road. The factor is Aveline Marchand, out of the Thousand Kingdom. The freight is four millstones for Veidrath on two sledges. She says the clans who stopped riding want to grind their own flour now, and a millstone is too heavy for any airship that will take it.
+You told me to write every day and I told you I would write when there was something worth writing, and here I am on the very first day, so you win. I am in Greenmouth! It is a gate, a hall, and a row of stables, and then the jungle begins all at once, like a wall somebody forgot to finish. The trees are taller than the mill tower. Taller than two mill towers stacked, Papa.
 
-The hall keeps a roll. The clerk wrote us in: me, the factor, her drovers Wat and Hobb, and our Roadward, Irmen Greenmouth Baxter. Five. The beasts go on a separate line, and the stones on a third. Irmen made me read the number back to her before she would sign.
+And the contract. You will laugh. Four millstones for Veidrath, on two sledges. Of everything on the Guild board, I drew your trade. The clans up there have stopped riding and want to grind their own flour, and a millstone is too heavy for any airship that will take one. I told the factor my father dresses stones and she said, "Then you can carry one." She is Aveline Marchand, out of Brisemont, dry as a ship's biscuit, and I like her already.
 
-In the taproom a drover off the last crossing told me every Roadward is buried in the jungle when they die, by the Principality's law. He said it the way a man brags about a cousin. "The road keeps its own," he said, and the whole bench said it with him.
+The Roadwards' hall wrote us into their great roll: me, Madame Marchand, her drovers Wat and Hobb, and our Roadward, Irmen Greenmouth Baxter, who has hands like yours and a laugh she keeps for special occasions. Five of us. The beasts go on one line and your stones on another. Irmen made me read the number back to her twice.
 
-I grew up in the Dominion, and the Basogur was the north edge of every story my grandmother told. Two days ago in Ringhold the Prince rode past the Guild hall, a young man with a streak of grey from the crown of his head like a badger's. The clerk beside me said they all come back from the road like that. We go in at first light.
+In the taproom they told me the loveliest thing. When a Roadward dies they are buried in the jungle, every one of them, by the Principality's own law. The whole bench said it together like a grace before supper: "The road keeps its own." Imagine loving a road enough to want to lie beside it after.
+
+And I saw the Prince in Ringhold! Young, and a streak of grey straight back from his crown like frost along one furrow. The clerk beside me said they all come back from the road like that. I mean to ask Irmen which road.
+
+We go in at first light.
 
 ## Day 1
 
-The light went green inside the first hour and stayed green. Sound goes strange under the canopy: a bird close by sounds far off and the sledge-runners sound like they are behind you.
+The light went green inside the first hour, Papa, green the way the millpond goes in June when you look up at the sky from under it. Sound does something odd under the leaves: a bird beside you sounds a field away, and the sledge-runners sound like they are coming up behind.
 
-Irmen talks to trees. She stops at one every hour or two, puts her palm flat on the bark and says a name. Walbert. Hedwig. Old Sawyer. Wat and Hobb laugh about it behind her back. Aveline asked her about it at the noon halt and Irmen said, "Manners."
+Irmen talks to the trees. Every hour or two she stops at one, lays her palm flat on the bark as if she were feeling a stone for true, and says a name. Walbert. Hedwig. Old Sawyer. Wat and Hobb snigger at her back. I think it is the kindest thing I have ever seen a grown woman do, so at the noon halt I asked if I might say good morning to them too.
 
-Around midday we crossed a length of rail lying in the fern, bent like a hairpin, the rune-plates on its sleepers gone the colour of old teeth. Irmen said a consortium laid it forty years ago and it looked like that by the next spring. She stepped over it the way you step over a root.
+She looked at me a long moment and said, "They don't know you yet."
+
+At midday we stepped over a length of old rail lying in the fern, bent round like a hairpin, its rune-plates gone the colour of old teeth. Irmen says a consortium laid it forty years ago and it looked like that by spring. Somebody had a very big idea here once.
 
 Count at the fire: five.
 
 ## Day 2
 
-Last night I cut a notch in the tree beside our camp, a Guild habit, so the next party knows where the water is. This morning the stream was on the other side of the camp and my notch was on a tree forty paces off. Irmen had already broken camp and was waiting for me to finish looking.
+Papa, the forest moved the furniture in the night.
 
-At midmorning two Vanara came down out of the canopy and took the lead from her without a word said. The elder is Ravi Marutar Eleven-Days. The younger is Nikhil Marutar, two names, and Ravi says he leads the last leg if he is ready for it, and comes out the far side with three. I asked what the third would be.
+I cut a notch in a tree by our camp yesterday evening, the way they taught us, so the next party knows where the water is. This morning the stream was on the other side of the camp and my notch was on a tree forty paces off, looking very pleased with itself. Irmen was already packed and waiting. She let me look for as long as I liked before she said we were going.
 
-"Whatever you call him," Ravi said.
+At midmorning two Vanara dropped out of the canopy and took the lead as easily as you take the reins from me at the gate. The elder is Ravi Marutar Eleven-Days, grey at the muzzle and quick as a wren. The younger is Nikhil Marutar, only two names yet, a year or two older than me and trying hard to look bored. Ravi says Nikhil leads the last leg if he is ready, and comes out the far side with a third name. I asked what the third name would be.
+
+"Whatever you call him," Ravi said. I am still thinking about it.
 
 ## Day 4
 
-We slept two nights in a web-hold, the Hanging Hold. The floor is a net of grey silk strung between four trunks at the height of a temple roof. The beasts and the stones stay below with one of the Marutar on watch, and you go up by a ladder that is also silk and that moves when you do.
+Two nights in a web-hold, Papa! The Hanging Hold is a floor of grey silk strung between four trunks as high up as the church roof at home, and you climb to it on a ladder that is silk as well and moves when you breathe. The beasts and your stones sleep below with one of the Marutar watching them.
 
-At dawn the Anadi re-strung the whole hold while we sat on a branch and watched. Strand by strand, the floor we had slept on came down and went back up, a hand's width to the east of where it was. The hold-mother is Zawadi The Night the Web Held. I asked her why they do it every morning.
+At dawn the Anadi take the whole hold down and put it back up. Every strand. We sat on a branch and watched the floor we had slept on come apart and go back together a hand's width east of where it was. The hold-mother is called Zawadi The Night the Web Held, and I asked her why they do it every morning.
 
 "The trees leaned in the night," she said. "The web has to agree with them."
 
-Her middle name is the title of the first story she wove. I asked what the story was and she said it takes a night to tell. Aveline stayed up for it. I slept. Aveline says it was worth the lost sleep and will not tell me any of it.
+Her middle name is the title of the first story she ever wove, and she says it takes a whole night to tell. Madame Marchand went to bed. I stayed up. It is the best story I have ever heard and I promised Zawadi I would not write it down, because it is hers, so you will have to come and hear it yourself.
 
 ## Day 5
 
-Something stood at the edge of the path this afternoon. I will write it down the way I saw it. Tall, taller than the stones on the sledge, grey-brown and shaggy the way moss grows on the north wall of a barn, standing where the trees start. Off the path. I looked at it for three steps, and when I looked again there was a tree there.
+I am going to write this part plainly, Papa, because my hand still is not steady.
 
-Irmen whistled, two notes, low then high. Ravi and Nikhil whistled the same two notes back without turning their heads. Nikhil dropped back and walked between Aveline and the trees for the rest of the afternoon.
+Something stood at the edge of the path this afternoon. Tall, taller than the stones on the sledge, grey-brown and shaggy the way moss grows on the north side of the mill, standing just where the trees begin. Off the path. I looked at it for three steps, and when I looked again there was a tree there, and I could not have told you which tree.
 
-At the fire I asked Ravi what it was. He said a name, Basajun, once, and passed the pot. Irmen said I had seen the edge of the path.
+Irmen whistled, two notes, low then high. Ravi and Nikhil whistled the same two notes back without turning their heads. Then Nikhil dropped back and walked between Madame Marchand and the trees for the rest of the day, and let on as if he had only felt like a change of company.
 
-Count: five.
+At the fire I asked Ravi what it was. He said one word, Basajun, and passed me the pot. Irmen said I had seen the edge of the path.
+
+Count: five. I counted three times.
 
 ## Day 7
 
-The road swung east today in a long curve, most of a day's walking, around ground the guides will not step on. I know the marks on the trees along the edge of it. They are ours: Guild sealing-marks, cut and painted, red over black, the pattern a deep-team leaves around a seal. The paint is eight years old by the look of it. I know what the marks mean: sealed, stay out, report anything that moves. The wind came off that side once around noon and smelled like a tannery.
+The road swung east today in a great slow curve, most of a day's walking, round ground the guides will not set foot on. And Papa, I knew the marks on the trees along the edge of it. They are ours. Guild sealing-marks, red over black, cut and painted, the pattern a deep-team leaves round a seal. I have only ever seen them drawn on the chalkboard at the hall in training. The paint is eight years old if it is a day. Somebody from my own Guild stood exactly here and painted them while the war was on. The wind came off that side once around noon and smelled like the tannery below the weir, and I stopped feeling proud and walked a bit faster.
 
-We camped with a druid tribe, the Greyroot, at the grove they call the Grove Where the Road Turned. A girl brought us water and showed me her tree, a young one with silver bark, as tall as she is. The tree is Ilarra and so is she.
+We camped with a druid tribe, the Greyroot, at a place they call the Grove Where the Road Turned. A little girl brought us water and then took my hand and showed me her tree, a young one with silver bark, exactly as tall as she is. The tree is called Ilarra, and so is she. When one of them dies, the other keeps the name. I have decided that if I ever have a daughter, I will plant her a tree.
 
-The Greyroot elder told me their grandparents and parents fought at the seal, with the web-holds and the Marutar and a Guild captain whose name none of them could say.
+The Greyroot elder told me their grandparents and parents fought at the seal, beside the web-holds and the Marutar and a Guild captain whose name none of them could get their tongues round.
 
 "The Guild came with maps and asked all of us to the same fire," she said. "We came. Once."
 
 ## Day 8
 
-Two posts today, close enough that I could stand between them and touch both. One is cut with the coin-mark of Nahaskel, the other with the antlers of Veidrath. Both say the ground they stand on belongs to them. Both are green to the top with moss. Irmen says the surveyors who set them each came once, a long time ago, and she has never seen anyone come to look at either.
+Two posts today, so close together I stood between them and put a hand on each. One is cut with the coin-mark of Nahaskel and the other with the antlers of Veidrath, and each says the ground belongs to it. Both are green to the top with moss. Irmen says the surveyors who set them each came once, a very long time ago, and nobody has come to look at either since. Two whole domains, Papa, and the moss is winning.
 
-In the afternoon a band of Lizardfolk crossed the path in single file, carrying fish on poles, eleven of them. Their leader stopped, looked at Irmen, counted us with one finger, and gave me his name the Villtur way when I gave him mine: Jargal Slowwater of Myrkvid Long Web. Then they were gone into the trees on the other side.
+In the afternoon a line of Lizardfolk crossed the path carrying fish on poles, eleven of them. Their leader stopped, looked at Irmen, and counted us with one finger. So I counted them back with mine. He liked that, I think; he gave me his name in the Villtur way when I gave him mine, Jargal Slowwater of Myrkvid Long Web, and then they were gone into the green on the other side.
 
-Count: five.
+Count: five. Theirs: eleven.
 
 ## Day 10
 
-The trees opened on water this afternoon. Aintzir, the lake. The first sky I have seen in eight days, and the light on the water hurt to look at. Wat and Hobb walked into it to their waists with their boots on.
+Irmen stopped this morning at a big old tree with a split in its bark like a smile and laid her hand on it as always. Then she took my wrist and put my palm beside hers.
 
-An airship went over the lake heading north, steady as a barge on a canal. Irmen says it is one of the Occultech ones; the other kind shake like a leaf over the canopy and come down somewhere they did not mean to.
+"This is Walbert," she said. "He taught me the road."
 
-Nikhil led today. His first leg. Ravi walked at the back and said nothing all day, which Irmen tells me is how it is done.
+So I said good morning to Walbert, Papa. I felt a bit of a fool and very honoured at the same time.
+
+In the afternoon the trees opened and there was water, Aintzir, the lake, and sky, the first sky in eight days, so bright on the water I had to look at it through my fingers. Wat and Hobb walked straight in to their waists with their boots on, and Madame Marchand laughed out loud, which I did not know she could. An airship went over the lake heading north, steady as a barge on the canal at home. Irmen says it is one of the Occultech kind; the other kind shake like a leaf over the canopy and come down wherever they please.
+
+Nikhil led today. His first leg. Ravi walked at the very back and said nothing all day long, which Irmen tells me is how it is done.
 
 ## Day 11
 
-We came out of the trees at noon on the eleventh day, as the roll said we would.
+We came out of the trees at noon on the eleventh day, exactly as the roll said we would.
 
-The northern gate belongs to the Oihandar Red Tusks: a palisade of whole trunks, orcs on the low broad vigross, and a kinrider, Khulan Deepfoot of Oihandar Red Tusks, who took Irmen's roll and counted us off it with her thumb. Five. The beasts. Four millstones. Irmen signed under her count, and turned round to walk the next party south.
+The northern gate belongs to the Oihandar Red Tusks: a wall of whole trunks, orcs on low broad beasts they call vigross, and a kinrider named Khulan Deepfoot of Oihandar Red Tusks, who took Irmen's roll and counted us off it with her thumb. Five. The beasts. Four millstones, Papa, every one of them whole. Irmen signed under the count, hugged me hard enough to hurt, and turned round to walk the next party south.
 
-Then Ravi put Nikhil in front of me and said he had led his first crossing, and his third name was mine to give, in my own words. I had put the question out of my head four days ago, and the answer was there waiting. I named him for the fifth day: Stepped-Between. He said it back to me twice, and Irmen wrote it into the roll after his other two.
+Then Ravi stood Nikhil in front of me and said he had led his first crossing, and his third name was mine to give, in my own words. I had been turning it over for four days and in the end it was easy. I named him for the fifth day: Stepped-Between. He said it back to me twice, trying it on, and Irmen wrote it into the roll after his other two.
 
 Nikhil Marutar Stepped-Between.
+
+Kiss the dog for me. Your Lisette.
