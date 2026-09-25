@@ -271,9 +271,15 @@ class WDMap:
                 inside = [l for l in self.labels
                           if r.contains(*l["position"]) and (want is None or l["z_index"] == want)]
                 if not inside and r.kind == "region":
-                    # A region shape without a region label (e.g. the circle around a god-city)
-                    # takes whatever label sits inside it.
-                    inside = [l for l in self.labels if r.contains(*l["position"])]
+                    # A region shape without a region label is usually a god-city's circle
+                    # (Myrria, Merkavar): name it after the divine-city label (+3) inside it or
+                    # just outside its edge, else after any non-god label inside it.
+                    x0, y0, x1, y1 = r.bbox
+                    pad = 0.25 * max(x1 - x0, y1 - y0)
+                    inside = [l for l in self.labels if l["z_index"] == 3
+                              and x0 - pad <= l["position"][0] <= x1 + pad
+                              and y0 - pad <= l["position"][1] <= y1 + pad] or \
+                             [l for l in self.labels if r.contains(*l["position"]) and l["z_index"] != 1]
                 if inside:
                     r.name = " ".join(max(inside, key=lambda l: l["size"])["text"].split())
             # A god domain is one colour across all its pieces, so unlabelled

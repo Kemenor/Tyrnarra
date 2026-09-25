@@ -3,7 +3,7 @@
  "size": [8192.0, 8192.0],
  "layers": {"+5": "Legend", "+4": "City Icons", "+3": "Divine City Labels", "+2": "Region Labels", "+1": "God Labels", "0": "Terrain", "-1": "City Labels", "-2": "-2", "-3": "-3", "-4": "-4", "-5": "-5"},
  "scale": {"reads": "1000 Miles", "segments": 10.0, "per_segment": 100.0, "bar_map_units": 2000, "per_map_unit": 0.5},
- "totals": {"labels": 121, "symbols": 15137, "regions": {"domain": 39, "region": 72}},
+ "totals": {"labels": 121, "symbols": 15137, "regions": {"domain": 39, "region": 73}},
  "labels": [
   {"layer": "+5 (Legend)", "text": "Capitol", "at": [211, 164], "font": "Uncial Antiqua", "size": 24},
   {"layer": "+5 (Legend)", "text": "City State", "at": [234, 240], "font": "Uncial Antiqua", "size": 24},
@@ -214,6 +214,7 @@
   {"kind": "region", "name": "Lua Lasai", "bbox": [7489, 7291, 7968, 8006], "area": 242359, "color": "#10753e"},
   {"kind": "region", "name": "Lurrath", "bbox": [1917, 2142, 2376, 2499], "area": 109212, "color": "#cebd0b"},
   {"kind": "region", "name": "Maitagarri", "bbox": [4453, 3462, 5103, 4108], "area": 231506, "color": "#257b0d"},
+  {"kind": "region", "name": "Merkavar", "bbox": [4461, 5840, 4668, 6011], "area": 28019, "color": "#d4a017"},
   {"kind": "region", "name": "Myrria", "bbox": [1119, 2572, 1333, 2745], "area": 26764, "color": "#000000"},
   {"kind": "region", "name": "Namur Republic", "bbox": [5030, 4526, 6081, 5322], "area": 355201, "color": "#b41afa"},
   {"kind": "region", "name": "No Mans Land", "bbox": [1223, 4711, 2501, 6031], "area": 521221, "color": "#ffffff"},
