@@ -10,7 +10,7 @@
 
 **Character:** a place that makes stories.
 
-**Peoples:** the **Anadi** and the **Vanara**, each at their fullest expression on Talan; mixed druid tribes; Lizardfolk jungle clans; one Orc clan at the northern gate.
+**Peoples:** the **Anadi** and the **Vanara**, each at their fullest expression on Talan; mixed druid tribes; Lizardfolk jungle clans; Orc clans along the fringe, one of them settled at the northern gate.
 
 **Tongue:** each hold, clan, and tribe its own; the druids keep ritual tongues; Talanese along the road and on the fringes, carried in by the Guild.
 
@@ -49,7 +49,7 @@ The Principality's law buries every Roadward in the jungle, beside the road. Gre
 > "Irmen stopped this morning at a big old tree with a split in its bark like a smile and laid her hand on it as always. Then she took my wrist and put my palm beside hers. 'This is Walbert,' she said. 'He taught me the road.'"
 > Lisette Carrow, on the tenth day
 
-**⚿ GM Secret: what the Prince pays.** The road holds because the Prince pays the jungle. Basajun is real: a **demi-god** who walks the Material Plane, coalesced over ages out of every traveler who ever feared the churn, and bound by the Gods' Law in proportion to his power. Princess Hildrun made the first covenant with him, and every holder of Ringhold since has made it again. At accession the holder walks the road with one Roadward as guide and witness, steps off the path where the Roadward stops, and meets Basajun face to face. The covenant is made with the holder, so each new holder makes it anew, and a page of the Second Book records each meeting.
+**⚿ GM Secret: what the Prince pays.** The road holds because the Prince pays the jungle. Basajun is real: a **demi-god** who walks the Material Plane, coalesced over ages out of every traveler who ever feared the churn. Princess Hildrun made the first covenant with him, and every holder of Ringhold since has made it again. At accession the holder walks the road with one Roadward as guide and witness, steps off the path where the Roadward stops, and meets Basajun face to face. The covenant is made with the holder, so each new holder makes it anew, and a page of the Second Book records each meeting.
 
 The Prince pays in person. Basajun chooses one love the new ruler holds or might hold and takes the possibility of it: the Prince comes out remembering the person, and unable to love them. The page records whose love it was. No ruler of Ringhold since Hildrun has married the love of their childhood. The Prince also comes out with the grey streak, and Ringhold sees it and credits the road.
 
@@ -62,15 +62,17 @@ Powers from beyond the trees have come to treat with the jungle and found nothin
 > "The trees leaned in the night. The web has to agree with them."
 > Zawadi The Night the Web Held, hold-mother of the Hanging Hold, asked why the hold is re-strung each morning
 
-The **web-holds** of the Anadi are villages hung between the trunks, thirty trees or more to a hold: a floor of grey silk for each household, walkways between them, a common floor at the middle where the cooking is done, and silk ladders to the ground. Each dawn the Anadi go out along the strands and re-string what the night pulled loose, a walkway on one day and a family's floor on the next, so that a hold stands a hand's width from where it stood the night before and in the same place in the jungle. They are thickest in the deep interior, and a path in the Basogur runs from hold to hold.
+The road crosses the Basogur along one line, and the peoples a traveler meets on it are the few who live beside that line. The canopy runs from coast to coast. Most of its holds have never had a Roadwards' party sleep under them, most of its clans guide their own ground and nobody else's, and most of its groves have names no outsider has written down. The chronicle knows the jungle's peoples by what the road shows of them.
 
-The **Vanara** walk those paths. Their clans, the **Marutar** and the **Kapisar** among them, guide between the holds, and a Vanara guide reads which way the ground has moved overnight the way a sailor reads the wind. A clan guides its own stretch of the jungle and hands a party on to the next, and a young guide walks whole crossings behind an elder before leading a leg.
+The **web-holds** of the Anadi stand across the whole jungle, thickest in the deep interior. A hold is a village hung between the trunks, thirty trees or more: a floor of grey silk for each household, walkways between them, a common floor at the middle where the cooking is done, and silk ladders to the ground. Each dawn the Anadi go out along the strands and re-string what the night pulled loose, a walkway on one day and a family's floor on the next, so that a hold stands a hand's width from where it stood the night before and in the same place in the jungle. A path in the Basogur runs from hold to hold, and the road's overnight stops are the handful of holds that stand along it.
 
-The **druid tribes** are mixed, every ancestry the jungle holds, and they plant a tree at every birth. The child and the tree share a name, and the tribes live in the groves where their trees stand, each grove named for what happened there: **the Grove Where the Road Turned**, **the Drowned Steps**, **Three Springs**. The **Greyroot** and the **Mossback** are the tribes the road knows.
+The **Vanara** walk those paths, in more clans than the road has names for. Each clan guides its own stretch of the jungle and hands a party on to the next, and a Vanara guide reads which way the ground has moved overnight the way a sailor reads the wind. The **Marutar** and the **Kapisar** are the clans that guide the road, and a young guide of theirs walks whole crossings behind an elder before leading a leg.
 
-The **Lizardfolk** jungle clans hunt with the **armiar**, the great spider, whose web spreads a hunter's senses across a hundred yards of canopy. **Myrkvid Long Web** hunts the interior; **the Frogged Tribe** floats the Skoga on the Ehizahar side and hunts the jungle's edge for days at a time, and keeps a silent feud with the other Lizardfolk clans over the river.
+The **druid tribes** are mixed, every ancestry the jungle holds, and they plant a tree at every birth. The child and the tree share a name, and a tribe lives in the groves where its trees stand, each grove named for what happened there. The **Greyroot** at **the Grove Where the Road Turned** and the **Mossback** of **the Drowned Steps** and **Three Springs** are the two tribes whose groves the road passes.
 
-The northern gate belongs to the **Oihandar Red Tusks**, an Orc clan of the fringe who ride the low, broad vigross through ground a runner cannot cross, and who settled at the gate: a palisade of whole trunks where the road leaves the trees, and a kinrider who counts each party off the Roadwards' roll.
+The **Lizardfolk** jungle clans hunt with the **armiar**, the great spider, whose web spreads a hunter's senses across a hundred yards of canopy. They are many, and they are most numerous in the interior. **Myrkvid Long Web** crosses the road in the middle of the jungle; **the Frogged Tribe** floats the Skoga on the Ehizahar side, hunts the jungle's edge for days at a time, and keeps a silent feud with the other Lizardfolk clans over the river.
+
+The **Orc** clans ride the jungle's fringe on the low, broad vigross, which goes through ground a runner cannot cross. One of them, the **Oihandar Red Tusks**, settled where the road leaves the trees and holds the northern gate: a palisade of whole trunks, and a kinrider who counts each party off the Roadwards' roll.
 
 ## The Stitchery
 
