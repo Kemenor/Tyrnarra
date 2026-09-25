@@ -24,6 +24,10 @@ The map's 37 capitol icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Legea Empire, Namur Republic, Order of Law (Zuzental), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
 
+## Awaiting the next export
+
+- **Hirubaso label** (Brauogi): moved from Divine City Labels to Region Labels on 2026-09-25 (it is Greenward's grove-enclave, not a god-city). Variants regenerated; rides along with the next export and publish.
+
 ## Backlog for the next map edit
 
 - **More region fixes (2026-09-25, `wdmap`):** region shapes added for Ardo Beroa (from its Ehizahar outline, #7fb3d5) and the south-east Lua Lasai island (Lua Lasai's colour); Balatur Erui's region recoloured from near-sea indigo to #8a5cf0 so it shows; the outlines of Namur Republic, No Mans Land and The Golden Coast each had a knot at their closing point (Wonderdraft's "Convex partition failed", unfilled regions) and lost that one point. The small Lautarra outline at (4461–4668, 5840–6011) is Merkavar's circle (its lake and mountain belong to the god-city): it keeps its Lautarra domain outline and got a Merkavar region shape (#d4a017), like Myrria's circle.
