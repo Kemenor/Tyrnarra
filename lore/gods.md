@@ -355,6 +355,20 @@ The **Kholo** keeping-people of **Haldmark** (Brauogi's north-western march; ful
 - **Compact / residence:** belief-formed and Diyu-resident, no Material-Plane stake to bind; took no part in the Compact. Reach mortals through the cleric's grant and the small omens of a kept home.
 - **Cleric domains (PF2e):** *canon-pending; the keeping/protection register (e.g. Family, Protection), to be set at the pf2e-registrar pass.*
 
+### Basajun: the Lord of the Woods (Basogur · Demi-God · belief-formed · walks the Material Plane)
+
+The one named non-bound god who lives on the Material Plane. Full canon in [`geography/nashavel/basogur.md`](geography/nashavel/basogur.md), *The god*.
+
+- **Aspects:** the Basogur Jungle; the churn; the edge of the path; the fear and awe of the traveler.
+- **Origin:** belief-formed over ages out of every traveler who ever feared the jungle's churn and told of it after: expeditions that vanished, paths that moved, the stories carried out of the canopy and told at hearths on both sides of it. Older than the Golden Empire and the Thousand, and older than the Flesh-Sculptor's Stitchery by ages.
+- **Etymology:** Basque *basajaun* (the lord of the woods), worn → **Basajun**. Full glossary entry in `glossary.md`, *Basogur Jungle*.
+- **Pronouns:** **he / him**, as the tribes tell him.
+- **Tier and residence:** a **Demi-God**, walking the Basogur on the Material Plane, and so bound by the Gods' Law in proportion to his power (the lightest articles); the exception the *Named Non-Bound Gods* intro names.
+- **Seen:** at the edge of a path and never on it: tall, shaggy, where the trees begin. Each people of the jungle tells a different shape of him (◈ *the told shapes of Basajun*), and a party that sees him whistles two notes, low then high (◈ *the whistle on the path*).
+- **Worship:** the jungle's tribes, the druid tribes above all; answered as any small god answers worship. No temple and no clergy outside the tribes.
+- **⚿ GM Secret: the covenant.** Basajun is real, and he has shown himself to one power from outside the jungle: House **Thornhollow** of Kaosadaemi. Princess Hildrun made the first covenant; every holder of Ringhold makes it again at accession, face to face, and pays with a grey streak and one love made impossible, the god's choice; every Roadward rests in the jungle at the end of life and becomes a tree that keeps the road. Full text in `geography/nashavel/basogur.md`, *The road*.
+- **Cleric domains (PF2e):** *canon-pending; to be set at the pf2e-registrar pass.*
+
 ### The Kyūbi-no-Den: the kitsune ancestral pantheon
 
 The kitsune of Emarrea (see `geography/lautara/emarrea.md`) keep their own small ancestral pantheon alongside whatever Bound-Thirteen worship they practice. Religion on Emarrea is **plural and open**: a kitsune household commonly keeps shrines to several gods at once, and the Heartcourt is structurally secular (no Faith pillar). Three named gods sit the Kyūbi-no-Den. All three reside in **Elysium** (Layer 3, good), where the Compact reaches them only when they reach across the veil. Their reach is real but localised (Emarrea-and-the-near-Lautaran-trade-roads), and their cleric populations are accordingly small by continental standards. The pantheon's Elysium residency reflects its devotional centre of gravity: a culture organised around love freely given, communal feast, and the kindness-trickster ethic.

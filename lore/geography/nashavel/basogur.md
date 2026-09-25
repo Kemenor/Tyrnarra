@@ -1,6 +1,6 @@
 # The Basogur Jungle (Nashavel · Ehizahar)
 
-*DRAFT for GM review (2026-09-25), written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Shared region: both [`../nashavel.md`](../nashavel.md) and [`../ehizahar.md`](../ehizahar.md) point here. Carries four ⚿ boxes (two mirrored in short on Kaosadaemi) and two ◈. The crossing quoted throughout is [`basogur-log.md`](basogur-log.md).*
+*Built 2026-09-24/25 and GM-reviewed, written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Shared region: both [`../nashavel.md`](../nashavel.md) and [`../ehizahar.md`](../ehizahar.md) point here. Carries three ⚿ boxes (the two Roadwards boxes mirrored in short on Kaosadaemi) and two ◈. The crossing quoted throughout is [`basogur-log.md`](basogur-log.md).*
 
 **Etymology:** Basque *baso* (forest, wood) → **Basogur**, an old name for an old place. **Basajun**: Basque *basajaun*, the lord of the woods, worn. **Aintzir**: Basque *aintzira*, lake, the final vowel dropped. **The Stitchery** is plain Talanese, the Guild's word.
 

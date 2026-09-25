@@ -1,6 +1,6 @@
 # Kaosadaemi Principality (Nashavel)
 
-*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract (2026-09-23). Carries one ⚿ box, placed-but-draft against the Basogur build. Parent domain: [`../nashavel.md`](../nashavel.md).*
+*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract (2026-09-23). Carries two ⚿ boxes, short mirrors of the full texts in [`basogur.md`](basogur.md) (Basogur build, 2026-09-25). Parent domain: [`../nashavel.md`](../nashavel.md).*
 
 **Etymology:** Basque *kaosa* (chaos) + Icelandic *dæmi* (district) → **Kaosadaemi**, the chaos district; a deep-stratum name for the ground. *Principality* is the Thousand's word, granted with the title under Renauld Fyrstmond's throne and never given back. The people call themselves **the Daemi**.
 
@@ -40,7 +40,9 @@ The long road around the Basogur enters the trees at Greenmouth, and the Princip
 
 The Daemi say the Roadwards are simply the best in the world at it, and they are. The road runs on time for another reason too, which the house keeps.
 
-**⚿ GM Secret: what the Roadwards pay.** *(Placed-but-draft: the box is written against the Basogur build, which decides what the bargain is with.)* The road holds because the Prince pays the jungle. There is a standing bargain, older than Hildrun's reign and renewed by every holder since, between House Thornhollow and something inside the Basogur that the jungle's fear has made: a god of the trees, coalesced out of every traveler who ever feared the churn, the way Haldmark's keeping made its Keeper. The bargain is the house's alone. Every other power that has tried to treat with the jungle has found nothing to treat with, because the thing that answers has been answered already, by one prince at a time, in a page of the Second Book nobody outside the house has read. What the page says the Prince gives, and what the jungle counts, is for the Basogur to tell.
+**⚿ GM Secret: what the Prince pays.** The road holds because the Prince pays the jungle's god, **Basajun**, a demi-god the Basogur's fear has made. Princess Hildrun made the first covenant, in the season the road first held; every holder of Ringhold makes it again at accession, face to face, and comes out with a grey streak and one love made impossible, the god's choice, recorded on a page of the Second Book. Full text: [`basogur.md`](basogur.md), *The road*.
+
+**⚿ GM Secret: what the Roadwards pay.** By the Principality's law every Roadward rests in the jungle at the end of life and becomes a tree beside the road that still knows the way. The hall knows it; the covenant stays the house's. Full text: [`basogur.md`](basogur.md), *The road*.
 
 ## The house that stayed
 
@@ -95,4 +97,4 @@ The Gnomes hold the city's temperament across the water, the spin that generates
 - **Herald Pieter Rouland of Lograth**: whose report on Ringhold's colours is the most-copied outsider account.
 - **The line**: Adalric Thornmond · Princess Wulfild Thornmond · Prince Gundram Thornhollow · Princess Odelind Ringhold Thornhollow · Princess Hildrun Ringhold Thornhollow · Prince Wenzel.
 
-**Still open:** the ⚿ page of the Second Book, written at the Basogur build; the valleys and river-wards by name; the Thousand Kingdom's standing view of the title; the ferry-treaty with the Emerald Isles; the count of the young who left this year.
+**Still open:** the valleys and river-wards by name; the Thousand Kingdom's standing view of the title; the ferry-treaty with the Emerald Isles; the count of the young who left this year.

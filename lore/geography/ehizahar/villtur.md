@@ -180,7 +180,7 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 ## Named clans and figures
 
 - **Harahari Iron Fangs**: an Orc-heavy grass-clan, the one that took Zenerious's first deal at the Sagarri fair and carried him from the mountains to the hill with the tree. Their leader then was **Trenbeom**, who told him he would miss the mountains; their leader now is **Ganbat Ironhorn**, who does not care where a thing ends.
-- **Oihandar Red Tusks**: an Orc clan of the Basogur fringe, riding the low broad vigross through ground a runner cannot cross.
+- **Oihandar Red Tusks**: an Orc clan of the Basogur fringe, riding the low broad vigross through ground a runner cannot cross; settled at the long road's northern gate, where a kinrider counts each party off the Roadwards' roll (see [`../nashavel/basogur.md`](../nashavel/basogur.md)).
 - **Vindrakar Hooves**: the grass-clan whose circuit runs from the hill to the Skoga; they think the Frogged Tribe are strange.
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga, at odds with the other Lizardfolk tribes; they float the river on timber and hunt the jungle's edge for days at a time. Their Lurresna is the fruity one.
 - **Myrkvid Long Web**: a Lizardfolk clan of the jungle, hunting through the armiar; **Nomin Threeriver** sits for it at the Taptent's back tables.
