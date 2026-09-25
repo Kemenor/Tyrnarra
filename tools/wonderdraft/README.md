@@ -70,7 +70,29 @@ wdmap restore MAP --backup 0
 - **Art swaps** (`--art`) take a texture or an art family already used somewhere in the map, which supplies the sprite's offset, footprint (`radius`), type and colour setup. The swapped symbol keeps its footprint (`radius x scale` stays the same, so a kapok replaces a pine at a pine's size; add `--scale` to change that), keeps its variant number where the new family has it, and gets its ground-colour `sample` recomputed from the ground image, as Wonderdraft does on placement. Art not yet in the map has to be placed once in Wonderdraft first.
 - Moving a symbol also refreshes its `sample`.
 
-`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
+### Adding things
+
+```bash
+wdmap add     MAP symbol --art 'user://assets/.../Town' --under Valreka --offset 0,-60
+wdmap add     MAP label  --text 'Testford' --at 2700,6600 --like Valreka
+wdmap scatter MAP --art 'user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/Kapok_Tree' --region 'Galdua Jendea' --preview forest.png
+wdmap along   MAP --art 'res://sprites/mountains/playful_jagged_peaks/peak' --from Valreka --to 'Haraour Eliza' --jitter 40
+wdmap stamp capture MAP castle-town --near Valreka --radius 150
+wdmap stamp place   MAP castle-town --under 'Ljos*' --offset 0,80
+wdmap stamp list
+wdmap markers MAP
+```
+
+- **New symbols** copy a symbol that already uses the art (so it must appear in the map once), take the family's typical scale and the layer that art is most used on (a town icon goes to City Icons, not the Legend), a random variant and mirror, and a fresh ground-colour sample.
+- **New labels** copy the style of `--like LABEL`, or of the first label on `--to-layer`.
+- **`scatter`** fills a region (`--region`, by inferred name) or `--rect` with random, non-overlapping placements: on land by default, clear of existing symbols and of label text. Without `--count`/`--density` it fills as far as `--spacing` allows (default: from the art's footprint). `--seed` makes it repeatable.
+- **`along`** places art every `--spacing` along `--path "X,Y X,Y …"` or from one label to another, pushed sideways by up to `--jitter`.
+- **Stamps** live as JSON in [`stamps/`](stamps/) (committed, so both machines have them). `capture` takes everything within `--radius` of a point or label, labels included, so keep the radius tight around what you want. `place` puts it at `--at` or under every label matching `--under`, optionally `--rotate`d (the arrangement turns; icons and text stay upright, which suits loose groups more than multi-piece towns) and `--scale`d.
+- **Markers** do the same from inside Wonderdraft: a label on layer **−5** reading `@stamp NAME [RADIUS]` or `@place NAME [DEG] [SCALE]`. Save and close Wonderdraft, run `wdmap markers MAP`: captures run first, then placements, then the marker labels are removed. `--overwrite` lets an `@stamp` replace an existing stamp.
+
+All of these save in place the same way `edit` does (backup, open-in-Wonderdraft and changed-on-disk checks, `--dry-run`, `--preview`).
+
+`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 
 ## How it works
 

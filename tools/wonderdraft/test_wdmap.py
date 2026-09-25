@@ -8,6 +8,7 @@ once and shared: a decoded 8192px map takes a few GB, so each test class must
 not load its own.
 """
 import copy
+import json
 import os
 import struct
 import sys
@@ -146,6 +147,62 @@ class EditTest(unittest.TestCase):
         self.assertEqual(len(self.m.symbols), n - len(hits))
         data = gdvar.encode(self.m.data["symbols"])
         self.assertEqual(gdvar.decode(data)[1], len(data))
+
+
+@unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
+class PlaceTest(unittest.TestCase):
+    """Adding things, on an in-memory copy of the real map; nothing is written."""
+
+    @classmethod
+    def setUpClass(cls):
+        _, shared = real_map()
+        data = dict(shared.data)
+        for k in ("symbols", "labels", "territories"):
+            data[k] = copy.deepcopy(shared.data[k])
+        cls.m = WDMap(data, TEST_MAP)
+
+    def test_scatter_stays_on_land_in_bounds_and_off_labels(self):
+        import place
+        m = self.m
+        rect = (2000, 5800, 2900, 6400)
+        pts, _ = place.scatter_points(m, lambda x, y: True, rect, spacing=50, seed=1)
+        self.assertGreater(len(pts), 20)
+        boxes = place.label_boxes(m)
+        for x, y in pts:
+            self.assertTrue(rect[0] <= x <= rect[2] and rect[1] <= y <= rect[3])
+            self.assertTrue(m.is_land(x, y))
+            self.assertFalse(any(b[0] <= x <= b[2] and b[1] <= y <= b[3] for b in boxes))
+        for i, (x, y) in enumerate(pts):
+            for x2, y2 in pts[i + 1:]:
+                self.assertGreaterEqual((x - x2) ** 2 + (y - y2) ** 2, 50 ** 2 - 1e-6)
+
+    def test_added_symbol_uses_typical_layer_and_fresh_sample(self):
+        import place
+        art = "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/Kapok_Tree"
+        idx = place.add_symbols(self.m, art, [(2400.0, 6000.0)], seed=3)
+        s = self.m.symbols[idx[0]]
+        self.assertEqual(s["z_index"], place._typical_layer(self.m, art))
+        self.assertEqual(tuple(s["sample"]), tuple(self.m.ground_sample(2400.0, 6000.0)))
+
+    def test_path_points_spacing(self):
+        import place
+        pts = place.path_points([(0, 0), (100, 0), (100, 100)], 25)
+        self.assertEqual(len(pts), 9)
+        self.assertEqual(pts[4], (100.0, 0.0))
+
+    def test_stamp_roundtrip_and_placement(self):
+        import stamps
+        m = self.m
+        x, y, _ = __import__("wdmap").label_anchor(m, "Valreka", 0)
+        line, st = stamps.capture(m, "unit-test", x, y, 150, write=False)
+        self.assertIn("not written", line)
+        self.assertEqual(stamps.from_json(json.loads(json.dumps(st["symbols"]))),
+                         [stamps.from_json(i) for i in st["symbols"]])
+        n = len(m.symbols)
+        _, si, li = stamps.place(m, st, x + 1000, y + 500)
+        self.assertEqual(len(m.symbols), n + len(st["symbols"]))
+        first = stamps.from_json(st["symbols"][0])
+        self.assertAlmostEqual(m.symbols[si[0]]["position"][0], x + 1000 + first["position"][0], places=2)
 
 
 if __name__ == "__main__":

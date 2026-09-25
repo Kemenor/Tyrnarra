@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect Wonderdraft maps: info, query, preview.
+"""Inspect and edit Wonderdraft maps: info, query, preview, edit, add, scatter, along, stamps.
 
     wdmap info    MAP
     wdmap query   MAP {symbols,labels,regions} [filters] [--list N] [--json]
@@ -7,6 +7,14 @@
     wdmap edit    MAP {symbols,labels,regions} [filters | --all] ACTIONS [--dry-run] [--preview OUT.png]
     wdmap backups MAP
     wdmap restore MAP [--backup N]
+    wdmap add     MAP symbol --art ART (--at X,Y | --under LABEL) [--offset DX,DY] [--scale K] [--to-layer L]
+    wdmap add     MAP label --text T (--at X,Y | --under LABEL) [--offset DX,DY] [--like LABEL] [--to-layer L] [--size N]
+    wdmap scatter MAP --art ART (--region NAME | --rect X0,Y0,X1,Y1) [--count N | --density D] [--spacing S]
+    wdmap along   MAP --art ART (--path "X,Y X,Y ..." | --from LABEL --to LABEL) [--spacing S] [--jitter J]
+    wdmap stamp list
+    wdmap stamp capture MAP NAME (--at X,Y | --near LABEL) [--radius R] [--overwrite]
+    wdmap stamp place   MAP NAME (--at X,Y | --under LABEL) [--rotate DEG] [--scale K]
+    wdmap markers MAP        (runs @stamp / @place marker labels on layer -5)
 
 Filters (all optional, combined with AND; globs are case-insensitive):
     --texture GLOB   symbol texture path, e.g. '*hatch_pine*'
@@ -27,9 +35,10 @@ Edit actions:
                  --font NAME  --size N  --color #rrggbb
     regions      --color #rrggbb  --border-style domain|region  --border-width W
 
-edit saves in place: it backs the map up first (~/.local/share/wdmap/backups),
-refuses while Wonderdraft has the map open, and refuses if the file changed on
-disk since it was read. --dry-run reports without saving.
+Every command that changes a map saves in place: it backs the map up first
+(~/.local/share/wdmap/backups), refuses while Wonderdraft has the map open, and
+refuses if the file changed on disk since it was read. --dry-run reports without
+saving; --preview OUT.png renders the changed area with the changes highlighted.
 """
 import argparse
 import collections
@@ -40,6 +49,8 @@ import sys
 HERE = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, HERE)
 import edit  # noqa: E402
+import place  # noqa: E402
+import stamps  # noqa: E402
 from wdmap import WDMap, backup, backups, family, label_anchor, select, wonderdraft_has_open  # noqa: E402
 
 
@@ -200,9 +211,7 @@ def _xy(spec):
 def cmd_edit(m, a):
     if not (has_filters(a) or a.all):
         sys.exit("error: give filters to select what to edit, or --all")
-    if not (a.dry_run or a.force) and wonderdraft_has_open(m.path):
-        sys.exit("not saved: Wonderdraft has %s open; save and close it there first (or use --dry-run)"
-                 % os.path.basename(m.path))
+    check_writable(m, a)
     hits = run_select(m, a.kind, a)
     if not hits:
         print("nothing matched; no changes")
@@ -223,16 +232,28 @@ def cmd_edit(m, a):
         print("%d %s matched, but no actions given; no changes" % (len(hits), a.kind))
         return
     print("%d %s selected" % (len(hits), a.kind))
+    if a.delete:
+        hl, pts = {}, [(it.bbox[0], it.bbox[1]) if a.kind == "regions" else it["position"] for _, it in hits]
+    else:
+        hl = {a.kind: [i for i, _ in hits]}
+        pts = ([p for _, it in hits for p in (it.bbox[:2], it.bbox[2:])] if a.kind == "regions"
+               else [it["position"] for _, it in hits])
+    finish(m, a, lines, hl, pts)
+
+
+def check_writable(m, a):
+    """Refuse early (before any work) when the save would be refused anyway."""
+    if not (a.dry_run or a.force) and wonderdraft_has_open(m.path):
+        sys.exit("not saved: Wonderdraft has %s open; save and close it there first (or use --dry-run)"
+                 % os.path.basename(m.path))
+
+
+def finish(m, a, lines, hl, pts):
+    """Report, optionally preview the changed area, then save in place (unless --dry-run)."""
     for line in lines:
         print("  " + line)
-    if a.preview:
+    if a.preview and pts:
         import preview
-        if a.delete:
-            hl, pts = {}, [(it.bbox[0], it.bbox[1]) if a.kind == "regions" else it["position"] for _, it in hits]
-        else:
-            hl = {a.kind: [i for i, _ in hits]}
-            pts = ([p for _, it in hits for p in (it.bbox[:2], it.bbox[2:])] if a.kind == "regions"
-                   else [it["position"] for _, it in hits])
         xs, ys = [p[0] for p in pts], [p[1] for p in pts]
         pad = max(200, 0.1 * max(max(xs) - min(xs), max(ys) - min(ys)))
         area = (min(xs) - pad, min(ys) - pad, max(xs) + pad, max(ys) + pad)
@@ -246,6 +267,140 @@ def cmd_edit(m, a):
     except RuntimeError as e:
         sys.exit("not saved: %s" % e)
     print("saved %s (backup: %s)" % (m.path, bak))
+
+
+def anchor(m, a):
+    """--at X,Y or --under LABEL, plus --offset."""
+    if getattr(a, "at", None):
+        x, y = _xy(a.at)
+    elif getattr(a, "under", None):
+        x, y, _ = label_anchor(m, a.under, 0)
+    else:
+        sys.exit("error: give --at X,Y or --under LABEL")
+    dx, dy = _xy(a.offset) if getattr(a, "offset", None) else (0.0, 0.0)
+    return x + dx, y + dy
+
+
+def cmd_add(m, a):
+    check_writable(m, a)
+    x, y = anchor(m, a)
+    layer = m.resolve_layer(a.to_layer) if a.to_layer is not None else None
+    if a.what == "symbol":
+        if not a.art:
+            sys.exit("error: add symbol needs --art")
+        idx = place.add_symbols(m, a.art, [(x, y)], scale=a.scale, layer=layer, mirror=False)
+        s = m.symbols[idx[0]]
+        finish(m, a, ["added %s at (%d, %d) layer %s" % (s["texture"], x, y, m.layer_name(s["z_index"]))],
+               {"symbols": idx}, [(x, y)])
+    else:
+        if not a.text:
+            sys.exit("error: add label needs --text")
+        i = place.add_label(m, a.text, x, y, like=a.like, layer=layer, size=a.size)
+        l = m.labels[i]
+        finish(m, a, ["added label %r at (%d, %d) layer %s, %s %s" % (
+            a.text, x, y, m.layer_name(l["z_index"]), l["font"], l["size"])], {"labels": [i]}, [(x, y)])
+
+
+def cmd_scatter(m, a):
+    check_writable(m, a)
+    targets, _ = edit.art_targets(m, a.art)
+    tpl = next(iter(targets.values()))
+    scale = a.scale if a.scale is not None else place._typical_scale(m, tpl["texture"])
+    spacing = a.spacing or (tpl.get("radius") or 30) * scale * 1.2
+    if a.region:
+        regs = [r for pat in a.region for r in m.find_regions(pat)]
+        bbox = (min(r.bbox[0] for r in regs), min(r.bbox[1] for r in regs),
+                max(r.bbox[2] for r in regs), max(r.bbox[3] for r in regs))
+        contains = lambda x, y: any(r.contains(x, y) for r in regs)  # noqa: E731
+        area = sum(r.area for r in regs)
+        where = "in " + ", ".join(sorted({r.label for r in regs}))
+    elif a.rect:
+        bbox = tuple(float(v) for v in a.rect.split(","))
+        contains = lambda x, y: True  # noqa: E731
+        area = None
+        where = "in rect %s" % a.rect
+    else:
+        sys.exit("error: scatter needs --region or --rect")
+    on = None if a.on == "any" else a.on
+    pts, wanted = place.scatter_points(m, contains, bbox, spacing, count=a.count, density=a.density,
+                                       on=on, avoid=not a.no_avoid, seed=a.seed, area_hint=area)
+    layer = m.resolve_layer(a.to_layer) if a.to_layer is not None else None
+    idx = place.add_symbols(m, a.art, pts, scale=scale, layer=layer, seed=a.seed, jitter_scale=a.jitter_scale)
+    lines = ["scattered %d x %s %s (spacing %g, scale %g)" % (len(idx), a.art, where, spacing, scale)]
+    if len(pts) < wanted and (a.count or a.density):
+        lines.append("note: asked for %d, only %d fit (spacing, land/water and existing symbols limit it)"
+                     % (wanted, len(pts)))
+    finish(m, a, lines, {"symbols": idx}, pts)
+
+
+def cmd_along(m, a):
+    check_writable(m, a)
+    if a.path:
+        path = [_xy(p) for p in a.path.split()]
+    elif a.from_ and a.to:
+        path = [label_anchor(m, a.from_, 0)[:2], label_anchor(m, a.to, 0)[:2]]
+    else:
+        sys.exit("error: along needs --path or --from/--to")
+    targets, _ = edit.art_targets(m, a.art)
+    tpl = next(iter(targets.values()))
+    scale = a.scale if a.scale is not None else place._typical_scale(m, tpl["texture"])
+    spacing = a.spacing or (tpl.get("radius") or 30) * scale * 2
+    pts = place.path_points(path, spacing, jitter=a.jitter, seed=a.seed)
+    layer = m.resolve_layer(a.to_layer) if a.to_layer is not None else None
+    idx = place.add_symbols(m, a.art, pts, scale=scale, layer=layer, seed=a.seed)
+    finish(m, a, ["placed %d x %s along a %d-point path (spacing %g)" % (len(idx), a.art, len(path), spacing)],
+           {"symbols": idx}, pts + path)
+
+
+def cmd_stamp(a):
+    if a.action == "list":
+        for st in stamps.list_stamps():
+            print("  %-24s %4d symbols %3d labels  radius %g  from %s, %s" % (
+                st["name"], len(st["symbols"]), len(st["labels"]), st["radius"], st["source"], st["captured"]))
+        return
+    if not a.map or not a.name:
+        sys.exit("error: stamp %s needs MAP and NAME" % a.action)
+    m = WDMap.load(a.map)
+    if a.action == "capture":
+        if a.near:
+            x, y, _ = label_anchor(m, a.near, 0)
+        elif a.at:
+            x, y = _xy(a.at)
+        else:
+            sys.exit("error: give --at X,Y or --near LABEL")
+        line, _ = stamps.capture(m, a.name, x, y, a.radius, overwrite=a.overwrite)
+        print("  " + line)
+        return
+    check_writable(m, a)
+    st = stamps.load_stamp(a.name)
+    if a.under:
+        import fnmatch
+        spots = [tuple(l["position"]) for l in m.labels
+                 if fnmatch.fnmatch(" ".join(l["text"].split()).lower(), a.under.lower())]
+        if not spots:
+            sys.exit("error: no label matching %r" % a.under)
+    elif a.at:
+        spots = [_xy(a.at)]
+    else:
+        sys.exit("error: give --at X,Y or --under LABEL")
+    dx, dy = _xy(a.offset) if a.offset else (0.0, 0.0)
+    lines, hs, hl_ = [], [], []
+    for x, y in spots:
+        line, si, li = stamps.place(m, st, x + dx, y + dy, a.rotate, a.stamp_scale)
+        lines.append(line)
+        hs += si
+        hl_ += li
+    finish(m, a, lines, {"symbols": hs, "labels": hl_}, [(x + dx, y + dy) for x, y in spots])
+
+
+def cmd_markers(m, a):
+    check_writable(m, a)
+    lines, hs, hl_ = stamps.process_markers(m, overwrite=a.overwrite, write=not a.dry_run)
+    if not lines:
+        print("no @stamp/@place marker labels on layer -5")
+        return
+    pts = [m.symbols[i]["position"] for i in hs] + [m.labels[i]["position"] for i in hl_]
+    finish(m, a, lines, {"symbols": hs, "labels": hl_}, pts)
 
 
 def cmd_backups(path):
@@ -265,6 +420,12 @@ def cmd_restore(path, n, force):
     shutil.copy2(chosen, path)
     print("restored %s from %s (the version it replaced is backed up as %s)"
           % (path, os.path.basename(chosen), os.path.basename(safety)))
+
+
+def add_write_opts(p):
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--preview", metavar="OUT.png")
+    p.add_argument("--force", action="store_true", help="skip the Wonderdraft-has-it-open check")
 
 
 def main():
@@ -306,9 +467,64 @@ def main():
     p.add_argument("--border-style")
     p.add_argument("--border-width", type=float)
     p.add_argument("--delete", action="store_true")
-    p.add_argument("--dry-run", action="store_true")
-    p.add_argument("--preview", metavar="OUT.png")
-    p.add_argument("--force", action="store_true", help="skip the Wonderdraft-has-it-open check")
+    add_write_opts(p)
+    p = sub.add_parser("add")
+    p.add_argument("map")
+    p.add_argument("what", choices=("symbol", "label"))
+    p.add_argument("--art")
+    p.add_argument("--text")
+    p.add_argument("--at", metavar="X,Y")
+    p.add_argument("--under", metavar="LABEL", help="at the position of the label matching this")
+    p.add_argument("--offset", metavar="DX,DY")
+    p.add_argument("--like", metavar="LABEL", help="copy the style of this label (default: first label on the layer)")
+    p.add_argument("--scale", type=float)
+    p.add_argument("--size", type=int)
+    p.add_argument("--to-layer")
+    add_write_opts(p)
+    p = sub.add_parser("scatter")
+    p.add_argument("map")
+    p.add_argument("--art", required=True)
+    p.add_argument("--region", action="append")
+    p.add_argument("--rect")
+    p.add_argument("--count", type=int)
+    p.add_argument("--density", type=float, help="symbols per 1000x1000 map units (default: fill to --spacing)")
+    p.add_argument("--spacing", type=float, help="minimum distance (default: from the art's footprint)")
+    p.add_argument("--on", choices=("land", "water", "any"), default="land")
+    p.add_argument("--no-avoid", action="store_true", help="allow overlapping existing symbols")
+    p.add_argument("--scale", type=float, help="default: the art's typical scale in this map")
+    p.add_argument("--jitter-scale", type=float, default=0.1)
+    p.add_argument("--to-layer")
+    p.add_argument("--seed", type=int)
+    add_write_opts(p)
+    p = sub.add_parser("along")
+    p.add_argument("map")
+    p.add_argument("--art", required=True)
+    p.add_argument("--path", help='"X,Y X,Y ..."')
+    p.add_argument("--from", dest="from_", metavar="LABEL")
+    p.add_argument("--to", metavar="LABEL")
+    p.add_argument("--spacing", type=float)
+    p.add_argument("--jitter", type=float, default=0.0)
+    p.add_argument("--scale", type=float)
+    p.add_argument("--to-layer")
+    p.add_argument("--seed", type=int)
+    add_write_opts(p)
+    p = sub.add_parser("stamp")
+    p.add_argument("action", choices=("list", "capture", "place"))
+    p.add_argument("map", nargs="?")
+    p.add_argument("name", nargs="?")
+    p.add_argument("--at", metavar="X,Y")
+    p.add_argument("--near", metavar="LABEL", help="capture around this label")
+    p.add_argument("--under", metavar="LABEL", help="place at every label matching this")
+    p.add_argument("--offset", metavar="DX,DY")
+    p.add_argument("--radius", type=float, default=stamps.DEFAULT_RADIUS)
+    p.add_argument("--rotate", type=float, default=0.0)
+    p.add_argument("--scale", dest="stamp_scale", type=float, default=1.0)
+    p.add_argument("--overwrite", action="store_true")
+    add_write_opts(p)
+    p = sub.add_parser("markers")
+    p.add_argument("map")
+    p.add_argument("--overwrite", action="store_true", help="let @stamp markers replace existing stamps")
+    add_write_opts(p)
     p = sub.add_parser("backups")
     p.add_argument("map")
     p = sub.add_parser("restore")
@@ -321,8 +537,11 @@ def main():
             return cmd_backups(a.map)
         if a.cmd == "restore":
             return cmd_restore(os.path.abspath(a.map), a.backup, a.force)
+        if a.cmd == "stamp":
+            return cmd_stamp(a)
         m = WDMap.load(a.map)
-        {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit}[a.cmd](m, a)
+        {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit, "add": cmd_add,
+         "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
 
