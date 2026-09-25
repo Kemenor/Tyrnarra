@@ -15,6 +15,7 @@
     wdmap stamp capture MAP NAME (--at X,Y | --near LABEL) [--radius R] [--overwrite]
     wdmap stamp place   MAP NAME (--at X,Y | --under LABEL) [--rotate DEG] [--scale K]
     wdmap markers MAP        (runs @stamp / @place marker labels on layer -5)
+    wdmap snapshot MAP [-o PATH]   (readable text snapshot for git: tools/wonderdraft/map-snapshot.json)
 
 Filters (all optional, combined with AND; globs are case-insensitive):
     --texture GLOB   symbol texture path, e.g. '*hatch_pine*'
@@ -393,6 +394,12 @@ def cmd_stamp(a):
     finish(m, a, lines, {"symbols": hs, "labels": hl_}, [(x + dx, y + dy) for x, y in spots])
 
 
+def cmd_snapshot(m, a):
+    import snapshot
+    path, changed = snapshot.write(m, a.output or snapshot.DEFAULT_PATH)
+    print("%s %s" % ("updated" if changed else "unchanged:", path))
+
+
 def cmd_markers(m, a):
     check_writable(m, a)
     lines, hs, hl_ = stamps.process_markers(m, overwrite=a.overwrite, write=not a.dry_run)
@@ -525,6 +532,9 @@ def build_parser():
     p.add_argument("map")
     p.add_argument("--overwrite", action="store_true", help="let @stamp markers replace existing stamps")
     add_write_opts(p)
+    p = sub.add_parser("snapshot")
+    p.add_argument("map")
+    p.add_argument("-o", "--output", help="default: tools/wonderdraft/map-snapshot.json")
     p = sub.add_parser("backups")
     p.add_argument("map")
     p = sub.add_parser("restore")
@@ -546,7 +556,8 @@ def run(argv=None):
             return cmd_stamp(a)
         m = WDMap.load(a.map)
         {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit, "add": cmd_add,
-         "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers}[a.cmd](m, a)
+         "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers,
+         "snapshot": cmd_snapshot}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
 

@@ -24,7 +24,7 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 
 1. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` writes the three variants.
 2. Open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
-3. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp` and runs `resize.sh` for the `display/` and `thumbs/` variants. It refuses when an export is missing or older than its variant map (stale).
+3. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp`, runs `resize.sh` for the `display/` and `thumbs/` variants, and refreshes `map-snapshot.json`. It refuses when an export is missing or older than its variant map (stale).
 4. Review the maps page and commit; pushing deploys the site.
 
 Exporting stays manual: Wonderdraft has no command-line export, and scripting its window on KDE Wayland proved unreliable (input-permission prompt, scaled coordinates).
@@ -92,9 +92,19 @@ wdmap markers MAP
 
 All of these save in place the same way `edit` does (backup, open-in-Wonderdraft and changed-on-disk checks, `--dry-run`, `--preview`).
 
+### Snapshot for git
+
+The map itself stays out of git: at ~100 MB it is over GitHub's per-file limit, compressed and undiffable, and every save would add a full copy to history. Proton Drive syncs it and `wdmap` keeps backups. Git tracks [`map-snapshot.json`](map-snapshot.json) instead, a readable text snapshot of what the map says: every label (layer, text, position, font, size), every region shape (kind, inferred name, bbox, area, colour), every icon-type symbol (settlements, castles) with its position, symbol counts per layer and art family, the scale bar and the layer names. It is deterministic, one item per line, so `git diff` reads like a changelog of the map.
+
+```bash
+wdmap snapshot ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map     # "updated" or "unchanged"
+```
+
+`wd_regions.py … --publish` refreshes it too, so the published views and the snapshot of their source are committed together.
+
 ### MCP server
 
-`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `backups`, `restore`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
+`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
 
 `wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 

@@ -135,6 +135,13 @@ def publish(outdir, stem):
         print("  %s -> %s" % (os.path.basename(export), os.path.relpath(dst, os.path.join(HERE, "..", ".."))),
               flush=True)
     subprocess.run(["bash", os.path.join(SITE_MAPS, "resize.sh")], check=True)
+    master = os.path.join(outdir, stem + ".wonderdraft_map")
+    if os.path.exists(master):
+        # The published views and the text snapshot of their source go into git together.
+        from snapshot import write
+        from wdmap import WDMap
+        path, changed = write(WDMap.load(master), os.path.join(HERE, "map-snapshot.json"))
+        print("snapshot %s: %s" % ("updated" if changed else "unchanged", os.path.relpath(path, os.path.join(HERE, "..", ".."))))
     print("Published into %s; review and commit when happy." % SITE_MAPS)
 
 

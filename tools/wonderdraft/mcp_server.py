@@ -301,6 +301,14 @@ def restore(backup: int = 0, map: str = DEFAULT_MAP) -> str:
 
 
 @server.tool(annotations=WRITE)
+def snapshot(map: str = DEFAULT_MAP) -> str:
+    """Refresh tools/wonderdraft/map-snapshot.json, the readable text snapshot of the map that git
+    tracks (labels, regions, icons, symbol counts, scale). Run after an editing session; the user
+    commits it."""
+    return _run(["snapshot", map])
+
+
+@server.tool(annotations=WRITE)
 def split_variants(map: str = DEFAULT_MAP) -> str:
     """Write the export variants next to the map: '<map> - God Domains', '- Regions', '- Terrain'
     (wd_regions.py). The user then exports each from Wonderdraft."""

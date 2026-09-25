@@ -205,5 +205,17 @@ class PlaceTest(unittest.TestCase):
         self.assertAlmostEqual(m.symbols[si[0]]["position"][0], x + 1000 + first["position"][0], places=2)
 
 
+@unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
+class SnapshotTest(unittest.TestCase):
+    def test_deterministic_valid_json(self):
+        import snapshot
+        _, m = real_map()
+        a, b = snapshot.dumps(snapshot.build(m)), snapshot.dumps(snapshot.build(m))
+        self.assertEqual(a, b)
+        d = json.loads(a)
+        self.assertEqual(len(d["labels"]), len(m.labels))
+        self.assertEqual(d["totals"]["symbols"], len(m.symbols))
+
+
 if __name__ == "__main__":
     unittest.main()

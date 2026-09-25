@@ -25,6 +25,9 @@ same operations exist as `wdmap …` commands.
    Ask the user to open the map when a check in Wonderdraft is needed.
 5. After label or symbol changes that affect a published view, regenerate the
    variants (`split_variants`) and note the pending re-export in `docs/map-todo.md`.
+6. At the end of an editing session run `snapshot` and commit
+   `tools/wonderdraft/map-snapshot.json` with the related docs: it is git's record of
+   the map (the map file itself is too big for git).
 
 ## The map's conventions
 
