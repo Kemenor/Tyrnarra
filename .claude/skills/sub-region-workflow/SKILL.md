@@ -352,6 +352,7 @@ Per CLAUDE.md: "Don't create empty stub files for sub-regions that don't exist y
   - **At-a-Glance facts panel** (etymology, position, terrain, character pills, people, tongue, faith, rule)
   - **God's-city-style callout** for the capital or mother-house
   - **5-8 themed sections**, each with a divider and section-heading. The first themed section should expand the seed; don't lead with governance.
+  - **A quoted log or letters published whole** as expandable day cards (`.log-letters`, per `docs/region-prose.md`), never only as a summary timeline
   - **Signature feature panels** (`.feature-panel`) for the kingdom's distinctive crafts or institutions
   - **Card grids** where appropriate (clans, departments, named artifacts, named bells, named seasons)
   - **Optional amber `◈ Popular Belief` and red `⚿ GM Secret` expandables**. Load `/setting/assets/site-interactions.js` if used. Folk-belief boxes work well for tavern-tales about the institution; GM secrets are reserved for canon the chronicler couldn't reasonably know.

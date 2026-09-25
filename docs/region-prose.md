@@ -12,6 +12,7 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 - **Every other quoted named voice gets a voice block in lore** (GM ruling, 2026-09-25), so the next quote from them sounds like the last. Two tiers:
   - **Passing voice** (quoted once, or several times inside one document): one line in a **Voices** list at the bottom of the file that quotes them, beside *Named figures*: **Name** · occupation · the voice in a phrase.
   - **Recurring voice** (quoted in a second context, or the author of a quoted document such as a log or a run of letters): name, occupation, and a short paragraph on temperament, register, habits of speech, and what they notice and pass over; at the top of their own document, or in the Voices list if they have none. A voice is promoted when it is quoted in a new context, never on spec.
+  - **A quoted log or run of letters is published whole** (GM ruling, 2026-09-25). Excerpts carry the color through the sections, and the page closes with the full document as expandable day cards (`.log-letters` in `style-b.css`: a `<button>` header with the day, a one-line summary, and the `Tap ▾` pill; the entry verbatim beneath). GM notes inside the document stay off the page. Reference: *The Crossing* on `basogur.html` and `villtur.html`.
   - A block says how a voice **sounds**, never what it knows: GM-tier facts about a person stay in ⚿ boxes. Blocks are lore-only and stay off the HTML pages. Proverbs and unattributed sayings get none.
 - Unattributed folk-belief stays in the amber ◈ register.
 
