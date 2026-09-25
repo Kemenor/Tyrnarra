@@ -155,7 +155,7 @@ The Basogur splits the rail, and the continent crosses its waist four ways:
 
 - **The Northern hub**: which city, and its character (candidates in [`../docs/open-threads.md`](../docs/open-threads.md)).
 - **The northern coast**: Villtur's few ports, which freeze and when, Fenurra's warm port and its name, and what that makes of the long road's trade.
-- **What drives a Magitrain**: boiler, rune-array, or both; speeds, fares, gauge. Waits on the GM's pass over the continent map and its scale; the figures are estimated from there.
+- **What drives a Magitrain**: boiler, rune-array, or both; speeds, fares, gauge. Waits on the GM's pass over the continent map and its scale; the figures are estimated from there. The map's scale bar currently reads about 6–8× too large for canon travel times (see [`../docs/map-todo.md`](../docs/map-todo.md), *Scale bar*).
 - **The airship guilds**: names, routes, fares; the Veidrath tower district (a deepening idea: [`../docs/deepening-ideas.md`](../docs/deepening-ideas.md)).
 - **The Iron Tide's route inland**: the record has Tide ships sighted at "the Order of Steam's ports", which lie on a Midarra bay behind the Gesalkai gate.
 - **Flying mounts**: which kinds, and in which regions (defined at each region's build).

@@ -8,6 +8,12 @@ Pending label work for the map art. The three views (terrain / kingdoms / domain
 
 - **Harro Distiratsua map label: keep the *-a*.** Canon adopted the map's *-a* spelling on 2026-08-13 (the authentic Basque definite form; glossary and lore updated at the Harro Distiratsua build), reversing the 2026-07-05 map-source fix to *-tsue*. **Action: revert the map source label back to "Harro Distiratsua"** so source and exports agree again. The currently-published exports already carry the correct *-a* label; no re-export needed unless the source is touched for other reasons.
 
+## Scale bar: relabel pending (GM, 2026-09-25)
+
+The scale bar (bottom-left of the terrain view) reads **0–2000 miles**. On the 8192 px original, 1000 bar-miles span ~1000 px, so **1 px ≈ 1 mile** as labelled. At that label Talan runs ~7,000 mi west–east and ~7,500 mi north–south (NW coast to SE coast ~8,300 mi; island to island ~9,200 mi), the Midarra ~5,300 mi long, and the Basogur ~1,500 mi deep: larger than Asia.
+
+Canon travel times want a map 6–8× smaller. The long road crosses the Basogur in 11 days on foot with sledges (165–275 mi at a hard 15–25 mi/day, against ~1,500 on the map); Rustam Varaz flies Merkavar to Sombral between noon and just after sunset (~8 h; ~425 mi at a plausible airship pace, against 3,000+ on the map). Both point to the bar's "2000" reading about **250–350 miles** (**~400–550 km**), which puts Talan at roughly 1,000–1,300 mi (1,700–2,100 km) across: Europe-sized. The GM plans to relabel the bar (and switch units); once settled, record the scale in `lore/geography/_continent.md` and derive Magitrain and airship figures from it (`lore/transport.md`, *Still open*).
+
 ## Backlog for the next map edit
 
 - **Tvisol** (Brauogi/Myrkono corner). The Twin Suns + Bikitsa joint kingdom now carries the canon name **Tvisol** (2026-07-06 build); consider a kingdom-view label for it, keeping the two half-labels. Optional settlement marks: **Solkai** (sunward ferry-capital) and **Gaulabe** (shade-half oven-town).
