@@ -1,4 +1,4 @@
-"""Godot 3 Variant (store_var / encode_variant) parser, enough to walk Wonderdraft maps."""
+"""Godot 3 Variant (store_var / encode_variant) codec for Wonderdraft maps: a byte-range parser plus full decode/encode."""
 import struct
 
 NAMES = ["NIL", "BOOL", "INT", "REAL", "STRING", "VECTOR2", "RECT2", "VECTOR3", "TRANSFORM2D",
@@ -162,3 +162,281 @@ def load(path):
     root = parse(b, 4)
     assert root.end == 4 + length, (root.end, length)
     return b, root
+
+
+# ---------------------------------------------------------------------------
+# Full decode / encode to plain Python values.
+#
+# decode() turns a variant into Python values; encode() writes it back. For
+# anything Wonderdraft writes, encode(decode(x)) reproduces x byte for byte:
+# INT is always written 64-bit and REAL is 64-bit only when float32 can't hold
+# the value exactly, so plain Python ints and floats carry enough information.
+
+from array import array
+
+
+class _Fixed(tuple):
+    """Fixed-size float struct (Vector2, Color, ...); fields are float32 on disk."""
+    TYPE = None
+    SIZE = None
+
+    def __new__(cls, *vals):
+        if len(vals) == 1 and not isinstance(vals[0], (int, float)):
+            vals = tuple(vals[0])
+        if len(vals) != cls.SIZE:
+            raise ValueError("%s needs %d values" % (cls.__name__, cls.SIZE))
+        return super().__new__(cls, (float(v) for v in vals))
+
+    def __repr__(self):
+        return "%s(%s)" % (type(self).__name__, ", ".join("%g" % v for v in self))
+
+
+def _fixed(name, type_, size):
+    return type(name, (_Fixed,), {"TYPE": type_, "SIZE": size, "__slots__": ()})
+
+
+Vector2 = _fixed("Vector2", 5, 2)
+Rect2 = _fixed("Rect2", 6, 4)
+Vector3 = _fixed("Vector3", 7, 3)
+Transform2D = _fixed("Transform2D", 8, 6)
+Plane = _fixed("Plane", 9, 4)
+Quat = _fixed("Quat", 10, 4)
+AABB = _fixed("AABB", 11, 6)
+Basis = _fixed("Basis", 12, 9)
+Transform = _fixed("Transform", 13, 12)
+Color = _fixed("Color", 14, 4)
+FIXED_TYPES = {c.TYPE: c for c in (Vector2, Rect2, Vector3, Transform2D, Plane, Quat, AABB, Basis, Transform, Color)}
+
+for _c in (Vector2,):
+    _c.x = property(lambda s: s[0])
+    _c.y = property(lambda s: s[1])
+Color.r = property(lambda s: s[0])
+Color.g = property(lambda s: s[1])
+Color.b = property(lambda s: s[2])
+Color.a = property(lambda s: s[3])
+
+
+class GdObject:
+    """An encoded Object: class name plus ordered (name, value) properties.
+
+    A list, not a dict: Godot can list a property twice (ImageTexture writes
+    "flags" twice). Empty class name = null object.
+    """
+    __slots__ = ("cls", "props")
+
+    def __init__(self, cls, props=None):
+        self.cls, self.props = cls, props if props is not None else []
+
+    def get(self, name, default=None):
+        for k, v in self.props:
+            if k == name:
+                return v
+        return default
+
+    def __repr__(self):
+        return "GdObject(%r, %d props)" % (self.cls, len(self.props))
+
+
+class Raw:
+    """A variant kept as its exact encoded bytes (NodePath, RID, object ids)."""
+    __slots__ = ("data",)
+
+    def __init__(self, data):
+        self.data = bytes(data)
+
+    @property
+    def type(self):
+        return struct.unpack_from("<I", self.data)[0] & 0xFFFF
+
+    def __repr__(self):
+        return "Raw(%s, %d bytes)" % (NAMES[self.type], len(self.data))
+
+
+class PoolIntArray(array):
+    def __new__(cls, vals=()):
+        return super().__new__(cls, "i", vals)
+
+
+class PoolRealArray(array):
+    def __new__(cls, vals=()):
+        return super().__new__(cls, "f", vals)
+
+
+class PoolStringArray(list):
+    pass
+
+
+class PoolVector2Array(list):
+    pass
+
+
+class PoolVector3Array(list):
+    pass
+
+
+class PoolColorArray(list):
+    pass
+
+
+def _read_str(b, p):
+    (n,) = struct.unpack_from("<I", b, p)
+    return bytes(b[p + 4:p + 4 + n]).decode("utf-8"), p + 4 + pad4(n)
+
+
+def decode(b, p=0):
+    """Decode the variant at offset p. Returns (value, end_offset)."""
+    (hdr,) = struct.unpack_from("<I", b, p)
+    t, flags = hdr & 0xFFFF, hdr >> 16
+    start = p
+    p += 4
+    if t == 0:
+        return None, p
+    if t == 1:
+        return bool(struct.unpack_from("<I", b, p)[0]), p + 4
+    if t == 2:
+        if flags & 1:
+            return struct.unpack_from("<q", b, p)[0], p + 8
+        return struct.unpack_from("<i", b, p)[0], p + 4
+    if t == 3:
+        if flags & 1:
+            return struct.unpack_from("<d", b, p)[0], p + 8
+        return struct.unpack_from("<f", b, p)[0], p + 4
+    if t == 4:
+        return _read_str(b, p)
+    if t in FIXED_TYPES:
+        cls = FIXED_TYPES[t]
+        return cls(struct.unpack_from("<%df" % cls.SIZE, b, p)), p + 4 * cls.SIZE
+    if t in (15, 16) or (t == 17 and flags & 1):
+        end = parse(b, start).end
+        return Raw(b[start:end]), end
+    if t == 17:
+        cls, p = _read_str(b, p)
+        props = []
+        if cls:
+            (cnt,) = struct.unpack_from("<I", b, p)
+            p += 4
+            for _ in range(cnt):
+                k, p = _read_str(b, p)
+                pv, p = decode(b, p)
+                props.append((k, pv))
+        return GdObject(cls, props), p
+    if t == 18:
+        (cnt,) = struct.unpack_from("<I", b, p)
+        p += 4
+        if cnt & 0x80000000:
+            raise ValueError("shared dictionary flag at %d" % start)
+        d = {}
+        for _ in range(cnt):
+            k, p = decode(b, p)
+            d[k], p = decode(b, p)
+        if len(d) != cnt:
+            raise ValueError("colliding dictionary keys at %d" % start)
+        return d, p
+    if t == 19:
+        (cnt,) = struct.unpack_from("<I", b, p)
+        p += 4
+        if cnt & 0x80000000:
+            raise ValueError("shared array flag at %d" % start)
+        out = []
+        for _ in range(cnt):
+            v, p = decode(b, p)
+            out.append(v)
+        return out, p
+    (cnt,) = struct.unpack_from("<I", b, p)
+    p += 4
+    if t == 20:
+        return bytes(b[p:p + cnt]), p + pad4(cnt)
+    if t == 21:
+        a = PoolIntArray()
+        a.frombytes(b[p:p + 4 * cnt])
+        return a, p + 4 * cnt
+    if t == 22:
+        a = PoolRealArray()
+        a.frombytes(b[p:p + 4 * cnt])
+        return a, p + 4 * cnt
+    if t == 23:
+        out = PoolStringArray()
+        for _ in range(cnt):
+            s, p = _read_str(b, p)
+            out.append(s)
+        return out, p
+    if t in (24, 25, 26):
+        cls, arr = {24: (Vector2, PoolVector2Array), 25: (Vector3, PoolVector3Array),
+                    26: (Color, PoolColorArray)}[t]
+        n = cls.SIZE
+        flat = struct.unpack_from("<%df" % (n * cnt), b, p)
+        return arr(cls(flat[i:i + n]) for i in range(0, n * cnt, n)), p + 4 * n * cnt
+    raise ValueError("unknown variant type %d at %d" % (t, start))
+
+
+def _put_str(out, s):
+    data = s.encode("utf-8")
+    out += struct.pack("<I", len(data))
+    out += data
+    out += b"\0" * (pad4(len(data)) - len(data))
+
+
+def _encode(v, out):
+    if v is None:
+        out += struct.pack("<I", 0)
+    elif isinstance(v, bool):
+        out += struct.pack("<II", 1, int(v))
+    elif isinstance(v, int):
+        # Wonderdraft's Godot build writes every INT as 64-bit, whatever its size.
+        out += struct.pack("<Iq", 2 | FLAG_64, v)
+    elif isinstance(v, float):
+        if struct.unpack("<f", struct.pack("<f", v))[0] == v:
+            out += struct.pack("<If", 3, v)
+        else:
+            out += struct.pack("<Id", 3 | FLAG_64, v)
+    elif isinstance(v, str):
+        out += struct.pack("<I", 4)
+        _put_str(out, v)
+    elif isinstance(v, _Fixed):
+        out += struct.pack("<I%df" % v.SIZE, v.TYPE, *v)
+    elif isinstance(v, Raw):
+        out += v.data
+    elif isinstance(v, GdObject):
+        out += struct.pack("<I", 17)
+        _put_str(out, v.cls)
+        if v.cls:
+            out += struct.pack("<I", len(v.props))
+            for k, pv in v.props:
+                _put_str(out, k)
+                _encode(pv, out)
+    elif isinstance(v, dict):
+        out += struct.pack("<II", 18, len(v))
+        for k, dv in v.items():
+            _encode(k, out)
+            _encode(dv, out)
+    elif isinstance(v, (bytes, bytearray)):
+        out += struct.pack("<II", 20, len(v))
+        out += v
+        out += b"\0" * (pad4(len(v)) - len(v))
+    elif isinstance(v, PoolIntArray):
+        out += struct.pack("<II", 21, len(v))
+        out += v.tobytes()
+    elif isinstance(v, PoolRealArray):
+        out += struct.pack("<II", 22, len(v))
+        out += v.tobytes()
+    elif isinstance(v, PoolStringArray):
+        out += struct.pack("<II", 23, len(v))
+        for s in v:
+            _put_str(out, s)
+    elif isinstance(v, (PoolVector2Array, PoolVector3Array, PoolColorArray)):
+        t = {PoolVector2Array: 24, PoolVector3Array: 25, PoolColorArray: 26}[type(v)]
+        out += struct.pack("<II", t, len(v))
+        for item in v:
+            out += struct.pack("<%df" % len(item), *item)
+    elif isinstance(v, (list, tuple)):
+        out += struct.pack("<II", 19, len(v))
+        for item in v:
+            _encode(item, out)
+    else:
+        raise TypeError("cannot encode %r" % type(v))
+
+
+def encode(v):
+    out = bytearray()
+    _encode(v, out)
+    return bytes(out)
