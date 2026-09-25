@@ -10,6 +10,7 @@ Wonderdraft has a single regions overlay, so god domains and regions can't be sh
 |---|---|---|
 | `<map> - God Domains` | dashed border (`border_dash`) | +2 (region labels), −1 (small city names) |
 | `<map> - Regions` | gradient border (`border_gradient`) | +1 (god domain labels) |
+| `<map> - Terrain` | none | +1 (god domain labels) |
 
 Everything else (terrain, symbols, +3 divine city names, +4 city icons, theme) is copied byte for byte. The input map is only read, never modified.
 
@@ -18,6 +19,15 @@ python3 tools/wonderdraft/wd_regions.py ~/ProtonDrive/Wonderdraft/Backup.wonderd
 ```
 
 Outputs land next to the input (or in `-o <folder>`) and are overwritten on every run, so treat them as export-only: edit the master, rerun, export.
+
+### Publishing the three map views
+
+1. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` writes the three variants.
+2. Open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
+3. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp` and runs `resize.sh` for the `display/` and `thumbs/` variants. It refuses when an export is missing or older than its variant map (stale).
+4. Review the maps page and commit; pushing deploys the site.
+
+Exporting stays manual: Wonderdraft has no command-line export, and scripting its window on KDE Wayland proved unreliable (input-permission prompt, scaled coordinates).
 
 ### Conventions the split depends on
 

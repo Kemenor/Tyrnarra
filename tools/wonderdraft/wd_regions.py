@@ -6,7 +6,12 @@ toggled separately. This writes a copy of the map per variant, keeping only that
 variant's region shapes and dropping labels on the layers it hides. The input
 map is only read, never modified.
 
+After exporting each variant from Wonderdraft next to its map file (same name,
+.webp/.png/.jpg), --publish copies the exports into the site's map folder as
+terrain/regions/domains.webp and refreshes the display/ and thumbs/ variants.
+
     wd-regions MAP.wonderdraft_map [-o OUTDIR]
+    wd-regions MAP.wonderdraft_map --publish [-o OUTDIR]
 """
 import argparse
 import os
@@ -21,6 +26,9 @@ import gdvar  # noqa: E402
 
 GCPF_SRC = os.path.join(HERE, "gcpf.c")
 GCPF = os.path.join(HERE, "gcpf")
+SITE_MAPS = os.path.normpath(os.path.join(HERE, "..", "..", "published", "setting", "assets", "maps"))
+EXPORT_EXTS = (".webp", ".png", ".jpg", ".jpeg")
+WEBP_QUALITY = 92  # what Wonderdraft's own WebP export uses
 
 
 def ensure_codec():
@@ -33,11 +41,13 @@ def ensure_codec():
     print("building gcpf codec with %s..." % cc)
     subprocess.run([cc, "-O2", "-o", GCPF, GCPF_SRC], check=True)
 
-# Region shapes are told apart by border style; label layers are z_index
-# (Default = 0, "+1" = 1, ...).
+# Region shapes are told apart by border style (None keeps no shapes); label
+# layers are z_index (Default = 0, "+1" = 1, ...). "site" is the file name the
+# export is published under.
 VARIANTS = {
-    "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1}},
-    "Regions": {"border": "border_gradient", "hide_label_layers": {1}},
+    "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1}, "site": "domains"},
+    "Regions": {"border": "border_gradient", "hide_label_layers": {1}, "site": "regions"},
+    "Terrain": {"border": None, "hide_label_layers": {1}, "site": "terrain"},
 }
 
 
@@ -82,7 +92,8 @@ def build_variant(b, root, spec):
     _, terr = child(root, "territories")
     _, shapes = child(terr, "territories")
     new_shapes, n_shapes = array_bytes(
-        b, shapes, lambda t: (field(t, "style") or "").endswith("/" + spec["border"]))
+        b, shapes, lambda t: spec["border"] is not None
+        and (field(t, "style") or "").endswith("/" + spec["border"]))
     new_terr = dict_bytes(b, terr, {"territories": new_shapes})
 
     _, labels = child(root, "labels")
@@ -93,16 +104,54 @@ def build_variant(b, root, spec):
     return u32(len(body)) + body, n_shapes, n_labels
 
 
+def find_export(outdir, stem, name):
+    base = os.path.join(outdir, "%s - %s" % (stem, name))
+    found = [base + e for e in EXPORT_EXTS if os.path.exists(base + e)]
+    if len(found) > 1:
+        sys.exit("several exports for %s: %s" % (name, ", ".join(found)))
+    return (found[0] if found else None), base + ".wonderdraft_map"
+
+
+def publish(outdir, stem):
+    """Copy the three Wonderdraft exports into the site as terrain/regions/domains.webp."""
+    plan = []
+    for name, spec in VARIANTS.items():
+        export, variant_map = find_export(outdir, stem, name)
+        if not export:
+            sys.exit("missing export for %s: save it from Wonderdraft as \"%s - %s.webp\" in %s"
+                     % (name, stem, name, outdir))
+        if os.path.exists(variant_map) and os.path.getmtime(export) < os.path.getmtime(variant_map):
+            sys.exit("%s is older than %s; re-export it first"
+                     % (os.path.basename(export), os.path.basename(variant_map)))
+        plan.append((export, os.path.join(SITE_MAPS, spec["site"] + ".webp")))
+
+    for export, dst in plan:
+        tmp = dst + ".tmp.webp"
+        if export.lower().endswith(".webp"):
+            shutil.copyfile(export, tmp)
+        else:
+            subprocess.run(["magick", export, "-quality", str(WEBP_QUALITY), tmp], check=True)
+        os.replace(tmp, dst)
+        print("  %s -> %s" % (os.path.basename(export), os.path.relpath(dst, os.path.join(HERE, "..", ".."))),
+              flush=True)
+    subprocess.run(["bash", os.path.join(SITE_MAPS, "resize.sh")], check=True)
+    print("Published into %s; review and commit when happy." % SITE_MAPS)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("map", help="input .wonderdraft_map (read only)")
     ap.add_argument("-o", "--outdir", help="output folder (default: next to the input)")
+    ap.add_argument("--publish", action="store_true",
+                    help="copy the Wonderdraft exports of the variants into the site's map folder")
     a = ap.parse_args()
 
     src = os.path.abspath(a.map)
     outdir = os.path.abspath(a.outdir) if a.outdir else os.path.dirname(src)
     os.makedirs(outdir, exist_ok=True)
     stem = os.path.splitext(os.path.basename(src))[0]
+    if a.publish:
+        return publish(outdir, stem)
 
     ensure_codec()
     r = subprocess.run([GCPF, "d", src], stdout=subprocess.PIPE)
