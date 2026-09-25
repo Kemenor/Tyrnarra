@@ -111,4 +111,11 @@ Chaos given a body, keeping a chosen shape by daily practice: the Conrasu are at
 - **Tadg Padraig Inis Rath**: a ferry-crew hand who crosses to the city before light.
 - **Tomas Bourdin**: a poet of the Thousand Kingdom, who sat under a tree on the Hegandi in 2530.
 
+## Voices
+
+- **Tomas Bourdin** · a poet of the Thousand Kingdom · unrhymed, still, sensory; a watcher who ends on the small thing in his hand.
+- **Grainne Brid Tully Gort** · cook of a kitchen-comhar at Dunloch · brisk and a little impatient, proud of never making the same thing twice; sends the questioner back over the ridge.
+- **Ruari Fionn O Dunloch** · a Maor, at the Dunloch quay · measured and self-aware; explains his power by what he does not own.
+- **Tadg Padraig Inis Rath** · a ferry-crew hand of Dunloch · terse and unbothered; reports what happens and leaves the meaning to you.
+
 **Still open:** the Maor houses beyond O Dunloch, O Derry, and O Carrick; the valleys and their comhar by name; what grows on Einbui; the Legea Faith's missionaries over the ridge, if any have come; the next charter-cast.

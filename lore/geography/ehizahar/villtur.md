@@ -217,4 +217,13 @@ The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty
 - **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
 - **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
+## Voices
+
+- **Master Zenerious of the Air Monastery** · Wyndwalken cartographer, author of the log · recurring voice; full block at the top of [`zenerious-log.md`](zenerious-log.md).
+- **Orrun of the Snow Lions** · a rider of the Snow Lions · blunt and spare; reasons in herds, grass, and who counted what, and states the game's rules without complaining about them.
+- **Field-priest Ymra of the Stillhands** · a field-priest of Hinka · observant and dry, a shade superior to outsiders; sees the court in the clans and the difference between a rider and a mount.
+- **Ganbat Ironhorn is Harahari Iron Fangs** · leader of the Iron Fangs · short and weary; wants a thing finished, wherever it ends.
+- **Nomin Threeriver of Myrkvid Long Web** · sits for the clan at the Taptent · patient and certain; speaks in years and floods, and waits.
+- **Surveyor Coll Brannock** · surveyor of the Northern line · dry report-prose with the sting left in the last clause.
+
 **Still open:** the tundra north beyond the Snow Lions; Modurtre's own pass (the mother trees, the pilgrimage); the further Aymuru texture (the chief's title, the quarters, the roster); the Sagarri High Fair question (Day 0 of the log); a present-day Golivander or Vyrenna passage if one is wanted.

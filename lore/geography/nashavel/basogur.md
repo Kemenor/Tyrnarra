@@ -155,4 +155,12 @@ Lisette Carrow's log, kept as letters to her father; full text in [`basogur-log.
 - **Day 10.** Walbert. Aintzir and the first sky. Nikhil leads his first leg.
 - **Day 11.** The Red Tusks' gate. Counted five. Nikhil Marutar Stepped-Between.
 
+## Voices
+
+- **Lisette Carrow** · Silver of the Adventurers' Guild, a miller's daughter of the Thousand Kingdom · recurring voice; full block at the top of [`basogur-log.md`](basogur-log.md).
+- **Irmen Greenmouth Baxter** · a Roadward of Kaosadaemi · few words, long looks before them (*"They don't know you yet."*); tender under the gruffness, and says the important thing once.
+- **Ravi Marutar Eleven-Days** · an elder Vanara guide · quick and wry; answers a question by handing it back to you.
+- **Zawadi The Night the Web Held** · hold-mother of the Hanging Hold · serene and patient; gives the reason for a thing in one image.
+- **An elder of the Greyroot** · elder of a druid tribe · spare; remembers a war in a sentence.
+
 **Still open:** the web-hold that is a city (deepening, after the build); more Vanara clans and druid tribes by name; the Lost-Era kingdoms under the canopy; what Hildrun gave for the first covenant, if it differed.

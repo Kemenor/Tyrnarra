@@ -8,7 +8,11 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 
 - Attributed in-world quotation is the primary color channel: letters, interviews, overheard snippets, words spoken on the record, each from a named mortal, with an attribution line that carries incidental world-fact ("Merchant Tullivan, in a letter to his husband, on the commissioning of weatherclocks for his small fleet").
 - Wit, judgment, praise, complaint, scene-work, and even a name's explanation live in quotes. Narration between them stays at eye level.
-- The site-wide bylines (Golivander, Vyrenna) keep their own rules in [`../lore/voices.md`](../lore/voices.md). Ordinary named voices need no corpus entry; load-bearing facts their quotes introduce go to the glossary.
+- The site-wide bylines (Golivander, Vyrenna) keep their own rules in [`../lore/voices.md`](../lore/voices.md). Load-bearing facts a quote introduces go to the glossary.
+- **Every other quoted named voice gets a voice block in lore** (GM ruling, 2026-09-25), so the next quote from them sounds like the last. Two tiers:
+  - **Passing voice** (quoted once, or several times inside one document): one line in a **Voices** list at the bottom of the file that quotes them, beside *Named figures*: **Name** · occupation · the voice in a phrase.
+  - **Recurring voice** (quoted in a second context, or the author of a quoted document such as a log or a run of letters): name, occupation, and a short paragraph on temperament, register, habits of speech, and what they notice and pass over; at the top of their own document, or in the Voices list if they have none. A voice is promoted when it is quoted in a new context, never on spec.
+  - A block says how a voice **sounds**, never what it knows: GM-tier facts about a person stay in ⚿ boxes. Blocks are lore-only and stay off the HTML pages. Proverbs and unattributed sayings get none.
 - Unattributed folk-belief stays in the amber ◈ register.
 
 ## Register

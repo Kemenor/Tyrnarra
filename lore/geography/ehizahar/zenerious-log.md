@@ -6,6 +6,8 @@
 
 **Status:** complete from Day 0 to Day 60 in the GM's hand (the Veidrath days 38 and 40 rewritten by the GM 2026-09-20/21, replacing Claude's drafts; a third Veidrath day was considered and is not needed). The Fenurra continuation after Day 60 is cut here and reserved for Fenurra's own pass. Names applied from the naming pass of 2026-09-15 and the Villtur register of 2026-09-21. Every name in the log is filled.
 
+**Voice block (recurring voice; added 2026-09-25, describes the GM's prose and changes none of it).** **Master Zenerious of the Air Monastery** · Wyndwalken cartographer. A plain, unpolished field-log in a mapmaker's hand: run-on entries and comma-joined thoughts, written at the end of the day and sometimes stopped mid-thought when dinner is called. Curious and self-deprecating (*"I'm not an anthropologist but"*), honest about fear and loneliness, doubtful the log will survive. He measures before he describes, tracks a recurring small pleasure (every clan's milk of the land) as his thread through the journey, and records what a kinrider or a guide explains to him in their words rather than his.
+
 Parent region: [`../ehizahar.md`](../ehizahar.md), *Lands of Villtur*.
 
 ---

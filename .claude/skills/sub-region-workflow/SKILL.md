@@ -263,6 +263,7 @@ Once direction and names are settled, draft the actual prose. **Surface in chat.
 - **Etymology entries for `lore/glossary.md`** (sub-region entry under *Sub-regions → <Domain>*, nested under parent if it's a place-within-a-place like *Hartzar Erruta* under *Air Monastery*).
 - **Faction subsection for `lore/glossary.md`** if institutions are coined (modeled on the Voroir Daua or Wyndwalken patterns).
 - **Bestiary updates** if an ancestry is being anchored, moved, or freshly placed (table cell + per-ancestry entry + cross-references in related entries). **Anchor the ancestry to its place-shaped version, not its generic lore.** "Vishkanya in Itsasalda" gets the tide-counting Reckoner specificity; "Vishkanya in Azkataria" gets the coffee-table philosopher specificity.
+- **Voice blocks for every quoted named voice** (per [`docs/region-prose.md`](../../../docs/region-prose.md), *Voices carry the color*): a one-line entry (name · occupation · the voice in a phrase) in a **Voices** list beside *Named figures* for a passing voice; a short voice paragraph for a recurring voice or the author of a quoted log or letters, at the top of their own document. Check existing Voices lists before quoting a named mortal again, and promote a passing voice to a paragraph when it is quoted in a new context.
 
 ### The ending audit (run before surfacing, every time)
 

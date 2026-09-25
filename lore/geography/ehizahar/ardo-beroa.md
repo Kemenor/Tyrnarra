@@ -99,4 +99,11 @@ Children are born on Ardo Beroa. Everyone who came here was something first, and
 - **Batou Firstsnow was Elurzahar White Halt, Hverhofn**: master of a fishing boat, who crosses his own dead.
 - **Naran, Hverhofn**: fourteen, born on the island, with nothing before the town.
 
+## Voices
+
+- **Merchant Ansel Torvane of Brasswatch** · a merchant, writing to his wife from a saltkeel · lyrical about the weather and the people, gently wry about himself (*"The wine I have already drunk."*).
+- **Batou Firstsnow was Elurzahar White Halt, Hverhofn** · master of a fishing boat · plain and reverent without ceremony; the sea spoken of as *she*.
+- **Setseg Coldford was Grey Manes, Hverhofn** · holder of the Fullest Post · proud and watchful; never lets herself take the next Reading for granted.
+- **Naran, Hverhofn** · fourteen, island-born · flat and puzzled, a teenager unimpressed by her mother's nostalgia.
+
 **Still open:** Igeria's hamlet and Kaldey's summer grazing by name; the arc ships' route and the Baerfrost trade in detail; what comes up in the nets once a winter; the *Unforgiven* stories by name; the first child of a following to be given a name before the town.

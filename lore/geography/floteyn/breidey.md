@@ -155,6 +155,15 @@ Since then two Long Tables have come and gone, and the confidence has not change
 - **Captain Dunstroem**: a Midarra master interviewed by the *Lautara Naval News*, on why the one thing he would keep off his deck is his Helmworks.
 - **Merchant Tullivan**: an off-island buyer of weatherclocks for his small fleet, whose letter to his husband is the most-copied outsider account of arriving at Breidhofn.
 
+## Voices
+
+*Voice blocks per `docs/region-prose.md` (added 2026-09-25; the prose above is the GM's and unchanged).*
+
+- **Dockmaster Silverbeak** · dockmaster at Breidhofn · a one-line verdict delivered as settled fact; plain, proud of the Isles, done talking once it is said.
+- **Merchant Tullivan** · owner of a small fleet, commissioning weatherclocks, writing to his husband · warm, candid letter-prose, amused at himself; notices hands, tools, and manners before the price.
+- **Captain Dunstroem** · a ship's captain, interviewed by the Lautara Naval News · salty and emphatic, *aye* and an oath; loyal to his gear and argues by comparison.
+- **Holder Ulraken of House Kjolur** · a Holder at the Settlement of 2524 · silken courtesy with an edge; reframes a loss as an investment and calls the Chairman *dear*.
+
 ---
 
 **Still open:** the sitting Chair; Fyrsta's conductor; the helmwrights' named master-pieces; Breidhofn's districts; the acre-and-slip texture of the countryside beyond the port; the next Long Table. (The Houses are named: **Kjolur**, **Lunnar**, **Reki**; see `../../glossary.md`, *The Houses of Breidey*.)

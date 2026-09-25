@@ -51,6 +51,8 @@ The cartographers gave up centuries ago; the locals never bothered. Nahaskel is 
 
 Sample names. Whim- and coin-names: Gwen, Rhys, Nia, Eirian, Bedwyr, Cadoc, Anwen, Rhoswen, Owain, Tegan, Idris, Carys, Bryn, Elwen, Gethin, Mabli, Emrys, Seren, Llyr, Branwen. Felt-family: Llewelyn, Trevelyan, Pryderi, Prydderch, Maelor, Tudur, Cynfael, Rhydderch, Madoc, Glyndwr. Whole: *Gwen Eirian Prydderch, wyrht* · *Rhys Bedwyr Llewelyn, wraec* · *Old Tally Anwen Llewelyn, lar* · *Pim Cadoc Trevelyan, wyrht* · *Dossa Rhoswen Pryderi, beod*.
 
+**Voices (Nahaskel)** *(per `docs/region-prose.md`, added 2026-09-25)*: **Dossa Rhoswen Pryderi** · a beod of Nahaskel · deadpan and practical; the joke is the whole answer.
+
 #### ◈ Popular Belief: the New Face
 
 Vesuna wears no fixed form, no gender, no ancestry, so in her own city she is **the New Face**, the face nobody knows. The newcomer at the Casting with the mad proposal; the unfamiliar voice in the crowd that says *what if we tried it the other way* and watches it catch. The Nahaskeli instinct to hear out the stranger with the impossible notion is older than the city's manners and deeper than its patience: in a place where everyone is a little lost and any new face might be the goddess, no one is turned away unheard. The one time you waved off the stranger, the chronicles like to say, that was Her.

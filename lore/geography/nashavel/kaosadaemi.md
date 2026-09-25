@@ -97,4 +97,11 @@ The Gnomes hold the city's temperament across the water, the spin that generates
 - **Herald Pieter Rouland of Lograth**: whose report on Ringhold's colours is the most-copied outsider account.
 - **The line**: Adalric Thornmond · Princess Wulfild Thornmond · Prince Gundram Thornhollow · Princess Odelind Ringhold Thornhollow · Princess Hildrun Ringhold Thornhollow · Prince Wenzel.
 
+## Voices
+
+- **Gisel Ferryhithe Springlock** · a tuner of the Tuning · clipped, counts in numbers, states the bargain and owns it without complaint.
+- **Rodgar Greenmouth Netknot** · a Roadward at Greenmouth · careful and exact; says plainly what he knows and just as plainly what he does not.
+- **Prince Wenzel Ringhold Thornhollow** · holder of Ringhold · short declaratives and a defiant pride in the house; history told as a list of things survived.
+- **Herald Pieter Rouland of Lograth** · a herald of the College, writing a report · formal, dry, and self-mocking; reads everything as heraldry first and builds long sentences that land on the thing he understood.
+
 **Still open:** the valleys and river-wards by name; the Thousand Kingdom's standing view of the title; the ferry-treaty with the Emerald Isles; the count of the young who left this year.

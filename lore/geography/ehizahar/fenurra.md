@@ -285,3 +285,12 @@ Used with Whisperfang bows. Built on either standard Ghost Willow shafts (lethal
 - **Rotbreach (Emberframe)**: Dreyghe Thorn neurotoxin coating. Does not kill; ensures weeks-to-months of burning nerve pain, hallucinations, screaming. Fenurrans deliberately leave Rotbreach victims alive. Demoralisation weapon.
 - **Ashburst (Emberframe)**: Volcanic salt, charroot powder, spark-seed core. Flash-burst of smoke and cinders plus a piercing sonic pop. Used during Infernal-Smoked assaults and Hook-Line-Sinker wall runs.
 - **Shardsong (Emberframe)**: Bone needles, glass slivers, resin binding. Tip explodes forward on impact, scattering shrapnel through close-rank formations or chokepoints.
+
+## Voices
+
+*Voice blocks per `docs/region-prose.md` (added 2026-09-25). The proverbs and axioms quoted above belong to no one and carry none.*
+
+- **Vaethryn Aex** · Speaker of the Scar · aphoristic, forge-and-fire metaphors; speaks for a whole people at once.
+- **Zai-Vith** · Huntmistress of the Black Cleft · stark and clipped; tribe over blood, no mourning words.
+- **Rhukk-Khaz** · Ashdrummer of the Broken Wall · craft-proud, turns a paradox on the listener.
+- **Lira-Kaan** · Bond-Twin of the Ashwall Line · intimate and vow-like; says the same promise three ways.
