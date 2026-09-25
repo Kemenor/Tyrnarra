@@ -98,6 +98,21 @@ wdmap markers MAP
 
 All of these save in place the same way `edit` does (backup, open-in-Wonderdraft and changed-on-disk checks, `--dry-run`, `--preview`).
 
+### Checking the map
+
+```bash
+wdmap check ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map            # everything
+wdmap check ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --level warning
+```
+
+One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, each with map coordinates; exits 1 if there are errors:
+
+- **error** outlines that cross themselves (Wonderdraft leaves those regions unfilled and logs "Convex partition failed") or have under 3 points.
+- **warning** land inside a domain outline that no region shape covers; unnamed or duplicate (stacked) shapes; very dark regions whose outline runs mostly through water (they vanish against the sea); capitol icons (the Legend's "Capitol" art) with no city name (+3 or −1) within 160 units; labels overlapping in a view where both are shown, measured with the real fonts; god-city names off Divine City Labels and non-god-cities on it; leftover `@stamp`/`@place` markers.
+- **info** trees and mountains standing in water.
+
+The god-city list is `GOD_CITIES` in `check.py`.
+
 ### Snapshot for git
 
 The map itself stays out of git: at ~100 MB it is over GitHub's per-file limit, compressed and undiffable, and every save would add a full copy to history. Proton Drive syncs it and `wdmap` keeps backups. Git tracks [`map-snapshot.json`](map-snapshot.json) instead, a readable text snapshot of what the map says: every label (layer, text, position, font, size), every region shape (kind, inferred name, bbox, area, colour), every icon-type symbol (settlements, castles) with its position, symbol counts per layer and art family, the scale bar and the layer names. It is deterministic, one item per line, so `git diff` reads like a changelog of the map.
@@ -110,7 +125,7 @@ wdmap snapshot ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map     # "updated" or
 
 ### MCP server
 
-`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
+`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `check`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
 
 `wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 

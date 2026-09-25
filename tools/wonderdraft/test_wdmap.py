@@ -205,6 +205,33 @@ class PlaceTest(unittest.TestCase):
         self.assertAlmostEqual(m.symbols[si[0]]["position"][0], x + 1000 + first["position"][0], places=2)
 
 
+class CheckHelpersTest(unittest.TestCase):
+    def test_self_crossings(self):
+        import check
+        square = [(0, 0), (10, 0), (10, 10), (0, 10)]
+        bowtie = [(0, 0), (10, 10), (10, 0), (0, 10)]
+        self.assertEqual(check.self_crossings(square), [])
+        self.assertTrue(check.self_crossings(bowtie))
+
+
+@unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
+class CheckTest(unittest.TestCase):
+    def test_runs_and_catches_an_overlap(self):
+        import check
+        from wd_regions import VARIANTS
+        _, shared = real_map()
+        data = dict(shared.data)
+        data["labels"] = copy.deepcopy(shared.data["labels"])
+        m = WDMap(data, TEST_MAP)
+        views = {n: set(v["hide_label_layers"]) for n, v in VARIANTS.items()}
+        before = [i for i in check.run(m, views) if i.kind == "overlap"]
+        a, b = m.labels[0], m.labels[1]
+        b["position"] = a["position"]
+        b["z_index"] = a["z_index"]
+        after = [i for i in check.check_labels(m, views) if i.kind == "overlap"]
+        self.assertGreater(len(after), len(before))
+
+
 @unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
 class SnapshotTest(unittest.TestCase):
     def test_deterministic_valid_json(self):

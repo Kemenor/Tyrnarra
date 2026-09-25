@@ -18,6 +18,7 @@
     wdmap stamp place   MAP NAME (--at X,Y | --under LABEL) [--rotate DEG] [--scale K]
     wdmap markers MAP        (runs @stamp / @place marker labels on layer -5)
     wdmap snapshot MAP [-o PATH]   (readable text snapshot for git: tools/wonderdraft/map-snapshot.json)
+    wdmap check   MAP [--level error|warning|info] [--json]   (consistency checks, see check.py)
 
 Filters (all optional, combined with AND; globs are case-insensitive):
     --texture GLOB   symbol texture path, e.g. '*hatch_pine*'
@@ -405,6 +406,28 @@ def cmd_stamp(a):
     finish(m, a, lines, {"symbols": hs, "labels": hl_}, [(x + dx, y + dy) for x, y in spots])
 
 
+def cmd_check(m, a):
+    import check
+    from wd_regions import VARIANTS
+    views = {name: set(spec["hide_label_layers"]) for name, spec in VARIANTS.items()}
+    levels = {"error": 0, "warning": 1, "info": 2}
+    issues = [i for i in check.run(m, views) if levels[i.level] <= levels[a.level]]
+    if a.json:
+        print(json.dumps([i._asdict() for i in issues], indent=1))
+    else:
+        if not issues:
+            print("no issues at level %s or above" % a.level)
+        kind = None
+        for i in issues:
+            if (i.level, i.kind) != kind:
+                kind = (i.level, i.kind)
+                n = sum(1 for j in issues if (j.level, j.kind) == kind)
+                print("%s: %s (%d)" % (i.level.upper(), i.kind, n))
+            print("  (%5d, %5d)  %s" % (i.at[0], i.at[1], i.message))
+    if any(i.level == "error" for i in issues):
+        sys.exit(1)
+
+
 def cmd_snapshot(m, a):
     import snapshot
     path, changed = snapshot.write(m, a.output or snapshot.DEFAULT_PATH)
@@ -545,6 +568,11 @@ def build_parser():
     p.add_argument("map")
     p.add_argument("--overwrite", action="store_true", help="let @stamp markers replace existing stamps")
     add_write_opts(p)
+    p = sub.add_parser("check")
+    p.add_argument("map")
+    p.add_argument("--level", choices=("error", "warning", "info"), default="info",
+                   help="lowest severity to show (default info = everything)")
+    p.add_argument("--json", action="store_true")
     p = sub.add_parser("snapshot")
     p.add_argument("map")
     p.add_argument("-o", "--output", help="default: tools/wonderdraft/map-snapshot.json")
@@ -570,7 +598,7 @@ def run(argv=None):
         m = WDMap.load(a.map)
         {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit, "add": cmd_add,
          "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers,
-         "snapshot": cmd_snapshot}[a.cmd](m, a)
+         "snapshot": cmd_snapshot, "check": cmd_check}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
 

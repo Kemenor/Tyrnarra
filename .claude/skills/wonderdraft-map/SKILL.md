@@ -16,16 +16,19 @@ same operations exist as `wdmap …` commands.
    does not notice file changes and would overwrite them on its next save; the
    tools refuse to save while its window shows the map. If a save is refused, ask
    the user to save and close the map in Wonderdraft, then retry.
-2. **Look first, change second.** `query` / `preview` to find things; write tools
+2. **Start a fixing session with `check`**: it lists every known kind of problem with
+   coordinates (knotted outlines, land without regions, unnamed capitols, overlapping
+   labels, wrong layers, ...); fix from that list, then run it again.
+3. **Look first, change second.** `query` / `preview` to find things; write tools
    with `dry_run=true` and `preview=true` first, show the user the preview for
    anything larger than a label fix, then run it for real.
-3. **Every save is backed up** (`backups`, `restore`); restore only when the user asks.
-4. **Don't launch Wonderdraft yourself** for checks: each launch parks ~3.5 GB in the
+4. **Every save is backed up** (`backups`, `restore`); restore only when the user asks.
+5. **Don't launch Wonderdraft yourself** for checks: each launch parks ~3.5 GB in the
    GPU driver's memory pool on the laptop, and that has already caused an OOM.
    Ask the user to open the map when a check in Wonderdraft is needed.
-5. After label or symbol changes that affect a published view, regenerate the
+6. After label or symbol changes that affect a published view, regenerate the
    variants (`split_variants`) and note the pending re-export in `docs/map-todo.md`.
-6. At the end of an editing session run `snapshot` and commit
+7. At the end of an editing session run `snapshot` and commit
    `tools/wonderdraft/map-snapshot.json` with the related docs: it is git's record of
    the map (the map file itself is too big for git).
 
