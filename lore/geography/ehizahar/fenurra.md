@@ -5,6 +5,8 @@ A sub-region of Ehizahar in its own right, bordering the Lands of Villtur but di
 > *"We do not pray for easier lives. We sharpen ourselves against the one we were given."*
 > Fenurran proverb
 
+**Position:** the northeast of Ehizahar, in the snow lands: a volcanic country standing in the ice, with a single warm port on its coast (GM, 2026-09-25).
+
 Parent domain: [`../ehizahar.md`](../ehizahar.md). The Fenurran tribes who live here are hardened, pragmatic, and politically distinct from the wider Villtur tribal sprawl; they hold themselves apart even from their tribal neighbours.
 
 ## The people: who the Fenurrans are
