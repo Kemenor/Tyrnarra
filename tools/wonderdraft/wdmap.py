@@ -270,6 +270,10 @@ class WDMap:
                 want = NAME_LAYER.get(r.kind)
                 inside = [l for l in self.labels
                           if r.contains(*l["position"]) and (want is None or l["z_index"] == want)]
+                if not inside and r.kind == "region":
+                    # A region shape without a region label (e.g. the circle around a god-city)
+                    # takes whatever label sits inside it.
+                    inside = [l for l in self.labels if r.contains(*l["position"])]
                 if inside:
                     r.name = " ".join(max(inside, key=lambda l: l["size"])["text"].split())
             # A god domain is one colour across all its pieces, so unlabelled

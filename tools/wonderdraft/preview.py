@@ -108,17 +108,22 @@ def render(m: WDMap, area=None, width=2048, highlight=None, grid=None,
     img.paste(g.convert("RGB"), (0, 0), land)
 
     if "regions" in show:
+        # Fills first, then every outline on top: drawing on one layer overwrites pixels, so a
+        # small shape inside a big one (Myrria's circle in Myrkono) lost its outline to the
+        # big shape's fill when both were drawn in one pass.
+        shapes = [(r, [to_px(x, y) for x, y in r.points], r.data.get("color") or (0.5, 0.5, 0.5, 1))
+                  for r in m.regions if len(r.points) >= 3]
+        hl_set = set(highlight.get("regions", ()))
         ov = Image.new("RGBA", img.size)
         d = ImageDraw.Draw(ov)
-        for r in m.regions:
-            if len(r.points) < 3:
-                continue
-            pts = [to_px(x, y) for x, y in r.points]
-            col = r.data.get("color") or (0.5, 0.5, 0.5, 1)
-            hl = r.index in highlight.get("regions", ())
-            d.polygon(pts, fill=_rgba(col, 60), outline=HIGHLIGHT + (255,) if hl else _rgba(col, 255),
-                      width=5 if hl else (3 if r.kind == "domain" else 2))
+        for r, pts, col in shapes:
+            d.polygon(pts, fill=_rgba(col, 60))
         img = Image.alpha_composite(img, ov)
+        d = ImageDraw.Draw(img)
+        for r, pts, col in sorted(shapes, key=lambda t: t[0].index in hl_set):
+            hl = r.index in hl_set
+            d.line(pts + pts[:1], fill=HIGHLIGHT + (255,) if hl else _rgba(col, 255),
+                   width=5 if hl else (3 if r.kind == "domain" else 2), joint="curve")
 
     if "symbols" in show:
         d = ImageDraw.Draw(img)
