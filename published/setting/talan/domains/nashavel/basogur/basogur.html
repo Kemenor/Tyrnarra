@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Basogur Jungle · Nashavel · Ehizahar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #6fbf95;   /* canopy light · 8.88:1 on Style B bg */
+    --card-bg: rgba(14,30,22,0.55);
+  }
+
+  /* Voice quotations (Lisette Carrow's letters and the record) */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids: the peoples of the road, the named, the price */
+  .people-grid, .figure-grid, .price-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .people-grid .card-name, .figure-grid .card-name, .price-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .secret-era-content .price-grid { --card-bg: rgba(46,14,18,0.55); margin: 14px 0; }
+  .secret-era-content .price-grid .card-name { color: #e8a0a0; }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+
+  /* The crossing, day by day: a static timeline of the log */
+  .log-day { position: relative; padding: 8px 0 8px 16px; display: flex; gap: 14px; align-items: baseline; }
+  .log-day::before { content: ''; position: absolute; left: -21px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--domain-accent); border: 2px solid var(--bg); }
+  .log-day .ld-date { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.15em; color: var(--domain-accent); min-width: 62px; flex-shrink: 0; text-transform: uppercase; }
+  .log-day .ld-text { line-height: 1.55; }
+  @media (max-width: 600px) { .log-day { flex-direction: column; gap: 2px; } }
+</style>
+</head>
+<body data-page="basogur">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/nashavel/nashavel.html">Nashavel</a><span class="sep">›</span><span>The Basogur Jungle</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Basogur Jungle</div>
+    <div class="page-subtitle">Nashavel &amp; Ehizahar · Shared Sub-Region · The Told Jungle</div>
+    <div class="page-flavor">"Papa, the forest moved the furniture in the night."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>baso</i> (forest, wood) → <b>Basogur</b>, an old name for an old place. <b>Basajun</b>: Basque <i>basajaun</i>, the lord of the woods, worn. <b>Aintzir</b>: Basque <i>aintzira</i>, lake, the final vowel dropped. <b>The Stitchery</b> is plain Talanese, the Guild's word.</dd>
+    <dt>Position</dt><dd>The canopy across the continent's waist, from the Midarra coast to the Hafra coast. <a href="/setting/talan/domains/ehizahar/veidrath/veidrath.html">Veidrath</a> stands at its northeast edge, with the lake <b>Aintzir</b> just inside the trees; <b>Ispilur</b>, with <a href="/setting/talan/domains/nashavel/nahaskel/nahaskel.html">Nahaskel</a> and Dunloch on it, lies at its southwest edge; <a href="/setting/talan/domains/nashavel/kaosadaemi/kaosadaemi.html">Kaosadaemi</a>'s ring of <b>Hringfel</b> rises to the southeast. The long road enters at <b>Greenmouth</b> in the south and comes out at the Oihandar Red Tusks' gate in the north. The south of the canopy is <a href="/setting/talan/domains/nashavel/nashavel.html">Nashavel</a>'s claim and the north is <a href="/setting/talan/domains/ehizahar/ehizahar.html">Ehizahar</a>'s, and the two claims meet in the middle.</dd>
+    <dt>Terrain</dt><dd>Old-growth jungle with wild magic in the trees; paths that do not keep their place; rivers that change their banks, the Skoga the largest on the Ehizahar side; one lake, Aintzir.</dd>
+    <dt>Character</dt><dd>
+      <i>A place that makes stories</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The God at the Edge</span><span class="pill">The Road</span><span class="pill">The Web-Holds</span><span class="pill">The Stitchery</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Anadi</b> and the <b>Vanara</b>, each at their fullest expression on Talan; mixed druid tribes; Lizardfolk jungle clans; Orc clans along the fringe, one of them settled at the northern gate.</dd>
+    <dt>Tongue</dt><dd>Each hold, clan, and tribe its own; the druids keep ritual tongues; Talanese along the road and on the fringes, carried in by the Guild.</dd>
+    <dt>Faith</dt><dd>Basajun, prayed to by the tribes and the druids above all; Vesuna and Hinka at the edges, where the domains reach in.</dd>
+    <dt>Rule</dt><dd>None. Two domains claim it and neither governs. A foreigner deals with a hold, a clan, a tribe, or the Roadwards.</dd>
+    <dt>Founded</dt><dd>Never. The Golden Empire never held it.</dd>
+    <dt>Source</dt><dd>The letters of <b>Lisette Carrow</b>, a Guild Silver of the Thousand Kingdom, to her father, a miller, written on a Roadwards' crossing from Greenmouth to the northern gate in 2532: the most-copied account of the road.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(111,191,149,0.5);">
+    <div class="gods-city-label">The One Line Through</div>
+    <div class="gods-city-name">The Road</div>
+    <div class="gods-city-byname">Greenmouth to the Red Tusks' gate · eleven days · counted in and counted out</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-god" class="section-heading">The God</h2>
+
+  <div class="voice-quote">
+    <p>"Something stood at the edge of the path this afternoon. Tall, taller than the stones on the sledge, grey-brown and shaggy the way moss grows on the north side of the mill, standing just where the trees begin. Off the path. I looked at it for three steps, and when I looked again there was a tree there, and I could not have told you which tree."</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, Silver of the Adventurers' Guild, in a letter to her father, a miller in the Thousand Kingdom, on the fifth day of a Roadwards' crossing, 2532</div>
+
+  <div class="prose">
+    <p>The Basogur is told about. A path that was a path yesterday and is a stream this morning, an expedition that went in with forty and came out with nine, a surveyor's notch on a tree that stood somewhere else by dawn: every traveler who has come out of the canopy has carried a story out with them, and the stories are older than the Empire and older than the Thousand. The tellers were afraid, and they were in awe, and they told it at every hearth on both sides of the trees.</p>
+    <p>The tribes of the jungle say a god walks it, and they call him <b>Basajun</b>. He is seen at the edge of a path and never on it. He is tall, he is shaggy, he stands where the trees begin, and each people tells a different shape of him. Some tribes pray to him; the druid tribes pray to him above any other. Scholars outside the canopy have argued for three centuries over whether the jungle's god is a god, a spirit, or a story.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Told Shapes of Basajun</button>
+    <div class="legend-era-content">
+      <p>Every people of the jungle has seen him, and no two have seen the same thing. The Anadi say he is a strand across the path at dawn that no one in the hold strung. The Vanara say he is an old grey-muzzled Vanara who walks beside you, off the path, keeping pace, and who is gone when you turn to thank him. The druids say he is a tree that stands one step nearer each time you look. The Lizardfolk say he is a reflection in still water with nothing above it. The Red Tusks at the gate say he is shaggy and the size of a vigross, and that he watched them build their palisade and let them.</p>
+    </div>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Whistle on the Path</button>
+    <div class="legend-era-content">
+      <p>When a traveler sees something at the edge of the path, the guide whistles two notes, low then high, and everyone who knows the road whistles them back without turning to look. The Roadwards say the whistle tells the thing at the edge that it has been seen and that the party is staying on the path. The Vanara say that if no one whistles back, it follows.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-road" class="section-heading">The Road</h2>
+
+  <div class="voice-quote">
+    <p>"In the taproom they told me the loveliest thing. When a Roadward dies they are buried in the jungle, every one of them, by the Principality's own law. The whole bench said it together like a grace before supper: 'The road keeps its own.'"</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, at Greenmouth, the night before the crossing</div>
+
+  <div class="prose">
+    <p>The long road around the Basogur goes through it once. It enters the trees at <b>Greenmouth</b>, the Kaosadaemi gate, and comes out eleven days later at the northern gate by Veidrath, and the <b>Roadwards</b> of the Principality take a party through on that schedule with the number of people it went in with. A Roadward walks the whole crossing. The paths between are walked by <b>Vanara guides</b>, who come down out of the canopy and take the lead from one web-hold to the next, and the web-holds are the overnight stops, strung high enough that the beasts and the freight sleep below them with a guide on watch. Freight goes through on sledges; the canopy takes wheels apart. The road carries what an airship cannot lift and a stillship cannot reach in time: millstones for Veidrath, stone and iron and anything heavy bound north or south that cannot wait for the sea.</p>
+    <p>Every party is written into the roll at the Roadwards' hall at Greenmouth, the people on one line, the beasts on a second, the freight on a third, and counted off the same roll at the other end. The road ran before the Principality's Roadwards ran it, and parties went in and came out on no schedule anyone could promise; the road began keeping time under <b>Princess Hildrun Ringhold Thornhollow</b>, in the season the Principality still calls the season the road first held.</p>
+    <p>The Principality's law buries every Roadward in the jungle, beside the road. Greenmouth tells it as a Roadward's honour, <i>the road keeps its own</i>, and the Roadwards greet certain trees along the way by name as they pass, the way a traveler nods to a grave. The holders of Ringhold go into the trees once, at their accession, with one Roadward, and come back out with a streak of grey from the crown; Ringhold credits the road.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"Irmen stopped this morning at a big old tree with a split in its bark like a smile and laid her hand on it as always. Then she took my wrist and put my palm beside hers. 'This is Walbert,' she said. 'He taught me the road.'"</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, on the tenth day</div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Prince Pays</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Page in the Second Book</div>
+      <p style="margin-top:0;">The road holds because the Prince pays the jungle. Basajun is real: a <b>demi-god</b> who walks the Material Plane, coalesced over ages out of every traveler who ever feared the churn. Princess Hildrun made the first covenant with him, and every holder of Ringhold since has made it again. At accession the holder walks the road with one Roadward as guide and witness, steps off the path where the Roadward stops, and meets Basajun face to face. The covenant is made with the holder, so each new holder makes it anew, and a page of the Second Book records each meeting.</p>
+      <div class="card-grid price-grid">
+        <div class="accent-card">
+          <div class="card-name">One Love, Made Impossible</div>
+          <p>Basajun chooses one love the new ruler holds or might hold and takes the possibility of it: the Prince comes out remembering the person, and unable to love them. The page records whose love it was. No ruler of Ringhold since Hildrun has married the love of their childhood.</p>
+        </div>
+        <div class="accent-card">
+          <div class="card-name">The Grey Streak</div>
+          <p>The Prince also comes out with a streak of grey from the crown, and Ringhold sees it and credits the road.</p>
+        </div>
+      </div>
+      <p style="margin-bottom:0;">Powers from beyond the trees have come to treat with the jungle and found nothing to treat with. Basajun has shown himself to the house and to no other power from outside the Basogur. The tribes pray to him and are answered as any small god answers worship.</p>
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Roadwards Pay</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Road Keeps Its Own</div>
+      <p style="margin-top:0;">The Roadwards pay their share at the end. The Principality's law, written in the Second Book beside the covenant page, sends every Roadward at the end of life to rest in the jungle, and there each becomes a tree beside the road that still knows the way. The road keeps its course because it is lined with them.</p>
+      <p style="margin-bottom:0;">The Roadwards know it: it is taught in the hall, and a Roadward greets her teachers by name as she passes. The covenant and what the Prince pays belong to the house, and the hall knows only its own half.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-holds-and-the-ways" class="section-heading">The Holds and the Ways</h2>
+
+  <div class="voice-quote">
+    <p>"The trees leaned in the night. The web has to agree with them."</p>
+  </div>
+  <div class="voice-attrib">Zawadi The Night the Web Held, hold-mother of the Hanging Hold, asked why the hold is re-strung each morning</div>
+
+  <div class="prose">
+    <p>The road crosses the Basogur along one line, and the peoples a traveler meets on it are the few who live beside that line. The canopy runs from coast to coast. Most of its holds have never had a Roadwards' party sleep under them, most of its clans guide their own ground and nobody else's, and most of its groves have names no outsider has written down. The chronicle knows the jungle's peoples by what the road shows of them.</p>
+    <p>The <b>web-holds</b> of the Anadi stand across the whole jungle, thickest in the deep interior. A hold is a village hung between the trunks, thirty trees or more: a floor of grey silk for each household, walkways between them, a common floor at the middle where the cooking is done, and silk ladders to the ground. Each dawn the Anadi go out along the strands and re-string what the night pulled loose, a walkway on one day and a family's floor on the next, so that a hold stands a hand's width from where it stood the night before and in the same place in the jungle. A path in the Basogur runs from hold to hold, and the road's overnight stops are the handful of holds that stand along it.</p>
+    <p>The <b>Vanara</b> walk those paths, in more clans than the road has names for. Each clan guides its own stretch of the jungle and hands a party on to the next, and a Vanara guide reads which way the ground has moved overnight the way a sailor reads the wind. The <b>Marutar</b> and the <b>Kapisar</b> are the clans that guide the road, and a young guide of theirs walks whole crossings behind an elder before leading a leg.</p>
+    <p>The <b>druid tribes</b> are mixed, every ancestry the jungle holds, and they plant a tree at every birth. The child and the tree share a name, and a tribe lives in the groves where its trees stand, each grove named for what happened there. The <b>Greyroot</b> at <b>the Grove Where the Road Turned</b> and the <b>Mossback</b> of <b>the Drowned Steps</b> and <b>Three Springs</b> are the two tribes whose groves the road passes.</p>
+    <p>The <b>Lizardfolk</b> jungle clans hunt with the <b>armiar</b>, the great spider, whose web spreads a hunter's senses across a hundred yards of canopy. They are many, and they are most numerous in the interior. <b>Myrkvid Long Web</b> crosses the road in the middle of the jungle; <b>the Frogged Tribe</b> floats the Skoga on the Ehizahar side, hunts the jungle's edge for days at a time, and keeps a silent feud with the other Lizardfolk clans over the river.</p>
+    <p>The <b>Orc</b> clans ride the jungle's fringe on the low, broad vigross, which goes through ground a runner cannot cross. One of them, the <b>Oihandar Red Tusks</b>, settled where the road leaves the trees and holds the northern gate: a palisade of whole trunks, and a kinrider who counts each party off the Roadwards' roll.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-stitchery" class="section-heading">The Stitchery</h2>
+
+  <div class="voice-quote">
+    <p>"The Guild came with maps and asked all of us to the same fire."</p>
+  </div>
+  <div class="voice-attrib">An elder of the Greyroot, at the Grove Where the Road Turned, to a Guild Silver on escort, 2532</div>
+
+  <div class="prose">
+    <p>The road's long bend at the middle of the crossing goes around the <b>Stitchery</b>, the sealed dungeon of the <a href="/setting/talan/the-binding.html#flesh-sculptor">Flesh-Sculptor</a>, the one of the Corrupted God's Nine who remakes flesh to its master's design. It lies under the Nashavel side of the canopy. When the Nine Dungeons erupted in 2524 MR it opened into the deep interior, and what came out was stitched from what the jungle had: its beasts and its lost.</p>
+    <p>The jungle's peoples fought it together. An Adventurers' Guild captain came in with maps and called the web-holds, the Marutar and Kapisar, the druid tribes, and the Lizardfolk clans to one fire. The Anadi strung the corridors shut, the Vanara drew the spawn off the paths, the druids closed the ground over the gate, and the Guild's deep-teams painted the perimeter red over black. The fire broke up when the seal held.</p>
+    <p>The seal is a web, and <b>Thousand-Eyes Hold</b> re-strings it every morning. Spawn still come up through the smaller ways the web does not cover. Downwind of the bend the air smells of a tannery.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Why the Seal Is a Web</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; A Dungeon That Churns</div>
+      <p style="margin:0;">The Flesh-Sculptor remakes its halls as it remakes flesh, and the Stitchery churns below the way the jungle churns above: a corridor mapped at dawn is a different corridor by dusk. That is why the Guild sealed it and never cleared it, and why the only seal that holds is one re-strung every morning. A stone seal cracks against a dungeon that changes its shape; a web agrees with it.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-two-claims" class="section-heading">The Two Claims</h2>
+
+  <div class="voice-quote">
+    <p>"Two posts today, so close together I stood between them and put a hand on each. One is cut with the coin-mark of Nahaskel and the other with the antlers of Veidrath, and each says the ground belongs to it. Both are green to the top with moss."</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, on the eighth day</div>
+
+  <div class="prose">
+    <p>Nashavel claims the Basogur and so does Ehizahar, and the claims meet under the canopy where their surveyors' posts stand in moss. Neither domain governs a tree of it. The Golden Empire ruled around the jungle for eight centuries and never held it; the chronicles place Lost-Era kingdoms under the canopy through those centuries, keeping their own laws, and the Dark Era ended them.</p>
+    <p>The jungle is why Talan has two rail networks. Consortia have tried the crossing for decades, and the attempts fail three ways. The churn warps the rails and scrambles the runes on the sleepers. The holds, clans, and tribes take the works apart as they are laid, each for its own reasons, without a council among them. And neither domain will sanction a right of way the other has not, so no consortium can buy one. Lengths of bent rail lie in the fern along the road, the oldest forty years in the green. North and south cross by stillship over Midarra, by airship over the canopy, or on foot with the Roadwards.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-the-jungles-people-are-called" class="section-heading">What the Jungle's People Are Called</h2>
+  <div class="prose">
+    <p>Three registers belong to the jungle's own peoples; the Lizardfolk clans and the Red Tusks keep the <a href="/setting/talan/domains/ehizahar/villtur/villtur.html">Villtur</a> register.</p>
+    <p><b>The Anadi: given · story · hold.</b> An Anadi's given name is her own. The second is the title of the first story she wove whole, taken when she comes of age, and replaced only if she weaves a grander one; for a year after, the hold says both. The third is the hold she was strung in, and it never changes.</p>
+    <p><b>The Vanara: given · clan · the name the led gave.</b> A Vanara carries a given name and a clan. The third name comes from the travelers she first brings through, in their tongue, and it is kept in their tongue. A Vanara who has not led a crossing carries two.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"Then Ravi stood Nikhil in front of me and said he had led his first crossing, and his third name was mine to give, in my own words. I named him for the fifth day: Stepped-Between. He said it back to me twice, trying it on, and Irmen wrote it into the roll after his other two."</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, at the northern gate, on the eleventh day</div>
+
+  <div class="prose">
+    <p><b>The druid tribes: tree · grove · tribe.</b> A child's name is her tree's, and her tree's is hers. The grove is where the tree stands, named for what happened there, and the tribe comes last. When one of the pair dies, the other keeps the name.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Anadi</b> · given</p>
+    <div class="pill-row"><span class="pill">Nyota</span><span class="pill">Zawadi</span><span class="pill">Imara</span><span class="pill">Amani</span><span class="pill">Neema</span><span class="pill">Tumaini</span><span class="pill">Subira</span><span class="pill">Rehema</span><span class="pill">Baraka</span><span class="pill">Jabari</span></div>
+    <p style="margin:14px 0 6px;"><b>Anadi</b> · holds</p>
+    <div class="pill-row"><span class="pill">Thousand-Eyes Hold</span><span class="pill">the Hanging Hold</span><span class="pill">Deepwater Hold</span></div>
+    <p style="margin:14px 0 6px;"><b>Vanara</b> · given</p>
+    <div class="pill-row"><span class="pill">Ravi</span><span class="pill">Sarasi</span><span class="pill">Anjan</span><span class="pill">Kavi</span><span class="pill">Nikhil</span><span class="pill">Devika</span><span class="pill">Tara</span><span class="pill">Arun</span><span class="pill">Indu</span><span class="pill">Mira</span></div>
+    <p style="margin:14px 0 6px;"><b>Vanara</b> · clans</p>
+    <div class="pill-row"><span class="pill">Marutar</span><span class="pill">Kapisar</span></div>
+    <p style="margin:14px 0 6px;"><b>Druid</b> · tree-names and tribes</p>
+    <div class="pill-row"><span class="pill">Haritz</span><span class="pill">Ilarra</span><span class="pill">Lizar</span><span class="pill">Greyroot</span><span class="pill">Mossback</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.7;">
+      <li><i>Nyota Who Wove the Flood Back, of Thousand-Eyes Hold</i></li>
+      <li><i>Zawadi The Night the Web Held, of the Hanging Hold</i></li>
+      <li><i>Imara Nine Strands for a Stranger, of Deepwater Hold</i></li>
+      <li><i>Ravi Marutar Eleven-Days</i> · <i>Sarasi Kapisar Brought-the-Herald</i> · <i>Anjan Marutar Skoga-to-Greenmouth</i> · <i>Kavi Kapisar Aintzir-Twice</i> · <i>Nikhil Marutar Stepped-Between</i></li>
+      <li><i>Haritz of the Drowned Steps, Mossback</i> · <i>Ilarra of the Grove Where the Road Turned, Greyroot</i> · <i>Lizar of Three Springs, Mossback</i></li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-anadi-and-the-vanara" class="section-heading">The Anadi and the Vanara of the Basogur</h2>
+  <div class="prose">
+    <p>The <b>Anadi</b> re-weave, and in the Basogur the weaving is the village. A hold is re-strung in part every morning and stands where it stood, and the Anadi who live in it take the day's mending as the day's work, unbothered by what the night undid. The Vanara guides steer from hold to hold.</p>
+    <p>The <b>Vanara</b> ride the change, and in the Basogur the change is the ground itself. A Vanara guide knows which way the jungle moved in the night and walks a party along it, and the third name she carries is given by the first travelers she brings through, in their tongue.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="named" class="section-heading">Named Holds, Tribes, and Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Thousand-Eyes Hold</div>
+      <p>The web-hold that keeps the Stitchery's seal.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Hanging Hold</div>
+      <p>An overnight stop on the road; hold-mother <b>Zawadi The Night the Web Held</b>.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Marutar &amp; the Kapisar</div>
+      <p>Vanara guide-clans of the road; <b>Ravi Marutar Eleven-Days</b>, an elder guide, and <b>Nikhil Marutar Stepped-Between</b>, named 2532.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Greyroot</div>
+      <p>A druid tribe at the Grove Where the Road Turned, by the Stitchery's bend; <b>Ilarra</b> is one of its children.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Mossback</div>
+      <p>A druid tribe of the Drowned Steps and Three Springs.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Myrkvid Long Web</div>
+      <p>A Lizardfolk clan of the interior; <b>Jargal Slowwater of Myrkvid Long Web</b>.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Frogged Tribe</div>
+      <p>A Lizardfolk river-clan on the Skoga, at the jungle's Ehizahar edge.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Oihandar Red Tusks</div>
+      <p>The Orc clan of the northern gate; <b>Khulan Deepfoot of Oihandar Red Tusks</b>, the kinrider who counts the parties.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Irmen Greenmouth Baxter</div>
+      <p>A Roadward of Kaosadaemi.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Lisette Carrow</div>
+      <p>A Guild Silver of the Thousand Kingdom, whose letters from the crossing are the most-copied account of the road.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-crossing" class="section-heading">The Crossing, Day by Day</h2>
+  <div class="prose">
+    <p>Lisette Carrow's letters to her father, in order, from Greenmouth to the northern gate. Twelve days, five on the roll, and four millstones.</p>
+  </div>
+  <div class="timeline">
+    <div class="log-day"><div class="ld-date">Day 0</div><div class="ld-text">Greenmouth: the gate, the hall, the roll. Four millstones for Veidrath. The burial law heard in the taproom; the Prince's grey streak seen in Ringhold.</div></div>
+    <div class="log-day"><div class="ld-date">Day 1</div><div class="ld-text">Under the canopy. Irmen greets the trees by name: <i>They don't know you yet.</i> Bent rail in the fern.</div></div>
+    <div class="log-day"><div class="ld-date">Day 2</div><div class="ld-text">The camp moved in the night. Ravi Marutar Eleven-Days and Nikhil Marutar take the lead.</div></div>
+    <div class="log-day"><div class="ld-date">Day 4</div><div class="ld-text">The Hanging Hold, re-strung in part at dawn. Zawadi's story, kept unwritten.</div></div>
+    <div class="log-day"><div class="ld-date">Day 5</div><div class="ld-text">Something at the edge of the path. The whistle. Nikhil walks between the factor and the trees. Basajun.</div></div>
+    <div class="log-day"><div class="ld-date">Day 7</div><div class="ld-text">The bend around the Stitchery; Guild sealing-marks, red over black. The Greyroot and Ilarra.</div></div>
+    <div class="log-day"><div class="ld-date">Day 8</div><div class="ld-text">The two posts in the moss. Myrkvid Long Web crosses the road, eleven of them.</div></div>
+    <div class="log-day"><div class="ld-date">Day 10</div><div class="ld-text">Walbert. Aintzir and the first sky. Nikhil leads his first leg.</div></div>
+    <div class="log-day"><div class="ld-date">Day 11</div><div class="ld-text">The Red Tusks' gate. Counted five. Nikhil Marutar Stepped-Between.</div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/nashavel/kaosadaemi/kaosadaemi.html"><b>Kaosadaemi Principality →</b></a> · Greenmouth, the Roadwards' hall, and the house that keeps the road on time.</li>
+      <li><a href="/setting/talan/domains/nashavel/nashavel.html"><b>Nashavel →</b></a> · The Chaos domain, whose claim is the canopy's south.</li>
+      <li><a href="/setting/talan/domains/ehizahar/ehizahar.html"><b>Ehizahar →</b></a> · The Hunt domain, whose claim is the canopy's north.</li>
+      <li><a href="/setting/talan/domains/ehizahar/veidrath/veidrath.html"><b>Veidrath →</b></a> · The hunting city at the jungle's northeast edge, where the millstones go.</li>
+      <li><a href="/setting/talan/domains/ehizahar/villtur/villtur.html"><b>Lands of Villtur →</b></a> · The clans whose register the Lizardfolk and the Red Tusks keep; the Frogged Tribe on the Skoga.</li>
+      <li><a href="/setting/talan/the-binding.html#flesh-sculptor"><b>The Binding →</b></a> · The Flesh-Sculptor and the rest of the Nine.</li>
+      <li><a href="/setting/talan/ancestries.html"><b>Peoples &amp; Heritages →</b></a> · The Anadi and the Vanara, at home here.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The jungle is larger than the road; most of it has never been written down.</div>
+    <ol>
+      <li><b>The holds, clans, and groves off the road.</b> Their names, and how many there are.</li>
+      <li><b>The Lost-Era kingdoms under the canopy.</b> Where they stood, and what the chronicles call them.</li>
+      <li><b>The Guild captain of the one fire.</b> Whose name none of the tribes could say, and the Guild's own record of the seal.</li>
+      <li><b>What the scholars conclude.</b> Whether Basajun is a god, a spirit, or a story.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · NASHAVEL &amp; EHIZAHAR · THE BASOGUR JUNGLE</div>
+
+</div>
+
+</body>
+</html>

@@ -181,6 +181,13 @@ Pace as stories want them. Rolling work.
 
 ---
 
+## § Regions: Nashavel & Ehizahar
+
+### [Basogur] Post-build texture
+**Decided.** The Basogur Jungle is canon and published (2026-09-25): Basajun the walking demi-god, the road and its two prices, the Anadi web-hold villages re-strung in part every morning, the Vanara guide-clans, the druid tribes, the Stitchery web-sealed, three registers, Lisette Carrow's crossing log.
+**Open.** The web-hold that is a full city hanging between the trees (GM idea, 2026-09-24); more Vanara clans and druid tribes by name, and the holds off the road; the Lost-Era kingdoms under the canopy (`timeline.md` l.170); the Guild captain of the one fire; whether Hildrun's first price differed from her heirs'; Basajun's cleric domains at the registrar pass.
+**Where.** [lore/geography/nashavel/basogur.md](../lore/geography/nashavel/basogur.md); [basogur.html](../published/setting/talan/domains/nashavel/basogur/basogur.html).
+
 ## § Factions & characters
 
 ### [Bestiary] Vice Demons: personalities, politics, mortal touch *(rolling)*
