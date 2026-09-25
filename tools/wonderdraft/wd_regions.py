@@ -45,9 +45,9 @@ def ensure_codec():
 # layers are z_index (Default = 0, "+1" = 1, ...). "site" is the file name the
 # export is published under.
 VARIANTS = {
-    "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1}, "site": "domains"},
+    "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1, -2}, "site": "domains"},
     "Regions": {"border": "border_gradient", "hide_label_layers": {1}, "site": "regions"},
-    "Terrain": {"border": None, "hide_label_layers": {1}, "site": "terrain"},
+    "Terrain": {"border": None, "hide_label_layers": {1, 2}, "site": "terrain"},
 }
 
 

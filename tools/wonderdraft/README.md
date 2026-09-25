@@ -8,9 +8,9 @@ Wonderdraft has a single regions overlay, so god domains and regions can't be sh
 
 | Variant | Region shapes kept | Label layers dropped |
 |---|---|---|
-| `<map> - God Domains` | dashed border (`border_dash`) | +2 (region labels), −1 (small city names) |
+| `<map> - God Domains` | dashed border (`border_dash`) | +2 (region labels), −1 (small city names), −2 (landmark names) |
 | `<map> - Regions` | gradient border (`border_gradient`) | +1 (god domain labels) |
-| `<map> - Terrain` | none | +1 (god domain labels) |
+| `<map> - Terrain` | none | +1 (god domain labels), +2 (region labels) |
 
 Everything else (terrain, symbols, +3 divine city names, +4 city icons, theme) is copied byte for byte. The input map is only read, never modified.
 
@@ -32,7 +32,7 @@ Exporting stays manual: Wonderdraft has no command-line export, and scripting it
 ### Conventions the split depends on
 
 - **Border style decides the variant.** God domains: dashed. Regions: gradient. A shape with any other border style is dropped from both.
-- **Label layers:** Default = terrain icons, +1 god domain labels, +2 region labels, +3 divine city names, +4 city icons, −1 small city names. Layers are saved as `z_index` (Default = 0, +1 = 1, −1 = −1, …).
+- **Label layers:** Default = terrain icons, +1 god domain labels, +2 region labels, +3 divine city names, +4 city icons, −1 small city names, −2 landmark names (mountains, rivers). Layers are saved as `z_index` (Default = 0, +1 = 1, −1 = −1, …).
 
 To change the rules, edit `VARIANTS` at the top of `wd_regions.py`.
 

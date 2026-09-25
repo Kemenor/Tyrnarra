@@ -33,7 +33,9 @@ same operations exist as `wdmap …` commands.
   (mountains and other named features, size 24), −5 markers (`@stamp` / `@place`).
 - **Region shapes:** god domains have the dashed border (`domain`), regions the
   gradient border (`region`); each is named after the label inside it (+1 / +2).
-- **Views:** `split_variants` writes `Main - God Domains / Regions / Terrain`; the
+- **Views:** `split_variants` writes `Main - God Domains / Regions / Terrain`
+  (God Domains hides +2, −1, −2; Regions hides +1; Terrain hides +1 and +2, so it
+  carries city, landmark and river names but no polity names); the
   user exports each from Wonderdraft as WebP next to it, then
   `wd_regions.py … --publish` copies them into `published/setting/assets/maps/`
   (see the README's *Publishing the three map views*). Never commit/push the maps
