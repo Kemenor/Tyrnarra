@@ -35,7 +35,7 @@ if (probe.error || probe.status !== 0) {
 mkdirSync(displayDir, { recursive: true });
 mkdirSync(thumbsDir, { recursive: true });
 
-const maps = ["terrain.webp", "kingdoms.webp", "domains.webp"];
+const maps = ["terrain.webp", "regions.webp", "domains.webp"];
 const MB = 1024 * 1024;
 const KB = 1024;
 let totalOrig = 0;

@@ -1,6 +1,6 @@
 # Wonderdraft tooling
 
-Tools for the Wonderdraft source maps behind the terrain / kingdoms / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The `.wonderdraft_map` sources live on Proton Drive (`~/ProtonDrive/Wonderdraft/`), not in git.
+Tools for the Wonderdraft source maps behind the terrain / regions / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The `.wonderdraft_map` sources live on Proton Drive (`~/ProtonDrive/Wonderdraft/`), not in git.
 
 ## `wd_regions.py`: one map, one file per region type
 

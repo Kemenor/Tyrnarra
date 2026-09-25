@@ -34,7 +34,7 @@ fi
 mkdir -p "$DISPLAY_DIR" "$THUMBS_DIR"
 
 # Maps to process
-MAPS=("terrain.webp" "kingdoms.webp" "domains.webp")
+MAPS=("terrain.webp" "regions.webp" "domains.webp")
 
 echo "Resizing Talan maps..."
 echo
