@@ -23,6 +23,7 @@ DIVINE_LAYER = 3
 CITY_NAME_LAYERS = (DIVINE_LAYER, -1)  # layers that name a settlement
 CAPITOL_LEGEND = "Capitol"
 CAPITOL_NAME_RADIUS = 160
+OWN_NAME_RADIUS = 60  # a region label this close to a capitol names it too (city-state: Rika Tikur)
 DARK_LUMINANCE = 0.12  # region colours darker than this vanish against Wonderdraft's deep-blue sea
 
 
@@ -124,12 +125,14 @@ def check_capitols(m):
     if not fam:
         return []
     names = [l for l in m.labels if l.get("z_index") in CITY_NAME_LAYERS]
+    own = [l for l in m.labels if l.get("z_index") == 2]
     out = []
     for s in m.symbols:
         if s.get("z_index") == 5 or family(s.get("texture")) != fam:
             continue
         x, y = s["position"]
-        if not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= CAPITOL_NAME_RADIUS ** 2 for l in names):
+        if not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= CAPITOL_NAME_RADIUS ** 2 for l in names) \
+                and not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= OWN_NAME_RADIUS ** 2 for l in own):
             region = next((r.label for r in m.regions if r.kind == "region" and r.contains(x, y)), "no region")
             out.append(Issue("warning", "capitol", "capitol icon without a city name (in %s)" % region, _xy((x, y))))
     return out

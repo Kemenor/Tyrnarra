@@ -270,6 +270,17 @@ class WDMap:
                 want = NAME_LAYER.get(r.kind)
                 inside = [l for l in self.labels
                           if r.contains(*l["position"]) and (want is None or l["z_index"] == want)]
+                if not inside and want is not None:
+                    # Label drawn just outside its own outline (small Golden Coast island):
+                    # nearest label of the shape's own kind within reach of its edge.
+                    x0, y0, x1, y1 = r.bbox
+                    reach = max(100.0, 0.5 * max(x1 - x0, y1 - y0))
+                    near = [l for l in self.labels if l["z_index"] == want
+                            and x0 - reach <= l["position"][0] <= x1 + reach
+                            and y0 - reach <= l["position"][1] <= y1 + reach]
+                    if near:
+                        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+                        inside = [min(near, key=lambda l: (l["position"][0] - cx) ** 2 + (l["position"][1] - cy) ** 2)]
                 if not inside and r.kind == "region":
                     # A region shape without a region label is usually a god-city's circle
                     # (Myrria, Merkavar): name it after the divine-city label (+3) inside it or
