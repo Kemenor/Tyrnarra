@@ -16,6 +16,8 @@ Canon travel times want a map 6–8× smaller. The long road crosses the Basogur
 
 ## Backlog for the next map edit
 
+- **Kaosadaemi Principality label typo** (Nashavel; found 2026-09-25 by the `wdmap` preview). The Region Labels (+2) label in the map source reads **"Kaosadaemi Prinicpality"**; canon is **Kaosadaemi Principality** (`nashavel/kaosadaemi.md`). Fix the source label, then regenerate the variants and re-export the regions view.
+
 - **Basogur: pull the top-right down** (Nashavel/Ehizahar; draft, 2026-09-25). At the draft scale the long road runs ~525–785 mi from Greenmouth to Veidrath, far past what walking parties with sledges cover in the log's 11 days. Pull the jungle's north-east lobe (the top right, where Veidrath stands) lower, so the road's line through the trees is roughly **600–700 px** on the full-res original (**~300–350 mi**), with the crossing lengthened lightly to match (target to confirm with the GM). Coordinate with the *Veidrath move* below, and with Zenerious's Skoga leg, whose "peak of the bend" is that lobe.
 
 - **Tvisol** (Brauogi/Myrkono corner). The Twin Suns + Bikitsa joint kingdom now carries the canon name **Tvisol** (2026-07-06 build); consider a regions-view label for it, keeping the two half-labels. Optional settlement marks: **Solkai** (sunward ferry-capital) and **Gaulabe** (shade-half oven-town).

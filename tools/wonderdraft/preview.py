@@ -20,8 +20,15 @@ HIGHLIGHT = (230, 30, 60)
 
 @lru_cache(maxsize=None)
 def _font_file(family):
+    # Wonderdraft names fonts with the style inside ("Gentium Book Basic Bold");
+    # fontconfig wants it as a style ("Gentium Book Basic:style=Bold").
+    words = family.split()
+    styles = []
+    while words and words[-1].lower() in ("bold", "italic", "regular"):
+        styles.insert(0, words.pop())
+    pattern = " ".join(words) + (":style=" + " ".join(styles) if styles else "")
     try:
-        out = subprocess.run(["fc-match", "-f", "%{file}", family], capture_output=True, text=True)
+        out = subprocess.run(["fc-match", "-f", "%{file}", pattern], capture_output=True, text=True)
         return out.stdout.strip() or None
     except OSError:
         return None

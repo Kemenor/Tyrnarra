@@ -2,9 +2,12 @@
 
     python3 -m unittest tools/wonderdraft/test_wdmap.py
 
-The real-map round trip runs against ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map
-(or $WD_TEST_MAP) and is skipped when that file isn't there.
+The real-map tests run against ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map
+(or $WD_TEST_MAP) and are skipped when that file isn't there. The map is decoded
+once and shared: a decoded 8192px map takes a few GB, so each test class must
+not load its own.
 """
+import copy
 import os
 import struct
 import sys
@@ -17,6 +20,18 @@ from gdvar import Color, GdObject, PoolIntArray, PoolRealArray, PoolStringArray,
 from wdmap import WDMap, family, point_in_poly, read_raw, select  # noqa: E402
 
 TEST_MAP = os.environ.get("WD_TEST_MAP", os.path.expanduser("~/ProtonDrive/Wonderdraft/Main.wonderdraft_map"))
+
+
+_REAL = {}
+
+
+def real_map():
+    """(raw bytes, WDMap) of the test map, decoded once per test run."""
+    if not _REAL:
+        raw = read_raw(TEST_MAP)
+        _REAL["raw"] = raw
+        _REAL["map"] = WDMap(gdvar.decode(raw, 4)[0], TEST_MAP)
+    return _REAL["raw"], _REAL["map"]
 
 
 def roundtrip(v):
@@ -74,13 +89,13 @@ class HelpersTest(unittest.TestCase):
 class RealMapTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.raw = read_raw(TEST_MAP)
-        (length,) = struct.unpack_from("<I", cls.raw, 0)
-        data, end = gdvar.decode(cls.raw, 4)
-        cls.m = WDMap(data, TEST_MAP)
+        cls.raw, cls.m = real_map()
 
     def test_byte_identical_roundtrip(self):
-        self.assertTrue(self.m.to_raw() == self.raw, "re-encoded map differs from the original")
+        body = gdvar.encode(self.m.data)
+        same = memoryview(self.raw)[4:] == body and struct.unpack_from("<I", self.raw)[0] == len(body)
+        del body
+        self.assertTrue(same, "re-encoded map differs from the original")
 
     def test_queries(self):
         m = self.m
@@ -89,6 +104,48 @@ class RealMapTest(unittest.TestCase):
         self.assertLess(len(on_water), len(select(m, "symbols", type_="tree")) / 10)
         named = [r for r in m.regions if r.name]
         self.assertGreater(len(named), len(m.regions) / 2)
+
+
+@unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
+class EditTest(unittest.TestCase):
+    """Edits on an in-memory copy of the real map; nothing is written."""
+
+    @classmethod
+    def setUpClass(cls):
+        # Edit a copy of the editable lists; the big terrain images stay shared and untouched.
+        _, shared = real_map()
+        data = dict(shared.data)
+        for k in ("symbols", "labels", "territories"):
+            data[k] = copy.deepcopy(shared.data[k])
+        cls.m = WDMap(data, TEST_MAP)
+
+    def test_label_replace(self):
+        import edit
+        hits = select(self.m, "labels", text="*prinicpality*")
+        if not hits:
+            self.skipTest("typo already fixed in the map")
+        lines = edit.edit_labels(self.m, hits, replace=("Prinicpality", "Principality"))
+        self.assertIn("Principality", hits[0][1]["text"])
+        self.assertTrue(lines[0].startswith("text:"))
+
+    def test_art_swap_keeps_footprint_and_resamples(self):
+        import edit
+        hits = select(self.m, "symbols", family_="*hatch_pine*")[:20]
+        before = [s["radius"] * s["scale"][0] for _, s in hits]
+        edit.edit_symbols(self.m, hits, art="user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/Kapok_Tree")
+        for (_, s), fp in zip(hits, before):
+            self.assertIn("Kapok_Tree", s["texture"])
+            self.assertAlmostEqual(s["radius"] * s["scale"][0], fp, places=3)
+            self.assertEqual(tuple(s["sample"]), tuple(self.m.ground_sample(*s["position"])))
+
+    def test_delete_and_reencode(self):
+        import edit
+        n = len(self.m.symbols)
+        hits = select(self.m, "symbols", type_="tree", on="water")
+        edit.edit_symbols(self.m, hits, delete=True)
+        self.assertEqual(len(self.m.symbols), n - len(hits))
+        data = gdvar.encode(self.m.data["symbols"])
+        self.assertEqual(gdvar.decode(data)[1], len(data))
 
 
 if __name__ == "__main__":

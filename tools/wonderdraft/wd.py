@@ -4,6 +4,9 @@
     wdmap info    MAP
     wdmap query   MAP {symbols,labels,regions} [filters] [--list N] [--json]
     wdmap preview MAP -o OUT.png [--area ...] [--grid N] [filters to highlight]
+    wdmap edit    MAP {symbols,labels,regions} [filters | --all] ACTIONS [--dry-run] [--preview OUT.png]
+    wdmap backups MAP
+    wdmap restore MAP [--backup N]
 
 Filters (all optional, combined with AND; globs are case-insensitive):
     --texture GLOB   symbol texture path, e.g. '*hatch_pine*'
@@ -16,6 +19,17 @@ Filters (all optional, combined with AND; globs are case-insensitive):
     --near LABEL:R   within R map units of the label matching LABEL
     --on land|water
     --style domain|region   (regions only)
+
+Edit actions:
+    all kinds    --move DX,DY  --delete
+    symbols      --scale F  --rotate DEG  --to-layer L  --art TEXTURE_OR_FAMILY
+    labels       --scale F  --rotate DEG  --to-layer L  --set-text T  --replace OLD NEW
+                 --font NAME  --size N  --color #rrggbb
+    regions      --color #rrggbb  --border-style domain|region  --border-width W
+
+edit saves in place: it backs the map up first (~/.local/share/wdmap/backups),
+refuses while Wonderdraft has the map open, and refuses if the file changed on
+disk since it was read. --dry-run reports without saving.
 """
 import argparse
 import collections
@@ -25,7 +39,8 @@ import sys
 
 HERE = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, HERE)
-from wdmap import WDMap, family, label_anchor, select  # noqa: E402
+import edit  # noqa: E402
+from wdmap import WDMap, backup, backups, family, label_anchor, select, wonderdraft_has_open  # noqa: E402
 
 
 def add_filters(ap):
@@ -177,6 +192,81 @@ def cmd_preview(m, a):
                            "".join(", %d %s highlighted" % (len(v), k) for k, v in hl.items())))
 
 
+def _xy(spec):
+    x, y = (float(v) for v in spec.split(","))
+    return (x, y)
+
+
+def cmd_edit(m, a):
+    if not (has_filters(a) or a.all):
+        sys.exit("error: give filters to select what to edit, or --all")
+    if not (a.dry_run or a.force) and wonderdraft_has_open(m.path):
+        sys.exit("not saved: Wonderdraft has %s open; save and close it there first (or use --dry-run)"
+                 % os.path.basename(m.path))
+    hits = run_select(m, a.kind, a)
+    if not hits:
+        print("nothing matched; no changes")
+        return
+    move = _xy(a.move) if a.move else None
+    layer = m.resolve_layer(a.to_layer) if a.to_layer is not None else None
+    if a.kind == "symbols":
+        lines = edit.edit_symbols(m, hits, move=move, scale=a.scale, rotate=a.rotate, layer=layer,
+                                  art=a.art, delete=a.delete)
+    elif a.kind == "labels":
+        lines = edit.edit_labels(m, hits, move=move, scale=a.scale, rotate=a.rotate, layer=layer,
+                                 text=a.set_text, replace=a.replace, font=a.font, size=a.size,
+                                 color=a.color, delete=a.delete)
+    else:
+        lines = edit.edit_regions(m, hits, move=move, color=a.color, style=a.border_style,
+                                  width=a.border_width, delete=a.delete)
+    if not lines:
+        print("%d %s matched, but no actions given; no changes" % (len(hits), a.kind))
+        return
+    print("%d %s selected" % (len(hits), a.kind))
+    for line in lines:
+        print("  " + line)
+    if a.preview:
+        import preview
+        if a.delete:
+            hl, pts = {}, [(it.bbox[0], it.bbox[1]) if a.kind == "regions" else it["position"] for _, it in hits]
+        else:
+            hl = {a.kind: [i for i, _ in hits]}
+            pts = ([p for _, it in hits for p in (it.bbox[:2], it.bbox[2:])] if a.kind == "regions"
+                   else [it["position"] for _, it in hits])
+        xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+        pad = max(200, 0.1 * max(max(xs) - min(xs), max(ys) - min(ys)))
+        area = (min(xs) - pad, min(ys) - pad, max(xs) + pad, max(ys) + pad)
+        preview.render(m, area=area, width=1600, highlight=hl).save(a.preview)
+        print("preview: %s" % a.preview)
+    if a.dry_run:
+        print("dry run: not saved")
+        return
+    try:
+        bak = m.save_in_place(force=a.force)
+    except RuntimeError as e:
+        sys.exit("not saved: %s" % e)
+    print("saved %s (backup: %s)" % (m.path, bak))
+
+
+def cmd_backups(path):
+    for i, b in enumerate(backups(path)):
+        print("%3d  %s  %.0f MB" % (i, os.path.basename(b), os.path.getsize(b) / 1e6))
+
+
+def cmd_restore(path, n, force):
+    import shutil
+    bs = backups(path)
+    if not bs or n >= len(bs):
+        sys.exit("error: no backup #%d for %s" % (n, path))
+    if not force and wonderdraft_has_open(path):
+        sys.exit("not restored: Wonderdraft has %s open; close it there first" % os.path.basename(path))
+    chosen = bs[n]
+    safety = backup(path)
+    shutil.copy2(chosen, path)
+    print("restored %s from %s (the version it replaced is backed up as %s)"
+          % (path, os.path.basename(chosen), os.path.basename(safety)))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
@@ -198,10 +288,41 @@ def main():
     p.add_argument("--grid", type=float, help="coordinate grid spacing in map units")
     p.add_argument("--kind", choices=("symbols", "labels", "regions"), help="what the filters highlight")
     add_filters(p)
+    p = sub.add_parser("edit")
+    p.add_argument("map")
+    p.add_argument("kind", choices=("symbols", "labels", "regions"))
+    add_filters(p)
+    p.add_argument("--all", action="store_true", help="edit every item of the kind (no filters)")
+    p.add_argument("--move", metavar="DX,DY")
+    p.add_argument("--scale", type=float)
+    p.add_argument("--rotate", type=float, metavar="DEG")
+    p.add_argument("--to-layer")
+    p.add_argument("--art", metavar="TEXTURE_OR_FAMILY")
+    p.add_argument("--set-text")
+    p.add_argument("--replace", nargs=2, metavar=("OLD", "NEW"))
+    p.add_argument("--font")
+    p.add_argument("--size", type=int)
+    p.add_argument("--color")
+    p.add_argument("--border-style")
+    p.add_argument("--border-width", type=float)
+    p.add_argument("--delete", action="store_true")
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--preview", metavar="OUT.png")
+    p.add_argument("--force", action="store_true", help="skip the Wonderdraft-has-it-open check")
+    p = sub.add_parser("backups")
+    p.add_argument("map")
+    p = sub.add_parser("restore")
+    p.add_argument("map")
+    p.add_argument("--backup", type=int, default=0, help="which backup (0 = newest, see `wdmap backups`)")
+    p.add_argument("--force", action="store_true")
     a = ap.parse_args()
     try:
+        if a.cmd == "backups":
+            return cmd_backups(a.map)
+        if a.cmd == "restore":
+            return cmd_restore(os.path.abspath(a.map), a.backup, a.force)
         m = WDMap.load(a.map)
-        {"info": cmd_info, "query": cmd_query, "preview": cmd_preview}[a.cmd](m, a)
+        {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
 

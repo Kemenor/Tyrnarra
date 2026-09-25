@@ -3,18 +3,21 @@
     m = WDMap.load(path)
     m.symbols / m.labels / m.regions     # lists of dicts, edited in place
     m.save(path)                         # re-encodes; unchanged data is byte-identical
+    m.save_in_place()                    # back up, check Wonderdraft/disk, overwrite m.path
 
 Coordinates are map units (Main: 8192 x 8192). Layers are z_index: Default = 0,
 "+1" = 1, "-1" = -1; the layer names the user set in Wonderdraft live in
 m.data["layers"]["names"], listed from +5 down to -5.
 """
 import fnmatch
+import glob
 import os
 import re
 import shutil
 import struct
 import subprocess
 import sys
+import time
 
 HERE = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, HERE)
@@ -24,6 +27,8 @@ from gdvar import Vector2  # noqa: E402
 GCPF_SRC = os.path.join(HERE, "gcpf.c")
 GCPF = os.path.join(HERE, "gcpf")
 USER_DIR = os.path.expanduser("~/.local/share/Wonderdraft")
+BACKUP_DIR = os.path.expanduser("~/.local/share/wdmap/backups")
+KEEP_BACKUPS = 20
 BORDER_KIND = {"border_dash": "domain", "border_gradient": "region"}
 # The label layer that names each kind of region shape.
 NAME_LAYER = {"domain": 1, "region": 2}
@@ -56,6 +61,53 @@ def write_raw(path, raw):
     if subprocess.run([GCPF, "c", tmp], input=raw).returncode:
         raise IOError("could not write %s" % path)
     os.replace(tmp, path)
+
+
+def wonderdraft_has_open(path):
+    """True if a running Wonderdraft may have this map open (then saving would race it).
+
+    Wonderdraft titles its window "<map name> - Wonderdraft". When Wonderdraft runs
+    but the titles can't be read, assume the worst.
+    """
+    running = False
+    for cmd in glob.glob("/proc/[0-9]*/cmdline"):
+        try:
+            with open(cmd, "rb") as f:
+                argv0 = f.read().split(b"\0", 1)[0]
+            if os.path.basename(argv0) == b"Wonderdraft.x86_64":
+                running = True
+                break
+        except OSError:
+            pass
+    if not running:
+        return False
+    stem = os.path.splitext(os.path.basename(path))[0]
+    try:
+        out = subprocess.run(["xdotool", "search", "--name", " - Wonderdraft$", "getwindowname", "%@"],
+                             capture_output=True, text=True, timeout=5,
+                             env=dict(os.environ, DISPLAY=os.environ.get("DISPLAY", ":0")))
+    except (OSError, subprocess.TimeoutExpired):
+        return True
+    titles = [t[:-len(" - Wonderdraft")].strip("* ") for t in out.stdout.splitlines()
+              if t.endswith(" - Wonderdraft")]
+    return not titles or stem in titles
+
+
+def backups(path):
+    """Backups of a map, newest first."""
+    stem = os.path.splitext(os.path.basename(path))[0]
+    return sorted(glob.glob(os.path.join(BACKUP_DIR, stem, "*.wonderdraft_map")), reverse=True)
+
+
+def backup(path):
+    stem = os.path.splitext(os.path.basename(path))[0]
+    d = os.path.join(BACKUP_DIR, stem)
+    os.makedirs(d, exist_ok=True)
+    dst = os.path.join(d, time.strftime("%Y-%m-%d_%H%M%S") + ".wonderdraft_map")
+    shutil.copy2(path, dst)
+    for old in backups(path)[KEEP_BACKUPS:]:
+        os.remove(old)
+    return dst
 
 
 def family(texture):
@@ -112,6 +164,19 @@ class WDMap:
         self.data, self.path = data, path
         self._regions = None
         self._mask = None
+        self._stat = self._file_stat()
+
+    def _file_stat(self):
+        try:
+            st = os.stat(self.path)
+            return (st.st_mtime_ns, st.st_size)
+        except (OSError, TypeError):
+            return None
+
+    def invalidate(self):
+        """Drop caches derived from the data (region names, land mask) after edits."""
+        self._regions = None
+        self._mask = None
 
     # --- load / save -------------------------------------------------------
 
@@ -130,6 +195,24 @@ class WDMap:
 
     def save(self, path):
         write_raw(path, self.to_raw())
+
+    def save_in_place(self, force=False):
+        """Overwrite the map it was loaded from, after backing it up. Returns the backup path.
+
+        Refuses when Wonderdraft may have the map open (its next save would wipe
+        these edits) or when the file changed on disk since it was loaded.
+        """
+        if not force and wonderdraft_has_open(self.path):
+            raise RuntimeError("Wonderdraft has %s open; save and close it there first"
+                               % os.path.basename(self.path))
+        if self._file_stat() != self._stat:
+            raise RuntimeError("%s changed on disk since it was loaded; reload and redo the edit"
+                               % os.path.basename(self.path))
+        raw = self.to_raw()
+        dst = backup(self.path)
+        write_raw(self.path, raw)
+        self._stat = self._file_stat()
+        return dst
 
     # --- basic accessors ---------------------------------------------------
 
@@ -223,6 +306,16 @@ class WDMap:
         if not (0 <= px < w and 0 <= py < h):
             return False
         return buf[(py * w + px) * 4 + 3] >= 128
+
+    def ground_sample(self, x, y):
+        """The ground colour Wonderdraft stores as a symbol's `sample`: the ground
+        image's pixel under the symbol, as a Color."""
+        img = self.data["ground"].get("data")
+        w, h = img["width"], img["height"]
+        px = min(w - 1, max(0, int(x * w / self.width)))
+        py = min(h - 1, max(0, int(y * h / self.height)))
+        o = (py * w + px) * 4
+        return gdvar.Color(*(v / 255 for v in img["data"][o:o + 4]))
 
     def image(self, name):
         """One of the terrain images (mask, ground, water_tint) as a PIL RGBA image."""

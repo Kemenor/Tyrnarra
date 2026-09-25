@@ -36,9 +36,9 @@ Exporting stays manual: Wonderdraft has no command-line export, and scripting it
 
 To change the rules, edit `VARIANTS` at the top of `wd_regions.py`.
 
-## `wdmap`: inspect maps (stage 1, step 1 of the AI tooling)
+## `wdmap`: inspect and edit maps (stage 1 of the AI tooling)
 
-`wd.py` (symlinked as `wdmap`) reads a map into plain data so it can be asked questions and previewed. Nothing here writes to a map yet.
+`wd.py` (symlinked as `wdmap`) reads a map into plain data so it can be asked questions, previewed and edited.
 
 ```bash
 wdmap info    MAP                                   # size, counts per layer (with your layer names), packs
@@ -53,7 +53,24 @@ wdmap preview MAP -o out.png --area region:Nashavel --grid 512 --type mountain
 - **Preview** is an approximation for seeing where things are: the real painted terrain (ground over the land mask), region shapes, user-pack symbols with their real art (greyscale trees/mountains tinted by their sampled ground colour, custom-colour icons by their palette), built-in symbols as markers by type, labels in a stand-in font (`fc-match` of the map font). `--grid N` adds a coordinate grid in map units.
 - **Land/water** is the alpha channel of the map's `mask` image.
 
-`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk.
+### Editing
+
+```bash
+wdmap edit MAP labels  --text '*prinicpality*' --replace Prinicpality Principality
+wdmap edit MAP symbols --region Myrkono --family '*hatch_pine*' --art 'user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/Kapok_Tree' --preview swap.png
+wdmap edit MAP symbols --on water --type tree --delete --dry-run
+wdmap edit MAP labels  --text Veidrath --to-layer "Divine City Labels" --move 0,-40
+wdmap edit MAP regions --text 'Three Pines' --color '#aa3355' --border-style domain
+wdmap backups MAP
+wdmap restore MAP --backup 0
+```
+
+- **Actions:** symbols `--move --scale --rotate --to-layer --art --delete`; labels `--move --scale --size --rotate --to-layer --set-text --replace --font --color --delete`; regions `--move --color --border-style --border-width --delete`. Filters select what is edited (same as `query`); editing with no filter needs `--all`.
+- **Saving** happens in place, edit by edit. Every save first copies the map to `~/.local/share/wdmap/backups/<map>/` (newest 20 kept); `restore` puts one back (backing up the current file first). Saving is refused while Wonderdraft has the map open (checked by window title, since Wonderdraft would overwrite the edit on its next save) and when the file changed on disk after it was read. `--dry-run` reports without saving; `--preview` renders the edited area with the changes highlighted.
+- **Art swaps** (`--art`) take a texture or an art family already used somewhere in the map, which supplies the sprite's offset, footprint (`radius`), type and colour setup. The swapped symbol keeps its footprint (`radius x scale` stays the same, so a kapok replaces a pine at a pine's size; add `--scale` to change that), keeps its variant number where the new family has it, and gets its ground-colour `sample` recomputed from the ground image, as Wonderdraft does on placement. Art not yet in the map has to be placed once in Wonderdraft first.
+- Moving a symbol also refreshes its `sample`.
+
+`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 
 ## How it works
 
