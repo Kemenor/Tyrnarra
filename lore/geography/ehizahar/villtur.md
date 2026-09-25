@@ -27,17 +27,17 @@
 > "The Lands of Villtur are colloquially known as the blank lands among my colleagues. Few dare to travel into it to map it out, most of them seem to not come back."
 > Master Zenerious of the Air Monastery, Day 0 of his log
 
-The Wyndwalken maps are the standard reference at every court on Talan that can afford a copy, and their sheets of Ehizahar show the coast, the ranges, the great river, Veidrath, and green. Zenerious crossed the green in sixty days and measured every hill he sat on, and his colleagues have the log. The land is not the difficulty. A surveyor with a rule and a compass can fix a hill on the grass to the yard and come back to it, and he did.
+The Wyndwalken maps are the standard reference at every court on Talan that can afford a copy, and their sheets of Ehizahar show the coast, the ranges, the great river, Veidrath, and green. Zenerious crossed the green in ninety days and measured every hill he sat on, and his colleagues have the log. The land is not the difficulty. A surveyor with a rule and a compass can fix a hill on the grass to the yard and come back to it, and he did.
 
 > "I have to admit, I have no idea how the Villturians do it, by eye alone I wouldn't be able to distinguish one green rolling hill from the next. Now I sit on this hill I couldn't distinguish with a token in my hand, they bound three colored strings to it, told me the Vindrakar Hooves would accept it and bring me to Veidrath."
-> Zenerious, Day 14
+> Zenerious, Day 24
 
 What a map of Villtur cannot hold is where you are. Every clan rides a circuit, a seasonal loop that runs for hundreds of miles from pasture to water to growing-ground and back, and the circuits are the borders: a clan's grass is wherever its circuit runs, for as long as the clan can hold it, and the circuits are redrawn every year by who arrived at the gathering fat and who arrived thin. Two clans whose loops touch at a river-crossing this spring may not touch next spring. A city sits fixed inside its pasture-ring, and the ring's edge is wherever the nearest circuit stopped taking it. None of this is on the ground. It is in who will meet you on it.
 
 Crossing Villtur is done the way Zenerious did it, and the way it has been done since: **the Handing.** You make a deal with the first clan whose grass you enter, at a fair or a river-ford or wherever a clan can be found, and the clan carries you to the edge of its circuit and hands you on. The instrument is **the strings**: three colored cords in the clan's own colors, bound to a token, which the next clan reads as the first clan's word that you are theirs to carry. Each clan honors the strings of the clans it has agreed to honor, and no others, and each carries you exactly as far as its own grass runs. Zenerious was handed nine times between Sagarri and the Scar of Aeris: two grass-clans, a river-clan, a city's delegation, the field-priests, a band of the clanless, a snow-clan. Nobody arranged the whole of it. Every clan arranged the next.
 
 > "The kinrider just said dinner is served, so I'm ending the entry for today here."
-> Zenerious, Day 34, traveling with the Aymuru delegation
+> Zenerious, Day 44, traveling with the Aymuru delegation
 
 So a foreign court that wants to cross Villtur deals with every circuit it crosses, one clan at a time, and each deal is honored by one clan and binds one clan. The court's envoy looks for the man who speaks for the land and there is no such man; he finds instead a chain of small deals that each end at a hill with a tree on it. The clans sell passage this way to anyone who asks. The ones who do not ask are the ones the Wyndwalken lost.
 
@@ -60,19 +60,19 @@ The one law of the game is the Gathering-Peace, and inside the Peace a dispute i
 When a clan's proof lapses, when a winter or a sickness or a lost generation leaves it unable to hold its circuit, the circuit goes, and what is left of the clan goes too. **The lone wolves** are what remains: bands of the clanless, the last of a broken clan or the banished of a whole one, together by choice and apart by choice, some under a name they chose and most under none. They hold no grass and ride no circuit and are handed nothing, and they get people through anyway, for pay, across the ground between the circuits that no clan will grant.
 
 > "Yesternight there was a fight, three people left, now we are 12, 13 if I include myself. They tell me not to worry, I hope they are right, because these cold winds seem hungrier than those I know from the Air Monastery."
-> Zenerious, Day 50, in the north
+> Zenerious, Day 60, in the north
 
 ## The circuit and the wall
 
 Some clans stopped. A Villtur city is a clan whose circuit ended where it stood: the wall is for the people and the herds graze outside it, so the city holds its pasture-ring by the same proof as any clan holds its grass, and what a rival takes from a city is its pasture and never the city. A held place and its pastures can be watched. A circuit across the open plain can only be ridden, and a clan that cannot be everywhere on its loop at once is claimed against at the far end. Stopping buys a claim that can be kept, and pays for it in reach: a city that wants more grass finds the grass already ridden by clans with deals and rivals of their own, and grows by negotiation or stops growing. That is why, in four centuries, no city in Villtur has become a country. Fenurra did, on ground nobody wanted (see below).
 
 > "This city was built by nomads and you can feel it, somewhat see it maybe. I have seen houses and next to it spaces for tents, I overheard a worker said he got a new job and is giddy to move to a different quarter, it seems people overwhelmingly live where they work here. A change in employer means a change in location, not by law but by custom."
-> Zenerious, Day 32, at Aymuru
+> Zenerious, Day 42, at Aymuru
 
 **Aymuru** is the one Zenerious rested in, and it was already a city with a delegation when he did. It stands where several circuits cross, and it stopped there because being findable was worth more than the loop: in a country where a clan is found by learning its circuit and riding to intercept it, a city is the one fixed address, the place strings are given and honored and a stranger can wait indoors. A few thousand live there, every people of the domain mixed. The clan's shape is the city's, transposed: a chief where the clan had a leader, and where a clan leader's chosen close ride out with him by his choice and theirs, the city's **kinrider** is a standing post, the guard at the gate and the escort on the road, the same word for a position that stopped moving. Every household keeps a tent-plot beside its house; kin off the road pitch on it, and in the traveling season the household pitches on it itself, when part of the city rides out. A plot that has grown over is read by the neighbors, and they say so. Quarters are work-quarters, and a household moves when its work does, by custom and never by law. And the ride-outs are rostered: who goes, when back, where a clan on the grass lets each rider decide at dawn.
 
 > "The city has been nice, they also have their own milk of the land, which I will taste tonight for the first time, they have told me it is a traveling drink. They don't consume it unless on the road."
-> Zenerious, Day 34
+> Zenerious, Day 44
 
 The settled tier runs from clan-towns that are one clan stopped, near-pure in blood and circuit, to mixes like Aymuru, and the pull toward it is stronger every generation. Stopping makes the proof easier to keep. The deep clans know it, and their argument against the wall is the argument of people who can feel it losing, made to a goddess who has already begun to settle with her people (see [`../ehizahar.md`](../ehizahar.md), *Veidrath → Faith*).
 
@@ -149,7 +149,7 @@ The settled half of Villtur reads the rail as the road the settled world was alw
 **Lurresna**, milk of the land: the Etxaber's milk, fermented, and one drink with a different recipe everywhere. Every clan's is its own and secret; the Frogged Tribe's on the Skoga comes out fruity; Aymuru's is drunk only on the road; the field-priests call theirs Hinka's offering and it is spiced.
 
 > "It certainly made me sputter much to the enjoyment of my guides."
-> Zenerious, Day 6
+> Zenerious, Day 14
 
 **◈ Popular Belief: the milk tells you where you are.** A Villturian will claim to place a clan's grass by the taste of its Lurresna, and to tell the year by the strength of it. Ask two and they will place the same cup on opposite sides of the river.
 
@@ -164,7 +164,7 @@ Between the hunt name and the clan stands a word, or none. An ordinary rider say
 A marriage between clans moves one name. Which of the two changes their clan half is the settlement read aloud at the wedding, and the clan that gained a name won the circuits. The stopped carry the place the way a clan carries its name: **Lori Aymuru**; a district that has half become Veidrath adds it after, **Lori Moonglow, Veidrath**. Standing-words go before the given name and are given by the clan, never taken: *Grandmother*, who teaches the young and is no kin to them; *Rider*; *Kinrider*; *Leader*.
 
 > "I saw them send the kids to the Moon glow tribe? district? next plot over. Where they are taught by Grandmother Lori as I have been told."
-> Zenerious, Day 38, at Veidrath
+> Zenerious, Day 48, at Veidrath
 
 **Sample names.** Given (the Villtur base, drifted): Altan, Batou, Bayar, Bolt, Chulun, Delgar, Erdan, Ganbat, Gerel, Hulan, Munk, Naran, Nomin, Orrun, Oyun, Sarna, Setseg, Suk, Temor, Tuya, Ymra, Zaya. Hunt (plain Talanese, for the kill or the ground): Whitepelt, Redstag, Longwinter, Threeriver, Ashfoot, Coldford, Nightbull, Sixpoint, Bluehare, Stillwater, Ironhorn, Firstsnow. Clan bynames: Iron Fangs, Hooves, Ash Runners, Snow Lions, Moonglow, Grey Manes, River Teeth, Longgrass. Whole names, across the ladder: *Naran Snow Lions* (a rider with no hunt name yet) · *Orrun Whitepelt Snow Lions* · *Bayar Redstag of Snow Lions* (a kinrider) · *Temor Longwinter is Snow Lions* (the leader) · *Hulan Coldford was Harahari Iron Fangs* (clanless) · *Lori Aymuru* (a city's) · *Gerel Moonglow, Veidrath* (a stopped clan's, half become the city) · *Grandmother Lori Moonglow*.
 
@@ -173,7 +173,7 @@ A marriage between clans moves one name. Which of the two changes their clan hal
 Fenurra is a Villtur country that finished becoming itself. It has a capital carved into the Scar, a Speaker's Mantle, a Bone Gong that calls a War Council, and a marriage treaty with a foreign empire, and it holds itself apart even from its tribal neighbors. It could grow because it grew on ground no circuit wanted: the crater is harsh and resource-poor in everything but the star-metals, and a power rising there took no clan's grass. On the map it is a name that appears suddenly inside the green. The strings are honored to its border, and beyond the border the Fenurrans do their own watching (see [`fenurra.md`](fenurra.md)).
 
 > "I feel like being watched, I know I feel like that because they want me to know they are watching."
-> Zenerious, Day 60
+> Zenerious, Day 90
 
 ---
 
@@ -198,24 +198,24 @@ Fenurra is a Villtur country that finished becoming itself. It has a capital car
 
 ## The crossing, day by day
 
-The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Sixty days, nine Handings, and one stretch alone.
+The whole of Zenerious's log, in order, from the Sagarri fair to the Scar. Ninety days, nine Handings, and one stretch alone.
 
 - **Day 0.** Sagarri, the Baratalda fair. Two Villtur clans present; a deal of safe passage struck with the Harahari Iron Fangs, through their circuit and on, clan by clan, to Veidrath and the north.
 - **Day 2.** The grass plains with the mountains still close. First ride on the Etxaber, a beast that carries a family; the scouts on smaller mounts. Trenbeom says he will miss the mountains.
-- **Day 6.** The mountains left behind, rolling green ahead. The first Lurresna, every clan's own secret; it makes him sputter.
-- **Day 14.** The edge of the Iron Fangs' circuit: a hill with a tree on it, three colored strings on a token, and a wait for the Vindrakar Hooves.
-- **Day 20.** With the Hooves, the Basogur in sight. Their Lurresna goes down easier. Ahead, the Skoga and the Frogged Tribe.
-- **Day 23.** On the river with the Frogged Tribe, floating on timber; they vanish into the jungle for days and come back with meat. Fruity Lurresna. Different traditions, one root.
-- **Day 28.** The peak of the bend, the closest point to Veidrath. The Frogged Tribe turns back; he goes on alone, and asks Fisaya for her winds.
-- **Day 30.** Two nights without a person. A hearthrune under a tree, Aymuru visible and two days off, and a hunter in colors he does not know, or nothing.
-- **Day 32.** Aymuru: a city built by nomads, houses with tent-plots beside them, a worker glad to move quarters with his work.
-- **Day 34.** On the road with the Aymuru delegation. The same shape as a clan, tents on lines, ride-outs rostered. The city's Lurresna, drunk only on the road. The kinrider calls dinner.
-- **Day 38.** Veidrath, with the city not there yet: empty plots between dirt roads, waiting for the clans; the Aymuru quarter that stopped packing fifteen years ago; the Moonglow, three generations stopped, teaching the young; five Sarnakhar Ash Runners taking the plot beside the market, which says what it says.
-- **Day 40.** The Crossing without its host, the Lady out on her hunting season; the Yearspit; a bout in the arena, two clans at a table in the Taptent, a wedding on the way home, and each time a kinrider explains they are settling the circuits.
-- **Day 43.** Out of Veidrath with a cluster of field-priests bound for Modurtre, the mountain the mother trees ring; a solid bed missed already; the priests' Lurresna, Hinka's offering, spiced.
-- **Day 50.** The priests gone, a cave, the cold beyond what a hearthrune answers. The lone wolves find him: the clanless, together and apart by choice; twelve of them after a fight, thirteen with him.
-- **Day 54.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
-- **Day 60.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
+- **Day 14.** The mountains left behind, rolling green ahead. The first Lurresna, every clan's own secret; it makes him sputter.
+- **Day 24.** The edge of the Iron Fangs' circuit: a hill with a tree on it, three colored strings on a token, and a wait for the Vindrakar Hooves.
+- **Day 28.** With the Hooves, the Basogur in sight. Their Lurresna goes down easier. Ahead, the Skoga and the Frogged Tribe.
+- **Day 31.** On the river with the Frogged Tribe, floating on timber; they vanish into the jungle for days and come back with meat. Fruity Lurresna. Different traditions, one root.
+- **Day 38.** The peak of the bend, the closest point to Veidrath. The Frogged Tribe turns back; he goes on alone, and asks Fisaya for her winds.
+- **Day 40.** Two nights without a person. A hearthrune under a tree, Aymuru visible and two days off, and a hunter in colors he does not know, or nothing.
+- **Day 42.** Aymuru: a city built by nomads, houses with tent-plots beside them, a worker glad to move quarters with his work.
+- **Day 44.** On the road with the Aymuru delegation. The same shape as a clan, tents on lines, ride-outs rostered. The city's Lurresna, drunk only on the road. The kinrider calls dinner.
+- **Day 48.** Veidrath, with the city not there yet: empty plots between dirt roads, waiting for the clans; the Aymuru quarter that stopped packing fifteen years ago; the Moonglow, three generations stopped, teaching the young; five Sarnakhar Ash Runners taking the plot beside the market, which says what it says.
+- **Day 50.** The Crossing without its host, the Lady out on her hunting season; the Yearspit; a bout in the arena, two clans at a table in the Taptent, a wedding on the way home, and each time a kinrider explains they are settling the circuits.
+- **Day 53.** Out of Veidrath with a cluster of field-priests bound for Modurtre, the mountain the mother trees ring; a solid bed missed already; the priests' Lurresna, Hinka's offering, spiced.
+- **Day 60.** The priests gone, a cave, the cold beyond what a hearthrune answers. The lone wolves find him: the clanless, together and apart by choice; twelve of them after a fight, thirteen with him.
+- **Day 64.** The snowstorm. Tents inside snow walls, a rationing plan, two days buried; one walks out on the second night and is not seen again. The Snow Lions find them on the third day; a standoff, a deal, provisions given out of what he reads as pity.
+- **Day 90.** Fenurra. Warmth after the ice, and the certainty of being watched by people who want him to know it. The log goes on into the Scar, and that is Fenurra's to tell.
 
 ## Voices
 
