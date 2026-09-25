@@ -78,7 +78,7 @@ The order and the Leitores are one faith and two powers. The readers say what th
 
 ## The False Saint
 
-> "The Guild came with maps. The order came with water. Between the two of us we had enough of each."
+> "The Guild came with maps. The order came with water. And both of us brought our best weapons and armour."
 > A commander of the Aguarda, on the sealing of 2524
 
 **Beatriz's road**, the route of her founder-walk, runs out from the cistern-towns into the southern desert, and for four centuries after her it was the road of the Walk. Near the end of the Dark Era, Beatriz set out on the Long Noon and did not come back, and the order counts her among those the noon took.
@@ -118,7 +118,7 @@ The Shoony give the heart once, and in Argia the heart goes to a vow, a well, a 
 ## Voices
 
 - **Rustam Varaz** · wine-buyer of Merkavar · recurring voice; full block at the top of [`argia-esfera-letter.md`](argia-esfera-letter.md).
-- **A commander of the Aguarda** · a commander of the order, on the sealing of 2524 · dry, fair to allies, proud of the order's part without claiming the whole.
+- **A commander of the Aguarda** · a commander of the order, on the sealing of 2524 · plain and soldierly; gives the ally equal credit and counts the order's share in water and steel.
 
 **Live tensions:** the Leitores against the order, over a reading and over who answers for it; the unwitnessed walkers, whom some priests honour and the order calls reckless; Harro's crown, short of revenue next door, and a mastership that has never had a crown behind it; and the forbidden road, which draws exactly the walkers the order would most like to keep off it.
 
