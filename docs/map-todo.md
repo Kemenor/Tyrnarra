@@ -6,7 +6,7 @@ Pending label work for the map art. The three views (terrain / regions / domains
 
 ## Awaiting export + variant regeneration
 
-- **Harro Distiratsua map label: keep the *-a*.** Canon adopted the map's *-a* spelling on 2026-08-13 (the authentic Basque definite form; glossary and lore updated at the Harro Distiratsua build), reversing the 2026-07-05 map-source fix to *-tsue*. **Action: revert the map source label back to "Harro Distiratsua"** so source and exports agree again. The currently-published exports already carry the correct *-a* label; no re-export needed unless the source is touched for other reasons.
+- **Harro Distiratsua map label: keep the *-a*.** Canon adopted the map's *-a* spelling on 2026-08-13 (the authentic Basque definite form; glossary and lore updated at the Harro Distiratsua build), reversing the 2026-07-05 map-source fix to *-tsue*. **Done 2026-09-25:** the map source label is back to "Harro Distiratsua" (`wdmap edit`), matching the published exports; the next regions-view re-export (pending for the Kaosadaemi fix) carries it too.
 
 ## Scale bar: relabel pending (GM, 2026-09-25)
 
