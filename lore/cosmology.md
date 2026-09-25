@@ -253,6 +253,8 @@ Tyrnarra has four distinct transport tiers, each with its own dominant technolog
 | **Arcanotech + Divitech** | God-sanctioned routes. The Divitech component requires a continuing divine relationship; only a few institutions maintain such craft: the Adventurers' Guild has one or two for Guild-mission use, the church of Iro keeps a Sun-sanctified vessel for diplomatic crossings, the church of Fisaya maintains another. | Vanishingly rare. Tied to the sanctifying god. |
 | **Arcanotech + Primotech** | Living-hull cloudships, grown from a single seed-Heart rather than built. Vindul has a story about a cloudship called *Eyrasunda* whose hull is a single immense living tree, capable of self-repair across centuries. Whether *Eyrasunda* still exists is doctrinally argued in Vindul. | **Mythical / legendary.** One or two are rumoured. Most scholars believe they are folklore. |
 
+**A cloudship rides the vapour.** Its dual-school binding makes the Cloud Sea bear it the way water bears a boat: it sits on the white, sails it, and anchors in it. Nothing flies over the Cloud Sea; an airship's lift fails above it, and the ship goes down into the vapour. A **cloud-quay** is a berth where the Cloud Sea meets rock, and only the two islands that touch the Cloud Sea have such a shore (the Bridgelands and Jadrey; see `transport.md`).
+
 Cloudships also serve as luxury water vessels for the very wealthy, but their commercial reason for existing is the Cloud Sea crossing: the only practical way for Talan to reach **Sortalde**, the **Red Empire's homeland**, or any other continent beyond Hafra.
 
 ### Magitrains and the Continental Rail Network

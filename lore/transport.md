@@ -121,6 +121,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 - **Who builds and flies them.** Vindul builds the best hulls of both kinds and supplies the elementals; the Order builds most Arcanotech engines; House Eisenhart builds the armoured Ironwings; Haizava flies cargo airships; the Strix are the natural pilots; airship crews keep Haizar ([`cosmology.md`](cosmology.md); [`geography/vindul.md`](geography/vindul.md); [`gods.md`](gods.md)). The Vindul and Sumendar airship guilds draw real revenue from the over-jungle route.
 - **Masts and moorings**: Frae City (the Rim); Merkavar (several ports); Sombral (the mast on the highest roof, the reading chalked beside it); Lurrath (the gate-towers on the ring-crest; nothing fast crosses the threshold); Veidrath (the docking-tower district); Lograth; the Twin Cities' tethered airships.
 - **Within cities**: Haizava's svifs and windrifts on the wind canals; Lograth's **Arteries**, glyph-routed aerial lines with gondolas; Frae City's chain-stairs and lifts.
+- **Flying mounts** exist (GM, 2026-09-25), and they are rare, regional, and very elite: each kind belongs to the place and people that breed or bond it, and a king or a prince may own one where a common noble does not. Elsewhere, one overhead is a marvel. The kinds are defined region by region, at each build.
 
 ---
 
@@ -128,6 +129,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 
 - **The Cloud Sea** bears no weight: any ordinary hull or airship that goes onto it sinks and vanishes ([`cosmology.md`](cosmology.md), *The Cloud Sea*).
 - **Cloudships** are always dual-school: Arcanotech with Occultech as standard (the Occultech lets the ship "remember the way", its routes kept as song); a few with Divitech (the Adventurers' Guild's one or two, the churches of Iro and Fisaya); *Eyrasunda*, the living-tree cloudship, legendary. Very rare; Vindul builds the best hulls ([`cosmology.md`](cosmology.md)).
+- **A cloudship rides the vapour** (GM, 2026-09-25). Its dual-school binding makes the Cloud Sea bear it the way water bears a boat: it sits on the white, sails it, and anchors in it. Nothing flies over the Cloud Sea: an airship's lift fails above it and the ship goes down into the vapour with the rest. The same hull sails water, which is why the very wealthy keep cloudships as luxury vessels. A **cloud-quay** is a berth where the Cloud Sea meets rock, and only the two islands that touch the Cloud Sea have such a shore; every cloud-quay on Talan stands in the Bridgelands, and a quay on Jadrey would make it the second landing.
 - **Only two places on Talan touch the Cloud Sea** (GM, 2026-09-25), and both are islands: the **Bridgelands** of the Emerald Isles (Zuzental), the canonical cloudship landing, where the Arcanotech bridges carry caravans across the gaps ([`geography/zuzental.md`](geography/zuzental.md)); and **Jadrey** off Lua Lasai (Egulon), which keeps no cloud-quay and no mast by island law ([`geography/egulon/lua-lasai.md`](geography/egulon/lua-lasai.md)).
 - **Off Talan**: **Sortalde**, east across the Cloud Sea, builds no cloudships; every ship on the route is Talan-made, and it reaches only the outer petals. **The Red Empire's home continent**, west across the Cloud Sea (GM, 2026-09-25): the **Iron Tide**'s warship-cloudships cross it and come down onto Hafra as a navy ([`geography/_off-continent.md`](geography/_off-continent.md)).
 - **The Riseway**: the sky-lane over Balatur Erui that every chart marks and no keel uses, the skywhales' climb ([`geography/floteyn/balatur-erui.md`](geography/floteyn/balatur-erui.md)).
@@ -153,8 +155,7 @@ The Basogur splits the rail, and the continent crosses its waist four ways:
 
 - **The Northern hub**: which city, and its character (candidates in [`../docs/open-threads.md`](../docs/open-threads.md)).
 - **The northern coast**: Villtur's few ports, which freeze and when, Fenurra's warm port and its name, and what that makes of the long road's trade.
-- **What drives a Magitrain**: boiler, rune-array, or both; speeds, fares, gauge.
-- **The airship guilds**: names, routes, fares; the Veidrath tower district.
-- **What a cloudship is to look at**: whether it rides the vapour or flies above it, and what a cloud-quay is.
+- **What drives a Magitrain**: boiler, rune-array, or both; speeds, fares, gauge. Waits on the GM's pass over the continent map and its scale; the figures are estimated from there.
+- **The airship guilds**: names, routes, fares; the Veidrath tower district (a deepening idea: [`../docs/deepening-ideas.md`](../docs/deepening-ideas.md)).
 - **The Iron Tide's route inland**: the record has Tide ships sighted at "the Order of Steam's ports", which lie on a Midarra bay behind the Gesalkai gate.
-- **Flying mounts**: none in canon.
+- **Flying mounts**: which kinds, and in which regions (defined at each region's build).

@@ -35,6 +35,11 @@ Entries keep the *Decided / Open / Where* format so settled bits stay settled (n
 
 ---
 
+### [Transport] The airship guilds
+**Decided.** The Vindul and Sumendar airship guilds draw real revenue from the over-Basogur route (`lore/cosmology.md`); airships are rare over most of Talan and common over a few great cities, fly low, and route around mountain groups (`lore/transport.md`, *Air*). Vindul builds the best hulls and binds the elementals; the Order of Steam builds most engines; House Eisenhart builds the Ironwings.
+**Open.** The guilds' names and registers; their routes and fares; how a mast city is chosen and who runs its moorings (the Veidrath tower district, Merkavar's several ports, Sombral's roof-mast); the line on `order-of-steam.html` that the Order's airship fleet is "one of two on Talan; Vindul's is the other", which sits badly beside the guilds, the Guild's own airships, and the Twin Cities' tethered ones.
+**Where.** [lore/transport.md](../lore/transport.md), *Air*; [lore/cosmology.md](../lore/cosmology.md), *On airships*; [order-of-steam.html](../published/setting/talan/factions/order-of-steam.html).
+
 ## § Regions: Lautara
 
 ### [Itsasalda] Vordsbench: chronicler-tier follow-ups
