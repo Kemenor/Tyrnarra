@@ -4,7 +4,7 @@
 
 **Etymology:** Basque *kaosa* (chaos) + Icelandic *dæmi* (district) → **Kaosadaemi**, the chaos district; a deep-stratum name for the ground. *Principality* is the Thousand's word, granted with the title under Renauld Fyrstmond's throne and never given back. The people call themselves **the Daemi**.
 
-**Position:** the east of Nashavel. The Basogur's canopy across the north, open grass in the south, the river **Mugibai** as the western line, the Hafra coast the whole east side, and the Hegandi escarpment on the south with the Thousand Kingdom below it. **Ringhold**, the seat, stands inside the ring of peaks called **Hringfel** in the middle of the country; **Ferryhithe** is the harbour, facing Zuzental's Northern Isle across the water; **Greenmouth** is where the long road around the Basogur enters the trees. The southern rail comes up over the Hegandi from the Thousand Kingdom and ends at Ringhold.
+**Position:** the east of Nashavel. The Basogur's canopy across the north, open grass in the south, the river **Mugibai** as the western line, the Hafra coast the whole east side, and the Hegandi escarpment on the south with the Thousand Kingdom below it. **Ringhold**, the seat, stands inside the ring of peaks called **Hringfel** in the middle of the country; **Ferryhithe** is the harbour, facing Zuzental's Northern Isle across the water; **Greenmouth** is where the long road through the Basogur enters the trees. The southern rail comes up over the Hegandi from the Thousand Kingdom and ends at Ringhold.
 
 **Terrain:** forest north, river-grass south, a ring of peaks in the middle, a long coast.
 
@@ -36,7 +36,7 @@ The Tuning takes anything. A clockwork, a spell-working, a dye, a bread, a knot:
 > "The road goes in at Greenmouth and comes out at the far side eleven days later, in the season it is meant to, with the people it went in with. I do not know how the house arranges the far side. I know that when a Roadward of another country tries it, the road takes a different number of days each time, and sometimes a different number of people."
 > Rodgar Greenmouth Netknot, Roadward, at the gate
 
-The long road around the Basogur enters the trees at Greenmouth, and the Principality holds the gate. **The Roadwards** are the other craft: they take travelers and freight into the jungle's churn, where rails warp and runes fail and a path is where it was yesterday only by chance, and they bring them out on schedule, which no one else on Talan does. The Roadwards' schedule is why a merchant with cargo too heavy for an airship and too slow for a stillship comes to Ferryhithe.
+The long road through the Basogur enters the trees at Greenmouth, and the Principality holds the gate. **The Roadwards** are the other craft: they take travelers and freight into the jungle's churn, where rails warp and runes fail and a path is where it was yesterday only by chance, and they bring them out on schedule, which no one else on Talan does. The Roadwards' schedule is why a merchant with cargo too heavy for an airship and too slow for a stillship comes to Ferryhithe.
 
 The Daemi say the Roadwards are simply the best in the world at it, and they are. The road runs on time for another reason too, which the house keeps.
 

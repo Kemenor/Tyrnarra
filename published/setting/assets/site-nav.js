@@ -61,6 +61,7 @@
       { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/setting/talan/the-binding/hollow-of-ten-thousand-threads.html', children: [] }
     ]},
     { slug: 'ancestries',  label: 'Ancestries',                href: '/setting/talan/ancestries.html',           children: [] },
+    { slug: 'transport',   label: 'Transport &amp; Travel',   href: '/setting/talan/transport.html',            children: [] },
     { slug: 'historical',  label: 'Historical · The Fallen',   href: '/setting/talan/historical/historical.html', children: [
       { slug: 'golden-empire',     label: 'The Golden Empire',     href: '/setting/talan/historical/golden-empire.html',     children: [] },
       { slug: 'storveldi-denbora', label: 'The Storveldi Denbora', href: '/setting/talan/historical/storveldi-denbora.html', children: [] },

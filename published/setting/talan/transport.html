@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transport · Talan · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #7fb8b0;   /* rail-steel teal · 9.04:1 on the dark base */
+    --card-bg: rgba(14,26,26,0.55);
+  }
+  .tier-grid, .pilot-grid, .power-grid { --col-min: 210px; --grid-gap: 14px; --card-pad: 16px 18px; }
+  .tier-grid .card-name, .pilot-grid .card-name, .power-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .tier-grid .card-sub { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 8px; }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .table-wrap { max-width: 1000px; margin: 14px auto 22px; overflow-x: auto; }
+  .ref-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .ref-table th, .ref-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid rgba(127,184,176,0.16); vertical-align: top; }
+  .ref-table th { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.22em; color: var(--gold-dim); text-transform: uppercase; padding-top: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(127,184,176,0.35); }
+  .ref-table td a { color: var(--gold); }
+  .ref-table td b { color: var(--gold-bright); font-weight: 600; }
+  .ref-table tr:last-child td { border-bottom: none; }
+  .port-row { margin: 10px 0 4px; }
+  .port-row .panel-label { margin-bottom: 6px; }
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+  @media (max-width: 600px) {
+    .ref-table { font-size: 0.85rem; }
+    .ref-table th, .ref-table td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body data-page="transport">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><span>Transport</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Transport</div>
+    <div class="page-subtitle">Talan · Rail, Road, Sea, Sky, and the Cloud Sea</div>
+    <div class="page-flavor">"The rails carry the deal, the dock holds the deal."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Tiers</dt><dd>Four, each with its own craft: the <b>rail</b> and the road on land; <b>saltkeels</b> and <b>stillships</b> on the two seas; <b>airships</b> in the sky; <b>cloudships</b> on the Cloud Sea.</dd>
+    <dt>Rail</dt><dd>Two networks that do not link, split by the Basogur Jungle. The southern centres on <a href="/setting/talan/domains/lautara/merkavar/merkavar.html">Merkavar</a>; the northern has its own hub. The Magitrain is the <a href="/setting/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>'s invention, about four centuries old.</dd>
+    <dt>Seas</dt><dd>The saltwater <b>Hafra</b> around the continent and the freshwater <b>Midarra</b> within it; cargo between them changes hulls at Gesalkai.</dd>
+    <dt>Sky</dt><dd>Airships are rare over most of Talan and common over a few great cities, the god-cities above all. They fly low and route around the mountains.</dd>
+    <dt>Beyond</dt><dd>Only a cloudship crosses the Cloud Sea, and only two islands of Talan touch it.</dd>
+    <dt>The waist</dt><dd>North and south cross the Basogur four ways: by stillship over the Midarra, by airship over the canopy, by the long road through the trees, and, barely, by the northern coast.</dd>
+  </dl>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="four-ways" class="section-heading">Four Ways to Move</h2>
+  <div class="prose">
+    <p>Talan moves on four tiers, and each has its own craft and its own technology. Where the craft is Magitech, the kind matters: <b>Arcanotech</b> is formula-built, reproducible, and industrial, the thing a merchant means when he says "Magitech", and the chaos country of the Basogur, the Blackened Lands, and the Darklands scrambles its precision. <b>Occultech</b> runs on the story wound into its making; every piece is partly its own, it resists being built by the hundred, and it holds where Arcanotech fails. See <a href="/setting/cosmology/magic.html">Magic</a> for the schools behind both.</p>
+  </div>
+  <div class="card-grid tier-grid">
+    <div class="accent-card"><div class="card-sub">Land</div><div class="card-name">Magitrains &amp; the road</div><p>Arcanotech rail, common as roads wherever it reaches; caravans, barges, and beasts everywhere else.</p></div>
+    <div class="accent-card"><div class="card-sub">Water</div><div class="card-name">Saltkeels &amp; stillships</div><p>The everyday hull. Wood-and-sail by count; Magitech ships for the wealthy; Occultech for cursed water.</p></div>
+    <div class="accent-card"><div class="card-sub">Sky</div><div class="card-name">Airships</div><p>Always Magitech: rune-array lift and engines, or a bound air elemental. Rare, costly, and low-flying.</p></div>
+    <div class="accent-card"><div class="card-sub">Cloud Sea</div><div class="card-name">Cloudships</div><p>Always built from two schools at once. Very rare, and the only way off the continent.</p></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rail" class="section-heading">The Rail</h2>
+  <div class="prose">
+    <p>The <b>Magitrain</b> is the public face of Magitech: scheduled passengers and freight, and most mortals of Talan have ridden one. The Elden built rail-bound acceleration first, the Lost-Era kingdoms and the Golden Empire knew it could be done, and the <b>Order of Steam</b> built the working engine and the long lines at the end of the Dark Era, out of its own Elden excavation in the volcanic belt. The Order still makes most of the rolling stock on the continent. The long lines follow older ground: in the north the Elden corridors, in the south the Golden Empire's roads.</p>
+    <p>The rail runs as <b>two networks that do not link</b>, split by the Basogur Jungle. The <b>northern</b> is confederated and many-handed, the Order's licensed lines foremost among the local ones, and its traffic gathers at a single hub that grew by trade-gravity at one of the flatter, cheaper rail cities. <a href="/setting/talan/domains/brauogi/lurrath/lurrath.html">Lurrath</a> is the famous exception: the magirail runs a spur to the railhead at Harrate, Lurrath's gate, and the stone-oxen carry everything the last miles in. The <b>southern</b> network centres on Merkavar, where the lines converge.</p>
+    <p>The Order itself sits outside the network it supplies. Its country is ringed by mountains and opens only onto its own bay, and whatever rail it runs inside the ring stays there; its rolling stock ships out through <a href="/setting/talan/domains/lautara/rika-tikur/rika-tikur.html">Rika Tikur</a> and the Dreaming Cape, crosses by Lautara water and road, and joins the lines at Merkavar. <a href="/setting/talan/domains/sumendar/eldara/eldara.html">Eldara</a>, south of the ring, keeps its own single line to Merkavar through one narrow valley.</p>
+    <p>The Order licenses the lines and sets freight terms, and its autumn reduced-fare freight window has held the same two weeks for forty years. <b>Consortia</b> build and run lines, like the one bending the Northern line toward Veidrath's edge a clan's consent at a time; <b>chartered companies</b> run trunks, like the Everbright Line across <a href="/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html">Harro Distiratsua</a>; landed houses hold stretches of road and rail; and the rails are worked by the <b>HRA</b>, the Halfling Railworkers' Association, with a branch at every major junction and its headquarters at Bellhalt in <a href="/setting/talan/domains/lautara/itsasalda/itsasalda.html">Itsasalda</a>.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table class="ref-table">
+      <tr><th>Line or node</th><th>Where it runs</th></tr>
+      <tr><td><b>The Northern line</b></td><td>Touches Ehizahar at its settled edges and bends toward the railhead bid at Veidrath's edge (<a href="/setting/talan/domains/ehizahar/villtur/villtur.html">Villtur</a>).</td></tr>
+      <tr><td><b>The Lurrath spur</b></td><td>Through <a href="/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html">Sugeiturri</a> to the railhead at Harrate.</td></tr>
+      <tr><td><b>The grain line</b></td><td>Brauogi grain through <a href="/setting/talan/domains/myrkono/ilun-tasun/ilun-tasun.html">Ilun Tasun</a> to Myrria.</td></tr>
+      <tr><td><b>The Merkavar line</b></td><td>Through the Lautara hill country by the single-track Arrol Cut.</td></tr>
+      <tr><td><b>Eldara's line</b></td><td>Eldara, Tahu Tangata, Emarrea, Merkavar.</td></tr>
+      <tr><td><b>The eastern lines</b></td><td>Merkavar across Atarialda to Egulon and Zuzental; a branch terminus at <a href="/setting/talan/domains/zuzental/crossroads.html">Crossroads</a>.</td></tr>
+      <tr><td><b>The Hegandi line</b></td><td>From the Thousand Kingdom to the foot of Ringhold (<a href="/setting/talan/domains/nashavel/kaosadaemi/kaosadaemi.html">Kaosadaemi</a>).</td></tr>
+      <tr><td><b>The Everbright trunk</b></td><td>Across Harro, Ongetorra to the lakeshore facing Ljosarn, with branch-lines to the gem-towns and the dusk run.</td></tr>
+      <tr><td><b>The Thekkavar line</b></td><td>Across <a href="/setting/talan/domains/egulon/lua-lasai/lua-lasai.html">Lua Lasai</a> to the lakeshore and Ljosarn in half a day, stopping at Margolora and the coast-ferry junction.</td></tr>
+      <tr><td><b>Bellhalt</b></td><td>Where the rail meets the principal river and the Midarra coast.</td></tr>
+    </table>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">Hazards of the Line</div>
+    <p><b>Train Pirates</b> work both networks and hit the slow stretches: climbs, junctions, station approaches, wherever a Magitrain drops to walking pace. Their axiom is the one line of Old Dwarvish most conductors learn, <i>Langsam auf Land, schnell auf Schiene</i>, slow on land, fast on rail. The Order arms its own lines; smaller operators hire the <a href="/setting/talan/factions/adventurers-guild.html">Adventurers' Guild</a>.</p>
+    <p style="margin-bottom:0;">Rarer and stranger is <b>the Conductor's Station</b>: a train that derails into a starry void where the rails' lost property drifts, and a five-eyed Conductor who asks <i>"Tickets please!"</i> and means a memory, an answer, or something of personal weight. Crews on both networks keep the same wards against it and tell the same stories.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="roads" class="section-heading">Roads</h2>
+  <div class="prose">
+    <p>The oldest roads still in use are the <a href="/setting/talan/historical/golden-empire.html">Golden Empire</a>'s: paved, milestone-marked, and the skeleton the southern rail later followed. The Dark Era made every road deadly, and <b>Uthra</b> coalesced from the prayers of those who walked them anyway; his worship is still wayside, a cairn at the trailhead, a coin where the road forks. Harro's Lamphold houses came out of the dark owning the roads they had kept lit, and still spend the way-tolls on the ways.</p>
+    <p><b>The long road</b> goes through the <a href="/setting/talan/domains/nashavel/basogur/basogur.html">Basogur</a> once: eleven days from Greenmouth, the Kaosadaemi gate, to the Oihandar Red Tusks' gate by Veidrath, kept on schedule by the <b>Roadwards</b>. Freight goes on sledges, the nights are spent in the web-holds, the Vanara guide, and the road carries what no airship can lift. On the northern side the sea offers no way around: port towns on Villtur's coasts are few, most freeze in winter, and Fenurra's warm port on the Hafra is the exception.</p>
+    <p>Other roads carry their own names. Sugeiturri's <i>northern road</i>, where "you'll never sleep cold", runs from hot-spring town to hot-spring town. At <a href="/setting/talan/domains/zuzental/crossroads.html">Crossroads</a> three roads broaden into one sprawl of caravanserai. Lurrath's masons cut roads meant to outlast the kingdoms that use them, and raise the roads of half the continent. In Villtur, a road is whatever a clan agrees to, and a traveller crosses by <b>the Handing</b>, clan to clan on the strings.</p>
+  </div>
+
+  <h3 class="sub-heading">Rivers, Caravans, Beasts</h3>
+  <div class="prose">
+    <p>The Itsasalda river-trade is the working spine of the southern network's water side: stillships land at the Midarra coast, and goods go on to Merkavar by river-craft or caravan-train, where the lake is the street. Brauogi's old houses and Lioaru's River Duchies hold the river-trade of their countries; Vernua's Maors own the quays, the ferries, and the roads over the Hegandi; Sombral's wine-barges come down both rivers all night. Most of Talan's overland trade passes through Lautara's caravan network at some point.</p>
+    <p>The beasts are regional. Haldmark's Kholo breed the stone-oxen for Lurrath's portage and the continent's heavy work; Villtur's clans ride the Etxaber, which carries a household; the hunting peoples keep their bond-beasts; Fenurra rides direwolves; Lioaru keeps its Stokkul mounts; and Valreka travels on its sand-whales.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-seas" class="section-heading">The Seas and Their Hulls</h2>
+  <div class="prose">
+    <p>The <b>Hafra</b> is the saltwater sea around Talan, ending at a clean line against the Cloud Sea; nothing lies on its far shore. The <b>Midarra</b> is the freshwater inner sea, rarely violent and occasionally strange: in a <b>Villveder</b>, magic turns unreliable across a stretch of open water and crews steer by eye until it lifts. At the Midarra's mouth the salt and the sweet meet along <b>the Gazmuga</b>, the Line, and do not mix.</p>
+    <p>Hulls divide by the water they are built for. A <b>saltkeel</b> is brine-sealed and deep-keeled for the open Hafra; a <b>stillship</b> is lighter and shallower, for the calm inner sea. Each sails the other water badly, so cargo between the seas changes hulls at <b>Gesalkai</b> on <a href="/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html">Balatur Erui</a>, across the Weighhouse scales. Wood-and-sail makes up most of both fleets; Magitech hulls are the wealthy upgrade; Occultech ships work the cursed waters, and the Adventurers' Guild keeps a small fleet of them.</p>
+  </div>
+
+  <div class="card-grid pilot-grid">
+    <div class="accent-card"><div class="card-name">The Stormriders</div><p>Fellibylur's pilots of the open Hafra. The master charts are kept at the Saltkeep in Brasswatch, under the Skybell Republic.</p></div>
+    <div class="accent-card"><div class="card-name">The Living Chart</div><p>The Sweetwater League's chart of the Midarra, corrected voyage by voyage and kept at the List-house in Uravel.</p></div>
+    <div class="accent-card"><div class="card-name">The Wakehelm</div><p>The Dreaming Cape's paired ship-pilots and dream-pilots, who hold the bay-mouth and the Midarra coast.</p></div>
+    <div class="accent-card"><div class="card-name">The Line-pilots</div><p>Gesalkai's pilots, mostly Merfolk, who take hulls through the gate where the two seas meet.</p></div>
+    <div class="accent-card"><div class="card-name">The Helmworks</div><p>Breidey's bearing-keepers, drift-clocks, and weatherclocks: precision Occultech that only Breidey's workshops can make.</p></div>
+  </div>
+
+  <div class="card-grid power-grid">
+    <div class="accent-card"><div class="card-name">Three Pines</div><p>The premier shipwright of the Hafra, launching black isiler hulls at Ontzola; its unlit escorts work the west Hafra (<a href="/setting/talan/domains/myrkono/three-pines/three-pines.html">Three Pines</a>).</p></div>
+    <div class="accent-card"><div class="card-name">The Sweetwater League</div><p>Its hulls carry mail, passengers, and small freight to every point of the Midarra, and its yard at Breidey broke the 2524 wave at sea (<a href="/setting/talan/domains/floteyn/floating-isles/floating-isles.html">Floating Isles</a>).</p></div>
+    <div class="accent-card"><div class="card-name">The Twin Cities</div><p>The drifting pirate capital of the Midarra, a raft-city below and tethered airships above; the Pirate Lords take a share of the north-south crossing.</p></div>
+    <div class="accent-card"><div class="card-name">The Order of Steam</div><p>House Eisenhart's Leviathan-class warships, the Ironwing airships, and <i>Stahlglanz</i>, the fortress that walks the sea floor (<a href="/setting/talan/domains/sumendar/order-of-steam/house-eisenhart.html">House Eisenhart</a>).</p></div>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Convoy You Cannot Hail</button>
+    <div class="legend-era-content">
+      <p>Every Hafra port west of Vindul tells it: a ship in trouble at night, a storm or a black-sail horizon, and out of the dark come hulls with no lights and no colours that fall in alongside, answer no hail, and are gone by first light, and the ship is home by morning. The drowned crew them, the dockside version runs, sailors the sea took who work their way back to harbour one saved ship at a time. To whistle for them is the worst luck there is.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-heading">Crossings and Ports</h3>
+  <div class="prose">
+    <p>The standard <b>Midarra crossing</b> runs from Solkai in <a href="/setting/talan/domains/brauogi/tvisol/tvisol.html">Tvisol</a> to Rika Tikur and the Dreaming Cape, passing Frae City and the Twin Cities: bulk cargo's road between north and south. Ferries run from Solkai to the <a href="/setting/talan/domains/brauogi/soul-tree/soul-tree.html">Soul Tree</a>, from Ferryhithe to Zuzental's Northern Isle, from Lua Lasai's coast to Jadrey, from Vernua to Nahaskel every morning, and from Ljosarn's hospice-quays every evening, each one part pilgrimage.</p>
+  </div>
+  <div class="feature-panel">
+    <div class="port-row"><div class="panel-label">Hafra ports</div>
+      <div class="pill-row"><span class="pill">Brasswatch</span><span class="pill">Cloudshadow</span><span class="pill">Highmarrow</span><span class="pill">Wrackmoor</span><span class="pill">Vindboorg</span><span class="pill">Grannholm</span><span class="pill">Ontzola</span><span class="pill">Fiskhofn</span><span class="pill">Hverhofn</span><span class="pill">Fenurra's warm port</span><span class="pill">Ferryhithe</span><span class="pill">Oathmoore</span></div></div>
+    <div class="port-row"><div class="panel-label">Midarra ports</div>
+      <div class="pill-row"><span class="pill">Rika Tikur</span><span class="pill">The Dreaming Cape</span><span class="pill">Bellhalt</span><span class="pill">Millhaven</span><span class="pill">Solkai</span><span class="pill">Hinstavor</span><span class="pill">Breidhofn</span><span class="pill">Uravel</span><span class="pill">Gesalkai</span></div></div>
+    <div class="port-row"><div class="panel-label">Lake and river quays</div>
+      <div class="pill-row"><span class="pill">Merkavar</span><span class="pill">Ljosarn</span><span class="pill">Sombral</span></div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-sky" class="section-heading">The Sky</h2>
+  <div class="prose">
+    <p>Every airship is Magitech, because flight is a Magitech property from the first plank. Most lift on <b>Arcanotech</b> rune-arrays and run on engines, the Order of Steam's standard line. The rarer <b>Occultech</b> airships carry a bound air elemental as lift and co-pilot, a working partnership; they are slower in fair weather and steadier where chaos scrambles the runes. Vindul builds the best hulls of both kinds and supplies the elementals, the Order builds most of the engines, and the Strix are the natural pilots.</p>
+    <p>Airships are rare over most of Talan and common over a few great cities, the god-cities above all. <a href="/setting/talan/domains/askamira/frae-city/frae-city.html">Frae City</a>, the largest city on the continent, is the great airship port, its berths along the Rim on the tower-tops and dear to rent. Airships fly low, well below the high ranges, and route around the mountain groups, so a sky-route follows the passes and the open water much as a road does; the Order's own ships leave its mountain ring through the bay and fly out over the Midarra.</p>
+    <p>Over the Basogur, airships are the premium route for passengers and urgent freight: Arcanotech ships shake and drift in the jungle's uplift, Occultech ships fly it clean and charge for it, and a millstone is too heavy for any airship that will take one. Over <a href="/setting/talan/domains/egulon/argia-esfera/argia-esfera.html">Argia Esfera</a>, ordinary ships cross in the morning or the dusk, and only the Occultech <b>noonships</b> fly through the killing noon.</p>
+    <p>Masts and moorings stand at Frae City, at Merkavar's several ports, on Sombral's highest roof with the week's reading chalked beside it, at Lurrath's gate-towers, where nothing fast crosses the threshold, at Veidrath's docking-tower, at <a href="/setting/talan/domains/zuzental/lograth/lograth.html">Lograth</a>, and among the Twin Cities' tethered hulls. Within cities the sky carries its own traffic: Haizava's svifs and windrifts on the wind canals, and Lograth's Arteries, gondolas on glyph-routed lines.</p>
+    <p><b>Flying mounts</b> exist, and they are rare, regional, and very elite: each kind belongs to the place and people that breed or bond it, a king or a prince may keep one where a common noble does not, and anywhere else one overhead is a marvel.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cloud-sea" class="section-heading">The Cloud Sea and Beyond</h2>
+  <div class="prose">
+    <p>The Cloud Sea bears no weight. An ordinary hull that crosses the line sinks fast, and nothing flies over the white: an airship's lift fails above it and the ship goes down into the vapour. A <b>cloudship</b> rides it. Its hull is built from two schools of Magitech at once, most often Arcanotech with Occultech, whose binding lets the ship remember the way across a sea with no landmarks, its routes kept as song. A cloudship sits on the white, sails it, and anchors in it, and the same hull sails water, which is why the very wealthy keep them as pleasure vessels.</p>
+    <p>A <b>cloud-quay</b> is a berth where the Cloud Sea meets rock, and only two islands of Talan have such a shore. The <b>Bridgelands</b> of the <a href="/setting/talan/domains/zuzental/emerald-isles.html">Emerald Isles</a> are the landing: every cloud-quay on the continent stands there, and Arcanotech bridges carry caravans across the gaps. <b>Jadrey</b>, off Lua Lasai, keeps no quay and no mast by island law, and a quay there would make it the second landing on Talan.</p>
+    <p>Beyond lie <a href="/setting/off-continent/sortalde.html">Sortalde</a>, east across the Cloud Sea, which builds no cloudships of its own and receives Talan's at its outer petals, and the <a href="/setting/off-continent/red-empire.html">Red Empire</a>'s home continent to the west, whose <b>Iron Tide</b> crosses in warship-cloudships and comes down onto the Hafra as a navy. Over Balatur Erui runs <b>the Riseway</b>, the lane every chart marks and no keel uses, where the skywhales climb.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Lights on the Cloud-Line</button>
+    <div class="legend-era-content">
+      <p>On Jadrey the islanders say that some autumns there are lights far out on the cloud-line where nothing is charted, seen from the high terraces on moonless nights, and that the terraces' best years follow; asked about them, they pour the questioner a glass and talk about the weather. Cloudship captains carry rumours of their own: islands the Cloud Sea opens to once a generation, a fourth continent no chart agrees on, and lands beneath the white where the sun goes when it sets.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="north-and-south" class="section-heading">Getting North and South</h2>
+  <div class="prose">
+    <p>The Basogur splits the rail at the continent's waist, and Talan crosses it four ways.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="ref-table">
+      <tr><th>Way</th><th>Route</th><th>Character</th></tr>
+      <tr><td><b>Stillship</b></td><td>Rika Tikur or the Dreaming Cape to Solkai, by Frae City and the Twin Cities</td><td>Bulk cargo's road; the Pirate Lords take their share.</td></tr>
+      <tr><td><b>Airship</b></td><td>Over the canopy</td><td>Passengers and urgent freight; the Occultech ships fly it clean.</td></tr>
+      <tr><td><b>The long road</b></td><td>Greenmouth to the Red Tusks' gate by Veidrath, eleven days</td><td>What no airship can lift; the Roadwards keep it on schedule.</td></tr>
+      <tr><td><b>The northern coast</b></td><td>Villtur's shore</td><td>Barely a way: few ports, most frozen in winter, Fenurra's warm port the exception.</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/talan.html"><b>Talan →</b></a> · The continent and its thirteen domains.</li>
+      <li><a href="/setting/talan/domains/sumendar/order-of-steam/order-of-steam.html"><b>The Order of Steam →</b></a> · The makers of the Magitrain.</li>
+      <li><a href="/setting/talan/domains/nashavel/basogur/basogur.html"><b>The Basogur Jungle →</b></a> · The long road and the Roadwards.</li>
+      <li><a href="/setting/talan/domains/askamira/frae-city/frae-city.html"><b>Frae City →</b></a> · The great airship port.</li>
+      <li><a href="/setting/talan/domains/floteyn/balatur-erui/balatur-erui.html"><b>Balatur Erui →</b></a> · The gate between the seas.</li>
+      <li><a href="/setting/off-continent/off-continent.html"><b>Off-Continent →</b></a> · What lies across the Cloud Sea.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The routes are known; much of what runs on them is still to be written down.</div>
+    <ol>
+      <li><b>The northern hub.</b> Which city the northern network gathers at.</li>
+      <li><b>The engine.</b> What drives a Magitrain, how fast it runs, and what a ticket costs.</li>
+      <li><b>The airship guilds.</b> Their names, their routes, and their fares.</li>
+      <li><b>Fenurra's port.</b> Its name, and who may use it.</li>
+      <li><b>The flying mounts.</b> Which kinds, and where they are bred.</li>
+      <li><b>The Iron Tide's reach.</b> How Tide ships came to be sighted at the Order of Steam's ports on a Midarra bay.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · TRANSPORT</div>
+
+</div>
+
+</body>
+</html>
