@@ -188,7 +188,7 @@ Four inline TBDs rendered on [legea-empire.html](../published/setting/talan/doma
 
 ### [Geography] The northern coast: why the long road goes overland
 **Decided (GM, 2026-09-25).** The long road runs **through** the Basogur (the old "bypass that loops around Basogur, monetised by toll-collecting kingdoms" is retired). The sea gives no way around on the northern side: port towns on Villtur's coasts are **exceedingly rare**, and **most freeze in winter**; **Fenurra's warm port** on the Hafra is the exception.
-**Open.** Deepen: which ports exist and where; when they freeze; Fenurra's port (name, who may use it, what it does for Fenurra's apartness); what the frozen coast makes of the long road's trade and the Veidrath railhead bid. **Check:** the sea-access table in `_continent.md` marks Ehizahar Hafra-only, while the ruling speaks of Villtur ports on the Midarra too; confirm whether Ehizahar has a Midarra shore.
+**Open.** Deepen: which ports exist and where; when they freeze; Fenurra's port (name, who may use it, what it does for Fenurra's apartness); what the frozen coast makes of the long road's trade and the Veidrath railhead bid. Ehizahar has a Midarra shore (GM, 2026-09-25: Villtur's southern coast, between the Baratalda border and the Basogur); table and `ehizahar.md` updated.
 **Where.** [lore/transport.md](../lore/transport.md), *Roads* and *Getting north and south*; [lore/geography/ehizahar/villtur.md](../lore/geography/ehizahar/villtur.md); [lore/geography/ehizahar/fenurra.md](../lore/geography/ehizahar/fenurra.md); [lore/geography/_continent.md](../lore/geography/_continent.md), *Domain sea-access summary*.
 
 ### [Geography] Transport consolidation: publishing debt and open questions

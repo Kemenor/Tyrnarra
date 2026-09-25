@@ -2,7 +2,7 @@
 
 **Borders:** Nashavel, Vindul, Brauogi
 
-**Seas:** Hafra (northern arctic coast; Ardo Beroa ice-isle archipelago offshore).
+**Seas:** Hafra (northern arctic coast and the eastern coast; Ardo Beroa ice-isle archipelago offshore); Midarra (Villtur's southern shore, between the Baratalda border and the Basogur) (GM, 2026-09-25).
 
 **Etymology:** Basque *ehiza* (hunt) + *zahar* (ancient, old) → *ehiza-zahar* → naturally eroded to *Ehizahar*. The ancient hunt. The oldest name on Talan, for the oldest land.
 
