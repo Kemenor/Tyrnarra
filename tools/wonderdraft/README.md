@@ -27,7 +27,7 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 3. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp`, runs `resize.sh` for the `display/` and `thumbs/` variants, and refreshes `map-snapshot.json`. It refuses when an export is missing or older than its variant map (stale).
 4. Review the maps page and commit; pushing deploys the site.
 
-**`--export`** (`wd_export.py`) drives Wonderdraft itself, since it has no command-line export: for each view it launches Wonderdraft with the map, waits `--load-wait` seconds (default 25; Main loads in ~10–20 s), then sends Ctrl+E, Enter (Export Options, PNG), a file name and Enter (save dialog), waits for the PNG to stop growing (~40 s), closes Wonderdraft, converts the PNG to WebP at quality 92 and deletes it. `--only Regions` (repeatable) limits it to some views. Lessons baked in:
+**`--export`** (`wd_export.py`) drives Wonderdraft itself, since it has no command-line export: for each view it launches Wonderdraft with the map, waits `--load-wait` seconds (default 15; Main loads in ~10 s), then sends Ctrl+E, Enter (Export Options, PNG), a file name and Enter (save dialog), waits for the PNG to stop growing (~40 s), closes Wonderdraft, converts the PNG to WebP at quality 92 and deletes it. `--only Regions` (repeatable) limits it to some views. Lessons baked in:
 
 - **Keyboard only, no clicks:** clicking by screenshot coordinates missed under display scaling.
 - **Focus is checked before every keystroke;** keys go to whichever window is active, so if another window has focus the run stops instead of typing into it.

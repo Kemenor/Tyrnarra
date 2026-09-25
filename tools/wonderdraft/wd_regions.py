@@ -154,8 +154,8 @@ def main():
                          "desktop for a few minutes; see wd_export.py)")
     ap.add_argument("--only", action="append", choices=list(VARIANTS),
                     help="with --export: only these views (repeatable)")
-    ap.add_argument("--load-wait", type=int, default=25,
-                    help="seconds to let Wonderdraft load each map before exporting (default 25)")
+    ap.add_argument("--load-wait", type=int, default=15,
+                    help="seconds to let Wonderdraft load each map before exporting (default 15)")
     ap.add_argument("--publish", action="store_true",
                     help="copy the Wonderdraft exports of the variants into the site's map folder")
     a = ap.parse_args()

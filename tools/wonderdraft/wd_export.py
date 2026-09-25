@@ -3,7 +3,7 @@
 For each view map ("<stem> - Terrain.wonderdraft_map" etc.): launch Wonderdraft with
 it (on the NVIDIA GPU when there is one, so the 8192px textures sit in video memory
 instead of the integrated GPU's page pool, which does not give system RAM back), wait
-a fixed LOAD_WAIT seconds after its window appears (Main loads in ~19 s; Wonderdraft
+a fixed LOAD_WAIT seconds after its window appears (Main loads in ~10 s; Wonderdraft
 keeps redrawing while idle, so CPU use can't tell "loaded" apart), then send Ctrl+E, Enter (Export Options: PNG), the file name,
 Enter (save dialog). Wait for the PNG to finish, close Wonderdraft, convert the PNG
 to WebP at Wonderdraft's quality 92 and delete the PNG before Proton Drive syncs it.
@@ -26,7 +26,7 @@ import time
 WD_DIR = os.path.expanduser("~/.local/opt/Wonderdraft")
 WD_BIN = os.path.join(WD_DIR, "Wonderdraft.x86_64")
 WEBP_QUALITY = 92
-LOAD_WAIT = 25
+LOAD_WAIT = 15
 TYPED_NAME = "wdexport"  # layout-safe: letters without y/z only
 
 
