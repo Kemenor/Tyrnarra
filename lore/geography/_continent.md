@@ -189,6 +189,7 @@ What a thing is called depends on when it was named, and a place carries its his
 | Basogur Jungle: the Anadi (Nashavel · Ehizahar) | Swahili | given + story + hold: the story is the title of her first woven story, taken at coming of age and replaced only by a grander one (the hold says both for a year); the hold she was strung in never changes | `geography/nashavel/basogur.md`, *What the jungle's people are called*; `glossary.md`, *Basogur Jungle* |
 | Basogur Jungle: the Vanara | Sanskrit | given + clan + the name the led gave, given by the first travelers she brings through and kept in their tongue; two names until she has led a crossing | as above |
 | Basogur Jungle: the druid tribes | Basque tree-words, worn; Talanese for groves and tribes | tree + grove + tribe: the child and her tree share a name, and the survivor keeps it; the grove is named for what happened there | as above |
+| Argia Esfera (Egulon) | Portuguese, plain letters; Basque for the mountain, its fires, and the wines | given + well (the household's cistern or spring, kept for life); + *da/do* comenda for the Aguarda; + the heat walked, in Talanese, for a paladin | `glossary.md`, *Argia Esfera → the Argian register*; `geography/egulon/argia-esfera.md`, *What an Argian is called* |
 
 Regions without a row have no defined register yet; define one at the region's build, choosing a word-base that keeps the region's sound distinct from its neighbours' and a personal-name structure that no other region uses.
 

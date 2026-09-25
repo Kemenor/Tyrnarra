@@ -56,7 +56,7 @@ The chartered company that runs the trunk rail took its name uninvited from the 
 
 ### Faith
 
-The kingdom reads Iro as the warmth that fits, keeps the festival calendar with the lakeshore rites, and sends its healers east. Against the vigil-country's kept flame and Ljosarn's kept promise it holds the third corner of the domain's argument: light as a craft of measure, poured to the drinker. (How Argia Esfera answers is left open here; the vigil-country is unbuilt, and its stance lands with its own build. The domain file's existing line, that a Sprite there learns to dim or to dazzle very carefully, is the only committed canon on the seam.)
+The kingdom reads Iro as the warmth that fits, keeps the festival calendar with the lakeshore rites, and sends its healers east. Against the vigil-country's kept flame and Ljosarn's kept promise it holds the third corner of the domain's argument: light as a craft of measure, poured to the drinker. (Argia Esfera answers with a light no hand makes: the fires of Sutarri and the reading of Ortzisu, where a Sprite is asked to stand back from the rail; see [`argia-esfera.md`](argia-esfera.md).)
 
 ### Live tensions
 

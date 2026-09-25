@@ -1,6 +1,6 @@
 # Argia Esfera (Egulon)
 
-*DRAFT for GM review (2026-09-25), written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Carries one ⚿ box and two ◈. The letter quoted throughout is [`argia-esfera-letter.md`](argia-esfera-letter.md). Parent domain: [`../egulon.md`](../egulon.md).*
+*Built 2026-09-25 and GM-reviewed, written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Carries one ⚿ box and two ◈. The letter quoted throughout is [`argia-esfera-letter.md`](argia-esfera-letter.md). Parent domain: [`../egulon.md`](../egulon.md).*
 
 **Etymology:** Basque *argia* (light) + Latin/Spanish *esfera* (sphere): an old compound, the sphere of light. The mountain and its fires are deep-stratum Basque (**Sutarri**, **Betisu**, **Ortzisu**), and so are the wines (**gozai**, **zerai**); the country's own names since the Dark Era run in the Argian register, Portuguese in our voice (**Sombral**, **the Aguarda**, **the Leitores**). A native is an **Argian**.
 
