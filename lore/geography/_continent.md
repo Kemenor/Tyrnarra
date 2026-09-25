@@ -54,12 +54,12 @@ The thirteen together hold about 3.4 million people. The kingdom capitals sit be
 
 ## The Continental Rail Network
 
-Talan runs on **Magitrains**, common-place Arcanotech infrastructure. The continent has **two interconnected networks** that do not link to each other:
+Talan runs on **Magitrains**, common-place Arcanotech infrastructure. The continent has **two networks** that do not link to each other:
 
 - **Northern Talan network**: connects the northern domains and their major cities.
 - **Southern Talan network**: connects the southern domains; Sumendar (Order of Steam manufacturing) is its industrial heart.
 
-The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **stillships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight; Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long overland road that loops around Basogur**. **Cloudships** serve the Cloud Sea crossing only; they are rare specialist craft, never deployed for domestic transport. Full canon in [`../cosmology.md`](../cosmology.md), *Technology: Magitech and Infrastructure*.
+The **Great Jungle (Basogur Jungle)**, straddling Nashavel and Ehizahar, prevents all through-rail between the two. North-south travel uses **stillships across Midarra** (bulk cargo), **airships over Basogur** (premium passenger / urgent freight; Arcanotech airships do this regularly but Occultech airships fly cleaner through the jungle's chaos-magic uplift), or the **long road** through the jungle, eleven days from Greenmouth to Veidrath under the Roadwards. **Cloudships** serve the Cloud Sea crossing only; they are rare specialist craft, never deployed for domestic transport. Full canon in [`../cosmology.md`](../cosmology.md), *Technology: Magitech and Infrastructure*.
 
 ---
 
@@ -85,31 +85,31 @@ Both move as one. The Twin Cities answer to no god and no kingdom; they are the 
 
 ### Domain sea-access summary
 
-Most domains coast both seas. Five do not, and the absences shape continent-wide trade and politics. Each per-domain file declares its sea access at the top alongside its land borders.
+Five domains coast both seas; the rest reach only one, and the absences shape continent-wide trade and politics. Each per-domain file declares its sea access at the top alongside its land borders.
 
 | Domain | Hafra | Midarra | Cloud Sea |
 |---|:---:|:---:|:---:|
 | Vindul | ✓ | – | – |
 | Lautara | **—** | ✓ | – |
-| Myrkono | ✓ | – | ✓ |
+| Myrkono | ✓ | ✓ | – |
 | Floteyn | ✓ | ✓ | – |
 | Sumendar | ✓ | ✓ | – |
 | Lioaru | ✓ | **—** | – |
 | Brauogi | ✓ | ✓ | – |
 | Ezkudon | ✓ | **—** | – |
-| Egulon | ✓ | **—** | – |
+| Egulon | ✓ | **—** | ✓ |
 | Zuzental | ✓ | ✓ | ✓ |
 | Nashavel | ✓ | – | – |
 | Ehizahar | ✓ | – | – |
 | Askamira | **—** | ✓ | – |
 
-**Hafra-locked:** Lautara, Askamira (both reach the world by Midarra only). **Midarra-locked:** Egulon, Ezkudon, Lioaru (all reach the world by Hafra only). **Cloud-Sea touching:** Myrkono (western coast) and Zuzental (the Bridgelands; canonical Sortalde cloudship landing).
+**Midarra only:** Lautara, Askamira. **Hafra only:** Vindul, Lioaru, Ezkudon, Egulon, Nashavel, Ehizahar. **Cloud-Sea touching:** two islands only, and both are the Cloud Sea's special ground: the **Bridgelands** of the Emerald Isles (Zuzental; the canonical Sortalde cloudship landing) and **Jadrey** off Lua Lasai (Egulon; quayless by island law).
 
 ---
 
 ## Other Continents
 
-Tyrnarra has more than one continent. Two are named in canon: **the Red Empire's home continent** (west across Hafra) and **Sortalde** (east across Hafra). Both, plus the six Sortalde petal-peoples, the Iron Tide, and the Menagerie, live in [`_off-continent.md`](_off-continent.md).
+Tyrnarra has more than one continent. Two are named in canon: **the Red Empire's home continent** (west across the Cloud Sea) and **Sortalde** (east across the Cloud Sea). Both, plus the six Sortalde petal-peoples, the Iron Tide, and the Menagerie, live in [`_off-continent.md`](_off-continent.md).
 
 ---
 

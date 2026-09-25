@@ -2,11 +2,11 @@
 
 **Borders:** Brauogi, Floteyn
 
-**Seas:** Hafra and Cloud Sea (west and south coasts; Three Pines island cluster); a short Midarra frontage in the far south-east, where Izarelai's pilot-coast and Bikitsa meet the inner sea.
+**Seas:** Hafra (west and south coasts; Three Pines island cluster); a short Midarra frontage in the far south-east, where Izarelai's pilot-coast and Bikitsa meet the inner sea.
 
 **Etymology:** Icelandic *myrkur* (darkness, murk) → *myrk* + Basque *baso sakona* (deep forest) → *sakona* → *kono*; fused and drifted to *Myrkono*. Carries both the shadow and the deep forest.
 
-**Position:** West Talan, Cloud Sea on two sides (west and south), bordering Floteyn to the south
+**Position:** West Talan, Hafra on two sides (west and south), bordering Floteyn to the south
 
 **Terrain:** Mountain range spine through the middle, mixed steppe and scrub, deep dark ancient forest (Black Forest character: old, dense, alive). Three heavily forested islands offshore to the west (collectively: **the Myrkons**; the **Three Pines** polity, see *Sub-regions*).
 
