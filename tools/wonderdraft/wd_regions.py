@@ -36,7 +36,7 @@ def ensure_codec():
 # Region shapes are told apart by border style; label layers are z_index
 # (Default = 0, "+1" = 1, ...).
 VARIANTS = {
-    "God Domains": {"border": "border_dash", "hide_label_layers": {2}},
+    "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1}},
     "Regions": {"border": "border_gradient", "hide_label_layers": {1}},
 }
 
