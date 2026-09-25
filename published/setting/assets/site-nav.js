@@ -141,6 +141,7 @@
       { slug: 'thekkavar',     label: 'Thekkavar &middot; the City of Learning', href: '/setting/talan/domains/ezkudon/thekkavar/thekkavar.html', children: [] }
     ] },
     { slug: 'egulon',   label: 'Egulon · Light',      href: '/setting/talan/domains/egulon/egulon.html',     children: [
+      { slug: 'argia-esfera', label: 'Argia Esfera &middot; the Country of Two Fires', href: '/setting/talan/domains/egulon/argia-esfera/argia-esfera.html', children: [] },
       { slug: 'harro-distiratsua', label: 'Harro Distiratsua &middot; the Light-Craft Kingdom', href: '/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html', children: [] },
       { slug: 'ljosarn', label: 'Ljosarn &middot; the Everbright City', href: '/setting/talan/domains/egulon/ljosarn/ljosarn.html', children: [] },
       { slug: 'lua-lasai', label: 'Lua Lasai &middot; the Guaranteed Country', href: '/setting/talan/domains/egulon/lua-lasai/lua-lasai.html', children: [] }

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argia Esfera · Egulon · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #7fb0e6;   /* Sombral's shutter blue · 8.60:1 on Style B bg */
+    --card-bg: rgba(14,20,34,0.55);
+  }
+
+  /* Voice quotations (Rustam Varaz's letter and the record) */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids */
+  .reading-grid, .figure-grid { --col-min: 200px; --grid-gap: 14px; --card-pad: 16px 18px; }
+  .reading-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .reading-grid .accent-card { border-left-width: 3px; }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="argia-esfera">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/egulon/egulon.html">Egulon</a><span class="sep">›</span><span>Argia Esfera</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Argia Esfera</div>
+    <div class="page-subtitle">Egulon Sub-Region · The Country of Two Fires</div>
+    <div class="page-flavor">"Nobody is left in the noon."</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Basque <i>argia</i> (light) + Latin/Spanish <i>esfera</i> (sphere): an old compound, the sphere of light. The mountain and its fires are deep-stratum Basque (<b>Sutarri</b>, <b>Betisu</b>, <b>Ortzisu</b>), and so are the wines (<b>gozai</b>, <b>zerai</b>); the country's own names since the Dark Era run in the Argian register, Portuguese in our voice (<b>Sombral</b>, <b>the Aguarda</b>, <b>the Leitores</b>). A native is an <b>Argian</b>.</dd>
+    <dt>Position</dt><dd>The east of <a href="/setting/talan/domains/egulon/egulon.html">Egulon</a>: the whole eastern peninsula from the bay facing the <a href="/setting/talan/domains/zuzental/emerald-isles.html">Emerald Isles</a>' Southern Isle down to the Hafra coast, and the southern band west to the ranges that close it off from <a href="/setting/talan/domains/egulon/lua-lasai/lua-lasai.html">Lua Lasai</a> and <a href="/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html">Harro</a>. <a href="/setting/talan/domains/egulon/ljosarn/ljosarn.html">Ljosarn</a> stands at its western edge on Vonura, the god's own enclave and no part of Argia. North of the rivers lies <b>the Green</b>; east stands <b>Sutarri</b>, the burning mountain, ringed by forest and by a river; south lies the desert; and at the desert's edge, on the river that runs from Sutarri to a small lake on the coast, stands <b>Sombral</b>, the seat.</dd>
+    <dt>Terrain</dt><dd>Green country and a mountain group in the north; a conifer forest east of Ljosarn; the lone burning mountain in the east; two rivers terraced into vineyards; gold desert and dune fields in the south, where the summer noon reaches 50 degrees.</dd>
+    <dt>Character</dt><dd>
+      <i>A country that keeps watch on two fires</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Burning Mountain</span><span class="pill">The Killing Noon</span><span class="pill">The Aguarda</span><span class="pill">Gozai &amp; Zerai</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>The <b>Shoony</b>, at their fullest expression on Talan; Sprites and Leshy throughout, as everywhere in Egulon.</dd>
+    <dt>Tongue</dt><dd>Talanese, with the Argian register for names and the country's own words.</dd>
+    <dt>Faith</dt><dd>Iro, held hottest here of anywhere in the domain; the <b>Leitores</b> read his summit fire, and <b>the Aguarda</b> keep his vows in arms.</dd>
+    <dt>Rule</dt><dd><b>The Aguarda</b>, a paladin order of Iro that holds the country: a <b>Mestre</b> for life, chosen by a chain of electors from among those who have walked <b>the Long Noon</b>.</dd>
+    <dt>Founded</dt><dd>The name is old; the state is the order's, from the Dark Era, when it cleansed the country's water and kept it.</dd>
+    <dt>Source</dt><dd>The letter of <b>Rustam Varaz</b>, wine-buyer of Merkavar, to his client on flying to Sombral: quoted through the page and published whole at its end.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(127,176,230,0.5);">
+    <div class="gods-city-label">The Seat</div>
+    <div class="gods-city-name">Sombral</div>
+    <div class="gods-city-byname">The shade-city at the desert's edge · the Mestre's cistern and the wine lodges</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-mountain" class="section-heading">The Mountain</h2>
+
+  <div class="voice-quote">
+    <p>"In the distance the burning mountain was already visible, the fire on top coloured as well, flickering into violet, then blue, and back to violet. Its foot is ringed by a forest in a golden hue, and above it the vines carry the same gold, shimmering in the light with emerald and diamond, colours neither bank produces."</p>
+  </div>
+  <div class="voice-attrib">Rustam Varaz, wine-buyer of Merkavar, in a letter to a client, arriving by air</div>
+
+  <div class="prose">
+    <p><b>Sutarri</b> burns from the rock. Its flanks carry fire the way other mountains carry snow: small flames standing out of cracks in bare stone, hundreds of them, with no fuel anyone has found and no hand to feed them, and not one of them has gone out in any chronicle. The Argians call the flank fires <b>Betisu</b>. By night they show across half the east as a scatter of points, a town seen from a hill, and travelers on the Hafra make them out from the deck.</p>
+    <p>At the summit burns one great fire that changes colour. It is <b>Ortzisu</b>, and the <b>Leitores</b>, Iro's priests of the reading, keep a house on the mountain's high shoulder and watch it in shifts. The colour runs ahead of the sun, and the shades between carry their own meanings in the Leitores' books. The readers set down what they see, and once a week the reading goes out to every mast, market, and well-house in the country, a chalk colour and a line in a priest's square hand. The south plans its summer by it: when to harvest, when to shutter, when to send the herds north, when to fill the cisterns. A Sprite who climbs to the reading-house is asked, politely, to stand back from the rail while the reading is taken.</p>
+  </div>
+
+  <div class="card-grid reading-grid">
+    <div class="accent-card" style="border-left-color:#e8c050"><div class="card-name" style="color:#e8c050">Gold</div><p>A fair week.</p></div>
+    <div class="accent-card" style="border-left-color:#7fb0e6"><div class="card-name">Blue</div><p>Heat.</p></div>
+    <div class="accent-card" style="border-left-color:#b89ae8"><div class="card-name" style="color:#b89ae8">Violet</div><p>A hard sun.</p></div>
+    <div class="accent-card" style="border-left-color:#e8766a"><div class="card-name" style="color:#e8766a">Red</div><p>A killing sun.</p></div>
+  </div>
+
+  <div class="prose">
+    <p>Below the fires, the forest that rings Sutarri's foot is gold in every season, and the river circles outside it. Above the forest, on terraces cut between the flank fires, grow the vines of <b>zerai</b>, gold in leaf and emerald and diamond in the fruit.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-noon" class="section-heading">The Noon</h2>
+
+  <div class="voice-quote">
+    <p>"A kind man at the counter explained it to me: leaving in the morning means flying over Argia Esfera during noon, which can end deadly, and only the noonships, the Occultech ones, are equipped to handle the heat."</p>
+  </div>
+  <div class="voice-attrib">Rustam Varaz, at the airship port of Merkavar</div>
+
+  <div class="prose">
+    <p>The south of Argia is desert, and in high summer the noon reaches 50 degrees. At that hour the country stops. Shutters close, streets empty, work waits for the evening, and the airships that cross Argia keep to the morning and the dusk; only the Occultech <b>noonships</b> fly through the middle of the day. The south lives by night through the summer, and the rule every Argian keeps without being taught is that nobody is left in the noon: a door opens to anyone caught outside at the killing hour, and the household behind it owes them shade and water until the heat breaks.</p>
+    <p>Anyone may walk the noon, and some do: pilgrims, penitents, the fervent, and the desperate, out on the sand at the worst hour to prove something to Iro or to themselves. Some of them die of it. Those who come back claim the heat they walked in, said as a number in Talanese, and the order writes down only the numbers it saw.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Claimed Numbers</button>
+    <div class="legend-era-content">
+      <p>Every tavern in the south has a regular who swears to a number the order never wrote down: a Fifty-One from a noon nobody else saw, a Fifty-Three from a road nobody walks. A patron who believes him stands his cup; the house never does, save where the owner knows the deed, and there are owners who pour a claimant free for life because once, at noon, he walked out and brought their child in. The rest of the room decides for itself whether the man at the bar is a charlatan or the real thing.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-aguarda" class="section-heading">The Aguarda</h2>
+
+  <div class="prose">
+    <p>The Dark Era came to Argia as it came everywhere, and here it came in the water: the rivers festered, the wells turned, and in a country where the summer kills in an afternoon, a poisoned well was a town's death. <b>The Aguarda</b> began as a handful of Iro's paladins who went from well to well cleansing the water and then stayed to hold it, keeping each source clean and open to any stranger who reached it. The order's founder-deed is the walk of <b>Beatriz Fontefria</b>: in the worst summer the valley has on record, she carried clean water on foot at noon across the desert to a cistern-town the corruption had cut off, and the heat that day was fifty-two degrees. Every paladin of the order since has walked in her name.</p>
+    <p>The order came out of the dark holding every well, cistern, and channel in the country, and it has held them since. It runs the water still: the cisterns under every town, the channels off both rivers, the shade-houses on the roads, and the noon-watch, the patrols that walk the streets and roads at the killing hour to bring in whoever is caught out. It builds the country's works, because it always has; a new cistern or channel is the order's to decide and dig. The country is divided into <b>comendas</b>, each held by a commander from a well-house on its own river stretch. At Sombral sits the <b>Mestre</b>, who receives envoys, signs treaties, and speaks for the country abroad.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">The Vows</div>
+    <p>A paladin of the Aguarda holds Iro's grants by a Knight's Oath, and the order's vows are the law it keeps on itself: water given to any who ask, no well closed to a stranger, no one left in the noon. The Compact binds that oath as it binds any, and a paladin who breaks it loses the god's grants for all to see. The order refuses no willing mortal, of any people, and in practice most of its paladins are Shoony.</p>
+  </div>
+
+  <div class="prose">
+    <p>A squire becomes a paladin by <b>the Walk</b>: a noon pilgrimage in full armour, on a ration of water bare enough to live on, to Beatriz's number. The order sends a party behind every squire to bring them in if they fall, and the party are the witnesses; a heat is written into the order's rolls only when the order saw it walked. A paladin who has walked carries the number in their name for life.</p>
+    <p>The Mestre holds the office for life. When a Mestre dies, the <b>Claveiro</b>, keeper of the cistern keys, holds the order and names two electors; they name two more, and the chain runs until there is an elector for every comenda. They meet once and choose the next Mestre from among the paladins who have walked <b>the Long Noon</b>, the older and harder route that only a handful in any generation attempt.</p>
+    <p>The order and the Leitores are one faith and two powers. The readers say what the sun will do; the order decides what the country does about it. A reading the order doubts, or an order the readers call faithless, is argued in public, and Iro, who says nothing on zeal, says nothing on this either. The Aguarda and Ljosarn's <b>Ordained</b> are separate orders of the same god, and each holds the other in respect and argues precedence at every feast where both stand.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-wine" class="section-heading">The Wine</h2>
+
+  <div class="voice-quote">
+    <p>"The river is a beautiful spectacle shimmering with the light of the sun, terraced almost all the way, the vines growing in many colours: one side a green bank with colours of blue, green, and teal, the other side almost like desert, its grapes of red, orange, and brown."</p>
+  </div>
+  <div class="voice-attrib">Rustam Varaz, over the Green</div>
+
+  <div class="prose">
+    <p><b>Gozai</b> is made on the river that runs from the western ranges east to join the Sutarri river above Sombral. Both banks are terraced nearly to the water. The north bank is the Green's, and its grapes come blue, green, and teal; the south bank is the desert's, and its grapes come red, orange, and brown. The vintners are Shoony families working their own terraces, and each bank keeps its own gozai. The must is fortified with grape spirit before it finishes, which keeps the sweetness in, and the casks age in the heat of Sombral's lodges for years before anyone opens them. Gozai is what Iro's altars pour across Talan, and a barge-load leaves Sombral for some temple most days of the year.</p>
+    <p><b>Zerai</b> grows only on Sutarri, on the terraces between the flank fires above the gold forest. The grapes are hard to raise and the wine harder to make; it carries a taste of the mountain no other wine on Talan has, and the vintages are small. A foreign buyer may taste zerai. The right to buy it is earned.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Godspour</button>
+    <div class="legend-era-content">
+      <p>The folk name for zerai is <b>godspour</b>, what the gods drink, and the folk hold that a cup of it shows the next colour of Ortzisu before the Leitores see it. Vintners sell it on the promise.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="sombral" class="section-heading">Sombral</h2>
+
+  <div class="voice-quote">
+    <p>"The city is white, and it is built for shade the way Merkavar is built for bargaining. Every street runs under arcades or awnings or vines trained overhead, the windows are narrow and deep, and the shutters are painted one blue I have seen nowhere else, save on the houses that keep a cask."</p>
+  </div>
+  <div class="voice-attrib">Rustam Varaz, at Sombral</div>
+
+  <div class="prose">
+    <p><b>Sombral</b> is the seat of the Mestre and the port of the wine, at the desert's edge where the two rivers meet and run on to the lake at the coast. It is built for shade: arcades over every street, awnings and trained vines between them, narrow deep windows, and one blue on every shutter, save on the houses that keep a family cask, whose shutters are amber. The lodges stand at the confluence, cut back into the riverbank so the casks lie cooler than the families above them, and the barges come down both rivers all night. The airship mast stands on the highest roof in the city with the week's reading chalked beside it. Under the city lies the order's great cistern, where the Mestre keeps the seat, and the dunes begin where the last lodge ends.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-false-saint" class="section-heading">The False Saint</h2>
+
+  <div class="voice-quote">
+    <p>"The Guild came with maps. The order came with water. And both of us brought our best weapons and armour."</p>
+  </div>
+  <div class="voice-attrib">A commander of the Aguarda, on the sealing of 2524</div>
+
+  <div class="prose">
+    <p><b>Beatriz's road</b>, the route of her founder-walk, runs out from the cistern-towns into the southern desert, and for four centuries after her it was the road of the Walk. Near the end of the Dark Era, Beatriz set out on the Long Noon and did not come back, and the order counts her among those the noon took.</p>
+    <p>When the Nine Dungeons erupted in 2524 MR, the chapel of the <a href="/setting/talan/the-binding.html#false-saint">False Saint</a>, one of the Corrupted God's Nine, opened through the sand halfway along Beatriz's road: an underground chapel oozing false miracles, where prayers rot into curses and the faithful rise as zealots of corruption. The Aguarda mustered as a state and called in the Adventurers' Guild, and together they broke the first wave and sealed the gate. It is sealed and uncleared, and what leaks from the smaller ways the order hunts on the sand. Since the eruption the order forbids Beatriz's road; the Walk follows a newer route, in her name and to her number, and the old road runs out into the desert with no sanctioned foot on it.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What the Walk Retraces</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Holiest Woman in the Order's Memory</div>
+      <p style="margin-top:0;">The noon did not take Beatriz Fontefria. She set out on the Long Noon in the last years of the Dark Era, and the Corrupted God took her on the sand; after the binding, it remade her, as it remade each of the Nine from a mortal it chose, into the mockery of faith that lies under her own road. The holiest woman in the order's memory is the False Saint.</p>
+      <p style="margin-bottom:0;">Every squire for four centuries walked toward her, and since 2524 the order has forbidden her road without knowing why the road should frighten it most: Beatriz made her own walk unwalkable. The false miracles the chapel breeds wear her shape when they can, a paladin in old armour who walks out of the noon and offers water, and the unwitnessed walkers of the south are the ones she reaches first.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-an-argian-is-called" class="section-heading">What an Argian Is Called</h2>
+  <div class="prose">
+    <p>An Argian carries a given name and a <b>well</b>: the cistern or spring their household draws from, said as a name. The well is kept for life, because a person's water does not change. The register keeps its words in plain letters. Anyone who joins the Aguarda adds the <b>comenda</b> they serve, with <i>da</i> or <i>do</i>; a paladin who has walked adds the heat, said in Talanese. In ordinary speech a paladin goes by given name and heat.</p>
+    <p>The unwitnessed walkers carry their claimed numbers the same way, and in the south a stranger with a number in her name is asked, sooner or later, whether the order wrote it down.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b></p>
+    <div class="pill-row"><span class="pill">Tomas</span><span class="pill">Ines</span><span class="pill">Afonso</span><span class="pill">Joana</span><span class="pill">Duarte</span><span class="pill">Beatriz</span><span class="pill">Rui</span><span class="pill">Leonor</span><span class="pill">Nuno</span><span class="pill">Catarina</span><span class="pill">Vasco</span><span class="pill">Madalena</span></div>
+    <p style="margin:14px 0 6px;"><b>Wells</b></p>
+    <div class="pill-row"><span class="pill">Posovelho · old well</span><span class="pill">Fontefria · cold spring</span><span class="pill">Fontenova · new spring</span><span class="pill">Cisternalta · high cistern</span><span class="pill">Posobranco · white well</span></div>
+    <p style="margin:14px 0 6px;"><b>Comendas</b></p>
+    <div class="pill-row"><span class="pill">da Serra</span><span class="pill">do Rio</span><span class="pill">da Areia</span><span class="pill">da Costa</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.7;">
+      <li><i>Ines Posovelho</i>, a vintner</li>
+      <li><i>Tomas Cisternalta da Serra</i>, a squire</li>
+      <li><i>Tomas Cisternalta da Serra, Forty-Nine</i>, a paladin; in the street, <i>Tomas Forty-Nine</i></li>
+    </ul>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-shoony" class="section-heading">The Shoony of Argia</h2>
+  <div class="prose">
+    <p>The Shoony give the heart once, and in Argia the heart goes to a vow, a well, a terrace, or a door. The noon-watch is theirs, and so are most of the order's paladins, most of the Leitores, and most of the vintners on both banks; and at the noon hour the Shoony households open their doors first.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card"><div class="card-name">Beatriz Fontefria, Fifty-Two</div><p>The founder-walker of the Aguarda; lost on the Long Noon at the end of the Dark Era.</p></div>
+    <div class="accent-card"><div class="card-name">Mestre Duarte Cisternalta, Fifty</div><p>The present Mestre, at Sombral.</p></div>
+    <div class="accent-card"><div class="card-name">Leonor Fontenova da Serra, Forty-Nine</div><p>The present Claveiro, keeper of the cistern keys.</p></div>
+    <div class="accent-card"><div class="card-name">The Posovelho Lodge</div><p>A gozai lodge at Sombral.</p></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-letter" class="section-heading">The Letter from Sombral</h2>
+  <div class="prose">
+    <p>Rustam Varaz's letter to his client, Madam Parisa, whole. Open each part to read it.</p>
+  </div>
+  <div class="log-letters">
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Merkavar</span><span class="ld-text">The morning: no passage until noon, and why.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>Dear Madam Parisa,</p><p>You have sent me quite on a journey with your request for gozai and zerai.</p><p>As always I had an early start into the day, but much to my dismay none of the airship ports had a passage to Sombral in the morn. The earliest they leave is at noon. A kind man at the counter explained it to me: leaving in the morning means flying over Argia Esfera during noon, which can end deadly, and only the noonships, the Occultech ones, are equipped to handle the heat.</p><p>So I booked passage on the earliest ship and sat down in a café and enjoyed a little rare rest.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">In the air</span><span class="ld-text">Lautara, Thekkavar in its forest ring, Harro and Ljosarn; the Green, the two banks, and the burning mountain.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>The views of Lautara made me smile, same as every time. Seeing the holy mountain. We cut through Azkataria, south to Jakinduria. We saw Thekkavar in the distance, alone in the middle of its ring of forest, held close the way a scholar holds a good book to the chest. Then east through Lua Lasai's north, a quick pass through Harro, and by Ljosarn with its holy flame to the south-east.</p><p>The barman, nice chap, lifted my confusion why we weave through the mountains and do not take the southern way. The heat was the answer once more.</p><p>Though I find not a lot to complain about, the views of the lands below were quite unlike any I have seen before.</p><p>We held a little north, over the Green, as it is colloquially known I was informed, to the river where the grapes for the gozai are grown.</p><p>The river is a beautiful spectacle shimmering with the light of the sun, terraced almost all the way, the vines growing in many colours: one side a green bank with colours of blue, green, and teal, the other side almost like desert, its grapes of red, orange, and brown. All made a little hazy by the still lingering heat.</p><p>In the distance the burning mountain was already visible, the fire on top coloured as well, flickering into violet, then blue, and back to violet. Its foot is ringed by a forest in a golden hue, and above it the vines carry the same gold, shimmering in the light with emerald and diamond, colours neither bank produces.</p><p>An old Argian told me of the fire-reading the priests turn into weather forecasts, and told me to check the reading for the coming week after landing, or I might be surprised and need to seek shelter with a family or two.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Sombral</span><span class="ld-text">The reading-board, the blue and the amber shutters, the lodges, the knights at the sand.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>We came down at Sombral with the sun just gone and the heat still standing in the streets like a guest who has not noticed the hour. The mast is on the city's highest roof, and the first thing on it, before customs or porters, is the reading-board: a violet chalk mark and beneath it, in a priest's square hand, <i>hard sun, seven days; keep in at noon.</i> Which in my trade, Madam, means buy early, and I have.</p><p>The city is white, and it is built for shade the way Merkavar is built for bargaining. Every street runs under arcades or awnings or vines trained overhead, the windows are narrow and deep, and the shutters are painted one blue I have seen nowhere else, save on the houses that keep a cask. Those are painted a deep amber, the colour of old gozai, and an Argian reads a street by them the way we read the signs over our stalls: behind every amber shutter a family cask is lying down. At this hour everything is open and everyone is out; the markets set up after dark, children run the arcades, and a family eating supper on its own doorstep asked me to sit. The people are mostly the dog-folk, warm and direct, and not quick to let a stranger walk off hungry.</p><p>The lodges stand along the river where the two waters meet, cut back into the bank so the casks lie cooler than the families above them, and barges come down all night stacked with barrels from both banks. Beyond the last lodge the town simply stops and the dunes begin, orange even by lamplight, and at their edge a pair of knights in pale armour, water-skins at their belts, were doing nothing I could name except watching the sand.</p><p>Tomorrow I taste gozai from both banks at the Posovelho lodge, before the heat. The zerai I may taste, I am told, and may not yet buy; that right is earned here, and I intend to learn what the earning costs.</p><p>Yours in haste and in the shade, Rustam</p></div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/egulon/egulon.html"><b>Egulon →</b></a> · The Light domain and its year of the vine.</li>
+      <li><a href="/setting/talan/domains/egulon/ljosarn/ljosarn.html"><b>Ljosarn →</b></a> · The god's own city on Vonura, at Argia's western edge; home of the Ordained.</li>
+      <li><a href="/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html"><b>Harro Distiratsua →</b></a> · The light-craft kingdom across the lake, and its crown.</li>
+      <li><a href="/setting/talan/domains/egulon/lua-lasai/lua-lasai.html"><b>Lua Lasai →</b></a> · The guaranteed country beyond the southern ranges.</li>
+      <li><a href="/setting/talan/the-binding.html#false-saint"><b>The Binding →</b></a> · The False Saint and the rest of the Nine.</li>
+      <li><a href="/setting/talan/ancestries.html"><b>Peoples &amp; Heritages →</b></a> · The Shoony, at home here.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The fires are known; much of the country around them is not yet written down.</div>
+    <ol>
+      <li><b>The rivers' names.</b> The Sutarri river and the western gozai river, as the Argians call them.</li>
+      <li><b>The towns of the Green.</b> The north and its mountain group, by name.</li>
+      <li><b>The colour-book.</b> The shades between gold, blue, violet, and red, and what the Leitores make of each.</li>
+      <li><b>The price of zerai.</b> How a foreign buyer earns the right to buy it.</li>
+      <li><b>The reading-house.</b> The Leitores' house on Sutarri's high shoulder.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · EGULON · ARGIA ESFERA</div>
+
+</div>
+
+</body>
+</html>
