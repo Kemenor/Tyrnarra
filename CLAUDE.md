@@ -85,6 +85,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     foundryExport/                     ← quest spec → paste-and-run Foundry VTT import macro (+ token bake / Forge upload)
     map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
     token-frames/                      ← shared Foundry token-frame library
+    wonderdraft/                       ← .wonderdraft_map tooling: wd_regions.py splits the master map into God Domains / Regions export variants
     keys/                              ← gitignored API keys (Forge), copied from Proton Drive
 
   lore/                                ← worldbuilding canon (NOT served; full roster in site-inventory)
