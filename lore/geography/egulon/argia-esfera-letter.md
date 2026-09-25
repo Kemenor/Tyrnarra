@@ -18,7 +18,7 @@ As always I had an early start into the day, but much to my dismay none of the a
 
 So I booked passage on the earliest ship and sat down in a café and enjoyed a little rare rest.
 
-The views of Lautara made me smile, same as every time. Seeing the holy mountain. We cut through Azkataria, south to Jakinduria. We saw Thekkavar in the distance, tucked behind its mountains the way a scholar holds a good book to the chest. Then east through Lua Lasai's north, a quick pass through Harro, and by Ljosarn with its holy flame to the south-east.
+The views of Lautara made me smile, same as every time. Seeing the holy mountain. We cut through Azkataria, south to Jakinduria. We saw Thekkavar in the distance, alone in the middle of its ring of forest, held close the way a scholar holds a good book to the chest. Then east through Lua Lasai's north, a quick pass through Harro, and by Ljosarn with its holy flame to the south-east.
 
 The barman, nice chap, lifted my confusion why we weave through the mountains and do not take the southern way. The heat was the answer once more.
 
