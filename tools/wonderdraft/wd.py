@@ -428,8 +428,8 @@ def add_write_opts(p):
     p.add_argument("--force", action="store_true", help="skip the Wonderdraft-has-it-open check")
 
 
-def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
+def build_parser():
+    ap = argparse.ArgumentParser(prog="wdmap", description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("info")
@@ -531,7 +531,12 @@ def main():
     p.add_argument("map")
     p.add_argument("--backup", type=int, default=0, help="which backup (0 = newest, see `wdmap backups`)")
     p.add_argument("--force", action="store_true")
-    a = ap.parse_args()
+    return ap
+
+
+def run(argv=None):
+    """Parse and run one wdmap command (argv without the program name)."""
+    a = build_parser().parse_args(argv)
     try:
         if a.cmd == "backups":
             return cmd_backups(a.map)
@@ -544,6 +549,10 @@ def main():
          "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
+
+
+def main():
+    run()
 
 
 if __name__ == "__main__":

@@ -75,3 +75,4 @@ tools/imageGen/comfy-server.log
 
 # Wonderdraft map tooling: the gcpf codec is compiled per machine on first run.
 tools/wonderdraft/gcpf
+tools/wonderdraft/.venv/

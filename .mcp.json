@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wonderdraft": {
+      "command": "bash",
+      "args": ["tools/wonderdraft/mcp-server.sh"]
+    }
+  }
+}

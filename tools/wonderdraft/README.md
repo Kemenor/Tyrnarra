@@ -92,6 +92,10 @@ wdmap markers MAP
 
 All of these save in place the same way `edit` does (backup, open-in-Wonderdraft and changed-on-disk checks, `--dry-run`, `--preview`).
 
+### MCP server
+
+`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `backups`, `restore`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
+
 `wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 
 ## How it works
