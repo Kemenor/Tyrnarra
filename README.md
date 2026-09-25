@@ -17,7 +17,7 @@ GitHub Pages serves `/published/` *as the site root*, so `/published/setting/tal
   - **`gm-notes/`** — GM / table material (served at `/gm-notes/`, unlinked from the player nav). Keeps the in-browser `tools/map-area-editor.html`.
   - **`player-campaigns/`** — the player companion (served at `/player-campaigns/`).
   - `index.html` (root redirect → `/setting/`), `CNAME`, `robots.txt`, `favicon*`, `site.webmanifest`.
-- **`/tools/`** — private GM build tooling, **not served**: `encounterBuilder/`, `foundryExport/`, `map-library/`, `token-frames/`.
+- **`/tools/`** — private GM build tooling, **not served**: `encounterBuilder/`, `foundryExport/`, `map-library/`, `token-frames/`, `wonderdraft/`.
 - **`/lore/`**, **`/docs/`** — private canon + site docs, **not served**.
 
 ---
