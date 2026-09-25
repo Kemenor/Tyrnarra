@@ -178,3 +178,33 @@ def path_points(path, spacing, jitter=0.0, seed=None):
             d += spacing
         carry = d - seg
     return out
+
+
+# --- region shapes ---------------------------------------------------------------
+
+def copy_shape(m, x, y, color, kind="region", width=None):
+    """Add a region shape by copying the outline of the smallest existing shape at (x, y).
+
+    Islands often have a god-domain outline but no region outline; copying the domain
+    outline gives the region exactly the same coast. The copy gets the border style of
+    `kind` and a fill `color` (alpha taken from an existing shape of that kind, so it
+    matches the others). Returns the new territory index.
+    """
+    from edit import BORDER_STYLE, parse_color
+    hits = [r for r in m.regions if r.contains(x, y)]
+    if not hits:
+        raise ValueError("no shape at (%g, %g) to copy the outline from" % (x, y))
+    src = min(hits, key=lambda r: r.area)
+    same = [r for r in m.regions if r.kind == kind]
+    alpha = statistics.median([r.data["color"][3] for r in same]) if same else src.data["color"][3]
+    t = copy.deepcopy(src.data)
+    t["style"] = BORDER_STYLE.get(kind, kind)
+    t["color"] = parse_color(color, alpha=alpha)
+    if same:
+        t["width"] = same[0].data.get("width", t.get("width"))
+        t["opacity"] = same[0].data.get("opacity", t.get("opacity"))
+    if width is not None:
+        t["width"] = float(width)
+    m.territories.append(t)
+    m.invalidate()
+    return len(m.territories) - 1, src

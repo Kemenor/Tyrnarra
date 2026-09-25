@@ -9,6 +9,8 @@
     wdmap restore MAP [--backup N]
     wdmap add     MAP symbol --art ART (--at X,Y | --under LABEL) [--offset DX,DY] [--scale K] [--to-layer L]
     wdmap add     MAP label --text T (--at X,Y | --under LABEL) [--offset DX,DY] [--like LABEL] [--to-layer L] [--size N]
+    wdmap add     MAP region (--at X,Y | --under LABEL) --color #rrggbb [--kind region|domain]
+                  (copies the outline of the smallest shape there, e.g. an island's domain outline)
     wdmap scatter MAP --art ART (--region NAME | --rect X0,Y0,X1,Y1) [--count N | --density D] [--spacing S]
     wdmap along   MAP --art ART (--path "X,Y X,Y ..." | --from LABEL --to LABEL) [--spacing S] [--jitter J]
     wdmap stamp list
@@ -286,6 +288,15 @@ def cmd_add(m, a):
     check_writable(m, a)
     x, y = anchor(m, a)
     layer = m.resolve_layer(a.to_layer) if a.to_layer is not None else None
+    if a.what == "region":
+        if not a.color:
+            sys.exit("error: add region needs --color")
+        i, src = place.copy_shape(m, x, y, a.color, kind=a.kind)
+        r = m.regions[i]
+        finish(m, a, ["added %s shape %s (outline copied from %s, %d points, area %d)" % (
+            a.kind, r.label, src.label, len(r.points), r.area)], {"regions": [i]},
+            [r.bbox[:2], r.bbox[2:]])
+        return
     if a.what == "symbol":
         if not a.art:
             sys.exit("error: add symbol needs --art")
@@ -477,7 +488,9 @@ def build_parser():
     add_write_opts(p)
     p = sub.add_parser("add")
     p.add_argument("map")
-    p.add_argument("what", choices=("symbol", "label"))
+    p.add_argument("what", choices=("symbol", "label", "region"))
+    p.add_argument("--color", help="region: fill colour #rrggbb")
+    p.add_argument("--kind", default="region", choices=("region", "domain"), help="region: border style")
     p.add_argument("--art")
     p.add_argument("--text")
     p.add_argument("--at", metavar="X,Y")
