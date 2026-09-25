@@ -23,11 +23,17 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 ### Publishing the three map views
 
 1. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map` writes the three variants.
-2. Open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
+2. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --export` exports them (~1.5 min per view; hands off keyboard and mouse meanwhile). Or by hand: open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
 3. `wd-regions ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp`, runs `resize.sh` for the `display/` and `thumbs/` variants, and refreshes `map-snapshot.json`. It refuses when an export is missing or older than its variant map (stale).
 4. Review the maps page and commit; pushing deploys the site.
 
-Exporting stays manual: Wonderdraft has no command-line export, and scripting its window on KDE Wayland proved unreliable (input-permission prompt, scaled coordinates).
+**`--export`** (`wd_export.py`) drives Wonderdraft itself, since it has no command-line export: for each view it launches Wonderdraft with the map, waits `--load-wait` seconds (default 25; Main loads in ~10–20 s), then sends Ctrl+E, Enter (Export Options, PNG), a file name and Enter (save dialog), waits for the PNG to stop growing (~40 s), closes Wonderdraft, converts the PNG to WebP at quality 92 and deletes it. `--only Regions` (repeatable) limits it to some views. Lessons baked in:
+
+- **Keyboard only, no clicks:** clicking by screenshot coordinates missed under display scaling.
+- **Focus is checked before every keystroke;** keys go to whichever window is active, so if another window has focus the run stops instead of typing into it.
+- **The typed file name is `wdexport.png`,** renamed afterwards: xdotool types as a US keyboard while KDE applies the German layout, so `-` arrives as `ß` (and y/z swap). If any other PNG appears instead, the run stops and names it.
+- **On the laptop Wonderdraft runs on the RTX 5070** (PRIME offload): on the integrated Radeon every launch parked ~3.5 GB in the GPU driver's page pool (`GPUReclaim`), which once ran the session out of memory.
+- Pause the Proton sync while it runs if you can: the 120 MB PNGs are transient.
 
 ### Conventions the split depends on
 

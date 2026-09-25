@@ -149,6 +149,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("map", help="input .wonderdraft_map (read only)")
     ap.add_argument("-o", "--outdir", help="output folder (default: next to the input)")
+    ap.add_argument("--export", action="store_true",
+                    help="drive Wonderdraft to export each variant to WebP next to it (takes over the "
+                         "desktop for a few minutes; see wd_export.py)")
+    ap.add_argument("--only", action="append", choices=list(VARIANTS),
+                    help="with --export: only these views (repeatable)")
+    ap.add_argument("--load-wait", type=int, default=25,
+                    help="seconds to let Wonderdraft load each map before exporting (default 25)")
     ap.add_argument("--publish", action="store_true",
                     help="copy the Wonderdraft exports of the variants into the site's map folder")
     a = ap.parse_args()
@@ -157,8 +164,25 @@ def main():
     outdir = os.path.abspath(a.outdir) if a.outdir else os.path.dirname(src)
     os.makedirs(outdir, exist_ok=True)
     stem = os.path.splitext(os.path.basename(src))[0]
+    if a.export:
+        import wd_export
+        views = [os.path.join(outdir, "%s - %s.wonderdraft_map" % (stem, n)) for n in VARIANTS
+                 if not a.only or n in a.only]
+        missing = [v for v in views if not os.path.exists(v)]
+        if missing:
+            sys.exit("missing variant maps (run without --export first): %s" % ", ".join(missing))
+        stale = [v for v in views if os.path.getmtime(v) < os.path.getmtime(src)]
+        if stale:
+            sys.exit("variant maps are older than %s; regenerate them first (run without --export)"
+                     % os.path.basename(src))
+        try:
+            wd_export.export_views(views, load_wait=a.load_wait)
+        except wd_export.ExportError as e:
+            sys.exit("export stopped: %s" % e)
     if a.publish:
         return publish(outdir, stem)
+    if a.export:
+        return
 
     ensure_codec()
     r = subprocess.run([GCPF, "d", src], stdout=subprocess.PIPE)
