@@ -29,7 +29,8 @@ same operations exist as `wdmap …` commands.
 ## The map's conventions
 
 - **Layers:** +5 Legend, +4 City Icons, +3 Divine City Labels, +2 Region Labels,
-  +1 God Labels, 0 Terrain (Default), −1 City Labels, −5 markers (`@stamp` / `@place`).
+  +1 God Labels, 0 Terrain (Default), −1 City Labels (size 32), −2 landmark labels
+  (mountains and other named features, size 24), −5 markers (`@stamp` / `@place`).
 - **Region shapes:** god domains have the dashed border (`domain`), regions the
   gradient border (`region`); each is named after the label inside it (+1 / +2).
 - **Views:** `split_variants` writes `Main - God Domains / Regions / Terrain`; the
