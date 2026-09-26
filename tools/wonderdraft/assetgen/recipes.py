@@ -10,6 +10,8 @@ FRAME = ", centered, whole subject in frame, isolated on a plain white backgroun
 NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, ground, soil, rocks, grass, "
             "shadow, landscape, scene, forest, several trees, parchment, paper texture, border, frame, cropped, blurry")
 
+# Prompt styles. All of them feed the same pack folder: greyscaled and levelled they look alike
+# on the map, and mixing them adds variety to a forest.
 STYLES = {
     "ink": "black ink outlines with soft watercolor wash shading, hand-drawn fantasy cartography",
     "sepia": "sepia brown ink linework with light wash shading, antique map illustration",
@@ -29,19 +31,19 @@ FAMILIES = {
                      "lopsided windswept fir tree, slightly irregular silhouette"],
         "replaces": "res://sprites/trees/_hd_christmas/",
         "kind": "trees",           # Wonderdraft sprite folder: trees | mountains | symbols
-        "height": 350,             # px at Wonderdraft scale 1 (built-in tree_xmas: ~180-210 x 300-415)
+        "size": (185, 330),        # px at Wonderdraft scale 1, matched by area (built-in tree_xmas ~170-210 x 300-415)
         "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor
         "aspect": (1.3, 2.6),      # height / width a usable cut-out must have
-        "pack_folder": "Tyrnarra_Conifers_{Style}",
-        "file": "conifer_{style}_{n:02d}",
+        "pack_folder": "Tyrnarra_Conifers",
+        "file": "conifer_{n:02d}",
     },
 }
 
 # Sprite finishing (sprites.py). Wonderdraft multiplies greyscale tree art by the ground colour,
 # so the grey values decide how much ground shows through: its own conifers are near-white
 # fill with black strokes.
-TARGET_MEAN = 190     # average grey of the opaque tree pixels after levels (0-255)
-OUTLINE = 6           # px at delivery size; about 1-2 px on the map at scale 0.2-0.3
+TARGET_MEAN = 195     # average grey of the opaque tree pixels after levels (0-255)
+OUTLINE = 3           # px at delivery size: covers the cut seam; the drawn ink line does the rest
 OUTLINE_GREY = 28
 DEFRINGE = 2          # px eaten from the cut-out's soft edge before the outline covers it
 

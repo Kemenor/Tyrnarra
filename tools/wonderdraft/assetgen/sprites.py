@@ -81,7 +81,8 @@ def check(rgba, fam):
     lo, hi = fam["aspect"]
     if not lo <= h / w <= hi:
         return "proportions %.2f" % (h / w)
-    if h < 0.8 * fam["height"]:
+    th, _ = target_size(w, h, fam)
+    if h < 0.8 * th:
         return "too small (%d px, would be enlarged)" % h
     widths = a.sum(1)
     crown = widths[: int(h * 0.85)].max()
@@ -93,6 +94,13 @@ def check(rgba, fam):
     if not 0.3 <= fill <= 0.8:
         return "fill %.2f" % fill
     return None
+
+
+def target_size(w, h, fam):
+    """(height, width) at Wonderdraft scale 1: the family's area, the cut-out's proportions."""
+    fw, fh = fam["size"]
+    th = (fw * fh * h / w) ** 0.5
+    return round(th), round(th * w / h)
 
 
 def levels(cutouts):
@@ -111,8 +119,8 @@ def finish(rgba, fam, lv):
     """Greyscale sprite at Wonderdraft's scale-1 height, soft edge hidden under a solid outline."""
     lo, hi, gamma = lv
     im = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
-    h = fam["height"] - 2 * recipes.OUTLINE
-    im = im.resize((max(1, round(im.width * h / im.height)), h), Image.LANCZOS)
+    th, tw = target_size(im.width, im.height, fam)
+    im = im.resize((max(1, tw - 2 * recipes.OUTLINE), max(1, th - 2 * recipes.OUTLINE)), Image.LANCZOS)
     t = np.asarray(im).astype(np.float32)
     lum = t[..., :3] @ LUMA
     g = 30 + 225 * np.clip((lum - lo) / max(1.0, hi - lo), 0, 1) ** gamma
@@ -129,23 +137,22 @@ def finish(rgba, fam, lv):
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
 
 
-def pack_dir(fam, style):
+def pack_dir(fam):
     return os.path.join(os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra/sprites"), fam["kind"],
-                        fam["pack_folder"].format(Style=style.capitalize(), style=style))
+                        fam["pack_folder"])
 
 
-def texture(fam, style, n):
-    folder = os.path.basename(pack_dir(fam, style))
-    return "user://assets/Tyrnarra/sprites/%s/%s/%s" % (fam["kind"], folder, fam["file"].format(style=style, n=n))
+def texture(fam, n):
+    return "user://assets/Tyrnarra/sprites/%s/%s/%s" % (fam["kind"], fam["pack_folder"], fam["file"].format(n=n))
 
 
-def install(sprites, fam, style):
+def install(sprites, fam):
     """Replace the pack folder's contents with `sprites`; returns the folder."""
-    folder = pack_dir(fam, style)
+    folder = pack_dir(fam)
     shutil.rmtree(folder, ignore_errors=True)
     os.makedirs(folder)
     for n, sp in enumerate(sprites, 1):
-        sp.save(os.path.join(folder, fam["file"].format(style=style, n=n) + ".png"))
+        sp.save(os.path.join(folder, fam["file"].format(n=n) + ".png"))
     meta = {"name": os.path.basename(folder).replace("_", " "), "radius": fam["radius"],
             "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": "sample_color"}
     with open(os.path.join(folder, ".wonderdraft_symbols"), "w") as f:

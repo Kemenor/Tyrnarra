@@ -2,10 +2,12 @@
 """Generate Wonderdraft art for the Tyrnarra pack. See README.md for the workflow and the lessons.
 
   assetgen.sh generate conifer --seeds 100-139        images + masks from the tower's ComfyUI
-  assetgen.sh build conifer --keep 24                 cut, check, finish, install into the pack
+  assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
   assetgen.sh test conifer                            real Wonderdraft export vs the built-in art
 
-Work files go to ~/.local/share/wdmap/assetgen/<family>/<style>/ (raw/, rejects.txt, sheet.jpg).
+Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
+add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
+chosen.txt, sheet.jpg, compare-*.jpg).
 """
 import argparse
 import os
@@ -65,42 +67,50 @@ def cmd_generate(a):
 
 
 def cmd_build(a):
+    from collections import Counter
     import sprites
     fam = _family(a.family)
+    base = os.path.join(WORK, fam["name"])
+    pool, rejects = [], []
     for style in a.style:
-        base = os.path.join(WORK, fam["name"], style)
-        raw = os.path.join(base, "raw")
+        raw = os.path.join(base, style, "raw")
+        if not os.path.isdir(raw):
+            continue
         seeds = sorted(int(f[:-4]) for f in os.listdir(raw) if f.endswith(".png") and "_mask" not in f)
-        good, rejects = [], []
+        good = []
         for seed in seeds:
             rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed))
             why = why or sprites.check(rgba, fam)
-            (rejects.append("%d: %s" % (seed, why)) if why else good.append((seed, rgba)))
+            (rejects.append("%s %d: %s" % (style, seed, why)) if why else good.append((seed, rgba)))
         if not good:
             print("%s: nothing usable from %d images" % (style, len(seeds)))
             continue
+        # Levels per prompt style (their ink differs), so every style lands on the same brightness.
         lv = sprites.levels([c for _, c in good])
-        random.Random(a.seed).shuffle(good)
-        chosen = sorted(good[: a.keep], key=lambda t: t[0])
-        finished = [sprites.finish(c, fam, lv) for _, c in chosen]
-        folder = sprites.install(finished, fam, style)
-        with open(os.path.join(base, "rejects.txt"), "w") as f:
-            f.write("\n".join(rejects) + "\n")
-        with open(os.path.join(base, "chosen.txt"), "w") as f:
-            f.write("\n".join("%s <- seed %d" % (fam["file"].format(style=style, n=n), s)
-                              for n, (s, _) in enumerate(chosen, 1)) + "\n")
-        sheet = sprites.contact_sheet(finished, os.path.join(base, "sheet.jpg"))
-        print("%s %s: %d images, %d usable, %d installed in %s (levels %.0f-%.0f, gamma %.2f); sheet %s"
-              % (fam["name"], style, len(seeds), len(good), len(finished), folder, lv[0], lv[1], lv[2], sheet))
-        from collections import Counter
-        print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
+        pool += [(style, seed, c, lv) for seed, c in good]
+        print("%s: %d images, %d usable (levels %.0f-%.0f, gamma %.2f)"
+              % (style, len(seeds), len(good), lv[0], lv[1], lv[2]))
+    if not pool:
+        sys.exit("nothing usable")
+    random.Random(a.seed).shuffle(pool)
+    chosen = sorted(pool[: a.keep], key=lambda t: (t[0], t[1]))
+    finished = [sprites.finish(c, fam, lv) for _, _, c, lv in chosen]
+    folder = sprites.install(finished, fam)
+    with open(os.path.join(base, "rejects.txt"), "w") as f:
+        f.write("\n".join(rejects) + "\n")
+    with open(os.path.join(base, "chosen.txt"), "w") as f:
+        f.write("\n".join("%s <- %s seed %d" % (fam["file"].format(n=n), style, seed)
+                          for n, (style, seed, _, _) in enumerate(chosen, 1)) + "\n")
+    sheet = sprites.contact_sheet(finished, os.path.join(base, "sheet.jpg"))
+    print("%s: %d usable, %d installed in %s; sheet %s" % (fam["name"], len(pool), len(finished), folder, sheet))
+    print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
 
 
 def cmd_test(a):
     import wdtest
     fam = _family(a.family)
     out = os.path.join(WORK, fam["name"])
-    for p in wdtest.run(fam, a.style, out, export=not a.no_export):
+    for p in wdtest.run(fam, out, export=not a.no_export):
         print(p)
 
 
@@ -110,13 +120,14 @@ def main(argv=None):
     for name, fn in (("generate", cmd_generate), ("build", cmd_build), ("test", cmd_test)):
         s = sub.add_parser(name)
         s.add_argument("family")
-        s.add_argument("--style", type=lambda v: v.split(","), default=list(recipes.STYLES),
-                       help="comma-separated styles (default: all)")
+        if name != "test":
+            s.add_argument("--style", type=lambda v: v.split(","), default=list(recipes.STYLES),
+                           help="comma-separated prompt styles (default: all)")
         s.set_defaults(fn=fn)
         if name == "generate":
             s.add_argument("--seeds", default="1-40", help="e.g. 1-40 or 5,9,12-20")
         if name == "build":
-            s.add_argument("--keep", type=int, default=24, help="variants to install")
+            s.add_argument("--keep", type=int, default=32, help="variants to install")
             s.add_argument("--seed", type=int, default=7, help="shuffle seed for picking variants")
         if name == "test":
             s.add_argument("--no-export", action="store_true", help="only rebuild maps and crops")

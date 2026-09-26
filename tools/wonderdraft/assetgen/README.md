@@ -7,14 +7,16 @@ today and in any later tool that reads Wonderdraft packs.
 
 ```
 assetgen.sh generate conifer --seeds 1-40      # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
-assetgen.sh build conifer --keep 24            # cut, check, finish, install into the Tyrnarra pack
+assetgen.sh build conifer --keep 32            # cut, check, finish, install into the Tyrnarra pack
 assetgen.sh test conifer                       # real Wonderdraft export vs the built-in art (hands off ~3 min)
 ```
 
-`--style ink` or `--style ink,sepia` limits any step to some styles (default: all in `recipes.py`).
-`build` writes `sheet.jpg` (the installed sprites tinted grass-green), `chosen.txt` (which seed
-became which file) and `rejects.txt` (why each other image was dropped) next to `raw/`.
-`test` writes `compare-*.jpg` into `~/.local/share/wdmap/assetgen/<family>/`.
+All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
+levelled they look alike on the map, and mixing them adds variety. `--style ink` limits
+`generate` or `build` to some of them. `build` writes into `~/.local/share/wdmap/assetgen/<family>/`:
+`sheet.jpg` (the installed sprites tinted grass-green), `chosen.txt` (which style and seed became
+which file) and `rejects.txt` (why each other image was dropped); every raw image has a `.txt`
+with its exact prompt and settings. `test` writes `compare-*.jpg` there too.
 
 The installed pack: `~/.local/share/Wonderdraft/assets/Tyrnarra/sprites/<kind>/<Folder>/`.
 Test maps and their exports: `~/.local/share/wdmap/assetgen-test/` (outside Proton Drive on
@@ -50,7 +52,7 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   copies of radius and offset.
 - **A map loads only the packs in its `included_packs` list**; any other pack's symbols give a
   "Missing custom assets" dialog. `wdmap` adds used packs on every save since 2026-09-26.
-- Texture paths have no extension: `user://assets/Tyrnarra/sprites/trees/Tyrnarra_Conifers_Ink/conifer_ink_01`.
+- Texture paths have no extension: `user://assets/Tyrnarra/sprites/trees/Tyrnarra_Conifers/conifer_01`.
 - **Size**: a symbol is drawn at sprite size x its `scale`. To replace a built-in family 1:1 the
   sprite must be as big as the built-in art at scale 1. Measure it from an export: find an
   isolated instance at a known scale and measure it (the built-in `tree_xmas` is about
@@ -83,19 +85,27 @@ What worked and what did not, in the order we found it (2026-09-26):
    `sprites.cut` trims it: below the crown the width narrows to the trunk, and the first row
    that widens again past 2.2x the trunk is where the ground starts.
 8. Images with background trees or a second object are rejected ("extra objects"), not repaired.
+9. **Shape variants** in the subject (`variants` in the family recipe, one per seed in turn) give a
+   forest variety without changing the look: "tall narrow spruce", "broad old fir", "young small
+   fir", "pine with drooping boughs", "lopsided windswept fir". Without them every tree came out
+   the same fir and a dense forest read as a repeated arrowhead texture.
+10. Ink and sepia converge after greyscale and levels; they are kept as two prompt styles feeding
+   one pack, not as two looks.
 
 ## Finishing (sprites.py, constants in recipes.py)
 
 - Levels are computed per family and style over all usable cut-outs, so a set stays consistent:
   2nd-98th luminance percentile stretched to 30-255, then a gamma so the average opaque grey is
   `TARGET_MEAN`.
-- Outline: `OUTLINE` px solid dark ring (at the 350 px delivery size) so it survives shrinking to
-  scale 0.2 (about 1-2 px on the map). The cut-out's soft edge still carries the white
+- Size: each sprite gets the family's scale-1 area (`size`, e.g. 185 x 330) at its own
+  proportions, so a broad tree comes out shorter rather than wider than the built-in art.
+- Outline: `OUTLINE` px solid dark ring. The cut-out's soft edge still carries the white
   background; `DEFRINGE` px of it are eaten and covered by the ring, otherwise a light halo
-  shows between outline and tree at full size.
+  shows between outline and tree at full size. A thick ring (6 px) on every tree made dense
+  forests a dark scale pattern; 3 px only covers the seam and leaves the drawn line to read.
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
-  0.8x the delivery height (they would be enlarged), a base wider than 60% of the crown (ground
-  or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
+  0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
+  crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
 
 ## Results log
 
@@ -106,7 +116,13 @@ What worked and what did not, in the order we found it (2026-09-26):
 - **Wonderdraft test 1** (ink and sepia, 20 variants each, from sheets): works end to end. Forests
   read darker and denser than Wonderdraft's, snow trees grey instead of white, full-size trees
   soft, a light halo inside the outline, stray ground and small side trees on a few.
-- **Round 4** (this tool): one tree per portrait image, ground trim, defringe, TARGET_MEAN 190.
+- **Round 4** (this tool): one tree per portrait image, ground trim, defringe, TARGET_MEAN 190,
+  6 px outline, sized to 350 px height. In Wonderdraft: snow trees now white and crisp at full
+  size. But about 1.5x too wide (single trees came out broader, and only height was matched),
+  and dense forests too dark: every tree's closed thick outline made a dark scale pattern.
+- **Round 5**: sized by area (185 x 330 at scale 1, keeping each tree's proportions), 3 px
+  outline (covers the cut seam only; the drawn ink line carries the edge), TARGET_MEAN 195,
+  six shape variants, ink and sepia pooled, 32 variants installed from 158 usable of 200.
 
 ## Families still to do
 

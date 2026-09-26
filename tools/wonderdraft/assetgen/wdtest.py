@@ -49,37 +49,31 @@ def areas(m, prefix):
     return [("dense", dense, 1), ("dense-3x", mid, 3), ("largest-2x", largest, 2)]
 
 
-def make_maps(fam, styles, log=print):
-    paths = []
-    for style in styles:
-        folder = sprites.pack_dir(fam, style)
-        n = len([f for f in os.listdir(folder) if f.endswith(".png")])
-        m = WDMap.load(BASE_MAP)
-        swapped = 0
-        for s in _family(m, fam["replaces"]):
-            x, y = s["position"]
-            k = zlib.crc32(("%.2f,%.2f" % (x, y)).encode()) % n + 1
-            s["texture"] = sprites.texture(fam, style, k)
-            s["radius"], s["offset"] = fam["radius"], type(s["offset"])(0, fam["offset_y"])
-            swapped += 1
-        os.makedirs(TEST_DIR, exist_ok=True)
-        path = os.path.join(TEST_DIR, "Assetgen %s %s.wonderdraft_map" % (fam["name"].capitalize(), style.capitalize()))
-        m.save(path)
-        log("  %s: %d symbols -> %d %s variants, %s" % (style, swapped, n, style, os.path.basename(path)))
-        paths.append(path)
-        del m
-    return paths
+def make_map(fam, log=print):
+    folder = sprites.pack_dir(fam)
+    n = len([f for f in os.listdir(folder) if f.endswith(".png")])
+    m = WDMap.load(BASE_MAP)
+    swapped = 0
+    for s in _family(m, fam["replaces"]):
+        x, y = s["position"]
+        k = zlib.crc32(("%.2f,%.2f" % (x, y)).encode()) % n + 1
+        s["texture"] = sprites.texture(fam, k)
+        s["radius"], s["offset"] = fam["radius"], type(s["offset"])(0, fam["offset_y"])
+        swapped += 1
+    os.makedirs(TEST_DIR, exist_ok=True)
+    path = os.path.join(TEST_DIR, "Assetgen %s.wonderdraft_map" % fam["name"].capitalize())
+    m.save(path)
+    log("  %d symbols -> %d variants, %s" % (swapped, n, os.path.basename(path)))
+    return path
 
 
-def compare(fam, styles, out_dir, log=print):
+def compare(fam, out_dir, log=print):
     Image.MAX_IMAGE_PIXELS = None
     m = WDMap.load(BASE_MAP)
     boxes = areas(m, fam["replaces"])
     del m
-    srcs = [("Wonderdraft (current)", BASE_EXPORT)]
-    for style in styles:
-        srcs.append(("Tyrnarra %s" % style.capitalize(),
-                     os.path.join(TEST_DIR, "Assetgen %s %s.webp" % (fam["name"].capitalize(), style.capitalize()))))
+    srcs = [("Wonderdraft (current)", BASE_EXPORT),
+            ("Tyrnarra pack", os.path.join(TEST_DIR, "Assetgen %s.webp" % fam["name"].capitalize()))]
     imgs = [(label, Image.open(p).convert("RGB")) for label, p in srcs if os.path.exists(p)]
     font = ImageFont.truetype(FONT, 24)
     out = []
@@ -98,9 +92,9 @@ def compare(fam, styles, out_dir, log=print):
     return out
 
 
-def run(fam, styles, out_dir, export=True, log=print):
-    log("Test maps from %s:" % os.path.basename(BASE_MAP))
-    paths = make_maps(fam, styles, log)
+def run(fam, out_dir, export=True, log=print):
+    log("Test map from %s:" % os.path.basename(BASE_MAP))
+    path = make_map(fam, log)
     if export:
-        wd_export.export_views(paths, log=log)
-    return compare(fam, styles, out_dir, log)
+        wd_export.export_views([path], log=log)
+    return compare(fam, out_dir, log)
