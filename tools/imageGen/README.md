@@ -506,3 +506,42 @@ the API down. `restart_server()` does this correctly. A prompt wedged in a
 model load ignores `/interrupt` (returns 200, does nothing); only a restart
 clears it, and `run_graph`'s heartbeat reports queue position so a pass parked
 behind a wedged prompt says so instead of claiming to render.
+
+## GPU faults: torch is pinned to ROCm 6.4 (fixed 2026-09-26)
+
+From 2026-09-13 every local render died with `Memory access fault by GPU
+node-1 … Page not present or supervisor privilege`, at a model load or the
+first sampling step. The kernel log is the same every time: `[gfxhub] page
+fault`, `Faulty UTCL2 client ID: TCP`, `RW: 0x1`, `PERMISSION_FAULTS: 0x5`,
+`MAPPING_ERROR: 0x0`. Sampling the server's `/proc/<pid>/maps` at the moment of
+the fault put the address at **byte 0 of a 2 MB buffer object mapped from
+`/dev/dri/renderD128`**: a ROCm-runtime-owned buffer, below ComfyUI and PyTorch.
+
+The fault follows the **ROCm runtime bundled inside the torch wheel**:
+
+| torch wheel | HIP | result |
+|---|---|---|
+| 2.12.0+rocm7.2 (installed 2026-06-11) | 7.2.53211 | faults, 6/6 runs |
+| 2.12.0+rocm7.1 | 7.1.52802 | faults |
+| **2.9.1+rocm6.4** | **6.4.43484** | **clean, 2/2 runs** |
+
+No ComfyUI flag touches it. Tried and still faulting on 7.x:
+`--disable-pinned-memory`, `--disable-async-offload --disable-dynamic-vram`,
+`HSA_ENABLE_SCRATCH_ASYNC_RECLAIM=0 HSA_NO_SCRATCH_RECLAIM=1`. Plain matmuls
+and `scaled_dot_product_attention` at FLUX.2 shapes pass on every backend in
+isolation, so a synthetic GPU test will not reproduce it; only a real render
+does.
+
+**The container venv now runs `torch==2.9.1+rocm6.4`,
+`torchvision==0.24.1+rocm6.4`, `torchaudio==2.9.1+rocm6.4`**, installed from
+`https://download.pytorch.org/whl/rocm6.4`. Do not "upgrade torch" back onto a
+rocm7.x wheel without re-running a full single-image render as the test. The
+previous venv is kept at `/var/mnt/games1tb/comfyui/venv-rocm72-backup`
+(17 GB); swapping back is a rename.
+
+Timing on 6.4: the **first pass after a server start** spends ~115 s warming
+kernels in sampling steps 1–2 (395 s total). Later passes on the same server
+sample at ~5–25 s/step: **267 s per image**, in line with the 221 s of
+September. So batch shots on one server rather than restarting between them.
+The card name reads "AMD Radeon Graphics" in the log on this wheel (it looks
+for `amdgpu.ids` under `/opt/amdgpu`); cosmetic.

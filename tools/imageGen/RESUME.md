@@ -1,13 +1,14 @@
-# RESUME: the Veldtmark cast art (paused 2026-09-13, ~23:40)
+# RESUME: local FLUX art
 
-Paused because the GPU started throwing `Memory access fault by GPU node-1`
-faults, not because anything is undecided. **Every creative call is locked and
-approved** — the remaining work is pressing go on 10 renders.
+**Status 2026-09-26: local rendering works again.** The GPU faults that stopped
+the pipeline on 2026-09-13 came from the ROCm 7.x runtime bundled in the torch
+wheel. The ComfyUI venv now runs `torch 2.9.1+rocm6.4`, and Kael Orvaine
+rendered clean twice (395 s cold, 267 s warm). Details and the version table:
+[README, *GPU faults*](README.md#gpu-faults-torch-is-pinned-to-rocm-64-fixed-2026-09-26).
 
-**First thing to try: reboot, then run the batch below.** The faults grew more
-frequent over the evening (a shot type that rendered fine at 22:47 was faulting
-by 23:34), which is consistent with the amdgpu driver being left dirty by
-repeated page faults and hard kills. A clean boot is the cheapest test.
+The Veldtmark cast itself was finished in Midjourney on 2026-09-13; the batch
+below is historical. The notes from that night are kept so the dead ends stay
+dead.
 
 ---
 
@@ -134,6 +135,9 @@ The remaining real levers are outside this repo:
    rebase` to a dated tag): tests the kernel driver. Both local deployments
    (20260916, 20260921) postdate the first fault.
 3. **Report upstream** (ROCm/ROCm) with the table above.
+
+**Resolved the same day by lever 1:** torch 2.12.0+rocm7.1 still faulted,
+torch 2.9.1+rocm6.4 rendered clean twice. See the README section.
 
 `npc_art.py` now reads `NPC_ART_EXTRA_ARGS` for one-off server flags, so
 experiments no longer need edits to the launch list. Each crash writes a ~18 GB
