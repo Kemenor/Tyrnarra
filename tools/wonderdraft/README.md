@@ -108,7 +108,7 @@ wdmap check ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --level warning
 One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, each with map coordinates; exits 1 if there are errors:
 
 - **error** outlines that cross themselves (Wonderdraft leaves those regions unfilled and logs "Convex partition failed") or have under 3 points.
-- **warning** land inside a domain outline that no region shape covers; unnamed or duplicate (stacked) shapes; a domain shape lying mostly inside another domain shape (a second outline on the domains view, as Merkavar's circle was); very dark regions whose outline runs mostly through water (they vanish against the sea); capitol icons (the Legend's "Capitol" art) with no city name (+3 or −1) within 160 units; labels overlapping in a view where both are shown, measured with the real fonts; god-city names off Divine City Labels and non-god-cities on it; leftover `@stamp`/`@place` markers.
+- **warning** land inside a domain outline that no region shape covers; unnamed or duplicate (stacked) shapes; a domain shape lying mostly inside another domain shape (a second outline on the domains view, as Merkavar's circle was); very dark regions whose outline runs mostly through water (they vanish against the sea); capital icons (the Legend's "Capital" art) with no city name (+3 or −1) within 160 units; labels overlapping in a view where both are shown, measured with the real fonts; god-city names off Divine City Labels and non-god-cities on it; leftover `@stamp`/`@place` markers.
 - **info** trees and mountains standing in water.
 
 The god-city list is `GOD_CITIES` in `check.py`.

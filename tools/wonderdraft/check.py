@@ -4,7 +4,7 @@
 error    Wonderdraft can't handle it (self-crossing outlines are left unfilled,
          "Convex partition failed" in its log).
 warning  Probably wrong on the map (missing region shapes, unnamed shapes, nested domains,
-         unnamed capitols, overlapping labels, labels on the wrong layer, ...).
+         unnamed capitals, overlapping labels, labels on the wrong layer, ...).
 info     Worth a look (trees standing in water).
 """
 import random
@@ -21,9 +21,9 @@ GOD_CITIES = {"Merkavar", "Myrria", "Haizava", "Eldara", "Valreka", "Thekkavar",
               "Uravel", "Lurrath", "Ljosarn", "Lograth", "Veidrath", "Nahaskel"}
 DIVINE_LAYER = 3
 CITY_NAME_LAYERS = (DIVINE_LAYER, -1)  # layers that name a settlement
-CAPITOL_LEGEND = "Capitol"
-CAPITOL_NAME_RADIUS = 160
-OWN_NAME_RADIUS = 60  # a region label this close to a capitol names it too (city-state: Rika Tikur)
+CAPITAL_LEGEND = ("Capital", "Capitol")  # the Legend entry; it read "Capitol" until 2026-09-26
+CAPITAL_NAME_RADIUS = 160
+OWN_NAME_RADIUS = 60  # a region label this close to a capital icon names it too (city-state: Rika Tikur)
 DARK_LUMINANCE = 0.12  # region colours darker than this vanish against Wonderdraft's deep-blue sea
 
 
@@ -129,19 +129,21 @@ def check_shapes(m):
     return out
 
 
-def capitol_family(m):
-    """Art family of the Legend's "Capitol" icon: the legend symbol nearest that legend label."""
-    lab = [l for l in m.labels if l.get("z_index") == 5 and _txt(l) == CAPITOL_LEGEND]
+def capital_family(m):
+    """Art family of the Legend's "Capital" icon: the legend symbol nearest that legend label."""
+    lab = [l for l in m.labels if l.get("z_index") == 5 and _txt(l) in CAPITAL_LEGEND]
     legend = [s for s in m.symbols if s.get("z_index") == 5]
     if not lab or not legend:
         return None
+    # Legend rows: the icon on the label's own row (smallest vertical offset), not merely
+    # the nearest one, which can sit on the next row (the Town icon did).
     x, y = lab[0]["position"]
-    s = min(legend, key=lambda s: (s["position"][0] - x) ** 2 + (s["position"][1] - y) ** 2)
+    s = min(legend, key=lambda s: (abs(s["position"][1] - y), abs(s["position"][0] - x)))
     return family(s["texture"])
 
 
-def check_capitols(m):
-    fam = capitol_family(m)
+def check_capitals(m):
+    fam = capital_family(m)
     if not fam:
         return []
     names = [l for l in m.labels if l.get("z_index") in CITY_NAME_LAYERS]
@@ -151,10 +153,10 @@ def check_capitols(m):
         if s.get("z_index") == 5 or family(s.get("texture")) != fam:
             continue
         x, y = s["position"]
-        if not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= CAPITOL_NAME_RADIUS ** 2 for l in names) \
+        if not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= CAPITAL_NAME_RADIUS ** 2 for l in names) \
                 and not any((l["position"][0] - x) ** 2 + (l["position"][1] - y) ** 2 <= OWN_NAME_RADIUS ** 2 for l in own):
             region = next((r.label for r in m.regions if r.kind == "region" and r.contains(x, y)), "no region")
-            out.append(Issue("warning", "capitol", "capitol icon without a city name (in %s)" % region, _xy((x, y))))
+            out.append(Issue("warning", "capital", "capital icon without a city name (in %s)" % region, _xy((x, y))))
     return out
 
 
@@ -212,7 +214,7 @@ def check_symbols(m):
 
 def run(m, views):
     """All checks; views = {view name: set of hidden label layers}."""
-    issues = (check_outlines(m) + check_shapes(m) + check_capitols(m) + check_labels(m, views)
+    issues = (check_outlines(m) + check_shapes(m) + check_capitals(m) + check_labels(m, views)
               + check_symbols(m))
     order = {"error": 0, "warning": 1, "info": 2}
     return sorted(issues, key=lambda i: (order[i.level], i.kind, i.at))

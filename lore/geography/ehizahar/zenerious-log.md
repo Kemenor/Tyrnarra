@@ -40,7 +40,7 @@ Now I sit on this hill I couldn't distinguish with a token in my hand, they boun
 
 ## Day 28
 
-The Vindrakar Hooves are currently escorting me, I see the Baosogur Jungle in the distance, it is impressive, even at this distance, the trees seem massive.
+The Vindrakar Hooves are currently escorting me, I see the Basogur Jungle in the distance, it is impressive, even at this distance, the trees seem massive.
 Also either I am getting used to the milk of the land or theirs is just more drinkable. I hardly cough.
 Soon we will reach the river Skoga at the edge of the Jungle, there I will switch to what the call The Frogged Tribe. They will escort me down the river to the forest peak, the part of the jungle that just furthest into Villtur, from there my Travel will be alone for a bit, to Aymuru, a small city where I will rest before travelling with their delegation to Veidrath.
 

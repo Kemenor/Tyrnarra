@@ -304,7 +304,7 @@ def restore(backup: int = 0, map: str = DEFAULT_MAP) -> str:
 def check(level: str = "info", map: str = DEFAULT_MAP) -> str:
     """Consistency check of the whole map: self-crossing outlines (Wonderdraft leaves them unfilled),
     land without region shapes, unnamed or duplicate shapes, dark regions that vanish against the
-    sea, capitol icons without a city name, labels overlapping in an exported view, god-city
+    sea, capital icons without a city name, labels overlapping in an exported view, god-city
     labels on the wrong layer, leftover @stamp/@place markers, trees/mountains in water. Each issue
     has coordinates; use preview on them. level: error | warning | info (everything)."""
     return _run(["check", map, "--level", level])

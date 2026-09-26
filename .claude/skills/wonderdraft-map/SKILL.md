@@ -17,7 +17,7 @@ same operations exist as `wdmap …` commands.
    tools refuse to save while its window shows the map. If a save is refused, ask
    the user to save and close the map in Wonderdraft, then retry.
 2. **Start a fixing session with `check`**: it lists every known kind of problem with
-   coordinates (knotted outlines, land without regions, unnamed capitols, overlapping
+   coordinates (knotted outlines, land without regions, unnamed capitals, overlapping
    labels, wrong layers, ...); fix from that list, then run it again.
 3. **Look first, change second.** `query` / `preview` to find things; write tools
    with `dry_run=true` and `preview=true` first, show the user the preview for
