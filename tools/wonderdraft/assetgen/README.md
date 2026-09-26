@@ -114,6 +114,32 @@ What worked and what did not, in the order we found it (2026-09-26):
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
 
+## Swapping built-in art for installed packs (packswap.py)
+
+Since 2026-09-26 the plan is to use bought packs first (Dotty Advanced + Booster bundles,
+Moulk's AI Fantasy Cartography Megapack; installed in the Wonderdraft asset folder, backed up in
+Proton Drive, never in this repo) and to generate our own art later.
+
+```
+assetgen.sh measure-builtins     # calibration: two exports, sizes -> builtin-sizes.json
+assetgen.sh packswap             # Base copy with every rule in pack-swap.json applied, exported, compared
+```
+
+- `measure-builtins` puts one copy of each built-in texture used in Main (262) on a grid in an
+  otherwise empty copy of the Base terrain, at scale 0.35, untinted, exports it with and without
+  the grid and measures each cell's difference: drawn width, height, centre and foot at scale 1.
+  Earlier attempts measured isolated symbols in the real map; in a map this dense almost none
+  are isolated, and stroke-drawn art falls apart into single strokes as connected blobs.
+- `packswap` swaps every symbol whose texture starts with a rule's `from` for a file of the
+  rule's `to` folder (picked by a hash of the position), with a scale that makes the new art
+  cover the same measured `match` dimension and an offset that puts its drawn foot and centre
+  where the old art's were. Radius comes from the folder's `.wonderdraft_symbols`. Custom-colour
+  folders (`_Cc`, draw_mode custom_colors) are refused until a rule gives colours.
+- Comparisons land in `~/.local/share/wdmap/assetgen/packswap/swap-*.jpg`.
+- First run (2026-09-26): all 24 families, 13,128 symbols swapped. Trees, dunes and the overall
+  map read like the original; Moulk mountains and hills came out somewhat small and the Tang
+  mountains faint, so their rules need a `size` above 1.
+
 ## Results log
 
 - **Round 1-2** (styleboard, 8 styles on sprite sheets): shortlisted ink, woodcut, sepia. On the
