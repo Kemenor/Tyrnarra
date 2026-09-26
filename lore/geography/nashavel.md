@@ -2,7 +2,7 @@
 
 **Borders:** Zuzental, Ehizahar
 
-**Seas:** Hafra (eastern coast).
+**Seas:** Hafra (eastern coast); Midarra (the western shore, at the inner sea's eastern end by Vernua) (GM, 2026-09-26).
 
 **Etymology:** Basque *nahas* (chaos, disorder, to mix) → rearranged and drifted to *Nashavel*. The chaos of the domain is in the name itself: the root scrambled on its way to the present.
 

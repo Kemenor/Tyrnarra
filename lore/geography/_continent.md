@@ -91,7 +91,7 @@ Both move as one. The Twin Cities answer to no god and no kingdom; they are the 
 
 ### Domain sea-access summary
 
-Six domains coast both seas; the rest reach only one, and the absences shape continent-wide trade and politics. Each per-domain file declares its sea access at the top alongside its land borders.
+Seven domains coast both seas (Nashavel, Ehizahar, Brauogi, Myrkono, Floteyn, Sumendar, Zuzental; GM, 2026-09-26); the rest reach only one, and the absences shape continent-wide trade and politics. Each per-domain file declares its sea access at the top alongside its land borders.
 
 | Domain | Hafra | Midarra | Cloud Sea |
 |---|:---:|:---:|:---:|
@@ -105,11 +105,11 @@ Six domains coast both seas; the rest reach only one, and the absences shape con
 | Ezkudon | ✓ | **—** | – |
 | Egulon | ✓ | **—** | ✓ |
 | Zuzental | ✓ | ✓ | ✓ |
-| Nashavel | ✓ | – | – |
+| Nashavel | ✓ | ✓ | – |
 | Ehizahar | ✓ | ✓ | – |
 | Askamira | **—** | ✓ | – |
 
-**Midarra only:** Lautara, Askamira. **Hafra only:** Vindul, Lioaru, Ezkudon, Egulon, Nashavel. **Cloud-Sea touching:** two islands only, and both are the Cloud Sea's special ground: the **Bridgelands** of the Emerald Isles (Zuzental; the canonical Sortalde cloudship landing) and **Jadrey** off Lua Lasai (Egulon; quayless by island law).
+**Midarra only:** Lautara, Askamira. **Hafra only:** Vindul, Lioaru, Ezkudon, Egulon. **Cloud-Sea touching:** two islands only, and both are the Cloud Sea's special ground: the **Bridgelands** of the Emerald Isles (Zuzental; the canonical Sortalde cloudship landing) and **Jadrey** off Lua Lasai (Egulon; quayless by island law).
 
 ---
 
