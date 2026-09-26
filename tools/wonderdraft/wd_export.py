@@ -4,8 +4,9 @@ For each view map ("<stem> - Terrain.wonderdraft_map" etc.): launch Wonderdraft 
 it (on the NVIDIA GPU when there is one, so the 8192px textures sit in video memory
 instead of the integrated GPU's page pool, which does not give system RAM back), wait
 a fixed LOAD_WAIT seconds after its window appears (Main loads in ~10 s; Wonderdraft
-keeps redrawing while idle, so CPU use can't tell "loaded" apart), then send Ctrl+E, Enter (Export Options: PNG), the file name,
-Enter (save dialog). Wait for the PNG to finish, close Wonderdraft, convert the PNG
+keeps redrawing while idle, so CPU use can't tell "loaded" apart), then send Ctrl+E, Enter (Export Options: PNG),
+Ctrl+A and the file name, Enter (save dialog). The save dialog opens at Wonderdraft's last export folder, so
+that setting in its config.ini is pointed at the map's folder first. Wait for the PNG to finish, close Wonderdraft, convert the PNG
 to WebP at Wonderdraft's quality 92 and delete the PNG before Proton Drive syncs it.
 
 xdotool types as if the keyboard were US while KWin applies the user's German layout,
@@ -18,6 +19,7 @@ requested once and otherwise the run stops instead of typing into another window
 Needs xdotool (Wonderdraft runs under XWayland) and a free desktop for a few minutes.
 """
 import os
+import re
 import signal
 import subprocess
 import sys
@@ -25,6 +27,7 @@ import time
 
 WD_DIR = os.path.expanduser("~/.local/opt/Wonderdraft")
 WD_BIN = os.path.join(WD_DIR, "Wonderdraft.x86_64")
+CONFIG_DIR = os.path.expanduser("~/.local/share/Wonderdraft")
 WEBP_QUALITY = 92
 LOAD_WAIT = 15
 TYPED_NAME = "wdexport"  # layout-safe: letters without y/z only
@@ -93,7 +96,9 @@ def _wait_file(path, since, timeout=600):
             stray = [f for f in os.listdir(folder) if f.lower().endswith(".png")
                      and os.path.getmtime(os.path.join(folder, f)) >= since]
             if stray:
-                raise ExportError("Wonderdraft saved %r instead of %r (keyboard layout?)"
+                # Let Wonderdraft finish writing it before it gets closed, so the file is whole.
+                _wait_stable(os.path.join(folder, stray[0]), timeout - (time.time() - start))
+                raise ExportError("Wonderdraft saved %r instead of %r (typed name mangled?)"
                                   % (stray[0], os.path.basename(path)))
         if os.path.exists(path):
             size = os.path.getsize(path)
@@ -105,6 +110,36 @@ def _wait_file(path, since, timeout=600):
         print("\r    writing PNG... %3ds " % (time.time() - start), end="", flush=True)
         time.sleep(2)
     raise ExportError("no finished %s after %ds" % (os.path.basename(path), timeout))
+
+
+def _wait_stable(path, timeout):
+    end, last, stable = time.time() + max(10, timeout), -1, 0
+    while time.time() < end and stable < 3:
+        size = os.path.getsize(path)
+        stable = stable + 1 if size == last else 0
+        last = size
+        time.sleep(2)
+
+
+def _point_export_dir(folder):
+    """Make the export dialog open in `folder`: Wonderdraft starts it at [Export] last_directory
+    in its config.ini, not next to the map (a map outside Proton Drive exported into Proton Drive)."""
+    cfg = os.path.join(CONFIG_DIR, "config.ini")
+    if not os.path.exists(cfg):
+        return
+    with open(cfg, encoding="utf-8") as f:
+        text = f.read()
+    line = 'last_directory="%s"' % folder
+    section = re.search(r"^\[Export\]\n(.*?)(?=^\[|\Z)", text, re.S | re.M)
+    if not section:
+        text = text.rstrip("\n") + "\n\n[Export]\n\n" + line + "\n"
+    elif re.search(r"^last_directory=.*$", section.group(1), re.M):
+        body = re.sub(r"^last_directory=.*$", lambda _: line, section.group(1), count=1, flags=re.M)
+        text = text[:section.start(1)] + body + text[section.end(1):]
+    else:
+        text = text[:section.end(1)].rstrip("\n") + "\n" + line + "\n\n" + text[section.end(1):]
+    with open(cfg, "w", encoding="utf-8") as f:
+        f.write(text)
 
 
 def _close(proc):
@@ -124,6 +159,7 @@ def export_view(map_path, env, log=print, load_wait=LOAD_WAIT):
     png, webp = os.path.join(folder, TYPED_NAME + ".png"), os.path.join(folder, stem + ".webp")
     if os.path.exists(png):
         os.remove(png)  # our own leftover; an existing file would make the dialog ask to overwrite
+    _point_export_dir(folder)
     t0 = time.time()
     with open(os.path.join("/tmp", "wd-export-%s.log" % os.getpid()), "w") as logf:
         proc = subprocess.Popen([WD_BIN, map_path], cwd=WD_DIR, env=env, stdout=logf, stderr=logf)
@@ -147,6 +183,10 @@ def export_view(map_path, env, log=print, load_wait=LOAD_WAIT):
         time.sleep(2.5)
         _ensure_focus(env, win, "typing the file name")
         typed_at = time.time()
+        # The name field can come pre-filled (a PNG already in the folder) with the cursor at
+        # its start; select it all so the typed name replaces it.
+        _xdo(env, "key", "--clearmodifiers", "ctrl+a")
+        time.sleep(0.3)
         _xdo(env, "type", "--delay", "25", TYPED_NAME + ".png")
         time.sleep(0.5)
         _ensure_focus(env, win, "saving")

@@ -139,6 +139,14 @@ class EditTest(unittest.TestCase):
             self.assertAlmostEqual(s["radius"] * s["scale"][0], fp, places=3)
             self.assertEqual(tuple(s["sample"]), tuple(self.m.ground_sample(*s["position"])))
 
+    def test_art_from_a_new_pack_gets_the_pack_enabled(self):
+        for _, s in select(self.m, "symbols", family_="*_hd_christmas*")[:5]:
+            s["texture"] = "user://assets/Tyrnarra/sprites/trees/Tyrnarra_Conifers_Ink/conifer_ink_01"
+        before = list(self.m.data["included_packs"])
+        self.assertEqual(self.m.include_used_packs(), ["Tyrnarra"])
+        self.assertEqual(self.m.data["included_packs"], before + ["Tyrnarra"])
+        self.assertNotIn("Tyrnarra", real_map()[1].data["included_packs"])  # the shared original stays as it was
+
     def test_delete_and_reencode(self):
         import edit
         n = len(self.m.symbols)

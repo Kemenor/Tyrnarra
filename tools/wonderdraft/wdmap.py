@@ -189,7 +189,27 @@ class WDMap:
             raise ValueError("%s: unexpected map layout" % path)
         return cls(data, os.path.abspath(path))
 
+    def include_used_packs(self):
+        """List every asset pack the symbols use in included_packs. Wonderdraft loads only the
+        packs a map lists there; a symbol from any other pack comes up as "Missing custom assets"
+        when the map opens. Returns the packs added."""
+        listed = self.data.get("included_packs")
+        if listed is None:
+            return []
+        added = []
+        for s in self.symbols:
+            t = s.get("texture") or ""
+            if t.startswith("user://assets/"):
+                pack = t.split("/")[3]
+                if pack not in listed and pack not in added:
+                    added.append(pack)
+        if added:
+            # A new list, not an append: copies of a map may share the original's list.
+            self.data["included_packs"] = list(listed) + added
+        return added
+
     def to_raw(self):
+        self.include_used_packs()
         body = gdvar.encode(self.data)
         return struct.pack("<I", len(body)) + body
 
