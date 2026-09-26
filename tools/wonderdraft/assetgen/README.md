@@ -99,10 +99,17 @@ What worked and what did not, in the order we found it (2026-09-26):
   `TARGET_MEAN`.
 - Size: each sprite gets the family's scale-1 area (`size`, e.g. 185 x 330) at its own
   proportions, so a broad tree comes out shorter rather than wider than the built-in art.
-- Outline: `OUTLINE` px solid dark ring. The cut-out's soft edge still carries the white
-  background; `DEFRINGE` px of it are eaten and covered by the ring, otherwise a light halo
-  shows between outline and tree at full size. A thick ring (6 px) on every tree made dense
-  forests a dark scale pattern; 3 px only covers the seam and leaves the drawn line to read.
+- Edge: the cut-out's semi-transparent edge pixels are tree colour mixed with the background;
+  `sprites.cut` takes the background colour (median of the image border) back out, so no light
+  halo shows at full size. No ring or erosion is needed for that.
+- Outline: `OUTLINE` px solid dark ring around the drawn edge. It is what separates trees at map
+  scale: the drawn ink lines are too fine to survive shrinking to 20-30 px. Measured on the densest
+  conifer forest (mean grey / share of pixels darker than 50, Wonderdraft's own: 86 / 32%):
+  6 px ring 55 / 59% on the inner forest (a dark scale pattern), no ring 95 / 5% (a flat green mass),
+  **1 px ring 86 / 27%** (matches). On a jagged conifer even 3 px of ring covered a quarter of the
+  sprite. `test` prints these two numbers for every run.
+- `INK_THIN` (max filter on luminance) makes dark strokes narrower; it barely changes the result
+  once the ring is thin, and 3 px and more blobs the lines. Off by default.
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
@@ -123,6 +130,12 @@ What worked and what did not, in the order we found it (2026-09-26):
 - **Round 5**: sized by area (185 x 330 at scale 1, keeping each tree's proportions), 3 px
   outline (covers the cut seam only; the drawn ink line carries the edge), TARGET_MEAN 195,
   six shape variants, ink and sepia pooled, 32 variants installed from 158 usable of 200.
+  In Wonderdraft: size right, full-size trees good, forests still too dark (thick drawn lines plus
+  a 3 px ring that covered 25% of each sprite).
+- **Round 6**: edge colour cleaned instead of eroded, ring down to 1 px (tested 0 and 1): the
+  forest matches Wonderdraft's brightness and darkness numbers and reads as separate trees; snow
+  trees clean. New subject wording with less ink ("pale foliage drawn with a few confident ink
+  lines, lots of white paper showing, minimal shading": ink share 45% -> 33%) for seeds 101-200.
 
 ## Families still to do
 

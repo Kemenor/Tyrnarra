@@ -19,9 +19,9 @@ STYLES = {
 
 FAMILIES = {
     "conifer": {
-        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, "
-                    "thick dark outline, bold shape readable at small size, light foliage with dark ink strokes, "
-                    "short visible trunk"),
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading, short visible trunk"),
         # One per seed, in turn (seed % len): variety inside the family.
         "variants": ["conifer tree, full rounded fir silhouette",
                      "tall narrow spruce tree, slender pointed silhouette",
@@ -43,9 +43,10 @@ FAMILIES = {
 # so the grey values decide how much ground shows through: its own conifers are near-white
 # fill with black strokes.
 TARGET_MEAN = 195     # average grey of the opaque tree pixels after levels (0-255)
-OUTLINE = 3           # px at delivery size: covers the cut seam; the drawn ink line does the rest
+INK_THIN = 0          # px narrower per side for dark lines (sprites.thin_ink); 3+ blobs the lines
+OUTLINE = 1           # solid ring around the drawn edge, px; it is what separates trees at map scale
 OUTLINE_GREY = 28
-DEFRINGE = 2          # px eaten from the cut-out's soft edge before the outline covers it
+DEFRINGE = 0          # px eaten from the soft edge under the ring (the cut edge is colour-cleaned already)
 
 # Generation (generate.py): SDXL Turbo on the tower's ComfyUI, ~5 s per image.
 CHECKPOINT = "DreamShaperXL_Turbo_v2.1.safetensors"

@@ -67,11 +67,29 @@ def cut(rgb_path, mask_path):
     if ground is not None:
         keep[ground:] = False
     alpha = mask * keep
+    # Semi-transparent edge pixels are the subject's colour mixed with the background (white or
+    # parchment); take the background back out, so the edge shows no light halo on the map.
+    border = np.concatenate([rgb[:8].reshape(-1, 3), rgb[-8:].reshape(-1, 3),
+                             rgb[:, :8].reshape(-1, 3), rgb[:, -8:].reshape(-1, 3)])
+    bg = np.median(border, axis=0)
+    a = alpha[..., None]
+    rgb = np.where(a > 0.02, (rgb - (1 - a) * bg) / np.maximum(a, 0.02), rgb).clip(0, 255)
     rows = np.flatnonzero(alpha.max(1) > 0.02)
     cols = np.flatnonzero(alpha.max(0) > 0.02)
     y0, y1, x0, x1 = rows[0], rows[-1] + 1, cols[0], cols[-1] + 1
     rgba = np.dstack([rgb[y0:y1, x0:x1], alpha[y0:y1, x0:x1, None] * 255])
     return rgba, None
+
+
+def thin_ink(rgba, radius):
+    """Greyscale with the dark lines made `radius` px narrower on each side (a max filter on
+    luminance): the strokes stay black, a dense forest of them reads less dark."""
+    lum = rgba[..., :3] @ LUMA
+    if radius > 0:
+        lum = ndimage.grey_dilation(lum, footprint=_disk(radius))
+    out = rgba.copy()
+    out[..., :3] = lum[..., None]
+    return out
 
 
 def check(rgba, fam):
@@ -116,7 +134,7 @@ def levels(cutouts):
 
 
 def finish(rgba, fam, lv):
-    """Greyscale sprite at Wonderdraft's scale-1 height, soft edge hidden under a solid outline."""
+    """Greyscale sprite at Wonderdraft's scale-1 size, optionally with a solid outline ring."""
     lo, hi, gamma = lv
     im = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
     th, tw = target_size(im.width, im.height, fam)
@@ -127,12 +145,14 @@ def finish(rgba, fam, lv):
     pad = recipes.OUTLINE + 2
     a = np.pad(t[..., 3] / 255, pad)
     g = np.pad(g, pad)
-    # The cut-out's outermost pixels still carry the white background; eat them and let the
-    # outline cover the seam instead of showing a light halo.
-    inner = ndimage.grey_erosion(a, footprint=_disk(recipes.DEFRINGE))
-    outer = ndimage.grey_dilation(a, footprint=_disk(recipes.OUTLINE))
-    grey = g * inner + recipes.OUTLINE_GREY * (1 - inner)
-    out = np.dstack([grey, grey, grey, outer * 255]).clip(0, 255).astype(np.uint8)
+    if recipes.OUTLINE:
+        # An extra solid ring around the drawn edge. On a conifer's jagged outline even 3 px
+        # of it covered a quarter of the sprite and darkened dense forests.
+        inner = ndimage.grey_erosion(a, footprint=_disk(recipes.DEFRINGE)) if recipes.DEFRINGE else a
+        outer = ndimage.grey_dilation(a, footprint=_disk(recipes.OUTLINE))
+        g = g * inner + recipes.OUTLINE_GREY * (1 - inner)
+        a = outer
+    out = np.dstack([g, g, g, a * 255]).clip(0, 255).astype(np.uint8)
     sprite = Image.fromarray(out, "RGBA")
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
 

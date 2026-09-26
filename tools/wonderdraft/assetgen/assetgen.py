@@ -77,10 +77,15 @@ def cmd_build(a):
         if not os.path.isdir(raw):
             continue
         seeds = sorted(int(f[:-4]) for f in os.listdir(raw) if f.endswith(".png") and "_mask" not in f)
+        if a.seeds:
+            wanted = set(_seeds(a.seeds))
+            seeds = [s for s in seeds if s in wanted]
         good = []
         for seed in seeds:
             rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed))
             why = why or sprites.check(rgba, fam)
+            if not why:
+                rgba = sprites.thin_ink(rgba, recipes.INK_THIN)
             (rejects.append("%s %d: %s" % (style, seed, why)) if why else good.append((seed, rgba)))
         if not good:
             print("%s: nothing usable from %d images" % (style, len(seeds)))
@@ -128,6 +133,7 @@ def main(argv=None):
             s.add_argument("--seeds", default="1-40", help="e.g. 1-40 or 5,9,12-20")
         if name == "build":
             s.add_argument("--keep", type=int, default=32, help="variants to install")
+            s.add_argument("--seeds", help="only these generated seeds, e.g. 101-200 (default: all)")
             s.add_argument("--seed", type=int, default=7, help="shuffle seed for picking variants")
         if name == "test":
             s.add_argument("--no-export", action="store_true", help="only rebuild maps and crops")

@@ -89,6 +89,14 @@ def compare(fam, out_dir, log=print):
         sheet.save(path, quality=90)
         out.append(path)
         log("  %s: %s at %s" % (name, os.path.basename(path), box))
+        if name == "dense":
+            # How dark the forest reads: the number to match against Wonderdraft's own.
+            for label, im in imgs:
+                grey = im.crop(box).convert("L")
+                hist = grey.histogram()
+                n = sum(hist)
+                mean = sum(i * c for i, c in enumerate(hist)) / n
+                log("    %-22s mean grey %.0f, dark (<50) %.0f%%" % (label, mean, 100 * sum(hist[:50]) / n))
     return out
 
 
