@@ -1,0 +1,52 @@
+"""What to generate: art families, styles and the numbers that make them fit Wonderdraft.
+
+A family replaces one of Wonderdraft's built-in art families (the "replaces" texture prefix)
+and borrows its size and anchor, so swapped symbols sit where the old ones stood. The prompt
+lessons behind these strings are in README.md ("Prompting").
+"""
+
+# Shared prompt tail and negative prompt. One subject per image, portrait: see README.
+FRAME = ", centered, whole subject in frame, isolated on a plain white background, no ground"
+NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, ground, soil, rocks, grass, "
+            "shadow, landscape, scene, forest, several trees, parchment, paper texture, border, frame, cropped, blurry")
+
+STYLES = {
+    "ink": "black ink outlines with soft watercolor wash shading, hand-drawn fantasy cartography",
+    "sepia": "sepia brown ink linework with light wash shading, antique map illustration",
+}
+
+FAMILIES = {
+    "conifer": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, "
+                    "thick dark outline, bold shape readable at small size, light foliage with dark ink strokes, "
+                    "short visible trunk"),
+        # One per seed, in turn (seed % len): variety inside the family.
+        "variants": ["conifer tree, full rounded fir silhouette",
+                     "tall narrow spruce tree, slender pointed silhouette",
+                     "broad old fir tree, wide layered branches",
+                     "young small fir tree, compact cone shape",
+                     "pine tree with drooping layered boughs",
+                     "lopsided windswept fir tree, slightly irregular silhouette"],
+        "replaces": "res://sprites/trees/_hd_christmas/",
+        "kind": "trees",           # Wonderdraft sprite folder: trees | mountains | symbols
+        "height": 350,             # px at Wonderdraft scale 1 (built-in tree_xmas: ~180-210 x 300-415)
+        "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor
+        "aspect": (1.3, 2.6),      # height / width a usable cut-out must have
+        "pack_folder": "Tyrnarra_Conifers_{Style}",
+        "file": "conifer_{style}_{n:02d}",
+    },
+}
+
+# Sprite finishing (sprites.py). Wonderdraft multiplies greyscale tree art by the ground colour,
+# so the grey values decide how much ground shows through: its own conifers are near-white
+# fill with black strokes.
+TARGET_MEAN = 190     # average grey of the opaque tree pixels after levels (0-255)
+OUTLINE = 6           # px at delivery size; about 1-2 px on the map at scale 0.2-0.3
+OUTLINE_GREY = 28
+DEFRINGE = 2          # px eaten from the cut-out's soft edge before the outline covers it
+
+# Generation (generate.py): SDXL Turbo on the tower's ComfyUI, ~5 s per image.
+CHECKPOINT = "DreamShaperXL_Turbo_v2.1.safetensors"
+STEPS, CFG, SAMPLER, SCHEDULER = 7, 2.0, "dpmpp_sde", "karras"
+WIDTH, HEIGHT = 832, 1216
+BG_MODEL = "birefnet.safetensors"
