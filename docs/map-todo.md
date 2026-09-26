@@ -26,9 +26,8 @@ The map's 37 capitol icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 ## Awaiting the next export
 
-- **Hirubaso label** (Brauogi): moved from Divine City Labels to Region Labels on 2026-09-25 (it is Greenward's grove-enclave, not a god-city). Variants regenerated; rides along with the next export and publish.
-- **From the first `wdmap check` (2026-09-26):** Haizava moved from the Terrain layer to Divine City Labels (its icon had looked like a second, unnamed Baerfrost capitol); Star Island's region lightened from near-sea #040fb5 to #5b7ff0; five trees/hills standing in water removed. Ride along with the next export.
-- **Domain colours** (2026-09-26): Lautarra, Ezkudon and Egulon read as one olive-gold band. Ezkudon recoloured #845c06 → **#1f8fd6** (sky blue) and Lautarra #4f3d00 → **#b8237a** (magenta, including Merkavar's circle and Rika Tikur, now one colour); Egulon keeps its yellow. Rides along with the next export.
+Nothing pending: the 2026-09-26 export and publish carried the Hirubaso and Haizava layer fixes, Star Island's lighter region, the removed strays and the new Lautarra/Ezkudon domain colours.
+
 - **Star Island capital**: its capitol icon has no city name yet; name it at the Star Island build (the check accepts the region label on the icon as a name, as for Rika Tikur, so it no longer flags this).
 
 ## Backlog for the next map edit
