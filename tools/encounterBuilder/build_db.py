@@ -3,13 +3,14 @@
 build_db.py - Flatten Foundry pf2e creature JSON into a queryable SQLite DB.
 
 Source-agnostic: point --packs at any number of directories containing Foundry
-actor JSON (type == "npc"). Official bestiaries and your Tyrnarra/Azkataria
+actor JSON (type == "npc"). Official bestiaries, installed Foundry modules
+(--modules, exported by export_modules.mjs) and your Tyrnarra/Azkataria
 homebrew can live side by side; everything is tagged with `pack` (folder name)
 and `source` (publication title) so you can filter or mix freely.
 
 Dedup: when official packs overlap (legacy Bestiary 1-3 vs. Monster Core), the
 same creature appears twice. Official rows are deduped by name, preferring the
-remastered entry. Homebrew rows are never deduped away (yours always survive).
+remastered entry. Homebrew and module rows are never deduped away.
 
 Designed to be re-run from scratch on every rebuild (drops + recreates).
 """
@@ -50,7 +51,7 @@ def derive_type(traits):
     return "unknown"
 
 
-def load_creature(path, pack, is_homebrew):
+def load_creature(path, pack, is_homebrew, is_module=False):
     with open(path, encoding="utf-8") as fh:
         d = json.load(fh)
     # Packs also carry non-actor JSON (e.g. _folders.json holds a list).
@@ -109,6 +110,7 @@ def load_creature(path, pack, is_homebrew):
         "source": (det.get("publication") or {}).get("title") or pack,
         "remaster": 1 if (det.get("publication") or {}).get("remaster") else 0,
         "is_homebrew": 1 if is_homebrew else 0,
+        "is_module": 1 if is_module else 0,
         "flavor": flavor,
     }
 
@@ -126,7 +128,7 @@ CREATE TABLE creatures (
     id INTEGER PRIMARY KEY,
     slug TEXT, name TEXT, level INTEGER, size TEXT, rarity TEXT,
     creature_type TEXT, hp INTEGER, ac INTEGER, pack TEXT, source TEXT,
-    remaster INTEGER, is_homebrew INTEGER, caster INTEGER, traditions TEXT,
+    remaster INTEGER, is_homebrew INTEGER, is_module INTEGER, caster INTEGER, traditions TEXT,
     traits_text TEXT, flavor TEXT
 );
 CREATE TABLE creature_traits (creature_id INTEGER, trait TEXT);
@@ -150,21 +152,21 @@ CREATE VIRTUAL TABLE creatures_fts USING fts5(
 """
 
 
-def load_dir(d, is_homebrew):
+def load_dir(d, is_homebrew, is_module=False):
     pack = os.path.basename(os.path.normpath(d))
     out = []
     for path in glob.glob(os.path.join(d, "**", "*.json"), recursive=True):
-        c = load_creature(path, pack, is_homebrew)
+        c = load_creature(path, pack, is_homebrew, is_module)
         if c and c["level"] is not None:
             out.append(c)
     return out
 
 
 def dedup(loaded):
-    """Official rows deduped by name (prefer remaster); homebrew always kept."""
+    """Official rows deduped by name (prefer remaster); homebrew and module rows always kept."""
     chosen, homebrew = {}, []
     for c in loaded:
-        if c["is_homebrew"]:
+        if c["is_homebrew"] or c["is_module"]:
             homebrew.append(c)
             continue
         k = c["name"].lower()
@@ -179,12 +181,16 @@ def main():
     ap.add_argument("--packs", nargs="+", required=True,
                     help="Directories of official Foundry actor JSON (globbed recursively).")
     ap.add_argument("--homebrew", help="Directory of your homebrew actor JSON (never deduped away).")
+    ap.add_argument("--modules", nargs="*", default=[],
+                    help="Directories of Foundry-module actor JSON (from export_modules.mjs; never deduped away).")
     ap.add_argument("--out", default="bestiary.db")
     args = ap.parse_args()
 
     loaded = []
     for d in args.packs:
         loaded += load_dir(d, is_homebrew=False)
+    for d in args.modules:
+        loaded += load_dir(d, is_homebrew=False, is_module=True)
     if args.homebrew and os.path.isdir(args.homebrew):
         loaded += load_dir(args.homebrew, is_homebrew=True)
 
@@ -195,11 +201,11 @@ def main():
     for c in rows:
         cur = con.execute(
             "INSERT INTO creatures(slug,name,level,size,rarity,creature_type,"
-            "hp,ac,pack,source,remaster,is_homebrew,caster,traditions,traits_text,flavor) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "hp,ac,pack,source,remaster,is_homebrew,is_module,caster,traditions,traits_text,flavor) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (c["slug"], c["name"], c["level"], c["size"], c["rarity"],
              c["creature_type"], c["hp"], c["ac"], c["pack"], c["source"],
-             c["remaster"], c["is_homebrew"], c["caster"], c["traditions"],
+             c["remaster"], c["is_homebrew"], c["is_module"], c["caster"], c["traditions"],
              " ".join(c["traits"]), c["flavor"]))
         cid = cur.lastrowid
         con.executemany("INSERT INTO creature_traits VALUES (?,?)",

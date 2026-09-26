@@ -10,16 +10,24 @@ PACK_RE), so the working copy stays small. Pack names are discovered from the gi
 tree rather than hardcoded, so new AP/Lost Omens bestiaries are picked up
 automatically and we don't depend on a fixed repo layout.
 
-Env overrides: PF2E_REPO (checkout dir), HOMEBREW_DIR (your creature JSON).
+If a local Foundry install is found (~/foundry, or FOUNDRY_DATA/FOUNDRY_APP), the
+Actor packs of its installed modules are exported first (export_modules.mjs, needs
+node) and ingested too.
+
+Env overrides: PF2E_REPO (checkout dir), HOMEBREW_DIR (your creature JSON),
+FOUNDRY_DATA / FOUNDRY_APP (local Foundry install, see export_modules.mjs).
 """
 import os
 import re
+import shutil
 import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.environ.get("PF2E_REPO", os.path.join(HERE, "_sources", "pf2e"))
 HOMEBREW = os.environ.get("HOMEBREW_DIR", os.path.join(HERE, "homebrew"))
+FOUNDRY_APP = os.environ.get("FOUNDRY_APP", os.path.join(os.path.expanduser("~"), "foundry", "app"))
+MODULES_OUT = os.path.join(HERE, "_sources", "modules")
 REMOTE = "https://github.com/foundryvtt/pf2e.git"
 # Creature-bearing packs: every bestiary, Monster Core, and the NPC gallery...
 PACK_RE = re.compile(r"bestiary|monster-core|npc-gallery", re.I)
@@ -40,7 +48,11 @@ def ensure_repo():
         git("clone", "--filter=blob:none", "--no-checkout", "--depth", "1", REMOTE, REPO)
         git("-C", REPO, "sparse-checkout", "init", "--cone")
     else:
-        git("-C", REPO, "pull", "--depth", "1", "--ff-only")
+        # A depth-1 clone can't fast-forward (its lone commit shares no history
+        # with the new tip), so fetch the tip and reset onto it. The checkout is
+        # a read-only mirror; nothing local to lose.
+        git("-C", REPO, "fetch", "--depth", "1", "origin", "HEAD")
+        git("-C", REPO, "reset", "--hard", "FETCH_HEAD")
 
 
 def discover_packs():
@@ -74,6 +86,14 @@ def main():
            "--packs", *pack_dirs, "--out", os.path.join(HERE, "bestiary.db")]
     if os.path.isdir(HOMEBREW):
         cmd += ["--homebrew", HOMEBREW]
+    # Installed Foundry modules (Battlezoo, Jam & Jax, ...), when Foundry is here.
+    if os.path.isdir(FOUNDRY_APP) and shutil.which("node"):
+        subprocess.run(["node", os.path.join(HERE, "export_modules.mjs")], check=True)
+        mod_dirs = sorted(os.path.join(MODULES_OUT, d) for d in os.listdir(MODULES_OUT))
+        if mod_dirs:
+            cmd += ["--modules", *mod_dirs]
+    else:
+        print("No local Foundry (or node) found; skipping module creatures.")
     subprocess.run(cmd, check=True)
 
     # 2. equipment -> items.db

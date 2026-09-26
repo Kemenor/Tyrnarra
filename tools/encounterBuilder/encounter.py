@@ -24,6 +24,7 @@ import sys
 
 # The "no-variants" core: the general bestiaries + NPC gallery, excluding AP /
 # Society packs whose scaled stat-variants ("(1-2)", "(PFS 2-05)") add noise.
+# Installed Foundry-module packs (Battlezoo, Jam & Jax) count as core too.
 CORE_PACKS = ["pathfinder-monster-core", "pathfinder-monster-core-2",
               "pathfinder-bestiary", "pathfinder-bestiary-2",
               "pathfinder-bestiary-3", "npc-gallery"]
@@ -59,7 +60,7 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
            not_traits=None, not_weak=None, not_immune=None,
            weak_min=None, resist_min=None, move_min=None,
            level=None, size=None, rarity=None, core=False, no_pfs=False,
-           source=None, no_homebrew=False, text=None, limit=200):
+           source=None, no_homebrew=False, no_modules=False, text=None, limit=200):
     where, where_params = ["1=1"], []
     joins, join_params = [], []
 
@@ -72,11 +73,14 @@ def search(con, ctype=None, traits=None, weak=None, resist=None, immune=None,
     if source:
         where.append("c.pack = ?"); where_params.append(source)
     if core:
-        where.append(f"c.pack IN ({','.join('?' * len(CORE_PACKS))})"); where_params += CORE_PACKS
+        where.append(f"(c.pack IN ({','.join('?' * len(CORE_PACKS))}) OR c.is_module = 1)")
+        where_params += CORE_PACKS
     if no_pfs:
         where.append("c.pack NOT LIKE 'pfs-%'")
     if no_homebrew:
         where.append("c.is_homebrew = 0")
+    if no_modules:
+        where.append("c.is_module = 0")
     if caster:
         where.append("c.caster = 1")
     if tradition:
@@ -233,6 +237,7 @@ def main():
     common.add_argument("--no-pfs", action="store_true", help="Exclude Pathfinder Society scenario packs.")
     common.add_argument("--source", help="Restrict to one pack (folder name, e.g. pathfinder-monster-core).")
     common.add_argument("--no-homebrew", action="store_true")
+    common.add_argument("--no-modules", action="store_true", help="Exclude creatures from installed Foundry modules.")
     common.add_argument("--json", action="store_true", help="Emit JSON instead of the text table.")
 
     s = sub.add_parser("search", parents=[common])
@@ -258,7 +263,7 @@ def main():
                 not_weak=a.not_weak, not_immune=a.not_immune, weak_min=a.weak_min,
                 resist_min=a.resist_min, move_min=a.move_min, size=a.size,
                 rarity=a.rarity, core=a.core, no_pfs=a.no_pfs, source=a.source,
-                no_homebrew=a.no_homebrew, text=a.text)
+                no_homebrew=a.no_homebrew, no_modules=a.no_modules, text=a.text)
 
     if a.cmd == "search":
         rows = search(con, level=a.level, limit=a.limit, **filt)

@@ -10,8 +10,9 @@ real data that you then tweak by hand.
 ```
                   ┌─> build_db.py    ─> bestiary.db ─> encounter.py (search + build)
 foundry pf2e repo ─┤     (creatures)
-                  └─> build_items.py ─> items.db    ─> loot.py (search; treasure-build planned)
+                  └─> build_items.py ─> items.db    ─> loot.py (search + treasure build)
 homebrew/*.json ───────^ (creatures only)         all SQLite + FTS5
+~/foundry modules ─> export_modules.mjs ─^ (creatures only)
 ```
 
 - **bestiary.db / items.db** are static snapshots. Nothing queries the network at prep time.
@@ -145,6 +146,26 @@ reproduces; `--json` for structured output.
 > The treasure tables at the top of `loot.py` (`TREASURE_BY_LEVEL`, `CURRENCY`,
 > `CURRENCY_PER_PC`, and `slots()`) are verified column-for-column against
 > [AoN Rules 2656](https://2e.aonprd.com/Rules.aspx?ID=2656).
+
+## Creatures from installed Foundry modules
+
+If a local Foundry install sits at `~/foundry` (override with `FOUNDRY_DATA` /
+`FOUNDRY_APP`), `rebuild.py` first runs `export_modules.mjs` (needs `node`). It
+reads every installed module's Actor packs (LevelDB) with the `classic-level`
+bundled in the Foundry app, re-inlines each actor's embedded items, and writes
+plain actor JSON to `_sources/modules/<module-id>.<pack>/`. Packs are copied to
+a temp dir before reading, so it works while Foundry is running. `_sources/`
+is gitignored, so paid module content stays local.
+
+- Module rows carry `is_module=1`, are never deduped away, count as `--core`,
+  and drop out with `--no-modules`. `--source` takes the folder name, e.g.
+  `battlezoo-bestiary-pf2e.pf2e-battlezoo-bestiary`.
+- Blank publication titles fall back to the module title.
+- Traitless class-NPC actors (Jam & Jax) are tagged `humanoid`, their animal
+  companions `animal` + `minion`, and the pack label ("Clerics") goes in the
+  blurb, so `--text "cleric*"` finds them. `* Template` actors are skipped.
+- Install a new creature module in Foundry, rerun `python rebuild.py`, and it is
+  picked up automatically. `node export_modules.mjs` runs the export alone.
 
 ## Adding Tyrnarra / Azkataria homebrew
 

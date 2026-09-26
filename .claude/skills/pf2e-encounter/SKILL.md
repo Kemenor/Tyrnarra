@@ -1,6 +1,6 @@
 ---
 name: pf2e-encounter
-description: Build a PF2e (2e Remaster) combat encounter to an exact XP budget from a theme, using the local bestiary tool at tools/encounterBuilder/. Trigger on "build an encounter", "encounter for the [room/dungeon]", "[trivial/low/moderate/severe/extreme] fight for N level-M PCs", "what monsters for [theme]", "give me a [boss/horde] of [creature type]", "search the bestiary for [theme]", or any request to staff a room/scene with thematically-matched creatures at a correct PF2e difficulty. Used standalone and as the encounter phase of the quest-workflow skill. The tool draws on ~5,900 real Foundry creatures (every bestiary + Monster Core + NPC gallery), so picks and budgets come from real data, not memory. Do not use for loot/treasure (that is pf2e-loot) or for non-PF2e systems.
+description: Build a PF2e (2e Remaster) combat encounter to an exact XP budget from a theme, using the local bestiary tool at tools/encounterBuilder/. Trigger on "build an encounter", "encounter for the [room/dungeon]", "[trivial/low/moderate/severe/extreme] fight for N level-M PCs", "what monsters for [theme]", "give me a [boss/horde] of [creature type]", "search the bestiary for [theme]", or any request to staff a room/scene with thematically-matched creatures at a correct PF2e difficulty. Used standalone and as the encounter phase of the quest-workflow skill. The tool draws on ~6,700 real Foundry creatures (every bestiary + Monster Core + NPC gallery + the Actor packs of the installed Foundry modules: Battlezoo, Jam & Jax), so picks and budgets come from real data, not memory. Do not use for loot/treasure (that is pf2e-loot) or for non-PF2e systems.
 ---
 
 # pf2e-encounter
@@ -22,7 +22,7 @@ Budgets are GM Core, exact. Party of 4: trivial 40 / low 60 / moderate 80 / seve
 ## Workflow
 
 1. **Pin the parameters.** Party level, party size (default 4), threat, shape (`boss` one big threat + chaff / `elite` a tough pair-trio / `spread` several near-level / `horde` many weak). If the caller gave a room/scene instead, infer threat and shape from its role (set-piece → severe/extreme boss; patrol → low/moderate spread; swarm room → horde).
-2. **Translate the theme into filters** (see cheatsheet). Default to `--core` to cut the AP/Society stat-variant noise ("(1-2)", "(PFS 2-05)"). Start broad (one `--text` or `--family`), then narrow.
+2. **Translate the theme into filters** (see cheatsheet). Default to `--core` to cut the AP/Society stat-variant noise ("(1-2)", "(PFS 2-05)"); `--core` keeps the installed-module packs (Battlezoo monsters, Jam & Jax class NPCs). Find J&J NPCs by class with a prefix match (`--text "cleric*"`), and add `--not-trait minion` to leave out their animal companions. Start broad (one `--text` or `--family`), then narrow.
 3. **Eyeball the pool with `search` first** (especially `-v` for defenses/speeds/senses), so the build draws from creatures you have actually looked at. Adjust filters until the pool reads right.
 4. **Build.** `python encounter.py build --party-level L --party-size N --threat T --shape S <theme filters> --core --seed K`. Reads back budget, spent XP, fill %, and members. A stderr warning means the themed pool was too thin to reach the floor: widen the theme or lower the threat.
 5. **Ground every pick in reality.** For each chosen creature, read its JSON under `_sources/pf2e/packs/pf2e/<pack>/<slug>.json` for the real Perception, saves, attacks, damage, and signature abilities. The DB carries only level/HP/AC/traits/defenses/senses/caster; the sheet carries the rest.
@@ -40,7 +40,7 @@ Budgets are GM Core, exact. Party of 4: trivial 40 / low 60 / moderate 80 / seve
 | Spellcaster | `--caster` · `--tradition occult` |
 | Carve the pool | `--not-trait incorporeal` · `--not-weak fire` · `--not-immune fire` |
 | Size (fit the room) | `--size lg --size huge` (repeatable => OR) |
-| Cleanliness | `--core` (general bestiaries only) · `--no-pfs` · `--rarity common` |
+| Cleanliness | `--core` (general bestiaries + installed modules) · `--no-pfs` · `--no-modules` · `--rarity common` |
 | Machine-readable | `--json` (search and build both) |
 | Reproducible build | `--seed K` |
 
