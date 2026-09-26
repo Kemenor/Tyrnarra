@@ -306,6 +306,26 @@ Written 2026-09-27; only the conifers are generated and installed so far.
   writes no text.
 - A family with nothing in `Main` to swap gets only the lineup from `test --offline`.
 
+**Runbook for the families still to generate** (round 1 each; check the lineup and the
+compare sheets, then `test --round 1` for a real export where the family is in `Main`):
+
+```
+# SDXL (plain LAN server, ~5 s per image; 60 seeds x 2 styles = 10 min per family)
+for f in peaks fells hills dunes willow pine palm bamboo deadtree savanna desert fungal; do
+    assetgen.sh generate $f --seeds 1-60 && assetgen.sh build $f --round 1 --keep 40 \
+        && assetgen.sh test $f --round 1 --offline
+done
+# FLUX (server with npc_art's flags, ~4 min per image)
+assetgen.sh generate broadleaf --seeds 1-40      # ~2.5 h
+assetgen.sh generate jungle --seeds 1-25
+assetgen.sh generate settlements --seeds 1-54    # seeds cycle through the 18 kinds: 3 each
+assetgen.sh generate god_cities --seeds 1-52     # 4 drawings per city
+```
+
+Seeds cycle through a family's variants (or items) as seed % count, so a range that is a
+multiple of the count gives each the same number of drawings. If an SDXL family comes out
+wrong in the lineup, `generate --engine flux` on new seeds uses its FLUX wording.
+
 ## Built-in art in Main before the swap
 
 By use (13,128 symbols):
