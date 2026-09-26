@@ -126,6 +126,9 @@ def cmd_measure(a):
 
 def cmd_packswap(a):
     import packswap
+    if a.apply:
+        packswap.apply(os.path.abspath(os.path.expanduser(a.apply)))
+        return
     path = packswap.make_swapped()
     if not a.no_export:
         import wd_export
@@ -140,6 +143,8 @@ def main(argv=None):
                            ("packswap", cmd_packswap, "Base view with built-ins swapped per pack-swap.json, exported")):
         s = sub.add_parser(name, help=text)
         s.add_argument("--no-export", action="store_true", help="reuse the last export")
+        if name == "packswap":
+            s.add_argument("--apply", metavar="MAP", help="swap this map in place (with backup) instead of a test copy")
         s.set_defaults(fn=fn)
     for name, fn in (("generate", cmd_generate), ("build", cmd_build), ("test", cmd_test)):
         s = sub.add_parser(name)

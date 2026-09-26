@@ -218,6 +218,21 @@ def make_swapped(log=print):
     return path
 
 
+
+def apply(path, log=print):
+    """Swap the built-ins in a real map, in place: wdmap's backup, and its refusal when
+    Wonderdraft has the map open or the file changed since loading."""
+    with open(SIZES) as f:
+        sizes = json.load(f)
+    m = WDMap.load(path)
+    done = swap(m, load_rules(), sizes, log)
+    left = sorted({family(s["texture"]) for s in m.symbols if builtin(s)})
+    backup = m.save_in_place()
+    log("%s: %d symbols swapped in %d families; still built-in: %s; packs: %s; backup %s"
+        % (os.path.basename(path), sum(done.values()), len(done), ", ".join(left) or "none",
+           ", ".join(m.data["included_packs"]), backup))
+    return backup
+
 def slug(prefix):
     return re.sub(r"[^a-z0-9]+", "-", prefix.lower().replace("res://sprites/", "").replace("res://packs/", "")).strip("-")
 
