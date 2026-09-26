@@ -26,7 +26,7 @@ The map's 37 capitol icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 ## Awaiting the next export
 
-- **Merkavar's circle** (2026-09-26): only a region now. Its separate Lautarra domain circle was removed (it lay wholly inside Lautarra's main outline), so the domains view shows Merkavar as plain Lautarra; the gold Merkavar region circle stays. Rides along with the next export.
+Nothing pending: the 2026-09-26 exports carried everything so far (last: Merkavar's separate domain circle removed; it is only a region now).
 
 - **Star Island capital**: its capitol icon has no city name yet; name it at the Star Island build (the check accepts the region label on the icon as a name, as for Rika Tikur, so it no longer flags this).
 
