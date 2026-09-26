@@ -84,3 +84,35 @@ def sdxl_with_mask(prompt, negative, seed, width, height, checkpoint, steps, cfg
         "10": {"class_type": "MaskToImage", "inputs": {"mask": ["9", 0]}},
         "11": {"class_type": "SaveImage", "inputs": {"images": ["10", 0], "filename_prefix": prefix + "_mask"}},
     }
+
+
+FLUX_MODELS = {"unet": "flux2-dev-Q4_K_M.gguf", "clip": "mistral_3_small_flux2_fp8.safetensors",
+               "vae": "flux2-vae.safetensors", "turbo_lora": "Flux_2-Turbo-LoRA_comfyui.safetensors"}
+
+
+def flux_with_mask(prompt, seed, width, height, bg_model, steps=8, guidance=4.0, prefix="tyrnarra/assetgen"):
+    """FLUX.2 [dev] (GGUF) with the Turbo LoRA plus a BiRefNet foreground mask: outputs [image, mask].
+    Slower than SDXL Turbo but follows shape instructions (a short trunk, a wide crown) that
+    SDXL ignores. It takes no negative prompt."""
+    return {
+        "u": {"class_type": "UnetLoaderGGUF", "inputs": {"unet_name": FLUX_MODELS["unet"]}},
+        "lo": {"class_type": "LoraLoaderModelOnly", "inputs": {
+            "lora_name": FLUX_MODELS["turbo_lora"], "strength_model": 1.0, "model": ["u", 0]}},
+        "c": {"class_type": "CLIPLoader", "inputs": {"clip_name": FLUX_MODELS["clip"], "type": "flux2", "device": "default"}},
+        "v": {"class_type": "VAELoader", "inputs": {"vae_name": FLUX_MODELS["vae"]}},
+        "ks": {"class_type": "KSamplerSelect", "inputs": {"sampler_name": "euler"}},
+        "t": {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["c", 0]}},
+        "g": {"class_type": "FluxGuidance", "inputs": {"guidance": guidance, "conditioning": ["t", 0]}},
+        "bg": {"class_type": "BasicGuider", "inputs": {"model": ["lo", 0], "conditioning": ["g", 0]}},
+        "fs": {"class_type": "Flux2Scheduler", "inputs": {"steps": steps, "width": width, "height": height}},
+        "el": {"class_type": "EmptyFlux2LatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}},
+        "rn": {"class_type": "RandomNoise", "inputs": {"noise_seed": seed}},
+        "sa": {"class_type": "SamplerCustomAdvanced", "inputs": {
+            "noise": ["rn", 0], "guider": ["bg", 0], "sampler": ["ks", 0], "sigmas": ["fs", 0], "latent_image": ["el", 0]}},
+        "vd": {"class_type": "VAEDecode", "inputs": {"samples": ["sa", 0], "vae": ["v", 0]}},
+        "7": {"class_type": "SaveImage", "inputs": {"images": ["vd", 0], "filename_prefix": prefix}},
+        "8": {"class_type": "LoadBackgroundRemovalModel", "inputs": {"bg_removal_name": bg_model}},
+        "9": {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["8", 0], "image": ["vd", 0]}},
+        "10": {"class_type": "MaskToImage", "inputs": {"mask": ["9", 0]}},
+        "11": {"class_type": "SaveImage", "inputs": {"images": ["10", 0], "filename_prefix": prefix + "_mask"}},
+    }

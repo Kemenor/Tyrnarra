@@ -114,6 +114,10 @@ What worked and what did not, in the order we found it (2026-09-26):
   6 px ring 55 / 59% on the inner forest (a dark scale pattern), no ring 95 / 5% (a flat green mass),
   **1 px ring 86 / 27%** (matches). On a jagged conifer even 3 px of ring covered a quarter of the
   sprite. `test` prints these two numbers for every run.
+- Inner fade (`INNER_LIGHTEN`, since round 8): strokes deeper than `INNER_EDGE` px inside the
+  shape fade toward white. It pays for a thick ring: a 4 px ring with a 0.7 fade keeps the
+  forest's brightness near the built-ins' while every tree reads as a pale shape with a dark rim,
+  where a thick ring alone made the dark scale pattern of round 4 and a thin ring an even mat.
 - `INK_THIN` (max filter on luminance) makes dark strokes narrower; it barely changes the result
   once the ring is thin, and 3 px and more blobs the lines. Off by default.
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
@@ -122,29 +126,37 @@ What worked and what did not, in the order we found it (2026-09-26):
 
 ## Testing (wdtest.py, render.py)
 
-- **What a family replaces**: the recipe's `replaces` is the art folder in `Main` today, e.g.
-  `Dotty_Pines` for conifers (it stands in for all six built-in conifer families since the
-  swap). The test map is the Base view with every symbol of that folder swapped for our pack,
-  each new sprite scaled to cover the drawn area of the art it replaces and standing on the
-  same foot (`packswap.fit`). The future swap of our pack into `Main` works the same way.
-- **The comparison export** is the Base as it is now: `Main - Base.webp` when it is newer than
-  the map, otherwise `assetgen-test/Assetgen Reference.webp`, an export of a copy that is redone
-  when the Base changes (`.md5` beside it). The built-in art before the swap is kept as
-  `Assetgen PreSwap Base.webp`.
-- **`--offline`** draws the patches here (`render.py`) in a few seconds, without Wonderdraft:
-  the Empty export (Base terrain, no symbols or labels) as ground, symbols y-sorted, straight-
-  alpha mipmaps like Godot's, greyscale art multiplied by the ground. Wonderdraft draws the soft
-  edges of shrunk sprites darker than plain alpha blending; an empirical fit (`EDGE_COVER`,
-  alpha squared on the colour) brings the densest patches within a few points of the real
-  exports: Dotty pines 87/35% real vs 89/30% here (mean grey / share darker than 50), round-6
-  conifers 86/27% vs 86/29%, Dotty oaks 73/36% vs 68/41%. Single trees match to the pixel.
-  Without the fit the dense numbers were far off (round 6: 96/7%). The real export has the last word.
-- `--offline` also writes `lineup.jpg`: every set's sprites side by side at full size and at
-  map size (40 px), tinted grass-green. The quickest way to compare art styles.
-- **Size**: the built-in conifers measured on the calibration grid are smaller than our
-  `size` (area of 137 x 291 at scale 1 against 185 x 330). So the fitted test draws our trees
-  at about 0.7x the scale rounds 5-6 used (median), the same area as the built-ins had.
-  `size` still sets the delivered resolution and the hand-placed size in Wonderdraft.
+- **The yardstick is Wonderdraft's own art**, as in every round since the first. A family with
+  a built-in counterpart (recipe `builtin`, e.g. `_hd_christmas`) is placed exactly where and as
+  big as that art stood in `Main` before the pack swap: position, scale and mirroring from the
+  pre-swap copy of `Main`, the recipe's size and anchor. It is compared with the Base export made
+  before the swap (`assetgen-test/Assetgen PreSwap Base.webp`, kept for this).
+- **Main now** is shown beside it: the recipe's `replaces` is the folder `Main` uses today
+  (`Dotty_Pines` for conifers), and its column is an export of the Base as it is now
+  (`Main - Base.webp` when newer than the map, else `Assetgen Reference.webp`, an export of a
+  copy redone whenever the Base changes; an `.md5` beside it tells). A family without a built-in
+  counterpart is fitted to that art instead: each sprite covers the drawn area of the one it
+  replaces and stands on the same foot (`packswap.fit`), as a later swap into `Main` would do.
+- **`builtin-refs`** (two exports, once): every built-in texture `Main` used, placed on an empty
+  copy of the Base, exported drawn white and drawn black; per pixel alpha = 1 - black / terrain
+  and grey = (white - (1 - alpha) terrain) / alpha give each built-in as a clean greyscale sprite
+  in `~/.local/share/wdmap/assetgen/builtins/` (local only, like the pack art: Wonderdraft's art
+  never goes into the repo). They fill the "Wonderdraft built-ins" row of `lineup.jpg`.
+- **`--offline`** draws our columns here (`render.py`) in a few seconds, without Wonderdraft,
+  beside the real exports of the built-ins and of `Main` now: the Empty export (Base terrain, no
+  symbols or labels) as ground, symbols y-sorted, straight-alpha mipmaps like Godot's, greyscale
+  art multiplied by the ground. Wonderdraft draws the soft edges of shrunk sprites darker than
+  plain alpha blending; an empirical fit (`EDGE_COVER`, alpha squared on the colour) brings the
+  densest patches within a few points of real exports for thin-edged art: Dotty pines 87/35% real
+  vs 89/30% here (mean grey / share darker than 50), round-6 conifers 86/27% vs 86/29%, Dotty oaks
+  73/36% vs 68/41%. Thick rings come out darker in Wonderdraft than here (round 9: 81/39% real,
+  86/30% here). Single trees match to the pixel. The real export has the last word.
+- `--offline` also writes `lineup.jpg`: the built-ins, the art `Main` uses now and each round,
+  sprite by sprite at full size and at map size (40 px), tinted grass-green.
+- **Size**: the built-in conifers measured on the calibration grid are smaller than our `size`
+  (area of 137 x 291 at scale 1 against 185 x 330). Placed at the built-ins' scales, as in all
+  rounds, our conifers are about 1.4x their linear size; fitted to Dotty's pines they come out
+  at 0.7x that scale. Both read well; `size` also sets the delivered resolution.
 
 ## Swapping built-in art for installed packs (packswap.py)
 
@@ -209,6 +221,17 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   pines read as separate bold shapes with thick outlines; ours are fine engraved firs that read
   as texture at 20-40 px. "Chunky, bold simple shape" in the prompt does not get SDXL Turbo
   there; a bolder look needs a different prompt or a stronger finishing outline.
+  Real export (2026-09-27, placed as the built-ins were, like rounds 1-6): built-ins 86/32%,
+  Dotty 87/35%, round 6 86/27%, round 7 84/30%.
+- **Rounds 8-10** (finishing only, same 40 cut-outs as round 7, `build --set`): a thicker ring
+  plus `INNER_LIGHTEN`, which fades strokes deep inside the shape toward white, so each tree
+  reads as a pale shape with a dark rim. Round 8: ring 3 px, fade 0.5. Round 9: ring 4 px, fade
+  0.7. Round 10: ring 2 px, fade 0.35. The ring and the fade cancel in brightness (offline all
+  86/29-30%) while the forest turns from an even mat into separate trees.
+- **Round 9 chosen and installed** (overnight decision, 2026-09-27): real export 81/39%, a
+  little darker than the built-ins' 86/32% and read as distinct treetops with dark gaps, like the
+  built-ins and Dotty; at full size a bold ink rim with a clean pale inside. Its settings are the
+  new defaults in recipes.py (`OUTLINE` 4, `INNER_LIGHTEN` 0.7).
 
 ## Families still to do
 

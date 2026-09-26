@@ -81,6 +81,14 @@ def cmd_build(a):
     fam = _family(a.family)
     base = os.path.join(WORK, fam["name"])
     out = _out(fam, a.round)
+    for kv in a.set or []:
+        # Finishing experiments without editing recipes.py: --set OUTLINE=3 --set INNER_LIGHTEN=0.5
+        key, _, value = kv.partition("=")
+        if not hasattr(recipes, key):
+            sys.exit("recipes.py has no %s" % key)
+        setattr(recipes, key, float(value) if "." in value else int(value))
+    if a.no_install and not a.round:
+        sys.exit("--no-install needs --round (the sprites go to its folder only)")
     pool, rejects = [], []
     for style in a.style:
         raw = os.path.join(base, style, "raw")
@@ -110,11 +118,17 @@ def cmd_build(a):
     random.Random(a.seed).shuffle(pool)
     chosen = sorted(pool[: a.keep], key=lambda t: (t[0], t[1]))
     finished = [sprites.finish(c, fam, lv) for _, _, c, lv in chosen]
-    folder = sprites.install(finished, fam)
-    if a.round:
+    if a.no_install:
+        folder = sprites.install(finished, fam, os.path.join(out, "sprites"))
+    else:
+        folder = sprites.install(finished, fam)
+    if a.round and not a.no_install:
         # A copy of the round's sprites, for comparing rounds after the next build replaced them.
         shutil.rmtree(os.path.join(out, "sprites"), ignore_errors=True)
         shutil.copytree(folder, os.path.join(out, "sprites"))
+    if a.set:
+        with open(os.path.join(out, "settings.txt"), "w") as f:
+            f.write("\n".join(a.set) + "\n")
     with open(os.path.join(out, "rejects.txt"), "w") as f:
         f.write("\n".join(rejects) + "\n")
     with open(os.path.join(out, "chosen.txt"), "w") as f:
@@ -135,6 +149,11 @@ def cmd_test(a):
         paths = wdtest.run(fam, out, export=not a.no_export, n=a.round)
     for p in paths:
         print(p)
+
+
+def cmd_builtin_refs(a):
+    import wdtest
+    wdtest.builtin_refs(export=not a.no_export)
 
 
 def cmd_measure(a):
@@ -158,6 +177,7 @@ def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     for name, fn, text in (("measure-builtins", cmd_measure, "measure the built-in art's sizes (one export)"),
+                           ("builtin-refs", cmd_builtin_refs, "built-in art as local reference sprites (two exports)"),
                            ("packswap", cmd_packswap, "Base view with built-ins swapped per pack-swap.json, exported")):
         s = sub.add_parser(name, help=text)
         s.add_argument("--no-export", action="store_true", help="reuse the last export")
@@ -177,6 +197,10 @@ def main(argv=None):
             s.add_argument("--keep", type=int, default=32, help="variants to install")
             s.add_argument("--seeds", help="only these generated seeds, e.g. 101-200 (default: all)")
             s.add_argument("--seed", type=int, default=7, help="shuffle seed for picking variants")
+            s.add_argument("--set", action="append", metavar="KEY=VALUE",
+                           help="override a finishing constant of recipes.py, e.g. OUTLINE=3 (repeatable)")
+            s.add_argument("--no-install", action="store_true",
+                           help="with --round: write the sprites to the round's folder only, not the pack")
         if name in ("build", "test"):
             s.add_argument("--round", type=int, help="round number: keep this round's files apart (README: Results log)")
         if name == "test":

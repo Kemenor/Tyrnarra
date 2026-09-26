@@ -142,6 +142,12 @@ def finish(rgba, fam, lv):
     t = np.asarray(im).astype(np.float32)
     lum = t[..., :3] @ LUMA
     g = 30 + 225 * np.clip((lum - lo) / max(1.0, hi - lo), 0, 1) ** gamma
+    if recipes.INNER_LIGHTEN:
+        # Bolder silhouette: strokes deep inside the shape fade toward white, the edge keeps its ink,
+        # so at map size a tree reads as a pale shape with a dark rim (like Wonderdraft's own art).
+        depth = ndimage.distance_transform_edt(t[..., 3] > 128)
+        w = np.clip((depth - recipes.INNER_EDGE) / recipes.INNER_EDGE, 0, 1) * recipes.INNER_LIGHTEN
+        g = g + (255 - g) * w
     pad = recipes.OUTLINE + 2
     a = np.pad(t[..., 3] / 255, pad)
     g = np.pad(g, pad)
@@ -166,9 +172,9 @@ def texture(fam, n):
     return "user://assets/Tyrnarra/sprites/%s/%s/%s" % (fam["kind"], fam["pack_folder"], fam["file"].format(n=n))
 
 
-def install(sprites, fam):
-    """Replace the pack folder's contents with `sprites`; returns the folder."""
-    folder = pack_dir(fam)
+def install(sprites, fam, folder=None):
+    """Replace the pack folder's (or `folder`'s) contents with `sprites`; returns the folder."""
+    folder = folder or pack_dir(fam)
     shutil.rmtree(folder, ignore_errors=True)
     os.makedirs(folder)
     for n, sp in enumerate(sprites, 1):
