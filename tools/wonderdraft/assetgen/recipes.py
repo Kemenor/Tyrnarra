@@ -18,6 +18,7 @@ NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, sig
 STYLES = {
     "ink": "black ink outlines with soft watercolor wash shading, hand-drawn fantasy cartography",
     "sepia": "sepia brown ink linework with light wash shading, antique map illustration",
+    "icon": "bold black ink outlines, cream white walls, flat red roofs, hand-drawn fantasy cartography",
 }
 
 FAMILIES = {
@@ -44,19 +45,23 @@ FAMILIES = {
         "file": "conifer_{n:02d}",
     },
     "broadleaf": {
+        # SDXL Turbo would not draw a short trunk or a wide crown (tall naturalistic trees,
+        # tree-of-life roots, circle frames); FLUX.2 does as asked (README: Prompting).
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no visible branches, no ground.",
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
                     "minimal shading, short visible trunk"),
         # Oaks and hazels were Main's two big broadleaf families; the rest adds temperate variety.
-        "variants": ["oak tree, broad rounded billowing crown",
-                     "old oak tree, wide spreading crown, gnarled trunk",
-                     "hazel tree, several thin stems, bushy round crown",
-                     "beech tree, smooth trunk, dense domed crown",
-                     "linden tree, tall rounded crown",
-                     "young deciduous tree, small round crown",
-                     "maple tree, full round lobed crown",
-                     "ash tree, open airy crown"],
-        "builtin": "res://sprites/trees/_hd_oak/",
+        "variants": ["oak tree: one big round puffy crown of scalloped leafy bumps, wider than it is tall, on a very short stubby trunk",
+                     "old oak tree: a broad spreading crown of billowing lobes, much wider than tall, on a short thick trunk",
+                     "hazel: a bushy round crown on several thin short stems",
+                     "beech tree: a dense smooth domed crown on a short straight trunk",
+                     "linden tree: a tall rounded egg-shaped crown on a short trunk",
+                     "young tree: a small round crown on a thin short trunk",
+                     "maple tree: a full round crown with a lobed wavy edge on a short trunk",
+                     "ash tree: an open airy crown of a few rounded leaf clusters on a short trunk"],
+        "builtin": "res://sprites/trees/_hd_oak/", "place": "fit",
         # Main's broadleaves since the pack swap (built-in oak, hazel and leafy tree became Dotty's oaks).
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks/",
         "kind": "trees",
@@ -66,7 +71,286 @@ FAMILIES = {
         "pack_folder": "Tyrnarra_Broadleaves",
         "file": "broadleaf_{n:02d}",
     },
+    "willow": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading, short visible trunk"),
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no ground.",
+        "variants": ["weeping willow tree, round crown of long drooping curtains of leaves",
+                     "old weeping willow, wide crown hanging down to the ground",
+                     "young willow tree, small drooping crown",
+                     "willow by the water, leaning trunk, drooping branches"],
+        "builtin": "res://sprites/trees/_hd_willow/", "place": "fit",
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",
+        "kind": "trees", "size": (260, 264), "radius": 128, "offset_y": -110, "aspect": (0.75, 1.5),
+        "pack_folder": "Tyrnarra_Willows", "file": "willow_{n:02d}",
+    },
+    "pine": {
+        # Mediterranean and mountain pines: Main's built-in cedars and umbrella pines, both
+        # Dotty's pines since the swap. Round 7's "drooping boughs" conifers drew these unasked.
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading, visible trunk"),
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no ground.",
+        "variants": ["umbrella pine, flat wide canopy on a tall bare trunk",
+                     "cedar tree with flat layered horizontal tiers of foliage",
+                     "old gnarled pine with a few cloud-like foliage pads",
+                     "Scots pine, tall trunk with a rounded irregular crown",
+                     "windswept mountain pine, crown blown to one side"],
+        "builtin": "res://sprites/trees/_hd_cedar/", "place": "fit",
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines/",
+        "kind": "trees", "size": (272, 300), "radius": 90, "offset_y": -130, "aspect": (0.6, 1.8),
+        "pack_folder": "Tyrnarra_Pines", "file": "pine_{n:02d}",
+    },
+    "jungle": {
+        # Rainforest canopy trees: Main's jungles are Dotty's kapoks (no built-in counterpart).
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading"),
+        "variants": ["tropical rainforest tree: a huge wide flat canopy of leafy clumps on a tall straight trunk",
+                     "kapok tree: a broad layered canopy over a trunk with wide buttress roots",
+                     "jungle tree: a dense round crown hung with a few vines",
+                     "young jungle tree: big glossy leaves in a round crown on a slim trunk",
+                     "strangler fig: a tangled trunk under a broad dense crown"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/",
+        "kind": "trees", "size": (340, 320), "radius": 100, "offset_y": -140, "aspect": (0.6, 1.6),
+        "pack_folder": "Tyrnarra_Jungle", "file": "jungle_{n:02d}",
+    },
+    "palm": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale leaves drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading"),
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["coconut palm tree, curved trunk, crown of long feathery fronds",
+                     "date palm, straight ringed trunk, dense round crown of fronds",
+                     "short fan palm with a bushy crown",
+                     "pair of leaning palm trees"],
+        "builtin": "res://sprites/trees/toon_palm/", "place": "fit",
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Palms/",
+        "kind": "trees", "size": (160, 240), "radius": 36, "offset_y": -100, "aspect": (1.0, 2.6),
+        "pack_folder": "Tyrnarra_Palms", "file": "palm_{n:02d}",
+    },
+    "bamboo": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale leaves drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading"),
+        "flux": "A {variant}, drawn as a symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["clump of tall bamboo stalks with leafy tops",
+                     "small grove of bamboo, stalks of different heights",
+                     "single tall bamboo cluster bending slightly"],
+        "replaces": "user://assets/Nibroc's Bamboo Forest/sprites/trees/Bamboo Trees/",
+        "kind": "trees", "size": (170, 300), "radius": 40, "offset_y": -130, "aspect": (1.2, 3.0),
+        "pack_folder": "Tyrnarra_Bamboo", "file": "bamboo_{n:02d}",
+    },
+    "deadtree": {
+        # Blighted lands, swamps and winter; not in Main yet, compared with Dotty's dead trees.
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, drawn with confident ink lines, lots of white paper showing, minimal shading"),
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["dead leafless tree with gnarled bare branches",
+                     "broken dead tree stump with a few crooked branches",
+                     "twisted dead tree leaning to one side",
+                     "bare winter tree with a round crown of thin branches"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Dead_Trees/",
+        "kind": "trees", "size": (250, 300), "radius": 70, "offset_y": -130, "aspect": (0.7, 2.0),
+        "pack_folder": "Tyrnarra_Dead_Trees", "file": "deadtree_{n:02d}",
+    },
+    "savanna": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
+                    "minimal shading"),
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["acacia tree, flat-topped umbrella crown on a thin forked trunk",
+                     "wide acacia tree, very flat broad crown",
+                     "baobab tree, huge thick bottle-shaped trunk with a small crown of stubby branches",
+                     "small thorny savanna tree"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
+        "compare": ["user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
+                    "user://assets/Dotty_Assets/sprites/trees/Dotty_Baobabs/"],
+        "kind": "trees", "size": (340, 250), "radius": 90, "offset_y": -105, "aspect": (0.45, 1.5),
+        "pack_folder": "Tyrnarra_Savanna", "file": "savanna_{n:02d}",
+    },
+    "desert": {
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, drawn with a few confident ink lines, lots of white paper showing, minimal shading"),
+        "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["saguaro cactus with two raised arms",
+                     "tall saguaro cactus with one arm",
+                     "round barrel cactus cluster",
+                     "prickly pear cactus with flat paddle pads"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Cactuses/",
+        "kind": "trees", "size": (150, 240), "radius": 40, "offset_y": -100, "aspect": (0.7, 2.6),
+        "pack_folder": "Tyrnarra_Cactuses", "file": "cactus_{n:02d}",
+    },
+    "fungal": {
+        # Giant-mushroom forests for strange and underground lands.
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, drawn with a few confident ink lines, lots of white paper showing, minimal shading"),
+        "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map. No ground.",
+        "variants": ["giant mushroom with a wide round cap on a tall stem",
+                     "cluster of three giant mushrooms of different heights",
+                     "giant toadstool with a spotted domed cap",
+                     "tall thin giant mushroom with a small conical cap"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Mushrooms/",
+        "kind": "trees", "size": (240, 260), "radius": 70, "offset_y": -110, "aspect": (0.6, 2.2),
+        "pack_folder": "Tyrnarra_Mushrooms", "file": "mushroom_{n:02d}",
+    },
+
+    # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
+    "peaks": {
+        "shape": "mountain", "canvas": (1216, 832),
+        "subject": ("a single {variant} drawn as a mountain symbol for a fantasy map, stylized, bold black ink "
+                    "outline, white snowy face with a few hatching lines on the shaded side, flat base, simple shape "
+                    "readable at small size"),
+        "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
+        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
+                     "sky, clouds, trees, several mountains, mountain range, parchment, border, frame, cropped, blurry"),
+        "variants": ["tall jagged mountain peak",
+                     "pair of sharp peaks, one taller than the other",
+                     "craggy mountain with a snowy summit",
+                     "broad mountain with two summits",
+                     "steep rocky spire",
+                     "mountain with a long ridge sloping down to one side"],
+        "builtin": "res://sprites/mountains/playful_jagged_peaks/", "place": "fit", "match": "width",
+        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1/",
+        "kind": "mountains",
+        "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
+        "radius": 45, "offset_y": 0, "aspect": (0.4, 1.1), "fill": (0.25, 0.9),
+        "pack_folder": "Tyrnarra_Peaks", "file": "peak_{n:02d}",
+    },
+    "fells": {
+        "shape": "mountain", "canvas": (1216, 832),
+        "subject": ("a single {variant} drawn as a mountain symbol for a fantasy map, stylized, bold black ink "
+                    "outline, pale face with a few soft hatching lines on the shaded side, flat base, simple shape "
+                    "readable at small size"),
+        "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
+        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
+                     "sky, clouds, trees, several mountains, mountain range, parchment, border, frame, cropped, blurry"),
+        "variants": ["rounded old mountain with a soft dome top",
+                     "worn mountain with two gentle humps",
+                     "broad rounded mountain with a shallow saddle",
+                     "low rounded mountain with a rocky shoulder"],
+        "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "width",
+        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2/",
+        "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.25, 1.0), "fill": (0.25, 0.9),
+        "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
+    },
+    "hills": {
+        "shape": "mountain", "canvas": (1216, 832),
+        "subject": ("a single {variant} drawn as a hill symbol for a fantasy map, stylized, bold black ink outline, "
+                    "pale face with a few short hatching strokes on the shaded side, flat base, simple shape"),
+        "flux": "A single {variant}, drawn as a hill symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
+        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
+                     "sky, clouds, trees, mountains, parchment, border, frame, cropped, blurry"),
+        "variants": ["low rounded grassy hill", "pair of gentle rolling hills", "long low hill with a soft slope",
+                     "small steep knoll"],
+        "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
+        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
+        "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.18, 0.7), "fill": (0.25, 0.9),
+        "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",
+    },
+    "dunes": {
+        "shape": "mountain", "canvas": (1216, 832),
+        "subject": ("a single {variant} drawn as a symbol for a fantasy map, stylized, bold black ink outline, "
+                    "pale sand with a few curved hatching lines on the shaded side, flat base, simple shape"),
+        "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
+        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
+                     "sky, clouds, trees, mountains, parchment, border, frame, cropped, blurry"),
+        "variants": ["crescent sand dune with a sharp crest", "long low sand dune", "pair of sand dunes",
+                     "tall sand dune with a curling crest"],
+        "builtin": "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_small/", "place": "fit", "match": "width",
+        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Dunes/",
+        "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.12, 0.55), "fill": (0.25, 0.95),
+        "pack_folder": "Tyrnarra_Dunes", "file": "dune_{n:02d}",
+    },
+
+    # --- icons: recolourable (Wonderdraft custom colours: R lines, G walls, B roofs) -------------
+    "settlements": {
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        "flux": "A {variant}, drawn as a settlement symbol for a hand-drawn fantasy map, seen from a slightly raised side view.",
+        "items": [("hamlet", "hamlet of two small cottages with thatched roofs"),
+                  ("village", "village of five cottages around a small chapel"),
+                  ("town", "small town of tall houses around a church tower"),
+                  ("walled_town", "town behind a low round stone wall with a gate"),
+                  ("city", "large city of many tightly packed houses, towers and a cathedral"),
+                  ("walled_city", "large city inside a ring of stone walls with towers"),
+                  ("capital", "grand capital city behind high walls, with a domed palace and tall towers"),
+                  ("castle", "castle with a keep and four corner towers"),
+                  ("fortress", "massive stone fortress with thick walls and a gatehouse"),
+                  ("tower", "lone tall stone watchtower"),
+                  ("port", "harbour town with houses, a lighthouse and a jetty with a small ship"),
+                  ("temple", "temple with columns and a dome"),
+                  ("monastery", "walled monastery with a bell tower"),
+                  ("ruins", "ruined castle with broken walls and a collapsed tower"),
+                  ("mine", "mine entrance in a rock face with a wooden headframe"),
+                  ("farmstead", "farmstead with a barn, a windmill and a fenced field"),
+                  ("camp", "camp of several tents around a campfire"),
+                  ("inn", "roadside inn with a hanging sign and a stable")],
+        "per_item": 3,
+        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
+        "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
+        "pack_folder": "Tyrnarra_Settlements", "file": "{item}_{n}",
+    },
+    "god_cities": {
+        # One themed icon per Bound god-city, from docs/god-city-seeds.md (open, chronicler-tier
+        # features only: what a traveller sees).
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        "flux": "A {variant}, drawn as a city symbol for a hand-drawn fantasy map, seen from a slightly raised side view.",
+        "items": [("merkavar", "lakeside trade city of domed market halls and awnings, a ring of market boats and barges moored along its shore"),
+                  ("myrria", "dark hillside city of narrow towers, its long winding stairways lit by lanterns"),
+                  ("eldara", "city carved into a smoking volcano, with stone halls, forge chimneys and wild wooden scaffolding"),
+                  ("uravel", "scatter of small islets with houses, linked by ropes and hanging bells, glass domes half-sunk in the water beneath"),
+                  ("haizava", "city of sails, wind vanes and windmills, its towers linked by rope bridges"),
+                  ("lurrath", "massive round ring of stone walls enclosing a solid squat stone city with ramps and a great central keep"),
+                  ("ljosarn", "lakeside city of lanterns around a tall beacon tower shining rays of light"),
+                  ("thekkavar", "great academy of domes, towers and libraries above stairs descending deep into the ground"),
+                  ("lograth", "two great buildings facing across one square, a royal palace and a temple crowned with scales, tall towers linked by aerial lines"),
+                  ("veidrath", "ancient stone temple core ringed by newer stone districts with an airship mooring tower, circles of tents around it"),
+                  ("nahaskel", "jumble of mismatched crooked buildings and impossible twisting towers stacked on top of each other"),
+                  ("valreka", "city with a palace and a temple built on the back of a giant whale swimming in the sea, smaller whales carrying houses beside it"),
+                  ("frae_city", "city on a great rock floating above a lake, held down by seven huge chains")],
+        "per_item": 2,
+        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
+        "kind": "symbols", "size": (320, 260), "radius": 80, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
+        "pack_folder": "Tyrnarra_God_Cities", "file": "{item}_{n}",
+    },
 }
+
+# FLUX.2 styles (comfy.flux_images; natural sentences, no negative prompt). Greyscale families
+# become greyscale anyway; "icon" asks for flat colours that sprites.finish_cc sorts into its
+# three colour masks (ink lines, pale walls, coloured roofs).
+FLUX_STYLES = {
+    "ink": ("Black ink with a light grey wash: a bold clean outline, a pale fill with only a few confident strokes "
+            "inside, soft shading on one side. Simple and readable at small size. Isolated on a plain white "
+            "background, nothing else in the image."),
+    "sepia": ("Sepia-brown ink with a pale warm wash: a bold clean outline, a light fill with a few fine hatching "
+              "strokes, shading on one side. Simple and readable at small size. Isolated on a plain white "
+              "background, nothing else in the image."),
+    "icon": ("Bold black ink outlines; walls left plain cream-white with light grey shading; roofs, flags and domes "
+             "painted in flat red. Simple, clean and readable at small size. Isolated on a plain white background, "
+             "nothing else in the image, no ground, no text."),
+}
+FLUX_BATCH = 4        # images per FLUX graph (the model stack loads once per graph)
+
+
+def variants(fam):
+    """The subject variants of a family: its items' descriptions, or its variants."""
+    return [d for _, d in fam["items"]] if "items" in fam else (fam.get("variants") or [""])
+
+
+def prompt(fam, style, seed, engine):
+    """The prompt for one seed: the family's variant seed % len, in the engine's wording."""
+    v = variants(fam)[seed % len(variants(fam))]
+    if engine == "flux":
+        return fam["flux"].format(variant=v) + " " + FLUX_STYLES[style]
+    return fam["subject"].format(variant=v) + FRAME + ", " + STYLES[style]
+
+
+def styles(fam):
+    return fam.get("styles", ["ink", "sepia"])
+
 
 # Sprite finishing (sprites.py). Wonderdraft multiplies greyscale tree art by the ground colour,
 # so the grey values decide how much ground shows through: its own conifers are near-white
@@ -78,6 +362,10 @@ OUTLINE_GREY = 28
 DEFRINGE = 0          # px eaten from the soft edge under the ring (the cut edge is colour-cleaned already)
 INNER_LIGHTEN = 0.7   # 0-1: how far strokes inside the shape fade toward white (sprites.finish)
 INNER_EDGE = 6        # px from the edge where that fading starts (full at twice this)
+# Custom-colour art (icons; sprites.finish_cc): R = ink lines, G = body, B = accents.
+OUTLINE_CC = 3        # solid ink ring, px
+CC_INK_LUM = 0.42     # luminance below which a pixel turns into ink (fully by 0.17)
+CC_ACCENT_SAT = 0.28  # saturation above which a pixel is an accent (roof, banner) rather than body
 
 # Generation (generate.py): SDXL Turbo on the tower's ComfyUI, ~5 s per image.
 CHECKPOINT = "DreamShaperXL_Turbo_v2.1.safetensors"

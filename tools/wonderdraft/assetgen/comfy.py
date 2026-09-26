@@ -90,29 +90,37 @@ FLUX_MODELS = {"unet": "flux2-dev-Q4_K_M.gguf", "clip": "mistral_3_small_flux2_f
                "vae": "flux2-vae.safetensors", "turbo_lora": "Flux_2-Turbo-LoRA_comfyui.safetensors"}
 
 
-def flux_with_mask(prompt, seed, width, height, bg_model, steps=8, guidance=4.0, prefix="tyrnarra/assetgen"):
-    """FLUX.2 [dev] (GGUF) with the Turbo LoRA plus a BiRefNet foreground mask: outputs [image, mask].
-    Slower than SDXL Turbo but follows shape instructions (a short trunk, a wide crown) that
-    SDXL ignores. It takes no negative prompt."""
-    return {
+def flux_images(jobs, steps=8, guidance=4.0, prefix="tyrnarra/assetgen"):
+    """FLUX.2 [dev] (GGUF Q4) with the Turbo LoRA, several images in one graph so the big models
+    load once: jobs = [(prompt, seed, width, height)], outputs one image per job, in order.
+    FLUX follows shape instructions (a short trunk, a wide crown, a whale under a city) that
+    SDXL Turbo ignores. No negative prompt, and no background-removal model: the drawings come
+    on clean white, which sprites.flood_mask cuts out locally.
+
+    The tower's server must run with npc_art's flags (--cache-none --reserve-vram 2.0
+    --cpu-vae; tools/imageGen/npc_art.py): without them a second FLUX job wedged the LAN server
+    in a model load that /interrupt cannot stop (2026-09-27). About 4 min per image there."""
+    g = {
         "u": {"class_type": "UnetLoaderGGUF", "inputs": {"unet_name": FLUX_MODELS["unet"]}},
         "lo": {"class_type": "LoraLoaderModelOnly", "inputs": {
             "lora_name": FLUX_MODELS["turbo_lora"], "strength_model": 1.0, "model": ["u", 0]}},
         "c": {"class_type": "CLIPLoader", "inputs": {"clip_name": FLUX_MODELS["clip"], "type": "flux2", "device": "default"}},
         "v": {"class_type": "VAELoader", "inputs": {"vae_name": FLUX_MODELS["vae"]}},
         "ks": {"class_type": "KSamplerSelect", "inputs": {"sampler_name": "euler"}},
-        "t": {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["c", 0]}},
-        "g": {"class_type": "FluxGuidance", "inputs": {"guidance": guidance, "conditioning": ["t", 0]}},
-        "bg": {"class_type": "BasicGuider", "inputs": {"model": ["lo", 0], "conditioning": ["g", 0]}},
-        "fs": {"class_type": "Flux2Scheduler", "inputs": {"steps": steps, "width": width, "height": height}},
-        "el": {"class_type": "EmptyFlux2LatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}},
-        "rn": {"class_type": "RandomNoise", "inputs": {"noise_seed": seed}},
-        "sa": {"class_type": "SamplerCustomAdvanced", "inputs": {
-            "noise": ["rn", 0], "guider": ["bg", 0], "sampler": ["ks", 0], "sigmas": ["fs", 0], "latent_image": ["el", 0]}},
-        "vd": {"class_type": "VAEDecode", "inputs": {"samples": ["sa", 0], "vae": ["v", 0]}},
-        "7": {"class_type": "SaveImage", "inputs": {"images": ["vd", 0], "filename_prefix": prefix}},
-        "8": {"class_type": "LoadBackgroundRemovalModel", "inputs": {"bg_removal_name": bg_model}},
-        "9": {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["8", 0], "image": ["vd", 0]}},
-        "10": {"class_type": "MaskToImage", "inputs": {"mask": ["9", 0]}},
-        "11": {"class_type": "SaveImage", "inputs": {"images": ["10", 0], "filename_prefix": prefix + "_mask"}},
     }
+    for i, (prompt, seed, width, height) in enumerate(jobs):
+        k = str(i)
+        g["t" + k] = {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["c", 0]}}
+        g["g" + k] = {"class_type": "FluxGuidance", "inputs": {"guidance": guidance, "conditioning": ["t" + k, 0]}}
+        g["bg" + k] = {"class_type": "BasicGuider", "inputs": {"model": ["lo", 0], "conditioning": ["g" + k, 0]}}
+        g["fs" + k] = {"class_type": "Flux2Scheduler", "inputs": {"steps": steps, "width": width, "height": height}}
+        g["el" + k] = {"class_type": "EmptyFlux2LatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}}
+        g["rn" + k] = {"class_type": "RandomNoise", "inputs": {"noise_seed": seed}}
+        g["sa" + k] = {"class_type": "SamplerCustomAdvanced", "inputs": {
+            "noise": ["rn" + k, 0], "guider": ["bg" + k, 0], "sampler": ["ks", 0], "sigmas": ["fs" + k, 0],
+            "latent_image": ["el" + k, 0]}}
+        g["vd" + k] = {"class_type": "VAEDecode", "inputs": {"samples": ["sa" + k, 0], "vae": ["v", 0]}}
+        # Numeric ids in job order: run() returns output images sorted by node id.
+        g[str(1000 + i)] = {"class_type": "SaveImage", "inputs": {"images": ["vd" + k, 0],
+                                                                  "filename_prefix": "%s_%d" % (prefix, seed)}}
+    return g

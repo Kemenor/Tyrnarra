@@ -11,6 +11,7 @@ assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/sh
 assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into the Tyrnarra pack
 assetgen.sh test conifer --round 7 --offline      # drawn here in seconds: Main's art vs round 6 vs round 7
 assetgen.sh test conifer --round 7                # the same from a real Wonderdraft export (hands off ~3 min)
+assetgen.sh builtin-refs                          # once: the built-ins as local reference sprites (lineups)
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -37,8 +38,15 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   `TYRNARRA_COMFY`. The same goes for anything else private (keys live in the gitignored
   `tools/keys/`).
 - Models used: `DreamShaperXL_Turbo_v2.1` (SDXL Turbo, 7 steps, ~5 s per 832x1216 image) and
-  `birefnet.safetensors` (BiRefNet Swin-L, MIT) for the built-in RemoveBackground node. Also on
-  the tower: Juggernaut XL, NoobAI XL, IP-Adapter for SDXL, FLUX.2 dev (GGUF Q4, ~2 min/image).
+  `birefnet.safetensors` (BiRefNet Swin-L, MIT) for the built-in RemoveBackground node; FLUX.2
+  dev (GGUF Q4 + Turbo LoRA, 8 steps) for the `engine: flux` families. Also on the tower:
+  Juggernaut XL, NoobAI XL, IP-Adapter for SDXL.
+- **FLUX needs the server started with npc_art's flags**: `--cache-none --reserve-vram 2.0
+  --cpu-vae` (tools/imageGen/npc_art.py, `ensure_server`, explains each). The plain LAN server
+  ran one FLUX image (435 s) and then wedged in a model load that `/interrupt` cannot stop; only
+  a restart on the tower frees it (2026-09-27). With the flags npc_art measured ~221 s per image.
+  FLUX graphs here skip BiRefNet: the drawings come on clean white, cut locally
+  (`sprites.flood_mask`).
 - `assetgen.sh` builds its own gitignored `.venv` (numpy, scipy, pillow) on first run.
 - `test` needs Wonderdraft installed as for `wd-regions --export`, and closed (`test --offline` does not).
 
@@ -97,6 +105,12 @@ What worked and what did not, in the order we found it (2026-09-26):
    the same fir and a dense forest read as a repeated arrowhead texture.
 10. Ink and sepia converge after greyscale and levels; they are kept as two prompt styles feeding
    one pack, not as two looks.
+11. **SDXL Turbo has shapes it will not draw.** A broadleaf tree with a short trunk under a wide
+   crown was one: every wording gave long trunks, roots or tree-of-life circles (Results log,
+   broadleaf trials). "Oak" alone summons the tree-of-life; "icon" summons a round badge.
+12. **FLUX.2 takes plain sentences and follows them**: shape, proportions, what to leave out
+   ("no roots, no visible branches, no ground"). No negative prompt. Keep place names out of
+   the prompt (it would letter them); describe what is seen.
 
 ## Finishing (sprites.py, constants in recipes.py)
 
@@ -232,8 +246,69 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   little darker than the built-ins' 86/32% and read as distinct treetops with dark gaps, like the
   built-ins and Dotty; at full size a bold ink rim with a clean pale inside. Its settings are the
   new defaults in recipes.py (`OUTLINE` 4, `INNER_LIGHTEN` 0.7).
+- **Round 11 installed** (overnight decision): round 9's finishing on all 400 conifer images
+  (seeds 1-200, both wordings, ink and sepia): 279 usable, **64 installed** for more variety.
+  Real export 83/37%, reads like round 9. The installed conifer set since 2026-09-27.
+- **Broadleaf prompt trials** (2026-09-27, SDXL Turbo, square canvas): the conifer wording gave
+  tall naturalistic watercolour trees with long trunks and visible branching, taller than wide.
+  "Cloud-shaped crown" pulled in clouds and mountains behind the tree; "icon" put it in a
+  circular badge; "coloring book" and "oak" drew tree-of-life oaks with roots, in circles;
+  "storybook cartoon tree" still gave a big trunk and roots. SDXL Turbo will not draw a short
+  trunk under a wide crown. **FLUX.2** did exactly as asked on the first image (a clean ink map
+  tree, puffy round crown, short trunk, bold outline, pale fill, soft grey wash on one side), so
+  broadleaf and jungle are FLUX families (`engine`). But the tower's LAN server wedged on the
+  second FLUX job (README: Setup); nothing more was generated that night.
 
-## Families still to do
+## Families
+
+`recipes.FAMILIES` holds one entry per family; `generate`, `build` and `test` take its name.
+Written 2026-09-27; only the conifers are generated and installed so far.
+
+| Family | Engine | Built-in yardstick | Replaces in Main | Pack folder |
+|---|---|---|---|---|
+| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 11, 64) |
+| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` |
+| willow | SDXL | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` |
+| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` |
+| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` |
+| palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` |
+| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` |
+| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` |
+| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` |
+| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` |
+| fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` |
+| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` |
+| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` |
+| dunes | SDXL | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` |
+| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` |
+| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` |
+
+- **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
+  the built-in texture that stood there (area for trees, width for mountains, which are built
+  side by side), so a family's delivered `size` only sets its resolution and hand-placed size.
+  Mountains are delivered at 3x the built-ins' size (131 x 92 for jagged peaks) to stay sharp
+  at `Main`'s scales. Conifers keep the rounds-1-11 placement (the built-in's scale as is).
+- **SDXL or FLUX**: SDXL Turbo (5 s per image) where its drawings work; FLUX.2 (about 4 min
+  per image) where the shape matters and SDXL ignores it. `generate --engine` overrides. Each
+  family also has the other engine's prompt, so switching needs no new wording.
+- **Icons** (`shape: icon`, `draw: custom_colors`): recolourable Wonderdraft art. Each pixel is
+  drawn as R x colour 1 + G x colour 2 + B x colour 3 with colours picked per symbol. Ours: **R
+  ink lines, G walls and body, B roofs, flags and domes**, each channel keeping the drawing's
+  shading (`sprites.finish_cc`: dark pixels become ink, saturated ones accents, the rest body;
+  a 3 px ink ring). BSG's icons, which `Main` uses, put lines in R and the body in G and leave B
+  empty, so the same three colours work for both. The icon prompt asks for flat red roofs on
+  cream walls so the sorting is easy. Families with `items` build named icons (`village_1`,
+  `village_2`, ...): up to `per_item` usable drawings of each.
+- **God-city icons** use only what a traveller sees (docs/god-city-seeds.md, chronicler tier):
+  Valreka's city on a whale, Frae City's chained rock over a lake, Haizava's sails and vanes,
+  Lurrath's stone ring, Ljosarn's beacon, and so on. The names stay out of the prompt, so FLUX
+  writes no text.
+- A family with nothing in `Main` to swap gets only the lineup from `test --offline`.
+
+## Built-in art in Main before the swap
+
+By use (13,128 symbols):
 
 Main's tree art now sits in Dotty folders, each standing in for several built-in families:
 `Dotty_Pines` (conifers, in progress), `Dotty_Oaks` (built-in oak 1518 + hazel 945 + leafy
@@ -243,8 +318,6 @@ broadleaf one that replaces `Dotty_Oaks`. Sizes measured on the calibration grid
 click point): oak 353 x 301, foot 24, centre -130, height/width 0.74-1.12; hazel 214 x 233,
 foot 26, centre -90, 0.83-1.71. The pre-swap copy of `Main` still tells which Dotty oak was
 an oak and which a hazel (same positions), so a test could give each its own variants.
-
-Built-in art in `Main` before the swap, by use (13,128 symbols):
 
 | Uses | Built-in family | | Uses | Built-in family |
 |---:|---|---|---:|---|
@@ -261,6 +334,7 @@ Built-in art in `Main` before the swap, by use (13,128 symbols):
 | 298 | mountains/playful_rounded_mountains | | 23 | trees/toon_palm |
 |  |  | | 24 | sand dunes large + penned mountains small |
 
-A new family needs a `FAMILIES` entry: its subject prompt with shape variants, the folder of
-`Main` it replaces, and its scale-1 size and anchor from builtin-sizes.json as above. The pack
-can hold more variants than Wonderdraft's built-ins (it has 9 conifers; we install 40).
+A new family needs a `FAMILIES` entry: its SDXL and FLUX wording with shape variants, the
+built-in yardstick and the folder of `Main` it replaces, its scale-1 size and anchor from
+builtin-sizes.json. The pack can hold more variants than Wonderdraft's built-ins (it has 9
+conifers; we install 64).

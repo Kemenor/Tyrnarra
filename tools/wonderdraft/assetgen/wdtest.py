@@ -95,7 +95,7 @@ def swap(symbols, fam, folder=None, placed=None):
     one takes the built-in's scale and mirroring and the recipe's anchor; else it is fitted to
     the art it replaces. Returns how many."""
     old = {t["texture"]: t for t in packswap.pack_folder(fam["replaces"].rstrip("/"))[0]}
-    files, _ = packswap.pack_folder(sprites.texture(fam, 1).rsplit("/", 1)[0], folder)
+    files, _ = packswap.pack_folder(sprites.texture_folder(fam), folder)
     if not files:
         raise SystemExit("no sprites in %s" % (folder or sprites.pack_dir(fam)))
     n = 0
@@ -105,8 +105,15 @@ def swap(symbols, fam, folder=None, placed=None):
             b = placed.get(_key(s))
             if b is None:
                 continue   # stood in for another built-in family
-            s["scale"] = type(s["scale"])(b["scale"][0], b["scale"][1])
-            s["offset"] = type(s["offset"])(0, fam["offset_y"])
+            if fam.get("place") == "fit":
+                # Cover the measured drawn size of the built-in texture that stood here.
+                scale, off = packswap.fit(b["scale"][0], packswap._size_for(SIZES(), b["texture"]), t,
+                                          fam.get("match", "area"))
+                s["scale"] = type(s["scale"])(scale, scale)
+                s["offset"] = type(s["offset"])(*off)
+            else:
+                s["scale"] = type(s["scale"])(b["scale"][0], b["scale"][1])
+                s["offset"] = type(s["offset"])(0, fam["offset_y"])
             s["mirror"] = b.get("mirror", False)
         else:
             scale, off = packswap.fit(s["scale"][0], packswap.drawn(old[s["texture"]], s["offset"]), t)
@@ -116,6 +123,17 @@ def swap(symbols, fam, folder=None, placed=None):
         s["radius"] = fam["radius"]
         n += 1
     return n
+
+
+_sizes = {}
+
+
+def SIZES():
+    """builtin-sizes.json, loaded once."""
+    if not _sizes:
+        with open(packswap.SIZES) as f:
+            _sizes.update(json.load(f))
+    return _sizes
 
 
 def round_dir(fam, n):
@@ -213,6 +231,8 @@ def _boxes(fam, base, pre):
 
 def run(fam, out_dir, export=True, n=None, log=print):
     """Real Wonderdraft test: test map (and the reference if stale) exported, then compared."""
+    if not _in_main(fam, WDMap.load(BASE_MAP).symbols):
+        raise SystemExit("nothing of %s in Main to swap; use --offline for its lineup" % fam["name"])
     log("Test map from %s:" % os.path.basename(BASE_MAP))
     placed, pre = builtin_placements(fam)
     path = make_map(fam, n, placed, log)
@@ -232,10 +252,27 @@ def run(fam, out_dir, export=True, n=None, log=print):
     return compare(boxes, [(label, im.crop) for label, im in columns], out_dir, log=log)
 
 
+def _in_main(fam, base):
+    return bool(fam.get("replaces")) and any(True for _ in _family(base, fam["replaces"]))
+
+
 def offline(fam, out_dir, n=None, log=print):
-    """The same comparison with our columns drawn here (render.py), and a lineup."""
+    """The same comparison with our columns drawn here (render.py), and a lineup. A family with
+    nothing to replace in Main (icons, biomes Main does not have yet) gets the lineup only."""
     import render
     base = WDMap.load(BASE_MAP).symbols
+    sets = []
+    if n:
+        prev = _earlier(n, lambda k: os.path.join(round_dir(fam, k), "sprites"))
+        if prev:
+            sets.append(("Round %d" % prev[0], prev[1]))
+        sets.append(("Round %d" % n, os.path.join(round_dir(fam, n), "sprites")))
+    else:
+        sets.append(("Tyrnarra pack", None))
+    if not _in_main(fam, base):
+        out = [lineup(_lineup_rows(fam, sets), os.path.join(out_dir, "lineup.jpg"))]
+        log("  nothing of this family in Main to swap; lineup: %s" % os.path.basename(out[0]))
+        return out
     placed, pre = builtin_placements(fam)
     boxes = _boxes(fam, base, pre)
     columns = []
@@ -245,14 +282,6 @@ def offline(fam, out_dir, n=None, log=print):
     main_now = "Main now: " + _art_name(fam)
     columns.append((main_now + " (drawn here)", lambda box: render.patch(base, box)) if stale
                    else (main_now, _open(ref).crop))
-    sets = []
-    if n:
-        prev = _earlier(n, lambda k: os.path.join(round_dir(fam, k), "sprites"))
-        if prev:
-            sets.append(("Round %d" % prev[0], prev[1]))
-        sets.append(("Round %d" % n, os.path.join(round_dir(fam, n), "sprites")))
-    else:
-        sets.append(("Tyrnarra pack", None))
     for label, folder in sets:
         syms = [dict(s) for s in base]
         swap(syms, fam, folder, placed)
@@ -265,34 +294,38 @@ def offline(fam, out_dir, n=None, log=print):
 
 
 def _lineup_rows(fam, sets):
+    """(label, files, custom colours?) per lineup row: built-ins, the bought art, each round."""
+    cc = fam.get("draw") == "custom_colors"
     rows = []
     if fam.get("builtin"):
         refs = os.path.join(BUILTIN_REFS, packswap.slug(fam["builtin"]))
         if os.path.isdir(refs):
             rows.append(("Wonderdraft built-ins", sorted(os.path.join(refs, f) for f in os.listdir(refs)
-                                                          if f.endswith(".png"))))
-    for folder in fam.get("compare", [fam["replaces"]]):
+                                                          if f.endswith(".png")), False))
+    for folder in fam.get("compare", [fam["replaces"]] if fam.get("replaces") else []):
         rows.append((folder.rstrip("/").rsplit("/", 1)[1].replace("_", " "),
-                     [t["file"] for t in packswap.pack_folder(folder.rstrip("/"))[0]]))
-    rows += [(label, [t["file"] for t in packswap.pack_folder(sprites.texture(fam, 1).rsplit("/", 1)[0], folder)[0]])
+                     [t["file"] for t in packswap.pack_folder(folder.rstrip("/"))[0]], cc))
+    rows += [(label, [t["file"] for t in packswap.pack_folder(sprites.texture_folder(fam), folder)[0]], cc)
              for label, folder in sets]
     return rows
 
 
-def lineup(rows, path, sizes=(150, 40), ground=(92, 140, 70), per_row=16):
-    """Each set's sprites side by side at full size and at map size, tinted like on grassland."""
+def lineup(rows, path, sizes=(150, 40), ground=(92, 140, 70), per_row=18):
+    """Each set's sprites side by side at full size and at map size, tinted like on grassland
+    (custom-colour art drawn with example colours: dark ink, cream walls, red roofs)."""
     font = ImageFont.truetype(FONT, 22)
     bands = []
-    for label, files in rows:
+    for label, files, cc in rows:
         files = files[:per_row]
         for h in sizes:
             tiles = []
             for f in files:
                 sp = Image.open(f).convert("RGBA")
                 sp = sp.resize((max(1, round(sp.width * h / sp.height)), h), Image.LANCZOS)
-                # Greyscale art multiplied by the ground colour, as Wonderdraft tints it.
                 bg = Image.new("RGB", sp.size, ground)
-                tiles.append(Image.composite(ImageChops.multiply(sp.convert("RGB"), bg), bg, sp.getchannel("A")))
+                # Greyscale art multiplied by the ground colour, as Wonderdraft tints it.
+                rgb = sprites.cc_colour(sp).convert("RGB") if cc else ImageChops.multiply(sp.convert("RGB"), bg)
+                tiles.append(Image.composite(rgb, bg, sp.getchannel("A")))
             bands.append((label if h == sizes[0] else None, tiles, h))
     width = max(sum(t.width + 6 for t in tiles) for _, tiles, _ in bands) + 20
     height = sum(h + 12 + (30 if label else 0) for label, _, h in bands) + 10

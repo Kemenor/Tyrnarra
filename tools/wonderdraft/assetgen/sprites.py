@@ -1,8 +1,10 @@
 """From generated images to Wonderdraft sprites.
 
-cut()       the subject out of one image: BiRefNet mask -> largest object, ground patch trimmed
+cut()       the subject out of one image: BiRefNet mask (or a flood fill of a clean white
+            background) -> largest object, a tree's ground patch trimmed
 check()     reasons to reject a cut-out (extra objects, cropped, odd proportions, ...)
-finish()    greyscale with the family's levels, resized to Wonderdraft's scale-1 size, outlined
+finish()    greyscale with the family's levels, resized to Wonderdraft's scale-1 size, outlined;
+            custom-colour families get R/G/B colour masks instead (finish_cc)
 install()   write a pack folder with the .wonderdraft_symbols file Wonderdraft reads
 """
 import json
@@ -23,10 +25,31 @@ def _disk(r):
     return x * x + y * y <= r * r
 
 
-def cut(rgb_path, mask_path):
-    """(rgba array, reason) for one generated image; rgba is None when the image is unusable."""
+def flood_mask(rgb):
+    """Foreground mask of a drawing on a clean white background, without a model: the
+    background is every near-white region that touches the image border. Enclosed white
+    (a pale crown inside its outline) stays foreground. Soft over the 2 px of the edge."""
+    border = np.concatenate([rgb[:8].reshape(-1, 3), rgb[-8:].reshape(-1, 3),
+                             rgb[:, :8].reshape(-1, 3), rgb[:, -8:].reshape(-1, 3)])
+    diff = np.abs(rgb - np.median(border, axis=0)).max(2)
+    lab, _ = ndimage.label(diff < 24)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    background = np.isin(lab, edge[edge > 0])
+    fg = ~background
+    soft = np.clip(diff / 60, 0, 1)
+    band = ndimage.binary_dilation(fg, iterations=2) & ~ndimage.binary_erosion(fg, iterations=1)
+    return np.where(band, np.maximum(soft, fg * 0.5), fg.astype(np.float32)).astype(np.float32)
+
+
+def cut(rgb_path, mask_path, shape="tree"):
+    """(rgba array, reason) for one generated image; rgba is None when the image is unusable.
+    Without a mask file the mask comes from flood_mask. Only trees get the ground trim: a
+    mountain's or a building's base is part of it."""
     rgb = np.asarray(Image.open(rgb_path).convert("RGB")).astype(np.float32)
-    mask = np.asarray(Image.open(mask_path).convert("L")).astype(np.float32) / 255
+    if mask_path and os.path.exists(mask_path):
+        mask = np.asarray(Image.open(mask_path).convert("L")).astype(np.float32) / 255
+    else:
+        mask = flood_mask(rgb)
     solid = mask > 0.5
     lab, n = ndimage.label(solid, structure=np.ones((3, 3)))
     if n == 0:
@@ -51,7 +74,7 @@ def cut(rgb_path, mask_path):
     crown_w = widths[top: top + int(span * 0.7)].max()
     narrow = [y for y in range(top + int(span * 0.4), bottom + 1) if 0 < widths[y] < 0.25 * crown_w]
     ground = None
-    if narrow:
+    if narrow and shape == "tree":
         trunk_top = narrow[0]
         run = [y for y in narrow if y - trunk_top < max(4, span * 0.05)]
         trunk_w = max(1.0, float(np.median(widths[run])))
@@ -106,10 +129,11 @@ def check(rgba, fam):
     crown = widths[: int(h * 0.85)].max()
     # The very base only: low branches and a root flare are part of the tree, a ground patch
     # the trim missed is about as wide as the crown.
-    if widths[int(h * 0.96):].max() > 0.55 * crown:
+    if fam.get("shape", "tree") == "tree" and widths[int(h * 0.96):].max() > 0.55 * crown:
         return "wide base (ground or bushes left)"
     fill = a.sum() / (h * w)
-    if not 0.3 <= fill <= 0.8:
+    lo, hi = fam.get("fill", (0.3, 0.8))
+    if not lo <= fill <= hi:
         return "fill %.2f" % fill
     return None
 
@@ -135,6 +159,8 @@ def levels(cutouts):
 
 def finish(rgba, fam, lv):
     """Greyscale sprite at Wonderdraft's scale-1 size, optionally with a solid outline ring."""
+    if fam.get("draw") == "custom_colors":
+        return finish_cc(rgba, fam)
     lo, hi, gamma = lv
     im = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
     th, tw = target_size(im.width, im.height, fam)
@@ -163,35 +189,94 @@ def finish(rgba, fam, lv):
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
 
 
+def finish_cc(rgba, fam):
+    """Custom-colour sprite at the family's scale-1 size. Wonderdraft draws each pixel as
+    R x colour 1 + G x colour 2 + B x colour 3 (the colours picked per symbol), so the channels
+    are masks: R the ink lines, G the body (walls, stone, ground), B the accents (roofs,
+    banners: whatever the drawing coloured). Each keeps the drawing's shading, so a wall in
+    shadow takes a darker shade of its colour; a solid ink ring of OUTLINE px goes round it."""
+    im = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
+    th, tw = target_size(im.width, im.height, fam)
+    o = recipes.OUTLINE_CC
+    im = im.resize((max(1, tw - 2 * o), max(1, th - 2 * o)), Image.LANCZOS)
+    t = np.asarray(im).astype(np.float32) / 255
+    rgb, a = t[..., :3], t[..., 3]
+    lum = rgb @ LUMA
+    mx, mn = rgb.max(2), rgb.min(2)
+    sat = (mx - mn) / np.maximum(mx, 1e-3)
+    ink = np.clip((recipes.CC_INK_LUM - lum) / 0.25, 0, 1)
+    accent = np.clip((sat - recipes.CC_ACCENT_SAT) / 0.2, 0, 1) * (1 - ink)
+    body = (1 - ink) * (1 - accent)
+    solid = a > 0.5
+
+    def shade(v, weight):
+        # Brightest tenth of the part = its full colour; darker parts a shade of it.
+        sel = solid & (weight > 0.5)
+        ref = np.percentile(v[sel], 90) if sel.sum() > 50 else 1.0
+        return np.clip(v / max(ref, 0.05), 0, 1)
+    R, G, B = ink, body * shade(lum, body), accent * shade(mx, accent)
+    pad = o + 2
+    R, G, B, a = (np.pad(c, pad) for c in (R, G, B, a))
+    if o:
+        outer = ndimage.grey_dilation(a, footprint=_disk(o))
+        R = R * a + (1 - a)
+        G, B = G * a, B * a
+        a = outer
+    out = np.dstack([R, G, B, a]) * 255
+    sprite = Image.fromarray(out.clip(0, 255).astype(np.uint8), "RGBA")
+    return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
+
+
 def pack_dir(fam):
     return os.path.join(os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra/sprites"), fam["kind"],
                         fam["pack_folder"])
 
 
+def texture_folder(fam):
+    return "user://assets/Tyrnarra/sprites/%s/%s" % (fam["kind"], fam["pack_folder"])
+
+
 def texture(fam, n):
-    return "user://assets/Tyrnarra/sprites/%s/%s/%s" % (fam["kind"], fam["pack_folder"], fam["file"].format(n=n))
+    return "%s/%s" % (texture_folder(fam), fam["file"].format(n=n))
 
 
-def install(sprites, fam, folder=None):
-    """Replace the pack folder's (or `folder`'s) contents with `sprites`; returns the folder."""
+def install(sprites, fam, folder=None, names=None):
+    """Replace the pack folder's (or `folder`'s) contents with `sprites`, saved under `names`
+    (default the family's numbered file names); returns the folder."""
     folder = folder or pack_dir(fam)
+    names = names or [fam["file"].format(n=n) for n in range(1, len(sprites) + 1)]
     shutil.rmtree(folder, ignore_errors=True)
     os.makedirs(folder)
-    for n, sp in enumerate(sprites, 1):
-        sp.save(os.path.join(folder, fam["file"].format(n=n) + ".png"))
+    for name, sp in zip(names, sprites):
+        sp.save(os.path.join(folder, name + ".png"))
     meta = {"name": os.path.basename(folder).replace("_", " "), "radius": fam["radius"],
-            "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": "sample_color"}
+            "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": fam.get("draw", "sample_color")}
     with open(os.path.join(folder, ".wonderdraft_symbols"), "w") as f:
         json.dump(meta, f, indent=4)
     return folder
 
 
-def contact_sheet(sprites, path, tint=(120, 170, 90), row_h=180, width=1600):
-    """Sprites tinted like Wonderdraft would on grassland, in rows."""
+CC_EXAMPLE = ((40, 30, 25), (226, 208, 170), (170, 62, 44))   # ink, walls, roofs for previews
+
+
+def cc_colour(sp, colours=CC_EXAMPLE):
+    """A custom-colour sprite drawn with example colours: R x c1 + G x c2 + B x c3."""
+    t = np.asarray(sp.convert("RGBA")).astype(np.float32) / 255
+    rgb = np.clip(t[..., :3] @ (np.array(colours, np.float32) / 255), 0, 1) * 255
+    out = Image.fromarray(np.dstack([rgb, t[..., 3] * 255]).astype(np.uint8), "RGBA")
+    return out
+
+
+def contact_sheet(sprites, path, tint=(120, 170, 90), row_h=180, width=1600, cc=False):
+    """Sprites tinted like Wonderdraft would on grassland (custom-colour ones drawn with
+    example colours), in rows."""
     tiles = []
     for sp in sprites:
         sp = sp.resize((max(1, round(sp.width * row_h / sp.height)), row_h), Image.LANCZOS)
-        rgb = ImageChops.multiply(sp.convert("RGB"), Image.new("RGB", sp.size, tint))
+        if cc:
+            rgb = cc_colour(sp).convert("RGB")
+        else:
+            rgb = ImageChops.multiply(sp.convert("RGB"), Image.new("RGB", sp.size, tint))
         tile = Image.new("RGB", sp.size, tint)
         tile.paste(rgb, (0, 0), sp.getchannel("A"))
         tiles.append(tile)

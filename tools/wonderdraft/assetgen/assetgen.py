@@ -41,30 +41,50 @@ def cmd_generate(a):
         sys.exit("No ComfyUI address: set TYRNARRA_COMFY or write it to %s (README: Setup)" % comfy.URL_FILE)
     if not comfy.alive():
         sys.exit("ComfyUI at %s is not answering; start it in LAN mode on the tower (README: Setup)" % comfy.HOST)
-    for style in a.style:
+    engine = a.engine or fam.get("engine", "sdxl")
+    width, height = fam.get("canvas", (recipes.WIDTH, recipes.HEIGHT))
+    negative = fam.get("negative", recipes.NEGATIVE)
+    for style in a.style or recipes.styles(fam):
         raw = os.path.join(WORK, fam["name"], style, "raw")
         os.makedirs(raw, exist_ok=True)
+        todo = []
         for seed in _seeds(a.seeds):
-            img = os.path.join(raw, "%d.png" % seed)
-            if os.path.exists(img):
+            if os.path.exists(os.path.join(raw, "%d.png" % seed)):
                 continue
-            variants = fam.get("variants") or [""]
-            prompt = (fam["subject"].format(variant=variants[seed % len(variants)])
-                      + recipes.FRAME + ", " + recipes.STYLES[style])
-            graph = comfy.sdxl_with_mask(prompt, recipes.NEGATIVE, seed, recipes.WIDTH, recipes.HEIGHT,
+            todo.append((seed, recipes.prompt(fam, style, seed, engine)))
+        if engine == "flux":
+            # Several images per graph: the FLUX stack loads once for all of them.
+            for i in range(0, len(todo), recipes.FLUX_BATCH):
+                batch = todo[i:i + recipes.FLUX_BATCH]
+                graph = comfy.flux_images([(p, seed, width, height) for seed, p in batch],
+                                          prefix="tyrnarra/%s_%s" % (fam["name"], style))
+                t, images = comfy.run(graph, timeout=3600)
+                for (seed, prompt), image in zip(batch, images):
+                    _save(raw, seed, image, None, "%s\nFLUX.2 dev Q4 + Turbo LoRA, 8 steps, guidance 4, %dx%d seed %d\n"
+                          % (prompt, width, height, seed))
+                print("%s %s seeds %s: %.0f s" % (fam["name"], style, ",".join(str(s) for s, _ in batch), t), flush=True)
+            continue
+        for seed, prompt in todo:
+            graph = comfy.sdxl_with_mask(prompt, negative, seed, width, height,
                                          recipes.CHECKPOINT, recipes.STEPS, recipes.CFG, recipes.SAMPLER,
                                          recipes.SCHEDULER, recipes.BG_MODEL,
                                          prefix="tyrnarra/%s_%s_%d" % (fam["name"], style, seed))
             t, (image, mask) = comfy.run(graph)
-            with open(os.path.join(raw, "%d_mask.png" % seed), "wb") as f:
-                f.write(mask)
-            with open(os.path.join(raw, "%d.txt" % seed), "w") as f:
-                f.write("%s\nnegative: %s\n%s %d steps cfg %s %s/%s %dx%d seed %d\n"
-                        % (prompt, recipes.NEGATIVE, recipes.CHECKPOINT, recipes.STEPS, recipes.CFG,
-                           recipes.SAMPLER, recipes.SCHEDULER, recipes.WIDTH, recipes.HEIGHT, seed))
-            with open(img, "wb") as f:
-                f.write(image)
+            _save(raw, seed, image, mask, "%s\nnegative: %s\n%s %d steps cfg %s %s/%s %dx%d seed %d\n"
+                  % (prompt, negative, recipes.CHECKPOINT, recipes.STEPS, recipes.CFG,
+                     recipes.SAMPLER, recipes.SCHEDULER, width, height, seed))
             print("%s %s seed %d: %.1f s" % (fam["name"], style, seed, t), flush=True)
+
+
+def _save(raw, seed, image, mask, settings):
+    """One generated image, its mask (none for FLUX: sprites.flood_mask cuts it) and its settings."""
+    if mask is not None:
+        with open(os.path.join(raw, "%d_mask.png" % seed), "wb") as f:
+            f.write(mask)
+    with open(os.path.join(raw, "%d.txt" % seed), "w") as f:
+        f.write(settings)
+    with open(os.path.join(raw, "%d.png" % seed), "wb") as f:
+        f.write(image)
 
 
 def _out(fam, n):
@@ -90,7 +110,7 @@ def cmd_build(a):
     if a.no_install and not a.round:
         sys.exit("--no-install needs --round (the sprites go to its folder only)")
     pool, rejects = [], []
-    for style in a.style:
+    for style in a.style or recipes.styles(fam):
         raw = os.path.join(base, style, "raw")
         if not os.path.isdir(raw):
             continue
@@ -100,7 +120,8 @@ def cmd_build(a):
             seeds = [s for s in seeds if s in wanted]
         good = []
         for seed in seeds:
-            rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed))
+            rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed),
+                                    fam.get("shape", "tree"))
             why = why or sprites.check(rgba, fam)
             if not why:
                 rgba = sprites.thin_ink(rgba, recipes.INK_THIN)
@@ -116,12 +137,25 @@ def cmd_build(a):
     if not pool:
         sys.exit("nothing usable")
     random.Random(a.seed).shuffle(pool)
-    chosen = sorted(pool[: a.keep], key=lambda t: (t[0], t[1]))
+    if "items" in fam:
+        # Named icons: up to per_item usable drawings of each item, files "<item>_<k>".
+        chosen, names, missing = [], [], []
+        for i, (item, _) in enumerate(fam["items"]):
+            got = sorted([t for t in pool if t[1] % len(fam["items"]) == i], key=lambda t: (t[0], t[1]))
+            got = [t for t in pool if t in got][: fam.get("per_item", 1)]
+            missing += [item] if not got else []
+            chosen += got
+            names += [fam["file"].format(item=item, n=k) for k in range(1, len(got) + 1)]
+        if missing:
+            print("  no usable drawing yet for: %s" % ", ".join(missing))
+    else:
+        chosen = sorted(pool[: a.keep], key=lambda t: (t[0], t[1]))
+        names = [fam["file"].format(n=n) for n in range(1, len(chosen) + 1)]
     finished = [sprites.finish(c, fam, lv) for _, _, c, lv in chosen]
     if a.no_install:
-        folder = sprites.install(finished, fam, os.path.join(out, "sprites"))
+        folder = sprites.install(finished, fam, os.path.join(out, "sprites"), names)
     else:
-        folder = sprites.install(finished, fam)
+        folder = sprites.install(finished, fam, names=names)
     if a.round and not a.no_install:
         # A copy of the round's sprites, for comparing rounds after the next build replaced them.
         shutil.rmtree(os.path.join(out, "sprites"), ignore_errors=True)
@@ -132,9 +166,9 @@ def cmd_build(a):
     with open(os.path.join(out, "rejects.txt"), "w") as f:
         f.write("\n".join(rejects) + "\n")
     with open(os.path.join(out, "chosen.txt"), "w") as f:
-        f.write("\n".join("%s <- %s seed %d" % (fam["file"].format(n=n), style, seed)
-                          for n, (style, seed, _, _) in enumerate(chosen, 1)) + "\n")
-    sheet = sprites.contact_sheet(finished, os.path.join(out, "sheet.jpg"))
+        f.write("\n".join("%s <- %s seed %d" % (name, style, seed)
+                          for name, (style, seed, _, _) in zip(names, chosen)) + "\n")
+    sheet = sprites.contact_sheet(finished, os.path.join(out, "sheet.jpg"), cc=fam.get("draw") == "custom_colors")
     print("%s: %d usable, %d installed in %s; sheet %s" % (fam["name"], len(pool), len(finished), folder, sheet))
     print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
 
@@ -188,11 +222,12 @@ def main(argv=None):
         s = sub.add_parser(name)
         s.add_argument("family")
         if name != "test":
-            s.add_argument("--style", type=lambda v: v.split(","), default=list(recipes.STYLES),
-                           help="comma-separated prompt styles (default: all)")
+            s.add_argument("--style", type=lambda v: v.split(","),
+                           help="comma-separated prompt styles (default: the family's)")
         s.set_defaults(fn=fn)
         if name == "generate":
             s.add_argument("--seeds", default="1-40", help="e.g. 1-40 or 5,9,12-20")
+            s.add_argument("--engine", choices=("sdxl", "flux"), help="override the family's engine")
         if name == "build":
             s.add_argument("--keep", type=int, default=32, help="variants to install")
             s.add_argument("--seeds", help="only these generated seeds, e.g. 101-200 (default: all)")
