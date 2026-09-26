@@ -161,7 +161,11 @@ def ensure_server(timeout=180):
     env = dict(os.environ)
     env.setdefault("PYTORCH_HIP_ALLOC_CONF", "expandable_segments:True")
     env.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
-    subprocess.Popen(["bash", LAUNCHER, "--cache-none", "--reserve-vram", "2.0", "--cpu-vae"],
+    # NPC_ART_EXTRA_ARGS appends server flags for one-off experiments without
+    # editing this list (e.g. NPC_ART_EXTRA_ARGS="--disable-pinned-memory").
+    extra = os.environ.get("NPC_ART_EXTRA_ARGS", "").split()
+    subprocess.Popen(["bash", LAUNCHER, "--cache-none", "--reserve-vram", "2.0", "--cpu-vae",
+                      *extra],
                      stdout=_server_logfile(), stderr=subprocess.STDOUT,
                      start_new_session=True, env=env)
     print(f"  (server log: {SERVER_LOG})", flush=True)
