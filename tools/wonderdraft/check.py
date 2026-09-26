@@ -3,7 +3,7 @@
 
 error    Wonderdraft can't handle it (self-crossing outlines are left unfilled,
          "Convex partition failed" in its log).
-warning  Probably wrong on the map (missing region shapes, unnamed shapes,
+warning  Probably wrong on the map (missing region shapes, unnamed shapes, nested domains,
          unnamed capitols, overlapping labels, labels on the wrong layer, ...).
 info     Worth a look (trees standing in water).
 """
@@ -80,6 +80,26 @@ def check_shapes(m):
             if a.kind == b.kind and all(abs(p - q) <= 3 for p, q in zip(a.bbox, b.bbox)):
                 out.append(Issue("warning", "duplicate", "two %s outlines on top of each other (%s, %s)"
                                  % (a.kind, a.label, b.label), _xy(a.bbox[:2])))
+    # A domain shape mostly inside another domain shape draws a second outline on the
+    # domains view (Merkavar's circle inside Lautarra). Regions nest on purpose, so domains only.
+    doms = [r for r in m.regions if r.kind == "domain"]
+    srng = random.Random(2)
+    for a in doms:
+        pts, tries = [], 0
+        while len(pts) < 100 and tries < 5000:
+            tries += 1
+            x, y = srng.uniform(a.bbox[0], a.bbox[2]), srng.uniform(a.bbox[1], a.bbox[3])
+            if a.contains(x, y):
+                pts.append((x, y))
+        for b in doms:
+            if b is a or b.area <= a.area or b.bbox[0] > a.bbox[2] or b.bbox[2] < a.bbox[0] \
+                    or b.bbox[1] > a.bbox[3] or b.bbox[3] < a.bbox[1]:
+                continue
+            inside = sum(1 for p in pts if b.contains(*p)) / max(1, len(pts))
+            if inside >= 0.5:
+                out.append(Issue("warning", "nested", "domain shape %s lies %d%% inside the %s domain shape; "
+                                 "it draws a second outline on the domains view"
+                                 % (a.label, inside * 100, b.label), _xy(a.bbox[:2])))
     for r in regs:
         c = r.data["color"]
         lum = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
