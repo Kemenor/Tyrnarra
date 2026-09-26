@@ -10,7 +10,7 @@ Pending label work for the map art. The three views (terrain / regions / domains
 
 ## Scale bar: halved in the source (GM, 2026-09-25)
 
-**Done in the map source 2026-09-25:** the GM halved the bar. It now reads **0–1000 miles** over the same 2000 px (10 segments × 100 mi), so **1 full-res px = 0.5 mi**, the draft working scale below; units are still miles. **Still to do:** re-export and publish the terrain view (the published exports still carry the old bar), and record the scale in `lore/geography/_continent.md` with the Magitrain and airship figures derived from it (`lore/transport.md`, *Still open*). The analysis that led here:
+**Done in the map source 2026-09-25:** the GM halved the bar. It now reads **0–1000 miles** over the same 2000 px (10 segments × 100 mi), so **1 full-res px = 0.5 mi**; units are still miles. **Confirmed as canon 2026-09-26** (`lore/geography/_continent.md`, *Scale*). **Done:** the views were re-exported and published with the new bar (2026-09-25), and the scale and speeds are recorded in `lore/geography/_continent.md`, *Scale*, and `lore/transport.md`, *Scale and speeds* (2026-09-26). The analysis that led here:
 
 The scale bar (bottom-left of the terrain view) read **0–2000 miles**. On the 8192 px original, 1000 bar-miles span ~1000 px, so **1 px ≈ 1 mile** as labelled. At that label Talan runs ~7,000 mi west–east and ~7,500 mi north–south (NW coast to SE coast ~8,300 mi; island to island ~9,200 mi), the Midarra ~5,300 mi long, and the Basogur ~1,500 mi deep: larger than Asia.
 

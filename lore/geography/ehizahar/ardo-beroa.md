@@ -75,7 +75,7 @@ What comes off the boats goes to the drying-halls, which need what only Urbero h
 > "They sold me a cask of hardfisk with a cure-mark on it older than my grandmother, and told me it would be good when my grandchildren opened it. I believe them. The wine I have already drunk."
 > Merchant Ansel Torvane, in the same letter
 
-The arc ships are why the islands are reached at all: a warm berth in a white sea, a pilot who knows the strait, a cask of the warm wine and a hold of what keeps. The trade is small, steady, and paid in iron, timber, and grain, none of which Urbero grows.
+The arc ships are why the islands are reached at all: a warm berth in a white sea, a pilot who knows the strait, a cask of the warm wine and a hold of what keeps. An arc ship is a saltkeel built for the ice, with a sheathed bow and a rounded hull that rides up onto the pack when it closes, and it sails the loose ice in season with an ice-route guide aboard. The trade is small, steady, and paid in iron, timber, and grain, none of which Urbero grows.
 
 **◈ Popular Belief: the Unforgiven.** On the coast they say the islands keep the ones Villtur put out for cause, the clan-breakers among the *was*es, and that a clan with a name to settle has crossed the strait after one of them more than once. They also say how it went. The island keeps one thing from the grass besides the register: a stranger coming to take one of theirs is an outsider's claim on the ground, and on the day the boats are sighted every ring on the harbour moves to one post. The clans that tried found the whole island at the quay and no one to negotiate with, and the ones that came back did not come back whole.
 

@@ -19,7 +19,7 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 
 ### The rail
 
-- **Magitrains** are Arcanotech and the public face of Magitech: scheduled passenger and freight service, common as roads where they reach. Most mortals of Talan have ridden one.
+- **Magitrains** are Arcanotech and the public face of Magitech, driven by the Order's **steam-and-rune** engine, boiler and rune-array as one machine (GM, 2026-09-26): scheduled passenger and freight service, common as roads where they reach. Most mortals of Talan have ridden one.
 - **The Order of Steam invented them** at the end of the Dark Era (c. 2135 MR), out of its volcanic-belt Elden excavation; the Elden built rail-bound acceleration first, the Lost Era and the Golden Empire knew it possible, the Order built the working engine and the long lines. The rail is about four centuries old. The Order remains the principal maker of rolling stock for both networks.
 - **The long lines follow older ground** (GM, 2026-09-25): in the north the Elden corridors, in the south the Golden Empire's roads.
 - **Two networks, unlinked**, split by the Basogur Jungle:
@@ -80,7 +80,8 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 
 - **Saltkeel** (Hafra): brine-sealed, deep-keeled. **Stillship** (Midarra): lighter, shallower, untreated for brine. The split is a hull-class, independent of wood or Magitech; each sails the other sea badly. Cargo between the seas changes hulls at **Gesalkai** on Balatur Erui, across the Weighhouse scales ([`geography/_continent.md`](geography/_continent.md)).
 - **Wood-and-sail** dominates by count; **Magitech ships** (mostly Arcanotech) are the wealth upgrade; **Occultech ships** work chaos water: near the Blackened Lands, Floteyn's deep eddies, the outer approaches to Sortalde. The Adventurers' Guild keeps a small Occultech sea fleet.
-- The Order of Steam's **boiler-hulls** promise a sea that no longer needs forests, and Three Pines hears the promise ([`geography/myrkono.md`](geography/myrkono.md)).
+- **Steam and rune are one tradition** (GM, 2026-09-26): the Order of Steam's boilers are Arcanotech, and its **boiler-hulls**, iron hulls that promise a sea that no longer needs forests, are Arcanotech ships in their newest form; Three Pines hears the promise ([`geography/myrkono.md`](geography/myrkono.md)).
+- **Ships in the ice** (GM, 2026-09-26). The northern Hafra is worked by **arc ships**, saltkeels built for the ice: sheathed bows, rounded hulls that ride up onto the pack when it closes, sailing the loose ice in season with an ice-route guide aboard, often a Baerfrost weather-reader ([`geography/ehizahar/ardo-beroa.md`](geography/ehizahar/ardo-beroa.md)). A true **icebreaker** is Arcanotech only, since sail cannot push a hull through solid ice and a boiler can: a heavy Arcanotech saltkeel with an iron-shod bow, costly and rare. Too few exist to hold Villtur's freezing ports open through the winter, so a winter passage north is a charter for the rich or the desperate.
 
 ### Pilots and charts
 
@@ -136,18 +137,44 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 
 ---
 
+## Scale and speeds
+
+**Scale** (GM, 2026-09-25): the map's bar reads 0–1000 miles, 1 full-res px = 0.5 mile. Talan is about 3,500 miles across and the size of South America; a god domain averages about Alaska, a region about Spain. Full figures in [`geography/_continent.md`](geography/_continent.md), *Scale*.
+
+**Speeds** (GM, 2026-09-26; working figures, to be adjusted if play needs it):
+
+| Mode | Speed |
+|---|---|
+| Airship | cruises ~60 mph; Occultech slower in fair weather, steadier in chaos |
+| Magitrain express | cruises ~40 mph; averages 25–30 mph with stops |
+| Saltkeel under sail (open Hafra) | 120–180 mi a day |
+| Stillship under sail (Midarra) | 80–130 mi a day; a Villveder can stall a crossing |
+| Arcanotech ship, either hull | 200–250 mi a day, whatever the wind |
+| Occultech ship | about its hull's sail speed in fair water; holds its course in chaos water |
+| Arc ship in the northern ice | slower than open water, by the ice and the season |
+| River raft drifting day and night | 80–100 mi a day |
+| Walking party | 15–25 mi a day; 25–30 on a good road |
+| Villtur clan on its circuit (herds, households) | 10–15 mi a day on moving days |
+| A clan escorting a guest on the Etxaber | ~30 mi a day |
+| Scouts on bond-beasts | 35–40 mi a day |
+| Travel through snow | 10–15 mi a day |
+
+**Checks against the record:** Rustam Varaz, Merkavar to Sombral, ~1,850 mi on his route, about 30 hours at airship pace (noon to the next dusk). The Thekkavar express across Lua Lasai, ~275–325 mi in half a day. Zenerious's crossing of Villtur, ninety days. The long road through the Basogur waits on the map fix that pulls the jungle's north-east lobe lower ([`../docs/map-todo.md`](../docs/map-todo.md)).
+
+---
+
 ## Getting north and south
 
 The Basogur splits the rail, and the continent crosses its waist four ways:
 
 | Way | Route | Character |
 |---|---|---|
-| Stillship across the Midarra | Rika Tikur / Dreaming Cape ↔ Solkai, by Frae City and the Twin Cities | Bulk cargo's route; the Pirate Lords take their share |
+| Stillship across the Midarra | Rika Tikur / Dreaming Cape ↔ Solkai, by Frae City and the Twin Cities (~1,290 mi) | Bulk cargo's route: 10–16 days under sail, 5–6 on an Arcanotech hull; the Pirate Lords take their share |
 | Airship over the Basogur | Over the canopy | Premium passengers and urgent freight; Occultech flies it clean |
 | The long road | Greenmouth → the Red Tusks' gate by Veidrath, eleven days | What no airship can lift; the Roadwards keep it on schedule |
 | By the northern coast | Villtur's shore | Barely an option: rare ports, most frozen in winter; Fenurra's warm port the exception |
 
-**Known travel times**: the long road, eleven to twelve days; Lua Lasai by the Thekkavar express, half a day; a weatherclock reads no further than a day's sail.
+**Known travel times**: the long road, eleven to twelve days; Lua Lasai by the Thekkavar express, half a day; the Midarra crossing, 10–16 days under sail; Merkavar to Sombral by air, about 30 hours; a weatherclock reads no further than a day's sail.
 
 ---
 
@@ -155,7 +182,8 @@ The Basogur splits the rail, and the continent crosses its waist four ways:
 
 - **The Northern hub**: which city, and its character (candidates in [`../docs/open-threads.md`](../docs/open-threads.md)).
 - **The northern coast**: Villtur's few ports, which freeze and when, Fenurra's warm port and its name, and what that makes of the long road's trade.
-- **What drives a Magitrain**: boiler, rune-array, or both; speeds, fares, gauge. Waits on the GM's pass over the continent map and its scale; the figures are estimated from there. A draft scale halves the map's bar (1 full-res px = 0.5 mi), with draft travel paces, pending the GM's confirmation (see [`../docs/map-todo.md`](../docs/map-todo.md), *Scale bar*, and [`../docs/open-threads.md`](../docs/open-threads.md), *Continental scale (draft)*).
+- **Fares and gauge**: what a Magitrain ticket, a berth, or an airship passage costs; the gauge of the two networks.
 - **The airship guilds**: names, routes, fares; the Veidrath tower district (a deepening idea: [`../docs/deepening-ideas.md`](../docs/deepening-ideas.md)).
 - **The Iron Tide's route inland**: the record has Tide ships sighted at "the Order of Steam's ports", which lie on a Midarra bay behind the Gesalkai gate.
 - **Flying mounts**: which kinds, and in which regions (defined at each region's build).
+- **Icebreakers**: who builds and runs them, and how many there are.
