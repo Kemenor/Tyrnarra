@@ -81,7 +81,7 @@ def check_shapes(m):
                 out.append(Issue("warning", "duplicate", "two %s outlines on top of each other (%s, %s)"
                                  % (a.kind, a.label, b.label), _xy(a.bbox[:2])))
     # A domain shape mostly inside another domain shape draws a second outline on the
-    # domains view (Merkavar's circle inside Lautarra). Regions nest on purpose, so domains only.
+    # domains view (Merkavar's circle inside Lautara). Regions nest on purpose, so domains only.
     doms = [r for r in m.regions if r.kind == "domain"]
     srng = random.Random(2)
     for a in doms:

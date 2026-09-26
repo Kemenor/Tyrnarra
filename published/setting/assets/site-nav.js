@@ -55,7 +55,9 @@
   // Note: the Talan section header itself links to the Continent
   // Overview, so that page is not repeated here.
   var TALAN_PAGES = [
-    { slug: 'maps',        label: 'Maps of Talan',      href: '/setting/talan/maps.html',        children: [] },
+    { slug: 'maps',        label: 'Maps of Talan',      href: '/setting/talan/maps.html',        children: [
+      { slug: 'interactive-map', label: 'Interactive Map', href: '/setting/talan/interactive-map.html', children: [] }
+    ]},
     { slug: 'history',     label: 'History &amp; Eras', href: '/setting/talan/history.html',     children: [] },
     { slug: 'the-binding', label: 'The Binding',        href: '/setting/talan/the-binding.html', children: [
       { slug: 'hollow-of-ten-thousand-threads', label: 'Hollow of Ten Thousand Threads', href: '/setting/talan/the-binding/hollow-of-ten-thousand-threads.html', children: [] }

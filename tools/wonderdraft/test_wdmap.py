@@ -232,6 +232,38 @@ class CheckTest(unittest.TestCase):
         self.assertGreater(len(after), len(before))
 
 
+class InteractiveLinkTest(unittest.TestCase):
+    PAGES = [("/d/lautara/lautara.html", "lautara", "Lautara", True, True),
+             ("/d/nashavel/kaosadaemi/kaosadaemi.html", "kaosadaemi", "Kaosadaemi Principality", False, True),
+             ("/d/lautara/dreaming-cape/dreaming-cape.html", "dreaming-cape", "The Dreaming Cape", False, True),
+             ("/d/lautara/emarrea/heartcourt.html", "heartcourt", "Heartcourt", False, False)]
+
+    def link(self, name, kind="region", overrides=None):
+        import interactive
+        return interactive.resolve_link(name, kind, self.PAGES, overrides or {})
+
+    def test_matching_rules(self):
+        self.assertEqual(self.link("Lautaria", "domain"), "/d/lautara/lautara.html")        # one letter off
+        self.assertEqual(self.link("Kaosadaemi Principality"), "/d/nashavel/kaosadaemi/kaosadaemi.html")
+        self.assertEqual(self.link("The Dreaming Cape"), "/d/lautara/dreaming-cape/dreaming-cape.html")
+        self.assertIsNone(self.link("Heartcourt"))          # sub-pages are not region pages
+        self.assertIsNone(self.link("Lautara"))             # a region never links a domain page
+        self.assertEqual(self.link("X", overrides={"X": "/y"}), "/y")
+
+
+@unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
+class InteractiveDataTest(unittest.TestCase):
+    def test_build_data(self):
+        import interactive
+        _, m = real_map()
+        site = os.path.normpath(os.path.join(HERE, "..", "..", "published"))
+        d = interactive.build_data(m, site, 5)
+        self.assertEqual(len(d["shapes"]), sum(1 for r in m.regions if len(r.points) >= 3))
+        self.assertTrue(all(len(s["points"]) >= 3 for s in d["shapes"]))
+        self.assertGreater(sum(1 for s in d["shapes"] if s["href"]), len(d["shapes"]) / 2)
+        self.assertTrue({l["group"] for l in d["labels"]} <= {"god", "region", "divine", "city", "landmark"})
+
+
 @unittest.skipUnless(os.path.exists(TEST_MAP), "no test map at %s" % TEST_MAP)
 class SnapshotTest(unittest.TestCase):
     def test_deterministic_valid_json(self):

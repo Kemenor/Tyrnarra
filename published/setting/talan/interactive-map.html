@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Map · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<link rel="stylesheet" href="/setting/assets/vendor/leaflet/leaflet.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/vendor/leaflet/leaflet.js"></script>
+<script defer src="/setting/assets/interactive-map.js"></script>
+<style>
+  :root { --domain-accent: #c8a04a; }
+  /* The map's label font: Gentium Book Basic Bold, self-hosted (SIL OFL, see assets/fonts). */
+  @font-face { font-family: 'Gentium Book Basic'; font-weight: 700; font-style: normal; font-display: swap;
+               src: url('/setting/assets/fonts/GentiumBookBasic-Bold.ttf') format('truetype'); }
+  .map-intro { font-style: italic; text-align: center; max-width: 780px; margin: 0 auto 14px; line-height: 1.55; opacity: 0.92; }
+  .map-shell { max-width: 1200px; margin: 0 auto 28px; }
+  .map-tools { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; justify-content: center;
+               margin-bottom: 12px; font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.06em; }
+  .map-tools fieldset { border: 1px solid rgba(200,160,74,0.3); border-radius: 4px; padding: 6px 12px 8px; margin: 0;
+                        display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
+  .map-tools legend { padding: 0 6px; color: var(--gold-dim); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  .map-tools label { cursor: pointer; color: var(--text); white-space: nowrap; }
+  .map-tools input { accent-color: var(--gold); margin-right: 4px; vertical-align: -1px; }
+  .map-tools button { font: inherit; color: var(--parch-bright); background: rgba(200,160,74,0.12); cursor: pointer;
+                      border: 1px solid rgba(200,160,74,0.45); border-radius: 3px; padding: 4px 10px; }
+  .map-tools button:hover, .map-tools button[aria-pressed="true"] { background: rgba(200,160,74,0.3); border-color: var(--gold-bright); }
+  .map-tools button:focus-visible, .map-tools input:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  #talan-map { height: min(78vh, 900px); min-height: 420px; border: 1px solid rgba(200,160,74,0.35); border-radius: 4px;
+               background: #0b1f2e; }
+  .map-hint { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+              color: var(--gold-dim); text-align: center; margin-top: 8px; }
+  .map-status { text-align: center; color: var(--text-dim); font-style: italic; }
+  /* Shapes and labels drawn over the tiles */
+  #talan-map .wd-shape { cursor: pointer; transition: fill-opacity 0.15s; }
+  #talan-map .wd-shape:hover { fill-opacity: 0.42; }
+  #talan-map .wd-labels text { pointer-events: none; paint-order: stroke; stroke-linejoin: round; }
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #1b150d; color: var(--text); border: 1px solid rgba(200,160,74,0.5); }
+  .leaflet-popup-content { font-family: 'Crimson Pro', serif; font-size: 1rem; margin: 10px 14px; }
+  .leaflet-popup-content .pop-name { font-family: 'Cinzel', serif; color: var(--parch-bright); font-size: 1.05rem; }
+  .leaflet-popup-content .pop-kind { color: var(--text-dim); font-style: italic; }
+  .leaflet-popup-content a { color: var(--gold-bright); }
+  .leaflet-container a.leaflet-popup-close-button { color: var(--gold-dim); }
+  .leaflet-bar a { background: #1b150d; color: var(--parch-bright); border-color: rgba(200,160,74,0.4); }
+  .leaflet-bar a:hover { background: #2a2014; color: var(--gold-bright); }
+</style>
+</head>
+<body data-page="interactive-map">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/maps.html">Maps</a><span class="sep">›</span><span>Interactive Map</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Interactive Map</div>
+    <div class="page-subtitle">Talan, Layer by Layer</div>
+    <div class="page-flavor">Lay the gods' borders over the kingdoms', or strip the land back to its rivers and peaks.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <p class="map-intro">
+    The same continent as the <a href="/setting/talan/maps.html">three fixed maps</a>, with every layer on its own switch. Drag to pan, scroll or pinch to zoom, and click a region or a god's domain to open its page.
+  </p>
+
+  <div class="map-shell">
+    <div class="map-tools" id="map-tools" hidden>
+      <fieldset>
+        <legend>Views</legend>
+        <button type="button" data-preset="terrain" aria-pressed="false">Terrain</button>
+        <button type="button" data-preset="regions" aria-pressed="false">Regions</button>
+        <button type="button" data-preset="domains" aria-pressed="false">Domains</button>
+      </fieldset>
+      <fieldset>
+        <legend>Borders</legend>
+        <label><input type="checkbox" data-layer="regions">Regions</label>
+        <label><input type="checkbox" data-layer="domains">God domains</label>
+      </fieldset>
+      <fieldset>
+        <legend>Names</legend>
+        <label><input type="checkbox" data-layer="region">Regions</label>
+        <label><input type="checkbox" data-layer="god">God domains</label>
+        <label><input type="checkbox" data-layer="divine">Divine cities</label>
+        <label><input type="checkbox" data-layer="city">Cities</label>
+        <label><input type="checkbox" data-layer="landmark">Landmarks</label>
+      </fieldset>
+    </div>
+    <div id="talan-map" role="application" aria-label="Interactive map of Talan"></div>
+    <p class="map-status" id="map-status">Loading the map…</p>
+    <div class="map-hint">Click a region or domain for its page</div>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · INTERACTIVE MAP</div>
+
+</div>
+
+</body>
+</html>

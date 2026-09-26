@@ -1,0 +1,4 @@
+{
+  "_comment": "Manual links for the interactive map: region/domain name (as `wdmap query MAP regions` shows it) -> site page, or null for no link. Names not listed here are matched automatically (interactive.resolve_link).",
+  "Twin Suns": "/setting/talan/domains/brauogi/tvisol/tvisol.html"
+}

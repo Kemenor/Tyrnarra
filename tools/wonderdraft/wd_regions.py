@@ -48,6 +48,9 @@ VARIANTS = {
     "God Domains": {"border": "border_dash", "hide_label_layers": {2, -1, -2}, "site": "domains"},
     "Regions": {"border": "border_gradient", "hide_label_layers": {1}, "site": "regions"},
     "Terrain": {"border": None, "hide_label_layers": {1, 2}, "site": "terrain"},
+    # Background of the interactive map: no shapes, no labels except the legend (+5); the page
+    # draws shapes and names on top. Published as tiles, not as a fixed map.
+    "Base": {"border": None, "hide_label_layers": {4, 3, 2, 1, 0, -1, -2, -3, -4, -5}, "site": None},
 }
 
 
@@ -112,10 +115,40 @@ def find_export(outdir, stem, name):
     return (found[0] if found else None), base + ".wonderdraft_map"
 
 
+def _same_file(a, b):
+    if os.path.getsize(a) != os.path.getsize(b):
+        return False
+    with open(a, "rb") as fa, open(b, "rb") as fb:
+        while True:
+            x, y = fa.read(1 << 20), fb.read(1 << 20)
+            if x != y:
+                return False
+            if not x:
+                return True
+
+
+def publish_interactive(outdir, stem, master):
+    """Tiles from the Base export and map-data.json from the master map, for the interactive map."""
+    base, base_map = find_export(outdir, stem, "Base")
+    if not base:
+        print("interactive map skipped: no \"%s - Base\" export (run --export)" % stem)
+        return
+    if os.path.exists(base_map) and os.path.getmtime(base) < os.path.getmtime(base_map):
+        sys.exit("%s is older than %s; re-export it first" % (os.path.basename(base), os.path.basename(base_map)))
+    import interactive
+    from wdmap import WDMap
+    print("interactive map:", flush=True)
+    max_z = interactive.write_tiles(base, os.path.join(SITE_MAPS, "tiles"))
+    interactive.write_data(WDMap.load(master), os.path.normpath(os.path.join(SITE_MAPS, "..", "..", "..")),
+                           os.path.join(SITE_MAPS, "map-data.json"), max_z)
+
+
 def publish(outdir, stem):
     """Copy the three Wonderdraft exports into the site as terrain/regions/domains.webp."""
     plan = []
     for name, spec in VARIANTS.items():
+        if not spec["site"]:
+            continue
         export, variant_map = find_export(outdir, stem, name)
         if not export:
             sys.exit("missing export for %s: save it from Wonderdraft as \"%s - %s.webp\" in %s"
@@ -136,6 +169,7 @@ def publish(outdir, stem):
               flush=True)
     subprocess.run(["bash", os.path.join(SITE_MAPS, "resize.sh")], check=True)
     master = os.path.join(outdir, stem + ".wonderdraft_map")
+    publish_interactive(outdir, stem, master)
     if os.path.exists(master):
         # The published views and the text snapshot of their source go into git together.
         from snapshot import write
@@ -209,8 +243,14 @@ def main():
         w = subprocess.run([GCPF, "c", tmp], input=data)
         if w.returncode:
             sys.exit("failed writing %s" % dst)
-        os.replace(tmp, dst)
-        print("  %-12s %3d shapes, %3d labels -> %s" % (name, n_shapes, n_labels, dst))
+        if os.path.exists(dst) and _same_file(tmp, dst):
+            # Unchanged: keep the old file and its date, so its export doesn't count as stale.
+            os.remove(tmp)
+            state = "unchanged"
+        else:
+            os.replace(tmp, dst)
+            state = "->"
+        print("  %-12s %3d shapes, %3d labels %s %s" % (name, n_shapes, n_labels, state, dst))
 
 
 if __name__ == "__main__":

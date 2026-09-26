@@ -113,6 +113,16 @@ One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, e
 
 The god-city list is `GOD_CITIES` in `check.py`.
 
+### Interactive map
+
+`published/setting/talan/interactive-map.html` shows the map with every layer on a switch. `--export` also exports a fourth view, **Base** (terrain, trees, mountains, city icons and the legend; no region shapes and no other labels), and `--publish` turns it into the page's data (`interactive.py`):
+
+- **Tiles:** the Base export cut into a Leaflet `CRS.Simple` pyramid at `published/setting/assets/maps/tiles/{z}/{x}/{y}.webp` (256 px, zoom 0–5, ~1,365 files, ~15 MB). All tiles are rewritten on every publish, so each publish adds that much to git history.
+- **`map-data.json`:** every region and domain outline (points, colour, border width, smoothing, its domain), every label on +1, +2, +3, −1, −2 (text, position, font, size, colours, rotation) and each shape's page link. The page draws them as one SVG in map units, so they scale with the map; outlines are smoothed like Wonderdraft's, domains dashed, regions with an inner glow.
+- **Links** are matched by name to the pages under `published/setting/talan/domains/`: exact name or title, a page slug the name starts with ("Kaosadaemi Principality" → `kaosadaemi`), or one letter off (so a misspelt label still finds its page). `map-links.json` sets or blocks a link by name (e.g. Twin Suns → the Tvisol page). `--publish` prints the shapes without a page.
+
+The fixed three-map page stays as it is; the interactive map is an addition.
+
 ### Snapshot for git
 
 The map itself stays out of git: at ~100 MB it is over GitHub's per-file limit, compressed and undiffable, and every save would add a full copy to history. Proton Drive syncs it and `wdmap` keeps backups. Git tracks [`map-snapshot.json`](map-snapshot.json) instead, a readable text snapshot of what the map says: every label (layer, text, position, font, size), every region shape (kind, inferred name, bbox, area, colour), every icon-type symbol (settlements, castles) with its position, symbol counts per layer and art family, the scale bar and the layer names. It is deterministic, one item per line, so `git diff` reads like a changelog of the map.
