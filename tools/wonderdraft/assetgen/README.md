@@ -1,14 +1,16 @@
 # assetgen: the Tyrnarra art pack for Wonderdraft
 
-Generates our own symbol art (trees first, then mountains) to replace the Wonderdraft built-in
-art in `Main`, which cannot come along to a future editor of our own (the EULA forbids
-extracting it). The art is made in Wonderdraft's own pack format, so it works in Wonderdraft
-today and in any later tool that reads Wonderdraft packs.
+Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, with many
+variants per family. Since the 2026-09-26 pack swap `Main` uses bought pack art (Dotty, Moulk)
+instead of Wonderdraft's built-ins; our pack is to replace that in turn. The art is made in
+Wonderdraft's own pack format, so it works in Wonderdraft today and in any later tool that
+reads Wonderdraft packs (Kartofuchs reads them from the same asset folder).
 
 ```
-assetgen.sh generate conifer --seeds 1-40      # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
-assetgen.sh build conifer --keep 32            # cut, check, finish, install into the Tyrnarra pack
-assetgen.sh test conifer                       # real Wonderdraft export vs the built-in art (hands off ~3 min)
+assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
+assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into the Tyrnarra pack
+assetgen.sh test conifer --round 7 --offline      # drawn here in seconds: Main's art vs round 6 vs round 7
+assetgen.sh test conifer --round 7                # the same from a real Wonderdraft export (hands off ~3 min)
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -16,7 +18,10 @@ levelled they look alike on the map, and mixing them adds variety. `--style ink`
 `generate` or `build` to some of them. `build` writes into `~/.local/share/wdmap/assetgen/<family>/`:
 `sheet.jpg` (the installed sprites tinted grass-green), `chosen.txt` (which style and seed became
 which file) and `rejects.txt` (why each other image was dropped); every raw image has a `.txt`
-with its exact prompt and settings. `test` writes `compare-*.jpg` there too.
+with its exact prompt and settings. `test` writes `compare-*.jpg` there too. With `--round N`
+all of that goes to `<family>/round-N/` instead, `build` keeps a copy of the round's sprites
+there (`round-N/sprites/`, so later rounds can be compared with it), and `test` names its
+export `Assetgen <Family> rN.webp`.
 
 The installed pack: `~/.local/share/Wonderdraft/assets/Tyrnarra/sprites/<kind>/<Folder>/`.
 Test maps and their exports: `~/.local/share/wdmap/assetgen-test/` (outside Proton Drive on
@@ -35,7 +40,7 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   `birefnet.safetensors` (BiRefNet Swin-L, MIT) for the built-in RemoveBackground node. Also on
   the tower: Juggernaut XL, NoobAI XL, IP-Adapter for SDXL, FLUX.2 dev (GGUF Q4, ~2 min/image).
 - `assetgen.sh` builds its own gitignored `.venv` (numpy, scipy, pillow) on first run.
-- `test` needs Wonderdraft installed as for `wd-regions --export`, and closed.
+- `test` needs Wonderdraft installed as for `wd-regions --export`, and closed (`test --offline` does not).
 
 ## Wonderdraft's rules for pack art
 
@@ -54,10 +59,11 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   "Missing custom assets" dialog. `wdmap` adds used packs on every save since 2026-09-26.
 - Texture paths have no extension: `user://assets/Tyrnarra/sprites/trees/Tyrnarra_Conifers/conifer_01`.
 - **Size**: a symbol is drawn at sprite size x its `scale`. To replace a built-in family 1:1 the
-  sprite must be as big as the built-in art at scale 1. Measure it from an export: find an
-  isolated instance at a known scale and measure it (the built-in `tree_xmas` is about
-  180-210 x 300-415 px at scale 1, centred 73 px above the click point, radius 51). In `Main`
-  conifers are used at scale 0.1-0.6, so they end up 30-250 px tall.
+  sprite must be as big as the built-in art at scale 1. The calibration grid measures it
+  (`measure-builtins` -> builtin-sizes.json): the nine built-in `tree_xmas` are 86-206 x
+  197-426 px at scale 1, area-equivalent 137 x 291, centred about 70 px above the click point,
+  radius 51. (An earlier estimate from isolated trees in an export, 180-210 x 300-415, caught only
+  the big ones.) In `Main` conifers are used at scale 0.1-0.6, so they end up 30-250 px tall.
 
 ## Prompting (SDXL Turbo, DreamShaper XL)
 
@@ -114,6 +120,32 @@ What worked and what did not, in the order we found it (2026-09-26):
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
 
+## Testing (wdtest.py, render.py)
+
+- **What a family replaces**: the recipe's `replaces` is the art folder in `Main` today, e.g.
+  `Dotty_Pines` for conifers (it stands in for all six built-in conifer families since the
+  swap). The test map is the Base view with every symbol of that folder swapped for our pack,
+  each new sprite scaled to cover the drawn area of the art it replaces and standing on the
+  same foot (`packswap.fit`). The future swap of our pack into `Main` works the same way.
+- **The comparison export** is the Base as it is now: `Main - Base.webp` when it is newer than
+  the map, otherwise `assetgen-test/Assetgen Reference.webp`, an export of a copy that is redone
+  when the Base changes (`.md5` beside it). The built-in art before the swap is kept as
+  `Assetgen PreSwap Base.webp`.
+- **`--offline`** draws the patches here (`render.py`) in a few seconds, without Wonderdraft:
+  the Empty export (Base terrain, no symbols or labels) as ground, symbols y-sorted, straight-
+  alpha mipmaps like Godot's, greyscale art multiplied by the ground. Wonderdraft draws the soft
+  edges of shrunk sprites darker than plain alpha blending; an empirical fit (`EDGE_COVER`,
+  alpha squared on the colour) brings the densest patches within a few points of the real
+  exports: Dotty pines 87/35% real vs 89/30% here (mean grey / share darker than 50), round-6
+  conifers 86/27% vs 86/29%, Dotty oaks 73/36% vs 68/41%. Single trees match to the pixel.
+  Without the fit the dense numbers were far off (round 6: 96/7%). The real export has the last word.
+- `--offline` also writes `lineup.jpg`: every set's sprites side by side at full size and at
+  map size (40 px), tinted grass-green. The quickest way to compare art styles.
+- **Size**: the built-in conifers measured on the calibration grid are smaller than our
+  `size` (area of 137 x 291 at scale 1 against 185 x 330). So the fitted test draws our trees
+  at about 0.7x the scale rounds 5-6 used (median), the same area as the built-ins had.
+  `size` still sets the delivered resolution and the hand-placed size in Wonderdraft.
+
 ## Swapping built-in art for installed packs (packswap.py)
 
 Since 2026-09-26 the plan is to use bought packs first (Dotty Advanced + Booster bundles,
@@ -139,6 +171,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
 - First run (2026-09-26): all 24 families, 13,128 symbols swapped. Trees, dunes and the overall
   map read like the original; Moulk mountains and hills came out somewhat small and the Tang
   mountains faint, so their rules need a `size` above 1.
+- Applied to `Main` itself the same day (`packswap --apply`); `Main` has no built-in art since.
+  `measure-builtins` now takes the built-ins from the copy made before
+  (`Main (before pack swap 2026-09-26).wonderdraft_map`); `packswap` without `--apply` has
+  nothing left to test in the Base and says so.
 
 ## Results log
 
@@ -162,10 +198,30 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   forest matches Wonderdraft's brightness and darkness numbers and reads as separate trees; snow
   trees clean. New subject wording with less ink ("pale foliage drawn with a few confident ink
   lines, lots of white paper showing, minimal shading": ink share 45% -> 33%) for seeds 101-200.
+- **Round 7** (2026-09-27; seeds 101-200 with that wording; first test fitted to `Main`'s Dotty
+  pines, compared offline): 121 usable of 200 (34 wide base, 45 proportions, mostly broad
+  trees just under 1.3), 40 installed. Worked: the raw art is lighter (share darker than 80:
+  ink 51% -> 44%, sepia 66% -> 54%), the "drooping boughs" variant adds two umbrella-crowned
+  pines for variety, and full-size trees are far crisper than Dotty's (its pine sprites are
+  ~180 px tall and blur where `Main` enlarges them up to scale 3.4). Did not change: levels to
+  `TARGET_MEAN` even out the lighter drawing, so at map size round 7 looks like round 6
+  (densest patch offline: Dotty 89/30%, round 6 89/25%, round 7 87/27%). Open: style. Dotty's
+  pines read as separate bold shapes with thick outlines; ours are fine engraved firs that read
+  as texture at 20-40 px. "Chunky, bold simple shape" in the prompt does not get SDXL Turbo
+  there; a bolder look needs a different prompt or a stronger finishing outline.
 
 ## Families still to do
 
-Built-in art in `Main` by use (13,128 symbols; the next candidates after conifers):
+Main's tree art now sits in Dotty folders, each standing in for several built-in families:
+`Dotty_Pines` (conifers, in progress), `Dotty_Oaks` (built-in oak 1518 + hazel 945 + leafy
+tree 356 = 2819 uses), `Dotty_Willows` (515), `Dotty_Palms` (23). The next family is the
+broadleaf one that replaces `Dotty_Oaks`. Sizes measured on the calibration grid
+(builtin-sizes.json, area-equivalent at scale 1, drawn foot, sprite centre relative to the
+click point): oak 353 x 301, foot 24, centre -130, height/width 0.74-1.12; hazel 214 x 233,
+foot 26, centre -90, 0.83-1.71. The pre-swap copy of `Main` still tells which Dotty oak was
+an oak and which a hazel (same positions), so a test could give each its own variants.
+
+Built-in art in `Main` before the swap, by use (13,128 symbols):
 
 | Uses | Built-in family | | Uses | Built-in family |
 |---:|---|---|---:|---|
@@ -182,6 +238,6 @@ Built-in art in `Main` by use (13,128 symbols; the next candidates after conifer
 | 298 | mountains/playful_rounded_mountains | | 23 | trees/toon_palm |
 |  |  | | 24 | sand dunes large + penned mountains small |
 
-A new family needs a `FAMILIES` entry: its subject prompt, the built-in texture prefix it
-replaces, and its scale-1 size and anchor, measured as above. The pack can hold more variants
-than Wonderdraft's built-ins (it has 9 conifers; we install 20+).
+A new family needs a `FAMILIES` entry: its subject prompt with shape variants, the folder of
+`Main` it replaces, and its scale-1 size and anchor from builtin-sizes.json as above. The pack
+can hold more variants than Wonderdraft's built-ins (it has 9 conifers; we install 40).

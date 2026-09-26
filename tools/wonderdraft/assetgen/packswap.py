@@ -30,7 +30,11 @@ ASSETS = os.path.expanduser("~/.local/share/Wonderdraft/assets")
 WD = os.path.expanduser("~/ProtonDrive/Wonderdraft")
 BASE_MAP = os.path.join(WD, "Main - Base.wonderdraft_map")
 BASE_EXPORT = os.path.join(WD, "Main - Base.webp")
+# Main itself was swapped on 2026-09-26 (--apply) and has no built-in art since. The built-ins are
+# read from the copy made before, and its Base export is kept in TEST_DIR for comparisons.
+PRE_SWAP = os.path.join(WD, "Main (before pack swap 2026-09-26).wonderdraft_map")
 TEST_DIR = os.path.expanduser("~/.local/share/wdmap/assetgen-test")
+PRE_SWAP_EXPORT = os.path.join(TEST_DIR, "Assetgen PreSwap Base.webp")
 DIFF_MIN = 40          # channel difference that counts as "built-in art was here" (WebP noise stays below)
 CELL = 450             # calibration grid cell, map units (18 x 18 cells on an 8192 map)
 GRID_SCALE = 0.35      # calibration scale: tall trees (~700 at 1, offset upward) stay inside a cell
@@ -51,16 +55,17 @@ def measure(export=True, log=print):
     """Drawn size and foot of every built-in texture at scale 1 -> builtin-sizes.json.
 
     A calibration map (the Base terrain, no labels) gets one copy of each built-in texture used
-    in Main on a grid, at GRID_SCALE, drawn untinted (white sample). Exported once with the grid
-    and once without, the difference inside each grid cell is exactly that texture's art."""
+    in Main before the swap (PRE_SWAP) on a grid, at GRID_SCALE, drawn untinted (white sample).
+    Exported once with the grid and once without, the difference inside each grid cell is
+    exactly that texture's art. The export without is also render.py's background."""
     os.makedirs(TEST_DIR, exist_ok=True)
     grid_map = os.path.join(TEST_DIR, "Assetgen Grid.wonderdraft_map")
     empty_map = os.path.join(TEST_DIR, "Assetgen Empty.wonderdraft_map")
-    m = WDMap.load(BASE_MAP)
     templates = {}
-    for s in m.symbols:
+    for s in WDMap.load(PRE_SWAP).symbols:
         if builtin(s) and s["texture"] not in templates:
             templates[s["texture"]] = s
+    m = WDMap.load(BASE_MAP)
     per_row = int(m.width // CELL)
     cells = {}
     grid = []
@@ -129,10 +134,11 @@ def _size_for(sizes, texture):
 
 # --- the pack art ----------------------------------------------------------------------
 
-def pack_folder(texture_folder):
-    """(files, meta) for a pack folder given as user://assets/<pack>/sprites/<kind>/<folder>."""
+def pack_folder(texture_folder, path=None):
+    """(files, meta) for a pack folder given as user://assets/<pack>/sprites/<kind>/<folder>;
+    `path` reads the art from another folder (an uninstalled round) under the same texture names."""
     rel = texture_folder[len("user://assets/"):]
-    path = os.path.join(ASSETS, rel)
+    path = path or os.path.join(ASSETS, rel)
     meta = {}
     if os.path.exists(os.path.join(path, ".wonderdraft_symbols")):
         with open(os.path.join(path, ".wonderdraft_symbols")) as f:
@@ -142,9 +148,34 @@ def pack_folder(texture_folder):
         im = Image.open(p)
         bb = im.getchannel("A").point(lambda v: 255 if v > 24 else 0).getbbox() if im.mode in ("RGBA", "LA") else None
         bb = bb or (0, 0, im.width, im.height)
-        files.append({"texture": texture_folder.rstrip("/") + "/" + os.path.basename(p)[:-4],
+        files.append({"texture": texture_folder.rstrip("/") + "/" + os.path.basename(p)[:-4], "file": p,
                       "W": im.width, "H": im.height, "bbox": bb})
     return files, meta
+
+
+def drawn(t, offset):
+    """Drawn size and foot at scale 1 (builtin-sizes.json's format) of pack art file `t` placed
+    with `offset`: Wonderdraft centres a sprite at position + offset x scale."""
+    bx0, by0, bx1, by1 = t["bbox"]
+    return {"w": bx1 - bx0, "h": by1 - by0, "cx": offset[0] + (bx0 + bx1) / 2 - t["W"] / 2,
+            "foot": offset[1] + by1 - t["H"] / 2}
+
+
+def fit(scale, src, t, match="area", size=1.0):
+    """(scale, (offset x, y)) that make art file `t` cover what `src` (drawn size at scale 1) covered
+    at `scale`, with its drawn foot and centre where the old art's were."""
+    bx0, by0, bx1, by1 = t["bbox"]
+    tw, th = bx1 - bx0, by1 - by0
+    if match == "width":
+        ratio = src["w"] / tw
+    elif match == "height":
+        ratio = src["h"] / th
+    else:
+        ratio = (src["w"] * src["h"] / (tw * th)) ** 0.5
+    new = scale * ratio * size
+    oy = (src["foot"] * scale - (by1 - t["H"] / 2) * new) / new
+    ox = (src["cx"] * scale - ((bx0 + bx1) / 2 - t["W"] / 2) * new) / new
+    return new, (round(ox, 2), round(oy, 2))
 
 
 # --- swapping ----------------------------------------------------------------------------
@@ -174,25 +205,10 @@ def swap(m, rules, sizes, log=print):
             raise SystemExit("no art in %s (is the pack installed?)" % rule["to"])
         x, y = s["position"]
         t = files[zlib.crc32(("%.2f,%.2f" % (x, y)).encode()) % len(files)]
-        bx0, by0, bx1, by1 = t["bbox"]
-        tw, th = bx1 - bx0, by1 - by0
-        match = rule.get("match", "area")
-        if match == "width":
-            ratio = src["w"] / tw
-        elif match == "height":
-            ratio = src["h"] / th
-        else:
-            ratio = (src["w"] * src["h"] / (tw * th)) ** 0.5
-        old = s["scale"][0]
-        new = old * ratio * rule.get("size", 1.0)
-        # Anchor: the new art's drawn foot and centre land where the old art's were.
-        foot_old = src["foot"] * old
-        cx_old = src["cx"] * old
-        oy = (foot_old - (by1 - t["H"] / 2) * new) / new
-        ox = (cx_old - ((bx0 + bx1) / 2 - t["W"] / 2) * new) / new
+        new, off = fit(s["scale"][0], src, t, rule.get("match", "area"), rule.get("size", 1.0))
         s["texture"] = t["texture"]
         s["scale"] = type(s["scale"])(new, new)
-        s["offset"] = type(s["offset"])(round(ox, 2), round(oy, 2))
+        s["offset"] = type(s["offset"])(*off)
         if "radius" in meta:
             s["radius"] = float(meta["radius"])
         if meta.get("draw_mode") == "custom_colors":
@@ -206,6 +222,8 @@ def make_swapped(log=print):
         sizes = json.load(f)
     m = WDMap.load(BASE_MAP)
     left_before = {family(s["texture"]) for s in m.symbols if builtin(s)}
+    if not left_before:
+        raise SystemExit("the Base has no built-in art left (Main was swapped 2026-09-26); nothing to test")
     done = swap(m, load_rules(), sizes, log)
     for k, v in sorted(done.items(), key=lambda kv: -kv[1]):
         log("  %5d  %s" % (v, k))
@@ -259,7 +277,7 @@ def compare(out_dir, log=print):
     Image.MAX_IMAGE_PIXELS = None
     m = WDMap.load(BASE_MAP)
     swapped = os.path.join(TEST_DIR, "Assetgen PackSwap.webp")
-    imgs = [("Wonderdraft built-ins", Image.open(BASE_EXPORT).convert("RGB")),
+    imgs = [("Wonderdraft built-ins", Image.open(PRE_SWAP_EXPORT).convert("RGB")),
             ("Dotty + Moulk packs", Image.open(swapped).convert("RGB"))]
     font = ImageFont.truetype(wdtest.FONT, 24)
     os.makedirs(out_dir, exist_ok=True)

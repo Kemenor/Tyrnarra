@@ -1,8 +1,10 @@
 """What to generate: art families, styles and the numbers that make them fit Wonderdraft.
 
-A family replaces one of Wonderdraft's built-in art families (the "replaces" texture prefix)
-and borrows its size and anchor, so swapped symbols sit where the old ones stood. The prompt
-lessons behind these strings are in README.md ("Prompting").
+A family replaces one art folder of Main (the "replaces" texture prefix: since the 2026-09-26
+pack swap a bought pack's folder, which stands where Wonderdraft's built-ins stood). Its size and
+anchor at scale 1 are the built-in art's, measured (builtin-sizes.json), so hand-placed symbols
+come out as big as Wonderdraft's own; the test fits each swapped symbol to the art it replaces.
+The prompt lessons behind these strings are in README.md ("Prompting").
 """
 
 # Shared prompt tail and negative prompt. One subject per image, portrait: see README.
@@ -29,7 +31,9 @@ FAMILIES = {
                      "young small fir tree, compact cone shape",
                      "pine tree with drooping layered boughs",
                      "lopsided windswept fir tree, slightly irregular silhouette"],
-        "replaces": "res://sprites/trees/_hd_christmas/",
+        # Main's conifers since the pack swap (built-in _hd_christmas, inked, hatch, _hd_pine,
+        # larix and cedar all became Dotty's pines).
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines/",
         "kind": "trees",           # Wonderdraft sprite folder: trees | mountains | symbols
         "size": (185, 330),        # px at Wonderdraft scale 1, matched by area (built-in tree_xmas ~170-210 x 300-415)
         "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor

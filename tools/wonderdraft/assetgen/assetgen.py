@@ -3,11 +3,12 @@
 
   assetgen.sh generate conifer --seeds 100-139        images + masks from the tower's ComfyUI
   assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
-  assetgen.sh test conifer                            real Wonderdraft export vs the built-in art
+  assetgen.sh test conifer --round 7                  real Wonderdraft export vs the art Main uses now
+  assetgen.sh test conifer --round 7 --offline        the same drawn here (render.py), no Wonderdraft
 
 Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
 add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
-chosen.txt, sheet.jpg, compare-*.jpg).
+chosen.txt, sheet.jpg, compare-*.jpg; with --round N all but raw/ in round-N/, plus the sprites).
 """
 import argparse
 import os
@@ -66,11 +67,20 @@ def cmd_generate(a):
             print("%s %s seed %d: %.1f s" % (fam["name"], style, seed, t), flush=True)
 
 
+def _out(fam, n):
+    """Where a family's (or one round's) build and test files go."""
+    out = os.path.join(WORK, fam["name"], *(["round-%d" % n] if n else []))
+    os.makedirs(out, exist_ok=True)
+    return out
+
+
 def cmd_build(a):
     from collections import Counter
+    import shutil
     import sprites
     fam = _family(a.family)
     base = os.path.join(WORK, fam["name"])
+    out = _out(fam, a.round)
     pool, rejects = [], []
     for style in a.style:
         raw = os.path.join(base, style, "raw")
@@ -101,12 +111,16 @@ def cmd_build(a):
     chosen = sorted(pool[: a.keep], key=lambda t: (t[0], t[1]))
     finished = [sprites.finish(c, fam, lv) for _, _, c, lv in chosen]
     folder = sprites.install(finished, fam)
-    with open(os.path.join(base, "rejects.txt"), "w") as f:
+    if a.round:
+        # A copy of the round's sprites, for comparing rounds after the next build replaced them.
+        shutil.rmtree(os.path.join(out, "sprites"), ignore_errors=True)
+        shutil.copytree(folder, os.path.join(out, "sprites"))
+    with open(os.path.join(out, "rejects.txt"), "w") as f:
         f.write("\n".join(rejects) + "\n")
-    with open(os.path.join(base, "chosen.txt"), "w") as f:
+    with open(os.path.join(out, "chosen.txt"), "w") as f:
         f.write("\n".join("%s <- %s seed %d" % (fam["file"].format(n=n), style, seed)
                           for n, (style, seed, _, _) in enumerate(chosen, 1)) + "\n")
-    sheet = sprites.contact_sheet(finished, os.path.join(base, "sheet.jpg"))
+    sheet = sprites.contact_sheet(finished, os.path.join(out, "sheet.jpg"))
     print("%s: %d usable, %d installed in %s; sheet %s" % (fam["name"], len(pool), len(finished), folder, sheet))
     print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
 
@@ -114,8 +128,12 @@ def cmd_build(a):
 def cmd_test(a):
     import wdtest
     fam = _family(a.family)
-    out = os.path.join(WORK, fam["name"])
-    for p in wdtest.run(fam, out, export=not a.no_export):
+    out = _out(fam, a.round)
+    if a.offline:
+        paths = wdtest.offline(fam, out, a.round)
+    else:
+        paths = wdtest.run(fam, out, export=not a.no_export, n=a.round)
+    for p in paths:
         print(p)
 
 
@@ -159,8 +177,12 @@ def main(argv=None):
             s.add_argument("--keep", type=int, default=32, help="variants to install")
             s.add_argument("--seeds", help="only these generated seeds, e.g. 101-200 (default: all)")
             s.add_argument("--seed", type=int, default=7, help="shuffle seed for picking variants")
+        if name in ("build", "test"):
+            s.add_argument("--round", type=int, help="round number: keep this round's files apart (README: Results log)")
         if name == "test":
             s.add_argument("--no-export", action="store_true", help="only rebuild maps and crops")
+            s.add_argument("--offline", action="store_true",
+                           help="draw the comparison here (render.py) instead of exporting with Wonderdraft")
     a = p.parse_args(argv)
     a.fn(a)
 
