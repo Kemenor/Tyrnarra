@@ -119,9 +119,28 @@ def cmd_test(a):
         print(p)
 
 
+def cmd_measure(a):
+    import packswap
+    packswap.measure(export=not a.no_export)
+
+
+def cmd_packswap(a):
+    import packswap
+    path = packswap.make_swapped()
+    if not a.no_export:
+        import wd_export
+        wd_export.export_views([path])
+    packswap.compare(os.path.join(WORK, "packswap"))
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
+    for name, fn, text in (("measure-builtins", cmd_measure, "measure the built-in art's sizes (one export)"),
+                           ("packswap", cmd_packswap, "Base view with built-ins swapped per pack-swap.json, exported")):
+        s = sub.add_parser(name, help=text)
+        s.add_argument("--no-export", action="store_true", help="reuse the last export")
+        s.set_defaults(fn=fn)
     for name, fn in (("generate", cmd_generate), ("build", cmd_build), ("test", cmd_test)):
         s = sub.add_parser(name)
         s.add_argument("family")

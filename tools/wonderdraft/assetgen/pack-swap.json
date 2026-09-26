@@ -1,0 +1,28 @@
+{
+  "_about": "Which built-in Wonderdraft art family becomes which installed pack folder (packswap.py). 'match' says which measured dimension the new art copies: area (trees), width (mountains, hills, dunes: ranges are built side by side), height. 'size' fine-tunes after a look at the test export. First rule whose 'from' prefixes the texture wins. Chosen 2026-09-26: Dotty classic for trees and dunes, Moulk's engraved art for mountains and hills.",
+  "rules": [
+    {"from": "res://sprites/trees/_hd_christmas/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/inked_pine/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/hatch_pine/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/_hd_pine/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/_hd_larix/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/_hd_cedar/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines", "match": "area"},
+    {"from": "res://sprites/trees/_hd_oak/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks", "match": "area"},
+    {"from": "res://sprites/trees/_hd_hazel/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks", "match": "area"},
+    {"from": "res://sprites/trees/leafy_tree/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks", "match": "area"},
+    {"from": "res://sprites/trees/_hd_willow/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows", "match": "area"},
+    {"from": "res://sprites/trees/toon_palm/", "to": "user://assets/Dotty_Assets/sprites/trees/Dotty_Palms", "match": "area"},
+    {"from": "res://sprites/mountains/playful_jagged_peaks/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1", "match": "width"},
+    {"from": "res://sprites/mountains/inked_mountains_large/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1", "match": "width"},
+    {"from": "res://sprites/mountains/penciled_mountains_large/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1", "match": "width"},
+    {"from": "res://sprites/mountains/penned_mountains_large/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1", "match": "width"},
+    {"from": "res://sprites/mountains/playful_rounded_mountains/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2", "match": "width"},
+    {"from": "res://sprites/mountains/penciled_mountains_small/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 1", "match": "width"},
+    {"from": "res://sprites/mountains/penned_mountains_small/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 1", "match": "width"},
+    {"from": "res://sprites/mountains/penned_hills/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1", "match": "width"},
+    {"from": "res://sprites/mountains/playful_hiils/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1", "match": "width"},
+    {"from": "res://packs/Tang Dynasty by Chan/sprites/mountains/hills/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/low hills 1", "match": "width"},
+    {"from": "res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "to": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/peak sample 1", "match": "height"},
+    {"from": "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_", "to": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Dunes", "match": "width"}
+  ]
+}
