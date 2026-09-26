@@ -1,0 +1,26 @@
+{
+  "slug": "marta",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "halfling",
+  "anchor": "full",
+  "character": "A brisk woman who looks about forty, compact and upright, thick dark brown curls pinned up tight with two wooden pins, a few threads of grey at the temples. Small round spectacles. A warm, knowing half-smile, eyes sharp and level. Ink stains on the fingers of her right hand",
+  "wardrobe": "a dark green wool dress with the sleeves pushed to the elbow under a fitted charcoal waistcoat, a leather coin satchel worn across the body on a strap, a thick ledger bound in cracked brown leather, a pencil tucked behind one ear",
+  "shots": {
+    "full": {
+      "file": "marta-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, the ledger held open against her hip, plain neutral background."
+    },
+    "portrait": {
+      "file": "marta",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, looking at the viewer over her spectacles, faint smile."
+    },
+    "scene": {
+      "file": "marta-entrance",
+      "size": "portrait_4_3",
+      "framing": "Perched on a tall stool beside the door of a crowded fighting pit under a bridge, ledger open on her knee, taking coins from an outstretched hand, raw timber beams and iron bolts overhead, oil lamps on chains, a sand ring and a shouting crowd blurred behind her."
+    }
+  }
+}

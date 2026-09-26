@@ -1,0 +1,26 @@
+{
+  "slug": "cord",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "human",
+  "anchor": "full",
+  "character": "A very large man in his forties, broad and heavy through the chest and arms, head shaved, a short dark beard grey at the chin. A flat, patient expression, heavy-lidded eyes. Thick scarred knuckles, a small old scar through one eyebrow",
+  "wardrobe": "a rough undyed linen shirt with the sleeves rolled to the elbow, a long heavy leather apron stained dark, a bar cloth over one shoulder, dark trousers and plain boots",
+  "shots": {
+    "full": {
+      "file": "cord-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, arms folded, plain neutral background."
+    },
+    "portrait": {
+      "file": "cord",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, looking straight at the viewer, expression unreadable."
+    },
+    "scene": {
+      "file": "cord-bar",
+      "size": "portrait_4_3",
+      "framing": "A huge barkeeper behind a rough plank bar, wiping a tankard with a cloth, raw timber and iron bolts of a bridge's underside close overhead, crude shelves of bottles, a single swaying oil lamp, drinkers in shadow along the bar."
+    }
+  }
+}

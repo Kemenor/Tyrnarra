@@ -1,0 +1,26 @@
+{
+  "slug": "sable-woman",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "catfolk",
+  "anchor": "full",
+  "character": "A woman of about thirty, lean and long-limbed, corded muscle through the shoulders and forearms. Short dense fur of deep sable brown, near black, paler at the throat. Pale gold eyes, level and unhurried. The tip of one ear notched, a thin old scar across the bridge of the nose. Expression calm and unbothered",
+  "wardrobe": "a close-fitting sleeveless vest of black leather, dark cloth wraps binding both hands and forearms, loose charcoal trousers bound at the calf with cord, barefoot",
+  "shots": {
+    "full": {
+      "file": "sable-woman-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, weight loose on the back foot, wrapped hands relaxed at her sides, plain neutral background."
+    },
+    "portrait": {
+      "file": "sable-woman",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, looking just past the viewer, expression calm and unbothered."
+    },
+    "scene": {
+      "file": "sable-woman-ring",
+      "size": "portrait_4_3",
+      "framing": "Fighting in a sand ring under the raw timber and iron bolts of a bridge's underside, sidestepping a heavier opponent's swing with room to spare, oil lamps on chains swaying overhead, a crowd shouting from wooden tiers."
+    }
+  }
+}
