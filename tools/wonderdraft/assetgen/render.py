@@ -6,12 +6,13 @@ get it: sorted by layer then y, sprites filtered through mipmaps built from stra
 premultiplied) alpha, greyscale art multiplied by the ground under it. Labels are left out.
 
 Wonderdraft draws the soft edges of shrunk sprites darker and more opaque than plain alpha
-blending does; in a dense forest those edges are most of the picture. EDGE_COVER and the
-squared alpha on the colour are a fit, not a mechanism: with them the densest patches of the
-real exports come out (mean grey / share darker than 50, real vs here, 2026-09-27):
-Dotty pines 87/35% vs 89/30%, round-6 conifers 86/27% vs 86/29%, Dotty oaks 73/36% vs 68/41%.
-Single trees and fills match to the pixel. Good for comparing art in seconds; `test` (the real
-export) has the last word.
+blending does; in a dense forest those edges are most of the picture. EDGE_COVER and
+COLOUR_POWER are a fit, not a mechanism, made on four real exports of the densest conifer
+patch (mean grey / share darker than 50, real vs here, 2026-09-27): Dotty pines 87/35% vs
+86/35%, round 9 (4 px ring) 81/39% vs 83/34%, round 11 83/37% vs 84/34%, round 6 (1 px ring)
+86/27% vs 82/35%. Thin-ringed art comes out a little dark; the pack's art has thick rings
+since round 9. Single trees and fills match to the pixel. Good for comparing art in seconds;
+`test` (the real export) has the last word.
 """
 import math
 import os
@@ -26,7 +27,8 @@ from wdmap import WDMap  # noqa: E402
 
 EMPTY = os.path.expanduser("~/.local/share/wdmap/assetgen-test/Assetgen Empty.webp")
 PAD = 400   # symbols this far outside a patch can still reach into it
-EDGE_COVER = 0.7   # background left under a symbol: 1 - alpha ** EDGE_COVER (see above)
+EDGE_COVER = 0.5   # background left under a symbol: 1 - alpha ** EDGE_COVER (see above)
+COLOUR_POWER = 2.0  # the symbol's colour counts alpha ** COLOUR_POWER (see above)
 
 
 @lru_cache(maxsize=1)
@@ -100,6 +102,6 @@ def patch(symbols, box):
         elif s.get("type") in ("tree", "mountain"):
             rgb = rgb * ground[ya:yb, xa:xb]
         region = dst[ya:yb, xa:xb]
-        region[:] = region * (1 - a ** EDGE_COVER) + rgb * a * a
+        region[:] = region * (1 - a ** EDGE_COVER) + rgb * a ** COLOUR_POWER
     out = dst[PAD:PAD + y1 - y0, PAD:PAD + x1 - x0]
     return Image.fromarray((out * 255).clip(0, 255).astype(np.uint8))

@@ -160,11 +160,11 @@ What worked and what did not, in the order we found it (2026-09-26):
   beside the real exports of the built-ins and of `Main` now: the Empty export (Base terrain, no
   symbols or labels) as ground, symbols y-sorted, straight-alpha mipmaps like Godot's, greyscale
   art multiplied by the ground. Wonderdraft draws the soft edges of shrunk sprites darker than
-  plain alpha blending; an empirical fit (`EDGE_COVER`, alpha squared on the colour) brings the
-  densest patches within a few points of real exports for thin-edged art: Dotty pines 87/35% real
-  vs 89/30% here (mean grey / share darker than 50), round-6 conifers 86/27% vs 86/29%, Dotty oaks
-  73/36% vs 68/41%. Thick rings come out darker in Wonderdraft than here (round 9: 81/39% real,
-  86/30% here). Single trees match to the pixel. The real export has the last word.
+  plain alpha blending; an empirical fit (`EDGE_COVER` 0.5, `COLOUR_POWER` 2), refitted on four
+  real exports, brings the densest patch within a few points (mean grey / share darker than 50,
+  real vs here): Dotty pines 87/35% vs 86/35%, round 9 81/39% vs 83/34%, round 11 83/37% vs
+  84/34%; thin-ringed round 6 comes out darker here (86/27% vs 82/35%). The first fit (0.7)
+  had round 9 at 86/30%. Single trees match to the pixel. The real export has the last word.
 - `--offline` also writes `lineup.jpg`: the built-ins, the art `Main` uses now and each round,
   sprite by sprite at full size and at map size (40 px), tinted grass-green.
 - **Size**: the built-in conifers measured on the calibration grid are smaller than our `size`
