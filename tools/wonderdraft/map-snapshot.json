@@ -3,7 +3,7 @@
  "size": [8192.0, 8192.0],
  "layers": {"+5": "Legend", "+4": "City Icons", "+3": "Divine City Labels", "+2": "Region Labels", "+1": "God Labels", "0": "Terrain", "-1": "City Labels", "-2": "-2", "-3": "-3", "-4": "-4", "-5": "-5"},
  "scale": {"reads": "1000 Miles", "segments": 10.0, "per_segment": 100.0, "bar_map_units": 2000, "per_map_unit": 0.5},
- "totals": {"labels": 121, "symbols": 15132, "regions": {"domain": 39, "region": 73}},
+ "totals": {"labels": 121, "symbols": 15132, "regions": {"domain": 38, "region": 73}},
  "labels": [
   {"layer": "+5 (Legend)", "text": "Capitol", "at": [211, 164], "font": "Uncial Antiqua", "size": 24},
   {"layer": "+5 (Legend)", "text": "City State", "at": [234, 240], "font": "Uncial Antiqua", "size": 24},
@@ -143,7 +143,6 @@
   {"kind": "domain", "name": "Floteyn", "bbox": [541, 3251, 3267, 4830], "area": 3296468, "color": "#04b5a9"},
   {"kind": "domain", "name": "Lautarra", "bbox": [3230, 5175, 6264, 6876], "area": 2838981, "color": "#b8237a"},
   {"kind": "domain", "name": "Lautarra", "bbox": [3468, 5247, 3664, 5392], "area": 17984, "color": "#b8237a"},
-  {"kind": "domain", "name": "Lautarra", "bbox": [4461, 5840, 4668, 6011], "area": 28019, "color": "#b8237a"},
   {"kind": "domain", "name": "Lautarra", "bbox": [4677, 4516, 4825, 4782], "area": 25525, "color": "#b8237a"},
   {"kind": "domain", "name": "Lioaru", "bbox": [916, 6558, 1177, 6802], "area": 47685, "color": "#ffffff"},
   {"kind": "domain", "name": "Lioaru", "bbox": [1560, 5631, 4587, 7661], "area": 3195466, "color": "#ffffff"},
