@@ -123,6 +123,8 @@ def cmd_build(a):
         if a.seeds:
             wanted = set(_seeds(a.seeds))
             seeds = [s for s in seeds if s in wanted]
+        # Drawings looked at and dropped by hand (recipe "exclude": {style: [seeds]}).
+        seeds = [s for s in seeds if s not in fam.get("exclude", {}).get(style, [])]
         good = []
         for seed in seeds:
             rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed),

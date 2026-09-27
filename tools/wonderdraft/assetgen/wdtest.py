@@ -429,62 +429,98 @@ def builtin_refs(export=True, log=print):
 
 MAIN_MAP = os.path.join(WD, "Main.wonderdraft_map")   # the Base view has no labels
 BSG = "user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"
-# Which of our settlement kinds stands in for each BSG icon Main uses.
-BSG_KINDS = {"Large City Stone Wall + Towers": "walled_city", "Cathedral": "temple",
-             "Large Stone Wall": "walled_town", "Fortress": "fortress", "Town": "town", "Keep": "castle",
-             "Small City": "city", "Castle": "castle", "Small City Stone Wall": "walled_town"}
+# A city in Main is a cluster of BSG icons (a god-city: Fortress + Town + Large Stone Wall).
+# A cluster becomes one of our settlement kinds by its most important member, in this order.
+BSG_KINDS = [("Large City Stone Wall + Towers", "walled_city"), ("Large Stone Wall", "walled_town"),
+             ("Small City Stone Wall", "walled_town"), ("Fortress", "fortress"), ("Cathedral", "temple"),
+             ("Castle", "castle"), ("Keep", "castle"), ("Small City", "city"), ("Town", "town")]
 ROOF = (0.62, 0.27, 0.20)     # colour 3 for the preview: Main's BSG icons leave it black
+CLUSTER_GAP = 70              # map units between icons of one city
+
+
+def _drawn_box(x, t):
+    """Map box (x0, y0, x1, y1) a symbol's art covers, from its file's bbox."""
+    sc = x["scale"][0]
+    bx0, by0, bx1, by1 = t["bbox"]
+    cx = x["position"][0] + x["offset"][0] * sc
+    cy = x["position"][1] + x["offset"][1] * sc
+    return (cx + (bx0 - t["W"] / 2) * sc, cy + (by0 - t["H"] / 2) * sc,
+            cx + (bx1 - t["W"] / 2) * sc, cy + (by1 - t["H"] / 2) * sc)
+
+
+def _clusters(syms, idx):
+    """Groups of symbol indices whose positions chain within CLUSTER_GAP."""
+    groups, left = [], list(idx)
+    while left:
+        group, todo = [], [left.pop()]
+        while todo:
+            i = todo.pop()
+            group.append(i)
+            xi, yi = syms[i]["position"][0], syms[i]["position"][1]
+            near = [j for j in left if (syms[j]["position"][0] - xi) ** 2 + (syms[j]["position"][1] - yi) ** 2
+                    < CLUSTER_GAP ** 2]
+            for j in near:
+                left.remove(j)
+            todo += near
+        groups.append(group)
+    return groups
 
 
 def icon_preview(fam, folder, path, base):
-    """Main's BSG icons replaced by ours, drawn here: the god-cities at their own labels, the
-    settlement kinds by BSG_KINDS; each at the BSG icon's drawn area, BSG's line and wall
-    colours, a roof colour added. Two crops per city/cluster: Main now | ours."""
+    """Main's city icons replaced by ours, drawn here. Each city (a cluster of BSG icons) becomes
+    one of ours as wide as the whole cluster, standing on its bottom edge, in the city's own
+    line and wall colours with a roof colour added: the god-cities by their labels, other
+    cities by BSG_KINDS. Two crops per city: Main now | ours."""
     import render
     ours = {}
     for t in packswap.pack_folder(sprites.texture_folder(fam), folder)[0]:
-        item = t["texture"].rsplit("/", 1)[1].rsplit("_", 1)[0]
-        ours.setdefault(item, []).append(t)
+        ours.setdefault(t["texture"].rsplit("/", 1)[1].rsplit("_", 1)[0], []).append(t)
     theirs = {t["texture"]: t for t in packswap.pack_folder(BSG.rstrip("/"))[0]}
     syms = [dict(x) for x in base]
-    targets = []    # (label, symbol index)
-    icons = [i for i, x in enumerate(syms) if x.get("texture", "").startswith(BSG)]
+    icons = [i for i, x in enumerate(syms) if x.get("texture", "") in theirs]
+    clusters = _clusters(syms, icons)
+    targets = []   # (label, cluster, our item)
     if fam["name"] == "god_cities":
         main = WDMap.load(MAIN_MAP)
         for lb in main.labels:
             if "Divine City" not in main.layer_name(lb.get("z_index", 0)):
                 continue
-            name = lb.get("text", "").strip().lower().replace(" ", "_")
+            item = lb.get("text", "").strip().lower().replace(" ", "_")
             x, y = lb["position"]
-            i = min(icons, key=lambda k: (syms[k]["position"][0] - x) ** 2 + (syms[k]["position"][1] - y) ** 2)
-            if name in ours:
-                targets.append((lb.get("text", "").strip(), i, name))
+            c = min(clusters, key=lambda g: min((syms[k]["position"][0] - x) ** 2 + (syms[k]["position"][1] - y) ** 2
+                                                for k in g))
+            if item in ours:
+                targets.append((lb.get("text", "").strip(), c, item))
     else:
-        for i in icons:
-            kind = BSG_KINDS.get(syms[i]["texture"].rsplit("/", 1)[1])
+        for c in clusters:
+            names = {syms[k]["texture"].rsplit("/", 1)[1] for k in c}
+            kind = next((kind for name, kind in BSG_KINDS if name in names), None)
             if kind in ours:
-                targets.append((kind, i, kind))
-    before = [dict(syms[i]) for _, i, _ in targets]
-    for (label, i, item), b in zip(targets, before):
-        x = syms[i]
-        old = theirs.get(x["texture"])
-        t = ours[item][zlib.crc32(_key(x).encode()) % len(ours[item])]
-        src = packswap.drawn(old, (0, 0)) if old else {"w": 250, "h": 170, "cx": 0, "foot": 85}
-        scale, off = packswap.fit(x["scale"][0], src, t)
-        x["texture"], x["scale"], x["offset"] = t["file"], type(x["scale"])(scale, scale), type(x["offset"])(*off)
-        cc = list(x.get("custom_colors") or [gdvar.Color(0, 0, 0, 1)] * 3)
-        x["custom_colors"] = [cc[0], cc[1], gdvar.Color(ROOF[0], ROOF[1], ROOF[2], 1)]
-        x["custom_color_mode"] = 1
-    # One crop per target (god-cities) or per kind (settlements), 240 x 160 around the icon, at 2x.
-    seen, crops = set(), []
-    for (label, i, item), b in zip(targets, before):
-        if label in seen:
-            continue
-        seen.add(label)
-        px, py = b["position"][0], b["position"][1]
-        crops.append((label, (round(px - 120), round(py - 90), round(px + 120), round(py + 70))))
+                targets.append((kind, c, kind))
+    crops = []
+    for label, c, item in targets:
+        boxes = [_drawn_box(syms[k], theirs[syms[k]["texture"]]) for k in c]
+        x0, y0 = min(b[0] for b in boxes), min(b[1] for b in boxes)
+        x1, y1 = max(b[2] for b in boxes), max(b[3] for b in boxes)
+        first = syms[c[0]]
+        t = ours[item][zlib.crc32(_key(first).encode()) % len(ours[item])]
+        bx0, by0, bx1, by1 = t["bbox"]
+        scale = (x1 - x0) / (bx1 - bx0)
+        new = dict(first)
+        new["texture"], new["scale"] = t["file"], type(first["scale"])(scale, scale)
+        new["position"] = type(first["position"])((x0 + x1) / 2, y1)
+        new["offset"] = type(first["offset"])(t["W"] / 2 - (bx0 + bx1) / 2, t["H"] / 2 - by1)
+        cc = list(first.get("custom_colors") or [gdvar.Color(0, 0, 0, 1)] * 3)
+        new["custom_colors"] = [cc[0], cc[1], gdvar.Color(ROOF[0], ROOF[1], ROOF[2], 1)]
+        new["custom_color_mode"] = 1
+        for k in c:
+            syms[k] = dict(syms[k], texture="")      # the cluster's own icons leave
+        syms[c[0]] = new
+        if label not in {lab for lab, _ in crops}:
+            mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+            crops.append((label, (round(mx - 120), round(my - 80), round(mx + 120), round(my + 80))))
     font = ImageFont.truetype(FONT, 20)
-    z, cw, chh = 2, 240 * 2, 160 * 2
+    cw, chh = 480, 320
     per_row = 3
     rows = (len(crops) + per_row - 1) // per_row
     sheet = Image.new("RGB", (per_row * (2 * cw + 30) + 10, rows * (chh + 40) + 10), (236, 229, 214))

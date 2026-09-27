@@ -69,7 +69,7 @@ FAMILIES = {
                      "beech tree: a dense smooth domed crown on a short straight trunk",
                      "linden tree: a tall rounded egg-shaped crown on a short trunk",
                      "young tree: a small round crown on a thin short trunk",
-                     "maple tree: a full round crown with a lobed wavy edge on a short trunk",
+                     "maple tree: a full round leafy crown on a short trunk",   # "lobed" drew a maple leaf
                      "ash tree: an open airy crown of a few rounded leaf clusters on a short trunk"],
         "builtin": "res://sprites/trees/_hd_oak/", "place": "fit",
         # Main's broadleaves since the pack swap (built-in oak, hazel and leafy tree became Dotty's oaks).
@@ -78,6 +78,7 @@ FAMILIES = {
         "size": (350, 300),        # built-in _hd_oak, area-equivalent at scale 1 (builtin-sizes.json)
         "radius": 118, "offset_y": -130,  # built-in _hd_oak footprint and anchor
         "aspect": (0.65, 1.6),     # built-in oaks 0.74-1.12, hazels 0.83-1.71
+        "exclude": {"ink": [14]},  # seed 14 drew a giant maple leaf
         "pack_folder": "Tyrnarra_Broadleaves",
         "file": "broadleaf_{n:02d}",
     },
