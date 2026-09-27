@@ -297,7 +297,7 @@ FAMILIES = {
                   ("inn", "roadside inn with a hanging sign and a stable")],
         "per_item": 3,
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
-        "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
+        "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.3, 0.97),
         "pack_folder": "Tyrnarra_Settlements", "file": "{item}_{n}",
     },
     "god_cities": {
