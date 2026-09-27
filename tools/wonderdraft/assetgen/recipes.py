@@ -19,7 +19,17 @@ STYLES = {
     "ink": "black ink outlines with soft watercolor wash shading, hand-drawn fantasy cartography",
     "sepia": "sepia brown ink linework with light wash shading, antique map illustration",
     "icon": "bold black ink outlines, cream white walls, flat red roofs, hand-drawn fantasy cartography",
+    # Terrain symbols: the watercolour styles drew detailed engravings and whole landscapes, and
+    # "hand-drawn fantasy cartography" brought the hatching back; the bare wording (in the
+    # subject) drew clean single mountains.
+    "line": "",
 }
+LINE_FRAME = ", sketch, isolated on a plain white background"
+# Mountains keep their ridge lines and shaded side: no inner fade, a thin ring.
+TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0}
+LINE_NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
+                 "panorama, horizon, sky, clouds, sun, birds, trees, forest, several mountains, mountain range, "
+                 "background, parchment, paper texture, border, frame, cropped, blurry, detailed, shading, hatching")
 
 FAMILIES = {
     "conifer": {
@@ -72,14 +82,16 @@ FAMILIES = {
         "file": "broadleaf_{n:02d}",
     },
     "willow": {
+        # SDXL drew mostly upright trees for "weeping willow" (1 in 6 wept); FLUX follows the shape.
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
                     "minimal shading, short visible trunk"),
         "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no ground.",
-        "variants": ["weeping willow tree, round crown of long drooping curtains of leaves",
-                     "old weeping willow, wide crown hanging down to the ground",
-                     "young willow tree, small drooping crown",
-                     "willow by the water, leaning trunk, drooping branches"],
+        "variants": ["weeping willow: a round dome of long drooping curtains of leaves hanging almost to the ground, short trunk",
+                     "old weeping willow: a wide crown whose long branches hang straight down like a curtain",
+                     "young weeping willow: a small dome of hanging leafy strands on a thin trunk",
+                     "leaning weeping willow: the trunk tilted to one side, long strands of leaves drooping down"],
         "builtin": "res://sprites/trees/_hd_willow/", "place": "fit",
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",
         "kind": "trees", "size": (260, 264), "radius": 128, "offset_y": -110, "aspect": (0.75, 1.5),
@@ -200,69 +212,53 @@ FAMILIES = {
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
-        "shape": "mountain", "canvas": (1216, 832),
-        "subject": ("a single {variant} drawn as a mountain symbol for a fantasy map, stylized, bold black ink "
-                    "outline, white snowy face with a few hatching lines on the shaded side, flat base, simple shape "
-                    "readable at small size"),
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with two or three "
+                    "inner ridge lines, white inside, flat bottom edge, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
-                     "sky, clouds, trees, several mountains, mountain range, parchment, border, frame, cropped, blurry"),
-        "variants": ["tall jagged mountain peak",
-                     "pair of sharp peaks, one taller than the other",
-                     "craggy mountain with a snowy summit",
-                     "broad mountain with two summits",
-                     "steep rocky spire",
-                     "mountain with a long ridge sloping down to one side"],
+        "variants": ["tall jagged mountain", "mountain with two sharp peaks", "craggy mountain with a snowy top",
+                     "broad mountain with two summits", "steep rocky spire", "mountain with a long ridge sloping to one side"],
         "builtin": "res://sprites/mountains/playful_jagged_peaks/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1/",
         "kind": "mountains",
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
-        "radius": 45, "offset_y": 0, "aspect": (0.4, 1.1), "fill": (0.25, 0.9),
+        "radius": 45, "offset_y": 0, "aspect": (0.3, 1.1), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Peaks", "file": "peak_{n:02d}",
     },
     "fells": {
-        "shape": "mountain", "canvas": (1216, 832),
-        "subject": ("a single {variant} drawn as a mountain symbol for a fantasy map, stylized, bold black ink "
-                    "outline, pale face with a few soft hatching lines on the shaded side, flat base, simple shape "
-                    "readable at small size"),
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with one or two "
+                    "soft inner lines, white inside, flat bottom edge, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
-                     "sky, clouds, trees, several mountains, mountain range, parchment, border, frame, cropped, blurry"),
-        "variants": ["rounded old mountain with a soft dome top",
-                     "worn mountain with two gentle humps",
-                     "broad rounded mountain with a shallow saddle",
-                     "low rounded mountain with a rocky shoulder"],
+        "variants": ["rounded old mountain with a soft dome top", "worn mountain with two gentle rounded humps",
+                     "broad rounded mountain with a shallow saddle", "low rounded mountain with a rocky shoulder"],
         "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2/",
-        "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.25, 1.0), "fill": (0.25, 0.9),
+        "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.2, 1.0), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
     },
     "hills": {
-        "shape": "mountain", "canvas": (1216, 832),
-        "subject": ("a single {variant} drawn as a hill symbol for a fantasy map, stylized, bold black ink outline, "
-                    "pale face with a few short hatching strokes on the shaded side, flat base, simple shape"),
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        "subject": ("minimalist black line drawing of one single {variant}, simple clean curved outline with one short "
+                    "inner line, white inside, flat bottom edge, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a hill symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
-                     "sky, clouds, trees, mountains, parchment, border, frame, cropped, blurry"),
-        "variants": ["low rounded grassy hill", "pair of gentle rolling hills", "long low hill with a soft slope",
+        "variants": ["low rounded hill", "pair of gentle rolling hills side by side", "long low hill with a soft slope",
                      "small steep knoll"],
         "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
-        "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.18, 0.7), "fill": (0.25, 0.9),
+        "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",
     },
     "dunes": {
-        "shape": "mountain", "canvas": (1216, 832),
-        "subject": ("a single {variant} drawn as a symbol for a fantasy map, stylized, bold black ink outline, "
-                    "pale sand with a few curved hatching lines on the shaded side, flat base, simple shape"),
+        # SDXL drew desert photos and abstract swooshes for any single-dune wording: FLUX.
+        "engine": "flux", "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE + ", desert, sand texture, photo of dunes",
+        "subject": ("minimalist black line drawing of one single {variant} shape, a simple curved outline with a sharp "
+                    "crest line, white inside, flat bottom edge, fantasy map symbol, like an icon"),
         "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "negative": ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
-                     "sky, clouds, trees, mountains, parchment, border, frame, cropped, blurry"),
-        "variants": ["crescent sand dune with a sharp crest", "long low sand dune", "pair of sand dunes",
-                     "tall sand dune with a curling crest"],
+        "variants": ["crescent sand dune", "long low sand dune", "pair of small sand dunes", "tall sand dune with a curling crest"],
         "builtin": "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_small/", "place": "fit", "match": "width",
         "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Dunes/",
-        "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.12, 0.55), "fill": (0.25, 0.95),
+        "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.1, 0.55), "fill": (0.2, 0.95),
         "pack_folder": "Tyrnarra_Dunes", "file": "dune_{n:02d}",
     },
 
@@ -328,11 +324,15 @@ FLUX_STYLES = {
     "sepia": ("Sepia-brown ink with a pale warm wash: a bold clean outline, a light fill with a few fine hatching "
               "strokes, shading on one side. Simple and readable at small size. Isolated on a plain white "
               "background, nothing else in the image."),
+    "line": ("Clean black ink line drawing: a bold clean outline, a few inner lines, white inside, a little grey "
+             "shading on one side. Simple and readable at small size. Isolated on a plain white background, nothing "
+             "else in the image."),
     "icon": ("Bold black ink outlines; walls left plain cream-white with light grey shading; roofs, flags and domes "
              "painted in flat red. Simple, clean and readable at small size. Isolated on a plain white background, "
              "nothing else in the image, no ground, no text."),
 }
 FLUX_BATCH = 4        # images per FLUX graph (the model stack loads once per graph)
+SDXL_BATCH = 8        # images per SDXL graph: the tower's --cache-none server reloads models per graph
 
 
 def variants(fam):
@@ -345,7 +345,8 @@ def prompt(fam, style, seed, engine):
     v = variants(fam)[seed % len(variants(fam))]
     if engine == "flux":
         return fam["flux"].format(variant=v) + " " + FLUX_STYLES[style]
-    return fam["subject"].format(variant=v) + FRAME + ", " + STYLES[style]
+    tail = STYLES[style]
+    return fam["subject"].format(variant=v) + fam.get("frame", FRAME) + (", " + tail if tail else "")
 
 
 def styles(fam):

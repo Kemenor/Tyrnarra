@@ -86,6 +86,35 @@ def sdxl_with_mask(prompt, negative, seed, width, height, checkpoint, steps, cfg
     }
 
 
+def sdxl_batch_with_mask(jobs, negative, checkpoint, steps, cfg, sampler, scheduler, bg_model,
+                         prefix="tyrnarra/assetgen"):
+    """Several SDXL images plus their BiRefNet masks in one graph: jobs = [(prompt, seed, width,
+    height)], outputs [image, mask] per job, in order. The tower's server runs with --cache-none
+    (for FLUX), which reloads every model for every job; in one graph they load once
+    (one image per graph took ~25 s there, against ~5 s on a caching server)."""
+    g = {
+        "ck": {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": checkpoint}},
+        "neg": {"class_type": "CLIPTextEncode", "inputs": {"text": negative, "clip": ["ck", 1]}},
+        "bgm": {"class_type": "LoadBackgroundRemovalModel", "inputs": {"bg_removal_name": bg_model}},
+    }
+    for i, (prompt, seed, width, height) in enumerate(jobs):
+        k = str(i)
+        g["pos" + k] = {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["ck", 1]}}
+        g["lat" + k] = {"class_type": "EmptyLatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}}
+        g["ks" + k] = {"class_type": "KSampler", "inputs": {
+            "model": ["ck", 0], "positive": ["pos" + k, 0], "negative": ["neg", 0], "latent_image": ["lat" + k, 0],
+            "seed": seed, "steps": steps, "cfg": cfg, "sampler_name": sampler, "scheduler": scheduler, "denoise": 1.0}}
+        g["vd" + k] = {"class_type": "VAEDecode", "inputs": {"samples": ["ks" + k, 0], "vae": ["ck", 2]}}
+        g["rb" + k] = {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["bgm", 0], "image": ["vd" + k, 0]}}
+        g["mi" + k] = {"class_type": "MaskToImage", "inputs": {"mask": ["rb" + k, 0]}}
+        # Numeric ids in job order, image before mask: run() returns outputs sorted by node id.
+        g[str(1000 + 2 * i)] = {"class_type": "SaveImage", "inputs": {"images": ["vd" + k, 0],
+                                                                      "filename_prefix": "%s_%d" % (prefix, seed)}}
+        g[str(1001 + 2 * i)] = {"class_type": "SaveImage", "inputs": {"images": ["mi" + k, 0],
+                                                                      "filename_prefix": "%s_%d_mask" % (prefix, seed)}}
+    return g
+
+
 FLUX_MODELS = {"unet": "flux2-dev-Q4_K_M.gguf", "clip": "mistral_3_small_flux2_fp8.safetensors",
                "vae": "flux2-vae.safetensors", "turbo_lora": "Flux_2-Turbo-LoRA_comfyui.safetensors"}
 

@@ -64,16 +64,19 @@ def cmd_generate(a):
                           % (prompt, width, height, seed))
                 print("%s %s seeds %s: %.0f s" % (fam["name"], style, ",".join(str(s) for s, _ in batch), t), flush=True)
             continue
-        for seed, prompt in todo:
-            graph = comfy.sdxl_with_mask(prompt, negative, seed, width, height,
-                                         recipes.CHECKPOINT, recipes.STEPS, recipes.CFG, recipes.SAMPLER,
-                                         recipes.SCHEDULER, recipes.BG_MODEL,
-                                         prefix="tyrnarra/%s_%s_%d" % (fam["name"], style, seed))
-            t, (image, mask) = comfy.run(graph)
-            _save(raw, seed, image, mask, "%s\nnegative: %s\n%s %d steps cfg %s %s/%s %dx%d seed %d\n"
-                  % (prompt, negative, recipes.CHECKPOINT, recipes.STEPS, recipes.CFG,
-                     recipes.SAMPLER, recipes.SCHEDULER, width, height, seed))
-            print("%s %s seed %d: %.1f s" % (fam["name"], style, seed, t), flush=True)
+        for i in range(0, len(todo), recipes.SDXL_BATCH):
+            batch = todo[i:i + recipes.SDXL_BATCH]
+            graph = comfy.sdxl_batch_with_mask([(p, seed, width, height) for seed, p in batch], negative,
+                                               recipes.CHECKPOINT, recipes.STEPS, recipes.CFG, recipes.SAMPLER,
+                                               recipes.SCHEDULER, recipes.BG_MODEL,
+                                               prefix="tyrnarra/%s_%s" % (fam["name"], style))
+            t, images = comfy.run(graph, timeout=1800)
+            for j, (seed, prompt) in enumerate(batch):
+                _save(raw, seed, images[2 * j], images[2 * j + 1],
+                      "%s\nnegative: %s\n%s %d steps cfg %s %s/%s %dx%d seed %d\n"
+                      % (prompt, negative, recipes.CHECKPOINT, recipes.STEPS, recipes.CFG,
+                         recipes.SAMPLER, recipes.SCHEDULER, width, height, seed))
+            print("%s %s seeds %d-%d: %.0f s" % (fam["name"], style, batch[0][0], batch[-1][0], t), flush=True)
 
 
 def _save(raw, seed, image, mask, settings):
@@ -101,6 +104,8 @@ def cmd_build(a):
     fam = _family(a.family)
     base = os.path.join(WORK, fam["name"])
     out = _out(fam, a.round)
+    for key, value in fam.get("finish", {}).items():
+        setattr(recipes, key, value)      # the family's own finishing (e.g. mountains keep inner lines)
     for kv in a.set or []:
         # Finishing experiments without editing recipes.py: --set OUTLINE=3 --set INNER_LIGHTEN=0.5
         key, _, value = kv.partition("=")
