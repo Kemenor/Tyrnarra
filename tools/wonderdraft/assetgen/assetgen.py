@@ -192,6 +192,13 @@ def cmd_test(a):
         print(p)
 
 
+def cmd_fullswap(a):
+    import fullswap
+    out = os.path.join(WORK, "fullswap")
+    os.makedirs(out, exist_ok=True)
+    fullswap.run(out, export=not a.no_export)
+
+
 def cmd_builtin_refs(a):
     import wdtest
     wdtest.builtin_refs(export=not a.no_export)
@@ -219,6 +226,7 @@ def main(argv=None):
     sub = p.add_subparsers(dest="cmd", required=True)
     for name, fn, text in (("measure-builtins", cmd_measure, "measure the built-in art's sizes (one export)"),
                            ("builtin-refs", cmd_builtin_refs, "built-in art as local reference sprites (two exports)"),
+                           ("fullswap", cmd_fullswap, "the whole pack in a copy of the Base, exported and compared"),
                            ("packswap", cmd_packswap, "Base view with built-ins swapped per pack-swap.json, exported")):
         s = sub.add_parser(name, help=text)
         s.add_argument("--no-export", action="store_true", help="reuse the last export")
