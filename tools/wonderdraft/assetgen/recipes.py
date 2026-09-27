@@ -64,6 +64,11 @@ FAMILIES = {
         # Round 13: the 0.7 inner fade left the densest drawings as blank pale shapes without their
         # branch tiers; half the fade and 2 px bolder strokes keep the tiers, like Wonderdraft's own.
         "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -2},
+        # Round 17 (the user: "some less textured ones jump out"): only drawings whose finished
+        # inside keeps its dark branch tiers (13% of it strokes at map scale; the flat ones had
+        # 4-9%, at 12% they still looked soft) and whose edge is clean (the hazy sepia ones had
+        # 0.064-0.09 soft alpha per opaque pixel). 77 of 279 pass.
+        "min_texture": 0.13, "max_haze": 0.06,
         "file": "conifer_{n:02d}",
     },
     "broadleaf": {

@@ -141,6 +141,16 @@ def cmd_build(a):
         pool += [(style, seed, c, lv) for seed, c in good]
         print("%s: %d images, %d usable (levels %.0f-%.0f, gamma %.2f)"
               % (style, len(seeds), len(good), lv[0], lv[1], lv[2]))
+    if fam.get("min_texture") or fam.get("max_haze"):
+        # Checks on the finished look (conifer tree review): a drawing whose inside stays flat,
+        # or whose edge carries a grey haze, stands out in a forest of crisp ones.
+        kept = []
+        for t in pool:
+            dark, haze = sprites.finish_look(sprites.finish(t[2], fam, t[3]))
+            why = ("flat (dark strokes %.2f)" % dark if dark < fam.get("min_texture", 0)
+                   else "hazy edge (%.3f)" % haze if haze > fam.get("max_haze", 1) else None)
+            (rejects.append("%s %d: %s" % (t[0], t[1], why)) if why else kept.append(t))
+        pool = kept
     if not pool:
         sys.exit("nothing usable")
     random.Random(a.seed).shuffle(pool)

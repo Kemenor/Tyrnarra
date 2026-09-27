@@ -231,6 +231,19 @@ def finish(rgba, fam, lv):
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
 
 
+def finish_look(sprite):
+    """(dark, haze) of a finished greyscale sprite. dark: share of dark stroke pixels inside the
+    shape at about map scale (a third), the outline ring left out; a flat pale inside scores
+    low. haze: soft-alpha pixels per opaque pixel; a grey fuzz round the outline scores high."""
+    a = np.asarray(sprite.convert("LA")).astype(np.float32)
+    haze = float(((a[..., 1] > 10) & (a[..., 1] < 180)).sum() / max(1, (a[..., 1] >= 180).sum()))
+    small = sprite.convert("LA").resize((max(1, sprite.width // 3), max(1, sprite.height // 3)), Image.LANCZOS)
+    s = np.asarray(small).astype(np.float32)
+    inside = ndimage.binary_erosion(s[..., 1] > 200, iterations=3)
+    dark = float((s[..., 0][inside] < 110).mean()) if inside.any() else 0.0
+    return dark, haze
+
+
 def finish_cc(rgba, fam):
     """Custom-colour sprite at the family's scale-1 size. Wonderdraft draws each pixel as
     R x colour 1 + G x colour 2 + B x colour 3 (the colours picked per symbol), so the channels

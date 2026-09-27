@@ -144,6 +144,10 @@ What worked and what did not, in the order we found it (2026-09-26):
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
+- Rejected after finishing, where a family sets it (`min_texture`, `max_haze`; conifers):
+  a flat inside (share of dark stroke pixels inside the shape at a third of the size, the ring
+  left out) or a grey haze round the outline (soft-alpha pixels per opaque pixel). Scored by
+  `sprites.finish_look`; the build finishes every usable drawing once more for it.
 
 ## Testing (wdtest.py, render.py)
 
@@ -371,6 +375,12 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     conifers 84/35% (86/32%), oaks 78/31% (88/18%: the bold strokes read darker, by design),
     willows 128/9% (129/9%), hills 134/8% (134/8%, no circles), dunes 148/3% (152/1%), jungle
     77/27% (Dotty's kapoks 68/41%; was 91/13%). The user: "these look by tree already better".
+  - The user settled the style: bold lines on a flat pale fill ("this is good and the style we
+    want to go for"), but "conifer still has some less textured ones that jump out". Scored all
+    279 usable conifers after finishing: the flat ones kept 4-9% dark strokes inside at map
+    scale (median 13%), and some sepia ones carried a grey haze round the outline. Round 17
+    keeps texture >= 13% and haze < 0.06 (77 pass), 64 installed; offline 81/34% (round 13:
+    82/35%). The young compact firs were all among the soft ones, so that variant is gone.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -388,7 +398,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 
 | Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
-| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 13, 64) |
+| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 17, 64) |
 | broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (bold, 38) |
 | willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (bold, 24) |
 | pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (32) |
