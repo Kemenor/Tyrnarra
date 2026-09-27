@@ -287,6 +287,22 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     (132/9% vs 134/8%). A few faint stripes remain where a drawing's base line sits above the
     fade; dropping "flat bottom edge" from the wording is the next try.
   - dunes: every SDXL wording gave desert photos or abstract swooshes: moved to FLUX.
+- **Fine-tuning round** (2026-09-27 midday; SDXL in sdxl mode, then FLUX in flux mode):
+  - peaks round 4 (seeds 101-148, "steep sides" instead of "flat bottom edge"): the stripes
+    across ranges are gone; 31 installed.
+  - hills round 2 ("one smooth curved outline like a gentle dome ... nothing on top", houses and
+    roads negative, fill down to 0.04 since Wonderdraft's own hills are little more than an
+    arc): 29 clean dome outlines (round 1: 14 mixed); one scribble excluded.
+  - cacti round 3 (six shapes, the old near-identical barrel seeds excluded): 47 saguaros,
+    prickly pears and groups; one group came out in flower pots.
+  - savanna round 3 (flat umbrella crowns spelled out): 48 flat-topped acacias and baobabs.
+  - broadleaves and jungle: the maple-leaf and leaf-bush drawings excluded by seed (39, 29).
+  - icons (FLUX, "roofs and domes red; no flags or banners"): settlements 33 (all 18 kinds,
+    the two monasteries from round 1 with flags since both new ones touched the edge),
+    god-cities 26 (two per city). The icon preview fits by area now: wide raised views next to
+    BSG's tall fronts.
+  - dunes round 3 (the side-view crescent shape spelled out for FLUX): all 24 read as dunes
+    with a crest line and a shaded steep face (round 1-2: curls and swooshes).
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -297,31 +313,30 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
 ## Families
 
 `recipes.FAMILIES` holds one entry per family; `generate`, `build` and `test` take its name.
-All generated and installed on 2026-09-27 (525 sprites; counts in the table; details in the
-Results log). Weak spots left for fine-tuning: hills (mixed), faint stripes in peak ranges,
-many near-identical barrel cacti, one leaf-shaped sprite each in broadleaves and jungle,
-acacias not flat-topped, dead trees faint at map size, dunes (few read as dunes), red flags on
-every icon, and icons fitted by width look flatter than Main's tall BSG icons.
+All generated and installed on 2026-09-27, then fine-tuned the same day (570 sprites; counts
+in the table; details in the Results log). Left for later: dead trees are faint at map size,
+fells are pointier than "rounded", one cactus group sits in flower pots, the camp's tents have
+red dome tops, and the monastery icons still carry the old red flags.
 
 | Family | Engine | Built-in yardstick | Replaces in Main | Pack folder |
 |---|---|---|---|---|
 | conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 11, 64) |
-| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (41) |
+| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (39) |
 | willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (24) |
 | pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (33) |
-| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (30) |
+| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (29) |
 | palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` (24) |
 | bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (40) |
 | deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (18) |
-| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (38) |
-| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (35) |
+| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (48) |
+| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
-| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (28) |
+| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (31) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (21) |
-| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (14) |
-| dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (14) |
-| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` (37) |
-| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` (24) |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (29) |
+| dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
+| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` (33) |
+| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` (26) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
