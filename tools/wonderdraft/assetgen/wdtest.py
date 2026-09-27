@@ -272,6 +272,9 @@ def offline(fam, out_dir, n=None, log=print):
     if not _in_main(fam, base):
         out = [lineup(_lineup_rows(fam, sets), os.path.join(out_dir, "lineup.jpg"))]
         log("  nothing of this family in Main to swap; lineup: %s" % os.path.basename(out[0]))
+        if fam.get("shape") == "icon":
+            out.append(icon_preview(fam, sets[-1][1], os.path.join(out_dir, "icons-in-main.jpg"), base))
+            log("  icons in Main: %s" % os.path.basename(out[-1]))
         return out
     placed, pre = builtin_placements(fam)
     boxes = _boxes(fam, base, pre)
@@ -420,3 +423,77 @@ def builtin_refs(export=True, log=print):
         count += 1
     log("  %d reference sprites in %s" % (count, BUILTIN_REFS))
     return BUILTIN_REFS
+
+
+# --- icons in Main --------------------------------------------------------------------------
+
+MAIN_MAP = os.path.join(WD, "Main.wonderdraft_map")   # the Base view has no labels
+BSG = "user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"
+# Which of our settlement kinds stands in for each BSG icon Main uses.
+BSG_KINDS = {"Large City Stone Wall + Towers": "walled_city", "Cathedral": "temple",
+             "Large Stone Wall": "walled_town", "Fortress": "fortress", "Town": "town", "Keep": "castle",
+             "Small City": "city", "Castle": "castle", "Small City Stone Wall": "walled_town"}
+ROOF = (0.62, 0.27, 0.20)     # colour 3 for the preview: Main's BSG icons leave it black
+
+
+def icon_preview(fam, folder, path, base):
+    """Main's BSG icons replaced by ours, drawn here: the god-cities at their own labels, the
+    settlement kinds by BSG_KINDS; each at the BSG icon's drawn area, BSG's line and wall
+    colours, a roof colour added. Two crops per city/cluster: Main now | ours."""
+    import render
+    ours = {}
+    for t in packswap.pack_folder(sprites.texture_folder(fam), folder)[0]:
+        item = t["texture"].rsplit("/", 1)[1].rsplit("_", 1)[0]
+        ours.setdefault(item, []).append(t)
+    theirs = {t["texture"]: t for t in packswap.pack_folder(BSG.rstrip("/"))[0]}
+    syms = [dict(x) for x in base]
+    targets = []    # (label, symbol index)
+    icons = [i for i, x in enumerate(syms) if x.get("texture", "").startswith(BSG)]
+    if fam["name"] == "god_cities":
+        main = WDMap.load(MAIN_MAP)
+        for lb in main.labels:
+            if "Divine City" not in main.layer_name(lb.get("z_index", 0)):
+                continue
+            name = lb.get("text", "").strip().lower().replace(" ", "_")
+            x, y = lb["position"]
+            i = min(icons, key=lambda k: (syms[k]["position"][0] - x) ** 2 + (syms[k]["position"][1] - y) ** 2)
+            if name in ours:
+                targets.append((lb.get("text", "").strip(), i, name))
+    else:
+        for i in icons:
+            kind = BSG_KINDS.get(syms[i]["texture"].rsplit("/", 1)[1])
+            if kind in ours:
+                targets.append((kind, i, kind))
+    before = [dict(syms[i]) for _, i, _ in targets]
+    for (label, i, item), b in zip(targets, before):
+        x = syms[i]
+        old = theirs.get(x["texture"])
+        t = ours[item][zlib.crc32(_key(x).encode()) % len(ours[item])]
+        src = packswap.drawn(old, (0, 0)) if old else {"w": 250, "h": 170, "cx": 0, "foot": 85}
+        scale, off = packswap.fit(x["scale"][0], src, t)
+        x["texture"], x["scale"], x["offset"] = t["file"], type(x["scale"])(scale, scale), type(x["offset"])(*off)
+        cc = list(x.get("custom_colors") or [gdvar.Color(0, 0, 0, 1)] * 3)
+        x["custom_colors"] = [cc[0], cc[1], gdvar.Color(ROOF[0], ROOF[1], ROOF[2], 1)]
+        x["custom_color_mode"] = 1
+    # One crop per target (god-cities) or per kind (settlements), 240 x 160 around the icon, at 2x.
+    seen, crops = set(), []
+    for (label, i, item), b in zip(targets, before):
+        if label in seen:
+            continue
+        seen.add(label)
+        px, py = b["position"][0], b["position"][1]
+        crops.append((label, (round(px - 120), round(py - 90), round(px + 120), round(py + 70))))
+    font = ImageFont.truetype(FONT, 20)
+    z, cw, chh = 2, 240 * 2, 160 * 2
+    per_row = 3
+    rows = (len(crops) + per_row - 1) // per_row
+    sheet = Image.new("RGB", (per_row * (2 * cw + 30) + 10, rows * (chh + 40) + 10), (236, 229, 214))
+    d = ImageDraw.Draw(sheet)
+    for k, (label, box) in enumerate(crops):
+        x0 = 10 + (k % per_row) * (2 * cw + 30)
+        y0 = 10 + (k // per_row) * (chh + 40)
+        d.text((x0, y0), "%s: Main now | Tyrnarra" % label, font=font, fill=(40, 30, 20))
+        sheet.paste(render.patch(base, box).resize((cw, chh), Image.LANCZOS), (x0, y0 + 28))
+        sheet.paste(render.patch(syms, box).resize((cw, chh), Image.LANCZOS), (x0 + cw + 6, y0 + 28))
+    sheet.save(path, quality=88)
+    return path
