@@ -349,6 +349,17 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     a new FLUX style `bold` asks for Wonderdraft's look (thick outline, a few big rounded
     shapes with thick curved strokes where they overlap, flat pale fill). "Like a sticker"
     drew stickers with a white border and a drop shadow, so the wording now says no border.
+  - `bold` in full (FLUX, 2026-09-27 18:16-21:37, 94 images at ~140 s): broadleaves 40, willows
+    24, jungle 30; dropped by hand broadleaf 37 (a blob with a flat cut-off bottom) and jungle 23
+    (a giant leaf bush). Finishing `BOLD_TREE` (no inner fade; the drawing's strokes are the
+    texture). Installed: broadleaves round 8 (38), willows round 4 (24), jungle round 4 (29).
+    Offline: willows 121/12% (built-ins 129/9%), jungle 74/23% (was 81/16%; Dotty's kapoks
+    68/41%), oaks 72/37% like Dotty's oaks (73/36%). A lighter levels target (228, 238) got the
+    oaks to round 2's brightness but turned the bold strokes grey, the opposite of the review.
+  - The offline renderer draws this oak forest about 10 grey darker than Wonderdraft: round 2
+    renders 77/33% here and measured 87/20% in the real export (the forest's other built-in
+    trees come out as blurry dark blobs). Compare offline rounds with each other, not with the
+    built-ins' export column, and confirm with a real export.
   - Mushrooms "a touch more texture": round 3, inner fade 0.35 and `INK_THIN` -1 (caps' dots and
     gills back), same 40 picks. Installed.
   - Dropped by hand: pine 13 (a watercolour stain came with it), bamboo 16, 19, 46 (forest
@@ -373,10 +384,10 @@ red dome tops, and the monastery icons still carry the old red flags.
 | Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
 | conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 13, 64) |
-| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (39) |
-| willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (24) |
+| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (bold, 38) |
+| willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (bold, 24) |
 | pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (32) |
-| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (29) |
+| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (bold, 29) |
 | palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` (24) |
 | bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (37) |
 | deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (16) |

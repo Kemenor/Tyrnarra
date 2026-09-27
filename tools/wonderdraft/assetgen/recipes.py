@@ -33,6 +33,9 @@ BOLD_TERRAIN = {"OUTLINE": 6, "INNER_LIGHTEN": 0.7, "BASE_FADE": 0.15, "SKIRT_TR
 # Hills: Wonderdraft's are an upper arc only; many drawings closed their base into a loop, so
 # the lower half fades out (hills round 4).
 HILL_FINISH = {"OUTLINE": 4, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.5, "SKIRT_TRIM": 0.2}
+# FLUX trees in the "bold" style (tree review): the drawing's own few thick strokes are the
+# texture, so nothing fades them.
+BOLD_TREE = {"INNER_LIGHTEN": 0.0}
 LINE_NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
                  "panorama, horizon, sky, clouds, sun, birds, trees, forest, several mountains, mountain range, "
                  "background, parchment, paper texture, border, frame, cropped, blurry, detailed, shading, hatching")
@@ -66,7 +69,7 @@ FAMILIES = {
     "broadleaf": {
         # SDXL Turbo would not draw a short trunk or a wide crown (tall naturalistic trees,
         # tree-of-life roots, circle frames); FLUX.2 does as asked (README: Prompting).
-        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["bold"], "finish": BOLD_TREE,
         "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no visible branches, no ground.",
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
@@ -87,13 +90,14 @@ FAMILIES = {
         "size": (350, 300),        # built-in _hd_oak, area-equivalent at scale 1 (builtin-sizes.json)
         "radius": 118, "offset_y": -130,  # built-in _hd_oak footprint and anchor
         "aspect": (0.65, 1.6),     # built-in oaks 0.74-1.12, hazels 0.83-1.71
-        "exclude": {"ink": [14, 23, 47]},  # these drew a giant maple leaf
+        # ink 14, 23, 47 drew a giant maple leaf; bold 37 a blob with a flat cut-off bottom.
+        "exclude": {"ink": [14, 23, 47], "bold": [37]},
         "pack_folder": "Tyrnarra_Broadleaves",
         "file": "broadleaf_{n:02d}",
     },
     "willow": {
         # SDXL drew mostly upright trees for "weeping willow" (1 in 6 wept); FLUX follows the shape.
-        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["bold"], "finish": BOLD_TREE,
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
                     "minimal shading, short visible trunk"),
@@ -127,7 +131,7 @@ FAMILIES = {
     },
     "jungle": {
         # Rainforest canopy trees: Main's jungles are Dotty's kapoks (no built-in counterpart).
-        "engine": "flux", "canvas": (1024, 1024), "styles": ["ink"],
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["bold"], "finish": BOLD_TREE,
         "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
@@ -138,7 +142,7 @@ FAMILIES = {
                      "young jungle tree: big glossy leaves in a round crown on a slim trunk",
                      "strangler fig: a tangled trunk under a broad dense crown"],
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/",
-        "exclude": {"ink": [8]},   # a giant leaf bush
+        "exclude": {"ink": [8], "bold": [23]},   # a giant leaf bush without a trunk
         "kind": "trees", "size": (340, 320), "radius": 100, "offset_y": -140, "aspect": (0.6, 1.6),
         "pack_folder": "Tyrnarra_Jungle", "file": "jungle_{n:02d}",
     },
