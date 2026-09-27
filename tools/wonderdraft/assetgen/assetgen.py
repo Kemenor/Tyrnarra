@@ -5,6 +5,7 @@
   assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
   assetgen.sh test conifer --round 7                  real Wonderdraft export vs the art Main uses now
   assetgen.sh test conifer --round 7 --offline        the same drawn here (render.py), no Wonderdraft
+  assetgen.sh gallery [conifer peaks ...]             review sheets of the installed pack, by variant
 
 Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
 add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
@@ -202,6 +203,14 @@ def cmd_test(a):
         print(p)
 
 
+def cmd_gallery(a):
+    import gallery
+    for name in a.families:
+        _family(name)
+    for path in gallery.run(a.families or list(recipes.FAMILIES)):
+        print(path)
+
+
 def cmd_fullswap(a):
     import fullswap
     out = os.path.join(WORK, "fullswap")
@@ -243,6 +252,9 @@ def main(argv=None):
         if name == "packswap":
             s.add_argument("--apply", metavar="MAP", help="swap this map in place (with backup) instead of a test copy")
         s.set_defaults(fn=fn)
+    s = sub.add_parser("gallery", help="review sheets of the installed pack, grouped by variant")
+    s.add_argument("families", nargs="*", help="default: every family")
+    s.set_defaults(fn=cmd_gallery)
     for name, fn in (("generate", cmd_generate), ("build", cmd_build), ("test", cmd_test)):
         s = sub.add_parser(name)
         s.add_argument("family")

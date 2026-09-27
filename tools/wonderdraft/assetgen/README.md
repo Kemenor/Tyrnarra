@@ -14,6 +14,7 @@ assetgen.sh test conifer --round 7 --offline      # drawn here in seconds: Main'
 assetgen.sh test conifer --round 7                # the same from a real Wonderdraft export (hands off ~3 min)
 assetgen.sh builtin-refs                          # once: the built-ins as local reference sprites (lineups)
 assetgen.sh fullswap                              # the whole pack in a copy of the Base, exported, vs the built-ins
+assetgen.sh gallery [peaks settlements ...]       # review sheets of the installed pack, by variant, numbered
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -150,6 +151,13 @@ What worked and what did not, in the order we found it (2026-09-26):
   `sprites.finish_look`; the build finishes every usable drawing once more for it.
 
 ## Testing (wdtest.py, render.py)
+
+- **`gallery`** (gallery.py): one sheet per family in `~/.local/share/wdmap/assetgen/gallery/`,
+  the installed sprites grouped by the variant (or icon item) each was drawn as and numbered
+  by file, tinted like Wonderdraft tints them (icons in example colours). The user reviews the
+  pack on these ("conifer 15 looks empty"). The variant comes from the prompt saved with the
+  raw image, matched to the family's variant list by shared words, so older wordings still
+  group right. Takes seconds.
 
 - **The yardstick is Wonderdraft's own art**, as in every round since the first. A family with
   a built-in counterpart (recipe `builtin`, e.g. `_hd_christmas`) takes over those symbols in a
@@ -381,6 +389,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     scale (median 13%), and some sepia ones carried a grey haze round the outline. Round 17
     keeps texture >= 13% and haze < 0.06 (77 pass), 64 installed; offline 81/34% (round 13:
     82/35%). The young compact firs were all among the soft ones, so that variant is gone.
+- **Galleries for review** (2026-09-27 night): `assetgen.sh gallery` for every family, the
+  mountains and icons reviewed next. Seen while making them: about half the hills are hollow
+  (the flood mask leaves an open drawing's inside transparent), the others filled; some peaks
+  and fells trail heavy dark base strokes (peaks 02, 14, 27; fells 03, 04, 19, 20).
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
