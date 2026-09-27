@@ -172,18 +172,17 @@ def make_map(log=print):
 
 
 def compare(out_dir, log=print):
-    """The whole map and a few regions, Main now | Tyrnarra pack."""
-    ref, stale = wdtest.reference(lambda *_: None)
-    if stale:
-        raise SystemExit("the reference export of the Base is stale; run `assetgen.sh test conifer` once")
-    now, ours = wdtest._open(ref), wdtest._open(OUT_MAP[:-len(".wonderdraft_map")] + ".webp")
+    """The whole map and a few regions, Wonderdraft's built-ins (the Base exported before the pack
+    swap: the baseline) | Tyrnarra pack. Jungle and bamboo were bought art already then."""
+    now = wdtest._open(wdtest.PRE_SWAP_EXPORT)
+    ours = wdtest._open(OUT_MAP[:-len(".wonderdraft_map")] + ".webp")
     pre = WDMap.load(wdtest.PRE_SWAP).symbols
     base = WDMap.load(wdtest.BASE_MAP).symbols
     font = ImageFont.truetype(wdtest.FONT, 26)
     out = []
     whole = Image.new("RGB", (2 * 1600 + 30, 1600 + 50), (236, 229, 214))
     d = ImageDraw.Draw(whole)
-    for i, (label, im) in enumerate((("Main now", now), ("Tyrnarra pack", ours))):
+    for i, (label, im) in enumerate((("Wonderdraft built-ins", now), ("Tyrnarra pack", ours))):
         d.text((10 + i * 1610, 10), label, font=font, fill=(40, 30, 20))
         whole.paste(im.resize((1600, 1600), Image.LANCZOS), (10 + i * 1610, 44))
     path = os.path.join(out_dir, "pack-whole-map.jpg")
@@ -194,7 +193,7 @@ def compare(out_dir, log=print):
                ("jagged peaks", wdtest.areas(pre, "res://sprites/mountains/playful_jagged_peaks/")[0][1]),
                ("hills", wdtest.areas(pre, "res://sprites/mountains/playful_hiils/")[0][1]),
                ("dunes", wdtest.areas(pre, "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_")[0][1]),
-               ("jungle", wdtest.areas(base, "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/")[0][1]),
+               ("jungle (Dotty's kapoks already before)", wdtest.areas(base, "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/")[0][1]),
                ("willows", wdtest.areas(pre, "res://sprites/trees/_hd_willow/")[0][1]),
                ("cities", wdtest.areas(base, wdtest.BSG)[0][1])]
     cw, ch = 960, 600
@@ -202,7 +201,12 @@ def compare(out_dir, log=print):
     d = ImageDraw.Draw(sheet)
     for r, (label, box) in enumerate(regions):
         y = 10 + r * (ch + 44)
-        d.text((10, y), "%s: Main now | Tyrnarra pack" % label, font=font, fill=(40, 30, 20))
+        for name, im in (("built-ins", now), ("pack", ours)):
+            g = im.crop(box).convert("L").histogram()
+            n = sum(g)
+            log("  %-40s %-9s mean grey %3.0f, dark (<50) %2.0f%%"
+                % (label, name, sum(i * c for i, c in enumerate(g)) / n, 100 * sum(g[:50]) / n))
+        d.text((10, y), "%s: Wonderdraft built-ins | Tyrnarra pack" % label, font=font, fill=(40, 30, 20))
         for i, im in enumerate((now, ours)):
             sheet.paste(im.crop(box).resize((cw, ch), Image.LANCZOS), (10 + i * (cw + 10), y + 36))
     path = os.path.join(out_dir, "pack-regions.jpg")
