@@ -139,6 +139,8 @@ FAMILIES = {
                      "date palm, straight ringed trunk, dense round crown of fronds",
                      "short fan palm with a bushy crown",
                      "pair of leaning palm trees"],
+        # Alpha from the ink, a thin ring: the mask and a 4 px ring made the fronds a round disc.
+        "ink_alpha": True, "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
         "builtin": "res://sprites/trees/toon_palm/", "place": "fit",
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Palms/",
         "kind": "trees", "size": (160, 240), "radius": 36, "offset_y": -100, "aspect": (1.0, 2.6),
@@ -199,6 +201,7 @@ FAMILIES = {
                      "round barrel cactus cluster",
                      "prickly pear cactus with flat paddle pads"],
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Cactuses/",
+        "base_max": 1.0,           # a barrel cactus is widest at the ground
         "kind": "trees", "size": (150, 240), "radius": 40, "offset_y": -100, "aspect": (0.7, 2.6),
         "pack_folder": "Tyrnarra_Cactuses", "file": "cactus_{n:02d}",
     },
@@ -338,7 +341,7 @@ FLUX_STYLES = {
              "painted in flat red. Simple, clean and readable at small size. Isolated on a plain white background, "
              "nothing else in the image, no ground, no text."),
 }
-FLUX_BATCH = 4        # images per FLUX graph (the model stack loads once per graph)
+FLUX_BATCH = 1        # images per FLUX graph: a 4-image graph wedged the tower (2026-09-27)
 SDXL_BATCH = 8        # images per SDXL graph: the tower's --cache-none server reloads models per graph
 
 

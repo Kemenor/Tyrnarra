@@ -38,16 +38,25 @@ def _get(path, timeout=30):
 def alive():
     if not HOST:
         return False
-    try:
-        return _get("/system_stats", 5).status == 200
-    except OSError:
-        return False
+    for _ in range(4):
+        try:
+            return _get("/system_stats", 20).status == 200
+        except OSError:
+            time.sleep(10)
+    return False
 
 
 def run(graph, timeout=900):
     """Run a graph; returns (seconds, [PNG bytes per image, in output-node order])."""
     t0 = time.time()
-    pid = _post("/prompt", {"prompt": graph, "client_id": str(uuid.uuid4())})["prompt_id"]
+    for attempt in range(20):
+        try:
+            pid = _post("/prompt", {"prompt": graph, "client_id": str(uuid.uuid4())})["prompt_id"]
+            break
+        except OSError:
+            if attempt == 19:
+                raise
+            time.sleep(15)
     return wait(pid, t0, timeout)
 
 
