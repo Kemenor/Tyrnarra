@@ -1,17 +1,19 @@
-"""Test a family's pack against Wonderdraft's built-in art and the art Main uses now.
+"""Test a family's pack against Wonderdraft's built-in art, which Main uses (again).
 
-The yardstick is Wonderdraft's own art, as in every round since the first: a family with a
-built-in counterpart (the recipe's "builtin") is placed exactly where and as big as that art
-stood in Main before the 2026-09-26 pack swap (same position, scale and mirroring, the
-recipe's anchor), and compared with the Base export made before the swap. Since the swap those
-symbols carry a bought pack's art (the recipe's "replaces", e.g. Dotty's pines), whose export
-is shown beside it. A family without a built-in counterpart is fitted to the art it replaces
-instead: each new sprite covers the same drawn area and stands on the same foot (packswap.fit).
+The yardstick is Wonderdraft's own art. Main was swapped to bought packs on 2026-09-26 and back to
+the built-ins on 2026-09-27 (the post-swap copy is kept as "Main (after pack swap 2026-09-26)").
+A family with a built-in counterpart (the recipe's "builtin") takes over those symbols in a copy
+of the Base view: same position, scale and mirroring, sized either by the recipe's scale-1 size
+("place": "scale", the conifers' rounds) or to the measured art of the built-in texture that
+stood there ("place": "fit"). A family without one takes over the bought art Main has for it
+(the recipe's "replaces", e.g. Dotty's kapoks), fitted to that art (packswap.fit). The export of
+the Base itself is the "Wonderdraft built-ins" column; the post-swap export shows the bought
+packs beside it where a family had one.
 
 `run` exports the test map with Wonderdraft (hands off ~3 min); `offline` draws our columns
 here (render.py) in seconds, within a few grey levels of a real export, beside the real
-exports of the built-ins and of Main now. `lineup` puts single sprites side by side, with
-the built-ins recovered from a Wonderdraft export of them on an empty map (`builtin_refs`).
+exports. `lineup` puts single sprites side by side, with the built-ins recovered from a
+Wonderdraft export of them on an empty map (`builtin_refs`).
 
 Rounds: `build --round N` keeps that round's sprites in <work>/<family>/round-N/sprites/, and
 `test --round N` names its export after the round; the comparison then shows the round before.
@@ -33,13 +35,13 @@ import wd_export  # noqa: E402
 
 import packswap  # noqa: E402
 import sprites  # noqa: E402
-from packswap import PRE_SWAP, PRE_SWAP_EXPORT  # noqa: E402
 
 WD = os.path.expanduser("~/ProtonDrive/Wonderdraft")
 BASE_MAP = os.path.join(WD, "Main - Base.wonderdraft_map")
 BASE_EXPORT = os.path.join(WD, "Main - Base.webp")
 TEST_DIR = os.path.expanduser("~/.local/share/wdmap/assetgen-test")  # outside Proton Drive: 100 MB per map
 REF_MAP = os.path.join(TEST_DIR, "Assetgen Reference.wonderdraft_map")
+POST_SWAP_EXPORT = os.path.join(TEST_DIR, "Assetgen PostSwap Base.webp")   # the Base with Dotty/Moulk art
 EMPTY_EXPORT = os.path.join(TEST_DIR, "Assetgen Empty.webp")
 WORK = os.path.expanduser("~/.local/share/wdmap/assetgen")
 BUILTIN_REFS = os.path.join(WORK, "builtins")   # local only: Wonderdraft's art stays on this machine
@@ -80,46 +82,34 @@ def areas(symbols, prefix):
     return [("dense", dense, 1), ("dense-3x", mid, 3), ("largest-2x", largest, 2)]
 
 
-def builtin_placements(fam):
-    """{position key: built-in symbol} of the family's built-in counterpart in Main before the
-    swap, and that map's symbols; ({}, None) for a family without one."""
-    if not fam.get("builtin"):
-        return {}, None
-    pre = WDMap.load(PRE_SWAP).symbols
-    return {_key(s): s for s in _family(pre, fam["builtin"])}, pre
+def _target(fam):
+    """The texture prefix of the symbols in Main a family takes over."""
+    return fam.get("builtin") or fam["replaces"]
 
 
-def swap(symbols, fam, folder=None, placed=None):
-    """Swap the family's symbols in the list for the installed pack, or for the sprites in `folder`
-    (a round; drawn by file path, so for render.py only). With `placed` (builtin_placements) each
-    one takes the built-in's scale and mirroring and the recipe's anchor; else it is fitted to
-    the art it replaces. Returns how many."""
-    old = {t["texture"]: t for t in packswap.pack_folder(fam["replaces"].rstrip("/"))[0]}
+def swap(symbols, fam, folder=None):
+    """Swap the family's symbols in the list (its built-in counterpart, else the bought art it
+    replaces) for the installed pack, or for the sprites in `folder` (a round; drawn by file
+    path, so for render.py only). Returns how many."""
+    builtin = fam.get("builtin")
+    old = {} if builtin else {t["texture"]: t for t in packswap.pack_folder(fam["replaces"].rstrip("/"))[0]}
     files, _ = packswap.pack_folder(sprites.texture_folder(fam), folder)
     if not files:
         raise SystemExit("no sprites in %s" % (folder or sprites.pack_dir(fam)))
     n = 0
-    for s in _family(symbols, fam["replaces"]):
+    for s in _family(symbols, _target(fam)):
         t = files[zlib.crc32(_key(s).encode()) % len(files)]
-        if placed:
-            b = placed.get(_key(s))
-            if b is None:
-                continue   # stood in for another built-in family
-            if fam.get("place") == "fit":
-                # Cover the measured drawn size of the built-in texture that stood here.
-                scale, off = packswap.fit(b["scale"][0], packswap._size_for(SIZES(), b["texture"]), t,
-                                          fam.get("match", "area"))
-                s["scale"] = type(s["scale"])(scale, scale)
-                s["offset"] = type(s["offset"])(*off)
-            else:
-                s["scale"] = type(s["scale"])(b["scale"][0], b["scale"][1])
-                s["offset"] = type(s["offset"])(0, fam["offset_y"])
-            s["mirror"] = b.get("mirror", False)
+        if builtin and fam.get("place") == "fit":
+            # Cover the measured drawn size of the built-in texture that stands here.
+            scale, off = packswap.fit(s["scale"][0], packswap._size_for(SIZES(), s["texture"]), t,
+                                      fam.get("match", "area"))
+        elif builtin:
+            scale, off = s["scale"][0], (0, fam["offset_y"])
         else:
             scale, off = packswap.fit(s["scale"][0], packswap.drawn(old[s["texture"]], s["offset"]), t)
-            s["scale"] = type(s["scale"])(scale, scale)
-            s["offset"] = type(s["offset"])(*off)
         s["texture"] = t["file"] if folder else t["texture"]
+        s["scale"] = type(s["scale"])(scale, scale)
+        s["offset"] = type(s["offset"])(*off)
         s["radius"] = fam["radius"]
         n += 1
     return n
@@ -176,13 +166,13 @@ def reference(log=print):
     return webp, REF_MAP
 
 
-def make_map(fam, n=None, placed=None, log=print):
+def make_map(fam, n=None, log=print):
     m = WDMap.load(BASE_MAP)
-    swapped = swap(m.symbols, fam, placed=placed)
+    swapped = swap(m.symbols, fam)
     os.makedirs(TEST_DIR, exist_ok=True)
     path = _test_map(fam, n)
     m.save(path)
-    how = "placed as the built-ins were" if placed else "fitted to %s" % _art_name(fam)
+    how = "in place of the built-ins" if fam.get("builtin") else "fitted to %s" % _art_name(fam)
     log("  %d symbols -> %s, %s, %s" % (swapped, fam["pack_folder"], how, os.path.basename(path)))
     return path
 
@@ -225,40 +215,48 @@ def _open(path):
     return Image.open(path).convert("RGB")
 
 
-def _boxes(fam, base, pre):
-    return areas(pre, fam["builtin"]) if pre else areas(base, fam["replaces"])
+def _boxes(fam, base):
+    return areas(base, _target(fam))
+
+
+def _columns(fam, ref):
+    """The real exports to compare with: the Base as it is (Wonderdraft's built-ins, or the
+    bought art a family without a built-in counterpart replaces) and, for built-in families,
+    the bought packs of the 2026-09-26 swap (post-swap export) beside it."""
+    cols = [("Wonderdraft built-ins" if fam.get("builtin") else "Main now: " + _art_name(fam), ref)]
+    if fam.get("builtin") and fam.get("replaces") and os.path.exists(POST_SWAP_EXPORT):
+        cols.append(("bought pack: " + _art_name(fam), POST_SWAP_EXPORT))
+    return cols
 
 
 def run(fam, out_dir, export=True, n=None, log=print):
     """Real Wonderdraft test: test map (and the reference if stale) exported, then compared."""
-    if not _in_main(fam, WDMap.load(BASE_MAP).symbols):
+    base = WDMap.load(BASE_MAP).symbols
+    if not _in_main(fam, base):
         raise SystemExit("nothing of %s in Main to swap; use --offline for its lineup" % fam["name"])
     log("Test map from %s:" % os.path.basename(BASE_MAP))
-    placed, pre = builtin_placements(fam)
-    path = make_map(fam, n, placed, log)
+    path = make_map(fam, n, log)
     ref, ref_map = reference(log)
     if export:
         wd_export.export_views([path] + ([ref_map] if ref_map else []), log=log)
     elif ref_map:
         raise SystemExit("the reference export is stale; run without --no-export")
-    boxes = _boxes(fam, WDMap.load(BASE_MAP).symbols, pre)
-    columns = [("Wonderdraft built-ins", _open(PRE_SWAP_EXPORT))] if pre else []
-    columns.append(("Main now: " + _art_name(fam), _open(ref)))
+    columns = [(label, _open(p)) for label, p in _columns(fam, ref)]
     if n:
         prev = _earlier(n, lambda k: _stem(_test_map(fam, k)) + ".webp")
         if prev:
             columns.append(("Round %d" % prev[0], _open(prev[1])))
     columns.append(("Round %d" % n if n else "Tyrnarra pack", _open(_stem(path) + ".webp")))
-    return compare(boxes, [(label, im.crop) for label, im in columns], out_dir, log=log)
+    return compare(_boxes(fam, base), [(label, im.crop) for label, im in columns], out_dir, log=log)
 
 
 def _in_main(fam, base):
-    return bool(fam.get("replaces")) and any(True for _ in _family(base, fam["replaces"]))
+    return bool(fam.get("builtin") or fam.get("replaces")) and any(True for _ in _family(base, _target(fam)))
 
 
 def offline(fam, out_dir, n=None, log=print):
     """The same comparison with our columns drawn here (render.py), and a lineup. A family with
-    nothing to replace in Main (icons, biomes Main does not have yet) gets the lineup only."""
+    nothing to take over in Main (icons, biomes Main does not have yet) gets the lineup only."""
     import render
     base = WDMap.load(BASE_MAP).symbols
     sets = []
@@ -276,21 +274,19 @@ def offline(fam, out_dir, n=None, log=print):
             out.append(icon_preview(fam, sets[-1][1], os.path.join(out_dir, "icons-in-main.jpg"), base))
             log("  icons in Main: %s" % os.path.basename(out[-1]))
         return out
-    placed, pre = builtin_placements(fam)
-    boxes = _boxes(fam, base, pre)
-    columns = []
-    if pre:
-        columns.append(("Wonderdraft built-ins", _open(PRE_SWAP_EXPORT).crop))
     ref, stale = reference(lambda *_: None)
-    main_now = "Main now: " + _art_name(fam)
-    columns.append((main_now + " (drawn here)", lambda box: render.patch(base, box)) if stale
-                   else (main_now, _open(ref).crop))
+    columns = []
+    for label, p in _columns(fam, ref):
+        if p == ref and stale:
+            columns.append((label + " (drawn here)", lambda box: render.patch(base, box)))
+        else:
+            columns.append((label, _open(p).crop))
     for label, folder in sets:
         syms = [dict(s) for s in base]
-        swap(syms, fam, folder, placed)
+        swap(syms, fam, folder)
         columns.append((label + " (drawn here)", lambda box, s=syms: render.patch(s, box)))
     log("offline (our columns drawn by render.py, the others are real exports):")
-    out = compare(boxes, columns, out_dir, prefix="offline", log=log)
+    out = compare(_boxes(fam, base), columns, out_dir, prefix="offline", log=log)
     out.append(lineup(_lineup_rows(fam, sets), os.path.join(out_dir, "lineup.jpg")))
     log("  lineup: %s" % os.path.basename(out[-1]))
     return out
@@ -365,7 +361,7 @@ def builtin_refs(export=True, log=print):
     with open(packswap.SIZES) as f:
         sizes = json.load(f)
     templates = {}
-    for s in WDMap.load(PRE_SWAP).symbols:
+    for s in WDMap.load(BASE_MAP).symbols:
         if packswap.builtin(s) and s["texture"] not in templates and s["texture"] in sizes:
             templates[s["texture"]] = s
     m = WDMap.load(BASE_MAP)

@@ -30,9 +30,11 @@ ASSETS = os.path.expanduser("~/.local/share/Wonderdraft/assets")
 WD = os.path.expanduser("~/ProtonDrive/Wonderdraft")
 BASE_MAP = os.path.join(WD, "Main - Base.wonderdraft_map")
 BASE_EXPORT = os.path.join(WD, "Main - Base.webp")
-# Main itself was swapped on 2026-09-26 (--apply) and has no built-in art since. The built-ins are
-# read from the copy made before, and its Base export is kept in TEST_DIR for comparisons.
+# Main was swapped to the packs on 2026-09-26 (--apply) and back to the built-ins on 2026-09-27,
+# so comparisons draw against Wonderdraft's own art again. The copy from before the swap (now the
+# same as Main) and the post-swap one ("Main (after pack swap 2026-09-26)") stay next to it.
 PRE_SWAP = os.path.join(WD, "Main (before pack swap 2026-09-26).wonderdraft_map")
+POST_SWAP = os.path.join(WD, "Main (after pack swap 2026-09-26).wonderdraft_map")
 TEST_DIR = os.path.expanduser("~/.local/share/wdmap/assetgen-test")
 PRE_SWAP_EXPORT = os.path.join(TEST_DIR, "Assetgen PreSwap Base.webp")
 DIFF_MIN = 40          # channel difference that counts as "built-in art was here" (WebP noise stays below)
@@ -223,7 +225,7 @@ def make_swapped(log=print):
     m = WDMap.load(BASE_MAP)
     left_before = {family(s["texture"]) for s in m.symbols if builtin(s)}
     if not left_before:
-        raise SystemExit("the Base has no built-in art left (Main was swapped 2026-09-26); nothing to test")
+        raise SystemExit("the Base has no built-in art (was Main swapped to the packs again?); nothing to test")
     done = swap(m, load_rules(), sizes, log)
     for k, v in sorted(done.items(), key=lambda kv: -kv[1]):
         log("  %5d  %s" % (v, k))

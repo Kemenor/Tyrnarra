@@ -1,10 +1,9 @@
 """A copy of Main's Base view with its art swapped for the Tyrnarra pack, to judge the pack on
 the real map (assetgen.sh fullswap). Main itself is never touched.
 
-Trees and mountains go by what stood at each spot before the 2026-09-26 pack swap (the pre-swap
-copy of Main): each built-in family maps to one of our folders (BUILTIN_TO), sized to that
-built-in texture's measured art (builtin-sizes.json) at its old scale. Art that was a bought
-pack already before the swap (Dotty's kapoks, Nibroc's bamboo: PACK_TO) is fitted to that art.
+Trees and mountains: each of Main's built-in families maps to one of our folders (BUILTIN_TO),
+sized to that built-in texture's measured art (builtin-sizes.json) at its scale. Bought art Main
+uses for what Wonderdraft lacks (Dotty's kapoks, Nibroc's bamboo: PACK_TO) is fitted to that art.
 City icons: every cluster of BSG icons becomes one of ours, as in wdtest.icon_preview: the
 god-cities by their labels, the rest by kind, in each city's own line and wall colours.
 """
@@ -63,19 +62,17 @@ def _folders():
     return {name: packswap.pack_folder(PACK + name) for name in names}
 
 
-def swap_art(syms, pre, ours, log=print):
+def swap_art(syms, ours, log=print):
     """Trees and mountains in place; returns {our folder: count}."""
     sizes = wdtest.SIZES()
-    before = {wdtest._key(s): s for s in pre if packswap.builtin(s)}
     bought = {}
     done = {}
     for s in syms:
         key = wdtest._key(s)
-        b = before.get(key)
+        b = s if packswap.builtin(s) else None
         rule = next((r for r in BUILTIN_TO if b and b["texture"].startswith(r[0])), None)
         if rule:
             src, scale0 = packswap._size_for(sizes, b["texture"]), b["scale"][0]
-            s["mirror"] = b.get("mirror", False)
         else:
             rule = next((r for r in PACK_TO if s.get("texture", "").startswith(r[0])), None)
             if not rule:
@@ -153,8 +150,7 @@ def swap_icons(syms, log=print):
 
 def make_map(log=print):
     m = WDMap.load(wdtest.BASE_MAP)
-    pre = WDMap.load(wdtest.PRE_SWAP).symbols
-    done = swap_art(m.symbols, pre, _folders(), log)
+    done = swap_art(m.symbols, _folders(), log)
     m.data["symbols"], icons = swap_icons(m.symbols, log)
     for k, v in sorted(done.items(), key=lambda kv: -kv[1]):
         log("  %5d  %s" % (v, k))
@@ -172,12 +168,14 @@ def make_map(log=print):
 
 
 def compare(out_dir, log=print):
-    """The whole map and a few regions, Wonderdraft's built-ins (the Base exported before the pack
-    swap: the baseline) | Tyrnarra pack. Jungle and bamboo were bought art already then."""
-    now = wdtest._open(wdtest.PRE_SWAP_EXPORT)
+    """The whole map and a few regions, Wonderdraft's built-ins (the Base's own export: the
+    baseline) | Tyrnarra pack. Main's jungle and bamboo are bought art, not built-ins."""
+    ref, stale = wdtest.reference(lambda *_: None)
+    if stale:
+        raise SystemExit("the Base's export is older than the Base; export it first (wd-regions --export)")
+    now = wdtest._open(ref)
     ours = wdtest._open(OUT_MAP[:-len(".wonderdraft_map")] + ".webp")
-    pre = WDMap.load(wdtest.PRE_SWAP).symbols
-    base = WDMap.load(wdtest.BASE_MAP).symbols
+    base = pre = WDMap.load(wdtest.BASE_MAP).symbols
     font = ImageFont.truetype(wdtest.FONT, 26)
     out = []
     whole = Image.new("RGB", (2 * 1600 + 30, 1600 + 50), (236, 229, 214))
@@ -193,7 +191,7 @@ def compare(out_dir, log=print):
                ("jagged peaks", wdtest.areas(pre, "res://sprites/mountains/playful_jagged_peaks/")[0][1]),
                ("hills", wdtest.areas(pre, "res://sprites/mountains/playful_hiils/")[0][1]),
                ("dunes", wdtest.areas(pre, "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_")[0][1]),
-               ("jungle (Dotty's kapoks already before)", wdtest.areas(base, "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/")[0][1]),
+               ("jungle (Main: Dotty's kapoks)", wdtest.areas(base, "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/")[0][1]),
                ("willows", wdtest.areas(pre, "res://sprites/trees/_hd_willow/")[0][1]),
                ("cities", wdtest.areas(base, wdtest.BSG)[0][1])]
     cw, ch = 960, 600

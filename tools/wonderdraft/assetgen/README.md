@@ -1,10 +1,11 @@
 # assetgen: the Tyrnarra art pack for Wonderdraft
 
 Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, with many
-variants per family. Since the 2026-09-26 pack swap `Main` uses bought pack art (Dotty, Moulk)
-instead of Wonderdraft's built-ins; our pack is to replace that in turn. The art is made in
-Wonderdraft's own pack format, so it works in Wonderdraft today and in any later tool that
-reads Wonderdraft packs (Kartofuchs reads them from the same asset folder).
+variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
+any tool of our own) and the bought packs that stood in for it. `Main` uses the built-ins
+again since 2026-09-27 (see "Swapping"), so every comparison draws against Wonderdraft's own
+art. The art is made in Wonderdraft's own pack format, so it works in Wonderdraft today and in
+any later tool that reads Wonderdraft packs (Kartofuchs reads them from the same asset folder).
 
 ```
 assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
@@ -12,6 +13,7 @@ assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, fi
 assetgen.sh test conifer --round 7 --offline      # drawn here in seconds: Main's art vs round 6 vs round 7
 assetgen.sh test conifer --round 7                # the same from a real Wonderdraft export (hands off ~3 min)
 assetgen.sh builtin-refs                          # once: the built-ins as local reference sprites (lineups)
+assetgen.sh fullswap                              # the whole pack in a copy of the Base, exported, vs the built-ins
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -144,16 +146,23 @@ What worked and what did not, in the order we found it (2026-09-26):
 ## Testing (wdtest.py, render.py)
 
 - **The yardstick is Wonderdraft's own art**, as in every round since the first. A family with
-  a built-in counterpart (recipe `builtin`, e.g. `_hd_christmas`) is placed exactly where and as
-  big as that art stood in `Main` before the pack swap: position, scale and mirroring from the
-  pre-swap copy of `Main`, the recipe's size and anchor. It is compared with the Base export made
-  before the swap (`assetgen-test/Assetgen PreSwap Base.webp`, kept for this).
-- **Main now** is shown beside it: the recipe's `replaces` is the folder `Main` uses today
-  (`Dotty_Pines` for conifers), and its column is an export of the Base as it is now
-  (`Main - Base.webp` when newer than the map, else `Assetgen Reference.webp`, an export of a
-  copy redone whenever the Base changes; an `.md5` beside it tells). A family without a built-in
-  counterpart is fitted to that art instead: each sprite covers the drawn area of the one it
-  replaces and stands on the same foot (`packswap.fit`), as a later swap into `Main` would do.
+  a built-in counterpart (recipe `builtin`, e.g. `_hd_christmas`) takes over those symbols in a
+  copy of the Base view: same position, scale and mirroring, sized by the recipe (`place:
+  scale`, the conifers) or to the measured art of the built-in texture that stood there (`place:
+  fit`). Its first column is the Base's own export (`Main - Base.webp` when newer than the map,
+  else `Assetgen Reference.webp`, an export of a copy redone whenever the Base changes; an `.md5`
+  beside it tells).
+- **The bought pack** is the second column where a family has one (recipe `replaces`, e.g.
+  `Dotty_Pines`): the Base export from the days `Main` used the packs
+  (`assetgen-test/Assetgen PostSwap Base.webp`). A family without a built-in counterpart takes
+  over the bought art `Main` has for it (Dotty's kapoks, Nibroc's bamboo), fitted to it: each
+  sprite covers the drawn area of the one it replaces and stands on the same foot
+  (`packswap.fit`).
+- **`fullswap`**: the whole pack in a copy of the Base (every built-in family by `BUILTIN_TO`
+  in fullswap.py, the bought jungle and bamboo, every city cluster by the icon rules), exported
+  and compared with the Base region by region (`~/.local/share/wdmap/assetgen/fullswap/`).
+  Wonderdraft's first load of the ~570 new pack images outlasts the usual 15 s load wait, so the
+  export waits 120 s.
 - **`builtin-refs`** (two exports, once): every built-in texture `Main` used, placed on an empty
   copy of the Base, exported drawn white and drawn black; per pixel alpha = 1 - black / terrain
   and grey = (white - (1 - alpha) terrain) / alpha give each built-in as a clean greyscale sprite
@@ -200,10 +209,12 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
 - First run (2026-09-26): all 24 families, 13,128 symbols swapped. Trees, dunes and the overall
   map read like the original; Moulk mountains and hills came out somewhat small and the Tang
   mountains faint, so their rules need a `size` above 1.
-- Applied to `Main` itself the same day (`packswap --apply`); `Main` has no built-in art since.
-  `measure-builtins` now takes the built-ins from the copy made before
-  (`Main (before pack swap 2026-09-26).wonderdraft_map`); `packswap` without `--apply` has
-  nothing left to test in the Base and says so.
+- Applied to `Main` itself the same day (`packswap --apply`), and **swapped back on 2026-09-27**
+  at the owner's wish, so comparisons draw against Wonderdraft's own art again. The pack-art
+  version is kept as `Main (after pack swap 2026-09-26).wonderdraft_map` (its only other
+  difference: Moulk's pack in `included_packs`), the copy from before as
+  `Main (before pack swap 2026-09-26).wonderdraft_map`; the four views were regenerated and the
+  exports from before the swap match them again.
 
 ## Results log
 
@@ -318,7 +329,7 @@ in the table; details in the Results log). Left for later: dead trees are faint 
 fells are pointier than "rounded", one cactus group sits in flower pots, the camp's tents have
 red dome tops, and the monastery icons still carry the old red flags.
 
-| Family | Engine | Built-in yardstick | Replaces in Main | Pack folder |
+| Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
 | conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 11, 64) |
 | broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (39) |
@@ -391,14 +402,9 @@ wrong in the lineup, `generate --engine flux` on new seeds uses its FLUX wording
 
 By use (13,128 symbols):
 
-Main's tree art now sits in Dotty folders, each standing in for several built-in families:
-`Dotty_Pines` (conifers, in progress), `Dotty_Oaks` (built-in oak 1518 + hazel 945 + leafy
-tree 356 = 2819 uses), `Dotty_Willows` (515), `Dotty_Palms` (23). The next family is the
-broadleaf one that replaces `Dotty_Oaks`. Sizes measured on the calibration grid
-(builtin-sizes.json, area-equivalent at scale 1, drawn foot, sprite centre relative to the
-click point): oak 353 x 301, foot 24, centre -130, height/width 0.74-1.12; hazel 214 x 233,
-foot 26, centre -90, 0.83-1.71. The pre-swap copy of `Main` still tells which Dotty oak was
-an oak and which a hazel (same positions), so a test could give each its own variants.
+Sizes measured on the calibration grid (builtin-sizes.json, area-equivalent at scale 1, drawn
+foot, sprite centre relative to the click point), e.g. oak 353 x 301, foot 24, centre -130,
+height/width 0.74-1.12; hazel 214 x 233, foot 26, centre -90, 0.83-1.71.
 
 | Uses | Built-in family | | Uses | Built-in family |
 |---:|---|---|---:|---|
