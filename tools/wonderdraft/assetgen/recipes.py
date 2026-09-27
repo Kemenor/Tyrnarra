@@ -265,7 +265,9 @@ FAMILIES = {
         "variants": ["low rounded hill", "gentle wide hill", "small rounded knoll", "long low hill"],
         "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
-        "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.2, 0.9),
+        "exclude": {"line": [118]},   # a scribble in a circle
+        # Sparse outlines are fine: Wonderdraft's own hills are little more than an arc.
+        "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.04, 0.9),
         "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",
     },
     "dunes": {
