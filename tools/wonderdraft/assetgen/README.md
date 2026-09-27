@@ -257,7 +257,39 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   trunk under a wide crown. **FLUX.2** did exactly as asked on the first image (a clean ink map
   tree, puffy round crown, short trunk, bold outline, pale fill, soft grey wash on one side), so
   broadleaf and jungle are FLUX families (`engine`). But the tower's LAN server wedged on the
-  second FLUX job (README: Setup); nothing more was generated that night.
+  second FLUX job (README: Setup).
+- **SDXL families, round 1-2** (2026-09-27 early morning, after the server restart with the
+  FLUX flags: ~22 s per image with the VAE on the CPU; quality pass of 6 images each first):
+  - pine: 33 of 48 usable, installed; umbrella pines, cedars, windswept pines. Densest built-in
+    cedar patch offline 111/18% vs built-ins 113/17%.
+  - bamboo: 1 of 48 as a tree (a clump is many stalks: "extra objects", "wide base", low fill);
+    as `shape: clump` 44 usable, 40 installed. Reads like Main's bamboo (112/13% vs 112/12%).
+  - deadtree: 0 of 48 (roots as wide as the crown, sparse fill); with `base_max` and a lower
+    fill 17, but the mask and the 4 px ring filled every crown into a leafy blob. With
+    `ink_alpha` (alpha from the ink: the paper between branches turns transparent), a 1 px ring
+    and no inner fade: 18 bare trees, installed.
+  - palm: 29 usable, but the mask and ring made the fronds round discs; with `ink_alpha` and a
+    thin ring 24 palms that read as palms, installed.
+  - willow: SDXL drew upright trees for "weeping willow" (1 in 6 wept): moved to FLUX.
+  - savanna, desert, fungal: good single subjects in the quality pass (acacias read as ordinary
+    trees; cacti and mushrooms clear); their full runs were cut short by the FLUX wedge and rerun.
+  - peaks, fells, hills: the watercolour wording drew engravings and whole landscapes; the
+    bare "minimalist black line drawing of one single mountain ... sketch" drew clean single
+    mountains (the "fantasy cartography" tail brought the hatching back, so terrain has its own
+    frame and style). Tree finishing flattened them (the inner fade erased ridge lines, the ring
+    closed the base): terrain keeps its inner lines with a 2 px ring. In a dense range the drawn
+    base lines and long low flanks lined up into horizontal stripes: `BASE_FADE` fades the
+    bottom 15%, `SKIRT_TRIM` cuts the flanks lower than 20% of the peak. Peaks round 3: 28
+    installed (offline 103/13% vs built-ins 100/26%, lighter line art); fells 21; hills 14
+    (132/9% vs 134/8%). A few faint stripes remain where a drawing's base line sits above the
+    fade; dropping "flat bottom edge" from the wording is the next try.
+  - dunes: every SDXL wording gave desert photos or abstract swooshes: moved to FLUX.
+- **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
+  the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
+  swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
+  image per graph (`FLUX_BATCH` 1), never SDXL and FLUX in one server session (restart between
+  engines), and the client retries through the minutes the server stops answering while FLUX
+  loads (`comfy.run`/`wait`).
 
 ## Families
 
