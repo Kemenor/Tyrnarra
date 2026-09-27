@@ -27,6 +27,12 @@ STYLES = {
 LINE_FRAME = ", sketch, isolated on a plain white background"
 # Mountains keep their ridge lines and shaded side: no inner fade, a thin ring.
 TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
+# Mountains measured against Wonderdraft's jagged peaks (peaks round 7): a heavy ring and calm
+# insides read like the built-ins' bold outlines; the thin-ringed line art read busy and small.
+BOLD_TERRAIN = {"OUTLINE": 6, "INNER_LIGHTEN": 0.7, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
+# Hills: Wonderdraft's are an upper arc only; many drawings closed their base into a loop, so
+# the lower half fades out (hills round 4).
+HILL_FINISH = {"OUTLINE": 4, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.5, "SKIRT_TRIM": 0.2}
 LINE_NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
                  "panorama, horizon, sky, clouds, sun, birds, trees, forest, several mountains, mountain range, "
                  "background, parchment, paper texture, border, frame, cropped, blurry, detailed, shading, hatching")
@@ -231,14 +237,15 @@ FAMILIES = {
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
         # Round 4 wording: "flat bottom edge" drew base lines that stacked into stripes across a range.
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with two or three "
                     "inner ridge lines, white inside, steep sides, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
         "variants": ["tall jagged mountain", "mountain with two sharp peaks", "craggy mountain with a snowy top",
                      "broad mountain with two summits", "steep rocky spire", "mountain with a long ridge sloping to one side"],
-        "builtin": "res://sprites/mountains/playful_jagged_peaks/", "place": "fit", "match": "width",
+        # Sized by area, not width: ours are wider than the built-ins' tall peaks, so width made them low.
+        "builtin": "res://sprites/mountains/playful_jagged_peaks/", "place": "fit", "match": "area",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1/",
         "kind": "mountains",
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
@@ -246,19 +253,19 @@ FAMILIES = {
         "pack_folder": "Tyrnarra_Peaks", "file": "peak_{n:02d}",
     },
     "fells": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with one or two "
                     "soft inner lines, white inside, flat bottom edge, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
         "variants": ["rounded old mountain with a soft dome top", "worn mountain with two gentle rounded humps",
                      "broad rounded mountain with a shallow saddle", "low rounded mountain with a rocky shoulder"],
-        "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "width",
+        "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "area",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2/",
         "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.2, 1.0), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
     },
     "hills": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE + ", houses, buildings, road, path, fence",
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": HILL_FINISH, "negative": LINE_NEGATIVE + ", houses, buildings, road, path, fence",
         # Round 2 wording: the first drew landscapes, hills with houses and trees, and wavy lines.
         "subject": ("minimalist black line drawing of one single {variant}, one smooth curved outline like a gentle "
                     "dome, one or two short inner strokes, white inside, nothing on top, fantasy map symbol"),
@@ -266,7 +273,7 @@ FAMILIES = {
         "variants": ["low rounded hill", "gentle wide hill", "small rounded knoll", "long low hill"],
         "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
-        "exclude": {"line": [118]},   # a scribble in a circle
+        "exclude": {"line": [118, 124, 137]},   # a scribble in a circle, a volcano from above, an ellipse
         # Sparse outlines are fine: Wonderdraft's own hills are little more than an arc.
         "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.04, 0.9),
         "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",

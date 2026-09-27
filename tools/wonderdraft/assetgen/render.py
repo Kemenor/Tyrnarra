@@ -26,6 +26,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 from wdmap import WDMap  # noqa: E402
 
 EMPTY = os.path.expanduser("~/.local/share/wdmap/assetgen-test/Assetgen Empty.webp")
+# Built-in art: the local reference sprites (wdtest.builtin_refs), placed by the measured size and
+# foot of each texture (builtin-sizes.json), so neighbours a test leaves built-in are drawn too.
+BUILTIN_REFS = os.path.expanduser("~/.local/share/wdmap/assetgen/builtins")
+SIZES = os.path.join(os.path.dirname(os.path.realpath(__file__)), "builtin-sizes.json")
 PAD = 400   # symbols this far outside a patch can still reach into it
 EDGE_COVER = 0.5   # background left under a symbol: 1 - alpha ** EDGE_COVER (see above)
 COLOUR_POWER = 2.0  # the symbol's colour counts alpha ** COLOUR_POWER (see above)
@@ -69,6 +73,27 @@ def _file(texture):
     return texture if texture.startswith("/") else WDMap.asset_file(texture)
 
 
+@lru_cache(maxsize=1)
+def _sizes():
+    import json
+    with open(SIZES) as f:
+        return json.load(f)
+
+
+def _builtin(texture):
+    """(reference sprite path, measured size) of a built-in texture, or (None, None)."""
+    import re
+    fam, name = texture.rsplit("/", 1)
+    slug = re.sub(r"[^a-z0-9]+", "-", (fam + "/").lower().replace("res://sprites/", "")
+                  .replace("res://packs/", "")).strip("-")
+    path = os.path.join(BUILTIN_REFS, slug, name + ".png")
+    size = _sizes().get(texture)
+    if not size:
+        same = [v for k, v in _sizes().items() if k.rsplit("/", 1)[0] == fam]
+        size = {k: sorted(v[k] for v in same)[len(same) // 2] for k in ("w", "h", "cx", "foot")} if same else None
+    return (path, size) if size and os.path.exists(path) else (None, None)
+
+
 def patch(symbols, box):
     """RGB image of map box (x0, y0, x1, y1), 1 px per map unit, like the 8192 px export."""
     x0, y0, x1, y1 = box
@@ -78,18 +103,32 @@ def patch(symbols, box):
     near = [s for s in symbols if x0 - PAD < s["position"][0] < x1 + PAD and y0 - PAD < s["position"][1] < y1 + PAD]
     near.sort(key=lambda s: (s.get("z_index", 0), s["position"][1]))
     for s in near:
-        path = _file(s.get("texture", ""))
-        if not path:
-            continue
-        H, W = _mips(path)[0].shape[:2]
+        texture = s.get("texture", "")
         sc = s["scale"][0]
-        w, h = max(1, round(W * sc)), max(1, round(H * sc))
-        art = _resample(path, w, h)
-        if s.get("mirror"):
-            art = art[:, ::-1]
-        ox, oy = s["offset"]
-        px = round(s["position"][0] + ox * sc - X0 - w / 2)
-        py = round(s["position"][1] + oy * sc - Y0 - h / 2)
+        if texture.startswith("res://"):
+            path, size = _builtin(texture)
+            if not path:
+                continue
+            # The reference sprite is the drawn art only: stretch it to the measured size and put
+            # its middle where the measured foot and centre say.
+            w, h = max(1, round(size["w"] * sc)), max(1, round(size["h"] * sc))
+            art = _resample(path, w, h)
+            if s.get("mirror"):
+                art = art[:, ::-1]
+            px = round(s["position"][0] + size["cx"] * sc - X0 - w / 2)
+            py = round(s["position"][1] + (size["foot"] - size["h"] / 2) * sc - Y0 - h / 2)
+        else:
+            path = _file(texture)
+            if not path:
+                continue
+            H, W = _mips(path)[0].shape[:2]
+            w, h = max(1, round(W * sc)), max(1, round(H * sc))
+            art = _resample(path, w, h)
+            if s.get("mirror"):
+                art = art[:, ::-1]
+            ox, oy = s["offset"]
+            px = round(s["position"][0] + ox * sc - X0 - w / 2)
+            py = round(s["position"][1] + oy * sc - Y0 - h / 2)
         ya, yb, xa, xb = max(0, py), min(dst.shape[0], py + h), max(0, px), min(dst.shape[1], px + w)
         if ya >= yb or xa >= xb:
             continue

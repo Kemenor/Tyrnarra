@@ -87,7 +87,7 @@ def _target(fam):
     return fam.get("builtin") or fam["replaces"]
 
 
-def swap(symbols, fam, folder=None):
+def swap(symbols, fam, folder=None, ground=None):
     """Swap the family's symbols in the list (its built-in counterpart, else the bought art it
     replaces) for the installed pack, or for the sprites in `folder` (a round; drawn by file
     path, so for render.py only). Returns how many."""
@@ -111,6 +111,9 @@ def swap(symbols, fam, folder=None):
         s["scale"] = type(s["scale"])(scale, scale)
         s["offset"] = type(s["offset"])(*off)
         s["radius"] = fam["radius"]
+        if ground and not s.get("sample"):
+            # Full-colour art was never tinted; our greyscale art must be (else it comes out white).
+            s["sample"] = ground(s["position"][0], s["position"][1])
         n += 1
     return n
 
@@ -168,7 +171,7 @@ def reference(log=print):
 
 def make_map(fam, n=None, log=print):
     m = WDMap.load(BASE_MAP)
-    swapped = swap(m.symbols, fam)
+    swapped = swap(m.symbols, fam, ground=m.ground_sample)
     os.makedirs(TEST_DIR, exist_ok=True)
     path = _test_map(fam, n)
     m.save(path)

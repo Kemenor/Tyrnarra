@@ -35,14 +35,14 @@ BUILTIN_TO = [
     ("res://sprites/trees/leafy_tree/", "trees/Tyrnarra_Broadleaves", "area"),
     ("res://sprites/trees/_hd_willow/", "trees/Tyrnarra_Willows", "area"),
     ("res://sprites/trees/toon_palm/", "trees/Tyrnarra_Palms", "area"),
-    ("res://sprites/mountains/playful_jagged_peaks/", "mountains/Tyrnarra_Peaks", "width"),
-    ("res://sprites/mountains/inked_mountains_large/", "mountains/Tyrnarra_Peaks", "width"),
-    ("res://sprites/mountains/penciled_mountains_large/", "mountains/Tyrnarra_Peaks", "width"),
-    ("res://sprites/mountains/penned_mountains_large/", "mountains/Tyrnarra_Peaks", "width"),
+    ("res://sprites/mountains/playful_jagged_peaks/", "mountains/Tyrnarra_Peaks", "area"),
+    ("res://sprites/mountains/inked_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
+    ("res://sprites/mountains/penciled_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
+    ("res://sprites/mountains/penned_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
     ("res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "mountains/Tyrnarra_Peaks", "height"),
-    ("res://sprites/mountains/playful_rounded_mountains/", "mountains/Tyrnarra_Fells", "width"),
-    ("res://sprites/mountains/penciled_mountains_small/", "mountains/Tyrnarra_Fells", "width"),
-    ("res://sprites/mountains/penned_mountains_small/", "mountains/Tyrnarra_Fells", "width"),
+    ("res://sprites/mountains/playful_rounded_mountains/", "mountains/Tyrnarra_Fells", "area"),
+    ("res://sprites/mountains/penciled_mountains_small/", "mountains/Tyrnarra_Fells", "area"),
+    ("res://sprites/mountains/penned_mountains_small/", "mountains/Tyrnarra_Fells", "area"),
     ("res://sprites/mountains/playful_hiils/", "mountains/Tyrnarra_Hills", "width"),
     ("res://sprites/mountains/penned_hills/", "mountains/Tyrnarra_Hills", "width"),
     ("res://packs/Tang Dynasty by Chan/sprites/mountains/hills/", "mountains/Tyrnarra_Hills", "width"),
@@ -62,8 +62,10 @@ def _folders():
     return {name: packswap.pack_folder(PACK + name) for name in names}
 
 
-def swap_art(syms, ours, log=print):
-    """Trees and mountains in place; returns {our folder: count}."""
+def swap_art(syms, ours, ground, log=print):
+    """Trees and mountains in place; returns {our folder: count}. `ground(x, y)` gives the ground
+    colour for symbols that carry no sample: full-colour built-ins (the inked and hatched pines)
+    were never tinted, and our greyscale art in their place would come out white."""
     sizes = wdtest.SIZES()
     bought = {}
     done = {}
@@ -89,6 +91,8 @@ def swap_art(syms, ours, log=print):
         s["texture"] = t["texture"]
         s["scale"] = type(s["scale"])(scale, scale)
         s["offset"] = type(s["offset"])(*off)
+        if not s.get("sample"):
+            s["sample"] = ground(s["position"][0], s["position"][1])
         if "radius" in meta:
             s["radius"] = float(meta["radius"])
         done[rule[1]] = done.get(rule[1], 0) + 1
@@ -150,7 +154,7 @@ def swap_icons(syms, log=print):
 
 def make_map(log=print):
     m = WDMap.load(wdtest.BASE_MAP)
-    done = swap_art(m.symbols, _folders(), log)
+    done = swap_art(m.symbols, _folders(), m.ground_sample, log)
     m.data["symbols"], icons = swap_icons(m.symbols, log)
     for k, v in sorted(done.items(), key=lambda kv: -kv[1]):
         log("  %5d  %s" % (v, k))
