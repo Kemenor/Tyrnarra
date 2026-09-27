@@ -314,6 +314,21 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     BSG's tall fronts.
   - dunes round 3 (the side-view crescent shape spelled out for FLUX): all 24 read as dunes
     with a crest line and a shaded steep face (round 1-2: curls and swooshes).
+- **Whole-map test and fixes** (2026-09-27 afternoon, `fullswap`, compared with the built-ins
+  after `Main` went back to them):
+  - Myrkono's forest came out white: the inked and hatched pines (and toon palms) are
+    full-colour built-ins without a ground sample, so our greyscale art in their place was
+    never tinted. Swapped symbols without a sample now get the ground colour under them.
+  - Peaks were small, busy and light next to Wonderdraft's bold peaks: round 7 (6 px ring,
+    inner fade 0.7, sized by area instead of width) reads like the built-ins' bold outlines;
+    fells the same. Densest built-in peak patch: 100/26% built-in, 112/16% ours.
+  - Hills drew closed base loops that showed as circles in a range: round 4 fades the lower
+    half out (Wonderdraft's hills are an upper arc), 4 px ring; 133/8% vs 134/8%.
+  - Matching the built-ins closely: conifers 86/33% vs 86/32%, oaks 87/20% vs 88/18%, willows,
+    dunes. The jungle has no built-in; ours reads much lighter than Dotty's kapoks (91/13% vs
+    68/41%).
+  - The first automatic export of the test map timed out: Wonderdraft's first load of the new
+    pack images outlasts 15 s. With a 120 s load wait it runs through (178 s in all).
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
