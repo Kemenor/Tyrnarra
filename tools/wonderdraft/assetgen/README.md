@@ -163,8 +163,8 @@ What worked and what did not, in the order we found it (2026-09-26):
 - **`fullswap`**: the whole pack in a copy of the Base (every built-in family by `BUILTIN_TO`
   in fullswap.py, the bought jungle and bamboo, every city cluster by the icon rules), exported
   and compared with the Base region by region (`~/.local/share/wdmap/assetgen/fullswap/`).
-  Wonderdraft's first load of the ~570 new pack images outlasts the usual 15 s load wait, so the
-  export waits 120 s.
+  It waits 30 s for the load (the user timed it under 30 s); the runs that once looked like slow
+  loads were a locked screen (see the export notes in `tools/wonderdraft/README.md`).
 - **`builtin-refs`** (two exports, once): every built-in texture `Main` used, placed on an empty
   copy of the Base, exported drawn white and drawn black; per pixel alpha = 1 - black / terrain
   and grey = (white - (1 - alpha) terrain) / alpha give each built-in as a clean greyscale sprite
@@ -335,7 +335,8 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     dunes. The jungle has no built-in; ours reads much lighter than Dotty's kapoks (91/13% vs
     68/41%).
   - The first automatic export of the test map timed out: Wonderdraft's first load of the new
-    pack images outlasts 15 s. With a 120 s load wait it runs through (178 s in all).
+    pack images outlasts 15 s. With a 120 s load wait it runs through (178 s in all). (Later
+    found: the failures were a locked screen swallowing the keystrokes; 30 s is enough.)
 - **Tree review** (2026-09-27 evening; the user went through every tree sprite on the gallery
   sheets: `gallery/NN-<family>.jpg`, grouped by the variant each was prompted as):
   - "Wonderdraft has stronger lines in the trees." Its oaks and willows are a flat pale fill
@@ -366,6 +367,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     scenes cut into loose stalks; rebuilt from exactly the 37 reviewed seeds, since an exclusion
     reshuffles the picks), dead trees 21 and 41 (hollow stumps drawn in 3D).
   - Liked as they are: pines, palms, savanna, cacti, the rest of the bamboo and dead trees.
+  - Real export of the whole pack (`fullswap`, 88 s with a 30 s load wait), vs the built-ins:
+    conifers 84/35% (86/32%), oaks 78/31% (88/18%: the bold strokes read darker, by design),
+    willows 128/9% (129/9%), hills 134/8% (134/8%, no circles), dunes 148/3% (152/1%), jungle
+    77/27% (Dotty's kapoks 68/41%; was 91/13%). The user: "these look by tree already better".
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX

@@ -17,6 +17,12 @@ Keystrokes go to whatever window has focus, so before every one the Wonderdraft
 window must be the active window; if it isn't (the user clicked elsewhere), focus is
 requested once and otherwise the run stops instead of typing into another window.
 Needs xdotool (Wonderdraft runs under XWayland) and a free desktop for a few minutes.
+
+The screen must stay unlocked: KDE's lock screen is a Wayland surface, so XWayland still
+reports Wonderdraft as the active window while the keystrokes go to the lock screen's password
+field (a whole-map test once "typed" the file name there as a failed unlock). The run holds a
+screen-saver inhibit (kde-inhibit) while it works, refuses to start on a locked screen, and
+stops before any keystroke if the screen locked anyway.
 """
 import os
 import re
@@ -76,7 +82,29 @@ def _countdown(seconds, what, proc):
     print("\r    %s... done  " % what, flush=True)
 
 
+def _screen_locked():
+    """True while the session's screen locker is up (org.freedesktop.ScreenSaver.GetActive)."""
+    try:
+        r = subprocess.run(["gdbus", "call", "--session", "--dest", "org.freedesktop.ScreenSaver",
+                            "--object-path", "/ScreenSaver", "--method", "org.freedesktop.ScreenSaver.GetActive"],
+                           capture_output=True, text=True, timeout=5)
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return "true" in r.stdout
+
+
+def _inhibit_lock():
+    """A helper process that keeps the screen from auto-locking while it runs, or None."""
+    try:
+        return subprocess.Popen(["kde-inhibit", "--screenSaver", "sleep", "7200"],
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except OSError:
+        return None
+
+
 def _ensure_focus(env, win, what):
+    if _screen_locked():
+        raise ExportError("the screen locked before %s; stopped instead of typing into the lock screen" % what)
     if _xdo(env, "getactivewindow") == win:
         return
     _xdo(env, "windowactivate", "--sync", win)
@@ -211,7 +239,14 @@ def export_views(map_paths, log=print, load_wait=LOAD_WAIT):
         raise ExportError("Wonderdraft not found at %s" % WD_BIN)
     if _wonderdraft_running():
         raise ExportError("Wonderdraft is already running; close it first (its window would confuse the run)")
+    if _screen_locked():
+        raise ExportError("the screen is locked; unlock it first (the keystrokes would go to the lock screen)")
     env, nvidia = _env()
     log("Exporting %d views with Wonderdraft%s. Hands off keyboard and mouse until it's done."
         % (len(map_paths), " on the NVIDIA GPU" if nvidia else ""))
-    return [export_view(p, env, log, load_wait) for p in map_paths]
+    inhibit = _inhibit_lock()
+    try:
+        return [export_view(p, env, log, load_wait) for p in map_paths]
+    finally:
+        if inhibit:
+            inhibit.terminate()

@@ -219,7 +219,8 @@ def compare(out_dir, log=print):
     return out
 
 
-LOAD_WAIT = 120   # s: Wonderdraft's first load of ~570 new pack images outlasts the usual 15 s
+LOAD_WAIT = 30    # s: the test map with the whole pack loads in under 30 s (the user timed it); the
+                  # failed runs that looked like slow loads were a locked screen (wd_export.py)
 
 
 def run(out_dir, export=True, log=print):

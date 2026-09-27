@@ -31,6 +31,7 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 
 - **Keyboard only, no clicks:** clicking by screenshot coordinates missed under display scaling.
 - **Focus is checked before every keystroke;** keys go to whichever window is active, so if another window has focus the run stops instead of typing into it.
+- **The screen must stay unlocked.** KDE's lock screen is a Wayland surface, so XWayland still reports Wonderdraft as active while the keys go to the lock screen's password field (one run "typed" the file name there as a failed unlock, and the export never happened). The run holds a screen-saver inhibit (`kde-inhibit --screenSaver`) while it works, refuses to start on a locked screen, and stops before any keystroke once the screen is locked.
 - **The typed file name is `wdexport.png`,** renamed afterwards: xdotool types as a US keyboard while KDE applies the German layout, so `-` arrives as `ß` (and y/z swap). If any other PNG appears instead, the run stops and names it.
 - **On the laptop Wonderdraft runs on the RTX 5070** (PRIME offload): on the integrated Radeon every launch parked ~3.5 GB in the GPU driver's page pool (`GPUReclaim`), which once ran the session out of memory.
 - Pause the Proton sync while it runs if you can: the 120 MB PNGs are transient.
