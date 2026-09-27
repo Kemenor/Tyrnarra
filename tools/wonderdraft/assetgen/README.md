@@ -426,6 +426,14 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     `Tyrnarra_2D_Settlements`, "just to see".
   - Paused ~30 min for the user's wake-on-LAN test of the tower; its Claude session now brings
     ComfyUI up after a wake.
+- **Night of 2026-09-28** (the user asleep: "do two per kind and flatter walled towns", then "feel
+  free to do any yet missing assets during the nights, I think for example volcanic was missing"):
+  - `settlements_2d` round 2 (seeds 20-41): a second drawing of every kind. The walled town and
+    walled city spelled out as "the wall one flat band across the bottom" (`FLAT_WALLS`, used by
+    the 2D family only, so the item names stay) came out flat; the raised round-1 ones (3, 5) are
+    excluded. 35 installed, two per kind but the camp (both new camps ran off the image edge).
+  - New families queued on the tower (FLUX, one after another): `volcanoes` (recolourable,
+    lava in the accent channel, style `lava`), `swamp` trees, `mesas`, `shrubs`.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -460,7 +468,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
-| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (19) |
+| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (35) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built

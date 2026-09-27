@@ -61,6 +61,14 @@ SETTLEMENT_ITEMS = [("hamlet", "hamlet of two small cottages with thatched roofs
                     ("camp", "camp of several tents around a campfire"),
                     ("inn", "roadside inn with a hanging sign and a stable")]
 
+# The flat (2D) icons' walled kinds: "a town behind a round wall" drew the wall in perspective.
+FLAT_WALLS = {
+    "walled_town": ("small town behind a low stone wall seen straight from the front: the wall one flat band across "
+                    "the bottom with a gate in the middle, the houses and a church tower rising behind it"),
+    "walled_city": ("large city behind a high stone wall seen straight from the front: the wall one flat band across "
+                    "the bottom with square towers and a gate, many roofs, towers and a cathedral rising behind it"),
+}
+
 FAMILIES = {
     "conifer": {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
@@ -272,6 +280,34 @@ FAMILIES = {
         # Round 3: half the inner fade and 1 px bolder strokes bring back the caps' dots and gills.
         "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -1},
     },
+    "swamp": {
+        # Swamps and marshes (night of 2026-09-28, "any yet missing assets"). Stilt roots and flared
+        # bases are as wide as the crown, so no ground trim: kept whole as a clump.
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["bold"], "finish": BOLD_TREE, "shape": "clump",
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground, no water.",
+        "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
+                    "small size, pale foliage drawn with a few confident ink lines"),
+        "variants": ["bald cypress: a tall narrow crown of drooping feathery foliage on a trunk flaring wide at the base, "
+                     "with a few knobby knees beside it",
+                     "mangrove: a round bushy crown held up on a tangle of arching stilt roots",
+                     "swamp tree hung with long curtains of moss from a broad crooked crown",
+                     "gnarled swamp tree: a twisted leaning trunk with a small ragged crown",
+                     "young mangrove: a small round crown on a few arching roots"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",   # nearest bought art, for the lineup
+        "kind": "trees", "size": (260, 300), "radius": 90, "offset_y": -120, "aspect": (0.7, 1.9), "fill": (0.2, 0.9),
+        "pack_folder": "Tyrnarra_Swamp_Trees", "file": "swamp_{n:02d}",
+    },
+    "shrubs": {
+        # Bushes and scrub to scatter over open land (night of 2026-09-28).
+        "engine": "flux", "canvas": (1024, 1024), "styles": ["bold"], "finish": BOLD_TREE, "shape": "clump",
+        "flux": "A single {variant}, drawn as a small plant symbol for a hand-drawn fantasy map. No ground.",
+        "subject": "a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at small size",
+        "variants": ["round leafy bush", "low wide shrub of a few rounded leafy clumps",
+                     "thorny scrub bush of bare twigs with a few small leaves", "heather bush: a low mound of tiny flowers"],
+        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks/",   # nearest bought art, for the lineup
+        "kind": "trees", "size": (140, 110), "radius": 45, "offset_y": -40, "aspect": (0.35, 1.4), "fill": (0.25, 0.95),
+        "pack_folder": "Tyrnarra_Shrubs", "file": "shrub_{n:02d}",
+    },
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
@@ -338,6 +374,40 @@ FAMILIES = {
         "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.1, 0.55), "fill": (0.2, 0.95),
         "pack_folder": "Tyrnarra_Dunes", "file": "dune_{n:02d}",
     },
+    "mesas": {
+        # Desert mesas, buttes and arches (night of 2026-09-28), in the peaks' bold finish.
+        "engine": "flux", "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME,
+        "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
+        "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map, seen from the side, nothing around it.",
+        "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with a few inner lines, "
+                    "white inside, fantasy map symbol"),
+        "variants": ["mesa: a wide flat-topped rock plateau with steep cliff sides striped by horizontal rock layers",
+                     "butte: a tall narrow flat-topped rock tower with sheer sides",
+                     "pair of mesas, a big flat-topped one behind a smaller one",
+                     "natural rock arch bridging two stone pillars",
+                     "cluster of three tall rock spires of different heights"],
+        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Mesas/",
+        "kind": "mountains", "size": (380, 220), "radius": 60, "offset_y": 0, "aspect": (0.25, 1.3), "fill": (0.2, 0.95),
+        "drop_thin": 14,
+        "pack_folder": "Tyrnarra_Mesas", "file": "mesa_{n:02d}",
+    },
+    "volcanoes": {
+        # "Volcanic was missing" (the user, 2026-09-28). Recolourable like the icons: R ink, G rock and
+        # smoke, B lava and glow, so each volcano's lava colour is picked on the map.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["lava"],
+        "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map, seen from the side.",
+        "subject": "a single {variant}, fantasy map symbol, bold black outlines",
+        "variants": ["active volcano: a tall cone with a crater at the top and a thick plume of smoke rising from it",
+                     "erupting volcano: a steep cone with glowing lava streams running down its sides and fire at the top",
+                     "broad volcano: a wide low cone with a large crater rim and a thin wisp of smoke",
+                     "small volcanic cone: a short steep cone with a smoking crater",
+                     "volcano with a lava lake: a broken crater rim around a glowing pool of lava",
+                     "dormant volcano: a tall quiet cone with an empty crater and a few old lava channels on its sides"],
+        "replaces": "user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/",
+        "compare": ["user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/"],
+        "kind": "symbols", "size": (340, 280), "radius": 90, "offset_y": 0, "aspect": (0.4, 1.6), "fill": (0.2, 0.97),
+        "pack_folder": "Tyrnarra_Volcanoes", "file": "volcano_{n:02d}",
+    },
 
     # --- icons: recolourable (Wonderdraft custom colours: R lines, G walls, B roofs) -------------
     "settlements": {
@@ -358,7 +428,9 @@ FAMILIES = {
         "shape": "clump", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
         "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
                  "no perspective and no depth, the buildings standing side by side like a skyline, as on old maps."),
-        "items": SETTLEMENT_ITEMS,
+        # Round 2 (seeds 20+): the walled ones came out raised; their wall spelled out as a flat band.
+        "items": [(k, FLAT_WALLS.get(k, d)) for k, d in SETTLEMENT_ITEMS],
+        "exclude": {"icon": [3, 5]},   # the raised walled town and walled city of round 1
         "per_item": 2,
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.25, 2.8), "fill": (0.3, 0.97),
@@ -407,6 +479,10 @@ FLUX_STYLES = {
              "shapes, with a few thick black curved strokes inside where the shapes overlap. Flat very pale fill, no "
              "grey wash, no small leaf marks, no hatching. Simple and readable at small size. Drawn directly on a "
              "plain white background: no border around it, no shadow, nothing else in the image."),
+    # Volcanoes (custom colours): lava in the accent channel, rock and smoke in the body.
+    "lava": ("Bold black ink outlines; rock left plain pale grey with light shading; lava, glow and fire painted in "
+             "flat red-orange; smoke plain light grey. Simple, clean and readable at small size. Isolated on a plain "
+             "white background, nothing else in the image, no ground, no text."),
     "line": ("Clean black ink line drawing: a bold clean outline, a few inner lines, white inside, a little grey "
              "shading on one side. Simple and readable at small size. Isolated on a plain white background, nothing "
              "else in the image."),
