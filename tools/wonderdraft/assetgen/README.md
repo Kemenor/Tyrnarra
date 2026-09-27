@@ -332,6 +332,13 @@ Written 2026-09-27; only the conifers are generated and installed so far.
   empty, so the same three colours work for both. The icon prompt asks for flat red roofs on
   cream walls so the sorting is easy. Families with `items` build named icons (`village_1`,
   `village_2`, ...): up to `per_item` usable drawings of each.
+- **Icon file names are a contract**: Kartofuchs places settlement icons by role, guessed from
+  the names in `Tyrnarra_Settlements` (2026-09-27): `capital_*`, `castle_*`, `fortress_*` =
+  capital; `city_*`, `walled_city_*` = city; `town_*`, `walled_town_*` = town; `village_*`,
+  `hamlet_*` = village. Folders with "god" in the name are skipped, so the god-cities stay
+  one-offs. Keep the `{item}_{n}` names and these item words. Top-down houses for its town
+  maps would be picked up as `house_*` or `building_*` in a folder with "town" or "city" in its
+  name.
 - **God-city icons** use only what a traveller sees (docs/god-city-seeds.md, chronicler tier):
   Valreka's city on a whale, Frae City's chained rock over a lake, Haizava's sails and vanes,
   Lurrath's stone ring, Ljosarn's beacon, and so on. The names stay out of the prompt, so FLUX

@@ -296,6 +296,7 @@ FAMILIES = {
                   ("camp", "camp of several tents around a campfire"),
                   ("inn", "roadside inn with a hanging sign and a stable")],
         "per_item": 3,
+        # Kartofuchs guesses each icon's role from these item names (README: Families): keep them.
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.3, 0.97),
         "pack_folder": "Tyrnarra_Settlements", "file": "{item}_{n}",
