@@ -324,6 +324,11 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     fells the same. Densest built-in peak patch: 100/26% built-in, 112/16% ours.
   - Hills drew closed base loops that showed as circles in a range: round 4 fades the lower
     half out (Wonderdraft's hills are an upper arc), 4 px ring; 133/8% vs 134/8%.
+  - Two black circles stayed in the hills: the exclude list named the wrong seeds, so the empty
+    ellipse (134) and the volcano seen from above (122) went in and two good hills stayed out.
+    Round 5 (seeds 101-148, exclusions checked against the raw drawings; 113 and 147 also out,
+    both standing on a full ellipse): 25 hills, no circles in the offline render of the range.
+    Check an exclusion against `raw/<seed>.png`, never against a position on the sheet.
   - Matching the built-ins closely: conifers 86/33% vs 86/32%, oaks 87/20% vs 88/18%, willows,
     dunes. The jungle has no built-in; ours reads much lighter than Dotty's kapoks (91/13% vs
     68/41%).
@@ -359,7 +364,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
 | peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (31) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (21) |
-| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (29) |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` (26) |
