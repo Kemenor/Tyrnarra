@@ -126,7 +126,7 @@ def cmd_build(a):
         good = []
         for seed in seeds:
             rgba, why = sprites.cut(os.path.join(raw, "%d.png" % seed), os.path.join(raw, "%d_mask.png" % seed),
-                                    fam.get("shape", "tree"))
+                                    fam.get("shape", "tree"), fam.get("ink_alpha", False))
             why = why or sprites.check(rgba, fam)
             if not why and fam.get("draw") != "custom_colors":
                 rgba = sprites.thin_ink(rgba, recipes.INK_THIN)   # greyscale; icons keep their colours

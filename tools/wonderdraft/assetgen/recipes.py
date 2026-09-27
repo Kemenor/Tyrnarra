@@ -168,6 +168,10 @@ FAMILIES = {
                      "twisted dead tree leaning to one side",
                      "bare winter tree with a round crown of thin branches"],
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Dead_Trees/",
+        # Gnarled roots flare as wide as the crown and bare branches fill little: 0 of 48 passed.
+        # Alpha from the ink, a thin ring, no fade: the mask and a thick ring filled the crowns in.
+        "base_max": 0.95, "fill": (0.12, 0.8), "ink_alpha": True,
+        "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
         "kind": "trees", "size": (250, 300), "radius": 70, "offset_y": -130, "aspect": (0.7, 2.0),
         "pack_folder": "Tyrnarra_Dead_Trees", "file": "deadtree_{n:02d}",
     },
@@ -199,7 +203,8 @@ FAMILIES = {
         "pack_folder": "Tyrnarra_Cactuses", "file": "cactus_{n:02d}",
     },
     "fungal": {
-        # Giant-mushroom forests for strange and underground lands.
+        # Giant-mushroom forests for strange and underground lands; clusters are several pieces.
+        "shape": "clump",
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, drawn with a few confident ink lines, lots of white paper showing, minimal shading"),
         "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map. No ground.",

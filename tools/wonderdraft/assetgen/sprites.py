@@ -41,10 +41,11 @@ def flood_mask(rgb):
     return np.where(band, np.maximum(soft, fg * 0.5), fg.astype(np.float32)).astype(np.float32)
 
 
-def cut(rgb_path, mask_path, shape="tree"):
+def cut(rgb_path, mask_path, shape="tree", ink_alpha=False):
     """(rgba array, reason) for one generated image; rgba is None when the image is unusable.
     Without a mask file the mask comes from flood_mask. Only trees get the ground trim: a
-    mountain's or a building's base is part of it."""
+    mountain's or a building's base is part of it. `ink_alpha` (bare trees): the paper between
+    the strokes turns transparent too, where the mask would fill a crown's outline."""
     rgb = np.asarray(Image.open(rgb_path).convert("RGB")).astype(np.float32)
     if mask_path and os.path.exists(mask_path):
         mask = np.asarray(Image.open(mask_path).convert("L")).astype(np.float32) / 255
@@ -98,6 +99,9 @@ def cut(rgb_path, mask_path, shape="tree"):
     border = np.concatenate([rgb[:8].reshape(-1, 3), rgb[-8:].reshape(-1, 3),
                              rgb[:, :8].reshape(-1, 3), rgb[:, -8:].reshape(-1, 3)])
     bg = np.median(border, axis=0)
+    if ink_alpha:
+        lum = rgb @ LUMA
+        alpha = alpha * np.clip((bg @ LUMA - lum) / 90, 0, 1) ** 0.7
     a = alpha[..., None]
     rgb = np.where(a > 0.02, (rgb - (1 - a) * bg) / np.maximum(a, 0.02), rgb).clip(0, 255)
     rows = np.flatnonzero(alpha.max(1) > 0.02)
@@ -132,7 +136,7 @@ def check(rgba, fam):
     crown = widths[: int(h * 0.85)].max()
     # The very base only: low branches and a root flare are part of the tree, a ground patch
     # the trim missed is about as wide as the crown.
-    if fam.get("shape", "tree") == "tree" and widths[int(h * 0.96):].max() > 0.55 * crown:
+    if fam.get("shape", "tree") == "tree" and widths[int(h * 0.96):].max() > fam.get("base_max", 0.55) * crown:
         return "wide base (ground or bushes left)"
     fill = a.sum() / (h * w)
     lo, hi = fam.get("fill", (0.3, 0.8))
