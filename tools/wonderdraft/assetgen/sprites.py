@@ -111,6 +111,34 @@ def cut(rgb_path, mask_path, shape="tree", ink_alpha=False):
     return rgba, None
 
 
+def fill_under(rgba):
+    """A hill's body made solid: everything under its top contour, column by column, turns
+    opaque (the paper there is the drawing's own white). A line drawing open at the bottom
+    otherwise stays hollow (the mask sees only the strokes), and strokes that reach below the
+    body got a ring of their own and hung under it like dark claws."""
+    out = rgba.copy()
+    a = out[..., 3] > 128
+    if not a.any():
+        return out
+    top = a.argmax(0)
+    rows = np.arange(a.shape[0])[:, None]
+    out[..., 3] = np.where((rows >= top[None, :]) & a.any(0)[None, :], 255, out[..., 3])
+    return out
+
+
+def drop_thin(rgba, radius):
+    """Strokes thinner than 2 x `radius` px that stick out of a mountain's body taken off (the
+    body kept as drawn, its outline included): a peak's bold base strokes, each ringed by the
+    outline, hung under it like dark claws. Filling under them instead built a box-shaped plinth."""
+    out = rgba.copy()
+    a = out[..., 3] > 128
+    body = ndimage.binary_opening(a, structure=_disk(radius))
+    if body.any():
+        keep = ndimage.binary_dilation(body, structure=_disk(radius + 2))
+        out[..., 3] = np.where(keep, out[..., 3], 0)
+    return out
+
+
 def thin_ink(rgba, radius):
     """Greyscale with the dark lines made `radius` px narrower on each side (a max filter on
     luminance): the strokes stay black, a dense forest of them reads less dark. A negative
@@ -304,8 +332,16 @@ def install(sprites, fam, folder=None, names=None):
     os.makedirs(folder)
     for name, sp in zip(names, sprites):
         sp.save(os.path.join(folder, name + ".png"))
-    meta = {"name": os.path.basename(folder).replace("_", " "), "radius": fam["radius"],
-            "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": fam.get("draw", "sample_color")}
+    if fam["kind"] == "symbols":
+        # Icon folders take one entry per symbol (as BSG's icons do): given a single folder-wide
+        # entry, Wonderdraft wrote its own per-symbol file with draw mode "normal", which draws
+        # custom-colour art as raw red/green/blue. Its own radius there: 3/8 of the shorter side.
+        meta = {name: {"name": name.replace("_", " ").title(), "radius": round(0.375 * min(sp.size)),
+                       "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": fam.get("draw", "sample_color")}
+                for name, sp in zip(names, sprites)}
+    else:
+        meta = {"name": os.path.basename(folder).replace("_", " "), "radius": fam["radius"],
+                "offset_x": 0, "offset_y": fam["offset_y"], "draw_mode": fam.get("draw", "sample_color")}
     with open(os.path.join(folder, ".wonderdraft_symbols"), "w") as f:
         json.dump(meta, f, indent=4)
     return folder

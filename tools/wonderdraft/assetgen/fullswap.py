@@ -19,6 +19,7 @@ import gdvar  # noqa: E402
 import wd_export  # noqa: E402
 
 import packswap  # noqa: E402
+import recipes  # noqa: E402
 import wdtest  # noqa: E402
 
 PACK = "user://assets/Tyrnarra/sprites/"
@@ -108,7 +109,7 @@ def swap_icons(syms, log=print):
     """Every BSG city cluster becomes one of our icons; returns the new symbol list and counts."""
     theirs = {t["texture"]: t for t in packswap.pack_folder(wdtest.BSG.rstrip("/"))[0]}
     groups = {}
-    for folder in ("symbols/Tyrnarra_Settlements", "symbols/Tyrnarra_God_Cities"):
+    for folder in ("symbols/" + recipes.FAMILIES[f]["pack_folder"] for f in ("settlements", "god_cities")):
         files, meta = packswap.pack_folder(PACK + folder)
         for t in files:
             groups.setdefault(t["texture"].rsplit("/", 1)[1].rsplit("_", 1)[0], []).append((t, meta))

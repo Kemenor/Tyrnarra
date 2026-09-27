@@ -40,6 +40,27 @@ LINE_NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark
                  "panorama, horizon, sky, clouds, sun, birds, trees, forest, several mountains, mountain range, "
                  "background, parchment, paper texture, border, frame, cropped, blurry, detailed, shading, hatching")
 
+# The settlement kinds, shared by the raised (2.5D) and the flat (2D) icon families. Kartofuchs
+# guesses each icon's role from these item names (README: Families): keep them.
+SETTLEMENT_ITEMS = [("hamlet", "hamlet of two small cottages with thatched roofs"),
+                    ("village", "village of five cottages around a small chapel"),
+                    ("town", "small town of tall houses around a church tower"),
+                    ("walled_town", "town behind a low round stone wall with a gate"),
+                    ("city", "large city of many tightly packed houses, towers and a cathedral"),
+                    ("walled_city", "large city inside a ring of stone walls with towers"),
+                    ("capital", "grand capital city behind high walls, with a domed palace and tall towers"),
+                    ("castle", "castle with a keep and four corner towers"),
+                    ("fortress", "massive stone fortress with thick walls and a gatehouse"),
+                    ("tower", "lone tall stone watchtower"),
+                    ("port", "harbour town with houses, a lighthouse and a jetty with a small ship"),
+                    ("temple", "temple with columns and a dome"),
+                    ("monastery", "walled monastery with a bell tower"),
+                    ("ruins", "ruined castle with broken walls and a collapsed tower"),
+                    ("mine", "mine entrance in a rock face with a wooden headframe"),
+                    ("farmstead", "farmstead with a barn, a windmill and a fenced field"),
+                    ("camp", "camp of several tents around a campfire"),
+                    ("inn", "roadside inn with a hanging sign and a stable")]
+
 FAMILIES = {
     "conifer": {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
@@ -267,6 +288,7 @@ FAMILIES = {
         "kind": "mountains",
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
         "radius": 45, "offset_y": 0, "aspect": (0.3, 1.1), "fill": (0.2, 0.9),
+        "drop_thin": 14,   # base strokes under 28 px that stick out of the body dropped (sprites.drop_thin)
         "pack_folder": "Tyrnarra_Peaks", "file": "peak_{n:02d}",
     },
     "fells": {
@@ -279,6 +301,7 @@ FAMILIES = {
         "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "area",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2/",
         "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.2, 1.0), "fill": (0.2, 0.9),
+        "drop_thin": 14,   # base strokes under 28 px that stick out of the body dropped (sprites.drop_thin)
         "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
     },
     "hills": {
@@ -295,6 +318,7 @@ FAMILIES = {
         "exclude": {"line": [113, 118, 122, 134, 147]},
         # Sparse outlines are fine: Wonderdraft's own hills are little more than an arc.
         "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.04, 0.9),
+        "fill_under": True,   # solid body under the top contour (sprites.fill_under)
         "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",
     },
     "dunes": {
@@ -319,29 +343,25 @@ FAMILIES = {
     "settlements": {
         "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
         "flux": "A {variant}, drawn as a settlement symbol for a hand-drawn fantasy map, seen from a slightly raised side view.",
-        "items": [("hamlet", "hamlet of two small cottages with thatched roofs"),
-                  ("village", "village of five cottages around a small chapel"),
-                  ("town", "small town of tall houses around a church tower"),
-                  ("walled_town", "town behind a low round stone wall with a gate"),
-                  ("city", "large city of many tightly packed houses, towers and a cathedral"),
-                  ("walled_city", "large city inside a ring of stone walls with towers"),
-                  ("capital", "grand capital city behind high walls, with a domed palace and tall towers"),
-                  ("castle", "castle with a keep and four corner towers"),
-                  ("fortress", "massive stone fortress with thick walls and a gatehouse"),
-                  ("tower", "lone tall stone watchtower"),
-                  ("port", "harbour town with houses, a lighthouse and a jetty with a small ship"),
-                  ("temple", "temple with columns and a dome"),
-                  ("monastery", "walled monastery with a bell tower"),
-                  ("ruins", "ruined castle with broken walls and a collapsed tower"),
-                  ("mine", "mine entrance in a rock face with a wooden headframe"),
-                  ("farmstead", "farmstead with a barn, a windmill and a fenced field"),
-                  ("camp", "camp of several tents around a campfire"),
-                  ("inn", "roadside inn with a hanging sign and a stable")],
+        "items": SETTLEMENT_ITEMS,
         "per_item": 3,
         # Kartofuchs guesses each icon's role from these item names (README: Families): keep them.
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.3, 0.97),
-        "pack_folder": "Tyrnarra_Settlements", "file": "{item}_{n}",
+        # The raised view reads as 2.5D; the user filed these under it once flat 2D icons were asked for.
+        "pack_folder": "Tyrnarra_2.5D_Settlements", "file": "{item}_{n}",
+    },
+    "settlements_2d": {
+        # "Can we generate some true 2D ones? Just to see" (the user, 2026-09-27): the same kinds as
+        # flat, straight-on map symbols, beside the raised view of "settlements".
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
+                 "no perspective and no depth, the buildings standing side by side like a skyline, as on old maps."),
+        "items": SETTLEMENT_ITEMS,
+        "per_item": 2,
+        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
+        "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.25, 2.8), "fill": (0.3, 0.97),
+        "pack_folder": "Tyrnarra_2D_Settlements", "file": "{item}_{n}",
     },
     "god_cities": {
         # One themed icon per Bound god-city, from docs/god-city-seeds.md (open, chronicler-tier
@@ -356,7 +376,8 @@ FAMILIES = {
                   ("lurrath", "massive round ring of stone walls enclosing a solid squat stone city with ramps and a great central keep"),
                   ("ljosarn", "lakeside city of lanterns around a tall beacon tower shining rays of light"),
                   ("thekkavar", "great academy of domes, towers and libraries above stairs descending deep into the ground"),
-                  ("lograth", "two great buildings facing across one square, a royal palace and a temple crowned with scales, tall towers linked by aerial lines"),
+                  # Lograth seeds 203+: the first wording drew the aerial lines as a tent-like sheet.
+                  ("lograth", "judgment city: a royal throne-hall and a tall temple crowned with a great pair of scales, facing each other across one wide paved square, joined in the middle by a bridge-like hall of courts, many small courthouses around them, and a few thin straight cables strung between slender towers with small gondolas hanging from them"),
                   ("veidrath", "ancient stone temple core ringed by newer stone districts with an airship mooring tower, circles of tents around it"),
                   ("nahaskel", "jumble of mismatched crooked buildings and impossible twisting towers stacked on top of each other"),
                   ("valreka", "city with a palace and a temple built on the back of a giant whale swimming in the sea, smaller whales carrying houses beside it"),
@@ -364,7 +385,7 @@ FAMILIES = {
         "per_item": 2,
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (320, 260), "radius": 80, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
-        "pack_folder": "Tyrnarra_God_Cities", "file": "{item}_{n}",
+        "pack_folder": "Tyrnarra_2.5D_God_Cities", "file": "{item}_{n}",
     },
 }
 

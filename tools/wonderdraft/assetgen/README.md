@@ -64,7 +64,9 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   That is why the same tree is green on grass and white on snow. Its own conifers are
   near-white fill with black brush strokes.
 - **Custom-colour art** lives in folders ending `_Cc`: red channel = colour 1 (foliage), green =
-  colour 2 (trunk), blue = colour 3, dark = lines. `draw_mode: custom_colors`.
+  colour 2 (trunk), blue = colour 3, dark = lines. `draw_mode: custom_colors`. Symbol (icon)
+  folders take one `.wonderdraft_symbols` entry per symbol (BSG's icons, ours); given one
+  folder-wide entry, Wonderdraft rewrites the file per symbol with draw mode `normal`.
 - **`.wonderdraft_symbols`** in each folder (JSON): `name`, `radius` (footprint for spacing),
   `offset_x`, `offset_y` (sprite centre relative to the click point, in scale-1 px),
   `draw_mode` (`sample_color` or `custom_colors`). Symbols stored in a map carry their own
@@ -393,6 +395,27 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   mountains and icons reviewed next. Seen while making them: about half the hills are hollow
   (the flood mask leaves an open drawing's inside transparent), the others filled; some peaks
   and fells trail heavy dark base strokes (peaks 02, 14, 27; fells 03, 04, 19, 20).
+- **Mountain and icon review** (2026-09-27 night, on the galleries): "fix the hollow and the base".
+  - Hollow hills: the mask of an open line drawing sees only the strokes, so about half the
+    hills were transparent inside. `fill_under` (hills round 6) makes everything under the top
+    contour solid paper: 25 even mounds, 131/10% offline (round 5: 132/10%).
+  - Dark base strokes: bold strokes reaching out of a peak's or fell's body each got the 6 px
+    ring and hung under it like claws. Filling under them built a box-shaped plinth; `drop_thin`
+    (14 px) takes strokes thinner than 28 px off the silhouette and keeps the body as drawn.
+    Peaks round 8 (30; seed 144 had too little body left), fells round 3 (18; seeds 4, 6, 29
+    were built of those strokes). Real export: peaks 115/14% (built-ins 100/26%), hills 133/8%
+    (134/8%), clean ranges. The offline render drew stepped blocks under the filled hills that
+    the real export does not show: its soft-alpha handling, not the art.
+  - Icons: "they look good, and should probably be under 2.5D": the raised-view folders are
+    `Tyrnarra_2.5D_Settlements` and `Tyrnarra_2.5D_God_Cities` now; `settlements_2d`, the
+    same kinds as flat straight-on symbols ("just to see"), goes to `Tyrnarra_2D_Settlements`.
+    Lograth "might need some work": its aerial lines came out as a tent-like sheet; new wording
+    (seeds 203+) spells out the twin seats across one square, the bridging hall of courts and
+    thin cables with gondolas.
+  - Wonderdraft had rewritten both icon folders' `.wonderdraft_symbols` into one entry per symbol
+    with draw mode `normal` (raw red/green/blue instead of the chosen colours): icon folders take
+    per-symbol entries, like BSG's. The installer writes them now (`custom_colors`, radius 3/8
+    of the shorter side, Wonderdraft's own measure); the installed files were repaired.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -421,12 +444,12 @@ red dome tops, and the monastery icons still carry the old red flags.
 | savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (48) |
 | desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
-| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (31) |
-| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (21) |
-| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (25) |
+| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (round 8, 30) |
+| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
-| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` (33) |
-| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` (26) |
+| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
+| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
@@ -445,7 +468,7 @@ red dome tops, and the monastery icons still carry the old red flags.
   cream walls so the sorting is easy. Families with `items` build named icons (`village_1`,
   `village_2`, ...): up to `per_item` usable drawings of each.
 - **Icon file names are a contract**: Kartofuchs places settlement icons by role, guessed from
-  the names in `Tyrnarra_Settlements` (2026-09-27): `capital_*`, `castle_*`, `fortress_*` =
+  the names in `Tyrnarra_2.5D_Settlements` (2026-09-27; `Tyrnarra_2D_Settlements` uses the same): `capital_*`, `castle_*`, `fortress_*` =
   capital; `city_*`, `walled_city_*` = city; `town_*`, `walled_town_*` = town; `village_*`,
   `hamlet_*` = village. Folders with "god" in the name are skipped, so the god-cities stay
   one-offs. Keep the `{item}_{n}` names and these item words. Top-down houses for its town
