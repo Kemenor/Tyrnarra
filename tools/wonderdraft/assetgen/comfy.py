@@ -48,13 +48,23 @@ def run(graph, timeout=900):
     """Run a graph; returns (seconds, [PNG bytes per image, in output-node order])."""
     t0 = time.time()
     pid = _post("/prompt", {"prompt": graph, "client_id": str(uuid.uuid4())})["prompt_id"]
+    return wait(pid, t0, timeout)
+
+
+def wait(pid, t0=None, timeout=900):
+    """Wait for a queued job and fetch its images. The server stops answering for minutes while
+    FLUX loads its models (2026-09-27), so a failed poll is retried until `timeout`."""
+    t0 = t0 or time.time()
     while True:
-        h = json.load(_get("/history/" + pid))
+        try:
+            h = json.load(_get("/history/" + pid))
+        except OSError:
+            h = {}
         if pid in h:
             break
         if time.time() - t0 > timeout:
             raise TimeoutError("ComfyUI job %s took over %ds" % (pid, timeout))
-        time.sleep(1)
+        time.sleep(2)
     st = h[pid]["status"]
     if st.get("status_str") != "success":
         raise RuntimeError("ComfyUI job failed: %s" % json.dumps(st)[:1500])
@@ -62,7 +72,14 @@ def run(graph, timeout=900):
     for node in sorted(h[pid]["outputs"], key=int):
         for im in h[pid]["outputs"][node].get("images", []):
             q = urllib.parse.urlencode({"filename": im["filename"], "subfolder": im["subfolder"], "type": im["type"]})
-            images.append(_get("/view?" + q, 60).read())
+            for attempt in range(10):
+                try:
+                    images.append(_get("/view?" + q, 60).read())
+                    break
+                except OSError:
+                    if attempt == 9:
+                        raise
+                    time.sleep(10)
     return time.time() - t0, images
 
 
