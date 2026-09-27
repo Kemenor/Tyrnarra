@@ -297,27 +297,31 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
 ## Families
 
 `recipes.FAMILIES` holds one entry per family; `generate`, `build` and `test` take its name.
-Written 2026-09-27; only the conifers are generated and installed so far.
+All generated and installed on 2026-09-27 (525 sprites; counts in the table; details in the
+Results log). Weak spots left for fine-tuning: hills (mixed), faint stripes in peak ranges,
+many near-identical barrel cacti, one leaf-shaped sprite each in broadleaves and jungle,
+acacias not flat-topped, dead trees faint at map size, dunes (few read as dunes), red flags on
+every icon, and icons fitted by width look flatter than Main's tall BSG icons.
 
 | Family | Engine | Built-in yardstick | Replaces in Main | Pack folder |
 |---|---|---|---|---|
 | conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 11, 64) |
-| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` |
-| willow | SDXL | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` |
-| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` |
-| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` |
-| palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` |
-| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` |
-| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` |
-| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` |
-| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` |
-| fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` |
-| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` |
-| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` |
-| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` |
-| dunes | SDXL | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` |
-| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` |
-| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` |
+| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (41) |
+| willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (24) |
+| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (33) |
+| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (30) |
+| palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` (24) |
+| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (40) |
+| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (18) |
+| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (38) |
+| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (35) |
+| fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
+| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (28) |
+| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (21) |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (14) |
+| dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (14) |
+| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_Settlements` (37) |
+| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_God_Cities` (24) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
