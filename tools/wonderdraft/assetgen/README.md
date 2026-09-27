@@ -41,10 +41,13 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   `birefnet.safetensors` (BiRefNet Swin-L, MIT) for the built-in RemoveBackground node; FLUX.2
   dev (GGUF Q4 + Turbo LoRA, 8 steps) for the `engine: flux` families. Also on the tower:
   Juggernaut XL, NoobAI XL, IP-Adapter for SDXL.
-- **FLUX needs the server started with npc_art's flags**: `--cache-none --reserve-vram 2.0
-  --cpu-vae` (tools/imageGen/npc_art.py, `ensure_server`, explains each). The plain LAN server
-  ran one FLUX image (435 s) and then wedged in a model load that `/interrupt` cannot stop; only
-  a restart on the tower frees it (2026-09-27). With the flags npc_art measured ~221 s per image.
+- **The tower's server has two modes** (since 2026-09-27; the tower's own Claude session
+  restarts it on request, naming the mode): **sdxl** (`--cache-none --reserve-vram 2.0`, VAE on
+  the GPU, ~5 s per SDXL image) and **flux** (the same plus `--cpu-vae`, ~2 min per FLUX image;
+  the flags are npc_art's, tools/imageGen/npc_art.py `ensure_server` explains each). Switch modes
+  between an SDXL phase and a FLUX phase: never mix the two engines in one server session, and
+  never send FLUX to an sdxl-mode server (the GPU VAE fault can crash it). The plain server
+  without these flags ran one FLUX image and then wedged in a load `/interrupt` cannot stop.
   FLUX graphs here skip BiRefNet: the drawings come on clean white, cut locally
   (`sprites.flood_mask`).
 - `assetgen.sh` builds its own gitignored `.venv` (numpy, scipy, pillow) on first run.
