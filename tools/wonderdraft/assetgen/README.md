@@ -138,7 +138,9 @@ What worked and what did not, in the order we found it (2026-09-26):
   forest's brightness near the built-ins' while every tree reads as a pale shape with a dark rim,
   where a thick ring alone made the dark scale pattern of round 4 and a thin ring an even mat.
 - `INK_THIN` (max filter on luminance) makes dark strokes narrower; it barely changes the result
-  once the ring is thin, and 3 px and more blobs the lines. Off by default.
+  once the ring is thin, and 3 px and more blobs the lines. Off by default. Negative, it makes
+  them bolder (a min filter at full size): -2 with half the inner fade keeps a conifer's branch
+  tiers, which the 0.7 fade had erased from the densest drawings (tree review, conifer round 13).
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
@@ -334,6 +336,25 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     68/41%).
   - The first automatic export of the test map timed out: Wonderdraft's first load of the new
     pack images outlasts 15 s. With a 120 s load wait it runs through (178 s in all).
+- **Tree review** (2026-09-27 evening; the user went through every tree sprite on the gallery
+  sheets: `gallery/NN-<family>.jpg`, grouped by the variant each was prompted as):
+  - "Wonderdraft has stronger lines in the trees." Its oaks and willows are a flat pale fill
+    with a few thick curved brush strokes; ours lost their inner lines to the 0.7 inner fade.
+  - Conifers: some looked empty (15, 34, 38, 49; six more like them). The densest drawings lost
+    their branch tiers; round 13 (inner fade 0.35, `INK_THIN` -2, same 64 picks) keeps them,
+    82/35% offline vs the built-ins' 86/32%. Installed.
+  - Broadleaves, willows, jungle "mostly green without texture": no inner fade and bolder
+    strokes brought FLUX's small leaf marks back (broadleaf rounds 3-5), but at map size they
+    blur into a muddy speckle (72/36% vs 88/18%). The drawings need fewer, bigger strokes:
+    a new FLUX style `bold` asks for Wonderdraft's look (thick outline, a few big rounded
+    shapes with thick curved strokes where they overlap, flat pale fill). "Like a sticker"
+    drew stickers with a white border and a drop shadow, so the wording now says no border.
+  - Mushrooms "a touch more texture": round 3, inner fade 0.35 and `INK_THIN` -1 (caps' dots and
+    gills back), same 40 picks. Installed.
+  - Dropped by hand: pine 13 (a watercolour stain came with it), bamboo 16, 19, 46 (forest
+    scenes cut into loose stalks; rebuilt from exactly the 37 reviewed seeds, since an exclusion
+    reshuffles the picks), dead trees 21 and 41 (hollow stumps drawn in 3D).
+  - Liked as they are: pines, palms, savanna, cacti, the rest of the bamboo and dead trees.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -351,14 +372,14 @@ red dome tops, and the monastery icons still carry the old red flags.
 
 | Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
-| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 11, 64) |
+| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 13, 64) |
 | broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (39) |
 | willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (24) |
-| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (33) |
+| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (32) |
 | jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (29) |
 | palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` (24) |
-| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (40) |
-| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (18) |
+| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (37) |
+| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (16) |
 | savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (48) |
 | desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |

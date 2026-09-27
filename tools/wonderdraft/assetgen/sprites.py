@@ -113,10 +113,14 @@ def cut(rgb_path, mask_path, shape="tree", ink_alpha=False):
 
 def thin_ink(rgba, radius):
     """Greyscale with the dark lines made `radius` px narrower on each side (a max filter on
-    luminance): the strokes stay black, a dense forest of them reads less dark."""
+    luminance): the strokes stay black, a dense forest of them reads less dark. A negative
+    radius makes them that much bolder (a min filter), so thin inner lines survive the
+    downscale to map size."""
     lum = rgba[..., :3] @ LUMA
     if radius > 0:
         lum = ndimage.grey_dilation(lum, footprint=_disk(radius))
+    elif radius < 0:
+        lum = ndimage.grey_erosion(lum, footprint=_disk(-radius))
     out = rgba.copy()
     out[..., :3] = lum[..., None]
     return out

@@ -58,6 +58,9 @@ FAMILIES = {
         "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor
         "aspect": (1.3, 2.6),      # height / width a usable cut-out must have
         "pack_folder": "Tyrnarra_Conifers",
+        # Round 13: the 0.7 inner fade left the densest drawings as blank pale shapes without their
+        # branch tiers; half the fade and 2 px bolder strokes keep the tiers, like Wonderdraft's own.
+        "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -2},
         "file": "conifer_{n:02d}",
     },
     "broadleaf": {
@@ -120,6 +123,7 @@ FAMILIES = {
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines/",
         "kind": "trees", "size": (272, 300), "radius": 90, "offset_y": -130, "aspect": (0.6, 1.8),
         "pack_folder": "Tyrnarra_Pines", "file": "pine_{n:02d}",
+        "exclude": {"ink": [13]},   # a watercolour stain cut out with the tree
     },
     "jungle": {
         # Rainforest canopy trees: Main's jungles are Dotty's kapoks (no built-in counterpart).
@@ -167,6 +171,7 @@ FAMILIES = {
         "replaces": "user://assets/Nibroc's Bamboo Forest/sprites/trees/Bamboo Trees/",
         "kind": "trees", "size": (170, 300), "radius": 40, "offset_y": -130, "aspect": (1.2, 3.0),
         "pack_folder": "Tyrnarra_Bamboo", "file": "bamboo_{n:02d}",
+        "exclude": {"ink": [16, 19, 46]},   # bamboo forest scenes, cut into loose stalks
     },
     "deadtree": {
         # Blighted lands, swamps and winter; not in Main yet, compared with Dotty's dead trees.
@@ -184,6 +189,7 @@ FAMILIES = {
         "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
         "kind": "trees", "size": (250, 300), "radius": 70, "offset_y": -130, "aspect": (0.7, 2.0),
         "pack_folder": "Tyrnarra_Dead_Trees", "file": "deadtree_{n:02d}",
+        "exclude": {"ink": [21, 41]},   # hollow stumps drawn in 3D, unlike the flat others
     },
     "savanna": {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
@@ -233,6 +239,8 @@ FAMILIES = {
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Mushrooms/",
         "kind": "trees", "size": (240, 260), "radius": 70, "offset_y": -110, "aspect": (0.6, 2.2),
         "pack_folder": "Tyrnarra_Mushrooms", "file": "mushroom_{n:02d}",
+        # Round 3: half the inner fade and 1 px bolder strokes bring back the caps' dots and gills.
+        "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -1},
     },
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
@@ -361,6 +369,13 @@ FLUX_STYLES = {
     "sepia": ("Sepia-brown ink with a pale warm wash: a bold clean outline, a light fill with a few fine hatching "
               "strokes, shading on one side. Simple and readable at small size. Isolated on a plain white "
               "background, nothing else in the image."),
+    # Wonderdraft's own trees: a flat pale fill and a few thick black strokes where the clumps
+    # overlap. "ink" drew grey wash and many small leaf marks that blur to speckle at map size.
+    # "Like a sticker" drew a sticker: a white die-cut border and a drop shadow.
+    "bold": ("Bold black brush-pen drawing: a thick black outline, the foliage drawn as a few big simple rounded "
+             "shapes, with a few thick black curved strokes inside where the shapes overlap. Flat very pale fill, no "
+             "grey wash, no small leaf marks, no hatching. Simple and readable at small size. Drawn directly on a "
+             "plain white background: no border around it, no shadow, nothing else in the image."),
     "line": ("Clean black ink line drawing: a bold clean outline, a few inner lines, white inside, a little grey "
              "shading on one side. Simple and readable at small size. Isolated on a plain white background, nothing "
              "else in the image."),
