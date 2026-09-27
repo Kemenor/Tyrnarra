@@ -26,7 +26,7 @@ STYLES = {
 }
 LINE_FRAME = ", sketch, isolated on a plain white background"
 # Mountains keep their ridge lines and shaded side: no inner fade, a thin ring.
-TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0}
+TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
 LINE_NEGATIVE = ("photo, realistic, 3d render, text, letters, caption, watermark, signature, landscape, scene, "
                  "panorama, horizon, sky, clouds, sun, birds, trees, forest, several mountains, mountain range, "
                  "background, parchment, paper texture, border, frame, cropped, blurry, detailed, shading, hatching")
@@ -145,6 +145,8 @@ FAMILIES = {
         "pack_folder": "Tyrnarra_Palms", "file": "palm_{n:02d}",
     },
     "bamboo": {
+        # A clump is many stalks: kept as several pieces, no ground trim (1 of 48 passed as a tree).
+        "shape": "clump", "fill": (0.12, 0.8),
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, pale leaves drawn with a few confident ink lines, lots of white paper showing, "
                     "minimal shading"),
@@ -363,6 +365,8 @@ OUTLINE_GREY = 28
 DEFRINGE = 0          # px eaten from the soft edge under the ring (the cut edge is colour-cleaned already)
 INNER_LIGHTEN = 0.7   # 0-1: how far strokes inside the shape fade toward white (sprites.finish)
 INNER_EDGE = 6        # px from the edge where that fading starts (full at twice this)
+BASE_FADE = 0.0       # share of the height over which the bottom fades out (mountains' open base)
+SKIRT_TRIM = 0.0      # mountains: cut the flanks where the shape is lower than this share of its peak
 # Custom-colour art (icons; sprites.finish_cc): R = ink lines, G = body, B = accents.
 OUTLINE_CC = 3        # solid ink ring, px
 CC_INK_LUM = 0.42     # luminance below which a pixel turns into ink (fully by 0.17)

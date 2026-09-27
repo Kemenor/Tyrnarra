@@ -57,7 +57,10 @@ def cut(rgb_path, mask_path, shape="tree"):
     sizes = ndimage.sum(solid, lab, range(1, n + 1))
     order = np.argsort(sizes)[::-1]
     main = lab == order[0] + 1
-    if n > 1 and sizes[order[1]] > 0.06 * sizes[order[0]]:
+    if shape == "clump":
+        # A bamboo clump or a group of mushrooms is several pieces: keep every sizeable one.
+        main = np.isin(lab, 1 + np.flatnonzero(sizes > 0.03 * sizes[order[0]]))
+    elif n > 1 and sizes[order[1]] > 0.06 * sizes[order[0]]:
         return None, "extra objects"
     H, W = main.shape
     rows = np.flatnonzero(main.any(1))
@@ -157,10 +160,31 @@ def levels(cutouts):
     return float(lo), float(hi), float(gamma)
 
 
+def trim_skirts(rgba, keep):
+    """A mountain without its long low flanks: only the columns at least `keep` of the tallest
+    column's height stay, and the last 8% on each side fade out. Wide skirts of neighbouring
+    mountains line up into horizontal stripes across a range."""
+    a = rgba[..., 3] > 128
+    heights = np.where(a.any(0), a.shape[0] - a.argmax(0), 0)
+    cols = np.flatnonzero(heights >= keep * heights.max())
+    x0, x1 = cols[0], cols[-1] + 1
+    out = rgba[:, x0:x1].copy()
+    w = x1 - x0
+    edge = max(1, int(0.08 * w))
+    ramp = np.ones(w)
+    ramp[:edge] = np.linspace(0, 1, edge)
+    ramp[-edge:] = np.linspace(1, 0, edge)
+    out[..., 3] *= ramp[None, :]
+    rows = np.flatnonzero(out[..., 3].max(1) > 2)
+    return out[rows[0]:rows[-1] + 1]
+
+
 def finish(rgba, fam, lv):
     """Greyscale sprite at Wonderdraft's scale-1 size, optionally with a solid outline ring."""
     if fam.get("draw") == "custom_colors":
         return finish_cc(rgba, fam)
+    if recipes.SKIRT_TRIM:
+        rgba = trim_skirts(rgba, recipes.SKIRT_TRIM)
     lo, hi, gamma = lv
     im = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
     th, tw = target_size(im.width, im.height, fam)
@@ -177,6 +201,14 @@ def finish(rgba, fam, lv):
     pad = recipes.OUTLINE + 2
     a = np.pad(t[..., 3] / 255, pad)
     g = np.pad(g, pad)
+    fade = None
+    if recipes.BASE_FADE:
+        # Open base (mountains): the bottom of the shape fades out into the ground instead of
+        # ending on a line, so a range does not stack into horizontal stripes.
+        rows = np.flatnonzero(a.max(1) > 0.5)
+        band = max(2.0, recipes.BASE_FADE * (rows[-1] - rows[0]))
+        y = np.arange(a.shape[0])[:, None]
+        fade = np.clip((rows[-1] - y) / band, 0, 1)
     if recipes.OUTLINE:
         # An extra solid ring around the drawn edge. On a conifer's jagged outline even 3 px
         # of it covered a quarter of the sprite and darkened dense forests.
@@ -184,6 +216,8 @@ def finish(rgba, fam, lv):
         outer = ndimage.grey_dilation(a, footprint=_disk(recipes.OUTLINE))
         g = g * inner + recipes.OUTLINE_GREY * (1 - inner)
         a = outer
+    if fade is not None:
+        a = a * fade
     out = np.dstack([g, g, g, a * 255]).clip(0, 255).astype(np.uint8)
     sprite = Image.fromarray(out, "RGBA")
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
