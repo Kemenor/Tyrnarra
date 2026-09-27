@@ -416,6 +416,16 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     with draw mode `normal` (raw red/green/blue instead of the chosen colours): icon folders take
     per-symbol entries, like BSG's. The installer writes them now (`custom_colors`, radius 3/8
     of the shorter side, Wonderdraft's own measure); the installed files were repaired.
+  - Lograth round 3 (seeds 203, 216, 229, 242 on the new wording): all four show the throne-hall
+    and the scales-temple across one square, joined by colonnades, cables between the towers;
+    203 and 229 installed, the other twelve god-cities rebuilt from their installed seeds.
+  - `settlements_2d` round 1 (seeds 1-19, one per kind plus a second village): flat skylines
+    and fronts, like the symbols on old maps; the walled town and walled city still came out
+    raised. A flat village is a row of separate houses, which the one-object check rejected:
+    the family keeps every sizeable piece (`shape: clump`). 19 installed in
+    `Tyrnarra_2D_Settlements`, "just to see".
+  - Paused ~30 min for the user's wake-on-LAN test of the tower; its Claude session now brings
+    ComfyUI up after a wake.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -450,6 +460,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
+| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (19) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built

@@ -353,8 +353,9 @@ FAMILIES = {
     },
     "settlements_2d": {
         # "Can we generate some true 2D ones? Just to see" (the user, 2026-09-27): the same kinds as
-        # flat, straight-on map symbols, beside the raised view of "settlements".
-        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        # flat, straight-on map symbols, beside the raised view of "settlements". A flat village
+        # is a row of separate houses: kept as several pieces (shape "clump"), not rejected.
+        "shape": "clump", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
         "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
                  "no perspective and no depth, the buildings standing side by side like a skyline, as on old maps."),
         "items": SETTLEMENT_ITEMS,
