@@ -78,7 +78,7 @@ FAMILIES = {
         "size": (350, 300),        # built-in _hd_oak, area-equivalent at scale 1 (builtin-sizes.json)
         "radius": 118, "offset_y": -130,  # built-in _hd_oak footprint and anchor
         "aspect": (0.65, 1.6),     # built-in oaks 0.74-1.12, hazels 0.83-1.71
-        "exclude": {"ink": [14]},  # seed 14 drew a giant maple leaf
+        "exclude": {"ink": [14, 23, 47]},  # these drew a giant maple leaf
         "pack_folder": "Tyrnarra_Broadleaves",
         "file": "broadleaf_{n:02d}",
     },
@@ -128,6 +128,7 @@ FAMILIES = {
                      "young jungle tree: big glossy leaves in a round crown on a slim trunk",
                      "strangler fig: a tangled trunk under a broad dense crown"],
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/",
+        "exclude": {"ink": [8]},   # a giant leaf bush
         "kind": "trees", "size": (340, 320), "radius": 100, "offset_y": -140, "aspect": (0.6, 1.6),
         "pack_folder": "Tyrnarra_Jungle", "file": "jungle_{n:02d}",
     },
