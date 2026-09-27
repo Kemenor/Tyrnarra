@@ -183,10 +183,12 @@ FAMILIES = {
                     "small size, pale foliage drawn with a few confident ink lines, lots of white paper showing, "
                     "minimal shading"),
         "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No ground.",
-        "variants": ["acacia tree, flat-topped umbrella crown on a thin forked trunk",
-                     "wide acacia tree, very flat broad crown",
+        # Seeds 49+ (round 3): the first wording drew ordinary round trees for "acacia".
+        "variants": ["acacia tree with a very flat wide umbrella-shaped crown, much wider than tall, on a thin trunk "
+                     "forking into a few bare branches",
+                     "wide acacia tree with a flat layered crown like a table top",
                      "baobab tree, huge thick bottle-shaped trunk with a small crown of stubby branches",
-                     "small thorny savanna tree"],
+                     "small thorny acacia bush with a flat top"],
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
         "compare": ["user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
                     "user://assets/Dotty_Assets/sprites/trees/Dotty_Baobabs/"],
@@ -197,10 +199,15 @@ FAMILIES = {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
                     "small size, drawn with a few confident ink lines, lots of white paper showing, minimal shading"),
         "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map. No ground.",
+        # Seeds 49+ (round 3): six shapes; the barrel cactus came out as a near-identical oval every
+        # time, so the old barrel seeds (seed % 4 == 2) are left out.
         "variants": ["saguaro cactus with two raised arms",
                      "tall saguaro cactus with one arm",
-                     "round barrel cactus cluster",
-                     "prickly pear cactus with flat paddle pads"],
+                     "saguaro cactus with three arms",
+                     "prickly pear cactus with a few flat paddle pads",
+                     "young saguaro cactus, a single tall column",
+                     "group of three small column cacti"],
+        "exclude": {"ink": [s for s in range(1, 49) if s % 4 == 2]},
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Cactuses/",
         "base_max": 1.0,           # a barrel cactus is widest at the ground
         "kind": "trees", "size": (150, 240), "radius": 40, "offset_y": -100, "aspect": (0.7, 2.6),
@@ -224,8 +231,9 @@ FAMILIES = {
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
         "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
+        # Round 4 wording: "flat bottom edge" drew base lines that stacked into stripes across a range.
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with two or three "
-                    "inner ridge lines, white inside, flat bottom edge, fantasy map symbol"),
+                    "inner ridge lines, white inside, steep sides, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
         "variants": ["tall jagged mountain", "mountain with two sharp peaks", "craggy mountain with a snowy top",
                      "broad mountain with two summits", "steep rocky spire", "mountain with a long ridge sloping to one side"],
@@ -249,12 +257,12 @@ FAMILIES = {
         "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
     },
     "hills": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE,
-        "subject": ("minimalist black line drawing of one single {variant}, simple clean curved outline with one short "
-                    "inner line, white inside, flat bottom edge, fantasy map symbol"),
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": TERRAIN_FINISH, "negative": LINE_NEGATIVE + ", houses, buildings, road, path, fence",
+        # Round 2 wording: the first drew landscapes, hills with houses and trees, and wavy lines.
+        "subject": ("minimalist black line drawing of one single {variant}, one smooth curved outline like a gentle "
+                    "dome, one or two short inner strokes, white inside, nothing on top, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a hill symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "variants": ["low rounded hill", "pair of gentle rolling hills side by side", "long low hill with a soft slope",
-                     "small steep knoll"],
+        "variants": ["low rounded hill", "gentle wide hill", "small rounded knoll", "long low hill"],
         "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
         "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
         "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.2, 0.9),
@@ -266,7 +274,12 @@ FAMILIES = {
         "subject": ("minimalist black line drawing of one single {variant} shape, a simple curved outline with a sharp "
                     "crest line, white inside, flat bottom edge, fantasy map symbol, like an icon"),
         "flux": "A single {variant}, drawn as a symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "variants": ["crescent sand dune", "long low sand dune", "pair of small sand dunes", "tall sand dune with a curling crest"],
+        # Seeds 25+ (round 3): the short names drew curls and swooshes; the shape spelled out.
+        "variants": ["sand dune seen from the side: a smooth crescent-shaped mound, much wider than tall, with one sharp "
+                     "curved crest line and soft shading on the steep side",
+                     "long low sand dune seen from the side: a gentle wave-shaped mound with one crest line",
+                     "pair of overlapping sand dunes seen from the side, the back one taller",
+                     "tall sand dune seen from the side with a sharp crest and a steep shaded face"],
         "builtin": "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_small/", "place": "fit", "match": "width",
         "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Dunes/",
         "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.1, 0.55), "fill": (0.2, 0.95),
@@ -339,9 +352,11 @@ FLUX_STYLES = {
     "line": ("Clean black ink line drawing: a bold clean outline, a few inner lines, white inside, a little grey "
              "shading on one side. Simple and readable at small size. Isolated on a plain white background, nothing "
              "else in the image."),
-    "icon": ("Bold black ink outlines; walls left plain cream-white with light grey shading; roofs, flags and domes "
-             "painted in flat red. Simple, clean and readable at small size. Isolated on a plain white background, "
-             "nothing else in the image, no ground, no text."),
+    # Seeds 101+ (round 2 of the icons): "roofs, flags and domes painted in flat red" put red
+    # flags on every icon, even the mine and the camp.
+    "icon": ("Bold black ink outlines; walls left plain cream-white with light grey shading; roofs and domes "
+             "painted in flat red; no flags or banners. Simple, clean and readable at small size. Isolated on a "
+             "plain white background, nothing else in the image, no ground, no text."),
 }
 FLUX_BATCH = 1        # images per FLUX graph: a 4-image graph wedged the tower (2026-09-27)
 SDXL_BATCH = 8        # images per SDXL graph: the tower's --cache-none server reloads models per graph

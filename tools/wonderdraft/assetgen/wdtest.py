@@ -505,7 +505,8 @@ def icon_preview(fam, folder, path, base):
         first = syms[c[0]]
         t = ours[item][zlib.crc32(_key(first).encode()) % len(ours[item])]
         bx0, by0, bx1, by1 = t["bbox"]
-        scale = (x1 - x0) / (bx1 - bx0)
+        # The cluster's area, not its width: ours are wide raised views, BSG's tall fronts.
+        scale = (((x1 - x0) * (y1 - y0)) / ((bx1 - bx0) * (by1 - by0))) ** 0.5
         new = dict(first)
         new["texture"], new["scale"] = t["file"], type(first["scale"])(scale, scale)
         new["position"] = type(first["position"])((x0 + x1) / 2, y1)
