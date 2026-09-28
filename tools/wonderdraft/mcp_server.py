@@ -310,6 +310,16 @@ def check(level: str = "info", map: str = DEFAULT_MAP) -> str:
     return _run(["check", map, "--level", level])
 
 
+@server.tool(annotations=READ)
+def geography(name: str | None = None, map: str = DEFAULT_MAP) -> str:
+    """The map's geography as text, for checking lore: every god domain and region shape with its
+    land neighbours (compass direction and border length), nearby shapes it does not border, its
+    coasts on the Hafra and the Midarra, and the labels inside it. name: glob to report only
+    matching shapes (e.g. 'Namur*'). Lakes and rivers are not included (painted terrain): look at
+    the published terrain export for water; preview does not draw it."""
+    return _run(["geography", map] + (["--name", name] if name else []))
+
+
 @server.tool(annotations=WRITE)
 def snapshot(map: str = DEFAULT_MAP) -> str:
     """Refresh tools/wonderdraft/map-snapshot.json, the readable text snapshot of the map that git

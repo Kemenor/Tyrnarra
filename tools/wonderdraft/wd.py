@@ -428,6 +428,17 @@ def cmd_check(m, a):
         sys.exit(1)
 
 
+def cmd_geography(m, a):
+    import geography
+    text = geography.report(m, a.name)
+    if a.output:
+        with open(a.output, "w") as f:
+            f.write(text + "\n")
+        print("wrote %s" % a.output)
+    else:
+        print(text)
+
+
 def cmd_snapshot(m, a):
     import snapshot
     path, changed = snapshot.write(m, a.output or snapshot.DEFAULT_PATH)
@@ -573,6 +584,10 @@ def build_parser():
     p.add_argument("--level", choices=("error", "warning", "info"), default="info",
                    help="lowest severity to show (default info = everything)")
     p.add_argument("--json", action="store_true")
+    p = sub.add_parser("geography")
+    p.add_argument("map")
+    p.add_argument("--name", help="only shapes whose name matches this glob")
+    p.add_argument("-o", "--output", help="write to a file instead of stdout")
     p = sub.add_parser("snapshot")
     p.add_argument("map")
     p.add_argument("-o", "--output", help="default: tools/wonderdraft/map-snapshot.json")
@@ -598,7 +613,7 @@ def run(argv=None):
         m = WDMap.load(a.map)
         {"info": cmd_info, "query": cmd_query, "preview": cmd_preview, "edit": cmd_edit, "add": cmd_add,
          "scatter": cmd_scatter, "along": cmd_along, "markers": cmd_markers,
-         "snapshot": cmd_snapshot, "check": cmd_check}[a.cmd](m, a)
+         "snapshot": cmd_snapshot, "check": cmd_check, "geography": cmd_geography}[a.cmd](m, a)
     except ValueError as e:
         sys.exit("error: %s" % e)
 

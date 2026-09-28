@@ -114,6 +114,15 @@ One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, e
 
 The god-city list is `GOD_CITIES` in `check.py`.
 
+### Geography for lore checks
+
+```bash
+wdmap geography ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map -o /tmp/geo.md   # every shape
+wdmap geography ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map --name 'Namur*'
+```
+
+`geography.py` (~4 s) reports every god domain and region shape as text: its land neighbours (compass direction centroid to centroid, and the shared border's length in grid cells), shapes nearby that it does not border, its coasts per sea, and the labels inside it. The seas: the **Hafra** is every sea reached from the map edge; the **Midarra** is the water left once its western mouth is closed along `MOUTH_X` (the Balatur Erui line). Lakes and rivers are painted terrain, not land mask, so they are not in the report, and `preview` does not draw them either: crop `published/setting/assets/maps/terrain.webp` to see water. First used for the lore audit in `docs/geo-audit-2026-09-28.md`.
+
 ### Interactive map
 
 `published/setting/talan/interactive-map.html` shows the map with every layer on a switch. `--export` also exports a fourth view, **Base** (terrain, trees, mountains, city icons and the legend; no region shapes and no other labels), and `--publish` turns it into the page's data (`interactive.py`):
