@@ -429,7 +429,7 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
 - **Night of 2026-09-28** (the user asleep: "do two per kind and flatter walled towns", then "feel
   free to do any yet missing assets during the nights, I think for example volcanic was missing"):
   - `settlements_2d` round 2 (seeds 20-41): a second drawing of every kind. The walled town and
-    walled city spelled out as "the wall one flat band across the bottom" (`FLAT_WALLS`, used by
+    walled city spelled out as "the wall one flat band across the bottom" (`FLAT_ITEMS`, used by
     the 2D family only, so the item names stay) came out flat; the raised round-1 ones (3, 5) are
     excluded. 35 installed, two per kind but the camp (both new camps ran off the image edge).
   - New families queued on the tower (FLUX, one after another): `volcanoes` (recolourable,
@@ -438,6 +438,14 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     `Tyrnarra_Volcanoes` (custom colours: lines, rock and smoke, lava). Bold outlines, pale rock,
     lava streams and a smoke plume; about Dotty's volcanoes' size. FLUX drew every variant
     active, the "dormant" ones included: a quiet volcano needs its own wording.
+  - `swamp` round 1 (seeds 1-30, 5 variants): moss-hung trees, gnarled leaning trunks, mangroves
+    on stilt roots and bald cypresses read as a swamp set; the young mangroves (seed % 5 == 4)
+    drew big single leaves across the crown, like the maples, and are excluded. 24 installed
+    in `Tyrnarra_Swamp_Trees`, about Dotty's willows' size (kept whole: `shape: clump`).
+  - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
+    reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
+    and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
+    bridge, beacon, portal arch; 2.5D recolourable icons, three drawings each).
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -466,6 +474,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (48) |
 | desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
+| swamp (cypress, mangrove, moss) | FLUX | none | (vs `Dotty_Willows`) | `Tyrnarra_Swamp_Trees` (24) |
 | peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (round 8, 30) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |

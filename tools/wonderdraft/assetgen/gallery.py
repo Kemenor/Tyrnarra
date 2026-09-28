@@ -28,7 +28,7 @@ TITLES = {"conifer": "Conifers", "pine": "Pines and cedars", "broadleaf": "Broad
           "willow": "Willows", "jungle": "Jungle", "palm": "Palms", "bamboo": "Bamboo",
           "savanna": "Savanna", "desert": "Cacti", "deadtree": "Dead trees", "fungal": "Giant mushrooms",
           "peaks": "Peaks", "fells": "Fells (rounded mountains)", "hills": "Hills", "dunes": "Dunes",
-          "swamp": "Swamp trees", "shrubs": "Shrubs", "mesas": "Mesas and buttes", "volcanoes": "Volcanoes",
+          "swamp": "Swamp trees", "shrubs": "Shrubs", "mesas": "Mesas and buttes", "volcanoes": "Volcanoes", "landmarks": "Landmarks (2.5D)",
           "settlements": "Settlements (2.5D)", "settlements_2d": "Settlements (2D)", "god_cities": "God-cities (2.5D)"}
 # Stand-ins for the ground colours Wonderdraft tints greyscale art with.
 TINTS = {"conifer": (84, 128, 78), "pine": (92, 132, 84), "broadleaf": (112, 158, 84),

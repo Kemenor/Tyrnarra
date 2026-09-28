@@ -61,12 +61,14 @@ SETTLEMENT_ITEMS = [("hamlet", "hamlet of two small cottages with thatched roofs
                     ("camp", "camp of several tents around a campfire"),
                     ("inn", "roadside inn with a hanging sign and a stable")]
 
-# The flat (2D) icons' walled kinds: "a town behind a round wall" drew the wall in perspective.
-FLAT_WALLS = {
+# Flat (2D) icon wordings where the shared one failed: "a town behind a round wall" drew the wall
+# in perspective; the camp's wide scene ran off the image.
+FLAT_ITEMS = {
     "walled_town": ("small town behind a low stone wall seen straight from the front: the wall one flat band across "
                     "the bottom with a gate in the middle, the houses and a church tower rising behind it"),
     "walled_city": ("large city behind a high stone wall seen straight from the front: the wall one flat band across "
                     "the bottom with square towers and a gate, many roofs, towers and a cathedral rising behind it"),
+    "camp": "small compact camp of three tents close around a campfire",
 }
 
 FAMILIES = {
@@ -293,6 +295,8 @@ FAMILIES = {
                      "swamp tree hung with long curtains of moss from a broad crooked crown",
                      "gnarled swamp tree: a twisted leaning trunk with a small ragged crown",
                      "young mangrove: a small round crown on a few arching roots"],
+        # The young mangroves (seed % 5 == 4) drew big single leaves across the crown, like the maples.
+        "exclude": {"bold": [4, 9, 14, 19, 24, 29]},
         "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",   # nearest bought art, for the lineup
         "kind": "trees", "size": (260, 300), "radius": 90, "offset_y": -120, "aspect": (0.7, 1.9), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Swamp_Trees", "file": "swamp_{n:02d}",
@@ -402,7 +406,8 @@ FAMILIES = {
                      "broad volcano: a wide low cone with a large crater rim and a thin wisp of smoke",
                      "small volcanic cone: a short steep cone with a smoking crater",
                      "volcano with a lava lake: a broken crater rim around a glowing pool of lava",
-                     "dormant volcano: a tall quiet cone with an empty crater and a few old lava channels on its sides"],
+                     # Seeds 35+: "dormant" still drew smoke and fire (round 1: 5, 11, 17, 23, 29).
+                     "extinct volcano: a quiet grey cone with a wide empty crater, no smoke, no fire, no lava"],
         "replaces": "user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/",
         "compare": ["user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/"],
         "kind": "symbols", "size": (340, 280), "radius": 90, "offset_y": 0, "aspect": (0.4, 1.6), "fill": (0.2, 0.97),
@@ -429,12 +434,30 @@ FAMILIES = {
         "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
                  "no perspective and no depth, the buildings standing side by side like a skyline, as on old maps."),
         # Round 2 (seeds 20+): the walled ones came out raised; their wall spelled out as a flat band.
-        "items": [(k, FLAT_WALLS.get(k, d)) for k, d in SETTLEMENT_ITEMS],
+        "items": [(k, FLAT_ITEMS.get(k, d)) for k, d in SETTLEMENT_ITEMS],
         "exclude": {"icon": [3, 5]},   # the raised walled town and walled city of round 1
         "per_item": 2,
         "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.25, 2.8), "fill": (0.3, 0.97),
         "pack_folder": "Tyrnarra_2D_Settlements", "file": "{item}_{n}",
+    },
+    "landmarks": {
+        # Single structures a world map marks (night of 2026-09-28), in the settlements' raised view
+        # and colours. Not settlements: Kartofuchs' role guessing ignores these item names.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        "flux": "A {variant}, drawn as a landmark symbol for a hand-drawn fantasy map, seen from a slightly raised side view.",
+        "items": [("standing_stones", "ring of tall rough standing stones"),
+                  ("obelisk", "tall stone obelisk on a stepped base"),
+                  ("lighthouse", "tall lighthouse on a small rocky point"),
+                  ("shrine", "small roadside shrine with a little roof and an offering stone"),
+                  ("statue", "giant stone statue of a robed figure on a plinth"),
+                  ("bridge", "old stone bridge of three arches"),
+                  ("beacon", "hilltop beacon: a squat stone tower with a big fire burning on top"),
+                  ("portal", "ancient stone archway carved with runes, standing alone")],
+        "per_item": 2,
+        "compare": ["user://assets/Dotty_Assets/sprites/symbols/Dotty_Mixed_Structures/"],
+        "kind": "symbols", "size": (220, 220), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.2, 0.97),
+        "pack_folder": "Tyrnarra_2.5D_Landmarks", "file": "{item}_{n}",
     },
     "god_cities": {
         # One themed icon per Bound god-city, from docs/god-city-seeds.md (open, chronicler-tier
