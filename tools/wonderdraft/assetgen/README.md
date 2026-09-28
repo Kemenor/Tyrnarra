@@ -467,6 +467,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     red roof here and there (a gatehouse on the bridge, a little tower behind a statue). 16
     installed, two per kind. Some shrines and chapels (here and in the settlements) carry a
     Christian cross; Tyrnarra has its own gods, left for the user to decide.
+  - Real export the morning after (`fullswap`, 87 s): conifers 81/38% (built-ins 86/32%; the
+    textured round 17 reads a touch darker), oaks 78/31% (88/18%), peaks 116/13% (100/26%), hills
+    133/8% (134/8%), dunes 148/3% (152/1%), jungle 77/27% (Dotty 68/41%), willows 128/9% (129/9%),
+    cities 150/9% (156/7%; 76 icons swapped). The new families are not in Main, so not in it.
   - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
