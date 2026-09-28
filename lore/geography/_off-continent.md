@@ -73,7 +73,7 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 **Shapeshifters, raccoon-dog-coded, mischievous and convivial.** Native to **Xidao** (Theatre Island), an outer petal. Tanuki are the performer-merchant class of Sortalde; their troupes circulate the inner seas, run inter-petal trade, and serve as informal cultural ambassadors. Their shapeshifting is theatrical as much as practical (most Tanuki perform openly; their deceptions are advertised in advance and admired for craft).
 
-**On Talan:** the most-likely-to-be-seen Sortalde ancestry alongside Yaoguai. Tanuki troupes occasionally survive the crossing for trade or performance contracts. The largest standing Tanuki population on Talan is on the **Emerald Isles** (around the embassies), with smaller settled communities working the touring circuits of Lautara, Crossroads in particular, where their performance culture meshes with the tri-domain commerce-and-rumour atmosphere.
+**On Talan:** the most-likely-to-be-seen Sortalde ancestry alongside Yaoguai. Tanuki troupes occasionally survive the crossing for trade or performance contracts. The largest standing Tanuki population on Talan is on the **Emerald Isles** (around the embassies), with smaller settled communities working Lautara's circuits and the Crossroads beyond them, where their performance culture meshes with the tri-domain commerce-and-rumour atmosphere.
 
 #### Wayang (Yingdao · Shadow Island)
 

@@ -6,9 +6,9 @@
 
 **The two halves.** The **east is the source**: the Iturmen mountains, the springs, Iturburu, the River Houses, the faith, the power. The **west is the world**: the Hafra ports, the Ilun Tasun gateway, the pass-towns, the rail, the busy trade-corridor through good green country, where most of the people and the money are. The Houses keep the holy water in the east while the world crosses the region in the west. The power is old and eastern; the wealth and the crowds are worldly and western.
 
-## Every town drinks their water
+## Nearly every town drinks their water
 
-Nearly every river in Brauogi rises in Sugeiturri (Twin Suns and Haldmark, which has its own source-lake, the exceptions), and the water runs out from here to the whole domain. The Hafra-coast towns' water, the breadbasket's, the cities': almost none of it begins anywhere but the eastern sources. This is the region's true power, and it is bigger than leverage, because it is never wielded. The old blood keeps; it does not grasp. The quiet, total fact under everything is that no one in Brauogi drinks water that did not begin in the Houses' keeping. The breadbasket grows on it, the cities drink it, and the Houses simply hold it flowing.
+Nearly every river in Brauogi rises in Sugeiturri (Twin Suns and Haldmark, which has its own source-lake, the exceptions), and the water runs out from here to the whole domain. The Hafra-coast towns' water, the breadbasket's, the cities': almost none of it begins anywhere but the eastern sources. This is the region's true power, and it is bigger than leverage, because it is never wielded. The old blood keeps; it does not grasp. The quiet, near-total fact under everything is that almost no one in Brauogi drinks water that did not begin in the Houses' keeping. The breadbasket grows on it, the cities drink it, and the Houses simply hold it flowing.
 
 ## The people: Keepers of the Current
 

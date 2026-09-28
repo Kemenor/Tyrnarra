@@ -109,7 +109,7 @@ Seven domains coast both seas (Nashavel, Ehizahar, Brauogi, Myrkono, Floteyn, Su
 | Ehizahar | ✓ | ✓ | – |
 | Askamira | **—** | ✓ | – |
 
-**Midarra only:** Lautara, Askamira. **Hafra only:** Vindul, Lioaru, Ezkudon, Egulon. **Cloud-Sea touching:** two islands only, and both are the Cloud Sea's special ground: the **Bridgelands** of the Emerald Isles (Zuzental; the canonical Sortalde cloudship landing) and **Jadrey** off Lua Lasai (Egulon; quayless by island law).
+**Midarra only:** Lautara, Askamira. **Hafra only:** Vindul, Lioaru, Ezkudon, Egulon. **Cloud-Sea touching:** two islands only, and both are the Cloud Sea's special ground: the **Bridgelands** of the Emerald Isles off Villtur's east coast (Zuzental; the canonical Sortalde cloudship landing) and **Jadrey**, Lua Lasai's exclave off Egulon's south-east coast (Egulon; quayless by island law).
 
 ---
 

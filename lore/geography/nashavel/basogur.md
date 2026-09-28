@@ -4,7 +4,7 @@
 
 **Etymology:** Basque *baso* (forest, wood) → **Basogur**, an old name for an old place. **Basajun**: Basque *basajaun*, the lord of the woods, worn. **Aintzir**: Basque *aintzira*, lake, the final vowel dropped. **The Stitchery** is plain Talanese, the Guild's word.
 
-**Position:** the canopy across the continent's waist, from the Midarra coast to the Hafra coast. **Veidrath** stands at its northeast edge, with the lake **Aintzir** just inside the trees; **Ispilur**, with Nahaskel and Dunloch on it, lies at its southern edge; Kaosadaemi's ring of **Hringfel** rises to the southeast. The long road enters at **Greenmouth** in the south and comes out at the Oihandar Red Tusks' gate in the north. The south of the canopy is Nashavel's claim and the north is Ehizahar's, and the two claims meet in the middle.
+**Position:** the canopy across the continent's waist, from the Midarra coast to the Hafra coast. **Veidrath** stands at its northeast edge, with the lake **Aintzir** just inside the trees; **Ispilur**, with Nahaskel and Dunloch on it, lies below its southern edge, fed by a river from a larger lake at the edge itself; Kaosadaemi's ring of **Hringfel** rises to the southeast. The long road enters at **Greenmouth** in the south and comes out at the Oihandar Red Tusks' gate in the north. The south of the canopy is Nashavel's claim and the north is Ehizahar's, and the two claims meet in the middle.
 
 **Terrain:** old-growth jungle with wild magic in the trees; paths that do not keep their place; rivers that change their banks, the Skoga the largest on the Ehizahar side; a knot of peaks mid-canopy where the two claims meet; one lake, Aintzir.
 

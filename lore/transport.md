@@ -41,7 +41,7 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 | Southern feeder lines | Tied to the HRA at the Azkataria junction | [`geography/lautara.md`](geography/lautara.md) |
 | Hegandi line | Thousand Kingdom → Ringhold, ending at its foot | [`geography/nashavel/kaosadaemi.md`](geography/nashavel/kaosadaemi.md) |
 | Everbright trunk | Across Harro, Ongetorra to the lakeshore facing Ljosarn; branch-lines to the gem-towns; the dusk run | [`geography/egulon/harro-distiratsua.md`](geography/egulon/harro-distiratsua.md) |
-| Thekkavar line | Across Lua Lasai to the lakeshore and Ljosarn in half a day; stops at Margolora and the coast-ferry junction | [`geography/egulon/lua-lasai.md`](geography/egulon/lua-lasai.md) |
+| Thekkavar line | Across Lua Lasai, then Harro's Everbright trunk for the last leg to the lakeshore and Ljosarn: about 800 miles in about a day; stops at Margolora and the coast-ferry junction | [`geography/egulon/lua-lasai.md`](geography/egulon/lua-lasai.md) |
 | Bellhalt | Where the rail meets the principal river and the Midarra coast | [`geography/lautara.md`](geography/lautara.md) |
 
 ### Hazards on the rail
@@ -103,7 +103,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 
 ### Crossings and ports
 
-- **The standard Midarra crossing**: **Solkai** (Tvisol, Brauogi) ↔ **Rika Tikur** and the Dreaming Cape (Lautara), passing Frae City and the Twin Cities. This is bulk cargo's north-south route ([`cosmology.md`](cosmology.md); [`geography/brauogi/tvisol.md`](geography/brauogi/tvisol.md)).
+- **The standard Midarra crossing**: **Solkai** (Tvisol, Brauogi) ↔ **Rika Tikur** and the Dreaming Cape (Lautara), passing Frae City and the Twin Cities, about 1,900 miles by that route. This is bulk cargo's north-south route ([`cosmology.md`](cosmology.md); [`geography/brauogi/tvisol.md`](geography/brauogi/tvisol.md)).
 - **Named ports** by water:
   - *Hafra*: Brasswatch, Cloudshadow, Highmarrow, Wrackmoor (the Skybell ports); Vindboorg; Grannholm; Ontzola and Geldur sound; Fiskhofn; Hverhofn on Urbero (ice-free); Fenurra's warm port (unnamed); Ferryhithe (the ferry to Zuzental's isles); Oathmoore (Emerald Isles).
   - *Midarra*: Rika Tikur; the Dreaming Cape; Bellhalt and the Muino-saila gap ports; Millhaven; Solkai and Hinstavor (Soul Tree); Breidhofn; Uravel; Gesalkai (both fronts); Baratalda's quay-town (unnamed); the Order of Steam bay.
@@ -131,7 +131,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 - **The Cloud Sea** bears no weight: any ordinary hull or airship that goes onto it sinks and vanishes ([`cosmology.md`](cosmology.md), *The Cloud Sea*).
 - **Cloudships** are always dual-school: Arcanotech with Occultech as standard (the Occultech lets the ship "remember the way", its routes kept as song); a few with Divitech (the Adventurers' Guild's one or two, the churches of Iro and Fisaya); *Eyrasunda*, the living-tree cloudship, legendary. Very rare; Vindul builds the best hulls ([`cosmology.md`](cosmology.md)).
 - **A cloudship rides the vapour** (GM, 2026-09-25). Its dual-school binding makes the Cloud Sea bear it the way water bears a boat: it sits on the white, sails it, and anchors in it. Nothing flies over the Cloud Sea: an airship's lift fails above it and the ship goes down into the vapour with the rest. The same hull sails water, which is why the very wealthy keep cloudships as luxury vessels. A **cloud-quay** is a berth where the Cloud Sea meets rock, and only the two islands that touch the Cloud Sea have such a shore; every cloud-quay on Talan stands in the Bridgelands, and a quay on Jadrey would make it the second landing.
-- **Only two places on Talan touch the Cloud Sea** (GM, 2026-09-25), and both are islands: the **Bridgelands** of the Emerald Isles (Zuzental), the canonical cloudship landing, where the Arcanotech bridges carry caravans across the gaps ([`geography/zuzental.md`](geography/zuzental.md)); and **Jadrey** off Lua Lasai (Egulon), which keeps no cloud-quay and no mast by island law ([`geography/egulon/lua-lasai.md`](geography/egulon/lua-lasai.md)).
+- **Only two places on Talan touch the Cloud Sea** (GM, 2026-09-25), and both are islands: the **Bridgelands** of the Emerald Isles (Zuzental), off Villtur's east coast, the canonical cloudship landing, where the Arcanotech bridges carry caravans across the gaps ([`geography/zuzental.md`](geography/zuzental.md)); and **Jadrey**, Lua Lasai's exclave off Egulon's south-east coast, which keeps no cloud-quay and no mast by island law ([`geography/egulon/lua-lasai.md`](geography/egulon/lua-lasai.md)).
 - **Off Talan**: **Sortalde**, east across the Cloud Sea, builds no cloudships; every ship on the route is Talan-made, and it reaches only the outer petals. **The Red Empire's home continent**, west across the Cloud Sea (GM, 2026-09-25): the **Iron Tide**'s warship-cloudships cross it and come down onto Hafra as a navy ([`geography/_off-continent.md`](geography/_off-continent.md)).
 - **The Riseway**: the sky-lane over Balatur Erui that every chart marks and no keel uses, the skywhales' climb ([`geography/floteyn/balatur-erui.md`](geography/floteyn/balatur-erui.md)).
 
@@ -159,7 +159,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 | Scouts on bond-beasts | 35–40 mi a day |
 | Travel through snow | 10–15 mi a day |
 
-**Checks against the record:** Rustam Varaz, Merkavar to Sombral, ~1,850 mi on his route, about 30 hours at airship pace (noon to the next dusk). The Thekkavar express across Lua Lasai, ~275–325 mi in half a day. Zenerious's crossing of Villtur, ninety days. The long road through the Basogur waits on the map fix that pulls the jungle's north-east lobe lower ([`../docs/map-todo.md`](../docs/map-todo.md)).
+**Checks against the record:** Rustam Varaz, Merkavar to Sombral, ~1,850 mi on his route, about 30 hours at airship pace (noon to the next dusk). The Thekkavar express across Lua Lasai and on by Harro's Everbright trunk to Ljosarn, ~800 mi in about a day. Zenerious's crossing of Villtur, ninety days. The long road through the Basogur waits on the map fix that pulls the jungle's north-east lobe lower ([`../docs/map-todo.md`](../docs/map-todo.md)).
 
 ---
 
@@ -169,12 +169,12 @@ The Basogur splits the rail, and the continent crosses its waist four ways:
 
 | Way | Route | Character |
 |---|---|---|
-| Stillship across the Midarra | Rika Tikur / Dreaming Cape ↔ Solkai, by Frae City and the Twin Cities (~1,290 mi) | Bulk cargo's route: 10–16 days under sail, 5–6 on an Arcanotech hull; the Pirate Lords take their share |
+| Stillship across the Midarra | Rika Tikur / Dreaming Cape ↔ Solkai, by Frae City and the Twin Cities (~1,900 mi) | Bulk cargo's route: 15–24 days under sail, 8–10 on an Arcanotech hull; the Pirate Lords take their share |
 | Airship over the Basogur | Over the canopy | Premium passengers and urgent freight; Occultech flies it clean |
 | The long road | Greenmouth → the Red Tusks' gate by Veidrath, eleven days | What no airship can lift; the Roadwards keep it on schedule |
 | By the northern coast | Villtur's shore | Barely an option: rare ports, most frozen in winter; Fenurra's warm port the exception |
 
-**Known travel times**: the long road, eleven to twelve days; Lua Lasai by the Thekkavar express, half a day; the Midarra crossing, 10–16 days under sail; Merkavar to Sombral by air, about 30 hours; a weatherclock reads no further than a day's sail.
+**Known travel times**: the long road, eleven to twelve days; Thekkavar to Ljosarn by the express, about a day; the Midarra crossing, 15–24 days under sail; Merkavar to Sombral by air, about 30 hours; a weatherclock reads no further than a day's sail.
 
 ---
 

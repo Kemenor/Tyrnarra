@@ -4,7 +4,7 @@
 
 **Etymology:** *Vernua* is Vesuna's name worn down in the late Lost Era, the country named in her shadow; *Dominion* is the Golden Empire's word for what it held here, and the Dark-Era houses kept the Imperial title because it was the one that said whose the land was.
 
-**Position:** the open middle of Nashavel: the Midarra to the west, the Basogur canopy to the north, the **Hegandi** escarpment walling it from Zuzental to the south, Kaosadaemi's mountains to the east. The lake **Ispilur** lies against the forest's edge in the northwest with two cities on it: **Nahaskel** on one shore and **Dunloch**, the Dominion's capital, across the water. Rivers converge on the middle around the lone mountain **Einbui**.
+**Position:** the open middle of Nashavel: the Midarra to the west, the Basogur canopy to the north, the **Hegandi** escarpment walling it from Zuzental to the south, Kaosadaemi's mountains to the east. The small lake **Ispilur** lies below the forest in the northwest, fed by a river from a larger lake at the forest's edge, with two cities on it: **Nahaskel** on one shore and **Dunloch**, the Dominion's capital, across the water. Rivers converge in the south on the lone mountain **Einbui**, on the Hegandi escarpment.
 
 **Terrain:** river-grassland and low hills, farmed edge to edge; the escarpment, the lake, the mountain. Weather that never repeats.
 

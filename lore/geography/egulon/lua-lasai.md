@@ -1,6 +1,6 @@
 # Lua Lasai (Egulon)
 
-**Position:** Southwestern Egulon, coastal on Hafra. Jakinduria and the Golden Coast (Ezkudon) to the west, Azkataria (Lautara) to the north-west, Atarialda (Lautara) north beyond the lake, the border mountains and forests, Harro Distiratsua to the northeast, Argia Esfera east across the southern ranges. The island of Jadrey lies off the southeast coast and reaches from Hafra into the Cloud Sea; the Bridgelands aside, it is the only ground on Talan that touches both. See [`../egulon.md`](../egulon.md) for the domain frame.
+**Position:** Southwestern Egulon, coastal on Hafra. Jakinduria and the Golden Coast (Ezkudon) to the west, Azkataria (Lautara) to the north-west, Atarialda (Lautara) north beyond the lake, the border mountains and forests, Harro Distiratsua to the northeast, Argia Esfera east across the southern ranges. The island of Jadrey, Lua Lasai's exclave, lies off Egulon's south-east coast beyond Argia Esfera's shore and reaches from Hafra into the Cloud Sea; the Bridgelands aside, it is the only ground on Talan that touches both. See [`../egulon.md`](../egulon.md) for the domain frame.
 
 **Polity:** The Primocracy of Lua Lasai, under the Double Surety. The Landsworn hold the offices, the valley-reeves hold the purse, the lineages hold the record.
 
@@ -42,7 +42,7 @@ The Surety's age shows at the edges. Its road-schedule assigned upkeep of the ol
 
 ### The rail
 
-The Thekkavar line crosses Lua Lasai to the lakeshore and Ljosarn, one of the fortress-ring's open sides, and the country takes real through-trade off it: archive-traffic and scholars eastbound, wine and cut flowers west, pilgrims in both directions. It stays a route rather than an artery. The expresses cross in half a day with two stops, Margolora and the junction for the coast ferry, and rail capital's standing petition for a southern branch to a Hafra quay has been declined by three Firsts running.
+The Thekkavar line crosses Lua Lasai, one of the fortress-ring's open sides, and joins Harro's Everbright trunk for the last leg to the lakeshore and Ljosarn; the country takes real through-trade off it: archive-traffic and scholars eastbound, wine and cut flowers west, pilgrims in both directions. It stays a route rather than an artery. The expresses run the whole way, some 800 miles, in about a day, with two stops in the country, Margolora and the junction for the coast ferry, and rail capital's standing petition for a southern branch to a Hafra quay has been declined by three Firsts running.
 
 ### The wines
 
@@ -50,7 +50,7 @@ Egunai is the country's wine and the continent's: the day wine, pressed in every
 
 ### Jadrey
 
-Jadrey lies off the southeast coast, green, steep, and small, and beside the Bridgelands it is the only ground on Talan that reaches from Hafra into the Cloud Sea. Everything the Bridgelands made of that fact, Jadrey declined. There is no cloud-quay and no mast; island law under the Surety builds none, and cloudship envoys who have circled the heights looking for a landing have anchored off a vineyard terrace and been offered wine. The islanders ferry to the coast on the Hafra side, keep the hodai terraces, and hold the answer their grandmothers held: the door is worth more shut, because a door worth arguing over is the one thing the Surety could not survive. The mainland young cross anyway. The dare is to climb past the terraces at night, sit the far cliff-edge, and dangle your feet off Talan into the Cloud Sea's air; every summer the island keeps a small harvest of lost shoes.
+Jadrey, Lua Lasai's exclave, lies off Egulon's south-east coast beyond Argia Esfera's shore, green and steep, and beside the Bridgelands it is the only ground on Talan that reaches from Hafra into the Cloud Sea. Everything the Bridgelands made of that fact, Jadrey declined. There is no cloud-quay and no mast; island law under the Surety builds none, and cloudship envoys who have circled the heights looking for a landing have anchored off a vineyard terrace and been offered wine. The islanders ferry to the coast on the Hafra side, keep the hodai terraces, and hold the answer their grandmothers held: the door is worth more shut, because a door worth arguing over is the one thing the Surety could not survive. The mainland young cross anyway. The dare is to climb past the terraces at night, sit the far cliff-edge, and dangle your feet off Talan into the Cloud Sea's air; every summer the island keeps a small harvest of lost shoes.
 
 ### Izarexa
 
