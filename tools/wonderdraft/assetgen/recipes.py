@@ -380,8 +380,10 @@ FAMILIES = {
     },
     "mesas": {
         # Desert mesas, buttes and arches (night of 2026-09-28), in the peaks' bold finish.
+        # Round 2: the peaks' 0.7 inner fade washed out the rock layers that make a mesa; 0.3 keeps them.
         "engine": "flux", "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME,
-        "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
+        "finish": dict(BOLD_TERRAIN, INNER_LIGHTEN=0.3), "negative": LINE_NEGATIVE,
+        "exclude": {"line": [21]},   # a butte whose two feet left a notch in its base
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map, seen from the side, nothing around it.",
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with a few inner lines, "
                     "white inside, fantasy map symbol"),

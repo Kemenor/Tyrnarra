@@ -442,6 +442,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     on stilt roots and bald cypresses read as a swamp set; the young mangroves (seed % 5 == 4)
     drew big single leaves across the crown, like the maples, and are excluded. 24 installed
     in `Tyrnarra_Swamp_Trees`, about Dotty's willows' size (kept whole: `shape: clump`).
+  - `mesas` round 2 (seeds 1-25, 5 variants: mesa, butte, pair of mesas, rock arch, spire
+    cluster): clean line drawings, but FLUX drew each variant nearly alike across seeds. The
+    peaks' finish (inner fade 0.7) washed out the rock layers; 0.3 keeps them. Seed 21 dropped
+    (a notch in its base). 24 installed in `Tyrnarra_Mesas`, about Dotty's mesas' size.
   - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
@@ -479,6 +483,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
+| mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
 | volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (30) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
