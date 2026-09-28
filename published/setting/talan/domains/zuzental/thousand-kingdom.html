@@ -58,6 +58,17 @@
   /* Inline TBD marker: same convention as Legea Empire page */
   /* Secret-box card scaffolding (.secret-reveal / .secret-pill / .secret-grid-* / .secret-card / .secret-coda) now lives in /setting/assets/style-b.css */
 
+  /* Voice quotations (Breidey pattern) */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Houses and heirs */
+  .card-kind { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
+  .house-elf   { --card-accent: #8aa0c8; }
+  .house-human { --card-accent: #c8a060; }
+
   /* Naming-convention section */
   .sub-heading {
     font-family: 'Cinzel', serif;
@@ -125,14 +136,16 @@
   <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
   <dl class="facts">
     <dt>Etymology</dt><dd>Modern Talanese, but the singular form preserves history: <i>one</i> Kingdom that <i>was a thousand</i>: a long consolidation of smaller polities under a single legal framework, completed generations ago. Chronicles disagree on whether the count was literal or rhetorical; the name has held either way.</dd>
-    <dt>Position</dt><dd>The dominant political sub-region of <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a>. Centres on Zuzental's green-and-open northern terrain; extends south into the sandy steppes and east toward the forested interior.</dd>
+    <dt>Position</dt><dd>The dominant political sub-region of <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a>, in its north-east: green and open country from the Hegandi escarpment on the Nashavel line down to the Order of Law's forest, with Lograth near the eastern coast.</dd>
     <dt>Government</dt><dd>Single kingdom run on <b>mortal-authored law</b>, with <a href="/setting/cosmology/grand-gods.html#forseti">Forseti</a>'s clergy as the courts of record. Two ruling bloodlines share authority by long-standing constitutional arrangement: <b>elven houses</b> and <b>human houses</b>.</dd>
     <dt>Capital</dt><dd><a href="/setting/talan/domains/zuzental/lograth/lograth.html">Lograth</a>: the Judgment City. Forseti's seat and the Kingdom's actual capital have grown together into a single urban mass. <b>The two are inseparable</b> in any practical sense.</dd>
+    <dt>Monarch</dt><dd><b>Aelis Marien Fyrstgilt</b>, the Founding Queen, about a hundred and still reigning. She means to hand the crown over in her lifetime; three heirs stand before her and none has yet been named.</dd>
+    <dt>Economy</dt><dd><b>War-craft.</b> Every holding keeps an armoury and a fighting school; the <b>Thousand harness</b> is sold in every domain, and students come from all of them.</dd>
     <dt>Founded</dt><dd><b>2457 MR</b>: re-founded after the Dark Era's fracture by the <b>Founding Queen</b> (the original unification under the Old King predated the Dark Era and did not survive his death). 75 years old as of 2532 MR: a young Kingdom by Talanese standards, but already established as the continent's reference implementation of oath-and-compact governance under divine judgment.</dd>
     <dt>Law</dt><dd>Mortal-authored statutes refined across the centuries the Thousand was being consolidated, organised as a <b>chain of sworn compacts</b> traceable back to the historical polities that signed them. Secrecy permitted only in service of justice; the open court and the sealed archive as the two halves of every temple. <i>Forseti does not write the Kingdom's law. Her clergy judge it.</i> See <a href="/setting/talan/domains/zuzental/lograth/lograth.html">Lograth</a> for the theology of the distinction.</dd>
     <dt>Character</dt><dd>
       <i>Constitutional dual-bloodline kingdom · long horizons argued with short ones · the continent's reference implementation of Law</i><br>
-      <div class="pill-row" style="margin-top:6px"><span class="pill">Forseti-Judged</span><span class="pill">Dual Bloodlines</span><span class="pill">Sworn-Compact Law</span><span class="pill">Houses Lograth</span><span class="pill">Borders the Legea Empire</span></div>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Forseti-Judged</span><span class="pill">Dual Bloodlines</span><span class="pill">Sworn-Compact Law</span><span class="pill">Houses Lograth</span><span class="pill">Thousand Harness</span><span class="pill">Succession Open</span><span class="pill">Borders the Legea Empire</span></div>
     </dd>
   </dl>
 
@@ -449,6 +462,132 @@
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <!-- ═══════════════════════════════════════════════════════════════
+       THE KINGDOM TODAY: holdings, harness and school, houses, succession
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <h2 id="the-holdings" class="section-heading">The Holdings</h2>
+  <div class="prose">
+    <p>The Thousand survives on the ground as <b>holdings</b>: each old polity's name, kept on the land-title and in the heralds' register long after the polity itself was worked into the Kingdom. A house holds one holding or several, and a title search in Lograth still ends at the holding a field answered to. The country runs green and open from the Hegandi escarpment in the north down to the Order of Law's forest in the south, with Lograth near the eastern coast and farmland and armoury towns between.</p>
+
+    <p>Garaion's sixty years emptied most of the old seats; houses died out, or fled and lost their ground. At the re-founding in 2457 the Crown sorted the holdings three ways: <b>reconstructed</b> houses came home with their registers and took back what they could prove; <b>new</b> houses were raised out of the resistance; and holdings with no one left to claim them were <b>gifted</b> by Aelis to the people who had earned them, each gift founding a house. The Thousand Seats mix seats whose registers run back into the Dark Era with seats seventy-five years old.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="harness-and-school" class="section-heading">Harness and School</h2>
+  <div class="prose">
+    <p>The Kingdom lives on war-craft. The thousand polities fought each other for centuries and then fought Garaion for sixty years, and every holding kept its armoury and its own way of fighting through all of it. Each holding still runs both: an armoury with its own marks and its own cut of plate, and a school that teaches its own style of blade and line.</p>
+
+    <p>A <b>Thousand harness</b> is made to the body that will wear it, fitted over weeks with the buyer standing in the shop, and a trained eye reads the holding from the fluting and the rivet-line across a battlefield. Buyers come from every domain, and students come with them: officers sent by foreign crowns, young nobles, and adventurers above all. The richest armoury holding is <b>Smedbeck</b>, held by House Harn.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"They measured me for three days, Papa. Arms out, arms up, kneel, stand, turn, and the armourer chalking me like a millstone he meant to dress. Now it sits on me closer than the runner sits on the bed-stone. Don't ask what it cost. It was all of it."</p>
+  </div>
+  <div class="voice-attrib">Lisette Carrow, Silver of the Adventurers' Guild, in a letter to her father on her first Thousand harness</div>
+
+  <div class="prose">
+    <p>A commoner family saves for years toward a child's first harness. A child chooses a school at fourteen and is known by it afterwards: a Smedbeck girl and an Ostergow boy settle an argument by asking whose school teaches the better guard.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-great-houses" class="section-heading">The Great Houses</h2>
+  <div class="prose">
+    <p>Five houses carry most of the Kingdom's weight at present.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card cut-left house-elf">
+      <div class="card-kind">Elven · Reconstructed</div>
+      <div class="card-name">House Lind</div>
+      <p>Left early when Garaion rose, carried its register into exile, and came home in 2457 able to prove every field. Holds <b>Lindhage</b> in the north. Its head, <b>Guiart Ermengarde Lindford</b>, remembers the Kingdom before the conquest.</p>
+    </div>
+    <div class="accent-card cut-left house-elf">
+      <div class="card-kind">Elven · New</div>
+      <div class="card-name">House Vaunt</div>
+      <p>Raised in 2457 for <b>Hadewig Anse Vauntford</b>, the elf of Aelis's adventurer party, who led the charge at the final battle and still lives; given holdings the war had emptied.</p>
+    </div>
+    <div class="accent-card cut-left house-human">
+      <div class="card-kind">Human · Pardoned</div>
+      <div class="card-name">House Wulf</div>
+      <p>Its captains served Garaion to the end. It keeps <b>Ostergow</b> under a sworn oath of submission, renewed at every Re-Swearing.</p>
+    </div>
+    <div class="accent-card cut-left house-human">
+      <div class="card-kind">Human · Old</div>
+      <div class="card-name">House Harn</div>
+      <p>The armour house; holds <b>Smedbeck</b>. Joined to the crown when Aelis married <b>Aimery Rolant Harnmond</b> in 2461. Aimery died in 2519, and his sister <b>Berthe Rolant Harnmond</b> heads the house, aunt to two of the three heirs.</p>
+    </div>
+    <div class="accent-card cut-left house-human">
+      <div class="card-kind">Human · Reconstructed</div>
+      <div class="card-name">House Vester</div>
+      <p>Holds <b>Hagwold</b> on the western line facing the Legea Empire. A branch of the house took the Divine Faith a generation ago, and the rest of the Kingdom calls it <b>the Auben</b>. Its head is <b>Joscelin Mathe Vestermond</b>.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-succession" class="section-heading">The Succession</h2>
+  <div class="prose">
+    <p><b>Aelis Marien Fyrstgilt</b> is about a hundred and still reigns. The power in her carries her past any ordinary Nephilim span, and she means to use it to hand the crown over alive and to watch the heir cross the ground to the Scales. By the Kingdom's naming law the chosen heir takes the head of family's prefix, and none of the three candidates yet carries <i>Fyrst</i>; a crowd has kept watch outside the heralds' hall in Lograth every morning for two years, waiting for one of them to be entered as Fyrst-.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="accent-card cut-left house-human">
+      <div class="card-kind">The Daughter · 58 · Nephilim</div>
+      <div class="card-name">Oriane Aelis Harngilt</div>
+      <p>The celestial sheen as plain on her as on her mother. She commanded the Crown's companies on the Nashavel border.</p>
+    </div>
+    <div class="accent-card cut-left house-human">
+      <div class="card-kind">The Son · 53 · Human</div>
+      <div class="card-name">Tancred Aelis Harnmond</div>
+      <p>Runs the Crown's dealings with the armouries and the schools, and knows the Kingdom's money better than anyone at court.</p>
+    </div>
+    <div class="accent-card cut-left house-elf">
+      <div class="card-kind">The Ward · 31 · Elf</div>
+      <div class="card-name">Everard Garin Vauntford</div>
+      <p>Hadewig's grandson. His father Garin died in the artefact crisis of the 2510s, and Aelis took the boy into her household and registered him as her child. The law makes an adopted heir exactly what a born one is.</p>
+    </div>
+  </div>
+
+  <div class="voice-quote">
+    <p>"Two of the three are my brother's children, and I will lose one of them either way. The house will be fine. I will not."</p>
+  </div>
+  <div class="voice-attrib">Berthe Rolant Harnmond, head of House Harn, to a Lawspeaker who asked which heir the armour house would back</div>
+
+  <div class="prose">
+    <p>House Harn has two grandchildren in the race. House Vaunt stands behind Everard. House Lind has declared nothing. House Wulf will back whoever guarantees its oath, and has asked all three.</p>
+  </div>
+
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: The Blood Shows</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Kingdom Says of the Heirs</div>
+      Folk across the Kingdom say Oriane is the Returning Blood's true answer: the sheen on her is the same light that showed on her mother at the founding, and a Fyrstgilt with the light cannot be passed over. They say the sheen dims on a monarch who breaks faith. And they say Aelis keeps the elf-boy on the list only to test which houses will stand by the blood.
+    </div>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret: Why the Ward Is on the List</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Heir Who Needs No Forgery</div>
+      <p class="secret-reveal">Aelis knows her own blood claim is a forgery. To her the crown was always the oath, and a sworn heir is exactly as true as a born one.</p>
+      <div class="secret-pills">
+        <span class="secret-pill">the oath over the blood</span>
+        <span class="secret-pill">the sealed letter</span>
+        <span class="secret-pill">Quietbarrow</span>
+      </div>
+      <p>Everard, with no blood claim to forge, is the one heir whose legitimacy she knows to be real by the only measure Forseti uses. Whoever succeeds opens the sealed letter at coronation, and Oriane and Tancred would learn that the lineage they carry is forged. Aelis has not chosen. Whoever takes the crown inherits Aldwin Mero's address with it, and Aldwin, who is Garaion, still lives in Quietbarrow.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p><b>The western line.</b> In the Vester villages of Hagwold the Faith's missionaries preach a god who tells you plainly what to do, and in a Kingdom where every right is a litigated oath that plainness draws people. The Auben sit among House Vester's votes in the Thousand Seats, and the next monarch will have to decide what a house with a converted branch is owed. The Legea Empire watches the succession for a weak reign.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
        FORSETI'S LAW IN PRACTICE
        ═══════════════════════════════════════════════════════════════ -->
 
@@ -509,7 +648,7 @@
     <ul>
       <li><a href="/setting/talan/domains/zuzental/zuzental.html"><b>Zuzental →</b></a> · Parent domain of the Thousand Kingdom.</li>
       <li><a href="/setting/cosmology/grand-gods.html#forseti"><b>Forseti →</b></a> · The bound Goddess whose clergy serve as judges in the Kingdom; portfolio is judgment and oath-keeping, not legislation.</li>
-      <li><a href="/setting/talan/domains/zuzental/legea-empire.html"><b>Legea Empire →</b></a> · The southern theocratic neighbour.</li>
+      <li><a href="/setting/talan/domains/zuzental/legea-empire.html"><b>Legea Empire →</b></a> · The western theocratic neighbour.</li>
       <li><a href="/setting/talan/domains/zuzental/emerald-isles.html"><b>Emerald Isles →</b></a> · The eastern island kingdom and trade partner.</li>
       <li><a href="/setting/talan/ancestries.html"><b>Bestiary &amp; Ancestries →</b></a> · Zuzental section with elf and human dominant ancestries detailed.</li>
     </ul>
