@@ -462,6 +462,11 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     statue on a whole castle; the statue also looked like a real religious figure. A style
     `landmark` ("a single structure standing alone: no houses, towers, domes or walls around it")
     and a hooded, faceless guardian statue redraw those five (seeds 104-127).
+  - `landmarks` round 2: the five redrawn in style `landmark` stand alone (a stone circle, an
+    obelisk, a hooded guardian statue, a three-arch bridge, a rune arch); FLUX still adds a small
+    red roof here and there (a gatehouse on the bridge, a little tower behind a statue). 16
+    installed, two per kind. Some shrines and chapels (here and in the settlements) carry a
+    Christian cross; Tyrnarra has its own gods, left for the user to decide.
   - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
@@ -505,7 +510,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
 | settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (36) |
-| landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Tyrnarra_2.5D_Landmarks` (6 so far) |
+| landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Tyrnarra_2.5D_Landmarks` (16) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
