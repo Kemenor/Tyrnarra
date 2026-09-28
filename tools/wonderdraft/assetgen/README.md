@@ -446,6 +446,9 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     cluster): clean line drawings, but FLUX drew each variant nearly alike across seeds. The
     peaks' finish (inner fade 0.7) washed out the rock layers; 0.3 keeps them. Seed 21 dropped
     (a notch in its base). 24 installed in `Tyrnarra_Mesas`, about Dotty's mesas' size.
+  - `shrubs` round 1 (seeds 1-24, 4 variants): round bushes, low wide shrubs and open twiggy
+    scrub, all 24 usable and installed in `Tyrnarra_Shrubs` (about a third of a broadleaf's
+    height at scale 1). The "heather" drew plain bushes, no flowers.
   - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
@@ -479,6 +482,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
 | swamp (cypress, mangrove, moss) | FLUX | none | (vs `Dotty_Willows`) | `Tyrnarra_Swamp_Trees` (24) |
+| shrubs (bush, shrub, scrub) | FLUX | none | (vs `Dotty_Oaks`) | `Tyrnarra_Shrubs` (24) |
 | peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (round 8, 30) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
