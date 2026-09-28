@@ -8,7 +8,7 @@
 
 **Position:** Central Midarra (the freshwater inner sea); an island domain surrounded entirely by water
 
-**Terrain:** Three completely distinct magical biomes coexisting on one island: ice in the north, desert/savanna in the center, dense forest in the east. No single climate governs. Star Island (small star-shaped island, modern name) lies nearby in Midarra.
+**Terrain:** Three completely distinct magical biomes coexisting on one island: ice in the north, desert/savanna in the west, dense forest in the east. No single climate governs. Star Island (small star-shaped island, modern name) lies nearby in Midarra.
 
 **Sub-regions:** Basamortua, Dea Elurra, and Maitagarri are **each its own polity** (GM, 2026-09-28): three governments on one island, one to a biome; their shape lands at the Askamira build.
 - **Basamortua**: the desert region. Basque *basa* (wild) + *mortu* (desert/empty) → Basamortua.

@@ -2,7 +2,7 @@
 
 **Etymology:** *Floating Isles of Shuun* is the collective name and the only one the whole archipelago answers to; every island carries its own. The **Sweetwater League** is the modern name of the pact that holds the water between them, plain English on the Hanseatic pattern, coined for the freshwater sea it swears to.
 
-**Position:** the hundreds of drifting islands scattered across the open western Midarra, with **Uravel**, the god-city, gathered at their heart (see [Floteyn](../floteyn.md), *Uravel*). Balatur Erui and the gate of the two waters lie west (see [Balatur Erui](balatur-erui.md)); the Order of Steam's bay-mouth opens into the same sea from the south, and every ton of the Order's bulk freight sails League water.
+**Position:** the hundreds of drifting islands scattered across the open western Midarra, with **Uravel**, the god-city, gathered at their heart (see [Floteyn](../floteyn.md), *Uravel*). Balatur Erui and the gate of the two waters lie west (see [Balatur Erui](balatur-erui.md)); the Order of Steam's bay-mouth opens into the same sea from the south-east, and every ton of the Order's bulk freight sails League water.
 
 **The isles themselves:** grown things, drifting on deep-water roots at the pace of years. An island surfaces pale, a bare root-crown of chalk (**a Nyey**, the new isle), greens over generations of soil and settlement, and when its root dies it stops drifting, bleaches, and begins the long settling (**a Kyrey**, the stilled isle). Both ends of life are pale, and the test is one sentence every child of the Isles knows: *a pale island that moves is a beginning; a pale island that holds still is an ending.*
 

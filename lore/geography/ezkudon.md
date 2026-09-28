@@ -6,9 +6,9 @@
 
 **Etymology:** Basque *ezkutu* (hidden, concealed) → drifted to *Ezkudon*. Names the controlling, secretive character of the domain: knowledge here is collected, preserved, and controlled. Access is negotiated, not assumed.
 
-**Position:** South-central Talan, below Brauogi, west of Egulon, north of Hafra
+**Position:** South-central Talan, below Lautara, west of Egulon, north of Hafra
 
-**Terrain:** Distinctive circular ring of forest and hills with mountains at the center, like a natural fortress grown around the great archives. Green forest in the north and west, sandy desert in the south, coastal access southeast, lakes to the west.
+**Terrain:** Distinctive circular ring of forest and hills with mountains at the center, like a natural fortress grown around the great archives. Green forest in the north and west, sandy desert in the south, coastal access southeast, lakes beyond the western border in Emarrea.
 
 **God's city:** Thekkavar, The City of Learning (the formal-institutional pole of Talanese learning; it teaches and keeps. Detailed below.)
 

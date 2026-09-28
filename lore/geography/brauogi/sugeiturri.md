@@ -8,7 +8,7 @@
 
 ## Every town drinks their water
 
-Nearly every river in Brauogi rises in Sugeiturri (Twin Suns the main exception), and the water runs out from here to the whole domain. Haldmark's water, the Hafra-coast towns', the breadbasket's, the cities': almost none of it begins anywhere but the eastern sources. This is the region's true power, and it is bigger than leverage, because it is never wielded. The old blood keeps; it does not grasp. The quiet, total fact under everything is that no one in Brauogi drinks water that did not begin in the Houses' keeping. The breadbasket grows on it, the cities drink it, and the Houses simply hold it flowing.
+Nearly every river in Brauogi rises in Sugeiturri (Twin Suns and Haldmark, which has its own source-lake, the exceptions), and the water runs out from here to the whole domain. The Hafra-coast towns' water, the breadbasket's, the cities': almost none of it begins anywhere but the eastern sources. This is the region's true power, and it is bigger than leverage, because it is never wielded. The old blood keeps; it does not grasp. The quiet, total fact under everything is that no one in Brauogi drinks water that did not begin in the Houses' keeping. The breadbasket grows on it, the cities drink it, and the Houses simply hold it flowing.
 
 ## The people: Keepers of the Current
 

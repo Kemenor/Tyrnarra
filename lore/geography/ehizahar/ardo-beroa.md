@@ -4,7 +4,7 @@
 
 **Etymology:** Basque *ardo* (wine) + *beroa* (warm): the warm wine. Read on the mainland as a joke about an arctic archipelago; read on the islands as the plain name of what they drink.
 
-**Position:** three large islands and a scatter of rock off Ehizahar's northern arctic coast, in the Hafra. **Urbero**, the southernmost, carries the warm ground and the town, **Hverhofn**; **Igeria** lies northwest, apart from the others; **Kaldey** lies north, and the snow stays on it. Baerfrost's coast runs west; the Villtur tundra faces the islands across the strait; the saltkeels of the northern Hafra arc pass the door.
+**Position:** three large islands and a scatter of rock off the northern arctic coast where Baerfrost meets Villtur, in the Hafra. **Urbero**, the southernmost, carries the warm ground and the town, **Hverhofn**; **Igeria** lies northwest, apart from the others, off Baerfrost's coast; **Kaldey** lies north, and the snow stays on it. Baerfrost's coast runs west; the Villtur tundra faces the islands across the strait; the saltkeels of the northern Hafra arc pass the door.
 
 **Terrain:** hot springs on Urbero, pouring mineral streams out of the rock down to a harbour the warm outflow keeps open all winter. Snow falls the year round and melts before it lands. Mist off the warm water lies on everything.
 

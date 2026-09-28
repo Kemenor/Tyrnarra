@@ -4,7 +4,7 @@
 
 **Position:** the one fixed island of Floteyn, standing in the mouth of the Midarra where the sweet inner sea meets the salt Hafra. The boundary of the two waters, **Gazmuga** (the salt-border; everyone alive says *the Line*), touches its western shore, so the island is washed by two seas that refuse each other. Itzasoa's shadow-coast lies north across the gate (see [Myrkono](../myrkono.md)), the Sumendar shore south, and the Floating Isles of Shuun begin to the east (see [Floteyn](../floteyn.md)).
 
-**Terrain:** forested throughout, rising to the old mountain **Lomendi** at the island's heart (Basque *lo* "sleep" + *mendi* "mountain": the sleeping mountain, warm at its roots), with one river running from Lomendi's southern flank down to the port of **Gesalkai**. Every other island in the domain drifts. Balatur Erui stays, and the drifting isles reckon their wandering by it; a Floteyn pilot a week off her count says she is looking for the island that will still be there.
+**Terrain:** forested throughout, rising to the old mountain **Lomendi** at the island's heart (Basque *lo* "sleep" + *mendi* "mountain": the sleeping mountain, warm at its roots), with one river crossing the island from its north-west shore, past Lomendi's western flank, down to the port of **Gesalkai**. Every other island in the domain drifts. Balatur Erui stays, and the drifting isles reckon their wandering by it; a Floteyn pilot a week off her count says she is looking for the island that will still be there.
 
 ---
 

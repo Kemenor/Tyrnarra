@@ -2,7 +2,7 @@
 
 **Etymology:** Basque *hiru* (three) + *baso* (forest), drifted from the longer *hiru-ibai-baso* "three-river-forest" with loss of the medial *ibai* → **Hirubaso**. The deep-old name of the wood itself; the forest carried it before any order lived there.
 
-**Position:** an enclave in the south-centre of Greenward's basin, the one stand of old wild wood in the plough-country, grown over the meeting of three rivers. Independent of the League that surrounds it, and one of Greenward's **Four That Held** (see [Greenward](greenward.md)); the Furrowsworn treat its border the way they treat weather, as a thing respected rather than negotiated.
+**Position:** the southern edge of Greenward's basin, against Tvisol, the one stand of old wild wood in the plough-country, grown over the meeting of three rivers. Independent of the League around it, and one of Greenward's **Four That Held** (see [Greenward](greenward.md)); the Furrowsworn treat its border the way they treat weather, as a thing respected rather than negotiated.
 
 **Character:** a hierocracy with no god at its head. The grove is governed by its druid order, the **Elkaride**, and by the order's doctrine, and the doctrine is the living-with itself: the order and the forest keep each other, and neither is master in the house.
 
@@ -34,7 +34,7 @@ Hirubaso is the one place on the continent where Primotech is routine (see `../.
 
 ## The grove and the plough
 
-The grove and the basin meet constantly, on purpose, in three standing ways. The **turning-rites** are the grove's gift to the furrow: the small consecrations a Greenward farmer keeps (the slow first furrow, the old seed at the field's corner) were set down by Elkaride hands, and each spring a walking of druids goes out along the reclamation line to renew them where the gold meets the grey. The grove's **Hand** sits on Greenward's Evenhand, one seat of the five, always an Elkaride who has done their year outside and can argue drainage with a steward without communing about it. And the rivers themselves are the third meeting: the three that join at the Heart water half the basin downstream, and the basin has never forgotten whose craft kept them clean through the dark.
+The grove and the basin meet constantly, on purpose, in three standing ways. The **turning-rites** are the grove's gift to the furrow: the small consecrations a Greenward farmer keeps (the slow first furrow, the old seed at the field's corner) were set down by Elkaride hands, and each spring a walking of druids goes out along the reclamation line to renew them where the gold meets the grey. The grove's **Hand** sits on Greenward's Evenhand, one seat of the five, always an Elkaride who has done their year outside and can argue drainage with a steward without communing about it. And the rivers themselves are the third meeting: the three that join at the Heart gather half the basin's water above the grove, and the basin has never forgotten whose craft kept them clean through the dark.
 
 ## The Sustra and the forest
 

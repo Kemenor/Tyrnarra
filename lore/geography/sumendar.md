@@ -1,14 +1,14 @@
 # Sumendar: Fire · Komo
 
-**Borders:** Floteyn, Lioaru, Lautara
+**Borders:** Lioaru, Lautara (Floteyn lies across the Midarra to the north)
 
-**Seas:** Hafra (south and west coasts) and Midarra (Burdineyja island chain; Order of Steam bay's west coast and uninhabited NW headland; Tahu Tangata's south-west bay arc).
+**Seas:** Hafra (west and south-west coasts) and Midarra (the whole north shore: No Man's Land and the Order of Steam's mountain wall; Burdineyja island chain; Order of Steam bay's west coast and uninhabited NW headland; Tahu Tangata's southern bay arc).
 
 **Etymology:** Basque *su* (fire) + *mendi* (mountain) → *sumendi* (Basque word for volcano, literally fire-mountain) → drifted to *Sumendar*.
 
-**Position:** South-southwest Talan, coastal on Hafra to the south and west
+**Position:** West-southwest Talan, coastal on Hafra to the west and south-west
 
-**Terrain:** Very mountainous. Distinctive circular mountain ring at the center with a river encircling it. Volcanic activity: cluster of active volcanoes to the west. Sandy/steppe terrain, patches of forest. The orange-brown ridge along the southern border is a major geographical divider separating Sumendar from Lioaru.
+**Terrain:** Very mountainous. Distinctive circular mountain ring at the center with a river encircling it. Volcanic activity: cluster of active volcanoes to the west. Sandy/steppe terrain, patches of forest. The orange-brown ridge walls the Order of Steam off from the rest of Sumendar; a lower brown range along the southern border marks the line with Lioaru.
 
 **God's city:** Eldara, The Forge City (located in No Man's Land)
 
@@ -26,7 +26,7 @@ One fire, four answers: the Dwarf masters it, the Kobold plays with it, the Gobl
 - **Burdineyja**: *(To be defined in the future.)* Name: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) → Burdineyja, the Iron Islands.
 - **Haraour Eliza**: *(To be defined in the future.)* Name: the *eliza* root is Basque (church).
 - **No Man's Land**: *(To be defined in the future.)* Houses Eldara, Komo's city-state; see *Eldara, the Forge City* below. **The Ash-Binder's dead lair lies in No Man's Land** (earmark, GM 2026-09-28; the furnace-lair and its slag-born remnants are sited at the Sumendar build; see [`../factions.md`](../factions.md), *The Nine Generals*).
-- **Order of Steam**: industrial kingdom-guild hybrid controlling the volcanic belt's manufacturing. No divine patron; the polity-frame is run by elected councils of master craftspeople and engineers (the **Council of the Forge** is the central war-policy and industrial-priority body). Volcanic-powered manufactories produce at a scale no other region matches. **Completely ringed by a mountain range**: the Order's only outward opening is a single stretch on the **west coast of the Order of Steam bay** (a freshwater sub-body of the freshwater Midarra), extending north to an uninhabited mountain-headland (the bay's north-west corner) that the Order holds as territory but never settled. Through this single bay-coast, bulk industrial freight ships out via the **Rika Tikur** island-city and through the bay-mouth (the bay opens north between the OoS headland and the **Dreaming Cape** north-east headland) into the open Midarra. The bay's other coasts belong to **Tahu Tangata** (south-west) and the **Dreaming Cape** (south, east, north-east; the Cape's capital sits on its NE headland at the bay-mouth). The Order has no other access to sea or land trade.
+- **Order of Steam**: industrial kingdom-guild hybrid controlling the volcanic belt's manufacturing. No divine patron; the polity-frame is run by elected councils of master craftspeople and engineers (the **Council of the Forge** is the central war-policy and industrial-priority body). Volcanic-powered manufactories produce at a scale no other region matches. **Completely ringed by a mountain range**: the Order's only outward opening is a single stretch on the **west coast of the Order of Steam bay** (a freshwater sub-body of the freshwater Midarra), extending north to an uninhabited mountain-headland (the bay's north-west corner) that the Order holds as territory but never settled. Through this single bay-coast, bulk industrial freight ships out via the **Rika Tikur** island-city and through the bay-mouth (the bay opens north between the OoS headland and the **Dreaming Cape** north-east headland) into the open Midarra. The bay's other coasts belong to **Tahu Tangata** (south) and the **Dreaming Cape** (east and north-east; the Cape's capital sits on its NE headland at the bay-mouth). The Order has no other access to sea or land trade.
 
   #### House Eisenhart
 

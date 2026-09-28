@@ -2,7 +2,7 @@
 
 **Borders:** Myrkono, Sumendar
 
-**Seas:** Midarra (western portion) and Hafra (the domain extends into both; the drifting islands cross between them).
+**Seas:** Midarra (western portion) and Hafra (the domain reaches the salt sea at Balatur Erui; the drifting islands keep to the sweet water).
 
 **Etymology:** Icelandic *flot* (float) + *eyjar* (islands) → compressed and drifted to *Floteyn*. Names the defining feature: the islands that drift, with *eyn* echoing the island root.
 

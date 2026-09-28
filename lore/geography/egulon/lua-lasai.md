@@ -1,6 +1,6 @@
 # Lua Lasai (Egulon)
 
-**Position:** Southwestern Egulon, coastal on Hafra. Jakinduria and the Golden Coast (Ezkudon) to the west, Atarialda (Lautara) north beyond the lake, the border mountains and forests, Harro Distiratsua to the northeast, Argia Esfera east across the southern ranges. The island of Jadrey lies off the southeast coast and reaches from Hafra into the Cloud Sea; the Bridgelands aside, it is the only ground on Talan that touches both. See [`../egulon.md`](../egulon.md) for the domain frame.
+**Position:** Southwestern Egulon, coastal on Hafra. Jakinduria and the Golden Coast (Ezkudon) to the west, Azkataria (Lautara) to the north-west, Atarialda (Lautara) north beyond the lake, the border mountains and forests, Harro Distiratsua to the northeast, Argia Esfera east across the southern ranges. The island of Jadrey lies off the southeast coast and reaches from Hafra into the Cloud Sea; the Bridgelands aside, it is the only ground on Talan that touches both. See [`../egulon.md`](../egulon.md) for the domain frame.
 
 **Polity:** The Primocracy of Lua Lasai, under the Double Surety. The Landsworn hold the offices, the valley-reeves hold the purse, the lineages hold the record.
 

@@ -99,7 +99,7 @@ The Guild also runs the world's most reliable courier network.
 - **Recursive irony:** every story told about him strengthens him, which generates new stories. He has never tried to inspire fear. He is, by his own assessment, simply *being proper*.
 - **Demonstrates the canon mechanic:** belief generates real divine power for mortal figures (`cosmology.md`, The Wellspring & Belief). Lavisburg is the cleanest contemporary case study.
 
-**Guild Sovereign Seraphel Duskbane**: Fetchling, current Guild Sovereign of **Myrria's Godshall**, and thus the highest-ranking Guild leader across Myrkono (Izarelai, Itzasoa, Ilun Tasun, Myrria).
+**Guild Sovereign Seraphel Duskbane**: Fetchling, current Guild Sovereign of **Myrria's Godshall**, and thus the highest-ranking Guild leader across Myrkono (Izarelai, Itzasoa, Ilun Tasun, Three Pines, Bikitsa, Myrria).
 
 - **Origin:** Believed Myrria-born. Started as a Bronze-rank adventurer at a remote Izarelai Branch Office, working as a scout/tracker on corruption-cult hunts.
 - **Epithet:** *Duskbane*, earned from her record against corruption cults in the steppes.

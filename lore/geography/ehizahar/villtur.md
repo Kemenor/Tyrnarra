@@ -4,7 +4,7 @@
 
 **Etymology:** Icelandic *villtur* (wild, lost, strayed), undrifted. The name is an outsider's: it is what the land is to someone who does not belong to it. I have looked for the word the clans use for the whole of it and found none; a clan names its circuit, a city names its walls, and the whole has only the name the rest of Talan gave it.
 
-**Position:** the whole of Ehizahar outside Fenurra and the Basogur fringe: the arctic coast, the high ranges of the north, the great river across the middle, the grass of the center, the old conifer country east and northwest, down to where the jungle's northmost spur reaches into the grass. Veidrath sits inside it, toward the southeast. Ardo Beroa lies offshore and outside.
+**Position:** the whole of Ehizahar outside Fenurra and the Basogur fringe: the arctic coast, the high ranges of the north, the great river across the middle, the grass of the center, the old conifer country east and northwest, down to where the jungle's northmost spur reaches into the grass. Veidrath sits on Villtur's south-eastern edge, at the Basogur's rim. Ardo Beroa lies offshore and outside.
 
 **Terrain:** ice, tundra, mountain, grass, old forest, river, the jungle's edge; the most varied ground on Talan under one name.
 

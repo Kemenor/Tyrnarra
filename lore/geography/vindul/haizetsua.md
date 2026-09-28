@@ -1,6 +1,6 @@
 # Haizetsua: the Tengu Island of Vindul
 
-The great western island of Vindul, Fisaya's domain, home of the Tengu. Mountain-range interior, coastal lowlands to the south and east, a sheltered harbour at the capital **Vindboorg**. Governed by the **Skarvorn Republic**, the seated body of the eleven Tengu clans, no single ruler. Its cities are the famous **singing cities** of the continent. Three Pines (Myrkono's outer-island cluster) sits off Haizetsua's southern coast.
+The great western island of Vindul, Fisaya's domain, home of the Tengu. Mountain-range interior, coastal lowlands to the south and east, a sheltered harbour at the capital **Vindboorg**. Governed by the **Skarvorn Republic**, the seated body of the eleven Tengu clans, no single ruler. Its cities are the famous **singing cities** of the continent. Three Pines (Myrkono's outer-island cluster) lies far to the south-west off Myrkono's coast; only its holm **Grannholm** sits in Haizetsua's lee.
 
 > *"The wind asks; the wind answers. We sing because the cities sing first."*
 > Traditional Tengu saying

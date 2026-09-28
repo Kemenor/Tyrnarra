@@ -1,6 +1,6 @@
 # Harro Distiratsua (Egulon)
 
-**Position:** Western Egulon. Lautara (Atarialda) across the western lake, the Crossroads tri-point at the northwest corner, Zuzental across the northern range, the Emerald Isles' Southern Isle across the water to the northeast, Argia Esfera east across Vonura, Lua Lasai to the south. Ljosarn stands on the eastern lake-line and belongs to no one. See [`../egulon.md`](../egulon.md) for the domain frame.
+**Position:** North-western Egulon. Lautara (Atarialda) across the western lake, the Crossroads tri-point at the northwest corner, Zuzental across the northern range, the Emerald Isles' Southern Isle across the water to the northeast, Argia Esfera east across Vonura, Lua Lasai to the south. Ljosarn stands on the eastern lake-line and belongs to no one. See [`../egulon.md`](../egulon.md) for the domain frame.
 
 **Polity:** The Kingdom of Harro Distiratsua, a Reconstruction-era crown carrying the old geographic name. Royal seat: Ongetorra. The crown rules with the sworn Lamphold houses; the Bright Ring holds its Ring Liberties within the kingdom.
 
