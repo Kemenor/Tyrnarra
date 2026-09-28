@@ -7,10 +7,9 @@ every working session.
 
 ## State (2026-09-28 morning)
 
-- **Pack:** 23 folders, 714 sprites, installed on the laptop in
-  `~/.local/share/Wonderdraft/assets/Tyrnarra` and mirrored to the Proton Drive copy
-  `~/ProtonDrive/Wonderdraft/Wonderdraft/assets/Tyrnarra` (`rsync -a --delete` after every
-  install). Counts per folder: the families table in the README.
+- **Pack:** 23 folders, 714 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
+  and mirrored to Proton Drive (`assetgen.sh sync` after every install, which also carries the
+  work files). Counts per folder: the families table in the README.
 - **Trees:** conifers, pines, broadleaves, willows, jungle, palms, bamboo, savanna, cacti, dead
   trees, giant mushrooms, swamp trees, shrubs.
 - **Terrain:** peaks, fells, hills, dunes, mesas; volcanoes (recolourable, active and extinct).
@@ -38,7 +37,8 @@ every working session.
   are filed as 2.5D; the flat 2D set was wanted "to see", then two per kind.
 - **Comparisons:** against Wonderdraft's built-in art, not Dotty (Dotty only as an extra
   column). The built-ins may not be extracted (EULA); they are exported from Wonderdraft onto a
-  blank map as local reference sprites only, never committed.
+  blank map as private reference sprites (on the machines and in the user's own Proton Drive),
+  never committed or published.
 - **Real Wonderdraft tests:** as often as useful, but tell the user first (the export drives the
   keyboard for about 90 s). With the laptop's screen locked the exporter refuses to run.
 - **Open, the user's call:**
@@ -50,25 +50,34 @@ every working session.
 
 ## Where things live
 
-| What | Where | In git? |
-|---|---|---|
-| Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | yes |
-| Raw drawings, rounds, sheets, galleries (about 2.6 GB) | laptop `~/.local/share/wdmap/assetgen/` | no |
-| Built-in reference sprites (EULA: local only) | laptop `~/.local/share/wdmap/assetgen/builtins/` | never |
-| Test maps and exports | laptop `~/.local/share/wdmap/assetgen-test/` | no |
-| Installed pack | laptop `~/.local/share/Wonderdraft/assets/Tyrnarra` + the Proton Drive mirror | no |
-| ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | never |
+| What | Local (the tools' paths) | Proton Drive (`Wonderdraft/...`) | In git? |
+|---|---|---|---|
+| Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | | yes |
+| Work folder: raw drawings, rounds, sheets, galleries (about 2.6 GB) | `~/.local/share/wdmap/assetgen/` | `assetgen-work/work/` | no |
+| Built-in reference sprites (EULA: private, never published) | `.../assetgen/builtins/` | inside `assetgen-work/work/` | never |
+| Test references (empty map, Base before and after the pack swap) | `~/.local/share/wdmap/assetgen-test/` | `assetgen-work/test/` | no |
+| Installed pack | `~/.local/share/Wonderdraft/assets/Tyrnarra` | `Wonderdraft/assets/Tyrnarra` | no |
+| Main and its Base view + export | | `Main*.wonderdraft_map`, `Main - Base.webp` | no |
+| ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | | never |
 
-**Working from the tower:** a session there has the code and these notes (after `git pull`),
-and ComfyUI runs locally (`TYRNARRA_COMFY=http://127.0.0.1:8188`). It does not have the raw
-drawings, the built-in references, Wonderdraft's test maps or the installed pack: those live on
-the laptop. So from the tower:
-- **Generating** new drawings works.
-- **Rebuilding existing families, offline tests and real exports** need the laptop's work
-  folder, or are done back on the laptop.
+The test maps themselves (100 MB each) are rebuilt by the tools from Main's Base, so only the
+three reference images travel.
 
-Keep one machine as the owner of the installed pack (the laptop so far). The tower's Proton
-Drive is an rclone mount that needs a fresh 2FA code after each reboot.
+**Moving between machines** (`assetgen.sh sync`):
+- **Starting a session:** run `sync --pull`. It copies the work folder, the test references and
+  the installed pack from Proton Drive into the local paths. It only adds and updates.
+- **Ending a session:** run `sync`. It mirrors this machine's copies into Proton Drive, deleting
+  there whatever is gone here.
+- **One machine at a time:** push only after pulling the other machine's work, or its new
+  drawings are deleted.
+- **Proton Drive folder:** `TYRNARRA_PROTON` points `sync` at it when it isn't `~/ProtonDrive`.
+- **Laptop:** its `~/ProtonDrive` is a local folder that rclone bisync syncs every 15 minutes.
+  A push there is a local copy, and the upload follows.
+- **Tower:** its Proton Drive is an rclone mount that needs a fresh 2FA code after each reboot.
+
+**Working from the tower:** after `git pull` and `sync --pull`, a session there can generate
+(ComfyUI runs locally: `TYRNARRA_COMFY=http://127.0.0.1:8188`), build, run offline tests and make
+galleries. Real Wonderdraft exports need Wonderdraft installed there and an unlocked desktop.
 
 ## The tower's ComfyUI
 
@@ -98,6 +107,7 @@ test <fam> --round N --offline               # seconds: lineup and map crops dra
 test <fam> --round N                         # real Wonderdraft export (hands off)
 fullswap                                     # whole pack in a copy of the Base, exported, vs built-ins
 gallery [families]                           # numbered review sheets per family, by variant
+sync [--pull]                                # work files and pack to (from) Proton Drive
 ```
 
 ## Rules for this repo

@@ -18,6 +18,7 @@ assetgen.sh test conifer --round 7                # the same from a real Wonderd
 assetgen.sh builtin-refs                          # once: the built-ins as local reference sprites (lineups)
 assetgen.sh fullswap                              # the whole pack in a copy of the Base, exported, vs the built-ins
 assetgen.sh gallery [peaks settlements ...]       # review sheets of the installed pack, by variant, numbered
+assetgen.sh sync [--pull]                         # work files, test references and pack to (from) Proton Drive
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and

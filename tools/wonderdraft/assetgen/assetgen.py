@@ -6,6 +6,7 @@
   assetgen.sh test conifer --round 7                  real Wonderdraft export vs the art Main uses now
   assetgen.sh test conifer --round 7 --offline        the same drawn here (render.py), no Wonderdraft
   assetgen.sh gallery [conifer peaks ...]             review sheets of the installed pack, by variant
+  assetgen.sh sync [--pull]                           work files and pack to / from Proton Drive
 
 Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
 add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
@@ -215,6 +216,40 @@ def cmd_gallery(a):
         print(path)
 
 
+def cmd_sync(a):
+    """The work that lives outside git, through Proton Drive, so another machine can take over:
+    the work folder (raw drawings, rounds, built-in references), the test references and the
+    installed pack. Push mirrors this machine (the owner) exactly; pull only adds and updates."""
+    import shutil
+    import subprocess
+    import wdtest
+    proton = os.path.expanduser(os.environ.get("TYRNARRA_PROTON", "~/ProtonDrive"))
+    hub = os.path.join(proton, "Wonderdraft", "assetgen-work")
+    pack = os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra")
+    pairs = [(WORK, os.path.join(hub, "work")),
+             (pack, os.path.join(proton, "Wonderdraft", "Wonderdraft", "assets", "Tyrnarra"))]
+    tests = ["Assetgen Empty.webp", "Assetgen PreSwap Base.webp", "Assetgen PostSwap Base.webp"]
+    if not os.path.isdir(proton):
+        sys.exit("no Proton Drive folder at %s (set TYRNARRA_PROTON)" % proton)
+    for here, there in pairs:
+        src, dst = (there, here) if a.pull else (here, there)
+        if not os.path.isdir(src):
+            print("skipped (missing): %s" % src)
+            continue
+        os.makedirs(dst, exist_ok=True)
+        flags = ["-a", "--update"] if a.pull else ["-a", "--delete"]
+        subprocess.run(["rsync"] + flags + [src + "/", dst + "/"], check=True)
+        print("%s -> %s" % (src, dst))
+    tdir = os.path.join(hub, "test")
+    os.makedirs(tdir if not a.pull else wdtest.TEST_DIR, exist_ok=True)
+    for name in tests:
+        src, dst = ((os.path.join(tdir, name), os.path.join(wdtest.TEST_DIR, name)) if a.pull
+                    else (os.path.join(wdtest.TEST_DIR, name), os.path.join(tdir, name)))
+        if os.path.exists(src):
+            shutil.copy2(src, dst)
+    print("test references: %s" % ("pulled" if a.pull else "pushed"))
+
+
 def cmd_fullswap(a):
     import fullswap
     out = os.path.join(WORK, "fullswap")
@@ -256,6 +291,9 @@ def main(argv=None):
         if name == "packswap":
             s.add_argument("--apply", metavar="MAP", help="swap this map in place (with backup) instead of a test copy")
         s.set_defaults(fn=fn)
+    s = sub.add_parser("sync", help="work files and pack to Proton Drive (or --pull them from it)")
+    s.add_argument("--pull", action="store_true", help="take them from Proton Drive (another machine's work)")
+    s.set_defaults(fn=cmd_sync)
     s = sub.add_parser("gallery", help="review sheets of the installed pack, grouped by variant")
     s.add_argument("families", nargs="*", help="default: every family")
     s.set_defaults(fn=cmd_gallery)
