@@ -434,6 +434,10 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     excluded. 35 installed, two per kind but the camp (both new camps ran off the image edge).
   - New families queued on the tower (FLUX, one after another): `volcanoes` (recolourable,
     lava in the accent channel, style `lava`), `swamp` trees, `mesas`, `shrubs`.
+  - `volcanoes` round 1 (seeds 1-30, 6 variants): all 30 usable and installed in
+    `Tyrnarra_Volcanoes` (custom colours: lines, rock and smoke, lava). Bold outlines, pale rock,
+    lava streams and a smoke plume; about Dotty's volcanoes' size. FLUX drew every variant
+    active, the "dormant" ones included: a quiet volcano needs its own wording.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -466,6 +470,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
+| volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (30) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
 | settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (35) |
