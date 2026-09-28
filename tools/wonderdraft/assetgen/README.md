@@ -1,5 +1,8 @@
 # assetgen: the Tyrnarra art pack for Wonderdraft
 
+**Picking this up? Read [STATUS.md](STATUS.md) first**: the current state, the user's decisions,
+what lives on which machine and how to work from the tower.
+
 Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, with many
 variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
 any tool of our own) and the bought packs that stood in for it. `Main` uses the built-ins
