@@ -184,6 +184,5 @@ The Basogur splits the rail, and the continent crosses its waist four ways:
 - **The northern coast**: Villtur's few ports, which freeze and when, Fenurra's warm port and its name, and what that makes of the long road's trade.
 - **Fares and gauge**: what a Magitrain ticket, a berth, or an airship passage costs; the gauge of the two networks.
 - **The airship guilds**: names, routes, fares; the Veidrath tower district (a deepening idea: [`../docs/deepening-ideas.md`](../docs/deepening-ideas.md)).
-- **The Iron Tide's route inland**: the record has Tide ships sighted at "the Order of Steam's ports", which lie on a Midarra bay behind the Gesalkai gate.
 - **Flying mounts**: which kinds, and in which regions (defined at each region's build).
 - **Icebreakers**: who builds and runs them, and how many there are.

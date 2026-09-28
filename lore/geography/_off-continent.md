@@ -99,6 +99,8 @@ For Talan-continental geography (structure, rail network, three seas, naming con
 
 ## The Red Empire's home continent (west across the Cloud Sea)
 
+> **Parked (GM, 2026-09-28).** The Red Empire, its continent, the Iron Tide, and the Menagerie are set aside. What follows stays canon as written; add nothing, and do not raise it in lore discussion or offer it as a thread. See [`../../docs/open-threads.md`](../../docs/open-threads.md), *§ Parked*.
+
 Largely unknown on Talan, but canonical: somewhere across the Cloud Sea lies a continent ruled by a godless authoritarian mortal-supremacist empire, its Iron Tide navy in routine and usually unfriendly contact with Talan's coasts. From a Talanese perspective the Empire is the *foreign* power; its capital, its emperor, and its core population are all over the sea. From the Empire's perspective, Talan is the *backwards* continent: the one still in thrall to gods.
 
 **Open thread:** The home continent's name, internal map, and any non-Imperial polities that share it with the Empire are TBD. Crossing distance is "long enough that landings are campaigns, not raids."
@@ -154,7 +156,7 @@ Strict caste structure, but the castes are **fluid**; rise and fall are constant
 
 **Sub-organisation of:** The Red Empire; its naval arm, and the only part of the Empire most Talanese have ever encountered firsthand.
 
-**Strategic role:** The Iron Tide is how the Empire reaches Talan. Its warship-cloudships cross the Cloud Sea, come down onto Hafra, hammer Talanese coastal kingdoms, and either burn what they cannot take or annex what they can. Coastal city-states (Floteyn, Itzasoa, Ilun Tasun, the Order of Steam's ports, Ehizahar's southern shore) have all sighted Iron Tide vessels at some point in the last century. The Adventurers Guild maintains standing intelligence on Iron Tide movements; the Order of Steam's airship fleets and House Eisenhart's *Stahlglanz* exist in part because of them.
+**Strategic role:** The Iron Tide is how the Empire reaches Talan. Its warship-cloudships cross the Cloud Sea, come down onto Hafra, hammer Talanese coastal kingdoms, and either burn what they cannot take or annex what they can. Coastal city-states (Floteyn, Itzasoa, Ilun Tasun, Ehizahar's southern shore) have all sighted Iron Tide vessels at some point in the last century. The Adventurers Guild maintains standing intelligence on Iron Tide movements; the Order of Steam's airship fleets and House Eisenhart's *Stahlglanz* exist in part because of them.
 
 **Character:** Black iron, fire, frost; ports reduced to ash. The Tide is engineered, not graceful.
 
