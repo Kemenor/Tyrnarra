@@ -58,7 +58,7 @@ SETTLEMENT_ITEMS = [("hamlet", "hamlet of two small cottages with thatched roofs
                     ("ruins", "ruined castle with broken walls and a collapsed tower"),
                     ("mine", "mine entrance in a rock face with a wooden headframe"),
                     ("farmstead", "farmstead with a barn, a windmill and a fenced field"),
-                    ("camp", "camp of several tents around a campfire"),
+                    ("camp", "camp of several canvas tents around a campfire, only tents, no buildings"),
                     ("inn", "roadside inn with a hanging sign and a stable")]
 
 # Flat (2D) icon wordings where the shared one failed: "a town behind a round wall" drew the wall
@@ -68,7 +68,9 @@ FLAT_ITEMS = {
                     "the bottom with a gate in the middle, the houses and a church tower rising behind it"),
     "walled_city": ("large city behind a high stone wall seen straight from the front: the wall one flat band across "
                     "the bottom with square towers and a gate, many roofs, towers and a cathedral rising behind it"),
-    "camp": "small compact camp of three tents close around a campfire",
+    # Seeds 106+: "tents around a campfire" drew red-domed stone houses behind the tents (the style
+    # asks for red roofs and domes).
+    "camp": "small compact camp of three canvas tents close around a campfire, only tents, no buildings",
 }
 
 FAMILIES = {
@@ -400,7 +402,10 @@ FAMILIES = {
     "volcanoes": {
         # "Volcanic was missing" (the user, 2026-09-28). Recolourable like the icons: R ink, G rock and
         # smoke, B lava and glow, so each volcano's lava colour is picked on the map.
-        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["lava"],
+        # The extinct cones need style "quiet": "lava" names lava and smoke, and FLUX drew them anyway
+        # (seeds 35-59 in "lava" came out active and are left out).
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["lava", "quiet"],
+        "exclude": {"lava": [35, 41, 47, 53, 59]},
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map, seen from the side.",
         "subject": "a single {variant}, fantasy map symbol, bold black outlines",
         "variants": ["active volcano: a tall cone with a crater at the top and a thick plume of smoke rising from it",
@@ -446,13 +451,18 @@ FAMILIES = {
     "landmarks": {
         # Single structures a world map marks (night of 2026-09-28), in the settlements' raised view
         # and colours. Not settlements: Kartofuchs' role guessing ignores these item names.
-        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon"],
+        # Round 1 ("icon" style): the lighthouses, shrines and beacons came out right; the style's
+        # "roofs and domes" put red-domed houses around the stones, the obelisk, the statue (on a
+        # whole castle), the bridge and the arch, and the statue looked like a real religious figure.
+        # Those five are redrawn in style "landmark" (seeds 104+).
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["icon", "landmark"],
+        "exclude": {"icon": [8, 16, 24, 1, 9, 17, 4, 12, 20, 5, 13, 21, 7, 15, 23]},
         "flux": "A {variant}, drawn as a landmark symbol for a hand-drawn fantasy map, seen from a slightly raised side view.",
         "items": [("standing_stones", "ring of tall rough standing stones"),
                   ("obelisk", "tall stone obelisk on a stepped base"),
                   ("lighthouse", "tall lighthouse on a small rocky point"),
                   ("shrine", "small roadside shrine with a little roof and an offering stone"),
-                  ("statue", "giant stone statue of a robed figure on a plinth"),
+                  ("statue", "giant stone statue of a hooded, faceless robed guardian holding a staff, on a plain square plinth"),
                   ("bridge", "old stone bridge of three arches"),
                   ("beacon", "hilltop beacon: a squat stone tower with a big fire burning on top"),
                   ("portal", "ancient stone archway carved with runes, standing alone")],
@@ -508,6 +518,14 @@ FLUX_STYLES = {
     "lava": ("Bold black ink outlines; rock left plain pale grey with light shading; lava, glow and fire painted in "
              "flat red-orange; smoke plain light grey. Simple, clean and readable at small size. Isolated on a plain "
              "white background, nothing else in the image, no ground, no text."),
+    # Landmarks: one structure alone; "roofs and domes painted red" (icon) built a town around each.
+    "landmark": ("Bold black ink outlines; stone left plain cream-white with light grey shading; red only on a roof "
+                 "if it has one. A single structure standing alone: no houses, towers, domes or walls around it; no "
+                 "flags or banners. Simple, clean and readable at small size. Isolated on a plain white background, "
+                 "nothing else in the image, no text."),
+    "quiet": ("Bold black ink outlines; rock left plain pale grey with light shading; a still, cold mountain. Simple, "
+              "clean and readable at small size. Isolated on a plain white background, nothing else in the image, no "
+              "ground, no text."),
     "line": ("Clean black ink line drawing: a bold clean outline, a few inner lines, white inside, a little grey "
              "shading on one side. Simple and readable at small size. Isolated on a plain white background, nothing "
              "else in the image."),

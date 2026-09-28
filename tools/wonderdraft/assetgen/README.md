@@ -449,6 +449,19 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   - `shrubs` round 1 (seeds 1-24, 4 variants): round bushes, low wide shrubs and open twiggy
     scrub, all 24 usable and installed in `Tyrnarra_Shrubs` (about a third of a broadleaf's
     height at scale 1). The "heather" drew plain bushes, no flowers.
+  - Quiet volcanoes: "extinct ... no smoke, no fire, no lava" still drew smoke and lava, since the
+    family's style names them; a second style `quiet` (rock and outlines only) drew five clean
+    extinct cones (seeds 35-59; the same seeds in `lava` are excluded). Volcanoes round 2: 35.
+  - Camps: the style's "roofs and domes painted red" put red-domed stone houses behind every
+    camp's tents. "Only tents, no buildings" fixed the 2.5D camp (seed 214, tent pavilions around
+    a fire; 196 ran off the edge), which replaces the old one; the flat 2D camps kept their domed
+    houses (seeds 70, 88 installed as the most compact; 106, 124 no better).
+  - `landmarks` round 1 (seeds 1-24, style `icon`): lighthouses, shrines and hilltop beacons came
+    out right (6 installed in `Tyrnarra_2.5D_Landmarks`). The style's roofs and domes built red-
+    domed houses around the standing stones, the obelisk, the bridge and the arch, and set the
+    statue on a whole castle; the statue also looked like a real religious figure. A style
+    `landmark` ("a single structure standing alone: no houses, towers, domes or walls around it")
+    and a hooded, faceless guardian statue redraw those five (seeds 104-127).
   - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
@@ -488,10 +501,11 @@ red dome tops, and the monastery icons still carry the old red flags.
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
-| volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (30) |
+| volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (35) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
-| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (35) |
+| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (36) |
+| landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Tyrnarra_2.5D_Landmarks` (6 so far) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
