@@ -289,8 +289,8 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 
 **Sumendar (Fire):**
 - **Burdineyja**: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
-- **Haraour Eliza**: Basque *eliza* (church); possibly religious sub-region
-- **Tahu Tangata**: indigenous culture name, meaning partially lost
+- **Haraour Eliza**: Basque *eliza* (church)
+- **Tahu Tangata**: old name, meaning partially lost
 - **No Man's Land**: modern English; Komo's city-state territory
 - **Eldara** (the Forge City): old/ancient stratum. Icelandic *eldr / eldur* (fire) → *eldar* → **Eldara**, "the fire." Reaches for *Icelandic* fire while the domain Sumendar names *Basque* fire (*sumendi*), so city and domain say the same word in two old tongues. Komo's ungoverned god-city, accreted (never founded) on the one ground where ore, lava, and the god's presence all met; making is worship, the forge is the only authority.
   - **The Throat**: descriptive English. The collapse-prone cave-passage punched north through the mountain to the Midarra; Eldara's pre-rail sea lifeline.
@@ -305,8 +305,8 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Oroiri**: Basque *oroit* (memory) + *hiri* (city) → contraction, *h-*loss → **Oroiri**, "the city of memory." Tani's buried Gods'-Era holy city, scattered under the desert at her death; Valreka roams to recover it piece by piece. Distinct from the **Storveldi Denbora**, whose separate ruin is the Blackened Lands; "Denbora" now names only that cursed empire.
 - **Galdua Jendea**: Basque; meaning disputed, "Place of Many Waters" (the hidden seeps and sand-springs the Azarketi water-bearers tend) or "Place of the Lost People." Houses Valreka and the sand-whale roaming-range.
 - **Lost Kingdom**: modern English; temporally unstable ruins
-- **River Duchies**: modern English; oasis river valley confederation
-- **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru. Partially independent cultural identity persists.
+- **River Duchies**: modern English
+- **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru.
 
 **Brauogi (Earth):**
 - **Gotorlekua** *(retired)*: Basque *gotor* (strong, firm, sturdy) + *leku* (place) + *-a* (definite article) → "the Stronghold." The former sub-region housing Lurrath; it did not survive the Lautara/Brauogi border redraw, and Lurrath's territory is now simply the interior of the **Eraztumen** ring. Kept here for the etymological record only.
@@ -383,7 +383,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Thekkavar** (the City of Learning): Icelandic *þekkja* (to know, to recognise) + *varða* (to ward, to guard) → "the knowing-keep, where knowledge is warded," drifted to **Thekkavar**. Enki's god-city in Jakinduria; the formal-institutional pole of Talanese learning (it teaches and keeps, where Azkataria argues and Atarialda remembers). Sits beside the Basque-named domain Ezkudon ("the hidden"): the hidden domain, the knowing-keep at its heart.
 - **The Leize**: Basque *leize* (abyss, chasm, deep cavern) → *leizea* → **the Leize**, the clergy's and old name for Enki's **Infinite Library**, the extraplanar deep beneath Thekkavar's sanctum, raised over the most dangerous depth. "The Infinite Library" is the everyday name; the Leize is the old one.
 - **Jakinduria**: Basque *jakinduria* (wisdom/knowledge); real word, no drift required
-- **The Golden Coast**: modern English; coastal sub-region
+- **The Golden Coast**: modern English
 - **Lua Lasai**: the guaranteed country between Ezkudon and Egulon; full entry and nested coinages under **Egulon (Light)** below (Egulon-primary; Jakinduria and the Golden Coast front it). Full canon: `geography/egulon/lua-lasai.md`.
 - **The Wildreach**: modern English compound. A sub-region of Ezkudon. The wild people live here, and the area carries a strong wild-magic / wild-fey character. The **Iratxobaso** cluster at its centre is the source or focus of that magic.
 - **Iratxobaso**: Basque *iratxo* (fey-creature, fairy, gnome) + *baso* (forest) → **Iratxobaso** "fey-forest" (near-undrifted compound). The cluster of multicoloured trees at the centre of the Wildreach (Ezkudon); their presence is read as the source or focus of the surrounding wild-magic. Whether the trees produce the wild-magic or merely cluster where it is densest is a question the wild people answer differently.
@@ -443,8 +443,8 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **The Bridge-Pearls**: modern English chronicler's by-name for **the Bridgelands**, a smaller string of stones to the main trio's emeralds; pearls for size and for the Cloud Sea's pale, near-white quality where the bridges meet the cloud-touching gaps. Jewel + sea angle.
 - **The Bridgelands**: modern English. The northeastern outer-rim islands of the Emerald Isles kingdom, named for the spanning Magitech bridges the kingdom built between them. The bridges are substantial Arcanotech works, capable of carrying caravan traffic across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Bridge engineering doubles as soft-power signal: *the kingdom that built the bridges is the kingdom Sortalde does business with.* Chronicler's by-name: *the Bridge-Pearls.*
 - **Legea Empire**: drift from Latin *lex/legem* (law); major empire. **A theocracy ruled by a demigod of a non-bound god (Layer 3 / Postlife resident; specifics TBD). State faith is the Divine Faith (see `geography/zuzental.md`, *Legea Empire → The Divine Faith*).** Sits inside Forseti's domain of Law; the resulting law-vs-law theological argument is structural and continual.
-- **Namur Republic**: modern English; democratic city-state network
-- **Order of Law**: modern English; institution
+- **Namur Republic**: modern English
+- **Order of Law**: modern English
 - **Crossroads**: modern English. Trade-nexus settlement on the southern tri-domain border where Zuzental, Lautara (Commerce), and Egulon (Light) meet. **Functionally independent** of all three; nominally a Zuzental sub-region by the geography of the tri-point but answers to no domain's law. Home of the **Spider's Silk Inn** (Matron Charna, ancient Anadi, weaver of enchanted silver silk that suppresses hostile magic). See `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*.
 
 **Nashavel (Chaos):**
