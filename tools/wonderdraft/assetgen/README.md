@@ -489,9 +489,12 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     without it the open-based drawings were hollow. `fill_enclosed` (a pixel turns opaque only
     with drawing above it, left and right of it) fills the pillars and leaves those gaps clear.
   - Seeds 12, 16, 24, 28 dropped (a faint background peak filled into a tab beside the pillar;
-    checked against the raw drawings). 24 installed in `Tyrnarra_Pillars`.
+    checked against the raw drawings). Round 1: 24 installed in `Tyrnarra_Pillars`.
   - Offline, the Air Monastery ring reads as a ring of narrow pillars again (164/8% vs the
     built-ins' 189/6%). At map scale the flat pine crowns on the needles read like mushroom caps.
+  - Round 2: the user removed the rounded pillars with a pine and the pine-crowned needles (both
+    pine variants, out of the variant list too). 16 installed: pairs, craggy towers, spire
+    clusters, grooved karst peaks.
   - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
     this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
@@ -529,7 +532,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
-| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (24) |
+| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (16) |
 | volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (35) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
