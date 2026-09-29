@@ -42,6 +42,12 @@ This file holds the continent-wide geography of Talan: structure, infrastructure
 
 The thirteen together hold about 3.4 million people. The kingdom capitals sit below them; a Kingshall city of 60,000 to 150,000 is a large one.
 
+### Population density
+
+The countryside is sized in two tiers (GM, 2026-09-29). **Held heartlands**, the farmed country a polity has kept since the Dark Era ended, carry **20 to 40 people per square mile**: the thin end of the medieval range, refilled across four centuries of the Adventurer Era and held there by the beasts of the wild. **Wild country** (for example the Basogur, the Blackened Lands, the deep forests and the high ranges) carries **2 to 10**. A region's population is its map area times its tier; on the full-resolution map one square pixel is a quarter of a square mile.
+
+The cities set the floor. A kingdom capital holds one to three percent of its country, and the god-cities draw on their domains and on the rail. The reference case is the **Legea Empire**: a Dark-Era refuge turned heartland at 25 per square mile, about 140,000 square miles and 3.5 million people, with a capital of 75,000.
+
 ## Structure
 
 - **Tyrnarra**: the world. Encompasses all planes (Prelife, Life Layer, Postlife) and the Cloud Sea.
