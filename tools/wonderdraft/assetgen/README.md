@@ -495,6 +495,8 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
   - Round 2: the user removed the rounded pillars with a pine and the pine-crowned needles (both
     pine variants, out of the variant list too). 16 installed: pairs, craggy towers, spire
     clusters, grooved karst peaks.
+  - Round 3: 16 more of the four kept kinds (seeds 31-46, all clean, no background peaks): 32
+    installed.
   - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
     this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
@@ -532,7 +534,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
-| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (16) |
+| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (32) |
 | volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (35) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |

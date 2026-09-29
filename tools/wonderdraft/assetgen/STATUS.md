@@ -7,7 +7,7 @@ every working session.
 
 ## State (2026-09-30)
 
-- **Pack:** 24 folders, 730 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
+- **Pack:** 24 folders, 746 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
   and mirrored to Proton Drive (`assetgen.sh sync` after every install, which also carries the
   work files). Counts per folder: the families table in the README.
 - **Trees:** conifers, pines, broadleaves, willows, jungle, palms, bamboo, savanna, cacti, dead
