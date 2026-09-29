@@ -40,7 +40,7 @@ BUILTIN_TO = [
     ("res://sprites/mountains/inked_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
     ("res://sprites/mountains/penciled_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
     ("res://sprites/mountains/penned_mountains_large/", "mountains/Tyrnarra_Peaks", "area"),
-    ("res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "mountains/Tyrnarra_Peaks", "height"),
+    ("res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "mountains/Tyrnarra_Pillars", "area"),
     ("res://sprites/mountains/playful_rounded_mountains/", "mountains/Tyrnarra_Fells", "area"),
     ("res://sprites/mountains/penciled_mountains_small/", "mountains/Tyrnarra_Fells", "area"),
     ("res://sprites/mountains/penned_mountains_small/", "mountains/Tyrnarra_Fells", "area"),

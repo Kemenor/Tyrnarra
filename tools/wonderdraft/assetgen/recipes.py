@@ -399,6 +399,31 @@ FAMILIES = {
         "drop_thin": 14,
         "pack_folder": "Tyrnarra_Mesas", "file": "mesa_{n:02d}",
     },
+    "pillars": {
+        # Tall karst pillars (2026-09-29): Main's Tang Dynasty mountains (141, e.g. the ring around the
+        # Air Monastery) are tall narrow crags; the peaks in their place spread into one wide mass.
+        "engine": "flux", "shape": "mountain", "canvas": (832, 1216), "styles": ["line"], "frame": LINE_FRAME,
+        "finish": dict(BOLD_TERRAIN, INNER_LIGHTEN=0.3, BASE_FADE=0.25), "negative": LINE_NEGATIVE,
+        # Many pillars are open at the base (hollow without a fill), but fill_under built
+        # straight-sided boxes under a pine's crown or a faint background peak: fill_enclosed.
+        "fill_enclosed": True,
+        "exclude": {"line": [12, 16, 24, 28]},   # a faint background peak filled into a flat tab beside the pillar
+        "flux": ("A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map in the manner of a "
+                 "Chinese ink painting, seen from the side, much taller than wide, nothing around it."),
+        "subject": ("minimalist black line drawing of one single {variant}, tall and narrow, sheer sides with a few "
+                    "vertical crack lines, white inside, fantasy map symbol"),
+        "variants": ["tall karst rock pillar with a rounded top and sheer grooved sides, one small twisted pine near the top",
+                     "pair of tall karst pillars side by side, one taller than the other",
+                     "tall craggy rock tower with a slanted top and a smaller crag at its foot",
+                     "cluster of three narrow rock spires of different heights",
+                     "massive rounded karst peak, taller than wide, with steep grooved sides",
+                     "slender rock needle leaning slightly, with a small pine on its top"],
+        "builtin": "res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "place": "fit", "match": "area",
+        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Pillar_Mts_Big/",
+        # About 2x the area of the Tang pillars' area-equivalent 222 x 314, like the peaks: sharp at big scales.
+        "kind": "mountains", "size": (300, 430), "radius": 50, "offset_y": 0, "aspect": (1.0, 3.0), "fill": (0.25, 0.95),
+        "pack_folder": "Tyrnarra_Pillars", "file": "pillar_{n:02d}",
+    },
     "volcanoes": {
         # "Volcanic was missing" (the user, 2026-09-28). Recolourable like the icons: R ink, G rock and
         # smoke, B lava and glow, so each volcano's lava colour is picked on the map.

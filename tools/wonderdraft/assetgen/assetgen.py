@@ -135,6 +135,8 @@ def cmd_build(a):
                 rgba = sprites.drop_thin(rgba, fam["drop_thin"])
             if not why and fam.get("fill_under"):
                 rgba = sprites.fill_under(rgba)
+            if not why and fam.get("fill_enclosed"):
+                rgba = sprites.fill_enclosed(rgba)
             why = why or sprites.check(rgba, fam)
             if not why and fam.get("draw") != "custom_colors":
                 rgba = sprites.thin_ink(rgba, recipes.INK_THIN)   # greyscale; icons keep their colours

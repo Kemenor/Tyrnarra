@@ -5,14 +5,15 @@ new session on either machine. The full record (every round, lesson and number) 
 [README.md](README.md); this file is the short version to read first. Update it at the end of
 every working session.
 
-## State (2026-09-28 morning)
+## State (2026-09-30)
 
-- **Pack:** 23 folders, 714 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
+- **Pack:** 24 folders, 738 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
   and mirrored to Proton Drive (`assetgen.sh sync` after every install, which also carries the
   work files). Counts per folder: the families table in the README.
 - **Trees:** conifers, pines, broadleaves, willows, jungle, palms, bamboo, savanna, cacti, dead
   trees, giant mushrooms, swamp trees, shrubs.
-- **Terrain:** peaks, fells, hills, dunes, mesas; volcanoes (recolourable, active and extinct).
+- **Terrain:** peaks, fells, hills, dunes, mesas, karst pillars (for Main's Tang Dynasty mountains);
+  volcanoes (recolourable, active and extinct).
 - **Icons** (recolourable, R ink / G body / B roofs and accents):
   - `Tyrnarra_2.5D_Settlements`: 18 kinds, raised view.
   - `Tyrnarra_2D_Settlements`: the same kinds, flat and straight-on, two per kind.
@@ -90,10 +91,15 @@ galleries. Real Wonderdraft exports need Wonderdraft installed there and an unlo
   - One FLUX image per graph.
 - **Waking it:** the user shuts the tower down when it's not needed. It wakes over LAN, and its
   Claude Remote Control session then starts and brings ComfyUI up.
+- **Away from home (VPN):** the tower's firewall lets the home LAN and the user's VPN reach
+  ComfyUI, so the usual address works over the VPN too. Fallback: an SSH tunnel through a machine
+  on the home LAN, with the tools pointed at it (`TYRNARRA_COMFY=http://127.0.0.1:<local port>`).
+- **After a wake:** the tower's session can come back under a new ID; a message queued for its
+  old ID is lost, so send to the live one.
 - **Engines by family:**
   - SDXL: conifers, pines, palms, bamboo, savanna, cacti, dead trees, mushrooms, and the
     line-art peaks, fells and hills.
-  - FLUX: broadleaves, willows, jungle, swamp, shrubs, dunes, mesas, volcanoes and all icons.
+  - FLUX: broadleaves, willows, jungle, swamp, shrubs, dunes, mesas, pillars, volcanoes and all icons.
 
 ## Commands
 

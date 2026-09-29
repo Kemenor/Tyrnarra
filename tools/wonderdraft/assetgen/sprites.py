@@ -126,6 +126,20 @@ def fill_under(rgba):
     return out
 
 
+def fill_enclosed(rgba):
+    """An open-bottomed drawing's inside made solid, stricter than fill_under: a pixel turns opaque
+    only where the drawing lies above it, to its left and to its right. A karst pillar open at the
+    base fills, while the space under a pine's crown, beside a faint background peak or between two
+    pillars stays clear (fill_under built straight-sided boxes there)."""
+    out = rgba.copy()
+    a = out[..., 3] > 128
+    above = np.maximum.accumulate(a, axis=0)
+    left = np.maximum.accumulate(a, axis=1)
+    right = np.maximum.accumulate(a[:, ::-1], axis=1)[:, ::-1]
+    out[..., 3] = np.where(above & left & right, 255, out[..., 3])
+    return out
+
+
 def drop_thin(rgba, radius):
     """Strokes thinner than 2 x `radius` px that stick out of a mountain's body taken off (the
     body kept as drawn, its outline included): a peak's bold base strokes, each ringed by the

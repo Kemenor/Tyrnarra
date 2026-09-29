@@ -479,6 +479,21 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
     and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
     bridge, beacon, portal arch; 2.5D recolourable icons, three drawings each).
+- **Karst pillars** (2026-09-29/30; the user: "around the air monastery ... the tall mountains
+  that Wonderdraft has ... now are quite wide at the base"): the ring around the Air Monastery
+  is Wonderdraft's Tang Dynasty mountains (141 in Main), tall narrow crags. `fullswap` put our
+  peaks in their place by height, and they spread into one wide mass. New family `pillars`
+  (FLUX, seeds 1-30: rounded karst pillars, pairs, craggy towers, spire clusters, grooved karst
+  peaks, leaning needles with a pine), mapped to the Tang mountains by area.
+  - `fill_under` built straight-sided boxes under the pines' crowns and faint background peaks;
+    without it the open-based drawings were hollow. `fill_enclosed` (a pixel turns opaque only
+    with drawing above it, left and right of it) fills the pillars and leaves those gaps clear.
+  - Seeds 12, 16, 24, 28 dropped (a faint background peak filled into a tab beside the pillar;
+    checked against the raw drawings). 24 installed in `Tyrnarra_Pillars`.
+  - Offline, the Air Monastery ring reads as a ring of narrow pillars again (164/8% vs the
+    built-ins' 189/6%). At map scale the flat pine crowns on the needles read like mushroom caps.
+  - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
+    this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
@@ -514,6 +529,7 @@ red dome tops, and the monastery icons still carry the old red flags.
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
 | mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
+| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (24) |
 | volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (35) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
