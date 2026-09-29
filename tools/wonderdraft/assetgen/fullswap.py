@@ -7,6 +7,7 @@ uses for what Wonderdraft lacks (Dotty's kapoks, Nibroc's bamboo: PACK_TO) is fi
 City icons: every cluster of BSG icons becomes one of ours, as in wdtest.icon_preview: the
 god-cities by their labels, the rest by kind, in each city's own line and wall colours.
 """
+import json
 import os
 import sys
 import zlib
@@ -55,6 +56,34 @@ PACK_TO = [
     ("user://assets/Nibroc's Bamboo Forest/sprites/trees/Bamboo Trees/", "trees/Tyrnarra_Bamboo", "area"),
 ]
 OUT_MAP = os.path.join(wdtest.TEST_DIR, "Assetgen Tyrnarra Pack.wonderdraft_map")
+
+
+def _ref(texture):
+    """A Wonderdraft texture path (or family prefix) as a Kartofuchs art reference."""
+    if texture.startswith("res://"):
+        return "wd-builtin:" + texture[len("res://"):]
+    if texture.startswith("user://assets/"):
+        return "wd:" + texture[len("user://assets/"):]
+    raise ValueError(texture)
+
+
+def kartofuchs_mapping(log=print):
+    """BUILTIN_TO and PACK_TO as a Kartofuchs art mapping ("Tyrnarra"), and the measured built-in
+    sizes (builtin-sizes.json) as its art-sizes.json, in Kartofuchs' data folder. Kartofuchs then
+    swaps the same way on import (or in its Swap art dialog); it measures pack art itself."""
+    data = os.path.join(os.environ.get("XDG_DATA_HOME") or os.path.expanduser("~/.local/share"), "kartofuchs")
+    rules = []
+    for src, folder, match in BUILTIN_TO + PACK_TO:
+        # A family ends in "/"; anything else is a name prefix ("…/sand_dunes_"), a * in Kartofuchs.
+        frm = _ref(src.rstrip("/")) if src.endswith("/") else _ref(src) + "*"
+        rules.append({"from": frm, "to": "wd:Tyrnarra/sprites/" + folder, "match": match})
+    os.makedirs(os.path.join(data, "mappings"), exist_ok=True)
+    with open(os.path.join(data, "mappings", "Tyrnarra.json"), "w") as f:
+        json.dump({"name": "Tyrnarra", "rules": rules}, f, indent=1)
+    sizes = {_ref(t): {k: round(float(v[k]), 2) for k in ("w", "h", "cx", "foot")} for t, v in wdtest.SIZES().items()}
+    with open(os.path.join(data, "art-sizes.json"), "w") as f:
+        json.dump(sizes, f, indent=1, sort_keys=True)
+    log("kartofuchs: mapping Tyrnarra (%d rules) and %d measured built-in sizes in %s" % (len(rules), len(sizes), data))
 
 
 def _folders():

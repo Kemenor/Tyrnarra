@@ -46,7 +46,11 @@ every working session.
   - The crosses on some shrines and chapels are fine for now.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch
     needs SDXL.
-  - Whether and how to swap the pack into Main (`fullswap.py` has the mapping).
+  - Whether and how to swap the pack into Main (`fullswap.py` has the mapping). Decided
+    2026-09-30: through Kartofuchs. `assetgen.sh kartofuchs` writes the mapping ("Tyrnarra") and
+    the measured built-in sizes into Kartofuchs' data folder; Kartofuchs swaps on import (or Map ▸
+    Swap art). Settlement icons are its next step. Re-run the command after changing
+    BUILTIN_TO/PACK_TO or re-measuring.
 - **Known leftovers:** the flat 2D camps still show domed houses behind the tents.
 
 ## Where things live
@@ -112,6 +116,7 @@ build <fam> --round N [--no-install] [--seeds ...] [--set KEY=V]
 test <fam> --round N --offline               # seconds: lineup and map crops drawn here
 test <fam> --round N                         # real Wonderdraft export (hands off)
 fullswap                                     # whole pack in a copy of the Base, exported, vs built-ins
+kartofuchs                                   # fullswap's families as Kartofuchs' "Tyrnarra" art mapping + measured built-in sizes
 gallery [families]                           # numbered review sheets per family, by variant
 sync [--pull]                                # work files and pack to (from) Proton Drive
 ```

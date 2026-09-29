@@ -259,6 +259,11 @@ def cmd_fullswap(a):
     fullswap.run(out, export=not a.no_export)
 
 
+def cmd_kartofuchs(a):
+    import fullswap
+    fullswap.kartofuchs_mapping()
+
+
 def cmd_builtin_refs(a):
     import wdtest
     wdtest.builtin_refs(export=not a.no_export)
@@ -293,6 +298,8 @@ def main(argv=None):
         if name == "packswap":
             s.add_argument("--apply", metavar="MAP", help="swap this map in place (with backup) instead of a test copy")
         s.set_defaults(fn=fn)
+    s = sub.add_parser("kartofuchs", help="the pack swap (fullswap's families) as Kartofuchs' Tyrnarra art mapping")
+    s.set_defaults(fn=cmd_kartofuchs)
     s = sub.add_parser("sync", help="work files and pack to Proton Drive (or --pull them from it)")
     s.add_argument("--pull", action="store_true", help="take them from Proton Drive (another machine's work)")
     s.set_defaults(fn=cmd_sync)
