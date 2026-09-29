@@ -179,13 +179,6 @@ Pace as stories want them. Rolling work.
 - **The Reach's relationship with Komo's church and Eldara**: both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified *(the relationship includes the **forge-fallen**, Reach Dragons who leave for Eldara and take up Komo; see `../lore/geography/sumendar.md`, Eldara)*
 **Where.** [lore/geography/sumendar.md](../lore/geography/sumendar.md), *Dragon's Reach*; [lore/ancestries.md](../lore/ancestries.md), *Dragons*; [dragons-reach.html](../published/setting/talan/domains/sumendar/dragons-reach.html), Open in the Chronicle Record panel mirrors these.
 
-### [Legea Empire] Doctrinal case-law against Zuzental
-**Decided.** The structural tension is **theocracy vs mortal self-governance**, not law-vs-law. *Forseti does not prescribe how mortals live*: her portfolio is judgment and oath-keeping; in Zuzental at large, mortals make their own laws and Forseti's clergy serve as judges, oath-witnesses, and contract-arbiters, not as authors of doctrine. The Empire is the exception: the Faith's god *does* prescribe daily mortal life, which is what makes the Empire a theocracy in the strict sense. **Antiquity resolved:** the Empire was founded in the **first third of the Dark Era** by a holy knight who fought Corrupted spawn, gathered survivors, and ascended to demigodhood through sustained mortal belief plus the Faith's god's recognition; hereditary demigod theocracy ever since. **Forseti's non-intervention is structural, not a choice**: the Gods' Law operates as physics and forbids the bound thirteen from directly governing mortal populations or waging open war against them, which is exactly what crushing the founding cult would have been. Forseti was a constrained spectator, not a tolerant overseer.
-**Open.** **Doctrinal case-law collisions**: exactly how the Faith's god-prescribed daily law differs from a Zuzental-Kingdom's mortal-authored daily law at the level of criminal code, contract, succession, oath. The teachings collide in principle; the practical case-law clashes are not yet written. *(The Empire's open names live in `open-threads.md`, the consolidated Legea Empire thread.)*
-**Where.** [lore/geography/zuzental.md](../lore/geography/zuzental.md), *Legea Empire → The Divine Faith*. Tension blocks on [legea-empire.html](../published/setting/talan/domains/zuzental/legea-empire.html) frame the principled disagreement; daily-practice consequences are unwritten.
-
----
-
 ## § Regions: Nashavel & Ehizahar
 
 ### [Basogur] Post-build texture

@@ -118,4 +118,4 @@ Chaos given a body, keeping a chosen shape by daily practice: the Conrasu are at
 - **Ruari Fionn O Dunloch** · a Maor, at the Dunloch quay · measured and self-aware; explains his power by what he does not own.
 - **Tadg Padraig Inis Rath** · a ferry-crew hand of Dunloch · terse and unbothered; reports what happens and leaves the meaning to you.
 
-**Still open:** the Maor houses beyond O Dunloch, O Derry, and O Carrick; the valleys and their comhar by name; what grows on Einbui; the Legea Faith's missionaries over the ridge, if any have come; the next charter-cast.
+**Still open:** the Maor houses beyond O Dunloch, O Derry, and O Carrick; the valleys and their comhar by name; what grows on Einbui; the next charter-cast. (The Legea Faith's reach over the ridge: Vernuan farmers go down the Hegandi to be received; see [`../zuzental/legea-empire.md`](../zuzental/legea-empire.md), *Asking for a new life*.)

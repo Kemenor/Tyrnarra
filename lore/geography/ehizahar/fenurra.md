@@ -46,9 +46,9 @@ When the Elden vanished in 2945 GR, the servants inherited the Scar with their m
 
 ## The schism
 
-A recent development: missionaries from the **Divine Faith** have penetrated Fenurra and converted a number of tribes. The ruling Draconis (caretakers of the Speaker's Mantle for generations) have been forced into a precarious position. To absorb the encroaching ideology rather than fracture against it, they have arranged the political marriage of their daughter to the **theocratic prince**, the heir to the **Legea Empire**, the demigod-ruled theocracy that *is* the Divine Faith's polity. The Faith serves a god not of the bound thirteen, but one residing in the third (Postlife) layer of the planes; the Faith names him openly as **Legaun**, while what he was is settled at GM-tier. See [`../zuzental.md`](../zuzental.md), *Legea Empire → The Divine Faith* for the full canon, including the ⚿ GM Secret.
+A recent development: missionaries from the **Divine Faith** of the **Legea Empire**, the demigod-ruled theocracy in north-western Zuzental, have come north to Fenurra and converted a number of tribes. The Faith serves a god outside the bound thirteen, residing in the third (Postlife) layer of the planes; it names him openly as **Legaun**, while what he was is settled at GM-tier. Its converts are received under Legean names and take their law from the Faith's book, the **Legedi**, and a converted clan answers a question at a reader's door that the rest of Fenurra would bring to the War Council. See [`../zuzental/legea-empire.md`](../zuzental/legea-empire.md) for the full canon, including the ⚿ GM Secrets.
 
-The outcome of this gambit is unsettled. It may unify Fenurra under a new religious overlay; it may shatter the tribal balance entirely; or it may drag Fenurra into the simmering law-vs-law theological argument between Forseti's Zuzental and the Empire's Faith.
+The ruling Draconis, caretakers of the Speaker's Mantle for generations, hold a Mantle that now has to mediate between tribes who answer to the council and clans who answer to a book. How they will meet it is unsettled. *(A Draconis–Legea marriage, earlier canon, is parked: see `docs/open-threads.md`, *Parked*.)*
 
 ---
 
