@@ -497,6 +497,9 @@ assetgen.sh packswap             # Base copy with every rule in pack-swap.json a
     clusters, grooved karst peaks.
   - Round 3: 16 more of the four kept kinds (seeds 31-46, all clean, no background peaks): 32
     installed.
+  - Real export (`fullswap`, 86 s): all 141 Tang mountains became pillars, and the Air Monastery
+    ring reads like Wonderdraft's again (narrow pillars, the ring's inside open, the lone crag a
+    slim pillar). The square blocks of the offline render do not show: its soft-alpha handling.
   - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
     this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with

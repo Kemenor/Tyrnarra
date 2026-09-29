@@ -20,8 +20,8 @@ every working session.
   - `Tyrnarra_2.5D_God_Cities`: two per god-city.
   - `Tyrnarra_2.5D_Landmarks`: standing stones, obelisk, lighthouse, shrine, statue, bridge,
     beacon, portal arch.
-- **Last real Wonderdraft test** (`fullswap`, 2026-09-28): every region reads close to the
-  built-ins (numbers in the README results log).
+- **Last real Wonderdraft test** (`fullswap`, 2026-09-30): every region reads close to the
+  built-ins, the Air Monastery's karst ring included (numbers in the README results log).
 - **Main.wonderdraft_map** is on Wonderdraft's built-in art, the baseline for every comparison.
   The version with bought art is kept as "Main (after pack swap 2026-09-26)". Never modify any
   `Main*.wonderdraft_map` unless the user asks.
