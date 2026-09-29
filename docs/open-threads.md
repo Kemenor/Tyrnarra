@@ -99,7 +99,7 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **A local language definition.** The tongue itself: its name (coined per the naming rule, etymology in the glossary); who speaks it and where (the whole region, the household, the rite, one trade or class); how it sits beside Talanese (a bilingual norm like Kotokoe, a Talanese dialect with a local lexicon, a ritual survival, a lost tongue kept only in names); and what of it surfaces in the region's names. A region that speaks only Talanese is a valid answer when its history earns it (a Golden-Era foundation, a rail town); then name its dialect.
 - **Names already in canon.** Per region, decide whether the existing Dark-Era institution and place names are re-rendered into the new word-base or kept as Talanese-era survivals; the naming-strata ladder gives either reading a history. Page mirrors follow on the publish signal.
 
-**First decision, before the pass.** Whether the god-cities carry registers of their own or speak their host region's; their mixed populations may argue for a city register layered over the host's.
+**God-cities (GM, 2026-09-29).** A god-city gets **its own naming scheme** and **speaks its host region's tongue**. So its word-base follows the host's language, and what is its own is the personal-name structure (and any naming habits of the city's). One reconcile follows: **Valreka and Galdua Jendea** share one row today (Tamazight, the whale names). The whale structure is Valreka's, so Galdua Jendea needs a personal-name structure of its own over the shared Tamazight base, plus the local-tongue definition Valreka then speaks.
 
 **Built regions with no register (census 2026-09-29):**
 - **Vindul:** Baerfrost · Air Monastery · Fellibylur · Haizava
@@ -113,7 +113,7 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **Askamira:** Frae City
 - **Ehizahar:** Veidrath · Ardo Beroa (its lore file has *What an islander is called*; it needs the table row and glossary block)
 - **Zuzental:** Emerald Isles · Legea Empire · Lograth
-- **Lioaru:** Lost Kingdom (the Storveldi tongue is lost; the cursed-born city may earn a register at its build)
+- **Lioaru:** Galdua Jendea (see the Valreka reconcile above) · Lost Kingdom (the Storveldi tongue is lost; the cursed-born city may earn a register at its build)
 
 **Rows to firm up.** Emarrea (*kitsune convention*), Fenurra (*Fenurran tribal convention*) and Haizetsua (*Tengu register*, *Tengu convention*) name a convention where the table wants the structure; spell each out in the shape of the Valreka and Nahaskel rows, and give each a local-tongue definition to match Kotokoe's.
 
