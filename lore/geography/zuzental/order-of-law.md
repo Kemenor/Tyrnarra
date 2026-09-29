@@ -84,7 +84,7 @@ The Order does not know. The Trimpon feels it and cannot name it: the weight of 
 
 ## Drukha and the Desi
 
-**Drukha** stands at the mouth of the great river on the south-east coast, a port of about ninety thousand where everything that crosses the Order's country arrives or leaves. The eastern line from Merkavar crosses into Zuzental at Crossroads and runs down the river valley to the Drukha yards; the ferry for Middle Isle and Oathmoore leaves from the harbour wall every tide; the river-barges come down from the west. The Order's house in Drukha stands on the quay, and the cutting of knots happens in its hall, in public, every morning of the year.
+**Drukha** stands at the mouth of the great river on the south-east coast, a port of about ninety thousand where everything that crosses the Order's country arrives or leaves. The eastern line from Merkavar crosses into Zuzental at Crossroads and runs north through the Order's country toward Lograth, and a branch follows the river down to the Drukha yards; the ferry for Middle Isle and Oathmoore leaves from the harbour wall every tide; the river-barges come down from the west. The Order's house in Drukha stands on the quay, and the cutting of knots happens in its hall, in public, every morning of the year.
 
 The country is governed from here. The **Desi** is the first lay officer, named by the Trimpon, and regent while the Trimpon is a child. Under the Desi the **Seneschals** keep the districts: the roads, the dykes, the granaries, the courts of ordinary law, the works. A foreign envoy is received by the Desi in Drukha; a treaty is sealed by the Trimpon in Kyrrskog; a new bridge is planned by the Seneschals and built by the sentenced.
 

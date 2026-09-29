@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order of Law · Zuzental · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #d9904e;   /* sundu saffron · 7.48:1 on Style B bg */
+    --card-bg: rgba(34,22,12,0.55);
+  }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids */
+  .rule-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .rule-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="order-of-law">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a><span class="sep">›</span><span>Order of Law</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Order of Law</div>
+    <div class="page-subtitle">Zuzental Sub-Region · Contemplative Order · The Court of One</div>
+    <div class="page-flavor">You are the only court that can judge you.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd><i>Order of Law</i> is plain Talanese from the hinge of the Golden and Dark Eras: the order of those who hold themselves to the law. The forest is <b>Kyrrskog</b>, far older than the Order; the monastery at its heart is the <b>Ankerhold</b>; the capital on the coast is <b>Drukha</b>.</dd>
+    <dt>Position</dt><dd>South-eastern <a href="/setting/talan/domains/zuzental/zuzental.html">Zuzental</a>, the largest country in the domain. The <a href="/setting/talan/domains/zuzental/thousand-kingdom.html">Thousand Kingdom</a> lies north, with <a href="/setting/talan/domains/zuzental/lograth/lograth.html">Lograth</a> on its mountain just across the line; the <a href="/setting/talan/domains/zuzental/legea-empire.html">Legea Empire</a> north-west, meeting it at the lake; the Namur Republic west, across a knot of mountains; the great river runs the whole southern border, with <a href="/setting/talan/domains/zuzental/crossroads.html">Crossroads</a> on it at the tri-point and <a href="/setting/talan/domains/egulon/harro-distiratsua/harro-distiratsua.html">Harro Distiratsua</a> beyond; the Hafra strait lies east, with the <a href="/setting/talan/domains/zuzental/emerald-isles.html">Emerald Isles</a>' Middle and Southern Isles across it.</dd>
+    <dt>Terrain</dt><dd>Farm country and heath in the north, drying to sandy steppe in the south-west; river valleys and hill country between, with the mountains on the Namur line. In the east-centre stands Kyrrskog, a forest the size of a kingdom, with the Ankerhold at its heart. Drukha stands on the south-east coast at the river's mouth.</dd>
+    <dt>Character</dt><dd>
+      <i>You are the only court that can judge you</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Court of One</span><span class="pill">The Contrary</span><span class="pill">The Sundu</span><span class="pill">The Ever-Knot</span><span class="pill">The Found Trimpon</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>About four million, Elves, Humans, and Hobgoblins together, with no people in charge of the place; pilgrims from every domain on the forest road.</dd>
+    <dt>Tongue</dt><dd>Talanese; the country's names are in its own register.</dd>
+    <dt>Faith</dt><dd>Forseti is honoured as the pattern of impartiality; the Order is no clergy of hers and swears on its Rule.</dd>
+    <dt>Rule</dt><dd>The <b>Trimpon</b>, found as a child and raised in Kyrrskog, holds the balance for life, over the <b>chapter</b> of the Ankerhold and the <b>Desi</b> and <b>Seneschals</b> who govern the country from Drukha.</dd>
+    <dt>Founded</dt><dd>About 1330 MR, as one hermit's cell in Kyrrskog; the country gathered around the Order in the Dark Era.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(217,144,78,0.5);">
+    <div class="gods-city-label">The Capital</div>
+    <div class="gods-city-name">Drukha</div>
+    <div class="gods-city-byname">At the river's mouth on the strait · the knots are cut on the quay</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-court-of-one" class="section-heading">The Court of One</h2>
+
+  <div class="voice-quote">
+    <p>"I told them a week. I had a horse to sell in Drukha on the Tuesday. I came out on the forty-first day with two knots and the horse long sold by my brother, and I have never been so glad to have been wrong about how long anything takes."</p>
+  </div>
+  <div class="voice-attrib">Mathis Rolant Ferre, a horse-trader of the Thousand Kingdom, on the forest road</div>
+
+  <div class="prose">
+    <p>Anyone may walk into Kyrrskog and ask to sit. The road runs five days under the trees from the forest's edge to the <b>Ankerhold</b>, and the monks walk it with anyone who comes. At the Ankerhold the sitter is given a <b>cell</b>: stone, one door, one chair, a bare wall facing the chair. A monk passes food through a hatch twice a day and asks nothing. The sitter stays until they have weighed their own case, what they did, whom it cost, what is owed, and set a verdict on themselves. Most sit a week or two. Some sit a season.</p>
+    <p>The sitter is alone with the case and free to leave the cell. A bell by the door calls a <b>listener</b>, a monk who sits outside the hatch and asks questions and answers none. A sitter with a verdict takes it out to the courtyards; a sitter whose verdict breaks there goes back to the cell and sits again. Most walk between the cell and the courtyard two or three times before a verdict holds.</p>
+    <p>People come at the turns of a life. A widow after a death she thinks she caused. A captain before he takes a command. A man who drowned a boy on a dare forty years ago and was never caught. A queen's advocate who won a case she should have lost. They come from every domain, and more from abroad since the eastern line reached Crossroads and made the journey a matter of days.</p>
+    <p><b>The Contrary.</b> A verdict set in a cell is taken out to the courtyards to be tested, because the Order holds only a verdict that is truly meant. There the sitter meets a <b>Contrary</b>, a monk trained to argue the other side. The Contrary stands, the sitter sits, and the Contrary claps each challenge down onto the flagstones: <i>what did the boy's mother lose, and what did you give her?</i> If the verdict is too soft, the Contrary argues for the wronged. If it is too hard, the Contrary argues for the sitter.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"The soft ones everyone expects. It's the hard ones that take the days. A man who wants forty years for a lie told to his father is not being honest, he's being proud, and I will clap at him until he sees it."</p>
+  </div>
+  <div class="voice-attrib">Pema Lowe, a Contrary of the Ankerhold</div>
+
+  <div class="prose">
+    <p>The courtyards are never quiet: the clapping carries under the trees at every hour, and pilgrims on the last mile of the road hear it before they see a wall. A verdict that survives its Contrary is knotted into a cord, and the sitter walks out with it.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">Tsopa · the Courtyard Practice</div>
+    <p style="margin-bottom:0;">The monks train on each other first. Every morning the chapter pairs off in the courtyards and argues its own cases, one standing and one seated, each taking the side against themselves; a novice is not made a Contrary until she can argue against her own verdict better than anyone else can.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cord" class="section-heading">The Cord</h2>
+  <div class="prose">
+    <p>The verdict is knotted into a <b>sundu</b>, a cord worn at the wrist: one knot for each year the sitter has set. The sentence is whatever the sitter set and the Contrary let stand, and it is served in the open. Years of labour on the Order's roads and dykes and on the harbour at Drukha. Restitution carried to the wronged's door, sometimes across three domains. A year of silence. A trade given up.</p>
+    <p>Each year the sentence is kept, a knot is cut at the Order's house in Drukha. When the last knot is cut the matter is closed, and in the Order's ground no one raises it again.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">The Ever-Knot</div>
+    <p style="margin-bottom:0;">A verdict larger than a life (a killing, a ruin that cannot be mended) cannot be paid in years. The sitter gives the life to the Order instead, and the cord carries a single knot that is never cut. The <b>ever-knotted</b> become monks of the Ankerhold. They stand beside the monks who took the vow with nothing owed, and the Order draws no line between the two.</p>
+  </div>
+
+  <div class="prose">
+    <p><b>What the cord is worth abroad.</b> The Order holds a served cord as a closed matter. Other courts hold it as they please. A Thousand Kingdom judge may count the knots in mitigation; Lograth takes no notice of a cord at all, since a knot proves nothing a court can test; a Legean reader has no page for it. The Order hands no one over and shields no one: a court that wants a sitter may take him at the Order's border, and if he means his verdict he goes on serving it in their prison.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"You get two kinds on this line. The ones who hide the wrist, they're foreigners and it's their first year. The ones who don't, you can lend money to."</p>
+  </div>
+  <div class="voice-attrib">Dawa Ferris, a rail-conductor on the Crossroads line</div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-an-orderman-is-called" class="section-heading">What an Orderman Is Called</h2>
+  <div class="prose">
+    <p>A child receives two names from a monk of the Order, drawn from the country's stock of a few hundred names. After sitting the Court of One, a person may <b>set one of them down and take a name of their own choosing</b>: anything at all except a name the monks give. It is the only choice about their name a person ever makes, and they make it about themselves. Many choose a word; some choose a foreign name; a few take the name of the person they wronged.</p>
+    <p>So a name tells you whether its bearer has sat. <b>Sonam Rinchen</b> has not. <b>Sonam Weathers</b> has, and chose <i>Weathers</i> the day he walked out. Marriage changes nothing, and the ever-knotted choose like everyone else.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Monk-given</b></p>
+    <div class="pill-row"><span class="pill">Tenzin</span><span class="pill">Pema</span><span class="pill">Dorje</span><span class="pill">Norbu</span><span class="pill">Dawa</span><span class="pill">Nyima</span><span class="pill">Sonam</span><span class="pill">Lhamo</span><span class="pill">Yangchen</span><span class="pill">Tashi</span><span class="pill">Dolma</span><span class="pill">Kunsang</span><span class="pill">Choden</span><span class="pill">Jigme</span><span class="pill">Namgyal</span><span class="pill">Tsering</span><span class="pill">Rinchen</span><span class="pill">Lobsang</span><span class="pill">Palden</span><span class="pill">Dechen</span></div>
+    <p style="margin:14px 0 6px;"><b>Chosen</b></p>
+    <div class="pill-row"><span class="pill">Weathers</span><span class="pill">Lowe</span><span class="pill">Ferris</span><span class="pill">Sorrel</span><span class="pill">Afterward</span><span class="pill">Mercy</span><span class="pill">Sparrow</span><span class="pill">any name on Talan</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.7;">
+      <li><i>Sonam Rinchen</i>, who has not yet sat</li>
+      <li><i>Sonam Weathers</i>, the same man after</li>
+      <li><i>Pema Lowe</i>, a Contrary</li>
+      <li><i>Norbu Keelan</i>, a Seneschal</li>
+      <li><i>Dawa Sorrel</i>, the Trimpon</li>
+    </ul>
+  </div>
+
+  <div class="prose">
+    <p><b>The young.</b> Village children who have not yet walked the forest road knot <b>pear-cords</b> for each other out of grass: three knots for a stolen pear, one for a lie about the dog. Parents pretend to be scandalised. The monks, who were children in the same villages, cut the grass knots with great ceremony when asked.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-trimpon" class="section-heading">The Trimpon</h2>
+  <div class="prose">
+    <p>The Order is ruled from the forest by the <b>Trimpon</b>, and the Trimpon is found.</p>
+    <p>When a Trimpon dies, the chapter sends monks out through the country's villages to look for a child of four or five who judges like the old: a child who hears two neighbours quarrel over a fence and says which of them is lying and why, and is right. The finders bring the candidates to the Ankerhold, and the chapter sets them the old test: a quarrel acted out in the courtyard by two monks, each in the right about half of it. The child who weighs both halves true is the Trimpon. The Order teaches that the forest recognises its own.</p>
+    <p>The found child is raised in the Ankerhold for fifteen years in judgment and in the country's business, while the <b>Desi</b> governs as regent. At twenty the Trimpon walks into a cell and sits the Court of One like anyone else, and comes out with a chosen name; it is the one day in a generation the whole country waits on a name. The present Trimpon was found in 2496 at the age of five as <i>Dawa Lhamo</i>, sat in 2511, and came out as <b>Dawa Sorrel</b>.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"We had the ferry flags up by noon. Nobody knew what she'd pick. My mother said a Trimpon always picks something you'd never guess and then it fits her like a glove for fifty years. Sorrel. We said it to each other all afternoon."</p>
+  </div>
+  <div class="voice-attrib">Choden Marrow, a ferry-hand of Drukha, on the day in 2511</div>
+
+  <div class="prose">
+    <p>The Trimpon owes nobody: no family, no house, no purse. The Trimpon seals the Order's treaties, names the Desi, and hears the cases the chapter cannot settle.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Found Are Returned</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; A Second Pass</div>
+      <p style="margin-top:0;">The test finds a soul. An ever-knotted monk who dies with the verdict truly meant and still unpaid comes before <b>Epairima</b> in person at Dauria, because a soul that has judged itself that hard is a weighty soul, and sometimes the Judge of Souls issues her rare <b>reversal verdict</b>: the soul goes back to the Life Layer for a second pass, to pay the rest. The children who judge like the old are these souls, carrying the old verdict under the new life.</p>
+      <div class="secret-grid-2">
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">What the Order believes</div>
+          <div class="secret-card-title">The forest recognises its own</div>
+          <div class="secret-card-body">The chapter tests for a gift of judgment and finds it. The Order does not know what it finds.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">What is true</div>
+          <div class="secret-card-title">Every Trimpon was an ever-knot</div>
+          <div class="secret-card-body">Each Trimpon is a returned ever-knot still paying. The Trimpon feels it and cannot name it: the weight of a debt with no remembered cause.</div>
+        </div>
+      </div>
+      <div class="secret-coda">The chosen name at twenty is the one trace. Trimpons tend to choose, without knowing why, the name they chose in the life before. The present Trimpon's <i>Sorrel</i> was also the chosen name of an ever-knotted monk of the Ankerhold who died in 2490, the year before her birth, and the chapter's own register holds both names.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="drukha-and-the-desi" class="section-heading">Drukha and the Desi</h2>
+  <div class="prose">
+    <p><b>Drukha</b> stands at the mouth of the great river on the south-east coast, a port of about ninety thousand where everything that crosses the Order's country arrives or leaves. The eastern line from Merkavar crosses into Zuzental at Crossroads and runs north through the Order's country toward Lograth, and a branch follows the river down to the Drukha yards; the ferry for Middle Isle and Oathmoore leaves from the harbour wall every tide; the river-barges come down from the west. The Order's house in Drukha stands on the quay, and the cutting of knots happens in its hall, in public, every morning of the year.</p>
+    <p>The country is governed from here. The <b>Desi</b> is the first lay officer, named by the Trimpon, and regent while the Trimpon is a child. Under the Desi the <b>Seneschals</b> keep the districts: the roads, the dykes, the granaries, the courts of ordinary law, the works. A foreign envoy is received by the Desi in Drukha; a treaty is sealed by the Trimpon in Kyrrskog; a new bridge is planned by the Seneschals and built by the sentenced.</p>
+    <p><b>No one judges others who has not first judged themselves.</b> Any lay person may be a Seneschal who has sat the Court of One, whatever the verdict; a clean sitting counts as fully as five knots. A candidate's sitting is argued harder in the courtyards than anyone else's, because a verdict of <i>nothing owed</i> from someone who plainly owes is exactly what a Contrary is there to break.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"They clapped at me for eleven days about my uncle's mill. I'd have told you I owed nothing. I owed him an apology and a roof, and I've paid both, and I'm a better Seneschal for it."</p>
+  </div>
+  <div class="voice-attrib">Norbu Keelan, Seneschal of the river district</div>
+
+  <div class="prose">
+    <p>The works are the country's great enterprise. The Order's roads are the best kept in Zuzental, its river dykes hold, and the Drukha harbour wall has been rebuilt three times by people paying off their own verdicts. Materials come from the Order's tithe, and the labour from the cords of some forty thousand sitters serving at any one time.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="kyrrskog" class="section-heading">Kyrrskog and the Ankerhold</h2>
+  <div class="prose">
+    <p>Kyrrskog is quiet the way deep water is quiet. The trees are old and tall and close, the ground is soft, and sound dies a few yards off the road.</p>
+    <p>The <b>Ankerhold</b> at its heart began as one cell. A hermit walked into the forest about 1330 MR, as the Golden Empire fell, and sat in a stone cell he built himself; he called himself <b>Anker</b> and never said what he owed. His cord hangs in the Ankerhold with one knot uncut, the first ever-knot. Others came to sit, and some stayed. Through the Dark Era the self-sentenced kept the roads open and the dykes up when no crown in the south could, and the country gathered around the only institution still working; by the end of the dark the Order was the state.</p>
+    <p>Today the Ankerhold is a town of stone under the trees: some six thousand monks, the rows of cells, the courtyards, the chapter-house, and the Trimpon's hall at the centre.</p>
+  </div>
+
+  <div class="popular-belief">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Who Anker Was</button>
+    <div class="legend-era-content">
+      <p>Everyone in the country has a theory. He was an Imperial general who lost the south. He was the Emperor's own physician. He was the man who lit the first lamp in the mines in 1321. Children say he is still sitting in his first cell, and that the knot on his cord is warm.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="peoples" class="section-heading">Peoples</h2>
+  <div class="prose">
+    <p>Elves, Humans, and Hobgoblins live throughout the country, and each sits the Court in its own way. Elves sit longest, and the Contraries say they argue with the dead. Humans sit fast and come back, twice or three times in a life. Hobgoblins set the hardest verdicts, and their Contraries spend more days arguing a Hobgoblin <i>down</i> than anyone else; a Hobgoblin with his last knot due will sometimes ask for it not to be cut.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="crossroads" class="section-heading">Crossroads</h2>
+  <div class="prose">
+    <p><a href="/setting/talan/domains/zuzental/crossroads.html">Crossroads</a> stands inside the Order's ground, on the southern river, and the Order has never ruled it. The Seneschal of the south district keeps a house in the town and collects no toll. The town's three bridges are kept by the sentenced, and travellers crossing to the Spider's Silk Inn walk past men and women repointing the stonework with their knots at their wrists.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · Lograth Wants to Hear the Contraries</div>
+    <p style="margin-bottom:0;">Every sitter speaks their whole case aloud to a Contrary, and some of those cases are crimes a Lograth court is still trying to prove. Lograth's advocates have petitioned the Concord of Courts to compel a Contrary to testify. The Order holds that what is said in the courtyards belongs to the sitter; Lograth holds that a truth kept from a court is a seal, and every seal can be petitioned. The Concord has not ruled, and three Contraries have been named in the petition.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Dawa Sorrel</div>
+      <p>The Trimpon. Found in 2496 as Dawa Lhamo; sat and chose her name in 2511.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Anker</div>
+      <p>The founding hermit, about 1330 MR; the first ever-knot.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Norbu Keelan</div>
+      <p>Seneschal of the river district.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Pema Lowe</div>
+      <p>A Contrary of the Ankerhold.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Dawa Ferris</div>
+      <p>A rail-conductor on the Crossroads line.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Choden Marrow</div>
+      <p>A ferry-hand of Drukha.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Mathis Rolant Ferre</div>
+      <p>A horse-trader of the Thousand Kingdom who sat for forty-one days.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/zuzental/zuzental.html"><b>Zuzental →</b></a> · The parent domain: Forseti's, the domain of judgment.</li>
+      <li><a href="/setting/talan/domains/zuzental/lograth/lograth.html"><b>Lograth →</b></a> · The Judgment City across the northern line, and its petition to hear the Contraries.</li>
+      <li><a href="/setting/talan/domains/zuzental/thousand-kingdom.html"><b>Thousand Kingdom →</b></a> · The northern neighbour, whose judges count the knots in mitigation.</li>
+      <li><a href="/setting/talan/domains/zuzental/legea-empire.html"><b>Legea Empire →</b></a> · The north-western neighbour, where the answer is already written.</li>
+      <li><a href="/setting/talan/domains/zuzental/crossroads.html"><b>Crossroads →</b></a> · The town on the southern river the Order has never ruled.</li>
+      <li><a href="/setting/talan/domains/zuzental/emerald-isles.html"><b>Emerald Isles →</b></a> · Across the strait: the Middle Isle ferry leaves Drukha every tide.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The Order's shape is settled; its named detail is the kind future story will fill in.</div>
+    <ol>
+      <li><b>The Desi.</b> The present first lay officer, by name.</li>
+      <li><b>The districts.</b> The Seneschals' districts by name, and the towns of the country beyond Drukha.</li>
+      <li><b>The chapter.</b> Its offices, and how the finders are chosen.</li>
+      <li><b>Anker's debt.</b> The chronicle has none.</li>
+      <li><b>The Concord's ruling.</b> Whether a Contrary can be made to testify.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · ZUZENTAL · ORDER OF LAW</div>
+
+</div>
+
+</body>
+</html>
