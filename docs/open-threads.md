@@ -87,10 +87,38 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 **Open.** What languages mortals actually speak day-to-day, and what they read when they read old things.
 - **Talanese as Common Tongue.** Origin (post-Crimson-Rain trade lingua? pre-Crimson-Rain survivor?), how universal it actually is, where it's a second tongue and what the first one is, whether the bound thirteen speak through it natively or through their own divine tongue.
 - **The Old Tongue.** Does a single ancestor language underlie the Basque/Icelandic deep stratum, or are the two strains the modern echo of two separate pre-Crimson-Rain language families? Either reading is workable; the naming rule does not commit. Implication for scholars who try to read genuinely Lost-Era inscriptions.
-- **Regional tongues.** Fenurran ritual register, Kotokoe (the kitsune cultural tongue), Sortalde dynastic register, Dragon's Reach internal speech (still using pre-corruption vocabulary in places?), Bolverk's internal scripts (Lostar writes her Library in a personal script per bolverk.html; that's one named example). Tahu Tangata also flagged in geography/sumendar.md as having a partially lost old name.
+- **Regional tongues.** Worked region by region under *[Cultures] Naming scheme and local tongue for every built region* (below); this bullet keeps the cross-regional questions. Fenurran ritual register, Kotokoe (the kitsune cultural tongue), Sortalde dynastic register, Dragon's Reach internal speech (still using pre-corruption vocabulary in places?), Bolverk's internal scripts (Lostar writes her Library in a personal script per bolverk.html; that's one named example). Tahu Tangata also flagged in geography/sumendar.md as having a partially lost old name.
 - **The Storveldi tongue.** Completely lost in the chronicle record per the Storveldi page TBDs. Whether *anything* survives in inscription, modern loanword, or Blackened-Lands fragment is open.
 - **Magical languages.** Does Arcane / Occult / Primal / Divine magic each have a working tongue? Divine cleric speech to one's god, Primal druidic, the Elden tongue (named-as-lost in elden.html TBDs).
 **Where.** [lore/geography/_continent.md](../lore/geography/_continent.md), *The Common Tongue: Talanese* is the natural anchor; [lore/cosmology.md](../lore/cosmology.md) for any cosmologically-significant tongues (the Wellspring-leak *valleys that spoke languages that produced what they named* is a hook waiting for canon); [lore/glossary.md](../lore/glossary.md) for any newly-coined language names.
+
+### [Cultures] Naming scheme and local tongue for every built region *(rolling)*
+**Decided.** A regional register has two parts: a **word-base** (the real-world language that names the region's places and things, shareable with neighbours) and a **personal-name structure** (unique to the region; a name tells you the bearer's culture). Canon in [lore/geography/_continent.md](../lore/geography/_continent.md), *Naming strata across the eras*, with the register table; each structure is recorded in [lore/glossary.md](../lore/glossary.md) under its region's block, and the region's own file carries a *What a … is called* section (Villtur, Vernua, Kaosadaemi, Argia Esfera are the pattern). The table's rule is that a region defines its register at its build; everything built before the practice began (the Valreka deepening, 2026-09-17) carries none.
+**Open (GM, 2026-09-29).** Go through every built region and give each two things:
+- **A naming scheme.** Word-base plus personal-name structure, recorded in the register table, the glossary block, and a *What a … is called* section in the region's lore file. The word-base is chosen against the neighbours so the region sounds like itself; the structure grows from the region's own culture (Valreka's whales, Nahaskel's coin, the Anadi's woven story) and is never reused.
+- **A local language definition.** The tongue itself: its name (coined per the naming rule, etymology in the glossary); who speaks it and where (the whole region, the household, the rite, one trade or class); how it sits beside Talanese (a bilingual norm like Kotokoe, a Talanese dialect with a local lexicon, a ritual survival, a lost tongue kept only in names); and what of it surfaces in the region's names. A region that speaks only Talanese is a valid answer when its history earns it (a Golden-Era foundation, a rail town); then name its dialect.
+- **Names already in canon.** Per region, decide whether the existing Dark-Era institution and place names are re-rendered into the new word-base or kept as Talanese-era survivals; the naming-strata ladder gives either reading a history. Page mirrors follow on the publish signal.
+
+**First decision, before the pass.** Whether the god-cities carry registers of their own or speak their host region's; their mixed populations may argue for a city register layered over the host's.
+
+**Built regions with no register (census 2026-09-29):**
+- **Vindul:** Baerfrost · Air Monastery · Fellibylur · Haizava
+- **Lautara:** Itsasalda · Dreaming Cape · Azkataria · Atarialda · Merkavar · Rika Tikur (the domain-wide merchant register, *[Cultures] Lautaran people-anchor cultural register*, lands first and frames these)
+- **Myrkono:** Myrria · Ilun Tasun · Itzasoa · Izarelai · Three Pines
+- **Floteyn:** Uravel · Balatur Erui · Floating Isles (the Nation Afloat as one register, or one per island) · Balaena · Breidey
+- **Brauogi:** Lurrath · Sugeiturri · Haldmark · Greenward · Tvisol · Baratalda · Hirubaso · Soul Tree
+- **Sumendar:** Eldara · Order of Steam (Old Dwarvish is named as a tongue; the register is unwritten) · Dragon's Reach
+- **Egulon:** Ljosarn · Harro Distiratsua · Lua Lasai (the last two already earmarked to the Iberian family in *[Egulon] Regional naming register pass*)
+- **Ezkudon:** Thekkavar
+- **Askamira:** Frae City
+- **Ehizahar:** Veidrath · Ardo Beroa (its lore file has *What an islander is called*; it needs the table row and glossary block)
+- **Zuzental:** Emerald Isles · Legea Empire · Lograth
+- **Lioaru:** Lost Kingdom (the Storveldi tongue is lost; the cursed-born city may earn a register at its build)
+
+**Rows to firm up.** Emarrea (*kitsune convention*), Fenurra (*Fenurran tribal convention*) and Haizetsua (*Tengu register*, *Tengu convention*) name a convention where the table wants the structure; spell each out in the shape of the Valreka and Nahaskel rows, and give each a local-tongue definition to match Kotokoe's.
+
+**Approach.** Rolling, one domain at a time, neighbours together so their sounds are chosen against each other; grill each register (`grill-me-lore`) before it locks. Lore first, HTML on the publish signal.
+**Where.** [lore/geography/_continent.md](../lore/geography/_continent.md), *Naming strata across the eras* (register table) and *The non-Talanese tongues*; [lore/glossary.md](../lore/glossary.md), each region's block; the region's file under [lore/geography/](../lore/geography/).
 
 ### [Cosmology] Calendar of Holy Days & festival cycle
 **Decided.** **GR/MR dating** is locked, hinge at Crimson Rain (0 GR / 0 MR), current year 2532 MR ([lore/timeline.md](../lore/timeline.md) + [lore/cosmology.md](../lore/cosmology.md), *Calendar*). A handful of named annual rites exist: **Festival of the Fox Lanterns** at Kawaakari, **Passing of the Tails** in the Heartcourt, **Dance of the Sulfur Fire** in Fenurra, the Lantern Stairs pilgrimage at Myrria.
