@@ -6,7 +6,7 @@
 
 **Position:** north-western Zuzental, on the Midarra coast. The Hegandi escarpment walls the north, with the Vernua Dominion above it; the Thousand Kingdom lies east, across the line where House Vester holds Hagwold; the Namur Republic lies south-west and the Order of Law south. The eastern half of **Hringseyja**, across the Quietline, is Legean.
 
-**Terrain:** open green plain, farmed to the horizon. Rivers come down off the escarpment to a lake in the middle of the country, with low hills east of it; a river runs the southern border to a second lake at the Thousand Kingdom corner. In the south-west three sheer needles of grey rock stand straight out of the plain: the **Orratzak**, with Debreqal at their eastern foot and the high reading-house on the tallest.
+**Terrain:** lowland farm country across most of its breadth: river valleys and long rolling ground, woods along the rivers, heath and pasture on the higher ground. Rivers come down off the escarpment to a lake in the middle of the country, with low hills east of it; a river runs the southern border to a second lake at the Thousand Kingdom corner. In the south-west three sheer needles of grey rock stand straight out of the lowland: the **Orratzak**, with Debreqal at their eastern foot and the high reading-house on the tallest.
 
 **Character:** the answer is already written.
 

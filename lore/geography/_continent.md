@@ -62,6 +62,8 @@ The cities set the floor. A kingdom capital holds one to three percent of its co
 
 **The map's scale bar reads 0–1000 miles** (GM, 2026-09-25): on the 8192 px terrain original, **1 px = 0.5 mile**. At that scale Talan runs about **3,500 miles** west to east and north to south, about **4,000 miles** (6,400 km) from its north-west coast to its south-east coast, and covers about **7.5 million square miles**: the size of South America, in a round, compact shape. The thirteen god domains average about **575,000 square miles** (about Alaska each); the forty-odd regions average **150,000–190,000 square miles** (about Spain or California), with Villtur, the Basogur, and the southern deserts far larger and the island realms far smaller. The **Midarra** runs about 2,650 miles end to end and covers about 1.9 million square miles, twice the Mediterranean. Travel speeds built on this scale are in [`../transport.md`](../transport.md), *Speeds*.
 
+**The map shows landmarks, not land cover** (GM, 2026-09-29). At this scale the map is an overview: it draws the borders, coasts, major rivers, named ranges and forests, capitals and god-cities, and lore does not contradict what it draws. Where the map shows nothing, that is no evidence of emptiness: a region the size of Spain holds river valleys, hill country, lesser woods, heath, marsh, and dozens of towns, and lore adds features below the map's resolution freely. Anything lore adds that would show at the map's scale (a range, a large forest, a lake, a named town) goes to [`../../docs/map-todo.md`](../../docs/map-todo.md) to be drawn in at a detail pass.
+
 ---
 
 ## The Continental Rail Network
