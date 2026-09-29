@@ -112,7 +112,7 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **Ezkudon:** Thekkavar
 - **Askamira:** Frae City
 - **Ehizahar:** Veidrath · Ardo Beroa (its lore file has *What an islander is called*; it needs the table row and glossary block)
-- **Zuzental:** Emerald Isles · Lograth · Legea Empire (**naming scheme done 2026-09-29**, `geography/zuzental/legea-empire.md`, *What a Legean is called*; its local tongue still open)
+- **Zuzental:** Emerald Isles · Lograth · Order of Law (**naming scheme done 2026-09-29**, `geography/zuzental/order-of-law.md`; its local tongue still open) · Legea Empire (**naming scheme done 2026-09-29**, `geography/zuzental/legea-empire.md`, *What a Legean is called*; its local tongue still open)
 - **Lioaru:** Galdua Jendea (see the Valreka reconcile above) · Lost Kingdom (the Storveldi tongue is lost; the cursed-born city may earn a register at its build)
 
 **Rows to firm up.** Emarrea (*kitsune convention*), Fenurra (*Fenurran tribal convention*) and Haizetsua (*Tengu register*, *Tengu convention*) name a convention where the table wants the structure; spell each out in the shape of the Valreka and Nahaskel rows, and give each a local-tongue definition to match Kotokoe's.
@@ -254,7 +254,7 @@ Items where the world has decided *what* but not *much*: placements and structur
 - **Tahu Tangata** (Sumendar). *To be defined in the future* (stub dropped, GM 2026-09-28). Old name, meaning partially lost. Built neighbours place it on the south-west arc of the Order of Steam bay, beside Rika Tikur, the Dreaming Cape and Emarrea, with the Sumendar rail line through it.
 - **No Man's Land** (Sumendar). *To be defined in the future* (stub dropped, GM 2026-09-28). Houses Eldara; the Ash-Binder's dead lair is earmarked here.
 - **Namur Republic** (Zuzental). *To be defined in the future* (stub dropped, GM 2026-09-28). Map: the south-west coastal wedge of Zuzental on the Midarra, with an unnamed capital icon on the coast.
-- **Order of Law** (Zuzental). *To be defined in the future* (stub dropped, GM 2026-09-28). Map: the forested middle and south-east of Zuzental to the Emerald Isles strait, with a cathedral icon in the forest and an unnamed capital on the south coast; runs the mainland port for Middle Isle (`emerald-isles.html`).
+- ~~**Order of Law** (Zuzental)~~ **Built (2026-09-29)**: the contemplative order of the Court of One; the Ankerhold in Kyrrskog, the sundu and the ever-knot, the found Trimpon, the Desi and Seneschals at Drukha. Full canon: `lore/geography/zuzental/order-of-law.md`.
 - ~~**Kaosadaemi Principality** (Nashavel)~~ **Built (2026-09-23)**: a Thousand principality orphaned by the Dark Era and gone Gnome by staying; chaos tuned to order under the ring. Full canon: `lore/geography/nashavel/kaosadaemi.md`.
 - ~~**Vernua Dominion** (Nashavel)~~ **Built (2026-09-23)**: the weather as the chaos, never the same twice, delivered every morning; the Maors and the comhar under the Share; the charter-cast the coin turns against; the Conrasu home. Full canon: `lore/geography/nashavel/vernua.md`.
 - ~~**Basogur Jungle** (Nashavel/Ehizahar, shared)~~ **Built and published (2026-09-25)**: a place that makes stories; Basajun the walking demi-god; the road and its two prices; the Anadi web-hold villages and Vanara guide-clans; the Stitchery web-sealed; three registers. Full canon: `lore/geography/nashavel/basogur.md`.

@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Namur Republic, Order of Law (Zuzental), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Namur Republic (Zuzental), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -31,6 +31,8 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 - **Star Island capital**: its capital icon has no city name yet; name it at the Star Island build (the check accepts the region label on the icon as a name, as for Rika Tikur, so it no longer flags this).
 
 ## Backlog for the next map edit
+
+- **Drukha, the Ankerhold, Kyrrskog** (Order of Law, Zuzental; named at the 2026-09-29 build). Label the capital icon on the river mouth (~6815, 5346) **Drukha** (City Labels); label the cathedral icon in the central forest (~6786, 4978) **the Ankerhold**; consider a terrain label **Kyrrskog** on the forest itself. The lore adds farm country and heath in the north, steppe in the south-west, river valleys and hill country between (below map resolution, per the landmarks rule).
 
 - **Debreqal and the Orratzak** (Legea Empire, Zuzental; named at the 2026-09-29 region pass). Label the Legea capital icon (~5934, 4766) **Debreqal** (City Labels); consider a small terrain label **Orratzak** on the three needle peaks west of it (~5800–5890, 4710–4790), where the cathedral icon (~5825, 4668) is the high reading-house. The keep on Legea's half of Hringseyja stays unnamed until its build.
 

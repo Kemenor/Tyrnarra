@@ -444,7 +444,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **The Bridgelands**: modern English. The far-northern outer islands of the Emerald Isles kingdom, a cluster of five islets off Villtur's east coast some 950 miles north of the main three, named for the spanning Magitech bridges the kingdom built between them. The bridges are substantial Arcanotech works, capable of carrying caravan traffic across the Cloud-Sea-touching gaps that would otherwise require cloudship hops. Bridge engineering doubles as soft-power signal: *the kingdom that built the bridges is the kingdom Sortalde does business with.* Chronicler's by-name: *the Bridge-Pearls.*
 - **Legea Empire**: Basque *legea*, "the law" (*lege* law + the article *-a*), unchanged; the ground's name before the Empire, taken by the Knight's camp. A hereditary demigod theocracy of the Divine Faith of **Legaun**, where the **Irakul** read the answer to any question from the **Legedi**. Full canon: `geography/zuzental/legea-empire.md`; its register below, *Faction proper nouns → Legea Empire: the Legean register*.
 - **Namur Republic**: modern English
-- **Order of Law**: modern English
+- **Order of Law**: plain Talanese, from the hinge of the Golden and Dark Eras (c. 1330 MR): the order of those who hold themselves to the law. The contemplative order of the **Court of One**, ruling the south-east of Zuzental. Full canon: `geography/zuzental/order-of-law.md`; its register below, *Faction proper nouns → Order of Law: the Order's register*.
 - **Crossroads**: modern English. Trade-nexus settlement on the southern tri-domain border where Zuzental, Lautara (Commerce), and Egulon (Light) meet. **Functionally independent** of all three; nominally a Zuzental sub-region by the geography of the tri-point but answers to no domain's law. Home of the **Spider's Silk Inn** (Matron Charna, ancient Anadi, weaver of enchanted silver silk that suppresses hostile magic). See `geography/zuzental.md`, *Crossroads → The Spider's Silk Inn*.
 
 **Nashavel (Chaos):**
@@ -926,6 +926,18 @@ Full canon in `geography/zuzental.md`, *Thousand Kingdom → The holdings* onwar
 - **Tesfa Worash ye-Orratzak**: Amharic *tesfa* (hope), a day-name; *worash* (heir), the heir's Deia. The heir, great-grandson of Amdeqal.
 - **The One Reading** (the succession rite); **the Unwritten** (a question no page answers); **page-riders**; **the latch-night**; **the day's page**; **the litany**; **the sixty-third volume**; **a quiet paling** (⚿ GM-tier): plain Talanese.
 - Day-names, Deia-words, and house-words: Amharic. Daughters: Tsehai (sun), Kokeb (star), Lemlem (green, growing), Tsega (grace), Hiwot (life), Mulu (full), Selam (peace), Aster (star), Yeshi, Alem (world). Sons: Tesfa (hope), Berhan (light), Abeb (flowering), Kebede (weighty, honoured), Tades (renewed), Desta (joy), Tamrat (wonder), Negash (reigning), Alemu (of the world), Fikre (my love). Deia: Gebere (farmer), Shemane (weaver), Negade (merchant), Wetadr (soldier), Tsehafi (scribe), Eregna (herder), Irakul (reader), Worash (heir). *ye-* "of"; houses Meda (field), Wenz (river), Gedel (cliff), Amba (flat-topped hill), Kolla (lowland).
+
+**Order of Law: the Order's register (pass of 2026-09-29):**
+- *The register.* Places and people in a **Tibetan** word-base, plain letters, light drift; the Order's practices and offices in plain Talanese; the forest in the deep stratum. Personal names: **two monk-given names**; after sitting the Court of One a person may set one down and take a **self-chosen name**, anything except a monk-given name. Full structure: `geography/zuzental/order-of-law.md`, *What an Orderman is called*.
+- **Kyrrskog**: Icelandic *kyrr* "still, quiet" + *skógur* "forest" → final *-ur* lost. "The still forest."
+- **The Ankerhold**: Middle English *anchorhold*, an anchorite's walled cell → *anchor* drifted to *anker*; also the founding hermit's chosen name, **Anker**.
+- **Drukha**: Tibetan *gru kha*, "ferry-landing," unchanged. The capital.
+- **Sundu**: Tibetan *srung mdud*, the knotted protection-cord → eroded to *sundu*. The cord of the Court of One.
+- **Trimpon**: Tibetan *khrims dpon*, "law-master, judge" → *Trimpon*. The found head of the Order.
+- **Desi**: Tibetan *sde srid*, the historical regent → *Desi*. First lay officer; regent during a Trimpon's minority.
+- **Tsopa**: Tibetan *rtsod pa*, "debate" → *Tsopa*. The courtyard practice.
+- **The Court of One**; **the Contrary**; **the listener**; **the ever-knot**; **Seneschal**; **pear-cord**: plain Talanese.
+- Monk-given names (Tibetan): Tenzin, Pema, Dorje, Norbu, Dawa (moon), Nyima (sun), Sonam, Lhamo, Yangchen, Tashi, Dolma, Kunsang, Choden, Jigme, Namgyal, Tsering, Rinchen, Lobsang, Palden, Dechen.
 
 **House Eisenhart (Order of Steam):**
 - **House Eisenhart**: Germanic-style compound (*Eisen* "iron" + *Hart* "hard"). Modern dwarven noble name. Fits the Order of Steam's modern stratum.
