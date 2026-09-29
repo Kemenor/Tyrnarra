@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Legea Empire, Namur Republic, Order of Law (Zuzental), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Namur Republic, Order of Law (Zuzental), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -31,6 +31,8 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 - **Star Island capital**: its capital icon has no city name yet; name it at the Star Island build (the check accepts the region label on the icon as a name, as for Rika Tikur, so it no longer flags this).
 
 ## Backlog for the next map edit
+
+- **Debreqal and the Orratzak** (Legea Empire, Zuzental; named at the 2026-09-29 region pass). Label the Legea capital icon (~5934, 4766) **Debreqal** (City Labels); consider a small terrain label **Orratzak** on the three needle peaks west of it (~5800–5890, 4710–4790), where the cathedral icon (~5825, 4668) is the high reading-house. The keep on Legea's half of Hringseyja stays unnamed until its build.
 
 **From the geography audit (GM rulings 2026-09-28; details in [`geo-audit-2026-09-28.md`](geo-audit-2026-09-28.md)):**
 - **Haizava** (Vindul, D1). Move the god-city's mark from open Baerfrost (~3085, 920) onto the great river's bend (~3100, 1210): the lore puts it on the river that runs the Baerfrost/Fellibylur border, the Eye anchored at the bend. The Air Monastery then lies to its north-east.
