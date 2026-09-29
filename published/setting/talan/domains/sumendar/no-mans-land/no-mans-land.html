@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Man's Land · Sumendar · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #d27a62;   /* cinder glow · 6.22:1 on Style B bg */
+    --card-bg: rgba(34,18,14,0.55);
+  }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids */
+  .life-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .life-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="no-mans-land">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/sumendar/sumendar.html">Sumendar</a><span class="sep">›</span><span>No Man's Land</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">No Man's Land</div>
+    <div class="page-subtitle">Sumendar Sub-Region · The Ungoverned Country · Eldara's Ground</div>
+    <div class="page-flavor">A country of fires that start, and a people who stay when they go out.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>Plain Talanese, and meant literally: ground that belongs to no one. Demonym: <b>Noman</b>, plural <b>Nomans</b>. The country's own words are frontier Talanese: cinders, kindlings, bindstone, the Bread Road.</dd>
+    <dt>Position</dt><dd>The leftover ground of <a href="/setting/talan/domains/sumendar/sumendar.html">Sumendar</a>, wrapped around Haraour Eliza on the north and east. A strip along the Midarra behind the coastal range, where <a href="/setting/talan/domains/sumendar/eldara/eldara.html">Eldara</a> stands in its mountain; then south down the whole east side of Haraour's river, between Haraour and the <a href="/setting/talan/domains/sumendar/order-of-steam/order-of-steam.html">Order of Steam</a>'s ridge, to the Tahu Tangata line and the south coast. The Red Dominion lies west of the northern strip.</dd>
+    <dt>Terrain</dt><dd>Steppe and dry grass over most of it; ore-rich hills and the coastal range in the north; mountains in the north-west; a strip of forest and river-meadow on the east side, where most of the cinders farm; brown badlands in the south-east, where the Ash-Binder's dungeon broke through in 2524 and the <b>Cold Furnace</b> stands. The rail from Tahu Tangata climbs through it to Eldara by <b>the Neck</b>, the one narrow valley at the Tahu Tangata line.</dd>
+    <dt>Character</dt><dd>
+      <i>A country of fires that start</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Moving Fire</span><span class="pill">Cinders</span><span class="pill">The Apprentice's Fire</span><span class="pill">The Cold Furnace</span><span class="pill">The Bindstone Rush</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>About a million, spread thin: every ancestry on the southern network, runaways from the Order of Steam, Kobolds and Goblins who came up from their own countries, rushers from everywhere since 2527.</dd>
+    <dt>Tongue</dt><dd>Talanese, the frontier kind everyone who arrives can share.</dd>
+    <dt>Faith</dt><dd>Komo, kept loosely: the Apprentice's Fire every year, a nod at every forge.</dd>
+    <dt>Rule</dt><dd>None. <b>Cinders</b> (the communes) run themselves; a <b>kindling</b> (an open assembly of whoever cares to come) elects a <b>captain</b> for any task that needs everyone, and the captain sets it down when the task is done. The rail is the one task that never ends.</dd>
+    <dt>Founded</dt><dd>Never. People have struck ore here as long as the chronicles run; the oldest cinders are Dark-Era.</dd>
+  </dl>
+
+  <a class="gods-city" href="/setting/talan/domains/sumendar/eldara/eldara.html" style="border-color: rgba(210,122,98,0.5);">
+    <div class="gods-city-label">The God's City, Standing in It</div>
+    <div class="gods-city-name">Eldara →</div>
+    <div class="gods-city-byname">The Forge City in the northern range · fed by the country around it</div>
+  </a>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-moving-fire" class="section-heading">The Moving Fire</h2>
+
+  <div class="voice-quote">
+    <p>"There's a strike every year somewhere between the Neck and the coast. Most are nothing. Every tenth one is a town by autumn. Every hundredth one is still a town when your grandchildren are old. That's the country. You just don't know which one you're standing in."</p>
+  </div>
+  <div class="voice-attrib">Wenna Oldhat, of Kettleford cinder, a prospector for forty years</div>
+
+  <div class="prose">
+    <p>The ground of No Man's Land is full of ore: iron in the northern hills, copper in the east, silver where the badlands begin, and seams that run a mile and stop. A strike goes the same way every time. Someone finds a seam and says so, or fails to keep quiet about it. Within a month there is a <b>rush-camp</b> on it: tents, a tavern in a wagon, a hundred people digging, and whoever holds the best of the seam holding it by the hands around them. There is no claims office, because there is no one to keep one.</p>
+    <p>Most seams run out in a season and the camp burns out with them: the tents fold, the tavern rolls on, and the black ring of the camp's fires is all that is left on the grass. Some seams hold. The camp digs down instead of along and becomes a <b>mine</b>, and the people who have dug a mine for ten years stop sleeping in tents, clear a field beside it for bread, and dig a well that belongs to everyone who drinks from it. By then the camp is a <b>cinder</b>.</p>
+    <p>So the country is frontier and settlement at once, and the line between them moves. A traveller on the rail passes a cinder with orchards two centuries old, then an hour of grass, then a camp six weeks old with a hanged claim-jumper at its gate. Kingdoms have looked at this and found nothing worth ruling: a thousand small mines, poor soil between them, and people who came here because they would not be ruled.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="cinders" class="section-heading">Cinders</h2>
+  <div class="prose">
+    <p>A cinder shares what its people use together, and nothing else. The well, the mill, the smithy, the stores for the winter, the ore-carts, and the field that feeds the mine belong to the cinder; a Noman's house, tools, and money are their own. Work that the whole cinder needs is done by whoever turns out, and a cinder remembers who turns out. A household that never does finds the mill slow to grind its corn.</p>
+    <p>Cinders help each other the same way: a burned barn is raised by three cinders in a week, a flooded mine is pumped by whoever has pumps, and the favour is remembered and returned, often by the next generation.</p>
+  </div>
+
+  <div class="voice-quote">
+    <p>"Nobody here owes you. Everybody here remembers."</p>
+  </div>
+  <div class="voice-attrib">Hesket Longwait, of Ashby Bend cinder, to a newcomer</div>
+
+  <div class="prose">
+    <p>The oldest cinders are Dark-Era, founded on strikes nobody has written down, and they have orchards, stone houses, and burying-grounds three hundred years deep. The youngest are ten years out of the tents. Most lie along the eastern river and forest strip, where the ground will grow barley, and along the rail.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-apprentices-fire" class="section-heading">The Apprentice's Fire</h2>
+  <div class="prose">
+    <p>Once a year, on the longest night, every cinder burns whatever has started to look like rule. The headman's chair (there is always someone sitting in it by midwinter). The debt-tallies from the year. The claim-stakes. The fence someone moved a yard in the spring. A hall built a little taller than the others loses its top floor to the fire, and the cinder helps its builder put up a proper one in the morning. Folk say the burning saves the <b>Apprentice</b> the trouble: a Noman crown would only tempt the god to reach over and light it himself.</p>
+    <p>The morning after is <b>Ashmorn</b>, when everyone rebuilds what was burned and a newcomer is named.</p>
+    <p><b>Kindlings.</b> When something needs everyone (a convoy, a flood, a strike that turns ugly, a spawn-pack coming up out of the badlands), someone lights a fire at a crossroads and sends word. Whoever cares to come, comes; that is a <b>kindling</b>. It argues until it agrees, elects a <b>captain</b> for the task, and goes home. The captain has the task and nothing else, and when the task is done the captain is nobody again. A captain who would not set the office down is given a new fire-name no one would want, and at the next Fire a straw captain in their coat burns with the chair. In some cinders the story goes that it was not only straw.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">The Line</div>
+    <p style="margin-bottom:0;">One task never ends. The rail from Tahu Tangata to Eldara runs through the country, over the Neck, and the rockfalls and washouts never stop; every autumn the rail cinders hold a kindling and elect a <b>line captain</b> for the year, and the cinders along the track keep it. Merchants who want to deal with No Man's Land deal with the line captain, who changes every autumn.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cold-furnace" class="section-heading">The Eruption and the Cold Furnace</h2>
+  <div class="prose">
+    <p>In 2524 the Nine Dungeons broke open across Talan, and one of them broke through the badlands in the south-east of No Man's Land: the lair of the <a href="/setting/talan/the-binding.html#ash-binder"><b>Ash-Binder</b></a>, a corrupted beast of fire and stone, in a furnace-cavern under the brown ridges. Its first wave went north along the rail toward Eldara, burning the cinders in its way.</p>
+    <p>Elsewhere the kingdoms mustered their armies and sealed their gates. No Man's Land had no army to muster. The cinders called kindlings instead: from the eastern river, from the rail, from the northern hills, from Eldara's own benches, whoever would come. They held the Neck and the rail for three years while an <b>Orichalcum-ranked party</b> of the <a href="/setting/talan/factions/adventurers-guild.html">Adventurers' Guild</a> worked down into the lair, and in <b>2527</b> the party and the cinders' fighters, together, brought the Ash-Binder down in its furnace. They buried some four hundred Nomans that year.</p>
+    <p>The kingdoms celebrate the Orichalcum party. Nomans tell it as the kindling, and the burying-grounds along the rail agree with them. Scholars have noted that the only General of the Nine yet felled fell where no one was commanded to fight it.</p>
+    <p>The furnace is cold now, and the cavern and the badlands around it are full of its <b>slag</b>.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-bindstone-rush" class="section-heading">The Bindstone Rush</h2>
+
+  <div class="voice-quote">
+    <p>"You want to know what it is? Nobody knows what it is. Put a hammer to it cold and it rings like a bell. Put it in a fire and whatever else is in that fire comes out better than it went in, or it comes out wrong. Eldara pays for it by the ounce. So here I am."</p>
+  </div>
+  <div class="voice-attrib">Corran Blackjack, a rusher at the Cold Furnace, in his second year</div>
+
+  <div class="prose">
+    <p>The slag of the Cold Furnace is <b>bindstone</b>: black, glassy, and heavy; a flake is warm in the hand on the coldest night, and a sack of it will scorch through its canvas. Worked into a forge-piece it does what no other stuff on Talan does. A blade quenched with a flake of it holds an edge nothing else holds; a lamp-mantle burns for a year; an engine runs hotter than its maker designed. And sometimes the piece comes out <i>wrong</i>: a blade that grows warm in the hand of a man it does not like, a lamp that throws light in a colour no one can name, a lock that will not open for its owner. Rushers call it lucky and dangerous in one breath. Eldara buys every ounce it can get.</p>
+    <p>So since 2527 the biggest rush the country has seen has poured onto the badlands. Slag-camps ring the Cold Furnace, and some hold two thousand people. The slag-born things still crawl out of the cavern's lower ways at night, and the camps keep guards, and the guards are paid in bindstone. Strangers come from every domain on the southern network. Most leave inside a year, rich or maimed or both.</p>
+  </div>
+
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · The Rush</div>
+    <p style="margin-bottom:0;">The old cinders are divided. Some ride the rush like every strike before it, hauling bindstone to the rail and growing fat. Some have banned it at their Apprentice's Fire and turn the carters away at the ford. And the old reason no kingdom ruled this ground (there was nothing here worth the trouble) ended in 2527: the Order of Steam's factors have been seen at the camps and the Red Dominion has sent riders to look at the badlands.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Scattered General</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Bindstone Is the Ash-Binder</div>
+      <p style="margin-top:0;">The Ash-Binder was never destroyed. The party and the kindling broke its body in the furnace, and it scattered, as a thing of fire and stone can: its substance is the slag. Every flake carried out of the badlands carries a piece of the General with it, and every Eldaran marvel forged with it holds a little of what the kingdoms celebrate as dead.</p>
+      <div class="secret-grid-2">
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">What the kingdoms celebrate</div>
+          <div class="secret-card-title">One of the Nine has fallen</div>
+          <div class="secret-card-body">Proof that the Nine can fall, and eight left to go.</div>
+        </div>
+        <div class="accent-card secret-card">
+          <div class="secret-card-label">What is true</div>
+          <div class="secret-card-title">The General is in the slag</div>
+          <div class="secret-card-body">The pieces that come out <i>wrong</i> are where it stirs: the blade that chooses a hand, the lamp that burns the colour of the furnace.</div>
+        </div>
+      </div>
+      <div class="secret-coda">Nothing yet gathers the pieces back together, and the rush is carrying them across Talan one sale at a time.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="eldaras-lifelines" class="section-heading">Eldara's Lifelines</h2>
+  <div class="prose">
+    <p>The god-city in the northern range cannot feed itself, and No Man's Land is most of how it eats and much of how it works.</p>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">The Rail</div>
+      <p>Most of Eldara's food comes by train from Tahu Tangata and beyond, climbing through No Man's Land and over the Neck; the rail cinders keep the line.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Bread Road</div>
+      <p>The cinders of the eastern river send their own barley up the Bread Road by cart, twice a year in a convoy with a captain, and it is the part of Eldara's bread that arrives when the Neck is shut.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Ore Carts</div>
+      <p>Eldara mines its own mountain, and its benches eat more ore than one mountain gives; the rest comes up from the cinders' mines.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The Almosts Go Out</div>
+      <p>Eldara pays in almosts, the near-true pieces worth a fortune beyond the mountains, and the Nomans who haul grain and ore up come home with them and sell them on down the rail.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-a-noman-is-called" class="section-heading">What a Noman Is Called</h2>
+  <div class="prose">
+    <p>A Noman keeps the given name they arrived with. The family name burns: at a newcomer's first Apprentice's Fire it goes into the flames with the chair and the debt-tallies, and on Ashmorn the cinder gives them a <b>fire-name</b> for something they did, usually something the cinder is still laughing about. So a Noman is <b>given name + fire-name</b>, and the fire-name is bestowed by the people who watched them. A child born in a cinder gets its fire-name at its first Fire after it has done something worth naming. A Noman who moves cinders keeps the name; a Noman who does something larger sometimes gets a second, and the cinder votes on which one sticks.</p>
+  </div>
+
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Fire-names</b></p>
+    <div class="pill-row"><span class="pill">Oldhat</span><span class="pill">Longwait</span><span class="pill">Blackjack</span><span class="pill">Sootface</span><span class="pill">Twicefallen</span><span class="pill">Quickmatch</span><span class="pill">Bellows</span><span class="pill">Nine-Fingers</span><span class="pill">Goodwater</span><span class="pill">Wrongway</span><span class="pill">Thatch</span><span class="pill">Firstlight</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <div class="pill-row"><span class="pill">Wenna Oldhat</span><span class="pill">Hesket Longwait</span><span class="pill">Corran Blackjack</span><span class="pill">Ilse Bellows</span><span class="pill">Maro Wrongway</span></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Wenna Oldhat</div>
+      <p>Of Kettleford cinder; a prospector for forty years.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Hesket Longwait</div>
+      <p>Of Ashby Bend cinder.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Corran Blackjack</div>
+      <p>A rusher at the Cold Furnace, in his second year.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/sumendar/eldara/eldara.html"><b>Eldara →</b></a> · The Forge City in the northern range, which the country feeds and which buys every ounce of bindstone.</li>
+      <li><a href="/setting/talan/domains/sumendar/sumendar.html"><b>Sumendar →</b></a> · The Fire domain and its four peoples.</li>
+      <li><a href="/setting/talan/domains/sumendar/order-of-steam/order-of-steam.html"><b>Order of Steam →</b></a> · Behind the ridge to the east; its factors have been seen at the camps.</li>
+      <li><a href="/setting/talan/the-binding.html#ash-binder"><b>The Binding →</b></a> · The Nine Generals, and the one that fell here.</li>
+      <li><a href="/setting/talan/factions/adventurers-guild.html"><b>Adventurers' Guild →</b></a> · The ranks, Orichalcum at the top.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">The country is settled only in the sense that it never will be.</div>
+    <ol>
+      <li><b>The Orichalcum party.</b> Its members by name, and what the victory cost them.</li>
+      <li><b>The cinders.</b> By name, beyond Kettleford and Ashby Bend.</li>
+      <li><b>The line captain.</b> Who holds the rail this year.</li>
+      <li><b>The slag-born.</b> Where they go at night.</li>
+      <li><b>The neighbours.</b> What the Order of Steam and the Red Dominion mean to do.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · SUMENDAR · NO MAN'S LAND</div>
+
+</div>
+
+</body>
+</html>
