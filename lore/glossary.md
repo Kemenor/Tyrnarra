@@ -291,7 +291,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Burdineyja**: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
 - **Haraour Eliza**: Basque *eliza* (church)
 - **Tahu Tangata**: old name, meaning partially lost
-- **No Man's Land**: modern English; Komo's city-state territory
+- **No Man's Land**: plain Talanese, meant literally: ground that belongs to no one. The ungoverned country around Eldara, Komo's city-state; full canon `geography/sumendar/no-mans-land.md`; register below, *Faction proper nouns → No Man's Land: the Noman register*.
 - **Eldara** (the Forge City): old/ancient stratum. Icelandic *eldr / eldur* (fire) → *eldar* → **Eldara**, "the fire." Reaches for *Icelandic* fire while the domain Sumendar names *Basque* fire (*sumendi*), so city and domain say the same word in two old tongues. Komo's ungoverned god-city, accreted (never founded) on the one ground where ore, lava, and the god's presence all met; making is worship, the forge is the only authority.
   - **The Throat**: descriptive English. The collapse-prone cave-passage punched north through the mountain to the Midarra; Eldara's pre-rail sea lifeline.
   - **The Fog District**: descriptive English. Eldara's seaward quarter against the Throat, in permanent steam where deep lava-heat meets cold Midarra air.
@@ -938,6 +938,17 @@ Full canon in `geography/zuzental.md`, *Thousand Kingdom → The holdings* onwar
 - **Tsopa**: Tibetan *rtsod pa*, "debate" → *Tsopa*. The courtyard practice.
 - **The Court of One**; **the Contrary**; **the listener**; **the ever-knot**; **Seneschal**; **pear-cord**: plain Talanese.
 - Monk-given names (Tibetan): Tenzin, Pema, Dorje, Norbu, Dawa (moon), Nyima (sun), Sonam, Lhamo, Yangchen, Tashi, Dolma, Kunsang, Choden, Jigme, Namgyal, Tsering, Rinchen, Lobsang, Palden, Dechen.
+
+**No Man's Land: the Noman register (pass of 2026-09-29):**
+- *The register.* Frontier Talanese (plain English with drift) for places and customs, the tongue every arrival shares. A Noman keeps the given name they arrived with; the family name burns at their first Apprentice's Fire, and on Ashmorn the cinder bestows a **fire-name** for something they did. Full structure: `geography/sumendar/no-mans-land.md`, *What a Noman is called*.
+- **Noman**, pl. **Nomans**: the demonym, plain Talanese.
+- **Cinder**: a commune; a rush-camp that stayed after its seam and turned to mine and field. **Rush-camp**: the camp on a fresh strike.
+- **Kindling**: an open assembly, called by lighting a fire at a crossroads; whoever cares to come, comes. **Captain**, **line captain**: the leader a kindling elects for one task; the line captain keeps the rail for a year.
+- **The Apprentice's Fire**: the longest night, when every cinder burns whatever has started to look like rule. **Ashmorn**: the morning after, when the burned is rebuilt and newcomers are named. **Fire-name**: the name the cinder bestows.
+- **The Bread Road**: the cart road the eastern cinders' barley climbs to Eldara. **The Neck**: the single-track rail valley at the Tahu Tangata line.
+- **Bindstone**: the black, glassy slag of the Cold Furnace. *Table note:* runs as **hot siccatite** (rare; *Lost Omens: The Grand Bazaar*; chunk 500 gp, ingot 5,000 gp), reskinned black and glassy; the pieces that come out wrong are GM-side quirks. (⚿ GM-tier: bindstone is the Ash-Binder, scattered.)
+- **The Cold Furnace**: the Ash-Binder's dead lair, a furnace-cavern under the south-eastern badlands.
+- **Kettleford**, **Ashby Bend**: cinders. Fire-names (sample): Oldhat, Longwait, Blackjack, Sootface, Twicefallen, Quickmatch, Bellows, Nine-Fingers, Goodwater, Wrongway, Thatch, Firstlight.
 
 **House Eisenhart (Order of Steam):**
 - **House Eisenhart**: Germanic-style compound (*Eisen* "iron" + *Hart* "hard"). Modern dwarven noble name. Fits the Order of Steam's modern stratum.

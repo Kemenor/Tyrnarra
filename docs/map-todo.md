@@ -32,6 +32,8 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 
 ## Backlog for the next map edit
 
+- **The Neck, the Cold Furnace** (No Man's Land, Sumendar; named at the 2026-09-29 build). Label **the Neck**, the single-track rail valley where Eldara's line crosses the No Man's Land / Tahu Tangata line (the mountain gap between the Order of Steam's ridge and the border range); label **the Cold Furnace**, the Ash-Binder's dead lair, in the south-eastern badlands (the brown ridges). Consider rush-camp icons around the Furnace.
+
 - **Drukha, the Ankerhold, Kyrrskog** (Order of Law, Zuzental; named at the 2026-09-29 build). Label the capital icon on the river mouth (~6815, 5346) **Drukha** (City Labels); label the cathedral icon in the central forest (~6786, 4978) **the Ankerhold**; consider a terrain label **Kyrrskog** on the forest itself. The lore adds farm country and heath in the north, steppe in the south-west, river valleys and hill country between (below map resolution, per the landmarks rule).
 
 - **Debreqal and the Orratzak** (Legea Empire, Zuzental; named at the 2026-09-29 region pass). Label the Legea capital icon (~5934, 4766) **Debreqal** (City Labels); consider a small terrain label **Orratzak** on the three needle peaks west of it (~5800–5890, 4710–4790), where the cathedral icon (~5825, 4668) is the high reading-house. The keep on Legea's half of Hringseyja stays unnamed until its build.
