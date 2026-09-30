@@ -31,10 +31,9 @@ WD = os.path.expanduser("~/ProtonDrive/Wonderdraft")
 BASE_MAP = os.path.join(WD, "Main - Base.wonderdraft_map")
 BASE_EXPORT = os.path.join(WD, "Main - Base.webp")
 # Main was swapped to the packs on 2026-09-26 (--apply) and back to the built-ins on 2026-09-27,
-# so comparisons draw against Wonderdraft's own art again. The copy from before the swap (now the
-# same as Main) and the post-swap one ("Main (after pack swap 2026-09-26)") stay next to it.
-PRE_SWAP = os.path.join(WD, "Main (before pack swap 2026-09-26).wonderdraft_map")
-POST_SWAP = os.path.join(WD, "Main (after pack swap 2026-09-26).wonderdraft_map")
+# so it is the map on Wonderdraft's own art again; the copies from before and after that swap were
+# cleared away on 2026-09-30 (Kartofuchs swaps art on import now).
+PRE_SWAP = os.path.join(WD, "Main.wonderdraft_map")
 TEST_DIR = os.path.expanduser("~/.local/share/wdmap/assetgen-test")
 PRE_SWAP_EXPORT = os.path.join(TEST_DIR, "Assetgen PreSwap Base.webp")
 DIFF_MIN = 40          # channel difference that counts as "built-in art was here" (WebP noise stays below)

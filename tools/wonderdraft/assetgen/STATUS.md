@@ -23,7 +23,7 @@ every working session.
 - **Last real Wonderdraft test** (`fullswap`, 2026-09-30): every region reads close to the
   built-ins, the Air Monastery's karst ring included (numbers in the README results log).
 - **Main.wonderdraft_map** is on Wonderdraft's built-in art, the baseline for every comparison.
-  The version with bought art is kept as "Main (after pack swap 2026-09-26)". Never modify any
+  The copies from before and after the 2026-09-26 pack swap were cleared away on 2026-09-30. Never modify any
   `Main*.wonderdraft_map` unless the user asks.
 
 ## Decisions (the user's)

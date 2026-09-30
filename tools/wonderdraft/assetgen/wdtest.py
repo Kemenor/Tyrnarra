@@ -1,7 +1,7 @@
 """Test a family's pack against Wonderdraft's built-in art, which Main uses (again).
 
 The yardstick is Wonderdraft's own art. Main was swapped to bought packs on 2026-09-26 and back to
-the built-ins on 2026-09-27 (the post-swap copy is kept as "Main (after pack swap 2026-09-26)").
+the built-ins on 2026-09-27 (the post-swap copy was cleared away on 2026-09-30).
 A family with a built-in counterpart (the recipe's "builtin") takes over those symbols in a copy
 of the Base view: same position, scale and mirroring, sized either by the recipe's scale-1 size
 ("place": "scale", the conifers' rounds) or to the measured art of the built-in texture that
