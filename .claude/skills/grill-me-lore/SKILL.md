@@ -1,6 +1,6 @@
 ---
 name: grill-me-lore
-description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated, walking the lore design tree one branch at a time with a recommended answer per question. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me-lore. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a Phase 5 prose draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
+description: Interview the user relentlessly about a Tyrnarra lore draft, seed, or design until specificity is reached and same-iness has been eliminated, walking the lore design tree one branch at a time with a recommended answer per question. Use when the user says "grill me", "stress-test this", "what's thin about this", "this feels generic", "deepen this", "push on this", "audit my draft", or invokes /grill-me-lore. Also useful mid-sub-region-workflow when a Phase 2 seed feels under-specified, a settled phase (4-9) reads thin, a Phase 10 draft has generic patches, or a sub-region card reads as same-y compared to its siblings. Do not use during Phase 0 of any workflow (read the canon first; you cannot grill on top of canon you haven't read) or for procedural-only work (naming-only passes, HTML wiring, sidebar updates).
 ---
 
 # Grill me
@@ -52,9 +52,9 @@ That's the rhythm. One axis. One recommendation. One question. Wait for the answ
 
 - The user invokes `/grill-me-lore`, says "grill me", or asks to be stress-tested on a draft.
 - **Mid-`sub-region-workflow`, inside a phase:**
-  - **Phase 2 (Generate seeds):** grill the seed before locking it. The specificity test is the central grill move.
-  - **Phase 3 (User picks + refines):** the clarifying questions phase *is* a grill, lightly held.
-  - **Phase 5 (Surface the prose draft):** grill the draft before commit. Push every abstract phrase for a concrete one; every generic *"the people of X are proud"* for a specific behavior; every ancestry-as-label for what *this* place adds.
+  - **Phase 2 (Seeds):** grill the seed before locking it. The specificity test is the central grill move.
+  - **Phases 4-9 (the settling phases: place and history, government, economy, daily life, naming, tension and reveal):** each phase is a grill, lightly held; push any thin answer before the phase closes.
+  - **Phase 10 (Draft):** grill the draft before commit. Push every abstract phrase for a concrete one; every generic *"the people of X are proud"* for a specific behavior; every ancestry-as-label for what *this* place adds.
 - Reviewing a faction, NPC, named event, religious order, or magical tradition that the user feels lukewarm about.
 - Auditing an existing HTML page that reads as same-y compared to its siblings.
 - After the user reads back their own draft and notices something feels thin but can't name what.
@@ -73,4 +73,4 @@ Grilling is a depth-tool *within* a `sub-region-workflow` phase. It does not rep
 - It does not bypass the surface-before-writing rule. A grill is chat, not commit.
 - It does not bypass the canon-read. If grilling surfaces a question the canon already answers, the answer is in the canon, not the user.
 
-When the grill is done, return to the workflow phase you were in. If the grill produced changes to a Phase 2 seed or a Phase 5 prose draft, re-surface the updated version before moving forward.
+When the grill is done, return to the workflow phase you were in. If the grill produced changes to a Phase 2 seed, a settled phase (4-9), or the Phase 10 draft, re-surface the updated version before moving forward.
