@@ -1,6 +1,6 @@
 # Namur Republic: pencilled options
 
-**Status: pencilled design ideas, not canon.** Recorded at the GM's request (2026-09-30) during the Namur build so the alternatives survive whichever way the build goes. Nothing here binds the lore; the lore wins over this file the moment the build commits. Canon anchors used below: `lore/geography/zuzental.md` (the Hobgoblin feeling; Forseti's Justice and Tyranny), `lore/geography/zuzental/legea-empire.md` (*Across the line → Oaths*; *The Faith → Reach*).
+**Status: pencilled design ideas, not canon. Option B was chosen and built on 2026-09-30** (`lore/geography/zuzental/namur-republic.md`); Option A and the other combinations stay here as ideas set aside. Recorded at the GM's request (2026-09-30) during the Namur build so the alternatives survive whichever way the build goes. Nothing here binds the lore; the lore wins over this file the moment the build commits. Canon anchors used below: `lore/geography/zuzental.md` (the Hobgoblin feeling; Forseti's Justice and Tyranny), `lore/geography/zuzental/legea-empire.md` (*Across the line → Oaths*; *The Faith → Reach*).
 
 ## The shared frame (both options)
 

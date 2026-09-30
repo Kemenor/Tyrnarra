@@ -138,7 +138,7 @@ Legea and the rest of Zuzental meet at the Thousand Kingdom line and at every ma
 
 **The Quietline.** Itsasalda holds the line across Hringseyja as sworn. The Empire holds it as a page, entered by the governor who stood at the swearing, binding because it is written; a later page could write it otherwise.
 
-**Live tension.** The next Re-Swearing at Lograth. When the Thousand Kingdom's new monarch crosses to the Scales, House Vester re-swears its charter, and the Auben hold that their reception closed their part of that oath; the Crown holds that it stands. Some Auben have gone back on the Faith to keep their place in the house, and in the Hagwold reading-house their names are pale. The Empire watches the Kingdom's succession for a weak reign.
+**Live tension.** The next Re-Swearing at Lograth. When the Thousand Kingdom's new monarch crosses to the Scales, House Vester re-swears its charter, and the Auben hold that their reception closed their part of that oath; the Crown holds that it stands. Some Auben have gone back on the Faith to keep their place in the house, and in the Hagwold reading-house their names are pale. The Empire watches the Kingdom's succession for a weak reign. To the south-west, the Empire fought the **Namur Republic** from 2398 to 2402; the sworn peace since has opened Portoferma, at the mouth of the Empire's river, to Legean trade, and the Empire has offered its army against the Blight-Seer's gate in Namur's hills (see [`namur-republic.md`](namur-republic.md)).
 
 ---
 
