@@ -179,6 +179,21 @@ Pace as stories want them. Rolling work.
 - **The Reach's relationship with Komo's church and Eldara**: both are in Sumendar; Dragons and Komo presumably interact in some defined way; how, exactly, is unspecified *(the relationship includes the **forge-fallen**, Reach Dragons who leave for Eldara and take up Komo; see `../lore/geography/sumendar.md`, Eldara)*
 **Where.** [lore/geography/sumendar.md](../lore/geography/sumendar.md), *Dragon's Reach*; [lore/ancestries.md](../lore/ancestries.md), *Dragons*; [dragons-reach.html](../published/setting/talan/domains/sumendar/dragons-reach.html), Open in the Chronicle Record panel mirrors these.
 
+### [Legea Empire] Workflow backfill: economy and transport
+**Why.** The 2026-09-29 region pass compressed the front of the sub-region workflow (no seed questions, a single seed, no government round, no economy discussion). The shipped canon holds; these are thin spots (audit, 2026-09-30).
+**Open.** **Economy:** what the Empire makes and sells beyond its farm country and the copying-halls of Debreqal; what its Midarra coast and river-mouth trade carry (the trade runs out through Namur's Holdfast, per the Namur build). **Transport:** roads and river traffic across the Empire beyond the page-riders; whether the rail reaches Legea. **Government:** a quick census check and the three tests on the demigod theocracy.
+**Where.** `lore/geography/zuzental/legea-empire.md`.
+
+### [Order of Law] Workflow backfill: economy
+**Why.** Audit of 2026-09-30: the build's economy stayed thin (the works and the tithe), and the government's three tests were implied rather than run.
+**Open.** What the Order's country makes and sells (farm country and heath, the Drukha port, the Middle Isle ferry trade, the pilgrim traffic on the forest road); the three tests on the Trimpon, the Desi, and the Seneschals.
+**Where.** `lore/geography/zuzental/order-of-law.md`.
+
+### [No Man's Land] Workflow backfill: youth and a Popular Belief
+**Why.** Audit of 2026-09-30: the build has children's fire-names but no coming-of-age or sanctioned transgression, and the page carries no amber ◈ Popular Belief box (the Apprentice folk-saying sits in the prose).
+**Open.** **Youth:** how a young Noman comes of age in a cinder, and what the young do that the cinder pretends not to see. **◈ Popular Belief:** a folk-tale box for the page (candidates: the Apprentice at the Fire; what the rushers say about bindstone; the Cold Furnace at night).
+**Where.** `lore/geography/sumendar/no-mans-land.md`; `published/setting/talan/domains/sumendar/no-mans-land/no-mans-land.html`.
+
 ## § Regions: Nashavel & Ehizahar
 
 ### [Basogur] Post-build texture
