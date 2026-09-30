@@ -84,6 +84,9 @@ The Order does not know. The Trimpon feels it and cannot name it: the weight of 
 
 ## Drukha and the Desi
 
+> "The ferry wasn't until the second tide, so I went to see what everyone here goes to see. The Order's house on the quay opens at first light and the line is already down to the water: a fishwife, two dockers, a gentleman in a better coat than mine, every one of them with a hand held out. A monk takes the wrist, finds the knot, and cuts it with a little pair of brass shears, and the knot drops into a bowl. That is all of it. Nobody says a word. But I watched the gentleman come out onto the quay after, and he stood there rubbing his wrist like a man who had set down a trunk, and then he bought the whole fish-stall breakfast."
+> Gilles Aubert Marchal, a cloth-factor of the Thousand Kingdom, in a letter to his wife, waiting on the Middle Isle ferry at Drukha
+
 **Drukha** stands at the mouth of the great river on the south-east coast, a port of about ninety thousand where everything that crosses the Order's country arrives or leaves. The eastern line from Merkavar crosses into Zuzental at Crossroads and runs north through the Order's country toward Lograth, and a branch follows the river down to the Drukha yards; the ferry for Middle Isle and Oathmoore leaves from the harbour wall every tide; the river-barges come down from the west. The Order's house in Drukha stands on the quay, and the cutting of knots happens in its hall, in public, every morning of the year.
 
 The country is governed from here. The **Desi** is the first lay officer, named by the Trimpon, and regent while the Trimpon is a child. Under the Desi the **Seneschals** keep the districts: the roads, the dykes, the granaries, the courts of ordinary law, the works. A foreign envoy is received by the Desi in Drukha; a treaty is sealed by the Trimpon in Kyrrskog; a new bridge is planned by the Seneschals and built by the sentenced.
@@ -128,6 +131,7 @@ Crossroads stands inside the Order's ground, on the southern river, and the Orde
 - **Dawa Ferris**: a rail-conductor on the Crossroads line.
 - **Choden Marrow**: a ferry-hand of Drukha.
 - **Mathis Rolant Ferre**: a horse-trader of the Thousand Kingdom who sat for forty-one days.
+- **Gilles Aubert Marchal**: a cloth-factor of the Thousand Kingdom, who watched the knots cut at Drukha.
 - **The Desi**: unnamed.
 
 ## Voices
@@ -136,6 +140,7 @@ Crossroads stands inside the Order's ground, on the southern river, and the Orde
 - **Pema Lowe** · a Contrary of the Ankerhold · blunt, precise, fond of the difficult sitter; speaks of pride as the commonest lie.
 - **Dawa Ferris** · rail-conductor on the Crossroads line · wry, practical, sorts people by one observed habit.
 - **Choden Marrow** · ferry-hand of Drukha · warm, gossipy, quotes her mother; tells a public day as a street party.
+- **Gilles Aubert Marchal** · cloth-factor of the Thousand Kingdom · observant and fond, writes to his wife in small scenes; notices clothes and ends on what someone did next.
 - **Norbu Keelan** · Seneschal of the river district · plain-spoken, self-mocking about his own sitting; turns a confession into a qualification.
 
 **Still open:** the local tongue (regional-tongue pass); the Desi's name; the Seneschals' districts by name; the towns of the country beyond Drukha; the chapter's offices; Anker's debt (the chronicle has none); the Concord's ruling on the Contraries.

@@ -46,6 +46,9 @@ The oldest cinders are Dark-Era, founded on strikes nobody has written down, and
 
 ## The Apprentice's Fire
 
+> "The longest night, and the train running up from the Neck with every lamp out so we could see. They were burning everywhere. A fire off to the left, then one far out on the right, then three together on a hill, and more beyond them, small as sparks, all the way to where the sky came down. Each one is a village putting its own chair on the fire, the guard told me, and laughed. At home that would be a riot and a page for it. Here the whole country does it on the same night and gets up in the morning to build another chair. I did not sleep until we were in the mountains."
+> Tamrat Negade ye-Kolla, a grain-merchant of the Legea Empire, on the Eldara train
+
 Once a year, on the longest night, every cinder burns whatever has started to look like rule. The headman's chair (there is always someone sitting in it by midwinter). The debt-tallies from the year. The claim-stakes. The fence someone moved a yard in the spring. A hall built a little taller than the others loses its top floor to the fire, and the cinder helps its builder put up a proper one in the morning. Folk say the burning saves the **Apprentice** the trouble: a Noman crown would only tempt the god to reach over and light it himself.
 
 The morning after is **Ashmorn**, when everyone rebuilds what was burned and a newcomer is named.
@@ -101,6 +104,7 @@ A Noman keeps the given name they arrived with. The family name burns: at a newc
 - **Wenna Oldhat**, of Kettleford cinder: a prospector for forty years.
 - **Hesket Longwait**, of Ashby Bend cinder.
 - **Corran Blackjack**: a rusher at the Cold Furnace.
+- **Tamrat Negade ye-Kolla**: a grain-merchant of the Legea Empire, on the Eldara train on the longest night.
 - **The line captain**: elected each autumn (the present one unnamed).
 - **The Orichalcum party** of 2527: unnamed in this file.
 
@@ -108,6 +112,7 @@ A Noman keeps the given name they arrived with. The family name burns: at a newc
 
 - **Wenna Oldhat** · prospector of Kettleford cinder · weathered, amused, speaks in odds and seasons; has seen every kind of strike and trusts none of them.
 - **Hesket Longwait** · of Ashby Bend cinder · laconic, flat, a man of short true sentences.
+- **Tamrat Negade ye-Kolla** · grain-merchant of the Legea Empire · precise and a little shaken, measures what he sees against the Legedi at home; ends on what it did to him.
 - **Corran Blackjack** · rusher at the Cold Furnace · quick, greedy, cheerfully honest about both; talks price before anything.
 
 **Still open:** the local tongue (regional-tongue pass); the Orichalcum party by name, and what the victory cost them; the cinders by name beyond Kettleford and Ashby Bend; the present line captain; where the slag-born go at night; what the Order of Steam and the Red Dominion mean to do.
