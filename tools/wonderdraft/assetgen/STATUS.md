@@ -20,11 +20,14 @@ every working session.
   - `Tyrnarra_2.5D_God_Cities`: two per god-city.
   - `Tyrnarra_2.5D_Landmarks`: standing stones, obelisk, lighthouse, shrine, statue, bridge,
     beacon, portal arch.
-- **Last real Wonderdraft test** (`fullswap`, 2026-09-30): every region reads close to the
+- **Last real Wonderdraft test** (the old fullswap, 2026-09-30): every region read close to the
   built-ins, the Air Monastery's karst ring included (numbers in the README results log).
-- **Main.wonderdraft_map** is on Wonderdraft's built-in art, the baseline for every comparison.
-  The copies from before and after the 2026-09-26 pack swap were cleared away on 2026-09-30. Never modify any
-  `Main*.wonderdraft_map` unless the user asks.
+- **Trimmed to generation (2026-09-30, the user):** the Wonderdraft swap and test tools (packswap,
+  fullswap, the test command, built-in reference renders) are gone. The pack is tried on a real
+  map in Kartofuchs: import `Main.wonderdraft_map` with the "Tyrnarra" art mapping (Map ▸ Import,
+  or Map ▸ Swap art on an open map). The mapping and the measured built-in sizes live in
+  Kartofuchs' data folder (`mappings/Tyrnarra.json`, `art-sizes.json`); change the mapping in
+  Kartofuchs' Swap art dialog. Never modify `Main.wonderdraft_map` unless the user asks.
 
 ## Decisions (the user's)
 
@@ -36,21 +39,12 @@ every working session.
   it looks good": no need to match Wonderdraft closely.
 - **Icons:** recolourable. One themed icon per god-city (two drawings each). The raised icons
   are filed as 2.5D; the flat 2D set was wanted "to see", then two per kind.
-- **Comparisons:** against Wonderdraft's built-in art, not Dotty (Dotty only as an extra
-  column). The built-ins may not be extracted (EULA); they are exported from Wonderdraft onto a
-  blank map as private reference sprites (on the machines and in the user's own Proton Drive),
-  never committed or published.
-- **Real Wonderdraft tests:** as often as useful, but tell the user first (the export drives the
-  keyboard for about 90 s). With the laptop's screen locked the exporter refuses to run.
+- **Reviewing:** the gallery sheets per family, and the whole pack on Main in Kartofuchs (see
+  State). Wonderdraft's built-in art is never extracted or published (EULA).
 - **Open, the user's call:**
   - The crosses on some shrines and chapels are fine for now.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch
     needs SDXL.
-  - Whether and how to swap the pack into Main (`fullswap.py` has the mapping). Decided
-    2026-09-30: through Kartofuchs. `assetgen.sh kartofuchs` writes the mapping ("Tyrnarra") and
-    the measured built-in sizes into Kartofuchs' data folder; Kartofuchs swaps on import (or Map ▸
-    Swap art). Settlement icons are its next step. Re-run the command after changing
-    BUILTIN_TO/PACK_TO or re-measuring.
 - **Known leftovers:** the flat 2D camps still show domed houses behind the tents.
 
 ## Where things live
@@ -59,18 +53,14 @@ every working session.
 |---|---|---|---|
 | Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | | yes |
 | Work folder: raw drawings, rounds, sheets, galleries (about 2.6 GB) | `~/.local/share/wdmap/assetgen/` | `assetgen-work/work/` | no |
-| Built-in reference sprites (EULA: private, never published) | `.../assetgen/builtins/` | inside `assetgen-work/work/` | never |
-| Test references (empty map, Base before and after the pack swap) | `~/.local/share/wdmap/assetgen-test/` | `assetgen-work/test/` | no |
 | Installed pack | `~/.local/share/Wonderdraft/assets/Tyrnarra` | `Wonderdraft/assets/Tyrnarra` | no |
-| Main and its Base view + export | | `Main*.wonderdraft_map`, `Main - Base.webp` | no |
+| Main | | `Main.wonderdraft_map` | no |
+| The "Tyrnarra" art mapping and measured built-in sizes | Kartofuchs' data folder (`~/.local/share/kartofuchs/`) | | no |
 | ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | | never |
 
-The test maps themselves (100 MB each) are rebuilt by the tools from Main's Base, so only the
-three reference images travel.
-
 **Moving between machines** (`assetgen.sh sync`):
-- **Starting a session:** run `sync --pull`. It copies the work folder, the test references and
-  the installed pack from Proton Drive into the local paths. It only adds and updates.
+- **Starting a session:** run `sync --pull`. It copies the work folder and the installed pack
+  from Proton Drive into the local paths. It only adds and updates.
 - **Ending a session:** run `sync`. It mirrors this machine's copies into Proton Drive, deleting
   there whatever is gone here.
 - **One machine at a time:** push only after pulling the other machine's work, or its new
@@ -81,8 +71,7 @@ three reference images travel.
 - **Tower:** its Proton Drive is an rclone mount that needs a fresh 2FA code after each reboot.
 
 **Working from the tower:** after `git pull` and `sync --pull`, a session there can generate
-(ComfyUI runs locally: `TYRNARRA_COMFY=http://127.0.0.1:8188`), build, run offline tests and make
-galleries. Real Wonderdraft exports need Wonderdraft installed there and an unlocked desktop.
+(ComfyUI runs locally: `TYRNARRA_COMFY=http://127.0.0.1:8188`), build and make galleries.
 
 ## The tower's ComfyUI
 
@@ -113,10 +102,6 @@ checkout's venv).
 ```
 generate <fam> --seeds 1-40 [--style S]      # drawings from ComfyUI into the work folder
 build <fam> --round N [--no-install] [--seeds ...] [--set KEY=V]
-test <fam> --round N --offline               # seconds: lineup and map crops drawn here
-test <fam> --round N                         # real Wonderdraft export (hands off)
-fullswap                                     # whole pack in a copy of the Base, exported, vs built-ins
-kartofuchs                                   # fullswap's families as Kartofuchs' "Tyrnarra" art mapping + measured built-in sizes
 gallery [families]                           # numbered review sheets per family, by variant
 sync [--pull]                                # work files and pack to (from) Proton Drive
 ```

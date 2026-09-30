@@ -1,11 +1,8 @@
 """What to generate: art families, styles and the numbers that make them fit Wonderdraft.
 
-A family is measured against Wonderdraft's built-in art ("builtin": the texture prefix of its
-counterpart in Main before the 2026-09-26 pack swap) and replaces one art folder of Main today
-("replaces": the bought pack's folder that took the built-ins' place). Its size and anchor at
-scale 1 are the built-in art's, so the test puts it exactly where and as big as the built-ins
-stood. A family without a built-in counterpart leaves out "builtin" and is fitted to the art it
-replaces. The prompt lessons behind these strings are in README.md ("Prompting").
+Each family becomes one folder of the Tyrnarra pack. How the pack is tried on a real map: import
+it into Kartofuchs with the Tyrnarra art mapping (README: Reviewing). The prompt lessons behind
+these strings are in README.md ("Prompting").
 """
 
 # Shared prompt tail and negative prompt. One subject per image, portrait: see README.
@@ -85,10 +82,8 @@ FAMILIES = {
                      "young small fir tree, compact cone shape",
                      "pine tree with drooping layered boughs",
                      "lopsided windswept fir tree, slightly irregular silhouette"],
-        "builtin": "res://sprites/trees/_hd_christmas/",
         # Main's conifers since the pack swap (built-in _hd_christmas, inked, hatch, _hd_pine,
         # larix and cedar all became Dotty's pines).
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines/",
         "kind": "trees",           # Wonderdraft sprite folder: trees | mountains | symbols
         "size": (185, 330),        # px at Wonderdraft scale 1, matched by area (built-in tree_xmas ~170-210 x 300-415)
         "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor
@@ -121,9 +116,7 @@ FAMILIES = {
                      "young tree: a small round crown on a thin short trunk",
                      "maple tree: a full round leafy crown on a short trunk",   # "lobed" drew a maple leaf
                      "ash tree: an open airy crown of a few rounded leaf clusters on a short trunk"],
-        "builtin": "res://sprites/trees/_hd_oak/", "place": "fit",
         # Main's broadleaves since the pack swap (built-in oak, hazel and leafy tree became Dotty's oaks).
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks/",
         "kind": "trees",
         "size": (350, 300),        # built-in _hd_oak, area-equivalent at scale 1 (builtin-sizes.json)
         "radius": 118, "offset_y": -130,  # built-in _hd_oak footprint and anchor
@@ -144,8 +137,6 @@ FAMILIES = {
                      "old weeping willow: a wide crown whose long branches hang straight down like a curtain",
                      "young weeping willow: a small dome of hanging leafy strands on a thin trunk",
                      "leaning weeping willow: the trunk tilted to one side, long strands of leaves drooping down"],
-        "builtin": "res://sprites/trees/_hd_willow/", "place": "fit",
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",
         "kind": "trees", "size": (260, 264), "radius": 128, "offset_y": -110, "aspect": (0.75, 1.5),
         "pack_folder": "Tyrnarra_Willows", "file": "willow_{n:02d}",
     },
@@ -161,8 +152,6 @@ FAMILIES = {
                      "old gnarled pine with a few cloud-like foliage pads",
                      "Scots pine, tall trunk with a rounded irregular crown",
                      "windswept mountain pine, crown blown to one side"],
-        "builtin": "res://sprites/trees/_hd_cedar/", "place": "fit",
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Pines/",
         "kind": "trees", "size": (272, 300), "radius": 90, "offset_y": -130, "aspect": (0.6, 1.8),
         "pack_folder": "Tyrnarra_Pines", "file": "pine_{n:02d}",
         "exclude": {"ink": [13]},   # a watercolour stain cut out with the tree
@@ -179,7 +168,6 @@ FAMILIES = {
                      "jungle tree: a dense round crown hung with a few vines",
                      "young jungle tree: big glossy leaves in a round crown on a slim trunk",
                      "strangler fig: a tangled trunk under a broad dense crown"],
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Kapoks/",
         "exclude": {"ink": [8], "bold": [23]},   # a giant leaf bush without a trunk
         "kind": "trees", "size": (340, 320), "radius": 100, "offset_y": -140, "aspect": (0.6, 1.6),
         "pack_folder": "Tyrnarra_Jungle", "file": "jungle_{n:02d}",
@@ -195,8 +183,6 @@ FAMILIES = {
                      "pair of leaning palm trees"],
         # Alpha from the ink, a thin ring: the mask and a 4 px ring made the fronds a round disc.
         "ink_alpha": True, "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
-        "builtin": "res://sprites/trees/toon_palm/", "place": "fit",
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Palms/",
         "kind": "trees", "size": (160, 240), "radius": 36, "offset_y": -100, "aspect": (1.0, 2.6),
         "pack_folder": "Tyrnarra_Palms", "file": "palm_{n:02d}",
     },
@@ -210,7 +196,6 @@ FAMILIES = {
         "variants": ["clump of tall bamboo stalks with leafy tops",
                      "small grove of bamboo, stalks of different heights",
                      "single tall bamboo cluster bending slightly"],
-        "replaces": "user://assets/Nibroc's Bamboo Forest/sprites/trees/Bamboo Trees/",
         "kind": "trees", "size": (170, 300), "radius": 40, "offset_y": -130, "aspect": (1.2, 3.0),
         "pack_folder": "Tyrnarra_Bamboo", "file": "bamboo_{n:02d}",
         "exclude": {"ink": [16, 19, 46]},   # bamboo forest scenes, cut into loose stalks
@@ -224,7 +209,6 @@ FAMILIES = {
                      "broken dead tree stump with a few crooked branches",
                      "twisted dead tree leaning to one side",
                      "bare winter tree with a round crown of thin branches"],
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Dead_Trees/",
         # Gnarled roots flare as wide as the crown and bare branches fill little: 0 of 48 passed.
         # Alpha from the ink, a thin ring, no fade: the mask and a thick ring filled the crowns in.
         "base_max": 0.95, "fill": (0.12, 0.8), "ink_alpha": True,
@@ -244,9 +228,6 @@ FAMILIES = {
                      "wide acacia tree with a flat layered crown like a table top",
                      "baobab tree, huge thick bottle-shaped trunk with a small crown of stubby branches",
                      "small thorny acacia bush with a flat top"],
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
-        "compare": ["user://assets/Dotty_Assets/sprites/trees/Dotty_Acacias/",
-                    "user://assets/Dotty_Assets/sprites/trees/Dotty_Baobabs/"],
         "kind": "trees", "size": (340, 250), "radius": 90, "offset_y": -105, "aspect": (0.45, 1.5),
         "pack_folder": "Tyrnarra_Savanna", "file": "savanna_{n:02d}",
     },
@@ -263,7 +244,6 @@ FAMILIES = {
                      "young saguaro cactus, a single tall column",
                      "group of three small column cacti"],
         "exclude": {"ink": [s for s in range(1, 49) if s % 4 == 2]},
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Cactuses/",
         "base_max": 1.0,           # a barrel cactus is widest at the ground
         "kind": "trees", "size": (150, 240), "radius": 40, "offset_y": -100, "aspect": (0.7, 2.6),
         "pack_folder": "Tyrnarra_Cactuses", "file": "cactus_{n:02d}",
@@ -278,7 +258,6 @@ FAMILIES = {
                      "cluster of three giant mushrooms of different heights",
                      "giant toadstool with a spotted domed cap",
                      "tall thin giant mushroom with a small conical cap"],
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Mushrooms/",
         "kind": "trees", "size": (240, 260), "radius": 70, "offset_y": -110, "aspect": (0.6, 2.2),
         "pack_folder": "Tyrnarra_Mushrooms", "file": "mushroom_{n:02d}",
         # Round 3: half the inner fade and 1 px bolder strokes bring back the caps' dots and gills.
@@ -299,7 +278,6 @@ FAMILIES = {
                      "young mangrove: a small round crown on a few arching roots"],
         # The young mangroves (seed % 5 == 4) drew big single leaves across the crown, like the maples.
         "exclude": {"bold": [4, 9, 14, 19, 24, 29]},
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Willows/",   # nearest bought art, for the lineup
         "kind": "trees", "size": (260, 300), "radius": 90, "offset_y": -120, "aspect": (0.7, 1.9), "fill": (0.2, 0.9),
         "pack_folder": "Tyrnarra_Swamp_Trees", "file": "swamp_{n:02d}",
     },
@@ -310,7 +288,6 @@ FAMILIES = {
         "subject": "a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at small size",
         "variants": ["round leafy bush", "low wide shrub of a few rounded leafy clumps",
                      "thorny scrub bush of bare twigs with a few small leaves", "heather bush: a low mound of tiny flowers"],
-        "replaces": "user://assets/Dotty_Assets/sprites/trees/Dotty_Oaks/",   # nearest bought art, for the lineup
         "kind": "trees", "size": (140, 110), "radius": 45, "offset_y": -40, "aspect": (0.35, 1.4), "fill": (0.25, 0.95),
         "pack_folder": "Tyrnarra_Shrubs", "file": "shrub_{n:02d}",
     },
@@ -325,8 +302,6 @@ FAMILIES = {
         "variants": ["tall jagged mountain", "mountain with two sharp peaks", "craggy mountain with a snowy top",
                      "broad mountain with two summits", "steep rocky spire", "mountain with a long ridge sloping to one side"],
         # Sized by area, not width: ours are wider than the built-ins' tall peaks, so width made them low.
-        "builtin": "res://sprites/mountains/playful_jagged_peaks/", "place": "fit", "match": "area",
-        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/mountains sample 1/",
         "kind": "mountains",
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
         "radius": 45, "offset_y": 0, "aspect": (0.3, 1.1), "fill": (0.2, 0.9),
@@ -340,8 +315,6 @@ FAMILIES = {
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
         "variants": ["rounded old mountain with a soft dome top", "worn mountain with two gentle rounded humps",
                      "broad rounded mountain with a shallow saddle", "low rounded mountain with a rocky shoulder"],
-        "builtin": "res://sprites/mountains/playful_rounded_mountains/", "place": "fit", "match": "area",
-        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/high hills 2/",
         "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.2, 1.0), "fill": (0.2, 0.9),
         "drop_thin": 14,   # base strokes under 28 px that stick out of the body dropped (sprites.drop_thin)
         "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
@@ -353,8 +326,6 @@ FAMILIES = {
                     "dome, one or two short inner strokes, white inside, nothing on top, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a hill symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
         "variants": ["low rounded hill", "gentle wide hill", "small rounded knoll", "long low hill"],
-        "builtin": "res://sprites/mountains/playful_hiils/", "place": "fit", "match": "width",
-        "replaces": "user://assets/Moulk's AI Fantasy Cartography Megapack/sprites/mountains/medium hills 1/",
         # A scribble in a circle (118), a volcano from above (122), an empty ellipse (134): all
         # three showed as black circles in a range; 113 and 147 stand on a full ellipse base.
         "exclude": {"line": [113, 118, 122, 134, 147]},
@@ -375,8 +346,6 @@ FAMILIES = {
                      "long low sand dune seen from the side: a gentle wave-shaped mound with one crest line",
                      "pair of overlapping sand dunes seen from the side, the back one taller",
                      "tall sand dune seen from the side with a sharp crest and a steep shaded face"],
-        "builtin": "res://packs/Arabia by Chan/sprites/mountains/sand_dunes_small/", "place": "fit", "match": "width",
-        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Dunes/",
         "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.1, 0.55), "fill": (0.2, 0.95),
         "pack_folder": "Tyrnarra_Dunes", "file": "dune_{n:02d}",
     },
@@ -394,7 +363,6 @@ FAMILIES = {
                      "pair of mesas, a big flat-topped one behind a smaller one",
                      "natural rock arch bridging two stone pillars",
                      "cluster of three tall rock spires of different heights"],
-        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Mesas/",
         "kind": "mountains", "size": (380, 220), "radius": 60, "offset_y": 0, "aspect": (0.25, 1.3), "fill": (0.2, 0.95),
         "drop_thin": 14,
         "pack_folder": "Tyrnarra_Mesas", "file": "mesa_{n:02d}",
@@ -421,8 +389,6 @@ FAMILIES = {
                      "tall craggy rock tower with a slanted top and a smaller crag at its foot",
                      "cluster of three narrow rock spires of different heights",
                      "massive rounded karst peak, taller than wide, with steep grooved sides"],
-        "builtin": "res://packs/Tang Dynasty by Chan/sprites/mountains/mountains/", "place": "fit", "match": "area",
-        "replaces": "user://assets/Dotty_Assets/sprites/mountains/Dotty_Pillar_Mts_Big/",
         # About 2x the area of the Tang pillars' area-equivalent 222 x 314, like the peaks: sharp at big scales.
         "kind": "mountains", "size": (300, 430), "radius": 50, "offset_y": 0, "aspect": (1.0, 3.0), "fill": (0.25, 0.95),
         "pack_folder": "Tyrnarra_Pillars", "file": "pillar_{n:02d}",
@@ -443,8 +409,6 @@ FAMILIES = {
                      "volcano with a lava lake: a broken crater rim around a glowing pool of lava",
                      # Seeds 35+: "dormant" still drew smoke and fire (round 1: 5, 11, 17, 23, 29).
                      "extinct volcano: a quiet grey cone with a wide empty crater, no smoke, no fire, no lava"],
-        "replaces": "user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/",
-        "compare": ["user://assets/Dotty_Assets/sprites/symbols/Dotty_Volcanoes/"],
         "kind": "symbols", "size": (340, 280), "radius": 90, "offset_y": 0, "aspect": (0.4, 1.6), "fill": (0.2, 0.97),
         "pack_folder": "Tyrnarra_Volcanoes", "file": "volcano_{n:02d}",
     },
@@ -456,7 +420,6 @@ FAMILIES = {
         "items": SETTLEMENT_ITEMS,
         "per_item": 3,
         # Kartofuchs guesses each icon's role from these item names (README: Families): keep them.
-        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.3, 0.97),
         # The raised view reads as 2.5D; the user filed these under it once flat 2D icons were asked for.
         "pack_folder": "Tyrnarra_2.5D_Settlements", "file": "{item}_{n}",
@@ -472,7 +435,6 @@ FAMILIES = {
         "items": [(k, FLAT_ITEMS.get(k, d)) for k, d in SETTLEMENT_ITEMS],
         "exclude": {"icon": [3, 5]},   # the raised walled town and walled city of round 1
         "per_item": 2,
-        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.25, 2.8), "fill": (0.3, 0.97),
         "pack_folder": "Tyrnarra_2D_Settlements", "file": "{item}_{n}",
     },
@@ -495,7 +457,6 @@ FAMILIES = {
                   ("beacon", "hilltop beacon: a squat stone tower with a big fire burning on top"),
                   ("portal", "ancient stone archway carved with runes, standing alone")],
         "per_item": 2,
-        "compare": ["user://assets/Dotty_Assets/sprites/symbols/Dotty_Mixed_Structures/"],
         "kind": "symbols", "size": (220, 220), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.2, 0.97),
         "pack_folder": "Tyrnarra_2.5D_Landmarks", "file": "{item}_{n}",
     },
@@ -519,7 +480,6 @@ FAMILIES = {
                   ("valreka", "city with a palace and a temple built on the back of a giant whale swimming in the sea, smaller whales carrying houses beside it"),
                   ("frae_city", "city on a great rock floating above a lake, held down by seven huge chains")],
         "per_item": 2,
-        "compare": ["user://assets/BSG_elvanos_mapIcons/sprites/symbols/BSG & Elvanos - Map Icons Custom Colors Textured/"],
         "kind": "symbols", "size": (320, 260), "radius": 80, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
         "pack_folder": "Tyrnarra_2.5D_God_Cities", "file": "{item}_{n}",
     },

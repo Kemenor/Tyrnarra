@@ -5,20 +5,17 @@ what lives on which machine and how to work from the tower.
 
 Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, with many
 variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
-any tool of our own) and the bought packs that stood in for it. `Main` uses the built-ins
-again since 2026-09-27 (see "Swapping"), so every comparison draws against Wonderdraft's own
-art. The art is made in Wonderdraft's own pack format, so it works in Wonderdraft today and in
-any later tool that reads Wonderdraft packs (Kartofuchs reads them from the same asset folder).
+any tool of our own) and the bought packs that stood in for it. The art is made in Wonderdraft's
+own pack format, so it works in Wonderdraft and in Kartofuchs, which reads the same asset folder.
+The pack is tried on the real map in Kartofuchs: import `Main.wonderdraft_map` with the
+"Tyrnarra" art mapping (see "Reviewing"). This tool only makes the art (trimmed to generation
+on 2026-09-30; the Wonderdraft swap and test tools it had are summed up under "Earlier tools").
 
 ```
 assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
 assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into the Tyrnarra pack
-assetgen.sh test conifer --round 7 --offline      # drawn here in seconds: Main's art vs round 6 vs round 7
-assetgen.sh test conifer --round 7                # the same from a real Wonderdraft export (hands off ~3 min)
-assetgen.sh builtin-refs                          # once: the built-ins as local reference sprites (lineups)
-assetgen.sh fullswap                              # the whole pack in a copy of the Base, exported, vs the built-ins
 assetgen.sh gallery [peaks settlements ...]       # review sheets of the installed pack, by variant, numbered
-assetgen.sh sync [--pull]                         # work files, test references and pack to (from) Proton Drive
+assetgen.sh sync [--pull]                         # work files and pack to (from) Proton Drive
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -26,14 +23,12 @@ levelled they look alike on the map, and mixing them adds variety. `--style ink`
 `generate` or `build` to some of them. `build` writes into `~/.local/share/wdmap/assetgen/<family>/`:
 `sheet.jpg` (the installed sprites tinted grass-green), `chosen.txt` (which style and seed became
 which file) and `rejects.txt` (why each other image was dropped); every raw image has a `.txt`
-with its exact prompt and settings. `test` writes `compare-*.jpg` there too. With `--round N`
-all of that goes to `<family>/round-N/` instead, `build` keeps a copy of the round's sprites
-there (`round-N/sprites/`, so later rounds can be compared with it), and `test` names its
-export `Assetgen <Family> rN.webp`.
+with its exact prompt and settings. With `--round N` all of that goes to `<family>/round-N/`
+instead, and `build` keeps a copy of the round's sprites there (`round-N/sprites/`, so later
+rounds can be compared with it). Older rounds also hold the `compare-*.jpg` sheets of the
+removed test tool.
 
 The installed pack: `~/.local/share/Wonderdraft/assets/Tyrnarra/sprites/<kind>/<Folder>/`.
-Test maps and their exports: `~/.local/share/wdmap/assetgen-test/` (outside Proton Drive on
-purpose: 100 MB maps and 120 MB PNGs should not sync).
 
 ## Setup
 
@@ -58,7 +53,6 @@ purpose: 100 MB maps and 120 MB PNGs should not sync).
   FLUX graphs here skip BiRefNet: the drawings come on clean white, cut locally
   (`sprites.flood_mask`).
 - `assetgen.sh` builds its own gitignored `.venv` (numpy, scipy, pillow) on first run.
-- `test` needs Wonderdraft installed as for `wd-regions --export`, and closed (`test --offline` does not).
 
 ## Wonderdraft's rules for pack art
 
@@ -156,7 +150,7 @@ What worked and what did not, in the order we found it (2026-09-26):
   left out) or a grey haze round the outline (soft-alpha pixels per opaque pixel). Scored by
   `sprites.finish_look`; the build finishes every usable drawing once more for it.
 
-## Testing (wdtest.py, render.py)
+## Reviewing
 
 - **`gallery`** (gallery.py): one sheet per family in `~/.local/share/wdmap/assetgen/gallery/`,
   the installed sprites grouped by the variant (or icon item) each was drawn as and numbered
@@ -164,77 +158,40 @@ What worked and what did not, in the order we found it (2026-09-26):
   pack on these ("conifer 15 looks empty"). The variant comes from the prompt saved with the
   raw image, matched to the family's variant list by shared words, so older wordings still
   group right. Takes seconds.
-
-- **The yardstick is Wonderdraft's own art**, as in every round since the first. A family with
-  a built-in counterpart (recipe `builtin`, e.g. `_hd_christmas`) takes over those symbols in a
-  copy of the Base view: same position, scale and mirroring, sized by the recipe (`place:
-  scale`, the conifers) or to the measured art of the built-in texture that stood there (`place:
-  fit`). Its first column is the Base's own export (`Main - Base.webp` when newer than the map,
-  else `Assetgen Reference.webp`, an export of a copy redone whenever the Base changes; an `.md5`
-  beside it tells).
-- **The bought pack** is the second column where a family has one (recipe `replaces`, e.g.
-  `Dotty_Pines`): the Base export from the days `Main` used the packs
-  (`assetgen-test/Assetgen PostSwap Base.webp`). A family without a built-in counterpart takes
-  over the bought art `Main` has for it (Dotty's kapoks, Nibroc's bamboo), fitted to it: each
-  sprite covers the drawn area of the one it replaces and stands on the same foot
-  (`packswap.fit`).
-- **`fullswap`**: the whole pack in a copy of the Base (every built-in family by `BUILTIN_TO`
-  in fullswap.py, the bought jungle and bamboo, every city cluster by the icon rules), exported
-  and compared with the Base region by region (`~/.local/share/wdmap/assetgen/fullswap/`).
-  It waits 30 s for the load (the user timed it under 30 s); the runs that once looked like slow
-  loads were a locked screen (see the export notes in `tools/wonderdraft/README.md`).
-- **`builtin-refs`** (two exports, once): every built-in texture `Main` used, placed on an empty
-  copy of the Base, exported drawn white and drawn black; per pixel alpha = 1 - black / terrain
-  and grey = (white - (1 - alpha) terrain) / alpha give each built-in as a clean greyscale sprite
-  in `~/.local/share/wdmap/assetgen/builtins/` (local only, like the pack art: Wonderdraft's art
-  never goes into the repo). They fill the "Wonderdraft built-ins" row of `lineup.jpg`.
-- **`--offline`** draws our columns here (`render.py`) in a few seconds, without Wonderdraft,
-  beside the real exports of the built-ins and of `Main` now: the Empty export (Base terrain, no
-  symbols or labels) as ground, symbols y-sorted, straight-alpha mipmaps like Godot's, greyscale
-  art multiplied by the ground. Wonderdraft draws the soft edges of shrunk sprites darker than
-  plain alpha blending; an empirical fit (`EDGE_COVER` 0.5, `COLOUR_POWER` 2), refitted on four
-  real exports, brings the densest patch within a few points (mean grey / share darker than 50,
-  real vs here): Dotty pines 87/35% vs 86/35%, round 9 81/39% vs 83/34%, round 11 83/37% vs
-  84/34%; thin-ringed round 6 comes out darker here (86/27% vs 82/35%). The first fit (0.7)
-  had round 9 at 86/30%. Single trees match to the pixel. The real export has the last word.
-- `--offline` also writes `lineup.jpg`: the built-ins, the art `Main` uses now and each round,
-  sprite by sprite at full size and at map size (40 px), tinted grass-green.
+- **On the real map, in Kartofuchs:** import `Main.wonderdraft_map` with the "Tyrnarra" art
+  mapping (Map ▸ Import, "Swap the art with"), or run Map ▸ Swap art on a map already open. Each
+  built-in family becomes one of our folders, fitted over the art that stood there (its measured
+  size, foot and middle) and tinted by the ground; swapping again starts from the original art,
+  so re-run it after installing a new round. The mapping and the measured built-in sizes live
+  in Kartofuchs' data folder (`mappings/Tyrnarra.json`, `art-sizes.json`), not in this repo.
 - **Size**: the built-in conifers measured on the calibration grid are smaller than our `size`
   (area of 137 x 291 at scale 1 against 185 x 330). Placed at the built-ins' scales, as in all
   rounds, our conifers are about 1.4x their linear size; fitted to Dotty's pines they come out
   at 0.7x that scale. Both read well; `size` also sets the delivered resolution.
 
-## Swapping built-in art for installed packs (packswap.py)
+## Earlier tools (removed 2026-09-30)
 
-Since 2026-09-26 the plan is to use bought packs first (Dotty Advanced + Booster bundles,
-Moulk's AI Fantasy Cartography Megapack; installed in the Wonderdraft asset folder, backed up in
-Proton Drive, never in this repo) and to generate our own art later.
+Until Kartofuchs could swap art on import, this tool tested the pack in Wonderdraft itself. What
+they did, for reading the results log:
 
-```
-assetgen.sh measure-builtins     # calibration: two exports, sizes -> builtin-sizes.json
-assetgen.sh packswap             # Base copy with every rule in pack-swap.json applied, exported, compared
-```
-
-- `measure-builtins` puts one copy of each built-in texture used in Main (262) on a grid in an
-  otherwise empty copy of the Base terrain, at scale 0.35, untinted, exports it with and without
-  the grid and measures each cell's difference: drawn width, height, centre and foot at scale 1.
-  Earlier attempts measured isolated symbols in the real map; in a map this dense almost none
-  are isolated, and stroke-drawn art falls apart into single strokes as connected blobs.
-- `packswap` swaps every symbol whose texture starts with a rule's `from` for a file of the
-  rule's `to` folder (picked by a hash of the position), with a scale that makes the new art
-  cover the same measured `match` dimension and an offset that puts its drawn foot and centre
-  where the old art's were. Radius comes from the folder's `.wonderdraft_symbols`. Custom-colour
-  folders (`_Cc`, draw_mode custom_colors) are refused until a rule gives colours.
-- Comparisons land in `~/.local/share/wdmap/assetgen/packswap/swap-*.jpg`.
-- First run (2026-09-26): all 24 families, 13,128 symbols swapped. Trees, dunes and the overall
-  map read like the original; Moulk mountains and hills came out somewhat small and the Tang
-  mountains faint, so their rules need a `size` above 1.
-- Applied to `Main` itself the same day (`packswap --apply`), and **swapped back on 2026-09-27**
-  at the owner's wish, so comparisons draw against Wonderdraft's own art again. The pack-art
-  version is kept as `Main (after pack swap 2026-09-26).wonderdraft_map` (its only other
-  difference: Moulk's pack in `included_packs`), the copy from before as
-  `Main (before pack swap 2026-09-26).wonderdraft_map`; the four views were regenerated and the
-  exports from before the swap match them again.
+- **`test <family> --round N`** swapped one family into a copy of Main's Base view and exported
+  it with Wonderdraft (`wdtest.py`); `--offline` drew the same here (`render.py`: the Empty
+  export as ground, straight-alpha mipmaps, an empirical edge fit `EDGE_COVER` 0.5,
+  `COLOUR_POWER` 2 that matched real exports within a few points). Compare sheets
+  (`compare-*.jpg`) and `lineup.jpg` in the round folders come from it.
+- **`builtin-refs`** exported every built-in texture Main used drawn white and black on an empty
+  Base and recovered them as private greyscale reference sprites for the lineups (never
+  published; deleted with the tool).
+- **`measure-builtins`** measured each built-in texture's drawn size, foot and middle at scale 1
+  from a calibration grid exported with and without it (isolated symbols in the dense real map
+  did not work: stroke art falls apart into single strokes). These numbers are Kartofuchs'
+  `art-sizes.json` now.
+- **`packswap`** (2026-09-26) swapped Main's built-ins for the bought packs (Dotty, Moulk) by
+  `pack-swap.json`; applied to Main that day and swapped back on 2026-09-27 at the owner's wish.
+- **`fullswap`** put the whole pack into a copy of the Base (each built-in family by a mapping
+  table, the bought jungle and bamboo, every BSG city cluster by the icon rules) and compared it
+  with the Base region by region. Its family table became Kartofuchs' "Tyrnarra" art mapping;
+  the city-icon swap was left out there.
 
 ## Results log
 
@@ -571,16 +528,15 @@ red dome tops, and the monastery icons still carry the old red flags.
   Valreka's city on a whale, Frae City's chained rock over a lake, Haizava's sails and vanes,
   Lurrath's stone ring, Ljosarn's beacon, and so on. The names stay out of the prompt, so FLUX
   writes no text.
-- A family with nothing in `Main` to swap gets only the lineup from `test --offline`.
 
-**Runbook for the families still to generate** (round 1 each; check the lineup and the
-compare sheets, then `test --round 1` for a real export where the family is in `Main`):
+**Runbook for new families** (round 1 each; check the build sheet and the gallery, then the
+pack on Main in Kartofuchs):
 
 ```
 # SDXL (plain LAN server, ~5 s per image; 60 seeds x 2 styles = 10 min per family)
 for f in peaks fells hills dunes willow pine palm bamboo deadtree savanna desert fungal; do
     assetgen.sh generate $f --seeds 1-60 && assetgen.sh build $f --round 1 --keep 40 \
-        && assetgen.sh test $f --round 1 --offline
+        && assetgen.sh gallery $f
 done
 # FLUX (server with npc_art's flags, ~4 min per image)
 assetgen.sh generate broadleaf --seeds 1-40      # ~2.5 h
@@ -593,11 +549,11 @@ Seeds cycle through a family's variants (or items) as seed % count, so a range t
 multiple of the count gives each the same number of drawings. If an SDXL family comes out
 wrong in the lineup, `generate --engine flux` on new seeds uses its FLUX wording.
 
-## Built-in art in Main before the swap
+## Built-in art in Main
 
 By use (13,128 symbols):
 
-Sizes measured on the calibration grid (builtin-sizes.json, area-equivalent at scale 1, drawn
+Sizes measured on the calibration grid (2026-09-26; now Kartofuchs' art-sizes.json; area-equivalent at scale 1, drawn
 foot, sprite centre relative to the click point), e.g. oak 353 x 301, foot 24, centre -130,
 height/width 0.74-1.12; hazel 214 x 233, foot 26, centre -90, 0.83-1.71.
 
@@ -616,7 +572,7 @@ height/width 0.74-1.12; hazel 214 x 233, foot 26, centre -90, 0.83-1.71.
 | 298 | mountains/playful_rounded_mountains | | 23 | trees/toon_palm |
 |  |  | | 24 | sand dunes large + penned mountains small |
 
-A new family needs a `FAMILIES` entry: its SDXL and FLUX wording with shape variants, the
-built-in yardstick and the folder of `Main` it replaces, its scale-1 size and anchor from
-builtin-sizes.json. The pack can hold more variants than Wonderdraft's built-ins (it has 9
+A new family needs a `FAMILIES` entry: its SDXL and FLUX wording with shape variants and its
+scale-1 size and anchor; where `Main` has built-ins for it, add it to the "Tyrnarra" art
+mapping in Kartofuchs (Map ▸ Swap art, then save). The pack can hold more variants than Wonderdraft's built-ins (it has 9
 conifers; we install 64).

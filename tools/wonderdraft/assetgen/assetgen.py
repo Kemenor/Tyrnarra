@@ -3,14 +3,14 @@
 
   assetgen.sh generate conifer --seeds 100-139        images + masks from the tower's ComfyUI
   assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
-  assetgen.sh test conifer --round 7                  real Wonderdraft export vs the art Main uses now
-  assetgen.sh test conifer --round 7 --offline        the same drawn here (render.py), no Wonderdraft
   assetgen.sh gallery [conifer peaks ...]             review sheets of the installed pack, by variant
   assetgen.sh sync [--pull]                           work files and pack to / from Proton Drive
 
+Trying the pack on a real map: import the map into Kartofuchs with the Tyrnarra art mapping.
+
 Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
 add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
-chosen.txt, sheet.jpg, compare-*.jpg; with --round N all but raw/ in round-N/, plus the sprites).
+chosen.txt, sheet.jpg; with --round N all but raw/ in round-N/, plus the sprites).
 """
 import argparse
 import os
@@ -93,7 +93,7 @@ def _save(raw, seed, image, mask, settings):
 
 
 def _out(fam, n):
-    """Where a family's (or one round's) build and test files go."""
+    """Where a family's (or one round's) build files go."""
     out = os.path.join(WORK, fam["name"], *(["round-%d" % n] if n else []))
     os.makedirs(out, exist_ok=True)
     return out
@@ -198,18 +198,6 @@ def cmd_build(a):
     print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
 
 
-def cmd_test(a):
-    import wdtest
-    fam = _family(a.family)
-    out = _out(fam, a.round)
-    if a.offline:
-        paths = wdtest.offline(fam, out, a.round)
-    else:
-        paths = wdtest.run(fam, out, export=not a.no_export, n=a.round)
-    for p in paths:
-        print(p)
-
-
 def cmd_gallery(a):
     import gallery
     for name in a.families:
@@ -220,17 +208,14 @@ def cmd_gallery(a):
 
 def cmd_sync(a):
     """The work that lives outside git, through Proton Drive, so another machine can take over:
-    the work folder (raw drawings, rounds, built-in references), the test references and the
-    installed pack. Push mirrors this machine (the owner) exactly; pull only adds and updates."""
-    import shutil
+    the work folder (raw drawings, rounds) and the installed pack. Push mirrors this machine (the
+    owner) exactly; pull only adds and updates."""
     import subprocess
-    import wdtest
     proton = os.path.expanduser(os.environ.get("TYRNARRA_PROTON", "~/ProtonDrive"))
     hub = os.path.join(proton, "Wonderdraft", "assetgen-work")
     pack = os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra")
     pairs = [(WORK, os.path.join(hub, "work")),
              (pack, os.path.join(proton, "Wonderdraft", "Wonderdraft", "assets", "Tyrnarra"))]
-    tests = ["Assetgen Empty.webp", "Assetgen PreSwap Base.webp", "Assetgen PostSwap Base.webp"]
     if not os.path.isdir(proton):
         sys.exit("no Proton Drive folder at %s (set TYRNARRA_PROTON)" % proton)
     for here, there in pairs:
@@ -242,76 +227,22 @@ def cmd_sync(a):
         flags = ["-a", "--update"] if a.pull else ["-a", "--delete"]
         subprocess.run(["rsync"] + flags + [src + "/", dst + "/"], check=True)
         print("%s -> %s" % (src, dst))
-    tdir = os.path.join(hub, "test")
-    os.makedirs(tdir if not a.pull else wdtest.TEST_DIR, exist_ok=True)
-    for name in tests:
-        src, dst = ((os.path.join(tdir, name), os.path.join(wdtest.TEST_DIR, name)) if a.pull
-                    else (os.path.join(wdtest.TEST_DIR, name), os.path.join(tdir, name)))
-        if os.path.exists(src):
-            shutil.copy2(src, dst)
-    print("test references: %s" % ("pulled" if a.pull else "pushed"))
-
-
-def cmd_fullswap(a):
-    import fullswap
-    out = os.path.join(WORK, "fullswap")
-    os.makedirs(out, exist_ok=True)
-    fullswap.run(out, export=not a.no_export)
-
-
-def cmd_kartofuchs(a):
-    import fullswap
-    fullswap.kartofuchs_mapping()
-
-
-def cmd_builtin_refs(a):
-    import wdtest
-    wdtest.builtin_refs(export=not a.no_export)
-
-
-def cmd_measure(a):
-    import packswap
-    packswap.measure(export=not a.no_export)
-
-
-def cmd_packswap(a):
-    import packswap
-    if a.apply:
-        packswap.apply(os.path.abspath(os.path.expanduser(a.apply)))
-        return
-    path = packswap.make_swapped()
-    if not a.no_export:
-        import wd_export
-        wd_export.export_views([path])
-    packswap.compare(os.path.join(WORK, "packswap"))
 
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
-    for name, fn, text in (("measure-builtins", cmd_measure, "measure the built-in art's sizes (one export)"),
-                           ("builtin-refs", cmd_builtin_refs, "built-in art as local reference sprites (two exports)"),
-                           ("fullswap", cmd_fullswap, "the whole pack in a copy of the Base, exported and compared"),
-                           ("packswap", cmd_packswap, "Base view with built-ins swapped per pack-swap.json, exported")):
-        s = sub.add_parser(name, help=text)
-        s.add_argument("--no-export", action="store_true", help="reuse the last export")
-        if name == "packswap":
-            s.add_argument("--apply", metavar="MAP", help="swap this map in place (with backup) instead of a test copy")
-        s.set_defaults(fn=fn)
-    s = sub.add_parser("kartofuchs", help="the pack swap (fullswap's families) as Kartofuchs' Tyrnarra art mapping")
-    s.set_defaults(fn=cmd_kartofuchs)
     s = sub.add_parser("sync", help="work files and pack to Proton Drive (or --pull them from it)")
     s.add_argument("--pull", action="store_true", help="take them from Proton Drive (another machine's work)")
     s.set_defaults(fn=cmd_sync)
     s = sub.add_parser("gallery", help="review sheets of the installed pack, grouped by variant")
     s.add_argument("families", nargs="*", help="default: every family")
     s.set_defaults(fn=cmd_gallery)
-    for name, fn in (("generate", cmd_generate), ("build", cmd_build), ("test", cmd_test)):
+    for name, fn in (("generate", cmd_generate), ("build", cmd_build)):
         s = sub.add_parser(name)
         s.add_argument("family")
-        if name != "test":
-            s.add_argument("--style", type=lambda v: v.split(","),
-                           help="comma-separated prompt styles (default: the family's)")
+        s.add_argument("--style", type=lambda v: v.split(","),
+                       help="comma-separated prompt styles (default: the family's)")
         s.set_defaults(fn=fn)
         if name == "generate":
             s.add_argument("--seeds", default="1-40", help="e.g. 1-40 or 5,9,12-20")
@@ -324,12 +255,7 @@ def main(argv=None):
                            help="override a finishing constant of recipes.py, e.g. OUTLINE=3 (repeatable)")
             s.add_argument("--no-install", action="store_true",
                            help="with --round: write the sprites to the round's folder only, not the pack")
-        if name in ("build", "test"):
             s.add_argument("--round", type=int, help="round number: keep this round's files apart (README: Results log)")
-        if name == "test":
-            s.add_argument("--no-export", action="store_true", help="only rebuild maps and crops")
-            s.add_argument("--offline", action="store_true",
-                           help="draw the comparison here (render.py) instead of exporting with Wonderdraft")
     a = p.parse_args(argv)
     a.fn(a)
 
