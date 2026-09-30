@@ -15,7 +15,9 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 4. **All canon can change, deliberately and on the user's yes.** Dates, transport, a General's dungeon, an ancestry's home, an earmark: each is a **canon move**, named, approved, and listed with the files it touches (Phase 4). **Silent contradiction is the only thing forbidden.**
 5. **Read before designing on canon** (Phase 0, point 7): if the user could point at a proposal and say "that contradicts `<file>`", `<file>` should have been read first.
 6. **Surface before writing; lore before HTML.** Prose is reviewed as a draft file (Phase 10) before it becomes canon (Phase 11); HTML waits for an explicit publish signal (Phase 12).
-7. **The project rules apply throughout:** `CLAUDE.md` (naming strata, affirmative prose, no em-dashes, *mortals* not *humans*, chronicler tier in open prose, the GM badges, commit discipline) and `docs/region-prose.md` (the region-entry contract; Breidey is the exemplar).
+7. **Candidate rounds are 1–3, scaled to importance, recommendation first** (seeds, images, governments, names, beliefs, secrets): three options for what carries the region, a single recommendation for side matters, alternatives on request.
+8. **Plain answers are allowed.** A phase question may have an ordinary answer (the people feed themselves; the clothes are unremarkable). Answer for plausibility first, using every neighbour and not only the famous one; never invent a dependency or a drama to feed the tension.
+9. **The project rules apply throughout:** `CLAUDE.md` (naming strata, affirmative prose, no em-dashes, *mortals* not *humans*, chronicler tier in open prose, the GM badges, commit discipline) and `docs/region-prose.md` (the region-entry contract; Breidey is the exemplar).
 
 ## The phases at a glance
 
@@ -73,7 +75,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 3. **Welcome the user's own ideas.** A seed idea the user brings (the Namur dictatorship came this way) is an answer, tested in Phase 2 alongside the others.
 4. **Leave to later phases:** the traveller's image (3), government (5), economy (6), daily life (7). Asked now, they produce guesses.
 
-**Output:** a 4–6 sentence summary in chat of what the answers say about the place: the flow, the pressure, the contradiction, the user's ideas. The user corrects it before any seed is made.
+**Output:** a 4–6 sentence summary in chat of what the answers say about the place: the flow, the pressure, the contradiction, the user's ideas. The user corrects it before any seed is made. **The summary is written even when the user's own idea answers the questions**: it fixes the neighbours and sibling contrasts as context, which otherwise drop out (the Namur dry run).
 
 **Closes when:** the user confirms the summary.
 
@@ -84,9 +86,9 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **Topic:** find the one thing this place is that no other place is; government, economy, and people grow from it.
 
 **What must be done:**
-1. **Generate 2–3 seeds.** A seed is an **image**, a **contradiction**, a **behaviour**, or a **collision of forces**; never a political archetype with an ancestry slotted in, a demographic label, or an adjective for the domain.
+1. **Generate 2–3 seeds.** A seed is an **image**, a **contradiction**, a **behaviour**, or a **collision of forces**; never a political archetype with an ancestry slotted in, a demographic label, or an adjective for the domain. **A seed may be political when the politics is the contradiction** (Namur: a free people sworn to obey one). **When the user brings the idea, the seeds may be its shapes**: variants of the user's idea laid side by side, then combined with the other open axes if needed (the Namur grid).
 2. **Per seed:**
-   - **The pitch**, 2–3 sentences, leading with the image or contradiction. No politics in the pitch.
+   - **The pitch**, 2–3 sentences, leading with the image or contradiction. No politics in the pitch unless the politics is the contradiction.
    - **What follows:** the political direction, the peoples' part, the signature institution, and one concrete sensory detail that grow from the seed. The government is a first sketch only (Phase 5 settles it).
    - **The cross-canon hook:** what it rhymes with in locked canon.
    - **The specificity test** in one line: could this place exist anywhere else in the setting; what would have to change to move it? If "only the name", the seed fails and is rewritten.
@@ -95,7 +97,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 5. **Recommend one.** The user picks, combines, inverts, or asks for the combinations laid side by side (the Namur grid: two shapes against three Generals).
 6. **Pencil on request.** If the user wants the alternatives kept, write them to `docs/pencilled/<region>.md` (marked not canon), commit, push.
 
-**Output:** the chosen seed, in the user's words or confirmed in mine; the pencil file if asked.
+**Output:** the chosen seed **as one sentence** (it becomes the page's flavour line: *a republic that keeps its word, including the one that made it a dictatorship*); the pencil file if asked.
 
 **Closes when:** the user has picked the seed and says it is good.
 
@@ -106,8 +108,8 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **Topic:** the one thing a visitor would carry home: the seed seen from the road, from outside.
 
 **What must be done:**
-1. **Offer 3–4 candidates**, each a single concrete thing: a sound, a gesture, a view, a public act (the knot-cutting on the Drukha quay; the line of fires seen from the Eldara train; the sword laid on the slab). Ground each in the seed and in canon already fixed.
-2. **Check it is not taken:** no repeat of an image a built place already owns.
+1. **Offer 2–3 candidates**, each a single concrete thing: a sound, a gesture, a view, a public act (the knot-cutting on the Drukha quay; the line of fires seen from the Eldara train; the sword laid on the slab). Ground each in the seed and in canon already fixed.
+2. **Check it is not taken, by name and by image:** no repeat of an image a built place already owns, including **kin rites** in other regions (Namur's Oath-Day beside Lograth's Re-Swearing: kin, checked, distinct).
 3. **Recommend one.**
 4. **Settle the speaker:** who sees it, from a register whose naming rules exist (so the name follows them); why they are there; the year; the form (a single quote, a letter, a journal entry).
 5. **Settle where it lands:** the top of the section it belongs to. If it grows into a longer document, it becomes its own in-world file (`lore/geography/<domain>/<region>-<form>.md`, with a voice block), published whole as a log card, excerpts quoted at section heads.
@@ -144,15 +146,16 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 **What must be done:**
 1. **Census first:** hold each candidate against the forms already on Talan (Appendix B) and name its nearest existing polity. Talan is heavy on councils and assemblies; a new one says what sets it apart.
-2. **Offer 3–5 government seeds**, each with:
-   - **Who rules, concretely**, answering the four questions a foreigner needs: who rules day to day, who receives an envoy, who signs the treaty, who decides to build the bridge.
+2. **Offer 2–3 government seeds**, each with:
+   - **Who rules, concretely**, answering the four questions a foreigner needs: who rules day to day, who receives an envoy, who signs the treaty, who decides to build the bridge. If the polity has a **special state** (an emergency office, a regency, an interregnum), answer the four questions **twice**: in ordinary times and in the special state, including how power is divided between them.
    - **Why they are fit to rule:** actual statecraft (planning, logistics, law, diplomacy) where this society already practises it. Craft-prestige is not competence.
    - **Why the ruled accept it:** the founding story, and the standing reason an ordinary person tolerates it today.
    - **The honest cost,** named plainly: a plutocracy is called a plutocracy.
 3. **The incentive check:** re-derive who actually wins any standing metric (seniority that reduces to age, stake that reduces to the biggest purse, a rule that rewards inventing guilt, like the Order of Law's "cosmetic knot"). Rework any seed the check breaks.
 4. **The three tests** on the recommended seed: **unity** (why does it not fracture?), **external agency** (how does it make a deal with a neighbour?), **internal provision** (how does it decide to build?). "No ruler" passes only by naming the non-governmental force that binds the place and the standing custom a foreigner deals with (No Man's Land: the kindling and the line captain).
 5. **Settle the powers:** what the rulers may do, what they may not, and where the lines are deliberately muddy (Namur: the Dictator may sign anything the oath requires, and what it requires is argued). A muddy line is often the live tension.
-6. **Recommend one.** The user picks, combines, or inverts.
+6. **When the seed is itself a government** (Namur), offer variants of its mechanics rather than whole new governments, and settle how its offices are filled (who may be chosen, and why they are fit).
+7. **Recommend one.** The user picks, combines, or inverts.
 
 **Output:** the chosen government in chat: offices, who fills them and how, the four answers, the three test results, the powers and their muddy edges, the honest cost.
 
@@ -165,15 +168,14 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **Topic:** how the people eat, what the place sells, what draws outsiders, and how it all moves. A region nobody has a reason to reach is not a region.
 
 **What must be done:**
-1. **Subsistence:** what feeds the people (farming, herding, fishing, forage), and whether they feed themselves or depend on imports (Eldara cannot, and that shaped No Man's Land).
+1. **Subsistence:** what feeds the people (farming, herding, fishing, forage), and whether they feed themselves or depend on imports (Eldara cannot, and that shaped No Man's Land). Answer for plausibility: a country rarely depends on its enemy for bread, and lean years draw on every neighbour. "They feed themselves" is a complete answer.
 2. **The draw:** the one thing only this place has that brings outsiders: a good, a service, a skill, a rite, a pilgrimage. If the answer is "nothing much", the place must be special some other way, or it is rethought.
 3. **What it sells and buys, and with whom:** named partners among the neighbours and on the wider network. Check the partners' own canon agrees, or note what it needs updating (the Thousand Kingdom buying Namur's ore).
 4. **Routes and transport:** whether it is on the rail (checked against `lore/transport.md` and the network's lines), its ports and sea routes, its roads and river traffic, and any single choke point. **Changing transport canon is a canon move like any other** (a new line, a closed route, a new crossing): name the change, get the user's yes, list the files it touches. What is never allowed is contradicting it *silently*.
-5. **Who gets rich, and who does not:** where the wealth sits, as the Phase 5 government shapes it.
-6. **How the economy feeds the tension:** the stake each side of the live tension has in it (Namur's closed mines against the reformers).
-7. **Table note, optional:** if a material or good maps to a PF2e item, check it in `tools/encounterBuilder/items.db` (`loot.py search`; rebuild with `rebuild.py` if absent), and against a second source (Archives of Nethys) if the database lacks it. The Foundry packs are not complete (warpglass is missing from them).
+5. **How the economy feeds the tension:** the stake each side of the live tension has in it (Namur's closed mines against the reformers).
+6. **Table note, optional:** if a material or good maps to a PF2e item, check it in `tools/encounterBuilder/items.db` (`loot.py search`; rebuild with `rebuild.py` if absent), and against a second source (Archives of Nethys) if the database lacks it. The Foundry packs are not complete (warpglass is missing from them).
 
-**Output:** the settled economy in chat: subsistence, the draw, partners and goods, routes and transport, where the wealth sits, its stake in the tension, any table note.
+**Output:** the settled economy in chat: subsistence, the draw, partners and goods, routes and transport, its stake in the tension, any table note. (Who gets rich matters only where the seed or the tension makes it matter, and then those phases carry it.)
 
 **Closes when:** the user says it is good.
 
@@ -185,7 +187,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 **What must be done:**
 1. **The ordinary day and the shared ritual:** how an ordinary person's day runs, and the civic ritual everyone shares, if there is one (the Oath-Day count, the dawn page, the Apprentice's Fire).
-2. **The senses and habits:** what people eat and drink, what they wear, what they sing, what the streets smell like, what a market morning looks like, what the regional vice is; and **how people talk**, a habit of speech that grows from the seed (Namur's "perhaps").
+2. **The senses and habits, as a few telling examples:** what is special here or tellingly ordinary among food, drink, dress, song, smell, the market, and the regional vice (Namur: the sworn-name tag at every throat, betting on the Oath-Day count, the spirit drunk only when a word is given). No full inventory, and **no blanket claims across classes** (rich and poor, town and country). And **how people talk**, a habit of speech that grows from the seed (Namur's "perhaps").
 3. **Movement:** how an ordinary person gets around, and the **signature movement** the region is known for (the page-riders, the Bread Road convoy, the ferry every tide). This is the daily side of Phase 6's routes.
 4. **Visitor against native:** what an outsider sees or misreads, and what a local knows; usually a gap in custom or knowledge.
 5. **Youth:** the **coming-of-age** act; the **sanctioned transgression** (what the young get away with, and who keeps it in check); and whether it is a **slope or a switch** (growing up is rarely a flip; the Namur fool's oath).
@@ -205,7 +207,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 1. **The region's register:** the **word-base** (a real-world language for its people and places, distinct in sound from its neighbours; word-bases may be shared) and the **personal-name structure** (unique to the region, grown from its culture: Legea's day-name, the Order's self-chosen name, Namur's sworn name; never another region's shape). A god-city gets a naming scheme of its own over its host region's tongue.
 2. **The local tongue:** define it (name, who speaks it, how it sits beside Talanese), or record it as pending the regional-tongue pass. Decided here either way.
 3. **Stratum per name, by era** (Appendix C): deep (Basque or Icelandic with drift) for the old and the land; regional for Dark-Era and later foundings; Talanese for Golden-Era and Adventurer-Era institutions.
-4. **3–5 candidates per slot** (the region if unnamed, capital, signature places, institutions, offices, rites, demonym), each with **source language, literal meaning, and drift step**; recommend one.
+4. **Candidates scaled to importance**, each with **source language, literal meaning, and drift step**: up to **three** for what a reader carries (the region if unnamed, the capital, the signature institution, the name structure); a **single recommendation** for side names (offices, rites, the demonym, figures), alternatives on request.
 5. **Check the real-language words.** Any word not known with certainty is checked before it is offered, or marked unverified.
 6. **The collision check** before offering: search lore, docs, and published for every candidate. Reserved words, heavy-traffic words, and titles or rites another region owns are avoided or flagged (Appendix C keeps the list).
 7. **Named figures:** everyone the draft will name or quote, in the register's structure, with a one-line role.
@@ -222,8 +224,8 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 **What must be done:**
 1. **Pin the live tension:** the pressure or change the place is living through, stated as fact, left open, won by nobody; a campaign seed, never a hook. Name each side and what it has at stake. A muddy line from Phase 5 or a stake from Phase 6 is often it.
-2. **◈ Popular Belief:** 2–3 candidates for what the folk say (tavern-tales, sayings, superstitions, including the parts that are wrong); one may quietly hedge toward the secret. Recommend one.
-3. **⚿ GM Secret:** 2–3 candidates, each naming the **chronicle surface** (what open prose can hint at), the **hidden truth**, and **what it sets up, concretely**: the story it enables, and for whom. If that cannot be named, the candidate is weak and is replaced. Each is checked against existing secrets and cosmology for coherence. Valid non-answers: **none yet**, **placed but draft**, **none at this level**. A page may carry several secrets, each placed after the section it answers.
+2. **◈ Popular Belief:** 1–3 candidates for what the folk say (tavern-tales, sayings, superstitions, including the parts that are wrong); one may quietly hedge toward the secret. Recommend one.
+3. **⚿ GM Secret:** 1–3 candidates, each naming the **chronicle surface** (what open prose can hint at), the **hidden truth**, and **what it sets up, concretely**: the story it enables, and for whom. If that cannot be named, the candidate is weak and is replaced. The chosen secret's set-ups are written as a short list at the end of its ⚿ box, so a GM sees the uses directly. Each is checked against existing secrets and cosmology for coherence. Valid non-answers: **none yet**, **placed but draft**, **none at this level**. A page may carry several secrets, each placed after the section it answers.
 4. **Section mass:** the user decides which topics carry the weight, or hands the call to me; either way the weighting is written down before drafting.
 
 **Output:** in chat, the live tension (sides and stakes), the chosen belief, the chosen secret(s) with surface, truth, and what each sets up, and the section weights.
@@ -249,7 +251,8 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
    - **Ending check:** the last sentence of every paragraph and section is a fact or a hook, never an epigram (a short line that resolves the meaning, a paired antithesis, a significance line, a *never*-closer).
    - **Leak check:** open prose holds nothing only a ⚿ box may say.
    - **Consistency check:** numbers, dates, and names agree across the draft, the in-world documents, and existing canon.
-   - **Arithmetic check:** every count, threshold, and population adds up.
+   - **Arithmetic check:** every count, threshold, and population adds up (the capital within 1–3% of the country).
+   - **Reverse check:** list every fact settled in Phases 3–9 and confirm each one landed in the draft; settled answers dropped in drafting are the commonest miss (Namur lost a visitor-against-native line and its rail this way).
 5. **Send the file**, with a chat summary: the structure, the derivations list, what each check caught and fixed.
 6. **Revise until approved:** each round of notes is applied and summarised, the checks re-run on anything changed.
 
@@ -356,6 +359,8 @@ Keep this current as regions are built.
 - **Leaking a secret into open prose** (the No Man's Land slag sentence that said the slag was the General's body).
 - **Overselling a secret:** a GM secret whose "what it sets up" cannot be named concretely is weak (the Ash-Binder "killed the Emperor" candidate).
 - **Epigram endings** (Vernua's six; Legea's "the Goddess of Law watched") and **arithmetic slips** (Namur's "fifty-seven more than a lapse needs").
+- **Pulling the loudest neighbour into every answer** (Namur's bread proposed as Legean, from its enemy): answer each question for plausibility, with every neighbour.
+- **Invoking a canon faction without reading it** (the Mercenary Guild proposed as a rival of Namur's companies; it is a deniable shadow network of individuals, nothing like them).
 - **Unchecked words and data:** a real-language word offered from memory, or a tool database treated as complete (warpglass).
 - **Naming collisions** (Stormpact over Compact; Namur's Speaker and Fenurra's).
 - **Damaging neighbouring canon:** moving an ancestry or a General means cleaning the cross-references in every file that names it.
@@ -378,4 +383,4 @@ Keep this current as regions are built.
 - **2026-05-28:** rewritten seed-first after the Lautara builds came out as templates with slots filled in (every Halfling doing routing, every Vishkanya doing administration). Seeds before political shapes; the archetype list demoted to a sanity check.
 - **2026-07-07:** government seed round added after the Baratalda build rebuilt its government five times.
 - **2026-08-13:** reveal round and section mass added with the region-prose contract; 2026-09-19 the one-defect-per-region requirement dropped (Villtur ruling).
-- **2026-09-30:** traveller's image moved after the seed; then the whole skill reworked into thirteen whole phases, each with a topic, a fixed list, and a fixed output, after the audit of the Legea, Order of Law, No Man's Land, and Namur builds (economy had no phase; daily life, youth, and the Popular Belief floated outside the phases; dates were proposed without checking the timeline). Phase-by-phase review with the GM.
+- **2026-09-30:** traveller's image moved after the seed; then the whole skill reworked into thirteen whole phases, each with a topic, a fixed list, and a fixed output, after the audit of the Legea, Order of Law, No Man's Land, and Namur builds (economy had no phase; daily life, youth, and the Popular Belief floated outside the phases; dates were proposed without checking the timeline). Phase-by-phase review with the GM, then a dry run of the Namur build through every phase, which added the always-written seed summary, political seeds and seed-shapes, the name-and-image check, the four questions for a special state, plain answers, the telling-examples rule for the senses, 1–3 candidates scaled to importance, the secret's set-up list, and the reverse check.
