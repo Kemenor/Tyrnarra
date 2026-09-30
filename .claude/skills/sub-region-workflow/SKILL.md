@@ -46,8 +46,9 @@ The common trigger is a bare *"flesh out [REGION]"* with no other context. The o
 | Phase | What happens | Phase boundary discipline |
 |---|---|---|
 | **0. Read the canon** | Domain lore + bordering-domain lore + glossary + ancestries + open-threads + parent HTML + project grep | Do not start Phase 1 until done |
-| **1. Seed questions** | Ask the user 3-5 targeted questions about geography, flow, atmosphere, and the traveler's-impression of the place. Surface the answers back as a summary before generating | Chat only. No writes. |
+| **1. Seed questions** | Ask the user 3-5 targeted questions about geography, flow, atmosphere, and contradiction. (The traveler's image waits for Phase 2.5, once there is a seed to see.) Surface the answers back as a summary before generating | Chat only. No writes. |
 | **2. Generate seeds** | Generate **2-3 distinct seeds**. Each is an image, a contradiction, a behavior, or a collision of forces; each must pass the specificity test ("could this place exist anywhere else? if yes, not specific enough"); each names what political form and ancestry role *naturally emerge*. End with a recommended pick. | Chat only. No writes. |
+| **2.5. Traveler's image** | Once a seed is picked, offer **3-4 image candidates** grounded in the seed and the canon: the one thing a traveler would remember (a sound, a gesture, a public act, a view). Recommend one. The pick lands in Phase 5 as an **attributed traveler's quote** with a voice block, placed at the top of the section it belongs to | Chat only. No writes. |
 | **3. User picks + refines** | User picks one or combines two. Axis-confirmation only. Ask one or two clarifying questions on placement, neighbors, ancestry-anchor, naming-axis | **Axis-confirmation is not a green light to draft prose.** Do not start Phase 5 yet |
 | **3.5. Government seed round** | For polities: offer **3-5 distinct government seeds**, each naming who concretely rules, why they are *fit* to rule, why the ruled accept it, and the honest cost. The government grows *from* the seed's world and *contains* the seed; it is never the seed generalized into rule. Census the continent's existing forms first. End with a recommended pick | Chat only. No writes. |
 | **4. Naming pass** | Offer 3-5 candidates per name slot with full etymology. Recommend one. Apply collision-check before suggesting. Wait for user pick | Chat only |
@@ -98,7 +99,7 @@ Read what the canon has already settled and **don't ask those**. The questions a
 ### Question categories
 
 - **Geography and flow.** What does this place sit *between*? What flows through it? What presses on it from outside? Does the rail go through it; does sea trade dock here; is it on a corridor from a neighboring domain? *(Example: "Itsasalda is the port of Merkavar — half the continent's sea trade lands here. That's its flow. What does that do to the feel of the place?")*
-- **The traveler's impression.** If you close your eyes and imagine being there, what's the one thing you'd remember? Not the politics, the texture — the smell, the sound, the gesture, the image you'd describe to someone who's never been. *(Example: "An old Halfling woman on the same dock stool she has sat on every morning for fifty years, watching a Brauogi grain ship unload with the expression of someone watching weather.")*
+- **The traveler's impression** is *not* asked here any more (GM, 2026-09-30): before there is a seed the answer is guesswork, and in the Order of Law and No Man's Land builds it was deferred and then forgotten. It is its own half-phase, **Phase 2.5**, right after the seed is picked.
 - **Contradiction or tension.** Is there an unlikely combination at the heart of this place? A people that shouldn't be where they are; a value held in a setting that resists it; two cultures that collided and didn't separate? *(Example: Atarialda — the wanderers are the most rooted. The campfire laugh is the dining-room laugh.)*
 - **The neighbor question.** How is this place different from its closest sibling sub-region? If a traveler walked from one to the other, what would change? *(Example: "Itsasalda is the dock that never moves; Atarialda is the threshold where the hearth meets every traveler. Different welcomes, different rhythms.")*
 - **Ancestry as seed, not identity.** *Only if an ancestry might anchor here, and only as a follow-up to one of the questions above.* What about *this place* changes how this ancestry lives? What does being from *here* add on top of being of this people? *(Example: Halflings are travelers everywhere — but the Atarialda hearth-Halflings are the ones who carry the hearth with them, so arriving and hosting, not roaming, is the whole point of the road.)*
@@ -178,6 +179,14 @@ These are political shapes the setting has used. When the seed is chosen and you
 - **Ancestry-anchor implication.** Check the canon for ancestries already claimed elsewhere before suggesting a new anchor. Crucially: **don't reduce the ancestry to its one-line lore.** If Halflings are "the traveling folk", that is a seed for *one* aspect of one *possible* Halfling-anchored sub-region. The Vishkanya Reckoners of Itsasalda *count tides* for the Vordsbench; the Vishkanya craftfolk of Azkataria *argue philosophy* at the coffee table. Same ancestry, different lives, because being from *here* shapes them.
 
 ---
+
+## Phase 2.5: Traveler's image (chat only)
+
+Added 2026-09-30 (GM). Run it as soon as a seed is picked, before the Phase 3 refinements: the image is the seed seen from the road, and it is easiest to find while the seed is fresh.
+
+Offer **3-4 candidates**, each a single concrete thing a traveler would carry home: a sound, a gesture, a view, a public act (the knot-cutting on the Drukha quay; the line of fires seen from the Eldara train on the longest night; the old woman on the same dock stool for fifty years). Ground each in the seed and in canon already fixed, check it does not repeat an image the region's siblings already own, and recommend one.
+
+The pick lands in the Phase 5 draft as an **attributed traveler's quote**: a named visitor (a register whose naming rules exist, so the name follows them), a line of attribution that carries incidental world-fact, and a voice block in the file's *Voices* list. Place it at the top of the section the image belongs to. The image is color, not the seed restated: it shows the place from outside, where the rest of the entry shows it from within.
 
 ## Phase 3: User picks + refines (axis-confirmation, NOT a green light)
 
