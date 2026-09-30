@@ -155,6 +155,7 @@
       { slug: 'thousand-kingdom', label: 'Thousand Kingdom · Forseti\'s Realm', href: '/setting/talan/domains/zuzental/thousand-kingdom.html', children: [] },
       { slug: 'emerald-isles',    label: 'Emerald Isles · Island Kingdom',     href: '/setting/talan/domains/zuzental/emerald-isles.html',    children: [] },
       { slug: 'legea-empire',     label: 'Legea Empire · Demigod Theocracy',   href: '/setting/talan/domains/zuzental/legea-empire.html',     children: [] },
+      { slug: 'namur-republic',   label: 'Namur Republic · the Sworn Republic', href: '/setting/talan/domains/zuzental/namur-republic/namur-republic.html',  children: [] },
       { slug: 'order-of-law',     label: 'Order of Law · The Court of One',    href: '/setting/talan/domains/zuzental/order-of-law/order-of-law.html',  children: [] },
       { slug: 'crossroads',       label: 'Crossroads · Southern Tri-Domain Nexus', href: '/setting/talan/domains/zuzental/crossroads.html',  children: [] }
     ]},
