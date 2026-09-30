@@ -38,6 +38,7 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 | Merkavar line | Through the Lautara hill country by the single-track **Arrol Cut** | [`glossary.md`](glossary.md) |
 | Eldara's line | Eldara → Tahu Tangata → Emarrea → Merkavar | [`geography/sumendar.md`](geography/sumendar.md) |
 | Eastern lines | Merkavar across Atarialda to Egulon and Zuzental | [`geography/lautara.md`](geography/lautara.md) |
+| Namur branch | Crossroads → west along the great river → Portoferma | [`geography/zuzental/namur-republic.md`](geography/zuzental/namur-republic.md) |
 | Southern feeder lines | Tied to the HRA at the Azkataria junction | [`geography/lautara.md`](geography/lautara.md) |
 | Hegandi line | Thousand Kingdom → Ringhold, ending at its foot | [`geography/nashavel/kaosadaemi.md`](geography/nashavel/kaosadaemi.md) |
 | Everbright trunk | Across Harro, Ongetorra to the lakeshore facing Ljosarn; branch-lines to the gem-towns; the dusk run | [`geography/egulon/harro-distiratsua.md`](geography/egulon/harro-distiratsua.md) |
@@ -106,7 +107,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 - **The standard Midarra crossing**: **Solkai** (Tvisol, Brauogi) ↔ **Rika Tikur** and the Dreaming Cape (Lautara), passing Frae City and the Twin Cities, about 1,900 miles by that route. This is bulk cargo's north-south route ([`cosmology.md`](cosmology.md); [`geography/brauogi/tvisol.md`](geography/brauogi/tvisol.md)).
 - **Named ports** by water:
   - *Hafra*: Brasswatch, Cloudshadow, Highmarrow, Wrackmoor (the Skybell ports); Vindboorg; Grannholm; Ontzola and Geldur sound; Fiskhofn; Hverhofn on Urbero (ice-free); Fenurra's warm port (unnamed); Ferryhithe (the ferry to Zuzental's isles); Oathmoore (Emerald Isles).
-  - *Midarra*: Rika Tikur; the Dreaming Cape; Bellhalt and the Muino-saila gap ports; Millhaven; Solkai and Hinstavor (Soul Tree); Breidhofn; Uravel; Gesalkai (both fronts); Baratalda's quay-town (unnamed); the Order of Steam bay.
+  - *Midarra*: Portoferma (Namur, at the mouth of Legea's river); Rika Tikur; the Dreaming Cape; Bellhalt and the Muino-saila gap ports; Millhaven; Solkai and Hinstavor (Soul Tree); Breidhofn; Uravel; Gesalkai (both fronts); Baratalda's quay-town (unnamed); the Order of Steam bay.
   - *Lakes*: Merkavar; Ljosarn's hospice-quays; Sombral's river-lodges.
 - **Ferries**: Solkai to the Soul Tree; Ferryhithe to Zuzental's Northern Isle; the Lua Lasai coast ferry to Jadrey; Vernua's morning boats to Nahaskel; Ljosarn's evening pilgrim ferries.
 
