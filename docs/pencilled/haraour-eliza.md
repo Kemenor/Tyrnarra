@@ -5,7 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-02). Opening readback approved in chat.
-- **Phase 1 (seed questions): open.** Awaiting the GM's ideas before offering seeds.
+- **Phase 1 (seed questions): closed** (GM, 2026-10-02). Appetite clarified as all three prompts; the summary approved in chat.
+- **Phase 2 (seeds): open.** Candidate round next; no seed selected.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -23,7 +24,20 @@
 
 - Sumendar's older Goblin paragraph still prescribes brewing and alchemical trades; the newer Goblin ancestry entry is feeling-only. Reconcile the domain paragraph during the build without treating that craft list as Haraour's mandatory culture.
 - Related domain-wide cleanup flags: Sumendar's Kobold paragraph retains craft language; the Dwarf ancestry entry carries established cultures and jobs. Any changes beyond Haraour's approved scope need to be surfaced with their affected files.
-- The church's meaning, access to the inner forest, the country's relationship to outsiders, and its particular expression of Goblin appetite remain open for seed discussion.
+- The central building's purpose and the concrete cultural expression of Goblin appetite remain open. Phase 1 below updates the initial church framing and establishes the broad relationship to the forest and outsiders.
+
+## Phase 1: the GM's answers
+
+Received and confirmed 2026-10-02.
+
+1. **The inner forest:** "somewhere familiar people visit and return from."
+2. **Goblin appetite:** initially "Both", then clarified as **"all three actually"**: delight in everything life offers; wanting what lies beyond reach; the tension between enjoying something and using it up.
+3. **Outsiders:** "I think more the first", referring to welcoming strangers into a sheltered country.
+4. **The central building:** "It doesn't need to be a church." The building's purpose is open; the cathedral icon and the *eliza* root do not require a religious institution. This relaxes the Phase 0 church framing without deciding a replacement or changing the name.
+
+**Approved summary:** Haraour Eliza is a sheltered Goblin heartland, welcoming to strangers, with a forest inside its mountain ring that locals visit as a familiar part of their country. Its people delight in what life offers, hunger for what they have yet to experience, and live with the tension between enjoying something and exhausting it. That appetite gives room for generosity, curiosity and excess, expressed differently across the country. The central building's purpose remains open. No Man's Land's frontier, the Order's industry and Tahu Tangata's renewing fire remain the neighbouring context.
+
+**Phase 1 checklist:** the four seed questions answered; prompts offered; the GM's clarification and open building purpose incorporated; detailed government, economy, daily life and traveller's image left to their phases; summary confirmed.
 
 ## Rejected options
 
@@ -31,7 +45,7 @@ None yet.
 
 ## Approved canon moves
 
-None yet. Approval of the readback authorises no lore rewrite.
+The GM has opened the central building's purpose beyond a church. Carry the eventual choice into the reviewed draft of `lore/geography/sumendar.md` and the new deep file, checking other references at that point. No replacement purpose or name change is approved; no lore has been rewritten.
 
 ## Private story uses: never publish to `/setting/`
 
