@@ -11,7 +11,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 1. **A phase closes only when the user says it is good.** Discuss each phase until then; do not move on under a broad "go on" unless the user closes it.
 2. **Every phase ends with a checklist readback**: list the phase's *What must be done* items and mark each done, answered-by-the-user, or deliberately left (with the user's say-so). A skipped item shows up here, not three regions later.
-3. **Nothing is written to lore before Phase 11**, with two exceptions the user asks for: pencil notes (`docs/pencilled/<region>.md`, marked not canon) and an in-world document the user has co-written and accepted (Phase 3). Both are committed and pushed when written.
+3. **Nothing is written to lore before Phase 11**, except an in-world document the user has co-written and accepted (Phase 3), committed and pushed on acceptance. Maintain the non-canon decision record in `docs/pencilled/<region>.md` throughout the build as described below; recording a proposal never approves it or makes it canon.
 4. **All canon can change, deliberately and on the user's yes.** Dates, transport, a General's dungeon, an ancestry's home, an earmark: each is a **canon move**, named, approved, and listed with the files it touches (Phase 4). **Silent contradiction is the only thing forbidden.**
 5. **Read before designing on canon** (Phase 0, point 7): if the user could point at a proposal and say "that contradicts `<file>`", `<file>` should have been read first.
 6. **Surface before writing; lore before HTML.** Prose is reviewed as a draft file (Phase 10) before it becomes canon (Phase 11); HTML waits for an explicit publish signal (Phase 12).
@@ -19,13 +19,21 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 8. **Plain answers are allowed.** A phase question may have an ordinary answer (the people feed themselves; the clothes are unremarkable). Answer for plausibility first, using every neighbour and not only the famous one; never invent a dependency or a drama to feed the tension.
 9. **The project rules apply throughout:** `CLAUDE.md` (naming strata, affirmative prose, no em-dashes, *mortals* not *humans*, chronicler tier in open prose, the GM badges, commit discipline) and `docs/region-prose.md` (the region-entry contract; Breidey is the exemplar).
 
+## Working record and revisions
+
+After the Phase 0 readback is approved, create or update `docs/pencilled/<region>.md`, headed **Working record: not canon**. Preserve existing pencil material. Keep a concise record of the current phase and its approval status, approved decisions by phase, rejected options with the reason, unanswered or deliberately deferred questions, and approved canon moves with their affected files. Summarise rejected options; preserve full alternatives when the user asks. Keep private story uses in a separate, clearly labelled **Private story uses: never publish to `/setting/`** section. Link the draft file once it exists.
+
+Update this record as decisions change and at each phase checkpoint, without requiring a separate request to take notes. Commit and push the record at approved phase boundaries with explicit paths, alongside any accepted document. Unreviewed draft prose waits for draft approval. On resuming, read the record and relevant current canon first; a pending proposal or an existing draft is never evidence of approval.
+
+**Approved decisions can be reopened.** Later government, economy, or history work may change the seed or traveller's image. Identify the affected decisions and dependent prose, explain the proposed change, and ask the user to approve that change. Mark those items reopened in the record, preserving the earlier decision until its replacement is approved. Recheck the affected phase items and canon moves; keep unrelated approvals and continue from the appropriate phase instead of restarting the whole build. An already committed document changes only through an explicitly approved revision, respecting GM-Written rules. Nothing dependent on an unresolved revision proceeds to canon or publication.
+
 ## The phases at a glance
 
 | # | Phase | Output |
 |---|---|---|
 | 0 | Canon read | A readback: stub or rework, constraints, map facts, siblings, conflicts, ancestry fixes, badges |
 | 1 | Seed questions | A summary of the user's answers |
-| 2 | Seeds | The chosen seed (+ pencil file on request) |
+| 2 | Seeds | The chosen seed, recorded with the options considered |
 | 3 | Traveller's image | The image, its speaker, year, form, and placement |
 | 4 | Place, peoples and history | A settled-facts list, dates and canon moves included |
 | 5 | Government | The chosen government, with the three test results |
@@ -54,7 +62,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 8. **Tracking docs:** the region's entries in `docs/open-threads.md`, `docs/deepening-ideas.md`, `docs/map-todo.md`, and `docs/pencilled/`.
 9. **Pages to be touched:** checked for GM-Vetted or GM-Written badges.
 
-**Output:** a readback in chat, no writes: stub or rework (and what a dropped stub said); fixed constraints; map facts (area, neighbours, icons, terrain); the sibling census (built versus stub, images and institutions already taken); canon conflicts and stale lines; ancestry entries needing a feeling-only fix; GM badges on pages this build touches.
+**Output:** a readback in chat before any writes: stub or rework (and what a dropped stub said); fixed constraints; map facts (area, neighbours, icons, terrain); the sibling census (built versus stub, existing images and institutions); canon conflicts and stale lines; ancestry entries needing a feeling-only fix; GM badges on pages this build touches. After approval, initialise the working record.
 
 **Closes when:** the user has seen the readback and says it is good.
 
@@ -83,7 +91,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 ## Phase 2: Seeds
 
-**Topic:** find the one thing this place is that no other place is; government, economy, and people grow from it.
+**Topic:** find what makes this place specific to its setting; government, economy, and people grow from it. Its identity comes from the combination and local consequences, and may include shared customs, borrowed institutions, and ordinary features.
 
 **What must be done:**
 1. **Generate 2–3 seeds.** A seed is an **image**, a **contradiction**, a **behaviour**, or a **collision of forces**; never a political archetype with an ancestry slotted in, a demographic label, or an adjective for the domain. **A seed may be political when the politics is the contradiction** (Namur: a free people sworn to obey one). **When the user brings the idea, the seeds may be its shapes**: variants of the user's idea laid side by side, then combined with the other open axes if needed (the Namur grid).
@@ -92,12 +100,12 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
    - **What follows:** the political direction, the peoples' part, the signature institution, and one concrete sensory detail that grow from the seed. The government is a first sketch only (Phase 5 settles it).
    - **The cross-canon hook:** what it rhymes with in locked canon.
    - **The specificity test** in one line: could this place exist anywhere else in the setting; what would have to change to move it? If "only the name", the seed fails and is rewritten.
-3. **Sameness check against the setting.** Hold each seed against the built regions *across the whole setting*, not only the domain's siblings; a seed that reads as a variant of a built place, or takes an image one already owns, is reworked. Overlaps often surface only here, and often from the user, who knows the setting best; that is expected, not a failure of Phase 0.
+3. **Sameness check against the setting.** Hold each seed against the built regions *across the whole setting*, not only the domain's siblings. Rework a seed whose identity merely duplicates another place. Shared customs, related images, and borrowed institutions are welcome where they fit; explain their local meaning and check any claimed historical connection against canon. Overlaps often surface only here, and often from the user, who knows the setting best; that is expected, not a failure of Phase 0.
 4. **The user's own ideas** from Phase 1 are tested the same way, alongside.
 5. **Recommend one.** The user picks, combines, inverts, or asks for the combinations laid side by side (the Namur grid: two shapes against three Generals).
-6. **Pencil on request.** If the user wants the alternatives kept, write them to `docs/pencilled/<region>.md` (marked not canon), commit, push.
+6. **Record the choice.** Update the working record with the chosen seed and a short account of the alternatives and why they were rejected or combined. Keep full alternative pitches if the user requests them.
 
-**Output:** the chosen seed **as one sentence** (it becomes the page's flavour line: *a republic that keeps its word, including the one that made it a dictatorship*); the pencil file if asked.
+**Output:** the chosen seed **as one sentence** (it becomes the page's flavour line: *a republic that keeps its word, including the one that made it a dictatorship*); the updated working record.
 
 **Closes when:** the user has picked the seed and says it is good.
 
@@ -109,7 +117,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 **What must be done:**
 1. **Offer 2–3 candidates**, each a single concrete thing: a sound, a gesture, a view, a public act (the knot-cutting on the Drukha quay; the line of fires seen from the Eldara train; the sword laid on the slab). Ground each in the seed and in canon already fixed.
-2. **Check it is not taken, by name and by image:** no repeat of an image a built place already owns, including **kin rites** in other regions (Namur's Oath-Day beside Lograth's Re-Swearing: kin, checked, distinct).
+2. **Compare names and images with built places**, including **kin rites** in other regions (Namur's Oath-Day beside Lograth's Re-Swearing). Shared rites and imagery may connect places; check whether the scene conveys this region's circumstances rather than merely copying another scene. Avoid confusing names, and do not invent a unique rite just to fill this slot. Reopen the image if later phases change what a traveller would see.
 3. **Recommend one.**
 4. **Settle the speaker:** who sees it, from a register whose naming rules exist (so the name follows them); why they are there; the year; the form (a single quote, a letter, a journal entry).
 5. **Settle where it lands:** the top of the section it belongs to. If it grows into a longer document, it becomes its own in-world file (`lore/geography/<domain>/<region>-<form>.md`, with a voice block), published whole as a log card, excerpts quoted at section heads.
@@ -165,11 +173,11 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 ## Phase 6: Economy
 
-**Topic:** how the people eat, what the place sells, what draws outsiders, and how it all moves. A region nobody has a reason to reach is not a region.
+**Topic:** how the people eat, what the place sells, what brings outsiders if any, and how it all moves.
 
 **What must be done:**
 1. **Subsistence:** what feeds the people (farming, herding, fishing, forage), and whether they feed themselves or depend on imports (Eldara cannot, and that shaped No Man's Land). Answer for plausibility: a country rarely depends on its enemy for bread, and lean years draw on every neighbour. "They feed themselves" is a complete answer.
-2. **The draw:** the one thing only this place has that brings outsiders: a good, a service, a skill, a rite, a pilgrimage. If the answer is "nothing much", the place must be special some other way, or it is rethought.
+2. **The draw:** why outsiders come, if they do: a good, a service, a skill, a rite, a pilgrimage, ordinary trade, family ties, or a convenient route. It need not be exclusive to this place. "Few outsiders come" is a valid answer; explain its access and local role without inventing an attraction.
 3. **What it sells and buys, and with whom:** named partners among the neighbours and on the wider network. Check the partners' own canon agrees, or note what it needs updating (the Thousand Kingdom buying Namur's ore).
 4. **Routes and transport:** whether it is on the rail (checked against `lore/transport.md` and the network's lines), its ports and sea routes, its roads and river traffic, and any single choke point. **Changing transport canon is a canon move like any other** (a new line, a closed route, a new crossing): name the change, get the user's yes, list the files it touches. What is never allowed is contradicting it *silently*.
 5. **How the economy feeds the tension:** the stake each side of the live tension has in it (Namur's closed mines against the reformers).
@@ -187,13 +195,13 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 
 **What must be done:**
 1. **The ordinary day and the shared ritual:** how an ordinary person's day runs, and the civic ritual everyone shares, if there is one (the Oath-Day count, the dawn page, the Apprentice's Fire).
-2. **The senses and habits, as a few telling examples:** what is special here or tellingly ordinary among food, drink, dress, song, smell, the market, and the regional vice (Namur: the sworn-name tag at every throat, betting on the Oath-Day count, the spirit drunk only when a word is given). No full inventory, and **no blanket claims across classes** (rich and poor, town and country). And **how people talk**, a habit of speech that grows from the seed (Namur's "perhaps").
-3. **Movement:** how an ordinary person gets around, and the **signature movement** the region is known for (the page-riders, the Bread Road convoy, the ferry every tide). This is the daily side of Phase 6's routes.
+2. **The senses and habits, as a few telling examples:** what is special here or tellingly ordinary among food, drink, dress, song, smell, the market, and the regional vice (Namur: the sworn-name tag at every throat, betting on the Oath-Day count, the spirit drunk only when a word is given). No full inventory, and **no blanket claims across classes** (rich and poor, town and country). Include **how people talk** where telling (Namur's "perhaps"); ordinary speech and habits shared with neighbours are valid answers.
+3. **Movement:** how an ordinary person gets around, and any **signature movement** the region already warrants (the page-riders, the Bread Road convoy, the ferry every tide). Ordinary walking, riding, or carts may be the whole answer. This is the daily side of Phase 6's routes.
 4. **Visitor against native:** what an outsider sees or misreads, and what a local knows; usually a gap in custom or knowledge.
 5. **Youth:** the **coming-of-age** act; the **sanctioned transgression** (what the young get away with, and who keeps it in check); and whether it is a **slope or a switch** (growing up is rarely a flip; the Namur fool's oath).
 6. **Faith as lived:** how the domain's god, or the region's own faith, shows in an ordinary day; clergy presence; devout, indifferent, syncretic, or hostile.
 
-**Output:** the settled daily life in chat: day and ritual, senses and speech, movement and signature movement, visitor against native, youth, faith as lived.
+**Output:** the settled daily life in chat: day and ritual, senses and speech, movement (including any signature movement), visitor against native, youth, faith as lived.
 
 **Closes when:** the user says it is good.
 
@@ -204,12 +212,12 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **Topic:** what everything is called, why, and in which stratum. A name tells a reader when a thing was named and by whom.
 
 **What must be done:**
-1. **The region's register:** the **word-base** (a real-world language for its people and places, distinct in sound from its neighbours; word-bases may be shared) and the **personal-name structure** (unique to the region, grown from its culture: Legea's day-name, the Order's self-chosen name, Namur's sworn name; never another region's shape). A god-city gets a naming scheme of its own over its host region's tongue.
-2. **The local tongue:** define it (name, who speaks it, how it sits beside Talanese), or record it as pending the regional-tongue pass. Decided here either way.
-3. **Stratum per name, by era** (Appendix C): deep (Basque or Icelandic with drift) for the old and the land; regional for Dark-Era and later foundings; Talanese for Golden-Era and Adventurer-Era institutions.
+1. **The region's register:** first read `lore/geography/_continent.md`, *The families of Talan* and *The regional registers*, including any pending re-render. Choose the **word-base** inside the family assigned by physical location and history, following culture rather than ancestry or god-domain. Word-bases may be shared; use local sound rules and plain letters speakable at a German- and English-speaking table. The **personal-name structure** remains unique to the region, grown from its culture (Legea's day-name, the Order's self-chosen name, Namur's sworn name; never another region's shape). Old examples illustrate structures, not permission to reuse a superseded word-base. A god-city gets its own naming scheme over its host region's tongue. If the family is unassigned, surface that gap and settle it with the user before choosing a base.
+2. **The local tongue:** define it (name, who speaks it, how it sits beside Talanese and its family), or record any still-open details as pending. Pending details do not waive the assigned family or permit unchecked names.
+3. **Stratum per name, by era and namer:** read `_continent.md`, *Naming strata across the eras*. Icelandic renders the **Elder Tongue**; Basque renders the **Court Tongue**. They have distinct histories and are never interchangeable choices for an "old" name. Follow that section for regional and Talanese strata too; an Adventurer-Era name is not automatically Talanese. Appendix C summarises the checks.
 4. **Candidates scaled to importance**, each with **source language, literal meaning, and drift step**: up to **three** for what a reader carries (the region if unnamed, the capital, the signature institution, the name structure); a **single recommendation** for side names (offices, rites, the demonym, figures), alternatives on request.
 5. **Check the real-language words.** Any word not known with certainty is checked before it is offered, or marked unverified.
-6. **The collision check** before offering: search lore, docs, and published for every candidate. Reserved words, heavy-traffic words, and titles or rites another region owns are avoided or flagged (Appendix C keeps the list).
+6. **The collision check** before offering: search lore, docs, and published for every candidate. Flag confusing proper-name collisions and explain deliberate echoes. Generic titles and shared rites may recur where they fit; Appendix C lists existing uses to compare, not exclusive ownership. Personal-name structures remain unique.
 7. **Named figures:** everyone the draft will name or quote, in the register's structure, with a one-line role.
 
 **Output:** a name table in chat: register and structure; the local tongue or "pending"; every slot with its pick and etymology; named figures; collisions found and resolved.
@@ -225,7 +233,7 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **What must be done:**
 1. **Pin the live tension:** the pressure or change the place is living through, stated as fact, left open, won by nobody; a campaign seed, never a hook. Name each side and what it has at stake. A muddy line from Phase 5 or a stake from Phase 6 is often it.
 2. **◈ Popular Belief:** 1–3 candidates for what the folk say (tavern-tales, sayings, superstitions, including the parts that are wrong); one may quietly hedge toward the secret. Recommend one.
-3. **⚿ GM Secret:** 1–3 candidates, each naming the **chronicle surface** (what open prose can hint at), the **hidden truth**, and **what it sets up, concretely**: the story it enables, and for whom. If that cannot be named, the candidate is weak and is replaced. The chosen secret's set-ups are written as a short list at the end of its ⚿ box, so a GM sees the uses directly. Each is checked against existing secrets and cosmology for coherence. Valid non-answers: **none yet**, **placed but draft**, **none at this level**. A page may carry several secrets, each placed after the section it answers.
+3. **⚿ GM Secret:** 1–3 candidates, each naming the **chronicle surface** (what open prose can hint at), the **hidden truth**, and **what it sets up, concretely**: the story it enables, and for whom. If that cannot be named, the candidate is weak and is replaced. Keep the chosen secret's practical set-ups in the working record's **Private story uses** section, outside the publishable draft. The ⚿ box carries the hidden world truth; campaign prompts never go into `/setting/`, even inside a GM box. If the user requests campaign material, develop it separately in the appropriate campaign layer under `docs/campaign-layer.md`. Check each secret against existing secrets and cosmology for coherence. Valid non-answers: **none yet**, **placed but draft**, **none at this level**. A page may carry several secrets, each placed after the section it answers.
 4. **Section mass:** the user decides which topics carry the weight, or hands the call to me; either way the weighting is written down before drafting.
 
 **Output:** in chat, the live tension (sides and stakes), the chosen belief, the chosen secret(s) with surface, truth, and what each sets up, and the section weights.
@@ -239,20 +247,20 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 **Topic:** turn every settled phase into the region's lore, drafted in full and reviewed before anything is written to canon.
 
 **What must be done:**
-1. **Write the whole draft as one file** in the scratchpad, in lettered targets:
+1. **Write the whole draft as one persistent file**, `docs/pencilled/<region>-draft.md`, headed **Draft: not canon** and linked from the working record, in lettered targets:
    - **(A) the deep file** `lore/geography/<domain>/<region>.md`: the facts header (etymology, position, terrain, character, peoples, tongue, faith, rule, founded); sections in the Phase 9 weights; the traveller's image at the top of its section; voices quoted at section heads; ◈ and ⚿ after the sections they answer; *What a … is called*; named figures, the Voices list, *Still open*; any in-world document published whole at the end.
    - **(B) the domain-file summary** replacing the stub.
    - **(C) the glossary block and the register row** (`_continent.md`, the regional-registers table).
    - **(D) every other file the approved canon moves touch.**
-   - **(E) docs:** open-threads, deepening-ideas, map-todo, the pencil file.
+   - **(E) docs:** open-threads, deepening-ideas, map-todo, the working record. Keep these authoring targets separate from the publishable prose in (A)–(D).
 2. **Nothing new sneaks in.** The draft uses only what Phases 0–9 settled; anything added (a number, a date, a custom, a quote) goes on a **derivations list**.
 3. **The prose contract** (`docs/region-prose.md` plus the global rules): eye-level narration, wit only in attributed quotes, affirmative prose, no em-dashes, *mortals* not *humans*, no name-glossing in narration, nothing from the banned list.
-4. **Four checks before sending:**
+4. **Five checks before sending:**
    - **Ending check:** the last sentence of every paragraph and section is a fact or a hook, never an epigram (a short line that resolves the meaning, a paired antithesis, a significance line, a *never*-closer).
-   - **Leak check:** open prose holds nothing only a ⚿ box may say.
+   - **Leak check:** open prose holds nothing only a ⚿ box may say; no private story uses or campaign prompts appear in setting prose, including its ⚿ boxes.
    - **Consistency check:** numbers, dates, and names agree across the draft, the in-world documents, and existing canon.
    - **Arithmetic check:** every count, threshold, and population adds up (the capital within 1–3% of the country).
-   - **Reverse check:** list every fact settled in Phases 3–9 and confirm each one landed in the draft; settled answers dropped in drafting are the commonest miss (Namur lost a visitor-against-native line and its rail this way).
+   - **Reverse check:** compare the draft with the working record's current approved decisions from Phases 0–9. Confirm each publishable fact landed; account separately for private story uses, rejected options, and deliberately deferred items. Resolve every reopened decision affecting the draft before approval. Settled answers dropped in drafting are the commonest miss (Namur lost a visitor-against-native line and its rail this way).
 5. **Send the file**, with a chat summary: the structure, the derivations list, what each check caught and fixed.
 6. **Revise until approved:** each round of notes is applied and summarised, the checks re-run on anything changed.
 
@@ -293,6 +301,8 @@ Takes a sub-region from a label on the map (or a thin existing entry) to full lo
 6. **Commit:** explicit paths; a message naming the page and every mirror; push.
 7. **Several pages at once:** a single page is built directly; fan out one agent per page only when two or more are built together (Appendix F).
 
+**Publication boundary:** mirror approved world prose and hidden truths only. Exclude working records, draft annotations, private story uses, and campaign prompts, including any such notes encountered in older lore files. If separating them requires rewriting approved prose, return that revision to lore review first. Publishing grants no authority to invent a name, fact, quote, belief, or secret. Report proposed additions to the user; review affected decisions and draft targets through Phases 10–11, commit the approved lore, then mirror it. Layout and accessibility choices may proceed within the existing conventions.
+
 **Output:** the publish commit hash and a summary: the page, its wiring, every mirror, badge decisions, the browser check results.
 
 **Closes when:** the push has landed and the user has seen the summary.
@@ -325,11 +335,15 @@ Keep this current as regions are built.
 
 ## Appendix C: Naming strata, drift, and collisions
 
-**Strata by era** (`_continent.md`, *Naming strata across the eras*): **deep** (Basque or Icelandic with drift) for anything named before the Crimson Rain or in the Lost Era and for the land itself; **regional** registers from the late Lost Era and again from the Dark Era to today; **Talanese** (English with drift) for the Golden Era (560–1325 MR) and, creeping back, the Adventurer Era. A name's stratum is fixed by when it was given.
+**Read the current tables first:** `lore/geography/_continent.md`, *The families of Talan*, *Naming strata across the eras*, and *The regional registers* are authoritative. Family assignments follow geography and history; choose a word-base within the assigned family, observing stated exceptions and pending re-renders. Do not copy an older example's base over a current assignment.
+
+**The two deep tongues are distinct.** The **Elder Tongue** (Icelandic with drift) belongs to names given in the Elden Era and the first stretch of the Gods' Era. A later use needs an established reason: Elden ground named then and settled later, or a learned coinage with a real scholarly reason. The **Court Tongue** (Basque with drift) belongs to the gods' rule, the hinge of 1 MR and early Lost Era, and holy or liturgical words; its surviving speech communities are specified in the canon. Being old or naming land alone does not choose between them.
+
+**Later strata:** regional registers emerge in the late Lost Era and return from the Dark Era onward; Talanese (English with drift) dominates Golden-Era naming and is spreading again in the Adventurer Era. Check the full era table and who gave the name. A name's stratum follows when it was given, not the polity's present age or the current date.
 
 **Talanese drift mechanisms:** vowel shift (i → y, ai → ae, ou → ow); consonant erosion (-ed → -t, -ing → -en); compound contraction; archaic suffixes (-en, -worn); loss of silent letters.
 
-**Reserved and taken words** (check before offering; add to this list as regions are built):
+**Existing uses to check** (examples, not an exhaustive list or a ban on reuse; search current files before offering). Avoid confusing proper names; allow shared generic titles, customs, and imagery where their local use is clear:
 - *Compact* (the Compact of the Bound Thirteen); *Order* (heavy traffic: Order of Steam, Voroir Daua, Order of Law).
 - Titles and offices: *Speaker* (Fenurra's Speaker's Mantle); *Stewardry* (Lograth); *Reeve* (Azkataria, Lua Lasai, Tvisol); *Provost* (Thekkavar); *the Standing* (Edgeward).
 - Rites and customs: *the Re-Swearing* (Lograth); *the Turning* (Haizava); *the Handing* (Villtur); *Muster* (Haldmark, Villtur).
@@ -339,8 +353,8 @@ Keep this current as regions are built.
 
 ## Appendix D: Hard rules
 
-- **Ancestry-as-label is not culture.** The same ancestry in two places lives two lives; if a draft has a people doing the same thing in two regions, the seed was not load-bearing.
-- **The specificity test.** Every seed and every committed region passes: could this place exist anywhere else in the setting?
+- **Ancestry-as-label is not culture.** Give a people's life here local context. Shared occupations, customs, and institutions are plausible; merely copying a whole culture under a new place-name fails.
+- **The specificity test.** Every seed and every committed region passes as a whole: what would have to change to move this place elsewhere in the setting? Ordinary features and shared traditions need no exclusive regional twist.
 - **No em-dashes anywhere.** En-dashes for numeric ranges only (1321 MR – 2135 MR).
 - **Affirmative prose.** No "Not X" or "Not X but Y" openings, except a true negation with no affirmative form ("his cult kept no records").
 - **The region-entry contract** (`docs/region-prose.md`): eye-level narration, colour in attributed quotes, elevation only at peaks, endings on a fact or a hook, no name-glossing, the chronicler's *I* only for absences, a required live tension, section mass decided by the user.
@@ -362,14 +376,16 @@ Keep this current as regions are built.
 - **Pulling the loudest neighbour into every answer** (Namur's bread proposed as Legean, from its enemy): answer each question for plausibility, with every neighbour.
 - **Invoking a canon faction without reading it** (the Mercenary Guild proposed as a rival of Namur's companies; it is a deniable shadow network of individuals, nothing like them).
 - **Unchecked words and data:** a real-language word offered from memory, or a tool database treated as complete (warpglass).
-- **Naming collisions** (Stormpact over Compact; Namur's Speaker and Fenurra's).
+- **Confusing naming collisions** (check Stormpact against Compact, or Namur's Speaker against Fenurra's). Shared generic offices are allowed; explain their local function and keep personal-name structures unique.
 - **Damaging neighbouring canon:** moving an ancestry or a General means cleaning the cross-references in every file that names it.
 - **Inner anchors in clickable cards** (`docs/card-conventions.md` forbids them).
 - **Measuring overflow against the window width**, which includes the scrollbar and reports false sideways scrolling.
 
 ## Appendix F: Parallelization for multi-page builds
 
-**One page: build it directly**, especially with its lore already in context; an agent only re-reads everything and runs slower. **Two or more pages: one general-purpose agent per page, in parallel**, each given: the lore source files; the template page; the convention docs (`CLAUDE.md`, `docs/card-conventions.md`, `docs/accessibility.md`, `docs/sidebar-nav.md`, `docs/region-prose.md`); 2–3 accent options to check with `node tools/contrast.mjs`; the fixed style rules; the seed verbatim; and a short report-back spec (accent and contrast, section count, any canon-additive choices, which ◈ and ⚿ boxes were written). Fold any canon-additive choices back into the glossary in one batch after all agents report.
+**One page: build it directly**, especially with its lore already in context; an agent only re-reads everything and runs slower. **Two or more pages: one general-purpose agent per page, in parallel**, each given: the approved lore source files; the template page; the convention docs (`CLAUDE.md`, `docs/card-conventions.md`, `docs/accessibility.md`, `docs/sidebar-nav.md`, `docs/region-prose.md`); 2–3 accent options to check with `node tools/contrast.mjs`; the fixed style rules; the seed verbatim; the Phase 12 publication boundary; and a short report-back spec (accent and contrast, section count, which approved ◈ and ⚿ boxes were mirrored, unresolved questions and proposed lore additions).
+
+Agents must report proposed lore additions **without implementing them**, including new names, quotes, beliefs, or secrets. The parent takes proposals to the user, updates the affected decisions and draft for review, and commits any approved lore changes through Phase 11 before agents mirror them. Never treat an agent's report as approval or silently fold additions into the glossary. Keep private story uses out of every setting page.
 
 ## Appendix G: Worked examples
 
@@ -384,3 +400,4 @@ Keep this current as regions are built.
 - **2026-07-07:** government seed round added after the Baratalda build rebuilt its government five times.
 - **2026-08-13:** reveal round and section mass added with the region-prose contract; 2026-09-19 the one-defect-per-region requirement dropped (Villtur ruling).
 - **2026-09-30:** traveller's image moved after the seed; then the whole skill reworked into thirteen whole phases, each with a topic, a fixed list, and a fixed output, after the audit of the Legea, Order of Law, No Man's Land, and Namur builds (economy had no phase; daily life, youth, and the Popular Belief floated outside the phases; dates were proposed without checking the timeline). Phase-by-phase review with the GM, then a dry run of the Namur build through every phase, which added the always-written seed summary, political seeds and seed-shapes, the name-and-image check, the four questions for a special state, plain answers, the telling-examples rule for the senses, 1–3 candidates scaled to importance, the secret's set-up list, and the reverse check.
+- **2026-10-01:** aligned naming with the language-family tables and distinct deep tongues; moved story uses to private authoring notes; barred canon additions during publication; added a persistent decision record and targeted reopening of approved choices; allowed shared customs, institutions, imagery, and ordinary features while retaining unique personal-name structures.
