@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-01); the summary written into the `sumendar.md` stub at the GM's request (an early lore write, replaced by the full entry at Phase 11).
 - **Phase 2 (seeds): closed** (GM, 2026-10-01).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-01).
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-01).
+- **Phase 5 (government): open.**
 
 ## Phase 0: settled facts
 
@@ -52,6 +53,16 @@
 > Joana Fontebaixa, one of the Leitores of Argia Esfera, to the master of the readers' house on Sutarri, 2531 MR
 
 Derivations from the letter: the master's name **Afonso** (Argia's sample given names); her **two days** late; her errand, **a new glass** in Eldara; **Fontebaixa** (Portuguese *fonte baixa*, "low spring", formed like the canon's *Fontefria*), to enter in the glossary at Phase 11.
+
+**Phase 4, place, peoples and history (GM, 2026-10-01):**
+- **Sites.** The **capital**: the walled city at the centre on the river from the northern hills (named at Phase 8); **the rail runs through it** (in at the Neck in the west corner, out to Emarrea in the south-east), and the grain is loaded there. **The Neck** and **the western forest** beside it, the robbers' cover on the Neck road. **The bay coast**: a short shore facing Rika Tikur, a landing or two worked by Cape and Rika Tikur boats; the old people leave the water to others. **The spire** on the southern edge: **the only place the fire-plant grows wild**, on slopes lightning burns; every cultivated field descends from seed first gathered there (a second reason the plant fails elsewhere: seed stock as well as craft). The northern belt under the Order's wall; the great river against Galdua Jendea.
+- **Neighbours.** Order of Steam (north): the wall; nothing crosses it but by the bay. Dreaming Cape (east, across the Markaa): friendly; its canon has Tahu Tangata songs naming the bay-water holy. Emarrea (south-east): the rail on to Merkavar; easy trade. Valreka (south-west, across the river): the herd buys food where it halts, and this bank is one such place. No Man's Land (west): the Neck; grain and trade go up, rushers and robbers come down. Eldara: fed by Tahu Tangata's trains. Rika Tikur: across the bay, a buyer.
+- **Peoples: unsorted by ancestry**, like Atarialda or Rika Tikur: the old people are whoever is born into the cycle. Sumendar's four anchors keep their homes elsewhere and live here a different life each, among the wider southern mix.
+- **Founding and naming.** The culture and the burn-cycle reach into the Gods' Era. The land took the name *Tahu Tangata* in its own tongue in the **late Lost Era** (the regional stratum); its meaning is partly lost because the tongue has drifted. The present polity's founding follows from Phase 5, by default Dark-Era.
+- **Dated history** (checked against `timeline.md`): Gods' Era, the old people already burn their fields; late Lost Era, the name; by 700 MR the Empire takes Sumendar and Tahu Tangata becomes **the granary of the Empire's southern heartland**, the imperial road running across it toward the mountain capital (the rail follows it today) and the dances surviving because the grain needed them; 1321–1325 MR the breach and the fall; Dark Era, the dance-companies keep the fields and the road; first century of the Adventurer Era, Eldara's line laid along the old road; 2524 MR the Ash-Binder breaks out in No Man's Land's south-east badlands near the west corner, its first wave north along the rail; **since 2527 MR the bindstone rush brings strangers down through the Neck, and robbery on the Neck road becomes a real risk**; 2531 MR Joana's letter.
+- **The 2524–2527 fight** stays No Man's Land's (the kindlings held the Neck); **Tahu Tangata's part was its grain, which kept Eldara fed through those years.**
+- **Population:** about **4 million** (30 per sq mi on 132,000 sq mi, the fallow turn allowed for); the capital about **60,000** (1.5%).
+- **Canon moves:** none. The imperial-granary line adds a fact to the Golden Era without changing one.
 
 ## Rejected options
 
