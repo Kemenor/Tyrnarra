@@ -45,6 +45,9 @@ every working session.
   - The crosses on some shrines and chapels are fine for now.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch
     needs SDXL.
+- **Shared with Kartofuchs (2026-10-01, the user):** the whole pack, god cities included, ships with
+  Kartofuchs as its base pack "Fuchsbau" (art/Fuchsbau, `Tyrnarra_` taken out of the names). After
+  installing a new round, run `fuchsbau <kartofuchs checkout>` and commit there.
 - **Known leftovers:** the flat 2D camps still show domed houses behind the tents.
 
 ## Where things live
@@ -104,6 +107,7 @@ generate <fam> --seeds 1-40 [--style S]      # drawings from ComfyUI into the wo
 build <fam> --round N [--no-install] [--seeds ...] [--set KEY=V]
 gallery [families]                           # numbered review sheets per family, by variant
 sync [--pull]                                # work files and pack to (from) Proton Drive
+fuchsbau <kartofuchs checkout>               # the pack into Kartofuchs as its own base pack (art/Fuchsbau)
 ```
 
 ## Rules for this repo
