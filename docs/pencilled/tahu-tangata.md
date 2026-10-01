@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-01).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-01).
 - **Phase 5 (government): closed** (GM, 2026-10-01).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-01).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -79,6 +80,15 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 - **The muddy line:** the Neck. The grain going up it is the elder's, the road it moves on the dancer's; when robbers or worse come down it, whose call it is gets argued every time (the live tension for Phase 9).
 - **Census:** nearest Haldmark (women's circles and the men's Vaka earning the franchise); this differs by being ungendered, woven across houses, and built on the fire.
 
+**Phase 6, economy (GM, 2026-10-01; closed):**
+- **Subsistence:** they feed themselves, with a surplus. A field's grain years (grain and pulses) and its tall-grass years (herds) come between burnings; the common stores carry bad seasons.
+- **The fire-plant's harvest is oil** (GM): the pressed seed gives an oil that **burns gold, steady and long**; the gold-orange of a burning field is the plant's oil burning in its heads. At home it is also the cooking oil, and the pressed seed-cake feeds the herds. **Local foods** are made from the plant too (the roasted seed and the like), traditions mostly kept at home.
+- **Exports:** the **long-lasting, gold-burning lamp-oil** (canon buyer: Uravel, whose Dark halls burn lamps every hour and import their oil, wax and glowstone; also Myrria's lanterns and Frae City's towers), and **the grain and food the fields grow in surplus** between burnings.
+- **The draw:** plain. Grain factors from Eldara and Rika Tikur, oil buyers, the occasional traveller off the train for a burn-night (Joana); and **would-be copiers** who come to buy seed stock or watch the dance, and go home to closed pods.
+- **Partners:** Eldara by rail (grain, most of its bread; pays in almosts and coin); Valreka at the river (grain and oil when the herd halts; coin, and **remembrance**: the houses entrust their genealogies to Valreka's Ghoran memory-keepers, *confirmed by the GM*); Rika Tikur and the Order by the bay (grain and oil; the Order's metal goods and tools through the island); Uravel, Myrria and Frae City (lamp-oil); Emarrea and Merkavar by rail (grain and oil; Lautaran cloth, Emarrean wine).
+- **Routes** (canon, unchanged): Eldara's line through the capital with the old imperial road beside it; the bay landing worked by Cape and Rika Tikur boats; the river fords where Valreka halts; the Markaa crossings; **the one choke point is the Neck**.
+- **Stake in the tension:** Eldara's bread and the oil both go up the Neck; the elder holds the grain and wants the trains running, the dancer holds the road and would have to send the companies; Eldara's hunger is the country's leverage and its risk.
+
 ## Rejected options
 
 - **Phase 3 images 2 and 3** (the morning field; the shut pods on an outsider's trial field): set aside; the morning field may return as a second quote at the harvest. Earlier drafts of the letter (a plain letter to the readers' house; the "nineteen years" line): superseded by the apology letter.
@@ -88,7 +98,6 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 
 ## Open and deferred
 
-- What the fire-plant's harvest is (Phase 6).
 - Whether the song does more than keep the line (Phase 9 secret candidate).
 
 ## Approved canon moves
