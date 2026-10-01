@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-01).
 - **Phase 5 (government): closed** (GM, 2026-10-01).
 - **Phase 6 (economy): closed** (GM, 2026-10-01).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-01).
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -88,6 +89,15 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 - **Partners:** Eldara by rail (grain, most of its bread; pays in almosts and coin); Valreka at the river (grain and oil when the herd halts; coin, and **remembrance**: the houses entrust their genealogies to Valreka's Ghoran memory-keepers, *confirmed by the GM*); Rika Tikur and the Order by the bay (grain and oil; the Order's metal goods and tools through the island); Uravel, Myrria and Frae City (lamp-oil); Emarrea and Merkavar by rail (grain and oil; Lautaran cloth, Emarrean wine).
 - **Routes** (canon, unchanged): Eldara's line through the capital with the old imperial road beside it; the bay landing worked by Cape and Rika Tikur boats; the river fords where Valreka halts; the Markaa crossings; **the one choke point is the Neck**.
 - **Stake in the tension:** Eldara's bread and the oil both go up the Neck; the elder holds the grain and wants the trains running, the dancer holds the road and would have to send the companies; Eldara's hunger is the country's leverage and its risk.
+
+**Phase 7, daily life (GM, 2026-10-01):**
+- **The day and the ritual.** Most days are farm days: field work, the stores, the herds on the grass-year fields. Fields are walled with low stone walls that double as **firebreaks** (the walls Joana sat on). **The reading:** an elder of a neighbouring house walks a field that seems tired and judges it; read tired, it goes to the fire-plant, and when the plant is ready **the company names the night** (GM: the reading stays with the houses). **The burn-night** is kept district by district: the company walks out and dances the line, families sit on the walls upwind, children carry water along the edge and beat out stray sparks, and at first light the opened heads are gathered from the ash. **The first bread** from a renewed field is shared among the houses whose children danced its burn.
+- **Senses and speech.** Gold light in every window at night (even a poor house burns its own oil), so a town reads gold from a distance; smoke in the burn seasons and the bitter smell of wet ash after rain; the roasted fire-seed at home, rarely sold; bread from an ash-year field that locals swear tastes different; songs at work and on the walls (the Cape's canon has them singing the bay-water holy). **A dancer counts the burns they have danced**, as a sailor counts voyages ("she's danced forty burns"); burns are no calendar, since a field may burn after seven years once and three the next. **The vice:** grudges from the reading, resenting the neighbour whose elder read your ground.
+- **Movement.** Foot and cart on the field roads; the rail and the old imperial road for distance. **The walk-out at dusk:** a company going to its burn in single file along the field walls, weapons humming low at the walkers' sides; a company is heard before it is seen. After harvest, the grain-carts to the capital's stores.
+- **Visitor against native.** A visitor sees fire on the plain and thinks wildfire; a native reads its colour (gold-orange and walking is a burn; grey smoke and fast flame is trouble, and everyone runs). Visitors stand downwind; natives sit upwind on the walls. Visitors take the singing weapons for instruments; natives know what else they are for.
+- **Youth.** Coming of age is **the first burn danced in the line**. A slope: a child carries water at the edge, then beats out strays, then dances the line's end, and years later its middle, where the fire is hardest to hold; growing up is moving toward the centre of the line. **The sanctioned transgression: spark-games**, the young playing at the dance with embers and practice weapons in fallow fields at night; line-leaders pretend not to know until someone gets burned.
+- **Faith as lived.** Komo kept in the burn itself, Destruction and Passion: the line is the rite and the song the prayer. No separate clergy: the line-leaders lead the rite, the houses keep the hearth. Devout in the burn, plain on a farm day; Jianna acknowledged by the grain-traders at the stores.
+- **Moved to Phase 8:** how locals place each other, by house and by line.
 
 ## Rejected options
 
