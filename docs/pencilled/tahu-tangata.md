@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-01).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-01).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-01).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-01).
+- **Phase 6 (economy): open.**
 
 ## Phase 0: settled facts
 
@@ -64,9 +65,24 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 - **Population:** about **4 million** (30 per sq mi on 132,000 sq mi, the fallow turn allowed for); the capital about **60,000** (1.5%).
 - **Canon moves:** none. The imperial-granary line adds a fact to the Golden Era without changing one.
 
+**Phase 5, government (GM, 2026-10-01): a diarchy of the ground and the fire.**
+- **Two belongings.** Every Tahu Tangatan belongs to a **house** by birth (the old kin-houses that hold the ground, each with fields across the cycle) and a **company** by district (the dance-line that burns the district's fields and keeps its stretch of road). A company draws its dancers from every house in its district, so each line is a weave of houses; marriages cross houses too. **Unity:** no house can turn on another whose children dance in its line.
+- **The two rulers**, one from each body, often rivals, each the other's check (distinct from Talan's pairs that act as one: Tvisol's wedded Stywards, the Cape's twin Voices, Izarelai's two Eyes). **The elder**: chosen by the gathering of house-heads from among themselves, holds office for life or until set down; rules land, inheritance, kin law, the common stores and the grain. **The dancer**: chosen by the line-leaders from among themselves, holds office **while able to lead a burn** (dancing can go on a good many years); rules the burns, the companies, the Neck and any fight. **The old and the young rule together at all times, so the pair leans conservative and progressive at once** (GM).
+- **House-heads** are chosen by their kin from among those who have danced the line; **line-leaders** by their companies, by leading burns. Both sit at the **gathering-ground** at the capital.
+- **The four questions.** Day to day: houses and companies in their districts, the two rulers at the capital. Envoys: two chairs at the gathering-ground; an envoy meets both. Treaties: each seals their own domain (grain the elder's, road the dancer's); nearly every real deal is both (Eldara's grain goes up the Neck), so both seals go on almost everything. A bridge: the elder pays from the stores, the dancer's companies build.
+- **Deadlock:** nothing changes; the stores keep, the line keeps, the proposal waits.
+- **Cross-reading:** a house never reads its own ground; a neighbouring house's elder judges a field tired.
+- **The road in:** the kinless (rail workers, rushers who stayed) earn a house by dancing years in a company until a house takes them in; the dancer's seat goes to whoever leads the line best, the one seat open to a stranger with no house behind them.
+- **The common stores:** the Empire's granaries kept as the houses' common stores, filled from every house's grain; they feed the country in a bad year and fill Eldara's trains; the gathering signs those deals. The houses were the Empire's local lords; the companies kept the dances.
+- **Honest cost:** deadlock in a crisis; the elder may sit for decades; the kinless are second-class until the line takes them; the capital's mixed town lives under country houses it never chose.
+- **Incentive check:** houses push their young into the line (intended: the line is the country's school); the dancer is tempted to dance past their prime and call burns to show leadership; cross-reading checks the burns, the body checks the rest.
+- **The muddy line:** the Neck. The grain going up it is the elder's, the road it moves on the dancer's; when robbers or worse come down it, whose call it is gets argued every time (the live tension for Phase 9).
+- **Census:** nearest Haldmark (women's circles and the men's Vaka earning the franchise); this differs by being ungendered, woven across houses, and built on the fire.
+
 ## Rejected options
 
 - **Phase 3 images 2 and 3** (the morning field; the shut pods on an outsider's trial field): set aside; the morning field may return as a second quote at the harvest. Earlier drafts of the letter (a plain letter to the readers' house; the "nineteen years" line): superseded by the apology letter.
+- **G3, the Stores** (the imperial granary office as the government): too close to Rika Tikur's merchant-led Company (GM); the granary survives as the houses' common stores. **G1 and G2 alone** (the companies rule; the land-kin rule): entwined into the diarchy instead.
 - **Seed A alone** (the land as a calendar of burns, authority with the keepers of the count): folded into B as its cycle; the fixed count became the felt reading of the ground.
 - **A yearly burn** of one stretch: rejected for farming plausibility; each field keeps its own clock.
 
