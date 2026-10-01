@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-01).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-01); the summary written into the `sumendar.md` stub at the GM's request (an early lore write, replaced by the full entry at Phase 11).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-01).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -25,13 +26,23 @@
 3. **Sibling:** they are the old people (of Sumendar).
 4. **Komo's faces:** Destruction and Passion, in the cycle and in indigenous dances that survived the Empire's stranglehold (it need not be that serious). An idea: **singing weapons** used in a dance during fire rituals.
 
+**Phase 2, the seed (GM, 2026-10-01):** *An old people who renew their land with fire, carried across the fields by a dance no one else can dance.* Seed B (the dance lights the fields) with Seed A's cycle folded in, plus the GM's additions:
+- **The cycle is per field, never yearly.** A field is farmed for some years until the locals *feel* the ground is tired (they read the soil, the weeds, the yield); then the **fire-plant** is sown, grows its time, and is burned on a **burn-night**; the burn opens its pods for the harvest and the ash renews the ground; then farming again. Fields stand at every stage at once, so some district burns every year and the country is a patchwork of black, green and gold. Seed A's keepers of the count become **readers of the ground**.
+- **The fire-plant:** a crop whose pods open only after fire (real-world serotiny: banksia, some pine cones, fire-lilies). Unique to Tahu Tangata; others have tried to grow and burn it and failed: **pods that stay closed, or burned**. What the harvest is (food, oil, spice, medicine) is Phase 6.
+- **Why only the locals succeed (open prose, the plain craft reason):** the pods need a slow, walking-pace fire front of the right heat; a wildfire runs too hot and cooks the seed, a torch-line too fast and leaves the pods shut. **The line of dancers carries the fire at a dancing pace**, which is how the fire front is controlled.
+- **The singing weapons have a job:** in smoke and darkness the dancers keep their line by ear, each weapon's hum telling the others where it is; the same weapons and the same companies keep the Neck. Whether anything deeper lives in the song is a Phase 9 secret candidate.
+- **Why the dances survived the Empire:** they were the farming; the Empire wanted the grain and no one else could make the fields burn right.
+- **Sameness check passed with differences to name:** Fenurra's Dance of the Sulfur Fire (a pair-bonding rite across flame-lines; this is communal and agricultural); No Man's Land's Apprentice's Fire (burns rule once a year; this burns land on a cycle to grow it: the Nomans burn the chair, the old people burn the field); Haizetsua's singing cities (wind through tuned stone; these sing in the hand, in motion, with fire); Fenurra's Brakkaun Ashdrums (sound that breaks magic; this sound keeps a line).
+
 ## Rejected options
 
-*(none yet)*
+- **Seed A alone** (the land as a calendar of burns, authority with the keepers of the count): folded into B as its cycle; the fixed count became the felt reading of the ground.
+- **A yearly burn** of one stretch: rejected for farming plausibility; each field keeps its own clock.
 
 ## Open and deferred
 
-*(none yet)*
+- What the fire-plant's harvest is (Phase 6).
+- Whether the song does more than keep the line (Phase 9 secret candidate).
 
 ## Approved canon moves
 
