@@ -18,7 +18,7 @@ For over three thousand years, Talan was dominated by the Elden, an ancient race
 
 In 2945 GR, every Elden vanished on the same day. Cities intact, libraries full, hearths still warm. No explanation has ever been confirmed publicly. Their ruins are among the most sought-after and dangerous places in the known world.
 
-Their tongue outlived them in names. The **Elder Tongue** (Icelandic with drift, in our voice) named the ground they held, and because they vanished in a day, the peoples who had lived under them went on using their words for some time after, fading as the gods' speech took over. Its names are still on the map; its meaning is lost (see [`geography/_continent.md`](geography/_continent.md), *Naming strata across the eras*).
+Their tongue outlived them in names. The **Silent Tongue** (Icelandic with drift, in our voice) named the ground they held, and because they vanished in a day, the peoples who had lived under them went on using their words for some time after, fading as the gods' speech took over. Its names are still on the map; its meaning is lost (see [`geography/_continent.md`](geography/_continent.md), *Naming strata across the eras*).
 
 ### ⚿ GM Secret: The Elden: What Happened
 

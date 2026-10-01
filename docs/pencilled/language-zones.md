@@ -104,7 +104,7 @@
 - **Greenward: Talanese.** The basin that died and was reclaimed.
 - **Baratalda: Talanese**, with a Mongolic contact layer from Villtur's hunters at the Sagarri fairs.
 - **Soul Tree: Talanese.** The dying of every land come to it.
-- **Hirubaso: Talanese**, with the old tongue kept in its Primal craft (lean). It held, as one of the Four, but its order draws on all three peoples.
+- **Hirubaso: Talanese at home, and the Elkaride's own Grove Tongue** (GM, 2026-10-01): a druidic tongue on an Ainu sound (a real-world isolate, so kin to nothing on Talan), taught only within the order and spoken by no one else, distinct from the Basogur druids' Court Tongue. Its own name and sound rules land at Hirubaso's naming pass.
 - **Sugeiturri: the deep tongue, Basque, still living** (GM). One of the oldest kingdoms on Talan, unbroken continuity: the River Houses never stopped speaking the tongue that named the world. Every old name in Brauogi is already Basque (Sugeiturri, Iturmen, Hirubaso, Garaztegi, Babesarri, Harrate, Zutarri): Brauogi spoke the deep tongue as a living language until the blight, and Sugeiturri still does.
 - **Lurrath: Talanese** (the god-city speaks its host's tongue, plus its own scheme), with **the old tongue kept in the Naming** and in its builders' craft-words, as a liturgy keeps an older language.
 - **Haldmark:** Uralic (see Vindul above).
@@ -122,6 +122,8 @@ Already placed elsewhere: the Soul Tree (Talanese), Burdineyja's Midarra group (
 **All zones are pencilled. Next: Q2 (the deep tongue) and Q3 (the Golden Empire).**
 
 ## Q2: the deep tongue (in progress, 2026-10-01)
+
+*Naming note (GM, 2026-10-01): in canon the Elden tongue is named **the Silent Tongue** ("the Elder Tongue" sat too close to *Elden*), beside **the Court Tongue**.*
 
 **The deep stratum is two tongues, not one** (GM). This answers the open thread *The Old Tongue* (open-threads, *Languages*): two separate pre-Rain tongues, never one ancestor.
 
