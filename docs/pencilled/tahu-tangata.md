@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-01).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-01); the summary written into the `sumendar.md` stub at the GM's request (an early lore write, replaced by the full entry at Phase 11).
 - **Phase 2 (seeds): closed** (GM, 2026-10-01).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-01).
+- **Phase 4 (place, peoples and history): open.**
 
 ## Phase 0: settled facts
 
@@ -34,8 +35,27 @@
 - **Why the dances survived the Empire:** they were the farming; the Empire wanted the grain and no one else could make the fields burn right.
 - **Sameness check passed with differences to name:** Fenurra's Dance of the Sulfur Fire (a pair-bonding rite across flame-lines; this is communal and agricultural); No Man's Land's Apprentice's Fire (burns rule once a year; this burns land on a cycle to grow it: the Nomans burn the chair, the old people burn the field); Haizetsua's singing cities (wind through tuned stone; these sing in the hand, in motion, with fire); Fenurra's Brakkaun Ashdrums (sound that breaks magic; this sound keeps a line).
 
+**Phase 3, the traveller's image (GM, 2026-10-01):** an apology letter, placed at the head of the section on the burn. The speaker: **Joana Fontebaixa**, one of the **Leitores** of Argia Esfera (Iro's priests who read Sutarri's summit fire), on her way to Eldara by rail, 2531 MR. Her personality: a **passion for fire** (a Komo kind of love in a priest of Iro, never named as such): she cannot pass a fire, gets off the train on impulse, and folds a pinch of the field's ash into the letter. The fire she sees is a **gold-orange no page of her readers' book holds**, unlike the summit's gold for a fair week (the gold comes from the fire-plant as it burns; that detail belongs to Phases 6–7, not the letter). Final text:
+
+> *Master Afonso,*
+>
+> *I will reach Eldara two days later than I promised, and the new glass will wait two days longer for me. It is my fault and I am sorry. Here is what happened, so you can decide how sorry I ought to be.*
+>
+> *We came down out of the Emarrean hills at evening, and the country outside the window changed colour every mile: black fields, then green, then gold, then black again, as if someone had laid out the year in strips. Past the third black one there was a fire, and it was moving. You know I cannot pass a fire. I was off at the next halt before the guard had finished calling it, and I walked back along the line in the dark with my bag banging my knees.*
+>
+> *I heard it before I saw it close: a humming, many voices of it, rising and falling, and not one of them a throat. At the field's edge I could see the dancers in their line, each one swinging something that sang as it turned, with fire on its ends, and wherever the line went the fire went, at the pace of a slow walk and no faster. The field ahead of them stood full of a tall plant I did not know, its heads closed tight, and as the fire passed under them the heads split open in the heat, one after another, a crackling like rain on a roof that followed the dancers across the field. The flame was a gold-orange I have never seen on our mountain. It is nothing like the summit's gold for a fair week, and our book has no page for it. I sat on a wall until there was nothing left but embers, and the morning train left without me.*
+>
+> *There is a pinch of that field folded into this letter. Smell it before you decide.*
+>
+> *Joana*
+>
+> Joana Fontebaixa, one of the Leitores of Argia Esfera, to the master of the readers' house on Sutarri, 2531 MR
+
+Derivations from the letter: the master's name **Afonso** (Argia's sample given names); her **two days** late; her errand, **a new glass** in Eldara; **Fontebaixa** (Portuguese *fonte baixa*, "low spring", formed like the canon's *Fontefria*), to enter in the glossary at Phase 11.
+
 ## Rejected options
 
+- **Phase 3 images 2 and 3** (the morning field; the shut pods on an outsider's trial field): set aside; the morning field may return as a second quote at the harvest. Earlier drafts of the letter (a plain letter to the readers' house; the "nineteen years" line): superseded by the apology letter.
 - **Seed A alone** (the land as a calendar of burns, authority with the keepers of the count): folded into B as its cycle; the fixed count became the felt reading of the ground.
 - **A yearly burn** of one stretch: rejected for farming plausibility; each field keeps its own clock.
 
@@ -51,3 +71,8 @@
 ## Private story uses: never publish to `/setting/`
 
 *(none yet)*
+
+## Skill notes (for the next `sub-region-workflow` revision)
+
+- **Phase 3, the traveller's image: give the speaker personality** (GM, 2026-10-01). The speaker needs touches of character in the quote itself (a passion, a habit, an impulse, a way of seeing), not only a name, a year and an errand. Add to Phase 3's *What must be done*: settle one or two personality traits with the speaker and let them show in the text.
+
