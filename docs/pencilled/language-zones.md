@@ -1,6 +1,6 @@
 # Language zones: pencilled frame
 
-**Status: draft, uncommitted, not canon.** Pencilled with the GM from 2026-10-01 as the frame for the language pass (`docs/open-threads.md`, *[Cultures] Naming scheme and local tongue for every built region*). Nothing here binds the lore until the GM releases it; the lore wins over this file the moment a decision commits. The canon this sits on: `lore/geography/_continent.md`, *Languages* (Talanese as the Imperial Dwarvish braid, the dialects, the non-Talanese tongues, the naming strata, the register table).
+**Status: working record. The core was released to canon on 2026-10-01** (`lore/geography/_continent.md`, *The families of Talan* and *Naming strata across the eras*; `lore/timeline.md`, the Elden, Gods' and Golden Era sections and the ⚿ cradle; `lore/glossary.md`, *Tongues of Talan*). The region-level canon moves listed below are still owed and land at each region's naming pass; until then, this file is their record and the lore wins where the two differ. Originally: Pencilled with the GM from 2026-10-01 as the frame for the language pass (`docs/open-threads.md`, *[Cultures] Naming scheme and local tongue for every built region*). Nothing here binds the lore until the GM releases it; the lore wins over this file the moment a decision commits. The canon this sits on: `lore/geography/_continent.md`, *Languages* (Talanese as the Imperial Dwarvish braid, the dialects, the non-Talanese tongues, the naming strata, the register table).
 
 ## The rule (Option B, at the branch level)
 

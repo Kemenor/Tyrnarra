@@ -1,7 +1,7 @@
 ﻿# Glossary: Coined Names & Etymologies
 
 A working record of names in the setting. Per the naming convention in `CLAUDE.md`:
-- **Old/ancient things** (named before the Crimson Rain, in the Lost Era, or at the hinge of 1 MR) → Basque or Icelandic source, with linguistic drift
+- **Old/ancient things** (named before the Crimson Rain, in the Lost Era, or at the hinge of 1 MR) → Basque or Icelandic source, with linguistic drift. The two are the two deep tongues: **Icelandic is the Elder Tongue** (the Elden's; for ground named in the Elden Era and the first stretch of the Gods' Era), **Basque is the Court Tongue** (the gods' speech on Talan; for names given in the Gods' Era and at the hinge). See `geography/_continent.md`, *Naming strata across the eras*
 - **Golden-Era and modern things** → plain English (Talanese in our voice), lightly drifted
 - **Regional registers** (Dark Era to today, and the late Lost Era) → the region's own word-base for places and things, and a personal-name structure unique to that region; recorded under the region's block below and in `geography/_continent.md`, *Naming strata across the eras*
 
@@ -1040,6 +1040,17 @@ Practices that belong to a trade rather than a domain. Full canon in `geography/
   - **Spilled**: Plain English. A lift over the mark can no longer be captured, only toppled: the stack scatters to the surrounding squares and every bale that leaves the board is out of the game for both players, in the water. On an open quay the wind spills lifts unaided, and the standing convention everywhere is that a spill counts however it came, which makes the weather a third hand.
   - **Landed**: Plain English. A lift carried to the far edge; its whole load is counted to the player who walked it there.
   - **Travelled idiom** (heard far from any dock): *over the mark* for any overreach; *carrying five* for ambition outgrowing its footing; *he landed it* for a thing brought off against the odds; *that one went in the water* for an unrecoverable loss.
+
+### Tongues of Talan
+
+The tongues themselves. The family each region speaks is in `geography/_continent.md`, *The families of Talan*; each region's register is under its own block below.
+
+- **Talanese**: Plain English, from *Talan*. The continental common tongue, grown in the Golden Era as a braid of Imperial Dwarvish's spine and each region's local words; rendered in our voice as English with drift.
+- **Imperial Dwarvish**: Plain English. The Golden Empire's administrative and scholarly tongue, now read and no longer spoken; Talanese's spine. One of two dwarven tongues of one Germanic family.
+- **Old Dwarvish**: Plain English. Imperial Dwarvish's sister: the older speech of the southern mountain dwarves, kept on purpose as the Order of Steam's antique register (*Stahlglanz*). German-sounding in our voice.
+- **The Elder Tongue**: Plain English, a modern scholars' label (the Talanese stratum names its own scholarship). The Elden's tongue, rendered as Icelandic with drift; alive in names and ruin-inscriptions, its meaning lost.
+- **The Court Tongue**: Plain English, a modern scholars' label. The tongue the gods ruled Talan in during the Gods' Era, rendered as Basque with drift; still spoken in Sugeiturri and by the Basogur druids, and the holy tongue of the bound thirteen's clergy. The gods themselves speak every tongue; this is their speech on Talan, not their own.
+- **The old tongue**: Plain English, folk usage: what mortals call either deep tongue, without telling them apart.
 
 ### Technology & Infrastructure
 

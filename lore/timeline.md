@@ -18,6 +18,8 @@ For over three thousand years, Talan was dominated by the Elden, an ancient race
 
 In 2945 GR, every Elden vanished on the same day. Cities intact, libraries full, hearths still warm. No explanation has ever been confirmed publicly. Their ruins are among the most sought-after and dangerous places in the known world.
 
+Their tongue outlived them in names. The **Elder Tongue** (Icelandic with drift, in our voice) named the ground they held, and because they vanished in a day, the peoples who had lived under them went on using their words for some time after, fading as the gods' speech took over. Its names are still on the map; its meaning is lost (see [`geography/_continent.md`](geography/_continent.md), *Naming strata across the eras*).
+
 ### ⚿ GM Secret: The Elden: What Happened
 
 - An ancient race active roughly 6000–2945 GR. Neither fully mortal nor fully divine.
@@ -60,7 +62,7 @@ The serpentine sapients that **Zaharsuge** is folk-attributed to having created 
 ## The Gods' Era
 **2944 GR – 1 GR**
 
-With the Elden gone, the gods moved to fill the void and found nothing standing between them and total dominion over mortal life. Nearly three thousand years of divine rule followed: gods as kings, gods as landlords, gods as law. Some were just, even benevolent. Many mortals knew prosperity under divine rule. But gods were also petty, jealous, and deeply territorial. Their conflicts repeatedly consumed mortal populations in wars mortals had no say in starting and no power to end.
+With the Elden gone, the gods moved to fill the void and found nothing standing between them and total dominion over mortal life. Nearly three thousand years of divine rule followed: gods as kings, gods as landlords, gods as law. They ruled Talan in the **Court Tongue** (Basque with drift, in our voice), and old and holy things across the continent were named in it, while mortals spoke their own families' tongues at home; the Romance root, Celtic in the east and an old Iranian root in the south-west were already spoken in these centuries. Some were just, even benevolent. Many mortals knew prosperity under divine rule. But gods were also petty, jealous, and deeply territorial. Their conflicts repeatedly consumed mortal populations in wars mortals had no say in starting and no power to end.
 
 **Mid-Era event: the rise of the Storveldi Denbora.** Among the mortal civilisations that arose during this era, one settled atop the ruins of an Elden city in what is now southern Lioaru and built its capital on those foundations. They called themselves the **Storveldi Denbora** and claimed Elden descent; the claim was a lie, but it took root in their culture and in the wider world. Over centuries they ran a sustained programme of self-experiment, divine engineering, and shard recovery, and crucially, **they developed the integration procedure**: the technique for actually imbuing a found shard of divinity into a mortal's own divine essence. By the end of the era, most of their ruling class had elevated themselves to **Demi-God status** through belief-and-power accumulation, and two of their sovereigns had ascended further to **Minor God status** by integrating recovered shards. The mechanic is open to any mortal, though no other civilisation possessed the procedure to use it. **The procedure is not public knowledge, but it persists** somewhere on Talan or its veils. Full truth in *⚿ GM Secret: The Storveldi Denbora: The Real History* below.
 
@@ -161,7 +163,7 @@ The forging of the Gods' Law banished all divine beings from the Material Plane 
 ## The Golden Era
 **560 MR – 1325 MR**
 
-Named for the civilization that defined it: the **Golden Empire**, a dwarven empire that rose from the southern heartlands and over seven centuries came to control approximately 70% of Talan, the largest mortal empire in recorded history. Trade flourished. Roads were built. Common law spread. The dwarven language and script became the scholarly standard of the age, fossilized in old place-names that survive to this day.
+Named for the civilization that defined it: the **Golden Empire**, a dwarven empire that rose from the southern heartlands and over seven centuries came to control approximately 70% of Talan, the largest mortal empire in recorded history. Trade flourished. Roads were built. Common law spread. The dwarven language and script became the scholarly standard of the age, fossilized in old place-names that survive to this day. **Imperial Dwarvish** is one of two dwarven tongues of one family; its sister, **Old Dwarvish**, is the older speech of the southern mountain dwarves, kept to this day as the Order of Steam's antique register. The Empire ruled largely through local lords, its provincial nobility, and the local tongues lived on beneath its own; Talanese grew on Imperial Dwarvish's spine wherever the Empire reached.
 
 The Empire's scholars attempted to recreate the Androids of the Elden and failed, producing the **Automaton** ancestry instead. Capable constructs, but not what they were reaching for.
 
@@ -201,6 +203,14 @@ He was conceived a generation or so before the Empire's founding, born near a St
 - Second, the population that can exploit the loophole (Reflections) is the population the thirteen cannot watch: surveilling Reflections en masse to study the mechanism would itself violate the Law's prohibition on *unchecked divine control of mortal lives*. The bound thirteen carry a permanent, structural inability to study the one path that could break the Compact.
 
 They do not advertise this. **No living Reflection knows what they are.** Across all of Talan and its veils, the people who know the full arc (Reflections, Stillpools, the Emperor's loophole, the Emperor's persistence in the Layer-2 pocket) number in the **lower single digits.** The Emperor himself, in his pocket, is one of them. The others are not who you would guess.
+
+**⚿ The cradle: the Empire began on the Emerald Isles.** The record says the Empire "rose from the southern heartlands", and for most of its life it did rule from there; it was not born there.
+
+1. **The cradle.** The Isle dwarves, who reached the Emerald Isles in the Elden or Gods' Era, founded the Empire on the islands. The Emperor's Stillpool "on the southern foothills of what would become the imperial heartland" is on **the Southern Isle**, the island the modern kingdom calls its founding bough. The Isle dwarves took **the Thousand first and fully**, laying their Germanic tongue over its native Romance speech (which is why the Thousand's tongue is a braid, and why Zuzental's legal Talanese is the closest of the modern dialects to the original Imperial Dwarvish), and **Kaosadaemi** second.
+2. **The throne moved south.** As the Empire grew, the dynasty moved its capital into Sumendar's dwarven mountains, to the mines and the southern dwarves of the Old Dwarvish root, and ruled from there for centuries; the capital is the Dark-Era ruin in Sumendar's outer reaches. So the record remembers the Empire rising from the south, and the archives that would correct it did not survive the Dark Era's first decade.
+3. **A vassal empire.** Beyond its first conquests the Empire spread by leaving local rule largely intact, which is why the local tongues survived beside its own.
+4. **The cradle's mainland broke away early.** By the Empire's peak the Thousand had shattered into the still-fractious kingdoms of Zuzental's far east, outside Imperial reach; those are the thousand polities **Renauld Fyrstmond, the Old King**, later hammered together. The Isles stayed crown land under direct rule.
+5. **After 1321 MR the Isles fell hardest.** Ruled directly, with no vassal to hold them, they collapsed with the Emperor and emptied. The modern Emerald Isles kingdom was refounded later on the Southern Isle, without knowing whose cradle it was; its native Talanese is the imperial tongue's direct daughter at its birthplace.
 
 **Why this matters as canon:**
 - The Emperor was Wellspring-direct (Reflection), not deity-mediated. This is what enabled the loophole.

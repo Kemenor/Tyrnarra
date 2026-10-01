@@ -129,7 +129,7 @@ Tyrnarra has more than one continent. Two are named in canon: **the Red Empire's
 
 ## Naming Convention (regions)
 
-God domains are ancient; they predate mortal civilization and carry old-world names (Basque or Icelandic root, drifted). The god's domain character shapes the name but does not describe it directly. Drift can happen anywhere in the word, not just the end. Creativity and cross-language compounds are encouraged.
+God domains are ancient; they predate mortal civilization and carry old-world names (Basque or Icelandic root, drifted). The two roots are the two deep tongues (see *Naming strata across the eras*): an Icelandic root is the **Elder Tongue**, ground the Elden named and the god kept (Vindul, Floteyn, Lioaru); a Basque root is the **Court Tongue**, a name the gods gave (Ehizahar, the oldest name on Talan); a compound is Elden ground the gods renamed and half kept (Brauogi, Myrkono). The god's domain character shapes the name but does not describe it directly. Drift can happen anywhere in the word, not just the end. Creativity and cross-language compounds are encouraged.
 
 ---
 
@@ -153,7 +153,7 @@ Talanese carries regional dialects in every domain. They diverge in vocabulary, 
 
 - **Lautaran merchant cant**: quick, contract-heavy, with a Jianna-tradition habit of finishing a deal with a verbal seal-phrase
 - **Vindul highland Talanese**: sing-song intonation from the mountain monasteries; preserves more old-Imperial vocabulary than most dialects
-- **Ehizahar tribal registers**: pruned-down, faster, three-tribal-variant where Orc, Lizardfolk, and Centaur each carry their own inflection over the shared spine
+- **Ehizahar tribal registers**: pruned-down, faster, with a clan's own inflection over the shared spine, so that grass clans, snow clans and jungle-edge clans are told apart by ear
 - **Sumendar industrial Talanese**: heavy with Order-of-Steam coinages for machinery and Magitech parts; faster than the southern average
 - **Zuzental legal Talanese**: formal, sub-clausal, the closest of the modern dialects to the original Imperial Dwarvish
 - **Brauogi village Talanese**: slow, agricultural-calendar-rich, the dialect outsider chroniclers most often hear as *"the way Talan really sounds"*
@@ -162,17 +162,45 @@ Talanese carries regional dialects in every domain. They diverge in vocabulary, 
 
 Other domains carry recognised variants but the eight above are the most-named by scholars. The dialects are converging at the speed of the rail network: a town with daily Magitrain service hears two or three other dialects every day, and the convergence of usage is visible across decades.
 
-### The non-Talanese tongues
+### The families of Talan
 
-Several languages persist alongside Talanese rather than being absorbed by it:
+Talan speaks more than a dozen families of tongue, and a family is a kinship: tongues of one family share their roots, and the nearer the kin, the more of a neighbour's speech a traveller catches. A tongue belongs to a place and the culture raised there, never to a people's blood. A kitsune raised in Merkavar speaks Merkavar's tongue, and anyone raised in Emarrea speaks Emarrea's; an ancestry shares a tongue only as far as its people live together in one culture. Families follow the ground and the history laid on it, not the god-domains: a domain border is no language line, Zuzental holds four families, and Uralic crosses from Vindul into Brauogi.
 
-- **Old Dwarvish**: the antique register of the Order of Steam (House Eisenhart's internal tongue), distinct from Imperial Dwarvish and intentionally preserved.
-- **Fenurran Latinate**: the Fenurran tribes' internal vocabulary, never widely spoken outside Fenurra.
-- **Kotokoe**: *"the voice of words"* (from *koto* + *koe*). The kitsune cultural tongue, used internally in Emarrea for place-names, dishes, rituals, gods, and craft-vocabulary; co-exists with Talanese as a bilingual household norm. Japanese-flavoured register. Full glossary entry in [`../glossary.md`](../glossary.md), *Kitsune proper nouns → Language*.
-- **Sortalde-internal Chinese-flavoured register**: the petals' own language, spoken across the Cloud Sea; Talanese diplomats need interpreters.
-- **Local survivals**: pockets in nearly every domain preserve a pre-Imperial tongue at the household and ritual level (the older Lioaru desert tribes, certain Floteyn islet communities, the Hareaveldi sand-realm's deep-old idiom).
+**In our voice.** Each family is rendered with a real-world language family for its sound, and the real-world kinship stands for the Tyrnarran one. Kinship is counted at the branch (Germanic, Romance, Celtic, Iranian, Berber), never the superfamily: Germanic, Romance and Celtic are three unrelated families on Talan, and so are Iranian and Berber. Within a family, a closer real-world relation means a closer Tyrnarran one (Italian and Portuguese are near cousins). Every base is rendered speakable for a German- and English-speaking table: the real-world language is inspiration for the sound, never a transcription, in plain letters, with a hard sound (an ejective, a click, a tone) suggested by a spelling a reader can say, or dropped. Three layers stand outside the rule: the two deep tongues (see *Naming strata across the eras*), Talanese, and the speech of the Wildreach, which the Feyworld touches and which answers to no mortal family (designed at the Wildreach's build).
 
-Imperial Dwarvish itself is now an antique: read by scholars to parse Empire-era law-books, spoken by no community as a living tongue. The Golden Empire's spine is the spine of Talanese itself, and that is the form in which the Empire still speaks.
+| Family (in our voice) | Where it is spoken | Notes |
+|---|---|---|
+| **Germanic, the imperial root** (Imperial Dwarvish's daughters) | the Thousand Kingdom's spine; Kaosadaemi | The tongue the Golden Empire's dwarves carried; **Talanese** grew on its spine. The Thousand braids it with its native Romance. |
+| **Germanic, the southern root** (Old Dwarvish's line) | the Order of Steam (German); the drifting isles of Floteyn: the Floating Isles, Balaena, Balatur Erui, Uravel (Norse, the mainland Scandinavian end) | Old Dwarvish is the southern mountain dwarves' old speech, kept on purpose by the Order. The isles are its sea-daughters, every docking a new dialect; the boats share a common crew-tongue on the Hanseatic model. |
+| **Romance** | Legea (French); the Thousand's native layer; Namur (Italian); Harro Distiratsua and Lua Lasai (Iberian); Argia Esfera (Portuguese) | Sister tongues from a root older than the Crimson Rain, along the inner sea and down the south-east. |
+| **Celtic** | Vernua (Irish), Nahaskel (Welsh) | The east's oldest family, once wider, pressed back to the jungle's edge. |
+| **Japonic** | Emarrea (Japanese: Kotokoe, the highland core); the Lautaran plain: Itsasalda, Merkavar, Azkataria, Atarialda, the Dreaming Cape at home (Ryukyuan-sounding sisters) | One family across Lautara; each region adds sound rules of its own, so the busiest country on the continent never sounds like one place. |
+| **Greek** | Ezkudon: Jakinduria and Thekkavar (Attic); the Golden Coast and the ring country (a Doric or Ionic drift) | The scholars' tongue meets the plain's Japonic on Azkataria's coffee-house floor. |
+| **Iranian** | Hareaveldi (Persian); the Lost Kingdom (an Avestan or Old Persian sound, the oldest form) | The Lost Isle may be a sister (decided at its build). |
+| **Berber** | Galdua Jendea and Valreka; the River Duchies (a sister) | The herd and the valley trade and marry, and the kinship is audible. |
+| **Polynesian** (a Māori base) | Tahu Tangata, Haraour Eliza, the Red Dominion, Burdineyja (both island groups) | Sumendar's own: an inland and mountain family, the Red Dominion its only seafaring branch. The Elden gate carries the same tongue to Burdineyja's Midarra group. |
+| **Kartvelian** (Georgian) | Dragon's Reach | No kin on Talan: the Dragons came from beyond the world. |
+| **Mongolic** | Villtur (a continuum by ground: grass, snow and jungle-edge clans each sound different); Veidrath (the common Mongolic of the gathering); Ardo Beroa (the island dialect); Fenurra (four tribal dialects sharing a harder crater sound) | Talan's largest family never under the Empire. |
+| **Uralic** | Baerfrost (Sami); Haizetsua (Finnish); Haldmark (Estonian or Karelian); Fellibylur (Hungarian; the Skybell ports lean Talanese); Haizava | The old north-west, never held by the Empire in its far north. |
+| **Quechuan** | Myrkono: Ilun Tasun, Itzasoa, Izarelai, Three Pines (Cusco, Central and Kichwa sounds); Tvisol (a sister with a Norse sound rule over it, from the ferry trade) | Myrkono held through the Dark Era and kept its own. |
+| **Dravidian** | Askamira: Maitagarri (Malayalam), Basamortua (Telugu), Dea Elurra (Kannada), a Tamil core | The island's own people, there before Frae City. |
+| **Bantu** (Swahili) | the Anadi of the Basogur | |
+| **Indo-Aryan** (Sanskrit) | the Vanara of the Basogur | |
+| **Tibetic** | the Order of Law | A monastic pocket, carried in by the founding and kept apart. |
+| **Talanese, native** | Brauogi's reclaimed ground (Greenward, Baratalda, Hirubaso, the Soul Tree, Lurrath); the Emerald Isles; Rika Tikur; No Man's Land; Eldara; Frae City; Star Island; the Air Monastery | Where a land was emptied and refilled by many peoples, or where strangers gather from everywhere, the tongue they share becomes the native one. |
+| **The Court Tongue, still spoken** | Sugeiturri's River Houses; the druid tribes of the Basogur | See *Naming strata across the eras*. |
+
+Off the continent, **Sortalde**'s petals keep their own Chinese-flavoured tongue; Talanese diplomats need interpreters. A **god-city** speaks its host region's tongue and keeps a naming scheme of its own. **Hringseyja** is split along the Quietline: the Itsasaldan half speaks the plain's Japonic, the Legean half French, and the protocol-day markets are where the two meet.
+
+**What every tongue carries.** No tongue stands alone: each carries a **contact layer** of words lent by its neighbours and its trade. And everywhere the Golden Empire ruled, the old tongue carries **the imperial loan layer**: Talanese and old Imperial words in its names and trades, deepest where the Empire held longest. Never-held ground (Ehizahar, the Basogur, Baerfrost, the Thousand after it broke away) carries the least, so a traveller with an ear can hear whether a place was ever Imperial.
+
+**Before the Rain.** Families were spoken on Talan long before the Crimson Rain: the Romance root, Celtic in the east, and an old Iranian root in the south-west, where the Storveldi Denbora rose. Scholars argue over a likeness between fragments recovered from the Blackened Lands and the speech of Hareaveldi, and the argument has never been settled.
+
+#### ⚿ GM Secret: the tongue of Tani's killers
+
+The likeness is descent. The Iranian family came from the Storveldi Denbora's own tongue, the speech of their homeland under the two deep tongues they dressed themselves in: the Nagaji of Hareaveldi speak its daughter, and the oldest form of it survives in the Blackened Lands among those who live in the cursed land (who they are lands at the Lioaru build). The Storveldi tongue is lost to the chronicle record and alive on the ground.
+
+**Imperial Dwarvish and Old Dwarvish.** Imperial Dwarvish is now an antique: read by scholars to parse Empire-era law-books, spoken by no community as a living tongue. The Golden Empire's spine is the spine of Talanese itself, and that is the form in which the Empire still speaks. Old Dwarvish is its sister in one family, the tongue of the southern mountain dwarves, preserved on purpose as the Order of Steam's antique register (House Eisenhart's internal tongue). Two dwarven peoples, two roots of one family: see [`../timeline.md`](../timeline.md), *The Golden Era*.
 
 ### Naming strata across the eras
 
@@ -180,20 +208,33 @@ What a thing is called depends on when it was named, and a place carries its his
 
 | Era | Stratum | What it sounds like |
 |---|---|---|
-| Before the Crimson Rain, and the Lost Era | **Deep** | The old tongues (Basque/Icelandic with drift in our voice). Few things were named in those years, and the namers held to the old ways; a name from this stratum is opaque and worn. |
+| Elden Era (6000 GR – 2945 GR), and the first stretch of the Gods' Era | **Deep: the Elder Tongue** | The Elden's tongue (Icelandic with drift in our voice). Its names outlived the Elden; its meaning did not. They vanished in a single day, so the peoples who had lived under them went on using their words for a time, fading as the gods' speech took over. |
+| Gods' Era (2944 GR – 1 GR), the hinge of 1 MR, and the early Lost Era | **Deep: the Court Tongue** | The tongue the gods ruled Talan in (Basque with drift in our voice). Old and holy things were named in it across every family's ground while mortals spoke their own families' tongues at home; after the Rain the namers held to it a while longer. Few things were named in those years, and a name from either deep tongue is opaque and worn. |
 | Late Lost Era | Deep giving way to **regional** | Each region's own tongue begins naming what it founds. |
 | Golden Era (560 MR – 1325 MR) | **Talanese** | The Imperial braid, rendered as English with drift; the Empire named nearly the whole continent in it, and Golden-Era foundations still carry those names. |
 | Dark Era (1321 MR – 2135 MR) to today | **Regional** | The Empire gone, the regions named in their own registers again, and the Dark-Era refoundings are the reason most living names sound local. |
 | The Adventurer Era, tending | Talanese returning | The rail and the Guild connect everyone, and plain Talanese is creeping back for the simple reason that everyone understands it. |
+
+**Two deep tongues.** The deep stratum is two tongues, and a scholar who knows them can read a deep name's age off its sound. The **Elder Tongue** was the Elden's, the speech of the three thousand years they held Talan; it survives in names and ruin-inscriptions, and no one has spoken it since the generations after the Elden vanished. The **Court Tongue** was the speech of the gods' courts and households in the Gods' Era, when the gods ruled as kings, landlords and law. The gods themselves speak every tongue, and a prayer reaches its god in whatever language it is prayed; the Court Tongue is the one they ruled Talan in, not their own true speech. Folk say *the old tongue* for both and keep them apart only in the scholar's mouth.
+
+**Reading a deep name.** An Elder-Tongue name is Elden ground that outlasted its namers, and a domain named in it is ground the god kept (Vindul, Floteyn, Lioaru). A Court-Tongue name was given by the gods or their courts (Ehizahar, the oldest name on Talan). A compound is the gods renaming Elden ground and keeping half of it: Brauogi, the bread named twice over (*brauð* + *ogi*), and Myrkono (*myrkur* + *kono*). The **Storveldi Denbora** wore both, an Elder word and a Court word on a people who spoke neither at home: their claim to Elden descent, made in language.
+
+**The Court Tongue lives on.** Two communities never stopped speaking it. **Sugeiturri**'s River Houses kept the gods' rivers before mortals took them at the Rain, and still speak the tongue the rivers were kept in; Brauogi spoke it as a living tongue until the Dark-Era blight emptied the basin. The **druid tribes of the Basogur** keep it among the old wood. It is also the **holy tongue of the bound thirteen's clergy**, carried in their rites the way an older language carries a liturgy, and the sanctums bear it: Igarbe, Zutarri, Urbarren, Urdeia, and the Legedi's *lege-*.
+
+#### ⚿ GM Secret: whose tongue the Elder Tongue is
+
+The Elden became the Corrupted God (see [`../cosmology.md`](../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*). Every Elder-Tongue name on the map is a word in the tongue of the thing bound beneath the world. Scholars who tell the two deep strata apart credit the elder one to the Elden from ruin-inscriptions, and stop there.
+
+**Elder-Tongue names after the Elden** (authoring rule). An Elder-Tongue name on something named after the first stretch of the Gods' Era is out of its era. By default it is re-rendered at the region's naming pass, into the region's family or the Court Tongue. It is kept where the place plausibly is Elden ground, named then and settled later (case by case; a GM-Written page only on the GM's word). A learned coinage, a scholar or founder reaching for Elden words the way scholars reach for an old learned tongue, is allowed only where the name has a real scholarly reason.
 
 **The regional registers.** A register has two parts. Its **word-base** names the region's places and things, and neighbouring regions may share one. Its **personal-name structure** is the region's fingerprint: no two regions are alike, and a mortal's name says where their family is from even two generations after it moved. The structures are recorded in [`../glossary.md`](../glossary.md) under each region's block; the word-bases are listed here.
 
 | Region | Word-base (in our voice) | Personal-name structure | Recorded |
 |---|---|---|---|
 | Emarrea (Lautara) | Japanese (Kotokoe) | kitsune convention | `glossary.md`, *Kitsune proper nouns*; `geography/lautara/emarrea.md` |
-| Fenurra (Ehizahar) | Latinate / Germanic | Fenurran tribal convention | `glossary.md`, *Fenurran proper nouns*; `geography/ehizahar/fenurra.md` |
+| Fenurra (Ehizahar) | **Re-render pending at Fenurra's naming pass:** Mongolic, four tribal dialects sharing a harder crater sound (hard *k* and *kh*, doubled consonants, hyphenated compounds); formerly Latinate / Germanic | Fenurran tribal convention | `glossary.md`, *Fenurran proper nouns*; `geography/ehizahar/fenurra.md` |
 | Thousand Kingdom (Zuzental) | Germanic / French | house prefix + ancestry suffix, heir-status mobility | `glossary.md`, *Thousand Kingdom: the noble-naming convention* |
-| Haizetsua (Vindul) | Tengu register | Tengu convention | `geography/vindul/haizetsua.md` |
+| Haizetsua (Vindul) | Tengu register, on a Uralic (Finnish) sound | Tengu convention | `geography/vindul/haizetsua.md` |
 | Sortalde (off-continent) | Chinese-flavoured | dynastic | `_off-continent.md` |
 | Nahaskel (Nashavel) | Welsh; field-words in old Talanese | whim-name + coin-name + felt-family, field last; the coin-name is the one fixed part, the rest changes freely; eight fields (beod · wyrht · bytel · fare · laec · ceap · lar · wraec) | `glossary.md`, *Nahaskel → the Nahaskel register*; `geography/nashavel.md`, *Nahaskel → What a Nahaskeli is called* |
 | Vernua Dominion (Nashavel) | Irish | two given names + two steadings, one of each from each parent, the same-sex parent's first; steadings never change; the Maors carry one house with the particle *O* | `glossary.md`, *Vernua Dominion → the Vernua register*; `geography/nashavel/vernua.md`, *What a Vernuan is called* |
@@ -202,14 +243,14 @@ What a thing is called depends on when it was named, and a place carries its his
 | Valreka and Galdua Jendea (Lioaru) | Tamazight | given + birth-whale + chosen whale; *u* / *ult* for the guiding blood; *Mez-* child prefix, *-ghar* elder suffix | `glossary.md`, *Valreka → the Valrekan register*; `geography/lioaru.md`, *Valreka → What a Valrekan is called* |
 | Basogur Jungle: the Anadi (Nashavel · Ehizahar) | Swahili | given + story + hold: the story is the title of her first woven story, taken at coming of age and replaced only by a grander one (the hold says both for a year); the hold she was strung in never changes | `geography/nashavel/basogur.md`, *What the jungle's people are called*; `glossary.md`, *Basogur Jungle* |
 | Basogur Jungle: the Vanara | Sanskrit | given + clan + the name the led gave, given by the first travelers she brings through and kept in their tongue; two names until she has led a crossing | as above |
-| Basogur Jungle: the druid tribes | Basque tree-words, worn; Talanese for groves and tribes | tree + grove + tribe: the child and her tree share a name, and the survivor keeps it; the grove is named for what happened there | as above |
+| Basogur Jungle: the druid tribes | the Court Tongue, still spoken (Basque tree-words, worn); Talanese for groves and tribes | tree + grove + tribe: the child and her tree share a name, and the survivor keeps it; the grove is named for what happened there | as above |
 | Argia Esfera (Egulon) | Portuguese, plain letters; Basque for the mountain, its fires, and the wines | given + well (the household's cistern or spring, kept for life); + *da/do* comenda for the Aguarda; + the heat walked, in Talanese, for a paladin | `glossary.md`, *Argia Esfera → the Argian register*; `geography/egulon/argia-esfera.md`, *What an Argian is called* |
-| Legea Empire (Zuzental) | Ge'ez / Amharic, plain letters; holy words in the deep stratum's *lege-* Basque | day-name + Deia + reading-house (*ye-*): the day-name is the first free name on the birth-day's litany (ten per sex per day) among the house's living faithful, freed again at death or apostasy; the Deia given by the book at fifteen and changed with each new life; converts named for the day of reception; demigods alone choose a throne-name | `glossary.md`, *Legea Empire → the Legean register*; `geography/zuzental/legea-empire.md`, *What a Legean is called* |
+| Legea Empire (Zuzental) | **Re-render pending at Legea's naming pass:** Romance (French); the names now in canon are Ge'ez / Amharic, plain letters; holy words in the Court Tongue's *lege-* | day-name + Deia + reading-house (*ye-*): the day-name is the first free name on the birth-day's litany (ten per sex per day) among the house's living faithful, freed again at death or apostasy; the Deia given by the book at fifteen and changed with each new life; converts named for the day of reception; demigods alone choose a throne-name | `glossary.md`, *Legea Empire → the Legean register*; `geography/zuzental/legea-empire.md`, *What a Legean is called* |
 | Order of Law (Zuzental) | Tibetan, plain letters; the Order's practices and offices in plain Talanese; Kyrrskog in the deep stratum | two names given by a monk; after sitting the Court of One, one is set down for a self-chosen name, anything except a monk-given name, so a name shows whether its bearer has sat | `glossary.md`, *Order of Law → the Order's register*; `geography/zuzental/order-of-law.md`, *What an Orderman is called* |
 | No Man's Land (Sumendar) | frontier Talanese (plain English with drift), the tongue every arrival shares | given name kept + a fire-name bestowed by the cinder at the first Apprentice's Fire; the family name is burned | `glossary.md`, *No Man's Land → the Noman register*; `geography/sumendar/no-mans-land.md`, *What a Noman is called* |
 | Namur Republic (Zuzental) | Italian, plain letters; Venetian family names lightly drifted | given + family + a sworn name from one's own citizen's oath (*detto/detta*), lost on oathbreaking; *Posaspada* after it for a Dictator who laid the office down | `glossary.md`, *Namur Republic → the Namurese register*; `geography/zuzental/namur-republic.md`, *What a Namurese is called* |
 
-Regions without a row have no defined register yet; define one at the region's build, choosing a word-base that keeps the region's sound distinct from its neighbours' and a personal-name structure that no other region uses.
+Regions without a row have no defined register yet; define one at the region's build, choosing a word-base inside the family *The families of Talan* gives the region, with sound rules of its own so it stays distinct from its kin, and a personal-name structure that no other region uses.
 
 ---
 
