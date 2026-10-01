@@ -9,7 +9,20 @@
 <link rel="stylesheet" href="/setting/assets/site-nav.css">
 <script defer src="/setting/assets/site-nav.js"></script>
 <script defer src="/setting/assets/site-interactions.js"></script>
-<style>:root { --domain-accent: #a85a22; }</style>
+<style>
+  :root { --domain-accent: #a85a22; }
+  .ref-table { width: 100%; max-width: 780px; margin: 8px auto 26px; border-collapse: collapse; font-size: 0.92rem; }
+  .ref-table th, .ref-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid rgba(200,144,10,0.16); vertical-align: top; }
+  .ref-table th { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.22em; color: var(--gold-dim); text-transform: uppercase; padding-top: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(200,144,10,0.35); }
+  .ref-table td b { color: var(--gold-bright); font-weight: 600; }
+  .ref-table tr:last-child td { border-bottom: none; }
+  .tongues-section { margin-top: 8px; }
+  .tongues-section .secret-era { max-width: 780px; margin: 0 auto 26px; }
+  @media (max-width: 600px) {
+    .ref-table { font-size: 0.85rem; }
+    .ref-table th, .ref-table td { padding: 6px 8px; }
+  }
+</style>
 </head>
 <body data-page="history">
 
@@ -56,7 +69,7 @@
         <div class="era-chevron">▾</div>
       </div>
       <div class="era-body">
-        For over three thousand years, Talan was dominated by the <a href="/setting/talan/historical/elden.html">Elden</a>, an ancient race of immense power and sophistication. Neither fully mortal nor fully divine, they built civilizations of staggering scale. Little of their culture survives in comprehensible form; what does is often beyond mortal understanding to replicate. Their greatest known achievement was the creation of the <b>Android</b> ancestry, people of extraordinary sophistication that no civilization has since been able to reproduce.<br><br>Then, in 2945 GR, every Elden vanished, on the same day, everywhere on Talan. No war, no plague, no exodus was recorded. Their cities stood intact, libraries full, hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across Talan, are among the most sought-after and dangerous places in the known world.
+        For over three thousand years, Talan was dominated by the <a href="/setting/talan/historical/elden.html">Elden</a>, an ancient race of immense power and sophistication. Neither fully mortal nor fully divine, they built civilizations of staggering scale. Little of their culture survives in comprehensible form; what does is often beyond mortal understanding to replicate. Their greatest known achievement was the creation of the <b>Android</b> ancestry, people of extraordinary sophistication that no civilization has since been able to reproduce.<br><br>Then, in 2945 GR, every Elden vanished, on the same day, everywhere on Talan. No war, no plague, no exodus was recorded. Their cities stood intact, libraries full, hearths still warm. No explanation has ever been confirmed. Their ruins, scattered across Talan, are among the most sought-after and dangerous places in the known world.<br><br>Their tongue outlived them in names. The Elden named the ground they held in the <b>Elder Tongue</b>, and those names are still on the map, though their meaning went with the Elden (see <a href="#tongues">The Tongues of Talan</a> below).
         <div class="legend-era">
           <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · What Happened to the Elden</button>
           <div class="legend-era-content">
@@ -82,7 +95,7 @@
         <div class="era-chevron">▾</div>
       </div>
       <div class="era-body">
-        With the Elden gone, the gods moved to fill the void, and found nothing standing between them and total dominion over mortal life. What followed was nearly three thousand years of divine rule: gods as kings, gods as landlords, gods as law. Mortals lived under the direct and often capricious governance of beings of immense power.<br><br>It was not uniformly terrible. Some gods were just, even benevolent. Many mortals knew prosperity under divine rule. But the gods were also petty, jealous, and deeply territorial. Their conflicts with one another, over borders, followers, resources, and pride, repeatedly consumed mortal populations in wars they had no say in starting and no power to end.<br><br>Mortal civilisations were not idle during this era. Several rose to prominence under, or in the gaps between, divine governance. The Gods' Era also saw the <b>crash of an alien vessel</b> in the volcanic south, what is now <a href="/setting/talan/domains/sumendar/sumendar.html">Sumendar</a>, bringing the first <b>Dragons</b> to Talan; their landing site became the city now called <a href="/setting/talan/domains/sumendar/sumendar.html">Dragon's Reach</a>. And in the era's final centuries, a powerful civilisation now remembered only as <i>"the Old Race"</i> rose, gathered forbidden power, and, by every chronicle's reckoning, brought the era to its catastrophic end.
+        With the Elden gone, the gods moved to fill the void, and found nothing standing between them and total dominion over mortal life. What followed was nearly three thousand years of divine rule: gods as kings, gods as landlords, gods as law. Mortals lived under the direct and often capricious governance of beings of immense power. The gods ruled Talan in the <b>Court Tongue</b>, and the names of old and holy things across the continent were given in it, while mortals went on speaking their own tongues at home.<br><br>It was not uniformly terrible. Some gods were just, even benevolent. Many mortals knew prosperity under divine rule. But the gods were also petty, jealous, and deeply territorial. Their conflicts with one another, over borders, followers, resources, and pride, repeatedly consumed mortal populations in wars they had no say in starting and no power to end.<br><br>Mortal civilisations were not idle during this era. Several rose to prominence under, or in the gaps between, divine governance. The Gods' Era also saw the <b>crash of an alien vessel</b> in the volcanic south, what is now <a href="/setting/talan/domains/sumendar/sumendar.html">Sumendar</a>, bringing the first <b>Dragons</b> to Talan; their landing site became the city now called <a href="/setting/talan/domains/sumendar/sumendar.html">Dragon's Reach</a>. And in the era's final centuries, a powerful civilisation now remembered only as <i>"the Old Race"</i> rose, gathered forbidden power, and, by every chronicle's reckoning, brought the era to its catastrophic end.
         <div class="legend-era">
           <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Old Race &amp; the God Killing Incident</button>
           <div class="legend-era-content">
@@ -170,7 +183,7 @@
         <div class="era-chevron">▾</div>
       </div>
       <div class="era-body">
-        Named for the civilization that defined it: the Golden Empire, a dwarven empire that rose from the southern heartlands and, over seven centuries of expansion, conquest, and political absorption, came to control approximately 70% of Talan. At its peak it was the largest mortal empire in recorded history, a monument to what mortals could build when freed from direct divine governance.<br><br>The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age, fossilized in the old place-names that survive to this day.<br><br>Among the Empire's many pursuits, its greatest scholars attempted to recreate the Androids of the Elden, synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: formidable constructs of considerable capability, but not the living people the Elden had made. The distinction haunted Imperial scholarship until the Empire's end. For the full institutional history of the Empire, its sweep, its work, its fall, and the legacy still embedded in modern Talan, see <a href="/setting/talan/historical/golden-empire.html"><b>The Golden Empire →</b></a>.
+        Named for the civilization that defined it: the Golden Empire, a dwarven empire that rose from the southern heartlands and, over seven centuries of expansion, conquest, and political absorption, came to control approximately 70% of Talan. At its peak it was the largest mortal empire in recorded history, a monument to what mortals could build when freed from direct divine governance.<br><br>The Golden Empire was not a gentle ruler, but it was a consistent one. Trade flourished. Roads were built. Common law spread. The era saw genuine prosperity across much of the continent, and the cultural foundations of many modern kingdoms trace directly to this period. The dwarven language and script became the scholarly standard of the age, fossilized in the old place-names that survive to this day. The Empire ruled largely through local lords, its provincial nobility, and the tongues it ruled lived on beneath its own; Talanese grew on Imperial Dwarvish's spine wherever the Empire reached.<br><br>Among the Empire's many pursuits, its greatest scholars attempted to recreate the Androids of the Elden, synthetic people whose sophistication had never been matched. They could not. What they produced instead was the <b>Automaton</b> ancestry: formidable constructs of considerable capability, but not the living people the Elden had made. The distinction haunted Imperial scholarship until the Empire's end. For the full institutional history of the Empire, its sweep, its work, its fall, and the legacy still embedded in modern Talan, see <a href="/setting/talan/historical/golden-empire.html"><b>The Golden Empire →</b></a>.
         <div class="legend-era">
           <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Why the Empire Worked</button>
           <div class="legend-era-content">
@@ -233,6 +246,81 @@
         Four centuries of rebuilding, expansion, and uneasy opportunity. Kingdoms have risen in the ruins of the Dark Era, some rebuilt on old foundations, some entirely new, some assembled from conquered neighbors. The Adventurers Guild, no longer fighting for survival against a singular threat, has transformed: still independent, still outside government, but now a world-spanning institution of enormous soft power. It brokers contracts, maintains neutral ground, and quietly influences more political decisions than any king would like to admit.<br><br>For four centuries the threats of the Corrupted God were a steady background hum. Spawn still emerged from deep places. Old ruins still harbored things that should not have survived. But the work was contained and almost routine, the Guild knew the protocols, border villages knew the signs. The world was alive again: trading, scheming, building, exploring.<br><br><b>That changed in 2524 MR.</b> Overnight, <b>nine colossal subterranean fortresses</b>: the Nine Dungeons, tore open pathways into the mortal world. From them came the first great corruption armies in four centuries, led not by mindless hunger but by purpose: each dungeon was commanded by one of the <b>Nine Generals of Corruption</b>, lieutenant-vessels wrought from the bound god's power. The kingdoms united, the Guild rallied, and the first wave was broken. The main entrances were sealed with wards, stone, and sacrifice. <b>One General has fallen</b>: the Ash-Binder, in a campaign now reckoned the closest thing the modern age has to a founding heroism. <b>Eight remain.</b><br><br>The Adventurer Era did not end. It changed shape. Smaller leakage continues; the Guild's research operation has shifted from emergence prediction to siege management; border towns plague-rot from below. The Wardstones still glow. For now. See <a href="/setting/talan/the-binding.html"><b>The Binding</b> →</a> for the seven stones, the Nine Generals, and the doctrine of the War of Seals.<br><br>It is a time of genuine opportunity and genuine danger in equal measure. History is being made by anyone willing to reach for it, and by some who would rather it were not.
       </div>
     </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="tongues-section">
+  <h2 id="tongues" class="section-heading">The Tongues of Talan</h2>
+
+  <div class="prose">
+    <p>Talan has had three masters, and each left its tongue on the map. The Elden held the continent for three thousand years and named its ground in the <b>Elder Tongue</b>. The gods ruled after them as kings, landlords and law, and named in the <b>Court Tongue</b>. The Golden Empire carried <b>Imperial Dwarvish</b> across seven tenths of the continent, and Talanese grew on its spine. A chronicler who dates a hall or a road by the sound of its name is usually right.</p>
+    <p><b>The two old tongues.</b> Folk say <i>the old tongue</i> for both; scholars keep them apart. The Elder Tongue lives in names and ruin-inscriptions and nowhere else. Its meaning went with the Elden, though the peoples who had lived under them went on using its words for a time after the vanishing, until the gods' speech took over. The Court Tongue is the speech the gods ruled Talan in. The gods themselves speak every tongue, and a prayer reaches its god in whatever language it is prayed; the Court Tongue was their speech on Talan, and old and holy things were named in it across the whole continent. Two communities still speak it as their own: the River Houses of <a href="/setting/talan/domains/brauogi/sugeiturri/sugeiturri.html">Sugeiturri</a>, who kept the gods' rivers before mortals took them at the Rain, and the druid tribes of the <a href="/setting/talan/domains/nashavel/basogur/basogur.html">Basogur</a>. It is also the holy tongue of the bound thirteen's clergy, carried in their rites, and the sanctums bear it: Igarbe, Zutarri, Urbarren.</p>
+    <p><b>Reading an old name.</b> An Elder-Tongue name is Elden ground that outlasted its namers, and a domain named in it is ground its god kept: Vindul, Floteyn, Lioaru. A Court-Tongue name was given by the gods: Ehizahar, the oldest name on Talan. A name in both is Elden ground the gods renamed and half kept: Brauogi, the bread named twice over, and Myrkono. The <a href="/setting/talan/historical/storveldi-denbora.html">Storveldi Denbora</a> wore both, an Elder word and a Court word on one people, a claim to Elden descent made in language.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Whose Tongue the Elder Tongue Is</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Words of the Bound</div>
+      The Elden became the Corrupted God (see the <b>Elden Era → GM Secret</b> above). Every Elder-Tongue name on the map is a word in the tongue of the thing bound beneath the world. Scholars who tell the two old tongues apart credit the elder one to the Elden from ruin-inscriptions, and stop there.
+    </div>
+  </div>
+
+  <div class="prose">
+    <p><b>Talanese.</b> The common tongue grew in the Golden Era as a braid: Imperial Dwarvish's spine, with each region's own words woven through it. It is a second tongue nearly everywhere and the first one in a few places: where a land was emptied and refilled by many peoples, as in Brauogi's reclaimed basin, and where strangers gather from everywhere, as in Frae City and Rika Tikur. Imperial Dwarvish itself is read by scholars and spoken by no one. Its sister, <b>Old Dwarvish</b>, the older speech of the southern mountain dwarves, survives as the Order of Steam's antique register.</p>
+    <p><b>The families.</b> Beneath Talanese, every region speaks its own tongue, and the tongues fall into families. Kin tongues share their roots, and the nearer the kin, the more of a neighbour's speech a traveller catches. A tongue belongs to a place and the culture raised there: a kitsune raised in Merkavar speaks Merkavar's tongue, and anyone raised in Emarrea speaks Emarrea's. Families follow the ground and its history, never the god-domains, so Zuzental holds four, and the northern tongues cross from Vindul into Brauogi.</p>
+  </div>
+
+  <table class="ref-table">
+    <tr><th>Family</th><th>Where it is spoken</th></tr>
+    <tr><td><b>The imperial dwarven tongues</b></td><td>The Thousand Kingdom's spine; Kaosadaemi. Imperial Dwarvish's living kin; the Thousand braids them with its inner-sea speech.</td></tr>
+    <tr><td><b>The southern dwarven tongues</b></td><td>The Order of Steam; the drifting isles of Floteyn, where every docking is a new dialect. Old Dwarvish's line.</td></tr>
+    <tr><td><b>The inner-sea tongues</b></td><td>Legea; the Thousand's older layer; Namur; Harro Distiratsua, Lua Lasai and Argia Esfera. Sisters from a root older than the Rain.</td></tr>
+    <tr><td><b>The jungle-edge tongues</b></td><td>Vernua; Nahaskel. The east's oldest family, pressed back against the Basogur.</td></tr>
+    <tr><td><b>The Lautaran tongues</b></td><td>Emarrea's Kotokoe; Itsasalda, Merkavar, Azkataria, Atarialda and the Dreaming Cape. One family across the commerce country, each region with a sound of its own.</td></tr>
+    <tr><td><b>The Ezkudon tongue</b></td><td>Jakinduria and Thekkavar; the Golden Coast. One tongue with deep dialects, meeting the Lautaran on Azkataria's coffee-house floor.</td></tr>
+    <tr><td><b>The tongues of the south-western sands</b></td><td>Hareaveldi; the Lost Kingdom, whose form is the oldest.</td></tr>
+    <tr><td><b>The whale-tongues</b></td><td>Galdua Jendea and Valreka; the River Duchies, a sister.</td></tr>
+    <tr><td><b>The mountain tongues of Sumendar</b></td><td>Tahu Tangata; Haraour Eliza; the Red Dominion; Burdineyja, on both its seas.</td></tr>
+    <tr><td><b>The Reach-tongue</b></td><td>Dragon's Reach. Kin to nothing on Talan: the Dragons came from beyond the world.</td></tr>
+    <tr><td><b>The clan tongues</b></td><td>Villtur, where grass, snow and jungle-edge clans each sound their own; Veidrath's common speech; Ardo Beroa; Fenurra. The largest family the Empire never ruled.</td></tr>
+    <tr><td><b>The northern tongues</b></td><td>Baerfrost; Haizetsua; Haldmark; Fellibylur; Haizava.</td></tr>
+    <tr><td><b>The Myrkonan tongues</b></td><td>Ilun Tasun; Itzasoa; Izarelai; Three Pines; Tvisol.</td></tr>
+    <tr><td><b>The island tongues of Askamira</b></td><td>Maitagarri; Basamortua; Dea Elurra. The island's own people, there before Frae City.</td></tr>
+    <tr><td><b>Tongues of their own</b></td><td>The Anadi and the Vanara of the Basogur; the Order of Law.</td></tr>
+    <tr><td><b>Talanese at home</b></td><td>Brauogi's reclaimed ground and Lurrath; the Emerald Isles; Rika Tikur; No Man's Land; Eldara; Frae City.</td></tr>
+    <tr><td><b>The Court Tongue, still spoken</b></td><td>Sugeiturri; the druid tribes of the Basogur.</td></tr>
+  </table>
+
+  <div class="prose">
+    <p>The Wildreach speaks in a way no family claims, touched by the Feyworld. Each god-city speaks its host region's tongue and keeps a naming of its own, and Hringseyja is split along the Quietline, Lautaran on one half and Legean on the other.</p>
+    <p><b>What every tongue carries.</b> Every tongue carries words lent by its neighbours and its trade. Everywhere the Golden Empire ruled, the old tongue also carries the Empire's own words, Talanese and Imperial, in its names and trades, deepest where the Empire held longest. Never-held ground carries the least, in Ehizahar, the Basogur, Baerfrost and Zuzental's far east, and a traveller with an ear can hear whether a place was ever Imperial.</p>
+    <p>The strangest entry on the family map is in that far east. The Thousand Kingdom, which the Empire did not hold at its height, speaks the living tongue nearest to Imperial Dwarvish, and its legal Talanese is the closest of all the dialects to the Imperial original. The chronicles leave it unexplained.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Empire's Cradle</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to the Lower Single Digits</div>
+      <b>The Empire began on the Emerald Isles.</b> The record says it rose from the southern heartlands, and for most of its life it did rule from there; it was born elsewhere.<br><br>
+      <b>The cradle.</b> The Isle dwarves, who reached the Emerald Isles in the Elden or Gods' Era, founded the Empire on the islands. The Emperor's Stillpool on the southern foothills of the imperial heartland is on <b>the Southern Isle</b>, the island the modern kingdom calls its founding bough. The Isle dwarves took <b>the Thousand first and fully</b>, laying their tongue over its native inner-sea speech, which is why the Thousand's tongue is a braid and its legal Talanese the nearest to the Imperial original, and <b>Kaosadaemi</b> second.<br><br>
+      <b>The throne moved south.</b> As the Empire grew, the dynasty moved its capital into Sumendar's dwarven mountains, to the mines and the southern dwarves of the Old Dwarvish line, and ruled from there for centuries. So the record remembers the Empire rising from the south, and the archives that would correct it did not survive the Dark Era's first decade. Beyond its first conquests the Empire spread by leaving local rule largely intact.<br><br>
+      <b>The cradle's mainland broke away early.</b> By the Empire's peak the Thousand had shattered into the fractious kingdoms of Zuzental's far east, the thousand polities the Old King later hammered together. The Isles stayed crown land under direct rule, and after 1321 MR they fell hardest: with no vassal to hold them, they collapsed with the Emperor and emptied. The modern Emerald Isles kingdom was refounded on the Southern Isle without knowing whose cradle it was, and its Talanese is the imperial tongue's direct daughter at its birthplace.
+    </div>
+  </div>
+
+  <div class="prose">
+    <p><b>Before the Rain.</b> Families were spoken on Talan long before the Crimson Rain: the inner-sea tongues' root, the jungle-edge tongues in the east, and an old tongue of the south-western sands, where the Storveldi Denbora rose. Scholars argue over a likeness between fragments recovered from <a href="/setting/talan/domains/lioaru/lost-kingdom.html">the Blackened Lands</a> and the speech of Hareaveldi, and the argument has never been settled.</p>
+  </div>
+
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Tongue of Tani's Killers</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Lost to the Record, Alive on the Ground</div>
+      The likeness is descent. The tongues of the south-western sands came from the Storveldi Denbora's own speech, the tongue of their homeland beneath the two old tongues they dressed themselves in. The Nagaji of Hareaveldi speak its daughter, and its oldest form survives in the Blackened Lands among those who live in the cursed land. The Storveldi tongue is lost to the chronicle record and alive on the ground.
+    </div>
+  </div>
   </div>
 
   <div class="footer">TYRNARRA · TALAN · HISTORY</div>
