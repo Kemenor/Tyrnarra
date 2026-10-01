@@ -5,7 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-01).
-- **Phase 1 (seed questions): open.**
+- **Phase 1 (seed questions): closed** (GM, 2026-10-01); the summary written into the `sumendar.md` stub at the GM's request (an early lore write, replaced by the full entry at Phase 11).
+- **Phase 2 (seeds): open.**
 
 ## Phase 0: settled facts
 
@@ -18,7 +19,11 @@
 
 ## Decisions by phase
 
-*(none yet)*
+**Phase 1, the GM's answers (2026-10-01; spitballing for seeds):**
+1. **Flow and pressure:** besides the rail and the forge country, No Man's Land's lawless people press on it; the Neck is where that pressure lands, and highway robbery may happen there.
+2. **Contradiction:** the fire that renews the land, built as a great cycle: after a great fire new things grow and the land is more fertile, and this is *the* culture for it.
+3. **Sibling:** they are the old people (of Sumendar).
+4. **Komo's faces:** Destruction and Passion, in the cycle and in indigenous dances that survived the Empire's stranglehold (it need not be that serious). An idea: **singing weapons** used in a dance during fire rituals.
 
 ## Rejected options
 
