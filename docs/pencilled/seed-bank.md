@@ -81,29 +81,20 @@ Thekkavar stands here, and the forest ring is here, so **the paper for all the b
 
 *Touches:* the forest ring around Thekkavar (open in two places; mountains on its northern edge with Jakinduria's own capital beneath them; Thekkavar alone in the open middle); Ezkudon's name, "hidden"; the Greek (Attic) tongue.
 
-## The Golden Coast (Ezkudon) · GM, 2026-10-02 (very draft)
-
-**The mirage coast, with the lenses inside it.** Heat-shimmer and Fata Morgana over the golden sand: ships at sea see towns floating above the dunes that are not there, and miss the ones that are. In the domain whose name means *hidden*, the coast hides itself, and only those who know the light find the real harbour. A people who read light well enough to see through mirages are the ones who grind **the lenses**: reading-glasses for old scholars, the great lenses of Thekkavar's stacks, telescopes, the instruments of seeing.
-
-*The map:* a dry coast of golden sand along the whole shore with orange dune-fields (the "golden" of the name); a river down from the hills past Thekkavar, with a small green grove at its mouth and a walled city in it; a few small islands offshore in the Hafra; the Wildreach's rainbow forest to the north-west and Jakinduria's ring above.
-
-*Touches:* Ezkudon's name, "hidden"; the Jakinduria entry above (the coast is the paper's way out, with tea, ink and fibre coming in); the Greek tongue (a Doric or Ionic drift). *Sameness to watch:* Harro Distiratsua sells fitted light (lamps); lenses are a different craft, kin to it. *Set aside:* growing tea here (the coast is dry; Haizetsua owns tea as an export), leaf-merchants, copyists, an ink coast.
-
-## Unplaced: the painting culture · GM, 2026-10-02 (wildshot)
+## Hareaveldi (Lioaru) · GM, 2026-10-02: the painting culture
 
 A culture centred on painting, sketching and drawing **the in-between and the truth beyond**: to make an image of greater truth than reality. **The three faces of painting: what we show, what is real, and what is true.** Painting as art and as a matter of great importance.
 
-*Candidate homes:* **Hareaveldi** (its tongue is Persian, and the real-world Persian miniature is one of the great painting traditions; Lioaru's peoples already stand in Tani's three tenses, and three faces of an image would rhyme with them; the Nagaji "become what's next", which a painting of the truth beyond could carry); **the Golden Coast** (the mirage coast is already about what is shown, what is real and what is true in light). *Sameness to watch:* Emarrea's kitsune "keep the chosen reveal" (what a kitsune shows you is what she means to show).
+*Touches:* its tongue is Persian, and the real-world Persian miniature is one of the great painting traditions; Lioaru's peoples already stand in Tani's three tenses, and three faces of an image would rhyme with them; the Nagaji "become what's next", which a painting of the truth beyond could carry. *Sameness to watch:* Emarrea's kitsune "keep the chosen reveal" (what a kitsune shows you is what she means to show).
 
-## Unplaced: the golden rain · GM, 2026-10-02 (wildshot)
+## The Lost Isle (Lioaru) · GM, 2026-10-02: the golden and silver rain
 
-Rain that is more than water: **a streak of falling gold** the locals capture, an essence unlike anything else, to be used, turned and carried on.
+Rain that is more than water: **streaks of falling gold, and of silver**, the locals capture, an essence unlike anything else, to be used, turned and carried on.
 
-*Candidate homes:* **the Lost Isle** (blank; offshore from the Lost Kingdom, where Tani died); **the Golden Coast** (the name; on a dry coast every rain is precious). *Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood. A golden rain sits right beside it, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart.
+*Touches:* offshore from the Lost Kingdom, where Tani died; the Lost Isle is otherwise blank. The map shows it black, for no reason in canon: repainting it is queued in `map-todo.md`. *Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood. A golden rain sits right beside it, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart.
 
-## Unplaced: the great beasts · GM, 2026-10-02 (wildshot)
+## The Basogur Jungle (rework): the Vanara's great beasts · GM, 2026-10-02
 
-Every town, village and city has **a great beast**. It grows in size with the population it cares for, and they care for it. **A beast's child means part of the town leaving to settle a new one; a beast's death means the town is abandoned.**
+Placed with **the Vanara of the Basogur** (GM): their structure was never truly defined beyond the guide-clans of the road. Every Vanara town and village has **a great beast**. It grows in size with the population it cares for, and they care for it. **A beast's child means part of the town leaving to settle a new one; a beast's death means the town is abandoned.**
 
-*Sameness to watch, closely:* **Valreka** already has a city built on great beasts, where a house is its whale, a calf founds a cadet house, and a whale's death means the house falls and its people scatter (`lioaru.md`). The great beasts differ (the beast grows with its people and carries no town on its back), but the shape is close, so the home should be far from Lioaru and the page should make the difference plain. *Candidate homes:* none of the blank regions suits (both lie in Lioaru, beside Valreka); a later rework of a built region, or a place off the continent.
-
+*Sameness to watch, closely:* **Valreka** already has a city built on great beasts, where a house is its whale, a calf founds a cadet house, and a whale's death means the house falls and its people scatter (`lioaru.md`). The great beasts differ (the beast grows with its people and carries no town on its back), but the shape is close, and the page should make the difference plain; the Basogur lies far from Lioaru. *Touches:* `nashavel/basogur.md` (the Vanara "ride the change"; clans guide their own stretches and hand parties on; the ground moves overnight; the Marutar and Kapisar named; *Still open*: more Vanara clans by name). A built region, so this lands as a rework through the workflow.
