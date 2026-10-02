@@ -189,6 +189,11 @@ Pace as stories want them. Rolling work.
 **Open.** What the Order's country makes and sells (farm country and heath, the Drukha port, the Middle Isle ferry trade, the pilgrim traffic on the forest road); the three tests on the Trimpon, the Desi, and the Seneschals.
 **Where.** `lore/geography/zuzental/order-of-law.md`.
 
+### [Tahu Tangata] Post-build texture
+**Why.** Built 2026-10-02 (`lore/geography/sumendar/tahu-tangata.md`); its *Still open* list.
+**Open.** Puahi's growing time and the number of kapa; the bay landing by name; the districts by name; the Huipapa in detail (its chairs, its sessions); the robbers of the Neck by name; Tihiwera's wild stands; the Valreka genealogies seen from Valreka's side.
+**Where.** `lore/geography/sumendar/tahu-tangata.md`; `lore/geography/lioaru.md` (Valreka).
+
 ### [No Man's Land] Workflow backfill: youth and a Popular Belief
 **Why.** Audit of 2026-09-30: the build has children's fire-names but no coming-of-age or sanctioned transgression, and the page carries no amber ◈ Popular Belief box (the Apprentice folk-saying sits in the prose).
 **Open.** **Youth:** how a young Noman comes of age in a cinder, and what the young do that the cinder pretends not to see. **◈ Popular Belief:** a folk-tale box for the page (candidates: the Apprentice at the Fire; what the rushers say about bindstone; the Cold Furnace at night).

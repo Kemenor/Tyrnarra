@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, Tahu Tangata, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar), Lost Isle, River Duchies, Lost Kingdom (ruined capital, never named), Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -31,6 +31,8 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 - **Star Island capital**: its capital icon has no city name yet; name it at the Star Island build (the check accepts the region label on the icon as a name, as for Rika Tikur, so it no longer flags this).
 
 ## Backlog for the next map edit
+
+- **Ahika, Tihiwera** (Tahu Tangata, Sumendar; named at the 2026-10-02 build). Label the capital icon at the centre of the plain (~3134, 5766) **Ahika** (the rail maps' **Garnerstow**). Label the pale spire on the southern edge by Emarrea (~3360, 5900) **Tihiwera**.
 
 - **Portoferma, the Sickwell** (Namur Republic, Zuzental; named at the 2026-09-30 build). Label the capital icon at the river-mouth on the coast (~5550, 4860) **Portoferma**; add or label **the Sickwell**, the Blight-Seer's sealed gate, in the south-western hills (the small mountain group near the coast).
 

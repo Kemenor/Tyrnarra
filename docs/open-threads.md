@@ -111,7 +111,7 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **Myrkono:** Myrria · Ilun Tasun · Itzasoa · Izarelai · Three Pines
 - **Floteyn:** Uravel · Balatur Erui · Floating Isles (the Nation Afloat as one register, or one per island) · Balaena · Breidey
 - **Brauogi:** Lurrath · Sugeiturri · Haldmark · Greenward · Tvisol · Baratalda · Hirubaso · Soul Tree
-- **Sumendar:** Eldara · Order of Steam (Old Dwarvish is named as a tongue; the register is unwritten) · Dragon's Reach · No Man's Land (**naming scheme done 2026-09-29**, `geography/sumendar/no-mans-land.md`; its local tongue still open)
+- **Sumendar:** Eldara · Order of Steam (Old Dwarvish is named as a tongue; the register is unwritten) · Dragon's Reach · No Man's Land (**naming scheme done 2026-09-29**, `geography/sumendar/no-mans-land.md`; its local tongue still open) · Tahu Tangata (**naming scheme and local tongue done 2026-10-02**: Reahi, the Sumendar family's core; `geography/sumendar/tahu-tangata.md`)
 - **Egulon:** Ljosarn · Harro Distiratsua · Lua Lasai (the last two already earmarked to the Iberian family in *[Egulon] Regional naming register pass*)
 - **Ezkudon:** Thekkavar
 - **Askamira:** Frae City
@@ -174,7 +174,7 @@ Total devil-claimed: 16 (the six seated devils) + 23 (the eight open lines, penc
 - **The rest of the trade-house roster** and the named districts of the berth-rich core (beyond Goldmoor and the Gaps) are unwritten; coin as stories need them.
 - **The OoS freight-factor quarter's name**, named factors, named Board figures, and a current Chair.
 - **House Goldmoor's reckoning** (GM-tier): which signs the lien is maturing, and what the house does when it learns the price.
-- **Tahu Tangata** (Sumendar), the bay's south-west coast neighbour, remains its own open stub (see the sub-region roster below).
+- **Tahu Tangata** (Sumendar), the bay's south-west coast neighbour, is built (2026-10-02; `lore/geography/sumendar/tahu-tangata.md`): it leaves the water to others, and its bay landing is worked by Cape and Rika Tikur boats.
 **Where.** [lore/geography/lautara.md](../lore/geography/lautara.md), *Rika Tikur* (including ⚿ GM Secret); [lore/glossary.md](../lore/glossary.md), *Lautara sub-regions → Rika Tikur* (the Company, berths, the Board, the Exchange, the Gaps, House Goldmoor, the Gilded Talon); [lore/ancestries.md](../lore/ancestries.md), *Dwarf*; [lore/geography/bolverk.md](../lore/geography/bolverk.md), *Vice Demons → Nirfel cult-seat*; HTML published at `/setting/talan/domains/lautara/rika-tikur/rika-tikur.html`.
 
 ### [Brauogi] Sugeiturri: post-build reconciles
@@ -255,7 +255,7 @@ Items where the world has decided *what* but not *much*: placements and structur
 **Concrete starter list** (ordered roughly by story-leverage, grouped by domain where natural):
 - **The Red Dominion** (Sumendar). *To be defined in the future* (stub dropped, GM 2026-09-28).
 - **Haraour Eliza** (Sumendar). *To be defined in the future* (stub dropped, GM 2026-09-28). Name: Basque *eliza* (church). **Goblin heartland** (earmarked 2026-09-29); see *Kobold + Goblin heartlands* below.
-- **Tahu Tangata** (Sumendar). *To be defined in the future* (stub dropped, GM 2026-09-28). Old name, meaning partially lost. Built neighbours place it on the south-west arc of the Order of Steam bay, beside Rika Tikur, the Dreaming Cape and Emarrea, with the Sumendar rail line through it.
+- ~~**Tahu Tangata** (Sumendar)~~ **Built (2026-10-02)**: the old people who renew their land with fire; each field's own clock, the reading by a neighbouring house, the puahi fire-plant and the burn-night, the kapa dancing the line with the singing purehua; the diarchy of the Tahu (the ground) and the Kaiahi (the fire) at the Huipapa in Ahika (Garnerstow); slowgold and Eldara's grain; the Neck as the live tension. Full canon: `lore/geography/sumendar/tahu-tangata.md`; the build record `docs/pencilled/tahu-tangata.md`.
 - ~~**No Man's Land** (Sumendar)~~ **Built (2026-09-29)**: the ungoverned country around Eldara; the moving fire of ore-strikes, cinders, kindlings and captains, the Apprentice's Fire, the Cold Furnace and the bindstone rush. Full canon: `lore/geography/sumendar/no-mans-land.md`.
 - ~~**Namur Republic** (Zuzental)~~ **Built (2026-09-30)**: the sworn Republic and its Dictator by oath, the Oath-Day and the Long Walk, the Blight-Seer's Sickwell in the old southern mines (moved from the Wildreach), year eight. Full canon: `lore/geography/zuzental/namur-republic.md`; the traveller's journal `namur-journal.md`; options set aside in `docs/pencilled/namur-republic.md`.
 - ~~**Order of Law** (Zuzental)~~ **Built (2026-09-29)**: the contemplative order of the Court of One; the Ankerhold in Kyrrskog, the sundu and the ever-knot, the found Trimpon, the Desi and Seneschals at Drukha. Full canon: `lore/geography/zuzental/order-of-law.md`.
