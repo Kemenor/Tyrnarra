@@ -63,7 +63,7 @@ Everyone sees the stars above; only here do they **twinkle from below as well**,
 **The land of music** becomes Askamira, the singing island, honed (GM): **in each of the three polities a different thing sings, and in all three the people work with the song**, singing with it and answering it, musical in their own facets. One indigenous people in three sister tongues (the Dravidian family).
 - **Dea Elurra, the ice: the land sings.** The ice itself sings as it shifts and cracks (real frozen lakes make a deep, eerie song).
 - **Basamortua, the desert: objects sing.** For example **crystals in the sand** that sing. (Replaces the earlier booming dunes, where the sand itself sang.)
-- **Maitagarri, the forest: the animals sing.** The forest's creatures sing, and the people sing with them. *To confirm:* the earlier seed, **bard-led, music as law** (cases settled and the crown held by song; its name means "lovable", suiting a crown that goes to the best-loved voice), as the way Maitagarri's people work with the song, or set aside.
+- **Maitagarri, the forest: the animals sing.** The forest's creatures sing, and the people sing with them. **Bard-led, music as law** (GM, kept): this is how Maitagarri's people work with the song; cases are settled and the crown held by song (its name means "lovable", suiting a crown that goes to the best-loved voice).
 
 So the land, the things in it, and the creatures of it each sing, and the people of all three answer.
 
