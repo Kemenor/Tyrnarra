@@ -32,7 +32,7 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 
 ## Backlog for the next map edit
 
-- **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground (its build, the golden and silver rain, is in `docs/pencilled/seed-bank.md`).
+- **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground with **three volcanic peaks**, each with a crater lake, and **a port** on the coast (the seed, the three rains, is in `docs/pencilled/seed-bank.md`; the coast the port faces is open until the build).
 
 - **Ahika, Tihiwera** (Tahu Tangata, Sumendar; named at the 2026-10-02 build). Label the capital icon at the centre of the plain (~3134, 5766) **Ahika** (the rail maps' **Garnerstow**). Label the pale spire on the southern edge by Emarrea (~3360, 5900) **Tihiwera**.
 

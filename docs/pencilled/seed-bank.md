@@ -87,11 +87,15 @@ A culture centred on painting, sketching and drawing **the in-between and the tr
 
 *Touches:* its tongue is Persian, and the real-world Persian miniature is one of the great painting traditions; Lioaru's peoples already stand in Tani's three tenses, and three faces of an image would rhyme with them; the Nagaji "become what's next", which a painting of the truth beyond could carry. *Sameness to watch:* Emarrea's kitsune "keep the chosen reveal" (what a kitsune shows you is what she means to show).
 
-## The Lost Isle (Lioaru) · GM, 2026-10-02: the golden and silver rain
+## The Lost Isle (Lioaru) · GM, 2026-10-02: the three rains
 
-Rain that is more than water: **streaks of falling gold, and of silver**, the locals capture, an essence unlike anything else, to be used, turned and carried on.
+**An ordinary port city** where every ship arrives, and from it **three roads** run inland, each to **its own mountain**: three old volcanoes, each holding **a crater lake** in its caldera, and around each lake **a town or city**. **One basin rains gold, one rains silver, one rains starlight itself.** When it rains, the streets run gold, silver or star. The locals capture it: an essence unlike anything else, used, turned and carried on, and it leaves the island through the port.
 
-*Touches:* offshore from the Lost Kingdom, where Tani died; the Lost Isle is otherwise blank. The map shows it black, for no reason in canon: repainting it is queued in `map-todo.md`. *Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood. A golden rain sits right beside it, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart.
+*Shape:* the island is about 130 × 120 miles, near round, ~11,900 sq mi (roughly Belgium), enough for the port on the coast and three massifs a few days' road apart. The volcanoes are the physical reading (GM): three small, deep, near-round calderas, each its own world. The port is the plain gate to the strange; the wonder is always one road further on.
+
+*Touches:* offshore from the Lost Kingdom, where Tani died; the Lost Isle is otherwise blank. **Lioaru is time**, and the domain already stands in three tenses (the Ghoran hold what was, the Azarketi answer it now, the Nagaji become what's next): the three basins may line up with them (silver for memory, gold for the daylight now, starlight for what's next; or starlight as old light arriving late), an option for the build to take or leave. **The Azarketi** are anchored on the Lost Isle, and amphibious folk around deep crater lakes fit them.
+
+*Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood: three precious rains in the domain where Tani died, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart. **Basins:** Haraour Eliza's mountain ring and Lurrath's Eraztumen ring each close a single great basin; three small crater lakes keep this one apart. **Threes:** Askamira is three countries with one song in three forms; the Lost Isle is one island, a hub and three spokes, and the build keeps the "three of a thing" from reading as a template. **Starlight is the crowded word:** Burdineyja's stars below (light in water), Star Island's legends, Myrria's Starlight Cliffs. Streets running with liquid light sit closest to Burdineyja; the difference to hold is that Burdineyja's light is alive, and this one falls from the sky and pools. The map shows the island black, for no reason in canon: the repaint is queued in `map-todo.md`.
 
 ## The Basogur Jungle (rework): the Vanara's great beasts · GM, 2026-10-02
 
