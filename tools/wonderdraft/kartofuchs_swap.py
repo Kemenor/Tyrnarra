@@ -16,7 +16,8 @@ of one layer within CLUSTER_GAP of each other) becomes one Fuchsbau icon as big 
 cluster (by area), standing on its bottom edge, in the city's own line and wall colours with a roof
 colour added. God-cities take their own icon, found by the nearest "Divine City Labels" label;
 other cities go by BSG_KINDS. Legend icons stay one by one. --flat uses the flat 2D settlements
-(god-cities stay raised). Mooma's markers have no Fuchsbau counterpart and stay.
+(god-cities stay raised); icons already swapped into the other style switch to this one, in place
+and as big (so `cities --flat` after `cities` turns the raised ones flat, and back without it). Mooma's markers have no Fuchsbau counterpart and stay.
 
 Options: --port (KARTOFUCHS_PORT, default 7717), --map (title of the open map, default Main),
 --art (Fuchsbau's folder; default $KARTOFUCHS/art/Fuchsbau, KARTOFUCHS default
@@ -130,7 +131,13 @@ def cmd_cities(a, base):
                 name = f[:-4]
                 ours.setdefault(name.rsplit("_", 1)[0], []).append(
                     ("%s/symbols/%s/%s" % (FB, folder, name), os.path.join(a.art, "sprites", "symbols", folder, f), meta.get(name, {})))
-    bsg_file = lambda it: os.path.join(a.bsg, it["asset"].rsplit("/", 1)[1] + ".png")
+    # Settlement icons already swapped into the other style (2.5D, or 2D) change style one by one.
+    other = "%s/symbols/%s/" % (FB, "Fuchsbau_2.5D_Settlements" if a.flat else "Fuchsbau_2D_Settlements")
+    def art_file(it):
+        name = it["asset"].rsplit("/", 1)[1] + ".png"
+        if it["asset"].startswith(BSG + "/"):
+            return os.path.join(a.bsg, name)
+        return os.path.join(a.art, "sprites", "symbols", it["asset"][len(FB) + len("/symbols/"):].rsplit("/", 1)[0], name)
     gods = [(l["text"].strip().lower().replace(" ", "_"), l["x"], l["y"])
             for ly in layers(doc["layers"]) if ly["name"] == "Divine City Labels" for l in ly["items"] if l["kind"] == "label"]
     cs, legend = [], set()   # clusters of every layer; the legend's, one icon each
@@ -154,9 +161,15 @@ def cmd_cities(a, base):
         item = god.get(g) or next((kind for n, kind in BSG_KINDS if n in names), None)
         if item in ours:
             work.append((c, item))
+    for ly in layers(doc["layers"]):
+        for i in ly["items"]:
+            if i["kind"] == "symbol" and i["asset"].startswith(other):
+                item = i["asset"].rsplit("/", 1)[1].rsplit("_", 1)[0]
+                if item in ours:
+                    work.append(([i], item))
     ops, counts = [], {}
     for c, item in work:
-        boxes = [drawn(i, art_box(bsg_file(i))) for i in c]
+        boxes = [drawn(i, art_box(art_file(i))) for i in c]
         X0, Y0 = min(b[0] for b in boxes), min(b[1] for b in boxes)
         X1, Y1 = max(b[2] for b in boxes), max(b[3] for b in boxes)
         first = c[0]
@@ -165,12 +178,13 @@ def cmd_cities(a, base):
         # The cluster's area, not its width: ours are wide raised views, BSG's tall fronts.
         scale = math.sqrt(((X1 - X0) * (Y1 - Y0)) / ((bx1 - bx0) * (by1 - by0)))
         cc = first["tint"]["colors"] if first["tint"].get("mode") == "custom" else ["#000000", "#ffffff", "#000000"]
+        roof = cc[2] if first["asset"].startswith(FB + "/") and len(cc) > 2 else ROOF
         was = {k: first[k] for k in ("asset", "scale", "anchorX", "anchorY", "footprint", "tint")}
         ops.append({"op": "item.update", "id": first["id"], "set": {
             "asset": ref, "x": round((X0 + X1) / 2, 2), "y": round(Y1, 2), "scale": round(scale, 5), "rotation": 0, "mirror": False,
             "anchorX": round(W / 2 - (bx0 + bx1) / 2, 2), "anchorY": round(H / 2 - by1, 2),
             "footprint": meta.get("radius", first["footprint"]),
-            "tint": {"mode": "custom", "colors": [cc[0], cc[1], ROOF]}, "was": first.get("was") or was}})
+            "tint": {"mode": "custom", "colors": [cc[0], cc[1], roof]}, "was": first.get("was") or was}})
         if len(c) > 1:
             ops.append({"op": "item.remove", "ids": [i["id"] for i in c[1:]]})
         counts[item] = counts.get(item, 0) + 1
@@ -178,7 +192,8 @@ def cmd_cities(a, base):
                                               ", ".join("%s %d" % kv for kv in sorted(counts.items()))))
     if a.dry or not ops:
         return
-    r = api(mb, "/api/tx", {"ops": ops, "label": "City icons to Fuchsbau", "origin": "script"})
+    label = "City icons to Fuchsbau (%s)" % ("2D" if a.flat else "2.5D")
+    r = api(mb, "/api/tx", {"ops": ops, "label": label, "origin": "script"})
     print("done (map version %s): one undo step in Kartofuchs" % r.get("version"))
 
 

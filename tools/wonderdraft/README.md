@@ -55,7 +55,8 @@ python3 tools/wonderdraft/kartofuchs_swap.py cities [--dry]    # the open Main's
 
 Import Main with "Swap the art with: Tyrnarra" (or Create ▸ Swap art on the open map), then run
 `cities`: each city cluster becomes one Fuchsbau icon, god-cities by their Divine City label.
-`--flat` takes the 2D settlements. Each step is one undo step in Kartofuchs. Mooma's markers stay.
+`--flat` takes the 2D settlements, and switches icons already swapped to 2.5D over in place (without
+`--flat`, back). Each step is one undo step in Kartofuchs. Mooma's markers stay.
 
 ## `wdmap`: inspect and edit maps (stage 1 of the AI tooling)
 
