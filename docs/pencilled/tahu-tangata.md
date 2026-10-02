@@ -143,7 +143,7 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 
 *(none yet)*
 
-## Skill notes (for the next `sub-region-workflow` revision)
+## Skill notes (folded into `sub-region-workflow` 2026-10-02)
 
 - **Phase 3, the traveller's image: give the speaker personality** (GM, 2026-10-01). The speaker needs touches of character in the quote itself (a passion, a habit, an impulse, a way of seeing), not only a name, a year and an errand. Add to Phase 3's *What must be done*: settle one or two personality traits with the speaker and let them show in the text.
 - **Phase 9, the secret's "what it sets up"** (GM, 2026-10-02): the GM reads it as adventure-hook material the setting should not carry, and dropped it from this build. Revisit the step in the skill: keep the strength test (a secret must matter to the world) without phrasing it as story set-ups.
