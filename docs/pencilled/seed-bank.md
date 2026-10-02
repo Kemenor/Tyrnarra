@@ -58,3 +58,11 @@ Everyone sees the stars above; only here do they **twinkle from below as well**,
 
 *Touches:* the earmark (the Kobold heartland, one polity across both groups, joined by the one working Elden gate); the name *Burdineyja*, "the Iron Islands", which ore-rich water fits; the Sumendar family's tongue on both seas. *Sameness to watch:* Izarelai's lake Izaru "doubles the whole sky" by reflection; this light is living and moving, and the page should not lean on "two skies".
 
+## Unplaced: the land of music · GM, 2026-10-02 (idea only)
+
+**The land of music.**
+
+*Angles offered (none chosen):* **music as law or rule** (cases settled by song; the crown to the most-loved song), home **Maitagarri** ("lovable"; Askamira's Dravidian tongue, and the real-world Dravidian south's Carnatic tradition); **music as the land's own voice** (singing ice, wind through stone, water through caverns, the people answering it), home **Dea Elurra** (real frozen lakes sing as they crack); **music as a trade** (the conservatory country that makes the instruments and trains the musicians), home **Jakinduria** (Thekkavar's Lanterns already hold an Institute of Song).
+
+*Sameness to watch:* Haizetsua's singing cities and stormsinging; Tahu Tangata's purehua; Baratalda's harvest horns; Fenurra's Ashdrums; Wren the fey musician (`voices.md`).
+
