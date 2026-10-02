@@ -81,3 +81,11 @@ Thekkavar stands here, and the forest ring is here, so **the paper for all the b
 
 *Touches:* the forest ring around Thekkavar (open in two places; mountains on its northern edge with Jakinduria's own capital beneath them; Thekkavar alone in the open middle); Ezkudon's name, "hidden"; the Greek (Attic) tongue.
 
+## The Golden Coast (Ezkudon) · GM, 2026-10-02 (very draft)
+
+**The mirage coast, with the lenses inside it.** Heat-shimmer and Fata Morgana over the golden sand: ships at sea see towns floating above the dunes that are not there, and miss the ones that are. In the domain whose name means *hidden*, the coast hides itself, and only those who know the light find the real harbour. A people who read light well enough to see through mirages are the ones who grind **the lenses**: reading-glasses for old scholars, the great lenses of Thekkavar's stacks, telescopes, the instruments of seeing.
+
+*The map:* a dry coast of golden sand along the whole shore with orange dune-fields (the "golden" of the name); a river down from the hills past Thekkavar, with a small green grove at its mouth and a walled city in it; a few small islands offshore in the Hafra; the Wildreach's rainbow forest to the north-west and Jakinduria's ring above.
+
+*Touches:* Ezkudon's name, "hidden"; the Jakinduria entry above (the coast is the paper's way out, with tea, ink and fibre coming in); the Greek tongue (a Doric or Ionic drift). *Sameness to watch:* Harro Distiratsua sells fitted light (lamps); lenses are a different craft, kin to it. *Set aside:* growing tea here (the coast is dry; Haizetsua owns tea as an export), leaf-merchants, copyists, an ink coast.
+
