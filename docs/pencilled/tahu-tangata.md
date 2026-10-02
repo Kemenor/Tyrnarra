@@ -16,7 +16,7 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-02).
 - **Phase 10 (draft): closed** (GM, 2026-10-02; the draft at [`tahu-tangata-draft.md`](tahu-tangata-draft.md)).
 - **Phase 11 (commit lore): done** (2026-10-02). Built: `lore/geography/sumendar/tahu-tangata.md`.
-- **Phase 12 (publish): waiting for the publish signal.**
+- **Phase 12 (publish): done** (2026-10-02): `published/setting/talan/domains/sumendar/tahu-tangata/tahu-tangata.html`, generated from the lore file; wired into the sidebar, the Sumendar card, the interactive map, the transport page and the site inventory.
 
 ## Phase 0: settled facts
 
