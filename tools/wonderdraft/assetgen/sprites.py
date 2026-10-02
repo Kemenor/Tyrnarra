@@ -374,14 +374,14 @@ def cc_colour(sp, colours=CC_EXAMPLE):
     return out
 
 
-def contact_sheet(sprites, path, tint=(120, 170, 90), row_h=180, width=1600, cc=False):
+def contact_sheet(sprites, path, tint=(120, 170, 90), row_h=180, width=1600, cc=False, cc_colours=None):
     """Sprites tinted like Wonderdraft would on grassland (custom-colour ones drawn with
     example colours), in rows."""
     tiles = []
     for sp in sprites:
         sp = sp.resize((max(1, round(sp.width * row_h / sp.height)), row_h), Image.LANCZOS)
         if cc:
-            rgb = cc_colour(sp).convert("RGB")
+            rgb = cc_colour(sp, cc_colours or CC_EXAMPLE).convert("RGB")
         else:
             rgb = ImageChops.multiply(sp.convert("RGB"), Image.new("RGB", sp.size, tint))
         tile = Image.new("RGB", sp.size, tint)

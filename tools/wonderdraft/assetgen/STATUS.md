@@ -95,6 +95,10 @@ every working session.
   on the home LAN, with the tools pointed at it (`TYRNARRA_COMFY=http://127.0.0.1:<local port>`).
 - **After a wake:** the tower's session can come back under a new ID; a message queued for its
   old ID is lost, so send to the live one.
+- **Auto-shutdown:** the tower powers itself off after three empty-queue checks in a row, five
+  minutes apart (about 10-15 minutes of real idle). The short gaps between one-image jobs, or
+  between chained batches, can't trip it. Wake it again over LAN if it went down (`generate`
+  skips drawings that already exist).
 - **Engines by family:**
   - SDXL: conifers, pines, palms, bamboo, savanna, cacti, dead trees, mushrooms, and the
     line-art peaks, fells and hills.

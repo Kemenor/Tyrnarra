@@ -196,7 +196,8 @@ def cmd_build(a):
     with open(os.path.join(out, "chosen.txt"), "w") as f:
         f.write("\n".join("%s <- %s seed %d" % (name, style, seed)
                           for name, (style, seed, _, _) in zip(names, chosen)) + "\n")
-    sheet = sprites.contact_sheet(finished, os.path.join(out, "sheet.jpg"), cc=fam.get("draw") == "custom_colors")
+    sheet = sprites.contact_sheet(finished, os.path.join(out, "sheet.jpg"), cc=fam.get("draw") == "custom_colors",
+                                  cc_colours=fam.get("cc_example"))
     print("%s: %d usable, %d installed in %s; sheet %s" % (fam["name"], len(pool), len(finished), folder, sheet))
     print("  rejected: %s" % dict(Counter(r.split(": ", 1)[1].split(" (")[0] for r in rejects)))
 

@@ -394,6 +394,146 @@ FAMILIES = {
         "kind": "mountains", "size": (300, 430), "radius": 50, "offset_y": 0, "aspect": (1.0, 3.0), "fill": (0.25, 0.95),
         "pack_folder": "Fuchsbau_Pillars", "file": "pillar_{n:02d}",
     },
+    "fruit_trees": {
+        # "We need more fruit trees" (the user, 2026-10-02): orchards and gardens. At map size a fruit
+        # tree reads by its fruit's colour, so these are recolourable: the trunk drawn dark goes with
+        # the lines into colour 1, the pale foliage is colour 2, fruit or blossom colour 3.
+        "engine": "flux", "draw": "custom_colors", "canvas": (1024, 1024), "styles": ["fruit"],
+        "flux": "A single {variant}, drawn as a tree symbol for a hand-drawn fantasy map. No roots, no ground.",
+        "subject": "a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at small size",
+        "variants": ["apple tree: a round leafy crown dotted with red apples, on a short sturdy trunk",
+                     "cherry tree in full blossom: a round crown covered in pink blossoms, on a short trunk",
+                     "orange tree: a small dense round crown hung with round oranges, on a short trunk",
+                     "pear tree: a tall oval crown hung with pears, on a slim trunk",
+                     "old olive tree: a gnarled twisted trunk under a loose silvery crown with small dark olives",
+                     "plum tree: a spreading rounded crown hung with purple plums, on a short trunk"],
+        "cc_example": ((52, 36, 24), (118, 156, 84), (196, 52, 40)),   # dark trunk and lines, leaf green, fruit red
+        "kind": "trees", "size": (260, 260), "radius": 80, "offset_y": -110, "aspect": (0.7, 1.6),
+        "pack_folder": "Fuchsbau_Fruit_Trees", "file": "fruit_tree_{n:02d}",
+    },
+    "holy_trees": {
+        # "Holy or special trees, for the specific giant tree thing" (the user, 2026-10-02): one-off
+        # landmark trees, where a scaled-up conifer stood in. Canon has the Soul Tree (Brauogi: "the
+        # single massive pale tree" at its island's centre) and Vernua's great tree on the Hegandi's
+        # brow. Recolourable: the dark trunk and roots go with the lines (colour 1), the crown is
+        # colour 2 (pale for the Soul Tree, green for a giant pine), ribbons, lanterns or a shrine's
+        # roof colour 3. Kept whole (shape "icon"): a tree's ground trim would cut the roots off.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["holytree"],
+        "flux": "A single {variant}, drawn as a landmark tree symbol for a hand-drawn fantasy map, seen from the side.",
+        "subject": "a single {variant}, fantasy map symbol, bold black outlines",
+        "variants": ["colossal ancient pine towering high, a massive straight trunk and a tall layered crown",
+                     "immense ancient pale tree with a vast spreading crown and a huge gnarled trunk, its roots gripping "
+                     "a small rocky mound",
+                     "giant sacred oak with a broad billowing crown, a hollow in its thick trunk and prayer ribbons tied "
+                     "to its lower branches",
+                     "world tree: an enormous ancient tree whose crown spreads wider than it is tall, thick roots spread "
+                     "wide over the ground",
+                     "ancient towering cedar with wide flat tiers of foliage and a small shrine at its foot",
+                     "huge ancient tree with small lanterns hanging among its branches"],
+        "cc_example": ((52, 36, 24), (118, 156, 84), (196, 52, 40)),   # dark trunk and lines, crown green, accents red
+        "kind": "trees", "size": (480, 540), "radius": 140, "offset_y": -200, "aspect": (0.7, 2.0), "fill": (0.25, 0.95),
+        "pack_folder": "Fuchsbau_Holy_Trees", "file": "holy_tree_{n:02d}",
+    },
+    "named_trees": {
+        # One themed tree per named landmark, like the god-cities' icons ("Soul Tree could use one as
+        # well", the user, 2026-10-02). The Soul Tree (lore/geography/brauogi/soul-tree.md): one tree
+        # at moon-scale at the island's centre, pale at all hours, its light never quite going out,
+        # pale leaves the islanders say wink out one per passing soul. Recolourable: lines colour 1,
+        # the pale tree (bark and leaves) colour 2, the light among the leaves colour 3.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["soultree"],
+        "flux": "{variant}, drawn as a landmark tree symbol for a hand-drawn fantasy map, seen from the side.",
+        "subject": "{variant}, fantasy map symbol, bold black outlines",
+        "items": [("soul_tree", "The Soul Tree: a single immense ancient tree, wider than tall, with pale moon-white bark, "
+                                "a vast spreading crown of countless small pale leaves and soft light glowing among them, "
+                                "its great roots gripping bare rock")],
+        "per_item": 4,
+        "finish": {"CC_ACCENT_SAT": 0.2},   # pale gold light, fainter than the icons' red roofs
+        "cc_example": ((64, 64, 72), (236, 238, 242), (240, 210, 130)),   # grey lines, pale tree, gold light
+        "kind": "trees", "size": (520, 520), "radius": 150, "offset_y": -200, "aspect": (0.6, 1.6), "fill": (0.25, 0.97),
+        "pack_folder": "Fuchsbau_Named_Trees", "file": "{item}_{n}",
+    },
+    "special_sites": {
+        # One-off and shared landmarks from the lore survey the user picked (2026-10-02), each worded
+        # from its canon lines (file in the comment). Flat 2D like the 2D settlements (the user prefers 2D
+        # for sites), recolourable: lines colour 1, stone,
+        # ground and hull colour 2, fire, glow, lava, roofs or the paradise's colours colour 3.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["site"],
+        "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
+                 "no perspective and no depth, like the symbols on old maps."),
+        "subject": "{variant}, fantasy map symbol, bold black outlines",
+        "items": [
+            # sumendar.md, Dragon's Reach: the mothership broke apart in the air; pieces lie across Talan.
+            ("mothership_fragment", "huge broken fragment of a crashed alien starship half buried in the ground: curved "
+                                    "hull plates, exposed ribs and torn metal, a few glowing cracks"),
+            ("dragons_reach", "city built in and from a vast crashed alien starship hull lying on a volcanic slope: curved "
+                              "hull plates forming its walls, towers and terraces climbing the wreck, furnace glow in its openings"),
+            # myrkono.md, the Seven Wardstones: the Plain stone alone in the grass; the Temple one in ziggurats.
+            ("wardstone", "single tall monolith of dark stone standing alone on a low grassy mound, carved with bands "
+                          "like great chains, a faint glow at its heart"),
+            ("wardstone_ziggurat", "towering stepped stone ziggurat with a great carved monolith set into its summit, "
+                                   "glowing faintly"),
+            # factions.md, the Nine Dungeons: a shared sealed gate, a dead lair, and the two distinct seals.
+            ("dungeon_gate", "sealed dungeon gate: a massive stone doorway sunk into the ground, closed with great slabs "
+                             "and heavy chains, cracked earth around it"),
+            ("dead_lair", "dead dungeon lair: a dark furnace-cavern mouth in brown ridges, ringed by heaps of grey slag "
+                          "and a few small tents"),
+            ("sickwell", "sealed dungeon of pits and mine shafts under a hanging cloud of sickly miasma, ringed by a stone "
+                         "wall with small watch-fires"),
+            ("stitchery", "sealed dungeon pit in the jungle closed by a huge spider-web seal strung between tall trees"),
+            # egulon/argia-esfera.md: flames out of the bare rock, a colour-changing summit fire, a gold forest ring.
+            ("sutarri", "burning mountain: a tall bare rock mountain with hundreds of small flames standing "
+                        "out of cracks on its flanks, one great fire at its summit, a ring of forest at its foot"),
+            # ehizahar/fenurra.md: the meteor crater with the capital carved into its inner walls.
+            ("scar_of_aeris", "vast meteor crater shown as a wide low ring-wall of dark rock, a city carved in terraces "
+                              "into the far inner wall rising behind the rim, wisps of volcanic smoke and glowing lava cracks"),
+            # _continent.md, the Twin Cities: a raft-city with a sky-city hanging above it.
+            ("twin_cities", "pirate raft-city of lashed-together ships and decks floating on the water, with a second "
+                            "city of tethered airships and small floating islets hanging directly above it on long ropes"),
+            # zuzental/legea-empire.md: three sheer needles, the reading-house on the tallest.
+            ("orratzak", "group of three sheer needles of grey rock standing straight out of flat land, a small high house with a "
+                         "red roof perched on the top of the tallest"),
+            # zuzental.md, the Bridgelands: five islets joined by spanning Magitech bridges.
+            ("bridgelands", "cluster of five small rocky islets joined by long arching bridges of metal and stone with "
+                            "glowing rune-lights"),
+            # nashavel/basogur.md, the Anadi web-holds: silk floors hung between thirty trees or more.
+            ("web_hold", "village of grey silk floors and walkways hung high between many tall jungle trees, silk "
+                         "ladders down to the ground"),
+            # docs/pencilled/seed-bank.md (seed, not canon yet): Galdua Jendea's hanging cities.
+            ("hanging_city", "city hanging in the shadowed face of a rock mountain: houses on ledges and in hollows of "
+                             "the cliff, ropes and walkways, a crystal spring falling from the rock, sand dunes below"),
+            # docs/pencilled/seed-bank.md (seed, not canon yet): Haraour Eliza's old palace in the poisonous paradise.
+            ("dead_palace", "ancient overgrown palace of a forgotten dead civilisation, half swallowed by a vivid "
+                            "jungle of strange brightly coloured plants, inside a ring of mountains"),
+        ],
+        "per_item": 2,
+        "kind": "symbols", "size": (380, 340), "radius": 100, "offset_y": 0, "aspect": (0.35, 2.2), "fill": (0.25, 0.97),
+        "pack_folder": "Fuchsbau_2D_Special_Sites", "file": "{item}_{n}",
+    },
+    "holy_mountains": {
+        # "Holy mountains. Like Merkavar needs a single high peak that is considered absolutely holy"
+        # (the user, 2026-10-02). Helgafjall (lore/geography/lautara.md): a snow-capped peak rising
+        # alone from the centre of Merkavar's lake, pilgrim trails winding up its slopes, its snow
+        # never fully melting. Recolourable like the volcanoes (R ink, G rock, B snow): a greyscale
+        # mountain takes the ground's colour, so its snow would turn green on grass or blue in a lake.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["snowpeak"],
+        "flux": "A single {variant}, drawn as a landmark mountain symbol for a hand-drawn fantasy map, seen from the side.",
+        "subject": "a single {variant}, fantasy map symbol, bold black outlines",
+        "variants": ["lone sacred mountain, much taller than wide, with a snow-capped summit and a pilgrim trail winding "
+                     "up its slopes",
+                     "towering solitary peak with a sharp snowy summit and a thin zigzag pilgrim path climbing to the top",
+                     "majestic holy mountain rising alone, broad at the base, snow on its upper slopes, small cairns along "
+                     "a path up its ridge",
+                     "solitary holy peak with a long stone stairway climbing its face to a tiny shrine at the summit",
+                     "lone sacred mountain with a snow-capped double summit and a winding trail between the two tops"],
+        # FLUX paints the snow a pale blue (saturation mostly 0.06-0.33), below the icons' accent
+        # threshold for strong red roofs (0.28): from 0.14 the cap sorts into colour 3, the grey
+        # rock (up to about 0.11) stays body.
+        "finish": {"CC_ACCENT_SAT": 0.14},
+        # Shown in sheets with white snow (colour 3) instead of the icons' red roofs.
+        "cc_example": ((40, 30, 25), (168, 160, 150), (246, 248, 252)),
+        "kind": "symbols", "size": (420, 480), "radius": 120, "offset_y": 0, "aspect": (0.6, 1.8), "fill": (0.25, 0.97),
+        "pack_folder": "Fuchsbau_Holy_Mountains", "file": "holy_mountain_{n:02d}",
+    },
     "volcanoes": {
         # "Volcanic was missing" (the user, 2026-09-28). Recolourable like the icons: R ink, G rock and
         # smoke, B lava and glow, so each volcano's lava colour is picked on the map.
@@ -504,6 +644,29 @@ FLUX_STYLES = {
              "grey wash, no small leaf marks, no hatching. Simple and readable at small size. Drawn directly on a "
              "plain white background: no border around it, no shadow, nothing else in the image."),
     # Volcanoes (custom colours): lava in the accent channel, rock and smoke in the body.
+    # Fruit trees (custom colours): foliage pale, trunk dark (joins the lines), fruit and blossom coloured.
+    "fruit": ("Bold black brush-pen outlines; the foliage drawn as a few big rounded shapes left plain pale cream "
+              "with light grey shading; the trunk solid dark brown-black; the fruit or blossoms painted in flat strong "
+              "colour. Simple and readable at small size. Isolated on a plain white background, nothing else in the "
+              "image, no ground, no text."),
+    # Holy trees (custom colours): crown pale, trunk dark (joins the lines), offerings coloured.
+    "holytree": ("Bold black brush-pen outlines; the crown drawn as a few big rounded or layered shapes left plain pale "
+                 "cream with light grey shading; the trunk and roots solid dark brown-black; ribbons, lanterns or a "
+                 "shrine roof, where there are any, painted in flat red. Simple and readable at small size. Isolated on "
+                 "a plain white background, nothing else in the image, no ground, no text."),
+    # Special sites (custom colours): stone and ground pale, fire, glow and roofs the accent.
+    "site": ("Bold black ink outlines; stone, ground, metal and walls left plain cream-white or pale grey with light "
+             "shading; fire, glow, lava, roofs and bright plants painted in flat red; no flags or banners. Simple, "
+             "clean and readable at small size. Isolated on a plain white background, nothing else in the image, no text."),
+    # The Soul Tree (custom colours): the whole tree pale, its light the accent.
+    "soultree": ("Bold black brush-pen outlines; the whole tree, bark and leaves, left plain pale white-grey with light "
+                 "shading; the soft light glowing among the leaves painted in flat pale gold. Simple and readable at "
+                 "small size. Isolated on a plain white background, nothing else in the image, no ground, no text."),
+    # Holy mountains (custom colours): the snow in the accent channel, so it can stay white anywhere.
+    "snowpeak": ("Bold black ink outlines; rock left plain pale grey with light shading; the snow on the summit "
+                 "painted in flat medium blue; paths, stairs and cairns drawn in thin black lines; no flags or "
+                 "banners, no clouds, no water. Simple, clean and readable at small size. Isolated on a plain white "
+                 "background, nothing else in the image, no ground, no text."),
     "lava": ("Bold black ink outlines; rock left plain pale grey with light shading; lava, glow and fire painted in "
              "flat red-orange; smoke plain light grey. Simple, clean and readable at small size. Isolated on a plain "
              "white background, nothing else in the image, no ground, no text."),

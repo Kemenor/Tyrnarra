@@ -463,6 +463,22 @@ they did, for reading the results log:
     slim pillar). The square blocks of the offline render do not show: its soft-alpha handling.
   - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
     this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
+- **Holy mountains and more** (2026-10-02; the user: "holy mountains. Like Merkavar needs a single
+  high peak that is considered absolutely holy", then fruit trees, holy and giant trees, the Soul
+  Tree, and special sites from a lore survey):
+  - `holy_mountains` (FLUX, style `snowpeak`, recolourable: lines, rock, snow): lone snow-capped
+    peaks with zigzag pilgrim stairs, double summits, a few with a summit shrine; Helgafjall's
+    look first. FLUX paints the snow pale blue (saturation mostly 0.06-0.33), under the icons'
+    accent threshold 0.28: `CC_ACCENT_SAT` 0.14 for this family sorts it into colour 3 while
+    the grey rock stays body. 25 of 25 installed in `Fuchsbau_Holy_Mountains`.
+  - Queued the same night: `fruit_trees` (apple, cherry blossom, orange, pear, olive, plum;
+    recolourable, fruit in colour 3), `holy_trees` (giant pine, the pale tree, sacred oak with
+    ribbons, world tree, cedar with shrine, lantern tree), `named_trees` (the Soul Tree),
+    `special_sites` (flat 2D, the user's pick: mothership fragment, Dragon's Reach, wardstones,
+    dungeon gate, dead lair, Sickwell, Stitchery, Sutarri, Scar of Aeris, Twin Cities, Orratzak,
+    Bridgelands, web-hold, and from the seed bank the hanging city and the dead palace).
+  - The tower now powers off after three empty-queue checks five minutes apart; batches are
+    chained with a 2 s waiter so the queue never sits empty between them.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
   the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
   swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
