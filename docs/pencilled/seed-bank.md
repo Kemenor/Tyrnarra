@@ -14,6 +14,8 @@ The heart of the region is **an old palace**, not a church: a forgotten, dead ci
 
 *Touches:* the Sumendar family's one seafaring branch; the west coast with the volcano cluster; Burdineyja's Hafra islands offshore.
 
+*Added (GM, 2026-10-02):* **heat vents and gases** make it special: something built on the volcanic country's vents and the gases they breathe. *Sameness to watch:* Fenurra already has sulfur vents and fumes (the Sulfur Vents of Vehl, the crater's poisonous air), and Eldara and the Order of Steam work volcanic heat; the Dominion's use of its vents and gases has to be its own.
+
 ## The Lost Kingdom (Lioaru) · GM, 2026-10-02
 
 Tani's death ruined the earth and left a cursed blight on the ground. After centuries **the dead rose**: new souls in old bodies, or old souls in new bodies; the dead and the warped building **a new society** in lands still scarred by what happened. Few come here, and fewer leave, and those only in disguise. Some have **flashes of memory** of the kingdom that once rose here: memories of their souls? of their bodies? or **of the ground**, stuck in time by a goddess's death. Bodies and souls stained by a curse not of their making but their burden, living among the dangers the cursed ground spawns.
@@ -45,4 +47,15 @@ Houses are not built on steady ground, for there is no steady ground: the sand i
 *Touches:* canon's sand "would swallow anything built on it" (`lioaru.md`, the reason Valreka took to the whales): the hanging cities are the other answer to the same ground, the people who chose the rock instead of the herd. The region's name is disputed, "Place of Many Waters" or "Place of the Lost People", and the canon water-map of "hidden seeps and sand-springs" (kept by Valreka's Azarketi water-bearers) is already there for the crystal springs. **Valreka's one need that never eases is water** (canon), so a city with springs is the herd's natural halt and partner. Valreka's register is the Berber family the region shares.
 
 *Open:* gliding usually rides the day's rising heat, and here the sun is the danger; when the caravans fly (dawn, dusk, the cooler months, or a craft that needs no thermals) is a question for the build. The earlier candidate homes (Haraour Eliza above the poisonous paradise; the Red Dominion above the gas-filled valleys) are set aside.
+
+## Unplaced: the stars below · GM, 2026-10-02
+
+Everyone sees the stars above; only here do they **twinkle from below as well**. The waters are ore- and mineral-rich (some say meteorites landed here), and they are filled with **luminous creatures and plankton, or plants, that glow at night**, a twinkling, ever-changing night sky below.
+
+*Candidate homes (none chosen):*
+- **Star Island**: the glowing water around a star-shaped island is exactly what would start the rumour that a star fell there; "some say meteorites landed here" is the island's own legend. The truth stays mundane and beautiful: life thriving on mineral-rich water.
+- **Burdineyja**: its name means *the Iron Islands*; ore-rich water around them fits the name.
+- **The Lost Isle**: nothing defined yet, so it could carry it whole.
+
+*Sameness to watch:* Izarelai's lake Izaru already "doubles the whole sky", two heavens by reflection (`myrkono.md`). This one glows with its own living light and moves, so the image differs; the page should let it.
 
