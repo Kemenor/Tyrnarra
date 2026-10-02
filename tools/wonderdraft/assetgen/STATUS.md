@@ -1,33 +1,35 @@
 # assetgen: status and handoff
 
-Where the Tyrnarra art pack stands, what the user has decided, and how to pick the work up in a
+Where the art pack (made for Tyrnarra, shipped with Kartofuchs as Fuchsbau) stands, what the user has decided, and how to pick the work up in a
 new session on either machine. The full record (every round, lesson and number) is
 [README.md](README.md); this file is the short version to read first. Update it at the end of
 every working session.
 
-## State (2026-09-30)
+## State (2026-10-02)
 
-- **Pack:** 24 folders, 746 sprites, installed in `~/.local/share/Wonderdraft/assets/Tyrnarra`
-  and mirrored to Proton Drive (`assetgen.sh sync` after every install, which also carries the
-  work files). Counts per folder: the families table in the README.
+- **Pack:** 24 folders, 746 sprites, in Kartofuchs as its own pack Fuchsbau (`art/Fuchsbau` in
+  the Kartofuchs checkout `$KARTOFUCHS`). `build` installs there since 2026-10-02; commit the art
+  in Kartofuchs after a build. The Wonderdraft-installed "Tyrnarra" copy and its Proton mirror
+  are gone (identical to Fuchsbau when trashed). Counts per folder: the families table in the README.
 - **Trees:** conifers, pines, broadleaves, willows, jungle, palms, bamboo, savanna, cacti, dead
   trees, giant mushrooms, swamp trees, shrubs.
 - **Terrain:** peaks, fells, hills, dunes, mesas, karst pillars (for Main's Tang Dynasty mountains);
   volcanoes (recolourable, active and extinct).
 - **Icons** (recolourable, R ink / G body / B roofs and accents):
-  - `Tyrnarra_2.5D_Settlements`: 18 kinds, raised view.
-  - `Tyrnarra_2D_Settlements`: the same kinds, flat and straight-on, two per kind.
-  - `Tyrnarra_2.5D_God_Cities`: two per god-city.
-  - `Tyrnarra_2.5D_Landmarks`: standing stones, obelisk, lighthouse, shrine, statue, bridge,
+  - `Fuchsbau_2.5D_Settlements`: 18 kinds, raised view.
+  - `Fuchsbau_2D_Settlements`: the same kinds, flat and straight-on, two per kind.
+  - `Fuchsbau_2.5D_God_Cities`: two per god-city.
+  - `Fuchsbau_2.5D_Landmarks`: standing stones, obelisk, lighthouse, shrine, statue, bridge,
     beacon, portal arch.
 - **Last real Wonderdraft test** (the old fullswap, 2026-09-30): every region read close to the
   built-ins, the Air Monastery's karst ring included (numbers in the README results log).
 - **Trimmed to generation (2026-09-30, the user):** the Wonderdraft swap and test tools (packswap,
   fullswap, the test command, built-in reference renders) are gone. The pack is tried on a real
-  map in Kartofuchs: import `Main.wonderdraft_map` with the "Tyrnarra" art mapping (Map ▸ Import,
-  or Map ▸ Swap art on an open map). The mapping and the measured built-in sizes live in
-  Kartofuchs' data folder (`mappings/Tyrnarra.json`, `art-sizes.json`); change the mapping in
-  Kartofuchs' Swap art dialog. Never modify `Main.wonderdraft_map` unless the user asks.
+  map in Kartofuchs: import `Main.wonderdraft_map` with the "Fuchsbau" art mapping (Map ▸ Import,
+  or Map ▸ Swap art on an open map). That mapping comes with Kartofuchs (`server/artmap.ts`,
+  `BASE_RULES`) and covers only Wonderdraft's built-in trees and mountains; other packs' art
+  imports as it is. The measured built-in sizes live in Kartofuchs' data folder
+  (`art-sizes.json`). Never modify `Main.wonderdraft_map` unless the user asks.
 
 ## Decisions (the user's)
 
@@ -46,8 +48,8 @@ every working session.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch
     needs SDXL.
 - **Shared with Kartofuchs (2026-10-01, the user):** the whole pack, god cities included, ships with
-  Kartofuchs as its base pack "Fuchsbau" (art/Fuchsbau, `Tyrnarra_` taken out of the names). After
-  installing a new round, run `fuchsbau <kartofuchs checkout>` and commit there.
+  Kartofuchs as its base pack "Fuchsbau" (art/Fuchsbau). Since 2026-10-02 (the user) it lives only
+  there: `build` installs into it, and the Wonderdraft "Tyrnarra" pack was deleted.
 - **Known leftovers:** the flat 2D camps still show domed houses behind the tents.
 
 ## Where things live
@@ -56,15 +58,16 @@ every working session.
 |---|---|---|---|
 | Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | | yes |
 | Work folder: raw drawings, rounds, sheets, galleries (about 2.6 GB) | `~/.local/share/wdmap/assetgen/` | `assetgen-work/work/` | no |
-| Installed pack | `~/.local/share/Wonderdraft/assets/Tyrnarra` | `Wonderdraft/assets/Tyrnarra` | no |
+| The pack (Fuchsbau) | `$KARTOFUCHS/art/Fuchsbau` | | yes, in Kartofuchs |
 | Main | | `Main.wonderdraft_map` | no |
-| The "Tyrnarra" art mapping and measured built-in sizes | Kartofuchs' data folder (`~/.local/share/kartofuchs/`) | | no |
+| Measured built-in sizes (`art-sizes.json`) | Kartofuchs' data folder (`~/.local/share/kartofuchs/`) | | no |
 | ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | | never |
 
 **Moving between machines** (`assetgen.sh sync`):
-- **Starting a session:** run `sync --pull`. It copies the work folder and the installed pack
-  from Proton Drive into the local paths. It only adds and updates.
-- **Ending a session:** run `sync`. It mirrors this machine's copies into Proton Drive, deleting
+- **Starting a session:** `git pull` in Kartofuchs (the pack), then `sync --pull`. It copies the
+  work folder from Proton Drive into the local path. It only adds and updates.
+- **Ending a session:** commit and push the pack in Kartofuchs, then run `sync`. It mirrors this
+  machine's work folder into Proton Drive, deleting
   there whatever is gone here.
 - **One machine at a time:** push only after pulling the other machine's work, or its new
   drawings are deleted.
@@ -73,7 +76,7 @@ every working session.
   A push there is a local copy, and the upload follows.
 - **Tower:** its Proton Drive is an rclone mount that needs a fresh 2FA code after each reboot.
 
-**Working from the tower:** after `git pull` and `sync --pull`, a session there can generate
+**Working from the tower:** after `git pull` (here and in Kartofuchs) and `sync --pull`, a session there can generate
 (ComfyUI runs locally: `TYRNARRA_COMFY=http://127.0.0.1:8188`), build and make galleries.
 
 ## The tower's ComfyUI
@@ -106,8 +109,7 @@ checkout's venv).
 generate <fam> --seeds 1-40 [--style S]      # drawings from ComfyUI into the work folder
 build <fam> --round N [--no-install] [--seeds ...] [--set KEY=V]
 gallery [families]                           # numbered review sheets per family, by variant
-sync [--pull]                                # work files and pack to (from) Proton Drive
-fuchsbau <kartofuchs checkout>               # the pack into Kartofuchs as its own base pack (art/Fuchsbau)
+sync [--pull]                                # work files to (from) Proton Drive
 ```
 
 ## Rules for this repo

@@ -1,4 +1,4 @@
-"""Review sheets of the installed Tyrnarra pack (assetgen.sh gallery [FAMILY...]).
+"""Review sheets of the installed pack, Fuchsbau (assetgen.sh gallery [FAMILY...]).
 
 One JPG per family in ~/.local/share/wdmap/assetgen/gallery/: its sprites grouped by the variant
 (or icon item) each was drawn as, each labelled with its file number, so a review can name

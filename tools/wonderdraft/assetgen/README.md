@@ -1,4 +1,4 @@
-# assetgen: the Tyrnarra art pack for Wonderdraft
+# assetgen: the art pack made for Tyrnarra, shipped with Kartofuchs as Fuchsbau
 
 **Picking this up? Read [STATUS.md](STATUS.md) first**: the current state, the user's decisions,
 what lives on which machine and how to work from the tower.
@@ -7,15 +7,17 @@ Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, 
 variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
 any tool of our own) and the bought packs that stood in for it. The art is made in Wonderdraft's
 own pack format, so it works in Wonderdraft and in Kartofuchs, which reads the same asset folder.
-The pack is tried on the real map in Kartofuchs: import `Main.wonderdraft_map` with the
-"Tyrnarra" art mapping (see "Reviewing"). This tool only makes the art (trimmed to generation
+Since 2026-10-02 `build` installs straight into Fuchsbau, Kartofuchs' own pack (`art/Fuchsbau` in
+a Kartofuchs checkout); the Wonderdraft-installed "Tyrnarra" copy is gone. The pack is tried on the
+real map in Kartofuchs: import `Main.wonderdraft_map` with the "Fuchsbau" art mapping, which comes
+with Kartofuchs (see "Reviewing"). This tool only makes the art (trimmed to generation
 on 2026-09-30; the Wonderdraft swap and test tools it had are summed up under "Earlier tools").
 
 ```
 assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
-assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into the Tyrnarra pack
+assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into Fuchsbau
 assetgen.sh gallery [peaks settlements ...]       # review sheets of the installed pack, by variant, numbered
-assetgen.sh sync [--pull]                         # work files and pack to (from) Proton Drive
+assetgen.sh sync [--pull]                         # work files to (from) Proton Drive
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and
@@ -28,7 +30,8 @@ instead, and `build` keeps a copy of the round's sprites there (`round-N/sprites
 rounds can be compared with it). Older rounds also hold the `compare-*.jpg` sheets of the
 removed test tool.
 
-The installed pack: `~/.local/share/Wonderdraft/assets/Tyrnarra/sprites/<kind>/<Folder>/`.
+The installed pack: `<Kartofuchs checkout>/art/Fuchsbau/sprites/<kind>/<Folder>/`, the checkout
+`$KARTOFUCHS` (default `~/Documents/fuchs/kartofuchs`). Commit the art there after a build.
 
 ## Setup
 
@@ -158,12 +161,13 @@ What worked and what did not, in the order we found it (2026-09-26):
   pack on these ("conifer 15 looks empty"). The variant comes from the prompt saved with the
   raw image, matched to the family's variant list by shared words, so older wordings still
   group right. Takes seconds.
-- **On the real map, in Kartofuchs:** import `Main.wonderdraft_map` with the "Tyrnarra" art
+- **On the real map, in Kartofuchs:** import `Main.wonderdraft_map` with the "Fuchsbau" art
   mapping (Map ▸ Import, "Swap the art with"), or run Map ▸ Swap art on a map already open. Each
   built-in family becomes one of our folders, fitted over the art that stood there (its measured
   size, foot and middle) and tinted by the ground; swapping again starts from the original art,
-  so re-run it after installing a new round. The mapping and the measured built-in sizes live
-  in Kartofuchs' data folder (`mappings/Tyrnarra.json`, `art-sizes.json`), not in this repo.
+  so re-run it after installing a new round. The mapping covers only Wonderdraft's built-in trees
+  and mountains (Kartofuchs' `server/artmap.ts`, `BASE_RULES`); other packs import as they are.
+  The measured built-in sizes live in Kartofuchs' data folder (`art-sizes.json`), not in a repo.
 - **Size**: the built-in conifers measured on the calibration grid are smaller than our `size`
   (area of 137 x 291 at scale 1 against 185 x 330). Placed at the built-ins' scales, as in all
   rounds, our conifers are about 1.4x their linear size; fitted to Dotty's pines they come out
@@ -476,30 +480,30 @@ red dome tops, and the monastery icons still carry the old red flags.
 
 | Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
-| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Tyrnarra_Conifers` (round 17, 64) |
-| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Tyrnarra_Broadleaves` (bold, 38) |
-| willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Tyrnarra_Willows` (bold, 24) |
-| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Tyrnarra_Pines` (32) |
-| jungle | FLUX | none | `Dotty_Kapoks` | `Tyrnarra_Jungle` (bold, 29) |
-| palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Tyrnarra_Palms` (24) |
-| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Tyrnarra_Bamboo` (37) |
-| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Tyrnarra_Dead_Trees` (16) |
-| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Tyrnarra_Savanna` (48) |
-| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Tyrnarra_Cactuses` (47) |
-| fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Tyrnarra_Mushrooms` (40) |
-| swamp (cypress, mangrove, moss) | FLUX | none | (vs `Dotty_Willows`) | `Tyrnarra_Swamp_Trees` (24) |
-| shrubs (bush, shrub, scrub) | FLUX | none | (vs `Dotty_Oaks`) | `Tyrnarra_Shrubs` (24) |
-| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Tyrnarra_Peaks` (round 8, 30) |
-| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Tyrnarra_Fells` (round 3, 18) |
-| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Tyrnarra_Hills` (round 6, 25) |
-| dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Tyrnarra_Dunes` (24) |
-| mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Tyrnarra_Mesas` (24) |
-| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Tyrnarra_Pillars` (32) |
-| volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Tyrnarra_Volcanoes` (35) |
-| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_Settlements` (33) |
-| god_cities (13) | FLUX | none | (vs BSG icons) | `Tyrnarra_2.5D_God_Cities` (26) |
-| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Tyrnarra_2D_Settlements` (36) |
-| landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Tyrnarra_2.5D_Landmarks` (16) |
+| conifer | SDXL | `_hd_christmas` | `Dotty_Pines` | `Fuchsbau_Conifers` (round 17, 64) |
+| broadleaf | FLUX | `_hd_oak` (fit) | `Dotty_Oaks` | `Fuchsbau_Broadleaves` (bold, 38) |
+| willow | FLUX | `_hd_willow` (fit) | `Dotty_Willows` | `Fuchsbau_Willows` (bold, 24) |
+| pine (cedar, umbrella pine) | SDXL | `_hd_cedar` (fit) | `Dotty_Pines` | `Fuchsbau_Pines` (32) |
+| jungle | FLUX | none | `Dotty_Kapoks` | `Fuchsbau_Jungle` (bold, 29) |
+| palm | SDXL | `toon_palm` (fit) | `Dotty_Palms` | `Fuchsbau_Palms` (24) |
+| bamboo | SDXL | none | Nibroc's `Bamboo Trees` | `Fuchsbau_Bamboo` (37) |
+| deadtree | SDXL | none | (not in Main; vs `Dotty_Dead_Trees`) | `Fuchsbau_Dead_Trees` (16) |
+| savanna (acacia, baobab) | SDXL | none | (vs `Dotty_Acacias`, `Dotty_Baobabs`) | `Fuchsbau_Savanna` (48) |
+| desert (cacti) | SDXL | none | (vs `Dotty_Cactuses`) | `Fuchsbau_Cactuses` (47) |
+| fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Fuchsbau_Mushrooms` (40) |
+| swamp (cypress, mangrove, moss) | FLUX | none | (vs `Dotty_Willows`) | `Fuchsbau_Swamp_Trees` (24) |
+| shrubs (bush, shrub, scrub) | FLUX | none | (vs `Dotty_Oaks`) | `Fuchsbau_Shrubs` (24) |
+| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Fuchsbau_Peaks` (round 8, 30) |
+| fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Fuchsbau_Fells` (round 3, 18) |
+| hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Fuchsbau_Hills` (round 6, 25) |
+| dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Fuchsbau_Dunes` (24) |
+| mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Fuchsbau_Mesas` (24) |
+| pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Fuchsbau_Pillars` (32) |
+| volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Fuchsbau_Volcanoes` (35) |
+| settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Fuchsbau_2.5D_Settlements` (33) |
+| god_cities (13) | FLUX | none | (vs BSG icons) | `Fuchsbau_2.5D_God_Cities` (26) |
+| settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Fuchsbau_2D_Settlements` (36) |
+| landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Fuchsbau_2.5D_Landmarks` (16) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
@@ -518,7 +522,7 @@ red dome tops, and the monastery icons still carry the old red flags.
   cream walls so the sorting is easy. Families with `items` build named icons (`village_1`,
   `village_2`, ...): up to `per_item` usable drawings of each.
 - **Icon file names are a contract**: Kartofuchs places settlement icons by role, guessed from
-  the names in `Tyrnarra_2.5D_Settlements` (2026-09-27; `Tyrnarra_2D_Settlements` uses the same): `capital_*`, `castle_*`, `fortress_*` =
+  the names in `Fuchsbau_2.5D_Settlements` (2026-09-27; `Fuchsbau_2D_Settlements` uses the same): `capital_*`, `castle_*`, `fortress_*` =
   capital; `city_*`, `walled_city_*` = city; `town_*`, `walled_town_*` = town; `village_*`,
   `hamlet_*` = village. Folders with "god" in the name are skipped, so the god-cities stay
   one-offs. Keep the `{item}_{n}` names and these item words. Top-down houses for its town
@@ -573,6 +577,6 @@ height/width 0.74-1.12; hazel 214 x 233, foot 26, centre -90, 0.83-1.71.
 |  |  | | 24 | sand dunes large + penned mountains small |
 
 A new family needs a `FAMILIES` entry: its SDXL and FLUX wording with shape variants and its
-scale-1 size and anchor; where `Main` has built-ins for it, add it to the "Tyrnarra" art
-mapping in Kartofuchs (Map ▸ Swap art, then save). The pack can hold more variants than Wonderdraft's built-ins (it has 9
+scale-1 size and anchor; where Wonderdraft has built-ins for it, add them to the Fuchsbau
+mapping in Kartofuchs (`BASE_RULES` in server/artmap.ts). The pack can hold more variants than Wonderdraft's built-ins (it has 9
 conifers; we install 64).

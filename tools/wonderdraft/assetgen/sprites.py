@@ -5,11 +5,13 @@ cut()       the subject out of one image: BiRefNet mask (or a flood fill of a cl
 check()     reasons to reject a cut-out (extra objects, cropped, odd proportions, ...)
 finish()    greyscale with the family's levels, resized to Wonderdraft's scale-1 size, outlined;
             custom-colour families get R/G/B colour masks instead (finish_cc)
-install()   write a pack folder with the .wonderdraft_symbols file Wonderdraft reads
+install()   write a pack folder with the .wonderdraft_symbols file Wonderdraft reads, in
+            Kartofuchs' Fuchsbau pack (pack_dir)
 """
 import json
 import os
 import shutil
+import sys
 
 import numpy as np
 from PIL import Image, ImageChops
@@ -324,17 +326,17 @@ def finish_cc(rgba, fam):
     return sprite.crop(sprite.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
 
 
+def pack_root():
+    """The pack the families install into: Fuchsbau, Kartofuchs' own pack, in a Kartofuchs checkout
+    (art/Fuchsbau). The checkout is $KARTOFUCHS, by default ~/Documents/fuchs/kartofuchs."""
+    repo = os.path.expanduser(os.environ.get("KARTOFUCHS", "~/Documents/fuchs/kartofuchs"))
+    if not os.path.isdir(os.path.join(repo, "server")) or not os.path.isdir(os.path.join(repo, "art")):
+        sys.exit("no Kartofuchs checkout at %s (set KARTOFUCHS)" % repo)
+    return os.path.join(repo, "art", "Fuchsbau")
+
+
 def pack_dir(fam):
-    return os.path.join(os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra/sprites"), fam["kind"],
-                        fam["pack_folder"])
-
-
-def texture_folder(fam):
-    return "user://assets/Tyrnarra/sprites/%s/%s" % (fam["kind"], fam["pack_folder"])
-
-
-def texture(fam, n):
-    return "%s/%s" % (texture_folder(fam), fam["file"].format(n=n))
+    return os.path.join(pack_root(), "sprites", fam["kind"], fam["pack_folder"])
 
 
 def install(sprites, fam, folder=None, names=None):

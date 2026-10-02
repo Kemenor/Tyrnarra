@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Generate Wonderdraft art for the Tyrnarra pack. See README.md for the workflow and the lessons.
+"""Generate art for Fuchsbau, Kartofuchs' own pack (Wonderdraft's pack format). See README.md for
+the workflow and the lessons.
 
   assetgen.sh generate conifer --seeds 100-139        images + masks from the tower's ComfyUI
   assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
   assetgen.sh gallery [conifer peaks ...]             review sheets of the installed pack, by variant
-  assetgen.sh sync [--pull]                           work files and pack to / from Proton Drive
-  assetgen.sh fuchsbau <kartofuchs checkout>          the pack as Kartofuchs' base pack (art/Fuchsbau)
+  assetgen.sh sync [--pull]                           work files to / from Proton Drive
 
-Trying the pack on a real map: import the map into Kartofuchs with the Tyrnarra art mapping.
+The pack is art/Fuchsbau in a Kartofuchs checkout ($KARTOFUCHS, sprites.pack_root): `build`
+installs there, and the art goes to other machines with that repo's git. Trying the pack on a
+real map: import the map into Kartofuchs with the Fuchsbau art mapping (it comes with Kartofuchs).
 
 Every prompt style feeds the same pack folder (they look alike once greyscaled; together they
 add variety). Work files: ~/.local/share/wdmap/assetgen/<family>/ (<style>/raw/, rejects.txt,
@@ -208,69 +210,27 @@ def cmd_gallery(a):
 
 
 def cmd_sync(a):
-    """The work that lives outside git, through Proton Drive, so another machine can take over:
-    the work folder (raw drawings, rounds) and the installed pack. Push mirrors this machine (the
-    owner) exactly; pull only adds and updates."""
+    """The work folder (raw drawings, rounds), which lives outside git, through Proton Drive, so
+    another machine can take over. Push mirrors this machine (the owner) exactly; pull only adds
+    and updates. The pack itself travels with the Kartofuchs repo."""
     import subprocess
     proton = os.path.expanduser(os.environ.get("TYRNARRA_PROTON", "~/ProtonDrive"))
-    hub = os.path.join(proton, "Wonderdraft", "assetgen-work")
-    pack = os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra")
-    pairs = [(WORK, os.path.join(hub, "work")),
-             (pack, os.path.join(proton, "Wonderdraft", "Wonderdraft", "assets", "Tyrnarra"))]
+    hub = os.path.join(proton, "Wonderdraft", "assetgen-work", "work")
     if not os.path.isdir(proton):
         sys.exit("no Proton Drive folder at %s (set TYRNARRA_PROTON)" % proton)
-    for here, there in pairs:
-        src, dst = (there, here) if a.pull else (here, there)
-        if not os.path.isdir(src):
-            print("skipped (missing): %s" % src)
-            continue
-        os.makedirs(dst, exist_ok=True)
-        flags = ["-a", "--update"] if a.pull else ["-a", "--delete"]
-        subprocess.run(["rsync"] + flags + [src + "/", dst + "/"], check=True)
-        print("%s -> %s" % (src, dst))
-
-
-def cmd_fuchsbau(a):
-    """The installed pack as Kartofuchs' own base pack: copied into <repo>/art/Fuchsbau with the
-    Tyrnarra name taken out of folder and symbol names (the art itself is the same)."""
-    import json
-    import shutil
-    import tempfile
-    src = os.path.expanduser("~/.local/share/Wonderdraft/assets/Tyrnarra")
-    art = os.path.join(os.path.abspath(os.path.expanduser(a.repo)), "art")
-    if not os.path.isdir(os.path.join(os.path.dirname(art), "server")):
-        sys.exit("%s is no Kartofuchs checkout" % os.path.dirname(art))
-    tmp = tempfile.mkdtemp(prefix="fuchsbau-", dir=os.path.dirname(art))
-    out = os.path.join(tmp, "Fuchsbau")
-    files = 0
-    for root, _, names in os.walk(src):
-        rel = os.path.relpath(root, src).replace("Tyrnarra_", "Fuchsbau_")
-        os.makedirs(os.path.join(out, rel), exist_ok=True)
-        for n in names:
-            if n == ".wonderdraft_symbols":
-                with open(os.path.join(root, n)) as f:
-                    meta = json.load(f)
-                rename = lambda d: {k: (v.replace("Tyrnarra", "Fuchsbau") if k == "name" and isinstance(v, str) else v) for k, v in d.items()}
-                meta = rename(meta) if "name" in meta or "draw_mode" in meta else {k: rename(v) if isinstance(v, dict) else v for k, v in meta.items()}
-                with open(os.path.join(out, rel, n), "w") as f:
-                    json.dump(meta, f, indent=4)
-            elif n.endswith(".png"):
-                shutil.copy2(os.path.join(root, n), os.path.join(out, rel, n))
-                files += 1
-    os.makedirs(art, exist_ok=True)
-    shutil.rmtree(os.path.join(art, "Fuchsbau"), ignore_errors=True)
-    os.rename(out, os.path.join(art, "Fuchsbau"))
-    shutil.rmtree(tmp)
-    print("Fuchsbau: %d sprites in %s" % (files, os.path.join(art, "Fuchsbau")))
+    src, dst = (hub, WORK) if a.pull else (WORK, hub)
+    if not os.path.isdir(src):
+        sys.exit("missing: %s" % src)
+    os.makedirs(dst, exist_ok=True)
+    flags = ["-a", "--update"] if a.pull else ["-a", "--delete"]
+    subprocess.run(["rsync"] + flags + [src + "/", dst + "/"], check=True)
+    print("%s -> %s" % (src, dst))
 
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
-    s = sub.add_parser("fuchsbau", help="the installed pack into a Kartofuchs checkout as its base pack (art/Fuchsbau)")
-    s.add_argument("repo", help="the Kartofuchs checkout")
-    s.set_defaults(fn=cmd_fuchsbau)
-    s = sub.add_parser("sync", help="work files and pack to Proton Drive (or --pull them from it)")
+    s = sub.add_parser("sync", help="work files to Proton Drive (or --pull them from it)")
     s.add_argument("--pull", action="store_true", help="take them from Proton Drive (another machine's work)")
     s.set_defaults(fn=cmd_sync)
     s = sub.add_parser("gallery", help="review sheets of the installed pack, grouped by variant")

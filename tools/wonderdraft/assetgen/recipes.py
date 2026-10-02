@@ -1,7 +1,8 @@
 """What to generate: art families, styles and the numbers that make them fit Wonderdraft.
 
-Each family becomes one folder of the Tyrnarra pack. How the pack is tried on a real map: import
-it into Kartofuchs with the Tyrnarra art mapping (README: Reviewing). The prompt lessons behind
+Each family becomes one folder of Fuchsbau, Kartofuchs' own pack (art/Fuchsbau in a Kartofuchs
+checkout). How the pack is tried on a real map: import it into Kartofuchs with the Fuchsbau art
+mapping, which comes with Kartofuchs (README: Reviewing). The prompt lessons behind
 these strings are in README.md ("Prompting").
 """
 
@@ -88,7 +89,7 @@ FAMILIES = {
         "size": (185, 330),        # px at Wonderdraft scale 1, matched by area (built-in tree_xmas ~170-210 x 300-415)
         "radius": 51, "offset_y": -73,   # built-in tree_xmas footprint and anchor
         "aspect": (1.3, 2.6),      # height / width a usable cut-out must have
-        "pack_folder": "Tyrnarra_Conifers",
+        "pack_folder": "Fuchsbau_Conifers",
         # Round 13: the 0.7 inner fade left the densest drawings as blank pale shapes without their
         # branch tiers; half the fade and 2 px bolder strokes keep the tiers, like Wonderdraft's own.
         "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -2},
@@ -123,7 +124,7 @@ FAMILIES = {
         "aspect": (0.65, 1.6),     # built-in oaks 0.74-1.12, hazels 0.83-1.71
         # ink 14, 23, 47 drew a giant maple leaf; bold 37 a blob with a flat cut-off bottom.
         "exclude": {"ink": [14, 23, 47], "bold": [37]},
-        "pack_folder": "Tyrnarra_Broadleaves",
+        "pack_folder": "Fuchsbau_Broadleaves",
         "file": "broadleaf_{n:02d}",
     },
     "willow": {
@@ -138,7 +139,7 @@ FAMILIES = {
                      "young weeping willow: a small dome of hanging leafy strands on a thin trunk",
                      "leaning weeping willow: the trunk tilted to one side, long strands of leaves drooping down"],
         "kind": "trees", "size": (260, 264), "radius": 128, "offset_y": -110, "aspect": (0.75, 1.5),
-        "pack_folder": "Tyrnarra_Willows", "file": "willow_{n:02d}",
+        "pack_folder": "Fuchsbau_Willows", "file": "willow_{n:02d}",
     },
     "pine": {
         # Mediterranean and mountain pines: Main's built-in cedars and umbrella pines, both
@@ -153,7 +154,7 @@ FAMILIES = {
                      "Scots pine, tall trunk with a rounded irregular crown",
                      "windswept mountain pine, crown blown to one side"],
         "kind": "trees", "size": (272, 300), "radius": 90, "offset_y": -130, "aspect": (0.6, 1.8),
-        "pack_folder": "Tyrnarra_Pines", "file": "pine_{n:02d}",
+        "pack_folder": "Fuchsbau_Pines", "file": "pine_{n:02d}",
         "exclude": {"ink": [13]},   # a watercolour stain cut out with the tree
     },
     "jungle": {
@@ -170,7 +171,7 @@ FAMILIES = {
                      "strangler fig: a tangled trunk under a broad dense crown"],
         "exclude": {"ink": [8], "bold": [23]},   # a giant leaf bush without a trunk
         "kind": "trees", "size": (340, 320), "radius": 100, "offset_y": -140, "aspect": (0.6, 1.6),
-        "pack_folder": "Tyrnarra_Jungle", "file": "jungle_{n:02d}",
+        "pack_folder": "Fuchsbau_Jungle", "file": "jungle_{n:02d}",
     },
     "palm": {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
@@ -184,7 +185,7 @@ FAMILIES = {
         # Alpha from the ink, a thin ring: the mask and a 4 px ring made the fronds a round disc.
         "ink_alpha": True, "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
         "kind": "trees", "size": (160, 240), "radius": 36, "offset_y": -100, "aspect": (1.0, 2.6),
-        "pack_folder": "Tyrnarra_Palms", "file": "palm_{n:02d}",
+        "pack_folder": "Fuchsbau_Palms", "file": "palm_{n:02d}",
     },
     "bamboo": {
         # A clump is many stalks: kept as several pieces, no ground trim (1 of 48 passed as a tree).
@@ -197,7 +198,7 @@ FAMILIES = {
                      "small grove of bamboo, stalks of different heights",
                      "single tall bamboo cluster bending slightly"],
         "kind": "trees", "size": (170, 300), "radius": 40, "offset_y": -130, "aspect": (1.2, 3.0),
-        "pack_folder": "Tyrnarra_Bamboo", "file": "bamboo_{n:02d}",
+        "pack_folder": "Fuchsbau_Bamboo", "file": "bamboo_{n:02d}",
         "exclude": {"ink": [16, 19, 46]},   # bamboo forest scenes, cut into loose stalks
     },
     "deadtree": {
@@ -214,7 +215,7 @@ FAMILIES = {
         "base_max": 0.95, "fill": (0.12, 0.8), "ink_alpha": True,
         "finish": {"OUTLINE": 1, "INNER_LIGHTEN": 0.0},
         "kind": "trees", "size": (250, 300), "radius": 70, "offset_y": -130, "aspect": (0.7, 2.0),
-        "pack_folder": "Tyrnarra_Dead_Trees", "file": "deadtree_{n:02d}",
+        "pack_folder": "Fuchsbau_Dead_Trees", "file": "deadtree_{n:02d}",
         "exclude": {"ink": [21, 41]},   # hollow stumps drawn in 3D, unlike the flat others
     },
     "savanna": {
@@ -229,7 +230,7 @@ FAMILIES = {
                      "baobab tree, huge thick bottle-shaped trunk with a small crown of stubby branches",
                      "small thorny acacia bush with a flat top"],
         "kind": "trees", "size": (340, 250), "radius": 90, "offset_y": -105, "aspect": (0.45, 1.5),
-        "pack_folder": "Tyrnarra_Savanna", "file": "savanna_{n:02d}",
+        "pack_folder": "Fuchsbau_Savanna", "file": "savanna_{n:02d}",
     },
     "desert": {
         "subject": ("a single chunky {variant} icon for a fantasy map, stylized, bold simple shape readable at "
@@ -246,7 +247,7 @@ FAMILIES = {
         "exclude": {"ink": [s for s in range(1, 49) if s % 4 == 2]},
         "base_max": 1.0,           # a barrel cactus is widest at the ground
         "kind": "trees", "size": (150, 240), "radius": 40, "offset_y": -100, "aspect": (0.7, 2.6),
-        "pack_folder": "Tyrnarra_Cactuses", "file": "cactus_{n:02d}",
+        "pack_folder": "Fuchsbau_Cactuses", "file": "cactus_{n:02d}",
     },
     "fungal": {
         # Giant-mushroom forests for strange and underground lands; clusters are several pieces.
@@ -259,7 +260,7 @@ FAMILIES = {
                      "giant toadstool with a spotted domed cap",
                      "tall thin giant mushroom with a small conical cap"],
         "kind": "trees", "size": (240, 260), "radius": 70, "offset_y": -110, "aspect": (0.6, 2.2),
-        "pack_folder": "Tyrnarra_Mushrooms", "file": "mushroom_{n:02d}",
+        "pack_folder": "Fuchsbau_Mushrooms", "file": "mushroom_{n:02d}",
         # Round 3: half the inner fade and 1 px bolder strokes bring back the caps' dots and gills.
         "finish": {"INNER_LIGHTEN": 0.35, "INK_THIN": -1},
     },
@@ -279,7 +280,7 @@ FAMILIES = {
         # The young mangroves (seed % 5 == 4) drew big single leaves across the crown, like the maples.
         "exclude": {"bold": [4, 9, 14, 19, 24, 29]},
         "kind": "trees", "size": (260, 300), "radius": 90, "offset_y": -120, "aspect": (0.7, 1.9), "fill": (0.2, 0.9),
-        "pack_folder": "Tyrnarra_Swamp_Trees", "file": "swamp_{n:02d}",
+        "pack_folder": "Fuchsbau_Swamp_Trees", "file": "swamp_{n:02d}",
     },
     "shrubs": {
         # Bushes and scrub to scatter over open land (night of 2026-09-28).
@@ -289,7 +290,7 @@ FAMILIES = {
         "variants": ["round leafy bush", "low wide shrub of a few rounded leafy clumps",
                      "thorny scrub bush of bare twigs with a few small leaves", "heather bush: a low mound of tiny flowers"],
         "kind": "trees", "size": (140, 110), "radius": 45, "offset_y": -40, "aspect": (0.35, 1.4), "fill": (0.25, 0.95),
-        "pack_folder": "Tyrnarra_Shrubs", "file": "shrub_{n:02d}",
+        "pack_folder": "Fuchsbau_Shrubs", "file": "shrub_{n:02d}",
     },
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
@@ -306,7 +307,7 @@ FAMILIES = {
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
         "radius": 45, "offset_y": 0, "aspect": (0.3, 1.1), "fill": (0.2, 0.9),
         "drop_thin": 14,   # base strokes under 28 px that stick out of the body dropped (sprites.drop_thin)
-        "pack_folder": "Tyrnarra_Peaks", "file": "peak_{n:02d}",
+        "pack_folder": "Fuchsbau_Peaks", "file": "peak_{n:02d}",
     },
     "fells": {
         "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
@@ -317,7 +318,7 @@ FAMILIES = {
                      "broad rounded mountain with a shallow saddle", "low rounded mountain with a rocky shoulder"],
         "kind": "mountains", "size": (330, 190), "radius": 33, "offset_y": 0, "aspect": (0.2, 1.0), "fill": (0.2, 0.9),
         "drop_thin": 14,   # base strokes under 28 px that stick out of the body dropped (sprites.drop_thin)
-        "pack_folder": "Tyrnarra_Fells", "file": "fell_{n:02d}",
+        "pack_folder": "Fuchsbau_Fells", "file": "fell_{n:02d}",
     },
     "hills": {
         "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": HILL_FINISH, "negative": LINE_NEGATIVE + ", houses, buildings, road, path, fence",
@@ -332,7 +333,7 @@ FAMILIES = {
         # Sparse outlines are fine: Wonderdraft's own hills are little more than an arc.
         "kind": "mountains", "size": (300, 115), "radius": 30, "offset_y": 0, "aspect": (0.15, 0.7), "fill": (0.04, 0.9),
         "fill_under": True,   # solid body under the top contour (sprites.fill_under)
-        "pack_folder": "Tyrnarra_Hills", "file": "hill_{n:02d}",
+        "pack_folder": "Fuchsbau_Hills", "file": "hill_{n:02d}",
     },
     "dunes": {
         # SDXL drew desert photos and abstract swooshes for any single-dune wording: FLUX.
@@ -347,7 +348,7 @@ FAMILIES = {
                      "pair of overlapping sand dunes seen from the side, the back one taller",
                      "tall sand dune seen from the side with a sharp crest and a steep shaded face"],
         "kind": "mountains", "size": (320, 90), "radius": 30, "offset_y": 0, "aspect": (0.1, 0.55), "fill": (0.2, 0.95),
-        "pack_folder": "Tyrnarra_Dunes", "file": "dune_{n:02d}",
+        "pack_folder": "Fuchsbau_Dunes", "file": "dune_{n:02d}",
     },
     "mesas": {
         # Desert mesas, buttes and arches (night of 2026-09-28), in the peaks' bold finish.
@@ -365,7 +366,7 @@ FAMILIES = {
                      "cluster of three tall rock spires of different heights"],
         "kind": "mountains", "size": (380, 220), "radius": 60, "offset_y": 0, "aspect": (0.25, 1.3), "fill": (0.2, 0.95),
         "drop_thin": 14,
-        "pack_folder": "Tyrnarra_Mesas", "file": "mesa_{n:02d}",
+        "pack_folder": "Fuchsbau_Mesas", "file": "mesa_{n:02d}",
     },
     "pillars": {
         # Tall karst pillars (2026-09-29): Main's Tang Dynasty mountains (141, e.g. the ring around the
@@ -391,7 +392,7 @@ FAMILIES = {
                      "massive rounded karst peak, taller than wide, with steep grooved sides"],
         # About 2x the area of the Tang pillars' area-equivalent 222 x 314, like the peaks: sharp at big scales.
         "kind": "mountains", "size": (300, 430), "radius": 50, "offset_y": 0, "aspect": (1.0, 3.0), "fill": (0.25, 0.95),
-        "pack_folder": "Tyrnarra_Pillars", "file": "pillar_{n:02d}",
+        "pack_folder": "Fuchsbau_Pillars", "file": "pillar_{n:02d}",
     },
     "volcanoes": {
         # "Volcanic was missing" (the user, 2026-09-28). Recolourable like the icons: R ink, G rock and
@@ -410,7 +411,7 @@ FAMILIES = {
                      # Seeds 35+: "dormant" still drew smoke and fire (round 1: 5, 11, 17, 23, 29).
                      "extinct volcano: a quiet grey cone with a wide empty crater, no smoke, no fire, no lava"],
         "kind": "symbols", "size": (340, 280), "radius": 90, "offset_y": 0, "aspect": (0.4, 1.6), "fill": (0.2, 0.97),
-        "pack_folder": "Tyrnarra_Volcanoes", "file": "volcano_{n:02d}",
+        "pack_folder": "Fuchsbau_Volcanoes", "file": "volcano_{n:02d}",
     },
 
     # --- icons: recolourable (Wonderdraft custom colours: R lines, G walls, B roofs) -------------
@@ -422,7 +423,7 @@ FAMILIES = {
         # Kartofuchs guesses each icon's role from these item names (README: Families): keep them.
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.3, 0.97),
         # The raised view reads as 2.5D; the user filed these under it once flat 2D icons were asked for.
-        "pack_folder": "Tyrnarra_2.5D_Settlements", "file": "{item}_{n}",
+        "pack_folder": "Fuchsbau_2.5D_Settlements", "file": "{item}_{n}",
     },
     "settlements_2d": {
         # "Can we generate some true 2D ones? Just to see" (the user, 2026-09-27): the same kinds as
@@ -436,7 +437,7 @@ FAMILIES = {
         "exclude": {"icon": [3, 5]},   # the raised walled town and walled city of round 1
         "per_item": 2,
         "kind": "symbols", "size": (260, 200), "radius": 60, "offset_y": 0, "aspect": (0.25, 2.8), "fill": (0.3, 0.97),
-        "pack_folder": "Tyrnarra_2D_Settlements", "file": "{item}_{n}",
+        "pack_folder": "Fuchsbau_2D_Settlements", "file": "{item}_{n}",
     },
     "landmarks": {
         # Single structures a world map marks (night of 2026-09-28), in the settlements' raised view
@@ -458,7 +459,7 @@ FAMILIES = {
                   ("portal", "ancient stone archway carved with runes, standing alone")],
         "per_item": 2,
         "kind": "symbols", "size": (220, 220), "radius": 60, "offset_y": 0, "aspect": (0.35, 2.8), "fill": (0.2, 0.97),
-        "pack_folder": "Tyrnarra_2.5D_Landmarks", "file": "{item}_{n}",
+        "pack_folder": "Fuchsbau_2.5D_Landmarks", "file": "{item}_{n}",
     },
     "god_cities": {
         # One themed icon per Bound god-city, from docs/god-city-seeds.md (open, chronicler-tier
@@ -481,7 +482,7 @@ FAMILIES = {
                   ("frae_city", "city on a great rock floating above a lake, held down by seven huge chains")],
         "per_item": 2,
         "kind": "symbols", "size": (320, 260), "radius": 80, "offset_y": 0, "aspect": (0.35, 1.8), "fill": (0.3, 0.97),
-        "pack_folder": "Tyrnarra_2.5D_God_Cities", "file": "{item}_{n}",
+        "pack_folder": "Fuchsbau_2.5D_God_Cities", "file": "{item}_{n}",
     },
 }
 
