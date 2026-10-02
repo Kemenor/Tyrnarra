@@ -89,3 +89,21 @@ Thekkavar stands here, and the forest ring is here, so **the paper for all the b
 
 *Touches:* Ezkudon's name, "hidden"; the Jakinduria entry above (the coast is the paper's way out, with tea, ink and fibre coming in); the Greek tongue (a Doric or Ionic drift). *Sameness to watch:* Harro Distiratsua sells fitted light (lamps); lenses are a different craft, kin to it. *Set aside:* growing tea here (the coast is dry; Haizetsua owns tea as an export), leaf-merchants, copyists, an ink coast.
 
+## Unplaced: the painting culture · GM, 2026-10-02 (wildshot)
+
+A culture centred on painting, sketching and drawing **the in-between and the truth beyond**: to make an image of greater truth than reality. **The three faces of painting: what we show, what is real, and what is true.** Painting as art and as a matter of great importance.
+
+*Candidate homes:* **Hareaveldi** (its tongue is Persian, and the real-world Persian miniature is one of the great painting traditions; Lioaru's peoples already stand in Tani's three tenses, and three faces of an image would rhyme with them; the Nagaji "become what's next", which a painting of the truth beyond could carry); **the Golden Coast** (the mirage coast is already about what is shown, what is real and what is true in light). *Sameness to watch:* Emarrea's kitsune "keep the chosen reveal" (what a kitsune shows you is what she means to show).
+
+## Unplaced: the golden rain · GM, 2026-10-02 (wildshot)
+
+Rain that is more than water: **a streak of falling gold** the locals capture, an essence unlike anything else, to be used, turned and carried on.
+
+*Candidate homes:* **the Lost Isle** (blank; offshore from the Lost Kingdom, where Tani died); **the Golden Coast** (the name; on a dry coast every rain is precious). *Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood. A golden rain sits right beside it, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart.
+
+## Unplaced: the great beasts · GM, 2026-10-02 (wildshot)
+
+Every town, village and city has **a great beast**. It grows in size with the population it cares for, and they care for it. **A beast's child means part of the town leaving to settle a new one; a beast's death means the town is abandoned.**
+
+*Sameness to watch, closely:* **Valreka** already has a city built on great beasts, where a house is its whale, a calf founds a cadet house, and a whale's death means the house falls and its people scatter (`lioaru.md`). The great beasts differ (the beast grows with its people and carries no town on its back), but the shape is close, so the home should be far from Lioaru and the page should make the difference plain. *Candidate homes:* none of the blank regions suits (both lie in Lioaru, beside Valreka); a later rework of a built region, or a place off the continent.
+
