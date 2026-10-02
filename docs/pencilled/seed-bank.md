@@ -60,14 +60,14 @@ Everyone sees the stars above; only here do they **twinkle from below as well**,
 
 ## Askamira (Maitagarri, Dea Elurra, Basamortua) · GM, 2026-10-02: the singing island
 
-**The land of music** becomes Askamira: the singing island, where the land and the people sing, each polity in its own facet. One indigenous people in three sister tongues (the Dravidian family), with song running through all three.
-- **Maitagarri, the forest: the people sing.** **Bard-led, music as law**: cases are settled, and the crown held, by song. (Its name means "lovable", which suits a crown that goes to the best-loved voice.)
-- **Dea Elurra, the ice: the land sings.** **The singing ice**: the ice itself sings as it shifts and cracks (real frozen lakes make a deep, eerie song), and the people's music answers it.
-- **Basamortua, the desert: the sand sings** (GM, accepted as proposed). Real dunes "boom" and hum when the sand slides, a low drone heard for miles.
+**The land of music** becomes Askamira, the singing island, honed (GM): **in each of the three polities a different thing sings, and in all three the people work with the song**, singing with it and answering it, musical in their own facets. One indigenous people in three sister tongues (the Dravidian family).
+- **Dea Elurra, the ice: the land sings.** The ice itself sings as it shifts and cracks (real frozen lakes make a deep, eerie song).
+- **Basamortua, the desert: objects sing.** For example **crystals in the sand** that sing. (Replaces the earlier booming dunes, where the sand itself sang.)
+- **Maitagarri, the forest: the animals sing.** The forest's creatures sing, and the people sing with them. *To confirm:* the earlier seed, **bard-led, music as law** (cases settled and the crown held by song; its name means "lovable", suiting a crown that goes to the best-loved voice), as the way Maitagarri's people work with the song, or set aside.
 
-So two lands that sing and one people who sing, three biomes on one island.
+So the land, the things in it, and the creatures of it each sing, and the people of all three answer.
 
-*Touches:* Askamira's three polities (each its own, GM 2026-09-28) and the indigenous Dravidian family (Malayalam, Telugu and Kannada sister sounds, a Tamil core); the real-world Dravidian south's Carnatic tradition, so the island's tongues come with a deep music vocabulary; Frae City above them, the Talanese city of the arrived. *Sameness to watch:* Haizetsua's singing cities are architecture played by the wind; Askamira's song is ice, sand and voice, so the page builds no singing towers. Also Tahu Tangata's purehua, Baratalda's harvest horns, Fenurra's Ashdrums, Wren the fey musician. **Jakinduria** is free again (music as law moved here).
+*Touches:* Askamira's three polities (each its own, GM 2026-09-28) and the indigenous Dravidian family (Malayalam, Telugu and Kannada sister sounds, a Tamil core); the real-world Dravidian south's Carnatic tradition, so the island's tongues come with a deep music vocabulary; Frae City above them, the Talanese city of the arrived. *Sameness to watch:* Haizetsua's singing cities are architecture played by the wind, so the page builds no singing towers; also Tahu Tangata's purehua (singing weapons, close to Basamortua's singing objects: crystals that sing of themselves, against weapons sung by a dancer's motion), Baratalda's harvest horns, Fenurra's Ashdrums, Wren the fey musician. **Jakinduria** is free of music (it is the paper country).
 
 ## Jakinduria (Ezkudon) · GM, 2026-10-02: the paper country
 
