@@ -31,3 +31,10 @@ Tani's death ruined the earth and left a cursed blight on the ground. After cent
 **A deep forest unlike anything else, in the colours of the rainbow.** The Feyworld leaks here. The people are not entirely what they seem: some ordinary mortals, others **Fey in disguise**, some half mortal, half fey. At its head sits **a fey lord**.
 
 *Touches:* Iratxobaso, the multicoloured fey-forest at its centre; the Wildreach's speech outside every family (the Feyworld-touched tongue); the Feyworld's rule that mortals enter only when brought (`voices.md`, Wren and Vyrenna).
+
+## Star Island (Askamira) · GM, 2026-10-02
+
+Shrouded in **mystique, myth, the arcane and the occult**: rumoured to be the base of it all, to be everything. **A portal to great power. A star that fell onto Talan. The creation of the greatest archmage who ever lived.** All of it draws people, and the people bring more rumours; legends gather, and **magic coalesces here by the island's image**. The truth is mere happenstance: Star Island is a simple island with no particular reason for its shape, a coincidence. **People seek the extraordinary in the mundane.**
+
+*Touches:* canon's Star Island (a small star-shaped island near Askamira, a modern Talanese name; its capital icon still unnamed, `map-todo.md`); Frae City across the water, the great airship port and the free knowledge-city. **The Occult school** (`cosmology.md`): Occult magic "uses the magic left behind in stories, art, song, and belief", because belief carries slivers of Wellspring energy. So the rumours can make real what the island never was: the shape is chance, and the magic people find there is real, gathered by their belief. The two layers (the mundane truth, the belief-made power) fit a chronicler tier of rumour and a ⚿ of happenstance.
+

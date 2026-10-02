@@ -73,6 +73,7 @@ Update this record as decisions change and at each phase checkpoint, without req
 **Topic:** draw out what only the user knows about this place, the texture the canon does not hold yet, before any seed is proposed.
 
 **What must be done:**
+0. **Start from the seed bank.** Read the region's entry in `docs/pencilled/seed-bank.md` first. If the GM has left an idea there, it leads: the questions below test and fill it out. If there is none, open with the three inspiration questions, and let the first answer become the seed's starting point: **what weird institution** would the GM love to see run here; **what single scene** should the players walk into; **what argument** would the GM love to hear the players have about the place.
 1. **Ask 3–5 questions**, only about what the Phase 0 readback left open; never ask what the canon already answers. Choose from:
    - **Flow:** what does it sit between, what passes through it, what presses on it from outside?
    - **Contradiction:** an unlikely combination at its heart, a value held against its setting?
