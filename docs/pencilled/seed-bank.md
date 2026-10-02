@@ -38,14 +38,11 @@ Shrouded in **mystique, myth, the arcane and the occult**: rumoured to be the ba
 
 *Touches:* canon's Star Island (a small star-shaped island near Askamira, a modern Talanese name; its capital icon still unnamed, `map-todo.md`); Frae City across the water, the great airship port and the free knowledge-city. **The Occult school** (`cosmology.md`): Occult magic "uses the magic left behind in stories, art, song, and belief", because belief carries slivers of Wellspring energy. So the rumours can make real what the island never was: the shape is chance, and the magic people find there is real, gathered by their belief. The two layers (the mundane truth, the belief-made power) fit a chronicler tier of rumour and a ⚿ of happenstance.
 
-## Unplaced: the hanging cities · GM, 2026-10-02
+## Galdua Jendea (Lioaru) · GM, 2026-10-02: the hanging cities
 
-Houses are not built on steady ground, for there is no steady ground: **the ground has become dangerous** for some reason, so the cities are built **hanging in the mountains**. At one time of day (day or night, undecided) the people travel high; they have built their own ways of **gliding over the ground** when they need to cross it.
+Houses are not built on steady ground, for there is no steady ground: the sand is dangerous, so the cities are built **hanging in the rock mountains**, **in the shadows, protected from the sun**. Water is drawn from **crystal springs** in the rock. **Not a typical nomad culture: steady cities, with caravans gliding over the sands.** **Valreka visits** the rock mountains.
 
-*Candidate homes (none chosen):*
-- **Haraour Eliza**, on the inner walls of the mountain ring above the poisonous paradise; the jungle floor breathes poison after dark, so the night is spent high and the day's gliding goes down to harvest what can be cooked.
-- **The Red Dominion**, on the volcanic flanks above valleys where heavy gas pools on still nights (canon: the volcano cluster is in the west); could merge with the beached-fleet seed: the hulls hauled up the cliffs and hung as houses.
-- **Galdua Jendea**, in the rock walls above sand that "would swallow anything built on it" (canon, `lioaru.md`, the reason Valreka took to the whales): the people who chose the cliffs instead of the herd.
+*Touches:* canon's sand "would swallow anything built on it" (`lioaru.md`, the reason Valreka took to the whales): the hanging cities are the other answer to the same ground, the people who chose the rock instead of the herd. The region's name is disputed, "Place of Many Waters" or "Place of the Lost People", and the canon water-map of "hidden seeps and sand-springs" (kept by Valreka's Azarketi water-bearers) is already there for the crystal springs. **Valreka's one need that never eases is water** (canon), so a city with springs is the herd's natural halt and partner. Valreka's register is the Berber family the region shares.
 
-*The shared logic:* the ground deadly at night, the day's rising heat (thermals off hot rock or sand) what makes gliding possible: live high, sleep high, glide while the sun is up.
+*Open:* gliding usually rides the day's rising heat, and here the sun is the danger; when the caravans fly (dawn, dusk, the cooler months, or a craft that needs no thermals) is a question for the build. The earlier candidate homes (Haraour Eliza above the poisonous paradise; the Red Dominion above the gas-filled valleys) are set aside.
 
