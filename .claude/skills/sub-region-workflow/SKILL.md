@@ -5,7 +5,7 @@ description: Use this skill whenever working on a Talanese sub-region (kingdom, 
 
 # Sub-region workflow
 
-Takes a sub-region from a label on the map (or a thin existing entry) to full lore canon and a published page, in thirteen phases. Each phase has one topic, a fixed list of what must be done, and a fixed output. Reworked 2026-09-30 after an audit of the Legea, Order of Law, No Man's Land, and Namur builds found items slipping between phases (economy, daily life, youth, Popular Beliefs, dates checked against canon); the history is in Appendix H.
+Takes a sub-region from a label on the map (or a thin existing entry) to full lore canon and a published page, in thirteen phases. Each phase has one topic, a fixed list of what must be done, and a fixed output.
 
 ## Ground rules
 
@@ -395,12 +395,3 @@ Agents must report proposed lore additions **without implementing them**, includ
 - **The prose exemplar:** Breidey (GM-written; `lore/geography/floteyn/breidey.md` and its page).
 - **The 2026-09 builds under this workflow's lessons:** Legea Empire (`zuzental/legea-empire.md`; a full pass on a built region), Order of Law (`zuzental/order-of-law.md`), No Man's Land (`sumendar/no-mans-land.md`; anarchy passing the three tests), Namur Republic (`zuzental/namur-republic.md`, with the co-written journal `namur-journal.md` and the pencil file `docs/pencilled/namur-republic.md`; the first build run close to this phase order).
 - **The older full-workflow precedents:** Baerfrost, the Air Monastery (Wyndwalken), and Fellibylur (`lore/geography/vindul.md` and their pages).
-
-## Appendix H: History of the skill
-
-- **2026-05-28:** rewritten seed-first after the Lautara builds came out as templates with slots filled in (every Halfling doing routing, every Vishkanya doing administration). Seeds before political shapes; the archetype list demoted to a sanity check.
-- **2026-07-07:** government seed round added after the Baratalda build rebuilt its government five times.
-- **2026-08-13:** reveal round and section mass added with the region-prose contract; 2026-09-19 the one-defect-per-region requirement dropped (Villtur ruling).
-- **2026-09-30:** traveller's image moved after the seed; then the whole skill reworked into thirteen whole phases, each with a topic, a fixed list, and a fixed output, after the audit of the Legea, Order of Law, No Man's Land, and Namur builds (economy had no phase; daily life, youth, and the Popular Belief floated outside the phases; dates were proposed without checking the timeline). Phase-by-phase review with the GM, then a dry run of the Namur build through every phase, which added the always-written seed summary, political seeds and seed-shapes, the name-and-image check, the four questions for a special state, plain answers, the telling-examples rule for the senses, 1–3 candidates scaled to importance, the secret's set-up list, and the reverse check.
-- **2026-10-01:** aligned naming with the language-family tables and distinct deep tongues; moved story uses to private authoring notes; barred canon additions during publication; added a persistent decision record and targeted reopening of approved choices; allowed shared customs, institutions, imagery, and ordinary features while retaining unique personal-name structures.
-- **2026-10-02:** two notes from the Tahu Tangata build: the traveller's-image speaker gets personality shown in the text (Phase 3); the secret's "what it sets up" replaced by a weight test in the world, with no story set-ups or hooks, and every route or owner a secret leans on checked against canon (Phase 9); and the sameness and census notes stay in the working record, never on the page (Phases 2, 5 and 10).
