@@ -69,3 +69,15 @@ So two lands that sing and one people who sing, three biomes on one island.
 
 *Touches:* Askamira's three polities (each its own, GM 2026-09-28) and the indigenous Dravidian family (Malayalam, Telugu and Kannada sister sounds, a Tamil core); the real-world Dravidian south's Carnatic tradition, so the island's tongues come with a deep music vocabulary; Frae City above them, the Talanese city of the arrived. *Sameness to watch:* Haizetsua's singing cities are architecture played by the wind; Askamira's song is ice, sand and voice, so the page builds no singing towers. Also Tahu Tangata's purehua, Baratalda's harvest horns, Fenurra's Ashdrums, Wren the fey musician. **Jakinduria** is free again (music as law moved here).
 
+## Jakinduria (Ezkudon) · GM, 2026-10-02: the paper country
+
+Thekkavar stands here, and the forest ring is here, so **the paper for all the books is made here**: **the supreme paper-makers**, of ordinary and of magical paper, and **special contract paper**.
+
+*Proposed with it (not yet confirmed):*
+- **Lograth's truepaper starts here.** Canon's *Sannblad*, the unforgeable Lograth contract-paper exported worldwide (`zuzental.md`; `glossary.md`), says nothing about where its sheets come from: Jakinduria mills the leaf, and Lograth makes it true.
+- **A paper that keeps its text for the right reader**, Ezkudon's hidden in a sheet; Thekkavar's **writs of descent** printed on it, sealed knowledge travelling on it. Room for others (paper that will not burn, paper that remembers).
+
+*Canon move to make at the build:* Thekkavar's entry (`ezkudon.md`) has the Golden Coast's trade as "tea and paper and ink coming in, finished thought going out". The Golden Coast has little forest (GM) and is Ezkudon's only coast, so it is the paper's **way out**, not its source: in through the coast come tea, ink, and rags or fibre for the finest papers; out go Jakinduria's paper and Thekkavar's finished thought. The line changes in `ezkudon.md` and on the published Thekkavar page.
+
+*Touches:* the forest ring around Thekkavar (open in two places; mountains on its northern edge with Jakinduria's own capital beneath them; Thekkavar alone in the open middle); Ezkudon's name, "hidden"; the Greek (Attic) tongue.
+
