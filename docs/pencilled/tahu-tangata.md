@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-01).
 - **Phase 7 (daily life): closed** (GM, 2026-10-01).
 - **Phase 8 (naming): closed** (GM, 2026-10-02).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-02).
+- **Phase 10 (draft): open.**
 
 ## Phase 0: settled facts
 
@@ -109,10 +110,19 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 - **Named figures:** **the Tahu, Hine Tamanui Waikura** (an old woman of house Tamanui, Tahu since 2507 MR; *Tamanui* at the Huipapa); **the Kaiahi, Kahu Rangiwai Papawera** (a man in his late thirties of house Rangiwai, Kaiahi since 2526 MR; GM chose the housed Kaiahi); **Tui Kahuroa Ngaiti**, line-leader of the western district's kapa, which keeps the Neck road (*Ngaiti* from *ngaio* "a tree" + *iti* "small", vowels worn; GM); **Rangi Manutoa Atapapa**, a house elder who reads his neighbours' ground and is resented for it; **Joana Fontebaixa** (Phase 3).
 - **Sample names:** given *Aroha, Huia, Kahu, Rangi, Tui, Hine, Tama, Kiri, Manu, Ata, Ihi, Ngaio, Rata, Toa*; houses *Tamanui, Rangiwai, Kahuroa, Manutoa, Hinekura, Rataroa*; first fields *Waikura, Papawera, Ngaiti, Atapapa, Rataroa, Tihipapa*; whole names *Kiri Hinekura* (a child), *Kiri Hinekura Papawera* (after her first burn), *Toa Atapapa* (a kinless dancer), *Toa Manutoa Atapapa* (taken into house Manutoa). Word sources: *hine* girl, *tama* son, *nui* great, *wai* water, *kura* red/precious, *kahu* hawk, *rangi* sky, *papa* ground, *wera* burnt, *tui* a bird, *roa* long, *ngaio* a tree, *iti* small, *manu* bird, *toa* brave, *ata* dawn.
 
+**Phase 9, tension and reveal (GM, 2026-10-02):**
+- **The live tension: who clears the Neck.** Since the bindstone rush began in 2527, robbers work the Neck road: they hit carts and slow trains on Tahu Tangata's side, take cover in the western forest, and slip back into No Man's Land, where no one rules and no one can be pursued without becoming a ruler. **The Tahu** (the grain going up is hers; the garners' contracts with Eldara depend on the trains) would rather pay someone (hired guards, the Guild) than spend the houses' children on a road. **The Kaiahi** (the road is his; the young lean to clearing it themselves) knows every dancer on the Neck is one not dancing at home, and burns wait. **The western district's kapa** under Tui Kahuroa Ngaiti carries the Neck alone, its own burns delayed, and wants the other districts to send dancers; their houses do not. Across the line, No Man's Land's line captain changes every autumn. No one has won; the argument comes back every autumn.
+- **◈ Popular Belief: the plant knows its own.** A field burned by a stranger stays shut, because puahi opens only for Tangatan fire; the would-be copiers go home with closed pods because the plant knows they are not its people. (Wrong in the mechanism; it points toward the first secret.)
+- **⚿ GM Secret 1: the song opens the pods.** Chronicle surface: copiers fail even with careful slow burns, and the locals say "*the field has to hear the line*". Truth: heat and pace are needed and are not enough; puahi answers the purehua's hum, the rising-and-falling pattern a kapa sings as it dances. The wild plant on Tihiwera opens to thunder; the cultivated plant was bred over generations to open to the song instead. The craft is the song.
+- **⚿ GM Secret 2: someone pays the robbers.** Chronicle surface: the robbery worsened after 2527 and is blamed on the rush. Truth: some of the Neck's robbers are paid. When the rail is unsafe, Eldara must buy more of its food by sea through the Throat (canon: its second lifeline), and the boats and the futures belong to Rika Tikur; a house on the Exchange trades on Eldara's hunger and keeps the Neck dangerous to do it. Coherence: adds a deed to Rika Tikur without touching its existing secret (Nirfel's lien); no new cosmology.
+- **"What it sets up" dropped (GM):** the secrets' story set-ups are not recorded; they read as adventure hooks, which the setting does not carry.
+- **Section weights:** heavy, the burn (the cycle, the reading, puahi, the dance and the purehua, Joana's letter at its head); medium, the houses and the kapa with the Tahu and the Kaiahi, and the Neck as the live tension; light, Ahika and the garners, the trade (slowgold, Eldara, Valreka's genealogies), daily life and youth, naming.
+
 ## Rejected options
 
 - **Phase 3 images 2 and 3** (the morning field; the shut pods on an outsider's trial field): set aside; the morning field may return as a second quote at the harvest. Earlier drafts of the letter (a plain letter to the readers' house; the "nineteen years" line): superseded by the apology letter.
 - **G3, the Stores** (the imperial granary office as the government): too close to Rika Tikur's merchant-led Company (GM); the granary survives as the houses' common stores. **G1 and G2 alone** (the companies rule; the land-kin rule): entwined into the diarchy instead.
+- **Phase 9 alternatives:** beliefs *the dead in the hum* and *Komo's sparks*; secret S3 (puahi from a dead god's blood on Tihiwera; duplicates Hringseyja's wax secret).
 - **Phase 8 alternatives:** a kinless Kaiahi (*Toa Atapapa*, a rail worker's child; GM chose the housed one); *Ngaioiti* and *Waiti* for the line-leader's field; capital *Pataka*, *Huihui*; plant *Hinuwera*; weapons *purere*, *hummer*; elder *Tahuhu*.
 - **Seed A alone** (the land as a calendar of burns, authority with the keepers of the count): folded into B as its cycle; the fixed count became the felt reading of the ground.
 - **A yearly burn** of one stretch: rejected for farming plausibility; each field keeps its own clock.
@@ -132,4 +142,5 @@ Derivations from the letter: the master's name **Afonso** (Argia's sample given 
 ## Skill notes (for the next `sub-region-workflow` revision)
 
 - **Phase 3, the traveller's image: give the speaker personality** (GM, 2026-10-01). The speaker needs touches of character in the quote itself (a passion, a habit, an impulse, a way of seeing), not only a name, a year and an errand. Add to Phase 3's *What must be done*: settle one or two personality traits with the speaker and let them show in the text.
+- **Phase 9, the secret's "what it sets up"** (GM, 2026-10-02): the GM reads it as adventure-hook material the setting should not carry, and dropped it from this build. Revisit the step in the skill: keep the strength test (a secret must matter to the world) without phrasing it as story set-ups.
 
