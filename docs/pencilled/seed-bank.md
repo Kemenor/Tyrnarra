@@ -48,14 +48,13 @@ Houses are not built on steady ground, for there is no steady ground: the sand i
 
 *Open:* gliding usually rides the day's rising heat, and here the sun is the danger; when the caravans fly (dawn, dusk, the cooler months, or a craft that needs no thermals) is a question for the build. The earlier candidate homes (Haraour Eliza above the poisonous paradise; the Red Dominion above the gas-filled valleys) are set aside.
 
-## Unplaced: the stars below · GM, 2026-10-02
+## Burdineyja (Sumendar) · GM, 2026-10-02: the stars below
 
-Everyone sees the stars above; only here do they **twinkle from below as well**. The waters are ore- and mineral-rich (some say meteorites landed here), and they are filled with **luminous creatures and plankton, or plants, that glow at night**, a twinkling, ever-changing night sky below.
+Everyone sees the stars above; only here do they **twinkle from below as well**, in the channels between the islands. The waters are ore- and mineral-rich (some say meteorites landed here) and filled with light that glows at night, a twinkling, ever-changing night sky below, with the other islands standing dark against it. **Both groups carry it** (GM), each its own way:
+- **The Hafra group (salt): plankton.** Luminous plankton and sea-creatures, the real-world kind, thriving in mineral-rich salt water.
+- **The Midarra group (fresh): something stranger.** Glowing plankton belongs to salt water, so the fresh Midarra's light has another cause, to be chosen at the build (the minerals, something the Elden left, something else).
 
-*Candidate homes (none chosen):*
-- **Star Island**: the glowing water around a star-shaped island is exactly what would start the rumour that a star fell there; "some say meteorites landed here" is the island's own legend. The truth stays mundane and beautiful: life thriving on mineral-rich water.
-- **Burdineyja**: its name means *the Iron Islands*; ore-rich water around them fits the name.
-- **The Lost Isle**: nothing defined yet, so it could carry it whole.
+*The measurements (from the map, 1 px = 0.5 mi):* **the Midarra group** is seven islands, six in a ring around a star-shaped centre, each 16–26 miles across, the channels **9–16 miles** (Gibraltar's strait is about 9 at its narrowest). **The Hafra group** is eight islands, seven mountain islands in a ring around the central island with the city, each 20–35 miles across, the channels **16–49 miles**, mostly 30–40. *Sight lines:* the horizon lies about 1.2 × √(height in feet) miles off: from a shore about 4 miles of water, from a 300 ft cliff about 21, from a 2,000 ft peak about 55; mountains of 2,000–3,000 ft show 50–60 miles away in clear air. So in the Midarra group any harbour sees the whole channel glow with the next island across it; in the Hafra group the shore sees the glow at its feet, and the mountains see the whole ring lit.
 
-*Sameness to watch:* Izarelai's lake Izaru already "doubles the whole sky", two heavens by reflection (`myrkono.md`). This one glows with its own living light and moves, so the image differs; the page should let it.
+*Touches:* the earmark (the Kobold heartland, one polity across both groups, joined by the one working Elden gate); the name *Burdineyja*, "the Iron Islands", which ore-rich water fits; the Sumendar family's tongue on both seas. *Sameness to watch:* Izarelai's lake Izaru "doubles the whole sky" by reflection; this light is living and moving, and the page should not lean on "two skies".
 
