@@ -43,6 +43,20 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 
 To change the rules, edit `VARIANTS` at the top of `wd_regions.py`.
 
+## `kartofuchs_swap.py`: Main in Kartofuchs, all on Fuchsbau art
+
+Kartofuchs' own Fuchsbau mapping swaps only Wonderdraft's built-in art. This script does the rest
+for Main, against a running Kartofuchs (the desktop app, port 7717):
+
+```bash
+python3 tools/wonderdraft/kartofuchs_swap.py mapping           # save the "Tyrnarra" mapping: Fuchsbau's rules + Main's bought packs
+python3 tools/wonderdraft/kartofuchs_swap.py cities [--dry]    # the open Main's BSG city icons as Fuchsbau icons
+```
+
+Import Main with "Swap the art with: Tyrnarra" (or Create ▸ Swap art on the open map), then run
+`cities`: each city cluster becomes one Fuchsbau icon, god-cities by their Divine City label.
+`--flat` takes the 2D settlements. Each step is one undo step in Kartofuchs. Mooma's markers stay.
+
 ## `wdmap`: inspect and edit maps (stage 1 of the AI tooling)
 
 `wd.py` (symlinked as `wdmap`) reads a map into plain data so it can be asked questions, previewed and edited.
