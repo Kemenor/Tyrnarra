@@ -477,6 +477,14 @@ they did, for reading the results log:
     `special_sites` (flat 2D, the user's pick: mothership fragment, Dragon's Reach, wardstones,
     dungeon gate, dead lair, Sickwell, Stitchery, Sutarri, Scar of Aeris, Twin Cities, Orratzak,
     Bridgelands, web-hold, and from the seed bank the hanging city and the dead palace).
+  - Results: `fruit_trees` 26 (apples, pears, cherry blossom take colour 3; plums and olives came
+    out dark, so their fruit goes with the lines). `holy_trees` 30, but the style's "ribbons,
+    lanterns or a shrine roof" turned every one into a shrine-tree with red ribbons and lanterns,
+    the giant pine and the pale tree included. `named_trees` 4 Soul Trees from 10 (pale, wide,
+    roots on rock; FLUX added a small crescent moon on most trunks, from "moon-white").
+    `special_sites` 32 (two per item): the "fire, glow ... painted red" style put flames on
+    items that have none (the Orratzak's needles, the Bridgelands, the gate, the wardstones),
+    and several came out raised rather than flat (crater, Bridgelands, Sickwell, web-hold).
   - The tower now powers off after three empty-queue checks five minutes apart; batches are
     chained with a 2 s waiter so the queue never sits empty between them.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with

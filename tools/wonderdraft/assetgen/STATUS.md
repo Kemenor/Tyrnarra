@@ -5,9 +5,9 @@ new session on either machine. The full record (every round, lesson and number) 
 [README.md](README.md); this file is the short version to read first. Update it at the end of
 every working session.
 
-## State (2026-10-02)
+## State (2026-10-03)
 
-- **Pack:** 24 folders, 746 sprites, in Kartofuchs as its own pack Fuchsbau (`art/Fuchsbau` in
+- **Pack:** 30 folders, 863 sprites, in Kartofuchs as its own pack Fuchsbau (`art/Fuchsbau` in
   the Kartofuchs checkout `$KARTOFUCHS`). `build` installs there since 2026-10-02; commit the art
   in Kartofuchs after a build. The Wonderdraft-installed "Tyrnarra" copy and its Proton mirror
   are gone (identical to Fuchsbau when trashed). Counts per folder: the families table in the README.
