@@ -485,6 +485,13 @@ they did, for reading the results log:
     `special_sites` 32 (two per item): the "fire, glow ... painted red" style put flames on
     items that have none (the Orratzak's needles, the Bridgelands, the gate, the wardstones),
     and several came out raised rather than flat (crater, Bridgelands, Sickwell, web-hold).
+  - Fixes (2026-10-03): the ribboned holy trees kept as `shrine_trees` (`Fuchsbau_Shrine_Trees`,
+    same 30); new `giant_trees` (style `gianttree`, "no ribbons, lanterns, shrines or offerings,
+    nothing red"): 24 of 24, plain pines, firs, cedars, oaks and pale trees. `special_sites`
+    round 2 (style `site2`: each item names its own red part, eye level, no top view): flames
+    only where canon has fire, flatter gate, Sickwell and web-hold; the crater still slightly
+    raised. The flat Bridgelands row is about 4x as wide as tall, so the aspect floor is 0.2.
+    30 installed (two per item, the Bridgelands included).
   - The tower now powers off after three empty-queue checks five minutes apart; batches are
     chained with a 2 s waiter so the queue never sits empty between them.
 - **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with

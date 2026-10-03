@@ -411,8 +411,10 @@ FAMILIES = {
         "kind": "trees", "size": (260, 260), "radius": 80, "offset_y": -110, "aspect": (0.7, 1.6),
         "pack_folder": "Fuchsbau_Fruit_Trees", "file": "fruit_tree_{n:02d}",
     },
-    "holy_trees": {
-        # "Holy or special trees, for the specific giant tree thing" (the user, 2026-10-02): one-off
+    "shrine_trees": {
+        # Round 1 of "holy or special trees" (the user, 2026-10-02): the style's ribbons, lanterns and
+        # shrine roof made every drawing a shrine-tree; the user kept them as shrine trees, and the
+        # plain giants are "giant_trees". Original note: one-off
         # landmark trees, where a scaled-up conifer stood in. Canon has the Soul Tree (Brauogi: "the
         # single massive pale tree" at its island's centre) and Vernua's great tree on the Hegandi's
         # brow. Recolourable: the dark trunk and roots go with the lines (colour 1), the crown is
@@ -432,7 +434,26 @@ FAMILIES = {
                      "huge ancient tree with small lanterns hanging among its branches"],
         "cc_example": ((52, 36, 24), (118, 156, 84), (196, 52, 40)),   # dark trunk and lines, crown green, accents red
         "kind": "trees", "size": (480, 540), "radius": 140, "offset_y": -200, "aspect": (0.7, 2.0), "fill": (0.25, 0.95),
-        "pack_folder": "Fuchsbau_Holy_Trees", "file": "holy_tree_{n:02d}",
+        "pack_folder": "Fuchsbau_Shrine_Trees", "file": "shrine_tree_{n:02d}",
+    },
+    "giant_trees": {
+        # The plain giants (2026-10-03): ancient landmark trees without offerings, for places like the
+        # snowy giants near Hverhofn, where a scaled-up conifer stood in. Recolourable like the shrine
+        # trees: dark trunk and roots with the lines (colour 1), the crown colour 2; nothing red.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["gianttree"],
+        "flux": "A single {variant}, drawn as a landmark tree symbol for a hand-drawn fantasy map, seen from the side.",
+        "subject": "a single {variant}, fantasy map symbol, bold black outlines",
+        "variants": ["colossal ancient pine towering high, a massive straight trunk and a tall layered crown",
+                     "immense ancient pale tree with a vast spreading crown and a huge gnarled trunk, its roots gripping "
+                     "a small rocky mound",
+                     "world tree: an enormous ancient tree whose crown spreads wider than it is tall, thick roots spread "
+                     "wide over the ground",
+                     "ancient towering cedar with wide flat tiers of foliage on a massive trunk",
+                     "giant ancient oak with a broad billowing crown and a thick hollowed trunk",
+                     "ancient giant fir, very tall and narrow, its lower trunk bare and massive"],
+        "cc_example": ((52, 36, 24), (118, 156, 84), (196, 52, 40)),
+        "kind": "trees", "size": (480, 540), "radius": 140, "offset_y": -200, "aspect": (0.7, 2.6), "fill": (0.25, 0.95),
+        "pack_folder": "Fuchsbau_Giant_Trees", "file": "giant_tree_{n:02d}",
     },
     "named_trees": {
         # One themed tree per named landmark, like the god-cities' icons ("Soul Tree could use one as
@@ -457,56 +478,45 @@ FAMILIES = {
         # from its canon lines (file in the comment). Flat 2D like the 2D settlements (the user prefers 2D
         # for sites), recolourable: lines colour 1, stone,
         # ground and hull colour 2, fire, glow, lava, roofs or the paradise's colours colour 3.
-        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["site"],
-        "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen straight from the front, "
-                 "no perspective and no depth, like the symbols on old maps."),
+        # Round 2 (style "site2", seeds 1-32): round 1's "fire, glow ... painted red" put flames on items
+        # that have none, and several came out raised; each item now names its own red part (or none),
+        # and the wording asks for eye level, no top view. The flat Bridgelands row is about 4x as
+        # wide as tall, hence the low aspect floor.
+        "shape": "icon", "draw": "custom_colors", "engine": "flux", "canvas": (1024, 1024), "styles": ["site2"],
+        "flux": ("A {variant}, drawn as a flat 2D symbol for a hand-drawn fantasy map: seen exactly from the side at "
+                 "eye level, no perspective, no top view and no depth, like the symbols on old maps."),
         "subject": "{variant}, fantasy map symbol, bold black outlines",
         "items": [
             # sumendar.md, Dragon's Reach: the mothership broke apart in the air; pieces lie across Talan.
-            ("mothership_fragment", "huge broken fragment of a crashed alien starship half buried in the ground: curved "
-                                    "hull plates, exposed ribs and torn metal, a few glowing cracks"),
-            ("dragons_reach", "city built in and from a vast crashed alien starship hull lying on a volcanic slope: curved "
-                              "hull plates forming its walls, towers and terraces climbing the wreck, furnace glow in its openings"),
+            ("mothership_fragment", "huge broken fragment of a crashed alien starship half buried in the ground: curved hull plates, exposed ribs and torn metal, a few thin cracks glowing red, no fire"),
+            ("dragons_reach", "city built in and from a vast crashed alien starship hull lying on a volcanic slope: curved hull plates forming its walls, towers and terraces climbing the wreck, red furnace glow in a few openings"),
             # myrkono.md, the Seven Wardstones: the Plain stone alone in the grass; the Temple one in ziggurats.
-            ("wardstone", "single tall monolith of dark stone standing alone on a low grassy mound, carved with bands "
-                          "like great chains, a faint glow at its heart"),
-            ("wardstone_ziggurat", "towering stepped stone ziggurat with a great carved monolith set into its summit, "
-                                   "glowing faintly"),
+            ("wardstone", "single tall monolith of dark stone standing alone on a low grassy mound, carved with bands like great chains, a small red glow at its heart, no fire"),
+            ("wardstone_ziggurat", "tall stepped stone ziggurat with a great carved monolith set into its summit, a small red glow on the monolith, no fire"),
             # factions.md, the Nine Dungeons: a shared sealed gate, a dead lair, and the two distinct seals.
-            ("dungeon_gate", "sealed dungeon gate: a massive stone doorway sunk into the ground, closed with great slabs "
-                             "and heavy chains, cracked earth around it"),
-            ("dead_lair", "dead dungeon lair: a dark furnace-cavern mouth in brown ridges, ringed by heaps of grey slag "
-                          "and a few small tents"),
-            ("sickwell", "sealed dungeon of pits and mine shafts under a hanging cloud of sickly miasma, ringed by a stone "
-                         "wall with small watch-fires"),
-            ("stitchery", "sealed dungeon pit in the jungle closed by a huge spider-web seal strung between tall trees"),
+            ("dungeon_gate", "sealed dungeon gate: a massive stone doorway in a low mound, closed with great slabs and heavy chains, no fire and nothing red"),
+            ("dead_lair", "dead dungeon lair: a dark furnace-cavern mouth in brown ridges with a dull red glow inside, heaps of grey slag and a few small tents in front"),
+            ("sickwell", "row of pits and mine shafts under a hanging cloud of sickly miasma, behind a low stone wall with small red watch-fires on it"),
+            ("stitchery", "sealed dungeon pit between tall jungle trees, closed by a huge spider-web seal strung between the trunks, red warning marks painted on the stones around it, no fire"),
             # egulon/argia-esfera.md: flames out of the bare rock, a colour-changing summit fire, a gold forest ring.
-            ("sutarri", "burning mountain: a tall bare rock mountain with hundreds of small flames standing "
-                        "out of cracks on its flanks, one great fire at its summit, a ring of forest at its foot"),
+            ("sutarri", "burning mountain: a tall bare rock mountain with hundreds of small red flames standing out of cracks on its flanks, one great red fire at its summit, a ring of forest at its foot"),
             # ehizahar/fenurra.md: the meteor crater with the capital carved into its inner walls.
-            ("scar_of_aeris", "vast meteor crater shown as a wide low ring-wall of dark rock, a city carved in terraces "
-                              "into the far inner wall rising behind the rim, wisps of volcanic smoke and glowing lava cracks"),
+            ("scar_of_aeris", "vast meteor crater shown as a long low ring-wall of dark rock, a city carved in terraces into the far inner wall rising above the rim, a few red lava cracks"),
             # _continent.md, the Twin Cities: a raft-city with a sky-city hanging above it.
-            ("twin_cities", "pirate raft-city of lashed-together ships and decks floating on the water, with a second "
-                            "city of tethered airships and small floating islets hanging directly above it on long ropes"),
+            ("twin_cities", "pirate raft-city of lashed-together ships and decks floating on the water, with a second city of airships and small floating islets hanging directly above it on long ropes, a few red sails, no fire"),
             # zuzental/legea-empire.md: three sheer needles, the reading-house on the tallest.
-            ("orratzak", "group of three sheer needles of grey rock standing straight out of flat land, a small high house with a "
-                         "red roof perched on the top of the tallest"),
+            ("orratzak", "group of three sheer needles of grey rock standing straight out of flat land, a small house with a red roof perched on the top of the tallest, no fire"),
             # zuzental.md, the Bridgelands: five islets joined by spanning Magitech bridges.
-            ("bridgelands", "cluster of five small rocky islets joined by long arching bridges of metal and stone with "
-                            "glowing rune-lights"),
+            ("bridgelands", "row of five small rocky islets side by side, joined by long arching bridges of metal and stone, small red rune-lights along the bridges, no fire"),
             # nashavel/basogur.md, the Anadi web-holds: silk floors hung between thirty trees or more.
-            ("web_hold", "village of grey silk floors and walkways hung high between many tall jungle trees, silk "
-                         "ladders down to the ground"),
+            ("web_hold", "village of grey silk floors and walkways hung high between a row of tall jungle trees, silk ladders down to the ground, nothing red"),
             # docs/pencilled/seed-bank.md (seed, not canon yet): Galdua Jendea's hanging cities.
-            ("hanging_city", "city hanging in the shadowed face of a rock mountain: houses on ledges and in hollows of "
-                             "the cliff, ropes and walkways, a crystal spring falling from the rock, sand dunes below"),
+            ("hanging_city", "city hanging in the shadowed face of a rock mountain: houses with red roofs on ledges and in hollows of the cliff, ropes and walkways, a crystal spring falling from the rock, sand dunes below"),
             # docs/pencilled/seed-bank.md (seed, not canon yet): Haraour Eliza's old palace in the poisonous paradise.
-            ("dead_palace", "ancient overgrown palace of a forgotten dead civilisation, half swallowed by a vivid "
-                            "jungle of strange brightly coloured plants, inside a ring of mountains"),
+            ("dead_palace", "ancient overgrown palace of a forgotten dead civilisation, half swallowed by a jungle of strange poisonous plants painted bright red, inside a ring of mountains"),
         ],
         "per_item": 2,
-        "kind": "symbols", "size": (380, 340), "radius": 100, "offset_y": 0, "aspect": (0.35, 2.2), "fill": (0.25, 0.97),
+        "kind": "symbols", "size": (380, 340), "radius": 100, "offset_y": 0, "aspect": (0.2, 2.2), "fill": (0.25, 0.97),
         "pack_folder": "Fuchsbau_2D_Special_Sites", "file": "{item}_{n}",
     },
     "holy_mountains": {
@@ -649,11 +659,21 @@ FLUX_STYLES = {
               "with light grey shading; the trunk solid dark brown-black; the fruit or blossoms painted in flat strong "
               "colour. Simple and readable at small size. Isolated on a plain white background, nothing else in the "
               "image, no ground, no text."),
-    # Holy trees (custom colours): crown pale, trunk dark (joins the lines), offerings coloured.
+    # Giant trees (custom colours): crown pale, trunk dark, no offerings and nothing red.
+    "gianttree": ("Bold black brush-pen outlines; the crown drawn as a few big rounded or layered shapes left plain "
+                  "pale cream with light grey shading; the trunk and roots solid dark brown-black. No ribbons, lanterns, "
+                  "shrines or offerings, nothing red. Simple and readable at small size. Isolated on a plain white "
+                  "background, nothing else in the image, no ground, no text."),
+    # Shrine trees (custom colours): crown pale, trunk dark (joins the lines), offerings coloured.
     "holytree": ("Bold black brush-pen outlines; the crown drawn as a few big rounded or layered shapes left plain pale "
                  "cream with light grey shading; the trunk and roots solid dark brown-black; ribbons, lanterns or a "
                  "shrine roof, where there are any, painted in flat red. Simple and readable at small size. Isolated on "
                  "a plain white background, nothing else in the image, no ground, no text."),
+    # Special sites round 2: each item names its own red part, so the style names none.
+    "site2": ("Bold black ink outlines; stone, ground, metal, wood and walls left plain cream-white or pale grey with "
+              "light shading; only the parts the description calls red painted flat red, nothing else red, no fire "
+              "unless described; no flags or banners. Simple, clean and readable at small size. Isolated on a plain "
+              "white background, nothing else in the image, no text."),
     # Special sites (custom colours): stone and ground pale, fire, glow and roofs the accent.
     "site": ("Bold black ink outlines; stone, ground, metal and walls left plain cream-white or pale grey with light "
              "shading; fire, glow, lava, roofs and bright plants painted in flat red; no flags or banners. Simple, "
