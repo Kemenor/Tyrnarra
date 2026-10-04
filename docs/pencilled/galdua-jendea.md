@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the telling committed at [`../../lore/geography/lioaru/galdua-jendea-telling.md`](../../lore/geography/lioaru/galdua-jendea-telling.md).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
 - **Phase 5 (government): closed** (GM, 2026-10-04).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-04).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -115,6 +116,22 @@
 - **"The mother rock"** (GM's phrase) rhymes with Lenama, the mother whale (crown / chain): kept as a deliberate kinship echo; the name at Phase 8.
 
 **Census (authoring only):** nearest is a crown with sworn houses, but the bond is a debt for a rescue, not fealty (real world: the Delian League); A's nearest the Basogur and the federated free-towns; C the Guild Sovereign's precedent and a gerontocracy. "The chain" is a working label (Vernua's "oligarchy of the chain"); Phase 8 names it. Appendix B of the skill gains the form at Phase 11.
+
+### Phase 6: economy (closed 2026-10-04)
+
+- **Subsistence: they feed themselves.** Inside each massif the canyons and gorges hold the food: the spring runs down them, the walls shade them (canyon pools and gardens deep in the shade, date palms where the sun reaches; the Sahara's massifs as the model). Shade-gardens and terraces hang on the shaded faces with the city. Small hardy goats on the rock, never the sand. Lean years: grain and oil from Tahu Tangata and valley food from the Duchies by night caravan; each daughter can call on the great rock's stores.
+- **The draw:** finding Valreka (the water-roll says where the herd waters next; canon's "nobody outside Galdua Jendea knows" stays true, because the great rock does); water and shelter for anyone crossing the southwest; the wing-post (the fastest word across the southwest short of an airship); the frontier (the Lost Kingdom's spawn, the legions, rock 18: adventurers' work the rocks hire); the troupes and Emarrea's taste for the place.
+- **The great trade: salt.** Salt pans out on the sand, worked by night, carried rock to rock by the sand-gliders, out at rock 3 to Tahu Tangata and the rail, at rock 4 to Emarrea, at 6 and 7 to the Duchies' river (Taoudenni's salt caravans as the model).
+- **Spring-crystal (rock crystal):** the springs rise deep and mineral-heavy; the minerals settle in the basins over years and grow clear crystal along the edges, by accident wherever water stands. The keepers' (each spring is its keepers'): a steady, controlled trade in lenses and ornament stone.
+- **Time sand (GM; name at Phase 8):** the region's rare export, found only here, from Tani's death. **Two sources:** the **basins** (in the oldest, deepest springs, fine grains settle out with the crystal; the keepers gather it a pinch at a time; **mostly the unfallen's old springs**, one more reason they are richer) and the **pale band** along the Blackened Lands (sand where moments repeat; a few old families have gathered it by night for generations, some never come back; since 2524 the Rot-Tyrant's legions range there, the wild sand grows scarce, and the basins' sand and its holders grow stronger). **What it does:** keeps what it touches from aging (Tani's Decay held still): a thing buried in it comes out as it went in, which is why the Lost Kingdom's ruins read newer than they should and Valreka's digs lift Oroiri whole; uses: alchemy and enchanting (slowing, quickening), preservation, true hourglasses. **Semi-restricted:** time sand leaves the chain only under the great rock's seal, with the chain-due taken; each spring's keepers sell their own, through the seal. Muddy line: the unfallen with sand-springs want to sell direct; the great rock says the seal keeps the price up and the sand out of the wrong hands. What time sand really is: a Phase 9 secret candidate.
+- **Also sold:** dried canyon fruit; guides and sand-pilots; the wing-post's service. **Bought:** grain and oil (Tahu Tangata); **light timber and cane for the wings and sledges** (no trees on the rock; Tahu Tangata's forest belt, Emarrea); cloth; metal off the rail.
+- **Valreka: the water is given, never sold** (GM): the rocks welcome all in need of water, and Valreka is no exception; and a city coming to your doorstep is a great boon, doubly so when it is bigger than yours. The herd gives back what it carries (river grain, Duchies goods, word from everywhere, sometimes a recovered piece of the past): a gift-exchange at the watering.
+- **Routes:** inside, the night caravans rock to rock and the wings by day. Doors out: **rock 3** across the great river to Tahu Tangata (Ahika and the rail ~100 mi beyond, Eldara's line to Merkavar), the chain's door to the continent and its choke point; **rock 4** to Emarrea; **rocks 6 and 7** to the Duchies' river; **rocks 9 and 10** small landings on the Hafra. No rail.
+- **Canon move 6 (GM yes): the Guild Post.** `lioaru.md` (*The roaming costs the Bank nothing and the Post half a shoal*): the Whalehall pays the Outrider Corps to run Valreka's sacks to the nearest rock, and the chain's wing-post carries them on; inbound letters for Valreka go to the great rock, which knows where the herd waters next.
+- **Stake in the tension:** the great rock holds the water-roll, the wing-post, the chain-due and the time-sand seal; the daughters pay the due and the labour; rock 8 watches the legions eat its salt-roads and the wild sand of the south-west while the great rock waits.
+- **Table note:** no plain glider in the PF2e database; nearest Golden Wings (L3, rare, magic assisted leaping) and Dragonaut's Wingsuit (L9, uncommon); the air-wing wants a small homebrew item or vehicle treatment, on the table side. Time sand reskins: Grim Sandglass, Redsand Hourglass, Jar of Shifting Sands.
+
+**Sameness (authoring only):** the bindstone rush (No Man's Land): time sand is no rush, the wild gathering old, small and shrinking, the real supply the quiet basins. The Golden Coast seed's glass that "remembers what the sand was": time sand *keeps* things from changing, that glass *shows* a past; that build should know time sand exists.
 
 ## Rejected options
 
