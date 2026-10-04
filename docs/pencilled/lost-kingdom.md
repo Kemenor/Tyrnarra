@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-04).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-04).
 - **Phase 2 (seeds): closed** (GM, 2026-10-04).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the record committed at [`../../lore/geography/lioaru/lost-kingdom-lantern.md`](../../lore/geography/lioaru/lost-kingdom-lantern.md).
+- **Phase 4 (place, peoples and history): open.**
 
 ## Phase 0: settled facts
 
@@ -38,8 +39,21 @@
 
 **Sameness (authoring only):** Talan has no magocracy (a new form for the census). Legea is a demigod theocracy whose founder ascended by belief: ascension sits near, but Legea is a holy line and this is might. Valreka owns "the buried returns": the returned claim the same faith from the other side.
 
+### Phase 3: traveller's image (closed 2026-10-04)
+
+**The image (GM's offer, replacing the three candidates):** a Roll party of four walks into the Lost Kingdom for a commissioned recovery; in the black haze they fight through a ruin of the land's mindless dead; a lord of the dead in rusted armour finds them, the dead stand aside for it, and it kills the party's leader; the people of the cursed land come out of the haze and save them (a Skeleton caster in the old tongue, a Fleshwarp dragging up the sand, a living woman before whom the dead lie down); a scant moment of talk ("We live here"; "You cannot leave him in this ground… He will march with them by morning"); then the sound of the Rot-Tyrant's army walking, "not a drum… feet".
+
+**Form (GM):** a memory caught in an object. The curse's own mechanism (moments repeat or pool in that ground; ⚿ Galdua's tagnit: Tani's death holds time still there), so no new magic. **A Whalehall relic-ledger entry** (the vault under Anzar; an appraiser of the Brokers' Walk) plus the transcription of the moment as it plays, present tense, sights, sounds, words, no thoughts; the appraiser's struck line at the end. **The object:** the Storveldi bronze lantern the party was sent for, cold whatever the room; the client declined delivery after one handling; held in the vault, not for sale; handled by the ring only. **The memory imprinted so strongly because the leader died in it** (GM). **The party:** four, Platinum; three returned; the leader's body not recovered (left to the cursed-born, who "will see to him"). **The lord** is destroyed (burned empty from the inside), a captain of the legions in rusted armour; the mindless dead obey it. **Year:** 2531 MR. **Placement:** own in-world file, published whole as a log card, excerpts at section heads.
+
+**New terrain fact (GM):** a constant blackened-sand haze over the Lost Kingdom; clear days very rare; from the cairns little can be seen.
+
+**Sameness (authoring only):** the Golden Coast seed's glass that remembers and shows a past; this is a moment caught by the cursed ground. That build should know.
+
+**Placeholders for Phase 8:** [APPRAISER], [HOLDER], [CASTER], [SHIELD], [LEADER].
+
 ## Rejected options
 
+- **Phase 3 candidates:** A, the burial after the battle seen from the ridge; B, the hooded guest at Tassast giving 2,500-year-old news under the sunrise law; C, the trade at the cairn. Replaced by the GM's own scene (A's burial survives in it as "we will see to him").
 - **Seed 1, the returned, alone** (rule by the readers of memory): folded into the seed as its divine casters.
 - **Seed 3, the war of two deaths:** better as the live tension (Phase 9) than as the seed.
 
