@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
 - **Phase 5 (government): closed** (GM, 2026-10-04).
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-04).
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -132,6 +133,21 @@
 - **Table note:** no plain glider in the PF2e database; nearest Golden Wings (L3, rare, magic assisted leaping) and Dragonaut's Wingsuit (L9, uncommon); the air-wing wants a small homebrew item or vehicle treatment, on the table side. Time sand reskins: Grim Sandglass, Redsand Hourglass, Jar of Shifting Sands.
 
 **Sameness (authoring only):** the bindstone rush (No Man's Land): time sand is no rush, the wild gathering old, small and shrinking, the real supply the quiet basins. The Golden Coast seed's glass that "remembers what the sand was": time sand *keeps* things from changing, that glass *shows* a past; that build should know time sand exists.
+
+### Phase 7: daily life (closed 2026-10-04)
+
+- **The day runs around the noon:** pre-dawn the caravans land; morning the work in the canyon gardens while the shade is cool; **the white hours** (late morning to mid-afternoon) the rock withdraws into its deep rooms and sleeps or works indoors, only the wings out; evening the markets on the ledges at dusk as the sand-gliders go down the dune-ramps; night the caravans out.
+- **The daily ritual: the calling of the spring.** Every dawn the keepers measure the spring and call its flow aloud from the spring-hall, passed ledge to ledge (*"the spring stands at nine fingers"*); the number the water-roll reports to the great rock; listened to like the weather, a falling number the news everyone dreads.
+- **The great ritual: the watering**, years apart: the rock's festival, census and market in one.
+- **Senses and habits:** **the dusk bloom** (shade-growing Ghoran keep their flowers closed through the glare and open them at dusk, the whole rock's evening scent at once; the sun-hardy bloom at noon, which is how you spot one); the cold of spring water and the smell of wet stone in the spring-halls; salt on everything, dates, goat cheese. **Speech:** *"How is your water?"* for *how are you*; *"before the sun"* for *in time*; the worst said of anyone, that they'd shut the door at sunrise. **The vice: holding a moment**, a pinch of time sand (illegal outside the seal) to linger in a good moment a little longer than the world allows; a rich person's vice that shades into something sadder in the old.
+- **Movement:** inside a rock, stairs, ropes, hanging walkways, basket-lifts on the cliff faces; between rocks, the caravans and the wings. **Signature movement: the dusk launch**, every rock's caravans sliding down the dune-ramps together at sunset.
+- **Visitor against native:** visitors go out at noon (some die of it); a visitor tries to pay for water and gives offence; a visitor takes the sunrise law for free lodging, where custom has the guest give their news first, as the herd gives back what it carries; a native knows the herd is coming before the bells (the water-roll said so weeks ago).
+- **Youth:** the sanctioned transgression, **the noon wings** (dares, racing the thermals, flying out to the herd), kept in check by **the wing-masters**, who own the ledges and ground anyone who flies past sense. **Coming of age: the first night-run**, crossing to the next rock as a caravan hand, out at dusk, in before the sun; shade-grower or sun-hardy, everyone. A slope: carried on a parent's two-seat wing, then ledge to ledge, then the first run, then the wings or the keeping.
+- **Faith as lived (GM yes to the new goddess and the Solyra altar):**
+  - Every spring-hall is a shrine; the keepers are as much clergy as Valreka's memory-keepers. Quiet, constant faith: water given in her name, the dead remembered by the place they lived; no temple of Valreka's sort (the sanctum rides Lenama; the herd's priests come at the watering).
+  - **A new minor goddess of springs, belief-formed in the Dark Era** (name at Phase 8; *iturri* is Iturima's, so out): when the springs failed and rocks fell, the keepers prayed for the water, and Tani (Decay; a spring drying is her too) was the wrong goddess to ask; they prayed to the water itself, to no one in particular, rock after rock, for centuries, and the prayer coalesced (Uthra's mechanism) into a small goddess of **springs, wells, hidden water and water given**. Minor Goddess, Layer 3, Elysium; templed only in the spring-halls. The keepers keep both: Tani the memory and the dead, she the water; the spring-hall a shrine to two goddesses. Valreka's Azarketi water-bearers may feed her faith too. As a belief-formed god she believes what her faithful believe (Phase 9: a secret, or just how such gods work).
+  - **Shuun** a little at the chain's doors (rock 3's river-landing, the Duchies side), kept by river-traders: pockets. **Urzar** acknowledged quietly for the water's nature (canon's pattern). **Solyra**: the wing-folk keep her altar on the high ledge and thank her at noon for the lift; the rest of the rock fears her and does not say so.
+- **Canon move 7 (GM yes):** `lore/gods.md` gains the spring-goddess under *Named Non-Bound Gods*; her cleric domains go on the PF2e registrar at publish.
 
 ## Rejected options
 
