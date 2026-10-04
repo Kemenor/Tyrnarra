@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
 - **Phase 7 (daily life): closed** (GM, 2026-10-04).
 - **Phase 8 (naming): closed** (GM, 2026-10-04).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-04).
+- **Phase 10 (draft): open**; the draft at [`galdua-jendea-draft.md`](galdua-jendea-draft.md).
 
 ## Phase 0: settled facts
 
@@ -190,8 +191,21 @@ Tamazight words checked against sources (English Wiktionary; dictionnaire-kabyle
 
 **Still open (names):** the other eleven living rocks (map labels); the Desert Palm's PF2e mechanics (table side).
 
+### Phase 9: tension and reveal (closed 2026-10-04)
+
+**The live tension: Tazrut, and who takes it back.** The frontier rock lies on the legions' ground. Tassast (unfallen) has always meant to retake it and cannot alone; Yemmazru could, and is in no hurry. Stated as fact, left open, won by nobody. Sides and stakes: **Tassast** and Lunja n Tassast (survival: with the legions on Tazrut, Tassast is the next frontier; its salt-roads and the pale band's wild tagnit are shrinking); **Yemmazru** and Yugurten (retaking makes Tazrut a ninth daughter and puts Yemmazru on the Lost Kingdom's edge; it waits for terms); **the unfallen** (a ninth daughter tips the Necklace further; some quietly prefer Tazrut stay lost); **the daughters** (the retaking would be their *tiwizi*, their labour and their dead, under a merwas they say is paid).
+
+**◈ Popular Belief (GM: both A and B):**
+- **A. Nanaman weeps at the dead spring.** Caravans sheltering on Taghbalut swear that on still nights they hear water running in the empty spring-hall, where none has run for centuries. Folk say Nanaman goes back to the springs she lost and weeps there, and that a rock that stays faithful never goes dry: a comfort the unfallen use as a boast and the daughters hear as an accusation. *(Placed after the keepers and the springs.)*
+- **B. A held moment is taken from your last day.** Every moment held with tagnit is subtracted from the end of your life, so the old who hold the most die soonest; said to shame the rich. It may be true. *(Placed after salt, crystal and tagnit, before K1.)*
+
+**⚿ GM Secret (GM: K1 only): what tagnit is.** *Chronicle surface:* tagnit comes only from the oldest, deepest springs and from the pale band against the Blackened Lands, and no one knows why. *Truth:* the springs draw on one great deep water beneath the whole sand sea (the real Nubian aquifer as the model); its oldest water passed under the place where Tani was killed. Tagnit is the stillness of her killing, the moment the divine retaliation stopped time in that ground, carried up a grain at a time in the water; the pale band is where it lies nearest the surface. *Weight:* every rock's water, the water given to the herd too, passed beneath where she died; the unfallen's wealth is drawing deepest, closest to her death; holding a moment is holding a grain of the instant a god was killed; Valreka's digs lift Oroiri whole because her death keeps her city; the Lost Kingdom's ruins read newer than they should for the same reason. *Canon check:* consistent with the Lost Kingdom's time-warped strata; Betibizi the separate focus of the necromancy; Tani's own secret is the gap *between* death and rebirth, untouched. *(Placed after salt, crystal and tagnit.)*
+
+**Section weights** (proposed, GM made no change): the Necklace, rock and sand, the two clocks (medium); **the watering** (heavy, the signature; the telling's excerpts); the keepers and the springs (medium, ◈ A); **Yemmazru and its daughters** (heavy); salt, crystal and tagnit (medium, ◈ B, ⚿ K1); the frontier (medium, the live tension); daily life (medium); what a Galduan is called (short). Named figures, Voices, Still open after; the telling published whole at the end.
+
 ## Rejected options
 
+- **Phase 9:** ◈ C (never miss a watering, or lose a year) not taken; ⚿ K2 (the first daughter, *Tamezwarut*, emptied by a false water-roll reading) not taken; ⚿ K3 (Nanaman believes her faithful) none at this level.
 - **Naming:** S2 (given + ledge + rock, daughters naming their mother) heavy; *Urarri* (Court Tongue "water-stone", the unfallen's name for the great rock) not taken; Aghbalu and Nantala for the goddess (*Tala* too near Talan); *akud* for time sand (a modern coinage); *Azar* (collides with Azarketi and Anzar); *skiff* (reads as a boat); *stillsand* (stillships) and *slowsand* (Tahu Tangata's slowgold) out.
 - **Government A, the chain with no centre:** each rock alone, only a unanimous meeting binds; nobody can make the chain act. Its sunrise law kept under B.
 - **Government C, the keepers' memory** (rule by remembered precedent, the eldest weighing most): a gerontocracy that silences the Nagaji; the seed generalized into rule.
