@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
 - **Phase 5 (government): closed** (GM, 2026-10-04).
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-04: "looks fantastic").
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -98,6 +99,16 @@
 - **Partners:** Tassast (the cairn trade; the disguised few who leave by its sandsails under the sunrise law); the Guild (through Tassast and the Whalehall); the Brokers' Walk on Anzar, at one remove.
 - **Routes:** no rail (the page's "No rail possible" stands); overland, the ridge, the cairns, Tassast's sandsails beyond; by sea, a small harbour where a few **smugglers** put in by night from along the Hafra coast, the other way out for the leaving. Choke point: the cairn line.
 - **Stake in the tension:** the ruler pays outsiders in what the ruins give for help against the Rot-Tyrant, and every relic paid out is the city's only wealth leaving it; the ascension-cultists at the edge offer most for the dangerous things; the strongest arcane caster knows what the deepest ruins might still hold.
+
+### Phase 7: daily life (closed 2026-10-04)
+
+- **The day:** under the haze day and night barely differ; the city keeps time by the watch on the wall. The kept and the warped fish at first light and work the cisterns and the stores; the risen, who neither eat nor tire, work the wall, the ruins-salvage and the long hours. At dusk every warden lights their stretch of the wards, and the city glances up to count them.
+- **The civic rite: the seeing-to** (from the lantern's "We will see to him"): every body that falls in or near the cursed ground is broken and buried before the ground can raise it (an enemy's, a friend's, an outsider's, and one of their own risen whose soul has gone), so nothing is left whole for the Rot-Tyrant; done by the dead's own people where they can, by anyone where they cannot, with a few words to Tani.
+- **Senses and habits:** black sand in everything (the bread of the living, the joints of the risen); the sea, the one clean smell and the reason the city stands where it does; the sound some nights, the legions walking somewhere in the haze, and the city going quiet to hear which way. **Speech:** *"Whose was it?"*, the first thing asked of someone who has just had a flash, and the answer a guess, *bones*, *soul* or *ground*; Talanese with an old shape to it, the old tongue coming back through the flashes; *"We live here"*, said to an outsider, and it ends the argument. **The vice: going in**: going inside the ring, nearer the capital, to have more flashes, a few hours lived in the old kingdom the bones remember; people come back quieter, and some come back wanting the old road (the mirror of Galdua's holding a moment).
+- **Movement:** on foot along the wall-ways; salvage parties out to the ruins, always with a caster; the ridge path to the cairns, or the smugglers' boats by night. **Signature movement: the salvage party**, roped together into the haze so no one is lost in it, a ward-light carried at its head.
+- **Visitor against native:** a visitor sees undead and draws steel (the meat-on-a-stick trope walks in with them); a visitor cannot tell a citizen from a legion soldier in the haze, and a native can: **the legions march in step; the risen walk out of step, each as the person it is**; *the dead who march in step are not ours*. A visitor takes the masks for shame; natives wear them only to go out, and at home a face of bone is a face.
+- **Youth:** the risen have no childhood, but every one was new once. For the living and warped children, the coming of age is **the first watch on the wall**; for the risen, **the first flash they can read**, when they can say *whose* and be believed, and that is when a newly risen takes a name. The sanctioned transgression, **the edge-walk**: the young go up the ridge to look at the living world from the cairns and come back before they are missed; the wardens pretend not to know until someone does not come back. A slope: trusted farther out one watch at a time.
+- **Faith as lived:** Tani is the city's faith, the ruler her divine caster on the seat; the elder face is the one kept (the one who remembers). Betibizi has priests in the city who say the cursed-born are his, since his resonance raised them; tolerated as long as they hold their stretches of the wall. The Duskwalkers are where the dead lie down (the woman in the lantern is one; the city needs no word for it). Rites: the seeing-to; the ward-lighting at dusk; the pilgrims' offerings at the ring's edge, which the city leaves where they lie.
 
 ## Rejected options
 
