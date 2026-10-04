@@ -209,6 +209,11 @@ Pace as stories want them. Rolling work.
 
 ## § Regions: Lioaru
 
+### [Lost Kingdom] Post-build texture
+**Decided.** Built 2026-10-05: `lore/geography/lioaru/lost-kingdom.md`.
+**Open.** Vardana's own name; what the deep ruins still hold; the Rot-Tyrant's identity (parked candidate: one of the two Storveldi sovereigns, remade by the Corrupted God; needs a ruling on what became of his shard); how the city acclaims a greater holding; the holds among the coastal ruins by name; the smugglers by name; the Duskwalkers of Ida.
+**Where.** `lore/geography/lioaru/lost-kingdom.md`; `lore/factions.md` (the Nine).
+
 ### [Galdua Jendea] Post-build texture
 **Decided.** Built 2026-10-04: `lore/geography/lioaru/galdua-jendea.md`.
 **Open.** The eleven other living rocks by name (map labels); how a rock chooses its keepers; the salt pans by name; the wing-post as an institution (who keeps the wings, what a letter costs); the River Duchies and Hareaveldi seen from the rocks (at their builds); whether Valreka's Azarketi water-bearers keep Nanaman; the Desert Palm's game mechanics (table side); Nanaman on the PF2e registrar.

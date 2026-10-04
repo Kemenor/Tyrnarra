@@ -13,7 +13,10 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
 - **Phase 7 (daily life): closed** (GM, 2026-10-04: "looks fantastic").
 - **Phase 8 (naming): closed** (GM, 2026-10-05).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-05).
+- **Phase 10 (draft): closed** (GM, 2026-10-05: "commit then publish"); the draft at [`lost-kingdom-draft.md`](lost-kingdom-draft.md).
+- **Phase 11 (commit lore): done** (2026-10-05). Built: `lore/geography/lioaru/lost-kingdom.md`.
+- **Phase 12 (publish): open.**
 
 ## Phase 0: settled facts
 
@@ -138,8 +141,23 @@ Avestan and Old Persian words checked against English Wiktionary and J. H. Peter
 
 **The lantern's placeholders:** [LEADER] **Idir Skjol Anzar** (Valrekan, Guild-sworn); [HOLDER] **Amayas n Tassast, of six** (Galduan); [SHIELD] **Brin Twicefallen** (Noman, a fire-name); [CASTER] **Aroha Hinekura Ngaiti** (Tangatan); [APPRAISER] **Dihya Ardats Anzar** (Valrekan, Guild-sworn).
 
+### Phase 9: tension and reveal (closed 2026-10-05)
+
+**The live tension: who kills the Rot-Tyrant.** Whoever does it does the greatest holding and rules Ida. Sides: **the Daraya, Rauca Urvan**, and Tani's faithful (her seat, the city staying the goddess's; she needs help and every helper is a successor); **Vindafarna Ast Arshama** and those who remember the old way (the seat and the city's direction; he has already saved a Guild party once); **the outsiders**, Guild parties out of Tassast and the Whalehall (the second General ever felled, and the muddy edge of who rules Ida if they do it); **Betibizi's priests**, holding their stretches and waiting. Next door, Tassast wants Tazrut back and Yemmazru waits for terms.
+
+**◈ Popular Belief (GM):**
+- **The dead eat the living** (meat on a stick, moved): kept, a cheap tale, and the cheapness makes it real. The oldest horror told of the Old Race (they ate the flesh of mortals as everyday food, meat on a stick from the street vendors) has moved to whoever lives in the killers' ground; to most of Talan the dead are the dead.
+- **A. The Daraya's marthras are the goddess's own**: the faithful say Rauca Urvan's flashes are Tani's last sight on the day she fell, and that this is why the gate held under her hand. *(Placed with the one who holds.)*
+- **B. The marthra of the killing**: the flash everyone fears, the goddess's fall seen from the ground where it happened; those who come back from going in having had it are quieter; whose memory it is is the oldest argument in the city. *(Placed with going in.)*
+- **Retired:** *the Old Race who killed Tani* (as a belief it held the truth; the chronicle's open prose carries the dispute); *the pilgrims speak of a voice* (the memories replace it); *the Inheritors* (the Azarketi's claim lives in their entry and in Valreka).
+
+**⚿ GM Secret (GM: K2 alone): Vindafarna's bones.** *Surface:* the strongest arcane caster in Ida, remembered name Arshama, whose bones remember the old way. *Truth:* his bones were one of the Storveldi ruling class, a demigod who died at Vardana in the retaliation, and his marthras carry true pieces of **the integration procedure**. *Weight:* canon's "fragments persist on Talan", one of them walking Ida's wall; his might; why the ascension-cultists court the cairns; why the old-road pressure is more than nostalgia; why the bound thirteen, who suppress integration work, would care who rules Ida. The page's existing ⚿ (the Storveldi Denbora's real history) stays.
+
+**Section weights (GM approved):** what the land is, the signs of the curse (medium); why the land is this way + ⚿ the Storveldi (medium); **Ida: the risen, the warped, the kept** (heavy, opening with the lantern); **the one who holds** + ◈ A + ⚿ K2 (heavy); the Dakhma and the legions, the live tension (medium); the ancestries of the cursed ground (medium); the cairns and who goes there + ◈ the dead eat the living (medium); daily life + ◈ B (medium); what the people of Ida are called (short). The Lost Isle section removed; the lantern published whole at the end.
+
 ## Rejected options
 
+- **Phase 9 secrets:** K1 (the risen's souls are Epairima's reversal verdicts): the shape is worn (a god's work its own servants unknowingly fight; Zaharsuge, the Voroir Daua), and 15,000 is the standing count after 2,500 years, so far from rare. K3 (the Rot-Tyrant is a Storveldi sovereign remade): left for the General's own day; needs a ruling on his shard.
 - **Naming:** S2 (soul in bones: *[chosen] ast [the bones' name]* for the risen, a parent's name with *-an* for the born-living), thinner for everyone but the risen.
 - **Government V2, the proof** (anyone may go inside the ring; the deepest return rules): Storveldi to the bone, kills the strong the wall needs. **V3, the circle of the strong** (a council of each school's strongest): another council. **"The ruler rests on a war it has no reason to end"**: withdrawn on the GM's correction (inaction lets someone else make the kill and rule).
 - **Population A** (keep the wild-country rule, ~116,000, a city of ~3,500): a town, wrong for a people walled into one city.

@@ -115,7 +115,7 @@ So every rock's water, and the water given to the herd, has passed beneath the p
 
 **Tassast** is the south-western rock, an unfallen one, the last living rock before the pale band. A hundred miles beyond it, out in the pale band, stands **Tazrut**. The cursed ground's spawn emptied it in the Dark Era, and it stood empty for centuries with its spring still running, too near the blight for anyone to stay. Tassast has always meant to take it back.
 
-Since 2524 the Rot-Tyrant's corpse-legions have ranged out of the Blackened Lands across the pale band, and Tazrut lies on their ground. Tassast cannot retake it alone, and every year the legions hold it, Tassast is the frontier, its salt-roads to the south-west fewer and the pale band's wild tagnit harder to gather. It hires adventurers for the watch-works, more each year.
+Since 2524 the Rot-Tyrant's corpse-legions have ranged out of the Dakhma under Vardana, across the pale band, and Tazrut lies on their ground. Tassast cannot retake it alone, and every year the legions hold it, Tassast is the frontier, its salt-roads to the south-west fewer and the pale band's wild tagnit harder to gather. It hires adventurers for the watch-works, more each year.
 
 Yemmazru could retake Tazrut. Reclaimed by Yemmazru, Tazrut would be a ninth daughter, and Yemmazru would stand at the Lost Kingdom's edge; Yemmazru is in no hurry, and waits for terms. Some of the unfallen would rather Tazrut stayed lost than see the Necklace tip further. The daughters know whose *tiwizi* a retaking would be, and whose dead. The argument comes to every watering.
 

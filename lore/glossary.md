@@ -304,7 +304,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Valreka** (the Whale-Borne City): Icelandic *hvalreki* (a beached whale; a windfall, a godsend) → *h-*loss, soften → **Valreka**, "the whale-drift," with the buried sense of the lucky thing the sand gives back. Tani's roaming god-city, refounded at her rebirth, riding sand-whales across Galdua Jendea to recover Oroiri.
 - **Oroiri**: Basque *oroit* (memory) + *hiri* (city) → contraction, *h-*loss → **Oroiri**, "the city of memory." Tani's buried Gods'-Era holy city, scattered under the desert at her death; Valreka roams to recover it piece by piece. Distinct from the **Storveldi Denbora**, whose separate ruin is the Blackened Lands; "Denbora" now names only that cursed empire.
 - **Galdua Jendea**: the Court Tongue, Basque *galdu* (lost) + *jende* (people), each with the article *-a* → **Galdua Jendea**, "the lost people". Given at the hinge of 1 MR to those who kept to the rock when Tani's faithful took to the whales. The older chronicles' reading "the Place of Many Waters" has no root in the word. The great dune sea of Lioaru, Valreka's range, and Azrar. Full block below, *Galdua Jendea*.
-- **Lost Kingdom**: modern English; temporally unstable ruins
+- **Lost Kingdom**: plain Talanese. Folk names: **the Blackened Lands**; *the black spot on the map*. Full block below, *The Lost Kingdom*.
 - **River Duchies**: modern English
 - **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru.
 
@@ -875,6 +875,32 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Dear and cheap.** The herd waters at Yemmazru most years and at the edge rocks years apart, so counts compare only within a rock; a Galduan asks *where* before *how many*.
 - **Away.** A Galduan who leaves keeps rock and count; the count stops while they are gone.
 - **Sound rules of the rock dialect.** A rock is *she*: places on the rock take the feminine *ta-…-t* frame. The rock keeps its endings where Valreka wears them off (*tiwizi* on the rock, *Tiwiz* in the herd).
+
+**The Lost Kingdom (Lioaru):** Avestan and Old Persian checked 2026-10-04 (English Wiktionary; J. H. Peterson's Avestan Dictionary, avesta.org); Basque *mugarri* checked 2026-10-05 (Elhuyar). Plain letters: š → sh, θ → th, x → kh, γ → gh; archaic endings kept.
+- **Hizva**: Avestan *hizvā* (tongue, language). The tongue of Ida: the oldest form of the south-western tongues, coming back to its speakers through the marthras.
+- **Ida**: Old Persian *idā* (here). The city on the south coast. *We live here.*
+- **Vardana**: Old Persian *vardana-* (town, city). The ruined Storveldi capital, as Ida calls it; its own name is lost.
+- **The Dakhma**: Avestan *daxma* (the place where the dead are laid). The Storveldi ossuaries under Vardana; the Rot-Tyrant's dungeon since 2524.
+- **The Mugarri**: the Court Tongue, Basque *mugarri* (boundary stone). The gods' ring of stones around the killing ground, set in the Week of Crimson Rain.
+- **The Daraya**: Old Persian *dāraya-* (to hold), the first half of *Dārayavauš*. The ruler of Ida, the one who holds.
+- ***pathra***: Avestan *pāθra* (guardian). The wardens of Ida's wall, each holding a stretch.
+- ***marthra***: Avestan *marəθra* (remembrance). A flash of memory of the old kingdom. (Avestan *mar-* alone is "to die"; the "remember" sense lives in *marəθra*.)
+- **Ast**, **Urvan**, **Zam**: Avestan *ast-* (bone), *urvan* (soul), *zam-* (earth, ground). The three readings in a name.
+- **The risen**, **the warped**, **the kept**, **the seeing-to**, **going in**, **the edge-walk**, **the salvage party**, **the haze**, **the cairns**, **the cursed-born** (outsiders' word): plain Talanese.
+
+*Named people of Ida (in the register below):*
+- **Rauca Urvan**: Old Persian *raucah* (day). The Daraya.
+- **Vindafarna Ast Arshama**: *Vindafarnah*, an attested Old Persian name ("finding glory"); remembered name *Arshama* (Old Persian *Aršāma*, Arsames).
+- **Hutaosa Zam**: Avestan *Hutaosā* (Atossa). A Duskwalker of the kept.
+- **Taxma Ast**: Old Persian *taxma-* (brave, valiant; as in the attested *Taxmaspada*). A Fleshwarp.
+- **Utana Zam**: Old Persian *Utāna* (Otanes). The steward.
+
+**The register of Ida: the personal-name convention.** Word-base the oldest Iranian form (Avestan and Old Persian sound), English alphabet, archaic endings kept. Full canon in `geography/lioaru/lost-kingdom.md`, *What the people of Ida are called*.
+- **Form.** *[given] [reading]*, and for many *[given] [reading] [remembered name]*.
+- **The reading.** *Ast* (the bones), *Urvan* (the soul), *Zam* (the ground): the source of the first marthra its bearer could read, taken when they can first say *whose* and be believed, living or risen. It records the guess the city accepted and does not change.
+- **The remembered name.** A name out of the marthras its bearer feels bound to, never certain whether it is theirs; taken by those who have one.
+
+*The lantern's party (in their own registers):* **Idir Skjol Anzar** (Valrekan, Guild-sworn; the party's leader, killed in the Lost Kingdom, 2531 MR); **Amayas n Tassast, of six** (Galduan); **Brin Twicefallen** (Noman); **Aroha Hinekura Ngaiti** (Tangatan); the appraiser **Dihya Ardats Anzar** (Valrekan, Guild-sworn).
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.
