@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-04).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-04).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-04).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -41,9 +42,18 @@
 
 **Sameness noted (authoring only):** airships (~60 mph, premium) against the gliders (local, cheap, sun-powered, no engine or licence); Haizava and Haizetsua own wind and flight in the north (the lift here is heat and sun); the Whalehall's Stokkul outriders carry the Guild Post (Phase 6).
 
+### Phase 2: seeds (closed 2026-10-04)
+
+**The seed: the ones who stayed** (GM took the recommendation). When Tani came back and her faithful took to the whales to dig up Oroiri, some kept to the rock to keep the water. Each rock is held by its spring, the spring by its keepers (rooted Ghoran elders who remember what happened *here*); the signature institution is **the watering of the herd**, two faiths of one goddess meeting at a spring. It explains the name (*galdu jende*, "the lost people"). The two clocks and the archipelago carry on as the texture the seed is lived through.
+
+**Flavour line:** *the lost people, who stayed on the rock to keep the water when the goddess's city rode off to dig up its past.*
+
+**Sameness (authoring only):** Villtur/Veidrath hold settled-against-nomad (here the settled are as old as the nomads and no one is settling now); Valreka's halt-argument (Memory against Decay) must not be restated region-wide: the seed is kinship between two ways of one faith.
+
 ## Rejected options
 
-*(none yet)*
+- **Seed 1, the sun's two faces** (the day turned inside out): kept as texture, weak alone (could move to Hareaveldi with the rock); Myrria's overlapping clocks sit close.
+- **Seed 3, a seafaring people with no sea** (rocks as islands, beacons, beacon-law, sand-raiders): kept as texture; desert-as-sea is a known trope; Burdineyja, Askamira and Balatur Erui close.
 
 ## Open and deferred
 
