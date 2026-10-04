@@ -14,7 +14,9 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-04).
 - **Phase 8 (naming): closed** (GM, 2026-10-04).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-04).
-- **Phase 10 (draft): open**; the draft at [`galdua-jendea-draft.md`](galdua-jendea-draft.md).
+- **Phase 10 (draft): closed** (GM, 2026-10-04: "looks good as is"); the draft at [`galdua-jendea-draft.md`](galdua-jendea-draft.md).
+- **Phase 11 (commit lore): done** (2026-10-04). Built: `lore/geography/lioaru/galdua-jendea.md`.
+- **Phase 12 (publish): open.**
 
 ## Phase 0: settled facts
 
@@ -157,7 +159,7 @@ Tamazight words checked against sources (English Wiktionary; dictionnaire-kabyle
 
 **Register.** Word-base **Tamazight**, shared with Valreka. Galdua's sound rules: (1) **a rock is "she"**: places on the rock take the feminine *ta-…-t* frame; (2) **the rock keeps its endings, the herd wears them off**: Valreka drops final vowels (*tiwizi* → Tiwiz, *tiziri* → Tizir), rock-speech keeps them whole; (3) plain letters, ḍ ẓ ɣ → d z gh, ɛ dropped. **The local tongue: *Awal*** (Tamazight *awal*, speech, word, language): one tongue for the rocks and Valreka, the rock dialect conservative, the herd's worn by travel; the River Duchies speak a sister; chroniclers keep "the whale-tongues".
 
-**Personal-name structure (S1, the watering count):** **given + *n* + rock + the waterings stood** (*Aksil n Tamalut, of sixteen*). At each watering the keepers count everyone present and the count rises by one; a child has no count until their first watering; a stranger who stays through a watering earns *of one*. Counts are not comparable across rocks (the herd waters at Yemmazru far more often: a Yemmazru count is cheap, a Tamalut count dear), so a Galduan asks *where* before *how many*. No other region carries a number in its names.
+**Personal-name structure (S1, the watering count):** **given + *n* + rock + the waterings stood** (*Aksil n Tamalut, of sixteen*). At each watering the keepers count everyone present and the count rises by one; a child has no count until their first watering; a stranger who stays through a watering earns *of one*. Counts are not comparable across rocks (the herd waters at Yemmazru far more often: a Yemmazru count is cheap, a Tamalut count dear), so a Galduan asks *where* before *how many*.
 
 | Slot | Name | Etymology |
 |---|---|---|
@@ -185,9 +187,11 @@ Tamazight words checked against sources (English Wiktionary; dictionnaire-kabyle
 - **Aksil n Tamalut, of sixteen** (HIM): *Aksil*, a historic Berber given name (the king Kusaila). Desert Palm Ghoran, an adventurer of Tamalut forty years on the sand and over it, who never missed a watering.
 - **Takane no Hana, of one** (HER): a kitsune player of the Kageroza; *Takane no Hana* her stage name (Japanese *takane no hana*, "the flower on the high peak", an out-of-reach love; *takane*, high peak, ironic for a woman afraid of heights). *Of one* the Galduans gave her: she stood through one watering, and she keeps it on the troupe's bills.
 - **The Kageroza** (THE TROUPE): Japanese *kagerō* (heat-haze, the shimmer over hot ground) + *-za* (a theatre troupe, as in *Kabuki-za*). An Emarrean company touring the rocks by sandsail.
-- **Dassine n Tamalut, of fifty-one**: the oldest keeper of Tamalut, two hundred years at the door. *Dassine*, a famous Tuareg poet's name.
+- **Dassine n Tamalut, of forty-nine**: the oldest keeper of Tamalut, two hundred years at the door. *Dassine*, a famous Tuareg poet's name.
 - **Yugurten n Yemmazru, of a hundred and twelve**: Yemmazru's chief keeper. *Yugurten*, the Berber form of Jugurtha.
 - **Lunja n Tassast, of twenty-three**: Tassast's keeper. *Lunja*, the heroine of a Kabyle folktale.
+
+**Sameness found at Phase 10 (authoring only; GM chose A, keep the count, 2026-10-04):** Argia Esfera (Egulon) carries a number in its paladins' names (the heat walked on the Long Noon: *Beatriz Fontefria, Fifty-Two*; its tavern legend of "a Fifty-One"), names its people by their **well**, keeps the Aguarda's vow "water given to any who ask, no well closed to a stranger", and stops at the killing noon. The structures differ in shape and sound (*Aksil n Tamalut, of sixteen*: everyone, for presence; Argia: paladins only, for heat); Dassine moved off fifty-one to **forty-nine**; the water-giving and the desert noon kept as shared custom, shown in their local meaning, with no comparison on the page.
 
 **Still open (names):** the other eleven living rocks (map labels); the Desert Palm's PF2e mechanics (table side).
 

@@ -79,3 +79,7 @@ Feelings first → placement second → culture last. Read the domain file and t
 subtitle/domains before proposing (ask for the portfolio if unrecorded). Surface proposed file-prose in
 chat **before** writing anything; corrections produce new text and are **not** a yes; on the explicit
 yes, write the files and commit in the same motion.
+
+## Ancestry heritages
+
+*(2026-10-04, the Galdua Jendea build.)* PF2e's per-ancestry heritages exist on Talan as written. A Tyrnarran ancestry heritage is a body or a carry the place has shaped (the Ghoran's Desert Palm bears the noon), never a job (the flying the rocks build on it is culture, and other peoples fly too). It lives with its place: entered in the ancestry's entry with a pointer to the region, and its game mechanics kept table-side.

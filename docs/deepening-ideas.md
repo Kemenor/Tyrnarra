@@ -104,6 +104,7 @@ Pace as stories want them. Rolling work.
 
 ### [Cultures] Lautara/Lioaru cultural interface
 **Decided.** Post-swap, Lautara's southern border now touches Lioaru directly. Two distinct registers meeting: Eastern silk-road merchants (Lautara) and indigenous desert-nomad culture (Lioaru, Hareaveldi). Cultural exchange line is structural to both domains.
+**Update (2026-10-04, the Galdua Jendea build).** The rocks of Galdua Jendea are settled cities, not nomads; Tamalut is the Emarrea door, where the troupes come in, and salt goes out to Emarrea there.
 **Open.** How Lautaran caravans interact with Lioaru desert traditions; whether nomadic Lioaru tribes serve as caravan-escorts or as independent traders; what the trade balance looks like (Lautaran luxury goods south into Lioaru, Lioaru desert-products north into Lautara); shared religious observances; the standing tension between Eastern court-merchant register and indigenous land-rooted register. Best handled when fleshing out Lioaru (the Hareaveldi build in `open-threads.md` is the natural moment).
 **Where.** [lore/geography/](../lore/geography/), eventually under both Lautaran and Lioaru sub-region files.
 
@@ -205,6 +206,15 @@ Pace as stories want them. Rolling work.
 **Decided.** The Basogur Jungle is canon and published (2026-09-25): Basajun the walking demi-god, the road and its two prices, the Anadi web-hold villages re-strung in part every morning, the Vanara guide-clans, the druid tribes, the Stitchery web-sealed, three registers, Lisette Carrow's crossing log.
 **Open.** The web-hold that is a full city hanging between the trees (GM idea, 2026-09-24); more Vanara clans and druid tribes by name, and the holds off the road; the Lost-Era kingdoms under the canopy (`timeline.md` l.170); the Guild captain of the one fire; whether Hildrun's first price differed from her heirs'; Basajun's cleric domains at the registrar pass.
 **Where.** [lore/geography/nashavel/basogur.md](../lore/geography/nashavel/basogur.md); [basogur.html](../published/setting/talan/domains/nashavel/basogur/basogur.html).
+
+## § Regions: Lioaru
+
+### [Galdua Jendea] Post-build texture
+**Decided.** Built 2026-10-04: `lore/geography/lioaru/galdua-jendea.md`.
+**Open.** The eleven other living rocks by name (map labels); how a rock chooses its keepers; the salt pans by name; the wing-post as an institution (who keeps the wings, what a letter costs); the River Duchies and Hareaveldi seen from the rocks (at their builds); whether Valreka's Azarketi water-bearers keep Nanaman; the Desert Palm's game mechanics (table side); Nanaman on the PF2e registrar.
+**Where.** `lore/geography/lioaru/galdua-jendea.md`; `lore/geography/lioaru.md` (Valreka); `lore/gods.md` (Nanaman).
+
+---
 
 ## § Factions & characters
 

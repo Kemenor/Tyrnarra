@@ -303,7 +303,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 **Lioaru (Time):**
 - **Valreka** (the Whale-Borne City): Icelandic *hvalreki* (a beached whale; a windfall, a godsend) → *h-*loss, soften → **Valreka**, "the whale-drift," with the buried sense of the lucky thing the sand gives back. Tani's roaming god-city, refounded at her rebirth, riding sand-whales across Galdua Jendea to recover Oroiri.
 - **Oroiri**: Basque *oroit* (memory) + *hiri* (city) → contraction, *h-*loss → **Oroiri**, "the city of memory." Tani's buried Gods'-Era holy city, scattered under the desert at her death; Valreka roams to recover it piece by piece. Distinct from the **Storveldi Denbora**, whose separate ruin is the Blackened Lands; "Denbora" now names only that cursed empire.
-- **Galdua Jendea**: Basque; meaning disputed, "Place of Many Waters" (the hidden seeps and sand-springs the Azarketi water-bearers tend) or "Place of the Lost People." Houses Valreka and the sand-whale roaming-range.
+- **Galdua Jendea**: the Court Tongue, Basque *galdu* (lost) + *jende* (people), each with the article *-a* → **Galdua Jendea**, "the lost people". Given at the hinge of 1 MR to those who kept to the rock when Tani's faithful took to the whales. The older chronicles' reading "the Place of Many Waters" has no root in the word. The great dune sea of Lioaru, Valreka's range, and Azrar. Full block below, *Galdua Jendea*.
 - **Lost Kingdom**: modern English; temporally unstable ruins
 - **River Duchies**: modern English
 - **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru.
@@ -837,7 +837,44 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The elder suffix.** **-ghar** (Tamazight *amghar*, elder). No ritual and no date. One day someone younger uses it for you; some years after that you begin writing it yourself.
 - **The dead whale.** A fallen house's people take their new whale's name; the Greymantel alone carry a dead whale's name for life, because the crown took them aboard.
 - **The Guild.** Taking the Guild oath always adds **Anzar** and always strikes the particle. Dropping the birth-whale is the member's own choice, unless Anzar was their birth-whale already.
-- **Scope.** Valreka and Galdua Jendea. Hareaveldi and the River Duchies define their own registers at their builds.
+- **Scope.** Valreka. Galdua Jendea keeps its own register over the same tongue (below); Hareaveldi and the River Duchies define theirs at their builds.
+
+**Galdua Jendea (Lioaru):** sources checked 2026-10-04 (English Wiktionary; dictionnaire-kabyle.com; Glosbe; Wikipedia, *Nanna Tala*). Plain letters: ḍ ẓ ɣ → d z gh, ɛ dropped.
+- **Awal**: Tamazight *awal* (speech, word, language). The tongue of the rocks and of Valreka, the whale-tongues' core; the rock dialect keeps its endings, the herd's wears them off.
+- **Galduan**: Talanese, from the region's name. The demonym.
+- **Azrar**, "the Necklace": Tamazight *azrar* (necklace; also chain). The seventeen living rocks and the two lost, as one country.
+- **Yemmazru**: Tamazight *yemma* (mother) + *aẓru* (rock, stone) → vowels run together. "The mother rock": the great rock's name since it reclaimed the fallen; everyday *Yemma*.
+- ***yessi***: Kabyle *yessi* ("my daughters"). The daughter rocks, as Yemmazru says it, and as they now say themselves.
+- **The unfallen**: plain Talanese. The eight rocks that never emptied.
+- **Tamalut**: Tamazight *amalu* (the north-facing, least sunny slope; shade) in the feminine frame → **Tamalut**, "the shaded one". The unfallen rock on the Emarrea corner.
+- **Tassast**: Kabyle *aɛessas* (guardian, keeper) in the feminine, ɛ dropped → **Tassast**, "the watchwoman". The unfallen frontier rock.
+- **Saltlanden**: Talanese *Salt Landing*, *-ing* → *-en*. A Golden-Era waystation name; the landing on the great river.
+- **Tazrut**: Tamazight *taẓrut* (a rocky island; a pebble), ending kept. The lost rock in the pale band.
+- **Taghbalut**: Tamazight *aɣbalu* (spring, source) in the feminine diminutive → **Taghbalut**, "the little spring". The rock whose spring failed.
+- **Nanaman**: Tamazight *nanna* (elder sister, aunt; an elder woman's honorific) + *aman* (water) → doubled *n* lost → **Nanaman**, "elder-sister water". The goddess of springs, belief-formed in the Dark Era. The real Berber Nanna Tala, spirit of a sacred spring in Libya's Nafusa Mountains, is the inspiration.
+- **Tagnit**: Kabyle *tagnitt* (moment, occasion) → doubled *t* softened → **tagnit**, "the moment". The time sand. Abroad **holdsand**, plain Talanese, after the vice of holding a moment.
+- ***inebgi***: Kabyle *inebgi* (guest; also host). The sunrise law; *under inebgi*, taken in before the sun.
+- ***tiwizi***: Tamazight *tiwizi* (voluntary collective village work). The labour the daughters owe Yemmazru, voluntary in name; the same word as Valreka's whale Tiwiz, its ending kept.
+- **The merwas**: Kabyle *amerwas* (debt) → initial *a-* lost. The daughters' life debt. The debt every rock owes is plain *the due*.
+- **The azwil**: Kabyle *azwil* (seal). Yemmazru's seal on tagnit leaving the Necklace.
+- **Sandsail** and **wings**: plain Talanese. The sail-sledges that cross the sand by night; the gliders that ride the noon.
+- **Desert Palm**: plain Talanese, after PF2e's plant-named Ghoran heritages. The sun-hardy Ghoran heritage.
+- **The pale band**, **the water-roll**, **the calling of the spring**, **the white hours**, **the watering**, **the keepers**, **the spring-hall**, **spring-crystal**, **the wing-masters**, **the first night-run**, **holding a moment**: plain Talanese.
+
+*Named Galduans (in the Galduan register, below):*
+- **Yugurten n Yemmazru, of a hundred and twelve**: *Yugurten*, the Berber form of Jugurtha. Chief keeper of Yemmazru.
+- **Lunja n Tassast, of twenty-three**: *Lunja*, heroine of a Kabyle folktale. Keeper of Tassast.
+- **Dassine n Tamalut, of forty-nine**: *Dassine*, the name of a famous Tuareg poet. The oldest keeper of Tamalut.
+- **Aksil n Tamalut, of sixteen**: *Aksil*, a historic Berber given name (the king Kusaila). A Desert Palm Ghoran adventurer; a speaker of the telling.
+- **Takane no Hana, of one**: Kotokoe, Japanese *takane no hana* ("the flower on the high peak", an out-of-reach love; *takane*, high peak). A kitsune player's stage name; *of one* given at Tamalut.
+- **The Kageroza**: Kotokoe, Japanese *kagerō* (heat-haze) + *-za* (a theatre troupe). An Emarrean troupe touring the rocks.
+
+**The Galduan register: the personal-name convention.** Word-base Tamazight (Awal, the rock dialect), English alphabet, drift as normal. Full canon in `geography/lioaru/galdua-jendea.md`, *What a Galduan is called*.
+- **Form.** *[given] n [rock], of [count]*. The rock is the one a person was born on and never changes; the count is the waterings they have stood.
+- **The count.** At every watering the keepers count everyone present; the count goes up by one. A child carries none until their first watering; a stranger counted at a watering carries *of one*. Counts are said in Talanese numbers.
+- **Dear and cheap.** The herd waters at Yemmazru most years and at the edge rocks years apart, so counts compare only within a rock; a Galduan asks *where* before *how many*.
+- **Away.** A Galduan who leaves keeps rock and count; the count stops while they are gone.
+- **Sound rules of the rock dialect.** A rock is *she*: places on the rock take the feminine *ta-…-t* frame. The rock keeps its endings where Valreka wears them off (*tiwizi* on the rock, *Tiwiz* in the herd).
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.

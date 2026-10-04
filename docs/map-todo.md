@@ -56,7 +56,7 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
   | 18 *(lost)* | 1950, 6820 | in the pale band against the Blackened Lands; the frontier rock |
   | 19 *(lost)* | 1980, 6050 | north-west gap; the dead spring |
 
-  Labels wait for the naming pass (Phase 8); the great rock's city may take a capital icon if Phase 5 makes it one.
+  **Labels** (named at the build, 2026-10-04): 13 **Yemmazru** (the capital: give it a capital icon), 4 **Tamalut**, 3 **Saltlanden**, 8 **Tassast**, 18 **Tazrut**, 19 **Taghbalut**; the other eleven await names (`docs/deepening-ideas.md`). The region label stays **Galdua Jendea**.
 
 - **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground with **three volcanic peaks**, each with a crater lake, and **a port** on the coast (the seed, the three rains, is in `docs/pencilled/seed-bank.md`; the coast the port faces is open until the build).
 

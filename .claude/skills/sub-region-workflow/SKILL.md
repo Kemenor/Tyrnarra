@@ -330,6 +330,7 @@ Keep this current as regions are built.
 - **Theocracies and clergy rule:** Legea (hereditary demigod theocracy, the readers of the book); the Dreaming Cape (Twin Lantern); Hirubaso (Elkaride hierocracy); the Order of Law (found Trimpon, forest chapter, Desi and Seneschals).
 - **Councils and assemblies (many):** the Vordsbench (Itsasalda), the hearth-council (Atarialda), the Open Floor (Azkataria), the Hightable, Baerfrost's chieftains, the Wyndwalken chapter, Fenurra's War Council, the Skarvorn, Myrria's Council of Adventurers; the Namur Senate (senators elected on self-written oaths) with its sworn Dictator.
 - **Money and property:** Rika Tikur (the Company, a plutocracy); Baratalda (Housen plutocracy, the Sealhouse); the Vernua Maors (oligarchy of the chain over voluntary comhar).
+- **Debt and rescue:** Galdua Jendea (Yemmazru and its daughters: a mother rock holding the rocks it reclaimed by a life debt, beside unfallen rocks owing only the due; the sunrise law under all).
 - **Chance and rotation:** Frae City (offices by lot and rotation); Nahaskel (the coin at the Casting); Balatur Erui (the ear-stone lot); Tvisol (rule by the young in paired reigns).
 - **Three estates in one hall:** Lograth (Throne, Lawspeakers, Stewardry).
 - **Without a ruler:** Villtur (clans, no unity); the Basogur (no centre, the Roadwards keep the road); No Man's Land (cinders, kindlings, task-captains, the Apprentice's Fire); Crossroads (functionally independent).

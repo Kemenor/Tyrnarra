@@ -64,6 +64,7 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 
 - **Rivers.** The Itsasalda river-trade is the working spine of the southern network's water side; stillships land at the Midarra coast and goods go on to Merkavar by river-craft or caravan-train; at Merkavar the lake is the street ([`geography/lautara.md`](geography/lautara.md)). River trade is held by Brauogi's old houses and Lioaru's River Duchies; Vernua's Maors own the quays, ferries, and roads over the Hegandi; Sombral's barges come down both rivers all night.
 - **Caravans.** Most of Talan's overland trade passes through Lautara's caravan-and-train network ([`geography/lautara.md`](geography/lautara.md)). Izarelai's Open Eyes are bought by every caravan-master ([`geography/myrkono.md`](geography/myrkono.md)).
+- **The sand.** Galdua Jendea crosses its dune sea by night on **sandsails**, sail-sledges that run rock to rock on the night wind, Stokkul-drawn where it fails, a night's run apart; only Valreka crosses by day ([`geography/lioaru/galdua-jendea.md`](geography/lioaru/galdua-jendea.md)).
 - **Beasts.** Stone-oxen, bred by the Haldmark Kholo for Lurrath's portage and the continent's heavy work; the Etxaber of the Villtur clans; the bond-beasts of the three hunting peoples; Fenurra's direwolves; the Fellibylur horse-breeders; Lioaru's Stokkul mounts; Valreka's sand-whales.
 
 ---
@@ -119,6 +120,7 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 - **How common** (GM, 2026-09-25): rare over most of Talan, common over a few great cities, the god-cities above all. **Frae City**, the largest city on the continent, is the great airship port: berths along **the Rim** on the tower-tops, dear to rent ([`geography/askamira.md`](geography/askamira.md)).
 - **How high** (GM, 2026-09-25): **low**. Airships fly well below the heights of the great ranges and route **around** mountain groups rather than over them; a sky-route follows passes and open water. The Order of Steam's airships leave its mountain ring through the bay and fly out over the Midarra. Rustam Varaz's flight from Merkavar to Sombral weaves through the mountains for the same reason and keeps off the southern way for the heat ([`geography/egulon/argia-esfera-letter.md`](geography/egulon/argia-esfera-letter.md)).
 - **Noonships**: Occultech airships rated for the killing noon over Argia Esfera; every other ship crosses Argia in the morning or the dusk ([`geography/egulon/argia-esfera.md`](geography/egulon/argia-esfera.md)).
+- **Wings**: Galdua Jendea's gliders, launched off the rocks' high ledges by magic and carried on the noon thermals over the sand; the one craft that rides the killing noon instead of avoiding it. Light loads only: letters, the urgent, adventurers ([`geography/lioaru/galdua-jendea.md`](geography/lioaru/galdua-jendea.md)).
 - **Over the Basogur**: the premium route for passengers and urgent freight. Arcanotech ships shake and drift in the chaos uplift; Occultech ships fly clean and charge for it. A millstone is too heavy for any airship that will take one ([`cosmology.md`](cosmology.md); [`geography/nashavel/basogur-log.md`](geography/nashavel/basogur-log.md)).
 - **Who builds and flies them.** Vindul builds the best hulls of both kinds and supplies the elementals; the Order builds most Arcanotech engines; House Eisenhart builds the armoured Ironwings; Haizava flies cargo airships; the Strix are the natural pilots; airship crews keep Haizar ([`cosmology.md`](cosmology.md); [`geography/vindul.md`](geography/vindul.md); [`gods.md`](gods.md)). The Vindul and Sumendar airship guilds draw real revenue from the over-jungle route.
 - **Masts and moorings**: Frae City (the Rim); Merkavar (several ports); Sombral (the mast on the highest roof, the reading chalked beside it); Lurrath (the gate-towers on the ring-crest; nothing fast crosses the threshold); Veidrath (the docking-tower district); Lograth; the Twin Cities' tethered airships.
@@ -158,6 +160,9 @@ Each water is charted by the craft that reads it ([`geography/_continent.md`](ge
 | Villtur clan on its circuit (herds, households) | 10–15 mi a day on moving days |
 | A clan escorting a guest on the Etxaber | ~30 mi a day |
 | Scouts on bond-beasts | 35–40 mi a day |
+| Sandsail (Galdua Jendea), dusk to sunrise | 100–150 mi a night |
+| Wing (Galdua Jendea), noon thermals | 300–600 mi a day, light loads |
+| Valreka's herd | 3–5 mph; 50–90 mi on a moving day (dusk to the cool morning, and the evening); a storm-sprint of 15–20 mph for an hour or two |
 | Travel through snow | 10–15 mi a day |
 
 **Checks against the record:** Rustam Varaz, Merkavar to Sombral, ~1,850 mi on his route, about 30 hours at airship pace (noon to the next dusk). The Thekkavar express across Lua Lasai and on by Harro's Everbright trunk to Ljosarn, ~800 mi in about a day. Zenerious's crossing of Villtur, ninety days. The long road through the Basogur waits on the map fix that pulls the jungle's north-east lobe lower ([`../docs/map-todo.md`](../docs/map-todo.md)).

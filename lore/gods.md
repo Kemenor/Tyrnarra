@@ -345,6 +345,17 @@ All non-bound beings on both layers are **belief-shaped**, but by different stre
 - **The Compact.** Belief-formed and Elysium-resident long after the Week of Crimson Rain; took no part in the Compact and holds no Material-Plane stake to bind. Reaches mortals only through omen, fair weather on the road, and the cleric's grant.
 - **Cleric domains (PF2e):** **Travel · Luck.** Travel for the road and the journey (cross-pantheon co-grant alongside Cronus and Nirfel); Luck for the traveller's fortune and safe passage, the face his Dark-Era safe-passage origin left on him (cross-pantheon co-grant alongside Vesuna). Full mapping on `pf2e-registrar.html`.
 
+### Nanaman: Elder-Sister Water (Springs · Minor Goddess · belief-formed)
+
+- **Aspects:** Springs · Wells · Hidden Water · Water Given. The goddess of the water that rises where there should be none, and of giving it away.
+- **Origin:** belief-formed, Uthra's mechanism. Through the **Dark Era**, as the springs of Galdua Jendea's rocks began to fail, the keepers prayed for the water; Tani, whose Decay a drying spring is, was the wrong goddess to ask, so they prayed to the water itself, rock after rock, for centuries. The prayer coalesced.
+- **Etymology:** Tamazight *nanna* (elder sister, aunt) + *aman* (water) → **Nanaman**, "elder-sister water." Full entry in `glossary.md`, *Galdua Jendea*.
+- **Pronouns:** **she / her.** An elder woman in the keepers' carving, seated at a basin, one hand in the water.
+- **Residence:** **Elysium** (Layer 3, the good plane). Templed only in the spring-halls of the rocks, where she shares the shrine with Tani.
+- **Worshippers:** the keepers of the rocks, and every Galduan who gives water in her name; well-diggers and water-finders of the southern deserts. Valreka's Azarketi water-bearers may keep her too (open).
+- **The Compact.** Belief-formed long after the Week of Crimson Rain; took no part in it and holds no Material-Plane stake. Reaches mortals through the cleric's grant and through springs that run longer than they should.
+- **Cleric domains (PF2e):** **Water · Vigil**. Water for the springs (a co-grant beside Shuun and Urzar); Vigil for the keepers who sit with the spring between waterings. To the registrar at publish.
+
 ### Haldis and Vaki: the Keeper and the Watcher (Kholo · belief-formed Minor Gods)
 
 The **Kholo** keeping-people of **Haldmark** (Brauogi's north-western march; full canon [`geography/brauogi/haldmark.md`](geography/brauogi/haldmark.md)) keep their own belief-formed pair, a divine mother-and-son mapped onto their own society: the women's keeping and the men's guarding.
