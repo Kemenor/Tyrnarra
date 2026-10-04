@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-04).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the telling committed at [`../../lore/geography/lioaru/galdua-jendea-telling.md`](../../lore/geography/lioaru/galdua-jendea-telling.md).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-04).
+- **Phase 6 (economy): open.**
 
 ## Phase 0: settled facts
 
@@ -98,8 +99,27 @@
 4. `lore/transport.md`: the sand-gliders and air-wings join the modes; the speeds table gains the sand-glider (100–150 mi a night), the air-wing (300–600 mi a day) and Valreka (3–5 mph, 50–90 mi a moving day, a 15–20 mph storm-sprint).
 5. `docs/map-todo.md`: the nineteen massifs with centres and the reference sketch (done 2026-10-04).
 
+### Phase 5: government (closed 2026-10-04)
+
+**The great rock and its daughters, under the sunrise law** (GM took B, with A's sunrise law as the custom under everything).
+- **Founding story:** in the Dark Era the chain broke; the great rock (13) held, and when the worst was over it reclaimed the lost rocks itself, carrying water, settlers and wings out to each dead or emptied rock. Every rock it reclaimed became its **daughter**.
+- **The sunrise law** (custom, everywhere): any caravan or wing that reaches a rock before the sun is taken in, whoever it is; a rock that turns one away never sees a caravan stop again.
+- **Two debts (GM: even the unfallen owe the chain):** the **chain debt**, owed by every rock for the chain kept alive through the Dark Era: a share toward the chain's works (the sunrise shelters, the beacons, the wing-post) and the water reports; an unfallen rock still treats and signs for itself. The **life debt**, owed by the daughters on top: labour when called; the great rock speaks for them abroad.
+- **The count:** **8 daughters, 8 unfallen**, and the great rock. By rocks the great rock and its daughters are 9 of 17; by people the unfallen (the old cities, the old springs, larger and richer) hold about half or more. The unfallen form no second centre: old, proud and spread across the chain, each would rather deal with the great rock alone; they stand together only when one thing angers all of them at once (a debt pressed too hard), and then they are the weight that can say no.
+- **The water-roll:** every rock reports its spring's flow to the great rock by wing-post; the great rock knows the chain's water and sets which springs can bear the herd and when. It does not steer Valreka (the digs, storms and wind take the herd; Ekaits says when it moves), but wherever the herd goes it waters by the great rock's word. The reports reach **Caldwel**, the cisterns house, through which the halt-argument already runs.
+- **Four answers:** day to day, each rock's own keepers; envoys received at the great rock, where Valreka's Eskua also deals; the great rock signs for itself and its daughters, the unfallen sign their own, usually beside it; each rock builds for itself, the chain's works (shelters at the dead spring, the frontier works) are the great rock's call, done with daughter labour and the chain-due.
+- **Powers:** the great rock may set the watering schedule, call on daughter labour, speak for its daughters abroad. It may not touch a rock's spring (each spring is its own keepers') or command an unfallen rock. **Muddy edges:** whether a life debt ends (the daughters: paid generations ago; the great rock: a spring is owed forever); whether a rock that was emptied, never lost, counts as a daughter; who holds a reclaimed rock's spring when the reclaimers stay on.
+- **Incentive check (breaks, kept as tension):** the great rock gains a daughter whenever a rock falls, and through the water-roll learns first that a spring is failing. Rock 18: rock 8 (unfallen) has always meant to take it back; reclaimed by the great rock it becomes a daughter and puts the great rock at the Lost Kingdom's edge; rock 8 cannot do it alone against the legions, and the great rock is in no hurry. (Candidate material for Phase 9.)
+- **Three tests:** unity (no rock lives alone; the daughters need the routes, wings and watering share; the unfallen need the chain; the sunrise law under all); external agency (the great rock speaks for most of the chain and with the herd; neighbours deal with it first, then with any unfallen rock that matters to them); internal provision (each rock for itself; the chain's works the great rock's).
+- **Honest cost:** a hegemony by debt; the daughters pay for a rescue their grandparents needed.
+- **"The mother rock"** (GM's phrase) rhymes with Lenama, the mother whale (crown / chain): kept as a deliberate kinship echo; the name at Phase 8.
+
+**Census (authoring only):** nearest is a crown with sworn houses, but the bond is a debt for a rescue, not fealty (real world: the Delian League); A's nearest the Basogur and the federated free-towns; C the Guild Sovereign's precedent and a gerontocracy. "The chain" is a working label (Vernua's "oligarchy of the chain"); Phase 8 names it. Appendix B of the skill gains the form at Phase 11.
+
 ## Rejected options
 
+- **Government A, the chain with no centre:** each rock alone, only a unanimous meeting binds; nobody can make the chain act. Its sunrise law kept under B.
+- **Government C, the keepers' memory** (rule by remembered precedent, the eldest weighing most): a gerontocracy that silences the Nagaji; the seed generalized into rule.
 - **Seed 1, the sun's two faces** (the day turned inside out): kept as texture, weak alone (could move to Hareaveldi with the rock); Myrria's overlapping clocks sit close.
 - **Seed 3, a seafaring people with no sea** (rocks as islands, beacons, beacon-law, sand-raiders): kept as texture; desert-as-sea is a known trope; Burdineyja, Askamira and Balatur Erui close.
 
