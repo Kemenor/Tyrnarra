@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-04).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-04).
 - **Phase 2 (seeds): closed** (GM, 2026-10-04).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the telling committed at [`../../lore/geography/lioaru/galdua-jendea-telling.md`](../../lore/geography/lioaru/galdua-jendea-telling.md).
+- **Phase 4 (place, peoples and history): open.**
 
 ## Phase 0: settled facts
 
@@ -49,6 +50,16 @@
 **Flavour line:** *the lost people, who stayed on the rock to keep the water when the goddess's city rode off to dig up its past.*
 
 **Sameness (authoring only):** Villtur/Veidrath hold settled-against-nomad (here the settled are as old as the nomads and no one is settling now); Valreka's halt-argument (Memory against Decay) must not be restated region-wide: the seed is kinship between two ways of one faith.
+
+### Phase 3: traveller's image (closed 2026-10-04)
+
+**The image (GM's combination of the watering and the noon launch):** the herd sighted from a rock at dawn; the young flying out to it on the noon thermals while it lies still through the noon; the herd coming in at dusk and the keepers opening the spring, the water falling down the shaded face to the troughs.
+
+**Speaker and form:** an Emarrean kitsune player of a touring troupe, at the rock already (the troupe tours the rock cities by sand-glider); afraid of heights and a hopeless romantic (GM). A Ghoran adventurer of the rock sees her at the lookout and takes her flying on a two-seat wing; they land on Anzar; the troupe finds them at the foot of the fall. **Form: a telling the troupe performs** (GM's idea), two voices (HER, HIM, switching to show how he saw her, then both on the flight and the watering) and the chorus; how much is true is the spectator's guess; it ends with the two players bowing hand in hand. Played since **2531 MR**. Title: *The Fall at [ROCK]*. Placement: own in-world file, published whole as a log card, excerpts at section heads. The memory-stone form set aside (a new magic object, and it would compete with the Ghoran as the living archives).
+
+**Facts the telling adds (accepted with it; Phases 4–8 confirm):** lookout bells; wings launched off a high ledge, a two-seat wing; a spring-hall in the cliff, opened by the keepers, the water falling down the rock's face to the troughs; the spring-hall shut between waterings, "years sometimes"; the oldest keeper at the door two hundred years (the 250-year cap in `ancestries.md` holds; the GM's 300 noted as over it); the Strays meeting the gliders; landing on Anzar; HIM a Ghoran adventurer of forty years on the sand, sun-tolerant (heritage at Phase 4), his flower opening in the heat; HER three tails; "The Valrekans call us the lost ones… We call it staying" (one folk reading of the name, in an attributed voice; the chronicler may still call the name disputed).
+
+**Placeholders for Phase 8:** [HER], [HIM], [ROCK], [THE TROUPE].
 
 ## Rejected options
 
