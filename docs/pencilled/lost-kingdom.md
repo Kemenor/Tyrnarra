@@ -5,7 +5,9 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-04).
-- **Phase 1 (seed questions): open.**
+- **Phase 1 (seed questions): closed** (GM, 2026-10-04).
+- **Phase 2 (seeds): closed** (GM, 2026-10-04).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -20,11 +22,26 @@
 
 ## Decisions by phase
 
-*(none yet)*
+### Phase 1: seed questions (closed 2026-10-04)
+
+**The summary (GM: "reads excellent").** The Lost Kingdom is the ground where Tani died, and it is not empty. Three kinds of people have made one society there: **the risen** (Skeletons, old Storveldi bones that got up with someone new inside), **the warped** (Fleshwarps, born living and reshaped by the ground), and **the kept** (the living who came to the edge and stayed: Duskwalkers born there, exiles, pilgrims who never went home). They hold together because everywhere else hunts or pities them: here being dead is ordinary, and some hold that a people who returned, in the land of the goddess who returned, are hers more truly than Valreka is; the mirror of Galdua Jendea next door, the people who stayed beside the people who came back. Everyone has flashes of the kingdom that stood here, and each flash comes from one source, a soul's own past, the bones' Storveldi life, or the ground's held moment, never all three; whose memory a flash was is a reading and a dispute, and the chronicle leaves it open. The pressure is the Rot-Tyrant's corpse-legions since 2524, dead too but raised and marched, everything the cursed-born refused to be; the war over the same ground is a war over what it means to have risen, and it **pushes the cursed-born outward, toward the wardens' cairns and the living: they cannot defeat the Rot-Tyrant alone, but the outsiders who might are as likely to kill them** (GM). Around them: the Guild's warning, the necromancers, cultists and pilgrims at the edge, Betibizi's pull, the Voroir Daua outside. Leaving is a craft: few go, and those who do go hooded and masked, with papers and a borrowed name, and the Voroir Daua watch for them.
+
+**Settled in the questions:** the GM answered Q2 (the flashes: soul, bones and ground all real sources, no flash all three, left open in the chronicle; Phase 9 decides whether a truth behind it earns a ⚿); Q1, Q3, Q4 and Q5 taken as the prompts stood.
+
+### Phase 2: seeds (closed 2026-10-04)
+
+**The seed: a magocracy of survival (GM's idea), with the returned inside it.** On the most dangerous ground on Talan, power is survival, so the strongest caster rules, as the Storveldi's ruling class did; the flashes of a great nation feed the ambition. **Might of any tradition counts** (GM): the Storveldi were an arcane, engineering power, and the cursed-born keep only the principle; arcane (the old way the bones remember), primal (mastering a land that fights back), occult (working the flashes and the stories the ground is thick with) and **divine** (the returned who pray: Seed 1, rising through the same rule). Open for Phases 5 and 9: a divine caster here has two gods in reach, Tani who returned and Betibizi whose resonance raised them. The war with the legions is held for Phase 9.
+
+**Flavour line:** *the returned dead, ruled by the strongest of them, in bones that remember the empire that killed a god.*
+
+**Cross-canon:** the Storveldi ruling class (all demi-gods); the integration procedure and its fragments (Betibizi's cult; the deep ruins); the bound thirteen suppress integration work where they find it; the ascension-cultists at the edge.
+
+**Sameness (authoring only):** Talan has no magocracy (a new form for the census). Legea is a demigod theocracy whose founder ascended by belief: ascension sits near, but Legea is a holy line and this is might. Valreka owns "the buried returns": the returned claim the same faith from the other side.
 
 ## Rejected options
 
-*(none yet)*
+- **Seed 1, the returned, alone** (rule by the readers of memory): folded into the seed as its divine casters.
+- **Seed 3, the war of two deaths:** better as the live tension (Phase 9) than as the seed.
 
 ## Open and deferred
 
