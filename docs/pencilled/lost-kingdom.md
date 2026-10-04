@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-04).
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
 - **Phase 7 (daily life): closed** (GM, 2026-10-04: "looks fantastic").
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-05).
+- **Phase 9 (tension and reveal): open.**
 
 ## Phase 0: settled facts
 
@@ -110,8 +111,36 @@
 - **Youth:** the risen have no childhood, but every one was new once. For the living and warped children, the coming of age is **the first watch on the wall**; for the risen, **the first flash they can read**, when they can say *whose* and be believed, and that is when a newly risen takes a name. The sanctioned transgression, **the edge-walk**: the young go up the ridge to look at the living world from the cairns and come back before they are missed; the wardens pretend not to know until someone does not come back. A slope: trusted farther out one watch at a time.
 - **Faith as lived:** Tani is the city's faith, the ruler her divine caster on the seat; the elder face is the one kept (the one who remembers). Betibizi has priests in the city who say the cursed-born are his, since his resonance raised them; tolerated as long as they hold their stretches of the wall. The Duskwalkers are where the dead lie down (the woman in the lantern is one; the city needs no word for it). Rites: the seeing-to; the ward-lighting at dusk; the pilgrims' offerings at the ring's edge, which the city leaves where they lie.
 
+### Phase 8: naming (closed 2026-10-05)
+
+Avestan and Old Persian words checked against English Wiktionary and J. H. Peterson's Avestan Dictionary (avesta.org) on 2026-10-04; *mugarri* against the Elhuyar Basque dictionary (2026-10-05). Avestan *mar-* alone is "to die": "remember" builds from *marəθra*. Collision search clean for every new name.
+
+**Register.** Word-base **the oldest Iranian form**, an Avestan / Old Persian sound beside Hareaveldi's Persian: the Storveldi tongue alive on the ground. Sound rules: archaic endings kept (*-a*, *-u*, *-ah*) where Persian wears them off; plain letters (š → sh, θ → th, x → kh, γ → gh). **The tongue: *Hizva*** (Avestan *hizvā*, tongue, language): it comes back to the city through the flashes; they call it the tongue.
+
+**Personal-name structure (S1, the reading, with the GM's addition):** **given + the source of the first readable flash** (*Ast*, bones, Avestan *ast-*; *Urvan*, soul, Avestan *urvan*; *Zam*, ground, Avestan *zam-*), taken when one can first say *whose* and be believed (living or risen: the coming of age made a name; the name records the guess the city accepted). **+ a remembered name** (GM): a name out of the flashes that its bearer feels a strong connection with, never certain whether it is their own memory or not, but it feels like it; carried by those who have one (*Vindafarna Ast Arshama*).
+
+| Slot | Name | Etymology |
+|---|---|---|
+| The coast city | **Ida** | Old Persian *idā*, "here". The city is called *Here*. |
+| The ruined capital | **Vardana** | Old Persian *vardana-*, "town, city": the cursed-born call it *the city*; its own name is lost, or held only in flashes. |
+| The Rot-Tyrant's dungeon (the ossuaries) | **the Dakhma** | Avestan *daxma*, "the place where the dead are laid". |
+| The inner stone ring | **the Mugarri** | **Court Tongue**: Basque *mugarri*, "boundary stone" (the gods' own stones from the retaliation). |
+| The ruler | **the Daraya** | Old Persian *dāraya-*, "to hold" (the first half of *Dārayavauš*). |
+| The wardens of the wards | locally ***pathra*** | Avestan *pāθra*, "guardian"; in Talanese the wardens. |
+| A flash | locally ***marthra*** | Avestan *marəθra*, "remembrance": *"Whose marthra was it?"* |
+| Plain Talanese | the haze, the seeing-to, going in, the edge-walk, the risen, the warped, the kept, the steward, the salvage party | |
+
+**Figures:**
+- **Rauca Urvan**, the Daraya: Old Persian *raucah*, "day". A risen divine caster of Tani; sealed the Dakhma's gate in 2524.
+- **Vindafarna Ast Arshama**, the strongest arcane caster, pressing from below: *Vindafarnah* (attested Old Persian name, "finding glory"); *Arshama* (Old Persian *Aršāma*, Arsames), his remembered name. The Skeleton in the lantern; his bones remember the old way.
+- **Hutaosa Zam**, the woman in the lantern, a Duskwalker: Avestan *Hutaosā* (Atossa).
+- **Utana Zam**, the steward, one of the kept, living: Old Persian *Utāna* (Otanes).
+
+**The lantern's placeholders:** [LEADER] **Idir Skjol Anzar** (Valrekan, Guild-sworn); [HOLDER] **Amayas n Tassast, of six** (Galduan); [SHIELD] **Brin Twicefallen** (Noman, a fire-name); [CASTER] **Aroha Hinekura Ngaiti** (Tangatan); [APPRAISER] **Dihya Ardats Anzar** (Valrekan, Guild-sworn).
+
 ## Rejected options
 
+- **Naming:** S2 (soul in bones: *[chosen] ast [the bones' name]* for the risen, a parent's name with *-an* for the born-living), thinner for everyone but the risen.
 - **Government V2, the proof** (anyone may go inside the ring; the deepest return rules): Storveldi to the bone, kills the strong the wall needs. **V3, the circle of the strong** (a council of each school's strongest): another council. **"The ruler rests on a war it has no reason to end"**: withdrawn on the GM's correction (inaction lets someone else make the kill and rule).
 - **Population A** (keep the wild-country rule, ~116,000, a city of ~3,500): a town, wrong for a people walled into one city.
 - **Phase 3 candidates:** A, the burial after the battle seen from the ridge; B, the hooded guest at Tassast giving 2,500-year-old news under the sunrise law; C, the trade at the cairn. Replaced by the GM's own scene (A's burial survives in it as "we will see to him").
