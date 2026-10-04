@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galdua Jendea · Lioaru · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #4fb8a8;   /* spring water · 8.13:1 on Style B bg */
+    --card-bg: rgba(14,28,24,0.55);
+  }
+
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-quote b { font-style: normal; font-family: 'Cinzel', serif; font-size: 0.82em; letter-spacing: 0.12em; color: var(--domain-accent); }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+
+  /* Card grids */
+  .life-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .life-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+
+  /* The telling */
+  .log-letter-body .stage { font-style: normal; font-size: 0.92em; opacity: 0.8; }
+  .log-letter-body .speaker { font-style: normal; font-family: 'Cinzel', serif; font-size: 0.8em; letter-spacing: 0.12em; color: var(--domain-accent); }
+</style>
+</head>
+<body data-page="galdua-jendea">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/lioaru/lioaru.html">Lioaru</a><span class="sep">›</span><span>Galdua Jendea</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Galdua Jendea</div>
+    <div class="page-subtitle">Lioaru Sub-Region · The Rocks of the Dune Sea · The Watering</div>
+    <div class="page-flavor">The lost people, who stayed on the rock to keep the water when the goddess's city rode off to dig up its past.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>The Court Tongue, given at the hinge of 1 MR: Basque <i>galdu</i> (lost) + <i>jende</i> (people), "the lost people". The older chronicles also read it "the Place of Many Waters", which the word does not carry; Galduans answer to both. Demonym: <b>Galduan</b>. The country's own words are in <b>Awal</b>, the rock dialect of the whale-tongues: <b>Yemmazru</b>, <b>Azrar</b>, <b>tagnit</b>, <i>inebgi</i>.</dd>
+    <dt>Position</dt><dd>The great dune sea at the heart of Lioaru. North-west, No Man's Land beyond the brown badland ridge; north-east, Tahu Tangata across the great river; at the eastern corner, Emarrea; east, Hareaveldi along the river that runs down to the Duchies; south, the River Duchies and a short shore on the Hafra; south-west, the Lost Kingdom beyond the pale band; west, the Hafra coast, with the Lost Isle offshore.</dd>
+    <dt>Terrain</dt><dd>About 344,000 square miles of open dune sea, and nineteen rock massifs standing out of it, each ten to forty miles across and none more than a night's sandsail run from the next. Inside each rock, canyons and gorges watered by its spring. In the south-west, the <b>pale band</b>, a belt of bleached sand along the Blackened Lands.</dd>
+    <dt>Character</dt><dd>
+      <i>The lost people, who stayed on the rock to keep the water when the goddess's city rode off to dig up its past.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Watering</span><span class="pill">Azrar, the Necklace</span><span class="pill">Sandsails and Wings</span><span class="pill">Yemmazru and Its Daughters</span><span class="pill">Tagnit</span><span class="pill">Tazrut</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>About 675,000, all of them on the rock. Ghoran are three in five, at their fullest on Talan; Nagaji about one in eight; Azarketi about one in fourteen, around the springs; the rest the southern mix.</dd>
+    <dt>Tongue</dt><dd>Awal on the rocks and in Valreka; Talanese at the doors and in the trade.</dd>
+    <dt>Faith</dt><dd>Tani and <b>Nanaman</b>, kept together in the spring-halls; Solyra on the high ledges; Shuun a little at the river doors.</dd>
+    <dt>Rule</dt><dd><b>Azrar</b>, the Necklace: seventeen living rocks under the sunrise law. <b>Yemmazru</b>, the great rock, and its eight daughter rocks; eight unfallen rocks that keep their own counsel.</dd>
+    <dt>Capital</dt><dd><b>Yemmazru</b>, the great rock; its city about 18,000.</dd>
+    <dt>Founded</dt><dd>The people at the hinge of 1 MR; each rock in its own age; the Necklace as it stands from the reclamations at the end of the Dark Era.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(79,184,168,0.5);">
+    <div class="gods-city-label">The Capital</div>
+    <div class="gods-city-name">Yemmazru</div>
+    <div class="gods-city-byname">The great rock · the strongest spring · the water-roll and the azwil</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-watering" class="section-heading">The Watering</h2>
+
+  <div class="voice-quote"><p><b>TAKANE:</b> <i>There was dust on the horizon. Then backs under the dust. Then roofs on the backs. Nineteen, the lamp-keeper's daughter said, counting on her fingers, and the great one in the middle carrying a palace. A city, coming across the sand like weather.</i></p></div>
+  <div class="voice-attrib"><i>The Fall at Tamalut</i>, the Kageroza's telling, as played since 2531 MR</div>
+  <div class="prose">
+    <p>When Valreka turns toward a rock, the rock knows it weeks ahead: Yemmazru has said in the water-roll which spring can bear the herd and when. The bells go when the lookouts sight it, at dawn, half a day out, and the rock comes to its ledges to watch. The herd lies still through the noon, a few hours off, as it always does, and the young of the rock take their wings off the high ledge and ride the noon heat out to it. The Strays come up the dunes on their Stokkul to meet whoever lands.</p>
+    <p>In the evening the herd comes in and lies down along the foot of the rock, Lenama in the middle. Up in the cliff the keepers open the spring-hall, which has stood shut since the last watering, and the water comes down the face of the rock to the troughs, where Valreka's water-bearers wait with their lines. Every rock gives the herd its water and takes nothing for it. The herd gives back what it carries: river grain, goods from the Duchies, word from everywhere, and now and then a piece of the past lifted from the sand.</p>
+  </div>
+  <div class="voice-quote"><p><b>AKSIL:</b> <i>From the herd it is a fall of water. From the rock it is a door. The spring-hall stays shut and dark from one watering to the next, years sometimes, and the keepers sit with the spring all that while.</i></p></div>
+  <div class="voice-attrib"><i>The Fall at Tamalut</i></div>
+  <div class="prose">
+    <p>A watering is a rock's festival, its market and its census. For as long as the herd stays, the bridges of the whales and the stairs of the rock are one city, and the keepers count everyone present on the rock and the herd alike; every Galduan's name carries the waterings they have stood. Yemmazru, at the middle of the herd's range, sees it most years. A rock at the edge of the sea may wait years between waterings: at Tamalut, on the Emarrea corner, the oldest keeper, <b>Dassine n Tamalut</b>, has opened the spring-hall forty-nine times in two hundred years.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-necklace" class="section-heading">The Necklace</h2>
+  <div class="prose">
+    <p>The rocks are <b>Azrar</b>, in Talanese the Necklace, and each is a massif ten to forty miles across, its north face in shade for most of the day, and on those shaded faces the cities hang: rooms cut into the cliff, ledges built out from it, walkways and stairs and ropes between, and basket-lifts that run the height of the face. Nagaji raise most of them, though the craft is not theirs alone. Inside each rock the spring runs down a canyon, and the canyon is where the rock eats.</p>
+    <p>Every Galduan lives on the rock, and the sand kills by noon. A Galduan crosses it at night, on a <b>sandsail</b>, the sail-sledge that carries every crate and barrel between the rocks: out at dusk, when the dune-ramps of every rock fill with sandsails going down together, across the cooling sand through the dark on the night wind, Stokkul-drawn where the wind fails, and onto the next rock before the sun is up. A night's run is a hundred to a hundred and fifty miles, and every rock lies within one of another, so the Necklace reaches every edge of the sea.</p>
+    <p>What is light or urgent crosses by day, on <b>wings</b>. The heat that stops everything on the sand lifts a wing off the high ledge, and a flier rides it high, into air far cooler than the ground, three hundred to six hundred miles in a day. Magic does the launch and carries the wing across the gaps between the thermals. The wing must be down on rock before the lift dies in the late afternoon. Letters, the urgent, the light and the precious go by wing, and so do adventurers in a hurry.</p>
+    <p>Only Valreka crosses the sea entire. The herd is the one city that moves over the sand, and it waters at the rocks.</p>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">The sunrise law</div>
+      <p>Any sandsail or wing that reaches a rock before the sun is taken in, whoever it carries. Galduans call it <i>inebgi</i>, and the guest gives their news first, as the herd gives back what it carries. A rock that shut its landing at sunrise would never see a sandsail stop again, and the worst thing one Galduan can say of another is that they would shut the door at sunrise.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The doors out</div>
+      <p><b>Saltlanden</b>, in the north-east, is the landing on the great river: across it lies Tahu Tangata, and a hundred miles beyond, the rail at Ahika. Most of what leaves the Necklace leaves there. <b>Tamalut</b> is the Emarrea corner, where the troupes come in. The southern rocks look down to the Duchies' river, and two rocks on the west coast keep small landings on the Hafra.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The dead spring</div>
+      <p>In the north-west, the chain bends around <b>Taghbalut</b>, a rock whose spring failed in the Dark Era. The rock still stands, its cliff-rooms empty, and sandsails still put in there at sunrise, because it is the only rock in reach. They carry their own water.</p>
+    </div>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">The Rocks in Time</div>
+    <p style="margin-bottom:0;">The springs of the rock watered Oroiri's country in the Gods' Era. When the goddess died and came back, and her faithful took to the whales to find her buried city, some kept to the rock and the springs instead, and the herd has called them the lost people since. The sandsails came early in the Lost Era. The Golden Empire held the rocks lightly, as waystations on its southern roads, and a few rocks still carry its names. In the Dark Era the herd fell to eleven whales and the Necklace broke: springs failed, the cursed ground's spawn came north across the pale band, and rock after rock emptied. The wings were born in those years, when the sand was too dangerous for anything slower.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-keepers-and-the-springs" class="section-heading">The Keepers and the Springs</h2>
+
+  <div class="voice-quote"><p><b>AKSIL:</b> <i>The oldest keeper on Tamalut has opened that door for two hundred years. She remembers every watering: which whale came in first, who was sick, who was born on the crossing, what the herd brought and what it took. Valreka carries its memory on its back. Ours stays in the stone, and the keepers stay with it.</i></p></div>
+  <div class="voice-attrib"><i>The Fall at Tamalut</i></div>
+  <div class="prose">
+    <p>Every rock's spring belongs to its <b>keepers</b>, the council that holds the spring-hall and governs the rock. Most keepers are Ghoran, rooted for centuries in one rock, and a keeper's memory is the rock's record: every watering, every dry year, every rock that fell. A spring rises from deep under the sand, cold and heavy with stone, and runs from the spring-hall in the cliff down into the rock's canyon. In the basins where the water stands, the stone it carries settles out over the years and grows into clear <b>spring-crystal</b> along the edges.</p>
+    <p><b>The calling of the spring.</b> Every dawn the keepers measure the spring and call its flow from the spring-hall, and the call is passed ledge to ledge down the cliff: <i>the spring stands at nine fingers</i>. The whole rock listens to it the way other countries listen to the weather. The same number goes out by wing to Yemmazru for the water-roll, and a falling number is the news every rock dreads.</p>
+    <p><b>Faith.</b> The spring-hall is a shrine to two goddesses. Tani holds the memory and the dead, and <b>Nanaman</b> holds the water: springs, wells, hidden water, water given. When the springs began to fail in the Dark Era, the keepers prayed for the water, and Tani, the goddess of Decay, was the one whose work a drying spring was. They prayed to the water itself, rock after rock, for centuries, and the prayer took shape as Nanaman. She is templed only in the spring-halls. The keepers are her clergy and Tani's both, and Galduans take that as plainly as the water.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Nanaman Weeps at Taghbalut</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Sandsail Crews Say</div>
+      <p>Sandsail crews sheltering on Taghbalut swear that on still nights they hear water running in the empty spring-hall, where none has run for centuries. Nanaman goes back to the springs she lost, folk say, and weeps there, and a rock that stays faithful will never go dry. The unfallen tell it as a boast. The daughters hear it as an accusation.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="yemmazru-and-its-daughters" class="section-heading">Yemmazru and Its Daughters</h2>
+
+  <div class="voice-quote"><p><i>"They tell me the merwas was paid by their grandmothers' grandmothers. I tell them their spring is still running. We have this conversation at every watering, and at every watering they drink."</i></p></div>
+  <div class="voice-attrib">Yugurten n Yemmazru, of a hundred and twelve, chief keeper of Yemmazru, to a Duchies envoy, 2530 MR</div>
+  <div class="prose">
+    <p>Yemmazru, the great rock, is the largest massif in the Necklace, near the middle of the herd's range, with the strongest spring. In the Dark Era it held when the rocks around it fell. When the worst was over, in the Dark Era's last decades and the first of the Adventurer Era, Yemmazru reclaimed the fallen rocks itself, one by one: it carried water, settlers and wings out to each emptied rock and made it live again. Every rock it reclaimed became its daughter. The daughters call themselves <b><i>yessi</i></b>, as Yemmazru says it, and Yemmazru has been the mother rock to them since.</p>
+    <p>Of the seventeen living rocks, eight are daughters. Eight are <b>the unfallen</b>, old rocks that never emptied, with the old springs and the old cities, larger and richer than the daughters: by rocks Yemmazru and its daughters are the Necklace's majority, and by people the unfallen hold about half of it.</p>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">Two debts</div>
+      <p>Every rock owes Yemmazru <b>the due</b>, for the Necklace it kept alive: a share toward the sunrise shelters, the beacons and the wing-post, and its spring's number every dawn. The daughters owe <b>the merwas</b> on top, for their lives: they send labour when Yemmazru calls, <i>tiwizi</i>, and Yemmazru speaks for them abroad. Whether a merwas ends is the Necklace's oldest argument. The daughters say it was paid generations ago, and Yemmazru says a spring is owed for as long as it runs. Whether a rock that was emptied and never lost counts as a daughter, and who holds a reclaimed spring when the reclaimers stay on, are argued at nearly every watering.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The water-roll</div>
+      <p>From the numbers every rock sends, Yemmazru knows the water of the whole Necklace, and it sets which springs can bear the herd, and when. The herd goes where its digs, its storms and the wind take it; wherever it goes, it waters by Yemmazru's word. The roll reaches Valreka through <b>Caldwel</b>, the house of the cisterns.</p>
+    </div>
+  </div>
+  <div class="prose">
+    <p><b>Who answers for the Necklace.</b> Each rock's keepers rule it day to day. Envoys come to Yemmazru, and so does the Eskua's court when the herd has business with the rocks. Yemmazru signs for itself and its daughters; each unfallen rock signs for itself, usually beside it. A rock builds what it needs from its own hands. Works for the whole Necklace, the shelters at Taghbalut and the watch-works at the frontier, are Yemmazru's call, built with the due and the daughters' <i>tiwizi</i>. Yemmazru may not touch a rock's spring, which is its keepers' alone, and it may not command an unfallen rock. The unfallen rarely stand together: each would rather deal with Yemmazru alone than take a lead from another. When one thing angers all of them at once, a merwas pressed too hard or a due raised too far, they are the weight that can say no.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="salt-crystal-and-tagnit" class="section-heading">Salt, Crystal and Tagnit</h2>
+  <div class="prose">
+    <p>Each rock feeds itself from its canyon: gardens deep in the shade, pools, date palms where the sun reaches, and small goats on the rock that never go onto the sand. In a lean year the sandsails bring grain and oil from Tahu Tangata and food from the Duchies' valley, and a daughter can call on Yemmazru's stores. The rocks buy what the rock cannot give: light timber and cane for the wings and the sandsails, from Tahu Tangata's forest belt and Emarrea; cloth; metal off the rail.</p>
+    <p><b>Salt.</b> Out on the sand lie salt pans, and the Necklace lives on them. Crews work the pans by night and load the sandsails before dawn, and the salt goes rock to rock and out at the doors: at Saltlanden to Tahu Tangata and the rail, at Tamalut to Emarrea, from the southern rocks to the Duchies' river.</p>
+    <p><b>Spring-crystal</b> goes out as lenses and ornament stone, a steady trade, each spring's crystal its keepers' to sell. The rocks sell guides and sand-pilots too, and the wing-post carries word for anyone who pays.</p>
+    <p><b>Tagnit.</b> In the oldest and deepest springs, fine grains of a pale sand settle out with the crystal, a pinch at a time, and the keepers gather it. <b>Tagnit</b> keeps what it touches from aging: a thing buried in it comes out as it went in. Alchemists and enchanters buy it for the slowing and quickening arts, physicians and merchants for keeping, and an hourglass filled with it keeps its own time. It is found nowhere else on Talan. Most of the springs that give it are the unfallen's. The rest comes from the pale band along the Blackened Lands, sand where moments repeat, gathered by night by a few old families of the south-western rocks, some of whom do not come back.</p>
+    <p>Tagnit leaves the Necklace only under the <b>azwil</b>, Yemmazru's seal, with the due taken. Each spring's keepers sell their own, through the seal. The unfallen whose springs give it would sell it themselves; Yemmazru answers that the seal keeps the price up and the sand out of the wrong hands. Abroad, tagnit is <b>holdsand</b>.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Held Moment</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Rocks Say</div>
+      <p>Every moment held with tagnit, folk say, is taken off the end of your life, so the old who hold the most die soonest. It is said to shame the rich. Some of the keepers believe it.</p>
+    </div>
+  </div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · What Tagnit Is</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Stillness of Her Killing</div>
+      <p style="margin-top:0;">The springs of Galdua Jendea all draw on one great deep water beneath the sand sea, and its oldest water passed under the ground where Tani was killed. Tagnit is the stillness of her killing: the moment the gods' retaliation stopped time in that ground, carried up a grain at a time in the water. The pale band is where it lies nearest the surface.</p>
+      <p>So every rock's water, and the water given to the herd, has passed beneath the place where she died. The unfallen are rich because their springs draw deepest, closest to her death. To hold a moment is to hold a grain of the instant a god was killed. Valreka's digs lift Oroiri whole because her death keeps her city, and the Lost Kingdom's ruins read newer than they should for the same reason.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-frontier" class="section-heading">The Frontier</h2>
+
+  <div class="voice-quote"><p><i>"On the clearest evenings you can see Tazrut from our high ledge, and there is water in it still. Three times in my life we have gone out to take it back. Twice we came home. Yemmazru sends its regards each time, and wings to count the dead."</i></p></div>
+  <div class="voice-attrib">Lunja n Tassast, of twenty-three, keeper of Tassast, to a Guild party hired at the watch-works, 2532 MR</div>
+  <div class="prose">
+    <p><b>Tassast</b> is the south-western rock, an unfallen one, the last living rock before the pale band. A hundred miles beyond it, out in the pale band, stands <b>Tazrut</b>. The cursed ground's spawn emptied it in the Dark Era, and it stood empty for centuries with its spring still running, too near the blight for anyone to stay. Tassast has always meant to take it back.</p>
+    <p>Since 2524 the Rot-Tyrant's corpse-legions have ranged out of the Blackened Lands across the pale band, and Tazrut lies on their ground. Tassast cannot retake it alone, and every year the legions hold it, Tassast is the frontier, its salt-roads to the south-west fewer and the pale band's wild tagnit harder to gather. It hires adventurers for the watch-works, more each year.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · Who Takes Back Tazrut</div>
+    <p style="margin-bottom:0;">Yemmazru could retake Tazrut. Reclaimed by Yemmazru, Tazrut would be a ninth daughter, and Yemmazru would stand at the Lost Kingdom's edge; Yemmazru is in no hurry, and waits for terms. Some of the unfallen would rather Tazrut stayed lost than see the Necklace tip further. The daughters know whose <i>tiwizi</i> a retaking would be, and whose dead. The argument comes to every watering.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="daily-life" class="section-heading">Daily Life</h2>
+  <div class="prose">
+    <p>The day turns around the noon. Before dawn the sandsails land; in the morning the rock works its canyon gardens while the shade is cool. From late morning to the middle of the afternoon come <b>the white hours</b>, when the rock withdraws into its deep rooms and sleeps or works indoors, and only the wings are out. In the evening the markets open on the ledges, and at dusk the sandsails go down the ramps. At night the rock sleeps or talks.</p>
+    <p>A Ghoran of the rocks keeps their flowers closed through the glare and opens them at dusk, so every rock's evening smells of a whole city blooming at once. A <b>Desert Palm</b> Ghoran blooms at noon, which is how you know one. The spring-halls smell of wet stone, the water out of them is cold, and there is salt on everything: on the dates, on the goat cheese, on the bread. Galduans ask <i>how is your water?</i> where others ask how you are, and say <i>before the sun</i> for <i>in time</i>. The vice of the well-off is <b>holding a moment</b>: a pinch of tagnit, taken outside the seal, to stay in a good moment a little longer than the world allows. In the old it shades into something sadder.</p>
+    <p>Inside a rock a Galduan climbs: stairs, ropes, hanging walkways, the basket-lifts. Between rocks they take a sandsail by night, or a wing by day.</p>
+    <p>Visitors go out onto the sand at noon, and some die of it; the ones who live learn why the rock goes silent. A visitor tries to pay for water and gives offence, and takes the sunrise law for free lodging and is asked for news before bread. A Galduan knows the herd is coming before the bells, because the water-roll said so weeks ago.</p>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">The young</div>
+      <p>The noon is theirs. The young fly the wings for the joy of it, race the thermals, dare each other off the high ledge and fly out to the herd when it lies still at noon. The <b>wing-masters</b>, who own the ledges, ground anyone who flies past sense. A child is carried first on a parent's two-seat wing, then flies ledge to ledge on the rock, and comes of age with the <b>first night-run</b>: a crossing to the next rock as a sandsail hand, out at dusk and in before the sun. Shade-grower or Desert Palm, every Galduan makes it. After it, some go to the wings and some to the keeping.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Faith as lived</div>
+      <p>The spring-hall is the rock's shrine: water is given in Nanaman's name, and the dead are remembered by the rock they lived on. The sanctum rides Lenama, and the herd's priests come to the rocks at the watering. The wing-folk keep an altar to Solyra on the high ledge and thank her at noon for the lift; the rest of the rock fears her and does not say so. At Saltlanden and the Duchies landings the river-traders keep a word for Shuun, and the keepers acknowledge Urzar for the water's own nature.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="what-a-galduan-is-called" class="section-heading">What a Galduan Is Called</h2>
+  <div class="prose">
+    <p>A Galduan carries a given name, their rock with <i>n</i> before it, and the waterings they have stood: <b>Aksil n Tamalut, of sixteen</b>. At every watering the keepers count everyone present, and the count goes up by one. A child carries no count until their first watering. A stranger who stays through a watering is counted with the rest and carries <i>of one</i> from then on.</p>
+    <p>Counts are dear or cheap by rock. The herd waters at Yemmazru most years, and a Yemmazru child of twelve may be <i>of ten</i>; a Tamalut elder of sixty may be <i>of fifteen</i>. So a Galduan asks <i>where</i> before <i>how many</i>. A Galduan who leaves the Necklace keeps their rock and their count, and the count stops while they are gone.</p>
+  </div>
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b></p>
+    <div class="pill-row"><span class="pill">Aksil</span><span class="pill">Dassine</span><span class="pill">Yugurten</span><span class="pill">Lunja</span><span class="pill">Tiziri</span><span class="pill">Idir</span><span class="pill">Tanirt</span><span class="pill">Massin</span><span class="pill">Dihya</span><span class="pill">Amayas</span><span class="pill">Tinhinan</span><span class="pill">Ziri</span></div>
+    <p style="margin:14px 0 6px;"><b>Rocks</b></p>
+    <div class="pill-row"><span class="pill">Yemmazru</span><span class="pill">Tamalut</span><span class="pill">Tassast</span><span class="pill">Saltlanden</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <div class="pill-row"><span class="pill"><i>Dihya n Yemmazru, of forty</i></span><span class="pill"><i>Amayas n Tassast, of six</i></span><span class="pill"><i>Takane no Hana, of one</i> (a kitsune player, counted at Tamalut).</span></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Yugurten n Yemmazru, of a hundred and twelve</div>
+      <p>Chief keeper of Yemmazru.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Lunja n Tassast, of twenty-three</div>
+      <p>Keeper of Tassast, on the frontier.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Dassine n Tamalut, of forty-nine</div>
+      <p>The oldest keeper of Tamalut, two hundred years at the spring-hall.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Aksil n Tamalut, of sixteen</div>
+      <p>A Desert Palm Ghoran of Tamalut, an adventurer forty years on the sand and over it; one of the two speakers of the telling.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Takane no Hana, of one</div>
+      <p>A kitsune player of the Kageroza, an Emarrean troupe touring the rocks; the other speaker.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-telling" class="section-heading">The Fall at Tamalut</h2>
+  <div class="prose"><p><i>The Fall at Tamalut</i>, the Kageroza's telling, as the troupe has played it on the rocks of Galdua Jendea and the stages of Emarrea since 2531 MR. Two players speak; the troupe plays the rest.</p></div>
+  <div class="log-letters">
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Morning</span><span class="ld-text">The bells: the herd on the horizon, a kitsune holding the wall, and a Ghoran watching her instead of the whales.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p class="stage">(The stage dark. A single lantern, high.)</p><p><span class="speaker">The Chorus</span> Every word of this is true, except the parts that are better.</p><p><span class="speaker">Takane</span> We had played Tamalut three nights, in a hall cut into the cliff, where the stone sweats cold all day and the audience sits in the dark like roots. I was in love with the hall. I was a little in love with the lamp-keeper's daughter. I was not in love with the ledges, because the ledges hang over nothing, and I keep my feet where the ground is.</p><p>On the fourth morning the bells went, and the whole rock ran for the lookouts. So I ran too, because a kitsune who hears a crowd running does not ask where.</p><p class="stage">(She runs to the lip of the stage and stops dead.)</p><p><span class="speaker">Takane</span> There was dust on the horizon. Then backs under the dust. Then roofs on the backs. Nineteen, the lamp-keeper's daughter said, counting on her fingers, and the great one in the middle carrying a palace. A city, coming across the sand like weather. I have built storms on a stage out of foxfire and silk. I have never built <i>that</i>.</p><p class="stage">(The lantern swings away from her. A Ghoran player steps out of the troupe: pale, unhurried, a white flower closed at his collar. He speaks to the audience as if she cannot hear him.)</p><p><span class="speaker">Aksil</span> I had come home for the watering. I always come home for the watering. I have walked the sand and flown over it for forty years, on other people's errands and the Guild's, and whatever I am doing, when the word comes that the herd is turning toward Tamalut, I put it down and come home.</p><p>So I was on the lookout, and the whole rock was looking at the herd, and I was looking at her.</p><p>She was leaning out over a drop she plainly hated. One hand was white on the rail. The other was already reaching, as if she could take the herd off the horizon and keep it. Her eyes had all nineteen whales in them. Her tails had opinions, three of them, and none of the opinions agreed with the hand on the rail.</p><p>I have seen many people want a thing. I had never seen anyone want it with half of herself while the other half held on to the wall.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Noon</span><span class="ld-text">The plunge: a wing made for two, the fall into the sun, and the landing on the Guild&#x27;s whale among the Strays.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p class="stage">(The lantern finds them both.)</p><p><span class="speaker">Takane</span> By noon the herd had stopped a few hours out and lain down in the sand to wait out the sun, as Valreka does. And by noon every child on the rock had a wing on their back. They run at the edge of the high ledge and drop off it. I watched the first one go. She fell out of the shade into the white light, and fell, and fell, and then the heat caught her and threw her upward like a leaf over a fire, and she laughed all the way up.</p><p>I was holding the wall. I would like that remembered.</p><p><span class="speaker">Aksil</span> She was holding the wall. And leaning toward the edge from it, the way a plant leans toward the window.</p><p>So I went to her and said, "You want to go."</p><p><span class="speaker">Takane</span> I said I wanted to live.</p><p><span class="speaker">Aksil</span> I said, "Both, then." And I held out a wing made for two.</p><p class="stage">(The troupe lifts them both. The lantern swings wide.)</p><p><span class="speaker">Takane</span> I will tell you what it is to fall into the sun. The shade lets go of you all at once. The air goes white. The rock drops past you, and you drop with it, and there is nothing in the world but the drop.</p><p><span class="speaker">Aksil</span> She screamed. Everyone screams the first time. She screamed in verse.</p><p><span class="speaker">Takane</span> I did not.</p><p><span class="speaker">Aksil</span> Something about the sun being a cruel lover.</p><p><span class="speaker">Takane</span> And then the heat hits from below, like a hand. The cloth goes tight. The falling stops being falling. You are higher than the rock, and the whole sand lies white and silent under you, and the only sounds are the wind in the cloth and a man laughing behind you.</p><p><span class="speaker">Aksil</span> My flower opened. It does that in the heat. She saw it and laughed at me, with her eyes still shut.</p><p><span class="speaker">Takane</span> They were open by then.</p><p><span class="speaker">Aksil</span> They were shut until I told her the whale was under us. After that she would not close them, and I had to tell her when to lean.</p><p><span class="speaker">Takane</span> We came down on the first whale, the Guild's, at the head of the herd, and the Strays came leaping up the dunes on their sand-beasts to see who had flown in.</p><p><span class="speaker">Aksil</span> The Strays always come. Anything that flies is a dare to them.</p><p><span class="speaker">Takane</span> I was in love with all of them. And with the whale. And a little with the man who had dropped me off a cliff.</p><p><span class="speaker">Aksil</span> A little, she says.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Dusk</span><span class="ld-text">The fall: the herd lies down at the rock, the keepers open the stone, and the troupe finds its lost lead.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p class="stage">(Dusk. The lantern lowers and reddens.)</p><p><span class="speaker">Takane</span> In the evening the herd rose and came on, and we rode it in. The whales lay down along the foot of the rock, one after another, the great one in the middle, and nineteen districts of people stood on nineteen backs and looked up. The whole city went quiet. Up in the cliff, in the dark of the spring-hall, the keepers opened the stone.</p><p>The water came down the face of the rock in one long white fall, out of the shade into the last red light, down to the troughs where the water-bearers stood waiting with their lines. Every soul on nineteen whales stood and listened to it. A whole desert of silence, and then that.</p><p><span class="speaker">Aksil</span> From the herd it is a fall of water. From the rock it is a door. The spring-hall stays shut and dark from one watering to the next, years sometimes, and the keepers sit with the spring all that while. The oldest keeper on Tamalut has opened that door for two hundred years. She remembers every watering: which whale came in first, who was sick, who was born on the crossing, what the herd brought and what it took. Valreka carries its memory on its back. Ours stays in the stone, and the keepers stay with it.</p><p>The Valrekans call us the lost ones, because we stayed when the goddess's city left. We call it staying. Then we open the door, and they drink.</p><p><span class="speaker">Takane</span> He told me that at the foot of the fall, with spray in his flower.</p><p><span class="speaker">Aksil</span> She cried. She will say she didn't.</p><p><span class="speaker">Takane</span> I sat down because my knees had given out.</p><p><span class="speaker">Aksil</span> I sat down because she did.</p><p class="stage">(The troupe rises and comes down the stage in a body, lanterns lit.)</p><p><span class="speaker">The Chorus</span> And where did we find her, when the troupe came down off the rock at dusk to look for its lost lead? At the foot of the fall. Sitting. Holding a Ghoran's hand.</p><p>Is any of it true?</p><p><span class="speaker">Takane</span> Ask him.</p><p><span class="speaker">Aksil</span> Ask her.</p><p class="stage">(The two players join hands and bow, glancing at each other. The lantern goes out.)</p></div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/lioaru/lioaru.html"><b>Lioaru →</b></a> · The Time domain and its three peoples.</li>
+      <li><a href="/setting/talan/domains/lioaru/valreka/valreka.html"><b>Valreka →</b></a> · The Whale-Borne City, which waters at the rocks.</li>
+      <li><a href="/setting/talan/domains/lioaru/valreka/whalehall.html"><b>The Whalehall →</b></a> · The Godshall on Anzar, where the wings land first.</li>
+      <li><a href="/setting/talan/domains/lioaru/lost-kingdom.html"><b>The Lost Kingdom →</b></a> · Beyond the pale band, where the legions come from.</li>
+      <li><a href="/setting/talan/domains/sumendar/tahu-tangata/tahu-tangata.html"><b>Tahu Tangata →</b></a> · Across the great river from Saltlanden.</li>
+      <li><a href="/setting/talan/domains/lautara/emarrea/emarrea.html"><b>Emarrea →</b></a> · Through the Tamalut door, home of the Kageroza.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">What the chronicle has not yet set down about the rocks.</div>
+    <ol>
+      <li><b>The rocks.</b> The eleven other living rocks, by name.</li>
+      <li><b>The keepers.</b> How a rock chooses them.</li>
+      <li><b>The salt pans.</b> By name.</li>
+      <li><b>The neighbours.</b> The River Duchies and Hareaveldi, seen from the rocks.</li>
+      <li><b>Nanaman.</b> Whether Valreka's water-bearers keep her too.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LIOARU · GALDUA JENDEA</div>
+
+</div>
+
+</body>
+</html>

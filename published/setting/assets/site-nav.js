@@ -127,6 +127,7 @@
       { slug: 'dragons-reach', label: 'Dragon\'s Reach · Dragon Capital', href: '/setting/talan/domains/sumendar/dragons-reach.html', children: [] }
     ]},
     { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/setting/talan/domains/lioaru/lioaru.html',     children: [
+      { slug: 'galdua-jendea', label: 'Galdua Jendea · the Rocks of the Dune Sea', href: '/setting/talan/domains/lioaru/galdua-jendea/galdua-jendea.html', children: [] },
       { slug: 'valreka',      label: 'Valreka &middot; the Whale-Borne City', href: '/setting/talan/domains/lioaru/valreka/valreka.html', children: [
         { slug: 'whalehall', label: 'The Whalehall &middot; Valreka\'s Godshall', href: '/setting/talan/domains/lioaru/valreka/whalehall.html', children: [] }
       ]},

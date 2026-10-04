@@ -16,7 +16,7 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-04).
 - **Phase 10 (draft): closed** (GM, 2026-10-04: "looks good as is"); the draft at [`galdua-jendea-draft.md`](galdua-jendea-draft.md).
 - **Phase 11 (commit lore): done** (2026-10-04). Built: `lore/geography/lioaru/galdua-jendea.md`.
-- **Phase 12 (publish): open.**
+- **Phase 12 (publish): done** (2026-10-04): `published/setting/talan/domains/lioaru/galdua-jendea/galdua-jendea.html`, generated from the lore file, the telling as three scene cards; wired into the sidebar, the Lioaru card, the interactive map and the site inventory; mirrored onto Valreka, the Whalehall, the Short Notice player page (the Post), the Lost Kingdom (the wardens), transport (sandsails, wings, speeds), ancestries (the Ghoran, ancestry heritages), history (the whale-tongues), the layer-3 gods page and the registrar (Nanaman).
 
 ## Phase 0: settled facts
 
