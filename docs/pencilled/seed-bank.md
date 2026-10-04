@@ -97,6 +97,8 @@ A culture centred on painting, sketching and drawing **the in-between and the tr
 
 *Sameness to watch:* **the Week of Crimson Rain**, when the skies wept divine blood: three precious rains in the domain where Tani died, so the build decides whether that echo is deliberate (and what it means cosmologically) or kept clearly apart. **Basins:** Haraour Eliza's mountain ring and Lurrath's Eraztumen ring each close a single great basin; three small crater lakes keep this one apart. **Threes:** Askamira is three countries with one song in three forms; the Lost Isle is one island, a hub and three spokes, and the build keeps the "three of a thing" from reading as a template. **Starlight is the crowded word:** Burdineyja's stars below (light in water), Star Island's legends, Myrria's Starlight Cliffs. Streets running with liquid light sit closest to Burdineyja; the difference to hold is that Burdineyja's light is alive, and this one falls from the sky and pools. The map shows the island black, for no reason in canon: the repaint is queued in `map-todo.md`.
 
+*Added (GM, 2026-10-04):* the Lost Isle has **no connection to the Lost Kingdom** any more (its old page section, sharing the curse at lower intensity, is retired at the Lost Kingdom build), and **the name is open**: it may be renamed at its build.
+
 ## The Basogur Jungle (rework): the Vanara's great beasts · GM, 2026-10-02
 
 Placed with **the Vanara of the Basogur** (GM): their structure was never truly defined beyond the guide-clans of the road. Every Vanara town and village has **a great beast**. It grows in size with the population it cares for, and they care for it. **A beast's child means part of the town leaving to settle a new one; a beast's death means the town is abandoned.**
