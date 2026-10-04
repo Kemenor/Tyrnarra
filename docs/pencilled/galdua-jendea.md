@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-04).
 - **Phase 2 (seeds): closed** (GM, 2026-10-04).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the telling committed at [`../../lore/geography/lioaru/galdua-jendea-telling.md`](../../lore/geography/lioaru/galdua-jendea-telling.md).
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
+- **Phase 5 (government): open.**
 
 ## Phase 0: settled facts
 
@@ -61,6 +62,42 @@
 
 **Placeholders for Phase 8:** [HER], [HIM], [ROCK], [THE TROUPE].
 
+### Phase 4: place, peoples and history (closed 2026-10-04)
+
+**Sites.** **Nineteen massifs**, each 10–40 mi across (map scale; on map-todo with centres and the reference sketch [`../map-refs/galdua-jendea-rocks.webp`](../map-refs/galdua-jendea-rocks.webp)); about 20,000 sq mi of open sand per rock. **17 living rocks**, some of them reclaimed after Dark-Era losses; every rock within one night's run (87–150 mi) of a neighbour, the chain reaching every edge. Characters by position: north (1, 2, 17, 3) faces No Man's Land's badlands and the great river, **3 the river-landing** for Tahu Tangata's grain and oil; east (4, 5, 14), **4 the Emarrea corner** (the troupes' way in), 5 facing Hareaveldi's river; the middle (11, 12, 13, 15, 16) the herd's home water; west coast (9, 10) on the Hafra facing the Lost Isle; south (6 toward the Duchies, 7 the short south shore); **8 the frontier** against the pale band. **13 the great rock**: largest massif and city, most-watered spring, beside the middle of the herd's range; its spring-hall the signature place (whether it rules: Phase 5). Take the pattern, not the dots.
+
+**Two lost rocks (GM: both).**
+- **18, the frontier rock**, in the pale band against the Blackened Lands (102 mi from 8, 146 from 9). Lost in the Dark Era to what the cursed ground spawns; stood empty for centuries with water still in it, too near the blight to stay; rock 8 has always meant to take it back. Since 2524 the Rot-Tyrant's corpse-legions range out across the pale band and the rock lies on their ground: resettling is nearly impossible. No canon move (the dungeon stays in the Blackened Lands; only its legions reach the rock).
+- **19, the dead spring**, in the north-west gap (89 mi from 10, 113 from 1, 115 from 11). Lost in the Dark Era when its spring failed. The rock still stands; caravans shelter there from the sunrise; nobody lives in its empty cliff-rooms. It explains the bend of the north-west chain, and it is what the keepers fear most.
+
+**Neighbours.** Valreka: partner, the watering (kinship, not the halt-argument). Tahu Tangata: grain and oil across the great river to rock 3. Emarrea: light (the troupes, the envoys' corner). Hareaveldi, River Duchies: light for now (stubs; Valreka's Asif trade passes). No Man's Land: light (the badland ridge between; few cross). The Lost Kingdom: the pressure (the pale band, the spawn, the corpse-legions since 2524). The Lost Isle: light (stub, off 9 and 10).
+
+**Peoples.** Ghoran ~60% (anchor, full expression; the keepers, the rock cities' old families); **Nagaji ~10–15%, the people most likely to hang a city, though the craft is not theirs alone** (GM); Azarketi ~5–10%, around the springs (their water-craft welcome where a spring runs low); others ~15–20% (kitsune from the Emarrea corner, Duchies folk, traders, adventurers).
+
+**Ghoran heritages (canon move, GM yes).** The four official heritages (Ancient Ash, Enchanting Lily, Strong Oak, Thorned Rose) exist across Talan as they are. **Shade-growing is ordinary Ghoran living here** (a way of life, not a body: the desert sun is too much for any plant). **Galdua Jendea adds one Tyrnarran Ghoran heritage, the sun-hardy**: flowers that open in the heat, able to stand in the noon; rare; mechanically close to PF2e's Desert Elf (fire resistance, heat severity one step lower). HIM is one. The flying is what the culture builds on the body, never the heritage. Name at Phase 8.
+
+**Founding.** The people: at the hinge of 1 MR, when the faithful split between the whales and the rock (the Court Tongue name *galdu jende*, "the lost people", fits). The rock cities: each its own age, shown in their names (oldest rocks Court Tongue or Lost-Era deep names; a few Imperial Talanese; most the regional Berber tongue since the Dark Era). The polity, if any: Dark Era or after (Phase 5).
+
+**Dated history** (checked against `timeline.md`):
+- **Gods' Era:** the springs of the rock served Oroiri's hinterland.
+- **0 GR – 0 MR, the Crimson Rain:** Tani killed in the Lost Kingdom; Oroiri swallowed and scattered.
+- **~1 MR:** the rebirth; Valreka refounded on Lenama; the stayers keep to the rock.
+- **Lost Era (1–560 MR):** the rock cities grow; Valreka's four Lost-Era houses bonded; the watering custom takes shape; the **sand-gliders** come into use.
+- **Golden Empire (560–1325 MR):** the Empire (ruling from Sumendar's dwarven mountains, through local lords) holds the rocks lightly as waystations; a few rocks take Imperial names; the herd at 26 whales in the last Golden century.
+- **Dark Era (1321–2135 MR):** the herd falls to eleven (five houses inside forty years); rocks lost (springs failed, spawn took them), among them 18 and 19; **the air-wings born** to keep the chain talking when the sand was too dangerous; 2131 MR the Greymantel's whale dies.
+- **Adventurer Era (2135 MR on):** some lost rocks reclaimed; the Guild comes to Valreka in the 2150s; the wings become everyone's; the troupes return.
+- **2524 MR:** the Nine Dungeons erupt; the Rot-Tyrant's legions press the south-west; rock 8 the frontier, 18 out of reach.
+- **2531 MR:** the telling. **2532 MR:** the present.
+
+**Population.** The sand holds no one; everyone lives on the rock. The floor of the wild tier, **~2 per sq mi: ~650,000–700,000**, about 40,000 a living rock on average across its city and towns. **The great rock's city ~15,000–20,000** (2–3%). Valreka's 70,000 counted apart.
+
+**Canon moves (GM yes, 2026-10-04):**
+1. `lioaru.md`, *What the roaming city trades*: "Valreka is the one thing that crosses Galdua Jendea entire… reaches where nothing fixed can" becomes the one *city* that crosses the sea entire, the moving market among fixed rocks; "scattered desert settlements" become the rock cities.
+2. Ghoran heritages: `lore/ancestries.md` (a short note on ancestry heritages on Talan; the sun-hardy heritage in the Ghoran entry) and `docs/ancestry-conventions.md` (a heritage is a body or a carry, never a job; a Tyrnarran heritage lives with its place).
+3. The Ghoran entry's vocation ("wardens of temporally unstable sites along the Lost Kingdom's edge") moves into the Lost Kingdom entry in `lioaru.md` as a Ghoran life there (`lore/ancestries.md`, `lore/geography/lioaru.md`).
+4. `lore/transport.md`: the sand-gliders and air-wings join the modes; the speeds table gains the sand-glider (100–150 mi a night), the air-wing (300–600 mi a day) and Valreka (3–5 mph, 50–90 mi a moving day, a 15–20 mph storm-sprint).
+5. `docs/map-todo.md`: the nineteen massifs with centres and the reference sketch (done 2026-10-04).
+
 ## Rejected options
 
 - **Seed 1, the sun's two faces** (the day turned inside out): kept as texture, weak alone (could move to Hareaveldi with the rock); Myrria's overlapping clocks sit close.
@@ -69,6 +106,4 @@
 ## Open and deferred
 
 - The gliding caravans against Valreka's "crosses entire" line (probably a canon move).
-- Where the rock stands: count and sites at Phase 4.
-- Ghoran sub-ancestries (Phase 4, canon move).
 - The gliders and the Guild Post (Phase 6).

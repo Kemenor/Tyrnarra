@@ -32,7 +32,31 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 
 ## Backlog for the next map edit
 
-- **The rock mountains of Galdua Jendea** (Lioaru; GM, 2026-10-04, at the build). The region's hanging cities need rock: draw the massifs that rise out of the dune sea. Their number, size and sites settle at the build's Phase 4 (`docs/pencilled/galdua-jendea.md`); the map now shows only open dunes inside the region.
+- **The rock mountains of Galdua Jendea** (Lioaru; GM, 2026-10-04, sited at the build's Phase 4). Draw **nineteen rock massifs** rising out of the dune sea, each about **10–40 miles across** (20–80 px on the full-res map): **17 living rocks** with cities hung on their shaded faces, and **2 lost rocks**. Every rock lies within one night's sand-glider run (~150 mi, 300 px) of a neighbour, so the chain reaches every edge. Reference sketch: [`map-refs/galdua-jendea-rocks.webp`](map-refs/galdua-jendea-rocks.webp) (regions view, 1 px there ≈ 1 mile; brown = living, grey = lost; the red lines are the night-runs, not roads to draw). Approximate centres on the full-res map; place the exact massifs by eye:
+
+  | Rock | Centre (x, y) | Note |
+  |---|---|---|
+  | 1 | 2140, 5890 | north-west, below the badland ridge |
+  | 2 | 2390, 5830 | north |
+  | 3 | 2730, 5980 | north-east, the great-river landing (Tahu Tangata) |
+  | 4 | 3060, 6220 | east, the Emarrea corner |
+  | 5 | 2890, 6440 | east, facing Hareaveldi's river |
+  | 6 | 2670, 6620 | south-east, toward the Duchies |
+  | 7 | 2400, 6960 | south, near the short south shore |
+  | 8 | 2150, 6780 | south-west, the frontier against the pale band |
+  | 9 | 1870, 6540 | west coast |
+  | 10 | 1900, 6210 | west coast |
+  | 11 | 2210, 6060 | inner north-west |
+  | 12 | 2530, 6160 | centre-north |
+  | 13 | 2350, 6400 | **the great rock**, largest massif, beside Valreka's icon (keep clear of the icon at ~2450, 6400) |
+  | 14 | 2730, 6280 | centre-east |
+  | 15 | 2070, 6440 | centre-west |
+  | 16 | 2390, 6680 | centre-south |
+  | 17 | 2550, 5900 | north, among the north dune field |
+  | 18 *(lost)* | 1950, 6820 | in the pale band against the Blackened Lands; the frontier rock |
+  | 19 *(lost)* | 1980, 6050 | north-west gap; the dead spring |
+
+  Labels wait for the naming pass (Phase 8); the great rock's city may take a capital icon if Phase 5 makes it one.
 
 - **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground with **three volcanic peaks**, each with a crater lake, and **a port** on the coast (the seed, the three rains, is in `docs/pencilled/seed-bank.md`; the coast the port faces is open until the build).
 
