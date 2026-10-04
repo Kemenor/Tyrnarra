@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Lost Kingdom: Lioaru · Tyrnarra</title>
+<title>The Lost Kingdom · Lioaru · Tyrnarra</title>
 <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/setting/assets/style-b.css">
 <link rel="stylesheet" href="/setting/assets/site-nav.css">
@@ -11,20 +11,23 @@
 <script defer src="/setting/assets/site-interactions.js"></script>
 <style>
   :root {
-    --domain-accent: #7c6878;
-    --card-bg: rgba(22,18,24,0.55);
+    --domain-accent: #9a86a0;   /* ash-mauve · 5.85:1 on Style B bg */
+    --card-bg: rgba(26,20,26,0.6);
   }
 
-  .signs-grid { --col-min: 220px; --card-pad: 12px 14px; --card-name-size: 0.93rem; }
-  .sign-desc { font-size: 0.9rem; color: var(--text); }
+  /* Voice quotations */
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
 
-  .ancestry-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px auto; max-width: 1000px; }
-  .ancestry-card { padding: 12px 16px; --card-bg: rgba(22,18,24,0.6); --card-accent: rgba(106,88,104,0.45); }
-  .ancestry-name { font-family: 'Cinzel', serif; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 6px; }
-  .ancestry-desc { font-size: 0.9rem; color: var(--text); }
+  /* Card grids */
+  .life-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .life-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
 
-  .warning-block { padding: 12px 16px; margin: 22px auto; max-width: 920px; --card-bg: rgba(40,18,22,0.55); --card-accent: #a04848; }
-  .warning-label { font-family: 'Cinzel', serif; color: #d88080; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 4px; }
+  /* The lantern */
+  .log-letter-body s { opacity: 0.75; }
 </style>
 </head>
 <body data-page="lost-kingdom">
@@ -32,72 +35,63 @@
 <div class="container">
 
   <div class="breadcrumb">
-    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/lioaru/lioaru.html">Lioaru</a><span class="sep">›</span><span>Lost Kingdom</span>
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/lioaru/lioaru.html">Lioaru</a><span class="sep">›</span><span>The Lost Kingdom</span>
   </div>
 
   <div class="header">
     <div class="header-ornament">✦ · ✦ · ✦</div>
     <div class="page-title">The Lost Kingdom</div>
-    <div class="page-subtitle">Lioaru Sub-Region · The Blackened Lands · "The Black Spot on the Map"</div>
-    <div class="page-flavor">"A god died here. The land has not forgotten how."</div>
+    <div class="page-subtitle">Lioaru Sub-Region · The Blackened Lands · Ida</div>
+    <div class="page-flavor">The returned dead, ruled by the strongest of them, in bones that remember the empire that killed a god.</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
   <dl class="facts">
-    <dt>Etymology</dt><dd>Plainly English (modern naming stratum). The folk-name <i>"the black spot on the map"</i> circulates in chronicles, sermons, and traveller's tales: most cartographers depict the territory as a literal void in the page rather than try to render its interior.</dd>
-    <dt>Position</dt><dd>The south-west coastal sub-region of Lioaru, fronting Hafra. Bounded inland by the desert; <b>Lost Isle</b> lies offshore to the west, sharing the curse at lower intensity.</dd>
-    <dt>Terrain</dt><dd>Blackened soil that takes nothing in cultivation. Time-warped strata where moments <i>repeat</i> or <i>pool</i>. Ruins that read newer than the surrounding stone, sometimes by centuries. Ambient necromantic resonance over the whole sub-region.</dd>
+    <dt>Etymology</dt><dd>Plain Talanese, the name the rest of Talan gives it. Folk names: <b>the Blackened Lands</b>, and <i>the black spot on the map</i>. Its own people speak <b>Hizva</b>, the oldest of the south-western tongues, and name their places in it: <b>Ida</b>, <b>Vardana</b>, <b>the Dakhma</b>. The ring of stones around the killing ground carries a Court Tongue name, <b>the Mugarri</b>.</dd>
+    <dt>Position</dt><dd>The south-west coast of Lioaru, on the Hafra. Its one land neighbour is Galdua Jendea, beyond a dark ridge along the north-east edge; past the ridge lies Galdua's pale band. Everywhere else is sea.</dd>
+    <dt>Terrain</dt><dd>About 57,900 square miles of black ground under a standing haze of black sand; clear days come a few times a year. The soil takes nothing. The ruins of a great city stand in the west of the interior, ringed by standing stones, and a walled town on the south coast.</dd>
     <dt>Character</dt><dd>
-      <i>Cursed ground, restless dead, time slipping, no kingdom claims it</i><br>
-      <div class="pill-row" style="margin-top:6px"><span class="pill">Ruined</span><span class="pill">Cursed Ground</span><span class="pill">Tani Died Here</span><span class="pill">Fleshwarp + Skeleton Origin</span><span class="pill">Unclaimed</span></div>
+      <i>The returned dead, ruled by the strongest of them, in bones that remember the empire that killed a god.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Tani Died Here</span><span class="pill">The Haze</span><span class="pill">Ida</span><span class="pill">The One Who Holds</span><span class="pill">The Dakhma</span><span class="pill">Fleshwarp + Skeleton Origin</span></div>
     </dd>
-    <dt>Politics</dt><dd>No kingdom claims it. No reliable maps exist of the deep interior. The <b>Adventurers' Guild posts a perpetual standing warning</b>; passing the edge is at the traveller's own count.</dd>
-    <dt>Magitrain</dt><dd><b>No rail. No rail planned. No rail possible.</b> The Blackened Lands' chaotic magical residue scrambles Arcanotech precision, and no rail consortium would build there in any case. Access is on foot, by mount, or by airship over the edge: and airships routinely refuse the contract.</dd>
-    <dt>Visitors</dt><dd>Tani-mourning sects on edge-pilgrimage; necromancers drawn by the resonance; ascension-cultists hunting for what the ruins might still hold; the rare Adventurers' Guild expedition. Most do not return whole; some do not return at all.</dd>
-    <dt>Wardens</dt><dd>Ghoran wardens keep watch along its edge, where the time-warps reach furthest, and post the warning-cairns travellers read.</dd>
+    <dt>Peoples</dt><dd>About 30,000, half of them in Ida. <b>The risen</b> (Skeletons) are about half; <b>the warped</b> (Fleshwarps) about a quarter; <b>the kept</b>, the living who came to the edge and stayed, about a quarter. Skeletons and Fleshwarps are at their fullest here, and Duskwalkers are born here more than anywhere on Talan.</dd>
+    <dt>Tongue</dt><dd>Hizva, which comes back to its speakers through their memories; Talanese with an old shape to it, for everything else.</dd>
+    <dt>Faith</dt><dd>Tani, whose divine caster sits the city's seat; Betibizi, whose priests hold their stretches of the wall.</dd>
+    <dt>Rule</dt><dd><b>the Daraya</b>, the one who has done the greatest holding against what comes out of the ground. <b>Rauca Urvan</b> holds the seat; she sealed the Dakhma's gate in 2524. The <b>pathra</b> hold the wall under her; a <b>steward</b> runs the rest.</dd>
+    <dt>Capital</dt><dd><b>Ida</b>, on the south coast, about 15,000.</dd>
+    <dt>Founded</dt><dd>The land at the Week of Crimson Rain; Ida in the Dark Era; the present Daraya in 2524.</dd>
   </dl>
 
-  <div class="accent-card warning-block">
-    <div class="warning-label">Adventurers' Guild: Standing Notice</div>
-    <p>The Lost Kingdom is the only sub-region on Talan that the Guild publishes a <b>permanent edge-of-region warning</b> for. Any party entering past the inner stone ring is recorded as a <i>missing-presumed-lost</i> contract from the moment they cross. Recovery teams are not dispatched. The standard <b>Silver-rank ceiling</b> the Guild applies to ordinary expedition contracts in the region has been overridden in writing by a <b>standing Guildhall instruction</b> that no party below the override-rank is permitted near the cursed ground at all. <b>Platinum and above only.</b></p>
+  <div class="gods-city" style="border-color: rgba(154,134,160,0.5);">
+    <div class="gods-city-label">The City</div>
+    <div class="gods-city-name">Ida</div>
+    <div class="gods-city-byname">On the south coast, outside the Mugarri · the risen, the warped, the kept · the Daraya and the wall</div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
   <h2 id="what-the-land-is" class="section-heading">What the Land Is</h2>
   <div class="prose">
-    <p>The Lost Kingdom is the wound where a Grand God died. The divine retaliation that followed Tani's killing concentrated on this single coast for the better part of a week: what mortals remember as the <b>Week of Crimson Rain</b>: and the land has carried the strike ever since. Three and a half thousand years have not healed it.</p>
-
-    <p>What grew here once is gone. What remains is the wound: and the things the wound makes.</p>
+    <p>The Lost Kingdom is the ground where a Grand God died. The gods' retaliation for Tani's killing fell on this one coast for the better part of the Week of Crimson Rain, and the land has carried the blow for some two and a half thousand years.</p>
   </div>
-
-  <h3 id="signs-of-the-curse" class="section-heading" style="font-size:1.1rem; margin-top:24px;">Signs of the Curse</h3>
-  <div class="card-grid signs-grid">
+  <div class="card-grid life-grid">
     <div class="accent-card">
-      <div class="card-name">Blackened Soil</div>
-      <div class="sign-desc">The ground takes nothing: no crop, no grass, not even the patient lichens that colonise dead stone elsewhere. The black is not ash; it is the soil itself, all the way down past the depth a shovel reaches.</div>
+      <div class="card-name">The haze</div>
+      <p>Black sand hangs in the air over the whole country, fine as flour, and the sun stands in it like a copper coin behind a cloth. A few days a year the wind clears it; on the rest, a traveller sees ten paces by lantern and the wardens on the ridge see the edge and nothing past it.</p>
     </div>
     <div class="accent-card">
-      <div class="card-name">Time-Warped Strata</div>
-      <div class="sign-desc">Moments <i>repeat</i> in pockets: a wind that blows the same gust twice; footsteps that arrive before the foot. Other moments <i>pool</i>, holding the traveller in a single second for what feels like an hour. The temporal anomalies are heaviest near the ruined capital's core.</div>
+      <div class="card-name">Signs of the curse</div>
+      <p>The soil is black all the way down, and it takes no crop, no grass and no lichen. Moments repeat in pockets, a gust that blows twice, footsteps that land before the foot; other moments pool and hold a traveller in one second for what feels like an hour. The stone of the ruins reads newer than it should, clean-edged, as if it were cut last year. A constant pressure lies on the spell-sense of anyone trained to feel it; necromancers describe crossing the ridge as the background hum of the dead turned up. The living who stay too long come back changed in body. And the dead get up: the ground raises its own, with no hand needed.</p>
     </div>
     <div class="accent-card">
-      <div class="card-name">Ruins Reading Newer</div>
-      <div class="sign-desc">Stone fragments that the eye reads as <i>newer</i> than the surrounding rock: by years, sometimes by centuries. The Old Race's lost capital lies underneath; the strata above it date wrong because the strata <i>are</i> wrong.</div>
+      <div class="card-name">The Mugarri</div>
+      <p>Around the killing ground stands a ring of great stones, the Mugarri, set by the gods in the Week of Crimson Rain. Inside it lie the ruined city and the worst of everything above: the time-warps thickest, the raising strongest. The Adventurers' Guild counts every party that passes the Mugarri as lost from the moment it crosses.</p>
     </div>
     <div class="accent-card">
-      <div class="card-name">Ambient Necromantic Resonance</div>
-      <div class="sign-desc">A constant low pressure on the spell-sense of anyone trained to feel it. Necromancers describe entering the Lost Kingdom as a <i>volume change</i>: the background hum of the dead made suddenly audible.</div>
-    </div>
-    <div class="accent-card">
-      <div class="card-name">Periodic Fleshwarp Incidents</div>
-      <div class="sign-desc">Survivors of the cursed ground sometimes return changed in body. Limbs malformed, organs duplicated, sense-organs in the wrong places. The land works on the living without consent and without pattern.</div>
-    </div>
-    <div class="accent-card">
-      <div class="card-name">The Restless Dead</div>
-      <div class="sign-desc">Concentrations of bone-revenants. Skeletons rise from the soil itself: most are old, some are not. No necromancer is needed; the land does its own raising.</div>
+      <div class="card-name">The ridge</div>
+      <p>Along the north-east border runs a dark ridge, and beyond it Galdua Jendea's pale band. Ghoran wardens keep watch along the ridge and post the warning-cairns travellers read; most outsiders come no farther.</p>
     </div>
   </div>
 
@@ -105,115 +99,209 @@
 
   <h2 id="why-the-land-is-this-way" class="section-heading">Why the Land Is This Way</h2>
   <div class="prose">
-    <p>The mortal histories agree on the public part of the story: <b>this is where Tani was killed.</b> The Goddess of Time was struck down in her own domain: the first Grand God ever slain. Her death triggered the Week of Crimson Rain, the Grand Gods' open war that ended an era and reshaped the world. The kingdom that occupied this coast at the time of her death was annihilated in the retaliation; the cursed ground left behind is what the modern map calls the Lost Kingdom.</p>
-
-    <p><i>Who</i> killed Tani is where the public histories thin. Mortal chronicles call the event <b>the God Killing Incident</b> and most retellings name the killers only as <i>"the Old Race who killed Tani"</i>. Some sources conflate them with the long-vanished <a href="/setting/talan/the-binding.html">Elden</a>; some treat them as an unnamed mortal civilisation of the Gods' Era; some treat them as a folk-figure for whatever the Storveldi Denbora actually were. The full truth is closer to the GM section at the bottom of this page.</p>
-
-    <p>What every chronicle does agree on: the killers' homeland was annihilated <i>here</i>, by the Grand Gods themselves, in answer.</p>
+    <p>The chronicles agree on the public part of the story. Tani, the Goddess of Time, was struck down here in her own domain, the first Grand God ever slain, and her death began the Week of Crimson Rain. The people who held this coast were annihilated by the gods in answer, and their great city lies in the west of the interior. The people of Ida call it <b>Vardana</b>, the city; its own name is lost.</p>
+    <p>Who the killers were is where the chronicles thin. Most call them the Old Race who killed Tani; some make them the Elden, some a mortal people of the Gods' Era who lived among the Elden's ruins and claimed their blood, some sorcerer-kings who pried open a secret meant for gods. The surviving record confirms only that their homeland was destroyed here, by the gods themselves.</p>
+  </div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Real History of the Lost Kingdom</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
+      <p style="margin-top:0;"><b>The killers were the Storveldi Denbora</b>: a mortal civilisation of the Gods' Era. Not the Elden, despite their claim to the contrary. They settled atop abandoned Elden ruins on this coast and built their own capital on those foundations; they <b>claimed Elden descent</b> for prestige and legitimacy, copying what they could understand of what their predecessors had left behind. The conflation of Storveldi Denbora with Elden is their own original lie, transmitted forward across millennia. Most modern mortals (including most Azarketi) do not know this.<br><br></p>
+      <p><b>What they actually achieved.</b> Generations of selective practice, alchemical work, archaeology of the Elden ruins beneath them, and what we would today call divine engineering. They used the Wellspring/belief mechanic aggressively to lift their entire ruling class to <b>Demi-God</b> status. The far rarer achievement: <b>they developed the integration procedure</b>, the technique for imbuing a found shard of divinity into a mortal's own divine essence. With the procedure in hand, any recovered shard could be converted into actual ascension. <i>The procedure was their true edge, not the shards themselves.</i> Two of their most accomplished sovereigns went further and reached <b>Minor God</b> status by integrating recovered shards. See <a href="/setting/talan/the-binding.html#what-the-binding-is">the-binding.html</a> for cosmological context.<br><br></p>
+      <p><b>The God Killing Incident.</b> The two Minor Gods of the Storveldi Denbora, supported by their Demi-God ruling class, attacked <b>Tani in her own domain and killed her</b>: the first Grand God ever slain. The retaliation was the <b>Week of Crimson Rain</b>; the centre of it was here. The capital was annihilated; the land around it was so deeply wounded that it has never healed. <i>This is the cosmological reason the Blackened Lands exist.</i><br><br></p>
+      <p><b>One member of the ruling class survived.</b> He used the integration procedure on himself in the aftermath, ascended to <b>Minor God of Undeath</b>, took the self-given name <b>Betibizi</b> ("eternal life"), and fled Talan for Abyss (Layer 3). He has not returned. <b>He is the spiritual root of the Blackened Lands' ambient necromancy</b>: the reason the cursed ground raises Skeletons without a necromancer's intervention, and the canonical source-god for the natural-born Skeleton ancestry. He is also the <b>original holder of the integration procedure</b>, the choke-point knowledge that could elevate other mortals past Demi-God status. Fragments of the procedure persist on Talan among Betibizi's cult and the descended Azarketi lineages; reconstructing the complete procedure from those fragments is <b>the largest unsolved capability gap on Talan</b>. The bound thirteen do not discuss whether they know its location.<br><br></p>
+      <p><b>The Azarketi connection.</b> Not every Storveldi Denbora citizen was at the capital when the gods came. A scattered population of survivors (descendants of those who had been experimented upon, or who carried the inherited results of generations of self-experiment, but who were never themselves elevated) persists today as the <b>Azarketi</b>. Their inherited "Elden blood" claim is the Storveldi Denbora's original lie passed down in a form that none of the modern claimants recognise. They descend from the people who <i>imitated</i> the Elden, not from the Elden themselves.<br><br></p>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="the-ancestries-of-the-cursed-ground" class="section-heading">The Ancestries of the Cursed Ground</h2>
+  <h2 id="ida" class="section-heading">Ida: the Risen, the Warped, the Kept</h2>
+
+  <div class="voice-quote"><p><i>"Who are you?"</i></p><p><i>"We live here."</i></p></div>
+  <div class="voice-attrib">A Guild party and a Skeleton of Ida, in the square of a ruined street, as the vault lantern on Anzar keeps it (2531 MR)</div>
   <div class="prose">
-    <p>The Lost Kingdom is the canonical origin point of two of Talan's mortal ancestries. <b>Neither is the work of any current faction.</b> They are not the product of cults, sorcerers, or governments. They are what the land itself produces from those who live or die on it.</p>
+    <p>The ground has raised its dead since the Rain, and for most of that time the aware ones rose and drifted away into a world that hunted them. In the Dark Era, when the world hunted everything strange, they began to come back, and on the south coast, outside the Mugarri, where the sea air thins the haze and the curse runs weakest, they built <b>Ida</b>.</p>
+    <p>Three kinds of people live in it. <b>The risen</b> are Skeletons, old bones that got up with someone new inside; they are half the city. <b>The warped</b> are Fleshwarps, born living and reshaped by the ground, each the only one of their kind. <b>The kept</b> are the living who came to the edge and stayed: Duskwalkers born in the cursed land, exiles, pilgrims who never went home. About 15,000 live in Ida and as many again in holds among the coastal ruins, inside the wards or close to them; the rest of the country holds no one.</p>
+    <p>The ground feeds no one, and the sea feeds the city. The kept and the warped fish the Hafra at first light and gather kelp and shellfish along the shore; the risen do not eat. The water comes from the old cisterns under the town, sunk deep. Ida is walled on the landward side, and along the wall run the wards.</p>
   </div>
-
-  <div class="ancestry-row">
-    <div class="accent-card framed ancestry-card">
-      <div class="ancestry-name">Fleshwarp</div>
-      <div class="ancestry-desc">The cursed ground twists living flesh into irregular bodies. Fleshwarps born of the Lost Kingdom are the natural mortal ancestry: children of survivors, of trespassers who lingered, and sometimes of the land's slower work on those who never asked to be changed at all. <b>This is the PF2e Fleshwarp ancestry as it exists on Talan.</b> Each is unique; no two share form.</div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">The flashes</div>
+      <p>Everyone in Ida, living or risen, has flashes of the kingdom that stood here: a street, a smell of roasting meat, a procession, sometimes a face. In Hizva a flash is a <b>marthra</b>, and the first thing anyone asks after one is <i>whose was it?</i> Each comes from one place: from a soul's own past, from the bones' own life, or from the ground, which keeps its moments. A flash comes from only one of the three, and whose a given flash was is a guess the whole city argues over. The old tongue comes back the same way, a word at a time, and Ida speaks it.</p>
     </div>
-    <div class="accent-card framed ancestry-card">
-      <div class="ancestry-name">Skeleton</div>
-      <div class="ancestry-desc">The restless wound pulls the dead back into motion. Lost-Kingdom Skeletons are not raised by a necromancer's hand: they rise. Some are old enough that nothing of who they were remains; some are recent enough that fragments of personality persist. They are the canonical natural-born Skeleton ancestry on Talan.</div>
+    <div class="accent-card">
+      <div class="card-name">The seeing-to</div>
+      <p>Every body that falls in or near the cursed ground is broken and buried before the ground can raise it: an enemy's, a friend's, an outsider's, one of the risen whose soul has gone. Nothing is left whole for what comes out of the Dakhma. A body's own people see to it where they can, and anyone does where they cannot, with a few words to Tani.</p>
     </div>
-  </div>
-
-  <div class="callout" style="margin-top:18px;">
-    <div class="callout-label">A Quieter Third: Duskwalkers</div>
-    <p>The Lost Kingdom is also Talan's largest source of the <b>Duskwalker</b> heritage: made, not born, a Duskwalker manifests as a mortal child where death runs close to the surface, and the Blackened Lands are the most prolific such ground on the continent, the wound to the <a href="/setting/talan/domains/brauogi/soul-tree/soul-tree.html"><b>Soul Tree</b></a>'s door (the island off Tvisol's Twin Suns coast, the one other great source). The cycle pushes back against the same pull that raises the Skeletons: one cursed ground, two answers. Epairima's wardens, the <b>Voroir Daua</b>, read Duskwalkers as the cycle's own children; the restless dead settle in their company, and undeath has never once taken one. Most drift away from the cursed ground as they grow; a Duskwalker met elsewhere on Talan traces, if she can be traced, back here.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="lost-isle" class="section-heading">Lost Isle</h2>
+  <h2 id="the-one-who-holds" class="section-heading">The One Who Holds</h2>
+
+  <div class="voice-quote"><p><i>"Ask the wall who rules. It has been asked before, and it answered."</i></p></div>
+  <div class="voice-attrib">Rauca Urvan, the Daraya, to a Guild envoy at the landward gate, 2530 MR</div>
   <div class="prose">
-    <p>A small island that lies offshore to the west, off Galdua Jendea's coast. It shares the cursed-ground character of the Blackened Lands at lower intensity: softer time-warps, fewer revenants, a fleshwarp incidence the locals call <i>"merciful by comparison."</i> No ferry runs there. Several have tried.</p>
-
-    <p>The deep history of Lost Isle is unwritten. Two possibilities circulate: that it was a coastal outpost of the same kingdom that perished on the mainland, dragged into the wound by association; or that it predates the kingdom entirely, and is the older scar: the one the kingdom unwisely built next to. The Adventurers' Guild does not adjudicate the question.</p>
+    <p>Ida is ruled by whoever has done the greatest <b>holding</b>: held the wall, burned a captain of the dead, sealed a gate. That person is <b>the Daraya</b>. Rule passes when someone holds against something greater, in the open, before witnesses, and the city acclaims it; or when the Daraya dies or fails at the wall.</p>
+    <p><b>Rauca Urvan</b> has been Daraya since 2524. She is risen, a divine caster of Tani, and when the Dakhma broke open that year she sealed its gate, and the city has acclaimed no greater holding since. Under her the <b>pathra</b> hold the wall, each a stretch of it and the wards along it, and a warden's stretch is their standing in the city. The strong come from every kind of casting: arcane, primal, occult and divine all count, as long as they hold. At dusk each of the pathra lights their stretch, and the city glances up to count the lights.</p>
+    <p>The Daraya calls anyone to the wall, commands the pathra and the wards, deals with the outsiders who come to the landward gate, and names a <b>steward</b>. The steward, <b>Utana Zam</b>, one of the kept, runs the fishing, the stores, the cisterns and the trade at the cairns. The Daraya may not keep the seat once a greater holding has been acclaimed. What counts as greater, and how the city acclaims it, is written nowhere.</p>
+    <p>The strongest arcane caster in Ida is <b>Vindafarna Ast Arshama</b>, a risen of the old way: the way the bones remember, of study and working, and of what the strong of Vardana once made of themselves. He holds the longest stretch of the wall, and in 2531 he came out of the haze with Hutaosa Zam and the Fleshwarp <b>Taxma Ast</b> and burned a captain of the legions to save a Guild party. Betibizi's priests hold their stretches too, and say the people of Ida are their god's, since his resonance raised them.</p>
+    <p>The Daraya means to kill the Rot-Tyrant herself. Whoever does it does the greatest holding there is, and rules after; she cannot do it alone, and every helper is a possible successor.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Daraya's Marthras</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Faithful Say</div>
+      <p>In Ida the faithful say that Rauca Urvan's flashes come from Tani herself, the last things the goddess saw on the day she fell here, and that this is why the gate held under the Daraya's hand in 2524. The Daraya has never said what her marthras show.</p>
+    </div>
+  </div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Vindafarna's Bones</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; A Fragment on the Wall</div>
+      <p style="margin-top:0;">Vindafarna's bones were one of the Storveldi ruling class: a Demi-God who died at Vardana in the retaliation. His marthras carry true pieces of <b>the integration procedure</b>, which canon says survives on Talan only in fragments; one of the fragments walks Ida's wall. That is his might, and why the ascension-cultists court the cairns, and why the old way in Ida is more than a memory. The bound thirteen suppress integration work wherever they find it, and would care very much who rules Ida if they knew.</p>
+    </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="who-goes-there-and-why" class="section-heading">Who Goes There, and Why</h2>
+  <h2 id="the-dakhma" class="section-heading">The Dakhma and the Legions</h2>
+
+  <div class="voice-quote"><p><i>It is not a drum. It is feet. A great many, in step, slow, iron on bone and bone on stone, from somewhere inside the haze.</i></p></div>
+  <div class="voice-attrib">The vault lantern on Anzar, as transcribed in 2531 MR</div>
   <div class="prose">
-    <p><b>Tani-mourning sects.</b> Small religious groups, scattered across Talan, who hold that the Goddess of Time was wronged and that her memory deserves witness. Their pilgrimage stops at the inner stone ring: they do not enter. Some leave offerings; most leave silent.</p>
-
-    <p><b>Necromancers.</b> Drawn by the resonance. The Lost Kingdom is the strongest single concentration of ambient death-magic on the continent; a practitioner who survives a week at the edge often returns home <i>changed</i> in study, if not in body. Most of the changes do not announce themselves as beneficial.</p>
-
-    <p><b>Ascension-cultists.</b> The folk-tradition that <i>"power can be found where the gods bled"</i> draws these the most reliably. They are looking for shards of divinity: fragments of Tani's power, or of the killers' own, depending on which version of the myth they hold. Sometimes they find what they came for. Sometimes the land finds them first.</p>
-
-    <p><b>The Adventurers' Guild.</b> Standing edge-monitoring contracts run year-round, posted at Lioaru's guildhalls and at Crossroads. The Guild publishes no map of the deep interior: partly because no one has produced one that two surveyors agree on, and partly because the maps that have been drawn are considered unsafe to circulate. <i>What is on the map can be sought.</i></p>
+    <p>Under Vardana the old kingdom laid its dead in great bone-halls, the <b>Dakhma</b>. In 2524, when the Nine Dungeons broke open across Talan, the <b>Rot-Tyrant</b>, the corpse-warlord in rusted armour, came up beneath them, and raised the dead of the Dakhma as its legions. Rauca Urvan sealed the main gate that year. The legions still come up through the lesser ways under the ruins, captains in rusted armour ahead of them, and range out across the pale band into Galdua Jendea, where they hold the lost rock of Tazrut.</p>
+    <p>The legions march in step. The risen walk out of step, each as the person it is, and that is how Ida tells its own from the enemy in the haze. The legions' bones are the same old bones the risen got up in: one people's dead, on both sides of the wall.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · Who Kills the Rot-Tyrant</div>
+    <p style="margin-bottom:0;">The Daraya means to, and needs help to do it. Vindafarna Ast Arshama holds the longest stretch of the wall and has burned a captain already. Guild parties out of Tassast and the Whalehall come for the second General ever felled, and if one of them lands the blow, Ida has no rule for who holds the seat after. Betibizi's priests hold their stretches and wait. Across the ridge, Tassast wants Tazrut back.</p>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <h2 id="what-people-say" class="section-heading">What People Say</h2>
+  <h2 id="ancestries" class="section-heading">The Ancestries of the Cursed Ground</h2>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">Fleshwarp</div>
+      <p>The ground twists living flesh into irregular bodies: the children of survivors, of trespassers who lingered, and of the kept, worked on slowly by the land. Each is unique, and the Lost Kingdom is the one place on Talan where a Fleshwarp is ordinary. Elsewhere a Fleshwarp of the Blackened Lands is rare and pitied, and few can tell one from the Red Empire's made fleshwarps on sight.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Skeleton</div>
+      <p>The wound pulls the dead back into motion with no necromancer's hand. Some rise with nothing in them; those are the dead the city sees to. The aware ones are the risen, and most of them live in Ida. Elsewhere on Talan a Skeleton is almost always a Blackened Lands émigré, refused entry by many kingdoms and watched, in some charters hunted, by the Voroir Daua.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Duskwalkers</div>
+      <p>The Lost Kingdom is the largest source of the Duskwalker heritage on Talan. A Duskwalker manifests as a mortal child where death runs close to the surface, and here it runs closest; the same ground that raises the dead seeds the children around whom the dead lie down. In Ida they are among the kept, and the city needs no word for what they are.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-cairns" class="section-heading">The Cairns, and Who Goes There</h2>
   <div class="prose">
-    <div class="legend-era">
-      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: The Old Race Who Killed Tani</button>
-      <div class="legend-era-content">
-        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
-        Most mortal chronicles call the killers <i>"the Old Race who killed Tani, whose land became the black spot."</i> Beyond that the stories differ. <b>Some conflate them with the Elden</b>: the long-vanished pre-Crimson-Rain civilisation; this is the most common version, and the most wrong. <b>Some hold they were a separate mortal civilisation</b> who simply lived among or after the Elden, claimed kinship for prestige, and reached too far. <b>Some hold they were sorcerer-kings of the Gods' Era</b> who pried open a forbidden divine secret. The historical record preserves enough to confirm the killers were <i>not</i> the Elden: but most retellings make the conflation anyway, because the killers themselves encouraged it during their lifetime. The lie has outlasted the liars by millennia.
-      </div>
-    </div>
-
-    <div class="legend-era">
-      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: The Inheritors</button>
-      <div class="legend-era-content">
-        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
-        The <b>Azarketi</b> (water-touched mortals scattered across Talan's coasts) sometimes still claim <i>"Elden blood"</i> as inherited tradition. Their elders preserve fragments of the claim in oral history. Some sages dispute the claim; others accept it as a folk-memory that probably descends from <i>somewhere</i> real. Few make the connection to the Lost Kingdom explicitly. The Azarketi themselves, when asked, usually say only that their people came from <i>"across the water, before the Rain."</i>
-      </div>
-    </div>
-
-    <div class="legend-era">
-      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: Pilgrims Speak of a Voice</button>
-      <div class="legend-era-content">
-        <div class="legend-era-label">◈ &nbsp; Theories &amp; Common Belief</div>
-        Among the Tani-mourning sects there is a quiet tradition: that the edge of the cursed ground sometimes <i>answers</i> the pilgrim. Not in words, never in shape: a sense of being heard, a pressure that lifts after an offering is made. Skeptics call it grief feeding on itself. The sects call it her, still present, somewhere under the soil.
-      </div>
-    </div>
-
-    <div class="legend-era">
-      <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief: Meat on a Stick</button>
-      <div class="legend-era-content">
-        <div class="legend-era-label">◈ &nbsp; Horror-Trope · Folk-History of the Old Race</div>
-        The most persistent piece of folk-detail about pre-annihilation life under the Old Race is also the ugliest: that they ate <b>human flesh as everyday food</b>: <i>meat on a stick, sold from street vendors</i>. Mothers use the phrase to frighten children. Sermons against the Old Race begin with it. Modern scholars dismiss it as a horror-trope grown in the centuries after the catastrophe, the kind of thing folk-history invents to dehumanise the destroyed. The trope refuses to die regardless. Adventurers who have walked the edge of the Blackened Lands occasionally come back saying the wind around certain ruins still smells of woodsmoke and roasted meat: which the trope explains too neatly to be coincidence, and which the skeptics explain by reminding everyone that ruin-air plays tricks on tired noses.
-      </div>
+    <p>Few outsiders cross the ridge. Most of the dealing between Ida and the world is done at <b>the cairns</b>: the people of Ida leave what the ruins give on a warden's cairn and take what was left in exchange, so no one has to stand face to face. The Ghoran wardens see it and let it be. What goes out is bronze and worked glass of the old kingdom's make, tools of a dead people, and rarest, an object that holds a moment, sold carefully and refused to the ascension-cultists unless someone is desperate. What comes in is cloth and metal for the living, gloves, masks and hoods for the leaving, books, and grain in a lean year. Most of it goes on through <b>Tassast</b>, Galdua Jendea's frontier rock, and some reaches the Brokers' Walk on Anzar at one remove.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">Adventurers' Guild · Standing Warning</div>
+    <p style="margin-bottom:0;">The Adventurers' Guild posts a permanent warning over the Blackened Lands, the only one of its kind on Talan, signed from the desk of Valreka's Guild Sovereign. A standing Guildhall instruction keeps every party below Platinum away from the cursed ground, and any party that passes the Mugarri is entered as missing, presumed lost; no recovery is sent. The Guild publishes no map of the interior.</p>
+  </div>
+  <div class="prose">
+    <p><b>Who comes.</b> Tani-mourning sects come on pilgrimage to the edge and leave offerings at the Mugarri; the city leaves the offerings where they lie. Necromancers come for the resonance, and ascension-cultists for whatever the ruins might still hold of the old road. Guild parties come for recoveries, for the watch-works at Tassast, and since 2524 for the war.</p>
+    <p><b>The leaving.</b> Few of Ida's people leave, and those who do go hooded and masked, with papers and a borrowed name: over the ridge to Tassast and its sandsails, which take in anyone before the sun, or by night in a smuggler's boat from the little harbour below the town. The Voroir Daua watch for them.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Dead Eat the Living</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What Travellers Say</div>
+      <p>The oldest horror told of the Old Race is that they ate the flesh of mortals as everyday food, meat on a stick from the street vendors; mothers frighten children with it, and sermons against the killers open with it. To most of Talan the dead are the dead, and over the centuries the tale has moved to whoever lives in the killers' ground: travellers say the dead of the Lost Kingdom eat the living. A party back from the edge will swear the wind off certain ruins smells of woodsmoke and roasting meat.</p>
     </div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
 
-  <div class="prose" style="margin-top:24px">
-    <div class="secret-era">
-      <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret: The Real History of the Lost Kingdom</button>
-      <div class="secret-era-content">
-        <div class="secret-era-label">⚿ &nbsp; Known to Almost No One</div>
-        <b>The killers were the Storveldi Denbora</b>: a mortal civilisation of the Gods' Era. Not the Elden, despite their claim to the contrary. They settled atop abandoned Elden ruins on this coast and built their own capital on those foundations; they <b>claimed Elden descent</b> for prestige and legitimacy, copying what they could understand of what their predecessors had left behind. The conflation of Storveldi Denbora with Elden is their own original lie, transmitted forward across millennia. Most modern mortals (including most Azarketi) do not know this.<br><br>
-
-        <b>What they actually achieved.</b> Generations of selective practice, alchemical work, archaeology of the Elden ruins beneath them, and what we would today call divine engineering. They used the Wellspring/belief mechanic aggressively to lift their entire ruling class to <b>Demi-God</b> status. The far rarer achievement: <b>they developed the integration procedure</b>, the technique for imbuing a found shard of divinity into a mortal's own divine essence. With the procedure in hand, any recovered shard could be converted into actual ascension. <i>The procedure was their true edge, not the shards themselves.</i> Two of their most accomplished sovereigns went further and reached <b>Minor God</b> status by integrating recovered shards. See <a href="/setting/talan/the-binding.html#what-the-binding-is">the-binding.html</a> for cosmological context.<br><br>
-
-        <b>The God Killing Incident.</b> The two Minor Gods of the Storveldi Denbora, supported by their Demi-God ruling class, attacked <b>Tani in her own domain and killed her</b>: the first Grand God ever slain. The retaliation was the <b>Week of Crimson Rain</b>; the centre of it was here. The capital was annihilated; the land around it was so deeply wounded that it has never healed. <i>This is the cosmological reason the Blackened Lands exist.</i><br><br>
-
-        <b>One member of the ruling class survived.</b> He used the integration procedure on himself in the aftermath, ascended to <b>Minor God of Undeath</b>, took the self-given name <b>Betibizi</b> ("eternal life"), and fled Talan for Abyss (Layer 3). He has not returned. <b>He is the spiritual root of the Blackened Lands' ambient necromancy</b>: the reason the cursed ground raises Skeletons without a necromancer's intervention, and the canonical source-god for the natural-born Skeleton ancestry. He is also the <b>original holder of the integration procedure</b>, the choke-point knowledge that could elevate other mortals past Demi-God status. Fragments of the procedure persist on Talan among Betibizi's cult and the descended Azarketi lineages; reconstructing the complete procedure from those fragments is <b>the largest unsolved capability gap on Talan</b>. The bound thirteen do not discuss whether they know its location.<br><br>
-
-        <b>The Azarketi connection.</b> Not every Storveldi Denbora citizen was at the capital when the gods came. A scattered population of survivors (descendants of those who had been experimented upon, or who carried the inherited results of generations of self-experiment, but who were never themselves elevated) persists today as the <b>Azarketi</b>. Their inherited "Elden blood" claim is the Storveldi Denbora's original lie passed down in a form that none of the modern claimants recognise. They descend from the people who <i>imitated</i> the Elden, not from the Elden themselves.<br><br>
-
-        See also: <a href="/setting/talan/history.html">history.html → Gods' Era</a> for timeline placement; <a href="/setting/talan/domains/lioaru/lioaru.html">lioaru.html</a> for the domain-level summary of this secret; <a href="/setting/talan/the-binding.html">the-binding.html → GM Secret</a> for the Corrupted God's true (Elden) identity, distinct from the Storveldi Denbora story.
-      </div>
+  <h2 id="daily-life" class="section-heading">Daily Life</h2>
+  <div class="prose">
+    <p>Under the haze, day and night barely differ, and Ida keeps time by the watch on the wall. The kept and the warped fish at first light and work the cisterns and the stores; the risen work the wall, the salvage and the long hours. There is black sand in everything, in the bread of the living and the joints of the risen, and the sea is the one clean smell. Some nights the legions can be heard walking somewhere out in the haze, and the whole city goes quiet to hear which way.</p>
+    <p>Ida speaks Talanese with an old shape to it, and Hizva coming back through the marthras. To an outsider who asks what they are, the people of Ida say <i>we live here</i>, and say no more.</p>
+    <p><b>Going in.</b> Some go inside the Mugarri, nearer Vardana, to have more marthras: to live a few hours in the old kingdom their bones remember. They come back quieter, and some come back wanting the old way.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The Marthra of the Killing</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What Ida Says</div>
+      <p>Everyone in Ida knows of one flash and fears it: the day the goddess fell, seen from the ground where it happened. Folk say those who come back from going in having had it are quieter than the rest; some never go in again, and some go in every month after. Whose memory it is, bones, soul or ground, is the oldest argument in the city.</p>
     </div>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">Out into the haze</div>
+      <p>The people of Ida go out to the ruins in <b>salvage parties</b>, always with a caster, roped together so no one is lost in the haze, a ward-light carried at the head.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Visitors</div>
+      <p>A visitor sees the dead and draws steel. A visitor cannot tell a citizen from a legion soldier in the haze, and a native can, by the step. A visitor takes the masks for shame; at home in Ida a face of bone is a face, and masks are for going out.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The young</div>
+      <p>The risen have no childhood, but every one was new once. A living or warped child of Ida comes of age at the <b>first watch on the wall</b>; a risen at the <b>first marthra they can read</b>, when they can say <i>whose</i> and be believed, and that is when a risen takes a name. The young walk up the ridge to look at the living world from the cairns and come back before they are missed, and the pathra pretend not to know until someone does not come back.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Faith</div>
+      <p>Tani is Ida's goddess, and the elder face is the one the city keeps, the one who remembers. The seeing-to is done in her name, and the pathra light the wards each dusk with a word to her. Betibizi's priests keep their own rites and their stretches of the wall.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="names" class="section-heading">What the People of Ida Are Called</h2>
+  <div class="prose">
+    <p>A name in Ida is a given name and the source of the first marthra its bearer could read: <b>Ast</b> for the bones, <b>Urvan</b> for the soul, <b>Zam</b> for the ground. It is taken when its bearer can first say <i>whose</i> and be believed, living or risen, and it records the guess the city accepted: <b>Rauca Urvan</b>, <b>Hutaosa Zam</b>. Many add a <b>remembered name</b>, a name out of the marthras that they feel bound to, never certain whether it is theirs: <b>Vindafarna Ast Arshama</b>. Outsiders call the people of Ida <i>the cursed-born</i>.</p>
+  </div>
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b></p>
+    <div class="pill-row"><span class="pill">Rauca</span><span class="pill">Utana</span><span class="pill">Hutaosa</span><span class="pill">Vindafarna</span><span class="pill">Taxma</span><span class="pill">Vahauka</span><span class="pill">Artavardiya</span><span class="pill">Gaubaruva</span><span class="pill">Hardanya</span><span class="pill">Irtashduna</span><span class="pill">Vidarna</span><span class="pill">Bagapana</span></div>
+    <p style="margin:14px 0 6px;"><b>Remembered</b></p>
+    <div class="pill-row"><span class="pill">Arshama</span><span class="pill">Ariyaramna</span><span class="pill">Vishtaspa</span><span class="pill">Humaya</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <div class="pill-row"><span class="pill"><i>Rauca Urvan</i></span><span class="pill"><i>Utana Zam</i></span><span class="pill"><i>Taxma Ast</i></span><span class="pill"><i>Vindafarna Ast Arshama</i>.</span></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Rauca Urvan</div>
+      <p>The Daraya: risen, a divine caster of Tani; sealed the Dakhma's gate in 2524.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Vindafarna Ast Arshama</div>
+      <p>: risen, the strongest arcane caster in Ida; holds the longest stretch of the wall; the Skeleton in the lantern.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Hutaosa Zam</div>
+      <p>: one of the kept, a Duskwalker; the woman in the lantern.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Taxma Ast</div>
+      <p>: one of the warped; the Fleshwarp in the lantern.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Utana Zam</div>
+      <p>: one of the kept; the steward of Ida.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-lantern" class="section-heading">The Lantern in the Vault</h2>
+  <div class="prose"><p>A relic ledger of the Whalehall vault under Anzar: the lantern a Roll party carried out of the Lost Kingdom in 2531 MR, and the moment it holds.</p></div>
+  <div class="log-letters">
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Ledger</span><span class="ld-text">The appraiser&#x27;s entry: a Storveldi-make lantern, cold whatever the room; three of four returned; handled by the ring only.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p><b>Whalehall · the vault under Anzar · relic ledger</b></p><p><b>Item:</b> a lantern of bronze, Storveldi make, its glass intact; cold to the touch whatever the room.<br><b>Recovered by:</b> a Roll party of four, Platinum, contract out of Tassast's watch-works. Three returned: <b>Amayas n Tassast, of six</b>, <b>Aroha Hinekura Ngaiti</b>, <b>Brin Twicefallen</b>. The party's leader, <b>Idir Skjol Anzar</b>, did not; body not recovered.<br><b>Commission:</b> a recovery for a collector on the Brokers' Walk. The client handled the item once and <b>declined delivery</b>. Held in the vault at the party's request; not for sale.<br><b>Property:</b> the lantern holds a moment. Whoever takes it by the handle sees and hears what its carrier saw and heard on the day, start to finish, about the length of a long breath, and then it begins again if the hand stays. The moment is the same every time. Holders report that the last sound stays in the ears for a day or more.<br><b>Handling:</b> by the ring only. Do not take the handle.<br><b>Transcribed by:</b> Dihya Ardats Anzar, appraiser, the Brokers' Walk, 2531 MR.</p><p><i>The transcription follows as the moment plays: what is seen, what is heard, what is said. Nothing else carries.</i></p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The moment</span><span class="ld-text">What the lantern shows: the haze, the dead getting up, the lord in rusted armour, the rescue, and the sound.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>Haze. Black sand in the air, fine as flour, and the sun up there somewhere, a copper coin behind a cloth. The lantern swings in the carrier's hand and lights ten paces of it.</p><p>A street. Walls of dressed stone, clean-edged, as if they were cut last year. Then the walls go on and there are bones in the sand along them, a great many, and then the bones are standing up.</p><p>"Back to back." That is Idir Skjol Anzar. "Back to back and walk."</p><p>They come out of the sand in their dozens with no sound but the sand running off them. Steel on bone. Brin Twicefallen counting them aloud and losing count. Aroha Hinekura Ngaiti saying a word and the haze lighting white, and the street full of falling bones. The lantern swings. Twenty paces. Thirty. The party walks backward through a square with a dry fountain in it, and the dead keep getting up.</p><p>Then they stop getting up. All of them at once. They stand where they are and turn their skulls the same way, up the street, and wait.</p><p>Something comes down the street in armour. Rust from the helm to the feet, and taller than anyone the carrier has stood beside, and under the rust the armour is very old. It walks without hurrying. The standing dead step aside for it.</p><p>"Behind me," Idir Skjol Anzar says, and goes to meet it.</p><p>It is quick, after that. One blow turned. One blow that is not. Idir Skjol Anzar goes down on the stones of the square and does not move, and the rusted thing lifts its blade again, and the carrier is running at it, and the lantern is swinging wild.</p><p>A voice in the haze, speaking words the living do not know: old words, slow, with a weight on every one.</p><p>The rust on the armour catches fire. Blue fire, from the inside, and the thing turns toward the voice. Out of the haze comes a Skeleton in a long dark robe, a staff in both hands, and behind it two more: a big shape, wrong in its limbs, a Fleshwarp, who puts both hands into the black sand and drags it up into a wall; and a woman, living, plain-faced, who walks into the square, and every standing bone in it lies down. They lie down like dogs. They do not get up again.</p><p>The rusted thing burns. It fights in the fire for a long time, and the Skeleton's voice never stops, and then the armour is empty and falls apart on the stones.</p><p>Quiet. Sand settling.</p><p>Brin Twicefallen, breathing hard: "Who are you?"</p><p>The Skeleton, in Talanese with an old shape to it: "We live here."</p><p>Aroha Hinekura Ngaiti, kneeling by Idir Skjol Anzar. Then not kneeling, standing up. Shaking the head.</p><p>The woman, gently: "You cannot leave him in this ground."</p><p>Brin Twicefallen: "We'll carry him."</p><p>The woman: "You will not carry him past the ridge before he gets up. He will march with them by morning."</p><p>"With who?"</p><p>Nobody answers. The Fleshwarp has lifted its head and is listening, and the Skeleton has turned its skull the way the dead turned theirs, up the street.</p><p>It is not a drum. It is feet. A great many, in step, slow, iron on bone and bone on stone, from somewhere inside the haze, and it is not getting louder fast. It does not have to.</p><p>The Skeleton: "Go. Now. We will see to him."</p><p>The lantern swings toward the haze, and the sound goes on.</p><p><s>I held it twice. I will not hold it again.</s></p></div></div>
   </div>
 
   <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
@@ -221,26 +309,28 @@
   <div class="see-also">
     <h3>Continue Reading</h3>
     <ul>
-      <li><a href="/setting/talan/domains/lioaru/lioaru.html"><b>Lioaru →</b></a> · Time domain: the desert, Valreka, and the full sub-region map.</li>
-      <li><a href="/setting/talan/historical/storveldi-denbora.html"><b>The Storveldi Denbora →</b></a> · The civilisation that killed Tani and whose ruins lie under the Blackened Lands.</li>
-      <li><a href="/setting/cosmology/gods.html"><b>Non-Bound Gods &amp; Beings →</b></a> · Betibizi, the survivor who ascended to Minor God of Undeath and fled to Abyss.</li>
-      <li><a href="/setting/talan/domains/lioaru/valreka/valreka.html"><b>Valreka →</b></a> · Tani's whale-borne city, built on the faith that the buried can return.</li>
-      <li><a href="/setting/talan/the-binding.html"><b>The Binding →</b></a> · The Elden and Corrupted God, distinct from the Storveldi Denbora story.</li>
+      <li><a href="/setting/talan/domains/lioaru/lioaru.html"><b>Lioaru →</b></a> · The Time domain and its peoples.</li>
+      <li><a href="/setting/talan/domains/lioaru/galdua-jendea/galdua-jendea.html"><b>Galdua Jendea →</b></a> · Across the ridge: the rocks, Tassast, and the lost Tazrut.</li>
+      <li><a href="/setting/talan/domains/lioaru/valreka/whalehall.html"><b>The Whalehall →</b></a> · The Godshall on Anzar, whose vault keeps the lantern.</li>
+      <li><a href="/setting/talan/historical/storveldi-denbora.html"><b>The Storveldi Denbora →</b></a> · The chronicles' tangle over who killed Tani.</li>
+      <li><a href="/setting/cosmology/layer-3-gods.html"><b>Non-Bound Gods &amp; Beings →</b></a> · Betibizi, whose priests hold their stretches of Ida's wall.</li>
+      <li><a href="/setting/talan/the-binding.html"><b>The Binding →</b></a> · The Nine Generals, the Rot-Tyrant among them.</li>
     </ul>
   </div>
 
   <div class="open-canon">
     <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
-    <div class="sub">The Lost Kingdom is, by design, a place where the map is mostly white. These threads name pieces the canon wants but has not yet built.</div>
-    <ul>
-      <li><b>A small city of the cursed-born.</b> Somewhere in the interior, sheltered from the worst of the time-warps and the deeper resonance, there is room for a settlement of <b>Skeletons and Fleshwarps</b> who have nowhere else to live. Not a faction, not a power, not a kingdom: a place where the ancestries the cursed ground produces have organised something resembling a town because they had to. Name, layout, government, leadership, the working relationship with the Adventurers' Guild's standing warning, the population's stance on the Storveldi Denbora ruins around them: all open. What is decided is that it exists; what is undecided is everything else.</li>
-      <li><b>The inner stone ring.</b> Mentioned as the threshold past which the Guild stops counting parties as recoverable. Whether it is a Storveldi Denbora work, a Tani-cult marker, or the gods' own boundary stones from the retaliation: open.</li>
-      <li><b>The deep ruins.</b> The Storveldi Denbora's annihilated capital lies under the cursed ground. What is recoverable, what is still active, and what the bound Thirteen have or have not finished cleaning out: all canon-pending. The integration-procedure fragments that survive on Talan have to have come from somewhere; whether the deepest of them are still down here is open.</li>
-      <li><b>Lost Isle's deep history.</b> Whether Lost Isle was a coastal outpost of the perished kingdom or an older scar the kingdom built next to: the page deliberately preserves both readings.</li>
-    </ul>
+    <div class="sub">What the chronicle has not yet set down about the Blackened Lands.</div>
+    <ol>
+      <li><b>Vardana.</b> The city's own name.</li>
+      <li><b>The deep ruins.</b> What they still hold.</li>
+      <li><b>The Rot-Tyrant.</b> Who or what it was.</li>
+      <li><b>The holding.</b> How Ida acclaims a greater one.</li>
+      <li><b>The coast.</b> The holds among the ruins, and the smugglers, by name.</li>
+    </ol>
   </div>
 
-  <div class="footer">TYRNARRA · TALAN · LIOARU · LOST KINGDOM</div>
+  <div class="footer">TYRNARRA · TALAN · LIOARU · THE LOST KINGDOM</div>
 
 </div>
 

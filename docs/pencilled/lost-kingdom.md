@@ -16,7 +16,7 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-05).
 - **Phase 10 (draft): closed** (GM, 2026-10-05: "commit then publish"); the draft at [`lost-kingdom-draft.md`](lost-kingdom-draft.md).
 - **Phase 11 (commit lore): done** (2026-10-05). Built: `lore/geography/lioaru/lost-kingdom.md`.
-- **Phase 12 (publish): open.**
+- **Phase 12 (publish): done** (2026-10-05): `published/setting/talan/domains/lioaru/lost-kingdom.html` rebuilt from the lore file (the old ⚿ real-history box kept; the Lost Isle section retired; accent to `#9a86a0` for text contrast); the lantern as two log cards. Mirrors: the Lioaru card, the Binding's Rot-Tyrant card (sited, the stub tag off), the remnants page, ancestries (Fleshwarp and Skeleton at home in Ida; the Duskwalker line fixed), history (Hizva in the families table and the ⚿), the Galdua page regenerated (the legions out of the Dakhma), the site inventory.
 
 ## Phase 0: settled facts
 
