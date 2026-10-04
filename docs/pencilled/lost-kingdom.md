@@ -8,7 +8,10 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-04).
 - **Phase 2 (seeds): closed** (GM, 2026-10-04).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-04); the record committed at [`../../lore/geography/lioaru/lost-kingdom-lantern.md`](../../lore/geography/lioaru/lost-kingdom-lantern.md).
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-04).
+- **Phase 5 (government): closed** (GM, 2026-10-04).
+- **Phase 6 (economy): closed** (GM, 2026-10-04).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -51,14 +54,59 @@
 
 **Placeholders for Phase 8:** [APPRAISER], [HOLDER], [CASTER], [SHIELD], [LEADER].
 
+### Phase 4: place, peoples and history (closed 2026-10-04; GM yes to all)
+
+- **Sites.** **The haze** over the whole country, clear days very rare. **The dark ridge** on the north-east border, the wardens' cairns along it, Galdua's pale band beyond. **The ruined capital** (the map icon, west interior): the Storveldi capital, annihilated, on Elden ruins; the time-warps heaviest at its core. **The Rot-Tyrant's dungeon: the capital's ossuaries**, the great bone-halls the Storveldi buried their dead in; in 2524 the General broke up through the Elden foundations beneath them, and its legions are raised from the Storveldi dead there, the same bones the cursed-born rose from (the Corrupted God's General, ⚿ the Elden, rising through Elden ruins under the place a god was killed). **The inner stone ring: the gods' own boundary stones** from the retaliation, set around the killing ground in the Week of Crimson Rain; inside, the capital and the worst of the curse, where the Guild stops counting. **The cursed-born city: on the south coast, outside the ring**, where the curse is weakest and the sea air thins the haze; the ground takes nothing, the Hafra feeds them.
+- **Neighbours.** Galdua Jendea, the only land neighbour and the frontier (the cairns, the wardens, Tassast and the lost Tazrut on the pale band, the push outward, the disguised few who leave); the Hafra (the coast, the fishing); the Lost Isle, no connection.
+- **Peoples.** The risen (Skeletons) about half; the warped (Fleshwarps) about a quarter; the kept (the living: Duskwalkers born there, exiles, pilgrims who stayed) about a quarter. Fleshwarps and Skeletons at full expression.
+- **Founding.** The land has raised its dead since the Rain; the coast city founded in the **Dark Era**, when the world outside hunted everything strange and the émigrés came back; the magocracy the survival rule of a walled town.
+- **Dated history.** Gods' Era: the Storveldi capital on Elden ruins. 0 GR – 0 MR: Tani killed here; the retaliation; the gods set the ring. Lost and Golden Eras: the land raises its dead, aware Skeletons rise and drift away; the Empire never holds the ground. Dark Era (1321–2135): émigrés return; the coast city founded; the cursed ground's spawn empties Tazrut (Galdua canon). Adventurer Era: the Guild's standing warning (signed from Valreka's Godshall); the Ghoran wardens' cairns. **2524 MR:** the Rot-Tyrant breaks out of the ossuaries; **the strongest of the cursed-born sealed its main gate, and the one who sealed it rules now**; the legions still come up through the lesser ways under the ruins and range across the pale band. 2531 MR: the lantern's day.
+- **Population (GM: B, a canon move):** the Blackened Lands drop out of the wild-country examples in `_continent.md`; almost all the land holds no one; **about 30,000 people, about half of them in the coast city (15,000)**: the 1–3% capital rule assumes a countryside, and this country has none.
+- **Canon moves (GM yes, 2026-10-04):**
+  1. Retire the Lost Isle material from the page and the lore, and the Azarketi distribution line "around the islands offshore of the Lost Kingdom" (`lost-kingdom.html`, `lioaru.md`, `ancestries.md`).
+  2. Fix "Three and a half thousand years" → about 2,500 (`lost-kingdom.html`).
+  3. Site the Rot-Tyrant: the ossuaries under the capital, the main gate sealed in 2524 by the cursed-born (`factions.md`, `the-binding.html`, `lioaru.md`).
+  4. The inner ring as the gods' boundary stones.
+  5. The cursed-born city: closes the open thread (`open-threads.md`).
+  6. **Meat on a stick: a belief, not truth** (GM): `lioaru.md`'s "reads as canonical truth" goes; the trope persists because for most people undead are undead: the old horror of the killers has slid onto the cursed-born, and outsiders say the dead there eat the living.
+  7. The Duskwalker "never once" (banned phrase) fixed in `ancestries.md` and on the page.
+  8. The Guild's warning signed from Amestan Anzar's desk, on the page as in `lioaru.md`.
+  9. Density: the Blackened Lands out of the wild-country examples (`_continent.md`).
+
+### Phase 5: government (closed 2026-10-04)
+
+**V1, the one who holds; the present ruler a divine caster of Tani (GM: A).**
+- **Rule goes to whoever has done the greatest holding**: held the wall, burned a captain, sealed the gate. Today's ruler sealed the Rot-Tyrant's main gate in 2524 and the city has acclaimed no greater holding since. Rule passes when someone holds against something greater, in the open, before witnesses, or when the ruler dies or fails at the wall.
+- **The wardens of the wards**: the strong who each hold a stretch of the wall and keep its wards lit; a warden's stretch is their standing. **A steward**, named by the ruler and usually one of the kept, runs the rest: the fishing, the stores, the leaving-trade in papers and disguises.
+- **Four answers:** the ruler rules day to day with the wardens on the wall; receives envoys at the landward gate (outsiders come rarely, under the Guild's warning, or as Tassast's watch-works); signs with whoever will deal with the dead (the Guild, Tassast, sometimes Valreka); decides to build, and everyone works (a ward is laid by whoever can lay one).
+- **Fit:** statecraft here is defence (the wall, the wards, the watch on the lesser ways, the sealing), and the strong do it; the steward runs provision.
+- **Accepted:** the city came through the Dark Era behind wards its strongest kept lit; everyone alive and risen in it is so because the gate holds.
+- **Incentive check (GM's correction):** the ruler is driven to **finish the Rot-Tyrant herself**, because whoever kills it does the greatest holding and rules; she needs help (outsiders, rivals, the wardens) and **every ally is a possible successor**: a rival who lands the blow rules; a Guild party that lands it raises the muddy edge. So she wants the war won, and wants control of who stands closest when it ends.
+- **Three tests:** unity (one wall, one gate; whoever splits the city dies outside it); external agency (the ruler deals for all; outsiders have no one else); internal provision (the ruler calls, the wardens lay the wards, everyone works, the steward feeds them).
+- **Powers:** may call anyone to the wall, command the wardens and wards, deal with outsiders, name the steward; may not hold the seat once a greater holding is acclaimed. **Muddy edges:** what counts as greater and who acclaims it (the city acclaims; how is unwritten); whether a holding by outsiders counts (if a Guild party cleared the dungeon, who would rule?); whether the strong may reach for more (the old road their bones remember, the integration fragments, Betibizi's priests).
+- **Honest cost:** rule by the strong; the kept, the weakest bodies in the city, have the least say.
+- **Present state (A):** the faith rules for now (a divine caster of Tani, the returned on top); the strongest arcane caster, whose bones remember the old way, presses from below. B (an arcane Skeleton on the seat) and C (a priest of Betibizi) kept as the live threat, not the present.
+
+**Census (authoring only):** Talan has no magocracy; the form is new (Appendix B gains it at Phase 11).
+
+### Phase 6: economy (closed 2026-10-04)
+
+- **Subsistence:** about 15,000 mouths (the kept and the warped; the risen do not eat). The sea is the field: they fish the Hafra off the coast city and gather kelp and shellfish. **Water from the old Storveldi cisterns** under the coast town, sunk deep into the great water beneath the sand sea that Galdua's springs draw on (the tagnit ⚿ sits under it unsaid). Lean years: bought through the leaving-trade.
+- **The draw:** few outsiders come: Guild contracts (recoveries from the ruins, edge-watch, Tassast's watch-works; since 2524 the war); the pilgrims, necromancers and ascension-cultists at the edge, who buy whatever the ruins give; collectors on Valreka's Brokers' Walk, at one remove.
+- **Sells what the ruins give:** Storveldi goods (bronze, worked glass, tools of a dead people's make) and, rarest, **objects that hold a moment** (like the lantern); sold carefully, refused to the ascension-cultists unless someone is desperate. **Buys:** cloth and metal for the living; gloves, masks and hoods for the leaving; books; grain in lean years.
+- **The cairn trade:** goods left on a warden's cairn and taken in exchange, so no one has to stand face to face; the Ghoran wardens see it and let it be.
+- **Partners:** Tassast (the cairn trade; the disguised few who leave by its sandsails under the sunrise law); the Guild (through Tassast and the Whalehall); the Brokers' Walk on Anzar, at one remove.
+- **Routes:** no rail (the page's "No rail possible" stands); overland, the ridge, the cairns, Tassast's sandsails beyond; by sea, a small harbour where a few **smugglers** put in by night from along the Hafra coast, the other way out for the leaving. Choke point: the cairn line.
+- **Stake in the tension:** the ruler pays outsiders in what the ruins give for help against the Rot-Tyrant, and every relic paid out is the city's only wealth leaving it; the ascension-cultists at the edge offer most for the dangerous things; the strongest arcane caster knows what the deepest ruins might still hold.
+
 ## Rejected options
 
+- **Government V2, the proof** (anyone may go inside the ring; the deepest return rules): Storveldi to the bone, kills the strong the wall needs. **V3, the circle of the strong** (a council of each school's strongest): another council. **"The ruler rests on a war it has no reason to end"**: withdrawn on the GM's correction (inaction lets someone else make the kill and rule).
+- **Population A** (keep the wild-country rule, ~116,000, a city of ~3,500): a town, wrong for a people walled into one city.
 - **Phase 3 candidates:** A, the burial after the battle seen from the ridge; B, the hooded guest at Tassast giving 2,500-year-old news under the sunrise law; C, the trade at the cairn. Replaced by the GM's own scene (A's burial survives in it as "we will see to him").
 - **Seed 1, the returned, alone** (rule by the readers of memory): folded into the seed as its divine casters.
 - **Seed 3, the war of two deaths:** better as the live tension (Phase 9) than as the seed.
 
 ## Open and deferred
 
-- The Rot-Tyrant's site and the eruption-and-containment history (Phase 4).
 - Who speaks the oldest Iranian form (Phases 4 and 8).
-- Retiring the page's Lost Isle material (a canon move, Phase 4).
