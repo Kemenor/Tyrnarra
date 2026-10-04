@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-04).
 - **Phase 6 (economy): closed** (GM, 2026-10-04).
 - **Phase 7 (daily life): closed** (GM, 2026-10-04).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-04).
+- **Phase 9 (tension and reveal): open.**
 
 ## Phase 0: settled facts
 
@@ -149,8 +150,49 @@
   - **Shuun** a little at the chain's doors (rock 3's river-landing, the Duchies side), kept by river-traders: pockets. **Urzar** acknowledged quietly for the water's nature (canon's pattern). **Solyra**: the wing-folk keep her altar on the high ledge and thank her at noon for the lift; the rest of the rock fears her and does not say so.
 - **Canon move 7 (GM yes):** `lore/gods.md` gains the spring-goddess under *Named Non-Bound Gods*; her cleric domains go on the PF2e registrar at publish.
 
+### Phase 8: naming (closed 2026-10-04)
+
+Tamazight words checked against sources (English Wiktionary; dictionnaire-kabyle.com; Glosbe; Wikipedia *Nanna Tala*, *Tafraout*, *Tweeza*; amawal.wikidot.com) on 2026-10-04. Collision search (lore, docs, published) clean for every pick.
+
+**Register.** Word-base **Tamazight**, shared with Valreka. Galdua's sound rules: (1) **a rock is "she"**: places on the rock take the feminine *ta-…-t* frame; (2) **the rock keeps its endings, the herd wears them off**: Valreka drops final vowels (*tiwizi* → Tiwiz, *tiziri* → Tizir), rock-speech keeps them whole; (3) plain letters, ḍ ẓ ɣ → d z gh, ɛ dropped. **The local tongue: *Awal*** (Tamazight *awal*, speech, word, language): one tongue for the rocks and Valreka, the rock dialect conservative, the herd's worn by travel; the River Duchies speak a sister; chroniclers keep "the whale-tongues".
+
+**Personal-name structure (S1, the watering count):** **given + *n* + rock + the waterings stood** (*Aksil n Tamalut, of sixteen*). At each watering the keepers count everyone present and the count rises by one; a child has no count until their first watering; a stranger who stays through a watering earns *of one*. Counts are not comparable across rocks (the herd waters at Yemmazru far more often: a Yemmazru count is cheap, a Tamalut count dear), so a Galduan asks *where* before *how many*. No other region carries a number in its names.
+
+| Slot | Name | Etymology |
+|---|---|---|
+| The great rock (13) | **Yemmazru** (everyday *Yemma*) | Tamazight *yemma* (mother) + *aẓru* (rock, stone) → vowels run together. "The mother rock": the name it took when it reclaimed the fallen (regional, Dark Era's end). Rhymes with Lenama, the mother whale. |
+| The chain of rocks | **Azrar**, "the Necklace" | Tamazight *azrar* (necklace; also chain). Flag: one letter from Valreka's house Adrar (accepted). |
+| The daughter rocks | ***yessi*** | Kabyle *yessi* ("my daughters"), as Yemmazru says it; the daughters took the word for themselves. |
+| The unfallen | **the unfallen** | Plain Talanese (descriptive; Lurrath's "unfallen stronghold" is only an adjective). |
+| The spring-goddess | **Nanaman** | Tamazight *nanna* (elder sister, aunt; an honorific for an elder woman) + *aman* (water) → doubled *n* lost. "Elder-sister water." Regional stratum (belief-formed in the Dark Era from the keepers' prayers). Inspiration: Nanna Tala, the Berber spirit of a sacred spring in Libya's Nafusa Mountains. |
+| Time sand | **tagnit** (Talanese trade name **holdsand**) | Kabyle *tagnitt* (moment, occasion) → doubled *t* softened. "The moment": *a pinch of tagnit*. Holdsand after the vice of holding a moment. |
+| Rock 4, the telling's [ROCK] (unfallen; the Emarrea corner) | **Tamalut** | Tamazight *amalu* (the north-facing, least sunny slope; shade) in the feminine frame. "The shaded one." Regional. |
+| Rock 3, the river-landing | **Saltlanden** | Talanese *Salt Landing*, *-ing* → *-en*. A Golden-Era Imperial waystation name. |
+| Rock 8, the frontier (unfallen) | **Tassast** | Kabyle *aɛessas* (guardian, keeper) in the feminine, ɛ dropped. "The watchwoman." Regional. |
+| Rock 18, lost to the legions | **Tazrut** | Tamazight *taẓrut* (a rocky island; a pebble), ending kept. Lost-Era regional. |
+| Rock 19, the dead spring | **Taghbalut** | *aɣbalu* (spring, source) in the feminine diminutive. "The little spring," now dry. |
+| The sunrise law (local) | ***inebgi*** | Kabyle *inebgi* (guest; also host): one word for both. *Under inebgi*: taken in at sunrise. |
+| The daughters' owed labour | ***tiwizi*** | Tamazight *tiwizi* (voluntary collective village work), used bitterly, being owed; the same word as Valreka's whale Tiwiz, ending kept (the sound rule shown). |
+| The life debt | **the merwas** | Kabyle *amerwas* (debt) → initial *a-* lost. The chain-due stays plain "the due". |
+| The time-sand seal | **the azwil** | Kabyle *azwil* (seal). |
+| Air-gliders / sand-gliders | **wings** / **sandsails** | Plain Talanese (GM: *skiff* reads as a boat; *sandsail* names the craft by what drives it). |
+| The sun-hardy heritage | **Desert Palm** (Ghoran heritage) | Plain Talanese, after PF2e's plant-named Ghoran heritages (Strong Oak, Thorned Rose); the date palm, "its head in the fire, its feet in the water." |
+| Demonym | **Galduan** | Talanese, from the region's name. |
+| Plain Talanese | the keepers, the spring-hall, the water-roll, the calling of the spring, the white hours, the watering, the dusk bloom, holding a moment, the first night-run, spring-crystal, the wing-masters, the due | |
+
+**Named figures:**
+- **Aksil n Tamalut, of sixteen** (HIM): *Aksil*, a historic Berber given name (the king Kusaila). Desert Palm Ghoran, an adventurer of Tamalut forty years on the sand and over it, who never missed a watering.
+- **Takane no Hana, of one** (HER): a kitsune player of the Kageroza; *Takane no Hana* her stage name (Japanese *takane no hana*, "the flower on the high peak", an out-of-reach love; *takane*, high peak, ironic for a woman afraid of heights). *Of one* the Galduans gave her: she stood through one watering, and she keeps it on the troupe's bills.
+- **The Kageroza** (THE TROUPE): Japanese *kagerō* (heat-haze, the shimmer over hot ground) + *-za* (a theatre troupe, as in *Kabuki-za*). An Emarrean company touring the rocks by sandsail.
+- **Dassine n Tamalut, of fifty-one**: the oldest keeper of Tamalut, two hundred years at the door. *Dassine*, a famous Tuareg poet's name.
+- **Yugurten n Yemmazru, of a hundred and twelve**: Yemmazru's chief keeper. *Yugurten*, the Berber form of Jugurtha.
+- **Lunja n Tassast, of twenty-three**: Tassast's keeper. *Lunja*, the heroine of a Kabyle folktale.
+
+**Still open (names):** the other eleven living rocks (map labels); the Desert Palm's PF2e mechanics (table side).
+
 ## Rejected options
 
+- **Naming:** S2 (given + ledge + rock, daughters naming their mother) heavy; *Urarri* (Court Tongue "water-stone", the unfallen's name for the great rock) not taken; Aghbalu and Nantala for the goddess (*Tala* too near Talan); *akud* for time sand (a modern coinage); *Azar* (collides with Azarketi and Anzar); *skiff* (reads as a boat); *stillsand* (stillships) and *slowsand* (Tahu Tangata's slowgold) out.
 - **Government A, the chain with no centre:** each rock alone, only a unanimous meeting binds; nobody can make the chain act. Its sunrise law kept under B.
 - **Government C, the keepers' memory** (rule by remembered precedent, the eldest weighing most): a gerontocracy that silences the Nagaji; the seed generalized into rule.
 - **Seed 1, the sun's two faces** (the day turned inside out): kept as texture, weak alone (could move to Hareaveldi with the rock); Myrria's overlapping clocks sit close.
