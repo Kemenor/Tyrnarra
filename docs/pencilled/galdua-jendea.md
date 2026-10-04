@@ -5,7 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-04).
-- **Phase 1 (seed questions): open.**
+- **Phase 1 (seed questions): closed** (GM, 2026-10-04).
+- **Phase 2 (seeds): open.**
 
 ## Phase 0: settled facts
 
@@ -27,7 +28,18 @@
 
 ## Decisions by phase
 
-*(none yet)*
+### Phase 1: seed questions (closed 2026-10-04)
+
+**The summary (GM-confirmed).** Galdua Jendea is a sea of sand with an archipelago of rock islands through it, each within one night's run of the next, chaining from Valreka's range to every edge. A sparse people lives on the rock in cities and towns hung in the shade of the stone, fed by crystal springs. The region runs on two clocks: **by night the sand-gliders** (sail-sledges with the cargo, across the cooling dunes, 100–150 mi, on rock again before sunrise); **by noon the air-gliders** (magic-assisted, riding the thermals the killing sun raises, high in the cooler air, 300–600 mi a day, carrying the light, the urgent and the adventurers). Nothing honest is on the sand at midday; only Valreka crosses at its own pace. The rock-folk are the ones who stayed: when the faithful took to the whales to find and unearth Oroiri, some kept to the rock and the springs, and *the lost people* may be what the herd called them. Partners now, the springs watering the herd, with the old difference between a faith that moves and a faith that stays. The Ghoran's full-expression home: Valreka's elders remember a people, the rock's elders remember a place. The pressure: the sun within; the Lost Kingdom from the south-west (the cursed ground, the monsters and corrupted beings it spawns, the Rot-Tyrant's corpse-legions since 2524).
+
+**Settled in the questions:**
+- **The rock:** sparse, enough massifs to go rock to rock, city to city or town to town, and reach every edge of the region that way. Spacing about one night's sand-glider run (~100–150 mi); roughly 15–30 massifs, counted and sited at Phase 4; on map-todo.
+- **Two crafts (GM: a mix):** sand-gliders for cargo (crates, barrels), dusk through the night, Stokkul-drawn where the wind fails; air-gliders by day on the sand thermals and magic (launch and holding lift between thermals), light loads. Real-world checks: a cargo glider sinks ~1 ft per 10–15 forward (a 3,000 ft launch carries 6–8 mi without lift); air cools ~3.5°F per 1,000 ft; sailplanes in desert thermals make 300–600 mi a day. **Adventurers use the air-gliders** (GM).
+- **Valreka's speed:** cruising 3–5 mph through the sand; a moving day 16–18 hours (dusk, night, cool morning, evening), 50–90 mi; a 15–20 mph sprint for an hour or two to outrun a storm; rests for days at digs, the river, near Emarrea; crossing the whole sea 10–15 moving days. Canon's "travels in the cool and beds down through the killing noon" stands. *(Candidate addition to the `transport.md` speeds table at Phase 11.)*
+- **The ancestry question (GM):** the Ghoran here need not all be one body. **Sub-ancestries** (PF2e ancestry heritages; Talan so far uses only versatile heritages): the official Ghoran four are Ancient Ash, Enchanting Lily, Strong Oak, Thorned Rose (AoN, checked 2026-10-04); none speaks to sun, shade or flight. Options: map the four onto ways of being Ghoran here, or a Tyrnarran heritage (sun-hardy beside the shade-growers). A heritage is a body or a carry, never a job. **A setting-wide first, so a canon move** (`lore/ancestries.md`, `docs/ancestry-conventions.md`), decided at Phase 4.
+- **Pressure (GM):** the sun inside; the Lost Kingdom from the south-west. The bindstone rush is too far to press.
+
+**Sameness noted (authoring only):** airships (~60 mph, premium) against the gliders (local, cheap, sun-powered, no engine or licence); Haizava and Haizetsua own wind and flight in the north (the lift here is heat and sun); the Whalehall's Stokkul outriders carry the Guild Post (Phase 6).
 
 ## Rejected options
 
@@ -35,6 +47,7 @@
 
 ## Open and deferred
 
-- When the gliders fly (seed bank).
 - The gliding caravans against Valreka's "crosses entire" line (probably a canon move).
-- Where the rock stands (Phase 1; sited at Phase 4).
+- Where the rock stands: count and sites at Phase 4.
+- Ghoran sub-ancestries (Phase 4, canon move).
+- The gliders and the Guild Post (Phase 6).
