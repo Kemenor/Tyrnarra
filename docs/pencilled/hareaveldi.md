@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
 - **Phase 8 (naming): closed** (GM, 2026-10-06).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
+- **Phase 10 (draft): open**; the draft at [`hareaveldi-draft.md`](hareaveldi-draft.md).
 
 ## Phase 0: settled facts
 
@@ -134,8 +135,21 @@ Persian words checked against English Wiktionary, abadis.ir and English Wikipedi
 
 **The order book's placeholders:** [BUYER] → Odelind Ringhold Mordant; [CAPITAL] → Panjrang; [GREEN OASIS] / [BLUE OASIS] / [RED OASIS] → Sabzab / Lajvard / Sorkhab; the green's [name] → zangar.
 
+### Phase 9: tension and reveal (closed 2026-10-06)
+
+**The live tension: the Tajvar's portrait** (proposed; the GM made no change). Golnar Bahar Rangraz has reigned as her *Bahar* self some twenty years; last year the elham took Ostad Kaveh Negar Naqqash while he painted her, and the portrait shows her next self already growing, by custom the realm's signal that the reign is ending; she says her self is not finished. Stated as fact, left open. Sides: **the Tajvar** (her crown and her right to say when her self ends; the law is hers); **Ostad Kaveh** (a great painter does not retract a true painting; every great painter's standing rests on it); **the five houses** (an interregnum is their rule, stretched once before; some want the reign over, some fear what an early end teaches the next Tajvar); **the country** (clinging is the vice everyone is taught to despise; it watches whether its ruler is doing what it hides in its own back rooms).
+
+**◈ Popular Belief (GM: A and B):**
+- **A. The elham is the child looking through you**: the moment the muse takes a painter is Tani's child face, the future face, looking out through the painter's eyes; why a true painting shows what is coming. *(With the elham and the great painters.)*
+- **B. A kept self lingers**: a portrait hidden at home instead of carried out keeps its self from going; the house feels it (an old voice in the next room, a habit come back); what mothers tell children to stop the vice. *(With daily life.)*
+
+**⚿ GM Secret (GM: K1): the pull.** *Surface:* folk say a true painting comes true; the five houses heed the elham's portraits; the great painters are honoured and feared. *Truth:* a painting made when the elham takes a painter pulls toward what it shows, as hard as the painter reached. Ostad Kaveh's portrait of the Tajvar pulls her toward her next self, and she can feel it; the houses' custom of heeding such paintings is, unknowing, a custom of being pulled. *Weight:* the live tension's mechanism (her refusal is a fight against a real pull); why some refuse to sit for a great painter; why a muse portrait of a candidate has decided reigns; why a child's sun with a shield and a sword is just a child's painting (a child does not reach). *(With the elham and the great painters.)*
+
+**Section weights (GM approved, K2's tongue section kept short without a ⚿):** the desert of colours (medium); **everyone paints** (heavy, opening with the order book); **the rangzar and the carrying-out** (heavy); the elham and the great painters + ◈ A + ⚿ (medium); **the shed crown** (heavy, ending on the live tension); trade and the roads (medium); daily life + ◈ B (medium); the tongue (short); what a Hareaveldi is called (short). The order book published whole at the end.
+
 ## Rejected options
 
+- **Phase 9:** the Wildreach as the tension (quieter; deepening); ◈ C (a fey cannot cross a painted window); ⚿ K2 (Sokhan the daughter of the killers' tongue: the existing ⚿ stays in `_continent.md` and on the history page, off this page).
 - **Naming:** S1 alone (given + self-name), S2 (given + birth-oasis colour + self-name; close to Argia's *given + well*), S3 (given + first board painting; static).
 - **Coming of age: the first window** (a child's bedroom window is already theirs to paint): replaced by the first carrying-out.
 - **Government G2, the league of colours** (the five houses in council, no crown): another council; it would retire the serpent-kingdom. **G3 alone, the painted crown** (the ruler is whoever a muse painter paints as ruler): the seed generalized into rule; woven in as a weight on the houses' choice instead.
