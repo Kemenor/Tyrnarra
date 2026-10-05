@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-05); the order book committed at [`../../lore/geography/lioaru/hareaveldi-order-book.md`](../../lore/geography/lioaru/hareaveldi-order-book.md).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-06).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -82,6 +83,15 @@
 - **Honest cost:** a monarchy whose term ends only when its holder says so, policed by a custom.
 
 **Census (authoring only):** a term by self is new on Talan (the nearest: Tahu Tangata's Kaiahi, who holds the chair while he can still lead a burn).
+
+### Phase 6: economy (closed 2026-10-06)
+
+- **Subsistence: they feed themselves.** Dates and gardens at the oases; grain along the north river; fish along the coast and off the islands; goats at every well. Lean years: Emarrea's orchards and the Duchies' valley.
+- **The draw:** colour (buyers from everywhere for the pigments: Ringhold by the barrel, every painter and dyer on the southern network); painting itself (students come to learn; Emarrea's court commissions and dislikes what it gets; a great painter's name draws sitters from far away).
+- **Sells:** the oases' colours (the green, the second-grade green, the dear blue clay, the cheap red bark, the golds, the white); painted things (boxes, bowls, panels: the ordinary work of a country that paints everything); **sea purple**, the rarest: **the crown keeps it** (the crown's colour, for what should last: the insignia, the frames; the ruler's own face never painted in it, since the ruler's portrait must be able to go to the sand); the islands' Azarketi dive for it and the crown buys it all. **The boards are never sold.**
+- **Buys:** timber for boards and frames (Emarrea's forests); salt from Galdua's rocks; glass jars from the Golden Coast for the pigments; sake and orchard goods from Emarrea; cloth and metal off the network.
+- **Routes (canon move, GM yes):** **a branch line, Biozuri to the capital along the old pigment road**, off Eldara's line at Emarrea (the southern lines follow the Golden Empire's roads; the pigments travelled them): makes `lioaru.html`'s "Lines reach … Hareaveldi" true (`transport.md`). The river: Emarrea's barges along the west edge to the Duchies; the ferries across the north river (the buyer took the barge: buyers travel with their jars). The coast: the capital's harbour on the Hafra; the island boats.
+- **Stake in the tension:** the five houses are the five colours (their wealth the trade; the interregnum their power); the crown holds the purple and the islands; the great painters are worth more than any oasis and belong to none.
 
 ## Rejected options
 
