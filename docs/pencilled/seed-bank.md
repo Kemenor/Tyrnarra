@@ -99,6 +99,8 @@ A culture centred on painting, sketching and drawing **the in-between and the tr
 
 *Added (GM, 2026-10-04):* the Lost Isle has **no connection to the Lost Kingdom** any more (its old page section, sharing the curse at lower intensity, is retired at the Lost Kingdom build), and **the name is open**: it may be renamed at its build.
 
+*Added (GM, 2026-10-05):* **the Lost Isle is the Azarketi's heartland**, their full-expression home (earmarked in `lore/ancestries.md`), so every Lioaru anchor has one: the Ghoran in Galdua Jendea, the Nagaji in Hareaveldi, the Azarketi here. They are water-born and the isle is three crater lakes; their feeling, *the ones who answer it now*, fits a people catching each rain and deciding what to make of it. A quiet irony for the build to use or leave: the Azarketi descend from the Storveldi commoners who lived away from the capital, and their fullest home is an island with no tie to the ground their ancestors' masters ruined.
+
 ## The Basogur Jungle (rework): the Vanara's great beasts · GM, 2026-10-02
 
 Placed with **the Vanara of the Basogur** (GM): their structure was never truly defined beyond the guide-clans of the road. Every Vanara town and village has **a great beast**. It grows in size with the population it cares for, and they care for it. **A beast's child means part of the town leaving to settle a new one; a beast's death means the town is abandoned.**

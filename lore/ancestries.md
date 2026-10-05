@@ -78,7 +78,7 @@ The ones who remember waking: every Awakened Animal was present at their own beg
 
 **Inherited folklore:** Many Azarketi today still claim **Elden blood**. This is the original Storveldi Denbora lie, transmitted forward across millennia. The Storveldi Denbora had no Elden ancestry; they simply built their capital atop Elden ruins and styled themselves heirs to the Elden for prestige. The Azarketi inherited the claim with the culture; most who repeat it today do not know they are perpetuating a falsehood that is two-and-a-half millennia old.
 
-**Distribution:** Dominant in Lioaru (Time / Tani; their ancestral homeland, including the Lost Kingdom edges where the Blackened Lands begin). Aquatic adaptations make Azarketi communities cluster on Lioaru's southern coast, around the southern isles, and along Hafra-side trade routes.
+**Distribution:** Dominant in Lioaru (Time / Tani; **heartland the Lost Isle**, earmarked 2026-10-05, built at that region's build; their ancestral homeland, including the Lost Kingdom edges where the Blackened Lands begin). Aquatic adaptations make Azarketi communities cluster on Lioaru's southern coast, around the southern isles, and along Hafra-side trade routes.
 
 **The feeling:** the ones who answer it now. Every Azarketi is born carrying a story bigger than their own life, and what an Azarketi is, is the answer given today: most wear the inherited Elden-blood claim as daily pride; Valreka's community answers with water. The inheritance is fixed; the response is a present-tense act, renewed every morning.
 
