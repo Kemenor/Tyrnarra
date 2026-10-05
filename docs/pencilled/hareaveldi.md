@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-05).
 - **Phase 2 (seeds): closed** (GM, 2026-10-05).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-05); the order book committed at [`../../lore/geography/lioaru/hareaveldi-order-book.md`](../../lore/geography/lioaru/hareaveldi-order-book.md).
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
+- **Phase 5 (government): open.**
 
 ## Phase 0: settled facts
 
@@ -54,6 +55,17 @@
 **Facts the order book adds (accepted with it):** arrival by the river barge from Biozuri across the border water; the capital's five oases a different colour each from the air, the city sewn between them; the window paintings visibly sized by reach, added to any time ("it was the evening for it"); painted doors, lid-insides, bowl-bottoms ("who breathing was for"); colours as goods: a green worth weeping over (dear), the second grade for stairwells, **blue clay that lasts and is very dear**, **red bark that fades fast and is cheap**, "for the things you were finished with"; the sand takes **red, then gold, then green, then blue**; the woman waiting on her own face "the way you'd wait for a kettle"; "All my life I've thought changing was the easy part"; she buys one jar of green and takes one board, "not mine either". Kaosadaemi's Ringhold as a pigment buyer (Phase 6 to confirm).
 
 **Placeholders for Phase 8:** [BUYER], [CAPITAL], [GREEN OASIS], [BLUE OASIS], [RED OASIS], the green's name.
+
+### Phase 4: place, peoples and history (closed 2026-10-06)
+
+- **Sites.** **About fifty oases** (sketch: [`../map-refs/hareaveldi-oases.webp`](../map-refs/hareaveldi-oases.webp); on map-todo), from a well and three palms to a town: a chain along the north border river facing Emarrea and down the west-edge river; strung along the two rivers that cross the country north to south; scattered in the open sand at deep wells. **Each oasis gives a colour**, by family of ground: **greens** along the north river, **blues** from the river clays, **reds** in the east toward the Wildreach (barks and resins), **golds and ochres** on the coast. **The capital**: five oases in a ring on the south coast, the city sewn between them, one each **green, blue, red, gold and white** (white: the desert's gypsum and lime, the ground every painter lays first). **The field of boards** outside the capital's east wall; every town has a smaller one. **The islands** (three, wooded, offshore; Azarketi): **sea purple** (GM: a special pigment), dived for by the Azarketi from sea snails, thousands of shells to a thimble of dye, the rarest colour in the country; **the sand cannot take it**, so no self is painted in purple (a self must be able to go): purple is for what should last, the frames of the boards, the lintels over the windows, the names on a grave. The order book's fade order (red, gold, green, blue last) stands.
+- **Neighbours.** Emarrea (north, across the river): close and constant; barges, sake and orchard goods; kitsune who love to commission and dislike what they get; the chosen reveal facing what is true. The Wildreach (east): uneasy; a fey cannot hide in a true painting. Galdua Jendea and the River Duchies (west): trade along the river (Galdua's salt; the Duchies light for now). The Golden Coast (south-east corner): light for now; glass and paint. Kaosadaemi's Ringhold (far): buys pigment by the barrel.
+- **Peoples.** Nagaji ~60% (anchor, full expression); Azarketi ~10% (the islands and the coast); kitsune ~10% (the northern river towns); the rest ~20% (Ghoran, the southern mix, Duchies folk).
+- **The name (canon move, GM yes):** reconciled to the strata rule: *veldi* (realm) the Elden's word for this ground, the gods renaming it the sand-realm and keeping half (*harea*); the old stub's "already a realm of its own when Tani arrived", made precise. The glossary's "the deep-old name a pre-Tani people gave" goes.
+- **Founding.** The Nagaji's tongue the living daughter of the old south-western tongue (canon's ⚿); the painting tradition old; the present order from the Dark Era (Phase 5); whether "the serpent-kingdom" is a kingdom, Phase 5.
+- **Dated history** (checked against `timeline.md`): Elden Era, the realm (*veldi*); Gods' Era, the gods rename it the sand-realm, the old Iranian root spoken in the south-west; Lost Era, the oases settle into towns and the painting habit takes hold; Golden Empire (560–1325 MR), held through local lords, the pigments travel the Empire's roads, a few Imperial names on the map; Dark Era (1321–2135 MR), to be set in Phase 5; Adventurer Era, Emarrea's downstream trade, the pigment trade reaching Ringhold; 2531 MR, the order book.
+- **Population.** About **3.5 per sq mi, ~1.2 million**, nearly all at the oases and along the rivers; **the capital ~35,000** (3%).
+- **Canon moves (GM yes, 2026-10-06):** (1) the etymology (`glossary.md`; the Lioaru page card at publish); (2) the oases sited on map-todo (done); (3) the `deepening-ideas.md` "indigenous desert-nomad culture" line corrected.
 
 ## Rejected options
 

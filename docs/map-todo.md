@@ -60,7 +60,16 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 
 - **Vardana, Ida, the Mugarri** (the Lost Kingdom, Lioaru; named at the 2026-10-05 build). Label the ruined-city icon (~1792, 7095) **Vardana**. Add a capital icon on the south coast at about (2050, 7255) and label it **Ida**, the city of the cursed-born. Optionally mark **the Mugarri** as a ring of standing stones around Vardana. The Dakhma lies under Vardana and needs no mark.
 
-- **Hareaveldi's oases** (Lioaru; GM, 2026-10-05, at the build). Repaint Hareaveldi's dune sea with **green oases throughout**: painterly green and colourful spots across the sand, so it reads as a desert of its own beside Galdua Jendea's. **The capital is five oases together** (the present oasis patch on the south coast at ~3850, 7490 grows into five). Sites and colours settle at the build's Phase 4 (`docs/pencilled/hareaveldi.md`).
+- **Hareaveldi's oases** (Lioaru; GM, 2026-10-05, sited at the build's Phase 4, 2026-10-06). Repaint Hareaveldi's dune sea with **about fifty green oases**, painterly green and colourful spots across the sand, so it reads as a desert of its own beside Galdua Jendea's. Reference sketch: [`map-refs/hareaveldi-oases.webp`](map-refs/hareaveldi-oases.webp) (regions view, crop origin 2800, 6050, half scale: full-res = 2800 + 2x, 6050 + 2y). The pattern:
+  - **a chain along the north border river** facing Emarrea, and **down the west-edge river** (greens);
+  - **strung along the two rivers** that cross the country north to south (blues);
+  - **toward the Wildreach** in the east (reds);
+  - **along the coast** (golds);
+  - **scattered in the open sand** at deep wells.
+  - **The capital: five oases in a ring on the south coast**, the city between them; ring centres about (3810, 7460), (3890, 7460), (3920, 7520), (3850, 7554), (3780, 7520) around the present icon (~3850, 7490). Colour hints for the art: green, blue, red, gold, white.
+  - **The three islands** stay wooded; nothing to add.
+
+  Labels wait for the naming pass (Phase 8).
 
 - **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground with **three volcanic peaks**, each with a crater lake, and **a port** on the coast (the seed, the three rains, is in `docs/pencilled/seed-bank.md`; the coast the port faces is open until the build).
 
