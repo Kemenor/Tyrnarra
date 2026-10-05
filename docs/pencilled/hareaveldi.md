@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-05).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-05).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-05).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -27,9 +28,25 @@
 
 **Settled in the questions:** the five prompts taken as they stood (every self painted; the Occult pull; each oasis a colour, pigment the wealth, the capital's five colours; the neighbours of appearances; the future tense), with the GM's two corrections above.
 
+### Phase 2: seeds (closed 2026-10-05)
+
+**The seed (Seed 1 as the heart carrying Seed 2, Seed 3 as texture, adjusted by the GM):**
+- **Most people paint.** Painting is everywhere and ordinary: doors, walls, pots, boats, signs, the inside of a lid; children and the old, the merchant at the shop-front; the land, the day, what does not exist and what might. The country's habit more than its ceremony.
+- **The great work is rare.** Almost every painting is just a painting; now and then **the muse takes a painter**, a moment of seeing in which they paint what is *true*. Most painters have it a handful of times in a life; the greatest have it often, and that makes them the greatest. (⚿ A painting made in that moment pulls, as hard as its painter reached.)
+- **The shed self goes to the desert** (from the dropped stub's line, "the desert is the great stripper-away"): a finished self is painted one last time, the portrait set out on the sand in sun and wind until the desert scours it blank, and the bare panel comes home for the new self. The house hangs who its people are now; what they were is given to the sand. Kinship echo with Valreka's wrights laying shed skin in the sand.
+- **The window right** (GM, after Hundertwasser's *Fensterrecht*): every resident may paint the wall around their own window as far as their arm reaches, with whatever they like; streets are patchworks of arm's-reach paintings; a window may be painted anew when a self is laid down. **The reach rhymes with the secret** (as far as you can reach; as hard as the painter reached), kept deliberately.
+- **A great painter** (the one the muse takes most often) is honoured and a little feared; some would rather not sit for one. A fact about a few painters, not the country's politics.
+- **The colours of the oases** are the texture: each oasis a colour, pigment the wealth, the five-oasis capital where every colour meets.
+
+**Flavour line:** *a people who paint everything, give every self they shed to the sand, and now and then paint what is true.*
+
+**Sameness (authoring only):** Namur's Senate hangs a portrait of every senator (one per office; here the house hangs only the present selves). Kaosadaemi's Ringhold houses wear their Gnomes' hair-colours in stripes and quarters (flat heraldic colour as identity; Hareaveldi's windows are pictures each resident paints). The Golden Coast seed's sand of every colour (Hareaveldi's colour is the oases' pigments).
+
 ## Rejected options
 
-*(none yet)*
+- **Keeping every self on the wall** (the gallery of selves as first pitched): thousands of portraits per house over centuries; backward-facing.
+- **Painting as rare and political** (Seed 2's commissions and refusals as diplomacy): it read as if painting were seldom done; replaced by most people paint, the true work rare.
+- **Seed 3 alone** (the desert of colours): texture, and the Golden Coast seed already has sand of every colour.
 
 ## Open and deferred
 
