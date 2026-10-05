@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-06).
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -93,8 +94,19 @@
 - **Routes (canon move, GM yes):** **a branch line, Biozuri to the capital along the old pigment road**, off Eldara's line at Emarrea (the southern lines follow the Golden Empire's roads; the pigments travelled them): makes `lioaru.html`'s "Lines reach … Hareaveldi" true (`transport.md`). The river: Emarrea's barges along the west edge to the Duchies; the ferries across the north river (the buyer took the barge: buyers travel with their jars). The coast: the capital's harbour on the Hafra; the island boats.
 - **Stake in the tension:** the five houses are the five colours (their wealth the trade; the interregnum their power); the crown holds the purple and the islands; the great painters are worth more than any oasis and belong to none.
 
+### Phase 7: daily life (closed 2026-10-06)
+
+- **The day:** work early and late at the wells, the gardens and the dye-pits; rest through the heat of the day; the evening light is the painting light, the windows filling with people leaning out with brushes when the heat breaks.
+- **The shared ritual: the carrying-out** (name at Phase 8): when someone lays down a self, the last portrait is painted, and at sunrise the family carries it to the field of boards, stands it facing the sun, and the person chooses the next empty board for whoever they are now. Done for the ruler too, the crown's last portrait carried out with the rest. Quiet, frequent, and how a town keeps time.
+- **Senses and habits:** colour on every hand (a native reads which oasis you are from by the stain); resin and wet clay at the dye-pits; the desert-bread Atarialda's kitchen keeps, baked in hot sand under the embers and eaten with dates. **Speech:** *"Who are you now?"*, the greeting for someone not seen in years; a shed self is not asked about: *"that was another"* closes the subject kindly. **The vice: keeping a shed self**, a finished portrait hidden at home instead of carried out; sentimental, a little shameful, common in the old; the household version of a ruler clinging to the crown.
+- **Movement:** on foot and by Stokkul between oases; caravans along the rivers; the barges, the branch line from Biozuri, the island boats. **Signature movement: the dawn procession to the field.**
+- **Visitor against native:** a visitor takes the field for a cemetery (it is a laundry line, natives laugh); tries to buy a board; calls a painting "true" as a compliment, and a native winces (the word means something here); a native reads the stained hands, and does not ask *who you were*.
+- **Youth:** a child's first painting is on a board from the field (the girl's sun with a shield and a sword); a child's bedroom window is theirs to paint, invited (GM). **Coming of age: the first carrying-out** (GM): at the end of childhood a young person paints their own childhood self, often the first portrait of themselves they make, carries it to the field at sunrise like any laid-down self, and chooses their first empty board for who they are now; before it others paint you, after it you paint yourself. A slope: no set age; carried out when the young person knows that self is finished; parents see it coming, and sometimes a great painter's portrait of a child shows it first. **The sanctioned transgression: painting beyond reach**: the young go out at night with ladders and paint the high walls no window reaches; the old pretend not to see; the painting stays until the wall's owner decides.
+- **Faith as lived:** Tani's three faces, and Hareaveldi keeps **the child's**, the future face, painted on doorposts and painted first by children (Valreka has never seen it; Hareaveldi paints it everywhere); the rebirth-rites carry the Nagaji cadence canon gives them; the carrying-out is said with a word to her.
+
 ## Rejected options
 
+- **Coming of age: the first window** (a child's bedroom window is already theirs to paint): replaced by the first carrying-out.
 - **Government G2, the league of colours** (the five houses in council, no crown): another council; it would retire the serpent-kingdom. **G3 alone, the painted crown** (the ruler is whoever a muse painter paints as ruler): the seed generalized into rule; woven in as a weight on the houses' choice instead.
 - **Phase 3:** C, the muse taking a street painter (risks making the muse a performance); the Ghoran memory-keeper speaker (GM: keep away); the Minotaur of Brauogi (no reason to come; no Greenward register); "the same board reused for the new self" (replaced by the commons of boards); "Nobody would take my money" (cut).
 - **Keeping every self on the wall** (the gallery of selves as first pitched): thousands of portraits per house over centuries; backward-facing.
