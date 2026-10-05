@@ -5,7 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-05).
-- **Phase 1 (seed questions): open.**
+- **Phase 1 (seed questions): closed** (GM, 2026-10-05).
+- **Phase 2 (seeds): open.**
 
 ## Phase 0: settled facts
 
@@ -20,7 +21,11 @@
 
 ## Decisions by phase
 
-*(none yet)*
+### Phase 1: seed questions (closed 2026-10-05)
+
+**The summary (GM-confirmed, with the GM's corrections).** Hareaveldi is a sand-realm turned painterly: a desert scattered with green and coloured oases, each giving its own pigment, and a capital where five oases and five colours meet. It is the Nagaji's fullest home, and its great matter is **painting, of everything**: the land, the oases, the things of a day, **what has never existed, and what may one day** (GM: not all portraits). Every image has three faces, *what we show, what is real, what is true*. The deepest use is the self: a Nagaji sheds a life and grows the next, and each finished self is painted before it is laid down, so a family's gallery holds every self its people have been; a great painter can paint *what is true* before its sitter can see it. **The power is Occult and sits behind the seal** (GM): in open prose painting matters enormously, the greatest painters are honoured and feared, some refuse to be painted, and folk say a true painting comes true; **⚿ in truth a painting pulls toward what it shows as hard as its painter pulled themselves toward it** (GM: "as the painter pulled himself"; for a Nagaji painter, something of the painter may go into the painting the way a self goes into a shed skin). Its neighbours are made of appearances (Emarrea's chosen reveal across the north river; the Wildreach's disguised Fey; the Golden Coast's remembering glass beyond); Hareaveldi is the one place that paints what is true: a fey cannot hide in a true portrait, and Emarrea loves to commission what it least likes to receive. Of Tani's tenses this is the future: Galdua keeps memory in a place, Ida cannot trust its memories, Hareaveldi looks forward to *what will be*.
+
+**Settled in the questions:** the five prompts taken as they stood (every self painted; the Occult pull; each oasis a colour, pigment the wealth, the capital's five colours; the neighbours of appearances; the future tense), with the GM's two corrections above.
 
 ## Rejected options
 
