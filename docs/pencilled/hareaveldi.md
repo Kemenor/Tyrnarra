@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-06).
+- **Phase 9 (tension and reveal): open.**
 
 ## Phase 0: settled facts
 
@@ -104,8 +105,38 @@
 - **Youth:** a child's first painting is on a board from the field (the girl's sun with a shield and a sword); a child's bedroom window is theirs to paint, invited (GM). **Coming of age: the first carrying-out** (GM): at the end of childhood a young person paints their own childhood self, often the first portrait of themselves they make, carries it to the field at sunrise like any laid-down self, and chooses their first empty board for who they are now; before it others paint you, after it you paint yourself. A slope: no set age; carried out when the young person knows that self is finished; parents see it coming, and sometimes a great painter's portrait of a child shows it first. **The sanctioned transgression: painting beyond reach**: the young go out at night with ladders and paint the high walls no window reaches; the old pretend not to see; the painting stays until the wall's owner decides.
 - **Faith as lived:** Tani's three faces, and Hareaveldi keeps **the child's**, the future face, painted on doorposts and painted first by children (Valreka has never seen it; Hareaveldi paints it everywhere); the rebirth-rites carry the Nagaji cadence canon gives them; the carrying-out is said with a word to her.
 
+### Phase 8: naming (closed 2026-10-06)
+
+Persian words checked against English Wiktionary, abadis.ir and English Wikipedia (*Persian name*) on 2026-10-06. Collision search clean for every name.
+
+**Register.** Word-base **Persian**, the living Iranian tongue, beside Ida's archaic Hizva: modern endings, plain letters (*kh* for x, *gh* for ġ, long vowels unmarked); Hizva keeps the old endings, Hareaveldi has worn them smooth. **The tongue: *Sokhan*** (Persian *sokhan*, speech).
+
+**Personal-name structure (GM): given + self-name + family.** The **given** name is kept for life. The **self-name** is taken at each carrying-out; the old one goes to the sand with the portrait and is not spoken again (*"that was another"*); usually a word (a season, a colour, a thing): *Golnar Bahar* ("spring") lays down that self and becomes *Golnar Payiz* ("autumn"). The **family** name is inherited, mostly from an old craft or a place, often with *-i*: **Rangraz** (dyer), **Kuzegar** (potter), **Naqqash** (painter), **Nakhli** (of the palm). **A child carries given + family and no self-name; the first carrying-out gives the first self-name.** *"Who are you now?"* asks for the self-name.
+
+| Slot | Name | Etymology |
+|---|---|---|
+| The capital | **Panjrang** | *panj* (five) + *rang* (colour); echoes the real *haft-rang* ("seven-colour") tilework. |
+| The five houses | **Sabz, Lajvard, Sorkh, Zard, Sefid** | green, lapis-blue, red, yellow-gold, white: each named for its oasis's colour. |
+| The ruler | **the Tajvar** | *tājvar*, archaic "king" (*tāj*, crown). |
+| A great painter | **Ostad** (title) | *ostād*, master. |
+| The muse | **the elham** | *elhām*, inspiration (an Arabic loan, as in real Persian): *"when the elham takes you."* |
+| The field of boards | **the rangzar** | *rang* + *-zār* (a place where it abounds, as *golzār*): "the place of colours". |
+| The carrying-out | locally ***pustandaz*** | from *pust andākhtan*, "to shed skin"; in Talanese, *the carrying-out*. |
+| Sea purple | **arghavan** | *arghavān*, purple; the Judas tree. |
+| The order book's oases | **Sabzab** (green), **Lajvard** (blue), **Sorkhab** (red) | *sabz* + *āb* ("green water"); *lājvard* (lapis); *sorkh* + *āb* ("red water"). Three of the capital's five; each house keeps its oasis (house Sabz of Sabzab, house Lajvard of Lajvard, house Sorkh of Sorkhab). |
+| The green worth weeping over | **zangar** | *zangār*, verdigris. |
+| Demonym | **Hareaveldi** | as Atarialda already says (*a Hareaveldi desert-bread*). |
+
+**Figures:**
+- **Golnar Bahar Rangraz**, the Tajvar: *golnār*, pomegranate flower; reigning as her *Bahar* self; of a dyers' family.
+- **Ostad Kaveh Negar Naqqash**, a great painter: *Kaveh*, the smith-hero of the Shahnameh; self-name *Negar* (painting, image); of a painters' family.
+- **Odelind Ringhold Mordant**, the buyer: Kaosadaemi register (given, old Germanic from Kaosadaemi's own list; born, Ringhold; tuning, her line's trade-word: a mordant fixes a dye).
+
+**The order book's placeholders:** [BUYER] → Odelind Ringhold Mordant; [CAPITAL] → Panjrang; [GREEN OASIS] / [BLUE OASIS] / [RED OASIS] → Sabzab / Lajvard / Sorkhab; the green's [name] → zangar.
+
 ## Rejected options
 
+- **Naming:** S1 alone (given + self-name), S2 (given + birth-oasis colour + self-name; close to Argia's *given + well*), S3 (given + first board painting; static).
 - **Coming of age: the first window** (a child's bedroom window is already theirs to paint): replaced by the first carrying-out.
 - **Government G2, the league of colours** (the five houses in council, no crown): another council; it would retire the serpent-kingdom. **G3 alone, the painted crown** (the ruler is whoever a muse painter paints as ruler): the seed generalized into rule; woven in as a weight on the houses' choice instead.
 - **Phase 3:** C, the muse taking a street painter (risks making the muse a performance); the Ghoran memory-keeper speaker (GM: keep away); the Minotaur of Brauogi (no reason to come; no Greenward register); "the same board reused for the new self" (replaced by the commons of boards); "Nobody would take my money" (cut).
