@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-05).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-05); the order book committed at [`../../lore/geography/lioaru/hareaveldi-order-book.md`](../../lore/geography/lioaru/hareaveldi-order-book.md).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-06).
+- **Phase 6 (economy): open.**
 
 ## Phase 0: settled facts
 
@@ -67,8 +68,24 @@
 - **Population.** About **3.5 per sq mi, ~1.2 million**, nearly all at the oases and along the rivers; **the capital ~35,000** (3%).
 - **Canon moves (GM yes, 2026-10-06):** (1) the etymology (`glossary.md`; the Lioaru page card at publish); (2) the oases sited on map-todo (done); (3) the `deepening-ideas.md` "indigenous desert-nomad culture" line corrected.
 
+### Phase 5: government (closed 2026-10-06)
+
+**G1, the shed crown, with G3's painting woven in (GM).**
+- **Rule lasts one self.** The ruler takes the crown as one self and lays it down with that self; the crown returns, and the ruler's last portrait *as ruler* goes out to the sand with the rest. A serpent-kingdom: a crown held for exactly as long as one skin (canon: "a self is a finished thing a Nagaji can lay down", made the constitution).
+- **The five houses of the capital**, one per oasis and colour, choose the next ruler from among those who have kept an oasis well (water and pigment are the statecraft: the wells, the river routes, the trade).
+- **The painted choice (GM):** a portrait by a great painter made when the muse took them, showing someone as the ruler, weighs on the houses' choice; custom, not binding; they rarely choose against one, and the chronicle remembers when they did. Candidates court the great painters; a great painter's refusal says something too. Muddy line: who says a painting was made when the muse took them (the painter's name and the houses' judgement, both fallible; the ordinary painting passed off as true is the obvious fraud). The painters bracket every reign without holding office: a true portrait can show a ruler's next self growing (the reign ending) and a candidate as ruler (who is next). *(⚿ for Phase 9: the muse portrait of a candidate as ruler pulls the realm toward it; the houses' custom of heeding such paintings is, unknowing, a custom of being pulled.)*
+- **Four answers:** the ruler rules day to day with the five houses (each oasis town keeps its own well-house); receives envoys; signs treaties with the five houses' assent; each oasis builds for itself, the crown builds wells, roads and the river landings.
+- **The interregnum** (the special state, between rulers): the five houses rule jointly day to day; the eldest of the five receives envoys; no treaty is signed until the crown is filled; nothing is built but what the wells need. Usually weeks. **The longest was a month (GM): the houses delayed the choice to keep the rule among themselves, and it ended when a second muse painting of the same candidate as ruler was painted** (dated at Phase 10 or left open).
+- **Accepted:** the founding (Dark Era): when the realm was coming apart, one ruler laid the crown down at her shedding instead of keeping it, and the realm held; the standing reason: no one in Hareaveldi can rule longer than they remain who they were.
+- **Incentive check (breaks two ways, kept as tension):** **clinging** (a ruler who will not become someone else keeps the crown; every Nagaji is taught to shed and the ruler alone is rewarded for not doing it); **fleeing** (a ruler can shed to escape a disaster: *that was another self*). Plus the houses' own: the interregnum is their rule, so they gain by delay (the month).
+- **Muddy edges:** who says a self is finished (by law the ruler; by custom the painters); whether a shed ruler answers for the old self's acts; who says a painting was the muse's.
+- **Honest cost:** a monarchy whose term ends only when its holder says so, policed by a custom.
+
+**Census (authoring only):** a term by self is new on Talan (the nearest: Tahu Tangata's Kaiahi, who holds the chair while he can still lead a burn).
+
 ## Rejected options
 
+- **Government G2, the league of colours** (the five houses in council, no crown): another council; it would retire the serpent-kingdom. **G3 alone, the painted crown** (the ruler is whoever a muse painter paints as ruler): the seed generalized into rule; woven in as a weight on the houses' choice instead.
 - **Phase 3:** C, the muse taking a street painter (risks making the muse a performance); the Ghoran memory-keeper speaker (GM: keep away); the Minotaur of Brauogi (no reason to come; no Greenward register); "the same board reused for the new self" (replaced by the commons of boards); "Nobody would take my money" (cut).
 - **Keeping every self on the wall** (the gallery of selves as first pitched): thousands of portraits per house over centuries; backward-facing.
 - **Painting as rare and political** (Seed 2's commissions and refusals as diplomacy): it read as if painting were seldom done; replaced by most people paint, the true work rare.
