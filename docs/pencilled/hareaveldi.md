@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-05).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-05).
 - **Phase 2 (seeds): closed** (GM, 2026-10-05).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-05); the order book committed at [`../../lore/geography/lioaru/hareaveldi-order-book.md`](../../lore/geography/lioaru/hareaveldi-order-book.md).
+- **Phase 4 (place, peoples and history): open.**
 
 ## Phase 0: settled facts
 
@@ -42,8 +43,21 @@
 
 **Sameness (authoring only):** Namur's Senate hangs a portrait of every senator (one per office; here the house hangs only the present selves). Kaosadaemi's Ringhold houses wear their Gnomes' hair-colours in stripes and quarters (flat heraldic colour as identity; Hareaveldi's windows are pictures each resident paints). The Golden Coast seed's sand of every colour (Hareaveldi's colour is the oases' pigments).
 
+### Phase 3: traveller's image (closed 2026-10-05)
+
+**The image (GM: A and B together):** the street of windows in the five-oasis capital, then the field of faces outside the east wall at sunrise.
+
+**Speaker and form:** **a Gnome of Kaosadaemi**, buying pigment for Ringhold (whose walls are repainted whenever a tenant moves); a **colour-snob** who **talks to herself in the margins** (GM). **Form: her order book**, the ledger column dry, the margins hers, taking over by the end. 2531 MR. Placement: own in-world file, published whole as a log card, excerpts at section heads. The Ghoran memory-keeper speaker set aside (GM); the Brauogi Minotaur weighed (a starker contrast, but no reason to cross the continent and no Greenward name register).
+
+**The field of boards (GM's rework):** the field outside the east wall is a **commons of boards**. Finished portraits stand facing the sun until the sand scours them blank; the blank ones stand at the ends of the rows and are anyone's, for anything: you take one home, mend the frame, plane the board, paint, and when you are done with it, or done being whoever painted it, you carry it back, let it go, and take the next empty one. Nobody owns a board; **the only price is taking care of it**. A child's first painting is on a scoured board (the girl's sun with a shield and a sword). **A board may leave the country** (GM): the one requirement is care, and nothing checks it. **Some boards never come back or break, and new ones are bought and set out** (GM).
+
+**Facts the order book adds (accepted with it):** arrival by the river barge from Biozuri across the border water; the capital's five oases a different colour each from the air, the city sewn between them; the window paintings visibly sized by reach, added to any time ("it was the evening for it"); painted doors, lid-insides, bowl-bottoms ("who breathing was for"); colours as goods: a green worth weeping over (dear), the second grade for stairwells, **blue clay that lasts and is very dear**, **red bark that fades fast and is cheap**, "for the things you were finished with"; the sand takes **red, then gold, then green, then blue**; the woman waiting on her own face "the way you'd wait for a kettle"; "All my life I've thought changing was the easy part"; she buys one jar of green and takes one board, "not mine either". Kaosadaemi's Ringhold as a pigment buyer (Phase 6 to confirm).
+
+**Placeholders for Phase 8:** [BUYER], [CAPITAL], [GREEN OASIS], [BLUE OASIS], [RED OASIS], the green's name.
+
 ## Rejected options
 
+- **Phase 3:** C, the muse taking a street painter (risks making the muse a performance); the Ghoran memory-keeper speaker (GM: keep away); the Minotaur of Brauogi (no reason to come; no Greenward register); "the same board reused for the new self" (replaced by the commons of boards); "Nobody would take my money" (cut).
 - **Keeping every self on the wall** (the gallery of selves as first pitched): thousands of portraits per house over centuries; backward-facing.
 - **Painting as rare and political** (Seed 2's commissions and refusals as diplomacy): it read as if painting were seldom done; replaced by most people paint, the true work rare.
 - **Seed 3 alone** (the desert of colours): texture, and the Golden Coast seed already has sand of every colour.
