@@ -16,7 +16,8 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
 - **Phase 10 (draft): closed** (GM, 2026-10-06, approved as drafted); the draft at [`lost-isle-draft.md`](lost-isle-draft.md).
 - **Phase 11 (commit lore): done** (2026-10-06). Built: `lore/geography/lioaru/auran.md`; the column renamed `lore/geography/lioaru/auran-column.md`.
-- **Phase 12 (publish): in progress.**
+- **Phase 12 (publish): done** (2026-10-06): `published/setting/talan/domains/lioaru/auran/auran.html`, generated from the lore file (`build_au.py`), the column as five log cards with the Guide's line first; accent `#b8c2d4`. Wired: sidebar, the Lioaru card (clickable), the interactive map region (renamed Auran, linked), the site inventory. Mirrors: `lioaru.html` (Terrain, Peoples, card), `ancestries.html` (Azarketi), `pf2e-registrar.html`, `valreka.html` and `whalehall.html` (the Sovereign's reach), `transport.html` (cloudships; Siyabask among the Hafra ports), `magic.html` (cloudships), `fellibylur.html` (the field-book), the *Short Notice* range; the Galdua page regenerated (Auran offshore).
+- **Added at publish (GM, 2026-10-06):** the optional Stormrider line taken up: many Stormriders keep their field-books in Auran's gold ink, which reads easier by a dim cabin lamp (`vindul.md`, Fellibylur; `auran.md`, *Three rains*; the Field-Book card on `fellibylur.html`).
 
 ## Phase 0: settled facts
 

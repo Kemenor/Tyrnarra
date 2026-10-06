@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auran · Lioaru · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #b8c2d4;   /* silfgir silver · 10.87:1 on Style B bg */
+    --card-bg: rgba(20,22,28,0.55);
+  }
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+  .life-grid, .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .life-grid .card-name, .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+</style>
+</head>
+<body data-page="auran">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/lioaru/lioaru.html">Lioaru</a><span class="sep">›</span><span>Auran</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">Auran</div>
+    <div class="page-subtitle">Lioaru Sub-Region · The Isle of the Three Rains · The Azarketi Heartland</div>
+    <div class="page-flavor">An island whose rain runs gold, silver and starlight in the streets, and whose people draw it out before sundown, every rain, or lose it.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd>The islanders' own name, in Hauri: Balochi <i>hawr</i> (rain) with the plural <i>-ān</i>, "the rains", drifted to <i>Auran</i>. Demonym and adjective: <b>Auran</b>. The three craters keep names in the Silent Tongue: <b>Gulgir</b>, <b>Storngir</b>, <b>Silfgir</b>. The island's own words are in <b>Hauri</b>: <b>Siyabask</b>, <b>the Bask</b>, <b>the Tolwaja</b>, <b>the Daptar</b>, <b>the Durbra</b>.</dd>
+    <dt>Position</dt><dd>The outermost land of the south-western Hafra, two days' sail from any coast. North-east, the Red Dominion's point, about 285 miles off; east, Galdua Jendea's west shore, about 330; east-south-east, the Lost Kingdom, about 310. About 240 miles west lies the edge of the Cloud Sea.</dd>
+    <dt>Terrain</dt><dd>About 11,900 square miles, near round and some 130 miles across. Three old volcanoes stand inland, each with a lake in its crater and a cap of cloud of its own: Gulgir in the east, a day's road from the coast; Storngir in the south; Silfgir in the west, facing the Cloud Sea. Below them lies green farmland under ordinary rain. The coast is cliff and black lava shelf almost all the way round, with coves for fishing boats; on the east coast an old lava flow runs out into the sea as a natural breakwater, the Bask, with deep water behind it.</dd>
+    <dt>Character</dt><dd>
+      <i>An island whose rain runs gold, silver and starlight in the streets, and whose people draw it out before sundown, every rain, or lose it.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">The Three Rains</span><span class="pill">The Drawing-Out</span><span class="pill">The Rain-Share</span><span class="pill">The Tolwaja</span><span class="pill">Cloudship Silver</span><span class="pill">Azarketi Heartland</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>About 300,000. Azarketi three in five, at their fullest on Talan; the rest the southern mix, Ghoran, Nagaji and kitsune; in Siyabask, everyone the ships bring.</dd>
+    <dt>Tongue</dt><dd>Hauri; Talanese on the quay and in the trade.</dd>
+    <dt>Faith</dt><dd>Tani, whose hour is sundown.</dd>
+    <dt>Rule</dt><dd><b>the Tolwaja</b>, who keeps the quay and the island's chest, chosen by the island's households for seven years, one household, one voice. <b>Hani Gipt Siyasang</b> has held the seat since 2525.</dd>
+    <dt>Capital</dt><dd><b>Siyabask</b>, on the Bask, about 9,000.</dd>
+    <dt>Founded</dt><dd>The craters' names in the Elden Era; the rain-share in the Dark Era.</dd>
+  </dl>
+
+  <div class="gods-city" style="border-color: rgba(184,194,212,0.5);">
+    <div class="gods-city-label">The Capital</div>
+    <div class="gods-city-name">Siyabask</div>
+    <div class="gods-city-byname">On the Bask, the lava arm of the east coast · the one harbour for a Hafra hull · the quay and the sundown account</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rains" class="section-heading">The Rains</h2>
+
+  <div class="voice-quote"><p><i>On my third afternoon a bell rang from the rim and the street emptied upward. I mean that: everyone went onto the roofs.</i></p></div>
+  <div class="voice-attrib">Vyrenna Tessek, <i>One Line Further</i>, at Gulgir, 2526 MR</div>
+  <div class="prose">
+    <p>Each of Auran's three craters rains its own rain. The cloud that caps a crater holds over it, and when it breaks, the rain falls inside the rim, onto the town that lines the bowl and into the lake at the bottom. It looks like ordinary rain until it lands. Then the runnels colour: at Gulgir the colour of late honey; at Storngir plain wet stone, with a cold point of light in every drop; at Silfgir a sheen on the channels, thin as breath on a mirror.</p>
+    <p>It rains about as often as rain does anywhere. Gulgir rains every few days, Storngir about once a week, and Silfgir every week or two, the least and the thinnest of the three. By sundown the colour has gone out of the water, and whatever has not been drawn out by then is only water.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">The Drawing-Out</div>
+    <p style="margin-bottom:0;">When the cap darkens, a bell rings from the rim and the town goes up onto its roofs. Every roof in a crater town slopes to one gutter, the gutters slope to the street, and the streets are cut with channels that run down to the settling tanks and the pans in the lakeside square. The whole town works the rain with boards and brooms, turning the flow at every corner, until the light goes. At the pans the rain is drawn out of the water and sealed in jars. At Silfgir the drawn silver goes on to the stills, and the stills are worked through the night.</p>
+  </div>
+  <div class="prose">
+    <p>Gold is the commonest, and its trade is ink: writing in gold-rain ink stands up off the page in poor light, though it gives no light of its own, and the writer still needs a lamp; many of Fellibylur's Stormriders keep their field-books in it. Aurans keep it as medicine too, a drop in the tea for a fever or on a wound, and swear it cures; it helps a little. Starlight is a reagent prized by mages and enchanters of every school. Silver is the rarest: a rain's whole catch at Silfgir, distilled, fills a vial no longer than a finger, and every cloudship built on Talan carries it.</p>
+  </div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Elden's Taps</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What the Craters Are</div>
+      <p style="margin-top:0;">The three craters are Elden works, built in the Elden Era and still running. Each is a tap on the Wellspring's outflow: it draws a thread of source-fluid up through the mountain and lets it fall as rain, shaped by the light it rises through, the sun's at Gulgir, the stars' at Storngir, and at Silfgir the glow of the Cloud Sea. Raw Wellspring will not hold a form, which is why the rain fades by sundown unless it is drawn out. The engine in each mountain mediates the outflow the way the gods' presence once did, so the craters cause no Stillpool births. The taps are small working pieces of the craft the Elden reached for at their ritual site.</p>
+      <p>That is why starlight answers every school of magic: it is a sliver of the source of all of it. It is why a cloudship's binding needs silver: the Cloud Sea is the veil, and Wellspring shaped by its light is what lets a hull ride it. The craters' Silent-Tongue names are the machines' own. And the Azarketi, many of whom claim Elden blood they do not have, live off a real Elden machine.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="siyabask" class="section-heading">Siyabask and the One Harbour</h2>
+
+  <div class="voice-quote"><p><i>The quay at Siyabask is like every quay I have stood on, loud and crowded and smelling of tar, until you notice that nobody on it looks at the sea.</i></p></div>
+  <div class="voice-attrib">Vyrenna Tessek, <i>One Line Further</i>, 2526 MR</div>
+  <div class="prose">
+    <p>Auran's coast is cliff and black lava shelf almost all the way round. Fishing boats work out of the coves, and one place on the island can take a deep-keeled Hafra hull: the bay behind the Bask, an old lava flow run out into the sea and set as a long breakwater, with deep water behind it. Siyabask stands on the flow itself.</p>
+    <p>Everything the craters catch goes out through Siyabask. The saltkeels come in from the north-east, most of them the Red Dominion's carriers, two days out, and others straight from further ports; Fellibylur's Stormriders chart the lane. On the quay the buyers watch the three cloud-caps inland, and when one darkens, the chalk prices on the warehouse boards change. The Guild keeps a post-house on the quay, within the reach of Valreka's Sovereign, and the Post goes out on the carrying ships.</p>
+    <p>Three roads run inland from Siyabask, one to each crater: a day to Gulgir, two or three to Storngir, four to Silfgir on the far side. A coast track joins the fishing coves. The roads carry the down-carts: after each rain the drawn essence goes down to the port in sealed jars, and the silver goes down under guard.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-rain-share" class="section-heading">The Rain-Share</h2>
+  <div class="prose">
+    <p>The rain on Auran belongs to the island, and every rain's sale is divided three ways. A third goes to the town that caught it, shared among everyone who worked the rain: <b>the catchers' third</b>. A tenth goes to the island's chest, for the roads, the walls, the Bask and the ships. The rest, a little over half, is <b>the rain-share</b>, paid once a year to every household on the island, in the farms and the coves as in the crater towns. Every household is entered in <b>the Daptar</b>, the share-roll, and draws one share. Shared among some 60,000 households, it buys a household's salt, its iron and a good coat; the island still farms and fishes for its living.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">The Bargain</div>
+    <p style="margin-bottom:0;">The rain-share is a Dark-Era law. When the Golden Empire fell, Auran was left alone at the edge of the Hafra, and raiders came for the craters. The whole island's levies held the roads, and its boats held the Bask. The crater towns gave the rain to the island in return for its spears, its bread and its one quay. The bargain still runs both ways: a crater town is a bowl of roofs and channels with little farmland inside the rim, and it eats what the farms send up the road. The rain is sold at the quay at Siyabask and nowhere else, so the world buys it at one price.</p>
+  </div>
+  <div class="prose">
+    <p><b>The Tolwaja.</b> The Tolwaja keeps the quay, the island's chest and Siyabask. She sets the prices, signs the island's trade and its treaties, receives envoys at her table on the quay, keeps the walls and the ships, judges at the quay, and decides the roads and the works the chest pays for. She sells nowhere but the quay and rules nothing inside a crater town: each crater town governs itself under its warden and builds its own roofs and channels. The households choose her for seven years, one household, one voice. Every village and town counts its households' voices and sends the tally to the quay, and the highest tally wins. She may stand again, and if the seat falls empty a tally is called at once. Those who keep no household of their own have no voice: the young until they found one, lodgers, sailors with no house on the island, and foreigners. <b>Hani Gipt Siyasang</b> has held the seat since 2525, and the tally falls this year.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">The Sundown Account</div>
+    <p style="margin-bottom:0;">Every evening the Tolwaja comes down to the quay steps, closes the day's books in public and answers any question put to her before dark. The account is held in Talanese, for the buyers on the quay. Answers the island disliked are remembered at the tally.</p>
+  </div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · Sell a Rain Before It Falls</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Island Says</div>
+      <p>Sell a rain before it falls, the island says, and the crater stops raining. The quay sells only what has been drawn.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-silver" class="section-heading">The Silver</h2>
+
+  <div class="voice-quote"><p><i>"The law says the rain is sold at the quay. Show me where it says how many quays."</i></p></div>
+  <div class="voice-attrib">Chakar Dur Kohbrah, warden of Silfgir, to the Tolwaja at the sundown account, 2532 MR</div>
+  <div class="prose">
+    <p>For more than a thousand years silver was the poor rain. It is the thinnest of the three and the hardest to draw, and the Empire's buyers paid little for it. Silfgir caught it all the same, because a rain is answered, and the share carried the silver town out of gold and starlight.</p>
+    <p>Around 2300 MR a Vindul yard built the first cloudship, and its binding took Auran's silver. Silfgir learned to distil, and within two centuries the poorest of the three craters became the one the world presses hardest. Every cloudship built on Talan since carries Auran's silver in its binding, and a hull takes the silver of several rains. The yards buy at the quay like everyone else, at the Tolwaja's price.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · The West Harbour</div>
+    <p style="margin-bottom:0;">Silfgir's rain now carries the share, and Silfgir keeps the same third as Gulgir. Its warden, <b>Chakar Dur Kohbrah</b>, asks for a half. The farming households answer that they carried Silfgir when its rain was worthless, and Gulgir and Storngir watch, because if Silfgir gets a half, they will ask for one next. A Vindul yard has offered to build Silfgir a harbour of its own under the rim, an Arcanotech breakwater on the west lava shelf, at the yard's cost, and Chakar has not refused it. With its own quay Silfgir could sell its silver directly, and the yard would buy it without the Tolwaja's price. The one-quay law says the rain is sold at the quay; whether it forbids building a harbour, or only selling from one, is a question the law leaves open. Hani Gipt Siyasang stands for the tally this year, and the question comes up on the quay steps every evening.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="daily-life" class="section-heading">Daily Life</h2>
+  <div class="prose">
+    <p>In a crater town the day runs on standby. The workshops, the still-houses, the roof-menders and the channel-clearers keep one eye on the cap, and when the bell rings everything stops and the town goes up. Every household keeps a rain-cloak and a wide hat on the peg by the door. In the countryside the farms and the coves work under plain rain and watch the caps from far off. In Siyabask the day runs on the quay, the weighing and the warehouses, and ends with the sundown account.</p>
+    <p>The crater towns greet each other with <i>which cap?</i> On Auran <i>by dusk</i> is a promise and <i>tomorrow</i> a polite no. A quarrel is settled before dark: a neighbour comes to the door at dusk to have it out or have it done, and stays for supper. The bread is barley, eaten with fish and figs, and a drop of gold goes in the tea when someone is ill. The quay's vice is betting on the caps, which crater rains next, and the buyers bet too, with their prices.</p>
+  </div>
+  <div class="feature-panel prose">
+    <div class="panel-label">The Share-Day</div>
+    <p style="margin-bottom:0;">Once a year the rain-share is paid in every village and town on the same day, and every debt on the island falls due that day. Auran settles up by sundown.</p>
+  </div>
+  <div class="card-grid life-grid">
+    <div class="accent-card">
+      <div class="card-name">Getting about</div>
+      <p>On foot, by mule and by cart on the three roads; by fishing boat round the coast.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Visitors</div>
+      <p>A visitor expects the gold to glow. A visitor tries to keep a puddle past sundown, takes <i>tomorrow</i> for a promise, and tries to buy at a crater town and is sent down the road to the quay. A native knows which crater will rain before the bell rings.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">The young</div>
+      <p>A child's first rains are worked with a bowl: the child runs after the runnels that jump the channels, and what a child catches in a bowl outside the channels is the child's own, unshared. The grandmothers and the channel-wardens keep the bowl-right from turning into theft, and the young stretch it as far as it goes, standing just outside the channels with bigger and bigger bowls until the wardens chase them off. In the teens comes the first rain worked with a board, and a catcher's portion in one's own name. A household of one's own brings the share and a voice at the tally.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Faith</div>
+      <p>Tani is kept plainly. Sundown is her hour on Auran, and closing the day before dark is said to be hers. Each crater square has a small shrine of her three faces and one priest, and the first bowl of every rain is poured back into the lake.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="history" class="section-heading">Peoples and History</h2>
+  <div class="prose">
+    <p>Auran is the Azarketi's fullest home on Talan. They came to the island in the Lost Era, among the peoples the Crimson Rain had scattered, drawn by its water. The rest of the island is the southern mix, Ghoran, Nagaji and kitsune, and Siyabask holds everyone the ships bring.</p>
+    <p>The rains are older than any record, and the craters carry names in the Silent Tongue. Under the Golden Empire Auran was a far province, and gold ink and starlight were its trade. When the Empire fell, the island held alone through the Dark Era, and the rain-share was made. The first cloudship, around 2300 MR, turned Silfgir from the poorest crater into the most pressed.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-tongue" class="section-heading">The Tongue</h2>
+  <div class="prose">
+    <p>Auran speaks <b>Hauri</b>, one of the tongues of the south-western sands, a cousin of Hareaveldi's Sokhan. Talanese is spoken on the quay and in the trade, and the sundown account is held in it.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="names" class="section-heading">What an Auran Is Called</h2>
+  <div class="prose">
+    <p>An Auran carries a given name, a bowl-name and a household name: <b>Hani Gipt Siyasang</b>. The bowl-name is given by the grandmothers at a child's first catch, from that moment, and kept for life; it is usually a single word. The household name is chosen by a household's founders when they found it and entered in the Daptar, which never takes a name twice. Children carry their parents' household name until they found their own, so a family name lasts one generation, and an Auran's last name says whose house they keep. A child before its first catch carries a given name and a household name.</p>
+  </div>
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Given</b></p>
+    <div class="pill-row"><span class="pill">Hani</span><span class="pill">Chakar</span><span class="pill">Mayro</span><span class="pill">Gwahram</span><span class="pill">Hammal</span><span class="pill">Doda</span><span class="pill">Balach</span><span class="pill">Bibarg</span><span class="pill">Sammi</span><span class="pill">Banari</span><span class="pill">Lali</span><span class="pill">Raji</span></div>
+    <p style="margin:14px 0 6px;"><b>Bowl-names</b></p>
+    <div class="pill-row"><span class="pill">Gipt</span><span class="pill">Burt</span><span class="pill">Dur</span><span class="pill">Brah</span><span class="pill">Passaw</span><span class="pill">Banda</span><span class="pill">Istar</span></div>
+    <p style="margin:14px 0 6px;"><b>Households</b></p>
+    <div class="pill-row"><span class="pill">Siyasang</span><span class="pill">Kohbrah</span><span class="pill">Zirkirr</span><span class="pill">Tiyab</span><span class="pill">Nodband</span><span class="pill">Jambar</span></div>
+    <p style="margin:14px 0 6px;"><b>Whole names</b></p>
+    <div class="pill-row"><span class="pill"><i>Hani Gipt Siyasang</i></span><span class="pill"><i>Chakar Dur Kohbrah</i></span><span class="pill"><i>Doda Tiyab</i> (a child before its first catch).</span></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Hani Gipt Siyasang</div>
+      <p>The Tolwaja: holds the seat since 2525; stands at the tally in 2532.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Chakar Dur Kohbrah</div>
+      <p>Warden of Silfgir: asks for a half; has not refused the yard's harbour.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Mayro Istar Zirkirr</div>
+      <p>Master of the stills at Silfgir: showed Vyrenna Tessek the silver in 2526.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Vyrenna Tessek</div>
+      <p>The columnist, in <i>One Line Further</i>).</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-column" class="section-heading">One Line Further: Auran</h2>
+  <div class="prose"><p>Vyrenna Tessek's column from Auran, in the Talan years of <i>One Line Further</i>, 2526 MR, opened by the line her grand-uncle's Guide gave the island.</p></div>
+  <div class="voice-quote"><p>Auran: two days by saltkeel; the three essences are sold at the Siyabask quay, where the visitor's business begins and ends; the nearest crater town lies a day's road inland, and it did not rain.</p></div>
+  <div class="voice-attrib">Golivander Tessek, <i>A Traveller's Guide to Tyrnarra</i></div>
+  <div class="log-letters">
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The quay</span><span class="ld-text">Siyabask, and a quay where nobody looks at the sea.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>My grand-uncle stayed one day and it did not rain, and he wrote that down, because he is honest. I read the line twice on the crossing and decided the only thing to do with it was to stay until it did.</p><p>The quay at Siyabask is like every quay I have stood on, loud and crowded and smelling of tar, until you notice that nobody on it looks at the sea. They look inland. Three mountains stand behind the town, far off and blue, each with its own cap of cloud, and the buyers on the quay watch the caps the way farmers watch a sky. When one darkens, the chalk prices on the warehouse boards change before anyone could possibly know anything. I asked which road rains most. Everyone said gold, the way you would tell a child which way is down.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The first gold</span><span class="ld-text">Gulgir on its roofs, the boy with his bowl, and a puddle at sundown.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>I lodged with a family in Gulgir: a mother who keeps accounts, a grandmother who keeps everyone, and a boy of nine who keeps a bowl by the door the way other boys keep a ball.</p><p>On my third afternoon a bell rang from the rim and the street emptied upward. I mean that: everyone went onto the roofs. The roofs here all slope to one gutter, and the gutters slope to the street, and the street is cut with channels like a carved board. By the time I had found the stairs, the rain was falling and the whole town was standing in it with boards and brooms, steering water.</p><p>It looks like ordinary rain until it lands. Then every runnel turns the colour of late honey and goes down the street toward the square, where the pans are, and the town walks beside it, turning it with the boards at every corner so none of it gets away. The boy ran ahead with his bowl, chasing the thin streams that jumped the channels, and brought each one back like a lost goat.</p><p>They work until the light goes, because at sundown it is over. I tried to keep a puddle. I scooped a handful from a gap in the stones where no board could reach, and held it, and watched it while the sun went down, and somewhere in the last red minute it was water in my hands, and then it was only cold. The grandmother saw me standing there with wet palms and laughed until she had to sit down on the step.</p><p>By that evening I knew the name of everyone on the street, which my readers will recognise as pure Vorkat and my editor as another week's delay.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Gold again</span><span class="ld-text">The neighbour at dusk, the gold ink, a drop in the tea.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>It rained gold again on the sixth day, and the ninth, and the twelfth. A guest learns quickly that the work is the same every time and nobody minds.</p><p>What I did not expect was everything else that happens before dark. On the ninth day a neighbour came to the door at dusk, still wet from the roofs, to tell the mother she had kept his board two rains running and he wanted it back or he wanted it settled. They had it out on the step, briskly, and settled it, and he stayed for supper. The mother told me afterwards that a quarrel kept overnight goes bad like milk. I had seen three such doorsteps by then, and I believe her.</p><p>She keeps her accounts in gold ink. I had heard it glows. It does not. In the evenings she writes by a lamp so low I would not read by it at home, and the figures stand up off the page as if someone had underlined them all, and she needs the lamp all the same. When I caught a cold, she put a drop in my tea and told me it would cure me. It helped, a little. She knows it helps a little; she says <i>cure</i> anyway, the way mothers do.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Starlight</span><span class="ld-text">Storngir, six days of waiting, a cold point of light in every drop.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>I went up the second road on the fourteenth day, because the boy told me starlight was the best and the mother told me it was for mages. Both are true. It rains less there, and the town is quieter and richer, and its houses are larger. I waited six days. When it came it looked like nothing at all in the gutter, plain wet stone, until you crouched and saw that every drop had a cold point of light in it, as if the street had been strewn with the night before night came. I did not try to keep any. I had learned.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Silver, at last</span><span class="ld-text">The Durbra, the stills through the night, a vial no longer than a finger.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>The third road climbs to the crater on the island's far side, and from its rim on a clear night the west keeps a pale edge that never quite goes out. They call it the Durbra. The Cloud Sea is out there, much too far to see; you see its light.</p><p>Silver rains least, and I was told so by everyone, so I took a room and stayed. It rained on my ninth day there. The rain was so thin I could not see the colour in it, only a sheen on the channels, like breath on a mirror. The town drew it into the pans anyway, every roof and every street, until sundown. Then they began on the stills, and worked through the night, and in the morning the master of the stills showed me what the whole town had caught. She scraped it from the bottom of the pan into a vial no longer than my finger, grey-white, and held it to the window, and said it was a good rain.</p><p>I left Auran on a Tellenn morning, with the boy's bowl in my luggage; he says he will want it back, and I am to bring it myself. I am writing this on the saltkeel, in his mother's gold ink, by a lamp I had to borrow. Maren, if the page is easy to read, that is the ink.</p></div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/lioaru/lioaru.html"><b>Lioaru →</b></a> · The Time domain and its three peoples.</li>
+      <li><a href="/setting/talan/domains/lioaru/valreka/valreka.html"><b>Valreka →</b></a> · The whale-borne city, whose Sovereign's reach covers the isle.</li>
+      <li><a href="/setting/talan/domains/lioaru/hareaveldi/hareaveldi.html"><b>Hareaveldi →</b></a> · The sand realm, where Sokhan is spoken and the Azarketi dive for arghavan.</li>
+      <li><a href="/setting/talan/domains/lioaru/galdua-jendea/galdua-jendea.html"><b>Galdua Jendea →</b></a> · The rocks across the water to the east.</li>
+      <li><a href="/setting/talan/domains/vindul/vindul.html"><b>Vindul →</b></a> · Where the yards build the cloudships.</li>
+      <li><a href="/setting/talan/ancestries.html"><b>Ancestries →</b></a> · The Azarketi: the ones who answer it now.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">What the chronicle has not yet set down about the isle of the three rains.</div>
+    <ol>
+      <li><b>The wardens.</b> How a crater town chooses its warden, and who holds Gulgir and Storngir.</li>
+      <li><b>The island.</b> Its villages and coves, by name.</li>
+      <li><b>The carrying.</b> The Red Dominion's side of the trade.</li>
+      <li><b>The Guild.</b> The post-house on the quay and its keeper.</li>
+      <li><b>The pans.</b> How the drawing-out is done.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · LIOARU · AURAN</div>
+
+</div>
+
+</body>
+</html>
