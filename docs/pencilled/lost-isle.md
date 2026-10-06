@@ -14,7 +14,9 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
 - **Phase 8 (naming): closed** (GM, 2026-10-06).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
-- **Phase 10 (draft): open.**
+- **Phase 10 (draft): closed** (GM, 2026-10-06, approved as drafted); the draft at [`lost-isle-draft.md`](lost-isle-draft.md).
+- **Phase 11 (commit lore): done** (2026-10-06). Built: `lore/geography/lioaru/auran.md`; the column renamed `lore/geography/lioaru/auran-column.md`.
+- **Phase 12 (publish): in progress.**
 
 ## Phase 0: settled facts
 

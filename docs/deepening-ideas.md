@@ -210,6 +210,11 @@ Pace as stories want them. Rolling work.
 
 ## § Regions: Lioaru
 
+### [Auran] Post-build texture
+**Decided.** Built 2026-10-06: `lore/geography/lioaru/auran.md`.
+**Open.** How a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Red Dominion's side of the carrying; the Guild's post-house and its keeper.
+**Where.** `lore/geography/lioaru/auran.md`.
+
 ### [Hareaveldi] Post-build texture
 **Decided.** Built 2026-10-06: `lore/geography/lioaru/hareaveldi.md`.
 **Open.** The forty-odd other oases and the three islands by name; the five houses' heads; the founding Tajvar Roshanak's date; the Wildreach's Fey at the eastern towns (the parked tension: a fey cannot hide in a true portrait); whether a new self answers for an old self's debts; the times the houses chose against a portrait.

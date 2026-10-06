@@ -4,7 +4,7 @@
 
 **Etymology:** the Court Tongue, given at the hinge of 1 MR: Basque *galdu* (lost) + *jende* (people), "the lost people". The older chronicles also read it "the Place of Many Waters", which the word does not carry; Galduans answer to both. Demonym: **Galduan**. The country's own words are in **Awal**, the rock dialect of the whale-tongues: **Yemmazru**, **Azrar**, **tagnit**, *inebgi*. (Derivations in the glossary.)
 
-**Position:** the great dune sea at the heart of Lioaru. North-west, No Man's Land beyond the brown badland ridge; north-east, Tahu Tangata across the great river; at the eastern corner, Emarrea; east, Hareaveldi along the river that runs down to the Duchies; south, the River Duchies and a short shore on the Hafra; south-west, the Lost Kingdom beyond the pale band; west, the Hafra coast, with the Lost Isle offshore.
+**Position:** the great dune sea at the heart of Lioaru. North-west, No Man's Land beyond the brown badland ridge; north-east, Tahu Tangata across the great river; at the eastern corner, Emarrea; east, Hareaveldi along the river that runs down to the Duchies; south, the River Duchies and a short shore on the Hafra; south-west, the Lost Kingdom beyond the pale band; west, the Hafra coast, with Auran far offshore.
 
 **Terrain:** about 344,000 square miles of open dune sea, and nineteen rock massifs standing out of it, each ten to forty miles across and none more than a night's sandsail run from the next. Inside each rock, canyons and gorges watered by its spring. In the south-west, the **pale band**, a belt of bleached sand along the Blackened Lands.
 

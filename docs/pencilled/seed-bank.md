@@ -89,6 +89,8 @@ A culture centred on painting, sketching and drawing **the in-between and the tr
 
 ## The Lost Isle (Lioaru) · GM, 2026-10-02: the three rains
 
+**Built as Auran (2026-10-06):** `lore/geography/lioaru/auran.md`.
+
 **An ordinary port city** where every ship arrives, and from it **three roads** run inland, each to **its own mountain**: three old volcanoes, each holding **a crater lake** in its caldera, and around each lake **a town or city**. **One basin rains gold, one rains silver, one rains starlight itself.** When it rains, the streets run gold, silver or star. The locals capture it: an essence unlike anything else, used, turned and carried on, and it leaves the island through the port.
 
 *Shape:* the island is about 130 × 120 miles, near round, ~11,900 sq mi (roughly Belgium), enough for the port on the coast and three massifs a few days' road apart. The volcanoes are the physical reading (GM): three small, deep, near-round calderas, each its own world. The port is the plain gate to the strange; the wonder is always one road further on.
