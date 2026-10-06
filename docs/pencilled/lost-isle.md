@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-06).
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -92,6 +93,16 @@
 - **Routes:** no rail. Saltkeels from the north-east (the Red Dominion's carriers, two days) and further ports direct; Fellibylur's Stormriders chart the lane; **the single choke point is the harbour behind the lava arm**. Three roads port to craters and a coast track; mules and carts. The Guild Post on the carrying ships. Canon addition at Phase 11: the port among `transport.md`'s named Hafra ports.
 - **Stake in the tension:** the silver town (most value, the same third, shared with 60,000 households); the yards (contracts for silver not yet fallen); the farming households (love the share, outnumber all at the tally); the Quaymaster between.
 - **Table note:** none (the rains stay the island's own).
+
+### Phase 7: daily life (closed 2026-10-06)
+
+- **The day:** crater towns on standby (workshops, still-houses, roof-mending, channel-clearing, an eye on the cap; at the bell everything stops and the town goes up); the countryside farms and fishes under plain rain; the port has the quay, the weighing, the warehouses and the sundown account on the steps.
+- **The ritual: the share-day.** Once a year the rain-share is paid in every village and town on one day, and **every debt on the island falls due that day**: the whole island settles up by sundown.
+- **Senses and speech:** the bell from the rim; the tinted gutters; the colour going out of the puddles at dusk; crater-town households keep a rain-cloak and a wide hat on the peg (country people need neither). *"Which cap?"* as a crater-town greeting. **"By dusk"** is a promise; **"tomorrow"** a polite no. Barley bread, fish, figs; a drop of gold in the tea when ill. **The vice:** betting on the caps on the quay (the buyers too, with prices).
+- **Movement:** foot, mule and cart on the three roads; fishing boats round the coast. **Signature: the down-carts**, the drawn essence carried down the road to the port in sealed jars after each rain, silver under guard.
+- **Visitor against native:** visitors expect the gold to glow, try to keep a puddle past sundown, take "tomorrow" for a promise, try to buy at a crater town and are sent to the quay; natives read the caps and know which crater will rain before the bell.
+- **Youth, a slope in three steps:** **the bowl** (a child's catch outside the channels is its own, unshared; grandmothers and channel-wardens keep it from turning into theft); **the board** (in the teens, the first rain worked with a board and a catcher's portion in one's own name); **the household** (one's own share and voice at the tally). **Sanctioned transgression:** the bowl-right stretched (bigger and bigger "bowls" just outside the channels; the wardens chase them off).
+- **Faith:** Tani kept plainly as the goddess of the hour; **sundown is her hour on the isle**, and closing the day before dark is said to be hers; a small shrine of the three faces in each crater square, one priest per town. **The first bowl of every rain is poured back into the lake.** ◈ candidate: the Elden made the rains (the craters carry their names).
 
 ## Rejected options
 
