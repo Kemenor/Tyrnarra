@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
 - **Phase 2 (seeds): closed** (GM, 2026-10-06).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-06); the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
+- **Phase 5 (government): open.**
 
 ## Phase 0: settled facts
 
@@ -57,6 +58,16 @@
 - **GM revisions after acceptance (2026-10-06):** the quay no longer "the busiest I have stood on" (she has stood on Merkavar's and Frae City's), now *like every quay… until you notice that nobody on it looks at the sea*; "someone says which" cut (everyone watches the caps); "I fell for the whole town" swapped for *By that evening I knew the name of everyone on the street*; the closing "The lamp was still necessary" cut (the borrowed lamp carries the joke); "never quite goes out" kept in her voice.
 - **Decided by the column, to check in later phases:** a day's road port to craters; the rain clocks (gold about every three days, starlight about a week, silver every week or two); a bell from each rim; roofs and streets built as catchment, channels to pans in the square; silver distilled through the night; the Cloud Sea's glow as a pale western edge seen from the silver rim (~240 mi off, below the horizon); the master of the stills; starlight for mages, its town quieter and richer; gold ink and the drop in the tea; a quarrel settled at the door by dusk.
 
+### Phase 4: place, peoples and history (closed 2026-10-06)
+
+- **Sites (GM-approved; sketch [`../map-refs/lost-isle-sites.webp`](../map-refs/lost-isle-sites.webp), full-res coordinates):** the port on the east coast (~1168, 6672), facing the mainland, the map's centre icon to move there; **gold** the nearest crater (~1120, 6650), ~26 mi, a day's road; **starlight** south (~1060, 6740), ~64 mi, two to three days; **silver** west (~962, 6668), ~103 mi, four days, the crater facing the Cloud Sea. Each massif 20–30 mi across, a caldera lake a few miles wide, its own cloud-cap; the rain falls inside the rim; the town lines the bowl's inner slopes, channels down to pans in a lakeside square. The rest of the island ordinary: green volcanic farmland and fishing coves, plain rain.
+- **Neighbours (GM-approved):** the Red Dominion (nearest, ~285 mi NE): its seafarers carry most cargo (light; the Dominion a stub). Valreka and the Guild: the Sovereign's reach; a Guild post-house at the port (light). Galdua: light. The Lost Kingdom: none (GM ruling); ships keep clear of its coast. Hareaveldi: Azarketi kin on its islands (light). Buyers at the port: Vindul's cloudship yards (silver), Ezkudon's ink houses (gold), mages (starlight). Fellibylur's Stormriders chart the lane.
+- **Peoples (GM-approved):** ~300,000 (25/sq mi, held heartland); Azarketi three in five, at their fullest; the southern mix (Ghoran, Nagaji, kitsune); the port everyone's. Port ~9,000 (3%); gold ~6,000, starlight ~4,000 (smaller, richer), silver ~3,000; the rest farms and coast.
+- **H1 (GM yes):** the rains older than any record; the craters named in the Silent Tongue (Elden ground). What the rains are stays for Phase 9.
+- **H2 (GM: b):** the Azarketi reached the isle in the Lost Era among the dispersed survivors, drawn by its water (canon's dispersal). Rejected: (a) the isle as Storveldi ground (the cut tie); (c) "as long as there are records".
+- **H3 (GM):** **no cloudships under the Empire; cloudships are a modern thing** (Adventurer Era). **The timeline (GM-approved):** before any record, the rains (Silent-Tongue crater names). Lost Era: the Azarketi reach the isle among the dispersed survivors. Golden Era: a far imperial province; gold ink and starlight the trade; **silver the poor rain**, caught because one answers the rain, sold for little. 1321 MR on: the Empire falls; the isle holds alone through the Dark Era, far from the mainland's wars; **the port's present rule founded in the Dark Era** (date and form at Phase 5). **c. 2300 MR: a Vindul yard builds the first cloudship, and its binding takes the isle's silver**; the silver town learns to distil and turns from the poorest crater to the most pressed within two centuries. After: Sortalde contact, the Bridgelands as the landing. 2526: Vyrenna's visit. 2532: now. (The silver's rise is material for the live tension, Phase 9.)
+- **Canon moves 3–5 approved (GM, 2026-10-06):** see *Canon moves*.
+
 ## Rejected options
 
 *(none yet)*
@@ -72,3 +83,6 @@
 
    Files: `lore/ancestries.md` (*The feeling*; the Elden claim and Valreka's water stay in their own paragraphs); `lore/geography/lioaru.md` (Peoples bullet; the closing line keeps "the Azarketi answer in the present"); mirrors `published/setting/talan/ancestries.html`, `published/setting/talan/domains/lioaru/lioaru.html`. Flank: the Lizardfolk answer an insult a year late.
 2. **The rename** (GM yes): name at Phase 8; files at Phase 11/12 (`lioaru.md`, `lioaru.html`, `ancestries.md`, `pf2e-registrar.html`, `map-todo.md`, `open-threads.md`, the Whalehall's reach, `valreka.html`, the *Short Notice* range, `map-data.json` and the interactive map, `site-nav.js` if listed).
+3. **The silver and the cloudships** (GM yes, 2026-10-06; the date c. 2300 MR approved at Phase 4). *Every cloudship built on Talan carries silver from the isle in its binding: the Cloud Sea's own light, which lets the white bear a hull.* The dual-school rule stands as written; the move speaks only of Talan's cloudships (the Iron Tide is parked canon). **Cloudships are an Adventurer-Era craft** (GM): nothing in canon dates them; *Eyrasunda*'s "self-repair across centuries" stays legend. Files: `lore/cosmology.md` (*On cloudships*), `lore/transport.md` (Cloud Sea bullets), `lore/glossary.md` (*Cloudship*), `lore/timeline.md` (Adventurer Era, the first cloudship).
+4. **The map** (GM yes): the repaint; the port icon to the east coast; three volcanic peaks with crater lakes; labels at the naming pass. Files: `docs/map-todo.md`; at publish `published/setting/assets/maps/map-data.json` and the interactive map.
+5. **The Guide line** (GM yes): the column's epigraph to read *"the nearest crater town lies a day's road inland"*. File: `lore/geography/lioaru/lost-isle-column.md`.

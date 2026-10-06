@@ -8,7 +8,7 @@
 
 **Golivander Tessek, *A Traveller's Guide to Tyrnarra*:**
 
-> *⟨ISLE⟩: two days by saltkeel; the three essences are sold at the ⟨PORT⟩ quay, where the visitor's business begins and ends; the crater towns lie a day's road inland, and it did not rain.*
+> *⟨ISLE⟩: two days by saltkeel; the three essences are sold at the ⟨PORT⟩ quay, where the visitor's business begins and ends; the nearest crater town lies a day's road inland, and it did not rain.*
 
 **Vyrenna Tessek, *One Line Further*, the Talan years:**
 
