@@ -16,6 +16,8 @@ The heart of the region is **an old palace**, not a church: a forgotten, dead ci
 
 *Added (GM, 2026-10-02):* **heat vents and gases** make it special: something built on the volcanic country's vents and the gases they breathe. *Sameness to watch:* Fenurra already has sulfur vents and fumes (the Sulfur Vents of Vehl, the crater's poisonous air), and Eldara and the Order of Steam work volcanic heat; the Dominion's use of its vents and gases has to be its own.
 
+*Added (GM, 2026-10-06):* **earmarked as navy-controlled**, a naval stratocracy: the fleet's command is the government. It fits the seed: the fleet that came ashore kept its chain of command, so the ranks became the offices and the ships the cities. *Sameness to watch:* Baerfrost's Hunt-League (rule by proven fighters) and Haldmark's Vaka (the franchise earned by service, where the army does not rule).
+
 ## The Lost Kingdom (Lioaru) · GM, 2026-10-02
 
 Tani's death ruined the earth and left a cursed blight on the ground. After centuries **the dead rose**: new souls in old bodies, or old souls in new bodies; the dead and the warped building **a new society** in lands still scarred by what happened. Few come here, and fewer leave, and those only in disguise. Some have **flashes of memory** of the kingdom that once rose here: memories of their souls? of their bodies? or **of the ground**, stuck in time by a goddess's death. Bodies and souls stained by a curse not of their making but their burden, living among the dangers the cursed ground spawns.

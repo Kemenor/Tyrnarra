@@ -344,6 +344,7 @@ Keep this current as regions are built.
 - **Open:**
   - **The hired outsider** (the Italian *podestà*): a foreigner hired as chief magistrate for a fixed term because he belongs to no faction; paid, then audited when he leaves.
   - **Outsiders as the ruling class** (the Mamluks, the Janissaries): rulers and soldiers recruited from outside who may not pass their rank to their children, so no family can capture the state. Set apart from rule by proven fighters (the Hunt-League) and the franchise by service (Haldmark) by the bar on heredity.
+  - **Stratocracy** (the military is the state and its ranks are the offices; set apart from a junta, which seizes a state it is not): **earmarked for the Red Dominion as a naval stratocracy** (GM, 2026-10-06; `docs/pencilled/seed-bank.md`).
   - **The liberum veto** (the Polish-Lithuanian Commonwealth): any single member voids the whole; unanimity as law, paralysis as its price.
   - **A ruler believed into being** (Tyrnarra's own): belief makes beings, so a polity sustains its sovereign by collective faith, and the sovereign fades if the belief does. Nearest: Legea's risen demigod.
   - **A shard as the crown** (Tyrnarra's own): whoever holds the polity's shard of divinity rules. Heavy lore implications; the integration procedure stays GM-secret.
