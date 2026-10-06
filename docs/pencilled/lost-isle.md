@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-06); the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-06).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -80,6 +81,17 @@
 - **Honest cost:** a monopoly resented abroad (the world's price of silver); at home the catchers share their wealth with farmers four days off; the young and the port's floating people voiceless.
 - **Rejected:** G1 as drafted (the crater towns alone vote), R1, R3, G2 as the removal mechanism, G3 (any town can stop everything; close to Lograth), G4 (kept in mind: a foreign yard bidding), G5, G6.
 - **Phase 4 reopened (GM, terrain):** **the isle's coast is cliff and black lava shelf almost all the way round**; coves take fishing boats; **the port's harbour is one of the only places on the island that can take the deep-keeled Hafra saltkeels**. The one-quay law rests on the ground as much as on the vote. **Harbour (GM: A):** a bay behind **a lava arm**, an old flow run out into the sea and set as a long natural breakwater, deep sheltered water behind it; the port stands on the flow. Rejected: B, a drowned fourth crater (adds a fourth to the three; pulls toward the dropped "plain port"). For map-todo: the lava arm and the bay on the east coast.
+
+### Phase 6: economy (closed 2026-10-06)
+
+- **Subsistence:** the isle feeds itself: barley and beans in the valleys, vines and figs on the slopes, goats above; fish from the coves (mostly Azarketi boats); lean years buy grain through the carrying ships. Imports: iron and tools, cloth, glass for stills and vials (glass from Ezkudon's coast is a light note for the Golden Coast build, nothing committed).
+- **The draw:** the three rains, sold at the quay; a few travellers come to watch a rain (Vyrenna's column sends some).
+- **Sells, at the quay:** silver to Talan's cloudship builders (the Vindul yards; the Guild, the churches of Iro and Fisaya); starlight, a reagent for mages and enchanters of every school (Frae City, Thekkavar, every academy); gold ink to scribes, archives and chart-makers (Thekkavar's "tea and paper and ink" in through the Golden Coast agrees; a Stormrider's field-book in gold ink reads easier in a dim cabin, an optional line for Fellibylur's pilots); the medicine, sailors' vials, mostly kept at home.
+- **The split:** **the catchers' due**, a third of each rain's sale to the crater town that caught it, divided among those who worked the rain; **the island's cut**, a tenth, to the Quaymaster's chest; **the rain-share**, the rest, paid once a year to every household. Shared among ~60,000 households it pays a household's salt, iron and a good coat, not its living: a dividend, not a pension.
+- **What the craters get back (GM question):** **bread** (a crater town is a bowl of roofs and channels with little farmland inside the rim; the farms feed it, and the share is the farms' return); **the port and its walls** (the only harbour for a Hafra hull, kept by the island's cut); **the price** (one seller sets it; a third of a monopoly price beats all of a bidding war); **their own share**. **The founding bargain (Dark Era):** raiders came for the craters; the whole island's levies held the roads and its boats the harbour; the crater towns gave the rain to the island for its spears, its bread and its one quay. **The irony:** the bargain was made when silver was the poor rain; for over a thousand years the share carried the silver town, paid out of gold and starlight; since the cloudships the silver town carries the share (*we carried you when your rain was worthless*).
+- **Routes:** no rail. Saltkeels from the north-east (the Red Dominion's carriers, two days) and further ports direct; Fellibylur's Stormriders chart the lane; **the single choke point is the harbour behind the lava arm**. Three roads port to craters and a coast track; mules and carts. The Guild Post on the carrying ships. Canon addition at Phase 11: the port among `transport.md`'s named Hafra ports.
+- **Stake in the tension:** the silver town (most value, the same third, shared with 60,000 households); the yards (contracts for silver not yet fallen); the farming households (love the share, outnumber all at the tally); the Quaymaster between.
+- **Table note:** none (the rains stay the island's own).
 
 ## Rejected options
 
