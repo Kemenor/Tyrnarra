@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-06).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
 - **Phase 2 (seeds): closed** (GM, 2026-10-06).
-- **Phase 3 (traveller's image): open**; the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-06); the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
+- **Phase 4 (place, peoples and history): open.**
 
 ## Phase 0: settled facts
 
@@ -47,7 +48,7 @@
 - **Frequency reopened (Phase 1 Q2, "a few times a year", replaced):** **often and thin**. It rains about as often as ordinary rain; each fall is water carrying the essence; the streets run tinted to the pans; the essence fades from the water by sundown unless drawn out first, so every rain is a race (channels, settling tanks, pans, the drawing-out, and for silver a further distilling). **Ranked by frequency:** the gold crater rains most often, starlight less, silver seldom and thinnest and needing the most distilling; commonness is how often a crater rains times how much each fall carries.
 - Rejected: rare and rich (a few rain-days a year: too thin an economy, few visitors ever see it); thin rains plus a great rain (more machinery, drifts toward Galdua's watering; available later if a festival is wanted).
 
-### Phase 3: traveller's image (open)
+### Phase 3: traveller's image (closed 2026-10-06)
 
 - **Image: I1, the street at dusk** in the first gold rain (the roofs, the channels, the boards, the boy with his bowl, the colour gone at sundown), closing on **the silver** (I3); the quay's cloud-caps (I2) in passing. Rejected as the lead: I2 (the rain only from afar), I3 (centres the pressure, the rarest sight).
 - **Speaker (GM): Vyrenna Tessek**, uniquely suited where Golivander is not: she waits for the rain. **2526 MR**, the Talan years, alone (before Wren). Traits for the piece: waits past every reason to leave; attached to the house she lodges in. The music peeve left out (her calling-horns column already did "a task, not a performance").
