@@ -7,7 +7,7 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-06, with corrections).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
 - **Phase 2 (seeds): closed** (GM, 2026-10-06).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): open**; the column accepted and committed at [`../../lore/geography/lioaru/river-duchies-chronicle.md`](../../lore/geography/lioaru/river-duchies-chronicle.md).
 
 ## Phase 0: settled facts
 
@@ -42,6 +42,13 @@
 
 - **Candidates:** S1 the quick valley (time runs quick for living things: three harvests between floods, fruit swells in a week and rots in the next; the slowest rivers, the fastest land; the people let the valley do the work and make an art of not hurrying; sloth the honest vice; Galdua's tagnit the coveted import); S2 the river redraws the duchies (each duchy the land between two channels; the flood shifts the beds and land changes duchy overnight; sameness: the Basogur's moving ground, Floteyn's drifting isles and living chart, Hareaveldi's blanked boards); S3 decay made rich (vats, cellars, curing-houses, fermenting-sheds: date wine, river vinegar, fish sauce, cheeses, compost black earth; sameness: Floteyn's deep-cellars, Atarialda's kitchens).
 - **Chosen (GM): S1 with S3 as its trade.** Decay made a positive thing. The GM's favourite line: *In Tani's land, decay is revered, and here it is also the trade.* S2 held as a Phase 5 candidate (borders on water).
+
+### Phase 3: traveller's image (open)
+
+- **Image: I1, the market turning in a day** (dawn heaps of fruit ripened overnight; soft by noon; the vinegar-makers', date-wine brewers' and fish-sauce yards' carts buying by the basket; in the vats by evening; a peach on the sill gone to juice by supper), with **I3, the holdsand seed** on the flood's eve inside it. Rejected as the lead: I2 the cellar street (quieter; close to Floteyn's deep-cellars).
+- **Speaker (GM): Golivander Tessek**, who sees through what others call scandalous to the whole picture (offered: a Galduan salt-sandsailer's tally; an Emarrean brewer's tasting notes; a Valrekan of Asif). **Form (GM): a *Travelling Chronicle* correspondence column**, *To my correspondents, on the River Duchies*: three cross letters printed and answered. **Year (GM: earlier than 2530): 2509 MR.** Traits for the piece: fairness to the people the letters sneer at; the meal described (his tell that he loved the place). Correspondents: Tiziri n Tamalut, of thirty (a keeper of Tamalut); Ottavia Grimal detta Ferma (of Namur); Izem Langback (a Valrekan factor buying for the granary-whale).
+- **The Guide entry (GM):** a one-paragraph entry undersells the continent's standard reference; **his full Guide entry on the Duchies is written at Phase 10 from the settled canon**, kept beside the column, and the page quotes excerpts. The short draft paragraph (with the tea clause, "The tea is fermented") is set aside until then.
+- **Decided by the column, to check in later phases:** the date wine reckoned in floods (a "nine-flood"); the vinegar-makers, date-wine brewers and fish-sauce yards buying at noon; river fish, barley, cheese; a dozen seeds in a pinch of holdsand; a field gives three harvests between floods, a fig ripe the week after it sets; "water is weather"; the flood climbs out of the channels and lays new silt; (set aside with the short Guide paragraph: a slow week by barge from Emarrea; the landings below Galdua's southern rocks).
 
 ## Rejected options
 
