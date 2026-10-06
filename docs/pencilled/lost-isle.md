@@ -7,7 +7,7 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-06).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
 - **Phase 2 (seeds): closed** (GM, 2026-10-06).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): open**; the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
 
 ## Phase 0: settled facts
 
@@ -46,6 +46,14 @@
 - **"Plain" dropped**: nothing pulls the port toward plainness; it is simply where everything goes out. (Phase 1 Q3's "plain on purpose, rains only water" reopened and retired.)
 - **Frequency reopened (Phase 1 Q2, "a few times a year", replaced):** **often and thin**. It rains about as often as ordinary rain; each fall is water carrying the essence; the streets run tinted to the pans; the essence fades from the water by sundown unless drawn out first, so every rain is a race (channels, settling tanks, pans, the drawing-out, and for silver a further distilling). **Ranked by frequency:** the gold crater rains most often, starlight less, silver seldom and thinnest and needing the most distilling; commonness is how often a crater rains times how much each fall carries.
 - Rejected: rare and rich (a few rain-days a year: too thin an economy, few visitors ever see it); thin rains plus a great rain (more machinery, drifts toward Galdua's watering; available later if a festival is wanted).
+
+### Phase 3: traveller's image (open)
+
+- **Image: I1, the street at dusk** in the first gold rain (the roofs, the channels, the boards, the boy with his bowl, the colour gone at sundown), closing on **the silver** (I3); the quay's cloud-caps (I2) in passing. Rejected as the lead: I2 (the rain only from afar), I3 (centres the pressure, the rarest sight).
+- **Speaker (GM): Vyrenna Tessek**, uniquely suited where Golivander is not: she waits for the rain. **2526 MR**, the Talan years, alone (before Wren). Traits for the piece: waits past every reason to leave; attached to the house she lodges in. The music peeve left out (her calling-horns column already did "a task, not a performance").
+- **Form:** a *One Line Further* column in parts, dated by rains, opened by the Guide's one line (*"…and it did not rain"*). Own file, published whole as a log card, excerpts at section heads; indexed in `voices.md` at Phase 11.
+- **GM tunings:** silver rains every week or two (not monthly); a rain's yield a vial no longer than a finger, not a nail's crust; **the Vindul buyer cut** (all buying happens at the port, so no buyer waits inland; the starlight inn's ring-wearing buyers changed to larger houses for the same reason).
+- **Decided by the column, to check in later phases:** a day's road port to craters; the rain clocks (gold about every three days, starlight about a week, silver every week or two); a bell from each rim; roofs and streets built as catchment, channels to pans in the square; silver distilled through the night; the Cloud Sea's glow as a pale western edge seen from the silver rim (~240 mi off, below the horizon); the master of the stills; starlight for mages, its town quieter and richer; gold ink and the drop in the tea; a quarrel settled at the door by dusk.
 
 ## Rejected options
 
