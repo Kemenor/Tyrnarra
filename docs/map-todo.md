@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar), Lost Isle, River Duchies, Hareaveldi (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar), Lost Isle, River Duchies (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -69,7 +69,7 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
   - **The capital: five oases in a ring on the south coast**, the city between them; ring centres about (3810, 7460), (3890, 7460), (3920, 7520), (3850, 7554), (3780, 7520) around the present icon (~3850, 7490). Colour hints for the art: green, blue, red, gold, white.
   - **The three islands** stay wooded; nothing to add.
 
-  Labels wait for the naming pass (Phase 8).
+  **Labels** (named at the build, 2026-10-06): **Panjrang** at the capital icon (~3850, 7490); of its ring, **Sabzab** (green), **Lajvard** (blue), **Sorkhab** (red); the other oases await names.
 
 - **Repaint the Lost Isle** (Lioaru; GM, 2026-10-02). The island is painted black on the map for no reason canon gives; repaint it as ordinary island ground with **three volcanic peaks**, each with a crater lake, and **a port** on the coast (the seed, the three rains, is in `docs/pencilled/seed-bank.md`; the coast the port faces is open until the build).
 

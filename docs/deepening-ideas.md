@@ -105,6 +105,7 @@ Pace as stories want them. Rolling work.
 ### [Cultures] Lautara/Lioaru cultural interface
 **Decided.** Post-swap, Lautara's southern border now touches Lioaru directly. Two distinct registers meeting: Eastern silk-road merchants (Lautara) and indigenous desert-nomad culture (Lioaru, Hareaveldi). Cultural exchange line is structural to both domains.
 **Update (2026-10-04, the Galdua Jendea build).** The rocks of Galdua Jendea are settled cities, not nomads; Tamalut is the Emarrea door, where the troupes come in, and salt goes out to Emarrea there.
+**Update (2026-10-06, the Hareaveldi build).** Hareaveldi is oasis towns and a crown, not nomads; Emarrea commissions its painters, and its barges and the pigment-road branch line carry the trade.
 **Open.** How Lautaran caravans interact with Lioaru desert traditions; whether nomadic Lioaru tribes serve as caravan-escorts or as independent traders; what the trade balance looks like (Lautaran luxury goods south into Lioaru, Lioaru desert-products north into Lautara); shared religious observances; the standing tension between Eastern court-merchant register and indigenous land-rooted register. Best handled when fleshing out Lioaru (the Hareaveldi build in `open-threads.md` is the natural moment).
 **Where.** [lore/geography/](../lore/geography/), eventually under both Lautaran and Lioaru sub-region files.
 
@@ -208,6 +209,11 @@ Pace as stories want them. Rolling work.
 **Where.** [lore/geography/nashavel/basogur.md](../lore/geography/nashavel/basogur.md); [basogur.html](../published/setting/talan/domains/nashavel/basogur/basogur.html).
 
 ## § Regions: Lioaru
+
+### [Hareaveldi] Post-build texture
+**Decided.** Built 2026-10-06: `lore/geography/lioaru/hareaveldi.md`.
+**Open.** The forty-odd other oases and the three islands by name; the five houses' heads; the founding Tajvar Roshanak's date; the Wildreach's Fey at the eastern towns (the parked tension: a fey cannot hide in a true portrait); whether a new self answers for an old self's debts; the times the houses chose against a portrait.
+**Where.** `lore/geography/lioaru/hareaveldi.md`.
 
 ### [Lost Kingdom] Post-build texture
 **Decided.** Built 2026-10-05: `lore/geography/lioaru/lost-kingdom.md`.

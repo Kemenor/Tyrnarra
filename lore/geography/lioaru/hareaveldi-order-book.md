@@ -1,14 +1,14 @@
-# The order book of [BUYER], buying colour for Ringhold
+# The order book of Odelind Ringhold Mordant, buying colour for Ringhold
 
-**In-world document of Hareaveldi** (region canon: the Hareaveldi entry, built at Phase 11 of the build; until then the working record [`../../../docs/pencilled/hareaveldi.md`](../../../docs/pencilled/hareaveldi.md)). Shaped together by the GM and Claude (2026-10-05): the GM chose the images (the street of windows and the field of faces), the speaker (a Gnome of Kaosadaemi), the form (her order book) and her traits, and reworked the field into a commons of boards; Claude wrote the text; accepted by the GM. The traveller's image for Hareaveldi (sub-region-workflow Phase 3). Placeholders in [brackets] wait for the naming pass (Phase 8). Published whole as a log card, with excerpts at the section heads.
+**In-world document of Hareaveldi** (region canon: [`hareaveldi.md`](hareaveldi.md)). Shaped together by the GM and Claude (2026-10-05): the GM chose the images (the street of windows and the field of faces), the speaker (a Gnome of Kaosadaemi), the form (her order book) and her traits, and reworked the field into a commons of boards; Claude wrote the text; accepted by the GM. The traveller's image for Hareaveldi (sub-region-workflow Phase 3). Published whole as a log card, with excerpts at the section heads.
 
-**Voice block (recurring voice).** **[BUYER]** · a Gnome of Kaosadaemi, buying pigment for Ringhold's ever-repainted walls. A colour-snob with a buyer's eye: has an opinion about every shade, prices everything, and holds Ringhold's hair-colour quarterings in fond contempt. Talks to herself in the margins: arguments, lists, exclamations, capitals when she is delighted. The ledger column is the work and stays dry; the margins are her, and by the end of the trip the margins have taken over the book.
+**Voice block (recurring voice).** **Odelind Ringhold Mordant** · a Gnome of Kaosadaemi, buying pigment for Ringhold's ever-repainted walls. A colour-snob with a buyer's eye: has an opinion about every shade, prices everything, and holds Ringhold's hair-colour quarterings in fond contempt. Talks to herself in the margins: arguments, lists, exclamations, capitals when she is delighted. The ledger column is the work and stays dry; the margins are her, and by the end of the trip the margins have taken over the book.
 
 ---
 
 *Kept on the road, 2531 MR. The ledger column is the work; the margins are hers.*
 
-**First day, [CAPITAL]**
+**First day, Panjrang**
 
 Came down from Biozuri on the river barge and over the border water at dawn. Five oases in a ring with the city sewn between them, and every one of them a different colour from the air. The Prince's purse should have sent me ten years ago.
 
@@ -18,27 +18,27 @@ Came down from Biozuri on the river barge and over the border water at dawn. Fiv
 
 *(margin: A woman leaned out of her window while I stood there and added a moon to hers. Just like that. In the middle of the afternoon. I asked why. She said it was the evening for it.)*
 
-**Third day, [GREEN OASIS]**
+**Third day, Sabzab**
 
 | Colour | From | Quantity | Price | Note |
 |---|---|---|---|---|
-| Green, [name] | [GREEN OASIS] | 40 jars | dear | worth it |
+| Green, zangar | Sabzab | 40 jars | dear | worth it |
 | Green, second grade | same | 12 jars | fair | for the stairwells; nobody looks at stairwells |
 
 *(margin: The green here is the green Ringhold has been pretending to have for a hundred years. I could weep. I won't. I'll negotiate.)*
 
 *(margin: Every door in this oasis is painted, and the inside of every lid, and the bottom of every bowl, where only the one who drinks will ever see it. I asked a potter who it was for. She looked at me as if I'd asked who breathing was for.)*
 
-**Fifth day, [BLUE OASIS] and [RED OASIS]**
+**Fifth day, Lajvard and Sorkhab**
 
 | Colour | From | Quantity | Price | Note |
 |---|---|---|---|---|
-| Blue, the clay | [BLUE OASIS] | 30 jars | very dear | lasts forever |
-| Red, the bark | [RED OASIS] | 25 jars | cheap | fades fast; Ringhold won't notice, Ringhold repaints by spring |
+| Blue, the clay | Lajvard | 30 jars | very dear | lasts forever |
+| Red, the bark | Sorkhab | 25 jars | cheap | fades fast; Ringhold won't notice, Ringhold repaints by spring |
 
 *(margin: The blue lasts forever and the red is gone in a season, and they price them backwards to how I'd price them. I asked the red-man why the cheap one was the fast one. He said the fast one was for the things you were finished with. I wrote it down without understanding it. I understand it now. See below.)*
 
-**Sixth day, outside [CAPITAL], at sunrise**
+**Sixth day, outside Panjrang, at sunrise**
 
 *Ordered:* nothing.
 
@@ -52,11 +52,11 @@ Came down from Biozuri on the river barge and over the border water at dawn. Fiv
 
 *(margin: All my life I've thought changing was the easy part.)*
 
-**Seventh day, [CAPITAL]**
+**Seventh day, Panjrang**
 
 | Colour | From | Quantity | Price | Note |
 |---|---|---|---|---|
-| Green, [name] | [GREEN OASIS] | 1 jar | full price | **not for resale** |
+| Green, zangar | Sabzab | 1 jar | full price | **not for resale** |
 | A board, from the field | the east wall | 1 | taking care of it | **not for resale; not mine either** |
 
 *(margin: Ringhold has no window right and no field. Ringhold is going to have to argue with me about both.)*

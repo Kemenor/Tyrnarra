@@ -306,7 +306,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Galdua Jendea**: the Court Tongue, Basque *galdu* (lost) + *jende* (people), each with the article *-a* → **Galdua Jendea**, "the lost people". Given at the hinge of 1 MR to those who kept to the rock when Tani's faithful took to the whales. The older chronicles' reading "the Place of Many Waters" has no root in the word. The great dune sea of Lioaru, Valreka's range, and Azrar. Full block below, *Galdua Jendea*.
 - **Lost Kingdom**: plain Talanese. Folk names: **the Blackened Lands**; *the black spot on the map*. Full block below, *The Lost Kingdom*.
 - **River Duchies**: modern English
-- **Hareaveldi**: Basque *harea* (sand) + Icelandic *veldi* (realm, dominion) → **Hareaveldi** "Sand Realm." Hybrid Basque/Icelandic; minimal drift, initial *h-* aspiration lost only, both roots otherwise intact. The deep-old name a pre-Tani people gave the dune country, which was already a realm of its own when Tani arrived in Lioaru.
+- **Hareaveldi**: a compound of the two deep tongues: Icelandic *veldi* (realm, dominion), the Silent Tongue's word for this ground, and Basque *harea* (sand), the Court Tongue's, the gods renaming the Elden's realm and keeping half → **Hareaveldi**, "the Sand Realm"; minimal drift, the initial *h-* aspiration lost only. A realm before Tani ruled Lioaru. Full block below, *Hareaveldi*.
 
 **Brauogi (Earth):**
 - **Gotorlekua** *(retired)*: Basque *gotor* (strong, firm, sturdy) + *leku* (place) + *-a* (definite article) → "the Stronghold." The former sub-region housing Lurrath; it did not survive the Lautara/Brauogi border redraw, and Lurrath's territory is now simply the interior of the **Eraztumen** ring. Kept here for the etymological record only.
@@ -901,6 +901,33 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The remembered name.** A name out of the marthras its bearer feels bound to, never certain whether it is theirs; taken by those who have one.
 
 *The lantern's party (in their own registers):* **Idir Skjol Anzar** (Valrekan, Guild-sworn; the party's leader, killed in the Lost Kingdom, 2531 MR); **Amayas n Tassast, of six** (Galduan); **Brin Twicefallen** (Noman); **Aroha Hinekura Ngaiti** (Tangatan); the appraiser **Dihya Ardats Anzar** (Valrekan, Guild-sworn).
+
+**Hareaveldi (Lioaru):** Persian checked 2026-10-06 (English Wiktionary; abadis.ir; English Wikipedia, *Persian name*). Plain letters: *kh*, *gh*, long vowels unmarked; modern endings.
+- **Sokhan**: Persian *sokhan* (speech). The tongue of Hareaveldi, the living tongue of the south-western sands.
+- **Panjrang**: *panj* (five) + *rang* (colour), "five colours". The capital, five oases in a ring on the south coast; the name echoes the real *haft-rang*, "seven-colour" tilework.
+- **Sabz**, **Lajvard**, **Sorkh**, **Zard**, **Sefid**: green, lapis (blue), red, yellow-gold, white. The five houses of Panjrang, each named for its oasis's colour.
+- **Sabzab**, **Lajvard**, **Sorkhab**: *sabz* + *āb* ("green water"); *lājvard* (lapis); *sorkh* + *āb* ("red water"). Three of Panjrang's five oases (house Sabz of Sabzab, house Lajvard of Lajvard, house Sorkh of Sorkhab).
+- **The Tajvar**: Persian *tājvar*, an archaic word for king (*tāj*, crown). The ruler, who holds the shed crown for one self.
+- **Ostad**: Persian *ostād* (master). The title of a great painter.
+- **The elham**: Persian *elhām* (inspiration; an Arabic loan, as in real Persian). The moment a painter paints what is true.
+- **The rangzar**: *rang* (colour) + *-zār* (a place where a thing abounds, as *golzār*, rose garden), "the place of colours". The field of boards outside every town.
+- ***pustandaz***: from Persian *pust andākhtan* (to shed skin). The carrying-out; in Talanese, *the carrying-out*.
+- **Arghavan**: Persian *arghavān* (purple; the Judas tree). The islands' sea purple, the crown's colour.
+- **Zangar**: Persian *zangār* (verdigris). The green of Sabzab.
+- **The window right**, **the carrying-out**, **the first carrying-out**, **the boards**, **the shed crown**, **keeping a self**: plain Talanese.
+
+*Named Hareaveldi (in the register below):*
+- **Golnar Bahar Rangraz**: *golnār* (pomegranate flower); self-name *bahār* (spring); family *rangraz* (dyer). The Tajvar.
+- **Ostad Kaveh Negar Naqqash**: *Kāveh*, the smith-hero of the Shahnameh; self-name *negār* (painting, image); family *naqqāsh* (painter, an Arabic loan). A great painter.
+- **Roshanak**: Persian *Rowshanak* (Roxana, "little light"). The Dark-Era Tajvar who first laid the crown down.
+
+*In another register:* **Odelind Ringhold Mordant** (Kaosadaemi: given, old Germanic; born, Ringhold; tuning, her line's trade-word, a *mordant* that fixes a dye). The buyer of the order book.
+
+**The Hareaveldi register: the personal-name convention.** Word-base Persian, English alphabet, plain letters. Full canon in `geography/lioaru/hareaveldi.md`, *What a Hareaveldi is called*.
+- **Form.** *[given] [self-name] [family]*.
+- **The self-name.** Taken at a carrying-out; when that self is laid down, its name goes to the sand with its portrait and is not spoken again. Usually a word (a season, a colour, a thing). *Who are you now?* asks for it.
+- **The child.** Given and family only; the first carrying-out gives the first self-name.
+- **The family.** Inherited, mostly from an old craft or a place, often with *-i*: Rangraz (dyer), Kuzegar (potter), Naqqash (painter), Nakhli (of the palm).
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.

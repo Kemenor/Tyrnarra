@@ -37,6 +37,7 @@ The **Magitech** that matters for vessels: **Arcanotech** is formula-based, repr
 | Grain line | Brauogi grain over the Garimen and Mugamen through Ilun Tasun to Myrria | [`geography/myrkono.md`](geography/myrkono.md) |
 | Merkavar line | Through the Lautara hill country by the single-track **Arrol Cut** | [`glossary.md`](glossary.md) |
 | Eldara's line | Eldara → Tahu Tangata (Ahika, the rail maps' Garnerstow) → Emarrea → Merkavar | [`geography/sumendar.md`](geography/sumendar.md) |
+| Pigment road branch | Biozuri (Emarrea) → Panjrang, along the old Golden Empire road the colours travelled | [`geography/lioaru/hareaveldi.md`](geography/lioaru/hareaveldi.md) |
 | Eastern lines | Merkavar across Atarialda to Egulon and Zuzental | [`geography/lautara.md`](geography/lautara.md) |
 | Namur branch | Crossroads → west along the great river → Portoferma | [`geography/zuzental/namur-republic.md`](geography/zuzental/namur-republic.md) |
 | Southern feeder lines | Tied to the HRA at the Azkataria junction | [`geography/lautara.md`](geography/lautara.md) |

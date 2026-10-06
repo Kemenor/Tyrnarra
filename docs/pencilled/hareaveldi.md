@@ -14,7 +14,9 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
 - **Phase 8 (naming): closed** (GM, 2026-10-06).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
-- **Phase 10 (draft): open**; the draft at [`hareaveldi-draft.md`](hareaveldi-draft.md).
+- **Phase 10 (draft): closed** (GM, 2026-10-06, after corrections: the painted choice trimmed; "some fear" made plain (a reign ended by a painting against the Tajvar's word would leave every later Tajvar at the mercy of the great painters); keeping a self not secret; every colour in grades); the draft at [`hareaveldi-draft.md`](hareaveldi-draft.md).
+- **Phase 11 (commit lore): done** (2026-10-06). Built: `lore/geography/lioaru/hareaveldi.md`.
+- **Phase 12 (publish): open.**
 
 ## Phase 0: settled facts
 
@@ -100,7 +102,7 @@
 
 - **The day:** work early and late at the wells, the gardens and the dye-pits; rest through the heat of the day; the evening light is the painting light, the windows filling with people leaning out with brushes when the heat breaks.
 - **The shared ritual: the carrying-out** (name at Phase 8): when someone lays down a self, the last portrait is painted, and at sunrise the family carries it to the field of boards, stands it facing the sun, and the person chooses the next empty board for whoever they are now. Done for the ruler too, the crown's last portrait carried out with the rest. Quiet, frequent, and how a town keeps time.
-- **Senses and habits:** colour on every hand (a native reads which oasis you are from by the stain); resin and wet clay at the dye-pits; the desert-bread Atarialda's kitchen keeps, baked in hot sand under the embers and eaten with dates. **Speech:** *"Who are you now?"*, the greeting for someone not seen in years; a shed self is not asked about: *"that was another"* closes the subject kindly. **The vice: keeping a shed self**, a finished portrait hidden at home instead of carried out; sentimental, a little shameful, common in the old; the household version of a ruler clinging to the crown.
+- **Senses and habits:** colour on every hand (a native reads which oasis you are from by the stain); resin and wet clay at the dye-pits; the desert-bread Atarialda's kitchen keeps, baked in hot sand under the embers and eaten with dates. **Speech:** *"Who are you now?"*, the greeting for someone not seen in years; a shed self is not asked about: *"that was another"* closes the subject kindly. **The vice: keeping a shed self**, a finished portrait kept at home instead of carried out (not secret; GM, Phase 10); sentimental, a little shameful, common in the old; the household version of a ruler clinging to the crown.
 - **Movement:** on foot and by Stokkul between oases; caravans along the rivers; the barges, the branch line from Biozuri, the island boats. **Signature movement: the dawn procession to the field.**
 - **Visitor against native:** a visitor takes the field for a cemetery (it is a laundry line, natives laugh); tries to buy a board; calls a painting "true" as a compliment, and a native winces (the word means something here); a native reads the stained hands, and does not ask *who you were*.
 - **Youth:** a child's first painting is on a board from the field (the girl's sun with a shield and a sword); a child's bedroom window is theirs to paint, invited (GM). **Coming of age: the first carrying-out** (GM): at the end of childhood a young person paints their own childhood self, often the first portrait of themselves they make, carries it to the field at sunrise like any laid-down self, and chooses their first empty board for who they are now; before it others paint you, after it you paint yourself. A slope: no set age; carried out when the young person knows that self is finished; parents see it coming, and sometimes a great painter's portrait of a child shows it first. **The sanctioned transgression: painting beyond reach**: the young go out at night with ladders and paint the high walls no window reaches; the old pretend not to see; the painting stays until the wall's owner decides.
@@ -141,7 +143,7 @@ Persian words checked against English Wiktionary, abadis.ir and English Wikipedi
 
 **◈ Popular Belief (GM: A and B):**
 - **A. The elham is the child looking through you**: the moment the muse takes a painter is Tani's child face, the future face, looking out through the painter's eyes; why a true painting shows what is coming. *(With the elham and the great painters.)*
-- **B. A kept self lingers**: a portrait hidden at home instead of carried out keeps its self from going; the house feels it (an old voice in the next room, a habit come back); what mothers tell children to stop the vice. *(With daily life.)*
+- **B. A kept self lingers**: a portrait kept at home instead of carried out keeps its self from going; the house feels it (an old voice in the next room, a habit come back); what mothers tell children to stop the vice. *(With daily life.)*
 
 **⚿ GM Secret (GM: K1): the pull.** *Surface:* folk say a true painting comes true; the five houses heed the elham's portraits; the great painters are honoured and feared. *Truth:* a painting made when the elham takes a painter pulls toward what it shows, as hard as the painter reached. Ostad Kaveh's portrait of the Tajvar pulls her toward her next self, and she can feel it; the houses' custom of heeding such paintings is, unknowing, a custom of being pulled. *Weight:* the live tension's mechanism (her refusal is a fight against a real pull); why some refuse to sit for a great painter; why a muse portrait of a candidate has decided reigns; why a child's sun with a shield and a sword is just a child's painting (a child does not reach). *(With the elham and the great painters.)*
 
