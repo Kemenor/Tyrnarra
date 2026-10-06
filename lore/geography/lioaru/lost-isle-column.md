@@ -2,7 +2,7 @@
 
 **In-world document of the isle** (region canon to come at the build; the isle is to be renamed at the naming pass, and this file with it). Shaped together by the GM and Claude (2026-10-06): the GM chose the voice (Vyrenna Tessek, who waits for the rain where her grand-uncle stayed a day) and tuned the silver; Claude wrote the text; accepted by the GM. The traveller's image for the isle (sub-region-workflow Phase 3): the street at dusk in the first gold rain, closing on the silver. A column in parts, dated by rains, opened by the Guide's one line it answers. Published whole as a log card, with excerpts at the section heads. Placeholders in ⟨angle brackets⟩ await the naming pass. To be indexed in [`../../voices.md`](../../voices.md), *Corpus index*, at the build.
 
-**Voice block.** **Vyrenna Tessek** · Tengu of clan Tessek, of Haizetsua, in the Talan years of *One Line Further* (2526 MR), travelling alone, before Wren. Waits past every reason to leave; gets attached to the house she lodges in. Wind-images: Vorkat (falling for a place), Tellenn (a farewell).
+**Voice block.** **Vyrenna Tessek** · Tengu of clan Tessek, of Haizetsua, in the Talan years of *One Line Further* (2526 MR), travelling alone, before Wren. Waits past every reason to leave; gets attached to the house she lodges in. Wind-images: Vorkat (attachment to a place), Tellenn (a farewell).
 
 ---
 
@@ -14,7 +14,7 @@
 
 **The quay.** My grand-uncle stayed one day and it did not rain, and he wrote that down, because he is honest. I read the line twice on the crossing and decided the only thing to do with it was to stay until it did.
 
-The quay at ⟨PORT⟩ is the busiest I have stood on, and nobody on it looks at the sea. They look inland. Three mountains stand behind the town, far off and blue, each with its own cap of cloud, and the buyers on the quay watch the caps the way farmers watch a sky. When one darkens, someone says which, and the chalk prices on the warehouse boards change before anyone could possibly know anything. I asked which road rains most. Everyone said gold, the way you would tell a child which way is down.
+The quay at ⟨PORT⟩ is like every quay I have stood on, loud and crowded and smelling of tar, until you notice that nobody on it looks at the sea. They look inland. Three mountains stand behind the town, far off and blue, each with its own cap of cloud, and the buyers on the quay watch the caps the way farmers watch a sky. When one darkens, the chalk prices on the warehouse boards change before anyone could possibly know anything. I asked which road rains most. Everyone said gold, the way you would tell a child which way is down.
 
 **The first gold.** I lodged with a family in ⟨GOLD TOWN⟩: a mother who keeps accounts, a grandmother who keeps everyone, and a boy of nine who keeps a bowl by the door the way other boys keep a ball.
 
@@ -24,7 +24,7 @@ It looks like ordinary rain until it lands. Then every runnel turns the colour o
 
 They work until the light goes, because at sundown it is over. I tried to keep a puddle. I scooped a handful from a gap in the stones where no board could reach, and held it, and watched it while the sun went down, and somewhere in the last red minute it was water in my hands, and then it was only cold. The grandmother saw me standing there with wet palms and laughed until she had to sit down on the step.
 
-I fell for the whole town that evening, all of it at once, which my readers will recognise as pure Vorkat and my editor will recognise as another week's delay.
+By that evening I knew the name of everyone on the street, which my readers will recognise as pure Vorkat and my editor as another week's delay.
 
 **Gold again.** It rained gold again on the sixth day, and the ninth, and the twelfth. A guest learns quickly that the work is the same every time and nobody minds.
 
@@ -38,4 +38,4 @@ She keeps her accounts in gold ink. I had heard it glows. It does not. In the ev
 
 Silver rains least, and I was told so by everyone, so I took a room and stayed. It rained on my ninth day there. The rain was so thin I could not see the colour in it, only a sheen on the channels, like breath on a mirror. The town drew it into the pans anyway, every roof and every street, until sundown. Then they began on the stills, and worked through the night, and in the morning the master of the stills showed me what the whole town had caught. She scraped it from the bottom of the pan into a vial no longer than my finger, grey-white, and held it to the window, and said it was a good rain.
 
-I left ⟨ISLE⟩ on a Tellenn morning, with the boy's bowl in my luggage; he says he will want it back, and I am to bring it myself. I am writing this on the saltkeel, in his mother's gold ink, by a lamp I had to borrow. Maren, if the page is easy to read, that is the ink. The lamp was still necessary.
+I left ⟨ISLE⟩ on a Tellenn morning, with the boy's bowl in my luggage; he says he will want it back, and I am to bring it myself. I am writing this on the saltkeel, in his mother's gold ink, by a lamp I had to borrow. Maren, if the page is easy to read, that is the ink.
