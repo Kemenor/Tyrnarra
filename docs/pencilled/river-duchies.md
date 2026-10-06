@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-06, with corrections).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-06).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -33,6 +34,14 @@
 - **Q3 (GM: yes):** through, Emarrea's barges downstream, Galdua's salt to the landings, Valreka's herd at the edge; pressing, the sand creeping into the green, Galdua's pale band and its legions to the west. **Sameness flagged (GM):** the green lost and fought for field by field sits close to Greenward (the grey seeping back).
 - **Q4 (GM): plenty in the domain of decay**: the valley grows more than anyone can keep, in Tani's land where everything passes. **Sloth may be the regional vice** (for later, Phase 7).
 - **Q5 (GM: yes):** from Galdua's rationed springs into a country that wastes water: channels left running, fields flooded on purpose, water poured on the ground; Galduans find it obscene, Duchy folk find the Galduans' care faintly sad.
+
+### Phase 2: seeds (closed 2026-10-06)
+
+**The seed (GM-approved, flavour line A):** *The slowest rivers on Talan run through its fastest ground: everything grows in a week and rots in the next, and the Duchies have made the rot their trade.*
+
+
+- **Candidates:** S1 the quick valley (time runs quick for living things: three harvests between floods, fruit swells in a week and rots in the next; the slowest rivers, the fastest land; the people let the valley do the work and make an art of not hurrying; sloth the honest vice; Galdua's tagnit the coveted import); S2 the river redraws the duchies (each duchy the land between two channels; the flood shifts the beds and land changes duchy overnight; sameness: the Basogur's moving ground, Floteyn's drifting isles and living chart, Hareaveldi's blanked boards); S3 decay made rich (vats, cellars, curing-houses, fermenting-sheds: date wine, river vinegar, fish sauce, cheeses, compost black earth; sameness: Floteyn's deep-cellars, Atarialda's kitchens).
+- **Chosen (GM): S1 with S3 as its trade.** Decay made a positive thing. The GM's favourite line: *In Tani's land, decay is revered, and here it is also the trade.* S2 held as a Phase 5 candidate (borders on water).
 
 ## Rejected options
 
