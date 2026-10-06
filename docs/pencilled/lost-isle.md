@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-06).
+- **Phase 9 (tension and reveal): open.**
 
 ## Phase 0: settled facts
 
@@ -103,6 +104,25 @@
 - **Visitor against native:** visitors expect the gold to glow, try to keep a puddle past sundown, take "tomorrow" for a promise, try to buy at a crater town and are sent to the quay; natives read the caps and know which crater will rain before the bell.
 - **Youth, a slope in three steps:** **the bowl** (a child's catch outside the channels is its own, unshared; grandmothers and channel-wardens keep it from turning into theft); **the board** (in the teens, the first rain worked with a board and a catcher's portion in one's own name); **the household** (one's own share and voice at the tally). **Sanctioned transgression:** the bowl-right stretched (bigger and bigger "bowls" just outside the channels; the wardens chase them off).
 - **Faith:** Tani kept plainly as the goddess of the hour; **sundown is her hour on the isle**, and closing the day before dark is said to be hers; a small shrine of the three faces in each crater square, one priest per town. **The first bowl of every rain is poured back into the lake.** ◈ candidate: the Elden made the rains (the craters carry their names).
+
+### Phase 8: naming (closed 2026-10-06)
+
+- **Family (GM): Iranian.** The Azarketi came in the Lost Era from the Storveldi dispersal, whose root was the old Iranian; Berber is the herd's family, and the isle has no herd tie. The imperial loan layer from the far province.
+- **Word-base (GM): Balochi**, the Makran coast's tongue, a cousin of Persian (not a daughter); sound kept apart from Sokhan (Persian) and Hizva (Avestan / Old Persian). Words verified by subagent, with sources, before offering.
+- **Structure (GM): N3, given + bowl-name + household.** The bowl-name is given by the grandmothers at a child's first catch and kept for life. **The household part is N1's (GM):** chosen by its founders when they found it and entered on the share-roll; children carry their parents' household name until they found their own; the share-roll never takes a name twice, so a family name lasts one generation. **Collision check:** no collision (every registers row read; the Anadi's and the Vanara's earned names share only a three-part shape, GM). Rejected: N1 (given + household founded anew each generation), N2 (given + the rain of one's birth + household; close to Valreka's birth-whale).
+
+**Verified words (subagent, 2026-10-06; sources: Barker & Mengal, *A Course in Baluchi* vol. 2 (1969); Korn, *Towards a Historical Grammar of Balochi* (2003); Dames (1922); Wiktionary; BÍN for Icelandic).** Balochi: *hawr* rain; *gwarag* to rain (stem *gwar-*); *jambar* cloud, *nōd* cumulus; *zir* sea, *zirī* maritime; *bandar* port (Persian loan); *tiyāb* seashore; *bāsk* (upper) arm; *siyāh* black; *sing/sang* stone; *kōh* mountain; *kāsag* bowl; *dār* wood, board; *bahr / bar* share, destiny; *bahr kanag* to divide; *lōg* house (Makrani); *bēgāh* evening; *hisāb* account (Arabic loan); *tōl* weighing, scales; *wājah* master; *daptar* register (from Persian *daftar*); *hakk* due; *dūr* far; *brāh* brightness, lustre; *rōšnāī* light; *istār* star; *sohr* gold (also red); *čāndī* silver (Indic loan); *rōč* day, sun; *bāndā* tomorrow; *girag* to catch (past *gipt*); *barag* to carry (past *burt*); *passaw* answer; *balluk* grandmother; *zahg* child. **Unverified:** island, quay/landing, anchorage. Genitive *-ay* (possessor first), plural *-ān*, infinitive *-ag*; no gender. Sound: keeps old hard consonants (*āp*, *rōč*), old *w-* → *gw-* (*gwāt* wind, *gwar-* rain), prothetic *i-* (*istār*). Given names (Barker): Chakar, Gwahram, Hammal, Doda, Balach, Bibarg, Bijjar, Shayhak, Relan, Hot; Hani, Sammi, Banari, Mayro, Lali, Raji. Icelandic: *gull*, *silfur*, *stjarna / stjörnu-*, *regn*, *ský*, *skál*, *gígur / gíg-* (crater), *ljós*, *vatn*, *fjall*, *ey(ja)*, *svartur*, *hraun*, *armur*, *fjar-*; *gullregn* is an existing word (laburnum).
+
+**The name table (GM-picked):**
+- **Register:** Balochi base, plain letters, no length marks; sound rules: Balochi's hard old consonants (*p*, *ch*, *k*) kept where Persian softens them; word-initial **gw-** kept; prothetic *i-* before *st-*; *aw* softened to *au* (*hawr* → *haur*). **The tongue: Hauri** (*hawr* "rain" + adjective *-ī*, "of the rain"). **Structure:** given + bowl-name + household.
+- **The isle: Auran** (Balochi *hawr* "rain" + plural *-ān*, "the rains" → *Hawrān* → *Auran*); adjective *Auran*. Rejected: Gwaran (demonym too close to the real Guaraní), Losren.
+- **The port: Siyabask** (*siyāh* "black" + *bāsk* "arm", "black arm"), on **the Bask** (*bāsk* "arm"), the lava arm. Rejected: Baskandar, Blakarm.
+- **The rain-share:** plain Talanese. Rejected: Haurbar.
+- **Craters and their towns (Silent Tongue, Elden names):** **Gulgir** (Icelandic *gull* "gold" + *gíg-* "crater", drifted), **Silfgir** (*silfur* "silver" + *gíg-*), **Storngir** (*stjörnu-* "star" + *gíg-* → *Stjörngír* → *Storngir*).
+- **Side names:** **the Tolwaja** (*tōl* "weighing, scales" + *wājah* "master"), the Quaymaster; **the share-day** (plain Talanese; Barkan rejected); **the Daptar** (*daptar* "register"), the share-roll; **the Durbra** (*dūr* "far" + *brāh* "lustre"), the far light; **the sundown account** (Talanese, held in the trade tongue for the buyers on the quay); **the catchers' third**; the bowl-right, the bowl-name, the down-carts in plain Talanese.
+- **Bowl-names** (short verified words from the moment of the first catch): *Gipt* "caught", *Burt* "carried off", *Dur* "far", *Brah* "shine", *Passaw* "answer", *Banda* "tomorrow" (for the child who brought it back after dark).
+- **Named figures:** **Hani Gipt Siyasang**, the Tolwaja (household *Siyasang*, "black stone"); **Chakar Dur Kohbrah**, warden of Silfgir (*Kohbrah*, "mountain-shine"); **Mayro Istar Zirkirr**, master of the stills at Silfgir, in Vyrenna's column (*Zirkirr*, "sea-edge").
+- **Collisions:** whole-repo search clean; *Ziri* (a Galduan given name) dropped as the tongue's name; *Bahr* avoided (Arabic "sea"; Hareaveldi's *Bahar*).
 
 ## Rejected options
 
