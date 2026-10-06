@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-06).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-06).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-06).
+- **Phase 3 (traveller's image): open.**
 
 ## Phase 0: settled facts
 
@@ -29,10 +30,22 @@
 **The answers:**
 
 - **Q1, what falls (stands for now, GM):** light out of the sky, falling as liquid that holds its glow. Gold is the sun's (Solyra); starlight the stars'; silver the Cloud Sea's own glow (no moon is silver), from the crater facing it. The Crimson Rain kept apart in open prose; any tie to Tani, the Wellspring or a god's death is for Phase 9.
-- **Q2, when it rains (stands for now, GM):** each crater on its own clock, a few times a year, never predicted; what falls must be caught that day before it sinks or fades. The island waits and watches, then drops everything at once.
+- **Q2, when it rains (stood at Phase 1; reopened and replaced at Phase 2, see there):** each crater on its own clock, a few times a year, never predicted; what falls must be caught that day before it sinks or fades. The island waits and watches, then drops everything at once.
 - **Q3, the port and the pressure:** the prompt (a plain port, the one town where it rains only water, the essence sold only at its quay; the Red Dominion's seafarers carrying most; outsiders wanting the craters) taken as interesting. **GM idea: rank the rains.** The rarest rain is needed for **cloudships**; another is valuable in magic generally; the third lesser, being the most numerous. Pairing proposed (not yet approved): silver rarest and the cloudships' need (the Cloud Sea's light lets a hull ride it); starlight for magic. **Settled (GM, 2026-10-06):** **silver the rarest, needed for cloudships**, rare because it must be **distilled further**: the catch can be large while the yield stays small. **Starlight** valuable to magic in general. **Gold** the commonest and lesser: **the ink**, which makes writing easier to read in poor light but **does not glow by itself** (a page written in gold-rain shows nothing in full dark; some light is still needed; ships' logs, night-watch charts, mine signs, letters; Ezkudon's ink imports via the Golden Coast a ready market), with a **folk side**: the isle swears gold-rain heals, and it helps a little (a drop in water for a fever, a wound dressed clean; sailors' vials). Rejected: gold as everyday light, and as warmth (both Egulon's, the sun's domain). Flagged as a large canon move, to be phrased as *Talan's* cloudships (the Red Empire's Iron Tide also crosses the Cloud Sea, and that canon is parked: add nothing, so the move must not touch it) (cloudship rarity is the dual-school requirement in `cosmology.md` and `transport.md`; a material bottleneck makes every cloudship trace to the isle) to settle at Phase 4.
 - **Q4, the Azarketi at home → the feeling reworked (GM, 2026-10-06).** The GM found the feeling itself off: pride is a vice no other people's feeling carries, and tying the feeling to another people's story (the Storveldi) is culture, not ancestry (conventions rules 1 and 9). **Chosen: A, "the ones who answer it now"** without the inherited burden. Heritage (Storveldi descent) stays at the head of the entry; the Elden-blood claim stays under *Inherited folklore* as a belief places hold or drop; Valreka's water stays under *In Valreka*. Rejected: B, "the ones who are here" (presence; flanks the kitsune, the Vanara and the Strix).
 - **Q5, the name (GM):** **rename.** "Lost Isle" sits too close to the Lost Kingdom; the island is repainted anyway. The new name at Phase 8; the map label changes with the repaint.
+
+### Phase 2: seeds (closed 2026-10-06)
+
+**The seed (GM-approved):** *An island whose rain runs gold, silver and starlight in the streets, and whose people draw it out before sundown, every rain, or lose it.* Three facets of one thing: the rain and its drawing-out (the people, the feeling made weather), the port (everything goes out through it; the seat of power), the silver (Talan's cloudships' need; the pressure). Gold rains most often (ink that eases reading in poor light, a little folk medicine), starlight less (magic), silver seldom and thinnest (distilled further; the cloudships). Sensory: after a rain the gutters run tinted down every street toward the pans, and by dusk the colour is gone from whatever was not caught.
+
+**Candidates (2026-10-06):** S1 the rain-day (behaviour), S2 the wonder behind the plain gate (contradiction), S3 every crossing in one crater (collision). **GM: the three are one seed, three facets of one thing**, combined.
+
+**GM rulings in the round:**
+- **The seat of power is in the port**: everything goes through it (a lean for Phase 5).
+- **"Plain" dropped**: nothing pulls the port toward plainness; it is simply where everything goes out. (Phase 1 Q3's "plain on purpose, rains only water" reopened and retired.)
+- **Frequency reopened (Phase 1 Q2, "a few times a year", replaced):** **often and thin**. It rains about as often as ordinary rain; each fall is water carrying the essence; the streets run tinted to the pans; the essence fades from the water by sundown unless drawn out first, so every rain is a race (channels, settling tanks, pans, the drawing-out, and for silver a further distilling). **Ranked by frequency:** the gold crater rains most often, starlight less, silver seldom and thinnest and needing the most distilling; commonness is how often a crater rains times how much each fall carries.
+- Rejected: rare and rich (a few rain-days a year: too thin an economy, few visitors ever see it); thin rains plus a great rain (more machinery, drifts toward Galdua's watering; available later if a festival is wanted).
 
 ## Rejected options
 
