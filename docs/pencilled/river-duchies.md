@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-07).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-07).
+- **Phase 8 (naming): open.**
 
 ## Phase 0: settled facts
 
@@ -76,12 +77,25 @@
 
 - **The key: the quickening stops at the valley's edge.** Food grown here rots fast here; carried out, it keeps like anyone's. The economy is **grow here, turn here, keep elsewhere**: eaten fresh, turned (fermented, cured, dried), or sold out fast to those who can store it.
 - **The slow isles (GM: yes):** the quickening stops at the shore, so **the islands are slow ground**: their strange trees grow over centuries, and **the Duchies age their ferments there** (date wine brewed in a week in the valley sits for years in the island cellars: the "nine-flood"). The phantom isle's own time is for the Phase 9 ⚿.
-- **Subsistence:** the valley feeds itself many times over: barley and vegetables in the fields, dates and fruit on the channel banks, fish from the channels and the bay, goats and water-buffalo on the levees. Grain is not kept long in the valley (it would sprout or rot): seed in holdsand, bulk grain out of the valley or to the island cellars. A lean year is a short harvest, not a hungry one.
+- **Subsistence:** the valley feeds itself many times over: barley and vegetables in the fields, dates and fruit on the channel banks, fish from the channels and the bay, goats and water-buffalo on the levees. Grain is not kept long in the valley (it would sprout or rot): bulk grain leaves the valley or goes to the island cellars, and **the seed is kept on the slow isles** (amended at Phase 7, GM: holdsand is rare and dear and does nothing the isles do not; it is no part of the Duchies' life). A lean year is a short harvest, not a hungry one.
 - **The draw:** buyers; traders for food and ferments; the herd to drink and buy.
-- **Sells:** grain and dried fruit to Valreka (Langback's granaries; "goods from the Duchies"), to Galdua's rocks and Hareaveldi in their lean years, and by sea from the capital's bay to the Hafra coasts; **the ferments** (date wine reckoned in floods, river vinegar, fish sauce, cheeses) upriver to Emarrea on the returning barges, onto the herd, and out by sea; **black earth** from the compost-yards to Galdua's canyon gardens and Valreka's garden-whale Urti. **Buys:** salt from Galdua; holdsand by the pinch for seed; sake, orchard goods and illusions from Emarrea; glass for the jars; metal and tools off the network. Timber from the thicket (fast-grown, soft).
+- **Sells:** grain and dried fruit to Valreka (Langback's granaries; "goods from the Duchies"), to Galdua's rocks and Hareaveldi in their lean years, and by sea from the capital's bay to the Hafra coasts; **the ferments** (date wine reckoned in floods, river vinegar, fish sauce, cheeses) upriver to Emarrea on the returning barges, onto the herd, and out by sea; **black earth** from the compost-yards to Galdua's canyon gardens and Valreka's garden-whale Urti. **Buys:** salt from Galdua (every turned thing is turned with it); sake, orchard goods and illusions from Emarrea; glass for the jars; metal and tools off the network. Timber from the thicket (fast-grown, soft).
 - **Routes:** Emarrea's barges drift down the main river, each duchy tolling its own stretch; the capital's bay the sea port (saltkeels to the Hafra coasts) and the single choke point where river meets sea; roads along the levees; the salt landings on the northern channels; the islands by boat, or on foot across the flats at low tide. No rail fixed (GM).
 - **Stake in the tension:** the cut law's own economy (fields falling to thicket change hands; cutting crews hired for profit); **the western fields** along Galdua's pale band, where the legions make farming dangerous, fields left untended go to thicket, and someone will cut them (a strong Phase 9 candidate).
 - **Table note:** none.
+
+### Phase 7: daily life (closed 2026-10-07)
+
+- **The day:** the dawn market (fruit ripened in the night on the stalls), the morning's work, the noon carts and the long sleep, the evening at the vats and the tables; the land does most of the work, and the day is built around letting it.
+- **The ritual: the flood feast.** Before the flood everything that would rot under the water is eaten: the whole valley at long tables on the levees, the last fresh meal of the year. **On the flood's eve the seed-boats come home** across the bay from the island stores, every village's seed for the new silt. Then the water comes, and the flood-warden's word is law until it goes down.
+- **Senses and speech:** towns sour-sweet (vinegar, lees, fruit going over), a compost-yard at every village's edge; everything eaten the same day; fish sauce on everything; every house its cheese; **the tea fermented**. Ages and vintages counted in floods (*a nine-flood wine*, *she's forty floods*); **"it'll keep"** the valley's joke; **"let it turn"**, *let it be, it'll become something*. **The vice: sloth**, sleeping through a harvest the valley grows anyway: admired in a farmer, despised in a duke who leaves his crews to cut.
+- **Movement:** on foot along the levees, skiffs on the channels, boats to the isles or across the flats at low tide; **the drift-barges**, downriver at the river's own pace (a week from Emarrea, nobody hurrying), back up towed by buffalo along the levee towpaths.
+- **Visitor against native:** a peach kept for later is juice by supper; bread left out overnight is furred by morning; visitors hurry and call the water wasted; natives eat it today, turn it, or sell it to someone leaving.
+- **Youth, a slope:** a child's garden that grows in days and rots in days; **the first cut**, at about fifteen, a corner of thicket to cut and keep cut a whole year, then theirs to work; **the sanctioned transgression: the first brew**, made in secret and badly, found by the elders and drunk at the flood feast with straight faces.
+- **Faith:** Tani's elder face, Decay revered; a small shrine at every compost-yard; the dead buried in the black earth become the next year's field within a season (*she's in the barley now*, said kindly); river traders keep a word for Shuun at the landings; the few Ghoran flower out of season and grow restless, and most move on.
+- **Custom (from Phase 5):** when a farmer falls sick, the neighbours cut his field for him, so it does not go to thicket and change hands.
+- **Rejected:** the crown that rots (GM, twice); holdsand in every household's seed (GM: rare and dear; the slow isles keep the seed).
+- **Column revised (GM yes):** the holdsand seed replaced by the seed-boats coming in from the island stores and the host salting the fish from a sack come down from the rocks: *every turned thing in that valley is turned with your rock's salt*.
 
 ## Rejected options
 
