@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-06).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-06); the column accepted and committed at [`../../lore/geography/lioaru/lost-isle-column.md`](../../lore/geography/lioaru/lost-isle-column.md) (to be renamed with the isle).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-06).
+- **Phase 6 (economy): open.**
 
 ## Phase 0: settled facts
 
@@ -67,6 +68,18 @@
 - **H2 (GM: b):** the Azarketi reached the isle in the Lost Era among the dispersed survivors, drawn by its water (canon's dispersal). Rejected: (a) the isle as Storveldi ground (the cut tie); (c) "as long as there are records".
 - **H3 (GM):** **no cloudships under the Empire; cloudships are a modern thing** (Adventurer Era). **The timeline (GM-approved):** before any record, the rains (Silent-Tongue crater names). Lost Era: the Azarketi reach the isle among the dispersed survivors. Golden Era: a far imperial province; gold ink and starlight the trade; **silver the poor rain**, caught because one answers the rain, sold for little. 1321 MR on: the Empire falls; the isle holds alone through the Dark Era, far from the mainland's wars; **the port's present rule founded in the Dark Era** (date and form at Phase 5). **c. 2300 MR: a Vindul yard builds the first cloudship, and its binding takes the isle's silver**; the silver town learns to distil and turns from the poorest crater to the most pressed within two centuries. After: Sortalde contact, the Bridgelands as the landing. 2526: Vyrenna's visit. 2532: now. (The silver's rise is material for the live tension, Phase 9.)
 - **Canon moves 3–5 approved (GM, 2026-10-06):** see *Canon moves*.
+
+### Phase 5: government (closed 2026-10-06)
+
+- **Census:** nearest Rika Tikur (Company plutocracy), Fellibylur (chartered merchant kingdom), Namur's elected Senate; Galdua's sunrise law as a law-by-the-hour neighbour.
+- **Candidates:** G1 the one quay (a sale-house, the Quaymaster chosen by the three crater towns); G2 the sundown account; G3 the three keys; then, on the GM's catch that G1 enfranchised only the crater towns (~4%): R1 the rain-towns' honest oligarchy, **R2 the rain is the island's**, R3 the port chooses; then three more at the GM's request: G4 the farm of the quay (rule auctioned), G5 ship-law (captain and quartermaster under the articles), G6 the Sundown Bench (rule by judges).
+- **Chosen (GM): R2 as is.** The rain belongs to the island: the catcher keeps a portion (size at Phase 6); the rest of the sale paid out as **the rain-share**, one to every household. **The one-quay law:** sold at the port's quay and nowhere else (Dark Era). **The ⟨Quaymaster⟩** heads the sale-house and the port, chosen by **household democracy, one household one voice**, each village and town tallying and sending to the quay, the highest tally winning. **A fixed term of seven years** (GM; recall rejected: counting withdrawn voices needs a vote anyway); she may stand again; an empty seat calls a tally at once. **The sundown account** kept as custom (not removal). Outside the vote: the young until they keep a household, lodgers, houseless sailors, foreigners.
+- **Four answers:** day to day the Quaymaster and her weighers; envoys at her table on the quay; she signs treaties; roads, breakwater, walls, ships from the island's cut, decided by her, answered for at sundown; each crater town builds its own catchments and runs its own affairs.
+- **Tests:** unity (every household paid from one sale; a breakaway town takes the share from every household and, with the coast as it is, has no harbour for a Hafra hull); external (she signs; the Guild's post-house; yards contract at her table); internal (the island's cut, answered for at sundown).
+- **Powers:** she may set prices, sign trade, keep walls and ships, judge at the quay; she may not sell off the quay or rule inside a crater town; **muddy: may the quay sell rain that has not fallen?** (the yards want future silver; the island sells only what is drawn).
+- **Honest cost:** a monopoly resented abroad (the world's price of silver); at home the catchers share their wealth with farmers four days off; the young and the port's floating people voiceless.
+- **Rejected:** G1 as drafted (the crater towns alone vote), R1, R3, G2 as the removal mechanism, G3 (any town can stop everything; close to Lograth), G4 (kept in mind: a foreign yard bidding), G5, G6.
+- **Phase 4 reopened (GM, terrain):** **the isle's coast is cliff and black lava shelf almost all the way round**; coves take fishing boats; **the port's harbour is one of the only places on the island that can take the deep-keeled Hafra saltkeels**. The one-quay law rests on the ground as much as on the vote. **Harbour (GM: A):** a bay behind **a lava arm**, an old flow run out into the sea and set as a long natural breakwater, deep sheltered water behind it; the port stands on the flow. Rejected: B, a drowned fourth crater (adds a fourth to the three; pulls toward the dropped "plain port"). For map-todo: the lava arm and the bay on the east coast.
 
 ## Rejected options
 
