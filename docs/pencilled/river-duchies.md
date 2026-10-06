@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-06).
 - **Phase 6 (economy): closed** (GM, 2026-10-07).
 - **Phase 7 (daily life): closed** (GM, 2026-10-07).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-07).
+- **Phase 9 (tension and reveal): open.**
 
 ## Phase 0: settled facts
 
@@ -96,6 +97,23 @@
 - **Custom (from Phase 5):** when a farmer falls sick, the neighbours cut his field for him, so it does not go to thicket and change hands.
 - **Rejected:** the crown that rots (GM, twice); holdsand in every household's seed (GM: rare and dear; the slow isles keep the seed).
 - **Column revised (GM yes):** the holdsand seed replaced by the seed-boats coming in from the island stores and the host salting the fish from a sack come down from the rocks: *every turned thing in that valley is turned with your rock's salt*.
+
+### Phase 8: naming (closed 2026-10-07)
+
+- **Family:** Berber (canon: a sister of Awal; the returners came down from the rocks and off the herd).
+- **Word-base (GM): Kabyle (Taqbaylit)**, its spirantized stops (*t* → *th*, *d* → *dh*, *k* softened) setting it apart in sound from Awal; plain letters. Rejected: Tashelhit (too close to Awal).
+- **Structure (GM): F1, given + birth-flood + house.** Each year, when the water goes down, the flood-warden names that year's flood for what it did; a child carries the name of the flood they were born under; vintages carry the same names; peers of one flood are a cohort, and a name tells an age. Rejected: F2 given + field + house (close to Argia Esfera's well); F3 given + return-name (close to Galdua's rock and Valreka's birth-whale).
+- **The region's name (GM): the River Duchies, kept** (plain Talanese, the Empire's granary province).
+- **Verified words (subagent, 2026-10-07; DiKab citing Dallet, *Dictionnaire kabyle-français* (1982), Bouamara, *Issin* (2010), Mansouri (2004); English Wiktionary; Kossmann & Stroomer, *Berber Phonology* (1997) for the sound features).** *asif* river (pl. *isaffen*); *aḥemmal* flood, spate; *gzem* to cut; *amadaɣ* brushwood, maquis; *iger* field; *taɣzut* riverside alluvial field; *aluḍ* silt, mud; *tigzirt* island(let) (sources disagree: *tagzirt* "island"); *tagut*, *agu* mist, fog; *aẓay* slowness, heavy; *uṭṭis* sleepy, slow, lazy; *aɣiwel* haste, speed; *rku* to rot; *xmer* to ferment; *tamtunt* leaven; *asemmam* sour; *lxell* vinegar; *tamegra* harvest; *timẓin* barley; *lemleḥ* salt; *aman* water; *ilel* sea; *lmersa* port; *lmida* low dining table; *ṭṭabla* table; *axxam* house, family; *aseggas* year; *ameslay* speech; *awal* word (Valreka's tongue). **Corrections:** *amɣar* is "old man" only (the village headman is *lamin*); no verified word for bay, levee or clearing. **Names** (Behind the Name; amazigh24): Akli, Lounis, Aghilas, Sekkura, Tassadit, Arezki, Fadhma, Taous, Mohand (the last four Arabic loans or hybrids); Tafsut, Yidir, Tiziri and Dihya avoided (already Valrekan or Galduan).
+- **The name table (GM-picked, after a correction round):** first round withdrawn on the GM's catch: *Thaghzuth* (capital) and *Thaguth* (phantom isle) nearly the same word, *Thigzirth* a third of a kind; clusters like *ghz* unsayable for a German and English table; *Madhagh* used twice (the thicket and a flood-name). **The th/dh spelling rule dropped** except the genuine clan marker *Ath*; short words, no clusters.
+  - **Register:** Kabyle base, plain letters, short words; set apart from Awal by the house marker **Ath** ("the people of"), the *le-* of Kabyle's Arabic loans, *gh* and doubled consonants. **The tongue: Ameslay** (*ameslay*, "speech"). **Structure:** given + birth-flood + house (*Ath* + the founding ancestor's name).
+  - **The capital: Lemersa** (*lmersa*, "port"; an Arabic loan, as in real Kabyle). Rejected: Granmouth (the Empire's Talanese port name).
+  - **The phantom isle: Agu** (*agu*, "fog"). **The three slow isles: Tamegra** (*tamegra*, "harvest"; the largest, the seed stores), **Tamtunt** (*tamtunt*, "leaven"; the ageing cellars), **Azay** (*aẓay*, "slowness"; the isle of the oldest trees); as a group, **the slow isles** (plain Talanese).
+  - **The Table: the Mida** (*lmida*, "low dining table"). **The flood: the Hemmal** (*aḥemmal*, "flood"). **The flood-warden**, **the cut law**, **the thicket** (GM: a function, no name), the flood feast, the seed-boats, the first cut, the drift-barges, the first brew: plain Talanese.
+  - **The duchies:** imperial Talanese names reclaimed at the return; the western one on the pale band **Westfold**; the rest open.
+  - **Sample flood-names:** **Aghiwel** ("haste"), **Aludh** ("silt"), **Asemmam** ("sour"; a flood that soured the fields), **Uttis** ("sleepy, slow").
+  - **Named figures:** **Tassadit Uttis Ath Akli**, the Mida's eldest, born in a slow flood; **Aghilas Aludh Ath Arezki**, this year's flood-warden; **Lounis Aghiwel Ath Sekkur**, duke of Westfold.
+  - Collision search clean for every pick.
 
 ## Rejected options
 
