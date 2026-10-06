@@ -43,6 +43,10 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 - Aphoristic closers: the epigram that resolves.
 - "worth noting" / "what's actually" / "here's the thing".
 - Unattributed wit in narration: give it a mouth and a name, or cut it.
+- The remembrance flourish: *"the chronicle remembers the times they did"*, *"and no one has forgotten"*. State the fact; let the record stand without remarking on it.
+- Explaining an implication the reader already has: *"…the painter's name and the houses' judgement, and both can be wrong."* Stop at the fact.
+- The dramatic refusal line: *"Ostad Kaveh will not paint it again."* If the refusal matters, a quoted voice carries it.
+- A word that implies more than the custom holds: *back rooms* for a habit that is not secret; *hidden* for something merely kept. Match the word to the canon.
 
 ## Content requirements
 
