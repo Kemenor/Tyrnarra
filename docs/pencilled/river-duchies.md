@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-06); the column accepted and committed at [`../../lore/geography/lioaru/river-duchies-chronicle.md`](../../lore/geography/lioaru/river-duchies-chronicle.md).
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-06).
 - **Phase 5 (government): closed** (GM, 2026-10-06).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-07).
+- **Phase 7 (daily life): open.**
 
 ## Phase 0: settled facts
 
@@ -70,6 +71,17 @@
 - **Offices (GM: yes):** **eleven duchies** (~4,500 sq mi and ~160,000 people each; an odd Table cannot tie); **the capital belongs to no duke**: the Table's seat and the flood-warden's, its quays shared; **the Table decides by majority**; the Table's eldest, the duke who has sat longest, speaks and signs.
 - **Rejected (GM, 2026-10-07):** the plain *liberum veto* (a real institution transplanted; undoes the shared river works; repeats the sloth joke; invites the neighbours' bribes) and the veto that rots at the flood (dropped too); the crown that rots and the thicket-sign offered as fantasy additions, GM: keep the government as is.
 - **Rejected:** G2 the channel-lords (moving borders; sameness with the Basogur's moving ground and Floteyn's drifting isles; the re-measuring dropped).
+
+### Phase 6: economy (closed 2026-10-07)
+
+- **The key: the quickening stops at the valley's edge.** Food grown here rots fast here; carried out, it keeps like anyone's. The economy is **grow here, turn here, keep elsewhere**: eaten fresh, turned (fermented, cured, dried), or sold out fast to those who can store it.
+- **The slow isles (GM: yes):** the quickening stops at the shore, so **the islands are slow ground**: their strange trees grow over centuries, and **the Duchies age their ferments there** (date wine brewed in a week in the valley sits for years in the island cellars: the "nine-flood"). The phantom isle's own time is for the Phase 9 ⚿.
+- **Subsistence:** the valley feeds itself many times over: barley and vegetables in the fields, dates and fruit on the channel banks, fish from the channels and the bay, goats and water-buffalo on the levees. Grain is not kept long in the valley (it would sprout or rot): seed in holdsand, bulk grain out of the valley or to the island cellars. A lean year is a short harvest, not a hungry one.
+- **The draw:** buyers; traders for food and ferments; the herd to drink and buy.
+- **Sells:** grain and dried fruit to Valreka (Langback's granaries; "goods from the Duchies"), to Galdua's rocks and Hareaveldi in their lean years, and by sea from the capital's bay to the Hafra coasts; **the ferments** (date wine reckoned in floods, river vinegar, fish sauce, cheeses) upriver to Emarrea on the returning barges, onto the herd, and out by sea; **black earth** from the compost-yards to Galdua's canyon gardens and Valreka's garden-whale Urti. **Buys:** salt from Galdua; holdsand by the pinch for seed; sake, orchard goods and illusions from Emarrea; glass for the jars; metal and tools off the network. Timber from the thicket (fast-grown, soft).
+- **Routes:** Emarrea's barges drift down the main river, each duchy tolling its own stretch; the capital's bay the sea port (saltkeels to the Hafra coasts) and the single choke point where river meets sea; roads along the levees; the salt landings on the northern channels; the islands by boat, or on foot across the flats at low tide. No rail fixed (GM).
+- **Stake in the tension:** the cut law's own economy (fields falling to thicket change hands; cutting crews hired for profit); **the western fields** along Galdua's pale band, where the legions make farming dangerous, fields left untended go to thicket, and someone will cut them (a strong Phase 9 candidate).
+- **Table note:** none.
 
 ## Rejected options
 
