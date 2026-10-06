@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-06).
 - **Phase 7 (daily life): closed** (GM, 2026-10-06).
 - **Phase 8 (naming): closed** (GM, 2026-10-06).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
+- **Phase 10 (draft): open.**
 
 ## Phase 0: settled facts
 
@@ -123,6 +124,15 @@
 - **Bowl-names** (short verified words from the moment of the first catch): *Gipt* "caught", *Burt* "carried off", *Dur* "far", *Brah* "shine", *Passaw* "answer", *Banda* "tomorrow" (for the child who brought it back after dark).
 - **Named figures:** **Hani Gipt Siyasang**, the Tolwaja (household *Siyasang*, "black stone"); **Chakar Dur Kohbrah**, warden of Silfgir (*Kohbrah*, "mountain-shine"); **Mayro Istar Zirkirr**, master of the stills at Silfgir, in Vyrenna's column (*Zirkirr*, "sea-edge").
 - **Collisions:** whole-repo search clean; *Ziri* (a Galduan given name) dropped as the tongue's name; *Bahr* avoided (Arabic "sea"; Hareaveldi's *Bahar*).
+
+### Phase 9: tension and reveal (closed 2026-10-06)
+
+- **◈ (GM): B1, sell a rain before it falls, and the crater stops raining.** Rejected: B2 the Elden made the rains, for their heirs; B3 rain kept past dark sours the house.
+- **⚿ (GM): S1, the Elden's taps.** Surface: Silent-Tongue crater names; rains older than any record; the fade by sundown; silver the one thing a cloudship's binding cannot do without; starlight prized above every reagent. Truth: the three craters are Elden works still running, taps on the Wellspring's outflow built in the Elden Era; each draws a thread of source-fluid up through the mountain and lets it fall as rain, shaped by the light it rises through (sun, stars, the Cloud Sea's glow); raw Wellspring will not hold a form, hence the fade unless drawn out; small working pieces of the craft the Elden reached for at their ritual site, the attempt that made them the Corrupted God. Reads differently: the fade (a mechanism); starlight (a sliver of the source of all magic); silver and the cloudships (the Cloud Sea is the veil; Wellspring shaped by its light lets a hull ride it); the Azarketi claim Elden blood they lack and live off a real Elden machine; the Silent-Tongue names are the machines' labels. Coherent with the Wellspring-leak canon and with persisting Elden works; the engine mediates, so no Stillpool Reflections. Rejected: S2 the Elden's engines (light only), S3 light out of time.
+- **Rejected (GM): the taps wearing down** (a campaign idea, not a setting fact; stays out of `/setting/`).
+- **Tension, round 1 rejected (GM):** the ten-year silver contract (too convenient beside B1). **Round 2 offered:** T1 Silfgir's third (a half for the town that carries the share; the tally this year); **T2 the west harbour** (a Vindul yard offers to build Silfgir an Arcanotech breakwater on the west lava shelf; Chakar has not refused; does the one-quay law forbid building a harbour or only selling from one?), recommended with T1 inside it; T3 the voiceless port.
+- **Live tension (GM): T2, the west harbour.** A Vindul yard has offered to build Silfgir a harbour under its own rim, an Arcanotech breakwater on the west lava shelf, at the yard's cost; **Chakar Dur Kohbrah** has not refused. Silfgir: its own quay, and the chance to sell its silver directly. The yard: silver without the Tolwaja's price. The island: the one harbour that holds the bargain. **Hani Gipt Siyasang** (Tolwaja since 2525; the tally falls in 2532): whether the one-quay law forbids building a harbour or only selling from one. Open, won by nobody.
+- **Section weights (GM: as proposed):** heavy: the rains and the drawing-out (opening with the column; ⚿ after it); the rain-share and the Tolwaja (the founding bargain, the tension). Medium: the isle and Siyabask (the coast, the Bask, the three roads); the silver and the cloudships; daily life (the share-day, the bowl and the board, the sundown account). Light: peoples, history, names.
 
 ## Rejected options
 
