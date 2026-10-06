@@ -5,7 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-06, with corrections).
-- **Phase 1 (seed questions): open.**
+- **Phase 1 (seed questions): closed** (GM, 2026-10-06).
+- **Phase 2 (seeds): open.**
 
 ## Phase 0: settled facts
 
@@ -21,7 +22,17 @@
 
 ## Decisions by phase
 
-*(Phase 1 in progress)*
+### Phase 1: seed questions (closed 2026-10-06)
+
+**The summary (GM-confirmed).** The River Duchies are a green the size of a kingdom between Galdua's dunes and Hareaveldi's oases: one great river from Emarrea's highlands spreading into a fan of lazy channels across the plain to the Hafra, and once a year the flood lays new silt over the whole valley, and the year is counted from it. Through it come Emarrea's barges downstream, Galdua's salt to the landings, Valreka's herd resting at the edge; the sand presses at the rim (its stance toward the dunes kept clear of Greenward's field-by-field fight), and beyond the western edge lie Galdua's pale band and the Rot-Tyrant's legions. Its heart is plenty in the domain of decay: the valley grows more than anyone can keep, and sloth may be its vice. It wastes water as Galdua gives it, which Galduans find obscene. Close offshore lies a smaller island or a chain of them with a strange-tree biome of their own (proposed: a chain built from the flood's silt), and beyond them a phantom isle in the mist, reached only on foot when the sea draws back.
+
+**The answers:**
+
+- **Q1 (GM: yes):** one great river spreads across the plain into a fan of slow channels; once a year **the flood** comes down from Emarrea's highlands and lays new silt over the valley; the year is counted from it, fields are measured anew after it, everything waits on it.
+- **Q2 (GM): a combination.** A **Socotra-like special biome** on the island: a tree like the dragon's-blood tree (not that name), with an even more striking look. And **a phantom island** surrounded by mist, approached only **on foot when the sea draws back** (Hy-Brasil with Mont-Saint-Michel's tidal crossing). GM aware it may be too much and overshadow the rest. **GM (2026-10-06): slim the island and bring it closer.** The map's large island was drawn long before regions or populations were set, to keep the Duchies from being small; a populous valley makes a small region fine, with a medium island or a collection of smallish ones (a map change at the repaint, a canon move at Phase 4).
+- **Q3 (GM: yes):** through, Emarrea's barges downstream, Galdua's salt to the landings, Valreka's herd at the edge; pressing, the sand creeping into the green, Galdua's pale band and its legions to the west. **Sameness flagged (GM):** the green lost and fought for field by field sits close to Greenward (the grey seeping back).
+- **Q4 (GM): plenty in the domain of decay**: the valley grows more than anyone can keep, in Tani's land where everything passes. **Sloth may be the regional vice** (for later, Phase 7).
+- **Q5 (GM: yes):** from Galdua's rationed springs into a country that wastes water: channels left running, fields flooded on purpose, water poured on the ground; Galduans find it obscene, Duchy folk find the Galduans' care faintly sad.
 
 ## Rejected options
 
