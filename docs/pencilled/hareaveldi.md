@@ -16,7 +16,7 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-06).
 - **Phase 10 (draft): closed** (GM, 2026-10-06, after corrections: the painted choice trimmed; "some fear" made plain (a reign ended by a painting against the Tajvar's word would leave every later Tajvar at the mercy of the great painters); keeping a self not secret; every colour in grades); the draft at [`hareaveldi-draft.md`](hareaveldi-draft.md).
 - **Phase 11 (commit lore): done** (2026-10-06). Built: `lore/geography/lioaru/hareaveldi.md`.
-- **Phase 12 (publish): open.**
+- **Phase 12 (publish): done** (2026-10-06): `published/setting/talan/domains/lioaru/hareaveldi/hareaveldi.html`, generated from the lore file, the order book as five day cards with its ledger tables. Wired into the sidebar, the Lioaru card (and its Peoples em-dash fixed), the interactive map (both Hareaveldi shapes), the site inventory. Mirrors: ancestries (the Nagaji's home), history (Sokhan), transport (the pigment road branch), Kaosadaemi (Ringhold's pigment).
 
 ## Phase 0: settled facts
 
