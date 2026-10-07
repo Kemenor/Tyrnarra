@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-07).
 - **Phase 7 (daily life): closed** (GM, 2026-10-07).
 - **Phase 8 (naming): closed** (GM, 2026-10-07).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-07).
+- **Phase 10 (draft): open.**
 
 ## Phase 0: settled facts
 
@@ -114,6 +115,13 @@
   - **Sample flood-names:** **Aghiwel** ("haste"), **Aludh** ("silt"), **Asemmam** ("sour"; a flood that soured the fields), **Uttis** ("sleepy, slow").
   - **Named figures:** **Tassadit Uttis Ath Akli**, the Mida's eldest, born in a slow flood; **Aghilas Aludh Ath Arezki**, this year's flood-warden; **Lounis Aghiwel Ath Sekkur**, duke of Westfold.
   - Collision search clean for every pick.
+
+### Phase 9: tension and reveal (closed 2026-10-07)
+
+- **Live tension (GM): the Westfold fields.** Since 2524 the Rot-Tyrant's legions have ranged across Galdua's pale band, which touches Westfold's western fields; farmers there have pulled back, and their fields have gone to thicket. Under the cut law thicket belongs to whoever cuts it back, and the neighbouring dukes send crews (with hired guards and adventurers) to cut the abandoned Westfold ground and keep it. **Lounis Aghiwel Ath Sekkur**, duke of Westfold, says a field abandoned to the legions has not gone to thicket but been taken, and taken land is not neglected land. The Mida must decide who judges, the duke or the flood-warden (the Phase 5 muddy line). Stakes: Westfold's farmers (their land when the legions go), the neighbouring dukes (new ground), the crews and adventurers (work), the cut law itself (bent for Westfold, it bends for everyone). Open, won by nobody.
+- **◈ (GM): B1, sleep in a field at noon and you'll wake a year older.** Mothers say it to keep children out of the fields in the heat; wrong (the quickening leaves people alone). Rejected: B2 the thicket comes back first where the cut law was broken; B3 the flood brings back what it took.
+- **⚿ (GM): none at this level.** Candidates offered and rejected: S1 the other half of tagnit (Galdua's deep water rising under the valley and spending the stillness of the killing; GM not sold on the connection); S2 Tani's elder face rests here (explains decay, not the quickening); S3 a sanctioned exchange with Tani at Valreka in the Lost Era (first version unmatched under Article 2; revised as growth for decay, still failing: the askers do not pay the price, later generations do); S4 a dead Gods'-Era harvest god's growth still running, its shard under the riverbed; S5 the valley as the place of Tani's rebirth. **Agu: no secret at this level**; the mystery stays in open prose.
+- **Section weights (GM: as proposed):** heavy: the quick valley and the turning (opening with the column; ◈ B1 closing it); the cut law, the dukes and the Mida (the tension). Medium: the river and the Hemmal (the flood feast, the flood-warden); the slow isles and Agu; daily life. Light: history (lost to its own green, the return); peoples; the tongue; names.
 
 ## Rejected options
 
