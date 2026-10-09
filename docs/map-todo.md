@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar), River Duchies (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar) (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -70,6 +70,8 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
   - **The three islands** stay wooded; nothing to add.
 
   **Labels** (named at the build, 2026-10-06): **Panjrang** at the capital icon (~3850, 7490); of its ring, **Sabzab** (green), **Lajvard** (blue), **Sorkhab** (red); the other oases await names.
+
+- **River Duchies** (Lioaru; built 2026-10-07; sketch [`map-refs/river-duchies-isles.webp`](map-refs/river-duchies-isles.webp), full-res coordinates). Remove the large sand island south of the coast. Draw a chain of three green islands off the south-east river mouths, tidal flats between them: **Tamegra** (~2872, 7434, ~30×15 mi), **Tamtunt** (~2812, 7462, ~19×11 mi), **Azay** (~2770, 7484, ~13×9 mi); a small fogged isle **Agu** (~2742, 7500). Label the capital icon (~2750, 7076) **Lemersa**; label **Westfold** on the western fields by the pale band.
 
 - **Repaint Auran** (formerly the Lost Isle; Lioaru; built 2026-10-06; sketch [`map-refs/lost-isle-sites.webp`](map-refs/lost-isle-sites.webp), full-res coordinates). The island is painted black for no reason canon gives; repaint it as ordinary island ground, green below, with **three volcanic peaks**, each with a crater lake: **Gulgir** (~1120, 6650), **Storngir** (~1060, 6740), **Silfgir** (~962, 6668). Cliff and black lava coast; **the Bask**, a lava arm on the east coast with the bay behind it. Move the capital icon from the centre (~1053, 6676) to **Siyabask** on the east coast (~1168, 6672). Labels: **Auran** (region, replacing *Lost Isle*), **Siyabask**, **Gulgir**, **Storngir**, **Silfgir**.
 

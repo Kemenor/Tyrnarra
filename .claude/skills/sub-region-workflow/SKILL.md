@@ -328,7 +328,7 @@ Do not assign one ancestry per sub-region, and do not invent a meta-rule that "d
 
 Keep this current as regions are built.
 
-- **Monarchies and houses:** the Thousand Kingdom (crown and sworn houses); the Emerald Isles; Harro Distiratsua (crown and Lamphold houses); Fellibylur (chartered merchant kingdom, parallel seats); Hareaveldi (the shed crown: a Tajvar for one self, chosen by the five houses, a great painter's portrait weighing on the choice).
+- **Monarchies and houses:** the Thousand Kingdom (crown and sworn houses); the Emerald Isles; Harro Distiratsua (crown and Lamphold houses); Fellibylur (chartered merchant kingdom, parallel seats); Hareaveldi (the shed crown: a Tajvar for one self, chosen by the five houses, a great painter's portrait weighing on the choice); the River Duchies (eleven dukes under the cut law, land held by keeping it cut; the Mida by majority; a flood-warden in the flood).
 - **Theocracies and clergy rule:** Legea (hereditary demigod theocracy, the readers of the book); the Dreaming Cape (Twin Lantern); Hirubaso (Elkaride hierocracy); the Order of Law (found Trimpon, forest chapter, Desi and Seneschals).
 - **Councils and assemblies (many):** the Vordsbench (Itsasalda), the hearth-council (Atarialda), the Open Floor (Azkataria), the Hightable, Baerfrost's chieftains, the Wyndwalken chapter, Fenurra's War Council, the Skarvorn, Myrria's Council of Adventurers; the Namur Senate (senators elected on self-written oaths) with its sworn Dictator.
 - **Money and property:** Rika Tikur (the Company, a plutocracy); Baratalda (Housen plutocracy, the Sealhouse); the Vernua Maors (oligarchy of the chain over voluntary comhar).

@@ -305,7 +305,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Oroiri**: Basque *oroit* (memory) + *hiri* (city) → contraction, *h-*loss → **Oroiri**, "the city of memory." Tani's buried Gods'-Era holy city, scattered under the desert at her death; Valreka roams to recover it piece by piece. Distinct from the **Storveldi Denbora**, whose separate ruin is the Blackened Lands; "Denbora" now names only that cursed empire.
 - **Galdua Jendea**: the Court Tongue, Basque *galdu* (lost) + *jende* (people), each with the article *-a* → **Galdua Jendea**, "the lost people". Given at the hinge of 1 MR to those who kept to the rock when Tani's faithful took to the whales. The older chronicles' reading "the Place of Many Waters" has no root in the word. The great dune sea of Lioaru, Valreka's range, and Azrar. Full block below, *Galdua Jendea*.
 - **Lost Kingdom**: plain Talanese. Folk names: **the Blackened Lands**; *the black spot on the map*. Full block below, *The Lost Kingdom*.
-- **River Duchies**: modern English
+- **River Duchies**: plain Talanese, the Golden Empire's name for the duchies of its granary province, kept at the return. Full block below, *The River Duchies*.
 - **Auran**: Balochi *hawr* (rain) + plural *-ān*, "the rains" → *Hawrān* → *Auran*. The islanders' name in Hauri, a regional-register name. Full block below, *Auran*. (Formerly mapped as the *Lost Isle*, renamed at the build, 2026-10-06.)
 - **Hareaveldi**: a compound of the two deep tongues: Icelandic *veldi* (realm, dominion), the Silent Tongue's word for this ground, and Basque *harea* (sand), the Court Tongue's, the gods renaming the Elden's realm and keeping half → **Hareaveldi**, "the Sand Realm"; minimal drift, the initial *h-* aspiration lost only. A realm before Tani ruled Lioaru. Full block below, *Hareaveldi*.
 
@@ -952,6 +952,28 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The bowl-name.** Given by the grandmothers at a child's first catch, from that moment, and kept for life; usually a single word (*Gipt*, caught; *Burt*, carried off; *Dur*, far; *Brah*, shine; *Passaw*, answer; *Banda*, tomorrow, for a child who brought the catch back after dark).
 - **The household.** Chosen by its founders when they found it and entered in the Daptar, which never takes a name twice; children carry their parents' until they found their own. A family name lasts one generation.
 - **The child.** Given and household until the first catch.
+
+**The River Duchies (Lioaru):** Kabyle checked 2026-10-07 (DiKab, citing Dallet, *Dictionnaire kabyle-français*, 1982, and Bouamara, *Issin*, 2010; English Wiktionary). Plain letters, short words; *ɣ* written *gh*; the clan marker *Ath*.
+- **Ameslay**: Kabyle *ameslay* (speech). The tongue of the River Duchies, a sister of the Awal of the rocks and the herd.
+- **Lemersa**: Kabyle *lmersa* (port; an Arabic loan, as in real Kabyle) → *Lemersa*. The capital, at the head of the bay; no duke's.
+- **The Mida**: Kabyle *lmida* (low dining table) → *the Mida*. The eleven dukes sitting together at Lemersa.
+- **The Hemmal**: Kabyle *aḥemmal* (flood, spate) → *the Hemmal*. The yearly flood.
+- **Tamegra**, **Tamtunt**, **Azay**: Kabyle *tamegra* (harvest), *tamtunt* (leaven), *aẓay* (slowness, heaviness). The slow isles: the seed stores, the cellars, the oldest trees.
+- **Agu**: Kabyle *agu* (fog). The island in the fog beyond Azay.
+- **Westfold**: plain Talanese, an imperial duchy name reclaimed at the return. The western duchy, on the pale band.
+- **The cut law**, **the flood-warden**, **the slow isles**, **the thicket**, **the flood feast**, **the seed-boats**, **the first cut**, **the first brew**, **the drift-barges**: plain Talanese.
+
+*Named Duchy folk (in the register below):*
+- **Tassadit Uttis Ath Akli**: *Tassadit* (a Kabyle woman's name, from Arabic *saʿd*, luck, in the Berber feminine frame); birth-flood *uṭṭis* (sleepy, slow); house *Ath Akli* (*akli*, a Kabyle man's name). The Mida's eldest.
+- **Aghilas Aludh Ath Arezki**: *Aghilas* (a Kabyle name, "leopard"); birth-flood *aluḍ* (silt); house *Ath Arezki*. This year's flood-warden.
+- **Lounis Aghiwel Ath Sekkur**: *Lounis* (a Kabyle name); birth-flood *aɣiwel* (haste); house *Ath Sekkur* (from *Sekkura*, a Kabyle name, "partridge"). Duke of Westfold.
+
+*In other registers:* **Golivander Tessek** (the Tengu convention); the column's correspondents **Tiziri n Tamalut, of thirty** (Galduan), **Ottavia Grimal detta Ferma** (Namurese), **Izem Langback** (Valrekan).
+
+**The Duchy register: the personal-name convention.** Word-base Kabyle, English alphabet, plain letters. Full canon in `geography/lioaru/river-duchies.md`, *What the Duchy folk are called*.
+- **Form.** *[given] [birth-flood] Ath [house]*.
+- **The birth-flood.** The name the flood-warden gives the year's flood when the water goes down, carried by every child born that year; the vintages carry the same names; everyone of one flood is a cohort. Flood-names are Ameslay words for what the flood did (*Aghiwel*, haste; *Aludh*, silt; *Asemmam*, sour; *Uttis*, slow).
+- **The house.** *Ath* (the people of) and the founder's name, carried by all the house's children.
 
 **Thekkavar (Enki's city-state, Ezkudon):**
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.

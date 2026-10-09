@@ -210,6 +210,11 @@ Pace as stories want them. Rolling work.
 
 ## § Regions: Lioaru
 
+### [River Duchies] Post-build texture
+**Decided.** Built 2026-10-07: `lore/geography/lioaru/river-duchies.md`.
+**Open.** The ten other duchies and their dukes; whether new houses are made; the season of the Hemmal; Agu; a ⚿ for the quickening if a good one turns up (the candidates rejected at the build are in `docs/pencilled/river-duchies.md`); Golivander's Guide entry on the Duchies, after his voice is reworked.
+**Where.** `lore/geography/lioaru/river-duchies.md`.
+
 ### [Auran] Post-build texture
 **Decided.** Built 2026-10-06: `lore/geography/lioaru/auran.md`.
 **Open.** How a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Red Dominion's side of the carrying; the Guild's post-house and its keeper.

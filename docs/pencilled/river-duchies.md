@@ -14,7 +14,9 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-07).
 - **Phase 8 (naming): closed** (GM, 2026-10-07).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-07).
-- **Phase 10 (draft): open.**
+- **Phase 10 (draft): closed** (GM, 2026-10-09: "A, hold it then commit and publish"; Decay softened to "the side of Tani most of Lioaru only resists", keeping Valreka's canon; the Guide entry held until Golivander's voice is reworked); the draft at [`river-duchies-draft.md`](river-duchies-draft.md). GM notes (2026-10-09): Decay is Tani's negative side, feared elsewhere in Lioaru and revered only here (the turning line and the faith lines revised; the "elder face" mapping dropped). **Golivander's voice to be reworked after this build** (GM not a fan of how he is written: the style, the definition in `voices.md`, the examples).
+- **Phase 11 (commit lore): done** (2026-10-09). Built: `lore/geography/lioaru/river-duchies.md`.
+- **Phase 12 (publish): in progress.**
 
 ## Phase 0: settled facts
 

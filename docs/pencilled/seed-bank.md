@@ -26,6 +26,8 @@ Tani's death ruined the earth and left a cursed blight on the ground. After cent
 
 ## River Duchies (Lioaru) · GM, 2026-10-02
 
+**Built (2026-10-07):** `lore/geography/lioaru/river-duchies.md`.
+
 **The oasis in the desert**, the green among the dunes: **lazy rivers**, and an oasis the size of a kingdom.
 
 *Touches:* the green river valley through Lioaru's desert; Emarrea's downstream trade and Valreka's house Asif (Duchy trade and marriages, "a valley accent"); a Berber sister tongue.
