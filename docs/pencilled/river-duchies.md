@@ -16,7 +16,7 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-07).
 - **Phase 10 (draft): closed** (GM, 2026-10-09: "A, hold it then commit and publish"; Decay softened to "the side of Tani most of Lioaru only resists", keeping Valreka's canon; the Guide entry held until Golivander's voice is reworked); the draft at [`river-duchies-draft.md`](river-duchies-draft.md). GM notes (2026-10-09): Decay is Tani's negative side, feared elsewhere in Lioaru and revered only here (the turning line and the faith lines revised; the "elder face" mapping dropped). **Golivander's voice to be reworked after this build** (GM not a fan of how he is written: the style, the definition in `voices.md`, the examples).
 - **Phase 11 (commit lore): done** (2026-10-09). Built: `lore/geography/lioaru/river-duchies.md`.
-- **Phase 12 (publish): in progress.**
+- **Phase 12 (publish): done** (2026-10-09): `published/setting/talan/domains/lioaru/river-duchies/river-duchies.html`, generated from the lore file (`build_rd.py`, scratchpad), the column as four log cards; accent `#a8c878`. Wired: sidebar, the Lioaru card (clickable), both map shapes linked, the site inventory. Mirrors: `history.html` (the whale-tongues row: Ameslay), `transport.html` (Lemersa among the ports). Left: the `lioaru.html` Magitrain line (rail not yet placed, GM); the old island shape on the map until the repaint.
 
 ## Phase 0: settled facts
 

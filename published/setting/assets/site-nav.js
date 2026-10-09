@@ -129,6 +129,7 @@
     { slug: 'lioaru',   label: 'Lioaru · Time',       href: '/setting/talan/domains/lioaru/lioaru.html',     children: [
       { slug: 'galdua-jendea', label: 'Galdua Jendea · the Rocks of the Dune Sea', href: '/setting/talan/domains/lioaru/galdua-jendea/galdua-jendea.html', children: [] },
       { slug: 'auran',        label: 'Auran · the Three Rains', href: '/setting/talan/domains/lioaru/auran/auran.html', children: [] },
+      { slug: 'river-duchies', label: 'River Duchies · the Quick Valley', href: '/setting/talan/domains/lioaru/river-duchies/river-duchies.html', children: [] },
       { slug: 'hareaveldi',   label: 'Hareaveldi · the Sand Realm', href: '/setting/talan/domains/lioaru/hareaveldi/hareaveldi.html', children: [] },
       { slug: 'valreka',      label: 'Valreka &middot; the Whale-Borne City', href: '/setting/talan/domains/lioaru/valreka/valreka.html', children: [
         { slug: 'whalehall', label: 'The Whalehall &middot; Valreka\'s Godshall', href: '/setting/talan/domains/lioaru/valreka/whalehall.html', children: [] }
