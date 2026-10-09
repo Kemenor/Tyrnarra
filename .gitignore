@@ -77,3 +77,6 @@ tools/imageGen/comfy-server.log
 tools/wonderdraft/gcpf
 tools/wonderdraft/.venv/
 tools/wonderdraft/assetgen/.venv/
+
+# region-page generators: Python bytecode cache
+tools/region-pages/__pycache__/
