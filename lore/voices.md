@@ -12,9 +12,9 @@ House style applies inside the voices too: no em-dashes, affirmative prose, *mor
 
 ### The spine: the dial
 
-Everything Golivander writes is organised around a single act: he notices, and then he decides how much of the noticed thing the page is owed. His four registers are four positions of that one dial, which is why an unlabeled paragraph from any of them still reads as him.
+Everything Golivander writes is organised around a single act: he notices, and then he decides how much of the noticed thing the page is owed. His registers are positions of that one dial, and the dial measures **how much of himself is on the page**. The *Guide* shows the world and keeps him at the edge of the frame; the *Chronicle* lets him walk into it; the letters home are nothing but him; the letters to Vyrenna hold what no page is ever owed.
 
-**The dial is structure, never a catchphrase.** The literal *"I notice and I shall not say"* formula appears rarely: once per column at most, often never. The withholding surfaces through variation instead. Ways he declines to say a thing, to be rotated and never repeated twice in one piece:
+**The withholding stays.** He still declines to say some things (to protect a source, to keep a confidence, to keep the sealed things sealed), and he declines with style, never with a formula. The ways rotate and never repeat in one piece:
 
 - He describes the tea for a paragraph at the exact moment a name would have landed.
 - He makes the joke about himself instead and moves on.
@@ -23,60 +23,69 @@ Everything Golivander writes is organised around a single act: he notices, and t
 - He gives the fact a neighbour: *the kingdom has a view on this; the kingdom is often early.*
 - He simply ends the paragraph one sentence before the reader expects.
 
-The reader learns to feel the withheld thing from the shape of the detour.
-
 ### The temperament
 
-**Witty and warm, in that order of visibility and the reverse order of importance.** Warmth is the ground; wit grows on it.
+**Funny, accurate and warm, and the order matters least.** He is the most read travel writer on the continent because he is a pleasure to read: dry, lively, exact, with a joke wherever the world has left one lying about. The comedy is never invented. The world is exactly as odd as he reports, and he is the one who noticed.
 
-**The wit never punches down.** Its licensed targets are institutions, pretension, collectives (*the kingdom*, *the literate classes*, *my publisher*), and Golivander himself. When a vulnerable person is in frame (the nervous young official, the grieving, the apprentice who poured the wrong tier), the wit steps aside and plain warmth carries the sentence. His opinion of a person he cannot praise is expressed as scrupulous, unmistakable fairness.
+**How the wit works.** The toolkit, to be rotated and never stacked:
+
+- **Deadpan precision.** A fact stated so exactly that the exactness becomes the joke. *The tolls are posted, fair and numerous.*
+- **Bathos.** The grand build-up that lands on something small. *The salt landings are quicker, if the traveller is a sack of salt.*
+- **The strange treated as routine, and the routine as momentous.** A valley where fruit rots in a day is reported like the weather; a well-made cup of tea is reported like a coronation.
+- **The literal-minded aside.** Taking a custom, a saying or a name at its word. *The traveller who keeps a peach for later will find at supper that later has already happened to it.*
+- **The late word.** The sentence that runs one clause past where the reader expected it to stop. *Bring small coin, and then bring more.*
+- **The honest absence.** What he has not seen, admitted plainly, is itself a joke. *Nobody has offered me a second fact, and I decline to invent one.*
+
+**The cadence.** Plain fact, plain fact, turn. Most sentences carry information and no joke at all; the joke earns its place by arriving after the reader has been told something true. A paragraph with a joke in every line is a paragraph that has stopped being a guide.
+
+**The wit never punches down.** Its licensed targets are institutions, pretension, collectives (*the kingdom*, *the literate classes*, *my publisher*, the eleven dukes as a body), inanimate things that behave like institutions (rivers, weather, bureaucracies, ferries), and Golivander himself. When a vulnerable person is in frame (the nervous young official, the grieving, the apprentice who poured the wrong tier), the wit steps aside and plain warmth carries the sentence. His opinion of a person he cannot praise is expressed as scrupulous, unmistakable fairness.
+
+**It is true.** Unlike a mockumentary, he is never wrong on purpose. Every joke rests on a fact the lore holds; method rule 1 (never print uncorroborated gossip) applies to punchlines too.
 
 ### The tea rule
 
-Golivander's single true pet peeve is **tea, badly brewed**. He abhors it, and the abhorrence is the **one licensed breach** of every register's rules: the only place displeasure is written down rather than implied, in all four registers, escalating as they open.
+Golivander's single true pet peeve is **tea, badly brewed**. He abhors it, and **tea is the one subject he will not be funny about.** In a voice that finds the joke in everything, the tea clause is flat, short and entirely serious, and that is what makes it land.
 
-- **Guide:** the sole negative judgment the reference work permits itself. One dry clause, deadlier for its isolation. Literate Talan knows he never complains in the Guide, so a tea complaint is a collector's item; readers hunt for them.
-- **Chronicle:** open, theatrical despair. A paragraph of mourning for what was done to good Vintek leaves, comic precisely because the warmth rule holds everywhere else.
+- **Guide:** one sentence, set by itself at the end of an entry, with nothing to soften it. *The tea is fermented.* Literate Talan hunts for them.
+- **Chronicle:** a paragraph of grief, utterly sincere, written in the same voice that spent the previous paragraph being delightful about a ferry; the reader laughs because he does not.
 - **Letters home:** three words, no articles. *"Boiled it. Barbarians."*
-- **The reflex is involuntary.** It fires even in places he otherwise loved; a five-paragraph love letter to a town will still carry the one wounded clause about the roadside brew on the way in.
+- **The reflex is involuntary.** It fires even in places he otherwise loved; a five-paragraph love letter to a town will still carry the one wounded clause about the roadside brew on the way in. One firing per piece at most.
 
-The peeve has a canonical villain: the mainland practice of faking Skardun by re-labelling lower-band leaves (see [`geography/vindul/haizetsua.md`](geography/vindul/haizetsua.md), *The Three Teas*). Seventy years of drinking what the mainland dares to call tea sit behind every clause.
+The peeve has a canonical villain: the mainland practice of faking Skardun by re-labelling lower-band leaves (see [`geography/vindul/haizetsua.md`](geography/vindul/haizetsua.md), *The Three Teas*).
 
-### The four registers
+### The registers
 
-#### 1 · *A Traveller's Guide to Tyrnarra* (the dial nearly closed)
+#### 1 · *A Traveller's Guide to Tyrnarra* (the dial: the world, with him at the edge)
 
-The formal multi-volume reference work; the standing authority of the literate classes. He publishes only what is the case. **His opinion lives in selection**: displeasure appears as the absence of his pleasure. When he loved a place, the entry lingers (the meal is described, the innkeeper's dog has a name); when a place disappointed him, the entry is impeccably complete and contains no meal. Readers scan for whether he ate.
+The multi-volume reference work, the best-selling book on the continent and the standing authority of the literate classes. It tells the traveller how to get there, where to sleep, what to eat, what to avoid and what it costs, and it is the book people read aloud to each other for pleasure. Practical first: every entry answers the traveller's questions. Funny second, throughout. He appears only as an *I* at the edges: what he did not see, what he declines to invent, the one meal he cannot stop thinking about.
 
 **Coverage runs in three public classes**, and literate Talan knows how to read them:
 
 1. **From the ground.** He stood there. Experience-first, sensory, specific. The overwhelming majority of Talan entries, including all thirteen god-cities.
-2. **From other mouths, and marked.** Method rule 1 (never print uncorroborated) forces this class to announce itself: *"I have not stood in it. Three who have agree on the following."* The register shift itself tells the reader which class they are in.
-3. **Silent.** Places no chronicler goes, and the Guide's silence is famous rather than embarrassed: Bolverk, the Nine Generals' dungeons, the Red Empire's home continent. His refusal to pretend is part of why the rest is trusted.
+2. **From other mouths, and marked.** Method rule 1 forces this class to announce itself, and he announces it with relish: *"I have not stood in it. Three who have agree on the following, and on nothing else."*
+3. **Silent.** Places no chronicler goes, and the Guide's silence is famous rather than embarrassed: Bolverk, the Nine Generals' dungeons, the Red Empire's home continent. Even the silence is phrased well.
 
-He has made the Cloud Sea crossing to **Sortalde** once, a years-long expedition in Vornsketta style; the Sortalde volume is the mainland's standing reference on the Petal Continent. He has never set foot on the Red Empire's continent; at most he has seen Iron Tide sails from a distance and interviewed survivors, class 2 at its most careful.
+He has made the Cloud Sea crossing to **Sortalde** once, a years-long expedition in Vornsketta style; the Sortalde volume is the mainland's standing reference on the Petal Continent. He has never set foot on the Red Empire's continent.
 
-**Sample (Guide register):**
+**Sample (Guide register):** the River Duchies, from [`geography/lioaru/river-duchies-chronicle.md`](geography/lioaru/river-duchies-chronicle.md).
 
-> *The ferry-inn on the Smáa keeps eleven rooms, an honest ledger, and a cook who understands eels. The dawn crossing is the reliable one. Travellers bound for the Cape should ask for the north-bank room and sleep early; the drift is gentler before midnight. The tea is boiled.*
+> *Buy fruit at dawn. Eat it before noon. At noon the vinegar-makers come round with their carts and buy whatever is left, and by evening it is in a vat being improved. The traveller who keeps a peach for later will find at supper that later has already happened to it. Nothing in the valley keeps, which the Duchy folk regard less as a misfortune than as a philosophy, and which they have turned into the best vinegar on Talan.*
 
-#### 2 · *The Travelling Chronicle* (the dial half-open)
+#### 2 · *The Travelling Chronicle* (the dial: him in the frame)
 
-The periodical. His own voice: opinions present but dressed, warmth openly worn, the elision doing the talking. He tells you *that* he noticed; what he does with it varies by the list above.
+The periodical, and where readers go for more of him. The same wit, at greater length and with Golivander walking into the scene: his opinions, his digressions, his feet, his luggage, the cider barrel he sat on. He tells you *that* he noticed and what he made of it; he argues with correspondents, admits his mistakes in print and enjoys them. Where the Guide is a joke at the world's expense, the Chronicle is a joke at his own, and the warmth shows through more openly.
 
 **Sample (Chronicle register):**
 
-> *The High Fair has moved, as the High Fair does, and I have arrived, as I do, a week behind my luggage. The Sealwarden's clerks tell me the Standings were read at dawn to spare the losing house an audience. A kindness, says the Registry. The losing house had opinions on the kindness, which it shared with the whole of the fair-square at noon, at length, from a cart. I sat on a cider barrel and took notes and was, for one hour of this working life, perfectly happy.*
+> *The High Fair has moved, as the High Fair does, and I have arrived, as I do, a week behind it and two days behind my luggage, which travels better than I do and has never once been asked for its papers. The Sealwarden's clerks tell me the Standings were read at dawn to spare the losing house an audience. A kindness, says the Registry. The losing house had views on the kindness, and shared them with the whole fair-square at noon, at length, from a cart, which the Registry had not thought to forbid because nobody had ever needed to. I sat on a cider barrel and took notes, and was, for one hour of this working life, perfectly happy. The cider barrel was less happy. It has been reported.*
 
-#### 3 · Letters home to clan Tessek (the dial open)
+#### 3 · Letters home to clan Tessek (the dial: all of him)
 
-The semi-private ring. Every Tengu abroad is on the clan's correspondence list; Golivander is its most famous name, and the clan reads his letters aloud at flock-meals. He knows they do, which keeps the letters warm rather than confessional: unbound, but written for one hearth-sized audience.
-
-The register is the Tengu one. **Wind-dates alone** (no Talanese month; at home the wind alone serves). **Speech-economy**: short sentences, the formal register's article-dropping and pronoun-dropping bleeding in. Flock idiom, Haizetsua references that need no gloss. The mainland literary architecture falls away entirely.
+The semi-private ring. Every Tengu abroad is on the clan's correspondence list; Golivander is its most famous name, and the clan reads his letters aloud at flock-meals. These are **not witty**. They are warm, opinionated and plain: what he loved, what he did not, who was kind, what he misses, what he thinks of the world without the dressing. The register is the Tengu one: **wind-dates alone**, **speech-economy** (short sentences, dropped articles and pronouns), flock idiom, Haizetsua references that need no gloss. Every line is an opinion, and every opinion is fond.
 
 **Sample (letter home):**
 
-> *Tellenn. Rain three days. Reached the orchard country; you would like the horns here. They call crews home across four valleys and mean every note. Ate well twice, slept badly once, wrote the middle of a chapter that has no ends yet. Tell aunt her Vintek tin arrived and saved a mainland fortnight. Winds hold you all.*
+> *Tellenn. Rain three days. Reached the orchard country. You would like the horns: they call crews home across four valleys and mean every note, which is more than I can say for most choirs. Good people here. Generous with pears, mean with chairs. Ate well twice, slept badly once, missed the flock-meal more than the meals. Tell aunt her Vintek tin arrived and saved a mainland fortnight. Winds hold you all.*
 
 #### 4 · The letters to Vyrenna (the dial fully open)
 
@@ -225,7 +234,7 @@ How the two bylines are used across the published site.
 - **Division of territory.** Golivander graces Talan: Guide excerpts on region and settlement pages, Chronicle passages where a court, an event, or a person is in frame. Vyrenna graces the beyond and the overlooked: planar pages when they exist, and the one-line places (her early corpus fits the thin sub-regions the census still lists). The division is temperament made visible: he carries Talan, she carries the beyond.
 - **A section is a treat, never chrome.** Any page *can* carry a voice-quotation; no page must. A quotation earns its place by adding a register the page's own prose cannot reach.
 - **Tier discipline.** Guide, Chronicle, and *One Line Further* excerpts are open prose (chronicler-tier). The tavern-shapes of his agelessness and his rumoured journeys are amber ◈ material. The letters to Vyrenna, the silent journeys, the aging mechanism, the retrace, and Wren's true name are red ⚿ and never leak into open prose.
-- **The don'ts.** The elision is varied, never a catchphrase. The wit never punches down. The tea reflex and the music peeve are rationed like any signature: one firing per piece at most. Vyrenna's wind-images run about one per passage. Register 4 cargo never appears on a player-facing page outside a ⚿ box.
+- **The don'ts.** The elision is varied, never a catchphrase. The wit never punches down. The tea reflex and the music peeve are rationed like any signature: one firing per piece at most. Golivander's wit follows the toolkit and the cadence in *The temperament* (plain fact, plain fact, turn), and every joke rests on a fact the lore holds; read the samples before writing a new passage. His letters home carry warmth and opinion, not wit. Vyrenna's wind-images run about one per passage. Register 4 cargo never appears on a player-facing page outside a ⚿ box.
 - **The samples above are canonical reference passages.** Match their cadence before coining new ones, and add substantial new in-world texts to this file (the `heartcourt-letters.md` model) so the corpus stays auditable.
 
 ## Corpus index (off-file passages)
@@ -235,4 +244,4 @@ How the two bylines are used across the published site.
 - **The Zenerious log (2026-09)**: a third byline, outside the Tessek family. **Master Zenerious of the Air Monastery**, a Wyndwalken field-log of the crossing of the Lands of Villtur at the Adventurer Era's opening, GM-written; its register is the day-report (what happened, what he saw, what he was told, what he did not understand; one practical complaint; no interpretation), and it is the voice channel of the Villtur entry. Lives in [`geography/ehizahar/zenerious-log.md`](geography/ehizahar/zenerious-log.md); quoted through [`geography/ehizahar/villtur.md`](geography/ehizahar/villtur.md). Match his entries before coining a new one; the whole log is GM-written.
 - **Balaena, two passages (2026-08-12)**: Golivander in the Guide register (the surface only, and found lacking: impeccably complete, no meal, the tea clause spent, and the entry's rare honest miss, *"the alleys inward are residential"*, born of the efficient-day method that once nearly cost the family Wren); Vyrenna in *One Line Further*, the Talan years (the alley on day one, eight days with five families, never tasted mirrorshine; one wind-image, Vorkat, its first corpus use). Both live in [`geography/floteyn/balaena.md`](geography/floteyn/balaena.md), *Voices in the yards*.
 - **Auran, the column (2026-10-06)**: Vyrenna in *One Line Further*, the Talan years (2526 MR, before Wren): a column in parts dated by rains, opened by the Guide's one line (*…and it did not rain*); two wind-images, Vorkat and Tellenn; no music peeve. Published whole: [`geography/lioaru/auran-column.md`](geography/lioaru/auran-column.md).
-- **The River Duchies, the correspondence (2026-10-07)**: Golivander in *The Travelling Chronicle*, 2509 MR, answering three cross correspondents (a Galduan keeper, a Namurese, a Valrekan factor); no tea clause, the meal described. Lives in [`geography/lioaru/river-duchies-chronicle.md`](geography/lioaru/river-duchies-chronicle.md). His *Guide* entry on the Duchies is held until his voice is reworked.
+- **The River Duchies, the correspondence (2026-10-07)**: Golivander in *The Travelling Chronicle*, 2509 MR, answering three cross correspondents (a Galduan keeper, a Namurese, a Valrekan factor); no tea clause, the meal described. Lives in [`geography/lioaru/river-duchies-chronicle.md`](geography/lioaru/river-duchies-chronicle.md). His full *Guide* entry on the Duchies, the first written in the reworked voice (2026-10-10), stands before it in the same file.

@@ -1,6 +1,6 @@
-# The Travelling Chronicle: To my correspondents, on the River Duchies
+# Golivander on the River Duchies: the Guide and the Chronicle
 
-**In-world document of the River Duchies** (region canon: [`river-duchies.md`](river-duchies.md)). Shaped together by the GM and Claude (2026-10-06): the GM chose the voice (Golivander Tessek, who sees through what others call scandalous to the whole picture) and the form (a *Chronicle* correspondence column); Claude wrote the text; accepted by the GM. The traveller's image for the River Duchies (sub-region-workflow Phase 3): the market turning in a day, and the seed-boats on the flood's eve. Revised at Phase 7 (GM, 2026-10-07): the holdsand seed replaced by the seed-boats and the Galduan salt. Published whole as a log card, with excerpts at the section heads. **To come:** Golivander's full *Guide* entry on the Duchies, held back at the build (GM, 2026-10-09) until his voice is reworked; a draft is in `docs/pencilled/river-duchies-draft.md`, D1. Indexed in [`../../voices.md`](../../voices.md), *Corpus index*.
+**In-world document of the River Duchies** (region canon: [`river-duchies.md`](river-duchies.md)). Shaped together by the GM and Claude (2026-10-06): the GM chose the voice (Golivander Tessek, who sees through what others call scandalous to the whole picture) and the form (a *Chronicle* correspondence column); Claude wrote the text; accepted by the GM. The traveller's image for the River Duchies (sub-region-workflow Phase 3): the market turning in a day, and the seed-boats on the flood's eve. Revised at Phase 7 (GM, 2026-10-07): the holdsand seed replaced by the seed-boats and the Galduan salt. Published whole as a log card, with excerpts at the section heads. Golivander's *Guide* entry on the Duchies stands before the column, written after his voice was reworked (GM, 2026-10-10). Indexed in [`../../voices.md`](../../voices.md), *Corpus index*.
 
 **Voice block.** **Golivander Tessek** · in *The Travelling Chronicle* register (the dial half-open), 2509 MR, from the ground. Answers three cross correspondents, each right about what they saw; the wit aims at the scandalised and never at the valley's people; the meal described, his tell that he loved the place; no tea clause here (it belongs to the Guide entry). His full canon: [`../../voices.md`](../../voices.md).
 
@@ -10,6 +10,24 @@
 - **Izem Langback** · a factor of Valreka, buying grain for the granary-whale (Valrekan register) · a counting man, offended by waste.
 
 ---
+
+**Golivander Tessek, *A Traveller's Guide to Tyrnarra*: the River Duchies**
+
+> *The River Duchies are a valley in which everything grows in a week and rots in the next, and its people have arranged their entire civilisation around not minding. The traveller is advised to adopt the same position at once. It saves time, which is the one thing the valley has no use for.*
+>
+> *Three routes lead in. The drift-barge from Emarrea takes a week, travelling at the speed of the river, a river that has never been asked to hurry and would not know how. The salt landings below Galdua's southern rocks are quicker, if the traveller is a sack of salt. Ships come into the bay at Lemersa, where the river meets the sea and both look relieved about it.*
+>
+> *Lemersa belongs to no duke, an arrangement the valley's eleven dukes agreed to because each of them preferred it to the alternative, which was another duke. They meet there at a low table called the Mida whenever a matter concerns all of them, which happens less often than visitors expect and more often than the dukes would like. Everything else is settled by whichever duke owns the stretch of river the traveller is standing beside, and each will charge a toll for it. The tolls are posted, fair and numerous. Bring small coin, and then bring more.*
+>
+> *Buy fruit at dawn. Eat it before noon. At noon the vinegar-makers come round with their carts and buy whatever is left, and by evening it is in a vat being improved. The traveller who keeps a peach for later will find at supper that later has already happened to it. Nothing in the valley keeps, which the Duchy folk regard less as a misfortune than as a philosophy, and which they have turned into the best vinegar on Talan.*
+>
+> *The date wine is reckoned in floods. A nine-flood, aged on Tamtunt, where the valley's hurry stops at the shore, is worth asking for and worth the price. The fish sauce goes on everything. This is correct.*
+>
+> *I have not stood on Agu, the island in the fog beyond the slow isles; it can be walked to only on the lowest tides of the year, and I was there on the wrong ones. Those who have been agree that the fog does not lift. Nobody has offered me a second fact, and I decline to invent one.*
+>
+> *Come before the Hemmal, the yearly flood, and eat at the flood feast on the levees, the one meal of the year the valley eats in a hurry. During the flood, do as the flood-warden says; the flood-warden is the only person in the valley entitled to be in a rush, and is not shy about it. The inns are plentiful and unhurried. Book nothing. Nothing here is booked.*
+>
+> *The tea is fermented.*
 
 **Golivander Tessek, *The Travelling Chronicle*, 2509 MR: To my correspondents, on the River Duchies**
 
