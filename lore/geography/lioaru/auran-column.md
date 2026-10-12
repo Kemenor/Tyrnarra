@@ -8,7 +8,7 @@
 
 **Golivander Tessek, *A Traveller's Guide to Tyrnarra*:**
 
-> *Auran: two days by saltkeel; the three essences are sold at the Siyabask quay, where the visitor's business begins and ends; the nearest crater town lies a day's road inland, and it did not rain.*
+> *Auran: two days by saltkeel; the three essences are sold on the quay at Siyabask, where the visitor's business begins and ends; the nearest crater town lies a day's road inland and is said to be remarkable when it rains. It did not rain.*
 
 **Vyrenna Tessek, *One Line Further*, the Talan years:**
 
