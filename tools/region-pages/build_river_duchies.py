@@ -14,7 +14,7 @@ quick_html = vq(quote(d1, 'At dawn the market')) + prose(p1[0:2]) + panel('The T
 # The river and the Hemmal
 d2 = section('The river and the Hemmal'); p2 = body(d2)
 assert [lead_name(p) for p in p2[1:3]] == ['The flood feast', 'The flood-warden']
-river_html = vq(quote(d2, 'Once a year it comes')) + prose(p2[0:1]) + lead_cards(p2[1:3])
+river_html = vq(quote(d2, 'Once a year the river comes')) + prose(p2[0:1]) + lead_cards(p2[1:3])
 
 # The cut law and the Mida
 d3 = section('The cut law and the Mida'); p3 = body(d3)
@@ -48,6 +48,13 @@ def figcard(x):
     r_ = inline(rest).replace('&lt;i&gt;', '<i>').replace('&lt;/i&gt;', '</i>'); r_ = r_[0].upper() + r_[1:]
     return '    <div class="accent-card">\n      <div class="card-name">%s</div>\n      <p>%s</p>\n    </div>\n' % (html.escape(m.group(1)), r_)
 fig_html = '  <div class="card-grid figure-grid">\n' + ''.join(figcard(x) for x in figs) + '  </div>\n'
+
+# The Guide entry, whole
+gi = T.index("**Golivander Tessek, *A Traveller's Guide to Tyrnarra*: the River Duchies**")
+gj = T.index("**Golivander Tessek, *The Travelling Chronicle*")
+gparas = [l[2:] if l.startswith('> ') else l[1:] for l in T[gi:gj].split('\n') if l.startswith('>')]
+gparas = [x.strip().strip('*') for x in gparas if x.strip()]
+guide_html = '  <div class="voice-quote">%s</div>\n  <div class="voice-attrib">Golivander Tessek, <i>A Traveller\'s Guide to Tyrnarra</i></div>\n' % ''.join('<p>%s</p>' % inline(x) for x in gparas)
 
 # The column: the intro, then a card per correspondent and one for the last evening
 col = T[T.index('My column on the River Duchies'):]
@@ -147,7 +154,8 @@ page = '''<!DOCTYPE html>
 ''' + folk_html + '\n' + DIV + '''  <h2 id="the-tongue" class="section-heading">The Tongue</h2>
 ''' + tongue_html + '\n' + DIV + '''  <h2 id="names" class="section-heading">What the Duchy Folk Are Called</h2>
 ''' + names_html + '\n' + DIV + '''  <h2 id="figures" class="section-heading">Named Figures</h2>
-''' + fig_html + '\n' + DIV + '''  <h2 id="the-column" class="section-heading">To My Correspondents, on the River Duchies</h2>
+''' + fig_html + '\n' + DIV + '''  <h2 id="the-guide" class="section-heading">The Guide: the River Duchies</h2>
+''' + guide_html + '\n' + DIV + '''  <h2 id="the-column" class="section-heading">To My Correspondents, on the River Duchies</h2>
 ''' + column_html + '\n' + DIV + '''  <div class="see-also">
     <h3>Continue Reading</h3>
     <ul>
