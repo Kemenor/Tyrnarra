@@ -1,6 +1,6 @@
 # The River Duchies (Lioaru)
 
-*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract (2026-10-07). Parent domain: [`../lioaru.md`](../lioaru.md). The column quoted throughout is [`river-duchies-chronicle.md`](river-duchies-chronicle.md).*
+*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract (2026-10-07). Parent domain: [`../lioaru.md`](../lioaru.md). Golivander's Guide entry and the column quoted throughout are in [`river-duchies-chronicle.md`](river-duchies-chronicle.md).*
 
 **Etymology:** plain Talanese, the Golden Empire's name for the duchies of its granary province, kept when the valley was cut back out of the thicket. Adjective: **Duchy**; its people, **the Duchy folk**. The valley's own words are in **Ameslay**: **Lemersa**, **the Mida**, **the Hemmal**, the slow isles **Tamegra**, **Tamtunt** and **Azay**, and **Agu**. (Derivations in the glossary.)
 
@@ -43,7 +43,7 @@ Sleep in a field at noon, mothers say, and you will wake a year older. They say 
 
 ## The river and the Hemmal
 
-> *Once a year it comes down out of Emarrea's highlands, climbs out of its channels and lays a hand of new silt over everything.*
+> *Once a year the river comes down out of Emarrea's highlands, climbs out of its channels and lays a hand of new silt over everything that has not been moved, which in the valley is most things.*
 > Golivander Tessek, *The Travelling Chronicle*, 2509 MR
 
 Once a year **the Hemmal** comes down from Emarrea's highlands. The river climbs out of its channels, the whole valley goes under, and when the water goes down it leaves a new layer of silt over every field. The valley counts its years from the flood, and its ages and vintages in floods: *a nine-flood wine*, *she is forty floods*.
@@ -121,4 +121,4 @@ A Duchy name is a given name, a birth-flood and a house: **Tassadit Uttis Ath Ak
 
 **Still open:** the ten other duchies by name; the dukes but three; whether new houses are made, and how; the season of the Hemmal; Agu.
 
-*The column, published whole: [`river-duchies-chronicle.md`](river-duchies-chronicle.md).*
+*The Guide entry and the column, published whole: [`river-duchies-chronicle.md`](river-duchies-chronicle.md).*
