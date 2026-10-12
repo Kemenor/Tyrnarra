@@ -4,7 +4,7 @@
 
 **Scope (GM, 2026-10-07):** the three polities are built **together, phase by phase**, each phase answered for all three side by side. **Star Island** is a separate, later build with its own seed (`seed-bank.md`, *Star Island*).
 
-**Current phase:** 1 (seed questions), open.
+**Current phase:** 2 (seeds), open.
 
 ---
 
@@ -54,9 +54,30 @@
 
 ---
 
-## Phase 1: Seed questions (open)
+## Phase 1: Seed questions (closed 2026-10-12)
 
-*Questions asked 2026-10-07; answers pending.*
+**The summary (GM-confirmed).** Askamira holds three kindred peoples of one Dravidian root, in three countries around Frae City's lake, each living beside a thing that sings and working with it in its own way. **Dea Elurra** sings with its shifting ice at dusk and dawn, when the ice sings loudest. **Basamortua** digs the fulgurites the lightning leaves in the sand and plays them, each its own note, a player's set gathered across a lifetime. **Maitagarri** drums for the **Pattupucha**, a half-tame cat with feathered ear-plumes and a swelling throat that sings its melody over its own purr, makes music with its kind, and welcomes the people who brought the rhythm it lacks. The three rivers from the lake to the sea are the island's roads to the city and the water, and each is a shared border. Each country carries one of Cronus's aspects in its own way: **Wandering** in Dea Elurra, where the land moves and its song moves with it; **Lawlessness** in Basamortua, where the fulgurites are anyone's for the finding; **Choice** in Maitagarri, where the Pattupucha and the people chose each other. Frae City holds all four, Defiance left to it alone.
+
+**The answers:**
+
+*Restarted 2026-10-07 after a first round drifted off the seed (history, the Rain, the climates' cause); those items are parked: who the islanders are and when the polities were founded (Phase 4), feeding Frae City (Phase 6), the climates' cause (Phase 9).*
+
+- **GM: the seed-bank entry is an idea, not a fixed state.** All three singers and Maitagarri's bard-led music-as-law are open to testing.
+- **Q1, what sings (GM, 2026-10-07):** **Dea Elurra: the ice** (kept). **Basamortua: fulgurites**, lightning-glass tubes in the sand (replaces the bank's crystals; that they whistle in wind is our extrapolation). **Maitagarri: a new animal on a housecat base**, easy to picture, then made its own (features and name in progress). Rejected: birds (every bird on Talan sings; says nothing of the place); "all animals" (generic); elephants (the Basogur's Vanara great beasts across the water). The Catfolk link was raised and dismissed by the GM.
+  - *The animal (GM):* housecat base with **long feathered ear-plumes** (caracal-like tufts drawn long), **a throat ruff/sac that swells when it sings** (frog, siamang, howler resonators), and **the purr as a drone** under its melody (a link to the Carnatic drone). **Half-tame: it semi-tamed itself to the bards**, the way real cats tamed themselves to grain stores. Working name *Pattupucha* (Malayalam *pāṭṭu* song + *pūcca* cat), provisional until Phase 8. Extra tails rejected (the kitsune's signature).
+  - *Its music (GM, 2026-10-08):* **not a mimic.** It sings along and understands music in a deeply ingrained, intimate way; the animals make music together (duets, concerts among themselves), the people joined them, and the animals like it. Rejected: the mimic/carrier idea (disappointing for a magical creature). **The people bring the drums (GM, option A):** the Pattupucha has voice (melody) and purr (drone) but no rhythm; the mortals who joined its concerts brought the beat (Kerala's chenda percussion as the real-world touch), and that is what the animals gain from their company. Rejected: a built-in rhythm (a drumming tail; the animal would need no one).
+- **Q2, Maitagarri (answered by the above):** the people work with the song by drumming for it and joining the concerts. The bank's "music as law, crown to the best-loved voice" stays open for Phase 5 (Emarrea's public poetry-and-competition disputes the neighbour to avoid).
+  - *Differences:* place-fixed / carried inert / alive and self-willed; set off by temperature / wind / the animal's own choosing.
+- **Q2, how the people work with the song:** open, all three polities.
+- **Q2, Dea Elurra and Basamortua (GM, 2026-10-09):** **Dea Elurra sings with the ice** at dusk and dawn, when it sings loudest, the people's music pitched to it. **Basamortua digs fulgurites and plays them**: each a pipe the lightning made, its own length and note; a player's set gathered across a lifetime (found and blown, against Tahu Tangata's made-and-swung purehua). Rejected: following the ice (reads the land like Haizetsua and Sugeiturri); fulgurites planted in the wind (Haizetsua's singing cities). Fulgurite trade abroad possible on top (Phase 6).
+- **Q3, flow (GM: yes):** the three rivers from the lake to the sea are the island's roads to Frae City and the sea; each is a border, so most of the island's traffic runs along a shared border.
+- **Q4, one people or three kin (GM lean, 2026-10-09):** **three kindred peoples**, their tongues as far apart as Malayalam, Telugu and Kannada; settle at Phase 4.
+- **Q5, Cronus (GM):** each polity embodies **one of Cronus's aspects** (Choice · Defiance · Wandering · Lawlessness) in its own way, not "freedom" in general. **Frae City embodies all four.** **Pairing (GM, 2026-10-12): Dea Elurra Wandering** (the land wanders and its song with it; depends on the ice really moving, Phase 4), **Basamortua Lawlessness** (the fulgurites are anyone's for the finding), **Maitagarri Choice**. Defiance stays with Frae City. Rejected: Basamortua Wandering / Dea Elurra Lawlessness (weaker links; Lawlessness had no concrete form on the ice).
+
+---
+
+## Phase 2: Seeds (open)
+
 
 ---
 
