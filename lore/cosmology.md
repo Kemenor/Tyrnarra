@@ -41,7 +41,7 @@ All gods and godlike beings (including demon lords, powerful spirits, belief-bor
 
 The set of laws sworn at the close of the Week of Crimson Rain. Mortals know it as the **Gods' Law**; scholars writing in the formal register name it **the Compact**; some chronicler traditions break it out as **the Thirteen Articles**. All three names refer to the same body of binding.
 
-> *"If someone speaks of laws I instinctively picture written words in a book, maybe a judge that decides the fate of a criminal. But the gods law is no written word; it is more akin to the laws of physics or magic, affecting everything around us. Forces not needed to be understood to be felt; chains that bind with no knowledge needed."*
+> *"Say the word law and most people picture a book, a judge, and someone in a great deal of trouble. The Gods' Law has none of these. It was sworn rather than written, and what was sworn took. It works the way falling works: a god who steps against one of its articles meets it the way a dropped plate meets the floor, with no hearing and no appeal. A mortal need not understand it to live under it, any more than a mortal needs to understand weather to get wet. The traveller will notice it chiefly in the gods' manners, which are careful to a degree that strikes newcomers as either very holy or very lawyerly. It is both."*
 >
 > Golivander, *A Traveller's Guide to Tyrnarra: The Gods' Law*
 
