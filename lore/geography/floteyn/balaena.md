@@ -32,11 +32,19 @@ A Baleni childhood is a geography lesson in trust: which yards are yours, which 
 
 ## Voices in the yards
 
-*Two passages, quoted on the island's page: the Guide's entry and the column that answered it, side by side without either naming the other (see [`../../voices.md`](../../voices.md)).*
+*Two passages, quoted on the island's page: the Guide's word on Balaena, an excerpt from Golivander's *Floating Isles* entry written in less than a day, and the column that answered it, side by side without either naming the other (see [`../../voices.md`](../../voices.md)). The Guide passage was rewritten in his reworked voice on 2026-10-12.*
 
-**Golivander Tessek, *A Traveller's Guide to Tyrnarra*:**
+**Golivander Tessek, *A Traveller's Guide to Tyrnarra*, from *The Floating Isles*: Balaena**
 
-> *Balaena is reached by League hull from Uravel or, at low water, on foot by the submerged bridge, which is sound, slick, and best crossed in daylight. The weight-gates are quick if you declare your baggage honestly; keep the tally-token, for departure without it is slow. The fountain shows twice daily and is worth one viewing. Rooms at the Landing are clean and cost double in the Glass; book the boat out before booking the bed. The draughts are the finest on the inner sea, and unlike most goods so described, this is simply true; buy at an assay-house, never on the quay. The alleys inward are residential, and the visitor's business is at the front. The tea is boiled.*
+> *Balaena is the most visited of the drifting isles and knows it. It greets every boat as though the boat had been expected for years, and charges accordingly. It is reached by League hull from Uravel or, at low water, on foot by the submerged bridge, which is sound, slick and best crossed in daylight by anyone who would prefer to arrive dry and unremarked.*
+>
+> *Everything that enters Balaena is weighed, and the traveller's honesty is weighed first. Declare your baggage truthfully and the weight-gates are quick. Keep the tally-token they give you: leaving without it is possible, but slow, and the clerks will be sorry for you in a way you will not enjoy.*
+>
+> *The fountain shows twice a day and is worth one viewing, which is one more than most fountains. Rooms at the Landing are clean; the same room in the Glass costs double and comes with a better view of the people at the Landing. Book the boat out before you book the bed. The draughts are the finest on the inner sea, and unlike most things so described, this is simply true. Buy them at an assay-house and never on the quay, where the bottles are just as fine and the contents are not.*
+>
+> *I spent less than a day on Balaena, my boat having its own views on the tide, and I report only what a day could see. The alleys inward are residential, and the visitor's business is at the front.*
+>
+> *The tea is boiled.*
 
 **Vyrenna Tessek, *One Line Further*, the Talan years:**
 
