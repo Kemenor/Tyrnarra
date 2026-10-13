@@ -133,7 +133,7 @@ The Heartcourt is famously dramatic, and the structure under that drama is not a
 Concrete moments each Heart carries, surfaced in canon to support the Heartcourt sub-page (`/setting/talan/domains/lautara/emarrea/heartcourt.html`) and Golivander's *Letters from Biozuri* dispatches (see [`heartcourt-letters.md`](heartcourt-letters.md)).
 
 **Saemi (Azure).**
-- *The three-day silence at Frae City.* Five years back, a Cronus-clergy envoy sat across from her for trade-talks; Saemi did not speak for three days. The envoy broke first and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.
+- *The three-day silence at Frae City.* Five years back, a Cronus-clergy envoy sat across from her for trade-talks; for three days of sessions Saemi let her clerk read the Emarrean terms and said nothing herself beyond courtesies. The envoy broke first, addressed her directly and asked the question Saemi had predicted; the answer was already drafted in the folder under her elbow. Emarrea gained a trade-preference treaty.
 - *The Heartcourt welcome dinner that became a four-hour conversation.* Her quiet bond with Norikaze began the night of his elevation, when she noticed his nervousness, took him aside under cover of getting more wine, and gave him advice about court protocol. Neither went back to the party.
 - *The Saiken-Veksir inheritance.* She was raised to inherit the Saiken-Veksir spice fortune, a Lautaran trade-house of three generations' standing. When the Azure Tail was offered she signed the inheritance over to her younger brother. He still sends her quarterly statements; she does not read them.
 

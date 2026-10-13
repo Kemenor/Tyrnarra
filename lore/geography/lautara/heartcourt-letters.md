@@ -14,11 +14,13 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 
 *Dear reader,*
 
-*Some volumes of A Traveller's Guide to Tyrnarra my publisher will sell openly in the markets of Frae City and Lograth. Some he will sell from a back room with the door not quite closed. Letters from Biozuri is the second sort, and the door does not close because the Hearts of Emarrea would consider the gesture rude.*
+*My publisher, who has views on everything and opinions on the rest, asked me sixteen years ago to write a few columns about Emarrea while I was passing through. I am still passing through. I come to Biozuri whenever the road allows, which over sixteen years has been more often than my other subjects would like. In that time I have been fed at the House of a Thousand Flavors more often than is good for a chronicler or his waistcoat, lodged by Hearts who knew perfectly well I would write about them, and corrected, once, by one of them, who read a column before it went to press and suggested, kindly, that I had given a remark to the wrong Heart. I revised it. She was right. She is usually right, which the kingdom finds restful and visiting envoys do not.*
 
-*I have visited the Heartcourt every spring and autumn for sixteen years. I have been welcomed at festival tables, fed at the House of a Thousand Flavors, given lodging by Hearts who knew very well I was going to write about them, and on one notable evening corrected on a misattribution by the Heart in question, who suggested I revise the column before it went to press. I did. (She was right.) The kitsune do not consider gossip beneath the dignity of governance. They consider it the texture of governance.*
+*A word on manners, for readers elsewhere. In most kingdoms, gossip about the court is something done behind the court's back. In Emarrea it is done in front of the court, with the court's help, and frequently at the court's table. The kitsune do not consider gossip beneath the dignity of governance; they consider it the texture of governance, and they would think a ruler nobody talked about had failed at something. The Hearts rule in public, love in public and argue in public, and once in a while, as readers of this column will discover, do rather more than argue in public. My task is to write down what the whole of Biozuri already knows, and to know when to stop.*
 
-*What follows are dispatches from a court that wants to be written about. May the kingdom of Emarrea remain as marvellously themselves as they have ever been, and may the rest of Talan continue to under-estimate them at its own expense.*
+*I do know when to stop. I have stopped, in sixteen years, more often than my readers would credit and less often than the Hearts would like. Where a column ends a sentence early, the reader may assume the sentence was finished in Biozuri, by someone else, over tea.*
+
+*What follows are dispatches from a court that wants to be written about. May the kingdom of Emarrea remain as marvellously itself as it has always been, and may the rest of Talan go on under-estimating it at its own expense.*
 
 – *G.*
 
@@ -27,9 +29,13 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 1 · On the Heart Who Says Less and Knows More
 *(Saemi, Azure)*
 
-*The Azure Heart, Saemi, has been a Heart for twenty-two years and a diplomat for the entire span. The kingdom understands that she travels well; the kingdom under-estimates how much she listens. I will share a confidence: at the Crimson-Year trade-talks with Frae City five years ago, she sat across from a Cronus-clergy envoy for three full days in silence. The envoy spoke first. The answer she gave was already drafted in the folder under her elbow.*
+*The Azure Heart, Saemi, has been a Heart for twenty-two years and a diplomat for all of them. She spends half the year on the road to Frae City and the trade-courts of Lautara, so the kingdom knows she travels well. What the kingdom under-estimates is how much she listens.*
 
-*She has, I am told, lately developed a fondness for walking in the Heartplaza gardens at sunrise. She is never alone. I shall not name the Heart who keeps the early-hour pace with her; you all know which Heart it is, and the discretion is the point.*
+*I offer the trade-talks at Frae City five years ago as evidence. A Cronus-clergy envoy sat across the table from her for three days of sessions. She let her clerk read the Emarrean terms, poured the envoy's water, nodded at his points and said nothing herself beyond courtesies; once she passed him the salt before he had asked for it, which he later told me was the most unnerving moment of the week. On the fourth morning he broke, addressed her directly and asked the question she had been waiting for, and the answer was already drafted, in her hand, in the folder under her elbow. Emarrea came away with a trade preference it still enjoys. The envoy came away with a great deal of respect and, I believe, a mild fear of condiments.*
+
+*She was raised to inherit the Saiken-Veksir spice fortune, three generations of Lautaran trade. When the Azure Tail was offered, she signed the inheritance over to her younger brother, who still sends her a statement of accounts every quarter. She does not read them. I asked whether this was a principle. She said it was a filing system.*
+
+*She has lately developed a fondness for walking in the Heartplaza gardens at sunrise. She is never alone. I shall not name the Heart who keeps the early hours with her; you all know which Heart it is, and the discretion is the point.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri, 2531 MR*
 
@@ -38,11 +44,17 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 2 · On the Heart Whose Generosity Is Also a Wager
 *(Houreni, Golden)*
 
-*The Golden Heart, Houreni, sent the Rose Heart a lantern. The lantern was made by a Honokage-cult artisan who has, I am reliably told, refused commissions from three Hearts in the past decade because "the work would not be sufficiently meant." This one she meant. It took six weeks. The Rose Heart's unpublished verses are woven into the paper, foxfire-lit so they emerge only at certain angles of the lantern's turn. When the Rose Heart received it, at a Heartplaza banquet so public that the kingdom calls it The Lantern Banquet now, he wept openly. The Golden Heart watched him weep with the satisfied air of a woman who has just won, by gift, what others compete for by courtship.*
+*The Golden Heart, Houreni, gives the best receptions in the kingdom, and knows it. An invitation to one is the most coveted object in Biozuri, narrowly ahead of a seat at the Spectacle and well ahead of this column. Her generosity is real, and it is also a wager.*
+
+*Some autumns ago, three chefs of the Cook's Circle threatened to walk out of the House of a Thousand Flavors over a dispute about where the mushrooms came from. Houreni underwrote three seasons of their specialty ingredients from her own purse, the chefs stayed, and the Nine Tails of Autumn menu is still served every autumn, with her seal-cipher worked into the dessert course. I have eaten it, and searched it for the seal as I went, and found it on the last spoonful.*
+
+*Lately she sent the Rose Heart a lantern. It was made by a Honokage-cult artisan who has, I am reliably told, refused commissions from three Hearts in the past decade because the work would not be sufficiently meant. This one was meant. It took six weeks. The Rose Heart's unpublished verses are woven into the paper so that they emerge only at certain angles as the lantern turns. He received it at a Heartplaza banquet so public that the kingdom now calls it the Lantern Banquet, and he wept, openly. The Golden Heart watched him weep with the air of a woman who has won by gift what others compete for by courtship.*
 
 *The Violet Heart was also present. The Violet Heart smiled.*
 
-*No one in this kingdom does anything by halves and I find it exhausting and enlivening in equal measure.*
+*The Ivory Heart, who considers the Golden Heart's style vulgar, was not present, and has mentioned this to me twice.*
+
+*No one in this kingdom does anything by halves, and I find it exhausting and enlivening in equal measure.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
