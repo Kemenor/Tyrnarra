@@ -1,6 +1,6 @@
 # Letters from Biozuri
 
-The Emarrea-specific section of Golivander's periodical ***The Travelling Chronicle***. Sixteen years of running coverage of the Heartcourt and its surrounding kingdom-life, circulated to the literate classes of Lautara, Frae City, and Sumendar. This file holds the canonical text of the present dispatches, quoted in-world on the Heartcourt page (`/setting/talan/domains/lautara/emarrea/heartcourt.html`).
+The Emarrea-specific section of Golivander's periodical ***The Travelling Chronicle***. Sixteen years of running coverage of the Heartcourt and its surrounding kingdom-life, circulated to the literate classes of Lautara, Frae City, and Sumendar. This file holds the canonical text of the present dispatches, quoted in-world on the Heartcourt page (`/setting/talan/domains/lautara/emarrea/heartcourt.html`, Columns 0-10) and on the Emarrea page (`/setting/talan/domains/lautara/emarrea/emarrea.html`, Columns 11 on, the kingdom beyond the court).
 
 Golivander writes in the *Chronicle* register of [`../../voices.md`](../../voices.md) (rewritten in his reworked voice, 2026-10-12 to 10-15): witty, warm, deeply familiar with everyone at court, never spiteful and never blandly neutral. He reports what the kingdom is saying, names what can be named, and leaves unresolved what cannot. Some Hearts cultivate him; some pointedly do not.
 
@@ -225,6 +225,25 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 *Some afternoons are not, in fact, for the column.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri (Kawaakari supplement), 2532 MR*
+
+---
+
+## Column 11 · On the Feast That Is Always Brewing Somewhere
+*(the circles of importance · a village feast in the orchard country; quoted on the Emarrea page)*
+
+*I had meant to spend the evening writing. I had a room above a tea-house in a village in the orchard country west of Biozuri, a lamp, a column two days late, and no intention whatever of going out, and I record these facts so that the reader understands the scale of what follows.*
+
+*At sunset the tea-house keeper's cousin arrived. I had not been introduced to the cousin, and the cousin did not consider this an obstacle. There was a feast, the cousin explained, at the far end of the village, for the year the village well was dug. The tea-house keeper was going, so the tea-house keeper's guest was going, because a guest under your roof is inside your circle for as long as he sleeps there, and one does not leave one's circle sitting alone with a lamp. I said I had a column to write. The cousin said the column could come too.*
+
+*The kitsune keep their obligations in circles. At the centre sits the family, and the family is more than blood: a sworn sibling counts, a lifelong friend counts, a lover counts, and a call from any of them is never refused. Around the family stand the neighbourhood, the village, the region and the kingdom, and every circle keeps its own festivals. A kitsune owes her neighbourhood's feasts her presence, her village's feasts her presence in most years, and her region's feasts a journey when she can make one; she owes the kingdom's great festivals nothing at all, which is why going to them is a point of pride. The result is a calendar in which, on any night of the year, there is a feast brewing somewhere and a cousin ready to drag you to it. I had heard the saying before. I had not, until that evening, been the one dragged.*
+
+*The feast for the well was the size of a village and the volume of a city. Everyone smiled at me, which a traveller from elsewhere must learn to read correctly: in Emarrea a smile is the ordinary weather of a conversation, and wants nothing from you. Everyone teased me, which is how the kitsune tell you that you have been accepted. I was teased about my feathers, my spectacles, my waistcoat and my column, in roughly ascending order of fondness. Halfway through the evening my cup of plum wine became, in my hand, a cup of foxfire that sang the first line of a drinking song and then became plum wine again. The child responsible was not punished. The table applauded, the child bowed, and after a moment, so did I. A good trick, in Emarrea, ends in laughter for everyone, the person it was played on included; anything less is merely a trick.*
+
+*Two things I saw that evening I have seen nowhere else. At the head table a woman rose before the noodles, said only that her sister had called, and left. Nobody asked why, and nobody needed to: a family call is answered, and the feast closes over the empty seat. And near midnight two young kitsune stood up together and announced that their bond had run its course, and the whole table drank to it, to the season they had had and to the season after. Then they sat down side by side and finished the meal. The kitsune say a bond is freely entered, joyfully shared and lovingly released, and I had taken the third part for poetry until I watched a village raise its cups to it.*
+
+*I wrote nothing that night. The column was three days late. My publisher has asked me, not for the first time, why I cannot simply decline an invitation, and I have explained, not for the first time, that I was not invited. I was collected.*
+
+– *G., The Travelling Chronicle, Letters from Biozuri, 2531 MR*
 
 ---
 
