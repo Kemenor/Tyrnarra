@@ -100,7 +100,8 @@ Each country is built on its own from Phase 3 (`dea-elurra.md`, `basamortua.md`,
 
 - **The shared history:** when and how the three polities formed (default Dark Era); how far the Golden Empire reached onto the island (sets the imperial loan layer).
 - **The shared Tamil-core tongue** under the three registers (Malayalam-, Telugu-, Kannada-sounding); three kindred peoples is the GM's lean (Phase 1, Q4).
-- **The three rivers and the lake (GM ideas, 2026-10-15, open):**
+- **The rivers flow inward, into the lake (GM, 2026-10-15).** Bergs calved into the lake stay in the lake; river ice rides in toward it. **The hidden city gets a pass of its own** (GM), not inside any one country's build; if it is dropped later, the lake drains through its bed on the **Lake Cerknica** model (a karst lake emptying through sinkholes, the water resurfacing as springs elsewhere).
+- **The three rivers and the lake (GM ideas, 2026-10-15; direction now settled as above):**
   1. *Outward:* the rivers flow from the lake to the sea, the lake fed from underground.
   2. *Inward:* the rivers flow into the lake, and the lake drains down, deep, to **a forgotten city and its people below**, reached only through the lake and unknown to nearly everyone; the water spreads from there and comes back up elsewhere.
   3. *The city feeds the lake:* the same hidden city, the water rising from it into the lake, the rivers flowing out.
