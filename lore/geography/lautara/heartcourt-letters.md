@@ -63,11 +63,15 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 3 · On the Heart Who Loves the Orchards
 *(Shionori, Emerald)*
 
-*The Emerald Heart, Shionori (and yes, the kingdom of Emarrea is the kind of kingdom where one of its rulers carries no honorific and prefers it that way), is one hundred and forty-two years old. They have eight tails. There are perhaps three living kitsune of whom this is true. The chronicle record of Emarrea suggests there has not been a seated Eight-Tail in living memory.*
+*The Emerald Heart, Shionori, is one hundred and forty-two years old and has eight tails. There are perhaps three living kitsune of whom this is true, and Shionori is the only one I have ever seen forget they have them. They walk the orchards barefoot, speak slowly enough that visitors finish their sentences for them and are wrong, and are, by the agreement of the other six Hearts, the one each of them goes to first when something has gone badly.*
 
-*I asked them once whether they intended to keep the seat into a ninth tail. They considered for some time. They said: "I do not think the orchards would forgive me."*
+*Twenty years ago, when the last polycule they belonged to lost one of its four to age, Shionori stepped out of it and did not seek another. The two who remain still visit them at the Birch Grove twice a year, and the visits, I am told, are cheerful.*
 
-*I had no response to this and decided I should not invent one for the column.*
+*They dine every week with the Golden Heart, a pairing the court found surprising for about a fortnight and has found obvious ever since. The Golden Heart asks after the orchards. Shionori asks whom the Golden Heart most wants to impress this season. Both, I gather, find the answers more useful than either expected.*
+
+*I asked them once whether they meant to keep the seat into a ninth tail. They considered the question for long enough that I finished my tea and began to wonder whether I had asked it aloud. Then they said: "I do not think the orchards would forgive me."*
+
+*I have turned that answer over for some years now and am no nearer a reply. I print it as it stands.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri, 2530 MR*
 
@@ -76,9 +80,13 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 4 · On the Heart Who Is Still Astonished to Find Himself Here
 *(Norikaze, Ivory)*
 
-*The Ivory Heart, Norikaze, was thirty years old when he was elevated. He had until that point been a junior professor of jurisprudence at Lograth, where Forseti's clergy taught him law as a structure of weighed evidence and ratified precedent. He was not, by his own published view, ready. He had said so to the Growing Circle. They had elevated him anyway.*
+*The Ivory Heart, Norikaze, was thirty years old when he was elevated, and until that morning had been a junior professor of jurisprudence at Lograth, where Forseti's clergy taught him law as a structure of weighed evidence and ratified precedent. He told the Hearts he was not ready. They elevated him anyway, which is the most Emarrean thing I have seen a government do, and I have seen this one settle a tariff at a banquet.*
 
-*He is by all reports a precise jurist and a man whose hairline I have watched recede half an inch in the eighteen months he has worn the white-and-black Tail. He is also (and the kingdom knows this) the subject of the most-discussed unfinished sentence in court memory. I shall not finish it for him. He cannot finish it for himself. Whether anyone will is, at present, the kingdom's most-watched open question.*
+*His doctoral thesis argued that Forseti's law could admit the kitsune way of choosing rulers by consent without any violence to doctrine. It is still cited at Lograth. He has not been back to hear it cited.*
+
+*He is a precise jurist. Six months into his seat he heard a household dispute the court expected to be over by lunch: three lovers had held a vineyard together, and one of them had walked out with the year's harvest in a sealed wagon. Norikaze took four hours. He asked about the vines, the contract, the wagon and the seal, and he drafted a ruling the court has cited eleven times since. The lover returned the wagon. I am told the wine was good.*
+
+*I have watched his hairline retreat half an inch in the eighteen months he has worn the white-and-black Tail. He is also, as the kingdom knows, the subject of the most-discussed unfinished sentence in recent memory. I shall not finish it for him. He cannot finish it for himself. Whether anyone will is, at present, the kingdom's favourite open question.*
 
 *Norikaze, my publisher sends his sympathies and his subscription rates.*
 
@@ -89,9 +97,13 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 5 · On the Heart Who Is Currently Two Hearts
 *(Yorume, Violet + Onyx Tail)*
 
-*The Violet Heart, Yorume, has carried the Onyx Tail for nine months while the Spectacle of Selection runs. She sleeps, I am told, four hours, drinks tea that I have been served on visits and found to be of a strength I cannot reproduce at home, and is by morning at the foxfire-masters' atelier mentoring her chosen Onyx candidate Kasumi.*
+*The Violet Heart, Yorume, has carried the Onyx Tail for nine months, since the Onyx seat fell vacant and the Spectacle of Selection began. She is therefore two Hearts and does the work of both. By every report she sleeps four hours a night, which she denies convincingly, being the finest illusionist in the kingdom.*
 
-*She is also somehow at court. She is also somehow at the Lantern Banquet. She is also somehow, on the night of the most-public moment in the Heartcircle's recent memory, on a balcony, watching, saying nothing afterwards. She is also, on certain nights I shall not specify, somewhere quieter than any of the above. (I shall not say where. The Heart who keeps that quiet knows already.)*
+*Her tea deserves a sentence of its own. I have been served it on three visits. It is brewed to a strength I cannot reproduce at home, though I have tried, and it is right.*
+
+*By morning she is at the foxfire-masters' atelier with Kasumi, whom she chose at sixteen, when Kasumi's second tail had already come, a decade before most kitsune grow one. She is also somehow at court. She is also somehow at the Lantern Banquet, smiling. She was also, on the afternoon the kingdom will be discussing for a generation, on a balcony above Heartplaza, watching, and has said nothing about it since. She is also, on certain nights I shall not specify, somewhere quieter than any of the above. (I shall not say where. The Heart who keeps that quiet knows already.)*
+
+*I asked her what she teaches Kasumi. She said: "Illusion is mercy. Secrecy is mercy. The trick that ends in laughter is mercy. Choose mercy. The Onyx Heart decides when truth would harm, and when it would not."*
 
 *Yorume, the kingdom would like you to sleep. The kingdom would also like the Spectacle to conclude. The kingdom would, on balance, like the Spectacle to conclude first.*
 
@@ -142,7 +154,7 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 
 *The Onyx Spectacle has produced two candidates, two schools, and one unprecedented run on the box-stands of Heartplaza, which now sell numbered seats for the trial-days. (I attended the third trial. I sat in row C. I have an opinion. I shall keep it.)*
 
-***Kasumi***, *mentored by the Violet Heart, is twenty-five years old and has one tail. She has, in three trials, made the audience laugh, made the audience gasp, made the audience uncertain whether the trick had happened yet, and on one notable occasion made the audience cry. Her school is secrets-as-illusion. Her foxfire is, to my eye (and I have seen foxfire in seven kingdoms), the cleanest I have witnessed outside her mentor's own work.*
+***Kasumi***, *mentored by the Violet Heart, is twenty-five years old and has two tails, the second grown at sixteen. She has, in three trials, made the audience laugh, made the audience gasp, made the audience uncertain whether the trick had happened yet, and on one notable occasion made the audience cry. Her school is secrets-as-illusion. Her foxfire is, to my eye (and I have seen foxfire in seven kingdoms), the cleanest I have witnessed outside her mentor's own work.*
 
 ***Murasaki***, *mentored by the Azure Heart, is forty-one years old and has four tails. She has, in three trials, said almost nothing, won twice, and on the trial she lost was widely judged afterwards to have lost on purpose. Her school is secrets-as-information-asymmetry. She is the candidate the merchants prefer. She is the candidate the rest of the kingdom finds slightly unsettling, which is, I suspect, also a vote in her favour.*
 

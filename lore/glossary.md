@@ -642,7 +642,7 @@ The kitsune culture is detailed in `geography/lautara/emarrea.md`. Outsiders ref
 - **Shirae**: Kotokoe *shira* (white, pure, unmarked) + *e* (picture, blessing, the recorded image) → "the white image" / "the clear record." Current **Sapphire Heart** (Knowledge &amp; Education) and acting **Crimson Heart** (Military &amp; War). Woman, 6 tails, 130s. Head of Biozuri's **House of Names** (Yumegatari's death-archive).
 
 **Onyx Spectacle candidates (currently competing):**
-- **Kasumi**: Kotokoe *kasumi* (mist) → directly preserved; the candidate the name fits literally. Yorume's protégé, 1 tail, mid 20s. *Stagecraft-secrets* school (secrets-as-illusion).
+- **Kasumi**: Kotokoe *kasumi* (mist) → directly preserved; the candidate the name fits literally. Yorume's protégé, 2 tails (the second at sixteen), mid 20s. *Stagecraft-secrets* school (secrets-as-illusion).
 - **Murasaki**: Kotokoe *murasaki* (purple, the colour of distance and quiet gravity) → directly preserved. Saemi's protégé, 4 tails, early 40s. *Listening-secrets* school (secrets-as-information-asymmetry).
 
 **Retired Heart:**

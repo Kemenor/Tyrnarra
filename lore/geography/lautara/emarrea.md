@@ -155,7 +155,7 @@ Concrete moments each Heart carries, surfaced in canon to support the Heartcourt
 **Yorume (Violet + Onyx Tail).**
 - *The night she first met Shirae.* Twelve years ago at the House of Names; Yorume had come to research a foxfire technique for animating an enchanted-paper memorial. They worked together until dawn. The technique was perfected; the memorial still lights Biozuri's lantern festival every Festival of the Fox Lanterns. The bond began that night and has held.
 - *Managing the double-Tail.* She sleeps four hours, drinks tea of a strength other Hearts have failed to replicate, lights small foxfire-baubles in her bedchamber for warmth-illusion when sleep refuses. Her Growing Circle students do not know.
-- *Mentoring Kasumi.* She chose Kasumi at sixteen, when Kasumi had already earned her first tail (an unusual prodigy). What she teaches: *"Illusion is mercy; secrecy is mercy; foxfire is mercy; the trick that ends in laughter is mercy. Choose mercy. The Onyx Heart decides when truth would harm, and when it would not."*
+- *Mentoring Kasumi.* She chose Kasumi at sixteen, when Kasumi's second tail had already come, a decade before most kitsune grow one, and her foxfire was already cleaner than most masters' (a double prodigy). What she teaches: *"Illusion is mercy; secrecy is mercy; foxfire is mercy; the trick that ends in laughter is mercy. Choose mercy. The Onyx Heart decides when truth would harm, and when it would not."*
 
 **Reien (Rose).**
 - *The elevation Spectacle.* Two years ago at twenty-six, against three older candidates, he wrote and performed a seven-act festival cycle titled ***Cycle of the First Lantern***. The kingdom voted by acclaim before the seventh act ended. He wept, the kingdom wept, Yorume lit the air gold with foxfire.
@@ -180,7 +180,7 @@ Concrete moments each Heart carries, surfaced in canon to support the Heartcourt
 
 Two candidates from the Growing Circle compete through public trials of misdirection, intelligence-gathering, and clever-without-malicious trickster-proof. Each is publicly mentored by a sitting Heart:
 
-- **Kasumi**: 1 tail, mid 20s, mentored by **Yorume**. The *stagecraft-secrets* school: secrets-as-illusion, the foxfire that misdirects, the kindness-trick that protects what shouldn't be seen. Theatrical, charismatic, the audience-favourite. A natural Honokage devotee.
+- **Kasumi**: 2 tails (the second at sixteen), mid 20s, mentored by **Yorume**. The *stagecraft-secrets* school: secrets-as-illusion, the foxfire that misdirects, the kindness-trick that protects what shouldn't be seen. Theatrical, charismatic, the audience-favourite. A natural Honokage devotee.
 - **Murasaki**: 4 tails, early 40s, mentored by **Saemi**. The *listening-secrets* school: secrets-as-information-asymmetry, the well-placed ear, the quiet recording, the network of trusted strangers. Quiet, polylingual, the agents'-favourite. Trained at the Lautaran trade-courts under Saemi's secondment over the past decade.
 
 The Spectacle is structurally a contest between two readings of what *Onyx* means. The kingdom is genuinely split. The trials are scheduled to conclude before the next Festival of the Fox Lanterns.
@@ -240,7 +240,7 @@ All three Kyūbi-no-Den gods reside in **Elysium** (Layer 3, good): not bound to
 ## Kitsune lifespan: slow ageing through tail growth
 
 - **Average lifespan:** 140-160 years; exceptional individuals to 180.
-- **Adulthood:** ~18. **Tail awakening (magical maturity):** ~25+, with new tails manifesting over time through spiritual, emotional, or magical growth.
+- **Adulthood:** ~18. **Tails:** every kitsune is born with one; the second comes with adulthood, in the twenties or thirties, and more follow through spiritual, emotional or magical growth.
 - **Elderhood:** begins around 120.
 
 **The first six tails are a life lived.** Age is the floor and the main driver: a kitsune in her twenties carries one or two, and most who live into elderhood carry five or six. Spiritual, emotional and magical growth set the pace rather than the calendar alone, so two kitsune of an age sit a tail or two apart without anyone finding it worth remarking on. A foxfire master of forty-five holds five where a diplomat of fifty-eight holds three, and both are ordinary. Six is the ceiling a long rich life reaches on its own.
