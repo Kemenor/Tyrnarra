@@ -247,6 +247,27 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 
 ---
 
+## Column 12 · On the Gods Who Share a Shelf
+*(the household shrine · the Kyūbi-no-Den and the Thirteen; quoted on the Emarrea page)*
+
+*Every kitsune house I have slept in keeps a shelf, and every shelf is crowded. My host in Biozuri last spring, a lantern-maker with three partners, two children and an opinion on everything, kept hers above the kitchen door, and it held, by my count, seven gods, two ancestors, a dried plum and a child's drawing of a fox that may or may not have been devotional.*
+
+*The first incense of the morning goes to Hahane, the Mother-Root, who heads the kitsune's own Nine-Tailed Hall and keeps love, family, festival and the bond of many hearts. It goes to her first in every house in the kingdom, without an exception I have found, and when I asked why, my host looked at me as one looks at a man who has asked why the door is opened before one walks through it.*
+
+*After Hahane the order is a matter of the household's taste and the day's business. Honokage, the Soft-Shadow, god of foxfire and kind misdirection, gets a lantern rather than incense, lanterns being what he likes. Yumegatari, the Dream-Teller, keeper of story and memory and the wish-lanterns, is thanked whenever a story is told well at the table, which in a kitsune house is most evenings. Then come the Thirteen, as many as the house finds useful or beloved. Jianna sits on the shelf of anyone in trade. Forseti comes down from the back of the shelf for a contract and goes back up afterwards. Iro, Sarrum and Vesuna each have their devout corners of the kingdom, and Bikiargi's small shrine comes out for the lunar festivals.*
+
+*And there is Fisaya, who is on every shelf, generally at the front. She is the most worshipped of the Thirteen in Emarrea by a wide margin: the goddess of change, among the only people within the Thirteen's reach who change their own shape, and of the wind, among a people whose caravans and letters go everywhere. On my host's shelf she is a kitsune, multicoloured, and plainly enjoying it. On every shelf on Haizetsua she is a Tengu. I am told by those who would know that the kitsune have the likeness right, which leaves my people with some explaining to do, and I have decided not to be the one who does it.*
+
+*The kitsune find it faintly puzzling that anyone keeps only one god, much as they find it faintly puzzling that anyone keeps only one partner. Both, they allow, work for some people; neither is the rule. The Heartcourt has nine pillars and none of them is Faith, which the kingdom regards as obvious and visiting clergy regard as an oversight. The temples are run by neighbourhoods and the shrines by households, and the gods appear to manage.*
+
+*The Nine-Tailed Hall, despite its name, holds three. The other six seats, the kitsune say, are open: kept for ancestral spirits, or for the small gods of particular places, or simply waiting until the world's stories grow long enough to fill them. Theologians argue over whether the empty seats are real or pious poetry. I put the question to my host. She said the seats would be filled when they were filled, that it would be rude to rush them, and that breakfast was ready, in that order of importance.*
+
+*I leave incense, as my readers know, at whatever temple stands nearest the road, a habit of seventy years that I cannot account for theologically. My host watched me light a stick for Hahane before my own breakfast, and said I would make a perfectly good kitsune, if not for the feathers.*
+
+– *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
+
+---
+
 ## Open in the chronicle record (canon notes)
 
 A handful of details inside the columns are deliberately under-specified in canon. Flagged here so future writes can either ratify or vary them:
