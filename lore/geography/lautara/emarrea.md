@@ -93,7 +93,7 @@ When the court runs short of nine, the remaining Hearts wear **multiple Tails**,
 The Heartcircle sits with **seven Hearts seated, two pillars vacant**. The vacancies tell you what Emarrea is currently focused on (and not):
 
 - **Crimson** (Military &amp; War) has been **structurally vacant for ten years.** The previous Crimson Heart, **Yorimichi**, retired at age, and the court has not pushed to elevate a successor. The reading: Emarrea sits inside Lautara at peace, no border pressure, and a Heart whose pillar carries no current weight is widely thought wasteful. Currently covered by **Shirae** (Sapphire) wearing a second Tail. Several Hearts argue the seat should be filled before it is needed; the court has not agreed.
-- **Onyx** (Secrets &amp; Shadows) is **recently vacant.** The previous Onyx Heart died within the past year (natural causes by chronicle record, contested by gossip), and a **Spectacle of Selection** is currently underway. Two candidates are competing through public trials; the Spectacle is drawing more spectators than the last harvest festival. Currently covered by **Yorume** (Violet) wearing a second Tail.
+- **Onyx** (Secrets &amp; Shadows) is **recently vacant.** The previous Onyx Heart, **Yorimichi's Growing Circle heir**, elevated to the Onyx seat in 2519 while she still held Crimson, died on the dais within the past year (natural causes by chronicle record, contested by gossip; his personal name uncommitted), and a **Spectacle of Selection** is currently underway. Two candidates are competing through public trials; the Spectacle is drawing more spectators than the last harvest festival. Currently covered by **Yorume** (Violet) wearing a second Tail.
 
 
 **The seven currently seated, by pillar:**
