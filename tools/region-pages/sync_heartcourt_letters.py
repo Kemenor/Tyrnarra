@@ -1,6 +1,6 @@
-"""Sync the Letters from Biozuri on the Heartcourt page from the lore file.
+"""Sync the Letters from Biozuri on the Heartcourt and Emarrea pages from the lore file.
 
-The Heartcourt page is hand-built; only the body of each `.golivander-letter` block
+Both pages are hand-built; only the body of each `.golivander-letter` block
 is replaced, matched by its letter-title, from lore/geography/lautara/heartcourt-letters.md.
 Titles, attributions and everything else on the page are left alone. Run from the
 repository root, optionally naming the column numbers to sync:
@@ -10,7 +10,8 @@ repository root, optionally naming the column numbers to sync:
 import re, html, sys
 
 LORE = 'lore/geography/lautara/heartcourt-letters.md'
-PAGE = 'published/setting/talan/domains/lautara/emarrea/heartcourt.html'
+PAGES = ['published/setting/talan/domains/lautara/emarrea/heartcourt.html',
+         'published/setting/talan/domains/lautara/emarrea/emarrea.html']
 
 def md_inline(t):
     t = t.strip()
@@ -50,15 +51,16 @@ def strip_tags(t):
 
 def main(nums):
     cols = columns()
-    page = open(PAGE).read()
+    pages = {p: open(p).read() for p in PAGES}
     for n in nums:
         title, chunks = cols[n]
-        blocks = list(re.finditer(r'<div class="golivander-letter">(.*?)\n(\s*)</div>', page, re.S))
         hit = None
-        for b in blocks:
-            t = re.search(r'<div class="letter-title">(.*?)</div>', b.group(1), re.S)
-            if t and strip_tags(t.group(1)).split('<br>')[0].startswith(title[:30]):
-                hit = b; break
+        for PAGE, page in pages.items():
+            for b in re.finditer(r'<div class="golivander-letter">(.*?)\n(\s*)</div>', page, re.S):
+                t = re.search(r'<div class="letter-title">(.*?)</div>', b.group(1), re.S)
+                if t and strip_tags(t.group(1)).split('<br>')[0].startswith(title[:30]):
+                    hit = b; break
+            if hit: break
         if hit is None:
             raise SystemExit('no page letter for column %d: %s' % (n, title))
         inner = hit.group(1)
@@ -67,9 +69,10 @@ def main(nums):
         indent = re.match(r'\s*', inner[head.end():]).group(0) or '\n      '
         body = ''.join(indent + x for x in render(chunks))
         new_inner = inner[:head.end()] + body + attrib.group(0)
-        page = page[:hit.start(1)] + new_inner + page[hit.end(1):]
-        print('synced column', n)
-    open(PAGE, 'w').write(page)
+        pages[PAGE] = page[:hit.start(1)] + new_inner + page[hit.end(1):]
+        print('synced column', n, '->', PAGE.rsplit('/', 1)[-1])
+    for p, page in pages.items():
+        open(p, 'w').write(page)
 
 if __name__ == '__main__':
     main([int(x) for x in sys.argv[1:]] or sorted(columns()))
