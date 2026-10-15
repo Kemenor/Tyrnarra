@@ -649,7 +649,7 @@ The kitsune culture is detailed in `geography/lautara/emarrea.md`. Outsiders ref
 - **Yorimichi**: Kotokoe *yori* (trust, reliance, the firm rest) + *michi* (way, path, road) → "the way of trust" / "the trusted path." Former **Crimson Heart** through several late-Adventurer-Era crises; retired in 2522 MR at age ~130. Now a master **Catjomin Sake** brewer at Kawaakari (brews reliably at *Kōmyōzen* tier; her rare *Kinkanrou* editions are sought by noble courts across Lautara). 7 tails, ~140. Attends Heartcourt sessions twice a year as honoured elder.
 
 **Civic landmark (new):**
-- **The House of Names**: Plain English. The Sapphire Heart's archive of every kitsune death in Emarrea across four centuries, run as an annexe of the Knowledge-pillar's offices in Biozuri. Theological annexe of **Yumegatari's** clergy: a story that ends is a record the world holds.
+- **The House of Names**: Plain English. The Sapphire Heart's archive of every kitsune death in Emarrea across four centuries (millions of names; some fifty-five new deaths a day, gathered by district copy-houses and entered at Biozuri once the funeral stories come in, about five days on), run as an annexe of the Knowledge-pillar's offices in Biozuri. Theological annexe of **Yumegatari's** clergy: a story that ends is a record the world holds.
 
 **Tradition & craft:**
 - **Catjomin Sake**: kitsune sacred sake tradition; nine tiers (one per tail of the brewer at time of brewing), each with a Japanese-style poetic name. Japanese-internal naming. Full table in `geography/lautara/emarrea.md`, *Catjomin Sake*.

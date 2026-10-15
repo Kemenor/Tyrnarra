@@ -25,6 +25,8 @@ Northern border is the **river** that runs east-west: it forms the Tahu Tangata/
 
 **Known as the Divine Envoys.** **Dominant in Lautara**, specifically in **Emarrea**. The Heartcourt rules; the capital is **Biozuri**; the famous mountain resort village is **Kawaakari**.
 
+**Population (2026-10-15):** about **5 million** across some 197,000 square miles of forested highland and terraced orchard (a held heartland at about 25 to the square mile); kitsune about three in five, some 3 million.
+
 **Fisaya** herself is depicted as a female kitsune with multicolour fur (see [`../../gods.md`](../../gods.md), the Thirteen). Kitsune communities feel a doctrinal pull toward Vindul (Fisaya's home domain) regardless of where they live; the wind reaches them from any direction. The actual demographic centre of kitsune life remains in Emarrea (Commerce).
 
 A second long-established kitsune population lives in **Merkavar** itself as market-readers and information brokers; the **Merkavar-kitsune** are an ancient parallel tradition to the Heartcourt's forested kingdom, with their own commercial-pragmatic register. The two registers diverged so long ago that kitsune from each are sometimes mutually unrecognisable to outsiders. See [`../lautara.md`](../lautara.md), *Notable Locations → Merkavar*.
@@ -172,7 +174,7 @@ Concrete moments each Heart carries, surfaced in canon to support the Heartcourt
   > what the river thinks of either.
 
 **Shirae (Sapphire + Crimson Tail).**
-- *The House of Names.* The four-century rolling archive of every kitsune death in Emarrea, each entry annotated with the stories told at funeral. Yumegatari's offering in archive form. The youngest entries are five days old; the oldest are four hundred and twelve years. Shirae heads the institution and reads in it daily.
+- *The House of Names.* The four-century rolling archive of every kitsune death in Emarrea, each entry annotated with the stories told at funeral. Yumegatari's offering in archive form. Some fifty-five kitsune die in Emarrea on an ordinary day, so the House is one of the great institutions of the south: district copy-houses gather the funeral stories and send them to Biozuri, and an entry is written there only once its stories have come in, about five days after the funeral. The youngest entries are always about five days old; the oldest are four hundred and twelve years; the names run to millions. Shirae heads the institution and reads in it daily.
 - *The Lost-Era treatises.* She is the only seated Heart who can read the strategic treatises preserved in the Sapphire archives; she has read all of them. Asked what the kingdom should build with what she has learned, she said: *"A library. Build the library. The army can wait for a reason to exist."*
 - *The twelve years with Yorume.* The bond is private, by Shirae's preference. The pattern: her absences from court coincide with Yorume's; she locks the House of Names an hour later than usual on nights they are together. The kingdom has not noticed. Shirae chose this.
 

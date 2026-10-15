@@ -114,7 +114,9 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 6 · On the Heart Who Was Always Going to Be Written About
 *(Reien, Rose)*
 
-*The Rose Heart, Reien, was twenty-six years old when he stood on the Spectacle stage and performed a seven-act festival cycle of his own composition. The kingdom voted by acclaim before the seventh act ended. He has been a Heart for two years, has been loved by three Hearts I can name and one I will not, and has published in the last fortnight a slim octavo titled Of Lanterns and the Lighting of Them that the literate classes of Lautara are already pretending not to read aloud at parties.*
+*The Rose Heart, Reien, was twenty-six when he stood on the Spectacle stage and performed a festival cycle of his own composition in seven acts, the Cycle of the First Lantern. The kingdom voted by acclaim before the seventh act ended, so he finished his own audition as a Heart. He wept. The kingdom wept. The Violet Heart lit the air gold with foxfire, and I wept too, which my publisher asked me to leave out and which I have left in.*
+
+*He has been a Heart for two years. In that time he has hosted a festival for nearly every reason the calendar offers and two it does not, been loved by two Hearts I can name and possibly by one I will not, and published, in the last fortnight, a slim octavo titled Of Lanterns and the Lighting of Them, which the literate classes of Lautara are already pretending not to read aloud at parties.*
 
 *Two of the verses, transcribed with his publisher's grumbling permission:*
 
@@ -137,13 +139,15 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 7 · On the Heart Who Holds Every Other Heart's Names
 *(Shirae, Sapphire + Crimson Tail)*
 
-*The Sapphire Heart, Shirae, runs the House of Names, which is a four-century archive of every kitsune death this kingdom has chosen to remember, annotated with the stories told at each funeral. I have read in it. I will not tell you what I read. The archive is hers, and she once told me, kindly but firmly, that "a chronicler who quotes from the House of Names without leaving offering at the lantern is the chronicler I do not next welcome," which I took to heart and now do.*
+*The Sapphire Heart, Shirae, keeps the House of Names, an archive begun four hundred and twelve years ago of every kitsune death the kingdom remembers, each entry annotated with the stories told at the funeral. Some fifty kitsune die in Emarrea on an ordinary day, and their stories come in from the district copy-houses, so the youngest entries are always about five days old. She reads in it every day, which is either the gloomiest habit in Biozuri or the most cheerful, depending on the stories, and she will tell you it is the second.*
 
-*She also reads the Lost-Era strategic treatises that no other Heart can. She has read all of them. When I asked her what she thought the kingdom should build with what she had learned, she said: "A library, Golivander. Build the library. The army can wait for a reason to exist."*
+*I have read in it. I will not tell you what I read. She once told me, kindly and firmly, that "a chronicler who quotes from the House of Names without leaving an offering at the lantern is a chronicler I do not next welcome". I have left an offering on every visit since, and been welcomed on every visit since, and drawn the obvious conclusion.*
 
-*She is, in addition, the Heart most often absent from court on the same evenings as another Heart whom I shall, for the third time in this dispatch, decline to name. The pattern has held for twelve years. The kingdom has not yet noticed. I notice because it is my work to notice. I notice and I do not write it down.*
+*Since the Crimson seat fell empty she has also carried its Tail, for the plain reason that she is the only Heart who can read the old strategic treatises in the Sapphire archives. She has read all of them. I asked her what the kingdom should build with what she had learned. She said: "A library, Golivander. Build the library. The army can wait for a reason to exist."*
 
-*Shirae, this dispatch is the closest the column will come.*
+*The court reads her coolness toward the Azure Heart as a feud. It is two people who would both rather be reading.*
+
+*She keeps her evenings to herself, and I keep them out of this column. Shirae, this is the closest the column will come.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
@@ -152,13 +156,15 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 ## Column 8 · On the Spectacle the Kingdom Is Watching Instead of Working
 *(The Onyx Spectacle)*
 
-*The Onyx Spectacle has produced two candidates, two schools, and one unprecedented run on the box-stands of Heartplaza, which now sell numbered seats for the trial-days. (I attended the third trial. I sat in row C. I have an opinion. I shall keep it.)*
+*The Onyx Spectacle has produced two candidates, two schools of secrecy, and an unprecedented run on the box-stands of Heartplaza, which now sell numbered seats for the trial-days at prices I would call extortionate if I had not paid them. It is drawing more spectators than the last harvest festival.*
 
-***Kasumi***, *mentored by the Violet Heart, is twenty-five years old and has two tails, the second grown at sixteen. She has, in three trials, made the audience laugh, made the audience gasp, made the audience uncertain whether the trick had happened yet, and on one notable occasion made the audience cry. Her school is secrets-as-illusion. Her foxfire is, to my eye (and I have seen foxfire in seven kingdoms), the cleanest I have witnessed outside her mentor's own work.*
+*I attended the third trial. I sat in row C. I have an opinion, and I shall keep it, since both candidates are trained in the art of finding out what people think.*
 
-***Murasaki***, *mentored by the Azure Heart, is forty-one years old and has four tails. She has, in three trials, said almost nothing, won twice, and on the trial she lost was widely judged afterwards to have lost on purpose. Her school is secrets-as-information-asymmetry. She is the candidate the merchants prefer. She is the candidate the rest of the kingdom finds slightly unsettling, which is, I suspect, also a vote in her favour.*
+*Kasumi, mentored by the Violet Heart, is twenty-five years old and has two tails, the second grown at sixteen. In three trials she has made the audience laugh, made the audience gasp, made the audience unsure whether the trick had happened yet, and on one occasion made the audience cry. Her school is secrets-as-illusion: the foxfire that misdirects, the kindness that hides what should not be seen. Her foxfire is, to my eye (and I have seen foxfire in seven kingdoms), the cleanest I have witnessed outside her mentor's own.*
 
-*The seventh and final trial is scheduled before the next Festival of the Fox Lanterns. Place no wagers; the Heartcourt has formally disapproved of public betting on a Spectacle, and the kingdom has formally ignored the disapproval, and I am formally not advising anyone.*
+*Murasaki, mentored by the Azure Heart, is forty-one years old, has four tails, and spent the past decade learning her trade in the trade-courts of Lautara. In three trials she has said almost nothing, won twice, and lost the third in a manner widely judged afterwards to have been on purpose. Her school is secrets-as-information: the well-placed ear, the quiet record, the network of trusted strangers. She is the candidate the merchants prefer. She is the candidate the rest of the kingdom finds faintly unsettling, which is, I suspect, also a vote in her favour.*
+
+*The seventh and final trial is set before the next Festival of the Fox Lanterns. Place no wagers. The Heartcourt has formally disapproved of public betting on a Spectacle, the kingdom has formally ignored the disapproval, and I am formally not advising anyone.*
 
 – *G., The Travelling Chronicle, Letters from Biozuri, 2532 MR*
 
