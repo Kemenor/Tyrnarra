@@ -4,7 +4,7 @@
 
 **Scope (GM, 2026-10-07):** the three polities are built **together, phase by phase**, each phase answered for all three side by side. **Star Island** is a separate, later build with its own seed (`seed-bank.md`, *Star Island*).
 
-**Current phase:** 2 (seeds), open.
+**Current phase:** Phase 2 closed (2026-10-15); the joint build ends here. Each country continues from Phase 3 in its own record, reading the *Island frame* below first.
 
 ---
 
@@ -78,20 +78,46 @@
 
 ## Phase 2: Seeds (open)
 
+**Candidates (2026-10-12):** D1 the land goes to sea singing (bergs calving into the Midarra; an ice trade) · D2 they sing to ice they will never hear again · B1 the sand owns nothing · B2 the open sand draws everyone · M1 a song that can't be taken · M2 the cats choose the crown.
+
+**GM picks (2026-10-15):** **D1**, polish wanted (more than the sea: a lake or more places where the ice meets water). **B1**, polish wanted (what it means for cities and houses; where it does not apply). **M1**, approved: the Pattupucha sings with whom it chooses; a caught one sings for no one; the forest's famous song cannot be bought (new fact "sings only by choice", GM yes).
+
+**Rejected:** D2 (abstract; near Ardo Beroa's "nothing stays" and Nahaskel's relearned city; its first form, rock-towns in moving ice, was Galdua Jendea's rock islands in sand). B2 (No Man's Land's frontier of arrivals; its pressure may return at Phase 9). M2 (craft-prestige is not competence to rule; would fail Phase 5 as a government). Villages forming where the cats sing (the Basogur Vanara's great beasts across the water).
+
+**The seeds (GM-approved, 2026-10-15); Phase 2 closed:**
+- **Dea Elurra (D1, polished):** *The ice country creeps outward and breaks off wherever it meets water (into its own lagoons, into Frae City's lake, into the Midarra), and the bergs drift off singing as they melt.* Real anchors: calving into lakes (Jökulsárlón, Perito Moreno); melting glacier ice crackling as trapped air escapes; the 19th-century ice trade. Inland lagoons are below map resolution; any at map scale go to map-todo.
+- **Basamortua (B1, polished):** *On Basamortua's sand nothing is owned, not the fulgurites the lightning leaves and not what anyone drops there, so its people pave their towns, raise their houses, and carry their life's music on their bodies.* The line: **on the sand, anyone's; off the sand (built, raised, paved, stone-lined wells), the keeper's.** Soil is ordinary held ground: the river-banks along the two border rivers and the savanna carry titled fields and farms.
+- **Maitagarri (M1):** *The Pattupucha sings with whom it chooses; a caught one sings for no one, so the one thing Maitagarri is famous for cannot be bought.*
+
+**Process (GM, 2026-10-15):** the joint build ends when Phase 2 closes; the seeds are the shared building block, and from Phase 3 each country is built on its own.
+
 
 ---
 
+## Island frame: shared by the three builds
+
+Each country is built on its own from Phase 3 (`dea-elurra.md`, `basamortua.md`, `maitagarri.md`, each reading this frame first). These items are shared: whichever build reaches one first settles it for all three, and the others build on it.
+
+- **The shared history:** when and how the three polities formed (default Dark Era); how far the Golden Empire reached onto the island (sets the imperial loan layer).
+- **The shared Tamil-core tongue** under the three registers (Malayalam-, Telugu-, Kannada-sounding); three kindred peoples is the GM's lean (Phase 1, Q4).
+- **The three rivers and the lake (GM ideas, 2026-10-15, open):**
+  1. *Outward:* the rivers flow from the lake to the sea, the lake fed from underground.
+  2. *Inward:* the rivers flow into the lake, and the lake drains down, deep, to **a forgotten city and its people below**, reached only through the lake and unknown to nearly everyone; the water spreads from there and comes back up elsewhere.
+  3. *The city feeds the lake:* the same hidden city, the water rising from it into the lake, the rivers flowing out.
+  - Consequence to weigh: with outward rivers, bergs calved into the lake ride the border rivers past Basamortua and Maitagarri to the sea; with inward rivers they stay in the lake.
+  - Canon to read end to end before designing the hidden city: the Darklands (`glossary.md`, *Darklands*: the deep underground, the Corrupted God's dominion), the Corrupted God and the Elden (`cosmology.md`, `timeline.md`), Stillpools and **Stillpool-rivers** (`cosmology.md`: a subsurface Wellspring-residue watercourse; the Dreaming Cape's is the one canon example). It lies under Frae City and the Council's chambers; Askamira carries no dungeon of the Nine. Settle the river direction at the first Phase 4; the hidden city's truth is ⚿ material (Phase 9) and may outgrow any one country's build.
+
 ## Rejected options
 
-*None yet.*
+Recorded in their phases above.
 
 ## Deferred questions
 
-*None yet.*
+- The climates' cause (Phase 9); feeding Frae City (Phase 6); who the islanders are and the polities' founding (Phase 4). See the island frame.
 
 ## Canon moves (approved)
 
-*None yet.*
+- **Frae City's lake carries Dea Elurra's bergs** (GM, 2026-10-15): the ice reaches the lake's north edge and calves into it; bergs drift past the shore districts under the rock, singing. Files: `lore/geography/askamira.md` (*Frae City*), `published/setting/talan/domains/askamira/frae-city/frae-city.html` at publish.
 
 ---
 
