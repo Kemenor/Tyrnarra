@@ -656,7 +656,7 @@ The kitsune culture is detailed in `geography/lautara/emarrea.md`. Outsiders ref
 - **Yukihime-shu**: "Snow Princess Wine." The pale-blush fruit wine of Kawaakari, made from mountain plums and snowberries. Japanese-internal naming.
 - **Yukihime-no-mori**: Kotokoe (Japanese-flavoured); *yukihime* (snow princess) + *no* (genitive) + *mori* (forest) → "the Snow Princess Forest." The pink-blossomed orchard-and-wildflower lowlands at Emarrea's southern edge where the Yukihime-shu plums grow on terraced slopes. The forest and the wine share the *Yukihime* name; the plums are the bridge.
 - **Foxfire Stone Massage**: Plain English. Kawaakari's signature spa treatment.
-- **Festival of the Fox Lanterns**: Plain English. Annual Kawaakari river festival; lanterns drift down the Hoshigawa.
+- **Festival of the Fox Lanterns**: Plain English. Annual lantern festival kept across Emarrea wherever there is water to float a lantern on; wish-lanterns, Yumegatari's offering. Kawaakari's, where the lanterns drift down the Hoshigawa, is the most beautiful and most famous, drawing the largest crowds and most of the Hearts.
 
 **Landmark:**
 - **The House of a Thousand Flavors**: Plain English. Premier dining-and-illusion venue in Heartplaza, run by the seven-chef polycule **The Cook's Circle** (Rinza, Maeko, Tairen, Shouka, Virel, Kyome, Elhara).

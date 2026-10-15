@@ -268,6 +268,23 @@ See also: `../../glossary.md` (*Golivander*, *The Travelling Chronicle*, *Letter
 
 ---
 
+## Column 13 · On the Night of the Fox Lanterns
+*(the Festival of the Fox Lanterns at Kawaakari · the Storyweaver · a petition on the riverbank; quoted on the Emarrea page)*
+
+*The Festival of the Fox Lanterns is kept wherever in Emarrea there is water to float a lantern on, which is most of it. Every river town lights its own, Biozuri lights its own, and I have seen a village with nothing but a well float a single lantern in a bucket and call it a festival, correctly. The one everybody goes to, if they can, is Kawaakari's. Kawaakari is a village of hot springs, plum terraces and one river, the Hoshigawa, which carries enough crystal dust down from the mountain to sparkle at noon, and on that one night carries a good share of the kingdom's wishes and most of its Hearts. I have attended it more times than I have managed to describe it, and my publisher has the drafts.*
+
+*The week before, as tradition and my stomach both require, I dined at the House of a Thousand Flavors in Biozuri, whose lantern-season menu is called Dreams Beneath the Lantern Sea. Between the courses Elhara, the Storyweaver of the Cook's Circle, came to each table and told a story, a different one at every table. It is understood, by a courtesy older than the House, that when the Storyweaver speaks, Yumegatari is listening, and possibly speaking too. Mine was about a lantern that would not float. I will not tell it. Readers who would like to hear it are welcome to have been there.*
+
+*At Kawaakari the whole village goes down to the river at dusk, and so do the thousands who came for it, and every one of them carries a paper lantern. On it they write a wish, or a name, or a story that ought to be kept. The lanterns are lit with foxfire, which throws no heat and so burns neither the paper nor the hand that holds it, set on the water, and let go. They are Yumegatari's offering, and the kitsune say that what is written on a lantern is told to her as it passes. Within the hour the Hoshigawa is a road of light from the bathhouse steps to the bend below the terraces, the crystal dust lit gold from above, and both banks stand in a silence no kitsune can otherwise keep for more than a minute.*
+
+*As at every great festival in Emarrea, any citizen may bring a matter straight to a Heart, and since the Hearts come to Kawaakari for the lanterns, the matters come to the riverbank. This year the Emerald Heart sat barefoot on a stool by the water and took petitions until the lanterns were lit. I watched an old brewer from the plum terraces explain, at length and with gestures, that the footbridge to the upper terrace had washed out in the spring and that the village council had been discussing it ever since. Shionori listened to every word. Then they asked how many planks the bridge had wanted. The brewer did not know. Shionori said that was the first thing to find out, and that they would walk up and count them in the morning; and in the morning, I am told, they did.*
+
+*I wrote my wish on my lantern, as I do every year. I will not tell you what it was, which is the one rule of the festival every kitsune keeps, and I watched it go down the river with all the others until I could no longer tell it from the rest.*
+
+– *G., The Travelling Chronicle, Letters from Biozuri, 2531 MR*
+
+---
+
 ## Open in the chronicle record (canon notes)
 
 A handful of details inside the columns are deliberately under-specified in canon. Flagged here so future writes can either ratify or vary them:
