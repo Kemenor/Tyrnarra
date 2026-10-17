@@ -7,7 +7,8 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-02). Opening readback approved in chat.
 - **Phase 1 (seed questions): closed** (GM, 2026-10-02). Appetite clarified as all three prompts; the summary approved in chat.
 - **Phase 2 (seeds): closed** (GM, 2026-10-17). Seed B with the GM's amendments: *A garden planted by a court no one remembers, and a people who have spent the centuries since learning to eat it.*
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-17). Waking at the palace; Natsume's letter accepted.
+- **Phase 4 (place, peoples and history): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -44,7 +45,7 @@ Received and confirmed 2026-10-02.
 
 **Seed round (2026-10-17).** Three shapes of the GM's seed-bank idea were offered:
 - **A, Brown on the plate:** the bright things kill, the cooks at the gate know each one's fire, and a dish is safe once its colour has cooked out; the cook-houses rule. Left the palace with no part.
-- **B, the garden without the gardener's notes:** the paradise is the planted garden of a forgotten court; the Goblins recover its uses one bite at a time. **Chosen (GM, 2026-10-17).** A's colour-cooks-out image may live on inside it.
+- **B, the garden without the gardener's notes:** the paradise is the planted garden of a forgotten court; the Goblins recover its uses one bite at a time. **Chosen (GM, 2026-10-17).** A's colour-cooks-out image was never adopted, and the GM rejected it at Phase 3: it is wasteful and adds nothing (why would the garden's food turn brown when ordinary vegetables do not).
 - **C, the season inside:** what kills in spring feeds in autumn, and families go up into the ring by season. Rejected as the weakest: close to Tahu Tangata's field clocks, the River Duchies' flood calendar and the Basogur's guided road.
 
 **The GM's amendments to B (2026-10-17):**
@@ -67,6 +68,38 @@ Received and confirmed 2026-10-02.
 **Phase 2 checklist:** three seeds offered as shapes of the GM's idea, each with pitch, what follows, canon hook and specificity test; sameness checked across the setting; B recommended and chosen; the GM's amendments and follow-ups recorded; the seed sentence approved.
 
 **Sameness notes (authoring only, never on the page):** the Basogur (a deadly forest entered with guides: here the danger is in the eating, and the forest is a pantry, not a crossing); the Wildreach and the Golden Coast (colour: here bright is the warning, as in poison frogs and fungi); the River Duchies (turning food: they rot and ferment, here the poison is taken out); Tahu Tangata (heat opens the puahi to renew the ground, not to eat); Baratalda (every fruit grows there, unexplained: here the garden was planted); the Lost Kingdom and the Storveldi (dead civilisations: here the builders are known only by what they grew).
+
+## Phase 3: traveller's image
+
+**Candidates (2026-10-17):** 1, the first colour at the tunnel mouth after a day of dark; **2, waking at the palace** as the boat slides out into morning, the night's boats ahead with sleepers aboard, the harvest barges, the quay with blankets; 3, the empty boats hauled up past the walkers. **2 chosen (GM, 2026-10-17).**
+
+**The speaker (GM, 2026-10-17):** a kitsune cook from away, writing home to her kitchen. She went in to learn one recipe and came out without it. Her trait: she takes every dish apart and lists what is in it; in the garden the habit fails her. Claude to write it.
+
+**The letter (accepted by the GM, 2026-10-17, after revisions: the hungry-in-a-kitchen clause cut as a claudism, the brown dishes cut, the haulers' greeting made literal, the squeeze on the path cut). Placeholders [the capital] and [the palace] wait for Phase 8:**
+
+> *Rinza,*
+>
+> *I have no recipe for you. I am sitting on the quay at [the capital] with a blanket somebody put round me, writing this before I forget how it went, because I have already forgotten what was in it.*
+>
+> *You know my habit. They gave me a loaf at [the palace] for the walk in: barley, a little rye, salt, lard, and too much caraway, baked yesterday. I wrote that down by my own lamp an hour into the tunnel, and then I stopped writing, because there was nothing to see. The path runs beside the river the whole way, uphill so gently you only know it by your legs. Twice I caught up with haulers walking the bank with shaded lamps, and something long and pale in the water ahead of them, towing an empty boat up on a rope. I had finished the loaf by noon. By evening I was hungrier than I have been in thirty years of kitchens.*
+>
+> *I will not try to tell you the garden. I tried for an hour last night and my notes are a list of colours. The cook who fed me tasted every dish before I did. I ate seven things, Rinza, and I cannot name one of them. I took the third apart in my mouth for a full minute the way you taught me and got nothing out of it but more of the taste. She laughed at me and brought the eighth.*
+>
+> *Afterwards they lay you in a boat and push you off, and the river does the rest. I slept the whole way out. I woke when the light changed: we were sliding out from under [the palace] into morning, and ahead of me the night's boats were coming out one by one, each with someone asleep in it, slow, the way our lanterns go on festival night. Barges came after, low in the water with baskets. People were waiting on the steps with blankets for the ones who had not woken yet.*
+>
+> *I am walking in again tomorrow. Do not give my station away.*
+>
+> *Natsume*
+
+> Natsume, a cook of the House of a Thousand Flavors in Biozuri, to Rinza, Head Flavorist of the Cook's Circle, 2532 MR
+
+**Placement:** the head of the section on the way in and out (the palace, the tunnel, the float).
+
+**The tunnel's draught beast (GM, 2026-10-17):** a big pale blind salamander of the tunnel river, several feet long, after the real olm (*Proteus anguinus*) scaled up; it tows the empty boats upstream in harness from the water while the hauler walks the bank with a shaded lamp (olms shun light). Slow, so walkers overtake it. Name at Phase 8 (avoid *taniwha*, a sacred Māori river guardian). Rejected: mules (plain); a garden-fed beast that eats the poisons raw (too large a question for Phase 3; may return at Phases 6 or 9 only if the GM raises it).
+
+**Carried to Phase 4:** the tunnel's size. Proposed: water wide enough for two boats to pass (about 25–30 ft), a towpath about 10 ft, a bore around 40 ft; option of a natural cave river the court widened and cut through, with broad halls and a few narrow throats where traffic waits.
+
+**Phase 3 checklist:** three candidates offered; kin rites checked (the River Duchies' drift-barges, Emarrea's floated lanterns); 2 recommended and chosen; the speaker settled (a kitsune cook of the House of a Thousand Flavors, 2532, a letter) with her trait shown in the text; placement settled; the letter written by Claude at the GM's request, revised on the GM's corrections and accepted; [new] additions flagged and the brown dishes cut; the tunnel's draught beast added at the GM's prompt.
 
 ## Rejected options
 
