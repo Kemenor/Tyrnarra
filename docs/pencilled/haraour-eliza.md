@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-02). Appetite clarified as all three prompts; the summary approved in chat.
 - **Phase 2 (seeds): closed** (GM, 2026-10-17). Seed B with the GM's amendments: *A garden planted by a court no one remembers, and a people who have spent the centuries since learning to eat it.*
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-17). Waking at the palace; Natsume's letter accepted.
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-19).
+- **Phase 5 (government): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -100,6 +101,34 @@ Received and confirmed 2026-10-02.
 **Carried to Phase 4:** the tunnel's size. Proposed: water wide enough for two boats to pass (about 25–30 ft), a towpath about 10 ft, a bore around 40 ft; option of a natural cave river the court widened and cut through, with broad halls and a few narrow throats where traffic waits.
 
 **Phase 3 checklist:** three candidates offered; kin rites checked (the River Duchies' drift-barges, Emarrea's floated lanterns); 2 recommended and chosen; the speaker settled (a kitsune cook of the House of a Thousand Flavors, 2532, a letter) with her trait shown in the text; placement settled; the letter written by Claude at the GM's request, revised on the GM's corrections and accepted; [new] additions flagged and the brown dishes cut; the tunnel's draught beast added at the GM's prompt.
+
+## Phase 4: place, peoples and history
+
+**Proposal round (2026-10-17) and the GM's answers (2026-10-19).** Approved:
+- **The tunnel:** the ring's river drains out underground through the mountain; the court followed it, cut the road beside it and widened the channel. About 25 miles, a long day's walk in and about 12 hours afloat out; a bore of about 40 ft (water for two boats to pass, a 10 ft towpath); dark.
+- **The garden:** planted around the Eliza and gone wild across the whole valley floor (about 100 miles across) since.
+- **The garden was a plant bank (GM's idea):** the original owners kept it as a bank of plants, which is why it holds so much variety, including plants found nowhere else.
+- **A preserve, farmed and cooked from (GM):** the garden is kept like a preserve, and its people also farm it and cook from it.
+- **Inside the ring:** people live there for working years, loosely, not by strict rule; the refuge is why.
+- **The Empire:** Haraour an Imperial province (560–1325 MR); the garden's dishes an imperial luxury; the capital's Talanese name from then.
+- **The refuge:** the outer country went in through the tunnel and sealed it through the Dark Era, lived off the garden, and learned most of what is known; the return and the crown at its end.
+- **Numbers:** about 3 million; the capital about 75,000.
+- **The Goblin feeling-only fix** in `sumendar.md` (GM: "definitely keep the fix").
+- **Opened by the GM:** the poisons. A people who can cook the poison out also hold the poison, and would do more with it, though perhaps less publicly. For Phases 6 and 9.
+
+**Second round (GM, 2026-10-19):**
+- **The god (GM's idea):** the plant bank dates from the **Gods' Era**, and **the Eliza was a church after all**, of a **nature god who truly lived there**. The bank was his and his people's. The palace, the tunnel and the Eliza are the work of that god's people. Tier: proposed as ⚿ (the open record knows only the name and argues over it); the god's fate, name and his people's fate go to Phase 9. Canon to respect: a dead god who is forgotten is gone permanently (`gods.md`, *Death & Regeneration*).
+- **Canon move 1 approved** (`sumendar.md`, the Haraour entry), now worded around the Eliza as the garden's house whose name says church; the open record disputes it.
+- **Canon move 3 approved for now** (`transport.md`: a road from a halt on Eldara's line, about 150 miles, no rail). **TBD:** a line may later sweep through to the Red Dominion; settle at that build.
+- **The other Phase 4 points approved**, with two changes:
+  - **The Ash-Binder closure dropped.**
+  - **The refuge revised:** the country did not flee and the capital was never abandoned. Those who sought refuge went in through the palace and found a home in the garden, because there was room; many stayed, and their descendants live inside today beside those who come in for working years. The house that held the palace kept the gate through the Dark Era and took the crown at its end. (This also removes the River Duchies' "return" overlap.)
+
+**Closed with (GM, 2026-10-19):** about **100,000 living inside the ring** (refuge families' descendants and people on working years), within the 3 million.
+
+**Phase 4 checklist:** sites placed (capital and palace fixed by the map; the tunnel, the inner mouth, the Eliza's distance and the river below map resolution; the capital's label for map-todo once named); neighbour lines settled (the Red Dominion light for now; Galdua Jendea not adjacent); peoples by the distribution model, with the Goblin feeling-only fix; founding era (the god's works in the Gods' Era; the crown at the Dark Era's end; the capital's Imperial Talanese name); dated history checked against `timeline.md`; population by the density rule; three canon moves approved with their files.
+
+**Sameness note (authoring only):** the River Duchies keep their seed on Tamegra, one of the slow isles, for replanting after the flood; Haraour's bank is a living collection of plants, kept growing.
 
 ## Rejected options
 
