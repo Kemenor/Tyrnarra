@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-17). Seed B with the GM's amendments: *A garden planted by a court no one remembers, and a people who have spent the centuries since learning to eat it.*
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-17). Waking at the palace; Natsume's letter accepted.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-19).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-20). The gate crown and the keepers of the record.
+- **Phase 6 (economy): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -129,6 +130,24 @@ Received and confirmed 2026-10-02.
 **Phase 4 checklist:** sites placed (capital and palace fixed by the map; the tunnel, the inner mouth, the Eliza's distance and the river below map resolution; the capital's label for map-todo once named); neighbour lines settled (the Red Dominion light for now; Galdua Jendea not adjacent); peoples by the distribution model, with the Goblin feeling-only fix; founding era (the god's works in the Gods' Era; the crown at the Dark Era's end; the capital's Imperial Talanese name); dated history checked against `timeline.md`; population by the density rule; three canon moves approved with their files.
 
 **Sameness note (authoring only):** the River Duchies keep their seed on Tamegra, one of the slow isles, for replanting after the flood; Haraour's bank is a living collection of plants, kept growing.
+
+## Phase 5: government
+
+**Seed round (2026-10-19):** G1, the gate crown (the crown holds the palace, the tunnel, the river, the boats and the haulers; the toll; reeves outside, a warden at the inner mouth; the households inside run their own); G2, the warrant crown (the crown stamps every cook and dish sold); G3, the keeper-king (the crown holds the record and the knowledge). **G1 chosen (GM, 2026-10-19).**
+
+**The GM's combination:** **the keepers of the record certify cooks themselves**, G2's warrant moved from the crown to the keepers. Two powers that pull, the crown and the keepers, in a changed form of merchant against nobility. The GM asked whether this is a cliché. Answer given: it holds if it stays **two monopolies checking each other**, each with a fair case and a fault (the crown sells faster than is safe; the keepers' caution is real and also keeps their certified cooks a closed shop), neither able to win outright.
+
+**Approved (GM, 2026-10-20):**
+- **Certification plant by plant** (after the fugu licence); a cook's standing is how many of the garden's plants she may serve. The keepers choose their own from certified cooks who have done tryings. The crown cannot certify; the keepers cannot toll or shut the gate.
+- **The heir lives working years inside the ring** before the crown passes.
+- **The poisons are the muddy line and the likely live tension.** Certification covers food; a poison sold as a poison falls under neither power's rule, and the gate lets it out. **The trade is not all in the dark (GM):** the Adventurers' Guild has genuine, lawful uses (poisons against monsters; the Guild follows local law, `factions.md`), and the Mercenary Guild buys for every purpose (deniable, informal, no buildings). The muddy part is where else it is sold.
+- **The numbers (approved, GM 2026-10-20):** the garden holds more kinds than anyone has counted (tens of thousands); the record names about 9,000; about 600 are cleared for the table, roughly one every four years over 2,500 years, most in the Dark-Era refuge; about 50 are safe raw and need no certificate; about 550 need preparation and are certifiable, about a hundred of them the staples. An ordinary garden cook holds 10–20 certificates (a full table), a master 80–150, the keepers at the top a few hundred; no one holds all. **A certificate is needed only to serve or sell to others**; at home anyone cooks what they dare, and most poisonings happen at home.
+
+**Closed with:** the gate crown (hereditary in the house that held the palace; the heir's working years inside; the palace, tunnel, river, boats, haulers and toll; royal reeves outside, a crown warden at the inner mouth; the households inside run their own); the keepers of the record at the Eliza (the record, plant-by-plant certification, self-chosen from certified tryers); the four answers; the special state of the gate shut; the powers (the crown may not tax climbers, certify, or take inside land; the keepers may not toll or shut the gate); the two pulls; the poison line; the honest cost of two monopolies.
+
+**Phase 5 checklist:** census held against Appendix B, nearest polities named and kept off the page; three government seeds with the four answers, fitness, acceptance and cost; the incentive check (the toll capped by free climbing; the keepers' closed shop); the three tests on G1; the special state answered twice; powers and the muddy line settled; succession settled; G1 chosen with the keepers' certification combined in.
+
+**Census and sameness notes (authoring only):** nearest gate monopoly, Auran's one-quay law (a commonwealth there); hereditary crowns, the Thousand Kingdom; two pulling powers in one Sumendar sibling, Tahu Tangata's diarchy (here the keepers are an institution, not a co-ruler); a controlled necessity, Argia Esfera's Aguarda at the wells.
 
 ## Rejected options
 
