@@ -10,7 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-17). Waking at the palace; Natsume's letter accepted.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-19).
 - **Phase 5 (government): closed** (GM, 2026-10-20). The gate crown and the keepers of the record.
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-21).
+- **Phase 7 (daily life): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -148,6 +149,17 @@ Received and confirmed 2026-10-02.
 **Phase 5 checklist:** census held against Appendix B, nearest polities named and kept off the page; three government seeds with the four answers, fitness, acceptance and cost; the incentive check (the toll capped by free climbing; the keepers' closed shop); the three tests on G1; the special state answered twice; powers and the muddy line settled; succession settled; G1 chosen with the keepers' certification combined in.
 
 **Census and sameness notes (authoring only):** nearest gate monopoly, Auran's one-quay law (a commonwealth there); hereditary crowns, the Thousand Kingdom; two pulling powers in one Sumendar sibling, Tahu Tangata's diarchy (here the keepers are an institution, not a co-ruler); a controlled necessity, Argia Esfera's Aguarda at the wells.
+
+## Phase 6: economy (closed, GM 2026-10-21)
+
+- **Subsistence:** they feed themselves. The outer country farms barley and millet, keeps goats and sheep, fishes the rivers, and fishes and pans salt on the short Hafra shore; lean years draw on Tangatan grain like the rest of Sumendar. Inside, the hundred-odd staples are the daily food, cooked at home without certificates; grain and salt come in through the gate.
+- **The draw:** guests who come to eat (the walk in, the float out; a hundred or two a day in season); cooks who come to learn (foreigners may be certified, but it takes years inside, so most go home without it); buyers of medicine, reagents and poisons.
+- **Sells:** preserved garden goods, dried, smoked and cured, certified at the gate (raw produce is deadly in untrained hands, so what travels is already made safe); the Eliza's drying tower and smokehouse still do the work they did for the god's people; the luxury the Empire ate is still the export (Biozuri, Merkavar, Frae City, rich tables). Medicines and reagents openly (Eldara's still-rooms; alchemists). Poisons to the Adventurers' Guild openly and lawfully (a Guild office at the capital), to the Mercenary Guild quietly, the rest murky.
+- **Buys:** iron and tools from No Man's Land and Eldara (knives, pots), Eldara's almosts (a garden kitchen running on a near-perfect Eldaran oven or still), cloth, grain in lean years.
+- **Seeds leave; the knowledge does not.** The garden's plants grow anywhere and some have been smuggled out, but without the record nobody abroad knows how to cook them. The monopoly is the record, not the plant.
+- **Routes:** the road from a halt on Eldara's line, about 150 miles across No Man's Land, carts out and guests in, both preyed on by the Neck robbers since 2527 (a line on to the Red Dominion TBD); the tunnel as the single choke point; barges on the river below the palace to the outer towns; fishing harbours only.
+- **Stakes in the tension:** the crown tolls everything that passes, poison included; the keepers earn by certificate and have no hold on poison, and bear the name if a Haraour poison kills abroad; **the households inside make the poisons**, their own income outside the keepers' reach; the Adventurers' Guild wants the supply kept lawful, the Mercenary Guild wants it unasked-about. So the crown and the inside stand together on the poison question, the keepers against.
+- **Table note:** deferred to the draft (PF2e alchemical poisons).
 
 ## Rejected options
 
