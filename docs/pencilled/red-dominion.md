@@ -7,7 +7,7 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-22).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-22).
 - **Phase 2 (seeds): closed** (GM, 2026-10-22).
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): open.** The sketchbook text accepted (2026-10-22); the test sketch next (local ComfyUI and Midjourney, keep the better).
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -50,6 +50,34 @@
 **Phase 2 checklist:** three seeds offered as shapes of the GM's idea, each with what follows, a canon hook and the specificity test; sameness checked across the setting; S2 recommended and chosen with S1's ship-towns as the visuals; S3 dropped; the seed sentence approved.
 
 **Sameness notes (authoring only):** S1 beside Dragon's Reach (one alien hull a city grew in; here a fleet broken into towns by choice); S2 beside Floteyn's Nation Afloat (afloat for good with no homeland; here a diaspora with a home port) and Valreka (a people that moves together; here a people spread apart and called home); S3 beside the Lost Kingdom and the Basogur's sealed Stitchery.
+
+## Phase 3: traveller's image
+
+**Candidates (2026-10-22):** 1, a town roofed with ships (upturned hulls, keels as ridge-beams, figureheads over doors, a ship's bell for a clock); 2, the home ships at the point, every crew with its own version of the song (close to Floteyn's Raft); 3, the question in every port. **1 chosen (GM, 2026-10-22).**
+
+**The speaker (GM, 2026-10-22):** **Roshanak Abri Kuzegar** (Hareaveldi register: given + self-name + family), a scholar of Thekkavar's Lantern of Natural Philosophy, bound for the sealed city to study what came up out of the breach; she takes the Hafra route on a Dominion carrier round the point and up the west coast. 2532. **Traits:** she draws everything (in Hareaveldi an image is how a thing is known); she came to read the Empire in its ruins and keeps sketching the roofs. **Form: a sketchbook**, her notes under numbered sketches (two Sumendar letters to masters already exist: Joana's, Natsume's). **Placement:** the head of the ship-towns section.
+
+**The sketches (GM, 2026-10-22):** render them, both locally (FLUX.2 via ComfyUI) and in Midjourney, and keep the better. No lettering in the images; her notes stay as text under each sketch. A sketch card on the page is a new Style B pattern (approved in principle). One test sketch after the notes are accepted; the final set at the publish, once Phases 4–7 have fixed the ship-towns.
+
+**The sketchbook (written by Claude; accepted by the GM, 2026-10-22, with every [new] addition kept). Placeholders [the capital], [the ship's name], [a northern port], [the landing town] wait for Phase 8:**
+
+> **1. The point, from the deck.** [The capital] on its rock at the end of the country: walls down to the water, a harbour inside them, and the town above in stone. The captain says it is the one town on this coast that stood. I drew it for the walls. I meant to come back to the harbour, and by then we had sailed.
+>
+> **2. The first ship-town, from the deck.** Forty-odd roofs along the shore, and every one of them a boat turned over. The small ones are fishing boats; the hall in the middle is a whole carrier, keel to the sky. From the water it looks like a fleet that sank the wrong way up.
+>
+> **3. The harbour-master's house.** The keel is the roof-tree and the ribs are the rafters. The planks still lie over one another the way they did at sea, so the rain runs off them the way the water did. He has cut his door where the hull was once patched, and kept the patch. I came here to draw the Empire.
+>
+> **4. A figurehead over a baker's door.** A woman with her arms full of fish, salt-white, painted fresh this spring. The house goes by her ship's name, and so does the bread: in the queue they ask for a loaf from the [ship's name]. I was meant to spend this morning at the milestone on the coast road.
+>
+> **5. The bell.** Where a town at home would keep a clock, this one has a ship's bell on a frame in the square, the ship's name cut round its rim. It rang twice while I drew it, for a boat coming in and for the tide.
+>
+> **6. Two crews.** Ours, and a crew at the next berth whose people have kept a quarter in [a northern port] for four generations. They sing the same song in two versions, and stop at the third line to argue it. Both crews are the Dominion's.
+>
+> **7. The mountains.** At evening, far inland to the north-east, a darker line under the cloud. We land at [the landing town] tomorrow and I go inland. The guides there take parties up in fours.
+>
+> *From the sketchbook of Roshanak Abri Kuzegar, scholar of Thekkavar, on the Hafra coast of the Red Dominion, 2532 MR*
+
+**Additions to flag [new]:** the point city built in stone (it stood, so the ship-towns are the returners' towns, not the capital); about forty roofs in a town, the hall a whole carrier; a house going by its ship's name, and the bread with it; the bell rung for boats and the tide; a Dominion crew whose people keep a quarter in a northern port for four generations (the port unnamed); a landing town on the west coast for the road inland; guides who take parties to the sealed city in fours.
 
 ## Rejected options (summary)
 
