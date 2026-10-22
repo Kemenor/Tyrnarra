@@ -6,7 +6,8 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-22).
 - **Phase 1 (seed questions): closed** (GM, 2026-10-22).
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-22).
+- **Phase 3 (traveller's image): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -38,7 +39,21 @@
 
 **Held idea, not hard lore (GM, 2026-10-22): nests.** The land they claim is not as safe as they would like: where the Corrupted God got its first foothold, nests of spawn may survive to this day. Kept separate from the Nine Dungeons. For Phases 4, 7 and 9.
 
-## Rejected options
+## Phase 2: seeds
+
+**Seed round (2026-10-22):** S1, the fleet ashore (every town a broken-up ship keeping its name, ranks and captain; held ship by ship); **S2, the homeland held for a people at sea** (the Dominion the home port of a people largely still out on the Hafra; the people is the fleet, so the state is the fleet's command; the land/sea split through every family; a muster of the whole people at the point); S3, the scar's keepers (the Dominion exists to keep the sealed city).
+
+**Chosen (GM, 2026-10-22): S2, with S1's beached ship-towns as the visuals.** **S3 dropped as a seed (GM):** the weakest; how the scar is kept and governed is an aside inside the sealed city, not a seed.
+
+**The seed (approved, GM 2026-10-22):** *A homeland won back for a people who mostly live at sea.* **How many live at sea is kept open (GM):** it has never been defined; Phase 4 sets it, and the sentence's "mostly" is checked then.
+
+**Phase 2 checklist:** three seeds offered as shapes of the GM's idea, each with what follows, a canon hook and the specificity test; sameness checked across the setting; S2 recommended and chosen with S1's ship-towns as the visuals; S3 dropped; the seed sentence approved.
+
+**Sameness notes (authoring only):** S1 beside Dragon's Reach (one alien hull a city grew in; here a fleet broken into towns by choice); S2 beside Floteyn's Nation Afloat (afloat for good with no homeland; here a diaspora with a home port) and Valreka (a people that moves together; here a people spread apart and called home); S3 beside the Lost Kingdom and the Basogur's sealed Stitchery.
+
+## Rejected options (summary)
+
+- **S3, the scar's keepers** (Phase 2): dropped as a seed; the sealed city stays a place and its keeping an aside.
 
 None yet.
 
