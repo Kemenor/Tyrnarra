@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-19).
 - **Phase 5 (government): closed** (GM, 2026-10-20). The gate crown and the keepers of the record.
 - **Phase 6 (economy): closed** (GM, 2026-10-21).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-22).
+- **Phase 8 (naming): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -160,6 +161,19 @@ Received and confirmed 2026-10-02.
 - **Routes:** the road from a halt on Eldara's line, about 150 miles across No Man's Land, carts out and guests in, both preyed on by the Neck robbers since 2527 (a line on to the Red Dominion TBD); the tunnel as the single choke point; barges on the river below the palace to the outer towns; fishing harbours only.
 - **Stakes in the tension:** the crown tolls everything that passes, poison included; the keepers earn by certificate and have no hold on poison, and bear the name if a Haraour poison kills abroad; **the households inside make the poisons**, their own income outside the keepers' reach; the Adventurers' Guild wants the supply kept lawful, the Mercenary Guild wants it unasked-about. So the crown and the inside stand together on the poison question, the keepers against.
 - **Table note:** deferred to the draft (PF2e alchemical poisons).
+
+## Phase 7: daily life (closed, GM 2026-10-22)
+
+- **The day:** outside, a farm day like anywhere in Sumendar; in the capital the day turns on the gate (guests set off at dawn, the night's boats come out under the palace in the morning, the carts load at noon). Inside, gathering in the cool of the morning, tending the cleared plots, the long cooking in the afternoon, shifts at the Eliza's drying tower and smokehouse.
+- **The cook's bite:** at every table, inside and out, whoever cooked takes the first bite of every dish before anyone else eats. Born in the garden as the show that a dish is safe; outside, over ordinary food, plain good manners.
+- **Clearings:** when the keepers clear a new plant (about once in four years), its first dish is cooked in the Eliza's kitchen, the crown walks in for it, and the whole country eats a token of it that year; people date things by clearings ("the year of the red root").
+- **Senses and speech:** bright means careful (children inside learn that the brighter a thing, the more care it needs; visitors call the garden beautiful, locals call it busy); long work gloves inside, since some of the garden is unsafe to touch, and garden gloves tucked in a belt outside mark someone who has done working years; woodsmoke and drying herbs at the gate and the Eliza. Idioms from the record: *uncleared* (untried, not yet trusted), *I'll take the bite* (I'll go first, I'll answer for it).
+- **The vice: the edge dish,** cooked just short of safe and eaten for the tingle and the numbness; no certified cook may serve it, so it is eaten at home and in uncertified dens near the inner mouth; most deaths that are not home accidents come from it.
+- **Movement:** carts and river barges outside; on foot and by boat from the Eliza down to the tunnel mouth inside; the walk in and the float out, with the salamanders hauling the empty boats back.
+- **Visitor against native:** the visitor sees beauty in the colours, takes the cook's bite for rudeness or show, wants to buy a recipe, and sleeps on the float; the native reads the colours as a warning, the bite as a promise, knows a recipe sits behind a certificate, and knows the boats are the harvest road.
+- **Youth:** inside, **the first bite** (cooking a garden dish for the household and taking the bite oneself), a slope from one staple at about eight to a whole table in the teens to the first guests; outside, **the first walk**, usually in the early teens with family.
+- **Transgressions (GM chose both):** **riding up**, young people of the capital skipping the walk by stowing away in the empty boats hauled up (against custom, not law; the toll is still paid; the haulers put them off at the next stretch or hand them a rope); and **stealing the bite**, outside only, a child snatching a taste before the cook (cheek, a smack of the ladle; inside nobody does it, because there it could kill). Rejected: going over the ring, too large (days of real climbing).
+- **Faith:** Komo at the cooking fire, the hearth the altar and cooking the worship, as Eldara's bread-rolling table; no separate clergy; practical, quietly devout. **The unexplained basket:** the first basket of each year's harvest is left on the Eliza's step and the keepers carry it in; a chronicler records the custom and nobody knows whose it was (it sits beside the ⚿ of the god without naming it).
 
 ## Rejected options
 
