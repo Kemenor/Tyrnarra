@@ -13,7 +13,8 @@
 - **Phase 6 (economy): closed** (GM, 2026-10-21).
 - **Phase 7 (daily life): closed** (GM, 2026-10-22).
 - **Phase 8 (naming): closed** (GM, 2026-10-22).
-- **Phase 9 (tension and reveal): open.**
+- **Phase 9 (tension and reveal): closed** (GM, 2026-10-22).
+- **Phase 10 (draft): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -197,6 +198,17 @@ Received and confirmed 2026-10-02.
 - **Map list:** the capital's label, **Pukawai**.
 
 **Phase 8 checklist:** register read and chosen inside the assigned Polynesian family with its own sound rules; the local tongue defined; stratum per name (Court Tongue for the region, the palace and the god; Leowai for the capital, the tunnel, the crown, the house and the huki; Golden-Era Talanese for Wakehythe; plain Talanese for offices and customs); candidates with etymologies; every real-language word verified with sources; collisions searched (names and the structure); named figures in the register.
+
+## Phase 9: tension and reveal
+
+**Approved (GM, 2026-10-22):**
+- **The live tension: poison under certificate, proposed, not enacted (GM).** The Keeper of the Record has proposed that no certified cook may make poison for sale; enacted, it would force the inside households to choose between their certificates and their poison income, and a household without either has nothing (the GM's realism point against an enacted rule left two years undecided). The keepers are divided (many of them come from inside households themselves), and the households, the crown and the Guilds press on them. Sides and stakes: the keepers (their name abroad; what the garden is for), the inside households (poison income beside their certificates), the Paapuka (tolls everything, so against; pressured by every poisoning traced home), the Adventurers' Guild (a lawful supply, whoever makes it), the Mercenary Guild (no questions).
+- **◈ Popular Belief: "The Garden knows its own."** Folk say the Garden does not poison those born inside it, and that anyone who has lived in the ring long enough can eat anything raw. It is wrong, and people die proving it every few years. It hedges toward the secret: the Garden's gardener knew his people. Set aside: "every clearing costs a life"; "the huki know every face".
+- **⚿ S1, the gardener (both secrets kept, GM):** Barzain, a Gods'-Era god of growing things, lived in the Eliza; his people built Jaurei and the Alaloa; the bank was his life's keeping, one of every plant he could gather, including crops and plants from across Talan that were lost everywhere else when the god-run world collapsed in the Lost Era, so the Garden's plants found nowhere else are Talan's lost Gods'-Era flora. **He was killed in the gods' war (GM).** His people stayed and forgot him in the Lost Era; a dead god who is forgotten is gone for good. The Haraour are his people's descendants, relearning their own garden. The cook's bite was once his portion, the cook now taking it in his place; the first basket is the last offering made to him, by people who do not know whose it is. **He fell away from home (GM, 2026-10-22):** he went out to the war and died on another field; his people waited at the gate and he never came back. The Garden holds no shard, and is no godblood site; whatever he left lies wherever he fell. Set aside: dying in the Eliza (an unpicked godblood site, shards in the Garden).
+- **⚿ S2, the unwritten list:** the keepers know more than the record says. A short list of plants is learned completely and never written or cleared, because they are good only for killing (poisons that cannot be tasted and act slowly); it passes from keeper to keeper by mouth. Their slowness is caution and concealment both; the proposed rule keeps the inside households from what they know; the gap between named and cleared plants means something.
+- **Section weights (approved, GM 2026-10-22):** heavy, the Garden and the Gate; medium, the keepers and the crown, the poison trade and the tension, daily life; light, history, the outer country, the neighbours, names.
+
+**Phase 9 checklist:** the live tension pinned with sides and stakes (proposed, not enacted, on the GM's realism point); three beliefs offered and one chosen; two secrets with surface, truth and the weight test, checked against the shard and god-death canon (`cosmology.md`, `gods.md`); where the god fell settled so the Garden holds no shard; section weights written down.
 
 ## Rejected options
 
