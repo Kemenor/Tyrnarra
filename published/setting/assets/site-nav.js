@@ -123,6 +123,7 @@
         { slug: 'house-eisenhart', label: 'House Eisenhart', href: '/setting/talan/domains/sumendar/order-of-steam/house-eisenhart.html', children: [] }
       ]},
       { slug: 'no-mans-land',  label: 'No Man\'s Land · the Ungoverned Country', href: '/setting/talan/domains/sumendar/no-mans-land/no-mans-land.html', children: [] },
+      { slug: 'haraour-eliza', label: 'Haraour Eliza · the Garden in the Ring', href: '/setting/talan/domains/sumendar/haraour-eliza/haraour-eliza.html', children: [] },
       { slug: 'tahu-tangata',  label: 'Tahu Tangata · the Old People of the Plain', href: '/setting/talan/domains/sumendar/tahu-tangata/tahu-tangata.html', children: [] },
       { slug: 'dragons-reach', label: 'Dragon\'s Reach · Dragon Capital', href: '/setting/talan/domains/sumendar/dragons-reach.html', children: [] }
     ]},

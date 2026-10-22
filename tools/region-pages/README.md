@@ -15,6 +15,7 @@ python3 tools/region-pages/build_river_duchies.py
 | `published/setting/talan/domains/lioaru/hareaveldi/hareaveldi.html` | `build_hareaveldi.py` |
 | `published/setting/talan/domains/lioaru/auran/auran.html` | `build_auran.py` |
 | `published/setting/talan/domains/lioaru/river-duchies/river-duchies.html` | `build_river_duchies.py` |
+| `published/setting/talan/domains/sumendar/haraour-eliza/haraour-eliza.html` | `build_haraour_eliza.py` |
 
 **Hand-built pages with synced parts:** the Heartcourt page (`published/setting/talan/domains/lautara/emarrea/heartcourt.html`) is hand-built; `sync_heartcourt_letters.py` replaces the body of each *Letters from Biozuri* column on it from `lore/geography/lautara/heartcourt-letters.md`, matched by title.
 
