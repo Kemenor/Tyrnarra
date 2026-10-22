@@ -289,7 +289,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 
 **Sumendar (Fire):**
 - **Burdineyja**: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
-- **Haraour Eliza**: Basque *eliza* (church)
+- **Haraour Eliza**: Court Tongue (Basque), the Gods' Era: *haran* "valley" + *ur* "water" → *haranur*, the *n* lost before the vowel → *haraur* → **Haraour**; with *eliza* "church": "the church of the valley water". The gods' name for the house at the valley's heart. Full canon `geography/sumendar/haraour-eliza.md`; register below, *Haraour Eliza (Sumendar)*.
 - **Tahu Tangata**: the region's own tongue, Reahi (the Sumendar family's core; Māori base, plain letters). *Tangata* "person, people" + *tahu*, read three ways (Te Aka Māori Dictionary): v. "to set on fire, light, burn" (also "to cook"); n. "spouse, partner; near relative"; and *tāhū* "ridge-pole; direct line of ancestry through the senior line", its long vowel since worn away. So the burning people, the kin people, or the people of the senior line; the namers' meaning is lost. Named in the late Lost Era (regional stratum).
 - **No Man's Land**: plain Talanese, meant literally: ground that belongs to no one. The ungoverned country around Eldara, Komo's city-state; full canon `geography/sumendar/no-mans-land.md`; register below, *Faction proper nouns → No Man's Land: the Noman register*.
 - **Eldara** (the Forge City): old/ancient stratum. Icelandic *eldr / eldur* (fire) → *eldar* → **Eldara**, "the fire." Reaches for *Icelandic* fire while the domain Sumendar names *Basque* fire (*sumendi*), so city and domain say the same word in two old tongues. Komo's ungoverned god-city, accreted (never founded) on the one ground where ore, lava, and the god's presence all met; making is worship, the forge is the only authority.
@@ -737,6 +737,21 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **Tihiwera**: *tihi* "peak, summit" + *wera* "burnt, hot" → **Tihiwera**, "the burnt peak". The spire on the southern edge, the wild home of puahi.
 - **The garners**: Talanese, the Empire's word kept. The houses' common stores.
 - **Burn-night, the reading, burn-kin, spark-games, first bread**: plain Talanese.
+
+### Haraour Eliza (Sumendar)
+
+- **Haraour** (pl. **Haraours**): the demonym, from the region's name, unchanged.
+- **Leowai**: *leo* "voice" + *wai* "water" (Hawaiian, Pukui & Elbert) → **Leowai**, "the water-voice". The tongue of Haraour Eliza, the Sumendar family's mountain sister to Reahi; Māori *reo* and Hawaiian *leo* are one word (Proto-Nuclear-Polynesian *\*leo*).
+- **The Leowai register: the personal-name convention.** Word-base Hawaiian, plain letters, the ʻokina and kahakō dropped; only *h k l m n p w* and vowels, every syllable ending in a vowel; *k* where Reahi has *t*, *l* where it has *r*, no *ng* or *wh*. *[given] na [bite-giver] [house]*: the **bite-giver** is whoever cooked one's first solid food and took the cook's bite before it, named after *na* (Hawaiian *na* "by, for, belonging to") and kept for life; the house is the family's, carried by all its children. Given: *Mahina* (moon), *Kekai* (*ke kai*, the sea), *Ikaika* (strong), *Nohea* (lovely), *Lehua* (the ʻōhiʻa blossom), *Kalani* (*ka lani*, the heavens), *Makana* (gift), *Nalu* (wave), *Hoku* (*hōkū*, star), *Kekoa* (*ke koa*, the brave). Houses: *Paaloa*, *Halewai* (*hale* house + *wai* water), *Halenui* (*hale* + *nui* great), *Alanui* (*ala* road + *nui*).
+- **Pukawai**: *puka* "to emerge, come out" + *wai* "water" → **Pukawai**, "where the water comes out". The capital, where the river leaves the mountain.
+- **Wakehythe**: Talanese, Golden Era: *wake* + *hythe* "landing place". The Empire's name for the gate town; still on the waybills.
+- **Jaurei**: Court Tongue (Basque) *jauregi* "palace" (*jaun* lord + *-egi* place), the *g* worn away between vowels → **Jaurei**. The palace at the gate. The *J* is read as a *Y*.
+- **The Alaloa**: *ala* "path, road" + *loa* "long" → **Alaloa**, "the long road". The tunnel through the ring.
+- **Huki** (sing. and pl.): *huki* "to pull, haul". The pale blind salamanders that tow the empty boats up the Alaloa; Talanese *the pullers*.
+- **The Paapuka**: *paa* (*paʻa*) "to hold fast" + *puka* "door, gate" → **Paapuka**, "the gate-holder"; Talanese gloss *the Gatekeeper*. The crown.
+- **Paaloa**: *paa* + *loa* → **Paaloa**, "held long". The royal house, which held the gate through the Dark Era.
+- **The Garden; the keepers of the record; the record of tryings; the trying; clearings; certificates; the cook's bite; uncleared; the edge dish; the first bite; the first walk; riding up; the inner mouth; working years**: plain Talanese.
+- **⚿ Barzain**: Court Tongue, from Basque *baratzain*, an attested variant of standard *baratzezain* "gardener", worn → **Barzain**, "the gardener". The god of the Eliza (GM-tier; see `geography/sumendar/haraour-eliza.md`, *⚿ GM Secret: the gardener*).
 
 ### Faction proper nouns
 

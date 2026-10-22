@@ -14,8 +14,10 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-22).
 - **Phase 8 (naming): closed** (GM, 2026-10-22).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-22).
-- **Phase 10 (draft): open.**
-- **Draft:** none yet.
+- **Phase 10 (draft): closed** (GM, 2026-10-22: "commit").
+- **Phase 11 (commit lore): done** (2026-10-22).
+- **Phase 12 (publish): waiting for the publish signal.** Draft written 2026-10-22: [`haraour-eliza-draft.md`](haraour-eliza-draft.md). GM review round 1 (2026-10-22): "who have not woken *yet*" on the palace steps, so the sleepers cannot be read as dead; **the heir earns a certificate or two from the keepers** during the working years (GM's idea). Otherwise approved as written.
+- **Draft:** [`haraour-eliza-draft.md`](haraour-eliza-draft.md).
 
 ## Phase 0: approved readback
 

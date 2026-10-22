@@ -4,6 +4,8 @@
 
 ## Haraour Eliza (Sumendar) · GM, 2026-10-02
 
+**Built (2026-10-22):** `lore/geography/sumendar/haraour-eliza.md`.
+
 The heart of the region is **an old palace**, not a church: a forgotten, dead civilisation; who or what lived there, no one knows. In the mountains lies **the poisonous paradise**: vibrant, colourful, like a jungle in the fire domain, and most of it deadly unless **cooked well**. **The capital is the gate into it.** People come for the paradise. The rest of the region is more ordinary Goblin country.
 
 *Touches:* the earmark (the Goblin heartland; the river ring, the mountain ring, the hidden forest, the capital outside the ring on the south-east). The name's *eliza* is the Court Tongue's "church", so the name may be a misreading of the ruin. The Goblin feeling in `ancestries.md` asks of anything "whether heat, distillation, or the right combination could make it" consumable: the paradise is that feeling's home ground.

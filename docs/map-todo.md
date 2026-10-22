@@ -22,7 +22,7 @@ The map's 37 capital icons (*Large City Stone Wall + Towers*, the Legend's "Capi
 
 **GM decisions (2026-09-25), applied:** Hverhofn (Ardo Beroa's town, far-north icon), Cold-Hall (Baerfrost, provisional name), Hartzar Erruta (Air Monastery), Ontzola (Three Pines) labelled. The capital icons of the Floating Isles of Shuun (no capital), Haldmark (no capital by design) and Atarialda (no capital by design; Crossroads is a separate city with its own icon) were removed.
 
-**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, Haraour Eliza, The Red Dominion (Sumendar) (Lioaru), The Golden Coast (Ezkudon).
+**No capital in canon yet** (name at the build): Dea Elurra, Maitagarri, Basamortua (Askamira), Order of Steam, Burdineyja, The Red Dominion (Sumendar) (Lioaru), The Golden Coast (Ezkudon).
 
 ## Awaiting the next export
 
@@ -32,6 +32,7 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
 
 ## Backlog for the next map edit
 
+- **Pukawai** (Haraour Eliza, Sumendar; GM, 2026-10-22): label the capital icon at (1762, 5469) **Pukawai**, the town at the south-east foot of the mountain ring where the river comes out.
 - **The rock mountains of Galdua Jendea** (Lioaru; GM, 2026-10-04, sited at the build's Phase 4). Draw **nineteen rock massifs** rising out of the dune sea, each about **10–40 miles across** (20–80 px on the full-res map): **17 living rocks** with cities hung on their shaded faces, and **2 lost rocks**. Every rock lies within one night's sand-glider run (~150 mi, 300 px) of a neighbour, so the chain reaches every edge. Reference sketch: [`map-refs/galdua-jendea-rocks.webp`](map-refs/galdua-jendea-rocks.webp) (regions view, 1 px there ≈ 1 mile; brown = living, grey = lost; the red lines are the night-runs, not roads to draw). Approximate centres on the full-res map; place the exact massifs by eye:
 
   | Rock | Centre (x, y) | Note |
