@@ -69,6 +69,16 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
   instead of claiming to render. `/interrupt` returns 200 but does nothing to a
   prompt wedged inside a model load; that needs `restart_server()`.
 
+## `scene_art.py` — scenes with no character
+
+Plain text-to-image on the same FLUX.2 graph as `npc_art.py`, for region-page sketches and other places with no NPC in them (added 2026-10-22 for the Red Dominion sketchbook). A scene spec (`scenes/<name>.json`) holds a literal `style` string, a `size`, and `scenes` as `key: what a camera would see`; every chosen scene renders `--count` variations in one ComfyUI prompt.
+
+```bash
+python3 scene_art.py --spec scenes/red-dominion-sketchbook.json --count 2 [--only s2-ship-town] [--api http://HOST:8188]
+```
+
+`--api` drives a ComfyUI already running on another machine (the tower, over the LAN); the script never starts a remote server. Keep the address out of committed files. **Lessons from the first sketch (2026-10-22):** FLUX defaults to a watercolour wash, so a line sketch has to say *black ink only, monochrome, no colour*; it draws "a ship on a building" upright as if in dry dock, so an upturned-hull roof has to be described as *an overturned boat on a beach, keel uppermost, no deck, no masts*. A render that stalls at tens of seconds per step has run out of VRAM on the host (another GPU app, an emulator): interrupt it and render elsewhere.
+
 ## `ancestries.json` — what a PF2e ancestry looks like
 
 A spec may carry `"ancestry": "shisk"`, and the catalog's line is prepended to

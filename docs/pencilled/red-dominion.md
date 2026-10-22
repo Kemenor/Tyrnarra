@@ -77,6 +77,8 @@
 >
 > *From the sketchbook of Roshanak Abri Kuzegar, scholar of Thekkavar, on the Hafra coast of the Red Dominion, 2532 MR*
 
+**Test renders (2026-10-22/23), sketch 2, local FLUX.2 on the tower via `tools/imageGen/scene_art.py`:** round 1 (ink and watercolour) had the style but pitched roofs on the cottages; round 2 (line work) got the hull roofs right and drew the hall's ship upright on top, as in dry dock; round 3 (an overturned boat on a beach; black ink only) stalled when the tower ran out of VRAM (an emulator on the GPU) and was stopped. **Local rendering paused (GM, 2026-10-23):** no more image generation on the tower for now. Next: the GM's Midjourney grid, or fal.ai, or the tower later. The images are for the publish (Phase 12); the build continues.
+
 **Additions to flag [new]:** the point city built in stone (it stood, so the ship-towns are the returners' towns, not the capital); about forty roofs in a town, the hall a whole carrier; a house going by its ship's name, and the bread with it; the bell rung for boats and the tide; a Dominion crew whose people keep a quarter in a northern port for four generations (the port unnamed); a landing town on the west coast for the road inland; guides who take parties to the sealed city in fours.
 
 ## Rejected options (summary)

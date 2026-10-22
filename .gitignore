@@ -80,3 +80,5 @@ tools/wonderdraft/assetgen/.venv/
 
 # region-page generators: Python bytecode cache
 tools/region-pages/__pycache__/
+# scene-art test rounds (keep the chosen renders only)
+tools/imageGen/scenes/*/round*/
