@@ -12,7 +12,8 @@
 - **Phase 5 (government): closed** (GM, 2026-10-20). The gate crown and the keepers of the record.
 - **Phase 6 (economy): closed** (GM, 2026-10-21).
 - **Phase 7 (daily life): closed** (GM, 2026-10-22).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-22).
+- **Phase 9 (tension and reveal): open.**
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -174,6 +175,28 @@ Received and confirmed 2026-10-02.
 - **Youth:** inside, **the first bite** (cooking a garden dish for the household and taking the bite oneself), a slope from one staple at about eight to a whole table in the teens to the first guests; outside, **the first walk**, usually in the early teens with family.
 - **Transgressions (GM chose both):** **riding up**, young people of the capital skipping the walk by stowing away in the empty boats hauled up (against custom, not law; the toll is still paid; the haulers put them off at the next stretch or hand them a rope); and **stealing the bite**, outside only, a child snatching a taste before the cook (cheek, a smack of the ladle; inside nobody does it, because there it could kill). Rejected: going over the ring, too large (days of real climbing).
 - **Faith:** Komo at the cooking fire, the hearth the altar and cooking the worship, as Eldara's bread-rolling table; no separate clergy; practical, quietly devout. **The unexplained basket:** the first basket of each year's harvest is left on the Eliza's step and the keepers carry it in; a chronicler records the custom and nobody knows whose it was (it sits beside the ⚿ of the god without naming it).
+
+## Phase 8: naming
+
+**Words verified (2026-10-22)** by a sourced subagent check: Hawaiian against Pukui & Elbert (UH Hilo mirror of wehewehe), Basque against Elhuyar, the Orotariko and Wiktionary; *reo/leo* and *tahu/kahu* cognates via Wiktionary and POLLEX. Dropped on the check: *moʻo* (sacred guardian spirit), *kiaʻi* (Mauna Kea protectors), *pō* (also the realm of the gods), *Kalea* (plain-letter form reads "whooping cough"), *Alani* (a brand), *Pua* (Disney's *Moana*); the "by" particle is short *na*; *baratza* and *baratzain* are attested variants of standard *baratze*, *baratzezain*.
+
+**Approved (GM, 2026-10-22), all recommendations:**
+- **The tongue: Leowai.** Hawaiian *leo* "voice" + *wai* "water", "the water-voice". The Sumendar family's mountain sister to Reahi ("the fire-voice"; Māori *reo* and Hawaiian *leo* are one word, *r* to *l*). Word-base Hawaiian, plain letters, ʻokina and kahakō dropped; only *h k l m n p w* and vowels, every syllable ending in a vowel; *k* where Reahi has *t*, *l* where it has *r*, no *ng* or *wh*. Spoken by everyone born in Haraour; Talanese the second tongue, strongest at the gate; the record, the certificates and the daily customs in plain Talanese.
+- **The personal-name structure (A): given + *na* + the one who took your first bite + house.** Whoever cooked one's first solid food and took the cook's bite before it is named in one's name for life (usually a grandparent or aunt). *Na* is Hawaiian "by, for". **The *na* particle beside Galdua's *n* is fine (GM).**
+- **Haraour Eliza:** Court Tongue, Basque *haran* "valley" + *ur* "water" → *haranur* → *n* lost → *haraur* → **Haraour**; with *eliza* "church": "the church of the valley water".
+- **The capital: Pukawai** (*puka* "to emerge, come out" + *wai* "water", "where the water comes out"); Imperial Talanese **Wakehythe** (*wake* + *hythe* "landing place", the landing where you wake; also a funeral wake), still on the waybills.
+- **The palace: Jaurei** (Court Tongue, Basque *jauregi* "palace", *jaun* "lord" + *-egi* "place"; the *g* worn away between vowels; the *J* read as *Y*).
+- **The Eliza** keeps its name. **The garden: the Garden**, plain Talanese (plain-letter *mala* reads "bad" or "sour").
+- **The tunnel: the Alaloa** (*ala* "path, road" + *loa* "long", "the long road").
+- **The salamanders: huki**, singular and plural (*huki* "to pull, haul"; gloss *the pullers*).
+- **The crown: the Paapuka** (*paa* "to hold fast" + *puka* "door, gate", "the gate-holder"; gloss *the Gatekeeper*), of **house Paaloa** (*paa* + *loa*, "held long").
+- **Offices and customs** in plain Talanese (the keepers, the record, certificates, clearings, the cook's bite, the edge dish, the first walk, riding up).
+- **Named figures:** **Mahina na Kekai Paaloa**, the Paapuka; **Ikaika na Nohea Halewai**, the Keeper of the Record (*hale* "house" + *wai* "water"). Given names to draw on: Lehua, Kalani, Makana, Nalu, Hoku, Mahina, Nohea, Ikaika, Kekoa, Kekai.
+- **⚿ The god: Barzain** (confirmed, GM 2026-10-22): Court Tongue, from *baratzain*, an attested variant of Basque *baratzezain* "gardener", worn → **Barzain**, "the gardener". GM-tier only. Set aside: *Hazain*, "the seed-keeper".
+- **Demonym: Haraour**, unchanged, plural **Haraours** (*a Haraour cook*). *Haraouran* rejected (GM: the *ra* after *raou* is a mouthful); *Haraoui* set aside.
+- **Map list:** the capital's label, **Pukawai**.
+
+**Phase 8 checklist:** register read and chosen inside the assigned Polynesian family with its own sound rules; the local tongue defined; stratum per name (Court Tongue for the region, the palace and the god; Leowai for the capital, the tunnel, the crown, the house and the huki; Golden-Era Talanese for Wakehythe; plain Talanese for offices and customs); candidates with etymologies; every real-language word verified with sources; collisions searched (names and the structure); named figures in the register.
 
 ## Rejected options
 
