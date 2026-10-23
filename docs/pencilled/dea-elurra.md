@@ -2,9 +2,9 @@
 
 **Working record: not canon.** Phases 0–2 were run jointly for the three Askamira countries; read [`askamira.md`](askamira.md) first, including its **Island frame** (shared items any of the three builds may settle for all).
 
-**Current phase:** 3 (traveller's image), placement settled; awaiting the GM's word to close.
+**Current phase:** 4 (place, peoples and history), open. Phase 3 closed 2026-10-24.
 
-**Resume here (2026-10-23).** Phase 3 has its placement (its own in-world file, below) and needs only the GM's word to close. **Phase 4 opens on:** who holds the shore districts at Frae City's anchors (GM lean: each leans to the neighbouring country's people; the north chain's district is Elurran); whether the ice truly moves; who the islanders are and when they arrived (Dark Era, per the joint build); the Golden Empire's reach; how often bergs reach the lake shore and their usual size. The north chain is named by Phase 8. After Dea Elurra: Basamortua and Maitagarri each on their own, then Star Island (rename Tamsin Hollis), then the hidden-city pass. Working method: one phase at a time, closed only on the GM's word with a checklist readback; every reason in a recommendation checked against the option (see the joint record, [`askamira.md`](askamira.md)).
+**Resume here (2026-10-23).** Phase 3 is closed. **Phase 4 opens on:** who holds the shore districts at Frae City's anchors (GM lean: each leans to the neighbouring country's people; the north chain's district is Elurran); whether the ice truly moves; who the islanders are and when they arrived (Dark Era, per the joint build); the Golden Empire's reach; how often bergs reach the lake shore and their usual size. The north chain is named by Phase 8. After Dea Elurra: Basamortua and Maitagarri each on their own, then Star Island (rename Tamsin Hollis), then the hidden-city pass. Working method: one phase at a time, closed only on the GM's word with a checklist readback; every reason in a recommendation checked against the option (see the joint record, [`askamira.md`](askamira.md)).
 
 ---
 
@@ -17,7 +17,7 @@
 
 ---
 
-## Phase 3: Traveller's image (open)
+## Phase 3: Traveller's image (closed 2026-10-24)
 
 **Candidates (2026-10-15):** 1 a berg singing under the rock (Frae City's lake, dusk) · 2 the shore singing with the ice (north coast; kin to Balatur Erui's whale-and-brass and Harro's dusk gloamsingers) · 3 a berg met far out on the Midarra.
 
@@ -109,3 +109,9 @@
 - **The shore districts lean toward the neighbouring country's people** (GM lean): the district at a chain on the north shore is Elurran. Settle at Phase 4 (with the island-frame question of whose ground the shore districts stand on). A small canon addition to Frae City.
 - **Every one of the seven chains needs a name** (GM). Canon has them unnamed (`glossary.md`, *The Seven Chains*). The north chain is named at this build's Phase 8 at the latest; the other six belong to Frae City (open thread).
 - **Map correction to the Phase 0 readback:** Dea Elurra's nearest facing shore is **the Lands of Villtur's Midarra coast** to the north-east (map geography: "nearby, not bordering: Lands of Villtur (NE)"); Baratalda, Greenward and the Soul Tree also coast the Midarra to the north-west.
+
+---
+
+## Phase 4: Place, peoples and history (open)
+
+**Round 1 (proposed 2026-10-24), awaiting the GM:** (A) does the ice move, and where do the Elurrans live; (B) the shore districts at Frae City's north anchors; (C) the island frame: the Golden Empire's reach, the Dark Era, the founding. Round 2 follows on the answers: sites, neighbour lines, peoples and proportions, population, dated history, canon moves.
