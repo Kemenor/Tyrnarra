@@ -9,7 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-22).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
-- **Phase 5 (government): next.** Starting point: no emperor; the navy holds it.
+- **Phase 5 (government): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 5* below). Starting point: no emperor; the navy holds it.
+- **Resume here:** the four Phase 5 questions at the end of the Phase 5 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -97,6 +98,31 @@
 - **Dated history** (checked against `timeline.md`). 560–1325 MR the Golden Empire, its throne moved into Sumendar's dwarven mountains (the NE cluster), the heartland *the Dominion*, the point its sea-gate. **1321 MR the breach beneath the imperial capital** (the Dark Era begins here; ⚿ the deliberate dig stays GM-only). 1321–1325 the heartland overrun; flight by sea and east into Haraour; the point holds. 1325–2135 the exile: the fleet's command holds the people together; they become the Hafra's carriers and found quarters in port after port. From 2135 the return: hulls beached and broken into towns; the land won back from monsters and mortals (squatters, wreckers, holdfasts, some of whom stayed and became Dominion folk). c. 2140s the sealing of the city (its keeping is an aside). c. 2300 the carriers bring Auran's cloudship silver to the mainland. 2532 guided parties of four to the scar; nests remain.
 - **Population.** Home about 1M (held coast and south about 40,000 sq mi at about 20 per sq mi, about 800k; scar and wild about 150,000 sq mi at 2–3, about 350k). Abroad about 1.5M (port quarters about 1.35M, crews at sea about 150k). About 60% abroad; "mostly at sea" counts the port quarters, who live on the Hafra (GM, yes). The capital about 30k (3%).
 - **Map landmarks (GM, 2026-10-23).** The region is near-empty on the map; the GM is open to adding forests, lakes or similar, and plans a landmark pass across many regions. Dominion landmarks (GM, yes to both): **the overgrowth**, forest over the abandoned interior heartland between the held coast and the scar (where the nests are; clearing it is the reclaiming); **the red lakes**, flooded open-cast mine pits running red with iron. The GM notes the Empire had many mines here, so the lakes need not cluster at the sealed city. Placement proposed: the foothills between the north range and the NE cluster and at the cluster's southern foot, draining into the western river so the landing town's river runs red (GM, yes). The landing town sits nearer (760, 5225), where the western river leaves the coastal forest. Overgrowth extent roughly map (900–1250, 5275–5700).
+
+## Phase 5: government (proposed 2026-10-23; not approved)
+
+**Starting point (GM):** no emperor; the navy holds it. The 2026-10-06 earmark: a **naval stratocracy** (the navy is the state, its ranks the offices; a junta seizes a state, a stratocracy is one). The form is fixed, so the candidates are variants of its mechanics.
+
+- **G1 · The Admiralty: rank is office.** A captain governs a ship and the town it came ashore as; a commodore a coast; the Admiralty at the point the whole, under a head (named in Phase 8). Captains commissioned from examined officers with sea-time. *Census:* nearest Haldmark's Vaka (service earns the franchise; the army does not rule there).
+- **G2 · The ship's articles: captain and quartermaster.** The captain absolute *in action*; a crew-chosen quartermaster over shares, disputes, provisions; the scar country permanently in action. *Precedent:* 1700s pirate articles. *Sameness risk:* Tahu Tangata's two chairs (ground and fire) in the same domain.
+- **G3 · The muster: belonging by ship, not by ground.** Every Dominion house is entered on a ship's muster roll and goes by its ship's name (sketch 4). The ships are the state's units. A beached ship-town is still a ship on the roll (its harbour-master, sketch 3, its officer; its bell, sketch 5, the ship's bell); a quarter in a northern port is the shore-berth of a ship that still sails. *Census:* the unusual list's "allegiance by person, not by ground"; set apart from Valreka's chosen whale by being inherited and tied to service.
+
+**Claude's recommendation: G1 + G3, G2's quartermaster optional.** The only form that fits a people 60% abroad: belonging rests on the roll, not the ground; Roshanak's sketches become the state's machinery.
+- **Four answers (ordinary):** day to day, each captain over its muster, commodores over coasts and quarters abroad, the Admiralty over the whole; envoys, the Admiralty's port-officer abroad (a consul), the head at the point; treaties, the head; the bridge, the Admiralty's yard, labour mustered from that coast's ships as service.
+- **In action (special state):** on the frontier and in a fight at sea, a captain's orders are absolute; the Admiralty's reach waits until the action ends.
+- **Offices filled:** captains commissioned by the Admiralty from examined officers with sea-time; the flag officers sit as the Admiralty; the head chosen by the flag officers from among themselves, serving until she strikes her flag or the board removes her.
+- **Fit to rule:** a navy provisions, plans, keeps records (the roll, the logs), keeps law at sea and consuls in foreign ports; it kept a scattered people fed, supplied and in touch for eight centuries.
+- **Accepted:** founding, the fleet carried them out of the breach and home; standing, the Admiralty's berths and convoys make a Dominion crew welcome in every Hafra port, the house's name is on the roll, and the frontier needs a standing force.
+- **Honest cost:** every office is a rank, so to govern you must have served; a farmer in the held south has a muster but no say; the land is run by sailors for the fleet's trade; commissions go by patronage ("interest") as much as by examination.
+- **Incentive check:** promotion by command record rewards captains who push into the scar for land and glory, pressing on the No Man's Land border (a live-tension candidate that falls out of the rule). No seniority criterion, so rank does not reduce to age.
+- **Three tests:** unity, the quarters abroad are held by the carrier network (berths, convoys, cargo under one command; a quarter that breaks away loses all three); external agency, the head signs, port-officers make local deals (berths, tolls); internal provision, the yard builds, funded by a share of every cargo carried under the Dominion's flag.
+- **Muddy lines (tension candidates):** reclaimed land, the ship whose crew cleared it or the Admiralty?; the quarters abroad, does the Admiralty's word bind a house four generations in a foreign port, under that port's law?
+
+**Questions to the GM (open):**
+1. G1 + G3, or otherwise?
+2. Keep G2's quartermaster as a crew-chosen office on each ship (shares and disputes), without the full split?
+3. The head chosen by the flag officers from among themselves, serving until she strikes her flag?
+4. The mortals of reclaimed land who stayed (squatters, holdfasts): did they join by being entered on a muster, making "being entered" the one way anyone becomes Dominion?
 
 ## Rejected options (summary)
 
