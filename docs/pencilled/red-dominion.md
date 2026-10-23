@@ -10,8 +10,8 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
-- **Phase 6 (economy): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 6* below).
-- **Resume here:** the GM's close of Phase 6 (readback given 2026-10-23); then Phase 7 (daily life). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Phase 6 (economy): closed** (GM, 2026-10-23). Carrying as the economy; E3 (timber and iron); H1 hulls with the refit; the imperial ships; naval guns.
+- **Resume here:** Phase 7 (daily life), not yet proposed. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -135,7 +135,7 @@
 
 **Phase 5 checklist (closed, GM 2026-10-23):** the form (G1 + G3); the four answers; in action; the muster's voice (C1); offices filled (captains commissioned, flag officers as the Admiralty, the head chosen from among them); why fit, why accepted; the honest cost; the incentive check; the three tests; the muddy lines (reclaimed land; the quarters abroad); entry by muster, leaving the muster is leaving the Dominion; G2, C2 and C3 dropped.
 
-## Phase 6: economy (proposed 2026-10-23; not approved)
+## Phase 6: economy (closed 2026-10-23)
 
 **Canon checked:** Auran (the carriers handle most of its cargo, two days out to Siyabask: drawn essence in sealed jars, cloudship silver); Balatur Erui (every cargo between the seas changes hulls at Gesalkai; "the salt hulls that carry the Hafra side of the trade are mostly Three Pines work"); the River Duchies (the Golden Empire's granary province, capital Lemersa at the head of the bay, across from the Dominion); Haraour (no rail, its carts go east to Eldara's line; a line on to the Dominion is its open question); `transport.md` (no Dominion entries yet; Hafra saltkeels 120–180 mi a day).
 
