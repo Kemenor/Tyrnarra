@@ -11,7 +11,8 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): closed** (GM, 2026-10-23). Carrying as the economy; E3 (timber and iron); H1 hulls with the refit; the imperial ships; naval guns.
-- **Resume here:** Phase 7 (daily life), not yet proposed. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Phase 7 (daily life): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 7* below).
+- **Resume here:** the Phase 7 questions at the end of the Phase 7 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -175,6 +176,30 @@
 - **Phase 8 note:** a house goes by its ship's name, so the flagship's house would carry "Emperor" in its name while every sigil has worn away; check against "the Dominion, never the Empire".
 - **GM aside, unplaced:** hidden imperial vaults holding weapons beyond modern reach exist (in no lore file yet; place when they come up).
 5. **Routes: yes.** No rail: a line would have to pass the scar country and the sealed city, and the Dominion is well connected by sea (GM's reasoning).
+
+## Phase 7: daily life (proposed 2026-10-23; not approved)
+
+1. **The day.** A ship-town keeps ship's time: the bell strikes the watches as at sea (sketch 5's bell rings for boats and the tide besides). The coast goes out on the tide to fish and comes in to the fields; the point works the yard and the foundry in shifts; the frontier towns clear the overgrowth, burning by day and keeping watch by night.
+2. **The shared ritual (choice).** R1 **the muster call:** once a year each ship-town reads its roll aloud in the square under the bell; every entered name answers *aboard*; names abroad are answered by kin at home ("aboard, at [a northern port]"); a struck name is left out of the reading. R2 **the great muster at the point:** the whole people called at once (the Phase 2 seed's image), held when a new head raises her flag. **★ Recommended: R1 every year, R2 at each new head.**
+3. **Senses and habits (a few).**
+   - **Food:** the Dominion pantry is a hold: kept food in sealed jars, salt fish, ship's biscuit; bread goes by its ship's name (sketch 4). At the muster call everyone eats ship's biscuit, landfolk too.
+   - **Song:** the shanties, one song in many versions, every port's crew with its own third line, and the argument over it is half the singing (sketch 6).
+   - **Smell:** tar on the beached hulls, iron in the red rivers, smoke from the clearing burns inland.
+   - **Speech:** "Which ship?" is "where are you from?"; *on the roll*, one of us, trusted; *struck*, gone from the Dominion (left the muster, or dead with no one to answer); *I was asked*, I had my say (from the asking).
+   - **The vice: odds on the four.** At the landing town people lay bets on the guided parties going up the scar road: whether all four come back, and when.
+4. **Movement.** Everyday: coast boats between the ship-towns; the coast road with its milestones for carts and walkers; the scar road only with a guide. **Signature movement: the homecoming.** When a carrier from abroad comes round the point, the bells ring it up the coast town by town.
+5. **Visitor against native.** The visitor sees poor towns roofed with old boats, waiting to be rebuilt in stone, and an Empire's leftovers; asks where someone is from and hears a ship's name. The native knows the hull roofs are the house's ship and the state's unit, and will never be replaced with stone; hears in the bell who is coming in; knows a Dominion quarter four generations abroad is as Dominion as the point.
+6. **Youth.** **The first voyage:** a child is entered under its house; around fifteen it sails one run with its ship or a carrier and on coming home is entered in its own name. A slope: harbour work from about ten, the first voyage, the first time asked. Landfolk sail it too; custom, never law. **Sanctioned transgression: walking the keel.** The young run the ridge-keel of the town's hall roof (the beached carrier, sketch 2) end to end; the harbour-master's people shout them down; everyone in the town did it once.
+7. **Faith as lived.** Syncretic, split like the people: **Shuun at sea** (the sailor's blessing, at casting off and on the water), **Komo ashore** (the foundry, the clearing fires, the hearth: the domain's god in the yard and the new fields). No ship's clergy; the captain speaks the words at a launch, a breaking-up and a burial at sea. Devout at the edges (sailing out, clearing ground), easy in between.
+
+**Questions to the GM (open):**
+1. The day by ship's time and the bell?
+2. The ritual: R1 yearly, R2 at each new head?
+3. The senses and speech: keep, cut or change any (the pantry, the shanty's third line, "which ship?", *on the roll*, *struck*, *I was asked*)?
+4. The vice: odds on the four?
+5. The homecoming as the signature movement?
+6. Youth: the first voyage and walking the keel?
+7. Faith: Shuun at sea, Komo ashore?
 
 ## Rejected options (summary)
 
