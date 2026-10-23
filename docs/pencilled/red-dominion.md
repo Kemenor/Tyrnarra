@@ -8,7 +8,8 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-22).
 - **Phase 2 (seeds): closed** (GM, 2026-10-22).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
-- **Phase 4 (place, peoples and history): next.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
+- **Phase 5 (government): next.** Starting point: no emperor; the navy holds it.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -86,6 +87,17 @@
 
 **Additions to flag [new]:** the point city built in stone (it stood, so the ship-towns are the returners' towns, not the capital); about forty roofs in a town, the hall a whole carrier; a house going by its ship's name, and the bread with it; the bell rung for boats and the tide; a Dominion crew whose people keep a quarter in a northern port for four generations (the port unnamed); a landing town on the west coast for the road inland; guides who take parties to the sealed city in fours.
 
+## Phase 4: place, peoples and history (closed 2026-10-23)
+
+- **Sites.** The capital on the southern point (1555, 6410), walled stone with its harbour inside the walls; it stood through the Dark Era and is the fleet's home port. **The sealed city** (the old imperial capital) in the north-eastern mountain cluster, about (1190, 5010), roughly 720 mi north of the capital, by the No Man's Land border; **the breach lies under it** (the old mine). **The scar country** around it: nests, old galleries, ground still healing; the frontier runs through the country (coast and south held, north-east still being won back). **The landing town** at the northern river's mouth, about (830, 5230); the road to the scar up the valley, about 180 mi. **Ship-towns** along the west coast (below map scale). **The Midarra coast** behind the coastal range, no port of note.
+- **Neighbours.** No Man's Land: the reclaiming pushes north and east (answers its open line on what the Dominion means to do). Haraour: breach refugees went east through Jaurei; trade on the road (TBD). Balatur Erui, about 100 mi across the Midarra's mouth: partners at the Gate of Two Waters, where salt- and sweet-sea cargo changes hands. Burdineyja: sheltered the fleet in the Dark Era, a refuge and never a home (light; revisable at its build). Auran: the carriers handle most of its cargo (existing canon). The Hafra ports: a Dominion quarter in many (names later).
+- **Peoples.** No anchor ancestry; a people made by the fleet. Dwarves most numerous (the old heartland stock, the Empire's southern dwarves); beside them Sumendar's other peoples, Azarketi among the crews, and whoever sailed with the fleet over eight centuries.
+- **Founding and name.** "Red Dominion" is Golden-Era Talanese: the Empire's name for its crown heartland (*the Dominion*, land held by the throne directly), red for the iron earth of the mine country; the returners kept it as their claim. The polity is the fleet, formed at sea in the 1321 flight; the point city holds an unbroken line from before the breach (a deliberate exception to *Kingdoms inherit names*).
+- **The continuity, as it must be said (GM, 2026-10-23).** The line is unbroken, and what it carries is **the Dominion, never the Empire**: the Dominion claims its own crown land and makes no claim to the imperial throne or the Empire's wider ground. It has **no emperor; the navy holds it.** The prose says this outright. Carries into Phase 5 as the government's starting point.
+- **Dated history** (checked against `timeline.md`). 560–1325 MR the Golden Empire, its throne moved into Sumendar's dwarven mountains (the NE cluster), the heartland *the Dominion*, the point its sea-gate. **1321 MR the breach beneath the imperial capital** (the Dark Era begins here; ⚿ the deliberate dig stays GM-only). 1321–1325 the heartland overrun; flight by sea and east into Haraour; the point holds. 1325–2135 the exile: the fleet's command holds the people together; they become the Hafra's carriers and found quarters in port after port. From 2135 the return: hulls beached and broken into towns; the land won back from monsters and mortals (squatters, wreckers, holdfasts, some of whom stayed and became Dominion folk). c. 2140s the sealing of the city (its keeping is an aside). c. 2300 the carriers bring Auran's cloudship silver to the mainland. 2532 guided parties of four to the scar; nests remain.
+- **Population.** Home about 1M (held coast and south about 40,000 sq mi at about 20 per sq mi, about 800k; scar and wild about 150,000 sq mi at 2–3, about 350k). Abroad about 1.5M (port quarters about 1.35M, crews at sea about 150k). About 60% abroad; "mostly at sea" counts the port quarters, who live on the Hafra (GM, yes). The capital about 30k (3%).
+- **Map landmarks (GM, 2026-10-23).** The region is near-empty on the map; the GM is open to adding forests, lakes or similar, and plans a landmark pass across many regions. Dominion landmarks (GM, yes to both): **the overgrowth**, forest over the abandoned interior heartland between the held coast and the scar (where the nests are; clearing it is the reclaiming); **the red lakes**, flooded open-cast mine pits running red with iron. The GM notes the Empire had many mines here, so the lakes need not cluster at the sealed city. Placement proposed: the foothills between the north range and the NE cluster and at the cluster's southern foot, draining into the western river so the landing town's river runs red (GM, yes). The landing town sits nearer (760, 5225), where the western river leaves the coastal forest. Overgrowth extent roughly map (900–1250, 5275–5700).
+
 ## Rejected options (summary)
 
 - **S3, the scar's keepers** (Phase 2): dropped as a seed; the sealed city stays a place and its keeping an aside.
@@ -94,7 +106,11 @@ None yet.
 
 ## Approved canon moves
 
-None yet.
+Approved 2026-10-23 (land at Phase 11 unless noted):
+1. **The imperial capital and the breach placed** in the Red Dominion's north-east: `lore/timeline.md` (*⚿ The cradle* and the Dark-Era open history; replaces "the Dark-Era ruin in Sumendar's outer reaches"), mirrored on `published/setting/talan/historical/golden-empire.html` at Phase 12 (fills "Name TBD" siting and the Open item "locations uncatalogued"). The Emperor's deliberate dig stays ⚿.
+2. **`lore/transport.md`:** the Dominion's carriers as a Hafra sea power; the capital and the landing town as ports.
+3. **Burdineyja** (`lore/geography/sumendar.md` stub): the Dark-Era shelter of the fleet, light canon.
+4. **`docs/map-todo.md`:** labels for the capital and the landing town; a ruin icon and label for the sealed city; possibly small town icons on the west coast; any landmarks approved.
 
 ## Private story uses: never publish to `/setting/`
 
