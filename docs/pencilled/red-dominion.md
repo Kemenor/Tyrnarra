@@ -11,8 +11,9 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): closed** (GM, 2026-10-23). Carrying as the economy; E3 (timber and iron); H1 hulls with the refit; the imperial ships; naval guns.
-- **Phase 7 (daily life): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 7* below).
-- **Resume here:** the Phase 7 questions at the end of the Phase 7 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives stay local only, outside the repo in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj` (moved there for the cloud hand-off).
+- **Phase 7 (daily life): closed** (GM, 2026-10-24). The reworked proposal kept whole; R2 dropped.
+- **Phase 8 (naming): next.**
+- **Resume here:** Phase 8 (naming); placeholders [the capital], [the ship's name], [a northern port], [the landing town], the head's title, the flagship. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives stay local only, outside the repo in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj` (moved there for the cloud hand-off).
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -178,29 +179,42 @@
 - **GM aside, unplaced:** hidden imperial vaults holding weapons beyond modern reach exist (in no lore file yet; place when they come up).
 5. **Routes: yes.** No rail: a line would have to pass the scar country and the sealed city, and the Dominion is well connected by sea (GM's reasoning).
 
-## Phase 7: daily life (proposed 2026-10-23; not approved)
+## Phase 7: daily life (closed 2026-10-24)
 
-1. **The day.** A ship-town keeps ship's time: the bell strikes the watches as at sea (sketch 5's bell rings for boats and the tide besides). The coast goes out on the tide to fish and comes in to the fields; the point works the yard and the foundry in shifts; the frontier towns clear the overgrowth, burning by day and keeping watch by night.
-2. **The shared ritual (choice).** R1 **the muster call:** once a year each ship-town reads its roll aloud in the square under the bell; every entered name answers *aboard*; names abroad are answered by kin at home ("aboard, at [a northern port]"); a struck name is left out of the reading. R2 **the great muster at the point:** the whole people called at once (the Phase 2 seed's image), held when a new head raises her flag. **★ Recommended: R1 every year, R2 at each new head.**
-3. **Senses and habits (a few).**
-   - **Food:** the Dominion pantry is a hold: kept food in sealed jars, salt fish, ship's biscuit; bread goes by its ship's name (sketch 4). At the muster call everyone eats ship's biscuit, landfolk too.
-   - **Song:** the shanties, one song in many versions, every port's crew with its own third line, and the argument over it is half the singing (sketch 6).
-   - **Smell:** tar on the beached hulls, iron in the red rivers, smoke from the clearing burns inland.
-   - **Speech:** "Which ship?" is "where are you from?"; *on the roll*, one of us, trusted; *struck*, gone from the Dominion (left the muster, or dead with no one to answer); *I was asked*, I had my say (from the asking).
-   - **The vice: odds on the four.** At the landing town people lay bets on the guided parties going up the scar road: whether all four come back, and when.
-4. **Movement.** Everyday: coast boats between the ship-towns; the coast road with its milestones for carts and walkers; the scar road only with a guide. **Signature movement: the homecoming.** When a carrier from abroad comes round the point, the bells ring it up the coast town by town.
-5. **Visitor against native.** The visitor sees poor towns roofed with old boats, waiting to be rebuilt in stone, and an Empire's leftovers; asks where someone is from and hears a ship's name. The native knows the hull roofs are the house's ship and the state's unit, and will never be replaced with stone; hears in the bell who is coming in; knows a Dominion quarter four generations abroad is as Dominion as the point.
-6. **Youth.** **The first voyage:** a child is entered under its house; around fifteen it sails one run with its ship or a carrier and on coming home is entered in its own name. A slope: harbour work from about ten, the first voyage, the first time asked. Landfolk sail it too; custom, never law. **Sanctioned transgression: walking the keel.** The young run the ridge-keel of the town's hall roof (the beached carrier, sketch 2) end to end; the harbour-master's people shout them down; everyone in the town did it once.
-7. **Faith as lived.** Syncretic, split like the people: **Shuun at sea** (the sailor's blessing, at casting off and on the water), **Komo ashore** (the foundry, the clearing fires, the hearth: the domain's god in the yard and the new fields). No ship's clergy; the captain speaks the words at a launch, a breaking-up and a burial at sea. Devout at the edges (sailing out, clearing ground), easy in between.
+**Version 1** (the cloud session's) was reviewed by Claude at the GM's request and reworked. Kept from it: the muster call, "which ship?", *on the roll*, *struck*, *I was asked*, the shanty's third line, the first voyage, Shuun at sea and Komo ashore, the odds on the four. Cut: ship's time on land and ship's biscuit for landfolk (the whole home made a ship; blanket claims across town and country); the bell striking the watches and ringing homecomings up the coast (one object doing everything); walking the keel (a generic roof-dare); "a struck name is left out of the reading" (remembrance flourish); "devout at the edges, easy in between" (epigram); the hull roofs never replaced with stone. Gaps it left: the held south (about 800k of the 1M at home), the quarters abroad (about 1.35M), the breach in daily life, the kin-rite check.
 
-**Questions to the GM (open):**
-1. The day by ship's time and the bell?
-2. The ritual: R1 yearly, R2 at each new head?
-3. The senses and speech: keep, cut or change any (the pantry, the shanty's third line, "which ship?", *on the roll*, *struck*, *I was asked*)?
-4. The vice: odds on the four?
-5. The homecoming as the signature movement?
-6. Youth: the first voyage and walking the keel?
-7. Faith: Shuun at sea, Komo ashore?
+**The muster abroad (GM's question, 2026-10-23).** Under G3 a quarter abroad is the shore-berth of a ship that still sails, so its houses stand on that ship's roll and answer at their own call when it comes in. The port where someone lives changes nothing; a house changes muster only by being entered on another. Kin answer only for those away from every berth: the adventurer, the scholar at Thekkavar, the sailor signed onto a foreign hull, someone married inland.
+
+1. **The day, by place.**
+   - **The held south** (most of the home): farm country on the old crown land. A farming day like any; the market town is timber and stone, since hulls are hauled up beaches and never inland. The plough still turns up imperial roof-tile.
+   - **The ship-towns** on the west coast: fishing on the tide, the boatyard, the bell for a boat coming in and for the tide (sketch 5).
+   - **The point:** the yard and the foundry in shifts; the Admiralty; the stone city.
+   - **The frontier:** clearing the overgrowth by day, the burns; the watch at night; the open pits at the red lakes.
+   - **The quarters abroad:** a street or two by the berth in a foreign port; the carriers' cargo, the chandlery, the warehouses; the Dominion's speech at home and the port's outside. A quarter's year runs by its ship's comings-in.
+2. **The shared ritual: the muster call.** Once a year each ship's roll is read aloud and every name answers *aboard*. At home the beached ship holds it under its bell on the town's beaching day; abroad the quarter holds it at the berth the first time its ship comes in after that day. Kin answer for those away from every berth: "aboard, at Thekkavar". R2, the great muster at a new head: dropped (GM). **Kin-rite check:** Namur's Oath-Day re-swears the Dictator and counts a vote; Lograth's Re-Swearing renews the founding oath once a generation. The muster call swears nothing and counts no vote: a roll answered by presence.
+3. **Senses and habits** (a few, by place).
+   - **Food:** fish on the coast; bread from the south's own fields; in the ship-towns the bread goes by its ship's name (sketch 4). Kept food in sealed jars is the carriers' and the quarters'.
+   - **Song:** the shanty, every quarter with its own third line, and the argument over it (sketch 6).
+   - **Smell:** tar on the coast; iron in the red rivers; smoke from the burns inland.
+   - **Speech:** "Which ship?" for "where are you from?"; *on the roll*, one of us; *struck*, gone from the Dominion; *I was asked*, I had my say. Abroad, the Dominion's speech at home and the port's tongue outside.
+   - **The vice: odds on the four** at the landing town (whether a party comes back whole, and when). Kin to Namur's betting on the Oath-Day count; a different object.
+4. **Movement.** Cart roads in the south; coast boats between the ship-towns; the coast road with its milestones; the scar road only with a guide. **Signature movement: the ship coming in, abroad.** When its ship comes in, the quarter goes down to the berth.
+5. **Visitor against native.** The visitor sees a poor coast of boat-roofed towns and takes them for the Dominion; asks where someone is from and hears a ship's name. The native knows most of the home lives inland on farms and most of the people live abroad, and that a quarter four generations in a foreign port is as Dominion as the point.
+6. **Youth.** **The first voyage:** a child is entered under its house; around fifteen it sails one run with its ship or a carrier and comes home entered in its own name; landfolk sail it too, by custom. A slope: harbour or field work from about ten, the first voyage, the first time asked. **Sanctioned transgression: stowing away.** The young stow away on a carrier for a run before their time; the crew finds them, works them hard, and brings them home; the captain logs it. In the quarters abroad, the young stow away the other way, to see the point.
+7. **Faith as lived.** Shuun at sea (canon: the sailor's blessing), at casting off and on the water; Komo ashore, at the foundry, the burns and the hearth. Aboard, the captain speaks the words at a launch, a breaking-up and a burial at sea; ashore, Komo's clergy where there are any. **The breach in daily life:** the Dominion digs open-cast only, never below daylight; its iron comes from open pits (the red lakes), and no shaft has been sunk since the return.
+
+**GM's answers (2026-10-24):** keep all; R2 dropped; odds on the four kept.
+
+**Phase 7 checklist (closed, GM 2026-10-24):** the day by place (south, ship-towns, point, frontier, quarters abroad); the shared ritual (the muster call; kin-rite check against the Oath-Day and the Re-Swearing); senses and habits by place, with speech and the vice; movement and the signature movement (the ship coming in, abroad); visitor against native; youth (the first voyage, a slope; stowing away, checked by the crew and the log); faith as lived (Shuun at sea, Komo ashore; open-cast only).
+
+**Questions put (answered):**
+1. The day by place, with the south as farm country and the inland towns in timber and stone?
+2. The muster call on the beaching day at home and at the ship's first coming-in abroad; R2 kept or dropped?
+3. Senses and speech: keep, cut or change any?
+4. The vice: odds on the four (beside Namur's betting), or another?
+5. The ship coming in, abroad, as the signature movement?
+6. Youth: the first voyage, and stowing away?
+7. Faith: Shuun at sea, Komo ashore; open-cast only, never below daylight?
 
 ## Rejected options (summary)
 
