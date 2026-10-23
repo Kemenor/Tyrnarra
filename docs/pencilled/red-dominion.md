@@ -11,7 +11,7 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 6* below).
-- **Resume here:** Phase 6 Q4 (hulls: the H1 mix and the iron sale to Three Pines); then the Phase 6 readback. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Resume here:** the GM's idea of surviving imperial ships (Phase 6, after Q4); then the Phase 6 readback. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -159,7 +159,9 @@
 1. **Subsistence: yes** as proposed.
 2. **The draw: yes**, the scar, with the Admiralty's nest bounty paid through the landing town.
 3. **What the home makes: E3**, timber the everyday trade, iron the prize.
-4. **Hulls: open.** The GM asked for a mix and whether the Dominion can sell to Three Pines. Canon read (`myrkono.md`, *Three Pines*): the hulls are **isiler**, a shadow-grown black pine that swells not at all, keeps no rot, takes Bikholm tar to the heart and runs quiet; the order book at Ontzola has never been deeper since 2524, and the timber-wards hold the cutting to the rotation. Proposed mix (H1): isiler saltkeels from Ontzola for the long-haul carriers; home-built hulls from the overgrowth's timber for the coast, the fishing and the short hauls (Auran, Lemersa, Gesalkai). Selling: the overgrowth's timber suits nothing Ontzola builds (a buyer pays for isiler); the iron suits it (fastenings, anchors, fittings), so the Dominion pays for its isiler partly in iron.
+4. **Hulls: H1 (GM, yes).** The GM asked for a mix and whether the Dominion can sell to Three Pines. Canon read (`myrkono.md`, *Three Pines*): the hulls are **isiler**, a shadow-grown black pine that swells not at all, keeps no rot, takes Bikholm tar to the heart and runs quiet; the order book at Ontzola has never been deeper since 2524, and the timber-wards hold the cutting to the rotation. Proposed mix (H1): isiler saltkeels from Ontzola for the long-haul carriers; home-built hulls from the overgrowth's timber for the coast, the fishing and the short hauls (Auran, Lemersa, Gesalkai). Selling: the overgrowth's timber suits nothing Ontzola builds (a buyer pays for isiler); the iron suits it (fastenings, anchors, fittings), so the Dominion pays for its isiler partly in iron. Two roofs on the beach: black isiler and brown home-built.
+
+**The GM's idea, open (2026-10-23): surviving imperial ships.** The Dominion still keeps some of the Golden Empire's own ships in commission. Canon read: the Empire's Arcanotech is the base of today's standard catalogue (`cosmology.md`); the Empire's archives did not survive the Dark Era's first decade (`timeline.md`); the fleet of 1321 sailed from the point, the Empire's sea-gate. Claude's proposal: a handful, kept up plank by plank; revered more than formidable; questions put to the GM below in chat.
 5. **Routes: yes.** No rail: a line would have to pass the scar country and the sealed city, and the Dominion is well connected by sea (GM's reasoning).
 
 ## Rejected options (summary)
