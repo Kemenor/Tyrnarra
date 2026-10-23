@@ -11,7 +11,7 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 6* below).
-- **Resume here:** the GM's idea of surviving imperial ships (Phase 6, after Q4); then the Phase 6 readback. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Resume here:** the GM's close of Phase 6 (readback given 2026-10-23); then Phase 7 (daily life). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -161,7 +161,18 @@
 3. **What the home makes: E3**, timber the everyday trade, iron the prize.
 4. **Hulls: H1 (GM, yes).** The GM asked for a mix and whether the Dominion can sell to Three Pines. Canon read (`myrkono.md`, *Three Pines*): the hulls are **isiler**, a shadow-grown black pine that swells not at all, keeps no rot, takes Bikholm tar to the heart and runs quiet; the order book at Ontzola has never been deeper since 2524, and the timber-wards hold the cutting to the rotation. Proposed mix (H1): isiler saltkeels from Ontzola for the long-haul carriers; home-built hulls from the overgrowth's timber for the coast, the fishing and the short hauls (Auran, Lemersa, Gesalkai). Selling: the overgrowth's timber suits nothing Ontzola builds (a buyer pays for isiler); the iron suits it (fastenings, anchors, fittings), so the Dominion pays for its isiler partly in iron. Two roofs on the beach: black isiler and brown home-built.
 
-**The GM's idea, open (2026-10-23): surviving imperial ships.** The Dominion still keeps some of the Golden Empire's own ships in commission. Canon read: the Empire's Arcanotech is the base of today's standard catalogue (`cosmology.md`); the Empire's archives did not survive the Dark Era's first decade (`timeline.md`); the fleet of 1321 sailed from the point, the Empire's sea-gate. Claude's proposal: a handful, kept up plank by plank; revered more than formidable; questions put to the GM below in chat.
+**The imperial ships (GM's idea, settled in discussion 2026-10-23).**
+- **A handful** of the Golden Empire's own ships still in commission: the emperor's fleet, the best the Empire had, built at the capital's yards and sailed from the point in 1321.
+- **Imperial tech is uneven (GM).** Modern work has caught up in some things and not others (the train is a true modern wonder; the Automatons and the hidden imperial weapon vaults are beyond it). The emperor's ships are unmatched in two things: **the hold that keeps** (water from salt, food that holds, cargo that arrives as it left; what made the exile survivable, and why the Hafra hires Dominion carriers) and **firepower** (ships that once conquered over half the world). The contrast: Three Pines is there and gone; the Dominion stays and is seen.
+- **Ship of Theseus.** Kept up plank by plank; hardly a timber original. The rune-plates are copied by rote, line for line, without full understanding; the Dominion's own designs follow them, less intricate and less powerful, still good.
+- **The refit (GM, yes).** Isiler hulls from Ontzola get imperial-pattern holds at the point's yard: an isiler hull with a Dominion hold is a Dominion carrier. The smaller home-built ships stay (coast, fishing, short hauls).
+- **The yard at the point:** foundry, rune-shop and refit yard in one. Iron (E3) casts the guns and fittings and is sold to Three Pines; Arcanotech is the holds and the copied rune-plates. The iron lies on the frontier (the red lakes), so the guns depend on the captains who push into the scar.
+- **The flagship** (name TBD; the GM's working name *the Emperor's Embrace*) flies the head's flag; "she strikes her flag" is literal, in the harbour at the point.
+- **The imperial marks** wore away with upkeep: a carver replacing a board carved what she knew. No decree; the Dominion over the Empire by twelve centuries of repair.
+- **◈ / ⚿ The weapon (GM).** Rumour has it the flagship carries an incredibly powerful weapon; with every retelling what it does and how strong it is changes (Popular Belief). The truth is a GM Secret, unset: a weapon unlike the tales; one that was and is gone (removed, spent, in a vault); or something else the tellings got wrong.
+- **Consequences flagged:** a handful of imperial warships makes the Dominion one of the Hafra's real sea powers beside the Unlit; the Iron Tide (the Red Empire's cloudship navy over the Hafra) is in view for Phase 9.
+- **Phase 8 note:** a house goes by its ship's name, so the flagship's house would carry "Emperor" in its name while every sigil has worn away; check against "the Dominion, never the Empire".
+- **GM aside, unplaced:** hidden imperial vaults holding weapons beyond modern reach exist (in no lore file yet; place when they come up).
 5. **Routes: yes.** No rail: a line would have to pass the scar country and the sealed city, and the Dominion is well connected by sea (GM's reasoning).
 
 ## Rejected options (summary)
