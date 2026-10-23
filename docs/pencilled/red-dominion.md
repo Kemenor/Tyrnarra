@@ -11,7 +11,7 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 6* below).
-- **Resume here:** the Phase 6 questions at the end of the Phase 6 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Resume here:** Phase 6 Q4 (hulls: the H1 mix and the iron sale to Three Pines); then the Phase 6 readback. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -154,6 +154,13 @@
 3. What the home makes: E1, E2 or E3?
 4. Hulls: bought from Three Pines, or built at home?
 5. Routes as above (no rail, two ports, the scar road the choke point)?
+
+**Phase 6: GM's answers (2026-10-23)**
+1. **Subsistence: yes** as proposed.
+2. **The draw: yes**, the scar, with the Admiralty's nest bounty paid through the landing town.
+3. **What the home makes: E3**, timber the everyday trade, iron the prize.
+4. **Hulls: open.** The GM asked for a mix and whether the Dominion can sell to Three Pines. Canon read (`myrkono.md`, *Three Pines*): the hulls are **isiler**, a shadow-grown black pine that swells not at all, keeps no rot, takes Bikholm tar to the heart and runs quiet; the order book at Ontzola has never been deeper since 2524, and the timber-wards hold the cutting to the rotation. Proposed mix (H1): isiler saltkeels from Ontzola for the long-haul carriers; home-built hulls from the overgrowth's timber for the coast, the fishing and the short hauls (Auran, Lemersa, Gesalkai). Selling: the overgrowth's timber suits nothing Ontzola builds (a buyer pays for isiler); the iron suits it (fastenings, anchors, fittings), so the Dominion pays for its isiler partly in iron.
+5. **Routes: yes.** No rail: a line would have to pass the scar country and the sealed city, and the Dominion is well connected by sea (GM's reasoning).
 
 ## Rejected options (summary)
 
