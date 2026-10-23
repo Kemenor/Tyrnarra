@@ -10,7 +10,7 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
 - **Phase 5 (government): answered 2026-10-23, awaiting the GM's close** (see *Phase 5: GM's answers* below). G1 + G3 with C1, the asking.
-- **Resume here:** the Phase 5 readback (Q4 is a lean, to firm up at the close); then Phase 6 (economy). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Resume here:** the GM's close of Phase 5 (all four answered); then Phase 6 (economy). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -130,7 +130,7 @@
 1. **G1 + G3: yes.** A naval stratocracy whose units are ships: rank is office; belonging by the muster roll, not by ground.
 2. **C1, the asking: yes** (in place of G2's quartermaster). Before a decision that puts the whole muster at hazard (at sea, doubtful weather; ashore, the scar is the weather: pushing into the scar, moving the town, taking new ground) the captain must put it to the muster and hear its answer. The captain may overrule; the asking and the answer go into the log, and a captain who overruled and lost answers for it before the board.
 3. **The head: yes.** Chosen by the flag officers from among themselves; serves until she strikes her flag or the board removes her.
-4. **Entry by muster: leaning yes.** The mortals of reclaimed land who stayed (squatters, holdfasts) joined by being entered on a muster; being entered is the one way anyone becomes Dominion.
+4. **Entry by muster: yes.** The mortals of reclaimed land who stayed (squatters, holdfasts) joined by being entered on a muster. Entering a muster is joining the Dominion; leaving the muster is ceasing to be Dominion (GM).
 
 ## Rejected options (summary)
 
