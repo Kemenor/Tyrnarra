@@ -9,8 +9,9 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-22).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
-- **Phase 5 (government): answered 2026-10-23, awaiting the GM's close** (see *Phase 5: GM's answers* below). G1 + G3 with C1, the asking.
-- **Resume here:** the GM's close of Phase 5 (all four answered); then Phase 6 (economy). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
+- **Phase 6 (economy): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 6* below).
+- **Resume here:** the Phase 6 questions at the end of the Phase 6 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -99,7 +100,7 @@
 - **Population.** Home about 1M (held coast and south about 40,000 sq mi at about 20 per sq mi, about 800k; scar and wild about 150,000 sq mi at 2–3, about 350k). Abroad about 1.5M (port quarters about 1.35M, crews at sea about 150k). About 60% abroad; "mostly at sea" counts the port quarters, who live on the Hafra (GM, yes). The capital about 30k (3%).
 - **Map landmarks (GM, 2026-10-23).** The region is near-empty on the map; the GM is open to adding forests, lakes or similar, and plans a landmark pass across many regions. Dominion landmarks (GM, yes to both): **the overgrowth**, forest over the abandoned interior heartland between the held coast and the scar (where the nests are; clearing it is the reclaiming); **the red lakes**, flooded open-cast mine pits running red with iron. The GM notes the Empire had many mines here, so the lakes need not cluster at the sealed city. Placement proposed: the foothills between the north range and the NE cluster and at the cluster's southern foot, draining into the western river so the landing town's river runs red (GM, yes). The landing town sits nearer (760, 5225), where the western river leaves the coastal forest. Overgrowth extent roughly map (900–1250, 5275–5700).
 
-## Phase 5: government (proposed and answered 2026-10-23; not yet closed)
+## Phase 5: government (closed 2026-10-23)
 
 **Starting point (GM):** no emperor; the navy holds it. The 2026-10-06 earmark: a **naval stratocracy** (the navy is the state, its ranks the offices; a junta seizes a state, a stratocracy is one). The form is fixed, so the candidates are variants of its mechanics.
 
@@ -131,6 +132,28 @@
 2. **C1, the asking: yes** (in place of G2's quartermaster). Before a decision that puts the whole muster at hazard (at sea, doubtful weather; ashore, the scar is the weather: pushing into the scar, moving the town, taking new ground) the captain must put it to the muster and hear its answer. The captain may overrule; the asking and the answer go into the log, and a captain who overruled and lost answers for it before the board.
 3. **The head: yes.** Chosen by the flag officers from among themselves; serves until she strikes her flag or the board removes her.
 4. **Entry by muster: yes.** The mortals of reclaimed land who stayed (squatters, holdfasts) joined by being entered on a muster. Entering a muster is joining the Dominion; leaving the muster is ceasing to be Dominion (GM).
+
+**Phase 5 checklist (closed, GM 2026-10-23):** the form (G1 + G3); the four answers; in action; the muster's voice (C1); offices filled (captains commissioned, flag officers as the Admiralty, the head chosen from among them); why fit, why accepted; the honest cost; the incentive check; the three tests; the muddy lines (reclaimed land; the quarters abroad); entry by muster, leaving the muster is leaving the Dominion; G2, C2 and C3 dropped.
+
+## Phase 6: economy (proposed 2026-10-23; not approved)
+
+**Canon checked:** Auran (the carriers handle most of its cargo, two days out to Siyabask: drawn essence in sealed jars, cloudship silver); Balatur Erui (every cargo between the seas changes hulls at Gesalkai; "the salt hulls that carry the Hafra side of the trade are mostly Three Pines work"); the River Duchies (the Golden Empire's granary province, capital Lemersa at the head of the bay, across from the Dominion); Haraour (no rail, its carts go east to Eldara's line; a line on to the Dominion is its open question); `transport.md` (no Dominion entries yet; Hafra saltkeels 120–180 mi a day).
+
+1. **Subsistence.** The home feeds itself in an ordinary year: fish all along the coast, the farms of the held south, and the reclaimed fields behind the ship-towns. In a lean year grain comes across the bay from the River Duchies at Lemersa, the Empire's old granary feeding the Empire's old heartland, carried in Dominion hulls. The coast never goes hungry; the frontier towns inland go short first. The quarters abroad live on their wages like any port folk.
+2. **The draw.** Few outsiders come to trade: the Dominion goes to them. Those who come, come for the scar: scholars (Roshanak), the curious who pay for the guided look, and parties of four hired to clear nests. **Proposed:** the Admiralty pays a bounty per nest cleared, through the landing town.
+3. **What the home makes (choice).** E1 timber: clearing the overgrowth is the reclaiming, and the cleared trees are ship timber. E2 iron: the imperial workings on the frontier (the red lakes), reopened where the ground is won. E3 both: timber the everyday trade, iron the prize. **★ Recommended: E3.**
+4. **The carrying is the economy.** The Dominion's wealth is freight: its carriers take a share of every cargo under its flag (the Phase 5 share that funds the Admiralty's yard). Partners: Auran (silver and essence to the mainland; existing canon); Gesalkai on Balatur Erui (salt cargo to the Weighhouse); the River Duchies (grain, in lean years and in trade); the Hafra ports with Dominion quarters (named later). It buys grain in lean years, finished goods, and hulls.
+5. **Hulls (choice).** **★ Recommended:** the carriers sail hulls bought from Three Pines (which fits Balatur Erui's "mostly Three Pines work"); the Admiralty's yard at the point refits and repairs, and breaks up the old hulls for the ship-towns. Alternative: the Dominion builds its own from the overgrowth's timber.
+6. **Routes.** No rail; the sea is the road. Ports: the capital at the point (the home port; every carrier calls there) and the landing town at the northern river's mouth. The ship-towns land boats on the beach. Roads: the coast road (sketch 4's milestone) and the scar road up the valley, about 180 mi. The Midarra coast has no port. Choke point: the scar road through the landing town. Haraour's open question (a line on to the Dominion) stays open. Canon move already approved: `transport.md` gets the carriers, the capital and the landing town.
+7. **Stake in the tension (candidates for Phase 9).** (a) The frontier: timber and iron lie in the overgrowth and the scar, so the economy pays the captains who push in. (b) Home and abroad: the quarters abroad earn the freight that funds the reclaiming of a homeland most of them do not live in.
+8. **Table note:** optional; none proposed.
+
+**Questions to the GM (open):**
+1. Subsistence as above (fish, the held south, grain from the River Duchies in lean years)?
+2. The draw: the scar, with the Admiralty's nest bounty?
+3. What the home makes: E1, E2 or E3?
+4. Hulls: bought from Three Pines, or built at home?
+5. Routes as above (no rail, two ports, the scar road the choke point)?
 
 ## Rejected options (summary)
 
