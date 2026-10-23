@@ -9,8 +9,8 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-22).
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-23). Roshanak's sketchbook and its six sketches.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-23).
-- **Phase 5 (government): proposed 2026-10-23, awaiting the GM's answers** (see *Phase 5* below). Starting point: no emperor; the navy holds it.
-- **Resume here:** the four Phase 5 questions at the end of the Phase 5 section. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
+- **Phase 5 (government): answered 2026-10-23, awaiting the GM's close** (see *Phase 5: GM's answers* below). G1 + G3 with C1, the asking.
+- **Resume here:** the Phase 5 readback (Q4 is a lean, to firm up at the close); then Phase 6 (economy). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives (`mj/`) stay local only.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -99,7 +99,7 @@
 - **Population.** Home about 1M (held coast and south about 40,000 sq mi at about 20 per sq mi, about 800k; scar and wild about 150,000 sq mi at 2–3, about 350k). Abroad about 1.5M (port quarters about 1.35M, crews at sea about 150k). About 60% abroad; "mostly at sea" counts the port quarters, who live on the Hafra (GM, yes). The capital about 30k (3%).
 - **Map landmarks (GM, 2026-10-23).** The region is near-empty on the map; the GM is open to adding forests, lakes or similar, and plans a landmark pass across many regions. Dominion landmarks (GM, yes to both): **the overgrowth**, forest over the abandoned interior heartland between the held coast and the scar (where the nests are; clearing it is the reclaiming); **the red lakes**, flooded open-cast mine pits running red with iron. The GM notes the Empire had many mines here, so the lakes need not cluster at the sealed city. Placement proposed: the foothills between the north range and the NE cluster and at the cluster's southern foot, draining into the western river so the landing town's river runs red (GM, yes). The landing town sits nearer (760, 5225), where the western river leaves the coastal forest. Overgrowth extent roughly map (900–1250, 5275–5700).
 
-## Phase 5: government (proposed 2026-10-23; not approved)
+## Phase 5: government (proposed and answered 2026-10-23; not yet closed)
 
 **Starting point (GM):** no emperor; the navy holds it. The 2026-10-06 earmark: a **naval stratocracy** (the navy is the state, its ranks the offices; a junta seizes a state, a stratocracy is one). The form is fixed, so the candidates are variants of its mechanics.
 
@@ -124,11 +124,20 @@
 3. The head chosen by the flag officers from among themselves, serving until she strikes her flag?
 4. The mortals of reclaimed land who stayed (squatters, holdfasts): did they join by being entered on a muster, making "being entered" the one way anyone becomes Dominion?
 
+**C · The muster's voice (GM, 2026-10-23, in place of G2's quartermaster).** The GM asked how ships really ran: in navies every office was appointed and the crew-chosen quartermaster was a pirate institution; medieval sea law (the Rolls of Oléron) had the master consult the crew before sailing in doubtful weather. The GM wanted that: a voice for the people without an office or a vote. Options put: C1, the asking; C2, the bell (the right to be heard); C3, the muster's consent on what is the muster's.
+
+**Phase 5: GM's answers (2026-10-23)**
+1. **G1 + G3: yes.** A naval stratocracy whose units are ships: rank is office; belonging by the muster roll, not by ground.
+2. **C1, the asking: yes** (in place of G2's quartermaster). Before a decision that puts the whole muster at hazard (at sea, doubtful weather; ashore, the scar is the weather: pushing into the scar, moving the town, taking new ground) the captain must put it to the muster and hear its answer. The captain may overrule; the asking and the answer go into the log, and a captain who overruled and lost answers for it before the board.
+3. **The head: yes.** Chosen by the flag officers from among themselves; serves until she strikes her flag or the board removes her.
+4. **Entry by muster: leaning yes.** The mortals of reclaimed land who stayed (squatters, holdfasts) joined by being entered on a muster; being entered is the one way anyone becomes Dominion.
+
 ## Rejected options (summary)
 
 - **S3, the scar's keepers** (Phase 2): dropped as a seed; the sealed city stays a place and its keeping an aside.
 
-None yet.
+- **G2, the ship's articles** (Phase 5): the full captain/quartermaster split dropped; the crew-chosen quartermaster replaced by C1, the asking.
+- **C2, the bell, and C3, the muster's consent** (Phase 5): not taken.
 
 ## Approved canon moves
 
