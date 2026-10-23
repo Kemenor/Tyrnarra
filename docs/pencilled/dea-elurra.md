@@ -2,9 +2,9 @@
 
 **Working record: not canon.** Phases 0–2 were run jointly for the three Askamira countries; read [`askamira.md`](askamira.md) first, including its **Island frame** (shared items any of the three builds may settle for all).
 
-**Current phase:** 3 (traveller's image), open on one item: placement of the scene.
+**Current phase:** 3 (traveller's image), placement settled; awaiting the GM's word to close.
 
-**Resume here (2026-10-23).** Phase 3 needs only the GM's word on placement (proposal: head of the deep file's section on the ice and its song; its own in-world file if it grows), then the phase closes. **Phase 4 opens on:** who holds the shore districts at Frae City's anchors (GM lean: each leans to the neighbouring country's people; the north chain's district is Elurran); whether the ice truly moves; who the islanders are and when they arrived (Dark Era, per the joint build); the Golden Empire's reach; how often bergs reach the lake shore and their usual size. The north chain is named by Phase 8. After Dea Elurra: Basamortua and Maitagarri each on their own, then Star Island (rename Tamsin Hollis), then the hidden-city pass. Working method: one phase at a time, closed only on the GM's word with a checklist readback; every reason in a recommendation checked against the option (see the joint record, [`askamira.md`](askamira.md)).
+**Resume here (2026-10-23).** Phase 3 has its placement (its own in-world file, below) and needs only the GM's word to close. **Phase 4 opens on:** who holds the shore districts at Frae City's anchors (GM lean: each leans to the neighbouring country's people; the north chain's district is Elurran); whether the ice truly moves; who the islanders are and when they arrived (Dark Era, per the joint build); the Golden Empire's reach; how often bergs reach the lake shore and their usual size. The north chain is named by Phase 8. After Dea Elurra: Basamortua and Maitagarri each on their own, then Star Island (rename Tamsin Hollis), then the hidden-city pass. Working method: one phase at a time, closed only on the GM's word with a checklist readback; every reason in a recommendation checked against the option (see the joint record, [`askamira.md`](askamira.md)).
 
 ---
 
@@ -36,7 +36,7 @@
 
 **Year:** spring 2532 MR (ice breaks up and calves most in spring). **Chain:** *[the north chain]* until Phase 8.
 
-**The scene (Claude drafted, GM corrected; accepted 2026-10-23).** GM corrections from draft 1: cut Yuba's "the keepers have a word for it"; cut the herd comparison (a sand-whale's water need is not canon, so the herd's need at a watering cannot be worked out); the broken-chain man becomes what everyone *says* (canon: the city's proudest boast); Tamsin answers Marta's question with one word before going quiet (she trusts nothing until she hears it, so the rumour closes when she does). Placement still open (proposal: head of the deep file's section on the ice and its song; its own in-world file if it grows).
+**The scene (Claude drafted, GM corrected; accepted 2026-10-23).** GM corrections from draft 1: cut Yuba's "the keepers have a word for it"; cut the herd comparison (a sand-whale's water need is not canon, so the herd's need at a watering cannot be worked out); the broken-chain man becomes what everyone *says* (canon: the city's proudest boast); Tamsin answers Marta's question with one word before going quiet (she trusts nothing until she hears it, so the rumour closes when she does). **Placement (GM, 2026-10-24): its own in-world file**, `lore/geography/askamira/dea-elurra-conversation.md` (named after the form, like `galdua-jendea-telling.md`), written at Phase 11 with a voice block for the three speakers; a few lines quoted as the excerpt at the head of the deep file's section on the ice and its song; published whole as a log card.
 
 > **MARTA:** Race you to the next landing.
 >
