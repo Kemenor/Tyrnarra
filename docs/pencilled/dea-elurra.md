@@ -2,7 +2,9 @@
 
 **Working record: not canon.** Phases 0–2 were run jointly for the three Askamira countries; read [`askamira.md`](askamira.md) first, including its **Island frame** (shared items any of the three builds may settle for all).
 
-**Current phase:** 3 (traveller's image), open.
+**Current phase:** 3 (traveller's image), open on one item: placement of the scene.
+
+**Resume here (2026-10-23).** Phase 3 needs only the GM's word on placement (proposal: head of the deep file's section on the ice and its song; its own in-world file if it grows), then the phase closes. **Phase 4 opens on:** who holds the shore districts at Frae City's anchors (GM lean: each leans to the neighbouring country's people; the north chain's district is Elurran); whether the ice truly moves; who the islanders are and when they arrived (Dark Era, per the joint build); the Golden Empire's reach; how often bergs reach the lake shore and their usual size. The north chain is named by Phase 8. After Dea Elurra: Basamortua and Maitagarri each on their own, then Star Island (rename Tamsin Hollis), then the hidden-city pass. Working method: one phase at a time, closed only on the GM's word with a checklist readback; every reason in a recommendation checked against the option (see the joint record, [`askamira.md`](askamira.md)).
 
 ---
 
