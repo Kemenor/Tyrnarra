@@ -34,6 +34,75 @@
 
 **Year:** spring 2532 MR (ice breaks up and calves most in spring). **Chain:** *[the north chain]* until Phase 8.
 
+**The scene (Claude drafted, GM corrected; accepted 2026-10-23).** GM corrections from draft 1: cut Yuba's "the keepers have a word for it"; cut the herd comparison (a sand-whale's water need is not canon, so the herd's need at a watering cannot be worked out); the broken-chain man becomes what everyone *says* (canon: the city's proudest boast); Tamsin answers Marta's question with one word before going quiet (she trusts nothing until she hears it, so the rumour closes when she does). Placement still open (proposal: head of the deep file's section on the ice and its song; its own in-world file if it grows).
+
+> **MARTA:** Race you to the next landing.
+>
+> **YUBA:** You've said that at four landings. You've stopped nine times.
+>
+> **MARTA:** I like to see how far we've come. Look. Down, under the rock.
+>
+> **YUBA:** There's a sail on the water.
+>
+> **MARTA:** Sails go somewhere. That's just drifting in.
+>
+> **TAMSIN:** Ice.
+>
+> **YUBA:** Ice is water gone hard in the cold. That's a hill.
+>
+> **TAMSIN:** It comes off the north shore. Their ice runs right down into the lake, and pieces break off.
+>
+> **YUBA:** All of that is water.
+>
+> **TAMSIN:** Will be.
+>
+> **YUBA:** Fresh?
+>
+> **TAMSIN:** Fresh.
+>
+> **YUBA:** That's more than Yemmazru drinks in a year. And it's just going into the lake.
+>
+> **MARTA:** It's cracking. Hear that?
+>
+> **YUBA:** Like a fire.
+>
+> **TAMSIN:** That's the part I was told. The ice sings, morning and evening, and the Elurrans sing with it.
+>
+> **MARTA:** Who told you?
+>
+> **TAMSIN:** A man in a tavern on Star Island. He'd also lost to the broken-chain man. Twice.
+>
+> **MARTA:** Everyone in this city says they've lost to the broken-chain man.
+>
+> **TAMSIN:** Twice, though.
+>
+> **YUBA:** It groaned. Did you hear it groan?
+>
+> **MARTA:** Someone's singing. At the bottom, by the anchor.
+>
+> **YUBA:** Three. Five. They're singing the low part. The groan.
+>
+> **MARTA:** Tamsin, is this it? Is this the thing?
+>
+> **TAMSIN:** Yes.
+>
+> **YUBA:** Twelve. Windows are opening. Twenty. It's coming up the stairs after us.
+>
+> **MARTA:** We should keep climbing.
+>
+> **MARTA:** In a minute.
+>
+> **YUBA:** Thirty. Forty. I've lost count.
+>
+> *A conversation overheard on [the north chain], spring 2532 MR.*
+
+**What the scene takes as given (to hold at Phases 4–9):**
+- The berg itself sounds as it melts (cracks like fire, groans); the Elurrans find its low note and sing with it. The ice sings *morning and evening* (Phase 1's dawn and dusk).
+- *Windows are opening*: residents along the chain join, leaning on the Elurran shore district (Phase 4 lean); ownership of the shore stays open.
+- The song has no words in the scene; what a berg is to the Elurrans (and whose it is) is untouched.
+
+**This morning's berg, scene scale (GM, 2026-10-23): a large one.** About 120 m long and 70 m wide, ~15 m out of the water, ~50–75 m draft (a blocky berg runs 3–5 times as deep as its height), roughly 0.5–1 million m³ of ice: 4–8 years of Yemmazru's drinking (about 18,000 people at ~20 L a day, ~130,000 m³ a year; drinking only, since canyon irrigation would empty it in weeks). Medium-length by the ice patrols' sea classes; large for a real lake berg, which suits an ice country of ice-cap scale. Kept large so the cracking carries up the chain and the district answers. **Open for Phase 4:** how often bergs reach that shore and their usual size (most may be lake-sized; this one is big). At that draft it would ground in shallows near the anchor unless the lake drops off steeply there; the lake's depth is open (the hidden-city pass).
+
 **Raised for later:**
 - **The shore districts lean toward the neighbouring country's people** (GM lean): the district at a chain on the north shore is Elurran. Settle at Phase 4 (with the island-frame question of whose ground the shore districts stand on). A small canon addition to Frae City.
 - **Every one of the seven chains needs a name** (GM). Canon has them unnamed (`glossary.md`, *The Seven Chains*). The north chain is named at this build's Phase 8 at the latest; the other six belong to Frae City (open thread).
