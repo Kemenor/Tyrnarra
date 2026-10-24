@@ -12,8 +12,9 @@
 - **Phase 5 (government): closed** (GM, 2026-10-23). A naval stratocracy whose units are ships (G1 + G3), the muster's voice by the asking (C1).
 - **Phase 6 (economy): closed** (GM, 2026-10-23). Carrying as the economy; E3 (timber and iron); H1 hulls with the refit; the imperial ships; naval guns.
 - **Phase 7 (daily life): closed** (GM, 2026-10-24). The reworked proposal kept whole; R2 dropped.
-- **Phase 8 (naming): next.**
-- **Resume here:** Phase 8 (naming); placeholders [the capital], [the ship's name], [a northern port], [the landing town], the head's title, the flagship. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives stay local only, outside the repo in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj` (moved there for the cloud hand-off).
+- **Phase 8 (naming): closed** (GM, 2026-10-24). Folau (Tongan base); rating + given + sea name + ship; Saegate; Hyseat; the Reds; Admiral Vailea Ballast Fetu.
+- **Phase 9 (tension and reveal): proposed 2026-10-24, awaiting the GM.**
+- **Resume here:** Phase 9 (tension and reveal). Phase 8 fills the placeholders: [the capital] Saegate, [the ship's name] the Mahu, [a northern port] Ontzola, [the landing town] Tuta. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives stay local only, outside the repo in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj` (moved there for the cloud hand-off).
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -216,6 +217,40 @@
 6. Youth: the first voyage, and stowing away?
 7. Faith: Shuun at sea, Komo ashore; open-cast only, never below daylight?
 
+## Phase 8: naming (closed, GM 2026-10-24)
+
+**Words checked** (subagent, 2026-10-24) against Churchward's *Tongan Dictionary* (1959) via Pollex-Online and the IDS Tongan list (Key): folau (fleet of vessels, voyage; to voyage), vaka (boat, ship), taulanga (harbour), vao / vaotā (forest, bush), ano (lake, swamp), kulokula (red; *kula* alone = to blush), mahu (abundance, abundant), tahi (sea), fetuʻu (star), matapā (gate, door), muifonua (cape, headland), foki (return), tuʻuta (to land, go ashore), hake (come up from sea to land), tāpuni / puni (shut), ukamea (iron), tali (answer), fafangu (bell; via the Tongan Bible), possessive ʻo / ʻa. *tauʻanga* not attested as a word; no Tongan word for "sealed" or "roll" found. Tongan consonants p t k ʻ m n ng f s h v l; no r, no w.
+
+- **Register.** Word-base **Tongan** in the Polynesian family; plain letters p t k m n ng f s h v l, the ʻ dropped and the vowels it parted merged; no r and no w (set apart from Reahi's r, w, wh and Leowai's seven letters). **The imperial loan layer deepest on Talan** (the crown heartland): the state, the ranks, the ship's kit and the trade in Golden-Era Talanese. **The tongue: Folau** (Tongan *folau*, "fleet of vessels, voyage"; kept unchanged).
+- **Personal-name structure (three candidates).** Rejected before offering: born-on ship + current ship (Valreka's birth-whale + chosen whale, with its Standing Roll). **R1 ★ rating + given + ship:** every adult who has sailed carries a rating before the given name as part of the name (Talanese: *Hand*, *Able*, *Mate* … *Captain*, *Commodore*, *Admiral*); a child carries given + ship; the first voyage makes one *Hand*; landfolk who sailed once stay *Hand* for life; one who never sailed carries no rating; changing muster changes the ship. Nearest: Valreka's *Mez-*/*-ghar* life-marks (stage, not service). R2 home name + sea name + ship (a Folau given name at home, a Talanese one in the ports; nearest Vernua's two given names). R3 given + ship + berth (the port the house berths at, or the home town; nearest Kaosadaemi's birthplace).
+- **The capital** (Golden-Era Talanese, the crown land's sea-gate). **★ Saegate** (*sea gate*, ea → ae); Rednes (*red ness*, the red headland); Muifon (Tongan *muifonua* "cape", clipped: a pre-imperial name the Empire left standing, a story choice). Note: Balatur Erui's epithet *the Gate of Two Waters* is nearby (an epithet, not a name).
+- **The sealed city** (the imperial capital; fills the Golden Empire page's "Name TBD"; Golden-Era Talanese). **★ Throndelve** (*throne* + *delve*, the throne-city of the mines; throne → thron); Gouldhall (*gold hall*, drifted); Hyseat (*high seat*, i → y). In the Dominion's mouth: *the sealed city*.
+- **The landing town** (named at the return; Folau): **Tuta** (Tongan *tuʻuta* "to land, go ashore"; ʻ dropped, *uu* → *u*).
+- **The overgrowth** (named by the returners; Folau): **the Vaota** (Tongan *vaotā* "forest"; macron dropped).
+- **The red lakes** (Folau): **Anokula** (Tongan *ano* "lake" + *kulokula* "red", the reduplication worn to *kula*).
+- **A northern port** (sketch 6): **Ontzola** (Three Pines, about 400 mi up the Hafra coast; existing canon). **Chosen (GM, 2026-10-24).** The sketch stays on the Dominion coast; Ontzola is the other crew's quarter, where the carriers' isiler hulls are built and refitted, which is why a house has berthed there four generations. Gesalkai (the nearest port, about 110 mi north across the Midarra's mouth) was offered first and dropped.
+- **The ship's name** (sketch 4; an exile ship, Dark-Era, Folau): **the Mahu** (Tongan *mahu* "abundance"), for the figurehead with her arms full of fish.
+- **The flagship:** the GM's *the Emperor's Embrace* (an imperial name, Golden-Era Talanese, given by the Empire: no claim). On the roll in full; in speech *the Embrace*, and her houses go by *Embrace*: the Emperor wore off the name the way the marks wore off the ship.
+- **Offices:** the head **the Admiral**; the board **the Admiralty**; captains, commodores, port-officers plain Talanese.
+- **Demonym: the Reds (GM, 2026-10-24).** Common-tongue Talanese, from the country's name: the Red Dominion is red for the iron earth of the mine country (Phase 4). *A Red*, *the Reds*; *Dominion folk* stays in formal use; among themselves the question is still "which ship?". *Dominian* not coined (confusion with the Vernua Dominion).
+- **The red, woven through (proposed 2026-10-24, not approved):** the GM wants everything a little red for its iron. (1) **Pit-red**, a paint ground from the red lakes' spoil (iron oxide; real-world precedent Falu red, from the Falun mine's waste, the preservative on Swedish wooden houses): the home-built hull roofs take it, the isiler roofs need nothing (isiler keeps no rot and takes tar to the heart), so the beach reads **black and red** (amends Phase 6's "black isiler and brown home-built"); the south paints its barns and doors with it. (2) **The red ground:** the frontier's dust, the red rivers (Phase 7's smell), the red lakes, the stain on hands and hems inland. (3) **The yard:** rust on everything iron at the point. Kept out: the sea, the bread, the people's looks.
+- **Named figure:** the present head, **Admiral Vailea Fetu** (invented given name in Folau sound; her house on the *Fetu*, Tongan *fetuʻu* "star", ʻ dropped and *uu* → *u*); she flies her flag in the *Embrace*.
+- **Collisions:** all candidates searched across lore, docs and published: none found. *Muster* has no proper-name use in lore.
+
+**The GM's picks (2026-10-24):**
+- **Structure: rating + given + sea name + ship** (GM: R1 with R2's sea name). **Everyone has a rating**, because everyone is on the navy's roll; the base rating means no voyage yet. Ladder (Talanese): **Land** (entered on the roll at birth; real-world precedent: the Royal Navy's *landsman*, the rating for one with no sea time) → **Hand** (the first voyage; Land to Hand, one letter) → Able → Mate → Captain → Commodore → Admiral. The given name is Folau, used at home; the sea name is Talanese, used aboard and in the ports; the ship comes last and changes with the muster.
+- **Capital: Saegate** (*sea gate*, ea → ae; the GM accepted the drifted spelling, which also avoids the real-world brand).
+- **Sealed city: Hyseat** (*high seat*, *high* → *hy*).
+- **The rest by recommendation:** Tuta, the Vaota, Anokula, Ontzola, the Mahu, the Embrace, the Admiral and the Admiralty, the Reds, the red weave (pit-red; black and red roofs, amending Phase 6's brown). Rednes and Muifon, Throndelve and Gouldhall, R2 and R3 as separate structures: dropped.
+
+**Settled with the merge (GM, 2026-10-24):**
+- **The sea name is given by the crew when it comes** (GM: never forced on the first voyage): a crew's name for the person (a deed, a habit, a look), given when something earns it, on the first run or years later, and kept for life whatever rank follows. Many Hands carry none for years; some never do. *Overlap found:* Ardo Beroa's islanders carry a self-chosen Talanese **sea-name** taken from the water (Firstsnow, Longnet, Greywater; `ehizahar/ardo-beroa.md`). Set apart by who gives it (the crew, never the bearer) and what it names (the person, never the water), and by the rating before and the ship after. Samples: Tally, Quick, Sixloaves, Ballast, Knotty, Lamplight, Shortrope, Dry.
+- **A Land rarely has a sea name:** the usual way is stowing away, since the crew that finds a stowaway often names them, and they come home still Land; a Land with a sea name is taken to have stowed away.
+- **The Admiral: Admiral Vailea Ballast Fetu.** Sick below for the whole of her first run; the crew's name stuck through every rank.
+- **Sample names:** *Land Fanu Mahu* (a child, or one who never sailed); *Hand Lomai Mahu* (a farmer who sailed once and was never named); *Able Tasi Sixloaves Mahu*; *Captain Halo Quick Fetu*.
+
+**Phase 8 checklist (closed, GM 2026-10-24):** the register (Tongan base inside the Polynesian family; p t k m n ng f s h v l; the imperial loan layer); the tongue (Folau); strata per name (Golden-Era Talanese for Saegate, Hyseat, the Embrace, ratings and offices; Folau for Tuta, the Vaota, Anokula, the Mahu, the Fetu; common-tongue Talanese for the Reds); candidates with etymologies, three for the capital, the sealed city and the structure; the Tongan words checked (Churchward via Pollex, IDS); the collision check (names and structures; Ardo Beroa's sea-name overlap resolved by who gives it and what it names); the named figure (Admiral Vailea Ballast Fetu). Ontzola for sketch 6's port; the red weave approved.
+
 ## Rejected options (summary)
 
 - **S3, the scar's keepers** (Phase 2): dropped as a seed; the sealed city stays a place and its keeping an aside.
@@ -232,7 +267,7 @@ Approved 2026-10-23 (land at Phase 11 unless noted):
 4. **`docs/map-todo.md`:** labels for the capital and the landing town; a ruin icon and label for the sealed city; possibly small town icons on the west coast; the overgrowth (forest) and the red lakes (Phase 4).
 
 From Phase 6 (approved with the phase, 2026-10-23; listed after the cloud review):
-5. **`lore/geography/myrkono.md`** (*Three Pines*): Dominion carriers in Ontzola's order book; the Dominion pays for isiler partly in iron (fastenings, anchors, fittings).
+5. **`lore/geography/myrkono.md`** (*Three Pines*): Dominion carriers in Ontzola's order book; the Dominion pays for isiler partly in iron (fastenings, anchors, fittings). **Added at Phase 8 (GM, 2026-10-24):** a Dominion quarter at Ontzola, four generations old, the shore-berth of a carrier on the Ontzola run.
 6. **`lore/transport.md`:** the refit (an isiler hull with an imperial-pattern hold is a Dominion carrier); the handful of imperial ships still in commission, the flagship at the point; the point's yard (foundry, rune-shop, refit yard); the Dominion's guns; no rail (the scar country and the sealed city lie across any line; Haraour's open question stays open).
 7. **`lore/geography/lioaru/river-duchies.md`** (light): grain across the bay from Lemersa to the Dominion in lean years, in Dominion hulls.
 8. **`lore/timeline.md`** (with move 1): the emperor's fleet sailed from the point in 1321 and is still partly in commission.
