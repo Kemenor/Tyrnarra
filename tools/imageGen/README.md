@@ -548,9 +548,10 @@ does.
 **The container venv now runs `torch==2.9.1+rocm6.4`,
 `torchvision==0.24.1+rocm6.4`, `torchaudio==2.9.1+rocm6.4`**, installed from
 `https://download.pytorch.org/whl/rocm6.4`. Do not "upgrade torch" back onto a
-rocm7.x wheel without re-running a full single-image render as the test. The
-previous venv is kept at `/var/mnt/games1tb/comfyui/venv-rocm72-backup`
-(17 GB); swapping back is a rename.
+rocm7.x wheel without re-running a full single-image render as the test.
+After a month of clean renders the rocm7.2 backup venv was deleted
+(2026-10-27); to test a 7.x wheel again, copy `venv` first and install into
+the copy.
 
 Timing on 6.4: the **first pass after a server start** spends ~115 s warming
 kernels in sampling steps 1–2 (395 s total). Later passes on the same server
