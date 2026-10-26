@@ -166,7 +166,6 @@ page = '''<!DOCTYPE html>
     <ol>
       <li><b>The wardens.</b> How a crater town chooses its warden, and who holds Gulgir and Storngir.</li>
       <li><b>The island.</b> Its villages and coves, by name.</li>
-      <li><b>The carrying.</b> The Red Dominion's side of the trade.</li>
       <li><b>The Guild.</b> The post-house on the quay and its keeper.</li>
       <li><b>The pans.</b> How the drawing-out is done.</li>
     </ol>

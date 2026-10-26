@@ -1230,3 +1230,18 @@ a.accent-card {
   .log-letter .ld-text { flex-basis: 100%; order: 3; }
   .log-letter-body { padding: 2px 16px 14px; }
 }
+
+/* ─── Sketch cards: an in-world sketchbook published whole ──────
+   Each card is a <figure>: the drawing, then a caption with the
+   sketch's number, its title, and the author's note under it, as
+   written. Plain cards (no link, no toggle). Used by red-dominion.html. */
+.sketch-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 18px 0 8px; }
+.sketch-card { margin: 0; background: var(--card-bg); border-top: 2px solid var(--domain-accent, var(--gold)); border-radius: 0 0 4px 4px; overflow: hidden; display: flex; flex-direction: column; }
+.sketch-card img { display: block; width: 100%; height: auto; background: #e8e2d4; }
+.sketch-card figcaption { padding: 14px 18px 18px; line-height: 1.6; }
+.sketch-card .sk-num { display: block; font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--domain-accent, var(--gold)); }
+.sketch-card .sk-title { display: block; font-family: 'Cinzel', serif; font-size: 0.98rem; letter-spacing: 0.05em; color: var(--gold-bright); margin: 4px 0 8px; }
+.sketch-card p { margin: 0; font-style: italic; }
+@media (max-width: 600px) {
+  .sketch-cards { grid-template-columns: 1fr; gap: 16px; }
+}
