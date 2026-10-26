@@ -115,4 +115,4 @@ A Noman keeps the given name they arrived with. The family name burns: at a newc
 - **Tamrat Negade ye-Kolla** · grain-merchant of the Legea Empire · precise and a little shaken, measures what he sees against the Legedi at home; ends on what it did to him.
 - **Corran Blackjack** · rusher at the Cold Furnace · quick, greedy, cheerfully honest about both; talks price before anything.
 
-**Still open:** the local tongue (regional-tongue pass); the Orichalcum party by name, and what the victory cost them; the cinders by name beyond Kettleford and Ashby Bend; the present line captain; where the slag-born go at night; what the Order of Steam and the Red Dominion mean to do.
+**Still open:** the local tongue (regional-tongue pass); the Orichalcum party by name, and what the victory cost them; the cinders by name beyond Kettleford and Ashby Bend; the present line captain; where the slag-born go at night; what the Order of Steam means to do, and how far the Red Dominion's frontier means to come.

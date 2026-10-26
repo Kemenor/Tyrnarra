@@ -169,8 +169,11 @@ Pace as stories want them. Rolling work.
 
 ## § Regions: Sumendar & Zuzental
 
+### [The Red Dominion] Post-build texture
+**Decided.** Built 2026-10-26 (`lore/geography/sumendar/red-dominion.md`; the sketchbook `red-dominion-sketchbook.md`). **Open, story-paced:** the ship-towns by name beyond the Mahu's; the coasts and their commodores; the quarters by port beyond Ontzola; the imperial ships by name and number beyond the *Embrace*; how Hyseat was sealed, and how the seal is kept; the road trade with Haraour; the Midarra shore behind the range; Burdineyja's side of the exile.
+
 ### [Haraour Eliza] Post-build texture
-**Decided.** Built 2026-10-22 (`lore/geography/sumendar/haraour-eliza.md`). **Open, story-paced:** the inner mouth's name and its lodges; the inside's own places and the outer towns by name; the Eliza's interior (the winter gardens, the kitchen floors, the drying tower); the dishes of the Garden by name; the number of keepers; the halt on Eldara's line; whether a line runs on to the Red Dominion (settle at that build); ⚿ where Barzain fell.
+**Decided.** Built 2026-10-22 (`lore/geography/sumendar/haraour-eliza.md`). **Open, story-paced:** the inner mouth's name and its lodges; the inside's own places and the outer towns by name; the Eliza's interior (the winter gardens, the kitchen floors, the drying tower); the dishes of the Garden by name; the number of keepers; the halt on Eldara's line; ⚿ where Barzain fell.
 
 ### [Dragon's Reach] City interior, named figures, mothership origin
 **Decided.** The civilisational shape is canon (see [dragons-reach.html](../published/setting/talan/domains/sumendar/dragons-reach.html) and [lore/geography/sumendar.md](../lore/geography/sumendar.md), *Dragon's Reach*). Crash placed at ~mid-Gods'-Era (4000–4500 years ago); city is built from the largest surviving mothership section; civilisational strife centred on the lost immortality (lifespans 150-180 non-purist / 200 purist / 230 "purest"); paths of purity are individual not institutional, with the teacher-recursion as the keystone observation; age-weighted vote tilts purist; pragmatist resentment is centuries-old and unresolved; Order-of-Steam parallel-recovery friction and Dragonet older-claim schism both canon.
@@ -220,7 +223,7 @@ Pace as stories want them. Rolling work.
 
 ### [Auran] Post-build texture
 **Decided.** Built 2026-10-06: `lore/geography/lioaru/auran.md`.
-**Open.** How a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Red Dominion's side of the carrying; the Guild's post-house and its keeper.
+**Open.** How a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Guild's post-house and its keeper.
 **Where.** `lore/geography/lioaru/auran.md`.
 
 ### [Hareaveldi] Post-build texture

@@ -125,6 +125,6 @@ An Auran carries a given name, a bowl-name and a household name: **Hani Gipt Siy
 - **Chakar Dur Kohbrah** · warden of Silfgir · blunt and exact; answers the island's custom with the letter of its law.
 - **Vyrenna Tessek**: recurring voice; her block is in [`../../voices.md`](../../voices.md), and the column's voice block heads [`auran-column.md`](auran-column.md).
 
-**Still open:** how a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Red Dominion's side of the carrying; the Guild's post-house and its keeper; how the drawing-out works at the pans.
+**Still open:** how a crater town chooses its warden; the villages and coves by name; Gulgir's and Storngir's wardens; the Guild's post-house and its keeper; how the drawing-out works at the pans.
 
 *The column, published whole: [`auran-column.md`](auran-column.md).*

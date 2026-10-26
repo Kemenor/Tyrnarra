@@ -14,9 +14,10 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-24). The reworked proposal kept whole; R2 dropped.
 - **Phase 8 (naming): closed** (GM, 2026-10-24). Folau (Tongan base); rating + given + sea name + ship; Saegate; Hyseat; the Reds; Admiral Vailea Ballast Fetu.
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-25). T1 the call to the quarters; ◈ the weapon and B1 sealed with him inside; ⚿ S1 the fleet killed the Emperor, ⚿ S3 the weapon (K1, W2); no shard; weights as proposed.
-- **Phase 10 (draft): in progress** (2026-10-25); the draft at [`red-dominion-draft.md`](red-dominion-draft.md).
-- **Resume here:** Phase 10 (draft). Phase 8 fills the placeholders: [the capital] Saegate, [the ship's name] the Mahu, [a northern port] Ontzola, [the landing town] Tuta. The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) are committed for the publish; the Midjourney alternatives stay local only, outside the repo in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj` (moved there for the cloud hand-off).
-- **Draft:** none yet.
+- **Phase 10 (draft): closed** (GM, 2026-10-26, "commit and publish").
+- **Phase 11 (commit lore): done** (2026-10-26). Full canon `lore/geography/sumendar/red-dominion.md`, the sketchbook `red-dominion-sketchbook.md`.
+- **Phase 12 (publish): in progress** (2026-10-26). The chosen sketches (`tools/imageGen/scenes/red-dominion/s*.webp`, `s5-bell-clean.webp` is sketch 5) become the sketch cards; the Midjourney alternatives stay local only in `/var/home/thomas/Documents/Tyrnarra-local/red-dominion/mj`.
+- **Draft:** [`red-dominion-draft.md`](red-dominion-draft.md), first round 2026-10-25; second round 2026-10-26 (GM notes: the Leviathan off the exports, the shard line out of the Dominion secret, parties of adventurers in place of fours, sections reordered so nothing is used before it is explained); approved 2026-10-26.
 
 ## Phase 0: approved readback
 
@@ -81,7 +82,7 @@
 >
 > **6. Two crews.** Ours, and a crew at the next berth whose people have kept a quarter in [a northern port] for four generations. They sing the same song in two versions, and stop at the third line to argue it. Both crews are the Dominion's.
 >
-> **7. The mountains.** At evening, far inland to the north-east, a darker line under the cloud. We land at [the landing town] tomorrow and I go inland. The guides there take parties up in fours.
+> **7. The mountains.** At evening, far inland to the north-east, a darker line under the cloud. We land at [the landing town] tomorrow and I go inland. The guides there take adventurers up.
 >
 > *From the sketchbook of Roshanak Abri Kuzegar, scholar of Thekkavar, on the Hafra coast of the Red Dominion, 2532 MR*
 

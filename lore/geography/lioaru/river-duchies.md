@@ -31,7 +31,7 @@
 
 In the River Duchies everything that grows and everything that rots does it quickly. A field gives three harvests between floods. A fig that sets in one week is ripe in the next and gone over in the week after. Bread left out overnight is furred by morning, and the dead, laid in the black earth, are part of the next year's field within a season. People and animals live at the ordinary pace; the quickening is for the crops, the fruit, the ferments and the rot. The Ghoran, being of the green, feel it: the few who live in the valley flower out of season and grow restless, and most move on.
 
-The quickening ends at the valley's edge. Grain carried up to Galdua's rocks or onto Valreka's whales keeps as well as anyone's, and the slow isles off the coast keep everything.
+The quickening ends at the valley's edge. Grain carried up to Galdua's rocks or onto Valreka's whales keeps as well as anyone's, and the slow isles off the coast keep everything. So does the grain that goes out from Lemersa across the bay in Red Dominion hulls, which the Dominion buys in trade and in its lean years.
 
 **The turning.** At dawn the stalls are heaped with fruit that ripened in the night. By noon it is soft, and the vinegar-makers', the date-wine brewers' and the fish-sauce yards' carts go round the market buying it by the basket, at a price the morning's seller had counted on. By evening it is in the vats. Decay is the side of Tani most of Lioaru only resists; here it is revered, and it is also the trade: date wine reckoned in floods, river vinegar, fish sauce, a cheese in every house, and black earth from the compost-yards at the edge of every village. What the valley cannot eat today it turns, and what it cannot turn it sells to someone leaving.
 

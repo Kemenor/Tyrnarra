@@ -291,6 +291,7 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
 - **Burdineyja**: Basque *burdin* (iron/metal) + Icelandic *eyja* (islands) = Iron Islands
 - **Haraour Eliza**: Court Tongue (Basque), the Gods' Era: *haran* "valley" + *ur* "water" → *haranur*, the *n* lost before the vowel → *haraur* → **Haraour**; with *eliza* "church": "the church of the valley water". The gods' name for the house at the valley's heart. Full canon `geography/sumendar/haraour-eliza.md`; register below, *Haraour Eliza (Sumendar)*.
 - **Tahu Tangata**: the region's own tongue, Reahi (the Sumendar family's core; Māori base, plain letters). *Tangata* "person, people" + *tahu*, read three ways (Te Aka Māori Dictionary): v. "to set on fire, light, burn" (also "to cook"); n. "spouse, partner; near relative"; and *tāhū* "ridge-pole; direct line of ancestry through the senior line", its long vowel since worn away. So the burning people, the kin people, or the people of the senior line; the namers' meaning is lost. Named in the late Lost Era (regional stratum).
+- **The Red Dominion**: Golden-Era Talanese. *Dominion*, the Empire's word for its crown heartland, the land the throne held directly; *red* for the iron earth of the mine country. Kept by the returners at 2135 MR. (The Vernua Dominion carries the same imperial word for what the Empire held in Nashavel.) Full canon `geography/sumendar/red-dominion.md`; register below, *The Red Dominion (Sumendar)*.
 - **No Man's Land**: plain Talanese, meant literally: ground that belongs to no one. The ungoverned country around Eldara, Komo's city-state; full canon `geography/sumendar/no-mans-land.md`; register below, *Faction proper nouns → No Man's Land: the Noman register*.
 - **Eldara** (the Forge City): old/ancient stratum. Icelandic *eldr / eldur* (fire) → *eldar* → **Eldara**, "the fire." Reaches for *Icelandic* fire while the domain Sumendar names *Basque* fire (*sumendi*), so city and domain say the same word in two old tongues. Komo's ungoverned god-city, accreted (never founded) on the one ground where ore, lava, and the god's presence all met; making is worship, the forge is the only authority.
   - **The Throat**: descriptive English. The collapse-prone cave-passage punched north through the mountain to the Midarra; Eldara's pre-rail sea lifeline.
@@ -753,6 +754,25 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The Garden; the keepers of the record; the record of tryings; the trying; clearings; certificates; the cook's bite; uncleared; the edge dish; the first bite; the first walk; riding up; the inner mouth; working years**: plain Talanese.
 - **⚿ Barzain**: Court Tongue, from Basque *baratzain*, an attested variant of standard *baratzezain* "gardener", worn → **Barzain**, "the gardener". The god of the Eliza (GM-tier; see `geography/sumendar/haraour-eliza.md`, *⚿ GM Secret: the gardener*).
 
+### The Red Dominion (Sumendar)
+
+- **The Reds** (sing. **a Red**): common-tongue Talanese, from the country's name; the demonym across the Hafra. **Dominion folk** in formal use. (*Dominian* avoided: too near the Vernua Dominion.)
+- **Folau**: Tongan *folau* "fleet of vessels; voyage; to voyage" (Churchward, *Tongan Dictionary*), unchanged. The tongue of the Red Dominion, the Sumendar family's one seafaring branch.
+- **The Folau register: the personal-name convention.** Word-base Tongan (the Sumendar family, the seafaring branch), plain letters: *p t k m n ng f s h v l* and the vowels; the glottal stop dropped and the vowels it parted merged; macrons dropped; no *r* and no *w*, against Reahi's *r w wh* and Leowai's seven letters. *[rating] [given] [sea name] [ship]*. The **rating** is Talanese, the fleet's ladder: *Land* (from birth), *Hand* (after the first voyage), *Able*, *Mate*, *Captain*, *Commodore*, *Admiral*; everyone is rated, because everyone is on a roll. The **given** name is Folau, used at home. The **sea name** is Talanese, given by a crew when something earns it (a deed, a habit, a look), kept for life, used aboard and in the ports; many carry none for years, a Land rarely has one (a stowaway's crew often names them). The **ship** is the muster's, last, and changes when a house is entered on another roll. Set apart from Ardo Beroa's sea-name (`geography/ehizahar/ardo-beroa.md`), which the bearer chooses and takes from the water: a Red's is given by others and names the person. Given (invented in Folau sound): *Vailea, Fanu, Lomai, Tasi, Halo, Pelu, Lavi, Mosi*. Sea names: *Tally, Quick, Sixloaves, Ballast, Knotty, Lamplight, Shortrope, Dry*. Ships below.
+- **Saegate**: Golden-Era Talanese, *sea gate*, *ea* → *ae*. The capital on the southern point, the Empire's sea-gate; it stood through the Dark Era.
+- **Hyseat**: Golden-Era Talanese, *high seat*, *high* → *hy*. The Golden Empire's capital in the Red Dominion's north-eastern mountains, over the breach of 1321; sealed in the 2140s. *The sealed city* in the Dominion's mouth.
+- **Tuta**: Folau, Tongan *tuʻuta* "to land, go ashore", the ʻ dropped and *uu* → *u*. The landing town for the road inland, named at the return.
+- **The Vaota**: Folau, Tongan *vaotā* "forest, bush", the macron dropped. The forest grown over the old heartland's fields, named by the returners.
+- **Anokula**: Folau, Tongan *ano* "lake" + *kulokula* "red", the doubled word worn to *kula*. The red lakes: the Empire's flooded open pits.
+- **The Mahu**: Folau, Tongan *mahu* "abundance, abundant". A ship of the exile, her figurehead a woman with her arms full of fish; her houses keep a ship-town on the west coast.
+- **The Fetu**: Folau, Tongan *fetuʻu* "star", the ʻ dropped and *uu* → *u*. The Admiral's house's ship.
+- **The Foki**: Folau, Tongan *foki* "to return". A carrier on the Ontzola run, whose quarter berths at Ontzola.
+- **The Tahi**: Folau, Tongan *tahi* "sea". The ship of Commodore Lavi Knotty Tahi.
+- **The Emperor's Embrace**: Golden-Era Talanese, the Empire's own name for its flagship, kept on the roll in full; *the Embrace* in speech, and her houses go by *Embrace*.
+- **The Admiral; the Admiralty; captain, commodore, port-officer; Land, Hand, Able, Mate**: Golden-Era Talanese, the fleet's words. *Land* after the old navies' *landsman*, the rating for one with no sea time.
+- **Pit-red**: plain Talanese. The paint ground from Anokula's spoil, an iron-oxide red (real-world kin: Falu red, from the Falun mine's waste).
+- **The muster, the roll, the muster call, aboard, struck, on the roll, the asking, I was asked, in action, interest, the quarters, the shore-berth, the hold that keeps, ship-town, the scar, the scar road, the first voyage, stowing away**: plain Talanese.
+
 ### Faction proper nouns
 
 **The Adventurers Guild:**
@@ -1133,7 +1153,7 @@ Full canon in `geography/zuzental.md`, *Thousand Kingdom → The holdings* onwar
 - **Council of the Forge**: Plain English. The Order of Steam's war-policy / industrial council.
 - **Anvil Throne / Steel Marches / Furnace-Law**: Plain English compound titles of the Eisenhart Matriarch.
 - **Ethersteel**: Plain English compound. The House's signature magic-warded plating.
-- **Eisenhart Leviathan-class / Ironwing line / runeblade bayonet**: Plain English. House Eisenhart's signature exports.
+- **Eisenhart Leviathan-class / Ironwing line / runeblade bayonet**: Plain English. House Eisenhart's signature builds; the Leviathan-class is kept for the Order.
 - **Siege of Nine Storms**: Plain English. The campaign in which the *Stahlglanz* broke a three-nation blockade.
 - **Total Mobilization**: Plain English. The Order of Steam's standing-army wartime escalation; not declared in over a century.
 

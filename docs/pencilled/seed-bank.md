@@ -12,6 +12,8 @@ The heart of the region is **an old palace**, not a church: a forgotten, dead ci
 
 ## The Red Dominion (Sumendar) · GM, 2026-10-02
 
+**Built (2026-10-26, `sub-region-workflow`):** `lore/geography/sumendar/red-dominion.md`.
+
 **A fleet that came ashore**: the old ships dragged up the beach and made into cities. How to build it is for the workflow.
 
 *Touches:* the Sumendar family's one seafaring branch; the west coast with the volcano cluster; Burdineyja's Hafra islands offshore.
