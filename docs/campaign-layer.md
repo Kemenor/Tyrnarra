@@ -91,7 +91,7 @@ published/player-campaigns/     ← served at /player-campaigns/ (the published/
     theme.css                 ← the per-campaign skin (overrides only the --c-* tokens)
 ```
 
-The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/imageGen/` (NPC art generation on the local GPU via ComfyUI/FLUX.2 — `npc_art.py`, Claude-operated through the `npc-art` skill), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro, plus Forge upload and token baking), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), `tools/token-frames/` (the shared Foundry token-frame library), and `tools/keys/` (gitignored API keys for Forge, copied from Proton Drive). Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
+The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/imageGen/` (NPC art generation on the local GPU via ComfyUI/FLUX.2 — `npc_art.py`, Claude-operated through the `npc-art` skill), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro, plus token baking and the art upload to the self-hosted Foundry server), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), `tools/token-frames/` (the shared Foundry token-frame library), and `tools/keys/` (gitignored API keys, copied from Proton Drive). Machine addresses (the Foundry server, the ComfyUI desktop) live outside the repo in `~/.config/tyrnarra/`; `tools/README.md` covers setting up a machine and `tools/check_setup.py` verifies it. Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
 
 ## Chrome conventions
 
@@ -126,8 +126,8 @@ distinct monster (the GM places *N* tokens), renames imported NPCs or makes a
 blank `npc` for narrative-only ones, and builds a loot-actor "chest" per haul
 with items + coins. It resolves everything **by name** from the world's own
 compendiums, so it redistributes no Paizo data and always matches the installed
-system version; it needs no module, relay, or API key and works on Forge-hosted
-worlds. It is the **Phase 7** step of the `quest-workflow` skill and a standalone
+system version; it needs no module, relay, or API key and runs on the
+self-hosted Foundry server. It is the **Phase 7** step of the `quest-workflow` skill and a standalone
 tool you can run against any quest. Verified live on Foundry VTT 14.363 / pf2e
 8.2.0. Full reference: [`tools/foundryExport/README.md`](../tools/foundryExport/README.md).
 

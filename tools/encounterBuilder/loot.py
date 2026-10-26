@@ -71,7 +71,8 @@ def gp(price_cp):
 
 def search(con, item_type=None, traits=None, not_traits=None, level=None,
            price_min=None, price_max=None, rarity=None, category=None,
-           group=None, consumable=None, source=None, text=None, limit=200):
+           group=None, consumable=None, source=None, no_modules=False, text=None,
+           limit=200):
     where, where_params = ["1=1"], []
     joins, join_params = [], []
 
@@ -88,6 +89,8 @@ def search(con, item_type=None, traits=None, not_traits=None, level=None,
         where.append("i.consumable = ?"); where_params.append(1 if consumable else 0)
     if source:
         where.append("i.source LIKE ?"); where_params.append(f"%{source}%")
+    if no_modules:
+        where.append("i.is_module = 0")
     if level:
         lo, hi = level
         where.append("i.level BETWEEN ? AND ?"); where_params += [lo, hi]
@@ -231,6 +234,7 @@ def main():
     s.add_argument("--permanent", action="store_true", help="Only kept/worn items.")
     s.add_argument("--consumable", action="store_true", help="Only spent items (consumable/ammo/treasure).")
     s.add_argument("--source", help="Match publication title (substring).")
+    s.add_argument("--no-modules", action="store_true", help="Exclude items from installed Foundry modules.")
     s.add_argument("--text", help="Fuzzy FTS5 over name/traits/flavor.")
     s.add_argument("--limit", type=int, default=50)
     s.add_argument("--json", action="store_true")
@@ -247,6 +251,7 @@ def main():
     b.add_argument("--not-trait", action="append", dest="not_traits")
     b.add_argument("--rarity")
     b.add_argument("--source")
+    b.add_argument("--no-modules", action="store_true", help="Exclude items from installed Foundry modules.")
     b.add_argument("--text", help="Theme: fuzzy FTS5 over name/traits/flavor.")
     b.add_argument("--seed", type=int)
     b.add_argument("--json", action="store_true")
@@ -259,7 +264,8 @@ def main():
         rows = search(con, item_type=a.item_type, traits=a.traits, not_traits=a.not_traits,
                       level=a.level, price_min=a.price_min, price_max=a.price_max,
                       rarity=a.rarity, category=a.category, group=a.group,
-                      consumable=consumable, source=a.source, text=a.text, limit=a.limit)
+                      consumable=consumable, source=a.source, no_modules=a.no_modules,
+                      text=a.text, limit=a.limit)
         if a.json:
             print(json.dumps(rows, indent=2)); return
         for r in rows:
@@ -272,7 +278,8 @@ def main():
 
     res = build(con, a.party_level, a.party_size, share=a.share, value=a.value,
                 perm_share=a.perm_share, seed=a.seed, traits=a.traits,
-                not_traits=a.not_traits, rarity=a.rarity, source=a.source, text=a.text)
+                not_traits=a.not_traits, rarity=a.rarity, source=a.source,
+                no_modules=a.no_modules, text=a.text)
     if a.json:
         print(json.dumps(res, indent=2)); return
     book = "by-the-book" if res["mode"] == "handout" else "target"

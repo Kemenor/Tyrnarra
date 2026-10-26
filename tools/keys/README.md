@@ -1,18 +1,23 @@
 # tools/keys — API keys (local only)
 
-The GM build tools authenticate to a paid service. Its key file lives **here**
-and is **gitignored** (`tools/**/*_key.txt`), so it never reaches GitHub. A
-fresh clone or new machine will not have it: copy it in from **Proton Drive**
-(or recreate from the dashboard below).
+Paid-service keys for the GM tools live **here** and are **gitignored**
+(everything in `tools/keys/` except this README and `.gitkeep`), so they never
+reach GitHub. A fresh clone or new machine will not have them: copy them in from
+**Proton Drive** (or recreate from the dashboard below).
 
 | File | Env var | Used by | Get it |
 |---|---|---|---|
-| `forge_key.txt` | `FORGE_KEY` | Forge asset upload (`tools/foundryExport/upload_forge.py`) | The Forge → Account → API Keys (**write-assets**) |
+| `falai.key` | `FAL_KEY` | fal.ai fallback renderer (`tools/imageGen/fal_art.py`) | fal.ai dashboard → Keys |
 
-(`fal_key.txt` was the fal.ai image-generation key; that tier was retired
-June 2026 in favour of local ComfyUI rendering (`tools/imageGen/`), which
-needs no key.)
+Primary renders are local (ComfyUI on the desktop, `tools/imageGen/`) and need
+no key. The old `forge_key.txt` (The Forge asset upload) is retired: Foundry is
+self-hosted now and art goes up with `tools/foundryExport/upload_foundry.py`
+over ssh.
 
-Each script checks its env var first, then this folder, then (legacy) its own
-directory. One key per file, the bare value, no quotes. The `.gitkeep` keeps this
-folder present on a fresh clone even with the keys absent.
+**Addresses are not keys and do not live here.** The Foundry server's ssh
+address and the ComfyUI desktop's URL go in `~/.config/tyrnarra/` on each
+machine (see [`../README.md`](../README.md)), so no host detail is ever in the repo.
+
+Each script checks its env var first, then this folder. One key per file, the
+bare value, no quotes. The `.gitkeep` keeps this folder present on a fresh clone
+even with the keys absent.

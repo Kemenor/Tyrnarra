@@ -6,8 +6,8 @@ from your installed compendiums, and creates loot-actor "chests" with items and
 coins.
 
 Why a macro (not a REST push): a macro runs inside your GM browser with the full
-`game` API, needs no module / relay / API key, works the same on Forge-hosted
-and self-hosted worlds, and ships *zero* Paizo stat data - every actor and item
+`game` API, needs no module / relay / API key, works on any Foundry server
+(ours is self-hosted), and ships *zero* Paizo stat data - every actor and item
 is resolved by name from the compendiums your world already has, so the numbers
 always match your installed system version.
 
@@ -38,7 +38,7 @@ The spec (JSON):
 Only `folder` is required. `monsters` / `npcs` / `chests` are each optional.
 `pack` on a monster/npc/item is an optional exact-pack hint: a bare repo folder
 name ("pathfinder-monster-core") is prefixed to "pf2e.<name>"; a dotted value
-("forge-vtt-shared-compendiums-tyrnara.actor-2-monsters-tyrnara") is used as-is.
+("battlezoo-bestiary-pf2e.pf2e-battlezoo-bestiary") is used as-is.
 Without a hint, the macro resolves by name against a remaster-first priority list
 and then every other compendium as fallback.
 

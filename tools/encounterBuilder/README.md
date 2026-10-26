@@ -12,7 +12,7 @@ real data that you then tweak by hand.
 foundry pf2e repo ─┤     (creatures)
                   └─> build_items.py ─> items.db    ─> loot.py (search + treasure build)
 homebrew/*.json ───────^ (creatures only)         all SQLite + FTS5
-Pi Foundry (rsync) ─> export_modules.mjs ─^ (creatures only)
+Foundry server (rsync) ─> export_modules.mjs ─> creatures + items (both DBs)
 ```
 
 - **bestiary.db / items.db** are static snapshots. Nothing queries the network at prep time.
@@ -149,21 +149,31 @@ reproduces; `--json` for structured output.
 
 ## Creatures from installed Foundry modules
 
-The Foundry server runs in Docker on the Raspberry Pi (`ssh pihole`, host paths
-`/mnt/foundry/app` and `/mnt/foundry/data`). Each `rebuild.py` run rsyncs from
-`FOUNDRY_REMOTE` (default `pihole:/mnt/foundry`) into `_sources/foundry/` only
-what the export needs: every module's `module.json`, the Actor pack folders
-those manifests name, and `classic-level` + its dependencies from the server's
-Foundry app (its prebuilds include linux-x64). About 24 MB; later runs are
-incremental. If the Pi is unreachable the last mirror is reused, then a local
-`~/foundry` install; `FOUNDRY_REMOTE=""` skips the sync.
+The Foundry server is self-hosted on the home network (Docker on a Raspberry Pi).
+Its address stays out of this public repo: `~/.config/tyrnarra/foundry-remote`
+(`<ssh-host>:/<foundry-root>`, the root holding `app/` and `data/Data/`), or
+`TYRNARRA_FOUNDRY`; see [`../README.md`](../README.md). Each `rebuild.py` run
+rsyncs into `_sources/foundry/` only what the export needs: every module's
+`module.json`, the Actor and Item pack folders those manifests name, and
+`classic-level` + its dependencies from the server's Foundry app (its prebuilds
+include linux-x64). About 30 MB; later runs are incremental. If the server is
+unreachable the last mirror is reused, then a local `~/foundry` install;
+`TYRNARRA_FOUNDRY=""` skips the sync.
 
-`export_modules.mjs` (needs `node`) then reads each Actor pack (LevelDB) with
-that `classic-level`, re-inlines each actor's embedded items, and writes plain
-actor JSON to `_sources/modules/<module-id>.<pack>/`. Packs are copied to a temp
+`export_modules.mjs` (needs `node`) then reads each Actor and Item pack
+(LevelDB) with that `classic-level`, re-inlines each actor's embedded items, and
+writes plain JSON to `_sources/modules/<module-id>.<pack>/` (creatures) and
+`_sources/module-items/<module-id>.<pack>/` (items). Starfinder mirror packs
+(`sf-*`, `sf2e-*`) are skipped. Packs are copied to a temp
 dir before reading, so a live server's LOCK never matters. `_sources/` is
-gitignored, so paid module content stays local. Modules that only ship Items
-(the Battlezoo ancestry/dragon books, pf2e-relics) contribute no creatures.
+gitignored, so paid module content stays local.
+
+**Module loot.** `build_items.py --modules` takes only *priced* physical items
+(weapon, armor, shield, equipment, consumable, ammo, treasure, backpack, kit):
+modules also ship unpriced pseudo-items (ancestry scales, animal-companion
+attacks, automation shims, relic gifts) that are not treasure. Module items
+carry `is_module=1`, are never deduped away, and drop out of `loot.py
+search`/`build` with `--no-modules`; `--source Battlezoo` narrows to them.
 
 - Module rows carry `is_module=1`, are never deduped away, count as `--core`,
   and drop out with `--no-modules`. `--source` takes the folder name, e.g.
@@ -172,8 +182,8 @@ gitignored, so paid module content stays local. Modules that only ship Items
 - Traitless class-NPC actors (Jam & Jax) are tagged `humanoid`, their animal
   companions `animal` + `minion`, and the pack label ("Clerics") goes in the
   blurb, so `--text "cleric*"` finds them. `* Template` actors are skipped.
-- Install a new creature module on the Pi, rerun `python rebuild.py`, and it is
-  picked up automatically.
+- Install a new module on the server, rerun `python rebuild.py`, and its
+  creatures and loot are picked up automatically.
 
 ## Adding Tyrnarra / Azkataria homebrew
 

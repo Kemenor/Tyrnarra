@@ -24,13 +24,19 @@ Run the Foundry commands here (`tools/foundryExport/`). **Image generation lives
 **Dependencies** (one-time): `pip install requests pillow numpy` here.
 (encounters/loot also need the encounterBuilder DBs: `python ../encounterBuilder/rebuild.py`.)
 
-**API key.** The key file lives in **[`../keys/`](../keys/README.md)** and is **gitignored** (`tools/**/*_key.txt`), so it is **not in the repo — a fresh clone copies it from Proton Drive.** The script reads its env var first, else `../keys/<file>`:
+**The Foundry server.** Foundry is self-hosted on the home network (Docker on a
+Raspberry Pi). No key is needed: `upload_foundry.py` copies art with rsync over
+ssh. Its address stays **out of this public repo**, in
+`~/.config/tyrnarra/foundry-remote` on each machine (`<ssh-host>:/<foundry-root>`,
+the root holding `data/Data/`), or `TYRNARRA_FOUNDRY`. Set a machine up with
+[`../README.md`](../README.md); `python3 ../check_setup.py` verifies it.
 
-| Key | File / env | For | Get it |
-|---|---|---|---|
-| The Forge | `../keys/forge_key.txt` / `FORGE_KEY` | `upload_forge.py` (asset upload) | The Forge → Account → API Keys (**write-assets**) |
+**Campaigns → worlds.** [`campaigns.json`](campaigns.json) maps each repo campaign
+(the folder under `published/gm-notes/`) to its Foundry world id (the folder
+under `Data/worlds/`); `null` means the campaign has no world yet. Add a line
+when a campaign gets a world.
 
-**Confirmed working:** Foundry VTT **14.363** / pf2e **8.2.0**; local renders are free (FLUX.2 dev on the machine's own GPU). Forge assets serve at `https://assets.forge-vtt.com/<your-id>/<target-path>/<file>`.
+**Confirmed working:** Foundry VTT **14.368** / pf2e on the self-hosted server; local renders are free (FLUX.2 dev on the desktop's GPU). Foundry serves its `Data/` folder at the site root, so uploaded art is addressed by the relative path `worlds/<world>/assets/<sub>/<file>`.
 
 ## The full pipeline, end to end
 
@@ -41,14 +47,14 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 3. **Import macro** — `foundry_macro.py build --spec …` → paste-run in Foundry: foldered actors + loot, tokens placed on the open scene.
 4. **Portraits** — invoke the **`npc-art` skill**: Claude distills each NPC's block into a spec and renders locally (`../imageGen/npc_art.py`, variations → set → upscale, user picks in chat) → `<campaign>/assets/portraits/`.
 5. **(optional, user-directed) Faction frames** — tokens are per-faction and most NPCs get none. When a new frame is wanted: extend the shared `tools/token-frames/faction-frames.json`; render the magenta-field ring with `npc_art.py frame`; `bake_token.py prep` (hue chroma-key) → `*.cut.png`; map actors→frames in `<quest>.token-map.json`; `bake_token.py batch` → `<campaign>/assets/tokens/<slug>.png`.
-7. **Upload** — `upload_forge.py --dir <campaign>/assets/portraits` (or `.../tokens`) `--target <campaign>/<quest>` → asset URLs.
-8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "<asset-url>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
+7. **Upload** — `upload_foundry.py --dir <art dir> --campaign <campaign> [--sub tokens/npc]` → copies into `worlds/<world>/assets/<sub>/` on the server and prints the `--base` to use.
+8. **Assign** — `foundry_macro.py assign-images --folder "<quest folder>" --base "worlds/<world>/assets/<sub>/" [--token-only --no-ring] --map "Name=file" …` → paste-run; sets portraits / framed tokens and re-skins placed tokens.
 
-The frame library is **shared, world-wide**: prompts + art live in `tools/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`published/gm-notes/<campaign>/<quest>.token-map.json`, beside the quest HTML) and the per-quest **portrait/token art** (`published/gm-notes/<campaign>/assets/portraits/` + `assets/tokens/`, beside `assets/maps/`) stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only the **key files** and scratch (`forge_urls.json`, `_variant-*` test-bakes, `_reup/`) are gitignored.
+The frame library is **shared, world-wide**: prompts + art live in `tools/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`published/gm-notes/<campaign>/<quest>.token-map.json`, beside the quest HTML) and the per-quest **portrait/token art** (`published/gm-notes/<campaign>/assets/portraits/` + `assets/tokens/`, beside `assets/maps/`) stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only scratch (`foundry_urls.json`, `_variant-*` test-bakes, `_reup/`) is gitignored.
 
 ## Why a macro, not a REST push
 
-A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works identically on Forge-hosted and self-hosted worlds. It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
+A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works on any Foundry server (ours is self-hosted). It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
 
 > Verified live against **Foundry VTT 14.363 / pf2e 8.2.0**: the full
 > create → verify → delete cycle (`Folder.create`, `importFromCompendium` with
@@ -122,7 +128,7 @@ still builds the folder; an unmatched area or actor is reported, never guessed.
 Names are matched against the world's compendiums, **remaster-first**, mirroring
 `encounter.py`'s dedup preference:
 
-- **Actors:** `pf2e.pathfinder-monster-core`, `-monster-core-2`, `pathfinder-npc-core`, `npc-gallery`, `pathfinder-bestiary`, `-2`, `-3`, then **every other** Actor compendium in the world (your homebrew / Forge-shared packs included) as fallback.
+- **Actors:** `pf2e.pathfinder-monster-core`, `-monster-core-2`, `pathfinder-npc-core`, `npc-gallery`, `pathfinder-bestiary`, `-2`, `-3`, then **every other** Actor compendium in the world (your homebrew and installed modules such as Battlezoo included) as fallback.
 - **Items:** `pf2e.equipment-srd` first (where `loot.py`'s item DB comes from), then every other Item compendium.
 
 Use an exact `pack` hint when a name is ambiguous across packs, or to force a
@@ -145,11 +151,13 @@ The four steps:
 2. **Generate.** The **`npc-art` skill** renders locally (`../imageGen/npc_art.py`,
    ComfyUI/FLUX.2 on this machine, no key): Claude authors the spec from the NPC's
    block and renders square portraits the user approves in chat.
-3. **Upload.** On The Forge, `upload_forge.py` pushes the folder into your Assets
-   Library via the Forge API (needs a Forge API key with write-assets, in a
-   gitignored `forge_key.txt`); it prints + saves a `{filename: asset URL}` map:
-   `python upload_forge.py --dir <dir> --target furrious-five/below-the-quiet-docks --out forge_urls.json`
-   (Self-hosted, or no key: drag the `<dir>` into a Foundry file-picker instead.)
+3. **Upload.** `upload_foundry.py` rsyncs the folder into the campaign's world
+   on the self-hosted server (`Data/worlds/<world>/assets/<sub>/`, default
+   `tokens/npc`, the worlds' existing convention). It never deletes what is
+   already there, prints the `--base` for step 4, and can save a
+   `{filename: foundry path}` map:
+   `python upload_foundry.py --dir <dir> --campaign furrious-five --out foundry_urls.json`
+   (`--world <id>` targets a world directly; `--list-worlds` shows them.)
 4. **Assign.** Either bake `image` filenames into the spec so a fresh import
    sets them, or, for an already-imported quest, generate a one-off assignment
    macro that matches names → files on the existing actors (and re-skins their
@@ -181,7 +189,7 @@ per-faction / special-monster borders, bake a frame into the token image:
    `python bake_token.py bake --portrait <campaign>/assets/portraits/sable-rei.webp --frame ../token-frames/sable-rei.cut.png --out <campaign>/assets/tokens/sable-rei.png`
    or `bake_token.py batch --portraits <campaign>/assets/portraits --frames ../token-frames --out <campaign>/assets/tokens --map <quest>.token-map.json` (frames resolve from the shared library by stem).
    (Opaque frames with no alpha fall back to an annulus mask; `--inner` tunes that band.)
-4. **Use it.** Upload the `<campaign>/assets/tokens/` dir (upload_forge.py), then assign with the
+4. **Use it.** Upload the `<campaign>/assets/tokens/` dir (upload_foundry.py), then assign with the
    token-only / ring-off flags (keeps the un-framed portrait as the actor `img`,
    no doubled ring):
    `python foundry_macro.py assign-images --folder "<quest>" --base "<tokens-url>/" --token-only --no-ring --map "Sable Rei=sable-rei.png" --map ...`

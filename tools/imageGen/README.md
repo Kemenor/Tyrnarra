@@ -53,8 +53,11 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
 - Outputs land beside the spec (`out` field), PNG. Portrait shots are square
   (`square_hd`) so they drop straight into the token-bake step when a token is
   wanted.
-- The module auto-starts the local ComfyUI server and is machine-bound to
-  `/var/mnt/games1tb/comfyui` (see that folder's `QUICKSTART.md`). If a Flux
+- The renderer is the ComfyUI install on the desktop, `/var/mnt/games1tb/comfyui`
+  (see that folder's `QUICKSTART.md`); on the desktop the module auto-starts it.
+  From the laptop, start `run-comfyui-lan.sh` on the desktop and put
+  `http://<desktop-ip>:8188` in `~/.config/tyrnarra/comfyui-url` (or
+  `TYRNARRA_COMFY`); a remote server is used as-is, never started or killed. If a Flux
   load grinds for minutes, another model family poisoned RAM: restart the
   server (`npc_art.restart_server()`); it is encoded in the module.
 - **ComfyUI runs inside the `comfyui` podman/distrobox container**, so killing
@@ -444,8 +447,8 @@ user says which NPC gets one and which frame to use. The pieces:
    actually needed; the library is shared world-wide).
 2. `../foundryExport/bake_token.py prep` chroma-keys the ring, `bake`/`batch`
    composites portrait + frame into token PNGs.
-3. `../foundryExport/upload_forge.py` + `foundry_macro.py assign-images`
-   push and assign. Forge key in `../keys/forge_key.txt` (gitignored).
+3. `../foundryExport/upload_foundry.py` + `foundry_macro.py assign-images`
+   copy the art into the campaign's world on the Foundry server and assign it.
 
 Full runbook: [`../foundryExport/README.md`](../foundryExport/README.md).
 

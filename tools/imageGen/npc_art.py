@@ -49,13 +49,20 @@ tools/token-frames/, ready for `bake_token.py prep`. Token baking itself is
 user-directed and faction-level (one frame per faction, most NPCs need no
 token) - see tools/foundryExport/README.md.
 
-This module is machine-bound to the ComfyUI install at /var/mnt/games1tb/comfyui
-(see that repo's QUICKSTART.md). It auto-starts the server if it is down and
-restarts it if RAM is poisoned by another engine's cached weights.
+The renderer is the ComfyUI install on the GPU desktop (/var/mnt/games1tb/comfyui,
+see that repo's QUICKSTART.md). On the desktop it auto-starts the server if it is
+down and restarts it if RAM is poisoned by another engine's cached weights.
+
+From another machine on the home network (the laptop), point TYRNARRA_COMFY or
+the first line of ~/.config/tyrnarra/comfyui-url (outside the repo, same as
+wonderdraft/assetgen) at the desktop's LAN server, http://<desktop-ip>:8188
+(started there with run-comfyui-lan.sh). A remote server is used as-is: it is
+never started, killed or restarted from here.
 """
 import argparse
 import json
 import os
+import socket
 import subprocess
 import sys
 import time
@@ -64,7 +71,37 @@ import urllib.parse
 import urllib.request
 import uuid
 
-API = "http://127.0.0.1:8188"
+URL_FILE = os.path.expanduser("~/.config/tyrnarra/comfyui-url")
+
+
+def _comfy_url():
+    url = os.environ.get("TYRNARRA_COMFY", "").strip()
+    if not url:
+        try:
+            with open(URL_FILE, encoding="utf-8") as fh:
+                url = fh.readline().strip()
+        except OSError:
+            pass
+    return (url or "http://127.0.0.1:8188").rstrip("/")
+
+
+def is_local(url):
+    """True when the server is on this machine (loopback, or one of this box's
+    own LAN addresses: binding to it only succeeds if the address is ours)."""
+    host = urllib.parse.urlparse(url).hostname or ""
+    if host in ("127.0.0.1", "localhost", "::1"):
+        return True
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.bind((socket.gethostbyname(host), 0))
+        return True
+    except OSError:
+        return False
+
+
+API = _comfy_url()
+# Only a server on this machine can be launched / killed / restarted from here.
+LOCAL = is_local(API)
 LAUNCHER = "/var/mnt/games1tb/comfyui/run-comfyui-lan.sh"
 CONTAINER = "comfyui"   # podman/distrobox container the ComfyUI venv runs in
 SERVER_LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "comfy-server.log")
@@ -127,6 +164,9 @@ def ensure_server(timeout=180):
     """Ping; auto-start detached if down; wait until ready."""
     if server_up():
         return
+    if not LOCAL:
+        sys.exit(f"ComfyUI at {API} is not answering. Start it on the desktop "
+                 "(run-comfyui-lan.sh) and retry.")
     print("  (starting ComfyUI server ...)", flush=True)
     # --cache-none is REQUIRED on this machine, measured 2026-09-13.
     # ComfyUI's `objects` cache holds the loaded model instances from the
@@ -201,6 +241,9 @@ def restart_server(timeout=60):
     Verifies the API is really gone before restarting, so a half-killed server
     holding tens of GB cannot masquerade as a fresh one.
     """
+    if not LOCAL:
+        sys.exit(f"ComfyUI at {API} is remote: restart it on the desktop itself "
+                 "(run-comfyui-lan.sh), then re-run.")
     _kill_server_procs()
     t0 = time.time()
     while server_up() and time.time() - t0 < timeout:

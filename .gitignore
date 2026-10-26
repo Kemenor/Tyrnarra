@@ -33,7 +33,7 @@ tools/encounterBuilder/__pycache__/
 __pycache__/
 *.pyc
 
-# API keys / secrets for the GM tools (Forge, etc.) - LOCAL ONLY, never
+# API keys / secrets for the GM tools - LOCAL ONLY, never
 # committed. They live in tools/keys/ (copied from Proton Drive on a fresh clone);
 # this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
@@ -50,10 +50,14 @@ tools/keys/*
 # Generated image-gen output (the approved generated art) IS committed for
 # portability: portraits/, frames/, and the baked tokens/ travel with the repo
 # (generation is non-deterministic, so the prompts alone can't reproduce the
-# exact approved cast). Only genuine scratch is ignored: Forge URL maps, variant
+# exact approved cast). Only genuine scratch is ignored: upload path maps, variant
 # test-bakes, and re-upload temp dirs. (Keys and __pycache__ are ignored above.)
+# Machine addresses (Foundry server, ComfyUI) never enter the repo at all: they
+# live in ~/.config/tyrnarra/ (see tools/README.md).
 published/gm-notes/**/forge_urls.json
 tools/**/forge_urls.json
+published/gm-notes/**/foundry_urls.json
+tools/**/foundry_urls.json
 published/gm-notes/**/tokens/_variant-*
 published/gm-notes/**/tokens/_reup/
 

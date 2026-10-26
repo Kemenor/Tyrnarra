@@ -37,6 +37,7 @@ def main():
 
     if a.api:
         npc_art.API = a.api.rstrip("/")
+        npc_art.LOCAL = npc_art.is_local(npc_art.API)
         if not npc_art.server_up():
             sys.exit(f"No ComfyUI answering at {npc_art.API}; start it on that host first.")
     else:

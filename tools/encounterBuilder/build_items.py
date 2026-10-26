@@ -4,6 +4,10 @@ build_items.py - Flatten Foundry pf2e equipment JSON into a queryable SQLite DB.
 
 Sibling to build_db.py (creatures). Same model: static snapshot, drop + recreate
 on every rebuild, dedup official items by name preferring the remastered entry.
+Items from installed Foundry modules (--modules, exported by export_modules.mjs)
+carry is_module=1 and are never deduped away. Only priced module items are kept:
+modules also ship unpriced pseudo-items (ancestry scales, animal-companion
+attacks, automation shims, relic gifts) that are not treasure.
 Feeds loot.py (thematic item search + treasure-budget building).
 """
 import argparse
@@ -26,7 +30,7 @@ def price_cp(price):
             + v.get("sp", 0) * 10 + v.get("cp", 0))
 
 
-def load_item(path, pack):
+def load_item(path, pack, is_module=False):
     with open(path, encoding="utf-8") as fh:
         d = json.load(fh)
     if not isinstance(d, dict) or d.get("type") not in (
@@ -50,6 +54,7 @@ def load_item(path, pack):
         "pack": pack,
         "source": (s.get("publication") or {}).get("title") or pack,
         "remaster": 1 if (s.get("publication") or {}).get("remaster") else 0,
+        "is_module": 1 if is_module else 0,
         "flavor": clean_text((s.get("description") or {}).get("value", "")),
     }
 
@@ -62,7 +67,8 @@ CREATE TABLE items (
     id INTEGER PRIMARY KEY,
     slug TEXT, name TEXT, item_type TEXT, level INTEGER, price_cp INTEGER,
     rarity TEXT, category TEXT, grp TEXT, bulk TEXT, consumable INTEGER,
-    pack TEXT, source TEXT, remaster INTEGER, traits_text TEXT, flavor TEXT
+    pack TEXT, source TEXT, remaster INTEGER, is_module INTEGER,
+    traits_text TEXT, flavor TEXT
 );
 CREATE TABLE item_traits (item_id INTEGER, trait TEXT);
 CREATE INDEX idx_it_trait ON item_traits(trait);
@@ -79,36 +85,43 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--packs", nargs="+", required=True,
                     help="Directories of Foundry equipment JSON (globbed recursively).")
+    ap.add_argument("--modules", nargs="*", default=[],
+                    help="Directories of Foundry-module item JSON (never deduped away).")
     ap.add_argument("--out", default="items.db")
     args = ap.parse_args()
 
     loaded = []
-    for d in args.packs:
-        pack = os.path.basename(os.path.normpath(d))
-        for path in glob.glob(os.path.join(d, "**", "*.json"), recursive=True):
-            it = load_item(path, pack)
-            if it and it["name"]:
-                loaded.append(it)
+    for dirs, is_module in ((args.packs, False), (args.modules, True)):
+        for d in dirs:
+            pack = os.path.basename(os.path.normpath(d))
+            for path in glob.glob(os.path.join(d, "**", "*.json"), recursive=True):
+                it = load_item(path, pack, is_module)
+                if it and it["name"] and (it["price_cp"] or not is_module):
+                    loaded.append(it)
 
-    # Dedup by name, preferring the remastered entry.
-    chosen = {}
+    # Dedup official items by name, preferring the remastered entry; module
+    # items are always kept.
+    chosen, module_items = {}, []
     for it in loaded:
+        if it["is_module"]:
+            module_items.append(it)
+            continue
         k = it["name"].lower()
         cur = chosen.get(k)
         if cur is None or (it["remaster"] and not cur["remaster"]):
             chosen[k] = it
-    rows = list(chosen.values())
+    rows = list(chosen.values()) + module_items
 
     con = sqlite3.connect(args.out)
     con.executescript(SCHEMA)
     for it in rows:
         cur = con.execute(
             "INSERT INTO items(slug,name,item_type,level,price_cp,rarity,category,"
-            "grp,bulk,consumable,pack,source,remaster,traits_text,flavor) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "grp,bulk,consumable,pack,source,remaster,is_module,traits_text,flavor) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (it["slug"], it["name"], it["item_type"], it["level"], it["price_cp"],
              it["rarity"], it["category"], it["grp"], str(it["bulk"]),
-             it["consumable"], it["pack"], it["source"], it["remaster"],
+             it["consumable"], it["pack"], it["source"], it["remaster"], it["is_module"],
              " ".join(it["traits"]), it["flavor"]))
         iid = cur.lastrowid
         con.executemany("INSERT INTO item_traits VALUES (?,?)",
