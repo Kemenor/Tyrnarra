@@ -172,4 +172,4 @@ A Haraour name is a given name, the one who took your first bite, and a house: *
 - **Ikaika na Nohea Halewai** · Keeper of the Record · dry; answers a question by showing something.
 - **Mahina na Kekai Paaloa** · the Paapuka · plain and proprietary; calls the gate *my door*.
 
-**Still open:** the inner mouth's name; the outer towns and the inside's places by name; the halt on Eldara's line; the number of keepers; the dishes of the Garden by name.
+**Still open:** the inner mouth's name; the outer towns and the inside's places by name; the halt on Eldara's line; whether a line will run on to the Red Dominion; the number of keepers; the dishes of the Garden by name.
