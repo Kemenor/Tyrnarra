@@ -57,6 +57,7 @@
       ]}
     ]},
     { slug: 'short-notice', label: 'Available on Short Notice', href: '/gm-notes/short-notice/index.html', children: [] },
+    { slug: 'heavens-dragons', label: 'Heavens Dragons', href: '/gm-notes/heavens-dragons/index.html', children: [] },
     { slug: 'tools', label: 'Tools', href: null, group: true, children: [
       { slug: 'map-area-editor', label: 'Map Area Editor', href: '/gm-notes/tools/map-area-editor.html', children: [] }
     ]}

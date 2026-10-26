@@ -54,7 +54,8 @@
       { slug: 'ff-millhaven',       label: 'Millhaven',                      href: '/player-campaigns/furrious-five/millhaven.html',       children: [] },
       { slug: 'ff-low-span',        label: 'The Low Span',                   href: '/player-campaigns/furrious-five/low-span.html',        children: [] }
     ]},
-    { slug: 'sn-hub', label: 'Available on Short Notice', href: '/player-campaigns/short-notice/short-notice.html', children: [] }
+    { slug: 'sn-hub', label: 'Available on Short Notice', href: '/player-campaigns/short-notice/short-notice.html', children: [] },
+    { slug: 'hd-hub', label: 'Heavens Dragons', href: '/player-campaigns/heavens-dragons/heavens-dragons.html', children: [] }
   ];
 
   var current = document.body.getAttribute('data-page') || '';
