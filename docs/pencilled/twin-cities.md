@@ -27,7 +27,7 @@
 5. Not everything needs to be unique. **The pirates worship many things.**
 
 **Conflicts, answered:**
-1. **Whose water:** never specified, and it stays that way. **The domains are not literally the gods; they are the people's categorization of the land.** (Note for the draft: `_continent.md`, *Structure*, says "Domain-borders are the bound god's territorial reach"; the wording may want a canon move later. Not acted on.)
+1. **Whose water:** never specified, and it stays that way. **The domains are not literally the gods; they are the people's categorization of the land.** The gods cannot rule mortals; a domain is the country around where a god resides, where its worship clusters. **Fixed in canon 2026-10-26** (`_continent.md`, *Structure*; `timeline.md`, *Kingdom continuity*; `maps.html`, *Domains*), which retired "the bound god's territorial reach".
 2. **"Divide the seas":** the Pirate Lords reach everywhere.
 3. **Merfolk entry:** approved to move the Twin Cities alliance and League piloting out of `ancestries.md` into the Twin Cities file (and the League's), leaving the entry feeling-only. Lands at Phase 11.
 4. **The Order of Steam's "one of two airship fleets" line** predates the workflow and is not hard canon; it does not constrain this build.

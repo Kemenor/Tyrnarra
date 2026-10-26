@@ -52,7 +52,7 @@ The cities set the floor. A kingdom capital holds one to three percent of its co
 
 - **Tyrnarra**: the world. Encompasses all planes (Prelife, Life Layer, Postlife) and the Cloud Sea.
 - **Talan**: the main continent on the Material Plane, where the 13 Bound Gods currently reside.
-- **God Domains**: Talan's primary regions, one per bound god. Ancient in origin; named using the Basque/Icelandic convention with linguistic drift. Domain-borders are the bound god's territorial reach, not a polity's lines; the domain outlives every kingdom that occupies it.
+- **God Domains**: Talan's primary regions, one per bound god. Ancient in origin; named using the Basque/Icelandic convention with linguistic drift. A domain is the people's way of dividing the land: the country around where a bound god resides, where that god's worship clusters. The gods rule none of it (the Gods' Law gives them no dominion over mortals), so a domain border is a reckoning, never a frontier; the kingdoms are the polities, and the domain outlives every kingdom that occupies it.
 - **Kingdoms / Sub-regions**: political and geographic divisions within each domain. **No Talanese kingdom predates 1 MR**, and few are older than the Dark Era (1321 MR – 2135 MR); most modern kingdoms were founded, refounded, or substantially redrawn in the Dark Era or its immediate aftermath. Old-sounding names are usually re-claimed from older Lost-Era polities that held the same ground, not inherited through unbroken rule. Full canon in `../timeline.md`, *Kingdom continuity across the eras*.
 - **Settlements**: cities, towns, villages within kingdoms.
 
