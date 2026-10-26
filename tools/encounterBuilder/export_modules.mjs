@@ -17,6 +17,7 @@
  * wiped and rewritten each run. _sources/ is gitignored (paid content stays local).
  *
  * Env overrides: FOUNDRY_DATA (the Data dir), FOUNDRY_APP (the app dir).
+ * rebuild.py points both at its rsync mirror of the Pi server (_sources/foundry/).
  */
 import { createRequire } from "module";
 import fs from "fs";

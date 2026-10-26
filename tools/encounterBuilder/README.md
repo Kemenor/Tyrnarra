@@ -12,7 +12,7 @@ real data that you then tweak by hand.
 foundry pf2e repo ─┤     (creatures)
                   └─> build_items.py ─> items.db    ─> loot.py (search + treasure build)
 homebrew/*.json ───────^ (creatures only)         all SQLite + FTS5
-~/foundry modules ─> export_modules.mjs ─^ (creatures only)
+Pi Foundry (rsync) ─> export_modules.mjs ─^ (creatures only)
 ```
 
 - **bestiary.db / items.db** are static snapshots. Nothing queries the network at prep time.
@@ -149,13 +149,21 @@ reproduces; `--json` for structured output.
 
 ## Creatures from installed Foundry modules
 
-If a local Foundry install sits at `~/foundry` (override with `FOUNDRY_DATA` /
-`FOUNDRY_APP`), `rebuild.py` first runs `export_modules.mjs` (needs `node`). It
-reads every installed module's Actor packs (LevelDB) with the `classic-level`
-bundled in the Foundry app, re-inlines each actor's embedded items, and writes
-plain actor JSON to `_sources/modules/<module-id>.<pack>/`. Packs are copied to
-a temp dir before reading, so it works while Foundry is running. `_sources/`
-is gitignored, so paid module content stays local.
+The Foundry server runs in Docker on the Raspberry Pi (`ssh pihole`, host paths
+`/mnt/foundry/app` and `/mnt/foundry/data`). Each `rebuild.py` run rsyncs from
+`FOUNDRY_REMOTE` (default `pihole:/mnt/foundry`) into `_sources/foundry/` only
+what the export needs: every module's `module.json`, the Actor pack folders
+those manifests name, and `classic-level` + its dependencies from the server's
+Foundry app (its prebuilds include linux-x64). About 24 MB; later runs are
+incremental. If the Pi is unreachable the last mirror is reused, then a local
+`~/foundry` install; `FOUNDRY_REMOTE=""` skips the sync.
+
+`export_modules.mjs` (needs `node`) then reads each Actor pack (LevelDB) with
+that `classic-level`, re-inlines each actor's embedded items, and writes plain
+actor JSON to `_sources/modules/<module-id>.<pack>/`. Packs are copied to a temp
+dir before reading, so a live server's LOCK never matters. `_sources/` is
+gitignored, so paid module content stays local. Modules that only ship Items
+(the Battlezoo ancestry/dragon books, pf2e-relics) contribute no creatures.
 
 - Module rows carry `is_module=1`, are never deduped away, count as `--core`,
   and drop out with `--no-modules`. `--source` takes the folder name, e.g.
@@ -164,8 +172,8 @@ is gitignored, so paid module content stays local.
 - Traitless class-NPC actors (Jam & Jax) are tagged `humanoid`, their animal
   companions `animal` + `minion`, and the pack label ("Clerics") goes in the
   blurb, so `--text "cleric*"` finds them. `* Template` actors are skipped.
-- Install a new creature module in Foundry, rerun `python rebuild.py`, and it is
-  picked up automatically. `node export_modules.mjs` runs the export alone.
+- Install a new creature module on the Pi, rerun `python rebuild.py`, and it is
+  picked up automatically.
 
 ## Adding Tyrnarra / Azkataria homebrew
 
