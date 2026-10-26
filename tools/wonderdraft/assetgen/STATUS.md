@@ -54,12 +54,12 @@ every working session.
 
 ## Where things live
 
-| What | Local (the tools' paths) | Proton Drive (`Wonderdraft/...`) | In git? |
+| What | Local (the tools' paths) | Proton Drive (`Tyrnarra sync/...`) | In git? |
 |---|---|---|---|
 | Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | | yes |
 | Work folder: raw drawings, rounds, sheets, galleries (about 2.6 GB) | `~/.local/share/wdmap/assetgen/` | `assetgen-work/work/` | no |
 | The pack (Fuchsbau) | `$KARTOFUCHS/art/Fuchsbau` | | yes, in Kartofuchs |
-| Main | | `Main.wonderdraft_map` | no |
+| Main | | `Wonderdraft/Main.wonderdraft_map` | no |
 | Measured built-in sizes (`art-sizes.json`) | Kartofuchs' data folder (`~/.local/share/kartofuchs/`) | | no |
 | ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | | never |
 
@@ -71,7 +71,7 @@ every working session.
   there whatever is gone here.
 - **One machine at a time:** push only after pulling the other machine's work, or its new
   drawings are deleted.
-- **Proton Drive folder:** `TYRNARRA_PROTON` points `sync` at it when it isn't `~/ProtonDrive`.
+- **Proton Drive folder:** `TYRNARRA_SYNC` points `sync` at it when it isn't `~/ProtonDrive/Tyrnarra sync`.
 - **Laptop:** its `~/ProtonDrive` is a local folder that rclone bisync syncs every 15 minutes.
   A push there is a local copy, and the upload follows.
 - **Tower:** its Proton Drive is an rclone mount that needs a fresh 2FA code after each reboot.

@@ -7,17 +7,12 @@ Shared, reusable battlemap resources for the campaign layer. Two kinds of thing 
 
 ## Restoring the art on a new PC
 
-The `_full/` art is **not in git**. It is synced between machines through a private **Proton Drive**, so a fresh clone has the catalogues but no images. Copy the art across before stitching any maps:
+The `_full/` art is **not in git**. It lives in the private Proton Drive sync folder (`~/ProtonDrive/Tyrnarra sync/map-library/`), and `_full` is a link to that folder, so a fresh clone has the catalogues and gets the images by linking:
 
-- **Proton Drive source:** `%USERPROFILE%\Proton Drive\My Files\map-library\`
-- **Repo target:** `tools\map-library\_full\`
-
-Copy the contents of the Proton folder into `_full/` so the subfolders line up (e.g. `…\map-library\trains\` lands at `tools\map-library\_full\trains\`). A mirror copy from the repo root:
-
-```powershell
-robocopy "$env:USERPROFILE\Proton Drive\My Files\map-library" "tools\map-library\_full" /E
+```bash
+python3 tools/check_setup.py --link
 ```
 
-Once copied, the catalogue filenames match the files in `_full/` and Claude can assemble consists. Re-downloading from the Tom Cartos / CzePeku subscriptions is the fallback if the Proton sync is unavailable.
+The subfolders line up through the link (`map-library/trains/` in the sync folder is `tools/map-library/_full/trains/`), so the catalogue filenames match the files and Claude can assemble consists. Re-downloading from the Tom Cartos / CzePeku subscriptions is the fallback if the Proton sync is unavailable.
 
 > Campaign-specific art (for example a single quest's station map under a campaign's own `assets/maps/_full/`) is restored the same way from its own source; only the shared library art lives under this folder.

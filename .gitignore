@@ -15,11 +15,12 @@ claude.session
 # maps/ (published/gm-notes/...) for campaign-specific art, or under the shared
 # map-library/ (now the private tools/map-library/) for reusable libraries. Only
 # the downsized web copies (and committed text catalogues) reach GitHub. The
-# `.gitkeep` keeps each `_full/` present on a fresh clone.
+# `.gitkeep` keeps each campaign `_full/` present on a fresh clone. The
+# map-library's `_full` is a link into the Proton Drive sync folder
+# (tools/check_setup.py --link), so the whole path is ignored, link or folder.
 published/gm-notes/**/_full/*
 !published/gm-notes/**/_full/.gitkeep
-tools/**/_full/*
-!tools/**/_full/.gitkeep
+tools/**/_full
 
 # pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
 # and the rebuildable SQLite snapshot are local-only build artifacts. Run
@@ -34,7 +35,7 @@ __pycache__/
 *.pyc
 
 # API keys / secrets for the GM tools - LOCAL ONLY, never
-# committed. They live in tools/keys/ (copied from Proton Drive on a fresh clone);
+# committed. They live in the Proton Drive sync folder's keys/, linked into tools/keys/ (tools/check_setup.py --link);
 # this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
 **/*.secret

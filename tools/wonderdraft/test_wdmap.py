@@ -2,8 +2,8 @@
 
     python3 -m unittest tools/wonderdraft/test_wdmap.py
 
-The real-map tests run against ~/ProtonDrive/Wonderdraft/Main.wonderdraft_map
-(or $WD_TEST_MAP) and are skipped when that file isn't there. The map is decoded
+The real-map tests run against ~/ProtonDrive/Tyrnarra sync/Wonderdraft/Main.wonderdraft_map
+(or $WD_TEST_MAP; $TYRNARRA_SYNC moves the sync folder) and are skipped when that file isn't there. The map is decoded
 once and shared: a decoded 8192px map takes a few GB, so each test class must
 not load its own.
 """
@@ -20,7 +20,8 @@ import gdvar  # noqa: E402
 from gdvar import Color, GdObject, PoolIntArray, PoolRealArray, PoolStringArray, PoolVector2Array, Vector2  # noqa: E402
 from wdmap import WDMap, family, point_in_poly, read_raw, select  # noqa: E402
 
-TEST_MAP = os.environ.get("WD_TEST_MAP", os.path.expanduser("~/ProtonDrive/Wonderdraft/Main.wonderdraft_map"))
+SYNC = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/ProtonDrive/Tyrnarra sync"))
+TEST_MAP = os.environ.get("WD_TEST_MAP", os.path.join(SYNC, "Wonderdraft", "Main.wonderdraft_map"))
 
 
 _REAL = {}

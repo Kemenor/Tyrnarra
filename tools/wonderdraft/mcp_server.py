@@ -24,7 +24,8 @@ from mcp.types import ToolAnnotations  # noqa: E402
 
 import wd  # noqa: E402
 
-DEFAULT_MAP = os.environ.get("WD_MAP", os.path.expanduser("~/ProtonDrive/Wonderdraft/Main.wonderdraft_map"))
+SYNC = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/ProtonDrive/Tyrnarra sync"))
+DEFAULT_MAP = os.environ.get("WD_MAP", os.path.join(SYNC, "Wonderdraft", "Main.wonderdraft_map"))
 READ = ToolAnnotations(readOnlyHint=True)
 WRITE = ToolAnnotations(readOnlyHint=False, destructiveHint=True, idempotentHint=False)
 

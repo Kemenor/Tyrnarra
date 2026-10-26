@@ -215,10 +215,10 @@ def cmd_sync(a):
     another machine can take over. Push mirrors this machine (the owner) exactly; pull only adds
     and updates. The pack itself travels with the Kartofuchs repo."""
     import subprocess
-    proton = os.path.expanduser(os.environ.get("TYRNARRA_PROTON", "~/ProtonDrive"))
-    hub = os.path.join(proton, "Wonderdraft", "assetgen-work", "work")
-    if not os.path.isdir(proton):
-        sys.exit("no Proton Drive folder at %s (set TYRNARRA_PROTON)" % proton)
+    sync = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/ProtonDrive/Tyrnarra sync"))
+    hub = os.path.join(sync, "assetgen-work", "work")
+    if not os.path.isdir(sync):
+        sys.exit("no Proton Drive sync folder at %s (set TYRNARRA_SYNC)" % sync)
     src, dst = (hub, WORK) if a.pull else (WORK, hub)
     if not os.path.isdir(src):
         sys.exit("missing: %s" % src)
