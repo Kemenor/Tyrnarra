@@ -90,7 +90,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
     token-frames/                      ← shared Foundry token-frame library
     wonderdraft/                       ← .wonderdraft_map tooling: wd_regions.py splits the master map into God Domains / Regions export variants
-    keys/                              ← gitignored API keys, linked from the Proton Drive sync folder ~/ProtonDrive/Tyrnarra sync/ (machine addresses live in ~/.config/tyrnarra/; see tools/README.md)
+    keys/                              ← gitignored API keys, linked from the Syncthing sync folder ~/Sync/Tyrnarra/ (machine addresses live in ~/.config/tyrnarra/; see tools/README.md)
     check_setup.py                     ← verifies a machine (laptop/desktop) can run the GM tools
 
   lore/                                ← worldbuilding canon (NOT served; full roster in site-inventory)

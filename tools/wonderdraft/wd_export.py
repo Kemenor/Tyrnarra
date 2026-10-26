@@ -7,7 +7,7 @@ a fixed LOAD_WAIT seconds after its window appears (Main loads in ~10 s; Wonderd
 keeps redrawing while idle, so CPU use can't tell "loaded" apart), then send Ctrl+E, Enter (Export Options: PNG),
 Ctrl+A and the file name, Enter (save dialog). The save dialog opens at Wonderdraft's last export folder, so
 that setting in its config.ini is pointed at the map's folder first. Wait for the PNG to finish, close Wonderdraft, convert the PNG
-to WebP at Wonderdraft's quality 92 and delete the PNG before Proton Drive syncs it.
+to WebP at Wonderdraft's quality 92 and delete the PNG before Syncthing syncs it.
 
 xdotool types as if the keyboard were US while KWin applies the user's German layout,
 so "-" arrives as "ß" (and y/z swap). The file name is therefore typed as TYPED_NAME,
@@ -151,7 +151,7 @@ def _wait_stable(path, timeout):
 
 def _point_export_dir(folder):
     """Make the export dialog open in `folder`: Wonderdraft starts it at [Export] last_directory
-    in its config.ini, not next to the map (a map outside Proton Drive exported into Proton Drive)."""
+    in its config.ini, not next to the map (a map outside the sync folder exported into the sync folder)."""
     cfg = os.path.join(CONFIG_DIR, "config.ini")
     if not os.path.exists(cfg):
         return

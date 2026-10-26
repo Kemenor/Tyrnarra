@@ -1,11 +1,11 @@
 ---
 name: wonderdraft-map
-description: Use this skill to read or change the Tyrnarra Wonderdraft map source (~/ProtonDrive/Tyrnarra sync/Wonderdraft/Main.wonderdraft_map) through the `wonderdraft` MCP tools or the `wdmap` command - looking at the map (map_info, query, preview), fixing labels, moving/retexturing/deleting symbols, recolouring regions, adding symbols and labels, scattering forests, lining up mountains, capturing and placing stamps, running the user's @stamp/@place markers, and preparing the three map-view exports. Trigger on "look at the map", "where is X on the map", "rename/fix the label", "add a town/forest/mountains", "stamp", "process my markers", a docs/map-todo.md item that is a label or symbol change, or "export/publish the maps". Do not use for painting terrain, drawing or redrawing region outlines, adding layers, or paths/roads (Wonderdraft only), nor for battlemaps (map-library) or the published map pages' prose.
+description: Use this skill to read or change the Tyrnarra Wonderdraft map source (~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map) through the `wonderdraft` MCP tools or the `wdmap` command - looking at the map (map_info, query, preview), fixing labels, moving/retexturing/deleting symbols, recolouring regions, adding symbols and labels, scattering forests, lining up mountains, capturing and placing stamps, running the user's @stamp/@place markers, and preparing the three map-view exports. Trigger on "look at the map", "where is X on the map", "rename/fix the label", "add a town/forest/mountains", "stamp", "process my markers", a docs/map-todo.md item that is a label or symbol change, or "export/publish the maps". Do not use for painting terrain, drawing or redrawing region outlines, adding layers, or paths/roads (Wonderdraft only), nor for battlemaps (map-library) or the published map pages' prose.
 ---
 
 # wonderdraft-map
 
-The map source is `~/ProtonDrive/Tyrnarra sync/Wonderdraft/Main.wonderdraft_map` (8192 x 8192
+The map source is `~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map` (8192 x 8192
 map units). The tooling lives in `tools/wonderdraft/` (read its `README.md` for
 details); the `wonderdraft` MCP server (`.mcp.json`) exposes it as tools, and the
 same operations exist as `wdmap …` commands.

@@ -17,7 +17,6 @@ on 2026-09-30; the Wonderdraft swap and test tools it had are summed up under "E
 assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
 assetgen.sh build conifer --seeds 101-200 --round 7 --keep 40   # cut, check, finish, install into Fuchsbau
 assetgen.sh gallery [peaks settlements ...]       # review sheets of the installed pack, by variant, numbered
-assetgen.sh sync [--pull]                         # work files to (from) Proton Drive
 ```
 
 All prompt styles in `recipes.STYLES` feed **one pack folder per family**: once greyscaled and

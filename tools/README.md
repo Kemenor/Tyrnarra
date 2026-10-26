@@ -15,25 +15,29 @@ also has the GPU) or the laptop. The site itself needs none of it.
 ## The sync folder
 
 Everything that is neither code nor public travels between machines through
-Proton Drive, in **`~/ProtonDrive/Tyrnarra sync/`** (`TYRNARRA_SYNC` moves it):
+Syncthing, in **`~/Sync/Tyrnarra/`** (`TYRNARRA_SYNC` moves it). An always-on
+relay keeps an encrypted copy, so the machines sync even when only one is on:
 
 | Folder | What | Reached through |
 |---|---|---|
-| `Wonderdraft/` | `Main.wonderdraft_map` and its backups, the Wonderdraft assets/themes | the `wonderdraft` tools directly |
-| `Kartofuchs/` | `Main.kartofuchs` | Kartofuchs |
+| `Wonderdraft/` | `Main.wonderdraft_map` and its backups; `app/assets`, `app/themes` (the packs the map needs) | the `wonderdraft` tools directly; links in Wonderdraft's data folder |
+| `Kartofuchs/` | `Main.kartofuchs`; `app/` stamps, themes, mappings, `art-sizes.json` | Kartofuchs; links in its data folder |
 | `Dungeondraft/` | Dungeondraft packs | Dungeondraft |
-| `assetgen-work/` | the asset generator's raw work (`assetgen.sh sync`) | `wonderdraft/assetgen/` |
+| `assetgen-work/work/` | the asset generator's raw work | the link `~/.local/share/wdmap/assetgen` |
 | `map-library/` | licensed battlemap art | the link `map-library/_full` |
 | `keys/` | paid-service keys | a link per key in `keys/` |
 | `config/` | `foundry-remote` | the link `~/.config/tyrnarra/foundry-remote` |
+| `published-full/` | the GM notes' full-res art | a link `_full` per art folder in `published/gm-notes/` |
 
 The real files live in the sync folder and the links point into it, never the
-other way: rclone bisync skips links inside `~/ProtonDrive`. `check_setup.py
---link` creates the links (moving a local file with no synced copy into the sync
-folder first) and the plain check reports any that are missing. `comfyui-url`
-stays a local file, because it differs per machine. Proton syncs the newest copy
-of a file and renames the older one `.conflict`, so let a big file like the map
-sync before opening it on another machine.
+other way: Syncthing copies a link as a link, without its files. `check_setup.py
+--link` creates the links (moving a local file or folder with no synced copy into
+the sync folder first) and the plain check reports any that are missing.
+`comfyui-url` stays a local file, because it differs per machine, and so do app
+settings and backups. When two machines change the same file before syncing,
+Syncthing keeps both and names the older one `.sync-conflict-...`, so let a big
+file like the map sync before opening it on another machine. Keep the sync folder
+outside any Proton Drive folder: two sync tools on one folder fight.
 
 ## This repo is public: what stays out of it
 

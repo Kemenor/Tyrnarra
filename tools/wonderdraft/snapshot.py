@@ -5,7 +5,7 @@ and undiffable), so the repo tracks this instead: every label, every region shap
 every settlement-type symbol, symbol counts per layer and art family, the scale bar
 and the layer names. Deterministic: the same map always gives the same bytes, one
 item per line, so `git diff` shows exactly what changed ("Tvisol added", "+105
-kapoks"). It does not restore a map; Proton Drive and the wdmap backups do that.
+kapoks"). It does not restore a map; Syncthing's file versions and the wdmap backups do that.
 """
 import collections
 import json

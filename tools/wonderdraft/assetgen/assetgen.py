@@ -5,7 +5,6 @@ the workflow and the lessons.
   assetgen.sh generate conifer --seeds 100-139        images + masks from the tower's ComfyUI
   assetgen.sh build conifer --keep 32                 cut, check, finish, install into the pack
   assetgen.sh gallery [conifer peaks ...]             review sheets of the installed pack, by variant
-  assetgen.sh sync [--pull]                           work files to / from Proton Drive
 
 The pack is art/Fuchsbau in a Kartofuchs checkout ($KARTOFUCHS, sprites.pack_root): `build`
 installs there, and the art goes to other machines with that repo's git. Trying the pack on a
@@ -210,30 +209,9 @@ def cmd_gallery(a):
         print(path)
 
 
-def cmd_sync(a):
-    """The work folder (raw drawings, rounds), which lives outside git, through Proton Drive, so
-    another machine can take over. Push mirrors this machine (the owner) exactly; pull only adds
-    and updates. The pack itself travels with the Kartofuchs repo."""
-    import subprocess
-    sync = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/ProtonDrive/Tyrnarra sync"))
-    hub = os.path.join(sync, "assetgen-work", "work")
-    if not os.path.isdir(sync):
-        sys.exit("no Proton Drive sync folder at %s (set TYRNARRA_SYNC)" % sync)
-    src, dst = (hub, WORK) if a.pull else (WORK, hub)
-    if not os.path.isdir(src):
-        sys.exit("missing: %s" % src)
-    os.makedirs(dst, exist_ok=True)
-    flags = ["-a", "--update"] if a.pull else ["-a", "--delete"]
-    subprocess.run(["rsync"] + flags + [src + "/", dst + "/"], check=True)
-    print("%s -> %s" % (src, dst))
-
-
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
-    s = sub.add_parser("sync", help="work files to Proton Drive (or --pull them from it)")
-    s.add_argument("--pull", action="store_true", help="take them from Proton Drive (another machine's work)")
-    s.set_defaults(fn=cmd_sync)
     s = sub.add_parser("gallery", help="review sheets of the installed pack, grouped by variant")
     s.add_argument("families", nargs="*", help="default: every family")
     s.set_defaults(fn=cmd_gallery)

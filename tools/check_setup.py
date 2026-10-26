@@ -11,9 +11,8 @@ Checks the toolchain (python packages, node, rsync, ssh), the private address
 files in ~/.config/tyrnarra/ (kept out of this public repo), the Foundry server
 over ssh (and that every campaign in foundryExport/campaigns.json has its world),
 the ComfyUI renderer, the built encounter/loot databases, and the links into the
-Proton Drive sync folder ("~/ProtonDrive/Tyrnarra sync", or $TYRNARRA_SYNC). It
-never changes anything except the address files you pass and, with --link, those
-links.
+Syncthing sync folder ("~/Sync/Tyrnarra", or $TYRNARRA_SYNC). It never changes
+anything except the address files you pass and, with --link, those links.
 """
 import argparse
 import json
@@ -24,10 +23,12 @@ import sys
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+GM_NOTES = os.path.join(os.path.dirname(HERE), "published", "gm-notes")
+APPDATA = os.path.expanduser("~/.local/share")
 CONF = os.path.expanduser("~/.config/tyrnarra")
 FOUNDRY_FILE = os.path.join(CONF, "foundry-remote")
 COMFY_FILE = os.path.join(CONF, "comfyui-url")
-SYNC = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/ProtonDrive/Tyrnarra sync"))
+SYNC = os.path.expanduser(os.environ.get("TYRNARRA_SYNC", "~/Sync/Tyrnarra"))
 
 failed = 0
 
@@ -61,25 +62,49 @@ def links():
     """(link, target) pairs: the real files live in the sync folder, the tools reach them through
     links. comfyui-url stays a plain local file, because it differs per machine."""
     pairs = [(os.path.join(HERE, "map-library", "_full"), os.path.join(SYNC, "map-library")),
-             (FOUNDRY_FILE, os.path.join(SYNC, "config", "foundry-remote"))]
+             (FOUNDRY_FILE, os.path.join(SYNC, "config", "foundry-remote")),
+             (os.path.join(APPDATA, "wdmap", "assetgen"), os.path.join(SYNC, "assetgen-work", "work"))]
     keys = os.path.join(SYNC, "keys")
     for name in sorted(os.listdir(keys)) if os.path.isdir(keys) else []:
         pairs.append((os.path.join(HERE, "keys", name), os.path.join(keys, name)))
+    # GM-notes full-res art: published/gm-notes/<rel>/_full <-> published-full/<rel>, from either side
+    full = os.path.join(SYNC, "published-full")
+    rels = set()
+    for root, dirs, _ in os.walk(GM_NOTES):
+        if "_full" in dirs:
+            rels.add(os.path.relpath(root, GM_NOTES))
+        dirs[:] = [d for d in dirs if d != "_full"]
+    for root, dirs, files in os.walk(full):
+        if files and root != full:
+            rels.add(os.path.relpath(root, full))
+            dirs[:] = []
+    for rel in sorted(rels):
+        pairs.append((os.path.join(GM_NOTES, rel, "_full"), os.path.join(full, rel)))
+    # app data the maps need to render, on machines that have the app
+    for app, sub, names in (("Wonderdraft", "Wonderdraft", ("assets", "themes")),
+                            ("kartofuchs", "Kartofuchs", ("stamps", "themes", "mappings", "art-sizes.json"))):
+        if os.path.isdir(os.path.join(APPDATA, app)):
+            pairs += [(os.path.join(APPDATA, app, n), os.path.join(SYNC, sub, "app", n)) for n in names]
     return pairs
 
 
 def link(path, target):
-    """Point path at target. A local file with no synced copy yet moves into the sync folder first;
-    anything else already at path is left alone and reported."""
+    """Point path at target. A local file or folder with no synced copy yet moves into the sync folder
+    first; anything else already at path is left alone and reported."""
     if os.path.islink(path):
         if os.path.realpath(path) == os.path.realpath(target):
             return
         os.remove(path)
     elif os.path.isdir(path):
         if set(os.listdir(path)) - {".gitkeep"}:
-            print(f"  skipped {path}: it holds files; move them into {target} first")
-            return
-        shutil.rmtree(path)
+            if os.path.exists(target):
+                print(f"  skipped {path}: {target} exists too; merge them into {target} first")
+                return
+            os.makedirs(os.path.dirname(target), exist_ok=True)
+            shutil.move(path, target)
+            print(f"  moved {path} -> {target}")
+        else:
+            shutil.rmtree(path)
     elif os.path.exists(path):
         if os.path.exists(target):
             print(f"  skipped {path}: {target} exists too; keep one of them")
@@ -96,7 +121,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--foundry", help='Write ~/.config/tyrnarra/foundry-remote ("<ssh-host>:/<foundry-root>").')
     ap.add_argument("--comfy", help="Write ~/.config/tyrnarra/comfyui-url (http://<host>:8188).")
-    ap.add_argument("--link", action="store_true", help="Link keys, map-library art and foundry-remote into the sync folder.")
+    ap.add_argument("--link", action="store_true",
+                    help="Link keys, map art, foundry-remote, assetgen work and map-app data into the sync folder.")
     a = ap.parse_args()
     if a.link:
         if not os.path.isdir(SYNC):
@@ -166,10 +192,11 @@ def main():
 
     print(f"Sync folder ({SYNC})")
     if not os.path.isdir(SYNC):
-        report(None, "missing", "install Proton Drive sync, or set TYRNARRA_SYNC")
+        report(None, "missing", "set up Syncthing (tools/README.md), or set TYRNARRA_SYNC")
     else:
         for path, target in links():
-            short = os.path.relpath(path, HERE) if path.startswith(HERE) else path.replace(os.path.expanduser("~"), "~")
+            root = os.path.dirname(HERE)
+            short = os.path.relpath(path, root) if path.startswith(root) else path.replace(os.path.expanduser("~"), "~")
             ok = os.path.islink(path) and os.path.realpath(path) == os.path.realpath(target)
             report(ok or None, f"{short} -> sync folder", "python3 tools/check_setup.py --link")
 

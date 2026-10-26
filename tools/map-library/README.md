@@ -7,7 +7,7 @@ Shared, reusable battlemap resources for the campaign layer. Two kinds of thing 
 
 ## Restoring the art on a new PC
 
-The `_full/` art is **not in git**. It lives in the private Proton Drive sync folder (`~/ProtonDrive/Tyrnarra sync/map-library/`), and `_full` is a link to that folder, so a fresh clone has the catalogues and gets the images by linking:
+The `_full/` art is **not in git**. It lives in the private Syncthing sync folder (`~/Sync/Tyrnarra/map-library/`), and `_full` is a link to that folder, so a fresh clone has the catalogues and gets the images by linking:
 
 ```bash
 python3 tools/check_setup.py --link

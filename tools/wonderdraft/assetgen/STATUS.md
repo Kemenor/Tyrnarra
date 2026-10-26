@@ -54,29 +54,24 @@ every working session.
 
 ## Where things live
 
-| What | Local (the tools' paths) | Proton Drive (`Tyrnarra sync/...`) | In git? |
+| What | Local (the tools' paths) | Sync folder (`~/Sync/Tyrnarra/...`) | In git? |
 |---|---|---|---|
 | Code, recipes, README, this file | `tools/wonderdraft/assetgen/` | | yes |
-| Work folder: raw drawings, rounds, sheets, galleries (about 2.6 GB) | `~/.local/share/wdmap/assetgen/` | `assetgen-work/work/` | no |
+| Work folder: raw drawings, rounds, sheets, galleries (about 2.9 GB) | `~/.local/share/wdmap/assetgen/` (a link) | `assetgen-work/work/` | no |
 | The pack (Fuchsbau) | `$KARTOFUCHS/art/Fuchsbau` | | yes, in Kartofuchs |
 | Main | | `Wonderdraft/Main.wonderdraft_map` | no |
-| Measured built-in sizes (`art-sizes.json`) | Kartofuchs' data folder (`~/.local/share/kartofuchs/`) | | no |
+| Measured built-in sizes (`art-sizes.json`) | Kartofuchs' data folder (`~/.local/share/kartofuchs/`, a link) | `Kartofuchs/app/` | no |
 | ComfyUI address | `~/.config/tyrnarra/comfyui-url` or `TYRNARRA_COMFY` | | never |
 
-**Moving between machines** (`assetgen.sh sync`):
-- **Starting a session:** `git pull` in Kartofuchs (the pack), then `sync --pull`. It copies the
-  work folder from Proton Drive into the local path. It only adds and updates.
-- **Ending a session:** commit and push the pack in Kartofuchs, then run `sync`. It mirrors this
-  machine's work folder into Proton Drive, deleting
-  there whatever is gone here.
-- **One machine at a time:** push only after pulling the other machine's work, or its new
-  drawings are deleted.
-- **Proton Drive folder:** `TYRNARRA_SYNC` points `sync` at it when it isn't `~/ProtonDrive/Tyrnarra sync`.
-- **Laptop:** its `~/ProtonDrive` is a local folder that rclone bisync syncs every 15 minutes.
-  A push there is a local copy, and the upload follows.
-- **Tower:** its Proton Drive is an rclone mount that needs a fresh 2FA code after each reboot.
+**Moving between machines:** the work folder is a link into the Syncthing sync folder
+(`check_setup.py --link` makes it), so drawings and rounds reach the other machine on their own.
+- **Starting a session:** `git pull` in Kartofuchs (the pack), and check that Syncthing shows the
+  folder up to date.
+- **Ending a session:** commit and push the pack in Kartofuchs.
+- **One machine at a time** still helps: two machines writing the same file before it syncs
+  leave a `.sync-conflict-...` copy.
 
-**Working from the tower:** after `git pull` (here and in Kartofuchs) and `sync --pull`, a session there can generate
+**Working from the tower:** after `git pull` (here and in Kartofuchs), a session there can generate
 (ComfyUI runs locally: `TYRNARRA_COMFY=http://127.0.0.1:8188`), build and make galleries.
 
 ## The tower's ComfyUI
@@ -113,7 +108,6 @@ checkout's venv).
 generate <fam> --seeds 1-40 [--style S]      # drawings from ComfyUI into the work folder
 build <fam> --round N [--no-install] [--seeds ...] [--set KEY=V]
 gallery [families]                           # numbered review sheets per family, by variant
-sync [--pull]                                # work files to (from) Proton Drive
 ```
 
 ## Rules for this repo

@@ -2,8 +2,8 @@
 
 Paid-service keys for the GM tools live **here** and are **gitignored**
 (everything in `tools/keys/` except this README and `.gitkeep`), so they never
-reach GitHub. The keys themselves live in the Proton Drive sync folder
-(`~/ProtonDrive/Tyrnarra sync/keys/`), and each one here is a link to its synced
+reach GitHub. The keys themselves live in the Syncthing sync folder
+(`~/Sync/Tyrnarra/keys/`), and each one here is a link to its synced
 copy: `python3 tools/check_setup.py --link` makes the links on a new machine.
 Recreate a lost key from the dashboard below.
 

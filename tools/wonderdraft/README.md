@@ -1,6 +1,6 @@
 # Wonderdraft tooling
 
-Tools for the Wonderdraft source maps behind the terrain / regions / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The `.wonderdraft_map` sources live on Proton Drive (`~/ProtonDrive/Tyrnarra sync/Wonderdraft/`; `$TYRNARRA_SYNC` moves the sync folder), not in git.
+Tools for the Wonderdraft source maps behind the terrain / regions / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The `.wonderdraft_map` sources live in the Syncthing sync folder (`~/Sync/Tyrnarra/Wonderdraft/`; `$TYRNARRA_SYNC` moves it), not in git.
 
 ## `wd_regions.py`: one map, one file per region type
 
@@ -15,16 +15,16 @@ Wonderdraft has a single regions overlay, so god domains and regions can't be sh
 Everything else (terrain, symbols, +3 divine city names, +4 city icons, theme) is copied byte for byte. The input map is only read, never modified.
 
 ```bash
-python3 tools/wonderdraft/wd_regions.py ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Backup.wonderdraft_map
+python3 tools/wonderdraft/wd_regions.py ~/Sync/Tyrnarra/Wonderdraft/Backup.wonderdraft_map
 ```
 
 Outputs land next to the input (or in `-o <folder>`) and are overwritten on every run, so treat them as export-only: edit the master, rerun, export.
 
 ### Publishing the three map views
 
-1. `wd-regions ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map` writes the three variants.
-2. `wd-regions ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map --export` exports them (~1.5 min per view; hands off keyboard and mouse meanwhile). Or by hand: open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
-3. `wd-regions ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp`, runs `resize.sh` for the `display/` and `thumbs/` variants, and refreshes `map-snapshot.json`. It refuses when an export is missing or older than its variant map (stale).
+1. `wd-regions ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map` writes the three variants.
+2. `wd-regions ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --export` exports them (~1.5 min per view; hands off keyboard and mouse meanwhile). Or by hand: open each variant in Wonderdraft and export it next to its map file under the same name: `Main - Terrain.webp`, `Main - Regions.webp`, `Main - God Domains.webp` (WebP is copied as is; PNG/JPG are converted at quality 92, Wonderdraft's own WebP setting).
+3. `wd-regions ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --publish` copies them to `published/setting/assets/maps/` as `terrain.webp`, `regions.webp` and `domains.webp`, runs `resize.sh` for the `display/` and `thumbs/` variants, and refreshes `map-snapshot.json`. It refuses when an export is missing or older than its variant map (stale).
 4. Review the maps page and commit; pushing deploys the site.
 
 **`--export`** (`wd_export.py`) drives Wonderdraft itself, since it has no command-line export: for each view it launches Wonderdraft with the map, waits `--load-wait` seconds (default 15; Main loads in ~10 s), then sends Ctrl+E, Enter (Export Options, PNG), a file name and Enter (save dialog), waits for the PNG to stop growing (~40 s), closes Wonderdraft, converts the PNG to WebP at quality 92 and deletes it. `--only Regions` (repeatable) limits it to some views. Lessons baked in:
@@ -117,8 +117,8 @@ All of these save in place the same way `edit` does (backup, open-in-Wonderdraft
 ### Checking the map
 
 ```bash
-wdmap check ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map            # everything
-wdmap check ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map --level warning
+wdmap check ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map            # everything
+wdmap check ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --level warning
 ```
 
 One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, each with map coordinates; exits 1 if there are errors:
@@ -132,8 +132,8 @@ The god-city list is `GOD_CITIES` in `check.py`.
 ### Geography for lore checks
 
 ```bash
-wdmap geography ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map -o /tmp/geo.md   # every shape
-wdmap geography ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map --name 'Namur*'
+wdmap geography ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map -o /tmp/geo.md   # every shape
+wdmap geography ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --name 'Namur*'
 ```
 
 `geography.py` (~4 s) reports every god domain and region shape as text: its land neighbours (compass direction centroid to centroid, and the shared border's length in grid cells), shapes nearby that it does not border, its coasts per sea, and the labels inside it. The seas: the **Hafra** is every sea reached from the map edge; the **Midarra** is the water left once its western mouth is closed along `MOUTH_X` (the Balatur Erui line). Lakes and rivers are painted terrain, not land mask, so they are not in the report, and `preview` does not draw them either: crop `published/setting/assets/maps/terrain.webp` to see water. First used for the lore audit in `docs/geo-audit-2026-09-28.md`.
@@ -150,17 +150,17 @@ The fixed three-map page stays as it is; the interactive map is an addition.
 
 ### Snapshot for git
 
-The map itself stays out of git: at ~100 MB it is over GitHub's per-file limit, compressed and undiffable, and every save would add a full copy to history. Proton Drive syncs it and `wdmap` keeps backups. Git tracks [`map-snapshot.json`](map-snapshot.json) instead, a readable text snapshot of what the map says: every label (layer, text, position, font, size), every region shape (kind, inferred name, bbox, area, colour), every icon-type symbol (settlements, castles) with its position, symbol counts per layer and art family, the scale bar and the layer names. It is deterministic, one item per line, so `git diff` reads like a changelog of the map.
+The map itself stays out of git: at ~100 MB it is over GitHub's per-file limit, compressed and undiffable, and every save would add a full copy to history. Syncthing syncs it (`~/Sync/Tyrnarra/Wonderdraft/`) and `wdmap` keeps backups. Git tracks [`map-snapshot.json`](map-snapshot.json) instead, a readable text snapshot of what the map says: every label (layer, text, position, font, size), every region shape (kind, inferred name, bbox, area, colour), every icon-type symbol (settlements, castles) with its position, symbol counts per layer and art family, the scale bar and the layer names. It is deterministic, one item per line, so `git diff` reads like a changelog of the map.
 
 ```bash
-wdmap snapshot ~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map     # "updated" or "unchanged"
+wdmap snapshot ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map     # "updated" or "unchanged"
 ```
 
 `wd_regions.py … --publish` refreshes it too, so the published views and the snapshot of their source are committed together.
 
 ### MCP server
 
-`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `check`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/ProtonDrive/Tyrnarra\ sync/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
+`mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `check`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
 
 `wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
 

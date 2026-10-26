@@ -14,12 +14,10 @@ claude.session
 # published. Drop full-res originals in a `_full/` subfolder: under a campaign's
 # maps/ (published/gm-notes/...) for campaign-specific art, or under the shared
 # map-library/ (now the private tools/map-library/) for reusable libraries. Only
-# the downsized web copies (and committed text catalogues) reach GitHub. The
-# `.gitkeep` keeps each campaign `_full/` present on a fresh clone. The
-# map-library's `_full` is a link into the Proton Drive sync folder
-# (tools/check_setup.py --link), so the whole path is ignored, link or folder.
-published/gm-notes/**/_full/*
-!published/gm-notes/**/_full/.gitkeep
+# the downsized web copies (and committed text catalogues) reach GitHub. Every
+# `_full` is a link into the Syncthing sync folder (map-library/, published-full/;
+# tools/check_setup.py --link), so the whole path is ignored, link or folder.
+published/gm-notes/**/_full
 tools/**/_full
 
 # pf2e encounter-builder: the cloned Foundry bestiary source (~250MB, re-clonable)
@@ -35,7 +33,7 @@ __pycache__/
 *.pyc
 
 # API keys / secrets for the GM tools - LOCAL ONLY, never
-# committed. They live in the Proton Drive sync folder's keys/, linked into tools/keys/ (tools/check_setup.py --link);
+# committed. They live in the Syncthing sync folder's keys/, linked into tools/keys/ (tools/check_setup.py --link);
 # this glob also covers the legacy next-to-script location.
 tools/**/*_key.txt
 **/*.secret
