@@ -28,9 +28,10 @@ TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.15, "SKIRT_
 # Mountains measured against Wonderdraft's jagged peaks (peaks round 7): a heavy ring and calm
 # insides read like the built-ins' bold outlines; the thin-ringed line art read busy and small.
 BOLD_TERRAIN = {"OUTLINE": 6, "INNER_LIGHTEN": 0.7, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
-# Peaks and fells under the map's darker mountain tints: the 0.7 fade leaves their ridge lines
-# washed out, and a tone curve takes the lines back down (the light body keeps its grey).
-BOLD_PEAKS = dict(BOLD_TERRAIN, LINE_DARKEN=3.0)
+# Peaks and fells: the 0.7 fade left their ridge lines washed out on the map, a flat grey shape.
+# Half the fade keeps the ridge lines and a tone curve takes them down to ink, so a light body
+# with dark lines reads like Wonderdraft's jagged peaks.
+BOLD_PEAKS = dict(BOLD_TERRAIN, INNER_LIGHTEN=0.35, LINE_DARKEN=3.0)
 # Hills: Wonderdraft's are an upper arc only; many drawings closed their base into a loop, so
 # the lower half fades out (hills round 4).
 HILL_FINISH = {"OUTLINE": 4, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.5, "SKIRT_TRIM": 0.2}
