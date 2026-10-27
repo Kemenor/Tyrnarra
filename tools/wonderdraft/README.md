@@ -1,6 +1,6 @@
 # Wonderdraft tooling
 
-Tools for the Wonderdraft source maps behind the terrain / regions / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The `.wonderdraft_map` sources live in the Syncthing sync folder (`~/Sync/Tyrnarra/Wonderdraft/`; `$TYRNARRA_SYNC` moves it), not in git.
+Tools for the Wonderdraft copy of the Tyrnarra map, a frozen, read-only backup and the source of the published terrain / regions / domains views (see [`docs/map-todo.md`](../../docs/map-todo.md)). The live map is in Kartofuchs ([`../kartofuchs/`](../kartofuchs/README.md)); only the read tools below are used on the Wonderdraft copy. The `.wonderdraft_map` sources live in the Syncthing sync folder (`~/Sync/Tyrnarra/Wonderdraft/`; `$TYRNARRA_SYNC` moves it), not in git.
 
 ## `wd_regions.py`: one map, one file per region type
 

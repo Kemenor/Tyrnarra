@@ -56,7 +56,7 @@ The frame library is **shared, world-wide**: prompts + art live in `tools/token-
 
 A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works on any Foundry server (ours is self-hosted). It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
 
-> Verified live against **Foundry VTT 14.363 / pf2e 8.2.0**: the full
+> Verified live: the full
 > create → verify → delete cycle (`Folder.create`, `importFromCompendium` with
 > rename, blank-`npc` `Actor.create`, loot `Actor.create`,
 > `createEmbeddedDocuments`, and the pf2e `inventory.addCoins` coin API) passes.
@@ -240,5 +240,5 @@ importable for an orchestrator that builds the spec in-process.
 ## Conventions
 
 - **One actor, many tokens.** Six goblins = one imported Goblin Warrior actor; you place six tokens at the table. Each token is its own combatant.
-- **You place tokens and add art.** The macro stops at "folder full of ready actors + a loot chest." Token placement, prototype-token art, and scene work stay manual by design.
+- **You place tokens and add art, unless the spec asks.** By default the macro stops at "folder full of ready actors + a loot chest"; pre-placed tokens and portrait/token art are the opt-in steps above, and scene work stays manual.
 - **Idempotency guard.** The folder-exists check prevents accidental double-imports; delete and re-run to rebuild from an edited spec.

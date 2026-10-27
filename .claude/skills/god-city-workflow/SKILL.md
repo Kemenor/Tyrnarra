@@ -1,6 +1,6 @@
 ---
 name: god-city-workflow
-description: Use this skill when building or fleshing out one of the thirteen Bound-god city-states of Talan (the god-cities) in the Tyrnarra worldbuilding project, taking it from its locked seed in docs/god-city-seeds.md to full lore and a dedicated Style B HTML page. Trigger on "build [god-city]", "flesh out [god-city]", "next god-city", "promote [god-city]", the god-city pass, or any of the thirteen names: Merkavar (Commerce/Jianna), Myrria (Darkness/Araphel), Haizava (Wind/Fisaya), Eldara (Fire/Komo), Valreka (Time/Tani, formerly Denbora), Thekkavar (Knowledge/Enki), Frae City (Freedom/Cronus), Uravel (Water/Shuun), Lurrath (Earth/Sarrum), Ljosarn (Light/Iro), Lograth (Law/Forseti), Veidrath (Hunt/Hinka), Nahaskel (Chaos/Vesuna). Also trigger when working with docs/god-city-seeds.md (the seed roster), or deepening/maturing an already-built god-city. Builds on sub-region-workflow and composes with grill-me-lore. Do NOT use for ordinary sub-regions, kingdoms, or factions (use sub-region-workflow), nor for cosmology or pantheon work.
+description: Use this skill when building or fleshing out one of the thirteen Bound-god city-states of Talan (the god-cities) in the Tyrnarra worldbuilding project, taking it from its locked seed in docs/god-city-seeds.md to full lore and a dedicated Style B HTML page. Trigger on "build [god-city]", "flesh out [god-city]", "next god-city", "promote [god-city]", the god-city pass, or any of the thirteen names: Merkavar (Commerce/Jianna), Myrria (Darkness/Araphel), Haizava (Wind/Fisaya), Eldara (Fire/Komo), Valreka (Time/Tani), Thekkavar (Knowledge/Enki), Frae City (Freedom/Cronus), Uravel (Water/Shuun), Lurrath (Earth/Sarrum), Ljosarn (Light/Iro), Lograth (Law/Forseti), Veidrath (Hunt/Hinka), Nahaskel (Chaos/Vesuna). Also trigger when working with docs/god-city-seeds.md (the seed roster), or deepening/maturing an already-built god-city. Builds on sub-region-workflow and composes with grill-me-lore. Do NOT use for ordinary sub-regions, kingdoms, or factions (use sub-region-workflow), nor for cosmology or pantheon work.
 ---
 
 # God-city workflow
@@ -25,7 +25,7 @@ What this skill **adds** is everything below: the pre-locked seed, the depth axe
 
 ## The roster
 
-[`docs/god-city-seeds.md`](../../../docs/god-city-seeds.md) is the source of truth for the pass: the thirteen seeds, the **uniqueness architecture** (the elemental quartet; the make/build/know cluster; the light-dark pair; the knowledge trio; Frae-vs-Nahaskel), the **per-city build-notes** (rich design + build flags for the unbuilt cities), and the **status** of each. Open it first. Update the city's status there at commit and again at HTML promotion.
+[`docs/god-city-seeds.md`](../../../docs/god-city-seeds.md) is the source of truth for the pass: the thirteen seeds, the **uniqueness architecture** (the elemental quartet; the make/build/know cluster; the light-dark pair; the knowledge trio; Frae-vs-Nahaskel), the **per-city design notes** (each city's design summary), and the **status** of each. Open it first. Update the city's status there at commit and again at HTML promotion.
 
 ## The god-city flow (phases, adapted)
 
