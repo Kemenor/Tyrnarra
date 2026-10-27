@@ -20,8 +20,9 @@ relay keeps an encrypted copy, so the machines sync even when only one is on:
 
 | Folder | What | Reached through |
 |---|---|---|
-| `Wonderdraft/` | `Main.wonderdraft_map` and its backups; `app/assets`, `app/themes` (the packs the map needs) | the `wonderdraft` tools directly; links in Wonderdraft's data folder |
+| `Wonderdraft/` | `Main.wonderdraft_map` and its backups; `app/themes` | the `wonderdraft` tools directly; links in Wonderdraft's data folder |
 | `Kartofuchs/` | `Main.kartofuchs`; `app/` stamps, themes, mappings, `art-sizes.json` | Kartofuchs; links in its data folder |
+| `Kartofuchs/packs/` | the bought asset packs (2-Minute Tabletop, Dotty, Avoro, ...) | the links `~/.local/share/kartofuchs/packs` (Kartofuchs' pack folder) and `~/.local/share/Wonderdraft/assets` (while Wonderdraft is installed) |
 | `Dungeondraft/` | Dungeondraft packs | Dungeondraft |
 | `assetgen-work/work/` | the asset generator's raw work | the link `~/.local/share/wdmap/assetgen` |
 | `map-library/` | licensed battlemap art | the link `map-library/_full` |

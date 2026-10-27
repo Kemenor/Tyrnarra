@@ -80,11 +80,14 @@ def links():
             dirs[:] = []
     for rel in sorted(rels):
         pairs.append((os.path.join(GM_NOTES, rel, "_full"), os.path.join(full, rel)))
-    # app data the maps need to render, on machines that have the app
-    for app, sub, names in (("Wonderdraft", "Wonderdraft", ("assets", "themes")),
+    # app data the maps need to render, on machines that have the app. The asset packs live in
+    # Kartofuchs/packs: Kartofuchs' own pack folder, and Wonderdraft's asset folder while it is installed.
+    packs = os.path.join(SYNC, "Kartofuchs", "packs")
+    for app, sub, names in (("Wonderdraft", "Wonderdraft", ("themes",)),
                             ("kartofuchs", "Kartofuchs", ("stamps", "themes", "mappings", "art-sizes.json"))):
         if os.path.isdir(os.path.join(APPDATA, app)):
             pairs += [(os.path.join(APPDATA, app, n), os.path.join(SYNC, sub, "app", n)) for n in names]
+            pairs.append((os.path.join(APPDATA, app, "assets" if app == "Wonderdraft" else "packs"), packs))
     # the maps' fonts (labels, and what the Avoro themes name), as user fonts for both map apps
     fonts = (os.path.join(APPDATA, "fonts", "tyrnarra"), os.path.join(SYNC, "fonts"))
     if any(os.path.exists(p) for p in fonts):
