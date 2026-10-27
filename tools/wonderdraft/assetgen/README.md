@@ -193,10 +193,12 @@ What works and what does not:
 - **Clumps** (`shape: clump`: bamboo, swamp trees, the flat 2D settlements) keep every sizeable
   piece, where the one-object check would reject a clump of stalks or a row of houses.
 - **Terrain** keeps its ridge lines: the tree finish's inner fade erases them and its ring closes
-  the base. Peaks and fells take `BOLD_TERRAIN` (6 px ring, 0.7 fade; mesas and pillars 0.3,
-  which keeps the rock layers), hills `HILL_FINISH`, dunes `TERRAIN_FINISH`. `BASE_FADE` fades
-  the bottom and `SKIRT_TRIM` cuts the flanks lower than 20% of the peak, so drawn base lines and
-  long low flanks do not line up into stripes across a range. Hills fade their whole lower half:
+  the base. Mesas and pillars take `BOLD_TERRAIN` with a 0.3 fade (6 px ring; the light fade
+  keeps the rock layers), peaks and fells `BOLD_PEAKS` (the same ring with a 0.7 fade, plus
+  `LINE_DARKEN`: greys below `LINE_DARKEN_BELOW`, 215, go down a gamma-3 curve, so the ridge
+  lines stay dark under the map's darker mountain tints), hills `HILL_FINISH`, dunes
+  `TERRAIN_FINISH`. `BASE_FADE` fades the bottom and `SKIRT_TRIM` cuts the flanks lower than 20%
+  of the peak, so drawn base lines and long low flanks do not line up into stripes across a range. Hills fade their whole lower half:
   Wonderdraft's hills are an upper arc, and a closed base loop shows as a circle in a range.
 - **Open drawings need a body.** `fill_under` (hills) makes everything under the top contour
   solid paper; without it about half the hills are hollow. `fill_enclosed` (pillars) turns a

@@ -28,6 +28,9 @@ TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.15, "SKIRT_
 # Mountains measured against Wonderdraft's jagged peaks (peaks round 7): a heavy ring and calm
 # insides read like the built-ins' bold outlines; the thin-ringed line art read busy and small.
 BOLD_TERRAIN = {"OUTLINE": 6, "INNER_LIGHTEN": 0.7, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
+# Peaks and fells under the map's darker mountain tints: the 0.7 fade leaves their ridge lines
+# washed out, and a tone curve takes the lines back down (the light body keeps its grey).
+BOLD_PEAKS = dict(BOLD_TERRAIN, LINE_DARKEN=3.0)
 # Hills: Wonderdraft's are an upper arc only; many drawings closed their base into a loop, so
 # the lower half fades out (hills round 4).
 HILL_FINISH = {"OUTLINE": 4, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.5, "SKIRT_TRIM": 0.2}
@@ -295,7 +298,7 @@ FAMILIES = {
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_PEAKS, "negative": LINE_NEGATIVE,
         # Round 4 wording: "flat bottom edge" drew base lines that stacked into stripes across a range.
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with two or three "
                     "inner ridge lines, white inside, steep sides, fantasy map symbol"),
@@ -310,7 +313,7 @@ FAMILIES = {
         "pack_folder": "Fuchsbau_Peaks", "file": "peak_{n:02d}",
     },
     "fells": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_TERRAIN, "negative": LINE_NEGATIVE,
+        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_PEAKS, "negative": LINE_NEGATIVE,
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with one or two "
                     "soft inner lines, white inside, flat bottom edge, fantasy map symbol"),
         "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
@@ -740,6 +743,8 @@ DEFRINGE = 0          # px eaten from the soft edge under the ring (the cut edge
 INNER_LIGHTEN = 0.7   # 0-1: how far strokes inside the shape fade toward white (sprites.finish)
 INNER_EDGE = 6        # px from the edge where that fading starts (full at twice this)
 BASE_FADE = 0.0       # share of the height over which the bottom fades out (mountains' open base)
+LINE_DARKEN = 0.0     # gamma for the greys below LINE_DARKEN_BELOW: darker inner lines (0 = off)
+LINE_DARKEN_BELOW = 215
 SKIRT_TRIM = 0.0      # mountains: cut the flanks where the shape is lower than this share of its peak
 # Custom-colour art (icons; sprites.finish_cc): R = ink lines, G = body, B = accents.
 OUTLINE_CC = 3        # solid ink ring, px

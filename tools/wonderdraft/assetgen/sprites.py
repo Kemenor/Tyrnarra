@@ -268,6 +268,11 @@ def finish(rgba, fam, lv):
         outer = ndimage.grey_dilation(a, footprint=_disk(recipes.OUTLINE))
         g = g * inner + recipes.OUTLINE_GREY * (1 - inner)
         a = outer
+    if recipes.LINE_DARKEN:
+        # Darker inner lines: greys below LINE_DARKEN_BELOW go down a gamma curve, the light body
+        # tones above it stay.
+        t = recipes.LINE_DARKEN_BELOW
+        g = np.where(g < t, t * (np.clip(g, 0, t) / t) ** recipes.LINE_DARKEN, g)
     if fade is not None:
         a = a * fade
     out = np.dstack([g, g, g, a * 255]).clip(0, 255).astype(np.uint8)
