@@ -27,6 +27,9 @@ every working session.
   `BASE_RULES`) and covers only Wonderdraft's built-in trees and mountains; other packs' art
   imports as it is. The measured built-in sizes live in Kartofuchs' data folder
   (`art-sizes.json`). Never modify `Main.wonderdraft_map` unless the user asks.
+- **Main in Kartofuchs** draws Wonderdraft's original art until the pack is ready (the user's
+  call): the bought packs, and the built-ins from `Wonderdraft_Builtins`, a local copy in
+  Kartofuchs' packs folder for this map only. Swap art with the Fuchsbau mapping puts the pack on.
 
 ## Decisions (the user's)
 
@@ -39,7 +42,8 @@ every working session.
 - **Icons:** recolourable. One themed icon per god-city (two drawings each). The raised icons
   are filed as 2.5D; the flat 2D set was wanted "to see", then two per kind.
 - **Reviewing:** the gallery sheets per family, and the whole pack on Main in Kartofuchs (see
-  State). Wonderdraft's built-in art is never extracted or published (EULA).
+  State). Wonderdraft's built-in art never goes into a repo or anywhere public; the local copy
+  stays on the user's machines.
 - **Open, the user's call:**
   - The crosses on some shrines and chapels are fine for now.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch

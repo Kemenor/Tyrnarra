@@ -31,7 +31,7 @@ Screenshots and exports are drawn by an editor. When none has the map open, Kart
 - **Layers** (top of the tree first): Map furniture, Terrain, City Icons, Legend (Legend, Legend (labels)), God Domain (God Domain Regions, God Labels), Kingdoms (Kingdom Regions, Region Labels), `-2` (landmark labels: mountains and other named features), City Labels, Divine City Labels.
 - **Region shapes:** god domains are on God Domain Regions, regions on Kingdom Regions; each is named after the label inside it (God Labels / Region Labels).
 - **Views:** Terrain, Regions and God Domains, the same three the published map pages show; `export` writes one image per view, `export_html` an interactive page.
-- **Art:** the bought packs come from Kartofuchs' pack folder (`~/Sync/Tyrnarra/Kartofuchs/packs`), Kartofuchs' own trees and mountains from its Fuchsbau pack. New art goes in from either; `assets` lists what is available.
+- **Art:** the map draws its original Wonderdraft art: the bought packs from Kartofuchs' pack folder (`~/Sync/Tyrnarra/Kartofuchs/packs`), and Wonderdraft's built-in trees, mountains and symbols from `Wonderdraft_Builtins` in the same folder, a copy from the user's own Wonderdraft install for this map only: it never goes into a repo or anywhere shared. Kartofuchs' own Fuchsbau pack is the replacement for later: every symbol keeps its original art, so `swap_art` puts Fuchsbau (or any pack) on in one step and takes it off again. New art goes in from any of these; `assets` lists what is available.
 
 ## Common tasks
 

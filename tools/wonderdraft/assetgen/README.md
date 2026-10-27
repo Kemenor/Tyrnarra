@@ -4,8 +4,8 @@
 what lives on which machine and how to work from the tower.
 
 Generates our own symbol art (trees, mountains and icons) in a Tyrnarra style, with many
-variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
-any tool of our own) and the bought packs that stand in for it. The art is made in Wonderdraft's
+variants per family, to replace Wonderdraft's built-in art in `Main` and the bought packs that stand in
+for it. The art is made in Wonderdraft's
 own pack format, so it works in Wonderdraft and in Kartofuchs, which reads the same asset folder.
 `build` installs straight into Fuchsbau, Kartofuchs' own pack (`art/Fuchsbau` in a Kartofuchs
 checkout). The pack is tried on the real map in Kartofuchs: import `Main.wonderdraft_map` with the
