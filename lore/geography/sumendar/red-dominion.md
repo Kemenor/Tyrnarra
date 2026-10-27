@@ -6,7 +6,7 @@
 
 **Position:** Sumendar's long western coast. A wedge about 1,000 miles from north to south, some 350 miles wide in the north, narrowing to the southern point. West and south, the Hafra; north, the Midarra behind a coastal range, with Balatur Erui about 100 miles across the Midarra's mouth; north-east, No Man's Land; east, Haraour Eliza; south-east, Lioaru's shore across the bay. Burdineyja's Hafra islands lie about 200 miles off the west coast, and Auran about 285 miles south-west of the point.
 
-**Terrain:** about 191,700 square miles, the largest country in Sumendar. A range runs along the Midarra coast, and the Midarra shore behind it has no port of note. A cluster of mountains stands in the north-east by No Man's Land, with **Hyseat**, the sealed city, in it. Forest on the north-west and south-west coasts; two rivers crossing the country west to the Hafra; a small dune field in the south; a forested valley down Haraour's border to the bay. Between the held coast and the mountains lies **the Vaota**, forest grown over the old heartland's fields; in the foothills and at the cluster's southern foot, **Anokula**, the red lakes.
+**Terrain:** about 191,700 square miles, the largest country in Sumendar. A range runs along the Midarra coast, and the Midarra shore behind it has no port of note. A cluster of mountains stands inland in the north, about 150 miles short of No Man's Land, with **Hyseat**, the sealed city, in it. Forest on the north-west and south-west coasts; two rivers crossing the country west to the Hafra; a small dune field in the south; a forested valley down Haraour's border to the bay. Between the held coast and the mountains lies **the Vaota**, forest grown over the old heartland's fields; in the foothills and at the cluster's southern foot, **Anokula**, the red lakes.
 
 **Character:** a homeland won back for a people who mostly live at sea.
 
@@ -46,7 +46,7 @@ Each ship-town keeps its ship's bell on a frame in the square, the ship's name c
 
 ## The fleet that came home
 
-Under the Golden Empire this was the crown heartland, held by the throne directly. The imperial capital, **Hyseat**, stood in the north-eastern mountains among the mines; **Saegate**, on the point, was the Empire's sea-gate, and the emperor's fleet was built in its yards.
+Under the Golden Empire this was the crown heartland, held by the throne directly. The imperial capital, **Hyseat**, stood in the northern mountains among the mines; **Saegate**, on the point, was the Empire's sea-gate, and the emperor's fleet was built in its yards.
 
 In 1321 MR the miners under Hyseat broke into something deep below the mountain, and the Corrupted God's first spawn came up through the capital. The heartland was overrun first. The emperor's fleet sailed from Saegate that year with as many as it could carry; others fled east, into Haraour through Jaurei. Saegate held behind its walls. By 1325 the Empire had fallen.
 
@@ -126,7 +126,7 @@ The held country is the coast and the south, about 40,000 square miles. North an
 
 **Tuta and the scar road.** Tuta stands where the western river leaves the coastal forest, the landing for the road inland. The scar road runs about 250 miles up the valley to Hyseat, and nobody takes it without a guide. The guides take parties up: scholars, the curious who pay for the look, and the adventurers who come for the bounty. At Tuta the Reds bet on the parties, on whether one comes back whole, and when.
 
-**Hyseat.** The old imperial capital stands in the north-eastern mountains by the border with No Man's Land, and the breach of 1321 lies under it. The returners sealed it in the 2140s, and the Admiralty keeps the seal. Since the bindstone rush of 2527 the Admiralty's riders have been out to look at No Man's Land's badlands as well.
+**Hyseat.** The old imperial capital stands in the mountains of the north, about 150 miles short of the border with No Man's Land, and the breach of 1321 lies under it. The returners sealed it in the 2140s, and the Admiralty keeps the seal. Since the bindstone rush of 2527 the Admiralty's riders have been out to look at No Man's Land's badlands as well.
 
 #### ◈ Popular Belief: sealed with him inside
 
