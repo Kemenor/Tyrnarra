@@ -150,6 +150,10 @@ What works and what does not:
    chapels come with a Christian cross (the user's call, see STATUS.md).
 17. **FLUX varies little across seeds** within one variant (the mesas come out nearly alike), so a
    family's variety comes from its variant list.
+18. **Bold peaks** (`boldpeak`): the bold trees' wording with ridge lines and a few strokes on the
+   shaded side. FLUX draws a mountain as a tall even pyramid unless told "wider than it is tall,
+   with an uneven jagged outline", and it closes the base with a drawn line whatever the prompt
+   says: the finish fades it out. "A snowy top" reads as a white cap out of place in a range.
 
 ## Finishing (sprites.py, constants in recipes.py)
 
@@ -194,9 +198,11 @@ What works and what does not:
   piece, where the one-object check would reject a clump of stalks or a row of houses.
 - **Terrain** keeps its ridge lines: the tree finish's inner fade erases them and its ring closes
   the base. Mesas and pillars take `BOLD_TERRAIN` with a 0.3 fade (6 px ring; the light fade
-  keeps the rock layers), peaks and fells `BOLD_PEAKS` (the same ring with a 0.35 fade, plus
+  keeps the rock layers), fells `BOLD_PEAKS` (the same ring with a 0.35 fade, plus
   `LINE_DARKEN`: greys below `LINE_DARKEN_BELOW`, 215, go down a gamma-3 curve, so a light body
-  carries dark ridge lines, like Wonderdraft's jagged peaks), hills `HILL_FINISH`, dunes
+  carries dark ridge lines, like Wonderdraft's jagged peaks), peaks `BOLD_DRAWN_PEAKS` (the bold
+  drawings: no ring, since the drawn outline is the edge and a ring beside it reads as a double
+  line; no fade; `LINE_DARKEN`; a 0.3 base fade), hills `HILL_FINISH`, dunes
   `TERRAIN_FINISH`. `BASE_FADE` fades the bottom and `SKIRT_TRIM` cuts the flanks lower than 20%
   of the peak, so drawn base lines and long low flanks do not line up into stripes across a range. Hills fade their whole lower half:
   Wonderdraft's hills are an upper arc, and a closed base loop shows as a circle in a range.
@@ -258,7 +264,7 @@ flags.
 | shrine_trees (ribbons, lanterns, shrine roofs) | FLUX | none | none | `Fuchsbau_Shrine_Trees` (30) |
 | giant_trees (pines, firs, cedars, oaks, pale trees) | FLUX | none | none | `Fuchsbau_Giant_Trees` (24) |
 | named_trees (the Soul Tree) | FLUX | none | none | `Fuchsbau_Named_Trees` (4) |
-| peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Fuchsbau_Peaks` (round 9, 30) |
+| peaks | FLUX | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Fuchsbau_Peaks` (bold, round 10, 30) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Fuchsbau_Fells` (round 4, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Fuchsbau_Hills` (round 6, 25) |
 | dunes | FLUX | `sand_dunes_small` | `Dotty_Dunes` | `Fuchsbau_Dunes` (24) |

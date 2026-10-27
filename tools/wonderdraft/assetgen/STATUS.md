@@ -92,8 +92,9 @@ every working session.
   skips drawings that already exist).
 - **Engines by family:**
   - SDXL: conifers, pines, palms, bamboo, savanna, cacti, dead trees, mushrooms, and the
-    line-art peaks, fells and hills.
-  - FLUX: broadleaves, willows, jungle, swamp, shrubs, dunes, mesas, pillars, volcanoes and all icons.
+    line-art fells and hills.
+  - FLUX: broadleaves, willows, jungle, swamp, shrubs, the bold peaks, dunes, mesas, pillars,
+    volcanoes and all icons.
 
 ## Commands
 

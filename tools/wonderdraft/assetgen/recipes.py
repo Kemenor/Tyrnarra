@@ -28,10 +28,15 @@ TERRAIN_FINISH = {"OUTLINE": 2, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.15, "SKIRT_
 # Mountains measured against Wonderdraft's jagged peaks (peaks round 7): a heavy ring and calm
 # insides read like the built-ins' bold outlines; the thin-ringed line art read busy and small.
 BOLD_TERRAIN = {"OUTLINE": 6, "INNER_LIGHTEN": 0.7, "BASE_FADE": 0.15, "SKIRT_TRIM": 0.2}
-# Peaks and fells: the 0.7 fade left their ridge lines washed out on the map, a flat grey shape.
+# Fells: the 0.7 fade left their ridge lines washed out on the map, a flat grey shape.
 # Half the fade keeps the ridge lines and a tone curve takes them down to ink, so a light body
 # with dark lines reads like Wonderdraft's jagged peaks.
 BOLD_PEAKS = dict(BOLD_TERRAIN, INNER_LIGHTEN=0.35, LINE_DARKEN=3.0)
+# Peaks in the FLUX "boldpeak" style (peaks round 10): the drawing's own thick outline is the
+# edge, so no ring (a ring beside it read as a double line with a pale gap); no fade on the few
+# bold strokes, the tone curve takes them to ink; a 0.3 base fade, since FLUX closes the base
+# with a drawn line whatever the prompt says.
+BOLD_DRAWN_PEAKS = dict(BOLD_TERRAIN, OUTLINE=0, INNER_LIGHTEN=0.0, BASE_FADE=0.3, LINE_DARKEN=3.0)
 # Hills: Wonderdraft's are an upper arc only; many drawings closed their base into a loop, so
 # the lower half fades out (hills round 4).
 HILL_FINISH = {"OUTLINE": 4, "INNER_LIGHTEN": 0.0, "BASE_FADE": 0.5, "SKIRT_TRIM": 0.2}
@@ -299,13 +304,22 @@ FAMILIES = {
 
     # --- mountains, hills, dunes: greyscale like the trees, centred on the click point -------
     "peaks": {
-        "shape": "mountain", "canvas": (1216, 832), "styles": ["line"], "frame": LINE_FRAME, "finish": BOLD_PEAKS, "negative": LINE_NEGATIVE,
-        # Round 4 wording: "flat bottom edge" drew base lines that stacked into stripes across a range.
+        "engine": "flux", "shape": "mountain", "canvas": (1216, 832), "styles": ["boldpeak"], "frame": LINE_FRAME,
+        "finish": BOLD_DRAWN_PEAKS, "negative": LINE_NEGATIVE,
+        # The line art's many fine hatched strokes read as grey at map size; the bold drawings'
+        # few thick strokes read like Wonderdraft's jagged peaks. "line" (SDXL) stays for reference.
+        "exclude": {"boldpeak": list(range(201, 213))},   # the trial, drawn with the tall-pyramid wording
+        # Round 4 wording (SDXL): "flat bottom edge" drew base lines that stacked into stripes across a range.
         "subject": ("minimalist black line drawing of one single {variant}, simple clean outline with two or three "
                     "inner ridge lines, white inside, steep sides, fantasy map symbol"),
-        "flux": "A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map: flat base line, nothing around it.",
-        "variants": ["tall jagged mountain", "mountain with two sharp peaks", "craggy mountain with a snowy top",
-                     "broad mountain with two summits", "steep rocky spire", "mountain with a long ridge sloping to one side"],
+        # The bold trial (seeds 201-212) drew tall, even pyramids on a base line: a range read as rows
+        # of teeth on stripes. Broad jagged shapes with an open base; the snowy top read odd in a range.
+        "flux": ("A single {variant}, drawn as a mountain symbol for a hand-drawn fantasy map, seen from the side: "
+                 "wider than it is tall, with an uneven jagged outline. The bottom is left open, with no line along "
+                 "the base and no ground. Nothing around it."),
+        "variants": ["broad jagged mountain with a ragged crest", "mountain with two sharp peaks",
+                     "craggy mountain with a broken jagged crest", "broad mountain with two summits",
+                     "wide mountain with three jagged peaks", "mountain with a long jagged ridge sloping to one side"],
         # Sized by area, not width: ours are wider than the built-ins' tall peaks, so width made them low.
         "kind": "mountains",
         "size": (400, 280),        # 3x the built-in's area-equivalent 131 x 92: sharp at Main's big scales
@@ -657,6 +671,12 @@ FLUX_STYLES = {
              "shapes, with a few thick black curved strokes inside where the shapes overlap. Flat very pale fill, no "
              "grey wash, no small leaf marks, no hatching. Simple and readable at small size. Drawn directly on a "
              "plain white background: no border around it, no shadow, nothing else in the image."),
+    # Peaks in the bold trees' manner: the line art's many fine hatched strokes read as grey at
+    # map size, where Wonderdraft's jagged peaks draw a few bold ones.
+    "boldpeak": ("Bold black brush-pen drawing: a thick black outline, two or three thick black ridge lines running "
+                 "down from the summit, and the shaded side marked with a few thick black strokes. Flat very pale "
+                 "fill, no grey wash, no fine lines, no hatching. Simple and readable at small size. Drawn directly "
+                 "on a plain white background: no border around it, no shadow, nothing else in the image."),
     # Volcanoes (custom colours): lava in the accent channel, rock and smoke in the body.
     # Fruit trees (custom colours): foliage pale, trunk dark (joins the lines), fruit and blossom coloured.
     "fruit": ("Bold black brush-pen outlines; the foliage drawn as a few big rounded shapes left plain pale cream "
