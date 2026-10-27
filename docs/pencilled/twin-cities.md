@@ -6,9 +6,10 @@
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-26), with the GM's corrections below.
 - **Phase 1 (seed questions): closed** (GM, 2026-10-27), with the combined summary below.
-- **Phase 2 (seeds): open.**
+- **Phase 2 (seeds): closed** (GM, 2026-10-27): seed A, the articles; seed B carries the traveller's image.
+- **Phase 3 (traveller's image): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 2. Three seeds offered (the articles, the joining, the two free cities); the recommendation is the articles.
+- **Resume here:** Phase 3. The image is the joining; speaker, year, form and personality are open.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -76,9 +77,23 @@
 
 The Twin Cities are one pirate nation in two cities on the Midarra. Each has its own Lords, and the Lords of both sit together as the top brass, for kinship and strength in numbers against the powers that would drag them down. Most pirates belong to one city only: the sea pirates live on water that fights them at every step, and the sky pirates live in an emptiness they love, diving into clouds and knowing the cold of the droplets. The sea city is a dark, stacked flotilla where the hulls shut out the sky. Its upper decks hold taverns, gambling halls and homes, the water-dwellers have its drowned bilges, and the Lords' spires stand on top. It moves on the machines of every ship built into it whenever its elected Lord sets a course. The sky city is four bright islets on Gods'-era artifacts, with airships now carrying part of the weight: plazas, outdoor tables, hammocks over the edge and wind singing through the windows, with sun or stars in sight from everywhere. When they can, the two cities join into one, and their markets and people mix; when they are hunted or the work is elsewhere, they split. Neither city sleeps, both live by pirate law (every district is a ship, everyone aboard has a vote, and no captain or Lord is safe), and both call themselves the truly free city, by choice and not by designation, aimed straight at Frae City on the same crossing.
 
+## Phase 2: the seed (GM, 2026-10-27)
+
+**The seed: the articles.** *A pirate nation in two cities, where every district is still a ship and everyone aboard has a vote.* The continent calls it lawless, and it has more law than any city on Talan: every district a ship never decommissioned, every resident its crew, the articles the constitution, a Lord deposable by show of hands or by knife. Proposed with it: each sky islet counts as a ship in law because it flies; the prize share spread from the raids to the districts; a district's articles carved into its old mainmast, deposed captains scored through.
+
+**Seed B, the joining, carries the traveller's image** (Phase 3): the sky city settling over the flotilla, gangways and lifts dropping, the markets merging, the sky city dripping cloud-water onto the sea city's top decks.
+
+**The live tension (GM, for Phase 9): being pirates.** No merchant or region likes them; none can deal with them except by making deals with them. This replaces seed C (the two free cities) as the tension; the Frae City jab stays as a feature.
+
+**Sameness notes (authoring only, never on the page):** Frae City also floats (a rock on seven chains that never moves; the islets fly unchained); the League's Raft lashes hulls for a sitting and unlashes (the sea city never unlashed); the League's Keelborn crew every hull without a vote (here every resident votes); Systrey's seven isles drift as one because their roots grew together (the Twin Cities join and part by choice); Myrria and Eldara never sleep (here the hulls keep the sky out).
+
+## Proposals for Phase 4 (not yet settled)
+
+- **The armada (GM, 2026-10-27).** A Midarra power sent scouts against the pirates; the city had moved before the scouts reported. It sent its whole armada to search; the pirates lured it deep into the Midarra, then the city's silhouette came over the horizon toward the region's own port and shelled it from sea and sky, and was gone before the armada returned. To settle: which power, the date, the targets, what it cost the pirates, and what it says about the sea city's speed.
+
 ## Rejected options
 
-None yet.
+- **Seed C, the two free cities** (Frae City as the defining rival): risked making the Twin Cities a foil; the jab stays as a feature, the tension is being pirates.
 
 ## Open questions
 
