@@ -27,6 +27,7 @@ relay keeps an encrypted copy, so the machines sync even when only one is on:
 | `map-library/` | licensed battlemap art | the link `map-library/_full` |
 | `keys/` | paid-service keys | a link per key in `keys/` |
 | `config/` | `foundry-remote` | the link `~/.config/tyrnarra/foundry-remote` |
+| `fonts/` | the maps' fonts: labels (Uncial Antiqua, Gentium Book Basic) and the ones the Avoro themes name | the link `~/.local/share/fonts/tyrnarra` |
 | `published-full/` | the GM notes' full-res art | a link `_full` per art folder in `published/gm-notes/` |
 
 The real files live in the sync folder and the links point into it, never the

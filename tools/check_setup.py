@@ -85,6 +85,10 @@ def links():
                             ("kartofuchs", "Kartofuchs", ("stamps", "themes", "mappings", "art-sizes.json"))):
         if os.path.isdir(os.path.join(APPDATA, app)):
             pairs += [(os.path.join(APPDATA, app, n), os.path.join(SYNC, sub, "app", n)) for n in names]
+    # the maps' fonts (labels, and what the Avoro themes name), as user fonts for both map apps
+    fonts = (os.path.join(APPDATA, "fonts", "tyrnarra"), os.path.join(SYNC, "fonts"))
+    if any(os.path.exists(p) for p in fonts):
+        pairs.append(fonts)
     return pairs
 
 
@@ -129,6 +133,8 @@ def main():
             sys.exit(f"no sync folder at {SYNC} (set TYRNARRA_SYNC)")
         for path, target in links():
             link(path, target)
+        if shutil.which("fc-cache"):
+            subprocess.run(["fc-cache", "-f", os.path.join(APPDATA, "fonts")], check=False)
     if a.foundry:
         write(FOUNDRY_FILE, a.foundry)
     if a.comfy:
