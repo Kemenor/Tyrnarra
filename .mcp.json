@@ -3,6 +3,10 @@
     "wonderdraft": {
       "command": "bash",
       "args": ["tools/wonderdraft/mcp-server.sh"]
+    },
+    "kartofuchs": {
+      "command": "bash",
+      "args": ["tools/kartofuchs/mcp-server.sh"]
     }
   }
 }

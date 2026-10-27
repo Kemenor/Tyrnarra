@@ -9,6 +9,8 @@ also has the GPU) or the laptop. The site itself needs none of it.
 | `foundryExport/` | quest spec → Foundry import macro, token baking, art upload | python (pillow, numpy), rsync + ssh |
 | `imageGen/` | NPC / scene art via ComfyUI (`npc-art` skill), Midjourney inbox | the desktop's ComfyUI (local there, over the LAN from the laptop) |
 | `wonderdraft/` | the map source tooling (`wonderdraft-map` skill) | its own venv; the map file in the sync folder |
+| `kartofuchs/` | starts the Kartofuchs MCP server (`kartofuchs` in `.mcp.json`) from the Kartofuchs checkout | the checkout (`$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`), Node 26, the Kartofuchs app running with the map open |
+| `region-pages/` | regenerates a region's published page from its lore files | python |
 | `map-library/`, `token-frames/` | shared map catalogues and token frames | nothing extra |
 | `keys/` | gitignored paid-service keys, linked from the sync folder | see [`keys/README.md`](keys/README.md) |
 

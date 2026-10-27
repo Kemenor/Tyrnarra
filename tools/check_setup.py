@@ -194,6 +194,15 @@ def main():
                "on the desktop npc_art starts it itself; from the laptop start run-comfyui-lan.sh "
                "on the desktop and set --comfy http://<desktop-ip>:8188")
 
+    print("Kartofuchs (the map editor and its MCP server)")
+    kf = os.path.expanduser(os.environ.get("KARTOFUCHS", "~/Documents/fuchs/kartofuchs"))
+    report(os.path.isfile(os.path.join(kf, "mcp", "server.ts")) or None, f"checkout at {kf}",
+           "git clone https://github.com/Kemenor/kartofuchs (or set KARTOFUCHS), then npm install && npm run package")
+    r = subprocess.run(["node", "--version"], capture_output=True, text=True) if shutil.which("node") else None
+    major = int(r.stdout.strip().lstrip("v").split(".")[0]) if r and r.returncode == 0 else 0
+    report(major >= 26 or None, f"node {r.stdout.strip() if major else 'missing'} (the MCP server needs 26+)",
+           "brew install node")
+
     print("Databases")
     for db in ("bestiary.db", "items.db"):
         report(os.path.exists(os.path.join(HERE, "encounterBuilder", db)) or False, f"encounterBuilder/{db}",
