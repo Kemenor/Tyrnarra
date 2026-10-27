@@ -3,15 +3,13 @@
 **Picking this up? Read [STATUS.md](STATUS.md) first**: the current state, the user's decisions,
 what lives on which machine and how to work from the tower.
 
-Generates our own symbol art (trees first, then mountains) in a Tyrnarra style, with many
+Generates our own symbol art (trees, mountains and icons) in a Tyrnarra style, with many
 variants per family, to replace Wonderdraft's built-in art in `Main` (which the EULA keeps out of
-any tool of our own) and the bought packs that stood in for it. The art is made in Wonderdraft's
+any tool of our own) and the bought packs that stand in for it. The art is made in Wonderdraft's
 own pack format, so it works in Wonderdraft and in Kartofuchs, which reads the same asset folder.
-Since 2026-10-02 `build` installs straight into Fuchsbau, Kartofuchs' own pack (`art/Fuchsbau` in
-a Kartofuchs checkout); the Wonderdraft-installed "Tyrnarra" copy is gone. The pack is tried on the
-real map in Kartofuchs: import `Main.wonderdraft_map` with the "Fuchsbau" art mapping, which comes
-with Kartofuchs (see "Reviewing"). This tool only makes the art (trimmed to generation
-on 2026-09-30; the Wonderdraft swap and test tools it had are summed up under "Earlier tools").
+`build` installs straight into Fuchsbau, Kartofuchs' own pack (`art/Fuchsbau` in a Kartofuchs
+checkout). The pack is tried on the real map in Kartofuchs: import `Main.wonderdraft_map` with the
+"Fuchsbau" art mapping, which comes with Kartofuchs (see "Reviewing"). This tool only makes the art.
 
 ```
 assetgen.sh generate conifer --seeds 1-40         # tower ComfyUI -> ~/.local/share/wdmap/assetgen/conifer/<style>/raw/
@@ -26,8 +24,7 @@ levelled they look alike on the map, and mixing them adds variety. `--style ink`
 which file) and `rejects.txt` (why each other image was dropped); every raw image has a `.txt`
 with its exact prompt and settings. With `--round N` all of that goes to `<family>/round-N/`
 instead, and `build` keeps a copy of the round's sprites there (`round-N/sprites/`, so later
-rounds can be compared with it). Older rounds also hold the `compare-*.jpg` sheets of the
-removed test tool.
+rounds can be compared with it).
 
 The installed pack: `<Kartofuchs checkout>/art/Fuchsbau/sprites/<kind>/<Folder>/`, the checkout
 `$KARTOFUCHS` (default `~/Documents/fuchs/kartofuchs`). Commit the art there after a build.
@@ -45,15 +42,21 @@ The installed pack: `<Kartofuchs checkout>/art/Fuchsbau/sprites/<kind>/<Folder>/
   `birefnet.safetensors` (BiRefNet Swin-L, MIT) for the built-in RemoveBackground node; FLUX.2
   dev (GGUF Q4 + Turbo LoRA, 8 steps) for the `engine: flux` families. Also on the tower:
   Juggernaut XL, NoobAI XL, IP-Adapter for SDXL.
-- **The tower's server has two modes** (since 2026-09-27; the tower's own Claude session
-  restarts it on request, naming the mode): **sdxl** (`--cache-none --reserve-vram 2.0`, VAE on
+- **The tower's server has two modes** (the tower's own Claude session restarts it on request,
+  naming the mode): **sdxl** (`--cache-none --reserve-vram 2.0`, VAE on
   the GPU, ~5 s per SDXL image) and **flux** (the same plus `--cpu-vae`, ~2 min per FLUX image;
   the flags are npc_art's, tools/imageGen/npc_art.py `ensure_server` explains each). Switch modes
   between an SDXL phase and a FLUX phase: never mix the two engines in one server session, and
   never send FLUX to an sdxl-mode server (the GPU VAE fault can crash it). The plain server
-  without these flags ran one FLUX image and then wedged in a load `/interrupt` cannot stop.
+  without these flags runs one FLUX image and then wedges in a load `/interrupt` cannot stop.
   FLUX graphs here skip BiRefNet: the drawings come on clean white, cut locally
   (`sprites.flood_mask`).
+- **One FLUX image per graph** (`FLUX_BATCH` 1): a graph with 4 FLUX images wedges even a
+  flux-mode server (the 17 GB text encoder stays in VRAM while the 19.6 GB unet loads, RAM goes
+  to swap, no step ever samples). The client retries through the minutes the server stops
+  answering while FLUX loads (`comfy.run`/`wait`).
+- **The tower powers off** after three empty-queue checks five minutes apart: chain batches with
+  a 2 s waiter so the queue never sits empty between them.
 - `assetgen.sh` builds its own gitignored `.venv` (numpy, scipy, pillow) on first run.
 
 ## Wonderdraft's rules for pack art
@@ -72,18 +75,17 @@ The installed pack: `<Kartofuchs checkout>/art/Fuchsbau/sprites/<kind>/<Folder>/
   `draw_mode` (`sample_color` or `custom_colors`). Symbols stored in a map carry their own
   copies of radius and offset.
 - **A map loads only the packs in its `included_packs` list**; any other pack's symbols give a
-  "Missing custom assets" dialog. `wdmap` adds used packs on every save since 2026-09-26.
-- Texture paths have no extension: `user://assets/Tyrnarra/sprites/trees/Tyrnarra_Conifers/conifer_01`.
+  "Missing custom assets" dialog. `wdmap` adds used packs on every save.
+- Texture paths have no extension: `user://assets/Fuchsbau/sprites/trees/Fuchsbau_Conifers/conifer_01`.
 - **Size**: a symbol is drawn at sprite size x its `scale`. To replace a built-in family 1:1 the
-  sprite must be as big as the built-in art at scale 1. The calibration grid measures it
-  (`measure-builtins` -> builtin-sizes.json): the nine built-in `tree_xmas` are 86-206 x
+  sprite must be as big as the built-in art at scale 1. Kartofuchs' `art-sizes.json` holds those
+  sizes, measured on a calibration grid: the nine built-in `tree_xmas` are 86-206 x
   197-426 px at scale 1, area-equivalent 137 x 291, centred about 70 px above the click point,
-  radius 51. (An earlier estimate from isolated trees in an export, 180-210 x 300-415, caught only
-  the big ones.) In `Main` conifers are used at scale 0.1-0.6, so they end up 30-250 px tall.
+  radius 51. In `Main` conifers are used at scale 0.1-0.6, so they end up 30-250 px tall.
 
-## Prompting (SDXL Turbo, DreamShaper XL)
+## Prompting (SDXL Turbo, DreamShaper XL; FLUX.2)
 
-What worked and what did not, in the order we found it (2026-09-26):
+What works and what does not:
 
 1. **One subject per image, portrait 832x1216.** Each tree comes out ~1000 px tall, crisp when
    shrunk to 350. Sheets of many icons ("set of ... icons, sprite sheet") give 15-30 trees per
@@ -91,17 +93,18 @@ What worked and what did not, in the order we found it (2026-09-26):
    line joining them and often touch; negatives do not stop it at CFG 2.
 2. **Ask for the map-reading shape, not realism**: "chunky", "full rounded silhouette",
    "stylized", "thick dark outline", "bold shape readable at small size". Plain "conifer icons"
-   gave thin spiky firs that turn into noise at 20-30 px.
+   gives thin spiky firs that turn into noise at 20-30 px. At that size all styles look alike:
+   silhouette and outline matter more than style.
 3. **Ask for a light fill**: "light foliage with dark ink strokes". Wonderdraft's tint needs a
    light body; dark-filled art makes black blobs in forests and grey trees in snow.
-4. **Style words** that held: "black ink outlines with soft watercolor wash shading, hand-drawn
+4. **Style words** that hold: "black ink outlines with soft watercolor wash shading, hand-drawn
    fantasy cartography" (ink); "sepia brown ink linework with light wash shading, antique map
    illustration" (sepia). Colour does not matter (everything becomes greyscale).
-5. **Failed styles**: "woodcut / linocut" gives solid black silhouettes whatever else the prompt
-   says (inverting them does not help). "Gilded manuscript" got no gold, "colored pencil"
-   barely any pencil; 4 of 8 styles collapsed into the same clip-art fir. SDXL Turbo falls back
-   to a default look when a style word is weak.
-6. **"antique"/"old map" pulls in parchment backgrounds and fake captions.** Harmless now (the
+5. **Failing styles**: "woodcut / linocut" gives solid black silhouettes whatever else the prompt
+   says (inverting them does not help). "Gilded manuscript" gets no gold, "colored pencil"
+   barely any pencil: SDXL Turbo falls back to a default look (the same clip-art fir) when a
+   style word is weak.
+6. **"antique"/"old map" pulls in parchment backgrounds and fake captions.** Harmless (the
    background removal drops them); keep "plain white background" in the prompt anyway.
 7. **The model draws ground anyway** (tufts, rocks, a shadow ellipse) about half the time.
    `sprites.cut` trims it: below the crown the width narrows to the trunk, and the first row
@@ -109,16 +112,44 @@ What worked and what did not, in the order we found it (2026-09-26):
 8. Images with background trees or a second object are rejected ("extra objects"), not repaired.
 9. **Shape variants** in the subject (`variants` in the family recipe, one per seed in turn) give a
    forest variety without changing the look: "tall narrow spruce", "broad old fir", "young small
-   fir", "pine with drooping boughs", "lopsided windswept fir". Without them every tree came out
-   the same fir and a dense forest read as a repeated arrowhead texture.
+   fir", "pine with drooping boughs", "lopsided windswept fir". Without them every tree comes out
+   the same fir and a dense forest reads as a repeated arrowhead texture.
 10. Ink and sepia converge after greyscale and levels; they are kept as two prompt styles feeding
    one pack, not as two looks.
 11. **SDXL Turbo has shapes it will not draw.** A broadleaf tree with a short trunk under a wide
-   crown was one: every wording gave long trunks, roots or tree-of-life circles (Results log,
-   broadleaf trials). "Oak" alone summons the tree-of-life; "icon" summons a round badge.
-12. **FLUX.2 takes plain sentences and follows them**: shape, proportions, what to leave out
+   crown is one: every wording gives long trunks, roots or tree-of-life circles, and "cloud-shaped
+   crown" pulls in clouds and mountains behind the tree. "Oak" alone summons the tree-of-life;
+   "icon" summons a round badge. Weeping willows come out upright, dunes as desert photos or
+   abstract swooshes. Those are FLUX families (`engine`). Bold separate shapes are out of reach
+   too: "chunky, bold simple shape" still gives fine engraved firs, so the bold look comes from
+   the finishing ring (see Finishing).
+12. **Terrain has its own frame and style** (`line`, `LINE_FRAME`): the bare "minimalist black
+   line drawing of one single mountain ... sketch" draws clean single mountains, where the
+   watercolour wording draws engravings and whole landscapes and a "fantasy cartography" tail
+   brings the hatching back. "Steep sides" keeps a range clean; "flat bottom edge" draws base
+   lines that stripe it. Hills want "one smooth curved outline like a gentle dome ... nothing on
+   top", with houses and roads in the negative.
+13. **FLUX.2 takes plain sentences and follows them**: shape, proportions, what to leave out
    ("no roots, no visible branches, no ground"). No negative prompt. Keep place names out of
    the prompt (it would letter them); describe what is seen.
+14. **Spell the shape out**, on either engine: short names give curls and swooshes for dunes,
+   where "sand dune seen from the side: a smooth crescent-shaped mound" gives dunes. The same
+   goes for flat umbrella crowns on savanna trees and a flat walled town's wall as "one flat band
+   across the bottom" (`FLAT_ITEMS`).
+15. **FLUX draws whatever the style names, on every item.** A style that mentions smoke and lava
+   makes every volcano active, the "dormant" ones included; flames or red roofs and domes put
+   flames on sites with no fire and red-domed houses behind camps and standing stones; ribbons
+   and lanterns turn every holy tree into a shrine tree. Give those items a style that leaves the
+   words out (`quiet` volcanoes, `landmark`, `gianttree`, `site2`, where each site names its own
+   red part), or say it outright ("only tents, no buildings"). FLUX still adds a small red roof
+   here and there.
+16. **Stray words get drawn too**: "moon-white" puts a crescent moon on the Soul Tree's trunk,
+   "like a sticker" draws a sticker with a white border and a drop shadow (the `bold` wording
+   says no border), and "heather" draws plain bushes with no flowers. A plain statue reads as a
+   real religious figure, so the landmark statue is a hooded, faceless guardian. Some shrines and
+   chapels come with a Christian cross (the user's call, see STATUS.md).
+17. **FLUX varies little across seeds** within one variant (the mesas come out nearly alike), so a
+   family's variety comes from its variant list.
 
 ## Finishing (sprites.py, constants in recipes.py)
 
@@ -134,16 +165,17 @@ What worked and what did not, in the order we found it (2026-09-26):
   scale: the drawn ink lines are too fine to survive shrinking to 20-30 px. Measured on the densest
   conifer forest (mean grey / share of pixels darker than 50, Wonderdraft's own: 86 / 32%):
   6 px ring 55 / 59% on the inner forest (a dark scale pattern), no ring 95 / 5% (a flat green mass),
-  **1 px ring 86 / 27%** (matches). On a jagged conifer even 3 px of ring covered a quarter of the
-  sprite. `test` prints these two numbers for every run.
-- Inner fade (`INNER_LIGHTEN`, since round 8): strokes deeper than `INNER_EDGE` px inside the
+  **1 px ring 86 / 27%** (matches). On a jagged conifer even 3 px of ring covers a quarter of the
+  sprite.
+- Inner fade (`INNER_LIGHTEN`): strokes deeper than `INNER_EDGE` px inside the
   shape fade toward white. It pays for a thick ring: a 4 px ring with a 0.7 fade keeps the
   forest's brightness near the built-ins' while every tree reads as a pale shape with a dark rim,
-  where a thick ring alone made the dark scale pattern of round 4 and a thin ring an even mat.
+  where a thick ring alone makes a dark scale pattern and a thin ring an even mat.
 - `INK_THIN` (max filter on luminance) makes dark strokes narrower; it barely changes the result
   once the ring is thin, and 3 px and more blobs the lines. Off by default. Negative, it makes
   them bolder (a min filter at full size): -2 with half the inner fade keeps a conifer's branch
-  tiers, which the 0.7 fade had erased from the densest drawings (tree review, conifer round 13).
+  tiers, which the 0.7 fade erases from the densest drawings (mushrooms take -1 for their dots
+  and gills).
 - Rejected before finishing: proportions outside the family's `aspect`, cut-outs smaller than
   0.8x the delivery height (they would be enlarged), a base (bottom 4%) wider than 55% of the
   crown (ground or bushes left), fill ratio outside 0.3-0.8, anything touching the image edge.
@@ -151,6 +183,28 @@ What worked and what did not, in the order we found it (2026-09-26):
   a flat inside (share of dark stroke pixels inside the shape at a third of the size, the ring
   left out) or a grey haze round the outline (soft-alpha pixels per opaque pixel). Scored by
   `sprites.finish_look`; the build finishes every usable drawing once more for it.
+- **Bold trees** (`BOLD_TREE`, the FLUX `bold` style: broadleaves, willows, jungle, swamp
+  trees, shrubs) take no inner fade: the drawing's few thick strokes are the texture, as on
+  Wonderdraft's own oaks and willows. Fine leaf marks blur into a muddy speckle at map size, and
+  a lighter levels target turns the bold strokes grey.
+- **Bare crowns and fronds** (dead trees, palms): `ink_alpha` (the paper between branches turns
+  transparent), a 1 px ring and no inner fade; the mask and a thick ring fill them into leafy
+  blobs and round discs.
+- **Clumps** (`shape: clump`: bamboo, swamp trees, the flat 2D settlements) keep every sizeable
+  piece, where the one-object check would reject a clump of stalks or a row of houses.
+- **Terrain** keeps its ridge lines: the tree finish's inner fade erases them and its ring closes
+  the base. Peaks and fells take `BOLD_TERRAIN` (6 px ring, 0.7 fade; mesas and pillars 0.3,
+  which keeps the rock layers), hills `HILL_FINISH`, dunes `TERRAIN_FINISH`. `BASE_FADE` fades
+  the bottom and `SKIRT_TRIM` cuts the flanks lower than 20% of the peak, so drawn base lines and
+  long low flanks do not line up into stripes across a range. Hills fade their whole lower half:
+  Wonderdraft's hills are an upper arc, and a closed base loop shows as a circle in a range.
+- **Open drawings need a body.** `fill_under` (hills) makes everything under the top contour
+  solid paper; without it about half the hills are hollow. `fill_enclosed` (pillars) turns a
+  pixel opaque only with drawing above it, left and right of it, since `fill_under` builds
+  straight-sided boxes under pine crowns and faint background peaks. `drop_thin` (14 px; peaks,
+  fells, mesas) takes strokes thinner than 28 px off the silhouette: bold base strokes reaching
+  out of the body would each get the ring and hang under it like claws, and filling under them
+  builds a box-shaped plinth.
 
 ## Reviewing
 
@@ -168,345 +222,20 @@ What worked and what did not, in the order we found it (2026-09-26):
   and mountains (Kartofuchs' `server/artmap.ts`, `BASE_RULES`); other packs import as they are.
   The measured built-in sizes live in Kartofuchs' data folder (`art-sizes.json`), not in a repo.
 - **Size**: the built-in conifers measured on the calibration grid are smaller than our `size`
-  (area of 137 x 291 at scale 1 against 185 x 330). Placed at the built-ins' scales, as in all
-  rounds, our conifers are about 1.4x their linear size; fitted to Dotty's pines they come out
+  (area of 137 x 291 at scale 1 against 185 x 330). Placed at the built-ins' scales, our
+  conifers are about 1.4x their linear size; fitted to Dotty's pines they come out
   at 0.7x that scale. Both read well; `size` also sets the delivered resolution.
-
-## Earlier tools (removed 2026-09-30)
-
-Until Kartofuchs could swap art on import, this tool tested the pack in Wonderdraft itself. What
-they did, for reading the results log:
-
-- **`test <family> --round N`** swapped one family into a copy of Main's Base view and exported
-  it with Wonderdraft (`wdtest.py`); `--offline` drew the same here (`render.py`: the Empty
-  export as ground, straight-alpha mipmaps, an empirical edge fit `EDGE_COVER` 0.5,
-  `COLOUR_POWER` 2 that matched real exports within a few points). Compare sheets
-  (`compare-*.jpg`) and `lineup.jpg` in the round folders come from it.
-- **`builtin-refs`** exported every built-in texture Main used drawn white and black on an empty
-  Base and recovered them as private greyscale reference sprites for the lineups (never
-  published; deleted with the tool).
-- **`measure-builtins`** measured each built-in texture's drawn size, foot and middle at scale 1
-  from a calibration grid exported with and without it (isolated symbols in the dense real map
-  did not work: stroke art falls apart into single strokes). These numbers are Kartofuchs'
-  `art-sizes.json` now.
-- **`packswap`** (2026-09-26) swapped Main's built-ins for the bought packs (Dotty, Moulk) by
-  `pack-swap.json`; applied to Main that day and swapped back on 2026-09-27 at the owner's wish.
-- **`fullswap`** put the whole pack into a copy of the Base (each built-in family by a mapping
-  table, the bought jungle and bamboo, every BSG city cluster by the icon rules) and compared it
-  with the Base region by region. Its family table became Kartofuchs' "Tyrnarra" art mapping;
-  the city-icon swap was left out there.
-
-## Results log
-
-- **Round 1-2** (styleboard, 8 styles on sprite sheets): shortlisted ink, woodcut, sepia. On the
-  map at 20-30 px all styles looked alike; silhouette and outline matter more than style.
-- **Round 3** (chunky prompt, outline, sized to measured 350 px): at the right size the forest
-  density matched Wonderdraft's. Woodcut dropped.
-- **Wonderdraft test 1** (ink and sepia, 20 variants each, from sheets): works end to end. Forests
-  read darker and denser than Wonderdraft's, snow trees grey instead of white, full-size trees
-  soft, a light halo inside the outline, stray ground and small side trees on a few.
-- **Round 4** (this tool): one tree per portrait image, ground trim, defringe, TARGET_MEAN 190,
-  6 px outline, sized to 350 px height. In Wonderdraft: snow trees now white and crisp at full
-  size. But about 1.5x too wide (single trees came out broader, and only height was matched),
-  and dense forests too dark: every tree's closed thick outline made a dark scale pattern.
-- **Round 5**: sized by area (185 x 330 at scale 1, keeping each tree's proportions), 3 px
-  outline (covers the cut seam only; the drawn ink line carries the edge), TARGET_MEAN 195,
-  six shape variants, ink and sepia pooled, 32 variants installed from 158 usable of 200.
-  In Wonderdraft: size right, full-size trees good, forests still too dark (thick drawn lines plus
-  a 3 px ring that covered 25% of each sprite).
-- **Round 6**: edge colour cleaned instead of eroded, ring down to 1 px (tested 0 and 1): the
-  forest matches Wonderdraft's brightness and darkness numbers and reads as separate trees; snow
-  trees clean. New subject wording with less ink ("pale foliage drawn with a few confident ink
-  lines, lots of white paper showing, minimal shading": ink share 45% -> 33%) for seeds 101-200.
-- **Round 7** (2026-09-27; seeds 101-200 with that wording; first test fitted to `Main`'s Dotty
-  pines, compared offline): 121 usable of 200 (34 wide base, 45 proportions, mostly broad
-  trees just under 1.3), 40 installed. Worked: the raw art is lighter (share darker than 80:
-  ink 51% -> 44%, sepia 66% -> 54%), the "drooping boughs" variant adds two umbrella-crowned
-  pines for variety, and full-size trees are far crisper than Dotty's (its pine sprites are
-  ~180 px tall and blur where `Main` enlarges them up to scale 3.4). Did not change: levels to
-  `TARGET_MEAN` even out the lighter drawing, so at map size round 7 looks like round 6
-  (densest patch offline: Dotty 89/30%, round 6 89/25%, round 7 87/27%). Open: style. Dotty's
-  pines read as separate bold shapes with thick outlines; ours are fine engraved firs that read
-  as texture at 20-40 px. "Chunky, bold simple shape" in the prompt does not get SDXL Turbo
-  there; a bolder look needs a different prompt or a stronger finishing outline.
-  Real export (2026-09-27, placed as the built-ins were, like rounds 1-6): built-ins 86/32%,
-  Dotty 87/35%, round 6 86/27%, round 7 84/30%.
-- **Rounds 8-10** (finishing only, same 40 cut-outs as round 7, `build --set`): a thicker ring
-  plus `INNER_LIGHTEN`, which fades strokes deep inside the shape toward white, so each tree
-  reads as a pale shape with a dark rim. Round 8: ring 3 px, fade 0.5. Round 9: ring 4 px, fade
-  0.7. Round 10: ring 2 px, fade 0.35. The ring and the fade cancel in brightness (offline all
-  86/29-30%) while the forest turns from an even mat into separate trees.
-- **Round 9 chosen and installed** (overnight decision, 2026-09-27): real export 81/39%, a
-  little darker than the built-ins' 86/32% and read as distinct treetops with dark gaps, like the
-  built-ins and Dotty; at full size a bold ink rim with a clean pale inside. Its settings are the
-  new defaults in recipes.py (`OUTLINE` 4, `INNER_LIGHTEN` 0.7).
-- **Round 11 installed** (overnight decision): round 9's finishing on all 400 conifer images
-  (seeds 1-200, both wordings, ink and sepia): 279 usable, **64 installed** for more variety.
-  Real export 83/37%, reads like round 9. The installed conifer set since 2026-09-27.
-- **Broadleaf prompt trials** (2026-09-27, SDXL Turbo, square canvas): the conifer wording gave
-  tall naturalistic watercolour trees with long trunks and visible branching, taller than wide.
-  "Cloud-shaped crown" pulled in clouds and mountains behind the tree; "icon" put it in a
-  circular badge; "coloring book" and "oak" drew tree-of-life oaks with roots, in circles;
-  "storybook cartoon tree" still gave a big trunk and roots. SDXL Turbo will not draw a short
-  trunk under a wide crown. **FLUX.2** did exactly as asked on the first image (a clean ink map
-  tree, puffy round crown, short trunk, bold outline, pale fill, soft grey wash on one side), so
-  broadleaf and jungle are FLUX families (`engine`). But the tower's LAN server wedged on the
-  second FLUX job (README: Setup).
-- **SDXL families, round 1-2** (2026-09-27 early morning, after the server restart with the
-  FLUX flags: ~22 s per image with the VAE on the CPU; quality pass of 6 images each first):
-  - pine: 33 of 48 usable, installed; umbrella pines, cedars, windswept pines. Densest built-in
-    cedar patch offline 111/18% vs built-ins 113/17%.
-  - bamboo: 1 of 48 as a tree (a clump is many stalks: "extra objects", "wide base", low fill);
-    as `shape: clump` 44 usable, 40 installed. Reads like Main's bamboo (112/13% vs 112/12%).
-  - deadtree: 0 of 48 (roots as wide as the crown, sparse fill); with `base_max` and a lower
-    fill 17, but the mask and the 4 px ring filled every crown into a leafy blob. With
-    `ink_alpha` (alpha from the ink: the paper between branches turns transparent), a 1 px ring
-    and no inner fade: 18 bare trees, installed.
-  - palm: 29 usable, but the mask and ring made the fronds round discs; with `ink_alpha` and a
-    thin ring 24 palms that read as palms, installed.
-  - willow: SDXL drew upright trees for "weeping willow" (1 in 6 wept): moved to FLUX.
-  - savanna, desert, fungal: good single subjects in the quality pass (acacias read as ordinary
-    trees; cacti and mushrooms clear); their full runs were cut short by the FLUX wedge and rerun.
-  - peaks, fells, hills: the watercolour wording drew engravings and whole landscapes; the
-    bare "minimalist black line drawing of one single mountain ... sketch" drew clean single
-    mountains (the "fantasy cartography" tail brought the hatching back, so terrain has its own
-    frame and style). Tree finishing flattened them (the inner fade erased ridge lines, the ring
-    closed the base): terrain keeps its inner lines with a 2 px ring. In a dense range the drawn
-    base lines and long low flanks lined up into horizontal stripes: `BASE_FADE` fades the
-    bottom 15%, `SKIRT_TRIM` cuts the flanks lower than 20% of the peak. Peaks round 3: 28
-    installed (offline 103/13% vs built-ins 100/26%, lighter line art); fells 21; hills 14
-    (132/9% vs 134/8%). A few faint stripes remain where a drawing's base line sits above the
-    fade; dropping "flat bottom edge" from the wording is the next try.
-  - dunes: every SDXL wording gave desert photos or abstract swooshes: moved to FLUX.
-- **Fine-tuning round** (2026-09-27 midday; SDXL in sdxl mode, then FLUX in flux mode):
-  - peaks round 4 (seeds 101-148, "steep sides" instead of "flat bottom edge"): the stripes
-    across ranges are gone; 31 installed.
-  - hills round 2 ("one smooth curved outline like a gentle dome ... nothing on top", houses and
-    roads negative, fill down to 0.04 since Wonderdraft's own hills are little more than an
-    arc): 29 clean dome outlines (round 1: 14 mixed); one scribble excluded.
-  - cacti round 3 (six shapes, the old near-identical barrel seeds excluded): 47 saguaros,
-    prickly pears and groups; one group came out in flower pots.
-  - savanna round 3 (flat umbrella crowns spelled out): 48 flat-topped acacias and baobabs.
-  - broadleaves and jungle: the maple-leaf and leaf-bush drawings excluded by seed (39, 29).
-  - icons (FLUX, "roofs and domes red; no flags or banners"): settlements 33 (all 18 kinds,
-    the two monasteries from round 1 with flags since both new ones touched the edge),
-    god-cities 26 (two per city). The icon preview fits by area now: wide raised views next to
-    BSG's tall fronts.
-  - dunes round 3 (the side-view crescent shape spelled out for FLUX): all 24 read as dunes
-    with a crest line and a shaded steep face (round 1-2: curls and swooshes).
-- **Whole-map test and fixes** (2026-09-27 afternoon, `fullswap`, compared with the built-ins
-  after `Main` went back to them):
-  - Myrkono's forest came out white: the inked and hatched pines (and toon palms) are
-    full-colour built-ins without a ground sample, so our greyscale art in their place was
-    never tinted. Swapped symbols without a sample now get the ground colour under them.
-  - Peaks were small, busy and light next to Wonderdraft's bold peaks: round 7 (6 px ring,
-    inner fade 0.7, sized by area instead of width) reads like the built-ins' bold outlines;
-    fells the same. Densest built-in peak patch: 100/26% built-in, 112/16% ours.
-  - Hills drew closed base loops that showed as circles in a range: round 4 fades the lower
-    half out (Wonderdraft's hills are an upper arc), 4 px ring; 133/8% vs 134/8%.
-  - Two black circles stayed in the hills: the exclude list named the wrong seeds, so the empty
-    ellipse (134) and the volcano seen from above (122) went in and two good hills stayed out.
-    Round 5 (seeds 101-148, exclusions checked against the raw drawings; 113 and 147 also out,
-    both standing on a full ellipse): 25 hills, no circles in the offline render of the range.
-    Check an exclusion against `raw/<seed>.png`, never against a position on the sheet.
-  - Matching the built-ins closely: conifers 86/33% vs 86/32%, oaks 87/20% vs 88/18%, willows,
-    dunes. The jungle has no built-in; ours reads much lighter than Dotty's kapoks (91/13% vs
-    68/41%).
-  - The first automatic export of the test map timed out: Wonderdraft's first load of the new
-    pack images outlasts 15 s. With a 120 s load wait it runs through (178 s in all). (Later
-    found: the failures were a locked screen swallowing the keystrokes; 30 s is enough.)
-- **Tree review** (2026-09-27 evening; the user went through every tree sprite on the gallery
-  sheets: `gallery/NN-<family>.jpg`, grouped by the variant each was prompted as):
-  - "Wonderdraft has stronger lines in the trees." Its oaks and willows are a flat pale fill
-    with a few thick curved brush strokes; ours lost their inner lines to the 0.7 inner fade.
-  - Conifers: some looked empty (15, 34, 38, 49; six more like them). The densest drawings lost
-    their branch tiers; round 13 (inner fade 0.35, `INK_THIN` -2, same 64 picks) keeps them,
-    82/35% offline vs the built-ins' 86/32%. Installed.
-  - Broadleaves, willows, jungle "mostly green without texture": no inner fade and bolder
-    strokes brought FLUX's small leaf marks back (broadleaf rounds 3-5), but at map size they
-    blur into a muddy speckle (72/36% vs 88/18%). The drawings need fewer, bigger strokes:
-    a new FLUX style `bold` asks for Wonderdraft's look (thick outline, a few big rounded
-    shapes with thick curved strokes where they overlap, flat pale fill). "Like a sticker"
-    drew stickers with a white border and a drop shadow, so the wording now says no border.
-  - `bold` in full (FLUX, 2026-09-27 18:16-21:37, 94 images at ~140 s): broadleaves 40, willows
-    24, jungle 30; dropped by hand broadleaf 37 (a blob with a flat cut-off bottom) and jungle 23
-    (a giant leaf bush). Finishing `BOLD_TREE` (no inner fade; the drawing's strokes are the
-    texture). Installed: broadleaves round 8 (38), willows round 4 (24), jungle round 4 (29).
-    Offline: willows 121/12% (built-ins 129/9%), jungle 74/23% (was 81/16%; Dotty's kapoks
-    68/41%), oaks 72/37% like Dotty's oaks (73/36%). A lighter levels target (228, 238) got the
-    oaks to round 2's brightness but turned the bold strokes grey, the opposite of the review.
-  - The offline renderer draws this oak forest about 10 grey darker than Wonderdraft: round 2
-    renders 77/33% here and measured 87/20% in the real export (the forest's other built-in
-    trees come out as blurry dark blobs). Compare offline rounds with each other, not with the
-    built-ins' export column, and confirm with a real export.
-  - Mushrooms "a touch more texture": round 3, inner fade 0.35 and `INK_THIN` -1 (caps' dots and
-    gills back), same 40 picks. Installed.
-  - Dropped by hand: pine 13 (a watercolour stain came with it), bamboo 16, 19, 46 (forest
-    scenes cut into loose stalks; rebuilt from exactly the 37 reviewed seeds, since an exclusion
-    reshuffles the picks), dead trees 21 and 41 (hollow stumps drawn in 3D).
-  - Liked as they are: pines, palms, savanna, cacti, the rest of the bamboo and dead trees.
-  - Real export of the whole pack (`fullswap`, 88 s with a 30 s load wait), vs the built-ins:
-    conifers 84/35% (86/32%), oaks 78/31% (88/18%: the bold strokes read darker, by design),
-    willows 128/9% (129/9%), hills 134/8% (134/8%, no circles), dunes 148/3% (152/1%), jungle
-    77/27% (Dotty's kapoks 68/41%; was 91/13%). The user: "these look by tree already better".
-  - The user settled the style: bold lines on a flat pale fill ("this is good and the style we
-    want to go for"), but "conifer still has some less textured ones that jump out". Scored all
-    279 usable conifers after finishing: the flat ones kept 4-9% dark strokes inside at map
-    scale (median 13%), and some sepia ones carried a grey haze round the outline. Round 17
-    keeps texture >= 13% and haze < 0.06 (77 pass), 64 installed; offline 81/34% (round 13:
-    82/35%). The young compact firs were all among the soft ones, so that variant is gone.
-- **Galleries for review** (2026-09-27 night): `assetgen.sh gallery` for every family, the
-  mountains and icons reviewed next. Seen while making them: about half the hills are hollow
-  (the flood mask leaves an open drawing's inside transparent), the others filled; some peaks
-  and fells trail heavy dark base strokes (peaks 02, 14, 27; fells 03, 04, 19, 20).
-- **Mountain and icon review** (2026-09-27 night, on the galleries): "fix the hollow and the base".
-  - Hollow hills: the mask of an open line drawing sees only the strokes, so about half the
-    hills were transparent inside. `fill_under` (hills round 6) makes everything under the top
-    contour solid paper: 25 even mounds, 131/10% offline (round 5: 132/10%).
-  - Dark base strokes: bold strokes reaching out of a peak's or fell's body each got the 6 px
-    ring and hung under it like claws. Filling under them built a box-shaped plinth; `drop_thin`
-    (14 px) takes strokes thinner than 28 px off the silhouette and keeps the body as drawn.
-    Peaks round 8 (30; seed 144 had too little body left), fells round 3 (18; seeds 4, 6, 29
-    were built of those strokes). Real export: peaks 115/14% (built-ins 100/26%), hills 133/8%
-    (134/8%), clean ranges. The offline render drew stepped blocks under the filled hills that
-    the real export does not show: its soft-alpha handling, not the art.
-  - Icons: "they look good, and should probably be under 2.5D": the raised-view folders are
-    `Tyrnarra_2.5D_Settlements` and `Tyrnarra_2.5D_God_Cities` now; `settlements_2d`, the
-    same kinds as flat straight-on symbols ("just to see"), goes to `Tyrnarra_2D_Settlements`.
-    Lograth "might need some work": its aerial lines came out as a tent-like sheet; new wording
-    (seeds 203+) spells out the twin seats across one square, the bridging hall of courts and
-    thin cables with gondolas.
-  - Wonderdraft had rewritten both icon folders' `.wonderdraft_symbols` into one entry per symbol
-    with draw mode `normal` (raw red/green/blue instead of the chosen colours): icon folders take
-    per-symbol entries, like BSG's. The installer writes them now (`custom_colors`, radius 3/8
-    of the shorter side, Wonderdraft's own measure); the installed files were repaired.
-  - Lograth round 3 (seeds 203, 216, 229, 242 on the new wording): all four show the throne-hall
-    and the scales-temple across one square, joined by colonnades, cables between the towers;
-    203 and 229 installed, the other twelve god-cities rebuilt from their installed seeds.
-  - `settlements_2d` round 1 (seeds 1-19, one per kind plus a second village): flat skylines
-    and fronts, like the symbols on old maps; the walled town and walled city still came out
-    raised. A flat village is a row of separate houses, which the one-object check rejected:
-    the family keeps every sizeable piece (`shape: clump`). 19 installed in
-    `Tyrnarra_2D_Settlements`, "just to see".
-  - Paused ~30 min for the user's wake-on-LAN test of the tower; its Claude session now brings
-    ComfyUI up after a wake.
-- **Night of 2026-09-28** (the user asleep: "do two per kind and flatter walled towns", then "feel
-  free to do any yet missing assets during the nights, I think for example volcanic was missing"):
-  - `settlements_2d` round 2 (seeds 20-41): a second drawing of every kind. The walled town and
-    walled city spelled out as "the wall one flat band across the bottom" (`FLAT_ITEMS`, used by
-    the 2D family only, so the item names stay) came out flat; the raised round-1 ones (3, 5) are
-    excluded. 35 installed, two per kind but the camp (both new camps ran off the image edge).
-  - New families queued on the tower (FLUX, one after another): `volcanoes` (recolourable,
-    lava in the accent channel, style `lava`), `swamp` trees, `mesas`, `shrubs`.
-  - `volcanoes` round 1 (seeds 1-30, 6 variants): all 30 usable and installed in
-    `Tyrnarra_Volcanoes` (custom colours: lines, rock and smoke, lava). Bold outlines, pale rock,
-    lava streams and a smoke plume; about Dotty's volcanoes' size. FLUX drew every variant
-    active, the "dormant" ones included: a quiet volcano needs its own wording.
-  - `swamp` round 1 (seeds 1-30, 5 variants): moss-hung trees, gnarled leaning trunks, mangroves
-    on stilt roots and bald cypresses read as a swamp set; the young mangroves (seed % 5 == 4)
-    drew big single leaves across the crown, like the maples, and are excluded. 24 installed
-    in `Tyrnarra_Swamp_Trees`, about Dotty's willows' size (kept whole: `shape: clump`).
-  - `mesas` round 2 (seeds 1-25, 5 variants: mesa, butte, pair of mesas, rock arch, spire
-    cluster): clean line drawings, but FLUX drew each variant nearly alike across seeds. The
-    peaks' finish (inner fade 0.7) washed out the rock layers; 0.3 keeps them. Seed 21 dropped
-    (a notch in its base). 24 installed in `Tyrnarra_Mesas`, about Dotty's mesas' size.
-  - `shrubs` round 1 (seeds 1-24, 4 variants): round bushes, low wide shrubs and open twiggy
-    scrub, all 24 usable and installed in `Tyrnarra_Shrubs` (about a third of a broadleaf's
-    height at scale 1). The "heather" drew plain bushes, no flowers.
-  - Quiet volcanoes: "extinct ... no smoke, no fire, no lava" still drew smoke and lava, since the
-    family's style names them; a second style `quiet` (rock and outlines only) drew five clean
-    extinct cones (seeds 35-59; the same seeds in `lava` are excluded). Volcanoes round 2: 35.
-  - Camps: the style's "roofs and domes painted red" put red-domed stone houses behind every
-    camp's tents. "Only tents, no buildings" fixed the 2.5D camp (seed 214, tent pavilions around
-    a fire; 196 ran off the edge), which replaces the old one; the flat 2D camps kept their domed
-    houses (seeds 70, 88 installed as the most compact; 106, 124 no better).
-  - `landmarks` round 1 (seeds 1-24, style `icon`): lighthouses, shrines and hilltop beacons came
-    out right (6 installed in `Tyrnarra_2.5D_Landmarks`). The style's roofs and domes built red-
-    domed houses around the standing stones, the obelisk, the bridge and the arch, and set the
-    statue on a whole castle; the statue also looked like a real religious figure. A style
-    `landmark` ("a single structure standing alone: no houses, towers, domes or walls around it")
-    and a hooded, faceless guardian statue redraw those five (seeds 104-127).
-  - `landmarks` round 2: the five redrawn in style `landmark` stand alone (a stone circle, an
-    obelisk, a hooded guardian statue, a three-arch bridge, a rune arch); FLUX still adds a small
-    red roof here and there (a gatehouse on the bridge, a little tower behind a statue). 16
-    installed, two per kind. Some shrines and chapels (here and in the settlements) carry a
-    Christian cross; Tyrnarra has its own gods, left for the user to decide.
-  - Real export the morning after (`fullswap`, 87 s): conifers 81/38% (built-ins 86/32%; the
-    textured round 17 reads a touch darker), oaks 78/31% (88/18%), peaks 116/13% (100/26%), hills
-    133/8% (134/8%), dunes 148/3% (152/1%), jungle 77/27% (Dotty 68/41%), willows 128/9% (129/9%),
-    cities 150/9% (156/7%; 76 icons swapped). The new families are not in Main, so not in it.
-  - Follow-ups queued behind the first night queue: five quiet volcanoes (the last variant
-    reworded "extinct ... no smoke, no fire, no lava"), two compact flat camps (`FLAT_ITEMS`),
-    and a new `landmarks` family (standing stones, obelisk, lighthouse, shrine, statue, stone
-    bridge, beacon, portal arch; 2.5D recolourable icons, three drawings each).
-- **Karst pillars** (2026-09-29/30; the user: "around the air monastery ... the tall mountains
-  that Wonderdraft has ... now are quite wide at the base"): the ring around the Air Monastery
-  is Wonderdraft's Tang Dynasty mountains (141 in Main), tall narrow crags. `fullswap` put our
-  peaks in their place by height, and they spread into one wide mass. New family `pillars`
-  (FLUX, seeds 1-30: rounded karst pillars, pairs, craggy towers, spire clusters, grooved karst
-  peaks, leaning needles with a pine), mapped to the Tang mountains by area.
-  - `fill_under` built straight-sided boxes under the pines' crowns and faint background peaks;
-    without it the open-based drawings were hollow. `fill_enclosed` (a pixel turns opaque only
-    with drawing above it, left and right of it) fills the pillars and leaves those gaps clear.
-  - Seeds 12, 16, 24, 28 dropped (a faint background peak filled into a tab beside the pillar;
-    checked against the raw drawings). Round 1: 24 installed in `Tyrnarra_Pillars`.
-  - Offline, the Air Monastery ring reads as a ring of narrow pillars again (164/8% vs the
-    built-ins' 189/6%). At map scale the flat pine crowns on the needles read like mushroom caps.
-  - Round 2: the user removed the rounded pillars with a pine and the pine-crowned needles (both
-    pine variants, out of the variant list too). 16 installed: pairs, craggy towers, spire
-    clusters, grooved karst peaks.
-  - Round 3: 16 more of the four kept kinds (seeds 31-46, all clean, no background peaks): 32
-    installed.
-  - Real export (`fullswap`, 86 s): all 141 Tang mountains became pillars, and the Air Monastery
-    ring reads like Wonderdraft's again (narrow pillars, the ring's inside open, the lone crag a
-    slim pillar). The square blocks of the offline render do not show: its soft-alpha handling.
-  - Reached the tower over the user's VPN: its firewall let only the home LAN reach ComfyUI, so
-    this batch ran through an SSH tunnel via the home LAN; the user then allowed the VPN range.
-- **Holy mountains and more** (2026-10-02; the user: "holy mountains. Like Merkavar needs a single
-  high peak that is considered absolutely holy", then fruit trees, holy and giant trees, the Soul
-  Tree, and special sites from a lore survey):
-  - `holy_mountains` (FLUX, style `snowpeak`, recolourable: lines, rock, snow): lone snow-capped
-    peaks with zigzag pilgrim stairs, double summits, a few with a summit shrine; Helgafjall's
-    look first. FLUX paints the snow pale blue (saturation mostly 0.06-0.33), under the icons'
-    accent threshold 0.28: `CC_ACCENT_SAT` 0.14 for this family sorts it into colour 3 while
-    the grey rock stays body. 25 of 25 installed in `Fuchsbau_Holy_Mountains`.
-  - Queued the same night: `fruit_trees` (apple, cherry blossom, orange, pear, olive, plum;
-    recolourable, fruit in colour 3), `holy_trees` (giant pine, the pale tree, sacred oak with
-    ribbons, world tree, cedar with shrine, lantern tree), `named_trees` (the Soul Tree),
-    `special_sites` (flat 2D, the user's pick: mothership fragment, Dragon's Reach, wardstones,
-    dungeon gate, dead lair, Sickwell, Stitchery, Sutarri, Scar of Aeris, Twin Cities, Orratzak,
-    Bridgelands, web-hold, and from the seed bank the hanging city and the dead palace).
-  - Results: `fruit_trees` 26 (apples, pears, cherry blossom take colour 3; plums and olives came
-    out dark, so their fruit goes with the lines). `holy_trees` 30, but the style's "ribbons,
-    lanterns or a shrine roof" turned every one into a shrine-tree with red ribbons and lanterns,
-    the giant pine and the pale tree included. `named_trees` 4 Soul Trees from 10 (pale, wide,
-    roots on rock; FLUX added a small crescent moon on most trunks, from "moon-white").
-    `special_sites` 32 (two per item): the "fire, glow ... painted red" style put flames on
-    items that have none (the Orratzak's needles, the Bridgelands, the gate, the wardstones),
-    and several came out raised rather than flat (crater, Bridgelands, Sickwell, web-hold).
-  - Fixes (2026-10-03): the ribboned holy trees kept as `shrine_trees` (`Fuchsbau_Shrine_Trees`,
-    same 30); new `giant_trees` (style `gianttree`, "no ribbons, lanterns, shrines or offerings,
-    nothing red"): 24 of 24, plain pines, firs, cedars, oaks and pale trees. `special_sites`
-    round 2 (style `site2`: each item names its own red part, eye level, no top view): flames
-    only where canon has fire, flatter gate, Sickwell and web-hold; the crater still slightly
-    raised. The flat Bridgelands row is about 4x as wide as tall, so the aspect floor is 0.2.
-    30 installed (two per item, the Bridgelands included).
-  - The tower now powers off after three empty-queue checks five minutes apart; batches are
-    chained with a 2 s waiter so the queue never sits empty between them.
-- **FLUX on the tower** (2026-09-27): a graph with 4 FLUX images wedged the server even with
-  the flags: the 17 GB text encoder stayed in VRAM while the 19.6 GB unet loaded, RAM went to
-  swap, no step ever sampled (diagnosed by the tower's Claude session). Rules since: one FLUX
-  image per graph (`FLUX_BATCH` 1), never SDXL and FLUX in one server session (restart between
-  engines), and the client retries through the minutes the server stops answering while FLUX
-  loads (`comfy.run`/`wait`).
+- **Excluding a drawing**: check an exclusion against `raw/<seed>.png`, never against a position
+  on a sheet. An exclusion reshuffles the picks, so to keep a reviewed set, rebuild from exactly
+  its seeds (`build --seeds`).
 
 ## Families
 
-`recipes.FAMILIES` holds one entry per family; `generate`, `build` and `test` take its name.
-All generated and installed on 2026-09-27, then fine-tuned the same day (570 sprites; counts
-in the table; details in the Results log). Left for later: dead trees are faint at map size,
-fells are pointier than "rounded", one cactus group sits in flower pots, the camp's tents have
-red dome tops, and the monastery icons still carry the old red flags.
+`recipes.FAMILIES` holds one entry per family; `generate` and `build` take its name, and its
+comments say why each setting is what it is. Counts are in the table. Known weak spots: dead
+trees are faint at map size, fells are pointier than "rounded", one cactus group sits in flower
+pots, the flat 2D camps show domed houses behind the tents, and the monastery icons carry red
+flags.
 
 | Family | Engine | Built-in yardstick | Bought pack equivalent | Pack folder |
 |---|---|---|---|---|
@@ -523,6 +252,10 @@ red dome tops, and the monastery icons still carry the old red flags.
 | fungal (giant mushrooms) | SDXL | none | (vs `Dotty_Mushrooms`) | `Fuchsbau_Mushrooms` (40) |
 | swamp (cypress, mangrove, moss) | FLUX | none | (vs `Dotty_Willows`) | `Fuchsbau_Swamp_Trees` (24) |
 | shrubs (bush, shrub, scrub) | FLUX | none | (vs `Dotty_Oaks`) | `Fuchsbau_Shrubs` (24) |
+| fruit_trees (apple, cherry, orange, pear, olive, plum; recolourable) | FLUX | none | none | `Fuchsbau_Fruit_Trees` (26) |
+| shrine_trees (ribbons, lanterns, shrine roofs) | FLUX | none | none | `Fuchsbau_Shrine_Trees` (30) |
+| giant_trees (pines, firs, cedars, oaks, pale trees) | FLUX | none | none | `Fuchsbau_Giant_Trees` (24) |
+| named_trees (the Soul Tree) | FLUX | none | none | `Fuchsbau_Named_Trees` (4) |
 | peaks | SDXL | `playful_jagged_peaks` (fit, width) | Moulk `mountains sample 1` | `Fuchsbau_Peaks` (round 8, 30) |
 | fells (rounded mountains) | SDXL | `playful_rounded_mountains` | Moulk `high hills 2` | `Fuchsbau_Fells` (round 3, 18) |
 | hills | SDXL | `playful_hiils` | Moulk `medium hills 1` | `Fuchsbau_Hills` (round 6, 25) |
@@ -530,16 +263,18 @@ red dome tops, and the monastery icons still carry the old red flags.
 | mesas (mesa, butte, arch, spires) | FLUX | none | (vs `Dotty_Mesas`) | `Fuchsbau_Mesas` (24) |
 | pillars (karst, Tang-style) | FLUX | Tang Dynasty `mountains` (area) | `Dotty_Pillar_Mts_Big` | `Fuchsbau_Pillars` (32) |
 | volcanoes (recolourable) | FLUX | none | (vs `Dotty_Volcanoes`) | `Fuchsbau_Volcanoes` (35) |
+| holy_mountains (recolourable) | FLUX | none | none | `Fuchsbau_Holy_Mountains` (25) |
 | settlements (18 kinds) | FLUX | none | (vs BSG icons) | `Fuchsbau_2.5D_Settlements` (33) |
 | god_cities (13) | FLUX | none | (vs BSG icons) | `Fuchsbau_2.5D_God_Cities` (26) |
 | settlements_2d (18 kinds, flat) | FLUX | none | (vs BSG icons) | `Fuchsbau_2D_Settlements` (36) |
 | landmarks (8 kinds) | FLUX | none | (vs `Dotty_Mixed_Structures`) | `Fuchsbau_2.5D_Landmarks` (16) |
+| special_sites (flat, two per site) | FLUX | none | none | `Fuchsbau_2D_Special_Sites` (30) |
 
 - **Built-in yardstick "fit"** (`place: fit`): each symbol covers the measured drawn size of
   the built-in texture that stood there (area for trees, width for mountains, which are built
   side by side), so a family's delivered `size` only sets its resolution and hand-placed size.
   Mountains are delivered at 3x the built-ins' size (131 x 92 for jagged peaks) to stay sharp
-  at `Main`'s scales. Conifers keep the rounds-1-11 placement (the built-in's scale as is).
+  at `Main`'s scales. Conifers keep the built-in's scale as is.
 - **SDXL or FLUX**: SDXL Turbo (5 s per image) where its drawings work; FLUX.2 (about 4 min
   per image) where the shape matters and SDXL ignores it. `generate --engine` overrides. Each
   family also has the other engine's prompt, so switching needs no new wording.
@@ -551,8 +286,13 @@ red dome tops, and the monastery icons still carry the old red flags.
   empty, so the same three colours work for both. The icon prompt asks for flat red roofs on
   cream walls so the sorting is easy. Families with `items` build named icons (`village_1`,
   `village_2`, ...): up to `per_item` usable drawings of each.
+- **Accent or body** is decided by saturation (`CC_ACCENT_SAT`, 0.28). FLUX paints snow pale blue,
+  so the holy mountains sort at 0.14 to give the snow colour 3; plums and olives come out dark, so
+  their fruit goes with the lines. Icon folders take one `.wonderdraft_symbols` entry per symbol,
+  which the installer writes (`custom_colors`, radius 3/8 of the shorter side, Wonderdraft's own
+  measure).
 - **Icon file names are a contract**: Kartofuchs places settlement icons by role, guessed from
-  the names in `Fuchsbau_2.5D_Settlements` (2026-09-27; `Fuchsbau_2D_Settlements` uses the same): `capital_*`, `castle_*`, `fortress_*` =
+  the names in `Fuchsbau_2.5D_Settlements` (`Fuchsbau_2D_Settlements` uses the same): `capital_*`, `castle_*`, `fortress_*` =
   capital; `city_*`, `walled_city_*` = city; `town_*`, `walled_town_*` = town; `village_*`,
   `hamlet_*` = village. Folders with "god" in the name are skipped, so the god-cities stay
   one-offs. Keep the `{item}_{n}` names and these item words. Top-down houses for its town
@@ -581,19 +321,19 @@ assetgen.sh generate god_cities --seeds 1-52     # 4 drawings per city
 
 Seeds cycle through a family's variants (or items) as seed % count, so a range that is a
 multiple of the count gives each the same number of drawings. If an SDXL family comes out
-wrong in the lineup, `generate --engine flux` on new seeds uses its FLUX wording.
+wrong on the gallery, `generate --engine flux` on new seeds uses its FLUX wording.
 
 ## Built-in art in Main
 
 By use (13,128 symbols):
 
-Sizes measured on the calibration grid (2026-09-26; now Kartofuchs' art-sizes.json; area-equivalent at scale 1, drawn
+Sizes measured on the calibration grid (Kartofuchs' `art-sizes.json`; area-equivalent at scale 1, drawn
 foot, sprite centre relative to the click point), e.g. oak 353 x 301, foot 24, centre -130,
 height/width 0.74-1.12; hazel 214 x 233, foot 26, centre -90, 0.83-1.71.
 
 | Uses | Built-in family | | Uses | Built-in family |
 |---:|---|---|---:|---|
-| 4893 | trees/_hd_christmas (conifer, in progress) | | 279 | mountains/playful_hiils |
+| 4893 | trees/_hd_christmas (conifer) | | 279 | mountains/playful_hiils |
 | 1518 | trees/_hd_oak | | 250 | trees/_hd_pine |
 | 1082 | mountains/playful_jagged_peaks | | 215 | packs/Tang Dynasty/mountains/hills |
 | 945 | trees/_hd_hazel | | 171 | packs/Arabia/mountains/sand_dunes_small |

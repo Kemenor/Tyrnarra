@@ -232,7 +232,7 @@ def main(argv=None):
                            help="override a finishing constant of recipes.py, e.g. OUTLINE=3 (repeatable)")
             s.add_argument("--no-install", action="store_true",
                            help="with --round: write the sprites to the round's folder only, not the pack")
-            s.add_argument("--round", type=int, help="round number: keep this round's files apart (README: Results log)")
+            s.add_argument("--round", type=int, help="round number: keep this round's files apart")
     a = p.parse_args(argv)
     a.fn(a)
 

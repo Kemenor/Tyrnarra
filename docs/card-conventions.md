@@ -111,9 +111,9 @@ No `→`, no `is-link`, no hover transform. Inline anchors are permitted in a pl
 
 When a clickable card's body would naturally cross-reference another page, **drop the inline anchor and use plain `<b>`**. The destination is usually reachable through the card's main link anyway (e.g. the Myrkono ancestry-card links to the Myrkono domain page, which itself links to Myrria, so dropping the inline *Myrria* link costs one extra click).
 
-### History note: the CSS-pseudo trick
+### The CSS-pseudo trick (not used)
 
-It is technically possible to keep inner anchors clickable while making the whole card clickable, using a `::before` pseudo-element on the title's anchor with `position: absolute; inset: 0` to cover the card, plus `pointer-events: none` on the body and `pointer-events: auto` on inner anchors to re-enable them. This was tried once on ancestries.html and reverted. Reasons:
+It is technically possible to keep inner anchors clickable while making the whole card clickable, using a `::before` pseudo-element on the title's anchor with `position: absolute; inset: 0` to cover the card, plus `pointer-events: none` on the body and `pointer-events: auto` on inner anchors to re-enable them. The site avoids it:
 
 - Mixed-affordance card is confusing visually and for screen readers.
 - Touch hit-targets crowd: most of the card goes to A, narrow inline strips go to B; mis-taps on mobile.
@@ -135,7 +135,7 @@ If you're converting a non-clickable card to clickable, the per-card accent colo
 
 ### Don't add a redundant *Page →* tag pill
 
-Earlier patterns sometimes used `<span class="subregion-tag">Page →</span>` in the tags row of clickable cards. The `→` in the title carries the affordance; the tag duplicates it and clutters the tag row. Drop those pills when you find them. (Done for the three historical hub cards.)
+A `<span class="subregion-tag">Page →</span>` in the tags row of a clickable card duplicates the `→` in the title, which already carries the affordance, and clutters the tag row. Leave it out, and drop any you find.
 
 ### `<a>` cannot contain block-level interactive content
 

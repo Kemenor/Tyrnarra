@@ -12,9 +12,8 @@ Recreate a lost key from the dashboard below.
 | `falai.key` | `FAL_KEY` | fal.ai fallback renderer (`tools/imageGen/fal_art.py`) | fal.ai dashboard → Keys |
 
 Primary renders are local (ComfyUI on the desktop, `tools/imageGen/`) and need
-no key. The old `forge_key.txt` (The Forge asset upload) is retired: Foundry is
-self-hosted now and art goes up with `tools/foundryExport/upload_foundry.py`
-over ssh.
+no key, and art goes up to the self-hosted Foundry with
+`tools/foundryExport/upload_foundry.py` over ssh.
 
 **Addresses are not keys and do not live here.** The Foundry server's ssh
 address and the ComfyUI desktop's URL go in `~/.config/tyrnarra/` on each

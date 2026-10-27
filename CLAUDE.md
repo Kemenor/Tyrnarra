@@ -110,7 +110,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     accessibility.md                   ← WCAG 2.1 AA contract: contrast palette, focus styles, ARIA
     card-conventions.md                ← clickable-card pattern: whole-card-link + ` →`, no inner anchors
     campaign-layer.md                  ← architecture of the campaign layers (GM /gm-notes/ + player /player-campaigns/)
-    ancestry-conventions.md            ← how to write a Tyrnarra ancestry (feeling-first; from the 2026 rebalance)
+    ancestry-conventions.md            ← how to write a Tyrnarra ancestry (feeling-first)
     god-city-seeds.md                  ← locked seeds + build roster of the thirteen god-cities (pass complete)
 
   .github/workflows/pages.yml          ← deploy: upload published/ → GitHub Pages (Actions)
@@ -274,7 +274,7 @@ This project is designed so a fresh Claude session can pick it up with no prior 
 1. **Read `CLAUDE.md` first**: naming rule, folder layout, style guide, drafting protocol (including the pre-read rule and the affirmative-prose rule).
 2. **Skim `docs/site-inventory.md`** to know what's already published, what's stub, and (in the *Lore files* section at the top) which `lore/` file covers which topics. The pre-read rule routes through this table.
 3. **Read the relevant `lore/` files end-to-end** before drafting content that touches their canon; the *Lore files* section tells you which.
-4. **Check `docs/open-threads.md`** if the user references an ongoing canon question; it lists the genuinely pending threads (unanswered canon, blocked builds, reworks, publishing debts) with status and where each lives. Story-paced enrichment of canon-complete material lives in `docs/deepening-ideas.md`; pending map-label work in `docs/map-todo.md`. **Parked topics stay silent:** anything under *§ Parked* in `open-threads.md` is never raised, suggested, or brought into a design unless the GM brings it up first. Above all **the Red Empire, its home continent, the Iron Tide, and the Menagerie** (parked 2026-09-28; existing canon stands, nothing new is written, and they are not mentioned as neighbours, threats, or consequences in any build).
+4. **Check `docs/open-threads.md`** if the user references an ongoing canon question; it lists the genuinely pending threads (unanswered canon, blocked builds, reworks, publishing debts) with status and where each lives. Story-paced enrichment of canon-complete material lives in `docs/deepening-ideas.md`; pending map-label work in `docs/map-todo.md`. **Parked topics stay silent:** anything under *§ Parked* in `open-threads.md` is never raised, suggested, or brought into a design unless the GM brings it up first. Above all **the Red Empire, its home continent, the Iron Tide, and the Menagerie** (existing canon stands, nothing new is written, and they are not mentioned as neighbours, threats, or consequences in any build).
 5. **For GM table / quest work**, read [`docs/campaign-layer.md`](docs/campaign-layer.md) and drive the relevant workflow skill (`quest-workflow`, `pf2e-encounter`, `pf2e-loot`); that material lives in the campaign layers, never on the worldbuilding pages.
 
 Don't rely on the user's in-session memory file for canon; that's a summary, not the source. The lore files win.

@@ -195,16 +195,12 @@ just your stuff with `--source homebrew`. No schema changes needed.
 
 ## Letting Claude Code drive it
 
-Two options, in order of how I'd phase them:
+Claude Code drives the CLI through the `pf2e-encounter` and `pf2e-loot` skills
+(`.claude/skills/`): search by theme, hand-pick creatures, build to budget, then
+read the source JSON for the chosen few. The CLI stdout is enough, so there is no
+MCP wrap; `search()`/`build()` stay plain importable functions in `encounter.py`.
 
-1. **CLI first (now).** Add a short note to `CLAUDE.md` pointing at the two
-   commands above. Claude Code can run `search`/`build`, read the output, and
-   iterate with you. Lowest friction; nail the schema and feel here.
-2. **MCP later.** Once the query shapes feel right, wrap `search()` and
-   `build()` (already plain functions in `encounter.py`) as MCP tools so Claude
-   gets structured returns instead of parsing stdout.
-
-## Notes / next steps
+## Notes
 
 - The encounter budget tables (GM Core) live at the top of `encounter.py` —
   trivial/low/moderate/severe/extreme and the relative-level XP table. Exact, no
@@ -216,8 +212,4 @@ Two options, in order of how I'd phase them:
   actor's `spellcastingEntry` items).
 - `value` is stored on weaknesses/resistances/speeds, exposed as the
   `--weak-min` / `--resist-min` / `--move-min` magnitude floors.
-- The tool is meant to be driven by Claude Code (it will become a skill): search
-  by theme, hand-pick creatures, build to budget, then read the source JSON for
-  the chosen few. An MCP wrap is unnecessary for that (the CLI stdout is enough);
-  `search()`/`build()` stay importable in case it ever helps.
 ```

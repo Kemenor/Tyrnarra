@@ -9,7 +9,7 @@ How to write the prompt text in a `<slug>.set.json`. The renderers are covered
 elsewhere (`tools/imageGen/README.md`); this is about the words.
 
 One spec feeds all three tiers, so it is written for the strictest reader:
-**Midjourney**, the primary pipeline as of 2026-09-13.
+**Midjourney**, the primary pipeline.
 
 ---
 
@@ -147,7 +147,7 @@ gone.
 The `--no` went the same way. `skeleton, corpse, undead` was right while the
 model was inventing him from words, and wrong once it was copying a face:
 suppressing *undead* and *corpse* strips the deathliness that makes him work.
-His spec now carries no negative at all.
+His spec carries no negative at all.
 
 The rule: **a defence protects the shot that has nothing else to go on.** It
 belongs to a text-to-image anchor and nowhere else. Once an anchor exists and is

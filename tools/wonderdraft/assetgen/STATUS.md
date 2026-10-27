@@ -1,16 +1,15 @@
 # assetgen: status and handoff
 
 Where the art pack (made for Tyrnarra, shipped with Kartofuchs as Fuchsbau) stands, what the user has decided, and how to pick the work up in a
-new session on either machine. The full record (every round, lesson and number) is
+new session on either machine. The full reference (families, rules, commands) is
 [README.md](README.md); this file is the short version to read first. Update it at the end of
 every working session.
 
-## State (2026-10-03)
+## State
 
 - **Pack:** 30 folders, 885 sprites, in Kartofuchs as its own pack Fuchsbau (`art/Fuchsbau` in
-  the Kartofuchs checkout `$KARTOFUCHS`). `build` installs there since 2026-10-02; commit the art
-  in Kartofuchs after a build. The Wonderdraft-installed "Tyrnarra" copy and its Proton mirror
-  are gone (identical to Fuchsbau when trashed). Counts per folder: the families table in the README.
+  the Kartofuchs checkout `$KARTOFUCHS`). `build` installs there; commit the art in Kartofuchs
+  after a build. Counts per folder: the families table in the README.
 - **Trees:** conifers, pines, broadleaves, willows, jungle, palms, bamboo, savanna, cacti, dead
   trees, giant mushrooms, swamp trees, shrubs.
 - **Terrain:** peaks, fells, hills, dunes, mesas, karst pillars (for Main's Tang Dynasty mountains);
@@ -21,11 +20,9 @@ every working session.
   - `Fuchsbau_2.5D_God_Cities`: two per god-city.
   - `Fuchsbau_2.5D_Landmarks`: standing stones, obelisk, lighthouse, shrine, statue, bridge,
     beacon, portal arch.
-- **Last real Wonderdraft test** (the old fullswap, 2026-09-30): every region read close to the
-  built-ins, the Air Monastery's karst ring included (numbers in the README results log).
-- **Trimmed to generation (2026-09-30, the user):** the Wonderdraft swap and test tools (packswap,
-  fullswap, the test command, built-in reference renders) are gone. The pack is tried on a real
-  map in Kartofuchs: import `Main.wonderdraft_map` with the "Fuchsbau" art mapping (Map ▸ Import,
+- **Fit:** on Main every region reads close to the built-ins, the Air Monastery's karst ring
+  included.
+- **Trying the pack:** this tool only generates. The pack is tried on a real map in Kartofuchs: import `Main.wonderdraft_map` with the "Fuchsbau" art mapping (Map ▸ Import,
   or Map ▸ Swap art on an open map). That mapping comes with Kartofuchs (`server/artmap.ts`,
   `BASE_RULES`) and covers only Wonderdraft's built-in trees and mountains; other packs' art
   imports as it is. The measured built-in sizes live in Kartofuchs' data folder
@@ -47,9 +44,8 @@ every working session.
   - The crosses on some shrines and chapels are fine for now.
   - The young compact firs come later: they dropped out in conifer round 17, and a new batch
     needs SDXL.
-- **Shared with Kartofuchs (2026-10-01, the user):** the whole pack, god cities included, ships with
-  Kartofuchs as its base pack "Fuchsbau" (art/Fuchsbau). Since 2026-10-02 (the user) it lives only
-  there: `build` installs into it, and the Wonderdraft "Tyrnarra" pack was deleted.
+- **Shared with Kartofuchs:** the whole pack, god cities included, ships with Kartofuchs as its
+  base pack "Fuchsbau" (art/Fuchsbau) and lives only there: `build` installs into it.
 - **Known leftovers:** the flat 2D camps still show domed houses behind the tents.
 
 ## Where things live
@@ -68,7 +64,7 @@ every working session.
 - **Starting a session:** `git pull` in Kartofuchs (the pack), and check that Syncthing shows the
   folder up to date.
 - **Ending a session:** commit and push the pack in Kartofuchs.
-- **One machine at a time** still helps: two machines writing the same file before it syncs
+- **One machine at a time** helps: two machines writing the same file before it syncs
   leave a `.sync-conflict-...` copy.
 
 **Working from the tower:** after `git pull` (here and in Kartofuchs), a session there can generate
@@ -116,4 +112,5 @@ gallery [families]                           # numbered review sheets per family
   names and personal details.
 - Stage explicit paths only; commit and push per finished step, to `main`.
 - The icon file names (`{item}_{n}`) are a contract with Kartofuchs' role guessing (README).
-- Log every round in the README results log, and update this file when the state changes.
+- Fold each round's lessons into the README as rules (its numbers go in the commit message), and
+  update this file when the state changes.

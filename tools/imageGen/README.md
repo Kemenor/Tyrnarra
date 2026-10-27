@@ -9,17 +9,9 @@ scene set → upscale. Kept separate from
 [`../foundryExport/`](../foundryExport/README.md) (which gets art *into*
 Foundry); this folder only **makes** the images.
 
-History: this folder previously held the fal.ai (`gen_portraits.py`,
-`gen_npc_set.py`) and Midjourney (`mj_prompts.py`) cloud tiers. Retired
-June 2026 — git history has them if ever needed. The committed art they
-produced stays where it is. A hosted tier came **back** in September 2026 as
-[`fal_art.py`](#fal_artpy--the-hosted-renderer), on a different footing: it
-shares `npc_art.py`'s spec and prompt builder instead of being a parallel
-implementation that drifts.
-
 ## `npc_art.py` — the renderer
 
-One Claude-operated module, FLUX.2-only (GGUF Q4 + Turbo LoRA, ~1-2 min/image
+One Claude-operated module, FLUX.2-only (GGUF Q4 + Turbo LoRA, ~4 min/image
 warm). Consistency via ReferenceLatent: the chosen variation anchors the full
 shot; the full shot anchors every ref-mode shot.
 
@@ -30,9 +22,9 @@ cost is that ComfyUI only fills `/history` when the whole prompt finishes, so
 nothing is written to disk until the pass ends: a 4-variation batch produces
 zero files and then four at once. `run_graph` prints an elapsed-time heartbeat
 every 30 s so the wait is legible. **Do not "fix" this by queueing one prompt
-per image** (tried, 2026-09: it swap-thrashed and was materially slower), and
+per image** (it swap-thrashes and is materially slower), and
 do not run two render drivers at once for the same reason. House styles: **painterly**
-(default) and **inked**, both approved against the Midjourney-era reference
+(default) and **inked**, both approved against the Midjourney reference
 art; a spec can also carry a literal style string.
 
 ```bash
@@ -64,8 +56,7 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
   it needs `podman exec comfyui pkill -f main.py`; a host-side `pkill -f
   main.py` matches only the wrapper and leaves the real Python alive holding
   ~50 GB with the API down. `restart_server()` does this correctly and verifies
-  the API is actually gone before restarting (fixed 2026-09, after the host-only
-  version made a wedged server strictly worse).
+  the API is actually gone before restarting.
 - **One driver at a time.** `run_graph` preflights the queue and says so if it
   is busy, and the progress heartbeat reports **queue position**, so a pass that
   is parked behind a wedged prompt says `NOT STARTED, queued behind 1 job(s)`
@@ -74,13 +65,13 @@ python3 npc_art.py frame      --name <frame-stem> --desc "ring description"
 
 ## `scene_art.py` — scenes with no character
 
-Plain text-to-image on the same FLUX.2 graph as `npc_art.py`, for region-page sketches and other places with no NPC in them (added 2026-10-22 for the Red Dominion sketchbook). A scene spec (`scenes/<name>.json`) holds a literal `style` string, a `size`, and `scenes` as `key: what a camera would see`; every chosen scene renders `--count` variations in one ComfyUI prompt.
+Plain text-to-image on the same FLUX.2 graph as `npc_art.py`, for region-page sketches and other places with no NPC in them. A scene spec (`scenes/<name>.json`) holds a literal `style` string, a `size`, and `scenes` as `key: what a camera would see`; every chosen scene renders `--count` variations in one ComfyUI prompt.
 
 ```bash
 python3 scene_art.py --spec scenes/red-dominion-sketchbook.json --count 2 [--only s2-ship-town] [--api http://HOST:8188]
 ```
 
-`--api` drives a ComfyUI already running on another machine (the tower, over the LAN); the script never starts a remote server. Keep the address out of committed files. **Lessons from the first sketch (2026-10-22):** FLUX defaults to a watercolour wash, so a line sketch has to say *black ink only, monochrome, no colour*; it draws "a ship on a building" upright as if in dry dock, so an upturned-hull roof has to be described as *an overturned boat on a beach, keel uppermost, no deck, no masts*. Do not say *in a sketchbook*: Midjourney then draws a photo of a sketchbook (the gutter, the page shadow, a grey cast); say *flat scan of the drawing alone* and add `--no photo, sketchbook, page shadow, gutter`. Prompts with people need *plain old-fashioned working clothes, no modern clothing, no backpacks*, or the figures come out as modern tourists. A render that stalls at tens of seconds per step has run out of VRAM on the host (another GPU app, an emulator): interrupt it and render elsewhere.
+`--api` drives a ComfyUI already running on another machine (the tower, over the LAN); the script never starts a remote server. Keep the address out of committed files. **Prompt rules for sketches:** FLUX defaults to a watercolour wash, so a line sketch has to say *black ink only, monochrome, no colour*; it draws "a ship on a building" upright as if in dry dock, so an upturned-hull roof has to be described as *an overturned boat on a beach, keel uppermost, no deck, no masts*. Do not say *in a sketchbook*: Midjourney then draws a photo of a sketchbook (the gutter, the page shadow, a grey cast); say *flat scan of the drawing alone* and add `--no photo, sketchbook, page shadow, gutter`. Prompts with people need *plain old-fashioned working clothes, no modern clothing, no backpacks*, or the figures come out as modern tourists. A render that stalls at tens of seconds per step has run out of VRAM on the host (another GPU app, an emulator): interrupt it and render elsewhere.
 
 ## `ancestries.json` — what a PF2e ancestry looks like
 
@@ -119,7 +110,7 @@ Archives of Nethys. Clear them as they are confirmed.
 
 ## `fal_art.py` — the hosted renderer
 
-The cloud sibling of `npc_art.py`, added September 2026. **Same spec file, same
+The cloud sibling of `npc_art.py`. **Same spec file, same
 prompts, same stage names**; the render happens on fal.ai. Use it when the local
 box is busy or wedged, when a set is wanted without a 12-minute model load, or
 to reach a model the local install does not have.
@@ -172,7 +163,7 @@ Key: `FAL_KEY` in the environment, else `../keys/falai.key`. The whole
 `tools/keys/` directory is gitignored (plus a `**/*.key` glob), so a key dropped
 in there cannot be committed whatever it is named.
 
-Validated 2026-09-13: `models`, `--dry-run` prompt assembly (byte-identical to
+Validated: `models`, `--dry-run` prompt assembly (byte-identical to
 the local builder), and full three-model bake-offs end to end (auth, queue
 polling, data-URI references, download, spec write-back).
 
@@ -181,27 +172,27 @@ polling, data-URI references, download, spec write-back).
 This is the constraint that shapes which renderer a given NPC goes to.
 
 - **The image check**, over `image_urls` on an *edit* call, refuses reference
-  pictures of visibly injured characters. Sera Vance's anchor (a beaten
-  prisoner, blood on her shirt) came back `422 content_policy_violation` with
-  `loc: ["body","image_urls"]`. Caevan's unbloodied anchor went through the
+  pictures of visibly injured characters. An anchor of a beaten prisoner with
+  blood on her shirt comes back `422 content_policy_violation` with
+  `loc: ["body","image_urls"]`, while an unbloodied anchor goes through the
   identical code path with a 1.8 MB data URI and no complaint, so it is the
   picture's content, not the transport, the payload size, or the C2PA metadata
   FLUX.2 embeds. **`enable_safety_checker: false` governs this one**, and it is
   on (i.e. checking disabled) for FLUX.2 in `BACKENDS` by GM decision.
 - **The prompt check**, over the edit call's prompt text, is **separate and has
-  no flag**. With the safety checker already disabled, Odo Mast's shots still
-  came back 422 with `loc: ["body","prompt"]`: his wardrobe is written in dried
-  blood, and the words alone are enough. Note the asymmetry: the *same* blood
-  text passed on the text-to-image anchor, so the edit endpoint screens prompts
-  harder than t2i does.
+  no flag**. With the safety checker already disabled, a wardrobe written in
+  dried blood still comes back 422 with `loc: ["body","prompt"]`: the words
+  alone are enough. Note the asymmetry: the *same* blood text passes on the
+  text-to-image anchor, so the edit endpoint screens prompts harder than t2i
+  does.
 
-**Seedream 4 refused nothing.** Odo Mast rendered his full three-shot set there,
-blood-writing and all, while FLUX.2 refused two of three. Combined with the style
-result below, that is the reason Seedream is the default.
+**Seedream refuses none of this.** It renders the blood-written set that FLUX.2
+refuses two shots of. Together with the style result below, that is the reason
+Seedream is the default.
 
 So the routing rule is: **Seedream for almost everything; the local renderer for
 anything Seedream also refuses** (`npc_art.py` has no checker at all). A refused
-shot no longer kills the pass, so a partial set comes back with a line naming
+shot does not kill the pass, so a partial set comes back with a line naming
 what to re-render locally.
 
 `_summarise()` exists for this: fal replays the whole request in the error body,
@@ -212,55 +203,53 @@ problems with different remedies.
 ### The reference governs identity, the framing governs composition
 
 An edit call inherits the **reference image's composition** unless told not to.
-That is why a portrait shot whose framing already said *"head and upper chest
-filling the frame"* kept coming back as the anchor's three-quarter body: the
-words described the crop, but nothing overrode what the reference showed.
+A portrait shot whose framing says *"head and upper chest filling the frame"*
+still comes back as the anchor's three-quarter body: the words describe the
+crop, but nothing overrides what the reference shows.
 
-Writing stronger framing prose does not fix it. Tested on Odo Mast 2026-09-13:
-the wording had to explicitly contradict the reference before the crop moved. So
-`RECOMPOSE` is appended to **every ref-mode shot**, saying the reference is for
-identity only and the framing overrides how it is cropped, posed and staged. The
-unmodified spec then produced a correct head-and-shoulders portrait.
+Writing stronger framing prose does not fix it: the wording has to explicitly
+contradict the reference before the crop moves. So `RECOMPOSE` is appended to
+**every ref-mode shot**, saying the reference is for identity only and the
+framing overrides how it is cropped, posed and staged. With it, an unmodified
+spec produces a correct head-and-shoulders portrait.
 
 It goes on every ref shot rather than only tight ones, because a scene shot is a
 recomposition too. **Specs need no change**; do not hand-write crop overrides
 into `framing` and do not "fix" a loose crop by moving a portrait to `mode:
 text`, which returns a different person.
 
-### House style: `digital` (2026-09-13)
+### House style: `digital`
 
-`--style digital` (in `STYLE_OVERRIDES`, an overlay on `npc_art.STYLES` so the
-other session's `npc_art.py` stays untouched). Stylised digital painting, crisp
+`--style digital` (in `STYLE_OVERRIDES`, an overlay on `npc_art.STYLES`, which
+stays untouched). Stylised digital painting, crisp
 clean rendering, confident linework, cel-influenced shading, muted palette,
 uncluttered background, with explicit negatives against oil/canvas/photographic
 texture.
 
-It replaces the older `painterly` oil language, which existed mainly to drag
-FLUX.2 off photorealism and pulled the look further into smeared oils than
+It takes the place of the `painterly` oil language, which exists mainly to drag
+FLUX.2 off photorealism and pulls the look further into smeared oils than
 wanted. Crisper is explicitly fine; the ceiling is a confident digital
 illustration, not an oil painting.
 
-### Model results, 2026-09-13
+### Model choice
 
-**Seedream 4.5 is the house model.** Across the four-NPC trial (Caevan the
-Vishkanya, Odo Mast the kitsune, Aldous the hovering revenant butler, Sera Vance
-the orc) it refused nothing, held identity through the reference chain, matched
-the `digital` brief, kept the `seed` input, and returned **3072×4096** for a flat
-$0.04. Sera is the proof: FLUX.2 refused her outright, and 4.5 rendered her
-correctly, as a woman, which FLUX.2 had also got wrong. It handles awkward
-specifics unprompted too: Odo's blood-written sleeves, Aldous's feet dissolving
-where he hovers clear of the floor.
+**Seedream 4.5 is the house model.** It refuses nothing, holds identity through
+the reference chain, matches the `digital` brief, keeps the `seed` input, and
+returns **3072×4096** for a flat $0.04. It renders the injured characters FLUX.2
+refuses, gets a woman right where FLUX.2 gets her wrong, and handles awkward
+specifics unprompted: blood-written sleeves, a hovering revenant's feet
+dissolving clear of the floor.
 
-Seedream 4 stays wired: same character, half the wall time, a quarter of the
-pixels, a penny cheaper. FLUX.2 stays as the second opinion, crisp and clean
-under `digital` but flatter, greyer, 768×1024, and it renders ancestry markers
-(Caevan's jewel-toned scaling) as plain grey. Both rejected models are described
+Seedream 4 is wired too: same character, half the wall time, a quarter of the
+pixels, a penny cheaper. FLUX.2 is the second opinion, crisp and clean under
+`digital` but flatter, greyer, 768×1024, and it renders ancestry markers (a
+Vishkanya's jewel-toned scaling) as plain grey. Both rejected models are described
 in the `BACKENDS` comments with the reasons.
 
 Sample set: `~/Documents/tyrnarra-art-trials/seedream45-bakeoff-2026-09-13/`
 (kept outside the repo: trial art, not approved art).
 
-### Speed, measured 2026-09-13
+### Speed
 
 | | per shot | 3-shot set |
 |---|---|---|
@@ -298,11 +287,11 @@ click the image you want and hit **save** in the panel.
 
 ### Do not use Omni Reference on V8.2
 
-`--oref` still appears on older jobs and still works, but **a prompt carrying
-`--oref` renders in V7.** The anchor would come back as 8.2 and the ref shots as
-7, with nothing in the UI saying so, and the set would quietly fail to match.
+`--oref` still works, but **a prompt carrying `--oref` renders in V7.** The
+anchor comes back as 8.2 and the ref shots as 7, with nothing in the UI saying
+so, and the set quietly fails to match.
 
-The **Edit Model** replaced it in V8.2, absorbing Omni Reference, Character
+V8.2's **Edit Model** takes its place, absorbing Omni Reference, Character
 Reference and Retexture. It takes up to 4 reference images, reached by Quick
 Edit on an image, dragging into the prompt bar, the Edit tab, or `--edit <url>`.
 Attaching offers three roles: *Attach to prompt* (the `--oref` successor, and
@@ -311,25 +300,25 @@ the one this flow wants), *Style reference*, and *Image Prompts*.
 ### Ref-shot prompts are compact, deliberately
 
 Midjourney shows a **"Long Prompt"** warning past roughly 150 words. Measured by
-bisection on the live prompt bar (2026-09-13): 148 words is clean, 152 warns.
+bisection on the live prompt bar: 148 words is clean, 152 warns.
 
 **A ref shot's prompt is its framing and nothing else.** The attached image is
 the identity, so everything that restates the identity is dead weight:
 
 - `character` + `wardrobe`, which `npc_art.prompt_for` repeats in every shot.
   Right for fal, whose edit endpoint leans on the words; redundant here, and it
-  was most of a 175-word prompt.
+  is most of a ~175-word prompt.
 - `npc_art.KEEP` ("keep the exact same character…"), which restates what
   attaching a reference already means.
-- The recompose line. **Note this one was empirical on fal, not decorative:**
-  without it, FLUX and Seedream returned the anchor's three-quarter body for a
-  portrait that asked for head-and-shoulders. Midjourney's Edit Model is
+- The recompose line. **Note this one is empirical on fal, not decorative:**
+  without it, FLUX and Seedream return the anchor's three-quarter body for a
+  portrait that asks for head-and-shoulders. Midjourney's Edit Model is
   instruction-driven and may not need it. **If Midjourney ref shots start coming
   back with the anchor's crop instead of the framing's, put it back first** —
   the exact wording is in `ref_prompt()`'s docstring.
 
-Result on this roster: ref shots fell from ~175 words to **24–39**, anchors sit
-at 105–125, and nothing trips the warning. Every shot in the `/prompts` response
+Ref shots run **24–39** words, anchors 105–125, and nothing trips the
+warning. Every shot in the `/prompts` response
 carries `words` and `long`; the panel prints the count and flags anything over
 budget.
 
@@ -344,10 +333,10 @@ reference to lean on.
 - **Style is off by default.** Midjourney carries the house look in a
   personalization profile (`--profile`), which the long style sentence competes
   with; the panel has a checkbox to add it back for a one-off.
-- **No standing `--no` list.** A defensive `photo, 3d render, text, watermark`
-  set was tried and dropped: the profile already holds the look, and the
-  renderings showed none of the problems it guarded against. Exclusions for
-  things that are not happening cost prompt weight and buy nothing.
+- **No standing `--no` list.** The profile already holds the look, and the
+  renderings show none of the problems a defensive `photo, 3d render, text,
+  watermark` set would guard against. Exclusions for things that are not
+  happening cost prompt weight and buy nothing.
 - **Style negatives still become `--no`,** when the style *is* switched on.
   Left inline, "no oil paint texture" reads to Midjourney as a thing to *draw*,
   so `split_negatives()` lifts every `no …` clause into the flag.
@@ -378,8 +367,7 @@ them would creep the number up without the warning moving.
 Click the image you want, then **save** in the panel. It writes the full-res
 original into the spec's folder as `<shot file>.<real extension>`.
 
-The first version drew a `⤓` on every grid thumbnail and was removed in v1.1: on
-the image, it sat on top of the zoom view. The panel is out of the way, needs no
+A button on the image would sit on top of the zoom view. The panel is out of the way, needs no
 per-image decoration (so no `MutationObserver`, no fighting the virtualised
 feed), and matches how the images actually get picked — one at a time, zoomed.
 
@@ -389,16 +377,16 @@ button polls twice a second rather than patching `history.pushState`, which also
 catches back/forward and anything the app does internally, and reports its own
 state (`open an image` / `pick a shot` / `save as <file>`).
 
-**The selected NPC and shot persist across reloads** (`localStorage`, v1.4).
+**The selected NPC and shot persist across reloads** (`localStorage`).
 This is a safety feature, not a convenience: `find_specs` lists specs by file
-modification time, so before v1.4 the panel's default moved to whichever spec
-was edited last. Reloading mid-session could silently repoint you at a different
+modification time, so without it the panel's default moves to whichever spec
+was edited last. Reloading mid-session would silently repoint you at a different
 character while you believed you were still on the old one, and the first sign
 would be one NPC's art saved under another's filename. If the remembered NPC has
 since disappeared from the roster, the panel says so rather than quietly
 choosing another.
 
-Three things measured on the live site (2026-09-13), all load-bearing:
+Three things measured on the live site, all load-bearing:
 
 - **The server cannot download the images.** `cdn.midjourney.com` serves a page
   fetch but answers a plain server-side one with **403**. The bytes are read in
@@ -455,13 +443,10 @@ Full runbook: [`../foundryExport/README.md`](../foundryExport/README.md).
 Generated art **is committed** (generation is non-deterministic; the approved
 images are the canon record). Specs are committed beside them.
 
-## Memory on this machine (measured 2026-09-13)
+## Memory on this machine
 
 The stack is **38.4 GB of weights** on a 64 GB box, and ComfyUI keeps models in
-system RAM between runs by design. **The pipeline had never actually been run
-end to end before this** (all committed art up to 2026-06-08 is Midjourney/fal;
-the `~1-2 min/image` figure in the original commit was an estimate, never a
-measurement), so the following is its first real benchmark.
+system RAM between runs by design.
 
 ### The one setting that matters: `--cache-none`
 
@@ -491,27 +476,26 @@ to the paging it avoids.
 
 - **`--disable-pinned-memory`** - pinning (`ram * 0.90` = 57.8 GB cap,
   `cudaHostRegister`, registers in place, does not copy) makes that memory
-  unreclaimable, but it is NOT the growth. Disabling cost 7% and left a
+  unreclaimable, but it is NOT the growth. Disabling it costs 7% and leaves a
   +12.2 GB ratchet.
 - **`--cache-ram`** - cannot help. `ram_release()` returns early only when
   `available >= target`, and the default inactive target is the whole machine,
-  so the *outputs* cache already evicts after every node. It never touched
+  so the *outputs* cache already evicts after every node. It never touches
   `objects`.
 - **`--disable-smart-memory`** - its help says "offload to regular ram instead
   of keeping models in vram": moves pressure onto system RAM, the wrong way.
 - **The fp8 text encoder** - `supports_fp8_compute()` is false on all
   non-NVIDIA, so it does manual-cast per layer, but this is NOT the growth
-  either. fp8 is fine with `--cache-none`. A `mistral_3_small_flux2_fp4_mixed`
-  (11.4 GB) was downloaded chasing this and is unnecessary; fp8 is still the
-  configured encoder. No GGUF of this encoder exists (every flux2 text-encoder
+  either. fp8 is fine with `--cache-none`, and it is the configured encoder; the
+  fp4 `mistral_3_small_flux2_fp4_mixed` (11.4 GB) is unnecessary. No GGUF of this encoder exists (every flux2 text-encoder
   GGUF on HF targets *klein*, a different architecture).
 - **Graph shape** - a 4-shot variations graph (41 nodes) and a 3-shot set
-  (38 nodes) are near-identical, and growth happened between two passes of the
-  *same* shape. Shape was never the variable.
+  (38 nodes) are near-identical, and growth happens between two passes of the
+  *same* shape. Shape is not the variable.
 
 ### Operating rules
 
-**One driver at a time** - two concurrent renders doubled pressure on a machine
+**One driver at a time** - two concurrent renders double pressure on a machine
 with none to spare. ComfyUI runs inside the `comfyui` podman container, so
 killing it needs `podman exec comfyui pkill -f main.py`; a host-side pkill
 matches only the wrapper and leaves the real Python alive holding ~50 GB with
@@ -520,42 +504,40 @@ model load ignores `/interrupt` (returns 200, does nothing); only a restart
 clears it, and `run_graph`'s heartbeat reports queue position so a pass parked
 behind a wedged prompt says so instead of claiming to render.
 
-## GPU faults: torch is pinned to ROCm 6.4 (fixed 2026-09-26)
+## GPU faults: torch is pinned to ROCm 6.4
 
-From 2026-09-13 every local render died with `Memory access fault by GPU
+On a rocm7.x torch wheel every local render dies with `Memory access fault by GPU
 node-1 … Page not present or supervisor privilege`, at a model load or the
 first sampling step. The kernel log is the same every time: `[gfxhub] page
 fault`, `Faulty UTCL2 client ID: TCP`, `RW: 0x1`, `PERMISSION_FAULTS: 0x5`,
 `MAPPING_ERROR: 0x0`. Sampling the server's `/proc/<pid>/maps` at the moment of
-the fault put the address at **byte 0 of a 2 MB buffer object mapped from
+the fault puts the address at **byte 0 of a 2 MB buffer object mapped from
 `/dev/dri/renderD128`**: a ROCm-runtime-owned buffer, below ComfyUI and PyTorch.
 
 The fault follows the **ROCm runtime bundled inside the torch wheel**:
 
 | torch wheel | HIP | result |
 |---|---|---|
-| 2.12.0+rocm7.2 (installed 2026-06-11) | 7.2.53211 | faults, 6/6 runs |
+| 2.12.0+rocm7.2 | 7.2.53211 | faults, 6/6 runs |
 | 2.12.0+rocm7.1 | 7.1.52802 | faults |
 | **2.9.1+rocm6.4** | **6.4.43484** | **clean, 2/2 runs** |
 
-No ComfyUI flag touches it. Tried and still faulting on 7.x:
+No ComfyUI flag touches it. Still faulting on 7.x with:
 `--disable-pinned-memory`, `--disable-async-offload --disable-dynamic-vram`,
 `HSA_ENABLE_SCRATCH_ASYNC_RECLAIM=0 HSA_NO_SCRATCH_RECLAIM=1`. Plain matmuls
 and `scaled_dot_product_attention` at FLUX.2 shapes pass on every backend in
 isolation, so a synthetic GPU test will not reproduce it; only a real render
 does.
 
-**The container venv now runs `torch==2.9.1+rocm6.4`,
+**The container venv runs `torch==2.9.1+rocm6.4`,
 `torchvision==0.24.1+rocm6.4`, `torchaudio==2.9.1+rocm6.4`**, installed from
 `https://download.pytorch.org/whl/rocm6.4`. Do not "upgrade torch" back onto a
-rocm7.x wheel without re-running a full single-image render as the test.
-After a month of clean renders the rocm7.2 backup venv was deleted
-(2026-10-27); to test a 7.x wheel again, copy `venv` first and install into
-the copy.
+rocm7.x wheel without re-running a full single-image render as the test. To
+test a 7.x wheel, copy `venv` first and install into the copy.
 
 Timing on 6.4: the **first pass after a server start** spends ~115 s warming
 kernels in sampling steps 1–2 (395 s total). Later passes on the same server
-sample at ~5–25 s/step: **267 s per image**, in line with the 221 s of
-September. So batch shots on one server rather than restarting between them.
+sample at ~5–25 s/step: **267 s per image**, in line with the 221 s of the
+`--cache-none` benchmark above. So batch shots on one server rather than restarting between them.
 The card name reads "AMD Radeon Graphics" in the log on this wheel (it looks
 for `amdgpu.ids` under `/opt/amdgpu`); cosmetic.

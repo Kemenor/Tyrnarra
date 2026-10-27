@@ -1,10 +1,8 @@
 # Defining Ancestries: the conventions
 
-How to write a Tyrnarra ancestry. Distilled from the 2026 ancestry-rebalance pass; applies to every
-future people, per-tribe pick, heritage, and god-city reconciliation. Companion to the standing rules
-in [`CLAUDE.md`](../CLAUDE.md). The rebalance tracker (`ancestry-rebalance-pass.md`) closed with the
-pass and is deleted; its full decision log lives in git history, and the still-open items were
-harvested into [`open-threads.md`](open-threads.md) and [`god-city-seeds.md`](god-city-seeds.md).
+How to write a Tyrnarra ancestry. Applies to every people, per-tribe pick, heritage, and god-city
+reconciliation. Companion to the standing rules in [`CLAUDE.md`](../CLAUDE.md); open ancestry items
+live in [`open-threads.md`](open-threads.md) and [`god-city-seeds.md`](god-city-seeds.md).
 
 ## The core rule
 
@@ -19,7 +17,7 @@ their heartland?** If it only describes them in one region, it is culture; move 
 
 1. **Feeling, not culture.** No practices in the ancestry text. A naming scheme, a rite, a council, a
    token, a reckoning custom: all of it belongs to a sub-region. (The trap that keeps recurring:
-   "Hobgoblin elders introduce by their oldest oath" was a culture; "the given word is load-bearing"
+   "Hobgoblin elders introduce by their oldest oath" is a culture; "the given word is load-bearing"
    is the feeling.)
 
 2. **Feeling, not job.** No occupational definitions. "Diggers," "soldiery," "herders," "clerks" are
@@ -82,4 +80,4 @@ yes, write the files and commit in the same motion.
 
 ## Ancestry heritages
 
-*(2026-10-04, the Galdua Jendea build.)* PF2e's per-ancestry heritages exist on Talan as written. A Tyrnarran ancestry heritage is a body or a carry the place has shaped (the Ghoran's Desert Palm bears the noon), never a job (the flying the rocks build on it is culture, and other peoples fly too). It lives with its place: entered in the ancestry's entry with a pointer to the region, and its game mechanics kept table-side.
+PF2e's per-ancestry heritages exist on Talan as written. A Tyrnarran ancestry heritage is a body or a carry the place has shaped (the Ghoran's Desert Palm bears the noon), never a job (the flying the rocks build on it is culture, and other peoples fly too). It lives with its place: entered in the ancestry's entry with a pointer to the region, and its game mechanics kept table-side.

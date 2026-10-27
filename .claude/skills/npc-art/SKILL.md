@@ -37,9 +37,9 @@ square, doubles as token-bake input; **scene** = the NPC in a setting moment
 
 **Portraits stay on `ref` mode.** `"mode": "text"` renders with no reference to
 the anchor and returns a different person; a shared seed does NOT preserve
-identity across different sizes and framings. The old note claiming otherwise
-was wrong and shipped mismatched close-ups (caught 2026-09). If ref mode crops
-too loose, tighten the framing text, do not switch to text mode.
+identity across different sizes and framings, so text-mode close-ups come out
+mismatched. If ref mode crops too loose, tighten the framing text, do not
+switch to text mode.
 
 **One variation, not four.** FLUX.2 + Turbo LoRA at 8 steps barely moves between
 seeds on an identical prompt, so extra variations are near-duplicates and pure

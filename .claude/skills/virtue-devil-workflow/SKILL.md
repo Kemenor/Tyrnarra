@@ -17,7 +17,7 @@ Two lessons feed it.
 
 First, the sub-region-workflow lesson: designs led by archetype-and-slot produce templates with the labels swapped. A devil designed as "the [Virtue] Devil, who corrupts [virtue]" is the demon-side equivalent of "a merchant republic of Halflings". The seed comes first; the seat emerges from it.
 
-Second, the Vice Demon consistency-pass lesson (2026-06-03): the seven demons were written one after another, and a later pass had to repair rank contradictions (Reidar mislabelled second-oldest), era/age arithmetic (Veislur's 650-vs-720 years and a misattributed Adventurer-Era arrival), a double-running clock (Ofunda's seventy-vs-forty-five years), and a sheaf of one-sided cross-references. This skill bakes the fixes in at design time: every devil carries explicit seat-taking dates checked against `lore/timeline.md` and the current year, every cross-reference is written on *both* entries in the same pass, and a running ledger keeps the fourteen ordered and distinct.
+Second, the consistency lesson from the Vice Demon roster: entries written one after another drift into rank contradictions (Reidar mislabelled second-oldest), era/age arithmetic slips (Veislur's 650-vs-720 years and a misattributed Adventurer-Era arrival), double-running clocks (Ofunda's seventy-vs-forty-five years), and one-sided cross-references. This skill catches them at design time: every devil carries explicit seat-taking dates checked against `lore/timeline.md` and the current year, every cross-reference is written on *both* entries in the same pass, and a running ledger keeps the fourteen ordered and distinct.
 
 ## How devils differ from demons (the design constraints)
 
@@ -55,10 +55,10 @@ If any canon contradicts what you were about to draft, the canon wins. Surface t
 | **1. Seed questions** | Ask the user 3-5 targeted questions about the corruption, the two faces, the origin class, the visitor's image, and the Council posture | Chat only. No writes. |
 | **2. Generate seeds** | 2-3 distinct seeds, each a person-shaped image or contradiction; each passes the could-this-hold-any-other-line test; each names what origin, faces, and Council role *emerge*. Diversity-check against the ledger. End with a recommended pick | Chat only. No writes. |
 | **3. User picks + refines** | Axis-confirmation only. One or two clarifying questions on era, origin, face-preference, hooks | **Axis-confirmation is not a green light to draft prose** |
-| **4. Naming pass** | 3-5 candidates per name slot with full etymology; collision-check; first-devil pattern locks if this is the first | Chat only |
+| **4. Naming pass** | 3-5 candidates per name slot with full etymology; collision-check; the pattern locks applied | Chat only |
 | **5. Surface the prose draft** | Draft the full bolverk.md entry, glossary entries, registrar row, ledger update. Grill it (see *Grilling the devil*). Flag every derivation beyond the user's picks | **Do not commit to files yet** |
 | **6. Commit lore** | On explicit go: bolverk.md entry + named-so-far line, glossary.md, open-threads.md, ledger | Lore is now canon. **Do not touch HTML** |
-| **7. HTML publish** | On explicit publish signal: replace the stub card in `published/setting/cosmology/bolverk.html` with a full card, update `published/setting/cosmology/pf2e-registrar.html`, `docs/site-inventory.md`, and any cross-page mentions | Generator already renders seated-vs-stub cards; replace the line's stub with a full card; see Phase 7 |
+| **7. HTML publish** | On explicit publish signal: replace the stub card in `published/setting/cosmology/bolverk.html` with a full card, update `published/setting/cosmology/pf2e-registrar.html`, `docs/site-inventory.md`, and any cross-page mentions | The generator renders seated lines as full cards and the rest as stubs; replace the line's stub with a full card; see Phase 7 |
 
 The phase boundaries are review checkpoints. Pause at each one even under broad "work through it" framing. Reading is fine within a phase; writes trigger the boundary.
 
@@ -148,13 +148,13 @@ Offer 3-5 candidates per name slot with full etymology, recommend one, wait for 
 - **Former name**, if the origin life had one: era- and culture-appropriate register (the Henrick Brodd / Mara Goldwake / Atezar / Klumpa pattern; a Gods'-Era figure drifts Basque/Icelandic, a Dark-Era mortal takes lightly drifted English, a regional-register mortal takes their region's register).
 - **Ziggurat by-name**, if the building earns one (the Long Inn / the Vault / the Library pattern).
 
-### First-devil pattern locks
+### Pattern locks
 
-The first devil designed locks three patterns for all fourteen. Decide them deliberately, with the user, and record the decisions in the glossary:
+Three patterns hold for all fourteen, recorded in the Virtue Devils block of `lore/glossary.md`:
 
-1. **Seat-name derivation.** The demon precedent is a drifted Icelandic word for the vice. Recommended devil parallel: a drifted Icelandic or Basque word for the **virtue** (the devil sits on the false-mean and wears the virtue's face; the name should too). Confirm or replace this rule at the first naming pass; apply it consistently afterward.
-2. **Favored-weapon rule.** The demons each carry one distinct PF2e **Advanced-category** weapon, and the fourteen follow the same rule: one Advanced weapon per holder, distinct across all twenty-one seat-holders citywide, thematically locked to the line. The ordered side tends to a formal/courtly register, but it stays **Advanced**. **Verify the category against the bestiary data, never from memory** (it has been mis-recalled repeatedly, e.g. Bladed Scarf and Flyssa are Martial, not Advanced): query `tools/encounterBuilder/items.db`, e.g. `python -c "import sqlite3; [print(r) for r in sqlite3.connect('tools/encounterBuilder/items.db').execute(\"SELECT name,grp FROM items WHERE item_type='weapon' AND category='advanced' ORDER BY grp,name\")]"` for the full candidate list, or filter by `name` to check one weapon. **Taken so far:** Aldori Dueling Sword, Flying Talon, Bladed Hoop, Visap, Karambit, Spirit Thresher, Dwarven Dorn-Dergar (the seven demons); Hook Sword (Jafnar), Bladed Diabolo (Sannar), Spiral Rapier (Drengar). **Lone exception on record:** Vondar's Khakkara (the ringed mendicant healer-staff; spelled **Khakkhara** in items.db and on AoN, where it is Martial) is kept by author's call because no Advanced weapon fits a healer's staff. Do not "correct" it, and add no new exceptions without the same justification.
-3. **Domain allocation sketch.** Before the first devil's grants are locked, pencil a light 14-row allocation across all virtue lines (3-5 domains each, no duplicates within the fourteen, cross-pantheon co-grants with the Bound 13 and the demons allowed and expected). Greedy per-devil picking will strand later lines; the sketch is a pencil-tier draft, revisable, but it must exist. Respect the registrar's pending notes (several open domains have non-devil candidate grantors) and the never-assigned pair (Dragon, Moon) unless the user opts in.
+1. **Seat-name derivation.** The demon precedent is a drifted Icelandic word for the vice. A devil's seat-name is a drifted Icelandic or Basque word for the **virtue** (the devil sits on the false-mean and wears the virtue's face; the name does too).
+2. **Favored-weapon rule.** The demons each carry one distinct PF2e **Advanced-category** weapon, and the fourteen follow the same rule: one Advanced weapon per holder, distinct across all twenty-one seat-holders citywide, thematically locked to the line. The ordered side tends to a formal/courtly register, but it stays **Advanced**. **Verify the category against the bestiary data, never from memory** (memory gets it wrong: Bladed Scarf and Flyssa, for example, are Martial, not Advanced): query `tools/encounterBuilder/items.db`, e.g. `python -c "import sqlite3; [print(r) for r in sqlite3.connect('tools/encounterBuilder/items.db').execute(\"SELECT name,grp FROM items WHERE item_type='weapon' AND category='advanced' ORDER BY grp,name\")]"` for the full candidate list, or filter by `name` to check one weapon. **Taken so far:** Aldori Dueling Sword, Flying Talon, Bladed Hoop, Visap, Karambit, Spirit Thresher, Dwarven Dorn-Dergar (the seven demons); Hook Sword (Jafnar), Bladed Diabolo (Sannar), Spiral Rapier (Drengar). **Lone exception on record:** Vondar's Khakkara (the ringed mendicant healer-staff; spelled **Khakkhara** in items.db and on AoN, where it is Martial) is kept by author's call because no Advanced weapon fits a healer's staff. Do not "correct" it, and add no new exceptions without the same justification.
+3. **Domain allocation sketch.** Grants follow the 14-row allocation sketch in `docs/open-threads.md` (2-3 domains per holder, no duplicates within the fourteen, cross-pantheon co-grants with the Bound 13 and the demons allowed and expected). Greedy per-devil picking strands later lines; the sketch is pencil-tier and revisable. Respect the registrar's pending notes (several open domains have non-devil candidate grantors) and the never-assigned pair (Dragon, Moon) unless the user opts in.
 
 ### Collision check
 
@@ -195,7 +195,7 @@ Bolverk canon is GM-leaning by nature, but the discipline still applies: the ent
 | File | What goes there |
 |---|---|
 | `lore/geography/bolverk.md` | The full devil entry under *Virtue Devils: the Fourteen*; update the **Named Virtue Devils so far** line; reciprocal cross-reference lines added to any demon or devil entry named in Reputation |
-| `lore/glossary.md` | Seat-name, former-name, and ziggurat etymologies; the first-devil pattern locks if newly decided |
+| `lore/glossary.md` | Seat-name, former-name, and ziggurat etymologies |
 | `docs/open-threads.md` | Open or update a Virtue Devils rolling thread (mirror of the Vice Demons thread): who is seated, what each entry left open, the allocation sketch's pencil state |
 
 Lore is now canon. **Do not touch HTML** without an explicit publish signal (*publish*, *render the card*, *make it live*, *put it on the site*, *mirror to HTML*).
@@ -204,7 +204,7 @@ Lore is now canon. **Do not touch HTML** without an explicit publish signal (*pu
 
 ## Phase 7: HTML publish (on explicit publish signal)
 
-1. **`published/setting/cosmology/bolverk.html`**: replace the virtue line's stub card with a full card using the same field schema as the `viceDemons` entries (name, line, location, orb emoji, accent + orbBg + orbGlow, heldSince, domain, weapon, etymology, summary, the labelled sections, reputation with `#anchor` links, secretTitle / secretLabel / secret). **Structural note:** the `virtueDevils` block already renders seated devils as full cards while unseated lines keep their stubs; that generator was established at Jafnar's publish, so the rework is done. For each new devil, supply the full card fields for its line, leave the other lines as stubs, and verify the remaining stub cards still render.
+1. **`published/setting/cosmology/bolverk.html`**: replace the virtue line's stub card with a full card using the same field schema as the `viceDemons` entries (name, line, location, orb emoji, accent + orbBg + orbGlow, heldSince, domain, weapon, etymology, summary, the labelled sections, reputation with `#anchor` links, secretTitle / secretLabel / secret). **Structural note:** the `virtueDevils` block renders seated devils as full cards and keeps stubs for unseated lines. For each new devil, supply the full card fields for its line, leave the other lines as stubs, and verify the remaining stub cards still render.
 2. **Anchors and reciprocity**: if the new card references a demon (or vice versa), add the reciprocal sentence to the other card in the same pass, with `#anchor` links both ways.
 3. **`published/setting/cosmology/pf2e-registrar.html`**: move the devil's domains from pending to granted; record cross-pantheon co-grants in the *Granted by* column; update the summary counts.
 4. **`docs/site-inventory.md`**: update the `published/setting/cosmology/bolverk.html` entry's Virtue Devils description (stub count down, seated count up, named entry summarised).
@@ -257,8 +257,8 @@ Maintain a running ledger as devils accumulate, updated at every Phase 6 commit 
 - **The specificity test.** Could this character hold any other virtue line? If yes, rework before commit.
 - **Tenure skews ancient; rank claims must be arithmetically true** against the ledger and `lore/timeline.md` (current year 2532 MR).
 - **Reciprocal cross-references in the same pass.** A relationship written on one entry only is a bug unless ledger-flagged as deliberate characterisation.
-- **Pantheon mechanics.** No domain duplicates within the fourteen; cross-pantheon co-grants welcome; one distinct favored weapon per holder per the locked rule; the allocation sketch exists before the first grants lock.
-- **Naming stratum + collision check + glossary etymology** for every coined name; first-devil pattern locks recorded.
+- **Pantheon mechanics.** No domain duplicates within the fourteen; cross-pantheon co-grants welcome; one distinct favored weapon per holder per the locked rule; grants follow the allocation sketch.
+- **Naming stratum + collision check + glossary etymology** for every coined name; the pattern locks hold.
 - **No em-dashes. Affirmative prose. Mortals, not humans.** En-dashes for numeric ranges only.
 - **Lore-first; surface-before-writing; HTML only on an explicit publish signal.**
 
@@ -270,7 +270,7 @@ Maintain a running ledger as devils accumulate, updated at every Phase 6 commit 
 - **The virtue painted on a monster.** Horns-and-menace first, virtue rationalised after. Seed first; the body comes out of the false-mean.
 - **Reissuing a demon's secret-shape.** Lostar owns the never-felt-it inversion, Nirfel the single missing entry, Veislur the unbroken framing, Drambur the scoured name, Reidar the Law-dependent banishment, Lethar the doctrinal stillness, Ofunda the watcher's catalogue. Fourteen more seats need fourteen more shapes.
 - **Greedy domain picking.** Three devils in, the thematically obvious domains are gone and the Hope Devil is granting leftovers. The allocation sketch exists to prevent this.
-- **Unreciprocated relationships.** The Vice Demon consistency pass existed because of these. Write both sides in the same pass.
+- **Unreciprocated relationships.** A reference written on one entry only is a consistency bug. Write both sides in the same pass.
 - **Untethered dates.** "Centuries ago" that contradicts the era math, ranks that contradict the ledger, an arrival-era that confuses the soul's fall with a later discovery (the Veislur error). Reconcile every date against timeline.md before surfacing.
 - **Forgetting the Council.** A devil entry without a Council posture is half an entry; the ordered side's politics is consensus, and every seat has a voice in it, even a silent one.
 - **Breaking the Justice restraint, or leaking the secret.** Any devil other than Jafnar who knows the uncalled Ofunda debt exists, references it, or acts on it breaks hard canon (see *Existing hooks*); a non-Jafnar devil's Council stance is about the standing truce, never the debt.
@@ -282,6 +282,6 @@ Maintain a running ledger as devils accumulate, updated at every Phase 6 commit 
 
 1. **Veislur** and **Lostar** entries in `lore/geography/bolverk.md`: the bar for character-could-hold-no-other-seat and for secrets that are wounds, not trivia.
 2. **Ofunda's** entry: the bargain-with-a-devil mechanics from the mortal side, the pre-tagged routing, and the debt the Justice Devil holds; the single richest devil-side hook in canon.
-3. **Reidar** and **Drambur** entries: era-anchored ancient tenure done correctly (post-consistency-pass), including how rank language is phrased against the ledger.
+3. **Reidar** and **Drambur** entries: era-anchored ancient tenure done correctly, including how rank language is phrased against the ledger.
 4. **The Virtue Devils section** of bolverk.md: the false-mean architecture, the Council, the tipping mechanic, the exorcist counter, the locked table of fourteen.
 5. **The `viceDemons` block** in `published/setting/cosmology/bolverk.html`: the publish-target card schema, anchor-link reciprocity, and the heldSince phrasing conventions.

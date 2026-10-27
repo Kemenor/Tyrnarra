@@ -6,14 +6,14 @@ How the persistent sidebar on every page is built and how to extend it.
 
 ## How it works
 
-- The sidebar structure lives in `/setting/assets/site-nav.js`. **Every section is a data-driven array** of `{ slug, label, href, children }` nodes, rendered by the recursive `buildAccordionRow`; there is no hand-written `<li>` nav markup anymore. One array per section:
+- The sidebar structure lives in `/setting/assets/site-nav.js`. **Every section is a data-driven array** of `{ slug, label, href, children }` nodes, rendered by the recursive `buildAccordionRow`. One array per section:
   - **`WORLD_PAGES`**: World & Cosmos. A **Gods & Powerful Beings** group (→ `gods.html` hub) nests the four divine-roster pages by planar layer: The Primordials (Prelife), The 13 Bound Gods (Material), Layer-3 Gods (Postlife), and Bolverk (the Abyss megacity). Alongside it sit the Gods' Law, Magic, and PF2e Registrar.
   - **`TALAN_PAGES`**: continent-level reference pages (Maps, History, The Binding, Ancestries, Historical).
   - **`DOMAINS`**: the 13 god-domains and their promoted sub-regions / settlements.
   - **`FACTION_PAGES`**: the cross-domain organisations.
   - **`OFFCONTINENT_PAGES`**: Sortalde, the Red Empire.
 
-  Each section's `<div class="nav-section">` header (the clickable section-label) is still a small string literal in `buildNavHtml()`, but its `<ul class="nav-list">` body is rendered from the matching array.
+  Each section's `<div class="nav-section">` header (the clickable section-label) is a small string literal in `buildNavHtml()`, but its `<ul class="nav-list">` body is rendered from the matching array.
 
   All five arrays are **recursive trees**; any `children` entry may itself carry a `children` array, and `buildExpandedSet` auto-expands the ancestor chain of the current page in any of them. The practical ceiling is around 4–5 levels (e.g. *Sumendar → Order of Steam → House Eisenhart*, or *Lautara → Dreaming Cape → Millhaven → Wayward Compass*) before sidebar labels start to wrap.
 - The sidebar styling lives in `/setting/assets/site-nav.css`.
@@ -104,16 +104,16 @@ The two campaign layers carry their **own** menus, separate from this worldbuild
 
 ## Other shared assets in `/setting/assets/`
 
-The sidebar isn't the only thing extracted from per-page inline code. Two other shared scripts live alongside `site-nav.js`:
+Other shared scripts and widgets live alongside `site-nav.js`:
 
-- **`site-interactions.js`**: shared click handlers for the three-tier knowledge widgets and the history-page era cards. Exposes `toggleSecret`, `toggleEraSecret`, `toggleEraLegend`, `toggleEra` on `window`, so the existing inline `onclick="toggleEraSecret(event, this)"` attributes on each page work unchanged. The toggles snapshot the button's initial `innerHTML` on first click via `data-original`, so each page's exact button copy is preserved without JS-side hardcoding of label text. A per-button `data-hide-label="…"` attribute overrides the default open-state label if a page wants a shorter form.
+- **`site-interactions.js`**: shared click handlers for the three-tier knowledge widgets and the history-page era cards. Exposes `toggleSecret`, `toggleEraSecret`, `toggleEraLegend`, `toggleEra` on `window`, so each page's inline `onclick="toggleEraSecret(event, this)"` attributes call them directly. The toggles snapshot the button's initial `innerHTML` on first click via `data-original`, so each page's exact button copy is preserved without JS-side hardcoding of label text. A per-button `data-hide-label="…"` attribute overrides the default open-state label if a page wants a shorter form.
 
   Include it on any page that uses `onclick="toggle*"`:
   ```html
   <script defer src="/setting/assets/site-interactions.js"></script>
   ```
 
-- **The place-map widget** (in `style-b.css` + `site-interactions.js`, 2026-09-17): a clickable map with a detail panel, in two renderings on one data model. *Schematic* mode is rows of `<button class="pm-cell" data-area="…">` under `.pm-row-label`s (a herd's draw-up, a hall's decks); *image* mode is an `<img>` with percentage-positioned `<button class="pm-hot">` hotspots (the map-area-editor's JSON). Both render `window.PLACE_AREAS[data-areas][data-area]` (`{k, n, t}`) into the map's `.pm-detail`, by delegation, no inline handlers; `aria-expanded` / `aria-controls` are seeded and kept in step. Reference: the draw-up on `lioaru/valreka/valreka.html` and the deck plan on `lioaru/valreka/whalehall.html`. Setting pages use this, never the campaign layer's `room-cell` / `map-hot` markup.
+- **The place-map widget** (in `style-b.css` + `site-interactions.js`): a clickable map with a detail panel, in two renderings on one data model. *Schematic* mode is rows of `<button class="pm-cell" data-area="…">` under `.pm-row-label`s (a herd's draw-up, a hall's decks); *image* mode is an `<img>` with percentage-positioned `<button class="pm-hot">` hotspots (the map-area-editor's JSON). Both render `window.PLACE_AREAS[data-areas][data-area]` (`{k, n, t}`) into the map's `.pm-detail`, by delegation, no inline handlers; `aria-expanded` / `aria-controls` are seeded and kept in step. Reference: the draw-up on `lioaru/valreka/valreka.html` and the deck plan on `lioaru/valreka/whalehall.html`. Setting pages use this, never the campaign layer's `room-cell` / `map-hot` markup.
 
 - **`site-starfield.js`**: generates the ambient star field for Style A "cosmic" pages. Picks up `<div class="starfield" id="starfield" data-stars="180"></div>` and fills it. `data-stars` is optional (defaults to 180). No-ops on pages without the placeholder, so it is safe to include anywhere, though it is only included on the Style A cosmic pages: the `/setting/index.html` landing plus the `/setting/cosmology/` pages.
 
@@ -129,7 +129,7 @@ The `.open-canon` panel (dashed TBD-inventory box at the bottom of several pages
 
 ### Three utility families in `style-b.css`
 
-- **`.card-grid` + `.card-name`**: the single most-repeated structure on the site, a responsive auto-fit grid of `.accent-card` items each headed by an uppercase Cinzel label over body prose. Before this existed, dozens of pages re-declared the identical pattern under bespoke names (`.gov-grid`/`.gov-card`/`.gov-name`, `.peoples-grid`, `.tier-grid`, `.craft-grid`, `.tension-grid`, …) plus matching `-name` and `-card p` clones. They all collapse to:
+- **`.card-grid` + `.card-name`**: the single most-repeated structure on the site, a responsive auto-fit grid of `.accent-card` items each headed by an uppercase Cinzel label over body prose. Use it wherever a page would otherwise declare the pattern under a bespoke name (`.gov-grid`/`.gov-card`/`.gov-name`, `.peoples-grid`, `.tier-grid`, `.craft-grid`, `.tension-grid`, …) with matching `-name` and `-card p` clones:
 
   ```html
   <div class="card-grid">

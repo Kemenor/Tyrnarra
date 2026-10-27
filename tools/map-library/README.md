@@ -13,6 +13,6 @@ The `_full/` art is **not in git**. It lives in the private Syncthing sync folde
 python3 tools/check_setup.py --link
 ```
 
-The subfolders line up through the link (`map-library/trains/` in the sync folder is `tools/map-library/_full/trains/`), so the catalogue filenames match the files and Claude can assemble consists. Re-downloading from the Tom Cartos / CzePeku subscriptions is the fallback if the Proton sync is unavailable.
+The subfolders line up through the link (`map-library/trains/` in the sync folder is `tools/map-library/_full/trains/`), so the catalogue filenames match the files and Claude can assemble consists. Re-downloading from the Tom Cartos / CzePeku subscriptions is the fallback if the sync folder is unavailable.
 
 > Campaign-specific art (for example a single quest's station map under a campaign's own `assets/maps/_full/`) is restored the same way from its own source; only the shared library art lives under this folder.

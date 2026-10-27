@@ -49,7 +49,7 @@ Each Style-B page sets `--domain-accent` in a tiny inline `<style>`. The variabl
 - `.accent-card` left border / framed border (graphic)
 - `.open-canon` dashed border (graphic)
 
-**`--domain-accent` is never used as a primary text colour in shared CSS.** `.open-canon h3` was historically the exception; it now uses a fixed `var(--gold)` so the heading stays AA-readable even when the page's accent is dim. The dashed border above the heading still carries the domain flavour.
+**`--domain-accent` is never used as a primary text colour in shared CSS.** `.open-canon h3` uses a fixed `var(--gold)` so the heading stays AA-readable even when the page's accent is dim. The dashed border above the heading still carries the domain flavour.
 
 **The 3 : 1 floor applies to every new `--domain-accent`.** WCAG 1.4.11 (Non-text Contrast) requires this for UI components and meaningful graphics; the card stripes are load-bearing for "which section am I in," so they need to be visible.
 

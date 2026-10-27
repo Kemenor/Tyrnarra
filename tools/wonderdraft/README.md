@@ -29,12 +29,12 @@ Outputs land next to the input (or in `-o <folder>`) and are overwritten on ever
 
 **`--export`** (`wd_export.py`) drives Wonderdraft itself, since it has no command-line export: for each view it launches Wonderdraft with the map, waits `--load-wait` seconds (default 15; Main loads in ~10 s), then sends Ctrl+E, Enter (Export Options, PNG), a file name and Enter (save dialog), waits for the PNG to stop growing (~40 s), closes Wonderdraft, converts the PNG to WebP at quality 92 and deletes it. `--only Regions` (repeatable) limits it to some views. Lessons baked in:
 
-- **Keyboard only, no clicks:** clicking by screenshot coordinates missed under display scaling.
+- **Keyboard only, no clicks:** clicks by screenshot coordinates miss under display scaling.
 - **Focus is checked before every keystroke;** keys go to whichever window is active, so if another window has focus the run stops instead of typing into it.
-- **The screen must stay unlocked.** KDE's lock screen is a Wayland surface, so XWayland still reports Wonderdraft as active while the keys go to the lock screen's password field (one run "typed" the file name there as a failed unlock, and the export never happened). The run holds a screen-saver inhibit (`kde-inhibit --screenSaver`) while it works, refuses to start on a locked screen, and stops before any keystroke once the screen is locked.
+- **The screen must stay unlocked.** KDE's lock screen is a Wayland surface, so XWayland still reports Wonderdraft as active while the keys go to the lock screen's password field, where the file name lands as a failed unlock and no export happens. The run holds a screen-saver inhibit (`kde-inhibit --screenSaver`) while it works, refuses to start on a locked screen, and stops before any keystroke once the screen is locked.
 - **The typed file name is `wdexport.png`,** renamed afterwards: xdotool types as a US keyboard while KDE applies the German layout, so `-` arrives as `ß` (and y/z swap). If any other PNG appears instead, the run stops and names it.
-- **On the laptop Wonderdraft runs on the RTX 5070** (PRIME offload): on the integrated Radeon every launch parked ~3.5 GB in the GPU driver's page pool (`GPUReclaim`), which once ran the session out of memory.
-- Pause the Proton sync while it runs if you can: the 120 MB PNGs are transient.
+- **On the laptop Wonderdraft runs on the RTX 5070** (PRIME offload): on the integrated Radeon every launch parks ~3.5 GB in the GPU driver's page pool (`GPUReclaim`), enough to run the session out of memory.
+- Pause Syncthing while it runs if you can: the 120 MB PNGs are transient.
 
 ### Conventions the split depends on
 
@@ -58,7 +58,7 @@ Import Main with "Swap the art with: Tyrnarra" (or Create ▸ Swap art on the op
 `--flat` takes the 2D settlements, and switches icons already swapped to 2.5D over in place (without
 `--flat`, back). Each step is one undo step in Kartofuchs. Mooma's markers stay.
 
-## `wdmap`: inspect and edit maps (stage 1 of the AI tooling)
+## `wdmap`: inspect and edit maps
 
 `wd.py` (symlinked as `wdmap`) reads a map into plain data so it can be asked questions, previewed and edited.
 
@@ -121,10 +121,10 @@ wdmap check ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map            # everyt
 wdmap check ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --level warning
 ```
 
-One pass (`check.py`, ~2 s) over the problems found by hand while fixing Main, each with map coordinates; exits 1 if there are errors:
+One pass (`check.py`, ~2 s) over the problems Main is prone to, each with map coordinates; exits 1 if there are errors:
 
 - **error** outlines that cross themselves (Wonderdraft leaves those regions unfilled and logs "Convex partition failed") or have under 3 points.
-- **warning** land inside a domain outline that no region shape covers; unnamed or duplicate (stacked) shapes; a domain shape lying mostly inside another domain shape (a second outline on the domains view, as Merkavar's circle was); very dark regions whose outline runs mostly through water (they vanish against the sea); capital icons (the Legend's "Capital" art) with no city name (+3 or −1) within 160 units; labels overlapping in a view where both are shown, measured with the real fonts; god-city names off Divine City Labels and non-god-cities on it; leftover `@stamp`/`@place` markers.
+- **warning** land inside a domain outline that no region shape covers; unnamed or duplicate (stacked) shapes; a domain shape lying mostly inside another domain shape (a second outline on the domains view); very dark regions whose outline runs mostly through water (they vanish against the sea); capital icons (the Legend's "Capital" art) with no city name (+3 or −1) within 160 units; labels overlapping in a view where both are shown, measured with the real fonts; god-city names off Divine City Labels and non-god-cities on it; leftover `@stamp`/`@place` markers.
 - **info** trees and mountains standing in water.
 
 The god-city list is `GOD_CITIES` in `check.py`.
@@ -136,7 +136,7 @@ wdmap geography ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map -o /tmp/geo.md 
 wdmap geography ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --name 'Namur*'
 ```
 
-`geography.py` (~4 s) reports every god domain and region shape as text: its land neighbours (compass direction centroid to centroid, and the shared border's length in grid cells), shapes nearby that it does not border, its coasts per sea, and the labels inside it. The seas: the **Hafra** is every sea reached from the map edge; the **Midarra** is the water left once its western mouth is closed along `MOUTH_X` (the Balatur Erui line). Lakes and rivers are painted terrain, not land mask, so they are not in the report, and `preview` does not draw them either: crop `published/setting/assets/maps/terrain.webp` to see water. First used for the lore audit in `docs/geo-audit-2026-09-28.md`.
+`geography.py` (~4 s) reports every god domain and region shape as text: its land neighbours (compass direction centroid to centroid, and the shared border's length in grid cells), shapes nearby that it does not border, its coasts per sea, and the labels inside it. The seas: the **Hafra** is every sea reached from the map edge; the **Midarra** is the water left once its western mouth is closed along `MOUTH_X` (the Balatur Erui line). Lakes and rivers are painted terrain, not land mask, so they are not in the report, and `preview` does not draw them either: crop `published/setting/assets/maps/terrain.webp` to see water.
 
 ### Interactive map
 
@@ -146,7 +146,7 @@ wdmap geography ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map --name 'Namur*'
 - **`map-data.json`:** every region and domain outline (points, colour, border width, smoothing, its domain), every label on +1, +2, +3, −1, −2 (text, position, font, size, colours, rotation) and each shape's page link. The page draws them as one SVG in map units, so they scale with the map; outlines are smoothed like Wonderdraft's, domains dashed, regions with an inner glow.
 - **Links** are matched by name to the pages under `published/setting/talan/domains/`: exact name or title, a page slug the name starts with ("Kaosadaemi Principality" → `kaosadaemi`), or one letter off (so a misspelt label still finds its page). `map-links.json` sets or blocks a link by name (e.g. Twin Suns → the Tvisol page). `--publish` prints the shapes without a page.
 
-The fixed three-map page stays as it is; the interactive map is an addition.
+The fixed three-map page is a separate page beside it.
 
 ### Snapshot for git
 
@@ -162,7 +162,7 @@ wdmap snapshot ~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map     # "updated" 
 
 `mcp_server.py` exposes all of the above to Claude as the `wonderdraft` MCP server, registered in the repo's [`.mcp.json`](../../.mcp.json) and started by `mcp-server.sh` (which builds a gitignored `.venv` with the `mcp` package on first run). Tools: `map_info`, `query`, `preview` (returns the image), `edit`, `add_symbol`, `add_label`, `scatter`, `along`, `stamp_list`, `stamp_capture`, `stamp_place`, `process_markers`, `check`, `backups`, `restore`, `snapshot`, `split_variants`. Each tool runs the same code path as the `wdmap` command, so the backups and safety checks apply; write tools take `dry_run` and `preview` (default on). The map defaults to `~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map` (or `$WD_MAP`) and is loaded per call, not kept in memory (~3 GB decoded). The [`wonderdraft-map`](../../.claude/skills/wonderdraft-map/SKILL.md) skill describes how Claude should use it.
 
-`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB; loading it per test class ran the laptop out of memory).
+`wdmap.py` is the model (`WDMap.load`, `.save`, `.symbols`, `.labels`, `.regions`, `select()`); `edit.py`, `place.py` and `stamps.py` hold the operations; `preview.py` renders; `test_wdmap.py` holds the tests (`python3 -m unittest tools/wonderdraft/test_wdmap.py`), including a byte-identical load/save round trip of the real map when it's on disk. The real map is decoded once per run (a decoded map takes a few GB, so loading it per test class runs the laptop out of memory).
 
 ## How it works
 

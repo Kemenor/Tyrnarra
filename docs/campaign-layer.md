@@ -40,7 +40,7 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
     gm.js                     ← shared interactions (tabs, secrets, NPC cards, floorplans, battlemap)
     gm-nav.css / gm-nav.js    ← GM left-sidebar drawer (its own tree; NOT the player site-nav)
   tools/                      ← GM utilities served with the layer
-    map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (the only tool that stays here; see below)
+    map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (the only tool served here; see below)
   gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)
     dc-cheatsheet.md          ← PF2e DCs: challenge-anchored, simple, adjustments, four degrees
     npc-block.md              ← NPC definition standard: 3 depths (Cardboard/Semi/Full) + Level/Skills off Table 2-3
@@ -61,10 +61,10 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
       tokens/                 ← baked token art (portrait + frame, committed)
 ```
 
-**Everything lives beside the thing it belongs to.** A campaign-wide
-`assets/portraits/` was tried and abandoned (2026-09): with three quests running
-it became one flat folder holding three unrelated casts, and nothing in a
-filename said which adventure an NPC came from.
+**Everything lives beside the thing it belongs to.** Art sits in the `art/`
+folder of its town or quest, never in a campaign-wide portraits folder, where
+unrelated casts pile up flat and nothing in a filename says which adventure an
+NPC came from.
 
 The split follows one question: **is this NPC tied to a place, or to an
 adventure?** A recurring innkeeper belongs to his town's folder and outlives any
@@ -91,7 +91,7 @@ published/player-campaigns/     ← served at /player-campaigns/ (the published/
     theme.css                 ← the per-campaign skin (overrides only the --c-* tokens)
 ```
 
-The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/imageGen/` (NPC art generation on the local GPU via ComfyUI/FLUX.2 — `npc_art.py`, Claude-operated through the `npc-art` skill), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro, plus token baking and the art upload to the self-hosted Foundry server), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), `tools/token-frames/` (the shared Foundry token-frame library), and `tools/keys/` (gitignored API keys, linked from the Syncthing sync folder). Machine addresses (the Foundry server, the ComfyUI desktop) live outside the repo in `~/.config/tyrnarra/`; `tools/README.md` covers setting up a machine and `tools/check_setup.py` verifies it. Only `map-area-editor.html` remains under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
+The private GM build tooling lives **outside** the served tree, at repo-root `/tools/` (NOT served): `tools/encounterBuilder/` (PF2e encounter + loot builders over the Foundry pf2e data, driving the `pf2e-encounter` / `pf2e-loot` skills), `tools/imageGen/` (NPC art generation on the local GPU via ComfyUI/FLUX.2 — `npc_art.py`, Claude-operated through the `npc-art` skill), `tools/foundryExport/` (quest spec → paste-and-run Foundry VTT import macro, plus token baking and the art upload to the self-hosted Foundry server), `tools/map-library/` (reusable map catalogues shared across campaigns — `magirail-stock.md`, `stitch.py`, per-car `areas/`, local-only `_full/` source art), `tools/token-frames/` (the shared Foundry token-frame library), and `tools/keys/` (gitignored API keys, linked from the Syncthing sync folder). Machine addresses (the Foundry server, the ComfyUI desktop) live outside the repo in `~/.config/tyrnarra/`; `tools/README.md` covers setting up a machine and `tools/check_setup.py` verifies it. Only `map-area-editor.html` lives under `published/gm-notes/tools/`, since it is a browser tool the GM opens like any other page.
 
 ## Chrome conventions
 
@@ -115,7 +115,7 @@ Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** 
 
 ### Map Area Editor (`published/gm-notes/tools/map-area-editor.html`)
 
-The companion authoring tool. Load a map PNG, draw / move / resize / delete rectangles, label + describe each area, reorder, and export JSON. An **area is a union of rectangles** (`{ label, desc, rects:[{left,top,width,height}] }`, all `%`); Shift+draw (or a row's `＋`) adds a piece to the selected area for irregular shapes. The exported JSON is what you hand back to generate the map tab's hotspot markup + `GM_MAP_AREAS` scaffold. Import is back-compatible with the old single-rect format.
+The companion authoring tool. Load a map PNG, draw / move / resize / delete rectangles, label + describe each area, reorder, and export JSON. An **area is a union of rectangles** (`{ label, desc, rects:[{left,top,width,height}] }`, all `%`); Shift+draw (or a row's `＋`) adds a piece to the selected area for irregular shapes. The exported JSON is what you hand back to generate the map tab's hotspot markup + `GM_MAP_AREAS` scaffold. Import also reads the single-rectangle area format.
 
 ## Foundry VTT export (`tools/foundryExport/`)
 

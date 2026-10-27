@@ -1,18 +1,18 @@
 # Region-entry prose rules
 
-How to write a region entry: sub-region deep files, domain-file bullets, god-city sections, and their HTML mirrors. These rules sit on top of CLAUDE.md's global prose rules (no em-dashes, *mortals* never *humans*, chronicler-tier voice with GM-tier only in secret boxes) and are checked at every Phase 5 draft. First workshopped 2026-08-13 during the Harro Distiratsua build; rewritten the same day from the GM-written Breidey exemplar.
+How to write a region entry: sub-region deep files, domain-file bullets, god-city sections, and their HTML mirrors. These rules sit on top of CLAUDE.md's global prose rules (no em-dashes, *mortals* never *humans*, chronicler-tier voice with GM-tier only in secret boxes) and are checked at every Phase 5 draft.
 
-**The exemplar is Breidey** (`lore/geography/floteyn/breidey.md` and its page, prose hand-written by the GM, 2026-08-13). When a rule below is unclear, the exemplar is the ruling.
+**The exemplar is Breidey** (`lore/geography/floteyn/breidey.md` and its page, prose hand-written by the GM). When a rule below is unclear, the exemplar is the ruling.
 
 ## Voices carry the color
 
 - Attributed in-world quotation is the primary color channel: letters, interviews, overheard snippets, words spoken on the record, each from a named mortal, with an attribution line that carries incidental world-fact ("Merchant Tullivan, in a letter to his husband, on the commissioning of weatherclocks for his small fleet").
 - Wit, judgment, praise, complaint, scene-work, and even a name's explanation live in quotes. Narration between them stays at eye level.
 - The site-wide bylines (Golivander, Vyrenna) keep their own rules in [`../lore/voices.md`](../lore/voices.md). Load-bearing facts a quote introduces go to the glossary.
-- **Every other quoted named voice gets a voice block in lore** (GM ruling, 2026-09-25), so the next quote from them sounds like the last. Two tiers:
+- **Every other quoted named voice gets a voice block in lore**, so the next quote from them sounds like the last. Two tiers:
   - **Passing voice** (quoted once, or several times inside one document): one line in a **Voices** list at the bottom of the file that quotes them, beside *Named figures*: **Name** · occupation · the voice in a phrase.
   - **Recurring voice** (quoted in a second context, or the author of a quoted document such as a log or a run of letters): name, occupation, and a short paragraph on temperament, register, habits of speech, and what they notice and pass over; at the top of their own document, or in the Voices list if they have none. A voice is promoted when it is quoted in a new context, never on spec.
-  - **A quoted log or run of letters is published whole** (GM ruling, 2026-09-25). Excerpts carry the color through the sections, and the page closes with the full document as expandable day cards (`.log-letters` in `style-b.css`: a `<button>` header with the day, a one-line summary, and the `Tap ▾` pill; the entry verbatim beneath). GM notes inside the document stay off the page. Reference: *The Crossing* on `basogur.html` and `villtur.html`.
+  - **A quoted log or run of letters is published whole.** Excerpts carry the color through the sections, and the page closes with the full document as expandable day cards (`.log-letters` in `style-b.css`: a `<button>` header with the day, a one-line summary, and the `Tap ▾` pill; the entry verbatim beneath). GM notes inside the document stay off the page. Reference: *The Crossing* on `basogur.html` and `villtur.html`.
   - A block says how a voice **sounds**, never what it knows: GM-tier facts about a person stay in ⚿ boxes. Blocks are lore-only and stay off the HTML pages. Proverbs and unattributed sayings get none.
 - Unattributed folk-belief stays in the amber ◈ register.
 
@@ -28,7 +28,7 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 - Mass follows care: lopsided sections, distribution settled with the GM at the phase boundary.
 - Real headings in deep files and HTML; `**Lead.**` bold openers only where headings cannot nest (domain-file bullets).
 - ◈ and ⚿ boxes may sit mid-section where the flow wants them.
-- HTML card-grids may restate prose facts (furniture ruling, 2026-08-13); card text follows the register rules like all prose.
+- HTML card-grids may restate prose facts; card text follows the register rules like all prose.
 
 ## Names and things
 
@@ -51,8 +51,4 @@ How to write a region entry: sub-region deep files, domain-file bullets, god-cit
 ## Content requirements
 
 - Live tensions are required. They are campaign seeds; state the tension as fact and leave it open, unresolved, and unarbitrated.
-- **The defect requirement is dropped (GM ruling, 2026-09-19, at the Villtur build).** v2 asked for one uncontested defect per region (the stale platform-board, the Rolls with no way to unregister). In practice it produced candidates the GM had to correct every time and added little at region scale, so it is no longer required. An existing defect in a built entry stays; a broken thing may still appear where it is genuinely there, written as any other fact; nothing is invented to fill the slot.
-
-**Dropped from v2 (2026-09-19, Villtur ruling):** the one-defect-per-region requirement.
-
-**Dropped from v1 (2026-08-13, Breidey exemplar ruling):** the one-per-page ornament arithmetic; the never-budget bookkeeping; the blanket quotation ban; uniform "end on the last fact."
+- A broken thing appears only where it is genuinely there (the stale platform-board, the Rolls with no way to unregister), written as any other fact; a defect already in a built entry stays, and nothing is invented to fill a slot.
