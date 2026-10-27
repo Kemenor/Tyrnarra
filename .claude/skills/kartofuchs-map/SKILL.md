@@ -1,13 +1,13 @@
 ---
 name: kartofuchs-map
-description: Use this skill to read or change the Tyrnarra map in Kartofuchs (~/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs), the map editor replacing Wonderdraft, through the `kartofuchs` MCP tools - opening the map, map_info, query, screenshots, editing labels and symbols, scattering, stamps, regions and shapes, terrain, views and exports. Trigger when the user names Kartofuchs or the Kartofuchs map ("in Kartofuchs", "the kartofuchs map", "open the map in Kartofuchs"), or asks to open the Tyrnarra map for editing in Kartofuchs. Until the user switches over, map requests that name neither app go to wonderdraft-map, which edits the map the published views come from. Do not use for battlemaps (map-library), the published map pages' prose, or Kartofuchs' own code (that is the kartofuchs repo).
+description: Use this skill to read or change the Tyrnarra map, which lives in Kartofuchs (~/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs), through the `kartofuchs` MCP tools - opening the map, map_info, query, screenshots, measuring areas and distances, editing labels and symbols, scattering forests and mountains, stamps, regions and shapes, terrain, views and exports. It is the default for every map request: "look at the map", "where is X on the map", "how big is X", "rename/fix the label", "add a town/forest/mountains", "stamp", a docs/map-todo.md item, "export the maps", or anything naming Kartofuchs. The Wonderdraft map is frozen; only a request that names Wonderdraft or its file goes to wonderdraft-map. Do not use for battlemaps (map-library), the published map pages' prose, or Kartofuchs' own code (that is the kartofuchs repo).
 ---
 
 # kartofuchs-map
 
 The Tyrnarra map in Kartofuchs is `~/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs` (a folder: `map.json` plus `terrain/`; 8192 x 8192 map units). It syncs between the laptop and the tower through Syncthing. Kartofuchs lives in its own repo (`$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`); `tools/kartofuchs/mcp-server.sh` starts its MCP server for Tyrnarra sessions as `kartofuchs` (`.mcp.json`).
 
-This map was imported from the Wonderdraft map on 2026-10-03 and is a separate copy: a change to one does not reach the other. Until the user switches over, the Wonderdraft map (`wonderdraft-map`) stays the source for the published map views. When it is unclear which map the user means, ask.
+This is the live Tyrnarra map: every map change goes here. It was imported from the Wonderdraft map on 2026-10-03, and the Wonderdraft map has been frozen and read-only since (`wonderdraft-map`).
 
 ## Opening the map
 
@@ -40,3 +40,9 @@ Screenshots and exports are drawn by an editor. When none has the map open, Kart
 - **Forest or mountains:** `scatter` into a named region or an area.
 - **Reuse a group:** `stamps` captures a group and places it again.
 - **A whole town map:** `generate` (city) or `import_town` (Watabou's export), linked from the world map with `link_map`.
+- **Measuring:** 1 map unit is 0.5 mile, so a square map unit is 0.25 square mile. `query` a region shape for its outline points; its area is the polygon's area in square units x 0.25, and a distance is map units x 0.5.
+- **A map-todo item:** make the change, then mark the `docs/map-todo.md` entry done in the Kartofuchs map, with the published views' re-export still pending.
+
+## The published views
+
+The three views and the interactive map's tiles under `published/setting/assets/maps/` are still the last export from the Wonderdraft map (`tools/wonderdraft/README.md`, *Publishing the three map views*). No step yet takes Kartofuchs' `export` into that folder, so changes made here show on the site only once one exists. When the user asks to publish the maps, say so; running the Wonderdraft pipeline on the frozen map would republish the old art.

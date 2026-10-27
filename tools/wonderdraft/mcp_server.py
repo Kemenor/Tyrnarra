@@ -32,8 +32,9 @@ WRITE = ToolAnnotations(readOnlyHint=False, destructiveHint=True, idempotentHint
 server = MCPServer(
     name="wonderdraft",
     instructions=(
-        "Tools for reading and editing Wonderdraft (.wonderdraft_map) fantasy maps for the Tyrnarra "
-        "setting. `map` defaults to the master map (%s). Coordinates are map units (8192x8192 on Main). "
+        "Tools for reading Wonderdraft (.wonderdraft_map) fantasy maps for the Tyrnarra setting. The "
+        "Tyrnarra Wonderdraft map is frozen and read-only: map changes go to the Kartofuchs map "
+        "(kartofuchs-map skill), so do not use the write tools on it. `map` defaults to the master map (%s). Coordinates are map units (8192x8192 on Main). "
         "Layers are numbers (+1, 0 = Default, -1) or the map's own layer names (God Labels, Region "
         "Labels, Divine City Labels, City Icons, City Labels, Terrain, Legend). Region shapes: 'domain' "
         "= god domain (dashed border), 'region' = region (gradient border), named after the label "
