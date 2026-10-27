@@ -13,11 +13,10 @@ This map was imported from the Wonderdraft map on 2026-10-03 and is a separate c
 
 The MCP tools work on the map the running Kartofuchs has open; they never touch the files themselves.
 
-1. **The map must be open on one machine only.** Both PCs save to the synced folder, so the map open on the laptop and the tower at once means one saves over the other. Before opening it, make sure it isn't open on the other PC; if you can't tell, ask the user.
-2. Call `maps` with `open` set to the map's absolute path (`/home/thomas/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs`). It opens the map in the running Kartofuchs and makes it the map the other tools use. `maps` with no arguments lists what is open.
-3. If it answers that Kartofuchs is not running, ask the user to start Kartofuchs (the desktop app, or `kartofuchs` in a terminal), then call `maps` again.
+1. Call `maps` with `open` set to the map's absolute path (`/home/thomas/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs`). It opens the map and makes it the map the other tools use; when Kartofuchs isn't running, it starts it in the background first (port 7717, log `~/.local/state/kartofuchs/mcp-server.log`). No need to ask the user before opening. `maps` with no arguments lists what is open.
+2. **One machine at a time.** While a machine has the map open, Kartofuchs keeps a `lock.json` in the map folder naming that host; it syncs to the other PC, which then refuses the map with the host's name. If `maps` refuses it that way, tell the user which machine has the map open and stop there. Never delete `lock.json` or copy the map to get around it. A lock goes stale 3 minutes after its machine stops renewing it, and Syncthing needs a little while to carry it over, so right after the user closes the map on one PC the other may still refuse it for a moment.
 
-Screenshots and exports are drawn by an open editor (a Kartofuchs window or browser tab), so they need the map shown somewhere; edits work without one.
+Screenshots and exports are drawn by an editor. When none has the map open, Kartofuchs starts its desktop app hidden to draw them (this needs a display), so they work without a visible window; edits never need one.
 
 ## Ground rules
 

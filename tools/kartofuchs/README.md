@@ -4,8 +4,8 @@ The bridge to [Kartofuchs](https://github.com/Kemenor/kartofuchs), the map edito
 
 - `mcp-server.sh` starts the Kartofuchs MCP server (`mcp/server.ts` in the Kartofuchs checkout), registered as `kartofuchs` in the repo's `.mcp.json`. It finds the checkout through `$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`, and needs Node 26.
 
-The server talks to the running Kartofuchs app, never to the map files, so its tools see a map only while the app has it open (the main map is `~/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs`). `KARTOFUCHS_PORT` picks the app's port (default 7717). Its tools read, query and edit the open map, generate towns and terrain, place stamps and take screenshots; Kartofuchs' own `CLAUDE.md` and `mcp/` describe them.
+The server talks to a running Kartofuchs, never to the map files, and starts one in the background when none runs, so `maps` with `open: <map folder>` works from nothing (the main map is `~/Sync/Tyrnarra/Kartofuchs/Main.kartofuchs`). `KARTOFUCHS_PORT` picks the port (default 7717). Its tools read, query and edit the open map, generate towns and terrain, place stamps and take screenshots; Kartofuchs' own `CLAUDE.md` and `mcp/` describe them.
 
-Never serve one map on two machines at once: the map syncs between them, and both would save over it.
+One machine at a time: an open map keeps a `lock.json` in its folder naming the host, which syncs to the other PC and makes Kartofuchs there refuse the map until the lock is released or goes stale (3 minutes).
 
 The `kartofuchs-map` skill (`.claude/skills/kartofuchs-map/`) is how a session opens and edits the Tyrnarra map through these tools.
