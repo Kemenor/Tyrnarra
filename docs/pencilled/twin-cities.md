@@ -5,8 +5,10 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-26), with the GM's corrections below.
-- **Phase 1 (seed questions): open.** The sea-city summary is approved (GM, 2026-10-27); the sky city has its own seed questions still to answer.
-- **Resume here:** Phase 1, the sky-city questions (whether to split the build into two is with the GM; the proposal is one build with two halves).
+- **Phase 1 (seed questions): closed** (GM, 2026-10-27), with the combined summary below.
+- **Phase 2 (seeds): open.**
+- **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
+- **Resume here:** Phase 2. Three seeds offered (the articles, the joining, the two free cities); the recommendation is the articles.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -57,7 +59,22 @@
 4. **"The truly free city" is a deliberate jab at Frae City**, because it is what the pirates would say.
 5. **The Lord of the city and the Pirate Lords.** The Pirate Lords are the top brass. One person is voted the city's Lord; that can be a Pirate Lord, and does not have to be.
 
-**Approved Phase 1 summary (sea city, 2026-10-27).** The Twin Cities are two pirate cities: a stacked flotilla of sea-pirate hulls on the Midarra, and above it the four islets of the airship pirates' sky city; they can join and travel as one, or go their own ways. The sea city grew from a mooring into a dark, sleepless world: taverns, gambling halls and housing on the upper decks, drowned bilges given over to the water-dwellers, and the Lords' spires on top. It moves on the machines of every kind of ship ever built into its core and the still-working ships of its outer ring, whenever the city's elected Lord sets a course. Its contradiction is a den of villainy that turns out to be a working town under pirate law: every district is still a ship, everyone aboard is crew with a vote, and no captain or Lord is safe from a vote or a blade. It shares the crossing with Frae City and calls itself the truly free city, by choice and not by designation, a deliberate jab at Frae City's freedom in its god's name; that rivalry is its sharpest neighbour contrast, with the Sweetwater League's Raft (which unlashes after each sitting) beside it. Myrria and Eldara never sleep either; here the reason is the hulls that keep the sky out.
+**Earlier sea-city summary (approved 2026-10-27, superseded by the combined summary below).** The Twin Cities are two pirate cities: a stacked flotilla of sea-pirate hulls on the Midarra, and above it the four islets of the airship pirates' sky city; they can join and travel as one, or go their own ways. The sea city grew from a mooring into a dark, sleepless world: taverns, gambling halls and housing on the upper decks, drowned bilges given over to the water-dwellers, and the Lords' spires on top. It moves on the machines of every kind of ship ever built into its core and the still-working ships of its outer ring, whenever the city's elected Lord sets a course. Its contradiction is a den of villainy that turns out to be a working town under pirate law: every district is still a ship, everyone aboard is crew with a vote, and no captain or Lord is safe from a vote or a blade. It shares the crossing with Frae City and calls itself the truly free city, by choice and not by designation, a deliberate jab at Frae City's freedom in its god's name; that rivalry is its sharpest neighbour contrast, with the Sweetwater League's Raft (which unlashes after each sitting) beside it. Myrria and Eldara never sleep either; here the reason is the hulls that keep the sky out.
+
+## Phase 1: the sky city (GM, 2026-10-27)
+
+**Same basis, expressed differently.** Each city has its own Lords. Most pirates are pirates of one only, sea or sky.
+- **Sea:** the waves under them, every step shaky, every step an effort; open seas, but always water.
+- **Sky:** nothingness around them, and they love it. They do not see the water they sail over; they see the clouds above and dive into them. Every sky pirate knows the cold droplets on the skin.
+
+1. **The image.** Open and bright: hardly a gaze in it that cannot find the sun, or the stars at night. Glass, windows, or just a hole where the air sings through. Wide plazas and gathering places, tables outside with chairs in front of every locale, hammocks swinging free or hung off the edge. It does not sleep either; it twinkles under the stars. Laughter and voices carry on the wind.
+2. **The lift.** Old artifacts of the Gods' Era, Elden or divine. As the city grew too large, the airships took up part of the weight. A humble beginning; the end product is the image above.
+3. **The prey.** An airship hunts more than airships. The sky pirates are neither richer nor choosier than the sea pirates, and they do not look down on them.
+4. **Together and apart.** The Lords of sea and sky sit together, for kinship and strength in numbers: each gains from the other, and together they may be strong enough to withstand the powers that want to drag them down. When they can, they build a single city: the markets combine, the people mingle. They part when they must: when hunted, or when the work is somewhere else.
+
+## Phase 1: approved summary (GM, 2026-10-27)
+
+The Twin Cities are one pirate nation in two cities on the Midarra. Each has its own Lords, and the Lords of both sit together as the top brass, for kinship and strength in numbers against the powers that would drag them down. Most pirates belong to one city only: the sea pirates live on water that fights them at every step, and the sky pirates live in an emptiness they love, diving into clouds and knowing the cold of the droplets. The sea city is a dark, stacked flotilla where the hulls shut out the sky. Its upper decks hold taverns, gambling halls and homes, the water-dwellers have its drowned bilges, and the Lords' spires stand on top. It moves on the machines of every ship built into it whenever its elected Lord sets a course. The sky city is four bright islets on Gods'-era artifacts, with airships now carrying part of the weight: plazas, outdoor tables, hammocks over the edge and wind singing through the windows, with sun or stars in sight from everywhere. When they can, the two cities join into one, and their markets and people mix; when they are hunted or the work is elsewhere, they split. Neither city sleeps, both live by pirate law (every district is a ship, everyone aboard has a vote, and no captain or Lord is safe), and both call themselves the truly free city, by choice and not by designation, aimed straight at Frae City on the same crossing.
 
 ## Rejected options
 
@@ -65,8 +82,9 @@ None yet.
 
 ## Open questions
 
-- What the inner city's machines are (steam, Magitech, both) and how the four islets stay up (Phase 4/6).
-- The city's Lord in detail: whether the sky city votes its own, and the canon move for "on a course the council of Pirate Lords sets" (`_continent.md`, the glossary) (Phase 5).
+- What the inner city's machines are (steam, Magitech, both) (Phase 4/6).
+- What the Gods'-Era lift artifacts are, Elden or divine, and how the city came by them: touches Elden canon, read `timeline.md` and `cosmology.md` end to end before proposing (Phase 4, likely a GM secret in Phase 9).
+- The Lords in detail: each city votes its own Lord (settled); the canon move for "on a course the council of Pirate Lords sets" (`_continent.md`, the glossary) (Phase 5).
 - Founding era and how the council formed (Phase 4).
 
 ## Canon moves (approved)
