@@ -5,8 +5,8 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-10-26), with the GM's corrections below.
-- **Phase 1 (seed questions): open.**
-- **Resume here:** Phase 1; the questions are in the chat of 2026-10-26.
+- **Phase 1 (seed questions): open.** The sea-city summary is approved (GM, 2026-10-27); the sky city has its own seed questions still to answer.
+- **Resume here:** Phase 1, the sky-city questions (whether to split the build into two is with the GM; the proposal is one build with two halves).
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -32,14 +32,42 @@
 3. **Merfolk entry:** approved to move the Twin Cities alliance and League piloting out of `ancestries.md` into the Twin Cities file (and the League's), leaving the entry feeling-only. Lands at Phase 11.
 4. **The Order of Steam's "one of two airship fleets" line** predates the workflow and is not hard canon; it does not constrain this build.
 
+## Phase 1: the GM's vision (2026-10-27)
+
+**The image: a stacked flotilla city.**
+- **Growth.** A few pirates moored together to enjoy spoils and trade. More ships found the spot, for trade, gambling, revelry, talk and strategy. The inner ships stayed, were rebuilt and taken apart and turned into buildings: a tavern, a gambling hall, a brothel, whatever their owners pleased.
+- **Upward.** The tavern needed room, so a ship was hoisted onto it and modified: a second storey, then a third. The tavern's top deck was later joined to the gambling hall next door, both grown tall, both with VIP decks up there. Three more ships were stacked just for housing. The tavern owner bought another ship and set it on top as his mansion. Old gangways became hallways and wide promenades, with doors on both sides: quarters, shops, by now even bakers.
+- **Inside.** Entering the city is entering a different world, with its own rules and its own time. The stacked ships keep the sun and moon out, which suits a city that has decided sleep is for someone else.
+- **Downward.** As it grew up it grew down: hulls pushed under by sheer weight, some flooded, some dry. The bilges. Used all the same, waste not want not: what the air-breathers stop using, the water-dwellers take over.
+- **The spires.** The residences of the Lords of the sea, each a legendary, feared pirate with crews and captains under them. Most Lords will not sit in their spires; when their flags show on the horizon, crowd on all sail.
+
+**The feeling.**
+- From outside, what many regions call it: a den of villainy, a float of scum and salvage, pirates lawless in everything.
+- Stay a while and it is a city that ticks a little differently. The baker still bakes, the barber still cuts hair (and knows how to cut a throat).
+- It calls itself **the truly free city, free by choice, not by designation**. The good and the bad are both here, and everyone is welcome.
+- Life runs on **pirate law**: the crew votes, and no captain is untouchable, nor any Lord, by vote or by gun and blade.
+
+**Naming hint (for Phase 8):** nautical terms for the city's parts (the bilges, hulls, decks and so on).
+
+## Phase 1: the GM's answers (2026-10-27)
+
+1. **The twin is the air-pirate city.** The vision above describes only the sea city. The twin is the sky city: four islets, home of the airship pirates. Sea-ship pirates below, airship pirates above, two sides of the same coin. They can join and move together, and they do not have to. (The Lords' spires belong to the sea city.)
+2. **Movement.** The outer ring is working ships that still sail; the inner city holds machines that drive it forward, since every kind of ship has been built into it. **The Lord of the city calls a move**: a voted pirate Lord who holds the seat until voted out, killed, or leaving it. Pirates still always vote their own captains.
+3. **Who votes: everyone who lives there.** Nobody signs onto a ship; the districts are run as ships because they were ships, so they still technically are, and living in one makes you its crew.
+4. **"The truly free city" is a deliberate jab at Frae City**, because it is what the pirates would say.
+5. **The Lord of the city and the Pirate Lords.** The Pirate Lords are the top brass. One person is voted the city's Lord; that can be a Pirate Lord, and does not have to be.
+
+**Approved Phase 1 summary (sea city, 2026-10-27).** The Twin Cities are two pirate cities: a stacked flotilla of sea-pirate hulls on the Midarra, and above it the four islets of the airship pirates' sky city; they can join and travel as one, or go their own ways. The sea city grew from a mooring into a dark, sleepless world: taverns, gambling halls and housing on the upper decks, drowned bilges given over to the water-dwellers, and the Lords' spires on top. It moves on the machines of every kind of ship ever built into its core and the still-working ships of its outer ring, whenever the city's elected Lord sets a course. Its contradiction is a den of villainy that turns out to be a working town under pirate law: every district is still a ship, everyone aboard is crew with a vote, and no captain or Lord is safe from a vote or a blade. It shares the crossing with Frae City and calls itself the truly free city, by choice and not by designation, a deliberate jab at Frae City's freedom in its god's name; that rivalry is its sharpest neighbour contrast, with the Sweetwater League's Raft (which unlashes after each sitting) beside it. Myrria and Eldara never sleep either; here the reason is the hulls that keep the sky out.
+
 ## Rejected options
 
 None yet.
 
 ## Open questions
 
-- How the city moves (sail, tow, Magitech, something else) and how the lifted parts stay up.
-- Founding era and how the council formed.
+- What the inner city's machines are (steam, Magitech, both) and how the four islets stay up (Phase 4/6).
+- The city's Lord in detail: whether the sky city votes its own, and the canon move for "on a course the council of Pirate Lords sets" (`_continent.md`, the glossary) (Phase 5).
+- Founding era and how the council formed (Phase 4).
 
 ## Canon moves (approved)
 
