@@ -1,6 +1,6 @@
 # kartofuchs/
 
-The bridge to [Kartofuchs](https://github.com/Kemenor/kartofuchs), the map editor that replaced Wonderdraft: the live Tyrnarra map is edited there, and the Wonderdraft map is frozen. The editor and its tools live in their own repository; this folder only makes them reachable from a Tyrnarra session.
+The bridge to [Kartofuchs](https://github.com/Kemenor/kartofuchs), the editor of the live Tyrnarra map; the Wonderdraft map is a read-only backup. The editor and its tools live in their own repository; this folder only makes them reachable from a Tyrnarra session.
 
 - `mcp-server.sh` starts the Kartofuchs MCP server (`mcp/server.ts` in the Kartofuchs checkout), registered as `kartofuchs` in the repo's `.mcp.json`. It finds the checkout through `$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`, and needs Node 26.
 

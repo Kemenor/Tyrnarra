@@ -89,7 +89,7 @@ The site is hierarchical: **Tyrnarra → Talan → Domains → Sub-Regions/Kingd
     foundryExport/                     ← quest spec → paste-and-run Foundry VTT import macro (+ token bake / upload to the self-hosted Foundry server)
     map-library/                       ← reusable map catalogues (+ local-only _full/ source art)
     token-frames/                      ← shared Foundry token-frame library
-    wonderdraft/                       ← tooling for the frozen, read-only Wonderdraft map (wd_regions.py made the current published map views)
+    wonderdraft/                       ← tooling for the frozen, read-only Wonderdraft map (wd_regions.py publishes the map views from it)
     kartofuchs/                        ← starts the MCP server of Kartofuchs, the editor of the live map (`kartofuchs` in .mcp.json), from its own checkout
     keys/                              ← gitignored API keys, linked from the Syncthing sync folder ~/Sync/Tyrnarra/ (machine addresses live in ~/.config/tyrnarra/; see tools/README.md)
     check_setup.py                     ← verifies a machine (laptop/desktop) can run the GM tools

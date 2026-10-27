@@ -8,7 +8,7 @@ also has the GPU) or the laptop. The site itself needs none of it.
 | `encounterBuilder/` | PF2e encounter + loot builders (`pf2e-encounter` / `pf2e-loot` skills) | python, node, rsync + ssh to the Foundry server |
 | `foundryExport/` | quest spec → Foundry import macro, token baking, art upload | python (pillow, numpy), rsync + ssh |
 | `imageGen/` | NPC / scene art via ComfyUI (`npc-art` skill), Midjourney inbox | the desktop's ComfyUI (local there, over the LAN from the laptop) |
-| `wonderdraft/` | tooling for the frozen, read-only Wonderdraft map, which made the current published map views (`wonderdraft-map` skill) | its own venv; the map file in the sync folder |
+| `wonderdraft/` | tooling for the frozen, read-only Wonderdraft map, the source of the published map views (`wonderdraft-map` skill) | its own venv; the map file in the sync folder |
 | `kartofuchs/` | starts the Kartofuchs MCP server (`kartofuchs` in `.mcp.json`) from the Kartofuchs checkout | the checkout (`$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`), Node 26, the Kartofuchs app running with the map open |
 | `region-pages/` | regenerates a region's published page from its lore files | python |
 | `map-library/`, `token-frames/` | shared map catalogues and token frames | nothing extra |

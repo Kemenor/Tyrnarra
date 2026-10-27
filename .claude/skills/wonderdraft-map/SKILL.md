@@ -1,15 +1,13 @@
 ---
 name: wonderdraft-map
-description: Use this skill only to read the frozen Tyrnarra Wonderdraft map (~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map) through the read tools of the `wonderdraft` MCP server or the `wdmap` command - map_info, query, preview, check, geography - when the user names Wonderdraft or its file, or asks how the published map views were made. The map has been read-only since work on Kartofuchs began; every map edit, and every map request that names neither app, goes to kartofuchs-map. Do not use for changing any map, for battlemaps (map-library), or for the published map pages' prose.
+description: Use this skill only to read the frozen Tyrnarra Wonderdraft map (~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map) through the read tools of the `wonderdraft` MCP server or the `wdmap` command - map_info, query, preview, check, geography - when the user names Wonderdraft or its file, or asks how the published map views were made. The map is read-only; every map edit, and every map request that names neither app, goes to kartofuchs-map. Do not use for changing any map, for battlemaps (map-library), or for the published map pages' prose.
 ---
 
 # wonderdraft-map
 
 `~/Sync/Tyrnarra/Wonderdraft/Main.wonderdraft_map` (8192 x 8192 map units) is the
-old Wonderdraft copy of the Tyrnarra map. It is **frozen and read-only**: the live
-map is the Kartofuchs one (`kartofuchs-map`), imported from this file on 2026-10-03
-and edited only there since. This file is kept as a backup until Wonderdraft is
-gone. The tooling lives in `tools/wonderdraft/` (its `README.md` has the details);
+Wonderdraft copy of the Tyrnarra map, kept as a **frozen, read-only** backup: the
+live map is the Kartofuchs one (`kartofuchs-map`). The tooling lives in `tools/wonderdraft/` (its `README.md` has the details);
 the `wonderdraft` MCP server (`.mcp.json`) exposes it as tools, and the same
 operations exist as `wdmap …` commands.
 
@@ -21,8 +19,7 @@ operations exist as `wdmap …` commands.
    goes to the Kartofuchs map.
 2. **Read only:** `map_info`, `query`, `preview`, `check`, `stamp_list`,
    `backups`, and `geography` (each shape's land neighbours, coasts and
-   labels as text). The map is as it stood when Kartofuchs work began, so a fact
-   read here may already be out of date in Kartofuchs.
+   labels as text). A fact read here can differ from the live Kartofuchs map.
 3. **Don't launch Wonderdraft yourself:** each launch parks ~3.5 GB in the GPU
    driver's memory pool on the laptop, and that has already caused an OOM.
 
@@ -37,8 +34,8 @@ operations exist as `wdmap …` commands.
 ## The published views
 
 The three views and the interactive map's tiles under
-`published/setting/assets/maps/` are this map's last export, made by
+`published/setting/assets/maps/` come from this map, through
 `wd_regions.py … --publish` (the README's *Publishing the three map views*), and
 `tools/wonderdraft/map-snapshot.json` is git's record of the map as exported.
-Republishing from here would only bring back the same art; the next published
-views come from Kartofuchs (`kartofuchs-map`, *The published views*).
+A publish from here republishes this map's art; publishing the live map is
+`kartofuchs-map`, *The published views*.
