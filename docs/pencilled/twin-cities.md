@@ -7,9 +7,10 @@
 - **Phase 0 (canon read): closed** (GM, 2026-10-26), with the GM's corrections below.
 - **Phase 1 (seed questions): closed** (GM, 2026-10-27), with the combined summary below.
 - **Phase 2 (seeds): closed** (GM, 2026-10-27): seed A, the articles; seed B carries the traveller's image.
-- **Phase 3 (traveller's image): open.**
+- **Phase 3 (traveller's image): closed** (GM, 2026-10-28): the column, accepted.
+- **Phase 4 (place, peoples and history): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 3. The image is the joining; speaker, year, form and personality are open.
+- **Resume here:** Phase 4. Read the Elden and divine-artifact canon (`timeline.md`, `cosmology.md`) end to end before settling the lift.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -86,6 +87,14 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 **The live tension (GM, for Phase 9): being pirates.** No merchant or region likes them; none can deal with them except by making deals with them. This replaces seed C (the two free cities) as the tension; the Frae City jab stays as a feature.
 
 **Sameness notes (authoring only, never on the page):** Frae City also floats (a rock on seven chains that never moves; the islets fly unchained); the League's Raft lashes hulls for a sitting and unlashes (the sea city never unlashed); the League's Keelborn crew every hull without a vote (here every resident votes); Systrey's seven isles drift as one because their roots grew together (the Twin Cities join and part by choice); Myrria and Eldara never sleep (here the hulls keep the sky out). **The Red Dominion (missed in the Phase 2 search, raised by the GM 2026-10-27):** its ship-towns are beached hulls laid keel-up as roofs, every house is entered on a ship's muster roll, a ship-town is a ship on the roll, *which ship?* is the Red's question, the town keeps its ship's bell in the square; its captain *asks* the muster and may overrule, rank is office, a house refusing service is *struck*. The Twin Cities are its pirate mirror: no roll (living aboard makes you crew), the vote binds, the captain falls, everyone welcome. The GM knew the overlap and keeps it: **the Dominion is navy, the Twin Cities are piracy; that is the main thing.** Keep off the Dominion's furniture: no ship's bells in squares, no *which ship?*, no struck houses.
+
+## Phase 3: the traveller's image (GM, 2026-10-28)
+
+- **The image:** the joining. The four islets come over the stacked city, airships straining on their lines beneath them, put out the evening and rain cloud-water on its top decks; the city turns its face up; by midnight the two markets are one.
+- **The speaker:** Vyrenna Tessek, *One Line Further*, the Talan years, **2527 MR**, opened by Golivander's *Guide* line (*I saw the city on the water. The other was out.*). She stays twelve days; homesick for the sky (Skarrenn); the music peeve turned to praise for the singing sky city.
+- **Form and placement:** a column in parts, published whole as a log card, excerpts at the section heads (the joining at the head of the joining section). File: [`lore/geography/twin-cities-column.md`](../../lore/geography/twin-cities-column.md), indexed in `lore/voices.md`.
+- **Rejected:** a League mail-master's ship's log (too dry; missed the visual weight and showed too little of the city).
+- **Facts the column fixes, to honour in Phase 4 on:** the spires are tall ships stood on end on the top; the tavern four hulls tall with the owner's ship on top; the outer ring under canvas keeping pace; the sky city's districts are the four islets with airships hung under them on lines; baskets as lifts; the sky city went east at the parting; the bilge-folk read as Merfolk (scaled at the temples). Placeholder: [Lower Spar].
 
 ## Proposals for Phase 4 (not yet settled)
 
