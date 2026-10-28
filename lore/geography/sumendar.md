@@ -8,7 +8,7 @@
 
 **Position:** West-southwest Talan, coastal on Hafra to the west and south-west
 
-**Terrain:** Very mountainous. Distinctive circular mountain ring at the center with a river encircling it. Volcanic activity: cluster of active volcanoes to the west. Sandy/steppe terrain, patches of forest. The orange-brown ridge walls the Order of Steam off from the rest of Sumendar; a lower brown range along the southern border marks the line with Lioaru.
+**Terrain:** Very mountainous. Distinctive circular mountain ring at the center with a river encircling it. Volcanic activity: the volcanic belt around the Order of Steam, which Dragon's Reach shares. Sandy/steppe terrain, patches of forest. The orange-brown ridge walls the Order of Steam off from the rest of Sumendar; a lower brown range along the southern border marks the line with Lioaru.
 
 **God's city:** Eldara, The Forge City (located in No Man's Land)
 
