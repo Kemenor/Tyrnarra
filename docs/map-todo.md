@@ -70,7 +70,7 @@ Nothing pending: the 2026-09-26 exports carried everything so far (last: the Lau
   - **scattered in the open sand** at deep wells.
   - **The capital: five oases in a ring on the south coast**, the city between them; ring centres about (3810, 7460), (3890, 7460), (3920, 7520), (3850, 7554), (3780, 7520) around the present icon (~3850, 7490). Colour hints for the art: green, blue, red, gold, white.
   - **The three islands** stay wooded; nothing to add.
-  - (**Done in the Kartofuchs map 2026-10-28**: 46 oases to the sketch, each a green patch, a pool in its group's water colour and small date palms; village icons at fourteen of them; Panjrang's five pools coloured green, blue, red, gold and white, its label moved above the ring; the orange ground wash under the north-west dune field taken off; re-export to the published views pending.)
+  - (**Done in the Kartofuchs map 2026-10-28**: 46 oases to the sketch, each a green patch, a pool in its group's water colour and small date palms; village icons at fourteen of them; Panjrang's five pools coloured green, blue, red, gold and white, its label moved above the ring; the orange ground washes under the dune fields taken off; the two north-south rivers widened and painted the blue of their clay beds; re-export to the published views pending.)
 
   **Labels** (named at the build, 2026-10-06): **Panjrang** at the capital icon (~3850, 7490) (**done in the Kartofuchs map 2026-10-27**, re-export to the published views pending); of its ring, **Sabzab** (green), **Lajvard** (blue), **Sorkhab** (red); the other oases await names.
 
