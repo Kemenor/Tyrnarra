@@ -8,9 +8,10 @@
 - **Phase 1 (seed questions): closed** (GM, 2026-10-27), with the combined summary below.
 - **Phase 2 (seeds): closed** (GM, 2026-10-27): seed A, the articles; seed B carries the traveller's image.
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-28): the column, accepted.
-- **Phase 4 (place, peoples and history): open.**
+- **Phase 4 (place, peoples and history): closed** (GM, 2026-10-28).
+- **Phase 5 (government): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 4. Read the Elden and divine-artifact canon (`timeline.md`, `cosmology.md`) end to end before settling the lift.
+- **Resume here:** Phase 5, the government (variants of the articles' mechanics offered).
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -95,6 +96,21 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 - **Form and placement:** a column in parts, published whole as a log card, excerpts at the section heads (the joining at the head of the joining section). File: [`lore/geography/twin-cities-column.md`](../../lore/geography/twin-cities-column.md), indexed in `lore/voices.md`.
 - **Rejected:** a League mail-master's ship's log (too dry; missed the visual weight and showed too little of the city).
 - **Facts the column fixes, to honour in Phase 4 on:** the spires are tall ships stood on end on the top; the tavern four hulls tall with the owner's ship on top; the outer ring under canvas keeping pace; the sky city's districts are the four islets with airships hung under them on lines; baskets as lifts; the sky city went east at the parting; the bilge-folk read as Merfolk (scaled at the temples). Placeholder: [Lower Spar].
+
+## Phase 4: place, peoples and history (GM, closed 2026-10-28)
+
+**Approved:**
+- **The lift is Elden.** Each islet rests on a piece of still-running Elden lifting-work (canon: the Elden built atmospheric vessels; some Elden works still run, as at Auran; airship lift descends from Elden ruins). Chronicle tier: *old works, likely Elden*; what they are, and that the Elden are the Corrupted God, is GM-tier (Phase 9).
+- **The sky city's beginning:** airship crews moored to a single drifting rock already hanging low over the Midarra; later they found and woke the other three; as the city grew too heavy, the airships took up part of the load.
+- **Place:** no fixed site; it keeps mostly to the central Midarra along the crossing. **Map:** a label in its usual waters, to catch the players' eye (map-todo at Phase 12).
+- **Neighbours:** Frae City (the jab both ways; they trade anyway); the Sweetwater League (mail unharried, publicly luck); the Order of Steam (light: escorts its freight lane, sells the engines; the Order is due a rework); the Red Dominion (sells guns to anyone); the crossing ports, Solkai and Rika Tikur (pay the pirates' share and complain); every other Midarra power prey, customer, or both, light for now.
+- **Peoples:** unsorted, defined by pirate law. The sea city takes every Midarra people; the Merfolk hold the bilges (the pod alliance); the sky city draws the most Tengu outside Vindul, a tendency only.
+- **Founding:** early Adventurer Era (Midarra trade, and the prey, came back after 2135); the name modern English.
+- **History (approved shape):** c. 2160s the first mooring; by c. 2200 inner hulls rebuilt and the first ships hoisted; c. 2270 the airship pirates moor to their first islet; c. 2300 the first joining and the Pirate Lords of both cities sit as one brass; c. 2350–2390 Mara Goldwake a Lord, died at anchor 2390; c. 2460 the armada, then the League's unspoken accommodation; 2527 Vyrenna's visit.
+- **Canon moves (approved):** (1) `_continent.md`, glossary, `transport.md`: the raft of lashed hulls becomes the stacked flotilla; *both move as one on a course the council sets* becomes *they join and part; each city's elected Lord sets its course*. (2) Merfolk trim (already approved). (3) **Mara Goldwake was a sky Lord** (Tengu; caches in every domain, inland where no sea hull reaches; her three hulls were airships): a line in `bolverk.md` and the glossary.
+
+- **The armada (c. 2460): Legea.** The pirates take the Hringbark wax ships crossing from Hringseyja (holy cargo to Legea; its clergy attune the wax at mainland temples). *Pirates who take from the water* is a new kind of question, so it goes up as an Unwritten one to the demigod **Amdeqal** (reigning since 2290), who writes a new line, and an empire with no navy builds a fleet on a page. The scouts arrive after the city has moved; the fleet goes to search; the sky city shows itself far out and leads it deep into the Midarra; the sea city, close all along, comes over the horizon to **the Legean half of Hringseyja** and shells its wax harbour and the fleet's berths, while Itsasalda's half across the Quietline watches and is left untouched; gone before the fleet comes home. Chronicle tier: the dated facts; the lure is the docks' version (◈). New canon for Phase 11: a Legean Midarra fleet (c. 2460) and the Legean half's harbour (unnamed in canon so far) in `zuzental/legea-empire.md` and `lautara.md`. To consider (Phase 6/9): a second line in the Legedi after the shelling, the terms on which a Legean may deal with the Twin Cities.
+- **Population:** sea city about **60,000**, sky city about **15,000**, together about **75,000** (just above Valreka's 70,000; a moving city must catch or buy all it eats). About one adult in five sails: some **12,000 hands**, on the order of **150 sea crews and 30-odd airships**.
 
 ## Proposals for Phase 4 (not yet settled)
 
