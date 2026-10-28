@@ -9,9 +9,10 @@
 - **Phase 2 (seeds): closed** (GM, 2026-10-27): seed A, the articles; seed B carries the traveller's image.
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-28): the column, accepted.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-28).
-- **Phase 5 (government): open.**
+- **Phase 5 (government): closed** (GM, 2026-10-29).
+- **Phase 6 (economy): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 5, the government (variants of the articles' mechanics offered).
+- **Resume here:** Phase 6, the economy.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -111,6 +112,29 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 
 - **The armada (c. 2460): Legea.** The pirates take the Hringbark wax ships crossing from Hringseyja (holy cargo to Legea; its clergy attune the wax at mainland temples). *Pirates who take from the water* is a new kind of question, so it goes up as an Unwritten one to the demigod **Amdeqal** (reigning since 2290), who writes a new line, and an empire with no navy builds a fleet on a page. The scouts arrive after the city has moved; the fleet goes to search; the sky city shows itself far out and leads it deep into the Midarra; the sea city, close all along, comes over the horizon to **the Legean half of Hringseyja** and shells its wax harbour and the fleet's berths, while Itsasalda's half across the Quietline watches and is left untouched; gone before the fleet comes home. Chronicle tier: the dated facts; the lure is the docks' version (◈). New canon for Phase 11: a Legean Midarra fleet (c. 2460) and the Legean half's harbour (unnamed in canon so far) in `zuzental/legea-empire.md` and `lautara.md`. To consider (Phase 6/9): a second line in the Legedi after the shelling, the terms on which a Legean may deal with the Twin Cities.
 - **Population:** sea city about **60,000**, sky city about **15,000**, together about **75,000** (just above Valreka's 70,000; a moving city must catch or buy all it eats). About one adult in five sails: some **12,000 hands**, on the order of **150 sea crews and 30-odd airships**.
+
+## Phase 5: government (GM, closed 2026-10-29)
+
+**Approved (GM liked all recommendations, 2026-10-29):** the city's Lord elected ship by ship (each district's show of hands, carried by its captain); captain and quartermaster in every district (captain commands in action and under way; quartermaster divides shares, settles quarrels, speaks for the crew); the vote over the body (a killed Lord or captain: the crew votes *deposition*, killer free and may stand, or *murder*, killer marooned); deals on word and flag, nothing signed; districts build their own by crew vote, the city's Lord the city-wide works from the city's cut; in action the city's Lord commands outright; joined, each city keeps its Lord and joint matters go to the Lords sitting together.
+
+**The two kinds of Lord (GM, 2026-10-29):**
+- **The city's Lord** is an office: elected, and the one who actually decides over the city.
+- **A Pirate Lord** is a standing, the classical legend (a Blackbeard): the top dog, feared, renowned, rich and powerful all at once. It ties to *belief is power*: a legend believed across the Midarra gives real weight. The Pirate Lords hold no office; they hold weight, the power to sway people, and they sit with the city because leaving them out would be a costly mistake. (This replaces the *by flag* proposal as the definition; captains sailing under a Lord's flag is one expression of the renown.)
+
+**The Phase 5 output (approved 2026-10-29):**
+
+- **Offices.** Every district (a ship) elects a **captain** and a **quartermaster** by show of hands; everyone who lives aboard votes. Each city elects its **Lord** ship by ship: each district votes, its captain carries the result. The city's Lord holds the seat until voted out, killed, or leaving it. Pirate captains are elected by their crews, always.
+- **The Pirate Lords** hold no office. A Lord is a legend: feared, renowned, rich and powerful at once, whose name told across the Midarra carries real weight (*belief is power*, `cosmology.md`). Nobody appoints one; you are a Lord when the other Lords and the city cannot afford to leave you out, so the list is always argued at its edges (about seven now). A legend must be fed: a Lord who stops raiding stops being told, and stops being a Lord. A **spire** (a ship stood on end atop the stack) is the city's acknowledgement; the skyline is the current list. Captains sail under a Lord's flag for the legend, and a Lord's word binds every captain under that flag. The city's Lord may also be a Pirate Lord: rare, and the most powerful person in the city; a city's Lord who is not spends the office managing the Lords.
+- **The four answers.** Day to day: the district captains and quartermasters. An envoy: the city's Lord, or a Pirate Lord for that Lord's own flag. A treaty: nobody signs; deals are a Lord's word and flag. The bridge: a district builds its own by crew vote, from its shares; the city's Lord builds city-wide (the engines, the lifts, the tow lines) from the city's cut of every prize (Phase 6).
+- **The special states.** *In action* (attacked, or under way): the city's Lord commands outright, the one time anyone does. *Joined*: each city keeps its Lord; what touches both goes to the Lords and both city Lords sitting together, who also settle disputes between crews and share out the waters.
+- **Unity:** any crew can sail away; it stays because a lone ship is hunted and the city is the one market that buys a prize without asking where it came from. **External agency:** a deal is a Lord's word, backed by every captain under the flag; buyers learn which Lord they are dealing with. **Internal provision:** the district for itself, the city's Lord for the whole.
+- **Powers.** The city's Lord may set the course, command in action, and spend the city's cut; may not command a Lord's fleet or overrule a district's vote. The Pirate Lords command their own fleets and sway everyone else; they rule no district.
+- **The vote over the body.** When a Lord or captain is killed, the crew votes over the body: *deposition* (the killer goes free and may stand) or *murder* (the killer is marooned). The quickest way to become a legend is to kill one, so Lords are dangerous to each other and to every ambitious captain.
+- **Muddy edges:** who commands a Lord's fleet defending the city; how far *in action* stretches; who counts as a Lord.
+- **Incentive check:** captains, Lords and city Lords all win by bringing in the biggest shares, so the city rewards its best raiders and cannot vote itself out of piracy without voting out the people who feed it. This powers the tension.
+- **The honest cost:** violence is part of the constitution; shares buy votes; the loud and the feared win; there is no peaceful Twin Cities under these articles.
+- **Census (off the page):** nearest are Auran (Tolwaja by household vote), Baerfrost's Hunt-League (chieftains seated for proven kills; the deed-route was rejected for that reason), the Raft (one island one voice; here a ship is a street with a vote), and the Red Dominion's absolute command in action (there the captain overrules the muster at other times; here never). The Pirate Lords as believed legends lean on the unusual form *a ruler believed into being* without being rulers.
+- **Mara Goldwake check:** *seated* reads as sitting with the Lords; her legend was the hoard nobody ever saw.
 
 ## Proposals for Phase 4 (not yet settled)
 
