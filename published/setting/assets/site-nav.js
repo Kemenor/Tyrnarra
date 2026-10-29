@@ -179,7 +179,8 @@
       { slug: 'ardo-beroa', label: 'Ardo Beroa &middot; the Island of Was', href: '/setting/talan/domains/ehizahar/ardo-beroa/ardo-beroa.html', children: [] }
     ]},
     { slug: 'askamira', label: 'Askamira · Freedom',  href: '/setting/talan/domains/askamira/askamira.html', children: [
-      { slug: 'frae-city',     label: 'Frae City &middot; the Unchained City', href: '/setting/talan/domains/askamira/frae-city/frae-city.html', children: [] }
+      { slug: 'frae-city',     label: 'Frae City &middot; the Unchained City', href: '/setting/talan/domains/askamira/frae-city/frae-city.html', children: [] },
+      { slug: 'twin-cities',   label: 'The Twin Cities', href: '/setting/talan/domains/askamira/twin-cities/twin-cities.html', children: [] }
     ] }
   ];
 

@@ -17,6 +17,7 @@ python3 tools/region-pages/build_river_duchies.py
 | `published/setting/talan/domains/lioaru/river-duchies/river-duchies.html` | `build_river_duchies.py` |
 | `published/setting/talan/domains/sumendar/haraour-eliza/haraour-eliza.html` | `build_haraour_eliza.py` |
 | `published/setting/talan/domains/sumendar/red-dominion/red-dominion.html` | `build_red_dominion.py` (also copies the sketches from `tools/imageGen/scenes/red-dominion/`) |
+| `published/setting/talan/domains/askamira/twin-cities/twin-cities.html` | `build_twin_cities.py` (walks nested sections and drops file references) |
 
 **Hand-built pages with synced parts:** the Heartcourt page (`published/setting/talan/domains/lautara/emarrea/heartcourt.html`) is hand-built; `sync_heartcourt_letters.py` replaces the body of each *Letters from Biozuri* column on it from `lore/geography/lautara/heartcourt-letters.md`, matched by title.
 

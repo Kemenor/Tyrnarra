@@ -16,9 +16,9 @@
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-29).
 - **Phase 10 (draft): closed** (GM, 2026-10-29, after comments in the live doc).
 - **Phase 11 (commit lore): closed** (2026-10-29).
-- **Phase 12 (publish): open**, waiting on the GM's go-ahead after the lore summary.
+- **Phase 12 (publish): closed** (2026-10-29): counted with Askamira (GM), lore moved to `lore/geography/askamira/`, page at `/setting/talan/domains/askamira/twin-cities/twin-cities.html`.
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 12, the page (`published/setting/...`, placement per the Factions reorganisation thread) and its mirrors (`transport.html`, `floating-isles.html`, `bolverk.html`, the GM short-notice hub's stale stub line); map-todo label.
+- **Resume here:** build done; follow-ups in `docs/open-threads.md`, *[Askamira] Twin Cities follow-ups*; the map label in `map-todo.md`.
 - **Draft:** [`twin-cities-draft.md`](twin-cities-draft.md) (Phase 10, with the GM); review copy as a live doc for comments: https://claude.ai/artifact/BRpjE3sgb1ZFgY4t74T46H (the GM's comments there feed back into the markdown draft).
 
 ## Phase 0: approved readback

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Twin Cities · Askamira · Tyrnarra</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setting/assets/style-b.css">
+<link rel="stylesheet" href="/setting/assets/site-nav.css">
+<script defer src="/setting/assets/site-nav.js"></script>
+<script defer src="/setting/assets/site-interactions.js"></script>
+<style>
+  :root {
+    --domain-accent: #e0915c;   /* lantern copper · 7.78:1 on Style B bg */
+    --card-bg: rgba(28,20,14,0.55);
+  }
+  .voice-quote { max-width: 780px; margin: 20px auto; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--domain-accent); border-radius: 0 4px 4px 0; font-style: italic; line-height: 1.65; }
+  .voice-quote p { margin: 0 0 12px; }
+  .voice-quote p:last-child { margin-bottom: 0; }
+  .voice-attrib { max-width: 780px; margin: -10px auto 22px; text-align: right; font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); }
+  .sub-heading { max-width: 780px; margin: 30px auto 6px; font-family: 'Cinzel', serif; font-size: 1.02rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--domain-accent); font-weight: 600; }
+  .prose-list { max-width: 780px; margin: 0 auto 16px; line-height: 1.65; }
+  .figure-grid { --col-min: 230px; --grid-gap: 16px; --card-pad: 18px 20px; }
+  .figure-grid .card-name { font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--domain-accent); }
+  .panel-label { font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--domain-accent); margin-bottom: 10px; }
+  .two-cities { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 780px; margin: 0 auto 10px; }
+  @media (max-width: 600px) { .two-cities { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="twin-cities">
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="/setting/index.html">Tyrnarra</a><span class="sep">›</span><a href="/setting/talan/talan.html">Talan</a><span class="sep">›</span><a href="/setting/talan/domains/askamira/askamira.html">Askamira</a><span class="sep">›</span><span>The Twin Cities</span>
+  </div>
+
+  <div class="header">
+    <div class="header-ornament">✦ · ✦ · ✦</div>
+    <div class="page-title">The Twin Cities</div>
+    <div class="page-subtitle">The Midarra · Freeboard and Skysail · The Pirate Capital</div>
+    <div class="page-flavor">A pirate nation in two cities, where everyone aboard has a vote and no captain is safe from it.</div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="at-a-glance" class="section-heading">At a Glance</h2>
+  <dl class="facts">
+    <dt>Etymology</dt><dd><i>the Twin Cities</i> is the name the rest of Talan uses, modern Talanese. Aboard, the two are <b>Freeboard</b>, the sea city, and <b>Skysail</b>, the sky city, both Adventurer-Era Talanese in the sailors' cant: <i>freeboard</i>, the height of a deck above the water; <i>skysail</i>, the highest sail a ship carries. Aboard, the pair is <i>the Board and the Sail</i>; outsiders call Freeboard <i>the Stack</i>. Demonyms: <b>Freeboarder</b>, <b>Skysailer</b>.</dd>
+    <dt>Position</dt><dd>No fixed place. The cities keep mostly to the central Midarra along the north-south crossing, where Solkai's and Rika Tikur's cargo passes. Folk count them with Askamira, since their usual waters lie around the island; the cities answer to no one there, and a Freeboarder counted under Cronus's domain takes it as an insult.</dd>
+    <dt>The Cities</dt><dd><b>Freeboard</b> is a flotilla of hulls stacked into a mountain on the water, ringed by working ships under sail. <b>Skysail</b> is four islets in the air, <b>the Fore, the Main, the Mizzen and the Jigger</b>, with airships hung beneath them on lines. The two moor together when they can and part when they must.</dd>
+    <dt>Character</dt><dd>
+      <i>A pirate nation in two cities, where everyone aboard has a vote and no captain is safe from it.</i><br>
+      <div class="pill-row" style="margin-top:6px"><span class="pill">Freeboard</span><span class="pill">Skysail</span><span class="pill">The Mooring</span><span class="pill">The Articles</span><span class="pill">The Pirate Lords</span><span class="pill">Colours</span></div>
+    </dd>
+    <dt>Peoples</dt><dd>About 75,000: some 60,000 in Freeboard and 15,000 in Skysail. Sorted by no ancestry: every people of the Midarra, the Merfolk in Freeboard's drowned hulls, and more Tengu in Skysail than anywhere outside Vindul. About one adult in five sails, some 12,000 hands.</dd>
+    <dt>Tongue</dt><dd>Talanese, the native tongue of a city of strangers, under <b>deck-talk</b>, the sailors' cant. Given names come from wherever a family came from.</dd>
+    <dt>Faith</dt><dd>Many things. Shuun among the sea crews, Fisaya among the sky crews, Bikiargi for the navigators and the night watch, and Cronus for freedom. The cities keep no temple of their own.</dd>
+    <dt>Rule</dt><dd>The articles. Every deck is a ship and everyone living aboard is its crew, electing a captain and a quartermaster by show of hands. Each city elects its <b>Lord</b> deck by deck. The <b>Pirate Lords</b> hold no office and outweigh everyone.</dd>
+    <dt>Founded</dt><dd>The first mooring in the 2160s MR; Skysail's first islet about 2270; the cities first moored together about 2300.</dd>
+  </dl>
+
+  <div class="two-cities">
+    <div class="gods-city" style="border-color: rgba(224,145,92,0.5); margin:0;">
+      <div class="gods-city-label">On the Water</div>
+      <div class="gods-city-name">Freeboard</div>
+      <div class="gods-city-byname">The Stack · hulls on hulls under lantern-light · the ring, the spires, the bilges</div>
+    </div>
+    <div class="gods-city" style="border-color: rgba(224,145,92,0.5); margin:0;">
+      <div class="gods-city-label">In the Air</div>
+      <div class="gods-city-name">Skysail</div>
+      <div class="gods-city-byname">The Fore, the Main, the Mizzen, the Jigger · four islets on old work, airships on the lines</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="freeboard" class="section-heading">Freeboard</h2>
+
+  <div class="voice-quote"><p><b>Finding it.</b> On the tenth morning the lookout called. I went up and saw what I took for an island with a storm sitting on it. It was ships. Hulls stacked on hulls, a whole fleet piled into a mountain, black and brown and every colour paint has ever been, with masts still standing out of it at every angle like a forest after a gale.</p></div>
+  <div class="voice-attrib">Vyrenna Tessek, <i>One Line Further</i>, 2527 MR</div>
+  <div class="prose"><p>Freeboard began in the 2160s MR as a mooring: a handful of pirate crews lashing up in open water to share out spoils and trade. More ships found the spot, for the trade, the gambling, the drink, and the talk of where the next prize lay. The ships in the middle stopped leaving. Their crews rebuilt them into a tavern, a gambling hall, a brothel, and planked the hulls together.</p></div>
+  <div class="prose"><p>The city grew upward from there. When the tavern by the landing needed room, a ship was hoisted onto it and refitted as a second storey, then a third; its top deck now runs across on beams to the gambling hall next door, and both keep their best rooms up there. Three hulls were stacked for housing alone. The tavern's owner bought a fifth ship and set it on top of the whole tavern for his own house, with lace at its portholes. Old gangways became hallways, then <b>promenades</b>, with doors down both sides: lodgings, shops, chandlers, a barber, bakers. The promenades take the names of rigging, the <b>Lower Spar</b> among them; a deck takes the name of the prize ship it was.</p></div>
+  <div class="prose"><p>Inside, the decks close overhead and the sky goes. The sun and the moon stay outside, and the lanterns are all the light there is. Freeboard keeps no common hour: each deck keeps its own watches, and the city is awake on all of them.</p></div>
+  <h3 class="sub-heading">The ring and the engines</h3>
+  <div class="prose"><p>Round Freeboard's foot sails <b>the ring</b>, the working ships that never stopped being ships: crews' own hulls, under canvas, berthed against the city and keeping pace with it. Deep in the stack sit the engines of every kind of ship ever built into it, steam-and-rune boilers and older things, coupled to the hulls they came with. When the city moves, the engines drive it and the ring takes the towlines, and the whole mountain goes at a crawl. The Lord of Freeboard sets the course.</p></div>
+  <h3 class="sub-heading">The spires</h3>
+  <div class="prose"><p>On top of the stack stand <b>the spires</b>: each the prize that made a Pirate Lord of the sea, hoisted and stood on end, flying its Lord's flag and held by the Lord's crew. A captain whose name the Midarra already tells hoists the prize that made it; nobody votes on a spire. It stands for as long as the crew can hold it and no one cares to pull it down, and a spire raised too early comes down fast. When a Lord dies or falls, the crew still holds the spire and defends it while it waits to see whether one of its own becomes the next Lord; if one does, the spire flies the new Lord's flag. If none does, the crew drifts off to other flags, and when too few are left to hold it, the spire comes down and is built into the city like any other hull.</p></div>
+  <div class="voice-quote"><p>"Five up top this season, and a sixth still flying a dead woman's flag. Her crew's holding it, but there's fewer of them every Mooring. Somebody steps up, or that timber's in somebody's floor by winter."</p></div>
+  <div class="voice-attrib">Pell out of the Spar, a teller of the Lower Spar</div>
+  <h3 class="sub-heading">The bilges</h3>
+  <div class="prose"><p>The weight pushes Freeboard down as it grows up. The oldest hulls lie below the waterline, some flooded and some dry. The dry ones are workshops and storerooms with the lake on the far side of every plank. The flooded ones belong to the <b>Merfolk</b>, whose pods hold the drowned decks and the water in the city's shadow, where they keep fish-pens and weed-beds. Trade between the two passes through hatches cut in the lowest decks, fish going up and everything else going down. A hull the air-breathers give up to the water passes to the pods.</p></div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="skysail" class="section-heading">Skysail and the Mooring</h2>
+
+  <div class="voice-quote"><p><b>The sky comes home.</b> Out in the west, low over the water, there were four islands in the air. They came on slowly. Dark rock underneath, bearded with roots, the edge of a city glinting along the top, and under each one a cluster of airships on long lines, straining, like gulls carrying something too heavy for them and too precious to drop.</p></div>
+  <div class="voice-attrib">Vyrenna Tessek, <i>One Line Further</i>, 2527 MR</div>
+  <div class="prose"><p>Skysail is the airship pirates' city, and it began with one rock. About 2270 MR a handful of airship crews moored to a stone already hanging low over the Midarra, the one now called <b>the Main</b>, and made it home. They found and woke three more: <b>the Fore</b>, <b>the Mizzen</b>, <b>the Jigger</b>. What holds the islets up is old work, set into the deep rock, and the scholars who have seen drawings of it call it Elden. The sky pirates tend it the way their grandparents showed them. As the city grew heavier than the old work would carry, airships took up the rest: crews hang their ships beneath the islets on long lines, and the lines are always taut.</p></div>
+  <div class="prose"><p>Skysail is all open. The streets are wide squares of stone with a table and chairs out in front of every door, awnings over them, and hammocks slung between posts, between houses and over the edge itself. The walls are mostly window, and many windows are only openings cut where the wind comes through, so the city hums in any breeze. It keeps the hours of the sun: work in the morning, long afternoons at the tables, lamps along every edge at night. Skiffs carry folk between the four islets.</p></div>
+  <div class="voice-quote"><p>"Down there they ask which watch. Up here we ask which wind. The Jigger's the cold one; you'll want a coat."</p></div>
+  <div class="voice-attrib">Kesti Downdraft, Lord of Skysail</div>
+  <div class="prose"><p>The sky crews dive their ships into clouds for the feel of it, in blind and white and out wet to the skin, and come home beaded with the droplets.</p></div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The islets are Elden ships</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What Holds Skysail Up</div>
+      <p style="margin-top:0;">The four islets are the hulls of Elden atmospheric vessels, grown over with eight thousand years of dust, root and stone. The old work the sky pirates tend is the ships' engines, run by habit and understood by no one aboard. The marks in the deepest holds, which the Skysailers call <i>the old writing</i>, are the Silent Tongue.</p>
+      <p>The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines beneath are latter-day copies of what they hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world.</p>
+    </div>
+  </div>
+  <h3 class="sub-heading">The Mooring</h3>
+  <div class="prose"><p>The two cities first moored together about 2300 MR, and the Lords of sea and sky have sat together since, for kinship and for strength in numbers. When both cities can, Skysail comes home to Freeboard: <b>the Mooring</b>. A shout goes down the gangways and Freeboard climbs to its highest decks. The islets come in over the stack and stop, and as they settle they shed cloud-water onto Freeboard's top decks, cold and fine, out of a clear sky. Lines drop, baskets come down from the islets, gangways swing across, and by midnight the two markets are one: fruit and greens from Skysail's gardens, fish from Freeboard's pens, prize goods and treasure from the holds of both, and everyone shouting about the price. The cities stay moored for days or weeks. They part when one of them is hunted or the work is elsewhere; the lines and the baskets come up, and the islets lean into the wind.</p></div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-articles" class="section-heading">The Articles and the Lords</h2>
+
+  <div class="voice-quote"><p><b>The vote.</b> On my fourth day, on a promenade called the Lower Spar, I watched its people vote out their captain over a leaking roof. Forty-one hands went up. He looked at them for a while, then bought them all a drink, and the new captain drank his and went to look at the roof.</p></div>
+  <div class="voice-attrib">Vyrenna Tessek, <i>One Line Further</i>, 2527 MR</div>
+  <div class="prose"><p>Both cities call themselves <b>the truly free city</b>, free by choice and not by designation. Frae City, on the same crossing, is free in its god's name, and the cities trade with it and sneer at it, and Frae City returns the sneer.</p></div>
+  <div class="prose"><p>Every deck of Freeboard was once a ship, and the city runs its decks as ships still. Each skysail islet counts as one, because it flies. Everyone who lives aboard is crew, from the day they move in: the baker, the barber, the woman who sells hot nuts at the corner of the Spar.</p></div>
+  <div class="prose"><p>A deck's crew elects its <b>captain</b> and its <b>quartermaster</b> by show of hands, <b>the hands</b>, and can put either out the same way. The captain commands in a fight and while the city is moving. The quartermaster divides the shares, settles quarrels and speaks for the crew. A deck builds and mends its own by the hands, paid from its shares. Pirate crews elect their captains the same way, always.</p></div>
+  <h3 class="sub-heading">The Lord of the city</h3>
+  <div class="prose"><p>Each city elects its <b>Lord</b>: the <b>Lord of Freeboard</b> and the <b>Lord of Skysail</b>. Every deck takes its own hands, and its captain carries the result to the count. A Lord holds the seat until voted out, killed, or gone. The Lord sets the city's course, commands outright when the city is under attack or under way, receives envoys, and builds what serves the whole city (the engines, the lifts, the towlines) from <b>the Tenth</b>, one share in ten of every prize sold aboard. The Lord commands no Pirate Lord's ships and overrules no deck's vote. When the cities are moored together, each keeps its own Lord, and what touches both goes to both Lords and the Pirate Lords together, who also settle disputes between crews and share out the waters.</p></div>
+  <div class="prose"><p><b>Odile Brasshand</b> holds Freeboard, a quartermaster who rose to the seat. <b>Kesti Downdraft</b> holds Skysail and is a Pirate Lord as well.</p></div>
+  <h3 class="sub-heading">The Pirate Lords</h3>
+  <div class="prose"><p>A Pirate Lord holds no office. A Lord is a pirate whose name is told in every tavern on the Midarra: feared, famous, rich, and powerful at once, followed by captains who sail under the Lord's flag for the name. Belief is power, and a name believed by enough of the Midarra carries real weight; the Lords sit with the city because leaving them out would cost it more than keeping them. No one appoints a Lord. A captain becomes one when the other Lords and the city can no longer leave that captain out, and who counts is argued at the edges of the list; about seven count now. A Lord who stops raiding stops being told of, and in time stops being a Lord, so the Lords keep to the sea and the sky, and a Lord's flag on the horizon is reason to crowd on all sail.</p></div>
+  <div class="prose"><p>A Lord's word binds every captain sailing under the Lord's flag. The cities sign nothing: every deal they make is a Lord's word and flag.</p></div>
+  <h3 class="sub-heading">The Last Hands</h3>
+  <div class="prose"><p>When a captain or a Lord is killed, the crew holds <b>the Last Hands</b> over the body. A vote for <i>deposition</i> sets the killer free and lets them stand for the seat; a vote for <i>murder</i> sees them marooned. A killer the Last Hands frees has a story every tavern tells, and the tellers make a legend faster from the death of a Lord than from anything else.</p></div>
+  <div class="voice-quote"><p>"You can't make peace with them. You can make arrangements with whichever one of them you're talking to, and pray he's the one who's still alive in spring."</p></div>
+  <div class="voice-attrib">Odile Brasshand, Lord of Freeboard, to a Legean envoy</div>
+  <h3 class="sub-heading">Ninehulls</h3>
+  <div class="prose"><p><b>Ninehulls</b> took nine ships in one night and became a Lord. Years later he took a wound that should have killed him and lived, and from then on the taverns told him as the man who cannot die. In Freeboard, before witnesses, he was killed. The Last Hands were held over him. Within days the man who killed him was dead, struck down by Ninehulls himself. No one remembers his given name. The Voroir Daua carry him on their list.</p></div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · Ninehulls, the unkillable</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; What Walks as Ninehulls</div>
+      <p style="margin-top:0;">The first wound was a near thing, and the man survived it. The death in Freeboard was real: the man died, and his soul went on to Dauria, where Epairima judged him herself, as she judges every soul belief has begun to lift. The legend of the unkillable did not end with him. Freeboard believed Ninehulls could not die, and the belief brought a being into existence that struck down his killer: a soul born of belief, shaped as the man.</p>
+      <p>The being does not know its true name and believes truly that it is Ninehulls. Its memory is the story the Midarra tells of him, as a being formed of belief takes its believers' account of itself; the given name was never part of the story, so it has none. It is no undead thing, since no soul was held back; the Voroir Daua know no better and keep it on their list as one. It lives on the whole Midarra's belief, in every port and on every deck where the unkillable is spoken of: a forgotten Lord stops being a Lord, and a forgotten belief being stops being.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="colours" class="section-heading">Colours and the Trade</h2>
+
+  <div class="voice-quote"><p><i>The Twin Cities: two of them, one on the water and one above it, and both move. Ask on any Midarra quay where they were last month and sail somewhere near it; the stillship masters who know will charge for the knowing, and the ones who charge most know least. Bring coin in small pieces and a purse you would not miss.</i></p></div>
+  <div class="voice-attrib">Golivander Tessek, <i>A Traveller's Guide to Tyrnarra</i></div>
+  <div class="prose"><p>The Midarra is fresh water, so the cities are never thirsty. Freeboard eats fish from the ring's boats and the Merfolk pens; Skysail grows the fruit and greens on its islets, and an apple from the sky is a gift below. Grain is bought on the coasts and from the Brauogi grain ships on the crossing, or taken as a prize. A lean year means more raiding.</p></div>
+  <div class="prose"><p>Freeboard is the Midarra's market that asks no questions. Prize cargo sells there cheap and without its history, and the buyers come for it from every coast, <b>Rika Tikur</b> first among them. Everything else comes for the night that never ends: the taverns, the gambling halls, the brothel. Crews hire on there, and the hunted come aboard to vanish among everyone else who did. The cities sell repairs and salvage, and Skysail sells fresh food and fast carriage. They buy grain, guns of the Saegate pattern brought in through Gesalkai's Weighhouse, engines, and airship gear.</p></div>
+  <div class="prose"><p>Every taken hull either sails on under a pirate captain or is broken up, hoisted and built into Freeboard, so a deck can be dated by the prize it was.</p></div>
+  <h3 class="sub-heading">Colours</h3>
+  <div class="prose"><p>The Pirate Lords take their share of the crossing in <b>colours</b>. The Lords share out the waters, and a shipper who means to cross one buys the colours of the Lord whose water it is: a pennant or a token, bought from the Lord's factor in Solkai or Rika Tikur, or paid for on the spot when the Lord's ships come alongside. Every captain under that Lord's flag honours them. A forged pass is <b>false colours</b>, and a ship caught flying them is a prize.</p></div>
+  <h3 class="sub-heading">The armada</h3>
+  <div class="prose"><p>About 2460 MR the pirates were taking the Hringbark wax ships that cross from Hringseyja to the Legean mainland. <i>Pirates who take from the water</i> was a question the Legedi held no page for, and it went up to the demigod <b>Amdeqal</b>, who wrote the answer as a new line: Legea would build a fleet. Its scouts found the cities and sailed home to report, and by the time the fleet reached the place, the cities had gone. The fleet went searching through the deep Midarra. Freeboard came over the horizon toward the Legean half of Hringseyja, shelled its wax harbour and the fleet's empty berths, and was gone before the fleet came home. Across the Quietline, Itsasalda's half was left untouched.</p></div>
+  <div class="prose"><p>The Legedi took a second line after the shelling, setting the terms on which a Legean ship may buy colours. Legea's wax ships have flown them since.</p></div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The lure</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Quays Say</div>
+      <p>On every quay of the Midarra they tell how the fleet was drawn off: how Skysail showed itself far out, low on the horizon, so the Legean captains took the chase and followed it for days into open water, while Freeboard had been close enough all along to watch the fleet sail past it.</p>
+    </div>
+  </div>
+  <div class="secret-era">
+    <button class="secret-era-toggle" onclick="toggleEraSecret(event, this)">⚿ &nbsp; GM Secret · The Accommodation</button>
+    <div class="secret-era-content">
+      <div class="secret-era-label">⚿ &nbsp; The Mail That Is Never Taken</div>
+      <p style="margin-top:0;">The Accommodation*: League hulls and everything flying the mail-pennant sail unharried, and the Lords receive the League's living chart a season stale through the Merfolk pods who scout for the pirates and pilot for the League in the same lifetime. Unsigned, denied on both sides, two generations old. In public, the League's unharried mail reads as luck, or as colours the League will not admit to buying.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="daily-life" class="section-heading">Daily Life</h2>
+
+  <div class="prose"><p>On a deck in Freeboard the baker bakes when the flour comes in, buys fish through a bilge hatch, sells along the promenade, and puts up a hand when the deck votes on the roof. Asked the time, a Freeboarder asks which watch. Asked where they are from, a Freeboarder names a deck.</p></div>
+  <div class="prose"><p>The drink is whatever came in last, and a tavern's board changes with the prizes. Clothes come from every coast at once, taken off the ships that carried them: a merchant's fine coat over bare feet, its quality a fair guide to the crew. Freeboard smells of tar, lamp oil, wet wood and bread; Skysail of wind and fruit.</p></div>
+  <div class="prose"><p>The talk is deck-talk. <i>Put it to the hands</i> settles anything. <i>Deposition or murder?</i> is asked over every quarrel, and the answer is always a joke.</p></div>
+  <h3 class="sub-heading">The tellers</h3>
+  <div class="prose"><p>Freeboard's vice is the <b>tellers</b>, who tell the Lords' deeds in the taverns for coin. Every Lord is told, and the best tellers draw a crowd for the same deed told the hundredth time. An ambitious captain pays to have their own deeds told; a captain caught paying is said to have a <b>bought name</b>.</p></div>
+  <div class="voice-quote"><p>"Anyone can buy a telling. Nobody can buy the second one. If the room doesn't ask for it again, you've paid for nothing."</p></div>
+  <div class="voice-attrib">Pell out of the Spar</div>
+  <h3 class="sub-heading">Getting about</h3>
+  <div class="prose"><p>Freeboarders walk the promenades, climb ladders that were masts, and ride rope-lifts between decks; boats ply the ring. Skysailers take skiffs between the islets. At the Mooring the baskets come down.</p></div>
+  <h3 class="sub-heading">The young</h3>
+  <div class="prose"><p>A youngster's first run on a prize crew earns a half share, and a <b>halfer</b> may put up a hand; the full share comes later. Freeboard's young climb the stack to touch a Lord's spire, and the Lord's crew chases them off; a child who touched one boasts of it for years. Skysail's young jump the gap between islets when they swing close at the Mooring.</p></div>
+  <h3 class="sub-heading">Faith</h3>
+  <div class="prose"><p>The sea crews keep Shuun, the sky crews Fisaya, and the navigators and night watch Bikiargi. Cronus is prayed to for freedom on both cities, however the pirates speak of Frae City. Clergy are whoever came aboard; the cities keep no temple of their own. A toast to a dead Lord whose story is still told belongs to an ordinary evening.</p></div>
+  <div class="legend-era">
+    <button class="legend-era-toggle" onclick="toggleEraLegend(event, this)">◈ &nbsp; Popular Belief · The broken-chain man drinks in Freeboard</button>
+    <div class="legend-era-content">
+      <div class="legend-era-label">◈ &nbsp; What the Taverns Say</div>
+      <p>Pirates say Cronus keeps to the truly free, so the broken-chain man arm-wrestles in Freeboard's taverns, not Frae City's. In Frae City he never loses. In Freeboard, they say, he lost once, and paid for the round.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="whose-colours" class="section-heading">Whose Colours</h2>
+
+  <div class="voice-quote"><p>"One pennant, every Lord's water, every Lord's captains honouring it. The coasts would pay double for that, and I'd have the Tenth to hold the stack together."</p></div>
+  <div class="voice-attrib">Odile Brasshand, Lord of Freeboard</div>
+  <div class="feature-panel prose">
+    <div class="panel-label">Live Tension · Whose Colours</div>
+    <p style="margin-bottom:0;">Since the armada the trade in colours has grown every year. The Lord of Freeboard lives on the Tenth and on colours, and colours are worth buying only while they are honoured. Odile Brasshand wants every Lord to honour every Lord's colours, so that one pass would carry a ship across the whole Midarra. The Pirate Lords refuse. A pass honoured by all is every Lord's name shared, and the raid the tellers love best is the one that breaks another Lord's colours. The coasts pay, complain, and wait to see whose colours will hold.</p>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="names" class="section-heading">What a Freeboarder Is Called</h2>
+  <div class="prose">
+    <p>Most aboard keep the names they came with and go on naming their children in their own tradition, so a child born aboard may carry names from two. Then comes the <b>told name</b>, the one the tellers tell, built on a deed and never chosen; a bigger story can replace it. With a told name the bearer chooses which inherited names to keep beside it. A Lord is known by the told name alone.</p>
+    <p>Until a told name comes, the city calls a person by the given name and where they came <i>out of</i>: a newcomer out of a port, the city-born out of a deck.</p>
+  </div>
+  <div class="feature-panel">
+    <div class="panel-label">Sample Names</div>
+    <p style="margin:0 0 6px;"><b>Untold</b></p>
+    <div class="pill-row"><span class="pill"><i>Jory out of Bellhalt</i></span><span class="pill"><i>Pell out of the Spar</i></span></div>
+    <p style="margin:14px 0 6px;"><b>Told</b></p>
+    <div class="pill-row"><span class="pill"><i>Odile Brasshand</i> (a Legean day-name kept)</span><span class="pill"><i>Kesti Downdraft</i> (a Tengu given name kept)</span></div>
+    <p style="margin:14px 0 6px;"><b>Lords</b></p>
+    <div class="pill-row"><span class="pill"><i>Ninehulls</i></span><span class="pill"><i>Sunfall</i></span><span class="pill"><i>Goldwake</i></span></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="figures" class="section-heading">Named Figures</h2>
+  <div class="card-grid figure-grid">
+    <div class="accent-card">
+      <div class="card-name">Odile Brasshand</div>
+      <p>Lord of Freeboard, a quartermaster risen; her family came out of Legea.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Kesti Downdraft</div>
+      <p>Lord of Skysail and a Pirate Lord; Tengu.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Ninehulls</div>
+      <p>A Pirate Lord of the sea, said to be unkillable.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Sunfall</div>
+      <p>A Pirate Lord of the sky, who strikes out of the sun.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Goldwake</div>
+      <p>Captain Mara Goldwake, a Pirate Lord of the sky through most of the mid-24th century MR; died at anchor c. 2390.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Pell out of the Spar</div>
+      <p>A teller of the Lower Spar.</p>
+    </div>
+    <div class="accent-card">
+      <div class="card-name">Amdeqal</div>
+      <p>The fifth demigod of Legea, who wrote the fleet's line.</p>
+    </div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <h2 id="the-column" class="section-heading">One Line Further: the Twin Cities</h2>
+  <div class="prose"><p>Vyrenna Tessek's column from the Twin Cities, in the Talan years of <i>One Line Further</i>, 2527 MR, opened by the line her grand-uncle's Guide gave them.</p></div>
+  <div class="voice-quote"><p>The Twin Cities: two of them, one on the water and one above it, and both move. Ask on any Midarra quay where they were last month and sail somewhere near it; the stillship masters who know will charge for the knowing, and the ones who charge most know least. Bring coin in small pieces and a purse you would not miss. The taverns never close, there being no hour at which they could sensibly be said to. I saw the city on the water. The other was out.</p><p>The tea is stewed.</p></div>
+  <div class="voice-attrib">Golivander Tessek, <i>A Traveller's Guide to Tyrnarra</i></div>
+  <div class="log-letters">
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Finding it</span><span class="ld-text">Nine days of the wrong water, then an island with a storm sitting on it.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>My grand-uncle saw one of the two cities and reported, with perfect honesty, that the other was out. I have never once in my life been able to leave a thing at <i>out</i>, so I took passage on a grain stillship whose master swore she knew where the pirates were this month, and charged me for it, and we spent nine days proving her wrong.</p><p>On the tenth morning the lookout called. I went up and saw what I took for an island with a storm sitting on it. It was ships. Hulls stacked on hulls, a whole fleet piled into a mountain, black and brown and every colour paint has ever been, with masts still standing out of it at every angle like a forest after a gale. Round its foot sailed a ring of ships that were still ships, under canvas, keeping pace with the mountain, and the mountain was moving. On its very top stood a handful of spires, each one a tall ship stood on its end, each flying its own flag. Our master took her hat off when she saw the flags. She told me later it was habit.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Under the hulls</span><span class="ld-text">The gangway becomes a street, the tavern four hulls tall, bread at three in the morning, a barber with two touches.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>You walk in along a gangway, and the gangway widens, and doors open on both sides, and somewhere in the first hundred paces it has become a street and the sky has gone. The decks close over you. Ships are hoisted onto ships here. The tavern by the landing is four hulls tall, its top deck run across on beams to the gambling hall next door, and on top of the whole tavern sits a fifth ship with lace at its portholes, where the owner lives. Every gangway is a hallway, every hallway a promenade, and the promenades are lined with shops lit by lanterns, because the lanterns are all the light there is. The sun stays outside and the moon with it, and the city has decided that suits it fine. The baker had bread out at what my body insisted was three in the morning, and the queue was as long as a queue at home at breakfast.</p><p>I had my crest trimmed by a barber on the third deck who hummed the whole way through, and he laid the razor along the feathers at my neck as gently as a mother's hand. I told him he had a light touch. He said he had two.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The vote</span><span class="ld-text">The Lower Spar votes out its captain over a leaking roof.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>Every street in this city was once a ship, and they still run them that way. On my fourth day, on a promenade called the Lower Spar, I watched its people vote out their captain over a leaking roof. Forty-one hands went up. He looked at them for a while, then bought them all a drink, and the new captain drank his and went to look at the roof. Nobody I asked found it remarkable. Everyone who lives here is crew, they told me: the baker, the barber, the woman who sells hot nuts at the corner of the Spar. A captain who forgets it gets reminded, by hands or otherwise. The Lords in their spires too. The Lords most of all.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The bilges</span><span class="ld-text">A window in a drowned hull, and a face on the other side.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>Below the lowest street the city goes on downward. The weight has pushed the oldest hulls under, some flooded and some dry, and the dry ones are workshops and storerooms with the sea on the far side of every plank. I went down a ladder into one and found a window in its side, thick old glass with the water pressed green against it, and a face on the other side looking in at me, scaled at the temples, hair lifting in the water like smoke. She raised a hand. I raised mine. What the air-breathers stop using, the water-folk move into.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The sky comes home</span><span class="ld-text">Skarrenn on the fifth day; four islands in the air on the eighth, and rain out of a clear sky.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>I had begun to miss the sky the way I miss my mother: badly, and in my stomach. I am a child of the wind, and Skarrenn found me on the fifth day in a city with no wind in it at all, and I sat on a coil of rope and sulked like a fledgling. The hot-nut woman told me to wait. "The other half's out," she said. "Comes back when it comes back."</p><p>It came back on the eighth day. A shout went down the gangways and the whole city climbed. I climbed with it, up stairs that had been ladders and ladders that had been masts, onto the highest open deck I could find. Out in the west, low over the water, there were four islands in the air.</p><p>They came on slowly. Dark rock underneath, bearded with roots, the edge of a city glinting along the top, and under each one a cluster of airships on long lines, straining, like gulls carrying something too heavy for them and too precious to drop. As they came over the city they put out the evening, and the deck I stood on went cool and blue. Then it rained. Out of a clear sky it rained on the top of the city: cloud-water shaken off the islands as they settled, cold and fine. And I watched a whole city that had not seen the sky in weeks turn its face up into it with its eyes closed.</p><p>By midnight the lines were down. Baskets dropped from the islands, gangways swung across, and the two markets poured into each other like two rivers meeting: the lantern-pale folk from below and the sun-brown folk from above, every one of them buying something they could not get at home and shouting about the price.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">Up</span><span class="ld-text">A basket, the brightest place she has stood, and a city the wind plays.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>I went up in a basket, which I recommend to no one.</p><p>At the top was the brightest place I have ever stood. The sky city is all open: wide squares of stone, a table and chairs out in front of every door, awnings snapping, and hammocks slung everywhere, between posts, between houses, out over the very edge, with people asleep in them above nothing at all. Every wall has windows, and half the windows are only holes, cut where the wind comes through. The wind comes through all of them, and the whole city hums.</p><p>I am always honest with you about music, so here it is. I have heard famous halls play the same piece a thousand nights and mean it once. Nobody plays this city; the wind does, and the wind has never pretended in its life. It sang the way Haizetsua sings. I stood in a square with a cup of something hot going cold in my hands and cried, and a sky pirate with a ring through her eyebrow sat down beside me and let me.</p><p>She had been in the clouds that morning. Her crew dive their ship into them on purpose, for the feel of it: in blind and white, out wet to the skin, every droplet cold as a coin. She showed me her arms, still beaded, and laughed at my face.</p><p>When the stars came out, the sky city stayed up too. It twinkles. Lamps along every edge, voices carried off on the wind, and laughter coming down out of the dark onto the decks below, where the sea-folk lay on their backs to listen.</p></div></div>
+    <div class="log-letter"><button class="log-letter-head" aria-expanded="false" onclick="var c=this.parentNode;c.classList.toggle('open');this.setAttribute('aria-expanded',c.classList.contains('open'))"><span class="ld-date">The last day</span><span class="ld-text">The islands lean into the wind, and an old pirate on the quay explains Frae City.</span><span class="expand-hint">Tap ▾</span></button><div class="log-letter-body"><p>They parted on the twelfth day. The lines came up, the baskets came up, the islands leaned into the wind and went east together, and the stacked city lit its lanterns and went about its business. I asked the hot-nut woman whether they would come back. She looked at me as if I had asked about the tide.</p><p>On the quay I asked an old pirate which city was the real one. He said both. Then he said Frae City was free because a god told it so, and the Twin Cities were free because they said so themselves, every morning, and could stop saying it any time they liked. "That's the difference," he said. "Write that down."</p></div></div>
+  </div>
+
+  <div class="divider"><div class="div-line"></div><div class="div-glyph">✦</div><div class="div-line"></div></div>
+
+  <div class="see-also">
+    <h3>Continue Reading</h3>
+    <ul>
+      <li><a href="/setting/talan/domains/askamira/askamira.html"><b>Askamira →</b></a> · The Freedom domain, whose island the cities' usual waters surround.</li>
+      <li><a href="/setting/talan/domains/askamira/frae-city/frae-city.html"><b>Frae City →</b></a> · The first free city, on the same crossing, free in its god's name.</li>
+      <li><a href="/setting/talan/domains/floteyn/floating-isles/floating-isles.html"><b>The Floating Isles →</b></a> · The Sweetwater League, whose mail sails through pirate water.</li>
+      <li><a href="/setting/talan/domains/zuzental/legea-empire.html"><b>The Legea Empire →</b></a> · The book that wrote a fleet, and then the terms for colours.</li>
+      <li><a href="/setting/talan/transport.html"><b>Transport →</b></a> · The Midarra crossing, and the share the Pirate Lords take of it.</li>
+    </ul>
+  </div>
+
+  <div class="open-canon">
+    <h3>⌬ &nbsp; Open in the Chronicle Record</h3>
+    <div class="sub">What the chronicle has not yet set down about the two cities.</div>
+    <ol>
+      <li><b>The sky Lords.</b> What marks a Lord on Skysail, where Freeboard's Lords have their spires.</li>
+      <li><b>The decks.</b> Freeboard's decks and promenades by name, beyond the Lower Spar.</li>
+      <li><b>The Lords.</b> The Pirate Lords beyond the four the chronicle names.</li>
+      <li><b>The wax harbour.</b> The harbour on the Legean half of Hringseyja, by name, and its governor.</li>
+      <li><b>The Legedi's lines.</b> The two lines on pirates, in full.</li>
+      <li><b>The engines.</b> What drives Freeboard, kind by kind.</li>
+    </ol>
+  </div>
+
+  <div class="footer">TYRNARRA · TALAN · ASKAMIRA · THE TWIN CITIES</div>
+
+</div>
+
+</body>
+</html>
