@@ -12,9 +12,10 @@
 - **Phase 5 (government): closed** (GM, 2026-10-29).
 - **Phase 6 (economy): closed** (GM, 2026-10-29).
 - **Phase 7 (daily life): closed** (GM, 2026-10-29).
-- **Phase 8 (naming): open.**
+- **Phase 8 (naming): closed** (GM, 2026-10-29).
+- **Phase 9 (tension and reveal): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 8, naming.
+- **Resume here:** Phase 9, tension and reveal.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -162,6 +163,14 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 - **Visitor against native:** the visitor sees no law and takes a show of hands for a riot; the native knows whose water this is, whose pass holds in it, and which deck's articles run on which stretch of promenade. The visitor keeps the time; the native asks which watch.
 - **Youth:** a slope, the **first share**: a first run on a prize crew earns a half share, and the half share brings the right to raise a hand; the full share comes later. Sanctioned transgressions, both tolerated because Lords are made of them: sea-city youth climb the stack to touch a Lord's spire (the Lord's crew chases them off; a child who touched one boasts of it for years); sky-city youth jump the gap between islets when they swing close at the joining.
 - **Faith as lived: many things.** Sea crews keep **Shuun**; sky crews **Fisaya** (the Tengu among them most); navigators and the night watch **Bikiargi**; and **Cronus is prayed to as well** (GM, 2026-10-29): he is freedom still, however the pirates sneer at Frae City. Clergy: whichever priest came aboard; no state temple. The Lords' legends are believed rather than worshipped; a toast to a dead Lord whose spire still stands is an ordinary evening's. (For Phase 9: whether anyone honours Goldwake knowing what she became; the broken-chain man said to drink in pirate taverns.)
+
+## Phase 8: naming (GM, closed 2026-10-29)
+
+- **Family: Talanese, native** (where strangers gather from everywhere, the shared tongue becomes the native one: as Frae City, Rika Tikur, No Man's Land). Adventurer Era, Talanese returning. **Local tongue: deck-talk**, Talanese under a sailors' cant.
+- **Personal-name structure (GM, 2026-10-29):** most keep the names they came with and carry on their own naming traditions, so a child may carry a mix of two cultures' names. Then the **told name** comes: the name the tavern tellers tell of you, built on a deed, never chosen, replaceable by a bigger one. With the told name, the bearer **chooses which of the inherited names to keep** beside it. A Lord is known by the told name alone (*Goldwake*). Until a told name comes, the city calls you by your given name *out of* where you came from (*Jory out of Bellhalt*; the city-born *out of* a deck, *Pell out of the Spar*): an address, not a name part. A **bought name** (paid at the tellers before the deed) is an insult. Fingerprint: inherited parts from several traditions, pruned by choice, with a Talanese deed-name. Distinct from the Red Dominion's sea name (crew-given once, kept for life, beside a fixed rating and ship).
+- **Names:** the sea city **Freeboard** (nautical: the height of the deck above the waterline; *free aboard*, the jab in the name; outsiders say *the Stack*); the sky city **Skysail** (the highest sail, above the royal; the lowest deck and the highest sail of one ship); the pair stays **the Twin Cities** abroad, *the Board and the Sail* aboard; the four islets **the Fore, the Main, the Mizzen, the Jigger** (the masts of a four-master; Skysail is one ship in law; the first rock moored to is the Main); demonyms **Freeboarder**, **Skysailer**; the pass **colours** (*buy a Lord's colours*, *sail under Goldwake's colours*; a forgery is *false colours*); the joining **the Mooring** (*the sky's come to moor*; *rafting up* avoided for the League's Raft); the vote over the body **the Last Hands**; the city's cut **the Tenth**; a half-share youngster a **halfer**; the offices **the Lord of Freeboard**, **the Lord of Skysail**; promenades named for rigging (**the Lower Spar** now canon), districts for the prize ship they were.
+- **Named figures:** **Goldwake** (Mara Goldwake, sky Lord c. 2350–2390, canon); **Odile Brasshand**, Lord of Freeboard, a quartermaster risen, no Pirate Lord, her family out of Legea (she kept her day-name); **Kesti Downdraft**, Lord of Skysail and a Pirate Lord, Tengu; **Ninehulls**, a sea Lord who took nine ships in one night, the given name forgotten; **Sunfall**, a sky Lord who strikes out of the sun; **Pell out of the Spar**, a teller of the Lower Spar.
+- **Checks:** freeboard, skysail, topgallant, jigger, colours, mooring are standard sailing terms; every coined name searched across lore, docs and published, no collisions.
 
 ## Proposals for Phase 4 (not yet settled)
 
