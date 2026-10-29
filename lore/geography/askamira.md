@@ -15,6 +15,7 @@
 - **Dea Elurra**: the ice region. Basque *elurra* (snow, ice) → drifted to Dea Elurra.
 - **Maitagarri**: the forest region. Basque *maitagarri* (lovable, charming, endearing).
 - **Star Island**: a small star-shaped island lying nearby in Midarra. Modern English name.
+- **The Twin Cities**: the two pirate cities of the Midarra, **Freeboard** on the water and **Skysail** in the air. Folk count them with Askamira, since their usual waters lie around the island; they answer to no one here, and a Freeboarder counted under Cronus's domain takes it as an insult. Full canon: [`askamira/twin-cities.md`](askamira/twin-cities.md).
 
 **God's city:** Frae City, the Unchained City (Cronus's home, a seven-chained rock floating over the Askamira lake; founded during the Week of Crimson Rain as the base of mortal resistance). Detailed below.
 

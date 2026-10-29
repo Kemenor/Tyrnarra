@@ -1,10 +1,10 @@
 # The Twin Cities (the Midarra)
 
-*Written under the [`region-prose.md`](../../docs/region-prose.md) contract. The Twin Cities belong to no domain; their canon frame is [`_continent.md`](_continent.md), *The Three Seas*. The column quoted through this file is kept whole in [`twin-cities-column.md`](twin-cities-column.md).*
+*Written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Counted with Askamira: [`../askamira.md`](../askamira.md); canon frame [`../_continent.md`](../_continent.md), *The Three Seas*. The column quoted through this file is kept whole in [`twin-cities-column.md`](twin-cities-column.md).*
 
 **Etymology:** *the Twin Cities* is the name the rest of Talan uses, modern Talanese. Aboard, the two are **Freeboard**, the sea city, and **Skysail**, the sky city, both Adventurer-Era Talanese in the sailors' cant: *freeboard*, the height of a deck above the water; *skysail*, the highest sail a ship carries. Aboard, the pair is *the Board and the Sail*; outsiders call Freeboard *the Stack*. Demonyms: **Freeboarder**, **Skysailer**. (Derivations in the glossary.)
 
-**Position:** no fixed place. The cities keep mostly to the central Midarra along the north-south crossing, where Solkai's and Rika Tikur's cargo passes.
+**Position:** no fixed place. The cities keep mostly to the central Midarra along the north-south crossing, where Solkai's and Rika Tikur's cargo passes. Folk count them with Askamira, since their usual waters lie around the island; the cities answer to no one there, and a Freeboarder counted under Cronus's domain takes it as an insult.
 
 **The cities:** **Freeboard** is a flotilla of hulls stacked into a mountain on the water, ringed by working ships under sail. **Skysail** is four islets in the air, **the Fore, the Main, the Mizzen and the Jigger**, with airships hung beneath them on lines. The two moor together when they can and part when they must.
 
@@ -68,9 +68,9 @@ The sky crews dive their ships into clouds for the feel of it, in blind and whit
 
 ### ⚿ GM Secret: the islets are Elden ships
 
-The four islets are the hulls of Elden atmospheric vessels (see [`../timeline.md`](../timeline.md), *⚿ GM Secret: The Elden: What Happened*), grown over with eight thousand years of dust, root and stone. The old work the sky pirates tend is the ships' engines, run by habit and understood by no one aboard. The marks in the deepest holds, which the Skysailers call *the old writing*, are the Silent Tongue.
+The four islets are the hulls of Elden atmospheric vessels (see [`../../timeline.md`](../../timeline.md), *⚿ GM Secret: The Elden: What Happened*), grown over with eight thousand years of dust, root and stone. The old work the sky pirates tend is the ships' engines, run by habit and understood by no one aboard. The marks in the deepest holds, which the Skysailers call *the old writing*, are the Silent Tongue.
 
-The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines beneath are latter-day copies of what they hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world ([`../cosmology.md`](../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*).
+The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines beneath are latter-day copies of what they hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world ([`../../cosmology.md`](../../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*).
 
 ### The Mooring
 
@@ -115,7 +115,7 @@ When a captain or a Lord is killed, the crew holds **the Last Hands** over the b
 
 ### ⚿ GM Secret: Ninehulls, the unkillable
 
-The first wound was a near thing, and the man survived it. The death in Freeboard was real: the man died, and his soul went on to Dauria, where Epairima judged him herself, as she judges every soul belief has begun to lift ([`../gods.md`](../gods.md), *Epairima*). The legend of the unkillable did not end with him. Freeboard believed Ninehulls could not die, and the belief brought a being into existence that struck down his killer: a soul born of belief, shaped as the man (see [`../cosmology.md`](../cosmology.md), *The Wellspring & Belief*).
+The first wound was a near thing, and the man survived it. The death in Freeboard was real: the man died, and his soul went on to Dauria, where Epairima judged him herself, as she judges every soul belief has begun to lift ([`../../gods.md`](../../gods.md), *Epairima*). The legend of the unkillable did not end with him. Freeboard believed Ninehulls could not die, and the belief brought a being into existence that struck down his killer: a soul born of belief, shaped as the man (see [`../../cosmology.md`](../../cosmology.md), *The Wellspring & Belief*).
 
 The being does not know its true name and believes truly that it is Ninehulls. Its memory is the story the Midarra tells of him, as a being formed of belief takes its believers' account of itself; the given name was never part of the story, so it has none. It is no undead thing, since no soul was held back; the Voroir Daua know no better and keep it on their list as one. It lives on the whole Midarra's belief, in every port and on every deck where the unkillable is spoken of: a forgotten Lord stops being a Lord, and a forgotten belief being stops being.
 
@@ -149,7 +149,7 @@ On every quay of the Midarra they tell how the fleet was drawn off: how Skysail 
 
 ### ⚿ GM Secret: the Accommodation
 
-Carried over unchanged from [`floteyn/floating-isles.md`](floteyn/floating-isles.md), *⚿ GM Secret: The Accommodation*: League hulls and everything flying the mail-pennant sail unharried, and the Lords receive the League's living chart a season stale through the Merfolk pods who scout for the pirates and pilot for the League in the same lifetime. Unsigned, denied on both sides, two generations old. In public, the League's unharried mail reads as luck, or as colours the League will not admit to buying.
+Carried over unchanged from [`../floteyn/floating-isles.md`](../floteyn/floating-isles.md), *⚿ GM Secret: The Accommodation*: League hulls and everything flying the mail-pennant sail unharried, and the Lords receive the League's living chart a season stale through the Merfolk pods who scout for the pirates and pilot for the League in the same lifetime. Unsigned, denied on both sides, two generations old. In public, the League's unharried mail reads as luck, or as colours the League will not admit to buying.
 
 ---
 
@@ -211,14 +211,14 @@ Until a told name comes, the city calls a person by the given name and where the
 - **Kesti Downdraft**: Lord of Skysail and a Pirate Lord; Tengu.
 - **Ninehulls**: a Pirate Lord of the sea, said to be unkillable.
 - **Sunfall**: a Pirate Lord of the sky, who strikes out of the sun.
-- **Goldwake**: Captain Mara Goldwake, a Pirate Lord of the sky through most of the mid-24th century MR; died at anchor c. 2390 (see [`bolverk.md`](bolverk.md), *Nirfel*).
+- **Goldwake**: Captain Mara Goldwake, a Pirate Lord of the sky through most of the mid-24th century MR; died at anchor c. 2390 (see [`../bolverk.md`](../bolverk.md), *Nirfel*).
 - **Pell out of the Spar**: a teller of the Lower Spar.
-- **Amdeqal**: the fifth demigod of Legea, who wrote the fleet's line (see [`zuzental/legea-empire.md`](zuzental/legea-empire.md)).
+- **Amdeqal**: the fifth demigod of Legea, who wrote the fleet's line (see [`../zuzental/legea-empire.md`](../zuzental/legea-empire.md)).
 
 ## Voices
 
-- **Vyrenna Tessek** · recurring voice; block in [`twin-cities-column.md`](twin-cities-column.md) and [`../voices.md`](../voices.md).
-- **Golivander Tessek** · recurring voice; [`../voices.md`](../voices.md).
+- **Vyrenna Tessek** · recurring voice; block in [`twin-cities-column.md`](twin-cities-column.md) and [`../../voices.md`](../../voices.md).
+- **Golivander Tessek** · recurring voice; [`../../voices.md`](../../voices.md).
 - **Pell out of the Spar** · teller of the Lower Spar · a working storyteller's patter; talks about legends as stock to be kept, and about money plainly.
 - **Kesti Downdraft** · Lord of Skysail · brisk and practical; hands a visitor the useful thing first.
 - **Odile Brasshand** · Lord of Freeboard · a quartermaster's voice: dry, numerate, unsentimental about Lords.

@@ -297,7 +297,7 @@ Items where the world has decided *what* but not *much*: placements and structur
 **Where.** [lore/geography/egulon/harro-distiratsua.md](../lore/geography/egulon/harro-distiratsua.md); [lore/geography/egulon/lua-lasai.md](../lore/geography/egulon/lua-lasai.md); [lore/geography/_continent.md](../lore/geography/_continent.md), *Naming strata across the eras*.
 
 ### [Midarra] Publish the Twin Cities *(next: the pirate one-shot)*
-**Lore built (2026-10-29).** Canon in [lore/geography/twin-cities.md](../lore/geography/twin-cities.md) (Freeboard and Skysail, the articles, the Pirate Lords, colours, Ninehulls) and the traveller's image in [lore/geography/twin-cities-column.md](../lore/geography/twin-cities-column.md); working record [docs/pencilled/twin-cities.md](pencilled/twin-cities.md).
+**Lore built (2026-10-29).** Canon in [lore/geography/askamira/twin-cities.md](../lore/geography/askamira/twin-cities.md) (Freeboard and Skysail, the articles, the Pirate Lords, colours, Ninehulls) and the traveller's image in [lore/geography/askamira/twin-cities-column.md](../lore/geography/askamira/twin-cities-column.md); working record [docs/pencilled/twin-cities.md](pencilled/twin-cities.md).
 **Open.** The page (the publish signal; its placement folds into the *Factions page reorganisation* thread, §Needs publishing) and its mirrors on `transport.html`, `floating-isles.html` and `bolverk.html`; the sky Lords' mark on Skysail; the decks by name; the Legedi's two pirate lines in full; the Legean half of Hringseyja's harbour by name.
 
 ---
