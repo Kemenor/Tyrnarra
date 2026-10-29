@@ -14,10 +14,12 @@
 - **Phase 7 (daily life): closed** (GM, 2026-10-29).
 - **Phase 8 (naming): closed** (GM, 2026-10-29).
 - **Phase 9 (tension and reveal): closed** (GM, 2026-10-29).
-- **Phase 10 (draft): open.**
+- **Phase 10 (draft): closed** (GM, 2026-10-29, after comments in the live doc).
+- **Phase 11 (commit lore): closed** (2026-10-29).
+- **Phase 12 (publish): open**, waiting on the GM's go-ahead after the lore summary.
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 10, the draft.
-- **Draft:** none yet.
+- **Resume here:** Phase 12, the page (`published/setting/...`, placement per the Factions reorganisation thread) and its mirrors (`transport.html`, `floating-isles.html`, `bolverk.html`, the GM short-notice hub's stale stub line); map-todo label.
+- **Draft:** [`twin-cities-draft.md`](twin-cities-draft.md) (Phase 10, with the GM); review copy as a live doc for comments: https://claude.ai/artifact/BRpjE3sgb1ZFgY4t74T46H (the GM's comments there feed back into the markdown draft).
 
 ## Phase 0: approved readback
 
@@ -163,7 +165,7 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 - **Movement:** the sea city on foot along the promenades, up ladders that were masts, by rope-lifts between decks, by boat round the outer ring; the sky city by small airship skiffs between the four islets (Haizava has the rope-bridges). **Signature movement: the baskets** dropped from the islets at the joining.
 - **Visitor against native:** the visitor sees no law and takes a show of hands for a riot; the native knows whose water this is, whose pass holds in it, and which deck's articles run on which stretch of promenade. The visitor keeps the time; the native asks which watch.
 - **Youth:** a slope, the **first share**: a first run on a prize crew earns a half share, and the half share brings the right to raise a hand; the full share comes later. Sanctioned transgressions, both tolerated because Lords are made of them: sea-city youth climb the stack to touch a Lord's spire (the Lord's crew chases them off; a child who touched one boasts of it for years); sky-city youth jump the gap between islets when they swing close at the joining.
-- **Faith as lived: many things.** Sea crews keep **Shuun**; sky crews **Fisaya** (the Tengu among them most); navigators and the night watch **Bikiargi**; and **Cronus is prayed to as well** (GM, 2026-10-29): he is freedom still, however the pirates sneer at Frae City. Clergy: whichever priest came aboard; no state temple. The Lords' legends are believed rather than worshipped; a toast to a dead Lord whose spire still stands is an ordinary evening's. (For Phase 9: whether anyone honours Goldwake knowing what she became; the broken-chain man said to drink in pirate taverns.)
+- **Faith as lived: many things.** Sea crews keep **Shuun**; sky crews **Fisaya** (the Tengu among them most); navigators and the night watch **Bikiargi**; and **Cronus is prayed to as well** (GM, 2026-10-29): he is freedom still, however the pirates sneer at Frae City. Clergy: whichever priest came aboard; no state temple. The Lords' legends are believed rather than worshipped; a toast to a dead Lord whose story is still told is an ordinary evening's. **Revised (GM, 2026-10-29, at the draft):** a spire is the prize that made its Lord, hoisted and stood on end, raised by the captain's own crew as a claim (nobody votes on a spire; it stands while the crew can hold it and no one pulls it down; raised too early, it comes down fast) and held by the Lord's crew; after the Lord's death the crew holds and defends it while waiting for a successor to rise from among them (the spire then flies the new Lord's flag); if none does, the crew drifts to other flags and the spire comes down and is built into the city. A legend lives on the whole Midarra's belief, never on one teller. (For Phase 9: whether anyone honours Goldwake knowing what she became; the broken-chain man said to drink in pirate taverns.)
 
 ## Phase 8: naming (GM, closed 2026-10-29)
 

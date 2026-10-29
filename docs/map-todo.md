@@ -6,6 +6,7 @@ Open work for the Tyrnarra map. The live map is the Kartofuchs map (`~/Sync/Tyrn
 
 ## Open
 
+- **The Twin Cities** (the Midarra). A label in their usual waters in the central Midarra, on the north-south crossing between Solkai and Rika Tikur, to catch the players' eye; the cities move, so no icon is fixed ([`../lore/geography/twin-cities.md`](../lore/geography/twin-cities.md)).
 - **Red Dominion ship-towns** (Sumendar). Optional: small town icons for the ship-towns along the west coast.
 - **Panjrang's ring oases** (Hareaveldi, Lioaru). Optional: labels **Sabzab** (green), **Lajvard** (blue), **Sorkhab** (red) on three of the five pools around Panjrang; left off so far, as the pools are small beside the capital's label.
 - **Kaosadaemi** (Nashavel; geography audit D13, GM 2026-09-28, [`geo-audit-2026-09-28.md`](geo-audit-2026-09-28.md)). Pull the Kaosadaemi/Vernua region line down to the Hegandi escarpment, so no strip of Vernua runs between Kaosadaemi and the escarpment (the Thousand Kingdom lies directly below it; the southern rail climbs the Hegandi to Ringhold).

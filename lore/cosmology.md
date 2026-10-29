@@ -119,6 +119,7 @@ The Bound Gods can be petitioned during an audience at their city-states. The sh
 - The Wellspring is the source of all things. **Belief is a mechanism of the Wellspring.** Collective belief generates real energy, a minuscule fragment per person, but real.
 - If enough people believe in something (a bogeyman, a spirit, a legend) that thing begins to exist, built from accumulated belief energy. **Belief beings** are real beings, created entirely by collective faith.
 - Belief beings do not need a shard of divinity to exist; they are created around one implicitly. But they **cease to exist if forgotten**: unlike the original twelve, there is nothing underlying them once belief drains away.
+- A belief being is a soul born of belief, a new thing in the world; it is not a soul held back from death, which is undeath. Belief beings can be killed like gods, and enough belief may bring one back; what is forgotten stays gone.
 - This applies to mortals too: a king, a general, a famous hero accrues tiny amounts of power from everyone who believes in them. This is why great leaders sometimes seem more than mortal: because they literally are.
 - Gods themselves grow more powerful with more belief. Being feared and being loved are both valid sources.
 
