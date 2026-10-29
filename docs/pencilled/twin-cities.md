@@ -10,9 +10,10 @@
 - **Phase 3 (traveller's image): closed** (GM, 2026-10-28): the column, accepted.
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-28).
 - **Phase 5 (government): closed** (GM, 2026-10-29).
-- **Phase 6 (economy): open.**
+- **Phase 6 (economy): closed** (GM, 2026-10-29).
+- **Phase 7 (daily life): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 6, the economy.
+- **Resume here:** Phase 7, daily life.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -135,6 +136,19 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 - **The honest cost:** violence is part of the constitution; shares buy votes; the loud and the feared win; there is no peaceful Twin Cities under these articles.
 - **Census (off the page):** nearest are Auran (Tolwaja by household vote), Baerfrost's Hunt-League (chieftains seated for proven kills; the deed-route was rejected for that reason), the Raft (one island one voice; here a ship is a street with a vote), and the Red Dominion's absolute command in action (there the captain overrules the muster at other times; here never). The Pirate Lords as believed legends lean on the unusual form *a ruler believed into being* without being rulers.
 - **Mara Goldwake check:** *seated* reads as sitting with the Lords; her legend was the hoard nobody ever saw.
+
+## Phase 6: economy (GM, closed 2026-10-29)
+
+- **Subsistence:** they feed themselves on water and fish and buy their grain. The Midarra is fresh, so drinking water is free; fish from the outer ring's boats and from fish-pens and weed beds in the shadow under the hulls, kept by the Merfolk of the bilges (their trade with the decks above); the sky city's islets carry gardens and orchards in the sun, so the sky grows the fresh food (fruit and greens up, fish and goods down: the joining is also a market); grain bought on the coasts and from the Brauogi grain ships on the crossing, sometimes taken as prize; a lean year means more raiding.
+- **The draw:** the market that asks no questions (the Midarra's fence); the night that never ends (taverns, gambling halls, the brothel); crews for hire, and a place for the hunted to vanish; the pass.
+- **The city grows from its prizes:** every taken hull sails on under a pirate captain or is broken, hoisted and built in; a district can be dated by the prize it was.
+- **Sells:** prize goods at a discount, repairs and salvage, passes; the sky city fresh food and fast carriage. **Buys:** grain; guns (Saegate pattern, in through Gesalkai's Weighhouse); engines and airship parts from the Order of Steam (light, pending its rework).
+- **Partners:** **Rika Tikur**, the main buyer of prize goods (canon: answers only to capital; its houses keep shrines to Nirfel, once Mara Goldwake; reach for Phase 9); Gesalkai (the guns); Legea after the armada (buys passes for its wax ships, on the terms of the Legedi's second line); the League (pays nothing in public; the accommodation, GM-tier).
+- **Routes:** no rail; the city keeps to the crossing because the prey and the buyers are there; the sky pirates fly at about 60 mph to anywhere a hull cannot reach (inland caravans, river barges, coast towns, other airships).
+- **The pass:** canon's *the Pirate Lords take their share*, made concrete. The Lords share out the waters, so a shipper buys a pass (a pennant or a token) from the Lord whose water it crosses, from that Lord's factor in Solkai or Rika Tikur, or pays when stopped; the captains under that Lord's flag honour it. No canon move (it fills an existing line). It covers the League's secret: in public the unharried mail reads as luck or an unadmitted pass.
+- **The city's cut:** one share in ten of every prize sold in the city, to the city's Lord, for the engines, the lifts and the tow lines.
+- **The stake in the tension:** every coast pays the pirates and profits from them (passes paid and resented, prize goods bought cheap and their sellers denounced, Legea's terms in its book); inside, the vote rewards the biggest shares, and a pass is worth buying only while the unprotected keep being taken.
+- **Table note:** none; the pass as a prop is homebrew.
 
 ## Proposals for Phase 4 (not yet settled)
 
