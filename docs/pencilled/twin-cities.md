@@ -11,9 +11,10 @@
 - **Phase 4 (place, peoples and history): closed** (GM, 2026-10-28).
 - **Phase 5 (government): closed** (GM, 2026-10-29).
 - **Phase 6 (economy): closed** (GM, 2026-10-29).
-- **Phase 7 (daily life): open.**
+- **Phase 7 (daily life): closed** (GM, 2026-10-29).
+- **Phase 8 (naming): open.**
 - **Build shape (GM, 2026-10-27):** one build, not split; the sky city gets equal weight with the sea city.
-- **Resume here:** Phase 7, daily life.
+- **Resume here:** Phase 8, naming.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -149,6 +150,18 @@ The Twin Cities are one pirate nation in two cities on the Midarra. Each has its
 - **The city's cut:** one share in ten of every prize sold in the city, to the city's Lord, for the engines, the lifts and the tow lines.
 - **The stake in the tension:** every coast pays the pirates and profits from them (passes paid and resented, prize goods bought cheap and their sellers denounced, Legea's terms in its book); inside, the vote rewards the biggest shares, and a pass is worth buying only while the unprotected keep being taken.
 - **Table note:** none; the pass as a prop is homebrew.
+
+## Phase 7: daily life (GM, closed 2026-10-29)
+
+- **The day:** the sea city keeps no common hour; each district keeps its own watches, and *what time is it?* is answered *which watch?* (unlike Myrria, where the clock kept is a signal; here the hour is whatever your crew says). A sea-city baker bakes when the flour comes in, buys fish through a bilge hatch from the Merfolk, sells on the promenade, and raises a hand when the deck votes on the roof. The sky city lives by the sun, the one place in the Twin Cities that has it: work in the morning, long afternoons at the outside tables, lamps along the edges at night.
+- **The shared ritual: the joining** (the drip, the faces turned up, the markets pouring together). The daily civic act: **the hands**, the show of hands that settles everything from a leaking roof to a captain.
+- **Senses and habits:** the drink is whatever came in last (a tavern's list changes with the prizes); clothes from every coast at once, prize-taken (a merchant's fine coat over bare feet; its quality says which crew); below, tar, lamp oil, wet wood and bread; above, wind, fruit and cold droplets; an apple from the sky city is a gift below.
+- **The vice: the tellers.** Tavern storytellers tell the Lords' deeds for coin, and an ambitious captain pays to have their own told: where belief is power, this is how a legend is fed, and buying stories is how one tries to become a Lord. (Gambling halls stay ordinary; the Red Dominion's vice is the odds at Tuta.)
+- **Speech:** *put it to the hands* (let's vote on it); *deposition or murder?* (the standing joke over any quarrel); asked where they are from, a resident names their **deck** (the district), keeping clear of the Dominion's *which ship?*.
+- **Movement:** the sea city on foot along the promenades, up ladders that were masts, by rope-lifts between decks, by boat round the outer ring; the sky city by small airship skiffs between the four islets (Haizava has the rope-bridges). **Signature movement: the baskets** dropped from the islets at the joining.
+- **Visitor against native:** the visitor sees no law and takes a show of hands for a riot; the native knows whose water this is, whose pass holds in it, and which deck's articles run on which stretch of promenade. The visitor keeps the time; the native asks which watch.
+- **Youth:** a slope, the **first share**: a first run on a prize crew earns a half share, and the half share brings the right to raise a hand; the full share comes later. Sanctioned transgressions, both tolerated because Lords are made of them: sea-city youth climb the stack to touch a Lord's spire (the Lord's crew chases them off; a child who touched one boasts of it for years); sky-city youth jump the gap between islets when they swing close at the joining.
+- **Faith as lived: many things.** Sea crews keep **Shuun**; sky crews **Fisaya** (the Tengu among them most); navigators and the night watch **Bikiargi**; and **Cronus is prayed to as well** (GM, 2026-10-29): he is freedom still, however the pirates sneer at Frae City. Clergy: whichever priest came aboard; no state temple. The Lords' legends are believed rather than worshipped; a toast to a dead Lord whose spire still stands is an ordinary evening's. (For Phase 9: whether anyone honours Goldwake knowing what she became; the broken-chain man said to drink in pirate taverns.)
 
 ## Proposals for Phase 4 (not yet settled)
 
