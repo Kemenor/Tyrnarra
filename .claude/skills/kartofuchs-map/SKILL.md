@@ -41,7 +41,7 @@ Screenshots and exports are drawn by an editor. When none has the map open, Kart
 - **Reuse a group:** `stamps` captures a group and places it again.
 - **A whole town map:** `generate` (city) or `import_town` (Watabou's export), linked from the world map with `link_map`.
 - **Measuring:** 1 map unit is 0.5 mile, so a square map unit is 0.25 square mile. `query` a region shape for its outline points; its area is the polygon's area in square units x 0.25, and a distance is map units x 0.5.
-- **A map-todo item:** make the change, then mark the `docs/map-todo.md` entry done in the Kartofuchs map; its re-export to the published views stays open.
+- **A map-todo item:** make the change, then delete its entry from `docs/map-todo.md` (the file lists open work only; the export to the published views is one line at its top). Keep what is still open of a partly done entry.
 
 ## The published views
 
