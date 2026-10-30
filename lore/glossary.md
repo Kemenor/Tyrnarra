@@ -473,7 +473,8 @@ Full etymologies are in `lore/geography/<region>.md` (one file per god domain). 
   - **Named figures**: **Gisel Ferryhithe Springlock** (a tuner, eleven entries) · **Rodgar Greenmouth Netknot** (a Roadward) · **Herald Pieter Rouland of Lograth** (Thousand Kingdom register; the report on Ringhold's colours, 2531).
 - **Basogur Jungle**: Basque *baso* (forest/wood) → drifted to *Basogur*; shared with Ehizahar. Full canon: `geography/nashavel/basogur.md`; the crossing log `geography/nashavel/basogur-log.md`. Nested names (build of 2026-09-24/25):
   - **Basajun**: Basque *basajaun* (*basa* "wild, of the wood" + *jaun* "lord"), the lord of the woods, worn (the *-au-* closed to *-u-*) → **Basajun**. The jungle's belief-formed demi-god, walking the Material Plane; see `gods.md`, *Basajun*.
-  - **Aintzir**: Basque *aintzira* (lake), final vowel dropped → **Aintzir**. The lake just inside the trees at the jungle's northeast edge, by Veidrath.
+  - **Aintzir**: Basque *aintzira* (lake), final vowel dropped → **Aintzir**. The lake just inside the trees at the jungle's northeast edge, by the Villtur Gates.
+  - **The Villtur Gates**: plain Talanese, the Roadwards' name (2026-10-30) for where the long road comes out of the trees into Villtur, on the jungle's north-east edge; the Oihandar Red Tusks' palisade.
   - **The Stitchery**: plain Talanese, the Guild's word. The Flesh-Sculptor's sealed dungeon under the Nashavel side of the canopy.
   - **Web-holds**: plain Talanese for the Anadi's villages hung between the trunks. Named: **Thousand-Eyes Hold** (keeps the Stitchery's web-seal) · **the Hanging Hold** (an overnight stop on the road) · **Deepwater Hold** (the interior).
   - **Marutar**: Sanskrit *marut* (the storm-winds, the restless ones) + a clan ending *-ar*, worn → **Marutar**. A Vanara guide-clan of the road.

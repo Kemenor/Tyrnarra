@@ -2,11 +2,11 @@
 
 *Built 2026-09-24/25 and GM-reviewed, written under the [`region-prose.md`](../../../docs/region-prose.md) contract. Shared region: both [`../nashavel.md`](../nashavel.md) and [`../ehizahar.md`](../ehizahar.md) point here. Carries three ⚿ boxes (the two Roadwards boxes mirrored in short on Kaosadaemi) and two ◈. The crossing quoted throughout is [`basogur-log.md`](basogur-log.md).*
 
-**Etymology:** Basque *baso* (forest, wood) → **Basogur**, an old name for an old place. **Basajun**: Basque *basajaun*, the lord of the woods, worn. **Aintzir**: Basque *aintzira*, lake, the final vowel dropped. **The Stitchery** is plain Talanese, the Guild's word.
+**Etymology:** Basque *baso* (forest, wood) → **Basogur**, an old name for an old place. **Basajun**: Basque *basajaun*, the lord of the woods, worn. **Aintzir**: Basque *aintzira*, lake, the final vowel dropped. **The Stitchery** is plain Talanese, the Guild's word; so is **the Villtur Gates**, the Roadwards' name.
 
-**Position:** the canopy across the continent's waist, from the Midarra coast to the Hafra coast. **Veidrath** stands at its northeast edge, with the lake **Aintzir** just inside the trees; **Ispilur**, with Nahaskel and Dunloch on it, lies below its southern edge, fed by a river from a larger lake at the edge itself; Kaosadaemi's ring of **Hringfel** rises to the southeast. The long road enters at **Greenmouth** in the south and comes out at the Oihandar Red Tusks' gate in the north. The south of the canopy is Nashavel's claim and the north is Ehizahar's, and the two claims meet in the middle.
+**Position:** the canopy across the continent's waist, from the Midarra coast to the Hafra coast. The **Skoga** runs along its northern edge, over the forest peak where the canopy reaches furthest into Villtur, and down the north-east edge to the Hafra. **The Villtur Gates** stand on that north-east edge, with the lake **Aintzir** just inside the trees, and **Veidrath** lies north of the Skoga's bend, in the grass beyond Aymuru; **Ispilur**, with Nahaskel and Dunloch on it, lies below its southern edge, fed by a river from a larger lake at the edge itself; Kaosadaemi's ring of **Hringfel** rises to the southeast. The long road enters at **Greenmouth** in the south and comes out at the Villtur Gates in the north-east. The south of the canopy is Nashavel's claim and the north is Ehizahar's, and the two claims meet in the middle.
 
-**Terrain:** old-growth jungle with wild magic in the trees; paths that do not keep their place; rivers that change their banks, the Skoga the largest on the Ehizahar side; a knot of peaks mid-canopy where the two claims meet; one lake, Aintzir.
+**Terrain:** old-growth jungle with wild magic in the trees; paths that do not keep their place; rivers that change their banks, the Skoga the largest, along the Ehizahar edge; a knot of peaks mid-canopy where the two claims meet; one lake, Aintzir.
 
 **Character:** a place that makes stories.
 
@@ -40,7 +40,7 @@ The tribes of the jungle say a god walks it, and they call him **Basajun**. He i
 > "In the taproom they told me the loveliest thing. When a Roadward dies they are buried in the jungle, every one of them, by the Principality's own law. The whole bench said it together like a grace before supper: 'The road keeps its own.'"
 > Lisette Carrow, at Greenmouth, the night before the crossing
 
-The long road runs through the Basogur. It enters the trees at **Greenmouth**, the Kaosadaemi gate, and comes out eleven days later at the northern gate by Veidrath, and the **Roadwards** of the Principality take a party through on that schedule with the number of people it went in with. A Roadward walks the whole crossing. The paths between are walked by **Vanara guides**, who come down out of the canopy and take the lead from one web-hold to the next, and the web-holds are the overnight stops, strung high enough that the beasts and the freight sleep below them with a guide on watch. Freight goes through on sledges; the canopy takes wheels apart. The road carries what an airship cannot lift and a stillship cannot reach in time: millstones for Veidrath, stone and iron and anything heavy bound north or south that cannot wait for the sea.
+The long road runs through the Basogur. It enters the trees at **Greenmouth**, the Kaosadaemi gate, and comes out eleven days later at the Villtur Gates, and the **Roadwards** of the Principality take a party through on that schedule with the number of people it went in with. A Roadward walks the whole crossing. The paths between are walked by **Vanara guides**, who come down out of the canopy and take the lead from one web-hold to the next, and the web-holds are the overnight stops, strung high enough that the beasts and the freight sleep below them with a guide on watch. Freight goes through on sledges; the canopy takes wheels apart. The road carries what an airship cannot lift and a stillship cannot reach in time: millstones for Veidrath, stone and iron and anything heavy bound north or south that cannot wait for the sea.
 
 Every party is written into the roll at the Roadwards' hall at Greenmouth, the people on one line, the beasts on a second, the freight on a third, and counted off the same roll at the other end. The road ran before the Principality's Roadwards ran it, and parties went in and came out on no schedule anyone could promise; the road began keeping time under **Princess Hildrun Ringhold Thornhollow**, in the season the Principality still calls the season the road first held.
 
@@ -72,7 +72,7 @@ The **druid tribes** are mixed, every ancestry the jungle holds, and they plant 
 
 The **Lizardfolk** jungle clans hunt with the **armiar**, the great spider, whose web spreads a hunter's senses across a hundred yards of canopy. They are many, and they are most numerous in the interior. **Myrkvid Long Web** crosses the road in the middle of the jungle; **the Frogged Tribe** floats the Skoga on the Ehizahar side, hunts the jungle's edge for days at a time, and keeps a silent feud with the other Lizardfolk clans over the river.
 
-The **Orc** clans ride the jungle's fringe on the low, broad vigross, which goes through ground a runner cannot cross. One of them, the **Oihandar Red Tusks**, settled where the road leaves the trees and holds the northern gate: a palisade of whole trunks, and a kinrider who counts each party off the Roadwards' roll.
+The **Orc** clans ride the jungle's fringe on the low, broad vigross, which goes through ground a runner cannot cross. One of them, the **Oihandar Red Tusks**, settled where the road leaves the trees and holds the Villtur Gates: a palisade of whole trunks, and a kinrider who counts each party off the Roadwards' roll.
 
 ## The Stitchery
 
@@ -137,7 +137,7 @@ The Vanara ride the change, and in the Basogur the change is the ground itself. 
 - **The Mossback**: a druid tribe of the Drowned Steps and Three Springs.
 - **Myrkvid Long Web**: a Lizardfolk clan of the interior; **Jargal Slowwater of Myrkvid Long Web**.
 - **The Frogged Tribe**: a Lizardfolk river-clan on the Skoga (see [`../ehizahar/villtur.md`](../ehizahar/villtur.md)).
-- **The Oihandar Red Tusks**: the Orc clan of the northern gate; **Khulan Deepfoot of Oihandar Red Tusks**, the kinrider who counts the parties.
+- **The Oihandar Red Tusks**: the Orc clan of the Villtur Gates; **Khulan Deepfoot of Oihandar Red Tusks**, the kinrider who counts the parties.
 - **Irmen Greenmouth Baxter**: a Roadward of Kaosadaemi.
 - **Lisette Carrow**: a Guild Silver of the Thousand Kingdom, whose log of the crossing is the most-copied account of the road.
 
