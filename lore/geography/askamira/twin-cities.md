@@ -72,6 +72,29 @@ The four islets are the hulls of Elden atmospheric vessels (see [`../../timeline
 
 The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines beneath are latter-day copies of what they hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world ([`../../cosmology.md`](../../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*).
 
+### The Unspent
+
+Under the Jigger, on the line nearest its keel, hangs **the Unspent**, Captain Mara Goldwake's flagship. Goldwake died aboard her about 2390 MR, at anchor far out on the Midarra. Some weeks later the Unspent came in over the Jigger with her sails set and no one at the wheel, and in the morning she was found in her old berth, lines made fast, every knot sound. No one aboard answered a hail.
+
+The crews of Goldwake's two other airships took up the Unspent's lines and have kept them since. They mend the rope, keep her trim, and stay off her deck: the few who went over her rail in the first years did not come back. The keepers today are the grandchildren of Goldwake's veterans, and they are poor, since none of Goldwake's buried fortune ever reached the crews who sailed for it. The rule came down to them with the lines: keep her shut.
+
+> "Nobody boards her. Count the ones who tried. Mend her lines and leave her be; she's no trouble hanging there."
+> Kesti Downdraft, Lord of Skysail
+
+#### ◈ Popular Belief: the catalogue in the cabin
+
+On both cities they say Goldwake wrote her catalogue on the walls of her cabin before she died, every cache on Talan, and that her dead crew keeps it for her until she comes back for it. Every few years a halfer swears to have seen lamplight behind the Unspent's stern windows.
+
+### ⚿ GM Secret: the Unspent
+
+What Goldwake took from the Sumendar ruin was a **lift-heart**: the part of an Elden atmospheric vessel that holds the hull up, the same work as the engines inside the islets (see the secret above), torn from a downed vessel in the ruin. Out of its hull it drew on whatever lived near it, and it shortened her life and her crew's over months. She died with it in her hand. Her crew died within days of her, aboard, and their oath to her held them: the ghosts of the Unspent's crew sailed her home, hung her in her berth, and keep her shut. They are souls held back, so the Voroir Daua would count them undead; the order keeps no watch on Skysail.
+
+The ghosts sealed the cabin, and it has held no air since. Goldwake lies inside, preserved, the lift-heart in her closed hand, and the heart sleeps in her grip. Around her lies her last cache, the one take she kept instead of burying, and taking from it marks the taker like any of her caches ([`../bolverk.md`](../bolverk.md), *Nirfel → Method on Talan*). The seal holds while the ghosts do. Opened, the cabin takes its first air in a century and a half, and the dry body gives way.
+
+The Jigger's engine runs short of its own heart: its socket stands empty, which is why the Jigger is the cold islet and carries the most airships on its lines. A loose and waking heart beside it would pull on the Jigger's engine to make itself whole, and drag the islet down. Seated in the empty socket, the heart would make the engine whole, and the Jigger would warm.
+
+Nirfel has been whispering to the keepers' grandchildren in her usual words: *it is not anyone else's; it is yours by right.* At the last count of hands the keepers voted in a new captain, **Merrin out of the Jigger**, on her promise to open the Unspent and sell what is inside. No one of them will go aboard to do it, so she is looking for outsiders who know old work.
+
 ### The Mooring
 
 The two cities first moored together about 2300 MR, and the Lords of sea and sky have sat together since, for kinship and for strength in numbers. When both cities can, Skysail comes home to Freeboard: **the Mooring**. A shout goes down the gangways and Freeboard climbs to its highest decks. The islets come in over the stack and stop, and as they settle they shed cloud-water onto Freeboard's top decks, cold and fine, out of a clear sky. Lines drop, baskets come down from the islets, gangways swing across, and by midnight the two markets are one: fruit and greens from Skysail's gardens, fish from Freeboard's pens, prize goods and treasure from the holds of both, and everyone shouting about the price. The cities stay moored for days or weeks. They part when one of them is hunted or the work is elsewhere; the lines and the baskets come up, and the islets lean into the wind.
@@ -111,11 +134,11 @@ When a captain or a Lord is killed, the crew holds **the Last Hands** over the b
 
 ### Ninehulls
 
-**Ninehulls** took nine ships in one night and became a Lord. Years later he took a wound that should have killed him and lived, and from then on the taverns told him as the man who cannot die. In Freeboard, before witnesses, he was killed. The Last Hands were held over him. Within days the man who killed him was dead, struck down by Ninehulls himself. No one remembers his given name. The Voroir Daua carry him on their list.
+**Ninehulls** took nine ships in one night and became a Lord. Years later he took a wound that should have killed him and lived, and from then on the taverns told him as the man who cannot die. In Freeboard he was killed from ambush, and no one saw who did it. The Last Hands were held over him with no killer to free or maroon. Within days the man the taverns named for it was dead, struck down by Ninehulls himself. No one remembers his given name. The Voroir Daua carry him on their list.
 
 ### ⚿ GM Secret: Ninehulls, the unkillable
 
-The first wound was a near thing, and the man survived it. The death in Freeboard was real: the man died, and his soul went on to Dauria, where Epairima judged him herself, as she judges every soul belief has begun to lift ([`../../gods.md`](../../gods.md), *Epairima*). The legend of the unkillable did not end with him. Freeboard believed Ninehulls could not die, and the belief brought a being into existence that struck down his killer: a soul born of belief, shaped as the man (see [`../../cosmology.md`](../../cosmology.md), *The Wellspring & Belief*).
+The first wound was a near thing, and the man survived it. The death in Freeboard was real: the man died, and his soul went on to Dauria, where Epairima judged him herself, as she judges every soul belief has begun to lift ([`../../gods.md`](../../gods.md), *Epairima*). The legend of the unkillable did not end with him. Freeboard believed Ninehulls could not die, and the belief brought a being into existence: a soul born of belief, shaped as the man (see [`../../cosmology.md`](../../cosmology.md), *The Wellspring & Belief*). It struck down the man the taverns blamed for the ambush, because it knows only the story and the story had named him. He was the wrong man. The ambusher was never named.
 
 The being does not know its true name and believes truly that it is Ninehulls. Its memory is the story the Midarra tells of him, as a being formed of belief takes its believers' account of itself; the given name was never part of the story, so it has none. It is no undead thing, since no soul was held back; the Voroir Daua know no better and keep it on their list as one. It lives on the whole Midarra's belief, in every port and on every deck where the unkillable is spoken of: a forgotten Lord stops being a Lord, and a forgotten belief being stops being.
 
@@ -213,6 +236,7 @@ Until a told name comes, the city calls a person by the given name and where the
 - **Sunfall**: a Pirate Lord of the sky, who strikes out of the sun.
 - **Goldwake**: Captain Mara Goldwake, a Pirate Lord of the sky through most of the mid-24th century MR; died at anchor c. 2390 (see [`../bolverk.md`](../bolverk.md), *Nirfel*).
 - **Pell out of the Spar**: a teller of the Lower Spar.
+- **Merrin out of the Jigger**: captain of the Unspent's keepers, voted in on the promise to open her.
 - **Amdeqal**: the fifth demigod of Legea, who wrote the fleet's line (see [`../zuzental/legea-empire.md`](../zuzental/legea-empire.md)).
 
 ## Voices
@@ -223,4 +247,4 @@ Until a told name comes, the city calls a person by the given name and where the
 - **Kesti Downdraft** · Lord of Skysail · brisk and practical; hands a visitor the useful thing first.
 - **Odile Brasshand** · Lord of Freeboard · a quartermaster's voice: dry, numerate, unsentimental about Lords.
 
-**Still open:** the sky Lords' mark on Skysail (Freeboard's Lords have spires); the decks by name beyond the Lower Spar; the Lords beyond the four named; the Legean half of Hringseyja's harbour by name, and its governor; the Legedi's two lines in full; the engines of Freeboard by kind.
+**Still open:** the sky Lords' mark on Skysail (Freeboard's Lords have spires); the decks by name beyond the Lower Spar; the Lords beyond the four named; the Legean half of Hringseyja's harbour by name, and its governor; the Legedi's two lines in full; the engines of Freeboard by kind; who ambushed Ninehulls.

@@ -1447,6 +1447,14 @@ Full geography in `geography/myrkono.md` and god-deep-dive in `gods.md`, *Araphe
   - **Told name**, **bought name**: see the register below.
   - **Pirate Lords' names**: **Ninehulls** (nine ships in one night); **Sunfall** (strikes out of the sun); **Goldwake** (existing canon).
   - **Odile Brasshand**, **Kesti Downdraft**, **Pell out of the Spar**: names in the Twin Cities register.
+  - **The Unspent**: Adventurer-Era Talanese, plain: *unspent* (kept, never paid out), named for Goldwake's doctrine that spending was loss. Mara Goldwake's flagship, hung under the Jigger since she came home crewless c. 2390 MR. Full canon: `geography/askamira/twin-cities.md`, *The Unspent*.
+  - **Lift-heart**: plain Talanese, a GM-tier working term: the part of an Elden atmospheric vessel that holds the hull up. The Skysailers have no word for it; to them it is all *the old work*.
+  - **Merrin out of the Jigger**: Twin Cities register. *Merrin*, a given name kept in her family from a coast her great-grandparents left (real-world source: Cornish *Merryn*); *out of the Jigger*, city-born on Skysail, where each islet counts as a deck. Captain of the Unspent's keepers.
+  - **Old Hobb out of the Jigger**: Twin Cities register. *Hobb*, an old Talanese short name (English *Hob*); a tender of the Jigger's old work, who knows every rite by rote. Cast of the Short Notice quest (GM layer).
+  - **Halfpenny**: a told name, Talanese. Ninehulls' quartermaster, told for splitting a prize before the hands down to the half-penny, every share even. Cast of the Short Notice quest (GM layer).
+  - **Redsail**: a bought name, Talanese. An unflagged poacher captain who paid the tellers before he had the deed. Cast of the Short Notice quest (GM layer).
+  - **The Goodmeasure**: modern Talanese, *good measure* (a full measure of grain with a little over), run together. A grain stillship on the Solkai crossing, carrying the party as passengers, which Ninehulls takes in the quest and hoists into Freeboard as a deck that keeps her name. Cast of the Short Notice quest (GM layer).
+  - **Master Ozhra**: a placeholder Kholo name, pending a Tvisol personal-name register. Master of the Goodmeasure, of a Kholo ferry-clan of the Solkai crossing; skimped on colours. Cast of the Short Notice quest (GM layer).
   - **The Twin Cities register.** Most keep the names they came with and name their children in their own tradition, so a child may carry two cultures' names. The **told name** (Talanese, built on a deed, given by the tellers, never chosen, replaceable by a bigger one) comes later, and with it the bearer chooses which inherited names to keep. A Lord is known by the told name alone. Until then, a person is addressed by the given name *out of* where they came from (a port, or for the city-born a deck). A told name paid for at the tellers before the deed is a **bought name**.
 
 ### Wellspring sites
