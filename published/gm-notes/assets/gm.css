@@ -185,6 +185,20 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .npc-art figure { flex: 1 1 150px; margin: 0; }
 .npc-art img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--gm-divider); border-radius: 5px; display: block; background: rgba(0,0,0,0.25); }
 .npc-art figcaption { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); text-align: center; margin-top: 4px; }
+
+/* An open card in a roster grid takes the whole row: the art stands in a
+   column on the left and the write-up reads at full width beside it, instead
+   of one long narrow column. Narrow screens keep the stacked card. */
+.npc-grid .npc-card.open { grid-column: 1 / -1; }
+@media (min-width: 761px) {
+  .npc-grid .npc-card.open .npc-body { display: flow-root; }
+  .npc-grid .npc-card.open .npc-body > .npc-art { float: left; width: 34%; min-width: 240px; margin: 0 26px 12px 0; gap: 8px; }
+  .npc-grid .npc-card.open .npc-body > :not(.npc-art) { display: flow-root; }
+  .npc-grid .npc-card.open .npc-art figure { flex: 1 1 calc(50% - 4px); }
+  .npc-grid .npc-card.open .npc-art figure:first-child { flex-basis: 100%; }
+  .npc-grid .npc-card.open .npc-art figcaption { font-size: 0.5rem; letter-spacing: 0.12em; }
+  .npc-grid .npc-card.open .exp-body { font-size: 1rem; line-height: 1.7; }
+}
 .exp-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-gold); margin: 12px 0 5px; }
 .exp-label:first-child { margin-top: 0; }
 .exp-body { font-size: 0.9rem; line-height: 1.65; }
