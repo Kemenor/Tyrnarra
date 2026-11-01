@@ -663,7 +663,7 @@ The kitsune culture is detailed in `geography/lautara/emarrea.md`. Outsiders ref
 - **The House of a Thousand Flavors**: Plain English. Premier dining-and-illusion venue in Heartplaza, run by the seven-chef polycule **The Cook's Circle** (Rinza, Maeko, Tairen, Shouka, Virel, Kyome, Elhara).
 
 **Kitsune abroad (named in play):**
-- **Itsune**: Kotokoe *ito* (thread) + *tsune* (constant, unchanging) → *itotsune* "the constant thread" → unstressed medial syllable lost, as in *Saekomi* → *Saemi* → **Itsune**. Harlen Doss's wife in Millhaven (*Furrious Five* campaign, named at the table 2026-11-01): a highland-born kitsune who married a Millhaven cloth merchant and runs his counter when he is out. One given name after the kitsune convention; in Millhaven she answers to "Itsune Doss" for the Talanese ear.
+- **Kinami**: Kotokoe *kinu* (silk) + *nami* (wave) → *kinunami* "silk-wave" → unstressed medial syllable lost, as in *Saekomi* → *Saemi* → **Kinami**. Harlen Doss's wife in Millhaven (*Furrious Five* campaign, named at the table 2026-11-01): a highland-born kitsune who married a Millhaven cloth merchant and runs his counter when he is out. One given name after the kitsune convention; in Millhaven she answers to "Kinami Doss" for the Talanese ear. (First named *Itsune*, "the constant thread", and renamed the same day for rhyming with *kitsune*.)
 
 **Social structure:**
 - **Circles of Importance**: Plain English. The five concentric loyalty rings: Family → Community → Settlement → Region → Kingdom.
