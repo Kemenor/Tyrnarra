@@ -1,0 +1,30 @@
+{
+  "slug": "itsune",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "kitsune",
+  "anchor": "full",
+  "character": "An anthropomorphic fox woman in her forties, slim and upright, a head taller than a halfling. Russet-red fur going grey around the muzzle, cream throat, one bushy tail with a pale tip. Sharp amber eyes, a small steady closed-mouth smile, level gaze",
+  "wardrobe": "a plain dark green wool dress, sleeves rolled to the elbow, a canvas apron with pins along the bib, a tailor's measuring tape around her neck",
+  "shots": {
+    "full": {
+      "file": "itsune-full",
+      "size": "portrait_4_3",
+      "framing": "Full body standing portrait, front view, hands folded, plain neutral background."
+    },
+    "portrait": {
+      "file": "itsune",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer directly, a small steady smile."
+    },
+    "scene": {
+      "file": "itsune-shop",
+      "size": "portrait_4_3",
+      "framing": "Standing behind the counter of a small tidy cloth shop, half-empty wooden shelves behind her, a framed length of rose silk on the wall, a brass scale and an open ledger on the counter, folding a bolt of plain linen, warm afternoon light through a small window."
+    }
+  },
+  "render": {
+    "anchor_renderer": "Midjourney V8.2, text to image (--profile 53lkvju)",
+    "set_renderer": "Midjourney V8.2, anchor attached to prompt"
+  }
+}
