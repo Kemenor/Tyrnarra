@@ -40,6 +40,7 @@ magenta, nothing else.*
 | `wayward-compass` | location | the Guild Office — compass-rose, sextant + dividers |
 | `crypt` | monster / theme | undead & funerary — gravestone, bone, ghost-light |
 | `brood` | monster | spiders — chitin, web, violet egg-glow |
+| `veldtmark` | household | the Veldtmark estate (*The Veldtmark Invitation*) — rope, cargo crates, wax seal, Bikiargi crescents; Midjourney, painted |
 | `sable-rei` | faction | the Sable-rei (Millhaven & *Below the Quiet Docks*) — fox + theatrical-mask |
 
 ## Authoring a new frame

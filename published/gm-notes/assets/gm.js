@@ -8,6 +8,9 @@
      Tabs:      <button class="gm-tab-btn" data-target="panel-id">…</button>
                 <div class="gm-panel" id="panel-id">…</div>
                 (first .gm-tab-btn / .gm-panel in a group start active)
+                The open tab is kept in the URL hash, without a leading
+                "tab-" (#approach opens data-target="tab-approach"), so a
+                reload or a shared link lands on the same tab.
 
      Secrets:   <div class="gm-secret">
                   <button class="gm-secret-toggle">⚿ …</button>
@@ -36,19 +39,35 @@
 (function () {
   'use strict';
 
+  function activateTab(tab) {
+    var tabBar = tab.parentElement;
+    tabBar.querySelectorAll('.gm-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+    tab.classList.add('active');
+    var panel = document.getElementById(tab.dataset.target);
+    if (panel) {
+      var scope = panel.parentElement;
+      scope.querySelectorAll(':scope > .gm-panel').forEach(function (p) { p.classList.remove('active'); });
+      panel.classList.add('active');
+    }
+  }
+
+  // ── Tab from the URL hash (#approach or #tab-approach) ──
+  function tabFromHash() {
+    var key = decodeURIComponent(location.hash.slice(1));
+    if (!key) return;
+    var tab = document.querySelector('.gm-tab-btn[data-target="' + CSS.escape(key) + '"]') ||
+              document.querySelector('.gm-tab-btn[data-target="tab-' + CSS.escape(key) + '"]');
+    if (tab) activateTab(tab);
+  }
+  tabFromHash();
+  window.addEventListener('hashchange', tabFromHash);
+
   document.addEventListener('click', function (e) {
     // ── Tabs ──────────────────────────────────────────────
     var tab = e.target.closest('.gm-tab-btn');
     if (tab && tab.dataset.target) {
-      var tabBar = tab.parentElement;
-      tabBar.querySelectorAll('.gm-tab-btn').forEach(function (b) { b.classList.remove('active'); });
-      tab.classList.add('active');
-      var panel = document.getElementById(tab.dataset.target);
-      if (panel) {
-        var scope = panel.parentElement;
-        scope.querySelectorAll(':scope > .gm-panel').forEach(function (p) { p.classList.remove('active'); });
-        panel.classList.add('active');
-      }
+      activateTab(tab);
+      history.replaceState(null, '', '#' + tab.dataset.target.replace(/^tab-/, ''));
       return;
     }
 
