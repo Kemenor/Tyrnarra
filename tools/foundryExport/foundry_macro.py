@@ -298,7 +298,7 @@ _TEMPLATE = r"""/* =============================================================
   }
 
   // ---- optional token placement on the active/viewed scene ----------------
-  // Areas are the map-area-editor export (% rects); placement says which actor
+  // Areas are the map-area-editor export (% rects and polygons); placement says which actor
   // goes in which area. Tokens fan out, grid-snapped, on the scene you have open.
   const placements = SPEC.placement || [];
   const scene = game.scenes.viewed || game.scenes.active;
@@ -317,16 +317,17 @@ _TEMPLATE = r"""/* =============================================================
       const k = String(ref).trim().toLowerCase();
       return areas.find(a => String(a.label || "").trim().toLowerCase() === k);
     };
-    const center = a => {                      // bounding box of the area's rects -> center px
-      const rs = a.rects || [];
-      const L = Math.min(...rs.map(r => r.left)), T = Math.min(...rs.map(r => r.top));
-      const R = Math.max(...rs.map(r => r.left + r.width)), B = Math.max(...rs.map(r => r.top + r.height));
+    const center = a => {                      // bounding box of the area's rects and polygons -> center px
+      const xs = [], ys = [];
+      (a.rects || []).forEach(r => { xs.push(r.left, r.left + r.width); ys.push(r.top, r.top + r.height); });
+      (a.polys || []).forEach(poly => poly.forEach(q => { xs.push(q[0]); ys.push(q[1]); }));
+      const L = Math.min(...xs), T = Math.min(...ys), R = Math.max(...xs), B = Math.max(...ys);
       return { cx: d.sceneX + (L + R) / 200 * d.sceneWidth, cy: d.sceneY + (T + B) / 200 * d.sceneHeight };
     };
     const tokenData = [];
     for (const p of placements) {
       const area = findArea(p.area), actor = byName[p.name];
-      if (!area || !(area.rects || []).length) { missing.push("placement area: " + p.area); continue; }
+      if (!area || !((area.rects || []).length || (area.polys || []).length)) { missing.push("placement area: " + p.area); continue; }
       if (!actor) { missing.push("placement actor: " + p.name + " (import it first)"); continue; }
       if (p.disposition && p.disposition in ALLIANCE && actor.system?.details && "alliance" in actor.system.details) {
         await actor.update({ "system.details.alliance": ALLIANCE[p.disposition] });

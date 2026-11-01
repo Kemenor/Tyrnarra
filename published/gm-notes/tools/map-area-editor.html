@@ -62,6 +62,18 @@
   .box-empty { font-style: italic; color: var(--gm-ink-dim); font-size: 0.86rem; }
   textarea#json { width: 100%; height: 200px; background: rgba(0,0,0,0.3); border: 1px solid var(--gm-divider); border-radius: 4px; color: var(--gm-ink); font-family: 'Consolas','Courier New',monospace; font-size: 0.78rem; line-height: 1.45; padding: 10px; resize: vertical; }
   .row-btns { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .overlay svg.plane { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .pshape { fill: rgba(106,166,200,0.16); stroke: rgba(106,166,200,0.9); stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: all; cursor: move; }
+  .pshape.sel { fill: rgba(200,160,74,0.2); stroke: var(--gm-gold); }
+  .pshape.active-piece { stroke-width: 3; }
+  .pdraw { fill: rgba(200,160,74,0.12); stroke: var(--gm-gold); stroke-width: 2; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
+  .vtx { position: absolute; width: 11px; height: 11px; margin: -6px 0 0 -6px; background: var(--gm-gold); border: 1px solid #1a1a1a; border-radius: 50%; cursor: move; z-index: 8; }
+  .vtx.draft { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #fff; pointer-events: none; }
+  .vtx.draft.first { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--gm-gold); }
+  .pnum { position: absolute; margin: 2px 0 0 2px; font-family: 'Cinzel', serif; font-size: 0.7rem; color: #fff; background: rgba(16,18,24,0.8); border-radius: 3px; padding: 0 5px; pointer-events: none; z-index: 6; }
+  .overlay.poly-mode { cursor: cell; }
+  .overlay.poly-mode .box, .overlay.poly-mode .pshape, .overlay.poly-mode .vtx { pointer-events: none; }
+  .tool-btn.on { color: var(--gm-ink-bright); border-color: var(--gm-gold); background: rgba(200,160,74,0.28); }
   .meta-line { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gm-ink-dim); margin-bottom: 8px; }
 </style>
 </head>
@@ -84,6 +96,7 @@
   <div class="tool-bar">
     <label class="tool-file"><span class="tool-btn">📂 &nbsp; Load Map Image</span><input type="file" id="fileInput" accept="image/*"></label>
     <span class="meta-line" id="imgName" style="margin:0 0 0 4px;">no image loaded</span>
+    <button class="tool-btn" id="polyBtn" type="button" title="P">▱  Polygon mode: off</button>
     <span style="flex:1"></span>
     <button class="tool-btn danger" id="clearBtn" type="button">Clear all areas</button>
   </div>
@@ -103,6 +116,7 @@
         <ul class="help-list">
           <li><b>Draw:</b> click-drag on empty map (makes a new area).</li>
           <li><b>L / T / plus shapes:</b> select an area, then <b>Shift</b>+draw (or its <b>＋</b> button) to add another rectangle to it. The pieces together are one clickable area.</li>
+          <li><b>Freeform shapes:</b> turn on <b>Polygon mode</b> (button or <b>P</b>), click to place corners, and close the shape on its first corner, by double-click or with <b>Enter</b>. <b>Backspace</b> removes the last corner, <b>Esc</b> cancels. Shift (or <b>＋</b>) adds the polygon to the selected area. Turn the mode off to edit: drag a corner to move it, <b>Alt</b>+click a corner to remove it, <b>Alt</b>+click an edge to add one.</li>
           <li><b>Move:</b> drag a piece. <b>Resize:</b> drag its handles.</li>
           <li><b>Select:</b> click a piece, or an area's number in the list.</li>
           <li><b>Reorder:</b> drag an area's number in the list.</li>
@@ -121,7 +135,7 @@
 
       <div class="panel-block">
         <h3>JSON</h3>
-        <div class="meta-line">each area carries a rects[] list · edit + Apply to re-import, or Copy / Download to hand off</div>
+        <div class="meta-line">each area carries rects[] and, for freeform shapes, polys[] · edit + Apply to re-import, or Copy / Download to hand off</div>
         <textarea id="json" spellcheck="false"></textarea>
         <div class="row-btns">
           <button class="tool-btn" id="copyBtn" type="button">Copy</button>
@@ -141,17 +155,22 @@
 <script>
 (function () {
   'use strict';
-  // An area is a union of rectangles: { label, desc, rects: [ {left,top,width,height}, … ] } (% , 0-100)
+  // An area is a union of pieces: rectangles { left, top, width, height } and polygons [[x, y], …], all in % (0-100).
+  // JSON: { label, desc, rects: [ … ], polys: [ [[x,y], …], … ] }  (polys only when the area has any)
   var areas = [];
   var selA = -1;       // selected area
-  var selR = -1;       // active rectangle (piece) within the selected area
+  var selR = -1;       // active piece within the selected area
+  var selK = 'r';      // kind of the active piece: 'r' rectangle, 'p' polygon
   var imageName = '';
-  var drag = null;     // { mode:'draw'|'move'|'resize', dir, startX, startY, init }
+  var drag = null;     // { mode:'draw'|'move'|'resize'|'pmove'|'vtx', … }
   var dragIndex = -1;  // list-reorder: area index being dragged
   var armed = false;   // when true, the next draw adds a piece to the selected area
+  var polyMode = false;
+  var drawing = null;  // polygon in progress: { pts:[[x,y],…], addTo, cursor }
   var imageData = '';  // data-URL of the loaded image, persisted to localStorage when it fits the quota
   var saveTimer = null;
   var STORE = 'tyrnarra-map-area-editor';
+  var SVGNS = 'http://www.w3.org/2000/svg';
 
   var img = document.getElementById('mapImg');
   var empty = document.getElementById('empty');
@@ -160,11 +179,24 @@
   var boxList = document.getElementById('boxList');
   var boxCount = document.getElementById('boxCount');
   var imgNameEl = document.getElementById('imgName');
+  var polyBtn = document.getElementById('polyBtn');
+  var svg = document.createElementNS(SVGNS, 'svg');
+  svg.setAttribute('class', 'plane'); svg.setAttribute('viewBox', '0 0 100 100'); svg.setAttribute('preserveAspectRatio', 'none');
+  overlay.appendChild(svg);
 
   function round(n) { return Math.round(n * 10) / 10; }
   function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
-  function activeRect() { return (areas[selA] && areas[selA].rects[selR]) || null; }
+  function activeRect() { return (selK === 'r' && areas[selA] && areas[selA].rects[selR]) || null; }
+  function activePoly() { return (selK === 'p' && areas[selA] && areas[selA].polys[selR]) || null; }
+  function firstKind(area) { return area.rects.length ? 'r' : 'p'; }
   function setArmed(on) { armed = on; overlay.classList.toggle('arming', !!on); }
+  function setPolyMode(on) {
+    polyMode = on; drawing = null;
+    overlay.classList.toggle('poly-mode', on);
+    polyBtn.textContent = on ? '▱  Polygon mode: on' : '▱  Polygon mode: off';
+    polyBtn.classList.toggle('on', on);
+    renderShapes();
+  }
 
   function pt(e) {
     var r = overlay.getBoundingClientRect();
@@ -172,6 +204,28 @@
       x: clamp((e.clientX - r.left) / r.width * 100, 0, 100),
       y: clamp((e.clientY - r.top) / r.height * 100, 0, 100)
     };
+  }
+  function nearPx(a, b, px) {   // two % points within px screen pixels of each other
+    var r = overlay.getBoundingClientRect();
+    return Math.abs((a[0] - b[0]) * r.width / 100) <= px && Math.abs((a[1] - b[1]) * r.height / 100) <= px;
+  }
+
+  function normArea(a) {
+    var rects = Array.isArray(a.rects)
+      ? a.rects.map(function (r) { return { left: +r.left || 0, top: +r.top || 0, width: +r.width || 0, height: +r.height || 0 }; }) : [];
+    var polys = Array.isArray(a.polys)
+      ? a.polys.filter(function (p) { return Array.isArray(p) && p.length >= 3; })
+          .map(function (p) { return p.map(function (q) { return [+q[0] || 0, +q[1] || 0]; }); }) : [];
+    if (!rects.length && !polys.length && a.width != null) {   // back-compat: old single-rect area
+      rects = [{ left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 }];
+    }
+    return { label: a.label || '', desc: a.desc || a.note || '', rects: rects, polys: polys };
+  }
+  function areaJson(area) {
+    var o = { label: area.label || '', desc: area.desc || '',
+      rects: area.rects.map(function (r) { return { left: round(r.left), top: round(r.top), width: round(r.width), height: round(r.height) }; }) };
+    if (area.polys.length) o.polys = area.polys.map(function (p) { return p.map(function (q) { return [round(q[0]), round(q[1])]; }); });
+    return o;
   }
 
   // ── Image load ──
@@ -190,8 +244,38 @@
     img.src = imageData;
   }
 
+  // ── Polygon drawing: click to place points, close on the first point, double-click or Enter ──
+  function finishPoly() {
+    if (!drawing) return;
+    var pts = [];
+    drawing.pts.forEach(function (q) { if (!pts.length || !nearPx(q, pts[pts.length - 1], 3)) pts.push(q); });
+    if (pts.length > 3 && nearPx(pts[0], pts[pts.length - 1], 3)) pts.pop();
+    if (pts.length >= 3) {
+      if (drawing.addTo >= 0 && areas[drawing.addTo]) {
+        areas[drawing.addTo].polys.push(pts); selA = drawing.addTo; selR = areas[selA].polys.length - 1;
+      } else {
+        areas.push({ label: '', desc: '', rects: [], polys: [pts] }); selA = areas.length - 1; selR = 0;
+      }
+      selK = 'p';
+    }
+    drawing = null;
+    renderAll();
+  }
+
   // ── Draw on empty overlay (new area, or a piece of the selected area) ──
   overlay.addEventListener('mousedown', function (e) {
+    if (polyMode) {
+      var q = pt(e), here = [q.x, q.y];
+      if (!drawing) {
+        drawing = { pts: [here], addTo: ((e.shiftKey || armed) && selA >= 0 && areas[selA]) ? selA : -1, cursor: here };
+        setArmed(false);
+      } else if (drawing.pts.length >= 3 && nearPx(here, drawing.pts[0], 8)) {
+        finishPoly(); e.preventDefault(); return;
+      } else {
+        drawing.pts.push(here);
+      }
+      renderShapes(); e.preventDefault(); return;
+    }
     if (e.target !== overlay) return;
     var p = pt(e);
     var addToArea = (e.shiftKey || armed) && selA >= 0 && areas[selA];
@@ -199,43 +283,89 @@
       areas[selA].rects.push({ left: p.x, top: p.y, width: 0, height: 0 });
       selR = areas[selA].rects.length - 1;
     } else {
-      areas.push({ label: '', desc: '', rects: [{ left: p.x, top: p.y, width: 0, height: 0 }] });
+      areas.push({ label: '', desc: '', rects: [{ left: p.x, top: p.y, width: 0, height: 0 }], polys: [] });
       selA = areas.length - 1; selR = 0;
     }
+    selK = 'r';
     setArmed(false);
     drag = { mode: 'draw', startX: p.x, startY: p.y };
     renderAll();
     e.preventDefault();
   });
+  overlay.addEventListener('dblclick', function (e) { if (polyMode && drawing) { finishPoly(); e.preventDefault(); } });
 
   function startMove(e, a, r) {
     e.stopPropagation(); e.preventDefault();
-    selA = a; selR = r;
+    selA = a; selR = r; selK = 'r';
     var p = pt(e);
     drag = { mode: 'move', startX: p.x, startY: p.y, init: Object.assign({}, areas[a].rects[r]) };
     renderShapes(); updateRowHighlight();
   }
   function startResize(e, a, r, dir) {
     e.stopPropagation(); e.preventDefault();
-    selA = a; selR = r;
+    selA = a; selR = r; selK = 'r';
     var p = pt(e);
     drag = { mode: 'resize', dir: dir, startX: p.x, startY: p.y, init: Object.assign({}, areas[a].rects[r]) };
     renderShapes(); updateRowHighlight();
   }
+  function startPolyMove(e, a, i) {
+    e.stopPropagation(); e.preventDefault();
+    selA = a; selR = i; selK = 'p';
+    var p = pt(e);
+    drag = { mode: 'pmove', startX: p.x, startY: p.y, init: areas[a].polys[i].map(function (q) { return q.slice(); }) };
+    renderShapes(); updateRowHighlight();
+  }
+  function startVertex(e, a, i, v) {
+    e.stopPropagation(); e.preventDefault();
+    selA = a; selR = i; selK = 'p';
+    var poly = areas[a].polys[i];
+    if (e.altKey) {   // Alt+click a corner removes it
+      if (poly.length > 3) poly.splice(v, 1);
+      renderAll(); return;
+    }
+    drag = { mode: 'vtx', v: v };
+    renderShapes(); updateRowHighlight();
+  }
+  function insertVertex(e, a, i) {   // Alt+click on a polygon edge adds a corner there
+    var poly = areas[a].polys[i], p = pt(e), best = 0, bestD = Infinity;
+    for (var k = 0; k < poly.length; k++) {
+      var s = poly[k], t = poly[(k + 1) % poly.length];
+      var dx = t[0] - s[0], dy = t[1] - s[1], len = dx * dx + dy * dy || 1;
+      var u = clamp(((p.x - s[0]) * dx + (p.y - s[1]) * dy) / len, 0, 1);
+      var d = Math.pow(s[0] + u * dx - p.x, 2) + Math.pow(s[1] + u * dy - p.y, 2);
+      if (d < bestD) { bestD = d; best = k; }
+    }
+    poly.splice(best + 1, 0, [p.x, p.y]);
+    selA = a; selR = i; selK = 'p';
+    drag = { mode: 'vtx', v: best + 1 };
+    renderAll();
+  }
 
   document.addEventListener('mousemove', function (e) {
+    if (drawing && !drag) { var c = pt(e); drawing.cursor = [c.x, c.y]; renderShapes(); return; }
     if (!drag) return;
-    var rect = activeRect(); if (!rect) return;
     var p = pt(e);
+    if (drag.mode === 'pmove' || drag.mode === 'vtx') {
+      var poly = activePoly(); if (!poly) return;
+      if (drag.mode === 'vtx') { poly[drag.v] = [p.x, p.y]; }
+      else {
+        var xs = drag.init.map(function (q) { return q[0]; }), ys = drag.init.map(function (q) { return q[1]; });
+        var dx = clamp(p.x - drag.startX, -Math.min.apply(null, xs), 100 - Math.max.apply(null, xs));
+        var dy = clamp(p.y - drag.startY, -Math.min.apply(null, ys), 100 - Math.max.apply(null, ys));
+        drag.init.forEach(function (q, k) { poly[k] = [q[0] + dx, q[1] + dy]; });
+      }
+      renderShapes(); renderJSON(); return;
+    }
+    var rect = activeRect(); if (!rect) return;
     if (drag.mode === 'draw') {
       rect.left = Math.min(drag.startX, p.x);
       rect.top = Math.min(drag.startY, p.y);
       rect.width = Math.abs(p.x - drag.startX);
       rect.height = Math.abs(p.y - drag.startY);
     } else if (drag.mode === 'move') {
-      var dx = p.x - drag.startX, dy = p.y - drag.startY;
-      rect.left = clamp(drag.init.left + dx, 0, 100 - rect.width);
-      rect.top = clamp(drag.init.top + dy, 0, 100 - rect.height);
+      var mx = p.x - drag.startX, my = p.y - drag.startY;
+      rect.left = clamp(drag.init.left + mx, 0, 100 - rect.width);
+      rect.top = clamp(drag.init.top + my, 0, 100 - rect.height);
     } else if (drag.mode === 'resize') {
       applyResize(rect, drag.init, drag.dir, p.x - drag.startX, p.y - drag.startY);
     }
@@ -253,9 +383,11 @@
 
   function removeActivePiece() {
     var area = areas[selA]; if (!area) return;
-    area.rects.splice(selR, 1);
-    if (area.rects.length === 0) { areas.splice(selA, 1); selA = -1; selR = -1; }
-    else { selR = Math.min(selR, area.rects.length - 1); }
+    var list = selK === 'p' ? area.polys : area.rects;
+    list.splice(selR, 1);
+    if (!area.rects.length && !area.polys.length) { areas.splice(selA, 1); selA = -1; selR = -1; return; }
+    if (list.length) { selR = Math.min(selR, list.length - 1); }
+    else { selK = firstKind(area); selR = 0; }
   }
 
   function applyResize(b, init, dir, dx, dy) {
@@ -268,13 +400,32 @@
     if (b.top + b.height > 100) b.height = 100 - b.top;
   }
 
-  // ── Keyboard: nudge / resize / delete / cancel arm ──
+  // ── Keyboard: nudge / resize / delete / polygon drawing / cancel ──
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { setArmed(false); renderList(); return; }
+    if (e.key === 'Escape') { if (drawing) { drawing = null; renderShapes(); return; } setArmed(false); renderList(); return; }
     var tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea') return;
-    var rect = activeRect(); if (!rect) return;
+    if (drawing) {
+      if (e.key === 'Enter') { finishPoly(); e.preventDefault(); }
+      else if (e.key === 'Backspace' || e.key === 'Delete') { drawing.pts.pop(); if (!drawing.pts.length) drawing = null; renderShapes(); e.preventDefault(); }
+      return;
+    }
+    if (e.key === 'p' || e.key === 'P') { setPolyMode(!polyMode); return; }
     var step = 0.5;
+    var poly = activePoly();
+    if (poly) {
+      if (e.key === 'Delete' || e.key === 'Backspace') { removeActivePiece(); renderAll(); e.preventDefault(); return; }
+      var ddx = e.key === 'ArrowRight' ? step : e.key === 'ArrowLeft' ? -step : 0;
+      var ddy = e.key === 'ArrowDown' ? step : e.key === 'ArrowUp' ? -step : 0;
+      if (ddx || ddy) {
+        if (poly.every(function (q) { return q[0] + ddx >= 0 && q[0] + ddx <= 100 && q[1] + ddy >= 0 && q[1] + ddy <= 100; })) {
+          poly.forEach(function (q) { q[0] += ddx; q[1] += ddy; });
+        }
+        renderShapes(); renderJSON(); e.preventDefault();
+      }
+      return;
+    }
+    var rect = activeRect(); if (!rect) return;
     if (e.key === 'Delete' || e.key === 'Backspace') { removeActivePiece(); renderAll(); e.preventDefault(); return; }
     var moved = true;
     if (e.shiftKey) {
@@ -292,17 +443,40 @@
     }
     if (moved) { renderShapes(); renderJSON(); e.preventDefault(); }
   });
+  polyBtn.addEventListener('click', function () { setPolyMode(!polyMode); });
 
   // ── Render (split so editing a label/description never rebuilds the panel inputs) ──
   function renderAll() { renderShapes(); renderList(); renderJSON(); }
   function moveArea(from, to) { if (from === to) return; var a = areas.splice(from, 1)[0]; areas.splice(to, 0, a); selA = to; renderAll(); }
 
+  function addNum(a, x, y) {
+    var n = document.createElement('span'); n.className = 'pnum'; n.textContent = a + 1;
+    n.style.left = x + '%'; n.style.top = y + '%';
+    overlay.appendChild(n);
+  }
+
   function renderShapes() {
-    Array.prototype.slice.call(overlay.querySelectorAll('.box')).forEach(function (n) { n.remove(); });
+    Array.prototype.slice.call(overlay.querySelectorAll('.box, .vtx, .pnum')).forEach(function (n) { n.remove(); });
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
     areas.forEach(function (area, a) {
+      area.polys.forEach(function (pts, i) {
+        var isActive = (a === selA && selK === 'p' && i === selR);
+        var el = document.createElementNS(SVGNS, 'polygon');
+        el.setAttribute('points', pts.map(function (q) { return q[0] + ',' + q[1]; }).join(' '));
+        el.setAttribute('class', 'pshape' + (a === selA ? ' sel' : '') + (isActive ? ' active-piece' : ''));
+        el.addEventListener('mousedown', function (e) { if (e.altKey && isActive) { e.stopPropagation(); e.preventDefault(); insertVertex(e, a, i); } else startPolyMove(e, a, i); });
+        svg.appendChild(el);
+        if (isActive) pts.forEach(function (q, v) {
+          var h = document.createElement('div'); h.className = 'vtx'; h.style.left = q[0] + '%'; h.style.top = q[1] + '%';
+          h.title = 'Drag to move · Alt+click to remove';
+          h.addEventListener('mousedown', function (e) { startVertex(e, a, i, v); });
+          overlay.appendChild(h);
+        });
+      });
+      if (!area.rects.length && area.polys.length) addNum(a, area.polys[0][0][0], area.polys[0][0][1]);
       area.rects.forEach(function (rect, r) {
         var d = document.createElement('div');
-        var isActive = (a === selA && r === selR);
+        var isActive = (a === selA && selK === 'r' && r === selR);
         d.className = 'box' + (a === selA ? ' sel' : '') + (isActive ? ' active-piece' : '');
         d.style.left = rect.left + '%'; d.style.top = rect.top + '%';
         d.style.width = rect.width + '%'; d.style.height = rect.height + '%';
@@ -318,11 +492,22 @@
         overlay.appendChild(d);
       });
     });
+    if (drawing) {
+      var line = document.createElementNS(SVGNS, 'polyline');
+      line.setAttribute('points', drawing.pts.concat([drawing.cursor]).map(function (q) { return q[0] + ',' + q[1]; }).join(' '));
+      line.setAttribute('class', 'pdraw');
+      svg.appendChild(line);
+      drawing.pts.forEach(function (q, v) {
+        var h = document.createElement('div'); h.className = 'vtx draft' + (v === 0 ? ' first' : ''); h.style.left = q[0] + '%'; h.style.top = q[1] + '%';
+        overlay.appendChild(h);
+      });
+    }
   }
 
   function updateRowHighlight() {
     Array.prototype.slice.call(boxList.querySelectorAll('.box-row')).forEach(function (row, a) { row.classList.toggle('sel', a === selA); });
   }
+  function selectArea(a) { selA = a; selR = 0; selK = firstKind(areas[a]); renderShapes(); updateRowHighlight(); }
 
   function renderList() {
     boxCount.textContent = areas.length;
@@ -337,25 +522,26 @@
 
       var head = document.createElement('div'); head.className = 'box-row-head';
       var num = document.createElement('span'); num.className = 'bnum'; num.textContent = a + 1; num.title = 'Click to select · drag to reorder'; num.draggable = true;
-      num.addEventListener('click', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      num.addEventListener('click', function () { selectArea(a); });
       num.addEventListener('dragstart', function (e) { dragIndex = a; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', String(a)); } catch (_) {} row.classList.add('dragging'); });
       num.addEventListener('dragend', function () { dragIndex = -1; Array.prototype.slice.call(boxList.querySelectorAll('.dragging, .drag-over')).forEach(function (r) { r.classList.remove('dragging'); r.classList.remove('drag-over'); }); });
 
       var lbl = document.createElement('input'); lbl.type = 'text'; lbl.className = 'lbl'; lbl.placeholder = 'label (short name)'; lbl.value = area.label || '';
-      lbl.addEventListener('focus', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      lbl.addEventListener('focus', function () { selectArea(a); });
       lbl.addEventListener('input', function () { area.label = lbl.value; renderJSON(); });
 
-      if (area.rects.length > 1) { var pc = document.createElement('span'); pc.className = 'pieces'; pc.textContent = area.rects.length + 'p'; pc.title = area.rects.length + ' pieces'; head.appendChild(pc); }
+      var count = area.rects.length + area.polys.length;
+      if (count > 1) { var pc = document.createElement('span'); pc.className = 'pieces'; pc.textContent = count + 'p'; pc.title = count + ' pieces'; head.appendChild(pc); }
 
       var addp = document.createElement('button'); addp.className = 'addp' + (armed && a === selA ? ' armed' : ''); addp.textContent = '＋'; addp.title = 'Add a piece to this area (then draw), or Shift+draw';
-      addp.addEventListener('click', function () { selA = a; selR = 0; setArmed(!(armed && a === selA) ? true : false); renderAll(); });
+      addp.addEventListener('click', function () { selA = a; selR = 0; selK = firstKind(area); setArmed(!(armed && a === selA) ? true : false); renderAll(); });
 
       var del = document.createElement('button'); del.className = 'del'; del.textContent = '✕'; del.title = 'Delete the whole area';
       del.addEventListener('click', function () { areas.splice(a, 1); selA = -1; selR = -1; renderAll(); });
 
       head.appendChild(num); head.appendChild(lbl); head.appendChild(addp); head.appendChild(del);
       var desc = document.createElement('textarea'); desc.className = 'desc'; desc.placeholder = 'description · the feel / contents (optional)'; desc.value = area.desc || '';
-      desc.addEventListener('focus', function () { selA = a; selR = 0; renderShapes(); updateRowHighlight(); });
+      desc.addEventListener('focus', function () { selectArea(a); });
       desc.addEventListener('input', function () { area.desc = desc.value; renderJSON(); });
       row.appendChild(head); row.appendChild(desc);
       boxList.appendChild(row);
@@ -363,25 +549,14 @@
   }
 
   function renderJSON() {
-    var out = {
-      image: imageName || '',
-      areas: areas.map(function (area) {
-        return {
-          label: area.label || '', desc: area.desc || '',
-          rects: area.rects.map(function (r) { return { left: round(r.left), top: round(r.top), width: round(r.width), height: round(r.height) }; })
-        };
-      })
-    };
-    jsonBox.value = JSON.stringify(out, null, 2);
+    jsonBox.value = JSON.stringify({ image: imageName || '', areas: areas.map(areaJson) }, null, 2);
     scheduleSave();
   }
 
   // ── Autosave to localStorage (debounced) ──
   function save() {
     try {
-      var areasJson = areas.map(function (area) {
-        return { label: area.label || '', desc: area.desc || '', rects: area.rects.map(function (r) { return { left: round(r.left), top: round(r.top), width: round(r.width), height: round(r.height) }; }) };
-      });
+      var areasJson = areas.map(areaJson);
       try { localStorage.setItem(STORE, JSON.stringify({ v: 1, image: imageName, imageData: imageData, areas: areasJson })); }
       catch (quota) { localStorage.setItem(STORE, JSON.stringify({ v: 1, image: imageName, imageData: '', areas: areasJson })); }  // image too big for quota → keep the areas
     } catch (e) { /* localStorage unavailable (private mode / disabled) → just skip */ }
@@ -394,12 +569,7 @@
     var data; try { data = JSON.parse(raw); } catch (e) { return; }
     if (!data || !Array.isArray(data.areas) || !data.areas.length) return;
     imageName = data.image || '';
-    areas = data.areas.map(function (a) {
-      var rects = (Array.isArray(a.rects) && a.rects.length)
-        ? a.rects.map(function (r) { return { left: +r.left || 0, top: +r.top || 0, width: +r.width || 0, height: +r.height || 0 }; })
-        : [{ left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 }];
-      return { label: a.label || '', desc: a.desc || '', rects: rects };
-    });
+    areas = data.areas.map(normArea);
     if (data.imageData) {
       imageData = data.imageData;
       imgNameEl.textContent = (imageName || 'map') + ' · restored';
@@ -412,7 +582,7 @@
   // ── Buttons ──
   document.getElementById('clearBtn').addEventListener('click', function () {
     if (areas.length && !confirm('Delete all ' + areas.length + ' areas?')) return;
-    areas = []; selA = -1; selR = -1; setArmed(false); renderAll();
+    areas = []; selA = -1; selR = -1; drawing = null; setArmed(false); renderAll();
   });
   document.getElementById('copyBtn').addEventListener('click', function () {
     jsonBox.select();
@@ -429,16 +599,8 @@
     try {
       var data = JSON.parse(jsonBox.value);
       if (data.image) { imageName = data.image; imgNameEl.textContent = data.image + ' (from JSON)'; }
-      areas = (data.areas || []).map(function (a) {
-        var rects;
-        if (Array.isArray(a.rects) && a.rects.length) {
-          rects = a.rects.map(function (r) { return { left: +r.left || 0, top: +r.top || 0, width: +r.width || 0, height: +r.height || 0 }; });
-        } else {
-          rects = [{ left: +a.left || 0, top: +a.top || 0, width: +a.width || 0, height: +a.height || 0 }];   // back-compat: old single-rect area
-        }
-        return { label: a.label || '', desc: a.desc || a.note || '', rects: rects };
-      });
-      selA = -1; selR = -1; setArmed(false); renderAll();
+      areas = (data.areas || []).map(normArea);
+      selA = -1; selR = -1; drawing = null; setArmed(false); renderAll();
     } catch (err) { alert('Could not parse JSON: ' + err.message); }
   });
 
