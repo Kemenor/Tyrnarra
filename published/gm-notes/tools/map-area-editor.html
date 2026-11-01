@@ -116,7 +116,7 @@
         <ul class="help-list">
           <li><b>Draw:</b> click-drag on empty map (makes a new area).</li>
           <li><b>L / T / plus shapes:</b> select an area, then <b>Shift</b>+draw (or its <b>＋</b> button) to add another rectangle to it. The pieces together are one clickable area.</li>
-          <li><b>Freeform shapes:</b> turn on <b>Polygon mode</b> (button or <b>P</b>), click to place corners, and close the shape on its first corner, by double-click or with <b>Enter</b>. <b>Backspace</b> removes the last corner, <b>Esc</b> cancels. Shift (or <b>＋</b>) adds the polygon to the selected area. Turn the mode off to edit: drag a corner to move it, <b>Alt</b>+click a corner to remove it, <b>Alt</b>+click an edge to add one.</li>
+          <li><b>Freeform shapes:</b> turn on <b>Polygon mode</b> (button or <b>P</b>), click to place corners, and close the shape on its first corner, by double-click or with <b>Enter</b>. <b>Right-click</b> or <b>Backspace</b> removes the last corner, <b>Esc</b> cancels. Shift (or <b>＋</b>) adds the polygon to the selected area. Turn the mode off to edit: drag a corner to move it, <b>Alt</b>+click a corner to remove it, <b>Alt</b>+click an edge to add one.</li>
           <li><b>Move:</b> drag a piece. <b>Resize:</b> drag its handles.</li>
           <li><b>Select:</b> click a piece, or an area's number in the list.</li>
           <li><b>Reorder:</b> drag an area's number in the list.</li>
@@ -264,6 +264,7 @@
 
   // ── Draw on empty overlay (new area, or a piece of the selected area) ──
   overlay.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;   // right click is handled by contextmenu below
     if (polyMode) {
       var q = pt(e), here = [q.x, q.y];
       if (!drawing) {
@@ -293,6 +294,13 @@
     e.preventDefault();
   });
   overlay.addEventListener('dblclick', function (e) { if (polyMode && drawing) { finishPoly(); e.preventDefault(); } });
+  overlay.addEventListener('contextmenu', function (e) {   // right click while drawing removes the last corner
+    if (!drawing) return;
+    e.preventDefault();
+    drawing.pts.pop();
+    if (!drawing.pts.length) drawing = null;
+    renderShapes();
+  });
 
   function startMove(e, a, r) {
     e.stopPropagation(); e.preventDefault();
