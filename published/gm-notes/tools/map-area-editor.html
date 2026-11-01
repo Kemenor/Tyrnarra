@@ -110,6 +110,7 @@
           <li><b>Delete:</b> Delete/Backspace removes the active piece; the ✕ removes the whole area.</li>
           <li>Give each area a <b>label</b> + <b>description</b>, then <b>Copy</b> / <b>Download</b> the JSON for me.</li>
           <li><b>Auto-saves</b> to this browser as you work; reloading the page restores your areas (and the map, if it fit storage). <b>Clear all</b> wipes it.</li>
+          <li><b>From a link</b> (<code>?map=…&amp;areas=…</code>, as listed by <code>tools/map-area-server.py</code> at <code>/__maps</code>): the map and its areas file load by themselves, and <b>Save to server</b> writes the areas file back into the repo.</li>
         </ul>
       </div>
 
@@ -126,7 +127,9 @@
           <button class="tool-btn" id="copyBtn" type="button">Copy</button>
           <button class="tool-btn" id="downloadBtn" type="button">Download .json</button>
           <button class="tool-btn" id="applyBtn" type="button">Apply (import)</button>
+          <button class="tool-btn" id="serverSaveBtn" type="button" style="display:none;">Save to server</button>
         </div>
+        <div class="meta-line" id="serverStatus"></div>
       </div>
     </div>
   </div>
@@ -439,7 +442,31 @@
     } catch (err) { alert('Could not parse JSON: ' + err.message); }
   });
 
-  restore();
+  // ── Linked mode: ?map=<image url>&areas=<areas.json url>, saved back through tools/map-area-server.py ──
+  var params = new URLSearchParams(location.search);
+  var linkedMap = params.get('map'), linkedAreas = params.get('areas');
+  var serverStatus = document.getElementById('serverStatus');
+
+  function loadLinked() {
+    STORE = STORE + ':' + linkedAreas;
+    imageName = linkedMap.split('/').pop();
+    imageData = linkedMap;
+    imgNameEl.textContent = imageName + ' · linked';
+    document.getElementById('serverSaveBtn').style.display = '';
+    fetch(linkedAreas + '?t=' + Date.now())
+      .then(function (r) { return r.ok ? r.json() : { areas: [] }; })
+      .then(function (data) { jsonBox.value = JSON.stringify(data); document.getElementById('applyBtn').click(); showImage(); })
+      .catch(function () { showImage(); });
+  }
+
+  document.getElementById('serverSaveBtn').addEventListener('click', function () {
+    fetch('/__save-areas?path=' + encodeURIComponent(linkedAreas), { method: 'POST', body: jsonBox.value })
+      .then(function (r) { return r.text().then(function (t) { if (!r.ok) throw new Error(t); }); })
+      .then(function () { serverStatus.textContent = 'Saved to ' + linkedAreas + ' · ' + new Date().toLocaleTimeString(); })
+      .catch(function (err) { serverStatus.textContent = 'Not saved: ' + (err.message || 'no save endpoint here; use Download'); });
+  });
+
+  if (linkedMap && linkedAreas) loadLinked(); else restore();
   renderAll();
 })();
 </script>

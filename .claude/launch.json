@@ -7,6 +7,12 @@
       "runtimeArgs": ["${workspaceFolder}/.claude/serve-preview.mjs"],
       "port": 8008,
       "autoPort": true
+    },
+    {
+      "name": "map-areas-lan",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["${workspaceFolder}/tools/map-area-server.py", "--port", "8010"],
+      "port": 8010
     }
   ]
 }

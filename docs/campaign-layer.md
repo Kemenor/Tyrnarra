@@ -117,6 +117,8 @@ Clicking any hotspot renders `n`/`t` into `#mapDetail` and highlights **every** 
 
 The companion authoring tool. Load a map PNG, draw / move / resize / delete rectangles, label + describe each area, reorder, and export JSON. An **area is a union of rectangles** (`{ label, desc, rects:[{left,top,width,height}] }`, all `%`); Shift+draw (or a row's `＋`) adds a piece to the selected area for irregular shapes. The exported JSON is what you hand back to generate the map tab's hotspot markup + `GM_MAP_AREAS` scaffold. Import also reads the single-rectangle area format.
 
+**Linked mode.** `python3 tools/map-area-server.py` serves `published/` on the local network (port 8010; the `map-areas-lan` entry in `.claude/launch.json`). Its `/__maps` page lists every `*.areas.json` under `gm-notes/` whose `image` sits beside it, each linking to the editor with `?map=…&areas=…`: the map and its areas load by themselves, and **Save to server** writes the areas file back into the repo. Areas files live beside their map's web copy as `<map>.areas.json`.
+
 ## Foundry VTT export (`tools/foundryExport/`)
 
 For tables run on Foundry VTT, `foundry_macro.py` turns a compact quest spec
