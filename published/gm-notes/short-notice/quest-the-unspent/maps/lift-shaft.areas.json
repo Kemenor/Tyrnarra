@@ -2,8 +2,8 @@
   "image": "lift-shaft.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Upper landing (inside route arrives)",
-      "desc": "The mild end of the field. Short climb.",
+      "label": "Exit: up to the engine heart",
+      "desc": "The top stairs. The goal: the carrier and the heart reach these stairs.",
       "rects": [
         {
           "left": 44,
@@ -14,92 +14,194 @@
       ]
     },
     {
-      "label": "2 \u00b7 Lower landing (outside route arrives)",
-      "desc": "The worst of the field. Full climb.",
+      "label": "Inside route enters",
+      "desc": "The left stairs onto the ring. A quarter of the ring from the exit.",
       "rects": [
         {
-          "left": 44,
-          "top": 80,
-          "width": 12,
-          "height": 16
+          "left": 85.4,
+          "top": 67.1,
+          "width": 13.4,
+          "height": 8.3
         }
       ]
     },
     {
-      "label": "3 \u00b7 The outer ring",
-      "desc": "Walkway round the shaft.",
+      "label": "Outside Route Enters",
+      "desc": "",
       "rects": [
         {
-          "left": 15,
-          "top": 18,
-          "width": 70,
-          "height": 8
-        },
-        {
-          "left": 8,
-          "top": 26,
-          "width": 10,
-          "height": 50
-        },
-        {
-          "left": 82,
-          "top": 26,
-          "width": 10,
-          "height": 50
-        },
-        {
-          "left": 15,
-          "top": 75,
-          "width": 70,
-          "height": 8
+          "left": 44.2,
+          "top": 80.9,
+          "width": 11.1,
+          "height": 10
         }
       ]
     },
     {
-      "label": "4 \u00b7 The crescent ramps",
-      "desc": "Curving walkways between ring and core; down bends toward the heart.",
+      "label": "Blocked off",
+      "desc": "",
       "rects": [
         {
-          "left": 25,
-          "top": 27,
-          "width": 50,
-          "height": 45
+          "left": 84.2,
+          "top": 32.2,
+          "width": 13.5,
+          "height": 7.9
+        },
+        {
+          "left": 1.8,
+          "top": 30.5,
+          "width": 15,
+          "height": 10.2
         }
       ]
     },
     {
-      "label": "5 \u00b7 The core",
-      "desc": "The centre of the failing field.",
+      "label": "Dangerous Clockwork hazard",
+      "desc": "Unstable Clockwork hazard, trying to pass needs DCs,\n- Crit Success - No Damage\n- Success - Half Damage\n- Failure - Full Damage and blocked moving through",
       "rects": [
         {
-          "left": 38,
-          "top": 42,
-          "width": 24,
-          "height": 20
+          "left": 73.1,
+          "top": 49,
+          "width": 23.4,
+          "height": 17.6
         }
       ]
     },
     {
-      "label": "6 \u00b7 Turning gears",
-      "desc": "Moving gears; hazard.",
+      "label": "Dangerous Clockwork hazard",
+      "desc": "Unstable Clockwork hazard, trying to pass needs DCs,\n- Crit Success - No Damage\n- Success - Half Damage\n- Failure - Full Damage and blocked moving through",
       "rects": [
         {
-          "left": 18,
-          "top": 47,
-          "width": 19,
-          "height": 19
+          "left": 21.2,
+          "top": 28.9,
+          "width": 15.3,
+          "height": 11.5
+        }
+      ]
+    },
+    {
+      "label": "Center Jumping Opportunity",
+      "desc": "Difficult, doubly so for the carrier",
+      "rects": [
+        {
+          "left": 33.2,
+          "top": 48.1,
+          "width": 10.5,
+          "height": 8.5
         },
         {
-          "left": 68,
-          "top": 48,
-          "width": 24,
-          "height": 20
+          "left": 59.4,
+          "top": 52.3,
+          "width": 10.4,
+          "height": 6.5
+        }
+      ]
+    },
+    {
+      "label": "Easy Clockwork hazard",
+      "desc": "Easier than the dangerous one",
+      "rects": [
+        {
+          "left": 6.5,
+          "top": 56.8,
+          "width": 8.8,
+          "height": 8.6
+        }
+      ]
+    },
+    {
+      "label": "Inner Walkway Pull",
+      "desc": "",
+      "rects": [
+        {
+          "left": 35.7,
+          "top": 59.9,
+          "width": 33.6,
+          "height": 8.7
         },
         {
-          "left": 53,
+          "left": 37,
+          "top": 40.9,
+          "width": 27.2,
+          "height": 6.2
+        }
+      ]
+    },
+    {
+      "label": "Dangerous Ground",
+      "desc": "Looks dangerous, Trap Sense, will crumble under medium sized creature",
+      "rects": [
+        {
+          "left": 46.4,
+          "top": 29.6,
+          "width": 17,
+          "height": 9.3
+        }
+      ]
+    },
+    {
+      "label": "Outer Walkway Pull",
+      "desc": "",
+      "rects": [
+        {
+          "left": 58.8,
+          "top": 24.3,
+          "width": 19.3,
+          "height": 5.6
+        },
+        {
+          "left": 70.7,
+          "top": 31.1,
+          "width": 12.1,
+          "height": 8.7
+        },
+        {
+          "left": 82.1,
+          "top": 40.7,
+          "width": 9.7,
+          "height": 7.4
+        },
+        {
+          "left": 66,
+          "top": 70.1,
+          "width": 12.7,
+          "height": 8.3
+        },
+        {
+          "left": 55.2,
           "top": 77,
-          "width": 37,
-          "height": 23
+          "width": 9.9,
+          "height": 4.2
+        },
+        {
+          "left": 26,
+          "top": 73.7,
+          "width": 17.5,
+          "height": 7.3
+        },
+        {
+          "left": 17.3,
+          "top": 66.9,
+          "width": 14.8,
+          "height": 6.6
+        },
+        {
+          "left": 10.5,
+          "top": 44.1,
+          "width": 7.8,
+          "height": 10.7
+        }
+      ]
+    },
+    {
+      "label": "The Governor",
+      "desc": "",
+      "rects": [
+        {
+          "left": 45.2,
+          "top": 48.3,
+          "width": 10.9,
+          "height": 10.1
         }
       ]
     }

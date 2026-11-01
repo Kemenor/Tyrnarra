@@ -2,7 +2,7 @@
   "image": "unspent-l2.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Officers' quarters",
+      "label": "Officers' quarters",
       "desc": "The quartermaster's and mates' rooms, left as they were.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 Gun deck",
+      "label": "Gun deck",
       "desc": "The cannons that can be shifted as ballast for the levelling puzzle.",
       "rects": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 Wing-sail rigging",
+      "label": "Wing-sail rigging",
       "desc": "The sail mounts; reachable from the rail.",
       "rects": [
         {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 Forecastle",
+      "label": "Forecastle",
       "desc": "Forward stores and the bow hatch.",
       "rects": [
         {

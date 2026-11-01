@@ -2,7 +2,7 @@
   "image": "root-choked-hull.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Way in (from the tended holds)",
+      "label": "Way in (from the tended holds)",
       "desc": "Root-path from the tenders' level.",
       "rects": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 The lower root-path",
+      "label": "The lower root-path",
       "desc": "Stone path through the roots. The hazard starts here as the islet shifts.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 The torn hull",
+      "label": "The torn hull",
       "desc": "The pit is a hole torn through to open sky. Roots tearing loose drag things toward it.",
       "rects": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 The rune ring",
+      "label": "The rune ring",
       "desc": "Ledge around the gap; the Silent Tongue cut into it.",
       "rects": [
         {
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "label": "5 \u00b7 The great root (the climb up)",
+      "label": "The great root (the climb up)",
       "desc": "The glowing root that climbs toward the gallery.",
       "rects": [
         {
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "label": "6 \u00b7 The way on",
+      "label": "The way on",
       "desc": "Dark upper passage.",
       "rects": [
         {

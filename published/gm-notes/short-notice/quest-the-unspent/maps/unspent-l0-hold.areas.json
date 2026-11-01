@@ -2,7 +2,7 @@
   "image": "unspent-l0-hold.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Stern hold",
+      "label": "Stern hold",
       "desc": "Barrels and ballast stacked against the stern.",
       "rects": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 Midships hold: the ballast puzzle",
+      "label": "Midships hold: the ballast puzzle",
       "desc": "She hangs at a tilt and jams the aft doors. Shift weight here until she hangs level, while the line strains.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 Bow hold",
+      "label": "Bow hold",
       "desc": "Chain locker and anchor stores.",
       "rects": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 Stern niche",
+      "label": "Stern niche",
       "desc": "The rudder housing.",
       "rects": [
         {

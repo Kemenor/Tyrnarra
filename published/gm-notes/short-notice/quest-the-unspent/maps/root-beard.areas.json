@@ -2,7 +2,7 @@
   "image": "root-beard.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Climb-in from the hanging fleet",
+      "label": "Climb-in from the hanging fleet",
       "desc": "Where the outside route reaches the root-beard.",
       "rects": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 West root-ledges",
+      "label": "West root-ledges",
       "desc": "Rock and root under the islet. No flying near the heart.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 Southern crags",
+      "label": "Southern crags",
       "desc": "Broken rock ledges.",
       "rects": [
         {
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 North-east overhang",
+      "label": "North-east overhang",
       "desc": "High ledge.",
       "rects": [
         {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "label": "5 \u00b7 East ledges",
+      "label": "East ledges",
       "desc": "Narrow footing.",
       "rects": [
         {
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "label": "6 \u00b7 Open air",
+      "label": "Open air",
       "desc": "The Midarra far below. A fall is a skiff catch and lost time.",
       "rects": [
         {
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "label": "7 \u00b7 Floating debris",
+      "label": "Floating debris",
       "desc": "Stepping stones of loose rock.",
       "rects": [
         {
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "label": "8 \u00b7 The shaft mouth",
+      "label": "The shaft mouth",
       "desc": "Where the wind is drawn up into the islet.",
       "rects": [
         {

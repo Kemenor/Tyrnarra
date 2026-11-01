@@ -2,7 +2,7 @@
   "image": "unspent-l1.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Galley and mess",
+      "label": "Galley and mess",
       "desc": "Tables still laid. The crew died within days of her, aboard.",
       "rects": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 The crew's last berths",
+      "label": "The crew's last berths",
       "desc": "Bunks with the bedding still in them.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 Midships stores",
+      "label": "Midships stores",
       "desc": "Rope, canvas, the ship's carpenter's kit.",
       "rects": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 Forward store: the false caches",
+      "label": "Forward store: the false caches",
       "desc": "Goldwake's bait: chests that are pits. First taste of greed.",
       "rects": [
         {

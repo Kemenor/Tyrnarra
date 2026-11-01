@@ -2,7 +2,7 @@
   "image": "goodmeasure-deck.webp",
   "areas": [
     {
-      "label": "1 \u00b7 Passenger cabin",
+      "label": "Passenger cabin",
       "desc": "The stern cabin where the party bunks. Master Ozhra's charts and the (missing) colours chest.",
       "rects": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "2 \u00b7 Quarterdeck and wheel",
+      "label": "Quarterdeck and wheel",
       "desc": "Ozhra at the wheel. First place Redsail's boarders aim for.",
       "rects": [
         {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "label": "3 \u00b7 Main deck",
+      "label": "Main deck",
       "desc": "Grain hatches and the guns. The poacher fight happens here.",
       "rects": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "4 \u00b7 Forecastle",
+      "label": "Forecastle",
       "desc": "Bow deck; good ground for ranged PCs.",
       "rects": [
         {
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "label": "5 \u00b7 Bowsprit",
+      "label": "Bowsprit",
       "desc": "A narrow perch over the water.",
       "rects": [
         {
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "label": "6 \u00b7 Port water: Redsail's ship comes alongside",
+      "label": "Port water: Redsail's ship comes alongside",
       "desc": "Boarding lines and planks come over the rail from here. (Second ship: a second Schooner scene or token.)",
       "rects": [
         {
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "label": "7 \u00b7 Starboard water: Ninehulls' broadside",
+      "label": "Starboard water: Ninehulls' broadside",
       "desc": "Where Ninehulls' fleet comes out of; the cannonade lands on the poachers.",
       "rects": [
         {
