@@ -1,0 +1,53 @@
+{
+  "image": "unspent-l1.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Galley and mess",
+      "desc": "Tables still laid. The crew died within days of her, aboard.",
+      "rects": [
+        {
+          "left": 36,
+          "top": 14,
+          "width": 28,
+          "height": 15
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 The crew's last berths",
+      "desc": "Bunks with the bedding still in them.",
+      "rects": [
+        {
+          "left": 35,
+          "top": 31,
+          "width": 30,
+          "height": 10
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Midships stores",
+      "desc": "Rope, canvas, the ship's carpenter's kit.",
+      "rects": [
+        {
+          "left": 36,
+          "top": 42,
+          "width": 28,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Forward store: the false caches",
+      "desc": "Goldwake's bait: chests that are pits. First taste of greed.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 68,
+          "width": 20,
+          "height": 18
+        }
+      ]
+    }
+  ]
+}

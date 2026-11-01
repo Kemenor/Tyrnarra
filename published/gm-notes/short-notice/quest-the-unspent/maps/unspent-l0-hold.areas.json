@@ -1,0 +1,53 @@
+{
+  "image": "unspent-l0-hold.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Stern hold",
+      "desc": "Barrels and ballast stacked against the stern.",
+      "rects": [
+        {
+          "left": 31,
+          "top": 21,
+          "width": 38,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 Midships hold: the ballast puzzle",
+      "desc": "She hangs at a tilt and jams the aft doors. Shift weight here until she hangs level, while the line strains.",
+      "rects": [
+        {
+          "left": 36,
+          "top": 42,
+          "width": 28,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Bow hold",
+      "desc": "Chain locker and anchor stores.",
+      "rects": [
+        {
+          "left": 39,
+          "top": 72,
+          "width": 22,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Stern niche",
+      "desc": "The rudder housing.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 12,
+          "width": 20,
+          "height": 9
+        }
+      ]
+    }
+  ]
+}

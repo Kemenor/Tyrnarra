@@ -1,0 +1,107 @@
+{
+  "image": "wardens-corridors.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Way in",
+      "desc": "Door from the root-choked hull.",
+      "rects": [
+        {
+          "left": 62,
+          "top": 90,
+          "width": 18,
+          "height": 10
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 South hall",
+      "desc": "Broken floor; the wardens' first post.",
+      "rects": [
+        {
+          "left": 25,
+          "top": 76,
+          "width": 65,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 The lower gate",
+      "desc": "Bronze gate bar across the hall.",
+      "rects": [
+        {
+          "left": 58,
+          "top": 72,
+          "width": 26,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 The long corridor",
+      "desc": "Where the wardens rush the carrier.",
+      "rects": [
+        {
+          "left": 35,
+          "top": 45,
+          "width": 40,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 The west gallery-arm",
+      "desc": "Side passage, cobwebs, a flanking route.",
+      "rects": [
+        {
+          "left": 5,
+          "top": 50,
+          "width": 30,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 The upper gate",
+      "desc": "Gate and bridge before the vault.",
+      "rects": [
+        {
+          "left": 25,
+          "top": 40,
+          "width": 55,
+          "height": 6
+        }
+      ]
+    },
+    {
+      "label": "7 \u00b7 The gallery of old writing",
+      "desc": "The round vault and its orrery: the Silent Tongue panels. The puzzle.",
+      "rects": [
+        {
+          "left": 26,
+          "top": 9,
+          "width": 48,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "label": "8 \u00b7 The side panels",
+      "desc": "Two more machines with writing on them.",
+      "rects": [
+        {
+          "left": 0,
+          "top": 12,
+          "width": 20,
+          "height": 15
+        },
+        {
+          "left": 80,
+          "top": 12,
+          "width": 20,
+          "height": 15
+        }
+      ]
+    }
+  ]
+}

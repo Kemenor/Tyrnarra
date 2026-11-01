@@ -1,0 +1,53 @@
+{
+  "image": "unspent-l3.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Goldwake's cabin",
+      "desc": "Sealed, airless for 140 years. Her body, the heart in her hand, her last cache. First air makes the arm fall.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 13,
+          "width": 22,
+          "height": 15
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 The cabin door (the seal)",
+      "desc": "Held by the ghosts. Opens only once they fall.",
+      "rects": [
+        {
+          "left": 46,
+          "top": 26,
+          "width": 8,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 The ghost-watch deck",
+      "desc": "The veterans' ghosts stand watch here. The fight before the cabin.",
+      "rects": [
+        {
+          "left": 33,
+          "top": 29,
+          "width": 34,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Bow deck",
+      "desc": "Forward deck and stairs.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 66,
+          "width": 20,
+          "height": 28
+        }
+      ]
+    }
+  ]
+}

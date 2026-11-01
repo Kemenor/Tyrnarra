@@ -1,0 +1,89 @@
+{
+  "image": "goodmeasure-deck.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Passenger cabin",
+      "desc": "The stern cabin where the party bunks. Master Ozhra's charts and the (missing) colours chest.",
+      "rects": [
+        {
+          "left": 2,
+          "top": 39,
+          "width": 15,
+          "height": 21
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 Quarterdeck and wheel",
+      "desc": "Ozhra at the wheel. First place Redsail's boarders aim for.",
+      "rects": [
+        {
+          "left": 17,
+          "top": 38,
+          "width": 12,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Main deck",
+      "desc": "Grain hatches and the guns. The poacher fight happens here.",
+      "rects": [
+        {
+          "left": 29,
+          "top": 36,
+          "width": 28,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Forecastle",
+      "desc": "Bow deck; good ground for ranged PCs.",
+      "rects": [
+        {
+          "left": 57,
+          "top": 39,
+          "width": 13,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 Bowsprit",
+      "desc": "A narrow perch over the water.",
+      "rects": [
+        {
+          "left": 70,
+          "top": 47,
+          "width": 27,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 Port water: Redsail's ship comes alongside",
+      "desc": "Boarding lines and planks come over the rail from here. (Second ship: a second Schooner scene or token.)",
+      "rects": [
+        {
+          "left": 0,
+          "top": 64,
+          "width": 100,
+          "height": 36
+        }
+      ]
+    },
+    {
+      "label": "7 \u00b7 Starboard water: Ninehulls' broadside",
+      "desc": "Where Ninehulls' fleet comes out of; the cannonade lands on the poachers.",
+      "rects": [
+        {
+          "left": 0,
+          "top": 0,
+          "width": 100,
+          "height": 34
+        }
+      ]
+    }
+  ]
+}

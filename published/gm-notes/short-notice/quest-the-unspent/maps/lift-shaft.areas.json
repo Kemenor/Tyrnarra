@@ -1,0 +1,107 @@
+{
+  "image": "lift-shaft.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Upper landing (inside route arrives)",
+      "desc": "The mild end of the field. Short climb.",
+      "rects": [
+        {
+          "left": 44,
+          "top": 12,
+          "width": 12,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 Lower landing (outside route arrives)",
+      "desc": "The worst of the field. Full climb.",
+      "rects": [
+        {
+          "left": 44,
+          "top": 80,
+          "width": 12,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 The outer ring",
+      "desc": "Walkway round the shaft.",
+      "rects": [
+        {
+          "left": 15,
+          "top": 18,
+          "width": 70,
+          "height": 8
+        },
+        {
+          "left": 8,
+          "top": 26,
+          "width": 10,
+          "height": 50
+        },
+        {
+          "left": 82,
+          "top": 26,
+          "width": 10,
+          "height": 50
+        },
+        {
+          "left": 15,
+          "top": 75,
+          "width": 70,
+          "height": 8
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 The crescent ramps",
+      "desc": "Curving walkways between ring and core; down bends toward the heart.",
+      "rects": [
+        {
+          "left": 25,
+          "top": 27,
+          "width": 50,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 The core",
+      "desc": "The centre of the failing field.",
+      "rects": [
+        {
+          "left": 38,
+          "top": 42,
+          "width": 24,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 Turning gears",
+      "desc": "Moving gears; hazard.",
+      "rects": [
+        {
+          "left": 18,
+          "top": 47,
+          "width": 19,
+          "height": 19
+        },
+        {
+          "left": 68,
+          "top": 48,
+          "width": 24,
+          "height": 20
+        },
+        {
+          "left": 53,
+          "top": 77,
+          "width": 37,
+          "height": 23
+        }
+      ]
+    }
+  ]
+}

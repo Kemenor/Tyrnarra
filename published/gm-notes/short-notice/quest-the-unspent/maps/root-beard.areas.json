@@ -1,0 +1,113 @@
+{
+  "image": "root-beard.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Climb-in from the hanging fleet",
+      "desc": "Where the outside route reaches the root-beard.",
+      "rects": [
+        {
+          "left": 46,
+          "top": 88,
+          "width": 14,
+          "height": 12
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 West root-ledges",
+      "desc": "Rock and root under the islet. No flying near the heart.",
+      "rects": [
+        {
+          "left": 0,
+          "top": 10,
+          "width": 25,
+          "height": 70
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Southern crags",
+      "desc": "Broken rock ledges.",
+      "rects": [
+        {
+          "left": 22,
+          "top": 55,
+          "width": 25,
+          "height": 45
+        },
+        {
+          "left": 57,
+          "top": 72,
+          "width": 43,
+          "height": 28
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 North-east overhang",
+      "desc": "High ledge.",
+      "rects": [
+        {
+          "left": 60,
+          "top": 0,
+          "width": 40,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 East ledges",
+      "desc": "Narrow footing.",
+      "rects": [
+        {
+          "left": 82,
+          "top": 25,
+          "width": 18,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 Open air",
+      "desc": "The Midarra far below. A fall is a skiff catch and lost time.",
+      "rects": [
+        {
+          "left": 22,
+          "top": 20,
+          "width": 62,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "label": "7 \u00b7 Floating debris",
+      "desc": "Stepping stones of loose rock.",
+      "rects": [
+        {
+          "left": 30,
+          "top": 22,
+          "width": 18,
+          "height": 8
+        },
+        {
+          "left": 52,
+          "top": 52,
+          "width": 16,
+          "height": 8
+        }
+      ]
+    },
+    {
+      "label": "8 \u00b7 The shaft mouth",
+      "desc": "Where the wind is drawn up into the islet.",
+      "rects": [
+        {
+          "left": 42,
+          "top": 0,
+          "width": 18,
+          "height": 10
+        }
+      ]
+    }
+  ]
+}

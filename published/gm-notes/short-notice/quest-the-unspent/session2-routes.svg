@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1400" width="760" height="1400" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9aa0ac"/></marker>
+    <marker id="aS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a640"/></marker>
+    <marker id="aF" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5aa8e0"/></marker>
+  </defs>
+  <style>
+    .t{fill:#eceef2;font-size:15px;font-weight:bold}
+    .s{fill:#b8bcc6;font-size:12px}
+    .h{fill:#eceef2;font-size:20px;font-weight:bold}
+    .lbl{font-size:13px;font-weight:bold}
+  </style>
+  <rect width="760" height="1400" fill="#14161c"/>
+  <text x="380" y="34" text-anchor="middle" class="h">Session 2 · The Jigger's Holds</text>
+
+  <rect x="200" y="54" width="360" height="62" rx="8" fill="#232733" stroke="#9aa0ac"/>
+  <text x="380" y="78" text-anchor="middle" class="t">0 · The Fall</text>
+  <text x="380" y="98" text-anchor="middle" class="s">Grab the heart, get off the sagging flagship (skill challenge)</text>
+  <line x1="380" y1="116" x2="380" y2="146" stroke="#9aa0ac" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="200" y="148" width="360" height="62" rx="8" fill="#232733" stroke="#9aa0ac"/>
+  <text x="380" y="172" text-anchor="middle" class="t">1 · Kesti's Briefing</text>
+  <text x="380" y="192" text-anchor="middle" class="s">Clock starts · the old tender offers to guide</text>
+  <line x1="380" y1="210" x2="380" y2="240" stroke="#9aa0ac" stroke-width="2" marker-end="url(#a)"/>
+
+  <polygon points="380,242 540,292 380,342 220,292" fill="#2b2f3d" stroke="#9aa0ac"/>
+  <text x="380" y="288" text-anchor="middle" class="t">2 · The Underside</text>
+  <text x="380" y="306" text-anchor="middle" class="s">Which way up?</text>
+
+  <path d="M220,292 L190,292 L190,382" fill="none" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+  <text x="70" y="282" class="lbl" fill="#e0a640">INSIDE · the reading</text>
+  <path d="M540,292 L570,292 L570,382" fill="none" stroke="#5aa8e0" stroke-width="2.5" marker-end="url(#aF)"/>
+  <text x="548" y="282" class="lbl" fill="#5aa8e0">OUTSIDE · open air</text>
+
+  <!-- INSIDE -->
+  <rect x="40" y="384" width="300" height="88" rx="8" fill="#2e2618" stroke="#e0a640"/>
+  <text x="190" y="408" text-anchor="middle" class="t">A1 · The Tended Holds</text>
+  <text x="190" y="428" text-anchor="middle" class="s">Exploration · the old tender leads</text>
+  <text x="190" y="446" text-anchor="middle" class="s">his rite by rote reveals step 3, WAKE</text>
+  <text x="190" y="462" text-anchor="middle" class="s">(he can't follow the outside climb)</text>
+  <line x1="190" y1="472" x2="190" y2="500" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+
+  <rect x="40" y="502" width="300" height="62" rx="8" fill="#2e2618" stroke="#e0a640"/>
+  <text x="190" y="526" text-anchor="middle" class="t">A2 · The Root-choked Hull</text>
+  <text x="190" y="546" text-anchor="middle" class="s">Hazard · roots tear loose, hull opens to sky</text>
+  <line x1="190" y1="564" x2="190" y2="592" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+
+  <rect x="40" y="594" width="300" height="74" rx="8" fill="#2e2618" stroke="#e0a640"/>
+  <text x="190" y="618" text-anchor="middle" class="t">A3 · The Gallery of Old Writing</text>
+  <text x="190" y="638" text-anchor="middle" class="s">Puzzle · costs +1 stage</text>
+  <text x="190" y="656" text-anchor="middle" class="s">reveals step 2 TURN and step 4 BIND</text>
+  <line x1="190" y1="668" x2="190" y2="696" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+
+  <rect x="40" y="698" width="300" height="62" rx="8" fill="#2e2618" stroke="#e0a640"/>
+  <text x="190" y="722" text-anchor="middle" class="t">A4 · The Wardens, in the corridors</text>
+  <text x="190" y="742" text-anchor="middle" class="s">Fight · moderate · tight walls, they rush the carrier</text>
+  <line x1="190" y1="760" x2="190" y2="788" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+
+  <rect x="40" y="790" width="300" height="62" rx="8" fill="#2e2618" stroke="#e0a640"/>
+  <text x="190" y="814" text-anchor="middle" class="t">A5 · Shaft, upper landing</text>
+  <text x="190" y="834" text-anchor="middle" class="s">Short climb · the mild end of the field</text>
+
+  <!-- OUTSIDE -->
+  <polygon points="570,384 720,444 570,504 420,444" fill="#18273a" stroke="#5aa8e0"/>
+  <text x="570" y="432" text-anchor="middle" class="t">B1 · The Gate</text>
+  <text x="570" y="450" text-anchor="middle" class="s">Spot the shaft mouth, then</text>
+  <text x="570" y="466" text-anchor="middle" class="s">cross open air with no lift</text>
+  <path d="M420,444 L360,444 L360,412 L342,412" fill="none" stroke="#5aa8e0" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#aF)"/>
+  <text x="352" y="404" class="s" fill="#5aa8e0">fail: +1 stage,</text>
+  <text x="352" y="476" class="s" fill="#5aa8e0">go inside</text>
+  <line x1="570" y1="504" x2="570" y2="530" stroke="#5aa8e0" stroke-width="2.5" marker-end="url(#aF)"/>
+
+  <rect x="420" y="532" width="300" height="92" rx="8" fill="#18273a" stroke="#5aa8e0"/>
+  <text x="570" y="556" text-anchor="middle" class="t">B2 · The Hanging Fleet</text>
+  <text x="570" y="576" text-anchor="middle" class="s">Skill challenge · climb through the airships</text>
+  <text x="570" y="594" text-anchor="middle" class="s">on the straining lines · help a crew hold:</text>
+  <text x="570" y="612" text-anchor="middle" class="s">−1 stage and lives saved, at a cost in time/HP</text>
+  <line x1="570" y1="624" x2="570" y2="652" stroke="#5aa8e0" stroke-width="2.5" marker-end="url(#aF)"/>
+
+  <rect x="420" y="654" width="300" height="74" rx="8" fill="#18273a" stroke="#5aa8e0"/>
+  <text x="570" y="678" text-anchor="middle" class="t">B3 · The Wardens, on the root-beard</text>
+  <text x="570" y="698" text-anchor="middle" class="s">Fight · moderate · in open air, no flying</text>
+  <text x="570" y="716" text-anchor="middle" class="s">near the heart; a fall is a skiff catch + time</text>
+  <line x1="570" y1="728" x2="570" y2="756" stroke="#5aa8e0" stroke-width="2.5" marker-end="url(#aF)"/>
+
+  <rect x="420" y="758" width="300" height="94" rx="8" fill="#18273a" stroke="#5aa8e0"/>
+  <text x="570" y="782" text-anchor="middle" class="t">B4 · The Full Shaft Climb</text>
+  <text x="570" y="802" text-anchor="middle" class="s">Hazard · "down" bends toward the heart</text>
+  <text x="570" y="820" text-anchor="middle" class="s">the worst of the failing field</text>
+  <text x="570" y="838" text-anchor="middle" class="s">no stage cost</text>
+
+  <path d="M190,852 L190,912 L298,912" fill="none" stroke="#e0a640" stroke-width="2.5" marker-end="url(#aS)"/>
+  <path d="M570,852 L570,912 L462,912" fill="none" stroke="#5aa8e0" stroke-width="2.5" marker-end="url(#aF)"/>
+
+  <!-- boss -->
+  <rect x="120" y="882" width="520" height="236" rx="10" fill="#2b2f3d" stroke="#eceef2" stroke-width="2"/>
+  <text x="380" y="908" text-anchor="middle" class="t">5 · The Engine Heart · boss</text>
+  <text x="380" y="928" text-anchor="middle" class="s">The engine's warden (severe) + the engine as a complex hazard</text>
+  <text x="380" y="946" text-anchor="middle" class="s">Goal: the carrier, adjacent to the socket, completes 4 seating steps in order</text>
+  <g font-size="12">
+    <text x="146" y="976" class="t" font-size="13">1 CRADLE</text><text x="250" y="976" class="s">Athletics · lay it in against the pull (always known)</text>
+    <text x="146" y="998" class="t" font-size="13">2 TURN</text><text x="250" y="998" class="s">Crafting or Arcana · align it to the engine</text>
+    <text x="146" y="1020" class="t" font-size="13">3 WAKE</text><text x="250" y="1020" class="s">Occultism, Religion or Performance · the tenders' rite</text>
+    <text x="146" y="1042" class="t" font-size="13">4 BIND</text><text x="250" y="1042" class="s">Thievery or Crafting · lock it home</text>
+  </g>
+  <text x="380" y="1070" text-anchor="middle" class="s">Each step: 2 actions + check.  Known step: standard DC.</text>
+  <text x="380" y="1088" text-anchor="middle" class="s">Unknown step: 1 Recall Knowledge action first, and a harder DC.</text>
+  <text x="380" y="1106" text-anchor="middle" class="s" fill="#e0a640">Inside: all 4 known  ·  </text>
+  <text x="520" y="1106" text-anchor="middle" class="s" fill="#5aa8e0">Outside: only CRADLE known</text>
+  <line x1="380" y1="1118" x2="380" y2="1146" stroke="#9aa0ac" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="200" y="1148" width="360" height="56" rx="8" fill="#1d2b22" stroke="#6fc28a"/>
+  <text x="380" y="1172" text-anchor="middle" class="t">6 · The Rise</text>
+  <text x="380" y="1192" text-anchor="middle" class="s">The Jigger lifts and warms · cloud-water rains</text>
+
+  <text x="40" y="1240" class="t">The Sink Clock</text>
+  <text x="180" y="1240" class="s">+1 per 10-min activity, crit fail, the gallery · −1 at B2, Kesti's lines, dumping weight</text>
+  <g text-anchor="middle">
+    <rect x="40"  y="1254" width="78" height="62" rx="6" fill="#262a33" stroke="#9aa0ac"/><text x="79" y="1272" class="t" font-size="13">1</text><text x="79" y="1290" class="s" font-size="10">airship</text><text x="79" y="1304" class="s" font-size="10">tears free</text>
+    <rect x="124" y="1254" width="78" height="62" rx="6" fill="#262a33" stroke="#9aa0ac"/><text x="163" y="1272" class="t" font-size="13">2</text><text x="163" y="1290" class="s" font-size="10">tilt, gardens</text><text x="163" y="1304" class="s" font-size="10">slide off</text>
+    <rect x="208" y="1254" width="78" height="62" rx="6" fill="#262a33" stroke="#9aa0ac"/><text x="247" y="1272" class="t" font-size="13">3</text><text x="247" y="1290" class="s" font-size="10">the Main</text><text x="247" y="1304" class="s" font-size="10">lurches</text>
+    <rect x="292" y="1254" width="78" height="62" rx="6" fill="#262a33" stroke="#9aa0ac"/><text x="331" y="1272" class="t" font-size="13">4</text><text x="331" y="1290" class="s" font-size="10">dead Lord's</text><text x="331" y="1304" class="s" font-size="10">spire falls</text>
+    <rect x="376" y="1254" width="78" height="62" rx="6" fill="#262a33" stroke="#9aa0ac"/><text x="415" y="1272" class="t" font-size="13">5</text><text x="415" y="1290" class="s" font-size="10">debris on</text><text x="415" y="1304" class="s" font-size="10">top decks</text>
+    <rect x="460" y="1254" width="78" height="62" rx="6" fill="#3a2a1a" stroke="#e0a640"/><text x="499" y="1272" class="t" font-size="13">6</text><text x="499" y="1290" class="s" font-size="10">settles on</text><text x="499" y="1304" class="s" font-size="10">the stack</text>
+    <rect x="544" y="1254" width="78" height="62" rx="6" fill="#3a2a1a" stroke="#e0a640"/><text x="583" y="1272" class="t" font-size="13">7</text><text x="583" y="1290" class="s" font-size="10">the stack</text><text x="583" y="1304" class="s" font-size="10">buckles</text>
+    <rect x="628" y="1254" width="92" height="62" rx="6" fill="#3d1a1a" stroke="#e0605a" stroke-width="2"/><text x="674" y="1272" class="t" font-size="13">8</text><text x="674" y="1290" class="s" font-size="10">engine stops,</text><text x="674" y="1304" class="s" font-size="10">lower city lost</text>
+  </g>
+  <text x="40" y="1342" class="s">1–5: warnings with a cost.  6–7: grim but fixable (casualties, bleak telling, Kesti's pay shrinks).</text>
+  <text x="40" y="1362" class="s">8: true failure. The Jigger falls and takes part of the lower city with it.</text>
+  <text x="40" y="1386" class="s">Inside spends time to make the boss easier; outside saves time and lives and makes the boss harder.</text>
+</svg>

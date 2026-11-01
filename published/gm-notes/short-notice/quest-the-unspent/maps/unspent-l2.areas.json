@@ -1,0 +1,71 @@
+{
+  "image": "unspent-l2.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Officers' quarters",
+      "desc": "The quartermaster's and mates' rooms, left as they were.",
+      "rects": [
+        {
+          "left": 38,
+          "top": 13,
+          "width": 24,
+          "height": 9
+        },
+        {
+          "left": 33,
+          "top": 24,
+          "width": 11,
+          "height": 12
+        },
+        {
+          "left": 56,
+          "top": 24,
+          "width": 11,
+          "height": 12
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 Gun deck",
+      "desc": "The cannons that can be shifted as ballast for the levelling puzzle.",
+      "rects": [
+        {
+          "left": 36,
+          "top": 42,
+          "width": 28,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Wing-sail rigging",
+      "desc": "The sail mounts; reachable from the rail.",
+      "rects": [
+        {
+          "left": 5,
+          "top": 12,
+          "width": 30,
+          "height": 48
+        },
+        {
+          "left": 65,
+          "top": 12,
+          "width": 30,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Forecastle",
+      "desc": "Forward stores and the bow hatch.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 72,
+          "width": 20,
+          "height": 22
+        }
+      ]
+    }
+  ]
+}

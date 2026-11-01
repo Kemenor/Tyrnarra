@@ -1,0 +1,95 @@
+{
+  "image": "root-choked-hull.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Way in (from the tended holds)",
+      "desc": "Root-path from the tenders' level.",
+      "rects": [
+        {
+          "left": 15,
+          "top": 86,
+          "width": 30,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 The lower root-path",
+      "desc": "Stone path through the roots. The hazard starts here as the islet shifts.",
+      "rects": [
+        {
+          "left": 18,
+          "top": 70,
+          "width": 75,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 The torn hull",
+      "desc": "The pit is a hole torn through to open sky. Roots tearing loose drag things toward it.",
+      "rects": [
+        {
+          "left": 30,
+          "top": 41,
+          "width": 40,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 The rune ring",
+      "desc": "Ledge around the gap; the Silent Tongue cut into it.",
+      "rects": [
+        {
+          "left": 28,
+          "top": 37,
+          "width": 44,
+          "height": 5
+        },
+        {
+          "left": 20,
+          "top": 42,
+          "width": 10,
+          "height": 20
+        },
+        {
+          "left": 70,
+          "top": 42,
+          "width": 12,
+          "height": 20
+        },
+        {
+          "left": 28,
+          "top": 62,
+          "width": 44,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 The great root (the climb up)",
+      "desc": "The glowing root that climbs toward the gallery.",
+      "rects": [
+        {
+          "left": 47,
+          "top": 18,
+          "width": 22,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 The way on",
+      "desc": "Dark upper passage.",
+      "rects": [
+        {
+          "left": 30,
+          "top": 0,
+          "width": 45,
+          "height": 18
+        }
+      ]
+    }
+  ]
+}

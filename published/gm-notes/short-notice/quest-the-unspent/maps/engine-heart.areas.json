@@ -1,0 +1,107 @@
+{
+  "image": "engine-heart.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Entry from the shaft",
+      "desc": "Where the party comes up.",
+      "rects": [
+        {
+          "left": 37,
+          "top": 92,
+          "width": 26,
+          "height": 8
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 The spine",
+      "desc": "Ladder and gantry up the middle.",
+      "rects": [
+        {
+          "left": 37,
+          "top": 50,
+          "width": 26,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 Fire channels",
+      "desc": "Engine hazard; the Rising variants show it worsening.",
+      "rects": [
+        {
+          "left": 20,
+          "top": 40,
+          "width": 17,
+          "height": 58
+        },
+        {
+          "left": 63,
+          "top": 40,
+          "width": 17,
+          "height": 58
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Side gantries and vent-turrets",
+      "desc": "The engine's own defences.",
+      "rects": [
+        {
+          "left": 6,
+          "top": 36,
+          "width": 14,
+          "height": 62
+        },
+        {
+          "left": 80,
+          "top": 36,
+          "width": 14,
+          "height": 62
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 The lower wheel",
+      "desc": "The warden's housing.",
+      "rects": [
+        {
+          "left": 33,
+          "top": 38,
+          "width": 34,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "label": "6 \u00b7 The great wheel and the socket",
+      "desc": "The empty socket. Seat the heart here: Cradle, Turn, Wake, Bind.",
+      "rects": [
+        {
+          "left": 30,
+          "top": 17,
+          "width": 40,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "label": "7 \u00b7 Furnace vents",
+      "desc": "Hazard flanking the socket.",
+      "rects": [
+        {
+          "left": 15,
+          "top": 13,
+          "width": 15,
+          "height": 18
+        },
+        {
+          "left": 70,
+          "top": 13,
+          "width": 15,
+          "height": 18
+        }
+      ]
+    }
+  ]
+}

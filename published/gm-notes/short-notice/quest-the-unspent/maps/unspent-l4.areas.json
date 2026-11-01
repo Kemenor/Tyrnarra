@@ -1,0 +1,77 @@
+{
+  "image": "unspent-l4.webp",
+  "areas": [
+    {
+      "label": "1 \u00b7 Boarding point: the kill-gangway",
+      "desc": "Where the keepers' line and gangway reach the Unspent. Goldwake's trap: planks drop out over open air.",
+      "rects": [
+        {
+          "left": 42,
+          "top": 82,
+          "width": 16,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "label": "2 \u00b7 Top deck and swivel guns",
+      "desc": "Swivel guns rigged to fire at whoever crosses. Session 3: the Ninehulls fight ground.",
+      "rects": [
+        {
+          "left": 37,
+          "top": 42,
+          "width": 26,
+          "height": 28
+        }
+      ]
+    },
+    {
+      "label": "3 \u00b7 The wing-sails",
+      "desc": "Open air on both sides. Anyone shoved off the rail falls toward Freeboard.",
+      "rects": [
+        {
+          "left": 5,
+          "top": 28,
+          "width": 28,
+          "height": 32
+        },
+        {
+          "left": 67,
+          "top": 28,
+          "width": 28,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "label": "4 \u00b7 Star skylight",
+      "desc": "The skylight over Goldwake's cabin, blacked from inside. Halfers swear they've seen lamplight here.",
+      "rects": [
+        {
+          "left": 40,
+          "top": 13,
+          "width": 21,
+          "height": 15
+        }
+      ]
+    },
+    {
+      "label": "5 \u00b7 Stern stairs",
+      "desc": "Curved stairs down to the cabin deck.",
+      "rects": [
+        {
+          "left": 31,
+          "top": 21,
+          "width": 11,
+          "height": 12
+        },
+        {
+          "left": 58,
+          "top": 21,
+          "width": 11,
+          "height": 12
+        }
+      ]
+    }
+  ]
+}
