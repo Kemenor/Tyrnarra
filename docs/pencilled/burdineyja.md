@@ -5,8 +5,9 @@
 ## Status
 
 - **Phase 0 (canon read): closed** (GM, 2026-11-05), with the GM's corrections below.
-- **Phase 1 (seed questions): open.** The questions are with the GM.
-- **Resume here:** Phase 1, the GM's answers.
+- **Phase 1 (seed questions): closed** (GM, 2026-11-05).
+- **Phase 2 (seeds): open.** Three seeds are with the GM.
+- **Resume here:** Phase 2, the GM's pick.
 - **Draft:** none yet.
 
 ## Phase 0: approved readback
@@ -32,13 +33,26 @@
 3. **The island waters are treacherous.** Goods can cross by the gate, but it is complex work beside Balatur Erui's: Gesalkai keeps the change of hulls and the bulk trade.
 4. **The Twin Cities are built** (`lore/geography/askamira/twin-cities.md`, 2026-10-29/31): Skysail's four islets are Elden atmospheric vessels, their engines still running; Goldwake's lift-heart came from "a Sumendar Magitech-ruin" (`bolverk.md`), unplaced.
 
+## Phase 1: the GM's answers (2026-11-05)
+
+1. **Two gates, one pair.** A gate stands on each side, one on the Hafra group's capital island and one on the Midarra group, and the two connect to each other reliably.
+2. **The Elden gates** are like stargates, and no one knows how to operate them. They come in all sizes; some work and some do not. One can be made to connect, but no one knows where they will come out, or whether they will survive. **These two are the only gates anyone can reliably connect.**
+3. **The Kobolds tinker with it.** Their experiments bore fruit and have not broken it (yet); they keep trying, and they are careful.
+4. **No split needed** (GM question): one people, or two sides of the same coin, rather than two cultures.
+5. **The glows differ:** one natural (the Hafra side), one strange (the Midarra side).
+6. **The gates cannot be moved**, or at least no one has moved one and got it working reliably. Some may still want to try.
+7. **The Order of Steam probably has a gate of its own** and has never got it to work truly reliably. (Touches the Order's open scope review; settled at Phase 4 as a canon move.)
+
+**Approved Phase 1 summary (GM, 2026-11-05).** Burdineyja is two island rings on two seas, joined by the only pair of Elden gates on Talan anyone can reliably connect; elsewhere the gates stand in every size, dead or waking, and a gate made to connect sends its traveller who knows where, if it does not kill them. One gate stands on the Hafra group's capital island, the other on the Midarra group, and neither can be moved, though some would still like to try. The flow is the gate itself: people, letters and goods step between the seas in a moment; freight is careful work and the waters around both rings are treacherous, so Gesalkai keeps the bulk trade and the gate carries what is worth the trouble. The contradiction is the Kobold temper set on the one Elden machine that works: they tinker with it, their experiments have paid off, it has not broken yet, and every Kobold here knows the *yet*; a people of the leap who are also careful. One people lives on both sides, two faces of one coin: the salt side has the mountains, the capital and the natural glow of plankton in ore-rich water; the fresh side is bare rock under a glow no one has explained. The pressure is led by the Order of Steam, which has a gate of its own it has never got working reliably and watches the Kobolds do with the leap what its method cannot; behind it come Gesalkai's trade, the pirate crossing, and anyone who dreams of carrying a gate away.
+
 ## Rejected options
 
 None yet.
 
 ## Open questions
 
-- Where the gate's other end stands (the Midarra group's star-shaped centre island is the natural answer) (Phase 1 or 4).
+- Which Midarra island holds the second gate (the star-shaped centre is the natural answer) (Phase 4).
+- The Elden gates as a category (stargate-like, every size, unknown destinations, deadly): a canon move into `timeline.md` ⚿ and the Elden page's tech, worded at Phase 4.
 - What makes the island waters treacherous (Phase 4).
 - The cause of the freshwater glow (Phase 2 or 4; seed bank).
 
