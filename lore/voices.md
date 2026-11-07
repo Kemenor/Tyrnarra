@@ -27,6 +27,10 @@ Everything Golivander writes is organised around a single act: he notices, and t
 
 **Funny, accurate and warm, and the order matters least.** He is the most read travel writer on the continent because he is a pleasure to read: dry, lively, exact, with a joke wherever the world has left one lying about. The comedy is never invented. The world is exactly as odd as he reports, and he is the one who noticed.
 
+**The models.** British wit in the line of Douglas Adams and Terry Pratchett, and of *Cunk on Earth*, except truthful: a chronicler's accounting, lively, factual and a little dry, lifted throughout by humour. This is the test for any new passage. The most widely read travel guide on the continent has to be fun to read, page after page; a passage that is correct and joyless has failed, however accurate it is.
+
+**He sees the whole picture.** Where a visitor sees a scandal (a people who water their roads, a man asleep through his own harvest, fruit rotting on every stall by noon), Golivander stays long enough to learn what the custom is for, and reports that. Readers come to him for the outrage and leave with the reason. The cross correspondent is his natural partner: right about what they saw, and a day short of the rest.
+
 **How the wit works.** The toolkit, to be rotated and never stacked:
 
 - **Deadpan precision.** A fact stated so exactly that the exactness becomes the joke. *The tolls are posted, fair and numerous.*
@@ -36,7 +40,7 @@ Everything Golivander writes is organised around a single act: he notices, and t
 - **The late word.** The sentence that runs one clause past where the reader expected it to stop. *Bring small coin, and then bring more.*
 - **The honest absence.** What he has not seen, admitted plainly, is itself a joke. *Nobody has offered me a second fact, and I decline to invent one.*
 
-**The cadence.** Plain fact, plain fact, turn. Most sentences carry information and no joke at all; the joke earns its place by arriving after the reader has been told something true. A paragraph with a joke in every line is a paragraph that has stopped being a guide.
+**The cadence.** Every sentence carries a fact; the wit is how the fact is said, never something added after it. Adams and Pratchett deliver their information through the joke, and so does he: the toll, the route and the price all arrive inside the turn of phrase. Short plain sentences are the setup that gives the turn its snap (*Book nothing. Nothing here is booked.*), and the flat tea clause is the one plain line that stands alone on purpose. What breaks the voice is a joke with no fact inside it, two tricks stacked in one sentence, or a Guide entry that stops telling the traveller how to get there and what it costs.
 
 **The wit never punches down.** Its licensed targets are institutions, pretension, collectives (*the kingdom*, *the literate classes*, *my publisher*, the eleven dukes as a body), inanimate things that behave like institutions (rivers, weather, bureaucracies, ferries), and Golivander himself. When a vulnerable person is in frame (the nervous young official, the grieving, the apprentice who poured the wrong tier), the wit steps aside and plain warmth carries the sentence. His opinion of a person he cannot praise is expressed as scrupulous, unmistakable fairness.
 
@@ -74,6 +78,8 @@ He has made the Cloud Sea crossing to **Sortalde** once, a years-long expedition
 #### 2 · *The Travelling Chronicle* (the dial: him in the frame)
 
 The periodical, and where readers go for more of him. The same wit, at greater length and with Golivander walking into the scene: his opinions, his digressions, his feet, his luggage, the cider barrel he sat on. He tells you *that* he noticed and what he made of it; he argues with correspondents, admits his mistakes in print and enjoys them. Where the Guide is a joke at the world's expense, the Chronicle is a joke at his own, and the warmth shows through more openly.
+
+**The shape of a Chronicle piece.** It opens on a hook, runs on his own misadventure (the late arrival, the luggage that travels better than he does, the barrel he sat on), and turns in nearly every paragraph. A Chronicle piece that reads like a report is wrong.
 
 **Sample (Chronicle register):**
 
@@ -234,7 +240,7 @@ How the two bylines are used across the published site.
 - **Division of territory.** Golivander graces Talan: Guide excerpts on region and settlement pages, Chronicle passages where a court, an event, or a person is in frame. Vyrenna graces the beyond and the overlooked: planar pages when they exist, and the one-line places (her early corpus fits the thin sub-regions the census still lists). The division is temperament made visible: he carries Talan, she carries the beyond.
 - **A section is a treat, never chrome.** Any page *can* carry a voice-quotation; no page must. A quotation earns its place by adding a register the page's own prose cannot reach.
 - **Tier discipline.** Guide, Chronicle, and *One Line Further* excerpts are open prose (chronicler-tier). The tavern-shapes of his agelessness and his rumoured journeys are amber ◈ material. The letters to Vyrenna, the silent journeys, the aging mechanism, the retrace, and Wren's true name are red ⚿ and never leak into open prose.
-- **The don'ts.** The elision is varied, never a catchphrase. The wit never punches down. The tea reflex and the music peeve are rationed like any signature: one firing per piece at most. Golivander's wit follows the toolkit and the cadence in *The temperament* (plain fact, plain fact, turn), and every joke rests on a fact the lore holds; read the samples before writing a new passage. His letters home carry warmth and opinion, not wit. Vyrenna's wind-images run about one per passage. Register 4 cargo never appears on a player-facing page outside a ⚿ box.
+- **The don'ts.** The elision is varied, never a catchphrase. The wit never punches down. The tea reflex and the music peeve are rationed like any signature: one firing per piece at most. Golivander's wit follows the models, the toolkit and the cadence in *The temperament* (every sentence a fact, the wit in how it is said), and every joke rests on a fact the lore holds; read the samples and at least one of his full pieces (the River Duchies entry and column, the Twin Cities column) before writing a new passage. His letters home carry warmth and opinion, not wit. Vyrenna's wind-images run about one per passage. Register 4 cargo never appears on a player-facing page outside a ⚿ box.
 - **The samples above are canonical reference passages.** Match their cadence before coining new ones, and add substantial new in-world texts to this file (the `heartcourt-letters.md` model) so the corpus stays auditable.
 
 ## Corpus index (off-file passages)
