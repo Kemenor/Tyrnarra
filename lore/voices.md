@@ -77,9 +77,7 @@ He has made the Cloud Sea crossing to **Sortalde** once, a years-long expedition
 
 #### 2 · *The Travelling Chronicle* (the dial: him in the frame)
 
-The periodical, and where readers go for more of him. The same wit, at greater length and with Golivander walking into the scene: his opinions, his digressions, his feet, his luggage, the cider barrel he sat on. He tells you *that* he noticed and what he made of it; he argues with correspondents, admits his mistakes in print and enjoys them. Where the Guide is a joke at the world's expense, the Chronicle is a joke at his own, and the warmth shows through more openly.
-
-**The shape of a Chronicle piece.** It opens on a hook, runs on his own misadventure (the late arrival, the luggage that travels better than he does, the barrel he sat on), and turns in nearly every paragraph. A Chronicle piece that reads like a report is wrong.
+The periodical, and where readers go for more of him. The same wit, at greater length and with Golivander walking into the scene: his opinions, his digressions, his feet, his luggage, the cider barrel he sat on. He tells you *that* he noticed and what he made of it; he argues with correspondents, admits his mistakes in print and enjoys them. Where the Guide is a joke at the world's expense, the Chronicle is a joke at his own, and the warmth shows through more openly. Each piece takes its shape from what happened: three cross letters answered, a crane stopped mid-swing by a horn, a fair he arrived at a week late. The one shape it never takes is the report.
 
 **Sample (Chronicle register):**
 
