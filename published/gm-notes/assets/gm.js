@@ -62,6 +62,18 @@
   tabFromHash();
   window.addEventListener('hashchange', tabFromHash);
 
+  // ── NPC card from the URL hash (cast.html#npc-merrin opens Merrin's card) ──
+  function cardFromHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var card = id && document.getElementById(id);
+    if (card && card.classList.contains('npc-card')) {
+      card.classList.add('open');
+      card.scrollIntoView({ block: 'start' });
+    }
+  }
+  cardFromHash();
+  window.addEventListener('hashchange', cardFromHash);
+
   document.addEventListener('click', function (e) {
     // ── Tabs ──────────────────────────────────────────────
     var tab = e.target.closest('.gm-tab-btn');
