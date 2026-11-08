@@ -1450,6 +1450,14 @@ Full geography in `geography/myrkono.md` and god-deep-dive in `gods.md`, *Araphe
   - **Told name**, **bought name**: see the register below.
   - **Pirate Lords' names**: **Ninehulls** (nine ships in one night); **Sunfall** (strikes out of the sun); **Goldwake** (existing canon).
   - **Odile Brasshand**, **Kesti Downdraft**, **Pell out of the Spar**: names in the Twin Cities register.
+  - **The Fairturn**: modern Talanese, from the prize *Fair Return* (a ship's wish for a good voyage home), run together and worn to *Fairturn*. Freeboard's first tavern, at the foot of the Lower Spar; decks keep their prizes' names.
+  - **The Lost Property**: modern Talanese, plain; a shop of prize goods on the Lower Spar, named for what it sells.
+  - **The Great Cabin**: modern Talanese, plain; the captain's quarters across a ship's stern. A magic-item shop on the Lower Spar, cut whole out of a prize.
+  - **The Wash**: modern Talanese, sailors' cant: *the wash*, the disturbed water alongside and astern of a moving ship. The fighting ring in a flooded hold under the Lower Spar.
+  - **The Stillroom**: modern Talanese, plain: a household's room for distilling and preserving. The alchemist's, below the waterline by the engines.
+  - **The Edge**, **The Ropewalk**, **The Tuning House**: modern Talanese, plain. Skysail's table-row along the drop on the Main; the rope gallery under the Jigger (a *ropewalk* is the long building where rope is laid); the wind-tuner's on the Fore.
+  - **Rosalba out of the Fairturn**, **Nohea out of the Lost Property**, **Ottavia out of Namur**, **Kahu out of the Low Hatch**, **Ilta out of the Fore**: Twin Cities register, untold names; given names kept from the families' own traditions (real-world sources: Italian *Rosalba*, Namur's register; Hawaiian *nohea* "handsome", Haraour Eliza's Leowai; Italian *Ottavia*; Māori *kahu* "hawk", Tahu Tangata's Reahi; Finnish *ilta* "evening", the Tengu register). *The Low Hatch*, a deck of Freeboard. Working names.
+  - **Holdfast**: a told name, Talanese; a Merfolk bookmaker of the Wash, told for holding a fighter who threw a bout under the water until he agreed to pay.
   - **The Unspent**: Adventurer-Era Talanese, plain: *unspent* (kept, never paid out), named for Goldwake's doctrine that spending was loss. Mara Goldwake's flagship, hung under the Jigger since she came home crewless c. 2390 MR. Full canon: `geography/askamira/twin-cities.md`, *The Unspent*.
   - **Lift-heart**: plain Talanese, a GM-tier working term: the part of an Elden atmospheric vessel that holds the hull up. The Skysailers have no word for it; to them it is all *the old work*.
   - **Merrin out of the Jigger**: Twin Cities register. *Merrin*, a given name kept in her family from a coast her great-grandparents left (real-world source: Cornish *Merryn*); *out of the Jigger*, city-born on Skysail, where each islet counts as a deck. Captain of the Unspent's keepers.

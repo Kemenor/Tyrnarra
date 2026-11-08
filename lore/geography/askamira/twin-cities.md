@@ -49,6 +49,20 @@ On top of the stack stand **the spires**: each the prize that made a Pirate Lord
 
 The weight pushes Freeboard down as it grows up. The oldest hulls lie below the waterline, some flooded and some dry. The dry ones are workshops and storerooms with the lake on the far side of every plank. The flooded ones belong to the **Merfolk**, whose pods hold the drowned decks and the water in the city's shadow, where they keep fish-pens and weed-beds. Trade between the two passes through hatches cut in the lowest decks, fish going up and everything else going down. A hull the air-breathers give up to the water passes to the pods.
 
+### Down the Lower Spar
+
+The Lower Spar runs from the landing into the stack, and a stranger off a prize ship walks it first.
+
+**The Fairturn** stands at its foot: the tavern Freeboard grew on, three hulls high, with the lace-windowed hull of its keeper's house on top. Its board is the cargo slate from the old Fairturn's hold, and the keeper chalks whatever came in last over whatever came in before. The tellers work the ground-floor room. One who moves up a floor has been asked for twice, and the top room, where the deck runs across on beams to the gambling hall, belongs to the best teller of the season. The keeper is **Rosalba out of the Fairturn**, whose grandfather hung the lace.
+
+**The Lost Property** takes up a whole hull halfway along: prize goods, cheap, sorted by the ship they came off. Painted boards over the shelves carry the prizes' names, so rope is found under the ship that carried it, and a buyer asks for a lantern by the ship it was on. The goods still carry other folk's initials, and **Nohea out of the Lost Property** scrapes a name off for a copper.
+
+**The Great Cabin** is a captain's cabin cut whole out of a prize and hoisted onto the Spar, stern windows and all. It sells the magic that comes off captured ships, laid out as it was found: a wand still on the dead captain's desk, a ring in the sea-chest. Each piece is sold with its tale, and the tale is half the price; a blade that killed a captain costs more than its twin that never did. A buyer who wants a piece clean pays extra to have the tale stay behind. **Ottavia out of Namur**, an elf who was a ship's wizard before she was taken off one, sets the prices.
+
+**The Wash** lies two decks under the Spar, in a hold opened to the lake on purpose. Hatch-covers float in a ring on the black water, lashed loosely together, and the fighters fight on them. A fighter in the water has lost. The Merfolk watch from below with their heads just under the surface, bet through the planks, and fish the loser out for a fee. A bout with both fighters standing at the bell goes to the hands of the crowd. The book is kept by **Holdfast**, a Merfolk woman told for a fighter who threw a bout: she took him under and held him there until he agreed to pay.
+
+**The Stillroom** is the alchemist's, below the waterline beside the engines, where the hull is warm. The deck put it there so that a fire in the Stillroom has the lake on the other side of the plank; an axe hangs by the door to let it in. The keeper, **Kahu out of the Low Hatch**, has her own hatch to the pods, and buys weed, eel-skin and ink from the Merfolk by the bucket.
+
 ---
 
 ## Skysail and the Mooring
@@ -65,6 +79,14 @@ Skysail is all open. The streets are wide squares of stone with a table and chai
 > Kesti Downdraft, Lord of Skysail
 
 The sky crews dive their ships into clouds for the feel of it, in blind and white and out wet to the skin, and come home beaded with the droplets.
+
+### Around the islets
+
+**The Edge** runs along the drop on the Main: a line of tables with the open air beyond them, hammocks slung over the side from posts sunk in the rock, and a kitchen that serves sky fruit and cold tea through the long afternoon. Skysailers sit with their backs to the drop. Kesti Downdraft has a table there, and it stays empty while she is away.
+
+**The Ropewalk** hangs under the Jigger on its own lines: the longest room in Skysail, a gallery of planks and netting open to the air, where the airship crews lay new rope the length of the room. The keepers mend the Unspent's lines there, and from the far end of the gallery she hangs close enough to read her name.
+
+**The Tuning House** stands on the Fore, and tunes the city's hum. Its keeper, **Ilta out of the Fore**, cuts and shapes window-openings so that a house sings in a chosen key in any wind, and sells wind-bells, skiff pilots' whistles, and the signal whistles the sky crews call to each other with across the gap.
 
 ### ⚿ GM Secret: the islets are Elden ships
 
