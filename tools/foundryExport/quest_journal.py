@@ -29,7 +29,7 @@ import os
 import re
 import sys
 
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup, Comment, NavigableString
 from bs4.dammit import EntitySubstitution
 from bs4.formatter import HTMLFormatter
 
@@ -121,6 +121,8 @@ def convert(el, soup, art):
     for sel in STRIP:
         for x in el.select(sel):
             x.decompose()
+    for c in el.find_all(string=lambda t: isinstance(t, Comment)):
+        c.extract()           # Foundry drops comments on store
     # links: keep the words, drop the link (they point at the website)
     for a in el.find_all("a"):
         a.unwrap()
@@ -218,6 +220,11 @@ def convert(el, soup, art):
         d.unwrap()
     for fc in el.find_all("figcaption"):
         fc.name = "p"
+    # a <p> may not hold block elements; the browser would split it on store
+    BLOCK = ["p", "ul", "ol", "table", "blockquote", "section", "h3", "h4", "div", "figure"]
+    for p in el.find_all("p"):
+        if p.find(BLOCK, recursive=False):
+            p.unwrap()
     html = el.decode_contents(formatter=FOUNDRY_HTML)
     html = re.sub(r"\n\s*\n+", "\n", html)
     return html.strip()
