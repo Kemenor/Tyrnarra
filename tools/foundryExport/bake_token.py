@@ -37,10 +37,11 @@ def _crop_square(im):
     return im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
 
 
-def _circle_mask(size, feather, radius_frac=0.995):
+def _circle_mask(size, feather, radius_frac=0.995, cy_frac=0.5):
     m = Image.new("L", (size, size), 0)
     c, r = size / 2, size / 2 * radius_frac
-    ImageDraw.Draw(m).ellipse((c - r, c - r, c + r, c + r), fill=255)
+    cy = size * cy_frac
+    ImageDraw.Draw(m).ellipse((c - r, cy - r, c + r, cy + r), fill=255)
     return m.filter(ImageFilter.GaussianBlur(feather)) if feather else m
 
 
@@ -108,7 +109,7 @@ def _framed(path, size, zoom=1.0, dy=0.0):
 
 
 def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="auto",
-         cutout=None, pop=(), zoom=1.0, dy=0.0):
+         cutout=None, pop=(), zoom=1.0, dy=0.0, ring=0.995, ring_dy=0.0):
     """Circle-crop portrait; layer frame (transparent -> exact; opaque -> annulus).
 
     Pop-out: `cutout` is the same portrait with its background removed (same
@@ -129,7 +130,9 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
             bb = f0.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
             if bb and (bb[3] - bb[1]) > (bb[2] - bb[0]):
                 radius = 0.96 * (bb[2] - bb[0]) / (bb[3] - bb[1])
-    canvas.paste(p, (0, 0), _circle_mask(size, feather, radius))
+    # ring < 0.995 draws the frame smaller than the token and ring_dy moves it down,
+    # leaving room above it for a pop-out head; the portrait circle follows the ring.
+    canvas.paste(p, (0, 0), _circle_mask(size, feather, radius * ring / 0.995, 0.5 + ring_dy))
     if frame:
         f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
         use_alpha = frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f))
@@ -140,10 +143,10 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
             bbox = f.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
             if bbox:
                 bw, bh = bbox[2] - bbox[0], bbox[3] - bbox[1]
-                scale = (size * 0.995) / max(bw, bh)
-                ring = f.crop(bbox).resize((max(1, round(bw * scale)), max(1, round(bh * scale))), Image.LANCZOS)
+                scale = (size * ring) / max(bw, bh)
+                rimg = f.crop(bbox).resize((max(1, round(bw * scale)), max(1, round(bh * scale))), Image.LANCZOS)
                 f = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-                f.paste(ring, ((size - ring.width) // 2, (size - ring.height) // 2), ring)
+                f.paste(rimg, ((size - rimg.width) // 2, (size - rimg.height) // 2 + round(ring_dy * size)), rimg)
             canvas = Image.alpha_composite(canvas, f)        # exact: frame's own alpha
         else:
             ring = Image.new("RGBA", (size, size), (0, 0, 0, 0))
@@ -198,6 +201,8 @@ def main():
     b.add_argument("--frame-mode", default="auto", choices=["auto", "alpha", "annulus"])
     b.add_argument("--zoom", type=float, default=1.0, help="Zoom the portrait (and cut-out) about its centre.")
     b.add_argument("--dy", type=float, default=0.0, help="Move the portrait down by this fraction of the token (negative: up).")
+    b.add_argument("--ring", type=float, default=0.995, help="The frame's size as a fraction of the token (smaller leaves room for a pop-out).")
+    b.add_argument("--ring-dy", type=float, default=0.0, help="Move the frame (and the portrait circle) down by this fraction of the token.")
     b.add_argument("--cutout", help="The portrait with its background removed (same framing), for --pop.")
     b.add_argument("--pop", action="append", default=[], metavar="X0,Y0,X1,Y1",
                    help="A box (fractions of the token) where the cut-out figure is laid over the frame. Repeatable.")
@@ -220,7 +225,7 @@ def main():
     elif a.cmd == "bake":
         pop = [tuple(float(v) for v in p.split(",")) for p in a.pop]
         print(bake(a.portrait, a.frame, a.out, a.size, a.inner, a.feather, a.frame_mode,
-                   cutout=a.cutout, pop=pop, zoom=a.zoom, dy=a.dy))
+                   cutout=a.cutout, pop=pop, zoom=a.zoom, dy=a.dy, ring=a.ring, ring_dy=a.ring_dy))
     else:
         fmap = json.load(open(a.map, encoding="utf-8-sig")) if a.map else {}
         exts = (".webp", ".png", ".jpg", ".jpeg")
