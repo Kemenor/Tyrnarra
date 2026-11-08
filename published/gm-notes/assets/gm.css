@@ -321,6 +321,18 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .map-wrap.hide-areas .map-hot .hot-num { opacity: 0; transition: opacity 0.15s; }
 .map-wrap.hide-areas .map-hot:hover { background: rgba(106,166,200,0.22); border-color: rgba(106,166,200,0.95); }
 .map-wrap.hide-areas .map-hot:hover .hot-num { opacity: 1; }
+/* Freeform areas: an <svg class="map-poly" viewBox="0 0 100 100" preserveAspectRatio="none">
+   over the image holds <polygon class="map-hot" data-area="…">; a poly-only area's number
+   sits in a .map-num at its centroid. Same click behaviour as the rectangles. */
+.map-wrap > svg.map-poly { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.map-poly .map-hot { fill: rgba(106,166,200,0.10); stroke: rgba(106,166,200,0.55); stroke-width: 1.5; vector-effect: non-scaling-stroke; pointer-events: all; cursor: pointer; transition: fill 0.15s, stroke 0.15s; }
+.map-poly .map-hot:hover { fill: rgba(106,166,200,0.22); stroke: rgba(106,166,200,0.95); }
+.map-poly .map-hot.active { fill: rgba(194,72,60,0.24); stroke: var(--gm-accent); }
+.map-wrap.hide-areas .map-poly .map-hot { fill: rgba(106,166,200,0); stroke: rgba(106,166,200,0); }
+.map-wrap.hide-areas .map-poly .map-hot:hover { fill: rgba(106,166,200,0.22); stroke: rgba(106,166,200,0.95); }
+.map-num { position: absolute; transform: translate(-50%, -50%); pointer-events: none; line-height: normal; }
+.map-num .hot-num { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #fff; background: rgba(16,18,24,0.72); border: 1px solid rgba(255,255,255,0.45); border-radius: 50%; min-width: 22px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; opacity: 0.85; }
+.map-wrap.hide-areas .map-num { opacity: 0; transition: opacity 0.15s; }
 .map-toggle { display: block; margin: 12px auto 0; font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); background: rgba(200,160,74,0.08); border: 1px solid var(--gm-divider); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
 .map-toggle:hover { color: var(--gm-ink-bright); border-color: var(--gm-gold-dim); }
 .map-detail { max-width: 800px; margin: 18px auto 0; min-height: 40px; }

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 · The Jigger's Holds · The Unspent</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gm-notes/assets/gm.css">
+<link rel="stylesheet" href="/gm-notes/assets/gm-nav.css">
+<script defer src="/gm-notes/assets/gm-nav.js"></script>
+<script defer src="/gm-notes/assets/gm.js"></script>
+<style>
+  .scene-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 12px; }
+  .scene-meta .pill a { border: none; color: inherit; }
+  .scene-kind { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 4px; }
+  .scene-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; }
+  .scene-jump a { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--gm-divider); border-radius: 3px; padding: 4px 9px; color: var(--gm-ink); }
+  .scene-jump a:hover { border-color: var(--gm-gold-dim); color: var(--gm-gold); }
+  .todo { font-size: 0.9rem; color: var(--gm-ink-dim); font-style: italic; }
+  .section[id] { scroll-margin-top: 20px; }
+</style>
+</head>
+<body data-page="quest-the-unspent-s2">
+
+<div class="gm-banner">
+  <span>⚔ &nbsp; GM Material · Behind the Screen · Not Player-Facing</span>
+  <span class="gm-banner-sep">·</span>
+  <a href="/gm-notes/short-notice/index.html">Campaign hub ↗</a>
+</div>
+
+<div class="gm-container">
+
+  <div class="breadcrumb">
+    <a href="/gm-notes/short-notice/index.html">Available on Short Notice</a><span class="sep">›</span><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html">The Unspent</a><span class="sep">›</span><span>Session 2</span>
+  </div>
+
+  <div class="gm-header">
+    <div class="gm-kicker">The Unspent · Session 2 of 3</div>
+    <div class="gm-title">The Jigger's Holds</div>
+    <div class="gm-flavor">The islet is falling onto the city. Carry the heart up through an Elden ship and seat it before she touches the spires.</div>
+    <div class="scene-jump">
+      <a href="#sink-clock">The Sink Clock</a><a href="#the-fall">The Fall</a><a href="#briefing">Briefing</a><a href="#underside">The Underside</a><a href="#tended-holds">Tended Holds</a><a href="#root-choked-hull">Root-choked Hull</a><a href="#wardens-corridors">Wardens and Gallery</a><a href="#the-gate">The Gate</a><a href="#hanging-fleet">Hanging Fleet</a><a href="#root-beard">Root-beard</a><a href="#gear-chamber">Gear Chamber</a><a href="#engine-heart">Engine Heart</a><a href="#the-rise">The Rise</a>
+    </div>
+  </div>
+
+  <div class="draft-note"><div class="draft-label">Draft · Claude</div><p>Read-alouds are first drafts. Encounters, hazard stats and DCs are still to build. The two routes are drawn on the <a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#flow">quest flowchart</a>.</p></div>
+
+  <div class="section" id="sink-clock">
+    <div class="section-title">The Sink Clock · the session's real enemy</div>
+    <div class="prose">
+      <p><b>8 stages.</b> +1 per 10-minute activity (Treat Wounds, Refocus, Repair, Identify), per critical failure at a hazard or the puzzle, and for the gallery. −1 at the hanging fleet, through Kesti's lines (costs a favour), or by dumping weight (homes into the Midarra).</p>
+      <p><b>1</b> an airship tears free · <b>2</b> the Jigger tilts, gardens slide off · <b>3</b> the Main lurches · <b>4</b> the dead Lord's spire falls · <b>5</b> debris on the top decks · <b>6</b> the Jigger settles on the stack · <b>7</b> the stack buckles · <b>8</b> the engine stops; the Jigger falls and takes part of the lower city.</p>
+      <p>1–5 are warnings with a cost; 6–7 grim but fixable (casualties, a bleak telling, Kesti's pay shrinks); 8 is true failure. Played clean, there is room for about two rests.</p>
+    </div>
+    <div class="gm-note"><div class="gm-note-label">The Carry</div><div class="gm-note-text"><p>The heart has to go up to the Jigger's empty socket. Near it, lift fails: no flying, and loose things drift toward it. The engine's defenders go for whoever carries it.</p></div></div>
+  </div>
+
+  <div class="section" id="the-fall">
+    <div class="scene-kind">Challenge · get off the Unspent</div>
+    <div class="section-title">1 · The Fall</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-merrin">Merrin out of the Jigger</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The Unspent drops a full length on her lines and every rope screams. Loose gear slides past you toward the heart, which rolls on the deck as though the deck ran downhill in every direction.</p><p>Above, the keepers are hauling baskets up hand over hand. They are hauling up the chests.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>A skill challenge: grab the heart and get off the sagging flagship. The keepers save the hoard before they help anyone: Nirfel's greed, shown and not named.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>The skill challenge (checks, successes needed, what failure costs).</li></ul></div>
+  </div>
+
+  <div class="section" id="briefing">
+    <div class="scene-kind">Social · the clock starts</div>
+    <div class="section-title">2 · Kesti's Briefing</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-kesti">Kesti Downdraft</a></span><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-hobb">Old Hobb</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Kesti Downdraft lands on the Unspent's rail from a skiff that is still moving and gives you the useful thing first. "That thing is pulling my islet down. There's a hollow in the old work that's always been empty; the tenders' rites go round it. Get it there. You have until she touches the spires."</p><p>Behind her, an old man in a tender's apron is already climbing over the rail. "Hobb," she says. "He knows the way in. Don't let him fall."</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>The Lord commands outright while the city is under attack or under way. She starts the sink clock and offers Hobb as a non-combatant guide. Asking her to have the Main take more lines buys a stage back, at the cost of a favour.</p></div></div>
+  </div>
+
+  <div class="section" id="underside">
+    <div class="scene-kind">Choice · which way up</div>
+    <div class="section-title">3 · The Underside</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-hobb">Old Hobb</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Under the Jigger the world turns over: rock overhead, roots hanging in a beard on every side, airships straining on their lines, and a long way below, the Midarra and the stacked city waiting for whatever falls.</p><p>Old Hobb points a crooked finger at a hatch in the rock. "The tended way's in there." Then, as if it does not matter: "Wind goes in somewhere up yonder too. Always has."</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p><b>Inside, the reading:</b> slower (the gallery costs a stage), and the party arrives at the boss knowing all four seating steps. <b>Outside, open air:</b> faster, saves lives at the hanging fleet, and the party arrives knowing only Cradle. The outside way has to be found: Hobb's hint is the clue, and the Gate is its first test.</p></div></div>
+  </div>
+
+  <div class="section" id="tended-holds">
+    <div class="scene-kind">Exploration · inside route</div>
+    <div class="section-title">A1 · The Tended Holds</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-hobb">Old Hobb</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Inside, the rock gives way to something older: smooth grey walls that curve like a ship's ribs, lit by lamps the tenders have hung for generations.</p><p>Hobb walks it like his own kitchen. At each brass plate he stops, touches it three times, hums four notes, and moves on. He has done it every day of his life and has no idea why.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>Hobb's rite by rote is the Wake step of the seating. A player who copies or records it knows Wake at the boss. Hobb cannot follow the outside climb; inside, he comes as far as the gear chamber.</p></div></div>
+  </div>
+
+  <div class="section" id="root-choked-hull">
+    <div class="scene-kind">Hazard · inside route</div>
+    <div class="section-title">A2 · The Root-choked Hull</div>
+    <div class="scene-meta"></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Roots have broken through here, thick as a mast and still moving, grinding as the islet sags. Ahead the floor ends in a ring of carved stone around a hole torn clean through the hull.</p><p>Through it you can see the sky, and far below the sky, the water.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>Roots tear loose as the islet shifts; the torn hull drags things toward the gap. A creature through the gap falls out under the islet (a skiff catch and lost time, as everywhere this session).</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>The hazard (level, checks, what the roots do each round).</li></ul></div>
+    <div class="section">
+      <div class="map-hint">The root-choked hull</div>
+      <!-- map: /gm-notes/short-notice/quest-the-unspent/maps/root-choked-hull -->
+<div class="map-wrap">
+  <img src="/gm-notes/short-notice/quest-the-unspent/maps/root-choked-hull.webp" alt="root-choked-hull battlemap (downsized reference)">
+  <button class="map-hot" data-area="root-choked-hull-1" style="left:15%;top:86%;width:30%;height:14%"><span class="hot-num">1</span></button>
+  <button class="map-hot" data-area="root-choked-hull-2" style="left:18%;top:70%;width:75%;height:16%"><span class="hot-num">2</span></button>
+  <button class="map-hot" data-area="root-choked-hull-3" style="left:30%;top:41%;width:40%;height:22%"><span class="hot-num">3</span></button>
+  <button class="map-hot" data-area="root-choked-hull-4" style="left:28%;top:37%;width:44%;height:5%"><span class="hot-num">4</span></button>
+  <button class="map-hot" data-area="root-choked-hull-4" style="left:20%;top:42%;width:10%;height:20%"></button>
+  <button class="map-hot" data-area="root-choked-hull-4" style="left:70%;top:42%;width:12%;height:20%"></button>
+  <button class="map-hot" data-area="root-choked-hull-4" style="left:28%;top:62%;width:44%;height:5%"></button>
+  <button class="map-hot" data-area="root-choked-hull-5" style="left:47%;top:18%;width:22%;height:22%"><span class="hot-num">5</span></button>
+  <button class="map-hot" data-area="root-choked-hull-6" style="left:30%;top:0%;width:45%;height:18%"><span class="hot-num">6</span></button>
+</div>
+<button class="map-toggle" type="button">Hide areas</button>
+<div class="map-detail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
+<!-- /map -->
+    </div>
+  </div>
+
+  <div class="section" id="wardens-corridors">
+    <div class="scene-kind">Fight + puzzle · the inside fight</div>
+    <div class="section-title">A3 + A4 · Wardens and Gallery</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-wardens">The wardens</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The passage opens into halls of pale stone and bronze, too regular to be cave and too old to be anything the pirates built. Something ahead clicks, then clicks again in answer.</p><p>At the top of a long stair a great round vault waits: an orrery of brass rings turning slowly around nothing, its walls covered in writing that seems to slide when you look at it.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p><b>The wardens:</b> Elden constructs woken by the engine's distress; they rush the carrier through the halls and gates. Moderate. <b>The gallery:</b> the Silent Tongue on the vault walls; reading it costs a stage and reveals Turn and Bind. The upper gate can be locked to mark its DC. The side passage behind debris is a place for optional treasure: clearing it costs time.</p><p>Keep the Corrupted God dial low: a critical failure on the reading brings a moment of dread from the writing, nothing more.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>Encounter: the wardens, moderate.</li><li>The gallery puzzle: how many successes, which skills.</li><li>The optional treasure behind the debris.</li></ul></div>
+    <div class="section">
+      <div class="map-hint">The wardens' halls and the gallery vault</div>
+      <!-- map: /gm-notes/short-notice/quest-the-unspent/maps/wardens-corridors -->
+<div class="map-wrap">
+  <img src="/gm-notes/short-notice/quest-the-unspent/maps/wardens-corridors.webp" alt="wardens-corridors battlemap (downsized reference)">
+  <button class="map-hot" data-area="wardens-corridors-1" style="left:55%;top:75.4%;width:45%;height:24.6%"><span class="hot-num">1</span></button>
+  <button class="map-hot" data-area="wardens-corridors-2" style="left:66.7%;top:90%;width:13.3%;height:7%"><span class="hot-num">2</span></button>
+  <button class="map-hot" data-area="wardens-corridors-3" style="left:20.9%;top:79%;width:33.8%;height:15.3%"><span class="hot-num">3</span></button>
+  <button class="map-hot" data-area="wardens-corridors-4" style="left:58%;top:72%;width:26%;height:3.7%"><span class="hot-num">4</span></button>
+  <button class="map-hot" data-area="wardens-corridors-5" style="left:37.7%;top:45%;width:53.5%;height:27%"><span class="hot-num">5</span></button>
+  <button class="map-hot" data-area="wardens-corridors-6" style="left:5%;top:50%;width:32.5%;height:24.5%"><span class="hot-num">6</span></button>
+  <button class="map-hot" data-area="wardens-corridors-7" style="left:39.6%;top:43.8%;width:19.6%;height:1.1%"><span class="hot-num">7</span></button>
+  <button class="map-hot" data-area="wardens-corridors-8" style="left:23.8%;top:35.4%;width:58.4%;height:8.3%"><span class="hot-num">8</span></button>
+  <button class="map-hot" data-area="wardens-corridors-9" style="left:0%;top:12%;width:20%;height:15%"><span class="hot-num">9</span></button>
+  <button class="map-hot" data-area="wardens-corridors-9" style="left:80%;top:12%;width:20%;height:15%"></button>
+  <button class="map-hot" data-area="wardens-corridors-9" style="left:29.8%;top:0.4%;width:39.6%;height:10.3%"></button>
+  <button class="map-hot" data-area="wardens-corridors-10" style="left:22.9%;top:11.2%;width:56.9%;height:23.4%"><span class="hot-num">10</span></button>
+  <button class="map-hot" data-area="wardens-corridors-11" style="left:40.5%;top:19.6%;width:18.8%;height:8.6%"><span class="hot-num">11</span></button>
+</div>
+<button class="map-toggle" type="button">Hide areas</button>
+<div class="map-detail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
+<!-- /map -->
+    </div>
+  </div>
+
+  <div class="section" id="the-gate">
+    <div class="scene-kind">Challenge · outside route</div>
+    <div class="section-title">B1 · The Gate</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-hobb">Old Hobb</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Hobb was right. Under the lip of the rock, a little to the east, the air is moving: the clouds bend toward a dark slot in the stone and vanish into it.</p><p>Between you and it there is nothing at all: thirty feet of open sky, and the heart in your arms pulling at every lift in the air around it.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>Spot the shaft mouth (Perception or Survival, reading the draught), then cross open air with no lift near the heart (Athletics or Acrobatics). Any good plan can replace a check: Skysail skiffs dropping lines, Kesti's crews swinging them across, carrying the heart apart from the flyers. Failure: +1 stage, and the party goes in the inside way.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>The two checks and their DCs.</li></ul></div>
+  </div>
+
+  <div class="section" id="hanging-fleet">
+    <div class="scene-kind">Challenge · outside route</div>
+    <div class="section-title">B2 · The Hanging Fleet</div>
+    <div class="scene-meta"></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The airships hang from the islet like fruit on a vine, dozens of them, crews on every deck hauling and shouting and cutting away what they cannot hold. Lines creak, snap, whip past.</p><p>To reach the root-beard you have to go hand over hand through all of it, and every crew you pass is asking for help.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>A skill challenge through the straining lines. Stopping to help a crew hold costs time or HP and pulls the clock back a stage, and saves lives that the tellers will count.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>The skill challenge.</li></ul></div>
+  </div>
+
+  <div class="section" id="root-beard">
+    <div class="scene-kind">Fight · the outside fight</div>
+    <div class="section-title">B3 · Wardens on the Root-beard</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-wardens">The wardens</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The underside of the Jigger is a forest turned upside down: shelves of black rock and root hanging over nothing, the Midarra glittering far below.</p><p>Then the rock opens like a door, and things of bronze and pale stone climb out of it toward you, heads turning as one toward whoever is holding the heart.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>The same wardens as the inside fight, in open air: no flying near the heart, gaps between the ledges that need jumps (the carrier cannot jump reliably), and the wardens shove people off. A fall is a skiff catch and lost time. After the fight, the shaft climb is narrated and ends at the gear chamber's bottom stairs.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>Encounter: the wardens, moderate, in this terrain.</li><li>The ledges and jumpable gaps (refine the map areas).</li></ul></div>
+    <div class="section">
+      <div class="map-hint">The root-beard under the Jigger</div>
+      <!-- map: /gm-notes/short-notice/quest-the-unspent/maps/root-beard -->
+<div class="map-wrap">
+  <img src="/gm-notes/short-notice/quest-the-unspent/maps/root-beard.webp" alt="root-beard battlemap (downsized reference)">
+  <button class="map-hot" data-area="root-beard-1" style="left:46%;top:88%;width:14%;height:12%"><span class="hot-num">1</span></button>
+  <button class="map-hot" data-area="root-beard-2" style="left:0%;top:10%;width:25%;height:70%"><span class="hot-num">2</span></button>
+  <button class="map-hot" data-area="root-beard-3" style="left:22%;top:55%;width:25%;height:45%"><span class="hot-num">3</span></button>
+  <button class="map-hot" data-area="root-beard-3" style="left:57%;top:72%;width:43%;height:28%"></button>
+  <button class="map-hot" data-area="root-beard-4" style="left:60%;top:0%;width:40%;height:22%"><span class="hot-num">4</span></button>
+  <button class="map-hot" data-area="root-beard-5" style="left:82%;top:25%;width:18%;height:48%"><span class="hot-num">5</span></button>
+  <button class="map-hot" data-area="root-beard-6" style="left:22%;top:20%;width:62%;height:40%"><span class="hot-num">6</span></button>
+  <button class="map-hot" data-area="root-beard-7" style="left:30%;top:22%;width:18%;height:8%"><span class="hot-num">7</span></button>
+  <button class="map-hot" data-area="root-beard-7" style="left:52%;top:52%;width:16%;height:8%"></button>
+  <button class="map-hot" data-area="root-beard-8" style="left:42%;top:0%;width:18%;height:10%"><span class="hot-num">8</span></button>
+</div>
+<button class="map-toggle" type="button">Hide areas</button>
+<div class="map-detail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
+<!-- /map -->
+    </div>
+  </div>
+
+  <div class="section" id="gear-chamber">
+    <div class="scene-kind">Hazard room · both routes</div>
+    <div class="section-title">A5 / B4 · The Gear Chamber</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-hobb">Old Hobb</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The shaft ends in a round chamber the size of a temple, and all of it is moving: walkways spiralling in toward a great turning heart of brass, gears the size of houses grinding at the edges, cables swinging loose overhead.</p><p>Everything leans toward the centre. The moment you step out of the stairwell you feel it lean on you, too.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">The room's rules</div><div class="gm-note-text"><p><b>Goal:</b> the carrier and the heart reach the exit (top stairs). Inside route enters at the lower-right stairs, outside at the bottom stairs. Foundry: 140 px grid, 5 ft, 33 × 46 squares, no walls.</p><p><b>The pull:</b> drift toward the governor, light on the outer walkways, strong on the inner ones, more for the carrier. Two Strides + Brace means no check; three Strides means a pull check at the end of the turn. The carrier's Brace needs Athletics (an ally can Aid). Off a walkway is a fall down the shaft: +1 stage, back in at the bottom stairs.</p><p><b>The clockworks:</b> G5 and G6 dangerous, G8 easy, always turning until stopped at the governor. Passing one: critical success no damage, success half, failure full damage and blocked. A dangerous clockwork's critical failure throws the creature off: one chance to grab a ledge, or an adjacent ally catches them and takes half the damage.</p><p><b>The strikes:</b> four sections each round on a three-round cycle, never two neighbours together; plus one wild strike. Reading the pattern (Perception or Crafting after a round of watching) lets the GM mark next round's four sections from then on; spotting the wild strike costs an action each round. The cycle, the d12 table and the ten pre-rolled wild strikes are in the area notes and in <a href="/gm-notes/short-notice/quest-the-unspent/gear-chamber-strikes.webp">the strike chart</a>.</p><p><b>The governor:</b> reached by the jumps (all but impossible for the carrier). Crafting, Arcana or Thievery stops a clockwork for 1 round, 2 on a critical success. The crumbling ground gives way under a Medium creature.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>Hazard stats: clockwork damage and DCs, strike damage and Reflex DC, pull DCs, the reading DC.</li><li>The Foundry macro: the sections as drawings, next round's strikes shown by click.</li></ul></div>
+    <div class="section">
+      <div class="map-hint">The gear chamber · the sections are the strike lanes</div>
+      <!-- map: /gm-notes/short-notice/quest-the-unspent/maps/lift-shaft -->
+<div class="map-wrap">
+  <img src="/gm-notes/short-notice/quest-the-unspent/maps/lift-shaft.webp" alt="lift-shaft battlemap (downsized reference)">
+  <button class="map-hot" data-area="lift-shaft-1" style="left:44%;top:12%;width:12%;height:14%"><span class="hot-num">1</span></button>
+  <button class="map-hot" data-area="lift-shaft-2" style="left:85.4%;top:67.1%;width:13.4%;height:8.3%"><span class="hot-num">2</span></button>
+  <button class="map-hot" data-area="lift-shaft-3" style="left:44.2%;top:80.9%;width:11.1%;height:10%"><span class="hot-num">3</span></button>
+  <button class="map-hot" data-area="lift-shaft-4" style="left:84.2%;top:32.2%;width:13.5%;height:7.9%"><span class="hot-num">4</span></button>
+  <button class="map-hot" data-area="lift-shaft-4" style="left:1.8%;top:30.5%;width:15%;height:10.2%"></button>
+  <button class="map-hot" data-area="lift-shaft-5" style="left:73.1%;top:49%;width:23.4%;height:17.6%"><span class="hot-num">5</span></button>
+  <button class="map-hot" data-area="lift-shaft-6" style="left:21.2%;top:28.9%;width:15.3%;height:11.5%"><span class="hot-num">6</span></button>
+  <button class="map-hot" data-area="lift-shaft-7" style="left:33.2%;top:48.1%;width:10.5%;height:8.5%"><span class="hot-num">7</span></button>
+  <button class="map-hot" data-area="lift-shaft-7" style="left:59.4%;top:52.3%;width:10.4%;height:6.5%"></button>
+  <button class="map-hot" data-area="lift-shaft-8" style="left:6.5%;top:56.8%;width:8.8%;height:8.6%"><span class="hot-num">8</span></button>
+  <button class="map-hot" data-area="lift-shaft-10" style="left:45.2%;top:48.3%;width:10.9%;height:10.1%"><span class="hot-num">10</span></button>
+  <svg class="map-poly" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="map-hot" data-area="lift-shaft-9" points="48.2,28.4 55.8,31 61.3,36.9 62,39.8 56.3,40.8 53.6,34.8 45.8,31.1"/>
+    <polygon class="map-hot" data-area="lift-shaft-11" points="83.6,71.2 72.6,78 57.4,82.7 53.8,78.2 67.6,74.9 76.7,68.5"/>
+    <polygon class="map-hot" data-area="lift-shaft-12" points="52.5,78.9 38.5,76.8 28,71.2 21.4,74.1 34.3,81.1 56.2,82.5"/>
+    <polygon class="map-hot" data-area="lift-shaft-13" points="44,61.9 56.9,62 76.5,63.1 80.3,66.7 67,68.4 55,64.9 45.8,65"/>
+    <polygon class="map-hot" data-area="lift-shaft-14" points="64.7,75.4 52.5,78.2 42,73.7 38.2,66.9 37.4,61.5 35.4,58 36.8,53.1 41.5,58.2 44.2,66.1 50.8,74.8 58.5,75.8"/>
+    <polygon class="map-hot" data-area="lift-shaft-15" points="56.6,62 63.4,52.9 72.7,47.2 75.1,40.1 79.2,39.2 79.3,46.5 73.2,53.5 67.8,55.4 62.9,61.8"/>
+    <polygon class="map-hot" data-area="lift-shaft-16" points="84.3,48 92.2,48.5 81.1,33.3 72.1,28.8 69.6,32.6 74.9,38.5 79.6,38.3 82.9,45"/>
+    <polygon class="map-hot" data-area="lift-shaft-17" points="68.2,32.2 71.5,27.8 55.8,23.3 38.9,24.2 39.6,30 49.5,28 61.8,30"/>
+    <polygon class="map-hot" data-area="lift-shaft-18" points="66.9,50.2 61.6,40.6 54.3,41.3 43.6,41.1 43.8,45.1 57.2,44.5 62.7,52.4"/>
+    <polygon class="map-hot" data-area="lift-shaft-19" points="40.8,47.9 43.5,40.2 35.2,37.7 19,41 18.1,46.7 26.3,42.7 38.4,43.1 36.1,47.4"/>
+    <polygon class="map-hot" data-area="lift-shaft-20" points="28.7,27.9 15.3,36.6 8.6,49 15.4,52.6 19,40.1 35.1,31.9 34.6,27"/>
+    <polygon class="map-hot" data-area="lift-shaft-21" points="9,51.3 15.1,70.3 21.2,74 27.8,71.1 25.9,66.8 17.7,61.7 16.3,52.5"/>
+  </svg>
+  <span class="map-num" style="left:54.7%;top:34.7%"><span class="hot-num">9</span></span>
+  <span class="map-num" style="left:68.6%;top:75.6%"><span class="hot-num">11</span></span>
+  <span class="map-num" style="left:38.5%;top:77.4%"><span class="hot-num">12</span></span>
+  <span class="map-num" style="left:60.8%;top:64.6%"><span class="hot-num">13</span></span>
+  <span class="map-num" style="left:45.6%;top:67.4%"><span class="hot-num">14</span></span>
+  <span class="map-num" style="left:70.0%;top:51.0%"><span class="hot-num">15</span></span>
+  <span class="map-num" style="left:79.6%;top:39.1%"><span class="hot-num">16</span></span>
+  <span class="map-num" style="left:55.0%;top:27.9%"><span class="hot-num">17</span></span>
+  <span class="map-num" style="left:55.7%;top:45.0%"><span class="hot-num">18</span></span>
+  <span class="map-num" style="left:32.2%;top:43.3%"><span class="hot-num">19</span></span>
+  <span class="map-num" style="left:22.4%;top:37.9%"><span class="hot-num">20</span></span>
+  <span class="map-num" style="left:19.0%;top:64.0%"><span class="hot-num">21</span></span>
+</div>
+<button class="map-toggle" type="button">Hide areas</button>
+<div class="map-detail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
+<!-- /map -->
+    </div>
+  </div>
+
+  <div class="section" id="engine-heart">
+    <div class="scene-kind">Boss</div>
+    <div class="section-title">4 · The Engine Heart</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-warden">The engine's warden</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>Heat hits you like a hand. The engine of the Jigger fills the chamber from floor to vault: rivers of fire on either side of a narrow walkway, belts grinding over the flames, and at the top, behind a great still wheel, a dark round socket the size of a shield.</p><p>Between you and it, something unfolds from the machinery and turns to face you.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">The fight</div><div class="gm-note-text"><p><b>Three ways to the socket:</b> the centre stair from the lower wheel (short, through the warden), the side stairs to the gallery and its gangways, or the side gantries round the warden's platform entirely. The gangways spawn smaller defenders as the engine hazard runs.</p><p><b>Seating the heart</b>, four steps in order at the socket, each 2 actions + a check: <b>Cradle</b> (Athletics, always known) · <b>Turn</b> (Crafting or Arcana) · <b>Wake</b> (Occultism, Religion or Performance) · <b>Bind</b> (Thievery or Crafting). A known step is a standard DC; an unknown one needs a Recall Knowledge action first and a harder DC. Critical failure: the engine lashes the seater. Critical success: the step is done and the engine holds still a round. Inside arrives with all four known; outside with Cradle only.</p><p>The fire is a hazard placed on the lava; the belts carry whoever stands on them. Use the Silver variant while the engine is cold, the Rising variants as the hazard worsens, the Original once the heart is seated.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">Still to build</div><ul class="trait-list todo"><li>Encounter: the warden (severe) + the engine as a complex hazard + gangway spawns, near extreme in total.</li><li>DCs for the four steps.</li></ul></div>
+    <div class="section">
+      <div class="map-hint">The engine heart</div>
+      <!-- map: /gm-notes/short-notice/quest-the-unspent/maps/engine-heart -->
+<div class="map-wrap">
+  <img src="/gm-notes/short-notice/quest-the-unspent/maps/engine-heart.webp" alt="engine-heart battlemap (downsized reference)">
+  <button class="map-hot" data-area="engine-heart-1" style="left:37%;top:92%;width:26%;height:8%"><span class="hot-num">1</span></button>
+  <button class="map-hot" data-area="engine-heart-2" style="left:37%;top:50%;width:26%;height:42%"><span class="hot-num">2</span></button>
+  <button class="map-hot" data-area="engine-heart-3" style="left:22.5%;top:40.7%;width:6.6%;height:56%"><span class="hot-num">3</span></button>
+  <button class="map-hot" data-area="engine-heart-3" style="left:71.2%;top:39.9%;width:5.4%;height:56.1%"></button>
+  <button class="map-hot" data-area="engine-heart-4" style="left:5.9%;top:34.1%;width:14.1%;height:44.6%"><span class="hot-num">4</span></button>
+  <button class="map-hot" data-area="engine-heart-4" style="left:79.9%;top:33.8%;width:14.6%;height:45%"></button>
+  <button class="map-hot" data-area="engine-heart-5" style="left:33%;top:39.7%;width:34%;height:11.2%"><span class="hot-num">5</span></button>
+  <svg class="map-poly" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="map-hot" data-area="engine-heart-6" points="81.5,32 83.7,30.2 84.1,22 78.4,17.5 65.7,13.9 58.9,12.8 55.2,15.7 46.9,15.9 40.3,13 30.2,14.7 19.2,18.1 15.4,25.1 16,30.7 18.8,32.1 30.3,32.3 29.9,35.6 17.5,35.1 6,34.4 10.6,31.4 9.2,21.1 18.8,14.1 35.2,9.7 57.8,9.1 74,10.9 82.5,15 90.7,20.2 90.8,31.3 95,34.2 82.3,35.1 69.1,35.9 68.5,32.7"/>
+    <polygon class="map-hot" data-area="engine-heart-7" points="64.9,19.4 59.1,16.6 36.1,17.1 28.6,24.9 31.8,32.3 43.5,34.3 60.7,33.9 69.9,31.1 70.6,23.3"/>
+    <polygon class="map-hot" data-area="engine-heart-8" points="30.6,24 15.3,23.9 16,27.2 30.5,27.1"/>
+    <polygon class="map-hot" data-area="engine-heart-8" points="83.8,23.7 83.7,27 70,27.3 69.5,23.6 77.6,23.9"/>
+    <polygon class="map-hot" data-area="engine-heart-9" points="41,39.6 40.2,36.3 36.5,33.8 31,32.4 30.9,35.6 35.9,37.7 35.8,39.7"/>
+    <polygon class="map-hot" data-area="engine-heart-9" points="59.2,39.4 60.3,36.1 68.1,32.6 68.5,35.5 63.6,37.7 63.6,39.4"/>
+    <polygon class="map-hot" data-area="engine-heart-10" points="57.7,36.2 55.3,32.9 43.2,33.4 42.9,35.7 50.4,37.1"/>
+  </svg>
+  <span class="map-num" style="left:50.4%;top:23.6%"><span class="hot-num">6</span></span>
+  <span class="map-num" style="left:51.7%;top:25.9%"><span class="hot-num">7</span></span>
+  <span class="map-num" style="left:23.1%;top:25.6%"><span class="hot-num">8</span></span>
+  <span class="map-num" style="left:35.9%;top:36.4%"><span class="hot-num">9</span></span>
+  <span class="map-num" style="left:49.9%;top:35.1%"><span class="hot-num">10</span></span>
+</div>
+<button class="map-toggle" type="button">Hide areas</button>
+<div class="map-detail"><div class="map-detail-empty">Select a numbered area on the map above.</div></div>
+<!-- /map -->
+    </div>
+  </div>
+
+  <div class="section" id="the-rise">
+    <div class="scene-kind">Resolution</div>
+    <div class="section-title">5 · The Rise</div>
+    <div class="scene-meta"><span class="pill"><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html#npc-kesti">Kesti Downdraft</a></span></div>
+    <div class="read-aloud"><div class="read-aloud-label">Read Aloud · draft</div><div class="read-aloud-text"><p>The heart clicks home. For a moment nothing happens. Then the engine breathes in, and warmth rolls out of the old work in a wave you feel through your boots.</p><p>The islet stops falling. It rises, slowly, lines slackening all around it, and from somewhere far above comes a sound you did not expect to hear in here: the whole of Skysail cheering.</p></div></div>
+    <div class="gm-note"><div class="gm-note-label">What happens</div><div class="gm-note-text"><p>The Jigger warms for the first time anyone remembers, and its airships have less to carry. Cloud-water rains on Freeboard again, as relief. Where the sink clock stopped decides how the tellers tell it.</p></div></div>
+  </div>
+
+  <div class="gm-footer">AVAILABLE ON SHORT NOTICE · THE UNSPENT · NOT PLAYER-FACING</div>
+
+</div>
+
+<!-- Area notes for the clickable maps, generated from maps/*.areas.json by tools/map_areas_html.py; behaviour lives in gm.js. -->
+<!-- map-areas -->
+<script>
+window.GM_MAP_AREAS = {
+ "root-choked-hull-1": {
+  "n": "1 · Way in (from the tended holds)",
+  "t": "<p>Root-path from the tenders&#x27; level.<\/p>"
+ },
+ "root-choked-hull-2": {
+  "n": "2 · The lower root-path",
+  "t": "<p>Stone path through the roots. The hazard starts here as the islet shifts.<\/p>"
+ },
+ "root-choked-hull-3": {
+  "n": "3 · The torn hull",
+  "t": "<p>The pit is a hole torn through to open sky. Roots tearing loose drag things toward it.<\/p>"
+ },
+ "root-choked-hull-4": {
+  "n": "4 · The rune ring",
+  "t": "<p>Ledge around the gap; the Silent Tongue cut into it.<\/p>"
+ },
+ "root-choked-hull-5": {
+  "n": "5 · The great root (the climb up)",
+  "t": "<p>The glowing root that climbs toward the gallery.<\/p>"
+ },
+ "root-choked-hull-6": {
+  "n": "6 · The way on",
+  "t": "<p>Dark upper passage.<\/p>"
+ },
+ "wardens-corridors-1": {
+  "n": "1 · South hall",
+  "t": "<p>Broken floor; the wardens&#x27; first post.<\/p>"
+ },
+ "wardens-corridors-2": {
+  "n": "2 · Way in",
+  "t": "<p>Door from the root-choked hull.<\/p>"
+ },
+ "wardens-corridors-3": {
+  "n": "3 · Side Room of South Hall",
+  "t": "<p>A sideroom not behind a gate<\/p>"
+ },
+ "wardens-corridors-4": {
+  "n": "4 · The lower gate",
+  "t": "<p>Bronze gate between lower hall and upper hall<\/p>"
+ },
+ "wardens-corridors-5": {
+  "n": "5 · Middle Hall",
+  "t": "<p>A middle hall before the real machine room<\/p>"
+ },
+ "wardens-corridors-6": {
+  "n": "6 · A side passage locked behind debris",
+  "t": "<p>Optional treasure location maybe?<\/p>"
+ },
+ "wardens-corridors-7": {
+  "n": "7 · Upper Gate",
+  "t": "<p>Second Gate before the main chamber<\/p>"
+ },
+ "wardens-corridors-8": {
+  "n": "8 · Entrance way into the machine room",
+  "t": "<p><\/p>"
+ },
+ "wardens-corridors-9": {
+  "n": "9 · The side panels",
+  "t": "<p>Three machines with writing on them.<\/p>"
+ },
+ "wardens-corridors-10": {
+  "n": "10 · Machine Room",
+  "t": "<p>The round vault and its orrery: the Silent Tongue panels. The puzzle.<\/p>"
+ },
+ "wardens-corridors-11": {
+  "n": "11 · Central Machine",
+  "t": "<p><\/p>"
+ },
+ "root-beard-1": {
+  "n": "1 · Climb-in from the hanging fleet",
+  "t": "<p>Where the outside route reaches the root-beard.<\/p>"
+ },
+ "root-beard-2": {
+  "n": "2 · West root-ledges",
+  "t": "<p>Rock and root under the islet. No flying near the heart.<\/p>"
+ },
+ "root-beard-3": {
+  "n": "3 · Southern crags",
+  "t": "<p>Broken rock ledges.<\/p>"
+ },
+ "root-beard-4": {
+  "n": "4 · North-east overhang",
+  "t": "<p>High ledge.<\/p>"
+ },
+ "root-beard-5": {
+  "n": "5 · East ledges",
+  "t": "<p>Narrow footing.<\/p>"
+ },
+ "root-beard-6": {
+  "n": "6 · Open air",
+  "t": "<p>The Midarra far below. A fall is a skiff catch and lost time.<\/p>"
+ },
+ "root-beard-7": {
+  "n": "7 · Floating debris",
+  "t": "<p>Stepping stones of loose rock.<\/p>"
+ },
+ "root-beard-8": {
+  "n": "8 · The shaft mouth",
+  "t": "<p>Where the wind is drawn up into the islet.<\/p>"
+ },
+ "lift-shaft-1": {
+  "n": "1 · Exit: up to the engine heart",
+  "t": "<p>The top stairs. The goal: the carrier and the heart reach these stairs.<\/p>"
+ },
+ "lift-shaft-2": {
+  "n": "2 · Inside route enters",
+  "t": "<p>The left stairs onto the ring. A quarter of the ring from the exit.<\/p>"
+ },
+ "lift-shaft-3": {
+  "n": "3 · Outside Route Enters",
+  "t": "<p><\/p>"
+ },
+ "lift-shaft-4": {
+  "n": "4 · Blocked off",
+  "t": "<p><\/p>"
+ },
+ "lift-shaft-5": {
+  "n": "5 · Dangerous Clockwork hazard",
+  "t": "<p>Unstable Clockwork hazard, trying to pass needs DCs,\n- Crit Success - No Damage\n- Success - Half Damage\n- Failure - Full Damage and blocked moving through<\/p>"
+ },
+ "lift-shaft-6": {
+  "n": "6 · Dangerous Clockwork hazard",
+  "t": "<p>Unstable Clockwork hazard, trying to pass needs DCs,\n- Crit Success - No Damage\n- Success - Half Damage\n- Failure - Full Damage and blocked moving through<\/p>"
+ },
+ "lift-shaft-7": {
+  "n": "7 · Center Jumping Opportunity",
+  "t": "<p>Difficult, doubly so for the carrier<\/p>"
+ },
+ "lift-shaft-8": {
+  "n": "8 · Easy Clockwork hazard",
+  "t": "<p>Easier than the dangerous one<\/p>"
+ },
+ "lift-shaft-9": {
+  "n": "9 · Dangerous Ground",
+  "t": "<p>Looks dangerous, Trap Sense, will crumble under medium sized creature Strikes: round 3 of 3 · wild-strike d12: 12.<\/p>"
+ },
+ "lift-shaft-10": {
+  "n": "10 · The Governor",
+  "t": "<p><\/p>"
+ },
+ "lift-shaft-11": {
+  "n": "11 · Ring South-East",
+  "t": "<p>Strikes: round 1 of 3 · wild-strike d12: 1.<\/p>"
+ },
+ "lift-shaft-12": {
+  "n": "12 · Ring South-West",
+  "t": "<p>Strikes: round 2 of 3 · wild-strike d12: 2.<\/p>"
+ },
+ "lift-shaft-13": {
+  "n": "13 · Crescent South-East",
+  "t": "<p>Strikes: round 2 of 3 · wild-strike d12: 8.<\/p>"
+ },
+ "lift-shaft-14": {
+  "n": "14 · Crescent South-West",
+  "t": "<p>Strikes: round 3 of 3 · wild-strike d12: 7.<\/p>"
+ },
+ "lift-shaft-15": {
+  "n": "15 · Crescent East (the right jump)",
+  "t": "<p>Strikes: round 3 of 3 · wild-strike d12: 9.<\/p>"
+ },
+ "lift-shaft-16": {
+  "n": "16 · Ring North-East",
+  "t": "<p>Strikes: round 1 of 3 · wild-strike d12: 6.<\/p>"
+ },
+ "lift-shaft-17": {
+  "n": "17 · Ring North (before the exit)",
+  "t": "<p>Strikes: round 2 of 3 · wild-strike d12: 5.<\/p>"
+ },
+ "lift-shaft-18": {
+  "n": "18 · Crescent North (above the governor)",
+  "t": "<p>Strikes: round 1 of 3 · wild-strike d12: 10.<\/p>"
+ },
+ "lift-shaft-19": {
+  "n": "19 · Crescent West",
+  "t": "<p>Strikes: round 2 of 3 · wild-strike d12: 11.<\/p>"
+ },
+ "lift-shaft-20": {
+  "n": "20 · Ring North-West (G6)",
+  "t": "<p>Strikes: round 3 of 3 · wild-strike d12: 4.<\/p>"
+ },
+ "lift-shaft-21": {
+  "n": "21 · Ring West (G8)",
+  "t": "<p>Strikes: round 1 of 3 · wild-strike d12: 3.<\/p>"
+ },
+ "engine-heart-1": {
+  "n": "1 · Entry from the shaft",
+  "t": "<p>Where the party comes up.<\/p>"
+ },
+ "engine-heart-2": {
+  "n": "2 · The spine",
+  "t": "<p>A plain walkway up the middle, between the fire channels, from the entry to the lower wheel.<\/p>"
+ },
+ "engine-heart-3": {
+  "n": "3 · Conveyor Belts",
+  "t": "<p>Conveyor belts over the lava/fire<\/p>"
+ },
+ "engine-heart-4": {
+  "n": "4 · Side gantries and vent-turrets",
+  "t": "<p>The engine&#x27;s own defences.<\/p>"
+ },
+ "engine-heart-5": {
+  "n": "5 · The lower wheel",
+  "t": "<p>The warden&#x27;s housing.<\/p>"
+ },
+ "engine-heart-6": {
+  "n": "6 · Upper Gallery",
+  "t": "<p><\/p>"
+ },
+ "engine-heart-7": {
+  "n": "7 · Core",
+  "t": "<p><\/p>"
+ },
+ "engine-heart-8": {
+  "n": "8 · Lower Gangways",
+  "t": "<p>Might spawn additional low level threats<\/p>"
+ },
+ "engine-heart-9": {
+  "n": "9 · Stair to Gallery",
+  "t": "<p><\/p>"
+ },
+ "engine-heart-10": {
+  "n": "10 · Stair to core",
+  "t": "<p><\/p>"
+ }
+};
+</script>
+<!-- /map-areas -->
+
+</body>
+</html>

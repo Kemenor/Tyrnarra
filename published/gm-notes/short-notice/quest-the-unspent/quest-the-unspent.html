@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Unspent · Quest · Available on Short Notice</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gm-notes/assets/gm.css">
+<link rel="stylesheet" href="/gm-notes/assets/gm-nav.css">
+<script defer src="/gm-notes/assets/gm-nav.js"></script>
+<script defer src="/gm-notes/assets/gm.js"></script>
+<style>
+  .scene-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 12px; }
+  .scene-meta .pill a { border: none; color: inherit; }
+  .scene-kind { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 4px; }
+  .scene-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; }
+  .scene-jump a { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--gm-divider); border-radius: 3px; padding: 4px 9px; color: var(--gm-ink); }
+  .scene-jump a:hover { border-color: var(--gm-gold-dim); color: var(--gm-gold); }
+  .todo { font-size: 0.9rem; color: var(--gm-ink-dim); font-style: italic; }
+  .section[id] { scroll-margin-top: 20px; }
+  .flow-wrap { max-width: 760px; margin: 10px auto 0; }
+  .quest-flow { width: 100%; height: auto; display: block; }
+  .quest-flow .ft { fill: var(--gm-ink-bright); font: 600 14px 'Crimson Pro', serif; }
+  .quest-flow .fs { fill: #a9a596; font: 12px 'Crimson Pro', serif; }
+  .quest-flow .fm { fill: #8fd18f; font: 10px 'Josefin Sans', sans-serif; letter-spacing: 0.06em; }
+  .quest-flow .fk { font: 600 9px 'Josefin Sans', sans-serif; letter-spacing: 0.16em; }
+  .quest-flow .fb { font: 600 13px 'Josefin Sans', sans-serif; letter-spacing: 0.18em; }
+  .quest-flow .fl { font: 600 11px 'Josefin Sans', sans-serif; letter-spacing: 0.06em; }
+  .quest-flow a.fnode rect, .quest-flow a.fnode polygon, .quest-flow a.fband rect { transition: fill 0.15s; }
+  .quest-flow a.fnode:hover rect, .quest-flow a.fnode:hover polygon { fill: #262b35; }
+  .quest-flow a.fband:hover rect { fill-opacity: 0.24; }
+  .quest-flow a { cursor: pointer; }
+</style>
+</head>
+<body data-page="quest-the-unspent">
+
+<div class="gm-banner">
+  <span>⚔ &nbsp; GM Material · Behind the Screen · Not Player-Facing</span>
+  <span class="gm-banner-sep">·</span>
+  <a href="/gm-notes/short-notice/index.html">Campaign hub ↗</a>
+</div>
+
+<div class="gm-container">
+
+  <div class="breadcrumb">
+    <a href="/gm-notes/short-notice/index.html">Available on Short Notice</a><span class="sep">›</span><span>Quest · The Unspent</span>
+  </div>
+
+  <div class="gm-header">
+    <div class="gm-kicker">Adventure Module · Pirate Multishot · The Twin Cities</div>
+    <div class="gm-title">The Unspent</div>
+    <div class="gm-flavor">A Pirate Lord takes your ship, a broke crew hires you to open a dead Lord's flagship, and an islet starts falling onto a city.</div>
+    <div class="pill-row" style="margin-top:16px">
+      <span class="pill">Party Level 11 · built for 5, played by 6</span><span class="pill">3 Sessions</span><span class="pill">Freeboard · Skysail · the Midarra</span><span class="pill">Pirates · Greed · an Elden engine</span>
+    </div>
+  </div>
+
+  <div class="draft-note"><div class="draft-label">Status</div><p>Structure, maps and areas are in place; read-alouds are first drafts. Still to build: the encounters, hazard stats, DCs, loot, NPC stat blocks, and the Foundry macros. Working brief: <a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.plan.md">quest-the-unspent.plan.md</a>. Canon: <i>lore/geography/askamira/twin-cities.md</i> (the Unspent, Ninehulls), <i>lore/geography/bolverk.md</i> (Nirfel).</p></div>
+
+  <div class="section">
+    <div class="section-title">The Premise</div>
+    <div class="prose">
+      <p>The party is crossing the Midarra on the grain stillship <b>Goodmeasure</b> on unrelated business. Poachers attack; <b>Ninehulls</b>' fleet blasts the poachers apart, and the Pirate Lord apologises, carries the party to Freeboard, and keeps their ship for a deck. Skysail comes home for the Mooring. <b>Merrin out of the Jigger</b>, captain of the broke crew that keeps Mara Goldwake's flagship <b>the Unspent</b>, hires the stranded Guild party to open it.</p>
+      <p>Inside, behind the dead crew who kept her shut, Goldwake sits at her table with an Elden <b>lift-heart</b> in her hand. The first air in 140 years makes her arm fall; the heart wakes and drags the islet the Jigger down toward Freeboard. The party carries it up through the Jigger's Elden holds and seats it in the engine. Then <b>Ninehulls</b> comes for Goldwake's hoard, and the party learns what it means to kill a man who cannot die.</p>
+    </div>
+    <div class="gm-note"><div class="gm-note-label">The Table</div><div class="gm-note-text"><p>Party level 11. Encounters built for <b>5 combatants</b> (low 75 · moderate 100 · severe 150 · extreme 200 XP); every scene works for all <b>6</b> at the table; play goes on with players missing. House rule from Session 0: a social roll may use the highest modifier among the party members present.</p></div></div>
+  </div>
+
+  <div class="section" id="flow">
+    <div class="section-title">The Flow · click any step</div>
+    <div class="map-hint">From the boat fight to Ninehulls' round · green ▦ = the battlemap</div>
+    <div class="flow-wrap">
+<svg class="quest-flow" viewBox="0 0 760 2436" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Unspent: flow of all three sessions">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a8676"/></marker></defs>
+<a href="session-1.html" class="fband"><rect x="10" y="10" width="740" height="40" rx="6" fill="#c2483c" fill-opacity="0.14" stroke="#c2483c" stroke-opacity="0.5"/><text x="26" y="36" class="fb" fill="#c2483c">SESSION 1 · STRUCK COLOURS</text><text x="734" y="36" text-anchor="end" class="fs">the Midarra → Freeboard → the Unspent</text></a>
+<a href="session-1.html#goodmeasure" class="fnode"><rect x="215.0" y="68" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="82" class="fk" fill="#c2483c">FIGHT</text><text x="380" y="89" text-anchor="middle" class="ft">The Goodmeasure</text><text x="380" y="107" text-anchor="middle" class="fs">Redsail&#x27;s poachers board · fight</text><text x="537.0" y="123" text-anchor="end" class="fm">▦ goodmeasure-deck</text></a>
+<path d="M380,130 L380,150" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#broadside" class="fnode"><rect x="215.0" y="152" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="166" class="fk" fill="#c2483c">SOCIAL</text><text x="380" y="173" text-anchor="middle" class="ft">Ninehulls&#x27; Broadside</text><text x="380" y="191" text-anchor="middle" class="fs">Redsail dies · &quot;the ship is mine&quot;</text></a>
+<path d="M380,214 L380,234" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#last-hands-at-sea" class="fnode"><rect x="215.0" y="236" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="250" class="fk" fill="#c2483c">RITUAL</text><text x="380" y="257" text-anchor="middle" class="ft">The Last Hands, at Sea</text><text x="380" y="275" text-anchor="middle" class="fs">the poachers vote deposition</text></a>
+<path d="M380,298 L380,318" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#freeboard" class="fnode"><rect x="215.0" y="320" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="334" class="fk" fill="#c2483c">EXPLORE</text><text x="380" y="341" text-anchor="middle" class="ft">Freeboard</text><text x="380" y="359" text-anchor="middle" class="fs">the hoisting · Pell is already telling it</text></a>
+<path d="M380,382 L380,402" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#mooring" class="fnode"><rect x="215.0" y="404" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="418" class="fk" fill="#c2483c">SET-PIECE</text><text x="380" y="425" text-anchor="middle" class="ft">The Mooring</text><text x="380" y="443" text-anchor="middle" class="fs">Skysail comes home · two markets become one</text></a>
+<path d="M380,466 L380,486" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#hire" class="fnode"><rect x="215.0" y="488" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="502" class="fk" fill="#c2483c">SOCIAL</text><text x="380" y="509" text-anchor="middle" class="ft">The Hire</text><text x="380" y="527" text-anchor="middle" class="fs">Merrin out of the Jigger · up by basket</text></a>
+<path d="M380,550 L380,570" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#boarding" class="fnode"><rect x="215.0" y="572" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="586" class="fk" fill="#c2483c">TRAP</text><text x="380" y="593" text-anchor="middle" class="ft">Boarding the Unspent</text><text x="380" y="611" text-anchor="middle" class="fs">the kill-gangway · rigged swivel guns</text><text x="537.0" y="627" text-anchor="end" class="fm">▦ unspent-l4</text></a>
+<path d="M380,634 L380,654" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#below-decks" class="fnode"><rect x="215.0" y="656" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="670" class="fk" fill="#c2483c">TRAP</text><text x="380" y="677" text-anchor="middle" class="ft">Below Decks</text><text x="380" y="695" text-anchor="middle" class="fs">the false caches · the crew&#x27;s last berths</text><text x="537.0" y="711" text-anchor="end" class="fm">▦ unspent-l1 · l2</text></a>
+<path d="M380,718 L380,738" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#the-hold" class="fnode"><rect x="215.0" y="740" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="754" class="fk" fill="#c2483c">PUZZLE</text><text x="380" y="761" text-anchor="middle" class="ft">The Hold</text><text x="380" y="779" text-anchor="middle" class="fs">she hangs at a tilt: level the ship</text><text x="537.0" y="795" text-anchor="end" class="fm">▦ unspent-l0-hold</text></a>
+<path d="M380,802 L380,822" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#ghost-watch" class="fnode"><rect x="215.0" y="824" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="838" class="fk" fill="#c2483c">FIGHT</text><text x="380" y="845" text-anchor="middle" class="ft">The Ghost-Watch</text><text x="380" y="863" text-anchor="middle" class="fs">the veterans&#x27; oath-ghosts: &quot;keep her shut&quot;</text><text x="537.0" y="879" text-anchor="end" class="fm">▦ unspent-l3</text></a>
+<path d="M380,886 L380,906" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-1.html#first-air" class="fnode"><rect x="215.0" y="908" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c2483c" stroke-width="1.6"/><text x="223.0" y="922" class="fk" fill="#c2483c">CLIFFHANGER</text><text x="380" y="929" text-anchor="middle" class="ft">First Air</text><text x="380" y="947" text-anchor="middle" class="fs">her arm falls · the heart rolls · the Jigger lurches</text><text x="537.0" y="963" text-anchor="end" class="fm">▦ unspent-l3</text></a>
+<path d="M380,970 L380,998" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html" class="fband"><rect x="10" y="1000" width="740" height="40" rx="6" fill="#c8a04a" fill-opacity="0.14" stroke="#c8a04a" stroke-opacity="0.5"/><text x="26" y="1026" class="fb" fill="#c8a04a">SESSION 2 · THE JIGGER&#x27;S HOLDS</text><text x="734" y="1026" text-anchor="end" class="fs">timed dungeon · the sink clock</text></a>
+<a href="session-2.html#the-fall" class="fnode"><rect x="215.0" y="1058" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c8a04a" stroke-width="1.6"/><text x="223.0" y="1072" class="fk" fill="#c8a04a">CHALLENGE</text><text x="380" y="1079" text-anchor="middle" class="ft">The Fall</text><text x="380" y="1097" text-anchor="middle" class="fs">grab the heart, get off the Unspent</text></a>
+<path d="M380,1120 L380,1140" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#briefing" class="fnode"><rect x="215.0" y="1142" width="330" height="62" rx="7" fill="#1b1e25" stroke="#c8a04a" stroke-width="1.6"/><text x="223.0" y="1156" class="fk" fill="#c8a04a">SOCIAL</text><text x="380" y="1163" text-anchor="middle" class="ft">Kesti&#x27;s Briefing</text><text x="380" y="1181" text-anchor="middle" class="fs">the sink clock starts · Old Hobb</text></a>
+<path d="M380,1204 L380,1224" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#underside" class="fnode"><polygon points="380,1226 530.0,1261.0 380,1296 230.0,1261.0" fill="#22262f" stroke="#c8a04a" stroke-width="1.6"/><text x="380" y="1259.0" text-anchor="middle" class="ft">The Underside</text><text x="380" y="1276.0" text-anchor="middle" class="fs">which way up?</text></a>
+<text x="150" y="1254" text-anchor="middle" class="fl" fill="#e0a640">INSIDE · the reading</text>
+<text x="610" y="1254" text-anchor="middle" class="fl" fill="#5aa8e0">OUTSIDE · open air</text>
+<path d="M230,1261 L190,1261 L190,1316" stroke="#e0a640" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M530,1261 L570,1261 L570,1316" stroke="#5aa8e0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#tended-holds" class="fnode"><rect x="40.0" y="1318" width="300" height="62" rx="7" fill="#1b1e25" stroke="#e0a640" stroke-width="1.6"/><text x="48.0" y="1332" class="fk" fill="#e0a640">EXPLORE</text><text x="190" y="1339" text-anchor="middle" class="ft">The Tended Holds</text><text x="190" y="1357" text-anchor="middle" class="fs">Old Hobb&#x27;s rite reveals WAKE</text></a>
+<a href="session-2.html#the-gate" class="fnode"><rect x="420.0" y="1318" width="300" height="62" rx="7" fill="#1b1e25" stroke="#5aa8e0" stroke-width="1.6"/><text x="428.0" y="1332" class="fk" fill="#5aa8e0">CHALLENGE</text><text x="570" y="1339" text-anchor="middle" class="ft">The Gate</text><text x="570" y="1357" text-anchor="middle" class="fs">spot the shaft mouth, cross open air</text></a>
+<path d="M190,1380 L190,1400" stroke="#e0a640" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M570,1380 L570,1400" stroke="#5aa8e0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M420.0,1349.0 L344.0,1349.0" stroke="#5aa8e0" stroke-width="2" fill="none" marker-end="url(#ah)" stroke-dasharray="6 4"/>
+<text x="380" y="1365.0" text-anchor="middle" class="fl" fill="#5aa8e0">gate failed:</text>
+<text x="380" y="1378.0" text-anchor="middle" class="fl" fill="#5aa8e0">+1 stage</text>
+<a href="session-2.html#root-choked-hull" class="fnode"><rect x="40.0" y="1402" width="300" height="62" rx="7" fill="#1b1e25" stroke="#e0a640" stroke-width="1.6"/><text x="48.0" y="1416" class="fk" fill="#e0a640">HAZARD</text><text x="190" y="1423" text-anchor="middle" class="ft">The Root-choked Hull</text><text x="190" y="1441" text-anchor="middle" class="fs">roots tear loose</text><text x="332.0" y="1457" text-anchor="end" class="fm">▦ root-choked-hull</text></a>
+<a href="session-2.html#hanging-fleet" class="fnode"><rect x="420.0" y="1402" width="300" height="62" rx="7" fill="#1b1e25" stroke="#5aa8e0" stroke-width="1.6"/><text x="428.0" y="1416" class="fk" fill="#5aa8e0">CHALLENGE</text><text x="570" y="1423" text-anchor="middle" class="ft">The Hanging Fleet</text><text x="570" y="1441" text-anchor="middle" class="fs">help a crew hold (−1 stage)</text></a>
+<path d="M190,1464 L190,1484" stroke="#e0a640" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M570,1464 L570,1484" stroke="#5aa8e0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#wardens-corridors" class="fnode"><rect x="40.0" y="1486" width="300" height="62" rx="7" fill="#1b1e25" stroke="#e0a640" stroke-width="1.6"/><text x="48.0" y="1500" class="fk" fill="#e0a640">FIGHT</text><text x="190" y="1507" text-anchor="middle" class="ft">Wardens and Gallery</text><text x="190" y="1525" text-anchor="middle" class="fs">the inside fight · the puzzle (+1 stage)</text><text x="332.0" y="1541" text-anchor="end" class="fm">▦ wardens-corridors</text></a>
+<a href="session-2.html#root-beard" class="fnode"><rect x="420.0" y="1486" width="300" height="62" rx="7" fill="#1b1e25" stroke="#5aa8e0" stroke-width="1.6"/><text x="428.0" y="1500" class="fk" fill="#5aa8e0">FIGHT</text><text x="570" y="1507" text-anchor="middle" class="ft">Wardens on the Root-beard</text><text x="570" y="1525" text-anchor="middle" class="fs">the outside fight · no flying</text><text x="712.0" y="1541" text-anchor="end" class="fm">▦ root-beard</text></a>
+<path d="M190,1548 L190,1584" stroke="#e0a640" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M570,1548 L570,1584" stroke="#5aa8e0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<text x="200" y="1572" text-anchor="start" class="fl" fill="#e0a640">lower-right stairs</text>
+<text x="580" y="1572" text-anchor="start" class="fl" fill="#5aa8e0">shaft climb · bottom stairs</text>
+<a href="session-2.html#gear-chamber" class="fnode"><rect x="170.0" y="1586" width="420" height="62" rx="7" fill="#1b1e25" stroke="#c8a04a" stroke-width="1.6"/><text x="178.0" y="1600" class="fk" fill="#c8a04a">HAZARD</text><text x="380" y="1607" text-anchor="middle" class="ft">The Gear Chamber</text><text x="380" y="1625" text-anchor="middle" class="fs">pull · clockworks · strike cycle · the governor</text><text x="582.0" y="1641" text-anchor="end" class="fm">▦ lift-shaft</text></a>
+<path d="M380,1648 L380,1668" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#engine-heart" class="fnode"><rect x="170.0" y="1670" width="420" height="62" rx="7" fill="#1b1e25" stroke="#c8a04a" stroke-width="1.6"/><text x="178.0" y="1684" class="fk" fill="#c8a04a">BOSS</text><text x="380" y="1691" text-anchor="middle" class="ft">The Engine Heart</text><text x="380" y="1709" text-anchor="middle" class="fs">the warden · seat the heart: Cradle, Turn, Wake, Bind</text><text x="582.0" y="1725" text-anchor="end" class="fm">▦ engine-heart</text></a>
+<path d="M380,1732 L380,1752" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-2.html#the-rise" class="fnode"><rect x="170.0" y="1754" width="420" height="62" rx="7" fill="#1b1e25" stroke="#c8a04a" stroke-width="1.6"/><text x="178.0" y="1768" class="fk" fill="#c8a04a">RESOLUTION</text><text x="380" y="1775" text-anchor="middle" class="ft">The Rise</text><text x="380" y="1793" text-anchor="middle" class="fs">the Jigger lifts and warms</text></a>
+<path d="M380,1816 L380,1836" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-3.html" class="fband"><rect x="10" y="1846" width="740" height="40" rx="6" fill="#6ea4be" fill-opacity="0.14" stroke="#6ea4be" stroke-opacity="0.5"/><text x="26" y="1872" class="fb" fill="#6ea4be">SESSION 3 · THE LAST HANDS</text><text x="734" y="1872" text-anchor="end" class="fs">the share-out → Ninehulls → the round</text></a>
+<a href="session-3.html#morning-after" class="fnode"><rect x="215.0" y="1904" width="330" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="223.0" y="1918" class="fk" fill="#6ea4be">SOCIAL</text><text x="380" y="1925" text-anchor="middle" class="ft">The Morning After</text><text x="380" y="1943" text-anchor="middle" class="fs">Kesti pays · passage out · the tellers</text></a>
+<path d="M380,1966 L380,1986" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-3.html#night-whisper" class="fnode"><polygon points="380,1988 530.0,2023.0 380,2058 230.0,2023.0" fill="#22262f" stroke="#6ea4be" stroke-width="1.6"/><text x="380" y="2021.0" text-anchor="middle" class="ft">Nirfel&#x27;s Night Whisper</text><text x="380" y="2038.0" text-anchor="middle" class="fs">&quot;go now, it is yours by right&quot;</text></a>
+<a href="session-3.html#night-whisper" class="fnode"><rect x="535.0" y="1996" width="210" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="543.0" y="2010" class="fk" fill="#6ea4be">CHOICE</text><text x="640" y="2017" text-anchor="middle" class="ft">Taken by Night</text><text x="640" y="2035" text-anchor="middle" class="fs">the Greed-mark · crossed the crew</text></a>
+<path d="M530,2023 L531,2023" stroke="#6ea4be" stroke-width="2" fill="none" marker-end="url(#ah)" stroke-dasharray="6 4"/>
+<path d="M380,2058 L380,2078" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-3.html#share-out" class="fnode"><rect x="170.0" y="2080" width="420" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="178.0" y="2094" class="fk" fill="#6ea4be">SOCIAL</text><text x="380" y="2101" text-anchor="middle" class="ft">The Share-out</text><text x="380" y="2119" text-anchor="middle" class="fs">on the Unspent · Merrin offers a share</text><text x="582.0" y="2135" text-anchor="end" class="fm">▦ unspent-l3 · l4</text></a>
+<path d="M380,2142 L380,2162" stroke="#8a8676" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-3.html#ninehulls" class="fnode"><rect x="170.0" y="2164" width="420" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="178.0" y="2178" class="fk" fill="#6ea4be">BOSS</text><text x="380" y="2185" text-anchor="middle" class="ft">Ninehulls</text><text x="380" y="2203" text-anchor="middle" class="fs">&quot;treasure&#x27;s mine, kids&quot; · the Man Who Cannot Die</text><text x="582.0" y="2219" text-anchor="end" class="fm">▦ unspent-l4</text></a>
+<path d="M300,2226 L190,2252" stroke="#6ea4be" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M460,2226 L570,2252" stroke="#6ea4be" stroke-width="2" fill="none" marker-end="url(#ah)" stroke-dasharray="6 4"/>
+<text x="250" y="2238" text-anchor="end" class="fl" fill="#6ea4be">he falls</text>
+<text x="510" y="2238" text-anchor="start" class="fl" fill="#6ea4be">he wins</text>
+<a href="session-3.html#last-hands" class="fnode"><rect x="40.0" y="2256" width="300" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="48.0" y="2270" class="fk" fill="#6ea4be">RITUAL</text><text x="190" y="2277" text-anchor="middle" class="ft">The Last Hands</text><text x="190" y="2295" text-anchor="middle" class="fs">deposition · Pell tells it · the told name</text></a>
+<a href="session-3.html#ninehulls" class="fnode"><rect x="420.0" y="2256" width="300" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="428.0" y="2270" class="fk" fill="#6ea4be">OUTCOME</text><text x="570" y="2277" text-anchor="middle" class="ft">He Takes the Hoard</text><text x="570" y="2295" text-anchor="middle" class="fs">they live · no told name · he laughs</text></a>
+<path d="M190,2318 L190,2332 L260,2332 L260,2356" stroke="#6ea4be" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M570,2318 L570,2332 L500,2332 L500,2356" stroke="#6ea4be" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<a href="session-3.html#the-round" class="fnode"><rect x="170.0" y="2358" width="420" height="62" rx="7" fill="#1b1e25" stroke="#6ea4be" stroke-width="1.6"/><text x="178.0" y="2372" class="fk" fill="#6ea4be">CODA</text><text x="380" y="2379" text-anchor="middle" class="ft">The Round</text><text x="380" y="2397" text-anchor="middle" class="fs">Ninehulls walks in and pays · his flag goes back up · they leave</text></a>
+</svg>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The Sessions</div>
+    <div class="gm-card-grid">
+      <a class="gm-link-card" href="/gm-notes/short-notice/quest-the-unspent/session-1.html"><div class="glc-kind">Session 1</div><div class="glc-name">Struck Colours →</div><div class="glc-desc">The Goodmeasure, Ninehulls, Freeboard and the Mooring, the hire, and the Unspent from top deck to Goldwake's cabin.</div></a>
+      <a class="gm-link-card" href="/gm-notes/short-notice/quest-the-unspent/session-2.html"><div class="glc-kind">Session 2</div><div class="glc-name">The Jigger's Holds →</div><div class="glc-desc">The timed dungeon: two routes up through the islet, the gear chamber, the engine heart, and the rise.</div></a>
+      <a class="gm-link-card" href="/gm-notes/short-notice/quest-the-unspent/session-3.html"><div class="glc-kind">Session 3</div><div class="glc-name">The Last Hands →</div><div class="glc-desc">Pay and passage, Nirfel's whisper, the share-out, Ninehulls, the Last Hands, and the round.</div></a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Running Threads</div>
+    <div class="prose">
+      <p><b>The telling.</b> Pell and the tellers tell the party's deeds from the moment of the capture. By session 3 the party is told bigger than Ninehulls, which is why he comes; the Last Hands give them a told name from the deed the room loved most.</p>
+      <p><b>"Yours by right."</b> Nirfel's line runs through the whole quest: the keepers' vote, the cabin, the night whisper, the share-out. Whoever takes from Goldwake's cache carries the Greed-mark.</p>
+      <p><b>What the party leaves rigged.</b> The kill-gangway, the swivel guns and the ship's tilt in session 1 are the arena in session 3.</p>
+    </div>
+  </div>
+
+  <div class="section" id="cast">
+    <div class="section-title">The Cast</div>
+    <div class="npc-grid">
+        <div class="npc-card" id="npc-ninehulls"><div class="npc-card-header"><div class="npc-icon">☠️</div><div><div class="npc-name">Ninehulls</div><div class="npc-role">Pirate Lord of the sea · the man who cannot die</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Took nine ships in one night. A wide smile, real manners, and a fleet behind him. Apologises to the party for the poachers and takes their ship anyway.</div>
+          <div class="npc-body"><div class="exp-body">Voice: warm, amused, generous with drink and never with a prize. He keeps to the articles. <b>Stats:</b> to build (session 3 boss, a level lower to carry the second life).<div class="gm-secret" style="margin-top:10px"><button class="gm-secret-toggle">⚿ GM Secret · What he is</button><div class="gm-secret-body"><div class="prose"><p>The man died in an ambush in Freeboard. The Midarra believed he could not die, and the belief made a being shaped as him, which knows only the story and has no given name. It struck down the man the taverns blamed, who was the wrong man. It lives on being told; a forgotten Lord stops being. Canon: <i>lore/geography/askamira/twin-cities.md</i>, ⚿ Ninehulls.</p></div></div></div></div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#broadside">Session 1 · the broadside</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#ninehulls">Session 3 · the fight</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#the-round">the round</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-halfpenny"><div class="npc-card-header"><div class="npc-icon">🪙</div><div><div class="npc-name">Halfpenny</div><div class="npc-role">Ninehulls' quartermaster · a told name</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Told for splitting a prize before the hands down to the half-penny, every share even. Counts everything, including you.</div>
+          <div class="npc-body"><div class="exp-body">Voice: a quartermaster's dry arithmetic. Calls the Last Hands over Ninehulls. <b>Stats:</b> to build.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#broadside">Session 1</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#ninehulls">Session 3</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-redsail"><div class="npc-card-header"><div class="npc-icon">🚩</div><div><div class="npc-name">Redsail</div><div class="npc-role">Poacher captain · a bought name</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">An unflagged captain who paid the tellers before he had the deed. His crew know it.</div>
+          <div class="npc-body"><div class="exp-body">Dies to Ninehulls in session 1; his crew vote deposition and sign under the black flag. <b>Stats:</b> to build with his crew.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#goodmeasure">Session 1 · the opening</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-ozhra"><div class="npc-card-header"><div class="npc-icon">⚓</div><div><div class="npc-name">Master Ozhra</div><div class="npc-role">Master of the Goodmeasure · Kholo</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">A Kholo of a ferry-clan of the Solkai crossing, keeping his own. Skimped on colours and knows it the moment the red sail shows.</div>
+          <div class="npc-body"><div class="exp-body">A placeholder name until Tvisol has a personal-name register. Non-combatant.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#goodmeasure">Session 1</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-pell"><div class="npc-card-header"><div class="npc-icon">📣</div><div><div class="npc-name">Pell out of the Spar</div><div class="npc-role">A teller of the Lower Spar</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Tells the Lords' deeds for coin, and tells the party's before they have finished doing them.</div>
+          <div class="npc-body"><div class="exp-body">Voice: a working storyteller's patter; talks about legends as stock to be kept, and about money plainly. "Anyone can buy a telling. Nobody can buy the second one."</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#freeboard">Session 1 · Freeboard</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#last-hands">Session 3 · the Last Hands</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-odile"><div class="npc-card-header"><div class="npc-icon">⚖️</div><div><div class="npc-name">Odile Brasshand</div><div class="npc-role">Lord of Freeboard · cameo</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">A quartermaster who rose to the seat. Wants every Lord to honour every Lord's colours.</div>
+          <div class="npc-body"><div class="exp-body">Voice: dry, numerate, unsentimental about Lords. Optional at the Mooring.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#mooring">Session 1 · the Mooring</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-kesti"><div class="npc-card-header"><div class="npc-icon">🪶</div><div><div class="npc-name">Kesti Downdraft</div><div class="npc-role">Lord of Skysail and a Pirate Lord · Tengu</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Brisk and practical; hands a visitor the useful thing first. Commands outright while the Jigger falls.</div>
+          <div class="npc-body"><div class="exp-body">Starts the sink clock, lends Hobb, can have the Main take lines for a favour. Pays the party coin and passage afterwards.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-2.html#briefing">Session 2 · the briefing</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#morning-after">Session 3</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-merrin"><div class="npc-card-header"><div class="npc-icon">🗝️</div><div><div class="npc-name">Merrin out of the Jigger</div><div class="npc-role">Captain of the Unspent's keepers</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Voted in on the promise to open the Unspent and sell what is inside. Hungry, proud, and the one who opens the door if the party hesitates.</div>
+          <div class="npc-body"><div class="exp-body">The keepers are the grandchildren of Goldwake's other two crews, and poor. Nirfel's whisper ("yours by right") reached them first.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#hire">Session 1 · the hire</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#share-out">Session 3 · the share-out</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-hobb"><div class="npc-card-header"><div class="npc-icon">🕯️</div><div><div class="npc-name">Old Hobb out of the Jigger</div><div class="npc-role">A tender of the old work</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Knows every rite of the Jigger by rote and none of the reasons. His humming is the Wake step.</div>
+          <div class="npc-body"><div class="exp-body">Non-combatant guide on the inside route; cannot make the outside climb.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-2.html#tended-holds">Session 2 · the tended holds</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-ghosts"><div class="npc-card-header"><div class="npc-icon">👻</div><div><div class="npc-name">The oath-crew</div><div class="npc-role">The Unspent's dead crew</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Died of the heart within days of their captain, sailed her home dead, and have kept her shut for 140 years.</div>
+          <div class="npc-body"><div class="exp-body">"Keep her shut." They guard the world from the heart, not the treasure. <b>Stats:</b> to build (Ghost Pirate Captain / Ghostly Mob candidates).</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#ghost-watch">Session 1 · the ghost-watch</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-goldwake"><div class="npc-card-header"><div class="npc-icon">🪶</div><div><div class="npc-name">Mara Goldwake</div><div class="npc-role">The dead Lord · now Nirfel</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Preserved at her table in the airless cabin, the lift-heart in her closed hand.</div>
+          <div class="npc-body"><div class="exp-body">Her soul is in Bolverk as Nirfel, the Greed Vice Demon; her body is only a body. Canon: <i>lore/geography/bolverk.md</i>, Nirfel.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#first-air">Session 1 · first air</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-nirfel"><div class="npc-card-header"><div class="npc-icon">💰</div><div><div class="npc-name">Nirfel</div><div class="npc-role">The whisper · Greed</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">"It is not anyone else's. It is yours by right." Whispers to the keepers, then the party.</div>
+          <div class="npc-body"><div class="exp-body">She acts only by whisper. Taking from her cache leaves the Greed-mark; the Guild knows a ritual to burn it off.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-1.html#first-air">Session 1</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-3.html#night-whisper">Session 3 · the night whisper</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-wardens"><div class="npc-card-header"><div class="npc-icon">⚙️</div><div><div class="npc-name">The wardens</div><div class="npc-role">Elden constructs of the Jigger</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Woken by the engine's distress; go for whoever carries the heart.</div>
+          <div class="npc-body"><div class="exp-body">The same fight on either route: the halls inside, the root-beard outside. <b>Stats:</b> to build.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-2.html#wardens-corridors">Session 2 · inside</a> · <a href="/gm-notes/short-notice/quest-the-unspent/session-2.html#root-beard">outside</a></div></div>
+        </div>
+        <div class="npc-card" id="npc-warden"><div class="npc-card-header"><div class="npc-icon">🔥</div><div><div class="npc-name">The engine's warden</div><div class="npc-role">Boss of the engine heart</div></div><div class="expand-hint">Tap ▾</div></div>
+          <div class="npc-summary">Unfolds from the machinery between the party and the socket.</div>
+          <div class="npc-body"><div class="exp-body"><b>Stats:</b> to build (severe), with the engine as a complex hazard and gangway spawns.</div><div class="hook-box"><div class="exp-label">Appears</div><a href="/gm-notes/short-notice/quest-the-unspent/session-2.html#engine-heart">Session 2 · the engine heart</a></div></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="gm-footer">AVAILABLE ON SHORT NOTICE · THE UNSPENT · NOT PLAYER-FACING</div>
+
+</div>
+
+<!-- Area notes for the clickable maps, generated from maps/*.areas.json by tools/map_areas_html.py; behaviour lives in gm.js. -->
+<!-- map-areas -->
+<script>
+window.GM_MAP_AREAS = {};
+</script>
+<!-- /map-areas -->
+
+</body>
+</html>
