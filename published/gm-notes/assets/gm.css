@@ -304,6 +304,13 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .gm-link-card .glc-name { font-family: 'Cinzel', serif; font-size: 1.12rem; color: var(--gm-ink-bright); margin-bottom: 8px; }
 .gm-link-card .glc-desc { font-size: 0.92rem; line-height: 1.6; color: var(--gm-ink); }
 
+/* ── NPC SHEET ── the npc-block fields (gm-reference/npc-block.md) as a label/value grid */
+.npc-sheet { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; margin: 12px 0; font-size: 0.94rem; line-height: 1.6; }
+.npc-sheet dt { font-family: 'Josefin Sans', sans-serif; font-size: 0.52rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gm-gold); padding-top: 5px; }
+.npc-sheet dd { margin: 0; color: var(--gm-ink); }
+.npc-depth { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gm-ink-dim); margin-left: 8px; }
+@media (max-width: 600px) { .npc-sheet { grid-template-columns: 1fr; gap: 2px; } .npc-sheet dt { padding-top: 8px; } }
+
 /* ── SKILL-CHECK CALLOUT ── skill + DC + the four degrees */
 .check { background: rgba(20,40,52,0.4); border: 1px solid rgba(110,160,190,0.28); border-left: 3px solid #6ea4be; border-radius: 0 4px 4px 0; padding: 13px 17px; margin: 14px 0; }
 .check-head { font-family: 'Cinzel', serif; color: #9fcbe0; font-size: 0.98rem; margin-bottom: 4px; }
