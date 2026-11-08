@@ -100,8 +100,18 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     p = _crop_square(Image.open(portrait).convert("RGBA")).resize((size, size), Image.LANCZOS)
     # Portrait sits inside the ring (0.96 radius) so the band always overlaps its
-    # rim and the art never spills past the frame.
-    canvas.paste(p, (0, 0), _circle_mask(size, feather, 0.96))
+    # rim and the art never spills past the frame. A frame with ornaments above or
+    # below the ring (a badge on top, drips under it) is taller than it is wide;
+    # the auto-fit then shrinks the ring, so the portrait shrinks with the ring's
+    # WIDTH, which is the ring itself.
+    radius = 0.96
+    if frame:
+        f0 = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
+        if frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f0)):
+            bb = f0.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
+            if bb and (bb[3] - bb[1]) > (bb[2] - bb[0]):
+                radius = 0.96 * (bb[2] - bb[0]) / (bb[3] - bb[1])
+    canvas.paste(p, (0, 0), _circle_mask(size, feather, radius))
     if frame:
         f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
         use_alpha = frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f))
