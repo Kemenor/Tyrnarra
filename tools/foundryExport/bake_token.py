@@ -95,8 +95,20 @@ def prep(frame_in, out, hue=None, hue_tol=26, sat_min=55, feather=1.5, despill=T
     return out, hue
 
 
+def _framed(path, size, zoom=1.0, dy=0.0):
+    """The image square-cropped to the token, zoomed about its centre and moved
+    down by dy (a fraction of the token; negative moves it up)."""
+    im = _crop_square(Image.open(path).convert("RGBA"))
+    big = round(size * zoom)
+    im = im.resize((big, big), Image.LANCZOS)
+    out = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    off = (size - big) // 2
+    out.paste(im, (off, off + round(dy * size)))
+    return out
+
+
 def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="auto",
-         cutout=None, pop=()):
+         cutout=None, pop=(), zoom=1.0, dy=0.0):
     """Circle-crop portrait; layer frame (transparent -> exact; opaque -> annulus).
 
     Pop-out: `cutout` is the same portrait with its background removed (same
@@ -104,7 +116,7 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
     fractions of the token) lays the cut-out's figure back OVER the frame
     there, so a head or an arm breaks the border."""
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    p = _crop_square(Image.open(portrait).convert("RGBA")).resize((size, size), Image.LANCZOS)
+    p = _framed(portrait, size, zoom, dy)
     # Portrait sits inside the ring (0.96 radius) so the band always overlaps its
     # rim and the art never spills past the frame. A frame with ornaments above or
     # below the ring (a badge on top, drips under it) is taller than it is wide;
@@ -138,7 +150,7 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
             ring.paste(f, (0, 0), _annulus_mask(size, inner, feather))
             canvas = Image.alpha_composite(canvas, ring)
     if cutout and pop:
-        c = _crop_square(Image.open(cutout).convert("RGBA")).resize((size, size), Image.LANCZOS)
+        c = _framed(cutout, size, zoom, dy)
         box = Image.new("L", (size, size), 0)
         d = ImageDraw.Draw(box)
         for x0, y0, x1, y1 in pop:
@@ -184,6 +196,8 @@ def main():
     b.add_argument("--inner", type=float, default=0.84, help="(annulus mode) portrait circle as fraction of radius.")
     b.add_argument("--feather", type=float, default=1.0)
     b.add_argument("--frame-mode", default="auto", choices=["auto", "alpha", "annulus"])
+    b.add_argument("--zoom", type=float, default=1.0, help="Zoom the portrait (and cut-out) about its centre.")
+    b.add_argument("--dy", type=float, default=0.0, help="Move the portrait down by this fraction of the token (negative: up).")
     b.add_argument("--cutout", help="The portrait with its background removed (same framing), for --pop.")
     b.add_argument("--pop", action="append", default=[], metavar="X0,Y0,X1,Y1",
                    help="A box (fractions of the token) where the cut-out figure is laid over the frame. Repeatable.")
@@ -206,7 +220,7 @@ def main():
     elif a.cmd == "bake":
         pop = [tuple(float(v) for v in p.split(",")) for p in a.pop]
         print(bake(a.portrait, a.frame, a.out, a.size, a.inner, a.feather, a.frame_mode,
-                   cutout=a.cutout, pop=pop))
+                   cutout=a.cutout, pop=pop, zoom=a.zoom, dy=a.dy))
     else:
         fmap = json.load(open(a.map, encoding="utf-8-sig")) if a.map else {}
         exts = (".webp", ".png", ".jpg", ".jpeg")

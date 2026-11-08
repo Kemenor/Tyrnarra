@@ -208,7 +208,7 @@ per-faction / special-monster borders, bake a frame into the token image:
 4. **Pop-out (optional).** For a head or an arm that breaks the border, cut the portrait's figure out of its background, then name the boxes (fractions of the token) where the figure goes back over the ring:
    `uvx --python 3.12 --from "rembg[cpu,cli]" rembg i -m birefnet-portrait <portrait>.png <slug>-cutout.png` (Python 3.12 through `uvx`, since rembg has no wheels for the system Python; the model downloads once, about 1 GB, into `~/.rembg/`), then
    `python bake_token.py bake --portrait <portrait>.png --frame <frame>.cut.png --cutout <slug>-cutout.png --pop 0.36,0,0.64,0.16 --pop 0,0.38,0.22,0.78 --out <campaign>/assets/tokens/<slug>.png`
-   (here: Ninehulls' head at the top and his right arm on the left). Keep the cut-out beside the portrait as `<slug>-cutout.png`.
+   (here: Ninehulls' head at the top and his right arm on the left). Keep the cut-out beside the portrait as `<slug>-cutout.png`. `--zoom` and `--dy` move portrait and cut-out together, to push the figure further over the ring: Ninehulls' token is `--zoom 1.35 --dy 0.12 --pop 0.3,0,0.7,0.2 --pop 0,0.3,0.24,0.85`, his head over the top of the ring.
 5. **Use it.** Upload the `<campaign>/assets/tokens/` dir (upload_foundry.py), then assign with the
    token-only / ring-off flags (keeps the un-framed portrait as the actor `img`,
    no doubled ring):
