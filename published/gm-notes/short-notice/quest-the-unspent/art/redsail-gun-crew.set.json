@@ -1,0 +1,25 @@
+{
+  "slug": "redsail-gun-crew",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A band of rough gunners of mixed ancestries: sunburned humans, a dwarf, a ratfolk. Faces and forearms blackened with powder smoke, eyes narrowed.",
+  "wardrobe": "Powder-stained shirts, red sashes stuffed with flintlock pistols, a pistol in each hand, powder horns on cords.",
+  "shots": {
+    "full": {
+      "file": "redsail-gun-crew-full",
+      "size": "landscape_4_3",
+      "framing": "Group shot, front view. Five gunners in a line on a ship's deck, pistols levelled at the viewer."
+    },
+    "portrait": {
+      "file": "redsail-gun-crew",
+      "size": "square_hd",
+      "framing": "Tight group portrait, square crop, three gunners' faces crowded together filling the frame, pistols raised beside them."
+    },
+    "scene": {
+      "file": "redsail-gun-crew-scene",
+      "size": "landscape_4_3",
+      "framing": "A line of gunners firing flintlock pistols across a gap of open water at another ship, clouds of white powder smoke."
+    }
+  }
+}

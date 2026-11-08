@@ -1,0 +1,25 @@
+{
+  "slug": "redsail-boarders",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A crowded band of rough sailors of mixed ancestries: sunburned humans, an orc, a lizardfolk, a goblin. Scarred, unshaven, grinning, hungry eyes.",
+  "wardrobe": "Faded sailor's shirts and canvas trousers, red rags tied round arms and heads, cutlasses and boarding axes, crossbows slung across their backs.",
+  "shots": {
+    "full": {
+      "file": "redsail-boarders-full",
+      "size": "landscape_4_3",
+      "framing": "Group shot, front view. Six boarders crowding a ship's rail, cutlasses raised, grapnel lines thrown over the rail."
+    },
+    "portrait": {
+      "file": "redsail-boarders",
+      "size": "square_hd",
+      "framing": "Tight group portrait, square crop, three boarders' faces crowded together filling the frame, cutlass blades raised."
+    },
+    "scene": {
+      "file": "redsail-boarders-scene",
+      "size": "landscape_4_3",
+      "framing": "Swarming across a boarding plank between two ships at sea, under a blood-red flag with a black skull."
+    }
+  }
+}
