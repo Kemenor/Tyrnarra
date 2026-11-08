@@ -42,7 +42,7 @@ magenta, nothing else.*
 | `brood` | monster | spiders — chitin, web, violet egg-glow |
 | `redsail` | crew | Redsail's poacher crew (*The Unspent*) — frayed blood-red sailcloth, black rope, black skull, crossed cutlasses; Midjourney, painted |
 | `veldtmark` | household | the Veldtmark estate (*The Veldtmark Invitation*) — rope, cargo crates, wax seal, Bikiargi crescents; Midjourney, painted |
-| `ninehulls` | crew | Ninehulls' crew (*The Unspent*) — black planking patched in other ships' colours, iron rivets, red drips below; the red nine from his flag (`published/gm-notes/short-notice/quest-the-unspent/art/ninehulls-flag.webp`) set on top by hand, since Midjourney would not draw it. `ninehulls-ring.png` is the bare ring; the nine goes on **after** `prep`, because its red sits inside the magenta key; Midjourney, painted |
+| `ninehulls` | crew | Ninehulls' crew (*The Unspent*) — black planking patched in other ships' colours, iron rivets, red drips below; Midjourney, painted |
 | `sable-rei` | faction | the Sable-rei (Millhaven & *Below the Quiet Docks*) — fox + theatrical-mask |
 
 ## Authoring a new frame
