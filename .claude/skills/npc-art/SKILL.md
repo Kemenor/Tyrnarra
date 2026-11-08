@@ -13,7 +13,7 @@ assets.
 
 ## On invocation
 
-1. Read `tools/imageGen/README.md` and the `npc_art.py` docstring (spec schema).
+1. Read `tools/imageGen/README.md` and the `npc_art.py` docstring (spec schema), and the NPC's entry in `tools/imageGen/ancestries.json`: the spec names its `ancestry` and the catalog supplies the species line. Write the prompt text by the `image-prompts` skill.
 2. Locate the NPC's **physical description** and **clothing & dress** — from the
    GM page / npc-block. If they do not exist, workshop them in chat first
    (that is part of NPC design, not of this skill).

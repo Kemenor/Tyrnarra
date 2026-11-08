@@ -11,6 +11,11 @@ elsewhere (`tools/imageGen/README.md`); this is about the words.
 One spec feeds all three tiers, so it is written for the strictest reader:
 **Midjourney**, the primary pipeline.
 
+**Before writing a spec, read the NPC's ancestry in `tools/imageGen/ancestries.json`**
+and set `"ancestry"` in the spec (see *The species goes in `ancestry`* below). The
+catalog holds the tested way to draw each PF2e ancestry; describing a species from
+memory is how a goloma came out with the wrong face.
+
 ---
 
 ## The one rule
@@ -55,13 +60,12 @@ unrelated that happens to sound similar.
 - **Cut:** Emarrean, Sortalde, Fenurran, Vindul, Zuzental, any kingdom, domain,
   house, order or god name. Also cut the *fact* of the reference: "the court
   fashion he saw exactly once" is backstory, not appearance.
-- **Keep:** vocabulary the model demonstrably knows. Real-world mythology and
-  common fantasy ancestries are fine and often efficient: *kitsune* reliably
-  produces the right creature and saves a dozen words; so do *halfling*, *orc*,
-  *minotaur*, *tengu*.
-- **Describe, then optionally name:** for anything niche, lead with the visual
-  and let the name ride along. *Vishkanya* alone is a gamble; "fine jewel-toned
-  scaling across the temples and the backs of the hands" is not.
+- **Keep:** vocabulary the model demonstrably knows: real-world mythology, and
+  words like *kitsune*, *halfling*, *orc*, *minotaur*, *tengu*. For a PF2e
+  ancestry the catalog already decides between the name and a description, so
+  the species goes in the `ancestry` field, never written into `character`.
+- **Describe, then optionally name:** for anything niche that is not an
+  ancestry, lead with the visual and let the name ride along.
 
 The test: **would this word mean anything to someone who has never seen your
 setting?** If it only works because *you* know what it means, it is not
@@ -203,7 +207,7 @@ worth one test each, since both bias toward a pleasant face.
 
 | Field | Holds | Test |
 |---|---|---|
-| `character` | The body: ancestry, age, build, colouring, face, hair, visible marks, and the expression as an observer reads it. | Nothing here should change between shots. |
+| `character` | The individual's body: age, build, colouring, face, hair, visible marks, and the expression as an observer reads it. The species comes from `ancestry`. | Nothing here should change between shots. |
 | `wardrobe` | The garments as seen: cut, fabric, colour, condition, ornament. | Nothing about where it came from or what it cost. |
 | `framing` | The camera: shot type, crop, angle, pose, and for a scene shot the setting and action. | This is the only field that differs per shot. |
 
@@ -304,3 +308,5 @@ camera can see.
 3. Check for em-dashes.
 4. Check the anchor's word count against ~150.
 5. Confirm `character` holds no clothing and `framing` holds no identity.
+6. Confirm `ancestry` is set, its catalog entry was read, and `character` does
+   not describe the species again or contradict the entry.
