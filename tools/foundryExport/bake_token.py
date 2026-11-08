@@ -192,8 +192,27 @@ def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, hea
             start = b_
     hx0, hx1 = max(runs, key=lambda r: r[1] - r[0])
     x0, x1 = max(0.0, hx0 / size - 0.03), min(1.0, hx1 / size + 0.03)
-    ring_top = 0.5 + ring_dy - ring / 2
-    box = (x0, 0.0, x1, ring_top + 0.12)
+    # where the frame's top band really sits once placed: a frame with spires or
+    # lanterns round it is drawn smaller, so its band runs lower than ring_top
+    f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
+    fa = f.split()[3].point(lambda v: 255 if v > 128 else 0)
+    bb = fa.getbbox()
+    sc = (size * ring) / max(bb[2] - bb[0], bb[3] - bb[1])
+    placed = Image.new("L", (size, size), 0)
+    rimg = fa.crop(bb).resize((max(1, round((bb[2] - bb[0]) * sc)), max(1, round((bb[3] - bb[1]) * sc))))
+    placed.paste(rimg, ((size - rimg.width) // 2, (size - rimg.height) // 2 + round(ring_dy * size)))
+    band_bottom = 0
+    for x in range(int(x0 * size), int(x1 * size), 2):
+        col = [y for y in range(size // 2) if placed.getpixel((x, y))]
+        if col:
+            # the band is the first run of opaque rows from the top; its bottom is where the run ends
+            run_end = col[0]
+            for y in col[1:]:
+                if y - run_end > 2:
+                    break
+                run_end = y
+            band_bottom = max(band_bottom, run_end)
+    box = (x0, 0.0, x1, band_bottom / size + 0.02)
     bake(portrait, frame, out, size, cutout=cutout, pop=[box], zoom=zoom, dy=dy, ring=ring, ring_dy=ring_dy)
     return out, f"head popped (dy {dy:+.3f})"
 
