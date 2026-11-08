@@ -52,6 +52,22 @@ A quest goes from premise to a populated, art-framed Foundry scene through these
 
 The frame library is **shared, world-wide**: prompts + art live in `tools/token-frames/` (`faction-frames.json` + the `.webp`/`.cut.png` rings), reusable by any campaign — most frames are universal (domains, regions, world factions, monster types). Only the per-quest **actor→frame map** (`published/gm-notes/<campaign>/<quest>.token-map.json`, beside the quest HTML) and the per-quest **portrait/token art** (`published/gm-notes/<campaign>/assets/portraits/` + `assets/tokens/`, beside `assets/maps/`) stay with the campaign. Generated images **are committed** so the exact approved art travels with the repo; only scratch (`foundry_urls.json`, `_variant-*` test-bakes, `_reup/`) is gitignored.
 
+## Quest journals
+
+`quest_journal.py` turns a quest's GM pages into Foundry journals in one JournalEntry folder: each scene page as a journal (one page per section, plus one per place card), the cast page as a journal with one page per NPC (portrait on top, numbers as tables, GM secrets as Foundry secret blocks), and an art spec of place views as image pages for "Show Players". The GM-layer markup is rewritten into plain HTML, since Foundry does not load `gm.css`; links to the website are kept as words.
+
+```bash
+Q=../../published/gm-notes/short-notice/quest-the-unspent
+python quest_journal.py --quest $Q --folder "The Unspent" \
+    --chapter "Chapter 1: Struck Colours=struck-colours.html" \
+    --cast cast.html --views art/twin-cities-views.set.json --views-title "The Twin Cities" \
+    --campaign short-notice --sub the-unspent --stage _stage/the-unspent \
+    --macro $Q/quest-the-unspent.journal.macro.js
+python upload_foundry.py --dir _stage/the-unspent --campaign short-notice --sub the-unspent
+```
+
+Art is resized to `.webp` in `--stage` (gitignored) and referenced only when its file exists, so a re-run after new renders picks the new art up; upload the stage folder again before running the macro. The macro replaces any journal of the same name in the folder: the GM pages stay the source, and an edit made in Foundry is lost on the next run.
+
 ## Why a macro, not a REST push
 
 A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works on any Foundry server (ours is self-hosted). It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.
