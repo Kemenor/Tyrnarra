@@ -30,6 +30,13 @@ import re
 import sys
 
 from bs4 import BeautifulSoup, NavigableString
+from bs4.dammit import EntitySubstitution
+from bs4.formatter import HTMLFormatter
+
+# Serialise the way Foundry stores a page, so a round trip is byte-stable:
+# HTML5 void elements (<img>, <br>, no slash) and literal UTF-8, escaping only & < >.
+FOUNDRY_HTML = HTMLFormatter(entity_substitution=EntitySubstitution.substitute_xml,
+                             void_element_close_prefix=None)
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -211,7 +218,7 @@ def convert(el, soup, art):
         d.unwrap()
     for fc in el.find_all("figcaption"):
         fc.name = "p"
-    html = el.decode_contents(formatter="html5")   # <img>, <br>: no XHTML slash, as Foundry stores them
+    html = el.decode_contents(formatter=FOUNDRY_HTML)
     html = re.sub(r"\n\s*\n+", "\n", html)
     return html.strip()
 
