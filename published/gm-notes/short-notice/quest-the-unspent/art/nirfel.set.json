@@ -5,22 +5,22 @@
   "anchor": "full",
   "ancestry": "tengu",
   "character": "An old tengu woman, a crow-headed person, black feathers with a faint grey salt-tarnish, small rings along her beak. Flat black eyes looking down at the viewer, beak closed, perfectly still. One hand raised, fingers mid-count.",
-  "wardrobe": "A weathered, faded captain's coat. Every button a different precious metal, gold, silver, copper, brass, each polished bright and gleaming against the worn cloth. Rings on every finger, talons in ship-leather boots.",
+  "wardrobe": "A heavy, weathered dark naval captain's coat, wide turned-back cuffs and lapels, flared skirts to the knee. Every button a different precious metal, gold, silver, copper, brass, each polished bright and gleaming against the worn cloth. Rings on every finger, talons in ship-leather boots.",
   "shots": {
     "full": {
       "file": "nirfel-full",
       "size": "portrait_4_3",
-      "framing": "Full body portrait, low angle looking up at her, she towers over the viewer. Standing in a long dark corridor of numbered iron vault doors, cold light falling from above."
+      "framing": "Full body portrait, seen slightly from below. Standing tall and very still in a long dark corridor of numbered iron vault doors, cold light falling from above."
     },
     "portrait": {
       "file": "nirfel",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, filling the frame, low angle looking up at her, cold light from above, eyes looking down at the viewer."
+      "framing": "Head and shoulders portrait, square crop, filling the frame, seen slightly from below, cold light from above, eyes looking down at the viewer."
     },
     "scene": {
       "file": "nirfel-scene",
       "size": "landscape_4_3",
-      "framing": "Standing at the far end of a long narrow corridor of numbered locked iron doors in a tall dark vault-tower, seen from a low angle, one door open beside her on a bare stone room holding a single ledger on a stand, cold light from above."
+      "framing": "Standing at the far end of a long narrow corridor of numbered locked iron doors in a tall dark vault-tower, one door open beside her on a bare stone room holding a single ledger on a stand, cold light from above."
     }
   }
 }
