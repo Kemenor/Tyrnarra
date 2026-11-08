@@ -8,7 +8,7 @@ How we write a knowledge check: what each degree says, and in what voice. The DC
 - **Tiers stack.** The GM reads the lower tier, then the higher one, so each tier carries only what is new. A tier that builds on the one below carries the green **+** mark (`<span class="stack">+</span>`, styled in `gm.css`) before its label. Never open a tier with "everything in the success, and…".
 - **Each degree opens with the roll it needs** in a boxed badge (`<span class="deg-at">≥30</span>`, styled in `gm.css`), then its label. The DC line gives the main skill's DC and, after a ·, each Lore's (usually 5 lower).
 - **Critical failure is a confident falsehood**, in the players' voice, with a bracketed aside for the GM: *(False: a Freeboarder takes that as an insult.)* The best falsehoods are what mortals actually believe (a ◈ Popular Belief is the first place to look) and push the players toward a wrong but playable move.
-- **Chronicler-tier.** A success tells what an in-world scholar or sailor could know. A critical success may point at a GM secret; it never states one.
+- **Rumour, not file.** A check tells what is *said*: what an in-world scholar, sailor or tavern would pass on, hedged where the telling is hedged (*it is said*, *some say*, *many names were brought forth*). It serves the intrigue rather than settling it; even a critical success gives the best version of the story, never the GM's account. It may point at a GM secret; it never states one.
 - Write it where it happens: a check sits right after the read-aloud that raises the question.
 
 ## Three shapes
