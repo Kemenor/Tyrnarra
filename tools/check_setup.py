@@ -62,6 +62,7 @@ def links():
     """(link, target) pairs: the real files live in the sync folder, the tools reach them through
     links. comfyui-url stays a plain local file, because it differs per machine."""
     pairs = [(os.path.join(HERE, "map-library", "_full"), os.path.join(SYNC, "map-library")),
+             (os.path.join(HERE, "audio-library", "_full"), os.path.join(SYNC, "audio-library")),
              (FOUNDRY_FILE, os.path.join(SYNC, "config", "foundry-remote")),
              (os.path.join(APPDATA, "wdmap", "assetgen"), os.path.join(SYNC, "assetgen-work", "work"))]
     keys = os.path.join(SYNC, "keys")
@@ -221,6 +222,9 @@ def main():
     print("Keys (tools/keys/, linked from the sync folder's keys/)")
     report(os.path.exists(os.path.join(HERE, "keys", "falai.key")) or None,
            "falai.key (fal.ai fallback renderer only)",
+           "put it in the sync folder's keys/ and run check_setup.py --link")
+    report(os.path.exists(os.path.join(HERE, "keys", "freesound.key")) or None,
+           "freesound.key (Freesound search in audio-library/ only)",
            "put it in the sync folder's keys/ and run check_setup.py --link")
 
     print("\nAll required checks passed." if not failed else f"\n{failed} required check(s) failed.")

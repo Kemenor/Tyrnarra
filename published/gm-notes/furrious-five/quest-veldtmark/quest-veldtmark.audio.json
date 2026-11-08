@@ -1,0 +1,49 @@
+{
+  "folder": "The Veldtmark Invitation",
+  "playlists": [
+    {
+      "name": "1 · Millhaven",
+      "description": "The hook: the Wayward Compass, Harlen's shop, the town.",
+      "sounds": [
+        { "ref": "tta:23", "name": "Wayward Compass (The Slaughtered Ox)" },
+        { "ref": "tta:131", "name": "Wayward Compass, quiet (The Bog Standard)" },
+        { "ref": "tta:495", "name": "Millhaven streets (Dedication Day)", "volume": 0.4 }
+      ]
+    },
+    {
+      "name": "2 · The Approach",
+      "description": "The Cape road and the estate grounds; Aldous at the door.",
+      "sounds": [
+        { "ref": "tta:357", "name": "Cape road (Promontory)" },
+        { "ref": "tta:377", "name": "Carriage up the lane (Through the Woods)" }
+      ]
+    },
+    {
+      "name": "3 · The Estate",
+      "description": "Ground and top floor. Everything is correct; everything is slightly wrong.",
+      "sounds": [
+        { "ref": "tta:488", "name": "Ground floor (Manor Dark)" },
+        { "ref": "tta:456", "name": "Top floor, breathing room (Drawing Room: Night)" },
+        { "ref": "tta:198", "name": "Wrongness (Shadowfell)", "volume": 0.45 }
+      ]
+    },
+    {
+      "name": "4 · The Basement",
+      "description": "Below the four hidden entries: the work, the chanting.",
+      "sounds": [
+        { "ref": "tta:39", "name": "Ritual chamber (Temple of the Eye)" },
+        { "ref": "tta:320", "name": "The great work (Cultist's Cavern)" },
+        { "ref": "tta:236", "name": "Sarcophagus corridor (Defiled Temple)" }
+      ]
+    },
+    {
+      "name": "5 · Fights",
+      "description": "The dining room, Aldous if forced, the escalating finale.",
+      "sounds": [
+        { "ref": "tta:227", "name": "Fight (Terror in the Woods)" },
+        { "ref": "tta:304", "name": "Before the fight (Fog of War)" },
+        { "ref": "tta:187", "name": "Finale (Endgame)" }
+      ]
+    }
+  ]
+}

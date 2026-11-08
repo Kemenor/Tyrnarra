@@ -28,6 +28,11 @@ tools/encounterBuilder/bestiary.db
 tools/encounterBuilder/items.db
 tools/encounterBuilder/__pycache__/
 
+# audio-library: the downloaded audio is tools/audio-library/_full (a sync-folder link,
+# ignored above); _cache/ holds the refreshable Tabletop Audio catalogue and the
+# upload stage.
+tools/audio-library/_cache/
+
 # Python bytecode caches anywhere under the GM tools.
 __pycache__/
 *.pyc

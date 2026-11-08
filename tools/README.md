@@ -12,6 +12,7 @@ also has the GPU) or the laptop. The site itself needs none of it.
 | `kartofuchs/` | starts the Kartofuchs MCP server (`kartofuchs` in `.mcp.json`) from the Kartofuchs checkout | the checkout (`$KARTOFUCHS`, else `~/Documents/fuchs/kartofuchs`), Node 26, the Kartofuchs app running with the map open |
 | `map-area-server.py` | serves `published/` on the LAN with a map list (`/__maps`) and save-back for the map-area editor | python |
 | `region-pages/` | regenerates a region's published page from its lore files | python |
+| `audio-library/` | ambience + music search (Tabletop Audio, Freesound) → Foundry playlists | python, rsync + ssh; a Freesound key for Freesound |
 | `map-library/`, `token-frames/` | shared map catalogues and token frames | nothing extra |
 | `keys/` | gitignored paid-service keys, linked from the sync folder | see [`keys/README.md`](keys/README.md) |
 
@@ -29,6 +30,7 @@ relay keeps an encrypted copy, so the machines sync even when only one is on:
 | `Dungeondraft/` | Dungeondraft packs | Dungeondraft |
 | `assetgen-work/work/` | the asset generator's raw work | the link `~/.local/share/wdmap/assetgen` |
 | `map-library/` | licensed battlemap art | the link `map-library/_full` |
+| `audio-library/` | downloaded table audio | the link `audio-library/_full` |
 | `keys/` | paid-service keys | a link per key in `keys/` |
 | `config/` | `foundry-remote` | the link `~/.config/tyrnarra/foundry-remote` |
 | `fonts/` | the maps' fonts: labels (Uncial Antiqua, Gentium Book Basic) and the ones the Avoro themes name | the link `~/.local/share/fonts/tyrnarra` |

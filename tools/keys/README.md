@@ -10,6 +10,7 @@ Recreate a lost key from the dashboard below.
 | File | Env var | Used by | Get it |
 |---|---|---|---|
 | `falai.key` | `FAL_KEY` | fal.ai fallback renderer (`tools/imageGen/fal_art.py`) | fal.ai dashboard → Keys |
+| `freesound.key` | `FREESOUND_KEY` | Freesound search + downloads (`tools/audio-library/audio.py`) | freesound.org/apiv2/apply (free) |
 
 Primary renders are local (ComfyUI on the desktop, `tools/imageGen/`) and need
 no key, and art goes up to the self-hosted Foundry with
