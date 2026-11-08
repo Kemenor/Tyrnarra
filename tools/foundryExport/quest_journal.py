@@ -188,6 +188,17 @@ def convert(el, soup, art):
             else:
                 new.string = text(x)
             x.replace_with(new)
+    # a skill check: the DC line in italics, then one paragraph per degree
+    for x in el.select(".check-dc"):
+        x.name = "p"
+        x.attrs = {}
+        em = soup.new_tag("em")
+        for c in list(x.contents):
+            em.append(c)
+        x.append(em)
+    for x in el.select(".deg"):
+        x.name = "p"
+        x.attrs = {}
     for meta in el.select(".scene-meta"):
         p = soup.new_tag("p")
         s = soup.new_tag("strong")
