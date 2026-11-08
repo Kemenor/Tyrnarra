@@ -26,7 +26,7 @@ import os
 import sys
 
 try:
-    from PIL import Image, ImageDraw, ImageFilter
+    from PIL import Image, ImageChops, ImageDraw, ImageFilter
 except ImportError:
     sys.exit("Missing dep. Run: pip install pillow numpy")
 
@@ -95,8 +95,14 @@ def prep(frame_in, out, hue=None, hue_tol=26, sat_min=55, feather=1.5, despill=T
     return out, hue
 
 
-def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="auto"):
-    """Circle-crop portrait; layer frame (transparent -> exact; opaque -> annulus)."""
+def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="auto",
+         cutout=None, pop=()):
+    """Circle-crop portrait; layer frame (transparent -> exact; opaque -> annulus).
+
+    Pop-out: `cutout` is the same portrait with its background removed (same
+    size and framing, e.g. from rembg); every `pop` box (x0, y0, x1, y1 as
+    fractions of the token) lays the cut-out's figure back OVER the frame
+    there, so a head or an arm breaks the border."""
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     p = _crop_square(Image.open(portrait).convert("RGBA")).resize((size, size), Image.LANCZOS)
     # Portrait sits inside the ring (0.96 radius) so the band always overlaps its
@@ -131,6 +137,16 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
             ring = Image.new("RGBA", (size, size), (0, 0, 0, 0))
             ring.paste(f, (0, 0), _annulus_mask(size, inner, feather))
             canvas = Image.alpha_composite(canvas, ring)
+    if cutout and pop:
+        c = _crop_square(Image.open(cutout).convert("RGBA")).resize((size, size), Image.LANCZOS)
+        box = Image.new("L", (size, size), 0)
+        d = ImageDraw.Draw(box)
+        for x0, y0, x1, y1 in pop:
+            d.rectangle([x0 * size, y0 * size, x1 * size, y1 * size], fill=255)
+        box = box.filter(ImageFilter.GaussianBlur(size / 128))     # soft edge where the pop starts
+        alpha = ImageChops.multiply(c.split()[3], box)
+        c.putalpha(alpha)
+        canvas = Image.alpha_composite(canvas, c)
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     canvas.save(out)
     return out
@@ -168,6 +184,9 @@ def main():
     b.add_argument("--inner", type=float, default=0.84, help="(annulus mode) portrait circle as fraction of radius.")
     b.add_argument("--feather", type=float, default=1.0)
     b.add_argument("--frame-mode", default="auto", choices=["auto", "alpha", "annulus"])
+    b.add_argument("--cutout", help="The portrait with its background removed (same framing), for --pop.")
+    b.add_argument("--pop", action="append", default=[], metavar="X0,Y0,X1,Y1",
+                   help="A box (fractions of the token) where the cut-out figure is laid over the frame. Repeatable.")
 
     z = sub.add_parser("batch", help="Bake a folder of portraits, a frame per stem.")
     z.add_argument("--portraits", required=True)
@@ -185,7 +204,9 @@ def main():
         _, used = prep(a.src, a.out, a.hue, a.hue_tol, a.sat_min, a.feather)
         print(f"{a.out}  (keyed hue {used:.0f})")
     elif a.cmd == "bake":
-        print(bake(a.portrait, a.frame, a.out, a.size, a.inner, a.feather, a.frame_mode))
+        pop = [tuple(float(v) for v in p.split(",")) for p in a.pop]
+        print(bake(a.portrait, a.frame, a.out, a.size, a.inner, a.feather, a.frame_mode,
+                   cutout=a.cutout, pop=pop))
     else:
         fmap = json.load(open(a.map, encoding="utf-8-sig")) if a.map else {}
         exts = (".webp", ".png", ".jpg", ".jpeg")
