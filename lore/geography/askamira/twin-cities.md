@@ -47,7 +47,7 @@ On top of the stack stand **the spires**: each the prize that made a Pirate Lord
 
 ### The bilges
 
-The weight pushes Freeboard down as it grows up. The oldest hulls lie below the waterline, some flooded and some dry. The dry ones are workshops and storerooms with the lake on the far side of every plank. The flooded ones belong to the **Merfolk**, whose pods hold the drowned decks and the water in the city's shadow, where they keep fish-pens and weed-beds. Trade between the two passes through hatches cut in the lowest decks, fish going up and everything else going down. A hull the air-breathers give up to the water passes to the pods.
+The weight pushes Freeboard down as it grows up. The oldest hulls lie below the waterline, some flooded and some dry. The dry ones are workshops and storerooms with the sea on the far side of every plank. The flooded ones belong to the **Merfolk**, whose pods hold the drowned decks and the water in the city's shadow, where they keep fish-pens and weed-beds. Trade between the two passes through hatches cut in the lowest decks, fish going up and everything else going down. A hull the air-breathers give up to the water passes to the pods.
 
 ### Down the Lower Spar
 
@@ -59,9 +59,9 @@ The Lower Spar runs from the landing into the stack, and a stranger off a prize 
 
 **The Great Cabin** is a captain's cabin cut whole out of a prize and hoisted onto the Spar, stern windows and all. It sells the magic that comes off captured ships, laid out as it was found: a wand still on the dead captain's desk, a ring in the sea-chest. Each piece is sold with its tale, and the tale is half the price; a blade that killed a captain costs more than its twin that never did. A buyer who wants a piece clean pays extra to have the tale stay behind. **Ottavia out of Namur**, an elf who was a ship's wizard before she was taken off one, sets the prices.
 
-**The Wash** lies two decks under the Spar, in a hold opened to the lake on purpose. Hatch-covers float in a ring on the black water, lashed loosely together, and the fighters fight on them. A fighter in the water has lost. The Merfolk watch from below with their heads just under the surface, bet through the planks, and fish the loser out for a fee. A bout with both fighters standing at the bell goes to the hands of the crowd. The book is kept by **Holdfast**, a Merfolk woman told for a fighter who threw a bout: she took him under and held him there until he agreed to pay.
+**The Wash** lies two decks under the Spar, in a hold opened to the sea on purpose. Hatch-covers float in a ring on the black water, lashed loosely together, and the fighters fight on them. A fighter in the water has lost. The Merfolk watch from below with their heads just under the surface, bet through the planks, and fish the loser out for a fee. A bout with both fighters standing at the bell goes to the hands of the crowd. The book is kept by **Holdfast**, a Merfolk woman told for a fighter who threw a bout: she took him under and held him there until he agreed to pay.
 
-**The Stillroom** is the alchemist's, below the waterline beside the engines, where the hull is warm. The deck put it there so that a fire in the Stillroom has the lake on the other side of the plank; an axe hangs by the door to let it in. The keeper, **Kahu out of the Low Hatch**, has her own hatch to the pods, and buys weed, eel-skin and ink from the Merfolk by the bucket.
+**The Stillroom** is the alchemist's, below the waterline beside the engines, where the hull is warm. The deck put it there so that a fire in the Stillroom has the sea on the other side of the plank; an axe hangs by the door to let it in. The keeper, **Kahu out of the Low Hatch**, has her own hatch to the pods, and buys weed, eel-skin and ink from the Merfolk by the bucket.
 
 ---
 

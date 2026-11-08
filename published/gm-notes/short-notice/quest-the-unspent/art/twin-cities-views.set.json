@@ -11,7 +11,7 @@
       "file": "freeboard-overview",
       "size": "landscape_16_9",
       "mode": "text",
-      "framing": "A mountain of old wooden ships stacked on top of each other rising out of a calm lake, hulls of every colour piled at every angle, hundreds of masts sticking out like a forest after a gale, rope bridges and gangways strung between the hulls, smoke rising from chimneys, five whole ships standing upright on end at the very top flying flags. A ring of sailing ships circles its foot. Seen from the deck of an approaching ship in early morning light."
+      "framing": "A mountain of old wooden ships stacked on top of each other rising out of a calm sea, hulls of every colour piled at every angle, hundreds of masts sticking out like a forest after a gale, rope bridges and gangways strung between the hulls, smoke rising from chimneys, five whole ships standing upright on end at the very top flying flags. A ring of sailing ships circles its foot. Seen from the deck of an approaching ship in early morning light."
     },
     "freeboard-street": {
       "file": "freeboard-street",
@@ -23,7 +23,7 @@
       "file": "skysail-overview",
       "size": "landscape_16_9",
       "mode": "text",
-      "framing": "Four floating islands of dark rock hanging in the sky above a calm lake, long roots trailing from their undersides, a city of open stone houses with striped awnings along their tops. Under each island a cluster of wooden airships hangs on long taut ropes. Small skiffs fly between the islands. Bright afternoon, clouds drifting past."
+      "framing": "Four floating islands of dark rock hanging in the sky above a calm sea, long roots trailing from their undersides, a city of open stone houses with striped awnings along their tops. Under each island a cluster of wooden airships hangs on long taut ropes. Small skiffs fly between the islands. Bright afternoon, clouds drifting past."
     },
     "skysail-street": {
       "file": "skysail-street",
@@ -35,7 +35,7 @@
       "file": "the-mooring",
       "size": "landscape_16_9",
       "mode": "text",
-      "framing": "Four floating islands of dark rock hanging low over a mountain of stacked wooden ships on a lake, rope lines, gangways and baskets hanging down between them, a fine rain falling out of a clear sky onto crowds cheering on the highest decks, airships hanging beneath the islands on taut lines. Evening light, lanterns coming on across the ships."
+      "framing": "Four floating islands of dark rock hanging low over a mountain of stacked wooden ships on the sea, rope lines, gangways and baskets hanging down between them, a fine rain falling out of a clear sky onto crowds cheering on the highest decks, airships hanging beneath the islands on taut lines. Evening light, lanterns coming on across the ships."
     }
   }
 }
