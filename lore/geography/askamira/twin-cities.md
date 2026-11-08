@@ -134,7 +134,7 @@ When a captain or a Lord is killed, the crew holds **the Last Hands** over the b
 
 ### Ninehulls
 
-**Ninehulls** took nine ships in one night and became a Lord. Years later he took a wound that should have killed him and lived, and from then on the taverns told him as the man who cannot die. In Freeboard he was killed from ambush, and no one saw who did it. The Last Hands were held over him with no killer to free or maroon. Within days the man the taverns named for it was dead, struck down by Ninehulls himself. No one remembers his given name. The Voroir Daua carry him on their list.
+**Ninehulls** took nine ships in one night and became a Lord. His flag is a red nine on black, a skull grinning out of the loop of the nine and bleeding down into red water. Years later he took a wound that should have killed him and lived, and from then on the taverns told him as the man who cannot die. In Freeboard he was killed from ambush, and no one saw who did it. The Last Hands were held over him with no killer to free or maroon. Within days the man the taverns named for it was dead, struck down by Ninehulls himself. No one remembers his given name. The Voroir Daua carry him on their list.
 
 ### ⚿ GM Secret: Ninehulls, the unkillable
 
@@ -247,4 +247,4 @@ Until a told name comes, the city calls a person by the given name and where the
 - **Kesti Downdraft** · Lord of Skysail · brisk and practical; hands a visitor the useful thing first.
 - **Odile Brasshand** · Lord of Freeboard · a quartermaster's voice: dry, numerate, unsentimental about Lords.
 
-**Still open:** the sky Lords' mark on Skysail (Freeboard's Lords have spires); the decks by name beyond the Lower Spar; the Lords beyond the four named; the Legean half of Hringseyja's harbour by name, and its governor; the Legedi's two lines in full; the engines of Freeboard by kind; who ambushed Ninehulls.
+**Still open:** the sky Lords' mark on Skysail (Freeboard's Lords have spires); the decks by name beyond the Lower Spar; the Lords beyond the four named; the Legean half of Hringseyja's harbour by name, and its governor; the Legedi's two lines in full; the engines of Freeboard by kind; who ambushed Ninehulls; the other Lords' flags (every Pirate Lord flies a device of their own; Redsail, with no told name, flies plain red).
