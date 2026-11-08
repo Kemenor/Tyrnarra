@@ -66,7 +66,7 @@ python quest_journal.py --quest $Q --folder "The Unspent" \
 python upload_foundry.py --dir _stage/the-unspent --campaign short-notice --sub the-unspent
 ```
 
-Art is resized to `.webp` in `--stage` (gitignored) and referenced only when its file exists, so a re-run after new renders picks the new art up; upload the stage folder again before running the macro. The macro replaces any journal of the same name in the folder: the GM pages stay the source, and an edit made in Foundry is lost on the next run.
+Art is resized to `.webp` in `--stage` (gitignored) and referenced only when its file exists, so a re-run after new renders picks the new art up; upload the stage folder again before running the macro. Players get each journal as Observer and every page as None, so the GM reveals pages one at a time (a page's ownership, or "Show Players" on a page); GM secret blocks stay hidden on a revealed page. The macro replaces any journal of the same name in the folder: the GM pages stay the source, and an edit made in Foundry is lost on the next run.
 
 ## Why a macro, not a REST push
 

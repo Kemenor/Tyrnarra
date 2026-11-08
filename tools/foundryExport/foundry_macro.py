@@ -499,21 +499,24 @@ _JOURNAL_TEMPLATE = r"""/* =====================================================
    Builds the quest's journals in one JournalEntry folder, one page per scene,
    place or NPC. A journal of the same name in that folder is REPLACED, so the
    repo stays the source of truth: edit the GM pages, regenerate, re-run.
-   Journals are GM-only; show an image page to the table with "Show Players".
+   Players see each journal (Observer) but none of its pages (None), so the GM
+   reveals pages one at a time from the page's ownership. GM secret blocks stay
+   hidden from Observers even on a revealed page.
    ========================================================================== */
 (async () => {
   if (!game.user.isGM) return ui.notifications.error("Run this macro as the GM.");
   const SPEC = __SPEC__;
   let folder = game.folders.find(f => f.type === "JournalEntry" && f.name === SPEC.folder && !f.folder);
   if (!folder) folder = await Folder.create({ name: SPEC.folder, type: "JournalEntry" });
+  const OWN = CONST.DOCUMENT_OWNERSHIP_LEVELS;
   const made = [], replaced = [];
   for (const j of SPEC.journals) {
     const old = game.journal.find(e => e.folder?.id === folder.id && e.name === j.name);
     if (old) { await old.delete(); replaced.push(j.name); }
     const pages = j.pages.map((p, i) => p.type === "image"
-      ? { name: p.name, type: "image", src: p.src, image: { caption: p.caption || "" }, sort: (i + 1) * 1000 }
-      : { name: p.name, type: "text", text: { content: p.html, format: 1 }, sort: (i + 1) * 1000 });
-    await JournalEntry.create({ name: j.name, folder: folder.id, pages });
+      ? { name: p.name, type: "image", src: p.src, image: { caption: p.caption || "" }, sort: (i + 1) * 1000, ownership: { default: OWN.NONE } }
+      : { name: p.name, type: "text", text: { content: p.html, format: 1 }, sort: (i + 1) * 1000, ownership: { default: OWN.NONE } });
+    await JournalEntry.create({ name: j.name, folder: folder.id, pages, ownership: { default: OWN.OBSERVER } });
     made.push(`${j.name} (${pages.length} pages)`);
   }
   await ChatMessage.create({ content: `<h3>Journals in ${SPEC.folder}</h3><ul>${made.map(x => "<li>" + x + "</li>").join("")}</ul>` +
