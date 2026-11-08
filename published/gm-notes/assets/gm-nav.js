@@ -58,9 +58,11 @@
     ]},
     { slug: 'short-notice', label: 'Available on Short Notice', href: '/gm-notes/short-notice/index.html', children: [
       { slug: 'quest-the-unspent', label: 'The Unspent', href: '/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html', children: [
-        { slug: 'quest-the-unspent-s1', label: 'Session 1 · Struck Colours',     href: '/gm-notes/short-notice/quest-the-unspent/session-1.html', children: [] },
-        { slug: 'quest-the-unspent-s2', label: "Session 2 · The Jigger's Holds", href: '/gm-notes/short-notice/quest-the-unspent/session-2.html', children: [] },
-        { slug: 'quest-the-unspent-s3', label: 'Session 3 · The Last Hands',     href: '/gm-notes/short-notice/quest-the-unspent/session-3.html', children: [] }
+        { slug: 'quest-the-unspent-colours',     label: 'I · Struck Colours',       href: '/gm-notes/short-notice/quest-the-unspent/struck-colours.html',     children: [] },
+        { slug: 'quest-the-unspent-aboard',      label: 'II · Aboard the Unspent',  href: '/gm-notes/short-notice/quest-the-unspent/aboard-the-unspent.html', children: [] },
+        { slug: 'quest-the-unspent-holds',       label: "III · The Jigger's Holds", href: '/gm-notes/short-notice/quest-the-unspent/the-jiggers-holds.html',  children: [] },
+        { slug: 'quest-the-unspent-last-hands',  label: 'IV · The Last Hands',      href: '/gm-notes/short-notice/quest-the-unspent/the-last-hands.html',     children: [] },
+        { slug: 'quest-the-unspent-cast',        label: 'The Cast',                 href: '/gm-notes/short-notice/quest-the-unspent/cast.html',               children: [] }
       ]}
     ]},
     { slug: 'heavens-dragons', label: 'Heavens Dragons', href: '/gm-notes/heavens-dragons/index.html', children: [] },
