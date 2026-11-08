@@ -2,8 +2,8 @@
   "image": "goodmeasure-deck.webp",
   "areas": [
     {
-      "label": "Passenger cabin",
-      "desc": "The stern cabin where the party bunks. Master Ozhra's charts and the (missing) colours chest.",
+      "label": "Guards' cabin",
+      "desc": "The stern cabin where the party bunks. Master Ozhra's charts and the pennant locker, with no Lord's colours in it.",
       "rects": [
         {
           "left": 2,
