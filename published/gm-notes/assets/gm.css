@@ -318,6 +318,9 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .deg { font-size: 0.9rem; line-height: 1.62; padding: 5px 0; border-top: 1px solid rgba(110,160,190,0.18); }
 .deg b { font-family: 'Cinzel', serif; font-weight: 400; color: #9fcbe0; }
 .deg.crit-s b { color: #84c98a; } .deg.crit-f b { color: var(--gm-accent); }
+/* The roll a degree needs, first in its row so the eye finds it at a glance:
+   <b><span class="deg-at">≥32</span> Success:</b> */
+.deg-at { display: inline-block; min-width: 3.6em; margin-right: 6px; padding: 1px 6px; border: 1px solid currentColor; border-radius: 3px; font-family: 'Josefin Sans', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-align: center; font-variant-numeric: tabular-nums; }
 /* beat headings inside a scene */
 .beat { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-gold); margin: 22px 0 6px; padding-top: 10px; border-top: 1px dashed var(--gm-divider); }
 
