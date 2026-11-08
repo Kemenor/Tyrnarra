@@ -27,6 +27,7 @@ Usage:
 """
 import argparse
 import json
+import math
 import os
 import re
 import shlex
@@ -81,6 +82,13 @@ SYNONYMS = [
     {"swamp", "bog", "marsh"},
     {"festival", "celebration", "party", "feast"},
 ]
+# Freesound sounds tagged with these are dropped by the default fantasy setting.
+# (Trains stay: Talan has rail.)
+MODERN_NOISE = {"car", "traffic", "engine", "diesel", "motor", "motorcycle", "truck", "highway",
+                "airplane", "aeroplane", "jet", "helicopter", "siren", "phone", "smartphone",
+                "computer", "keyboard", "radio", "television", "tv", "industrial", "industry",
+                "factory", "cargo", "container", "freeway", "tram", "subway", "metro", "bus",
+                "electric", "electronic", "synth", "beep", "notification", "dubstep", "edm"}
 UNMODERN = {"scifi", "modern"}       # dropped by the default fantasy setting...
 KEEP = {"fantasy", "historical"}     # ...unless the track is also one of these
 
@@ -267,11 +275,21 @@ def search_fs(query_text, a):
     flt = [f"duration:[{lo} TO {hi}]"]
     if a.cc0:
         flt.append('license:"Creative Commons 0"')
+    pool = 60 if a.fs_sort == "score" else min(a.limit, 150)
     data = fs_get("search/text/", query=query_text, filter=" ".join(flt), fields=FS_FIELDS,
-                  page_size=min(a.limit, 50), sort=a.fs_sort)
-    res = [fs_entry(s) for s in data.get("results", [])]
-    # Freesound already ranks by relevance; keep its order (score descends by position).
-    return [(100 - i, r) for i, r in enumerate(res)]
+                  page_size=pool, sort=a.fs_sort)
+    res = []
+    for i, s in enumerate(data.get("results", [])):
+        r = fs_entry(s)
+        if a.setting == "fantasy" and words(" ".join(r["tags"]) + " " + r["title"]) & MODERN_NOISE:
+            continue
+        if a.fs_sort != "score":
+            res.append((1000 - i, r))
+            continue
+        # Freesound's relevance order, nudged towards sounds other people found worth using:
+        # a sound ranked 10th with 5,000 downloads beats the 1st with 3.
+        res.append((30 * (1 - i / pool) + 6 * math.log10(r["downloads"] + 1) + 2 * r["rating"], r))
+    return res
 
 
 # ---------------------------------------------------------------- local packs
@@ -457,7 +475,7 @@ def build_playlists(spec):
             t = resolve(s["ref"])
             refs.append(t)
             sounds.append({k: v for k, v in {
-                "name": s.get("name") or t["title"],
+                "name": s.get("name") or re.sub(r"\.(wav|mp3|flac|ogg|aiff?|m4a)$", "", t["title"], flags=re.I),
                 "path": f"{REMOTE_SUB}/{local_path(t)[1]}",
                 "volume": s.get("volume"), "repeat": s.get("repeat"), "fade": s.get("fade"),
                 "credit": credit(t)}.items() if v is not None})
@@ -516,7 +534,13 @@ def main():
     p.add_argument("--spec", required=True)
     p.add_argument("--out", help="Write the macro here (default: stdout).")
     p.add_argument("--upload", action="store_true", help="Fetch and rsync the files to the server first.")
-    a = ap.parse_args()
+    # `-word` excludes a word from a search; argparse would read it as an unknown option.
+    a, extra = ap.parse_known_args()
+    bad = [x for x in extra if not (x.startswith("-") and not x.startswith("--") and len(x) > 1)]
+    if bad or (extra and a.cmd != "search"):
+        ap.error(f"unrecognized arguments: {' '.join(extra)}")
+    if extra:
+        a.terms += extra
 
     if a.cmd == "refresh":
         print(f"{len(tta_catalogue(force=True))} Tabletop Audio tracks cached.")
