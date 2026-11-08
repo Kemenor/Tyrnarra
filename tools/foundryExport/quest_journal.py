@@ -293,6 +293,8 @@ def main():
     ap.add_argument("--campaign", required=True, help="Repo campaign slug (campaigns.json gives the world).")
     ap.add_argument("--sub", required=True, help="Upload folder under the world's assets/.")
     ap.add_argument("--stage", required=True, help="Local folder the .webp art is staged into.")
+    ap.add_argument("--replace", action="store_true",
+                    help="Delete and rebuild same-named journals (loses edits made in Foundry). Default: add missing pages only.")
     ap.add_argument("--spec", help="Write the journal spec JSON here.")
     ap.add_argument("--macro", help="Write the Foundry macro here.")
     a = ap.parse_args()
@@ -313,7 +315,7 @@ def main():
         vp = view_pages(os.path.join(a.quest, a.views), art)
         if vp:
             journals.append({"name": f"{a.folder} · {a.views_title}", "pages": vp})
-    spec = {"folder": a.folder, "journals": journals}
+    spec = {"folder": a.folder, "mode": "replace" if a.replace else "add", "journals": journals}
     for j in journals:
         print(f"{j['name']}: {len(j['pages'])} pages", file=sys.stderr)
     print(f"Staged {len(art.staged)} image(s) in {a.stage}", file=sys.stderr)
