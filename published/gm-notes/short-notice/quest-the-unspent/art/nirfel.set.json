@@ -10,17 +10,17 @@
     "full": {
       "file": "nirfel-full",
       "size": "portrait_4_3",
-      "framing": "Full body portrait, seen slightly from below. Standing tall and very still in a long dark corridor of numbered iron vault doors, cold light falling from above."
+      "framing": "Full body portrait, seen slightly from below. Standing tall and very still in a long dark corridor of numbered iron vault doors, cold light falling from above, dim red light reflected on the floor and the underside of her coat."
     },
     "portrait": {
       "file": "nirfel",
       "size": "square_hd",
-      "framing": "Head and shoulders portrait, square crop, filling the frame, seen slightly from below, cold light from above, eyes looking down at the viewer."
+      "framing": "Head and shoulders portrait, square crop, filling the frame, seen slightly from below, cold light from above, a dim red glow from below catching the underside of her beak and collar, eyes looking down at the viewer."
     },
     "scene": {
       "file": "nirfel-scene",
       "size": "landscape_4_3",
-      "framing": "Standing at the far end of a long narrow corridor of numbered locked iron doors in a tall dark vault-tower, one door open beside her on a bare stone room holding a single ledger on a stand, cold light from above."
+      "framing": "Standing at the far end of a long narrow corridor of numbered locked iron doors in a tall dark vault-tower, one door open beside her on a bare stone room holding a single ledger on a stand, cold light from above, dim red light reflected on the floor."
     }
   }
 }
