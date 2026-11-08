@@ -386,3 +386,6 @@ a:hover { color: var(--gm-ink-bright); border-bottom-color: var(--gm-gold); }
 .npc-art img { cursor: zoom-in; }
 body.gm-lightbox-open { overflow: hidden; }
 @media (max-width: 600px) { .gm-lightbox { padding: 14px; } .gm-lightbox img { max-height: calc(100vh - 78px); } }
+
+/* A degree marked .stack builds on the degree below it: read that one first. */
+.deg .stack, .gm-flavor .stack { display: inline-block; min-width: 1.15em; padding: 0 3px; margin-right: 3px; border: 1px solid rgba(132,201,138,0.55); border-radius: 3px; font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; line-height: 1.25; text-align: center; color: #84c98a; vertical-align: 1px; }
