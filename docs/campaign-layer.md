@@ -41,7 +41,7 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
     gm-nav.css / gm-nav.js    ← GM left sidebar (its own tree; NOT the player site-nav): pinned open from 1340px wide, a drawer below
   tools/                      ← GM utilities served with the layer
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (the only tool served here; see below)
-  gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)
+  gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific); README.md indexes them
     dc-cheatsheet.md          ← PF2e DCs: challenge-anchored, simple, adjustments, four degrees
     npc-block.md              ← NPC definition standard: 3 depths (Cardboard/Semi/Full) + Level/Skills off Table 2-3
   <campaign>/                 ← e.g. furrious-five/
