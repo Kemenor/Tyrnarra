@@ -2,8 +2,9 @@
   "slug": "patala-latasi",
   "out": ".",
   "style": "painterly",
+  "ancestry": "goloma",
   "anchor": "full",
-  "character": "A tall, narrow humanoid woman with many eyes in a ring around her head, large dark eyes, never all closed at once. Smooth brown skin, close-cropped hair.",
+  "character": "A tall, narrow woman, smooth warm brown skin, close-cropped dark hair. Head tilted slightly, calm and watchful.",
   "wardrobe": "A lookout's weatherproof coat, a spyglass on a cord, rope gloves.",
   "shots": {
     "full": {
