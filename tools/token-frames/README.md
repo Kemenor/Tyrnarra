@@ -43,6 +43,11 @@ magenta, nothing else.*
 | `redsail` | crew | Redsail's poacher crew (*The Unspent*) — frayed blood-red sailcloth, black rope, black skull, crossed cutlasses; Midjourney, painted |
 | `veldtmark` | household | the Veldtmark estate (*The Veldtmark Invitation*) — rope, cargo crates, wax seal, Bikiargi crescents; Midjourney, painted |
 | `ninehulls` | crew | Ninehulls' crew (*The Unspent*) — black planking patched in other ships' colours, iron rivets, red drips below; Midjourney, painted |
+| `freeboard` | city | Freeboard (*The Unspent*) — stacked hull timbers in many colours, little ships standing as spires, hanging lanterns; the spires and lanterns reach past the band, so the ring bakes smaller; Midjourney, painted |
+| `skysail` | city | Skysail (*The Unspent*) — pale sky-blue band under dark rock and roots, tiny airships on taut lines; Midjourney, painted |
+| `unspent-keepers` | crew | the Unspent's keepers (*The Unspent*) — twisted old rope and worn gilt; Midjourney, painted |
+| `oath-crew` | monster / crew | the Unspent's oath-crew ghosts (*The Unspent*) — rotted rigging, barnacled planks, sea-green ghost-light; its render left a faint haze, cleared with an alpha floor of 34 after `prep`; Midjourney, painted |
+| `wardens` | monster | the Jigger's wardens (*The Unspent*) — dark stone band set with brass rivet-plates and a gear rim; Midjourney, painted |
 | `sable-rei` | faction | the Sable-rei (Millhaven & *Below the Quiet Docks*) — fox + theatrical-mask |
 
 ## Authoring a new frame
