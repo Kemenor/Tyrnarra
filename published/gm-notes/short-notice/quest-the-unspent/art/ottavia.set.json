@@ -1,0 +1,26 @@
+{
+  "slug": "ottavia",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "elf",
+  "anchor": "full",
+  "character": "A tall very straight woman, silver hair cut blunt at the jaw, pale grey eyes, a thin white scar round one wrist. Calm, unsmiling, measuring.",
+  "wardrobe": "A long blue wizard's coat, salt-stained, brass buttons that do not match, reading spectacles on a chain.",
+  "shots": {
+    "full": {
+      "file": "ottavia-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing in a ship captain's great cabin with tall stern windows behind her, a wand laid on the desk beside her."
+    },
+    "portrait": {
+      "file": "ottavia",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "ottavia-scene",
+      "size": "landscape_4_3",
+      "framing": "Holding a ring up to the light of tall leaded stern windows in a ship's cabin full of weapons, chests and charts, a customer waiting across the desk."
+    }
+  }
+}

@@ -545,7 +545,9 @@ def prompt_for(spec, shot, is_edit=False, extra=""):
     # before describing which one. An edit shot skips it, since the attached
     # reference already carries the species.
     ancestry = "" if is_edit else ancestry_line(spec)
-    body = spec["character"].strip() + ", " + spec["wardrobe"].strip() + "."
+    # A place spec (a city view) has no one in it: no character, no wardrobe.
+    who = [x.strip() for x in (spec.get("character") or "", spec.get("wardrobe") or "") if x.strip()]
+    body = (", ".join(who) + ".") if who else ""
     if ancestry:
         body = ancestry.rstrip(". ") + ". " + body
     parts += [framing, body, style_of(spec)]

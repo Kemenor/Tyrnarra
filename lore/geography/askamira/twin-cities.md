@@ -82,9 +82,9 @@ The sky crews dive their ships into clouds for the feel of it, in blind and whit
 
 ### Around the islets
 
-**The Edge** runs along the drop on the Main: a line of tables with the open air beyond them, hammocks slung over the side from posts sunk in the rock, and a kitchen that serves sky fruit and cold tea through the long afternoon. Skysailers sit with their backs to the drop. Kesti Downdraft has a table there, and it stays empty while she is away.
+**The Edge** runs along the drop on the Main: a line of tables with the open air beyond them, hammocks slung over the side from posts sunk in the rock, and a kitchen that serves sky fruit and cold tea through the long afternoon. Skysailers sit with their backs to the drop. The kitchen is **Graça out of the Main**'s. Kesti Downdraft has a table there, and it stays empty while she is away.
 
-**The Ropewalk** hangs under the Jigger on its own lines: the longest room in Skysail, a gallery of planks and netting open to the air, where the airship crews lay new rope the length of the room. The keepers mend the Unspent's lines there, and from the far end of the gallery she hangs close enough to read her name.
+**The Ropewalk** hangs under the Jigger on its own lines: the longest room in Skysail, a gallery of planks and netting open to the air, where the airship crews lay new rope the length of the room under **Jowan out of the Jigger**, who knows every line beneath the islet by its weight. The keepers mend the Unspent's lines there, and from the far end of the gallery she hangs close enough to read her name.
 
 **The Tuning House** stands on the Fore, and tunes the city's hum. Its keeper, **Ilta out of the Fore**, cuts and shapes window-openings so that a house sings in a chosen key in any wind, and sells wind-bells, skiff pilots' whistles, and the signal whistles the sky crews call to each other with across the gap.
 

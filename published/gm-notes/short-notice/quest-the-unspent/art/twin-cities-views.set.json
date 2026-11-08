@@ -1,0 +1,41 @@
+{
+  "slug": "twin-cities-views",
+  "about": "Views of the Twin Cities for The Unspent: Freeboard and Skysail apart and moored together. No characters; every shot is text-to-image.",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "freeboard-overview",
+  "character": "",
+  "wardrobe": "",
+  "shots": {
+    "freeboard-overview": {
+      "file": "freeboard-overview",
+      "size": "landscape_16_9",
+      "mode": "text",
+      "framing": "A mountain of old wooden ships stacked on top of each other rising out of a calm lake, hulls of every colour piled at every angle, hundreds of masts sticking out like a forest after a gale, rope bridges and gangways strung between the hulls, smoke rising from chimneys, five whole ships standing upright on end at the very top flying flags. A ring of sailing ships circles its foot. Seen from the deck of an approaching ship in early morning light."
+    },
+    "freeboard-street": {
+      "file": "freeboard-street",
+      "size": "landscape_4_3",
+      "mode": "text",
+      "framing": "Inside a city built from stacked ships: a long narrow promenade that was once a ship's gangway, shop doors and windows cut into hull planking down both sides, a low ceiling of deck beams, lanterns hanging overhead and no sky. A busy crowd in plain old-fashioned working clothes, a hot-nut seller with a brazier, barrels and coiled rope, warm lamplight and haze."
+    },
+    "skysail-overview": {
+      "file": "skysail-overview",
+      "size": "landscape_16_9",
+      "mode": "text",
+      "framing": "Four floating islands of dark rock hanging in the sky above a calm lake, long roots trailing from their undersides, a city of open stone houses with striped awnings along their tops. Under each island a cluster of wooden airships hangs on long taut ropes. Small skiffs fly between the islands. Bright afternoon, clouds drifting past."
+    },
+    "skysail-street": {
+      "file": "skysail-street",
+      "size": "landscape_4_3",
+      "mode": "text",
+      "framing": "A wide square of pale stone on a floating island, tables and chairs under striped awnings in front of every door, hammocks slung between posts and out over the edge, houses whose walls are mostly open window frames, wind chimes. People in plain old-fashioned clothes eating at the tables. Beyond the edge, open sky and a sea of clouds far below."
+    },
+    "the-mooring": {
+      "file": "the-mooring",
+      "size": "landscape_16_9",
+      "mode": "text",
+      "framing": "Four floating islands of dark rock hanging low over a mountain of stacked wooden ships on a lake, rope lines, gangways and baskets hanging down between them, a fine rain falling out of a clear sky onto crowds cheering on the highest decks, airships hanging beneath the islands on taut lines. Evening light, lanterns coming on across the ships."
+    }
+  }
+}

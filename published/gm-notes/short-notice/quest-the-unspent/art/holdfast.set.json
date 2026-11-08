@@ -1,0 +1,26 @@
+{
+  "slug": "holdfast",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "merfolk",
+  "anchor": "full",
+  "character": "A broad-shouldered woman of forty-five, grey-green skin with old scars, a long dark tail barred like a pike's, short cropped hair, webbed hands. A wide delighted smile.",
+  "wardrobe": "A heavy brass chain over her shoulders hung with many rings, a small slate tied to one wrist.",
+  "shots": {
+    "full": {
+      "file": "holdfast-full",
+      "size": "portrait_4_3",
+      "framing": "Full body, front view. Half out of black water in a flooded wooden ship's hold, her tail visible beneath the surface, arms folded on a floating hatch-cover."
+    },
+    "portrait": {
+      "file": "holdfast",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "holdfast-scene",
+      "size": "landscape_4_3",
+      "framing": "Below floating planks where two fighters struggle, rising out of dark water to haul a soaked loser out by the collar, lantern light on the ripples, a crowd on the gallery above."
+    }
+  }
+}

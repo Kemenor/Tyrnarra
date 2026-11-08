@@ -1,0 +1,26 @@
+{
+  "slug": "jowan",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "ratfolk",
+  "anchor": "full",
+  "character": "A thin grey-muzzled man of fifty-five, callused paws, a kinked tail, a brass thimble through one ear.",
+  "wardrobe": "A tarred canvas smock lined with fleece, a marlinspike hanging at his hip.",
+  "shots": {
+    "full": {
+      "file": "jowan-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a long gallery of planks and netting hung beneath a floating rock, coils of rope at his feet."
+    },
+    "portrait": {
+      "file": "jowan",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "jowan-scene",
+      "size": "landscape_4_3",
+      "framing": "Laying a long rope along a gallery slung under a floating island, open air beneath the netting, a dark airship with black sails hanging on lines in the distance."
+    }
+  }
+}

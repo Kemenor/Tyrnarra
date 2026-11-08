@@ -1,0 +1,26 @@
+{
+  "slug": "graca",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "strix",
+  "anchor": "full",
+  "character": "A tall long-armed woman of forty, dark brown wings folded high behind her shoulders, flour on the wingtips, close-cropped black hair, a broad easy smile.",
+  "wardrobe": "A loose sleeveless shirt, a striped apron, bare forearms with old oven burns.",
+  "shots": {
+    "full": {
+      "file": "graca-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing at the edge of a floating rock island beside a row of café tables, open sky and clouds behind her."
+    },
+    "portrait": {
+      "file": "graca",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "graca-scene",
+      "size": "landscape_4_3",
+      "framing": "Carrying a tray of fruit along a row of tables at the very edge of a floating island, hammocks slung out over the open drop, far below a sea of clouds."
+    }
+  }
+}

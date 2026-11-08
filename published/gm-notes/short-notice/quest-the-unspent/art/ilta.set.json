@@ -1,0 +1,26 @@
+{
+  "slug": "ilta",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "tengu",
+  "anchor": "full",
+  "character": "A small sleek person, blue-black feathers with a pale bar on each wing, a nicked beak, head tilted, listening.",
+  "wardrobe": "A loose grey robe tied with cord, a dozen whistles on strings round the neck, a small hammer in one hand.",
+  "shots": {
+    "full": {
+      "file": "ilta-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing in a stone room whose walls are mostly open window frames, wind chimes and bells hanging everywhere."
+    },
+    "portrait": {
+      "file": "ilta",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "ilta-scene",
+      "size": "landscape_4_3",
+      "framing": "Tapping the edge of a stone window opening with a small hammer, head cocked, on a windy rooftop of a floating city, chimes swinging around them."
+    }
+  }
+}

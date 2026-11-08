@@ -1,0 +1,26 @@
+{
+  "slug": "rosalba",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "dwarf",
+  "anchor": "full",
+  "character": "A broad short woman of sixty, thick forearms, a grey braid wound round her head and pinned with a fork, a burn scar across the back of one hand. A loud open laugh.",
+  "wardrobe": "A brocade waistcoat buttoned wrong over a linen shirt, sleeves rolled, a leather apron, a ring of keys at her belt.",
+  "shots": {
+    "full": {
+      "file": "rosalba-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing behind a bar counter made from a ship's rail, a slate drinks board behind her."
+    },
+    "portrait": {
+      "file": "rosalba",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "rosalba-scene",
+      "size": "landscape_4_3",
+      "framing": "Leaning on the bar of a crowded tavern inside a ship's hull, lanterns overhead, a storyteller standing on a table behind her, laughing at someone off frame."
+    }
+  }
+}

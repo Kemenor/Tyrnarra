@@ -1,0 +1,26 @@
+{
+  "slug": "nohea",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "goblin",
+  "anchor": "full",
+  "character": "A small wiry man of thirty-five, notched ears, a jeweller's loupe screwed into one eye, a quick toothy grin.",
+  "wardrobe": "A long captain's coat cut down to his size with the braid picked off, three tool belts, a small chisel on a cord round his neck.",
+  "shots": {
+    "full": {
+      "file": "nohea-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing in a narrow shop crammed floor to ceiling with ropes, lanterns and crates, holding up a brass lantern."
+    },
+    "portrait": {
+      "file": "nohea",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "nohea-scene",
+      "size": "landscape_4_3",
+      "framing": "Behind a counter in a cramped hold full of shelves, painted ship names on boards above each shelf, scraping initials off a pewter cup with a chisel."
+    }
+  }
+}

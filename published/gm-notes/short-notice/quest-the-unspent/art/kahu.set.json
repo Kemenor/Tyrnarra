@@ -1,0 +1,26 @@
+{
+  "slug": "kahu",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "tripkee",
+  "anchor": "full",
+  "character": "A small mottled green and bronze woman of thirty, big gold eyes, smoked goggles pushed up on her forehead, pale burn spots on her fingers.",
+  "wardrobe": "A stained rubber-cloth apron, sleeves tied back with string, a bandolier of corked glass phials across her chest.",
+  "shots": {
+    "full": {
+      "file": "kahu-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing in a warm cramped workshop inside a ship's hull, glassware bubbling on a bench, an axe hanging on the wall by the door."
+    },
+    "portrait": {
+      "file": "kahu",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "kahu-scene",
+      "size": "landscape_4_3",
+      "framing": "Pouring a glowing green liquid between two flasks at a workbench in a dim ship's hold, steam rising, a hatch in the floor open to dark water beside her."
+    }
+  }
+}
