@@ -211,7 +211,7 @@ def convert(el, soup, art):
         d.unwrap()
     for fc in el.find_all("figcaption"):
         fc.name = "p"
-    html = el.decode_contents()
+    html = el.decode_contents(formatter="html5")   # <img>, <br>: no XHTML slash, as Foundry stores them
     html = re.sub(r"\n\s*\n+", "\n", html)
     return html.strip()
 
