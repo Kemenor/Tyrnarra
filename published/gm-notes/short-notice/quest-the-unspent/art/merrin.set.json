@@ -1,0 +1,25 @@
+{
+  "slug": "merrin",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A young ratfolk woman, sleek brown fur, whiskers trimmed neat, a notch in one ear, bright black eyes. Thin. An eager, hungry half-smile.",
+  "wardrobe": "A captain's coat two sizes too big, cuffs rolled twice, patched canvas beneath, a ring of keys at her belt.",
+  "shots": {
+    "full": {
+      "file": "merrin-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing with her chin up, one hand on the keys."
+    },
+    "portrait": {
+      "file": "merrin",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "merrin-scene",
+      "size": "landscape_4_3",
+      "framing": "Standing at the end of a rope gangway reaching toward a dark airship with black sails, hanging on lines beneath a floating rock."
+    }
+  }
+}

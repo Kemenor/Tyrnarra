@@ -1,0 +1,25 @@
+{
+  "slug": "teofoga",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "An old lizardfolk man, olive scales gone grey along the jaw, one eye milky white, the other dark and calm. Heavy-lidded, a slow blink. Stooped, unhurried.",
+  "wardrobe": "A faded sailor's waistcoat and loose trousers, a ring of keys and a purse at his belt, no weapon.",
+  "shots": {
+    "full": {
+      "file": "teofoga-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, both hands resting on a walking stick."
+    },
+    "portrait": {
+      "file": "teofoga",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "teofoga-scene",
+      "size": "landscape_4_3",
+      "framing": "Standing over a dead pirate captain on a deck, one clawed hand raised, a crowd of pirates around him raising their hands to vote."
+    }
+  }
+}

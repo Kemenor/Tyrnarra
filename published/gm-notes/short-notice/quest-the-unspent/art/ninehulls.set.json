@@ -1,0 +1,25 @@
+{
+  "slug": "ninehulls",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A towering giant of a human man, seven and a half feet tall, broad as a wardrobe. Deep sun-brown skin, shaved head, a thick greying black beard in nine braids. A pale puckered scar across his throat and down his chest. A wide warm grin.",
+  "wardrobe": "A long black red-lined captain's coat open over a bare chest, a huge cutlass.",
+  "shots": {
+    "full": {
+      "file": "ninehulls-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, hands on hips."
+    },
+    "portrait": {
+      "file": "ninehulls",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "ninehulls-scene",
+      "size": "landscape_4_3",
+      "framing": "Swinging down onto a merchant ship's deck on a rope through cannon smoke, landing heavily, planks buckling, laughing."
+    }
+  }
+}

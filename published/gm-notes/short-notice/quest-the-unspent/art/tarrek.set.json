@@ -1,0 +1,25 @@
+{
+  "slug": "tarrek",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A huge minotaur man, about forty-five, brown hide greying at the muzzle, horns capped in old brass. A vine tattoo winding round one forearm. Calm, slow, patient eyes.",
+  "wardrobe": "A sleeveless canvas sailor's jerkin, rope over one shoulder, a belaying pin in his belt.",
+  "shots": {
+    "full": {
+      "file": "tarrek-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, coiling a rope over his arm."
+    },
+    "portrait": {
+      "file": "tarrek",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "tarrek-scene",
+      "size": "landscape_4_3",
+      "framing": "Herding sailors toward an open deck hatch, one huge arm outstretched, a pirate ship closing behind."
+    }
+  }
+}

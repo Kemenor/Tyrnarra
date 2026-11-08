@@ -1,0 +1,25 @@
+{
+  "slug": "naama",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A lean fetchling woman, about twenty-eight, shadow-grey skin, silver eyes with no visible pupils, short black hair. Very still, face blank and watchful.",
+  "wardrobe": "Close-fitting dark sailor's clothes, bare feet, two daggers worn crosswise at the small of her back.",
+  "shots": {
+    "full": {
+      "file": "naama-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, a dagger in each hand, weight on the balls of her feet."
+    },
+    "portrait": {
+      "file": "naama",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "naama-scene",
+      "size": "landscape_4_3",
+      "framing": "Dropping onto a ship's bow from a swinging rope, daggers drawn, sea spray behind her."
+    }
+  }
+}

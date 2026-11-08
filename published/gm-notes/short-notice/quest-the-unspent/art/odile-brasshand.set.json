@@ -1,0 +1,25 @@
+{
+  "slug": "odile-brasshand",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A square, weathered human woman of about fifty, close-cropped iron-grey hair. A brass prosthetic left hand. A flat, unimpressed mouth, appraising eyes.",
+  "wardrobe": "A practical dark coat with brass buttons, a quartermaster's ledger tucked under her arm.",
+  "shots": {
+    "full": {
+      "file": "odile-brasshand-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing straight, brass hand resting on a railing."
+    },
+    "portrait": {
+      "file": "odile-brasshand",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "odile-brasshand-scene",
+      "size": "landscape_4_3",
+      "framing": "On a high deck at night overlooking a city made of ships stacked on ships, lanterns everywhere below her."
+    }
+  }
+}

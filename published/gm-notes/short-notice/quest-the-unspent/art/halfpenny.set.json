@@ -1,0 +1,25 @@
+{
+  "slug": "halfpenny",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A tall, spare elf woman, ageless face, long and patient. Silver-grey hair cropped short. Ink-stained fingertips. A worn brass coin on a cord at her throat. Level grey eyes, mouth set flat.",
+  "wardrobe": "A long dark sea-coat covered in pockets, wooden tally sticks in each, sleeves rolled to the elbow, a wax tablet and stylus at her hip.",
+  "shots": {
+    "full": {
+      "file": "halfpenny-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing straight on a ship's deck, writing on a wax tablet."
+    },
+    "portrait": {
+      "file": "halfpenny",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "halfpenny-scene",
+      "size": "landscape_4_3",
+      "framing": "At a barrel used as a table on a ship's deck, counting coins into small even piles while pirates wait in a line."
+    }
+  }
+}

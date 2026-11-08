@@ -1,0 +1,25 @@
+{
+  "slug": "redsail",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A broad, sunburned human man in his late thirties. A beard dyed bright red. Gold rings on every finger. A big open-mouthed shout, chin up, chest out.",
+  "wardrobe": "A fine blue captain's coat slightly too large for him, a red sash wound twice round his waist, a rapier at his hip.",
+  "shots": {
+    "full": {
+      "file": "redsail-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a quarterdeck, one boot on the rail, rapier raised."
+    },
+    "portrait": {
+      "file": "redsail",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "redsail-scene",
+      "size": "landscape_4_3",
+      "framing": "Shouting from the quarterdeck of a two-masted ship under a plain red flag as his crew throw grapnels across to another ship."
+    }
+  }
+}

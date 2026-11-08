@@ -1,0 +1,25 @@
+{
+  "slug": "pell",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A small halfling woman of forty, freckled, grey at the temples, deep laugh lines. A wide, animated face, mid-story, eyebrows high.",
+  "wardrobe": "A long patched coat sewn all over with coins from many lands, bare feet.",
+  "shots": {
+    "full": {
+      "file": "pell-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a tavern table, arms flung wide."
+    },
+    "portrait": {
+      "file": "pell",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "pell-scene",
+      "size": "landscape_4_3",
+      "framing": "Telling a story from a tabletop in a crowded lantern-lit tavern built inside the hull of a ship, the audience leaning in."
+    }
+  }
+}

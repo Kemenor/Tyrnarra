@@ -1,0 +1,25 @@
+{
+  "slug": "togafiti",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A huge orc man, about thirty, heavily muscled, green-grey skin crossed with old scars. Tusks ringed with iron. A furious roar, teeth bared.",
+  "wardrobe": "A red headscarf, a leather sailor's jerkin open at the chest, bare arms, a long-bladed polearm.",
+  "shots": {
+    "full": {
+      "file": "togafiti-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing braced on a ship's deck, polearm held across his body."
+    },
+    "portrait": {
+      "file": "togafiti",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "togafiti-scene",
+      "size": "landscape_4_3",
+      "framing": "Leaping over a ship's rail with his polearm swinging, sailors scattering from the blade."
+    }
+  }
+}

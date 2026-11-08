@@ -1,0 +1,25 @@
+{
+  "slug": "patala-latasi",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A tall, narrow humanoid woman with many eyes in a ring around her head, large dark eyes, never all closed at once. Smooth brown skin, close-cropped hair.",
+  "wardrobe": "A lookout's weatherproof coat, a spyglass on a cord, rope gloves.",
+  "shots": {
+    "full": {
+      "file": "patala-latasi-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, one hand shading her eyes."
+    },
+    "portrait": {
+      "file": "patala-latasi",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "patala-latasi-scene",
+      "size": "landscape_4_3",
+      "framing": "In a ship's crow's nest high above the sails, pointing at a distant sail on the horizon, mouth open in a shout."
+    }
+  }
+}

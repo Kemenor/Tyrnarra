@@ -1,0 +1,25 @@
+{
+  "slug": "kesti-downdraft",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A lean tengu woman, a crow-headed person, slate-grey feathers shading pale at the throat, one white streak down a wing. Sharp amber eyes, beak set, alert.",
+  "wardrobe": "Worn flight leathers, a fleece-lined coat, pilot's goggles pushed up into her crest feathers, a whistle on a cord.",
+  "shots": {
+    "full": {
+      "file": "kesti-downdraft-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's rail in the wind, perfectly balanced."
+    },
+    "portrait": {
+      "file": "kesti-downdraft",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "kesti-downdraft-scene",
+      "size": "landscape_4_3",
+      "framing": "Leaping from a small flying skiff onto a ship's rail beneath floating islands of dark rock hung with airships."
+    }
+  }
+}

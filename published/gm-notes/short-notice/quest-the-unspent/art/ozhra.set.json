@@ -1,0 +1,25 @@
+{
+  "slug": "ozhra",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "An older male gnoll merchant with a hyena's head, spotted fur gone grey at the muzzle, one ear notched. Ink-stained fingers. A tight polite smile, ears pinned back, eyes on the horizon.",
+  "wardrobe": "A good brown wool merchant's coat with polished brass buttons, a key on a chain round his neck.",
+  "shots": {
+    "full": {
+      "file": "ozhra-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, one hand closed around the key at his chest."
+    },
+    "portrait": {
+      "file": "ozhra",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "ozhra-scene",
+      "size": "landscape_4_3",
+      "framing": "Pacing the deck of a cargo sailing ship on a bright calm sea, looking out at the empty horizon."
+    }
+  }
+}

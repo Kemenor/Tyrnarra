@@ -1,0 +1,25 @@
+{
+  "slug": "old-hobb",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "An old tengu man, crow-headed, feathers gone ash-grey and thin, a crooked forefinger. Bright sharp eyes. Humming, beak slightly open.",
+  "wardrobe": "A worn leather tender's apron hung with smooth brass tools, a woollen scarf.",
+  "shots": {
+    "full": {
+      "file": "old-hobb-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing with a lantern raised, the other hand pointing."
+    },
+    "portrait": {
+      "file": "old-hobb",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "old-hobb-scene",
+      "size": "landscape_4_3",
+      "framing": "Touching a brass plate in a curving ancient stone corridor by lantern light, three fingers on the metal, humming."
+    }
+  }
+}

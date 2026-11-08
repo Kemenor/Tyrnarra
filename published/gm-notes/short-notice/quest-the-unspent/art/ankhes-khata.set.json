@@ -1,0 +1,25 @@
+{
+  "slug": "ankhes-khata",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A young person of nineteen with pale ashen skin and pale silvery eyes, a faint soft glow about the face, quick bright grin, curious.",
+  "wardrobe": "A loose sailor's shirt and trousers, bare feet black with tar, a knot of rope charms at the wrist.",
+  "shots": {
+    "full": {
+      "file": "ankhes-khata-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing on a ship's deck, leaning forward eagerly."
+    },
+    "portrait": {
+      "file": "ankhes-khata",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "ankhes-khata-scene",
+      "size": "landscape_4_3",
+      "framing": "Sitting on a grain sack on a ship's deck at dusk, chin in hands, listening wide-eyed to a story."
+    }
+  }
+}

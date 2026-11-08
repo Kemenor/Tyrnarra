@@ -1,0 +1,25 @@
+{
+  "slug": "mara-goldwake",
+  "out": ".",
+  "style": "painterly",
+  "anchor": "full",
+  "character": "A dead tengu woman, crow-headed, sitting upright, black feathers dulled grey with dust. Small rings on her beak. Eyes closed. Perfectly still and dry, preserved.",
+  "wardrobe": "A buttoned captain's coat, every button a different metal, ship-leather boots over talons.",
+  "shots": {
+    "full": {
+      "file": "mara-goldwake-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Seated at a table, one hand closed around a faintly glowing metal sphere."
+    },
+    "portrait": {
+      "file": "mara-goldwake",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "mara-goldwake-scene",
+      "size": "landscape_4_3",
+      "framing": "In a sealed ornate ship's cabin full of treasure, seated dead at her table, a glowing sphere rolling from her opening hand."
+    }
+  }
+}
