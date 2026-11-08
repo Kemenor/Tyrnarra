@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "An older male gnoll merchant with a hyena's head, spotted fur gone grey at the muzzle, one ear notched. Ink-stained fingers. A tight polite smile, ears pinned back, eyes on the horizon.",
+  "ancestry": "kholo",
+  "character": "An older man, spotted fur gone grey at the muzzle, one ear notched. Ink-stained fingers. A tight polite smile, ears pinned back, eyes on the horizon.",
   "wardrobe": "A good brown wool merchant's coat with polished brass buttons, a key on a chain round his neck.",
   "shots": {
     "full": {

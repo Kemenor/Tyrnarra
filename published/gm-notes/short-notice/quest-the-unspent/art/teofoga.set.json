@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "An old lizardfolk man, olive scales gone grey along the jaw, one eye milky white, the other dark and calm. Heavy-lidded, a slow blink. Stooped, unhurried.",
+  "ancestry": "lizardfolk",
+  "character": "An old man, olive scales gone grey along the jaw, one eye milky white, the other dark and calm. Heavy-lidded, a slow blink. Stooped, unhurried.",
   "wardrobe": "A faded sailor's waistcoat and loose trousers, a ring of keys and a purse at his belt, no weapon.",
   "shots": {
     "full": {

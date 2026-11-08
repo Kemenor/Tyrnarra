@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A square, weathered human woman of about fifty, close-cropped iron-grey hair. A brass prosthetic left hand. A flat, unimpressed mouth, appraising eyes.",
+  "ancestry": "human",
+  "character": "A square, weathered woman of about fifty, close-cropped iron-grey hair. A brass prosthetic left hand. A flat, unimpressed mouth, appraising eyes.",
   "wardrobe": "A practical dark coat with brass buttons, a quartermaster's ledger tucked under her arm.",
   "shots": {
     "full": {

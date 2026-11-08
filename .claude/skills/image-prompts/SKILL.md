@@ -210,6 +210,15 @@ worth one test each, since both bias toward a pleasant face.
 Keep them in their lanes. A `character` field that describes a coat, or a
 `framing` that re-describes the face, means the same words get sent twice.
 
+**The species goes in `ancestry`, not in `character`.** Set `"ancestry": "<name>"`
+and `tools/imageGen/ancestries.json` supplies the tested species line to the
+anchor shot (the name itself where the model knows it, a description where it
+does not, nothing where the ancestry has no generic look). Read the catalog entry
+before writing the spec: `character` then describes only the individual, and
+must not contradict the catalog unless this one person genuinely differs. A
+missing entry means the ancestry was never checked: look it up on Archives of
+Nethys and add it, rather than describing it from memory.
+
 ---
 
 ## Length: shorter is not a compromise, it is the technique

@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "An old tengu man, crow-headed, feathers gone ash-grey and thin, a crooked forefinger. Bright sharp eyes. Humming, beak slightly open.",
+  "ancestry": "tengu",
+  "character": "An old man, feathers gone ash-grey and thin, a crooked forefinger. Bright sharp eyes. Humming, beak slightly open.",
   "wardrobe": "A worn leather tender's apron hung with smooth brass tools, a woollen scarf.",
   "shots": {
     "full": {

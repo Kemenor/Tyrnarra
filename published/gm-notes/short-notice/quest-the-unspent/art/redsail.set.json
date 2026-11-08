@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A broad, sunburned human man in his late thirties. A beard dyed bright red. Gold rings on every finger. A big open-mouthed shout, chin up, chest out.",
+  "ancestry": "human",
+  "character": "A broad, sunburned man in his late thirties. A beard dyed bright red. Gold rings on every finger. A big open-mouthed shout, chin up, chest out.",
   "wardrobe": "A fine blue captain's coat slightly too large for him, a red sash wound twice round his waist, a rapier at his hip.",
   "shots": {
     "full": {

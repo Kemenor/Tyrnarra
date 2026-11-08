@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A huge orc man, about thirty, heavily muscled, green-grey skin crossed with old scars. Tusks ringed with iron. A furious roar, teeth bared.",
+  "ancestry": "orc",
+  "character": "A huge man, about thirty, heavily muscled, crossed with old scars. Tusks ringed with iron. A furious roar, teeth bared.",
   "wardrobe": "A red headscarf, a leather sailor's jerkin open at the chest, bare arms, a long-bladed polearm.",
   "shots": {
     "full": {

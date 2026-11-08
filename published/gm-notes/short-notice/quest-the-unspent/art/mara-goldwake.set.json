@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A dead tengu woman, crow-headed, sitting upright, black feathers dulled grey with dust. Small rings on her beak. Eyes closed. Perfectly still and dry, preserved.",
+  "ancestry": "tengu",
+  "character": "A dead woman sitting upright, black feathers dulled grey with dust. Small rings on her beak. Eyes closed. Perfectly still and dry, preserved.",
   "wardrobe": "A buttoned captain's coat, every button a different metal, ship-leather boots over talons.",
   "shots": {
     "full": {

@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A small halfling woman of forty, freckled, grey at the temples, deep laugh lines. A wide, animated face, mid-story, eyebrows high.",
+  "ancestry": "halfling",
+  "character": "A small woman of forty, freckled, grey at the temples, deep laugh lines. A wide, animated face, mid-story, eyebrows high.",
   "wardrobe": "A long patched coat sewn all over with coins from many lands, bare feet.",
   "shots": {
     "full": {

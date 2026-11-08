@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A huge minotaur man, about forty-five, brown hide greying at the muzzle, horns capped in old brass. A vine tattoo winding round one forearm. Calm, slow, patient eyes.",
+  "ancestry": "minotaur",
+  "character": "A huge man, about forty-five, brown hide greying at the muzzle, horns capped in old brass. A vine tattoo winding round one forearm. Calm, slow, patient eyes.",
   "wardrobe": "A sleeveless canvas sailor's jerkin, rope over one shoulder, a belaying pin in his belt.",
   "shots": {
     "full": {

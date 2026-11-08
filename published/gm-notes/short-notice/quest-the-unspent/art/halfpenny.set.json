@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A tall, spare elf woman, ageless face, long and patient. Silver-grey hair cropped short. Ink-stained fingertips. A worn brass coin on a cord at her throat. Level grey eyes, mouth set flat.",
+  "ancestry": "elf",
+  "character": "A tall, spare woman, ageless face, long and patient. Silver-grey hair cropped short. Ink-stained fingertips. A worn brass coin on a cord at her throat. Level grey eyes, mouth set flat.",
   "wardrobe": "A long dark sea-coat covered in pockets, wooden tally sticks in each, sleeves rolled to the elbow, a wax tablet and stylus at her hip.",
   "shots": {
     "full": {

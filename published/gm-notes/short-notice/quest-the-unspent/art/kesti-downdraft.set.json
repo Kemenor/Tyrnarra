@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A lean tengu woman, a crow-headed person, slate-grey feathers shading pale at the throat, one white streak down a wing. Sharp amber eyes, beak set, alert.",
+  "ancestry": "tengu",
+  "character": "A lean woman, slate-grey feathers shading pale at the throat, one white streak down a wing. Sharp amber eyes, beak set, alert.",
   "wardrobe": "Worn flight leathers, a fleece-lined coat, pilot's goggles pushed up into her crest feathers, a whistle on a cord.",
   "shots": {
     "full": {

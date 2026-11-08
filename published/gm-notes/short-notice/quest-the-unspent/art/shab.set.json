@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A young female gnoll with a hyena's head, spotted fur, sharp upright ears, spectacles pushed up her muzzle. Alert eyes, a guarded half-smile.",
+  "ancestry": "kholo",
+  "character": "A young woman, spotted fur, sharp upright ears, spectacles pushed up her muzzle. Alert eyes, a guarded half-smile.",
   "wardrobe": "A neat brown purser's waistcoat, rolled sleeves, a thick ledger held against her chest.",
   "shots": {
     "full": {

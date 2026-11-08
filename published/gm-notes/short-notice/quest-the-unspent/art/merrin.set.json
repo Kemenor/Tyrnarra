@@ -3,7 +3,8 @@
   "out": ".",
   "style": "painterly",
   "anchor": "full",
-  "character": "A young ratfolk woman, sleek brown fur, whiskers trimmed neat, a notch in one ear, bright black eyes. Thin. An eager, hungry half-smile.",
+  "ancestry": "ratfolk",
+  "character": "A young woman, sleek brown fur, whiskers trimmed neat, a notch in one ear, bright black eyes. Thin. An eager, hungry half-smile.",
   "wardrobe": "A captain's coat two sizes too big, cuffs rolled twice, patched canvas beneath, a ring of keys at her belt.",
   "shots": {
     "full": {
