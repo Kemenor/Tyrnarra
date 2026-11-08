@@ -167,6 +167,37 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
     return out
 
 
+def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, head_top=0.015, zoom=1.0):
+    """Bake with the head lifted over the frame, worked out from the cut-out.
+
+    The figure is moved so the top of its head sits head_top below the token's
+    top edge; the frame is drawn at `ring` of the token, moved down by ring_dy,
+    so the head clears its top band; the pop box covers the head's width from
+    the top edge down past the band. A head already cut off at the top of the
+    source art is left inside the ring (a flat-topped pop-out reads badly)."""
+    c = _framed(cutout, size, zoom).split()[3].point(lambda v: 255 if v > 128 else 0)
+    w = c.width
+    rows = [sum(1 for x in range(0, w, 2) if c.getpixel((x, y))) for y in range(c.height)]
+    top = next((y for y, n in enumerate(rows) if n > w * 0.01), 0)
+    if top < size * 0.01:
+        return bake(portrait, frame, out, size, cutout=None, zoom=zoom), "head cut off in the art: plain"
+    dy = head_top - top / size
+    xs = sorted({x for y in range(top, min(c.height, top + int(size * 0.12))) for x in range(0, w, 2) if c.getpixel((x, y))})
+    # the head is the widest run of columns; a stray bit of the cut-out (a bird, a
+    # lantern) near the top is its own run and stays inside the ring
+    runs, start = [], xs[0]
+    for a_, b_ in zip(xs, xs[1:] + [None]):
+        if b_ is None or b_ - a_ > size * 0.04:
+            runs.append((start, a_))
+            start = b_
+    hx0, hx1 = max(runs, key=lambda r: r[1] - r[0])
+    x0, x1 = max(0.0, hx0 / size - 0.03), min(1.0, hx1 / size + 0.03)
+    ring_top = 0.5 + ring_dy - ring / 2
+    box = (x0, 0.0, x1, ring_top + 0.12)
+    bake(portrait, frame, out, size, cutout=cutout, pop=[box], zoom=zoom, dy=dy, ring=ring, ring_dy=ring_dy)
+    return out, f"head popped (dy {dy:+.3f})"
+
+
 def _resolve_frame(val, frames_dir):
     if not val:
         return None
@@ -218,7 +249,29 @@ def main():
     z.add_argument("--feather", type=float, default=1.0)
     z.add_argument("--frame-mode", default="auto", choices=["auto", "alpha", "annulus"])
 
+    h = sub.add_parser("headpop", help="Bake tokens with the head lifted over the frame, from cut-outs.")
+    h.add_argument("--portraits", required=True, help="Folder of <slug>.png portraits.")
+    h.add_argument("--cutouts", required=True, help="Folder of the same portraits with the background removed (<slug>-cutout.png or <slug>.png).")
+    h.add_argument("--frames", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "token-frames"))
+    h.add_argument("--map", required=True, help='JSON {frame-stem: [portrait slugs]}.')
+    h.add_argument("--out", required=True)
+    h.add_argument("--size", type=int, default=512)
+
     a = ap.parse_args()
+    if a.cmd == "headpop":
+        groups = json.load(open(a.map, encoding="utf-8"))
+        for fr, slugs in groups.items():
+            frame = _resolve_frame(fr, a.frames)
+            for slug in slugs:
+                cut = next((os.path.join(a.cutouts, slug + e) for e in ("-cutout.png", ".png")
+                            if os.path.exists(os.path.join(a.cutouts, slug + e))), None)
+                if not cut:
+                    print(f"{slug}: no cut-out, skipped")
+                    continue
+                _, msg = head_pop(os.path.join(a.portraits, slug + ".png"), frame, cut,
+                                  os.path.join(a.out, slug + ".png"), a.size)
+                print(f"{slug} [{fr}]: {msg}")
+        return
     if a.cmd == "prep":
         _, used = prep(a.src, a.out, a.hue, a.hue_tol, a.sat_min, a.feather)
         print(f"{a.out}  (keyed hue {used:.0f})")
