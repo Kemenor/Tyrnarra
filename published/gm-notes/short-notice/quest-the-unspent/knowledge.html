@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge · The Unspent</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gm-notes/assets/gm.css">
+<link rel="stylesheet" href="/gm-notes/assets/gm-nav.css">
+<script defer src="/gm-notes/assets/gm-nav.js"></script>
+<script defer src="/gm-notes/assets/gm.js"></script>
+<style>
+  .scene-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 12px; }
+  .scene-meta .pill a { border: none; color: inherit; }
+  .scene-kind { font-family: 'Josefin Sans', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gm-accent); margin-bottom: 4px; }
+  .scene-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; }
+  .scene-jump a { font-family: 'Josefin Sans', sans-serif; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--gm-divider); border-radius: 3px; padding: 4px 9px; color: var(--gm-ink); }
+  .scene-jump a:hover { border-color: var(--gm-gold-dim); color: var(--gm-gold); }
+  .todo { font-size: 0.9rem; color: var(--gm-ink-dim); font-style: italic; }
+  .section[id] { scroll-margin-top: 20px; }
+</style>
+</head>
+<body data-page="quest-the-unspent-knowledge">
+
+<div class="gm-banner">
+  <span>⚔ &nbsp; GM Material · Behind the Screen · Not Player-Facing</span>
+  <span class="gm-banner-sep">·</span>
+  <a href="/gm-notes/short-notice/index.html">Campaign hub ↗</a>
+</div>
+
+<div class="gm-container">
+
+  <div class="breadcrumb">
+    <a href="/gm-notes/short-notice/index.html">Available on Short Notice</a><span class="sep">›</span><a href="/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html">The Unspent</a><span class="sep">›</span><span>Knowledge</span>
+  </div>
+
+  <div class="gm-header">
+    <div class="gm-kicker">The Unspent · Recall Knowledge</div>
+    <div class="gm-title">What They Might Know</div>
+    <div class="gm-flavor">Five topics the party will ask about, with the skills that apply and what each degree tells them. A critical failure tells them something false, said with confidence.</div>
+    <div class="scene-jump"><a href="#twin-cities">The Twin Cities</a><a href="#freeboard">Freeboard</a><a href="#skysail">Skysail</a><a href="#pirate-lords">The Pirate Lords</a><a href="#ninehulls">Ninehulls</a></div>
+  </div>
+
+  <div class="draft-note"><div class="draft-label">Draft · Claude</div><p>DCs are simple DCs set by how widely the thing is known on the Midarra; a relevant Lore takes 5 off (Mercantile Lore, less close to the subject, 2). Everything below the critical successes is chronicler-tier canon from <i>lore/geography/askamira/twin-cities.md</i>; the critical successes hint and never state a GM secret. The belief check draws on <i>lore/cosmology.md</i>, <i>The Wellspring &amp; Belief</i>.</p></div>
+
+  <div class="section" id="twin-cities">
+    <div class="scene-kind">Recall Knowledge · common on the Midarra</div>
+    <div class="section-title">The Twin Cities</div>
+    <div class="prose"><p>Anyone who has worked the Midarra has heard of them. Easy for a sailor, harder for a landsman.</p></div>
+    <div class="check">
+      <div class="check-head">◈ The Twin Cities</div>
+      <div class="check-dc">Society DC 20 · Sailing Lore, Pirate Lore or Midarra Lore DC 15</div>
+      <div class="deg crit-s"><b>Critical Success (≥30):</b> All of the Success, and: both cities call themselves <i>the truly free city</i> and sneer at Frae City, which sneers back. About 2460 MR Legea sent a fleet after them; Freeboard came over the horizon behind it, shelled the Legean half of Hringseyja's harbour and was gone before the fleet came home. Legean wax ships have bought colours ever since.</div>
+      <div class="deg"><b>Success (≥20):</b> Two pirate cities that move: <b>Freeboard</b> on the water, <b>Skysail</b> in the air, some 75,000 souls, keeping mostly to the central Midarra on the Solkai crossing. When they can, they moor together, sky over sea. They run on the <b>articles</b>: every deck is a ship, everyone living aboard is its crew, and the crew elects its captain and quartermaster by show of hands. Each city elects a <b>Lord</b>: Odile Brasshand holds Freeboard, Kesti Downdraft holds Skysail. Freeboard is the market that asks no questions: prize cargo sells cheap there, without its history.</div>
+      <div class="deg"><b>Failure (&lt;20):</b> Pirate cities, somewhere on the Midarra. Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤10):</b> <i>(false)</i> The cities are Askamira's, counted under Cronus's domain; name the island and the pirates will take you for neighbours. <i>A Freeboarder takes that as an insult.</i></div>
+    </div>
+  </div>
+  <div class="section" id="freeboard">
+    <div class="scene-kind">Recall Knowledge · the sea city</div>
+    <div class="section-title">Freeboard</div>
+    <div class="prose"><p>The stack, the decks, and how a Freeboarder lives.</p></div>
+    <div class="check">
+      <div class="check-head">◈ Freeboard</div>
+      <div class="check-dc">Society DC 22 · Pirate Lore, Sailing Lore or Freeboard Lore DC 17 · Mercantile Lore DC 20 for its market</div>
+      <div class="deg crit-s"><b>Critical Success (≥32):</b> All of the Success, and: the Lord lives on <b>the Tenth</b>, one share in ten of every prize sold aboard. Freeboard's vice is its <b>tellers</b>, who tell the Lords' deeds in the taverns for coin; a captain caught paying for their own telling has a <b>bought name</b>, and it is an insult. A killed captain gets <b>the Last Hands</b>: the crew votes <i>deposition</i> (the killer goes free and may stand for the seat) or <i>murder</i> (the killer is marooned). One spire on top flies a dead Lord's flag; her crew still holds it, and fewer every season.</div>
+      <div class="deg"><b>Success (≥22):</b> A mountain of ships stacked on ships, ringed by working ships under sail; its old engines drive it at a crawl and the Lord of Freeboard sets the course. Decks are named for the prizes they were, promenades for rigging (the <b>Lower Spar</b>). Inside there is no sky and no common hour: each deck keeps its own watch, so you ask a Freeboarder <i>which watch</i>. The Merfolk hold the drowned hulls at the bottom and trade through hatches. On top stand the <b>spires</b>, each the prize that made a Pirate Lord, flying the Lord's flag.</div>
+      <div class="deg"><b>Failure (&lt;22):</b> A floating pirate town. Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤12):</b> <i>(false)</i> Freeboard belongs to Ninehulls; his word is law on every deck. <i>The Lord of Freeboard is Odile Brasshand, and a Pirate Lord commands no deck.</i></div>
+    </div>
+  </div>
+  <div class="section" id="skysail">
+    <div class="scene-kind">Recall Knowledge · the sky city</div>
+    <div class="section-title">Skysail</div>
+    <div class="prose"><p>Four islets in the air, and the old work that holds them up.</p></div>
+    <div class="check">
+      <div class="check-head">◈ Skysail</div>
+      <div class="check-dc">Society DC 24 · Sailing Lore (sky) or Pirate Lore DC 19</div>
+      <div class="deg crit-s"><b>Critical Success (≥34):</b> All of the Success, and: the first crews moored to one stone already hanging low over the Midarra, about 2270 MR, the one now called the Main, and later found and woke the other three. What holds the islets up is <b>old work</b> in the deep rock that the tenders keep by rote; scholars who have seen drawings of it call it Elden. The <b>Jigger</b> is the cold islet and carries the most airships on its lines, and under it hangs <b>the Unspent</b>, Goldwake's flagship, which nobody boards.</div>
+      <div class="deg"><b>Success (≥24):</b> Four islets in the air, named for a ship's masts: <b>the Fore, the Main, the Mizzen and the Jigger</b>. Airships hang beneath them on long lines, always taut. The city is all open: wide stone squares, a table in front of every door, hammocks slung over the edge, walls that are mostly window, so the whole city hums in the wind. It keeps the sun's hours, and skiffs carry folk between the islets. Kesti Downdraft, a Tengu, is its Lord and a Pirate Lord besides. More Tengu live there than anywhere outside Vindul.</div>
+      <div class="deg"><b>Failure (&lt;24):</b> A city on flying rocks. Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤14):</b> <i>(false)</i> The islets hang from the airships beneath them; cut enough lines and an islet drops. <i>The airships carry only what the old work cannot.</i></div>
+    </div>
+    <div class="check">
+      <div class="check-head">◈ The old work (only once they have seen it, or ask what holds the islets up)</div>
+      <div class="check-dc">Arcana or Crafting DC 32 · Engineering Lore DC 27</div>
+      <div class="deg crit-s"><b>Critical Success (≥42):</b> All of the Success, and: it is lift-work of a kind that was built for something much smaller than an island, and it is straining.</div>
+      <div class="deg"><b>Success (≥32):</b> No school of magic they know. Engineering, very old, and running by habit: the tenders keep it going without understanding it.</div>
+      <div class="deg"><b>Failure (&lt;32):</b> Stone and old brass. Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤22):</b> <i>(false)</i> It is a shrine to Fisaya, and the islets fly by her favour.</div>
+    </div>
+  </div>
+  <div class="section" id="pirate-lords">
+    <div class="scene-kind">Recall Knowledge · the names the taverns tell</div>
+    <div class="section-title">The Pirate Lords</div>
+    <div class="prose"><p>What a Pirate Lord is, and who counts.</p></div>
+    <div class="check">
+      <div class="check-head">◈ The Pirate Lords</div>
+      <div class="check-dc">Society DC 24 · Pirate Lore or Midarra Lore DC 19</div>
+      <div class="deg crit-s"><b>Critical Success (≥34):</b> All of the Success, and: on the Midarra belief is power, and a name believed by enough of it carries real weight; that is why the cities sit with the Lords. Colours are honoured only by the selling Lord's captains. Odile Brasshand wants one pass that every Lord honours, and the Lords refuse: the raid the tellers love best is the one that breaks another Lord's colours. Of the dead, <b>Goldwake</b>, a sky Lord, died at anchor about 2390 MR.</div>
+      <div class="deg"><b>Success (≥24):</b> A Pirate Lord holds no office: a Lord is a pirate whose name every tavern on the Midarra tells, followed by captains who sail under the Lord's flag for the name. About seven count now; who counts is argued at the edges. A Lord's word binds every captain under that flag. The Lords share out the waters and sell <b>colours</b>, passes across their water, through factors in Solkai and Rika Tikur. A Lord who stops raiding stops being told of, and in time stops being a Lord. Named: <b>Ninehulls</b>, <b>Sunfall</b> (who strikes out of the sun), <b>Kesti Downdraft</b>.</div>
+      <div class="deg"><b>Failure (&lt;24):</b> Famous pirates. Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤14):</b> <i>(false)</i> The Pirate Lords are elected by the hands, like everyone else on the cities. <i>Nobody votes on a Lord.</i></div>
+    </div>
+  </div>
+  <div class="section" id="ninehulls">
+    <div class="scene-kind">Recall Knowledge · the most told name on the Midarra</div>
+    <div class="section-title">Ninehulls</div>
+    <div class="prose"><p>Everyone has a version.</p></div>
+    <div class="check">
+      <div class="check-head">◈ Ninehulls</div>
+      <div class="check-dc">Society DC 20 · Pirate Lore or Midarra Lore DC 15</div>
+      <div class="deg crit-s"><b>Critical Success (≥30):</b> All of the Success, and: he was killed from ambush in Freeboard, and no one saw who did it. The Last Hands were held over him with no killer to free or maroon. Within days the man the taverns named for it was dead, struck down by Ninehulls himself. No one remembers that man's given name. The Voroir Daua carry Ninehulls on their list.</div>
+      <div class="deg"><b>Success (≥20):</b> Took nine ships in one night and became a Lord. His flag is a red nine on black, a skull grinning out of the loop of the nine and bleeding into red water. A Human, two metres thirty and built like a wardrobe; the tellers say he grows a little with every tale, and old hands swear he was a finger's width shorter last season. Years later he took a wound that should have killed him and lived, and the taverns have told him since as <b>the man who cannot die</b>. His spire flies on Freeboard.</div>
+      <div class="deg"><b>Failure (&lt;20):</b> A big pirate with a famous flag.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤10):</b> <i>(false)</i> Ninehulls is a title, handed captain to captain with the flagship; this one is the fourth.</div>
+    </div>
+    <div class="check">
+      <div class="check-head">◈ A legend that walks (only if they wonder how he came back, or what he is)</div>
+      <div class="check-dc">Religion or Occultism DC 30</div>
+      <div class="deg crit-s"><b>Critical Success (≥40):</b> All of the Success, and: such a being knows itself as its story tells it, and enough belief can bring it back after it is killed. What is forgotten stays gone.</div>
+      <div class="deg"><b>Success (≥30):</b> A legend believed by enough people can begin to exist, built from the belief: a <b>belief being</b>, a soul born of belief and no undead thing. It lasts while it is remembered.</div>
+      <div class="deg"><b>Failure (&lt;30):</b> Nothing useful.</div>
+      <div class="deg crit-f"><b>Critical Failure (≤20):</b> <i>(false)</i> He is undead, held back by a pact; destroy his phylactery and he stays down.</div>
+    </div>
+  </div>
+
+  <div class="gm-footer">AVAILABLE ON SHORT NOTICE · THE UNSPENT · NOT PLAYER-FACING</div>
+</div>
+
+</body>
+</html>

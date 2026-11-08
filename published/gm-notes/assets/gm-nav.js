@@ -62,7 +62,8 @@
         { slug: 'quest-the-unspent-aboard',      label: 'II · Aboard the Unspent',  href: '/gm-notes/short-notice/quest-the-unspent/aboard-the-unspent.html', children: [] },
         { slug: 'quest-the-unspent-holds',       label: "III · The Jigger's Holds", href: '/gm-notes/short-notice/quest-the-unspent/the-jiggers-holds.html',  children: [] },
         { slug: 'quest-the-unspent-last-hands',  label: 'IV · The Last Hands',      href: '/gm-notes/short-notice/quest-the-unspent/the-last-hands.html',     children: [] },
-        { slug: 'quest-the-unspent-cast',        label: 'The Cast',                 href: '/gm-notes/short-notice/quest-the-unspent/cast.html',               children: [] }
+        { slug: 'quest-the-unspent-cast',        label: 'The Cast',                 href: '/gm-notes/short-notice/quest-the-unspent/cast.html',               children: [] },
+        { slug: 'quest-the-unspent-knowledge',   label: 'Knowledge',                href: '/gm-notes/short-notice/quest-the-unspent/knowledge.html',          children: [] }
       ]}
     ]},
     { slug: 'heavens-dragons', label: 'Heavens Dragons', href: '/gm-notes/heavens-dragons/index.html', children: [] },

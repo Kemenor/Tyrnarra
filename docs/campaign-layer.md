@@ -38,7 +38,7 @@ published/gm-notes/             ← served at /gm-notes/ (the published/ prefix 
   assets/                     ← shared GM chrome (loaded by every campaign page)
     gm.css                    ← GM stylesheet ("behind the screen": ink-slate ground, red GM accent)
     gm.js                     ← shared interactions (tabs, secrets, NPC cards, floorplans, battlemap)
-    gm-nav.css / gm-nav.js    ← GM left-sidebar drawer (its own tree; NOT the player site-nav)
+    gm-nav.css / gm-nav.js    ← GM left sidebar (its own tree; NOT the player site-nav): pinned open from 1340px wide, a drawer below
   tools/                      ← GM utilities served with the layer
     map-area-editor.html      ← draw clickable areas on a battlemap → export JSON (the only tool served here; see below)
   gm-reference/               ← GM quick-reference docs (system rules, not campaign-specific)

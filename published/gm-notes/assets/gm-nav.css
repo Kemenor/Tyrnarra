@@ -132,3 +132,11 @@ a.gm-nav-grouplabel.is-current { color: var(--gm-gold-bright, #e0bd66); backgrou
 .gm-nav-scrim.open { opacity: 1; pointer-events: auto; }
 
 @media (max-width: 600px) { .gm-nav { width: 86vw; } }
+
+/* Wide screens: the menu stays open beside the page, no toggle and no scrim.
+   1340px = the 286px menu + the 1040px page column + a little air. */
+@media (min-width: 1340px) {
+  .gm-nav { transform: none; box-shadow: none; transition: none; }
+  .gm-nav-toggle, .gm-nav-scrim { display: none; }
+  body { padding-left: 286px; }
+}
