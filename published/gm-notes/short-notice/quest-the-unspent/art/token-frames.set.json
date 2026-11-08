@@ -1,0 +1,47 @@
+{
+  "slug": "token-frames-unspent",
+  "about": "Token frames for The Unspent's factions, through the Midjourney helper. Each shot is text-to-image and saves into tools/token-frames/; cut with bake_token.py prep afterwards.",
+  "out": "../../../../../tools/token-frames",
+  "style": "none",
+  "character": "",
+  "wardrobe": "",
+  "anchor": "ninehulls",
+  "shots": {
+    "ninehulls": {
+      "file": "ninehulls",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: a pirate lord's border of black-painted ship planking patched with boards in other ships' colours (green, ochre, faded blue), studded with iron rivets, a red numeral nine at the top with a small grinning skull in its loop, red water dripping from the bottom, worked in black, blood red and dull iron, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    },
+    "freeboard": {
+      "file": "freeboard",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: a city-of-ships border of stacked wooden hull timbers in many paint colours, tiny hanging ship's lanterns glowing warm, rope-bridge lashings binding the planks, small upright ships standing like spires along the top, worked in tarred wood, brass and lamplight amber, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    },
+    "skysail": {
+      "file": "skysail",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: a sky-city border of dark floating rock bearded with trailing roots underneath, taut lines with tiny airships hanging from them, small wind-chimes, worked in slate grey, pale sky blue and weathered brass, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    },
+    "unspent-keepers": {
+      "file": "unspent-keepers",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: a poor keepers' border of old rope full of careful splices and patches, a ring of old iron keys hanging along it, worn faded gilt trim from a grander past, worked in hemp brown, rust and tarnished gold, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    },
+    "oath-crew": {
+      "file": "oath-crew",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: a ghost crew's border of sea-rotted rigging and barnacled ship planks, tarnished gold coins caught in the rope, a cold sea-green ghost-light glowing faintly through it, worked in grey-green, black and dull gold, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    },
+    "wardens": {
+      "file": "wardens",
+      "size": "square_hd",
+      "mode": "text",
+      "framing": "A single thin ornate circular token-border ring, floating on a completely solid flat pure magenta (#ff00ff) background that ALSO fills the entire circular center of the ring, so the only non-magenta thing in the image is the slim decorative ring band itself. The ring: an ancient machine border of dark stone set with worn brass plates and interlocking ring-gears, a faint pale lift-glow between the plates, worked in basalt grey, old brass and pale blue-white light, no letters or runes, thin band, perfectly centered, symmetrical, top-down flat view. No portrait, no scene, nothing inside the ring - just pure magenta. No text."
+    }
+  }
+}
