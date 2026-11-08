@@ -2,8 +2,9 @@
   "slug": "naama",
   "out": ".",
   "style": "painterly",
+  "ancestry": "fetchling",
   "anchor": "full",
-  "character": "A lean fetchling woman, about twenty-eight, shadow-grey skin, silver eyes with no visible pupils, short black hair. Very still, face blank and watchful.",
+  "character": "A lean woman, about twenty-eight, short-cropped hair. Very still, face blank and watchful.",
   "wardrobe": "Close-fitting dark sailor's clothes, bare feet, two daggers worn crosswise at the small of her back.",
   "shots": {
     "full": {
