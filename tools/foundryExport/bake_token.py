@@ -54,6 +54,82 @@ def _annulus_mask(size, inner_frac, feather):
     return m.filter(ImageFilter.GaussianBlur(feather)) if feather else m
 
 
+def solidify(cut_path, out=None, floor=24, close=5):
+    """Make a cut frame's ring solid: the magenta key leaves ring pixels whose
+    colour sits near the key half-transparent, so a portrait shows through the
+    band. Every pixel above `floor` alpha, with small gaps closed, becomes opaque."""
+    im = Image.open(cut_path).convert("RGBA")
+    m = im.split()[3].point(lambda v: 255 if v > floor else 0)
+    m = m.filter(ImageFilter.MaxFilter(close)).filter(ImageFilter.MinFilter(close))   # close pinholes
+    im.putalpha(m.filter(ImageFilter.GaussianBlur(0.6)))
+    im.save(out or cut_path)
+    return out or cut_path
+
+
+def _ring_hole(frame_alpha):
+    """(cx, cy, r) of the transparent hole inside a placed frame: the region
+    round the canvas centre that the ring encloses. r reaches the hole's
+    furthest edge, so the portrait meets the band with no gap and the band,
+    being solid, hides the overlap."""
+    size = frame_alpha.width
+    m = frame_alpha.point(lambda v: 255 if v > 128 else 0)
+    ImageDraw.floodfill(m, (size // 2, size // 2), 128)
+    hole = m.point(lambda v: 255 if v == 128 else 0)
+    bb = hole.getbbox()
+    if not bb or (bb[2] - bb[0]) > size * 0.98:       # leaked: the ring is not closed
+        return None
+    return (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2, max(bb[2] - bb[0], bb[3] - bb[1]) / 2 + 2
+
+
+def _ring_inside(alpha, cx, cy, rays=360):
+    """The region inside a placed frame's band, as an L mask, or None.
+
+    Along each ray from (cx, cy) the band is the longest run of opaque pixels;
+    its start is the inside edge. The centre is first re-found from the band's
+    top and bottom edges, since a frame with drips or a badge sits off its box."""
+    import math
+    size = alpha.width
+    a = alpha.point(lambda v: 255 if v > 128 else 0).load()
+
+    def edge(theta, cx, cy):
+        best, start, run_start, run = (0, None), None, None, 0
+        r = 0
+        while True:
+            x, y = int(cx + r * math.cos(theta)), int(cy + r * math.sin(theta))
+            if not (0 <= x < size and 0 <= y < size):
+                break
+            if a[x, y]:
+                if run_start is None:
+                    run_start = r
+                run += 1
+            else:
+                if run_start is not None and run > best[0]:
+                    best = (run, run_start)
+                run_start, run = None, 0
+            r += 1
+        if run_start is not None and run > best[0]:
+            best = (run, run_start)
+        return best[1]
+
+    for _ in range(2):                                  # settle the centre on the band
+        up, down = edge(-math.pi / 2, cx, cy), edge(math.pi / 2, cx, cy)
+        left, right = edge(math.pi, cx, cy), edge(0, cx, cy)
+        if None in (up, down, left, right):
+            return None
+        cy += (down - up) / 2
+        cx += (right - left) / 2
+    pts = []
+    for k in range(rays):
+        t = 2 * math.pi * k / rays
+        r = edge(t, cx, cy)
+        if r is None:
+            return None
+        pts.append((cx + (r + 3) * math.cos(t), cy + (r + 3) * math.sin(t)))
+    m = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(m).polygon(pts, fill=255)
+    return m
+
+
 def _has_alpha(img):
     if img.mode != "RGBA":
         return False
@@ -93,6 +169,7 @@ def prep(frame_in, out, hue=None, hue_tol=26, sat_min=55, feather=1.5, despill=T
         cut.putalpha(cut.split()[3].filter(ImageFilter.GaussianBlur(feather)))
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     cut.save(out)
+    solidify(out)            # the key leaves near-key colours half-transparent; make the ring solid
     return out, hue
 
 
@@ -118,40 +195,43 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
     there, so a head or an arm breaks the border."""
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     p = _framed(portrait, size, zoom, dy)
-    # Portrait sits inside the ring (0.96 radius) so the band always overlaps its
-    # rim and the art never spills past the frame. A frame with ornaments above or
-    # below the ring (a badge on top, drips under it) is taller than it is wide;
-    # the auto-fit then shrinks the ring, so the portrait shrinks with the ring's
-    # WIDTH, which is the ring itself.
-    radius = 0.96
-    if frame:
-        f0 = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
-        if frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f0)):
-            bb = f0.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
-            if bb and (bb[3] - bb[1]) > (bb[2] - bb[0]):
-                radius = 0.96 * (bb[2] - bb[0]) / (bb[3] - bb[1])
-    # ring < 0.995 draws the frame smaller than the token and ring_dy moves it down,
-    # leaving room above it for a pop-out head; the portrait circle follows the ring.
-    canvas.paste(p, (0, 0), _circle_mask(size, feather, radius * ring / 0.995, 0.5 + ring_dy))
+    placed = None                                       # the frame as drawn on this token
     if frame:
         f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
-        use_alpha = frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f))
-        if use_alpha:
-            # Auto-fit: scale the ring so its opaque extent reaches the token edge,
-            # regardless of how large the model drew it. Then composite its own alpha.
-            # Threshold the alpha first so faint key remnants don't inflate the bbox.
+        if frame_mode == "alpha" or (frame_mode == "auto" and _has_alpha(f)):
+            # Auto-fit: scale the ring so its opaque extent fills `ring` of the token
+            # (ring < 0.995 leaves room above it for a pop-out head; ring_dy moves it down).
             bbox = f.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
+            placed = Image.new("RGBA", (size, size), (0, 0, 0, 0))
             if bbox:
                 bw, bh = bbox[2] - bbox[0], bbox[3] - bbox[1]
                 scale = (size * ring) / max(bw, bh)
                 rimg = f.crop(bbox).resize((max(1, round(bw * scale)), max(1, round(bh * scale))), Image.LANCZOS)
-                f = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-                f.paste(rimg, ((size - rimg.width) // 2, (size - rimg.height) // 2 + round(ring_dy * size)), rimg)
-            canvas = Image.alpha_composite(canvas, f)        # exact: frame's own alpha
-        else:
-            ring = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-            ring.paste(f, (0, 0), _annulus_mask(size, inner, feather))
-            canvas = Image.alpha_composite(canvas, ring)
+                placed.paste(rimg, ((size - rimg.width) // 2, (size - rimg.height) // 2 + round(ring_dy * size)), rimg)
+    # The portrait is cut to the inside of the ring, the way a magic wand on the
+    # ring's hole would: flood-fill the hole, grow it a few pixels so it tucks
+    # under the band, and keep only that. Nothing of the portrait reaches outside
+    # the ring. Without a closed ring, a circle of `ring` size stands in.
+    # The portrait is cut to the inside of the ring. Rays go out from the ring's
+    # centre; along each, the band is the longest unbroken stretch of frame (a
+    # thin rope line or a tiny airship inside the ring is a short one), and the
+    # portrait reaches 3 px under the band's inner edge. Frame bits nearer the
+    # centre than the band are erased, so nothing sits on the face.
+    mask = None
+    if placed is not None:
+        inside = _ring_inside(placed.split()[3], size // 2, size * (0.5 + ring_dy))
+        if inside is not None:
+            mask = inside.filter(ImageFilter.MaxFilter(7)).filter(ImageFilter.GaussianBlur(feather))
+            placed.putalpha(ImageChops.multiply(placed.split()[3], ImageChops.invert(inside.filter(ImageFilter.MinFilter(5)))))
+    if mask is None:
+        mask = _circle_mask(size, feather, 0.96 * ring / 0.995, 0.5 + ring_dy)
+    canvas.paste(p, (0, 0), mask)
+    if placed is not None:
+        canvas = Image.alpha_composite(canvas, placed)
+    elif frame:
+        rg = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+        rg.paste(f, (0, 0), _annulus_mask(size, inner, feather))
+        canvas = Image.alpha_composite(canvas, rg)
     if cutout and pop:
         c = _framed(cutout, size, zoom, dy)
         box = Image.new("L", (size, size), 0)
@@ -167,7 +247,19 @@ def bake(portrait, frame, out, size=512, inner=0.84, feather=1.0, frame_mode="au
     return out
 
 
-def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, head_top=0.015, zoom=1.0):
+def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, head_top=0.015, zoom=None):
+    """Bake with the head over the frame. A head that sits low in its art cannot
+    rise far at zoom 1 without the portrait leaving the ring's bottom bare, so
+    zoom in a step at a time until the head clears the band."""
+    ring_top = 0.5 + ring_dy - ring / 2
+    steps = [zoom] if zoom else [1.0, 1.1, 1.2, 1.3]
+    for z in steps:
+        res = _head_pop(portrait, frame, cutout, out, size, ring, ring_dy, head_top, z)
+        if res[2] < ring_top - 0.01 or z == steps[-1]:
+            return res[0], res[1] + ("" if z == 1.0 else f", zoom {z}")
+
+
+def _head_pop(portrait, frame, cutout, out, size, ring, ring_dy, head_top, zoom):
     """Bake with the head lifted over the frame, worked out from the cut-out.
 
     The figure is moved so the top of its head sits head_top below the token's
@@ -179,10 +271,23 @@ def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, hea
     w = c.width
     rows = [sum(1 for x in range(0, w, 2) if c.getpixel((x, y))) for y in range(c.height)]
     top = next((y for y, n in enumerate(rows) if n > w * 0.01), 0)
-    if top < size * 0.01:
-        return bake(portrait, frame, out, size, cutout=None, zoom=zoom), "head cut off in the art: plain"
-    dy = head_top - top / size
-    xs = sorted({x for y in range(top, min(c.height, top + int(size * 0.12))) for x in range(0, w, 2) if c.getpixel((x, y))})
+    clipped = top < size * 0.01
+    # place by the head itself: its first row wider than a seventh of the token,
+    # so a horn or an ear above it does not decide where the head goes
+    wide = next((y for y, n in enumerate(rows) if n * 2 > w / 7 and y >= top), top)
+    ring_top = 0.5 + ring_dy - ring / 2
+    # the head's first wide row goes just above the band; a horn or ear above it
+    # may run off the token's top. The portrait must still reach the ring's bottom.
+    dy = 0.0 if clipped else ring_top - 0.05 - wide / size
+    dy = max(dy, (0.5 + ring_dy + ring / 2 - 0.07) - (0.5 + zoom / 2))      # 0.07: the band's own depth
+    # the head's width: the top 12% of the figure, or deeper while that is only a
+    # horn or an ear (narrower than a sixth of the token)
+    depth = 0.12
+    while True:
+        xs = sorted({x for y in range(top, min(c.height, top + int(size * depth))) for x in range(0, w, 2) if c.getpixel((x, y))})
+        if depth >= 0.3 or (xs and xs[-1] - xs[0] > size / 6):
+            break
+        depth += 0.03
     # the head is the widest run of columns; a stray bit of the cut-out (a bird, a
     # lantern) near the top is its own run and stays inside the ring
     runs, start = [], xs[0]
@@ -214,7 +319,7 @@ def head_pop(portrait, frame, cutout, out, size=512, ring=0.9, ring_dy=0.06, hea
             band_bottom = max(band_bottom, run_end)
     box = (x0, 0.0, x1, band_bottom / size + 0.02)
     bake(portrait, frame, out, size, cutout=cutout, pop=[box], zoom=zoom, dy=dy, ring=ring, ring_dy=ring_dy)
-    return out, f"head popped (dy {dy:+.3f})"
+    return out, ("head cut off in the art: popped in place" if clipped else f"head popped (dy {dy:+.3f})"), wide / size + dy
 
 
 def _resolve_frame(val, frames_dir):
@@ -268,6 +373,10 @@ def main():
     z.add_argument("--feather", type=float, default=1.0)
     z.add_argument("--frame-mode", default="auto", choices=["auto", "alpha", "annulus"])
 
+    so = sub.add_parser("solidify", help="Make a cut frame's ring solid (no half-transparent band).")
+    so.add_argument("frames", nargs="+")
+    so.add_argument("--floor", type=int, default=24, help="Alpha above this becomes opaque (90 for a frame with a soft drop shadow).")
+
     h = sub.add_parser("headpop", help="Bake tokens with the head lifted over the frame, from cut-outs.")
     h.add_argument("--portraits", required=True, help="Folder of <slug>.png portraits.")
     h.add_argument("--cutouts", required=True, help="Folder of the same portraits with the background removed (<slug>-cutout.png or <slug>.png).")
@@ -277,8 +386,13 @@ def main():
     h.add_argument("--size", type=int, default=512)
 
     a = ap.parse_args()
+    if a.cmd == "solidify":
+        for f in a.frames:
+            print(solidify(f, floor=a.floor))
+        return
     if a.cmd == "headpop":
         groups = json.load(open(a.map, encoding="utf-8"))
+        hand = groups.pop("_by_hand", {})
         for fr, slugs in groups.items():
             frame = _resolve_frame(fr, a.frames)
             for slug in slugs:
@@ -288,7 +402,10 @@ def main():
                     print(f"{slug}: no cut-out, skipped")
                     continue
                 _, msg = head_pop(os.path.join(a.portraits, slug + ".png"), frame, cut,
-                                  os.path.join(a.out, slug + ".png"), a.size)
+                                  os.path.join(a.out, slug + ".png"), a.size,
+                                  zoom=1.0 if slug in hand else None)
+                if slug in hand:
+                    msg += f"  [by hand: {hand[slug]}]"
                 print(f"{slug} [{fr}]: {msg}")
         return
     if a.cmd == "prep":

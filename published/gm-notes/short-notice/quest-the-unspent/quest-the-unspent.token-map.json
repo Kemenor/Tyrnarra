@@ -1,8 +1,41 @@
 {
-  "lautara": ["ankhes-khata", "hangas", "ozhra", "patala-latasi", "shab", "tarrek"],
-  "redsail": ["naama", "redsail", "teofoga", "togafiti"],
-  "ninehulls": ["halfpenny"],
-  "freeboard": ["odile-brasshand", "pell", "rosalba", "nohea", "ottavia", "holdfast", "kahu"],
-  "skysail": ["kesti-downdraft", "old-hobb", "graca", "jowan", "ilta"],
-  "unspent-keepers": ["merrin"]
+  "lautara": [
+    "ankhes-khata",
+    "hangas",
+    "ozhra",
+    "patala-latasi",
+    "shab",
+    "tarrek"
+  ],
+  "redsail": [
+    "naama",
+    "redsail",
+    "teofoga",
+    "togafiti"
+  ],
+  "ninehulls": [
+    "halfpenny"
+  ],
+  "freeboard": [
+    "odile-brasshand",
+    "pell",
+    "rosalba",
+    "nohea",
+    "ottavia",
+    "holdfast",
+    "kahu"
+  ],
+  "skysail": [
+    "kesti-downdraft",
+    "old-hobb",
+    "graca",
+    "jowan",
+    "ilta"
+  ],
+  "unspent-keepers": [
+    "merrin"
+  ],
+  "_by_hand": {
+    "hangas": "a tall horn over a low face: re-bake with --zoom 1.0 (horn over the ring) or finish in Pinta from hangas-cutout.png"
+  }
 }
