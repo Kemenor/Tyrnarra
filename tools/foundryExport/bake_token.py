@@ -471,6 +471,8 @@ def main():
         groups = json.load(open(a.map, encoding="utf-8"))
         hand = groups.pop("_by_hand", {})
         for fr, slugs in groups.items():
+            if fr.startswith("_"):                    # notes such as "_troops", not a frame
+                continue
             frame = _resolve_frame(fr, a.frames)
             for slug in slugs:
                 cut = next((os.path.join(a.cutouts, slug + e) for e in ("-cutout.png", ".png")

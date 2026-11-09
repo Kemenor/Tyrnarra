@@ -129,6 +129,18 @@
   "anchorX": 0.5,
   "anchorY": 0.5
  },
+ "Redsail's Boarders": {
+  "file": "redsail-boarders.png?v=82ebd3d5",
+  "scale": 1.308,
+  "anchorX": 0.469,
+  "anchorY": 0.605
+ },
+ "Redsail's Gun Crew": {
+  "file": "redsail-gun-crew.png?v=5f91f1c7",
+  "scale": 1.308,
+  "anchorX": 0.469,
+  "anchorY": 0.605
+ },
  "Rosalba out of the Fairturn": {
   "file": "rosalba.png?v=0c88a401",
   "scale": 1.313,

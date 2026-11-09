@@ -100,6 +100,16 @@
     "anchorX": 0.5,
     "anchorY": 0.5
   },
+  "redsail-boarders": {
+    "scale": 1.308,
+    "anchorX": 0.469,
+    "anchorY": 0.605
+  },
+  "redsail-gun-crew": {
+    "scale": 1.308,
+    "anchorX": 0.469,
+    "anchorY": 0.605
+  },
   "rosalba": {
     "scale": 1.313,
     "anchorX": 0.501,

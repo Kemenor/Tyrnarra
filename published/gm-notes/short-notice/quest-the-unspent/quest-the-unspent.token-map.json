@@ -40,5 +40,10 @@
     "hangas": "finished by hand in Pinta: tokens/layers/hangas/hangas.ora; exported with bake_token.export_ora, headpop leaves it alone",
     "togafiti": "finished by hand in Pinta: tokens/layers/togafiti/togafitistep.ora; exported with bake_token.export_ora, headpop leaves it alone",
     "redsail": "finished by hand in Pinta: tokens/layers/redsail/Redsail-cutout.ora; exported with bake_token.export_ora, headpop leaves it alone"
+  },
+  "_troops": {
+    "redsail-boarders": "redsail",
+    "redsail-gun-crew": "redsail",
+    "_how": "square crop of the -full group shot, zoom 0.8 dy 0.13, ring 0.86 lowered 0.07; weapons rising over the upper band popped from the rembg cut-out"
   }
 }
