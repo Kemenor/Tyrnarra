@@ -401,11 +401,11 @@ def main():
                 if not cut:
                     print(f"{slug}: no cut-out, skipped")
                     continue
+                if slug in hand:                      # finished by hand: never overwritten
+                    print(f"{slug} [{fr}]: by hand, left alone ({hand[slug]})")
+                    continue
                 _, msg = head_pop(os.path.join(a.portraits, slug + ".png"), frame, cut,
-                                  os.path.join(a.out, slug + ".png"), a.size,
-                                  zoom=1.0 if slug in hand else None)
-                if slug in hand:
-                    msg += f"  [by hand: {hand[slug]}]"
+                                  os.path.join(a.out, slug + ".png"), a.size)
                 print(f"{slug} [{fr}]: {msg}")
         return
     if a.cmd == "prep":
