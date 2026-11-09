@@ -88,7 +88,7 @@ def _ring_inside(alpha, cx, cy, rays=360):
     its start is the inside edge. The centre is first re-found from the band's
     top and bottom edges, since a frame with drips or a badge sits off its box."""
     import math
-    size = alpha.width
+    size, height = alpha.size
     a = alpha.point(lambda v: 255 if v > 128 else 0).load()
 
     def edge(theta, cx, cy):
@@ -96,7 +96,7 @@ def _ring_inside(alpha, cx, cy, rays=360):
         r = 0
         while True:
             x, y = int(cx + r * math.cos(theta)), int(cy + r * math.sin(theta))
-            if not (0 <= x < size and 0 <= y < size):
+            if not (0 <= x < size and 0 <= y < height):
                 break
             if a[x, y]:
                 if run_start is None:
@@ -125,9 +125,86 @@ def _ring_inside(alpha, cx, cy, rays=360):
         if r is None:
             return None
         pts.append((cx + (r + 3) * math.cos(t), cy + (r + 3) * math.sin(t)))
-    m = Image.new("L", (size, size), 0)
+    m = Image.new("L", (size, height), 0)
     ImageDraw.Draw(m).polygon(pts, fill=255)
     return m
+
+
+def ring_geometry(alpha, guess=None):
+    """(cx, cy, outer diameter) in pixels of the ring in a frame's alpha: the
+    centre of its hole, and the band's outer edge averaged over the four axes.
+    Thin bits hanging off the band (lanterns, hooks) are opened away first."""
+    w, h = alpha.size
+    guess = guess or (w // 2, h // 2)
+    inside = _ring_inside(alpha, guess[0], guess[1])
+    if inside is None:
+        return None
+    hb = inside.getbbox()
+    cx, cy = (hb[0] + hb[2]) / 2, (hb[1] + hb[3]) / 2
+    a = alpha.point(lambda v: 255 if v > 128 else 0)
+    k = max(3, w // 64) | 1
+    a = a.filter(ImageFilter.MinFilter(k)).filter(ImageFilter.MaxFilter(k))
+    start = (hb[2] - hb[0]) / 2 - 4
+
+    def out_edge(dx, dy):
+        r, last = int(start), None
+        while True:
+            x, y = int(cx + dx * r), int(cy + dy * r)
+            if not (0 <= x < w and 0 <= y < h):
+                break
+            if a.getpixel((x, y)):
+                last = r
+            elif last is not None and r - last > 3:
+                break
+            r += 1
+        return last or r
+    return cx, cy, (out_edge(1, 0) + out_edge(-1, 0) + out_edge(0, 1) + out_edge(0, -1)) / 2
+
+
+def foundry_texture(token_png, ring_alpha, offset=(0, 0)):
+    """{scale, anchorX, anchorY} for a token: the ring fills one grid square and
+    sits on it, so a pop-out reaches past. ring_alpha is the ring as placed (the
+    token's own frame layer), offset moves it into the token's canvas."""
+    tw, th = Image.open(token_png).size
+    g = ring_geometry(ring_alpha)
+    if g is None:
+        return None
+    cx, cy, d = g
+    k = tw / ring_alpha.width if ring_alpha.width == ring_alpha.height else 1.0
+    cx, cy, d = (cx + offset[0]) * k, (cy + offset[1]) * k, d * k
+    return {"scale": round(tw / d, 3), "anchorX": round(cx / tw, 3), "anchorY": round(cy / th, 3)}
+
+
+def export_ora(ora, out, ring_layer="data/layer1.png", size=512, margin=8):
+    """A hand-made token (a Pinta/Krita .ora) -> a square PNG centred on its ring,
+    big enough that nothing that breaks out of the ring is clipped, and the
+    Foundry texture {scale, anchorX, anchorY} for it (anchor is the centre, since
+    the canvas is built round the ring). ring_layer is the layer holding the ring."""
+    import zipfile, io
+    z = zipfile.ZipFile(ora)
+    merged = Image.open(io.BytesIO(z.read("mergedimage.png"))).convert("RGBA")
+    ring_a = Image.open(io.BytesIO(z.read(ring_layer))).convert("RGBA").split()[3]
+    bb = ring_a.point(lambda v: 255 if v > 128 else 0).getbbox()
+    cx, cy, d = ring_geometry(ring_a, ((bb[0] + bb[2]) // 2, (bb[1] + bb[3]) // 2))
+    cb = merged.split()[3].point(lambda v: 255 if v > 16 else 0).getbbox()
+    half = max(cx - cb[0], cb[2] - cx, cy - cb[1], cb[3] - cy) + margin
+    side = int(round(2 * half))
+    sq = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    sq.alpha_composite(merged, (int(round(side / 2 - cx)), int(round(side / 2 - cy))))
+    sq.resize((size, size), Image.LANCZOS).save(out)
+    return {"scale": round(side / d, 3), "anchorX": 0.5, "anchorY": 0.5}
+
+
+def placed_frame(frame, size=512, ring=0.995, ring_dy=0.0):
+    """The frame's alpha as bake() draws it on a token of `size`."""
+    f = Image.open(frame).convert("RGBA").resize((size, size), Image.LANCZOS)
+    bb = f.split()[3].point(lambda v: 255 if v > 128 else 0).getbbox()
+    bw, bh = bb[2] - bb[0], bb[3] - bb[1]
+    sc = (size * ring) / max(bw, bh)
+    r = f.crop(bb).resize((max(1, round(bw * sc)), max(1, round(bh * sc))), Image.LANCZOS)
+    out = Image.new("L", (size, size), 0)
+    out.paste(r.split()[3], ((size - r.width) // 2, (size - r.height) // 2 + round(ring_dy * size)))
+    return out
 
 
 def _has_alpha(img):

@@ -36,7 +36,9 @@
     "merrin"
   ],
   "_by_hand": {
-    "hangas": "finished by hand in Pinta: tokens/layers/hangas/hangas.ora; headpop leaves tokens/hangas.png alone",
-    "togafiti": "finished by hand in Pinta: tokens/layers/togafiti/togafitistep.ora (stepping out of the ring); headpop leaves tokens/togafiti.png alone"
+    "ninehulls": "finished by hand in Pinta: tokens/layers/ninehulls/ninehulls.ora; exported with bake_token.export_ora, headpop leaves it alone",
+    "hangas": "finished by hand in Pinta: tokens/layers/hangas/hangas.ora; exported with bake_token.export_ora, headpop leaves it alone",
+    "togafiti": "finished by hand in Pinta: tokens/layers/togafiti/togafitistep.ora; exported with bake_token.export_ora, headpop leaves it alone",
+    "redsail": "finished by hand in Pinta: tokens/layers/redsail/Redsail-cutout.ora; exported with bake_token.export_ora, headpop leaves it alone"
   }
 }

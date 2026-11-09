@@ -1,0 +1,128 @@
+{
+  "_about": "Foundry token texture per token: scale = image width / ring diameter, anchor = the ring's centre as a fraction of the image, so every ring fills one grid square and sits on it while pop-outs reach past. pf2e Auto-scale must be off on these tokens. Measured by bake_token.foundry_texture.",
+  "ankhes-khata": {
+    "scale": 1.122,
+    "anchorX": 0.499,
+    "anchorY": 0.558
+  },
+  "graca": {
+    "scale": 1.205,
+    "anchorX": 0.505,
+    "anchorY": 0.553
+  },
+  "halfpenny": {
+    "scale": 1.346,
+    "anchorX": 0.444,
+    "anchorY": 0.592
+  },
+  "hangas": {
+    "scale": 1.333,
+    "anchorX": 0.5,
+    "anchorY": 0.5
+  },
+  "holdfast": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "ilta": {
+    "scale": 1.205,
+    "anchorX": 0.505,
+    "anchorY": 0.553
+  },
+  "jowan": {
+    "scale": 1.205,
+    "anchorX": 0.505,
+    "anchorY": 0.553
+  },
+  "kahu": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "kesti-downdraft": {
+    "scale": 1.205,
+    "anchorX": 0.505,
+    "anchorY": 0.553
+  },
+  "merrin": {
+    "scale": 1.122,
+    "anchorX": 0.498,
+    "anchorY": 0.559
+  },
+  "naama": {
+    "scale": 1.249,
+    "anchorX": 0.466,
+    "anchorY": 0.596
+  },
+  "ninehulls": {
+    "scale": 1.154,
+    "anchorX": 0.5,
+    "anchorY": 0.5
+  },
+  "nohea": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "odile-brasshand": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "old-hobb": {
+    "scale": 1.205,
+    "anchorX": 0.505,
+    "anchorY": 0.553
+  },
+  "ottavia": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "ozhra": {
+    "scale": 1.122,
+    "anchorX": 0.499,
+    "anchorY": 0.558
+  },
+  "patala-latasi": {
+    "scale": 1.122,
+    "anchorX": 0.499,
+    "anchorY": 0.558
+  },
+  "pell": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "redsail": {
+    "scale": 1.772,
+    "anchorX": 0.5,
+    "anchorY": 0.5
+  },
+  "rosalba": {
+    "scale": 1.313,
+    "anchorX": 0.501,
+    "anchorY": 0.551
+  },
+  "shab": {
+    "scale": 1.122,
+    "anchorX": 0.499,
+    "anchorY": 0.558
+  },
+  "tarrek": {
+    "scale": 1.122,
+    "anchorX": 0.499,
+    "anchorY": 0.558
+  },
+  "teofoga": {
+    "scale": 1.249,
+    "anchorX": 0.466,
+    "anchorY": 0.596
+  },
+  "togafiti": {
+    "scale": 1.375,
+    "anchorX": 0.5,
+    "anchorY": 0.5
+  }
+}
