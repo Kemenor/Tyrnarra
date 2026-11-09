@@ -10,235 +10,151 @@
   if (!game.user.isGM) return ui.notifications.error("Run this macro as the GM.");
   const FOLDER = "The Unspent", BASE = "worlds/heavens-dragons/assets/the-unspent/tokens/", MAP = {
  "Ankhes Khata": {
-  "file": "ankhes-khata.png",
+  "file": "ankhes-khata.png?v=2fb88655",
   "scale": 1.122,
   "anchorX": 0.499,
   "anchorY": 0.558
  },
- "Graça": {
-  "file": "graca.png",
-  "scale": 1.205,
-  "anchorX": 0.505,
-  "anchorY": 0.553
- },
  "Graça out of the Main": {
-  "file": "graca.png",
+  "file": "graca.png?v=86cc6fa0",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
  },
  "Halfpenny": {
-  "file": "halfpenny.png",
+  "file": "halfpenny.png?v=03b4a5cf",
   "scale": 1.346,
   "anchorX": 0.444,
   "anchorY": 0.592
  },
  "Hangas": {
-  "file": "hangas.png",
+  "file": "hangas.png?v=589543bc",
   "scale": 1.333,
   "anchorX": 0.5,
   "anchorY": 0.5
  },
  "Holdfast": {
-  "file": "holdfast.png",
+  "file": "holdfast.png?v=a79dedac",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
  "Ilta out of the Fore": {
-  "file": "ilta.png",
-  "scale": 1.205,
-  "anchorX": 0.505,
-  "anchorY": 0.553
- },
- "Ilta": {
-  "file": "ilta.png",
-  "scale": 1.205,
-  "anchorX": 0.505,
-  "anchorY": 0.553
- },
- "Jowan": {
-  "file": "jowan.png",
+  "file": "ilta.png?v=c879365b",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
  },
  "Jowan out of the Jigger": {
-  "file": "jowan.png",
+  "file": "jowan.png?v=8d9a02ae",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
  },
  "Kahu out of the Low Hatch": {
-  "file": "kahu.png",
-  "scale": 1.313,
-  "anchorX": 0.501,
-  "anchorY": 0.551
- },
- "Kahu": {
-  "file": "kahu.png",
+  "file": "kahu.png?v=adc5f181",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
  "Kesti Downdraft": {
-  "file": "kesti-downdraft.png",
+  "file": "kesti-downdraft.png?v=85a2603d",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
  },
  "Merrin out of the Jigger": {
-  "file": "merrin.png",
-  "scale": 1.122,
-  "anchorX": 0.498,
-  "anchorY": 0.559
- },
- "Merrin": {
-  "file": "merrin.png",
+  "file": "merrin.png?v=5552cee1",
   "scale": 1.122,
   "anchorX": 0.498,
   "anchorY": 0.559
  },
  "Naama out of Solkai": {
-  "file": "naama.png",
-  "scale": 1.249,
-  "anchorX": 0.466,
-  "anchorY": 0.596
- },
- "Naama": {
-  "file": "naama.png",
+  "file": "naama.png?v=0ee70ac5",
   "scale": 1.249,
   "anchorX": 0.466,
   "anchorY": 0.596
  },
  "Ninehulls": {
-  "file": "ninehulls.png",
+  "file": "ninehulls.png?v=8d8e80ed",
   "scale": 1.154,
   "anchorX": 0.5,
   "anchorY": 0.5
  },
  "Nohea out of the Lost Property": {
-  "file": "nohea.png",
-  "scale": 1.313,
-  "anchorX": 0.501,
-  "anchorY": 0.551
- },
- "Nohea": {
-  "file": "nohea.png",
+  "file": "nohea.png?v=295fb767",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
  "Odile Brasshand": {
-  "file": "odile-brasshand.png",
+  "file": "odile-brasshand.png?v=a17ce766",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
- "Old Hobb": {
-  "file": "old-hobb.png",
-  "scale": 1.205,
-  "anchorX": 0.505,
-  "anchorY": 0.553
- },
  "Old Hobb out of the Jigger": {
-  "file": "old-hobb.png",
+  "file": "old-hobb.png?v=a67b1fb8",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
  },
  "Ottavia out of Namur": {
-  "file": "ottavia.png",
+  "file": "ottavia.png?v=f9443eb3",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
- },
- "Ottavia": {
-  "file": "ottavia.png",
-  "scale": 1.313,
-  "anchorX": 0.501,
-  "anchorY": 0.551
- },
- "Ozhra": {
-  "file": "ozhra.png",
-  "scale": 1.122,
-  "anchorX": 0.499,
-  "anchorY": 0.558
  },
  "Master Ozhra": {
-  "file": "ozhra.png",
+  "file": "ozhra.png?v=f1721c85",
   "scale": 1.122,
   "anchorX": 0.499,
   "anchorY": 0.558
  },
  "Patala Latasi": {
-  "file": "patala-latasi.png",
+  "file": "patala-latasi.png?v=9f2a72ac",
   "scale": 1.122,
   "anchorX": 0.499,
   "anchorY": 0.558
  },
- "Pell": {
-  "file": "pell.png",
-  "scale": 1.313,
-  "anchorX": 0.501,
-  "anchorY": 0.551
- },
  "Pell out of the Spar": {
-  "file": "pell.png",
+  "file": "pell.png?v=573e1cae",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
  "Redsail": {
-  "file": "redsail.png",
+  "file": "redsail.png?v=b6d9b953",
   "scale": 1.772,
   "anchorX": 0.5,
   "anchorY": 0.5
  },
  "Rosalba out of the Fairturn": {
-  "file": "rosalba.png",
-  "scale": 1.313,
-  "anchorX": 0.501,
-  "anchorY": 0.551
- },
- "Rosalba": {
-  "file": "rosalba.png",
+  "file": "rosalba.png?v=0c88a401",
   "scale": 1.313,
   "anchorX": 0.501,
   "anchorY": 0.551
  },
  "Shab": {
-  "file": "shab.png",
+  "file": "shab.png?v=ee0e9c35",
   "scale": 1.122,
   "anchorX": 0.499,
   "anchorY": 0.558
  },
  "Tarrek": {
-  "file": "tarrek.png",
+  "file": "tarrek.png?v=09cb5d53",
   "scale": 1.122,
   "anchorX": 0.499,
   "anchorY": 0.558
  },
  "Teofoga out of Hringseyja": {
-  "file": "teofoga.png",
+  "file": "teofoga.png?v=8f4e0c80",
   "scale": 1.249,
   "anchorX": 0.466,
   "anchorY": 0.596
- },
- "Teofoga": {
-  "file": "teofoga.png",
-  "scale": 1.249,
-  "anchorX": 0.466,
-  "anchorY": 0.596
- },
- "Togafiti": {
-  "file": "togafiti.png",
-  "scale": 1.375,
-  "anchorX": 0.5,
-  "anchorY": 0.5
  },
  "Togafiti out of Rika Tikur": {
-  "file": "togafiti.png",
+  "file": "togafiti.png?v=8bba2afa",
   "scale": 1.375,
   "anchorX": 0.5,
   "anchorY": 0.5
