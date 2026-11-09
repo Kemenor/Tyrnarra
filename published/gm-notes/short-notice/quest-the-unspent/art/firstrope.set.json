@@ -1,0 +1,26 @@
+{
+  "slug": "firstrope",
+  "out": ".",
+  "style": "painterly",
+  "ancestry": "catfolk",
+  "anchor": "full",
+  "character": "A lean long-limbed man of forty-five, tawny fur greying at the muzzle, one ear torn to a notch, rope-burn scars across both palms. A wide grin.",
+  "wardrobe": "A striped sash wound tight over a sleeveless leather jerkin, bare arms, a wooden belaying pin through the sash, nine knotted cords at his belt.",
+  "shots": {
+    "full": {
+      "file": "firstrope-full",
+      "size": "portrait_4_3",
+      "framing": "Full body portrait, front view. Standing easily on the rail of a black-hulled ship, one hand on a rope."
+    },
+    "portrait": {
+      "file": "firstrope",
+      "size": "square_hd",
+      "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
+    },
+    "scene": {
+      "file": "firstrope-scene",
+      "size": "landscape_4_3",
+      "framing": "Knocking the head off a barrel with a belaying pin on a crowded pirate ship's deck, the crew cheering, cannon smoke drifting."
+    }
+  }
+}
