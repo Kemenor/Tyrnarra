@@ -8,22 +8,19 @@
   "wardrobe": "A loose sleeveless blouse gathered at the neckline, a striped apron tied at the waist, old oven burns on her forearms.",
   "shots": {
     "full": {
-      "file": "graca-v2-full",
+      "file": "graca-full",
       "size": "portrait_4_3",
       "framing": "Full body portrait, front view. Standing at the edge of a floating rock island beside a row of café tables, open sky and clouds behind her."
     },
     "portrait": {
-      "file": "graca-v2",
+      "file": "graca",
       "size": "square_hd",
       "framing": "Head and shoulders portrait, square crop, filling the frame, facing the viewer."
     },
     "scene": {
-      "file": "graca-v2-scene",
+      "file": "graca-scene",
       "size": "landscape_4_3",
       "framing": "Carrying a tray of fruit along a row of tables at the very edge of a floating island, hammocks slung out over the open drop, far below a sea of clouds."
     }
-  },
-  "render": {
-    "note": "v2: redone because the first set read as a man; files are graca-v2*, swap in for graca* once chosen"
   }
 }
