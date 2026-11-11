@@ -6,7 +6,7 @@
 
 **Position:** no fixed place. The cities keep mostly to the central Midarra along the north-south crossing, where Solkai's and Rika Tikur's cargo passes. Folk count them with Askamira, since their usual waters lie around the island; the cities answer to no one there, and a Freeboarder counted under Cronus's domain takes it as an insult.
 
-**The cities:** **Freeboard** is a flotilla of hulls stacked into a mountain on the water, ringed by working ships under sail. **Skysail** is four islets in the air, **the Fore, the Main, the Mizzen and the Jigger**, with airships hung beneath them on lines. The two moor together when they can and part when they must.
+**The cities:** **Freeboard** is a flotilla of hulls stacked into a mountain on the water, ringed by working ships under sail. **Skysail** is four islets in the air, **the Fore, the Main, the Mizzen and the Jigger**, with airships riding above them on taut lines. The two moor together when they can and part when they must.
 
 **Character:** a pirate nation in two cities, where everyone aboard has a vote and no captain is safe from it.
 
@@ -67,11 +67,11 @@ The Lower Spar runs from the landing into the stack, and a stranger off a prize 
 
 ## Skysail and the Mooring
 
-> **The sky comes home.** Out in the west, low over the water, there were four islands in the air. They came on slowly. Dark rock underneath, bearded with roots, the edge of a city glinting along the top, and under each one a cluster of airships on long lines, straining, like gulls carrying something too heavy for them and too precious to drop.
+> **The sky comes home.** Out in the west, low over the water, there were four islands in the air. They came on slowly. Dark rock underneath, bearded with roots, the edge of a city glinting along the top, and above each one a cluster of airships on long lines, straining, like gulls carrying something too heavy for them and too precious to drop.
 >
 > Vyrenna Tessek, *One Line Further*, 2527 MR
 
-Skysail is the airship pirates' city, and it began with one rock. About 2270 MR a handful of airship crews moored to a stone already hanging low over the Midarra, the one now called **the Main**, and made it home. They found and woke three more: **the Fore**, **the Mizzen**, **the Jigger**. What holds the islets up is old work, set into the deep rock, and the scholars who have seen drawings of it call it Elden. The sky pirates tend it the way their grandparents showed them. As the city grew heavier than the old work would carry, airships took up the rest: crews hang their ships beneath the islets on long lines, and the lines are always taut.
+Skysail is the airship pirates' city, and it began with one rock. About 2270 MR a handful of airship crews moored to a stone already hanging low over the Midarra, the one now called **the Main**, and made it home. They found and woke three more: **the Fore**, **the Mizzen**, **the Jigger**. What holds the islets up is old work, set into the deep rock, and the scholars who have seen drawings of it call it Elden. The sky pirates tend it the way their grandparents showed them. As the city grew heavier than the old work would carry, airships took up the rest: crews moor their ships above the islets on long lines, riding over the rooftops, and the lines are always taut. Ships at rest, and ships past flying, moor beneath on lines of their own, and the islet carries them.
 
 Skysail is all open. The streets are wide squares of stone with a table and chairs out in front of every door, awnings over them, and hammocks slung between posts, between houses and over the edge itself. The walls are mostly window, and many windows are only openings cut where the wind comes through, so the city hums in any breeze. It keeps the hours of the sun: work in the morning, long afternoons at the tables, lamps along every edge at night. Skiffs carry folk between the four islets.
 
@@ -92,7 +92,7 @@ The sky crews dive their ships into clouds for the feel of it, in blind and whit
 
 The four islets are the hulls of Elden atmospheric vessels (see [`../../timeline.md`](../../timeline.md), *⚿ GM Secret: The Elden: What Happened*), grown over with eight thousand years of dust, root and stone. The old work the sky pirates tend is the ships' engines, run by habit and understood by no one aboard. The marks in the deepest holds, which the Skysailers call *the old writing*, are the Silent Tongue.
 
-The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines beneath are latter-day copies of what they hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world ([`../../cosmology.md`](../../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*).
+The engines were built to lift a hull and its crew, and the city on top is more than they were made for. The airships on the lines above are latter-day copies of what they help hold up, since airship lift descends from Elden ruins. The writing in the holds is in the tongue of the thing bound beneath the world ([`../../cosmology.md`](../../cosmology.md), *⚿ GM Secret: The Corrupted God: True Identity*).
 
 ### The Unspent
 
