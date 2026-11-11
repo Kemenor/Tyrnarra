@@ -61,7 +61,7 @@ The Lower Spar runs from the landing into the stack, and a stranger off a prize 
 
 **The Wash** lies two decks under the Spar, in a hold opened to the sea on purpose. Hatch-covers float in a ring on the black water, lashed loosely together, and the fighters fight on them. A fighter in the water has lost. The Merfolk watch from below with their heads just under the surface, bet through the planks, and fish the loser out for a fee. A bout with both fighters standing at the bell goes to the hands of the crowd. The book is kept by **Holdfast**, a Merfolk man told for a fighter who threw a bout: he took him under and held him there until he agreed to pay.
 
-**The Stillroom** is the alchemist's, below the waterline beside the engines, where the hull is warm. The deck put it there so that a fire in the Stillroom has the sea on the other side of the plank; an axe hangs by the door to let it in. The keeper, **Kahu out of the Low Hatch**, has her own hatch to the pods, and buys weed, eel-skin and ink from the Merfolk by the bucket.
+**The Stillroom** is the alchemist's, below the waterline beside the engines, where the hull is warm. The deck put it there so that a fire in the Stillroom has the sea on the other side of the plank; an axe hangs behind the counter to let it in. The keeper, **Kahu out of the Low Hatch**, has her own hatch to the pods, and buys weed, eel-skin and ink from the Merfolk by the bucket.
 
 ---
 
