@@ -5,6 +5,11 @@
     "anchorX": 0.499,
     "anchorY": 0.558
   },
+  "firstrope": {
+    "scale": 1.346,
+    "anchorX": 0.444,
+    "anchorY": 0.592
+  },
   "graca": {
     "scale": 1.205,
     "anchorX": 0.505,

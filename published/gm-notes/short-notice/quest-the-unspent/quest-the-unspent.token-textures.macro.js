@@ -16,10 +16,16 @@
   "anchorY": 0.558
  },
  "Graça out of the Main": {
-  "file": "graca.png?v=86cc6fa0",
+  "file": "graca.png?v=b282d051",
   "scale": 1.205,
   "anchorX": 0.505,
   "anchorY": 0.553
+ },
+ "Firstrope": {
+  "file": "firstrope.png?v=ea4e3482",
+  "scale": 1.346,
+  "anchorX": 0.444,
+  "anchorY": 0.592
  },
  "Halfpenny": {
   "file": "halfpenny.png?v=03b4a5cf",
