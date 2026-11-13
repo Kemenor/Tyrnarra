@@ -287,7 +287,7 @@ Mara visits her own floors regularly. She walks the corridors. She opens the doo
 
 **Method on Talan.** She whispers to **the deserving-feeling**: the merchant who thinks he is owed a contract that went to a rival, the heir who got cut out of a will, the explorer who has not been recognised for what she found. Her message: *"Something is buried at [coordinates]. It is not anyone else's. You alone can take it. It is yours by right."*
 
-Some of the caches she whispers about are real. Some are bait: empty pits, or worse. **Either way, the taking binds.** Every cache taken for oneself leaves a Greed-mark on the taker. The mark answers greed, not wages: a share fairly earned and paid out of a cache's sale marks no one, and the hand that takes more than its due is marked. A determined Adventurers' Guild party can recover one of her caches and burn the mark off with the right ritual; most mortals who find a cache do not have the party or the ritual, and the mark sits on them for life.
+Some of the caches she whispers about are real. Some are bait: empty pits, or worse. **Either way, the taking binds.** Every recovered cache leaves a Greed-mark on the taker. A determined Adventurers' Guild party can recover one of her caches and burn the mark off with the right ritual; most mortals who find a cache do not have the party or the ritual, and the mark sits on them for life.
 
 The Adventurers' Guild has a working list of confirmed Goldwake caches and a much longer list of suspected ones. Recovery is technically high-rank work; the bullion alone justifies it; the mark complicates it.
 
