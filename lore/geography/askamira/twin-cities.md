@@ -82,7 +82,7 @@ The sky crews dive their ships into clouds for the feel of it, in blind and whit
 
 ### Around the islets
 
-**The Edge** runs along the drop on the Main: a line of tables with the open air beyond them, hammocks slung over the side from posts sunk in the rock, and a kitchen that serves sky fruit and cold tea through the long afternoon. Skysailers sit with their backs to the drop. The kitchen is **Graça out of the Main**'s. Kesti Downdraft has a table there, and it stays empty while she is away.
+**The Edge** runs along the drop on the Main: a line of tables with the open air beyond them, hammocks slung over the side from posts sunk in the rock, and a kitchen that serves sky fruit and cold tea through the long afternoon. Skysailers sit facing the drop, as if it were a view. The kitchen is **Graça out of the Main**'s. Kesti Downdraft has a table there, and it stays empty while she is away.
 
 **The Ropewalk** hangs under the Jigger on its own lines: the longest room in Skysail, a gallery of planks and netting open to the air, where the airship crews lay new rope the length of the room under **Jowan out of the Jigger**, who knows every line beneath the islet by its weight. The keepers mend the Unspent's lines there, and from the far end of the gallery she hangs close enough to read her name.
 
