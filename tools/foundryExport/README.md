@@ -68,6 +68,25 @@ python upload_foundry.py --dir _stage/the-unspent --campaign short-notice --sub 
 
 Art is resized to `.webp` in `--stage` (gitignored) and referenced only when its file exists, so a re-run after new renders picks the new art up; upload the stage folder again before running the macro. Players get each journal as Observer and every page as None, so the GM reveals pages one at a time (a page's ownership, or "Show Players" on a page); GM secret blocks stay hidden on a revealed page. The macro is **add-only** by default: a journal that already exists keeps every page it has (edits made in Foundry, layout, reveals), and only pages missing by name are added. `--replace` deletes and rebuilds same-named journals instead, losing anything done in Foundry.
 
+## Running scripts in a world: the runner (`foundry_run.py`)
+
+The runner is a headless GM client on the Foundry server, so scripts reach a world from any machine that can ssh to the server, with no browser and no Chrome extension. It joins the running world as the Gamemaster user **Wellspring** (in both worlds), whose password is random and lives only in the launcher's single-sign-on secrets file on the Pi (`tools/sso-password.mjs … random`), so nobody types or sees it. It connects only when asked, without the canvas, and leaves after ten idle minutes, so it does not sit in the player list.
+
+```bash
+python foundry_run.py --status                                    # which world runs, who is in
+python foundry_run.py --campaign short-notice -e 'return game.actors.size'
+python foundry_run.py --campaign furrious-five script.js         # a file: the body of an async function
+python foundry_run.py --campaign short-notice apply-spec spec.json --dry   # what a quest_journal.py --spec would change
+python foundry_run.py --campaign short-notice apply-spec spec.json         # update every page whose HTML differs
+```
+
+- **`return` hands a value back**, as JSON: return plain data (names, ids, counts), not documents. The exit code is 1 when the script threw or could not run; page errors and warnings come back under `console`.
+- **One world runs at a time.** A script for a world that is not running stops with a message; `--switch` has the launcher start it, and the launcher refuses while people are connected.
+- **Players connected:** the runner refuses unless `--live` is given, so it never writes into a session in progress by accident.
+- **`apply-spec`** updates only pages whose HTML differs and lists pages missing in Foundry. Pages laid out by hand in Foundry (the Cast, whose page keeps the converter's HTML in `flags.world.originalHtml`) are never overwritten; a changed source is listed under `customLayoutChanged`.
+
+On the Pi it is the `runner` service in the self-host compose stack (built from [`runner/`](runner/), `pull_policy: never` so the nightly image pull skips it), reached through `<foundry-root>/tools/foundry-run` (`docker exec` into the container; it listens on 127.0.0.1 inside it only). To redeploy after editing `runner/`: rsync it to `~/srv/selfhost/runner/` on the Pi, then `docker compose build runner && docker compose up -d runner` there.
+
 ## Why a macro, not a REST push
 
 A macro runs inside your GM browser with the full `game` API. It needs **no module, no relay server, no API key**, and works on any Foundry server (ours is self-hosted). It ships **zero Paizo stat data**: every actor and item is resolved *by name* from the compendiums your world already has, so the numbers always match your installed system version. The macro is plain text — it lives in the repo next to the quest and is fully inspectable.

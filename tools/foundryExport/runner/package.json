@@ -1,0 +1,8 @@
+{
+  "name": "tyrnarra-foundry-runner",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "playwright-core": "1.49.1"
+  }
+}

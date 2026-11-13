@@ -1,0 +1,5 @@
+#!/bin/bash
+# Host wrapper for the Foundry runner on the Pi (installed as ~/srv/selfhost/foundry-run).
+#   foundry-run --world <id> [--switch] [--live] < script.js
+#   foundry-run --status | --leave
+exec docker exec -i runner node /app/run.mjs "$@"
