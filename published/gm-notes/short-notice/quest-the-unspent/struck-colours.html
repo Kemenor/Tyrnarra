@@ -27,6 +27,8 @@
   .view { margin: 10px 0 16px; text-align: center; }
   .view img { width: 100%; border: 1px solid var(--gm-divider); border-radius: 4px; }
   .ra-aside { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gm-ink-dim); margin-right: 4px; }
+  .check .inv-tabs { margin: 6px 0 4px; }
+  .check .gm-panel { padding-top: 2px; }
 </style>
 </head>
 <body data-page="quest-the-unspent-colours">
@@ -281,12 +283,38 @@
     </div>
     <div class="check">
       <div class="check-head">◈ Investigate: what their skills read off her</div>
-      <div class="check-dc">Exploration (Investigate): Recall Knowledge as a secret check, with any skill that fits, while they look her over or cross to her · roll per player and skill · give each one the line for their skill if they reach its DC</div>
-      <div class="deg"><b><span class="deg-at">DC 20</span> Nature:</b> Gulls ride the wind all round the Jigger, and not one lands on her. The ones that come close veer off at her stern.</div>
-      <div class="deg"><b><span class="deg-at">DC 23</span> Sailing Lore (sky) or Crafting:</b> She hangs nose-down because her weight has shifted aft: cargo or guns slid against the stern and never moved back. Inside her, any door that closes against that lean will have jammed in its frame.</div>
-      <div class="deg"><b><span class="deg-at">DC 25</span> Crafting or Engineering Lore:</b> The swivel guns at her doors are rigged to fire when the doors or the gangway port open, and her own gangway planks are set to drop. Anti-boarder work, the kind a Lord fits to her own flagship.</div>
-      <div class="deg"><b><span class="deg-at">DC 28</span> Religion or Occultism:</b> Rope rots and canvas tears, yet nobody has tended her and she is sound. Something is tending her: the dead held back by an oath can do this, crews still keeping a duty they swore in life. On 38 or more: such dead fight whoever would break the oath and no one else, and this oath was about keeping something in, not keeping people out.</div>
-      <div class="deg"><b><span class="deg-at">DC 30</span> Arcana:</b> Her own lift-work is dead; nothing aboard should carry her a mile, let alone home across the Midarra. Yet her stern pulls faintly upward against its lines, as if something aft still wants to rise.</div>
+      <div class="check-dc">Exploration (Investigate): Recall Knowledge as a secret check while they look her over or cross to her · each player picks a skill; flip to its tab · Nature DC 20 · Sailing Lore (sky) DC 23 · Crafting or Engineering Lore DC 25 · Religion or Occultism DC 28 · Arcana DC 30</div>
+    <div class="gm-tabs inv-tabs"><button class="gm-tab-btn active" data-target="inv-nature">Nature</button><button class="gm-tab-btn" data-target="inv-sailing">Sailing Lore (sky)</button><button class="gm-tab-btn" data-target="inv-crafting">Crafting or Engineering Lore</button><button class="gm-tab-btn" data-target="inv-religion">Religion or Occultism</button><button class="gm-tab-btn" data-target="inv-arcana">Arcana</button></div>
+    <div class="gm-panel active" id="inv-nature">
+      <div class="deg crit-s"><b><span class="deg-at">≥30</span> <span class="stack" title="Read after the tier below" aria-label="read after the tier below">+</span> Critical Success:</b> Nothing lives aboard her at all: no rat on her lines, no moss in her seams, not even mould on the canvas. Whatever is aboard, animals will not go near it.</div>
+      <div class="deg"><b><span class="deg-at">≥20</span> Success:</b> Gulls ride the wind all round the Jigger, and not one lands on her. The ones that come close veer off at her stern.</div>
+      <div class="deg"><b><span class="deg-at">11 to 19</span> Failure:</b> A quiet ship. Nothing more.</div>
+      <div class="deg crit-f"><b><span class="deg-at">≤10</span> Critical Failure:</b> The gulls keep off because the keepers smear her rail with fish poison. <i>(False.)</i></div>
+    </div>
+    <div class="gm-panel" id="inv-sailing">
+      <div class="deg crit-s"><b><span class="deg-at">≥33</span> <span class="stack" title="Read after the tier below" aria-label="read after the tier below">+</span> Critical Success:</b> And she was sailed home that way. Her sails are still set for level flight, so whoever brought her in held her through a lean no living crew would have stood for.</div>
+      <div class="deg"><b><span class="deg-at">≥23</span> Success:</b> She hangs nose-down because her weight has shifted aft: cargo or guns slid against the stern and never moved back. Inside her, any door that closes against that lean will have jammed in its frame.</div>
+      <div class="deg"><b><span class="deg-at">14 to 22</span> Failure:</b> She hangs badly. Old ships do.</div>
+      <div class="deg crit-f"><b><span class="deg-at">≤13</span> Critical Failure:</b> She hangs nose-down because her lines are failing; another season and she drops. <i>(False: every line is sound.)</i></div>
+    </div>
+    <div class="gm-panel" id="inv-crafting">
+      <div class="deg crit-s"><b><span class="deg-at">≥35</span> <span class="stack" title="Read after the tier below" aria-label="read after the tier below">+</span> Critical Success:</b> And the trap work is kept: greased, primed, the slow match fresh, as if someone tends it every week.</div>
+      <div class="deg"><b><span class="deg-at">≥25</span> Success:</b> The swivel guns at her doors are rigged to fire when the doors or the gangway port open, and her own gangway planks are set to drop. Anti-boarder work, the kind a Lord fits to her own flagship.</div>
+      <div class="deg"><b><span class="deg-at">16 to 24</span> Failure:</b> Old guns on an old ship.</div>
+      <div class="deg crit-f"><b><span class="deg-at">≤15</span> Critical Failure:</b> The guns are for show; they were spiked long ago. <i>(False.)</i></div>
+    </div>
+    <div class="gm-panel" id="inv-religion">
+      <div class="deg crit-s"><b><span class="deg-at">≥38</span> <span class="stack" title="Read after the tier below" aria-label="read after the tier below">+</span> Critical Success:</b> The dead who keep an oath fight whoever would break it, and no one else. Whatever they swore, it was about keeping something in, not keeping people out.</div>
+      <div class="deg"><b><span class="deg-at">≥28</span> Success:</b> Rope rots and canvas tears, yet nobody has tended her and she is sound. Something is tending her: the dead held back by an oath can do this, crews still keeping a duty they swore in life.</div>
+      <div class="deg"><b><span class="deg-at">19 to 27</span> Failure:</b> Good rope, kept dry. Nothing more comes to mind.</div>
+      <div class="deg crit-f"><b><span class="deg-at">≤18</span> Critical Failure:</b> She is cursed: look at her too long and you die within the year. <i>(False.)</i></div>
+    </div>
+    <div class="gm-panel" id="inv-arcana">
+      <div class="deg crit-s"><b><span class="deg-at">≥40</span> <span class="stack" title="Read after the tier below" aria-label="read after the tier below">+</span> Critical Success:</b> What pulls is no airship's lift. It is older and far stronger, of a kind with the old work that holds the islets up.</div>
+      <div class="deg"><b><span class="deg-at">≥30</span> Success:</b> Her own lift-work is dead; nothing aboard should carry her a mile, let alone home across the Midarra. Yet her stern pulls faintly upward against its lines, as if something aft still wants to rise.</div>
+      <div class="deg"><b><span class="deg-at">21 to 29</span> Failure:</b> No magic you can name.</div>
+      <div class="deg crit-f"><b><span class="deg-at">≤20</span> Critical Failure:</b> She hangs by Goldwake's own spell, which breaks the day the last keeper dies. <i>(False.)</i></div>
+    </div>
     </div>
     <div class="check">
       <div class="check-head">◈ Asking around on Skysail: Diplomacy (Gather Information)</div>
