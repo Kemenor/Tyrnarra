@@ -59,6 +59,7 @@
     { slug: 'short-notice', label: 'Available on Short Notice', href: '/gm-notes/short-notice/index.html', children: [
       { slug: 'quest-the-unspent', label: 'The Unspent', href: '/gm-notes/short-notice/quest-the-unspent/quest-the-unspent.html', children: [
         { slug: 'quest-the-unspent-colours',     label: 'I · Struck Colours',       href: '/gm-notes/short-notice/quest-the-unspent/struck-colours.html',     children: [] },
+        { slug: 'quest-the-unspent-streets',     label: 'On the Streets',           href: '/gm-notes/short-notice/quest-the-unspent/on-the-streets.html',     children: [] },
         { slug: 'quest-the-unspent-aboard',      label: 'II · Aboard the Unspent',  href: '/gm-notes/short-notice/quest-the-unspent/aboard-the-unspent.html', children: [] },
         { slug: 'quest-the-unspent-holds',       label: "III · The Jigger's Holds", href: '/gm-notes/short-notice/quest-the-unspent/the-jiggers-holds.html',  children: [] },
         { slug: 'quest-the-unspent-last-hands',  label: 'IV · The Last Hands',      href: '/gm-notes/short-notice/quest-the-unspent/the-last-hands.html',     children: [] },
