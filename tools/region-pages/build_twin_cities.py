@@ -24,6 +24,14 @@ BOX_LABELS = {
     'the Accommodation': 'The Mail That Is Never Taken',
     'the lure': 'What the Quays Say',
     'the broken-chain man drinks in Freeboard': 'What the Taverns Say',
+    'the catalogue in the cabin': 'What Both Cities Say',
+    'the Unspent': 'What Hangs Under the Jigger',
+}
+
+# boxes whose title would give the answer away on the closed button:
+# the button names the topic, the inner label carries the answer
+BOX_BUTTONS = {
+    'the islets are Elden ships': ('What holds Skysail up', 'The Islets Are Elden Ships'),
 }
 
 def render(block):
@@ -43,8 +51,11 @@ def render(block):
                 while i < len(chunks) and not chunks[i].startswith('#'):
                     paras.append(clean(chunks[i])); i += 1
                 title = m.group(2)
-                label = BOX_LABELS[title]
-                out += (secret if m.group(1).startswith('⚿') else belief)(title[0].upper() + title[1:], label, paras)
+                if title in BOX_BUTTONS:
+                    button, label = BOX_BUTTONS[title]
+                else:
+                    button, label = title[0].upper() + title[1:], BOX_LABELS[title]
+                out += (secret if m.group(1).startswith('⚿') else belief)(button, label, paras)
                 continue
             out += '  <h3 class="sub-heading">%s</h3>\n' % html.escape(head)
         elif c.startswith('>'):
@@ -218,6 +229,8 @@ page = '''<!DOCTYPE html>
       <li><b>The wax harbour.</b> The harbour on the Legean half of Hringseyja, by name, and its governor.</li>
       <li><b>The Legedi's lines.</b> The two lines on pirates, in full.</li>
       <li><b>The engines.</b> What drives Freeboard, kind by kind.</li>
+      <li><b>The ambush.</b> Who killed Ninehulls from ambush in Freeboard.</li>
+      <li><b>The flags.</b> The devices the other Lords fly.</li>
     </ol>
   </div>
 
