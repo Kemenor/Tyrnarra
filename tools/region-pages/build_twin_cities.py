@@ -102,7 +102,7 @@ col = T[T.index('**Finding it.**'):]
 keys = ['Finding it', 'Under the hulls', 'The vote', 'The bilges', 'The sky comes home', 'Up', 'The last day']
 parts = re.split(r'\n\n(?=\*\*(?:%s)\.\*\*)' % '|'.join(re.escape(k) for k in keys), col)
 summaries = {'Finding it': 'Nine days of the wrong water, then an island with a storm sitting on it.',
-             'Under the hulls': 'The gangway becomes a street, the tavern four hulls tall, bread at three in the morning, a barber with two touches.',
+             'Under the hulls': 'The gangway becomes a street, the tavern three hulls tall, bread at three in the morning, a barber with two touches.',
              'The vote': 'The Lower Spar votes out its captain over a leaking roof.',
              'The bilges': 'A window in a drowned hull, and a face on the other side.',
              'The sky comes home': 'Skarrenn on the fifth day; four islands in the air on the eighth, and rain out of a clear sky.',
