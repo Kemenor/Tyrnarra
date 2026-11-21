@@ -1017,7 +1017,7 @@ The Tengu culture is detailed in `geography/vindul/haizetsua.md`. Outsiders refe
 - **The Lanterns** (the Institutes): plain English. Thekkavar's schools, one per facet of life (the Stage, the Table, Song, Natural Philosophy, the Arcane, the Lullaby, and more), each poetically "a lantern lighting one face of the world" after Enki's lantern-staff; functionally the Institutes, each sovereign in its discipline and its depths.
 - **The Convocation**: plain English. The assembled heads of the Institutes; Thekkavar's college of governance.
 - **The Provost**: plain English. The elected, term-limited chair of the Convocation and the city's voice to the world.
-- **The Sealed**: descriptive. Enki's clergy and secret-keepers, those who took the remember-and-serve bargain in the Leize and are bound never to speak or write what they found; keepers of the Infinite Library, drawn from both Catfolk and Shisk. The **Keeper of the Infinite Library** is the eldest of them.
+- **The Sealed**: descriptive. Enki's clergy and secret-keepers, those who took the remember-and-serve bargain in the Leize and are bound never to speak or write what they found; keepers of the Infinite Library, drawn from all three peoples (Catfolk, Shisk and Ratfolk). The **Keeper of the Infinite Library** is the eldest of them.
 - **Writs of descent**: plain English. The depth-grants that mark a scholar's earned access; you read a life in the writs it holds.
 - **Page-runners**: plain English. The young who carry books up and down the stacks on request; the city's circulation.
 - **The Quiet Hour**: plain English. Thekkavar's daily citywide reading-rite; the Lanterns still their lectures and the whole city falls to reading over tea. (See also **the Helgaft**, Thekkavar student-slang, above.)
