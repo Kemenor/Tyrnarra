@@ -119,11 +119,27 @@ Mechanical corrections, mostly player-facing and live now. Each can go in withou
 
 ## GM calls the audit raised
 
-- Crossroads: a region to build out, or a settlement entry kept as is?
-- Twin Cities page: is its lag behind the lore deliberate while *The Unspent* runs?
-- Breidey: which additions (population, founding date, register, youth), if any?
-- Dragon's Reach: does the ~4,000-year polity stay as a deliberate story feature, or refound it?
-- The Lioaru word-bases: is a drift pass owed?
+- **Crossroads** (GM, 2026-11-21): a city, not a region. Built out when needed; off the redo list.
+- **Twin Cities page** (GM, 2026-11-21): the lag is not deliberate; bring the page in line with the lore.
+- **Breidey** (GM, 2026-11-21): to be discussed; the GM may write the additions himself.
+- **Dragon's Reach** (open): keep the ~4,000-year city as a deliberate story feature, made explicit at its redo (the Empire and Dark-Era passages, the name's stratum, place vs. constitution continuity); no refounding proposed.
+- **The Lioaru word-bases** (GM, 2026-11-21): a drift pass may be owed; to be looked at.
+
+## Fix pass applied (2026-11-21)
+
+Every item in *Fixes that need no new canon* is done except those below. Also done along the way: the Twin Cities page rebuilt to the lore (with its builder updated), Sugeiturri's ◈ mirrored into lore, the Azarketi entry's GM-tier marked, the Zaharsuge leak on `layer-3-gods.html`, the Villtur Gates on `talan.html` and `transport.html`, Tvisol's "three centuries" (nearly four), the Argontzi melt and Lenama's count brought to the lore in the glossary.
+
+**Still open, needs the GM:**
+- **Haldmark's gods:** the fix moved "belief-formed" and Vaki's forging into the ⚿ box, but `layer-3-gods.html` states both openly. Is a minor god's belief-formed status chronicler-tier? If yes, Haldmark's first ⚿ paragraph returns to open prose.
+- **Itzasoa's temple-watch:** `myrkono.md` (and the page) name the near thing as the Hollow of Ten Thousand Threads, the Vermin Queen's dungeon; `open-threads.md` (*Itzasoa: the temple-watch history*) rules a Nine General out and calls the justification an open non-Nine deep site.
+- **The Sealed:** `ezkudon.md` says drawn from all three peoples (Catfolk, Shisk, Ratfolk); the glossary says Catfolk and Shisk.
+- **The Fairturn's height:** `twin-cities.md` gives three hulls plus the keeper's house in one place, a fifth ship on top in another; the column says four hulls tall with a fifth on top.
+- **Lua Lasai's "fortress-ring":** the map draws a forest ring open in two places, mountains only on the north edge; `map-todo.md` defers the ruling to the Jakinduria build. "Forest-ring" everywhere (also `transport.md`, `ezkudon.html`), or keep until then.
+- **Lograth's "post-Crimson-Rain centuries"** (`zuzental.md`, mirrored on `thousand-kingdom.html`): the era framing the audit flags, for the Lograth pass.
+- **Namur's player-character set-ups** are off the page; the lore passage (`namur-republic.md`, *What it sets up*) stays in lore, which is unpublished.
+- **Page-only canon left in place:** Dragon's Reach (Lograth's survey refusals, the Reach paying for finds), the Order of Steam and Eldara pages; Vindul/Lautara ◈ boxes with no ◈ in lore. Reconcile at each region's pass.
+- **Naming text on pages** ("Basque and Icelandic" on three Myrkono pages, "Talanese throughout" on six Lautaran pages) waits for each domain's naming pass.
+- **The `lioaru.html` Character row** was rewritten from lore (pills: Unstable Time, Three Tenses, Tani Died Here); worth a look.
 
 ---
 

@@ -80,7 +80,7 @@ The Trimpon owes nobody: no family, no house, no purse. The Trimpon seals the Or
 
 **⚿ GM Secret: the found are returned.** The test finds a soul. An ever-knotted monk who dies with the verdict truly meant and still unpaid comes before Epairima in person at Dauria, because a soul that has judged itself that hard is a weighty soul, and sometimes the Judge of Souls issues her rare **reversal verdict**: the soul goes back to the Life Layer for a second pass, to pay the rest (`../../gods.md`, *Epairima*). The children who judge like the old are these souls, carrying the old verdict under the new life. **Every Trimpon has been an ever-knot still paying.**
 
-The Order does not know. The Trimpon feels it and cannot name it: the weight of a debt with no remembered cause. The chosen name at twenty is the one trace. Trimpons tend to choose, without knowing why, the name they chose in the life before; the present Trimpon's *Sorrel* was also the chosen name of an ever-knotted monk of the Ankerhold who died in 2490, the year before her birth,, and the chapter's own register holds both names.
+The Order does not know. The Trimpon feels it and cannot name it: the weight of a debt with no remembered cause. The chosen name at twenty is the one trace. Trimpons tend to choose, without knowing why, the name they chose in the life before; the present Trimpon's *Sorrel* was also the chosen name of an ever-knotted monk of the Ankerhold who died in 2490, the year before her birth, and the chapter's own register holds both names.
 
 ## Drukha and the Desi
 

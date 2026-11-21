@@ -10,7 +10,7 @@
 
 **Whalehall · the vault under Anzar · relic ledger**
 
-**Item:** a lantern of bronze, Storveldi make, its glass intact; cold to the touch whatever the room.
+**Item:** a lantern of bronze, of the old kingdom's make, its glass intact; cold to the touch whatever the room.
 **Recovered by:** a Roll party of four, Platinum, contract out of Tassast's watch-works. Three returned: **Amayas n Tassast, of six**, **Aroha Hinekura Ngaiti**, **Brin Twicefallen**. The party's leader, **Idir Skjol Anzar**, did not; body not recovered.
 **Commission:** a recovery for a collector on the Brokers' Walk. The client handled the item once and **declined delivery**. Held in the vault at the party's request; not for sale.
 **Property:** the lantern holds a moment. Whoever takes it by the handle sees and hears what its carrier saw and heard on the day, start to finish, about the length of a long breath, and then it begins again if the hand stays. The moment is the same every time. Holders report that the last sound stays in the ears for a day or more.
